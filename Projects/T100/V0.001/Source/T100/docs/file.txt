@@ -1,0 +1,5 @@
+binary
+	mix		virtual
+
+exe
+	code 		data		share

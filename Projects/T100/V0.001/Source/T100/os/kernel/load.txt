@@ -1,0 +1,87 @@
+IMPORT  "file\exe.txt"
+
+
+DATA
+    load_exe_head_sign                                  INTEGER
+    load_exe_head_type                                  INTEGER
+    load_exe_head_code_count                            INTEGER
+    load_exe_head_code_table_offset                     INTEGER
+    load_exe_head_code_table_length                     INTEGER
+    load_exe_head_code_offset                           INTEGER
+    load_exe_head_code_length                           INTEGER
+    //
+    load_exe_head_data_count                            INTEGER
+    load_exe_head_data_table_offset                     INTEGER
+    load_exe_head_data_table_length                     INTEGER
+    load_exe_head_data_offset                           INTEGER
+    load_exe_head_data_length                           INTEGER
+    //
+    load_exe_head_share_code_count                      INTEGER
+    load_exe_head_share_code_table_offset               INTEGER
+    load_exe_head_share_code_table_length               INTEGER
+    load_exe_head_share_code_offset                     INTEGER
+    load_exe_head_share_code_length                     INTEGER
+    //
+    load_exe_head_share_data_count                      INTEGER
+    load_exe_head_share_data_table_offset               INTEGER
+    load_exe_head_share_data_table_length               INTEGER
+    load_exe_head_share_data_offset                     INTEGER
+    load_exe_head_share_data_length                     INTEGER
+    //
+    load_exe_result                                     INTEGER
+    load_exe_result_offset                              INTEGER
+    //
+    load_exe_location_offset                            INTEGER
+    //
+    load_exe_code_offset                                INTEGER
+    load_exe_data_offset                                INTEGER
+    load_exe_share_code_offset                          INTEGER
+    load_exe_share_data_offset                          INTEGER
+    //
+
+END
+
+PROC=LOAD_EXE
+    MOVE    load_exe_result_offset                      AAR
+    MOVE    load_exe_location_offset                    ABR
+    //
+    MOVE    AAR                                         @load_exe_result
+    MOVE    ABR                                         load_exe_location_offset
+    MOVE    ACR                                         @load_exe_head_sign
+    CALL    EXE_LOAD_HEAD
+    MOVE    ACR                                         load_exe_result
+    JZ      LOAD_EXE_ERROR
+    //
+    MOVE    AAR                                         @load_exe_result
+    MOVE    ABR                                         @load_exe_head_code_count
+    MOVE    ACR                                         load_exe_code_offset
+    CALL    EXE_LOAD_CODE
+    MOVE    ACR                                         load_exe_result
+    JZ      LOAD_EXE_ERROR
+    ////
+    MOVE    AAR                                         @load_exe_result
+    MOVE    ABR                                         @load_exe_head_data_count
+    MOVE    ACR                                         load_exe_data_offset
+    CALL    EXE_LOAD_DATA
+    MOVE    ACR                                         load_exe_result
+    JZ      LOAD_EXE_ERROR
+    ////
+    MOVE    AAR                                         @load_exe_result
+    MOVE    ABR                                         @load_exe_head_share_code_count
+    MOVE    ACR                                         load_exe_share_code_offset
+    CALL    EXE_LOAD_SHARE_CODE
+    MOVE    ACR                                         load_exe_result
+    JZ      LOAD_EXE_ERROR
+    ////
+    MOVE    AAR                                         @load_exe_result
+    MOVE    ABR                                         @load_exe_head_share_data_count
+    MOVE    ACR                                         load_exe_share_data_offset
+    CALL    EXE_LOAD_SHARE_DATA
+    MOVE    ACR                                         load_exe_result
+    JZ      LOAD_EXE_ERROR
+    //
+    MOVE    #load_exe_result_offset                     1
+    RET
+LOAD_EXE_ERROR:
+    MOVE    #load_exe_result_offset                     0
+END

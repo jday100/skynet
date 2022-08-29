@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Common" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100Common" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="test" />
+				</Compiler>
+				<Linker>
+					<Add library="../build/libT100Lib.a" />
+					<Add library="dl" />
+					<Add library="iconv" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Common" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Lib">
+				<Option output="../build/T100Common" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="test" />
+				</Compiler>
+				<Linker>
+					<Add library="../build/libT100Lib.a" />
+					<Add library="dl" />
+					<Add library="iconv" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/T100DeviceTypes.h" />
+		<Unit filename="include/T100Font.h" />
+		<Unit filename="include/T100FontCommon.h" />
+		<Unit filename="include/T100FontFile.h" />
+		<Unit filename="include/T100FontFileReader.h" />
+		<Unit filename="include/T100FontFileWriter.h" />
+		<Unit filename="include/T100OrderTypes.h" />
+		<Unit filename="include/T100VDisk.h" />
+		<Unit filename="include/T100VDiskCommon.h" />
+		<Unit filename="include/T100VDiskFile.h" />
+		<Unit filename="include/T100VDiskHint.h" />
+		<Unit filename="include/T100VDiskPart.h" />
+		<Unit filename="include/T100VFS.h" />
+		<Unit filename="include/T100VFSDirectory.h" />
+		<Unit filename="include/T100VFSFile.h" />
+		<Unit filename="include/T100VFSItem.h" />
+		<Unit filename="include/T100VFSTable.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/T100Font.cpp" />
+		<Unit filename="src/T100FontFile.cpp" />
+		<Unit filename="src/T100FontFileReader.cpp" />
+		<Unit filename="src/T100FontFileWriter.cpp" />
+		<Unit filename="src/T100VDisk.cpp" />
+		<Unit filename="src/T100VDiskFile.cpp" />
+		<Unit filename="src/T100VDiskHint.cpp" />
+		<Unit filename="src/T100VDiskPart.cpp" />
+		<Unit filename="src/T100VFS.cpp" />
+		<Unit filename="src/T100VFSDirectory.cpp" />
+		<Unit filename="src/T100VFSFile.cpp" />
+		<Unit filename="src/T100VFSItem.cpp" />
+		<Unit filename="src/T100VFSTable.cpp" />
+		<Unit filename="test/T100CommonTest.cpp" />
+		<Unit filename="test/T100CommonTest.h" />
+		<Unit filename="test/T100CommonTestHint.cpp" />
+		<Unit filename="test/T100CommonTestHint.h" />
+		<Unit filename="test/T100FontTest.cpp" />
+		<Unit filename="test/T100FontTest.h" />
+		<Unit filename="test/T100TestApp.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="test/T100TestApp.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="test/T100VDiskTest.cpp" />
+		<Unit filename="test/T100VDiskTest.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

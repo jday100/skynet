@@ -1,0 +1,360 @@
+DATA=ROM_DATA
+    rom_device_mode_type                INTEGER     1
+    rom_device_mode_set                 INTEGER     2
+    rom_device_mode_get                 INTEGER     3
+    //
+    rom_device_type_cu                  INTEGER     1
+    rom_device_type_au                  INTEGER     2
+    rom_device_type_io                  INTEGER     3
+    rom_device_type_memory              INTEGER     4
+    rom_device_type_display             INTEGER     5
+    rom_device_type_disk                INTEGER     6
+    rom_device_type_keyboard            INTEGER     7
+    rom_device_type_mouse               INTEGER     8
+    rom_device_type_net                 INTEGER     9
+    rom_device_type_usb                 INTEGER     10
+    rom_device_type_joystick            INTEGER     11
+    rom_device_type_printer             INTEGER     12
+    rom_device_type_phone               INTEGER     13
+    rom_device_type_sound               INTEGER     14
+    rom_device_type_video               INTEGER     15
+    rom_device_type_cdrom               INTEGER     16
+    rom_device_type_dvd                 INTEGER     17
+    rom_device_type_max                 INTEGER     18
+    //
+    rom_device_max                      INTEGER     8       //255
+    //
+    rom_start_message                   STRING      "Starting..."
+    rom_error_message                   STRING      "ROM ERROR!"
+    rom_location_offset                 INTEGER     1114112
+    rom_part_location_low_offset        INTEGER     1114108
+    rom_part_location_high_offset       INTEGER     1114109
+    rom_part_length_low_offset          INTEGER     1114110
+    rom_part_length_high_offset         INTEGER     1114111
+    //
+    int069_disk_read                    INTEGER     7
+    //
+    display_mode_read                   INTEGER     14
+    display_mode_write                  INTEGER     15
+    //
+    disk_mode_get                       INTEGER     13
+    disk_mode_block                     INTEGER     14
+    disk_mode_read                      INTEGER     17
+    disk_mode_write                     INTEGER     18
+    disk_block_index_limit              INTEGER     16
+    disk_block_size                     INTEGER     16384
+    disk_block_length                   INTEGER     1024
+    //
+END
+
+DATA=INT_TABLE      VIRTUAL     LOCATION=1048576    LENGTH=1024
+    //
+    int000                              INTEGER[4]              //fatal error
+    int001                              INTEGER[4]              //cu error
+    int002                              INTEGER[4]              //au error
+    int003                              INTEGER[4]              //io error
+    int004                              INTEGER[240]            //reserve
+    //
+    int064                              INTEGER[4]              //cu
+    int065                              INTEGER[4]              //au
+    int066                              INTEGER[4]              //io
+    int067                              INTEGER[4]              //memory
+    int068                              INTEGER[4]              //display
+    int069                              INTEGER[4]              //disk
+    int070                              INTEGER[4]              //keyboard
+    int071                              INTEGER[4]              //mouse
+    int072                              INTEGER[4]              //net
+    int073                              INTEGER[4]              //usb
+    int074                              INTEGER[4]              //joystick
+    int075                              INTEGER[4]              //printer
+    int076                              INTEGER[4]              //phone
+    int077                              INTEGER[4]              //sound
+    int078                              INTEGER[4]              //video
+    int079                              INTEGER[160]            //reserve
+    //
+    int128                              INTEGER[4]              //software
+
+END
+
+DATA=INT_DATA       VIRTUAL     LOCATION=1049600    //1048576+1024
+    int_result                          INTEGER
+    int_result_offset                   INTEGER
+    //
+    int068_result                       INTEGER
+    int068_result_offset                INTEGER
+    //
+    int069_result                       INTEGER
+    int069_result_offset                INTEGER
+    int069_abr                          INTEGER
+    int069_acr                          INTEGER
+    int069_adr                          INTEGER
+    //
+    int069_disk_result_offset           INTEGER
+    int069_disk_buffer_offset           INTEGER
+    int069_disk_location_low_offset     INTEGER
+    int069_disk_location_high_offset    INTEGER
+    int069_disk_location_index_offset   INTEGER
+
+END
+
+DATA=HARD_DATA      VIRTUAL     LOCATION=1050624    //1049600+1024
+    hard_device_order_address           INTEGER
+    hard_device_data1_address           INTEGER
+    hard_device_data2_address           INTEGER
+    hard_device_data3_address           INTEGER
+    hard_device_type_result             INTEGER
+    //
+    hard_cu_installed_flag              INTEGER
+    hard_au_installed_flag              INTEGER
+    //
+    hard_io_installed_flag              INTEGER
+    hard_io_order_address               INTEGER
+    hard_io_data1_address               INTEGER
+    hard_io_data2_address               INTEGER
+    hard_io_data3_address               INTEGER
+    //
+    hard_memory_installed_flag          INTEGER
+    hard_memory_order_address           INTEGER
+    hard_memory_data1_address           INTEGER
+    hard_memory_data2_address           INTEGER
+    hard_memory_data3_address           INTEGER
+    //
+    hard_display_installed_flag         INTEGER
+    hard_display_order_address          INTEGER
+    hard_display_data1_address          INTEGER
+    hard_display_data2_address          INTEGER
+    hard_display_data3_address          INTEGER
+    //
+    hard_disk_installed_flag            INTEGER
+    hard_disk_order_address             INTEGER
+    hard_disk_data1_address             INTEGER
+    hard_disk_data2_address             INTEGER
+    hard_disk_data3_address             INTEGER
+    //
+    hard_keyboard_installed_flag        INTEGER
+    hard_keyboard_order_address         INTEGER
+    hard_keyboard_data1_address         INTEGER
+    hard_keyboard_data2_address         INTEGER
+    hard_keyboard_data3_address         INTEGER
+    //
+    hard_mouse_installed_flag           INTEGER
+    hard_mouse_order_address            INTEGER
+    hard_mouse_data1_address            INTEGER
+    hard_mouse_data2_address            INTEGER
+    hard_mouse_data3_address            INTEGER
+    //
+    hard_net_installed_flag             INTEGER
+    hard_net_order_address              INTEGER
+    hard_net_data1_address              INTEGER
+    hard_net_data2_address              INTEGER
+    hard_net_data3_address              INTEGER
+    //
+    hard_net_installed_flag             INTEGER
+    hard_usb_order_address              INTEGER
+    hard_usb_data1_address              INTEGER
+    hard_usb_data2_address              INTEGER
+    hard_usb_data3_address              INTEGER
+    //
+    hard_joystick_installed_flag        INTEGER
+    hard_joystick_order_address         INTEGER
+    hard_joystick_data1_address         INTEGER
+    hard_joystick_data2_address         INTEGER
+    hard_joystick_data3_address         INTEGER
+    //
+    hard_printer_installed_flag         INTEGER
+    hard_printer_order_address          INTEGER
+    hard_printer_data1_address          INTEGER
+    hard_printer_data2_address          INTEGER
+    hard_printer_data3_address          INTEGER
+    //
+    hard_phone_installed_flag           INTEGER
+    hard_phone_order_address            INTEGER
+    hard_phone_data1_address            INTEGER
+    hard_phone_data2_address            INTEGER
+    hard_phone_data3_address            INTEGER
+    //
+    hard_sound_installed_flag           INTEGER
+    hard_sound_order_address            INTEGER
+    hard_sound_data1_address            INTEGER
+    hard_sound_data2_address            INTEGER
+    hard_sound_data3_address            INTEGER
+    //
+    hard_video_installed_flag           INTEGER
+    hard_video_order_address            INTEGER
+    hard_video_data1_address            INTEGER
+    hard_video_data2_address            INTEGER
+    hard_video_data3_address            INTEGER
+    //
+    hard_io_result_offset               INTEGER
+    hard_result                         INTEGER
+    hard_result_offset                  INTEGER
+    hard_scan_result                    INTEGER
+    hard_scan_result_offset             INTEGER
+END
+
+DATA=CPU_DATA       VIRTUAL     LOCATION=1051648    //1050624+1024
+    cpu_result                          INTEGER
+    //
+    cpu_cu_order_address                INTEGER
+    cpu_cu_data1_address                INTEGER
+    cpu_cu_data2_address                INTEGER
+    cpu_cu_data3_address                INTEGER
+    //
+    cpu_au_order_address                INTEGER
+    cpu_au_data1_address                INTEGER
+    cpu_au_data2_address                INTEGER
+    cpu_au_data3_address                INTEGER
+    //
+    cpu_cu_result_offset                INTEGER
+    cpu_au_result_offset                INTEGER
+END
+
+DATA=MEMORY_DATA    VIRTUAL     LOCATION=1052672    //1051648+1024
+    memory_result_offset                INTEGER
+    //
+    memory_order_address                INTEGER
+    memory_data1_address                INTEGER
+    memory_data2_address                INTEGER
+    memory_data3_address                INTEGER
+    //
+END
+
+DATA=DISPLAY_DATA   VIRTUAL     LOCATION=1053696    //1052672+1024
+    display_result_offset               INTEGER
+    //
+    display_order_address               INTEGER
+    display_data1_address               INTEGER
+    display_data2_address               INTEGER
+    display_data3_address               INTEGER
+    //
+    display_put_result_offset           INTEGER
+    display_print_result_offset         INTEGER
+    display_print_target_offset         INTEGER
+END
+
+DATA=DISK_DATA      VIRTUAL     LOCATION=1054720    //1053696+1024
+    disk_result_offset                  INTEGER
+    //
+    disk_order_address                  INTEGER
+    disk_data1_address                  INTEGER
+    disk_data2_address                  INTEGER
+    disk_data3_address                  INTEGER
+    //
+    disk_block_size                     INTEGER
+    disk_block_offset                   INTEGER
+    disk_length_low                     INTEGER
+    disk_length_high                    INTEGER
+    //
+    disk_source_offset                  INTEGER
+    disk_target_offset                  INTEGER
+    //
+    disk_read_result_offset             INTEGER
+    disk_write_result_offset            INTEGER
+    disk_id_low                         INTEGER
+    disk_id_high                        INTEGER
+    //
+END
+
+DATA=KEYBOARD_DATA  VIRTUAL     LOCATION=1055744    //1054720+1024
+    keyboard_result_offset              INTEGER
+    //
+    keyboard_order_address              INTEGER
+    keyboard_data1_address              INTEGER
+    keyboard_data2_address              INTEGER
+    keyboard_data3_address              INTEGER
+    //
+END
+
+DATA=MOUSE_DATA     VIRTUAL     LOCATION=1056768    //1055744+1024
+    mouse_result_offset                 INTEGER
+    //
+    mouse_order_address                 INTEGER
+    mouse_data1_address                 INTEGER
+    mouse_data2_address                 INTEGER
+    mouse_data3_address                 INTEGER
+    //
+END
+
+DATA=DISK_BUFFER    VIRTUAL     LOCATION=1057792    //1056768+1024
+    disk_buffer                         INTEGER[1024]
+END
+
+DATA=FS_DATA        VIRTUAL     LOCATION=1058826    //1057792+1024
+    fs_boot_part_search_buffer_offset   INTEGER
+END
+
+DATA=RAM_DATA       VIRTUAL     LOCATION=1059850    //1058826+1024
+    rom_result                                      INTEGER
+    rom_show_info_result                            INTEGER
+    rom_show_info_result_offset                     INTEGER
+    //
+    rom_part_scan_result                            INTEGER
+    rom_part_scan_result_offset                     INTEGER
+    rom_boot_part_location_low                      INTEGER
+    rom_boot_part_location_high                     INTEGER
+    rom_boot_part_length_low                        INTEGER
+    rom_boot_part_length_high                       INTEGER
+    //
+    rom_boot_part_search_result                     INTEGER
+    rom_boot_part_search_result_offset              INTEGER
+    rom_boot_part_search_disk_buffer_offset         INTEGER
+    rom_boot_part_search_location_low_offset        INTEGER
+    rom_boot_part_search_location_high_offset       INTEGER
+    rom_boot_part_search_length_low_offset          INTEGER
+    rom_boot_part_search_length_high_offset         INTEGER
+    rom_boot_part_search_index                      INTEGER
+    rom_boot_part_search_location_low               INTEGER
+    rom_boot_part_search_location_high              INTEGER
+    rom_boot_part_search_length_low                 INTEGER
+    rom_boot_part_search_length_high                INTEGER
+    //
+    rom_boot_part_load_result                       INTEGER
+    rom_boot_part_load_result_offset                INTEGER
+    rom_boot_part_load_location_offset              INTEGER
+	rom_boot_part_load_index                        INTEGER
+    rom_boot_part_load_location_low                 INTEGER
+    rom_boot_part_load_location_high                INTEGER
+    //
+
+END
+
+DATA=STRING_DATA    VIRTUAL     LOCATION=1060874    //1059850+1024
+    string_equal_result_offset                      INTEGER
+    string_equal_source_offset                      INTEGER
+    string_equal_target_offset                      INTEGER
+    //
+    string_split_result_offset                      INTEGER
+    string_split_string_parameter_offset            INTEGER
+    string_split_mask_parameter_offset              INTEGER
+    string_split_size_parameter_offset              INTEGER
+    string_split_array_parameter_offset             INTEGER
+    string_split_array_buffer_parameter_offset      INTEGER
+    //
+    string_split_string_offset                      INTEGER
+    string_split_mask                               INTEGER
+    string_split_size                               INTEGER
+    string_split_array_offset                       INTEGER
+    string_split_array_buffer_offset                INTEGER
+    string_split_length                             INTEGER
+    string_split_offset                             INTEGER
+    //
+    string_first_result                             INTEGER
+    string_first_result_offset                      INTEGER
+    string_first_string_offset                      INTEGER
+    string_first_value_offset                       INTEGER
+    //
+    string_init_result_offset                       INTEGER
+    string_init_string_offset                       INTEGER
+    string_init_length                              INTEGER
+    string_init_string_length                       INTEGER
+    //
+END
+
+DATA=IO_DATA        VIRTUAL     LOCATION=1061898    //1060874+1024
+    io_copy_result_offset                           INTEGER
+    io_copy_source_offset                           INTEGER
+    io_copy_target_offset                           INTEGER
+    io_copy_length                                  INTEGER
+    //
+
+END

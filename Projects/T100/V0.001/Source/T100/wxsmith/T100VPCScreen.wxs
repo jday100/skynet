@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="T100VPCScreen">
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<handler function="OnPaint" entry="EVT_PAINT" />
+		<handler function="OnEraseBackground" entry="EVT_ERASE_BACKGROUND" />
+		<object class="wxTimer" name="ID_TIMER_SCREEN" variable="T100VPCTimer" member="yes">
+			<interval>1</interval>
+			<handler function="OnT100VPCTimerTrigger" entry="EVT_TIMER" />
+		</object>
+	</object>
+</wxsmith>

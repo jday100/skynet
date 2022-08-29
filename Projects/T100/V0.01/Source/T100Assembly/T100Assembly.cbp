@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Assembly" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../build/T100Assembly" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="work/os/rom.txt  build/rom.bin" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/produce/real" />
+					<Add directory="include/produce/virtual" />
+					<Add directory="include/produce" />
+					<Add directory="include/scanner" />
+					<Add directory="include/syntax" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="../T100Common/include" />
+					<Add directory="test" />
+					<Add directory="include/cmdline" />
+					<Add directory="../T100Lib/include/cmdline" />
+				</Compiler>
+				<Linker>
+					<Add library="../build/libT100Lib.a" />
+					<Add library="dl" />
+					<Add library="iconv" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Assembly" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="include/produce" />
+					<Add directory="include/syntax" />
+					<Add directory="test" />
+					<Add directory="include/cmdline" />
+					<Add directory="include/scanner" />
+					<Add directory="include/produce/real" />
+					<Add directory="include/produce/virtual" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Test">
+				<Option output="bin/Debug/T100Assembly" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/produce/real" />
+					<Add directory="include/produce/virtual" />
+					<Add directory="include/produce" />
+					<Add directory="include/scanner" />
+					<Add directory="include/syntax" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="../T100Common/include" />
+					<Add directory="test" />
+					<Add directory="include/cmdline" />
+				</Compiler>
+				<Linker>
+					<Add library="../T100Lib/bin/Debug/libT100Lib.a" />
+					<Add library="dl" />
+				</Linker>
+			</Target>
+			<Target title="Lib">
+				<Option output="../build/T100Assembly" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/produce/real" />
+					<Add directory="include/produce/virtual" />
+					<Add directory="include/produce" />
+					<Add directory="include/scanner" />
+					<Add directory="include/syntax" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="../T100Common/include" />
+					<Add directory="test" />
+					<Add directory="include/cmdline" />
+					<Add directory="../T100Lib/include/cmdline" />
+				</Compiler>
+				<Linker>
+					<Add library="../build/libT100Lib.a" />
+					<Add library="dl" />
+					<Add library="iconv" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="../build/build/rom.bin" />
+		<Unit filename="include/T100Assembly.h" />
+		<Unit filename="include/T100AssemblyApp.h" />
+		<Unit filename="include/T100AssemblyCommon.h" />
+		<Unit filename="include/T100AssemblyError.h" />
+		<Unit filename="include/T100AssemblyHelp.h" />
+		<Unit filename="include/T100AssemblyHint.h" />
+		<Unit filename="include/T100AssemblyLog.h" />
+		<Unit filename="include/T100AssemblySetup.h" />
+		<Unit filename="include/cmdline/T100AssemblyCmdLineParser.h" />
+		<Unit filename="include/cmdline/T100AssemblyCmdLineResult.h" />
+		<Unit filename="include/produce/T100BuildInfo.h" />
+		<Unit filename="include/produce/T100LabelDrawer.h" />
+		<Unit filename="include/produce/T100ParseInfo.h" />
+		<Unit filename="include/produce/T100PartDrawer.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/produce/T100PartFile.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/produce/T100PartFileReader.h" />
+		<Unit filename="include/produce/T100PartFileWriter.h" />
+		<Unit filename="include/produce/T100PartInfo.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/produce/T100ProcedureDrawer.h" />
+		<Unit filename="include/produce/T100Produce.h" />
+		<Unit filename="include/produce/T100ProduceBuilder.h" />
+		<Unit filename="include/produce/T100ProduceFile.h" />
+		<Unit filename="include/produce/T100ProduceInfo.h" />
+		<Unit filename="include/produce/T100ProduceMerger.h" />
+		<Unit filename="include/produce/T100ProduceParser.h" />
+		<Unit filename="include/produce/T100Segment.h" />
+		<Unit filename="include/produce/T100SegmentCode.h" />
+		<Unit filename="include/produce/T100SegmentData.h" />
+		<Unit filename="include/produce/T100VariableDrawer.h" />
+		<Unit filename="include/produce/real/T100RealBuilder.h" />
+		<Unit filename="include/produce/real/T100RealFile.h" />
+		<Unit filename="include/produce/real/T100RealFileReader.h" />
+		<Unit filename="include/produce/real/T100RealFileWriter.h" />
+		<Unit filename="include/produce/real/T100RealInfo.h" />
+		<Unit filename="include/produce/real/T100RealMerger.h" />
+		<Unit filename="include/produce/virtual/T100VirtualBuilder.h" />
+		<Unit filename="include/produce/virtual/T100VirtualFile.h" />
+		<Unit filename="include/produce/virtual/T100VirtualFileReader.h" />
+		<Unit filename="include/produce/virtual/T100VirtualFileWriter.h" />
+		<Unit filename="include/produce/virtual/T100VirtualInfo.h" />
+		<Unit filename="include/produce/virtual/T100VirtualMerger.h" />
+		<Unit filename="include/scanner/T100ByteScanner.h" />
+		<Unit filename="include/scanner/T100ByteToken.h" />
+		<Unit filename="include/scanner/T100CharScanner.h" />
+		<Unit filename="include/scanner/T100CharToken.h" />
+		<Unit filename="include/scanner/T100KeywordScanner.h" />
+		<Unit filename="include/scanner/T100KeywordTable.h" />
+		<Unit filename="include/scanner/T100KeywordToken.h" />
+		<Unit filename="include/scanner/T100PartScanner.h" />
+		<Unit filename="include/scanner/T100PartScannerTools.h" />
+		<Unit filename="include/scanner/T100PartToken.h" />
+		<Unit filename="include/scanner/T100SegmentScanner.h" />
+		<Unit filename="include/scanner/T100SegmentToken.h" />
+		<Unit filename="include/scanner/T100SentenceScanner.h" />
+		<Unit filename="include/scanner/T100SentenceToken.h" />
+		<Unit filename="include/scanner/T100StringScanner.h" />
+		<Unit filename="include/scanner/T100StringToken.h" />
+		<Unit filename="include/syntax/T100AllSentences.h" />
+		<Unit filename="include/syntax/T100Sentence.h" />
+		<Unit filename="include/syntax/T100SentenceAdd.h" />
+		<Unit filename="include/syntax/T100SentenceAnd.h" />
+		<Unit filename="include/syntax/T100SentenceCall.h" />
+		<Unit filename="include/syntax/T100SentenceCmt.h" />
+		<Unit filename="include/syntax/T100SentenceCode.h" />
+		<Unit filename="include/syntax/T100SentenceComment.h" />
+		<Unit filename="include/syntax/T100SentenceCopy.h" />
+		<Unit filename="include/syntax/T100SentenceData.h" />
+		<Unit filename="include/syntax/T100SentenceDebug.h" />
+		<Unit filename="include/syntax/T100SentenceDiv.h" />
+		<Unit filename="include/syntax/T100SentenceEnd.h" />
+		<Unit filename="include/syntax/T100SentenceHalt.h" />
+		<Unit filename="include/syntax/T100SentenceImport.h" />
+		<Unit filename="include/syntax/T100SentenceIn.h" />
+		<Unit filename="include/syntax/T100SentenceInt.h" />
+		<Unit filename="include/syntax/T100SentenceIret.h" />
+		<Unit filename="include/syntax/T100SentenceJnz.h" />
+		<Unit filename="include/syntax/T100SentenceJump.h" />
+		<Unit filename="include/syntax/T100SentenceJz.h" />
+		<Unit filename="include/syntax/T100SentenceLabel.h" />
+		<Unit filename="include/syntax/T100SentenceLoad.h" />
+		<Unit filename="include/syntax/T100SentenceLock.h" />
+		<Unit filename="include/syntax/T100SentenceLoop.h" />
+		<Unit filename="include/syntax/T100SentenceMode.h" />
+		<Unit filename="include/syntax/T100SentenceMove.h" />
+		<Unit filename="include/syntax/T100SentenceMul.h" />
+		<Unit filename="include/syntax/T100SentenceNop.h" />
+		<Unit filename="include/syntax/T100SentenceNot.h" />
+		<Unit filename="include/syntax/T100SentenceOr.h" />
+		<Unit filename="include/syntax/T100SentenceOut.h" />
+		<Unit filename="include/syntax/T100SentenceProcedure.h" />
+		<Unit filename="include/syntax/T100SentenceRet.h" />
+		<Unit filename="include/syntax/T100SentenceStore.h" />
+		<Unit filename="include/syntax/T100SentenceSub.h" />
+		<Unit filename="include/syntax/T100SentenceUnlock.h" />
+		<Unit filename="include/syntax/T100SentenceVariable.h" />
+		<Unit filename="include/syntax/T100SentenceXor.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/T100Assembly.cpp" />
+		<Unit filename="src/T100AssemblyApp.cpp" />
+		<Unit filename="src/T100AssemblyError.cpp" />
+		<Unit filename="src/T100AssemblyHelp.cpp" />
+		<Unit filename="src/T100AssemblyHint.cpp" />
+		<Unit filename="src/T100AssemblyLog.cpp" />
+		<Unit filename="src/T100AssemblySetup.cpp" />
+		<Unit filename="src/cmdline/T100AssemblyCmdLineParser.cpp" />
+		<Unit filename="src/cmdline/T100AssemblyCmdLineResult.cpp" />
+		<Unit filename="src/produce/T100BuildInfo.cpp" />
+		<Unit filename="src/produce/T100LabelDrawer.cpp" />
+		<Unit filename="src/produce/T100ParseInfo.cpp" />
+		<Unit filename="src/produce/T100PartDrawer.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/produce/T100PartFile.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/produce/T100PartFileReader.cpp" />
+		<Unit filename="src/produce/T100PartFileWriter.cpp" />
+		<Unit filename="src/produce/T100PartInfo.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/produce/T100ProcedureDrawer.cpp" />
+		<Unit filename="src/produce/T100Produce.cpp" />
+		<Unit filename="src/produce/T100ProduceBuilder.cpp" />
+		<Unit filename="src/produce/T100ProduceFile.cpp" />
+		<Unit filename="src/produce/T100ProduceInfo.cpp" />
+		<Unit filename="src/produce/T100ProduceMerger.cpp" />
+		<Unit filename="src/produce/T100ProduceParser.cpp" />
+		<Unit filename="src/produce/T100Segment.cpp" />
+		<Unit filename="src/produce/T100SegmentCode.cpp" />
+		<Unit filename="src/produce/T100SegmentData.cpp" />
+		<Unit filename="src/produce/T100VariableDrawer.cpp" />
+		<Unit filename="src/produce/real/T100RealBuilder.cpp" />
+		<Unit filename="src/produce/real/T100RealFile.cpp" />
+		<Unit filename="src/produce/real/T100RealFileReader.cpp" />
+		<Unit filename="src/produce/real/T100RealFileWriter.cpp" />
+		<Unit filename="src/produce/real/T100RealInfo.cpp" />
+		<Unit filename="src/produce/real/T100RealMerger.cpp" />
+		<Unit filename="src/produce/virtual/T100VirtualBuilder.cpp" />
+		<Unit filename="src/produce/virtual/T100VirtualFile.cpp" />
+		<Unit filename="src/produce/virtual/T100VirtualFileReader.cpp" />
+		<Unit filename="src/produce/virtual/T100VirtualFileWriter.cpp" />
+		<Unit filename="src/produce/virtual/T100VirtualInfo.cpp" />
+		<Unit filename="src/produce/virtual/T100VirtualMerger.cpp" />
+		<Unit filename="src/scanner/T100ByteScanner.cpp" />
+		<Unit filename="src/scanner/T100ByteToken.cpp" />
+		<Unit filename="src/scanner/T100CharScanner.cpp" />
+		<Unit filename="src/scanner/T100CharToken.cpp" />
+		<Unit filename="src/scanner/T100KeywordScanner.cpp" />
+		<Unit filename="src/scanner/T100KeywordTable.cpp" />
+		<Unit filename="src/scanner/T100KeywordToken.cpp" />
+		<Unit filename="src/scanner/T100PartScanner.cpp" />
+		<Unit filename="src/scanner/T100PartScannerTools.cpp" />
+		<Unit filename="src/scanner/T100PartToken.cpp" />
+		<Unit filename="src/scanner/T100SegmentScanner.cpp" />
+		<Unit filename="src/scanner/T100SegmentToken.cpp" />
+		<Unit filename="src/scanner/T100SentenceScanner.cpp" />
+		<Unit filename="src/scanner/T100SentenceToken.cpp" />
+		<Unit filename="src/scanner/T100StringScanner.cpp" />
+		<Unit filename="src/scanner/T100StringToken.cpp" />
+		<Unit filename="src/syntax/T100Sentence.cpp" />
+		<Unit filename="src/syntax/T100SentenceAdd.cpp" />
+		<Unit filename="src/syntax/T100SentenceAnd.cpp" />
+		<Unit filename="src/syntax/T100SentenceCall.cpp" />
+		<Unit filename="src/syntax/T100SentenceCmt.cpp" />
+		<Unit filename="src/syntax/T100SentenceCode.cpp" />
+		<Unit filename="src/syntax/T100SentenceComment.cpp" />
+		<Unit filename="src/syntax/T100SentenceCopy.cpp" />
+		<Unit filename="src/syntax/T100SentenceData.cpp" />
+		<Unit filename="src/syntax/T100SentenceDebug.cpp" />
+		<Unit filename="src/syntax/T100SentenceDiv.cpp" />
+		<Unit filename="src/syntax/T100SentenceEnd.cpp" />
+		<Unit filename="src/syntax/T100SentenceHalt.cpp" />
+		<Unit filename="src/syntax/T100SentenceImport.cpp" />
+		<Unit filename="src/syntax/T100SentenceIn.cpp" />
+		<Unit filename="src/syntax/T100SentenceInt.cpp" />
+		<Unit filename="src/syntax/T100SentenceIret.cpp" />
+		<Unit filename="src/syntax/T100SentenceJnz.cpp" />
+		<Unit filename="src/syntax/T100SentenceJump.cpp" />
+		<Unit filename="src/syntax/T100SentenceJz.cpp" />
+		<Unit filename="src/syntax/T100SentenceLabel.cpp" />
+		<Unit filename="src/syntax/T100SentenceLoad.cpp" />
+		<Unit filename="src/syntax/T100SentenceLock.cpp" />
+		<Unit filename="src/syntax/T100SentenceLoop.cpp" />
+		<Unit filename="src/syntax/T100SentenceMode.cpp" />
+		<Unit filename="src/syntax/T100SentenceMove.cpp" />
+		<Unit filename="src/syntax/T100SentenceMul.cpp" />
+		<Unit filename="src/syntax/T100SentenceNop.cpp" />
+		<Unit filename="src/syntax/T100SentenceNot.cpp" />
+		<Unit filename="src/syntax/T100SentenceOr.cpp" />
+		<Unit filename="src/syntax/T100SentenceOut.cpp" />
+		<Unit filename="src/syntax/T100SentenceProcedure.cpp" />
+		<Unit filename="src/syntax/T100SentenceRet.cpp" />
+		<Unit filename="src/syntax/T100SentenceStore.cpp" />
+		<Unit filename="src/syntax/T100SentenceSub.cpp" />
+		<Unit filename="src/syntax/T100SentenceUnlock.cpp" />
+		<Unit filename="src/syntax/T100SentenceVariable.cpp" />
+		<Unit filename="src/syntax/T100SentenceXor.cpp" />
+		<Unit filename="test/T100AssemblyTest.cpp" />
+		<Unit filename="test/T100AssemblyTest.h" />
+		<Unit filename="test/T100AssemblyTestHint.cpp" />
+		<Unit filename="test/T100AssemblyTestHint.h" />
+		<Unit filename="test/T100PartScannerTest.cpp" />
+		<Unit filename="test/T100PartScannerTest.h" />
+		<Unit filename="test/T100RealProduceTest.cpp" />
+		<Unit filename="test/T100RealProduceTest.h" />
+		<Unit filename="test/T100ScannerTest.cpp" />
+		<Unit filename="test/T100ScannerTest.h" />
+		<Unit filename="test/T100SegmentScannerTest.cpp" />
+		<Unit filename="test/T100SegmentScannerTest.h" />
+		<Unit filename="test/T100SentenceScannerTest.cpp" />
+		<Unit filename="test/T100SentenceScannerTest.h" />
+		<Unit filename="test/T100StringScannerTest.cpp" />
+		<Unit filename="test/T100StringScannerTest.h" />
+		<Unit filename="test/T100TestApp.cpp" />
+		<Unit filename="test/T100TestApp.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

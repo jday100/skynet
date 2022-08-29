@@ -1,0 +1,24 @@
+IMPORT  "test_share.txt"
+
+DATA
+    a                               INTEGER     3
+    b                               INTEGER     4
+    result                          INTEGER
+    value                           INTEGER
+END
+
+
+CODE    DEFAULT
+    MOVE    AAR                     @result
+    MOVE    ABR                     a
+    MOVE    ACR                     b
+    CALL    SHARE_ADD
+
+    MOVE    ACR                     result
+    JZ      ERROR
+
+    MOVE    value                   share_value
+    NOP
+ERROR:
+    HALT
+END

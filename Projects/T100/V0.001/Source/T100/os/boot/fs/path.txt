@@ -1,0 +1,235 @@
+
+DATA
+    path_init_result                                        INTEGER
+    path_init_result_offset                                 INTEGER
+    //
+    path_init_location_low_offset                           INTEGER
+    path_init_length_low_offset                             INTEGER
+    //
+    path_init_location_low                                  INTEGER
+    path_init_location_high                                 INTEGER
+    path_init_length_low                                    INTEGER
+    path_init_length_high                                   INTEGER
+    //
+    path_search_result                                      INTEGER
+    path_search_result_offset                               INTEGER
+    //
+    path_search_value                                       INTEGER[3]
+    path_search_name_offset                                 INTEGER
+    path_search_handle_offset                               INTEGER
+    path_search_value_location_low_offset                   INTEGER
+    path_search_value_location_high_offset                  INTEGER
+    path_search_value_index_offset                          INTEGER
+    path_search_value_offset_offset                         INTEGER
+    path_search_item_location_low_offset                    INTEGER
+    path_search_item_location_high_offset                   INTEGER
+    path_search_item_length_low_offset                      INTEGER
+    path_search_item_length_high_offset                     INTEGER
+    path_search_item_properties_offset                      INTEGER[2]
+    //
+    path_search_location_low                                INTEGER
+    path_search_location_high                               INTEGER
+    path_search_length_low                                  INTEGER
+    path_search_length_high                                 INTEGER
+    //
+    path_search_split_size                                  INTEGER
+    path_search_split_array_offset                          INTEGER
+    path_search_split_array_buffer_offset                   INTEGER
+    path_search_split_array                                 INTEGER[100]
+    path_search_split_array_buffer                          INTEGER[1024]
+    path_search_split_array_index                           INTEGER
+    path_search_split_array_buffer_index                    INTEGER
+    //
+END
+
+DATA
+    path_disk_buffer                                        INTEGER[1024]
+END
+
+PROC=PATH_INIT
+    CMT     30040010
+    MOVE    path_init_result_offset                         AAR
+    MOVE    path_init_location_low_offset                   ABR
+    MOVE    path_init_length_low_offset                     ACR
+    //
+    MOVE    path_init_location_low                          #path_init_location_low_offset
+    MOVE    AAR                                             path_init_location_low_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    path_init_location_high                         #ACR
+    //
+    MOVE    path_init_length_low                            #path_init_length_low_offset
+    MOVE    AAR                                             path_init_length_low_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    path_init_length_high                           #ACR
+    //
+    MOVE    fs_path_root_low                                0
+    MOVE    fs_path_root_high                               0
+    MOVE    fs_path_current_low                             0
+    MOVE    fs_path_current_high                            0
+    //
+    CMT     30040020
+    MOVE    #path_init_result_offset                        1
+    RET
+PATH_INIT_ERROR:
+    CMT     30040030
+    MOVE    #path_init_result_offset                        0
+END
+
+//
+//result_offset
+//name_offset
+//value_offset
+//
+//value
+//location_low
+//location_high
+//index
+//offset
+//item_location_low
+//item_location_high
+//item_length_low
+//item_length_high
+//item_properties[2]
+//
+PROC=PATH_SEARCH
+    CMT     30040050
+    MOVE    path_search_result_offset                       AAR
+    MOVE    path_search_name_offset                         ABR
+    MOVE    path_search_handle_offset                       ACR
+    //
+    MOVE    ACR                                             #ABR
+    JZ      PATH_SEARCH_ERROR
+    //
+    MOVE    path_search_value_location_low_offset           path_search_handle_offset
+    MOVE    AAR                                             path_search_handle_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    path_search_value_location_high_offset          ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    path_search_value_index_offset                  ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    path_search_value_offset_offset                 ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    path_search_item_location_low_offset            ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    path_search_item_location_high_offset           ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    path_search_item_length_low_offset              ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    path_search_item_length_high_offset             ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    path_search_item_properties_offset[0]           ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    path_search_item_properties_offset[1]           ACR
+    //
+    CMT     30040060
+    MOVE    AAR                                             @path_search_result
+    MOVE    ABR                                             path_search_name_offset
+    MOVE    ACR                                             @fs_path_root
+    CALL    STRING_EQUAL
+    MOVE    ACR                                             path_search_result
+    JNZ     PATH_SEARCH_ROOT
+    //
+    CMT     30040070
+    MOVE    AAR                                             @path_search_result
+    MOVE    ABR                                             path_search_name_offset
+    MOVE    ACR                                             @path_search_value
+    CALL    STRING_FIRST
+    MOVE    ACR                                             path_search_result
+    JNZ     PATH_SEARCH_FIRST_ROOT
+    //
+    CMT     30040080
+    MOVE    path_search_location_low                        fs_path_current_low
+    MOVE    path_search_location_high                       fs_path_current_high
+    //
+PATH_SEARCH_SPLIT:
+    MOVE    path_search_split_array_offset                  @path_search_split_array
+    MOVE    path_search_split_array_buffer_offset           @path_search_split_array_buffer
+    CMT     30040090
+    MOVE    AAR                                             @path_search_result
+    MOVE    ABR                                             path_search_name_offset
+    MOVE    ACR                                             @fs_path_mask
+    MOVE    ADR                                             @path_search_split_size
+    CALL    STRING_SPLIT
+    MOVE    ACR                                             path_search_result
+    JZ      PATH_SEARCH_ERROR
+    //
+    CMT     30040100
+    MOVE    ACR                                             path_search_split_size
+    JZ      PATH_SEARCH_ERROR
+    //
+    CMT     30040110
+    MOVE    AAR                                             path_search_split_size
+    MOVE    ABR                                             1
+    SUB
+    MOVE    CCR                                             ACR
+    //
+    MOVE    path_search_split_array_index                   path_search_split_array_offset
+PATH_SEARCH_ITEM_NEXT:
+    CMT     30040120
+    MOVE    path_search_split_array_buffer_index            #path_search_split_array_index
+    //
+    MOVE    ACR                                             #path_search_split_array_buffer_index
+    JZ      PATH_SEARCH_ERROR
+    //
+    CMT     30040130
+    //test
+    MOVE    AAR                                             path_search_location_low
+    MOVE    AAR                                             path_search_location_high
+    //
+    MOVE    AAR                                             @path_search_result
+    MOVE    ABR                                             @path_search_location_low
+    MOVE    ACR                                             path_search_split_array_buffer_index
+    MOVE    ADR                                             path_search_handle_offset
+    CALL    ITEM_SEARCH
+    MOVE    ACR                                             path_search_result
+    JZ      PATH_SEARCH_ERROR
+    //
+    CMT     30040131
+    MOVE    path_search_location_low                        #path_search_item_location_low_offset
+    MOVE    path_search_location_high                       #path_search_item_location_high_offset
+    MOVE    AAR                                             path_search_split_array_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    path_search_split_array_index                   ACR
+    CMT     30040140
+    LOOP    PATH_SEARCH_ITEM_NEXT
+    //
+    CMT     30040150
+
+    JUMP    PATH_SEARCH_TRUE
+
+PATH_SEARCH_FIRST_ROOT:
+    CMT     30040160
+    MOVE    path_search_location_low                        fs_path_root_low
+    MOVE    path_search_location_high                       fs_path_root_high
+    //
+    JUMP    PATH_SEARCH_SPLIT
+
+PATH_SEARCH_ROOT:
+    CMT     30040170
+    MOVE    #path_search_item_location_low_offset           path_search_location_low
+    MOVE    #path_search_item_location_high_offset          path_search_location_high
+    MOVE    #path_search_item_length_low_offset             path_search_length_low
+    MOVE    #path_search_item_length_high_offset            path_search_length_high
+    MOVE    #path_search_item_properties_offset[0]          1
+    MOVE    #path_search_item_properties_offset[1]          1
+    //
+PATH_SEARCH_TRUE:
+    CMT     30040180
+    MOVE    #path_search_result_offset                      1
+    RET
+PATH_SEARCH_ERROR:
+    CMT     30040190
+    MOVE    #path_search_result_offset                      0
+END

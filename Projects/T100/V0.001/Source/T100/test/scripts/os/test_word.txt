@@ -1,0 +1,177 @@
+IMPORT  "lib\word.txt"
+
+MODE    REAL    TINY
+
+DATA        VIRTUAL     LOCATION=1114112
+    test_word_shl_result                                INTEGER
+    //
+    test_word_shl_word_result                           INTEGER
+    test_word_shl_word_result_offset                    INTEGER
+    test_word_shl_word_value                            INTEGER
+    //
+    test_word_shl_dword_result                          INTEGER
+    test_word_shl_dword_result_offset                   INTEGER
+    test_word_shl_dword_value_low                       INTEGER
+    test_word_shl_dword_value_high                      INTEGER
+END
+
+DATA
+
+END
+
+CODE
+    MOVE    AAR                                         @test_word_shl_result
+    CALL    TEST_WORD_SHL_WORD
+    MOVE    ACR                                         test_word_shl_result
+    JZ      TEST_WORD_ERROR
+    //
+    MOVE    AAR                                         @test_word_shl_result
+    CALL    TEST_WORD_SHL_DWORD
+    MOVE    ACR                                         test_word_shl_result
+    JNZ     TEST_WORD_ERROR
+    //
+    MOVE    AAR                                         1
+    HALT
+    //
+TEST_WORD_ERROR:
+    MOVE    AAR                                         0
+    HALT
+END
+
+PROC=TEST_WORD_SHL_WORD
+    MOVE    test_word_shl_word_result_offset            AAR
+    //
+    MOVE    AAR                                         @test_word_shl_word_result
+    MOVE    ABR                                         1
+    MOVE    ACR                                         0
+    MOVE    ADR                                         @test_word_shl_word_value
+    CALL    WORD_SHL_WORD
+    MOVE    ACR                                         test_word_shl_word_result
+    JZ      TEST_WORD_SHL_WORD_ERROR
+    //
+    MOVE    AAR                                         test_word_shl_word_value
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_WORD_SHL_WORD_ERROR
+    //
+    MOVE    AAR                                         @test_word_shl_word_result
+    MOVE    ABR                                         1
+    MOVE    ACR                                         1
+    MOVE    ADR                                         @test_word_shl_word_value
+    CALL    WORD_SHL_WORD
+    MOVE    ACR                                         test_word_shl_word_result
+    JZ      TEST_WORD_SHL_WORD_ERROR
+    //
+    MOVE    AAR                                         test_word_shl_word_value
+    MOVE    ABR                                         2
+    SUB
+    JNZ     TEST_WORD_SHL_WORD_ERROR
+    //
+    MOVE    AAR                                         @test_word_shl_word_result
+    MOVE    ABR                                         1
+    MOVE    ACR                                         31
+    MOVE    ADR                                         @test_word_shl_word_value
+    CALL    WORD_SHL_WORD
+    MOVE    ACR                                         test_word_shl_word_result
+    JZ      TEST_WORD_SHL_WORD_ERROR
+    //
+    MOVE    AAR                                         test_word_shl_word_value
+    MOVE    ABR                                         2147483648
+    SUB
+    JNZ     TEST_WORD_SHL_WORD_ERROR
+    //
+    MOVE    #test_word_shl_word_result_offset           1
+    RET
+    //
+TEST_WORD_SHL_WORD_ERROR:
+    MOVE    #test_word_shl_word_result_offset           0
+END
+
+
+PROC=TEST_WORD_SHL_DWORD
+    MOVE    test_word_shl_dword_result_offset           AAR
+    //
+    MOVE    AAR                                         @test_word_shl_dword_result
+    MOVE    ABR                                         1
+    MOVE    ACR                                         0
+    MOVE    ADR                                         @test_word_shl_dword_value_low
+    CALL    WORD_SHL_DWORD
+    MOVE    ACR                                         test_word_shl_dword_result
+    JZ      TEST_WORD_SHL_DWORD_ERROR
+    //
+    MOVE    AAR                                         test_word_shl_dword_value_low
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_WORD_SHL_DWORD_ERROR
+    MOVE    ACR                                         test_word_shl_dword_value_high
+    JNZ     TEST_WORD_SHL_DWORD_ERROR
+    //
+    MOVE    AAR                                         @test_word_shl_dword_result
+    MOVE    ABR                                         1
+    MOVE    ACR                                         1
+    MOVE    ADR                                         @test_word_shl_dword_value_low
+    CALL    WORD_SHL_DWORD
+    MOVE    ACR                                         test_word_shl_dword_result
+    JZ      TEST_WORD_SHL_DWORD_ERROR
+    //
+    MOVE    AAR                                         test_word_shl_dword_value_low
+    MOVE    ABR                                         2
+    SUB
+    JNZ     TEST_WORD_SHL_DWORD_ERROR
+    MOVE    ACR                                         test_word_shl_dword_value_high
+    JNZ     TEST_WORD_SHL_DWORD_ERROR
+    //
+    MOVE    AAR                                         @test_word_shl_dword_result
+    MOVE    ABR                                         1
+    MOVE    ACR                                         31
+    MOVE    ADR                                         @test_word_shl_dword_value_low
+    CALL    WORD_SHL_DWORD
+    MOVE    ACR                                         test_word_shl_dword_result
+    JZ      TEST_WORD_SHL_DWORD_ERROR
+    //
+    MOVE    AAR                                         test_word_shl_dword_value_low
+    MOVE    ABR                                         2147483648
+    SUB
+    JNZ     TEST_WORD_SHL_DWORD_ERROR
+    MOVE    ACR                                         test_word_shl_dword_value_high
+    JNZ     TEST_WORD_SHL_DWORD_ERROR
+    //
+    MOVE    AAR                                         @test_word_shl_dword_result
+    MOVE    ABR                                         1
+    MOVE    ACR                                         32
+    MOVE    ADR                                         @test_word_shl_dword_value_low
+    CALL    WORD_SHL_DWORD
+    MOVE    ACR                                         test_word_shl_dword_result
+    JZ      TEST_WORD_SHL_DWORD_ERROR
+    //
+    MOVE    ACR                                         test_word_shl_dword_value_low
+    JNZ     TEST_WORD_SHL_DWORD_ERROR
+    MOVE    AAR                                         test_word_shl_dword_value_high
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_WORD_SHL_DWORD_ERROR
+    //
+    MOVE    AAR                                         @test_word_shl_dword_result
+    MOVE    ABR                                         1
+    MOVE    ACR                                         63
+    MOVE    ADR                                         @test_word_shl_dword_value_low
+    CALL    WORD_SHL_DWORD
+    MOVE    ACR                                         test_word_shl_dword_result
+    JZ      TEST_WORD_SHL_DWORD_ERROR
+    //
+    MOVE    ACR                                         test_word_shl_dword_value_low
+    JNZ     TEST_WORD_SHL_DWORD_ERROR
+    MOVE    AAR                                         test_word_shl_dword_value_high
+    MOVE    ABR                                         2147483648
+    SUB
+    JNZ     TEST_WORD_SHL_DWORD_ERROR
+    //
+    MOVE    #test_word_shl_dword_result_offset          1
+    RET
+    //
+TEST_WORD_SHL_DWORD_ERROR:
+    MOVE    #test_word_shl_dword_result_offset          0
+END
+
+
+

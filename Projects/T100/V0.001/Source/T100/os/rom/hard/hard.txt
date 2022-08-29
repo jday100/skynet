@@ -1,0 +1,121 @@
+IMPORT  "cpu.txt"
+IMPORT  "memory.txt"
+IMPORT  "display.txt"
+IMPORT  "disk.txt"
+IMPORT  "keyboard.txt"
+IMPORT  "mouse.txt"
+
+
+PROC=HARD_IO_INIT
+    CMT     50070010
+    MOVE    hard_io_result_offset                       AAR
+    //
+    MOVE    hard_io_installed_flag                      1
+    //
+    MOVE    hard_io_order_address                       hard_device_order_address
+    MOVE    hard_io_data1_address                       hard_device_data1_address
+    MOVE    hard_io_data2_address                       hard_device_data2_address
+    MOVE    hard_io_data3_address                       hard_device_data3_address
+    //
+    MOVE    #hard_io_result_offset                      1
+END
+
+PROC=HARD_INIT
+    CMT     50010
+    MOVE    hard_result_offset                          AAR
+    //
+    MOVE    AAR                                         @hard_result
+    CALL    HARD_SCAN
+    MOVE    ACR                                         hard_result
+    JZ      HARD_INIT_ERROR
+    CMT     50020
+    MOVE    #hard_result_offset                         1
+    RET
+    //
+HARD_INIT_ERROR:
+    CMT     50030
+    MOVE    #hard_result_offset                         0
+    RET
+END
+
+PROC=HARD_SCAN
+    CMT     50040
+    MOVE    hard_scan_result_offset                     AAR
+    //
+    MOVE    hard_device_order_address                   0
+    MOVE    hard_device_data1_address                   1
+    MOVE    hard_device_data2_address                   2
+    MOVE    hard_device_data3_address                   3
+    //
+    MOVE    AAR                                         rom_device_max
+    MOVE    ABR                                         1
+    SUB
+    MOVE    CCR                                         ACR
+    //
+HARD_SCAN_NEXT:
+    CMT     50050
+    OUT     hard_device_order_address                   rom_device_mode_type
+    IN      hard_device_type_result                     hard_device_data1_address
+    MOVE    AAR                                         hard_device_type_result
+    MOVE    ABR                                         4
+    MUL
+    //
+    //DBG
+    MOVE    ABR                                         ACR
+    MOVE    AAR                                         @HARD_SCAN_ASSAY_DEVICES
+    ADD
+    MOVE    AAR                                         @hard_scan_result
+    JUMP    ACR
+HARD_SCAN_ASSAY_DEVICES:
+    NOP
+    NOP
+    NOP
+    NOP
+    CALL    CPU_CU_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    CPU_AU_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    HARD_IO_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    MEMORY_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    DISPLAY_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    DISK_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    KEYBOARD_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    MOUSE_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    //
+HARD_SCAN_ASSAY_DEVICES_END:
+    CMT     50060
+    MOVE    ACR                                         hard_scan_result
+    JZ      HARD_SCAN_ERROR
+    //
+    CMT     50070
+    MOVE    AAR                                         hard_device_order_address
+    MOVE    ABR                                         4
+    ADD
+    MOVE    hard_device_order_address                   ACR
+    //
+    MOVE    AAR                                         hard_device_data1_address
+    ADD
+    MOVE    hard_device_data1_address                   ACR
+    MOVE    AAR                                         hard_device_data2_address
+    ADD
+    MOVE    hard_device_data2_address                   ACR
+    MOVE    AAR                                         hard_device_data3_address
+    ADD
+    MOVE    hard_device_data3_address                   ACR
+    LOOP    HARD_SCAN_NEXT
+    //
+    CMT     50080
+    MOVE    #hard_scan_result_offset                    1
+    RET
+    //
+HARD_SCAN_ERROR:
+    CMT     50090
+    MOVE    #hard_scan_result_offset                    0
+    RET
+END

@@ -1,0 +1,20 @@
+一、安装CodeBlocks
+二、编译WxWidgets
+三、制作字体文件
+四、编译ROM
+五、编译引导程序
+六、编译操作系统
+七、制作虚拟磁盘文件
+1、建立虚拟磁盘文件
+	create vdisk stores\vdisk.vdk  1024
+2、建立分区
+	create part first boot 1 512
+3、格式化分区
+	format first build\boot.bin
+4、建立目录
+	mkdir first :system
+5、复制操作系统
+	copy build\init.bin first :system:init.bin
+	copy build\kernel.bin first :system:kernel.bin
+
+八、运行虚拟机

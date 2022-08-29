@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="T100VPCDebugFrame">
+		<size>600,800</size>
+		<id_arg>0</id_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxStaticBox" name="ID_STATICBOX1" variable="StaticBox1" member="yes">
+			<label>Memory：</label>
+			<pos>8,168</pos>
+			<size>584,376</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX3" variable="StaticBox3" member="yes">
+			<label>IO：</label>
+			<pos>8,544</pos>
+			<size>584,200</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX2" variable="StaticBox2" member="yes">
+			<label>CPU：</label>
+			<pos>8,0</pos>
+			<size>584,168</size>
+		</object>
+		<object class="wxButton" name="ID_BUTTON_STEP" variable="StepButton" member="yes">
+			<label>Step</label>
+			<pos>56,760</pos>
+			<handler function="OnStepButtonClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON_RUN" variable="RunButton" member="yes">
+			<label>Run</label>
+			<pos>472,760</pos>
+			<handler function="OnRunButtonClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX4" variable="StaticBox4" member="yes">
+			<label>CU：</label>
+			<pos>16,16</pos>
+			<size>168,144</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX5" variable="StaticBox5" member="yes">
+			<label>AU：</label>
+			<pos>192,16</pos>
+			<size>336,144</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX6" variable="StaticBox6" member="yes">
+			<label>ROM：</label>
+			<pos>16,184</pos>
+			<size>280,352</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX7" variable="StaticBox7" member="yes">
+			<label>RAM：</label>
+			<pos>304,184</pos>
+			<size>280,352</size>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+			<label>COR：</label>
+			<pos>24,32</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+			<label>CBR：</label>
+			<pos>24,64</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+			<label>CCR：</label>
+			<pos>24,96</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+			<label>AAR：</label>
+			<pos>200,32</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+			<label>ABR：</label>
+			<pos>200,64</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+			<label>ACR：</label>
+			<pos>200,96</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT8" variable="StaticText8" member="yes">
+			<label>ADR：</label>
+			<pos>200,128</pos>
+		</object>
+		<object class="wxListCtrl" name="ID_LISTCTRL_ROM" variable="ListCtrlRom" member="yes">
+			<pos>24,232</pos>
+			<size>264,296</size>
+			<style>wxLC_REPORT</style>
+		</object>
+		<object class="wxListCtrl" name="ID_LISTCTRL_RAM" variable="ListCtrlRam" member="yes">
+			<pos>312,232</pos>
+			<size>264,296</size>
+			<style>wxLC_REPORT</style>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX8" variable="StaticBox8" member="yes">
+			<label>Device：</label>
+			<pos>16,560</pos>
+			<size>184,176</size>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX9" variable="StaticBox9" member="yes">
+			<label>Block：</label>
+			<pos>208,560</pos>
+			<size>184,176</size>
+		</object>
+		<object class="wxListCtrl" name="ID_LISTCTRL_DEVICE" variable="ListCtrlDevice" member="yes">
+			<pos>24,576</pos>
+			<size>168,152</size>
+			<style>wxLC_REPORT</style>
+		</object>
+		<object class="wxListCtrl" name="ID_LISTCTRL_BLOCK" variable="ListCtrlBlock" member="yes">
+			<pos>216,608</pos>
+			<size>168,120</size>
+			<style>wxLC_REPORT</style>
+		</object>
+		<object class="wxStaticBox" name="ID_STATICBOX10" variable="StaticBox10" member="yes">
+			<label>Page：</label>
+			<pos>400,560</pos>
+			<size>184,176</size>
+		</object>
+		<object class="wxListCtrl" name="ID_LISTCTRL_PAGE" variable="ListCtrlPage" member="yes">
+			<pos>408,608</pos>
+			<size>168,120</size>
+			<style>wxLC_REPORT</style>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT9" variable="StaticText9" member="yes">
+			<label>ACF：</label>
+			<pos>368,32</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT10" variable="StaticText10" member="yes">
+			<label>AMF：</label>
+			<pos>368,64</pos>
+		</object>
+		<object class="wxStaticText" name="ID_STATICTEXT11" variable="StaticText11" member="yes">
+			<label>AOF：</label>
+			<pos>368,96</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_COR" variable="ComboBoxCOR" member="yes">
+			<pos>64,32</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_CBR" variable="ComboBoxCBR" member="yes">
+			<pos>64,64</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_CCR" variable="ComboBoxCCR" member="yes">
+			<pos>64,96</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_AAR" variable="ComboBoxAAR" member="yes">
+			<pos>240,32</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_ABR" variable="ComboBoxABR" member="yes">
+			<pos>240,64</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_ACR" variable="ComboBoxACR" member="yes">
+			<pos>240,96</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_ADR" variable="ComboBoxADR" member="yes">
+			<pos>240,128</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_ACF" variable="ComboBoxACF" member="yes">
+			<pos>408,32</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_AMF" variable="ComboBoxAMF" member="yes">
+			<pos>408,64</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_AOF" variable="ComboBoxAOF" member="yes">
+			<pos>408,96</pos>
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_ROM_BASE" variable="ComboBoxRomBase" member="yes">
+			<pos>24,200</pos>
+			<handler function="OnComboBoxRomBaseSelected" entry="EVT_COMBOBOX" />
+			<handler function="OnComboBoxRomBaseTextUpdated" entry="EVT_TEXT" />
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_RAM_BASE" variable="ComboBoxRamBase" member="yes">
+			<pos>312,200</pos>
+			<handler function="OnComboBoxRamBaseSelected" entry="EVT_COMBOBOX" />
+			<handler function="OnComboBoxRamBaseTextUpdated" entry="EVT_TEXT" />
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_BLOCK_BASE" variable="ComboBoxBlockBase" member="yes">
+			<pos>216,576</pos>
+			<handler function="OnComboBoxBlockBaseSelected" entry="EVT_COMBOBOX" />
+			<handler function="OnComboBoxBlockBaseTextUpdated" entry="EVT_TEXT" />
+		</object>
+		<object class="wxComboBox" name="ID_COMBOBOX_PAGE_BASE" variable="ComboBoxPageBase" member="yes">
+			<pos>408,576</pos>
+			<handler function="OnComboBoxPageBaseSelected" entry="EVT_COMBOBOX" />
+			<handler function="OnComboBoxPageBaseTextUpdated" entry="EVT_TEXT" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON_NEXT" variable="NextButton" member="yes">
+			<label>Next</label>
+			<pos>192,760</pos>
+			<handler function="OnNextButtonClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxButton" name="ID_BUTTON_PAUSE" variable="PauseButton" member="yes">
+			<label>Pause</label>
+			<pos>336,760</pos>
+			<handler function="OnPauseButtonClick" entry="EVT_BUTTON" />
+		</object>
+		<object class="wxMenuBar" variable="MenuBar" member="yes">
+			<object class="wxMenu" variable="Menu1" member="yes">
+				<label>Setup</label>
+				<object class="wxMenuItem" name="ID_MENUITEM_LOG_ON" variable="MenuLogOn" member="yes">
+					<label>Log ON</label>
+					<handler function="OnMenuLogOnSelected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM_LOG_OFF" variable="MenuLogOff" member="yes">
+					<label>Log OFF</label>
+					<handler function="OnMenuLogOffSelected" entry="EVT_MENU" />
+					<radio>1</radio>
+				</object>
+			</object>
+		</object>
+	</object>
+</wxsmith>

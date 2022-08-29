@@ -1,0 +1,305 @@
+PROC=INT_INIT
+    CMT     100010
+    MOVE    int_result_offset                           AAR
+    //
+    MOVE    int000[0]                                   0
+    MOVE    int000[1]                                   @INT000
+    //
+    MOVE    int001[0]                                   0
+    MOVE    int001[1]                                   @INT001
+    //
+    MOVE    int002[0]                                   0
+    MOVE    int002[1]                                   @INT002
+    //
+    MOVE    int003[0]                                   0
+    MOVE    int003[1]                                   @INT003
+    //
+    //
+    MOVE    int064[0]                                   0
+    MOVE    int064[1]                                   @INT064
+    //
+    MOVE    int065[0]                                   0
+    MOVE    int065[1]                                   @INT065
+    //
+    MOVE    int066[0]                                   0
+    MOVE    int066[1]                                   @INT066
+    //
+    MOVE    int067[0]                                   0
+    MOVE    int067[1]                                   @INT067
+    //
+    MOVE    int068[0]                                   0
+    MOVE    int068[1]                                   @INT068
+    //
+    MOVE    int069[0]                                   0
+    MOVE    int069[1]                                   @INT069
+    //
+    MOVE    int070[0]                                   0
+    MOVE    int070[1]                                   @INT070
+    //
+    MOVE    int071[0]                                   0
+    MOVE    int071[1]                                   @INT071
+    //
+    MOVE    int072[0]                                   0
+    MOVE    int072[1]                                   @INT072
+    //
+    MOVE    int073[0]                                   0
+    MOVE    int073[1]                                   @INT073
+    //
+    MOVE    int074[0]                                   0
+    MOVE    int074[1]                                   @INT074
+    //
+    MOVE    int075[0]                                   0
+    MOVE    int075[1]                                   @INT075
+    //
+    MOVE    int076[0]                                   0
+    MOVE    int076[1]                                   @INT076
+    //
+    MOVE    int077[0]                                   0
+    MOVE    int077[1]                                   @INT077
+    //
+    MOVE    int078[0]                                   0
+    MOVE    int078[1]                                   @INT078
+    //
+    //
+    MOVE    int128[0]                                   0
+    MOVE    int128[1]                                   @INT128
+    //
+    UNLOCK
+    CMT     100020
+    MOVE    #int_result_offset                          1
+    RET
+INT_INIT_ERROR:
+    CMT     100030
+    MOVE    #int_result_offset                          0
+    RET
+END
+
+CODE
+//
+INT000:
+    CMT     101010
+    NOP
+    IRET
+//
+//
+INT001:
+    CMT     102010
+    NOP
+    IRET
+//
+//
+INT002:
+    CMT     103010
+    NOP
+    IRET
+//
+//
+INT003:
+    CMT     104010
+    NOP
+    IRET
+//
+//
+INT064:
+    CMT     165010
+    NOP
+    IRET
+//
+//
+INT065:
+    CMT     166010
+    NOP
+    IRET
+//
+//
+INT066:
+    CMT     167010
+    NOP
+    IRET
+//
+//
+INT067:
+    CMT     168010
+    NOP
+    NOP
+    IRET
+//
+//
+INT068:
+    CMT     169010
+    NOP
+    MOVE    int068_result_offset                        AAR
+    MOVE    AAR                                         @int068_result
+    MOVE    ABR                                         ACR
+    CALL    DISPLAY_PRINT
+    MOVE    ACR                                         int068_result
+    MOVE    #int068_result_offset                       ACR
+    IRET
+//
+//
+//Mode
+//1     TYPE
+//2     SET
+//3     GET
+//4     BLOCK
+//5     FORMAT
+//6     CLEAR
+//7     READ
+//8     WRITE
+INT069:
+    LOCK
+    CMT     170010
+    MOVE    int069_disk_result_offset                   AAR
+    MOVE    int069_abr                                  ABR
+    MOVE    int069_acr                                  ACR
+    MOVE    int069_adr                                  ADR
+    //
+    MOVE    ACR                                         ABR
+    JZ      INT069_ERROR
+    MOVE    AAR                                         8
+    SUB
+    MOVE    ACR                                         AMF
+    JNZ     INT069_ERROR
+    MOVE    AAR                                         2
+    MUL
+    MOVE    ABR                                         ACR
+    MOVE    AAR                                         @INT069_JUMP
+    ADD
+    JUMP    ACR
+INT069_JUMP:
+    NOP
+    NOP
+    JUMP    INT069_TYPE
+    JUMP    INT069_SET
+    JUMP    INT069_GET
+    JUMP    INT069_BLOCK
+    JUMP    INT069_FORMAT
+    JUMP    INT069_CLEAR
+    JUMP    INT069_READ
+    JUMP    INT069_WRITE
+    NOP
+INT069_TYPE:
+INT069_SET:
+INT069_GET:
+INT069_BLOCK:
+INT069_FORMAT:
+INT069_CLEAR:
+INT069_READ:
+    //
+    //result_offset
+    //type
+    //buffer_offset
+    //index_offset
+    //low_offset
+    //high_offset
+    //
+    MOVE    int069_disk_buffer_offset                   int069_acr
+    MOVE    int069_disk_location_index_offset           int069_adr
+    MOVE    AAR                                         int069_adr
+    MOVE    ABR                                         1
+    ADD
+    MOVE    int069_disk_location_low_offset             ACR
+    MOVE    AAR                                         ACR
+    ADD
+    MOVE    int069_disk_location_high_offset            ACR
+    //
+    CMT     170020
+    //DBG
+    MOVE    AAR                                         #int069_disk_buffer_offset
+    MOVE    AAR                                         #int069_disk_location_low_offset
+    MOVE    AAR                                         #int069_disk_location_high_offset
+    MOVE    AAR                                         #int069_disk_location_index_offset
+    //
+    //DBG
+    OUT     disk_data1_address                          #int069_disk_location_low_offset
+    OUT     disk_data2_address                          #int069_disk_location_high_offset
+    OUT     disk_data3_address                          #int069_disk_location_index_offset
+    OUT     disk_order_address                          disk_mode_read
+    //
+    MOVE    int069_result                               1
+    MOVE    ACR                                         int069_result
+    JZ      INT069_ERROR
+    //
+    MOVE    AAR                                         @int069_result
+    MOVE    ABR                                         disk_block_offset
+    MOVE    ACR                                         int069_disk_buffer_offset
+    MOVE    ADR                                         disk_block_size
+    CALL    IO_COPY
+    MOVE    ACR                                         int069_result
+    JZ      INT069_ERROR
+    //
+    MOVE    #int069_disk_result_offset                  1
+    UNLOCK
+    IRET
+    //
+INT069_WRITE:
+    NOP
+INT069_ERROR:
+    MOVE    #int069_disk_result_offset                  0
+    CMT     170030
+    UNLOCK
+    IRET
+//
+//
+INT070:
+    CMT     171010
+    NOP
+
+
+    IRET
+//
+//
+INT071:
+    CMT     172010
+    NOP
+    IRET
+//
+//
+INT072:
+    CMT     173010
+    NOP
+    IRET
+//
+//
+INT073:
+    CMT     174010
+    NOP
+    IRET
+//
+//
+INT074:
+    CMT     175010
+    NOP
+    IRET
+//
+//
+INT075:
+    CMT     176010
+    NOP
+    IRET
+//
+//
+INT076:
+    CMT     177010
+    NOP
+    IRET
+//
+//
+INT077:
+    CMT     178010
+    NOP
+    IRET
+//
+//
+INT078:
+    CMT     179010
+    NOP
+    IRET
+//
+//
+INT128:
+    CMT     229010
+    NOP
+    IRET
+//
+END

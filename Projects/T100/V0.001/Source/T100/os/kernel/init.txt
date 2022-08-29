@@ -1,0 +1,335 @@
+IMPORT  "share.txt"
+IMPORT  "fs\fs.txt"
+IMPORT  "file\exe_new.txt"
+IMPORT  "file\exe_test.txt"
+
+IMPORT  "lib\pool.txt"
+IMPORT  "test\test_pool.txt"
+
+//
+//init          40010
+//
+//fs            40010010
+//table         40020010
+//item          40030010
+//path          40040010
+//file          40050010
+//exe           40060010
+//
+
+MODE    REAL    TINY
+
+DATA
+    init_result                                                 INTEGER
+    init_message                                                STRING      "initing..."
+    init_error_message                                          STRING      "init error!"
+    //
+    init_part_location_low                                      INTEGER
+    init_part_location_high                                     INTEGER
+    init_part_length_low                                        INTEGER
+    init_part_length_high                                       INTEGER
+    //
+    init_block_index_limit                                      INTEGER     16
+    init_disk_block_length                                      INTEGER     1024
+    int069_disk_read                                            INTEGER     7
+    //
+    init_kernel_file                                            STRING      ":system:kernel.bin"
+    //
+    init_show_info_result                                       INTEGER
+    init_show_info_result_offset                                INTEGER
+    //
+    init_get_part_info_result                                   INTEGER
+    init_get_part_info_result_offset                            INTEGER
+    init_get_part_info_location_low_offset                      INTEGER     1114108
+    init_get_part_info_location_high_offset                     INTEGER     1114109
+    init_get_part_info_length_low_offset                        INTEGER     1114110
+    init_get_part_info_length_high_offset                       INTEGER     1114111
+    //
+    init_load_kernel_result                                     INTEGER
+    init_load_kernel_result_offset                              INTEGER
+    //
+    init_load_kernel_location_low                               INTEGER
+    init_load_kernel_location_high                              INTEGER
+    init_load_kernel_index                                      INTEGER
+    init_load_kernel_offset                                     INTEGER
+    init_load_kernel_item_location_low                          INTEGER
+    init_load_kernel_item_location_high                         INTEGER
+    init_load_kernel_item_length_low                            INTEGER
+    init_load_kernel_item_length_high                           INTEGER
+    init_load_kernel_item_properties                            INTEGER[2]
+    //
+    init_file_load_result                                       INTEGER
+    init_file_load_result_offset                                INTEGER
+    //
+    init_file_load_handle_offset                                INTEGER
+    init_file_load_buffer_offset                                INTEGER     1114112
+    //
+    init_file_load_item_location_low                            INTEGER
+    init_file_load_item_location_high                           INTEGER
+    init_file_load_location_temp_low                            INTEGER
+    init_file_load_location_temp_high                           INTEGER
+    //
+    init_print_result                                           INTEGER
+    init_print_result_offset                                    INTEGER
+    //
+    init_exe_load_result                                        INTEGER
+    init_exe_load_result_offset                                 INTEGER
+    //
+    init_exe_load_handle_offset                                 INTEGER
+    init_exe_load_location_low                                  INTEGER
+    init_exe_load_location_high                                 INTEGER
+    //
+
+END
+
+CODE
+    CMT     40010
+    MOVE    AAR                                                 @init_result
+    CALL    INIT_SHOW_INFO
+    MOVE    ACR                                                 init_result
+    JZ      INIT_ERROR
+    //
+    CMT     40020
+    MOVE    AAR                                                 @init_result
+    CALL    INIT_GET_PART_INFO
+    MOVE    ACR                                                 init_result
+    JZ      INIT_ERROR
+    //
+    //
+    MOVE    AAR                                                 @init_result
+    CALL    TEST_POOL
+    MOVE    ACR                                                 init_result
+    JZ      INIT_ERROR
+    //
+    //
+    CMT     40030
+    //DBG
+    MOVE    AAR                                                 @init_result
+    CALL    INIT_LOAD_KERNEL
+    MOVE    ACR                                                 init_result
+    JZ      INIT_ERROR
+    //
+    CMT     40040
+    JUMP    {init_file_load_buffer_offset:0}
+    //
+INIT_ERROR:
+    CMT     40050
+    HALT
+END
+
+PROC=INIT_SHOW_INFO
+    CMT     40110
+    MOVE    init_show_info_result_offset                        AAR
+    MOVE    AAR                                                 @init_show_info_result
+    MOVE    ABR                                                 init_message
+    CALL    INIT_PRINT
+    MOVE    ACR                                                 init_show_info_result
+    JZ      INIT_SHOW_INFO_ERROR
+    //
+    CMT     40120
+    MOVE    #init_show_info_result_offset                       1
+    RET
+INIT_SHOW_INFO_ERROR:
+    CMT     40130
+    MOVE    #init_show_info_result_offset                       0
+END
+
+PROC=INIT_GET_PART_INFO
+    CMT     40210
+    MOVE    init_get_part_info_result_offset                    AAR
+    //
+    MOVE    init_part_location_low                              {0:init_get_part_info_location_low_offset}
+    MOVE    init_part_location_high                             {0:init_get_part_info_location_high_offset}
+    MOVE    init_part_length_low                                {0:init_get_part_info_length_low_offset}
+    MOVE    init_part_length_high                               {0:init_get_part_info_length_high_offset}
+    //
+    MOVE    ACR                                                 init_part_location_low
+    JZ      INIT_GET_PART_INFO_ERROR
+    //
+    CMT     40220
+    MOVE    AAR                                                 init_part_length_low
+    MOVE    ABR                                                 4
+    SUB
+    MOVE    ACR                                                 AMF
+    JNZ     INIT_GET_PART_INFO_ERROR
+    //
+    MOVE    boot_part_location_low                              init_part_location_low
+    MOVE    boot_part_location_high                             init_part_location_high
+    MOVE    boot_part_length_low                                init_part_length_low
+    MOVE    boot_part_length_high                               init_part_length_high
+    //
+    CMT     40230
+    MOVE    #init_get_part_info_result_offset                   1
+    RET
+INIT_GET_PART_INFO_ERROR:
+    CMT     40240
+    MOVE    #init_get_part_info_result_offset                   0
+END
+
+PROC=INIT_LOAD_KERNEL
+    CMT     40310
+    MOVE    init_load_kernel_result_offset                      AAR
+    //
+    MOVE    AAR                                                 @init_load_kernel_result
+    MOVE    ABR                                                 @init_part_location_low
+    MOVE    ACR                                                 @init_part_length_low
+    CALL    FS_PART_INIT
+    MOVE    ACR                                                 init_load_kernel_result
+    JZ      INIT_LOAD_KERNEL_ERROR
+    //
+    CMT     40320
+    MOVE    AAR                                                 @init_load_kernel_result
+    MOVE    ABR                                                 init_kernel_file
+    MOVE    ACR                                                 @init_load_kernel_location_low
+    CALL    FS_FILE_OPEN
+    MOVE    ACR                                                 init_load_kernel_result
+    JZ      INIT_LOAD_KERNEL_ERROR
+    //
+    CMT     40330
+    //MOVE    AAR                                                 @init_load_kernel_result
+    //MOVE    ABR                                                 @init_load_kernel_location_low
+    //CALL    INIT_FILE_LOAD
+    //MOVE    ACR                                                 init_load_kernel_result
+    //JZ      INIT_LOAD_KERNEL_ERROR
+    //
+    //DBG
+    MOVE    AAR                                                 @init_load_kernel_result
+    MOVE    ABR                                                 @init_load_kernel_location_low
+    CALL    INIT_EXE_LOAD
+    MOVE    ACR                                                 init_load_kernel_result
+    JZ      INIT_LOAD_KERNEL_ERROR
+    //
+    CMT     40340
+    MOVE    AAR                                                 @init_load_kernel_result
+    MOVE    ABR                                                 @init_load_kernel_location_low
+    CALL    FS_FILE_CLOSE
+    MOVE    ACR                                                 init_load_kernel_result
+    JZ      INIT_LOAD_KERNEL_ERROR
+    //
+    CMT     40350
+    MOVE    #init_load_kernel_result_offset                     1
+    RET
+INIT_LOAD_KERNEL_ERROR:
+    CMT     40360
+    MOVE    #init_load_kernel_result_offset                     0
+END
+
+PROC=INIT_FILE_LOAD
+    CMT     40410
+    MOVE    init_file_load_result_offset                        AAR
+    MOVE    init_file_load_handle_offset                        ABR
+    //
+    MOVE    AAR                                                 ABR
+    MOVE    ABR                                                 4
+    ADD
+    MOVE    init_file_load_item_location_low                    #ACR
+    //
+    MOVE    AAR                                                 ACR
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    init_file_load_item_location_high                   #ACR
+    //
+    MOVE    AAR                                                 @init_file_load_result
+    MOVE    ABR                                                 @init_file_load_item_location_low
+    CALL    ITEM_EQUAL_ISEND
+    MOVE    ACR                                                 init_file_load_result
+    JNZ     INIT_FILE_LOAD_ERROR
+    //
+INIT_FILE_LOAD_NEXT:
+    CMT     40420
+    MOVE    AAR                                                 @init_file_load_result
+    MOVE    ABR                                                 init_file_load_item_location_low
+    MOVE    ACR                                                 init_file_load_item_location_high
+    MOVE    ADR                                                 init_file_load_buffer_offset
+    CALL    FILE_READ
+    MOVE    ACR                                                 init_file_load_result
+    JZ      INIT_FILE_LOAD_ERROR
+    //
+    CMT     40430
+    MOVE    AAR                                                 @init_file_load_result
+    MOVE    ABR                                                 @init_file_load_item_location_low
+    MOVE    ACR                                                 @init_file_load_location_temp_low
+    CALL    TABLE_SEARCH
+    MOVE    ACR                                                 init_file_load_result
+    JZ      INIT_FILE_LOAD_ERROR
+    //
+    CMT     40440
+    MOVE    AAR                                                 @init_file_load_result
+    MOVE    ABR                                                 @init_file_load_location_temp_low
+    CALL    ITEM_EQUAL_ISEND
+    MOVE    ACR                                                 init_file_load_result
+    JNZ     INIT_FILE_LOAD_END
+    //
+    CMT     40450
+    MOVE    init_file_load_item_location_low                    init_file_load_location_temp_low
+    MOVE    init_file_load_item_location_high                   init_file_load_location_temp_high
+    //
+    JUMP    INIT_FILE_LOAD_NEXT
+    //
+INIT_FILE_LOAD_END:
+    CMT     40470
+    MOVE    #init_file_load_result_offset                       1
+    RET
+INIT_FILE_LOAD_ERROR:
+    CMT     40480
+    MOVE    #init_file_load_result_offset                       0
+END
+
+PROC=INIT_PRINT
+    CMT     40510
+    MOVE    init_print_result_offset                            AAR
+    MOVE    AAR                                                 @{CBR:@init_print_result}
+    MOVE    ACR                                                 @{CBR:ABR}
+    MOVE    ABR                                                 1
+    INT     68
+    MOVE    ACR                                                 init_print_result
+    JZ      INIT_PRINT_ERROR
+    //
+    CMT     40520
+    MOVE    #init_print_result_offset                           1
+    RET
+INIT_PRINT_ERROR:
+    CMT     40530
+    MOVE    #init_print_result_offset                           0
+END
+
+PROC=INIT_EXE_LOAD
+    CMT     40610
+    MOVE    init_exe_load_result_offset                         AAR
+    MOVE    init_exe_load_handle_offset                         ABR
+    //
+    MOVE    AAR                                                 init_exe_load_handle_offset
+    MOVE    ABR                                                 4
+    ADD
+    MOVE    init_exe_load_location_low                          #ACR
+    //
+    MOVE    AAR                                                 ACR
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    init_exe_load_location_high                         #ACR
+    //
+    MOVE    AAR                                                 @init_exe_load_result
+    MOVE    ABR                                                 @init_exe_load_location_low
+    CALL    ITEM_EQUAL_ISEND
+    MOVE    ACR                                                 init_exe_load_result
+    JNZ     INIT_EXE_LOAD_ERROR
+    //
+    CMT     40620
+    MOVE    AAR                                                 @init_exe_load_result
+    MOVE    ABR                                                 init_exe_load_handle_offset
+    CALL    EXE_LOAD
+    MOVE    ACR                                                 init_exe_load_result
+    JZ      INIT_EXE_LOAD_ERROR
+    //
+    MOVE    AAR                                                 @init_exe_load_result
+    CALL    EXE_LOAD_TEST
+    MOVE    ACR                                                 init_exe_load_result
+    JZ      INIT_EXE_LOAD_ERROR
+    //
+    CMT     40630
+    MOVE    #init_exe_load_result_offset                        1
+    RET
+INIT_EXE_LOAD_ERROR:
+    CMT     40640
+    MOVE    #init_exe_load_result_offset                        0
+END

@@ -1,0 +1,10 @@
+MODE	REAL
+
+DATA
+
+END
+
+CODE
+	HALT
+END 
+

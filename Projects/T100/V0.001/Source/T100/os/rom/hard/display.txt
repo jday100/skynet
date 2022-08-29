@@ -1,0 +1,44 @@
+PROC=DISPLAY_INIT
+    CMT     50030010
+    MOVE    display_result_offset                       AAR
+    //
+    MOVE    display_order_address                       hard_device_order_address
+    MOVE    display_data1_address                       hard_device_data1_address
+    MOVE    display_data2_address                       hard_device_data2_address
+    MOVE    display_data3_address                       hard_device_data3_address
+    //
+    MOVE    hard_display_installed_flag                 1
+    //
+    MOVE    #display_result_offset                      1
+END
+
+PROC=DISPLAY_PUT
+    CMT     50030020
+    MOVE    display_put_result_offset                   AAR
+    //
+    OUT     display_data3_address                       ABR
+    OUT     display_order_address                       display_mode_write
+    //
+    MOVE    #display_put_result_offset                  1
+END
+
+PROC=DISPLAY_PRINT
+    CMT     50030030
+    MOVE    display_print_result_offset                 AAR
+    MOVE    display_print_target_offset                 ABR
+    //
+    MOVE    CCR                                         #display_print_target_offset
+DISPLAY_PRINT_NEXT:
+    CMT     50030040
+    MOVE    AAR                                         display_print_target_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    display_print_target_offset                 ACR
+    //
+    OUT     display_data3_address                       #ACR
+    OUT     display_order_address                       display_mode_write
+    LOOP    DISPLAY_PRINT_NEXT
+    //
+    CMT     50030050
+    MOVE    #display_print_result_offset                1
+END

@@ -1,0 +1,28 @@
+PROC=CPU_CU_INIT
+    CMT     50010010
+    MOVE    cpu_cu_result_offset                        AAR
+    //
+    MOVE    cpu_cu_order_address                        hard_device_order_address
+    MOVE    cpu_cu_data1_address                        hard_device_data1_address
+    MOVE    cpu_cu_data2_address                        hard_device_data2_address
+    MOVE    cpu_cu_data3_address                        hard_device_data3_address
+    //
+    MOVE    hard_cu_installed_flag                      1
+    //
+    MOVE    #cpu_cu_result_offset                       1
+END
+
+PROC=CPU_AU_INIT
+    CMT     50010020
+    MOVE    cpu_au_result_offset                        AAR
+    //
+    MOVE    cpu_au_order_address                        hard_device_order_address
+    MOVE    cpu_au_data1_address                        hard_device_data1_address
+    MOVE    cpu_au_data2_address                        hard_device_data2_address
+    MOVE    cpu_au_data3_address                        hard_device_data3_address
+    //
+    MOVE    hard_au_installed_flag                      1
+    //
+    MOVE    #cpu_au_result_offset                       1
+END
+

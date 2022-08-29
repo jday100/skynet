@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Lib" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../build/T100Lib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="-t -l lib.a source.txt target.bin" />
+				<Compiler>
+					<Add option="-std=c++17" />
+					<Add option="-std=c17" />
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="test" />
+					<Add directory="include/cmdline" />
+				</Compiler>
+				<Linker>
+					<Add library="dl" />
+					<Add library="iconv" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Lib" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="test" />
+					<Add directory="include/cmdline" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Lib">
+				<Option output="../build/T100Lib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-std=c++17" />
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="test" />
+					<Add directory="include/cmdline" />
+				</Compiler>
+				<Linker>
+					<Add library="dl" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/T100App.h" />
+		<Unit filename="include/T100AppSetup.h" />
+		<Unit filename="include/T100Buffer.h" />
+		<Unit filename="include/T100Callback.h" />
+		<Unit filename="include/T100CallbackCommon.h" />
+		<Unit filename="include/T100CapacityTools.h" />
+		<Unit filename="include/T100Clock.h" />
+		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/T100Console.h" />
+		<Unit filename="include/T100ConsoleBase.h" />
+		<Unit filename="include/T100ConsoleCommon.h" />
+		<Unit filename="include/T100ConsoleLinux.h" />
+		<Unit filename="include/T100ConsoleWindows.h" />
+		<Unit filename="include/T100DataStructure.h" />
+		<Unit filename="include/T100DataTypes.h" />
+		<Unit filename="include/T100DirectoryEntry.h" />
+		<Unit filename="include/T100DiskCommon.h" />
+		<Unit filename="include/T100File.h" />
+		<Unit filename="include/T100FileCommon.h" />
+		<Unit filename="include/T100FileReader.h" />
+		<Unit filename="include/T100FileTools.h" />
+		<Unit filename="include/T100FileWriter.h" />
+		<Unit filename="include/T100Folder.h" />
+		<Unit filename="include/T100GraphicCommon.h" />
+		<Unit filename="include/T100Help.h" />
+		<Unit filename="include/T100Hint.h" />
+		<Unit filename="include/T100Leak.h" />
+		<Unit filename="include/T100Library.h" />
+		<Unit filename="include/T100Log.h" />
+		<Unit filename="include/T100LogAppender.h" />
+		<Unit filename="include/T100LogAppenderFile.h" />
+		<Unit filename="include/T100LogCommon.h" />
+		<Unit filename="include/T100PathTools.h" />
+		<Unit filename="include/T100Reader.h" />
+		<Unit filename="include/T100Scanner.h" />
+		<Unit filename="include/T100Service.h" />
+		<Unit filename="include/T100ServiceTank.h" />
+		<Unit filename="include/T100Setup.h" />
+		<Unit filename="include/T100Stream.h" />
+		<Unit filename="include/T100String.h" />
+		<Unit filename="include/T100String32.h" />
+		<Unit filename="include/T100String32Tools.h" />
+		<Unit filename="include/T100StringEqual.h" />
+		<Unit filename="include/T100StringHash.h" />
+		<Unit filename="include/T100StringTools.h" />
+		<Unit filename="include/T100StringTypes.h" />
+		<Unit filename="include/T100Test.h" />
+		<Unit filename="include/T100TestTools.h" />
+		<Unit filename="include/T100TextFileReader.h" />
+		<Unit filename="include/T100TextFileWriter.h" />
+		<Unit filename="include/T100Thread.h" />
+		<Unit filename="include/T100Token.h" />
+		<Unit filename="include/T100Unicode.h" />
+		<Unit filename="include/T100UnicodeCommon.h" />
+		<Unit filename="include/T100Writer.h" />
+		<Unit filename="include/cmdline/T100CmdLineCharScanner.h" />
+		<Unit filename="include/cmdline/T100CmdLineCharToken.h" />
+		<Unit filename="include/cmdline/T100CmdLineCommon.h" />
+		<Unit filename="include/cmdline/T100CmdLineExec.h" />
+		<Unit filename="include/cmdline/T100CmdLineInfo.h" />
+		<Unit filename="include/cmdline/T100CmdLineOption.h" />
+		<Unit filename="include/cmdline/T100CmdLineParam.h" />
+		<Unit filename="include/cmdline/T100CmdLineParser.h" />
+		<Unit filename="include/cmdline/T100CmdLineResult.h" />
+		<Unit filename="include/cmdline/T100CmdLineStringScanner.h" />
+		<Unit filename="include/cmdline/T100CmdLineStringToken.h" />
+		<Unit filename="include/cmdline/T100CmdLineSwitch.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/T100App.cpp" />
+		<Unit filename="src/T100AppSetup.cpp" />
+		<Unit filename="src/T100Callback.cpp" />
+		<Unit filename="src/T100CapacityTools.cpp" />
+		<Unit filename="src/T100Clock.cpp" />
+		<Unit filename="src/T100Console.cpp" />
+		<Unit filename="src/T100ConsoleBase.cpp" />
+		<Unit filename="src/T100ConsoleLinux.cpp" />
+		<Unit filename="src/T100ConsoleWindows.cpp" />
+		<Unit filename="src/T100DirectoryEntry.cpp" />
+		<Unit filename="src/T100File.cpp" />
+		<Unit filename="src/T100FileReader.cpp" />
+		<Unit filename="src/T100FileTools.cpp" />
+		<Unit filename="src/T100FileWriter.cpp" />
+		<Unit filename="src/T100Folder.cpp" />
+		<Unit filename="src/T100Help.cpp" />
+		<Unit filename="src/T100Hint.cpp" />
+		<Unit filename="src/T100Leak.cpp" />
+		<Unit filename="src/T100Library.cpp" />
+		<Unit filename="src/T100Log.cpp" />
+		<Unit filename="src/T100LogAppender.cpp" />
+		<Unit filename="src/T100LogAppenderFile.cpp" />
+		<Unit filename="src/T100PathTools.cpp" />
+		<Unit filename="src/T100Reader.cpp" />
+		<Unit filename="src/T100Scanner.cpp" />
+		<Unit filename="src/T100Service.cpp" />
+		<Unit filename="src/T100ServiceTank.cpp" />
+		<Unit filename="src/T100Setup.cpp" />
+		<Unit filename="src/T100Stream.cpp" />
+		<Unit filename="src/T100String.cpp" />
+		<Unit filename="src/T100String32.cpp" />
+		<Unit filename="src/T100String32Tools.cpp" />
+		<Unit filename="src/T100StringEqual.cpp" />
+		<Unit filename="src/T100StringHash.cpp" />
+		<Unit filename="src/T100StringTools.cpp" />
+		<Unit filename="src/T100Test.cpp" />
+		<Unit filename="src/T100TestTools.cpp" />
+		<Unit filename="src/T100TextFileReader.cpp" />
+		<Unit filename="src/T100TextFileWriter.cpp" />
+		<Unit filename="src/T100Thread.cpp" />
+		<Unit filename="src/T100Token.cpp" />
+		<Unit filename="src/T100Unicode.cpp" />
+		<Unit filename="src/T100Writer.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineCharScanner.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineCharToken.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineExec.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineInfo.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineOption.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineParam.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineParser.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineResult.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineStringScanner.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineStringToken.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineSwitch.cpp" />
+		<Unit filename="test/T100CmdLineTest.cpp" />
+		<Unit filename="test/T100CmdLineTest.h" />
+		<Unit filename="test/T100ConsoleTest.cpp" />
+		<Unit filename="test/T100ConsoleTest.h" />
+		<Unit filename="test/T100FileTest.cpp" />
+		<Unit filename="test/T100FileTest.h" />
+		<Unit filename="test/T100LibTest.cpp" />
+		<Unit filename="test/T100LibTest.h" />
+		<Unit filename="test/T100LibTestHint.cpp" />
+		<Unit filename="test/T100LibTestHint.h" />
+		<Unit filename="test/T100LogTest.cpp" />
+		<Unit filename="test/T100LogTest.h" />
+		<Unit filename="test/T100StringTest.cpp" />
+		<Unit filename="test/T100StringTest.h" />
+		<Unit filename="test/T100TestApp.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="test/T100TestApp.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,178 @@
+
+DATA
+    table_init_result                                       INTEGER
+    table_init_result_offset                                INTEGER
+    table_init_location_low_offset                          INTEGER
+    table_init_location_high_offset                         INTEGER
+    table_init_length_low_offset                            INTEGER
+    table_init_length_high_offset                           INTEGER
+    //
+    table_init_location_low                                 INTEGER
+    table_init_location_high                                INTEGER
+    table_init_length_low                                   INTEGER
+    table_init_length_high                                  INTEGER
+    //
+    table_init_middle_low                                   INTEGER
+    table_init_middle_high                                  INTEGER
+    table_init_value_low                                    INTEGER
+    table_init_value_high                                   INTEGER
+    //
+    table_search_result                                     INTEGER
+    table_search_result_offset                              INTEGER
+    //
+    table_search_location_low_offset                        INTEGER
+    table_search_location_high_offset                       INTEGER
+    table_search_value_location_low_offset                  INTEGER
+    table_search_value_location_high_offset                 INTEGER
+    //
+    table_search_location_low                               INTEGER
+    table_search_location_high                              INTEGER
+    table_search_middle_low                                 INTEGER
+    table_search_middle_high                                INTEGER
+    table_search_residue_low                                INTEGER
+    table_search_residue_high                               INTEGER
+    //
+    table_search_value_low                                  INTEGER
+    table_search_value_high                                 INTEGER
+    table_search_index                                      INTEGER
+    table_search_offset                                     INTEGER
+
+
+END
+
+DATA
+    table_disk_buffer                                       INTEGER[1024]
+END
+
+PROC=TABLE_INIT
+    CMT     30020010
+    MOVE    table_init_result_offset                        AAR
+    MOVE    table_init_location_low_offset                  ABR
+    MOVE    table_init_length_low_offset                    ACR
+    //
+    MOVE    AAR                                             table_init_location_low_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    table_init_location_high_offset                 ACR
+    //
+    MOVE    fs_table_begin_low                              1
+    MOVE    fs_table_begin_high                             0
+    MOVE    AAR                                             @table_init_result
+    MOVE    ABR                                             table_init_location_low_offset
+    MOVE    ACR                                             8192
+    MOVE    ADR                                             @table_init_middle_low
+    CALL    DWORD_WORD_DIV
+    MOVE    ACR                                             table_init_result
+    JZ      TABLE_INIT_ERROR
+    //
+    CMT     30020020
+    MOVE    AAR                                             @table_init_result
+    MOVE    ABR                                             @fs_table_begin_low
+    MOVE    ACR                                             @table_init_middle_low
+    MOVE    ADR                                             @table_init_value_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                             table_init_result
+    JZ      TABLE_INIT_ERROR
+    //
+    CMT     30020030
+    MOVE    fs_table_end_low                                table_init_value_low
+    MOVE    fs_table_end_high                               table_init_value_high
+    //
+    MOVE    #table_init_result_offset                       1
+    RET
+TABLE_INIT_ERROR:
+    CMT     30020040
+    MOVE    #table_init_result_offset                       0
+END
+
+//
+//result_offset
+//location_low_offset
+//value_low_offset
+//
+PROC=TABLE_SEARCH
+    MOVE    table_search_result_offset                      AAR
+    MOVE    table_search_location_low_offset                ABR
+    MOVE    table_search_value_location_low_offset          ACR
+    //
+    MOVE    AAR                                             table_search_location_low_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    table_search_location_high_offset               ACR
+    //
+    MOVE    AAR                                             table_search_value_location_low_offset
+    ADD
+    MOVE    table_search_value_location_high_offset         ACR
+    //
+    MOVE    table_search_location_low                       #table_search_location_low_offset
+    MOVE    table_search_location_high                      #table_search_location_high_offset
+    //
+    MOVE    AAR                                             @table_search_result
+    MOVE    ABR                                             table_search_location_low_offset
+    MOVE    ACR                                             8192
+    MOVE    ADR                                             @table_search_middle_low
+    CALL    DWORD_WORD_DIV2
+    MOVE    ACR                                             table_search_result
+    JZ      TABLE_SEARCH_ERROR
+    //
+    MOVE    AAR                                             @table_search_result
+    MOVE    ABR                                             @table_search_middle_low
+    MOVE    ACR                                             @fs_table_begin_low
+    MOVE    ADR                                             @table_search_value_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                             table_search_result
+    JZ      TABLE_SEARCH_ERROR
+    //
+    MOVE    AAR                                             @table_search_result
+    MOVE    ABR                                             @table_search_residue_low
+    MOVE    ACR                                             512
+    MOVE    ADR                                             @table_search_middle_low
+    CALL    DWORD_WORD_DIV2
+    MOVE    ACR                                             table_search_result
+    JZ      TABLE_SEARCH_ERROR
+    //
+    MOVE    ACR                                             table_search_middle_high
+    JNZ     TABLE_SEARCH_ERROR
+    MOVE    table_search_index                              table_search_middle_low
+    MOVE    ACR                                             table_search_residue_high
+    JNZ     TABLE_SEARCH_ERROR
+    MOVE    table_search_offset                             table_search_residue_low
+    //
+    MOVE    AAR                                             @table_search_result
+    MOVE    ABR                                             @table_search_value_low
+    MOVE    ACR                                             @table_search_middle_low
+    CALL    FS_ABSOLUTE_LOCATION
+    MOVE    ACR                                             table_search_result
+    JZ      TABLE_SEARCH_ERROR
+    //
+    MOVE    table_search_location_low                       table_search_middle_low
+    MOVE    table_search_location_high                      table_search_middle_high
+    //
+    MOVE    AAR                                             @{CBR:@table_search_result}
+    MOVE    ABR                                             int069_disk_read
+    MOVE    ACR                                             @{CBR:@table_disk_buffer}
+    MOVE    ADR                                             @{CBR:@table_search_index}
+    INT     69
+    MOVE    ACR                                             table_search_result
+    JZ      TABLE_SEARCH_ERROR
+    //
+    MOVE    AAR                                             table_search_offset
+    MOVE    ABR                                             2
+    MUL
+    MOVE    ABR                                             ACR
+    MOVE    AAR                                             @table_disk_buffer
+    ADD
+    MOVE    table_search_value_low                          #ACR
+    MOVE    AAR                                             ACR
+    MOVE    ABR                                             1
+    ADD
+    MOVE    table_search_value_high                         #ACR
+    //
+    MOVE    #table_search_value_location_low_offset         table_search_value_low
+    MOVE    #table_search_value_location_high_offset        table_search_value_high
+    //
+    MOVE    #table_search_result_offset                     1
+    RET
+TABLE_SEARCH_ERROR:
+    MOVE    #table_search_result_offset                     0
+END

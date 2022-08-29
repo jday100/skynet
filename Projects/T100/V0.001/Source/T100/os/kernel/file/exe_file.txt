@@ -1,0 +1,56 @@
+DATA
+    exe_file_head_sign                                      INTEGER     9
+    exe_file_head_type                                      INTEGER     0
+    //
+    exe_file_head_code_count                                INTEGER     1
+    exe_file_head_code_table_offset                         INTEGER     27
+    exe_file_head_code_table_length                         INTEGER     3
+    exe_file_head_code_offset                               INTEGER     33
+    exe_file_head_code_length                               INTEGER     97
+    //
+    exe_file_head_data_count                                INTEGER     1
+    exe_file_head_data_table_offset                         INTEGER     30
+    exe_file_head_data_table_length                         INTEGER     3
+    exe_file_head_data_offset                               INTEGER     130
+    exe_file_head_data_length                               INTEGER     44
+    //
+    exe_file_head_share_code_count                          INTEGER     0
+    exe_file_head_share_code_table_offset                   INTEGER     0
+    exe_file_head_share_code_table_length                   INTEGER     0
+    exe_file_head_share_code_offset                         INTEGER     0
+    exe_file_head_share_code_length                         INTEGER     0
+    //
+    exe_file_head_share_data_count                          INTEGER     1
+    exe_file_head_share_data_table_offset                   INTEGER     33
+    exe_file_head_share_data_table_length                   INTEGER     3
+    exe_file_head_share_data_offset                         INTEGER     0
+    exe_file_head_share_data_length                         INTEGER     0
+    //
+    exe_file_head_expanded_count                            INTEGER     0
+    exe_file_head_expanded_table_offset                     INTEGER     0
+    exe_file_head_expanded_table_length                     INTEGER     0
+    exe_file_head_expanded_offset                           INTEGER     0
+    exe_file_head_expanded_length                           INTEGER     0
+    //
+    exe_file_code_table_offset                              INTEGER     1116160
+    exe_file_code_table_value_index                         INTEGER     0
+    exe_file_code_table_value_offset                        INTEGER     0
+    exe_file_code_table_value_length                        INTEGER     4
+    //
+    exe_file_data_table_offset                              INTEGER     1116163
+    exe_file_data_table_value_index                         INTEGER     0
+    exe_file_data_table_value_offset                        INTEGER
+    exe_file_data_table_value_length                        INTEGER
+    //
+    exe_file_share_code_table_offset                        INTEGER     1116166
+    exe_file_share_code_table_value_index                   INTEGER     0
+    exe_file_share_code_table_value_offset                  INTEGER
+    exe_file_share_code_table_value_length                  INTEGER
+    //
+    exe_file_share_data_table_offset                        INTEGER     1116169
+    exe_file_share_data_table_value_index                   INTEGER     0
+    exe_file_share_data_table_value_offset                  INTEGER
+    exe_file_share_data_table_value_length                  INTEGER
+    //
+
+END

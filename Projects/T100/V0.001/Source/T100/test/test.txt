@@ -1,0 +1,8 @@
+MODE    REAL    TINY
+CODE
+    CMT     1
+    DBG
+    NOP
+    CMT     2
+    HALT
+END

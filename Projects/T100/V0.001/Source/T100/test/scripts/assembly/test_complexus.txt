@@ -1,0 +1,36 @@
+MODE    REAL    TINY
+
+DATA
+    source                              INTEGER
+    target                              INTEGER
+    result                              INTEGER
+    base                                INTEGER     1049600
+    offset                              INTEGER
+END
+
+
+CODE
+    //
+    MOVE    source                      1
+    MOVE    target                      1
+    MOVE    AAR                         source
+    MOVE    ABR                         {1049600:@target}
+    SUB
+    JNZ     TEST_COMPLEXUS_ERROR
+    //
+    MOVE    source                      2
+    MOVE    offset                      3
+    //
+    MOVE    {base:offset}               2
+    MOVE    AAR                         source
+    MOVE    ABR                         target
+    SUB
+    JNZ     TEST_COMPLEXUS_ERROR
+    //
+
+    NOP
+    HALT
+    //
+TEST_COMPLEXUS_ERROR:
+    HALT
+END

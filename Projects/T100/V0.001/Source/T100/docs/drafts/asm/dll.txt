@@ -1,0 +1,11 @@
+DATA=DLL
+    dll                                 INTEGER     2
+END
+
+//CODE    DATA=DLL
+
+PROC=PROC1
+    MOVE    AAR                         dll
+END
+
+//END

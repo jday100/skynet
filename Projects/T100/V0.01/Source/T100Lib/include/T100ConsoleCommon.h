@@ -1,0 +1,18 @@
+#ifndef T100CONSOLECOMMON_H
+#define T100CONSOLECOMMON_H
+
+#include "T100Common.h"
+
+#define     T100CONSOLE_PROMPT_DEFAULT                  L'?'
+#define     T100CONSOLE_SEPARATOR_DEFAULT               L' '
+#define     T100CONSOLE_COMMAND_PROMPT_DEFAULT          L'-'
+
+
+typedef enum{
+    T100CONSOLE_NONE        = 0,
+    T100CONSOLE_WINDOWS,
+    T100CONSOLE_LINUX,
+    T100CONSOLE_MAX
+}T100CONSOLE_TYPE;
+
+#endif // T100CONSOLECOMMON_H

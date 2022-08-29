@@ -1,0 +1,138 @@
+MODE    REAL    TINY
+
+DATA
+    source                          INTEGER     1
+    target                          INTEGER
+    result                          INTEGER
+END
+
+CODE
+    //
+    //Register
+    MOVE    AAR                     COR
+    MOVE    ABR                     5
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    AAR                     CBR
+    MOVE    ABR                     1049600
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    AAR                     CCR
+    MOVE    ABR                     0
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    //
+    MOVE    AAR                     1
+    MOVE    ABR                     1
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    ACR                     2
+    MOVE    AAR                     ACR
+    MOVE    ABR                     2
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    ADR                     3
+    MOVE    AAR                     ADR
+    MOVE    ABR                     3
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    AAR                     2147483648
+    MOVE    ABR                     2147483648
+    ADD
+    MOVE    ACR                     ACF
+    JZ      TEST_MOVE_ERROR
+    //
+    MOVE    AAR                     4
+    MOVE    ABR                     5
+    SUB
+    MOVE    ACR                     AMF
+    JZ      TEST_MOVE_ERROR
+    //
+    MOVE    AAR                     2147483647
+    MOVE    ABR                     2147483647
+    MUL
+    MOVE    ACR                     AOF
+    JZ      TEST_MOVE_ERROR
+    //
+    //
+    //Memory
+    MOVE    AAR                     source
+    MOVE    target                  1
+    MOVE    ABR                     target
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    source                  2
+    MOVE    target                  2
+    MOVE    AAR                     source
+    MOVE    ACR                     target
+    MOVE    ABR                     ACR
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    source                  3
+    MOVE    target                  3
+    MOVE    AAR                     source
+    MOVE    ADR                     target
+    MOVE    ABR                     ADR
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    source                  4
+    MOVE    target                  4
+    MOVE    AAR                     source
+    MOVE    ACF                     target
+    MOVE    ABR                     ACF
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    source                  5
+    MOVE    target                  5
+    MOVE    AAR                     source
+    MOVE    AMF                     target
+    MOVE    ABR                     AMF
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    source                  6
+    MOVE    target                  6
+    MOVE    AAR                     source
+    MOVE    AOF                     target
+    MOVE    ABR                     AOF
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    //
+    MOVE    source                  7
+    MOVE    target                  @result
+    MOVE    #target                 7
+    MOVE    AAR                     source
+    MOVE    ABR                     #target
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    MOVE    ABR                     result
+    SUB
+    JNZ     TEST_MOVE_ERROR
+    //
+    //
+
+    //
+
+    //
+    NOP
+    MOVE    AAR                     1
+    HALT
+
+TEST_MOVE_ERROR:
+    MOVE    AAR                     0
+
+    HALT
+END
+

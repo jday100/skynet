@@ -1,0 +1,224 @@
+IMPORT  "data.txt"
+IMPORT  "hard\hard.txt"
+IMPORT  "int.txt"
+IMPORT  "..\fs\part.txt"
+IMPORT  "..\lib\string.txt"
+IMPORT  "..\lib\io.txt"
+
+//
+//rom           10
+//
+//string        10010
+//io            20010
+//
+//boot          30010
+//
+//init          40010
+//
+//hard          50010
+//int          100010
+//
+//kernel        60010
+//
+//fs            70010
+//part          70010010
+//
+//cpu           50010010
+//disk          50020010
+//display       50030010
+//keyboard      50040010
+//memory        50050010
+//mouse         50060010
+//io            50070010
+//
+//test          9x00x0010
+//
+
+
+MODE    REAL    TINY
+
+CODE
+//
+ROM_INIT:
+    //DBG
+    CMT     10
+    //
+    MOVE    AAR                                         @rom_result
+    CALL    HARD_INIT
+    MOVE    ACR                                         rom_result
+    JZ      ROM_FATAL_ERROR
+    //
+    //DBG
+    CMT     20
+    MOVE    AAR                                         @rom_result
+    CALL    INT_INIT
+    MOVE    ACR                                         rom_result
+    JZ      ROM_FATAL_ERROR
+    //
+    //DBG
+    CMT     30
+    MOVE    AAR                                         @rom_result
+    CALL    ROM_SHOW_INFO
+    MOVE    ACR                                         rom_result
+    JZ      ROM_ERROR
+    //DBG
+    //
+    CMT     40
+    MOVE    AAR                                         @rom_result
+    MOVE    ABR                                         @disk_buffer
+    MOVE    ACR                                         @rom_boot_part_location_low
+    MOVE    ADR                                         @rom_boot_part_length_low
+    CALL    ROM_BOOT_PART_SEARCH
+    MOVE    ACR                                         rom_result
+    JZ      ROM_ERROR
+    //
+    MOVE    #rom_part_location_low_offset               rom_boot_part_location_low
+    MOVE    #rom_part_location_high_offset              rom_boot_part_location_high
+    MOVE    #rom_part_length_low_offset                 rom_boot_part_length_low
+    MOVE    #rom_part_length_high_offset                rom_boot_part_length_high
+    //
+    CMT     50
+    MOVE    AAR                                         @rom_result
+    MOVE    ABR                                         rom_location_offset
+    MOVE    ACR                                         rom_boot_part_location_low
+    MOVE    ADR                                         rom_boot_part_location_high
+    CALL    ROM_BOOT_PART_LOAD
+    MOVE    ACR                                         rom_result
+    JZ      ROM_ERROR
+
+    CMT     60
+
+    //
+    JUMP    ROM_JUMP
+    //
+ROM_ERROR:
+    CMT     100
+    MOVE    AAR                                         1
+    MOVE    ABR                                         @rom_error_message
+    INT     68
+    JUMP    ROM_END
+    //
+ROM_FATAL_ERROR:
+    //
+    CMT     110
+ROM_END:
+    CMT     120
+    NOP
+    HALT
+    //
+ROM_JUMP:
+    CMT     130
+    NOP
+    JUMP    {1114112:0}
+    HALT
+    //
+END
+
+PROC=ROM_SHOW_INFO
+    CMT     150
+    MOVE    rom_show_info_result_offset                 AAR
+    //
+    MOVE    AAR                                         @rom_show_info_result
+    MOVE    ABR                                         1
+    MOVE    ACR                                         @rom_start_message
+    //
+    INT     68
+    //
+    CMT     160
+    MOVE    #rom_show_info_result_offset                1
+END
+
+PROC=ROM_BOOT_PART_SEARCH
+    MOVE    rom_boot_part_search_result_offset          AAR
+    MOVE    rom_boot_part_search_disk_buffer_offset     ABR
+    MOVE    rom_boot_part_search_location_low_offset    ACR
+    MOVE    rom_boot_part_search_length_low_offset      ADR
+    //
+    MOVE    AAR                                         rom_boot_part_search_location_low_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    rom_boot_part_search_location_high_offset   ACR
+    MOVE    AAR                                         rom_boot_part_search_length_low_offset
+    ADD
+    MOVE    rom_boot_part_search_length_high_offset     ACR
+    //
+    MOVE    AAR                                         disk_block_index_limit
+    MOVE    ABR                                         1
+    SUB
+    MOVE    CCR                                         ACR
+    MOVE    rom_boot_part_search_index                  0
+    MOVE    rom_boot_part_search_location_low           0
+    MOVE    rom_boot_part_search_location_high          0
+    //
+ROM_BOOT_PART_SEARCH_NEXT:
+    CMT     1
+    MOVE    AAR                                         @rom_boot_part_search_result
+    MOVE    ABR                                         int069_disk_read
+    MOVE    ACR                                         rom_boot_part_search_disk_buffer_offset
+    MOVE    ADR                                         @rom_boot_part_search_index
+    INT     69
+    MOVE    ACR                                         rom_boot_part_search_result
+    JZ      ROM_BOOT_PART_SEARCH_ERROR
+    //
+    //
+    MOVE    AAR                                         @rom_boot_part_search_result
+    MOVE    ABR                                         rom_boot_part_search_disk_buffer_offset
+    MOVE    ACR                                         rom_boot_part_search_location_low_offset
+    MOVE    ADR                                         rom_boot_part_search_length_low_offset
+    CALL    BOOT_PART_SEARCH
+    MOVE    ACR                                         rom_boot_part_search_result
+    JNZ     ROM_BOOT_PART_SEARCH_FOUNDED
+    //
+    MOVE    AAR                                         rom_boot_part_search_index
+    MOVE    ABR                                         1
+    ADD
+    MOVE    rom_boot_part_search_index                  ACR
+    LOOP    ROM_BOOT_PART_SEARCH_NEXT
+    //
+    JUMP    ROM_BOOT_PART_SEARCH_ERROR
+    //
+ROM_BOOT_PART_SEARCH_FOUNDED
+    MOVE    #rom_boot_part_search_result_offset         1
+    RET
+ROM_BOOT_PART_SEARCH_ERROR:
+    MOVE    #rom_boot_part_search_result_offset         0
+END
+
+PROC=ROM_BOOT_PART_LOAD
+    MOVE    rom_boot_part_load_result_offset            AAR
+    MOVE    rom_boot_part_load_location_offset          ABR
+    MOVE    rom_boot_part_load_location_low             ACR
+    MOVE    rom_boot_part_load_location_high            ADR
+    //
+    MOVE    AAR                                         disk_block_index_limit
+    MOVE    ABR                                         1
+    SUB
+    MOVE    CCR                                         ACR
+    //
+    MOVE    rom_boot_part_load_index                    0
+ROM_BOOT_PART_LOAD_NEXT:
+    CMT     1
+    MOVE    AAR                                         @rom_boot_part_load_result
+    MOVE    ABR                                         int069_disk_read
+    MOVE    ACR                                         rom_boot_part_load_location_offset
+    MOVE    ADR                                         @rom_boot_part_load_index
+    INT     69
+    MOVE    ACR                                         rom_boot_part_load_result
+    JZ      ROM_BOOT_PART_LOAD_ERROR
+    //
+    MOVE    AAR                                         rom_boot_part_load_location_offset
+    MOVE    ABR                                         disk_block_length
+    ADD
+    MOVE    rom_boot_part_load_location_offset          ACR
+    //
+    MOVE    AAR                                         rom_boot_part_load_index
+    MOVE    ABR                                         1
+    ADD
+    MOVE    rom_boot_part_load_index                    ACR
+    LOOP    ROM_BOOT_PART_LOAD_NEXT
+    //
+    MOVE    #rom_boot_part_load_result_offset           1
+    RET
+ROM_BOOT_PART_LOAD_ERROR:
+    MOVE    #rom_boot_part_load_result_offset           0
+END

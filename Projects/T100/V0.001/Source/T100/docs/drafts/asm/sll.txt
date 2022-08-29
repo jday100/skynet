@@ -1,0 +1,11 @@
+DATA=SLL
+    sll                                 INTEGER     3
+END
+
+//CODE    DATA=SLL
+
+PROC=PROC2
+    MOVE    AAR                         sll
+END
+
+//END

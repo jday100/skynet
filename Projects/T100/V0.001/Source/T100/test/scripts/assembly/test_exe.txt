@@ -1,0 +1,32 @@
+DATA=DATA1
+    data1                                   INTEGER     1
+END
+
+DATA=DATA2
+    data2                                   INTEGER     2
+END
+
+CODE=CODE1  DATA=DATA1
+    MOVE    AAR                             data1
+    //
+    JUMP    CODE2
+END
+
+CODE=CODE2  DATA=DATA2
+    MOVE    AAR                             data2
+    //
+    JUMP    STOP
+END
+
+DATA=DATA
+    data                                    INTEGER     3
+END
+
+CODE=MAIN
+    MOVE    AAR                             data
+    //
+    JUMP    CODE1
+
+STOP:
+    HALT
+END

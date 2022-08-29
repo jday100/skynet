@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Produce" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../build/T100Produce" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="test" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="../T100Assembly/include" />
+					<Add directory="../T100Assembly/include/scanner" />
+					<Add directory="../T100Common/include" />
+				</Compiler>
+				<Linker>
+					<Add library="../build/libT100Assembly.a" />
+					<Add library="../build/libT100Common.a" />
+					<Add library="../build/libT100Lib.a" />
+					<Add library="iconv" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Produce" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="test" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/T100LabelDrawer.h" />
+		<Unit filename="include/T100PartDrawer.h" />
+		<Unit filename="include/T100PartFile.h" />
+		<Unit filename="include/T100PartFileReader.h" />
+		<Unit filename="include/T100PartFileWriter.h" />
+		<Unit filename="include/T100PartInfo.h" />
+		<Unit filename="include/T100PartPath.h" />
+		<Unit filename="include/T100PartSetup.h" />
+		<Unit filename="include/T100ProcedureDrawer.h" />
+		<Unit filename="include/T100VariableDrawer.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/T100LabelDrawer.cpp" />
+		<Unit filename="src/T100PartDrawer.cpp" />
+		<Unit filename="src/T100PartFile.cpp" />
+		<Unit filename="src/T100PartFileReader.cpp" />
+		<Unit filename="src/T100PartFileWriter.cpp" />
+		<Unit filename="src/T100PartInfo.cpp" />
+		<Unit filename="src/T100PartPath.cpp" />
+		<Unit filename="src/T100PartSetup.cpp" />
+		<Unit filename="src/T100ProcedureDrawer.cpp" />
+		<Unit filename="src/T100VariableDrawer.cpp" />
+		<Unit filename="test/T100PartTest.cpp" />
+		<Unit filename="test/T100PartTest.h" />
+		<Unit filename="test/T100ProduceTest.cpp" />
+		<Unit filename="test/T100ProduceTest.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

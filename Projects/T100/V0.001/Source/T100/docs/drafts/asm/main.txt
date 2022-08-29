@@ -1,0 +1,17 @@
+IMPORT  "dll.txt"
+IMPORT  "sll.txt"
+
+
+DATA
+    data                                    INTEGER     1
+END
+
+CODE=MAIN
+    MOVE    AAR                             data
+    //
+    CALL    PROC1
+    //
+    CALL    PROC2
+    //
+    HALT
+END

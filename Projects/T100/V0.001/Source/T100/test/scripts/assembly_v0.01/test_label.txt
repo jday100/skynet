@@ -1,0 +1,28 @@
+MODE    REAL    TINY
+
+DATA
+    start_offset        INTEGER     @START
+    stop_offset         INTEGER     @STOP
+END
+
+CODE
+//
+START:
+    MOVE    AAR         start_offset
+    MOVE    ABR         @START
+    SUB
+    JNZ     LABEL_ERROR
+    //
+    MOVE    AAR         stop_offset
+    MOVE    ABR         @STOP
+    SUB
+    JNZ     LABEL_ERROR
+    //
+    NOP
+    MOVE    AAR         1
+STOP:
+    HALT
+LABEL_ERROR:
+    MOVE    AAR         0
+    HALT
+END

@@ -1,0 +1,13 @@
+PROC=MEMORY_INIT
+    CMT     50050010
+    MOVE    memory_result_offset                        AAR
+    //
+    MOVE    memory_order_address                        hard_device_order_address
+    MOVE    memory_data1_address                        hard_device_data1_address
+    MOVE    memory_data2_address                        hard_device_data2_address
+    MOVE    memory_data3_address                        hard_device_data3_address
+    //
+    MOVE    hard_memory_installed_flag                  1
+    //
+    MOVE    #memory_result_offset                       1
+END

@@ -1,0 +1,32 @@
+IMPORT  "..\\rom\\data.txt"
+
+
+PROC=IO_COPY
+    CMT     20010
+    MOVE    io_copy_result_offset                           AAR
+    MOVE    io_copy_source_offset                           ABR
+    MOVE    io_copy_target_offset                           ACR
+    MOVE    io_copy_length                                  ADR
+    //
+    MOVE    AAR                                             io_copy_length
+    MOVE    ABR                                             1
+    SUB
+    MOVE    CCR                                             ACR
+    //
+IO_COPY_NEXT:
+    IN      #io_copy_target_offset                          io_copy_source_offset
+    //
+    MOVE    AAR                                             io_copy_source_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    io_copy_source_offset                           ACR
+    //
+    MOVE    AAR                                             io_copy_target_offset
+    //MOVE    ABR                                             1
+    ADD
+    MOVE    io_copy_target_offset                           ACR
+    //
+    LOOP    IO_COPY_NEXT
+    //
+    MOVE    #io_copy_result_offset                          1
+END

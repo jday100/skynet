@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100FontBuilder" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../build/T100FontBuilder" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="include" />
+					<Add directory="../T100Common/include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30ud.a" />
+					<Add library="../build/libT100Common.a" />
+					<Add library="../build/libT100Lib.a" />
+					<Add library="dl" />
+					<Add library="iconv" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100FontBuilder" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/serve" />
+					<Add directory="include/view" />
+					<Add directory="include" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw30u.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add option="-Wall" />
+			<Add directory="$(#wx)/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#wx)/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+		</Linker>
+		<Unit filename="T100FontBuilderApp.cpp" />
+		<Unit filename="T100FontBuilderApp.h" />
+		<Unit filename="T100FontBuilderMain.cpp" />
+		<Unit filename="T100FontBuilderMain.h" />
+		<Unit filename="include/T100FontHint.h" />
+		<Unit filename="include/serve/T100FontCallback.h" />
+		<Unit filename="include/serve/T100FontServe.h" />
+		<Unit filename="include/serve/T100FontTools.h" />
+		<Unit filename="include/view/T100FontPanel.h" />
+		<Unit filename="include/view/T100FontView.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/T100FontHint.cpp" />
+		<Unit filename="src/serve/T100FontCallback.cpp" />
+		<Unit filename="src/serve/T100FontServe.cpp" />
+		<Unit filename="src/serve/T100FontTools.cpp" />
+		<Unit filename="src/view/T100FontPanel.cpp" />
+		<Unit filename="src/view/T100FontView.cpp" />
+		<Unit filename="wxsmith/T100FontBuilderframe.wxs" />
+		<Unit filename="wxsmith/T100FontPanel.wxs" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="T100FontBuilderApp.cpp" main="T100FontBuilderFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/T100FontBuilderframe.wxs" src="T100FontBuilderMain.cpp" hdr="T100FontBuilderMain.h" fwddecl="0" i18n="1" name="T100FontBuilderFrame" language="CPP" />
+					<wxPanel wxs="wxsmith/T100FontPanel.wxs" src="src\view\T100FontPanel.cpp" hdr="include\view\T100FontPanel.h" fwddecl="0" i18n="1" name="T100FontPanel" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

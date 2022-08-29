@@ -1,0 +1,278 @@
+我的通用汇编语言规范草案 
+V0.01
+2022年3月23日发布
+
+一、MODE语句
+设定汇编程序的全局参数。
+MODE	REAL | NORMAL 	TINY | SMALL | MIDDLE | BIG | LARGE
+
+1、REAL | NORMAL
+设定程序运行的寻址模式。
+REAL	实模式
+运行于CPU初始化状态。程序可以使用全部地址空间。
+
+NORMAL	普遍模式
+程序运行的正常状态，在由操作系统管理的保护模式下运行。
+
+2、TINY | SMALL | MIDDLE | BIG | LARGE
+汇编程序生成的文件格式。
+a、TINY	极小模式
+数据段和代码段混合在一起，可以直接载入，从0开始运行。
+b、BIG	大模式
+支持多个数据段和多个代码段，必须由操作系统载入，从代码段MAIN开始运行。
+
+二、IMPORT语句
+导入汇编文件。
+IMPORT	 "demo.txt"
+
+三、段
+段分为代码段和数据段，使用CODE，DATA语句定义，使用END语句结束。
+1、CODE代码段
+CODE=NAME	VIRTUAL	DEFAULT		LOCATION=1024		LENGTH=1024
+END
+a、NAME	代码段的名称
+b、VIRTUAL 	虚拟段
+编译的时候不会被链接到文件内，但是运行的时候会访问到。只能用于实模式。
+c、DEFAULT	默认段
+程序开始的第一个段，只能有一个段设置为DEFAULT，只能用于实模式。
+d、LOCATION	段定位
+设置虚拟段的定位，只能用于实模式。
+e、LENGTH	段长度
+设置段的长度，两种模式都可以使用，设定长度后，不足的以此长度保留空间，超过此长度的编译错误。
+f、END		段结束
+
+2、DATA数据段
+DATA=NAME	VIRTUAL	DEFAULT		LOCATION=1024		LENGTH=1024
+END
+a、NAME	数据段的名称
+b、VIRTUAL 	虚拟段
+编译的时候不会被链接到文件内，但是运行的时候会访问到。只能用于实模式。
+c、DEFAULT	默认段
+程序使用的第一个数据段，只能有一个段设置为DEFAULT，只能用于实模式。
+d、LOCATION	段定位
+设置虚拟段的定位，只能用于实模式。
+e、LENGTH	段长度
+设置段的长度，两种模式都可以使用，设定长度后，不足的以此长度保留空间，超过此长度的编译错误。
+f、END		段结束
+
+3、共享段
+
+四、过程
+1、过程定义
+过程使用PROC语句定义，使用END语句结束
+PROC=NAME
+END
+a、NAME		过程名称
+全局唯一，名称不能重复。
+
+2、过程调用
+使用CALL语句调用过程，调用完成后返回到调用点之后运行。
+CALL 	NAME
+
+3、参数传递
+通过寄存器来传递过程的参数。
+不需要返回的参数直接传递给寄存器，需要返回的参数将参数的地址值传递给寄存器，过程运行中可以通过地址改变数值。
+
+五、标号
+标号配合JUMP语句可以实现无条件跳转功能。
+CODE
+	JUMP	THERE
+	。。。
+THERE：
+END
+
+标号以“：”结束，单独一行，以大写字母开始。
+
+六、变量
+1、类型
+目前支持INTEGER和STRING类型。
+a、INTEGER
+支持32位无符号整数。
+b、STRING
+支持UTF-8字符串。一个字母占用一个整数长度，整个字符串占用长度是字母个数加2。
+
+2、定义
+DATA
+	int	INTEGER		1
+	string	STRING		"string"
+END
+
+a、int 	变量名
+以小写字母开始，全局唯一，名称不能重复。
+b、INTEGER 	变量类型
+c、1	变量初始值
+设置初始值为1。
+
+d、string		变量名
+e、STRING	变量类型
+f、"string"		字符串内容
+
+3、使用
+MOVE 	b	a
+直接使用变量名。
+
+七、运算指令
+1、ADD
+加法指令。
+
+2、SUB
+减法指令。
+
+3、MUL
+乘法指令。
+
+4、DIV
+除法指令。
+
+八、逻辑运算指令
+1、AND
+逻辑与指令。
+
+2、OR
+逻辑或指令。
+
+3、NOT
+逻辑非指令。
+
+4、XOR
+逻辑异或指令。
+
+九、控制指令
+1、NOP
+空操作指令。
+
+2、HALT
+停机指令。
+
+3、LOCK
+加锁指令。
+
+4、UNLOCK
+解锁指令。
+
+十、程序执行指令
+1、CALL
+过程调用指令。
+
+2、RET
+过程返回指令。
+
+3、INT
+中断调用指令。
+
+4、IRET
+中断返回指令。
+
+5、JUMP
+无条件跳转指令。
+
+6、JZ
+为零则跳转指令。
+
+7、JNZ
+不为零则跳转指令。
+
+8、LOOP
+循环指令。
+
+十一、数据转移指令
+1、MOVE
+数据转移指令。
+
+2、IN
+IO输入指令。
+
+3、OUT
+IO输出指令。
+
+十二、汇编结构
+1、模式
+a、实模式
+IMPORT	"library.txt"
+MODE	REAL	TINY
+
+DATA
+
+END
+
+CODE
+	HALT
+END
+
+b、普通模式
+IMPORT	"library.txt"
+
+DATA
+
+END
+
+CODE=MAIN
+	HALT
+END
+
+普通模式程序入口为”MAIN“代码段，此代码段全局唯一，不能重复。
+
+2、虚拟段
+虚拟段只能用于实模式。
+
+IMPORT	"library.txt"
+MODE	REAL	TINY
+
+DATA	VIRTUAL		LOCATION=1024
+	a		INTEGER		1
+END
+
+CODE
+	HALT
+END
+
+3、共享段
+共享段只能用于普通模式。
+
+share.txt:
+
+DATA=SHARE_DATA 	SHARE
+	a		INTEGER		1
+END
+
+CODE=SHARE_CODE 	SHARE
+
+PROC=SET_A
+	MOVE 	a	100
+END 
+
+END 
+
+
+IMPORT 	"share.txt"
+
+DATA 
+	b		INTEGER
+END 
+
+CODE=MAIN
+	MOVE 	b	a
+	
+	CALL 	SET_A
+
+	HALT
+END
+
+
+IMPORT 	"share.txt"
+
+DATA 
+	c		INTEGER
+END 
+
+CODE=MAIN
+	MOVE 	c	a
+
+	CALL 	SET_A
+
+	HALT
+END
+
+共享段允许两个程序之间直接传递数据。
+段的寻址根据段名。
+

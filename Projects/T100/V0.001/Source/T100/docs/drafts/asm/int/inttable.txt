@@ -1,0 +1,7 @@
+DATA=SHARE_INTTABLE     SHARE   LOCATION=1048576        //1051648
+    inttable_000_0                      INTEGER
+    inttable_000_1                      INTEGER
+    inttable_000_2                      INTEGER
+    inttable_000_3                      INTEGER
+    //
+END

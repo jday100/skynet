@@ -1,0 +1,3 @@
+DATA=SHARE_DATA     SHARE   LOCATION=1114112        //1051648
+    share_value                         INTEGER
+END

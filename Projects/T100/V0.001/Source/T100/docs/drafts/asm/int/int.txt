@@ -1,0 +1,19 @@
+DATA
+    int000_result                           INTEGER
+    int000_result_offset                    INTEGER
+    //
+END
+
+CODE
+//
+INT000:
+    MOVE    int000_result_offset            AAR
+    //
+    MOVE    #int000_result_offset           1
+    IRET
+    //
+INT000_ERROR:
+    MOVE    #int000_result_offset           0
+    IRET
+
+END

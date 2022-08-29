@@ -1,0 +1,33 @@
+DATA=DATA
+    data                                    INTEGER     1
+END
+
+DATA=SHARE      SHARE
+    share                                   INTEGER     2
+END
+
+CODE=MAIN   DATA=DATA
+    MOVE    AAR                             data
+    //
+    CALL    PROC1
+    //
+    MOVE    AAR                             {SHARE:share}
+    MOVE    {SHARE:share}                   3
+    //
+
+    //
+    MOVE    CDR                             SHARE
+    MOVE    AAR                             {CDR:share}
+    MOVE    {CDR:share}                     AAR
+    //
+    //HALT
+END
+
+
+CODE        DATA=SHARE
+
+PROC=PROC1
+    MOVE    share                           4
+END
+
+END

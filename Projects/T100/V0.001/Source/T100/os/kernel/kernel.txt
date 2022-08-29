@@ -1,0 +1,8 @@
+IMPORT  "share.txt"
+
+MODE    SMALL
+
+CODE
+    CMT     60010
+    HALT
+END

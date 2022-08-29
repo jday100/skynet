@@ -1,0 +1,13 @@
+PROC=KEYBOARD_INIT
+    CMT     50040010
+    MOVE    keyboard_result_offset                      AAR
+    //
+    MOVE    keyboard_order_address                      hard_device_order_address
+    MOVE    keyboard_data1_address                      hard_device_data1_address
+    MOVE    keyboard_data2_address                      hard_device_data2_address
+    MOVE    keyboard_data3_address                      hard_device_data3_address
+    //
+    MOVE    hard_keyboard_installed_flag                1
+    //
+    MOVE    #keyboard_result_offset                     1
+END

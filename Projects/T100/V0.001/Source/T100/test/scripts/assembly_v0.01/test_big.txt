@@ -1,0 +1,56 @@
+MODE    BIG
+
+DATA
+    a                                   INTEGER     1
+END
+
+DATA
+    b                                   INTEGER     2
+END
+
+DATA
+    add_result_offset                   INTEGER
+    add_value_offset                    INTEGER
+    //
+    add_source                          INTEGER
+    add_target                          INTEGER
+END
+
+DATA
+    result                              INTEGER
+    value                               INTEGER
+END
+
+CODE
+
+PROC=TEST_ADD
+    MOVE    add_result_offset           AAR
+    MOVE    add_source                  ABR
+    MOVE    add_target                  ACR
+    MOVE    add_value_offset            ADR
+    //
+    MOVE    AAR                         add_source
+    MOVE    ABR                         add_target
+    ADD
+    MOVE    #add_value_offset           ACR
+
+    MOVE    #add_result_offset          1
+END
+
+END
+
+CODE    DEFAULT
+    MOVE    AAR                         @result
+    MOVE    ABR                         a
+    MOVE    ACR                         b
+    MOVE    ADR                         @value
+    CALL    TEST_ADD
+    //
+    MOVE    ACR                         result
+    JZ      ERROR
+    NOP
+
+ERROR:
+
+    HALT
+END

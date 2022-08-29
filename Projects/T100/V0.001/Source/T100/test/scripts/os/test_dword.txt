@@ -1,0 +1,481 @@
+IMPORT  "lib\dword.txt"
+
+MODE    REAL    TINY
+
+DATA    VIRTUAL     LOCATION=1114112
+    test_dword_result                                   INTEGER
+    //
+    test_dword_add_result                               INTEGER
+    test_dword_add_result_offset                        INTEGER
+    test_dword_add_source_low                           INTEGER
+    test_dword_add_source_high                          INTEGER
+    test_dword_add_target_low                           INTEGER
+    test_dword_add_target_high                          INTEGER
+    test_dword_add_value_low                            INTEGER
+    test_dword_add_value_high                           INTEGER
+    //
+    test_dword_shl_result                               INTEGER
+    test_dword_shl_result_offset                        INTEGER
+    test_dword_shl_source_low                           INTEGER
+    test_dword_shl_source_high                          INTEGER
+    test_dword_shl_target                               INTEGER
+    test_dword_shl_value_low                            INTEGER
+    test_dword_shl_value_high                           INTEGER
+    //
+    test_dword_mul_result                               INTEGER
+    test_dword_mul_result_offset                        INTEGER
+    test_dword_mul_source_low                           INTEGER
+    test_dword_mul_source_high                          INTEGER
+    test_dword_mul_target                               INTEGER
+    test_dword_mul_value_low                            INTEGER
+    test_dword_mul_value_high                           INTEGER
+    //
+    test_dword_div_result                               INTEGER
+    test_dword_div_result_offset                        INTEGER
+    test_dword_div_source_low                           INTEGER
+    test_dword_div_source_high                          INTEGER
+    test_dword_div_target                               INTEGER
+    test_dword_div_value_low                            INTEGER
+    test_dword_div_value_high                           INTEGER
+    //
+END
+
+CODE
+    MOVE    AAR                                         @test_dword_result
+    CALL    TEST_DWORD_SHL
+    MOVE    ACR                                         test_dword_result
+    JZ      TEST_DWORD_ERROR
+    //
+    MOVE    AAR                                         @test_dword_result
+    CALL    TEST_DWORD_ADD
+    MOVE    ACR                                         test_dword_result
+    JZ      TEST_DWORD_ERROR
+    //
+    MOVE    AAR                                         @test_dword_result
+    CALL    TEST_DWORD_MUL
+    MOVE    ACR                                         test_dword_result
+    JZ      TEST_DWORD_ERROR
+    //
+    MOVE    AAR                                         @test_dword_result
+    CALL    TEST_DWORD_DIV
+    MOVE    ACR                                         test_dword_result
+    JZ      TEST_DWORD_ERROR
+    //
+    MOVE    AAR                                         1
+    HALT
+    //
+TEST_DWORD_ERROR:
+    MOVE    AAR                                         0
+    HALT
+END
+
+PROC=TEST_DWORD_ADD
+    MOVE    test_dword_add_result_offset                AAR
+    //
+    MOVE    test_dword_add_source_low                   0
+    MOVE    test_dword_add_source_high                  0
+    MOVE    test_dword_add_target_low                   0
+    MOVE    test_dword_add_target_high                  0
+    //
+    MOVE    AAR                                         @test_dword_add_result
+    MOVE    ABR                                         @test_dword_add_source_low
+    MOVE    ACR                                         @test_dword_add_target_low
+    MOVE    ADR                                         @test_dword_add_value_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                         test_dword_add_result
+    JZ      TEST_DWORD_ADD_ERROR
+    MOVE    ACR                                         test_dword_add_value_low
+    JNZ     TEST_DWORD_ADD_ERROR
+    MOVE    ACR                                         test_dword_add_value_high
+    JNZ     TEST_DWORD_ADD_ERROR
+    //
+    MOVE    test_dword_add_source_low                   1
+    MOVE    test_dword_add_source_high                  0
+    MOVE    test_dword_add_target_low                   0
+    MOVE    test_dword_add_target_high                  0
+    //
+    MOVE    AAR                                         @test_dword_add_result
+    MOVE    ABR                                         @test_dword_add_source_low
+    MOVE    ACR                                         @test_dword_add_target_low
+    MOVE    ADR                                         @test_dword_add_value_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                         test_dword_add_result
+    JZ      TEST_DWORD_ADD_ERROR
+    MOVE    AAR                                         test_dword_add_value_low
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_DWORD_ADD_ERROR
+    MOVE    ACR                                         test_dword_add_value_high
+    JNZ     TEST_DWORD_ADD_ERROR
+    //
+    MOVE    test_dword_add_source_low                   0
+    MOVE    test_dword_add_source_high                  0
+    MOVE    test_dword_add_target_low                   1
+    MOVE    test_dword_add_target_high                  0
+    //
+    MOVE    AAR                                         @test_dword_add_result
+    MOVE    ABR                                         @test_dword_add_source_low
+    MOVE    ACR                                         @test_dword_add_target_low
+    MOVE    ADR                                         @test_dword_add_value_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                         test_dword_add_result
+    JZ      TEST_DWORD_ADD_ERROR
+    MOVE    AAR                                         test_dword_add_value_low
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_DWORD_ADD_ERROR
+    MOVE    ACR                                         test_dword_add_value_high
+    JNZ     TEST_DWORD_ADD_ERROR
+    //
+    //
+    MOVE    test_dword_add_source_low                   1
+    MOVE    test_dword_add_source_high                  0
+    MOVE    test_dword_add_target_low                   1
+    MOVE    test_dword_add_target_high                  0
+    //
+    MOVE    AAR                                         @test_dword_add_result
+    MOVE    ABR                                         @test_dword_add_source_low
+    MOVE    ACR                                         @test_dword_add_target_low
+    MOVE    ADR                                         @test_dword_add_value_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                         test_dword_add_result
+    JZ      TEST_DWORD_ADD_ERROR
+    MOVE    AAR                                         test_dword_add_value_low
+    MOVE    ABR                                         2
+    SUB
+    JNZ     TEST_DWORD_ADD_ERROR
+    MOVE    ACR                                         test_dword_add_value_high
+    JNZ     TEST_DWORD_ADD_ERROR
+    //
+    MOVE    test_dword_add_source_low                   1
+    MOVE    test_dword_add_source_high                  1
+    MOVE    test_dword_add_target_low                   1
+    MOVE    test_dword_add_target_high                  1
+    //
+    MOVE    AAR                                         @test_dword_add_result
+    MOVE    ABR                                         @test_dword_add_source_low
+    MOVE    ACR                                         @test_dword_add_target_low
+    MOVE    ADR                                         @test_dword_add_value_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                         test_dword_add_result
+    JZ      TEST_DWORD_ADD_ERROR
+    MOVE    AAR                                         test_dword_add_value_low
+    MOVE    ABR                                         2
+    SUB
+    JNZ     TEST_DWORD_ADD_ERROR
+    MOVE    AAR                                         test_dword_add_value_high
+    MOVE    ABR                                         2
+    SUB
+    JNZ     TEST_DWORD_ADD_ERROR
+    //
+    MOVE    test_dword_add_source_low                   2147483648
+    MOVE    test_dword_add_source_high                  0
+    MOVE    test_dword_add_target_low                   2147483648
+    MOVE    test_dword_add_target_high                  0
+    //
+    MOVE    AAR                                         @test_dword_add_result
+    MOVE    ABR                                         @test_dword_add_source_low
+    MOVE    ACR                                         @test_dword_add_target_low
+    MOVE    ADR                                         @test_dword_add_value_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                         test_dword_add_result
+    JZ      TEST_DWORD_ADD_ERROR
+    MOVE    ACR                                         test_dword_add_value_low
+    JNZ     TEST_DWORD_ADD_ERROR
+    MOVE    AAR                                         test_dword_add_value_high
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_DWORD_ADD_ERROR
+    //
+    MOVE    #test_dword_add_result_offset               1
+    RET
+TEST_DWORD_ADD_ERROR:
+    MOVE    #test_dword_add_result_offset               0
+END
+
+PROC=TEST_DWORD_MUL
+    MOVE    test_dword_mul_result_offset                AAR
+    //
+    MOVE    test_dword_mul_source_low                   0
+    MOVE    test_dword_mul_source_high                  0
+    MOVE    test_dword_mul_target                       0
+    //
+    MOVE    AAR                                         @test_dword_mul_result
+    MOVE    ABR                                         @test_dword_mul_source_low
+    MOVE    ACR                                         test_dword_mul_target
+    MOVE    ADR                                         @test_dword_mul_value_low
+    CALL    DWORD_WORD_MUL
+    MOVE    ACR                                         test_dword_mul_result
+    JZ      TEST_DWORD_MUL_ERROR
+    MOVE    ACR                                         test_dword_mul_value_low
+    JNZ     TEST_DWORD_MUL_ERROR
+    MOVE    ACR                                         test_dword_mul_value_high
+    JNZ     TEST_DWORD_MUL_ERROR
+    //
+    MOVE    test_dword_mul_source_low                   1
+    MOVE    test_dword_mul_source_high                  0
+    MOVE    test_dword_mul_target                       1
+    //
+    MOVE    AAR                                         @test_dword_mul_result
+    MOVE    ABR                                         @test_dword_mul_source_low
+    MOVE    ACR                                         test_dword_mul_target
+    MOVE    ADR                                         @test_dword_mul_value_low
+    CALL    DWORD_WORD_MUL
+    MOVE    ACR                                         test_dword_mul_result
+    JZ      TEST_DWORD_MUL_ERROR
+    MOVE    AAR                                         test_dword_mul_value_low
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_DWORD_MUL_ERROR
+    MOVE    ACR                                         test_dword_mul_value_high
+    JNZ     TEST_DWORD_MUL_ERROR
+    //
+    MOVE    test_dword_mul_source_low                   1
+    MOVE    test_dword_mul_source_high                  1
+    MOVE    test_dword_mul_target                       1
+    //
+    MOVE    AAR                                         @test_dword_mul_result
+    MOVE    ABR                                         @test_dword_mul_source_low
+    MOVE    ACR                                         test_dword_mul_target
+    MOVE    ADR                                         @test_dword_mul_value_low
+    CALL    DWORD_WORD_MUL
+    MOVE    ACR                                         test_dword_mul_result
+    JZ      TEST_DWORD_MUL_ERROR
+    MOVE    AAR                                         test_dword_mul_value_low
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_DWORD_MUL_ERROR
+    MOVE    AAR                                         test_dword_mul_value_high
+    SUB
+    JNZ     TEST_DWORD_MUL_ERROR
+    //
+    MOVE    test_dword_mul_source_low                   65536
+    MOVE    test_dword_mul_source_high                  0
+    MOVE    test_dword_mul_target                       65536
+    //
+    MOVE    AAR                                         @test_dword_mul_result
+    MOVE    ABR                                         @test_dword_mul_source_low
+    MOVE    ACR                                         test_dword_mul_target
+    MOVE    ADR                                         @test_dword_mul_value_low
+    CALL    DWORD_WORD_MUL
+    MOVE    ACR                                         test_dword_mul_result
+    JZ      TEST_DWORD_MUL_ERROR
+    MOVE    ACR                                         test_dword_mul_value_low
+    JNZ     TEST_DWORD_MUL_ERROR
+    MOVE    AAR                                         test_dword_mul_value_high
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_DWORD_MUL_ERROR
+    //
+    MOVE    test_dword_mul_source_low                   65536
+    MOVE    test_dword_mul_source_high                  1
+    MOVE    test_dword_mul_target                       65536
+    //
+    MOVE    AAR                                         @test_dword_mul_result
+    MOVE    ABR                                         @test_dword_mul_source_low
+    MOVE    ACR                                         test_dword_mul_target
+    MOVE    ADR                                         @test_dword_mul_value_low
+    CALL    DWORD_WORD_MUL
+    MOVE    ACR                                         test_dword_mul_result
+    JZ      TEST_DWORD_MUL_ERROR
+    MOVE    ACR                                         test_dword_mul_value_low
+    JNZ     TEST_DWORD_MUL_ERROR
+    MOVE    AAR                                         test_dword_mul_value_high
+    MOVE    ABR                                         65537
+    SUB
+    JNZ     TEST_DWORD_MUL_ERROR
+    //
+    MOVE    #test_dword_mul_result_offset               1
+    RET
+TEST_DWORD_MUL_ERROR:
+    MOVE    #test_dword_mul_result_offset               0
+END
+
+
+PROC=TEST_DWORD_SHL
+    MOVE    test_dword_shl_result_offset                AAR
+    //
+    MOVE    test_dword_shl_source_low                   0
+    MOVE    test_dword_shl_source_high                  0
+    MOVE    test_dword_shl_target                       0
+    //
+    MOVE    AAR                                         @test_dword_shl_result
+    MOVE    ABR                                         @test_dword_shl_source_low
+    MOVE    ACR                                         test_dword_shl_target
+    MOVE    ADR                                         @test_dword_shl_value_low
+    CALL    DWORD_WORD_SHL
+    MOVE    ACR                                         test_dword_shl_result
+    JZ      TEST_DWORD_SHL_ERROR
+    MOVE    ACR                                         test_dword_shl_value_low
+    JNZ     TEST_DWORD_SHL_ERROR
+    MOVE    ACR                                         test_dword_shl_value_high
+    JNZ     TEST_DWORD_SHL_ERROR
+    //
+    MOVE    test_dword_shl_source_low                   0
+    MOVE    test_dword_shl_source_high                  0
+    MOVE    test_dword_shl_target                       1
+    //
+    MOVE    AAR                                         @test_dword_shl_result
+    MOVE    ABR                                         @test_dword_shl_source_low
+    MOVE    ACR                                         test_dword_shl_target
+    MOVE    ADR                                         @test_dword_shl_value_low
+    CALL    DWORD_WORD_SHL
+    MOVE    ACR                                         test_dword_shl_result
+    JZ      TEST_DWORD_SHL_ERROR
+    MOVE    ACR                                         test_dword_shl_value_low
+    JNZ     TEST_DWORD_SHL_ERROR
+    MOVE    ACR                                         test_dword_shl_value_high
+    JNZ     TEST_DWORD_SHL_ERROR
+    //
+    MOVE    test_dword_shl_source_low                   1
+    MOVE    test_dword_shl_source_high                  1
+    MOVE    test_dword_shl_target                       1
+    //
+    MOVE    AAR                                         @test_dword_shl_result
+    MOVE    ABR                                         @test_dword_shl_source_low
+    MOVE    ACR                                         test_dword_shl_target
+    MOVE    ADR                                         @test_dword_shl_value_low
+    CALL    DWORD_WORD_SHL
+    MOVE    ACR                                         test_dword_shl_result
+    JZ      TEST_DWORD_SHL_ERROR
+    MOVE    AAR                                         test_dword_shl_value_low
+    MOVE    ABR                                         2
+    SUB
+    JNZ     TEST_DWORD_SHL_ERROR
+    MOVE    AAR                                         test_dword_shl_value_high
+    SUB
+    JNZ     TEST_DWORD_SHL_ERROR
+    //
+    MOVE    test_dword_shl_source_low                   1
+    MOVE    test_dword_shl_source_high                  0
+    MOVE    test_dword_shl_target                       31
+    //
+    MOVE    AAR                                         @test_dword_shl_result
+    MOVE    ABR                                         @test_dword_shl_source_low
+    MOVE    ACR                                         test_dword_shl_target
+    MOVE    ADR                                         @test_dword_shl_value_low
+    CALL    DWORD_WORD_SHL
+    MOVE    ACR                                         test_dword_shl_result
+    JZ      TEST_DWORD_SHL_ERROR
+    MOVE    AAR                                         test_dword_shl_value_low
+    MOVE    ABR                                         2147483648
+    SUB
+    JNZ     TEST_DWORD_SHL_ERROR
+    MOVE    ACR                                         test_dword_shl_value_high
+    JNZ     TEST_DWORD_SHL_ERROR
+    //
+    MOVE    test_dword_shl_source_low                   1
+    MOVE    test_dword_shl_source_high                  0
+    MOVE    test_dword_shl_target                       32
+    //
+    MOVE    AAR                                         @test_dword_shl_result
+    MOVE    ABR                                         @test_dword_shl_source_low
+    MOVE    ACR                                         test_dword_shl_target
+    MOVE    ADR                                         @test_dword_shl_value_low
+    CALL    DWORD_WORD_SHL
+    MOVE    ACR                                         test_dword_shl_result
+    JNZ     TEST_DWORD_SHL_ERROR
+    //
+    MOVE    #test_dword_shl_result_offset               1
+    RET
+TEST_DWORD_SHL_ERROR:
+    MOVE    #test_dword_shl_result_offset               0
+END
+
+PROC=TEST_DWORD_DIV
+    MOVE    test_dword_div_result_offset                AAR
+    //
+    MOVE    test_dword_div_source_low                   0
+    MOVE    test_dword_div_source_high                  0
+    MOVE    test_dword_div_target                       0
+    //
+    MOVE    AAR                                         @test_dword_div_result
+    MOVE    ABR                                         @test_dword_div_source_low
+    MOVE    ACR                                         test_dword_div_target
+    MOVE    ADR                                         @test_dword_div_value_low
+    CALL    DWORD_WORD_DIV
+    MOVE    ACR                                         test_dword_div_result
+    JNZ     TEST_DWORD_DIV_ERROR
+    //
+    MOVE    test_dword_div_source_low                   1
+    MOVE    test_dword_div_source_high                  1
+    MOVE    test_dword_div_target                       1
+    //
+    MOVE    AAR                                         @test_dword_div_result
+    MOVE    ABR                                         @test_dword_div_source_low
+    MOVE    ACR                                         test_dword_div_target
+    MOVE    ADR                                         @test_dword_div_value_low
+    CALL    DWORD_WORD_DIV
+    MOVE    ACR                                         test_dword_div_result
+    JZ      TEST_DWORD_DIV_ERROR
+    MOVE    AAR                                         test_dword_div_value_low
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_DWORD_DIV_ERROR
+    MOVE    AAR                                         test_dword_div_value_high
+    SUB
+    JNZ     TEST_DWORD_DIV_ERROR
+    //
+    MOVE    test_dword_div_source_low                   2
+    MOVE    test_dword_div_source_high                  2
+    MOVE    test_dword_div_target                       2
+    //
+    MOVE    AAR                                         @test_dword_div_result
+    MOVE    ABR                                         @test_dword_div_source_low
+    MOVE    ACR                                         test_dword_div_target
+    MOVE    ADR                                         @test_dword_div_value_low
+    CALL    DWORD_WORD_DIV
+    MOVE    ACR                                         test_dword_div_result
+    JZ      TEST_DWORD_DIV_ERROR
+    MOVE    AAR                                         test_dword_div_value_low
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_DWORD_DIV_ERROR
+    MOVE    AAR                                         test_dword_div_value_high
+    SUB
+    JNZ     TEST_DWORD_DIV_ERROR
+    //
+    MOVE    test_dword_div_source_low                   2
+    MOVE    test_dword_div_source_high                  1
+    MOVE    test_dword_div_target                       2
+    //
+    MOVE    AAR                                         @test_dword_div_result
+    MOVE    ABR                                         @test_dword_div_source_low
+    MOVE    ACR                                         test_dword_div_target
+    MOVE    ADR                                         @test_dword_div_value_low
+    CALL    DWORD_WORD_DIV
+    MOVE    ACR                                         test_dword_div_result
+    JZ      TEST_DWORD_DIV_ERROR
+    MOVE    AAR                                         test_dword_div_value_low
+    MOVE    ABR                                         2147483649
+    SUB
+    JNZ     TEST_DWORD_DIV_ERROR
+    MOVE    ACR                                         test_dword_div_value_high
+    JNZ     TEST_DWORD_DIV_ERROR
+    //
+    MOVE    test_dword_div_source_low                   4294967295
+    MOVE    test_dword_div_source_high                  4294967295
+    MOVE    test_dword_div_target                       2863311530
+    //
+    MOVE    AAR                                         @test_dword_div_result
+    MOVE    ABR                                         @test_dword_div_source_low
+    MOVE    ACR                                         test_dword_div_target
+    MOVE    ADR                                         @test_dword_div_value_low
+    CALL    DWORD_WORD_DIV
+    MOVE    ACR                                         test_dword_div_result
+    JZ      TEST_DWORD_DIV_ERROR
+    MOVE    AAR                                         test_dword_div_value_low
+    MOVE    ABR                                         2147483649
+    SUB
+    JNZ     TEST_DWORD_DIV_ERROR
+    MOVE    AAR                                         test_dword_div_value_high
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_DWORD_DIV_ERROR
+    //
+    MOVE    #test_dword_div_result_offset               1
+    RET
+    //
+TEST_DWORD_DIV_ERROR:
+    MOVE    #test_dword_div_result_offset               0
+END

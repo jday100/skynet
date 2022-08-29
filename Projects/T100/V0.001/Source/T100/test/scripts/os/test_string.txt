@@ -1,0 +1,199 @@
+IMPORT  "lib\string.txt"
+
+MODE    REAL    TINY
+
+
+DATA        VIRTUAL     LOCATION=1069056
+    test_string_equal_result_offset                     INTEGER
+    test_string_equal_result                            INTEGER
+
+    string_result                                       INTEGER
+
+    test_string_split_result_offset                     INTEGER
+    test_string_split_result                            INTEGER
+    test_string_split_size                              INTEGER
+    test_string_split_array_offset                      INTEGER
+    test_string_split_array_buffer_offset               INTEGER
+    test_string_split_array                             INTEGER[100]
+    test_string_split_array_buffer                      INTEGER[1024]
+    test_string_split_array_index                       INTEGER
+    test_string_split_array_buffer_index                INTEGER
+
+END
+
+DATA
+    string_empty_source                                 STRING      ""
+    string_empty_target                                 STRING      ""
+    string_ascii_source                                 STRING      "test"
+    string_unicode_source                               STRING      "你好"
+    string_ascii_same_target                            STRING      "test"
+    string_unicode_same_target                          STRING      "你好"
+    string_ascii_different_target_good                  STRING      "good"
+    string_ascii_different_target_hello                 STRING      "hello"
+    string_unicode_different_target_please              STRING      "请"
+    string_unicode_different_target_earth               STRING      "地球"
+
+    test_string_split_source                            STRING      ":system:kernel:task"
+    test_string_split_mask                              STRING      ":"
+
+END
+
+PROC=TEST_STRING_EQUAL
+    CMT     900010010
+    MOVE    test_string_equal_result_offset             AAR
+    //empty
+    MOVE    AAR                                         @test_string_equal_result
+    MOVE    ABR                                         @string_empty_source
+    MOVE    ACR                                         @string_empty_target
+    //
+    CALL    STRING_EQUAL
+    //
+    MOVE    ACR                                         test_string_equal_result
+    JZ      TEST_STRING_EQUAL_FALSE
+    //
+    CMT     900010020
+    MOVE    AAR                                         @test_string_equal_result
+    MOVE    ABR                                         @string_empty_source
+    MOVE    ACR                                         @string_ascii_same_target
+    //
+    CALL    STRING_EQUAL
+    //
+    MOVE    ACR                                         test_string_equal_result
+    JNZ     TEST_STRING_EQUAL_FALSE
+    //
+    CMT     900010030
+    MOVE    AAR                                         @test_string_equal_result
+    MOVE    ABR                                         @string_ascii_source
+    MOVE    ACR                                         @string_empty_target
+    //
+    CALL    STRING_EQUAL
+    //
+    MOVE    ACR                                         test_string_equal_result
+    JNZ     TEST_STRING_EQUAL_FALSE
+    //
+    CMT     900010040
+    MOVE    AAR                                         @test_string_equal_result
+    MOVE    ABR                                         @string_ascii_source
+    MOVE    ACR                                         @string_ascii_same_target
+    //
+    CALL    STRING_EQUAL
+    //
+    MOVE    ACR                                         test_string_equal_result
+    JZ      TEST_STRING_EQUAL_FALSE
+    //
+    CMT     900010050
+    MOVE    AAR                                         @test_string_equal_result
+    MOVE    ABR                                         @string_ascii_source
+    MOVE    ACR                                         @string_ascii_different_target_good
+    //
+    CALL    STRING_EQUAL
+    //
+    MOVE    ACR                                         test_string_equal_result
+    JNZ     TEST_STRING_EQUAL_FALSE
+    //
+    CMT     900010060
+    MOVE    AAR                                         @test_string_equal_result
+    MOVE    ABR                                         @string_ascii_source
+    MOVE    ACR                                         @string_ascii_different_target_hello
+    //
+    CALL    STRING_EQUAL
+    //
+    MOVE    ACR                                         test_string_equal_result
+    JNZ     TEST_STRING_EQUAL_FALSE
+    //
+    CMT     900010070
+    MOVE    #test_string_equal_result_offset            1
+    RET
+TEST_STRING_EQUAL_FALSE:
+    CMT     900010080
+    MOVE    #test_string_equal_result_offset            0
+END
+
+PROC=TEST_STRING_SPLIT
+    CMT     900010090
+    MOVE    test_string_split_result_offset             AAR
+    //
+    MOVE    test_string_split_array_offset              @test_string_split_array
+    MOVE    test_string_split_array_buffer_offset       @test_string_split_array_buffer
+    //
+    MOVE    AAR                                         @test_string_split_result
+    MOVE    ABR                                         @test_string_split_source
+    MOVE    ACR                                         @test_string_split_mask
+    MOVE    ADR                                         @test_string_split_size
+    //
+    CALL    STRING_SPLIT
+    MOVE    ACR                                         test_string_split_result
+    JZ      TEST_STRING_SPLIT_FALSE
+    //
+    CMT     900010100
+    MOVE    AAR                                         test_string_split_size
+    MOVE    ABR                                         3
+    SUB
+    JNZ     TEST_STRING_SPLIT_FALSE
+    //
+    CMT     900010110
+    MOVE    test_string_split_array_index               test_string_split_array_offset
+    MOVE    test_string_split_array_buffer_index        #test_string_split_array_index
+    MOVE    AAR                                         #test_string_split_array_buffer_index
+    MOVE    ABR                                         6
+    SUB
+    JNZ     TEST_STRING_SPLIT_FALSE
+    //
+    CMT     900010120
+    MOVE    AAR                                         test_string_split_array_index
+    MOVE    ABR                                         1
+    ADD
+    MOVE    test_string_split_array_index               ACR
+    //
+    MOVE    test_string_split_array_buffer_index        #test_string_split_array_index
+    MOVE    AAR                                         #test_string_split_array_buffer_index
+    MOVE    ABR                                         6
+    SUB
+    JNZ     TEST_STRING_SPLIT_FALSE
+    //
+    CMT     900010130
+    MOVE    AAR                                         test_string_split_array_index
+    MOVE    ABR                                         1
+    ADD
+    MOVE    test_string_split_array_index               ACR
+    //
+    MOVE    test_string_split_array_buffer_index        #test_string_split_array_index
+    MOVE    AAR                                         #test_string_split_array_buffer_index
+    MOVE    ABR                                         4
+    SUB
+    JNZ     TEST_STRING_SPLIT_FALSE
+    //
+    CMT     900010140
+    MOVE    #test_string_split_result_offset            1
+    RET
+TEST_STRING_SPLIT_FALSE:
+    CMT     900010150
+    MOVE    #test_string_split_result_offset            0
+END
+
+CODE
+    CMT     900010150
+    //
+    MOVE    AAR                                         @string_result
+
+    CALL    TEST_STRING_EQUAL
+
+    MOVE    ACR                                         string_result
+    JZ      TEST_STRING_FALSE
+    //
+    CMT     900010160
+    MOVE    AAR                                         @string_result
+
+    CALL    TEST_STRING_SPLIT
+
+    MOVE    ACR                                         string_result
+    JZ      TEST_STRING_FALSE
+
+    CMT     900010170
+    MOVE    AAR                                         1
+    HALT
+TEST_STRING_FALSE:
+    CMT     900010180
+    MOVE    AAR                                         0
+    HALT
+END

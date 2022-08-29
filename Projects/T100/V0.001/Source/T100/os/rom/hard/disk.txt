@@ -1,0 +1,92 @@
+PROC=DISK_INIT
+    CMT     50020010
+    MOVE    disk_result_offset                          AAR
+    //
+    MOVE    disk_order_address                          hard_device_order_address
+    MOVE    disk_data1_address                          hard_device_data1_address
+    MOVE    disk_data2_address                          hard_device_data2_address
+    MOVE    disk_data3_address                          hard_device_data3_address
+    //
+    OUT     disk_order_address                          disk_mode_get
+    IN      disk_block_size                             disk_data1_address
+    IN      disk_length_low                             disk_data2_address
+    IN      disk_length_high                            disk_data3_address
+    //
+    OUT     disk_order_address                          disk_mode_block
+    IN      disk_block_offset                           disk_data1_address
+    //
+    MOVE    hard_disk_installed_flag                    1
+    //
+    MOVE    #disk_result_offset                         1
+END
+
+PROC=DISK_READ
+    CMT     50020020
+    MOVE    disk_read_result_offset                     AAR
+    //
+    MOVE    disk_id_low                                 ABR
+    MOVE    disk_id_high                                ACR
+    MOVE    disk_target_offset                          ADR
+    //
+    OUT     disk_data1_address                          disk_id_low
+    OUT     disk_data2_address                          disk_id_high
+    OUT     disk_order_address                          disk_mode_read
+    //
+    MOVE    AAR                                         disk_block_size
+    MOVE    ABR                                         1
+    SUB
+    MOVE    CCR                                         ACR
+    //
+    MOVE    disk_source_offset                          disk_block_offset
+    MOVE    ABR                                         1
+DISK_READ_NEXT:
+    CMT     50020030
+    IN      disk_target_offset                          disk_source_offset
+    MOVE    AAR                                         disk_target_offset
+    ADD
+    MOVE    disk_target_offset                          ACR
+    MOVE    AAR                                         disk_source_offset
+    ADD
+    MOVE    disk_source_offset                          ACR
+    //
+    LOOP    DISK_READ_NEXT
+    //
+    CMT     50020040
+    MOVE    #disk_read_result_offset                    1
+END
+
+PROC=DISK_WRITE
+    CMT     50020050
+    MOVE    disk_write_result_offset                    AAR
+    //
+    MOVE    disk_id_low                                 ABR
+    MOVE    disk_id_high                                ACR
+    MOVE    disk_source_offset                          ADR
+    //
+    MOVE    AAR                                         disk_block_size
+    MOVE    ABR                                         1
+    SUB
+    MOVE    CCR                                         ACR
+    //
+    MOVE    disk_target_offset                          disk_block_offset
+    MOVE    ABR                                         1
+DISK_WRITE_NEXT:
+    CMT     50020060
+    IN      disk_target_offset                          disk_source_offset
+    MOVE    AAR                                         disk_target_offset
+    ADD
+    MOVE    disk_target_offset                          ACR
+    MOVE    AAR                                         disk_source_offset
+    ADD
+    MOVE    disk_source_offset                          ACR
+    //
+    LOOP    DISK_WRITE_NEXT
+    //
+    CMT     50020070
+    OUT     disk_data1_address                          disk_id_low
+    OUT     disk_data2_address                          disk_id_high
+    OUT     disk_order_address                          disk_mode_write
+    //
+    CMT     50020080
+    MOVE    #disk_write_result_offset                   1
+END

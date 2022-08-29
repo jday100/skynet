@@ -1,0 +1,46 @@
+load
+
+TWO 				SIX
+loadTarget			loadTarget
+	loadOperator			loadOperator		loadOperator
+		loadRegister			loadRegister		loadRegister
+		loadMemory			loadMemory		loadMemory
+
+loadSource			loadSource
+	loadOperator			loadOperator		loadOperator
+		loadRegister			loadRegister		loadRegister
+		loadMemory			loadMemory		loadMemory
+
+getSource				getSource
+	getOperator
+		getRegister		getOperator		getOperator
+		getMemory			getRegister		getRegister
+						getMemory		getMemory
+setTarget
+	setRegister		setTarget
+	setMemory			
+					setMemory
+
+
+
+load
+TWO                                 SIX
+loadTarget                          loadTarget
+    loadOperator                        loadOperator            loadOperator
+        loadRegister                        loadRegister            loadRegister
+        loadMemory                          loadMemory              loadMemory
+
+loadSource                          loadSource
+    loadOperator                        loadOperator            loadOperator
+        loadRegister                        loadRegister            loadRegister
+        loadMemory                          loadMemory              loadMemory
+
+getSource                           getComplexusSource
+    getOperator                         getComplexus
+        getRegister                         getOperator             getOperator
+        getMemory                               getRegister             getRegister
+                                                getMemory               getMemory
+
+setTarget                           setComplexusTarget
+    setRegister
+    setMemory                           setMemory

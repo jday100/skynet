@@ -1,0 +1,87 @@
+IMPORT  "rom\data.txt"
+IMPORT  "rom\hard\hard.txt"
+IMPORT  "rom\int.txt"
+IMPORT  "fs\part.txt"
+IMPORT  "lib\string.txt"
+
+MODE    REAL    TINY
+
+
+DATA        VIRTUAL     LOCATION=1069056
+    test_disk_read_result                               INTEGER
+    test_disk_read_result_offset                        INTEGER
+
+END
+
+
+CODE
+//
+ROM_INIT:
+    CMT     10
+    MOVE    AAR                                         @rom_result
+    CALL    HARD_INIT
+    MOVE    ACR                                         rom_result
+    JZ      ROM_FATAL_ERROR
+    //
+    CMT     20
+    MOVE    AAR                                         @rom_result
+    CALL    INT_INIT
+    MOVE    ACR                                         rom_result
+    JZ      ROM_FATAL_ERROR
+    //
+    CMT     40
+    MOVE    AAR                                         @rom_result
+    CALL    TEST_DISK_READ
+    MOVE    ACR                                         rom_result
+    JZ      ROM_ERROR
+    //
+    CMT     60
+    MOVE    AAR                                         1
+    HALT
+    //
+ROM_ERROR:
+    CMT     100
+    MOVE    AAR                                         0
+    HALT
+    //
+ROM_FATAL_ERROR:
+    CMT     110
+    MOVE    AAR                                         0
+    HALT
+    //
+ROM_END:
+    CMT     120
+    MOVE    AAR                                         1
+    NOP
+    HALT
+    //
+END
+
+PROC=TEST_DISK_READ
+    MOVE    test_disk_read_result_offset                AAR
+    //
+    MOVE    AAR                                         @test_disk_read_result
+    MOVE    ABR                                         0
+    MOVE    ACR                                         0
+    MOVE    ADR                                         @disk_buffer
+    CALL    DISK_READ
+    MOVE    ACR                                         test_disk_read_result
+    JZ      TEST_DISK_READ_ERROR
+    //
+    MOVE    AAR                                         disk_buffer
+    MOVE    ABR                                         5
+    SUB
+    JNZ     TEST_DISK_READ_ERROR
+    MOVE    AAR                                         @disk_buffer
+    MOVE    ABR                                         4
+    ADD
+    MOVE    AAR                                         #ACR
+    MOVE    ABR                                         104
+    SUB
+    JNZ     TEST_DISK_READ_ERROR
+    //
+    MOVE    #test_disk_read_result_offset               1
+    RET
+TEST_DISK_READ_ERROR:
+    MOVE    #test_disk_read_result_offset               0
+END

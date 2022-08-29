@@ -1,0 +1,30 @@
+help
+
+create	vdisk	<filename>	<size>	
+create	file	<part>	<path>
+create	dir	<part>	<path>
+create 	part	<name>	<start>	<size>
+create 	part	<name> 	boot	<start>	<size>
+
+remove	vdisk	<filename>
+remove 	part 	<name>
+remove 	file	<part>	<path>
+remove 	dir	<part>	<path>
+
+set	part	<name> 	boot	<flag>
+
+load 	<filename>
+
+list	
+list 	<part>	<path>
+
+format 	<name>
+format	<name>	<filename>	
+
+mkdir	<part>	<path>
+
+chdir	<part>	<path>
+
+rmdir	<part>	<path>
+
+copy	<source>	<part>	<target>

@@ -1,0 +1,12 @@
+IMPORT      "inttable.txt"
+IMPORT      "data.txt"
+
+DATA
+    value                               INTEGER     1
+END
+
+CODE
+    MOVE    value                       share_value
+    //
+    HALT
+END

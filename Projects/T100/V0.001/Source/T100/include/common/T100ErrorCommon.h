@@ -1,0 +1,6 @@
+#ifndef T100ERRORCOMMON_H
+#define T100ERRORCOMMON_H
+
+
+
+#endif // T100ERRORCOMMON_H

@@ -1,0 +1,26 @@
+IMPORT  "segment.txt"
+
+DATA
+    a                                   INTEGER     1
+    b                                   INTEGER     2
+    value                               INTEGER
+    result                              INTEGER
+END
+
+CODE
+    MOVE    AAR                         @result
+    MOVE    ABR                         a
+    MOVE    ACR                         b
+    MOVE    ADR                         @value
+    CALL    TEST_ADD
+    MOVE    ACR                         result
+    JZ      ERROR
+
+    MOVE    AAR                         add_result
+    JZ      ERROR
+
+    NOP
+ERROR:
+    HALT
+END
+

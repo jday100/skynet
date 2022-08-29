@@ -1,0 +1,8 @@
+DATA=SHARE_DATA     SHARE   LOCATION=1113088
+    boot_part_location_low                                  INTEGER
+    boot_part_location_high                                 INTEGER
+    boot_part_length_low                                    INTEGER
+    boot_part_length_high                                   INTEGER
+    //
+
+END

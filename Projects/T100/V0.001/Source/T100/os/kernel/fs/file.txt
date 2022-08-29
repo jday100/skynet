@@ -1,0 +1,305 @@
+DATA
+    file_open_result                                        INTEGER
+    file_open_result_offset                                 INTEGER
+    //
+    file_open_name_offset                                   INTEGER
+    file_open_handle_offset                                 INTEGER
+    //
+    file_open_value_location_low_offset                     INTEGER
+    file_open_value_location_high_offset                    INTEGER
+    file_open_value_length_low_offset                       INTEGER
+    file_open_value_length_high_offset                      INTEGER
+    file_open_value_properties_offset                       INTEGER[2]
+    //
+    file_open_item_location_low                             INTEGER
+    file_open_item_location_high                            INTEGER
+    file_open_item_length_low                               INTEGER
+    file_open_item_length_high                              INTEGER
+    file_open_item_properties                               INTEGER[2]
+    //
+    file_close_result                                       INTEGER
+    file_close_result_offset                                INTEGER
+    //
+    file_load_result                                        INTEGER
+    file_load_result_offset                                 INTEGER
+    //
+    file_load_location_low_offset                           INTEGER
+    file_load_buffer_offset                                 INTEGER
+    //
+    file_read_result                                        INTEGER
+    file_read_result_offset                                 INTEGER
+    //
+    file_read_buffer_offset                                 INTEGER
+    //
+    file_read_index                                         INTEGER
+    file_read_location_low                                  INTEGER
+    file_read_location_high                                 INTEGER
+    file_read_middle_low                                    INTEGER
+    file_read_middle_high                                   INTEGER
+    //
+    file_seek_result                                        INTEGER
+    file_seek_result_offset                                 INTEGER
+    //
+    file_seek_seek_low                                      INTEGER
+    file_seek_seek_high                                     INTEGER
+    file_seek_handle_offset                                 INTEGER
+    file_seek_location_low                                  INTEGER
+    file_seek_location_high                                 INTEGER
+    file_seek_length_low                                    INTEGER
+    file_seek_length_high                                   INTEGER
+    //
+    file_read_index_result                                  INTEGER
+    file_read_index_result_offset                           INTEGER
+    //
+    file_read_index_location_offset                         INTEGER
+    file_read_index_index                                   INTEGER
+    file_read_index_location_low                            INTEGER
+    file_read_index_location_high                           INTEGER
+    file_read_index_buffer_offset                           INTEGER
+    //
+    file_read_index_middle_low                              INTEGER
+    file_read_index_middle_high                             INTEGER
+    //
+END
+
+//
+//result_offset
+//name_offset
+//handle_offset
+//
+//handle
+//
+//location_low
+//location_high
+//index
+//offset
+//item_location_low
+//item_location_high
+//item_length_low
+//item_length_high
+//item_properties[2]
+//
+PROC=FILE_OPEN
+    CMT     40050010
+    MOVE    file_open_result_offset                         AAR
+    MOVE    file_open_name_offset                           ABR
+    MOVE    file_open_handle_offset                         ACR
+    //
+    CMT     40050020
+    MOVE    file_open_value_location_low_offset             file_open_handle_offset
+    MOVE    AAR                                             file_open_handle_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    file_open_value_location_high_offset            ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    file_open_value_length_low_offset               ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    file_open_value_length_high_offset              ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    file_open_value_properties_offset[0]            ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    file_open_value_properties_offset[1]            ACR
+    //
+    CMT     40050030
+    MOVE    AAR                                             @file_open_result
+    MOVE    ABR                                             file_open_name_offset
+    MOVE    ACR                                             @file_open_item_location_low
+    CALL    PATH_SEARCH
+    MOVE    ACR                                             file_open_result
+    JZ      FILE_OPEN_ERROR
+    //
+    CMT     40050040
+    MOVE    #file_open_value_location_low_offset            file_open_item_location_low
+    MOVE    #file_open_value_location_high_offset           file_open_item_location_high
+    MOVE    #file_open_value_length_low_offset              file_open_item_length_low
+    MOVE    #file_open_value_length_high_offset             file_open_item_length_high
+    //
+    MOVE    #file_open_value_properties_offset[0]           file_open_item_properties[0]
+    MOVE    #file_open_value_properties_offset[1]           file_open_item_properties[1]
+    //
+    CMT     40050050
+    MOVE    #file_open_result_offset                        1
+    RET
+FILE_OPEN_ERROR:
+    CMT     40050060
+    MOVE    #file_open_result_offset                        0
+END
+
+PROC=FILE_CLOSE
+    CMT     40050110
+    MOVE    file_close_result_offset                        AAR
+    //
+    MOVE    #file_close_result_offset                       1
+    RET
+FILE_CLOSE_ERROR:
+    CMT     40050130
+    MOVE    #file_close_result_offset                       0
+END
+
+PROC=FILE_LOAD
+    CMT     40050210
+    MOVE    file_load_result_offset                         AAR
+    MOVE    file_load_location_low_offset                   ABR
+    MOVE    file_load_buffer_offset                         ACR
+
+    MOVE    #file_load_result_offset                        1
+    RET
+FILE_LOAD_ERROR:
+    CMT     40050230
+    MOVE    #file_load_result_offset                        0
+END
+
+//
+//result_offset
+//location_low
+//location_high
+//buffer_offset
+//
+PROC=FILE_READ
+    CMT     40050310
+    MOVE    file_read_result_offset                         AAR
+    MOVE    file_read_location_low                          ABR
+    MOVE    file_read_location_high                         ACR
+    MOVE    file_read_buffer_offset                         ADR
+    //
+    CMT     40050320
+    MOVE    AAR                                             @file_read_result
+    MOVE    ABR                                             @file_read_location_low
+    MOVE    ACR                                             @file_read_middle_low
+    CALL    FS_RELATIVE_LOCATION
+    MOVE    ACR                                             file_read_result
+    JZ      FILE_READ_ERROR
+    //
+    CMT     40050330
+    MOVE    AAR                                             @file_read_result
+    MOVE    ABR                                             @file_read_middle_low
+    MOVE    ACR                                             @file_read_location_low
+    CALL    FS_ABSOLUTE_LOCATION
+    MOVE    ACR                                             file_read_result
+    JZ      FILE_READ_ERROR
+    //
+    CMT     40050340
+    MOVE    AAR                                             init_block_index_limit
+    MOVE    ABR                                             1
+    SUB
+    MOVE    CCR                                             ACR
+    //
+    MOVE    file_read_index                                 0
+    //
+FILE_READ_NEXT:
+    CMT     40050350
+    MOVE    AAR                                             @{CBR:@file_read_result}
+    MOVE    ABR                                             int069_disk_read
+    MOVE    ACR                                             file_read_buffer_offset
+    MOVE    ADR                                             @{CBR:@file_read_index}
+    INT     69
+    MOVE    ACR                                             file_read_result
+    JZ      FILE_READ_ERROR
+    //
+    CMT     40050360
+    MOVE    AAR                                             file_read_buffer_offset
+    MOVE    ABR                                             init_disk_block_length
+    ADD
+    MOVE    file_read_buffer_offset                         ACR
+    //
+    MOVE    AAR                                             file_read_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    file_read_index                                 ACR
+    //
+    CMT     40050370
+    LOOP    FILE_READ_NEXT
+    //
+    CMT     40050380
+    MOVE    #file_read_result_offset                        1
+    RET
+FILE_READ_ERROR:
+    CMT     40050390
+    MOVE    #file_read_result_offset                        0
+END
+
+
+PROC=FILE_SEEK
+    CMT     40050410
+    MOVE    file_seek_result_offset                         AAR
+    MOVE    file_seek_handle_offset                         ABR
+    MOVE    file_seek_seek_low                              ACR
+    MOVE    file_seek_seek_high                             ADR
+    //
+    //
+    CMT     40050420
+    MOVE    #file_seek_result_offset                        1
+    RET
+FILE_SEEK_ERROR:
+    CMT     40050430
+    MOVE    #file_seek_result_offset                        0
+END
+
+PROC=FILE_READ_INDEX
+    CMT     40050510
+    MOVE    file_read_index_result_offset                   AAR
+    MOVE    file_read_index_location_offset                 ABR
+    MOVE    file_read_index_index                           ACR
+    MOVE    file_read_index_buffer_offset                   ADR
+    //
+    MOVE    AAR                                             @file_read_index_result
+    MOVE    ABR                                             file_read_index_location_offset
+    CALL    ITEM_EQUAL_ISEND
+    MOVE    ACR                                             file_read_index_result
+    JNZ     FILE_READ_INDEX_ERROR
+    //
+    CMT     40050520
+    MOVE    AAR                                             15
+    MOVE    ABR                                             file_read_index_index
+    SUB
+    MOVE    ACR                                             AMF
+    JNZ     FILE_READ_INDEX_ERROR
+    //
+    CMT     40050530
+    //DBG
+    MOVE    AAR                                             #file_read_index_location_offset
+    //
+    MOVE    AAR                                             @file_read_index_result
+    MOVE    ABR                                             file_read_index_location_offset
+    MOVE    ACR                                             @file_read_index_middle_low
+    CALL    FS_RELATIVE_LOCATION
+    MOVE    ACR                                             file_read_index_result
+    JZ      FILE_READ_INDEX_ERROR
+    //
+    CMT     40050540
+    //DBG
+    MOVE    AAR                                             file_read_index_middle_low
+    MOVE    AAR                                             file_read_index_middle_high
+    //
+    MOVE    AAR                                             @file_read_index_result
+    MOVE    ABR                                             @file_read_index_middle_low
+    MOVE    ACR                                             @file_read_index_location_low
+    CALL    FS_ABSOLUTE_LOCATION
+    MOVE    ACR                                             file_read_index_result
+    JZ      FILE_READ_INDEX_ERROR
+    //
+    CMT     40050550
+    //DBG
+    MOVE    AAR                                             file_read_index_index
+    MOVE    AAR                                             file_read_index_location_low
+    MOVE    AAR                                             file_read_index_location_high
+    //
+    MOVE    AAR                                             @{CBR:@file_read_index_result}
+    MOVE    ABR                                             int069_disk_read
+    MOVE    ACR                                             file_read_index_buffer_offset
+    MOVE    ADR                                             @{CBR:@file_read_index_index}
+    INT     69
+    MOVE    ACR                                             file_read_index_result
+    JZ      FILE_READ_INDEX_ERROR
+    //
+    CMT     40050560
+    MOVE    #file_read_index_result_offset                  1
+    RET
+FILE_READ_INDEX_ERROR:
+    CMT     40050570
+    MOVE    #file_read_index_result_offset                  0
+END

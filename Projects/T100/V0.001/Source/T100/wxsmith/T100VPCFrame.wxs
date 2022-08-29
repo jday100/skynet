@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="T100VPCFrame">
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxRichTextCtrl" name="ID_RICHTEXTCTRL1" variable="RichTextCtrl1" member="yes">
+			<value>Text</value>
+			<pos>232,312</pos>
+		</object>
+		<object class="wxStatusBar" name="ID_STATUSBAR1" variable="StatusBar1" member="yes">
+			<fields>1</fields>
+			<widths>-10</widths>
+			<styles>wxSB_NORMAL</styles>
+		</object>
+		<object class="wxMenuBar" variable="MenuBar1" member="yes">
+			<object class="wxMenu" variable="Menu1" member="yes">
+				<label>File</label>
+				<object class="wxMenuItem" name="ID_MENUITEM_START" variable="MenuStart" member="yes">
+					<label>Start</label>
+					<handler function="OnMenuStartSelected" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM_STOP" variable="MenuStop" member="yes">
+					<label>Stop</label>
+					<handler function="OnMenuStopSelected" entry="EVT_MENU" />
+				</object>
+				<object class="separator" />
+				<object class="wxMenuItem" name="ID_MENUITEM_QUIT" variable="MenuQuit" member="yes">
+					<label>Quit</label>
+					<handler function="OnMenuQuitSelected" entry="EVT_MENU" />
+				</object>
+			</object>
+			<object class="wxMenu" variable="Menu4" member="yes">
+				<label>Config</label>
+				<object class="wxMenuItem" name="ID_MENUITEM_SETUP" variable="MenuSetup" member="yes">
+					<label>Setup</label>
+					<handler function="OnMenuSetupSelected" entry="EVT_MENU" />
+				</object>
+				<object class="wxMenuItem" name="ID_MENUITEM_DEBUG" variable="MenuDebug" member="yes">
+					<label>Debug</label>
+					<handler function="OnMenuDebugSelected" entry="EVT_MENU" />
+				</object>
+			</object>
+		</object>
+	</object>
+</wxsmith>

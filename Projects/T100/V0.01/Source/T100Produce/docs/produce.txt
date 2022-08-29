@@ -1,0 +1,16 @@
+Drawer
+	parse
+		Scanner
+			PartInfo
+
+		PartFileWriter
+			PartInfo
+
+		
+
+
+Produce
+	Builder
+		Merger
+		FileWriter
+			PartInfo

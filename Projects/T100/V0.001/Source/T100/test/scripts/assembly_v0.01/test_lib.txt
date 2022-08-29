@@ -1,0 +1,25 @@
+DATA
+    lib_result_offset                   INTEGER
+    lib_value_offset                    INTEGER
+    lib_source                          INTEGER
+    lib_target                          INTEGER
+END
+
+
+CODE
+
+PROC=LIB_ADD
+    MOVE    lib_result_offset           AAR
+    MOVE    lib_source                  ABR
+    MOVE    lib_target                  ACR
+    MOVE    lib_value_offset            ADR
+    //
+    MOVE    AAR                         lib_source
+    MOVE    ABR                         lib_target
+    ADD
+    MOVE    #lib_value_offset           ACR
+    //
+    MOVE    #lib_result_offset          1
+END
+
+END

@@ -1,0 +1,30 @@
+MODE    REAL    TINY
+
+DATA
+    source                              INTEGER
+    target                              INTEGER
+    result                              INTEGER
+    base                                INTEGER     1049600
+    offset                              INTEGER     0
+END
+
+
+CODE
+    MOVE    source                      1
+    OUT     offset                      source
+    IN      target                      offset
+    MOVE    AAR                         source
+    MOVE    ABR                         target
+    SUB
+    JNZ     TEST_IO_ERROR
+    //
+
+    NOP
+    MOVE    AAR                         1
+    HALT
+    //
+TEST_IO_ERROR:
+    MOVE    AAR                         0
+    HALT
+END
+

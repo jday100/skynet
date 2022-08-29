@@ -1,0 +1,24 @@
+DATA=SHARE_DATA     SHARE
+    share_value                         INTEGER
+    share_result_offset                 INTEGER
+    share_source                        INTEGER
+    share_target                        INTEGER
+END
+
+
+CODE=SHARE_CODE     SHARE
+
+PROC=SHARE_ADD
+    MOVE    share_result_offset         AAR
+    MOVE    share_source                ABR
+    MOVE    share_target                ACR
+    //
+    MOVE    AAR                         share_source
+    MOVE    ABR                         share_target
+    ADD
+    MOVE    share_value                 ACR
+    //
+    MOVE    #share_result_offset        1
+END
+
+END

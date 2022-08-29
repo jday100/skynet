@@ -1,0 +1,47 @@
+MODE    REAL    TINY
+
+DATA    VIRTUAL     LOCATION=1024
+    share_value                         INTEGER
+END
+
+DATA
+    a                                   INTEGER     4
+    result                              INTEGER
+    value                               INTEGER
+
+    add_result_offset                   INTEGER
+    add_value_offset                    INTEGER
+    add_source                          INTEGER
+    add_target                          INTEGER
+END
+
+CODE    DEFAULT
+    MOVE    AAR                         @result
+    MOVE    ABR                         share_value
+    MOVE    ACR                         a
+    MOVE    ADR                         @value
+    CALL    TEST_ADD
+    MOVE    ACR                         result
+    JZ      ERROR
+
+    MOVE    share_value                 value
+    NOP
+    HALT
+    //
+PROC=TEST_ADD
+    MOVE    add_result_offset           AAR
+    MOVE    add_source                  ABR
+    MOVE    add_target                  ACR
+    MOVE    add_value_offset            ADR
+    //
+    MOVE    AAR                         add_source
+    MOVE    ABR                         add_target
+    ADD
+    MOVE    #add_value_offset           ACR
+
+    MOVE    #add_result_offset          1
+END
+
+ERROR:
+    HALT
+END

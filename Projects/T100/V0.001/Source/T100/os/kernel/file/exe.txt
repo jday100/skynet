@@ -1,0 +1,908 @@
+IMPORT  "..\mem\mem.txt"
+IMPORT  "..\fs\file.txt"
+
+DATA
+    exe_code_buffer_offset                                  INTEGER
+    exe_data_buffer_offset                                  INTEGER
+    exe_share_code_buffer_offset                            INTEGER
+    exe_share_data_buffer_offset                            INTEGER
+    //
+    exe_code_table_buffer_offset                            INTEGER
+    exe_data_table_buffer_offset                            INTEGER
+    exe_share_code_table_buffer_offset                      INTEGER
+    exe_share_data_table_buffer_offset                      INTEGER
+    //
+    exe_buffer_offset                                       INTEGER
+    exe_buffer_length                                       INTEGER
+    exe_buffer_limit                                        INTEGER
+    //
+    exe_buffer_current_offset                               INTEGER
+    exe_buffer_current_limit                                INTEGER
+    exe_buffer_current_length                               INTEGER
+    exe_buffer_current_residue                              INTEGER
+    //
+    exe_length                                              INTEGER
+    exe_location_low                                        INTEGER
+    exe_location_high                                       INTEGER
+    exe_block_index                                         INTEGER
+    //
+    exe_head_sign_flag                                      INTEGER     9
+    exe_head_type_big_flag                                  INTEGER     0
+    //
+    exe_head_sign                                           INTEGER
+    exe_head_type                                           INTEGER
+    //
+    exe_head_code_count                                     INTEGER
+    exe_head_code_table_offset                              INTEGER
+    exe_head_code_table_length                              INTEGER
+    exe_head_code_offset                                    INTEGER
+    exe_head_code_length                                    INTEGER
+    //
+    exe_head_data_count                                     INTEGER
+    exe_head_data_table_offset                              INTEGER
+    exe_head_data_table_length                              INTEGER
+    exe_head_data_offset                                    INTEGER
+    exe_head_data_length                                    INTEGER
+    //
+    exe_head_share_code_count                               INTEGER
+    exe_head_share_code_table_offset                        INTEGER
+    exe_head_share_code_table_length                        INTEGER
+    exe_head_share_code_offset                              INTEGER
+    exe_head_share_code_length                              INTEGER
+    //
+    exe_head_share_data_count                               INTEGER
+    exe_head_share_data_table_offset                        INTEGER
+    exe_head_share_data_table_length                        INTEGER
+    exe_head_share_data_offset                              INTEGER
+    exe_head_share_data_length                              INTEGER
+    //
+    exe_head_expanded_count                                 INTEGER
+    exe_head_expanded_table_offset                          INTEGER
+    exe_head_expanded_table_length                          INTEGER
+    exe_head_expanded_offset                                INTEGER
+    exe_head_expanded_length                                INTEGER
+    //
+    exe_table_buffer_value                                  INTEGER
+    exe_table_buffer_current_offset                         INTEGER
+    //
+    exe_load_result                                         INTEGER
+    exe_load_result_offset                                  INTEGER
+    exe_load_handle_offset                                  INTEGER
+    //
+    exe_load_location_offset                                INTEGER
+    exe_load_location_low                                   INTEGER
+    exe_load_location_high                                  INTEGER
+    exe_load_length_low                                     INTEGER
+    exe_load_length_high                                    INTEGER
+    //
+    exe_init_result_offset                                  INTEGER
+    //
+    exe_load_head_result                                    INTEGER
+    exe_load_head_result_offset                             INTEGER
+    exe_load_head_location_offset                           INTEGER
+    exe_load_head_offset                                    INTEGER
+    //
+    exe_load_code_table_result                              INTEGER
+    exe_load_code_table_result_offset                       INTEGER
+    //
+    exe_load_data_table_result                              INTEGER
+    exe_load_data_table_result_offset                       INTEGER
+    //
+    exe_load_share_code_table_result                        INTEGER
+    exe_load_share_code_table_result_offset                 INTEGER
+    //
+    exe_load_share_data_table_result                        INTEGER
+    exe_load_share_data_table_result_offset                 INTEGER
+    //
+    exe_load_code_result                                    INTEGER
+    exe_load_code_result_offset                             INTEGER
+    //
+    exe_load_data_result                                    INTEGER
+    exe_load_data_result_offset                             INTEGER
+    //
+    exe_load_share_code_result                              INTEGER
+    exe_load_share_code_result_offset                       INTEGER
+    //
+    exe_load_share_data_result                              INTEGER
+    exe_load_share_data_result_offset                       INTEGER
+    //
+    exe_load_table_result                                   INTEGER
+    exe_load_table_result_offset                            INTEGER
+    exe_load_table_count                                    INTEGER
+    exe_load_table_buffer_offset                            INTEGER
+    //
+    exe_load_table_value                                    INTEGER
+    //
+    exe_load_share_table_result                             INTEGER
+    exe_load_share_table_result_offset                      INTEGER
+    exe_load_share_table_count                              INTEGER
+    exe_load_share_table_buffer_offset                      INTEGER
+    //
+    exe_load_share_table_length                             INTEGER
+    //
+    exe_load_segments_result                                INTEGER
+    exe_load_segments_result_offset                         INTEGER
+    exe_load_segments_count                                 INTEGER
+    exe_load_segments_table_offset                          INTEGER
+    exe_load_segments_buffer_offset                         INTEGER
+    exe_load_segments_length                                INTEGER
+    //
+    exe_load_share_segments_result                          INTEGER
+    exe_load_share_segments_result_offset                   INTEGER
+    exe_load_share_segments_count                           INTEGER
+    exe_load_share_segments_table_offset                    INTEGER
+    //
+    exe_read_index_result                                   INTEGER
+    exe_read_index_result_offset                            INTEGER
+    exe_read_index_value                                    INTEGER
+    //
+    exe_parse_next_result                                   INTEGER
+    exe_parse_next_result_offset                            INTEGER
+    //
+    exe_parse_next_buffer_offset                            INTEGER
+    exe_parse_next_length                                   INTEGER
+    exe_parse_next_value                                    INTEGER
+    //
+
+END
+
+
+DATA
+    exe_disk_buffer                                         INTEGER[1024]
+END
+
+//
+PROC=EXE_LOAD
+    CMT     40060010
+    //DBG
+    MOVE    exe_load_result_offset                          AAR
+    MOVE    exe_load_handle_offset                          ABR
+    //
+    MOVE    AAR                                             exe_load_handle_offset
+    MOVE    ABR                                             4
+    ADD
+    MOVE    exe_location_low                                #ACR
+    //
+    MOVE    AAR                                             ACR
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_location_high                               #ACR
+    //
+    CMT     40060020
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    exe_length                                      #ACR
+    //
+    CMT     40060030
+    MOVE    AAR                                             @exe_load_result
+    CALL    EXE_INIT
+    MOVE    AAR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    CMT     40060040
+    MOVE    AAR                                             @exe_load_result
+    MOVE    ABR                                             @exe_head_sign
+    CALL    EXE_LOAD_HEAD
+    MOVE    ACR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    CMT     40060050
+    //DBG
+    MOVE    AAR                                             @exe_load_result
+    CALL    EXE_LOAD_CODE_TABLE
+    MOVE    ACR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    CMT     40060060
+    //DBG
+    MOVE    AAR                                             @exe_load_result
+    CALL    EXE_LOAD_DATA_TABLE
+    MOVE    ACR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    CMT     40060070
+    //DBG
+    MOVE    AAR                                             @exe_load_result
+    CALL    EXE_LOAD_SHARE_CODE_TABLE
+    MOVE    ACR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    CMT     40060080
+    //DBG
+    MOVE    AAR                                             @exe_load_result
+    CALL    EXE_LOAD_SHARE_DATA_TABLE
+    MOVE    ACR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    MOVE    AAR                                             @exe_load_result
+    CALL    EXE_LOAD_TEST_TABLE
+    MOVE    ACR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    CMT     40060090
+    //DBG
+    MOVE    AAR                                             @exe_load_result
+    CALL    EXE_LOAD_CODE
+    MOVE    ACR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    CMT     40060100
+    //DBG
+    MOVE    AAR                                             @exe_load_result
+    CALL    EXE_LOAD_DATA
+    MOVE    ACR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    CMT     40060110
+    //DBG
+    MOVE    AAR                                             @exe_load_result
+    CALL    EXE_LOAD_SHARE_CODE
+    MOVE    ACR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    CMT     40060120
+    //DBG
+    MOVE    AAR                                             @exe_load_result
+    CALL    EXE_LOAD_SHARE_DATA
+    MOVE    ACR                                             exe_load_result
+    JZ      EXE_LOAD_ERROR
+    //
+    CMT     40060130
+    //DBG
+    MOVE    #exe_load_result_offset                         1
+    RET
+EXE_LOAD_ERROR:
+    CMT     40060140
+    //DBG
+    MOVE    #exe_load_result_offset                         0
+END
+
+
+PROC=EXE_INIT
+    CMT     40060210
+    //DBG
+    MOVE    exe_init_result_offset                          AAR
+    //
+    MOVE    exe_code_buffer_offset                          1083392     //1067008+16384
+    MOVE    exe_data_buffer_offset                          1099776     //1083392+16384
+    MOVE    exe_share_code_buffer_offset                    1050624     //1048576+2048
+    MOVE    exe_share_data_buffer_offset                    1067008     //1050624+16384
+    //
+    MOVE    exe_table_buffer_current_offset                 1116160     //9502720+1116160=10618880
+    //
+    MOVE    exe_buffer_offset                               @exe_disk_buffer
+    MOVE    exe_buffer_length                               1024
+    MOVE    AAR                                             exe_buffer_offset
+    MOVE    ABR                                             exe_buffer_length
+    ADD
+    MOVE    exe_buffer_limit                                ACR
+    //
+    MOVE    exe_buffer_current_offset                       exe_buffer_offset
+    MOVE    exe_buffer_current_limit                        exe_buffer_offset
+    MOVE    exe_buffer_current_length                       0
+    MOVE    exe_buffer_current_residue                      0
+    //
+    MOVE    exe_block_index                                 0
+    //
+    CMT     40060220
+    MOVE    #exe_init_result_offset                         1
+    RET
+EXE_INIT_ERROR:
+    CMT     40060230
+    MOVE    #exe_init_result_offset                         0
+END
+
+PROC=EXE_LOAD_HEAD
+    CMT     40060310
+    //DBG
+    MOVE    exe_load_head_result_offset                     AAR
+    MOVE    exe_load_head_offset                            ABR
+    //
+    MOVE    AAR                                             @exe_load_head_result
+    MOVE    ABR                                             exe_load_head_offset
+    MOVE    ACR                                             27
+    CALL    EXE_PARSE_NEXT
+    MOVE    ACR                                             exe_load_head_result
+    JZ      EXE_LOAD_HEAD_ERROR
+    //
+    CMT     40060320
+    //DBG
+    MOVE    AAR                                             exe_head_sign
+    MOVE    ABR                                             exe_head_sign_flag
+    SUB
+    JNZ     EXE_LOAD_HEAD_ERROR
+    //
+    CMT     40060330
+    MOVE    AAR                                             exe_head_type
+    MOVE    ABR                                             exe_head_type_big_flag
+    SUB
+    JNZ     EXE_LOAD_HEAD_ERROR
+    //
+    CMT     40060340
+    MOVE    #exe_load_head_result_offset                    1
+    RET
+EXE_LOAD_HEAD_ERROR:
+    MOVE    #exe_load_head_result_offset                    0
+END
+
+PROC=EXE_LOAD_CODE_TABLE
+    CMT     40060410
+    //DBG
+    MOVE    exe_load_code_table_result_offset               AAR
+    //
+    MOVE    exe_code_table_buffer_offset                    exe_table_buffer_current_offset
+    //
+    MOVE    AAR                                             @exe_load_code_table_result
+    MOVE    ABR                                             exe_head_code_count
+    MOVE    ACR                                             exe_code_table_buffer_offset
+    CALL    EXE_LOAD_TABLE
+    MOVE    ACR                                             exe_load_code_table_result
+    JZ      EXE_LOAD_CODE_TABLE_ERROR
+    //
+    CMT     40060420
+    //DBG
+    MOVE    #exe_load_code_table_result_offset              1
+    RET
+EXE_LOAD_CODE_TABLE_ERROR:
+    CMT     40060430
+    //DBG
+    MOVE    #exe_load_code_table_result_offset              0
+END
+
+PROC=EXE_LOAD_DATA_TABLE
+    CMT     40060510
+    MOVE    exe_load_data_table_result_offset               AAR
+    //
+    MOVE    exe_data_table_buffer_offset                    exe_table_buffer_current_offset
+    //
+    MOVE    AAR                                             @exe_load_data_table_result
+    MOVE    ABR                                             exe_head_data_count
+    MOVE    ACR                                             exe_data_table_buffer_offset
+    CALL    EXE_LOAD_TABLE
+    MOVE    ACR                                             exe_load_data_table_result
+    JZ      EXE_LOAD_DATA_TABLE_ERROR
+    //
+    CMT     40060520
+    MOVE    #exe_load_data_table_result_offset              1
+    RET
+EXE_LOAD_DATA_TABLE_ERROR:
+    CMT     40060530
+    //DBG
+    MOVE    #exe_load_data_table_result_offset              0
+END
+
+PROC=EXE_LOAD_SHARE_CODE_TABLE
+    CMT     40060610
+    MOVE    exe_load_share_code_table_result_offset         AAR
+    //
+    MOVE    exe_share_code_table_buffer_offset              exe_table_buffer_current_offset
+    //
+    MOVE    AAR                                             @exe_load_share_code_table_result
+    MOVE    ABR                                             exe_head_share_code_count
+    MOVE    ACR                                             exe_share_code_table_buffer_offset
+    CALL    EXE_LOAD_SHARE_TABLE
+    MOVE    ACR                                             exe_load_share_code_table_result
+    JZ      EXE_LOAD_SHARE_CODE_TABLE_ERROR
+    //
+    CMT     40060620
+    MOVE    #exe_load_share_code_table_result_offset        1
+    RET
+EXE_LOAD_SHARE_CODE_TABLE_ERROR:
+    CMT     40060630
+    MOVE    #exe_load_share_code_table_result_offset        0
+END
+
+PROC=EXE_LOAD_SHARE_DATA_TABLE
+    CMT     40060710
+    MOVE    exe_load_share_data_table_result_offset         AAR
+    //
+    MOVE    exe_share_data_table_buffer_offset              exe_table_buffer_current_offset
+    //
+    MOVE    AAR                                             @exe_load_share_data_table_result
+    MOVE    ABR                                             exe_head_share_data_count
+    MOVE    ACR                                             exe_share_data_table_buffer_offset
+    CALL    EXE_LOAD_SHARE_TABLE
+    MOVE    ACR                                             exe_load_share_data_table_result
+    JZ      EXE_LOAD_SHARE_DATA_TABLE_ERROR
+    //
+    CMT     40060720
+    MOVE    #exe_load_share_data_table_result_offset        1
+    RET
+EXE_LOAD_SHARE_DATA_TABLE_ERROR:
+    CMT     40060730
+    MOVE    #exe_load_share_data_table_result_offset        0
+END
+
+PROC=EXE_LOAD_CODE
+    CMT     40060810
+    MOVE    exe_load_code_result_offset                     AAR
+    //
+    MOVE    AAR                                             @exe_load_code_result
+    MOVE    ABR                                             exe_head_code_count
+    MOVE    ACR                                             exe_code_table_buffer_offset
+    MOVE    ADR                                             exe_code_buffer_offset
+    CALL    EXE_LOAD_SEGMENTS
+    MOVE    ACR                                             exe_load_code_result
+    JZ      EXE_LOAD_CODE_ERROR
+    //
+    CMT     40060820
+    MOVE    #exe_load_code_result_offset                    1
+    RET
+EXE_LOAD_CODE_ERROR:
+    CMT     40060830
+    MOVE    #exe_load_code_result_offset                    0
+END
+
+PROC=EXE_LOAD_DATA
+    CMT     40060910
+    MOVE    exe_load_data_result_offset                     AAR
+    //
+    MOVE    AAR                                             @exe_load_data_result
+    MOVE    ABR                                             exe_head_data_count
+    MOVE    ACR                                             exe_data_table_buffer_offset
+    CALL    EXE_LOAD_SEGMENTS
+    MOVE    ACR                                             exe_load_data_result
+    JZ      EXE_LOAD_DATA_ERROR
+    //
+    CMT     40060920
+    MOVE    #exe_load_data_result_offset                    1
+    RET
+EXE_LOAD_DATA_ERROR:
+    CMT     40060930
+    MOVE    #exe_load_data_result_offset                    0
+END
+
+PROC=EXE_LOAD_SHARE_CODE
+    CMT     40061010
+    MOVE    exe_load_share_code_result_offset               AAR
+    //
+    MOVE    AAR                                             @exe_load_share_code_result
+    MOVE    ABR                                             exe_head_share_code_count
+    MOVE    ACR                                             exe_share_code_table_buffer_offset
+    CALL    EXE_LOAD_SHARE_SEGMENTS
+    MOVE    ACR                                             exe_load_share_code_result
+    JZ      EXE_LOAD_SHARE_CODE_ERROR
+    //
+    CMT     40061020
+    MOVE    #exe_load_share_code_result_offset              1
+    RET
+EXE_LOAD_SHARE_CODE_ERROR:
+    CMT     40061030
+    MOVE    #exe_load_share_code_result_offset              0
+END
+
+PROC=EXE_LOAD_SHARE_DATA
+    CMT     40061110
+    MOVE    exe_load_share_data_result_offset               AAR
+    //
+    MOVE    AAR                                             @exe_load_share_data_result
+    MOVE    ABR                                             exe_head_share_data_count
+    MOVE    ACR                                             exe_share_data_table_buffer_offset
+    CALL    EXE_LOAD_SHARE_SEGMENTS
+    MOVE    ACR                                             exe_load_share_data_result
+    JZ      EXE_LOAD_SHARE_DATA_ERROR
+    //
+    CMT     40061120
+    MOVE    #exe_load_share_data_result_offset              1
+    RET
+EXE_LOAD_SHARE_DATA_ERROR:
+    CMT     40061130
+    MOVE    #exe_load_share_data_result_offset              0
+END
+
+PROC=EXE_LOAD_TABLE
+    CMT     40061210
+    //DBG
+    MOVE    exe_load_table_result_offset                    AAR
+    MOVE    exe_load_table_count                            ABR
+    MOVE    exe_load_table_buffer_offset                    ACR
+    //
+    MOVE    ACR                                             exe_load_table_count
+    JZ      EXE_LOAD_TABLE_END
+    //
+    CMT     40061220
+    //DBG
+    MOVE    AAR                                             exe_load_table_count
+    MOVE    ABR                                             3
+    MUL
+    MOVE    exe_load_table_value                            ACR
+    //
+    //DBG
+    MOVE    AAR                                             @exe_load_table_result
+    MOVE    ABR                                             exe_load_table_buffer_offset
+    CALL    EXE_PARSE_NEXT
+    MOVE    ACR                                             exe_load_table_result
+    JZ      EXE_LOAD_TABLE_ERROR
+    //
+    CMT     40061230
+    //DBG
+    MOVE    AAR                                             exe_table_buffer_current_offset
+    MOVE    ABR                                             exe_load_table_value
+    ADD
+    MOVE    exe_table_buffer_current_offset                 ACR
+    //
+EXE_LOAD_TABLE_END:
+    CMT     40061240
+    //DBG
+    MOVE    #exe_load_table_result_offset                   1
+    RET
+EXE_LOAD_TABLE_ERROR:
+    CMT     40061250
+    //DBG
+    MOVE    #exe_load_table_result_offset                   0
+END
+
+PROC=EXE_LOAD_SHARE_TABLE
+    CMT     40061310
+    //DBG
+    MOVE    exe_load_share_table_result_offset              AAR
+    MOVE    exe_load_share_table_count                      ABR
+    MOVE    exe_load_share_table_buffer_offset              ACR
+    //
+    MOVE    ACR                                             exe_load_share_table_count
+    JZ      EXE_LOAD_SHARE_TABLE_END
+    //
+    CMT     40061320
+    MOVE    AAR                                             exe_load_share_table_count
+    MOVE    ABR                                             1
+    SUB
+    MOVE    CCR                                             ACR
+    //
+EXE_LOAD_SHARE_TABLE_NEXT:
+    CMT     40061330
+    //DBG
+    MOVE    AAR                                             @exe_load_share_table_result
+    MOVE    ABR                                             exe_load_share_table_buffer_offset
+    MOVE    ACR                                             5
+    CALL    EXE_PARSE_NEXT
+    MOVE    ACR                                             exe_load_share_table_result
+    JZ      EXE_LOAD_SHARE_TABLE_ERROR
+    //
+    CMT     40061340
+    MOVE    AAR                                             exe_table_buffer_current_offset
+    MOVE    ABR                                             5
+    ADD
+    MOVE    exe_table_buffer_current_offset                 ACR
+    MOVE    AAR                                             exe_load_share_table_buffer_offset
+    ADD
+    MOVE    exe_load_share_table_buffer_offset              ACR
+    //
+    //DBG
+    MOVE    AAR                                             #exe_table_buffer_current_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_share_table_length                     ACR
+    //
+    CMT     40061350
+    //DBG
+    MOVE    AAR                                             @exe_load_share_table_result
+    MOVE    ABR                                             exe_load_share_table_buffer_offset
+    MOVE    ACR                                             exe_load_share_table_length
+    CALL    EXE_PARSE_NEXT
+    MOVE    ACR                                             exe_load_share_table_result
+    JZ      EXE_LOAD_SHARE_TABLE_ERROR
+    //
+    CMT     40061360
+    //DBG
+    MOVE    AAR                                             exe_load_share_table_buffer_offset
+    MOVE    ABR                                             exe_load_share_table_length
+    ADD
+    MOVE    exe_load_share_table_buffer_offset              ACR
+    //
+    MOVE    AAR                                             exe_table_buffer_current_offset
+    ADD
+    MOVE    exe_table_buffer_current_offset                 ACR
+    //
+    LOOP    EXE_LOAD_SHARE_TABLE_NEXT
+    //
+EXE_LOAD_SHARE_TABLE_END:
+    //
+    CMT     40061370
+    MOVE    #exe_load_share_table_result_offset             1
+    RET
+EXE_LOAD_SHARE_TABLE_ERROR:
+    CMT     40061380
+    MOVE    #exe_load_share_table_result_offset             0
+END
+
+PROC=EXE_LOAD_SEGMENTS
+    CMT     40061410
+    MOVE    exe_load_segments_result_offset                 AAR
+    MOVE    exe_load_segments_count                         ABR
+    MOVE    exe_load_segments_table_offset                  ACR
+    MOVE    exe_load_segments_buffer_offset                 ADR
+    //
+    MOVE    ACR                                             exe_load_segments_count
+    JZ      EXE_LOAD_SEGMENTS_END
+    //
+    CMT     40061420
+    MOVE    AAR                                             exe_load_segments_count
+    MOVE    ABR                                             1
+    SUB
+    MOVE    CCR                                             ACR
+    //
+EXE_LOAD_SEGMENTS_NEXT:
+    CMT     40061430
+    MOVE    AAR                                             exe_load_segments_table_offset
+    MOVE    ABR                                             2
+    ADD
+    MOVE    exe_load_segments_length                        #ACR
+    //
+    MOVE    ACR                                             exe_load_segments_length
+    JZ      EXE_LOAD_SEGMENTS_ERROR
+    //
+    MOVE    AAR                                             @exe_load_segments_result
+    MOVE    ABR                                             exe_load_segments_buffer_offset
+    MOVE    ACR                                             exe_load_segments_length
+    CALL    EXE_PARSE_NEXT
+    MOVE    ACR                                             exe_load_segments_result
+    JZ      EXE_LOAD_SEGMENTS_ERROR
+    //
+    MOVE    AAR                                             exe_load_segments_buffer_offset
+    MOVE    ABR                                             exe_load_segments_length
+    ADD
+    MOVE    exe_load_segments_buffer_offset                 ACR
+    //
+    MOVE    AAR                                             exe_load_segments_table_offset
+    MOVE    ABR                                             3
+    ADD
+    MOVE    exe_load_segments_table_offset                  ACR
+    //
+    CMT     40061440
+    LOOP    EXE_LOAD_SEGMENTS_NEXT
+    //
+EXE_LOAD_SEGMENTS_END:
+    //
+    CMT     40061450
+    MOVE    #exe_load_segments_result_offset                1
+    RET
+EXE_LOAD_SEGMENTS_ERROR:
+    CMT     40061460
+    MOVE    #exe_load_segments_result_offset                0
+END
+
+PROC=EXE_LOAD_SHARE_SEGMENTS
+    CMT     40061510
+    MOVE    exe_load_share_segments_result_offset           AAR
+    MOVE    exe_load_share_segments_count                   ABR
+    MOVE    exe_load_share_segments_table_offset            ACR
+    //
+    MOVE    ACR                                             exe_load_share_segments_count
+    JZ      EXE_LOAD_SHARE_SEGMENTS_END
+    //
+    CMT     40061520
+    MOVE    AAR                                             exe_load_share_segments_count
+    MOVE    ABR                                             1
+    SUB
+    MOVE    CCR                                             ACR
+    //
+EXE_LOAD_SHARE_SEGMENTS_NEXT:
+    CMT     40061530
+    MOVE    AAR                                             exe_load_share_segments_table_offset
+    MOVE    ABR                                             2
+    ADD
+    MOVE    ACR                                             #ACR
+    //
+    MOVE    AAR                                             @exe_load_share_segments_result
+    MOVE    ABR                                             exe_load_share_segments_table_offset
+    CALL    EXE_PARSE_NEXT
+    MOVE    ACR                                             exe_load_share_segments_result
+    JZ      EXE_LOAD_SHARE_SEGMENTS_END
+    //
+    CMT     40061540
+    MOVE    ABR                                             exe_load_share_segments_table_offset
+    MOVE    AAR                                             #exe_load_share_segments_table_offset
+    ADD
+    MOVE    AAR                                             ACR
+    MOVE    ABR                                             2
+    ADD
+    MOVE    exe_load_share_segments_table_offset            ACR
+    //
+    CMT     40061550
+    LOOP    EXE_LOAD_SHARE_SEGMENTS_NEXT
+    //
+EXE_LOAD_SHARE_SEGMENTS_END:
+    //
+    CMT     40061560
+    MOVE    #exe_load_share_segments_result_offset          1
+    RET
+EXE_LOAD_SHARE_SEGMENTS_ERROR:
+    CMT     40061570
+    MOVE    #exe_load_share_segments_result_offset          0
+END
+
+PROC=EXE_READ_INDEX
+    CMT     40061710
+    MOVE    exe_read_index_result_offset                    AAR
+    //
+    MOVE    AAR                                             @exe_read_index_result
+    MOVE    ABR                                             @exe_location_low
+    CALL    ITEM_EQUAL_ISEND
+    MOVE    ACR                                             exe_read_index_result
+    JNZ     EXE_READ_INDEX_ERROR
+    //
+    CMT     40061720
+    MOVE    AAR                                             15
+    MOVE    ABR                                             exe_block_index
+    SUB
+    MOVE    ACR                                             AMF
+    JNZ     EXE_READ_INDEX_ERROR
+    //
+    CMT     40061730
+    //
+    MOVE    AAR                                             @exe_read_index_result
+    MOVE    ABR                                             @exe_location_low
+    MOVE    ACR                                             exe_block_index
+    MOVE    ADR                                             @{CBR:@exe_disk_buffer}
+    CALL    FILE_READ_INDEX
+    MOVE    ACR                                             exe_read_index_result
+    JZ      EXE_READ_INDEX_ERROR
+    //
+    CMT     40061740
+    //DBG
+    MOVE    AAR                                             exe_length
+    MOVE    ABR                                             exe_buffer_length
+    SUB
+    MOVE    exe_read_index_value                            ACR
+    //
+    MOVE    exe_length                                      0
+    MOVE    ACR                                             AMF
+    JNZ     EXE_READ_INDEX_EOF
+    //
+    CMT     40061750
+    MOVE    exe_length                                      exe_read_index_value
+    MOVE    exe_buffer_current_limit                        exe_buffer_limit
+    JUMP    EXE_READ_INDEX_END
+    //
+EXE_READ_INDEX_EOF:
+    CMT     40061760
+    MOVE    AAR                                             exe_buffer_limit
+    MOVE    ABR                                             exe_read_index_value
+    SUB
+    MOVE    exe_read_index_value                            ACR
+    MOVE    ACR                                             AMF
+    JNZ     EXE_READ_INDEX_ERROR
+    //
+    CMT     40061770
+    MOVE    exe_buffer_current_limit                        exe_read_index_value
+    //
+    //MOVE    AAR                                             exe_buffer_offset
+    //MOVE    ABR                                             exe_read_index_value
+    //ADD
+    //MOVE    exe_buffer_current_limit                        ACR
+    //
+EXE_READ_INDEX_END:
+    CMT     40061780
+    //DBG
+    MOVE    #exe_read_index_result_offset                   1
+    RET
+EXE_READ_INDEX_ERROR:
+    CMT     40061790
+    //DBG
+    MOVE    #exe_read_index_result_offset                   0
+END
+
+//
+//result
+//0     failure
+//1     success
+//2     eof
+//
+PROC=EXE_PARSE_NEXT
+    CMT     40061810
+    //DBG
+    MOVE    exe_parse_next_result_offset                    AAR
+    MOVE    exe_parse_next_buffer_offset                    ABR
+    MOVE    exe_parse_next_length                           ACR
+    //
+    MOVE    ACR                                             exe_length
+    JNZ     EXE_PARSE_NEXT_START
+    CMT     40061820
+    MOVE    AAR                                             exe_buffer_current_offset
+    MOVE    ABR                                             exe_buffer_current_limit
+    SUB
+    MOVE    ACR                                             AMF
+    JNZ     EXE_PARSE_NEXT_EOF
+    //
+EXE_PARSE_NEXT_START:
+    CMT     40061830
+    MOVE    AAR                                             exe_buffer_offset
+    MOVE    ABR                                             exe_buffer_current_offset
+    SUB
+    JNZ     EXE_PARSE_NEXT_NEXT
+    //
+    CMT     40061840
+    MOVE    AAR                                             @exe_parse_next_result
+    CALL    EXE_READ_INDEX
+    MOVE    ACR                                             exe_parse_next_result
+    JZ      EXE_PARSE_NEXT_ERROR
+    //
+    //DBG
+    MOVE    exe_buffer_current_length                       exe_parse_next_length
+EXE_PARSE_NEXT_NEXT:
+    CMT     40061850
+    MOVE    AAR                                             exe_buffer_current_offset
+    MOVE    ABR                                             exe_buffer_current_length
+    ADD
+    MOVE    exe_buffer_current_limit                        ACR
+    //
+    MOVE    AAR                                             exe_buffer_limit
+    MOVE    ABR                                             exe_buffer_current_limit
+    SUB
+    MOVE    ACR                                             AMF
+    JZ      EXE_PARSE_NEXT_ZERO
+    //
+    CMT     40061860
+    MOVE    AAR                                             exe_buffer_limit
+    MOVE    ABR                                             exe_buffer_current_offset
+    SUB
+    MOVE    ACR                                             AMF
+    JNZ     EXE_PARSE_NEXT_ERROR
+    //
+    CMT     40061870
+    MOVE    exe_buffer_current_length                       ACR
+    //
+    MOVE    AAR                                             exe_buffer_current_limit
+    MOVE    ABR                                             exe_buffer_limit
+    SUB
+    MOVE    ACR                                             AMF
+    JNZ     EXE_PARSE_NEXT_ERROR
+    //
+    MOVE    exe_buffer_current_residue                      ACR
+    //
+EXE_PARSE_NEXT_ZERO:
+    CMT     40061880
+    MOVE    AAR                                             @exe_parse_next_result
+    MOVE    ABR                                             exe_buffer_current_offset
+    MOVE    ACR                                             exe_parse_next_buffer_offset
+    MOVE    ADR                                             exe_buffer_current_length
+    CALL    MEM_COPY
+    MOVE    ACR                                             exe_parse_next_result
+    JZ      EXE_PARSE_NEXT_ERROR
+    //
+    CMT     40061890
+    //DBG
+    MOVE    AAR                                             exe_buffer_current_offset
+    MOVE    ABR                                             exe_buffer_current_length
+    ADD
+    MOVE    exe_buffer_current_offset                       ACR
+    //
+    MOVE    AAR                                             exe_buffer_limit
+    MOVE    ABR                                             exe_buffer_current_offset
+    SUB
+    MOVE    exe_parse_next_value                            ACR
+    MOVE    ACR                                             AMF
+    JNZ     EXE_PARSE_NEXT_LENGTH
+    //
+    CMT     40061910
+    JUMP    EXE_PARSE_NEXT_END
+    //
+EXE_PARSE_NEXT_LENGTH:
+    CMT     40061920
+    MOVE    AAR                                             exe_length
+    MOVE    ABR                                             exe_buffer_current_length
+    SUB
+    MOVE    exe_length                                      ACR
+    MOVE    ACR                                             AMF
+    JNZ     EXE_PARSE_NEXT_ERROR
+    //
+    CMT     40061930
+    MOVE    ACR                                             exe_buffer_current_residue
+    JZ      EXE_PARSE_NEXT_END
+    //
+    CMT     40061940
+    MOVE    exe_buffer_current_length                       exe_buffer_current_residue
+    JUMP    EXE_PARSE_NEXT_NEXT
+    //
+EXE_PARSE_NEXT_END:
+    CMT     40061950
+    MOVE    #exe_parse_next_result_offset                   1
+    RET
+EXE_PARSE_NEXT_EOF:
+    CMT     40061960
+    MOVE    #exe_parse_next_result_offset                   2
+    RET
+EXE_PARSE_NEXT_ERROR:
+    CMT     40061970
+    MOVE    #exe_parse_next_result_offset                   0
+END

@@ -1,0 +1,13 @@
+IMPORT      "share.txt"
+
+MODE    REAL    TINY
+
+DATA
+    value                               INTEGER
+END
+
+CODE
+    MOVE    value                       share_value
+    //
+    HALT
+END

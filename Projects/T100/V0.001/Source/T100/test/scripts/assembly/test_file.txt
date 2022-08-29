@@ -1,0 +1,7 @@
+IMPORT "test_import.txt"
+
+MODE TINY
+CODE
+END
+DATA
+END

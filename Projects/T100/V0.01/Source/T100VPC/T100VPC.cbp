@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100VPC" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../build/T100VPC" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-std=c17" />
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="include/device" />
+					<Add directory="include/qu32" />
+					<Add directory="include/order" />
+					<Add directory="../T100Common/include" />
+					<Add directory="test" />
+					<Add directory="include/view/dialog" />
+					<Add directory="../T100VPC" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30ud.a" />
+					<Add library="../build/libT100Lib.a" />
+					<Add library="../build/libT100Common.a" />
+					<Add library="iconv" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100VPC" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include" />
+					<Add directory="include/device" />
+					<Add directory="include/qu32" />
+					<Add directory="include/order" />
+					<Add directory="test" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="../T100Common/include" />
+					<Add directory="include/view/dialog" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw30u.a" />
+					<Add library="../build/libT100Common.a" />
+					<Add library="../build/libT100Lib.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add option="-Wall" />
+			<Add directory="$(#wx)/include" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="$(#wx)/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+		</Linker>
+		<Unit filename="T100VPCApp.cpp" />
+		<Unit filename="T100VPCApp.h" />
+		<Unit filename="T100VPCMain.cpp" />
+		<Unit filename="T100VPCMain.h" />
+		<Unit filename="include/T100VPCCommon.h" />
+		<Unit filename="include/T100VPCSetup.h" />
+		<Unit filename="include/device/T100AUDevice.h" />
+		<Unit filename="include/device/T100AUDeviceInfo.h" />
+		<Unit filename="include/device/T100BlockDevice.h" />
+		<Unit filename="include/device/T100CUDevice.h" />
+		<Unit filename="include/device/T100CUDeviceInfo.h" />
+		<Unit filename="include/device/T100Device.h" />
+		<Unit filename="include/device/T100DeviceInfo.h" />
+		<Unit filename="include/device/T100Disk.h" />
+		<Unit filename="include/device/T100DiskInfo.h" />
+		<Unit filename="include/device/T100Display.h" />
+		<Unit filename="include/device/T100DisplayInfo.h" />
+		<Unit filename="include/device/T100Keyboard.h" />
+		<Unit filename="include/device/T100KeyboardInfo.h" />
+		<Unit filename="include/device/T100MemoryDevice.h" />
+		<Unit filename="include/device/T100MemoryInfo.h" />
+		<Unit filename="include/device/T100Mouse.h" />
+		<Unit filename="include/device/T100MouseInfo.h" />
+		<Unit filename="include/device/T100PageDevice.h" />
+		<Unit filename="include/device/T100PortDevice.h" />
+		<Unit filename="include/device/T100PortDeviceInfo.h" />
+		<Unit filename="include/order/T100AllOrders.h" />
+		<Unit filename="include/order/T100Order.h" />
+		<Unit filename="include/order/T100OrderAdd.h" />
+		<Unit filename="include/order/T100OrderAnd.h" />
+		<Unit filename="include/order/T100OrderCall.h" />
+		<Unit filename="include/order/T100OrderCmt.h" />
+		<Unit filename="include/order/T100OrderDebug.h" />
+		<Unit filename="include/order/T100OrderDiv.h" />
+		<Unit filename="include/order/T100OrderHalt.h" />
+		<Unit filename="include/order/T100OrderIn.h" />
+		<Unit filename="include/order/T100OrderInt.h" />
+		<Unit filename="include/order/T100OrderIret.h" />
+		<Unit filename="include/order/T100OrderJnz.h" />
+		<Unit filename="include/order/T100OrderJump.h" />
+		<Unit filename="include/order/T100OrderJz.h" />
+		<Unit filename="include/order/T100OrderLock.h" />
+		<Unit filename="include/order/T100OrderLoop.h" />
+		<Unit filename="include/order/T100OrderMove.h" />
+		<Unit filename="include/order/T100OrderMul.h" />
+		<Unit filename="include/order/T100OrderNop.h" />
+		<Unit filename="include/order/T100OrderNot.h" />
+		<Unit filename="include/order/T100OrderOr.h" />
+		<Unit filename="include/order/T100OrderOut.h" />
+		<Unit filename="include/order/T100OrderRet.h" />
+		<Unit filename="include/order/T100OrderSub.h" />
+		<Unit filename="include/order/T100OrderUnlock.h" />
+		<Unit filename="include/order/T100OrderXor.h" />
+		<Unit filename="include/qu32/T100AU32.h" />
+		<Unit filename="include/qu32/T100CU32.h" />
+		<Unit filename="include/qu32/T100Executor32.h" />
+		<Unit filename="include/qu32/T100Interrupt32.h" />
+		<Unit filename="include/qu32/T100Memory32.h" />
+		<Unit filename="include/qu32/T100Port32.h" />
+		<Unit filename="include/qu32/T100QU32.h" />
+		<Unit filename="include/qu32/T100QU32Setup.h" />
+		<Unit filename="include/qu32/T100Register32.h" />
+		<Unit filename="include/serve/T100VPCCallback.h" />
+		<Unit filename="include/serve/T100VPCServe.h" />
+		<Unit filename="include/view/T100VPCScreen.h" />
+		<Unit filename="include/view/T100VPCView.h" />
+		<Unit filename="include/view/dialog/T100VPCDebugDemoDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCDebugDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCHardwareDemoDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCHardwareDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCHardwareSelectDemoDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCHardwareSelectDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCSetupDemoDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCSetupDialog.h" />
+		<Unit filename="main.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="src/T100VPCSetup.cpp" />
+		<Unit filename="src/device/T100AUDevice.cpp" />
+		<Unit filename="src/device/T100AUDeviceInfo.cpp" />
+		<Unit filename="src/device/T100BlockDevice.cpp" />
+		<Unit filename="src/device/T100CUDevice.cpp" />
+		<Unit filename="src/device/T100CUDeviceInfo.cpp" />
+		<Unit filename="src/device/T100Device.cpp" />
+		<Unit filename="src/device/T100DeviceInfo.cpp" />
+		<Unit filename="src/device/T100Disk.cpp" />
+		<Unit filename="src/device/T100DiskInfo.cpp" />
+		<Unit filename="src/device/T100Display.cpp" />
+		<Unit filename="src/device/T100DisplayInfo.cpp" />
+		<Unit filename="src/device/T100Keyboard.cpp" />
+		<Unit filename="src/device/T100KeyboardInfo.cpp" />
+		<Unit filename="src/device/T100MemoryDevice.cpp" />
+		<Unit filename="src/device/T100MemoryInfo.cpp" />
+		<Unit filename="src/device/T100Mouse.cpp" />
+		<Unit filename="src/device/T100MouseInfo.cpp" />
+		<Unit filename="src/device/T100PageDevice.cpp" />
+		<Unit filename="src/device/T100PortDevice.cpp" />
+		<Unit filename="src/device/T100PortDeviceInfo.cpp" />
+		<Unit filename="src/order/T100Order.cpp" />
+		<Unit filename="src/order/T100OrderAdd.cpp" />
+		<Unit filename="src/order/T100OrderAnd.cpp" />
+		<Unit filename="src/order/T100OrderCall.cpp" />
+		<Unit filename="src/order/T100OrderCmt.cpp" />
+		<Unit filename="src/order/T100OrderDebug.cpp" />
+		<Unit filename="src/order/T100OrderDiv.cpp" />
+		<Unit filename="src/order/T100OrderHalt.cpp" />
+		<Unit filename="src/order/T100OrderIn.cpp" />
+		<Unit filename="src/order/T100OrderInt.cpp" />
+		<Unit filename="src/order/T100OrderIret.cpp" />
+		<Unit filename="src/order/T100OrderJnz.cpp" />
+		<Unit filename="src/order/T100OrderJump.cpp" />
+		<Unit filename="src/order/T100OrderJz.cpp" />
+		<Unit filename="src/order/T100OrderLock.cpp" />
+		<Unit filename="src/order/T100OrderLoop.cpp" />
+		<Unit filename="src/order/T100OrderMove.cpp" />
+		<Unit filename="src/order/T100OrderMul.cpp" />
+		<Unit filename="src/order/T100OrderNop.cpp" />
+		<Unit filename="src/order/T100OrderNot.cpp" />
+		<Unit filename="src/order/T100OrderOr.cpp" />
+		<Unit filename="src/order/T100OrderOut.cpp" />
+		<Unit filename="src/order/T100OrderRet.cpp" />
+		<Unit filename="src/order/T100OrderSub.cpp" />
+		<Unit filename="src/order/T100OrderUnlock.cpp" />
+		<Unit filename="src/order/T100OrderXor.cpp" />
+		<Unit filename="src/qu32/T100AU32.cpp" />
+		<Unit filename="src/qu32/T100CU32.cpp" />
+		<Unit filename="src/qu32/T100Executor32.cpp" />
+		<Unit filename="src/qu32/T100Interrupt32.cpp" />
+		<Unit filename="src/qu32/T100Memory32.cpp" />
+		<Unit filename="src/qu32/T100Port32.cpp" />
+		<Unit filename="src/qu32/T100QU32.cpp" />
+		<Unit filename="src/qu32/T100QU32Setup.cpp" />
+		<Unit filename="src/qu32/T100Register32.cpp" />
+		<Unit filename="src/serve/T100VPCCallback.cpp" />
+		<Unit filename="src/serve/T100VPCServe.cpp" />
+		<Unit filename="src/view/T100VPCScreen.cpp" />
+		<Unit filename="src/view/T100VPCView.cpp" />
+		<Unit filename="src/view/dialog/T100VPCDebugDemoDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCDebugDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCHardwareDemoDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCHardwareDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCHardwareSelectDemoDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCHardwareSelectDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCSetupDemoDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCSetupDialog.cpp" />
+		<Unit filename="test/T100QU32Test.cpp" />
+		<Unit filename="test/T100QU32Test.h" />
+		<Unit filename="test/T100TestApp.cpp" />
+		<Unit filename="test/T100TestApp.h" />
+		<Unit filename="test/T100VPCTest.cpp" />
+		<Unit filename="test/T100VPCTest.h" />
+		<Unit filename="wxsmith/T100HardwareDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCDebugDemoDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCHardwareDemoDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCHardwareSelectDemoDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCScreen.wxs" />
+		<Unit filename="wxsmith/T100VPCSetupDemoDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCframe.wxs" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="T100VPCApp.cpp" main="T100VPCFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/T100VPCframe.wxs" src="T100VPCMain.cpp" hdr="T100VPCMain.h" fwddecl="0" i18n="1" name="T100VPCFrame" language="CPP" />
+					<wxFrame wxs="wxsmith/T100VPCScreen.wxs" src="src\view\T100VPCScreen.cpp" hdr="include\view\T100VPCScreen.h" fwddecl="0" i18n="1" name="T100VPCScreen" language="CPP" />
+					<wxDialog wxs="wxsmith/T100HardwareDialog.wxs" src="src\view\T100HardwareDialog.cpp" hdr="include\view\T100HardwareDialog.h" fwddecl="0" i18n="1" name="T100HardwareDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100VPCHardwareDemoDialog.wxs" src="src\view\dialog\T100VPCHardwareDemoDialog.cpp" hdr="include\view\dialog\T100VPCHardwareDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCHardwareDemoDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100VPCHardwareSelectDemoDialog.wxs" src="src\view\dialog\T100VPCHardwareSelectDemoDialog.cpp" hdr="include\view\dialog\T100VPCHardwareSelectDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCHardwareSelectDemoDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100VPCSetupDemoDialog.wxs" src="src\view\dialog\T100VPCSetupDemoDialog.cpp" hdr="include\view\dialog\T100VPCSetupDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCSetupDemoDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100VPCDebugDemoDialog.wxs" src="src\view\dialog\T100VPCDebugDemoDialog.cpp" hdr="include\view\dialog\T100VPCDebugDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCDebugDemoDialog" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
