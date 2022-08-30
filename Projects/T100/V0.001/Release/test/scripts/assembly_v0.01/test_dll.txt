@@ -1,0 +1,25 @@
+IMPORT  "test_lib.txt"
+
+DATA
+    a                           INTEGER     1
+    b                           INTEGER     2
+    result                      INTEGER
+    value                       INTEGER
+
+END
+
+
+CODE    DEFAULT
+    MOVE    AAR                 @result
+    MOVE    ABR                 a
+    MOVE    ACR                 b
+    MOVE    ADR                 @value
+    CALL    LIB_ADD
+    MOVE    ACR                 result
+    JZ      ERROR
+
+    MOVE    AAR                 value
+    NOP
+ERROR:
+    HALT
+END

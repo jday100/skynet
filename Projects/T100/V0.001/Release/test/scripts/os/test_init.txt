@@ -1,0 +1,6 @@
+MODE    REAL    TINY
+
+CODE
+    MOVE    AAR                                             1
+    HALT
+END

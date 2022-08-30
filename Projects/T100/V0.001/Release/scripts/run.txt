@@ -1,0 +1,5 @@
+load stores\vdisk.vdk
+format first build\boot.bin
+copy build\init.bin :system:init.bin
+copy build\kernel.bin :system:kernel.bin
+quit

@@ -1,0 +1,21 @@
+DATA
+    int000_offset                       INTEGER     @INT000
+END
+
+DATA    SHARE       LOCATION=1048576
+    int000_result                       INTEGER
+END
+
+CODE    SHARE       LOCATION=1048576
+//
+INT000:
+    NOP
+    IRET
+    //
+END
+
+CODE    DEFAULT
+    MOVE    AAR                         int000_offset
+    //
+    HALT
+END

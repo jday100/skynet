@@ -1,0 +1,7 @@
+create vdisk stores\vdisk.vdk 1024
+create part first 1 512
+format first build\boot.bin
+mkdir first :system
+copy build\init.bin first :system:init.bin
+copy build\kernel.bin first :system:kernel.bin
+quit

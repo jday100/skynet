@@ -1,0 +1,9 @@
+MODE    REAL    TINY
+
+CODE
+    //
+    MOVE    AAR                                         0
+    JUMP    {1049604:4}
+    MOVE    AAR                                         1
+    HALT
+END

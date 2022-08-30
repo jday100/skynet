@@ -1,0 +1,101 @@
+IMPORT  "boot\fs\fs.txt"
+
+MODE    REAL    TINY
+
+DATA
+    test_fs_result                                      INTEGER
+    test_fs_result_offset                               INTEGER
+    //
+    test_fs_part_init_result                            INTEGER
+    test_fs_part_init_result_offset                     INTEGER
+    //
+    test_fs_part_init_location_low                      INTEGER     0
+    test_fs_part_init_location_high                     INTEGER     0
+    test_fs_part_init_length_low                        INTEGER     0
+    test_fs_part_init_length_high                       INTEGER     0
+    //
+END
+
+CODE
+    MOVE    AAR                                         @test_fs_result
+    CALL    TEST_FS_PART_INIT
+    MOVE    ACR                                         test_fs_result
+    JZ      TEST_FS_ERROR
+    //
+    MOVE    AAR                                         1
+    HALT
+    //
+TEST_FS_ERROR:
+    MOVE    AAR                                         0
+    HALT
+END
+
+
+PROC=TEST_FS_PART_INIT
+    MOVE    test_fs_part_init_result_offset             AAR
+    //
+    //FS_PART_INIT
+    MOVE    test_fs_part_init_location_low              1
+    MOVE    test_fs_part_init_length_low                1024
+    //
+    MOVE    AAR                                         @test_fs_part_init_result
+    MOVE    ABR                                         @test_fs_part_init_location_low
+    MOVE    ACR                                         @test_fs_part_init_length_low
+    CALL    FS_PART_INIT
+    MOVE    ACR                                         test_fs_part_init_result
+    JZ      TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    AAR                                         fs_part_location_low
+    MOVE    ABR                                         test_fs_part_init_location_low
+    SUB
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    ACR                                         fs_part_location_high
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    AAR                                         fs_part_length_low
+    MOVE    ABR                                         test_fs_part_init_length_low
+    SUB
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    ACR                                         fs_part_length_high
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    AAR                                         fs_table_begin_low
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    ACR                                         fs_table_begin_high
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    AAR                                         fs_table_end_low
+    MOVE    ABR                                         1
+    SUB
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    ACR                                         fs_table_end_high
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    ACR                                         fs_path_root_low
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    ACR                                         fs_path_root_high
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    ACR                                         fs_path_current_low
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //
+    MOVE    ACR                                         fs_path_current_high
+    JNZ     TEST_FS_PART_INIT_ERROR
+    //FS_PART_INIT
+    //
+
+
+    //
+    MOVE    #test_fs_part_init_result_offset            1
+    RET
+    //
+TEST_FS_PART_INIT_ERROR:
+    MOVE    #test_fs_part_init_result_offset            0
+END
