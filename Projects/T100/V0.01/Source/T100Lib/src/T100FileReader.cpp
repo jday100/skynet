@@ -32,7 +32,7 @@ T100BOOL T100FileReader::open()
 
     result = T100Unicode::to_string8(m_file);
 
-    m_ifs = T100NEW std::ifstream(result, std::ios::out | std::ios::binary);
+    m_ifs = T100NEW std::ifstream(result, std::ios::in | std::ios::binary);
 
     if(m_ifs){
         if(m_ifs->is_open()){
@@ -89,9 +89,12 @@ T100BOOL T100FileReader::seek(T100DWORD seek)
 T100BOOL T100FileReader::read(T100WORD* data, T100WORD& length)
 {
     T100BOOL        result;
+    T100WORD        size;
 
     if(m_opened){
-        result = m_ifs->read((T100STDCHAR*)data, length * 4).fail();
+        size    = m_ifs->read((T100STDCHAR*)data, length * 4).gcount();
+        length  = size / 4;
+        result  = m_ifs->bad();
 
         if(!result){
             return T100TRUE;

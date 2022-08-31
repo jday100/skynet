@@ -46,6 +46,7 @@ class T100Sentence
 
     protected:
         T100BOOL                    getProcedureOffset(T100BuildInfo*, T100String, T100WORD&);
+        T100BOOL                    createPartInfo(T100String);
 
     protected:
         T100SentenceToken*          m_token         = T100NULL;

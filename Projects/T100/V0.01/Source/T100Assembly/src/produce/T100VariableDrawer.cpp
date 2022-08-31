@@ -35,3 +35,10 @@ T100VARIABLE_DEFINE* T100VariableDrawer::getVariableDefine(T100String key)
 
     return result;
 }
+
+T100BOOL T100VariableDrawer::clear()
+{
+    m_variable_hash.clear();
+
+    return T100TRUE;
+}

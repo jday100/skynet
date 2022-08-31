@@ -16,9 +16,9 @@ class T100App
 
         static T100VOID             getCmdLine(int&, wchar_t**&);
 
-        static T100VOID             quit();
+        virtual T100VOID            quit();
 
-        static T100VOID             wait();
+        virtual T100VOID            wait();
 
     protected:
         static T100APP_VECTOR       m_apps;

@@ -35,3 +35,9 @@ T100PROCEDURE_DEFINE* T100ProcedureDrawer::getProcedureDefine(T100String key)
 
     return result;
 }
+
+T100BOOL T100ProcedureDrawer::clear()
+{
+    m_procedure_hash.clear();
+    return T100TRUE;
+}

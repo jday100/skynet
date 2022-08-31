@@ -13,6 +13,7 @@ T100String32    operator +  (const T100CHAR32*, const T100String32&);
 
 class T100String32
 {
+    friend class T100String32Tools;
     public:
         T100String32();
         T100String32(T100CHAR32*);
@@ -40,6 +41,7 @@ class T100String32
         T100String32    operator +  (const T100String32&);
 
     protected:
+        T100STRING32&               getString32();
 
     private:
         T100STRING32                m_string32;

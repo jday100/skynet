@@ -6,6 +6,7 @@
 
 class T100Segment
 {
+    friend class T100RealMerger;
     public:
         T100Segment();
         virtual ~T100Segment();
@@ -31,6 +32,10 @@ class T100Segment
     protected:
         T100String                  m_name;
         T100WORD_VECTOR             m_mem;
+
+        T100BOOL                    isDefault           = T100FALSE;
+        T100BOOL                    isVirtual           = T100FALSE;
+        T100BOOL                    isShare             = T100FALSE;
 
         T100WORD                    m_offset            = 0;
         T100WORD                    m_location          = 0;

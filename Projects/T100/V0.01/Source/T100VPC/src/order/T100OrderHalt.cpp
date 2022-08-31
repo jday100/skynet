@@ -13,7 +13,7 @@ T100OrderHalt::~T100OrderHalt()
 
 T100BOOL T100OrderHalt::run()
 {
-    getHost()->done();
+    getHost()->halt();
 
     return T100TRUE;
 }

@@ -281,8 +281,8 @@ typedef struct{
     T100WORD            offset;
 }T100ITEM;
 
-
-#define     T100SEGMENTDATA_VECTOR      std::vector<T100Segment*>
+#define     T100SEGMENT_CODE_VECTOR     std::vector<T100SegmentCode*>
+#define     T100SEGMENT_DATA_VECTOR     std::vector<T100SegmentData*>
 
 #define     T100PART_INFO_VECTOR        std::vector<T100PartInfo*>
 #define     T100PART_INFO_HASH          std::unordered_map<T100String, T100PartInfo*, T100StringHash, T100StringEqual>

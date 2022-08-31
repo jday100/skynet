@@ -6,6 +6,7 @@
 
 class T100SegmentCode : public T100Segment
 {
+    friend class T100RealMerger;
     public:
         T100SegmentCode();
         virtual ~T100SegmentCode();
@@ -24,6 +25,9 @@ class T100SegmentCode : public T100Segment
         T100BOOL                    addProcedureCall(T100PROCEDURE_CALL*);
 
     protected:
+        T100VOID                    create();
+        T100VOID                    destroy();
+
         T100LABELOFFSET_HASH        m_label_hash;
         T100LABElCALL_VECTOR        m_label_call;
 

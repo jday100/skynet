@@ -1,0 +1,4 @@
+
+work/os/rom.txt  build/rom.bin
+
+-t

@@ -118,7 +118,12 @@ T100BOOL T100ProduceParser::add(T100WSTRING& full, T100PartToken& token)
     item = token.copy();
 
     if(item){
-        info = T100NEW T100PartInfo();
+        info = T100ProduceInfo::getPartDrawer().getPartInfo(name);
+        if(info){
+
+        }else{
+            info = T100NEW T100PartInfo();
+        }
         info->getParseInfo().setToken(item);
     }else{
         return T100FALSE;

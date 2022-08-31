@@ -14,7 +14,7 @@ class T100RealMerger : public T100ProduceMerger
         T100BOOL            run(T100ProduceInfo&, T100RealInfo&);
 
     protected:
-        T100BOOL            merge(T100RealInfo&, T100PartInfo*);
+        T100BOOL            merge(T100PartInfo*, T100RealInfo&);
 
         T100BOOL            decide_code(T100SegmentCode*, T100SegmentCode*);
         T100BOOL            decide_data(T100SegmentData*, T100SegmentData*);

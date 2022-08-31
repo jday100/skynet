@@ -15,6 +15,9 @@ class T100RealInfo
         T100SegmentData&            getData();
 
     protected:
+        T100VOID                    create();
+        T100VOID                    destroy();
+
         T100SegmentCode             m_code;
         T100SegmentData             m_data;
 

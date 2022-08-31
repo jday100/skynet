@@ -34,6 +34,9 @@ class T100BuildInfo
         T100BOOL                    getProcedure(T100String, T100WORD&);
         T100BOOL                    addProcedureCall(T100PROCEDURE_CALL*);
 
+        T100SEGMENT_CODE_VECTOR&    getCodeSegments();
+        T100SEGMENT_DATA_VECTOR&    getDataSegments();
+
 
     protected:
         T100TOKEN_TYPE              m_type          = T100TOKEN_NONE;
@@ -41,6 +44,9 @@ class T100BuildInfo
         T100SegmentData*            m_data          = T100NULL;
 
     private:
+        T100SEGMENT_CODE_VECTOR     m_code_segments;
+        T100SEGMENT_DATA_VECTOR     m_data_segments;
+
 };
 
 #endif // T100BUILDINFO_H

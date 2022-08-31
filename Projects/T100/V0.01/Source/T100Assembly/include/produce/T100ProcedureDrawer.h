@@ -16,6 +16,8 @@ class T100ProcedureDrawer
         static T100BOOL                     setProcedureDefine(T100String, T100PROCEDURE_DEFINE*);
         static T100PROCEDURE_DEFINE*        getProcedureDefine(T100String);
 
+        static T100BOOL                     clear();
+
     protected:
         static T100PROCEDURE_HASH           m_procedure_hash;
 

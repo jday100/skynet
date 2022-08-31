@@ -3,6 +3,7 @@
 #include "T100String.h"
 #include "T100QU32Setup.h"
 #include "T100QU32.h"
+#include "T100FileTools.h"
 
 
 T100Memory32::T100Memory32(T100QU32* host)
@@ -20,8 +21,16 @@ T100Memory32::~T100Memory32()
 
 T100VOID T100Memory32::create()
 {
-    m_rom.resize(T100QU32Setup::m_rom_size);
-    m_ram.resize(T100QU32Setup::m_ram_size);
+    m_rom_base      = T100QU32Setup::getRomBase();
+    m_rom_length    = T100QU32Setup::getRomSize();
+    m_rom_limit     = m_rom_base + m_rom_length;
+
+    m_ram_base      = T100QU32Setup::getRamBase();
+    m_ram_length    = T100QU32Setup::getRamSize();
+    m_ram_limit     = m_ram_base + m_ram_length;
+
+    m_rom.resize(m_rom_length);
+    m_ram.resize(m_ram_length);
 }
 
 T100VOID T100Memory32::destroy()
@@ -121,7 +130,20 @@ T100BOOL T100Memory32::raw_write(T100WORD base, T100WORD offset, T100WORD value)
     return result;
 }
 
-T100BOOL T100Memory32::load(T100STRING file, T100WORD location, T100WORD length)
+T100BOOL T100Memory32::load(T100STRING file, T100WORD location)
 {
+    T100BOOL        result      = T100FALSE;
+    T100WORD        value;
 
+    if(location >= m_ram_base){
+        value = location - m_ram_base;
+        result = T100FileTools::load(file.to_wstring(), m_ram, value);
+    }else if(location >= m_rom_base){
+        value = location - m_rom_base;
+        result = T100FileTools::load(file.to_wstring(), m_rom, value);
+    }else{
+        return T100FALSE;
+    }
+
+    return result;
 }

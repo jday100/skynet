@@ -71,7 +71,7 @@ T100BOOL T100VPCCallback::frame_menu_hardware_select(void* d)
 
 T100BOOL T100VPCCallback::frame_menu_setup(void* d)
 {
-    T100VPCSetupDemoDialog          dialog(m_view->getFrame());
+    T100VPCSetupDialog          dialog(m_view->getFrame());
 
     dialog.ShowModal();
 }

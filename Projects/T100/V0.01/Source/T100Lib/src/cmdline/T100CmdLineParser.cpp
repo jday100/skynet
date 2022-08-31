@@ -93,6 +93,18 @@ READ_NEXT:
                             //result = T100NEW T100CmdLineSwitch();
                         }
                         break;
+                    case T100CMDLINE_TOKEN_END:
+                        {
+                            T100CmdLineSwitch       item;
+
+                            item.value  = first;
+
+                            value = classify(item, data);
+                            if(!value){
+                                return T100FALSE;
+                            }
+                        }
+                        break;
                     default:
                         return T100FALSE;
                     }

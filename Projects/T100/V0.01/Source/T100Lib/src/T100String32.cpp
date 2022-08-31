@@ -88,6 +88,11 @@ T100BYTE* T100String32::byte_data()
     return result;
 }
 
+T100STRING32& T100String32::getString32()
+{
+    return m_string32;
+}
+
 T100BOOL T100String32::operator==(const T100String32& str)
 {
     return m_string32 == str.m_string32;
@@ -197,3 +202,5 @@ T100String32 operator+(const T100CHAR32* source, const T100String32& target)
 
     return result;
 }
+
+

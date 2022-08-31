@@ -111,14 +111,14 @@ T100BOOL T100BuildInfo::closeSegment()
     switch(m_type){
     case T100SEGMENT_CODE:
         {
-
-
-
+            m_code_segments.push_back(m_code);
+            m_code = T100NULL;
         }
         break;
     case T100SEGMENT_DATA:
         {
-
+            m_data_segments.push_back(m_data);
+            m_data = T100NULL;
         }
         break;
     case T100SEGMENT_PROCEDURE:
@@ -130,6 +130,8 @@ T100BOOL T100BuildInfo::closeSegment()
             m_code->setValue(order.WORD);
             m_code->next();
 
+            m_code_segments.push_back(m_code);
+            m_code = T100NULL;
         }
         break;
     default:
@@ -311,3 +313,12 @@ T100BOOL T100BuildInfo::addProcedureCall(T100PROCEDURE_CALL* call)
     return result;
 }
 
+T100SEGMENT_CODE_VECTOR& T100BuildInfo::getCodeSegments()
+{
+    return m_code_segments;
+}
+
+T100SEGMENT_DATA_VECTOR& T100BuildInfo::getDataSegments()
+{
+    return m_data_segments;
+}

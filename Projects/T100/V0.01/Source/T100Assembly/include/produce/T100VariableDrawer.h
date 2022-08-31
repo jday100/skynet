@@ -16,6 +16,8 @@ class T100VariableDrawer
         static T100BOOL                     setVariableDefine(T100String, T100VARIABLE_DEFINE*);
         static T100VARIABLE_DEFINE*         getVariableDefine(T100String);
 
+        static T100BOOL                     clear();
+
     protected:
         static T100VARIABLE_HASH            m_variable_hash;
 

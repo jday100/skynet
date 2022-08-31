@@ -16,9 +16,11 @@ class T100PartDrawer
 
         static T100BOOL                     append(T100String&, T100PartInfo*);
 
+        static T100PartInfo*                getPartInfo(T100String&);
+
         static T100PART_INFO_VECTOR&        getPartInfos();
 
-
+        static T100BOOL                     clear();
 
         static T100BOOL                     load(T100String, T100PartInfo*);
         static T100BOOL                     save(T100String, T100PartInfo*);

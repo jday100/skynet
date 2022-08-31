@@ -39,6 +39,23 @@ T100BOOL T100PartDrawer::append(T100String& name, T100PartInfo* info)
     return T100TRUE;
 }
 
+T100PartInfo* T100PartDrawer::getPartInfo(T100String& name)
+{
+    T100BOOL                            result          = T100FALSE;
+    T100PART_INFO_HASH::iterator        it;
+
+    it = m_part_hash.find(name);
+
+    if(it == m_part_hash.end()){
+
+    }else{
+        return (*it).second;
+    }
+
+    return T100NULL;
+}
+
+
 T100PART_INFO_VECTOR& T100PartDrawer::getPartInfos()
 {
     return m_part_vector;
@@ -62,6 +79,14 @@ T100BOOL T100PartDrawer::load(T100String name, T100PartInfo* info)
     result = reader->load(*info);
 
     return result;
+}
+
+T100BOOL T100PartDrawer::clear()
+{
+    m_part_hash.clear();
+    m_part_vector.clear();
+
+    return T100TRUE;
 }
 
 T100BOOL T100PartDrawer::save(T100String name, T100PartInfo* info)

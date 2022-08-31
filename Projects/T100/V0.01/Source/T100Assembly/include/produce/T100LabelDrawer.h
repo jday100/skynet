@@ -16,6 +16,8 @@ class T100LabelDrawer
         static T100BOOL                 setLabelDefine(T100String, T100LABEL_DEFINE*);
         static T100LABEL_DEFINE*        getLabelDefine(T100String);
 
+        static T100BOOL                 clear();
+
     protected:
         static T100LABEL_HASH           m_label_hash;
 

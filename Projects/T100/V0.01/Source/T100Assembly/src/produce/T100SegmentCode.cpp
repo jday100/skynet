@@ -3,11 +3,23 @@
 T100SegmentCode::T100SegmentCode()
 {
     //ctor
+    create();
 }
 
 T100SegmentCode::~T100SegmentCode()
 {
     //dtor
+    destroy();
+}
+
+T100VOID T100SegmentCode::create()
+{
+    m_mem.resize(m_offset + 1);
+}
+
+T100VOID T100SegmentCode::destroy()
+{
+
 }
 
 T100BOOL T100SegmentCode::setValue(T100WORD value)

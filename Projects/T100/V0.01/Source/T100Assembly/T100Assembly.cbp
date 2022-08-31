@@ -12,7 +12,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="work/os/rom.txt  build/rom.bin" />
+				<Option parameters="-t" />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
@@ -26,15 +26,18 @@
 					<Add directory="test" />
 					<Add directory="include/cmdline" />
 					<Add directory="../T100Lib/include/cmdline" />
+					<Add directory="T100Assembly/include/produce" />
 				</Compiler>
 				<Linker>
+					<Add library="../build/libT100Common.a" />
 					<Add library="../build/libT100Lib.a" />
 					<Add library="dl" />
 					<Add library="iconv" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/T100Assembly" prefix_auto="1" extension_auto="1" />
+				<Option output="../build/T100Assembly" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -48,55 +51,14 @@
 					<Add directory="include/scanner" />
 					<Add directory="include/produce/real" />
 					<Add directory="include/produce/virtual" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="../T100Common/include" />
+					<Add directory="../T100Lib/include/cmdline" />
+					<Add directory="T100Assembly/include/produce" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
-				</Linker>
-			</Target>
-			<Target title="Test">
-				<Option output="bin/Debug/T100Assembly" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Debug/" />
-				<Option type="1" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-					<Add directory="include" />
-					<Add directory="include/produce/real" />
-					<Add directory="include/produce/virtual" />
-					<Add directory="include/produce" />
-					<Add directory="include/scanner" />
-					<Add directory="include/syntax" />
-					<Add directory="../T100Lib/include" />
-					<Add directory="../T100Common/include" />
-					<Add directory="test" />
-					<Add directory="include/cmdline" />
-				</Compiler>
-				<Linker>
-					<Add library="../T100Lib/bin/Debug/libT100Lib.a" />
-					<Add library="dl" />
-				</Linker>
-			</Target>
-			<Target title="Lib">
-				<Option output="../build/T100Assembly" prefix_auto="1" extension_auto="1" />
-				<Option working_dir="" />
-				<Option object_output="obj/Debug/" />
-				<Option type="2" />
-				<Option compiler="gcc" />
-				<Compiler>
-					<Add option="-g" />
-					<Add directory="include" />
-					<Add directory="include/produce/real" />
-					<Add directory="include/produce/virtual" />
-					<Add directory="include/produce" />
-					<Add directory="include/scanner" />
-					<Add directory="include/syntax" />
-					<Add directory="../T100Lib/include" />
-					<Add directory="../T100Common/include" />
-					<Add directory="test" />
-					<Add directory="include/cmdline" />
-					<Add directory="../T100Lib/include/cmdline" />
-				</Compiler>
-				<Linker>
+					<Add library="../build/libT100Common.a" />
 					<Add library="../build/libT100Lib.a" />
 					<Add library="dl" />
 					<Add library="iconv" />
@@ -108,6 +70,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="../build/build/rom.bin" />
+		<Unit filename="../build/test/build/test_basic.bin" />
 		<Unit filename="include/T100Assembly.h" />
 		<Unit filename="include/T100AssemblyApp.h" />
 		<Unit filename="include/T100AssemblyCommon.h" />
@@ -121,23 +84,11 @@
 		<Unit filename="include/produce/T100BuildInfo.h" />
 		<Unit filename="include/produce/T100LabelDrawer.h" />
 		<Unit filename="include/produce/T100ParseInfo.h" />
-		<Unit filename="include/produce/T100PartDrawer.h">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Test" />
-		</Unit>
-		<Unit filename="include/produce/T100PartFile.h">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Test" />
-		</Unit>
+		<Unit filename="include/produce/T100PartDrawer.h" />
+		<Unit filename="include/produce/T100PartFile.h" />
 		<Unit filename="include/produce/T100PartFileReader.h" />
 		<Unit filename="include/produce/T100PartFileWriter.h" />
-		<Unit filename="include/produce/T100PartInfo.h">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Test" />
-		</Unit>
+		<Unit filename="include/produce/T100PartInfo.h" />
 		<Unit filename="include/produce/T100ProcedureDrawer.h" />
 		<Unit filename="include/produce/T100Produce.h" />
 		<Unit filename="include/produce/T100ProduceBuilder.h" />
@@ -216,11 +167,8 @@
 		<Unit filename="include/syntax/T100SentenceUnlock.h" />
 		<Unit filename="include/syntax/T100SentenceVariable.h" />
 		<Unit filename="include/syntax/T100SentenceXor.h" />
-		<Unit filename="main.cpp">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Test" />
-		</Unit>
+		<Unit filename="main.cpp" />
+		<Unit filename="params.txt" />
 		<Unit filename="src/T100Assembly.cpp" />
 		<Unit filename="src/T100AssemblyApp.cpp" />
 		<Unit filename="src/T100AssemblyError.cpp" />
@@ -233,23 +181,11 @@
 		<Unit filename="src/produce/T100BuildInfo.cpp" />
 		<Unit filename="src/produce/T100LabelDrawer.cpp" />
 		<Unit filename="src/produce/T100ParseInfo.cpp" />
-		<Unit filename="src/produce/T100PartDrawer.cpp">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Test" />
-		</Unit>
-		<Unit filename="src/produce/T100PartFile.cpp">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Test" />
-		</Unit>
+		<Unit filename="src/produce/T100PartDrawer.cpp" />
+		<Unit filename="src/produce/T100PartFile.cpp" />
 		<Unit filename="src/produce/T100PartFileReader.cpp" />
 		<Unit filename="src/produce/T100PartFileWriter.cpp" />
-		<Unit filename="src/produce/T100PartInfo.cpp">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Test" />
-		</Unit>
+		<Unit filename="src/produce/T100PartInfo.cpp" />
 		<Unit filename="src/produce/T100ProcedureDrawer.cpp" />
 		<Unit filename="src/produce/T100Produce.cpp" />
 		<Unit filename="src/produce/T100ProduceBuilder.cpp" />

@@ -27,12 +27,14 @@
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/T100Lib" prefix_auto="1" extension_auto="1" />
+				<Option output="../build/T100Lib" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
 				<Option object_output="obj/Release/" />
-				<Option type="1" />
+				<Option type="2" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-std=c++17" />
 					<Add directory="include" />
 					<Add directory="test" />
 					<Add directory="include/cmdline" />
@@ -41,14 +43,16 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
-			<Target title="Lib">
+			<Target title="Test">
 				<Option output="../build/T100Lib" prefix_auto="1" extension_auto="1" />
 				<Option working_dir="" />
 				<Option object_output="obj/Debug/" />
 				<Option type="2" />
 				<Option compiler="gcc" />
+				<Option parameters="-t -l lib.a source.txt target.bin" />
 				<Compiler>
 					<Add option="-std=c++17" />
+					<Add option="-std=c17" />
 					<Add option="-g" />
 					<Add directory="include" />
 					<Add directory="test" />
@@ -56,6 +60,7 @@
 				</Compiler>
 				<Linker>
 					<Add library="dl" />
+					<Add library="iconv" />
 				</Linker>
 			</Target>
 		</Build>
@@ -202,14 +207,8 @@
 		<Unit filename="test/T100LogTest.h" />
 		<Unit filename="test/T100StringTest.cpp" />
 		<Unit filename="test/T100StringTest.h" />
-		<Unit filename="test/T100TestApp.cpp">
-			<Option target="Debug" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="test/T100TestApp.h">
-			<Option target="Debug" />
-			<Option target="Release" />
-		</Unit>
+		<Unit filename="test/T100TestApp.cpp" />
+		<Unit filename="test/T100TestApp.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

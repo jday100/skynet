@@ -90,14 +90,16 @@ T100BOOL T100QU32::stop()
     return T100TRUE;
 }
 
-T100BOOL T100QU32::done()
+T100BOOL T100QU32::halt()
 {
+    m_executor->stop();
 
+    return T100TRUE;
 }
 
-T100BOOL T100QU32::load(T100STRING file, T100WORD location, T100WORD length)
+T100BOOL T100QU32::load(T100STRING file, T100WORD location)
 {
-    return m_memory->load(file, location, length);
+    return m_memory->load(file, location);
 }
 
 T100BOOL T100QU32::load()
@@ -108,7 +110,7 @@ T100BOOL T100QU32::load()
         T100String      file;
 
         file = T100QU32Setup::getRomFile();
-        result = m_memory->load(file, 0, 0);
+        result = m_memory->load(file, 0);
         if(!result){
             return T100FALSE;
         }

@@ -16,6 +16,8 @@ class T100ProduceInfo
         T100ProduceInfo();
         virtual ~T100ProduceInfo();
 
+        static T100BOOL                 clear();
+
         static T100BOOL                 m_code_default;
         static T100BOOL                 m_data_default;
 

@@ -25,6 +25,8 @@ T100BOOL T100SentenceImport::parse()
         m_token->type   = T100SENTENCE_IMPORT;
         file            = m_item->value;
         setLoaded(T100FALSE);
+
+        result = createPartInfo(file);
     }else{
         result = T100FALSE;
     }

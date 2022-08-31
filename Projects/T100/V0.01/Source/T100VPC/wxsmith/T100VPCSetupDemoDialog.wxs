@@ -18,14 +18,19 @@
 								<border>5</border>
 							</object>
 							<object class="sizeritem">
-								<object class="wxComboBox" name="ID_COMBOBOX1" variable="ComboBox1" member="yes" />
+								<object class="wxComboBox" name="ID_COMBOBOX_FONT_FILE" variable="FontFileComboBox" member="yes">
+									<handler function="OnFontFileComboBoxSelected" entry="EVT_COMBOBOX" />
+									<handler function="OnFontFileComboBoxTextUpdated" entry="EVT_TEXT" />
+									<handler function="OnFontFileComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
 							</object>
 							<object class="sizeritem">
-								<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+								<object class="wxButton" name="ID_BUTTON_FONT_FILE" variable="FontFileButton" member="yes">
 									<label>浏览…</label>
+									<handler function="OnFontFileButtonClick" entry="EVT_BUTTON" />
 								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
@@ -46,14 +51,19 @@
 								<border>5</border>
 							</object>
 							<object class="sizeritem">
-								<object class="wxComboBox" name="ID_COMBOBOX2" variable="ComboBox2" member="yes" />
+								<object class="wxComboBox" name="ID_COMBOBOX_VDISK_FILE" variable="VDiskFileComboBox" member="yes">
+									<handler function="OnVDiskFileComboBoxSelected" entry="EVT_COMBOBOX" />
+									<handler function="OnVDiskFileComboBoxTextUpdated" entry="EVT_TEXT" />
+									<handler function="OnVDiskFileComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
 							</object>
 							<object class="sizeritem">
-								<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
+								<object class="wxButton" name="ID_BUTTON_VDISK_FILE" variable="VDiskFileButton" member="yes">
 									<label>浏览…</label>
+									<handler function="OnVDiskFileButtonClick" entry="EVT_BUTTON" />
 								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
@@ -70,122 +80,292 @@
 			<object class="sizeritem">
 				<object class="wxStaticBoxSizer" variable="StaticBoxSizer3" member="no">
 					<label>内存：</label>
+					<orient>wxVERTICAL</orient>
 					<object class="sizeritem">
-						<object class="wxStaticBoxSizer" variable="StaticBoxSizer5" member="no">
-							<label>ROM：</label>
-							<orient>wxVERTICAL</orient>
+						<object class="wxBoxSizer" variable="BoxSizer3" member="no">
 							<object class="sizeritem">
-								<object class="wxGridBagSizer" variable="GridBagSizer1" member="no">
+								<object class="wxStaticBoxSizer" variable="StaticBoxSizer5" member="no">
+									<label>ROM：</label>
+									<orient>wxVERTICAL</orient>
 									<object class="sizeritem">
-										<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
-											<label>BASE：</label>
+										<object class="wxGridBagSizer" variable="GridBagSizer1" member="no">
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+													<label>BASE：</label>
+												</object>
+												<col>0</col>
+												<row>0</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxComboBox" name="ID_COMBOBOX_ROM_BASE" variable="ROMBaseComboBox" member="yes">
+													<handler function="OnROMBaseComboBoxSelected" entry="EVT_COMBOBOX" />
+													<handler function="OnROMBaseComboBoxTextUpdated" entry="EVT_TEXT" />
+													<handler function="OnROMBaseComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+												</object>
+												<colspan>2</colspan>
+												<col>1</col>
+												<row>0</row>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+													<label>SIZE：</label>
+												</object>
+												<col>0</col>
+												<row>1</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+													<label>文件：</label>
+												</object>
+												<col>0</col>
+												<row>2</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+											</object>
+											<object class="sizeritem">
+												<object class="wxComboBox" name="ID_COMBOBOX_ROM_SIZE" variable="ROMSizeComboBox" member="yes">
+													<handler function="OnROMSizeComboBoxSelected" entry="EVT_COMBOBOX" />
+													<handler function="OnROMSizeComboBoxTextUpdated" entry="EVT_TEXT" />
+													<handler function="OnROMSizeComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+												</object>
+												<col>1</col>
+												<row>1</row>
+												<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxCheckBox" name="ID_CHECKBOX_ROM" variable="ROMCheckBox" member="yes">
+													<label>加载ROM</label>
+													<handler function="OnROMCheckBoxClick" entry="EVT_CHECKBOX" />
+												</object>
+												<col>2</col>
+												<row>1</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxComboBox" name="ID_COMBOBOX_ROM_FILE" variable="ROMFileComboBox" member="yes">
+													<handler function="OnROMFileComboBoxSelected" entry="EVT_COMBOBOX" />
+													<handler function="OnROMFileComboBoxTextUpdated" entry="EVT_TEXT" />
+													<handler function="OnROMFileComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+												</object>
+												<col>1</col>
+												<row>2</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxButton" name="ID_BUTTON_ROM_FILE" variable="ROMFileButton" member="yes">
+													<label>浏览…</label>
+													<handler function="OnROMFileButtonClick" entry="EVT_BUTTON" />
+												</object>
+												<col>2</col>
+												<row>2</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+											</object>
 										</object>
-										<col>0</col>
-										<row>0</row>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
-									</object>
-									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX3" variable="ComboBox3" member="yes" />
-										<colspan>2</colspan>
-										<col>1</col>
-										<row>0</row>
-										<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
-										<border>5</border>
-										<option>1</option>
-									</object>
-									<object class="sizeritem">
-										<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
-											<label>SIZE：</label>
-										</object>
-										<col>0</col>
-										<row>1</row>
-										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-										<border>5</border>
-										<option>1</option>
-									</object>
-									<object class="sizeritem">
-										<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
-											<label>文件：</label>
-										</object>
-										<col>0</col>
-										<row>2</row>
-										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-										<border>5</border>
-									</object>
-									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX4" variable="ComboBox4" member="yes" />
-										<colspan>2</colspan>
-										<col>1</col>
-										<row>1</row>
-										<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
-										<border>5</border>
-										<option>1</option>
-									</object>
-									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX5" variable="ComboBox5" member="yes" />
-										<col>1</col>
-										<row>2</row>
-										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-										<border>5</border>
-										<option>1</option>
-									</object>
-									<object class="sizeritem">
-										<object class="wxButton" name="ID_BUTTON3" variable="Button3" member="yes">
-											<label>浏览…</label>
-										</object>
-										<col>2</col>
-										<row>2</row>
-										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-										<border>5</border>
 									</object>
 								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
 							</object>
+							<object class="sizeritem">
+								<object class="wxStaticBoxSizer" variable="StaticBoxSizer6" member="no">
+									<label>RAM：</label>
+									<object class="sizeritem">
+										<object class="wxFlexGridSizer" variable="FlexGridSizer2" member="no">
+											<cols>2</cols>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+													<label>BASE：</label>
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxComboBox" name="ID_COMBOBOX_RAM_BASE" variable="RAMBaseComboBox" member="yes">
+													<handler function="OnRAMBaseComboBoxSelected" entry="EVT_COMBOBOX" />
+													<handler function="OnRAMBaseComboBoxTextUpdated" entry="EVT_TEXT" />
+													<handler function="OnRAMBaseComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+													<label>SIZE：</label>
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxComboBox" name="ID_COMBOBOX_RAM_SIZE" variable="RAMSizeComboBox" member="yes">
+													<handler function="OnRAMSizeComboBoxSelected" entry="EVT_COMBOBOX" />
+													<handler function="OnRAMSizeComboBoxTextUpdated" entry="EVT_TEXT" />
+													<handler function="OnRAMSizeComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+												</object>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+										</object>
+										<flag>wxALL|wxALIGN_TOP</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+								</object>
+								<flag>wxALL|wxEXPAND</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
 						</object>
 						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<border>5</border>
-						<option>1</option>
 					</object>
 					<object class="sizeritem">
-						<object class="wxStaticBoxSizer" variable="StaticBoxSizer6" member="no">
-							<label>RAM：</label>
+						<object class="wxBoxSizer" variable="BoxSizer4" member="no">
 							<object class="sizeritem">
-								<object class="wxFlexGridSizer" variable="FlexGridSizer2" member="no">
-									<cols>2</cols>
+								<object class="wxStaticBoxSizer" variable="StaticBoxSizer7" member="no">
+									<label>加载：</label>
 									<object class="sizeritem">
-										<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
-											<label>BASE：</label>
+										<object class="wxGridBagSizer" variable="GridBagSizer2" member="no">
+											<object class="sizeritem">
+												<object class="wxListView" name="ID_LISTVIEW_FILE" variable="FileListView" member="yes">
+													<handler function="OnFileListViewItemSelect" entry="EVT_LIST_ITEM_SELECTED" />
+												</object>
+												<colspan>2</colspan>
+												<rowspan>4</rowspan>
+												<col>0</col>
+												<row>0</row>
+												<flag>wxALL|wxEXPAND</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT10" variable="StaticText10" member="yes">
+													<label>文件：</label>
+												</object>
+												<col>2</col>
+												<row>0</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxComboBox" name="ID_COMBOBOX_FILE" variable="FileComboBox" member="yes">
+													<handler function="OnFileComboBoxSelected" entry="EVT_COMBOBOX" />
+													<handler function="OnFileComboBoxTextUpdated" entry="EVT_TEXT" />
+													<handler function="OnFileComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+												</object>
+												<colspan>2</colspan>
+												<col>3</col>
+												<row>0</row>
+												<flag>wxALL|wxEXPAND</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxButton" name="ID_BUTTON4" variable="FileButton" member="yes">
+													<label>浏览…</label>
+													<handler function="OnFileButtonClick" entry="EVT_BUTTON" />
+												</object>
+												<col>5</col>
+												<row>0</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT11" variable="StaticText11" member="yes">
+													<label>定位：</label>
+												</object>
+												<col>2</col>
+												<row>1</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxComboBox" name="ID_COMBOBOX_LOCATION" variable="LocationComboBox" member="yes">
+													<handler function="OnLocationComboBoxSelected" entry="EVT_COMBOBOX" />
+													<handler function="OnLocationComboBoxTextUpdated" entry="EVT_TEXT" />
+													<handler function="OnLocationComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+												</object>
+												<col>3</col>
+												<row>1</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxStaticText" name="ID_STATICTEXT12" variable="StaticText12" member="yes">
+													<label>长度：</label>
+												</object>
+												<col>4</col>
+												<row>1</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxComboBox" name="ID_COMBOBOX_LENGTH" variable="LengthComboBox" member="yes">
+													<handler function="OnLengthComboBoxSelected" entry="EVT_COMBOBOX" />
+													<handler function="OnLengthComboBoxTextUpdated" entry="EVT_TEXT" />
+													<handler function="OnLengthComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+												</object>
+												<col>5</col>
+												<row>1</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxButton" name="ID_BUTTON_APPEND" variable="AppendButton" member="yes">
+													<label>添加</label>
+												</object>
+												<col>3</col>
+												<row>3</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
+											<object class="sizeritem">
+												<object class="wxButton" name="ID_BUTTON_REMOVE" variable="RemoveButton" member="yes">
+													<label>删除</label>
+												</object>
+												<col>4</col>
+												<row>3</row>
+												<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+												<border>5</border>
+												<option>1</option>
+											</object>
 										</object>
-										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-										<border>5</border>
-										<option>1</option>
-									</object>
-									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX6" variable="ComboBox6" member="yes" />
-										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-										<border>5</border>
-										<option>1</option>
-									</object>
-									<object class="sizeritem">
-										<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
-											<label>SIZE：</label>
-										</object>
-										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-										<border>5</border>
-										<option>1</option>
-									</object>
-									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX7" variable="ComboBox7" member="yes" />
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
 									</object>
 								</object>
-								<flag>wxALL|wxALIGN_TOP</flag>
+								<flag>wxALL|wxEXPAND</flag>
 								<border>5</border>
 								<option>1</option>
 							</object>
@@ -213,7 +393,11 @@
 								<option>1</option>
 							</object>
 							<object class="sizeritem">
-								<object class="wxComboBox" name="ID_COMBOBOX8" variable="ComboBox8" member="yes" />
+								<object class="wxComboBox" name="ID_COMBOBOX_SCREEN_WIDTH" variable="ScreenWidthComboBox" member="yes">
+									<handler function="OnScreenWidthComboBoxSelected" entry="EVT_COMBOBOX" />
+									<handler function="OnScreenWidthComboBoxTextUpdated" entry="EVT_TEXT" />
+									<handler function="OnScreenWidthComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
@@ -227,7 +411,11 @@
 								<option>1</option>
 							</object>
 							<object class="sizeritem">
-								<object class="wxComboBox" name="ID_COMBOBOX9" variable="ComboBox9" member="yes" />
+								<object class="wxComboBox" name="ID_COMBOBOX_SCREEN_HEIGHT" variable="ScreenHeightComboBox" member="yes">
+									<handler function="OnScreenHeightComboBoxSelected" entry="EVT_COMBOBOX" />
+									<handler function="OnScreenHeightComboBoxTextUpdated" entry="EVT_TEXT" />
+									<handler function="OnScreenHeightComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>

@@ -51,11 +51,12 @@ T100WORD T100CU32::getCCR()
 
 T100WORD T100CU32::step()
 {
-    T100WORD base, offset, value;
+    T100BOOL        result;
+    T100WORD        base, offset, value;
 
     base        = getCBR();
     offset      = getCOR();
-    //value       = getHost()->getMemory32()->read(base, offset);
+    result      = getHost()->getMemory32()->raw_read(base, offset, value);
 
     //T100Log::info(T100HintQU32::order_hint(base, "BASE"));
     //T100Log::info(T100HintQU32::order_hint(offset, "OFFSET"));

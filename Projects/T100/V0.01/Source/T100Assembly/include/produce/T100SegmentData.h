@@ -6,6 +6,7 @@
 
 class T100SegmentData : public T100Segment
 {
+    friend class T100RealMerger;
     public:
         T100SegmentData();
         virtual ~T100SegmentData();
@@ -16,8 +17,12 @@ class T100SegmentData : public T100Segment
         T100BOOL                    setVariable(T100String, T100WORD);
         T100BOOL                    getVariable(T100String, T100WORD&);
 
+        T100BOOL                    appendLabelCall(T100LABEL_CALL*);
+
     protected:
         T100VARIABLEOFFSET_HASH     m_variable_hash;
+
+        T100LABElCALL_VECTOR        m_label_call;
 
     private:
 };

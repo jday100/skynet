@@ -13,6 +13,8 @@ class T100String32Tools
 
         static T100String32         to_string(T100WORD*, T100WORD);
 
+        static T100BOOL             format(T100String, T100String&);
+
         static T100BOOL             copy(T100WORD*, T100WORD*, T100WORD);
 
         static T100BOOL             split(T100String, T100String, T100STRING_VECTOR&);

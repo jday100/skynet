@@ -27,9 +27,9 @@ class T100QU32
         T100BOOL                start();
         T100BOOL                stop();
 
-        T100BOOL                done();
+        T100BOOL                halt();
 
-        T100BOOL                load(T100STRING, T100WORD, T100WORD);
+        T100BOOL                load(T100STRING, T100WORD);
 
 
     protected:

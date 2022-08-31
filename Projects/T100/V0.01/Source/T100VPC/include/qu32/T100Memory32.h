@@ -7,6 +7,7 @@ class T100QU32;
 
 class T100Memory32
 {
+    friend class T100CU32;
     friend class T100QU32;
     friend class T100Order;
     friend class T100MemoryDevice;
@@ -25,7 +26,7 @@ class T100Memory32
         T100BOOL                raw_read(T100WORD, T100WORD, T100WORD&);
         T100BOOL                raw_write(T100WORD, T100WORD, T100WORD);
 
-        T100BOOL                load(T100STRING, T100WORD, T100WORD);
+        T100BOOL                load(T100STRING, T100WORD);
 
     private:
         T100QU32*               m_host          = T100NULL;

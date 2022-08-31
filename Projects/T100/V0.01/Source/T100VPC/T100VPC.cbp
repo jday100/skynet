@@ -42,7 +42,8 @@
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/T100VPC" prefix_auto="1" extension_auto="1" />
+				<Option output="../build/T100VPC" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build" />
 				<Option object_output="obj/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
@@ -72,6 +73,41 @@
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
+			<Target title="Test">
+				<Option output="../build/T100VPC" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-std=c17" />
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="include/device" />
+					<Add directory="include/qu32" />
+					<Add directory="include/order" />
+					<Add directory="../T100Common/include" />
+					<Add directory="test" />
+					<Add directory="include/view/dialog" />
+					<Add directory="../T100VPC" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+				</ResourceCompiler>
+				<Linker>
+					<Add library="libwxmsw30ud.a" />
+					<Add library="../build/libT100Lib.a" />
+					<Add library="../build/libT100Common.a" />
+					<Add library="iconv" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-pipe" />
@@ -89,10 +125,22 @@
 		<Linker>
 			<Add option="-mthreads" />
 		</Linker>
-		<Unit filename="T100VPCApp.cpp" />
-		<Unit filename="T100VPCApp.h" />
-		<Unit filename="T100VPCMain.cpp" />
-		<Unit filename="T100VPCMain.h" />
+		<Unit filename="T100VPCApp.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T100VPCApp.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T100VPCMain.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T100VPCMain.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="include/T100VPCCommon.h" />
 		<Unit filename="include/T100VPCSetup.h" />
 		<Unit filename="include/device/T100AUDevice.h" />
@@ -164,7 +212,7 @@
 		<Unit filename="include/view/dialog/T100VPCSetupDemoDialog.h" />
 		<Unit filename="include/view/dialog/T100VPCSetupDialog.h" />
 		<Unit filename="main.cpp">
-			<Option target="&lt;{~None~}&gt;" />
+			<Option target="Test" />
 		</Unit>
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />

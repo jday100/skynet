@@ -43,9 +43,9 @@ T100BOOL T100Thread::stop()
         return T100FALSE;
     }
 
-    wait();
-    T100SAFE_DELETE(m_thread);
     m_running = T100FALSE;
+    //wait();
+    //T100SAFE_DELETE(m_thread);
 
     return T100TRUE;
 }

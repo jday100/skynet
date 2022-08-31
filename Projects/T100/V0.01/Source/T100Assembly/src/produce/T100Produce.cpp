@@ -47,6 +47,8 @@ T100BOOL T100Produce::run(T100STRING& source, T100STRING& target)
     T100ProduceParser           parser;
     T100ProduceBuilder*         builder         = T100NULL;
 
+    T100ProduceInfo::clear();
+
     result = parser.run(source, info);
     if(!result){
         return T100FALSE;

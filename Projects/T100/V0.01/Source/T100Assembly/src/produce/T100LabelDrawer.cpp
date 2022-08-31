@@ -35,3 +35,9 @@ T100LABEL_DEFINE* T100LabelDrawer::getLabelDefine(T100String key)
 
     return result;
 }
+
+T100BOOL T100LabelDrawer::clear()
+{
+    m_label_hash.clear();
+    return T100TRUE;
+}

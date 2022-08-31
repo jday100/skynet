@@ -1,13 +1,18 @@
 #include "T100Sentence.h"
 
+#include "T100String32Tools.h"
+#include "T100PathTools.h"
+
 #include "T100AssemblyHint.h"
 #include "T100AssemblyError.h"
 #include "T100ProduceInfo.h"
 #include "T100SentenceScanner.h"
 
+#include "T100ProduceInfo.h"
 #include "T100BuildInfo.h"
 #include "T100VariableDrawer.h"
 #include "T100ProcedureDrawer.h"
+#include "T100PartDrawer.h"
 
 
 T100Sentence::T100Sentence(T100SentenceScanner* scanner)
@@ -2187,3 +2192,22 @@ T100BOOL T100Sentence::getProcedureOffset(T100BuildInfo* info, T100String name, 
         return result;
 }
 
+T100BOOL T100Sentence::createPartInfo(T100String file)
+{
+    T100BOOL            result          = T100TRUE;
+    T100String          name;
+    T100WSTRING         full;
+    T100String          temp;
+
+    result = T100String32Tools::format(file, name);
+    if(result){
+        result = T100PathTools::full(name.to_wstring(), full);
+        if(result){
+            T100PartInfo*   info    = T100NEW T100PartInfo();
+            temp = full;
+            result = T100ProduceInfo::getPartDrawer().append(temp, info);
+        }
+    }
+
+    return result;
+}

@@ -45,3 +45,9 @@ T100BOOL T100SegmentData::getVariable(T100String name, T100WORD& offset)
 
     return result;
 }
+
+T100BOOL T100SegmentData::appendLabelCall(T100LABEL_CALL* call)
+{
+    m_label_call.push_back(call);
+    return T100TRUE;
+}

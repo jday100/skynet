@@ -61,3 +61,13 @@ T100ProcedureDrawer& T100ProduceInfo::getProcedureDrawer()
 {
     return m_procedure_drawer;
 }
+
+T100BOOL T100ProduceInfo::clear()
+{
+    m_part_drawer.clear();
+    m_variable_drawer.clear();
+    m_label_drawer.clear();
+    m_procedure_drawer.clear();
+
+    return T100TRUE;
+}

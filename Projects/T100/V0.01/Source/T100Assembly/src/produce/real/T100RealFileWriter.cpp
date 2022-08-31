@@ -73,12 +73,12 @@ T100BOOL T100RealFileWriter::write_head()
         order.BYTE2.BYTE    = T_IMM;
         order.BYTE3.BYTE    = T_NONE;
 
-        result = write(&(order.WORD), 4);
+        result = write(&(order.WORD), 1);
         if(!result){
             return T100FALSE;
         }
 
-        result = write(&(data.WORD), 4);
+        result = write(&(data.WORD), 1);
         if(!result){
             return T100FALSE;
         }
@@ -103,7 +103,7 @@ T100BOOL T100RealFileWriter::write_data()
         return T100TRUE;
     }
 
-    size    = m_info->getData().getMem().size() * 4;
+    size    = m_info->getData().getMem().size();
     result  = write(m_info->getData().getMem().data(), size);
     if(!result){
         return T100FALSE;
@@ -125,7 +125,7 @@ T100BOOL T100RealFileWriter::write_code()
         return T100FALSE;
     }
 
-    size    = m_info->getCode().getMem().size() * 4;
+    size    = m_info->getCode().getMem().size();
     result  = write(m_info->getCode().getMem().data(), size);
     if(!result){
         return T100FALSE;
