@@ -118,3 +118,13 @@ T100BOOL T100QU32::load()
 
     return result;
 }
+
+T100VOID T100QU32::setCallback(T100QU32Interface* callback)
+{
+    m_callback = callback;
+}
+
+T100QU32Interface* T100QU32::getCallback()
+{
+    return m_callback;
+}

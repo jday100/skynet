@@ -1,7 +1,9 @@
 #ifndef T100DISPLAY_H
 #define T100DISPLAY_H
 
-#include "T100PageDevice.h"
+#include "T100DisplayBlockDevice.h"
+#include "T100DisplayPageDevice.h"
+
 
 enum T100DISPLAY_MODE{
     T100DISPLAYMODE_NONE            = T100DEVICEMODE_MAX,
@@ -27,6 +29,8 @@ class T100Display : public T100Device
         T100BOOL            out(T100WORD, T100WORD);
 
     protected:
+        T100DisplayBlockDevice              m_block_device;
+        T100DisplayPageDevice               m_page_device;
 
     private:
 };

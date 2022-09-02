@@ -17,8 +17,8 @@ class T100ProduceParser
 
     protected:
         T100BOOL            load(T100STRING&, T100BOOL);
-        T100BOOL            scan(T100WSTRING&);
-        T100BOOL            append(T100PartToken&, T100BOOL);
+        T100BOOL            scan(T100WSTRING&, T100BOOL);
+        T100BOOL            append(T100PartToken&);
 
         T100BOOL            add(T100WSTRING&, T100PartToken&);
 

@@ -10,6 +10,13 @@ T100TestTools::~T100TestTools()
     //dtor
 }
 
+T100BOOL T100TestTools::Exists(T100WSTRING path)
+{
+    T100File        file(path);
+
+    return file.exists();
+}
+
 T100BOOL T100TestTools::CleanAndCreate(T100File& file)
 {
     T100BOOL            result          = T100TRUE;

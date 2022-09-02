@@ -71,6 +71,18 @@
 		</Compiler>
 		<Unit filename="../build/build/rom.bin" />
 		<Unit filename="../build/test/build/test_basic.bin" />
+		<Unit filename="../build/test/build/test_multiple.bin" />
+		<Unit filename="../build/test/resources/assembly/real/test_basic.txt" />
+		<Unit filename="../build/test/resources/assembly/real/test_import.txt" />
+		<Unit filename="../build/test/resources/assembly/real/test_multiple.txt" />
+		<Unit filename="../build/test/resources/assembly/scanner/test_byte.txt" />
+		<Unit filename="../build/test/resources/assembly/scanner/test_char.txt" />
+		<Unit filename="../build/test/resources/assembly/scanner/test_import.txt" />
+		<Unit filename="../build/test/resources/assembly/scanner/test_keyword.txt" />
+		<Unit filename="../build/test/resources/assembly/scanner/test_part.txt" />
+		<Unit filename="../build/test/resources/assembly/scanner/test_segment.txt" />
+		<Unit filename="../build/test/resources/assembly/scanner/test_sentence.txt" />
+		<Unit filename="../build/test/resources/assembly/scanner/test_string.txt" />
 		<Unit filename="include/T100Assembly.h" />
 		<Unit filename="include/T100AssemblyApp.h" />
 		<Unit filename="include/T100AssemblyCommon.h" />

@@ -3,11 +3,15 @@
 #include <wx/intl.h>
 #include <wx/string.h>
 
+const long T100DiskCreatePartDialog::ID_STATICTEXT1 = wxNewId();
+const long T100DiskCreatePartDialog::ID_TEXTCTRL_NAME = wxNewId();
+const long T100DiskCreatePartDialog::ID_STATICTEXT2 = wxNewId();
+const long T100DiskCreatePartDialog::ID_COMBOBOX_LOCATION = wxNewId();
 const long T100DiskCreatePartDialog::ID_STATICTEXT3 = wxNewId();
-const long T100DiskCreatePartDialog::ID_TEXTCTRL2 = wxNewId();
+const long T100DiskCreatePartDialog::ID_COMBOBOX_LENGTH = wxNewId();
+const long T100DiskCreatePartDialog::ID_CHECKBOX_BOOT = wxNewId();
 const long T100DiskCreatePartDialog::ID_STATICTEXT4 = wxNewId();
-const long T100DiskCreatePartDialog::ID_COMBOBOX2 = wxNewId();
-const long T100DiskCreatePartDialog::ID_CHECKBOX2 = wxNewId();
+const long T100DiskCreatePartDialog::ID_COMBOBOX_TYPE = wxNewId();
 
 BEGIN_EVENT_TABLE(T100DiskCreatePartDialog,wxDialog)
 
@@ -18,41 +22,129 @@ T100DiskCreatePartDialog::T100DiskCreatePartDialog(wxWindow* parent,wxWindowID i
 {
     //ctor
     BuildContent(parent,id,pos,size);
+    create();
 }
 
 T100DiskCreatePartDialog::~T100DiskCreatePartDialog()
 {
     //dtor
+    destroy();
 }
+
 void T100DiskCreatePartDialog::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
 {
 	wxBoxSizer* BoxSizer1;
+	wxBoxSizer* BoxSizer2;
 	wxFlexGridSizer* FlexGridSizer1;
+	wxStaticBoxSizer* StaticBoxSizer1;
 
 	Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_DIALOG_STYLE, _T("id"));
 	SetClientSize(wxDefaultSize);
 	Move(wxDefaultPosition);
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
+	StaticBoxSizer1 = new wxStaticBoxSizer(wxVERTICAL, this, _("新建分区："));
 	FlexGridSizer1 = new wxFlexGridSizer(0, 2, 0, 0);
-	StaticText3 = new wxStaticText(this, ID_STATICTEXT3, _("名称："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT3"));
-	FlexGridSizer1->Add(StaticText3, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	NameTextCtrl = new wxTextCtrl(this, ID_TEXTCTRL2, _("Text"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL2"));
+	StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("名称："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
+	FlexGridSizer1->Add(StaticText1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	NameTextCtrl = new wxTextCtrl(this, ID_TEXTCTRL_NAME, _("Text"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_TEXTCTRL_NAME"));
 	FlexGridSizer1->Add(NameTextCtrl, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	StaticText4 = new wxStaticText(this, ID_STATICTEXT4, _("大小："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT4"));
-	FlexGridSizer1->Add(StaticText4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	LengthComboBox = new wxComboBox(this, ID_COMBOBOX2, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX2"));
+	StaticText2 = new wxStaticText(this, ID_STATICTEXT2, _("起始："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
+	FlexGridSizer1->Add(StaticText2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	LocationComboBox = new wxComboBox(this, ID_COMBOBOX_LOCATION, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_LOCATION"));
+	FlexGridSizer1->Add(LocationComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StaticText3 = new wxStaticText(this, ID_STATICTEXT3, _("大小："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT3"));
+	FlexGridSizer1->Add(StaticText3, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	LengthComboBox = new wxComboBox(this, ID_COMBOBOX_LENGTH, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_LENGTH"));
 	FlexGridSizer1->Add(LengthComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BootCheckBox = new wxCheckBox(this, ID_CHECKBOX2, _("启动"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX2"));
+	StaticBoxSizer1->Add(FlexGridSizer1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	BootCheckBox = new wxCheckBox(this, ID_CHECKBOX_BOOT, _("启动"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_CHECKBOX_BOOT"));
 	BootCheckBox->SetValue(false);
-	FlexGridSizer1->Add(BootCheckBox, 1, wxALL|wxALIGN_RIGHT|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer1->Add(FlexGridSizer1, 1, wxALL|wxEXPAND, 5);
+	StaticBoxSizer1->Add(BootCheckBox, 0, wxALL|wxALIGN_LEFT, 5);
+	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
+	StaticText4 = new wxStaticText(this, ID_STATICTEXT4, _("类型："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT4"));
+	BoxSizer2->Add(StaticText4, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	TypeComboBox = new wxComboBox(this, ID_COMBOBOX_TYPE, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_TYPE"));
+	BoxSizer2->Add(TypeComboBox, 0, wxALL|wxEXPAND, 5);
+	StaticBoxSizer1->Add(BoxSizer2, 0, wxALL|wxEXPAND, 5);
+	BoxSizer1->Add(StaticBoxSizer1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
+
+	Connect(ID_TEXTCTRL_NAME,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnNameTextCtrlText);
+	Connect(ID_TEXTCTRL_NAME,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnNameTextCtrlTextEnter);
+	Connect(ID_COMBOBOX_LOCATION,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnLocationComboBoxSelected);
+	Connect(ID_COMBOBOX_LOCATION,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnLocationComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_LOCATION,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnLocationComboBoxTextEnter);
+	Connect(ID_COMBOBOX_LENGTH,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnLengthComboBoxSelected);
+	Connect(ID_COMBOBOX_LENGTH,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnLengthComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_LENGTH,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnLengthComboBoxTextEnter);
+	Connect(ID_CHECKBOX_BOOT,wxEVT_COMMAND_CHECKBOX_CLICKED,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnBootCheckBoxClick);
+	Connect(ID_COMBOBOX_TYPE,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnTypeComboBoxSelected);
+	Connect(ID_COMBOBOX_TYPE,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnTypeComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_TYPE,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100DiskCreatePartDialog::OnTypeComboBoxTextEnter);
 
     BoxSizer1->Add(CreateStdDialogButtonSizer(wxOK | wxCANCEL),
                    wxSizerFlags().Right().Border());
 
     SetSizerAndFit(BoxSizer1);
 
+}
+
+T100VOID T100DiskCreatePartDialog::create()
+{
+    TypeComboBox->Append(_("default"));
+}
+
+T100VOID T100DiskCreatePartDialog::destroy()
+{
+
+}
+
+void T100DiskCreatePartDialog::OnNameTextCtrlText(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnNameTextCtrlTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnLocationComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnLocationComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnLocationComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnLengthComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnLengthComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnLengthComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnBootCheckBoxClick(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnTypeComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnTypeComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100DiskCreatePartDialog::OnTypeComboBoxTextEnter(wxCommandEvent& event)
+{
 }

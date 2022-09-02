@@ -10,6 +10,8 @@ T100MODE                T100ProduceInfo::m_mode                         = T100MO
 
 T100BOOL                T100ProduceInfo::m_code_default                 = T100FALSE;
 T100BOOL                T100ProduceInfo::m_data_default                 = T100FALSE;
+T100SegmentCode*        T100ProduceInfo::m_code                         = T100NULL;
+T100SegmentData*        T100ProduceInfo::m_data                         = T100NULL;
 T100PartDrawer          T100ProduceInfo::m_part_drawer;
 
 T100VariableDrawer      T100ProduceInfo::m_variable_drawer;
@@ -64,10 +66,37 @@ T100ProcedureDrawer& T100ProduceInfo::getProcedureDrawer()
 
 T100BOOL T100ProduceInfo::clear()
 {
+    m_mode          = T100MODE_NONE;
+    m_code_default  = T100FALSE;
+    m_data_default  = T100FALSE;
+
+    m_code          = T100NULL;
+    m_data          = T100NULL;
+
     m_part_drawer.clear();
     m_variable_drawer.clear();
     m_label_drawer.clear();
     m_procedure_drawer.clear();
 
+    return T100TRUE;
+}
+
+T100BOOL T100ProduceInfo::setDefaultCode(T100SegmentCode* code)
+{
+    if(m_code){
+        return T100FALSE;
+    }
+
+    m_code = code;
+    return T100TRUE;
+}
+
+T100BOOL T100ProduceInfo::setDefaultData(T100SegmentData* data)
+{
+    if(m_data){
+        return T100FALSE;
+    }
+
+    m_data = data;
     return T100TRUE;
 }

@@ -46,7 +46,7 @@ T100BOOL T100VDiskCallback::frame_menu_new(void* d)
     T100VDiskFrame*         frame           = T100NULL;
 
     if(dialog.ShowModal() == wxID_OK){
-        name    = dialog.FileTextCtrl->GetValue().ToStdWstring();
+        name    = dialog.FileComboBox->GetValue().ToStdWstring();
         result  = dialog.LengthComboBox->GetValue().ToLongLong(&length);
         if(!result){
             return T100FALSE;
@@ -75,7 +75,7 @@ T100BOOL T100VDiskCallback::dialog_new_browse(void* d)
     if(dialog.ShowModal() == wxID_OK){
         T100DiskCreateDialog* parent = static_cast<T100DiskCreateDialog*>(d);
 
-        parent->FileTextCtrl->SetValue(dialog.GetFilename());
+        //parent->FileTextCtrl->SetValue(dialog.GetFilename());
     }else{
         result = T100FALSE;
     }

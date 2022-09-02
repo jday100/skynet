@@ -4,6 +4,7 @@
 #include <wx/frame.h>
 #include "T100VPCCommon.h"
 class T100VPCScreen;
+class T100VPCDebugFrame;
 
 
 class T100VPCView
@@ -19,11 +20,14 @@ class T100VPCView
 
         T100BOOL                hide();
 
+        T100BOOL                ShowDebug();
+
     protected:
 
     private:
         wxFrame*                m_frame             = T100NULL;
         T100VPCScreen*          m_screen            = T100NULL;
+        T100VPCDebugFrame*      m_debug             = T100NULL;
 
 };
 

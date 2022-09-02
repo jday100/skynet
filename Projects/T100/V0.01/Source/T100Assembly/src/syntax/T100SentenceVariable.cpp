@@ -34,17 +34,7 @@ T100BOOL T100SentenceVariable::parse()
         type            = T100SENTENCE_VARIABLE;
         m_token->type   = T100SENTENCE_VARIABLE;
 
-        T100VARIABLE_DEFINE*    vd = T100NEW T100VARIABLE_DEFINE;
-
-        vd->name        = name;
-        vd->length      = target.LENGTH;
-        vd->value       = target.VALUE;
-        vd->type        = target.DATA_TYPE;
-        vd->isarray     = target.ISARRAY;
-        vd->isshare     = target.ISSHARE;
-
-        //T100ParseInfo::getVariableDrawer().setVariableDefine(name, vd);
-        //T100ProduceInfo::setVariableDefine(name, vd);
+        result = setDefine();
     }
 
     return result;
@@ -313,9 +303,9 @@ T100BOOL T100SentenceVariable::build(T100BuildInfo* info)
             }
 
             if(1 == target.LENGTH){
-                //result = info->getData()->setWord(offset, target.VALUE);
+                result = info->getData()->setWord(offset, target.VALUE);
             }else{
-                //result = info->getData()->setArray(offset, target.LENGTH);
+                result = info->getData()->setArray(offset, target.LENGTH);
             }
 
             if(result){
@@ -373,6 +363,27 @@ T100BOOL T100SentenceVariable::build(T100BuildInfo* info)
 
     if(result){
         info->setVariable(name, offset);
+    }
+
+    return result;
+}
+
+T100BOOL T100SentenceVariable::setDefine()
+{
+    T100BOOL            result          = T100TRUE;
+
+    T100VARIABLE_DEFINE*    vd = T100NEW T100VARIABLE_DEFINE();
+
+    vd->name        = name;
+    vd->length      = target.LENGTH;
+    vd->value       = target.VALUE;
+    vd->type        = target.DATA_TYPE;
+    vd->isarray     = target.ISARRAY;
+    vd->isshare     = target.ISSHARE;
+
+    result = T100ProduceInfo::getVariableDrawer().setVariableDefine(name, vd);
+    if(!result){
+        T100SAFE_DELETE(vd);
     }
 
     return result;

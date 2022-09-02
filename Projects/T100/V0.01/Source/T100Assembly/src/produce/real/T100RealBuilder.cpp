@@ -50,6 +50,8 @@ T100BOOL T100RealBuilder::build(T100ProduceInfo& info)
     for(T100PartInfo* item : info.getPartDrawer().getPartInfos()){
         if(item){
             m_part = item;
+            item->getBuildInfo().m_code_master = item->getParseInfo().getToken()->master;
+            item->getBuildInfo().m_data_master = item->getParseInfo().getToken()->master;
             result = build(item->getParseInfo().getToken());
             if(result){
                 result = save(item);

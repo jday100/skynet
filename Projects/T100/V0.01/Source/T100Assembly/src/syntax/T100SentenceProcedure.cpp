@@ -1,6 +1,6 @@
 #include "T100SentenceProcedure.h"
 
-#include "T100ParseInfo.h"
+#include "T100ProduceInfo.h"
 #include "T100ProcedureDrawer.h"
 
 
@@ -25,13 +25,7 @@ T100BOOL T100SentenceProcedure::parse()
         type            = T100SENTENCE_PROCEDURE;
         m_token->type   = T100SENTENCE_PROCEDURE;
 
-        T100PROCEDURE_DEFINE*   pd = T100NEW T100PROCEDURE_DEFINE;
-
-        pd->name        = name;
-
-        //T100ParseInfo::getProcedureDrawer().setProcedureDefine(name, pd);
-
-        //T100ProduceInfo::setProcedureDefine(name, pd);
+        result = setDefine(name);
     }
 
     return result;
@@ -109,4 +103,21 @@ READ_NEXT:
 T100BOOL T100SentenceProcedure::build(T100BuildInfo* info)
 {
     return info->openSegment(this);
+}
+
+T100BOOL T100SentenceProcedure::setDefine(T100String& name)
+{
+    T100BOOL            result          = T100TRUE;
+
+    T100PROCEDURE_DEFINE*   pd = T100NEW T100PROCEDURE_DEFINE();
+
+    pd->name = name;
+
+    result = T100ProduceInfo::getProcedureDrawer().setProcedureDefine(name, pd);
+
+    if(!result){
+        T100SAFE_DELETE(pd);
+    }
+
+    return result;
 }

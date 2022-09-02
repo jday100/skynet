@@ -28,6 +28,8 @@ class T100Memory32
 
         T100BOOL                load(T100STRING, T100WORD);
 
+        T100BOOL                notify(T100WORD, T100WORD);
+
     private:
         T100QU32*               m_host          = T100NULL;
 

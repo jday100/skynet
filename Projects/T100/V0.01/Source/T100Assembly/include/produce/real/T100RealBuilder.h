@@ -33,6 +33,7 @@ class T100RealBuilder : public T100ProduceBuilder
 
     private:
         T100PartInfo*       m_part          = T100NULL;
+        T100BOOL            m_master        = T100FALSE;
 
 };
 

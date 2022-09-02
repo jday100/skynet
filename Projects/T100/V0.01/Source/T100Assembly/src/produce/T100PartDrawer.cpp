@@ -21,6 +21,10 @@ T100BOOL T100PartDrawer::exists(T100String name)
     T100BOOL                            result          = T100FALSE;
     T100PART_INFO_HASH::iterator        it;
 
+    int i;
+
+    i = m_part_hash.size();
+
     it = m_part_hash.find(name);
 
     if(it == m_part_hash.end()){

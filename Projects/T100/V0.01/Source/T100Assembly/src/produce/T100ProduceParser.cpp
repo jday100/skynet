@@ -46,14 +46,14 @@ T100BOOL T100ProduceParser::load(T100STRING& file, T100BOOL flag)
     T100PathTools::format(current, path, name);
     T100PathTools::chdir(path);
 
-    result = scan(name);
+    result = scan(name, flag);
 
     T100PathTools::chdir(cwd);
 
     return result;
 }
 
-T100BOOL T100ProduceParser::scan(T100WSTRING& file)
+T100BOOL T100ProduceParser::scan(T100WSTRING& file, T100BOOL flag)
 {
     T100BOOL                    result          = T100TRUE;
     T100PartScannerTools        tools;
@@ -68,7 +68,13 @@ T100BOOL T100ProduceParser::scan(T100WSTRING& file)
     while(scanner->next(token)){
         if(token.eof)break;
 
-        if(append(token, T100FALSE)){
+        if(T100FILE_SOURCE == token.type){
+            if(flag){
+                token.master = T100TRUE;
+            }
+        }
+
+        if(append(token)){
 
         }else{
             result = T100FALSE;
@@ -83,7 +89,7 @@ T100BOOL T100ProduceParser::scan(T100WSTRING& file)
     return result;
 }
 
-T100BOOL T100ProduceParser::append(T100PartToken& token, T100BOOL flag)
+T100BOOL T100ProduceParser::append(T100PartToken& token)
 {
     T100BOOL            result          = T100FALSE;
     T100WSTRING         path;
@@ -99,7 +105,7 @@ T100BOOL T100ProduceParser::append(T100PartToken& token, T100BOOL flag)
     }else{
         if(T100FILE_IMPORT == token.type){
             T100String  part(name);
-            result = load(part, flag);
+            result = load(part, T100FALSE);
         }else{
             result = add(full, token);
         }

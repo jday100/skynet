@@ -8,6 +8,7 @@
 #include "T100Port32.h"
 #include "T100Interrupt32.h"
 #include "T100Executor32.h"
+#include "T100QU32Interface.h"
 
 
 class T100QU32
@@ -15,6 +16,9 @@ class T100QU32
     public:
         T100QU32();
         virtual ~T100QU32();
+
+        T100VOID                setCallback(T100QU32Interface*);
+        T100QU32Interface*      getCallback();
 
         T100CU32*               getCU32();
         T100AU32*               getAU32();
@@ -47,6 +51,7 @@ class T100QU32
         T100Interrupt32*        m_interrupt     = T100NULL;
         T100Executor32*         m_executor      = T100NULL;
 
+        T100QU32Interface*      m_callback      = T100NULL;
 
 };
 

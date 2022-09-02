@@ -42,7 +42,7 @@ class T100DiskCtrl : public wxControl
         T100VOID                    create();
         T100VOID                    destroy();
 
-        wxMenu                      menu;
+        wxMenu                      m_menu;
 
     private:
         static const long ID_PAINT;
@@ -74,6 +74,7 @@ class T100DiskCtrl : public wxControl
         T100INT                     Hit(T100WORD);
 
         T100VOID                    ShowMenu(T100WORD);
+        T100VOID                    SetMenu(T100INT);
 
         T100DISK                    m_disk;
 

@@ -85,6 +85,7 @@
 		<Unit filename="include/serve/T100VDiskServe.h" />
 		<Unit filename="include/view/T100VDiskCtrl.h" />
 		<Unit filename="include/view/T100VDiskView.h" />
+		<Unit filename="include/view/dialog/T100VDiskNewDemoDialog.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
@@ -92,14 +93,15 @@
 		<Unit filename="src/serve/T100VDiskServe.cpp" />
 		<Unit filename="src/view/T100VDiskCtrl.cpp" />
 		<Unit filename="src/view/T100VDiskView.cpp" />
-		<Unit filename="wxsmith/T100VDiskNewDialog.wxs" />
+		<Unit filename="src/view/dialog/T100VDiskNewDemoDialog.cpp" />
+		<Unit filename="wxsmith/T100VDiskNewDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VDiskframe.wxs" />
 		<Extensions>
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="T100VDiskApp.cpp" main="T100VDiskFrame" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxFrame wxs="wxsmith/T100VDiskframe.wxs" src="T100VDiskMain.cpp" hdr="T100VDiskMain.h" fwddecl="0" i18n="1" name="T100VDiskFrame" language="CPP" />
-					<wxDialog wxs="wxsmith/T100VDiskNewDialog.wxs" src="src\view\dialog\T100VDiskNewDialog.cpp" hdr="include\view\dialog\T100VDiskNewDialog.h" fwddecl="0" i18n="1" name="T100VDiskNewDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100VDiskNewDemoDialog.wxs" src="src\view\dialog\T100VDiskNewDemoDialog.cpp" hdr="include\view\dialog\T100VDiskNewDemoDialog.h" fwddecl="0" i18n="1" name="T100VDiskNewDemoDialog" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

@@ -31,7 +31,10 @@ class T100PartScanner : public T100Scanner
         T100BOOL                    append();
         T100BOOL                    read();
 
+        T100String                  getFile();
+
     private:
+        static T100TOKEN_TYPE       m_type;
         T100SegmentScanner*         m_scanner           = T100NULL;
 
 };

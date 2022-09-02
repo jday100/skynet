@@ -29,14 +29,15 @@
 					<Add directory="test" />
 					<Add directory="include/view/dialog" />
 					<Add directory="../T100VPC" />
+					<Add directory="include/view/frame" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 				</ResourceCompiler>
 				<Linker>
 					<Add library="libwxmsw30ud.a" />
-					<Add library="../build/libT100Lib.a" />
 					<Add library="../build/libT100Common.a" />
+					<Add library="../build/libT100Lib.a" />
 					<Add library="iconv" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
@@ -61,6 +62,7 @@
 					<Add directory="../T100Lib/include" />
 					<Add directory="../T100Common/include" />
 					<Add directory="include/view/dialog" />
+					<Add directory="include/view/frame" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -96,6 +98,7 @@
 					<Add directory="test" />
 					<Add directory="include/view/dialog" />
 					<Add directory="../T100VPC" />
+					<Add directory="include/view/frame" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -153,7 +156,9 @@
 		<Unit filename="include/device/T100Disk.h" />
 		<Unit filename="include/device/T100DiskInfo.h" />
 		<Unit filename="include/device/T100Display.h" />
+		<Unit filename="include/device/T100DisplayBlockDevice.h" />
 		<Unit filename="include/device/T100DisplayInfo.h" />
+		<Unit filename="include/device/T100DisplayPageDevice.h" />
 		<Unit filename="include/device/T100Keyboard.h" />
 		<Unit filename="include/device/T100KeyboardInfo.h" />
 		<Unit filename="include/device/T100MemoryDevice.h" />
@@ -197,13 +202,14 @@
 		<Unit filename="include/qu32/T100Memory32.h" />
 		<Unit filename="include/qu32/T100Port32.h" />
 		<Unit filename="include/qu32/T100QU32.h" />
+		<Unit filename="include/qu32/T100QU32Interface.h" />
 		<Unit filename="include/qu32/T100QU32Setup.h" />
 		<Unit filename="include/qu32/T100Register32.h" />
 		<Unit filename="include/serve/T100VPCCallback.h" />
+		<Unit filename="include/serve/T100VPCLink.h" />
 		<Unit filename="include/serve/T100VPCServe.h" />
 		<Unit filename="include/view/T100VPCScreen.h" />
 		<Unit filename="include/view/T100VPCView.h" />
-		<Unit filename="include/view/dialog/T100VPCDebugDemoDialog.h" />
 		<Unit filename="include/view/dialog/T100VPCDebugDialog.h" />
 		<Unit filename="include/view/dialog/T100VPCHardwareDemoDialog.h" />
 		<Unit filename="include/view/dialog/T100VPCHardwareDialog.h" />
@@ -211,6 +217,8 @@
 		<Unit filename="include/view/dialog/T100VPCHardwareSelectDialog.h" />
 		<Unit filename="include/view/dialog/T100VPCSetupDemoDialog.h" />
 		<Unit filename="include/view/dialog/T100VPCSetupDialog.h" />
+		<Unit filename="include/view/frame/T100VPCDebugDemoFrame.h" />
+		<Unit filename="include/view/frame/T100VPCDebugFrame.h" />
 		<Unit filename="main.cpp">
 			<Option target="Test" />
 		</Unit>
@@ -228,7 +236,9 @@
 		<Unit filename="src/device/T100Disk.cpp" />
 		<Unit filename="src/device/T100DiskInfo.cpp" />
 		<Unit filename="src/device/T100Display.cpp" />
+		<Unit filename="src/device/T100DisplayBlockDevice.cpp" />
 		<Unit filename="src/device/T100DisplayInfo.cpp" />
+		<Unit filename="src/device/T100DisplayPageDevice.cpp" />
 		<Unit filename="src/device/T100Keyboard.cpp" />
 		<Unit filename="src/device/T100KeyboardInfo.cpp" />
 		<Unit filename="src/device/T100MemoryDevice.cpp" />
@@ -271,13 +281,14 @@
 		<Unit filename="src/qu32/T100Memory32.cpp" />
 		<Unit filename="src/qu32/T100Port32.cpp" />
 		<Unit filename="src/qu32/T100QU32.cpp" />
+		<Unit filename="src/qu32/T100QU32Interface.cpp" />
 		<Unit filename="src/qu32/T100QU32Setup.cpp" />
 		<Unit filename="src/qu32/T100Register32.cpp" />
 		<Unit filename="src/serve/T100VPCCallback.cpp" />
+		<Unit filename="src/serve/T100VPCLink.cpp" />
 		<Unit filename="src/serve/T100VPCServe.cpp" />
 		<Unit filename="src/view/T100VPCScreen.cpp" />
 		<Unit filename="src/view/T100VPCView.cpp" />
-		<Unit filename="src/view/dialog/T100VPCDebugDemoDialog.cpp" />
 		<Unit filename="src/view/dialog/T100VPCDebugDialog.cpp" />
 		<Unit filename="src/view/dialog/T100VPCHardwareDemoDialog.cpp" />
 		<Unit filename="src/view/dialog/T100VPCHardwareDialog.cpp" />
@@ -285,6 +296,8 @@
 		<Unit filename="src/view/dialog/T100VPCHardwareSelectDialog.cpp" />
 		<Unit filename="src/view/dialog/T100VPCSetupDemoDialog.cpp" />
 		<Unit filename="src/view/dialog/T100VPCSetupDialog.cpp" />
+		<Unit filename="src/view/frame/T100VPCDebugDemoFrame.cpp" />
+		<Unit filename="src/view/frame/T100VPCDebugFrame.cpp" />
 		<Unit filename="test/T100QU32Test.cpp" />
 		<Unit filename="test/T100QU32Test.h" />
 		<Unit filename="test/T100TestApp.cpp" />
@@ -292,7 +305,7 @@
 		<Unit filename="test/T100VPCTest.cpp" />
 		<Unit filename="test/T100VPCTest.h" />
 		<Unit filename="wxsmith/T100HardwareDialog.wxs" />
-		<Unit filename="wxsmith/T100VPCDebugDemoDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCDebugDemoFrame.wxs" />
 		<Unit filename="wxsmith/T100VPCHardwareDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCHardwareSelectDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCScreen.wxs" />
@@ -309,7 +322,7 @@
 					<wxDialog wxs="wxsmith/T100VPCHardwareDemoDialog.wxs" src="src\view\dialog\T100VPCHardwareDemoDialog.cpp" hdr="include\view\dialog\T100VPCHardwareDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCHardwareDemoDialog" language="CPP" />
 					<wxDialog wxs="wxsmith/T100VPCHardwareSelectDemoDialog.wxs" src="src\view\dialog\T100VPCHardwareSelectDemoDialog.cpp" hdr="include\view\dialog\T100VPCHardwareSelectDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCHardwareSelectDemoDialog" language="CPP" />
 					<wxDialog wxs="wxsmith/T100VPCSetupDemoDialog.wxs" src="src\view\dialog\T100VPCSetupDemoDialog.cpp" hdr="include\view\dialog\T100VPCSetupDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCSetupDemoDialog" language="CPP" />
-					<wxDialog wxs="wxsmith/T100VPCDebugDemoDialog.wxs" src="src\view\dialog\T100VPCDebugDemoDialog.cpp" hdr="include\view\dialog\T100VPCDebugDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCDebugDemoDialog" language="CPP" />
+					<wxFrame wxs="wxsmith/T100VPCDebugDemoFrame.wxs" src="src\view\frame\T100VPCDebugDemoFrame.cpp" hdr="include\view\frame\T100VPCDebugDemoFrame.h" fwddecl="0" i18n="1" name="T100VPCDebugDemoFrame" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

@@ -6,7 +6,6 @@
 #include <wx/dialog.h>
 #include <wx/sizer.h>
 #include <wx/stattext.h>
-#include <wx/textctrl.h>
 
 
 class T100DiskCreateDialog : public wxDialog
@@ -16,11 +15,11 @@ class T100DiskCreateDialog : public wxDialog
         virtual ~T100DiskCreateDialog();
 
 
-        wxButton*           BrowseButton;
+		wxButton*           BrowseButton;
+		wxComboBox*         FileComboBox;
 		wxComboBox*         LengthComboBox;
 		wxStaticText*       StaticText1;
 		wxStaticText*       StaticText2;
-		wxTextCtrl*         FileTextCtrl;
 
 
     protected:
@@ -28,13 +27,19 @@ class T100DiskCreateDialog : public wxDialog
 
     private:
 		static const long ID_STATICTEXT1;
-		static const long ID_TEXTCTRL1;
-		static const long ID_BUTTON1;
+		static const long ID_COMBOBOX_FILE;
+		static const long ID_BUTTON_BROWSE;
 		static const long ID_STATICTEXT2;
-		static const long ID_COMBOBOX1;
+		static const long ID_COMBOBOX_LENGTH;
 
     private:
-        void OnBrowseButtonClick(wxCommandEvent& event);
+		void OnFileComboBoxSelected(wxCommandEvent& event);
+		void OnFileComboBoxTextUpdated(wxCommandEvent& event);
+		void OnFileComboBoxTextEnter(wxCommandEvent& event);
+		void OnBrowseButtonClick(wxCommandEvent& event);
+		void OnLengthComboBoxSelected(wxCommandEvent& event);
+		void OnLengthComboBoxTextUpdated(wxCommandEvent& event);
+		void OnLengthComboBoxTextEnter(wxCommandEvent& event);
 
     protected:
 

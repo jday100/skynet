@@ -7,7 +7,6 @@
 #include <wx/dialog.h>
 #include <wx/sizer.h>
 #include <wx/stattext.h>
-#include <wx/textctrl.h>
 //*)
 
 class T100DiskCreateDemoDialog: public wxDialog
@@ -18,27 +17,33 @@ class T100DiskCreateDemoDialog: public wxDialog
 		virtual ~T100DiskCreateDemoDialog();
 
 		//(*Declarations(T100DiskCreateDemoDialog)
-		wxButton* Button1;
-		wxComboBox* ComboBox1;
+		wxButton* BrowseButton;
+		wxComboBox* FileComboBox;
+		wxComboBox* LengthComboBox;
 		wxStaticText* StaticText1;
 		wxStaticText* StaticText2;
-		wxTextCtrl* TextCtrl1;
 		//*)
 
 	protected:
 
 		//(*Identifiers(T100DiskCreateDemoDialog)
 		static const long ID_STATICTEXT1;
-		static const long ID_TEXTCTRL1;
-		static const long ID_BUTTON1;
+		static const long ID_COMBOBOX_FILE;
+		static const long ID_BUTTON_BROWSE;
 		static const long ID_STATICTEXT2;
-		static const long ID_COMBOBOX1;
+		static const long ID_COMBOBOX_LENGTH;
 		//*)
 
 	private:
 
 		//(*Handlers(T100DiskCreateDemoDialog)
-		void OnButton1Click(wxCommandEvent& event);
+		void OnFileComboBoxSelected(wxCommandEvent& event);
+		void OnFileComboBoxTextUpdated(wxCommandEvent& event);
+		void OnFileComboBoxTextEnter(wxCommandEvent& event);
+		void OnBrowseButtonClick(wxCommandEvent& event);
+		void OnLengthComboBoxSelected(wxCommandEvent& event);
+		void OnLengthComboBoxTextUpdated(wxCommandEvent& event);
+		void OnLengthComboBoxTextEnter(wxCommandEvent& event);
 		//*)
 
 	protected:

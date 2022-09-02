@@ -111,6 +111,7 @@ T100BOOL T100Memory32::raw_write(T100WORD base, T100WORD offset, T100WORD value)
                 result = T100FALSE;
             }else{
                 m_ram[os] = value;
+                notify(offset, value);
             }
         }
     }else{
@@ -123,6 +124,7 @@ T100BOOL T100Memory32::raw_write(T100WORD base, T100WORD offset, T100WORD value)
                 result = T100FALSE;
             }else{
                 m_rom[os] = value;
+                notify(offset, value);
             }
         }
     }
@@ -143,6 +145,22 @@ T100BOOL T100Memory32::load(T100STRING file, T100WORD location)
         result = T100FileTools::load(file.to_wstring(), m_rom, value);
     }else{
         return T100FALSE;
+    }
+
+    return result;
+}
+
+T100BOOL T100Memory32::notify(T100WORD offset, T100WORD value)
+{
+    T100BOOL            result          = T100TRUE;
+
+    if(T100QU32Setup::DEBUG){
+        if(offset >= T100QU32Setup::MEMORY_WINDOW_BEGIN && offset <= T100QU32Setup::MEMORY_WINDOW_END){
+            m_host->getCallback()->notify_memory_update(offset, value);
+        }
+        if(offset >= T100QU32Setup::PORT_WINDOW_BEGIN && offset <= T100QU32Setup::PORT_WINDOW_END){
+            m_host->getCallback()->notify_port_update(offset, value);
+        }
     }
 
     return result;

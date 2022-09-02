@@ -12,6 +12,12 @@ class T100QU32Setup : public T100AppSetup
         T100QU32Setup();
         virtual ~T100QU32Setup();
 
+        static T100BOOL             DEBUG;
+        static T100WORD             MEMORY_WINDOW_BEGIN;
+        static T100WORD             MEMORY_WINDOW_END;
+        static T100WORD             PORT_WINDOW_BEGIN;
+        static T100WORD             PORT_WINDOW_END;
+
         static T100BOOL             needLoadRom;
 
         static T100String           getRomFile();

@@ -105,5 +105,9 @@ T100WORD T100Segment::getLocation()
 
 T100WORD T100Segment::getLength()
 {
+    if(0 == m_length){
+        return m_mem.size();
+    }
+
     return m_length;
 }

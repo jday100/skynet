@@ -5,7 +5,6 @@
 #include <wx/button.h>
 #include <wx/combobox.h>
 #include <wx/dialog.h>
-#include <wx/gbsizer.h>
 #include <wx/sizer.h>
 #include <wx/stattext.h>
 //*)
@@ -18,8 +17,8 @@ class T100DiskFormatPartDemoDialog: public wxDialog
 		virtual ~T100DiskFormatPartDemoDialog();
 
 		//(*Declarations(T100DiskFormatPartDemoDialog)
-		wxButton* Button1;
-		wxComboBox* ComboBox1;
+		wxButton* BrowseButton;
+		wxComboBox* FileComboBox;
 		wxStaticText* StaticText1;
 		//*)
 
@@ -27,13 +26,18 @@ class T100DiskFormatPartDemoDialog: public wxDialog
 
 		//(*Identifiers(T100DiskFormatPartDemoDialog)
 		static const long ID_STATICTEXT1;
-		static const long ID_COMBOBOX1;
-		static const long ID_BUTTON1;
+		static const long ID_COMBOBOX_FILE;
+		static const long ID_BUTTON_BROWSE;
 		//*)
 
 	private:
 
 		//(*Handlers(T100DiskFormatPartDemoDialog)
+		void OnFileComboBoxSelected(wxCommandEvent& event);
+		void OnFileComboBoxTextUpdated(wxCommandEvent& event);
+		void OnFileComboBoxTextEnter(wxCommandEvent& event);
+		void OnButton1Click(wxCommandEvent& event);
+		void OnBrowseButtonClick(wxCommandEvent& event);
 		//*)
 
 	protected:

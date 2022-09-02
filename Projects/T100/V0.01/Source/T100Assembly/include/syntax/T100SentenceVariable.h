@@ -21,6 +21,8 @@ class T100SentenceVariable : public T100Sentence
         T100BOOL                parseType();
         T100BOOL                parseValue();
 
+        T100BOOL                setDefine();
+
     private:
 };
 

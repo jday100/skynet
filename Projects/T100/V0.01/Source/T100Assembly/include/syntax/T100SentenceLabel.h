@@ -17,6 +17,7 @@ class T100SentenceLabel : public T100Sentence
         T100BOOL            build(T100BuildInfo*);
 
     protected:
+        T100BOOL            setDefine(T100String&);
 
     private:
 };

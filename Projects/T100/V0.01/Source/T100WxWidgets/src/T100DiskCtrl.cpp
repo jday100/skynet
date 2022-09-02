@@ -1,11 +1,15 @@
 #include "T100DiskCtrl.h"
 
 #include <wx/dcclient.h>
+#include <wx/msgdlg.h>
 #include "T100DiskCreatePartDialog.h"
 #include "T100DiskDialog.h"
 
 //
 #include "T100DiskBrowsePartDemoDialog.h"
+
+#include "T100DiskEditPartDialog.h"
+#include "T100DiskFormatPartDialog.h"
 
 
 const long T100DiskCtrl::ID_PAINT = wxNewId();
@@ -44,13 +48,13 @@ T100VOID T100DiskCtrl::create()
     Connect(ID_PART_BROWSE, wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100DiskCtrl::OnBrowsePart);
     Connect(ID_PART_FORMAT, wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100DiskCtrl::OnFormatPart);
 
-    menu.Append(ID_PART_CREATE, _T("Create"));
-    menu.Append(ID_PART_EDIT, _T("Edit"));
-    menu.Append(ID_PART_REMOVE, _T("Remove"));
-    menu.AppendSeparator();
-    menu.Append(ID_PART_FORMAT, _T("Format"));
-    menu.AppendSeparator();
-    menu.Append(ID_PART_BROWSE, _T("Browse"));
+    m_menu.Append(ID_PART_CREATE,   _T("Create"));
+    m_menu.Append(ID_PART_EDIT,     _T("Edit"));
+    m_menu.Append(ID_PART_REMOVE,   _T("Remove"));
+    m_menu.AppendSeparator();
+    m_menu.Append(ID_PART_FORMAT,   _T("Format"));
+    m_menu.AppendSeparator();
+    m_menu.Append(ID_PART_BROWSE,   _T("Browse"));
 }
 
 T100VOID T100DiskCtrl::destroy()
@@ -120,6 +124,9 @@ T100VOID T100DiskCtrl::OnCreatePart(wxCommandEvent& event)
 {
     T100DiskCreatePartDialog        dialog(this);
 
+    dialog.LocationComboBox->SetEditable(T100FALSE);
+    dialog.LocationComboBox->SetValue(std::to_string(m_location));
+
     if(dialog.ShowModal() == wxID_OK){
         T100String          name;
         T100LONG            length;
@@ -156,12 +163,20 @@ T100VOID T100DiskCtrl::OnCreatePart(wxCommandEvent& event)
 
 T100VOID T100DiskCtrl::OnEditPart(wxCommandEvent& event)
 {
+    T100DiskEditPartDialog      dialog(this);
 
+    if(dialog.ShowModal() == wxID_OK){
+
+    }
 }
 
 T100VOID T100DiskCtrl::OnRemovePart(wxCommandEvent& event)
 {
+    wxMessageDialog         dialog(this, _("Are you sure?"));
 
+    if(dialog.ShowModal() == wxID_OK){
+
+    }
 }
 
 T100VOID T100DiskCtrl::OnBrowsePart(wxCommandEvent& event)
@@ -175,7 +190,21 @@ T100VOID T100DiskCtrl::OnBrowsePart(wxCommandEvent& event)
 
 T100VOID T100DiskCtrl::OnFormatPart(wxCommandEvent& event)
 {
+    T100BOOL        isboot = T100TRUE;
 
+    if(isboot){
+        T100DiskFormatPartDialog        dialog(this);
+
+        if(dialog.ShowModal() == wxID_OK){
+
+        }
+    }else{
+        wxMessageDialog         dialog(this, _("Are you sure?"));
+
+        if(dialog.ShowModal() == wxID_OK){
+
+        }
+    }
 }
 
 T100VOID T100DiskCtrl::OnEraseBackground(wxEraseEvent& event)
@@ -199,8 +228,7 @@ T100VOID T100DiskCtrl::OnMouse(wxMouseEvent& event)
 
     result = Hit(event.GetX());
 
-
-    //PopupMenu(&menu);
+    SetMenu(result);
 
     ShowMenu(result);
 }
@@ -330,14 +358,53 @@ T100INT T100DiskCtrl::Hit(T100WORD x)
 T100VOID T100DiskCtrl::ShowMenu(T100WORD index)
 {
     if(index < 0 || index >= m_parts.size()){
-        PopupMenu(&menu);
+        PopupMenu(&m_menu);
     }else{
         T100DISK_PART_CTRL*     ctrl    = T100NULL;
 
         ctrl = m_parts[index];
 
         if(ctrl){
-            PopupMenu(&menu);
+            PopupMenu(&m_menu);
+        }
+    }
+}
+
+T100VOID T100DiskCtrl::SetMenu(T100INT index)
+{
+    if(-1 == index){
+        m_menu.Enable(ID_PART_CREATE,       T100TRUE);
+        m_menu.Enable(ID_PART_EDIT,         T100FALSE);
+        m_menu.Enable(ID_PART_REMOVE,       T100FALSE);
+        m_menu.Enable(ID_PART_FORMAT,       T100FALSE);
+        m_menu.Enable(ID_PART_BROWSE,       T100FALSE);
+    }else{
+        if(0 <= index && m_parts.size() > index){
+            T100DISK_PART_CTRL*     part        = T100NULL;
+
+            part = m_parts[index];
+
+            if(part){
+                if(part->PART->ISFORMATED){
+                    m_menu.Enable(ID_PART_CREATE,       T100FALSE);
+                    m_menu.Enable(ID_PART_EDIT,         T100TRUE);
+                    m_menu.Enable(ID_PART_REMOVE,       T100TRUE);
+                    m_menu.Enable(ID_PART_FORMAT,       T100TRUE);
+                    m_menu.Enable(ID_PART_BROWSE,       T100TRUE);
+                }else{
+                    m_menu.Enable(ID_PART_CREATE,       T100FALSE);
+                    m_menu.Enable(ID_PART_EDIT,         T100TRUE);
+                    m_menu.Enable(ID_PART_REMOVE,       T100TRUE);
+                    m_menu.Enable(ID_PART_FORMAT,       T100TRUE);
+                    m_menu.Enable(ID_PART_BROWSE,       T100FALSE);
+                }
+            }
+        }else{
+            m_menu.Enable(ID_PART_CREATE,       T100TRUE);
+            m_menu.Enable(ID_PART_EDIT,         T100FALSE);
+            m_menu.Enable(ID_PART_REMOVE,       T100FALSE);
+            m_menu.Enable(ID_PART_FORMAT,       T100FALSE);
+            m_menu.Enable(ID_PART_BROWSE,       T100FALSE);
         }
     }
 }

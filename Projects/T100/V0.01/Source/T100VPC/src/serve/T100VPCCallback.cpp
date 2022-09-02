@@ -11,7 +11,8 @@
 #include "T100VPCSetupDemoDialog.h"
 #include "T100VPCHardwareSelectDemoDialog.h"
 #include "T100VPCHardwareSelectDialog.h"
-#include "T100VPCDebugDemoDialog.h"
+
+#include "T100VPCDebugDemoFrame.h"
 
 
 T100VPCServe*       T100VPCCallback::m_serve            = T100NULL;
@@ -78,7 +79,9 @@ T100BOOL T100VPCCallback::frame_menu_setup(void* d)
 
 T100BOOL T100VPCCallback::frame_menu_debug(void* d)
 {
-    T100VPCDebugDemoDialog          dialog(m_view->getFrame());
+    //T100VPCDebugDemoFrame*  frame = T100NEW T100VPCDebugDemoFrame(m_view->getFrame());
 
-    dialog.Show(false);
+    //frame->Show();
+
+    m_view->ShowDebug();
 }

@@ -103,7 +103,7 @@ READ_NEXT:
                 //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_DATA_SYNTAX_ERROR));
                 return T100FALSE;
             }else{
-                T100ProduceInfo::m_code_default    = T100TRUE;
+                T100ProduceInfo::m_data_default    = T100TRUE;
             }
 
             goto READ_NEXT;

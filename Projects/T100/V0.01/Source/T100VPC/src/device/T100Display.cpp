@@ -1,7 +1,9 @@
 #include "T100Display.h"
 
 T100Display::T100Display(T100QU32* host)
-    :T100Device(host)
+    :T100Device(host),
+    m_block_device(host),
+    m_page_device(host)
 {
     //ctor
 }

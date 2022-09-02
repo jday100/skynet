@@ -17,6 +17,7 @@
 
 #include "T100VPCApp.h"
 #include "T100VPCCallback.h"
+#include "T100VPCLink.h"
 
 
 //helper functions
@@ -56,9 +57,17 @@ const long T100VPCFrame::idMenuAbout = wxNewId();
 const long T100VPCFrame::ID_STATUSBAR1 = wxNewId();
 //*)
 
+const long T100VPCFrame::ID_THREAD_QUIT = wxNewId();
+const long T100VPCFrame::ID_DEBUG_MEMORY_UPDATE = wxNewId();
+const long T100VPCFrame::ID_DEBUG_PORT_UPDATE = wxNewId();
+
+
 BEGIN_EVENT_TABLE(T100VPCFrame,wxFrame)
     //(*EventTable(T100VPCFrame)
     //*)
+    EVT_THREAD(ID_THREAD_QUIT, T100VPCFrame::OnThreadQuit)
+    EVT_THREAD(ID_DEBUG_MEMORY_UPDATE, T100VPCFrame::OnDebugMemoryUpdate)
+    EVT_THREAD(ID_DEBUG_PORT_UPDATE, T100VPCFrame::OnDebugPortUpdate)
 END_EVENT_TABLE()
 
 T100VPCFrame::T100VPCFrame(wxWindow* parent,wxWindowID id)
@@ -128,6 +137,7 @@ T100VOID T100VPCFrame::create()
     wxGetApp().m_view.setFrame(this);
 
     T100VPCCallback::init(&wxGetApp().m_serve, &wxGetApp().m_view);
+    T100VPCLink::init(&wxGetApp().m_serve, &wxGetApp().m_view);
 }
 
 T100VOID T100VPCFrame::destroy()
@@ -169,4 +179,19 @@ void T100VPCFrame::OnMenuSetupSelected(wxCommandEvent& event)
 void T100VPCFrame::OnMenuDebugSelected(wxCommandEvent& event)
 {
     T100VPCCallback::frame_menu_debug();
+}
+
+void T100VPCFrame::OnThreadQuit(wxThreadEvent& event)
+{
+
+}
+
+void T100VPCFrame::OnDebugMemoryUpdate(wxThreadEvent& event)
+{
+
+}
+
+void T100VPCFrame::OnDebugPortUpdate(wxThreadEvent& event)
+{
+
 }

@@ -9,6 +9,7 @@
 
 class T100PartInfo
 {
+    friend class T100RealBuilder;
     public:
         T100PartInfo();
         virtual ~T100PartInfo();
@@ -25,6 +26,7 @@ class T100PartInfo
 
     private:
         T100String              m_name;
+        T100BOOL                m_master            = T100FALSE;
 
 };
 

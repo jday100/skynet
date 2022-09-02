@@ -1,4 +1,6 @@
 #include "T100SentenceImport.h"
+#include "T100String32Tools.h"
+
 
 T100SentenceImport::T100SentenceImport(T100SentenceScanner* scanner)
     :T100Sentence(scanner)
@@ -23,10 +25,13 @@ T100BOOL T100SentenceImport::parse()
     if(T100CONSTANT_STRING == m_item->type){
         type            = T100SENTENCE_IMPORT;
         m_token->type   = T100SENTENCE_IMPORT;
-        file            = m_item->value;
+        result = T100String32Tools::format(m_item->value, file);
+        if(!result){
+            return T100FALSE;
+        }
         setLoaded(T100FALSE);
 
-        result = createPartInfo(file);
+        //result = createPartInfo(file);
     }else{
         result = T100FALSE;
     }

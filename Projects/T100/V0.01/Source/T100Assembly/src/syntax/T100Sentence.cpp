@@ -2199,15 +2199,15 @@ T100BOOL T100Sentence::createPartInfo(T100String file)
     T100WSTRING         full;
     T100String          temp;
 
-    result = T100String32Tools::format(file, name);
-    if(result){
-        result = T100PathTools::full(name.to_wstring(), full);
+    //result = T100String32Tools::format(file, name);
+    //if(result){
+        result = T100PathTools::full(file.to_wstring(), full);
         if(result){
             T100PartInfo*   info    = T100NEW T100PartInfo();
             temp = full;
             result = T100ProduceInfo::getPartDrawer().append(temp, info);
         }
-    }
+    //}
 
     return result;
 }

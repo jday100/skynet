@@ -10,6 +10,7 @@ class T100TestTools
         T100TestTools();
         virtual ~T100TestTools();
 
+        static T100BOOL         Exists(T100WSTRING);
         static T100BOOL         CleanAndCreate(T100File&);
 
     protected:

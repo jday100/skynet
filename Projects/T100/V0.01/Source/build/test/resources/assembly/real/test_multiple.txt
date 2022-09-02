@@ -1,0 +1,20 @@
+IMPORT "test_import.txt"
+
+MODE	REAL
+
+DATA
+	a	                                    INTEGER	1
+	b	                                    INTEGER	2
+	result 	                                INTEGER	0
+END
+
+CODE
+	MOVE 	AAR	                            @result
+	MOVE 	ABR	                            @a
+	MOVE 	ACR	                            @b
+
+	CALL    TEST_ADD
+
+	MOVE    AAR	                            result
+	HALT
+END

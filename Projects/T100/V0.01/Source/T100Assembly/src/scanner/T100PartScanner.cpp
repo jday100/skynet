@@ -1,5 +1,10 @@
 #include "T100PartScanner.h"
 
+#include "T100SentenceImport.h"
+
+T100TOKEN_TYPE      T100PartScanner::m_type             = T100FILE_SOURCE;
+
+
 T100PartScanner::T100PartScanner()
 {
     //ctor
@@ -14,7 +19,7 @@ T100PartScanner::~T100PartScanner()
 
 T100VOID T100PartScanner::create()
 {
-
+    m_type  = T100FILE_SOURCE;
 }
 
 T100VOID T100PartScanner::destroy()
@@ -68,7 +73,7 @@ T100BOOL T100PartScanner::next(T100Token& token)
     m_token = (T100PartToken*)&token;
     m_token->clear();
 
-    m_token->type   = T100FILE_SOURCE;
+    m_token->type = T100FILE_SOURCE;
 
     return run();
 }
@@ -96,7 +101,7 @@ READ_NEXT:
     case T100SEGMENT_IMPORT:
         {
             m_token->type       = T100FILE_IMPORT;
-            //m_token->file       = getFile();
+            m_token->file       = getFile();
             setLoaded(T100FALSE);
 
             //T100AssemblyLog::info(T100LOG_FILE, T100AssemblyHint::file_hint(m_token->file.to_std_string(), T100FILESCAN_IMPORT_FILE));
@@ -126,6 +131,23 @@ READ_NEXT:
             };
         }while(T100TRUE);
     };
+
+    return result;
+}
+
+T100String T100PartScanner::getFile()
+{
+    T100String      result;
+
+    if(1 == m_item.sentences.size()){
+        T100SentenceToken *token = m_item.sentences[0];
+
+        if(T100SENTENCE_IMPORT == token->type){
+            T100SentenceImport *data = (T100SentenceImport*)(token->value);
+
+            result = data->file;
+        }
+    }
 
     return result;
 }

@@ -9,14 +9,22 @@ class T100VariableDrawer;
 class T100LabelDrawer;
 class T100ProcedureDrawer;
 
+class T100SegmentCode;
+class T100SegmentData;
+
 
 class T100ProduceInfo
 {
+    friend class T100BuildInfo;
+    friend class T100RealMerger;
     public:
         T100ProduceInfo();
         virtual ~T100ProduceInfo();
 
         static T100BOOL                 clear();
+
+        static T100BOOL                 setDefaultCode(T100SegmentCode*);
+        static T100BOOL                 setDefaultData(T100SegmentData*);
 
         static T100BOOL                 m_code_default;
         static T100BOOL                 m_data_default;
@@ -31,6 +39,8 @@ class T100ProduceInfo
         static T100ProcedureDrawer&     getProcedureDrawer();
 
     protected:
+        static T100SegmentCode*         m_code;
+        static T100SegmentData*         m_data;
 
     private:
         static T100MODE                 m_mode;

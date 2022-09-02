@@ -193,7 +193,7 @@ typedef struct{
     T100String              NAME;
     T100WORD                LENGTH;
     T100DATA_TYPE           DATA_TYPE;
-    T100SYMBOL_TYPE         ADDR_TYPE;
+    T100SYMBOL_TYPE         ADDR_TYPE   = S_NONE;
     T100BOOL                USED        = T100FALSE;
 }T100OPERATOR;
 

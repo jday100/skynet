@@ -27,13 +27,13 @@ T100BOOL T100String32Tools::format(T100String source, T100String& target)
 
     size = source.length();
 
-    if(2 <= size){
+    if(2 >= size){
         return T100TRUE;
     }
 
     s = source.to_string().getString32();
 
-    T100STRING32 t(s.begin()+1, s.end()-1);
+    T100STRING32 t(s.begin()+2, s.end()-2);
 
     target = T100String32(const_cast<char32_t*>(t.c_str()));
 

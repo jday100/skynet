@@ -10,6 +10,7 @@ class T100Sentence;
 
 class T100BuildInfo
 {
+    friend class T100RealBuilder;
     public:
         T100BuildInfo();
         virtual ~T100BuildInfo();
@@ -37,11 +38,19 @@ class T100BuildInfo
         T100SEGMENT_CODE_VECTOR&    getCodeSegments();
         T100SEGMENT_DATA_VECTOR&    getDataSegments();
 
+        T100SegmentData*            getData();
+
 
     protected:
         T100TOKEN_TYPE              m_type          = T100TOKEN_NONE;
+        T100BOOL                    m_code_master   = T100FALSE;
+        T100BOOL                    m_data_master   = T100FALSE;
         T100SegmentCode*            m_code          = T100NULL;
         T100SegmentData*            m_data          = T100NULL;
+
+        T100BOOL                    createCode(T100Sentence*);
+        T100BOOL                    createData(T100Sentence*);
+        T100BOOL                    createProcedure(T100Sentence*);
 
     private:
         T100SEGMENT_CODE_VECTOR     m_code_segments;

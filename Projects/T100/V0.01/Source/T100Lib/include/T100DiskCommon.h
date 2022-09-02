@@ -28,6 +28,7 @@ typedef struct{
     T100DWORD       LOCATION;
     T100DWORD       LENGTH;
     T100BOOL        BOOT;
+    T100BOOL        ISFORMATED;
 }T100DISK_PART;
 
 typedef struct{

@@ -1,0 +1,17 @@
+DATA
+	test_add_result_offset	                INTEGER	0
+	test_add_a_offset		                INTEGER 0
+	test_add_b_offset		                INTEGER	0
+END
+
+PROC=TEST_ADD
+	MOVE 	test_add_result_offset	        AAR
+	MOVE 	test_add_a_offset		        ABR
+	MOVE 	test_add_b_offset		        ACR
+	//
+	MOVE 	AAR			                    #test_add_a_offset
+	MOVE 	ABR			                    #test_add_b_offset
+	ADD
+	MOVE 	#test_add_result_offset	        ACR
+END
+

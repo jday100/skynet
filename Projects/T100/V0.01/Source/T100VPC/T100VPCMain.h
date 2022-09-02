@@ -21,6 +21,7 @@
 
 class T100VPCFrame: public wxFrame
 {
+    friend class T100VPCLink;
     public:
 
         T100VPCFrame(wxWindow* parent,wxWindowID id = -1);
@@ -60,6 +61,18 @@ class T100VPCFrame: public wxFrame
         wxStatusBar* StatusBar1;
         //*)
 
+    private:
+        static const long ID_THREAD_QUIT;
+
+        static const long ID_DEBUG_MEMORY_UPDATE;
+        static const long ID_DEBUG_PORT_UPDATE;
+
+        void OnThreadQuit(wxThreadEvent& event);
+
+        void OnDebugMemoryUpdate(wxThreadEvent& event);
+        void OnDebugPortUpdate(wxThreadEvent& event);
+
+    private:
         T100VOID            create();
         T100VOID            destroy();
 

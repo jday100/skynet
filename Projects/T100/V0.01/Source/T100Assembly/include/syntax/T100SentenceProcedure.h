@@ -19,6 +19,8 @@ class T100SentenceProcedure : public T100Sentence
     protected:
         T100BOOL                parseConfig();
 
+        T100BOOL                setDefine(T100String&);
+
     private:
 };
 

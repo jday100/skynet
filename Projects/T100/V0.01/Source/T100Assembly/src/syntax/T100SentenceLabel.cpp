@@ -1,6 +1,6 @@
 #include "T100SentenceLabel.h"
 
-#include "T100ParseInfo.h"
+#include "T100ProduceInfo.h"
 #include "T100LabelDrawer.h"
 
 
@@ -25,6 +25,8 @@ T100BOOL T100SentenceLabel::parse()
         name            = m_item->value;
         type            = T100SENTENCE_LABEL;
         m_token->type   = T100SENTENCE_LABEL;
+
+        result = setDefine(name);
     }
 
     return result;
@@ -34,18 +36,21 @@ T100BOOL T100SentenceLabel::build(T100BuildInfo* info)
 {
     info->setLabel(name, info->getOffset());
 
-    T100LABEL_DEFINE*   ld = T100NEW T100LABEL_DEFINE;
-
-    /*
-    ld->isvirtual       = info->getCode()->isVirtual;
-    ld->isshare         = info->getCode()->isShare;
-    ld->name            = name;
-    ld->offset          = info->getOffset();
-    */
-
-    //T100ProduceInfo::setLabelDefine(name, ld);
-
-    //T100ParseInfo::getLabelDrawer().setLabelDefine(name, ld);
-
     return T100TRUE;
+}
+
+T100BOOL T100SentenceLabel::setDefine(T100String& name)
+{
+    T100BOOL            result          = T100TRUE;
+
+    T100LABEL_DEFINE*   ld = T100NEW T100LABEL_DEFINE();
+
+    ld->name        = name;
+
+    result = T100ProduceInfo::getLabelDrawer().setLabelDefine(name, ld);
+    if(!result){
+        T100SAFE_DELETE(ld);
+    }
+
+    return result;
 }
