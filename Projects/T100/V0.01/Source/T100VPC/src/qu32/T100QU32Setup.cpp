@@ -1,21 +1,23 @@
 #include "T100QU32Setup.h"
 
-T100BOOL            T100QU32Setup::DEBUG                = T100FALSE;
-T100WORD            T100QU32Setup::MEMORY_WINDOW_BEGIN  = 0;
-T100WORD            T100QU32Setup::MEMORY_WINDOW_END    = 0;
-T100WORD            T100QU32Setup::PORT_WINDOW_BEGIN    = 0;
-T100WORD            T100QU32Setup::PORT_WINDOW_END      = 0;
+T100BOOL                T100QU32Setup::DEBUG                    = T100FALSE;
+T100EXECUTOR_MODE       T100QU32Setup::DEBUG_MODE               = T100EXECUTOR_MODE_NONE;
+T100EXECUTOR_STATE      T100QU32Setup::DEBUG_STATE              = T100EXECUTOR_STATE_NONE;
+T100WORD                T100QU32Setup::MEMORY_WINDOW_BEGIN      = 0;
+T100WORD                T100QU32Setup::MEMORY_WINDOW_END        = 0;
+T100WORD                T100QU32Setup::PORT_WINDOW_BEGIN        = 0;
+T100WORD                T100QU32Setup::PORT_WINDOW_END          = 0;
 
-T100String          T100QU32Setup::m_build_path         = L"build";
-T100String          T100QU32Setup::m_stores_path        = L"stores";
-T100String          T100QU32Setup::m_resources_path     = L"resources";
+T100String              T100QU32Setup::m_build_path             = L"build";
+T100String              T100QU32Setup::m_stores_path            = L"stores";
+T100String              T100QU32Setup::m_resources_path         = L"resources";
 
-T100BOOL            T100QU32Setup::needLoadRom          = T100TRUE;
-T100String          T100QU32Setup::m_rom_file           = L"rom.bin";
-T100WORD            T100QU32Setup::m_ram_base           = 1024 * 1024 * 1024;
-T100WORD            T100QU32Setup::m_ram_size           = 1024 * 1024;
-T100WORD            T100QU32Setup::m_rom_base           = 0;
-T100WORD            T100QU32Setup::m_rom_size           = 1024 * 1024;
+T100BOOL                T100QU32Setup::needLoadRom              = T100TRUE;
+T100String              T100QU32Setup::m_rom_file               = L"rom.bin";
+T100WORD                T100QU32Setup::m_ram_base               = 1024 * 1024 * 1024;
+T100WORD                T100QU32Setup::m_ram_size               = 1024 * 1024;
+T100WORD                T100QU32Setup::m_rom_base               = 0;
+T100WORD                T100QU32Setup::m_rom_size               = 1024 * 1024;
 
 
 T100QU32Setup::T100QU32Setup()

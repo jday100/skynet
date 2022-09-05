@@ -22,6 +22,7 @@ class T100VDisk
 
         virtual T100BOOL            open();
         virtual T100BOOL            close();
+        virtual T100BOOL            opened();
 
         virtual T100BOOL            read(T100DWORD, T100WORD*);
         virtual T100BOOL            write(T100DWORD, T100WORD*);

@@ -20,14 +20,18 @@
 					<Add directory="../T100Lib/include" />
 					<Add directory="include/view" />
 					<Add directory="include/serve" />
+					<Add directory="test" />
+					<Add directory="../T100Common/include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 				</ResourceCompiler>
 				<Linker>
 					<Add library="libwxmsw30ud.a" />
+					<Add library="../build/libT100Common.a" />
 					<Add library="../build/libT100Lib.a" />
 					<Add library="dl" />
+					<Add library="iconv" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -43,6 +47,7 @@
 					<Add directory="include" />
 					<Add directory="include/view" />
 					<Add directory="include/serve" />
+					<Add directory="test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -68,6 +73,7 @@
 					<Add directory="../T100Lib/include" />
 					<Add directory="include/view" />
 					<Add directory="include/serve" />
+					<Add directory="test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -151,6 +157,8 @@
 		<Unit filename="src/view/T100DiskRemovePartDemoDialog.cpp" />
 		<Unit filename="src/view/T100DiskRemovePartDialog.cpp" />
 		<Unit filename="src/view/T100DiskView.cpp" />
+		<Unit filename="test/T100TestDiskCtrl.cpp" />
+		<Unit filename="test/T100TestDiskCtrl.h" />
 		<Unit filename="wxsmith/T100DiskBrowsePartDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100DiskCreateDemoDialog1.wxs" />
 		<Unit filename="wxsmith/T100DiskCreatePartDemoDialog.wxs" />

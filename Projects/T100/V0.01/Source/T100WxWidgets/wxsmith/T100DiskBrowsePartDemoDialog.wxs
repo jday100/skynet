@@ -30,7 +30,7 @@
 									<defaultfolder></defaultfolder>
 									<filter></filter>
 								</object>
-								<flag>wxALL|wxEXPAND</flag>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
 							</object>

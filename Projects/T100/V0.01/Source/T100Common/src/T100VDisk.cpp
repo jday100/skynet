@@ -64,6 +64,14 @@ T100BOOL T100VDisk::close()
     return m_file->close();
 }
 
+T100BOOL T100VDisk::opened()
+{
+    if(m_file){
+        return m_file->opened();
+    }
+
+    return T100FALSE;
+}
 
 T100BOOL T100VDisk::load()
 {

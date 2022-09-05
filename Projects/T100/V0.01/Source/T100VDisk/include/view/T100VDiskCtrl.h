@@ -21,6 +21,12 @@ class T100VDiskCtrl : public T100DiskCtrl
         T100BOOL            OnMenuBrowse(void* = T100NULL);
         T100BOOL            OnMenuFormat(void* = T100NULL);
 
+        T100BOOL            OnFolderCreate(void* = T100NULL);
+        T100BOOL            OnFolderRemove(void* = T100NULL);
+
+        T100BOOL            OnFileCopy(void* = T100NULL);
+        T100BOOL            OnFileRemove(void* = T100NULL);
+
     private:
 };
 

@@ -1,6 +1,8 @@
 #include "T100CU32.h"
 
 #include "T100QU32.h"
+#include "T100QU32Setup.h"
+#include "T100OrderTypes.h"
 
 
 T100CU32::T100CU32(T100QU32* host)
@@ -17,6 +19,9 @@ T100CU32::~T100CU32()
 T100VOID T100CU32::setCOR(T100WORD value)
 {
     m_cor.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100COR, value);
+    }
 }
 
 T100WORD T100CU32::getCOR()
@@ -25,6 +30,9 @@ T100WORD T100CU32::getCOR()
 
     value = m_cor.getValue();
     m_cor.setValue(value + 1);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100COR, value + 1);
+    }
 
     return value;
 }
@@ -32,6 +40,9 @@ T100WORD T100CU32::getCOR()
 T100VOID T100CU32::setCBR(T100WORD value)
 {
     m_cbr.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100CBR, value);
+    }
 }
 
 T100WORD T100CU32::getCBR()
@@ -42,6 +53,9 @@ T100WORD T100CU32::getCBR()
 T100VOID T100CU32::setCCR(T100WORD value)
 {
     m_ccr.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100CBR, value);
+    }
 }
 
 T100WORD T100CU32::getCCR()

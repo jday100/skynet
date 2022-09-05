@@ -23,7 +23,11 @@
 										<option>1</option>
 									</object>
 									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX1" variable="ComboBox1" member="yes" />
+										<object class="wxComboBox" name="ID_COMBOBOX_COR" variable="CORComboBox" member="yes">
+											<handler function="OnCORComboBoxSelected" entry="EVT_COMBOBOX" />
+											<handler function="OnCORComboBoxTextUpdated" entry="EVT_TEXT" />
+											<handler function="OnCORComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+										</object>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
@@ -37,7 +41,11 @@
 										<option>1</option>
 									</object>
 									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX2" variable="ComboBox2" member="yes" />
+										<object class="wxComboBox" name="ID_COMBOBOX_CBR" variable="CBRComboBox" member="yes">
+											<handler function="OnCBRComboBoxSelected" entry="EVT_COMBOBOX" />
+											<handler function="OnCBRComboBoxTextUpdated" entry="EVT_TEXT" />
+											<handler function="OnCBRComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+										</object>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
@@ -51,7 +59,11 @@
 										<option>1</option>
 									</object>
 									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX3" variable="ComboBox3" member="yes" />
+										<object class="wxComboBox" name="ID_COMBOBOX_CCR" variable="CCRComboBox" member="yes">
+											<handler function="OnCCRComboBoxSelected" entry="EVT_COMBOBOX" />
+											<handler function="OnCCRComboBoxTextUpdated" entry="EVT_TEXT" />
+											<handler function="OnCCRComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+										</object>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
@@ -81,7 +93,11 @@
 										<option>1</option>
 									</object>
 									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX4" variable="ComboBox4" member="yes" />
+										<object class="wxComboBox" name="ID_COMBOBOX_AAR" variable="AARComboBox" member="yes">
+											<handler function="OnAARComboBoxSelected" entry="EVT_COMBOBOX" />
+											<handler function="OnAARComboBoxTextUpdated" entry="EVT_TEXT" />
+											<handler function="OnAARComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+										</object>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
@@ -95,7 +111,11 @@
 										<option>1</option>
 									</object>
 									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX5" variable="ComboBox5" member="yes" />
+										<object class="wxComboBox" name="ID_COMBOBOX_ACF" variable="ACFComboBox" member="yes">
+											<handler function="OnACFComboBoxSelected" entry="EVT_COMBOBOX" />
+											<handler function="OnACFComboBoxTextUpdated" entry="EVT_TEXT" />
+											<handler function="OnACFComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+										</object>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
@@ -109,7 +129,11 @@
 										<option>1</option>
 									</object>
 									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX6" variable="ComboBox6" member="yes" />
+										<object class="wxComboBox" name="ID_COMBOBOX_ABR" variable="ABRComboBox" member="yes">
+											<handler function="OnABRComboBoxSelected" entry="EVT_COMBOBOX" />
+											<handler function="OnABRComboBoxTextUpdated" entry="EVT_TEXT" />
+											<handler function="OnABRComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+										</object>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
@@ -123,7 +147,11 @@
 										<option>1</option>
 									</object>
 									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX7" variable="ComboBox7" member="yes" />
+										<object class="wxComboBox" name="ID_COMBOBOX_AMF" variable="AMFComboBox" member="yes">
+											<handler function="OnAMFComboBoxSelected" entry="EVT_COMBOBOX" />
+											<handler function="OnAMFComboBoxTextUpdated" entry="EVT_TEXT" />
+											<handler function="OnAMFComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+										</object>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
@@ -137,7 +165,11 @@
 										<option>1</option>
 									</object>
 									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX8" variable="ComboBox8" member="yes" />
+										<object class="wxComboBox" name="ID_COMBOBOX_ACR" variable="ACRComboBox" member="yes">
+											<handler function="OnACRComboBoxSelected" entry="EVT_COMBOBOX" />
+											<handler function="OnACRComboBoxTextUpdated" entry="EVT_TEXT" />
+											<handler function="OnACRComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+										</object>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
@@ -151,7 +183,11 @@
 										<option>1</option>
 									</object>
 									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX9" variable="ComboBox9" member="yes" />
+										<object class="wxComboBox" name="ID_COMBOBOX_AOF" variable="AOFComboBox" member="yes">
+											<handler function="OnAOFComboBoxSelected" entry="EVT_COMBOBOX" />
+											<handler function="OnAOFComboBoxTextUpdated" entry="EVT_TEXT" />
+											<handler function="OnAOFComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+										</object>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
@@ -165,7 +201,11 @@
 										<option>1</option>
 									</object>
 									<object class="sizeritem">
-										<object class="wxComboBox" name="ID_COMBOBOX10" variable="ComboBox10" member="yes" />
+										<object class="wxComboBox" name="ID_COMBOBOX_ADR" variable="ADRComboBox" member="yes">
+											<handler function="OnADRComboBoxSelected" entry="EVT_COMBOBOX" />
+											<handler function="OnADRComboBoxTextUpdated" entry="EVT_TEXT" />
+											<handler function="OnADRComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+										</object>
 										<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 										<border>5</border>
 										<option>1</option>
@@ -192,7 +232,11 @@
 					<object class="sizeritem">
 						<object class="wxBoxSizer" variable="BoxSizer3" member="no">
 							<object class="sizeritem">
-								<object class="wxComboBox" name="ID_COMBOBOX11" variable="ComboBox11" member="yes" />
+								<object class="wxComboBox" name="ID_COMBOBOX_MEMORY_OFFSET" variable="MemoryOffsetComboBox" member="yes">
+									<handler function="OnMemoryOffsetComboBoxSelected" entry="EVT_COMBOBOX" />
+									<handler function="OnMemoryOffsetComboBoxTextUpdated" entry="EVT_TEXT" />
+									<handler function="OnMemoryOffsetComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
@@ -210,17 +254,27 @@
 					<object class="sizeritem">
 						<object class="wxBoxSizer" variable="BoxSizer2" member="no">
 							<object class="sizeritem">
-								<object class="wxListView" name="ID_LISTVIEW1" variable="ListView1" member="yes" />
+								<object class="wxListView" name="ID_LISTVIEW_MEMORY" variable="MemoryListView" member="yes">
+									<style>wxLC_REPORT</style>
+								</object>
 								<flag>wxALL|wxEXPAND</flag>
 								<border>5</border>
 								<option>1</option>
 							</object>
 							<object class="sizeritem">
-								<object class="wxScrollBar" name="ID_SCROLLBAR1" variable="ScrollBar1" member="yes">
+								<object class="wxScrollBar" name="ID_SCROLLBAR_MEMORY" variable="MemoryScrollBar" member="yes">
 									<thumbsize>1</thumbsize>
 									<range>10</range>
 									<pagesize>1</pagesize>
 									<size>20,17</size>
+									<handler function="OnMemoryScrollBarScroll" entry="EVT_COMMAND_SCROLL" />
+									<handler function="OnMemoryScrollBarScrollTop" entry="EVT_COMMAND_SCROLL_TOP" />
+									<handler function="OnMemoryScrollBarScrollBottom" entry="EVT_COMMAND_SCROLL_BOTTOM" />
+									<handler function="OnMemoryScrollBarScrollLineUp" entry="EVT_COMMAND_SCROLL_LINEUP" />
+									<handler function="OnMemoryScrollBarScrollLineDown" entry="EVT_COMMAND_SCROLL_LINEDOWN" />
+									<handler function="OnMemoryScrollBarScrollPageUp" entry="EVT_COMMAND_SCROLL_PAGEUP" />
+									<handler function="OnMemoryScrollBarScrollPageDown" entry="EVT_COMMAND_SCROLL_PAGEDOWN" />
+									<handler function="OnMemoryScrollBarScrollChanged" entry="EVT_COMMAND_SCROLL_CHANGED" />
 								</object>
 								<flag>wxALL|wxEXPAND</flag>
 								<border>5</border>
@@ -242,7 +296,11 @@
 					<object class="sizeritem">
 						<object class="wxBoxSizer" variable="BoxSizer4" member="no">
 							<object class="sizeritem">
-								<object class="wxComboBox" name="ID_COMBOBOX13" variable="ComboBox13" member="yes" />
+								<object class="wxComboBox" name="ID_COMBOBOX_PORT_OFFSET" variable="PortOffsetComboBox" member="yes">
+									<handler function="OnPortOffsetComboBoxSelected" entry="EVT_COMBOBOX" />
+									<handler function="OnPortOffsetComboBoxTextUpdated" entry="EVT_TEXT" />
+									<handler function="OnPortOffsetComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
@@ -260,17 +318,27 @@
 					<object class="sizeritem">
 						<object class="wxBoxSizer" variable="BoxSizer5" member="no">
 							<object class="sizeritem">
-								<object class="wxListView" name="ID_LISTVIEW2" variable="ListView2" member="yes" />
+								<object class="wxListView" name="ID_LISTVIEW_PORT" variable="PortListView" member="yes">
+									<style>wxLC_REPORT</style>
+								</object>
 								<flag>wxALL|wxEXPAND</flag>
 								<border>5</border>
 								<option>1</option>
 							</object>
 							<object class="sizeritem">
-								<object class="wxScrollBar" name="ID_SCROLLBAR2" variable="ScrollBar2" member="yes">
+								<object class="wxScrollBar" name="ID_SCROLLBAR_PORT" variable="PortScrollBar" member="yes">
 									<thumbsize>1</thumbsize>
 									<range>10</range>
 									<pagesize>1</pagesize>
 									<size>20,119</size>
+									<handler function="OnPortScrollBarScroll" entry="EVT_COMMAND_SCROLL" />
+									<handler function="OnPortScrollBarScrollTop" entry="EVT_COMMAND_SCROLL_TOP" />
+									<handler function="OnPortScrollBarScrollBottom" entry="EVT_COMMAND_SCROLL_BOTTOM" />
+									<handler function="OnPortScrollBarScrollLineUp" entry="EVT_COMMAND_SCROLL_LINEUP" />
+									<handler function="OnPortScrollBarScrollLineDown" entry="EVT_COMMAND_SCROLL_LINEDOWN" />
+									<handler function="OnPortScrollBarScrollPageUp" entry="EVT_COMMAND_SCROLL_PAGEUP" />
+									<handler function="OnPortScrollBarScrollPageDown" entry="EVT_COMMAND_SCROLL_PAGEDOWN" />
+									<handler function="OnPortScrollBarScrollChanged" entry="EVT_COMMAND_SCROLL_CHANGED" />
 								</object>
 								<flag>wxALL|wxEXPAND</flag>
 								<border>5</border>
@@ -288,48 +356,54 @@
 			<object class="sizeritem">
 				<object class="wxBoxSizer" variable="BoxSizer6" member="no">
 					<object class="sizeritem">
-						<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+						<object class="wxButton" name="ID_BUTTON_RUN" variable="RunButton" member="yes">
 							<label>Run</label>
+							<handler function="OnRunButtonClick" entry="EVT_BUTTON" />
 						</object>
 						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<border>5</border>
 						<option>1</option>
 					</object>
 					<object class="sizeritem">
-						<object class="wxButton" name="ID_BUTTON2" variable="Button2" member="yes">
+						<object class="wxButton" name="ID_BUTTON_STEP" variable="StepButton" member="yes">
 							<label>Step</label>
+							<handler function="OnStepButtonClick" entry="EVT_BUTTON" />
 						</object>
 						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<border>5</border>
 						<option>1</option>
 					</object>
 					<object class="sizeritem">
-						<object class="wxButton" name="ID_BUTTON3" variable="Button3" member="yes">
+						<object class="wxButton" name="ID_BUTTON3" variable="NextButton" member="yes">
 							<label>Next</label>
+							<handler function="OnNextButtonClick" entry="EVT_BUTTON" />
 						</object>
 						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<border>5</border>
 						<option>1</option>
 					</object>
 					<object class="sizeritem">
-						<object class="wxButton" name="ID_BUTTON4" variable="Button4" member="yes">
+						<object class="wxButton" name="ID_BUTTON_CALL" variable="CallButton" member="yes">
 							<label>Call</label>
+							<handler function="OnCallButtonClick" entry="EVT_BUTTON" />
 						</object>
 						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<border>5</border>
 						<option>1</option>
 					</object>
 					<object class="sizeritem">
-						<object class="wxButton" name="ID_BUTTON5" variable="Button5" member="yes">
+						<object class="wxButton" name="ID_BUTTON_RETURN" variable="ReturnButton" member="yes">
 							<label>Return</label>
+							<handler function="OnReturnButtonClick" entry="EVT_BUTTON" />
 						</object>
 						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<border>5</border>
 						<option>1</option>
 					</object>
 					<object class="sizeritem">
-						<object class="wxButton" name="ID_BUTTON6" variable="Button6" member="yes">
+						<object class="wxButton" name="ID_BUTTON_PAUSE" variable="PauseButton" member="yes">
 							<label>Pause</label>
+							<handler function="OnPauseButtonClick" entry="EVT_BUTTON" />
 						</object>
 						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<border>5</border>

@@ -38,7 +38,7 @@ void T100DiskBrowsePartDemoDialog::BuildContent(wxWindow* parent,wxWindowID id,c
 	BoxSizer2->Add(BoxSizer3, 1, wxALL|wxEXPAND, 5);
 	BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);
 	GenericDirCtrl2 = new wxGenericDirCtrl(this, ID_GENERICDIRCTRL2, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, wxEmptyString, 0, _T("ID_GENERICDIRCTRL2"));
-	BoxSizer4->Add(GenericDirCtrl2, 1, wxALL|wxEXPAND, 5);
+	BoxSizer4->Add(GenericDirCtrl2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer2->Add(BoxSizer4, 1, wxALL|wxEXPAND, 5);
 	BoxSizer1->Add(BoxSizer2, 1, wxALL|wxEXPAND, 5);
 	SetSizer(BoxSizer1);

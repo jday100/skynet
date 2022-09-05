@@ -135,6 +135,11 @@ T100VOID T100VDiskFrame::create()
     VDiskCtrl->SetLength(1024);
 
     VDiskCtrl->Hide();
+
+    MenuNew->Enable(T100TRUE);
+    MenuOpen->Enable(T100TRUE);
+    MenuSave->Enable(T100FALSE);
+    MenuClose->Enable(T100FALSE);
 }
 
 T100VOID T100VDiskFrame::destroy()
@@ -144,7 +149,8 @@ T100VOID T100VDiskFrame::destroy()
 
 void T100VDiskFrame::OnQuit(wxCommandEvent& event)
 {
-    Close();
+    //Close();
+    T100VDiskCallback::frame_menu_quit();
 }
 
 void T100VDiskFrame::OnAbout(wxCommandEvent& event)
@@ -155,20 +161,40 @@ void T100VDiskFrame::OnAbout(wxCommandEvent& event)
 
 void T100VDiskFrame::OnMenuNewSelected(wxCommandEvent& event)
 {
-    T100VDiskCallback::frame_menu_new(this);
+    if(T100VDiskCallback::frame_menu_new(this)){
+        MenuNew->Enable(T100FALSE);
+        MenuOpen->Enable(T100FALSE);
+        MenuSave->Enable(T100TRUE);
+        MenuClose->Enable(T100TRUE);
+    }
 }
 
 void T100VDiskFrame::OnMenuOpenSelected(wxCommandEvent& event)
 {
-    T100VDiskCallback::frame_menu_open(this);
+    if(T100VDiskCallback::frame_menu_open(this)){
+        MenuNew->Enable(T100FALSE);
+        MenuOpen->Enable(T100FALSE);
+        MenuSave->Enable(T100TRUE);
+        MenuClose->Enable(T100TRUE);
+    }
 }
 
 void T100VDiskFrame::OnMenuSaveSelected(wxCommandEvent& event)
 {
+        MenuNew->Enable(T100FALSE);
+        MenuOpen->Enable(T100FALSE);
+        MenuSave->Enable(T100TRUE);
+        MenuClose->Enable(T100TRUE);
 }
 
 void T100VDiskFrame::OnMenuCloseSelected(wxCommandEvent& event)
 {
+    if(T100VDiskCallback::frame_menu_close()){
+        MenuNew->Enable(T100TRUE);
+        MenuOpen->Enable(T100TRUE);
+        MenuSave->Enable(T100FALSE);
+        MenuClose->Enable(T100FALSE);
+    }
 }
 
 T100BOOL T100VDiskFrame::load(T100VDisk* vdisk)
@@ -189,5 +215,13 @@ T100BOOL T100VDiskFrame::load(T100VDisk* vdisk)
     }
 
     VDiskCtrl->Load(ctrls);
+    VDiskCtrl->Refresh();
     VDiskCtrl->Show();
+}
+
+T100BOOL T100VDiskFrame::clear()
+{
+    VDiskCtrl->Clear();
+    VDiskCtrl->Refresh();
+    return T100TRUE;
 }

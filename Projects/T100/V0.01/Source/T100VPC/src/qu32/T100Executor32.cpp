@@ -28,6 +28,13 @@ T100BOOL T100Executor32::stop()
 T100VOID T100Executor32::run()
 {
     do{
+        if(T100EXECUTOR_STATE_PAUSE == T100QU32Setup::DEBUG_STATE){
+            std::unique_lock<std::mutex> locker(m_mutex);
+
+            m_condition.wait(locker);
+            locker.unlock();
+        }
+
         execute();
 
         if(!running())return;
@@ -38,6 +45,20 @@ T100VOID T100Executor32::run()
 T100VOID T100Executor32::debug()
 {
 
+}
+
+T100BOOL T100Executor32::step()
+{
+    m_state     = T100EXECUTOR_STATE_PAUSE;
+    m_mode      = T100EXECUTOR_MODE_STEP;
+    m_condition.notify_all();
+}
+
+T100BOOL T100Executor32::next()
+{
+    m_state     = T100EXECUTOR_STATE_RUNNING;
+    m_mode      = T100EXECUTOR_MODE_NEXT;
+    m_condition.notify_all();
 }
 
 T100VOID T100Executor32::execute()

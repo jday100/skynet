@@ -47,10 +47,25 @@ T100BOOL T100VDiskServe::saveVDisk()
 
 T100BOOL T100VDiskServe::closeVDisk()
 {
+    if(m_vdisk){
+        if(m_vdisk->close()){
+            T100SAFE_DELETE(m_vdisk);
+            return T100TRUE;
+        }
+    }
 
+    return T100FALSE;
 }
 
 T100VDisk* T100VDiskServe::getVDisk()
 {
     return m_vdisk;
+}
+
+T100BOOL T100VDiskServe::opened()
+{
+    if(m_vdisk){
+        return m_vdisk->opened();
+    }
+    return T100FALSE;
 }

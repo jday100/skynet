@@ -7,39 +7,39 @@
 
 //(*IdInit(T100VPCDebugDemoFrame)
 const long T100VPCDebugDemoFrame::ID_STATICTEXT1 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX1 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_COR = wxNewId();
 const long T100VPCDebugDemoFrame::ID_STATICTEXT2 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX2 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_CBR = wxNewId();
 const long T100VPCDebugDemoFrame::ID_STATICTEXT3 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX3 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_CCR = wxNewId();
 const long T100VPCDebugDemoFrame::ID_STATICTEXT4 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX4 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_AAR = wxNewId();
 const long T100VPCDebugDemoFrame::ID_STATICTEXT5 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX5 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_ACF = wxNewId();
 const long T100VPCDebugDemoFrame::ID_STATICTEXT6 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX6 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_ABR = wxNewId();
 const long T100VPCDebugDemoFrame::ID_STATICTEXT7 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX7 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_AMF = wxNewId();
 const long T100VPCDebugDemoFrame::ID_STATICTEXT8 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX8 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_ACR = wxNewId();
 const long T100VPCDebugDemoFrame::ID_STATICTEXT9 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX9 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_AOF = wxNewId();
 const long T100VPCDebugDemoFrame::ID_STATICTEXT10 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX10 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX11 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_ADR = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_MEMORY_OFFSET = wxNewId();
 const long T100VPCDebugDemoFrame::ID_COMBOBOX12 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_LISTVIEW1 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_SCROLLBAR1 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_COMBOBOX13 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_LISTVIEW_MEMORY = wxNewId();
+const long T100VPCDebugDemoFrame::ID_SCROLLBAR_MEMORY = wxNewId();
+const long T100VPCDebugDemoFrame::ID_COMBOBOX_PORT_OFFSET = wxNewId();
 const long T100VPCDebugDemoFrame::ID_COMBOBOX14 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_LISTVIEW2 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_SCROLLBAR2 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_BUTTON1 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_BUTTON2 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_LISTVIEW_PORT = wxNewId();
+const long T100VPCDebugDemoFrame::ID_SCROLLBAR_PORT = wxNewId();
+const long T100VPCDebugDemoFrame::ID_BUTTON_RUN = wxNewId();
+const long T100VPCDebugDemoFrame::ID_BUTTON_STEP = wxNewId();
 const long T100VPCDebugDemoFrame::ID_BUTTON3 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_BUTTON4 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_BUTTON5 = wxNewId();
-const long T100VPCDebugDemoFrame::ID_BUTTON6 = wxNewId();
+const long T100VPCDebugDemoFrame::ID_BUTTON_CALL = wxNewId();
+const long T100VPCDebugDemoFrame::ID_BUTTON_RETURN = wxNewId();
+const long T100VPCDebugDemoFrame::ID_BUTTON_PAUSE = wxNewId();
 //*)
 
 BEGIN_EVENT_TABLE(T100VPCDebugDemoFrame,wxFrame)
@@ -78,98 +78,157 @@ void T100VPCDebugDemoFrame::BuildContent(wxWindow* parent,wxWindowID id,const wx
 	FlexGridSizer1 = new wxFlexGridSizer(0, 2, 0, 0);
 	StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("COR："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
 	FlexGridSizer1->Add(StaticText1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	ComboBox1 = new wxComboBox(this, ID_COMBOBOX1, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX1"));
-	FlexGridSizer1->Add(ComboBox1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	CORComboBox = new wxComboBox(this, ID_COMBOBOX_COR, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_COR"));
+	FlexGridSizer1->Add(CORComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticText2 = new wxStaticText(this, ID_STATICTEXT2, _("CBR："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT2"));
 	FlexGridSizer1->Add(StaticText2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	ComboBox2 = new wxComboBox(this, ID_COMBOBOX2, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX2"));
-	FlexGridSizer1->Add(ComboBox2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	CBRComboBox = new wxComboBox(this, ID_COMBOBOX_CBR, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_CBR"));
+	FlexGridSizer1->Add(CBRComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticText3 = new wxStaticText(this, ID_STATICTEXT3, _("CCR："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT3"));
 	FlexGridSizer1->Add(StaticText3, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	ComboBox3 = new wxComboBox(this, ID_COMBOBOX3, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX3"));
-	FlexGridSizer1->Add(ComboBox3, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	CCRComboBox = new wxComboBox(this, ID_COMBOBOX_CCR, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_CCR"));
+	FlexGridSizer1->Add(CCRComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer3->Add(FlexGridSizer1, 1, wxALL|wxALIGN_TOP, 5);
 	StaticBoxSizer1->Add(StaticBoxSizer3, 1, wxALL|wxEXPAND, 5);
 	StaticBoxSizer4 = new wxStaticBoxSizer(wxHORIZONTAL, this, _("AU："));
 	FlexGridSizer2 = new wxFlexGridSizer(0, 4, 0, 0);
 	StaticText4 = new wxStaticText(this, ID_STATICTEXT4, _("AAR："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT4"));
 	FlexGridSizer2->Add(StaticText4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	ComboBox4 = new wxComboBox(this, ID_COMBOBOX4, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX4"));
-	FlexGridSizer2->Add(ComboBox4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	AARComboBox = new wxComboBox(this, ID_COMBOBOX_AAR, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_AAR"));
+	FlexGridSizer2->Add(AARComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticText5 = new wxStaticText(this, ID_STATICTEXT5, _("ACF："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT5"));
 	FlexGridSizer2->Add(StaticText5, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	ComboBox5 = new wxComboBox(this, ID_COMBOBOX5, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX5"));
-	FlexGridSizer2->Add(ComboBox5, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	ACFComboBox = new wxComboBox(this, ID_COMBOBOX_ACF, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_ACF"));
+	FlexGridSizer2->Add(ACFComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticText6 = new wxStaticText(this, ID_STATICTEXT6, _("ABR："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT6"));
 	FlexGridSizer2->Add(StaticText6, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	ComboBox6 = new wxComboBox(this, ID_COMBOBOX6, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX6"));
-	FlexGridSizer2->Add(ComboBox6, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	ABRComboBox = new wxComboBox(this, ID_COMBOBOX_ABR, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_ABR"));
+	FlexGridSizer2->Add(ABRComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticText7 = new wxStaticText(this, ID_STATICTEXT7, _("AMF："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT7"));
 	FlexGridSizer2->Add(StaticText7, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	ComboBox7 = new wxComboBox(this, ID_COMBOBOX7, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX7"));
-	FlexGridSizer2->Add(ComboBox7, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	AMFComboBox = new wxComboBox(this, ID_COMBOBOX_AMF, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_AMF"));
+	FlexGridSizer2->Add(AMFComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticText8 = new wxStaticText(this, ID_STATICTEXT8, _("ACR："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT8"));
 	FlexGridSizer2->Add(StaticText8, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	ComboBox8 = new wxComboBox(this, ID_COMBOBOX8, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX8"));
-	FlexGridSizer2->Add(ComboBox8, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	ACRComboBox = new wxComboBox(this, ID_COMBOBOX_ACR, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_ACR"));
+	FlexGridSizer2->Add(ACRComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticText9 = new wxStaticText(this, ID_STATICTEXT9, _("AOF："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT9"));
 	FlexGridSizer2->Add(StaticText9, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	ComboBox9 = new wxComboBox(this, ID_COMBOBOX9, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX9"));
-	FlexGridSizer2->Add(ComboBox9, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	AOFComboBox = new wxComboBox(this, ID_COMBOBOX_AOF, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_AOF"));
+	FlexGridSizer2->Add(AOFComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticText10 = new wxStaticText(this, ID_STATICTEXT10, _("ADR："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT10"));
 	FlexGridSizer2->Add(StaticText10, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	ComboBox10 = new wxComboBox(this, ID_COMBOBOX10, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX10"));
-	FlexGridSizer2->Add(ComboBox10, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	ADRComboBox = new wxComboBox(this, ID_COMBOBOX_ADR, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_ADR"));
+	FlexGridSizer2->Add(ADRComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer4->Add(FlexGridSizer2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer1->Add(StaticBoxSizer4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer1->Add(StaticBoxSizer1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer2 = new wxStaticBoxSizer(wxVERTICAL, this, _("Memory："));
 	BoxSizer3 = new wxBoxSizer(wxHORIZONTAL);
-	ComboBox11 = new wxComboBox(this, ID_COMBOBOX11, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX11"));
-	BoxSizer3->Add(ComboBox11, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	MemoryOffsetComboBox = new wxComboBox(this, ID_COMBOBOX_MEMORY_OFFSET, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_MEMORY_OFFSET"));
+	BoxSizer3->Add(MemoryOffsetComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	ComboBox12 = new wxComboBox(this, ID_COMBOBOX12, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX12"));
 	BoxSizer3->Add(ComboBox12, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer2->Add(BoxSizer3, 0, wxALL|wxEXPAND, 5);
 	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
-	ListView1 = new wxListView(this, ID_LISTVIEW1, wxDefaultPosition, wxDefaultSize, wxLC_LIST, wxDefaultValidator, _T("ID_LISTVIEW1"));
-	BoxSizer2->Add(ListView1, 1, wxALL|wxEXPAND, 5);
-	ScrollBar1 = new wxScrollBar(this, ID_SCROLLBAR1, wxDefaultPosition, wxSize(20,17), 0, wxDefaultValidator, _T("ID_SCROLLBAR1"));
-	ScrollBar1->SetScrollbar(0, 1, 10, 1);
-	BoxSizer2->Add(ScrollBar1, 0, wxALL|wxEXPAND, 5);
+	MemoryListView = new wxListView(this, ID_LISTVIEW_MEMORY, wxDefaultPosition, wxDefaultSize, wxLC_REPORT, wxDefaultValidator, _T("ID_LISTVIEW_MEMORY"));
+	BoxSizer2->Add(MemoryListView, 1, wxALL|wxEXPAND, 5);
+	MemoryScrollBar = new wxScrollBar(this, ID_SCROLLBAR_MEMORY, wxDefaultPosition, wxSize(20,17), 0, wxDefaultValidator, _T("ID_SCROLLBAR_MEMORY"));
+	MemoryScrollBar->SetScrollbar(0, 1, 10, 1);
+	BoxSizer2->Add(MemoryScrollBar, 0, wxALL|wxEXPAND, 5);
 	StaticBoxSizer2->Add(BoxSizer2, 1, wxALL|wxEXPAND, 5);
 	BoxSizer1->Add(StaticBoxSizer2, 1, wxALL|wxEXPAND, 5);
 	StaticBoxSizer5 = new wxStaticBoxSizer(wxVERTICAL, this, _("Port："));
 	BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);
-	ComboBox13 = new wxComboBox(this, ID_COMBOBOX13, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX13"));
-	BoxSizer4->Add(ComboBox13, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	PortOffsetComboBox = new wxComboBox(this, ID_COMBOBOX_PORT_OFFSET, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_PORT_OFFSET"));
+	BoxSizer4->Add(PortOffsetComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	ComboBox14 = new wxComboBox(this, ID_COMBOBOX14, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX14"));
 	BoxSizer4->Add(ComboBox14, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer5->Add(BoxSizer4, 0, wxALL|wxEXPAND, 5);
 	BoxSizer5 = new wxBoxSizer(wxHORIZONTAL);
-	ListView2 = new wxListView(this, ID_LISTVIEW2, wxDefaultPosition, wxDefaultSize, wxLC_LIST, wxDefaultValidator, _T("ID_LISTVIEW2"));
-	BoxSizer5->Add(ListView2, 1, wxALL|wxEXPAND, 5);
-	ScrollBar2 = new wxScrollBar(this, ID_SCROLLBAR2, wxDefaultPosition, wxSize(20,119), 0, wxDefaultValidator, _T("ID_SCROLLBAR2"));
-	ScrollBar2->SetScrollbar(0, 1, 10, 1);
-	BoxSizer5->Add(ScrollBar2, 0, wxALL|wxEXPAND, 5);
+	PortListView = new wxListView(this, ID_LISTVIEW_PORT, wxDefaultPosition, wxDefaultSize, wxLC_REPORT, wxDefaultValidator, _T("ID_LISTVIEW_PORT"));
+	BoxSizer5->Add(PortListView, 1, wxALL|wxEXPAND, 5);
+	PortScrollBar = new wxScrollBar(this, ID_SCROLLBAR_PORT, wxDefaultPosition, wxSize(20,119), 0, wxDefaultValidator, _T("ID_SCROLLBAR_PORT"));
+	PortScrollBar->SetScrollbar(0, 1, 10, 1);
+	BoxSizer5->Add(PortScrollBar, 0, wxALL|wxEXPAND, 5);
 	StaticBoxSizer5->Add(BoxSizer5, 1, wxALL|wxEXPAND, 5);
 	BoxSizer1->Add(StaticBoxSizer5, 1, wxALL|wxEXPAND, 5);
 	BoxSizer6 = new wxBoxSizer(wxHORIZONTAL);
-	Button1 = new wxButton(this, ID_BUTTON1, _("Run"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON1"));
-	BoxSizer6->Add(Button1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	Button2 = new wxButton(this, ID_BUTTON2, _("Step"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON2"));
-	BoxSizer6->Add(Button2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	Button3 = new wxButton(this, ID_BUTTON3, _("Next"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON3"));
-	BoxSizer6->Add(Button3, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	Button4 = new wxButton(this, ID_BUTTON4, _("Call"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON4"));
-	BoxSizer6->Add(Button4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	Button5 = new wxButton(this, ID_BUTTON5, _("Return"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON5"));
-	BoxSizer6->Add(Button5, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	Button6 = new wxButton(this, ID_BUTTON6, _("Pause"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON6"));
-	BoxSizer6->Add(Button6, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	RunButton = new wxButton(this, ID_BUTTON_RUN, _("Run"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_RUN"));
+	BoxSizer6->Add(RunButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StepButton = new wxButton(this, ID_BUTTON_STEP, _("Step"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_STEP"));
+	BoxSizer6->Add(StepButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	NextButton = new wxButton(this, ID_BUTTON3, _("Next"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON3"));
+	BoxSizer6->Add(NextButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	CallButton = new wxButton(this, ID_BUTTON_CALL, _("Call"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_CALL"));
+	BoxSizer6->Add(CallButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	ReturnButton = new wxButton(this, ID_BUTTON_RETURN, _("Return"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_RETURN"));
+	BoxSizer6->Add(ReturnButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	PauseButton = new wxButton(this, ID_BUTTON_PAUSE, _("Pause"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_PAUSE"));
+	BoxSizer6->Add(PauseButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer1->Add(BoxSizer6, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
+
+	Connect(ID_COMBOBOX_COR,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnCORComboBoxSelected);
+	Connect(ID_COMBOBOX_COR,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnCORComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_COR,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnCORComboBoxTextEnter);
+	Connect(ID_COMBOBOX_CBR,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnCBRComboBoxSelected);
+	Connect(ID_COMBOBOX_CBR,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnCBRComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_CBR,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnCBRComboBoxTextEnter);
+	Connect(ID_COMBOBOX_CCR,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnCCRComboBoxSelected);
+	Connect(ID_COMBOBOX_CCR,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnCCRComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_CCR,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnCCRComboBoxTextEnter);
+	Connect(ID_COMBOBOX_AAR,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnAARComboBoxSelected);
+	Connect(ID_COMBOBOX_AAR,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnAARComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_AAR,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnAARComboBoxTextEnter);
+	Connect(ID_COMBOBOX_ACF,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnACFComboBoxSelected);
+	Connect(ID_COMBOBOX_ACF,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnACFComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_ACF,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnACFComboBoxTextEnter);
+	Connect(ID_COMBOBOX_ABR,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnABRComboBoxSelected);
+	Connect(ID_COMBOBOX_ABR,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnABRComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_ABR,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnABRComboBoxTextEnter);
+	Connect(ID_COMBOBOX_AMF,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnAMFComboBoxSelected);
+	Connect(ID_COMBOBOX_AMF,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnAMFComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_AMF,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnAMFComboBoxTextEnter);
+	Connect(ID_COMBOBOX_ACR,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnACRComboBoxSelected);
+	Connect(ID_COMBOBOX_ACR,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnACRComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_ACR,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnACRComboBoxTextEnter);
+	Connect(ID_COMBOBOX_AOF,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnAOFComboBoxSelected);
+	Connect(ID_COMBOBOX_AOF,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnAOFComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_AOF,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnAOFComboBoxTextEnter);
+	Connect(ID_COMBOBOX_ADR,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnADRComboBoxSelected);
+	Connect(ID_COMBOBOX_ADR,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnADRComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_ADR,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnADRComboBoxTextEnter);
+	Connect(ID_COMBOBOX_MEMORY_OFFSET,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryOffsetComboBoxSelected);
+	Connect(ID_COMBOBOX_MEMORY_OFFSET,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryOffsetComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_MEMORY_OFFSET,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryOffsetComboBoxTextEnter);
+	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_TOP|wxEVT_SCROLL_BOTTOM|wxEVT_SCROLL_LINEUP|wxEVT_SCROLL_LINEDOWN|wxEVT_SCROLL_PAGEUP|wxEVT_SCROLL_PAGEDOWN|wxEVT_SCROLL_THUMBTRACK|wxEVT_SCROLL_THUMBRELEASE|wxEVT_SCROLL_CHANGED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryScrollBarScroll);
+	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_TOP,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryScrollBarScrollTop);
+	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_BOTTOM,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryScrollBarScrollBottom);
+	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_LINEUP,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryScrollBarScrollLineUp);
+	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_LINEDOWN,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryScrollBarScrollLineDown);
+	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_PAGEUP,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryScrollBarScrollPageUp);
+	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_PAGEDOWN,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryScrollBarScrollPageDown);
+	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_CHANGED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnMemoryScrollBarScrollChanged);
+	Connect(ID_COMBOBOX_PORT_OFFSET,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortOffsetComboBoxSelected);
+	Connect(ID_COMBOBOX_PORT_OFFSET,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortOffsetComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_PORT_OFFSET,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortOffsetComboBoxTextEnter);
+	Connect(ID_SCROLLBAR_PORT,wxEVT_SCROLL_TOP|wxEVT_SCROLL_BOTTOM|wxEVT_SCROLL_LINEUP|wxEVT_SCROLL_LINEDOWN|wxEVT_SCROLL_PAGEUP|wxEVT_SCROLL_PAGEDOWN|wxEVT_SCROLL_THUMBTRACK|wxEVT_SCROLL_THUMBRELEASE|wxEVT_SCROLL_CHANGED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortScrollBarScroll);
+	Connect(ID_SCROLLBAR_PORT,wxEVT_SCROLL_TOP,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortScrollBarScrollTop);
+	Connect(ID_SCROLLBAR_PORT,wxEVT_SCROLL_BOTTOM,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortScrollBarScrollBottom);
+	Connect(ID_SCROLLBAR_PORT,wxEVT_SCROLL_LINEUP,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortScrollBarScrollLineUp);
+	Connect(ID_SCROLLBAR_PORT,wxEVT_SCROLL_LINEDOWN,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortScrollBarScrollLineDown);
+	Connect(ID_SCROLLBAR_PORT,wxEVT_SCROLL_PAGEUP,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortScrollBarScrollPageUp);
+	Connect(ID_SCROLLBAR_PORT,wxEVT_SCROLL_PAGEDOWN,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortScrollBarScrollPageDown);
+	Connect(ID_SCROLLBAR_PORT,wxEVT_SCROLL_CHANGED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPortScrollBarScrollChanged);
+	Connect(ID_BUTTON_RUN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnRunButtonClick);
+	Connect(ID_BUTTON_STEP,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnStepButtonClick);
+	Connect(ID_BUTTON3,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnNextButtonClick);
+	Connect(ID_BUTTON_CALL,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnCallButtonClick);
+	Connect(ID_BUTTON_RETURN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnReturnButtonClick);
+	Connect(ID_BUTTON_PAUSE,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugDemoFrame::OnPauseButtonClick);
 	//*)
 }
 
@@ -179,3 +238,235 @@ T100VPCDebugDemoFrame::~T100VPCDebugDemoFrame()
 	//*)
 }
 
+
+void T100VPCDebugDemoFrame::OnCORComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnCORComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnCORComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnCBRComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnCBRComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnCBRComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnCCRComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnCCRComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnCCRComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnAARComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnAARComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnAARComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnABRComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnABRComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnABRComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnACRComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnACRComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnACRComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnADRComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnADRComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnADRComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnACFComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnACFComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnACFComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnAMFComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnAMFComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnAMFComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnAOFComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnAOFComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnAOFComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryOffsetComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryOffsetComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryOffsetComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryScrollBarScrollLineDown(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryScrollBarScrollPageUp(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryScrollBarScrollPageDown(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryScrollBarScrollChanged(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortOffsetComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortOffsetComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortOffsetComboBoxTextEnter(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryScrollBarScrollLineUp(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryScrollBarScroll(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryScrollBarScrollTop(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnMemoryScrollBarScrollBottom(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortScrollBarScroll(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortScrollBarScrollTop(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortScrollBarScrollBottom(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortScrollBarScrollLineUp(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortScrollBarScrollLineDown(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortScrollBarScrollPageUp(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortScrollBarScrollPageDown(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPortScrollBarScrollChanged(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnRunButtonClick(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnPauseButtonClick(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnStepButtonClick(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnNextButtonClick(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnCallButtonClick(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugDemoFrame::OnReturnButtonClick(wxCommandEvent& event)
+{
+}

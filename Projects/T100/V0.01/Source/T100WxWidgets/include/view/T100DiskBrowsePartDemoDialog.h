@@ -6,6 +6,8 @@
 #include <wx/dirctrl.h>
 #include <wx/sizer.h>
 //*)
+#include "T100FileSystemCtrl.h"
+
 
 class T100DiskBrowsePartDemoDialog: public wxDialog
 {

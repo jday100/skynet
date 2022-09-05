@@ -43,3 +43,23 @@ T100BOOL T100VDiskCtrl::OnMenuFormat(void* d)
 {
 
 }
+
+T100BOOL T100VDiskCtrl::OnFolderCreate(void* d)
+{
+
+}
+
+T100BOOL T100VDiskCtrl::OnFolderRemove(void* d)
+{
+
+}
+
+T100BOOL T100VDiskCtrl::OnFileCopy(void* d)
+{
+
+}
+
+T100BOOL T100VDiskCtrl::OnFileRemove(void* d)
+{
+
+}

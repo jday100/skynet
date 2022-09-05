@@ -42,9 +42,7 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*IdInit(T100WxWidgetsFrame)
-const long T100WxWidgetsFrame::ID_STATICBOX1 = wxNewId();
 const long T100WxWidgetsFrame::ID_CUSTOM1 = wxNewId();
-const long T100WxWidgetsFrame::ID_PANEL1 = wxNewId();
 const long T100WxWidgetsFrame::idMenuQuit = wxNewId();
 const long T100WxWidgetsFrame::idMenuAbout = wxNewId();
 const long T100WxWidgetsFrame::ID_STATUSBAR1 = wxNewId();
@@ -63,11 +61,13 @@ T100WxWidgetsFrame::T100WxWidgetsFrame(wxWindow* parent,wxWindowID id)
     wxMenuBar* MenuBar1;
     wxMenuItem* MenuItem1;
     wxMenuItem* MenuItem2;
+    wxStaticBoxSizer* StaticBoxSizer1;
 
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
-    Panel1 = new wxPanel(this, ID_PANEL1, wxPoint(272,288), wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL1"));
-    StaticBox1 = new wxStaticBox(Panel1, ID_STATICBOX1, _("Label"), wxPoint(8,8), wxSize(384,432), 0, _T("ID_STATICBOX1"));
-    Custom1 = new T100DiskCtrl(Panel1,ID_CUSTOM1,wxPoint(24,32),wxSize(300,30),0,wxDefaultValidator,_T("ID_CUSTOM1"));
+    StaticBoxSizer1 = new wxStaticBoxSizer(wxHORIZONTAL, this, _("DiskCtrl："));
+    DiskCtrl = new T100TestDiskCtrl(this,ID_CUSTOM1,wxDefaultPosition,wxSize(400,30),0,wxDefaultValidator,_T("ID_CUSTOM1"));
+    StaticBoxSizer1->Add(DiskCtrl, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    SetSizer(StaticBoxSizer1);
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
     MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
@@ -84,16 +84,32 @@ T100WxWidgetsFrame::T100WxWidgetsFrame(wxWindow* parent,wxWindowID id)
     StatusBar1->SetFieldsCount(1,__wxStatusBarWidths_1);
     StatusBar1->SetStatusStyles(1,__wxStatusBarStyles_1);
     SetStatusBar(StatusBar1);
+    StaticBoxSizer1->Fit(this);
+    StaticBoxSizer1->SetSizeHints(this);
 
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100WxWidgetsFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100WxWidgetsFrame::OnAbout);
     //*)
+
+    create();
 }
 
 T100WxWidgetsFrame::~T100WxWidgetsFrame()
 {
     //(*Destroy(T100WxWidgetsFrame)
     //*)
+
+    destroy();
+}
+
+T100VOID T100WxWidgetsFrame::create()
+{
+    DiskCtrl->SetLength(1024);
+}
+
+T100VOID T100WxWidgetsFrame::destroy()
+{
+
 }
 
 void T100WxWidgetsFrame::OnQuit(wxCommandEvent& event)

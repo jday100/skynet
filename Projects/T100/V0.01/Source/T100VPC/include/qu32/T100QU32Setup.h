@@ -3,6 +3,7 @@
 
 #include "T100AppSetup.h"
 #include "T100String.h"
+#include "T100VPCCommon.h"
 
 
 class T100QU32Setup : public T100AppSetup
@@ -13,6 +14,8 @@ class T100QU32Setup : public T100AppSetup
         virtual ~T100QU32Setup();
 
         static T100BOOL             DEBUG;
+        static T100EXECUTOR_MODE    DEBUG_MODE;
+        static T100EXECUTOR_STATE   DEBUG_STATE;
         static T100WORD             MEMORY_WINDOW_BEGIN;
         static T100WORD             MEMORY_WINDOW_END;
         static T100WORD             PORT_WINDOW_BEGIN;

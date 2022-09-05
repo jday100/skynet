@@ -22,6 +22,8 @@ class T100VPCView
 
         T100BOOL                ShowDebug();
 
+        T100VPCDebugFrame*      getDebugFrame();
+
     protected:
 
     private:

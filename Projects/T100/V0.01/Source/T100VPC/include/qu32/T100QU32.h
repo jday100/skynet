@@ -30,6 +30,15 @@ class T100QU32
 
         T100BOOL                start();
         T100BOOL                stop();
+        T100BOOL                wait();
+
+        T100BOOL                pause();
+        T100BOOL                run();
+        T100BOOL                resume();
+        T100BOOL                step();
+        T100BOOL                next();
+        T100BOOL                nextCall();
+        T100BOOL                nextReturn();
 
         T100BOOL                halt();
 

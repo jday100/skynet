@@ -11,6 +11,8 @@ class T100VDiskView
         T100VDiskView();
         virtual ~T100VDiskView();
 
+        T100BOOL            quit();
+
         T100VOID            setFrame(wxFrame*);
         wxFrame*            getFrame();
 

@@ -17,6 +17,7 @@
 //*)
 
 #include "T100Common.h"
+class T100VPCView;
 
 
 class T100VPCFrame: public wxFrame
@@ -26,6 +27,9 @@ class T100VPCFrame: public wxFrame
 
         T100VPCFrame(wxWindow* parent,wxWindowID id = -1);
         virtual ~T100VPCFrame();
+
+        T100VOID            setView(T100VPCView*);
+        T100VPCView*        getView();
 
     private:
 
@@ -62,19 +66,27 @@ class T100VPCFrame: public wxFrame
         //*)
 
     private:
+        static const long ID_THREAD_START;
+        static const long ID_THREAD_STOP;
         static const long ID_THREAD_QUIT;
 
+        static const long ID_DEBUG_REGISTER_UPDATE;
         static const long ID_DEBUG_MEMORY_UPDATE;
         static const long ID_DEBUG_PORT_UPDATE;
 
+        void OnThreadStart(wxThreadEvent& event);
+        void OnThreadStop(wxThreadEvent& event);
         void OnThreadQuit(wxThreadEvent& event);
 
+        void OnDebugRegisterUpdate(wxThreadEvent& event);
         void OnDebugMemoryUpdate(wxThreadEvent& event);
         void OnDebugPortUpdate(wxThreadEvent& event);
 
     private:
         T100VOID            create();
         T100VOID            destroy();
+
+        T100VPCView*        m_view          = T100NULL;
 
         DECLARE_EVENT_TABLE()
 };

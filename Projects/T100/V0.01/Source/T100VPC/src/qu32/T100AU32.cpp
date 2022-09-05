@@ -1,4 +1,9 @@
 #include "T100AU32.h"
+#include "T100QU32Setup.h"
+#include "T100OrderTypes.h"
+#include "T100QU32.h"
+#include "T100QU32Interface.h"
+
 
 T100AU32::T100AU32(T100QU32* host)
     :m_host(host)
@@ -14,6 +19,9 @@ T100AU32::~T100AU32()
 T100VOID T100AU32::setAAR(T100WORD value)
 {
     m_aar.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100AAR, value);
+    }
 }
 
 T100WORD T100AU32::getAAR()
@@ -24,6 +32,9 @@ T100WORD T100AU32::getAAR()
 T100VOID T100AU32::setABR(T100WORD value)
 {
     m_abr.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100ABR, value);
+    }
 }
 
 T100WORD T100AU32::getABR()
@@ -34,6 +45,9 @@ T100WORD T100AU32::getABR()
 T100VOID T100AU32::setACR(T100WORD value)
 {
     m_acr.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100ACR, value);
+    }
 }
 
 T100WORD T100AU32::getACR()
@@ -44,6 +58,9 @@ T100WORD T100AU32::getACR()
 T100VOID T100AU32::setADR(T100WORD value)
 {
     m_adr.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100ADR, value);
+    }
 }
 
 T100WORD T100AU32::getADR()
@@ -54,6 +71,9 @@ T100WORD T100AU32::getADR()
 T100VOID T100AU32::setACF(T100WORD value)
 {
     m_acf.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100ACF, value);
+    }
 }
 
 T100WORD T100AU32::getACF()
@@ -64,6 +84,9 @@ T100WORD T100AU32::getACF()
 T100VOID T100AU32::setAMF(T100WORD value)
 {
     m_amf.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100AMF, value);
+    }
 }
 
 T100WORD T100AU32::getAMF()
@@ -74,6 +97,9 @@ T100WORD T100AU32::getAMF()
 T100VOID T100AU32::setAOF(T100WORD value)
 {
     m_aof.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getCallback()->notify_register_update(T100AOF, value);
+    }
 }
 
 T100WORD T100AU32::getAOF()

@@ -1,5 +1,6 @@
 #include "T100VPCView.h"
 
+#include "T100VPCSetup.h"
 #include "T100VPCScreen.h"
 #include "T100VPCDebugFrame.h"
 
@@ -42,5 +43,13 @@ T100BOOL T100VPCView::hide()
 
 T100BOOL T100VPCView::ShowDebug()
 {
+    m_debug = T100NEW T100VPCDebugFrame(m_frame);
 
+    T100VPCSetup::DEBUG = T100TRUE;
+    m_debug->Show();
+}
+
+T100VPCDebugFrame* T100VPCView::getDebugFrame()
+{
+    return m_debug;
 }

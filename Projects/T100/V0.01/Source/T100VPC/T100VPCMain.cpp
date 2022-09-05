@@ -18,6 +18,9 @@
 #include "T100VPCApp.h"
 #include "T100VPCCallback.h"
 #include "T100VPCLink.h"
+#include "T100EventData.h"
+#include "T100RegisterEventData.h"
+#include "T100VPCDebugFrame.h"
 
 
 //helper functions
@@ -57,7 +60,10 @@ const long T100VPCFrame::idMenuAbout = wxNewId();
 const long T100VPCFrame::ID_STATUSBAR1 = wxNewId();
 //*)
 
+const long T100VPCFrame::ID_THREAD_START = wxNewId();
+const long T100VPCFrame::ID_THREAD_STOP = wxNewId();
 const long T100VPCFrame::ID_THREAD_QUIT = wxNewId();
+const long T100VPCFrame::ID_DEBUG_REGISTER_UPDATE = wxNewId();
 const long T100VPCFrame::ID_DEBUG_MEMORY_UPDATE = wxNewId();
 const long T100VPCFrame::ID_DEBUG_PORT_UPDATE = wxNewId();
 
@@ -65,7 +71,10 @@ const long T100VPCFrame::ID_DEBUG_PORT_UPDATE = wxNewId();
 BEGIN_EVENT_TABLE(T100VPCFrame,wxFrame)
     //(*EventTable(T100VPCFrame)
     //*)
+    EVT_THREAD(ID_THREAD_START, T100VPCFrame::OnThreadStart)
+    EVT_THREAD(ID_THREAD_STOP, T100VPCFrame::OnThreadStop)
     EVT_THREAD(ID_THREAD_QUIT, T100VPCFrame::OnThreadQuit)
+    EVT_THREAD(ID_DEBUG_REGISTER_UPDATE, T100VPCFrame::OnDebugRegisterUpdate)
     EVT_THREAD(ID_DEBUG_MEMORY_UPDATE, T100VPCFrame::OnDebugMemoryUpdate)
     EVT_THREAD(ID_DEBUG_PORT_UPDATE, T100VPCFrame::OnDebugPortUpdate)
 END_EVENT_TABLE()
@@ -135,6 +144,7 @@ T100VPCFrame::~T100VPCFrame()
 T100VOID T100VPCFrame::create()
 {
     wxGetApp().m_view.setFrame(this);
+    m_view = &wxGetApp().m_view;
 
     T100VPCCallback::init(&wxGetApp().m_serve, &wxGetApp().m_view);
     T100VPCLink::init(&wxGetApp().m_serve, &wxGetApp().m_view);
@@ -143,6 +153,16 @@ T100VOID T100VPCFrame::create()
 T100VOID T100VPCFrame::destroy()
 {
 
+}
+
+T100VOID T100VPCFrame::setView(T100VPCView* view)
+{
+    m_view = view;
+}
+
+T100VPCView* T100VPCFrame::getView()
+{
+    return m_view;
 }
 
 void T100VPCFrame::OnQuit(wxCommandEvent& event)
@@ -181,17 +201,59 @@ void T100VPCFrame::OnMenuDebugSelected(wxCommandEvent& event)
     T100VPCCallback::frame_menu_debug();
 }
 
+void T100VPCFrame::OnThreadStart(wxThreadEvent& event)
+{
+    if(T100QU32Setup::DEBUG){
+        //m_view->getDebugFrame()->load();
+        T100VPCCallback::debug_notify_start(m_view->getDebugFrame());
+    }
+}
+
+void T100VPCFrame::OnThreadStop(wxThreadEvent& event)
+{
+    if(T100QU32Setup::DEBUG){
+        //m_view->getDebugFrame()->save();
+        T100VPCCallback::debug_notify_stop(m_view->getDebugFrame());
+    }
+}
+
 void T100VPCFrame::OnThreadQuit(wxThreadEvent& event)
 {
 
 }
 
+void T100VPCFrame::OnDebugRegisterUpdate(wxThreadEvent& event)
+{
+    T100RegisterEventData*      data    = T100NULL;
+
+    data = static_cast<T100RegisterEventData*>(event.GetEventObject());
+
+    if(data){
+        m_view->getDebugFrame()->OnRegisterUpdate(data->TYPE, data->VALUE);
+        T100SAFE_DELETE(data);
+    }
+}
+
 void T100VPCFrame::OnDebugMemoryUpdate(wxThreadEvent& event)
 {
+    T100EventData*      data    = T100NULL;
 
+    data = static_cast<T100EventData*>(event.GetEventObject());
+
+    if(data){
+        m_view->getDebugFrame()->OnMemoryUpdate(data->OFFSET, data->VALUE);
+        T100SAFE_DELETE(data);
+    }
 }
 
 void T100VPCFrame::OnDebugPortUpdate(wxThreadEvent& event)
 {
+    T100EventData*      data    = T100NULL;
 
+    data = static_cast<T100EventData*>(event.GetEventObject());
+
+    if(data){
+        m_view->getDebugFrame()->OnPortUpdate(data->OFFSET, data->VALUE);
+        T100SAFE_DELETE(data);
+    }
 }

@@ -30,6 +30,7 @@
 					<Add directory="include/view/dialog" />
 					<Add directory="../T100VPC" />
 					<Add directory="include/view/frame" />
+					<Add directory="include/data" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -63,6 +64,7 @@
 					<Add directory="../T100Common/include" />
 					<Add directory="include/view/dialog" />
 					<Add directory="include/view/frame" />
+					<Add directory="include/data" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -99,6 +101,7 @@
 					<Add directory="include/view/dialog" />
 					<Add directory="../T100VPC" />
 					<Add directory="include/view/frame" />
+					<Add directory="include/data" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -146,6 +149,8 @@
 		</Unit>
 		<Unit filename="include/T100VPCCommon.h" />
 		<Unit filename="include/T100VPCSetup.h" />
+		<Unit filename="include/data/T100EventData.h" />
+		<Unit filename="include/data/T100RegisterEventData.h" />
 		<Unit filename="include/device/T100AUDevice.h" />
 		<Unit filename="include/device/T100AUDeviceInfo.h" />
 		<Unit filename="include/device/T100BlockDevice.h" />
@@ -226,6 +231,8 @@
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/T100VPCSetup.cpp" />
+		<Unit filename="src/data/T100EventData.cpp" />
+		<Unit filename="src/data/T100RegisterEventData.cpp" />
 		<Unit filename="src/device/T100AUDevice.cpp" />
 		<Unit filename="src/device/T100AUDeviceInfo.cpp" />
 		<Unit filename="src/device/T100BlockDevice.cpp" />

@@ -6,6 +6,7 @@
 #include "T100Display.h"
 #include "T100Keyboard.h"
 #include "T100Mouse.h"
+#include "T100VPCLink.h"
 
 
 T100VPCServe::T100VPCServe()
@@ -37,6 +38,10 @@ T100BOOL T100VPCServe::start()
     }
 
     m_host = T100NEW T100QU32();
+
+    if(T100VPCSetup::DEBUG){
+        m_host->setCallback(m_callback);
+    }
 
     if(!load()){
         return T100FALSE;
@@ -106,4 +111,17 @@ T100BOOL T100VPCServe::createDevice(T100QU32* host, T100DeviceInfo* info)
     }
 
     return result;
+}
+
+T100BOOL T100VPCServe::createCallback()
+{
+    if(!m_callback){
+        m_callback = T100NEW T100VPCLink();
+    }
+
+    if(m_host){
+        m_host->setCallback(m_callback);
+    }
+
+    return T100TRUE;
 }

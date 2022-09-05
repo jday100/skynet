@@ -7,6 +7,20 @@
 
 
 typedef enum{
+    T100DISK_ICON_NONE          = 0,
+    T100DISK_ICON_FOLDER,
+    T100DISK_ICON_FOLDER_OPEN,
+    T100DISK_ICON_COMPUTER,
+    T100DISK_ICON_DRIVE,
+    T100DISK_ICON_CDROM,
+    T100DISK_ICON_FLOPPY,
+    T100DISK_ICON_REMOVEABLE,
+    T100DISK_ICON_FILE,
+    T100DISK_ICON_EXECUTABLE,
+    T100DISK_ICON_MAX
+}T100DISK_ICON_TYPE;
+
+typedef enum{
     T100DISK_NONE               = 0,
     T100DISK_MAX
 }T100DISK_TYPE;
@@ -29,10 +43,11 @@ typedef struct{
     T100DWORD       LENGTH;
     T100BOOL        BOOT;
     T100BOOL        ISFORMATED;
+    T100BOOL        ISUSED;
 }T100DISK_PART;
 
 typedef struct{
-    T100DISK_PART*          PART;
+    T100DISK_PART*          PART        = T100NULL;
     T100WORD                X;
     T100WORD                Y;
     T100WORD                WIDTH;

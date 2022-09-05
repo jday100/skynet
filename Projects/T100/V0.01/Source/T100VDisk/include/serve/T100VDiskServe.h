@@ -11,6 +11,8 @@ class T100VDiskServe
         T100VDiskServe();
         virtual ~T100VDiskServe();
 
+        T100BOOL            opened();
+
         T100BOOL            createVDisk(T100String, T100DWORD);
         T100BOOL            openVDisk(T100String);
         T100BOOL            saveVDisk();

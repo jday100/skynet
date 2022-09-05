@@ -3,24 +3,30 @@
 
 #include <wx/wx.h>
 #include <wx/generic/dirctrlg.h>
+#include "T100DiskCtrl.h"
 
 
 class T100FileSystemCtrl : public wxGenericDirCtrl
 {
     public:
-        T100FileSystemCtrl(wxWindow *parent, const wxWindowID id = wxID_ANY,
-              const wxString &dir = wxDirDialogDefaultFolderStr,
-              const wxPoint& pos = wxDefaultPosition,
-              const wxSize& size = wxDefaultSize,
-              long style = wxDIRCTRL_3D_INTERNAL,
-              const wxString& filter = wxEmptyString,
-              int defaultFilter = 0,
-              const wxString& name = wxTreeCtrlNameStr);
+        T100FileSystemCtrl(wxWindow *parent);
         virtual ~T100FileSystemCtrl();
 
+        T100BOOL            SetDiskCtrl(T100DiskCtrl*);
+
+        T100BOOL            Load();
+
     protected:
+        void                SetupSections();
+
+        size_t              getAllDrives(wxArrayString& paths, wxArrayString& names, wxArrayInt& icon_ids);
 
     private:
+        T100DiskCtrl*       m_disk          = T100NULL;
+
+        void BuildContent(wxWindow *parent);
+
+		DECLARE_EVENT_TABLE()
 };
 
 #endif // T100FILESYSTEMCTRL_H

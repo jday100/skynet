@@ -14,6 +14,11 @@ class T100VPCLink : public T100QU32Interface
 
         static T100BOOL             init(T100VPCServe*, T100VPCView*);
 
+        T100BOOL                    notify_start();
+        T100BOOL                    notify_stop();
+
+        T100BOOL                    notify_register_update(T100WORD, T100WORD);
+
         T100BOOL                    notify_memory_update(T100WORD, T100WORD);
         T100BOOL                    notify_port_update(T100WORD, T100WORD);
 

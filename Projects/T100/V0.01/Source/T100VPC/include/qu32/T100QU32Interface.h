@@ -10,8 +10,15 @@ class T100QU32Interface
         T100QU32Interface();
         virtual ~T100QU32Interface();
 
+        virtual T100BOOL            notify_start() = 0;
+        virtual T100BOOL            notify_stop() = 0;
+
+        virtual T100BOOL            notify_register_update(T100WORD, T100WORD) = 0;
+
         virtual T100BOOL            notify_memory_update(T100WORD, T100WORD) = 0;
         virtual T100BOOL            notify_port_update(T100WORD, T100WORD) = 0;
+
+
 
     protected:
 

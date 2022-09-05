@@ -70,6 +70,10 @@ T100BOOL T100QU32::start()
         return T100FALSE;
     }
 
+    if(!m_callback->notify_start()){
+        return T100FALSE;
+    }
+
     return m_executor->start();
 }
 
@@ -80,6 +84,14 @@ T100BOOL T100QU32::stop()
 
     value = m_executor->stop();
 
+    if(value){
+        if(!m_callback->notify_stop()){
+            result = T100FALSE;
+        }
+    }else{
+        result = T100FALSE;
+    }
+
     T100SAFE_DELETE(m_executor);
     T100SAFE_DELETE(m_interrupt);
     T100SAFE_DELETE(m_port);
@@ -87,6 +99,54 @@ T100BOOL T100QU32::stop()
     T100SAFE_DELETE(m_au);
     T100SAFE_DELETE(m_cu);
 
+    return result;
+}
+
+T100BOOL T100QU32::wait()
+{
+    m_executor->wait();
+    return T100TRUE;
+}
+
+T100BOOL T100QU32::pause()
+{
+    m_executor->hangup();
+    return T100TRUE;
+}
+
+T100BOOL T100QU32::run()
+{
+    m_executor->wakeup();
+    return T100TRUE;
+}
+
+T100BOOL T100QU32::resume()
+{
+    m_executor->wakeup();
+    return T100TRUE;
+}
+
+T100BOOL T100QU32::step()
+{
+    m_executor->step();
+    return T100TRUE;
+}
+
+T100BOOL T100QU32::next()
+{
+    m_executor->next();
+    return T100TRUE;
+}
+
+T100BOOL T100QU32::nextCall()
+{
+    m_executor->next();
+    return T100TRUE;
+}
+
+T100BOOL T100QU32::nextReturn()
+{
+    m_executor->next();
     return T100TRUE;
 }
 

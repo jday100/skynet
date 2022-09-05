@@ -26,12 +26,14 @@
 
 class T100VDiskFrame: public wxFrame
 {
+    friend class T100VDiskView;
     public:
 
         T100VDiskFrame(wxWindow* parent,wxWindowID id = -1);
         virtual ~T100VDiskFrame();
 
         T100BOOL            load(T100VDisk*);
+        T100BOOL            clear();
 
     private:
 

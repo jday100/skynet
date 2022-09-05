@@ -20,6 +20,9 @@ class T100VDiskCallback
         static T100BOOL                 frame_menu_save(void* = T100NULL);
         static T100BOOL                 frame_menu_close(void* = T100NULL);
 
+        static T100BOOL                 frame_menu_quit(void* = T100NULL);
+        static T100BOOL                 frame_menu_about(void* = T100NULL);
+
         static T100BOOL                 ctrl_menu_new(void* = T100NULL);
 
 

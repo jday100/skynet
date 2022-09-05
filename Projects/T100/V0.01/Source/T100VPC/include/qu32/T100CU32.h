@@ -13,6 +13,7 @@ class T100CU32
     friend class T100OrderJump;
     friend class T100OrderLoop;
     friend class T100Interrupt32;
+    friend class T100VPCDebugFrame;
     public:
         T100CU32(T100QU32*);
         virtual ~T100CU32();

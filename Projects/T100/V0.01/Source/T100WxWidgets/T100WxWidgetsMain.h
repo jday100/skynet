@@ -11,13 +11,15 @@
 #define T100WXWIDGETSMAIN_H
 
 //(*Headers(T100WxWidgetsFrame)
-#include "T100DiskCtrl.h"
+#include "T100TestDiskCtrl.h"
 #include <wx/frame.h>
 #include <wx/menu.h>
-#include <wx/panel.h>
-#include <wx/statbox.h>
+#include <wx/sizer.h>
 #include <wx/statusbr.h>
 //*)
+
+#include "T100Common.h"
+
 
 class T100WxWidgetsFrame: public wxFrame
 {
@@ -34,20 +36,19 @@ class T100WxWidgetsFrame: public wxFrame
         //*)
 
         //(*Identifiers(T100WxWidgetsFrame)
-        static const long ID_STATICBOX1;
         static const long ID_CUSTOM1;
-        static const long ID_PANEL1;
         static const long idMenuQuit;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
         //*)
 
         //(*Declarations(T100WxWidgetsFrame)
-        T100DiskCtrl* Custom1;
-        wxPanel* Panel1;
-        wxStaticBox* StaticBox1;
+        T100TestDiskCtrl* DiskCtrl;
         wxStatusBar* StatusBar1;
         //*)
+
+        T100VOID            create();
+        T100VOID            destroy();
 
         DECLARE_EVENT_TABLE()
 };
