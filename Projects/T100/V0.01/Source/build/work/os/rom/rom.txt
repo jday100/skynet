@@ -1,0 +1,11 @@
+IMPORT	"lib\string.txt"
+IMPORT	"lib\io.txt"
+IMPORT	"data.txt"
+IMPORT 	"int.txt"
+IMPORT	"hard\hard.txt"
+
+MODE 	REAL
+
+CODE
+
+END

@@ -15,6 +15,10 @@
 #include "T100VPCDebugDemoFrame.h"
 
 #include "T100VPCDebugFrame.h"
+#include "T100VPCHostFrame.h"
+
+#include "T100VPCHostLoadDialog.h"
+#include "T100VPCHostRunDialog.h"
 
 
 T100VPCServe*       T100VPCCallback::m_serve            = T100NULL;
@@ -38,6 +42,8 @@ T100BOOL T100VPCCallback::init(T100VPCServe* serve, T100VPCView* view)
 
     m_serve     = serve;
     m_view      = view;
+
+    m_serve->createCallback();
 
     return T100TRUE;
 }
@@ -81,7 +87,7 @@ T100BOOL T100VPCCallback::frame_menu_setup(void* d)
 
 T100BOOL T100VPCCallback::frame_menu_debug(void* d)
 {
-    m_serve->createCallback();
+    //m_serve->createCallback();
     m_view->ShowDebug();
 }
 
@@ -141,6 +147,43 @@ T100BOOL T100VPCCallback::debug_button_return_click(void* d)
     }
 }
 
+T100BOOL T100VPCCallback::debug_memory_offset_update(void* d)
+{
+    if(!d)return T100FALSE;
+    if(!m_serve->m_host)return T100FALSE;
+
+    T100VPCDebugFrame*      frame   = T100NULL;
+
+    frame = static_cast<T100VPCDebugFrame*>(d);
+    if(!frame)return T100FALSE;
+
+
+    wxString    temp;
+    T100LONG    result;
+
+    T100WORD    offset;
+    T100WORD    value;
+
+    temp = frame->MemoryOffsetComboBox->GetValue();
+
+    if(!temp.ToLongLong(&result)){
+        return T100FALSE;
+    }
+    offset = result;
+    m_serve->m_host->getMemory32()->raw_read(0, offset, value);
+
+    frame->update(frame->MemoryListView, offset, value);
+
+    frame->load(m_serve->m_host);
+
+    return T100TRUE;
+}
+
+T100BOOL T100VPCCallback::debug_port_offset_update(void* d)
+{
+
+}
+
 T100BOOL T100VPCCallback::debug_notify_start(void* d)
 {
     T100VPCDebugFrame*      frame   = T100NULL;
@@ -148,7 +191,8 @@ T100BOOL T100VPCCallback::debug_notify_start(void* d)
     frame = static_cast<T100VPCDebugFrame*>(d);
 
     if(frame){
-        frame->load(m_serve->m_host);
+        frame->updateMemory(m_serve->m_host->getMemory32());
+        frame->updatePort(m_serve->m_host->getPort32());
         return T100TRUE;
     }
 
@@ -158,4 +202,56 @@ T100BOOL T100VPCCallback::debug_notify_start(void* d)
 T100BOOL T100VPCCallback::debug_notify_stop(void* d)
 {
 
+}
+
+T100BOOL T100VPCCallback::host_menu_load(void* d)
+{
+    T100VPCHostFrame*       frame       = T100NULL;
+
+    frame = static_cast<T100VPCHostFrame*>(d);
+
+    if(frame){
+        T100BOOL                    result;
+        T100VPCHostLoadDialog       dialog(frame);
+        T100LONG                    location;
+
+        if(dialog.ShowModal() == wxID_OK){
+            if(dialog.ComboBoxLocation->GetValue().ToLongLong(&location)){
+                return m_serve->m_host->load(dialog.ComboBoxFile->GetValue().ToStdWstring(), location);
+            }else{
+                return T100FALSE;
+            }
+        }
+    }
+    return T100FALSE;
+}
+
+T100BOOL T100VPCCallback::host_menu_run(void* d)
+{
+    T100VPCHostFrame*       frame       = T100NULL;
+
+    frame = static_cast<T100VPCHostFrame*>(d);
+
+    if(frame){
+        T100BOOL                    result;
+        T100VPCHostRunDialog        dialog(frame);
+        T100LONG                    base;
+        T100LONG                    offset;
+
+        if(dialog.ShowModal() == wxID_OK){
+            if(dialog.ComboBoxBase->GetValue().ToLongLong(&base)){
+
+            }else{
+                return T100FALSE;
+            }
+            if(dialog.ComboBoxOffset->GetValue().ToLongLong(&offset)){
+
+            }else{
+                return T100FALSE;
+            }
+
+            return m_serve->run(base, offset);
+        }
+    }
+    return T100FALSE;
 }

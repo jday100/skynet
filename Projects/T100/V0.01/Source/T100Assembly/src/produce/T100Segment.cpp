@@ -31,10 +31,14 @@ T100BOOL T100Segment::setWord(T100WORD& offset, T100WORD value)
         return T100FALSE;
     }
 
-    m_mem.resize(m_offset + 1);
+    T100WORD    temp;
+
+    temp = m_offset + 1;
+    m_mem.resize(temp);
     m_mem[m_offset] = value;
 
-    m_offset++;
+    offset      = m_offset + m_location;
+    m_offset    = temp;
 
     return T100TRUE;
 }

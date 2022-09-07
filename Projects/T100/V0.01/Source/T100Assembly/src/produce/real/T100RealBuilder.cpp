@@ -111,7 +111,7 @@ T100BOOL T100RealBuilder::build(T100SegmentToken* token)
 
 T100BOOL T100RealBuilder::build(T100SentenceToken* token)
 {
-    T100BOOL            result          = T100TRUE;
+    T100BOOL            result          = T100FALSE;
 
     if(token->value){
         result = token->value->build(&(m_part->getBuildInfo()));

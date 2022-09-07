@@ -65,11 +65,8 @@ T100VPCDebugFrame::~T100VPCDebugFrame()
 
 T100VOID T100VPCDebugFrame::create()
 {
-    T100VPCSetup::MEMORY_WINDOW_BEGIN       = T100MEMORY_RAM_BASE;
-    T100VPCSetup::MEMORY_WINDOW_END         = T100MEMORY_RAM_BASE + 256;
 
-    T100VPCSetup::PORT_WINDOW_BEGIN         = 0;
-    T100VPCSetup::PORT_WINDOW_END           = 256;
+    init();
 
     initList();
 }
@@ -283,68 +280,9 @@ T100BOOL T100VPCDebugFrame::save()
 
 T100BOOL T100VPCDebugFrame::initList()
 {
-    MemoryListView->ClearAll();
+    init(MemoryListView, 0);
 
-    MemoryListView->AppendColumn(_("Offset"), wxLIST_FORMAT_CENTER, 200);
-    MemoryListView->AppendColumn(_("Value"), wxLIST_FORMAT_CENTER, 200);
-    MemoryListView->AppendColumn(_("Symbol"), wxLIST_FORMAT_CENTER, 200);
-    MemoryListView->AppendColumn(_(""), wxLIST_FORMAT_CENTER, 200);
-
-    T100WORD        start;
-    T100WORD        stop;
-    T100WORD        offset;
-    T100WORD        index;
-
-
-    start   = T100VPCSetup::MEMORY_WINDOW_BEGIN;
-    stop    = T100VPCSetup::MEMORY_WINDOW_END;
-
-    offset  = start;
-    index   = offset - start;
-
-    for(;offset < stop;offset++){
-        long id = MemoryListView->InsertItem(index++, std::to_string(offset));
-
-        //MemoryListView->InsertItem(id, std::to_string(0));
-    }
-
-    int i = MemoryListView->GetCountPerPage();
-
-
-
-    MemoryListView->ClearAll();
-
-    MemoryListView->AppendColumn(_("Offset"), wxLIST_FORMAT_CENTER, 200);
-    MemoryListView->AppendColumn(_("Value"), wxLIST_FORMAT_CENTER, 200);
-    MemoryListView->AppendColumn(_("Symbol"), wxLIST_FORMAT_CENTER, 200);
-    MemoryListView->AppendColumn(_(""), wxLIST_FORMAT_CENTER, 200);
-
-    start   = T100VPCSetup::MEMORY_WINDOW_BEGIN;
-    stop    = start + i;
-    offset  = start;
-    index   = 0;
-
-    for(;offset < stop;offset++){
-        long id = MemoryListView->InsertItem(index++, std::to_string(offset));
-    }
-
-    ///
-    i = PortListView->GetCountPerPage();
-    PortListView->ClearAll();
-
-    PortListView->AppendColumn(_("Offset"), wxLIST_FORMAT_CENTER, 200);
-    PortListView->AppendColumn(_("Value"), wxLIST_FORMAT_CENTER, 200);
-    PortListView->AppendColumn(_("Symbol"), wxLIST_FORMAT_CENTER, 200);
-    PortListView->AppendColumn(_(""), wxLIST_FORMAT_CENTER, 200);
-
-    start   = T100VPCSetup::PORT_WINDOW_BEGIN;
-    stop    = start + i;
-    offset  = start;
-    index   = 0;
-
-    for(;offset < stop;offset++){
-        long id = PortListView->InsertItem(index++, std::to_string(offset));
-    }
+    init(PortListView, 0);
 
     return T100TRUE;
 }
@@ -479,6 +417,7 @@ void T100VPCDebugFrame::OnMemoryOffsetComboBoxTextUpdated(wxCommandEvent& event)
 
 void T100VPCDebugFrame::OnMemoryOffsetComboBoxTextEnter(wxCommandEvent& event)
 {
+    T100VPCCallback::debug_memory_offset_update(this);
 }
 
 void T100VPCDebugFrame::OnMemoryScrollBarScrollLineDown(wxScrollEvent& event)
@@ -495,6 +434,10 @@ void T100VPCDebugFrame::OnMemoryScrollBarScrollPageDown(wxScrollEvent& event)
 
 void T100VPCDebugFrame::OnMemoryScrollBarScrollChanged(wxScrollEvent& event)
 {
+    T100VPCSetup::MEMORY_WINDOW_BEGIN   = event.GetSelection();
+    T100VPCSetup::MEMORY_WINDOW_END     = T100VPCSetup::MEMORY_WINDOW_BEGIN + MemoryListView->GetCountPerPage();
+
+    T100VPCCallback::debug_notify_start(this);
 }
 
 void T100VPCDebugFrame::OnPortOffsetComboBoxSelected(wxCommandEvent& event)
@@ -652,6 +595,122 @@ T100BOOL T100VPCDebugFrame::OnMemoryUpdate(T100WORD offset, T100WORD value)
 }
 
 T100BOOL T100VPCDebugFrame::OnPortUpdate(T100WORD offset, T100WORD value)
+{
+
+}
+
+
+T100BOOL T100VPCDebugFrame::init(wxListView* view, T100WORD offset)
+{
+    if(!view)return T100FALSE;
+
+    view->ClearAll();
+
+    view->AppendColumn(_("Offset"), wxLIST_FORMAT_CENTER, 200);
+    view->AppendColumn(_("Value"),  wxLIST_FORMAT_CENTER, 200);
+    view->AppendColumn(_("Symbol"), wxLIST_FORMAT_CENTER, 200);
+    view->AppendColumn(_(""),       wxLIST_FORMAT_CENTER, 200);
+
+    /*
+    T100WORD    count;
+    T100WORD    index;
+
+    count = view->GetCountPerPage();
+
+    for(index = 0;index < count;index++){
+        view->InsertItem(index, std::to_string(offset + index));
+    }
+    */
+
+    return T100TRUE;
+}
+
+T100BOOL T100VPCDebugFrame::update(wxListView* view, T100WORD offset, T100WORD value)
+{
+    if(!view)return T100FALSE;
+
+    T100WORD    count;
+
+    count = view->GetCountPerPage();
+
+    if(count <= offset){
+        return T100FALSE;
+    }
+
+    view->SetItem(offset, 1, std::to_string(value));
+
+    return T100TRUE;
+}
+
+T100BOOL T100VPCDebugFrame::init()
+{
+    T100VPCSetup::DEBUG                     = T100TRUE;
+    T100VPCSetup::MEMORY_WINDOW_BEGIN       = 0;
+    T100VPCSetup::MEMORY_WINDOW_END         = MemoryListView->GetCountPerPage();
+    T100VPCSetup::PORT_WINDOW_BEGIN         = 0;
+    T100VPCSetup::PORT_WINDOW_END           = PortListView->GetCountPerPage();
+
+    T100WORD        base;
+    T100WORD        size;
+    T100WORD        total;
+
+    base    = T100VPCSetup::getRamBase();
+    size    = T100VPCSetup::getRamSize();
+    total   = base + size;
+
+    MemoryScrollBar->SetRange(total);
+    MemoryScrollBar->SetPageSize(MemoryListView->GetCountPerPage());
+
+    PortScrollBar->SetRange(1024 * 1024 * 1024);
+    PortScrollBar->SetPageSize(PortListView->GetCountPerPage());
+
+    return T100TRUE;
+}
+
+T100BOOL T100VPCDebugFrame::initMemory()
+{
+    T100WORD        base;
+    T100WORD        size;
+    T100WORD        total;
+
+    base    = T100VPCSetup::getRamBase();
+    size    = T100VPCSetup::getRamSize();
+
+    total   = base + size;
+
+    MemoryScrollBar->SetPageSize(MemoryListView->GetCountPerPage());
+    MemoryScrollBar->SetRange(total);
+
+
+}
+
+T100BOOL T100VPCDebugFrame::updateMemory(T100Memory32* memory)
+{
+    if(!memory)return T100FALSE;
+
+    MemoryListView->DeleteAllItems();
+
+    T100WORD        count;
+    T100WORD        index       = 0;
+    T100WORD        offset;
+    T100WORD        value;
+
+
+    count   = MemoryListView->GetCountPerPage();
+    offset  = T100VPCSetup::MEMORY_WINDOW_BEGIN;
+
+    for(;index < count;index++){
+        memory->raw_read(0, offset, value);
+
+        MemoryListView->InsertItem(index, std::to_string(offset));
+        MemoryListView->SetItem(index, 1, std::to_string(value));
+
+        offset++;
+    }
+
+}
+
+T100BOOL T100VPCDebugFrame::updatePort(T100Port32* port)
 {
 
 }

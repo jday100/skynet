@@ -61,10 +61,13 @@ T100BOOL T100Memory32::write(T100WORD offset, T100WORD value)
     return raw_write(base, offset, value);
 }
 
-T100BOOL T100Memory32::raw_read(T100WORD base, T100WORD offset, T100WORD& value)
+T100BOOL T100Memory32::raw_read(T100WORD base, T100WORD temp, T100WORD& value)
 {
     T100BOOL            result          = T100TRUE;
+    T100WORD            offset;
     T100WORD            os;
+
+    offset = base + temp;
 
     if(offset >= m_ram_limit){
         result = T100FALSE;
@@ -72,7 +75,7 @@ T100BOOL T100Memory32::raw_read(T100WORD base, T100WORD offset, T100WORD& value)
         if(offset < m_ram_base){
             result = T100FALSE;
         }else{
-            os = offset = m_ram_base;
+            os = offset - m_ram_base;
             if(os >= m_ram_length){
                 result = T100FALSE;
             }else{
@@ -95,10 +98,13 @@ T100BOOL T100Memory32::raw_read(T100WORD base, T100WORD offset, T100WORD& value)
     return result;
 }
 
-T100BOOL T100Memory32::raw_write(T100WORD base, T100WORD offset, T100WORD value)
+T100BOOL T100Memory32::raw_write(T100WORD base, T100WORD temp, T100WORD value)
 {
     T100BOOL            result          = T100TRUE;
+    T100WORD            offset;
     T100WORD            os;
+
+    offset = base + temp;
 
     if(offset >= m_ram_limit){
         result = T100FALSE;

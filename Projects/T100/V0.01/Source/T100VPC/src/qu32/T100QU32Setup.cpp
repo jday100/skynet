@@ -8,6 +8,9 @@ T100WORD                T100QU32Setup::MEMORY_WINDOW_END        = 0;
 T100WORD                T100QU32Setup::PORT_WINDOW_BEGIN        = 0;
 T100WORD                T100QU32Setup::PORT_WINDOW_END          = 0;
 
+T100WORD                T100QU32Setup::SCREEN_WIDTH             = 800;
+T100WORD                T100QU32Setup::SCREEN_HEIGHT            = 600;
+
 T100String              T100QU32Setup::m_build_path             = L"build";
 T100String              T100QU32Setup::m_stores_path            = L"stores";
 T100String              T100QU32Setup::m_resources_path         = L"resources";

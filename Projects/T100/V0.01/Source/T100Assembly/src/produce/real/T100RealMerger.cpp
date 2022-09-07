@@ -155,7 +155,7 @@ T100BOOL T100RealMerger::merge_code(T100SegmentCode* source, T100SegmentCode* ta
     }
 
     /*
-    for(auto it : source->m_variables){
+    for(auto it : source->m_variable_call){
         T100WORD        offset;
 
         offset = length + it.second;
@@ -203,6 +203,11 @@ T100BOOL T100RealMerger::merge_code(T100SegmentCode* source, T100SegmentCode* ta
 
     for(auto item : source->m_variable_call){
         item->offset = length + item->offset;
+        //
+        T100WORD test;
+
+        test = item->offset;
+
         target->m_variable_call.push_back(item);
     }
 
@@ -329,6 +334,10 @@ T100BOOL T100RealMerger::relocate(T100RealInfo& info)
             T100VARIABLE_DEFINE*    vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(item->name);
 
             if(vd){
+                T100WORD    test;
+
+                test = vd->offset;
+
                 if(vd->isvirtual || vd->isshare){
                     info.getCode().getMem()[offset] = vd->offset;
                     continue;

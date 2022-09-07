@@ -12,6 +12,10 @@ class T100StringTools
 
         static T100BOOL         code_convert(T100STDSTRING, T100STDSTRING, T100STDCHAR*, size_t, T100STDCHAR*, size_t);
 
+        static T100LONG         to_long(T100WSTRING);
+
+        static T100FLOAT        to_float(T100WSTRING);
+
     protected:
 
     private:

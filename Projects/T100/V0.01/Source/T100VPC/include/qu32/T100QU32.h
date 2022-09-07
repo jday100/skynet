@@ -32,6 +32,8 @@ class T100QU32
         T100BOOL                stop();
         T100BOOL                wait();
 
+        T100BOOL                exec(T100WORD, T100WORD);
+
         T100BOOL                pause();
         T100BOOL                run();
         T100BOOL                resume();

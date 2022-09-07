@@ -10,10 +10,13 @@
 #include <wx/stattext.h>
 #include "T100Common.h"
 class T100QU32;
+class T100Port32;
+class T100Memory32;
 
 
 class T100VPCDebugFrame : public wxFrame
 {
+    friend class T100VPCCallback;
     public:
         T100VPCDebugFrame(wxWindow* parent,wxWindowID id=wxID_ANY,const wxPoint& pos=wxDefaultPosition,const wxSize& size=wxDefaultSize);
         virtual ~T100VPCDebugFrame();
@@ -157,6 +160,22 @@ class T100VPCDebugFrame : public wxFrame
 		void OnNextButtonClick(wxCommandEvent& event);
 		void OnCallButtonClick(wxCommandEvent& event);
 		void OnReturnButtonClick(wxCommandEvent& event);
+
+    private:
+        T100BOOL            init();
+
+        T100BOOL            initMemory();
+        T100BOOL            updateMemory(T100Memory32*);
+        T100BOOL            updateMemory(T100WORD, T100WORD);
+
+        T100BOOL            initPort();
+        T100BOOL            updatePort(T100Port32*);
+        T100BOOL            updatePort(T100WORD, T100WORD);
+
+
+
+        T100BOOL            init(wxListView*, T100WORD);
+        T100BOOL            update(wxListView*, T100WORD, T100WORD);
 
     private:
 		T100VOID            create();

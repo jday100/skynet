@@ -51,8 +51,10 @@ T100VOID T100KeywordTable::create()
 
     m_keywords[T100String(L"MODE")]         = T100KEYWORD_MODE;
     m_keywords[T100String(L"REAL")]         = T100KEYWORD_REAL;
+    m_keywords[T100String(L"NORMAL")]       = T100KEYWORD_NORMAL;
     m_keywords[T100String(L"TINY")]         = T100KEYWORD_TINY;
     m_keywords[T100String(L"VIRTUAL")]      = T100KEYWORD_VIRTUAL;
+    m_keywords[T100String(L"SHARE")]        = T100KEYWORD_SHARE;
     m_keywords[T100String(L"LOCATION")]     = T100KEYWORD_LOCATION;
     m_keywords[T100String(L"LENGTH")]       = T100KEYWORD_LENGTH;
     m_keywords[T100String(L"DEFAULT")]      = T100KEYWORD_DEFAULT;

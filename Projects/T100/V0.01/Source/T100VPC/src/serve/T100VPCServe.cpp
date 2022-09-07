@@ -39,9 +39,9 @@ T100BOOL T100VPCServe::start()
 
     m_host = T100NEW T100QU32();
 
-    if(T100VPCSetup::DEBUG){
+    //if(T100VPCSetup::DEBUG){
         m_host->setCallback(m_callback);
-    }
+    //}
 
     if(!load()){
         return T100FALSE;
@@ -53,6 +53,11 @@ T100BOOL T100VPCServe::start()
 T100BOOL T100VPCServe::stop()
 {
 
+}
+
+T100BOOL T100VPCServe::run(T100WORD base, T100WORD offset)
+{
+    return m_host->exec(base, offset);
 }
 
 T100BOOL T100VPCServe::load()

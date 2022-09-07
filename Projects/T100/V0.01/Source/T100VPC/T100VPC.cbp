@@ -220,10 +220,16 @@
 		<Unit filename="include/view/dialog/T100VPCHardwareDialog.h" />
 		<Unit filename="include/view/dialog/T100VPCHardwareSelectDemoDialog.h" />
 		<Unit filename="include/view/dialog/T100VPCHardwareSelectDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCHostLoadDemoDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCHostLoadDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCHostRunDemoDialog.h" />
+		<Unit filename="include/view/dialog/T100VPCHostRunDialog.h" />
 		<Unit filename="include/view/dialog/T100VPCSetupDemoDialog.h" />
 		<Unit filename="include/view/dialog/T100VPCSetupDialog.h" />
 		<Unit filename="include/view/frame/T100VPCDebugDemoFrame.h" />
 		<Unit filename="include/view/frame/T100VPCDebugFrame.h" />
+		<Unit filename="include/view/frame/T100VPCHostDemoFrame.h" />
+		<Unit filename="include/view/frame/T100VPCHostFrame.h" />
 		<Unit filename="main.cpp">
 			<Option target="Test" />
 		</Unit>
@@ -301,10 +307,16 @@
 		<Unit filename="src/view/dialog/T100VPCHardwareDialog.cpp" />
 		<Unit filename="src/view/dialog/T100VPCHardwareSelectDemoDialog.cpp" />
 		<Unit filename="src/view/dialog/T100VPCHardwareSelectDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCHostLoadDemoDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCHostLoadDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCHostRunDemoDialog.cpp" />
+		<Unit filename="src/view/dialog/T100VPCHostRunDialog.cpp" />
 		<Unit filename="src/view/dialog/T100VPCSetupDemoDialog.cpp" />
 		<Unit filename="src/view/dialog/T100VPCSetupDialog.cpp" />
 		<Unit filename="src/view/frame/T100VPCDebugDemoFrame.cpp" />
 		<Unit filename="src/view/frame/T100VPCDebugFrame.cpp" />
+		<Unit filename="src/view/frame/T100VPCHostDemoFrame.cpp" />
+		<Unit filename="src/view/frame/T100VPCHostFrame.cpp" />
 		<Unit filename="test/T100QU32Test.cpp" />
 		<Unit filename="test/T100QU32Test.h" />
 		<Unit filename="test/T100TestApp.cpp" />
@@ -315,6 +327,9 @@
 		<Unit filename="wxsmith/T100VPCDebugDemoFrame.wxs" />
 		<Unit filename="wxsmith/T100VPCHardwareDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCHardwareSelectDemoDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCHostDemoFrame.wxs" />
+		<Unit filename="wxsmith/T100VPCHostLoadDemoDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCHostRunDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCScreen.wxs" />
 		<Unit filename="wxsmith/T100VPCSetupDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCframe.wxs" />
@@ -330,6 +345,9 @@
 					<wxDialog wxs="wxsmith/T100VPCHardwareSelectDemoDialog.wxs" src="src\view\dialog\T100VPCHardwareSelectDemoDialog.cpp" hdr="include\view\dialog\T100VPCHardwareSelectDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCHardwareSelectDemoDialog" language="CPP" />
 					<wxDialog wxs="wxsmith/T100VPCSetupDemoDialog.wxs" src="src\view\dialog\T100VPCSetupDemoDialog.cpp" hdr="include\view\dialog\T100VPCSetupDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCSetupDemoDialog" language="CPP" />
 					<wxFrame wxs="wxsmith/T100VPCDebugDemoFrame.wxs" src="src\view\frame\T100VPCDebugDemoFrame.cpp" hdr="include\view\frame\T100VPCDebugDemoFrame.h" fwddecl="0" i18n="1" name="T100VPCDebugDemoFrame" language="CPP" />
+					<wxFrame wxs="wxsmith/T100VPCHostDemoFrame.wxs" src="src\view\frame\T100VPCHostDemoFrame.cpp" hdr="include\view\frame\T100VPCHostDemoFrame.h" fwddecl="0" i18n="1" name="T100VPCHostDemoFrame" language="CPP" />
+					<wxDialog wxs="wxsmith/T100VPCHostLoadDemoDialog.wxs" src="src\view\dialog\T100VPCHostLoadDemoDialog.cpp" hdr="include\view\dialog\T100VPCHostLoadDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCHostLoadDemoDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100VPCHostRunDemoDialog.wxs" src="src\view\dialog\T100VPCHostRunDemoDialog.cpp" hdr="include\view\dialog\T100VPCHostRunDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCHostRunDemoDialog" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

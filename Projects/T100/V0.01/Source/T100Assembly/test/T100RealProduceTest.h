@@ -17,6 +17,8 @@ class T100RealProduceTest : public T100Test
 
         T100BOOL                test_multiple();
 
+        T100BOOL                test_share();
+
         T100BOOL                test_keyword();
 
         T100BOOL                test_real();

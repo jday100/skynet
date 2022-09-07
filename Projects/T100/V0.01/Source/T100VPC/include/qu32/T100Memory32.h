@@ -12,6 +12,8 @@ class T100Memory32
     friend class T100Order;
     friend class T100MemoryDevice;
     friend class T100Interrupt32;
+    friend class T100VPCCallback;
+    friend class T100VPCDebugFrame;
     public:
         T100Memory32(T100QU32*);
         virtual ~T100Memory32();

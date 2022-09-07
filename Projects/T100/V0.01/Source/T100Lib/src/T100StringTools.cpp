@@ -42,3 +42,13 @@ T100BOOL T100StringTools::code_convert(T100STDSTRING source, T100STDSTRING targe
 
     return result;
 }
+
+T100LONG T100StringTools::to_long(T100WSTRING str)
+{
+    return std::stoll(str.c_str(), T100NULL, 0);
+}
+
+T100FLOAT T100StringTools::to_float(T100WSTRING str)
+{
+    return std::stof(str);
+}

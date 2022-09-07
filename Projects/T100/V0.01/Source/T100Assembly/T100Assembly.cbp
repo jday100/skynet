@@ -71,10 +71,15 @@
 		</Compiler>
 		<Unit filename="../build/build/rom.bin" />
 		<Unit filename="../build/test/build/test_basic.bin" />
+		<Unit filename="../build/test/build/test_master.bin" />
 		<Unit filename="../build/test/build/test_multiple.bin" />
+		<Unit filename="../build/test/build/test_slave.bin" />
 		<Unit filename="../build/test/resources/assembly/real/test_basic.txt" />
 		<Unit filename="../build/test/resources/assembly/real/test_import.txt" />
+		<Unit filename="../build/test/resources/assembly/real/test_master.txt" />
 		<Unit filename="../build/test/resources/assembly/real/test_multiple.txt" />
+		<Unit filename="../build/test/resources/assembly/real/test_share.txt" />
+		<Unit filename="../build/test/resources/assembly/real/test_slave.txt" />
 		<Unit filename="../build/test/resources/assembly/scanner/test_byte.txt" />
 		<Unit filename="../build/test/resources/assembly/scanner/test_char.txt" />
 		<Unit filename="../build/test/resources/assembly/scanner/test_import.txt" />

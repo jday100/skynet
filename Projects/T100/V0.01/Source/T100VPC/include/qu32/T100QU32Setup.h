@@ -21,6 +21,9 @@ class T100QU32Setup : public T100AppSetup
         static T100WORD             PORT_WINDOW_BEGIN;
         static T100WORD             PORT_WINDOW_END;
 
+        static T100WORD             SCREEN_WIDTH;
+        static T100WORD             SCREEN_HEIGHT;
+
         static T100BOOL             needLoadRom;
 
         static T100String           getRomFile();

@@ -108,6 +108,13 @@ T100BOOL T100QU32::wait()
     return T100TRUE;
 }
 
+T100BOOL T100QU32::exec(T100WORD base, T100WORD offset)
+{
+    m_cu->setCBR(base);
+    m_cu->setCOR(offset);
+    return m_executor->start();
+}
+
 T100BOOL T100QU32::pause()
 {
     m_executor->hangup();

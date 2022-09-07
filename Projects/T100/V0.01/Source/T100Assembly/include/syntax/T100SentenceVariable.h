@@ -23,6 +23,10 @@ class T100SentenceVariable : public T100Sentence
 
         T100BOOL                setDefine();
 
+        T100BOOL                buildFloat(T100BuildInfo*);
+        T100BOOL                buildInteger(T100BuildInfo*);
+        T100BOOL                buildString(T100BuildInfo*);
+
     private:
 };
 

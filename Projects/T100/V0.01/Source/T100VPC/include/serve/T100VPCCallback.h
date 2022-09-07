@@ -31,8 +31,14 @@ class T100VPCCallback
         static T100BOOL                 debug_button_call_click(void* = T100NULL);
         static T100BOOL                 debug_button_return_click(void* = T100NULL);
 
+        static T100BOOL                 debug_memory_offset_update(void* = T100NULL);
+        static T100BOOL                 debug_port_offset_update(void* = T100NULL);
+
         static T100BOOL                 debug_notify_start(void* = T100NULL);
         static T100BOOL                 debug_notify_stop(void* = T100NULL);
+
+        static T100BOOL                 host_menu_load(void* = T100NULL);
+        static T100BOOL                 host_menu_run(void* = T100NULL);
 
     protected:
 

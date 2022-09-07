@@ -231,6 +231,9 @@ T100VOID T100Executor32::execute()
         }
     //
     default:
+        {
+            m_host->halt();
+        }
         break;
     }
 

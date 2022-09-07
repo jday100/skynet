@@ -14,6 +14,8 @@ class T100VPCServe
         T100BOOL                start();
         T100BOOL                stop();
 
+        T100BOOL                run(T100WORD, T100WORD);
+
         T100BOOL                createCallback();
 
     protected:
