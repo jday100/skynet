@@ -1,0 +1,8 @@
+PROC=MOUSE_INIT
+    CMT     30100010
+    MOVE    mouse_init_result_return            AAR
+    //
+    MOVE    #mouse_init_result_return           1
+    //
+    CMT     30101000
+END

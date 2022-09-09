@@ -13,7 +13,9 @@ T100OrderMul::~T100OrderMul()
 
 T100BOOL T100OrderMul::run()
 {
+    getHost()->getAU32()->Mul();
 
+    return T100TRUE;
 }
 
 T100VOID T100OrderMul::log()

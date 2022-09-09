@@ -6,6 +6,7 @@
 #define     T100CONSOLE_PROMPT_DEFAULT                  L'?'
 #define     T100CONSOLE_SEPARATOR_DEFAULT               L' '
 #define     T100CONSOLE_COMMAND_PROMPT_DEFAULT          L'-'
+#define     T100CONSOLE_COMMAND_EQUAL_DEFAULT           L'='
 
 
 typedef enum{

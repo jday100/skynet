@@ -23,6 +23,9 @@ class T100ProduceInfo
 
         static T100BOOL                 clear();
 
+        static T100VOID                 setName(T100String&);
+        static T100String&              getName();
+
         static T100BOOL                 setDefaultCode(T100SegmentCode*);
         static T100BOOL                 setDefaultData(T100SegmentData*);
 
@@ -43,6 +46,7 @@ class T100ProduceInfo
         static T100SegmentData*         m_data;
 
     private:
+        static T100String               m_name;
         static T100MODE                 m_mode;
 
         static T100PartDrawer           m_part_drawer;

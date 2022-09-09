@@ -4,8 +4,27 @@ IMPORT	"data.txt"
 IMPORT 	"int.txt"
 IMPORT	"hard\hard.txt"
 
+//
+//_offset   pointer
+//_return   return
+//
+
 MODE 	REAL
 
 CODE
 
+ROM_INIT:
+    MOVE    AAR                     @rom_result
+    CALL    HARD_INIT
+    MOVE    ACR                     rom_result
+    JZ      ROM_FATAL_ERROR
+    //
+
+
+ROM_JUMP:
+
+ROM_COMMON_ERROR:
+
+ROM_FATAL_ERROR:
+	HALT
 END

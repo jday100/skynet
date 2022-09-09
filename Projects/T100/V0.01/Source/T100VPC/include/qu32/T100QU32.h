@@ -27,6 +27,7 @@ class T100QU32
         T100Interrupt32*        getInterrupt32();
         T100Executor32*         getExecutor32();
 
+        T100BOOL                create();
 
         T100BOOL                start();
         T100BOOL                stop();
@@ -48,7 +49,6 @@ class T100QU32
 
 
     protected:
-        T100VOID                create();
         T100VOID                destroy();
 
         T100BOOL                load();

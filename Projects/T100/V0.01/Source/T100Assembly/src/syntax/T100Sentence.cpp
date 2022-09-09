@@ -2175,21 +2175,22 @@ T100BOOL T100Sentence::buildInfo(T100ORDER_TYPE type, T100BuildInfo* code, T100O
 
 T100BOOL T100Sentence::getProcedureOffset(T100BuildInfo* info, T100String name, T100WORD& offset)
 {
-        T100BOOL            result          = T100TRUE;
+    T100BOOL            result          = T100TRUE;
 
-        result = info->getProcedure(name, offset);
+    result = info->getProcedure(name, offset);
 
-        if(!result){
-            T100PROCEDURE_DEFINE*   pd = T100ProduceInfo::getProcedureDrawer().getProcedureDefine(name);
+    if(!result){
+        T100PROCEDURE_DEFINE*   pd = T100ProduceInfo::getProcedureDrawer().getProcedureDefine(name);
 
-            if(pd){
-                offset = pd->offset;
-            }else{
-                return T100FALSE;
-            }
+        if(pd){
+            offset = pd->offset;
+            result = T100TRUE;
+        }else{
+            return T100FALSE;
         }
+    }
 
-        return result;
+    return result;
 }
 
 T100BOOL T100Sentence::createPartInfo(T100String file)

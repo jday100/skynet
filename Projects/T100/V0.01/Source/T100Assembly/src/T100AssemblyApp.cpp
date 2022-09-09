@@ -35,7 +35,8 @@ T100BOOL T100AssemblyApp::run()
         }else{
             T100Assembly            assembly;
 
-            result = assembly.run(data.SOURCE, data.TARGET);
+            //result = assembly.run(data.SOURCE, data.TARGET);
+            result = assembly.run(data);
         }
     }
 

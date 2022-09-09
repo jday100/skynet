@@ -11,6 +11,7 @@ class T100VPCSetup : public T100QU32Setup
         T100VPCSetup();
         virtual ~T100VPCSetup();
 
+        static T100BOOL                 initDevices();
         static T100BOOL                 appendDevice(T100DeviceInfo*);
         static T100BOOL                 removeDevice(T100DeviceInfo*);
         static T100DEVICE_INFO_VECTOR&  getDevices();

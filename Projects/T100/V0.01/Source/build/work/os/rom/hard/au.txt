@@ -1,0 +1,8 @@
+PROC=CPU_AU_INIT
+    CMT     30040010
+    MOVE    cpu_au_init_result_return               AAR
+    //
+    MOVE    #cpu_au_init_result_return              1
+    //
+    CMT     30041000
+END

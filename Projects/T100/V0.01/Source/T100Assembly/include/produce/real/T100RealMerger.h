@@ -24,6 +24,8 @@ class T100RealMerger : public T100ProduceMerger
 
         T100BOOL            relocate(T100RealInfo&);
 
+        T100BOOL            save();
+
     private:
 };
 

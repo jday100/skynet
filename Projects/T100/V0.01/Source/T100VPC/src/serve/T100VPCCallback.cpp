@@ -20,6 +20,8 @@
 #include "T100VPCHostLoadDialog.h"
 #include "T100VPCHostRunDialog.h"
 
+#include "T100VPCSetup.h"
+
 
 T100VPCServe*       T100VPCCallback::m_serve            = T100NULL;
 T100VPCView*        T100VPCCallback::m_view             = T100NULL;
@@ -157,24 +159,20 @@ T100BOOL T100VPCCallback::debug_memory_offset_update(void* d)
     frame = static_cast<T100VPCDebugFrame*>(d);
     if(!frame)return T100FALSE;
 
-
     wxString    temp;
-    T100LONG    result;
-
-    T100WORD    offset;
-    T100WORD    value;
+    T100LONG    value;
 
     temp = frame->MemoryOffsetComboBox->GetValue();
-
-    if(!temp.ToLongLong(&result)){
+    if(!temp.ToLongLong(&value)){
         return T100FALSE;
     }
-    offset = result;
-    m_serve->m_host->getMemory32()->raw_read(0, offset, value);
 
-    frame->update(frame->MemoryListView, offset, value);
+    T100VPCSetup::MEMORY_WINDOW_BEGIN   = value;
+    T100VPCSetup::MEMORY_WINDOW_END     = T100VPCSetup::MEMORY_WINDOW_BEGIN + frame->MemoryListView->GetCountPerPage();
 
-    frame->load(m_serve->m_host);
+    frame->MemoryScrollBar->SetThumbPosition(value);
+
+    frame->updateMemory(m_serve->m_host->getMemory32());
 
     return T100TRUE;
 }
@@ -182,6 +180,22 @@ T100BOOL T100VPCCallback::debug_memory_offset_update(void* d)
 T100BOOL T100VPCCallback::debug_port_offset_update(void* d)
 {
 
+}
+
+///
+T100BOOL T100VPCCallback::debug_port_update(void* d)
+{
+    if(!d)return T100FALSE;
+    if(!m_serve->m_host)return T100FALSE;
+
+    T100VPCDebugFrame*      frame   = T100NULL;
+
+    frame = static_cast<T100VPCDebugFrame*>(d);
+    if(!frame)return T100FALSE;
+
+    frame->updatePort(m_serve->m_host->getPort32());
+
+    return T100TRUE;
 }
 
 T100BOOL T100VPCCallback::debug_notify_start(void* d)

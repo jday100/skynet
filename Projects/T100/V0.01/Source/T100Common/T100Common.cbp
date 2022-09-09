@@ -16,6 +16,10 @@
 					<Add directory="include" />
 					<Add directory="../T100Lib/include" />
 					<Add directory="test" />
+					<Add directory="../T100Assembly/include/produce" />
+					<Add directory="../T100Assembly/include" />
+					<Add directory="../T100Assembly/include/syntax" />
+					<Add directory="../T100Assembly/include/scanner" />
 				</Compiler>
 				<Linker>
 					<Add library="../build/libT100Lib.a" />
@@ -48,6 +52,10 @@
 					<Add directory="include" />
 					<Add directory="../T100Lib/include" />
 					<Add directory="test" />
+					<Add directory="../T100Assembly/include/produce" />
+					<Add directory="../T100Assembly/include" />
+					<Add directory="../T100Assembly/include/syntax" />
+					<Add directory="../T100Assembly/include/scanner" />
 				</Compiler>
 				<Linker>
 					<Add library="../build/libT100Lib.a" />

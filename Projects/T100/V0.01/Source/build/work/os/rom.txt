@@ -1,10 +1,23 @@
-MODE	REAL
-
-DATA
-
-END
-
-CODE
-	HALT
-END 
-
+//
+//lib               1
+//
+//rom               3
+//      rom             30010
+//      int             30010010
+//          hard        30020010
+//              cu          30030010
+//              au          30040010
+//              memory      30050010
+//              port        30060010
+//              disk        30070010
+//              display     30080010
+//              keyboard    30090010
+//              mouse       30100010
+//
+//boot              5
+//
+//kernel            7
+//      init
+//      kernel
+//
+//

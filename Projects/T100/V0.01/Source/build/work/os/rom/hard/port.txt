@@ -1,0 +1,8 @@
+PROC=PORT_INIT
+    CMT     30060010
+    MOVE    port_init_result_return                     AAR
+    //
+    MOVE    #port_init_result_return                    1
+    //
+    CMT     30061000
+END

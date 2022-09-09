@@ -85,6 +85,11 @@ T100BOOL T100AssemblyCmdLineParser::setOption(T100CmdLineOption& info, T100Assem
             data.NAME   = info.value;
         }
         break;
+    case L'l':
+        {
+            data.PATHS.push_back(info.value);
+        }
+        break;
     default:
         result = T100FALSE;
     }

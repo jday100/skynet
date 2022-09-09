@@ -12,3 +12,27 @@ T100DebugFileWriter::~T100DebugFileWriter()
 {
     //dtor
 }
+
+T100BOOL T100DebugFileWriter::write_head()
+{
+    T100BOOL            result          = T100FALSE;
+
+
+
+
+}
+
+T100BOOL T100DebugFileWriter::write_variables()
+{
+
+}
+
+T100BOOL T100DebugFileWriter::write_labels()
+{
+
+}
+
+T100BOOL T100DebugFileWriter::write_procedures()
+{
+
+}

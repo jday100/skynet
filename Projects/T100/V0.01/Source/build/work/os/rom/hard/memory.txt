@@ -1,0 +1,8 @@
+PROC=MEMORY_INIT
+    CMT     30050010
+    MOVE    memory_init_result_return           AAR
+    //
+    MOVE    #memory_init_result_return          1
+    //
+    CMT     30051000
+END

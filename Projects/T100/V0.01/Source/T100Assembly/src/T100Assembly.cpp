@@ -25,3 +25,23 @@ T100BOOL T100Assembly::run(T100WSTRING& source, T100WSTRING& target)
 
     return result;
 }
+
+T100BOOL T100Assembly::run(T100AssemblyCmdLineResult& data)
+{
+    T100BOOL            result;
+    T100String          source;
+    T100String          target;
+    T100Produce         produce;
+
+    source  = data.SOURCE;
+    target  = data.TARGET;
+
+    for(T100WSTRING item : data.PATHS){
+        T100String  temp(item);
+        produce.getPathDrawer().append(temp);
+    }
+
+    result = produce.run(source, target);
+
+    return result;
+}

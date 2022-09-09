@@ -1,14 +1,29 @@
 #include "T100Disk.h"
+#include "T100QU32.h"
+
 
 T100Disk::T100Disk(T100QU32* host)
     :T100BlockDevice(host)
 {
     //ctor
+    create();
 }
 
 T100Disk::~T100Disk()
 {
     //dtor
+    destroy();
+}
+
+T100VOID T100Disk::create()
+{
+    m_port = m_host->getPort32();
+    m_port->appendDevice(m_id, this);
+}
+
+T100VOID T100Disk::destroy()
+{
+    m_port->removeDevice(m_id);
 }
 
 T100BOOL T100Disk::load(T100Port32* port)

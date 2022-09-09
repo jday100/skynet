@@ -18,6 +18,11 @@ T100Produce::~T100Produce()
     //dtor
 }
 
+T100ClassPathDrawer& T100Produce::getPathDrawer()
+{
+    return m_path_drawer;
+}
+
 T100ProduceBuilder* T100Produce::create_builder(T100ProduceInfo& info)
 {
     T100ProduceBuilder*         result          = T100NULL;
@@ -48,6 +53,9 @@ T100BOOL T100Produce::run(T100STRING& source, T100STRING& target)
     T100ProduceBuilder*         builder         = T100NULL;
 
     T100ProduceInfo::clear();
+    T100ProduceInfo::setName(target);
+
+    parser.setPathDrawer(&m_path_drawer);
 
     result = parser.run(source, info);
     if(!result){

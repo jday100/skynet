@@ -41,6 +41,7 @@ T100BOOL T100Port32::appendDevice(T100BYTE& id, T100Device* dev)
     if(result){
         m_devices.push_back(dev);
         id = m_devices.size() - 1;
+        m_device_hash[id] = dev;
     }
 
     return result;
@@ -58,6 +59,15 @@ T100BOOL T100Port32::removeDevice(T100BYTE id)
 
         T100Device* dev = (T100Device*)m_devices[id];
         m_devices[id] = T100NULL;
+
+        T100DEVICE_HASH::iterator   it;
+
+        it = m_device_hash.find(id);
+
+        if(it != m_device_hash.end()){
+            m_device_hash.erase(it);
+        }
+
         return T100TRUE;
     }
 
@@ -66,25 +76,132 @@ T100BOOL T100Port32::removeDevice(T100BYTE id)
 
 T100Device* T100Port32::getDevice(T100BYTE id)
 {
-    T100Device*     result      = T100NULL;
+    T100DEVICE_HASH::iterator       it;
 
-    if(id < m_devices.size()){
-        result = m_devices[id];
+    it = m_device_hash.find(id);
+
+    if(it != m_device_hash.end()){
+        return (*it).second;
     }
 
-    return result;
+    return T100NULL;
 }
 
 T100BOOL T100Port32::in(T100WORD offset, T100WORD& value)
 {
-    T100BOOL            result          = T100TRUE;
+    T100BOOL            result          = T100FALSE;
+
+    if(offset < m_device_limit){
+        T100BYTE    id;
+
+        id = offset >> 2;
+
+        T100Device* dev = getDevice(id);
+
+        if(dev){
+            id = offset & 3;
+            return dev->in(id, value);
+        }
+    }else if(offset < m_block_limit){
+        T100WORD    id;
+
+        id = offset / m_device_limit;
+
+        if(id > m_blocks.size()){
+            return T100FALSE;
+        }
+
+        T100BlockDevice* dev = (T100BlockDevice*)m_blocks[id-1];
+        if(dev){
+            T100WORD            os;
+            T100DEVICE_BLOCK*   block   = T100NULL;
+
+            os      = offset % m_device_limit;
+            block   = m_block_hash[id];
+
+            value = block->data[os];
+            return T100TRUE;
+        }
+
+    }else if(offset < m_page_limit){
+        T100WORD        id;
+
+        id = offset / m_block_limit;
+
+        if(id > m_pages.size()){
+            return T100FALSE;
+        }
+
+        T100PageDevice* dev = (T100PageDevice*)m_pages[id-1];
+        if(dev){
+            T100WORD            os;
+            T100DEVICE_PAGE*    page    = T100NULL;
+
+            os      = offset % m_block_limit;
+            page    = m_page_hash[id];
+
+            value = page->data[os];
+            return T100TRUE;
+        }
+    }
 
     return result;
 }
 
 T100BOOL T100Port32::out(T100WORD offset, T100WORD value)
 {
-    T100BOOL            result          = T100TRUE;
+    T100BOOL            result          = T100FALSE;
+
+    if(offset < m_device_limit){
+        T100BYTE        id;
+
+        id = offset >> 2;
+
+        T100Device* dev = getDevice(id);
+        if(dev){
+            id = offset & 3;
+
+            return dev->out(id, value);
+        }
+    }else if(offset < m_block_limit){
+        T100WORD        id;
+
+        id = offset / m_device_limit;
+        if(id > m_blocks.size()){
+            return T100FALSE;
+        }
+
+        T100BlockDevice* dev = (T100BlockDevice*)m_blocks[id-1];
+        if(dev){
+            T100WORD                os;
+            T100DEVICE_BLOCK*       block       = T100NULL;
+
+            os      = offset % m_device_limit;
+            block   = m_block_hash[id];
+
+            block->data[os] = value;
+            return T100TRUE;
+        }
+    }else if(offset < m_page_limit){
+        T100WORD        id;
+
+        id = offset / m_block_limit;
+        if(id > m_pages.size()){
+            return T100FALSE;
+        }
+
+        T100PageDevice* dev = (T100PageDevice*)m_pages[id-1];
+        if(dev){
+            T100WORD                os;
+            T100DEVICE_PAGE*        page        = T100NULL;
+
+            os      = offset % m_block_limit;
+            page    = m_page_hash[id];
+
+            page->data[os] = value;
+            return T100TRUE;
+        }
+    }
 
     return result;
 }
@@ -112,3 +229,5 @@ T100DEVICE_PAGE* T100Port32::getPage(T100WORD id)
 {
 
 }
+
+

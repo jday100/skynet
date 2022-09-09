@@ -29,6 +29,9 @@ class T100Display : public T100Device
         T100BOOL            out(T100WORD, T100WORD);
 
     protected:
+        T100VOID            create();
+        T100VOID            destroy();
+
         T100DisplayBlockDevice              m_block_device;
         T100DisplayPageDevice               m_page_device;
 

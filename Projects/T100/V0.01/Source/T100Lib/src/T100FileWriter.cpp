@@ -1,5 +1,6 @@
 #include "T100FileWriter.h"
 
+#include "T100String.h"
 #include "T100Unicode.h"
 
 
@@ -99,4 +100,25 @@ T100BOOL T100FileWriter::write(T100WORD* data, T100WORD length)
     }
 
     return T100FALSE;
+}
+
+T100BOOL T100FileWriter::write(T100String& value)
+{
+    T100WORD*       data        = T100NULL;
+    T100WORD        length;
+
+    data    = value.to_string().raw_data();
+    length  = value.to_string().raw_length();
+
+    return write(data, length);
+}
+
+T100BOOL T100FileWriter::write(T100WORD value)
+{
+    return write(&value, 1);
+}
+
+T100BOOL T100FileWriter::write(T100DWORD value)
+{
+    return write((T100WORD*)&value, 2);
 }

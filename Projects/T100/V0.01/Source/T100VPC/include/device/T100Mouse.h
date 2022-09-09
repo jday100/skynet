@@ -79,6 +79,8 @@ class T100Mouse : public T100Device
         T100BOOL            out(T100WORD, T100WORD);
 
     protected:
+        T100VOID            create();
+        T100VOID            destroy();
 
     private:
 };

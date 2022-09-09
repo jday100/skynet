@@ -1,5 +1,10 @@
 #include "T100VPCSetup.h"
 
+#include "T100DiskInfo.h"
+#include "T100DisplayInfo.h"
+#include "T100KeyboardInfo.h"
+#include "T100MouseInfo.h"
+
 
 T100DEVICE_INFO_VECTOR      T100VPCSetup::m_devices;
 T100WSTRING                 T100VPCSetup::m_vdisk_file          = L"vdisk.vdk";
@@ -19,6 +24,28 @@ T100VPCSetup::T100VPCSetup()
 T100VPCSetup::~T100VPCSetup()
 {
     //dtor
+}
+
+T100BOOL T100VPCSetup::initDevices()
+{
+    T100DiskInfo*           disk;
+    T100DisplayInfo*        display;
+    T100KeyboardInfo*       keyboard;
+    T100MouseInfo*          mouse;
+
+    disk        = T100NEW T100DiskInfo();
+    display     = T100NEW T100DisplayInfo();
+    keyboard    = T100NEW T100KeyboardInfo();
+    mouse       = T100NEW T100MouseInfo();
+
+    disk->length    = 1024 * 1024 * 1024;
+
+    appendDevice(disk);
+    appendDevice(display);
+    appendDevice(keyboard);
+    appendDevice(mouse);
+
+    return T100TRUE;
 }
 
 T100BOOL T100VPCSetup::appendDevice(T100DeviceInfo* dev)

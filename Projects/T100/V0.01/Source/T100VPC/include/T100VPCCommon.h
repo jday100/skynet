@@ -24,6 +24,7 @@ typedef enum{
 }T100EXECUTOR_MODE;
 
 #define     T100DEVICE_VECTOR           std::vector<T100Device*>
+#define     T100DEVICE_HASH             std::unordered_map<T100WORD, T100Device*>
 #define     T100BLOCK_HASH              std::unordered_map<T100WORD, T100DEVICE_BLOCK*>
 #define     T100PAGE_HASH               std::unordered_map<T100WORD, T100DEVICE_PAGE*>
 

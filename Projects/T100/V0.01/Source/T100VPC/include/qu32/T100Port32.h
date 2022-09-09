@@ -33,9 +33,11 @@ class T100Port32
         T100DEVICE_PAGE*        getPage(T100WORD);
 
     protected:
+        T100DEVICE_HASH         m_device_hash;
+        T100BLOCK_HASH          m_block_hash;
+        T100PAGE_HASH           m_page_hash;
+
         T100VOID                destroy();
-
-
 
     private:
         T100QU32*               m_host          = T100NULL;

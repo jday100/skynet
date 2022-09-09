@@ -1,0 +1,81 @@
+DATA=ROM_DATA
+    rom_device_mode_type            INTEGER     1
+    rom_device_mode_set             INTEGER     2
+    rom_device_mode_get             INTEGER     3
+    //
+    rom_device_type_cu              INTEGER     1
+    rom_device_type_au              INTEGER     2
+    rom_device_type_port            INTEGER     3
+    rom_device_type_memory          INTEGER     4
+    rom_device_type_display         INTEGER     5
+    rom_device_type_disk            INTEGER     6
+    rom_device_type_keyboard        INTEGER     7
+    rom_device_type_mouse           INTEGER     8
+    rom_device_type_net             INTEGER     9
+    rom_device_type_usb             INTEGER     10
+    rom_device_type_joystick        INTEGER     11
+    rom_device_type_printer         INTEGER     12
+    rom_device_type_mic             INTEGER     13
+    rom_device_type_sound           INTEGER     14
+    rom_device_type_video           INTEGER     15
+    rom_device_type_cdrom           INTEGER     16
+    rom_device_type_dvd             INTEGER     17
+    rom_device_type_phone           INTEGER     18
+    rom_device_type_max             INTEGER     19
+    //
+    rom_device_max                  INTEGER     8       //255
+END
+
+DATA=ROM_DATA   VIRTUAL     LOCATION=1073742848     LENGTH=1024
+    rom_result                      INTEGER     0
+END
+
+DATA=HARD_DATA  VIRTUAL     LOCATION=1073743872     LENGTH=1024
+    hard_device_order_offset        INTEGER     0
+    hard_device_data1_offset        INTEGER     0
+    hard_device_data2_offset        INTEGER     0
+    hard_device_data3_offset        INTEGER     0
+    //
+    hard_result                     INTEGER     0
+    hard_result_return              INTEGER     0
+    //
+    hard_scan_result                INTEGER     0
+    hard_scan_result_return         INTEGER     0
+    //
+    hard_scan_type_result           INTEGER     0
+    //
+
+    //
+    //CU
+    cpu_cu_init_result              INTEGER     0
+    cpu_cu_init_result_return       INTEGER     0
+    //
+    //AU
+    cpu_au_init_result              INTEGER     0
+    cpu_au_init_result_return       INTEGER     0
+    //
+    //PORT
+    port_init_result                INTEGER     0
+    port_init_result_return         INTEGER     0
+    //
+    //MEMORY
+    memory_init_result              INTEGER     0
+    memory_init_result_return       INTEGER     0
+    //
+    //DISK
+    disk_init_result                INTEGER     0
+    disk_init_result_return         INTEGER     0
+    //
+    //DISPLAY
+    display_init_result             INTEGER     0
+    display_init_result_return      INTEGER     0
+    //
+    //KEYBOARD
+    keyboard_init_result            INTEGER     0
+    keyboard_init_result_return     INTEGER     0
+    //
+    //MOUSE
+    mouse_init_result               INTEGER     0
+    mouse_init_result_return        INTEGER     0
+    //
+END

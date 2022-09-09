@@ -15,9 +15,18 @@ T100QU32::~T100QU32()
     destroy();
 }
 
-T100VOID T100QU32::create()
+T100BOOL T100QU32::create()
 {
+    m_cu        = T100NEW T100CU32(this);
+    m_au        = T100NEW T100AU32(this);
+    m_memory    = T100NEW T100Memory32(this);
+    m_port      = T100NEW T100Port32(this);
+    m_interrupt = T100NEW T100Interrupt32(this);
+    m_executor  = T100NEW T100Executor32(this);
 
+    m_port->create();
+
+    return T100TRUE;
 }
 
 T100VOID T100QU32::destroy()
@@ -57,15 +66,6 @@ T100Executor32* T100QU32::getExecutor32()
 
 T100BOOL T100QU32::start()
 {
-    m_cu        = T100NEW T100CU32(this);
-    m_au        = T100NEW T100AU32(this);
-    m_memory    = T100NEW T100Memory32(this);
-    m_port      = T100NEW T100Port32(this);
-    m_interrupt = T100NEW T100Interrupt32(this);
-    m_executor  = T100NEW T100Executor32(this);
-
-    m_port->create();
-
     if(!load()){
         return T100FALSE;
     }

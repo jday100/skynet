@@ -13,7 +13,9 @@ T100OrderOr::~T100OrderOr()
 
 T100BOOL T100OrderOr::run()
 {
+    getHost()->getAU32()->Or();
 
+    return T100TRUE;
 }
 
 T100VOID T100OrderOr::log()

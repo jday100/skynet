@@ -6,6 +6,7 @@
 #include "T100ProcedureDrawer.h"
 
 
+T100String              T100ProduceInfo::m_name;
 T100MODE                T100ProduceInfo::m_mode                         = T100MODE_NONE;
 
 T100BOOL                T100ProduceInfo::m_code_default                 = T100FALSE;
@@ -27,6 +28,16 @@ T100ProduceInfo::T100ProduceInfo()
 T100ProduceInfo::~T100ProduceInfo()
 {
     //dtor
+}
+
+T100VOID T100ProduceInfo::setName(T100String& name)
+{
+    m_name = name;
+}
+
+T100String& T100ProduceInfo::getName()
+{
+    return m_name;
 }
 
 T100BOOL T100ProduceInfo::setMode(T100MODE mode)

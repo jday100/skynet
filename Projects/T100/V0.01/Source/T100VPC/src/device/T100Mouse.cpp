@@ -1,14 +1,29 @@
 #include "T100Mouse.h"
+#include "T100QU32.h"
+
 
 T100Mouse::T100Mouse(T100QU32* host)
     :T100Device(host)
 {
     //ctor
+    create();
 }
 
 T100Mouse::~T100Mouse()
 {
     //dtor
+    destroy();
+}
+
+T100VOID T100Mouse::create()
+{
+    m_port = m_host->getPort32();
+    m_port->appendDevice(m_id, this);
+}
+
+T100VOID T100Mouse::destroy()
+{
+    m_port->removeDevice(m_id);
 }
 
 T100BOOL T100Mouse::load(T100Port32* port)

@@ -1,5 +1,6 @@
 #include "T100ProduceParser.h"
 
+#include "T100File.h"
 #include "T100PathTools.h"
 #include "T100PartToken.h"
 #include "T100PartScanner.h"
@@ -8,6 +9,8 @@
 
 #include "T100ParseInfo.h"
 #include "T100PartDrawer.h"
+
+#include "T100ClassPathDrawer.h"
 
 
 T100ProduceParser::T100ProduceParser()
@@ -20,11 +23,21 @@ T100ProduceParser::~T100ProduceParser()
     //dtor
 }
 
+T100VOID T100ProduceParser::setPathDrawer(T100ClassPathDrawer* drawer)
+{
+    m_path_drawer = drawer;
+}
+
+T100ClassPathDrawer* T100ProduceParser::getPathDrawer()
+{
+    return m_path_drawer;
+}
+
 T100BOOL T100ProduceParser::run(T100STRING& file, T100ProduceInfo& info)
 {
     T100BOOL            result;
 
-    m_root = T100PathTools::getCwd();
+    m_path_drawer->setRoot(T100PathTools::getCwd());
 
     result = load(file, T100TRUE);
 
@@ -35,13 +48,19 @@ T100BOOL T100ProduceParser::load(T100STRING& file, T100BOOL flag)
 {
     T100BOOL            result;
     T100WSTRING         cwd;
+    T100String          full;
+
+    result = search(file, full);
+    if(!result){
+        return T100FALSE;
+    }
 
     T100WSTRING         current;
     T100WSTRING         path;
     T100WSTRING         name;
 
     cwd     = T100PathTools::getCwd();
-    current = file.to_wstring();
+    current = full.to_wstring();
 
     T100PathTools::format(current, path, name);
     T100PathTools::chdir(path);
@@ -72,6 +91,7 @@ T100BOOL T100ProduceParser::scan(T100WSTRING& file, T100BOOL flag)
             if(flag){
                 token.master = T100TRUE;
             }
+            token.file = file;
         }
 
         if(append(token)){
@@ -146,7 +166,20 @@ T100BOOL T100ProduceParser::add(T100WSTRING& full, T100PartToken& token)
     return result;
 }
 
+T100BOOL T100ProduceParser::search(T100String file, T100String& full)
+{
+    T100BOOL        result;
+    T100File        item(file.to_wstring());
 
+    if(item.exists()){
+        full = file;
+        return T100TRUE;
+    }
+
+    result = m_path_drawer->find(file, full);
+
+    return result;
+}
 
 
 

@@ -113,6 +113,8 @@ T100BOOL T100CmdLineCharScanner::classify()
 {
     if(T100CONSOLE_COMMAND_PROMPT_DEFAULT == m_token->value){
         m_token->type   = T100CMDLINE_TOKEN_PROMPT;
+    }else if(T100CONSOLE_COMMAND_EQUAL_DEFAULT == m_token->value){
+        m_token->type   = T100CMDLINE_TOKEN_EQUAL;
     }else{
         m_token->type   = T100CMDLINE_TOKEN_CHAR;
     }

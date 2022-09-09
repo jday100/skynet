@@ -7,6 +7,9 @@
 #include "T100LabelDrawer.h"
 #include "T100ProcedureDrawer.h"
 
+#include "T100DebugFile.h"
+#include "T100DebugFileWriter.h"
+
 
 T100RealMerger::T100RealMerger()
 {
@@ -30,9 +33,11 @@ T100BOOL T100RealMerger::run(T100ProduceInfo& source, T100RealInfo& target)
         return T100FALSE;
     }
 
-    result = merge_data(T100ProduceInfo::m_data, &target.getData());
-    if(!result){
-        return T100FALSE;
+    if(T100ProduceInfo::m_data){
+        result = merge_data(T100ProduceInfo::m_data, &target.getData());
+        if(!result){
+            return T100FALSE;
+        }
     }
 
     for(T100PartInfo* item : parts){
@@ -47,6 +52,10 @@ T100BOOL T100RealMerger::run(T100ProduceInfo& source, T100RealInfo& target)
     }
 
     result = relocate(target);
+
+    if(result){
+        result = save();
+    }
 
     return result;
 }
@@ -391,4 +400,44 @@ T100BOOL T100RealMerger::relocate(T100RealInfo& info)
     }
 
     return result;
+}
+
+T100BOOL T100RealMerger::save()
+{
+    T100BOOL                result;
+    T100String              name;
+
+    name = T100ProduceInfo::getName();
+
+    T100DebugFile           debug(name);
+    T100DebugFileWriter*    writer      = T100NULL;
+
+    writer = debug.getWriter();
+    if(!writer){
+        return T100FALSE;
+    }
+
+    if(!writer->open()){
+        return T100FALSE;
+    }
+
+    result = writer->write_head();
+
+    if(result){
+        result = writer->write_variables();
+    }
+
+    if(result){
+        result = writer->write_labels();
+    }
+
+    if(result){
+        result = writer->write_procedures();
+    }
+
+    if(!writer->close()){
+        return T100FALSE;
+    }
+
+    return T100TRUE;
 }

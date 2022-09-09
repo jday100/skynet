@@ -1,0 +1,8 @@
+PROC=DISK_INIT
+    CMT     30070010
+    MOVE    disk_init_result_return                 AAR
+    //
+    MOVE    #disk_init_result_return                1
+    //
+    CMT     30071000
+END

@@ -1,0 +1,8 @@
+PROC=DISPLAY_INIT
+    CMT     30080010
+    MOVE    display_init_result_return                      AAR
+    //
+    MOVE    #display_init_result_return                     1
+    //
+    CMT     30081000
+END

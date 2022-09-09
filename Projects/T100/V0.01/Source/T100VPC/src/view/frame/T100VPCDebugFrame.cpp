@@ -66,6 +66,8 @@ T100VPCDebugFrame::~T100VPCDebugFrame()
 T100VOID T100VPCDebugFrame::create()
 {
 
+    MemoryOffsetComboBox->AppendText(_("1073743872"));
+
     init();
 
     initList();
@@ -498,6 +500,10 @@ void T100VPCDebugFrame::OnPortScrollBarScrollPageDown(wxScrollEvent& event)
 
 void T100VPCDebugFrame::OnPortScrollBarScrollChanged(wxScrollEvent& event)
 {
+    T100VPCSetup::PORT_WINDOW_BEGIN     = event.GetSelection();
+    T100VPCSetup::PORT_WINDOW_END       = T100VPCSetup::PORT_WINDOW_BEGIN + PortListView->GetCountPerPage();
+
+    T100VPCCallback::debug_port_update(this);
 }
 
 void T100VPCDebugFrame::OnRunButtonClick(wxCommandEvent& event)
@@ -707,10 +713,32 @@ T100BOOL T100VPCDebugFrame::updateMemory(T100Memory32* memory)
 
         offset++;
     }
-
+    return T100TRUE;
 }
 
 T100BOOL T100VPCDebugFrame::updatePort(T100Port32* port)
 {
+    if(!port)return T100FALSE;
 
+    PortListView->DeleteAllItems();
+
+    T100WORD        count;
+    T100WORD        index       = 0;
+    T100WORD        offset;
+    T100WORD        value;
+
+    count   = PortListView->GetCountPerPage();
+    offset  = T100VPCSetup::PORT_WINDOW_BEGIN;
+
+    for(;index < count;index++){
+        if(!port->in(offset, value)){
+            value = 0;
+        }
+
+        PortListView->InsertItem(index, std::to_string(offset));
+        PortListView->SetItem(index, 1, std::to_string(value));
+
+        offset++;
+    }
+    return T100TRUE;
 }

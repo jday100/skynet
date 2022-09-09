@@ -82,15 +82,94 @@ READ_NEXT:
                     switch(token.type){
                     case T100CMDLINE_TOKEN_EQUAL:
                         {
-                            //result = T100NEW T100CmdLineOption();
+                            T100CmdLineOption       option;
 
+                            option.key  = first;
+OPTION_READ_NEXT:
+                            value = scanner.next(token);
+                            if(!value){
+                                return T100FALSE;
+                            }
+
+                            switch(token.type){
+                            case T100CMDLINE_TOKEN_CHAR:
+                                {
+                                    option.value += token.value;
+                                    goto OPTION_READ_NEXT;
+                                }
+                                break;
+                            case T100CMDLINE_TOKEN_END:
+                                {
+                                    value = classify(option, data);
+                                    if(!value){
+                                        return T100FALSE;
+                                    }
+                                    goto READ_NEXT;
+                                }
+                                break;
+                            case T100CMDLINE_TOKEN_EOF:
+                                {
+                                    value = classify(option, data);
+                                    if(!value){
+                                        return T100FALSE;
+                                    }
+                                    goto READ_NEXT;
+                                }
+                                break;
+                            default:
+                                return T100FALSE;
+                            }
                         }
                         break;
                     case T100CMDLINE_TOKEN_CHAR:
                         {
-                            //result = T100NEW T100CmdLineSwitch();
+                            T100CmdLineSwitch   item;
 
-                            //result = T100NEW T100CmdLineSwitch();
+                            item.value  = first;
+
+                            value = classify(item, data);
+                            if(!value){
+                                return T100FALSE;
+                            }
+
+                            item.value  = token.value;
+                            value = classify(item, data);
+                            if(!value){
+                                return T100FALSE;
+                            }
+SWITCH_READ_NEXT:
+                            value = scanner.next(token);
+                            if(!value){
+                                return T100FALSE;
+                            }
+
+                            switch(token.type){
+                            case T100CMDLINE_TOKEN_CHAR:
+                                {
+                                    T100CmdLineSwitch   item;
+
+                                    item.value  = token.value;
+
+                                    value = classify(item, data);
+                                    if(!value){
+                                        return T100FALSE;
+                                    }
+                                    goto SWITCH_READ_NEXT;
+                                }
+                                break;
+                            case T100CMDLINE_TOKEN_END:
+                                {
+                                    goto READ_NEXT;
+                                }
+                                break;
+                            case T100CMDLINE_TOKEN_EOF:
+                                {
+                                    return T100TRUE;
+                                }
+                                break;
+                            default:
+                                return T100FALSE;
+                            }
                         }
                         break;
                     case T100CMDLINE_TOKEN_END:

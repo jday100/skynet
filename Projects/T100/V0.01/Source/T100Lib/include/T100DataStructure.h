@@ -11,5 +11,7 @@
 #define     T100WORD_VECTOR             std::vector<T100WORD>
 #define     T100DWORD_VECTOR            std::vector<T100DWORD>
 
+#define     T100WSTRING_VECTOR          std::vector<T100WSTRING>
+
 
 #endif // T100DATASTRUCTURE_H

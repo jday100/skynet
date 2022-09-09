@@ -39,9 +39,13 @@ T100BOOL T100VPCServe::start()
 
     m_host = T100NEW T100QU32();
 
-    //if(T100VPCSetup::DEBUG){
-        m_host->setCallback(m_callback);
-    //}
+
+    m_host->setCallback(m_callback);
+
+
+    if(!m_host->create()){
+        return T100FALSE;
+    }
 
     if(!load()){
         return T100FALSE;
@@ -65,6 +69,12 @@ T100BOOL T100VPCServe::load()
     T100BOOL            result          = T100TRUE;
 
     T100DEVICE_INFO_VECTOR&     devices = T100VPCSetup::getDevices();
+
+    if(0 == devices.size()){
+        if(!T100VPCSetup::initDevices()){
+            return T100FALSE;
+        }
+    }
 
     for(T100DeviceInfo* info : devices){
         if(info){

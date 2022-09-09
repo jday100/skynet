@@ -1,0 +1,8 @@
+PROC=KEYBOARD_INIT
+    CMT     30090010
+    MOVE    keyboard_init_result_return                     AAR
+    //
+    MOVE    #keyboard_init_result_return                    1
+    //
+    CMT     30091000
+END

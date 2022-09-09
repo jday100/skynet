@@ -31,7 +31,7 @@ class T100Device
         T100VOID                    create();
         T100VOID                    destroy();
 
-        T100WORD                    m_data[4];
+        T100WORD                    m_data[4] = {0, 0, 0, 0};
         T100BYTE                    m_id            = 0;
         T100QU32*                   m_host          = T100NULL;
         T100Port32*                 m_port          = T100NULL;

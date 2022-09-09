@@ -1,0 +1,106 @@
+IMPORT  "cu.txt"
+IMPORT  "au.txt"
+IMPORT  "port.txt"
+IMPORT  "memory.txt"
+IMPORT  "display.txt"
+IMPORT  "disk.txt"
+IMPORT  "keyboard.txt"
+IMPORT  "mouse.txt"
+
+
+PROC=HARD_INIT
+    MOVE    hard_result_return                      AAR
+    //
+    MOVE    AAR                                     @hard_result
+    CALL    HARD_SCAN
+    MOVE    ACR                                     hard_result
+    JZ      HARD_INIT_ERROR
+    //
+    MOVE    #hard_result_return                     1
+    RET
+    //
+HARD_INIT_ERROR:
+    MOVE    #hard_result_return                     0
+END
+
+PROC=HARD_SCAN
+    CMT     1
+    MOVE    hard_scan_result_return                 AAR
+    //
+    MOVE    hard_device_order_offset                0
+    MOVE    hard_device_data1_offset                1
+    MOVE    hard_device_data2_offset                2
+    MOVE    hard_device_data3_offset                3
+    //
+    MOVE    AAR                                     rom_device_max
+    MOVE    ABR                                     1
+    SUB
+    MOVE    CCR                                     ACR
+    //
+HARD_SCAN_NEXT:
+    CMT     2
+    OUT     hard_device_order_offset                rom_device_mode_type
+    IN      hard_scan_type_result                   hard_device_data1_offset
+    MOVE    AAR                                     hard_scan_type_result
+    MOVE    ABR                                     4
+    MUL
+    //
+    MOVE    ABR                                     ACR
+    MOVE    AAR                                     @HARD_SCAN_ASSAY_DEVICES
+    ADD
+    MOVE    AAR                                     @hard_scan_result
+    JUMP    ACR
+    //
+HARD_SCAN_ASSAY_DEVICES:
+    NOP
+    NOP
+    NOP
+    NOP
+    CALL    CPU_CU_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    CPU_AU_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    PORT_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    MEMORY_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    DISPLAY_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    DISK_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    KEYBOARD_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    CALL    MOUSE_INIT
+    JUMP    HARD_SCAN_ASSAY_DEVICES_END
+    //
+HARD_SCAN_ASSAY_DEVICES_END:
+    CMT     3
+    MOVE    ACR                                     hard_scan_result
+    JZ      HARD_SCAN_ERROR
+    //
+    DBG
+    MOVE    AAR                                     hard_device_order_offset
+    MOVE    ABR                                     4
+    ADD
+    MOVE    hard_device_order_offset                ACR
+    //
+    MOVE    AAR                                     hard_device_data1_offset
+    ADD
+    MOVE    hard_device_data1_offset                ACR
+    //
+    MOVE    AAR                                     hard_device_data2_offset
+    ADD
+    MOVE    hard_device_data2_offset                ACR
+    //
+    MOVE    AAR                                     hard_device_data3_offset
+    ADD
+    MOVE    hard_device_data3_offset                ACR
+    LOOP    HARD_SCAN_NEXT
+    //
+    CMT     4
+    MOVE    #hard_scan_result_return                1
+    RET
+HARD_SCAN_ERROR:
+    CMT     5
+    MOVE    #hard_scan_result_return                0
+END

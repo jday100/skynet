@@ -12,7 +12,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-t" />
+				<Option parameters="-l=work/os work/os/rom/rom.txt  build/rom.bin" />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
@@ -99,6 +99,7 @@
 		<Unit filename="include/cmdline/T100AssemblyCmdLineParser.h" />
 		<Unit filename="include/cmdline/T100AssemblyCmdLineResult.h" />
 		<Unit filename="include/produce/T100BuildInfo.h" />
+		<Unit filename="include/produce/T100ClassPathDrawer.h" />
 		<Unit filename="include/produce/T100LabelDrawer.h" />
 		<Unit filename="include/produce/T100ParseInfo.h" />
 		<Unit filename="include/produce/T100PartDrawer.h" />
@@ -116,6 +117,8 @@
 		<Unit filename="include/produce/T100Segment.h" />
 		<Unit filename="include/produce/T100SegmentCode.h" />
 		<Unit filename="include/produce/T100SegmentData.h" />
+		<Unit filename="include/produce/T100SegmentDrawer.h" />
+		<Unit filename="include/produce/T100SegmentInfo.h" />
 		<Unit filename="include/produce/T100VariableDrawer.h" />
 		<Unit filename="include/produce/real/T100RealBuilder.h" />
 		<Unit filename="include/produce/real/T100RealFile.h" />
@@ -196,6 +199,7 @@
 		<Unit filename="src/cmdline/T100AssemblyCmdLineParser.cpp" />
 		<Unit filename="src/cmdline/T100AssemblyCmdLineResult.cpp" />
 		<Unit filename="src/produce/T100BuildInfo.cpp" />
+		<Unit filename="src/produce/T100ClassPathDrawer.cpp" />
 		<Unit filename="src/produce/T100LabelDrawer.cpp" />
 		<Unit filename="src/produce/T100ParseInfo.cpp" />
 		<Unit filename="src/produce/T100PartDrawer.cpp" />
@@ -213,6 +217,8 @@
 		<Unit filename="src/produce/T100Segment.cpp" />
 		<Unit filename="src/produce/T100SegmentCode.cpp" />
 		<Unit filename="src/produce/T100SegmentData.cpp" />
+		<Unit filename="src/produce/T100SegmentDrawer.cpp" />
+		<Unit filename="src/produce/T100SegmentInfo.cpp" />
 		<Unit filename="src/produce/T100VariableDrawer.cpp" />
 		<Unit filename="src/produce/real/T100RealBuilder.cpp" />
 		<Unit filename="src/produce/real/T100RealFile.cpp" />
