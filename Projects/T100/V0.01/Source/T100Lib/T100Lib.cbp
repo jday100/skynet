@@ -85,6 +85,7 @@
 		<Unit filename="include/T100DataTypes.h" />
 		<Unit filename="include/T100DirectoryEntry.h" />
 		<Unit filename="include/T100DiskCommon.h" />
+		<Unit filename="include/T100Error.h" />
 		<Unit filename="include/T100File.h" />
 		<Unit filename="include/T100FileCommon.h" />
 		<Unit filename="include/T100FileReader.h" />
@@ -149,6 +150,7 @@
 		<Unit filename="src/T100ConsoleLinux.cpp" />
 		<Unit filename="src/T100ConsoleWindows.cpp" />
 		<Unit filename="src/T100DirectoryEntry.cpp" />
+		<Unit filename="src/T100Error.cpp" />
 		<Unit filename="src/T100File.cpp" />
 		<Unit filename="src/T100FileReader.cpp" />
 		<Unit filename="src/T100FileTools.cpp" />

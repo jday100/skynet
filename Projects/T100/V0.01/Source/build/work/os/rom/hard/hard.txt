@@ -9,22 +9,26 @@ IMPORT  "mouse.txt"
 
 
 PROC=HARD_INIT
+    CMT     3020010
     MOVE    hard_result_return                      AAR
     //
+    CMT     3020020
     MOVE    AAR                                     @hard_result
     CALL    HARD_SCAN
     MOVE    ACR                                     hard_result
     JZ      HARD_INIT_ERROR
     //
+    CMT     3020030
     MOVE    #hard_result_return                     1
     RET
     //
 HARD_INIT_ERROR:
+    CMT     3020040
     MOVE    #hard_result_return                     0
 END
 
 PROC=HARD_SCAN
-    CMT     1
+    CMT     3021010
     MOVE    hard_scan_result_return                 AAR
     //
     MOVE    hard_device_order_offset                0
@@ -38,7 +42,7 @@ PROC=HARD_SCAN
     MOVE    CCR                                     ACR
     //
 HARD_SCAN_NEXT:
-    CMT     2
+    CMT     3021020
     OUT     hard_device_order_offset                rom_device_mode_type
     IN      hard_scan_type_result                   hard_device_data1_offset
     MOVE    AAR                                     hard_scan_type_result
@@ -74,11 +78,10 @@ HARD_SCAN_ASSAY_DEVICES:
     JUMP    HARD_SCAN_ASSAY_DEVICES_END
     //
 HARD_SCAN_ASSAY_DEVICES_END:
-    CMT     3
+    CMT     3021030
     MOVE    ACR                                     hard_scan_result
     JZ      HARD_SCAN_ERROR
     //
-    DBG
     MOVE    AAR                                     hard_device_order_offset
     MOVE    ABR                                     4
     ADD
@@ -97,10 +100,10 @@ HARD_SCAN_ASSAY_DEVICES_END:
     MOVE    hard_device_data3_offset                ACR
     LOOP    HARD_SCAN_NEXT
     //
-    CMT     4
+    CMT     3021040
     MOVE    #hard_scan_result_return                1
     RET
 HARD_SCAN_ERROR:
-    CMT     5
+    CMT     3021050
     MOVE    #hard_scan_result_return                0
 END

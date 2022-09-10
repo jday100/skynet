@@ -1,8 +1,15 @@
 PROC=PORT_INIT
-    CMT     30060010
+    CMT     3060010
     MOVE    port_init_result_return                     AAR
+    //
+    MOVE    port_order_offset                           hard_device_order_offset
+    MOVE    port_data1_offset                           hard_device_data1_offset
+    MOVE    port_data2_offset                           hard_device_data2_offset
+    MOVE    port_data3_offset                           hard_device_data3_offset
+    //
+    MOVE    hard_port_inited_flag                       1
     //
     MOVE    #port_init_result_return                    1
     //
-    CMT     30061000
+    CMT     3061000
 END

@@ -1,8 +1,48 @@
 PROC=DISPLAY_INIT
-    CMT     30080010
+    CMT     3080010
     MOVE    display_init_result_return                      AAR
+    //
+    MOVE    display_order_offset                            hard_device_order_offset
+    MOVE    display_data1_offset                            hard_device_data1_offset
+    MOVE    display_data2_offset                            hard_device_data2_offset
+    MOVE    display_data3_offset                            hard_device_data3_offset
+    //
+    MOVE    hard_display_inited_flag                        1
     //
     MOVE    #display_init_result_return                     1
     //
-    CMT     30081000
+    CMT     3080020
+END
+
+PROC=DISPLAY_PUT
+    CMT     3081010
+    MOVE    display_put_result_return                       AAR
+    //
+    OUT     display_data3_offset                            ABR
+    OUT     display_order_offset                            display_mode_write
+    //
+    MOVE    #display_put_result_return                      1
+    CMT     3081020
+END
+
+PROC=DISPLAY_PRINT
+    CMT     3082010
+    MOVE    display_print_result_return                     AAR
+    MOVE    display_print_target_return                     ABR
+    //
+    MOVE    CCR                                             #display_print_target_return
+DISPLAY_PRINT_NEXT:
+    CMT     3082020
+    MOVE    AAR                                             display_print_target_return
+    MOVE    ABR                                             1
+    ADD
+    MOVE    display_print_target_return                     ACR
+    //
+    OUT     display_data3_offset                            #ACR
+    OUT     display_order_offset                            display_mode_write
+    LOOP    DISPLAY_PRINT_NEXT
+    //
+    CMT     3082030
+    MOVE    #display_print_result_return                    1
+    CMT     3082040
 END

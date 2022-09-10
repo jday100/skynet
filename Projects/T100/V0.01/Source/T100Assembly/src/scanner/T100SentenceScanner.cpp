@@ -2,6 +2,7 @@
 
 #include "T100AssemblyHint.h"
 #include "T100AssemblyLog.h"
+#include "T100AssemblyError.h"
 #include "T100AllSentences.h"
 
 
@@ -51,6 +52,7 @@ T100BOOL T100SentenceScanner::read()
 
     result = m_scanner->next(m_item);
     if(!result){
+        T100AssemblyError::err      = T100TRUE;
         return T100FALSE;
     }else{
         setLoaded(T100TRUE);
@@ -218,6 +220,8 @@ READ_NEXT:
         T100AssemblyLog::info(T100LOG_SENTENCE, T100AssemblyHint::sentence_hint(getToken(), T100SENTENCESCAN_SENTENCE_READ_SUCCESS));
     }else{
         //T100AssemblyError::error(T100AssemblyHint::sentence_hint(getToken(), T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+
+        T100AssemblyError::err      = T100TRUE;
 
         nextLine();
         setLoaded(T100FALSE);
@@ -545,6 +549,8 @@ T100BOOL T100SentenceScanner::parseOrder()
             break;
         }
     default:
+        T100AssemblyError::err  = T100TRUE;
+
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
         result          = T100FALSE;
@@ -587,6 +593,8 @@ T100BOOL T100SentenceScanner::parseTail()
                 break;
             }
         default:
+            T100AssemblyError::err      = T100TRUE;
+
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             return T100FALSE;

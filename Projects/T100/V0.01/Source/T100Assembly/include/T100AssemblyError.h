@@ -2,9 +2,10 @@
 #define T100ASSEMBLYERROR_H
 
 #include "T100AssemblyCommon.h"
+#include "T100Error.h"
 
 
-class T100AssemblyError
+class T100AssemblyError : public T100Error
 {
     public:
         T100AssemblyError();

@@ -87,7 +87,8 @@ T100BOOL T100Segment::setArray(T100WORD& offset, T100WORD length)
     }
 
     m_mem.resize(size);
-    m_offset = size;
+    offset      = m_offset + m_location;
+    m_offset    = size;
 
     return T100TRUE;
 }

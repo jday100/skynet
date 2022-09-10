@@ -4,8 +4,8 @@
 
 T100Display::T100Display(T100QU32* host)
     :T100Device(host),
-    m_block_device(host),
-    m_page_device(host)
+    m_block_device(this),
+    m_page_device(this)
 {
     //ctor
     create();
@@ -93,4 +93,9 @@ T100BOOL T100Display::out(T100WORD offset, T100WORD value)
     };
 
     return T100TRUE;
+}
+
+T100QU32* T100Display::getHost()
+{
+    return m_host;
 }

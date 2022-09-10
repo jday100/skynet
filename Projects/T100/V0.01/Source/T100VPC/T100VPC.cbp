@@ -213,6 +213,7 @@
 		<Unit filename="include/serve/T100VPCCallback.h" />
 		<Unit filename="include/serve/T100VPCLink.h" />
 		<Unit filename="include/serve/T100VPCServe.h" />
+		<Unit filename="include/view/T100VPCDemoScreen.h" />
 		<Unit filename="include/view/T100VPCScreen.h" />
 		<Unit filename="include/view/T100VPCView.h" />
 		<Unit filename="include/view/dialog/T100VPCDebugDialog.h" />
@@ -300,6 +301,7 @@
 		<Unit filename="src/serve/T100VPCCallback.cpp" />
 		<Unit filename="src/serve/T100VPCLink.cpp" />
 		<Unit filename="src/serve/T100VPCServe.cpp" />
+		<Unit filename="src/view/T100VPCDemoScreen.cpp" />
 		<Unit filename="src/view/T100VPCScreen.cpp" />
 		<Unit filename="src/view/T100VPCView.cpp" />
 		<Unit filename="src/view/dialog/T100VPCDebugDialog.cpp" />

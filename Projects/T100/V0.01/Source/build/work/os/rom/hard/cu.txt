@@ -1,8 +1,15 @@
 PROC=CPU_CU_INIT
-    CMT     30030010
+    CMT     3030010
     MOVE    cpu_cu_init_result_return           AAR
+    //
+    MOVE    cpu_cu_order_offset                 hard_device_order_offset
+    MOVE    cpu_cu_data1_offset                 hard_device_data1_offset
+    MOVE    cpu_cu_data2_offset                 hard_device_data2_offset
+    MOVE    cpu_cu_data3_offset                 hard_device_data3_offset
+    //
+    MOVE    hard_cpu_cu_inited_flag             1
     //
     MOVE    #cpu_cu_init_result_return          1
     //
-    CMT     30031000
+    CMT     3031000
 END

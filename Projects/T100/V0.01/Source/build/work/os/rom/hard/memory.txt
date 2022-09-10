@@ -1,8 +1,15 @@
 PROC=MEMORY_INIT
-    CMT     30050010
+    CMT     3050010
     MOVE    memory_init_result_return           AAR
+    //
+    MOVE    memory_order_offset                 hard_device_order_offset
+    MOVE    memory_data1_offset                 hard_device_data1_offset
+    MOVE    memory_data2_offset                 hard_device_data2_offset
+    MOVE    memory_data3_offset                 hard_device_data3_offset
+    //
+    MOVE    hard_memory_inited_flag             1
     //
     MOVE    #memory_init_result_return          1
     //
-    CMT     30051000
+    CMT     3051000
 END

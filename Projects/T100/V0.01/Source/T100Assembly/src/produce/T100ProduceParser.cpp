@@ -2,6 +2,7 @@
 
 #include "T100File.h"
 #include "T100PathTools.h"
+#include "T100AssemblyError.h"
 #include "T100PartToken.h"
 #include "T100PartScanner.h"
 #include "T100PartScannerTools.h"
@@ -103,6 +104,10 @@ T100BOOL T100ProduceParser::scan(T100WSTRING& file, T100BOOL flag)
     }
 
     if(!tools.close()){
+        result = T100FALSE;
+    }
+
+    if(T100AssemblyError::err){
         result = T100FALSE;
     }
 

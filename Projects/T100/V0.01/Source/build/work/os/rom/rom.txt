@@ -14,17 +14,32 @@ MODE 	REAL
 CODE
 
 ROM_INIT:
+    CMT     30010
     MOVE    AAR                     @rom_result
     CALL    HARD_INIT
     MOVE    ACR                     rom_result
     JZ      ROM_FATAL_ERROR
     //
+    CMT     30020
+    MOVE    AAR                     @rom_result
+    CALL    INT_INIT
+    MOVE    ACR                     rom_result
+    JZ      ROM_FATAL_ERROR
+    //
+    CMT     30030
 
+    //INT_TEST
+    DBG
+    CMT     30040
+    MOVE    AAR                     @rom_result
+    INT     1
+    CMT     30050
 
 ROM_JUMP:
 
 ROM_COMMON_ERROR:
-
+    CMT     31010
 ROM_FATAL_ERROR:
+    CMT     32010
 	HALT
 END

@@ -88,8 +88,7 @@ READ_NEXT:
         if(!result)return T100FALSE;
     }
 
-    switch(m_item.type)
-    {
+    switch(m_item.type){
     case T100TOKEN_EOF:
         {
             m_token->type       = T100TOKEN_EOF;

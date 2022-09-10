@@ -1,8 +1,15 @@
 PROC=DISK_INIT
-    CMT     30070010
+    CMT     3070010
     MOVE    disk_init_result_return                 AAR
+    //
+    MOVE    disk_order_offset                       hard_device_order_offset
+    MOVE    disk_data1_offset                       hard_device_data1_offset
+    MOVE    disk_data2_offset                       hard_device_data2_offset
+    MOVE    disk_data3_offset                       hard_device_data3_offset
+    //
+    MOVE    hard_disk_inited_flag                   1
     //
     MOVE    #disk_init_result_return                1
     //
-    CMT     30071000
+    CMT     3071000
 END
