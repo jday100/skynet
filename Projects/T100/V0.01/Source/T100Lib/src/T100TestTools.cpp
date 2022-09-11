@@ -1,5 +1,10 @@
 #include "T100TestTools.h"
 
+#include <iomanip>
+#include <sstream>
+#include <iostream>
+
+
 T100TestTools::T100TestTools()
 {
     //ctor
@@ -37,6 +42,32 @@ T100BOOL T100TestTools::CleanAndCreate(T100File& file)
 
     value = file.create();
     result = value;
+
+    return result;
+}
+
+T100BOOL T100TestTools::Print(T100WORD_VECTOR& data)
+{
+    for(T100WORD item : data){
+        std::cout << Hex(item);
+        std::cout << " ";
+    }
+
+    return T100TRUE;
+}
+
+T100STDSTRING T100TestTools::Hex(T100WORD& value)
+{
+    std::stringstream   str;
+    std::string         result;
+
+    str << std::uppercase << std::hex << std::setw(8) << std::setfill('0') << value;
+
+    result = str.str();
+
+    result.insert(2, " ");
+    result.insert(5, " ");
+    result.insert(8, " ");
 
     return result;
 }

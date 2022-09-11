@@ -23,14 +23,16 @@ typedef enum{
     T100EXECUTOR_MODE_MAX
 }T100EXECUTOR_MODE;
 
-#define     T100DEVICE_VECTOR           std::vector<T100Device*>
-#define     T100DEVICE_HASH             std::unordered_map<T100WORD, T100Device*>
-#define     T100BLOCK_HASH              std::unordered_map<T100WORD, T100DEVICE_BLOCK*>
-#define     T100PAGE_HASH               std::unordered_map<T100WORD, T100DEVICE_PAGE*>
+#define     T100DEVICE_VECTOR               std::vector<T100Device*>
+#define     T100DEVICE_BLOCK_VECTOR         std::vector<T100BlockDevice*>
+#define     T100DEVICE_PAGE_VECTOR          std::vector<T100PageDevice*>
+#define     T100DEVICE_HASH                 std::unordered_map<T100WORD, T100Device*>
+#define     T100BLOCK_HASH                  std::unordered_map<T100WORD, T100DEVICE_BLOCK*>
+#define     T100PAGE_HASH                   std::unordered_map<T100WORD, T100DEVICE_PAGE*>
 
-#define     T100DEVICE_INFO_VECTOR      std::vector<T100DeviceInfo*>
+#define     T100DEVICE_INFO_VECTOR          std::vector<T100DeviceInfo*>
 
-#define     T100MEMORY_RAM_BASE         1024 * 1024 * 1024
+#define     T100MEMORY_RAM_BASE             1024 * 1024 * 1024
 
 
 #endif // T100VPCCOMMON_H

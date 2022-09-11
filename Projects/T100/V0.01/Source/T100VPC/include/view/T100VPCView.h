@@ -25,6 +25,8 @@ class T100VPCView
 
         T100VPCDebugFrame*      getDebugFrame();
 
+        T100VPCHostFrame*       getHostFrame();
+
     protected:
 
     private:

@@ -17,6 +17,7 @@ typedef struct{
     T100WORD            FONT_NAME[130];
     T100WORD            FONT_WIDTH;
     T100WORD            FONT_HEIGHT;
+    T100WORD            FONT_LENGTH;
     T100WORD            ROW_SIZE;
 }T100FONTFILE_HEAD;
 

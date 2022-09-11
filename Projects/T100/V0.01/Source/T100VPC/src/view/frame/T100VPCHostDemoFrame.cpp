@@ -6,6 +6,7 @@
 //*)
 
 //(*IdInit(T100VPCHostDemoFrame)
+const long T100VPCHostDemoFrame::ID_PANEL1 = wxNewId();
 const long T100VPCHostDemoFrame::ID_MENU_LOAD = wxNewId();
 const long T100VPCHostDemoFrame::ID_MENU_RUN = wxNewId();
 const long T100VPCHostDemoFrame::ID_STATUSBAR1 = wxNewId();
@@ -30,6 +31,8 @@ void T100VPCHostDemoFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxP
 	SetClientSize(wxDefaultSize);
 	Move(wxDefaultPosition);
 	BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);
+	Panel1 = new wxPanel(this, ID_PANEL1, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL1"));
+	BoxSizer1->Add(Panel1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	SetSizer(BoxSizer1);
 	MenuBar1 = new wxMenuBar();
 	Menu1 = new wxMenu();

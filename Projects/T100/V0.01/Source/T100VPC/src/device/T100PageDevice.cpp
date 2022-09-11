@@ -2,6 +2,9 @@
 #include "T100Port32.h"
 
 
+T100WORD        T100PageDevice::m_page_size         = 1024 * 1024;
+
+
 T100PageDevice::T100PageDevice(T100QU32* host)
     :T100Device(host)
 {
@@ -15,6 +18,7 @@ T100PageDevice::~T100PageDevice()
 
 T100BOOL T100PageDevice::load(T100Port32* port)
 {
+    m_port = port;
     return T100TRUE;
 }
 

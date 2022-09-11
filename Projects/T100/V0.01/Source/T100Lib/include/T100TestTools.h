@@ -13,6 +13,11 @@ class T100TestTools
         static T100BOOL         Exists(T100WSTRING);
         static T100BOOL         CleanAndCreate(T100File&);
 
+
+        static T100BOOL         Print(T100WORD_VECTOR&);
+
+        static T100STDSTRING    Hex(T100WORD&);
+
     protected:
 
     private:

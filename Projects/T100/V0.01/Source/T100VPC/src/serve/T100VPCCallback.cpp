@@ -22,6 +22,8 @@
 
 #include "T100VPCSetup.h"
 
+#include "T100VPCDisplay.h"
+
 
 T100VPCServe*       T100VPCCallback::m_serve            = T100NULL;
 T100VPCView*        T100VPCCallback::m_view             = T100NULL;
@@ -35,6 +37,32 @@ T100VPCCallback::T100VPCCallback()
 T100VPCCallback::~T100VPCCallback()
 {
     //dtor
+}
+
+T100BOOL T100VPCCallback::serve_create_display(void* d)
+{
+    if(!d){
+        return T100FALSE;
+    }
+
+    T100QU32*           host        = T100NULL;
+    T100VPCHostFrame*   frame       = T100NULL;
+
+    host    = static_cast<T100QU32*>(d);
+    frame   = m_view->getHostFrame();
+
+    T100VPCDisplay*    display     = T100NULL;
+
+    display = T100NEW T100VPCDisplay(host, frame);
+    if(!display){
+        return T100FALSE;
+    }
+
+    if(!display->create()){
+        return T100FALSE;
+    }
+
+    return T100TRUE;
 }
 
 T100BOOL T100VPCCallback::init(T100VPCServe* serve, T100VPCView* view)

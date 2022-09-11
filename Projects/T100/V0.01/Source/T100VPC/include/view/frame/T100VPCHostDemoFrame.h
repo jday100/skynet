@@ -4,6 +4,7 @@
 //(*Headers(T100VPCHostDemoFrame)
 #include <wx/frame.h>
 #include <wx/menu.h>
+#include <wx/panel.h>
 #include <wx/sizer.h>
 #include <wx/statusbr.h>
 //*)
@@ -20,12 +21,14 @@ class T100VPCHostDemoFrame: public wxFrame
 		wxMenuBar* MenuBar1;
 		wxMenuItem* MenuLoad;
 		wxMenuItem* MenuRun;
+		wxPanel* Panel1;
 		wxStatusBar* StatusBar1;
 		//*)
 
 	protected:
 
 		//(*Identifiers(T100VPCHostDemoFrame)
+		static const long ID_PANEL1;
 		static const long ID_MENU_LOAD;
 		static const long ID_MENU_RUN;
 		static const long ID_STATUSBAR1;

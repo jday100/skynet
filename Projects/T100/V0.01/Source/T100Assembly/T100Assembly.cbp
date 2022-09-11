@@ -64,16 +64,60 @@
 					<Add library="iconv" />
 				</Linker>
 			</Target>
+			<Target title="Lib">
+				<Option output="../build/T100Assembly" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option parameters="-l=work/os work/os/rom/rom.txt  build/rom.bin" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/produce/real" />
+					<Add directory="include/produce/virtual" />
+					<Add directory="include/produce" />
+					<Add directory="include/scanner" />
+					<Add directory="include/syntax" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="../T100Common/include" />
+					<Add directory="test" />
+					<Add directory="include/cmdline" />
+					<Add directory="../T100Lib/include/cmdline" />
+					<Add directory="T100Assembly/include/produce" />
+				</Compiler>
+				<Linker>
+					<Add library="../build/libT100Common.a" />
+					<Add library="../build/libT100Lib.a" />
+					<Add library="dl" />
+					<Add library="iconv" />
+				</Linker>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../build/build/rom.bin" />
-		<Unit filename="../build/test/build/test_basic.bin" />
-		<Unit filename="../build/test/build/test_master.bin" />
-		<Unit filename="../build/test/build/test_multiple.bin" />
-		<Unit filename="../build/test/build/test_slave.bin" />
+		<Unit filename="../build/build/rom.bin">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../build/test/build/test_basic.bin">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../build/test/build/test_master.bin">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../build/test/build/test_multiple.bin">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="../build/test/build/test_slave.bin">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="../build/test/resources/assembly/real/test_basic.txt" />
 		<Unit filename="../build/test/resources/assembly/real/test_import.txt" />
 		<Unit filename="../build/test/resources/assembly/real/test_master.txt" />
@@ -187,7 +231,10 @@
 		<Unit filename="include/syntax/T100SentenceUnlock.h" />
 		<Unit filename="include/syntax/T100SentenceVariable.h" />
 		<Unit filename="include/syntax/T100SentenceXor.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="params.txt" />
 		<Unit filename="src/T100Assembly.cpp" />
 		<Unit filename="src/T100AssemblyApp.cpp" />
@@ -302,8 +349,14 @@
 		<Unit filename="test/T100SentenceScannerTest.h" />
 		<Unit filename="test/T100StringScannerTest.cpp" />
 		<Unit filename="test/T100StringScannerTest.h" />
-		<Unit filename="test/T100TestApp.cpp" />
-		<Unit filename="test/T100TestApp.h" />
+		<Unit filename="test/T100TestApp.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="test/T100TestApp.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

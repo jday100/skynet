@@ -92,9 +92,9 @@ T100BOOL T100FontTools::createFile(T100STRING file)
     length      = amount / 32;
 
     m_length    = length;
+    m_font.setLength(length);
 
     m_data      = T100NEW T100WORD[length];
-    //m_value     = m_begin;
 
     m_file      = T100NEW T100FontFile(file);
 
@@ -151,6 +151,9 @@ T100BOOL T100FontTools::writeHead()
     }else{
         m_file->setFontName(T100Unicode::to_wstring(m_fontname));
     }
+
+    m_font.setWidth(m_width);
+    m_font.setHeight(m_height);
 
     m_file->setFontWidth(m_width);
     m_file->setFontHeight(m_height);

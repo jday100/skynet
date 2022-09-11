@@ -209,25 +209,57 @@ T100BOOL T100Port32::out(T100WORD offset, T100WORD value)
 T100BOOL T100Port32::allotBlock(T100BlockDevice* dev, T100WORD length, T100WORD_VECTOR& blocks)
 {
     T100BOOL            result          = T100TRUE;
+    T100WORD            count;
+
+    count = (length + m_device_limit - 1) / m_device_limit;
+
+    for(int i=0;i<count;i++){
+        if((m_device_limit - 1) <= m_blocks.size()){
+            return T100FALSE;
+        }
+
+        T100DEVICE_BLOCK* data = T100NEW T100DEVICE_BLOCK();
+
+        m_blocks.push_back(dev);
+        data->id = m_blocks.size();
+        m_block_hash[data->id] = data;
+        blocks.push_back(m_blocks.size());
+    }
 
     return result;
 }
 
 T100DEVICE_BLOCK* T100Port32::getBlock(T100WORD id)
 {
-
+    return m_block_hash[id];
 }
 
 T100BOOL T100Port32::allotPage(T100PageDevice* dev, T100WORD length, T100WORD_VECTOR& pages)
 {
     T100BOOL            result          = T100TRUE;
+    T100WORD            count;
+
+    count = (length + m_block_limit - 1) / m_block_limit;
+
+    for(int i=0;i<count;i++){
+        if((m_block_limit - 1) <= m_pages.size()){
+            return T100FALSE;
+        }
+
+        T100DEVICE_PAGE* data = T100NEW T100DEVICE_PAGE();
+
+        m_pages.push_back(dev);
+        data->id = m_pages.size();
+        m_page_hash[data->id] = data;
+        pages.push_back(m_pages.size());
+    }
 
     return result;
 }
 
 T100DEVICE_PAGE* T100Port32::getPage(T100WORD id)
 {
-
+    return m_page_hash[id];
 }
 
 

@@ -1,7 +1,7 @@
 #include "T100QU32Test.h"
 #include "T100QU32.h"
 
-#include "T100Display.h"
+#include "T100VPCDisplay.h"
 #include "T100Disk.h"
 #include "T100Keyboard.h"
 #include "T100Mouse.h"
@@ -46,7 +46,7 @@ T100BOOL T100QU32Test::test_qu32()
     T100BYTE            keyboard_id;
     T100BYTE            mouse_id;
 
-    T100Display         display(&host);
+    T100VPCDisplay      display(&host, T100NULL);
     T100Disk            disk(&host);
     T100Keyboard        keyboard(&host);
     T100Mouse           mouse(&host);

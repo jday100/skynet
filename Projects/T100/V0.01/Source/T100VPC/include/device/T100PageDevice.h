@@ -17,6 +17,8 @@ class T100PageDevice : public T100Device
         virtual T100BOOL            out(T100WORD, T100WORD);
 
     protected:
+        static T100WORD             m_page_size;
+
         T100WORD_VECTOR             m_pages;
 
     private:

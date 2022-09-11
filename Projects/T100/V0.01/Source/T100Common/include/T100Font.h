@@ -6,6 +6,7 @@
 
 class T100Font
 {
+    friend class T100FontFileReader;
     public:
         T100Font();
         virtual ~T100Font();
@@ -20,6 +21,9 @@ class T100Font
 
         T100VOID                    setHeight(T100WORD);
         T100WORD                    getHeight();
+
+        T100VOID                    setLength(T100WORD);
+        T100WORD                    getLength();
 
         T100BOOL                    setRowSize(T100WORD);
         T100WORD                    getRowSize();
@@ -36,7 +40,11 @@ class T100Font
         T100STRING                  m_name;
         T100WORD                    m_width         = 0;
         T100WORD                    m_height        = 0;
+        T100WORD                    m_length        = 0;
         T100WORD                    m_row_size      = 0;
+
+        T100BOOL                    unwind(T100WORD, T100WORD*, T100HWORD);
+        T100BOOL                    unwind(T100WORD, T100FONT_DATA_VECTOR*);
 
     private:
         T100FONT_HASH               m_fonts;

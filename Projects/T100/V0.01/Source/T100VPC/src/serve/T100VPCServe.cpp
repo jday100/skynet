@@ -3,10 +3,12 @@
 
 #include "T100DeviceInfo.h"
 #include "T100Disk.h"
-#include "T100Display.h"
+#include "T100VPCDisplay.h"
 #include "T100Keyboard.h"
 #include "T100Mouse.h"
 #include "T100VPCLink.h"
+
+#include "T100VPCCallback.h"
 
 
 T100VPCServe::T100VPCServe()
@@ -102,9 +104,11 @@ T100BOOL T100VPCServe::createDevice(T100QU32* host, T100DeviceInfo* info)
         break;
     case T100DEVICE_DISPLAY:
         {
-            T100Display*    display;
+            //T100Display*    display;
 
-            display     = T100NEW T100Display(host);
+            //display     = T100NEW T100VPCDisplay(host);
+
+            T100VPCCallback::serve_create_display(host);
         }
         break;
     case T100DEVICE_KEYBOARD:

@@ -68,3 +68,8 @@ T100VPCDebugFrame* T100VPCView::getDebugFrame()
 {
     return m_debug;
 }
+
+T100VPCHostFrame* T100VPCView::getHostFrame()
+{
+    return m_host;
+}

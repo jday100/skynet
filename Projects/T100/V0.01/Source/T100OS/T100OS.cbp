@@ -7,15 +7,28 @@
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/libT100OS" prefix_auto="1" extension_auto="1" />
+				<Option output="../build/T100OS" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
-				<Option type="3" />
+				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option createDefFile="1" />
-				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="T100OS/include" />
+					<Add directory="../T100Lib/include" />
+					<Add directory="include" />
+					<Add directory="T100OS/test" />
+					<Add directory="test" />
+					<Add directory="../T100Assembly/include" />
+					<Add directory="../T100Common/include" />
+					<Add directory="../T100Assembly/include/cmdline" />
+					<Add directory="../T100Lib/include/cmdline" />
 				</Compiler>
+				<Linker>
+					<Add library="../build/libT100Assembly.a" />
+					<Add library="../build/libT100Common.a" />
+					<Add library="../build/libT100Lib.a" />
+					<Add library="iconv" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/libT100OS" prefix_auto="1" extension_auto="1" />
@@ -26,6 +39,8 @@
 				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="T100OS/include" />
+					<Add directory="T100OS/test" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -37,6 +52,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="../build/build/rom.bin" />
+		<Unit filename="../build/test/os/test_int.txt" />
 		<Unit filename="../build/work/os/boot/.gitkeep" />
 		<Unit filename="../build/work/os/kernel/.gitkeep" />
 		<Unit filename="../build/work/os/lib/dword.txt" />
@@ -56,7 +72,13 @@
 		<Unit filename="../build/work/os/rom/hard/port.txt" />
 		<Unit filename="../build/work/os/rom/int.txt" />
 		<Unit filename="../build/work/os/rom/rom.txt" />
+		<Unit filename="include/T100OSSetup.h" />
+		<Unit filename="include/T100TestApp.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/T100OSSetup.cpp" />
+		<Unit filename="src/T100TestApp.cpp" />
+		<Unit filename="test/T100OSTest.cpp" />
+		<Unit filename="test/T100OSTest.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

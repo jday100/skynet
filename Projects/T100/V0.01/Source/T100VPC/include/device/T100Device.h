@@ -19,6 +19,7 @@ class T100Device
         T100STRING                  getName();
 
         T100DEVICE_TYPE             getType();
+        T100Port32*                 getPort32();
 
         virtual T100BOOL            load(T100Port32*) = 0;
         virtual T100BOOL            unload() = 0;

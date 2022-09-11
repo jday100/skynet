@@ -42,3 +42,8 @@ T100DEVICE_TYPE T100Device::getType()
 {
     return m_type;
 }
+
+T100Port32* T100Device::getPort32()
+{
+    return m_port;
+}

@@ -82,6 +82,7 @@
 		<Unit filename="include/T100ConsoleLinux.h" />
 		<Unit filename="include/T100ConsoleWindows.h" />
 		<Unit filename="include/T100DataStructure.h" />
+		<Unit filename="include/T100DataStructureTools.h" />
 		<Unit filename="include/T100DataTypes.h" />
 		<Unit filename="include/T100DirectoryEntry.h" />
 		<Unit filename="include/T100DiskCommon.h" />
@@ -149,6 +150,7 @@
 		<Unit filename="src/T100ConsoleBase.cpp" />
 		<Unit filename="src/T100ConsoleLinux.cpp" />
 		<Unit filename="src/T100ConsoleWindows.cpp" />
+		<Unit filename="src/T100DataStructureTools.cpp" />
 		<Unit filename="src/T100DirectoryEntry.cpp" />
 		<Unit filename="src/T100Error.cpp" />
 		<Unit filename="src/T100File.cpp" />

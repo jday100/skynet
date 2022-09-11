@@ -20,6 +20,8 @@ class T100VPCHostFrame : public wxFrame
 		wxMenuItem*         MenuRun;
 		wxStatusBar*        StatusBar1;
 
+		wxBoxSizer*         BoxSizer1;
+
     protected:
         static const long ID_MENU_LOAD;
         static const long ID_MENU_RUN;

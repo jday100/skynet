@@ -25,7 +25,7 @@ DATA=ROM_DATA
     //
     rom_device_max                  INTEGER     8       //255
     //
-
+    rom_start_message               STRING      "Starting..."
     //
     display_mode_read               INTEGER     14
     display_mode_write              INTEGER     15

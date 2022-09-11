@@ -15,6 +15,8 @@ class T100VPCCallback
         static T100BOOL                 init(T100VPCServe*, T100VPCView*);
 
     public:
+        static T100BOOL                 serve_create_display(void* = T100NULL);
+
         static T100BOOL                 frame_menu_start(void* = T100NULL);
         static T100BOOL                 frame_menu_stop(void* = T100NULL);
 

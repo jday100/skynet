@@ -24,6 +24,14 @@ class T100Display : public T100Device
         T100Display(T100QU32*);
         virtual ~T100Display();
 
+        T100BOOL            getScreen(T100WORD*);
+
+        T100VOID            setWidth(T100WORD);
+        T100WORD            getWidth();
+
+        T100VOID            setHeight(T100WORD);
+        T100WORD            getHeight();
+
         T100BOOL            load(T100Port32*);
         T100BOOL            unload();
 
@@ -39,7 +47,12 @@ class T100Display : public T100Device
         T100DisplayBlockDevice              m_block_device;
         T100DisplayPageDevice               m_page_device;
 
+        virtual T100BOOL                    OnCreate(void* = T100NULL) = 0;
+
     private:
+        T100WORD            m_width         = 0;
+        T100WORD            m_height        = 0;
+
 };
 
 #endif // T100DISPLAY_H

@@ -11,6 +11,11 @@ class T100DisplayPageDevice : public T100PageDevice
         T100DisplayPageDevice(T100Display*);
         virtual ~T100DisplayPageDevice();
 
+        T100BOOL                getScreen(T100WORD*);
+
+        T100BOOL                draw(T100WORD, T100WORD, T100WORD);
+        T100BOOL                draw(T100WORD, T100WORD, T100WORD, T100WORD, T100WORD*);
+
     protected:
         T100VOID                create();
         T100VOID                destroy();

@@ -90,7 +90,11 @@ T100VOID T100VPCSetup::setVDiskFile(T100WSTRING file)
 
 T100WSTRING T100VPCSetup::getVDiskFile()
 {
-    return m_vdisk_file;
+    T100String      result;
+
+    result = getStores() + L"\\" + m_vdisk_file;
+
+    return result.to_wstring();
 }
 
 T100VOID T100VPCSetup::setFontFile(T100WSTRING file)
@@ -100,7 +104,11 @@ T100VOID T100VPCSetup::setFontFile(T100WSTRING file)
 
 T100WSTRING T100VPCSetup::getFontFile()
 {
-    return m_font_file;
+    T100String      result;
+
+    result = getResources() + L"\\" + m_font_file;
+
+    return result.to_wstring();
 }
 
 T100VOID T100VPCSetup::setRomFile(T100WSTRING file)

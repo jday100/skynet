@@ -131,6 +131,7 @@
 		<Linker>
 			<Add option="-mthreads" />
 		</Linker>
+		<Unit filename="../build/resources/font.fnt" />
 		<Unit filename="T100VPCApp.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
@@ -214,6 +215,7 @@
 		<Unit filename="include/serve/T100VPCLink.h" />
 		<Unit filename="include/serve/T100VPCServe.h" />
 		<Unit filename="include/view/T100VPCDemoScreen.h" />
+		<Unit filename="include/view/T100VPCDisplay.h" />
 		<Unit filename="include/view/T100VPCScreen.h" />
 		<Unit filename="include/view/T100VPCView.h" />
 		<Unit filename="include/view/dialog/T100VPCDebugDialog.h" />
@@ -302,6 +304,7 @@
 		<Unit filename="src/serve/T100VPCLink.cpp" />
 		<Unit filename="src/serve/T100VPCServe.cpp" />
 		<Unit filename="src/view/T100VPCDemoScreen.cpp" />
+		<Unit filename="src/view/T100VPCDisplay.cpp" />
 		<Unit filename="src/view/T100VPCScreen.cpp" />
 		<Unit filename="src/view/T100VPCView.cpp" />
 		<Unit filename="src/view/dialog/T100VPCDebugDialog.cpp" />

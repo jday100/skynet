@@ -31,7 +31,7 @@ T100VPCHostFrame::~T100VPCHostFrame()
 void T100VPCHostFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
 {
 
-	wxBoxSizer* BoxSizer1;
+
 
 	Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
 	SetClientSize(wxDefaultSize);

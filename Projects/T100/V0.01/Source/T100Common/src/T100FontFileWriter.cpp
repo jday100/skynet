@@ -112,6 +112,7 @@ T100BOOL T100FontFileWriter::write_head()
 
     head.FONT_WIDTH     = m_font->getWidth();
     head.FONT_HEIGHT    = m_font->getHeight();
+    head.FONT_LENGTH    = m_font->getLength();
     head.ROW_SIZE       = m_font->getRowSize();
 
     data    = (T100WORD*)&head;
