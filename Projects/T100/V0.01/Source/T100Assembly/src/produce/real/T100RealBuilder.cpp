@@ -122,10 +122,13 @@ T100BOOL T100RealBuilder::build(T100SentenceToken* token)
     }else{
         result = T100FALSE;
 
+        result = token->value->build(&(m_part->getBuildInfo()));
+
         T100WORD type = token->type;
 
         if(token->value){
             T100String name = token->value->value;
+            return result;
         }
     }
 

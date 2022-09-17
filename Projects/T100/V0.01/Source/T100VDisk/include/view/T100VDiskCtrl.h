@@ -27,6 +27,16 @@ class T100VDiskCtrl : public T100DiskCtrl
         T100BOOL            OnFileCopy(void* = T100NULL);
         T100BOOL            OnFileRemove(void* = T100NULL);
 
+        T100BOOL            OnGetAllDrivers(wxArrayString&, wxArrayString&, wxArrayInt&);
+
+    protected:
+        T100BOOL            DoGetAllParts(T100DISK_PART_CTRL_VECTOR&);
+        T100BOOL            DoGetAllItems(wxString, wxString, T100DISK_ITEM_VECTOR&);
+        T100BOOL            DoCreateDir();
+        T100BOOL            DoRemoveDir();
+        T100BOOL            DoCopyFile();
+        T100BOOL            DoRemoveFile();
+
     private:
 };
 

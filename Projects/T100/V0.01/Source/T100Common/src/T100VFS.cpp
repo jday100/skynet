@@ -57,7 +57,8 @@ T100BOOL T100VFS::format(T100STRING name)
 
     if(m_table->create()){
         if(m_item->create()){
-            return T100TRUE;
+            part->FORMATED = 1;
+            return m_part->save();
         }
     }
 

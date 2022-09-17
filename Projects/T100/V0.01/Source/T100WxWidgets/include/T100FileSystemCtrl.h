@@ -21,6 +21,34 @@ class T100FileSystemCtrl : public wxGenericDirCtrl
 
         size_t              getAllDrives(wxArrayString& paths, wxArrayString& names, wxArrayInt& icon_ids);
 
+        void                PopulateNode(wxTreeItemId parentId);
+
+    private:
+        void                OnExpandItem(wxTreeEvent& event);
+        void                OnCollapseItem(wxTreeEvent& event);
+        void                OnBeginEditItem(wxTreeEvent& event);
+        void                OnEndEditItem(wxTreeEvent& event);
+        void                OnTreeSelChange(wxTreeEvent& event);
+        void                OnSize(wxSizeEvent& event);
+        void                OnTreeBeginDrag(wxTreeEvent& event);
+        void                OnTreeEndDrag(wxTreeEvent& event);
+        void                OnTreeDeleteItem(wxTreeEvent& event);
+        void                OnTreeItemMenu(wxTreeEvent& event);
+
+    private:
+        void                DoExpandItem(wxTreeItemId);
+        void                DoCollapseItem();
+        void                DoBeginEditItem();
+        void                DoEndEditItem();
+        void                DoSelectChange();
+        void                DoBeginDrag();
+        void                DoEndDrag();
+        void                DoDeleteItem();
+        void                DoItemMenu();
+
+    private:
+        void                ExpandDir(wxTreeItemId parentId);
+
     private:
         T100DiskCtrl*       m_disk          = T100NULL;
 

@@ -1,0 +1,96 @@
+DATA
+    part_size                                   INTEGER     1
+    //
+    boot_part_search_result                     INTEGER
+    boot_part_search_result_offset              INTEGER
+    boot_part_search_buffer_offset              INTEGER
+    boot_part_search_location_low_offset        INTEGER
+    boot_part_search_location_high_offset       INTEGER
+    boot_part_search_length_low_offset          INTEGER
+    boot_part_search_length_high_offset         INTEGER
+    boot_part_search_index                      INTEGER
+    //
+    boot_part_search_part_offset                INTEGER
+END
+
+PROC=BOOT_PART_SEARCH
+    CMT     70010010
+    MOVE    boot_part_search_result_offset              AAR
+    MOVE    boot_part_search_buffer_offset              ABR
+    MOVE    boot_part_search_location_low_offset        ACR
+    MOVE    boot_part_search_length_low_offset          ADR
+    //
+    MOVE    AAR                                         boot_part_search_location_low_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    boot_part_search_location_high_offset       ACR
+    MOVE    AAR                                         boot_part_search_length_low_offset
+    ADD
+    MOVE    boot_part_search_length_high_offset         ACR
+    //
+    MOVE    fs_boot_part_search_buffer_offset           boot_part_search_buffer_offset
+    //
+    MOVE    AAR                                         part_size
+    MOVE    ABR                                         1
+    SUB
+    MOVE    CCR                                         ACR
+    //
+BOOT_PART_SEARCH_NEXT:
+    CMT     70010020
+    MOVE    AAR                                         fs_boot_part_search_buffer_offset
+    MOVE    ABR                                         22
+    ADD
+    MOVE    fs_boot_part_search_buffer_offset           ACR
+    MOVE    AAR                                         #ACR
+    MOVE    ABR                                         1
+    SUB
+    JNZ     BOOT_PART_SEARCH_NOT_USED
+    //
+    CMT     70010030
+    MOVE    AAR                                         fs_boot_part_search_buffer_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    fs_boot_part_search_buffer_offset           ACR
+    MOVE    AAR                                         #ACR
+    MOVE    ABR                                         1
+    SUB
+    JZ      BOOT_PART_SEARCH_FOUNDED
+    CMT     70010040
+    JUMP    BOOT_PART_SEARCH_NOT_BOOT
+BOOT_PART_SEARCH_NOT_USED:
+    CMT     70010050
+    MOVE    AAR                                         fs_boot_part_search_buffer_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    fs_boot_part_search_buffer_offset           ACR
+BOOT_PART_SEARCH_NOT_BOOT:
+    CMT     70010060
+    MOVE    AAR                                         fs_boot_part_search_buffer_offset
+    MOVE    ABR                                         8
+    ADD
+    MOVE    fs_boot_part_search_buffer_offset           ACR
+    LOOP    BOOT_PART_SEARCH_NEXT
+    //
+    CMT     70010070
+    MOVE    #boot_part_search_result_offset             0
+    RET
+BOOT_PART_SEARCH_FOUNDED:
+    CMT     70010080
+    MOVE    AAR                                         fs_boot_part_search_buffer_offset
+    MOVE    ABR                                         5
+    SUB
+    MOVE    #boot_part_search_location_low_offset       #ACR
+    MOVE    AAR                                         ACR
+    MOVE    ABR                                         1
+    ADD
+    MOVE    #boot_part_search_location_high_offset      #ACR
+    //
+    MOVE    AAR                                         ACR
+    ADD
+    MOVE    #boot_part_search_length_low_offset         #ACR
+    MOVE    AAR                                         ACR
+    ADD
+    MOVE    #boot_part_search_length_high_offset        #ACR
+    //
+    MOVE    #boot_part_search_result_offset             1
+END

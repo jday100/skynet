@@ -37,8 +37,8 @@ void T100DiskBrowsePartDialog::BuildContent(wxWindow* parent,wxWindowID id,const
 	BoxSizer3->Add(GenericDirCtrl, 1, wxALL|wxEXPAND, 5);
 	BoxSizer2->Add(BoxSizer3, 1, wxALL|wxEXPAND, 5);
 	BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);
-	VDiskDirCtrl = T100NEW T100FileSystemCtrl(this);
-	BoxSizer4->Add(VDiskDirCtrl, 1, wxALL|wxEXPAND, 5);
+	DiskDirCtrl = T100NEW T100DiskBrowseCtrl(this);
+	BoxSizer4->Add(DiskDirCtrl, 1, wxALL|wxEXPAND, 5);
 	BoxSizer2->Add(BoxSizer4, 1, wxALL|wxEXPAND, 5);
 	BoxSizer1->Add(BoxSizer2, 1, wxALL|wxEXPAND, 5);
 	SetSizer(BoxSizer1);

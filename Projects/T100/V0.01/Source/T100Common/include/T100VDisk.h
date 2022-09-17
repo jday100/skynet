@@ -16,6 +16,7 @@ class T100VDisk
 
         virtual T100BOOL            exists();
         virtual T100DWORD           length();
+        virtual T100DWORD           cluster_length();
 
         virtual T100BOOL            create(T100DWORD);
         virtual T100BOOL            remove();

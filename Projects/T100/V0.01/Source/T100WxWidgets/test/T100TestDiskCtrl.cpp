@@ -75,3 +75,45 @@ T100BOOL T100TestDiskCtrl::OnGetAllDrivers(wxArrayString& paths, wxArrayString& 
     wxMessageBox(_("GetAllDrivers!"));
     return T100TRUE;
 }
+
+///
+T100BOOL T100TestDiskCtrl::DoGetAllParts(T100DISK_PART_CTRL_VECTOR& parts)
+{
+    parts = GetAllParts();
+
+    return T100TRUE;
+}
+
+T100BOOL T100TestDiskCtrl::DoGetAllItems(wxString part, wxString path, T100DISK_ITEM_VECTOR& items)
+{
+    T100DISK_ITEM*      item;
+
+    item = T100NEW T100DISK_ITEM();
+
+    item->ISDIR     = T100TRUE;
+    item->NAME      = L"Test";
+
+    items.push_back(item);
+
+    return T100TRUE;
+}
+
+T100BOOL T100TestDiskCtrl::DoCreateDir()
+{
+
+}
+
+T100BOOL T100TestDiskCtrl::DoRemoveDir()
+{
+
+}
+
+T100BOOL T100TestDiskCtrl::DoCopyFile()
+{
+
+}
+
+T100BOOL T100TestDiskCtrl::DoRemoveFile()
+{
+
+}

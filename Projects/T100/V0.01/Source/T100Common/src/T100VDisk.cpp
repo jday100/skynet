@@ -36,6 +36,11 @@ T100DWORD T100VDisk::length()
     return m_file->length();
 }
 
+T100DWORD T100VDisk::cluster_length()
+{
+    return m_file->cluster_length();
+}
+
 T100BOOL T100VDisk::create(T100DWORD length)
 {
     T100BOOL    result      = T100FALSE;

@@ -101,6 +101,9 @@ T100BOOL T100Port32::in(T100WORD offset, T100WORD& value)
         if(dev){
             id = offset & 3;
             return dev->in(id, value);
+        }else{
+            value = 0;
+            return T100TRUE;
         }
     }else if(offset < m_block_limit){
         T100WORD    id;
@@ -162,6 +165,9 @@ T100BOOL T100Port32::out(T100WORD offset, T100WORD value)
             id = offset & 3;
 
             return dev->out(id, value);
+        }else{
+            //test
+            return T100TRUE;
         }
     }else if(offset < m_block_limit){
         T100WORD        id;

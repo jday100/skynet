@@ -5,6 +5,7 @@
 #include <wx/dirctrl.h>
 #include <wx/sizer.h>
 #include "T100FileSystemCtrl.h"
+#include "T100DiskBrowseCtrl.h"
 
 
 class T100DiskBrowsePartDialog : public wxDialog
@@ -14,7 +15,9 @@ class T100DiskBrowsePartDialog : public wxDialog
         virtual ~T100DiskBrowsePartDialog();
 
         wxGenericDirCtrl*           GenericDirCtrl;
-        T100FileSystemCtrl*         VDiskDirCtrl;
+        //T100FileSystemCtrl*         VDiskDirCtrl;
+
+        T100DiskBrowseCtrl*         DiskDirCtrl;
 
     protected:
         static const long ID_GENERICDIRCTRL;

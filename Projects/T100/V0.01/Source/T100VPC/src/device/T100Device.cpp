@@ -15,12 +15,18 @@ T100Device::~T100Device()
 
 T100VOID T100Device::create()
 {
+    m_inited = T100FALSE;
     m_loaded = T100FALSE;
 }
 
 T100VOID T100Device::destroy()
 {
 
+}
+
+T100BOOL T100Device::isInited()
+{
+    return m_inited;
 }
 
 T100BOOL T100Device::isLoaded()

@@ -23,6 +23,7 @@ class T100VDiskFile : public T100File
 
         virtual T100BOOL            seek(T100DWORD);
         virtual T100DWORD           length();
+        virtual T100DWORD           cluster_length();
 
         T100BOOL                    read(T100DWORD, T100WORD*);
         T100BOOL                    write(T100DWORD, T100WORD*);

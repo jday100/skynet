@@ -201,6 +201,25 @@ T100DWORD T100VDiskFile::length()
     return result;
 }
 
+T100DWORD T100VDiskFile::cluster_length()
+{
+    T100DWORD   result      = 0;
+
+    if(opened()){
+        return m_info.LENGTH;
+    }else{
+        if(open(T100FILE_READ)){
+            if(read_head()){
+                result = m_info.LENGTH;
+            }
+            if(close()){
+
+            }
+        }
+    }
+    return result;
+}
+
 T100BOOL T100VDiskFile::read(T100DWORD id, T100WORD* data)
 {
     T100BOOL    result      = T100TRUE;

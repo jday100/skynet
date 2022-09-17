@@ -68,6 +68,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../build/stores/vdisk.vdk" />
 		<Unit filename="include/T100DebugFile.h" />
 		<Unit filename="include/T100DebugFileReader.h" />
 		<Unit filename="include/T100DebugFileWriter.h" />

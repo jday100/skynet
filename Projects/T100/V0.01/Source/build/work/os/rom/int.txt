@@ -129,6 +129,7 @@ INT068:
     //
     MOVE    int068_result_return                            AAR
     MOVE    AAR                                             @int068_result
+    MOVE    ABR                                             ACR
     CALL    DISPLAY_PRINT
     MOVE    ACR                                             int068_result
     MOVE    #int068_result_return                           ACR
@@ -147,7 +148,102 @@ INT068:
 //7     READ
 //8     WRITE
 INT069:
+    LOCK
     CMT     3010690010
+    MOVE    int069_disk_result_return                   AAR
+    MOVE    int069_abr                                  ABR
+    MOVE    int069_acr                                  ACR
+    MOVE    int069_adr                                  ADR
+    //
+    MOVE    ACR                                         ABR
+    JZ      INT069_ERROR
+    //
+    MOVE    AAR                                         8
+    SUB
+    MOVE    ACR                                         AMF
+    JNZ     INT069_ERROR
+    //
+    MOVE    AAR                                         2
+    MUL
+    MOVE    ABR                                         ACR
+    MOVE    AAR                                         @INT069_JUMP
+    ADD
+    JUMP    ACR
+    //
+INT069_JUMP:
+    NOP
+    NOP
+    JUMP    INT069_TYPE
+    JUMP    INT069_SET
+    JUMP    INT069_GET
+    JUMP    INT069_BLOCK
+    JUMP    INT069_FORMAT
+    JUMP    INT069_CLEAR
+    JUMP    INT069_READ
+    JUMP    INT069_WRITE
+    NOP
+    //
+INT069_TYPE:
+INT069_SET:
+INT069_GET:
+INT069_BLOCK:
+INT069_FORMAT:
+INT069_CLEAR:
+    JUMP    INT069_ERROR
+    //
+INT069_READ:
+    //
+    //result_return
+    //type
+    //buffer_offset
+    //index_offset
+    //low_offset
+    //high_offset
+    //
+    MOVE    int069_disk_buffer_offset                   int069_acr
+    MOVE    int069_disk_location_index_offset           int069_adr
+    MOVE    AAR                                         int069_adr
+    MOVE    ABR                                         1
+    ADD
+    MOVE    int069_disk_location_low_offset             ACR
+    MOVE    AAR                                         ACR
+    ADD
+    MOVE    int069_disk_location_high_offset            ACR
+    //
+    CMT     1
+    //DEBUG
+    MOVE    AAR                                         #int069_disk_buffer_offset
+    MOVE    AAR                                         #int069_disk_location_low_offset
+    MOVE    AAR                                         #int069_disk_location_high_offset
+    MOVE    AAR                                         #int069_disk_location_index_offset
+    //
+    OUT     disk_data1_offset                           #int069_disk_location_low_offset
+    OUT     disk_data2_offset                           #int069_disk_location_high_offset
+    OUT     disk_data3_offset                           #int069_disk_location_index_offset
+    OUT     disk_order_offset                           disk_mode_read
+    //
+    MOVE    int069_result                               1
+    MOVE    ACR                                         int069_result
+    JZ      INT069_ERROR
+    //
+    MOVE    AAR                                         @int069_result
+    MOVE    ABR                                         disk_block_offset
+    MOVE    ACR                                         int069_disk_buffer_offset
+    MOVE    ADR                                         disk_block_size
+    CALL    IO_COPY
+    MOVE    ACR                                         int069_result
+    JZ      INT069_ERROR
+    //
+    MOVE    #int069_disk_result_return                  1
+    UNLOCK
+    IRET
+    //
+INT069_WRITE:
+    NOP
+INT069_ERROR:
+    MOVE    #int069_disk_result_return                  0
+    CMT     1
+    UNLOCK
     IRET
 //
 //

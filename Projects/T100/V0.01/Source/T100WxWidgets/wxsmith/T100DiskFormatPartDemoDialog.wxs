@@ -17,6 +17,7 @@
 					</object>
 					<object class="sizeritem">
 						<object class="wxComboBox" name="ID_COMBOBOX_FILE" variable="FileComboBox" member="yes">
+							<size>300,-1</size>
 							<handler function="OnFileComboBoxSelected" entry="EVT_COMBOBOX" />
 							<handler function="OnFileComboBoxTextUpdated" entry="EVT_TEXT" />
 							<handler function="OnFileComboBoxTextEnter" entry="EVT_TEXT_ENTER" />

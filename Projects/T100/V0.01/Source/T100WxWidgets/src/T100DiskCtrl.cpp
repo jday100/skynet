@@ -110,6 +110,11 @@ T100BOOL T100DiskCtrl::init()
     return T100TRUE;
 }
 
+T100DISK_PART_CTRL_VECTOR& T100DiskCtrl::GetAllParts()
+{
+    return m_parts;
+}
+
 T100BOOL T100DiskCtrl::CreatePart(T100DISK_PART_CTRL* source, T100DISK_PART& target)
 {
     if(!source)return T100FALSE;
@@ -552,8 +557,8 @@ T100VOID T100DiskCtrl::OnBrowsePart(wxCommandEvent& event)
 
     T100DiskBrowsePartDialog        dialog(this);
 
-    dialog.VDiskDirCtrl->SetDiskCtrl(this);
-    dialog.VDiskDirCtrl->Load();
+    dialog.DiskDirCtrl->SetDiskCtrl(this);
+    dialog.DiskDirCtrl->Load();
 
     if(dialog.ShowModal() == wxID_OK){
 
@@ -593,7 +598,7 @@ T100VOID T100DiskCtrl::OnFormatPart(wxCommandEvent& event)
         }
     }
 
-    if(OnMenuFormat()){
+    if(OnMenuFormat(item->PART)){
         item->PART->ISFORMATED  = T100TRUE;
         Refresh();
     }
@@ -905,6 +910,12 @@ T100BOOL T100DiskCtrl::Load(T100DISK_PART_VECTOR& parts)
 {
     T100BOOL            result          = T100TRUE;
     T100DWORD           total           = 0;
+
+    if(0 == parts.size()){
+
+    }else{
+        Clear();
+    }
 
     for(T100DISK_PART* item : parts){
         if(item){

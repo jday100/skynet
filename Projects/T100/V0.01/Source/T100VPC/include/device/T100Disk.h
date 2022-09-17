@@ -22,7 +22,7 @@ enum T100DISK_MODE{
 class T100Disk : public T100BlockDevice
 {
     public:
-        T100Disk(T100QU32*);
+        T100Disk(T100QU32*, T100String = L"");
         virtual ~T100Disk();
 
         T100BOOL            load(T100Port32*);
@@ -39,6 +39,11 @@ class T100Disk : public T100BlockDevice
         T100BOOL            write(T100DWORD, T100WORD);
 
     private:
+        T100WORD            m_buffer[1024 * 16];
+        //T100DWORD           m_id            = 0;
+        T100BOOL            m_readed        = T100FALSE;
+
+        T100String          m_file;
         T100VDisk*          m_vdisk         = T100NULL;
 
 };

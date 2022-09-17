@@ -161,9 +161,13 @@ T100BOOL T100VDiskPart::boot(T100String name, T100BOOL boot)
 T100VFS_PART* T100VDiskPart::search(T100String name)
 {
     T100VFS_PART*   result      = T100NULL;
+    T100WORD        data;
 
     for(int i=0;i<T100VFS_PART_SIZE;i++){
         if(1 == m_parts.PARTS[i].USED){
+            //test
+            data = name.to_string().raw_data()[0];
+
             if(T100String32Tools::compare(m_parts.PARTS[i].LABEL, 16, name)){
                 result = &(m_parts.PARTS[i]);
                 return result;

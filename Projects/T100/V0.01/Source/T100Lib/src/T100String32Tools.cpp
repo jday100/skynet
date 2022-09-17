@@ -78,6 +78,18 @@ T100BOOL T100String32Tools::compare(T100WORD* data, T100WORD length, T100String&
     T100WORD    tlength;
     T100WORD*   sdata;
 
+    T100WORD    s;
+    T100WORD    t;
+
+    T100WORD    temp;
+
+    temp    = source.to_string().raw_data()[0];
+    sdata   = source.to_string().raw_data();
+    temp    = sdata[0];
+
+    temp    = source.to_string().raw_data()[0];
+
+
     slength = source.length();
     if(slength > length){
         return T100FALSE;
@@ -90,9 +102,14 @@ T100BOOL T100String32Tools::compare(T100WORD* data, T100WORD length, T100String&
     tlength = data[0];
 
     if(slength == tlength){
-        sdata   = source.to_string().raw_data();
+        //sdata   = source.to_string().raw_data();
         for(int i=0;i<slength+2;i++){
-            if(data[i] == sdata[i]){
+            //test
+            //s = sdata[i];
+            s = source.to_string().raw_data()[i];
+            t = data[i];
+
+            if(s == t){
 
             }else{
                 return T100FALSE;

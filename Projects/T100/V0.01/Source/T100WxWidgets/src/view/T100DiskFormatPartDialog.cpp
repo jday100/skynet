@@ -36,7 +36,7 @@ void T100DiskFormatPartDialog::BuildContent(wxWindow* parent,wxWindowID id,const
 	StaticBoxSizer1 = new wxStaticBoxSizer(wxHORIZONTAL, this, _("格式化分区："));
 	StaticText1 = new wxStaticText(this, ID_STATICTEXT1, _("引导文件："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT1"));
 	StaticBoxSizer1->Add(StaticText1, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	FileComboBox = new wxComboBox(this, ID_COMBOBOX_FILE, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_FILE"));
+	FileComboBox = new wxComboBox(this, ID_COMBOBOX_FILE, wxEmptyString, wxDefaultPosition, wxSize(300,-1), 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_FILE"));
 	StaticBoxSizer1->Add(FileComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BrowseButton = new wxButton(this, ID_BUTTON_BROWSE, _("浏览…"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_BROWSE"));
 	StaticBoxSizer1->Add(BrowseButton, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);

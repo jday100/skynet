@@ -30,6 +30,17 @@ DATA=ROM_DATA
     display_mode_read               INTEGER     14
     display_mode_write              INTEGER     15
     //
+    disk_mode_get                   INTEGER     13
+    disk_mode_block                 INTEGER     14
+    disk_mode_read                  INTEGER     17
+    disk_mode_write                 INTEGER     18
+    disk_block_index_limit          INTEGER     16
+    disk_block_size                 INTEGER     1024
+    disk_block_limit                INTEGER     16384
+    //
+    int068_mode_print               INTEGER     1
+    int069_mode_disk_read           INTEGER     7
+    //
 END
 
 DATA=INT_TABLE      VIRTUAL     LOCATION=1073741824     LENGTH=1024
@@ -62,7 +73,29 @@ DATA=INT_TABLE      VIRTUAL     LOCATION=1073741824     LENGTH=1024
 END
 
 DATA=ROM_DATA   VIRTUAL     LOCATION=1073742848     LENGTH=1024
-    rom_result                      INTEGER     0
+    rom_result                                      INTEGER     0
+    //
+    rom_show_info_result                            INTEGER     0
+    rom_show_info_result_return                     INTEGER     0
+    //
+    rom_boot_part_search_result                     INTEGER     0
+    rom_boot_part_search_result_return              INTEGER     0
+    //
+    rom_boot_part_search_disk_buffer_offset         INTEGER     0
+    rom_boot_part_search_location_low_offset        INTEGER     0
+    rom_boot_part_search_location_high_offset       INTEGER     0
+    rom_boot_part_search_length_low_offset          INTEGER     0
+    rom_boot_part_search_length_high_offset         INTEGER     0
+    //
+    rom_boot_part_search_index                      INTEGER     0
+    rom_boot_part_search_location_low               INTEGER     0
+    rom_boot_part_search_location_high              INTEGER     0
+    //
+    rom_boot_part_location_low                      INTEGER     0
+    rom_boot_part_location_high                     INTEGER     0
+    rom_boot_part_length_low                        INTEGER     0
+    rom_boot_part_length_high                       INTEGER     0
+    //
 END
 
 DATA=HARD_DATA  VIRTUAL     LOCATION=1073743872     LENGTH=1024
@@ -134,6 +167,20 @@ DATA=HARD_DATA  VIRTUAL     LOCATION=1073743872     LENGTH=1024
     disk_data2_offset               INTEGER     0
     disk_data3_offset               INTEGER     0
     //
+    disk_block_length               INTEGER     0
+    disk_length_low                 INTEGER     0
+    disk_length_high                INTEGER     0
+    disk_block_offset               INTEGER     0
+    //
+
+    disk_read_result_return         INTEGER     0
+    disk_write_result_return        INTEGER     0
+    //
+    disk_read_id_low                INTEGER     0
+    disk_read_id_high               INTEGER     0
+    disk_read_source_offset         INTEGER     0
+    disk_read_target_offset         INTEGER     0
+    //
     //DISPLAY
     display_init_result             INTEGER     0
     display_init_result_return      INTEGER     0
@@ -177,4 +224,35 @@ DATA=INT_DATA  VIRTUAL     LOCATION=1073744896     LENGTH=1024
     int068_result                   INTEGER     0
     int068_result_return            INTEGER     0
     //
+    int069_result                           INTEGER     0
+    int069_result_return                    INTEGER     0
+    int069_abr                              INTEGER     0
+    int069_acr                              INTEGER     0
+    int069_adr                              INTEGER     0
+    //
+    int069_disk_result_return               INTEGER     0
+    int069_disk_buffer_offset               INTEGER     0
+    int069_disk_location_low_offset         INTEGER     0
+    int069_disk_location_high_offset        INTEGER     0
+    int069_disk_location_index_offset       INTEGER     0
+    //
+
+    //
+END
+
+DATA=DISK_BUFFER    VIRTUAL     LOCATION=1073745920     LENGTH=1024
+    disk_buffer                     INTEGER[1024]
+END
+
+DATA=FS_DATA        VIRTUAL     LOCATION=1073746944     LENGTH=1024
+    fs_boot_part_search_buffer_offset       INTEGER     0
+END
+
+DATA=IO_DATA        VIRTUAL     LOCATION=1073747968     LENGTH=1024
+    io_copy_result_offset                           INTEGER
+    io_copy_source_offset                           INTEGER
+    io_copy_target_offset                           INTEGER
+    io_copy_length                                  INTEGER
+    //
+
 END

@@ -15,6 +15,7 @@
 #include <wx/string.h>
 //*)
 
+#include "T100String32Tools.h"
 #include "T100VDiskApp.h"
 #include "T100VDiskCallback.h"
 
@@ -202,14 +203,29 @@ T100BOOL T100VDiskFrame::load(T100VDisk* vdisk)
     T100VFS_PART_VECTOR             parts;
     T100DISK_PART_VECTOR            ctrls;
 
+    VDiskCtrl->SetLength(vdisk->cluster_length());
+
     vdisk->part_list(parts);
 
     for(T100VFS_PART item : parts){
         T100DISK_PART*          part = T100NEW T100DISK_PART();
 
+        part->NAME          = T100String32Tools::to_string(item.LABEL, 18);
         part->LOCATION      = item.LOCATION;
         part->LENGTH        = item.LENGTH;
-        //part->BOOT          = item->BOOT;
+        part->ISUSED        = T100TRUE;
+
+        if(0 == item.BOOT){
+            part->BOOT  = T100FALSE;
+        }else{
+            part->BOOT  = T100TRUE;
+        }
+
+        if(0 == item.FORMATED){
+            part->ISFORMATED    = T100FALSE;
+        }else{
+            part->ISFORMATED    = T100TRUE;
+        }
 
         ctrls.push_back(part);
     }

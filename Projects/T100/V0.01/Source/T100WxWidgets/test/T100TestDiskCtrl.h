@@ -29,6 +29,13 @@ class T100TestDiskCtrl : public T100DiskCtrl
 
         T100BOOL                        OnGetAllDrivers(wxArrayString&, wxArrayString&, wxArrayInt&);
 
+        T100BOOL                        DoGetAllParts(T100DISK_PART_CTRL_VECTOR&);
+        T100BOOL                        DoGetAllItems(wxString, wxString, T100DISK_ITEM_VECTOR&);
+        T100BOOL                        DoCreateDir();
+        T100BOOL                        DoRemoveDir();
+        T100BOOL                        DoCopyFile();
+        T100BOOL                        DoRemoveFile();
+
     private:
 };
 

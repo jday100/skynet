@@ -4,6 +4,7 @@
 //(*Headers(T100DiskBrowsePartDemoDialog)
 #include <wx/dialog.h>
 #include <wx/dirctrl.h>
+#include <wx/menu.h>
 #include <wx/sizer.h>
 //*)
 #include "T100FileSystemCtrl.h"
@@ -19,6 +20,13 @@ class T100DiskBrowsePartDemoDialog: public wxDialog
 		//(*Declarations(T100DiskBrowsePartDemoDialog)
 		wxGenericDirCtrl* GenericDirCtrl1;
 		wxGenericDirCtrl* GenericDirCtrl2;
+		wxMenu Menu1;
+		wxMenu* MenuItem1;
+		wxMenu* MenuItem4;
+		wxMenuItem* MenuItem2;
+		wxMenuItem* MenuItem3;
+		wxMenuItem* MenuItem5;
+		wxMenuItem* MenuItem6;
 		//*)
 
 	protected:
@@ -26,6 +34,12 @@ class T100DiskBrowsePartDemoDialog: public wxDialog
 		//(*Identifiers(T100DiskBrowsePartDemoDialog)
 		static const long ID_GENERICDIRCTRL1;
 		static const long ID_GENERICDIRCTRL2;
+		static const long ID_MENUITEM2;
+		static const long ID_MENUITEM3;
+		static const long ID_MENUITEM1;
+		static const long ID_MENUITEM5;
+		static const long ID_MENUITEM6;
+		static const long ID_MENUITEM4;
 		//*)
 
 	private:

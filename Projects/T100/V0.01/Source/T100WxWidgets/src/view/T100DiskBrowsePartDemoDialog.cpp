@@ -8,6 +8,12 @@
 //(*IdInit(T100DiskBrowsePartDemoDialog)
 const long T100DiskBrowsePartDemoDialog::ID_GENERICDIRCTRL1 = wxNewId();
 const long T100DiskBrowsePartDemoDialog::ID_GENERICDIRCTRL2 = wxNewId();
+const long T100DiskBrowsePartDemoDialog::ID_MENUITEM2 = wxNewId();
+const long T100DiskBrowsePartDemoDialog::ID_MENUITEM3 = wxNewId();
+const long T100DiskBrowsePartDemoDialog::ID_MENUITEM1 = wxNewId();
+const long T100DiskBrowsePartDemoDialog::ID_MENUITEM5 = wxNewId();
+const long T100DiskBrowsePartDemoDialog::ID_MENUITEM6 = wxNewId();
+const long T100DiskBrowsePartDemoDialog::ID_MENUITEM4 = wxNewId();
 //*)
 
 BEGIN_EVENT_TABLE(T100DiskBrowsePartDemoDialog,wxDialog)
@@ -42,6 +48,18 @@ void T100DiskBrowsePartDemoDialog::BuildContent(wxWindow* parent,wxWindowID id,c
 	BoxSizer2->Add(BoxSizer4, 1, wxALL|wxEXPAND, 5);
 	BoxSizer1->Add(BoxSizer2, 1, wxALL|wxEXPAND, 5);
 	SetSizer(BoxSizer1);
+	MenuItem1 = new wxMenu();
+	MenuItem2 = new wxMenuItem(MenuItem1, ID_MENUITEM2, _("Create"), wxEmptyString, wxITEM_NORMAL);
+	MenuItem1->Append(MenuItem2);
+	MenuItem3 = new wxMenuItem(MenuItem1, ID_MENUITEM3, _("Remove"), wxEmptyString, wxITEM_NORMAL);
+	MenuItem1->Append(MenuItem3);
+	Menu1.Append(ID_MENUITEM1, _("Folder"), MenuItem1, wxEmptyString);
+	MenuItem4 = new wxMenu();
+	MenuItem5 = new wxMenuItem(MenuItem4, ID_MENUITEM5, _("Copy"), wxEmptyString, wxITEM_NORMAL);
+	MenuItem4->Append(MenuItem5);
+	MenuItem6 = new wxMenuItem(MenuItem4, ID_MENUITEM6, _("Remove"), wxEmptyString, wxITEM_NORMAL);
+	MenuItem4->Append(MenuItem6);
+	Menu1.Append(ID_MENUITEM4, _("File"), MenuItem4, wxEmptyString);
 	SetSizer(BoxSizer1);
 	Layout();
 	//*)

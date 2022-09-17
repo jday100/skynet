@@ -55,10 +55,16 @@ typedef struct{
     T100FLOAT               RATIO;
 }T100DISK_PART_CTRL;
 
+typedef struct{
+    T100STRING      NAME;
+    T100BOOL        ISDIR;
+}T100DISK_ITEM;
+
 
 #define     T100DISK_VECTOR                 std::vector<T100DISK*>
 #define     T100DISK_PART_VECTOR            std::vector<T100DISK_PART*>
 #define     T100DISK_PART_CTRL_VECTOR       std::vector<T100DISK_PART_CTRL*>
+#define     T100DISK_ITEM_VECTOR            std::vector<T100DISK_ITEM*>
 
 #define     T100DISK_COLOUR_DEFAULT                 T100COLOUR_GREEN
 #define     T100DISK_PART_COLOUR_DEFAULT            T100COLOUR_YELLOW

@@ -72,23 +72,6 @@ T100BOOL T100VDiskCallback::frame_menu_new(void* d)
     return result;
 }
 
-T100BOOL T100VDiskCallback::dialog_new_browse(void* d)
-{
-    T100BOOL            result          = T100TRUE;
-
-    wxFileDialog        dialog(m_view->getFrame(), _("Create a new file"), "", "", "VDisk files (*.vdk)|*.vdk");
-
-    if(dialog.ShowModal() == wxID_OK){
-        T100DiskCreateDialog* parent = static_cast<T100DiskCreateDialog*>(d);
-
-        //parent->FileTextCtrl->SetValue(dialog.GetFilename());
-    }else{
-        result = T100FALSE;
-    }
-
-    return result;
-}
-
 
 T100BOOL T100VDiskCallback::frame_menu_open(void* d)
 {
@@ -105,7 +88,7 @@ T100BOOL T100VDiskCallback::frame_menu_open(void* d)
         T100STRING          name;
         T100VDiskFrame*     frame;
 
-        name    = dialog.GetFilename().ToStdWstring();
+        name    = dialog.GetPath().ToStdWstring();
         result  = m_serve->openVDisk(name);
 
         frame   = static_cast<T100VDiskFrame*>(d);
@@ -157,6 +140,16 @@ T100BOOL T100VDiskCallback::frame_menu_close(void* d)
     return result;
 }
 
+T100BOOL T100VDiskCallback::frame_menu_quit(void* d)
+{
+    if(m_serve->opened()){
+        return T100FALSE;
+    }else{
+        m_view->quit();
+    }
+    return T100TRUE;
+}
+
 T100BOOL T100VDiskCallback::ctrl_menu_new(void* d)
 {
     T100BOOL            result          = T100TRUE;
@@ -169,12 +162,28 @@ T100BOOL T100VDiskCallback::ctrl_menu_new(void* d)
     return result;
 }
 
-T100BOOL T100VDiskCallback::frame_menu_quit(void* d)
+T100BOOL T100VDiskCallback::ctrl_menu_remove(void* d)
 {
-    if(m_serve->opened()){
-        return T100FALSE;
-    }else{
-        m_view->quit();
-    }
-    return T100TRUE;
+    T100BOOL            result          = T100TRUE;
+    T100DISK_PART*      part            = T100NULL;
+
+    part    = static_cast<T100DISK_PART*>(d);
+
+    result  = m_serve->getVDisk()->part_remove(part->NAME);
+
+    return result;
 }
+
+T100BOOL T100VDiskCallback::ctrl_menu_format(void* d)
+{
+    T100BOOL            result          = T100TRUE;
+    T100DISK_PART*      part            = T100NULL;
+
+    part    = static_cast<T100DISK_PART*>(d);
+
+    result  = m_serve->getVDisk()->fs_format(part->NAME);
+
+    return result;
+}
+
+

@@ -53,7 +53,8 @@ typedef struct{
     T100DWORD               LENGTH;
     T100WORD                USED;
     T100WORD                BOOT;
-    T100WORD                RESERVE[8];
+    T100WORD                FORMATED;
+    T100WORD                RESERVE[7];
 }T100VFS_PART;
 
 

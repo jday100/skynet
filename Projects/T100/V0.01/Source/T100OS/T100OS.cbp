@@ -54,6 +54,7 @@
 		<Unit filename="../build/build/rom.bin" />
 		<Unit filename="../build/test/os/test_int.txt" />
 		<Unit filename="../build/work/os/boot/.gitkeep" />
+		<Unit filename="../build/work/os/fs/part.txt" />
 		<Unit filename="../build/work/os/kernel/.gitkeep" />
 		<Unit filename="../build/work/os/lib/dword.txt" />
 		<Unit filename="../build/work/os/lib/io.txt" />

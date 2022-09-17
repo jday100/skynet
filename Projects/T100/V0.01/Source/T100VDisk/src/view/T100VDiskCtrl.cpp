@@ -31,7 +31,11 @@ T100BOOL T100VDiskCtrl::OnMenuEdit(void* d)
 
 T100BOOL T100VDiskCtrl::OnMenuRemove(void* d)
 {
+    T100BOOL            result          = T100TRUE;
 
+    result = T100VDiskCallback::ctrl_menu_remove(d);
+
+    return result;
 }
 
 T100BOOL T100VDiskCtrl::OnMenuBrowse(void* d)
@@ -41,7 +45,11 @@ T100BOOL T100VDiskCtrl::OnMenuBrowse(void* d)
 
 T100BOOL T100VDiskCtrl::OnMenuFormat(void* d)
 {
+    T100BOOL            result          = T100TRUE;
 
+    result = T100VDiskCallback::ctrl_menu_format(d);
+
+    return result;
 }
 
 T100BOOL T100VDiskCtrl::OnFolderCreate(void* d)
@@ -60,6 +68,42 @@ T100BOOL T100VDiskCtrl::OnFileCopy(void* d)
 }
 
 T100BOOL T100VDiskCtrl::OnFileRemove(void* d)
+{
+
+}
+
+T100BOOL T100VDiskCtrl::OnGetAllDrivers(wxArrayString& paths, wxArrayString& names, wxArrayInt& icons)
+{
+
+}
+
+///
+T100BOOL T100VDiskCtrl::DoGetAllParts(T100DISK_PART_CTRL_VECTOR& parts)
+{
+
+}
+
+T100BOOL T100VDiskCtrl::DoGetAllItems(wxString part, wxString path, T100DISK_ITEM_VECTOR& items)
+{
+
+}
+
+T100BOOL T100VDiskCtrl::DoCreateDir()
+{
+
+}
+
+T100BOOL T100VDiskCtrl::DoRemoveDir()
+{
+
+}
+
+T100BOOL T100VDiskCtrl::DoCopyFile()
+{
+
+}
+
+T100BOOL T100VDiskCtrl::DoRemoveFile()
 {
 
 }

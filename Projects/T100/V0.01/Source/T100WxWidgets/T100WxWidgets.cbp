@@ -118,9 +118,12 @@
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="include/T100DiskBrowseCtrl.h" />
+		<Unit filename="include/T100DiskBrowseData.h" />
 		<Unit filename="include/T100DiskCtrl.h" />
 		<Unit filename="include/T100DiskDialog.h" />
 		<Unit filename="include/T100FileSystemCtrl.h" />
+		<Unit filename="include/T100VDiskBrowseCtrl.h" />
 		<Unit filename="include/serve/T100DiskCallback.h" />
 		<Unit filename="include/serve/T100DiskServe.h" />
 		<Unit filename="include/view/T100DiskBrowsePartDemoDialog.h" />
@@ -139,9 +142,12 @@
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/T100DiskBrowseCtrl.cpp" />
+		<Unit filename="src/T100DiskBrowseData.cpp" />
 		<Unit filename="src/T100DiskCtrl.cpp" />
 		<Unit filename="src/T100DiskDialog.cpp" />
 		<Unit filename="src/T100FileSystemCtrl.cpp" />
+		<Unit filename="src/T100VDiskBrowseCtrl.cpp" />
 		<Unit filename="src/serve/T100DiskCallback.cpp" />
 		<Unit filename="src/serve/T100DiskServe.cpp" />
 		<Unit filename="src/view/T100DiskBrowsePartDemoDialog.cpp" />

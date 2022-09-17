@@ -11,6 +11,7 @@
 class T100DiskCtrl : public wxControl
 {
     friend class T100FileSystemCtrl;
+    friend class T100DiskBrowseCtrl;
     public:
         T100DiskCtrl(wxWindow* parent, wxWindowID id,
                      const wxPoint& pos = wxDefaultPosition,
@@ -43,6 +44,8 @@ class T100DiskCtrl : public wxControl
         T100BOOL                    EditPart(T100DISK_PART*);
         T100BOOL                    RemovePart(T100DISK_PART*);
 
+        T100DISK_PART_CTRL_VECTOR&  GetAllParts();
+
         T100BOOL                    FormatPart(T100DISK_PART*);
         T100BOOL                    BrowsePart(T100DISK_PART*);
 
@@ -66,6 +69,15 @@ class T100DiskCtrl : public wxControl
 
         ///
         virtual T100BOOL            OnGetAllDrivers(wxArrayString&, wxArrayString&, wxArrayInt&) = 0;
+
+    protected:
+        virtual T100BOOL            DoGetAllParts(T100DISK_PART_CTRL_VECTOR&) = 0;
+        virtual T100BOOL            DoGetAllItems(wxString, wxString, T100DISK_ITEM_VECTOR&) = 0;
+
+        virtual T100BOOL            DoCreateDir() = 0;
+        virtual T100BOOL            DoRemoveDir() = 0;
+        virtual T100BOOL            DoCopyFile() = 0;
+        virtual T100BOOL            DoRemoveFile() = 0;
 
     protected:
         T100VOID                    create();

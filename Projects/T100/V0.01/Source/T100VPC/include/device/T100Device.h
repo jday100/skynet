@@ -21,6 +21,8 @@ class T100Device
         T100DEVICE_TYPE             getType();
         T100Port32*                 getPort32();
 
+        virtual T100BOOL            isInited();
+
         virtual T100BOOL            load(T100Port32*) = 0;
         virtual T100BOOL            unload() = 0;
         virtual T100BOOL            isLoaded();
@@ -32,13 +34,15 @@ class T100Device
         T100VOID                    create();
         T100VOID                    destroy();
 
+        std::atomic_bool            m_inited;
+        std::atomic_bool            m_loaded;
+
         T100WORD                    m_data[4] = {0, 0, 0, 0};
         T100BYTE                    m_id            = 0;
         T100QU32*                   m_host          = T100NULL;
         T100Port32*                 m_port          = T100NULL;
 
     private:
-        std::atomic_bool            m_loaded;
         T100STRING                  m_name;
         T100DEVICE_TYPE             m_type          = T100DEVICE_NONE;
 
