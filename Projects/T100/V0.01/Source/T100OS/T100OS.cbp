@@ -54,6 +54,12 @@
 		<Unit filename="../build/build/rom.bin" />
 		<Unit filename="../build/test/os/test_int.txt" />
 		<Unit filename="../build/work/os/boot/.gitkeep" />
+		<Unit filename="../build/work/os/boot/boot.txt" />
+		<Unit filename="../build/work/os/boot/fs/file.txt" />
+		<Unit filename="../build/work/os/boot/fs/fs.txt" />
+		<Unit filename="../build/work/os/boot/fs/item.txt" />
+		<Unit filename="../build/work/os/boot/fs/path.txt" />
+		<Unit filename="../build/work/os/boot/fs/table.txt" />
 		<Unit filename="../build/work/os/fs/part.txt" />
 		<Unit filename="../build/work/os/kernel/.gitkeep" />
 		<Unit filename="../build/work/os/lib/dword.txt" />

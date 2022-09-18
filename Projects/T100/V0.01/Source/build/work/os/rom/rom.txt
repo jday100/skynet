@@ -44,19 +44,23 @@ ROM_INIT:
     MOVE    ACR                     rom_result
     JZ      ROM_FATAL_ERROR
     //
+    DBG
     CMT     30050
 
-    CMT     30030
+    CMT     30060
     MOVE    AAR                     @rom_result
     CALL    ROM_SHOW_INFO
     MOVE    ACR                     rom_result
     JZ      ROM_FATAL_ERROR
-
+    //
+    CMT     30070
+    //
 ROM_JUMP:
 
 ROM_COMMON_ERROR:
     CMT     31010
 ROM_FATAL_ERROR:
+    DBG
     CMT     32010
     MOVE    AAR                     @rom_result
     CALL    ROM_SHOW_INFO
@@ -79,6 +83,7 @@ PROC=ROM_SHOW_INFO
 END
 
 PROC=ROM_BOOT_PART_SEARCH
+    CMT     34010
     MOVE    rom_boot_part_search_result_return          AAR
     MOVE    rom_boot_part_search_disk_buffer_offset     ABR
     MOVE    rom_boot_part_search_location_low_offset    ACR
@@ -101,7 +106,7 @@ PROC=ROM_BOOT_PART_SEARCH
     MOVE    rom_boot_part_search_location_high          0
     //
 ROM_BOOT_PART_SEARCH_NEXT:
-    CMT     1
+    CMT     34020
     MOVE    AAR                                         @rom_boot_part_search_result
     MOVE    ABR                                         int069_mode_disk_read
     MOVE    ACR                                         rom_boot_part_search_disk_buffer_offset
@@ -110,6 +115,7 @@ ROM_BOOT_PART_SEARCH_NEXT:
     MOVE    ACR                                         rom_boot_part_search_result
     JZ      ROM_BOOT_PART_SEARCH_ERROR
     //
+    CMT     34030
     MOVE    AAR                                         @rom_boot_part_search_result
     MOVE    ABR                                         rom_boot_part_search_disk_buffer_offset
     MOVE    ACR                                         rom_boot_part_search_location_low_offset
@@ -118,17 +124,21 @@ ROM_BOOT_PART_SEARCH_NEXT:
     MOVE    ACR                                         rom_boot_part_search_result
     JNZ     ROM_BOOT_PART_SEARCH_FOUNDED
     //
+    CMT     34040
     MOVE    AAR                                         rom_boot_part_search_index
     MOVE    ABR                                         1
     ADD
     MOVE    rom_boot_part_search_index                  ACR
     LOOP    ROM_BOOT_PART_SEARCH_NEXT
     //
+    CMT     34050
     JUMP    ROM_BOOT_PART_SEARCH_ERROR
     //
 ROM_BOOT_PART_SEARCH_FOUNDED:
+    CMT     34060
     MOVE    #rom_boot_part_search_result_return         1
     RET
 ROM_BOOT_PART_SEARCH_ERROR:
+    CMT     34070
     MOVE    #rom_boot_part_search_result_return         0
 END

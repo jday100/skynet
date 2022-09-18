@@ -14,7 +14,7 @@ DATA
 END
 
 PROC=BOOT_PART_SEARCH
-    CMT     70010010
+    CMT     2010010
     MOVE    boot_part_search_result_offset              AAR
     MOVE    boot_part_search_buffer_offset              ABR
     MOVE    boot_part_search_location_low_offset        ACR
@@ -36,7 +36,7 @@ PROC=BOOT_PART_SEARCH
     MOVE    CCR                                         ACR
     //
 BOOT_PART_SEARCH_NEXT:
-    CMT     70010020
+    CMT     2010020
     MOVE    AAR                                         fs_boot_part_search_buffer_offset
     MOVE    ABR                                         22
     ADD
@@ -46,7 +46,7 @@ BOOT_PART_SEARCH_NEXT:
     SUB
     JNZ     BOOT_PART_SEARCH_NOT_USED
     //
-    CMT     70010030
+    CMT     2010030
     MOVE    AAR                                         fs_boot_part_search_buffer_offset
     MOVE    ABR                                         1
     ADD
@@ -55,27 +55,28 @@ BOOT_PART_SEARCH_NEXT:
     MOVE    ABR                                         1
     SUB
     JZ      BOOT_PART_SEARCH_FOUNDED
-    CMT     70010040
+    //
+    CMT     2010040
     JUMP    BOOT_PART_SEARCH_NOT_BOOT
 BOOT_PART_SEARCH_NOT_USED:
-    CMT     70010050
+    CMT     2010050
     MOVE    AAR                                         fs_boot_part_search_buffer_offset
     MOVE    ABR                                         1
     ADD
     MOVE    fs_boot_part_search_buffer_offset           ACR
 BOOT_PART_SEARCH_NOT_BOOT:
-    CMT     70010060
+    CMT     2010060
     MOVE    AAR                                         fs_boot_part_search_buffer_offset
     MOVE    ABR                                         8
     ADD
     MOVE    fs_boot_part_search_buffer_offset           ACR
     LOOP    BOOT_PART_SEARCH_NEXT
     //
-    CMT     70010070
+    CMT     2010070
     MOVE    #boot_part_search_result_offset             0
     RET
 BOOT_PART_SEARCH_FOUNDED:
-    CMT     70010080
+    CMT     2010080
     MOVE    AAR                                         fs_boot_part_search_buffer_offset
     MOVE    ABR                                         5
     SUB
@@ -92,5 +93,6 @@ BOOT_PART_SEARCH_FOUNDED:
     ADD
     MOVE    #boot_part_search_length_high_offset        #ACR
     //
+    CMT     2010090
     MOVE    #boot_part_search_result_offset             1
 END

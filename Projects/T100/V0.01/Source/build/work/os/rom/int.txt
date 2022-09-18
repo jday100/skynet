@@ -158,11 +158,13 @@ INT069:
     MOVE    ACR                                         ABR
     JZ      INT069_ERROR
     //
+    CMT     3010690020
     MOVE    AAR                                         8
     SUB
     MOVE    ACR                                         AMF
     JNZ     INT069_ERROR
     //
+    CMT     3010690030
     MOVE    AAR                                         2
     MUL
     MOVE    ABR                                         ACR
@@ -189,6 +191,7 @@ INT069_GET:
 INT069_BLOCK:
 INT069_FORMAT:
 INT069_CLEAR:
+    CMT     3010691010
     JUMP    INT069_ERROR
     //
 INT069_READ:
@@ -200,6 +203,7 @@ INT069_READ:
     //low_offset
     //high_offset
     //
+    CMT     3010692010
     MOVE    int069_disk_buffer_offset                   int069_acr
     MOVE    int069_disk_location_index_offset           int069_adr
     MOVE    AAR                                         int069_adr
@@ -210,7 +214,7 @@ INT069_READ:
     ADD
     MOVE    int069_disk_location_high_offset            ACR
     //
-    CMT     1
+    CMT     3010692020
     //DEBUG
     MOVE    AAR                                         #int069_disk_buffer_offset
     MOVE    AAR                                         #int069_disk_location_low_offset
@@ -226,6 +230,7 @@ INT069_READ:
     MOVE    ACR                                         int069_result
     JZ      INT069_ERROR
     //
+    CMT     3010692030
     MOVE    AAR                                         @int069_result
     MOVE    ABR                                         disk_block_offset
     MOVE    ACR                                         int069_disk_buffer_offset
@@ -234,6 +239,7 @@ INT069_READ:
     MOVE    ACR                                         int069_result
     JZ      INT069_ERROR
     //
+    CMT     3010692040
     MOVE    #int069_disk_result_return                  1
     UNLOCK
     IRET
@@ -241,8 +247,8 @@ INT069_READ:
 INT069_WRITE:
     NOP
 INT069_ERROR:
+    CMT     3010699010
     MOVE    #int069_disk_result_return                  0
-    CMT     1
     UNLOCK
     IRET
 //
