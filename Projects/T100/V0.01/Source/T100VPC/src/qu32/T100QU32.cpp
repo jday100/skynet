@@ -195,3 +195,8 @@ T100QU32Interface* T100QU32::getCallback()
 {
     return m_callback;
 }
+
+T100QU32Notifier& T100QU32::getNotifier()
+{
+    return m_notifier;
+}

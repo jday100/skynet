@@ -162,11 +162,12 @@ T100BOOL T100Memory32::notify(T100WORD offset, T100WORD value)
 
     if(T100QU32Setup::DEBUG){
         if(offset >= T100QU32Setup::MEMORY_WINDOW_BEGIN && offset <= T100QU32Setup::MEMORY_WINDOW_END){
-            m_host->getCallback()->notify_memory_update(offset, value);
+            //m_host->getCallback()->notify_memory_update(offset, value);
+            m_host->getNotifier().notify_memory_update(offset, value);
         }
-        if(offset >= T100QU32Setup::PORT_WINDOW_BEGIN && offset <= T100QU32Setup::PORT_WINDOW_END){
-            m_host->getCallback()->notify_port_update(offset, value);
-        }
+        //if(offset >= T100QU32Setup::PORT_WINDOW_BEGIN && offset <= T100QU32Setup::PORT_WINDOW_END){
+            //m_host->getCallback()->notify_port_update(offset, value);
+        //}
     }
 
     return result;

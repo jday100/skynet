@@ -66,6 +66,7 @@ const long T100VPCFrame::ID_THREAD_QUIT = wxNewId();
 const long T100VPCFrame::ID_DEBUG_REGISTER_UPDATE = wxNewId();
 const long T100VPCFrame::ID_DEBUG_MEMORY_UPDATE = wxNewId();
 const long T100VPCFrame::ID_DEBUG_PORT_UPDATE = wxNewId();
+const long T100VPCFrame::ID_DEBUG_PAUSE = wxNewId();
 
 
 BEGIN_EVENT_TABLE(T100VPCFrame,wxFrame)
@@ -77,6 +78,8 @@ BEGIN_EVENT_TABLE(T100VPCFrame,wxFrame)
     EVT_THREAD(ID_DEBUG_REGISTER_UPDATE, T100VPCFrame::OnDebugRegisterUpdate)
     EVT_THREAD(ID_DEBUG_MEMORY_UPDATE, T100VPCFrame::OnDebugMemoryUpdate)
     EVT_THREAD(ID_DEBUG_PORT_UPDATE, T100VPCFrame::OnDebugPortUpdate)
+    //
+    EVT_THREAD(ID_DEBUG_PAUSE, T100VPCFrame::OnDebugPause)
 END_EVENT_TABLE()
 
 T100VPCFrame::T100VPCFrame(wxWindow* parent,wxWindowID id)
@@ -256,4 +259,9 @@ void T100VPCFrame::OnDebugPortUpdate(wxThreadEvent& event)
         m_view->getDebugFrame()->OnPortUpdate(data->OFFSET, data->VALUE);
         T100SAFE_DELETE(data);
     }
+}
+
+void T100VPCFrame::OnDebugPause(wxThreadEvent& event)
+{
+    m_view->getDebugFrame()->Show();
 }

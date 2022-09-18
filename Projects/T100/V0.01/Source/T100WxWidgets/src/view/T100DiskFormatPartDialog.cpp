@@ -73,6 +73,6 @@ void T100DiskFormatPartDialog::OnBrowseButtonClick(wxCommandEvent& event)
     wxFileDialog        dialog(this, _T("Select a boot file"), "", "", _T("Boot file (*.bin) | *.bin"), wxFD_FILE_MUST_EXIST);
 
     if(dialog.ShowModal() == wxID_OK){
-        FileComboBox->SetValue(dialog.GetFilename());
+        FileComboBox->SetValue(dialog.GetPath());
     }
 }

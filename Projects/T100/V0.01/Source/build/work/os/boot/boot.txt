@@ -1,4 +1,3 @@
-IMPORT  "rom\data.txt"
 IMPORT  "fs\fs.txt"
 
 MODE    REAL

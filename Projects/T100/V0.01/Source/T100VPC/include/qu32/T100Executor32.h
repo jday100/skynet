@@ -25,6 +25,8 @@ class T100Executor32 : public T100Thread
         T100BOOL                        step();
         T100BOOL                        next();
 
+        T100BOOL                        pause();
+
     protected:
         T100VOID                        run();
 

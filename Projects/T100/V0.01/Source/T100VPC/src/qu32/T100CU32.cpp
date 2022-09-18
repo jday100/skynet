@@ -20,7 +20,8 @@ T100VOID T100CU32::setCOR(T100WORD value)
 {
     m_cor.setValue(value);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100COR, value);
+        //m_host->getCallback()->notify_register_update(T100COR, value);
+        m_host->getNotifier().notify_register_cor();
     }
 }
 
@@ -31,7 +32,8 @@ T100WORD T100CU32::getCOR()
     value = m_cor.getValue();
     m_cor.setValue(value + 1);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100COR, value + 1);
+        //m_host->getCallback()->notify_register_update(T100COR, value + 1);
+        m_host->getNotifier().notify_register_cor();
     }
 
     return value;
@@ -41,7 +43,8 @@ T100VOID T100CU32::setCBR(T100WORD value)
 {
     m_cbr.setValue(value);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100CBR, value);
+        //m_host->getCallback()->notify_register_update(T100CBR, value);
+        m_host->getNotifier().notify_register_cbr();
     }
 }
 
@@ -54,7 +57,8 @@ T100VOID T100CU32::setCCR(T100WORD value)
 {
     m_ccr.setValue(value);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100CBR, value);
+        //m_host->getCallback()->notify_register_update(T100CBR, value);
+        m_host->getNotifier().notify_register_ccr();
     }
 }
 

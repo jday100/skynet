@@ -9,6 +9,7 @@
 #include "T100Interrupt32.h"
 #include "T100Executor32.h"
 #include "T100QU32Interface.h"
+#include "T100QU32Notifier.h"
 
 
 class T100QU32
@@ -26,6 +27,7 @@ class T100QU32
         T100Port32*             getPort32();
         T100Interrupt32*        getInterrupt32();
         T100Executor32*         getExecutor32();
+        T100QU32Notifier&       getNotifier();
 
         T100BOOL                create();
 
@@ -63,6 +65,7 @@ class T100QU32
         T100Executor32*         m_executor      = T100NULL;
 
         T100QU32Interface*      m_callback      = T100NULL;
+        T100QU32Notifier        m_notifier;
 
 };
 

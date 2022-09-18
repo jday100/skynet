@@ -576,15 +576,17 @@ T100VOID T100DiskCtrl::OnFormatPart(wxCommandEvent& event)
     if(!item)return;
     if(!item->PART)return;
 
-    T100BOOL        isboot = T100TRUE;
+    T100BOOL                isboot = T100TRUE;
+    T100DISK_PART_INFO      info;
 
-    isboot = item->PART->BOOT;
+    isboot      = item->PART->BOOT;
+    info.PART   = item->PART;
 
     if(isboot){
         T100DiskFormatPartDialog        dialog(this);
 
         if(dialog.ShowModal() == wxID_OK){
-
+            info.BOOT_FILE  = dialog.FileComboBox->GetValue().ToStdWstring();
         }else{
             return;
         }
@@ -598,7 +600,7 @@ T100VOID T100DiskCtrl::OnFormatPart(wxCommandEvent& event)
         }
     }
 
-    if(OnMenuFormat(item->PART)){
+    if(OnMenuFormat(&info)){
         item->PART->ISFORMATED  = T100TRUE;
         Refresh();
     }

@@ -89,3 +89,10 @@ T100BOOL T100VPCLink::notify_port_update(T100WORD offset, T100WORD value)
 
     wxQueueEvent(m_view->getFrame(), event.Clone());
 }
+
+T100BOOL T100VPCLink::notify_debug_pause()
+{
+    wxThreadEvent       event(wxEVT_THREAD, T100VPCFrame::ID_DEBUG_PAUSE);
+
+    wxQueueEvent(m_view->getFrame(), event.Clone());
+}

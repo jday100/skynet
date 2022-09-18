@@ -19,6 +19,8 @@ class T100QU32Interface
         virtual T100BOOL            notify_port_update(T100WORD, T100WORD) = 0;
 
 
+        virtual T100BOOL            notify_debug_pause() = 0;
+
 
     protected:
 

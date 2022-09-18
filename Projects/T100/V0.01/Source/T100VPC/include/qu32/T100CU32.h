@@ -13,6 +13,7 @@ class T100CU32
     friend class T100OrderJnz;
     friend class T100OrderJump;
     friend class T100OrderLoop;
+    friend class T100QU32Timer;
     friend class T100Interrupt32;
     friend class T100VPCDebugFrame;
     public:

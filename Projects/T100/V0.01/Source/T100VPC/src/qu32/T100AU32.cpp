@@ -3,6 +3,7 @@
 #include "T100OrderTypes.h"
 #include "T100QU32.h"
 #include "T100QU32Interface.h"
+#include "T100QU32Notifier.h"
 
 
 T100AU32::T100AU32(T100QU32* host)
@@ -20,7 +21,8 @@ T100VOID T100AU32::setAAR(T100WORD value)
 {
     m_aar.setValue(value);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100AAR, value);
+        //m_host->getCallback()->notify_register_update(T100AAR, value);
+        m_host->getNotifier().notify_register_aar();
     }
 }
 
@@ -33,7 +35,8 @@ T100VOID T100AU32::setABR(T100WORD value)
 {
     m_abr.setValue(value);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100ABR, value);
+        //m_host->getCallback()->notify_register_update(T100ABR, value);
+        m_host->getNotifier().notify_register_abr();
     }
 }
 
@@ -46,7 +49,8 @@ T100VOID T100AU32::setACR(T100WORD value)
 {
     m_acr.setValue(value);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100ACR, value);
+        //m_host->getCallback()->notify_register_update(T100ACR, value);
+        m_host->getNotifier().notify_register_acr();
     }
 }
 
@@ -59,7 +63,8 @@ T100VOID T100AU32::setADR(T100WORD value)
 {
     m_adr.setValue(value);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100ADR, value);
+        //m_host->getCallback()->notify_register_update(T100ADR, value);
+        m_host->getNotifier().notify_register_adr();
     }
 }
 
@@ -72,7 +77,8 @@ T100VOID T100AU32::setACF(T100WORD value)
 {
     m_acf.setValue(value);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100ACF, value);
+        //m_host->getCallback()->notify_register_update(T100ACF, value);
+        m_host->getNotifier().notify_register_acf();
     }
 }
 
@@ -85,7 +91,8 @@ T100VOID T100AU32::setAMF(T100WORD value)
 {
     m_amf.setValue(value);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100AMF, value);
+        //m_host->getCallback()->notify_register_update(T100AMF, value);
+        m_host->getNotifier().notify_register_amf();
     }
 }
 
@@ -98,7 +105,8 @@ T100VOID T100AU32::setAOF(T100WORD value)
 {
     m_aof.setValue(value);
     if(T100QU32Setup::DEBUG){
-        m_host->getCallback()->notify_register_update(T100AOF, value);
+        //m_host->getCallback()->notify_register_update(T100AOF, value);
+        m_host->getNotifier().notify_register_aof();
     }
 }
 

@@ -12,7 +12,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-l=work/os .\work\os\boot\boot.txt .\build\boot.bin" />
+				<Option parameters="-l=work/os work/os/rom/rom.txt  build/rom.bin" />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />

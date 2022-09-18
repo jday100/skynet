@@ -74,6 +74,8 @@ class T100VPCFrame: public wxFrame
         static const long ID_DEBUG_MEMORY_UPDATE;
         static const long ID_DEBUG_PORT_UPDATE;
 
+        static const long ID_DEBUG_PAUSE;
+
         void OnThreadStart(wxThreadEvent& event);
         void OnThreadStop(wxThreadEvent& event);
         void OnThreadQuit(wxThreadEvent& event);
@@ -81,6 +83,8 @@ class T100VPCFrame: public wxFrame
         void OnDebugRegisterUpdate(wxThreadEvent& event);
         void OnDebugMemoryUpdate(wxThreadEvent& event);
         void OnDebugPortUpdate(wxThreadEvent& event);
+
+        void OnDebugPause(wxThreadEvent& event);
 
     private:
         T100VOID            create();

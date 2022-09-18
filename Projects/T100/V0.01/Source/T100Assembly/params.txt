@@ -4,3 +4,5 @@ work/os/rom.txt  build/rom.bin
 -t
 
 -l=work/os work/os/rom/rom.txt  build/rom.bin
+
+-l=work/os .\work\os\boot\boot.txt .\build\boot.bin

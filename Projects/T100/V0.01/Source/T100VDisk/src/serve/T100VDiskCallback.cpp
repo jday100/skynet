@@ -176,12 +176,20 @@ T100BOOL T100VDiskCallback::ctrl_menu_remove(void* d)
 
 T100BOOL T100VDiskCallback::ctrl_menu_format(void* d)
 {
-    T100BOOL            result          = T100TRUE;
-    T100DISK_PART*      part            = T100NULL;
+    T100BOOL                result          = T100TRUE;
+    T100DISK_PART_INFO*     info            = T100NULL;
 
-    part    = static_cast<T100DISK_PART*>(d);
+    info    = static_cast<T100DISK_PART_INFO*>(d);
 
-    result  = m_serve->getVDisk()->fs_format(part->NAME);
+    if(!info){
+        return T100FALSE;
+    }
+
+    if((!info->PART->BOOT) && info->BOOT_FILE.empty()){
+        result  = m_serve->getVDisk()->fs_format(info->PART->NAME);
+    }else{
+        result  = m_serve->getVDisk()->fs_format(info->PART->NAME, info->BOOT_FILE);
+    }
 
     return result;
 }

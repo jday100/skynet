@@ -56,6 +56,11 @@ typedef struct{
 }T100DISK_PART_CTRL;
 
 typedef struct{
+    T100DISK_PART*          PART        = T100NULL;
+    T100STRING              BOOT_FILE;
+}T100DISK_PART_INFO;
+
+typedef struct{
     T100STRING      NAME;
     T100BOOL        ISDIR;
 }T100DISK_ITEM;

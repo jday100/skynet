@@ -31,6 +31,7 @@
 					<Add directory="../T100VPC" />
 					<Add directory="include/view/frame" />
 					<Add directory="include/data" />
+					<Add directory="T100VPC/include/qu32" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -65,6 +66,7 @@
 					<Add directory="include/view/dialog" />
 					<Add directory="include/view/frame" />
 					<Add directory="include/data" />
+					<Add directory="T100VPC/include/qu32" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -102,6 +104,7 @@
 					<Add directory="../T100VPC" />
 					<Add directory="include/view/frame" />
 					<Add directory="include/data" />
+					<Add directory="T100VPC/include/qu32" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -209,7 +212,9 @@
 		<Unit filename="include/qu32/T100Port32.h" />
 		<Unit filename="include/qu32/T100QU32.h" />
 		<Unit filename="include/qu32/T100QU32Interface.h" />
+		<Unit filename="include/qu32/T100QU32Notifier.h" />
 		<Unit filename="include/qu32/T100QU32Setup.h" />
+		<Unit filename="include/qu32/T100QU32Timer.h" />
 		<Unit filename="include/qu32/T100Register32.h" />
 		<Unit filename="include/serve/T100VPCCallback.h" />
 		<Unit filename="include/serve/T100VPCLink.h" />
@@ -298,7 +303,9 @@
 		<Unit filename="src/qu32/T100Port32.cpp" />
 		<Unit filename="src/qu32/T100QU32.cpp" />
 		<Unit filename="src/qu32/T100QU32Interface.cpp" />
+		<Unit filename="src/qu32/T100QU32Notifier.cpp" />
 		<Unit filename="src/qu32/T100QU32Setup.cpp" />
+		<Unit filename="src/qu32/T100QU32Timer.cpp" />
 		<Unit filename="src/qu32/T100Register32.cpp" />
 		<Unit filename="src/serve/T100VPCCallback.cpp" />
 		<Unit filename="src/serve/T100VPCLink.cpp" />

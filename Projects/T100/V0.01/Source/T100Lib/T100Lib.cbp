@@ -121,6 +121,7 @@
 		<Unit filename="include/T100TextFileReader.h" />
 		<Unit filename="include/T100TextFileWriter.h" />
 		<Unit filename="include/T100Thread.h" />
+		<Unit filename="include/T100Timer.h" />
 		<Unit filename="include/T100Token.h" />
 		<Unit filename="include/T100Unicode.h" />
 		<Unit filename="include/T100UnicodeCommon.h" />
@@ -183,6 +184,7 @@
 		<Unit filename="src/T100TextFileReader.cpp" />
 		<Unit filename="src/T100TextFileWriter.cpp" />
 		<Unit filename="src/T100Thread.cpp" />
+		<Unit filename="src/T100Timer.cpp" />
 		<Unit filename="src/T100Token.cpp" />
 		<Unit filename="src/T100Unicode.cpp" />
 		<Unit filename="src/T100Writer.cpp" />

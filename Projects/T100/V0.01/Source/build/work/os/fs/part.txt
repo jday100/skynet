@@ -36,6 +36,7 @@ PROC=BOOT_PART_SEARCH
     MOVE    CCR                                         ACR
     //
 BOOT_PART_SEARCH_NEXT:
+    DBG
     CMT     2010020
     MOVE    AAR                                         fs_boot_part_search_buffer_offset
     MOVE    ABR                                         22
