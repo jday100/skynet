@@ -30,6 +30,7 @@ class T100VPCCallback
         static T100BOOL                 debug_button_pause_click(void* = T100NULL);
         static T100BOOL                 debug_button_step_click(void* = T100NULL);
         static T100BOOL                 debug_button_next_click(void* = T100NULL);
+        static T100BOOL                 debug_button_comment_click(void* = T100NULL);
         static T100BOOL                 debug_button_call_click(void* = T100NULL);
         static T100BOOL                 debug_button_return_click(void* = T100NULL);
 

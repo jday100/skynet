@@ -1,6 +1,7 @@
 #ifndef T100REGISTER32_H
 #define T100REGISTER32_H
 
+#include <atomic>
 #include "T100Common.h"
 
 
@@ -16,8 +17,8 @@ class T100Register32
     protected:
 
     private:
-        T100WORD            m_value         = 0;
-
+        //volatile T100WORD            m_value         = 0;
+        std::atomic_int32_t     m_value;
 };
 
 #endif // T100REGISTER32_H

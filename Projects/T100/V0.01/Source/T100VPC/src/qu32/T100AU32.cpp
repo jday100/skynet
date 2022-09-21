@@ -125,13 +125,13 @@ T100VOID T100AU32::Add()
 
     value.DWORD = (T100DWORD)a + b;
 
-    m_acr.setValue(value.WORD_LOW.WORD);
-    m_adr.setValue(value.WORD_HIGH.WORD);
+    setACR(value.WORD_LOW.WORD);
+    setADR(value.WORD_HIGH.WORD);
 
     if(value.WORD_HIGH.WORD > 0){
-        m_acf.setValue(1);
+        setACF(1);
     }else{
-        m_acf.setValue(0);
+        setACF(0);
     }
 }
 
@@ -144,15 +144,15 @@ T100VOID T100AU32::Sub()
 
     if(a >= b){
         c = a - b;
-        m_amf.setValue(0);
+        setAMF(0);
     }else{
         c = b - a;
-        m_amf.setValue(1);
+        setAMF(1);
     }
     d = 0;
 
-    m_acr.setValue(c);
-    m_adr.setValue(d);
+    setACR(c);
+    setADR(d);
 }
 
 T100VOID T100AU32::Mul()
@@ -165,13 +165,13 @@ T100VOID T100AU32::Mul()
 
     value.DWORD = (T100DWORD)a * b;
 
-    m_acr.setValue(value.WORD_LOW.WORD);
-    m_adr.setValue(value.WORD_HIGH.WORD);
+    setACR(value.WORD_LOW.WORD);
+    setADR(value.WORD_HIGH.WORD);
 
     if(value.WORD_HIGH.WORD > 0){
-        m_aof.setValue(1);
+        setAOF(1);
     }else{
-        m_aof.setValue(0);
+        setAOF(0);
     }
 }
 
@@ -185,10 +185,10 @@ T100VOID T100AU32::Div()
     c = a / b;
     d = a % b;
 
-    m_acr.setValue(c);
-    m_adr.setValue(d);
+    setACR(c);
+    setADR(d);
 
-    m_aof.setValue(0);
+    setAOF(0);
 }
 
 T100VOID T100AU32::And()
@@ -201,8 +201,8 @@ T100VOID T100AU32::And()
     c = a & b;
     d = 0;
 
-    m_acr.setValue(c);
-    m_adr.setValue(d);
+    setACR(c);
+    setADR(d);
 }
 
 T100VOID T100AU32::Or()
@@ -215,8 +215,8 @@ T100VOID T100AU32::Or()
     c = a | b;
     d = 0;
 
-    m_acr.setValue(c);
-    m_adr.setValue(d);
+    setACR(c);
+    setADR(d);
 }
 
 T100VOID T100AU32::Not()
@@ -229,8 +229,8 @@ T100VOID T100AU32::Not()
     c = !a;
     d = 0;
 
-    m_acr.setValue(c);
-    m_adr.setValue(d);
+    setACR(c);
+    setADR(d);
 }
 
 T100VOID T100AU32::Xor()

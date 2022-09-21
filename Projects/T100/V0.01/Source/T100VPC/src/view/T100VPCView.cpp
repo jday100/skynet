@@ -60,7 +60,10 @@ T100BOOL T100VPCView::ShowDebug()
 {
     m_debug = T100NEW T100VPCDebugFrame(m_frame);
 
-    T100VPCSetup::DEBUG = T100TRUE;
+    T100VPCSetup::DEBUG         = T100TRUE;
+    T100VPCSetup::DEBUG_MODE    = T100EXECUTOR_MODE_RUN;
+    T100VPCSetup::DEBUG_STATE   = T100EXECUTOR_STATE_PAUSE;
+
     m_debug->Show();
 }
 

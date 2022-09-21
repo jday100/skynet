@@ -1,5 +1,6 @@
 #include "T100QU32Timer.h"
 
+#include "T100TestTools.h"
 #include "T100OrderTypes.h"
 #include "T100QU32Notifier.h"
 #include "T100QU32.h"
@@ -27,6 +28,11 @@ T100QU32* T100QU32Timer::getHost()
 
 T100BOOL T100QU32Timer::OnTimer()
 {
+    //T100TestTools::Print(L"OnTimer");
+
+    //T100TestTools::Print(&(m_host->getNotifier().m_cbr));
+    //T100TestTools::Print(to_wstring(m_host->getNotifier().m_cbr));
+
     T100WORD    value;
 
     if(m_host->getNotifier().m_cor){

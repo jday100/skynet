@@ -91,7 +91,7 @@ T100BOOL T100Port32::in(T100WORD offset, T100WORD& value)
 {
     T100BOOL            result          = T100FALSE;
 
-    if(offset < m_device_limit){
+    if(offset < m_port_limit){
         T100BYTE    id;
 
         id = offset >> 2;
@@ -108,7 +108,7 @@ T100BOOL T100Port32::in(T100WORD offset, T100WORD& value)
     }else if(offset < m_block_limit){
         T100WORD    id;
 
-        id = offset / m_device_limit;
+        id = offset / m_port_limit;
 
         if(id > m_blocks.size()){
             return T100FALSE;
@@ -119,7 +119,7 @@ T100BOOL T100Port32::in(T100WORD offset, T100WORD& value)
             T100WORD            os;
             T100DEVICE_BLOCK*   block   = T100NULL;
 
-            os      = offset % m_device_limit;
+            os      = offset % m_port_limit;
             block   = m_block_hash[id];
 
             value = block->data[os];
@@ -155,7 +155,7 @@ T100BOOL T100Port32::out(T100WORD offset, T100WORD value)
 {
     T100BOOL            result          = T100FALSE;
 
-    if(offset < m_device_limit){
+    if(offset < m_port_limit){
         T100BYTE        id;
 
         id = offset >> 2;
@@ -172,7 +172,7 @@ T100BOOL T100Port32::out(T100WORD offset, T100WORD value)
     }else if(offset < m_block_limit){
         T100WORD        id;
 
-        id = offset / m_device_limit;
+        id = offset / m_port_limit;
         if(id > m_blocks.size()){
             return T100FALSE;
         }
@@ -182,7 +182,7 @@ T100BOOL T100Port32::out(T100WORD offset, T100WORD value)
             T100WORD                os;
             T100DEVICE_BLOCK*       block       = T100NULL;
 
-            os      = offset % m_device_limit;
+            os      = offset % m_port_limit;
             block   = m_block_hash[id];
 
             block->data[os] = value;

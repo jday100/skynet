@@ -159,6 +159,15 @@ T100BOOL T100VPCCallback::debug_button_next_click(void* d)
     }
 }
 
+T100BOOL T100VPCCallback::debug_button_comment_click(void* d)
+{
+    if(m_serve->m_host){
+        m_serve->m_host->nextComment();
+    }else{
+        T100QU32Setup::DEBUG_MODE   = T100EXECUTOR_MODE_NEXT_COMMENT;
+    }
+}
+
 T100BOOL T100VPCCallback::debug_button_call_click(void* d)
 {
     if(m_serve->m_host){
@@ -207,7 +216,30 @@ T100BOOL T100VPCCallback::debug_memory_offset_update(void* d)
 
 T100BOOL T100VPCCallback::debug_port_offset_update(void* d)
 {
+    if(!d)return T100FALSE;
+    if(!m_serve->m_host)return T100FALSE;
 
+    T100VPCDebugFrame*      frame   = T100NULL;
+
+    frame = static_cast<T100VPCDebugFrame*>(d);
+    if(!frame)return T100FALSE;
+
+    wxString    temp;
+    T100LONG    value;
+
+    temp = frame->PortOffsetComboBox->GetValue();
+    if(!temp.ToLongLong(&value)){
+        return T100FALSE;
+    }
+
+    T100VPCSetup::PORT_WINDOW_BEGIN     = value;
+    T100VPCSetup::PORT_WINDOW_END       = T100VPCSetup::PORT_WINDOW_BEGIN + frame->PortListView->GetCountPerPage();
+
+    frame->PortScrollBar->SetThumbPosition(value);
+
+    frame->updatePort(m_serve->m_host->getPort32());
+
+    return T100TRUE;
 }
 
 ///

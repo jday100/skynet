@@ -24,7 +24,6 @@ ROM_INIT:
     CMT     30030
 
     //INT_TEST
-    DBG
     CMT     30040
     MOVE    AAR                     @rom_result
     INT     1

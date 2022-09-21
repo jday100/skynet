@@ -1,5 +1,8 @@
 #include "T100OrderCmt.h"
 
+#include "T100TestTools.h"
+
+
 T100OrderCmt::T100OrderCmt(T100QU32* host, T100Executor32* exec)
     :T100Order(host, exec)
 {
@@ -14,6 +17,10 @@ T100OrderCmt::~T100OrderCmt()
 T100BOOL T100OrderCmt::run()
 {
     id = getHost()->getCU32()->step();
+
+    T100TestTools::Print(std::to_wstring(id));
+
+    getHost()->getExecutor32()->pauseComment();
 
     return T100TRUE;
 }

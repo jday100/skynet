@@ -42,6 +42,7 @@ class T100QU32
         T100BOOL                resume();
         T100BOOL                step();
         T100BOOL                next();
+        T100BOOL                nextComment();
         T100BOOL                nextCall();
         T100BOOL                nextReturn();
 

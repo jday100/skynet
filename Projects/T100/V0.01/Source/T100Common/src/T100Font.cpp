@@ -170,7 +170,7 @@ T100BOOL T100Font::getFont(T100WORD key, T100FONT_DATA_VECTOR*& font)
 
     T100FONT_DATA_VECTOR& temp = *font;
 
-    T100TestTools::Print(temp);
+    //T100TestTools::Print(temp);
 
     return T100TRUE;
 }

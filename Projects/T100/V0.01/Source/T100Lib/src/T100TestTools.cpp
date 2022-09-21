@@ -71,3 +71,15 @@ T100STDSTRING T100TestTools::Hex(T100WORD& value)
 
     return result;
 }
+
+T100BOOL T100TestTools::Print(T100WSTRING msg)
+{
+    wprintf(L"%ls\n", msg.c_str());
+    return T100TRUE;
+}
+
+T100BOOL T100TestTools::Print(void* value)
+{
+    wprintf(L"%10X\n", value);
+    return T100TRUE;
+}

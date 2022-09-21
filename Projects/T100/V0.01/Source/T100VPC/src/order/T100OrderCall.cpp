@@ -27,6 +27,8 @@ T100BOOL T100OrderCall::run()
         getHost()->getInterrupt32()->call(target.OPERATOR.VALUE);
     }
 
+    getHost()->getExecutor32()->pauseCall();
+
     return T100TRUE;
 
 }

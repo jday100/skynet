@@ -39,7 +39,8 @@ const long T100VPCDebugFrame::ID_LISTVIEW_PORT = wxNewId();
 const long T100VPCDebugFrame::ID_SCROLLBAR_PORT = wxNewId();
 const long T100VPCDebugFrame::ID_BUTTON_RUN = wxNewId();
 const long T100VPCDebugFrame::ID_BUTTON_STEP = wxNewId();
-const long T100VPCDebugFrame::ID_BUTTON3 = wxNewId();
+const long T100VPCDebugFrame::ID_BUTTON_NEXT = wxNewId();
+const long T100VPCDebugFrame::ID_BUTTON_COMMENT = wxNewId();
 const long T100VPCDebugFrame::ID_BUTTON_CALL = wxNewId();
 const long T100VPCDebugFrame::ID_BUTTON_RETURN = wxNewId();
 const long T100VPCDebugFrame::ID_BUTTON_PAUSE = wxNewId();
@@ -184,8 +185,10 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	BoxSizer6->Add(RunButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StepButton = new wxButton(this, ID_BUTTON_STEP, _("Step"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_STEP"));
 	BoxSizer6->Add(StepButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	NextButton = new wxButton(this, ID_BUTTON3, _("Next"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON3"));
+	NextButton = new wxButton(this, ID_BUTTON_NEXT, _("Next"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_NEXT"));
 	BoxSizer6->Add(NextButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	CommentButton = new wxButton(this, ID_BUTTON_COMMENT, _("Comment"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_COMMENT"));
+	BoxSizer6->Add(CommentButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	CallButton = new wxButton(this, ID_BUTTON_CALL, _("Call"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_CALL"));
 	BoxSizer6->Add(CallButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	ReturnButton = new wxButton(this, ID_BUTTON_RETURN, _("Return"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_RETURN"));
@@ -251,7 +254,8 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	Connect(ID_SCROLLBAR_PORT,wxEVT_SCROLL_CHANGED,(wxObjectEventFunction)&T100VPCDebugFrame::OnPortScrollBarScrollChanged);
 	Connect(ID_BUTTON_RUN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugFrame::OnRunButtonClick);
 	Connect(ID_BUTTON_STEP,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugFrame::OnStepButtonClick);
-	Connect(ID_BUTTON3,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugFrame::OnNextButtonClick);
+	Connect(ID_BUTTON_NEXT,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugFrame::OnNextButtonClick);
+	Connect(ID_BUTTON_COMMENT,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugFrame::OnCommentButtonClick);
 	Connect(ID_BUTTON_CALL,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugFrame::OnCallButtonClick);
 	Connect(ID_BUTTON_RETURN,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugFrame::OnReturnButtonClick);
 	Connect(ID_BUTTON_PAUSE,wxEVT_COMMAND_BUTTON_CLICKED,(wxObjectEventFunction)&T100VPCDebugFrame::OnPauseButtonClick);
@@ -411,6 +415,7 @@ void T100VPCDebugFrame::OnAOFComboBoxTextEnter(wxCommandEvent& event)
 
 void T100VPCDebugFrame::OnMemoryOffsetComboBoxSelected(wxCommandEvent& event)
 {
+    T100VPCCallback::debug_memory_offset_update(this);
 }
 
 void T100VPCDebugFrame::OnMemoryOffsetComboBoxTextUpdated(wxCommandEvent& event)
@@ -419,7 +424,11 @@ void T100VPCDebugFrame::OnMemoryOffsetComboBoxTextUpdated(wxCommandEvent& event)
 
 void T100VPCDebugFrame::OnMemoryOffsetComboBoxTextEnter(wxCommandEvent& event)
 {
-    T100VPCCallback::debug_memory_offset_update(this);
+    if(T100VPCCallback::debug_memory_offset_update(this)){
+        if(!find(MemoryOffsetComboBox)){
+            MemoryOffsetComboBox->Append(MemoryOffsetComboBox->GetValue());
+        }
+    }
 }
 
 void T100VPCDebugFrame::OnMemoryScrollBarScrollLineDown(wxScrollEvent& event)
@@ -444,6 +453,7 @@ void T100VPCDebugFrame::OnMemoryScrollBarScrollChanged(wxScrollEvent& event)
 
 void T100VPCDebugFrame::OnPortOffsetComboBoxSelected(wxCommandEvent& event)
 {
+    T100VPCCallback::debug_port_offset_update(this);
 }
 
 void T100VPCDebugFrame::OnPortOffsetComboBoxTextUpdated(wxCommandEvent& event)
@@ -452,6 +462,11 @@ void T100VPCDebugFrame::OnPortOffsetComboBoxTextUpdated(wxCommandEvent& event)
 
 void T100VPCDebugFrame::OnPortOffsetComboBoxTextEnter(wxCommandEvent& event)
 {
+    if(T100VPCCallback::debug_port_offset_update(this)){
+        if(!find(PortOffsetComboBox)){
+            PortOffsetComboBox->Append(PortOffsetComboBox->GetValue());
+        }
+    }
 }
 
 void T100VPCDebugFrame::OnMemoryScrollBarScrollLineUp(wxScrollEvent& event)
@@ -524,6 +539,11 @@ void T100VPCDebugFrame::OnStepButtonClick(wxCommandEvent& event)
 void T100VPCDebugFrame::OnNextButtonClick(wxCommandEvent& event)
 {
     T100VPCCallback::debug_button_next_click();
+}
+
+void T100VPCDebugFrame::OnCommentButtonClick(wxCommandEvent& event)
+{
+    T100VPCCallback::debug_button_comment_click();
 }
 
 void T100VPCDebugFrame::OnCallButtonClick(wxCommandEvent& event)
@@ -741,4 +761,23 @@ T100BOOL T100VPCDebugFrame::updatePort(T100Port32* port)
         offset++;
     }
     return T100TRUE;
+}
+
+T100BOOL T100VPCDebugFrame::find(wxComboBox* combo)
+{
+    T100BOOL        result      = T100TRUE;
+    wxString        value;
+    T100WORD        count;
+    T100WORD        i;
+
+    value = combo->GetValue();
+    count = combo->GetCount();
+
+    for(i=0;i<count;i++){
+        if(combo->GetString(i) == value){
+            return T100TRUE;
+        }
+    }
+
+    return T100FALSE;
 }

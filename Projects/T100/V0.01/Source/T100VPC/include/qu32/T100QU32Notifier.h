@@ -33,10 +33,15 @@ class T100QU32Notifier
         T100VOID                notify_port_update(T100WORD, T100WORD);
 
     protected:
+        T100VOID                create();
+        T100VOID                destroy();
+
         T100VOID                init();
 
     private:
         T100QU32Timer           m_timer;
+
+        std::atomic_bool        m_running;
 
         std::atomic_bool        m_cor;
         std::atomic_bool        m_cbr;

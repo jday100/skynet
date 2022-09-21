@@ -60,7 +60,7 @@ END
 //item_properties[2]
 //
 PROC=FILE_OPEN
-    CMT     30050010
+    CMT     4030010
     MOVE    file_open_result_offset                         AAR
     MOVE    file_open_name_offset                           ABR
     MOVE    file_open_handle_offset                         ACR
@@ -90,7 +90,7 @@ PROC=FILE_OPEN
     MOVE    ACR                                             file_open_result
     JZ      FILE_OPEN_ERROR
     //
-    CMT     30050020
+    CMT     4030020
     MOVE    #file_open_value_location_low_offset            file_open_item_location_low
     MOVE    #file_open_value_location_high_offset           file_open_item_location_high
     MOVE    #file_open_value_length_low_offset              file_open_item_length_low
@@ -98,23 +98,23 @@ PROC=FILE_OPEN
     MOVE    #file_open_value_properties_offset[0]           file_open_item_properties[0]
     MOVE    #file_open_value_properties_offset[1]           file_open_item_properties[1]
     //
-    CMT     30050030
+    CMT     4030030
     MOVE    #file_open_result_offset                        1
     RET
 FILE_OPEN_ERROR:
-    CMT     30050040
+    CMT     4030040
     MOVE    #file_open_result_offset                        0
 END
 
 PROC=FILE_CLOSE
-    CMT     30050060
+    CMT     4031060
     MOVE    file_close_result_offset                        AAR
     //
-    CMT     30050070
+    CMT     4031070
     MOVE    #file_close_result_offset                       1
     RET
 FILE_CLOSE_ERROR:
-    CMT     30050080
+    CMT     4031080
     MOVE    #file_close_result_offset                       0
 END
 
@@ -125,7 +125,7 @@ END
 //buffer_offset
 //
 PROC=FILE_LOAD
-    CMT     30050100
+    CMT     4033010
     MOVE    file_load_result_offset                         AAR
     MOVE    file_load_location_low                          ABR
     MOVE    file_load_location_high                         ACR
@@ -133,19 +133,19 @@ PROC=FILE_LOAD
     //
     MOVE    ACR                                             file_load_location_low
     JZ      FILE_LOAD_ERROR
-    CMT     30050110
+    CMT     4033020
     MOVE    ACR                                             file_load_buffer_offset
     JZ      FILE_LOAD_ERROR
     //
 FILE_LOAD_NEXT:
-    CMT     30050120
+    CMT     4033030
     MOVE    AAR                                             @file_load_result
     MOVE    ABR                                             @file_load_location_low
     CALL    ITEM_EQUAL_ISEND
     MOVE    ACR                                             file_load_result
     JNZ     FILE_LOAD_END
     //
-    CMT     30050130
+    CMT     4033040
     MOVE    AAR                                             @file_load_result
     MOVE    ABR                                             file_load_location_low
     MOVE    ACR                                             file_load_location_high
@@ -154,7 +154,7 @@ FILE_LOAD_NEXT:
     MOVE    ACR                                             file_load_result
     JZ      FILE_LOAD_ERROR
     //
-    CMT     30050140
+    CMT     4033050
     MOVE    AAR                                             @file_load_result
     MOVE    ABR                                             @file_load_location_low
     MOVE    ACR                                             @file_load_value_location_low
@@ -162,7 +162,7 @@ FILE_LOAD_NEXT:
     MOVE    ACR                                             file_load_result
     JZ      FILE_LOAD_ERROR
     //
-    CMT     30050150
+    CMT     4033060
     MOVE    AAR                                             file_load_buffer_offset
     MOVE    ABR                                             16384
     ADD
@@ -172,11 +172,11 @@ FILE_LOAD_NEXT:
     //
 FILE_LOAD_END:
     //
-    CMT     30050160
+    CMT     4033070
     MOVE    #file_load_result_offset                        1
     RET
 FILE_LOAD_ERROR:
-    CMT     30050170
+    CMT     4033080
     MOVE    #file_load_result_offset                        0
 END
 
@@ -187,7 +187,7 @@ END
 //buffer_offset
 //
 PROC=FILE_READ
-    CMT     30050190
+    CMT     4034010
     MOVE    file_read_result_offset                         AAR
     MOVE    file_read_location_low                          ABR
     MOVE    file_read_location_high                         ACR
@@ -200,6 +200,7 @@ PROC=FILE_READ
     MOVE    ACR                                             file_read_result
     JZ      FILE_READ_ERROR
     //
+    CMT     4034020
     MOVE    AAR                                             @file_read_result
     MOVE    ABR                                             @file_read_middle_low
     MOVE    ACR                                             @file_read_location_low
@@ -207,7 +208,7 @@ PROC=FILE_READ
     MOVE    ACR                                             file_read_result
     JZ      FILE_READ_ERROR
     //
-    CMT     30050195
+    CMT     4034030
     MOVE    AAR                                             disk_block_index_limit
     MOVE    ABR                                             1
     SUB
@@ -215,7 +216,7 @@ PROC=FILE_READ
     //
     MOVE    file_read_index                                 0
 FILE_READ_NEXT:
-    CMT     30050200
+    CMT     4034040
     MOVE    AAR                                             @{CBR:@file_read_result}
     MOVE    ABR                                             int069_mode_disk_read
     //MOVE    ACR                                             @{CBR:@file_disk_buffer}
@@ -225,7 +226,7 @@ FILE_READ_NEXT:
     MOVE    ACR                                             file_read_result
     JZ      FILE_READ_ERROR
     //
-    CMT     30050210
+    CMT     4034050
     MOVE    AAR                                             file_read_buffer_offset
     MOVE    ABR                                             disk_block_length
     ADD
@@ -237,11 +238,11 @@ FILE_READ_NEXT:
     MOVE    file_read_index                                 ACR
     LOOP    FILE_READ_NEXT
     //
-    CMT     30050220
+    CMT     4034060
     MOVE    #file_read_result_offset                        1
     RET
 FILE_READ_ERROR:
-    CMT     30050230
+    CMT     4034070
     MOVE    #file_read_result_offset                        0
 END
 

@@ -3,6 +3,7 @@
 T100Register32::T100Register32()
 {
     //ctor
+    m_value = 0;
 }
 
 T100Register32::~T100Register32()

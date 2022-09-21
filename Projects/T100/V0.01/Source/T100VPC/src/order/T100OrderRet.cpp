@@ -14,6 +14,7 @@ T100OrderRet::~T100OrderRet()
 T100BOOL T100OrderRet::run()
 {
     getHost()->getInterrupt32()->ret();
+    getHost()->getExecutor32()->pauseReturn();
 
     return T100TRUE;
 }

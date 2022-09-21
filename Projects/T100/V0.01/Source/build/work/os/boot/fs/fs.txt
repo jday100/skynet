@@ -67,7 +67,7 @@ DATA
 END
 
 PROC=FS_PART_INIT
-    CMT     30010010
+    CMT     40010
     MOVE    fs_part_init_result_offset                      AAR
     MOVE    fs_part_init_location_low_offset                ABR
     MOVE    fs_part_init_length_low_offset                  ACR
@@ -87,13 +87,13 @@ PROC=FS_PART_INIT
     MOVE    ACR                                             fs_part_location_low
     JZ      FS_PART_INIT_ERROR
     //
-    CMT     30010020
+    CMT     40020
     MOVE    fs_part_length_low                              #fs_part_init_length_low_offset
     MOVE    fs_part_length_high                             #fs_part_init_length_high_offset
     //
     MOVE    ACR                                             fs_part_length_high
     JNZ     FS_PART_INIT_LENGTH
-    CMT     30010030
+    CMT     40030
     MOVE    AAR                                             fs_part_length_low
     MOVE    ABR                                             4
     SUB
@@ -101,7 +101,7 @@ PROC=FS_PART_INIT
     JNZ     FS_PART_INIT_ERROR
     //
 FS_PART_INIT_LENGTH:
-    CMT     30010030
+    CMT     40030
     MOVE    AAR                                             @fs_part_init_result
     MOVE    ABR                                             fs_part_init_location_low_offset
     MOVE    ACR                                             fs_part_init_length_low_offset
@@ -109,7 +109,7 @@ FS_PART_INIT_LENGTH:
     MOVE    ACR                                             fs_part_init_result
     JZ      FS_PART_INIT_ERROR
     //
-    CMT     30010040
+    CMT     40040
     MOVE    AAR                                             @fs_part_init_result
     MOVE    ABR                                             fs_part_init_location_low_offset
     MOVE    ACR                                             fs_part_init_length_low_offset
@@ -117,7 +117,7 @@ FS_PART_INIT_LENGTH:
     MOVE    ACR                                             fs_part_init_result
     JZ      FS_PART_INIT_ERROR
     //
-    CMT     30010050
+    CMT     40050
     MOVE    AAR                                             @fs_part_init_result
     MOVE    ABR                                             fs_part_init_location_low_offset
     MOVE    ACR                                             fs_part_init_length_low_offset
@@ -125,11 +125,11 @@ FS_PART_INIT_LENGTH:
     MOVE    ACR                                             fs_part_init_result
     JZ      FS_PART_INIT_ERROR
     //
-    CMT     30010050
+    CMT     40060
     MOVE    #fs_part_init_result_offset                     1
     RET
 FS_PART_INIT_ERROR:
-    CMT     30010060
+    CMT     40070
     MOVE    #fs_part_init_result_offset                     0
 END
 
@@ -150,7 +150,7 @@ END
 //item_properties[2]
 //
 PROC=FS_FILE_OPEN
-    CMT     30010080
+    CMT     41010
     MOVE    fs_file_open_result_offset                      AAR
     MOVE    fs_file_open_name_offset                        ABR
     MOVE    fs_file_open_handle_offset                      ACR
@@ -162,28 +162,28 @@ PROC=FS_FILE_OPEN
     MOVE    ACR                                             fs_file_open_result
     JZ      FS_FILE_OPEN_ERROR
     //
-    CMT     30010090
+    CMT     41020
     MOVE    #fs_file_open_result_offset                     1
     RET
 FS_FILE_OPEN_ERROR:
-    CMT     30010100
+    CMT     41030
     MOVE    #fs_file_open_result_offset                     0
 END
 
 PROC=FS_FILE_CLOSE
-    CMT     30010110
+    CMT     42010
     MOVE    fs_file_close_result_offset                     AAR
     //
-    CMT     30010120
+    CMT     42020
     MOVE    #fs_file_close_result_offset                    1
     RET
 FS_FILE_CLOSE_ERROR:
-    CMT     30010130
+    CMT     42030
     MOVE    #fs_file_close_result_offset                    0
 END
 
 PROC=FS_ABSOLUTE_LOCATION
-    CMT     30010150
+    CMT     43010
     MOVE    fs_absolute_location_result_offset              AAR
     MOVE    fs_absolute_location_source_low_offset          ABR
     MOVE    fs_absolute_location_target_low_offset          ACR
@@ -204,7 +204,7 @@ PROC=FS_ABSOLUTE_LOCATION
     MOVE    ACR                                             fs_absolute_location_result
     JZ      FS_ABSOLUTE_LOCATION_ERROR
     //
-    CMT     30010160
+    CMT     43020
     MOVE    #fs_absolute_location_target_low_offset         fs_absolute_location_value_low
     MOVE    #fs_absolute_location_target_high_offset        fs_absolute_location_value_high
     //
@@ -212,12 +212,12 @@ PROC=FS_ABSOLUTE_LOCATION
     RET
     //
 FS_ABSOLUTE_LOCATION_ERROR:
-    CMT     30010170
+    CMT     43030
     MOVE    #fs_absolute_location_result_offset             0
 END
 
 PROC=FS_RELATIVE_LOCATION
-    CMT     30010190
+    CMT     44010
     MOVE    fs_relative_location_result_offset              AAR
     MOVE    fs_relative_location_source_low_offset          ABR
     MOVE    fs_relative_location_target_low_offset          ACR
@@ -240,7 +240,7 @@ PROC=FS_RELATIVE_LOCATION
     MOVE    ACR                                             fs_relative_location_result
     JZ      FS_RELATIVE_LOCATION_ERROR
     //
-    CMT     30010200
+    CMT     44020
     MOVE    AAR                                             @fs_relative_location_result
     MOVE    ABR                                             @fs_relative_location_middle_low
     MOVE    ACR                                             @fs_relative_location_constant_low
@@ -249,7 +249,7 @@ PROC=FS_RELATIVE_LOCATION
     MOVE    ACR                                             fs_relative_location_result
     JZ      FS_RELATIVE_LOCATION_ERROR
     //
-    CMT     30010210
+    CMT     44030
     MOVE    #fs_relative_location_target_low_offset         fs_relative_location_value_low
     MOVE    #fs_relative_location_target_high_offset        fs_relative_location_value_high
     //
@@ -257,6 +257,6 @@ PROC=FS_RELATIVE_LOCATION
     RET
     //
 FS_RELATIVE_LOCATION_ERROR:
-    CMT     30010220
+    CMT     44040
     MOVE    #fs_relative_location_result_offset             0
 END

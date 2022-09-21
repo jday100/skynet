@@ -6,7 +6,6 @@
 T100QU32::T100QU32()
 {
     //ctor
-    create();
 }
 
 T100QU32::~T100QU32()
@@ -123,6 +122,8 @@ T100BOOL T100QU32::pause()
 
 T100BOOL T100QU32::run()
 {
+    m_executor->resume();
+
     m_executor->wakeup();
     return T100TRUE;
 }
@@ -145,15 +146,21 @@ T100BOOL T100QU32::next()
     return T100TRUE;
 }
 
+T100BOOL T100QU32::nextComment()
+{
+    m_executor->nextComment();
+    return T100TRUE;
+}
+
 T100BOOL T100QU32::nextCall()
 {
-    m_executor->next();
+    m_executor->nextCall();
     return T100TRUE;
 }
 
 T100BOOL T100QU32::nextReturn()
 {
-    m_executor->next();
+    m_executor->nextReturn();
     return T100TRUE;
 }
 

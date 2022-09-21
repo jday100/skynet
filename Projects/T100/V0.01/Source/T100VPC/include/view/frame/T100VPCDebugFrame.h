@@ -33,6 +33,7 @@ class T100VPCDebugFrame : public wxFrame
         wxButton*           CallButton;
 		wxButton*           NextButton;
 		wxButton*           PauseButton;
+		wxButton*           CommentButton;
 		wxButton*           ReturnButton;
 		wxButton*           RunButton;
 		wxButton*           StepButton;
@@ -96,7 +97,8 @@ class T100VPCDebugFrame : public wxFrame
 		static const long ID_SCROLLBAR_PORT;
 		static const long ID_BUTTON_RUN;
 		static const long ID_BUTTON_STEP;
-		static const long ID_BUTTON3;
+		static const long ID_BUTTON_NEXT;
+		static const long ID_BUTTON_COMMENT;
 		static const long ID_BUTTON_CALL;
 		static const long ID_BUTTON_RETURN;
 		static const long ID_BUTTON_PAUSE;
@@ -158,6 +160,7 @@ class T100VPCDebugFrame : public wxFrame
 		void OnPauseButtonClick(wxCommandEvent& event);
 		void OnStepButtonClick(wxCommandEvent& event);
 		void OnNextButtonClick(wxCommandEvent& event);
+		void OnCommentButtonClick(wxCommandEvent& event);
 		void OnCallButtonClick(wxCommandEvent& event);
 		void OnReturnButtonClick(wxCommandEvent& event);
 
@@ -176,6 +179,8 @@ class T100VPCDebugFrame : public wxFrame
 
         T100BOOL            init(wxListView*, T100WORD);
         T100BOOL            update(wxListView*, T100WORD, T100WORD);
+
+        T100BOOL            find(wxComboBox*);
 
     private:
 		T100VOID            create();

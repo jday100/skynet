@@ -42,19 +42,35 @@ T100VOID T100Executor32::run()
 
         execute();
 
-        if(!running())return;
+        if(!running()){
+            if(T100QU32Setup::DEBUG){
+                m_host->getNotifier().stop();
+            }
+
+            return;
+        }
 
     }while(running());
 }
 
+T100BOOL T100Executor32::resume()
+{
+    T100QU32Setup::DEBUG_MODE   = T100EXECUTOR_MODE_RUN;
+    T100QU32Setup::DEBUG_STATE  = T100EXECUTOR_STATE_RUNNING;
+
+    m_condition.notify_all();
+
+    return T100TRUE;
+}
+
 T100BOOL T100Executor32::pause()
 {
-    m_state = T100EXECUTOR_STATE_PAUSE;
+    T100QU32Setup::DEBUG_STATE = T100EXECUTOR_STATE_PAUSE;
 }
 
 T100VOID T100Executor32::debug()
 {
-    switch(m_mode){
+    switch(T100QU32Setup::DEBUG_MODE){
     case T100EXECUTOR_MODE_NEXT:
         {
             pause();
@@ -66,16 +82,58 @@ T100VOID T100Executor32::debug()
 
 T100BOOL T100Executor32::step()
 {
-    m_state     = T100EXECUTOR_STATE_PAUSE;
-    m_mode      = T100EXECUTOR_MODE_STEP;
+    T100QU32Setup::DEBUG_STATE  = T100EXECUTOR_STATE_PAUSE;
+    T100QU32Setup::DEBUG_MODE   = T100EXECUTOR_MODE_STEP;
     m_condition.notify_all();
 }
 
 T100BOOL T100Executor32::next()
 {
-    m_state     = T100EXECUTOR_STATE_RUNNING;
-    m_mode      = T100EXECUTOR_MODE_NEXT;
+    T100QU32Setup::DEBUG_STATE  = T100EXECUTOR_STATE_RUNNING;
+    T100QU32Setup::DEBUG_MODE   = T100EXECUTOR_MODE_NEXT;
     m_condition.notify_all();
+}
+
+T100BOOL T100Executor32::nextComment()
+{
+    T100QU32Setup::DEBUG_STATE  = T100EXECUTOR_STATE_RUNNING;
+    T100QU32Setup::DEBUG_MODE   = T100EXECUTOR_MODE_NEXT_COMMENT;
+    m_condition.notify_all();
+}
+
+T100BOOL T100Executor32::nextCall()
+{
+    T100QU32Setup::DEBUG_STATE  = T100EXECUTOR_STATE_RUNNING;
+    T100QU32Setup::DEBUG_MODE   = T100EXECUTOR_MODE_NEXT_CALL;
+    m_condition.notify_all();
+}
+
+T100BOOL T100Executor32::nextReturn()
+{
+    T100QU32Setup::DEBUG_STATE  = T100EXECUTOR_STATE_RUNNING;
+    T100QU32Setup::DEBUG_MODE   = T100EXECUTOR_MODE_NEXT_RETURN;
+    m_condition.notify_all();
+}
+
+T100BOOL T100Executor32::pauseComment()
+{
+    if(T100EXECUTOR_MODE_NEXT_COMMENT == T100QU32Setup::DEBUG_MODE){
+        T100QU32Setup::DEBUG_STATE = T100EXECUTOR_STATE_PAUSE;
+    }
+}
+
+T100BOOL T100Executor32::pauseCall()
+{
+    if(T100EXECUTOR_MODE_NEXT_CALL == T100QU32Setup::DEBUG_MODE){
+        T100QU32Setup::DEBUG_STATE = T100EXECUTOR_STATE_PAUSE;
+    }
+}
+
+T100BOOL T100Executor32::pauseReturn()
+{
+    if(T100EXECUTOR_MODE_NEXT_RETURN == T100QU32Setup::DEBUG_MODE){
+        T100QU32Setup::DEBUG_STATE = T100EXECUTOR_STATE_PAUSE;
+    }
 }
 
 T100VOID T100Executor32::execute()

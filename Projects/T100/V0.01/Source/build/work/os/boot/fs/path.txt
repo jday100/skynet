@@ -47,7 +47,7 @@ DATA
 END
 
 PROC=PATH_INIT
-    CMT     30040010
+    CMT     4040010
     MOVE    path_init_result_offset                         AAR
     MOVE    path_init_location_low_offset                   ABR
     MOVE    path_init_length_low_offset                     ACR
@@ -69,11 +69,11 @@ PROC=PATH_INIT
     MOVE    fs_path_current_low                             0
     MOVE    fs_path_current_high                            0
     //
-    CMT     30040020
+    CMT     4040020
     MOVE    #path_init_result_offset                        1
     RET
 PATH_INIT_ERROR:
-    CMT     30040030
+    CMT     4040030
     MOVE    #path_init_result_offset                        0
 END
 
@@ -94,7 +94,7 @@ END
 //item_properties[2]
 //
 PROC=PATH_SEARCH
-    CMT     30040050
+    CMT     4041010
     MOVE    path_search_result_offset                       AAR
     MOVE    path_search_name_offset                         ABR
     MOVE    path_search_handle_offset                       ACR
@@ -102,6 +102,7 @@ PROC=PATH_SEARCH
     MOVE    ACR                                             #ABR
     JZ      PATH_SEARCH_ERROR
     //
+    CMT     4041020
     MOVE    path_search_value_location_low_offset           path_search_handle_offset
     MOVE    AAR                                             path_search_handle_offset
     MOVE    ABR                                             1
@@ -132,7 +133,7 @@ PROC=PATH_SEARCH
     ADD
     MOVE    path_search_item_properties_offset[1]           ACR
     //
-    CMT     30040060
+    CMT     4041030
     MOVE    AAR                                             @path_search_result
     MOVE    ABR                                             path_search_name_offset
     MOVE    ACR                                             @fs_path_root
@@ -140,7 +141,7 @@ PROC=PATH_SEARCH
     MOVE    ACR                                             path_search_result
     JNZ     PATH_SEARCH_ROOT
     //
-    CMT     30040070
+    CMT     4041040
     MOVE    AAR                                             @path_search_result
     MOVE    ABR                                             path_search_name_offset
     MOVE    ACR                                             @path_search_value
@@ -148,14 +149,14 @@ PROC=PATH_SEARCH
     MOVE    ACR                                             path_search_result
     JNZ     PATH_SEARCH_FIRST_ROOT
     //
-    CMT     30040080
+    CMT     4041050
     MOVE    path_search_location_low                        fs_path_current_low
     MOVE    path_search_location_high                       fs_path_current_high
     //
 PATH_SEARCH_SPLIT:
     MOVE    path_search_split_array_offset                  @path_search_split_array
     MOVE    path_search_split_array_buffer_offset           @path_search_split_array_buffer
-    CMT     30040090
+    CMT     4041070
     MOVE    AAR                                             @path_search_result
     MOVE    ABR                                             path_search_name_offset
     MOVE    ACR                                             @fs_path_mask
@@ -164,11 +165,11 @@ PATH_SEARCH_SPLIT:
     MOVE    ACR                                             path_search_result
     JZ      PATH_SEARCH_ERROR
     //
-    CMT     30040100
+    CMT     4041080
     MOVE    ACR                                             path_search_split_size
     JZ      PATH_SEARCH_ERROR
     //
-    CMT     30040110
+    CMT     4041090
     MOVE    AAR                                             path_search_split_size
     MOVE    ABR                                             1
     SUB
@@ -176,13 +177,13 @@ PATH_SEARCH_SPLIT:
     //
     MOVE    path_search_split_array_index                   path_search_split_array_offset
 PATH_SEARCH_ITEM_NEXT:
-    CMT     30040120
+    CMT     4041100
     MOVE    path_search_split_array_buffer_index            #path_search_split_array_index
     //
     MOVE    ACR                                             #path_search_split_array_buffer_index
     JZ      PATH_SEARCH_ERROR
     //
-    CMT     30040130
+    CMT     4041110
     //test
     MOVE    AAR                                             path_search_location_low
     MOVE    AAR                                             path_search_location_high
@@ -195,29 +196,29 @@ PATH_SEARCH_ITEM_NEXT:
     MOVE    ACR                                             path_search_result
     JZ      PATH_SEARCH_ERROR
     //
-    CMT     30040131
+    CMT     4041120
     MOVE    path_search_location_low                        #path_search_item_location_low_offset
     MOVE    path_search_location_high                       #path_search_item_location_high_offset
     MOVE    AAR                                             path_search_split_array_index
     MOVE    ABR                                             1
     ADD
     MOVE    path_search_split_array_index                   ACR
-    CMT     30040140
+    CMT     4041130
     LOOP    PATH_SEARCH_ITEM_NEXT
     //
-    CMT     30040150
+    CMT     4041140
 
     JUMP    PATH_SEARCH_TRUE
 
 PATH_SEARCH_FIRST_ROOT:
-    CMT     30040160
+    CMT     4041150
     MOVE    path_search_location_low                        fs_path_root_low
     MOVE    path_search_location_high                       fs_path_root_high
     //
     JUMP    PATH_SEARCH_SPLIT
 
 PATH_SEARCH_ROOT:
-    CMT     30040170
+    CMT     4041160
     MOVE    #path_search_item_location_low_offset           path_search_location_low
     MOVE    #path_search_item_location_high_offset          path_search_location_high
     MOVE    #path_search_item_length_low_offset             path_search_length_low
@@ -226,10 +227,10 @@ PATH_SEARCH_ROOT:
     MOVE    #path_search_item_properties_offset[1]          1
     //
 PATH_SEARCH_TRUE:
-    CMT     30040180
+    CMT     4041170
     MOVE    #path_search_result_offset                      1
     RET
 PATH_SEARCH_ERROR:
-    CMT     30040190
+    CMT     4041180
     MOVE    #path_search_result_offset                      0
 END

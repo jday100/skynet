@@ -18,6 +18,10 @@ class T100TestTools
 
         static T100STDSTRING    Hex(T100WORD&);
 
+        static T100BOOL         Print(T100WSTRING);
+
+        static T100BOOL         Print(void*);
+
     protected:
 
     private:

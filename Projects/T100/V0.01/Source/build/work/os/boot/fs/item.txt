@@ -52,13 +52,13 @@ DATA
 END
 
 PROC=ITEM_INIT
-    CMT     30030010
+    CMT     4010010
     MOVE    item_init_result_offset                         AAR
-    CMT     30030020
+    CMT     4010020
     MOVE    #item_init_result_offset                        1
     RET
 ITEM_INIT_ERROR:
-    CMT     30030030
+    CMT     4010030
     MOVE    #item_init_result_offset                        0
 END
 
@@ -81,7 +81,7 @@ END
 //item_properties[2]
 //
 PROC=ITEM_SEARCH
-    CMT     30030050
+    CMT     4011010
     MOVE    item_search_result_offset                       AAR
     MOVE    item_search_location_low_offset                 ABR
     MOVE    item_search_name_offset                         ACR
@@ -120,7 +120,7 @@ PROC=ITEM_SEARCH
     ADD
     MOVE    item_search_item_properties_offset[1]           ACR
     //
-    CMT     30030051
+    CMT     4011020
     //test
     MOVE    AAR                                             #item_search_location_low_offset
     MOVE    ABR                                             #item_search_location_high_offset
@@ -132,7 +132,7 @@ PROC=ITEM_SEARCH
     MOVE    ACR                                             item_search_result
     JZ      ITEM_SEARCH_ERROR
     //
-    CMT     30030052
+    CMT     4011030
     //test
     MOVE    AAR                                             item_search_middle_low
     MOVE    AAR                                             item_search_middle_high
@@ -144,16 +144,16 @@ PROC=ITEM_SEARCH
     MOVE    ACR                                             item_search_result
     JZ      ITEM_SEARCH_ERROR
     //
-    CMT     30030055
+    CMT     4011040
     MOVE    item_search_location_low                        item_search_value_location_low
     MOVE    item_search_location_high                       item_search_value_location_high
     //
-    CMT     30030056
+    CMT     4011050
     MOVE    CCR                                             15
     MOVE    item_search_index                               0
     //
 ITEM_SEARCH_NEXT:
-    CMT     30030060
+    CMT     4011060
     MOVE    AAR                                             @{CBR:@item_search_result}
     MOVE    ABR                                             int069_mode_disk_read
     MOVE    ACR                                             @{CBR:@item_disk_buffer}
@@ -162,13 +162,13 @@ ITEM_SEARCH_NEXT:
     MOVE    ACR                                             item_search_result
     JZ      ITEM_SEARCH_ERROR
     //
-    CMT     30030070
+    CMT     4011070
     MOVE    item_search_buffer_offset                       @item_disk_buffer
     MOVE    item_search_loop                                CCR
     MOVE    CCR                                             15
     //
 ITEM_SEARCH_ITEM_NEXT:
-    CMT     30030080
+    CMT     4011080
     MOVE    AAR                                             @item_search_result
     MOVE    ABR                                             item_search_name_offset
     MOVE    ACR                                             item_search_buffer_offset
@@ -176,6 +176,7 @@ ITEM_SEARCH_ITEM_NEXT:
     MOVE    ACR                                             item_search_result
     JZ      ITEM_SEARCH_ITEM_FALSE
     //
+    CMT     4011090
     MOVE    AAR                                             item_search_buffer_offset
     MOVE    ABR                                             254
     ADD
@@ -188,7 +189,7 @@ ITEM_SEARCH_ITEM_NEXT:
     MOVE    ACR                                             item_search_value_properties[0]
     JZ      ITEM_SEARCH_ITEM_FALSE
     //
-    CMT     30030090
+    CMT     4011100
     MOVE    AAR                                             item_search_buffer_offset
     MOVE    ABR                                             250
     ADD
@@ -206,11 +207,11 @@ ITEM_SEARCH_ITEM_NEXT:
     MOVE    #item_search_item_properties_offset[0]          item_search_value_properties[0]
     MOVE    #item_search_item_properties_offset[1]          item_search_value_properties[1]
     //
-    CMT     30030091
+    CMT     4011110
     JUMP    ITEM_SEARCH_TRUE
     //
 ITEM_SEARCH_ITEM_FALSE:
-    CMT     30030100
+    CMT     4011120
     MOVE    AAR                                             item_search_buffer_offset
     MOVE    ABR                                             256
     ADD
@@ -218,7 +219,7 @@ ITEM_SEARCH_ITEM_FALSE:
     //
     LOOP    ITEM_SEARCH_ITEM_NEXT
     //
-    CMT     30030110
+    CMT     4011130
     MOVE    CCR                                             item_search_loop
     //
     MOVE    AAR                                             item_search_index
@@ -227,33 +228,33 @@ ITEM_SEARCH_ITEM_FALSE:
     MOVE    item_search_index                               ACR
     //
     LOOP    ITEM_SEARCH_NEXT
-    CMT     30030120
+    CMT     4011140
     //
 ITEM_SEARCH_ERROR:
-    CMT     30030130
+    CMT     4011150
     MOVE    #item_search_result_offset                      0
     RET
 ITEM_SEARCH_TRUE:
-    CMT     30030140
+    CMT     4011160
     MOVE    #item_search_result_offset                      1
 END
 
 PROC=ITEM_EQUAL_ISBAD
-    CMT     30030150
+    CMT     4012010
     MOVE    item_equal_isbad_result_offset                  AAR
     MOVE    item_equal_isbad_source_offset                  ABR
     //
     MOVE    ACR                                             @item_bad_low
     CALL    DWORD_EQUAL
-    CMT     30030160
+    CMT     4012020
 END
 
 PROC=ITEM_EQUAL_ISEND
-    CMT     30030180
+    CMT     4013010
     MOVE    item_equal_isend_result_offset                  AAR
     MOVE    item_equal_isend_source_offset                  ABR
     //
     MOVE    ACR                                             @item_end_low
     CALL    DWORD_EQUAL
-    CMT     30030190
+    CMT     4013020
 END
