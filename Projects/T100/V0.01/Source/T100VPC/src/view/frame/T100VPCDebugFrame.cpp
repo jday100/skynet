@@ -183,10 +183,10 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	BoxSizer6 = new wxBoxSizer(wxHORIZONTAL);
 	RunButton = new wxButton(this, ID_BUTTON_RUN, _("Run"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_RUN"));
 	BoxSizer6->Add(RunButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	StepButton = new wxButton(this, ID_BUTTON_STEP, _("Step"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_STEP"));
-	BoxSizer6->Add(StepButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	NextButton = new wxButton(this, ID_BUTTON_NEXT, _("Next"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_NEXT"));
 	BoxSizer6->Add(NextButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StepButton = new wxButton(this, ID_BUTTON_STEP, _("Step"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_STEP"));
+	BoxSizer6->Add(StepButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	CommentButton = new wxButton(this, ID_BUTTON_COMMENT, _("Comment"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_COMMENT"));
 	BoxSizer6->Add(CommentButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	CallButton = new wxButton(this, ID_BUTTON_CALL, _("Call"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_CALL"));

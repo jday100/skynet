@@ -214,6 +214,15 @@ T100BOOL T100VDisk::fs_list(T100STRING name, T100STRING path)
     return result;
 }
 
+T100BOOL T100VDisk::fs_list(T100STRING name, T100STRING path, T100DISK_ITEM_VECTOR& items)
+{
+    T100BOOL    result;
+
+    result = m_vfs->list(name, path, items);
+
+    return result;
+}
+
 T100BOOL T100VDisk::fs_copy(T100STRING source, T100STRING name, T100STRING target)
 {
     T100BOOL    result;

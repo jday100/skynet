@@ -15,7 +15,6 @@ PROC=IO_COPY
     //
 IO_COPY_NEXT:
     CMT     1040020
-    DBG
     IN      #io_copy_target_offset                          io_copy_source_offset
     //
     MOVE    AAR                                             io_copy_source_offset

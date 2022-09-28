@@ -76,6 +76,7 @@
 		<Linker>
 			<Add option="-mthreads" />
 		</Linker>
+		<Unit filename="../build/stores/vdisk.vdk" />
 		<Unit filename="T100VDiskApp.cpp" />
 		<Unit filename="T100VDiskApp.h" />
 		<Unit filename="T100VDiskMain.cpp" />

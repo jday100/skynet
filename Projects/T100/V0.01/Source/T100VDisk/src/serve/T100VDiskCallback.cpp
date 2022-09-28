@@ -194,4 +194,38 @@ T100BOOL T100VDiskCallback::ctrl_menu_format(void* d)
     return result;
 }
 
+T100BOOL T100VDiskCallback::ctrl_get_all_parts(void* d)
+{
+    T100BOOL                        result          = T100TRUE;
+    T100DISK_PART_CTRL_VECTOR*      parts           = T100NULL;
 
+    parts = static_cast<T100DISK_PART_CTRL_VECTOR*>(d);
+
+    if(!parts){
+        return T100FALSE;
+    }
+
+    T100VFS_PART_VECTOR     items;
+
+    result = m_serve->getVDisk()->part_list(items);
+
+    if(!result){
+        return T100FALSE;
+    }
+
+    for(T100VFS_PART item : items){
+
+    }
+
+    return result;
+}
+
+T100BOOL T100VDiskCallback::ctrl_get_all_items(T100String part, T100String path, T100DISK_ITEM_VECTOR& items)
+{
+    T100BOOL                result          = T100TRUE;
+
+
+    result = m_serve->getVDisk()->fs_list(part, path, items);
+
+    return result;
+}

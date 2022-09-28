@@ -3,6 +3,7 @@
 
 #include "T100Common.h"
 #include "T100String.h"
+#include "T100DiskCommon.h"
 class T100VDiskFile;
 class T100VDiskPart;
 class T100VFSDirectory;
@@ -131,6 +132,7 @@ class T100VFS
         T100BOOL            remove(T100STRING, T100STRING);
 
         T100BOOL            list(T100STRING, T100STRING);
+        T100BOOL            list(T100STRING, T100STRING, T100DISK_ITEM_VECTOR&);
         T100BOOL            copy(T100STRING, T100STRING, T100STRING);
 
         T100BOOL            read(T100DWORD, T100WORD*);

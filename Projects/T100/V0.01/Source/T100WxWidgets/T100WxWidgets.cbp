@@ -126,6 +126,8 @@
 		<Unit filename="include/T100VDiskBrowseCtrl.h" />
 		<Unit filename="include/serve/T100DiskCallback.h" />
 		<Unit filename="include/serve/T100DiskServe.h" />
+		<Unit filename="include/view/T100DiskBrowseCreateFolderDemoDialog.h" />
+		<Unit filename="include/view/T100DiskBrowseCreateFolderDialog.h" />
 		<Unit filename="include/view/T100DiskBrowsePartDemoDialog.h" />
 		<Unit filename="include/view/T100DiskBrowsePartDialog.h" />
 		<Unit filename="include/view/T100DiskCreateDemoDialog.h" />
@@ -150,6 +152,8 @@
 		<Unit filename="src/T100VDiskBrowseCtrl.cpp" />
 		<Unit filename="src/serve/T100DiskCallback.cpp" />
 		<Unit filename="src/serve/T100DiskServe.cpp" />
+		<Unit filename="src/view/T100DiskBrowseCreateFolderDemoDialog.cpp" />
+		<Unit filename="src/view/T100DiskBrowseCreateFolderDialog.cpp" />
 		<Unit filename="src/view/T100DiskBrowsePartDemoDialog.cpp" />
 		<Unit filename="src/view/T100DiskBrowsePartDialog.cpp" />
 		<Unit filename="src/view/T100DiskCreateDemoDialog.cpp" />
@@ -165,6 +169,7 @@
 		<Unit filename="src/view/T100DiskView.cpp" />
 		<Unit filename="test/T100TestDiskCtrl.cpp" />
 		<Unit filename="test/T100TestDiskCtrl.h" />
+		<Unit filename="wxsmith/T100DiskBrowseCreateFolderDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100DiskBrowsePartDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100DiskCreateDemoDialog1.wxs" />
 		<Unit filename="wxsmith/T100DiskCreatePartDemoDialog.wxs" />
@@ -184,6 +189,7 @@
 					<wxDialog wxs="wxsmith/T100DiskFormatPartDemoDialog.wxs" src="src\view\T100DiskFormatPartDemoDialog.cpp" hdr="include\view\T100DiskFormatPartDemoDialog.h" fwddecl="0" i18n="1" name="T100DiskFormatPartDemoDialog" language="CPP" />
 					<wxDialog wxs="wxsmith/T100DiskBrowsePartDemoDialog.wxs" src="src\view\T100DiskBrowsePartDemoDialog.cpp" hdr="include\view\T100DiskBrowsePartDemoDialog.h" fwddecl="0" i18n="1" name="T100DiskBrowsePartDemoDialog" language="CPP" />
 					<wxDialog wxs="wxsmith/T100DiskCreateDemoDialog.wxs" src="src\view\T100DiskCreateDemoDialog.cpp" hdr="include\view\T100DiskCreateDemoDialog.h" fwddecl="0" i18n="1" name="T100DiskCreateDemoDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100DiskBrowseCreateFolderDemoDialog.wxs" src="src\view\T100DiskBrowseCreateFolderDemoDialog.cpp" hdr="include\view\T100DiskBrowseCreateFolderDemoDialog.h" fwddecl="0" i18n="1" name="T100DiskBrowseCreateFolderDemoDialog" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

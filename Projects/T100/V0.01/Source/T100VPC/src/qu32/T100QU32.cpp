@@ -116,6 +116,8 @@ T100BOOL T100QU32::exec(T100WORD base, T100WORD offset)
 
 T100BOOL T100QU32::pause()
 {
+    m_executor->pause();
+
     m_executor->hangup();
     return T100TRUE;
 }

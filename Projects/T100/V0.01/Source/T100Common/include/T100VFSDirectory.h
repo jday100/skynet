@@ -24,6 +24,7 @@ class T100VFSDirectory
         T100BOOL            search(T100String, T100VFS_ITEM_HANDLE&);
         T100BOOL            search(T100DWORD, T100String, T100VFS_ITEM_HANDLE&);
         T100BOOL            list(T100String);
+        T100BOOL            list(T100String, T100DISK_ITEM_VECTOR&);
 
     protected:
         T100DWORD           m_root          = 0;

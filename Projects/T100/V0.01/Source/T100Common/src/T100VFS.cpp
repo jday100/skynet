@@ -255,6 +255,28 @@ T100BOOL T100VFS::list(T100STRING name, T100STRING path)
     return value;
 }
 
+T100BOOL T100VFS::list(T100STRING name, T100STRING path, T100DISK_ITEM_VECTOR& items)
+{
+    T100BOOL        result      = T100TRUE;
+    T100BOOL        value;
+    T100VFS_PART*   part        = T100NULL;
+
+    part = m_part->search(name);
+
+    if(part){
+        value = change_part(part);
+        if(!value){
+            return T100FALSE;
+        }
+    }else{
+        return T100FALSE;
+    }
+
+    value = m_path->list(path, items);
+
+    return value;
+}
+
 T100BOOL T100VFS::copy(T100STRING source, T100STRING name, T100STRING target)
 {
     /*

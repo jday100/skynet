@@ -32,10 +32,10 @@ class T100VDiskCtrl : public T100DiskCtrl
     protected:
         T100BOOL            DoGetAllParts(T100DISK_PART_CTRL_VECTOR&);
         T100BOOL            DoGetAllItems(wxString, wxString, T100DISK_ITEM_VECTOR&);
-        T100BOOL            DoCreateDir();
-        T100BOOL            DoRemoveDir();
-        T100BOOL            DoCopyFile();
-        T100BOOL            DoRemoveFile();
+        T100BOOL            DoCreateFolder(T100DISK_ITEM*);
+        T100BOOL            DoRemoveFolder(T100DISK_ITEM*);
+        T100BOOL            DoCopyFile(T100DISK_ITEM*, T100DISK_ITEM*);
+        T100BOOL            DoRemoveFile(T100DISK_ITEM*);
 
     private:
 };

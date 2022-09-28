@@ -527,7 +527,7 @@ T100BOOL T100Order::getComplexusSource(T100OPERATOR_DOUBLE& op, T100WORD& value)
         case T_NONE:
             {
                 offset  = op.BASE.VALUE + op.OPERATOR.VALUE;
-                value   = getHost()->getMemory32()->read(0, offset);
+                getHost()->getMemory32()->raw_read(0, offset, value);
             }
             break;
         case T_IMM:
@@ -538,9 +538,8 @@ T100BOOL T100Order::getComplexusSource(T100OPERATOR_DOUBLE& op, T100WORD& value)
         case I_MEM:
             {
                 offset  = op.BASE.VALUE + op.OPERATOR.VALUE;
-                interim = getHost()->getMemory32()->read(0, offset);
-                value   = getHost()->getMemory32()->read(0, interim);
-
+                getHost()->getMemory32()->raw_read(0, offset, interim);
+                getHost()->getMemory32()->raw_read(0, interim, value);
             }
             break;
         default:
@@ -647,8 +646,8 @@ T100BOOL T100Order::setIOTarget(T100OPERATOR_DOUBLE& op, T100WORD value)
     case I_MEM:
         {
             if(op.USED){
-                offset = getHost()->getMemory32()->read(op.BASE.VALUE, op.OPERATOR.VALUE);
-                offset = getHost()->getMemory32()->read(0, offset);
+                getHost()->getMemory32()->raw_read(op.BASE.VALUE, op.OPERATOR.VALUE, offset);
+                getHost()->getMemory32()->raw_read(0, offset, value);
             }else{
                 return T100FALSE;
             }

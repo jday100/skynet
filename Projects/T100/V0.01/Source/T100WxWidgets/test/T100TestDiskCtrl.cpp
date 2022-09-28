@@ -98,22 +98,46 @@ T100BOOL T100TestDiskCtrl::DoGetAllItems(wxString part, wxString path, T100DISK_
     return T100TRUE;
 }
 
-T100BOOL T100TestDiskCtrl::DoCreateDir()
+T100BOOL T100TestDiskCtrl::DoCreateFolder(T100DISK_ITEM* item)
 {
+    if(!item){
+        return T100FALSE;
+    }
 
+    wxMessageBox(_("Folder is created!"));
+
+    return T100TRUE;
 }
 
-T100BOOL T100TestDiskCtrl::DoRemoveDir()
+T100BOOL T100TestDiskCtrl::DoRemoveFolder(T100DISK_ITEM* item)
 {
+    if(!item){
+        return T100FALSE;
+    }
 
+    wxMessageBox(_("Folder is removed!"));
+
+    return T100TRUE;
 }
 
-T100BOOL T100TestDiskCtrl::DoCopyFile()
+T100BOOL T100TestDiskCtrl::DoCopyFile(T100DISK_ITEM* source, T100DISK_ITEM* target)
 {
+    if((!source) || (!target)){
+        return T100FALSE;
+    }
 
+    wxMessageBox(_("File is copied!"));
+
+    return T100TRUE;
 }
 
-T100BOOL T100TestDiskCtrl::DoRemoveFile()
+T100BOOL T100TestDiskCtrl::DoRemoveFile(T100DISK_ITEM* item)
 {
+    if(!item){
+        return T100FALSE;
+    }
 
+    wxMessageBox(_("File is removed!"));
+
+    return T100TRUE;
 }

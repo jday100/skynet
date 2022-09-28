@@ -752,6 +752,16 @@ T100VOID T100DiskCtrl::DrawPart(wxDC& dc, T100DISK_PART_CTRL* item)
         dc.SetBrush(*wxGREEN_BRUSH);
     }
 
+    if(item->PART->ISUSED){
+        if(item->PART->ISFORMATED){
+            dc.SetBrush(*wxYELLOW_BRUSH);
+        }else{
+            dc.SetBrush(*wxRED_BRUSH);
+        }
+    }else{
+        dc.SetBrush(*wxGREEN_BRUSH);
+    }
+
     dc.DrawRectangle(wxPoint(item->X, item->Y), wxSize(item->WIDTH, item->HEIGHT));
 
     //dc.DrawText(L"1G", wxPoint(150, 5));

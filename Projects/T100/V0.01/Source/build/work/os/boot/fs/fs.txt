@@ -101,7 +101,7 @@ PROC=FS_PART_INIT
     JNZ     FS_PART_INIT_ERROR
     //
 FS_PART_INIT_LENGTH:
-    CMT     40030
+    CMT     40040
     MOVE    AAR                                             @fs_part_init_result
     MOVE    ABR                                             fs_part_init_location_low_offset
     MOVE    ACR                                             fs_part_init_length_low_offset
@@ -109,7 +109,7 @@ FS_PART_INIT_LENGTH:
     MOVE    ACR                                             fs_part_init_result
     JZ      FS_PART_INIT_ERROR
     //
-    CMT     40040
+    CMT     40050
     MOVE    AAR                                             @fs_part_init_result
     MOVE    ABR                                             fs_part_init_location_low_offset
     MOVE    ACR                                             fs_part_init_length_low_offset
@@ -117,7 +117,7 @@ FS_PART_INIT_LENGTH:
     MOVE    ACR                                             fs_part_init_result
     JZ      FS_PART_INIT_ERROR
     //
-    CMT     40050
+    CMT     40060
     MOVE    AAR                                             @fs_part_init_result
     MOVE    ABR                                             fs_part_init_location_low_offset
     MOVE    ACR                                             fs_part_init_length_low_offset
@@ -125,11 +125,11 @@ FS_PART_INIT_LENGTH:
     MOVE    ACR                                             fs_part_init_result
     JZ      FS_PART_INIT_ERROR
     //
-    CMT     40060
+    CMT     40070
     MOVE    #fs_part_init_result_offset                     1
     RET
 FS_PART_INIT_ERROR:
-    CMT     40070
+    CMT     40080
     MOVE    #fs_part_init_result_offset                     0
 END
 

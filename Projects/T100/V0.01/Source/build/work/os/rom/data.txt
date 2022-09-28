@@ -26,6 +26,12 @@ DATA=ROM_DATA
     rom_device_max                  INTEGER     8       //255
     //
     rom_start_message               STRING      "Starting..."
+    rom_error_message               STRING      "ROM ERROR!"
+    rom_location_offset             INTEGER     1074266112
+    rom_part_location_low_offset    INTEGER     1074266108
+    rom_part_location_high_offset   INTEGER     1074266109
+    rom_part_length_low_offset      INTEGER     1074266110
+    rom_part_length_high_offset     INTEGER     1074266111
     //
     display_mode_read               INTEGER     14
     display_mode_write              INTEGER     15
@@ -95,6 +101,13 @@ DATA=ROM_DATA   VIRTUAL     LOCATION=1073742848     LENGTH=1024
     rom_boot_part_location_high                     INTEGER     0
     rom_boot_part_length_low                        INTEGER     0
     rom_boot_part_length_high                       INTEGER     0
+    //
+    rom_boot_part_load_result                       INTEGER
+    rom_boot_part_load_result_offset                INTEGER
+    rom_boot_part_load_location_offset              INTEGER
+	rom_boot_part_load_index                        INTEGER
+    rom_boot_part_load_location_low                 INTEGER
+    rom_boot_part_load_location_high                INTEGER
     //
 END
 
@@ -287,4 +300,7 @@ DATA=STRING_DATA    VIRTUAL     LOCATION=1073748992     LENGTH=1024
     string_init_length                              INTEGER
     string_init_string_length                       INTEGER
     //
+END
+
+DATA=BOOT_DATA      VIRTUAL     LOCATION=1074266112     LENGTH=16384
 END

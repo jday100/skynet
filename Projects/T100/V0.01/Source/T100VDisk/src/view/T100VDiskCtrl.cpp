@@ -80,30 +80,38 @@ T100BOOL T100VDiskCtrl::OnGetAllDrivers(wxArrayString& paths, wxArrayString& nam
 ///
 T100BOOL T100VDiskCtrl::DoGetAllParts(T100DISK_PART_CTRL_VECTOR& parts)
 {
+    T100BOOL            result          = T100TRUE;
 
+    result = T100VDiskCallback::ctrl_get_all_parts(&parts);
+
+    return result;
 }
 
 T100BOOL T100VDiskCtrl::DoGetAllItems(wxString part, wxString path, T100DISK_ITEM_VECTOR& items)
 {
+    T100BOOL            result          = T100TRUE;
 
+    result = T100VDiskCallback::ctrl_get_all_items(part.ToStdWstring(), path.ToStdWstring(), items);
+
+    return result;
 }
 
-T100BOOL T100VDiskCtrl::DoCreateDir()
+T100BOOL T100VDiskCtrl::DoCreateFolder(T100DISK_ITEM* item)
 {
 
 }
 
-T100BOOL T100VDiskCtrl::DoRemoveDir()
+T100BOOL T100VDiskCtrl::DoRemoveFolder(T100DISK_ITEM* item)
 {
 
 }
 
-T100BOOL T100VDiskCtrl::DoCopyFile()
+T100BOOL T100VDiskCtrl::DoCopyFile(T100DISK_ITEM* source, T100DISK_ITEM* target)
 {
 
 }
 
-T100BOOL T100VDiskCtrl::DoRemoveFile()
+T100BOOL T100VDiskCtrl::DoRemoveFile(T100DISK_ITEM* item)
 {
 
 }

@@ -416,6 +416,47 @@ T100BOOL T100VFSDirectory::list(T100STRING path)
     return value;
 }
 
+T100BOOL T100VFSDirectory::list(T100STRING path, T100DISK_ITEM_VECTOR& items)
+{
+    T100BOOL    value;
+    T100DWORD   current;
+
+    if(path.empty()){
+        return T100FALSE;
+    }
+
+    if(L":" == path){
+        current = m_root;
+    }else{
+        if(L':' == path[0]){
+            current = m_root;
+        }else{
+            current = m_current;
+        }
+
+        T100STRING_VECTOR    dirs;
+
+        value = T100String32Tools::split(path, ":", dirs);
+        if(!value){
+            return T100FALSE;
+        }
+
+        T100VFS_ITEM_HANDLE     handle;
+
+        for(auto dir : dirs){
+            value = search(current, dir, handle);
+            if(!value){
+                return T100FALSE;
+            }
+            current = handle.ITEM.LOCATION;
+        }
+    }
+
+    value = m_vfs->m_item->list(current, items);
+
+    return value;
+}
+
 T100BOOL T100VFSDirectory::isdir(T100STRING path)
 {
     T100BOOL                value;

@@ -27,6 +27,7 @@ class T100VFSItem
         T100BOOL                search(T100DWORD, T100String, T100VFS_ITEM_HANDLE&);
 
         T100BOOL                list(T100DWORD);
+        T100BOOL                list(T100DWORD, T100DISK_ITEM_VECTOR& items);
 
     protected:
         T100DWORD               m_location          = 0;

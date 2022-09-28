@@ -74,10 +74,10 @@ class T100DiskCtrl : public wxControl
         virtual T100BOOL            DoGetAllParts(T100DISK_PART_CTRL_VECTOR&) = 0;
         virtual T100BOOL            DoGetAllItems(wxString, wxString, T100DISK_ITEM_VECTOR&) = 0;
 
-        virtual T100BOOL            DoCreateDir() = 0;
-        virtual T100BOOL            DoRemoveDir() = 0;
-        virtual T100BOOL            DoCopyFile() = 0;
-        virtual T100BOOL            DoRemoveFile() = 0;
+        virtual T100BOOL            DoCreateFolder(T100DISK_ITEM*) = 0;
+        virtual T100BOOL            DoRemoveFolder(T100DISK_ITEM*) = 0;
+        virtual T100BOOL            DoCopyFile(T100DISK_ITEM*, T100DISK_ITEM*) = 0;
+        virtual T100BOOL            DoRemoveFile(T100DISK_ITEM*) = 0;
 
     protected:
         T100VOID                    create();

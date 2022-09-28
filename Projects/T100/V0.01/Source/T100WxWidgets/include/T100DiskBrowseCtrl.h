@@ -43,8 +43,14 @@ class T100DiskBrowseCtrl : public wxGenericDirCtrl
         void                    OnTreeDeleteItem(wxTreeEvent& event);
         void                    OnTreeItemMenu(wxTreeEvent& event);
 
+        void                    OnCreateFolder(wxCommandEvent& event);
+        void                    OnRemoveFolder(wxCommandEvent& event);
+        void                    OnRemoveFile(wxCommandEvent& event);
+
     private:
         wxTreeItemId            m_root_id;
+        wxTreeItemId            m_current;
+
         wxMenu                  m_menu;
         wxMenu                  m_folder_menu;
         wxMenu                  m_file_menu;

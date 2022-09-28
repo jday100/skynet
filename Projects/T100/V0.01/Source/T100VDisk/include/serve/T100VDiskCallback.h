@@ -1,6 +1,7 @@
 #ifndef T100VDISKCALLBACK_H
 #define T100VDISKCALLBACK_H
 
+#include "T100DiskCommon.h"
 #include "T100VDiskCommon.h"
 class T100VDiskServe;
 class T100VDiskView;
@@ -26,6 +27,9 @@ class T100VDiskCallback
         static T100BOOL                 ctrl_menu_new(void* = T100NULL);
         static T100BOOL                 ctrl_menu_remove(void* = T100NULL);
         static T100BOOL                 ctrl_menu_format(void* = T100NULL);
+
+        static T100BOOL                 ctrl_get_all_parts(void* = T100NULL);
+        static T100BOOL                 ctrl_get_all_items(T100String, T100String, T100DISK_ITEM_VECTOR&);
 
     protected:
 

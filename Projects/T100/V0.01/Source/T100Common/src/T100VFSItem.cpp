@@ -174,6 +174,47 @@ T100BOOL T100VFSItem::list(T100DWORD current)
     return T100TRUE;
 }
 
+T100BOOL T100VFSItem::list(T100DWORD current, T100DISK_ITEM_VECTOR& items)
+{
+    T100BOOL    result      = T100TRUE;
+    T100BOOL    value;
+    T100DWORD               id;
+    T100VFS_ITEM_INFO       info;
+    T100WORD*               data;
+
+    data = (T100WORD*)&info;
+
+    id = m_vfs->absolute(m_vfs->relative(current));
+    value = m_vfs->m_vdisk->read(id, data);
+    if(!value){
+        return T100FALSE;
+    }
+
+    value = T100FALSE;
+    for(int i=0;i<16 * 16 - 1;i++){
+        if(1 == info.ITEMS[i].PROPERTIES[0]){
+            T100DISK_ITEM*  item = T100NEW T100DISK_ITEM();
+
+            item->NAME      = T100String32Tools::to_string(info.ITEMS[i].NAME, 202);
+
+            if(1 == info.ITEMS[i].PROPERTIES[1]){
+                item->ISDIR = T100TRUE;
+            }else{
+                item->ISDIR = T100FALSE;
+            }
+
+            items.push_back(item);
+            value = T100TRUE;
+        }
+    }
+
+    if(!value){
+        //T100Log::info(T100SYSTEM_HINT_VDISK_NO_ITEM);
+    }
+
+    return T100TRUE;
+}
+
 T100BOOL T100VFSItem::search(T100String name, T100VFS_ITEM_HANDLE& handle)
 {
     T100BOOL    result      = T100TRUE;

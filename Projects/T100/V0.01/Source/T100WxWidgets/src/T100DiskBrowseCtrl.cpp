@@ -1,6 +1,8 @@
 #include "T100DiskBrowseCtrl.h"
 
 #include "T100DiskBrowseData.h"
+#include "T100DiskBrowseCreateFolderDialog.h"
+
 
 const long T100DiskBrowseCtrl::ID_MENU_FOLDER_CREATE = wxNewId();
 const long T100DiskBrowseCtrl::ID_MENU_FOLDER_REMOVE = wxNewId();
@@ -37,6 +39,10 @@ T100DiskBrowseCtrl::~T100DiskBrowseCtrl()
 void T100DiskBrowseCtrl::BuildContent(wxWindow *parent)
 {
     Create(parent);
+
+    Connect(ID_MENU_FOLDER_CREATE, wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100DiskBrowseCtrl::OnCreateFolder);
+    Connect(ID_MENU_FOLDER_REMOVE, wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100DiskBrowseCtrl::OnRemoveFolder);
+    Connect(ID_MENU_FILE_REMOVE, wxEVT_COMMAND_MENU_SELECTED,   (wxObjectEventFunction)&T100DiskBrowseCtrl::OnRemoveFile);
 }
 
 T100BOOL T100DiskBrowseCtrl::SetDiskCtrl(T100DiskCtrl* disk)
@@ -47,7 +53,7 @@ T100BOOL T100DiskBrowseCtrl::SetDiskCtrl(T100DiskCtrl* disk)
 
 T100BOOL T100DiskBrowseCtrl::Load()
 {
-    T100BOOL        result;
+    T100BOOL        result      = T100TRUE;
 
     wxString    path;
     wxString    name;
@@ -70,9 +76,11 @@ T100BOOL T100DiskBrowseCtrl::Load()
     m_file_menu.Append(ID_MENU_FILE_REMOVE, _("Remove"));
     m_menu.Append(wxID_ANY, _("File"), &m_file_menu);
 
-    T100DISK_PART_CTRL_VECTOR       parts;
+    //T100DISK_PART_CTRL_VECTOR       parts;
 
-    result = m_disk->DoGetAllParts(parts);
+    //result = m_disk->DoGetAllParts(parts);
+
+    T100DISK_PART_CTRL_VECTOR&  parts = m_disk->GetAllParts();
 
     if(result){
         for(T100DISK_PART_CTRL* item : parts){
@@ -135,7 +143,7 @@ void T100DiskBrowseCtrl::ExpandDir(wxTreeItemId parentId)
                 icon    = wxFileIconsTable::file;
             }
 
-            AddPart(path, name, icon);
+            AddItem(parentId, path, name, icon);
         }
     }
 }
@@ -210,7 +218,7 @@ void T100DiskBrowseCtrl::OnExpandItem(wxTreeEvent& event)
                 icon    = wxFileIconsTable::file;
             }
 
-            AddPart(path, name, icon);
+            AddItem(parentId, path, name, icon);
         }
     }
 
@@ -233,7 +241,7 @@ void T100DiskBrowseCtrl::OnEndEditItem(wxTreeEvent& event)
 
 void T100DiskBrowseCtrl::OnTreeSelChange(wxTreeEvent& event)
 {
-
+    m_current = event.GetItem();
 }
 
 void T100DiskBrowseCtrl::OnSize(wxSizeEvent& event)
@@ -260,3 +268,56 @@ void T100DiskBrowseCtrl::OnTreeItemMenu(wxTreeEvent& event)
 {
     ShowMenu();
 }
+
+void T100DiskBrowseCtrl::OnCreateFolder(wxCommandEvent& event)
+{
+    T100BOOL            result          = T100TRUE;
+
+    T100DiskBrowseCreateFolderDialog        dialog(this);
+
+    if(dialog.ShowModal() == wxID_OK){
+        T100DISK_ITEM       item;
+
+        item.NAME   = dialog.FolderTextCtrl->GetValue().ToStdWstring();
+        item.ISDIR  = T100TRUE;
+
+        result = m_disk->DoCreateFolder(&item);
+
+        if(result){
+            wxString    name;
+            wxString    path;
+
+            name = item.NAME.to_wstring();
+            path = item.NAME.to_wstring();
+            result = AddItem(m_current, name, path, wxFileIconsTable::folder);
+        }
+    }
+
+}
+
+void T100DiskBrowseCtrl::OnRemoveFolder(wxCommandEvent& event)
+{
+    T100BOOL            result          = T100TRUE;
+
+    wxMessageDialog     dialog(this, _("Are you sure?"));
+
+    if(dialog.ShowModal() == wxID_OK){
+        T100DISK_ITEM       item;
+
+        result = m_disk->DoRemoveFolder(&item);
+    }
+}
+
+void T100DiskBrowseCtrl::OnRemoveFile(wxCommandEvent& event)
+{
+    T100BOOL            result          = T100TRUE;
+
+    wxMessageDialog     dialog(this, _("Are you sure?"));
+
+    if(dialog.ShowModal() == wxID_OK){
+        T100DISK_ITEM       item;
+
+        result = m_disk->DoRemoveFile(&item);
+    }
+}
+

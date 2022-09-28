@@ -1,6 +1,7 @@
 #ifndef T100VDISK_H
 #define T100VDISK_H
 
+#include "T100DiskCommon.h"
 #include "T100VDiskCommon.h"
 #include "T100VFS.h"
 #include "T100VDiskFile.h"
@@ -44,6 +45,7 @@ class T100VDisk
         virtual T100BOOL            fs_remove(T100STRING, T100STRING);
 
         virtual T100BOOL            fs_list(T100STRING, T100STRING);
+        virtual T100BOOL            fs_list(T100STRING, T100STRING, T100DISK_ITEM_VECTOR&);
         virtual T100BOOL            fs_copy(T100STRING, T100STRING, T100STRING);
 
     protected:
