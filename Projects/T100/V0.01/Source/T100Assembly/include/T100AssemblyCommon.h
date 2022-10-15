@@ -310,6 +310,10 @@ typedef struct{
     T100WORD            location;
 }T100SEGMENT_KEY;
 
+
+#define     T100SEGMENT_HASH            std::unordered_map<T100SEGMENT_KEY, T100Segment*, T100SegmentHash, T100SegmentEqual>
+
+
 /*
 typedef enum{
     T100SEGMENT_NONE        = 0,

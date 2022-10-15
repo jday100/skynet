@@ -12,7 +12,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-l=work/os .\work\os\boot\boot.txt .\build\boot.bin" />
+				<Option parameters="-t" />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
@@ -27,6 +27,7 @@
 					<Add directory="include/cmdline" />
 					<Add directory="../T100Lib/include/cmdline" />
 					<Add directory="T100Assembly/include/produce" />
+					<Add directory="T100Assembly/test" />
 				</Compiler>
 				<Linker>
 					<Add library="../build/libT100Common.a" />
@@ -55,6 +56,7 @@
 					<Add directory="../T100Common/include" />
 					<Add directory="../T100Lib/include/cmdline" />
 					<Add directory="T100Assembly/include/produce" />
+					<Add directory="T100Assembly/test" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -85,6 +87,7 @@
 					<Add directory="include/cmdline" />
 					<Add directory="../T100Lib/include/cmdline" />
 					<Add directory="T100Assembly/include/produce" />
+					<Add directory="T100Assembly/test" />
 				</Compiler>
 				<Linker>
 					<Add library="../build/libT100Common.a" />
@@ -132,6 +135,7 @@
 		<Unit filename="../build/test/resources/assembly/scanner/test_segment.txt" />
 		<Unit filename="../build/test/resources/assembly/scanner/test_sentence.txt" />
 		<Unit filename="../build/test/resources/assembly/scanner/test_string.txt" />
+		<Unit filename="../build/test/resources/assembly/virtual/test_basic.txt" />
 		<Unit filename="include/T100Assembly.h" />
 		<Unit filename="include/T100AssemblyApp.h" />
 		<Unit filename="include/T100AssemblyCommon.h" />
@@ -162,6 +166,8 @@
 		<Unit filename="include/produce/T100SegmentCode.h" />
 		<Unit filename="include/produce/T100SegmentData.h" />
 		<Unit filename="include/produce/T100SegmentDrawer.h" />
+		<Unit filename="include/produce/T100SegmentEqual.h" />
+		<Unit filename="include/produce/T100SegmentHash.h" />
 		<Unit filename="include/produce/T100SegmentInfo.h" />
 		<Unit filename="include/produce/T100VariableDrawer.h" />
 		<Unit filename="include/produce/real/T100RealBuilder.h" />
@@ -265,6 +271,8 @@
 		<Unit filename="src/produce/T100SegmentCode.cpp" />
 		<Unit filename="src/produce/T100SegmentData.cpp" />
 		<Unit filename="src/produce/T100SegmentDrawer.cpp" />
+		<Unit filename="src/produce/T100SegmentEqual.cpp" />
+		<Unit filename="src/produce/T100SegmentHash.cpp" />
 		<Unit filename="src/produce/T100SegmentInfo.cpp" />
 		<Unit filename="src/produce/T100VariableDrawer.cpp" />
 		<Unit filename="src/produce/real/T100RealBuilder.cpp" />
@@ -357,6 +365,8 @@
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="test/T100VirtualProduceTest.cpp" />
+		<Unit filename="test/T100VirtualProduceTest.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -1,4 +1,4 @@
-IMPORT  "..\..\lib\string.txt"
+IMPORT  "lib\string.txt"
 
 DATA
     item_bad_low                                            INTEGER     4294967295

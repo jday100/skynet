@@ -10,6 +10,8 @@
 #include "T100DebugFile.h"
 #include "T100DebugFileWriter.h"
 
+#include "T100TestTools.h"
+
 
 T100RealMerger::T100RealMerger()
 {
@@ -392,6 +394,7 @@ T100BOOL T100RealMerger::relocate(T100RealInfo& info)
 
                 info.getCode().getMem()[offset] = temp + os;
             }else{
+                T100TestTools::Print(item->name.to_wstring());
                 return T100FALSE;
             }
         }else{

@@ -1,0 +1,266 @@
+IMPORT  "..\lib\dword.txt"
+IMPORT  "table.txt"
+IMPORT  "item.txt"
+IMPORT  "file.txt"
+IMPORT  "path.txt"
+
+DATA
+    fs_part_location_low                                    INTEGER
+    fs_part_location_high                                   INTEGER
+    fs_part_length_low                                      INTEGER
+    fs_part_length_high                                     INTEGER
+    //
+    fs_table_begin_low                                      INTEGER
+    fs_table_begin_high                                     INTEGER
+    fs_table_end_low                                        INTEGER
+    fs_table_end_high                                       INTEGER
+    //
+    fs_path_root                                            STRING      ":"
+    fs_path_mask                                            STRING      ":"
+    fs_path_root_low                                        INTEGER
+    fs_path_root_high                                       INTEGER
+    fs_path_current_low                                     INTEGER
+    fs_path_current_high                                    INTEGER
+    //
+    fs_part_init_result                                     INTEGER
+    fs_part_init_result_offset                              INTEGER
+    fs_part_init_location_low_offset                        INTEGER
+    fs_part_init_location_high_offset                       INTEGER
+    fs_part_init_length_low_offset                          INTEGER
+    fs_part_init_length_high_offset                         INTEGER
+    //
+    fs_file_open_result                                     INTEGER
+    fs_file_open_result_offset                              INTEGER
+    fs_file_open_name_offset                                INTEGER
+    fs_file_open_handle_offset                              INTEGER
+    //
+    fs_file_close_result                                    INTEGER
+    fs_file_close_result_offset                             INTEGER
+    //
+    fs_absolute_location_result                             INTEGER
+    fs_absolute_location_result_offset                      INTEGER
+    //
+    fs_absolute_location_source_low_offset                  INTEGER
+    fs_absolute_location_source_high_offset                 INTEGER
+    fs_absolute_location_target_low_offset                  INTEGER
+    fs_absolute_location_target_high_offset                 INTEGER
+    //
+    fs_absolute_location_value_low                          INTEGER
+    fs_absolute_location_value_high                         INTEGER
+    //
+    fs_relative_location_result                             INTEGER
+    fs_relative_location_result_offset                      INTEGER
+    //
+    fs_relative_location_source_low_offset                  INTEGER
+    fs_relative_location_source_high_offset                 INTEGER
+    fs_relative_location_target_low_offset                  INTEGER
+    fs_relative_location_target_high_offset                 INTEGER
+    //
+    fs_relative_location_middle_low                         INTEGER
+    fs_relative_location_middle_high                        INTEGER
+    fs_relative_location_value_low                          INTEGER
+    fs_relative_location_value_high                         INTEGER
+    //
+    fs_relative_location_constant_low                       INTEGER
+    fs_relative_location_constant_high                      INTEGER
+    //
+END
+
+PROC=FS_PART_INIT
+    CMT     40010010
+    MOVE    fs_part_init_result_offset                      AAR
+    MOVE    fs_part_init_location_low_offset                ABR
+    MOVE    fs_part_init_length_low_offset                  ACR
+    //
+    MOVE    AAR                                             fs_part_init_location_low_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    fs_part_init_location_high_offset               ACR
+    //
+    MOVE    AAR                                             fs_part_init_length_low_offset
+    ADD
+    MOVE    fs_part_init_length_high_offset                 ACR
+    //
+    MOVE    fs_part_location_low                            #fs_part_init_location_low_offset
+    MOVE    fs_part_location_high                           #fs_part_init_location_high_offset
+    //
+    MOVE    ACR                                             fs_part_location_low
+    JZ      FS_PART_INIT_ERROR
+    //
+    CMT     40010020
+    MOVE    fs_part_length_low                              #fs_part_init_length_low_offset
+    MOVE    fs_part_length_high                             #fs_part_init_length_high_offset
+    //
+    MOVE    ACR                                             fs_part_length_high
+    JNZ     FS_PART_INIT_LENGTH
+    CMT     40010030
+    MOVE    AAR                                             fs_part_length_low
+    MOVE    ABR                                             4
+    SUB
+    MOVE    ACR                                             AMF
+    JNZ     FS_PART_INIT_ERROR
+    //
+FS_PART_INIT_LENGTH:
+    CMT     40010040
+    MOVE    AAR                                             @fs_part_init_result
+    MOVE    ABR                                             fs_part_init_location_low_offset
+    MOVE    ACR                                             fs_part_init_length_low_offset
+    CALL    TABLE_INIT
+    MOVE    ACR                                             fs_part_init_result
+    JZ      FS_PART_INIT_ERROR
+    //
+    CMT     40010050
+    MOVE    AAR                                             @fs_part_init_result
+    MOVE    ABR                                             fs_part_init_location_low_offset
+    MOVE    ACR                                             fs_part_init_length_low_offset
+    CALL    ITEM_INIT
+    MOVE    ACR                                             fs_part_init_result
+    JZ      FS_PART_INIT_ERROR
+    //
+    CMT     40010060
+    MOVE    AAR                                             @fs_part_init_result
+    MOVE    ABR                                             fs_part_init_location_low_offset
+    MOVE    ACR                                             fs_part_init_length_low_offset
+    CALL    PATH_INIT
+    MOVE    ACR                                             fs_part_init_result
+    JZ      FS_PART_INIT_ERROR
+    //
+    CMT     40010070
+    MOVE    #fs_part_init_result_offset                     1
+    RET
+FS_PART_INIT_ERROR:
+    CMT     40010080
+    MOVE    #fs_part_init_result_offset                     0
+END
+
+//
+//result_offset
+//name_offset
+//handle_offset
+//
+//handle
+//
+//location_low
+//location_high
+//index
+//offset
+//item_location_low
+//item_location_high
+//item_length_low
+//item_length_high
+//item_properties[2]
+//
+PROC=FS_FILE_OPEN
+    CMT     40010110
+    MOVE    fs_file_open_result_offset                      AAR
+    MOVE    fs_file_open_name_offset                        ABR
+    MOVE    fs_file_open_handle_offset                      ACR
+    //
+    MOVE    AAR                                             @fs_file_open_result
+    MOVE    ABR                                             fs_file_open_name_offset
+    MOVE    ACR                                             fs_file_open_handle_offset
+    CALL    PATH_SEARCH
+    MOVE    ACR                                             fs_file_open_result
+    JZ      FS_FILE_OPEN_ERROR
+    //
+    CMT     40010120
+    MOVE    #fs_file_open_result_offset                     1
+    RET
+FS_FILE_OPEN_ERROR:
+    CMT     40010130
+    MOVE    #fs_file_open_result_offset                     0
+END
+
+PROC=FS_FILE_CLOSE
+    CMT     40010210
+    MOVE    fs_file_close_result_offset                     AAR
+    //
+    MOVE    #fs_file_close_result_offset                    1
+    RET
+FS_FILE_OPEN_ERROR:
+    CMT     40010230
+    MOVE    #fs_file_close_result_offset                    0
+END
+
+PROC=FS_ABSOLUTE_LOCATION
+    CMT     40010310
+    MOVE    fs_absolute_location_result_offset              AAR
+    MOVE    fs_absolute_location_source_low_offset          ABR
+    MOVE    fs_absolute_location_target_low_offset          ACR
+    //
+    MOVE    AAR                                             fs_absolute_location_source_low_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    fs_absolute_location_source_high_offset         ACR
+    MOVE    AAR                                             fs_absolute_location_target_low_offset
+    ADD
+    MOVE    fs_absolute_location_target_high_offset         ACR
+    //
+    CMT     40010320
+    MOVE    AAR                                             @fs_absolute_location_result
+    MOVE    ABR                                             fs_absolute_location_source_low_offset
+    MOVE    ACR                                             @fs_part_location_low
+    MOVE    ADR                                             @fs_absolute_location_value_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                             fs_absolute_location_result
+    JZ      FS_ABSOLUTE_LOCATION_ERROR
+    //
+    CMT     40010330
+    MOVE    #fs_absolute_location_target_low_offset         fs_absolute_location_value_low
+    MOVE    #fs_absolute_location_target_high_offset        fs_absolute_location_value_high
+    //
+    CMT     40010340
+    MOVE    #fs_absolute_location_result_offset             1
+    RET
+    //
+FS_ABSOLUTE_LOCATION_ERROR:
+    CMT     40010350
+    MOVE    #fs_absolute_location_result_offset             0
+END
+
+PROC=FS_RELATIVE_LOCATION
+    CMT     40010410
+    MOVE    fs_relative_location_result_offset              AAR
+    MOVE    fs_relative_location_source_low_offset          ABR
+    MOVE    fs_relative_location_target_low_offset          ACR
+    //
+    MOVE    AAR                                             fs_relative_location_source_low_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    fs_relative_location_source_high_offset         ACR
+    MOVE    AAR                                             fs_relative_location_target_low_offset
+    ADD
+    MOVE    fs_relative_location_target_high_offset         ACR
+    //
+    MOVE    fs_relative_location_constant_low               1
+    MOVE    fs_relative_location_constant_high              0
+    CMT     40010420
+    MOVE    AAR                                             @fs_relative_location_result
+    MOVE    ABR                                             fs_relative_location_source_low_offset
+    MOVE    ACR                                             @fs_table_end_low
+    MOVE    ADR                                             @fs_relative_location_middle_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                             fs_relative_location_result
+    JZ      FS_RELATIVE_LOCATION_ERROR
+    //
+    CMT     40010430
+    MOVE    AAR                                             @fs_relative_location_result
+    MOVE    ABR                                             @fs_relative_location_middle_low
+    MOVE    ACR                                             @fs_relative_location_constant_low
+    MOVE    ADR                                             @fs_relative_location_value_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                             fs_relative_location_result
+    JZ      FS_RELATIVE_LOCATION_ERROR
+    //
+    CMT     40010440
+    MOVE    #fs_relative_location_target_low_offset         fs_relative_location_value_low
+    MOVE    #fs_relative_location_target_high_offset        fs_relative_location_value_high
+    //
+    CMT     40010450
+    MOVE    #fs_relative_location_result_offset             1
+    RET
+    //
+FS_RELATIVE_LOCATION_ERROR:
+    CMT     40010460
+    MOVE    #fs_relative_location_result_offset             0
+END

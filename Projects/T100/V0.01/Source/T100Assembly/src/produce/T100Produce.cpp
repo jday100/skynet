@@ -39,6 +39,9 @@ T100ProduceBuilder* T100Produce::create_builder(T100ProduceInfo& info)
         }
         break;
     default:
+        {
+            result = T100NEW T100VirtualBuilder();
+        }
         break;
     }
 

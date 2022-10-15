@@ -59,9 +59,18 @@ DATA
     boot_file_load_location_temp_low        INTEGER
     boot_file_load_location_temp_high       INTEGER
     //
+    disk_mode_get                           INTEGER     13
+    disk_mode_block                         INTEGER     14
+    disk_mode_read                          INTEGER     17
+    disk_mode_write                         INTEGER     18
+    disk_block_index_limit                  INTEGER     16
+    disk_block_length                       INTEGER     1024
+    disk_block_limit                        INTEGER     16384
+    //
+    int069_mode_disk_read                   INTEGER     7
 END
 
-DATA    VIRTUAL     LOCATION=1073807360     LENGTH=16384        //
+DATA    VIRTUAL     LOCATION=16384      LENGTH=16384        //
     boot_init_buffer                        INTEGER     0
 END
 

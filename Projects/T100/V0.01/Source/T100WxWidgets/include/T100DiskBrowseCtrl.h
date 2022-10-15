@@ -23,6 +23,7 @@ class T100DiskBrowseCtrl : public wxGenericDirCtrl
         wxTreeItemId            AddPart(wxString&, wxString&, int);
         wxTreeItemId            AddItem(wxTreeItemId, wxString&, wxString&, int);
 
+        void                    InitMenu();
         void                    ShowMenu();
 
     private:
@@ -52,8 +53,9 @@ class T100DiskBrowseCtrl : public wxGenericDirCtrl
         wxTreeItemId            m_current;
 
         wxMenu                  m_menu;
-        wxMenu                  m_folder_menu;
-        wxMenu                  m_file_menu;
+        wxMenu*                 m_folder_menu   = T100NULL;
+        wxMenu*                 m_file_menu     = T100NULL;
+
         wxTreeCtrl*             m_tree          = T100NULL;
         T100DiskCtrl*           m_disk          = T100NULL;
 

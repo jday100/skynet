@@ -20,6 +20,7 @@
 					<Add directory="../T100Assembly/include" />
 					<Add directory="../T100Assembly/include/syntax" />
 					<Add directory="../T100Assembly/include/scanner" />
+					<Add directory="T100Common/include" />
 				</Compiler>
 				<Linker>
 					<Add library="../build/libT100Lib.a" />
@@ -35,6 +36,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
+					<Add directory="T100Common/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -56,11 +58,13 @@
 					<Add directory="../T100Assembly/include" />
 					<Add directory="../T100Assembly/include/syntax" />
 					<Add directory="../T100Assembly/include/scanner" />
+					<Add directory="T100Common/include" />
 				</Compiler>
 				<Linker>
 					<Add library="../build/libT100Lib.a" />
 					<Add library="dl" />
 					<Add library="iconv" />
+					<Add library="../build/libT100Assembly.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -74,6 +78,11 @@
 		<Unit filename="include/T100DebugFileWriter.h" />
 		<Unit filename="include/T100DebugInfo.h" />
 		<Unit filename="include/T100DeviceTypes.h" />
+		<Unit filename="include/T100ExecutableCommon.h" />
+		<Unit filename="include/T100ExecutableFile.h" />
+		<Unit filename="include/T100ExecutableFileReader.h" />
+		<Unit filename="include/T100ExecutableFileWriter.h" />
+		<Unit filename="include/T100ExecutableInfo.h" />
 		<Unit filename="include/T100Font.h" />
 		<Unit filename="include/T100FontCommon.h" />
 		<Unit filename="include/T100FontFile.h" />
@@ -90,14 +99,15 @@
 		<Unit filename="include/T100VFSFile.h" />
 		<Unit filename="include/T100VFSItem.h" />
 		<Unit filename="include/T100VFSTable.h" />
-		<Unit filename="main.cpp">
-			<Option target="Debug" />
-			<Option target="Release" />
-		</Unit>
+		<Unit filename="main.cpp" />
 		<Unit filename="src/T100DebugFile.cpp" />
 		<Unit filename="src/T100DebugFileReader.cpp" />
 		<Unit filename="src/T100DebugFileWriter.cpp" />
 		<Unit filename="src/T100DebugInfo.cpp" />
+		<Unit filename="src/T100ExecutableFile.cpp" />
+		<Unit filename="src/T100ExecutableFileReader.cpp" />
+		<Unit filename="src/T100ExecutableFileWriter.cpp" />
+		<Unit filename="src/T100ExecutableInfo.cpp" />
 		<Unit filename="src/T100Font.cpp" />
 		<Unit filename="src/T100FontFile.cpp" />
 		<Unit filename="src/T100FontFileReader.cpp" />
@@ -117,14 +127,8 @@
 		<Unit filename="test/T100CommonTestHint.h" />
 		<Unit filename="test/T100FontTest.cpp" />
 		<Unit filename="test/T100FontTest.h" />
-		<Unit filename="test/T100TestApp.cpp">
-			<Option target="Debug" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="test/T100TestApp.h">
-			<Option target="Debug" />
-			<Option target="Release" />
-		</Unit>
+		<Unit filename="test/T100TestApp.cpp" />
+		<Unit filename="test/T100TestApp.h" />
 		<Unit filename="test/T100VDiskTest.cpp" />
 		<Unit filename="test/T100VDiskTest.h" />
 		<Extensions>

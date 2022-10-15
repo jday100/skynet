@@ -11,6 +11,7 @@ class T100Sentence;
 class T100BuildInfo
 {
     friend class T100RealBuilder;
+    friend class T100VirtualBuilder;
     public:
         T100BuildInfo();
         virtual ~T100BuildInfo();

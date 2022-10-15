@@ -53,32 +53,13 @@ T100BOOL T100DiskBrowseCtrl::SetDiskCtrl(T100DiskCtrl* disk)
 
 T100BOOL T100DiskBrowseCtrl::Load()
 {
-    T100BOOL        result      = T100TRUE;
+    T100BOOL            result          = T100TRUE;
+    wxString            name;
+    wxString            path;
+    int                 icon;
 
-    wxString    path;
-    wxString    name;
-    wxInt32     icon;
+    InitMenu();
 
-    path    = _("\\");
-    name    = _("Computer");
-    icon    = wxFileIconsTable::computer;
-
-    AddSection(path, name, icon);
-
-    if(!m_disk){
-        return T100FALSE;
-    }
-
-    m_folder_menu.Append(ID_MENU_FOLDER_CREATE, _("Create"));
-    m_folder_menu.Append(ID_MENU_FOLDER_REMOVE, _("Remove"));
-    m_menu.Append(wxID_ANY, _("Folder"), &m_folder_menu);
-    m_file_menu.Append(ID_MENU_FILE_COPY, _("Copy"));
-    m_file_menu.Append(ID_MENU_FILE_REMOVE, _("Remove"));
-    m_menu.Append(wxID_ANY, _("File"), &m_file_menu);
-
-    //T100DISK_PART_CTRL_VECTOR       parts;
-
-    //result = m_disk->DoGetAllParts(parts);
 
     T100DISK_PART_CTRL_VECTOR&  parts = m_disk->GetAllParts();
 
@@ -92,7 +73,7 @@ T100BOOL T100DiskBrowseCtrl::Load()
         }
     }
 
-
+    return result;
 }
 
 wxTreeCtrl* T100DiskBrowseCtrl::CreateTreeCtrl(wxWindow* parent, wxWindowID id, const wxPoint& pos, const wxSize& size, long treeStyle)
@@ -179,6 +160,24 @@ wxTreeItemId T100DiskBrowseCtrl::AddItem(wxTreeItemId parentId, wxString& path, 
     m_tree->SetItemHasChildren(treeid);
 
     return treeid;
+}
+
+void T100DiskBrowseCtrl::InitMenu()
+{
+    m_folder_menu = T100NEW wxMenu();
+    wxMenuItem* folder_create = T100NEW wxMenuItem(m_folder_menu, ID_MENU_FOLDER_CREATE, _("Create"), wxEmptyString, wxITEM_NORMAL);
+    m_folder_menu->Append(folder_create);
+    wxMenuItem* folder_remove = T100NEW wxMenuItem(m_folder_menu, ID_MENU_FOLDER_REMOVE, _("Remove"), wxEmptyString, wxITEM_NORMAL);
+    m_folder_menu->Append(folder_remove);
+
+    m_menu.Append(wxID_ANY, _("Folder"), m_folder_menu, wxEmptyString);
+
+    m_file_menu = T100NEW wxMenu();
+    wxMenuItem* file_remove = T100NEW wxMenuItem(m_file_menu, ID_MENU_FILE_REMOVE, _("Remove"), wxEmptyString, wxITEM_NORMAL);
+    m_file_menu->Append(file_remove);
+
+    m_menu.Append(wxID_ANY, _("File"), m_file_menu, wxEmptyString);
+
 }
 
 void T100DiskBrowseCtrl::ShowMenu()

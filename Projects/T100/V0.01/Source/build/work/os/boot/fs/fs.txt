@@ -1,4 +1,4 @@
-IMPORT  "..\..\lib\dword.txt"
+IMPORT  "lib\dword.txt"
 IMPORT  "table.txt"
 IMPORT  "item.txt"
 IMPORT  "file.txt"

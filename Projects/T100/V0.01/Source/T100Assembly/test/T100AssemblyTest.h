@@ -7,6 +7,7 @@
 #include "T100SegmentScannerTest.h"
 #include "T100PartScannerTest.h"
 #include "T100RealProduceTest.h"
+#include "T100VirtualProduceTest.h"
 
 
 class T100AssemblyTest : public T100Test
@@ -23,6 +24,7 @@ class T100AssemblyTest : public T100Test
         T100PartScannerTest         test_part;
 
         T100RealProduceTest         test_real;
+        T100VirtualProduceTest      test_virtual;
 
     private:
 };

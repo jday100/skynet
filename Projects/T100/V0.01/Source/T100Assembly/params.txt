@@ -6,3 +6,6 @@ work/os/rom.txt  build/rom.bin
 -l=work/os work/os/rom/rom.txt  build/rom.bin
 
 -l=work/os .\work\os\boot\boot.txt .\build\boot.bin
+
+
+-l=work/os/kernel .\work\os\kernel\init.txt .\build\init.bin
