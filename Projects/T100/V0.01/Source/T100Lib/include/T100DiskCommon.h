@@ -61,7 +61,9 @@ typedef struct{
 }T100DISK_PART_INFO;
 
 typedef struct{
+    T100STRING      PART;
     T100STRING      NAME;
+    T100STRING      PATH;
     T100BOOL        ISDIR;
 }T100DISK_ITEM;
 

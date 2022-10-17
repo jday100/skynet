@@ -17,6 +17,7 @@ class T100ProduceInfo
 {
     friend class T100BuildInfo;
     friend class T100RealMerger;
+    friend class T100VirtualMerger;
     public:
         T100ProduceInfo();
         virtual ~T100ProduceInfo();

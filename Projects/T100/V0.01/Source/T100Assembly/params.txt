@@ -9,3 +9,5 @@ work/os/rom.txt  build/rom.bin
 
 
 -l=work/os/kernel .\work\os\kernel\init.txt .\build\init.bin
+
+-l=work/os/kernel .\work\os\kernel\kernel.txt .\build\kernel.bin

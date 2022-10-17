@@ -7,6 +7,7 @@
 class T100SegmentData : public T100Segment
 {
     friend class T100RealMerger;
+    friend class T100VirtualMerger;
     public:
         T100SegmentData();
         virtual ~T100SegmentData();

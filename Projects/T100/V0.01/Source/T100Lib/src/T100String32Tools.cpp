@@ -65,9 +65,25 @@ T100BOOL T100String32Tools::copy(T100WORD* target, T100WORD* source, T100WORD le
     return T100TRUE;
 }
 
-T100BOOL T100String32Tools::split(T100String line, T100String mask, T100STRING_VECTOR& result)
+T100BOOL T100String32Tools::split(T100String line, T100String mask, T100STRING_VECTOR& strs)
 {
+    T100BOOL            result          = T100TRUE;
+    T100WCHAR*          source          = T100NULL;
+    T100WCHAR*          item            = T100NULL;
+    T100WSTRING         str;
 
+    source = const_cast<T100WCHAR*>(line.m_wstring.c_str());
+
+    item = ::wcstok(source, mask.m_wstring.c_str());
+
+    while(T100NULL != item){
+        str = item;
+        strs.push_back(str);
+
+        item = ::wcstok(T100NULL, mask.m_wstring.c_str());
+    }
+
+    return result;
 }
 
 T100BOOL T100String32Tools::compare(T100WORD* data, T100WORD length, T100String& source)

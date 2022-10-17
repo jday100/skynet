@@ -29,10 +29,19 @@ class T100ExecutableFileWriter : public T100FileWriter
 
         T100BOOL                    write_segment(T100Segment*);
 
+        T100BOOL                    create_head();
+
+        T100BOOL                    count(T100SEGMENT_CODE_VECTOR&, T100WORD&, T100WORD&);
+        T100BOOL                    count(T100SEGMENT_CODE_VECTOR&, T100WORD&, T100WORD&, T100WORD&);
+        T100BOOL                    count(T100SEGMENT_DATA_VECTOR&, T100WORD&, T100WORD&);
+        T100BOOL                    count(T100SEGMENT_DATA_VECTOR&, T100WORD&, T100WORD&, T100WORD&);
+
     private:
         T100ExecutableInfo*         m_info          = T100NULL;
 
         T100EXECUTABLE_FILE_HEAD    m_head;
+
+        T100WORD                    m_offset        = 0;
 
 };
 

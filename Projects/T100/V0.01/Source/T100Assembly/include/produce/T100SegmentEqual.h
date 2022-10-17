@@ -1,7 +1,7 @@
 #ifndef T100SEGMENTEQUAL_H
 #define T100SEGMENTEQUAL_H
 
-#include "T100Segment.h"
+#include "T100AssemblyCommon.h"
 
 
 class T100SegmentEqual

@@ -15,6 +15,10 @@ class T100ExecutableInfo
         T100ExecutableInfo();
         virtual ~T100ExecutableInfo();
 
+        T100SegmentCode*                m_code          = T100NULL;
+
+        T100SegmentData*                m_data          = T100NULL;
+
         T100SEGMENT_CODE_VECTOR         m_codes;
 
         T100SEGMENT_DATA_VECTOR         m_datas;
@@ -24,6 +28,8 @@ class T100ExecutableInfo
         T100SEGMENT_DATA_VECTOR         m_share_datas;
 
     protected:
+        T100VOID                        create();
+        T100VOID                        destroy();
 
     private:
 };

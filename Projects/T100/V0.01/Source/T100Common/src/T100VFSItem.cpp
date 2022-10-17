@@ -198,9 +198,9 @@ T100BOOL T100VFSItem::list(T100DWORD current, T100DISK_ITEM_VECTOR& items)
             item->NAME      = T100String32Tools::to_string(info.ITEMS[i].NAME, 202);
 
             if(1 == info.ITEMS[i].PROPERTIES[1]){
-                item->ISDIR = T100TRUE;
-            }else{
                 item->ISDIR = T100FALSE;
+            }else{
+                item->ISDIR = T100TRUE;
             }
 
             items.push_back(item);

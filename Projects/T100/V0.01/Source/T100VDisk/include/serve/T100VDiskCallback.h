@@ -31,6 +31,12 @@ class T100VDiskCallback
         static T100BOOL                 ctrl_get_all_parts(void* = T100NULL);
         static T100BOOL                 ctrl_get_all_items(T100String, T100String, T100DISK_ITEM_VECTOR&);
 
+        static T100BOOL                 ctrl_create_folder(void* = T100NULL);
+        static T100BOOL                 ctrl_remove_folder(void* = T100NULL);
+
+        static T100BOOL                 ctrl_copy_file(void* = T100NULL, void* = T100NULL);
+        static T100BOOL                 ctrl_remove_file(void* = T100NULL);
+
     protected:
 
     private:

@@ -14,7 +14,9 @@ class T100VirtualMerger : public T100ProduceMerger
         T100BOOL                run(T100ProduceInfo&, T100VirtualInfo&);
 
     protected:
-        T100BOOL                merge();
+        T100BOOL                merge(T100PartInfo*);
+        T100BOOL                merge(T100SEGMENT_CODE_VECTOR&);
+        T100BOOL                merge(T100SEGMENT_DATA_VECTOR&);
         T100BOOL                decide(T100SegmentCode*, T100SegmentCode*);
         T100BOOL                decide(T100SegmentData*, T100SegmentData*);
         T100BOOL                mergeCode(T100SegmentCode*, T100SegmentCode*);
@@ -26,6 +28,7 @@ class T100VirtualMerger : public T100ProduceMerger
         T100Segment*            findShareData(T100SEGMENT_KEY*);
 
     private:
+        T100VirtualInfo*        m_info          = T100NULL;
         T100SEGMENT_HASH        m_codes;
         T100SEGMENT_HASH        m_datas;
         T100SEGMENT_HASH        m_share_codes;

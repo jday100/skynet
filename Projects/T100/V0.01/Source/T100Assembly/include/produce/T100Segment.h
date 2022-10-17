@@ -2,6 +2,13 @@
 #define T100SEGMENT_H
 
 #include "T100AssemblyCommon.h"
+#include "T100SegmentEqual.h"
+#include "T100SegmentHash.h"
+
+
+
+
+#define     T100SEGMENT_HASH            std::unordered_map<T100SEGMENT_KEY, T100Segment*, T100SegmentHash, T100SegmentEqual>
 
 
 class T100Segment

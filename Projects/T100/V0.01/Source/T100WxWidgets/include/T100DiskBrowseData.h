@@ -15,6 +15,7 @@ class T100DiskBrowseData : public wxDirItemData
         T100VOID            setPart(T100BOOL);
         T100BOOL            isPart();
         wxString            part;
+        T100BOOL            loaded          = T100FALSE;
 
     protected:
 

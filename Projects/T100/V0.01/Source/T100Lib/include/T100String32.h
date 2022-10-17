@@ -14,6 +14,8 @@ T100String32    operator +  (const T100CHAR32*, const T100String32&);
 class T100String32
 {
     friend class T100String32Tools;
+    friend class T100SegmentEqual;
+    friend class T100SegmentHash;
     public:
         T100String32();
         T100String32(T100CHAR32*);

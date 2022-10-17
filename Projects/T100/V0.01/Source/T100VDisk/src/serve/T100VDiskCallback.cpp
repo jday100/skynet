@@ -222,10 +222,84 @@ T100BOOL T100VDiskCallback::ctrl_get_all_parts(void* d)
 
 T100BOOL T100VDiskCallback::ctrl_get_all_items(T100String part, T100String path, T100DISK_ITEM_VECTOR& items)
 {
-    T100BOOL                result          = T100TRUE;
+    T100BOOL            result          = T100TRUE;
 
 
     result = m_serve->getVDisk()->fs_list(part, path, items);
+
+    return result;
+}
+
+T100BOOL T100VDiskCallback::ctrl_create_folder(void* d)
+{
+    T100BOOL            result          = T100TRUE;
+    T100DISK_ITEM*      item            = T100NULL;
+
+    item = (T100DISK_ITEM*)d;
+
+    if(item->ISDIR){
+
+    }else{
+        return T100FALSE;
+    }
+
+    result = m_serve->getVDisk()->fs_mkdir(item->PART, item->PATH);
+
+    return result;
+}
+
+T100BOOL T100VDiskCallback::ctrl_remove_folder(void* d)
+{
+    T100BOOL            result          = T100TRUE;
+    T100DISK_ITEM*      item            = T100NULL;
+
+    item = (T100DISK_ITEM*)d;
+
+    if(item->ISDIR){
+
+    }else{
+        return T100FALSE;
+    }
+
+    result = m_serve->getVDisk()->fs_rmdir(item->PART, item->PATH);
+
+    return result;
+}
+
+T100BOOL T100VDiskCallback::ctrl_copy_file(void* s, void* t)
+{
+    T100BOOL            result          = T100TRUE;
+    T100DISK_ITEM*      source          = T100NULL;
+    T100DISK_ITEM*      target          = T100NULL;
+
+    source  = (T100DISK_ITEM*)s;
+    target  = (T100DISK_ITEM*)t;
+
+    if(source->ISDIR){
+        return T100FALSE;
+    }
+
+    if(target->ISDIR){
+        return T100FALSE;
+    }
+
+    result = m_serve->getVDisk()->fs_copy(source->PATH, target->PART, target->PATH);
+
+    return result;
+}
+
+T100BOOL T100VDiskCallback::ctrl_remove_file(void* d)
+{
+    T100BOOL            result          = T100TRUE;
+    T100DISK_ITEM*      item            = T100NULL;
+
+    item = (T100DISK_ITEM*)d;
+
+    if(item->ISDIR){
+        return T100FALSE;
+    }
+
+    result = m_serve->getVDisk()->fs_remove(item->PART, item->PATH);
 
     return result;
 }

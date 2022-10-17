@@ -21,7 +21,9 @@ class T100DiskBrowseCtrl : public wxGenericDirCtrl
         void                    ExpandDir(wxTreeItemId parentId);
         T100DiskBrowseData*     GetItemData(wxTreeItemId);
         wxTreeItemId            AddPart(wxString&, wxString&, int);
+
         wxTreeItemId            AddItem(wxTreeItemId, wxString&, wxString&, int);
+        T100BOOL                RemoveItem(wxTreeItemId);
 
         void                    InitMenu();
         void                    ShowMenu();

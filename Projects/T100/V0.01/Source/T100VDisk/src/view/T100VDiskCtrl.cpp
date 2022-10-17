@@ -98,20 +98,36 @@ T100BOOL T100VDiskCtrl::DoGetAllItems(wxString part, wxString path, T100DISK_ITE
 
 T100BOOL T100VDiskCtrl::DoCreateFolder(T100DISK_ITEM* item)
 {
+    T100BOOL            result          = T100TRUE;
 
+    result = T100VDiskCallback::ctrl_create_folder(item);
+
+    return result;
 }
 
 T100BOOL T100VDiskCtrl::DoRemoveFolder(T100DISK_ITEM* item)
 {
+    T100BOOL            result          = T100TRUE;
 
+    result = T100VDiskCallback::ctrl_remove_folder(item);
+
+    return result;
 }
 
 T100BOOL T100VDiskCtrl::DoCopyFile(T100DISK_ITEM* source, T100DISK_ITEM* target)
 {
+    T100BOOL            result          = T100TRUE;
 
+    result = T100VDiskCallback::ctrl_copy_file(source, target);
+
+    return result;
 }
 
 T100BOOL T100VDiskCtrl::DoRemoveFile(T100DISK_ITEM* item)
 {
+    T100BOOL            result          = T100TRUE;
 
+    result = T100VDiskCallback::ctrl_remove_file(item);
+
+    return result;
 }

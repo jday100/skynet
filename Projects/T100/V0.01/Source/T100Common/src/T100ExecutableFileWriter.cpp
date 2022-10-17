@@ -1,4 +1,5 @@
 #include "T100ExecutableFileWriter.h"
+#include <cstring>
 #include "T100String.h"
 #include "T100SegmentCode.h"
 #include "T100SegmentData.h"
@@ -19,6 +20,15 @@ T100BOOL T100ExecutableFileWriter::save(T100ExecutableInfo& info)
 {
     T100BOOL            result          = T100TRUE;
     T100BOOL            value;
+
+    m_info = &info;
+
+    if(!opened()){
+        value = open();
+        if(!value){
+            return T100FALSE;
+        }
+    }
 
     value = write_head();
     if(!value){
@@ -41,7 +51,14 @@ T100BOOL T100ExecutableFileWriter::save(T100ExecutableInfo& info)
     }
 
     value   = write_share();
-    result  = value;
+    if(!value){
+        return T100FALSE;
+    }
+
+    value = close();
+    if(!value){
+        result = T100FALSE;
+    }
 
     return result;
 }
@@ -52,6 +69,12 @@ T100BOOL T100ExecutableFileWriter::write_head()
 
     T100WORD*       data        = T100NULL;
     T100WORD        length;
+
+    if(create_head()){
+
+    }else{
+        return T100FALSE;
+    }
 
     data    = (T100WORD*)&m_head;
     length  = (sizeof(T100EXECUTABLE_FILE_HEAD) + 3) / 4;
@@ -400,6 +423,181 @@ T100BOOL T100ExecutableFileWriter::write_segment(T100Segment* seg)
     length  = seg->getLength();
 
     result  = write(data, length);
+
+    return result;
+}
+
+T100BOOL T100ExecutableFileWriter::create_head()
+{
+    T100BOOL    result      = T100FALSE;
+    T100WORD    table       = 0;
+    T100WORD    total       = 0;
+    T100WORD    length      = 0;
+
+    if(!m_info){
+        return T100FALSE;
+    }
+
+    memset(&m_head, 0, sizeof(T100EXECUTABLE_FILE_HEAD));
+
+    m_head.COMMON.SIGN      =   T100FILE_EXECUTABLE;
+
+    result = count(m_info->m_codes, total, length);
+    if(!result){
+        return T100FALSE;
+    }
+
+    m_offset = sizeof(T100EXECUTABLE_FILE_HEAD) / 4;
+
+    m_head.CODE_COUNT       =   total;
+    if(0 != total){
+        m_head.CODE_TABLE_OFFSET        = m_offset;
+        m_head.CODE_TABLE_LENGTH        = sizeof(T100EXECUTABLE_FILE_CODE) / 4 * total;
+        m_head.CODE_LENGTH              = length;
+
+        m_offset += m_head.CODE_TABLE_LENGTH;
+    }
+
+    total   = 0;
+    length  = 0;
+
+    result = count(m_info->m_datas, total, length);
+    if(!result){
+        return T100FALSE;
+    }
+
+    m_head.DATA_COUNT       =   total;
+    if(0 != total){
+        m_head.DATA_TABLE_OFFSET        = m_offset;
+        m_head.DATA_TABLE_LENGTH        = sizeof(T100EXECUTABLE_FILE_DATA) / 4 * total;
+        m_head.DATA_LENGTH              = length;
+
+        m_offset += m_head.DATA_TABLE_LENGTH;
+    }
+
+    total   = 0;
+    length  = 0;
+
+    result = count(m_info->m_share_codes, table, total, length);
+    if(!result){
+        return T100FALSE;
+    }
+
+    m_head.SHARE_CODE_COUNT     =   total;
+    if(0 != total){
+        m_head.SHARE_CODE_TABLE_OFFSET      = m_offset;
+        m_head.SHARE_CODE_TABLE_LENGTH      = table + total * 3;
+        m_head.SHARE_CODE_LENGTH            = length;
+
+        m_offset += m_head.SHARE_CODE_TABLE_LENGTH;
+    }
+
+    table   = 0;
+    total   = 0;
+    length  = 0;
+
+    result = count(m_info->m_share_datas, table, total, length);
+    if(!result){
+        return T100FALSE;
+    }
+
+    m_head.SHARE_DATA_COUNT     =   total;
+    if(0 != total){
+        m_head.SHARE_DATA_TABLE_OFFSET      = m_offset;
+        m_head.SHARE_DATA_TABLE_LENGTH      = table + total * 4;
+        m_head.SHARE_DATA_LENGTH            = length;
+
+        m_offset += m_head.SHARE_DATA_TABLE_LENGTH;
+    }
+
+    table   = 0;
+    total   = 0;
+    length  = 0;
+
+    if(0 != m_head.CODE_COUNT){
+        m_head.CODE_OFFSET      = m_offset;
+        m_offset                += m_head.CODE_LENGTH;
+    }
+
+    if(0 != m_head.DATA_COUNT){
+        m_head.DATA_OFFSET      = m_offset;
+        m_offset                += m_head.DATA_LENGTH;
+    }
+
+    if(0 != m_head.SHARE_CODE_COUNT){
+        m_head.SHARE_CODE_OFFSET        = m_offset;
+        m_offset                        += m_head.SHARE_CODE_LENGTH;
+    }
+
+    if(0 != m_head.SHARE_DATA_COUNT){
+        m_head.SHARE_DATA_OFFSET        = m_offset;
+    }
+
+    return result;
+}
+
+T100BOOL T100ExecutableFileWriter::count(T100SEGMENT_CODE_VECTOR& seg, T100WORD& total, T100WORD& length)
+{
+    T100BOOL    result      = T100TRUE;
+
+    for(auto item : seg){
+        if(item){
+            total++;
+            length += item->getLength();
+        }else{
+            return T100FALSE;
+        }
+    }
+
+    return result;
+}
+
+T100BOOL T100ExecutableFileWriter::count(T100SEGMENT_CODE_VECTOR& seg, T100WORD& table, T100WORD& total, T100WORD& length)
+{
+    T100BOOL    result      = T100TRUE;
+
+    for(auto item : seg){
+        if(item){
+            table   += item->getName().to_string().raw_length();
+            total++;
+            length  += item->getLength();
+        }else{
+            return T100FALSE;
+        }
+    }
+
+    return result;
+}
+
+T100BOOL T100ExecutableFileWriter::count(T100SEGMENT_DATA_VECTOR& seg, T100WORD& total, T100WORD& length)
+{
+    T100BOOL    result      = T100TRUE;
+
+    for(auto item : seg){
+        if(item){
+            total++;
+            length += item->getLength();
+        }else{
+            return T100FALSE;
+        }
+    }
+
+    return result;
+}
+
+T100BOOL T100ExecutableFileWriter::count(T100SEGMENT_DATA_VECTOR& seg, T100WORD& table, T100WORD& total, T100WORD& length)
+{
+    T100BOOL    result      = T100TRUE;
+
+    for(auto item : seg){
+        if(item){
+            table   += item->getName().to_string().raw_length();
+            total++;
+            length  += item->getLength();
+        }else{
+            return T100FALSE;
+        }
+    }
 
     return result;
 }

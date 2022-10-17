@@ -99,7 +99,10 @@
 		<Unit filename="include/T100VFSFile.h" />
 		<Unit filename="include/T100VFSItem.h" />
 		<Unit filename="include/T100VFSTable.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="src/T100DebugFile.cpp" />
 		<Unit filename="src/T100DebugFileReader.cpp" />
 		<Unit filename="src/T100DebugFileWriter.cpp" />
