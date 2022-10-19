@@ -185,7 +185,7 @@ PROC=BOOT_INIT_SEARCH
     JZ      BOOT_INIT_SEARCH_ERROR
     //
     CMT     54020
-    DBG
+    //DBG
     MOVE    AAR                                     @boot_init_search_result
     MOVE    ABR                                     boot_init_file
     MOVE    ACR                                     @boot_init_search_location_low
@@ -208,13 +208,13 @@ PROC=BOOT_INIT_SEARCH
     JZ      BOOT_INIT_SEARCH_ERROR
     //
     CMT     54050
-    DBG
+    //DBG
     MOVE    #boot_init_search_result_offset         1
     RET
     //
 BOOT_INIT_SEARCH_ERROR:
     CMT     54060
-    DBG
+    //DBG
     MOVE    #boot_init_search_result_offset         0
 END
 

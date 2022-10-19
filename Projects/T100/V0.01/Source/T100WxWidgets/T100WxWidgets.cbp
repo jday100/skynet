@@ -119,6 +119,7 @@
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="include/T100DiskBrowseCtrl.h" />
+		<Unit filename="include/T100DiskBrowseCtrlDropTarget.h" />
 		<Unit filename="include/T100DiskBrowseData.h" />
 		<Unit filename="include/T100DiskCtrl.h" />
 		<Unit filename="include/T100DiskDialog.h" />
@@ -145,6 +146,7 @@
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/T100DiskBrowseCtrl.cpp" />
+		<Unit filename="src/T100DiskBrowseCtrlDropTarget.cpp" />
 		<Unit filename="src/T100DiskBrowseData.cpp" />
 		<Unit filename="src/T100DiskCtrl.cpp" />
 		<Unit filename="src/T100DiskDialog.cpp" />

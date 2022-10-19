@@ -66,6 +66,7 @@ T100BOOL T100Segment::setString(T100WORD& offset, T100String str)
     offset = m_offset;
 
     for(int i=0;i<length;i++){
+        size = data[i];
         m_mem[m_offset] = data[i];
         m_offset++;
     }

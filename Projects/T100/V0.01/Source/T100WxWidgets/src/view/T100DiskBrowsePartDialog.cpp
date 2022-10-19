@@ -2,12 +2,15 @@
 
 #include <wx/intl.h>
 #include <wx/string.h>
+#include <wx/dnd.h>
+
 
 const long T100DiskBrowsePartDialog::ID_GENERICDIRCTRL = wxNewId();
 const long T100DiskBrowsePartDialog::ID_VDISKDIRCTRL = wxNewId();
 
 BEGIN_EVENT_TABLE(T100DiskBrowsePartDialog,wxDialog)
-
+    EVT_TREE_BEGIN_DRAG     (wxID_TREECTRL, T100DiskBrowsePartDialog::OnTreeBeginDrag)
+    EVT_TREE_END_DRAG       (wxID_TREECTRL, T100DiskBrowsePartDialog::OnTreeEndDrag)
 END_EVENT_TABLE()
 
 T100DiskBrowsePartDialog::T100DiskBrowsePartDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
@@ -44,5 +47,34 @@ void T100DiskBrowsePartDialog::BuildContent(wxWindow* parent,wxWindowID id,const
 	SetSizer(BoxSizer1);
 	SetSizer(BoxSizer1);
 	Layout();
+
+}
+
+void T100DiskBrowsePartDialog::OnTreeBeginDrag(wxTreeEvent& event)
+{
+    wxDirItemData*      itemData        = T100NULL;
+    wxTreeItemId        itemId;
+
+    wxFileDataObject    data;
+    wxDropSource        source(this);
+
+
+    itemId      = event.GetItem();
+
+    itemData    = static_cast<wxDirItemData*>(GenericDirCtrl->GetTreeCtrl()->GetItemData(itemId));
+
+    if(itemData){
+        if(itemData->m_isDir){
+
+        }else{
+            data.AddFile(itemData->m_path);
+            source.SetData(data);
+            source.DoDragDrop();
+        }
+    }
+}
+
+void T100DiskBrowsePartDialog::OnTreeEndDrag(wxTreeEvent& event)
+{
 
 }

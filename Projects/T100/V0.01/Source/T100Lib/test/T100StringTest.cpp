@@ -3,6 +3,7 @@
 #include "T100LibTestHint.h"
 #include "T100String.h"
 #include "T100Unicode.h"
+#include "T100String32Tools.h"
 
 
 T100WSTRING         T100StringTest::m_name              = L"string";
@@ -50,6 +51,11 @@ T100BOOL T100StringTest::do_test()
     }
 
     value = test_unicode();
+    if(!value){
+        result = T100FALSE;
+    }
+
+    value = test_tools();
     if(!value){
         result = T100FALSE;
     }
@@ -409,5 +415,27 @@ T100BOOL T100StringTest::test_unicode()
 
 
     show_result(result, T100TEST_HINT_LIB_STRING_UNICODE_TEST_STOP);
+    return result;
+}
+
+T100BOOL T100StringTest::test_tools()
+{
+    T100BOOL        result      = T100TRUE;
+
+    T100String      source  = L"\"test\"";
+    T100String      target;
+    T100String      confirm = L"test";
+
+    result = T100String32Tools::format(source, target);
+    if(result){
+        if(confirm == target){
+
+        }else{
+            result = T100FALSE;
+        }
+    }else{
+
+    }
+
     return result;
 }

@@ -48,7 +48,7 @@ class T100String
 
         T100STDSTRING               to_std_string();
         T100WSTRING                 to_wstring();
-        T100String32                to_string();
+        T100String32&               to_string();
 
     public:
         T100BOOL        operator == (const T100String&);

@@ -16,6 +16,8 @@ class T100DiskBrowseCtrl : public wxGenericDirCtrl
         T100BOOL                SetDiskCtrl(T100DiskCtrl*);
         T100BOOL                Load();
 
+        T100BOOL                Copy(const wxArrayString, wxTreeItemId);
+
     protected:
         wxTreeCtrl*             CreateTreeCtrl(wxWindow* parent, wxWindowID id, const wxPoint& pos, const wxSize& size, long treeStyle);
         void                    ExpandDir(wxTreeItemId parentId);

@@ -23,6 +23,9 @@ class T100DiskBrowsePartDialog : public wxDialog
         static const long ID_GENERICDIRCTRL;
         static const long ID_VDISKDIRCTRL;
 
+        void OnTreeBeginDrag(wxTreeEvent& event);
+        void OnTreeEndDrag(wxTreeEvent& event);
+
     private:
         void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);
 

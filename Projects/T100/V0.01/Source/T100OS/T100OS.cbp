@@ -51,6 +51,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../build/build/boot.bin" />
+		<Unit filename="../build/build/init.bin" />
+		<Unit filename="../build/build/kernel.knl" />
 		<Unit filename="../build/build/rom.bin" />
 		<Unit filename="../build/test/os/test_int.txt" />
 		<Unit filename="../build/work/os/boot/.gitkeep" />
@@ -73,6 +76,9 @@
 		<Unit filename="../build/work/os/kernel/fs/path.txt" />
 		<Unit filename="../build/work/os/kernel/fs/table.txt" />
 		<Unit filename="../build/work/os/kernel/init.txt" />
+		<Unit filename="../build/work/os/kernel/init_load.txt" />
+		<Unit filename="../build/work/os/kernel/init_load_test.txt" />
+		<Unit filename="../build/work/os/kernel/init_old.txt" />
 		<Unit filename="../build/work/os/kernel/int/int.txt" />
 		<Unit filename="../build/work/os/kernel/kernel.txt" />
 		<Unit filename="../build/work/os/kernel/lib/dword.txt" />

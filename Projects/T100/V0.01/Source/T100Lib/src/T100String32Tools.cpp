@@ -23,7 +23,6 @@ T100BOOL T100String32Tools::format(T100String source, T100String& target)
 {
     T100BOOL            result          = T100TRUE;
     T100WORD            size;
-    T100STRING32        s;
 
     size = source.length();
 
@@ -31,11 +30,13 @@ T100BOOL T100String32Tools::format(T100String source, T100String& target)
         return T100TRUE;
     }
 
-    s = source.to_string().getString32();
+    T100WSTRING     s;
 
-    T100STRING32 t(s.begin()+2, s.end()-2);
+    s = source.to_wstring();
 
-    target = T100String32(const_cast<char32_t*>(t.c_str()));
+    T100WSTRING     t(s.begin() + 1, s.end() - 1);
+
+    target = T100String(t);
 
     return result;
 }

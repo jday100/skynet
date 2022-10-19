@@ -279,7 +279,6 @@ T100BOOL T100VFS::list(T100STRING name, T100STRING path, T100DISK_ITEM_VECTOR& i
 
 T100BOOL T100VFS::copy(T100STRING source, T100STRING name, T100STRING target)
 {
-    /*
     T100BOOL        result      = T100TRUE;
     T100BOOL        value;
     T100VFS_PART*   part        = T100NULL;
@@ -333,7 +332,7 @@ T100BOOL T100VFS::copy(T100STRING source, T100STRING name, T100STRING target)
         return T100FALSE;
     }
 
-    std::ifstream ifs(source, std::ios::in | std::ios::binary);
+    std::ifstream ifs(source.to_std_string().c_str(), std::ios::in | std::ios::binary);
     if(!ifs.is_open()){
         value = tf.close();
         if(!value){
@@ -359,7 +358,6 @@ WRITE_END:
     }
 
     return result;
-    */
 }
 
 T100BOOL T100VFS::change_part(T100VFS_PART* part)

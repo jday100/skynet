@@ -1,7 +1,10 @@
 #include "T100DiskBrowseCtrl.h"
 
+#include "T100PathTools.h"
 #include "T100DiskBrowseData.h"
 #include "T100DiskBrowseCreateFolderDialog.h"
+
+#include "T100DiskBrowseCtrlDropTarget.h"
 
 
 const long T100DiskBrowseCtrl::ID_MENU_FOLDER_CREATE = wxNewId();
@@ -43,6 +46,10 @@ void T100DiskBrowseCtrl::BuildContent(wxWindow *parent)
     Connect(ID_MENU_FOLDER_CREATE, wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100DiskBrowseCtrl::OnCreateFolder);
     Connect(ID_MENU_FOLDER_REMOVE, wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100DiskBrowseCtrl::OnRemoveFolder);
     Connect(ID_MENU_FILE_REMOVE, wxEVT_COMMAND_MENU_SELECTED,   (wxObjectEventFunction)&T100DiskBrowseCtrl::OnRemoveFile);
+
+    T100DiskBrowseCtrlDropTarget*   target = T100NEW T100DiskBrowseCtrlDropTarget(this);
+
+    this->SetDropTarget(target);
 }
 
 T100BOOL T100DiskBrowseCtrl::SetDiskCtrl(T100DiskCtrl* disk)
@@ -384,7 +391,7 @@ void T100DiskBrowseCtrl::OnRemoveFile(wxCommandEvent& event)
 
         item.PART   = GetItemData(m_current)->part.ToStdWstring();
         item.NAME   = GetItemData(m_current)->m_name.ToStdWstring();
-        item.PART   = GetItemData(m_current)->m_path.ToStdWstring();
+        item.PATH   = GetItemData(m_current)->m_path.ToStdWstring();
         item.ISDIR  = GetItemData(m_current)->m_isDir;
 
         result = m_disk->DoRemoveFile(&item);
@@ -395,3 +402,35 @@ void T100DiskBrowseCtrl::OnRemoveFile(wxCommandEvent& event)
     }
 }
 
+T100BOOL T100DiskBrowseCtrl::Copy(const wxArrayString filenames, wxTreeItemId itemId)
+{
+    T100BOOL            result          = T100TRUE;
+
+    T100DISK_ITEM       source;
+    T100DISK_ITEM       target;
+    T100WSTRING         path;
+    T100WSTRING         name;
+
+    source.PATH     = filenames[0].ToStdWstring();
+    source.ISDIR    = T100FALSE;
+
+    result = T100PathTools::split(source.PATH.to_wstring(), path, name);
+    if(!result){
+        return T100FALSE;
+    }
+
+    target.PART     = GetItemData(itemId)->part.ToStdWstring();
+    target.NAME     = name;
+    target.PATH     = GetItemData(itemId)->m_path.ToStdWstring() + L":" + name;
+    target.ISDIR    = T100FALSE;
+
+    result = m_disk->DoCopyFile(&source, &target);
+
+    if(result){
+        wxString cpath = target.PATH.to_wstring();
+        wxString cname = target.NAME.to_wstring();
+        result = AddItem(itemId, cpath, cname, wxFileIconsTable::file);
+    }
+
+    return result;
+}

@@ -1,0 +1,57 @@
+DATA
+    init_load_test_part_result                          INTEGER
+    init_load_test_part_result_offset                   INTEGER
+    //
+    init_load_test_handle_result                        INTEGER
+    init_load_test_handle_result_offset                 INTEGER
+    //
+
+END
+
+PROC=INIT_LOAD_TEST_PART
+    CMT     1
+    MOVE    init_load_test_part_result_offset           AAR
+    //
+    MOVE    AAR                                         init_part_location_low
+    MOVE    ABR                                         1
+    SUB
+    JNZ     INIT_LOAD_TEST_PART_ERROR
+    //
+    MOVE    ACR                                         init_part_location_high
+    JNZ     INIT_LOAD_TEST_PART_ERROR
+    //
+    MOVE    AAR                                         init_part_length_low
+    MOVE    ABR                                         1023
+    SUB
+    JNZ     INIT_LOAD_TEST_PART_ERROR
+    //
+    MOVE    ACR                                         init_part_length_high
+    JNZ     INIT_LOAD_TEST_PART_ERROR
+    //
+    CMT     2
+    MOVE    #init_load_test_part_result_offset          1
+    RET
+INIT_LOAD_TEST_PART_ERROR:
+    CMT     999
+    MOVE    #init_load_test_part_result_offset          0
+END
+
+PROC=INIT_LOAD_TEST_HANDLE
+    CMT     1
+    MOVE    init_load_test_handle_result_offset         AAR
+    //
+    //      5
+    //
+    MOVE    AAR                                         init_load_handle_location_low
+    MOVE    ABR                                         5
+    SUB
+    JNZ     INIT_LOAD_TEST_HANDLE_ERROR
+    //
+    //
+    CMT     2
+    MOVE    #init_load_test_handle_result_offset        1
+    RET
+INIT_LOAD_TEST_HANDLE_ERROR:
+    CMT     999
+    MOVE    #init_load_test_handle_result_offset        0
+END

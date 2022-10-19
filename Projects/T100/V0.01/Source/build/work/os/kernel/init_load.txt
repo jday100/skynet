@@ -1,0 +1,484 @@
+IMPORT  "init_load_test.txt"
+
+DATA
+    init_load_exe_code_buffer_offset                    INTEGER
+    init_load_exe_data_buffer_offset                    INTEGER
+    init_load_exe_share_code_buffer_offset              INTEGER
+    init_load_exe_share_data_buffer_offset              INTEGER
+    //
+    init_load_exe_code_table_buffer_offset              INTEGER
+    init_load_exe_data_table_buffer_offset              INTEGER
+    init_load_exe_share_code_table_buffer_offset        INTEGER
+    init_load_exe_share_data_table_buffer_offset        INTEGER
+    //
+    init_load_exe_buffer_offset                         INTEGER
+    init_load_exe_buffer_length                         INTEGER
+    init_load_exe_buffer_limit                          INTEGER
+    //
+    init_load_exe_buffer_current_offset                 INTEGER
+    init_load_exe_buffer_current_limit                  INTEGER
+    init_load_exe_buffer_current_length                 INTEGER
+    init_load_exe_buffer_current_residue                INTEGER
+    //
+    init_load_exe_length                                INTEGER
+    init_load_exe_location_low                          INTEGER
+    init_load_exe_location_high                         INTEGER
+    init_load_exe_block_index                           INTEGER
+    //
+    init_load_exe_head_sign_flag                        INTEGER     9
+    init_load_exe_head_type_big_flag                    INTEGER     0
+    //
+    init_load_exe_head_sign                             INTEGER
+    init_load_exe_head_type                             INTEGER
+    //
+    init_load_exe_head_code_count                       INTEGER
+    init_load_exe_head_code_table_offset                INTEGER
+    init_load_exe_head_code_table_length                INTEGER
+    init_load_exe_head_code_offset                      INTEGER
+    init_load_exe_head_code_length                      INTEGER
+    //
+    init_load_exe_head_data_count                       INTEGER
+    init_load_exe_head_data_table_offset                INTEGER
+    init_load_exe_head_data_table_length                INTEGER
+    init_load_exe_head_data_offset                      INTEGER
+    init_load_exe_head_data_length                      INTEGER
+    //
+    init_load_exe_head_share_code_count                 INTEGER
+    init_load_exe_head_share_code_table_offset          INTEGER
+    init_load_exe_head_share_code_table_length          INTEGER
+    init_load_exe_head_share_code_offset                INTEGER
+    init_load_exe_head_share_code_length                INTEGER
+    //
+    init_load_exe_head_share_data_count                 INTEGER
+    init_load_exe_head_share_data_table_offset          INTEGER
+    init_load_exe_head_share_data_table_length          INTEGER
+    init_load_exe_head_share_data_offset                INTEGER
+    init_load_exe_head_share_data_length                INTEGER
+    //
+    init_load_exe_head_expanded_count                   INTEGER
+    init_load_exe_head_expanded_table_offset            INTEGER
+    init_load_exe_head_expanded_table_length            INTEGER
+    init_load_exe_head_expanded_offset                  INTEGER
+    init_load_exe_head_expanded_length                  INTEGER
+    //
+    init_load_exe_table_buffer_value                    INTEGER
+    init_load_exe_table_buffer_current_offset           INTEGER
+    //
+    //
+    init_load_head_offset                               INTEGER
+    //
+    init_load_result                                    INTEGER
+    init_load_result_offset                             INTEGER
+    //
+    init_load_handle_location_low                       INTEGER
+    init_load_handle_location_high                      INTEGER
+    init_load_handle_index                              INTEGER
+    init_load_handle_offset                             INTEGER
+    init_load_handle_item_location_low                  INTEGER
+    init_load_handle_item_location_high                 INTEGER
+    init_load_handle_item_length_low                    INTEGER
+    init_load_handle_item_length_high                   INTEGER
+    init_load_handle_item_properties                    INTEGER[2]
+    //
+    init_load_location_low                              INTEGER
+    init_load_location_high                             INTEGER
+    init_load_length_low                                INTEGER
+    init_load_length_high                               INTEGER
+    //
+    init_load_init_result                               INTEGER
+    init_load_init_result_offset                        INTEGER
+    //
+    init_load_head_result                               INTEGER
+    init_load_head_result_offset                        INTEGER
+    //
+    init_load_kernel_buffer_offset                      INTEGER     1
+    //
+    init_load_code_result                               INTEGER
+    init_load_code_result_offset                        INTEGER
+    //
+    init_load_data_result                               INTEGER
+    init_load_data_result_offset                        INTEGER
+    //
+    init_load_share_code_result                         INTEGER
+    init_load_share_code_result_offset                  INTEGER
+    //
+    init_load_share_data_result                         INTEGER
+    init_load_share_data_result_offset                  INTEGER
+    //
+
+    init_load_parse_next_result                         INTEGER
+    init_load_parse_next_result_offset                  INTEGER
+    //
+    init_load_parse_next_buffer_offset                  INTEGER
+    init_load_parse_next_length                         INTEGER
+    init_load_parse_next_value                          INTEGER
+    //
+    init_load_read_index_result                         INTEGER
+    init_load_read_index_result_offset                  INTEGER
+    init_load_read_index_value                          INTEGER
+    //
+END
+
+PROC=INIT_LOAD
+    CMT     7010010
+    DBG
+    MOVE    init_load_result_offset                     AAR
+    //
+    CMT     7010011
+    DBG
+    MOVE    AAR                                         @init_load_result
+    CALL    INIT_LOAD_TEST_PART
+    //
+    CMT     7010012
+    MOVE    AAR                                         @init_load_result
+    MOVE    ABR                                         @init_part_location_low
+    MOVE    ACR                                         @init_part_length_low
+    CALL    FS_PART_INIT
+    MOVE    ACR                                         init_load_result
+    JZ      INIT_LOAD_ERROR
+    //
+    CMT     7010020
+    MOVE    AAR                                         @init_load_result
+    MOVE    ABR                                         init_kernel_file
+    MOVE    ACR                                         @init_load_handle_location_low
+    CALL    FS_FILE_OPEN
+    MOVE    ACR                                         init_load_result
+    JZ      INIT_LOAD_ERROR
+    //
+    CMT     7010021
+    DBG
+    MOVE    AAR                                         @init_load_result
+    CALL    INIT_LOAD_TEST_HANDLE
+    //
+    CMT     7010030
+    MOVE    AAR                                         @init_load_result
+    CALL    INIT_LOAD_HEAD
+    MOVE    ACR                                         init_load_result
+    JZ      INIT_LOAD_ERROR
+    //
+    CMT     7010040
+    MOVE    AAR                                         @init_load_result
+    CALL    INIT_LOAD_INIT
+    MOVE    ACR                                         init_load_result
+    JZ      INIT_LOAD_ERROR
+    //
+    CMT     7010050
+    MOVE    AAR                                         @init_load_result
+    CALL    INIT_LOAD_CODE
+    MOVE    ACR                                         init_load_result
+    JZ      INIT_LOAD_ERROR
+    //
+    CMT     7010060
+    MOVE    AAR                                         @init_load_result
+    CALL    INIT_LOAD_DATA
+    MOVE    ACR                                         init_load_result
+    JZ      INIT_LOAD_ERROR
+    //
+    CMT     7010070
+    MOVE    AAR                                         @init_load_result
+    CALL    INIT_LOAD_SHARE_CODE
+    MOVE    ACR                                         init_load_result
+    JZ      INIT_LOAD_ERROR
+    //
+    CMT     7010080
+    MOVE    AAR                                         @init_load_result
+    CALL    INIT_LOAD_SHARE_DATA
+    MOVE    ACR                                         init_load_result
+    JZ      INIT_LOAD_ERROR
+    //
+    CMT     7010090
+    MOVE    AAR                                         @init_load_result
+    MOVE    ABR                                         @init_load_location_low
+    CALL    FS_FILE_CLOSE
+    MOVE    ACR                                         init_load_result
+    JZ      INIT_LOAD_ERROR
+    //
+    CMT     7010100
+    MOVE    #init_load_result_offset                    1
+    RET
+INIT_LOAD_ERROR:
+    CMT     7010110
+    MOVE    #init_load_result_offset                    0
+END
+
+PROC=INIT_LOAD_INIT
+    CMT     7010120
+    MOVE    init_load_init_result_offset                AAR
+    //
+    CMT     7010130
+    MOVE    #init_load_init_result_offset               1
+    RET
+INIT_LOAD_INIT_ERROR:
+    CMT     7010140
+    MOVE    #init_load_init_result_offset               0
+END
+
+PROC=INIT_LOAD_HEAD
+    CMT     7010150
+    MOVE    init_load_head_result_offset                AAR
+    //
+    MOVE    AAR                                         @init_load_head_result
+    MOVE    ABR                                         init_load_head_offset
+    MOVE    ACR                                         27
+    CALL    INIT_LOAD_PARSE_NEXT
+    MOVE    ACR                                         init_load_head_result
+    JZ      INIT_LOAD_HEAD_ERROR
+    //
+    CMT     7010160
+    MOVE    AAR                                         exe_head_sign
+    MOVE    ABR                                         exe_head_sign_flag
+    SUB
+    JNZ     INIT_LOAD_HEAD_ERROR
+    //
+    //
+    CMT     7010170
+    MOVE    #init_load_head_result_offset               1
+    RET
+INIT_LOAD_HEAD_ERROR:
+    CMT     7010180
+    MOVE    #init_load_head_result_offset               0
+END
+
+PROC=INIT_LOAD_CODE
+    CMT     7010190
+    MOVE    init_load_code_result_offset                AAR
+    //
+    CMT     7010200
+    MOVE    #init_load_code_result_offset               1
+    RET
+INIT_LOAD_CODE_ERROR:
+    CMT     7010210
+    MOVE    #init_load_code_result_offset               0
+END
+
+PROC=INIT_LOAD_DATA
+    CMT     7010220
+    MOVE    init_load_data_result_offset                AAR
+    //
+    CMT     7010230
+    MOVE    #init_load_data_result_offset               1
+    RET
+INIT_LOAD_ERROR:
+    CMT     7010240
+    MOVE    #init_load_data_result_offset               0
+END
+
+PROC=INIT_LOAD_SHARE_CODE
+    CMT     7010250
+    MOVE    init_load_share_code_result_offset          AAR
+    //
+    CMT     7010260
+    MOVE    #init_load_share_code_result_offset         1
+    RET
+INIT_LOAD_SHARE_CODE_ERROR:
+    CMT     7010270
+    MOVE    #init_load_share_code_result_offset         0
+END
+
+PROC=INIT_LOAD_SHARE_DATA
+    CMT     7010280
+    MOVE    init_load_share_data_result_offset          AAR
+    //
+    CMT     7010290
+    MOVE    #init_load_share_data_result_offset         1
+    RET
+INIT_LOAD_SHARE_DATA_ERROR:
+    CMT     7010300
+    MOVE    init_load_share_data_result_offset          0
+END
+
+
+
+////////////
+//
+//result
+//0     failure
+//1     success
+//2     eof
+//
+PROC=INIT_LOAD_PARSE_NEXT
+    CMT     7010500
+    DBG
+    MOVE    init_load_parse_next_result_offset          AAR
+    MOVE    init_load_parse_next_buffer_offset          ABR
+    MOVE    init_load_parse_next_length                 ACR
+    //
+    MOVE    ACR                                         init_load_exe_length
+    JNZ     INIT_LOAD_PARSE_NEXT_ERROR
+    //
+    CMT     7010510
+    MOVE    AAR                                         init_load_exe_buffer_current_offset
+    MOVE    ABR                                         init_load_exe_buffer_current_limit
+    SUB
+    MOVE    ACR                                         AMF
+    JNZ     INIT_LOAD_PARSE_NEXT_EOF
+    //
+INIT_LOAD_PARSE_NEXT_START:
+    CMT     7010520
+    MOVE    AAR                                         init_load_exe_buffer_offset
+    MOVE    ABR                                         init_load_exe_buffer_current_offset
+    SUB
+    JNZ     INIT_LOAD_PARSE_NEXT_NEXT
+    //
+    CMT     7010530
+    MOVE    AAR                                         @init_load_parse_next_result
+    CALL    INIT_LOAD_READ_INDEX
+    MOVE    ACR                                         init_load_parse_next_result
+    JZ      INIT_LOAD_PARSE_NEXT_ERROR
+    //
+    CMT     7010540
+    DBG
+    MOVE    init_load_exe_buffer_current_length         init_load_parse_next_length
+INIT_LOAD_PARSE_NEXT_NEXT:
+    CMT     7010550
+    MOVE    AAR                                         init_load_exe_buffer_current_offset
+    MOVE    ABR                                         init_load_exe_buffer_current_length
+    ADD
+    MOVE    init_load_exe_buffer_current_limit          ACR
+    //
+    MOVE    AAR                                         init_load_exe_buffer_limit
+    MOVE    ABR                                         init_load_exe_buffer_current_limit
+    SUB
+    MOVE    ACR                                         AMF
+    JZ      INIT_LOAD_PARSE_NEXT_ZERO
+    //
+    CMT     7010560
+    MOVE    AAR                                         init_load_exe_buffer_limit
+    MOVE    ABR                                         init_load_exe_buffer_current_offset
+    SUB
+    MOVE    ACR                                         AMF
+    JNZ     INIT_LOAD_PARSE_NEXT_ERROR
+    //
+    CMT     7010570
+    MOVE    init_load_exe_buffer_current_length         ACR
+    //
+    MOVE    AAR                                         init_load_exe_buffer_current_limit
+    MOVE    ABR                                         init_load_exe_buffer_limit
+    SUB
+    MOVE    ACR                                         AMF
+    JNZ     INIT_LOAD_PARSE_NEXT_ERROR
+    //
+    CMT     7010580
+    MOVE    init_load_exe_buffer_current_residue        ACR
+    //
+INIT_LOAD_PARSE_NEXT_ZERO:
+    CMT     7010590
+    MOVE    AAR                                         @init_load_parse_next_result
+    MOVE    ABR                                         init_load_exe_buffer_current_offset
+    MOVE    ACR                                         init_load_parse_next_buffer_offset
+    MOVE    ADR                                         init_load_exe_buffer_current_length
+    CALL    MEM_COPY
+    MOVE    ACR                                         init_load_parse_next_result
+    JZ      INIT_LOAD_PARSE_NEXT_ERROR
+    //
+    CMT     7010600
+    DBG
+    MOVE    AAR                                         init_load_exe_buffer_current_offset
+    MOVE    ABR                                         init_load_exe_buffer_current_length
+    ADD
+    MOVE    init_load_exe_buffer_current_offset         ACR
+    //
+    CMT     7010610
+    MOVE    AAR                                         init_load_exe_buffer_limit
+    MOVE    ABR                                         init_load_exe_buffer_current_offset
+    SUB
+    MOVE    init_load_parse_next_value                  ACR
+    MOVE    ACR                                         AMF
+    JNZ     INIT_LOAD_PARSE_NEXT_LENGTH
+    //
+    CMT     7010620
+    JUMP    INIT_LOAD_PARSE_NEXT_END
+    //
+INIT_LOAD_PARSE_NEXT_LENGTH:
+    CMT     7010630
+    MOVE    AAR                                         init_load_exe_length
+    MOVE    ABR                                         init_load_exe_buffer_current_length
+    SUB
+    MOVE    init_load_exe_length                        ACR
+    MOVE    ACR                                         AMF
+    JNZ     INIT_LOAD_PARSE_NEXT_ERROR
+    //
+    CMT     7010640
+    MOVE    ACR                                         init_load_exe_buffer_current_residue
+    JZ      INIT_LOAD_PARSE_NEXT_END
+    //
+    CMT     7010650
+    MOVE    init_load_exe_buffer_current_length         init_load_exe_buffer_current_residue
+    JUMP    INIT_LOAD_PARSE_NEXT_NEXT
+    //
+INIT_LOAD_PARSE_NEXT_END:
+    CMT     7010660
+    MOVE    #init_load_parse_next_result_offset         1
+    RET
+INIT_LOAD_PARSE_NEXT_EOF:
+    CMT     7010670
+    MOVE    #init_load_parse_next_result_offset         2
+    RET
+INIT_LOAD_PARSE_NEXT_ERROR:
+    CMT     7010680
+    MOVE    #init_load_parse_next_result_offset         0
+END
+
+////
+PROC=INIT_LOAD_READ_INDEX
+    CMT     7010700
+    MOVE    init_load_read_index_result_offset          AAR
+    //
+    MOVE    AAR                                         init_load_read_index_result
+    MOVE    ABR                                         init_load_exe_location_low
+    CALL    ITEM_EQUAL_ISEND
+    MOVE    ACR                                         init_load_read_index_result
+    JNZ     INIT_LOAD_READ_INDEX_ERROR
+    //
+    CMT     7010710
+    MOVE    AAR                                         15
+    MOVE    ABR                                         init_load_exe_block_index
+    SUB
+    MOVE    ACR                                         AMF
+    JNZ     INIT_LOAD_READ_INDEX_ERROR
+    //
+    CMT     7010720
+    MOVE    AAR                                         @init_load_read_index_result
+    MOVE    ABR                                         @init_load_exe_location_low
+    MOVE    ACR                                         init_load_exe_block_index
+    MOVE    ADR                                         @{CBR:@init_disk_buffer}
+    CALL    FILE_READ_INDEX
+    MOVE    ACR                                         init_load_read_index_result
+    JZ      INIT_LOAD_READ_INDEX_ERROR
+    //
+    CMT     7010730
+    DBG
+    MOVE    AAR                                         init_load_exe_length
+    MOVE    ABR                                         init_load_exe_buffer_length
+    SUB
+    MOVE    init_load_read_index_value                  ACR
+    //
+    MOVE    init_load_exe_length                        0
+    MOVE    ACR                                         AMF
+    JNZ     INIT_LOAD_READ_INDEX_EOF
+    //
+    CMT     7010740
+    MOVE    init_load_exe_length                        init_load_read_index_value
+    MOVE    init_load_exe_buffer_current_limit          init_load_exe_buffer_limit
+    JUMP    INIT_LOAD_READ_INDEX_END
+    //
+INIT_LOAD_READ_INDEX_EOF:
+    CMT     7010750
+    MOVE    AAR                                         init_load_exe_buffer_limit
+    MOVE    ABR                                         init_load_read_index_value
+    SUB
+    MOVE    init_load_read_index_value                  ACR
+    MOVE    ACR                                         AMF
+    JNZ     INIT_LOAD_READ_INDEX_ERROR
+    //
+    CMT     7010760
+    MOVE    init_load_exe_buffer_current_limit          init_load_read_index_value
+    //
+INIT_LOAD_READ_INDEX_END:
+    CMT     7010770
+    MOVE    #init_load_read_index_result_offset         1
+    RET
+INIT_LOAD_READ_INDEX_ERROR:
+    CMT     7010780
+    MOVE    #init_load_read_index_result_offset         0
+END

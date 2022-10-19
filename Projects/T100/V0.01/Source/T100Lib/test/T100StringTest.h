@@ -21,6 +21,8 @@ class T100StringTest : public T100Test
 
         T100BOOL                    test_unicode();
 
+        T100BOOL                    test_tools();
+
     private:
         static T100WSTRING          m_name;
 

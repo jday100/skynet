@@ -142,6 +142,10 @@ T100VOID T100AU32::Sub()
     a = m_aar.getValue();
     b = m_abr.getValue();
 
+    if(1023 == a){
+        a = 1023;
+    }
+
     if(a >= b){
         c = a - b;
         setAMF(0);

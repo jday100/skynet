@@ -116,7 +116,7 @@ T100WSTRING T100String::to_wstring()
     return m_wstring;
 }
 
-T100String32 T100String::to_string()
+T100String32& T100String::to_string()
 {
     return m_string32;
 }
