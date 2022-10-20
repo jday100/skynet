@@ -93,6 +93,7 @@
 		<Unit filename="../build/work/os/lib/io.txt" />
 		<Unit filename="../build/work/os/lib/string.txt" />
 		<Unit filename="../build/work/os/lib/word.txt" />
+		<Unit filename="../build/work/os/mm.txt" />
 		<Unit filename="../build/work/os/rom.txt" />
 		<Unit filename="../build/work/os/rom/data.txt" />
 		<Unit filename="../build/work/os/rom/hard/au.txt" />

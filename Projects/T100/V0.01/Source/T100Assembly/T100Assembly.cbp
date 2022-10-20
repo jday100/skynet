@@ -12,7 +12,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-l=work/os/kernel .\work\os\kernel\init.txt .\build\init.bin" />
+				<Option parameters="-t" />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
@@ -101,26 +101,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="../build/build/rom.bin">
-			<Option target="Debug" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="../build/test/build/test_basic.bin">
-			<Option target="Debug" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="../build/test/build/test_master.bin">
-			<Option target="Debug" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="../build/test/build/test_multiple.bin">
-			<Option target="Debug" />
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="../build/test/build/test_slave.bin">
-			<Option target="Debug" />
-			<Option target="Release" />
-		</Unit>
+		<Unit filename="../build/build/boot.bin" />
+		<Unit filename="../build/build/init.bin" />
+		<Unit filename="../build/build/kernel.knl" />
+		<Unit filename="../build/build/rom.bin" />
+		<Unit filename="../build/test/build/test_basic.bin" />
+		<Unit filename="../build/test/build/test_master.tgt" />
+		<Unit filename="../build/test/build/test_slave.tgt" />
 		<Unit filename="../build/test/resources/assembly/real/test_basic.txt" />
 		<Unit filename="../build/test/resources/assembly/real/test_import.txt" />
 		<Unit filename="../build/test/resources/assembly/real/test_master.txt" />
@@ -135,7 +122,13 @@
 		<Unit filename="../build/test/resources/assembly/scanner/test_segment.txt" />
 		<Unit filename="../build/test/resources/assembly/scanner/test_sentence.txt" />
 		<Unit filename="../build/test/resources/assembly/scanner/test_string.txt" />
+		<Unit filename="../build/test/resources/assembly/virtual/test_basic.bin" />
 		<Unit filename="../build/test/resources/assembly/virtual/test_basic.txt" />
+		<Unit filename="../build/test/resources/assembly/virtual/test_master.tgt" />
+		<Unit filename="../build/test/resources/assembly/virtual/test_master.txt" />
+		<Unit filename="../build/test/resources/assembly/virtual/test_share.txt" />
+		<Unit filename="../build/test/resources/assembly/virtual/test_slave.tgt" />
+		<Unit filename="../build/test/resources/assembly/virtual/test_slave.txt" />
 		<Unit filename="include/T100Assembly.h" />
 		<Unit filename="include/T100AssemblyApp.h" />
 		<Unit filename="include/T100AssemblyCommon.h" />

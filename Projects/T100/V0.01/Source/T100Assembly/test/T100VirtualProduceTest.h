@@ -15,6 +15,8 @@ class T100VirtualProduceTest : public T100Test
 
         T100BOOL                test_virtual();
 
+        T100BOOL                test_share();
+
     private:
         static T100WSTRING      m_name;
 

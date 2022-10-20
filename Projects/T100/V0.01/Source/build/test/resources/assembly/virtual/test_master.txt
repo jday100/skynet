@@ -1,0 +1,7 @@
+IMPORT 	"test_share.txt"
+
+CODE
+	MOVE 	share_data	1
+	HALT
+END 
+

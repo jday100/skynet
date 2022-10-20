@@ -5,7 +5,16 @@ DATA
     init_load_test_handle_result                        INTEGER
     init_load_test_handle_result_offset                 INTEGER
     //
-
+    init_load_test_read_index_result                    INTEGER
+    init_load_test_read_index_result_offset             INTEGER
+    //
+    init_load_test_head_result                          INTEGER
+    init_load_test_head_result_offset                   INTEGER
+    //
+    init_load_test_code_table_result                    INTEGER
+    init_load_test_code_table_result_offset             INTEGER
+    init_load_test_code_table_buffer_offset             INTEGER
+    //
 END
 
 PROC=INIT_LOAD_TEST_PART
@@ -40,18 +49,130 @@ PROC=INIT_LOAD_TEST_HANDLE
     CMT     1
     MOVE    init_load_test_handle_result_offset         AAR
     //
-    //      5
+    //      3
     //
-    MOVE    AAR                                         init_load_handle_location_low
-    MOVE    ABR                                         5
+    MOVE    AAR                                         init_load_handle_item_location_low
+    MOVE    ABR                                         3
     SUB
     JNZ     INIT_LOAD_TEST_HANDLE_ERROR
     //
+    MOVE    ACR                                         init_load_handle_item_location_high
+    JNZ     INIT_LOAD_TEST_HANDLE_ERROR
+    //
+    //      32
     //
     CMT     2
+    DBG
+    MOVE    AAR                                         init_load_handle_item_length_low
+    MOVE    ABR                                         32
+    SUB
+    JNZ     INIT_LOAD_TEST_HANDLE_ERROR
+    //
+    MOVE    ACR                                         init_load_handle_item_length_high
+    JNZ     INIT_LOAD_TEST_HANDLE_ERROR
+    //
+    CMT     3
     MOVE    #init_load_test_handle_result_offset        1
     RET
 INIT_LOAD_TEST_HANDLE_ERROR:
     CMT     999
     MOVE    #init_load_test_handle_result_offset        0
+END
+
+PROC=INIT_LOAD_TEST_READ_INDEX
+    CMT     1
+    MOVE    init_load_test_read_index_result_offset     AAR
+    //
+    DBG
+    MOVE    AAR                                         {CBR:@init_disk_buffer}
+    MOVE    ABR                                         9
+    SUB
+    JNZ     INIT_LOAD_TEST_READ_INDEX_ERROR
+    //
+    CMT     2
+    MOVE    #init_load_test_read_index_result_offset    1
+    RET
+INIT_LOAD_TEST_READ_INDEX_ERROR:
+    CMT     4
+    MOVE    #init_load_test_read_index_result_offset    0
+END
+
+PROC=INIT_LOAD_TEST_HEAD
+    CMT     1
+    MOVE    init_load_test_head_result_offset           AAR
+    //
+    DBG
+    MOVE    AAR                                         init_load_exe_head_sign
+    MOVE    ABR                                         9
+    SUB
+    JNZ     INIT_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    ACR                                         init_load_exe_head_type
+    JNZ     INIT_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                         init_load_exe_head_code_count
+    MOVE    ABR                                         1
+    SUB
+    JNZ     INIT_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    ACR                                         init_load_exe_head_data_count
+    JNZ     INIT_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    ACR                                         init_load_exe_head_share_code_count
+    JNZ     INIT_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                         init_load_exe_head_share_data_count
+    MOVE    ABR                                         1
+    SUB
+    JNZ     INIT_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                         init_load_exe_head_share_data_length
+    MOVE    ABR                                         4
+    SUB
+    JNZ     INIT_LOAD_TEST_HEAD_ERROR
+    //
+    CMT     2
+    MOVE    #init_load_test_head_result_offset          1
+    RET
+INIT_LOAD_TEST_HEAD_ERROR:
+    CMT     4
+    MOVE    #init_load_test_head_result_offset          0
+END
+
+PROC=INIT_LOAD_TEST_CODE_TABLE
+    CMT     1
+    DBG
+    MOVE    init_load_test_code_table_result_offset     AAR
+    //
+    MOVE    init_load_test_code_table_buffer_offset     init_load_exe_code_table_buffer_offset
+    //
+    MOVE    ACR                                         #init_load_test_code_table_buffer_offset
+    JNZ     INIT_LOAD_TEST_CODE_TABLE_ERROR
+    //
+    MOVE    AAR                                         init_load_test_code_table_buffer_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    init_load_test_code_table_buffer_offset     ACR
+    //
+    MOVE    AAR                                         #init_load_test_code_table_buffer_offset
+    MOVE    ABR                                         46
+    SUB
+    JNZ     INIT_LOAD_TEST_CODE_TABLE_ERROR
+    //
+    MOVE    AAR                                         init_load_test_code_table_buffer_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    init_load_test_code_table_buffer_offset     ACR
+    //
+    MOVE    AAR                                         #init_load_test_code_table_buffer_offset
+    MOVE    ABR                                         6
+    SUB
+    JNZ     INIT_LOAD_TEST_CODE_TABLE_ERROR
+    //
+    CMT     2
+    MOVE    #init_load_test_code_table_result_offset    1
+    RET
+INIT_LOAD_TEST_CODE_TABLE_ERROR:
+    CMT     4
+    MOVE    #init_load_test_code_table_result_offset    0
 END

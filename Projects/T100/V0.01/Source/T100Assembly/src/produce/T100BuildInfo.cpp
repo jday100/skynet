@@ -361,6 +361,8 @@ T100BOOL T100BuildInfo::createCode(T100Sentence* sent)
 
     m_code = T100NEW T100SegmentCode();
 
+    m_code->setName(code->name);
+
     m_code->isMaster    = m_code_master;
 
     m_code->isDefault   = code->isDefault;
@@ -382,6 +384,8 @@ T100BOOL T100BuildInfo::createData(T100Sentence* sent)
     }
 
     m_data = T100NEW T100SegmentData();
+
+    m_data->setName(data->name);
 
     m_data->isMaster    = m_data_master;
 
