@@ -5,8 +5,11 @@ DATA
     init_load_test_handle_result                        INTEGER
     init_load_test_handle_result_offset                 INTEGER
     //
-    init_load_test_read_index_result                    INTEGER
-    init_load_test_read_index_result_offset             INTEGER
+    init_load_test_read_index_one_result                INTEGER
+    init_load_test_read_index_one_result_offset         INTEGER
+    //
+    init_load_test_read_index_two_result                INTEGER
+    init_load_test_read_index_two_result_offset         INTEGER
     //
     init_load_test_head_result                          INTEGER
     init_load_test_head_result_offset                   INTEGER
@@ -15,10 +18,43 @@ DATA
     init_load_test_code_table_result_offset             INTEGER
     init_load_test_code_table_buffer_offset             INTEGER
     //
+    init_load_test_data_table_result                    INTEGER
+    init_load_test_data_table_result_offset             INTEGER
+    init_load_test_data_table_buffer_offset             INTEGER
+    //
+    init_load_test_share_code_table_result              INTEGER
+    init_load_test_share_code_table_result_offset       INTEGER
+    init_load_test_share_code_table_buffer_offset       INTEGER
+    //
+    init_load_test_share_data_table_result              INTEGER
+    init_load_test_share_data_table_result_offset       INTEGER
+    init_load_test_share_data_table_buffer_offset       INTEGER
+    //
+    init_load_test_parse_next_one_result                INTEGER
+    init_load_test_parse_next_one_result_offset         INTEGER
+    //
+    init_load_test_parse_next_two_result                INTEGER
+    init_load_test_parse_next_two_result_offset         INTEGER
+    //
+    init_load_test_parse_next_three_result              INTEGER
+    init_load_test_parse_next_three_result_offset       INTEGER
+    //
+    init_load_test_code_result                          INTEGER
+    init_load_test_code_result_offset                   INTEGER
+    //
+    init_load_test_data_result                          INTEGER
+    init_load_test_data_result_offset                   INTEGER
+    //
+    init_load_test_share_code_result                    INTEGER
+    init_load_test_share_code_result_offset             INTEGER
+    //
+    init_load_test_share_data_result                    INTEGER
+    init_load_test_share_data_result_offset             INTEGER
+    //
 END
 
 PROC=INIT_LOAD_TEST_PART
-    CMT     1
+    CMT     700000010
     MOVE    init_load_test_part_result_offset           AAR
     //
     MOVE    AAR                                         init_part_location_low
@@ -26,27 +62,30 @@ PROC=INIT_LOAD_TEST_PART
     SUB
     JNZ     INIT_LOAD_TEST_PART_ERROR
     //
+    CMT     700000020
     MOVE    ACR                                         init_part_location_high
     JNZ     INIT_LOAD_TEST_PART_ERROR
     //
+    CMT     700000030
     MOVE    AAR                                         init_part_length_low
     MOVE    ABR                                         1023
     SUB
     JNZ     INIT_LOAD_TEST_PART_ERROR
     //
+    CMT     700000040
     MOVE    ACR                                         init_part_length_high
     JNZ     INIT_LOAD_TEST_PART_ERROR
     //
-    CMT     2
+    CMT     700000050
     MOVE    #init_load_test_part_result_offset          1
     RET
 INIT_LOAD_TEST_PART_ERROR:
-    CMT     999
+    CMT     700000060
     MOVE    #init_load_test_part_result_offset          0
 END
 
 PROC=INIT_LOAD_TEST_HANDLE
-    CMT     1
+    CMT     700001000
     MOVE    init_load_test_handle_result_offset         AAR
     //
     //      3
@@ -56,49 +95,33 @@ PROC=INIT_LOAD_TEST_HANDLE
     SUB
     JNZ     INIT_LOAD_TEST_HANDLE_ERROR
     //
+    CMT     700001010
     MOVE    ACR                                         init_load_handle_item_location_high
     JNZ     INIT_LOAD_TEST_HANDLE_ERROR
     //
     //      32
     //
-    CMT     2
+    CMT     700001020
     DBG
     MOVE    AAR                                         init_load_handle_item_length_low
     MOVE    ABR                                         32
     SUB
     JNZ     INIT_LOAD_TEST_HANDLE_ERROR
     //
+    CMT     700001030
     MOVE    ACR                                         init_load_handle_item_length_high
     JNZ     INIT_LOAD_TEST_HANDLE_ERROR
     //
-    CMT     3
+    CMT     700001040
     MOVE    #init_load_test_handle_result_offset        1
     RET
 INIT_LOAD_TEST_HANDLE_ERROR:
-    CMT     999
+    CMT     700001050
     MOVE    #init_load_test_handle_result_offset        0
 END
 
-PROC=INIT_LOAD_TEST_READ_INDEX
-    CMT     1
-    MOVE    init_load_test_read_index_result_offset     AAR
-    //
-    DBG
-    MOVE    AAR                                         {CBR:@init_disk_buffer}
-    MOVE    ABR                                         9
-    SUB
-    JNZ     INIT_LOAD_TEST_READ_INDEX_ERROR
-    //
-    CMT     2
-    MOVE    #init_load_test_read_index_result_offset    1
-    RET
-INIT_LOAD_TEST_READ_INDEX_ERROR:
-    CMT     4
-    MOVE    #init_load_test_read_index_result_offset    0
-END
-
 PROC=INIT_LOAD_TEST_HEAD
-    CMT     1
+    CMT     700003000
     MOVE    init_load_test_head_result_offset           AAR
     //
     DBG
@@ -107,40 +130,46 @@ PROC=INIT_LOAD_TEST_HEAD
     SUB
     JNZ     INIT_LOAD_TEST_HEAD_ERROR
     //
+    CMT     700003010
     MOVE    ACR                                         init_load_exe_head_type
     JNZ     INIT_LOAD_TEST_HEAD_ERROR
     //
+    CMT     700003020
     MOVE    AAR                                         init_load_exe_head_code_count
     MOVE    ABR                                         1
     SUB
     JNZ     INIT_LOAD_TEST_HEAD_ERROR
     //
+    CMT     700003030
     MOVE    ACR                                         init_load_exe_head_data_count
     JNZ     INIT_LOAD_TEST_HEAD_ERROR
     //
+    CMT     700003040
     MOVE    ACR                                         init_load_exe_head_share_code_count
     JNZ     INIT_LOAD_TEST_HEAD_ERROR
     //
+    CMT     700003050
     MOVE    AAR                                         init_load_exe_head_share_data_count
     MOVE    ABR                                         1
     SUB
     JNZ     INIT_LOAD_TEST_HEAD_ERROR
     //
+    CMT     700003060
     MOVE    AAR                                         init_load_exe_head_share_data_length
     MOVE    ABR                                         4
     SUB
     JNZ     INIT_LOAD_TEST_HEAD_ERROR
     //
-    CMT     2
+    CMT     700003070
     MOVE    #init_load_test_head_result_offset          1
     RET
 INIT_LOAD_TEST_HEAD_ERROR:
-    CMT     4
+    CMT     700003080
     MOVE    #init_load_test_head_result_offset          0
 END
 
 PROC=INIT_LOAD_TEST_CODE_TABLE
-    CMT     1
+    CMT     700004000
     DBG
     MOVE    init_load_test_code_table_result_offset     AAR
     //
@@ -149,6 +178,7 @@ PROC=INIT_LOAD_TEST_CODE_TABLE
     MOVE    ACR                                         #init_load_test_code_table_buffer_offset
     JNZ     INIT_LOAD_TEST_CODE_TABLE_ERROR
     //
+    CMT     700004010
     MOVE    AAR                                         init_load_test_code_table_buffer_offset
     MOVE    ABR                                         1
     ADD
@@ -159,6 +189,7 @@ PROC=INIT_LOAD_TEST_CODE_TABLE
     SUB
     JNZ     INIT_LOAD_TEST_CODE_TABLE_ERROR
     //
+    CMT     700004020
     MOVE    AAR                                         init_load_test_code_table_buffer_offset
     MOVE    ABR                                         1
     ADD
@@ -169,10 +200,508 @@ PROC=INIT_LOAD_TEST_CODE_TABLE
     SUB
     JNZ     INIT_LOAD_TEST_CODE_TABLE_ERROR
     //
-    CMT     2
+    CMT     700004030
     MOVE    #init_load_test_code_table_result_offset    1
     RET
 INIT_LOAD_TEST_CODE_TABLE_ERROR:
-    CMT     4
+    CMT     700004040
     MOVE    #init_load_test_code_table_result_offset    0
+END
+
+PROC=INIT_LOAD_TEST_DATA_TABLE
+    CMT     700005000
+    DBG
+    MOVE    init_load_test_data_table_result_offset     AAR
+    //
+    MOVE    ACR                                         init_load_exe_head_data_count
+    JZ      INIT_LOAD_TEST_DATA_TABLE_END
+    //
+    CMT     700005010
+    MOVE    init_load_test_data_table_buffer_offset     init_load_exe_data_table_buffer_offset
+    //
+    MOVE    AAR                                         #init_load_test_data_table_buffer_offset
+    MOVE    ABR                                         0
+    SUB
+    JNZ     INIT_LOAD_TEST_DATA_TABLE_ERROR
+    //
+    CMT     700005020
+    MOVE    AAR                                         init_load_test_data_table_buffer_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    init_load_test_data_table_buffer_offset     ACR
+    //
+    MOVE    AAR                                         #init_load_test_data_table_buffer_offset
+    MOVE    ABR                                         0
+    SUB
+    JNZ     INIT_LOAD_TEST_DATA_TABLE_ERROR
+    //
+    CMT     700005030
+    MOVE    AAR                                         init_load_test_data_table_buffer_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    init_load_test_data_table_buffer_offset     ACR
+    //
+    MOVE    AAR                                         #init_load_test_data_table_buffer_offset
+    MOVE    ABR                                         0
+    SUB
+    JNZ     INIT_LOAD_TEST_DATA_TABLE_ERROR
+    //
+    CMT     700005040
+    MOVE    AAR                                         init_load_test_data_table_buffer_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    init_load_test_data_table_buffer_offset     ACR
+    //
+INIT_LOAD_TEST_DATA_TABLE_END:
+    CMT     700005050
+    MOVE    init_load_test_data_table_result_offset     1
+    RET
+INIT_LOAD_TEST_DATA_TABLE_ERROR:
+    CMT     700005060
+    MOVE    init_load_test_data_table_result_offset     0
+END
+
+PROC=INIT_LOAD_TEST_SHARE_CODE_TABLE
+    CMT     700006000
+    DBG
+    MOVE    init_load_test_share_code_table_result_offset       AAR
+    //
+    MOVE    ACR                                                 init_load_exe_head_share_code_count
+    JZ      INIT_LOAD_TEST_SHARE_CODE_TABLE_END
+    //
+    CMT     700006010
+    MOVE    init_load_test_share_code_table_buffer_offset       init_load_exe_share_code_table_buffer_offset
+    //
+    MOVE    AAR                                                 #init_load_test_share_code_table_buffer_offset
+    MOVE    ABR                                                 0
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_CODE_TABLE_ERROR
+    //
+    CMT     700006020
+    MOVE    AAR                                                 init_load_test_share_code_table_buffer_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    init_load_test_share_code_table_buffer_offset       ACR
+    //
+    MOVE    AAR                                                 #init_load_test_share_code_table_buffer_offset
+    MOVE    ABR                                                 0
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_CODE_TABLE_ERROR
+    //
+    CMT     700006030
+    MOVE    AAR                                                 init_load_test_share_code_table_buffer_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    init_load_test_share_code_table_buffer_offset       ACR
+    //
+    MOVE    AAR                                                 #init_load_test_share_code_table_buffer_offset
+    MOVE    ABR                                                 0
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_CODE_TABLE_ERROR
+    //
+    CMT     700006040
+    MOVE    AAR                                                 init_load_test_share_code_table_buffer_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    init_load_test_share_code_table_buffer_offset       ACR
+    //
+INIT_LOAD_TEST_SHARE_CODE_TABLE_END:
+    CMT     700006050
+    MOVE    #init_load_test_share_code_table_result_offset      1
+    RET
+INIT_LOAD_TEST_SHARE_CODE_TABLE_ERROR:
+    CMT     700006060
+    MOVE    #init_load_test_share_code_table_result_offset      0
+END
+
+PROC=INIT_LOAD_TEST_SHARE_DATA_TABLE
+    CMT     700007000
+    DBG
+    MOVE    init_load_test_share_data_table_result_offset       AAR
+    //
+    MOVE    ACR                                                 init_load_exe_head_share_data_count
+    JZ      INIT_LOAD_TEST_SHARE_DATA_TABLE_END
+    //
+    CMT     700007010
+    MOVE    init_load_test_share_data_table_buffer_offset       init_load_exe_share_data_table_buffer_offset
+    //
+    MOVE    AAR                                                 #init_load_test_share_data_table_buffer_offset
+    MOVE    ABR                                                 0
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_DATA_TABLE_ERROR
+    //
+    CMT     700007020
+    MOVE    AAR                                                 init_load_test_share_data_table_buffer_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    init_load_test_share_data_table_buffer_offset       ACR
+    //
+INIT_LOAD_TEST_SHARE_DATA_TABLE_END:
+    CMT     700007030
+    MOVE    #init_load_test_share_data_table_result_offset      1
+    RET
+INIT_LOAD_TEST_SHARE_DATA_TABLE_ERROR:
+    CMT     700007040
+    MOVE    #init_load_test_share_data_table_result_offset      0
+END
+
+PROC=INIT_LOAD_TEST_READ_INDEX_ONE
+    CMT     700002000
+    MOVE    init_load_test_read_index_one_result_offset         AAR
+    //
+    DBG
+    MOVE    AAR                                                 {CBR:@init_disk_buffer}
+    MOVE    ABR                                                 9
+    SUB
+    JNZ     INIT_LOAD_TEST_READ_INDEX_ONE_ERROR
+    //
+    CMT     700002010
+    MOVE    #init_load_test_read_index_one_result_offset        1
+    RET
+INIT_LOAD_TEST_READ_INDEX_ONE_ERROR:
+    CMT     700002020
+    MOVE    #init_load_test_read_index_one_result_offset        0
+END
+
+PROC=INIT_LOAD_TEST_READ_INDEX_TWO
+    CMT     700002000
+    MOVE    init_load_test_read_index_two_result_offset         AAR
+    //
+    DBG
+    MOVE    AAR                                                 {CBR:@init_disk_buffer}
+    MOVE    ABR                                                 9
+    SUB
+    JNZ     INIT_LOAD_TEST_READ_INDEX_TWO_ERROR
+    //
+    CMT     700002010
+    MOVE    #init_load_test_read_index_two_result_offset        1
+    RET
+INIT_LOAD_TEST_READ_INDEX_TWO_ERROR:
+    CMT     700002020
+    MOVE    #init_load_test_read_index_two_result_offset        0
+END
+
+PROC=INIT_LOAD_TEST_PARSE_NEXT_ONE
+    CMT     700010000
+    MOVE    init_load_test_parse_next_one_result_offset         AAR
+    //
+    DBG
+    MOVE    AAR                                                 init_load_exe_buffer_offset
+    MOVE    ABR                                                 5950
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_ONE_ERROR
+    //
+    CMT     700010010
+    MOVE    AAR                                                 init_load_exe_buffer_length
+    MOVE    ABR                                                 1024
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_ONE_ERROR
+    //
+    CMT     700010020
+    MOVE    AAR                                                 init_load_exe_buffer_limit
+    MOVE    ABR                                                 6974
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_ONE_ERROR
+    //
+    CMT     700010030
+    MOVE    AAR                                                 init_load_exe_buffer_current_offset
+    MOVE    ABR                                                 5977
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_ONE_ERROR
+    //
+    CMT     700010040
+    MOVE    AAR                                                 init_load_exe_buffer_current_limit
+    MOVE    ABR                                                 5977
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_ONE_ERROR
+    //
+    CMT     700010050
+    MOVE    AAR                                                 init_load_exe_buffer_current_length
+    MOVE    ABR                                                 27
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_ONE_ERROR
+    //
+    CMT     700010060
+    MOVE    AAR                                                 init_load_exe_buffer_current_residue
+    MOVE    ABR                                                 0
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_ONE_ERROR
+    //
+    CMT     700010070
+    MOVE    #init_load_test_parse_next_one_result_offset        1
+    RET
+INIT_LOAD_TEST_PARSE_NEXT_ONE_ERROR:
+    CMT     700010080
+    MOVE    #init_load_test_parse_next_one_result_offset        0
+END
+
+PROC=INIT_LOAD_TEST_PARSE_NEXT_TWO
+    CMT     700011000
+    MOVE    init_load_test_parse_next_two_result_offset         AAR
+    //
+    DBG
+    MOVE    AAR                                                 init_load_exe_buffer_offset
+    MOVE    ABR                                                 5950
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_TWO_ERROR
+    //
+    CMT     700011010
+    MOVE    AAR                                                 init_load_exe_buffer_length
+    MOVE    ABR                                                 1024
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_TWO_ERROR
+    //
+    CMT     700011020
+    MOVE    AAR                                                 init_load_exe_buffer_limit
+    MOVE    ABR                                                 6974
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_TWO_ERROR
+    //
+    CMT     700011030
+    MOVE    AAR                                                 init_load_exe_buffer_current_offset
+    MOVE    ABR                                                 5980        //6004
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_TWO_ERROR
+    //
+    CMT     700011040
+    MOVE    AAR                                                 init_load_exe_buffer_current_limit
+    MOVE    ABR                                                 5980
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_TWO_ERROR
+    //
+    CMT     700011050
+    MOVE    AAR                                                 init_load_exe_buffer_current_length
+    MOVE    ABR                                                 3
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_TWO_ERROR
+    //
+    CMT     700011060
+    MOVE    AAR                                                 init_load_exe_buffer_current_residue
+    MOVE    ABR                                                 0
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_TWO_ERROR
+    //
+    CMT     700011070
+    MOVE    #init_load_test_parse_next_two_result_offset        1
+    RET
+INIT_LOAD_TEST_PARSE_NEXT_TWO_ERROR:
+    CMT     700011080
+    MOVE    #init_load_test_parse_next_two_result_offset        0
+END
+
+PROC=INIT_LOAD_TEST_PARSE_NEXT_THREE
+    CMT     700012000
+    MOVE    init_load_test_parse_next_three_result_offset       AAR
+    //
+    DBG
+    MOVE    AAR                                                 init_load_exe_buffer_offset
+    MOVE    ABR                                                 5950
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_THREE_ERROR
+    //
+    CMT     700012010
+    MOVE    AAR                                                 init_load_exe_buffer_length
+    MOVE    ABR                                                 1024
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_THREE_ERROR
+    //
+    CMT     700012020
+    MOVE    AAR                                                 init_load_exe_buffer_limit
+    MOVE    ABR                                                 6974
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_THREE_ERROR
+    //
+    CMT     700012030
+    MOVE    AAR                                                 init_load_exe_buffer_current_offset
+    MOVE    ABR                                                 5996        //5986
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_THREE_ERROR
+    //
+    CMT     700012040
+    MOVE    AAR                                                 init_load_exe_buffer_current_limit
+    MOVE    ABR                                                 5996
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_THREE_ERROR
+    //
+    CMT     700012050
+    MOVE    AAR                                                 init_load_exe_buffer_current_length
+    MOVE    ABR                                                 11
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_THREE_ERROR
+    //
+    CMT     700012060
+    MOVE    AAR                                                 init_load_exe_buffer_current_residue
+    MOVE    ABR                                                 0
+    SUB
+    JNZ     INIT_LOAD_TEST_PARSE_NEXT_THREE_ERROR
+    //
+    CMT     700012070
+    MOVE    #init_load_test_parse_next_three_result_offset      1
+    RET
+INIT_LOAD_TEST_PARSE_NEXT_THREE_ERROR:
+    CMT     700012080
+    MOVE    #init_load_test_parse_next_three_result_offset      0
+END
+
+PROC=INIT_LOAD_TEST_CODE
+    CMT     700013000
+    DBG
+    MOVE    init_load_test_code_result_offset                   AAR
+    //
+    CMT     700013010
+    MOVE    AAR                                                 init_load_segments_count
+    MOVE    ABR                                                 1
+    SUB
+    JNZ     INIT_LOAD_TEST_CODE_ERROR
+    //
+    CMT     700013020
+    MOVE    AAR                                                 init_load_segments_table_offset
+    MOVE    ABR                                                 131075
+    SUB
+    JNZ     INIT_LOAD_TEST_CODE_ERROR
+    //
+    CMT     700013030
+    MOVE    AAR                                                 init_load_segments_buffer_offset
+    MOVE    ABR                                                 65542
+    SUB
+    JNZ     INIT_LOAD_TEST_CODE_ERROR
+    //
+    CMT     700013040
+    MOVE    AAR                                                 init_load_segments_length
+    MOVE    ABR                                                 6
+    SUB
+    JNZ     INIT_LOAD_TEST_CODE_ERROR
+    //
+    CMT     700013050
+    MOVE    #init_load_test_code_result_offset                  1
+    RET
+INIT_LOAD_TEST_CODE_ERROR:
+    CMT     700013060
+    MOVE    #init_load_test_code_result_offset                  0
+END
+
+PROC=INIT_LOAD_TEST_DATA
+    CMT     700014000
+    DBG
+    MOVE    init_load_test_data_result_offset                   AAR
+    //
+    CMT     700014010
+    MOVE    ACR                                                 init_load_exe_head_data_count
+    JZ      INIT_LOAD_TEST_DATA_END
+    //
+    CMT     700014020
+    MOVE    AAR                                                 init_load_segments_count
+    MOVE    ABR                                                 1
+    SUB
+    JNZ     INIT_LOAD_TEST_DATA_ERROR
+    //
+    CMT     700014030
+    MOVE    AAR                                                 init_load_segments_table_offset
+    MOVE    ABR                                                 131075
+    SUB
+    JNZ     INIT_LOAD_TEST_DATA_ERROR
+    //
+    CMT     700014040
+    MOVE    AAR                                                 init_load_segments_buffer_offset
+    MOVE    ABR                                                 65542
+    SUB
+    JNZ     INIT_LOAD_TEST_DATA_ERROR
+    //
+    CMT     700014050
+    MOVE    AAR                                                 init_load_segments_length
+    MOVE    ABR                                                 6
+    SUB
+    JNZ     INIT_LOAD_TEST_DATA_ERROR
+    //
+INIT_LOAD_TEST_DATA_END:
+    CMT     700014060
+    MOVE    #init_load_test_data_result_offset                  1
+    RET
+INIT_LOAD_TEST_DATA_ERROR:
+    CMT     700014070
+    MOVE    #init_load_test_data_result_offset                  0
+END
+
+PROC=INIT_LOAD_TEST_SHARE_CODE
+    CMT     700015000
+    DBG
+    MOVE    init_load_test_share_code_result_offset             AAR
+    //
+    CMT     1
+    MOVE    ACR                                                 init_load_exe_head_share_code_count
+    JZ      INIT_LOAD_TEST_SHARE_CODE_END
+    //
+    CMT     1
+    MOVE    AAR                                                 init_load_share_segments_count
+    MOVE    ABR                                                 1
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_CODE_ERROR
+    //
+    CMT     1
+    MOVE    AAR                                                 init_load_share_segments_table_offset
+    MOVE    ABR                                                 1
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_CODE_ERROR
+    //
+    CMT     1
+    MOVE    AAR                                                 init_load_share_segments_buffer_offset
+    MOVE    ABR                                                 1
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_CODE_ERROR
+    //
+    CMT     1
+    MOVE    AAR                                                 init_load_share_segments_length
+    MOVE    ABR                                                 1
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_CODE_ERROR
+    //
+INIT_LOAD_TEST_SHARE_CODE_END:
+    CMT     1
+    MOVE    #init_load_test_share_code_result_offset            1
+    RET
+INIT_LOAD_TEST_SHARE_CODE_ERROR:
+    CMT     1
+    MOVE    #init_load_test_share_code_result_offset            0
+END
+
+PROC=INIT_LOAD_TEST_SHARE_DATA
+    CMT     700016000
+    DBG
+    MOVE    init_load_test_share_data_result_offset             AAR
+    //
+    CMT     700016010
+    MOVE    ACR                                                 init_load_exe_head_share_data_count
+    JZ      INIT_LOAD_TEST_SHARE_DATA_END
+    //
+    CMT     700016020
+    MOVE    AAR                                                 init_load_share_segments_count
+    MOVE    ABR                                                 1
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_DATA_ERROR
+    //
+    CMT     700016030
+    MOVE    AAR                                                 init_load_share_segments_table_offset
+    MOVE    ABR                                                 131077      //131077
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_DATA_ERROR
+    //
+    CMT     700016040
+    MOVE    AAR                                                 init_load_share_segments_buffer_offset
+    MOVE    ABR                                                 114804      //114804
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_DATA_ERROR
+    //
+    CMT     700016050
+    MOVE    AAR                                                 init_load_share_segments_length
+    MOVE    ABR                                                 4
+    SUB
+    JNZ     INIT_LOAD_TEST_SHARE_DATA_ERROR
+    //
+INIT_LOAD_TEST_SHARE_DATA_END:
+    CMT     700016060
+    MOVE    #init_load_test_share_data_result_offset            1
+    RET
+INIT_LOAD_TEST_SHARE_DATA_ERROR:
+    CMT     700016070
+    MOVE    #init_load_test_share_data_result_offset            0
 END

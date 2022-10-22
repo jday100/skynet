@@ -46,7 +46,7 @@ DATA
     init_load_kernel_item_length_high                   INTEGER
     init_load_kernel_item_properties                    INTEGER[2]
     //
-    init_file_load_buffer_offset                        INTEGER     1073747968
+    init_file_load_buffer_offset                        INTEGER     1073748992
     //
     init_print_result                                   INTEGER
     init_print_result_offset                            INTEGER
