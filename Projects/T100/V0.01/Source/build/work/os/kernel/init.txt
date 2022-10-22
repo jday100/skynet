@@ -87,7 +87,12 @@ CODE
     //
     CMT     70040
     DBG
-    JUMP    {init_file_load_buffer_offset:0}
+    //JUMP    {init_file_load_buffer_offset:0}
+    //
+    MOVE    AAR                                         CBR
+    MOVE    ABR                                         65536
+    ADD
+    JUMP    {ACR:0}
     //
 INIT_ERROR:
     CMT     70050
