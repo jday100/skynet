@@ -1,0 +1,43 @@
+汇编语言指令集V0.1
+
+
+一、运算指令：
+    1、Add
+    2、Sub
+    3、Mul
+    4、Div
+    5、And
+    6、Or
+    7、Not
+    8、Xor
+
+二、控制指令：
+    1、Cmt
+    2、Debug
+    3、Nop
+    4、Lock
+    5、Unlock
+    6、Halt
+    7、Quit
+    8、LGDT
+
+三、编程指令：
+    1、Call
+    2、Return
+    3、Int
+    4、Ireturn
+    5、Jump
+    6、Jz
+    7、Jnz
+    8、Loop
+    9、Push
+    10、Pop
+
+四、传输指令：
+    1、Move
+    2、Copy
+    3、Load
+    4、Store
+    5、In
+    6、Out
+

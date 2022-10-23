@@ -65,9 +65,21 @@
 		<Unit filename="T100App.h" />
 		<Unit filename="T100Main.cpp" />
 		<Unit filename="T100Main.h" />
+		<Unit filename="build/.gitkeep" />
+		<Unit filename="docs/.gitkeep" />
+		<Unit filename="docs/T100.txt" />
+		<Unit filename="docs/assembly/T100Addressing.txt" />
+		<Unit filename="docs/assembly/T100Keyword.txt" />
+		<Unit filename="docs/assembly/T100Order.txt" />
+		<Unit filename="logs/.gitkeep" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="resources/.gitkeep" />
+		<Unit filename="scripts/.gitkeep" />
+		<Unit filename="stores/.gitkeep" />
+		<Unit filename="test/.gitkeep" />
+		<Unit filename="work/.gitkeep" />
 		<Unit filename="wxsmith/T100frame.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

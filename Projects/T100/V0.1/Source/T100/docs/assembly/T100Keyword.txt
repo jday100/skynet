@@ -1,0 +1,76 @@
+汇编语言关键词表V0.1
+
+一、语言
+    MODE
+    REAL
+    VIRTUAL
+    DEFAULT
+    SHARE
+    LOCATION
+    LENGTH
+    IMPORT
+    CODE
+    DATA
+    END
+    PROC
+
+二、指令
+    ADD
+    SUB
+    MUL
+    DIV
+    AND
+    OR
+    NOT
+    XOR
+
+    CMT
+    DEBUG
+    NOP
+    LOCK
+    UNLOCK
+    HALT
+    QUIT
+    LGDT
+
+    CALL
+    RETURN
+    INT
+    IRET
+    JUMP
+    JZ
+    JNZ
+    LOOP
+    PUSH
+    POP
+
+    MOVE
+    COPY
+    LOAD
+    STORE
+    IN
+    OUT
+
+三、寄存器
+    COR
+    CBR
+    CCR
+    CSR
+    CGDTR
+
+    AAR
+    ABR
+    ACR
+    ADR
+
+    ACF
+    AMF
+    AOF
+
+四、数据类型
+    INTEGER
+    FLOAT
+    STRING
+
+
+
