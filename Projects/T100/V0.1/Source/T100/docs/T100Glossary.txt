@@ -1,0 +1,51 @@
+通用词汇表V0.1
+
+
+start launch activate initiate enablement
+stop cease quit shutoff
+
+begin end
+on off
+
+
+一、基础库
+    1、store
+        启动
+        停止
+
+    2、serve
+        启动
+        停止
+
+    3、view
+        启动
+        停止
+
+
+二、组件
+    1、store
+        启动
+        停止
+
+    2、serve
+        启动
+        停止
+
+    3、view
+        启动
+        停止
+
+
+三、应用
+    1、store
+        启动
+        停止
+
+    2、serve
+        启动
+        停止
+
+    3、view
+        启动
+        停止
+

@@ -14,10 +14,14 @@
 #include <wx/image.h>
 //*)
 
+#include "T100Common.h"
+#include "T100ThisAppManager.h"
+
 IMPLEMENT_APP(T100App);
 
 bool T100App::OnInit()
 {
+    /*DON'T DELETE IT
     //(*AppInitialize
     bool wxsOK = true;
     wxInitAllImageHandlers();
@@ -29,5 +33,16 @@ bool T100App::OnInit()
     }
     //*)
     return wxsOK;
+    */
 
+    T100BOOL wxsOK = T100TRUE;
+    wxInitAllImageHandlers();
+    if ( wxsOK )
+    {
+        T100ThisAppManager      app;
+
+        app.start();
+    }
+
+    return wxsOK;
 }

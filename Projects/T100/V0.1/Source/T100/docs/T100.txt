@@ -17,31 +17,34 @@ T100 V0.1
 5.T100Component
     存放项目通用的组件。
 
-6.T100Test
+6.T100WxWidgets
+    存放自定义的WxWidgets组件。
+
+7.T100Test
     存放项目的测试代码。
 
-7.T100FontBuilder
+8.T100FontBuilder
     字体文件的生成器。
 
-8.T100VDisk
+9.T100VDisk
     虚拟磁盘的管理器，使用控制台模式。
 
-9.T100Assembly
+10.T100Assembly
     汇编语言编译器。
 
-10.T100VPC
+11.T100VPC
     虚拟机。
 
-11.T100AOS
+12.T100AOS
     汇编版本的操作系统源代码。
 
-12.T100Editor
+13.T100Editor
     C++版本的编辑器。
 
-13.T100IDE
+14.T100IDE
     C++版本的IDE。
 
-14.T100AL(暂定)
+15.T100AL(暂定)
     C++版本的高级语言编译器。
 
 

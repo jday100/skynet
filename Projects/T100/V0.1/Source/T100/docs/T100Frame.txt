@@ -1,0 +1,14 @@
+通用架构V0.1
+
+一、标准三层结构
+    1、store
+    2、serve
+    3、view
+
+二、应用程序结构
+
+基               store
+        组
+础               serve
+        件
+库               view

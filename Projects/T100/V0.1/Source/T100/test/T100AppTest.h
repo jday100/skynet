@@ -1,0 +1,20 @@
+#ifndef T100APPTEST_H
+#define T100APPTEST_H
+
+#include "T100WxApp.h"
+
+
+class T100AppTest : public T100WxWidgets::T100WxApp
+{
+    public:
+        T100AppTest();
+        virtual ~T100AppTest();
+
+        T100BOOL            run();
+
+    protected:
+
+    private:
+};
+
+#endif // T100APPTEST_H
