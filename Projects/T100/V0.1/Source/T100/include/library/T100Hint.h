@@ -1,6 +1,8 @@
 #ifndef T100HINT_H
 #define T100HINT_H
 
+#include "T100Common.h"
+#include "T100StringCommon.h"
 
 class T100Hint
 {

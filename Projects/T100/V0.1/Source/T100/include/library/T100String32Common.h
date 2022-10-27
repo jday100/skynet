@@ -1,0 +1,8 @@
+#ifndef T100STRING32COMMON_H
+#define T100STRING32COMMON_H
+
+
+class T100String32;
+
+
+#endif // T100STRING32COMMON_H
