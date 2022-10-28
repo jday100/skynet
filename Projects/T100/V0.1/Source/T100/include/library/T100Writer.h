@@ -1,8 +1,12 @@
 #ifndef T100WRITER_H
 #define T100WRITER_H
 
+#include "T100Common.h"
+#include "T100Class.h"
 
-class T100Writer
+namespace T100Library{
+
+class T100Writer : public T100Class
 {
     public:
         T100Writer();
@@ -12,5 +16,7 @@ class T100Writer
 
     private:
 };
+
+}
 
 #endif // T100WRITER_H

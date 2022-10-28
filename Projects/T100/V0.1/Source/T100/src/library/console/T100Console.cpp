@@ -44,17 +44,17 @@ T100VOID T100Console::create()
 
 T100VOID T100Console::destroy()
 {
-
+    T100SAFE_DELETE(m_console);
 }
 
 T100VOID T100Console::outline(T100WSTRING& msg)
 {
-
+    m_console->outline(msg);
 }
 
 T100VOID T100Console::getline(T100WSTRING& msg)
 {
-
+    m_console->getline(msg);
 }
 
 }

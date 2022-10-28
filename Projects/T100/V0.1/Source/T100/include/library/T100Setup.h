@@ -1,8 +1,12 @@
 #ifndef T100SETUP_H
 #define T100SETUP_H
 
+#include "T100Class.h"
+#include "T100Common.h"
 
-class T100Setup
+namespace T100Library{
+
+class T100Setup : public T100Class
 {
     public:
         T100Setup();
@@ -12,5 +16,7 @@ class T100Setup
 
     private:
 };
+
+}
 
 #endif // T100SETUP_H

@@ -15,6 +15,8 @@ class T100ConsoleLinux : public T100ConsoleBase
         T100VOID            getline(T100WSTRING&);
 
     protected:
+        T100VOID            create();
+        T100VOID            destroy();
 
     private:
 };

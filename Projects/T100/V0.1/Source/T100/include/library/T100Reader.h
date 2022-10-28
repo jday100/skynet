@@ -1,8 +1,13 @@
 #ifndef T100READER_H
 #define T100READER_H
 
+#include "T100Common.h"
+#include "T100Class.h"
 
-class T100Reader
+
+namespace T100Library{
+
+class T100Reader : public T100Class
 {
     public:
         T100Reader();
@@ -12,5 +17,7 @@ class T100Reader
 
     private:
 };
+
+}
 
 #endif // T100READER_H

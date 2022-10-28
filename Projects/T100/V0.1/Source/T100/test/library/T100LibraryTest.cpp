@@ -2,10 +2,10 @@
 
 namespace T100Library{
 
-T100LibraryTest::T100LibraryTest()
-    :T100Library::T100Test(T100NULL, L""),
-    test_string(T100NULL),
-    test_log(T100NULL)
+T100LibraryTest::T100LibraryTest(T100Test* parent)
+    :T100Library::T100Test(parent, L""),
+    test_string(this),
+    test_log(this)
 {
     //ctor
 }

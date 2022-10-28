@@ -3,6 +3,7 @@
 namespace T100Library{
 
 T100ConsoleBase::T100ConsoleBase()
+    :T100Class()
 {
     //ctor
 }

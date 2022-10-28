@@ -1,0 +1,32 @@
+#ifndef T100TOKENTYPES_H
+#define T100TOKENTYPES_H
+
+
+namespace T100Component{
+
+
+typedef enum{
+    T100TOKEN_NONE          = 0,
+    //
+    T100TOKEN_EOF           = 1,
+    T100TOKEN_ERROR,
+    T100TOKEN_SPACE,
+    T100TOKEN_BR,
+    //
+    T100BYTE_ASCII,
+    T100BYTE_ONE,
+    T100BYTE_TWO,
+    T100BYTE_THREE,
+    T100BYTE_FOUR,
+    T100BYTE_FIVE,
+    T100BYTE_SIX,
+    T100BYTE_SEVEN,
+    //
+
+    T100TOKEN_MAX
+}T100TOKEN_TYPE;
+
+
+}
+
+#endif // T100TOKENTYPES_H

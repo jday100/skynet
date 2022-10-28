@@ -4,6 +4,8 @@
 #include "T100StringCommon.h"
 #include "T100String32.h"
 
+#define     T100STRING          T100Library::T100String
+
 
 namespace T100Library{
 

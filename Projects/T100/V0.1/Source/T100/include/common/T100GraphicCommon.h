@@ -1,6 +1,8 @@
 #ifndef T100GRAPHICCOMMON_H
 #define T100GRAPHICCOMMON_H
 
+namespace T100Library{
+
 typedef enum{
     T100COLOUR_NONE         = 0,
     T100COLOUR_TYPE_BLACK,
@@ -13,5 +15,7 @@ typedef enum{
     T100COLOUR_TYPE_PURPLE,
     T100COLOUR_TYPE_MAX
 }T100COLOUR_TYPE;
+
+}
 
 #endif // T100GRAPHICCOMMON_H

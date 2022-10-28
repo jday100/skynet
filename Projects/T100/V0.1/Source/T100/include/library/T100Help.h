@@ -1,8 +1,13 @@
 #ifndef T100HELP_H
 #define T100HELP_H
 
+#include "T100Common.h"
+#include "T100Class.h"
 
-class T100Help
+
+namespace T100Library{
+
+class T100Help : public T100Class
 {
     public:
         T100Help();
@@ -12,5 +17,7 @@ class T100Help
 
     private:
 };
+
+}
 
 #endif // T100HELP_H

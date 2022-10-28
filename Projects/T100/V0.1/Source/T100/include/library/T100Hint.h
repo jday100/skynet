@@ -4,7 +4,9 @@
 #include "T100Common.h"
 #include "T100StringCommon.h"
 
-class T100Hint
+namespace T100Library{
+
+class T100Hint : public T100Class
 {
     public:
         T100Hint();
@@ -14,5 +16,7 @@ class T100Hint
 
     private:
 };
+
+}
 
 #endif // T100HINT_H

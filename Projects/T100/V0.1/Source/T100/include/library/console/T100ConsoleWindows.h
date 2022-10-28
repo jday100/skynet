@@ -14,7 +14,11 @@ class T100ConsoleWindows : public T100ConsoleBase
         T100VOID            outline(T100WSTRING&);
         T100VOID            getline(T100WSTRING&);
 
+        T100VOID            setForegroundColour(T100COLOUR_TYPE);
+
     protected:
+        T100VOID            create();
+        T100VOID            destroy();
 
     private:
 };

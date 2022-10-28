@@ -5,6 +5,13 @@
 #include "T100Common.h"
 #include "T100GraphicCommon.h"
 
+#define     T100CONSOLE_PROMPT_DEFAULT                  L'?'
+#define     T100CONSOLE_SEPARATOR_DEFAULT               L' '
+#define     T100CONSOLE_COMMAND_PROMPT_DEFAULT          L'-'
+#define     T100CONSOLE_COMMAND_EQUAL_DEFAULT           L'='
+
+namespace T100Library{
+
 typedef enum{
     T100CONSOLE_TYPE_NONE           = 0,
     T100CONSOLE_TYPE_WINDOWS,
@@ -13,5 +20,6 @@ typedef enum{
     T100CONSOLE_TYPE_MAX
 }T100CONSOLE_TYPE;
 
+}
 
 #endif // T100CONSOLECOMMON_H

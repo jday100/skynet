@@ -11,6 +11,8 @@ class T100ByteToken : public T100Component::T100Token
         T100ByteToken();
         virtual ~T100ByteToken();
 
+        T100VOID            clear();
+
     protected:
 
     private:

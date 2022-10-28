@@ -11,7 +11,7 @@ namespace T100Library{
 class T100LibraryTest : public T100Test
 {
     public:
-        T100LibraryTest();
+        T100LibraryTest(T100Test*);
         virtual ~T100LibraryTest();
 
     protected:
