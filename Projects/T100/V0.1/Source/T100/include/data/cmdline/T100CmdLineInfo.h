@@ -1,6 +1,9 @@
 #ifndef T100CMDLINEINFO_H
 #define T100CMDLINEINFO_H
 
+#include "T100CmdLineCommon.h"
+
+namespace T100Library{
 
 class T100CmdLineInfo
 {
@@ -8,9 +11,13 @@ class T100CmdLineInfo
         T100CmdLineInfo();
         virtual ~T100CmdLineInfo();
 
+        T100CMDLINE_TYPE            type;
+
     protected:
 
     private:
 };
+
+}
 
 #endif // T100CMDLINEINFO_H

@@ -120,6 +120,8 @@
 		<Unit filename="docs/assembly/T100Keyword.txt" />
 		<Unit filename="docs/assembly/T100Order.txt" />
 		<Unit filename="include/al/T100AL.h" />
+		<Unit filename="include/app/T100ThisAppCmdLineParser.h" />
+		<Unit filename="include/app/T100ThisAppCmdLineResult.h" />
 		<Unit filename="include/app/T100ThisAppManager.h" />
 		<Unit filename="include/app/T100ThisAppSetup.h" />
 		<Unit filename="include/assembly/T100Assembly.h" />
@@ -145,6 +147,7 @@
 		<Unit filename="include/data/cmdline/T100CmdLineInfo.h" />
 		<Unit filename="include/data/cmdline/T100CmdLineOption.h" />
 		<Unit filename="include/data/cmdline/T100CmdLineParam.h" />
+		<Unit filename="include/data/cmdline/T100CmdLineResult.h" />
 		<Unit filename="include/data/cmdline/T100CmdLineStringToken.h" />
 		<Unit filename="include/data/cmdline/T100CmdLineSwitch.h" />
 		<Unit filename="include/editor/T100Editor.h" />
@@ -195,6 +198,7 @@
 		<Unit filename="include/library/T100Writer.h" />
 		<Unit filename="include/library/cmdline/T100CmdLineCharScanner.h" />
 		<Unit filename="include/library/cmdline/T100CmdLineCommon.h" />
+		<Unit filename="include/library/cmdline/T100CmdLineParser.h" />
 		<Unit filename="include/library/cmdline/T100CmdLineStringScanner.h" />
 		<Unit filename="include/library/console/T100Console.h" />
 		<Unit filename="include/library/console/T100ConsoleBase.h" />
@@ -219,6 +223,8 @@
 		<Unit filename="resources/.gitkeep" />
 		<Unit filename="scripts/.gitkeep" />
 		<Unit filename="src/al/T100AL.cpp" />
+		<Unit filename="src/app/T100ThisAppCmdLineParser.cpp" />
+		<Unit filename="src/app/T100ThisAppCmdLineResult.cpp" />
 		<Unit filename="src/app/T100ThisAppManager.cpp" />
 		<Unit filename="src/app/T100ThisAppSetup.cpp" />
 		<Unit filename="src/assembly/T100Assembly.cpp" />
@@ -235,6 +241,7 @@
 		<Unit filename="src/data/cmdline/T100CmdLineInfo.cpp" />
 		<Unit filename="src/data/cmdline/T100CmdLineOption.cpp" />
 		<Unit filename="src/data/cmdline/T100CmdLineParam.cpp" />
+		<Unit filename="src/data/cmdline/T100CmdLineResult.cpp" />
 		<Unit filename="src/data/cmdline/T100CmdLineStringToken.cpp" />
 		<Unit filename="src/data/cmdline/T100CmdLineSwitch.cpp" />
 		<Unit filename="src/editor/T100Editor.cpp" />
@@ -277,6 +284,7 @@
 		<Unit filename="src/library/T100Unicode.cpp" />
 		<Unit filename="src/library/T100Writer.cpp" />
 		<Unit filename="src/library/cmdline/T100CmdLineCharScanner.cpp" />
+		<Unit filename="src/library/cmdline/T100CmdLineParser.cpp" />
 		<Unit filename="src/library/cmdline/T100CmdLineStringScanner.cpp" />
 		<Unit filename="src/library/console/T100Console.cpp" />
 		<Unit filename="src/library/console/T100ConsoleBase.cpp" />
