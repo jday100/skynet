@@ -11,6 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="-T" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-g" />
@@ -191,6 +192,9 @@
 		<Unit filename="include/library/T100Test.h" />
 		<Unit filename="include/library/T100TestCommon.h" />
 		<Unit filename="include/library/T100TestTools.h" />
+		<Unit filename="include/library/T100TextFile.h" />
+		<Unit filename="include/library/T100TextFileReader.h" />
+		<Unit filename="include/library/T100TextFileWriter.h" />
 		<Unit filename="include/library/T100Thread.h" />
 		<Unit filename="include/library/T100Timer.h" />
 		<Unit filename="include/library/T100Unicode.h" />
@@ -279,6 +283,9 @@
 		<Unit filename="src/library/T100StringTools.cpp" />
 		<Unit filename="src/library/T100Test.cpp" />
 		<Unit filename="src/library/T100TestTools.cpp" />
+		<Unit filename="src/library/T100TextFile.cpp" />
+		<Unit filename="src/library/T100TextFileReader.cpp" />
+		<Unit filename="src/library/T100TextFileWriter.cpp" />
 		<Unit filename="src/library/T100Thread.cpp" />
 		<Unit filename="src/library/T100Timer.cpp" />
 		<Unit filename="src/library/T100Unicode.cpp" />

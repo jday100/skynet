@@ -38,6 +38,7 @@ class T100Log : public T100Class
         static std::atomic_bool             m_running;
         static T100LOG_TYPE                 m_type;
 
+        static T100VOID                     outline(T100LOG_TYPE, T100WSTRING);
 
 };
 

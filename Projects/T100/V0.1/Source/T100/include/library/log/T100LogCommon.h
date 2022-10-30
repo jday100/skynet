@@ -5,6 +5,10 @@
 #include "T100Common.h"
 #include "T100DataStructure.h"
 
+#define         T100LOG_QUEUE                       std::queue<T100WSTRING>
+
+#define         T100LOG_VECTOR                      std::vector<T100LogBase*>
+
 namespace T100Library{
 class T100LogBase;
 
@@ -20,10 +24,6 @@ typedef enum{
     T100LOG_TYPE_ALL,
     T100LOG_TYPE_MAX
 }T100LOG_TYPE;
-
-#define         T100LOG_QUEUE                       std::queue<T100WSTRING>
-
-#define         T100LOG_VECTOR                      std::vector<T100LogBase*>
 
 }
 

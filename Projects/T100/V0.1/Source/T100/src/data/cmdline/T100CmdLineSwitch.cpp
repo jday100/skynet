@@ -16,7 +16,7 @@ T100CmdLineSwitch::~T100CmdLineSwitch()
 
 T100VOID T100CmdLineSwitch::create()
 {
-    type = T100CMDlINE_SWITCH;
+    type = T100CMDLINE_SWITCH;
 }
 
 T100VOID T100CmdLineSwitch::destroy()

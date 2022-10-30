@@ -39,10 +39,19 @@ bool T100App::OnInit()
     wxInitAllImageHandlers();
     if ( wxsOK )
     {
-        T100ThisAppManager      app;
-
-        app.start();
+        m_manager.start();
     }
 
     return wxsOK;
+}
+
+bool T100App::Initialize(int& argc, wxChar** argv)
+{
+    wxApp::Initialize(argc, argv);
+    return m_manager.parse(argc, argv);
+}
+
+T100ThisAppManager* T100App::getManager()
+{
+    return &m_manager;
 }
