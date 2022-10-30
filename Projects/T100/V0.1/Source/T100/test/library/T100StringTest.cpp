@@ -5,11 +5,11 @@
 
 namespace T100Library{
 
-T100WSTRING         T100StringTest::m_name                      = L"library.string";
+T100WSTRING         T100StringTest::m_name                      = L"string";
 
 
 T100StringTest::T100StringTest(T100Test* parent)
-    :T100Library::T100Test(parent, L"")
+    :T100Library::T100Test(parent, m_name)
 {
     //ctor
 }

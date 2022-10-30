@@ -19,6 +19,8 @@ class T100ThisAppTest : public T100Library::T100Test
         T100Assembly::T100AssemblyTest          test_assembly;
 
     private:
+        static T100WSTRING                      m_name;
+
 };
 
 }

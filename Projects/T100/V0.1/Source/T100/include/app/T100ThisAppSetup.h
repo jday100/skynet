@@ -13,6 +13,8 @@ class T100ThisAppSetup : public T100Library::T100AppSetup
 
         static T100STRING           getTestResources(T100STRING);
 
+        static T100STRING           APP_TEST_PATH;
+
     protected:
 
     private:

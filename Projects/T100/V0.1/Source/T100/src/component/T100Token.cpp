@@ -15,7 +15,10 @@ T100Token::~T100Token()
 
 T100VOID T100Token::clear()
 {
-
+    type    = T100TOKEN_NONE;
+    eof     = T100FALSE;
+    err     = T100ERROR_NONE;
+    row     = 0;
 }
 
 }

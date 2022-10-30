@@ -2,8 +2,10 @@
 
 namespace T100Library{
 
+T100WSTRING         T100LogTest::m_name                     = L"log";
+
 T100LogTest::T100LogTest(T100Test* parent)
-    :T100Library::T100Test(parent, L"")
+    :T100Library::T100Test(parent, m_name)
 {
     //ctor
 }

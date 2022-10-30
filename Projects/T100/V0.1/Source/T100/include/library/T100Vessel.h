@@ -35,6 +35,11 @@ class T100Vessel
             return T100TRUE;
         };
 
+        std::vector<Value>&     getVector()
+        {
+            return m_vector;
+        };
+
         Value       at(T100WORD index)
         {
             return m_vector.at(index);

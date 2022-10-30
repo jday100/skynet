@@ -15,7 +15,9 @@ T100ByteToken::~T100ByteToken()
 
 T100VOID T100ByteToken::clear()
 {
+    value       = 0;
 
+    T100Token::clear();
 }
 
 }

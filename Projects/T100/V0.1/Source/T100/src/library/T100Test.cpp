@@ -1,4 +1,6 @@
 #include "T100Test.h"
+#include <sstream>
+
 
 namespace T100Library{
 
@@ -11,7 +13,9 @@ T100WORD        T100Test::m_failure         = 0;
 
 
 T100Test::T100Test(T100Test* parent, T100WSTRING name)
-    :T100Class()
+    :T100Class(),
+    m_parent(parent),
+    m_name(name)
 {
     //ctor
     create();
@@ -37,7 +41,7 @@ T100VOID T100Test::create()
         m_units = 0;
     }
 
-    append();
+    add();
 
     if(m_need_init){
         if(init()){
@@ -63,7 +67,22 @@ T100VOID T100Test::destroy()
     }
 }
 
-T100VOID T100Test::append()
+T100VOID T100Test::add()
+{
+    m_units++;
+    if(m_parent){
+        m_parent->append(m_name, this);
+    }else{
+        append(m_name, this);
+    }
+}
+
+T100VOID T100Test::append(T100WSTRING name, T100Test* test)
+{
+    m_tests.push_back(name, test);
+}
+
+T100VOID T100Test::remove(T100WSTRING name, T100Test* test)
 {
 
 }
@@ -79,7 +98,45 @@ T100BOOL T100Test::test_all()
         m_failure   = 0;
     }
 
-    return T100FALSE;
+    for(T100Test* entry : m_tests.getVector()){
+        if(this == entry){
+
+        }else{
+            if(entry->test_all()){
+
+            }else{
+                result = T100FALSE;
+            }
+        }
+    }
+
+    out_test_begin(m_name);
+
+    m_index++;
+
+    if(do_test()){
+
+    }else{
+        result = T100FALSE;
+    }
+
+    for(T100TEST_CALL call : m_test_call.getVector()){
+        if(call(this)){
+
+        }else{
+            result = T100FALSE;
+        }
+    }
+
+    if(result){
+        m_success++;
+    }else{
+        m_failure++;
+    }
+
+    out_test_end(m_name, result);
+
+    return result;
 }
 
 T100VOID T100Test::list()
@@ -94,67 +151,123 @@ T100BOOL T100Test::find()
 
 T100BOOL T100Test::do_init()
 {
-
+    if(!m_inited){
+        m_inited = init();
+        return m_inited;
+    }
+    return T100TRUE;
 }
 
 T100BOOL T100Test::do_uninit()
 {
-
+    if(!m_uninited){
+        m_uninited = uninit();
+        return m_uninited;
+    }
+    return T100TRUE;
 }
 
 T100BOOL T100Test::init()
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100Test::uninit()
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100Test::do_test()
 {
-
+    return T100TRUE;
 }
 
 T100VOID T100Test::show_result(T100BOOL result, T100WSTRING& msg)
 {
+    std::wstringstream      ss;
 
+    if(result){
+        ss << L"[SUCCESS] " << msg;
+    }else{
+        ss << L"[FAILURE] " << msg;
+    }
+
+    out(ss.str());
 }
 
 T100VOID T100Test::out(T100WSTRING msg)
 {
-
+    m_console->outline(msg);
 }
 
-T100VOID T100Test::out_test_begin(T100WSTRING& msg)
+T100VOID T100Test::out_test_begin(T100WSTRING& name)
 {
+    std::wstringstream      result;
 
+    result << L"Unit [ " << m_index << L"/" << m_units << L" ] : [ " << name << L" ] test is beginning ... ";
+
+    out(result.str());
 }
 
-T100VOID T100Test::out_test_end(T100WSTRING& msg, T100BOOL result)
+T100VOID T100Test::out_test_end(T100WSTRING& name, T100BOOL result)
 {
+    std::wstringstream      ss;
 
+    if(result){
+        ss << L"[SUCCESS] ";
+    }else{
+        ss << L"[FAILURE] ";
+    }
+
+    ss << L"Unit [ " << m_index - 1 << L"/" << m_units << L" ] : [ " << name << L" ] test is ended . ";
+
+    if(!m_parent){
+        ss << L"\n";
+        ss << L"Test result: ";
+        if(result){
+            ss << L"[SUCCESS] ";
+        }else{
+            ss << L"[FAILURE] ";
+        }
+
+        ss << L"Success " << m_success << L" units . ";
+        ss << L"Failure " << m_failure << L" units . ";
+        ss << L"\n" << L"Total be tested " << m_units << L" units . ";
+    }
+
+    out(ss.str());
 }
 
-T100VOID T100Test::out_list(T100WSTRING& msg)
+T100VOID T100Test::out_list(T100WSTRING& name)
 {
+    std::wstringstream      result;
 
+    result << L"\t Test unit: [ " << name << L" ]";
+
+    out(result.str());
 }
 
-T100VOID T100Test::out_list_element(T100WSTRING& msg)
+T100VOID T100Test::out_list_element(T100WSTRING& name)
 {
+    std::wstringstream      result;
 
+    result << L"\t\tTest element: [ " << name << L" ]";
+
+    out(result.str());
 }
 
 T100VOID T100Test::out_list_begin()
 {
-
+    out(L"All test units: ");
 }
 
 T100VOID T100Test::out_list_end()
 {
+    std::wstringstream      result;
 
+    result << L"Total test " << m_units << L" units . ";
+
+    out(result.str());
 }
 
 }

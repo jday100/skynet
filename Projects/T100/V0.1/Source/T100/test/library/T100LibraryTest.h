@@ -19,6 +19,8 @@ class T100LibraryTest : public T100Test
         T100LogTest             test_log;
 
     private:
+        static T100WSTRING      m_name;
+
 };
 
 }

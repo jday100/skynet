@@ -16,10 +16,10 @@ class T100Token : public T100Library::T100Class
         T100Token();
         virtual ~T100Token();
 
-        T100TOKEN_TYPE                  type            = T100TOKEN_NONE;
-        T100BOOL                        eof             = T100FALSE;
-        T100ERROR_TYPE     err             = T100ERROR_NONE;
-        T100WORD                        row             = 0;
+        T100TOKEN_TYPE          type            = T100TOKEN_NONE;
+        T100BOOL                eof             = T100FALSE;
+        T100ERROR_TYPE          err             = T100ERROR_NONE;
+        T100WORD                row             = 0;
 
         virtual T100VOID        clear();
 

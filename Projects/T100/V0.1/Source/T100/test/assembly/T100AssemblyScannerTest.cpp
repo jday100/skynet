@@ -1,15 +1,18 @@
 #include "T100AssemblyScannerTest.h"
 
+#include "T100Log.h"
 #include "T100ThisAppSetup.h"
 #include "T100AssemblyTestHint.h"
 #include "T100ByteToken.h"
 #include "T100ByteScanner.h"
 
 
-namespace T100Library{
+namespace T100Assembly{
+
+T100WSTRING         T100AssemblyScannerTest::m_name                     = L"scanner";
 
 T100AssemblyScannerTest::T100AssemblyScannerTest(T100Test* parent)
-    :T100Library::T100Test(parent, L"")
+    :T100Library::T100Test(parent, m_name)
 {
     //ctor
 }
@@ -37,7 +40,7 @@ T100BOOL T100AssemblyScannerTest::test_byte()
     T100BOOL        result          = T100TRUE;
     T100BOOL        value;
 
-    T100Log::info(T100Assembly::T100TEST_HINT_ASSEMBLY_SCANNER_BYTE_TEST_START);
+    T100Library::T100Log::info(T100Assembly::T100TEST_HINT_ASSEMBLY_SCANNER_BYTE_TEST_START);
 
     T100Assembly::T100ByteScanner*          scanner         = T100NULL;
     T100Assembly::T100ByteToken             token;

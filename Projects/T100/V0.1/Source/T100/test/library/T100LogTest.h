@@ -14,6 +14,8 @@ class T100LogTest : public T100Library::T100Test
     protected:
 
     private:
+        static T100WSTRING      m_name;
+
 };
 
 }

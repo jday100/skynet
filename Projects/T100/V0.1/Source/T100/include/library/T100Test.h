@@ -8,6 +8,9 @@
 #include "T100Console.h"
 
 namespace T100Library{
+class T100Test;
+
+typedef     T100BOOL(*T100TEST_CALL)(T100Test*);
 
 class T100Test : public T100Class
 {
@@ -30,7 +33,7 @@ class T100Test : public T100Class
         virtual T100VOID            create();
         virtual T100VOID            destroy();
 
-        virtual T100VOID            append();
+        virtual T100VOID            add();
 
         virtual T100BOOL            do_init();
         virtual T100BOOL            do_uninit();
@@ -48,6 +51,9 @@ class T100Test : public T100Class
         virtual T100VOID            out_list_begin();
         virtual T100VOID            out_list_end();
 
+        virtual T100VOID            append(T100WSTRING, T100Test*);
+        virtual T100VOID            remove(T100WSTRING, T100Test*);
+
     private:
         std::atomic_bool            m_need_init;
         std::atomic_bool            m_inited;
@@ -64,7 +70,8 @@ class T100Test : public T100Class
         static T100WORD             m_success;
         static T100WORD             m_failure;
 
-        T100Vessel<T100WSTRING, T100Test*>      m_tests;
+        T100Vessel<T100WSTRING, T100Test*>          m_tests;
+        T100Vessel<T100WSTRING, T100TEST_CALL>      m_test_call;
 
 };
 

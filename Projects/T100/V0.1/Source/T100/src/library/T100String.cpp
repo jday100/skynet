@@ -5,7 +5,7 @@
 namespace T100Library{
 
 T100String::T100String()
-    :m_wstring(), m_string32()
+    :T100Class(), m_wstring(), m_string32()
 {
     //ctor
 }
