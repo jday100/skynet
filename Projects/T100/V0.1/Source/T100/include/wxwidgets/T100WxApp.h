@@ -4,11 +4,12 @@
 #include "T100App.h"
 
 namespace T100WxWidgets{
+class T100WxAppManager;
 
 class T100WxApp : public T100Library::T100App
 {
     public:
-        T100WxApp();
+        T100WxApp(T100WxAppManager*);
         virtual ~T100WxApp();
 
     protected:

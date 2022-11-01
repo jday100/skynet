@@ -1,16 +1,59 @@
 #ifndef T100FONT_H
 #define T100FONT_H
 
+#include "T100FontCommon.h"
+#include "T100FontFile.h"
 
-class T100Font
+namespace T100Component{
+
+class T100Font : public T100Library::T100Class
 {
+    friend class T100FontFileReader;
     public:
         T100Font();
         virtual ~T100Font();
 
+        T100BOOL                    load(T100STRING);
+
+        T100VOID                    setName(T100STRING);
+        T100STRING                  getName();
+
+        T100VOID                    setWidth(T100WORD);
+        T100WORD                    getWidth();
+
+        T100VOID                    setHeight(T100WORD);
+        T100WORD                    getHeight();
+
+        T100VOID                    setLength(T100WORD);
+        T100WORD                    getLength();
+
+        T100BOOL                    setRowSize(T100WORD);
+        T100WORD                    getRowSize();
+
+        T100BOOL                    setFont(T100WORD, T100FONT_DATA_VECTOR*);
+        T100BOOL                    getFont(T100WORD, T100FONT_DATA_VECTOR*&);
+
+        T100BOOL                    appendRow(T100FONTFILE_ROW*);
+        T100BOOL                    removeRow(T100FONTFILE_ROW*);
+
+        T100FONT_ROW_VECTOR&        getFonts();
+
     protected:
+        T100STRING                  m_name;
+        T100WORD                    m_width         = 0;
+        T100WORD                    m_height        = 0;
+        T100WORD                    m_length        = 0;
+        T100WORD                    m_row_size      = 0;
+
+        T100BOOL                    unwind(T100WORD, T100WORD*, T100HWORD);
+        T100BOOL                    unwind(T100WORD, T100FONT_DATA_VECTOR*);
 
     private:
+        T100FONT_HASH               m_fonts;
+        T100FONT_ROW_VECTOR         m_rows;
+
 };
+
+}
 
 #endif // T100FONT_H

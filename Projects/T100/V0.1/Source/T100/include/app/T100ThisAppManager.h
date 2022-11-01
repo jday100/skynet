@@ -5,6 +5,10 @@
 #include "T100WxAppManager.h"
 #include "T100ThisAppCmdLineResult.h"
 
+namespace T100FontBuilder{
+    class T100FontApp;
+}
+
 
 class T100ThisAppManager : public T100WxWidgets::T100WxAppManager
 {
@@ -22,8 +26,11 @@ class T100ThisAppManager : public T100WxWidgets::T100WxAppManager
         T100VOID                create();
         T100VOID                destroy();
 
+    protected:
+        T100FontBuilder::T100FontApp*            m_font          = T100NULL;
+
     private:
-        T100ThisAppCmdLineResult        m_info;
+        T100ThisAppCmdLineResult            m_info;
 
 };
 

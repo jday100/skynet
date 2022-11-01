@@ -8,11 +8,12 @@
 #define         T100APP_VECTOR                  std::vector<T100App*>
 
 namespace T100Library{
+class T100AppManager;
 
 class T100App : public T100Class
 {
     public:
-        T100App();
+        T100App(T100AppManager*);
         virtual ~T100App();
 
         static T100VOID             getCmdLine(int&, wchar_t**&);
@@ -32,6 +33,8 @@ class T100App : public T100Class
         T100VOID                    close();
 
     private:
+        T100AppManager*             m_manager           = T100NULL;
+
 };
 
 }

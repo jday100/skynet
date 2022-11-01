@@ -1,0 +1,19 @@
+-?      usage       run usage
+-T      test        run test
+-H      help        run help
+-V      vpc         run vpc
+-D      vdisk       run vdisk console
+-M      vdm         run vdisk manager
+-F      font        run font file builder
+-I      ide         run ide
+-A      assembly    run assembly compiler
+-E      editor      run editor
+-L      log         setup log
+-R      error       setup error
+
+-q      quit        quit app
+-l      list        list test units
+-i      input       input file
+-o      output      output file
+-u      unit        run test unit
+-p      classpath   setup import path

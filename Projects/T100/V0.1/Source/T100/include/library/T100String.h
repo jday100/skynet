@@ -31,6 +31,7 @@ class T100String : public T100Class
 {
     friend class T100StringHash;
     friend class T100StringEqual;
+    friend class T100String32Tools;
     public:
         T100String();
         T100String(const T100STDCHAR*);

@@ -7,6 +7,7 @@
 
 #include "T100ThisAppCmdLineParser.h"
 
+#include "T100FontApp.h"
 
 
 T100ThisAppManager::T100ThisAppManager()
@@ -39,9 +40,14 @@ T100BOOL T100ThisAppManager::start()
     T100Library::T100Log::start();
 
     if(m_info.TEST){
-        T100AppTest         test;
+        T100AppTest         test(this);
 
         test.run();
+    }
+
+    if(m_info.FONT){
+        m_font = T100NEW T100FontBuilder::T100FontApp(this);
+        m_font->show();
     }
 
     return T100TRUE;

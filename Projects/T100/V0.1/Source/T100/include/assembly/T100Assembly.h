@@ -8,7 +8,7 @@ namespace T100Assembly{
 class T100Assembly : public T100Library::T100App
 {
     public:
-        T100Assembly();
+        T100Assembly(T100Library::T100AppManager*);
         virtual ~T100Assembly();
 
     protected:

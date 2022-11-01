@@ -2,7 +2,8 @@
 
 namespace T100Editor{
 
-T100Editor::T100Editor()
+T100Editor::T100Editor(T100WxWidgets::T100WxAppManager* obj)
+    :T100WxWidgets::T100WxApp(obj)
 {
     //ctor
 }

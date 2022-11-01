@@ -2,7 +2,8 @@
 
 #include "T100ThisAppTest.h"
 
-T100AppTest::T100AppTest()
+T100AppTest::T100AppTest(T100WxWidgets::T100WxAppManager* obj)
+    :T100WxWidgets::T100WxApp(obj)
 {
     //ctor
 }

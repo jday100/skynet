@@ -9,7 +9,8 @@ namespace T100Library{
 T100APP_VECTOR          T100App::m_apps;
 std::atomic_int         T100App::m_count;
 
-T100App::T100App()
+T100App::T100App(T100AppManager* obj)
+    :m_manager(obj)
 {
     //ctor
     create();

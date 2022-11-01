@@ -8,7 +8,7 @@ namespace T100AL{
 class T100AL : public T100Library::T100App
 {
     public:
-        T100AL();
+        T100AL(T100Library::T100AppManager*);
         virtual ~T100AL();
 
     protected:

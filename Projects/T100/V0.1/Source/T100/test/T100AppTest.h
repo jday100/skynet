@@ -7,7 +7,7 @@
 class T100AppTest : public T100WxWidgets::T100WxApp
 {
     public:
-        T100AppTest();
+        T100AppTest(T100WxWidgets::T100WxAppManager*);
         virtual ~T100AppTest();
 
         T100BOOL            run();

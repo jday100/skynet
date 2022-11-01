@@ -1,6 +1,7 @@
 #ifndef T100FONTSERVE_H
 #define T100FONTSERVE_H
 
+namespace T100FontBuilder{
 
 class T100FontServe
 {
@@ -12,5 +13,7 @@ class T100FontServe
 
     private:
 };
+
+}
 
 #endif // T100FONTSERVE_H

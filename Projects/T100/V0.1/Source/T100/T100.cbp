@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-T" />
+				<Option parameters="-F" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-g" />
@@ -188,6 +188,7 @@
 		<Unit filename="T100Main.cpp" />
 		<Unit filename="T100Main.h" />
 		<Unit filename="build/.gitkeep" />
+		<Unit filename="cmd.txt" />
 		<Unit filename="docs/.gitkeep" />
 		<Unit filename="docs/T100.txt" />
 		<Unit filename="docs/T100Frame.txt" />
@@ -314,6 +315,7 @@
 		<Unit filename="include/component/compiler/T100SymbolFileWriter.h" />
 		<Unit filename="include/component/compiler/T100SymbolInfo.h" />
 		<Unit filename="include/component/font/T100Font.h" />
+		<Unit filename="include/component/font/T100FontCommon.h" />
 		<Unit filename="include/component/font/T100FontFile.h" />
 		<Unit filename="include/component/font/T100FontFileReader.h" />
 		<Unit filename="include/component/font/T100FontFileWriter.h" />
@@ -336,10 +338,14 @@
 		<Unit filename="include/editor/T100Editor.h" />
 		<Unit filename="include/editor/serve/T100EditorServe.h" />
 		<Unit filename="include/editor/view/T100EditorView.h" />
-		<Unit filename="include/font/T100FontBuilder.h" />
+		<Unit filename="include/font/T100FontApp.h" />
+		<Unit filename="include/font/T100FontHint.h" />
+		<Unit filename="include/font/T100FontSetup.h" />
 		<Unit filename="include/font/serve/T100FontCallback.h" />
 		<Unit filename="include/font/serve/T100FontServe.h" />
 		<Unit filename="include/font/serve/T100FontTools.h" />
+		<Unit filename="include/font/view/T100FontFrame.h" />
+		<Unit filename="include/font/view/T100FontPanel.h" />
 		<Unit filename="include/font/view/T100FontView.h" />
 		<Unit filename="include/ide/T100IDE.h" />
 		<Unit filename="include/ide/callback/T100IDECallbackBase.h" />
@@ -638,10 +644,14 @@
 		<Unit filename="src/editor/T100Editor.cpp" />
 		<Unit filename="src/editor/serve/T100EditorServe.cpp" />
 		<Unit filename="src/editor/view/T100EditorView.cpp" />
-		<Unit filename="src/font/T100FontBuilder.cpp" />
+		<Unit filename="src/font/T100FontApp.cpp" />
+		<Unit filename="src/font/T100FontHint.cpp" />
+		<Unit filename="src/font/T100FontSetup.cpp" />
 		<Unit filename="src/font/serve/T100FontCallback.cpp" />
 		<Unit filename="src/font/serve/T100FontServe.cpp" />
 		<Unit filename="src/font/serve/T100FontTools.cpp" />
+		<Unit filename="src/font/view/T100FontFrame.cpp" />
+		<Unit filename="src/font/view/T100FontPanel.cpp" />
 		<Unit filename="src/font/view/T100FontView.cpp" />
 		<Unit filename="src/ide/T100IDE.cpp" />
 		<Unit filename="src/ide/callback/T100IDECallbackBase.cpp" />
@@ -814,6 +824,8 @@
 		<Unit filename="test/library/T100StringTest.h" />
 		<Unit filename="work/.gitkeep" />
 		<Unit filename="work/AOS/rom/rom.txt" />
+		<Unit filename="wxsmith/T100FontFrame.wxs" />
+		<Unit filename="wxsmith/T100FontPanel.wxs" />
 		<Unit filename="wxsmith/T100frame.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
@@ -821,6 +833,8 @@
 				<gui name="wxWidgets" src="T100App.cpp" main="T100Frame" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxFrame wxs="wxsmith/T100frame.wxs" src="T100Main.cpp" hdr="T100Main.h" fwddecl="0" i18n="1" name="T100Frame" language="CPP" />
+					<wxFrame wxs="wxsmith/T100FontFrame.wxs" src="src\font\view\T100FontFrame.cpp" hdr="include\font\view\T100FontFrame.h" fwddecl="0" i18n="1" name="T100FontFrame" language="CPP" />
+					<wxPanel wxs="wxsmith/T100FontPanel.wxs" src="src\font\view\T100FontPanel.cpp" hdr="include\font\view\T100FontPanel.h" fwddecl="0" i18n="1" name="T100FontPanel" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>
