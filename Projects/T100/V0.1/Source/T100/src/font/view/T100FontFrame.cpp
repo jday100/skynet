@@ -8,6 +8,7 @@
 namespace T100FontBuilder{
 
 //(*IdInit(T100FontFrame)
+const long T100FontFrame::ID_CUSTOM1 = wxNewId();
 //*)
 
 BEGIN_EVENT_TABLE(T100FontFrame,wxFrame)
@@ -24,8 +25,9 @@ void T100FontFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& p
 {
 	//(*Initialize(T100FontFrame)
 	Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
-	SetClientSize(wxDefaultSize);
+	SetClientSize(wxSize(406,550));
 	Move(wxDefaultPosition);
+	Custom1 = new T100FontPanel(this,ID_CUSTOM1,wxPoint(192,296),wxDefaultSize);
 	//*)
 }
 

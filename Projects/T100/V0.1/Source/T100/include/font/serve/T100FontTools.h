@@ -14,6 +14,7 @@ namespace T100FontBuilder{
 
 class T100FontTools
 {
+    friend class T100FontPanel;
     public:
         T100FontTools();
         virtual ~T100FontTools();

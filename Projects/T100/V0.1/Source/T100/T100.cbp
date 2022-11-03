@@ -84,6 +84,7 @@
 				</ResourceCompiler>
 				<Linker>
 					<Add library="libwxmsw30ud.a" />
+					<Add library="iconv" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -320,6 +321,7 @@
 		<Unit filename="include/component/font/T100FontFileReader.h" />
 		<Unit filename="include/component/font/T100FontFileWriter.h" />
 		<Unit filename="include/component/vdisk/T100VDisk.h" />
+		<Unit filename="include/component/vdisk/T100VDiskCommon.h" />
 		<Unit filename="include/component/vdisk/T100VDiskFile.h" />
 		<Unit filename="include/component/vdisk/T100VDiskPart.h" />
 		<Unit filename="include/component/vdisk/T100VFS.h" />

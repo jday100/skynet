@@ -2,6 +2,7 @@
 #define T100FONTFRAME_H
 
 //(*Headers(T100FontFrame)
+#include "T100FontPanel.h"
 #include <wx/frame.h>
 //*)
 
@@ -15,11 +16,13 @@ class T100FontFrame: public wxFrame
 		virtual ~T100FontFrame();
 
 		//(*Declarations(T100FontFrame)
+		T100FontPanel* Custom1;
 		//*)
 
 	protected:
 
 		//(*Identifiers(T100FontFrame)
+		static const long ID_CUSTOM1;
 		//*)
 
 	private:

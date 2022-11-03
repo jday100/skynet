@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <wxsmith>
 	<object class="wxFrame" name="T100FontFrame">
+		<size>406,550</size>
 		<pos_arg>1</pos_arg>
 		<size_arg>1</size_arg>
+		<object class="Custom" name="ID_CUSTOM1" subclass="T100FontPanel" variable="Custom1" member="yes">
+			<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID),$(POS),$(SIZE));</creating_code>
+			<include_file>T100FontPanel.h</include_file>
+			<local_include>1</local_include>
+			<style></style>
+			<pos>192,296</pos>
+		</object>
 	</object>
 </wxsmith>

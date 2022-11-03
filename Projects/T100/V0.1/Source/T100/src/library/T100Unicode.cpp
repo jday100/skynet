@@ -112,4 +112,28 @@ T100WSTRING T100Unicode::to_wstring(T100STRING32& str)
     return result;
 }
 
+T100STDSTRING T100Unicode::gbk_to_utf8(T100STDSTRING& str)
+{
+    T100STDSTRING       result;
+
+    T100STDCHAR*        inbuf;
+    T100STDCHAR*        outbuf;
+    size_t              inlen;
+    size_t              outlen;
+
+    inbuf   = (T100STDCHAR*)str.c_str();
+    inlen   = str.size();
+
+    outlen  = inlen * 3;
+    outbuf  = T100NEW T100STDCHAR[outlen];
+
+    if(T100StringTools::code_convert("GBK", "UTF-8", inbuf, inlen, outbuf, outlen)){
+        result = outbuf;
+    }
+
+    T100SAFE_DELETE(outbuf);
+
+    return result;
+}
+
 }

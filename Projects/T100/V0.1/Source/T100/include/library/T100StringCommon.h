@@ -7,7 +7,7 @@
 #include "T100Class.h"
 class T100String;
 
-#define     T100STRING_VECTOR                   std::vector<T100String>
+#define     T100STRING_VECTOR                   std::vector<T100Library::T100String>
 
 
 #endif // T100STRINGCOMMON_H
