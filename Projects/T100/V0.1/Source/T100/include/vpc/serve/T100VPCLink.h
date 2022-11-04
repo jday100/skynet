@@ -1,8 +1,11 @@
 #ifndef T100VPCLINK_H
 #define T100VPCLINK_H
 
+#include "T100QU32Interface.h"
 
-class T100VPCLink
+namespace T100VPC{
+
+class T100VPCLink : public T100QU32::T100QU32Interface
 {
     public:
         T100VPCLink();
@@ -12,5 +15,7 @@ class T100VPCLink
 
     private:
 };
+
+}
 
 #endif // T100VPCLINK_H

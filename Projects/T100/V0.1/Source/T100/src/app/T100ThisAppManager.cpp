@@ -8,6 +8,7 @@
 #include "T100ThisAppCmdLineParser.h"
 
 #include "T100FontApp.h"
+#include "T100VPCApp.h"
 
 
 T100ThisAppManager::T100ThisAppManager()
@@ -48,6 +49,11 @@ T100BOOL T100ThisAppManager::start()
     if(m_info.FONT){
         m_font = T100NEW T100FontBuilder::T100FontApp(this);
         m_font->show();
+    }
+
+    if(m_info.VPC){
+        m_vpc = T100NEW T100VPC::T100VPCApp(this);
+        m_vpc->show();
     }
 
     return T100TRUE;

@@ -9,6 +9,10 @@ namespace T100FontBuilder{
     class T100FontApp;
 }
 
+namespace T100VPC{
+    class T100VPCApp;
+}
+
 
 class T100ThisAppManager : public T100WxWidgets::T100WxAppManager
 {
@@ -27,7 +31,8 @@ class T100ThisAppManager : public T100WxWidgets::T100WxAppManager
         T100VOID                destroy();
 
     protected:
-        T100FontBuilder::T100FontApp*            m_font          = T100NULL;
+        T100FontBuilder::T100FontApp*       m_font          = T100NULL;
+        T100VPC::T100VPCApp*                m_vpc           = T100NULL;
 
     private:
         T100ThisAppCmdLineResult            m_info;

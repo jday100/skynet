@@ -63,12 +63,22 @@ T100BOOL T100ThisAppCmdLineParser::setSwitch(T100Library::T100CmdLineSwitch& inf
     switch(info.value){
     case L'T':
         {
-            data.TEST   = T100TRUE;
+            data.TEST       = T100TRUE;
         }
         break;
     case L'F':
         {
-            data.FONT   = T100TRUE;
+            data.FONT       = T100TRUE;
+        }
+        break;
+    case L'A':
+        {
+            data.ASSEMBLY   = T100TRUE;
+        }
+        break;
+    case L'V':
+        {
+            data.VPC        = T100TRUE;
         }
         break;
     default:
