@@ -1,16 +1,23 @@
 #ifndef T100ORDERCOPY_H
 #define T100ORDERCOPY_H
 
+#include "T100Order.h"
 
-class T100OrderCopy
+namespace T100QU32{
+
+class T100OrderCopy : public T100Order
 {
     public:
-        T100OrderCopy();
+        T100OrderCopy(T100QU32*, T100Executor32*);
         virtual ~T100OrderCopy();
 
     protected:
+        T100BOOL            run();
+        T100VOID            log();
 
     private:
 };
+
+}
 
 #endif // T100ORDERCOPY_H

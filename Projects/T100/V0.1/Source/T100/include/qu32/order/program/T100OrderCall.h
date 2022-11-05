@@ -11,7 +11,7 @@ class T100OrderCall : public T100Order
         T100OrderCall(T100QU32*, T100Executor32*);
         virtual ~T100OrderCall();
 
-        T100OPERATOR_DOUBLE         target;
+        T100Component::T100OPERATOR_DOUBLE         target;
 
     protected:
         T100BOOL                    run();

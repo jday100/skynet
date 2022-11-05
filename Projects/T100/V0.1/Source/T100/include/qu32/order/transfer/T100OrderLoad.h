@@ -1,16 +1,23 @@
 #ifndef T100ORDERLOAD_H
 #define T100ORDERLOAD_H
 
+#include "T100Order.h"
 
-class T100OrderLoad
+namespace T100QU32{
+
+class T100OrderLoad : public T100Order
 {
     public:
-        T100OrderLoad();
+        T100OrderLoad(T100QU32*, T100Executor32*);
         virtual ~T100OrderLoad();
 
     protected:
+        T100BOOL            run();
+        T100VOID            log();
 
     private:
 };
+
+}
 
 #endif // T100ORDERLOAD_H

@@ -28,29 +28,29 @@ class T100Order
         T100QU32*                   getHost();
         T100Executor32*             getExecutor();
 
-        T100BOOL                    parse(T100OPERATOR_DOUBLE&, T100OPERATOR_DOURCLE&);
+        T100BOOL                    parse(T100Component::T100OPERATOR_DOUBLE&, T100Component::T100OPERATOR_DOUBLE&);
 
     protected:
-        T100BOOL                    load(T100OPERATOR_DOUBLE&, T100OPERATOR_DOUBLE&);
+        T100BOOL                    load(T100Component::T100OPERATOR_DOUBLE&, T100Component::T100OPERATOR_DOUBLE&);
 
-        T100BOOL                    loadTarget(T100OPERATOR_DOUBLE&);
-        T100BOOL                    loadSource(T100OPERATOR_DOUBLE&);
+        T100BOOL                    loadTarget(T100Component::T100OPERATOR_DOUBLE&);
+        T100BOOL                    loadSource(T100Component::T100OPERATOR_DOUBLE&);
 
-        T100BOOL                    loadMonoTarget(T100OPERATOR_DOUBLE&);
+        T100BOOL                    loadMonoTarget(T100Component::T100OPERATOR_DOUBLE&);
 
-        T100BOOL                    loadOperator(T100OPERATOR_SINGLE&);
-        T100BOOL                    loadRegister(T100OPERATOR_SINGLE&);
-        T100BOOL                    loadMemory(T100OPERATOR_SINGLE&);
+        T100BOOL                    loadOperator(T100Component::T100OPERATOR_SINGLE&);
+        T100BOOL                    loadRegister(T100Component::T100OPERATOR_SINGLE&);
+        T100BOOL                    loadMemory(T100Component::T100OPERATOR_SINGLE&);
 
-        T100BOOL                    getSource(T100OPERATOR_DOUBLE& T100WORD&);
-        T100BOOL                    getComplexusSource(T100OPERATOR_DOUBLE&, T100WORD&);
-        T100BOOL                    getIOSource(T100OPERATOR_DOUBLE&, T100WORD&);
+        T100BOOL                    getSource(T100Component::T100OPERATOR_DOUBLE&, T100WORD&);
+        T100BOOL                    getComplexusSource(T100Component::T100OPERATOR_DOUBLE&, T100WORD&);
+        T100BOOL                    getIOSource(T100Component::T100OPERATOR_DOUBLE&, T100WORD&);
 
-        T100BOOL                    setTarget(T100OPERATOR_DOUBLE&, T100WORD);
-        T100BOOL                    setIOTarget(T100OPERATOR_SINGLE&, T100WORD);
+        T100BOOL                    setTarget(T100Component::T100OPERATOR_DOUBLE&, T100WORD);
+        T100BOOL                    setIOTarget(T100Component::T100OPERATOR_SINGLE&, T100WORD);
 
-        T100BOOL                    setRegister(T100OPERATOR_SINGLE&, T100WORD);
-        T100BOOL                    setMemory(T100OPERATOR_SINGLE&, T100WORD);
+        T100BOOL                    setRegister(T100Component::T100OPERATOR_SINGLE&, T100WORD);
+        T100BOOL                    setMemory(T100Component::T100OPERATOR_SINGLE&, T100WORD);
 
     private:
         T100QU32*                   m_host          = T100NULL;
