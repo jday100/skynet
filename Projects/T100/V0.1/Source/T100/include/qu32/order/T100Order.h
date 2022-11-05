@@ -47,7 +47,9 @@ class T100Order
         T100BOOL                    getIOSource(T100Component::T100OPERATOR_DOUBLE&, T100WORD&);
 
         T100BOOL                    setTarget(T100Component::T100OPERATOR_DOUBLE&, T100WORD);
-        T100BOOL                    setIOTarget(T100Component::T100OPERATOR_SINGLE&, T100WORD);
+        T100BOOL                    setIOTarget(T100Component::T100OPERATOR_DOUBLE&, T100WORD);
+
+        T100BOOL                    setOperator(T100Component::T100OPERATOR_SINGLE&, T100WORD);
 
         T100BOOL                    setRegister(T100Component::T100OPERATOR_SINGLE&, T100WORD);
         T100BOOL                    setMemory(T100Component::T100OPERATOR_SINGLE&, T100WORD);

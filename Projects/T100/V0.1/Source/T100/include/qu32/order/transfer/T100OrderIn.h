@@ -11,8 +11,8 @@ class T100OrderIn : public T100Order
         T100OrderIn(T100QU32*, T100Executor32*);
         virtual ~T100OrderIn();
 
-        T100OPERATOR_DOUBLE         target;
-        T100OPERATOR_DOUBLE         source;
+        T100Component::T100OPERATOR_DOUBLE         target;
+        T100Component::T100OPERATOR_DOUBLE         source;
 
     protected:
         T100BOOL                    run();

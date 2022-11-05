@@ -11,7 +11,7 @@ class T100OrderJump : public T100Order
         T100OrderJump(T100QU32*, T100Executor32*);
         virtual ~T100OrderJump();
 
-        T100OPERATOR_DOUBLE         target;
+        T100Component::T100OPERATOR_DOUBLE         target;
 
     protected:
         T100BOOL                    run();

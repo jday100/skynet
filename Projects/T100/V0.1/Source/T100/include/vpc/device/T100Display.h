@@ -1,16 +1,61 @@
 #ifndef T100DISPLAY_H
 #define T100DISPLAY_H
 
+#include "T100DisplayBlockDevice.h"
+#include "T100DisplayPageDevice.h"
 
-class T100Display
+namespace T100VPC{
+
+typedef enum{
+    T100DISPLAYMODE_NONE            = T100DEVICEMODE_MAX,
+    T100DISPLAYMODE_TYPE,
+    T100DISPLAYMODE_SET,
+    T100DISPLAYMODE_GET,
+    T100DISPLAYMODE_READ,
+    T100DISPLAYMODE_WRITE,
+    T100DISPLAYMODE_MAX
+}T100DISPLAY_MODE;
+
+
+class T100Display : public T100Device
 {
+    friend class T100DisplayBlockDevice;
+    friend class T100DisplayPageDevice;
     public:
-        T100Display();
+        T100Display(T100QU32*);
         virtual ~T100Display();
 
+        T100BOOL            getScreen(T100WORD*);
+
+        T100VOID            setWidth(T100WORD);
+        T100WORD            getWidth();
+
+        T100VOID            setHeight(T100WORD);
+        T100WORD            getHeight();
+
+        T100BOOL            load(T100Port32*);
+        T100BOOL            unload();
+
+        T100BOOL            in(T100WORD, T100WORD&);
+        T100BOOL            out(T100WORD, T100WORD);
+
     protected:
+        T100VOID            create();
+        T100VOID            destroy();
+
+        T100QU32*           getHost();
+
+        T100DisplayBlockDevice          m_block_device;
+        T100DisplayPageDevice           m_page_device;
+
+        virtual T100BOOL                OnCreate(void* = T100NULL) = 0;
 
     private:
+        T100WORD            m_width             = 0;
+        T100WORD            m_height            = 0;
+
 };
+
+}
 
 #endif // T100DISPLAY_H

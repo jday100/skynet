@@ -259,7 +259,7 @@ T100VOID T100Executor32::execute()
             result = icall.execute(value);
         }
         break;
-    case T100Component::T100ORdER_IRET:
+    case T100Component::T100ORDER_IRET:
         {
             T100OrderIret       iret(m_host, this);
             result = iret.execute(value);
@@ -274,7 +274,7 @@ T100VOID T100Executor32::execute()
     case T100Component::T100ORDER_JZ:
         {
             T100OrderJz         jz(m_host, this);
-            result = js.execute(value);
+            result = jz.execute(value);
         }
         break;
     case T100Component::T100ORDER_JNZ:

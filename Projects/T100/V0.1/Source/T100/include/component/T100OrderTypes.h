@@ -53,7 +53,7 @@ typedef enum{
     T100ORDER_JUMP,
     T100ORDER_JZ,
     T100ORDER_JNZ,
-    T100ORDEr_LOOP,
+    T100ORDER_LOOP,
     //
     T100ORDER_IN,
     T100ORDER_OUT,

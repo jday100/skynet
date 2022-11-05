@@ -11,8 +11,8 @@ class T100OrderMove : public T100Order
         T100OrderMove(T100QU32*, T100Executor32*);
         virtual ~T100OrderMove();
 
-        T100OPERATOR_DOUBLE         target;
-        T100OPERATOR_DOUBLE         source;
+        T100Component::T100OPERATOR_DOUBLE         target;
+        T100Component::T100OPERATOR_DOUBLE         source;
 
     protected:
         T100BOOL                    run();
