@@ -16,13 +16,21 @@ class T100VPCCallback
 
         static T100BOOL             init(T100VPCServe*, T100VPCView*);
 
-        static T100BOOL             menu_start_click();
+    public:
+        static T100BOOL             frame_menu_start(void* = T100NULL);
+        static T100BOOL             frame_menu_stop(void* = T100NULL);
+        static T100BOOL             frame_menu_quit(void* = T100NULL);
 
-        static T100BOOL             menu_stop_click();
+        static T100BOOL             frame_menu_hardware(void* = T100NULL);
+        static T100BOOL             frame_menu_hardware_select(void* = T100NULL);
+        static T100BOOL             frame_menu_setup(void* = T100NULL);
 
-        static T100BOOL             menu_quit_click();
+        static T100BOOL             frame_menu_debug(void* = T100NULL);
 
-        static T100BOOL             menu_config_click();
+        static T100BOOL             frame_menu_about(void* = T100NULL);
+
+    public:
+
 
     protected:
         static T100VPCServe*        m_serve;

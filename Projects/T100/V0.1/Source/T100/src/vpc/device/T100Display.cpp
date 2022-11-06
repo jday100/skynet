@@ -5,8 +5,8 @@
 
 namespace T100VPC{
 
-T100Display::T100Display(T100QU32* host)
-    :T100Device(host),
+T100Display::T100Display(T100QU32::T100QU32* host)
+    :T100QU32::T100Device(host),
     m_block_device(this),
     m_page_device(this)
 {
@@ -34,7 +34,7 @@ T100VOID T100Display::destroy()
     m_port->removeDevice(m_id);
 }
 
-T100BOOL T100Display::load(T100Port32* port)
+T100BOOL T100Display::load(T100QU32::T100Port32* port)
 {
     return T100TRUE;
 }
@@ -83,9 +83,9 @@ T100BOOL T100Display::out(T100WORD offset, T100WORD value)
     case 0:
         {
             switch(value){
-            case T100DEVICEMODE_TYPE:
+            case T100Component::T100DEVICEMODE_TYPE:
                 {
-                    m_data[1] = T100DEVICE_DISPLAY;
+                    m_data[1] = T100Component::T100DEVICE_DISPLAY;
                     m_data[2] = 1;
                     m_data[3] = 1;
                 }
@@ -99,9 +99,9 @@ T100BOOL T100Display::out(T100WORD offset, T100WORD value)
                 break;
             case T100DISPLAYMODE_GET:
                 {
-                    m_data[1] = m_row_size;
-                    m_data[2] = m_column_size;
-                    m_data[3] = 0
+                    //m_data[1] = m_row_size;
+                    //m_data[2] = m_column_size;
+                    m_data[3] = 0;
                 }
                 break;
             case T100DISPLAYMODE_WRITE:
@@ -123,7 +123,7 @@ T100BOOL T100Display::out(T100WORD offset, T100WORD value)
     return result;
 }
 
-T100QU32* T100Display::getHost()
+T100QU32::T100QU32* T100Display::getHost()
 {
     return m_host;
 }

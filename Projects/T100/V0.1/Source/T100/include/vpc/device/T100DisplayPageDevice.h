@@ -7,7 +7,7 @@ namespace T100VPC{
 class T100Display;
 
 
-class T100DisplayPageDevice : public T100PageDevice
+class T100DisplayPageDevice : public T100QU32::T100PageDevice
 {
     public:
         T100DisplayPageDevice(T100Display*);
@@ -22,7 +22,7 @@ class T100DisplayPageDevice : public T100PageDevice
         T100VOID            create();
         T100VOID            destroy();
 
-        T100BOOL            load(T100Port32*);
+        T100BOOL            load(T100QU32::T100Port32*);
         T100BOOL            unload();
 
     private:

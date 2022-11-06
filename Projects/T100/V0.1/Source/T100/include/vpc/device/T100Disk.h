@@ -7,7 +7,7 @@
 namespace T100VPC{
 
 typedef enum{
-    T100DISKMODE_NONE           = T100DEVICEMODE_MAX,
+    T100DISKMODE_NONE           = T100Component::T100DEVICEMODE_MAX,
     T100DISKMODE_TYPE,
     T100DISKMODE_SET,
     T100DISKMODE_GET,
@@ -19,13 +19,13 @@ typedef enum{
     T100DISKMODE_MAX
 }T100DISK_MODE;
 
-class T100Disk : public T100BlockDevice
+class T100Disk : public T100QU32::T100BlockDevice
 {
     public:
-        T100Disk(T100QU32*, T100STRING = L"");
+        T100Disk(T100QU32::T100QU32*, T100STRING = L"");
         virtual ~T100Disk();
 
-        T100BOOL            load(T100Port32*);
+        T100BOOL            load(T100QU32::T100Port32*);
         T100BOOL            unload();
 
         T100BOOL            in(T100WORD, T100WORD&);
@@ -43,7 +43,7 @@ class T100Disk : public T100BlockDevice
         T100BOOL            m_readed            = T100FALSE;
 
         T100STRING          m_file;
-        T100VDisk*          m_vdisk             = T100NULL;
+        T100Component::T100VDisk*          m_vdisk             = T100NULL;
 
 };
 

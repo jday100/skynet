@@ -30,7 +30,7 @@ T100VOID T100DisplayPageDevice::destroy()
     unload();
 }
 
-T100BOOL T100DisplayPageDevice::load(T100Port32* port)
+T100BOOL T100DisplayPageDevice::load(T100QU32::T100Port32* port)
 {
     T100BOOL        result          = T100FALSE;
     T100WORD        length;
@@ -58,7 +58,7 @@ T100BOOL T100DisplayPageDevice::getScreen(T100WORD* data)
     T100WORD            total           = 0;
     T100WORD            index           = 0;
     T100WORD            id;
-    T100DEVICE_PAGE*    page            = T100NULL;
+    T100Component::T100DEVICE_PAGE*    page            = T100NULL;
 
     total = m_display->getWidth() * m_display->getHeight();
 
@@ -78,7 +78,7 @@ T100BOOL T100DisplayPageDevice::getScreen(T100WORD* data)
             return T100FALSE;
         }
 
-        memcpy(data + offset, page->data, length * sizeof(T100WORD));
+        memcpy(data + offset, page->DATA, length * sizeof(T100WORD));
 
         offset += length;
 
@@ -93,7 +93,7 @@ T100BOOL T100DisplayPageDevice::draw(T100WORD x, T100WORD y, T100WORD value)
     T100WORD            index;
     T100WORD            os;
     T100WORD            id;
-    T100DEVICE_PAGE*    page            = T100NULL;
+    T100Component::T100DEVICE_PAGE*    page            = T100NULL;
 
     offset  = y * m_display->getWidth() + x;
     index   = offset / m_page_size;
@@ -107,7 +107,7 @@ T100BOOL T100DisplayPageDevice::draw(T100WORD x, T100WORD y, T100WORD value)
     page    = getPort32()->getPage(id);
 
     if(page){
-        page->data[os] = value;
+        page->DATA[os] = value;
         return T100TRUE;
     }
     return T100FALSE;

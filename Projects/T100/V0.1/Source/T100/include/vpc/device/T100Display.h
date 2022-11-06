@@ -7,7 +7,7 @@
 namespace T100VPC{
 
 typedef enum{
-    T100DISPLAYMODE_NONE            = T100DEVICEMODE_MAX,
+    T100DISPLAYMODE_NONE            = T100Component::T100DEVICEMODE_MAX,
     T100DISPLAYMODE_TYPE,
     T100DISPLAYMODE_SET,
     T100DISPLAYMODE_GET,
@@ -17,12 +17,12 @@ typedef enum{
 }T100DISPLAY_MODE;
 
 
-class T100Display : public T100Device
+class T100Display : public T100QU32::T100Device
 {
     friend class T100DisplayBlockDevice;
     friend class T100DisplayPageDevice;
     public:
-        T100Display(T100QU32*);
+        T100Display(T100QU32::T100QU32*);
         virtual ~T100Display();
 
         T100BOOL            getScreen(T100WORD*);
@@ -33,7 +33,7 @@ class T100Display : public T100Device
         T100VOID            setHeight(T100WORD);
         T100WORD            getHeight();
 
-        T100BOOL            load(T100Port32*);
+        T100BOOL            load(T100QU32::T100Port32*);
         T100BOOL            unload();
 
         T100BOOL            in(T100WORD, T100WORD&);
@@ -43,7 +43,7 @@ class T100Display : public T100Device
         T100VOID            create();
         T100VOID            destroy();
 
-        T100QU32*           getHost();
+        T100QU32::T100QU32*           getHost();
 
         T100DisplayBlockDevice          m_block_device;
         T100DisplayPageDevice           m_page_device;

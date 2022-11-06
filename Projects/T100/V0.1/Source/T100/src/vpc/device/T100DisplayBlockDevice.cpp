@@ -37,7 +37,7 @@ T100VOID T100DisplayBlockDevice::destroy()
     unload();
 }
 
-T100BOOL T100DisplayBlockDevice::load(T100Port32* port)
+T100BOOL T100DisplayBlockDevice::load(T100QU32::T100Port32* port)
 {
     T100BOOL        result          = T100TRUE;
     T100WORD        length;

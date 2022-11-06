@@ -19,7 +19,7 @@ typedef struct{
 }T100MOUSE_DATA;
 
 typedef enum{
-    T100MOUSEMODE_NONE          = T100DEVICEMODE_MAX,
+    T100MOUSEMODE_NONE          = T100Component::T100DEVICEMODE_MAX,
     T100MOUSEMODE_TYPE,
     T100MOUSEMODE_SET,
     T100MOUSEMODE_GET,
@@ -52,7 +52,7 @@ typedef union{
 typedef union{
     struct{
         T100INT     X:16;
-        T100INT     Y:16
+        T100INT     Y:16;
     };
     T100WORD        WORD;
 }T100MOUSE_LOCATION;
@@ -66,13 +66,13 @@ typedef union{
 }T100MOUSE_OFFSET;
 
 
-class T100Mouse : public T100Device
+class T100Mouse : public T100QU32::T100Device
 {
     public:
-        T100Mouse(T100QU32*);
+        T100Mouse(T100QU32::T100QU32*);
         virtual ~T100Mouse();
 
-        T100BOOL            load(T100Port32*);
+        T100BOOL            load(T100QU32::T100Port32*);
         T100BOOL            unload();
 
         T100BOOL            in(T100WORD, T100WORD&);

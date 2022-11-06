@@ -3,6 +3,8 @@
 
 //(*Headers(T100VPCFrame)
 #include <wx/frame.h>
+#include <wx/menu.h>
+#include <wx/statusbr.h>
 //*)
 
 namespace T100VPC{
@@ -15,16 +17,44 @@ class T100VPCFrame: public wxFrame
 		virtual ~T100VPCFrame();
 
 		//(*Declarations(T100VPCFrame)
+		wxMenu* Menu11;
+		wxMenu* Menu1;
+		wxMenu* Menu6;
+		wxMenu* Menu8;
+		wxMenuBar* MenuBar1;
+		wxMenuItem* AboutMenu;
+		wxMenuItem* DebugMenu;
+		wxMenuItem* HardwareMenu;
+		wxMenuItem* QuitMenu;
+		wxMenuItem* SetupMenu;
+		wxMenuItem* StartMenu;
+		wxMenuItem* StopMenu;
+		wxStatusBar* StatusBar1;
 		//*)
 
 	protected:
 
 		//(*Identifiers(T100VPCFrame)
+		static const long ID_MENUITEM_START;
+		static const long ID_MENUITEM_STOP;
+		static const long ID_MENUITEM_QUIT;
+		static const long ID_MENUITEM_DEBUG;
+		static const long ID_MENUITEM_HARDWARE;
+		static const long ID_MENUITEM_SETUP;
+		static const long ID_MENUITEM_ABOUT;
+		static const long ID_STATUSBAR1;
 		//*)
 
 	private:
 
 		//(*Handlers(T100VPCFrame)
+		void OnStartMenuSelected(wxCommandEvent& event);
+		void OnStopMenuSelected(wxCommandEvent& event);
+		void OnQuitMenuSelected(wxCommandEvent& event);
+		void OnDebugMenuSelected(wxCommandEvent& event);
+		void OnHardwareMenuSelected(wxCommandEvent& event);
+		void OnSetupMenuSelected(wxCommandEvent& event);
+		void OnAboutMenuSelected(wxCommandEvent& event);
 		//*)
 
 	protected:

@@ -27,7 +27,7 @@ T100BOOL T100VPCCallback::init(T100VPCServe* serve, T100VPCView* view)
     m_view      = view;
 }
 
-T100BOOL T100VPCCallback::menu_start_click()
+T100BOOL T100VPCCallback::frame_menu_start(void* d)
 {
     if(m_serve->running()){
         return T100FALSE;
@@ -37,7 +37,7 @@ T100BOOL T100VPCCallback::menu_start_click()
     m_serve->start();
 }
 
-T100BOOL T100VPCCallback::menu_stop_click()
+T100BOOL T100VPCCallback::frame_menu_stop(void* d)
 {
     if(!m_serve->running()){
         return T100FALSE;
@@ -47,7 +47,7 @@ T100BOOL T100VPCCallback::menu_stop_click()
     m_view->hide();
 }
 
-T100BOOL T100VPCCallback::menu_quit_click()
+T100BOOL T100VPCCallback::frame_menu_quit(void* d)
 {
     if(m_serve->running()){
         m_serve->stop();
@@ -56,7 +56,7 @@ T100BOOL T100VPCCallback::menu_quit_click()
     m_view->quit();
 }
 
-T100BOOL T100VPCCallback::menu_config_click()
+T100BOOL T100VPCCallback::frame_menu_hardware(void* d)
 {
     if(m_serve->running()){
         return T100FALSE;

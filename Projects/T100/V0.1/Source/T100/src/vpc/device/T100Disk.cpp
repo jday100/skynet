@@ -1,12 +1,13 @@
 #include "T100Disk.h"
 
+#include "T100BitTypes.h"
 #include "T100QU32.h"
 #include "T100VPCSetup.h"
 
 namespace T100VPC{
 
-T100Disk::T100Disk(T100QU32* host, T100STRING file)
-    :T100BlockDevice(host),
+T100Disk::T100Disk(T100QU32::T100QU32* host, T100STRING file)
+    :T100QU32::T100BlockDevice(host),
     m_file(file)
 {
     //ctor
@@ -27,7 +28,7 @@ T100VOID T100Disk::create()
     if(m_file.empty()){
         return;
     }else{
-        m_vdisk = T100NEW T100VDisk(m_file);
+        m_vdisk = T100NEW T100Component::T100VDisk(m_file);
         if(m_vdisk){
             if(m_vdisk->open()){
                 m_inited = T100TRUE;
@@ -57,7 +58,7 @@ T100VOID T100Disk::destroy()
     }
 }
 
-T100BOOL T100Disk::load(T100Port32* port)
+T100BOOL T100Disk::load(T100QU32::T100Port32* port)
 {
     T100BOOL        result;
     T100WORD        size;
@@ -104,9 +105,9 @@ T100BOOL T100Disk::out(T100WORD offset, T100WORD value)
             m_data[0] = value;
 
             switch(value){
-            case T100DEVICEMODE_TYPE:
+            case T100Component::T100DEVICEMODE_TYPE:
                 {
-                    m_data[1] = T100DEVICE_DISK;
+                    m_data[1] = T100Component::T100DEVICE_DISK;
                     m_data[2] = 1;
                     m_data[3] = 0;
                 }
@@ -177,7 +178,7 @@ T100BOOL T100Disk::read(T100DWORD id, T100WORD index)
     T100WORD            bid;
     T100DWORD           offset;
     T100WORD            length;
-    T100DEVICE_BLOCK*   block           = T100NULL;
+    T100Component::T100DEVICE_BLOCK*   block           = T100NULL;
     T100WORD*           data;
 
     if(!m_loaded){
@@ -214,7 +215,7 @@ T100BOOL T100Disk::read(T100DWORD id, T100WORD index)
     length  = 1024;
 
     source  = (T100WORD*)&m_buffer + offset;
-    target  = block->data;
+    target  = block->DATA;
 
     memcpy(target, source, 1024 * 4);
 
@@ -227,19 +228,19 @@ T100BOOL T100Disk::write(T100DWORD id, T100WORD index)
     T100WORD            bid;
     T100DWORD           offset;
     T100WORD            length;
-    T100DEVICE_BLOCK*   block           = T100NULL;
+    T100Component::T100DEVICE_BLOCK*   block           = T100NULL;
     T100WORD*           data;
 
     if(!m_loaded){
         return T100FALSE;
     }
 
-    if((0 == m_blocks.size()) || (16 <= index){
+    if((0 == m_blocks.size()) || (16 <= index)){
         return T100FALSE;
     }
 
     bid         = m_blocks[0];
-    block       = GetPort32()->getBlock(bid);
+    block       = getPort32()->getBlock(bid);
     if(!block){
         return T100FALSE;
     }
@@ -264,7 +265,7 @@ T100BOOL T100Disk::write(T100DWORD id, T100WORD index)
     length  = 1024;
 
     target  = (T100WORD*)&m_buffer + offset;
-    source  = block->data;
+    source  = block->DATA;
 
     memcpy(target, source, 1024 * 4);
 

@@ -8,7 +8,7 @@ namespace T100VPC{
 class T100Display;
 
 
-class T100DisplayBlockDevice : public T100BlockDevice
+class T100DisplayBlockDevice : public T100QU32::T100BlockDevice
 {
     public:
         T100DisplayBlockDevice(T100Display*);
@@ -20,7 +20,7 @@ class T100DisplayBlockDevice : public T100BlockDevice
         T100VOID            create();
         T100VOID            destroy();
 
-        T100BOOL            load(T100Port32*);
+        T100BOOL            load(T100QU32::T100Port32*);
         T100BOOL            unload();
 
     protected:
@@ -29,7 +29,7 @@ class T100DisplayBlockDevice : public T100BlockDevice
 
     private:
         T100Display*        m_display           = T100NULL;
-        T100Font            m_font;
+        T100Component::T100Font            m_font;
 
         T100WORD            m_row_size          = 0;
         T100WORD            m_column_size       = 0;

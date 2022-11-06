@@ -501,6 +501,7 @@
 		<Unit filename="include/vdisk/serve/T100VDiskServe.h" />
 		<Unit filename="include/vdisk/view/T100VDiskView.h" />
 		<Unit filename="include/vpc/T100VPCApp.h" />
+		<Unit filename="include/vpc/T100VPCCommon.h" />
 		<Unit filename="include/vpc/T100VPCSetup.h" />
 		<Unit filename="include/vpc/data/T100AUDeviceInfo.h" />
 		<Unit filename="include/vpc/data/T100CUDeviceInfo.h" />
