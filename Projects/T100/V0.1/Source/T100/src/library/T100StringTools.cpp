@@ -16,6 +16,26 @@ T100StringTools::~T100StringTools()
     //dtor
 }
 
+T100BOOL T100StringTools::split(T100WSTRING line, T100WSTRING mask, T100WSTRING_VECTOR& strs)
+{
+    T100BOOL        result          = T100TRUE;
+    T100WCHAR*      source          = T100NULL;
+    T100WCHAR*      item            = T100NULL;
+    T100WSTRING     str;
+
+    source  = const_cast<T100WCHAR*>(line.c_str());
+    item    = ::wcstok(source, mask.c_str());
+
+    while(T100NULL != item){
+        str = item;
+        strs.push_back(str);
+
+        item = ::wcstok(T100NULL, mask.c_str());
+    }
+
+    return result;
+}
+
 T100BOOL T100StringTools::code_convert(T100STDSTRING source, T100STDSTRING target, T100STDCHAR* inbuf, size_t inlen, T100STDCHAR* outbuf, size_t outlen)
 {
     T100BOOL        result          = T100TRUE;

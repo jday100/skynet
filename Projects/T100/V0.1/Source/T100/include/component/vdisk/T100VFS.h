@@ -6,6 +6,20 @@
 #include "T100String.h"
 #include "T100Class.h"
 
+namespace T100Component{
+
+typedef struct{
+    T100WORD                    LABEL[18];
+    T100DWORD                   LOCATION;
+    T100DWORD                   LENGTH;
+    T100WORD                    USED;
+    T100WORD                    BOOT;
+    T100WORD                    FORMATED;
+    T100WORD                    RESERVE[7];
+}T100VFS_PART;
+
+}
+
 
 #define     T100VFS_BLOCK_SIZE                  16 * 1024
 #define     T100VFS_CLUSTER_SIZE                16
@@ -19,7 +33,7 @@
 #define     T100VFS_PART_SIZE                   512
 #define     T100VFS_PART_DATA_LENGTH            16 * 1024
 
-#define     T100VFS_PART_VECTOR                 std::vector<T100VFS_PART>
+#define     T100VFS_PART_VECTOR                 std::vector<T100Component::T100VFS_PART>
 #define     T100VFS_ITEM_VECTOR                 std::vector<T100VFS_ITEM*>
 
 
@@ -53,16 +67,6 @@ typedef enum{
     T100VFS_ITEM_BAD            = 0xffffffffffffffff,
     T100VFS_ITEM_END            = 0xffffffffffffff00
 }T100VFS_ITEM_TYPE;
-
-typedef struct{
-    T100WORD                    LABEL[18];
-    T100DWORD                   LOCATION;
-    T100DWORD                   LENGTH;
-    T100WORD                    USED;
-    T100WORD                    BOOT;
-    T100WORD                    FORMATED;
-    T100WORD                    RESERVE[7];
-}T100VFS_PART;
 
 typedef union{
     T100VFS_PART                PARTS[T100VFS_PART_SIZE];

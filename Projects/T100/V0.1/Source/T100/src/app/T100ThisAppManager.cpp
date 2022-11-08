@@ -9,6 +9,7 @@
 
 #include "T100FontApp.h"
 #include "T100VPCApp.h"
+#include "T100VDiskConsole.h"
 
 
 T100ThisAppManager::T100ThisAppManager()
@@ -49,6 +50,11 @@ T100BOOL T100ThisAppManager::start()
     if(m_info.FONT){
         m_font = T100NEW T100FontBuilder::T100FontApp(this);
         m_font->show();
+    }
+
+    if(m_info.VDISK){
+        m_vdisk = T100NEW T100VDisk::T100VDiskConsole(this);
+        m_vdisk->run();
     }
 
     if(m_info.VPC){

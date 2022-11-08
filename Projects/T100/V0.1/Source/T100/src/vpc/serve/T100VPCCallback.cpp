@@ -65,4 +65,24 @@ T100BOOL T100VPCCallback::frame_menu_hardware(void* d)
     m_view->getConfig()->Show();
 }
 
+T100BOOL T100VPCCallback::frame_menu_hardware_select(void* d)
+{
+
+}
+
+T100BOOL T100VPCCallback::frame_menu_setup(void* d)
+{
+
+}
+
+T100BOOL T100VPCCallback::frame_menu_debug(void* d)
+{
+
+}
+
+T100BOOL T100VPCCallback::frame_menu_about(void* d)
+{
+
+}
+
 }

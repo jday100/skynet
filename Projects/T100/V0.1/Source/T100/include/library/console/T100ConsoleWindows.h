@@ -11,6 +11,8 @@ class T100ConsoleWindows : public T100ConsoleBase
         T100ConsoleWindows();
         virtual ~T100ConsoleWindows();
 
+        T100VOID            print(T100WSTRING&);
+
         T100VOID            outline(T100WSTRING&);
         T100VOID            getline(T100WSTRING&);
 

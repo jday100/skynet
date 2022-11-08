@@ -85,30 +85,37 @@ T100VPCFrame::~T100VPCFrame()
 
 void T100VPCFrame::OnStartMenuSelected(wxCommandEvent& event)
 {
+    T100VPCCallback::frame_menu_start();
 }
 
 void T100VPCFrame::OnStopMenuSelected(wxCommandEvent& event)
 {
+    T100VPCCallback::frame_menu_stop();
 }
 
 void T100VPCFrame::OnQuitMenuSelected(wxCommandEvent& event)
 {
+    T100VPCCallback::frame_menu_quit();
 }
 
 void T100VPCFrame::OnDebugMenuSelected(wxCommandEvent& event)
 {
+    T100VPCCallback::frame_menu_debug();
 }
 
 void T100VPCFrame::OnHardwareMenuSelected(wxCommandEvent& event)
 {
+    T100VPCCallback::frame_menu_hardware();
 }
 
 void T100VPCFrame::OnSetupMenuSelected(wxCommandEvent& event)
 {
+    T100VPCCallback::frame_menu_setup();
 }
 
 void T100VPCFrame::OnAboutMenuSelected(wxCommandEvent& event)
 {
+    T100VPCCallback::frame_menu_about();
 }
 
 }

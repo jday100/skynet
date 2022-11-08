@@ -3,6 +3,8 @@
 
 #include "T100Common.h"
 #include "T100StringTypes.h"
+#include "T100DataStructure.h"
+
 
 namespace T100Library{
 
@@ -11,6 +13,8 @@ class T100StringTools
     public:
         T100StringTools();
         virtual ~T100StringTools();
+
+        static T100BOOL         split(T100WSTRING, T100WSTRING, T100WSTRING_VECTOR&);
 
         static T100BOOL         code_convert(T100STDSTRING, T100STDSTRING, T100STDCHAR*, size_t, T100STDCHAR*, size_t);
 

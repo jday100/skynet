@@ -11,6 +11,8 @@ class T100ConsoleLog : public T100ConsoleBase
         T100ConsoleLog();
         virtual ~T100ConsoleLog();
 
+        T100VOID            print(T100WSTRING&);
+
         T100VOID            outline(T100WSTRING&);
         T100VOID            getline(T100WSTRING&);
 

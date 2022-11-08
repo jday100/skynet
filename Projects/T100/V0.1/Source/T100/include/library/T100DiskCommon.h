@@ -4,10 +4,25 @@
 #include "T100Common.h"
 #include "T100GraphicCommon.h"
 #include "T100String.h"
+#include "T100DataStructure.h"
 
-#define     T100DISK_VECTOR                     std::vector<T100DISK*>
-#define     T100DISK_PART_VECTOR                std::vector<T100DISK_PART*>
-#define     T100DISK_PART_CTRL_VECTOR           std::vector<T100DISK_PART_CTRL*>
+namespace T100Library{
+
+typedef struct{
+    T100STRING          PART;
+    T100STRING          NAME;
+    T100STRING          PATH;
+    T100BOOL            ISDIR;
+}T100DISK_ITEM;
+
+}
+
+#define     T100DISK_VECTOR                     std::vector<T100Library::T100DISK*>
+
+#define     T100DISK_PART_VECTOR                std::vector<T100Library::T100DISK_PART*>
+
+#define     T100DISK_PART_CTRL_VECTOR           std::vector<T100Library::T100DISK_PART_CTRL*>
+
 #define     T100DISK_ITEM_VECTOR                std::vector<T100Library::T100DISK_ITEM*>
 
 #define     T100DISK_COLOUR_DEFAULT             T100COLOUR_TYPE_GREEN
@@ -68,13 +83,6 @@ typedef struct{
     T100DISK_PART*      PART            = T100NULL;
     T100STRING          BOOT_FILE;
 }T100DISK_PART_INFO;
-
-typedef struct{
-    T100STRING          PART;
-    T100STRING          NAME;
-    T100STRING          PATH;
-    T100BOOL            ISDIR;
-}T100DISK_ITEM;
 
 }
 

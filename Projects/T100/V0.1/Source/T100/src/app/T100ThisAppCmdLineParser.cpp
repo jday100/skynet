@@ -71,6 +71,11 @@ T100BOOL T100ThisAppCmdLineParser::setSwitch(T100Library::T100CmdLineSwitch& inf
             data.FONT       = T100TRUE;
         }
         break;
+    case L'D':
+        {
+            data.VDISK      = T100TRUE;
+        }
+        break;
     case L'A':
         {
             data.ASSEMBLY   = T100TRUE;

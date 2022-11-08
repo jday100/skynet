@@ -11,6 +11,8 @@ class T100ConsoleLinux : public T100ConsoleBase
         T100ConsoleLinux();
         virtual ~T100ConsoleLinux();
 
+        T100VOID            print(T100WSTRING&);
+
         T100VOID            outline(T100WSTRING&);
         T100VOID            getline(T100WSTRING&);
 

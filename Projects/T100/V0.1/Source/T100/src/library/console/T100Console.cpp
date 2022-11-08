@@ -3,6 +3,7 @@
 #include "T100ConsoleLog.h"
 #include "T100ConsoleLinux.h"
 #include "T100ConsoleWindows.h"
+#include "T100ConsoleTerminal.h"
 
 
 namespace T100Library{
@@ -23,6 +24,11 @@ T100Console::~T100Console()
 T100VOID T100Console::create()
 {
     switch(m_type){
+    case T100CONSOLE_TYPE_TERMINAL:
+        {
+            m_console = T100NEW T100ConsoleTerminal();
+        }
+        break;
     case T100CONSOLE_TYPE_LOG:
         {
             m_console = T100NEW T100ConsoleLog();

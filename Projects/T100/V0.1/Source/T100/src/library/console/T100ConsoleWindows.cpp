@@ -1,6 +1,7 @@
 #include "T100ConsoleWindows.h"
 
 #include <windows.h>
+#include "T100Unicode.h"
 
 namespace T100Library{
 
@@ -27,6 +28,11 @@ T100VOID T100ConsoleWindows::destroy()
 
 }
 
+T100VOID T100ConsoleWindows::print(T100WSTRING& msg)
+{
+    wprintf(L"%ls", msg.c_str());
+}
+
 T100VOID T100ConsoleWindows::outline(T100WSTRING& msg)
 {
     wprintf(L"%ls\n", msg.c_str());
@@ -34,10 +40,16 @@ T100VOID T100ConsoleWindows::outline(T100WSTRING& msg)
 
 T100VOID T100ConsoleWindows::getline(T100WSTRING& msg)
 {
-    T100WCHAR       buffer[1024];
+    T100STDCHAR         buffer[1024];
+    T100STDCHAR*        ptr;
+    T100STDSTRING       line;
 
-    wscanf(L"%ls", buffer);
-    msg = buffer;
+    ptr     = buffer;
+    gets(ptr);
+
+    line    = ptr;
+
+    msg     = T100Unicode::to_wstring(line);
 }
 
 T100VOID T100ConsoleWindows::setForegroundColour(T100COLOUR_TYPE type)

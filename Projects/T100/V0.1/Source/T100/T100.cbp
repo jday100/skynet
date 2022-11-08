@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-V" />
+				<Option parameters="-D" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-g" />
@@ -86,6 +86,7 @@
 					<Add directory="include/qu32/order/control" />
 					<Add directory="include/qu32/order/program" />
 					<Add directory="include/qu32/order/transfer" />
+					<Add directory="include/data/console" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -167,6 +168,7 @@
 					<Add directory="include/ide/view" />
 					<Add directory="include/vdisk/console" />
 					<Add directory="include/qu32" />
+					<Add directory="include/data/console" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -349,6 +351,7 @@
 		<Unit filename="include/data/cmdline/T100CmdLineResult.h" />
 		<Unit filename="include/data/cmdline/T100CmdLineStringToken.h" />
 		<Unit filename="include/data/cmdline/T100CmdLineSwitch.h" />
+		<Unit filename="include/data/console/T100ConsoleStringToken.h" />
 		<Unit filename="include/editor/T100Editor.h" />
 		<Unit filename="include/editor/serve/T100EditorServe.h" />
 		<Unit filename="include/editor/view/T100EditorView.h" />
@@ -438,6 +441,10 @@
 		<Unit filename="include/library/console/T100ConsoleCommon.h" />
 		<Unit filename="include/library/console/T100ConsoleLinux.h" />
 		<Unit filename="include/library/console/T100ConsoleLog.h" />
+		<Unit filename="include/library/console/T100ConsoleStringScanner.h" />
+		<Unit filename="include/library/console/T100ConsoleTerminal.h" />
+		<Unit filename="include/library/console/T100ConsoleTerminalParser.h" />
+		<Unit filename="include/library/console/T100ConsoleTerminalThread.h" />
 		<Unit filename="include/library/console/T100ConsoleWindows.h" />
 		<Unit filename="include/library/log/T100Log.h" />
 		<Unit filename="include/library/log/T100LogBase.h" />
@@ -495,6 +502,7 @@
 		<Unit filename="include/qu32/order/transfer/T100OrderOut.h" />
 		<Unit filename="include/qu32/order/transfer/T100OrderStore.h" />
 		<Unit filename="include/vdisk/T100VDiskApp.h" />
+		<Unit filename="include/vdisk/T100VDiskHelp.h" />
 		<Unit filename="include/vdisk/console/T100VDiskCmdLineParser.h" />
 		<Unit filename="include/vdisk/console/T100VDiskConsole.h" />
 		<Unit filename="include/vdisk/serve/T100VDiskCallback.h" />
@@ -663,6 +671,7 @@
 		<Unit filename="src/data/cmdline/T100CmdLineResult.cpp" />
 		<Unit filename="src/data/cmdline/T100CmdLineStringToken.cpp" />
 		<Unit filename="src/data/cmdline/T100CmdLineSwitch.cpp" />
+		<Unit filename="src/data/console/T100ConsoleStringToken.cpp" />
 		<Unit filename="src/editor/T100Editor.cpp" />
 		<Unit filename="src/editor/serve/T100EditorServe.cpp" />
 		<Unit filename="src/editor/view/T100EditorView.cpp" />
@@ -743,6 +752,10 @@
 		<Unit filename="src/library/console/T100ConsoleBase.cpp" />
 		<Unit filename="src/library/console/T100ConsoleLinux.cpp" />
 		<Unit filename="src/library/console/T100ConsoleLog.cpp" />
+		<Unit filename="src/library/console/T100ConsoleStringScanner.cpp" />
+		<Unit filename="src/library/console/T100ConsoleTerminal.cpp" />
+		<Unit filename="src/library/console/T100ConsoleTerminalParser.cpp" />
+		<Unit filename="src/library/console/T100ConsoleTerminalThread.cpp" />
 		<Unit filename="src/library/console/T100ConsoleWindows.cpp" />
 		<Unit filename="src/library/log/T100Log.cpp" />
 		<Unit filename="src/library/log/T100LogBase.cpp" />
@@ -797,6 +810,7 @@
 		<Unit filename="src/qu32/order/transfer/T100OrderOut.cpp" />
 		<Unit filename="src/qu32/order/transfer/T100OrderStore.cpp" />
 		<Unit filename="src/vdisk/T100VDiskApp.cpp" />
+		<Unit filename="src/vdisk/T100VDiskHelp.cpp" />
 		<Unit filename="src/vdisk/console/T100VDiskCmdLineParser.cpp" />
 		<Unit filename="src/vdisk/console/T100VDiskConsole.cpp" />
 		<Unit filename="src/vdisk/serve/T100VDiskCallback.cpp" />
