@@ -1,6 +1,11 @@
 #ifndef T100PRODUCEMERGER_H
 #define T100PRODUCEMERGER_H
 
+#include "T100Common.h"
+#include "T100ProduceInfo.h"
+#include "T100BuildInfo.h"
+
+namespace T100Assembly{
 
 class T100ProduceMerger
 {
@@ -12,5 +17,7 @@ class T100ProduceMerger
 
     private:
 };
+
+}
 
 #endif // T100PRODUCEMERGER_H
