@@ -1,6 +1,7 @@
 #ifndef T100SEGMENTINFO_H
 #define T100SEGMENTINFO_H
 
+namespace T100Assembly{
 
 class T100SegmentInfo
 {
@@ -12,5 +13,7 @@ class T100SegmentInfo
 
     private:
 };
+
+}
 
 #endif // T100SEGMENTINFO_H

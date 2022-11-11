@@ -216,6 +216,7 @@
 		<Unit filename="include/app/T100ThisAppManager.h" />
 		<Unit filename="include/app/T100ThisAppSetup.h" />
 		<Unit filename="include/assembly/T100Assembly.h" />
+		<Unit filename="include/assembly/T100AssemblyCommon.h" />
 		<Unit filename="include/assembly/T100AssemblyHint.h" />
 		<Unit filename="include/assembly/T100AssemblyLog.h" />
 		<Unit filename="include/assembly/data/T100BuildInfo.h" />
@@ -225,6 +226,7 @@
 		<Unit filename="include/assembly/data/T100Segment.h" />
 		<Unit filename="include/assembly/data/T100SegmentCode.h" />
 		<Unit filename="include/assembly/data/T100SegmentData.h" />
+		<Unit filename="include/assembly/data/T100SegmentEqual.h" />
 		<Unit filename="include/assembly/data/T100SegmentHash.h" />
 		<Unit filename="include/assembly/data/T100SegmentInfo.h" />
 		<Unit filename="include/assembly/produce/T100ClassPathDrawer.h" />
@@ -559,6 +561,7 @@
 		<Unit filename="src/assembly/data/T100Segment.cpp" />
 		<Unit filename="src/assembly/data/T100SegmentCode.cpp" />
 		<Unit filename="src/assembly/data/T100SegmentData.cpp" />
+		<Unit filename="src/assembly/data/T100SegmentEqual.cpp" />
 		<Unit filename="src/assembly/data/T100SegmentHash.cpp" />
 		<Unit filename="src/assembly/data/T100SegmentInfo.cpp" />
 		<Unit filename="src/assembly/produce/T100ClassPathDrawer.cpp" />

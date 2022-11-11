@@ -1,6 +1,9 @@
 #include "T100VirtualFileReader.h"
 
-T100VirtualFileReader::T100VirtualFileReader()
+namespace T100Assembly{
+
+T100VirtualFileReader::T100VirtualFileReader(T100STRING file)
+    :T100ExecutableFileReader(file)
 {
     //ctor
 }
@@ -8,4 +11,6 @@ T100VirtualFileReader::T100VirtualFileReader()
 T100VirtualFileReader::~T100VirtualFileReader()
 {
     //dtor
+}
+
 }

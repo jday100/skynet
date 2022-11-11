@@ -10,6 +10,7 @@
 #include "T100FontApp.h"
 #include "T100VPCApp.h"
 #include "T100VDiskConsole.h"
+#include "T100Assembly.h"
 
 
 T100ThisAppManager::T100ThisAppManager()
@@ -38,6 +39,8 @@ T100VOID T100ThisAppManager::destroy()
 
 T100BOOL T100ThisAppManager::start()
 {
+    T100BOOL        result;
+
     T100Library::T100Log::append(T100NEW T100Library::T100LogConsole());
     T100Library::T100Log::start();
 
@@ -55,6 +58,11 @@ T100BOOL T100ThisAppManager::start()
     if(m_info.VDISK){
         m_vdisk = T100NEW T100VDisk::T100VDiskConsole(this);
         m_vdisk->run();
+    }
+
+    if(m_info.ASSEMBLY){
+        m_assembly  = T100NEW T100Assembly::T100Assembly(this);
+        result      = m_assembly.run(m_info);
     }
 
     if(m_info.VPC){

@@ -1,8 +1,11 @@
 #ifndef T100VIRTUALINFO_H
 #define T100VIRTUALINFO_H
 
+#include "T100ExecutableInfo.h"
 
-class T100VirtualInfo
+namespace T100Assembly{
+
+class T100VirtualInfo : public T100ExecutableInfo
 {
     public:
         T100VirtualInfo();
@@ -12,5 +15,7 @@ class T100VirtualInfo
 
     private:
 };
+
+}
 
 #endif // T100VIRTUALINFO_H
