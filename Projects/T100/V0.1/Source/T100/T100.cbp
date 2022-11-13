@@ -217,6 +217,7 @@
 		<Unit filename="include/app/T100ThisAppSetup.h" />
 		<Unit filename="include/assembly/T100Assembly.h" />
 		<Unit filename="include/assembly/T100AssemblyCommon.h" />
+		<Unit filename="include/assembly/T100AssemblyError.h" />
 		<Unit filename="include/assembly/T100AssemblyHint.h" />
 		<Unit filename="include/assembly/T100AssemblyLog.h" />
 		<Unit filename="include/assembly/data/T100BuildInfo.h" />
@@ -552,6 +553,7 @@
 		<Unit filename="src/app/T100ThisAppManager.cpp" />
 		<Unit filename="src/app/T100ThisAppSetup.cpp" />
 		<Unit filename="src/assembly/T100Assembly.cpp" />
+		<Unit filename="src/assembly/T100AssemblyError.cpp" />
 		<Unit filename="src/assembly/T100AssemblyHint.cpp" />
 		<Unit filename="src/assembly/T100AssemblyLog.cpp" />
 		<Unit filename="src/assembly/data/T100BuildInfo.cpp" />
