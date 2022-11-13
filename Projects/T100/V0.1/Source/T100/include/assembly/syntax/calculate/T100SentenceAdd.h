@@ -17,8 +17,8 @@ class T100SentenceAdd : public T100Sentence
         T100SentenceAdd(T100SentenceScanner*);
         virtual ~T100SentenceAdd();
 
-        T100OPERATOR            target;
-        T100OPERATOR            source;
+        T100Component::T100OPERATOR            target;
+        T100Component::T100OPERATOR            source;
 
         T100BOOL                parse();
         T100BOOL                build(T100BuildInfo*);

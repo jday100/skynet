@@ -1,5 +1,6 @@
 #include "T100SentenceAdd.h"
 
+#include "T100BitTypes.h"
 #include "T100BuildInfo.h"
 
 namespace T100Assembly{
@@ -33,7 +34,7 @@ T100BOOL T100SentenceAdd::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE = T100ORDER_ADD;
+    order.BYTE0.BYTE = T100Component::T100ORDER_ADD;
 
     info->setValue(order.WORD);
     info->next();

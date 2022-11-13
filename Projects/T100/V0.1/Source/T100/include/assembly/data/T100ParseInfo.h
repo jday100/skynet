@@ -22,7 +22,7 @@ class T100ParseInfo
     protected:
         T100PartToken*                  m_token         = T100NULL;
 
-        static T100VariableDrawer*&     getVariableDrawer();
+        static T100VariableDrawer&      getVariableDrawer();
         static T100LabelDrawer&         getLabelDrawer();
         static T100ProcedureDrawer&     getProcedureDrawer();
 

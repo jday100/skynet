@@ -6,6 +6,9 @@
 
 #define     T100STRING          T100Library::T100String
 
+namespace T100Assembly{
+class T100SegmentHash;
+}
 
 namespace T100Library{
 
@@ -32,6 +35,7 @@ class T100String : public T100Class
     friend class T100StringHash;
     friend class T100StringEqual;
     friend class T100String32Tools;
+    friend class T100Assembly::T100SegmentHash;
     public:
         T100String();
         T100String(const T100STDCHAR*);

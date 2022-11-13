@@ -6,16 +6,16 @@
 
 namespace T100Assembly{
 
-class T100SegmentScanner : public T100Scanner
+class T100SegmentScanner : public T100Component::T100Scanner
 {
     public:
         T100SegmentScanner();
         virtual ~T100SegmentScanner();
 
-        T100VOID                    setSource(T100Scanner*);
-        T100Scanner*                getSource();
+        T100VOID                    setSource(T100Component::T100Scanner*);
+        T100Component::T100Scanner*                getSource();
 
-        T100BOOL                    next(T100Token&);
+        T100BOOL                    next(T100Component::T100Token&);
 
     protected:
         T100SegmentToken*           m_token             = T100NULL;

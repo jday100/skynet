@@ -2,6 +2,7 @@
 #define T100SEGMENTDATA_H
 
 #include "T100Segment.h"
+#include "T100ProduceInfo.h"
 
 namespace T100Assembly{
 

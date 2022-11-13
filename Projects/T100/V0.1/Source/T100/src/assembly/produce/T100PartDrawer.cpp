@@ -17,7 +17,7 @@ T100PartDrawer::~T100PartDrawer()
     //dtor
 }
 
-T100BOOL T100PartDrawer::existe(T100STRING name)
+T100BOOL T100PartDrawer::exists(T100STRING name)
 {
     T100BOOL                            result          = T100FALSE;
     T100PART_INFO_HASH::iterator        it;

@@ -7,7 +7,7 @@
 
 namespace T100Assembly{
 
-class T100RealFileWriter : public T100FileWriter
+class T100RealFileWriter : public T100Library::T100FileWriter
 {
     public:
         T100RealFileWriter(T100STRING);

@@ -11,8 +11,8 @@ class T100SentenceIn : public T100Sentence
         T100SentenceIn(T100SentenceScanner*);
         virtual ~T100SentenceIn();
 
-        T100OPERATOR_COMPLEXUS          target;
-        T100OPERATOR_MAX                source;
+        T100Component::T100OPERATOR_COMPLEXUS          target;
+        T100Component::T100OPERATOR                    source;
 
         T100BOOL                        parse();
 

@@ -1,5 +1,6 @@
 #include "T100BuildInfo.h"
 
+#include "T100BitTypes.h"
 #include "T100Sentence.h"
 #include "T100ProduceInfo.h"
 #include "T100SentenceCode.h"
@@ -111,7 +112,7 @@ T100BOOL T100BuildInfo::closeSegment()
                 }
             }else{
                 if(m_code_master && m_code->isMaster){
-                    result = T100ProduceInfo::setDefaultCode(code);
+                    result = T100ProduceInfo::setDefaultCode(m_code);
                     if(result){
                         m_code_master = T100FALSE;
                     }
@@ -126,7 +127,7 @@ T100BOOL T100BuildInfo::closeSegment()
         {
             if(T100ProduceInfo::m_data_default){
                 if(m_data->isDefault){
-                    result = T100ProduceInfo::setDefultData(m_data);
+                    result = T100ProduceInfo::setDefaultData(m_data);
                 }
             }else{
                 if(m_data_master && m_data->isMaster){
@@ -145,7 +146,7 @@ T100BOOL T100BuildInfo::closeSegment()
         {
             T100WORD_BITS       order;
 
-            order.BYTE0.BYTE    = T100ORDER_RETURN;
+            order.BYTE0.BYTE    = T100Component::T100ORDER_RETURN;
 
             m_code->setValue(order.WORD);
             m_code->next();
@@ -250,7 +251,7 @@ T100BOOL T100BuildInfo::setLabel(T100STRING name, T100WORD offset)
 
 T100BOOL T100BuildInfo::getLabel(T100STRING name, T100WORD& offset)
 {
-    T100BOOL        result          = T100NULL;
+    T100BOOL        result          = T100TRUE;
 
     switch(m_type){
     case T100SEGMENT_CODE:
@@ -376,7 +377,7 @@ T100BOOL T100BuildInfo::createData(T100Sentence* sent)
     m_data->isMaster    = m_data_master;
 
     m_data->isDefault   = data->isDefault;
-    m_data->isVirtual   = data->isVirtaul;
+    m_data->isVirtual   = data->isVirtual;
     m_data->isShare     = data->isShare;
     m_data->m_location  = data->location;
     m_data->m_length    = data->length;

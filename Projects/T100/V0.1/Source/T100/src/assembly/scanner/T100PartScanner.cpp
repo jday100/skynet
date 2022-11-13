@@ -5,9 +5,10 @@
 
 namespace T100Assembly{
 
-T100TOKEN_TYPE      T100PartScanner::m_type                         = T100FILE_SOURCE;
+T100TOKEN_TYPE      T100PartScanner::m_type                         = T100PART_SOURCE;
 
 T100PartScanner::T100PartScanner()
+    :T100Component::T100Scanner()
 {
     //ctor
     create();
@@ -21,7 +22,7 @@ T100PartScanner::~T100PartScanner()
 
 T100VOID T100PartScanner::create()
 {
-    m_type = T100FILE_SOURCE;
+    m_type = T100PART_SOURCE;
 }
 
 T100VOID T100PartScanner::destroy()
@@ -29,12 +30,12 @@ T100VOID T100PartScanner::destroy()
 
 }
 
-T100VOID T100PartScanner::setSource(T100Scanner* scanner)
+T100VOID T100PartScanner::setSource(T100Component::T100Scanner* scanner)
 {
     m_scanner = dynamic_cast<T100SegmentScanner*>(scanner);
 }
 
-T100Scanner* T100PartScanner::getSource()
+T100Component::T100Scanner* T100PartScanner::getSource()
 {
     return m_scanner;
 }
@@ -68,12 +69,12 @@ T100BOOL T100PartScanner::read()
     return result;
 }
 
-T100BOOL T100PartScanner::next(T100Token& token)
+T100BOOL T100PartScanner::next(T100Component::T100Token& token)
 {
     m_token = (T100PartToken*)&token;
     m_token->clear();
 
-    m_token->type = T100FILE_SOURCE;
+    m_token->type = T100PART_SOURCE;
 
     return run();
 }
@@ -99,7 +100,7 @@ READ_NEXT:
         break;
     case T100SEGMENT_IMPORT:
         {
-            m_token->type           = T100FILE_IMPORT;
+            m_token->type           = T100PART_IMPORT;
             m_token->file           = getFile();
             setLoaded(T100FALSE);
             return T100TRUE;
@@ -138,7 +139,7 @@ T100STRING T100PartScanner::getFile()
         T100SentenceToken*  token = m_item.sentences[0];
 
         if(T100SENTENCE_IMPORT == token->type){
-            T100SegmentImport*  data = (T100SegmentImport*)(token->value);
+            T100SentenceImport*  data = (T100SentenceImport*)(token->value);
 
             result = data->file;
         }

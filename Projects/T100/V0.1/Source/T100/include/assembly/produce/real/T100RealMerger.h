@@ -1,6 +1,7 @@
 #ifndef T100REALMERGER_H
 #define T100REALMERGER_H
 
+#include "T100PartInfo.h"
 #include "T100RealInfo.h"
 #include "T100ProduceMerger.h"
 
@@ -21,7 +22,7 @@ class T100RealMerger : public T100ProduceMerger
         T100BOOL        decide_data(T100SegmentData*, T100SegmentData*);
 
         T100BOOL        merge_code(T100SegmentCode*, T100SegmentCode*);
-        T100BOOL        merge_data(T100SegmentData*, T100segmentData*);
+        T100BOOL        merge_data(T100SegmentData*, T100SegmentData*);
 
         T100BOOL        relocate(T100RealInfo&);
 

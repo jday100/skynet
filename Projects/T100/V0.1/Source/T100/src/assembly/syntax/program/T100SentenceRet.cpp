@@ -1,9 +1,11 @@
 #include "T100SentenceRet.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceRet::T100SentenceRet(T100SentenceScanner* scanner)
-    :T100Scanner(scanner)
+    :T100Sentence(scanner)
 {
     //ctor
 }
@@ -31,7 +33,7 @@ T100BOOL T100SentenceRet::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE = T100ORDER_RETURN;
+    order.BYTE0.BYTE = T100Component::T100ORDER_RETURN;
 
     info->setValue(order.WORD);
     info->next();

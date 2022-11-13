@@ -5,7 +5,7 @@
 
 namespace T100Assembly{
 
-class T100VirtualFileReader : public T100ExecutableFileReader
+class T100VirtualFileReader : public T100Component::T100ExecutableFileReader
 {
     public:
         T100VirtualFileReader(T100STRING);

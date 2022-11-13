@@ -1,6 +1,9 @@
 #include "T100SymbolFileReader.h"
 
-T100SymbolFileReader::T100SymbolFileReader()
+namespace T100Component{
+
+T100SymbolFileReader::T100SymbolFileReader(T100STRING file)
+    :T100Library::T100FileReader(file.to_wstring())
 {
     //ctor
 }
@@ -8,4 +11,6 @@ T100SymbolFileReader::T100SymbolFileReader()
 T100SymbolFileReader::~T100SymbolFileReader()
 {
     //dtor
+}
+
 }

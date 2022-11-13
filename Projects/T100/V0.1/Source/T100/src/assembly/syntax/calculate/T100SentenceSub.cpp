@@ -1,5 +1,7 @@
 #include "T100SentenceSub.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceSub::T100SentenceSub(T100SentenceScanner* scanner)
@@ -31,7 +33,7 @@ T100BOOL T100SentenceSub::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE = T100ORDER_SUB;
+    order.BYTE0.BYTE = T100Component::T100ORDER_SUB;
 
     info->setValue(order.WORD);
     info->next();

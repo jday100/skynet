@@ -13,7 +13,7 @@ class T100PartDrawer
         T100PartDrawer();
         virtual ~T100PartDrawer();
 
-        static T100BOOL                     existe(T100STRING);
+        static T100BOOL                     exists(T100STRING);
 
         static T100BOOL                     append(T100STRING&, T100PartInfo*);
 

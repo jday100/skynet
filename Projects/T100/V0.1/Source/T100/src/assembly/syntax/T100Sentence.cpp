@@ -1,5 +1,6 @@
 #include "T100Sentence.h"
 
+#include "T100BitTypes.h"
 #include "T100String32Tools.h"
 #include "T100PathTools.h"
 
@@ -62,7 +63,7 @@ T100BOOL T100Sentence::read()
 
 T100BOOL T100Sentence::clear()
 {
-    m_type      = S_NONE;
+    m_type      = T100Component::S_NONE;
     m_scanner->clear();
     return T100TRUE;
 }
@@ -82,11 +83,11 @@ T100BOOL T100Sentence::isLoaded()
     return m_scanner->isLoaded();
 }
 
-T100BOOL T100Sentence::parseNumber(T100OPERATOR& op)
+T100BOOL T100Sentence::parseNumber(T100Component::T100OPERATOR& op)
 {
     T100BOOL        result          = T100FALSE;
 
-    m_type  = S_NONE;
+    m_type  = T100Component::S_NONE;
 
 READ_NEXT:
     result = read();
@@ -111,14 +112,14 @@ READ_NEXT:
         break;
     case T100CHAR_POUND:
         {
-            m_type  = S_VAL;
+            m_type  = T100Component::S_VAL;
             setLoaded(T100FALSE);
             goto READ_NEXT;
         }
         break;
     case T100CHAR_EMAIL:
         {
-            m_type  = S_ADD;
+            m_type  = T100Component::S_ADD;
             setLoaded(T100FALSE);
             goto READ_NEXT;
         }
@@ -180,75 +181,75 @@ READ_NEXT:
     return T100FALSE;
 }
 
-T100BOOL T100Sentence::parseRegister(T100OPERATOR& op)
+T100BOOL T100Sentence::parseRegister(T100Component::T100OPERATOR& op)
 {
     switch(m_item->type){
     case T100KEYWORD_COR:
         {
-            op.DATA_TYPE    = T100DATA_COR;
+            op.DATA_TYPE    = T100Component::T100DATA_COR;
             op.ADDR_TYPE    = m_type;
             setLoaded(T100FALSE);
         }
         break;
     case T100KEYWORD_CBR:
         {
-            op.DATA_TYPE    = T100DATA_CBR;
+            op.DATA_TYPE    = T100Component::T100DATA_CBR;
             op.ADDR_TYPE    = m_type;
             setLoaded(T100FALSE);
         }
         break;
     case T100KEYWORD_CCR:
         {
-            op.DATA_TYPE    = T100DATA_CCR;
+            op.DATA_TYPE    = T100Component::T100DATA_CCR;
             op.ADDR_TYPE    = m_type;
             setLoaded(T100FALSE);
         }
         break;
     case T100KEYWORD_AAR:
         {
-            op.DATA_TYPE    = T100DATA_AAR;
+            op.DATA_TYPE    = T100Component::T100DATA_AAR;
             op.ADDR_TYPE    = m_type;
             setLoaded(T100FALSE);
         }
         break;
     case T100KEYWORD_ABR:
         {
-            op.DATA_TYPE    = T100DATA_ABR;
+            op.DATA_TYPE    = T100Component::T100DATA_ABR;
             op.ADDR_TYPE    = m_type;
             setLoaded(T100FALSE);
         }
         break;
     case T100KEYWORD_ACR:
         {
-            op.DATA_TYPE    = T100DATA_ACR;
+            op.DATA_TYPE    = T100Component::T100DATA_ACR;
             op.ADDR_TYPE    = m_type;
             setLoaded(T100FALSE);
         }
         break;
     case T100KEYWORD_ADR:
         {
-            op.DATA_TYPE    = T100DATA_ADR;
+            op.DATA_TYPE    = T100Component::T100DATA_ADR;
             op.ADDR_TYPE    = m_type;
             setLoaded(T100FALSE);
         }
         break;
     case T100KEYWORD_ACF:
         {
-            op.DATA_TYPE    = T100DATA_ACF;
+            op.DATA_TYPE    = T100Component::T100DATA_ACF;
             op.ADDR_TYPE    = m_type;
             setLoaded(T100FALSE);
         }
         break;
     case T100KEYWORD_AMF:
         {
-            op.DATA_TYPE    = T100DATA_AMF;
+            op.DATA_TYPE    = T100Component::T100DATA_AMF;
             op.ADDR_TYPE    = m_type;
             setLoaded(T100FALSE);
         }
         break;
     case T100KEYWORD_AOF:
         {
-            op.DATA_TYPE    = T100DATA_AOF;
+            op.DATA_TYPE    = T100Component::T100DATA_AOF;
             op.ADDR_TYPE    = m_type;
             setLoaded(T100FALSE);
         }
@@ -258,7 +259,7 @@ T100BOOL T100Sentence::parseRegister(T100OPERATOR& op)
     return T100TRUE;
 }
 
-T100BOOL T100Sentence::parseExpression(T100OPERATOR& op)
+T100BOOL T100Sentence::parseExpression(T100Component::T100OPERATOR& op)
 {
     T100BOOL        result          = T100FALSE;
 
@@ -276,10 +277,10 @@ READ_NEXT:
     case T100CONSTANT_INTEGER:
         {
             op.LENGTH       = 0;
-            op.DATA_TYPE    = T100DATA_INTEGER;
+            op.DATA_TYPE    = T100Component::T100DATA_INTEGER;
             op.ADDR_TYPE    = m_type;
 
-            op.VALUE        = std:;stoll(m_item->value.to_wstring().c_str(), T100NULL, 0);
+            op.VALUE        = std::stoll(m_item->value.to_wstring().c_str(), T100NULL, 0);
 
             setLoaded(T100FALSE);
 
@@ -288,13 +289,13 @@ READ_NEXT:
         break;
     case T100CONSTANT_FLOAT:
         {
-            if(S_NONE != m_type){
+            if(T100Component::S_NONE != m_type){
                 T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
                 return T100FALSE;
             }
 
             op.LENGTH       = 0;
-            op.DATA_TYPE    = T100DATA_FLOAT;
+            op.DATA_TYPE    = T100Component::T100DATA_FLOAT;
             op.ADDR_TYPE    = m_type;
 
             op.VALUE        = std::stof(m_item->value.to_wstring().c_str());
@@ -329,35 +330,35 @@ READ_NEXT:
     return T100FALSE;
 }
 
-T100BOOL T100Sentence::parseVariable(T100OPERATOR& op)
+T100BOOL T100Sentence::parseVariable(T100Component::T100OPERATOR& op)
 {
     op.NAME         = m_item->value;
-    op.DATA_TYPE    = T100DATA_VARIABLE;
+    op.DATA_TYPE    = T100Component::T100DATA_VARIABLE;
     op.ADDR_TYPE    = m_type;
 
     return parseBrackets(op);
 }
 
-T100BOOL T100Sentence::parseLabel(T100OPERATOR& op)
+T100BOOL T100Sentence::parseLabel(T100Component::T100OPERATOR& op)
 {
     T100BOOL        result          = T100FALSE;
 
     switch(m_type){
-    case S_NONE:
+    case T100Component::S_NONE:
         {
             op.NAME         = m_item->value;
-            op.DATA_TYPE    = T100DATA_LABEL;
-            op.ADDR_TYPE    = S_NONE;
+            op.DATA_TYPE    = T100Component::T100DATA_LABEL;
+            op.ADDR_TYPE    = T100Component::S_NONE;
 
             setLoaded(T100FALSE);
             result = T100TRUE;
         }
         break;
-    case S_ADD:
+    case T100Component::S_ADD:
         {
             op.NAME         = m_item->value;
-            op.DATA_TYPE    = T100DATA_LABEL;
-            op.ADDR_TYPE    = S_ADD;
+            op.DATA_TYPE    = T100Component::T100DATA_LABEL;
+            op.ADDR_TYPE    = T100Component::S_ADD;
 
             setLoaded(T100FALSE);
             result = T100TRUE;
@@ -366,14 +367,14 @@ T100BOOL T100Sentence::parseLabel(T100OPERATOR& op)
     default:
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
-        TT100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+        T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         result = T100FALSE;
     }
 
     return result;
 }
 
-T100BOOL T100Sentence::parseBrackets(T100OPERATOR& op)
+T100BOOL T100Sentence::parseBrackets(T100Component::T100OPERATOR& op)
 {
     T100BOOL        result          = T100FALSE;
 
@@ -388,12 +389,12 @@ READ_NEXT:
     }
 
     switch(m_item->type){
-    case T100TOKEN_BR:
+    case T100Component::T100TOKEN_BR:
         {
             return T100TRUE;
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
@@ -401,7 +402,7 @@ READ_NEXT:
             return T100FALSE;
         }
         break;
-    case T100TOKEN_SPACE:
+    case T100Component::T100TOKEN_SPACE:
         {
             setLoaded(T100FALSE);
             goto READ_NEXT;
@@ -450,12 +451,12 @@ READ_NEXT:
     return T100FALSE;
 }
 
-T100BOOL T100Sentence::parseBrace(T100OPERATOR& base, T100OPERATOR& op)
+T100BOOL T100Sentence::parseBrace(T100Component::T100OPERATOR& base, T100Component::T100OPERATOR& op)
 {
     T100BOOL        result          = T100FALSE;
 
     setLoaded(T100FALSE);
-    m_type  = S_NONE;
+    m_type  = T100Component::S_NONE;
 
 READ_NEXT:
     if(!isLoaded()){
@@ -466,7 +467,7 @@ READ_NEXT:
     }
 
     switch(m_item->type){
-    case T100TOKEN_BR:
+    case T100Component::T100TOKEN_BR:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
@@ -511,7 +512,7 @@ READ_NEXT:
             goto READ_NEXT;
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
@@ -519,7 +520,7 @@ READ_NEXT:
             return T100FALSE;
         }
         break;
-    case T100TOKEN_SPACE:
+    case T100Component::T100TOKEN_SPACE:
         {
             setLoaded(T100FALSE);
             goto READ_NEXT;
@@ -552,11 +553,11 @@ READ_NEXT:
     return T100FALSE;
 }
 
-T100BOOL T100Sentence::parseOperator(T100OPERATOR& op)
+T100BOOL T100Sentence::parseOperator(T100Component::T100OPERATOR& op)
 {
     T100BOOL        result          = T100FALSE;
 
-    m_type      = S_NONE;
+    m_type      = T100Component::S_NONE;
 
 READ_NEXT:
     if(!isLoaded()){
@@ -583,14 +584,14 @@ READ_NEXT:
         break;
     case T100CHAR_POUND:
         {
-            m_type      = S_VAL;
+            m_type      = T100Component::S_VAL;
             setLoaded(T100FALSE);
             goto READ_NEXT;
         }
         break;
     case T100CHAR_EMAIL:
         {
-            m_type      = S_ADD;
+            m_type      = T100Component::S_ADD;
             setLoaded(T100FALSE);
             goto READ_NEXT;
         }
@@ -646,11 +647,11 @@ READ_NEXT:
     return T100FALSE;
 }
 
-T100BOOL T100Sentence::parseOperator(T100OPERATOR_COMPLEXUS& op)
+T100BOOL T100Sentence::parseOperator(T100Component::T100OPERATOR_COMPLEXUS& op)
 {
     T100BOOL        result          = T100FALSE;
 
-    m_type      = S_NONE;
+    m_type      = T100Component::S_NONE;
 
 READ_NEXT:
     if(!isLoaded()){
@@ -677,14 +678,14 @@ READ_NEXT:
         break;
     case T100CHAR_POUND:
         {
-            m_type  = S_VAL;
+            m_type  = T100Component::S_VAL;
             setLoaded(T100FALSE);
             goto READ_NEXT;
         }
         break;
     case T100CHAR_EMAIL:
         {
-            m_type  = S_ADD;
+            m_type  = T100Component::S_ADD;
             setLoaded(T100FALSE);
             goto READ_NEXT;
         }
@@ -746,11 +747,11 @@ READ_NEXT:
     return T100FALSE;
 }
 
-T100BOOL T100Sentence::parseComplexus(T100OPERATOR_COMPLEXUS& op)
+T100BOOL T100Sentence::parseComplexus(T100Component::T100OPERATOR_COMPLEXUS& op)
 {
     T100BOOL        result          = T100FALSE;
 
-    m_type      = S_NONE;
+    m_type      = T100Component::S_NONE;
 
 READ_NEXT:
     if(!isLoaded()){
@@ -777,14 +778,14 @@ READ_NEXT:
         break;
     case T100CHAR_POUND:
         {
-            m_type      = S_VAL;
+            m_type      = T100Component::S_VAL;
             setLoaded(T100FALSE);
             goto READ_NEXT;
         }
         break;
     case T100CHAR_EMAIL:
         {
-            m_type      = S_ADD;
+            m_type      = T100Component::S_ADD;
             setLoaded(T100FALSE);
             goto READ_NEXT;
         }
@@ -800,8 +801,8 @@ READ_NEXT:
     case T100KEYWORD_AMF:
     case T100KEYWORD_AOF:
         {
-            op.SYMBOL_TYPE      = S_NONE;
-            op.TYPE             = T100OPERATOR_ONE_ONE;
+            op.SYMBOL_TYPE      = T100Component::S_NONE;
+            op.TYPE             = T100Component::T100OPERATOR_ONE_ONE;
             return parseRegister(op.OFFSET);
         }
         break;
@@ -809,24 +810,24 @@ READ_NEXT:
     case T100CONSTANT_FLOAT:
         {
             op.OFFSET.USED      = T100TRUE;
-            op.SYMBOL_TYPE      = S_NONE;
-            op.TYPE             = T100OPERATOR_ONE_ONE;
+            op.SYMBOL_TYPE      = T100Component::S_NONE;
+            op.TYPE             = T100Component::T100OPERATOR_ONE_ONE;
             return parseExpression(op.OFFSET);
         }
         break;
     case T100KEYWORD_VARIABLE:
         {
             op.OFFSET.USED      = T100TRUE;
-            op.SYMBOL_TYPE      = S_NONE;
-            op.TYPE             = T100OPERATOR_ONE_ONE;
+            op.SYMBOL_TYPE      = T100Component::S_NONE;
+            op.TYPE             = T100Component::T100OPERATOR_ONE_ONE;
             return parseLabel(op.OFFSET);
         }
         break;
     case T100KEYWORD_LABEL:
         {
             op.OFFSET.USED      = T100TRUE;
-            op.SYMBOL_TYPE      = S_NONE;
-            op.TYPE             = T100OPERATOR_ONE_ONE;
+            op.SYMBOL_TYPE      = T100Component::S_NONE;
+            op.TYPE             = T100Component::T100OPERATOR_ONE_ONE;
             return parseLabel(op.OFFSET);
         }
         break;
@@ -834,7 +835,7 @@ READ_NEXT:
         {
             op.USED             = T100TRUE;
             op.SYMBOL_TYPE      = m_type;
-            op.TYPE             = T100OPERATOR_THREE_THREE;
+            op.TYPE             = T100Component::T100OPERATOR_THREE_THREE;
             return parseBrace(op.BASE, op.OFFSET);
         }
         break;
@@ -856,7 +857,7 @@ READ_NEXT:
     return T100FALSE;
 }
 
-T100BOOL T100Sentence::parseOperator(T100OPERATOR_BINOCULAR& op)
+T100BOOL T100Sentence::parseOperator(T100Component::T100OPERATOR_BINOCULAR& op)
 {
     T100BOOL        result          = T100FALSE;
 
@@ -870,36 +871,36 @@ T100BOOL T100Sentence::parseOperator(T100OPERATOR_BINOCULAR& op)
         return T100FALSE;
     }
 
-    if(T100OPERATOR_THREE_THREE == op.TARGET.TYPE){
-        op.TYPE         = T100OPERATOR_THREE_THREE;
-        op.SOURCE.TYPE  = T100OPERATOR_THREE_THREE;
-    }else if(T100OPERATOR_THREE_THREE == op.SOURCE.TYPE){
-        op.TYPE         = T100OPERATOR_THREE_THREE;
-        op.TARGET.TYPE  = T100OPERATOR_THREE_THREE;
+    if(T100Component::T100OPERATOR_THREE_THREE == op.TARGET.TYPE){
+        op.TYPE         = T100Component::T100OPERATOR_THREE_THREE;
+        op.SOURCE.TYPE  = T100Component::T100OPERATOR_THREE_THREE;
+    }else if(T100Component::T100OPERATOR_THREE_THREE == op.SOURCE.TYPE){
+        op.TYPE         = T100Component::T100OPERATOR_THREE_THREE;
+        op.TARGET.TYPE  = T100Component::T100OPERATOR_THREE_THREE;
     }else{
-        op.TYPE = T100OPERATOR_ONE_ONE;
+        op.TYPE = T100Component::T100OPERATOR_ONE_ONE;
     }
 
     return T100TRUE;
 }
 
-T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, T100OPERATOR_BUILD& info)
+T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100Component::T100OPERATOR& target, T100Component::T100OPERATOR_BUILD& info)
 {
     T100BOOL        result          = T100FALSE;
 
     switch(target.DATA_TYPE){
-    case T100DATA_COR:
+    case T100Component::T100DATA_COR:
         {
             info.OPERATOR_FLAG      = T100FALSE;
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_COR;
+                    info.OPERATOR_TYPE      = T100Component::T_COR;
                 }
                 break;
-            case S_VAL:
+            case T100Component::S_VAL:
                 {
-                    info.OPERATOR_TYPE      = I_COR;
+                    info.OPERATOR_TYPE      = T100Component::I_COR;
                 }
                 break;
             default:
@@ -907,18 +908,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             }
         }
         break;
-    case T100DATA_CBR:
+    case T100Component::T100DATA_CBR:
         {
             info.OPERATOR_FLAG      = T100FALSE;
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_CBR;
+                    info.OPERATOR_TYPE      = T100Component::T_CBR;
                 }
                 break;
-            case S_VAL:
+            case T100Component::S_VAL:
                 {
-                    info.OPERATOR_TYPE      = I_CBR;
+                    info.OPERATOR_TYPE      = T100Component::I_CBR;
                 }
                 break;
             default:
@@ -926,18 +927,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             }
         }
         break;
-    case T100DATA_CCR:
+    case T100Component::T100DATA_CCR:
         {
             info.OPERATOR_FLAG      = T100FALSE;
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_CCR;
+                    info.OPERATOR_TYPE      = T100Component::T_CCR;
                 }
                 break;
-            case S_VAL:
+            case T100Component::S_VAL:
                 {
-                    info.OPERATOR_TYPE      = I_CCR;
+                    info.OPERATOR_TYPE      = T100Component::I_CCR;
                 }
                 break;
             default:
@@ -945,18 +946,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             }
         }
         break;
-    case T100DATA_AAR:
+    case T100Component::T100DATA_AAR:
         {
             info.OPERATOR_FLAG      = T100FALSE;
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_AAR;
+                    info.OPERATOR_TYPE      = T100Component::T_AAR;
                 }
                 break;
-            case S_VAL:
+            case T100Component::S_VAL:
                 {
-                    info.OPERATOR_TYPE      = I_AAR;
+                    info.OPERATOR_TYPE      = T100Component::I_AAR;
                 }
                 break;
             default:
@@ -964,18 +965,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             }
         }
         break;
-    case T100DATA_ABR:
+    case T100Component::T100DATA_ABR:
         {
             info.OPERATOR_FLAG      = T100FALSE;
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_ABR;
+                    info.OPERATOR_TYPE      = T100Component::T_ABR;
                 }
                 break;
-            case S_VAL:
+            case T100Component::S_VAL:
                 {
-                    info.OPERATOR_TYPE      = I_ABR;
+                    info.OPERATOR_TYPE      = T100Component::I_ABR;
                 }
                 break;
             default:
@@ -983,37 +984,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             }
         }
         break;
-    case T100DATA_ACR:
+    case T100Component::T100DATA_ACR:
         {
             info.OPERATOR_FLAG      = T100FALSE;
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_ACR;
+                    info.OPERATOR_TYPE      = T100Component::T_ACR;
                 }
                 break;
-            case S_VAL:
+            case T100Component::S_VAL:
                 {
-                    info.OPERATOR_TYPE      = I_ACR;
-                }
-                break;
-            default;
-                return T100FALSE;
-            }
-        }
-        break;
-    case T100DATA_ADR:
-        {
-            info.OPERATOR_FLAG      = T100FALSE;
-            switch(target.ADDR_TYPE){
-            case S_NONE:
-                {
-                    info.OPERATOR_TYPE      = T_ADR;
-                }
-                break;
-            case S_VAL:
-                {
-                    info.OPERATOR_TYPE      = I_ADR;
+                    info.OPERATOR_TYPE      = T100Component::I_ACR;
                 }
                 break;
             default:
@@ -1021,19 +1003,38 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             }
         }
         break;
-    case T100DATA_ACF:
+    case T100Component::T100DATA_ADR:
         {
             info.OPERATOR_FLAG      = T100FALSE;
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_ACF;
+                    info.OPERATOR_TYPE      = T100Component::T_ADR;
+                }
+                break;
+            case T100Component::S_VAL:
+                {
+                    info.OPERATOR_TYPE      = T100Component::I_ADR;
+                }
+                break;
+            default:
+                return T100FALSE;
+            }
+        }
+        break;
+    case T100Component::T100DATA_ACF:
+        {
+            info.OPERATOR_FLAG      = T100FALSE;
+            switch(target.ADDR_TYPE){
+            case T100Component::S_NONE:
+                {
+                    info.OPERATOR_TYPE      = T100Component::T_ACF;
                 }
                 break;
             /*
-            case S_VAL:
+            case T100Component::S_VAL:
                 {
-                    info.OPERATOR_TYPE      = I_ACF;
+                    info.OPERATOR_TYPE      = T100Component::I_ACF;
                 }
                 break;
             */
@@ -1042,19 +1043,19 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             }
         }
         break;
-    case T100DATA_AMF:
+    case T100Component::T100DATA_AMF:
         {
             info.OPERATOR_FLAG      = T100FALSE;
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_AMF;
+                    info.OPERATOR_TYPE      = T100Component::T_AMF;
                 }
                 break;
             /*
-            case S_VAL:
+            case T100Component::S_VAL:
                 {
-                    info.OPERATOR_TYPE      = I_AMF;
+                    info.OPERATOR_TYPE      = T100Component::I_AMF;
                 }
                 break;
             */
@@ -1063,19 +1064,19 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             }
         }
         break;
-    case T100DATA_AOF:
+    case T100Component::T100DATA_AOF:
         {
             info.OPERATOR_FLAG      = T100FALSE;
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_AOF;
+                    info.OPERATOR_TYPE      = T100Component::T_AOF;
                 }
                 break;
             /*
-            case S_VAL:
+            case T100Component::S_VAL:
                 {
-                    info.OPERATOR_TYPE      = I_AOF;
+                    info.OPERATOR_TYPE      = T100Component::I_AOF;
                 }
                 break;
             */
@@ -1084,7 +1085,7 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             }
         }
         break;
-    case T100DATA_INTEGER:
+    case T100Component::T100DATA_INTEGER:
         {
             info.OPERATOR_FLAG      = T100TRUE;
             info.OPERATOR_VALUE     = target.VALUE;
@@ -1092,19 +1093,19 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             info.OPERATOR_OFFSET    = info.OFFSET;
 
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_IMM;
+                    info.OPERATOR_TYPE      = T100Component::T_IMM;
                 }
                 break;
-            case S_ADD:
+            case T100Component::S_ADD:
                 {
-                    info.OPERATOR_TYPE      = T_COR;
+                    info.OPERATOR_TYPE      = T100Component::T_COR;
                 }
                 break;
-            case S_VAL:
+            case T100Component::S_VAL:
                 {
-                    info.OPERATOR_TYPE      = T_IMM;
+                    info.OPERATOR_TYPE      = T100Component::T_IMM;
                 }
                 break;
             default:
@@ -1112,7 +1113,7 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             }
         }
         break;
-    case T100DATA_FLOAT:
+    case T100Component::T100DATA_FLOAT:
         {
             info.OPERATOR_FLAG      = T100TRUE;
             info.OPERATOR_VALUE     = target.VALUE;
@@ -1120,39 +1121,39 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             info.OPERATOR_OFFSET    = info.OFFSET;
 
             switch(target.ADDR_TYPE){
-            case S_NONE:
+            case T100Component::S_NONE:
                 {
-                    info.OPERATOR_TYPE      = T_IMM;
+                    info.OPERATOR_TYPE      = T100Component::T_IMM;
                 }
                 break;
             default:
-                T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                 return T100FALSE;
             }
         }
         break;
-    case T100DATA_STRING:
+    case T100Component::T100DATA_STRING:
         {
-            T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
             return T100FALSE;
         }
         break;
-    case T100DATA_LABEL:
+    case T100Component::T100DATA_LABEL:
         {
             info.OPERATOR_FLAG      = T100TRUE;
 
             switch(target.ADDR_TYPE){
-            case S_NONE:
-            case S_ADD:
+            case T100Component::S_NONE:
+            case T100Component::S_ADD:
                 {
                     T100WORD        offset;
 
-                    info.OPERATOR_TYPE      = T_IMM;
+                    info.OPERATOR_TYPE      = T100Component::T_IMM;
 
                     result = code->getLabel(target.NAME, offset);
 
-                    T100LABEL_CALL* item    = T100NW T100LABEL_CALL();
-                    item->name              = target.NAME;
+                    T100LABEL_CALL* item    = T100NEW T100LABEL_CALL();
+                    item->NAME              = target.NAME;
 
                     //test
                     info.OFFSET++;
@@ -1161,7 +1162,7 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
                     T100WORD        temp;
 
                     temp = code->getOffset() + info.OPERATOR_OFFSET;
-                    item->offset = code->getOffset() + info.OPERATOR_OFFSET;
+                    item->OFFSET = code->getOffset() + info.OPERATOR_OFFSET;
 
                     code->addLabelCall(item);
 
@@ -1169,12 +1170,12 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
                 }
                 break;
             default:
-                T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                 return T100FALSE;
             }
         }
         break;
-    case T100DATA_VARIABLE:
+    case T100Component::T100DATA_VARIABLE:
         {
             T100WORD        offset;
 
@@ -1182,7 +1183,7 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
 
             T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(target.NAME);
             if(!vd){
-                T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                 return T100FALSE;
             }
 
@@ -1190,7 +1191,7 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
             if(vd->ISARRAY){
                 if(target.ISARRAY){
                     if(target.LENGTH >= vd->LENGTH){
-                        T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                        //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                         return T100FALSE;
                     }else{
                         info.OPERATOR_ARRAY     = T100TRUE;
@@ -1198,12 +1199,12 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
                     }
                 }
             }else if(vd->ISARRAY != target.ISARRAY){
-                T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                 return T100FALSE;
             }
 
             result = code->getVariable(target.NAME, offset);
-            offset = vd->offset;
+            offset = vd->OFFSET;
 
             T100VARIABLE_CALL* item     = T100NEW T100VARIABLE_CALL();
 
@@ -1221,35 +1222,35 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
 
             info.OPERATOR_VALUE     = offset;
 
-            switch(vd->type){
-            case T100DATA_INTEGER:
-            case T100DATA_FLOAT:
+            switch(vd->TYPE){
+            case T100Component::T100DATA_INTEGER:
+            case T100Component::T100DATA_FLOAT:
                 {
                     switch(target.ADDR_TYPE){
-                    case S_NONE:
+                    case T100Component::S_NONE:
                         {
                             if(info.OPERATOR_ARRAY){
                                 if(target.ISSHARE){
-                                    info.OPERATOR_TYPE      = ST_ARR;
+                                    info.OPERATOR_TYPE      = T100Component::ST_ARR;
                                 }else{
-                                    info.OPERATOR_TYPE      = T_ARR;
+                                    info.OPERATOR_TYPE      = T100Component::T_ARR;
                                 }
-                                info.OFFSET++
+                                info.OFFSET++;
                             }else{
                                 if(target.ISSHARE){
-                                    info.OPERATOR_TYPE      = ST_MEM;
+                                    info.OPERATOR_TYPE      = T100Component::ST_MEM;
                                 }else{
-                                    info.OPERATOR_TYPE      = T_MEM;
+                                    info.OPERATOR_TYPE      = T100Component::T_MEM;
                                 }
                             }
                         }
                         break;
-                    case S_ADD:
+                    case T100Component::S_ADD:
                         {
                             if(target.ISSHARE){
-                                info.OPERATOR_TYPE      = ST_IMM;
+                                info.OPERATOR_TYPE      = T100Component::ST_IMM;
                             }else{
-                                info.OPERATOR_TYPE      = T_IMM;
+                                info.OPERATOR_TYPE      = T100Component::T_IMM;
                             }
 
                             if(info.OPERATOR_ARRAY){
@@ -1257,20 +1258,20 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
                             }
                         }
                         break;
-                    case S_VAL:
+                    case T100Component::S_VAL:
                         {
                             if(info.OPERATOR_ARRAY){
                                 if(target.ISSHARE){
-                                    info.OPERATOR_TYPE      = SI_ARR;
+                                    info.OPERATOR_TYPE      = T100Component::SI_ARR;
                                 }else{
-                                    info.OPERATOR_TYPE      = I_ARR;
+                                    info.OPERATOR_TYPE      = T100Component::I_ARR;
                                 }
                                 info.OFFSET++;
                             }else{
                                 if(target.ISSHARE){
-                                    info.OPERATOR_TYPE      = SI_MEM;
+                                    info.OPERATOR_TYPE      = T100Component::SI_MEM;
                                 }else{
-                                    info.OPERATOR_TYPE      = I_MEM;
+                                    info.OPERATOR_TYPE      = T100Component::I_MEM;
                                 }
                             }
                         }
@@ -1280,25 +1281,25 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
                     }
                 }
                 break;
-            case T100DATA_STRING:
+            case T100Component::T100DATA_STRING:
                 {
                     switch(target.ADDR_TYPE){
-                    case S_NONE:
-                    case S_ADD:
+                    case T100Component::S_NONE:
+                    case T100Component::S_ADD:
                         {
                             if(target.ISSHARE){
-                                info.OPERATOR_TYPE      = ST_IMM;
+                                info.OPERATOR_TYPE      = T100Component::ST_IMM;
                             }else{
-                                info.OPERATOR_TYPE      = T_IMM;
+                                info.OPERATOR_TYPE      = T100Component::T_IMM;
                             }
                         }
                         break;
-                    case S_VAL:
+                    case T100Component::S_VAL:
                         {
                             if(target.ISSHARE){
-                                info.OPERATOR_TYPE      = ST_MEM;
+                                info.OPERATOR_TYPE      = T100Component::ST_MEM;
                             }else{
-                                info.OPERATOR_TYPE      = T_MEM;
+                                info.OPERATOR_TYPE      = T100Component::T_MEM;
                             }
                         }
                         break;
@@ -1315,29 +1316,29 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR& target, 
     return T100TRUE;
 }
 
-T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS& op, T100OPERATOR_BUILD& info)
+T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100Component::T100OPERATOR_COMPLEXUS& op, T100Component::T100OPERATOR_BUILD& info)
 {
     T100BOOL        result          = T100FALSE;
 
     info.BASE_USED      = T100FALSE;
-    info.BASE_TYPE      = T_NONE;
+    info.BASE_TYPE      = T100Component::T_NONE;
 
     if(op.USED){
         info.BASE_USED      = T100TRUE;
 
         switch(op.BASE.DATA_TYPE){
-        case T100DATA_COR:
+        case T100Component::T100DATA_COR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_COR;
+                        info.BASE_TYPE      = T100Component::T_COR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_COR;
+                        info.BASE_TYPE      = T100Component::I_COR;
                     }
                     break;
                 default:
@@ -1345,18 +1346,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                 }
             }
             break;
-        case T100DATA_CBR:
+        case T100Component::T100DATA_CBR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_CBR;
+                        info.BASE_TYPE      = T100Component::T_CBR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_CBR;
+                        info.BASE_TYPE      = T100Component::I_CBR;
                     }
                     break;
                 default:
@@ -1364,18 +1365,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                 }
             }
             break;
-        case T100DATA_CCR:
+        case T100Component::T100DATA_CCR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_CCR;
+                        info.BASE_TYPE      = T100Component::T_CCR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_CCR;
+                        info.BASE_TYPE      = T100Component::I_CCR;
                     }
                     break;
                 default:
@@ -1383,18 +1384,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                 }
             }
             break;
-        case T100DATA_AAR:
+        case T100Component::T100DATA_AAR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_AAR;
+                        info.BASE_TYPE      = T100Component::T_AAR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_AAR;
+                        info.BASE_TYPE      = T100Component::I_AAR;
                     }
                     break;
                 default:
@@ -1402,18 +1403,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                 }
             }
             break;
-        case T100DATA_ABR:
+        case T100Component::T100DATA_ABR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_ABR;
+                        info.BASE_TYPE      = T100Component::T_ABR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_ABR;
+                        info.BASE_TYPE      = T100Component::I_ABR;
                     }
                     break;
                 default:
@@ -1421,18 +1422,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                 }
             }
             break;
-        case T100DATA_ACR:
+        case T100Component::T100DATA_ACR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_ACR;
+                        info.BASE_TYPE      = T100Component::T_ACR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_ACR;
+                        info.BASE_TYPE      = T100Component::I_ACR;
                     }
                     break;
                 default:
@@ -1440,18 +1441,18 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                 }
             }
             break;
-        case T100DATA_ADR:
+        case T100Component::T100DATA_ADR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_ADR;
+                        info.BASE_TYPE      = T100Component::T_ADR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_ADR;
+                        info.BASE_TYPE      = T100Component::I_ADR;
                     }
                     break;
                 default:
@@ -1459,7 +1460,7 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                 }
             }
             break;
-        case T100DATA_INTEGER:
+        case T100Component::T100DATA_INTEGER:
             {
                 info.BASE_FLAG      = T100TRUE;
                 info.BASE_VALUE     = op.BASE.VALUE;
@@ -1467,25 +1468,25 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                 info.BASE_OFFSET    = info.OFFSET;
 
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_IMM;
+                        info.BASE_TYPE      = T100Component::T_IMM;
                     }
                     break;
-                case S_ADD:
+                case T100Component::S_ADD:
                     {
-                        info.BASE_TYPE      = T_COR;
+                        info.BASE_TYPE      = T100Component::T_COR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = T_IMM;
+                        info.BASE_TYPE      = T100Component::T_IMM;
                     }
                     break;
                 }
             }
             break;
-        case T100DATA_FLOAT:
+        case T100Component::T100DATA_FLOAT:
             {
                 info.BASE_FLAG      = T100TRUE;
                 info.BASE_VALUE     = op.BASE.VALUE;
@@ -1493,34 +1494,34 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                 info.BASE_OFFSET    = info.OFFSET;
 
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_IMM;
+                        info.BASE_TYPE      = T100Component::T_IMM;
                     }
                     break;
                 default:
-                    T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                    //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                     return T100FALSE;
                 }
             }
             break;
-        case T100DATA_STRING:
+        case T100Component::T100DATA_STRING:
             {
-                T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                 return T100FALSE;
             }
             break;
-        case T100DATA_LABEL:
+        case T100Component::T100DATA_LABEL:
             {
                 info.BASE_FLAG      = T100TRUE;
 
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
-                case S_ADD:
+                case T100Component::S_NONE:
+                case T100Component::S_ADD:
                     {
                         T100WORD        offset;
 
-                        info.BASE_TYPE      = T_IMM;
+                        info.BASE_TYPE      = T100Component::T_IMM;
 
                         result = code->getLabel(op.BASE.NAME, offset);
                         T100LABEL_CALL* item    = T100NEW T100LABEL_CALL();
@@ -1528,7 +1529,7 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                         //test
                         info.OFFSET++;
                         info.BASE_OFFSET        = info.OFFSET;
-                        item->offset            = code->getOffset() + info.BASE_OFFSET;
+                        item->OFFSET            = code->getOffset() + info.BASE_OFFSET;
 
                         code->addLabelCall(item);
 
@@ -1536,12 +1537,12 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                     }
                     break;
                 default:
-                    T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                    //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                     return T100FALSE;
                 }
             }
             break;
-        case T100DATA_VARIABLE:
+        case T100Component::T100DATA_VARIABLE:
             {
                 T100WORD        offset;
 
@@ -1549,16 +1550,16 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
 
                 T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(op.BASE.NAME);
                 if(!vd){
-                    T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                    //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                     return T100FALSE;
                 }
 
                 result = code->getVariable(op.BASE.NAME, offset);
-                offset = vd->offset;
+                offset = vd->OFFSET;
 
                 T100VARIABLE_CALL* item     = T100NEW T100VARIABLE_CALL();
 
-                item->name                  = op.BASE.NAME;
+                item->NAME                  = op.BASE.NAME;
                 info.OFFSET++;
                 info.BASE_OFFSET            = info.OFFSET;
                 item->OFFSET                = code->getOffset() + info.BASE_OFFSET;
@@ -1567,24 +1568,24 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
 
                 info.BASE_VALUE             = offset;
 
-                switch(vd->type){
-                case T100DATA_INTEGER:
-                case T100DATA_FLOAT:
+                switch(vd->TYPE){
+                case T100Component::T100DATA_INTEGER:
+                case T100Component::T100DATA_FLOAT:
                     {
                         switch(op.BASE.ADDR_TYPE){
-                        case S_NONE:
+                        case T100Component::S_NONE:
                             {
-                                info.BASE_TYPE      = T_MEM;
+                                info.BASE_TYPE      = T100Component::T_MEM;
                             }
                             break;
-                        case S_ADD:
+                        case T100Component::S_ADD:
                             {
-                                info.BASE_TYPE      = T_IMM;
+                                info.BASE_TYPE      = T100Component::T_IMM;
                             }
                             break;
-                        case S_VAL:
+                        case T100Component::S_VAL:
                             {
-                                info.BASE_TYPE      = I_MEM;
+                                info.BASE_TYPE      = T100Component::I_MEM;
                             }
                             break;
                         default:
@@ -1592,22 +1593,22 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
                         }
                     }
                     break;
-                case T100DATA_STRING:
+                case T100Component::T100DATA_STRING:
                     {
                         switch(op.BASE.ADDR_TYPE){
-                        case S_NONE:
-                        case S_ADD:
+                        case T100Component::S_NONE:
+                        case T100Component::S_ADD:
                             {
-                                info.BASE_TYPE      = T_IMM;
+                                info.BASE_TYPE      = T100Component::T_IMM;
                             }
                             break;
-                        case S_VAL:
+                        case T100Component::S_VAL:
                             {
-                                info.BASE_TYPE      = T_MEM;
+                                info.BASE_TYPE      = T100Component::T_MEM;
                             }
                             break;
                         default:
-                            T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                            //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                             return T100FALSE;
                         }
                     }
@@ -1623,19 +1624,19 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_COMPLEXUS
     return result;
 }
 
-T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_BINOCULAR& op, T100OPERATOR_INFO& info)
+T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100Component::T100OPERATOR_BINOCULAR& op, T100Component::T100OPERATOR_INFO& info)
 {
     T100BOOL        result          = T100FALSE;
 
     info.TYPE       = op.TYPE;
 
-    switch(op.type){
-    case T100OPERATOR_ONE_ONE:
+    switch(op.TYPE){
+    case T100Component::T100OPERATOR_ONE_ONE:
         {
             info.TARGET.OFFSET      = 0;
         }
         break;
-    case T100OPERATOR_THREE_THREE:
+    case T100Component::T100OPERATOR_THREE_THREE:
         {
             info.TARGET.OFFSET      = 1;
         }
@@ -1656,27 +1657,27 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100OPERATOR_BINOCULAR
     return result;
 }
 
-T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXUS& op, T100OPERATOR_BUILD& info)
+T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100Component::T100OPERATOR_COMPLEXUS& op, T100Component::T100OPERATOR_BUILD& info)
 {
     T100BOOL        result          = T100FALSE;
 
     info.BASE_USED      = T100FALSE;
-    info.BASE_TYPE      = T_NONE;
+    info.BASE_TYPE      = T100Component::T_NONE;
 
     switch(op.SYMBOL_TYPE){
-    case S_NONE:
+    case T100Component::S_NONE:
         {
-            info.TYPE   = T_NONE;
+            info.TYPE   = T100Component::T_NONE;
         }
         break;
-    case S_ADD:
+    case T100Component::S_ADD:
         {
-            info.TYPE   = T_IMM;
+            info.TYPE   = T100Component::T_IMM;
         }
         break;
-    case S_VAL:
+    case T100Component::S_VAL:
         {
-            info.TYPE   = I_MEM;
+            info.TYPE   = T100Component::I_MEM;
         }
         break;
     default:
@@ -1687,18 +1688,18 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
         info.BASE_USED      = T100TRUE;
 
         switch(op.BASE.DATA_TYPE){
-        case T100DATA_COR:
+        case T100Component::T100DATA_COR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_COR;
+                        info.BASE_TYPE      = T100Component::T_COR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_COR;
+                        info.BASE_TYPE      = T100Component::I_COR;
                     }
                     break;
                 default:
@@ -1706,18 +1707,18 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                 }
             }
             break;
-        case T100DATA_CBR:
+        case T100Component::T100DATA_CBR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_CBR;
+                        info.BASE_TYPE      = T100Component::T_CBR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_CBR;
+                        info.BASE_TYPE      = T100Component::I_CBR;
                     }
                     break;
                 default:
@@ -1725,18 +1726,18 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                 }
             }
             break;
-        case T100DATA_CCR:
+        case T100Component::T100DATA_CCR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_CCR;
+                        info.BASE_TYPE      = T100Component::T_CCR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_CCR;
+                        info.BASE_TYPE      = T100Component::I_CCR;
                     }
                     break;
                 default:
@@ -1744,18 +1745,18 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                 }
             }
             break;
-        case T100DATA_AAR:
+        case T100Component::T100DATA_AAR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_AAR;
+                        info.BASE_TYPE      = T100Component::T_AAR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_AAR;
+                        info.BASE_TYPE      = T100Component::I_AAR;
                     }
                     break;
                 default:
@@ -1763,18 +1764,18 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                 }
             }
             break;
-        case T100DATA_ABR:
+        case T100Component::T100DATA_ABR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_ABR;
+                        info.BASE_TYPE      = T100Component::T_ABR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_ABR;
+                        info.BASE_TYPE      = T100Component::I_ABR;
                     }
                     break;
                 default:
@@ -1782,18 +1783,18 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                 }
             }
             break;
-        case T100DATA_ACR:
+        case T100Component::T100DATA_ACR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_ACR;
+                        info.BASE_TYPE      = T100Component::T_ACR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_ACR;
+                        info.BASE_TYPE      = T100Component::I_ACR;
                     }
                     break;
                 default:
@@ -1801,18 +1802,18 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                 }
             }
             break;
-        case T100DATA_ADR:
+        case T100Component::T100DATA_ADR:
             {
                 info.BASE_FLAG      = T100FALSE;
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_ADR;
+                        info.BASE_TYPE      = T100Component::T_ADR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = I_ADR;
+                        info.BASE_TYPE      = T100Component::I_ADR;
                     }
                     break;
                 default:
@@ -1820,7 +1821,7 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                 }
             }
             break;
-        case T100DATA_INTEGER:
+        case T100Component::T100DATA_INTEGER:
             {
                 info.BASE_FLAG      = T100TRUE;
                 info.BASE_VALUE     = op.BASE.VALUE;
@@ -1828,25 +1829,25 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                 info.BASE_OFFSET    = info.OFFSET;
 
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_IMM;
+                        info.BASE_TYPE      = T100Component::T_IMM;
                     }
                     break;
-                case S_ADD:
+                case T100Component::S_ADD:
                     {
-                        info.BASE_TYPE      = T_COR;
+                        info.BASE_TYPE      = T100Component::T_COR;
                     }
                     break;
-                case S_VAL:
+                case T100Component::S_VAL:
                     {
-                        info.BASE_TYPE      = T_IMM;
+                        info.BASE_TYPE      = T100Component::T_IMM;
                     }
                     break;
                 }
             }
             break;
-        case T100DATA_FLOAT:
+        case T100Component::T100DATA_FLOAT:
             {
                 info.BASE_FLAG      = T100TRUE;
                 info.BASE_VALUE     = op.BASE.VALUE;
@@ -1854,43 +1855,43 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                 info.BASE_OFFSET    = info.OFFSET;
 
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
+                case T100Component::S_NONE:
                     {
-                        info.BASE_TYPE      = T_IMM;
+                        info.BASE_TYPE      = T100Component::T_IMM;
                     }
                     break;
                 default:
-                    T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                    //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                     return T100FALSE;
                 }
             }
             break;
-        case T100DATA_STRING:
+        case T100Component::T100DATA_STRING:
             {
-                T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                 return T100FALSE;
             }
             break;
-        case T100DATA_LABEL:
+        case T100Component::T100DATA_LABEL:
             {
                 info.BASE_FLAG      = T100TRUE;
 
                 switch(op.BASE.ADDR_TYPE){
-                case S_NONE:
-                case S_ADD:
+                case T100Component::S_NONE:
+                case T100Component::S_ADD:
                     {
                         T100WORD        offset;
 
-                        info.BASE_TYPE      = T_IMM;
+                        info.BASE_TYPE      = T100Component::T_IMM;
 
                         result = code->getLabel(op.BASE.NAME, offset);
 
                         T100LABEL_CALL* item    = T100NEW T100LABEL_CALL();
-                        item->name              = op.BASE.NAME;
+                        item->NAME              = op.BASE.NAME;
                         //test
                         info.OFFSET++;
                         info.BASE_OFFSET        = info.OFFSET;
-                        item->offset            = code->getOffset() + info.BASE_OFFSET;
+                        item->OFFSET            = code->getOffset() + info.BASE_OFFSET;
 
                         code->addLabelCall(item);
 
@@ -1898,12 +1899,12 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                     }
                     break;
                 default:
-                    T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                    //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                     return T100FALSE;
                 }
             }
             break;
-        case T100dATA_VARIABLE:
+        case T100Component::T100DATA_VARIABLE:
             {
                 T100WORD        offset;
 
@@ -1911,42 +1912,42 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
 
                 T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(op.BASE.NAME);
                 if(!vd){
-                    T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                    //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                     return T100FALSE;
                 }
 
                 result = code->getVariable(op.BASE.NAME, offset);
-                offset = vd->offset;
+                offset = vd->OFFSET;
 
                 T100VARIABLE_CALL* item     = T100NEW T100VARIABLE_CALL();
 
-                item->name                  = op.BASE.NAME;
+                item->NAME                  = op.BASE.NAME;
                 info.OFFSET++;
                 info.BASE_OFFSET            = info.OFFSET;
-                item->offset                = code->getOffset() + info.BASE_OFFSET;
+                item->OFFSET                = code->getOffset() + info.BASE_OFFSET;
 
                 code->addVariableCall(item);
 
                 info.BASE_VALUE             = offset;
 
                 switch(vd->TYPE){
-                case T100DATA_INTEGER:
-                case T100DATA_FLOAT:
+                case T100Component::T100DATA_INTEGER:
+                case T100Component::T100DATA_FLOAT:
                     {
                         switch(op.BASE.ADDR_TYPE){
-                        case S_NONE:
+                        case T100Component::S_NONE:
                             {
-                                info.BASE_TYPE      = T_MEM;
+                                info.BASE_TYPE      = T100Component::T_MEM;
                             }
                             break;
-                        case S_ADD:
+                        case T100Component::S_ADD:
                             {
-                                info.BASE_TYPE      = T_IMM;
+                                info.BASE_TYPE      = T100Component::T_IMM;
                             }
                             break;
-                        case S_VAL:
+                        case T100Component::S_VAL:
                             {
-                                info.BASE_TYPE      = I_MEM;
+                                info.BASE_TYPE      = T100Component::I_MEM;
                             }
                             break;
                         default:
@@ -1954,22 +1955,22 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
                         }
                     }
                     break;
-                case T100DATA_STRING:
+                case T100Component::T100DATA_STRING:
                     {
                         switch (op.BASE.ADDR_TYPE){
-                        case S_NONE:
-                        case S_ADD:
+                        case T100Component::S_NONE:
+                        case T100Component::S_ADD:
                             {
-                                info.BASE_TYPE      = T_IMM;
+                                info.BASE_TYPE      = T100Component::T_IMM;
                             }
                             break;
-                        case S_VAL:
+                        case T100Component::S_VAL:
                             {
-                                info.BASE_TYPE      = T_MEM;
+                                info.BASE_TYPE      = T100Component::T_MEM;
                             }
                             break;
                         default:
-                            T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                            //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                             return T100FALSE;
                         }
                     }
@@ -1985,7 +1986,7 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100OPERATOR_COMPLEXU
     return result;
 }
 
-T100BOOL T100Sentence::buildInfo(T100ORDER_TYPE type, T100BuildInfo* code, T100OPERATOR_INFO& info)
+T100BOOL T100Sentence::buildInfo(T100Component::T100ORDER_TYPE type, T100BuildInfo* code, T100Component::T100OPERATOR_INFO& info)
 {
     T100BOOL            result          = T100TRUE;
     T100WORD_BITS       order;
@@ -1993,9 +1994,9 @@ T100BOOL T100Sentence::buildInfo(T100ORDER_TYPE type, T100BuildInfo* code, T100O
     order.BYTE0.BYTE    = type;
 
     switch(info.TYPE){
-    case T100OPERATOR_ONE_ONE:
+    case T100Component::T100OPERATOR_ONE_ONE:
         {
-            order.BYTE1.BYTE    = T100OPERATOR_ONE_ONE;
+            order.BYTE1.BYTE    = T100Component::T100OPERATOR_ONE_ONE;
 
             order.BYTE2.BYTE    = info.TARGET.OPERATOR_TYPE;
             order.BYTE3.BYTE    = info.SOURCE.OPERATOR_TYPE;
@@ -2009,9 +2010,9 @@ T100BOOL T100Sentence::buildInfo(T100ORDER_TYPE type, T100BuildInfo* code, T100O
             }
         }
         break;
-    case T100OPERATOR_THREE_THREE:
+    case T100Component::T100OPERATOR_THREE_THREE:
         {
-            order.BYTE1.BYTE    = T100OPERATOR_THREE_THREE;
+            order.BYTE1.BYTE    = T100Component::T100OPERATOR_THREE_THREE;
 
             order.BYTE2.BYTE    = info.TARGET.TYPE;
             order.BYTE3.BYTE    = info.SOURCE.TYPE;
@@ -2037,7 +2038,7 @@ T100BOOL T100Sentence::buildInfo(T100ORDER_TYPE type, T100BuildInfo* code, T100O
                 code->next();
 
                 if(info.TARGET.OPERATOR_ARRAY){
-                    code->setValue(info.TARGET.OPEATOR_INDEX);
+                    code->setValue(info.TARGET.OPERATOR_INDEX);
                     code->next();
                 }
             }
@@ -2078,11 +2079,11 @@ T100BOOL T100Sentence::getProcedureOffset(T100BuildInfo* info, T100STRING name, 
             offset = pd->OFFSET;
             result = T100TRUE;
         }else{
-            result T100FALSE;
+            return T100FALSE;
         }
     }
 
-    return T100FALSE;
+    return result;
 }
 
 T100BOOL T100Sentence::createPartInfo(T100STRING file)
@@ -2092,7 +2093,7 @@ T100BOOL T100Sentence::createPartInfo(T100STRING file)
     T100WSTRING         full;
     T100STRING          temp;
 
-    result = T100PathTools::full(file.to_wstring(), full);
+    result = T100Library::T100PathTools::full(file.to_wstring(), full);
     if(result){
         T100PartInfo*   info    = T100NEW T100PartInfo();
         temp    = full;

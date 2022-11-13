@@ -2,10 +2,11 @@
 #define T100STRINGTOKEN_H
 
 #include "T100Token.h"
+#include "T100String.h"
 
-namespace T100Assemby{
+namespace T100Assembly{
 
-class T100StringToken : public T100Token
+class T100StringToken : public T100Component::T100Token
 {
     public:
         T100StringToken();

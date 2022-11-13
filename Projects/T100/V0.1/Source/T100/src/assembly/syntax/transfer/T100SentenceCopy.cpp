@@ -3,7 +3,7 @@
 namespace T100Assembly{
 
 T100SentenceCopy::T100SentenceCopy(T100SentenceScanner* scanner)
-    :T100Scanner(scanner)
+    :T100Sentence(scanner)
 {
     //ctor
 }

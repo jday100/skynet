@@ -3,6 +3,7 @@
 namespace T100Assembly{
 
 T100StringScanner::T100StringScanner()
+    :T100Component::T100Scanner()
 {
     //ctor
     T100Scanner::clear();
@@ -13,12 +14,12 @@ T100StringScanner::~T100StringScanner()
     //dtor
 }
 
-T100VOID T100StringScanner::setSource(T100Scanner* obj)
+T100VOID T100StringScanner::setSource(T100Component::T100Scanner* obj)
 {
     m_scanner = dynamic_cast<T100CharScanner*>(obj);
 }
 
-T100Scanner* T100StringScanner::getSource()
+T100Component::T100Scanner* T100StringScanner::getSource()
 {
     return m_scanner;
 }
@@ -61,7 +62,7 @@ T100BOOL T100StringScanner::read()
     return result;
 }
 
-T100BOOL T100StringScanner::next(T100Token& token)
+T100BOOL T100StringScanner::next(T100Component::T100Token& token)
 {
     m_token = (T100StringToken*)&token;
     clear();

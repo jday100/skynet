@@ -1,5 +1,7 @@
 #include "T100SentenceCmt.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceCmt::T100SentenceCmt(T100SentenceScanner* scanner)
@@ -60,13 +62,13 @@ READ_NEXT:
         break;
     case T100TOKEN_EOF:
         {
-            m_token->type   = T100TOKEN_ERROR
+            m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             return T100FALSE;
         }
         break;
     default:
-        m_token->type   = T100TOKEn_ERROR;
+        m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
         return T100FALSE;
     }
@@ -78,7 +80,7 @@ T100BOOL T100SentenceCmt::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE = T100ORDER_CMT;
+    order.BYTE0.BYTE = T100Component::T100ORDER_CMT;
 
     info->setValue(order.WORD);
     info->next();

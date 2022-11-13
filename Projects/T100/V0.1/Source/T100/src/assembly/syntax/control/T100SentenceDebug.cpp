@@ -1,9 +1,11 @@
 #include "T100SentenceDebug.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceDebug::T100SentenceDebug(T100SentenceScanner* scanner)
-    :T100Scanner(scanner)
+    :T100Sentence(scanner)
 {
     //ctor
 }
@@ -31,7 +33,7 @@ T100BOOL T100SentenceDebug::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE = T100ORDER_DBG;
+    order.BYTE0.BYTE = T100Component::T100ORDER_DBG;
 
     info->setValue(order.WORD);
     info->next();

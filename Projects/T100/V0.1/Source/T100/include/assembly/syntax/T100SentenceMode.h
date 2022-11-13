@@ -5,12 +5,7 @@
 
 namespace T100Assembly{
 
-typedef enum{
-    T100MODE_NONE           = 0,
-    T100MODE_REAL,
-    T100MODE_VIRTUAL,
-    T100MODE_MAX
-}T100MODE;
+
 
 
 class T100SentenceMode : public T100Sentence
@@ -19,7 +14,7 @@ class T100SentenceMode : public T100Sentence
         T100SentenceMode(T100SentenceScanner*);
         virtual ~T100SentenceMode();
 
-        T100MODE            mode            =;
+        T100MODE            mode            = T100MODE_VIRTUAL;
 
         T100BOOL            parse();
 

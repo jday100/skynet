@@ -1,9 +1,11 @@
 #include "T100RealFileWriter.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100RealFileWriter::T100RealFileWriter(T100STRING file)
-    :T100FileWriter(file.to_wstring())
+    :T100Library::T100FileWriter(file.to_wstring())
 {
     //ctor
 }
@@ -68,10 +70,10 @@ T100BOOL T100RealFileWriter::write_head()
 
         data.WORD   = offset;
 
-        order.BYTE0.BYTE    = T100ORDER_JUMP;
-        order.BYTE1.BYTE    = T_NONE;
-        order.BYTE2.BYTE    = T_IMM;
-        order.BYTE3.BYTE    = T_NONE;
+        order.BYTE0.BYTE    = T100Component::T100ORDER_JUMP;
+        order.BYTE1.BYTE    = T100Component::T_NONE;
+        order.BYTE2.BYTE    = T100Component::T_IMM;
+        order.BYTE3.BYTE    = T100Component::T_NONE;
 
         result = write(&(order.WORD), 1);
         if(!result){

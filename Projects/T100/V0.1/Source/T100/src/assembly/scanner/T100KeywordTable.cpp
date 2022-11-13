@@ -96,7 +96,7 @@ T100VOID T100KeywordTable::destroy()
     m_keywords.clear();
 }
 
-T100TOKEn_TYPE T100KeywordTable::find(T100TRING str)
+T100TOKEN_TYPE T100KeywordTable::find(T100STRING str)
 {
     return m_keywords[str];
 }

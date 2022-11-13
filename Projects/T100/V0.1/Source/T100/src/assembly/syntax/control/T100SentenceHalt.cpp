@@ -1,5 +1,7 @@
 #include "T100SentenceHalt.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceHalt::T100SentenceHalt(T100SentenceScanner* scanner)
@@ -31,7 +33,7 @@ T100BOOL T100SentenceHalt::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE = T100ORDER_HALT;
+    order.BYTE0.BYTE = T100Component::T100ORDER_HALT;
 
     info->setValue(order.WORD);
     info->next();

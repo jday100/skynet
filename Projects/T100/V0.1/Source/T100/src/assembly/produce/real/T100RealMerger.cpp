@@ -60,7 +60,7 @@ T100BOOL T100RealMerger::run(T100ProduceInfo& source, T100RealInfo& target)
     return result;
 }
 
-T100BOOL T100RealMerger::merger(T100PartInfo* part, T100RealInfo& info)
+T100BOOL T100RealMerger::merge(T100PartInfo* part, T100RealInfo& info)
 {
     T100BOOL        result      = T100FALSE;
 
@@ -81,7 +81,7 @@ T100BOOL T100RealMerger::merger(T100PartInfo* part, T100RealInfo& info)
         }
     }
 
-    for(T100SegmentData* item : part->getBuildInfo().gtDataSegments()){
+    for(T100SegmentData* item : part->getBuildInfo().getDataSegments()){
         if(!item){
             return T100FALSE;
         }
@@ -109,7 +109,7 @@ T100BOOL T100RealMerger::decide_code(T100SegmentCode* source, T100SegmentCode* t
 
     if(source->isVirtual)return T100FALSE;
 
-    if(sourcr->isShare)return T100FALSE;
+    if(source->isShare)return T100FALSE;
 
     if(source->m_location != 0)return T100FALSE;
 
@@ -140,7 +140,7 @@ T100BOOL T100RealMerger::merge_code(T100SegmentCode* source, T100SegmentCode* ta
         return T100TRUE;
     }
 
-    if(souece->isShare){
+    if(source->isShare){
         return T100TRUE;
     }
 
@@ -154,7 +154,7 @@ T100BOOL T100RealMerger::merge_code(T100SegmentCode* source, T100SegmentCode* ta
     length = target->getMem().size();
 
     if(source->m_length == 0){
-        source->getMem().resize(souece->getMem().size() - 1);
+        source->getMem().resize(source->getMem().size() - 1);
         target->getMem().insert(target->getMem().end(), source->getMem().begin(), source->getMem().end());
     }else{
         size = source->m_length >= (source->getMem().size() - 1) ? source->m_length : (source->getMem().size() - 1);
@@ -192,7 +192,7 @@ T100BOOL T100RealMerger::merge_code(T100SegmentCode* source, T100SegmentCode* ta
             return T100FALSE;
         }
 
-        ld->offset = offset;
+        ld->OFFSET = offset;
     }
 
     for(auto it : source->m_procedure_hash){
@@ -207,21 +207,21 @@ T100BOOL T100RealMerger::merge_code(T100SegmentCode* source, T100SegmentCode* ta
             return T100FALSE;
         }
 
-        pd->offset = offset;
+        pd->OFFSET = offset;
     }
 
     for(auto item : source->m_variable_call){
-        item->offset = length + item->offset;
+        item->OFFSET = length + item->OFFSET;
         target->m_variable_call.push_back(item);
     }
 
     for(auto item : source->m_label_call){
-        item->offset = length + item->offset;
+        item->OFFSET = length + item->OFFSET;
         target->m_label_call.push_back(item);
     }
 
     for(auto item : source->m_procedure_call){
-        item->offset = length + item->offset;
+        item->OFFSET = length + item->OFFSET;
         target->m_procedure_call.push_back(item);
     }
 
@@ -271,11 +271,11 @@ T100BOOL T100RealMerger::merge_data(T100SegmentData* source, T100SegmentData* ta
             return T100FALSE;
         }
 
-        vd->offset = offset;
+        vd->OFFSET = offset;
     }
 
     for(auto item : source->m_label_call){
-        item->offset = length + item->offset;
+        item->OFFSET = length + item->OFFSET;
         target->m_label_call.push_back(item);
     }
 
@@ -298,14 +298,14 @@ T100BOOL T100RealMerger::relocate(T100RealInfo& info)
 
     for(T100LABEL_CALL* item : info.getData().m_label_call){
         if(item){
-            offset = item->offset;
+            offset = item->OFFSET;
 
-            T100LABEL_DEFINE* ld = T100ProduceInfo::getLabelDrawer().getLabelDefine(item->name);
+            T100LABEL_DEFINE* ld = T100ProduceInfo::getLabelDrawer().getLabelDefine(item->NAME);
 
             if(ld){
                 if(ld->ISVIRTUAL || ld->ISSHARE)continue;
 
-                temp = ld->offset;
+                temp = ld->OFFSET;
 
                 info.getData().getMem()[offset] = temp + os + size;
             }else{
@@ -321,16 +321,16 @@ T100BOOL T100RealMerger::relocate(T100RealInfo& info)
 
     for(T100VARIABLE_CALL* item : info.getCode().m_variable_call){
         if(item){
-            offset = item->offset;
+            offset = item->OFFSET;
 
-            T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(item->name);
+            T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(item->NAME);
 
             if(vd){
                 if(vd->ISVIRTUAL || vd->ISSHARE){
-                    info.getCode().getMem()[offset] = vd->offset;
+                    info.getCode().getMem()[offset] = vd->OFFSET;
                     continue;
                 }else{
-                    info.getCode().getMem()[offset] = vd->offset + 2;
+                    info.getCode().getMem()[offset] = vd->OFFSET + 2;
                 }
             }else{
                 return T100FALSE;
@@ -342,9 +342,9 @@ T100BOOL T100RealMerger::relocate(T100RealInfo& info)
 
     for(T100LABEL_CALL* item : info.getCode().m_label_call){
         if(item){
-            offset = item->offset;
+            offset = item->OFFSET;
 
-            T100LABEL_DEFINE* ld = T100ProduceInfo::getLabelDrawer().getLabelDefine(item->name);
+            T100LABEL_DEFINE* ld = T100ProduceInfo::getLabelDrawer().getLabelDefine(item->NAME);
 
             if(ld){
                 if(ld->ISVIRTUAL || ld->ISSHARE)continue;
@@ -362,16 +362,16 @@ T100BOOL T100RealMerger::relocate(T100RealInfo& info)
 
     for(T100PROCEDURE_CALL* item : info.getCode().m_procedure_call){
         if(item){
-            offset = item->offset;
+            offset = item->OFFSET;
 
-            T100PROCEDURE_DEFINE* pd = T100ProduceInfo::getProcedureDrawer().getProcedureDefine(item->name);
+            T100PROCEDURE_DEFINE* pd = T100ProduceInfo::getProcedureDrawer().getProcedureDefine(item->NAME);
 
             if(pd){
-                temp = pd->offset;
+                temp = pd->OFFSET;
 
                 info.getCode().getMem()[offset] = temp + os;
             }else{
-                T100TestTools::Print(item->name.to_wstring());
+                //T100TestTools::Print(item->name.to_wstring());
                 return T100FALSE;
             }
         }else{
@@ -388,8 +388,8 @@ T100BOOL T100RealMerger::save()
 
     name = T100ProduceInfo::getName();
 
-    T100SymbolFile          symbol(name);
-    T100SymbolFileWriter*   writer      = T100NULL;
+    T100Component::T100SymbolFile          symbol(name);
+    T100Component::T100SymbolFileWriter*   writer      = T100NULL;
 
     writer = symbol.getWriter();
     if(!writer){

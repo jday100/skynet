@@ -110,7 +110,7 @@ T100BOOL T100VirtualMerger::merge(T100SEGMENT_DATA_VECTOR& datas)
                 return T100FALSE;
             }
         }else{
-            result = mergeData(item, m_info->m_data, m_info->datas, m_datas);
+            result = mergeData(item, m_info->m_data, m_info->m_datas, m_datas);
             if(!result){
                 return T100FALSE;
             }
@@ -186,7 +186,7 @@ T100BOOL T100VirtualMerger::mergeCode(T100SegmentCode* target, T100SegmentCode* 
             return T100FALSE;
         }
 
-        ld->offset = offset;
+        ld->OFFSET = offset;
     }
 
     for(auto it : source->m_procedure_hash){
@@ -201,21 +201,21 @@ T100BOOL T100VirtualMerger::mergeCode(T100SegmentCode* target, T100SegmentCode* 
             return T100FALSE;
         }
 
-        pd->offset = offset;
+        pd->OFFSET = offset;
     }
 
     for(auto item : source->m_variable_call){
-        item->offset = length + item->offset;
+        item->OFFSET = length + item->OFFSET;
         target->m_variable_call.push_back(item);
     }
 
     for(auto item : source->m_label_call){
-        item->offset = length + item->offset;
+        item->OFFSET = length + item->OFFSET;
         target->m_label_call.push_back(item);
     }
 
     for(auto item : source->m_procedure_call){
-        item->offset = length + item->offset;
+        item->OFFSET = length + item->OFFSET;
         target->m_procedure_call.push_back(item);
     }
 
@@ -252,13 +252,13 @@ T100BOOL T100VirtualMerger::mergeData(T100SegmentData* target, T100SegmentData* 
     for(auto item : source->m_label_call){
         T100WORD        offset;
 
-        T100LABEL_DEFINE* ld = T100ProduceInfo::getLabelDrawer().getLabelDefine(item->name);
+        T100LABEL_DEFINE* ld = T100ProduceInfo::getLabelDrawer().getLabelDefine(item->NAME);
         if(!ld){
             return T100FALSE;
         }
 
-        offset = ld->offset;
-        target->getMem()[offset] = ld->offset;
+        offset = ld->OFFSET;
+        target->getMem()[offset] = ld->OFFSET;
     }
 
     for(auto it : source->m_variable_hash){
@@ -273,7 +273,7 @@ T100BOOL T100VirtualMerger::mergeData(T100SegmentData* target, T100SegmentData* 
             return T100FALSE;
         }
 
-        vd->offset = offset;
+        vd->OFFSET = offset;
     }
 
     return T100TRUE;
@@ -344,7 +344,7 @@ T100Segment* T100VirtualMerger::find(T100SEGMENT_KEY* key, T100SEGMENT_HASH& seg
     return it->second;
 }
 
-T100BOOL T100Virtualmerger::mergeCode(T100SegmentCode* source, T100SegmentCode*& target, T100SEGMENT_CODE_VECTOR& codes_vector, T100SEGMENT_HASH& codes_hash)
+T100BOOL T100VirtualMerger::mergeCode(T100SegmentCode* source, T100SegmentCode*& target, T100SEGMENT_CODE_VECTOR& codes_vector, T100SEGMENT_HASH& codes_hash)
 {
     T100BOOL        result          = T100FALSE;
 
@@ -373,8 +373,8 @@ T100BOOL T100Virtualmerger::mergeCode(T100SegmentCode* source, T100SegmentCode*&
     }else{
         T100SEGMENT_KEY* key = T100NEW T100SEGMENT_KEY();
 
-        key->name       = source->getName();
-        key->location   = source->getLocation();
+        key->NAME       = source->getName();
+        key->LOCATION   = source->getLocation();
 
         T100Segment* seg = find(key, codes_hash);
 

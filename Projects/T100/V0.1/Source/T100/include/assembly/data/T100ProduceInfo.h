@@ -2,7 +2,8 @@
 #define T100PRODUCEINFO_H
 
 #include "T100AssemblyCommon.h"
-#include "T100SentenceMode.h"
+//#include "T100SentenceMode.h"
+
 
 namespace T100Assembly{
 class T100PartDrawer;
@@ -26,7 +27,7 @@ class T100ProduceInfo
 
         static T100BOOL                     clear();
 
-        static T100VOID                     setName(T100STRING);
+        static T100VOID                     setName(T100STRING&);
         static T100STRING&                  getName();
 
         static T100BOOL                     setDefaultCode(T100SegmentCode*);
@@ -61,5 +62,31 @@ class T100ProduceInfo
 };
 
 }
+
+
+
+#define         T100SEGMENT_CODE_VECTOR                 std::vector<T100Assembly::T100SegmentCode*>
+#define         T100SEGMENT_DATA_VECTOR                 std::vector<T100Assembly::T100SegmentData*>
+
+#define         T100PART_INFO_VECTOR                    std::vector<T100PartInfo*>
+#define         T100PART_INFO_HASH                      std::unordered_map<T100STRING, T100PartInfo*, T100Library::T100StringHash, T100Library::T100StringEqual>
+
+#define         T100VARIABLE_CALL                       T100ITEM
+#define         T100LABEL_CALL                          T100ITEM
+#define         T100PROCEDURE_CALL                      T100ITEM
+
+#define         T100VARIABLE_HASH                       std::unordered_map<T100STRING, T100VARIABLE_DEFINE*, T100Library::T100StringHash, T100Library::T100StringEqual>
+#define         T100VARIABLEOFFSET_HASH                 std::unordered_map<T100STRING, T100WORD, T100Library::T100StringHash, T100Library::T100StringEqual>
+#define         T100VARIABLECALL_VECTOR                 std::vector<T100LABEL_CALL*>
+
+#define         T100LABEL_HASH                          std::unordered_map<T100STRING, T100LABEL_DEFINE*, T100Library::T100StringHash, T100Library::T100StringEqual>
+#define         T100LABELOFFSET_HASH                    std::unordered_map<T100STRING, T100WORD, T100Library::T100StringHash, T100Library::T100StringEqual>
+#define         T100LABELCALL_VECTOR                    std::vector<T100LABEL_CALL*>
+
+#define         T100PROCEDURE_DEFINE                    T100ITEM
+#define         T100PROCEDURE_HASH                      std::unordered_map<T100STRING, T100PROCEDURE_DEFINE*, T100Library::T100StringHash, T100Library::T100StringEqual>
+#define         T100PROCEDUREOFFSET_HASH                std::unordered_map<T100STRING, T100WORD, T100Library::T100StringHash, T100Library::T100StringEqual>
+#define         T100PROCEDURECALL_VECTOR                std::vector<T100PROCEDURE_CALL*>
+
 
 #endif // T100PRODUCEINFO_H

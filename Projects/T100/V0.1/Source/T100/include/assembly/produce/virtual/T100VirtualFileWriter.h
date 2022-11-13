@@ -7,7 +7,7 @@
 
 namespace T100Assembly{
 
-class T100VirtualFileWriter : public T100ExecutableFileWriter
+class T100VirtualFileWriter : public T100Component::T100ExecutableFileWriter
 {
     public:
         T100VirtualFileWriter(T100STRING);

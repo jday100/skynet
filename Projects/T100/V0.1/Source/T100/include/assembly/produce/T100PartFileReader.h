@@ -7,7 +7,7 @@
 
 namespace T100Assembly{
 
-class T100PartFileReader : public T100FileReader
+class T100PartFileReader : public T100Library::T100FileReader
 {
     public:
         T100PartFileReader(T100STRING);

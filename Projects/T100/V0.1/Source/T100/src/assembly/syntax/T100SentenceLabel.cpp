@@ -46,7 +46,7 @@ T100BOOL T100SentenceLabel::setDefine(T100STRING& name)
 
     T100LABEL_DEFINE* ld = T100NEW T100LABEL_DEFINE();
 
-    ld->name        = name;
+    ld->NAME        = name;
 
     result = T100ProduceInfo::getLabelDrawer().setLabelDefine(name, ld);
     if(!result){

@@ -1,5 +1,7 @@
 #include "T100SentenceMode.h"
 
+#include "T100AssemblyHint.h"
+#include "T100AssemblyError.h"
 #include "T100ProduceInfo.h"
 
 namespace T100Assembly{

@@ -27,7 +27,7 @@ T100BOOL T100Assembly::run(T100ThisAppCmdLineResult& info)
 
     for(T100WSTRING item : info.PATHS){
         T100STRING  temp(item);
-        produce.getPathDrawer().append(temp);
+        produce.getClassPathDrawer().append(temp);
     }
 
     result = produce.run(source, target);

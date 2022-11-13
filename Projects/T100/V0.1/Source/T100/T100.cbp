@@ -324,6 +324,7 @@
 		<Unit filename="include/component/T100Scanner.h" />
 		<Unit filename="include/component/T100Token.h" />
 		<Unit filename="include/component/T100TokenTypes.h" />
+		<Unit filename="include/component/compiler/T100ExecutableCommon.h" />
 		<Unit filename="include/component/compiler/T100ExecutableFile.h" />
 		<Unit filename="include/component/compiler/T100ExecutableFileReader.h" />
 		<Unit filename="include/component/compiler/T100ExecutableFileWriter.h" />

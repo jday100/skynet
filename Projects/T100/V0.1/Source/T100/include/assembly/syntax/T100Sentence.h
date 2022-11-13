@@ -1,6 +1,7 @@
 #ifndef T100SENTENCE_H
 #define T100SENTENCE_H
 
+#include <atomic>
 #include "T100OrderTypes.h"
 #include "T100AssemblyCommon.h"
 #include "T100BuildInfo.h"
@@ -24,26 +25,26 @@ class T100Sentence
         virtual T100BOOL            build(T100BuildInfo*) = 0;
 
     protected:
-        T100BOOL                    parseOperator(T100OPERATOR&);
-        T100BOOL                    parseOperator(T100OPERATOR_COMPLEXUS&);
-        T100BOOL                    parseOperator(T100OPERATOR_BINOCULAR&);
-        T100BOOL                    parseComplexus(T100OPERATOR_COMPLEXUS&);
+        T100BOOL                    parseOperator(T100Component::T100OPERATOR&);
+        T100BOOL                    parseOperator(T100Component::T100OPERATOR_COMPLEXUS&);
+        T100BOOL                    parseOperator(T100Component::T100OPERATOR_BINOCULAR&);
+        T100BOOL                    parseComplexus(T100Component::T100OPERATOR_COMPLEXUS&);
 
-        T100BOOL                    parseNumber(T100OPERATOR&);
-        T100BOOL                    parseRegister(T100OPERATOR&);
-        T100BOOL                    parseExpression(T100OPERATOR&);
-        T100BOOL                    parseVariable(T100OPERATOR&);
-        T100BOOL                    parseLabel(T100OPERATOR&);
-        T100BOOL                    parseBrackets(T100OPERATOR*);
-        T100BOOL                    parseBrace(T100OPERATOR&, T100OPERATOR&);
+        T100BOOL                    parseNumber(T100Component::T100OPERATOR&);
+        T100BOOL                    parseRegister(T100Component::T100OPERATOR&);
+        T100BOOL                    parseExpression(T100Component::T100OPERATOR&);
+        T100BOOL                    parseVariable(T100Component::T100OPERATOR&);
+        T100BOOL                    parseLabel(T100Component::T100OPERATOR&);
+        T100BOOL                    parseBrackets(T100Component::T100OPERATOR&);
+        T100BOOL                    parseBrace(T100Component::T100OPERATOR&, T100Component::T100OPERATOR&);
 
     protected:
-        T100BOOL                    buildOperator(T100BuildInfo*, T100OPERATOR&, T100OPERATOR_BUILD&);
-        T100BOOL                    buildOperator(T100BuildInfo*, T100OPERATOR_COMPLEXUS&, T100OPERATOR_BUILD&);
-        T100BOOL                    buildOperator(T100BuildInfo*, T100OPERATOR_BINOCULAR&, T100OPERATOR_INFO&);
-        T100BOOL                    buildComplexus(T100BuildInfo*, T100OPERATOR_COMPLEXUS&, T100OPERATOR_BUILD&);
+        T100BOOL                    buildOperator(T100BuildInfo*, T100Component::T100OPERATOR&, T100Component::T100OPERATOR_BUILD&);
+        T100BOOL                    buildOperator(T100BuildInfo*, T100Component::T100OPERATOR_COMPLEXUS&, T100Component::T100OPERATOR_BUILD&);
+        T100BOOL                    buildOperator(T100BuildInfo*, T100Component::T100OPERATOR_BINOCULAR&, T100Component::T100OPERATOR_INFO&);
+        T100BOOL                    buildComplexus(T100BuildInfo*, T100Component::T100OPERATOR_COMPLEXUS&, T100Component::T100OPERATOR_BUILD&);
 
-        T100BOOL                    buildInfo(T100ORDER_TYPE, T100BuildInfo*, T100OPERATOR_INFO&);
+        T100BOOL                    buildInfo(T100Component::T100ORDER_TYPE, T100BuildInfo*, T100Component::T100OPERATOR_INFO&);
 
     protected:
         T100BOOL                    getProcedureOffset(T100BuildInfo*, T100STRING, T100WORD&);
@@ -54,7 +55,7 @@ class T100Sentence
         T100KeywordToken*           m_item          = T100NULL;
         std::atomic_bool*           m_loaded        = T100NULL;
 
-        T100SYMBOL_TYPE             m_type          = S_NONE;
+        T100Component::T100SYMBOL_TYPE             m_type          = T100Component::S_NONE;
 
         T100VOID                    create();
         T100VOID                    destroy();

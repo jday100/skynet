@@ -10,7 +10,7 @@
 namespace T100Assembly{
 class T100Sentence;
 
-class T100SentenceToken : public T100Token
+class T100SentenceToken : public T100Component::T100Token
 {
     public:
         T100SentenceToken();

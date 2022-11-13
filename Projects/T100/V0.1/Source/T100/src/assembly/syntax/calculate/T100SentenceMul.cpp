@@ -1,5 +1,7 @@
 #include "T100SentenceMul.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceMul::T100SentenceMul(T100SentenceScanner* scanner)
@@ -31,7 +33,7 @@ T100BOOL T100SentenceMul::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE    = T100ORDER_MUL;
+    order.BYTE0.BYTE    = T100Component::T100ORDER_MUL;
 
     info->setValue(order.WORD);
     info->next();

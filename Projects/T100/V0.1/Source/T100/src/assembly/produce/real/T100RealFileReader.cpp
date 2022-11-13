@@ -3,7 +3,7 @@
 namespace T100Assembly{
 
 T100RealFileReader::T100RealFileReader(T100STRING file)
-    :T100FileReader(file.to_wstring())
+    :T100Library::T100FileReader(file.to_wstring())
 {
     //ctor
 }

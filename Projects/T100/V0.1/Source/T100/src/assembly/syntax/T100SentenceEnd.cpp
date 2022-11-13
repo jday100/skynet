@@ -1,6 +1,6 @@
 #include "T100SentenceEnd.h"
 
-namespage T100Assembly{
+namespace T100Assembly{
 
 T100SentenceEnd::T100SentenceEnd(T100SentenceScanner* scanner)
     :T100Sentence(scanner)

@@ -5,7 +5,7 @@
 
 namespace T100Assembly{
 
-class T100CharToken : public T100Token
+class T100CharToken : public T100Component::T100Token
 {
     public:
         T100CharToken();

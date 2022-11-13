@@ -7,7 +7,7 @@
 
 namespace T100Assembly{
 
-class T100PartFileWriter : public T100FileWriter
+class T100PartFileWriter : public T100Library::T100FileWriter
 {
     public:
         T100PartFileWriter(T100STRING);

@@ -1,5 +1,7 @@
 #include "T100SentenceJz.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceJz::T100SentenceJz(T100SentenceScanner* scanner)
@@ -32,12 +34,12 @@ T100BOOL T100SentenceJz::build(T100BuildInfo* info)
 {
     T100BOOL                result;
     T100WORD_BITS           order;
-    T100OPERATOR_BUILD      build;
+    T100Component::T100OPERATOR_BUILD      build;
 
-    order.BYTE0.BYTE    = T100ORDER_JZ;
+    order.BYTE0.BYTE    = T100Component::T100ORDER_JZ;
 
     build.BASE_USED     = T100FALSE;
-    build.BASE_TYPE     = T_NONE;
+    build.BASE_TYPE     = T100Component::T_NONE;
     result = buildOperator(info, target, build);
     if(!result){
         return T100FALSE;

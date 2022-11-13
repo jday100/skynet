@@ -1,9 +1,11 @@
 #include "T100SentenceJump.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceJump::T100SentenceJump(T100SentenceScanner* scanner)
-    :T100Scanner(scanner)
+    :T100Sentence(scanner)
 {
     //ctor
 }
@@ -32,9 +34,9 @@ T100BOOL T100SentenceJump::build(T100BuildInfo* info)
 {
     T100BOOL                result;
     T100WORD_BITS           order;
-    T100OPERATOR_BUILD      build;
+    T100Component::T100OPERATOR_BUILD      build;
 
-    order.BYTE0.BYTE = T100ORDER_JUMP;
+    order.BYTE0.BYTE = T100Component::T100ORDER_JUMP;
 
     result = buildOperator(info, target, build);
     if(!result){
@@ -47,7 +49,7 @@ T100BOOL T100SentenceJump::build(T100BuildInfo* info)
     info->setValue(order.WORD);
     info->next();
 
-    if(build.BASE_USED && build>BASE_FLAG){
+    if(build.BASE_USED && build.BASE_FLAG){
         info->setValue(build.BASE_VALUE);
         info->next();
     }

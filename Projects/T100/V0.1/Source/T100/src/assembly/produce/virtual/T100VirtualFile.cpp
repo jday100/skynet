@@ -26,7 +26,7 @@ T100VirtualFileWriter* T100VirtualFile::getWriter()
 {
     T100VirtualFileWriter*      result          = T100NULL;
 
-    result = T100NEW T100VirtaulFileWriter(getName());
+    result = T100NEW T100VirtualFileWriter(getName());
 
     return result;
 }

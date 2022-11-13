@@ -7,7 +7,7 @@
 #include "T100StringEqual.h"
 #include "T100Token.h"
 
-#define     T100KEYWORD_HASH            std::unordered_map<T100STRING, T100TOKEN_TYPE, T100StringHash, T100StringEqual>
+#define     T100KEYWORD_HASH            std::unordered_map<T100STRING, T100TOKEN_TYPE, T100Library::T100StringHash, T100Library::T100StringEqual>
 
 namespace T100Assembly{
 

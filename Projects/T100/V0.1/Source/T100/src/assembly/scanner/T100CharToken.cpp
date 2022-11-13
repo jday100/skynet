@@ -3,6 +3,7 @@
 namespace T100Assembly{
 
 T100CharToken::T100CharToken()
+    :T100Component::T100Token()
 {
     //ctor
 }

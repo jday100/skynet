@@ -5,6 +5,7 @@
 namespace T100Assembly{
 
 T100SentenceToken::T100SentenceToken()
+    :T100Component::T100Token()
 {
     //ctor
 }

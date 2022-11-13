@@ -4,11 +4,10 @@
 #include "T100AssemblyCommon.h"
 #include "T100SentenceToken.h"
 
-#define     T100SEGMENT_VECTOR          std::vector<T100SegmentToken*>
 
 namespace T100Assembly{
 
-class T100SegmentToken : public T100Token
+class T100SegmentToken : public T100Component::T100Token
 {
     public:
         T100SegmentToken();
@@ -28,6 +27,9 @@ class T100SegmentToken : public T100Token
 
     private:
 };
+
+#define     T100SEGMENT_VECTOR          std::vector<T100SegmentToken*>
+
 
 }
 

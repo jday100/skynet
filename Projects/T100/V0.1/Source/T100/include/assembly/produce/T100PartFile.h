@@ -6,7 +6,7 @@
 
 namespace T100Assembly{
 
-class T100PartFile : public T100File
+class T100PartFile : public T100Library::T100File
 {
     public:
         T100PartFile(T100STRING);

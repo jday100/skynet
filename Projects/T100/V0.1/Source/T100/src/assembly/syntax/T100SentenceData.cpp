@@ -1,5 +1,7 @@
 #include "T100SentenceData.h"
 
+#include "T100AssemblyError.h"
+#include "T100AssemblyHint.h"
 #include "T100ProduceInfo.h"
 
 namespace T100Assembly{
@@ -183,7 +185,7 @@ READ_NEXT:
 
 T100BOOL T100SentenceData::build(T100BuildInfo* info)
 {
-    return info->opeSegment(this);
+    return info->openSegment(this);
 }
 
 }

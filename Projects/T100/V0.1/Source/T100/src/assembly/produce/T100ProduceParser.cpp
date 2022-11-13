@@ -39,7 +39,7 @@ T100BOOL T100ProduceParser::run(T100STRING& file, T100ProduceInfo& info)
 {
     T100BOOL        result;
 
-    m_path_drawer->setRoot(T100PathTools::getCwd());
+    m_path_drawer->setRoot(T100Library::T100PathTools::getCwd());
 
     result = load(file, T100TRUE);
 
@@ -61,15 +61,15 @@ T100BOOL T100ProduceParser::load(T100STRING& file, T100BOOL flag)
     T100WSTRING         path;
     T100WSTRING         name;
 
-    cwd     = T100PathTools::getCwd();
+    cwd     = T100Library::T100PathTools::getCwd();
     current = full.to_wstring();
 
-    T100PathTools::format(current, path, name);
-    T100PathTools::cddir(path);
+    T100Library::T100PathTools::format(current, path, name);
+    T100Library::T100PathTools::chdir(path);
 
     result = scan(name, flag);
 
-    T100PathTools::chdir(cwd);
+    T100Library::T100PathTools::chdir(cwd);
 
     return result;
 }
@@ -89,7 +89,7 @@ T100BOOL T100ProduceParser::scan(T100WSTRING& file, T100BOOL flag)
     while(scanner->next(token)){
         if(token.eof)break;
 
-        if(T100FILE_SOURCE == token.type){
+        if(T100PART_SOURCE == token.type){
             if(flag){
                 token.master = T100TRUE;
             }
@@ -124,12 +124,12 @@ T100BOOL T100ProduceParser::append(T100PartToken& token)
 
     name = token.file.to_wstring();
 
-    T100PathTools::full(name, full);
+    T100Library::T100PathTools::full(name, full);
 
     if(m_produce->getPartDrawer().exists(T100STRING(full))){
         return T100TRUE;
     }else{
-        if(T100FILE_IMPORT == token.type){
+        if(T100PART_IMPORT == token.type){
             T100STRING      part(name);
             result = load(part, T100FALSE);
         }else{
@@ -173,7 +173,7 @@ T100BOOL T100ProduceParser::add(T100WSTRING& full, T100PartToken& token)
 T100BOOL T100ProduceParser::search(T100STRING file, T100STRING& full)
 {
     T100BOOL        result;
-    T100File        item(file.to_wstring());
+    T100Library::T100File        item(file.to_wstring());
 
     if(item.exists()){
         full = file;

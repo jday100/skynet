@@ -79,7 +79,7 @@ T100PartScanner* T100PartScannerTools::create(T100STRING file)
     if(m_segment_scanner){
         m_segment_scanner->setSource(m_sentence_scanner);
     }else{
-        m_byte->scanner->close();
+        m_byte_scanner->close();
 
         T100SAFE_DELETE(m_byte_scanner);
         T100SAFE_DELETE(m_char_scanner);

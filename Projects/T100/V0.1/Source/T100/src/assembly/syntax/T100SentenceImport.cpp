@@ -27,7 +27,7 @@ T100BOOL T100SentenceImport::parse()
     if(T100CONSTANT_STRING == m_item->type){
         type            = T100SENTENCE_IMPORT;
         m_token->type   = T100SENTENCE_IMPORT;
-        result = T100String32Tools::format(m_item->value, file);
+        result = T100Library::T100String32Tools::format(m_item->value, file);
         if(!result){
             return T100FALSE;
         }

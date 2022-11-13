@@ -13,7 +13,7 @@ class T100SentenceUnlock : public T100Sentence
 
         T100BOOL            parse();
 
-        T100BOOL            build(T100BuildInf*);
+        T100BOOL            build(T100BuildInfo*);
 
     protected:
 

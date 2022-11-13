@@ -5,6 +5,8 @@
 #include "T100Token.h"
 #include "T100SegmentCode.h"
 #include "T100SegmentData.h"
+#include "T100ProduceInfo.h"
+
 
 namespace T100Assembly{
 class T100Sentence;
@@ -42,7 +44,7 @@ class T100BuildInfo
         T100SegmentData*            getData();
 
     protected:
-        T100TOKEN_TYPE              m_type          = T100TOKEn_NONE;
+        T100TOKEN_TYPE              m_type          = T100TOKEN_NONE;
         T100BOOL                    m_code_master   = T100FALSE;
         T100BOOL                    m_data_master   = T100FALSE;
         T100SegmentCode*            m_code          = T100NULL;

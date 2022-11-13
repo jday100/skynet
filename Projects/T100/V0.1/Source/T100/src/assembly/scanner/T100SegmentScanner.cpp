@@ -5,6 +5,7 @@
 namespace T100Assembly{
 
 T100SegmentScanner::T100SegmentScanner()
+    :T100Component::T100Scanner()
 {
     //ctor
 }
@@ -14,12 +15,12 @@ T100SegmentScanner::~T100SegmentScanner()
     //dtor
 }
 
-T100VOID T100SegmentScanner::setSource(T100Scanner* scanner)
+T100VOID T100SegmentScanner::setSource(T100Component::T100Scanner* scanner)
 {
     m_scanner = dynamic_cast<T100SentenceScanner*>(scanner);
 }
 
-T100Scanner* T100SegmentScanner::getSource()
+T100Component::T100Scanner* T100SegmentScanner::getSource()
 {
     return m_scanner;
 }
@@ -46,7 +47,7 @@ T100BOOL T100SegmentScanner::read()
     return m_scanner->next(m_item);
 }
 
-T100BOOL T100SegmentScanner::next(T100Token& token)
+T100BOOL T100SegmentScanner::next(T100Component::T100Token& token)
 {
     m_token = (T100SegmentToken*)&token;
     m_token->clear();

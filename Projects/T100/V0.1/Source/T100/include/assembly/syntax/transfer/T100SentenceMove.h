@@ -11,7 +11,7 @@ class T100SentenceMove : public T100Sentence
         T100SentenceMove(T100SentenceScanner*);
         virtual ~T100SentenceMove();
 
-        T100OPERATOR_BINOCULAR          ops;
+        T100Component::T100OPERATOR_BINOCULAR          ops;
 
         T100BOOL                        parse();
 

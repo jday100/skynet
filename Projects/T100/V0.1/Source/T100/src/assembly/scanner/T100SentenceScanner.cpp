@@ -8,6 +8,7 @@
 namespace T100Assembly{
 
 T100SentenceScanner::T100SentenceScanner()
+    :T100Component::T100Scanner()
 {
     //ctor
 }
@@ -17,12 +18,12 @@ T100SentenceScanner::~T100SentenceScanner()
     //dtor
 }
 
-T100VOID T100SentenceScanner::setSource(T100Scanner* obj)
+T100VOID T100SentenceScanner::setSource(T100Component::T100Scanner* obj)
 {
     m_scanner = dynamic_cast<T100KeywordScanner*>(obj);
 }
 
-T100Scanner* T100SentenceScanner::getSource()
+T100Component::T100Scanner* T100SentenceScanner::getSource()
 {
     return m_scanner;
 }
@@ -62,7 +63,7 @@ T100BOOL T100SentenceScanner::read()
     return T100TRUE;
 }
 
-T100BOOL T100SentenceScanner::next(T100Token& token)
+T100BOOL T100SentenceScanner::next(T100Component::T100Token& token)
 {
     m_token = (T100SentenceToken*)&token;
     m_token->clear();
@@ -207,7 +208,7 @@ READ_NEXT:
     if(result){
         append();
 
-        T100AssemblyLog::info(T100LOG_SENTENCE, T100AssemblyHint::sentence_hint(getToken(), T100SENTENCESCAN_SENTENCE_READ_SUCCESS));
+        //T100AssemblyLog::info(T100LOG_SENTENCE, T100AssemblyHint::sentence_hint(getToken(), T100SENTENCESCAN_SENTENCE_READ_SUCCESS));
     }else{
         T100AssemblyError::err      = T100TRUE;
 

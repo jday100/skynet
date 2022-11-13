@@ -1,8 +1,11 @@
 #include "T100CharScanner.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100CharScanner::T100CharScanner()
+    :T100Component::T100Scanner()
 {
     //ctor
 }
@@ -12,12 +15,12 @@ T100CharScanner::~T100CharScanner()
     //dtor
 }
 
-T100VOID T100CharScanner::setSource(T100Scanner* obj)
+T100VOID T100CharScanner::setSource(T100Component::T100Scanner* obj)
 {
     m_scanner   = dynamic_cast<T100ByteScanner*>(obj);
 }
 
-T100Scanner* T100CharScanner::getSource()
+T100Component::T100Scanner* T100CharScanner::getSource()
 {
     return m_scanner;
 }
@@ -206,7 +209,7 @@ T100BOOL T100CharScanner::append()
 
             if(T100BYTE_ONE != m_item.type){
                 m_token->type   = T100TOKEN_ERROR;
-                m_token->err    = T100EROR_CHAR;
+                m_token->err    = T100ERROR_CHAR;
                 return T100FALSE;
             }
 
@@ -294,7 +297,7 @@ T100BOOL T100CharScanner::read()
     return T100FALSE;
 }
 
-T100BOOL T100CharScanner::next(T100Token& token)
+T100BOOL T100CharScanner::next(T100Component::T100Token& token)
 {
     m_token = (T100CharToken*)&token;
     clear();

@@ -1,5 +1,7 @@
 #include "T100SentenceVariable.h"
 
+#include "T100AssemblyHint.h"
+#include "T100AssemblyError.h"
 #include "T100StringTools.h"
 #include "T100String32Tools.h"
 #include "T100ProduceInfo.h"
@@ -69,7 +71,7 @@ READ_NEXT:
         break;
     case T100KEYWORD_INTEGER:
         {
-            target.DATA_TYPE    = T100DATA_INTEGER;
+            target.DATA_TYPE    = T100Component::T100DATA_INTEGER;
             target.LENGTH       = 1;
             target.VALUE        = 0;
 
@@ -78,7 +80,7 @@ READ_NEXT:
         break;
     case T100KEYWORD_FLOAT:
         {
-            target.DATA_TYPE    = T100DATA_FLOAT;
+            target.DATA_TYPE    = T100Component::T100DATA_FLOAT;
             target.LENGTH       = 1;
             target.VALUE        = 0.0;
 
@@ -87,7 +89,7 @@ READ_NEXT:
         break;
     case T100KEYWORD_STRING:
         {
-            target.DATA_TYPE    = T100DATA_STRING;
+            target.DATA_TYPE    = T100Component::T100DATA_STRING;
             target.LENGTH       = 1;
             target.NAME.clear();
 
@@ -140,8 +142,8 @@ READ_NEXT:
         break;
     case T100CONSTANT_INTEGER:
         {
-            if(T100DATA_INTEGER == target.DATA_TYPE){
-                target.VALUE = T100StringTools::to_long(m_item->value.to_wstring());
+            if(T100Component::T100DATA_INTEGER == target.DATA_TYPE){
+                target.VALUE = T100Library::T100StringTools::to_long(m_item->value.to_wstring());
 
                 setLoaded(T100FALSE);
                 return T100TRUE;
@@ -153,8 +155,8 @@ READ_NEXT:
         break;
     case T100CONSTANT_FLOAT:
         {
-            if(T100DATA_FLOAT == target.DATA_TYPE){
-                target.VALUE = T100StringTools::to_float(m_item->value.to_wstring());
+            if(T100Component::T100DATA_FLOAT == target.DATA_TYPE){
+                target.VALUE = T100Library::T100StringTools::to_float(m_item->value.to_wstring());
 
                 setLoaded(T100FALSE);
                 return T100TRUE;
@@ -166,7 +168,7 @@ READ_NEXT:
         break;
     case T100CONSTANT_STRING:
         {
-            if(T100DATA_STRING == target.DATA_TYPE){
+            if(T100Component::T100DATA_STRING == target.DATA_TYPE){
                 target.NAME = m_item->value;
 
                 setLoaded(T100FALSE);
@@ -186,7 +188,7 @@ READ_NEXT:
 
             if(T100KEYWORD_LABEL == m_item->type){
                 target.NAME         = m_item->value;
-                target.ADDR_TYPE    = S_ADD;
+                target.ADDR_TYPE    = T100Component::S_ADD;
 
                 setLoaded(T100FALSE);
                 return T100TRUE;
@@ -226,17 +228,17 @@ T100BOOL T100SentenceVariable::build(T100BuildInfo* info)
     T100BOOL        result          = T100TRUE;
 
     switch(target.DATA_TYPE){
-    case T100DATA_FLOAT:
+    case T100Component::T100DATA_FLOAT:
         {
             result = buildFloat(info);
         }
         break;
-    case T100DATA_INTEGER:
+    case T100Component::T100DATA_INTEGER:
         {
             result = buildInteger(info);
         }
         break;
-    case T100DATA_STRING:
+    case T100Component::T100DATA_STRING:
         {
             result = buildString(info);
         }
@@ -252,7 +254,7 @@ T100BOOL T100SentenceVariable::setDefine()
 
     T100VARIABLE_DEFINE* vd = T100NEW T100VARIABLE_DEFINE();
 
-    vd->name        = name;
+    vd->NAME        = name;
     vd->LENGTH      = target.LENGTH;
     vd->VALUE       = target.VALUE;
     vd->TYPE        = target.DATA_TYPE;
@@ -287,11 +289,11 @@ T100BOOL T100SentenceVariable::buildFloat(T100BuildInfo* info)
         T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(name);
 
         if(!vd){
-            T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
             return T100FALSE;
         }
 
-        vd->name        = name;
+        vd->NAME        = name;
         vd->LENGTH      = target.LENGTH;
         vd->TYPE        = target.DATA_TYPE;
         vd->OFFSET      = offset;
@@ -307,7 +309,7 @@ T100BOOL T100SentenceVariable::buildInteger(T100BuildInfo* info)
     T100BOOL        result          = T100TRUE;
     T100WORD        offset;
 
-    if(S_ADD == target.ADDR_TYPE){
+    if(T100Component::S_ADD == target.ADDR_TYPE){
         result = info->getData()->setWord(offset, target.VALUE);
 
         if(result){
@@ -316,7 +318,7 @@ T100BOOL T100SentenceVariable::buildInteger(T100BuildInfo* info)
             T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(name);
 
             if(!vd){
-                T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                 return T100FALSE;
             }
 
@@ -325,13 +327,13 @@ T100BOOL T100SentenceVariable::buildInteger(T100BuildInfo* info)
             vd->TYPE        = target.DATA_TYPE;
             vd->OFFSET      = offset;
             vd->ISVIRTUAL   = info->getData()->isVirtual;
-            vd->ISSHARE     = info->getData()->isShare();
+            vd->ISSHARE     = info->getData()->isShare;
 
             T100BOOL    value = vd->ISSHARE;
 
             result = T100ProduceInfo::getVariableDrawer().setVariableDefine(name, vd);
             if(!result){
-                T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
                 return T100FALSE;
             }
 
@@ -362,7 +364,7 @@ T100BOOL T100SentenceVariable::buildInteger(T100BuildInfo* info)
         T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(name);
 
         if(!vd){
-            T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
             return T100FALSE;
         }
 
@@ -389,7 +391,7 @@ T100BOOL T100SentenceVariable::buildString(T100BuildInfo* info)
     //test
     T100STRING      temp;
 
-    if(!T100String32Tools::format(target.NAME, temp)){
+    if(!T100Library::T100String32Tools::format(target.NAME, temp)){
         return T100FALSE;
     }
 
@@ -399,7 +401,7 @@ T100BOOL T100SentenceVariable::buildString(T100BuildInfo* info)
 
         T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(name);
         if(!vd){
-            T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::build_hint(type, data, T100BUILD_SENTENCE_ERROR));
             return T100FALSE;
         }
 

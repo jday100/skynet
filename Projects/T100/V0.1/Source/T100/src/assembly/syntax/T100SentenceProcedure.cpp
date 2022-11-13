@@ -1,5 +1,7 @@
 #include "T100SentenceProcedure.h"
 
+#include "T100AssemblyHint.h"
+#include "T100AssemblyError.h"
 #include "T100ProduceInfo.h"
 #include "T100ProcedureDrawer.h"
 
@@ -112,7 +114,7 @@ T100BOOL T100SentenceProcedure::setDefine(T100STRING& name)
 
     T100PROCEDURE_DEFINE* pd = T100NEW T100PROCEDURE_DEFINE();
 
-    pd->name    = name;
+    pd->NAME    = name;
 
     result = T100ProduceInfo::getProcedureDrawer().setProcedureDefine(name, pd);
 

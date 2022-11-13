@@ -6,10 +6,10 @@
 
 namespace T100Assembly{
 
-class T100ProduceFile : public T100File
+class T100ProduceFile : public T100Library::T100File
 {
     public:
-        T100ProduceFile(T100STRINT);
+        T100ProduceFile(T100STRING);
         virtual ~T100ProduceFile();
 
     protected:

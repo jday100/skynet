@@ -1,5 +1,7 @@
 #include "T100SentenceJnz.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceJnz::T100SentenceJnz(T100SentenceScanner* scanner)
@@ -32,9 +34,9 @@ T100BOOL T100SentenceJnz::build(T100BuildInfo* info)
 {
     T100BOOL                result;
     T100WORD_BITS           order;
-    T100OPERATOR_BUILD      build;
+    T100Component::T100OPERATOR_BUILD      build;
 
-    order.BYTE0.BYTE = T100ORDER_JNZ;
+    order.BYTE0.BYTE = T100Component::T100ORDER_JNZ;
 
     result = buildOperator(info, target, build);
     if(!result){

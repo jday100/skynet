@@ -1,5 +1,7 @@
 #include "T100SentenceOr.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceOr::T100SentenceOr(T100SentenceScanner* scanner)
@@ -31,7 +33,7 @@ T100BOOL T100SentenceOr::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE    = T100ORDER_OR;
+    order.BYTE0.BYTE    = T100Component::T100ORDER_OR;
 
     info->setValue(order.WORD);
     info->next();

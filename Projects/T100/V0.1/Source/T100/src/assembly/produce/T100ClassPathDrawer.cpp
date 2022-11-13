@@ -37,7 +37,7 @@ T100BOOL T100ClassPathDrawer::find(T100STRING file, T100STRING& result)
 
         path = m_root + L"\\" + file;
 
-        T100File    target(path.to_wstring());
+        T100Library::T100File    target(path.to_wstring());
 
         if(target.exists()){
             result = path;
@@ -45,12 +45,12 @@ T100BOOL T100ClassPathDrawer::find(T100STRING file, T100STRING& result)
         }
     }
 
-    fot(T100STRING& item : m_paths){
+    for(T100STRING& item : m_paths){
         T100STRING      path;
 
         path = item + L"\\" + file;
 
-        T100File    target(path.to_wstring());
+        T100Library::T100File    target(path.to_wstring());
 
         if(target.exists()){
             result = path;
@@ -63,7 +63,7 @@ T100BOOL T100ClassPathDrawer::find(T100STRING file, T100STRING& result)
 
         path = m_root + L"\\" + item + L"\\" + file;
 
-        T100File    target(path.to_wstring());
+        T100Library::T100File    target(path.to_wstring());
 
         if(target.exists()){
             result = path;

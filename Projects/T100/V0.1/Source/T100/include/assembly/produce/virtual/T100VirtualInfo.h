@@ -5,7 +5,7 @@
 
 namespace T100Assembly{
 
-class T100VirtualInfo : public T100ExecutableInfo
+class T100VirtualInfo : public T100Component::T100ExecutableInfo
 {
     public:
         T100VirtualInfo();

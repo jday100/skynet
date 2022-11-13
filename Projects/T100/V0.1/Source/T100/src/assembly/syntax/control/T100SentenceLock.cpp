@@ -1,9 +1,11 @@
 #include "T100SentenceLock.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceLock::T100SentenceLock(T100SentenceScanner* scanner)
-    :T100Scanner(scanner)
+    :T100Sentence(scanner)
 {
     //ctor
 }
@@ -31,7 +33,7 @@ T100BOOL T100SentenceLock::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE = T100ORDER_LOCK;
+    order.BYTE0.BYTE = T100Component::T100ORDER_LOCK;
 
     info->setValue(order.WORD);
     info->next();

@@ -12,7 +12,7 @@ class T100SegmentHash
         virtual ~T100SegmentHash();
 
         std::size_t operator()(const T100SEGMENT_KEY& key) const {
-            return std::hash<std::u32string>()(key.name.m_string32.m_string32) ^ std::hash<T100WORD>()(key.location);
+            return std::hash<std::u32string>()(key.NAME.m_string32.m_string32) ^ std::hash<T100WORD>()(key.LOCATION);
         }
 
     protected:

@@ -6,6 +6,7 @@
 #include "T100SegmentToken.h"
 #include "T100ProduceInfo.h"
 #include "T100VirtualInfo.h"
+#include "T100PartInfo.h"
 
 namespace T100Assembly{
 

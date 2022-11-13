@@ -1,5 +1,7 @@
 #include "T100SentenceIn.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceIn::T100SentenceIn(T100SentenceScanner* scanner)
@@ -13,7 +15,7 @@ T100SentenceIn::~T100SentenceIn()
     //dtor
 }
 
-T100BOOL T100SentenceIn::parse();
+T100BOOL T100SentenceIn::parse()
 {
     T100BOOL        result          = T100TRUE;
 
@@ -37,15 +39,15 @@ T100BOOL T100SentenceIn::build(T100BuildInfo* info)
 {
     T100BOOL                result          = T100FALSE;
     T100WORD_BITS           order;
-    T100OPERATOR_INFO       build;
+    T100Component::T100OPERATOR_INFO       build;
 
     switch(target.TYPE){
-    case T100OPERATOR_ONE_ONE:
+    case T100Component::T100OPERATOR_ONE_ONE:
         {
             build.TARGET.OFFSET     = 0;
         }
         break;
-    case T100OPERATOR_THREE_THREE:
+    case T100Component::T100OPERATOR_THREE_THREE:
         {
             build.TARGET.OFFSET     = 1;
         }
@@ -61,7 +63,7 @@ T100BOOL T100SentenceIn::build(T100BuildInfo* info)
 
     build.SOURCE.OFFSET     = build.TARGET.OFFSET;
     build.SOURCE.BASE_USED  = T100FALSE;
-    build.SOURCE.BASE_TYPE  = T_NONE;
+    build.SOURCE.BASE_TYPE  = T100Component::T_NONE;
     result = buildOperator(info, source, build.SOURCE);
     if(!result){
         return T100FALSE;
@@ -69,7 +71,7 @@ T100BOOL T100SentenceIn::build(T100BuildInfo* info)
 
     build.TYPE      = target.TYPE;
 
-    result = buildInfo(T100ORDER_IN, info, build);
+    result = buildInfo(T100Component::T100ORDER_IN, info, build);
     if(!result){
         return T100FALSE;
     }

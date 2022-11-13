@@ -1,11 +1,12 @@
 #include "T100SentenceNop.h"
 
+#include "T100BitTypes.h"
 #include "T100Sentence.h"
 
 namespace T100Assembly{
 
 T100SentenceNop::T100SentenceNop(T100SentenceScanner* scanner)
-    :T100Scanner(scanner)
+    :T100Sentence(scanner)
 {
     //ctor
 }
@@ -33,7 +34,7 @@ T100BOOL T100SentenceNop::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE = T100ORDER_NOP;
+    order.BYTE0.BYTE = T100Component::T100ORDER_NOP;
 
     info->setValue(order.WORD);
     info->next();

@@ -3,6 +3,7 @@
 
 #include "T100ProduceMerger.h"
 #include "T100VirtualInfo.h"
+#include "T100PartInfo.h"
 
 namespace T100Assembly{
 

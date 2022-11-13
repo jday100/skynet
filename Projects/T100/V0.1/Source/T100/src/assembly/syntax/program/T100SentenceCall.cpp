@@ -1,5 +1,6 @@
 #include "T100SentenceCall.h"
 
+#include "T100BitTypes.h"
 #include "T100ProduceInfo.h"
 
 namespace T100Assembly{
@@ -70,7 +71,7 @@ READ_NEXT:
         break;
     default:
         m_token->type   = T100TOKEN_ERROR;
-        m_token->err    = T100ERROR_SENTENCE
+        m_token->err    = T100ERROR_SENTENCE;
         return T100FALSE;
     }
 
@@ -82,9 +83,9 @@ T100BOOL T100SentenceCall::build(T100BuildInfo* info)
     T100BOOL            result          = T100FALSE;
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE = T100ORDER_CALL;
-    order.BYTE1.BYTE = T_NONE;
-    order.BYTE2.BYTE = T_IMM;
+    order.BYTE0.BYTE = T100Component::T100ORDER_CALL;
+    order.BYTE1.BYTE = T100Component::T_NONE;
+    order.BYTE2.BYTE = T100Component::T_IMM;
 
     T100WORD        offset;
 
@@ -95,7 +96,7 @@ T100BOOL T100SentenceCall::build(T100BuildInfo* info)
 
     T100PROCEDURE_CALL* item = T100NEW T100PROCEDURE_CALL();
 
-    item->name      = name;
+    item->NAME      = name;
     item->OFFSET    = info->getOffset() + 1;
 
     info->addProcedureCall(item);

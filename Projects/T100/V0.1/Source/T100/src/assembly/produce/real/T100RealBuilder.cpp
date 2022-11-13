@@ -10,6 +10,8 @@
 #include "T100PartDrawer.h"
 #include "T100RealInfo.h"
 
+#include "T100Sentence.h"
+
 namespace T100Assembly{
 
 T100RealBuilder::T100RealBuilder()
@@ -74,7 +76,9 @@ T100BOOL T100RealBuilder::build(T100PartToken* token)
 {
     T100BOOL        result          = T100TRUE;
 
-    for(T100SegmentToken* item : token->segments()){
+    /*
+    //for(T100SegmentToken* item : token->segments()){
+    for(auto item : token->segments()){
         if(item){
             result = build(item);
             if(!result){
@@ -84,6 +88,7 @@ T100BOOL T100RealBuilder::build(T100PartToken* token)
             return T100FALSE;
         }
     }
+    */
 
     if(result){
         //result = m_produce->getPartDrawer().save(name, info);
@@ -129,7 +134,7 @@ T100BOOL T100RealBuilder::build(T100SentenceToken* token)
         T100WORD    type = token->type;
 
         if(token->value){
-            T100String  name = token->value->value;
+            T100STRING  name = token->value->value;
             return result;
         }
     }

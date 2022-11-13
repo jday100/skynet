@@ -1,5 +1,7 @@
 #include "T100SentenceDiv.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceDiv::T100SentenceDiv(T100SentenceScanner* scanner)
@@ -31,7 +33,7 @@ T100BOOL T100SentenceDiv::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE    = T100ORDER_DIV;
+    order.BYTE0.BYTE    = T100Component::T100ORDER_DIV;
 
     info->setValue(order.WORD);
     info->next();

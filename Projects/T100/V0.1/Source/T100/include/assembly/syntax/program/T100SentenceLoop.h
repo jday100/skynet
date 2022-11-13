@@ -11,7 +11,7 @@ class T100SentenceLoop : public T100Sentence
         T100SentenceLoop(T100SentenceScanner*);
         virtual ~T100SentenceLoop();
 
-        T100OPERATOR            target;
+        T100Component::T100OPERATOR            target;
 
         T100BOOL                parse();
 

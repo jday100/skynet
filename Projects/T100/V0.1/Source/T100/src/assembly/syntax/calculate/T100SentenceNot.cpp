@@ -1,5 +1,7 @@
 #include "T100SentenceNot.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceNot::T100SentenceNot(T100SentenceScanner* scanner)
@@ -31,7 +33,7 @@ T100BOOL T100SentenceNot::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE    = T100ORDER_NOT;
+    order.BYTE0.BYTE    = T100Component::T100ORDER_NOT;
 
     info->setValue(order.WORD);
     info->next();

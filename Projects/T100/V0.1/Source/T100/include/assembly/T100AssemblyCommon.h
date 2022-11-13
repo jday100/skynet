@@ -279,30 +279,15 @@ typedef struct{
 }T100SEGMENT_KEY;
 
 
+typedef enum{
+    T100MODE_NONE           = 0,
+    T100MODE_REAL,
+    T100MODE_VIRTUAL,
+    T100MODE_MAX
+}T100MODE;
+
 }
 
-#define         T100SEGMENT_CODE_VECTOR                 std::vector<T100SegmentCode*>
-#define         T100SEGMENT_DATA_VECTOR                 std::vector<T100SegmentData*>
-
-#define         T100PART_INFO_VECTOR                    std::vector<T100PartInfo*>
-#define         T100PART_INFO_HASH                      std::unordered_map<T100STRING, T100PartInfo*, T100StringHash, T100StringEqual>
-
-#define         T100VARIABLE_CALL                       T100ITEM
-#define         T100LABEL_CALL                          T100ITEM
-#define         T100PROCEDURE_CALL                      T100ITEM
-
-#define         T100VARIABLE_HASH                       std::unordered_map<T100STRING, T100VARIABLE_DEFINE*, T100StringHash, T100StringEqual>
-#define         T100VARIABLEOFFSET_HASH                 std::unordered_map<T100STRING, T100WORD, T100StringHash, T100StringEqual>
-#define         T100VARIABLECALL_VECTOR                 std::vector<T100LABEL_CALL*>
-
-#define         T100LABEL_HASH                          std::unordered_map<T100STRING, T100LABEL_DEFINE*, T100StringHash, T100StringEqual>
-#define         T100LABELOFFSET_HASH                    std::unordered_map<T100STRING, T100WORD, T100StringHash, T100StringEqual>
-#define         T100LABELCALL_VECTOR                    std::vector<T100LABEL_CALL*>
-
-#define         T100PROCEDURE_DEFINE                    T100ITEM
-#define         T100PROCEDURE_HASH                      std::unordered_map<T100STRING, T100PROCEDURE_DEFINE*, T100StringHash, T100StringEqual>
-#define         T100PROCEDUREOFFSET_HASH                std::unordered_map<T100STRING, T100WORD, T100StringHash, T100StringEqual>
-#define         T100PROCEDURECALL_VECTOR                std::vector<T100PROCEDURE_CALL*>
 
 
 #endif // T100ASSEMBLYCOMMON_H

@@ -3,6 +3,7 @@
 namespace T100Assembly{
 
 T100PartToken::T100PartToken()
+    :T100Component::T100Token()
 {
     //ctor
     create();

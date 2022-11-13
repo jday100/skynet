@@ -4,6 +4,7 @@
 #include "T100VirtualMerger.h"
 #include "T100VirtualFile.h"
 #include "T100VirtualFileWriter.h"
+#include "T100Sentence.h"
 
 namespace T100Assembly{
 

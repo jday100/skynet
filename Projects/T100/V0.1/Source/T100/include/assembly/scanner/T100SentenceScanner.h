@@ -6,17 +6,17 @@
 
 namespace T100Assembly{
 
-class T100SentenceScanner : public T100Scanner
+class T100SentenceScanner : public T100Component::T100Scanner
 {
     friend class T100Sentence;
     public:
         T100SentenceScanner();
         virtual ~T100SentenceScanner();
 
-        T100VOID                setSource(T100Scanner*);
-        T100Scanner*            getSource();
+        T100VOID                setSource(T100Component::T100Scanner*);
+        T100Component::T100Scanner*            getSource();
 
-        T100BOOL                next(T100Token&);
+        T100BOOL                next(T100Component::T100Token&);
 
     protected:
         T100SentenceToken*      m_token         = T100NULL;

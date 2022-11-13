@@ -1,5 +1,7 @@
 #include "T100SentenceInt.h"
 
+#include "T100BitTypes.h"
+
 namespace T100Assembly{
 
 T100SentenceInt::T100SentenceInt(T100SentenceScanner* scanner)
@@ -78,7 +80,7 @@ T100BOOL T100SentenceInt::build(T100BuildInfo* info)
 {
     T100WORD_BITS       order;
 
-    order.BYTE0.BYTE = T100ORDER_INT;
+    order.BYTE0.BYTE = T100Component::T100ORDER_INT;
     order.BYTE3.BYTE = id;
 
     info->setValue(order.WORD);

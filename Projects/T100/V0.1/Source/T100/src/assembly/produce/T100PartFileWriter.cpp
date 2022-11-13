@@ -3,7 +3,7 @@
 namespace T100Assembly{
 
 T100PartFileWriter::T100PartFileWriter(T100STRING file)
-    :T100FileWriter(file.to_wstring())
+    :T100Library::T100FileWriter(file.to_wstring())
 {
     //ctor
 }

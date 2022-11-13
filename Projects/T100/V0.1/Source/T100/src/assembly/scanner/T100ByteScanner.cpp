@@ -85,7 +85,7 @@ T100BOOL T100ByteScanner::run()
         break;
     default:
         getToken()->type        = classify(getToken()->value);
-        T100AssemblyLog::info(T100AssemblyHint::byte_hint(getToken(), T100BYTESCAN_BYTE_READ_SUCCESS));
+        //T100AssemblyLog::info(T100AssemblyHint::byte_hint(getToken(), T100BYTESCAN_BYTE_READ_SUCCESS));
     }
 
     return T100TRUE;
@@ -150,7 +150,7 @@ T100TOKEN_TYPE T100ByteScanner::classify(T100BYTE byte)
         result  = T100Component::T100BYTE_SEVEN;
     }
 
-    T100AssemblyLog::info(T100AssemblyHint::byte_hint(getToken(), T100BYTESCAN_BYTE_CLASSIFY_FINISHED));
+    //T100AssemblyLog::info(T100AssemblyHint::byte_hint(getToken(), T100BYTESCAN_BYTE_CLASSIFY_FINISHED));
     return result;
 }
 

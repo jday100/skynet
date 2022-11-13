@@ -5,6 +5,8 @@
 #include "T100String.h"
 #include "T100StringHash.h"
 #include "T100StringEqual.h"
+#include "T100ProduceInfo.h"
+
 
 namespace T100Assembly{
 

@@ -5,6 +5,7 @@
 namespace T100Assembly{
 
 T100KeywordScanner::T100KeywordScanner()
+    :T100Component::T100Scanner()
 {
     //ctor
     clear();
@@ -15,12 +16,12 @@ T100KeywordScanner::~T100KeywordScanner()
     //dtor
 }
 
-T100VOID T100KeywordScanner::setSource(T100Scanner* obj)
+T100VOID T100KeywordScanner::setSource(T100Component::T100Scanner* obj)
 {
     m_scanner = dynamic_cast<T100StringScanner*>(obj);
 }
 
-T100Scanner* T100KeywordScanner::getSource()
+T100Component::T100Scanner* T100KeywordScanner::getSource()
 {
     return m_scanner;
 }
@@ -57,7 +58,7 @@ T100BOOL T100KeywordScanner::read()
     return result;
 }
 
-T100BOOL T100KeywordScanner::next(T100Token& token)
+T100BOOL T100KeywordScanner::next(T100Component::T100Token& token)
 {
     m_token = (T100KeywordToken*)&token;
     m_token->clear();

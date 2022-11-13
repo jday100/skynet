@@ -36,15 +36,15 @@ T100BOOL T100SentenceOut::parse()
 T100BOOL T100SentenceOut::build(T100BuildInfo* info)
 {
     T100BOOL                result          = T100FALSE;
-    T100OPERATOR_INFO       build;
+    T100Component::T100OPERATOR_INFO       build;
 
     switch(source.TYPE){
-    case T100OPERATOR_ONE_ONE:
+    case T100Component::T100OPERATOR_ONE_ONE:
         {
             build.TARGET.OFFSET     = 0;
         }
         break;
-    case T100OPERATOR_THREE_THREE:
+    case T100Component::T100OPERATOR_THREE_THREE:
         {
             build.TARGET.OFFSET     = 1;
         }
@@ -54,7 +54,7 @@ T100BOOL T100SentenceOut::build(T100BuildInfo* info)
     }
 
     build.TARGET.BASE_USED  = T100FALSE;
-    build.TARGET.BASE_TYPE  = T_NONE;
+    build.TARGET.BASE_TYPE  = T100Component::T_NONE;
     result = buildOperator(info, target, build.TARGET);
     if(!result){
         return T100FALSE;
@@ -68,7 +68,7 @@ T100BOOL T100SentenceOut::build(T100BuildInfo* info)
 
     build.TYPE      = source.TYPE;
 
-    result = buildInfo(T100ORDER_OUT, info, build);
+    result = buildInfo(T100Component::T100ORDER_OUT, info, build);
     if(!result){
         return T100FALSE;
     }

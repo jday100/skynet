@@ -11,8 +11,8 @@ class T100SegmentEqual
         T100SegmentEqual();
         virtual ~T100SegmentEqual();
 
-        boot operator()(const T100SEGMENT_KEY& key1, const T100SEGMENT_KEY& key2) const {
-            return key1.name == key2.name && key1.LOCATION == key2.LOCATION;
+        bool operator()(const T100SEGMENT_KEY& key1, const T100SEGMENT_KEY& key2) const {
+            return const_cast<T100STRING&>(key1.NAME) == const_cast<T100STRING&>(key2.NAME) && key1.LOCATION == key2.LOCATION;
         }
 
     protected:

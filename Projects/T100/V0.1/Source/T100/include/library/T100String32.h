@@ -3,6 +3,10 @@
 
 #include "T100Class.h"
 
+namespace T100Assembly{
+class T100SegmentHash;
+}
+
 namespace T100Library{
 class T100String32;
 
@@ -14,6 +18,7 @@ T100String32&   operator +  (const T100CHAR32*, const T100String32&);
 
 class T100String32 : public T100Class
 {
+    friend class T100Assembly::T100SegmentHash;
     public:
         T100String32();
         T100String32(T100CHAR32*);

@@ -3,7 +3,7 @@
 namespace T100Assembly{
 
 T100VirtualFileWriter::T100VirtualFileWriter(T100STRING file)
-    :T100ExecutableFileWriter(file)
+    :T100Component::T100ExecutableFileWriter(file)
 {
     //ctor
 }

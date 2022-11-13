@@ -6,16 +6,16 @@
 
 namespace T100Assembly{
 
-class T100StringScanner : public T100Scanner
+class T100StringScanner : public T100Component::T100Scanner
 {
     public:
         T100StringScanner();
         virtual ~T100StringScanner();
 
-        T100VOID                setSource(T100Scanner*);
-        T100Scanner*            getSource();
+        T100VOID                setSource(T100Component::T100Scanner*);
+        T100Component::T100Scanner*            getSource();
 
-        T100BOOL                next(T100Token&);
+        T100BOOL                next(T100Component::T100Token&);
 
     protected:
         T100StringToken*        m_token         = T100NULL;
@@ -34,7 +34,7 @@ class T100StringScanner : public T100Scanner
 
     private:
         T100CharScanner*        m_scanner       = T100NULL;
-        T100TOKEN_TYPE          m_type          = T100TOKEn_NONE;
+        T100TOKEN_TYPE          m_type          = T100TOKEN_NONE;
 
 };
 

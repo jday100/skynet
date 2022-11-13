@@ -1,5 +1,7 @@
 #include "T100SentenceCode.h"
 
+#include "T100AssemblyError.h"
+#include "T100AssemblyHint.h"
 #include "T100ProduceInfo.h"
 
 namespace T100Assembly{
@@ -85,10 +87,10 @@ READ_NEXT:
                     name    = m_item->value;
                     setLoaded(T100FALSE);
                     goto READ_NEXT;
-                }else[
+                }else{
                     T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
                     return T100FALSE;
-                ]
+                }
             }else{
                 goto READ_NEXT;
             }

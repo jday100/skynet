@@ -6,13 +6,13 @@
 #include "T100StringEqual.h"
 #include "T100SegmentToken.h"
 
-#define     T100FILE_VECTOR                 std::vector<T100PartToken*>
+#define     T100FILE_VECTOR                 std::vector<T100Assembly::T100PartToken*>
 #define     T100FILE_HASH                   std::unordered_map<T100STRING, T100PartToken*, T100StringHash, T100StringEqual>
 #define     T100FILE_LIST                   std::list<T100PartToken*>
 
 namespace T100Assembly{
 
-class T100PartToken : public T100Token
+class T100PartToken : public T100Component::T100Token
 {
     public:
         T100PartToken();

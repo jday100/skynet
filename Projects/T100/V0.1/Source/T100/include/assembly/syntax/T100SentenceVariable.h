@@ -12,7 +12,7 @@ class T100SentenceVariable : public T100Sentence
         virtual ~T100SentenceVariable();
 
         T100STRING          name;
-        T100OPERATOR        target;
+        T100Component::T100OPERATOR        target;
 
         T100BOOL            parse();
 
