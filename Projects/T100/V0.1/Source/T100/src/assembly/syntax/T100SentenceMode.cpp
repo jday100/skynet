@@ -61,7 +61,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_MODE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_MODE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -106,7 +106,7 @@ READ_NEXT:
         break;
     }
 
-    T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_MODE_SYNTAX_ERROR));
+    //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_MODE_SYNTAX_ERROR));
     return T100FALSE;
 }
 

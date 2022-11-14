@@ -59,7 +59,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -101,14 +101,14 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
     default:
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
-        T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
+        //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
         return T100FALSE;
     }
 
@@ -148,7 +148,7 @@ READ_NEXT:
                 setLoaded(T100FALSE);
                 return T100TRUE;
             }else{
-                T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
                 return T100FALSE;
             }
         }
@@ -161,7 +161,7 @@ READ_NEXT:
                 setLoaded(T100FALSE);
                 return T100TRUE;
             }else{
-                T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
                 return T100FALSE;
             }
         }
@@ -174,7 +174,7 @@ READ_NEXT:
                 setLoaded(T100FALSE);
                 return T100TRUE;
             }else{
-                T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
                 return T100FALSE;
             }
         }
@@ -193,7 +193,7 @@ READ_NEXT:
                 setLoaded(T100FALSE);
                 return T100TRUE;
             }else{
-                T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
                 return T100FALSE;
             }
         }
@@ -202,7 +202,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -215,11 +215,11 @@ READ_NEXT:
     default:
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
-        T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
+        //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
         return T100FALSE;
     }
 
-    T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
+    //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_VARIABLE_SYNTAX_ERROR));
     return T100FALSE;
 }
 

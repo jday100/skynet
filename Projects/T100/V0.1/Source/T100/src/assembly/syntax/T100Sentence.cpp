@@ -100,7 +100,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -161,7 +161,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -174,7 +174,7 @@ READ_NEXT:
     default:
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
-        T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+        //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
     }
 
@@ -290,7 +290,7 @@ READ_NEXT:
     case T100CONSTANT_FLOAT:
         {
             if(T100Component::S_NONE != m_type){
-                T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
                 return T100FALSE;
             }
 
@@ -308,7 +308,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -316,14 +316,14 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
     default:
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
-        T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+        //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
     }
 
@@ -367,7 +367,7 @@ T100BOOL T100Sentence::parseLabel(T100Component::T100OPERATOR& op)
     default:
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
-        T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+        //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         result = T100FALSE;
     }
 
@@ -398,7 +398,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -433,13 +433,13 @@ READ_NEXT:
                 }else{
                     m_token->type   = T100TOKEN_ERROR;
                     m_token->err    = T100ERROR_SENTENCE;
-                    T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+                    //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
                     return T100FALSE;
                 }
             }else{
                 m_token->type   = T100TOKEN_ERROR;
                 m_token->err    = T100ERROR_SENTENCE;
-                T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
                 return T100FALSE;
             }
         }
@@ -471,7 +471,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -516,7 +516,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -546,7 +546,7 @@ READ_NEXT:
     default:
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
-        T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+        //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
     }
 
@@ -572,7 +572,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -633,14 +633,14 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
     default:
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
-        T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+        //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
     }
 
@@ -666,7 +666,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -733,14 +733,14 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
     default:
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
-        T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+        //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
     }
 
@@ -766,7 +766,7 @@ READ_NEXT:
         {
             m_token->type   = T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -843,14 +843,14 @@ READ_NEXT:
         {
             m_token->type       = T100TOKEN_ERROR;
             m_token->err        = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
     default:
         m_token->type   = T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
-        T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
+        //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
     }
 

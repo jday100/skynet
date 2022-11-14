@@ -12,6 +12,7 @@
 
 #include "T100Sentence.h"
 
+
 namespace T100Assembly{
 
 T100RealBuilder::T100RealBuilder()
@@ -76,9 +77,8 @@ T100BOOL T100RealBuilder::build(T100PartToken* token)
 {
     T100BOOL        result          = T100TRUE;
 
-    /*
-    //for(T100SegmentToken* item : token->segments()){
-    for(auto item : token->segments()){
+
+    for(T100SegmentToken* item : token->segments){
         if(item){
             result = build(item);
             if(!result){
@@ -88,7 +88,7 @@ T100BOOL T100RealBuilder::build(T100PartToken* token)
             return T100FALSE;
         }
     }
-    */
+
 
     if(result){
         //result = m_produce->getPartDrawer().save(name, info);

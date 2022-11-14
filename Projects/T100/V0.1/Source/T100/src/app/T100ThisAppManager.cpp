@@ -62,7 +62,7 @@ T100BOOL T100ThisAppManager::start()
 
     if(m_info.ASSEMBLY){
         m_assembly  = T100NEW T100Assembly::T100Assembly(this);
-        //result      = m_assembly.run(m_info);
+        result      = m_assembly->run(m_info);
     }
 
     if(m_info.VPC){

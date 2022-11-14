@@ -53,7 +53,7 @@ READ_NEXT:
         {
             m_token->type       = T100TOKEN_ERROR;
             m_token->err        = T100ERROR_SENTENCE;
-            T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
+            //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
@@ -88,7 +88,7 @@ READ_NEXT:
                     setLoaded(T100FALSE);
                     goto READ_NEXT;
                 }else{
-                    T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
+                    //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
                     return T100FALSE;
                 }
             }else{
@@ -102,7 +102,7 @@ READ_NEXT:
             setLoaded(T100FALSE);
 
             if(T100ProduceInfo::m_code_default){
-                T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
+                //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
                 return T100FALSE;
             }else{
                 T100ProduceInfo::m_code_default     = T100TRUE;
@@ -137,7 +137,7 @@ READ_NEXT:
                     setLoaded(T100FALSE);
                     goto READ_NEXT;
                 }else{
-                    T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
+                    //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
                     return T100FALSE;
                 }
             }else{
@@ -164,7 +164,7 @@ READ_NEXT:
                     setLoaded(T100FALSE);
                     goto READ_NEXT;
                 }else{
-                    T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
+                    //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
                     return T100FALSE;
                 }
             }else{
@@ -179,7 +179,7 @@ READ_NEXT:
         break;
     }
 
-    T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
+    //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
     return T100FALSE;
 }
 
