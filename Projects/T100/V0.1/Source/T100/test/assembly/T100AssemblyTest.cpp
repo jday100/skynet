@@ -11,7 +11,9 @@ T100AssemblyTest::T100AssemblyTest(T100Test* parent)
     test_keyword(this),
     test_sentence(this),
     test_segment(this),
-    test_part(this)
+    test_part(this),
+    test_real(this),
+    test_virtual(this)
 {
     //ctor
 }

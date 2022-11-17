@@ -1,0 +1,5 @@
+
+CODE
+	HALT
+END 
+

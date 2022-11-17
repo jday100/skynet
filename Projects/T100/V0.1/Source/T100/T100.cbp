@@ -213,11 +213,13 @@
 		<Unit filename="docs/assembly/T100Keyword.txt" />
 		<Unit filename="docs/assembly/T100Order.txt" />
 		<Unit filename="include/al/T100AL.h" />
+		<Unit filename="include/al/T100ALApp.h" />
 		<Unit filename="include/app/T100ThisAppCmdLineParser.h" />
 		<Unit filename="include/app/T100ThisAppCmdLineResult.h" />
 		<Unit filename="include/app/T100ThisAppManager.h" />
 		<Unit filename="include/app/T100ThisAppSetup.h" />
 		<Unit filename="include/assembly/T100Assembly.h" />
+		<Unit filename="include/assembly/T100AssemblyApp.h" />
 		<Unit filename="include/assembly/T100AssemblyCommon.h" />
 		<Unit filename="include/assembly/T100AssemblyError.h" />
 		<Unit filename="include/assembly/T100AssemblyHint.h" />
@@ -359,6 +361,7 @@
 		<Unit filename="include/data/cmdline/T100CmdLineSwitch.h" />
 		<Unit filename="include/data/console/T100ConsoleStringToken.h" />
 		<Unit filename="include/editor/T100Editor.h" />
+		<Unit filename="include/editor/T100EditorApp.h" />
 		<Unit filename="include/editor/serve/T100EditorServe.h" />
 		<Unit filename="include/editor/view/T100EditorView.h" />
 		<Unit filename="include/font/T100FontApp.h" />
@@ -371,6 +374,7 @@
 		<Unit filename="include/font/view/T100FontPanel.h" />
 		<Unit filename="include/font/view/T100FontView.h" />
 		<Unit filename="include/ide/T100IDE.h" />
+		<Unit filename="include/ide/T100IDEApp.h" />
 		<Unit filename="include/ide/callback/T100IDECallbackBase.h" />
 		<Unit filename="include/ide/callback/T100IDECallbackManager.h" />
 		<Unit filename="include/ide/callback/T100IDECallbackProject.h" />
@@ -514,6 +518,7 @@
 		<Unit filename="include/vdisk/serve/T100VDiskCallback.h" />
 		<Unit filename="include/vdisk/serve/T100VDiskServe.h" />
 		<Unit filename="include/vdisk/view/T100VDiskView.h" />
+		<Unit filename="include/vpc/T100VPC.h" />
 		<Unit filename="include/vpc/T100VPCApp.h" />
 		<Unit filename="include/vpc/T100VPCCommon.h" />
 		<Unit filename="include/vpc/T100VPCSetup.h" />
@@ -551,11 +556,13 @@
 		<Unit filename="resources/.gitkeep" />
 		<Unit filename="scripts/.gitkeep" />
 		<Unit filename="src/al/T100AL.cpp" />
+		<Unit filename="src/al/T100ALApp.cpp" />
 		<Unit filename="src/app/T100ThisAppCmdLineParser.cpp" />
 		<Unit filename="src/app/T100ThisAppCmdLineResult.cpp" />
 		<Unit filename="src/app/T100ThisAppManager.cpp" />
 		<Unit filename="src/app/T100ThisAppSetup.cpp" />
 		<Unit filename="src/assembly/T100Assembly.cpp" />
+		<Unit filename="src/assembly/T100AssemblyApp.cpp" />
 		<Unit filename="src/assembly/T100AssemblyError.cpp" />
 		<Unit filename="src/assembly/T100AssemblyHint.cpp" />
 		<Unit filename="src/assembly/T100AssemblyLog.cpp" />
@@ -681,6 +688,7 @@
 		<Unit filename="src/data/cmdline/T100CmdLineSwitch.cpp" />
 		<Unit filename="src/data/console/T100ConsoleStringToken.cpp" />
 		<Unit filename="src/editor/T100Editor.cpp" />
+		<Unit filename="src/editor/T100EditorApp.cpp" />
 		<Unit filename="src/editor/serve/T100EditorServe.cpp" />
 		<Unit filename="src/editor/view/T100EditorView.cpp" />
 		<Unit filename="src/font/T100FontApp.cpp" />
@@ -693,6 +701,7 @@
 		<Unit filename="src/font/view/T100FontPanel.cpp" />
 		<Unit filename="src/font/view/T100FontView.cpp" />
 		<Unit filename="src/ide/T100IDE.cpp" />
+		<Unit filename="src/ide/T100IDEApp.cpp" />
 		<Unit filename="src/ide/callback/T100IDECallbackBase.cpp" />
 		<Unit filename="src/ide/callback/T100IDECallbackManager.cpp" />
 		<Unit filename="src/ide/callback/T100IDECallbackProject.cpp" />
@@ -824,6 +833,7 @@
 		<Unit filename="src/vdisk/serve/T100VDiskCallback.cpp" />
 		<Unit filename="src/vdisk/serve/T100VDiskServe.cpp" />
 		<Unit filename="src/vdisk/view/T100VDiskView.cpp" />
+		<Unit filename="src/vpc/T100VPC.cpp" />
 		<Unit filename="src/vpc/T100VPCApp.cpp" />
 		<Unit filename="src/vpc/T100VPCSetup.cpp" />
 		<Unit filename="src/vpc/data/T100AUDeviceInfo.cpp" />
@@ -862,6 +872,8 @@
 		<Unit filename="test/assembly/T100AssemblyKeywordScannerTest.h" />
 		<Unit filename="test/assembly/T100AssemblyPartScannerTest.cpp" />
 		<Unit filename="test/assembly/T100AssemblyPartScannerTest.h" />
+		<Unit filename="test/assembly/T100AssemblyRealTest.cpp" />
+		<Unit filename="test/assembly/T100AssemblyRealTest.h" />
 		<Unit filename="test/assembly/T100AssemblyScannerTest.cpp" />
 		<Unit filename="test/assembly/T100AssemblyScannerTest.h" />
 		<Unit filename="test/assembly/T100AssemblySegmentScannerTest.cpp" />
@@ -874,6 +886,8 @@
 		<Unit filename="test/assembly/T100AssemblyTest.h" />
 		<Unit filename="test/assembly/T100AssemblyTestHint.cpp" />
 		<Unit filename="test/assembly/T100AssemblyTestHint.h" />
+		<Unit filename="test/assembly/T100AssemblyVirtualTest.cpp" />
+		<Unit filename="test/assembly/T100AssemblyVirtualTest.h" />
 		<Unit filename="test/library/T100LibraryTest.cpp" />
 		<Unit filename="test/library/T100LibraryTest.h" />
 		<Unit filename="test/library/T100LibraryTestHint.cpp" />
@@ -886,9 +900,19 @@
 		<Unit filename="test/library/T100TestTest.h" />
 		<Unit filename="test/library/test/T100TestDemoTest.cpp" />
 		<Unit filename="test/library/test/T100TestDemoTest.h" />
+		<Unit filename="test/resources/assembly/real/test_basic.bin" />
+		<Unit filename="test/resources/assembly/real/test_basic.txt" />
+		<Unit filename="test/resources/assembly/real/test_import.txt" />
+		<Unit filename="test/resources/assembly/real/test_master.txt" />
+		<Unit filename="test/resources/assembly/real/test_multiple.bin" />
+		<Unit filename="test/resources/assembly/real/test_multiple.txt" />
+		<Unit filename="test/resources/assembly/real/test_share.txt" />
+		<Unit filename="test/resources/assembly/real/test_slave.txt" />
 		<Unit filename="test/resources/assembly/scanner/test_byte.txt" />
 		<Unit filename="test/resources/assembly/scanner/test_char.txt" />
+		<Unit filename="test/resources/assembly/scanner/test_import.txt" />
 		<Unit filename="test/resources/assembly/scanner/test_keyword.txt" />
+		<Unit filename="test/resources/assembly/scanner/test_part.txt" />
 		<Unit filename="test/resources/assembly/scanner/test_segment.txt" />
 		<Unit filename="test/resources/assembly/scanner/test_sentence.txt" />
 		<Unit filename="test/resources/assembly/scanner/test_string.txt" />

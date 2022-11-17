@@ -9,6 +9,9 @@
 #include "T100AssemblySegmentScannerTest.h"
 #include "T100AssemblyPartScannerTest.h"
 
+#include "T100AssemblyRealTest.h"
+#include "T100AssemblyVirtualTest.h"
+
 
 namespace T100Assembly{
 
@@ -25,6 +28,9 @@ class T100AssemblyTest : public T100Library::T100Test
         T100AssemblySentenceScannerTest     test_sentence;
         T100AssemblySegmentScannerTest      test_segment;
         T100AssemblyPartScannerTest         test_part;
+
+        T100AssemblyRealTest                test_real;
+        T100AssemblyVirtualTest             test_virtual;
 
     private:
         static T100WSTRING                  m_name;

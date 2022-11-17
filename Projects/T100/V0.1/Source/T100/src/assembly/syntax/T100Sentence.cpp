@@ -820,7 +820,7 @@ READ_NEXT:
             op.OFFSET.USED      = T100TRUE;
             op.SYMBOL_TYPE      = T100Component::S_NONE;
             op.TYPE             = T100Component::T100OPERATOR_ONE_ONE;
-            return parseLabel(op.OFFSET);
+            return parseVariable(op.OFFSET);
         }
         break;
     case T100KEYWORD_LABEL:

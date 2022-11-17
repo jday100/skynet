@@ -14,7 +14,7 @@ namespace T100VDisk{
 }
 
 namespace T100Assembly{
-    class T100Assembly;
+    class T100AssemblyApp;
 }
 
 namespace T100VPC{
@@ -41,7 +41,7 @@ class T100ThisAppManager : public T100WxWidgets::T100WxAppManager
     protected:
         T100FontBuilder::T100FontApp*       m_font          = T100NULL;
         T100VDisk::T100VDiskConsole*        m_vdisk         = T100NULL;
-        T100Assembly::T100Assembly*         m_assembly      = T100NULL;
+        T100Assembly::T100AssemblyApp*      m_assembly      = T100NULL;
         T100VPC::T100VPCApp*                m_vpc           = T100NULL;
 
     private:

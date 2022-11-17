@@ -1,11 +1,8 @@
 #include "T100Assembly.h"
 
-#include "T100Produce.h"
-
 namespace T100Assembly{
 
-T100Assembly::T100Assembly(T100Library::T100AppManager* obj)
-    :T100Library::T100App(obj)
+T100Assembly::T100Assembly()
 {
     //ctor
 }
@@ -15,24 +12,14 @@ T100Assembly::~T100Assembly()
     //dtor
 }
 
-T100BOOL T100Assembly::run(T100ThisAppCmdLineResult& info)
+T100Produce& T100Assembly::getProduce()
 {
-    T100BOOL        result;
-    T100STRING      source;
-    T100STRING      target;
-    T100Produce     produce;
+    return m_produce;
+}
 
-    source = info.SOURCE;
-    target = info.TARGET;
-
-    for(T100WSTRING item : info.PATHS){
-        T100STRING  temp(item);
-        produce.getClassPathDrawer().append(temp);
-    }
-
-    result = produce.run(source, target);
-
-    return result;
+T100BOOL T100Assembly::run(T100STRING source, T100STRING target)
+{
+    return m_produce.run(source, target);
 }
 
 }

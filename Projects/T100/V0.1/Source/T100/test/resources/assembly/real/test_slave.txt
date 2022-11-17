@@ -1,0 +1,15 @@
+IMPORT "test_share.txt"
+
+MODE	REAL
+
+DATA
+	a	                                    INTEGER	1
+	result 	                                INTEGER	0
+END
+
+CODE
+    MOVE    result                  {0:share_data}
+    MOVE    AAR                     result
+	HALT
+END
+
