@@ -3,6 +3,7 @@
 #include <fstream>
 #include "T100BitTypes.h"
 #include "T100Unicode.h"
+#include "T100AssemblyCommon.h"
 #include "T100AssemblyLog.h"
 #include "T100AssemblyHint.h"
 
@@ -133,21 +134,21 @@ T100TOKEN_TYPE T100ByteScanner::classify(T100BYTE byte)
     bits.BYTE           = byte;
 
     if(bits.BIT7 == T100FALSE){
-        result  = T100Component::T100BYTE_ASCII;
+        result  = T100Assembly::T100BYTE_ASCII;
     }else if(bits.BIT6 == T100FALSE){
-        result  = T100Component::T100BYTE_ONE;
+        result  = T100Assembly::T100BYTE_ONE;
     }else if(bits.BIT5 == T100FALSE){
-        result  = T100Component::T100BYTE_TWO;
+        result  = T100Assembly::T100BYTE_TWO;
     }else if(bits.BIT4 == T100FALSE){
-        result  = T100Component::T100BYTE_THREE;
+        result  = T100Assembly::T100BYTE_THREE;
     }else if(bits.BIT3 == T100FALSE){
-        result  = T100Component::T100BYTE_FOUR;
+        result  = T100Assembly::T100BYTE_FOUR;
     }else if(bits.BIT2 == T100FALSE){
-        result  = T100Component::T100BYTE_FIVE;
+        result  = T100Assembly::T100BYTE_FIVE;
     }else if(bits.BIT1 == T100FALSE){
-        result  = T100Component::T100BYTE_SIX;
+        result  = T100Assembly::T100BYTE_SIX;
     }else{
-        result  = T100Component::T100BYTE_SEVEN;
+        result  = T100Assembly::T100BYTE_SEVEN;
     }
 
     //T100AssemblyLog::info(T100AssemblyHint::byte_hint(getToken(), T100BYTESCAN_BYTE_CLASSIFY_FINISHED));

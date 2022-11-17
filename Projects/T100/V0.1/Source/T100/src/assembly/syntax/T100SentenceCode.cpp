@@ -44,20 +44,20 @@ READ_NEXT:
     }
 
     switch(m_item->type){
-    case T100TOKEN_BR:
+    case T100Component::T100TOKEN_BR:
         {
             return T100TRUE;
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
-            m_token->type       = T100TOKEN_ERROR;
+            m_token->type       = T100Component::T100TOKEN_ERROR;
             m_token->err        = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCE_CODE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
-    case T100TOKEN_SPACE:
+    case T100Component::T100TOKEN_SPACE:
         {
             setLoaded(T100FALSE);
             goto READ_NEXT;

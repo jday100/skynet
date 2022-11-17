@@ -75,4 +75,114 @@ T100FLOAT T100StringTools::to_float(T100WSTRING str)
     return std::stof(str);
 }
 
+T100STDSTRING T100StringTools::utf8_to_gbk(T100STDSTRING& str)
+{
+    T100STDSTRING       value;
+    T100BOOL            result;
+    T100WORD            length;
+
+    length  = str.size() * 2;
+
+    T100STDCHAR         buffer[length];
+
+    result = code_convert("UTF-8", "GBK", (T100STDCHAR*)str.c_str(), str.size(), buffer, length);
+    if(result){
+        value = buffer;
+    }
+    return value;
+}
+
+T100STDSTRING T100StringTools::gbk_to_utf8(T100STDSTRING& str)
+{
+    T100STDSTRING       value;
+    T100BOOL            result;
+    T100WORD            length;
+
+    length  = str.size() * 2;
+
+    T100STDCHAR         buffer[length];
+
+    result = code_convert("GBK", "UTF-8", (T100STDCHAR*)str.c_str(), str.size(), buffer, length);
+    if(result){
+        value = buffer;
+    }
+    return value;
+}
+
+
+T100STRING_CODED_TYPE T100StringTools::test(T100CHAR8* chars)
+{
+    unsigned char ch;
+
+    ch = chars[0];
+    ch = chars[1];
+
+    //输入“一”
+    switch(chars[0]){
+    case 0xa4:
+        {
+            if(0x40 == chars[1]){
+                return T100STRING_CODED_BIG5;
+            }
+        }
+        break;
+    case 0xd2:
+        {
+            if(0xbb == chars[1]){
+                return T100STRING_CODED_GBK;
+            }
+        }
+        break;
+    case 0xe4:
+        {
+            if(0xb8 == chars[1] && 0x80 == chars[2]){
+                return T100STRING_CODED_UTF8;
+            }
+        }
+        break;
+    case 0x4e:
+        {
+            if(0 == chars[1]){
+                return T100STRING_CODED_UTF16BE;
+            }
+        }
+        break;
+    case 0:
+        {
+            switch(chars[1]){
+            case 0:
+                {
+                    switch(chars[2]){
+                    case 0xfe:
+                        {
+                            if(0xff == chars[3] && 0 == chars[4]
+                               && 0x4e == chars[5] && 0 == chars[6]
+                               && 0 == chars[7]){
+                                return T100STRING_CODED_UCS4;
+                            }
+                        }
+                        break;
+                    case 0x4e:
+                        {
+                            if(0 == chars[3]){
+                                return T100STRING_CODED_UCS4;
+                            }
+                        }
+                        break;
+                    }
+                }
+                break;
+            case 0x4e:
+                {
+                    return T100STRING_CODED_UTF16LE;
+                }
+                break;
+            }
+        }
+        break;
+    }
+
+    return T100STRING_CODED_NONE;
+}
+
 }

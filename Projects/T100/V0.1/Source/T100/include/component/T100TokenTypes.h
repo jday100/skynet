@@ -4,7 +4,6 @@
 
 namespace T100Component{
 
-
 typedef enum{
     T100TOKEN_NONE          = 0,
     //
@@ -13,6 +12,7 @@ typedef enum{
     T100TOKEN_SPACE,
     T100TOKEN_BR,
     //
+    /*
     T100BYTE_ASCII,
     T100BYTE_ONE,
     T100BYTE_TWO,
@@ -22,10 +22,9 @@ typedef enum{
     T100BYTE_SIX,
     T100BYTE_SEVEN,
     //
-
+    */
     T100TOKEN_MAX
 }T100TOKEN_TYPE;
-
 
 }
 

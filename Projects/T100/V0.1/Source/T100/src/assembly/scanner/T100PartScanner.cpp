@@ -90,9 +90,9 @@ READ_NEXT:
     }
 
     switch(m_item.type){
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
-            m_token->type           = T100TOKEN_EOF;
+            m_token->type           = T100Component::T100TOKEN_EOF;
             m_token->eof            = m_item.eof;
             m_token->row            = m_item.row;
             return T100TRUE;
@@ -116,7 +116,7 @@ READ_NEXT:
             }
 
             switch(m_item.type){
-            case T100TOKEN_EOF:
+            case T100Component::T100TOKEN_EOF:
                 {
                     return T100TRUE;
                 }

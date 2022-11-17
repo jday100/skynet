@@ -15,6 +15,15 @@ class T100StringTest : public T100Test
         T100BOOL                do_test();
 
         T100BOOL                test_std8();
+        T100BOOL                test_std16();
+        T100BOOL                test_std32();
+        T100BOOL                test_base();
+        T100BOOL                test_wstring();
+        T100BOOL                test_string();
+
+        T100BOOL                test_tools();
+
+        T100BOOL                test_unicode();
 
     private:
         static T100WSTRING      m_name;

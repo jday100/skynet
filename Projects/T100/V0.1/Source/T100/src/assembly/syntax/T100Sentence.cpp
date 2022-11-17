@@ -96,15 +96,15 @@ READ_NEXT:
     }
 
     switch(m_item->type){
-    case T100TOKEN_BR:
+    case T100Component::T100TOKEN_BR:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
-    case T100TOKEN_SPACE:
+    case T100Component::T100TOKEN_SPACE:
         {
             setLoaded(T100FALSE);
             goto READ_NEXT;
@@ -157,9 +157,9 @@ READ_NEXT:
             return parseVariable(op);
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
@@ -172,7 +172,7 @@ READ_NEXT:
         }
         break;
     default:
-        m_token->type   = T100TOKEN_ERROR;
+        m_token->type   = T100Component::T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
         //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
@@ -306,22 +306,22 @@ READ_NEXT:
         break;
     case T100CONSTANT_STRING:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
     default:
-        m_token->type   = T100TOKEN_ERROR;
+        m_token->type   = T100Component::T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
         //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
@@ -365,7 +365,7 @@ T100BOOL T100Sentence::parseLabel(T100Component::T100OPERATOR& op)
         }
         break;
     default:
-        m_token->type   = T100TOKEN_ERROR;
+        m_token->type   = T100Component::T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
         //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         result = T100FALSE;
@@ -396,7 +396,7 @@ READ_NEXT:
         break;
     case T100Component::T100TOKEN_EOF:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
@@ -431,13 +431,13 @@ READ_NEXT:
                     setLoaded(T100FALSE);
                     return T100TRUE;
                 }else{
-                    m_token->type   = T100TOKEN_ERROR;
+                    m_token->type   = T100Component::T100TOKEN_ERROR;
                     m_token->err    = T100ERROR_SENTENCE;
                     //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
                     return T100FALSE;
                 }
             }else{
-                m_token->type   = T100TOKEN_ERROR;
+                m_token->type   = T100Component::T100TOKEN_ERROR;
                 m_token->err    = T100ERROR_SENTENCE;
                 //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
                 return T100FALSE;
@@ -469,7 +469,7 @@ READ_NEXT:
     switch(m_item->type){
     case T100Component::T100TOKEN_BR:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
@@ -514,7 +514,7 @@ READ_NEXT:
         break;
     case T100Component::T100TOKEN_EOF:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
@@ -544,7 +544,7 @@ READ_NEXT:
         }
         break;
     default:
-        m_token->type   = T100TOKEN_ERROR;
+        m_token->type   = T100Component::T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
         //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
@@ -568,15 +568,15 @@ READ_NEXT:
     }
 
     switch(m_item->type){
-    case T100TOKEN_BR:
+    case T100Component::T100TOKEN_BR:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
-    case T100TOKEN_SPACE:
+    case T100Component::T100TOKEN_SPACE:
         {
             setLoaded(T100FALSE);
             goto READ_NEXT;
@@ -629,16 +629,16 @@ READ_NEXT:
             return parseLabel(op);
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
     default:
-        m_token->type   = T100TOKEN_ERROR;
+        m_token->type   = T100Component::T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
         //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
@@ -662,15 +662,15 @@ READ_NEXT:
     }
 
     switch(m_item->type){
-    case T100TOKEN_BR:
+    case T100Component::T100TOKEN_BR:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
-    case T100TOKEN_SPACE:
+    case T100Component::T100TOKEN_SPACE:
         {
             setLoaded(T100FALSE);
             goto READ_NEXT;
@@ -729,16 +729,16 @@ READ_NEXT:
             return parseBrace(op.BASE, op.OFFSET);
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
     default:
-        m_token->type   = T100TOKEN_ERROR;
+        m_token->type   = T100Component::T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
         //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;
@@ -762,15 +762,15 @@ READ_NEXT:
     }
 
     switch(m_item->type){
-    case T100TOKEN_BR:
+    case T100Component::T100TOKEN_BR:
         {
-            m_token->type   = T100TOKEN_ERROR;
+            m_token->type   = T100Component::T100TOKEN_ERROR;
             m_token->err    = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
-    case T100TOKEN_SPACE:
+    case T100Component::T100TOKEN_SPACE:
         {
             setLoaded(T100FALSE);
             goto READ_NEXT;
@@ -839,16 +839,16 @@ READ_NEXT:
             return parseBrace(op.BASE, op.OFFSET);
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
-            m_token->type       = T100TOKEN_ERROR;
+            m_token->type       = T100Component::T100TOKEN_ERROR;
             m_token->err        = T100ERROR_SENTENCE;
             //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
             return T100FALSE;
         }
         break;
     default:
-        m_token->type   = T100TOKEN_ERROR;
+        m_token->type   = T100Component::T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
         //T100AssemblyError::error(T100AssemblyHint::sentence_hint(this, T100SENTENCESCAN_SENTENCE_SYNTAX_ERROR));
         return T100FALSE;

@@ -1,0 +1,7 @@
+IMPORT "test_import.txt"
+
+MODE	REAL
+CODE
+END
+DATA
+END

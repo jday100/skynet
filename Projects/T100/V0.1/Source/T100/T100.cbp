@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-D" />
+				<Option parameters="-T" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-g" />
@@ -87,6 +87,7 @@
 					<Add directory="include/qu32/order/program" />
 					<Add directory="include/qu32/order/transfer" />
 					<Add directory="include/data/console" />
+					<Add directory="test/library/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -169,6 +170,7 @@
 					<Add directory="include/vdisk/console" />
 					<Add directory="include/qu32" />
 					<Add directory="include/data/console" />
+					<Add directory="test/library/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -856,8 +858,18 @@
 		<Unit filename="test/T100AppTest.h" />
 		<Unit filename="test/T100ThisAppTest.cpp" />
 		<Unit filename="test/T100ThisAppTest.h" />
+		<Unit filename="test/assembly/T100AssemblyKeywordScannerTest.cpp" />
+		<Unit filename="test/assembly/T100AssemblyKeywordScannerTest.h" />
+		<Unit filename="test/assembly/T100AssemblyPartScannerTest.cpp" />
+		<Unit filename="test/assembly/T100AssemblyPartScannerTest.h" />
 		<Unit filename="test/assembly/T100AssemblyScannerTest.cpp" />
 		<Unit filename="test/assembly/T100AssemblyScannerTest.h" />
+		<Unit filename="test/assembly/T100AssemblySegmentScannerTest.cpp" />
+		<Unit filename="test/assembly/T100AssemblySegmentScannerTest.h" />
+		<Unit filename="test/assembly/T100AssemblySentenceScannerTest.cpp" />
+		<Unit filename="test/assembly/T100AssemblySentenceScannerTest.h" />
+		<Unit filename="test/assembly/T100AssemblyStringScannerTest.cpp" />
+		<Unit filename="test/assembly/T100AssemblyStringScannerTest.h" />
 		<Unit filename="test/assembly/T100AssemblyTest.cpp" />
 		<Unit filename="test/assembly/T100AssemblyTest.h" />
 		<Unit filename="test/assembly/T100AssemblyTestHint.cpp" />
@@ -870,6 +882,16 @@
 		<Unit filename="test/library/T100LogTest.h" />
 		<Unit filename="test/library/T100StringTest.cpp" />
 		<Unit filename="test/library/T100StringTest.h" />
+		<Unit filename="test/library/T100TestTest.cpp" />
+		<Unit filename="test/library/T100TestTest.h" />
+		<Unit filename="test/library/test/T100TestDemoTest.cpp" />
+		<Unit filename="test/library/test/T100TestDemoTest.h" />
+		<Unit filename="test/resources/assembly/scanner/test_byte.txt" />
+		<Unit filename="test/resources/assembly/scanner/test_char.txt" />
+		<Unit filename="test/resources/assembly/scanner/test_keyword.txt" />
+		<Unit filename="test/resources/assembly/scanner/test_segment.txt" />
+		<Unit filename="test/resources/assembly/scanner/test_sentence.txt" />
+		<Unit filename="test/resources/assembly/scanner/test_string.txt" />
 		<Unit filename="work/.gitkeep" />
 		<Unit filename="work/AOS/rom/rom.txt" />
 		<Unit filename="wxsmith/T100FontFrame.wxs" />

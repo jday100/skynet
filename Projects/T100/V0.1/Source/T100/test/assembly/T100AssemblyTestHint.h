@@ -8,6 +8,21 @@ namespace T100Assembly{
 static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_BYTE_TEST_START                      = L"Assembly byte scanner test is starting ... ";
 static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_BYTE_TEST_STOP                       = L"Assembly byte scanner test is stopped . ";
 
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_CHAR_TEST_START                      = L"Assembly char scanner test is starting ... ";
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_CHAR_TEST_STOP                       = L"Assembly char scanner test is stopped . ";
+
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_STRING_TEST_START                    = L"Assembly string scanner test is starting ... ";
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_STRING_TEST_STOP                     = L"Assembly string scanner test is stopped . ";
+
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_SENTENCE_TEST_START                  = L"Assembly sentence scanner test is starting ... ";
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_SENTENCE_TEST_STOP                   = L"Assembly sentence scanner test is stopped . ";
+
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_SEGMENT_TEST_START                   = L"Assembly segment scanner test is starting ... ";
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_SEGMENT_TEST_STOP                    = L"Assembly segment scanner test is stopped . ";
+
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_PART_TEST_START                      = L"Assembly part scanner test is starting ... ";
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_SCANNER_PART_TEST_STOP                       = L"Assembly part scanner test is stopped . ";
+
 
 class T100AssemblyTestHint : public T100Library::T100Hint
 {

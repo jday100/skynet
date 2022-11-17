@@ -186,16 +186,16 @@ READ_NEXT:
             goto READ_NEXT;
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
-            m_token->type       = T100TOKEN_EOF;
+            m_token->type       = T100Component::T100TOKEN_EOF;
             m_token->eof        = T100TRUE;
             m_token->row        = m_item.row;
             result = T100TRUE;
         }
         break;
-    case T100TOKEN_BR:
-    case T100TOKEN_SPACE:
+    case T100Component::T100TOKEN_BR:
+    case T100Component::T100TOKEN_SPACE:
         {
             setLoaded(T100FALSE);
             goto READ_NEXT;
@@ -510,7 +510,7 @@ T100BOOL T100SentenceScanner::parseOrder()
     default:
         T100AssemblyError::err  = T100TRUE;
 
-        m_token->type   = T100TOKEN_ERROR;
+        m_token->type   = T100Component::T100TOKEN_ERROR;
         m_token->err    = T100ERROR_SENTENCE;
         result = T100FALSE;
     };
@@ -531,13 +531,13 @@ T100BOOL T100SentenceScanner::parseTail()
         }
 
         switch(m_item.type){
-        case T100TOKEN_EOF:
+        case T100Component::T100TOKEN_EOF:
             {
                 setLoaded(T100FALSE);
                 return T100TRUE;
             }
             break;
-        case T100TOKEN_BR:
+        case T100Component::T100TOKEN_BR:
             {
                 setLoaded(T100FALSE);
                 return T100TRUE;
@@ -551,7 +551,7 @@ T100BOOL T100SentenceScanner::parseTail()
         default:
             T100AssemblyError::err      = T100TRUE;
 
-            m_token->type       = T100TOKEN_ERROR;
+            m_token->type       = T100Component::T100TOKEN_ERROR;
             m_token->err        = T100ERROR_SENTENCE;
             return T100FALSE;
         };
@@ -563,13 +563,13 @@ T100BOOL T100SentenceScanner::parseTail()
 T100VOID T100SentenceScanner::nextLine()
 {
     if(isLoaded()){
-        if(T100TOKEN_BR == m_item.type){
+        if(T100Component::T100TOKEN_BR == m_item.type){
             setLoaded(T100FALSE);
         }
     }else{
         while(read()){
             if(m_item.eof)break;
-            if(T100TOKEN_BR == m_item.type){
+            if(T100Component::T100TOKEN_BR == m_item.type){
                 setLoaded(T100FALSE);
                 break;
             }

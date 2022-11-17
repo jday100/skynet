@@ -15,6 +15,7 @@ class T100AssemblyScannerTest : public T100Library::T100Test
         T100BOOL                do_test();
 
         T100BOOL                test_byte();
+        T100BOOL                test_char();
 
     private:
         static T100WSTRING      m_name;

@@ -12,6 +12,9 @@ class T100ThisAppSetup : public T100Library::T100AppSetup
         virtual ~T100ThisAppSetup();
 
         static T100STRING           getTestResources(T100STRING);
+        static T100STRING           getTestBuild(T100STRING);
+        static T100STRING           getTestStores(T100STRING);
+        static T100STRING           getTestWork(T100STRING);
 
         static T100STRING           APP_TEST_PATH;
 

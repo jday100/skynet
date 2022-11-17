@@ -5,6 +5,8 @@
 
 namespace T100Assembly{
 
+T100BOOL        T100AssemblyHint::m_detail              = T100TRUE;
+
 T100AssemblyHint::T100AssemblyHint()
     :T100Library::T100Hint()
 {
@@ -16,7 +18,7 @@ T100AssemblyHint::~T100AssemblyHint()
     //dtor
 }
 
-T100WSTRING T100AssemblyHint::byte_hint(T100ByteToken* token, T100WSTRING& msg)
+T100WSTRING T100AssemblyHint::byte_hint(T100ByteToken* token, T100WSTRING msg)
 {
     T100WSTRING     result;
     T100WSTRING     value;

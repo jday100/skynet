@@ -65,7 +65,7 @@ T100BOOL T100CharScanner::append()
         break;
     case T100BYTE_ONE:
         {
-            m_token->type       = T100TOKEN_ERROR;
+            m_token->type       = T100Component::T100TOKEN_ERROR;
             m_token->err        = T100ERROR_CHAR;
 
             result = T100FALSE;
@@ -91,7 +91,7 @@ T100BOOL T100CharScanner::append()
             }
 
             if(T100BYTE_ONE != m_item.type){
-                m_token->type   = T100TOKEN_ERROR;
+                m_token->type   = T100Component::T100TOKEN_ERROR;
                 m_token->err    = T100ERROR_CHAR;
                 return T100FALSE;
             }
@@ -130,7 +130,7 @@ T100BOOL T100CharScanner::append()
             }
 
             if(T100BYTE_ONE != m_item.type){
-                m_token->type   = T100TOKEN_ERROR;
+                m_token->type   = T100Component::T100TOKEN_ERROR;
                 m_token->err    = T100ERROR_CHAR;
                 return T100FALSE;
             }
@@ -150,7 +150,7 @@ T100BOOL T100CharScanner::append()
             }
 
             if(T100BYTE_ONE != m_item.type){
-                m_token->type   = T100TOKEN_ERROR;
+                m_token->type   = T100Component::T100TOKEN_ERROR;
                 m_token->err    = T100ERROR_CHAR;
                 return T100FALSE;
             }
@@ -188,7 +188,7 @@ T100BOOL T100CharScanner::append()
             }
 
             if(T100BYTE_ONE != m_item.type){
-                m_token->type   = T100TOKEN_ERROR;
+                m_token->type   = T100Component::T100TOKEN_ERROR;
                 m_token->err    = T100ERROR_CHAR;
                 return T100FALSE;
             }
@@ -208,7 +208,7 @@ T100BOOL T100CharScanner::append()
             }
 
             if(T100BYTE_ONE != m_item.type){
-                m_token->type   = T100TOKEN_ERROR;
+                m_token->type   = T100Component::T100TOKEN_ERROR;
                 m_token->err    = T100ERROR_CHAR;
                 return T100FALSE;
             }
@@ -228,7 +228,7 @@ T100BOOL T100CharScanner::append()
             }
 
             if(T100BYTE_ONE != m_item.type){
-                m_token->type   = T100TOKEN_ERROR;
+                m_token->type   = T100Component::T100TOKEN_ERROR;
                 m_token->err    = T100ERROR_CHAR;
                 return T100FALSE;
             }
@@ -252,7 +252,7 @@ T100BOOL T100CharScanner::append()
         break;
     case T100BYTE_FIVE:
         {
-            m_token->type       = T100TOKEN_ERROR;
+            m_token->type       = T100Component::T100TOKEN_ERROR;
             m_token->err        = T100ERROR_CHAR;
 
             result = T100FALSE;
@@ -260,7 +260,7 @@ T100BOOL T100CharScanner::append()
         break;
     case T100BYTE_SIX:
         {
-            m_token->type       = T100TOKEN_ERROR;
+            m_token->type       = T100Component::T100TOKEN_ERROR;
             m_token->err        = T100ERROR_CHAR;
 
             result = T100FALSE;
@@ -268,15 +268,15 @@ T100BOOL T100CharScanner::append()
         break;
     case T100BYTE_SEVEN:
         {
-            m_token->type       = T100TOKEN_ERROR;
+            m_token->type       = T100Component::T100TOKEN_ERROR;
             m_token->err        = T100ERROR_CHAR;
 
             result = T100FALSE;
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
-            m_token->type       = T100TOKEN_EOF;
+            m_token->type       = T100Component::T100TOKEN_EOF;
             m_token->eof        = m_item.eof;
 
             result = T100TRUE;
@@ -327,26 +327,31 @@ T100TOKEN_TYPE T100CharScanner::classify()
     case T100ASCII_LF:
         {
             m_row++;
-            result = T100TOKEN_BR;
+            result = T100Component::T100TOKEN_BR;
             m_token->value = U' ';
         }
         break;
     case T100ASCII_CR:
         {
-            result = T100TOKEN_BR;
+            result = T100Component::T100TOKEN_BR;
             m_token->value = U' ';
         }
         break;
     case T100ASCII_TAB:
     case T100ASCII_SPACE:
         {
-            result = T100TOKEN_SPACE;
+            result = T100Component::T100TOKEN_SPACE;
             m_token->value = U' ';
         }
         break;
     case T100ASCII_EXCLAMATION:
         {
             result = T100CHAR_EXCLAMATION;
+        }
+        break;
+    case T100ASCII_DOUBLE_QUOTES:
+        {
+            result = T100CHAR_DOUBLE_QUOTES;
         }
         break;
     case T100ASCII_POUND:

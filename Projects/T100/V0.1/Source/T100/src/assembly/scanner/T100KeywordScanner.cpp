@@ -79,7 +79,7 @@ READ_NEXT:
     }
 
     switch(m_item.type){
-    case T100TOKEN_SPACE:
+    case T100Component::T100TOKEN_SPACE:
         {
             setLoaded(T100FALSE);
             goto READ_NEXT;
@@ -110,16 +110,16 @@ READ_NEXT:
             result = parseSlash();
         }
         break;
-    case T100TOKEN_BR:
+    case T100Component::T100TOKEN_BR:
         {
-            m_token->type   = T100TOKEN_BR;
+            m_token->type   = T100Component::T100TOKEN_BR;
             setLoaded(T100FALSE);
             result = T100TRUE;
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
-            m_token->type   = T100TOKEN_EOF;
+            m_token->type   = T100Component::T100TOKEN_EOF;
             m_token->eof    = m_item.eof;
             m_token->row    = m_item.row;
             result = T100TRUE;
@@ -288,8 +288,8 @@ T100BOOL T100KeywordScanner::parseQuotes()
                 return T100TRUE;
             }
             break;
-        case T100TOKEN_EOF:
-        case T100TOKEN_BR:
+        case T100Component::T100TOKEN_EOF:
+        case T100Component::T100TOKEN_BR:
             {
                 m_token->err    = T100ERROR_KEYWORD;
                 return T100FALSE;
@@ -331,13 +331,13 @@ T100BOOL T100KeywordScanner::parseSlash()
                 }
 
                 switch(m_item.type){
-                case T100TOKEN_BR:
+                case T100Component::T100TOKEN_BR:
                     {
                         m_token->type   = T100KEYWORD_COMMENT;
                         return T100TRUE;
                     }
                     break;
-                case T100TOKEN_EOF:
+                case T100Component::T100TOKEN_EOF:
                     {
                         m_token->type   = T100KEYWORD_COMMENT;
                         return T100TRUE;

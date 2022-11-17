@@ -12,6 +12,9 @@ class T100LogTest : public T100Library::T100Test
         virtual ~T100LogTest();
 
     protected:
+        T100BOOL                do_test();
+
+        T100BOOL                test_log();
 
     private:
         static T100WSTRING      m_name;

@@ -106,9 +106,9 @@ T100BOOL T100SegmentScanner::run()
                 return T100TRUE;
             }
             break;
-        case T100TOKEN_EOF:
+        case T100Component::T100TOKEN_EOF:
             {
-                m_token->type       = T100TOKEN_EOF;
+                m_token->type       = T100Component::T100TOKEN_EOF;
                 m_token->eof        = T100TRUE;
                 m_token->row        = m_item.row;
                 return T100TRUE;

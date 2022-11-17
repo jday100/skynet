@@ -75,8 +75,8 @@ T100BOOL T100StringScanner::run()
     T100BOOL        result          = T100FALSE;
 
     if(isLoaded()){
-        if(T100TOKEN_EOF == m_item.type){
-            m_token->type   = T100TOKEN_EOF;
+        if(T100Component::T100TOKEN_EOF == m_item.type){
+            m_token->type   = T100Component::T100TOKEN_EOF;
             m_token->eof    = T100TRUE;
             m_token->row    = m_item.row;
             return T100TRUE;
@@ -160,7 +160,7 @@ T100BOOL T100StringScanner::isOperator()
             result = T100TRUE;
         }
         break;
-    case T100TOKEN_EOF:
+    case T100Component::T100TOKEN_EOF:
         {
             result = T100TRUE;
         }

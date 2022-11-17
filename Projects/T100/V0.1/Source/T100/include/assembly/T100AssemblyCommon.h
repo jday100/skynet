@@ -3,6 +3,7 @@
 
 #include "T100Common.h"
 #include "T100OrderTypes.h"
+#include "T100TokenTypes.h"
 #include "T100String.h"
 #include "T100StringHash.h"
 #include "T100StringEqual.h"
@@ -62,12 +63,14 @@ typedef enum{
 typedef enum{
     //T100TOKEN_NONE                = 0,
     //
+    /*
     T100TOKEN_EOF                   = 1,
     T100TOKEN_ERROR,
     T100TOKEN_SPACE,
     T100TOKEN_BR,
+    */
     //
-    T100BYTE_ASCII,
+    T100BYTE_ASCII                  = T100Component::T100TOKEN_MAX,
     T100BYTE_ONE,
     T100BYTE_TWO,
     T100BYTE_THREE,

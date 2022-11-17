@@ -11,6 +11,7 @@ class T100SegmentHash;
 }
 
 namespace T100Library{
+class T100String;
 
 T100BOOL        operator == (const T100STDCHAR*, const T100String&);
 T100BOOL        operator != (const T100STDCHAR*, const T100String&);
@@ -27,7 +28,7 @@ T100BOOL        operator != (const T100WCHAR*, const T100String&);
 T100BOOL        operator == (const T100String&, const T100String&);
 T100BOOL        operator != (const T100String&, const T100String&);
 
-T100BOOL        operator +  (const T100WCHAR*, const T100String&);
+T100String      operator +  (const T100WCHAR*, const T100String&);
 
 
 class T100String : public T100Class
