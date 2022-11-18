@@ -3,6 +3,7 @@
 namespace T100Assembly{
 
 T100AssemblyTestHint::T100AssemblyTestHint()
+    :T100Hint()
 {
     //ctor
 }

@@ -48,6 +48,7 @@ class T100QU32
         T100BOOL                nextReturn();
 
         T100BOOL                halt();
+        T100WORD                getReturn();
 
         T100BOOL                load(T100STRING, T100WORD);
 
@@ -57,6 +58,8 @@ class T100QU32
         T100BOOL                load();
 
     private:
+        T100WORD                m_return;
+
         T100CU32*               m_cu            = T100NULL;
         T100AU32*               m_au            = T100NULL;
         T100Memory32*           m_memory        = T100NULL;

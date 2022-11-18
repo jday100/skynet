@@ -33,6 +33,11 @@ T100VOID T100QU32::destroy()
 
 }
 
+T100WORD T100QU32::getReturn()
+{
+    return m_return;
+}
+
 T100CU32* T100QU32::getCU32()
 {
     return m_cu;

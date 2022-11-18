@@ -88,6 +88,8 @@
 					<Add directory="include/qu32/order/transfer" />
 					<Add directory="include/data/console" />
 					<Add directory="test/library/test" />
+					<Add directory="test/vpc" />
+					<Add directory="test/os" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -171,6 +173,8 @@
 					<Add directory="include/qu32" />
 					<Add directory="include/data/console" />
 					<Add directory="test/library/test" />
+					<Add directory="test/vpc" />
+					<Add directory="test/os" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -900,6 +904,10 @@
 		<Unit filename="test/library/T100TestTest.h" />
 		<Unit filename="test/library/test/T100TestDemoTest.cpp" />
 		<Unit filename="test/library/test/T100TestDemoTest.h" />
+		<Unit filename="test/os/T100OSTest.cpp" />
+		<Unit filename="test/os/T100OSTest.h" />
+		<Unit filename="test/os/T100OSTestHint.cpp" />
+		<Unit filename="test/os/T100OSTestHint.h" />
 		<Unit filename="test/resources/assembly/real/test_basic.bin" />
 		<Unit filename="test/resources/assembly/real/test_basic.txt" />
 		<Unit filename="test/resources/assembly/real/test_import.txt" />
@@ -916,6 +924,12 @@
 		<Unit filename="test/resources/assembly/scanner/test_segment.txt" />
 		<Unit filename="test/resources/assembly/scanner/test_sentence.txt" />
 		<Unit filename="test/resources/assembly/scanner/test_string.txt" />
+		<Unit filename="test/vpc/T100QU32Test.cpp" />
+		<Unit filename="test/vpc/T100QU32Test.h" />
+		<Unit filename="test/vpc/T100VPCTest.cpp" />
+		<Unit filename="test/vpc/T100VPCTest.h" />
+		<Unit filename="test/vpc/T100VPCTestHint.cpp" />
+		<Unit filename="test/vpc/T100VPCTestHint.h" />
 		<Unit filename="work/.gitkeep" />
 		<Unit filename="work/AOS/rom/rom.txt" />
 		<Unit filename="wxsmith/T100FontFrame.wxs" />

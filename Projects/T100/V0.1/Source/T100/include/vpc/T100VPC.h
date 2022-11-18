@@ -1,6 +1,9 @@
 #ifndef T100VPC_H
 #define T100VPC_H
 
+#include "T100Common.h"
+
+namespace T100VPC{
 
 class T100VPC
 {
@@ -12,5 +15,7 @@ class T100VPC
 
     private:
 };
+
+}
 
 #endif // T100VPC_H
