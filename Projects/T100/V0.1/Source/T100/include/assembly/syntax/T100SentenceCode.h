@@ -11,6 +11,8 @@ class T100SentenceCode : public T100Sentence
         T100SentenceCode(T100SentenceScanner*);
         virtual ~T100SentenceCode();
 
+        static T100VOID     init();
+
         T100STRING          name;
         T100BOOL            isVirtual       = T100FALSE;
         T100BOOL            isDefault       = T100FALSE;

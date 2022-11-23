@@ -11,6 +11,8 @@ class T100SentenceInt : public T100Sentence
         T100SentenceInt(T100SentenceScanner*);
         virtual ~T100SentenceInt();
 
+        static T100VOID     init();
+
         T100BYTE            id;
 
         T100BOOL            parse();

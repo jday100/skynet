@@ -17,6 +17,11 @@ T100SentenceMode::~T100SentenceMode()
     //dtor
 }
 
+T100VOID T100SentenceMode::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_MODE] = L"T100SentenceMode";
+}
+
 T100BOOL T100SentenceMode::parse()
 {
     T100BOOL        result          = T100TRUE;

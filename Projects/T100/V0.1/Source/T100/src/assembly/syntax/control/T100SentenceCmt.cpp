@@ -15,6 +15,11 @@ T100SentenceCmt::~T100SentenceCmt()
     //dtor
 }
 
+T100VOID T100SentenceCmt::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_CMT] = L"T100SentenceCmt";
+}
+
 T100BOOL T100SentenceCmt::parse()
 {
     T100BOOL        result          = T100TRUE;

@@ -11,6 +11,8 @@ class T100SentenceUnlock : public T100Sentence
         T100SentenceUnlock(T100SentenceScanner*);
         virtual ~T100SentenceUnlock();
 
+        static T100VOID     init();
+
         T100BOOL            parse();
 
         T100BOOL            build(T100BuildInfo*);

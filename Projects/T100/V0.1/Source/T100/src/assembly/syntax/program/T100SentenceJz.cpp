@@ -15,6 +15,11 @@ T100SentenceJz::~T100SentenceJz()
     //dtor
 }
 
+T100VOID T100SentenceJz::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_JZ] = L"T100SentenceJz";
+}
+
 T100BOOL T100SentenceJz::parse()
 {
     T100BOOL        result          = T100TRUE;

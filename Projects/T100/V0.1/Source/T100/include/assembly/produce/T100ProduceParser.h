@@ -22,6 +22,9 @@ class T100ProduceParser
         T100BOOL                    run(T100STRING&, T100ProduceInfo&);
 
     protected:
+        T100VOID                    create();
+        T100VOID                    destroy();
+
         T100BOOL                    load(T100STRING&, T100BOOL);
         T100BOOL                    scan(T100WSTRING&, T100BOOL);
         T100BOOL                    append(T100PartToken&);

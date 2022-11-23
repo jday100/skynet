@@ -1,5 +1,7 @@
 #include "T100FontApp.h"
 
+#include "T100FontBuilder.h"
+
 
 namespace T100FontBuilder{
 
@@ -18,17 +20,19 @@ T100FontApp::~T100FontApp()
 
 T100VOID T100FontApp::create()
 {
-
+    m_builder = T100NEW T100FontBuilder();
 }
 
 T100VOID T100FontApp::destroy()
 {
-
+    T100SAFE_DELETE(m_builder);
 }
 
 T100VOID T100FontApp::show()
 {
-
+    if(m_builder){
+        m_builder->show();
+    }
 }
 
 }

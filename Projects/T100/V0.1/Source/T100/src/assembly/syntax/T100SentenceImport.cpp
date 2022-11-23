@@ -2,6 +2,8 @@
 
 #include "T100String32Tools.h"
 
+#include "T100ProduceInfo.h"
+
 namespace T100Assembly{
 
 T100SentenceImport::T100SentenceImport(T100SentenceScanner* scanner)
@@ -13,6 +15,11 @@ T100SentenceImport::T100SentenceImport(T100SentenceScanner* scanner)
 T100SentenceImport::~T100SentenceImport()
 {
     //dtor
+}
+
+T100VOID T100SentenceImport::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_IMPORT] = L"T100SentenceImport";
 }
 
 T100BOOL T100SentenceImport::parse()

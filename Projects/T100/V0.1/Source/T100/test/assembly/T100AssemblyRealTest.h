@@ -20,6 +20,8 @@ class T100AssemblyRealTest : public T100Library::T100Test
 
         T100BOOL                    test_share();
 
+        T100BOOL                    test_stack();
+
     private:
         static T100WSTRING          m_name;
 

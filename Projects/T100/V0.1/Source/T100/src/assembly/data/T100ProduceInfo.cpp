@@ -20,6 +20,8 @@ T100VariableDrawer      T100ProduceInfo::m_variable_drawer;
 T100LabelDrawer         T100ProduceInfo::m_label_drawer;
 T100ProcedureDrawer     T100ProduceInfo::m_procedure_drawer;
 
+T100TOKEN_NAME_HASH     T100ProduceInfo::m_token_names;
+
 
 T100ProduceInfo::T100ProduceInfo()
 {

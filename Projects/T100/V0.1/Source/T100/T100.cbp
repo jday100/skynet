@@ -14,6 +14,8 @@
 				<Option parameters="-T" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
+					<Add option="-std=gnu++17" />
+					<Add option="-std=c17" />
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -92,6 +94,7 @@
 					<Add directory="test/os" />
 					<Add directory="test/font" />
 					<Add directory="test/vdisk" />
+					<Add directory="include/assembly/syntax/sentence" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -179,6 +182,7 @@
 					<Add directory="test/os" />
 					<Add directory="test/font" />
 					<Add directory="test/vdisk" />
+					<Add directory="include/assembly/syntax/sentence" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -316,7 +320,23 @@
 		<Unit filename="include/assembly/syntax/program/T100SentenceJump.h" />
 		<Unit filename="include/assembly/syntax/program/T100SentenceJz.h" />
 		<Unit filename="include/assembly/syntax/program/T100SentenceLoop.h" />
+		<Unit filename="include/assembly/syntax/program/T100SentencePop.h" />
+		<Unit filename="include/assembly/syntax/program/T100SentencePush.h" />
 		<Unit filename="include/assembly/syntax/program/T100SentenceRet.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100BinocularParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100BraceParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100BracketsParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100ComplexusParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100ExpressionParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100LabelParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100NumberParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100OperatorParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100ParserBase.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100RegisterParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100SentenceBase.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100SentenceCommon.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100SentenceParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100VariableParser.h" />
 		<Unit filename="include/assembly/syntax/transfer/T100SentenceCopy.h" />
 		<Unit filename="include/assembly/syntax/transfer/T100SentenceIn.h" />
 		<Unit filename="include/assembly/syntax/transfer/T100SentenceLoad.h" />
@@ -659,7 +679,22 @@
 		<Unit filename="src/assembly/syntax/program/T100SentenceJump.cpp" />
 		<Unit filename="src/assembly/syntax/program/T100SentenceJz.cpp" />
 		<Unit filename="src/assembly/syntax/program/T100SentenceLoop.cpp" />
+		<Unit filename="src/assembly/syntax/program/T100SentencePop.cpp" />
+		<Unit filename="src/assembly/syntax/program/T100SentencePush.cpp" />
 		<Unit filename="src/assembly/syntax/program/T100SentenceRet.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100BinocularParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100BraceParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100BracketsParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100ComplexusParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100ExpressionParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100LabelParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100NumberParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100OperatorParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100ParserBase.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100RegisterParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100SentenceBase.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100SentenceParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100VariableParser.cpp" />
 		<Unit filename="src/assembly/syntax/transfer/T100SentenceCopy.cpp" />
 		<Unit filename="src/assembly/syntax/transfer/T100SentenceIn.cpp" />
 		<Unit filename="src/assembly/syntax/transfer/T100SentenceLoad.cpp" />

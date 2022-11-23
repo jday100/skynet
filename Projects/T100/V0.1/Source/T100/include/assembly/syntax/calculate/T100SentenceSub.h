@@ -11,6 +11,8 @@ class T100SentenceSub : public T100Sentence
         T100SentenceSub(T100SentenceScanner*);
         virtual ~T100SentenceSub();
 
+        static T100VOID     init();
+
         T100BOOL            parse();
 
         T100BOOL            build(T100BuildInfo*);

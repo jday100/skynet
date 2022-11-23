@@ -11,6 +11,8 @@ class T100SentenceIret : public T100Sentence
         T100SentenceIret(T100SentenceScanner*);
         virtual ~T100SentenceIret();
 
+        static T100VOID     init();
+
         T100BOOL            parse();
 
         T100BOOL            build(T100BuildInfo*);

@@ -11,6 +11,8 @@ class T100SentenceCmt : public T100Sentence
         T100SentenceCmt(T100SentenceScanner*);
         virtual ~T100SentenceCmt();
 
+        static T100VOID     init();
+
         T100WORD            id;
 
         T100BOOL            parse();

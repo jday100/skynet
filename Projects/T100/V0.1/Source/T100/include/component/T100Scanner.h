@@ -15,6 +15,13 @@ class T100Scanner : public T100Library::T100Class
         T100Scanner();
         virtual ~T100Scanner();
 
+        virtual T100BOOL            read();
+        virtual T100BOOL            append();
+        virtual T100VOID            clear();
+
+        virtual T100VOID            setLoaded(T100BOOL);
+        virtual T100BOOL            isLoaded();
+
         virtual T100BOOL            next(T100Token&) = 0;
 
     protected:
@@ -22,13 +29,6 @@ class T100Scanner : public T100Library::T100Class
 
         T100VOID                    create();
         T100VOID                    destroy();
-
-        virtual T100VOID            clear();
-        virtual T100BOOL            read();
-        virtual T100BOOL            append();
-
-        virtual T100VOID            setLoaded(T100BOOL);
-        virtual T100BOOL            isLoaded();
 
         virtual T100BOOL            run() = 0;
 

@@ -50,6 +50,9 @@ class T100CU32
 
         T100Register32              m_ccr;          //Count
 
+        T100Register32              m_ssr;          //ss
+        T100Register32              m_spr;          //sp
+
 };
 
 }

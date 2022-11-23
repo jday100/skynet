@@ -83,6 +83,11 @@ T100BOOL T100Sentence::isLoaded()
     return m_scanner->isLoaded();
 }
 
+T100VOID T100Sentence::log()
+{
+
+}
+
 T100BOOL T100Sentence::parseNumber(T100Component::T100OPERATOR& op)
 {
     T100BOOL        result          = T100FALSE;

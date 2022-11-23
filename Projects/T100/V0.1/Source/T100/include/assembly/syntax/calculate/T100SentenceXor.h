@@ -11,6 +11,8 @@ class T100SentenceXor : public T100Sentence
         T100SentenceXor(T100SentenceScanner*);
         virtual ~T100SentenceXor();
 
+        static T100VOID     init();
+
         T100BOOL            parse();
 
         T100BOOL            build(T100BuildInfo*);

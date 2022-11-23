@@ -11,6 +11,8 @@ class T100SentenceJz : public T100Sentence
         T100SentenceJz(T100SentenceScanner*);
         virtual ~T100SentenceJz();
 
+        static T100VOID                 init();
+
         T100Component::T100OPERATOR_COMPLEXUS          target;
 
         T100BOOL                        parse();

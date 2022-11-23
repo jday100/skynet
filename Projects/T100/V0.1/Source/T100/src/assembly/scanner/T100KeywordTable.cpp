@@ -43,6 +43,9 @@ T100VOID T100KeywordTable::create()
     m_keywords[T100STRING(L"JNZ")]          = T100KEYWORD_JNZ;
     m_keywords[T100STRING(L"LOOP")]         = T100KEYWORD_LOOP;
 
+    m_keywords[T100STRING(L"PUSH")]         = T100KEYWORD_PUSH;
+    m_keywords[T100STRING(L"POP")]          = T100KEYWORD_POP;
+
     m_keywords[T100STRING(L"IN")]           = T100KEYWORD_IN;
     m_keywords[T100STRING(L"OUT")]          = T100KEYWORD_OUT;
     m_keywords[T100STRING(L"MOVE")]         = T100KEYWORD_MOVE;
@@ -69,6 +72,9 @@ T100VOID T100KeywordTable::create()
     m_keywords[T100STRING(L"COR")]          = T100KEYWORD_COR;
     m_keywords[T100STRING(L"CBR")]          = T100KEYWORD_CBR;
     m_keywords[T100STRING(L"CCR")]          = T100KEYWORD_CCR;
+
+    m_keywords[T100STRING(L"SSR")]          = T100KEYWORD_SSR;
+    m_keywords[T100STRING(L"SPR")]          = T100KEYWORD_SPR;
 
     m_keywords[T100STRING(L"AAR")]          = T100KEYWORD_AAR;
     m_keywords[T100STRING(L"ABR")]          = T100KEYWORD_ABR;

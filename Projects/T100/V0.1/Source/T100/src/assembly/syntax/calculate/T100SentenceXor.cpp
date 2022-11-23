@@ -15,6 +15,11 @@ T100SentenceXor::~T100SentenceXor()
     //dtor
 }
 
+T100VOID T100SentenceXor::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_XOR] = L"T100SentenceXor";
+}
+
 T100BOOL T100SentenceXor::parse()
 {
     T100BOOL        result          = T100TRUE;

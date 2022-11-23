@@ -15,6 +15,11 @@ T100SentenceJump::~T100SentenceJump()
     //dtor
 }
 
+T100VOID T100SentenceJump::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_JUMP] = L"T100SentenceJump";
+}
+
 T100BOOL T100SentenceJump::parse()
 {
     T100BOOL        result          = T100TRUE;

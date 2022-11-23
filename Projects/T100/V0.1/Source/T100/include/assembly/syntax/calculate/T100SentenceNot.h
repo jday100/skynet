@@ -11,6 +11,8 @@ class T100SentenceNot : public T100Sentence
         T100SentenceNot(T100SentenceScanner*);
         virtual ~T100SentenceNot();
 
+        static T100VOID     init();
+
         T100BOOL            parse();
 
         T100BOOL            build(T100BuildInfo*);

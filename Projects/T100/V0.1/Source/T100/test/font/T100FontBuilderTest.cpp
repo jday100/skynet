@@ -52,7 +52,7 @@ T100BOOL T100FontBuilderTest::test_font()
     panel   = builder.getView()->getFrame()->FontPanel;
 
 
-    index   = panel->FontNameChoice->FindString(L"system");
+    index   = panel->FontNameChoice->FindString(L"System");
     if(0 <= index){
         panel->FontNameChoice->SetSelection(index);
     }else{
@@ -62,10 +62,11 @@ T100BOOL T100FontBuilderTest::test_font()
     if(result){
         panel->NameCodeRadioButton1->SetValue(T100TRUE);
         panel->FontSizeComboBox->SetSelection(0);
-        panel->CountryListBox->SetSelection(0);
+        panel->CountryListBox->SetSelection(1);
         panel->CodeBeginComboBox->SetSelection(0);
         panel->CodeEndComboBox->SetSelection(0);
         panel->AppendButton->HitTest(0, 0);
+        panel->FileComboBox->SetValue(file.to_wstring());
         panel->RunButton->HitTest(0, 0);
     }
 

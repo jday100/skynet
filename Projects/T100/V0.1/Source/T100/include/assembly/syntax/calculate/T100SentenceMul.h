@@ -11,6 +11,8 @@ class T100SentenceMul : public T100Sentence
         T100SentenceMul(T100SentenceScanner*);
         virtual ~T100SentenceMul();
 
+        static T100VOID     init();
+
         T100BOOL            parse();
 
         T100BOOL            build(T100BuildInfo*);

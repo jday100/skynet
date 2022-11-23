@@ -50,6 +50,8 @@ class T100Sentence
         T100BOOL                    getProcedureOffset(T100BuildInfo*, T100STRING, T100WORD&);
         T100BOOL                    createPartInfo(T100STRING);
 
+        virtual T100VOID            log();
+
     protected:
         T100SentenceToken*          m_token         = T100NULL;
         T100KeywordToken*           m_item          = T100NULL;

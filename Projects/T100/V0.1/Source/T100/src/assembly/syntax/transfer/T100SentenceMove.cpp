@@ -15,6 +15,11 @@ T100SentenceMove::~T100SentenceMove()
     //dtor
 }
 
+T100VOID T100SentenceMove::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_MOVE] = L"T100SentenceMove";
+}
+
 T100BOOL T100SentenceMove::parse()
 {
     T100BOOL        result          = T100TRUE;

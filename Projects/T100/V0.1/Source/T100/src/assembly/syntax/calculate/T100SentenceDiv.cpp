@@ -15,6 +15,11 @@ T100SentenceDiv::~T100SentenceDiv()
     //dtor
 }
 
+T100VOID T100SentenceDiv::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_DIV] = L"T100SentenceDiv";
+}
+
 T100BOOL T100SentenceDiv::parse()
 {
     T100BOOL        result          = T100TRUE;

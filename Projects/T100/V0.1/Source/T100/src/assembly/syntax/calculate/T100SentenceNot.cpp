@@ -15,6 +15,11 @@ T100SentenceNot::~T100SentenceNot()
     //dtor
 }
 
+T100VOID T100SentenceNot::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_NOT] = L"T100SentenceNot";
+}
+
 T100BOOL T100SentenceNot::parse()
 {
     T100BOOL        result          = T100TRUE;

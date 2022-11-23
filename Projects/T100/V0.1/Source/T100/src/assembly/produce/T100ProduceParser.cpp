@@ -13,16 +13,66 @@
 
 #include "T100ClassPathDrawer.h"
 
+#include "T100AllSentences.h"
+
+
 namespace T100Assembly{
 
 T100ProduceParser::T100ProduceParser()
 {
     //ctor
+    create();
 }
 
 T100ProduceParser::~T100ProduceParser()
 {
     //dtor
+    destroy();
+}
+
+T100VOID T100ProduceParser::create()
+{
+    T100SentenceImport::init();
+    T100SentenceMode::init();
+
+    T100SentenceCode::init();
+    T100SentenceData::init();
+    T100SentenceEnd::init();
+
+    T100SentenceLock::init();
+    T100SentenceUnlock::init();
+    T100SentenceNop::init();
+    T100SentenceCmt::init();
+    T100SentenceDebug::init();
+    T100SentenceHalt::init();
+
+    T100SentenceAdd::init();
+    T100SentenceDiv::init();
+    T100SentenceMul::init();
+    T100SentenceSub::init();
+
+    T100SentenceAnd::init();
+    T100SentenceOr::init();
+    T100SentenceNot::init();
+    T100SentenceXor::init();
+
+    T100SentenceCall::init();
+    T100SentenceRet::init();
+    T100SentenceInt::init();
+    T100SentenceIret::init();
+    T100SentenceJump::init();
+    T100SentenceJnz::init();
+    T100SentenceJz::init();
+    T100SentenceLoop::init();
+
+    T100SentenceIn::init();
+    T100SentenceOut::init();
+    T100SentenceMove::init();
+}
+
+T100VOID T100ProduceParser::destroy()
+{
+
 }
 
 T100VOID T100ProduceParser::setClassPathDrawer(T100ClassPathDrawer* drawer)

@@ -2,7 +2,8 @@
 #define T100PRODUCEINFO_H
 
 #include "T100AssemblyCommon.h"
-//#include "T100SentenceMode.h"
+
+#define         T100TOKEN_NAME_HASH                 std::unordered_map<T100WORD, T100STRING>
 
 
 namespace T100Assembly{
@@ -44,6 +45,8 @@ class T100ProduceInfo
         static T100VariableDrawer&          getVariableDrawer();
         static T100LabelDrawer&             getLabelDrawer();
         static T100ProcedureDrawer&         getProcedureDrawer();
+
+        static T100TOKEN_NAME_HASH          m_token_names;
 
     protected:
         static T100SegmentCode*             m_code;

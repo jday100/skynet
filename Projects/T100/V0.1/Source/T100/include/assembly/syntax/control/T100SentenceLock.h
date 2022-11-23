@@ -11,6 +11,8 @@ class T100SentenceLock : public T100Sentence
         T100SentenceLock(T100SentenceScanner*);
         virtual ~T100SentenceLock();
 
+        static T100VOID     init();
+
         T100BOOL            parse();
 
         T100BOOL            build(T100BuildInfo*);

@@ -11,6 +11,8 @@ class T100SentenceCall : public T100Sentence
         T100SentenceCall(T100SentenceScanner*);
         virtual ~T100SentenceCall();
 
+        static T100VOID     init();
+
         T100STRING          name;
 
         T100BOOL            parse();

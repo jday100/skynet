@@ -13,6 +13,11 @@ T100SentenceOut::~T100SentenceOut()
     //dtor
 }
 
+T100VOID T100SentenceOut::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_OUT] = L"T100SentenceOut";
+}
+
 T100BOOL T100SentenceOut::parse()
 {
     T100BOOL        result          = T100TRUE;

@@ -15,6 +15,11 @@ T100SentenceMul::~T100SentenceMul()
     //dtor
 }
 
+T100VOID T100SentenceMul::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_MUL] = L"T100SentenceMul";
+}
+
 T100BOOL T100SentenceMul::parse()
 {
     T100BOOL        result          = T100TRUE;

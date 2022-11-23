@@ -17,6 +17,8 @@ class T100SentenceAdd : public T100Sentence
         T100SentenceAdd(T100SentenceScanner*);
         virtual ~T100SentenceAdd();
 
+        static T100VOID         init();
+
         T100Component::T100OPERATOR            target;
         T100Component::T100OPERATOR            source;
 

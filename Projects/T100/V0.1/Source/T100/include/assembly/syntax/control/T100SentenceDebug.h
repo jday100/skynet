@@ -11,6 +11,8 @@ class T100SentenceDebug : public T100Sentence
         T100SentenceDebug(T100SentenceScanner*);
         virtual ~T100SentenceDebug();
 
+        static T100VOID     init();
+
         T100BOOL            parse();
 
         T100BOOL            build(T100BuildInfo*);

@@ -15,6 +15,11 @@ T100SentenceLock::~T100SentenceLock()
     //dtor
 }
 
+T100VOID T100SentenceLock::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_LOCK] = L"T100SentenceLock";
+}
+
 T100BOOL T100SentenceLock::parse()
 {
     T100BOOL        result          = T100TRUE;

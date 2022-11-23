@@ -14,6 +14,8 @@ class T100SentenceMode : public T100Sentence
         T100SentenceMode(T100SentenceScanner*);
         virtual ~T100SentenceMode();
 
+        static T100VOID     init();
+
         T100MODE            mode            = T100MODE_VIRTUAL;
 
         T100BOOL            parse();

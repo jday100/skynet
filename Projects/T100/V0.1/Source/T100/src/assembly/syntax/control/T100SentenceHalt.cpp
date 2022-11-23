@@ -15,6 +15,11 @@ T100SentenceHalt::~T100SentenceHalt()
     //dtor
 }
 
+T100VOID T100SentenceHalt::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_HALT] = L"T100SentenceHalt";
+}
+
 T100BOOL T100SentenceHalt::parse()
 {
     T100BOOL        result          = T100TRUE;

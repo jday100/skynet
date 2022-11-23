@@ -15,6 +15,11 @@ T100SentenceDebug::~T100SentenceDebug()
     //dtor
 }
 
+T100VOID T100SentenceDebug::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_DEBUG] = L"T100SentenceDebug";
+}
+
 T100BOOL T100SentenceDebug::parse()
 {
     T100BOOL        result          = T100TRUE;

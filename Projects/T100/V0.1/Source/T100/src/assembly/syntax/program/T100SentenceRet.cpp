@@ -15,6 +15,11 @@ T100SentenceRet::~T100SentenceRet()
     //dtor
 }
 
+T100VOID T100SentenceRet::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_RETURN] = L"T100SentenceRet";
+}
+
 T100BOOL T100SentenceRet::parse()
 {
     T100BOOL        result          = T100TRUE;

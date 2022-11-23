@@ -15,6 +15,11 @@ T100SentenceLoop::~T100SentenceLoop()
     //dtor
 }
 
+T100VOID T100SentenceLoop::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_LOOP] = L"T100SentenceLoop";
+}
+
 T100BOOL T100SentenceLoop::parse()
 {
     T100BOOL        result          = T100TRUE;

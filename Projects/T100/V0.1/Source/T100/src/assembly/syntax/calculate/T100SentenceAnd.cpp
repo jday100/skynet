@@ -15,6 +15,11 @@ T100SentenceAnd::~T100SentenceAnd()
     //dtor
 }
 
+T100VOID T100SentenceAnd::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_AND] = L"T100SentenceAnd";
+}
+
 T100BOOL T100SentenceAnd::parse()
 {
     T100BOOL        result          = T100TRUE;

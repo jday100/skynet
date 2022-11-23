@@ -13,6 +13,9 @@ class T100SentenceScanner : public T100Component::T100Scanner
         T100SentenceScanner();
         virtual ~T100SentenceScanner();
 
+        T100BOOL                append();
+        T100BOOL                read();
+
         T100VOID                setSource(T100Component::T100Scanner*);
         T100Component::T100Scanner*            getSource();
 
@@ -26,8 +29,6 @@ class T100SentenceScanner : public T100Component::T100Scanner
         T100KeywordToken*       getItem();
 
         T100BOOL                run();
-        T100BOOL                append();
-        T100BOOL                read();
 
         T100VOID                nextLine();
 

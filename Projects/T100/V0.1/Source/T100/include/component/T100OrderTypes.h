@@ -12,6 +12,9 @@ typedef enum{
     T100CBR,
     T100CCR,
     //
+    T100SSR,
+    T100SPR,
+    //
     T100AAR,
     T100ABR,
     T100ACR,
@@ -55,6 +58,9 @@ typedef enum{
     T100ORDER_JNZ,
     T100ORDER_LOOP,
     //
+    T100ORDER_PUSH,
+    T100ORDER_POP,
+    //
     T100ORDER_IN,
     T100ORDER_OUT,
     T100ORDER_MOVE,
@@ -70,6 +76,8 @@ typedef enum{
     T100DATA_COR,
     T100DATA_CBR,
     T100DATA_CCR,
+    T100DATA_SSR,
+    T100DATA_SPR,
     T100DATA_AAR,
     T100DATA_ABR,
     T100DATA_ACR,
@@ -91,6 +99,9 @@ typedef enum{
     T_COR,
     T_CBR,
     T_CCR,
+    //
+    T_SSR,
+    T_SPR,
     //
     T_AAR,
     T_ABR,

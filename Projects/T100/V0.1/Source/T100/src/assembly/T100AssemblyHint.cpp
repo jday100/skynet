@@ -2,6 +2,8 @@
 
 #include <cwchar>
 #include "T100ByteToken.h"
+#include "T100ProduceInfo.h"
+#include "T100SentenceToken.h"
 
 namespace T100Assembly{
 
@@ -51,6 +53,14 @@ T100WSTRING T100AssemblyHint::byte_hint(T100ByteToken* token, T100WSTRING msg)
     swprintf(buffer, L"Byte: [%s] Type: [%s] >> %s", value, name, msg);
 
     return buffer;
+}
+
+T100WSTRING T100AssemblyHint::sentence_hint(T100SentenceToken* token, T100WSTRING msg)
+{
+    T100STRING      name;
+
+    name = T100ProduceInfo::m_token_names[token->type];
+
 }
 
 }

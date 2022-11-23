@@ -15,6 +15,11 @@ T100SentenceSub::~T100SentenceSub()
     //dtor
 }
 
+T100VOID T100SentenceSub::init()
+{
+    T100ProduceInfo::m_token_names[T100SENTENCE_SUB] = L"T100SentenceSub";
+}
+
 T100BOOL T100SentenceSub::parse()
 {
     T100BOOL        result          = T100TRUE;
