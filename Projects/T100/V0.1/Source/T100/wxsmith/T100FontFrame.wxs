@@ -4,7 +4,7 @@
 		<size>406,550</size>
 		<pos_arg>1</pos_arg>
 		<size_arg>1</size_arg>
-		<object class="Custom" name="ID_CUSTOM1" subclass="T100FontPanel" variable="Custom1" member="yes">
+		<object class="Custom" name="ID_CUSTOM_FONT_PANEL" subclass="T100FontPanel" variable="FontPanel" member="yes">
 			<creating_code>$(THIS) = new $(CLASS)($(PARENT),$(ID),$(POS),$(SIZE));</creating_code>
 			<include_file>T100FontPanel.h</include_file>
 			<local_include>1</local_include>

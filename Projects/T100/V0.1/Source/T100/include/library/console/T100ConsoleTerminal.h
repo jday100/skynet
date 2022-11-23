@@ -1,6 +1,8 @@
 #ifndef T100CONSOLETERMINAL_H
 #define T100CONSOLETERMINAL_H
 
+#include <mutex>
+#include <condition_variable>
 #include "T100ConsoleBase.h"
 
 namespace T100Library{
@@ -13,6 +15,9 @@ class T100ConsoleTerminal : public T100ConsoleBase
         T100ConsoleTerminal(T100ConsoleTerminalParser* = T100NULL, T100CONSOLE_TYPE = T100CONSOLE_TYPE_WINDOWS);
         virtual ~T100ConsoleTerminal();
 
+        T100BOOL                exec(T100WSTRING);
+        T100BOOL                run();
+        T100VOID                wait();
         T100VOID                print(T100WSTRING&);
 
         T100VOID                outline(T100WSTRING&);
@@ -31,6 +36,8 @@ class T100ConsoleTerminal : public T100ConsoleBase
 
         T100ConsoleTerminalThread*      m_thread            = T100NULL;
         T100ConsoleTerminalParser*      m_parser            = T100NULL;
+        std::mutex                      m_mutex;
+        std::condition_variable         m_condition;
 
 };
 

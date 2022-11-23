@@ -16,13 +16,13 @@ class T100FontFrame: public wxFrame
 		virtual ~T100FontFrame();
 
 		//(*Declarations(T100FontFrame)
-		T100FontPanel* Custom1;
+		T100FontPanel* FontPanel;
 		//*)
 
 	protected:
 
 		//(*Identifiers(T100FontFrame)
-		static const long ID_CUSTOM1;
+		static const long ID_CUSTOM_FONT_PANEL;
 		//*)
 
 	private:

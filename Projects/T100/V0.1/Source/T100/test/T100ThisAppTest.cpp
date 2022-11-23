@@ -8,6 +8,8 @@ T100ThisAppTest::T100ThisAppTest()
     :T100Library::T100Test(T100NULL, m_name),
     test_library(this),
     test_assembly(this),
+    test_font(this),
+    test_vdisk(this),
     test_vpc(this),
     test_os(this)
 {

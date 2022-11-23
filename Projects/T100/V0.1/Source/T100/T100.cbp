@@ -90,6 +90,8 @@
 					<Add directory="test/library/test" />
 					<Add directory="test/vpc" />
 					<Add directory="test/os" />
+					<Add directory="test/font" />
+					<Add directory="test/vdisk" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -175,6 +177,8 @@
 					<Add directory="test/library/test" />
 					<Add directory="test/vpc" />
 					<Add directory="test/os" />
+					<Add directory="test/font" />
+					<Add directory="test/vdisk" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -369,6 +373,7 @@
 		<Unit filename="include/editor/serve/T100EditorServe.h" />
 		<Unit filename="include/editor/view/T100EditorView.h" />
 		<Unit filename="include/font/T100FontApp.h" />
+		<Unit filename="include/font/T100FontBuilder.h" />
 		<Unit filename="include/font/T100FontHint.h" />
 		<Unit filename="include/font/T100FontSetup.h" />
 		<Unit filename="include/font/serve/T100FontCallback.h" />
@@ -403,6 +408,7 @@
 		<Unit filename="include/library/T100App.h" />
 		<Unit filename="include/library/T100AppManager.h" />
 		<Unit filename="include/library/T100AppSetup.h" />
+		<Unit filename="include/library/T100AppThread.h" />
 		<Unit filename="include/library/T100Buffer.h" />
 		<Unit filename="include/library/T100Callback.h" />
 		<Unit filename="include/library/T100CapacityTools.h" />
@@ -696,6 +702,7 @@
 		<Unit filename="src/editor/serve/T100EditorServe.cpp" />
 		<Unit filename="src/editor/view/T100EditorView.cpp" />
 		<Unit filename="src/font/T100FontApp.cpp" />
+		<Unit filename="src/font/T100FontBuilder.cpp" />
 		<Unit filename="src/font/T100FontHint.cpp" />
 		<Unit filename="src/font/T100FontSetup.cpp" />
 		<Unit filename="src/font/serve/T100FontCallback.cpp" />
@@ -730,6 +737,7 @@
 		<Unit filename="src/library/T100App.cpp" />
 		<Unit filename="src/library/T100AppManager.cpp" />
 		<Unit filename="src/library/T100AppSetup.cpp" />
+		<Unit filename="src/library/T100AppThread.cpp" />
 		<Unit filename="src/library/T100Callback.cpp" />
 		<Unit filename="src/library/T100CapacityTools.cpp" />
 		<Unit filename="src/library/T100Class.cpp" />
@@ -892,6 +900,10 @@
 		<Unit filename="test/assembly/T100AssemblyTestHint.h" />
 		<Unit filename="test/assembly/T100AssemblyVirtualTest.cpp" />
 		<Unit filename="test/assembly/T100AssemblyVirtualTest.h" />
+		<Unit filename="test/font/T100FontBuilderTest.cpp" />
+		<Unit filename="test/font/T100FontBuilderTest.h" />
+		<Unit filename="test/font/T100FontBuilderTestHint.cpp" />
+		<Unit filename="test/font/T100FontBuilderTestHint.h" />
 		<Unit filename="test/library/T100LibraryTest.cpp" />
 		<Unit filename="test/library/T100LibraryTest.h" />
 		<Unit filename="test/library/T100LibraryTestHint.cpp" />
@@ -904,6 +916,14 @@
 		<Unit filename="test/library/T100TestTest.h" />
 		<Unit filename="test/library/test/T100TestDemoTest.cpp" />
 		<Unit filename="test/library/test/T100TestDemoTest.h" />
+		<Unit filename="test/os/T100OSBootTest.cpp" />
+		<Unit filename="test/os/T100OSBootTest.h" />
+		<Unit filename="test/os/T100OSInitTest.cpp" />
+		<Unit filename="test/os/T100OSInitTest.h" />
+		<Unit filename="test/os/T100OSKernelTest.cpp" />
+		<Unit filename="test/os/T100OSKernelTest.h" />
+		<Unit filename="test/os/T100OSRomTest.cpp" />
+		<Unit filename="test/os/T100OSRomTest.h" />
 		<Unit filename="test/os/T100OSTest.cpp" />
 		<Unit filename="test/os/T100OSTest.h" />
 		<Unit filename="test/os/T100OSTestHint.cpp" />
@@ -924,6 +944,10 @@
 		<Unit filename="test/resources/assembly/scanner/test_segment.txt" />
 		<Unit filename="test/resources/assembly/scanner/test_sentence.txt" />
 		<Unit filename="test/resources/assembly/scanner/test_string.txt" />
+		<Unit filename="test/vdisk/T100VDiskTest.cpp" />
+		<Unit filename="test/vdisk/T100VDiskTest.h" />
+		<Unit filename="test/vdisk/T100VDiskTestHint.cpp" />
+		<Unit filename="test/vdisk/T100VDiskTestHint.h" />
 		<Unit filename="test/vpc/T100QU32Test.cpp" />
 		<Unit filename="test/vpc/T100QU32Test.h" />
 		<Unit filename="test/vpc/T100VPCTest.cpp" />

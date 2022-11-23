@@ -8,6 +8,7 @@ class T100ConsoleTerminal;
 
 class T100ConsoleTerminalParser
 {
+    friend class T100ConsoleTerminal;
     friend class T100ConsoleTerminalThread;
     public:
         T100ConsoleTerminalParser();

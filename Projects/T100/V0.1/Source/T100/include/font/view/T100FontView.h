@@ -15,6 +15,8 @@ class T100FontView
         T100BOOL            init();
         T100BOOL            show();
 
+        T100FontFrame*      getFrame();
+
     protected:
         T100VOID            create();
         T100VOID            destroy();

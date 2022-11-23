@@ -45,7 +45,11 @@ T100VOID T100App::quit()
 
 T100VOID T100App::wait()
 {
-
+    if(m_thread){
+        std::unique_lock<std::mutex>    locker(m_mutex);
+        m_condition.wait(locker);
+        locker.unlock();
+    }
 }
 
 T100VOID T100App::open()

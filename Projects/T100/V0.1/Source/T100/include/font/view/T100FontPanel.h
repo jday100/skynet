@@ -107,6 +107,8 @@ class T100FontPanel: public wxPanel
 
 	    T100BOOL            verify();
 
+	    T100VOID            quit();
+
 		void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);
 
 		DECLARE_EVENT_TABLE()

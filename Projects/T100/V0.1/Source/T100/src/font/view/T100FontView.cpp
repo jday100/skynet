@@ -27,6 +27,11 @@ T100VOID T100FontView::destroy()
     T100SAFE_DELETE(m_frame);
 }
 
+T100FontFrame* T100FontView::getFrame()
+{
+    return m_frame;
+}
+
 T100BOOL T100FontView::init()
 {
 

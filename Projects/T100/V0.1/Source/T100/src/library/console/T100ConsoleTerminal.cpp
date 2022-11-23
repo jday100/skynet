@@ -1,5 +1,6 @@
 #include "T100ConsoleTerminal.h"
 
+#include "T100Thread.h"
 #include "T100ConsoleLinux.h"
 #include "T100ConsoleWindows.h"
 #include "T100ConsoleTerminalParser.h"
@@ -38,9 +39,6 @@ T100VOID T100ConsoleTerminal::create()
         m_parser = T100NEW T100ConsoleTerminalParser();
     }
     m_parser->setConsole(this);
-
-    m_thread = T100NEW T100ConsoleTerminalThread(this);
-    m_thread->start();
 }
 
 T100VOID T100ConsoleTerminal::destroy()
@@ -71,6 +69,38 @@ T100VOID T100ConsoleTerminal::outline(T100WSTRING& msg)
 T100VOID T100ConsoleTerminal::getline(T100WSTRING& msg)
 {
     m_console->getline(msg);
+}
+
+T100BOOL T100ConsoleTerminal::run()
+{
+    m_thread = T100NEW T100ConsoleTerminalThread(this);
+    m_thread->start();
+    return T100FALSE;
+}
+
+T100VOID T100ConsoleTerminal::wait()
+{
+    T100WSTRING     cmd;
+
+    cmd = L"quit\r\n";
+    T100Library::T100Thread::sleep(1000);
+    outline(cmd);
+    std::unique_lock<std::mutex>    locker(m_mutex);
+    m_condition.wait(locker);
+    locker.unlock();
+}
+
+T100BOOL T100ConsoleTerminal::exec(T100WSTRING cmd)
+{
+    T100BOOL        result          = T100TRUE;
+
+    T100CONSOLE_COMMAND_VECTOR      cmds;
+
+    result = m_parser->split(cmd, cmds);
+    if(result){
+        result = m_parser->parse(cmds);
+    }
+    return result;
 }
 
 }

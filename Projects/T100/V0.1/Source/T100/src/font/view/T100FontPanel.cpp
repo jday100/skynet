@@ -395,6 +395,7 @@ void T100FontPanel::OnPaintPanelPaint(wxPaintEvent& event)
     }else{
         RunButton->SetLabel(_("运行"));
         m_tools.m_value = m_tools.m_begin;
+        quit();
     }
 }
 
@@ -449,6 +450,11 @@ T100BOOL T100FontPanel::verify()
     }
 
     return T100TRUE;
+}
+
+T100VOID T100FontPanel::quit()
+{
+
 }
 
 
