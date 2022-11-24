@@ -289,6 +289,18 @@ T100VOID T100Executor32::execute()
             result = loop.execute(value);
         }
         break;
+    case T100Component::T100ORDER_PUSH:
+        {
+            T100OrderPush       push(m_host, this);
+            result = push.execute(value);
+        }
+        break;
+    case T100Component::T100ORDER_POP:
+        {
+            T100OrderPop        pop(m_host, this);
+            result = pop.execute(value);
+        }
+        break;
     case T100Component::T100ORDER_IN:
         {
             T100OrderIn         in(m_host, this);

@@ -1,5 +1,8 @@
 #include "T100SentencePop.h"
 
+#include "T100BitTypes.h"
+#include "T100SentenceCommon.h"
+
 namespace T100Assembly{
 
 T100SentencePop::T100SentencePop(T100SentenceScanner* scanner)
@@ -23,11 +26,11 @@ T100BOOL T100SentencePop::parse()
     T100BOOL        result          = T100TRUE;
 
     setLoaded(T100FALSE);
-    //result = parseOperator(target);
+    result = getOperatorParser().parse(target);
 
     if(result){
-        type            = T100SENTENCE_PUSH;
-        m_token->type   = T100SENTENCE_PUSH;
+        type            = T100SENTENCE_POP;
+        m_token->type   = T100SENTENCE_POP;
     }
 
     return result;
@@ -35,7 +38,21 @@ T100BOOL T100SentencePop::parse()
 
 T100BOOL T100SentencePop::build(T100BuildInfo* info)
 {
-    return T100FALSE;
+    T100BOOL            result;
+    T100WORD_BITS       order;
+    ::T100SentenceBase::T100OPERATOR_BUILD        build;
+
+    order.BYTE0.BYTE    = T100Component::T100ORDER_POP;
+
+    result = getOperatorBuilder().build(info, target, build);
+    if(!result){
+        return T100FALSE;
+    }
+
+    info->setValue(order.WORD);
+    info->next();
+
+    return T100TRUE;
 }
 
 }

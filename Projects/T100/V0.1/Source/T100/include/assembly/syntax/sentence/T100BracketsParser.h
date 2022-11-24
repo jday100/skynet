@@ -12,6 +12,8 @@ class T100BracketsParser : public T100ParserBase
         T100BracketsParser(T100SentenceBase*);
         virtual ~T100BracketsParser();
 
+        T100BOOL            parse(T100OPERATOR&);
+
     protected:
 
     private:

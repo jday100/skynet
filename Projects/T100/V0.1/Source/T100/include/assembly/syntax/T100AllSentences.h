@@ -34,6 +34,9 @@
 #include "T100SentenceJz.h"
 #include "T100SentenceLoop.h"
 
+#include "T100SentencePush.h"
+#include "T100SentencePop.h"
+
 #include "T100SentenceIn.h"
 #include "T100SentenceOut.h"
 #include "T100SentenceMove.h"

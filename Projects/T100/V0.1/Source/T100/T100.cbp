@@ -183,6 +183,7 @@
 					<Add directory="test/font" />
 					<Add directory="test/vdisk" />
 					<Add directory="include/assembly/syntax/sentence" />
+					<Add directory="include/qu32/order/program" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -323,13 +324,18 @@
 		<Unit filename="include/assembly/syntax/program/T100SentencePop.h" />
 		<Unit filename="include/assembly/syntax/program/T100SentencePush.h" />
 		<Unit filename="include/assembly/syntax/program/T100SentenceRet.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100BinocularBuilder.h" />
 		<Unit filename="include/assembly/syntax/sentence/T100BinocularParser.h" />
 		<Unit filename="include/assembly/syntax/sentence/T100BraceParser.h" />
 		<Unit filename="include/assembly/syntax/sentence/T100BracketsParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100BuilderBase.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100ComplexusBuilder.h" />
 		<Unit filename="include/assembly/syntax/sentence/T100ComplexusParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100DoubleBuilder.h" />
 		<Unit filename="include/assembly/syntax/sentence/T100ExpressionParser.h" />
 		<Unit filename="include/assembly/syntax/sentence/T100LabelParser.h" />
 		<Unit filename="include/assembly/syntax/sentence/T100NumberParser.h" />
+		<Unit filename="include/assembly/syntax/sentence/T100OperatorBuilder.h" />
 		<Unit filename="include/assembly/syntax/sentence/T100OperatorParser.h" />
 		<Unit filename="include/assembly/syntax/sentence/T100ParserBase.h" />
 		<Unit filename="include/assembly/syntax/sentence/T100RegisterParser.h" />
@@ -534,6 +540,8 @@
 		<Unit filename="include/qu32/order/program/T100OrderJump.h" />
 		<Unit filename="include/qu32/order/program/T100OrderJz.h" />
 		<Unit filename="include/qu32/order/program/T100OrderLoop.h" />
+		<Unit filename="include/qu32/order/program/T100OrderPop.h" />
+		<Unit filename="include/qu32/order/program/T100OrderPush.h" />
 		<Unit filename="include/qu32/order/program/T100OrderRet.h" />
 		<Unit filename="include/qu32/order/transfer/T100OrderCopy.h" />
 		<Unit filename="include/qu32/order/transfer/T100OrderIn.h" />
@@ -682,13 +690,18 @@
 		<Unit filename="src/assembly/syntax/program/T100SentencePop.cpp" />
 		<Unit filename="src/assembly/syntax/program/T100SentencePush.cpp" />
 		<Unit filename="src/assembly/syntax/program/T100SentenceRet.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100BinocularBuilder.cpp" />
 		<Unit filename="src/assembly/syntax/sentence/T100BinocularParser.cpp" />
 		<Unit filename="src/assembly/syntax/sentence/T100BraceParser.cpp" />
 		<Unit filename="src/assembly/syntax/sentence/T100BracketsParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100BuilderBase.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100ComplexusBuilder.cpp" />
 		<Unit filename="src/assembly/syntax/sentence/T100ComplexusParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100DoubleBuilder.cpp" />
 		<Unit filename="src/assembly/syntax/sentence/T100ExpressionParser.cpp" />
 		<Unit filename="src/assembly/syntax/sentence/T100LabelParser.cpp" />
 		<Unit filename="src/assembly/syntax/sentence/T100NumberParser.cpp" />
+		<Unit filename="src/assembly/syntax/sentence/T100OperatorBuilder.cpp" />
 		<Unit filename="src/assembly/syntax/sentence/T100OperatorParser.cpp" />
 		<Unit filename="src/assembly/syntax/sentence/T100ParserBase.cpp" />
 		<Unit filename="src/assembly/syntax/sentence/T100RegisterParser.cpp" />
@@ -866,6 +879,8 @@
 		<Unit filename="src/qu32/order/program/T100OrderJump.cpp" />
 		<Unit filename="src/qu32/order/program/T100OrderJz.cpp" />
 		<Unit filename="src/qu32/order/program/T100OrderLoop.cpp" />
+		<Unit filename="src/qu32/order/program/T100OrderPop.cpp" />
+		<Unit filename="src/qu32/order/program/T100OrderPush.cpp" />
 		<Unit filename="src/qu32/order/program/T100OrderRet.cpp" />
 		<Unit filename="src/qu32/order/transfer/T100OrderCopy.cpp" />
 		<Unit filename="src/qu32/order/transfer/T100OrderIn.cpp" />
@@ -913,6 +928,8 @@
 		<Unit filename="test/.gitkeep" />
 		<Unit filename="test/T100AppTest.cpp" />
 		<Unit filename="test/T100AppTest.h" />
+		<Unit filename="test/T100FullTest.cpp" />
+		<Unit filename="test/T100FullTest.h" />
 		<Unit filename="test/T100ThisAppTest.cpp" />
 		<Unit filename="test/T100ThisAppTest.h" />
 		<Unit filename="test/assembly/T100AssemblyKeywordScannerTest.cpp" />

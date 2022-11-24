@@ -29,6 +29,9 @@
 #include "T100OrderJnz.h"
 #include "T100OrderLoop.h"
 //
+#include "T100OrderPush.h"
+#include "T100OrderPop.h"
+//
 #include "T100OrderIn.h"
 #include "T100OrderOut.h"
 #include "T100OrderMove.h"

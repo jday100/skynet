@@ -19,6 +19,15 @@ class T100Sentence
 
         T100TOKEN_TYPE              type            = T100TOKEN_NONE;
         T100STRING                  value;
+        T100SentenceToken*          m_token         = T100NULL;
+        T100KeywordToken*           m_item          = T100NULL;
+
+        T100BOOL                    read();
+        T100BOOL                    clear();
+        T100BOOL                    append();
+
+        T100VOID                    setLoaded(T100BOOL);
+        T100BOOL                    isLoaded();
 
         virtual T100BOOL            parse() = 0;
 
@@ -53,8 +62,7 @@ class T100Sentence
         virtual T100VOID            log();
 
     protected:
-        T100SentenceToken*          m_token         = T100NULL;
-        T100KeywordToken*           m_item          = T100NULL;
+
         std::atomic_bool*           m_loaded        = T100NULL;
 
         T100Component::T100SYMBOL_TYPE             m_type          = T100Component::S_NONE;
@@ -62,12 +70,7 @@ class T100Sentence
         T100VOID                    create();
         T100VOID                    destroy();
 
-        T100BOOL                    read();
-        T100BOOL                    clear();
-        T100BOOL                    append();
 
-        T100VOID                    setLoaded(T100BOOL);
-        T100BOOL                    isLoaded();
 
     private:
         T100SentenceScanner*        m_scanner       = T100NULL;

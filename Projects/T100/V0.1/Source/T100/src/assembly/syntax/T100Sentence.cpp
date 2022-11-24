@@ -210,6 +210,20 @@ T100BOOL T100Sentence::parseRegister(T100Component::T100OPERATOR& op)
             setLoaded(T100FALSE);
         }
         break;
+    case T100KEYWORD_SSR:
+        {
+            op.DATA_TYPE    = T100Component::T100DATA_SSR;
+            op.ADDR_TYPE    = m_type;
+            setLoaded(T100FALSE);
+        }
+        break;
+    case T100KEYWORD_SPR:
+        {
+            op.DATA_TYPE    = T100Component::T100DATA_SPR;
+            op.ADDR_TYPE    = m_type;
+            setLoaded(T100FALSE);
+        }
+        break;
     case T100KEYWORD_AAR:
         {
             op.DATA_TYPE    = T100Component::T100DATA_AAR;
@@ -591,7 +605,7 @@ READ_NEXT:
         {
             m_type      = T100Component::S_VAL;
             setLoaded(T100FALSE);
-            goto READ_NEXT;
+    goto READ_NEXT;
         }
         break;
     case T100CHAR_EMAIL:
@@ -604,6 +618,8 @@ READ_NEXT:
     case T100KEYWORD_COR:
     case T100KEYWORD_CBR:
     case T100KEYWORD_CCR:
+    case T100KEYWORD_SSR:
+    case T100KEYWORD_SPR:
     case T100KEYWORD_AAR:
     case T100KEYWORD_ABR:
     case T100KEYWORD_ACR:
@@ -798,6 +814,8 @@ READ_NEXT:
     case T100KEYWORD_COR:
     case T100KEYWORD_CBR:
     case T100KEYWORD_CCR:
+    case T100KEYWORD_SSR:
+    case T100KEYWORD_SPR:
     case T100KEYWORD_AAR:
     case T100KEYWORD_ABR:
     case T100KEYWORD_ACR:

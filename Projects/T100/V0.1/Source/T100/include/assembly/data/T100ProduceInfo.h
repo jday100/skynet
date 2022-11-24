@@ -74,9 +74,9 @@ class T100ProduceInfo
 #define         T100PART_INFO_VECTOR                    std::vector<T100PartInfo*>
 #define         T100PART_INFO_HASH                      std::unordered_map<T100STRING, T100PartInfo*, T100Library::T100StringHash, T100Library::T100StringEqual>
 
-#define         T100VARIABLE_CALL                       T100ITEM
-#define         T100LABEL_CALL                          T100ITEM
-#define         T100PROCEDURE_CALL                      T100ITEM
+#define         T100VARIABLE_CALL                       T100Assembly::T100ITEM
+#define         T100LABEL_CALL                          T100Assembly::T100ITEM
+#define         T100PROCEDURE_CALL                      T100Assembly::T100ITEM
 
 #define         T100VARIABLE_HASH                       std::unordered_map<T100STRING, T100VARIABLE_DEFINE*, T100Library::T100StringHash, T100Library::T100StringEqual>
 #define         T100VARIABLEOFFSET_HASH                 std::unordered_map<T100STRING, T100WORD, T100Library::T100StringHash, T100Library::T100StringEqual>

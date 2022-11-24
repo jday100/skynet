@@ -474,6 +474,30 @@ T100BOOL T100SentenceScanner::parseOrder()
             }
         }
         break;
+        //
+    case T100KEYWORD_PUSH:
+        {
+            m_sentence = T100NEW T100SentencePush(this);
+
+            m_sentence->value = m_item.value;
+            result = m_sentence->parse();
+            if(result){
+                result = parseTail();
+            }
+        }
+        break;
+    case T100KEYWORD_POP:
+        {
+            m_sentence = T100NEW T100SentencePop(this);
+
+            m_sentence->value = m_item.value;
+            result = m_sentence->parse();
+            if(result){
+                result = parseTail();
+            }
+        }
+        break;
+        //
     case T100KEYWORD_IN:
         {
             m_sentence = T100NEW T100SentenceIn(this);

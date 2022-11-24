@@ -5,12 +5,19 @@
 namespace T100SentenceBase{
 
 T100SentenceBase::T100SentenceBase(T100Assembly::T100SentenceScanner* scanner)
-    :m_scanner(scanner),
+    :T100Assembly::T100Sentence(scanner),
+    m_scanner(scanner),
     m_operator_parser(this),
     m_register_parser(this),
     m_expression_parser(this),
     m_variable_parser(this),
-    m_label_parser(this)
+    m_label_parser(this),
+    m_brackets_parser(this),
+    m_brace_parser(this),
+    m_operator_builder(this),
+    m_complexus_builder(this),
+    m_binocular_builder(this),
+    m_double_builder(this)
 {
     //ctor
 }
@@ -18,33 +25,6 @@ T100SentenceBase::T100SentenceBase(T100Assembly::T100SentenceScanner* scanner)
 T100SentenceBase::~T100SentenceBase()
 {
     //dtor
-}
-
-T100BOOL T100SentenceBase::read()
-{
-
-}
-
-T100BOOL T100SentenceBase::clear()
-{
-    m_type  = P_NONE;
-    m_scanner->clear();
-    return T100TRUE;
-}
-
-T100BOOL T100SentenceBase::append()
-{
-    return m_scanner->append();
-}
-
-T100VOID T100SentenceBase::setLoaded(T100BOOL value)
-{
-    m_scanner->setLoaded(value);
-}
-
-T100BOOL T100SentenceBase::isLoaded()
-{
-    return m_scanner->isLoaded();
 }
 
 T100OperatorParser& T100SentenceBase::getOperatorParser()
@@ -70,6 +50,37 @@ T100VariableParser& T100SentenceBase::getVariableParser()
 T100LabelParser& T100SentenceBase::getLabelParser()
 {
     return m_label_parser;
+}
+
+T100BracketsParser& T100SentenceBase::getBracketsParser()
+{
+    return m_brackets_parser;
+}
+
+T100BraceParser& T100SentenceBase::getBraceParser()
+{
+    return m_brace_parser;
+}
+
+
+T100OperatorBuilder& T100SentenceBase::getOperatorBuilder()
+{
+    return m_operator_builder;
+}
+
+T100ComplexusBuilder& T100SentenceBase::getComplexusBuilder()
+{
+    return m_complexus_builder;
+}
+
+T100BinocularBuilder& T100SentenceBase::getBinocularBuilder()
+{
+    return m_binocular_builder;
+}
+
+T100DoubleBuilder& T100SentenceBase::getDoubleBuilder()
+{
+    return m_double_builder;
 }
 
 }

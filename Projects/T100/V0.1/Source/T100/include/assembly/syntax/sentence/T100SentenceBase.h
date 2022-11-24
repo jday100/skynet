@@ -24,41 +24,26 @@
 #include "T100LabelParser.h"
 
 
+#include "T100Sentence.h"
+
+#include "T100OperatorBuilder.h"
+#include "T100ComplexusBuilder.h"
+#include "T100BinocularBuilder.h"
+#include "T100DoubleBuilder.h"
+
 namespace T100Assembly{
 class T100SentenceScanner;
 }
 
 namespace T100SentenceBase{
 
-class T100SentenceBase
+class T100SentenceBase : public T100Assembly::T100Sentence
 {
     public:
         T100SentenceBase(T100Assembly::T100SentenceScanner*);
         virtual ~T100SentenceBase();
 
-        T100TOKEN_TYPE              type            = T100TOKEN_NONE;
-        T100STRING                  value;
-
         T100PREFIX_TYPE             m_type          = P_NONE;
-
-
-        T100BOOL                    read();
-        T100BOOL                    clear();
-        T100BOOL                    append();
-
-        T100VOID                    setLoaded(T100BOOL);
-        T100BOOL                    isLoaded();
-
-        virtual T100BOOL            parse() = 0;
-
-        virtual T100BOOL            build(T100Assembly::T100BuildInfo*) = 0;
-
-        T100Assembly::T100SentenceToken*            m_token         = T100NULL;
-        T100Assembly::T100KeywordToken*             m_item          = T100NULL;
-
-    protected:
-        std::atomic_bool*           m_loaded        = T100NULL;
-
 
     public:
         T100OperatorParser&         getOperatorParser();
@@ -67,6 +52,15 @@ class T100SentenceBase
 
         T100VariableParser&         getVariableParser();
         T100LabelParser&            getLabelParser();
+
+        T100BracketsParser&         getBracketsParser();
+        T100BraceParser&            getBraceParser();
+
+    public:
+        T100OperatorBuilder&        getOperatorBuilder();
+        T100ComplexusBuilder&       getComplexusBuilder();
+        T100BinocularBuilder&       getBinocularBuilder();
+        T100DoubleBuilder&          getDoubleBuilder();
 
     private:
         T100Assembly::T100SentenceScanner*          m_scanner           = T100NULL;
@@ -79,6 +73,15 @@ class T100SentenceBase
 
         T100VariableParser                          m_variable_parser;
         T100LabelParser                             m_label_parser;
+
+        T100BracketsParser                          m_brackets_parser;
+        T100BraceParser                             m_brace_parser;
+
+    private:
+        T100OperatorBuilder                         m_operator_builder;
+        T100ComplexusBuilder                        m_complexus_builder;
+        T100BinocularBuilder                        m_binocular_builder;
+        T100DoubleBuilder                           m_double_builder;
 
 };
 

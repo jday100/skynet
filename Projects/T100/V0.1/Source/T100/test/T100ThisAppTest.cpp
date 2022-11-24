@@ -11,6 +11,7 @@ T100ThisAppTest::T100ThisAppTest()
     test_font(this),
     test_vdisk(this),
     test_vpc(this),
+    test_full(this),
     test_os(this)
 {
     //ctor

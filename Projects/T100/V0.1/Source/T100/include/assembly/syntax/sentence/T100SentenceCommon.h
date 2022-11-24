@@ -194,6 +194,40 @@ typedef struct{
 }T100OPERATOR_BINOCULAR;
 
 
+
+typedef struct{
+    T100BOOL                    USED;
+    T100BYTE                    TYPE;
+    T100PREFIX_TYPE             PREFIX_TYPE;
+    T100WORD                    INTERIM_OFFSET      = 0;
+    T100WORD                    OFFSET              = 0;
+    T100WORD                    VALUE               = 0;
+    T100BOOL                    FLAG                = T100FALSE;
+    T100BOOL                    ARRAY               = T100FALSE;
+    T100WORD                    INDEX;
+}T100OPERATOR_BUILD;
+
+typedef struct{
+    T100BYTE                    OFFSET              = 0;
+    T100BYTE                    TYPE;
+    T100OPERATOR_BUILD          BASE;
+    T100OPERATOR_BUILD          OPERATOR;
+}T100OPERATOR_COMPLEXUS_BUILD;
+
+typedef struct{
+    T100OPERATOR_COMPLEXUS_BUILD        TARGET;
+    T100OPERATOR_COMPLEXUS_BUILD        SOURCE;
+    T100OPERATOR_TYPE                   TYPE;
+}T100OPERATOR_BINOCULAR_BUILD;
+
+typedef struct{
+    T100BOOL                    USED                = T100FALSE;
+    T100OPERATOR_BUILD          BASE;
+    T100OPERATOR_BUILD          OPERATOR;
+    T100WORD                    TYPE;
+    T100WORD                    VALUE;
+}T100OPERATOR_DOUBLE_BUILD;
+
 }
 
 #endif // T100SENTENCECOMMON_H
