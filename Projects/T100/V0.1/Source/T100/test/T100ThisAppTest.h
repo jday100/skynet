@@ -11,7 +11,7 @@
 #include "T100OSTest.h"
 
 
-namespace T100ThisAppTest{
+namespace T100{
 
 class T100ThisAppTest : public T100Library::T100Test
 {

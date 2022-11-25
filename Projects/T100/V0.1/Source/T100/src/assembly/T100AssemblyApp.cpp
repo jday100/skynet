@@ -5,7 +5,7 @@
 namespace T100Assembly{
 
 T100AssemblyApp::T100AssemblyApp(T100Library::T100AppManager* obj)
-    :T100Library::T100App(obj)
+    :T100Library::T100AppBase(obj)
 {
     //ctor
 }

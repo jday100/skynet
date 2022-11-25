@@ -9,6 +9,8 @@
 
 namespace T100Library{
 
+typedef         T100BOOL (*T100CALLBACK)(void*);
+
 typedef         T100BOOL (*T100CALLBACK_HANDLE)(void*, void*, void*, void*, void*);
 
 typedef struct{

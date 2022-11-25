@@ -1,6 +1,6 @@
 #include "T100ThisAppTest.h"
 
-namespace T100ThisAppTest{
+namespace T100{
 
 T100WSTRING         T100ThisAppTest::m_name                     = L"T100";
 

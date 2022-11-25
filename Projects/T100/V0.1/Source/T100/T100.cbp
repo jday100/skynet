@@ -95,6 +95,7 @@
 					<Add directory="test/font" />
 					<Add directory="test/vdisk" />
 					<Add directory="include/assembly/syntax/sentence" />
+					<Add directory="." />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -431,7 +432,7 @@
 		<Unit filename="include/ide/view/T100IDEView.h" />
 		<Unit filename="include/ide/view/T100IDEViewBase.h" />
 		<Unit filename="include/ide/view/T100IDEViewManager.h" />
-		<Unit filename="include/library/T100App.h" />
+		<Unit filename="include/library/T100AppBase.h" />
 		<Unit filename="include/library/T100AppManager.h" />
 		<Unit filename="include/library/T100AppSetup.h" />
 		<Unit filename="include/library/T100AppThread.h" />
@@ -782,7 +783,7 @@
 		<Unit filename="src/ide/view/T100IDEView.cpp" />
 		<Unit filename="src/ide/view/T100IDEViewBase.cpp" />
 		<Unit filename="src/ide/view/T100IDEViewManager.cpp" />
-		<Unit filename="src/library/T100App.cpp" />
+		<Unit filename="src/library/T100AppBase.cpp" />
 		<Unit filename="src/library/T100AppManager.cpp" />
 		<Unit filename="src/library/T100AppSetup.cpp" />
 		<Unit filename="src/library/T100AppThread.cpp" />
@@ -928,10 +929,14 @@
 		<Unit filename="test/.gitkeep" />
 		<Unit filename="test/T100AppTest.cpp" />
 		<Unit filename="test/T100AppTest.h" />
+		<Unit filename="test/T100AppTestThread.cpp" />
+		<Unit filename="test/T100AppTestThread.h" />
 		<Unit filename="test/T100FullTest.cpp" />
 		<Unit filename="test/T100FullTest.h" />
 		<Unit filename="test/T100ThisAppTest.cpp" />
 		<Unit filename="test/T100ThisAppTest.h" />
+		<Unit filename="test/T100ThisAppTestHint.cpp" />
+		<Unit filename="test/T100ThisAppTestHint.h" />
 		<Unit filename="test/assembly/T100AssemblyKeywordScannerTest.cpp" />
 		<Unit filename="test/assembly/T100AssemblyKeywordScannerTest.h" />
 		<Unit filename="test/assembly/T100AssemblyPartScannerTest.cpp" />

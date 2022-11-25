@@ -3,10 +3,14 @@
 
 #include "T100Common.h"
 #include "T100DeviceTypes.h"
+#include "T100String.h"
+
 
 namespace T100QU32{
     class T100T100Device;
 }
+
+#define     T100PRELOAD_VECTOR                  std::vector<T100PRELOAD_ITEM*>
 
 #define     T100DEVICE_VECTOR                   std::vector<T100Device*>
 #define     T100DEVICE_BLOCK_VECTOR             std::vector<T100BlockDevice*>
@@ -38,6 +42,13 @@ typedef enum{
     T100EXECUTOR_MODE_RUN,
     T100EXECUTOR_MODE_MAX
 }T100EXECUTOR_MODE;
+
+typedef struct{
+    T100STRING          FILE;
+    T100WORD            OFFSET;
+    T100WORD            LENGTH;
+    T100BOOL            ISRUN;
+}T100PRELOAD_ITEM;
 
 }
 

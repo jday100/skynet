@@ -2,7 +2,7 @@
 #define T100VPCAPP_H
 
 #include "T100Common.h"
-#include "T100App.h"
+#include "T100AppBase.h"
 #include "T100ThisAppManager.h"
 
 
@@ -11,7 +11,7 @@ class T100VPCServe;
 class T100VPCView;
 
 
-class T100VPCApp : public T100Library::T100App
+class T100VPCApp : public T100Library::T100AppBase
 {
     public:
         T100VPCApp(T100ThisAppManager*);

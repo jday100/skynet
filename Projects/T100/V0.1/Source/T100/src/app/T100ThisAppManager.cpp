@@ -7,6 +7,7 @@
 
 #include "T100ThisAppCmdLineParser.h"
 
+#include "T100Main.h"
 #include "T100FontApp.h"
 #include "T100VPCApp.h"
 #include "T100VDiskConsole.h"
@@ -43,6 +44,8 @@ T100BOOL T100ThisAppManager::start()
 
     T100Library::T100Log::append(T100NEW T100Library::T100LogConsole());
     T100Library::T100Log::start();
+
+    m_frame = T100NEW T100Frame(0);
 
     if(m_info.TEST){
         T100AppTest         test(this);

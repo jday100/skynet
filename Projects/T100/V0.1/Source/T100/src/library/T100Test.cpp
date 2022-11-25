@@ -52,6 +52,10 @@ T100VOID T100Test::create()
     }else{
         m_inited = T100TRUE;
     }
+
+    //test
+    m_inited    = T100FALSE;
+    m_uninited  = T100FALSE;
 }
 
 T100VOID T100Test::destroy()
@@ -151,7 +155,7 @@ T100BOOL T100Test::find()
 
 T100BOOL T100Test::do_init()
 {
-    if(!m_inited){
+    if(T100FALSE == m_inited){
         m_inited = init();
         return m_inited;
     }
@@ -160,7 +164,7 @@ T100BOOL T100Test::do_init()
 
 T100BOOL T100Test::do_uninit()
 {
-    if(!m_uninited){
+    if(T100FALSE == m_uninited){
         m_uninited = uninit();
         return m_uninited;
     }

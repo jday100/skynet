@@ -30,6 +30,8 @@ T100BOOL T100VDiskCmdLineParser::parse(T100CONSOLE_COMMAND_VECTOR& cmds)
 
     if(L"help" == cmd){
         result = help();
+    }else if(L"quit" == cmd){
+        result = quit();
     }else if(L"create" == cmd){
         switch(size){
         case 4:
@@ -424,6 +426,14 @@ T100BOOL T100VDiskCmdLineParser::fs_copy(T100WSTRING source, T100WSTRING name, T
         result = T100FALSE;
     }
     return result;
+}
+
+T100BOOL T100VDiskCmdLineParser::quit()
+{
+    if(m_vdisk){
+        return m_vdisk->close();
+    }
+    return T100TRUE;
 }
 
 }

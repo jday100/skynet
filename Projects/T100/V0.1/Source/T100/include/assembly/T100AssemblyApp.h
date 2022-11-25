@@ -1,12 +1,12 @@
 #ifndef T100ASSEMBLYAPP_H
 #define T100ASSEMBLYAPP_H
 
-#include "T100App.h"
+#include "T100AppBase.h"
 #include "T100ThisAppCmdLineResult.h"
 
 namespace T100Assembly{
 
-class T100AssemblyApp : public T100Library::T100App
+class T100AssemblyApp : public T100Library::T100AppBase
 {
     public:
         T100AssemblyApp(T100Library::T100AppManager*);

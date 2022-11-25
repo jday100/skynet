@@ -1,12 +1,15 @@
 #ifndef T100WXAPP_H
 #define T100WXAPP_H
 
-#include "T100App.h"
+#include <wx/frame.h>
+#include "T100AppBase.h"
 
 namespace T100WxWidgets{
 class T100WxAppManager;
 
-class T100WxApp : public T100Library::T100App
+typedef     T100BOOL (wxFrame::*T100FRAME_CALLBACK)(void*);
+
+class T100WxApp : public T100Library::T100AppBase
 {
     public:
         T100WxApp(T100WxAppManager*);

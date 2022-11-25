@@ -7,7 +7,7 @@
 namespace T100VPC{
 
 T100VPCApp::T100VPCApp(T100ThisAppManager* obj)
-    :T100Library::T100App(obj)
+    :T100Library::T100AppBase(obj)
 {
     //ctor
     create();

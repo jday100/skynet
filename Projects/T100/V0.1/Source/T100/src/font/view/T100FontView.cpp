@@ -45,4 +45,12 @@ T100BOOL T100FontView::show()
     return T100FALSE;
 }
 
+T100BOOL T100FontView::quit()
+{
+    if(m_frame){
+        return m_frame->Close();
+    }
+    return T100FALSE;
+}
+
 }

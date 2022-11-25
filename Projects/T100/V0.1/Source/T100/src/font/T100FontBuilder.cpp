@@ -64,9 +64,9 @@ T100VOID T100FontBuilder::show()
 
 T100VOID T100FontBuilder::quit()
 {
-    std::unique_lock<std::mutex>    locker(m_mutex);
-    m_condition.wait(locker);
-    locker.unlock();
+    if(m_view){
+        m_view->quit();
+    }
 }
 
 }

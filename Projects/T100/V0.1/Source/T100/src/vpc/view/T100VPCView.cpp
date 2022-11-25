@@ -3,6 +3,7 @@
 #include "T100VPCFrame.h"
 #include "T100VPCScreen.h"
 #include "T100VPCConfigDialog.h"
+#include "T100VPCCallback.h"
 
 
 namespace T100VPC{
@@ -65,9 +66,24 @@ T100BOOL T100VPCView::hide()
     return T100FALSE;
 }
 
+T100BOOL T100VPCView::run()
+{
+    return T100VPCCallback::frame_menu_start();
+}
+
 T100BOOL T100VPCView::quit()
 {
     T100SAFE_DELETE(m_frame);
+
+    if(m_callback){
+        (m_parent->*m_callback)(T100NULL);
+    }
+}
+
+T100VOID T100VPCView::setCallback(wxFrame* frame, T100WxWidgets::T100FRAME_CALLBACK callback)
+{
+    m_parent    = frame;
+    m_callback  = callback;
 }
 
 }

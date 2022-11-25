@@ -14,6 +14,7 @@
 
 #include <atomic>
 #include "T100Common.h"
+#include "T100WxApp.h"
 #include "T100FontTools.h"
 
 
@@ -25,6 +26,8 @@ class T100FontPanel: public wxPanel
 
 		T100FontPanel(wxWindow* parent,wxWindowID id=wxID_ANY,const wxPoint& pos=wxDefaultPosition,const wxSize& size=wxDefaultSize);
 		virtual ~T100FontPanel();
+
+		T100VOID    setCallback(wxFrame*, T100WxWidgets::T100FRAME_CALLBACK);
 
 		//(*Declarations(T100FontPanel)
 		wxButton* AppendButton;
@@ -47,7 +50,7 @@ class T100FontPanel: public wxPanel
 		wxStaticBox* StaticBox4;
 		//*)
 
-	protected:
+	public:
 
 		//(*Identifiers(T100FontPanel)
 		static const long ID_STATICBOX1;
@@ -104,6 +107,9 @@ class T100FontPanel: public wxPanel
 	protected:
 	    T100VOID            create();
 	    T100VOID            destroy();
+
+	    wxFrame*            m_frame             = T100NULL;
+	    T100WxWidgets::T100FRAME_CALLBACK       m_callback          = T100NULL;
 
 	    T100BOOL            verify();
 

@@ -28,6 +28,11 @@ T100VOID T100FontApp::destroy()
     T100SAFE_DELETE(m_builder);
 }
 
+T100FontBuilder* T100FontApp::getFontBuilder()
+{
+    return m_builder;
+}
+
 T100VOID T100FontApp::show()
 {
     if(m_builder){

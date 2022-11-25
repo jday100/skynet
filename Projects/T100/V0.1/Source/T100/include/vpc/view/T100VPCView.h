@@ -2,6 +2,7 @@
 #define T100VPCVIEW_H
 
 #include "T100Common.h"
+#include "T100WxApp.h"
 
 namespace T100VPC{
 class T100VPCFrame;
@@ -15,9 +16,12 @@ class T100VPCView
         T100VPCView();
         virtual ~T100VPCView();
 
+        T100VOID        setCallback(wxFrame*, T100WxWidgets::T100FRAME_CALLBACK);
+
         T100BOOL                    show();
         T100BOOL                    hide();
 
+        T100BOOL                    run();
         T100BOOL                    quit();
 
         T100VOID                    setFrame(T100VPCFrame*);
@@ -35,6 +39,9 @@ class T100VPCView
         T100VPCFrame*               m_frame         = T100NULL;
         T100VPCScreen*              m_screen        = T100NULL;
         T100VPCConfigDialog*        m_config        = T100NULL;
+
+        wxFrame*                                m_parent            = T100NULL;
+        T100WxWidgets::T100FRAME_CALLBACK       m_callback          = T100NULL;
 
 };
 

@@ -3,7 +3,7 @@
 namespace T100WxWidgets{
 
 T100WxApp::T100WxApp(T100WxAppManager* obj)
-    :T100Library::T100App((T100Library::T100AppManager*)obj)
+    :T100Library::T100AppBase((T100Library::T100AppManager*)obj)
 {
     //ctor
 }

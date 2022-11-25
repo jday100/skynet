@@ -111,6 +111,14 @@ T100BOOL T100QU32::wait()
     return T100TRUE;
 }
 
+T100BOOL T100QU32::running()
+{
+    if(m_executor){
+        return m_executor->running();
+    }
+    return T100FALSE;
+}
+
 T100BOOL T100QU32::exec(T100WORD base, T100WORD offset)
 {
     m_cu->setCBR(base);
@@ -194,6 +202,18 @@ T100BOOL T100QU32::load()
             return T100FALSE;
         }
     }
+
+    for(T100PRELOAD_ITEM*   item : T100QU32Setup::getPreloadFiles()){
+        if(item){
+            result = m_memory->load(item->FILE, item->OFFSET);
+            if(!result){
+                return T100FALSE;
+            }
+        }else{
+            return T100FALSE;
+        }
+    }
+
     return result;
 }
 

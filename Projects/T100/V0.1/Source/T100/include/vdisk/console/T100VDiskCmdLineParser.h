@@ -55,6 +55,7 @@ class T100VDiskCmdLineParser : public T100Library::T100ConsoleTerminalParser
 
     protected:
         T100BOOL            help();
+        T100BOOL            quit();
 
         T100BOOL            create(T100WSTRING, T100WSTRING);
         T100BOOL            remove(T100WSTRING);

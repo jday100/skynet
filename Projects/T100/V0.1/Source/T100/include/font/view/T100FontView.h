@@ -14,6 +14,7 @@ class T100FontView
 
         T100BOOL            init();
         T100BOOL            show();
+        T100BOOL            quit();
 
         T100FontFrame*      getFrame();
 

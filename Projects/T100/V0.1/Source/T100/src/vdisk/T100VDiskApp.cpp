@@ -3,7 +3,7 @@
 namespace T100VDisk{
 
 T100VDiskApp::T100VDiskApp(T100Library::T100AppManager* obj)
-    :T100Library::T100App(obj)
+    :T100Library::T100AppBase(obj)
 {
     //ctor
 }

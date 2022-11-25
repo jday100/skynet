@@ -454,9 +454,16 @@ T100BOOL T100FontPanel::verify()
 
 T100VOID T100FontPanel::quit()
 {
-
+    if(m_callback){
+        (m_frame->*m_callback)(T100NULL);
+    }
 }
 
+T100VOID T100FontPanel::setCallback(wxFrame* frame, T100WxWidgets::T100FRAME_CALLBACK callback)
+{
+    m_frame     = frame;
+    m_callback  = callback;
+}
 
 }
 

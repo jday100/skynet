@@ -15,6 +15,16 @@
 #include <wx/string.h>
 //*)
 
+#include <thread>
+#include "T100String.h"
+#include "T100ThisAppSetup.h"
+#include "T100FontView.h"
+#include "T100FontFrame.h"
+#include "T100FontPanel.h"
+
+#include "T100VPCView.h"
+
+
 //helper functions
 enum wxbuildinfoformat {
     short_f, long_f };
@@ -47,9 +57,15 @@ const long T100Frame::idMenuAbout = wxNewId();
 const long T100Frame::ID_STATUSBAR1 = wxNewId();
 //*)
 
+const long T100Frame::ID_THREAD_FONT = wxNewId();
+const long T100Frame::ID_THREAD_VPC = wxNewId();
+
 BEGIN_EVENT_TABLE(T100Frame,wxFrame)
     //(*EventTable(T100Frame)
     //*)
+    EVT_THREAD(ID_THREAD_FONT, T100Frame::OnThreadFont)
+    EVT_THREAD(ID_THREAD_VPC, T100Frame::OnThreadVPC)
+
 END_EVENT_TABLE()
 
 T100Frame::T100Frame(wxWindow* parent,wxWindowID id)
@@ -99,4 +115,102 @@ void T100Frame::OnAbout(wxCommandEvent& event)
 {
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
+}
+
+void T100Frame::OnThreadFont(wxThreadEvent& event)
+{
+    T100BOOL        result          = T100TRUE;
+    T100STRING      file;
+    T100INT         index;
+
+    T100FontBuilder::T100FontPanel*         panel           = T100NULL;
+
+    m_builder   = T100NEW T100FontBuilder::T100FontBuilder();
+    m_builder->show();
+
+    file    = T100ThisAppSetup::getTestStores(L"test_font.fnt");
+    panel   = m_builder->getView()->getFrame()->FontPanel;
+
+    panel->setCallback(this, (T100WxWidgets::T100FRAME_CALLBACK)&T100Frame::font_quit);
+
+    index   = panel->FontNameChoice->FindString(L"System");
+    if(0 <= index){
+        panel->FontNameChoice->SetSelection(index);
+        panel->FontNameChoice->SendSelectionChangedEvent(wxEVT_COMMAND_CHOICE_SELECTED);
+    }else{
+        result = T100FALSE;
+    }
+
+    if(result){
+        panel->NameCodeRadioButton1->SetValue(T100TRUE);
+        wxCommandEvent  code1(wxEVT_COMMAND_RADIOBUTTON_SELECTED, panel->ID_RADIOBUTTON_NAMECODE1);
+        panel->NameCodeRadioButton1->GetEventHandler()->ProcessEvent(code1);
+        //wxQueueEvent(panel->NameCodeRadioButton1->GetEventHandler(), event.Clone());
+
+        panel->FontSizeComboBox->SetSelection(0);
+        panel->FontSizeComboBox->SendSelectionChangedEvent(wxEVT_COMMAND_COMBOBOX_SELECTED);
+
+        panel->CountryListBox->SetSelection(1);
+        panel->CountryListBox->SendSelectionChangedEvent(wxEVT_COMMAND_LISTBOX_SELECTED);
+
+        panel->CodeBeginComboBox->SetSelection(0);
+        panel->CodeBeginComboBox->SendSelectionChangedEvent(wxEVT_COMMAND_COMBOBOX_SELECTED);
+
+        panel->CodeEndComboBox->SetSelection(0);
+        panel->CodeEndComboBox->SendSelectionChangedEvent(wxEVT_COMMAND_COMBOBOX_SELECTED);
+
+        panel->AppendButton->HitTest(0, 0);
+        wxCommandEvent  append(wxEVT_COMMAND_BUTTON_CLICKED, panel->ID_BUTTON_APPEND);
+        panel->AppendButton->GetEventHandler()->ProcessEvent(append);
+
+        panel->FileComboBox->SetValue(file.to_wstring());
+        panel->FileComboBox->SendSelectionChangedEvent(wxEVT_COMMAND_COMBOBOX_SELECTED);
+
+        panel->RunButton->HitTest(0, 0);
+        wxCommandEvent  run(wxEVT_COMMAND_BUTTON_CLICKED, panel->ID_BUTTON_RUN);
+        panel->RunButton->GetEventHandler()->ProcessEvent(run);
+    }
+}
+
+void T100Frame::OnThreadVPC(wxThreadEvent& event)
+{
+    T100BOOL        result          = T100TRUE;
+    T100BOOL        value;
+
+    T100STRING      file;
+    T100VPC::T100VPC*       vpc         = T100NULL;
+
+    vpc     = T100NEW T100VPC::T100VPC();
+
+    vpc->getView()->setCallback(this, (T100WxWidgets::T100FRAME_CALLBACK)&T100Frame::vpc_quit);
+
+    //vpc->show();
+    vpc->run();
+}
+
+T100BOOL T100Frame::font_quit(void* d)
+{
+    m_condition.notify_all();
+
+    if(m_builder){
+        m_builder->quit();
+    }
+}
+
+T100BOOL T100Frame::vpc_quit(void* d)
+{
+    m_condition.notify_all();
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(10000));
+
+    if(m_vpc){
+        m_vpc->quit();
+    }
+}
+
+T100VOID T100Frame::wait()
+{
+    std::unique_lock<std::mutex>        locker(m_mutex);
+    m_condition.wait(locker);
+    locker.unlock();
 }

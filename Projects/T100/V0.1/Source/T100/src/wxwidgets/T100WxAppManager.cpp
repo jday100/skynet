@@ -13,4 +13,9 @@ T100WxAppManager::~T100WxAppManager()
     //dtor
 }
 
+wxFrame* T100WxAppManager::getFrame()
+{
+    return m_frame;
+}
+
 }

@@ -5,6 +5,8 @@ namespace T100QU32{
 T100BOOL                    T100QU32Setup::DEBUG                        = T100FALSE;
 T100EXECUTOR_MODE           T100QU32Setup::DEBUG_MODE                   = T100EXECUTOR_MODE_NONE;
 T100EXECUTOR_STATE          T100QU32Setup::DEBUG_STATE                  = T100EXECUTOR_STATE_NONE;
+T100PRELOAD_VECTOR          T100QU32Setup::m_files;
+
 T100WORD                    T100QU32Setup::MEMORY_WINDOW_BEGIN          = 0;
 T100WORD                    T100QU32Setup::MEMORY_WINDOW_END            = 0;
 T100WORD                    T100QU32Setup::PORT_WINDOW_BEGIN            = 0;
@@ -92,6 +94,11 @@ T100VOID T100QU32Setup::setRomSize(T100WORD value)
 T100WORD T100QU32Setup::getRomSize()
 {
     return m_rom_size;
+}
+
+T100PRELOAD_VECTOR& T100QU32Setup::getPreloadFiles()
+{
+    return m_files;
 }
 
 }

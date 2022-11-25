@@ -16,6 +16,8 @@ class T100FontApp : public T100WxWidgets::T100WxApp
 
         T100VOID                show();
 
+        T100FontBuilder*        getFontBuilder();
+
     protected:
         T100VOID                create();
         T100VOID                destroy();

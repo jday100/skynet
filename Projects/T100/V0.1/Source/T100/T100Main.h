@@ -15,6 +15,11 @@
 #include <wx/menu.h>
 #include <wx/statusbr.h>
 //*)
+#include <mutex>
+#include <condition_variable>
+#include "T100Common.h"
+#include "T100FontBuilder.h"
+#include "T100VPC.h"
 
 class T100Frame: public wxFrame
 {
@@ -23,7 +28,25 @@ class T100Frame: public wxFrame
         T100Frame(wxWindow* parent,wxWindowID id = -1);
         virtual ~T100Frame();
 
+        T100VOID    wait();
+
+        static const long ID_THREAD_FONT;
+        static const long ID_THREAD_VPC;
+
+    protected:
+        void OnThreadFont(wxThreadEvent& event);
+        void OnThreadVPC(wxThreadEvent& event);
+
     private:
+        std::mutex                  m_mutex;
+        std::condition_variable     m_condition;
+
+        T100FontBuilder::T100FontBuilder*       m_builder           = T100NULL;
+        T100VPC::T100VPC*                       m_vpc               = T100NULL;
+
+        T100BOOL    font_quit(void*);
+        T100BOOL    vpc_quit(void*);
+
 
         //(*Handlers(T100Frame)
         void OnQuit(wxCommandEvent& event);

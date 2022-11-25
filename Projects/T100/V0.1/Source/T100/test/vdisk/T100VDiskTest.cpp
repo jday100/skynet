@@ -70,7 +70,13 @@ T100BOOL T100VDiskTest::test_console()
         }
     }
 
-    //console.wait();
+    if(result){
+        cmd     = L"quit";
+        value   = console.exec(cmd.to_wstring());
+        if(!value){
+            result = T100FALSE;
+        }
+    }
 
     show_result(result, T100TEST_HINT_VDISK_CONSOLE_TEST_STOP);
     return result;
