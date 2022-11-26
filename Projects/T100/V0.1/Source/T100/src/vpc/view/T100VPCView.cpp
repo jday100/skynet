@@ -86,4 +86,24 @@ T100VOID T100VPCView::setCallback(wxFrame* frame, T100WxWidgets::T100FRAME_CALLB
     m_callback  = callback;
 }
 
+T100BOOL T100VPCView::start()
+{
+    if(m_frame){
+        m_frame->StartMenu->Enable(T100FALSE);
+        m_frame->StopMenu->Enable(T100TRUE);
+        return T100TRUE;
+    }
+    return T100FALSE;
+}
+
+T100BOOL T100VPCView::stop()
+{
+    if(m_frame){
+        m_frame->StartMenu->Enable(T100TRUE);
+        m_frame->StopMenu->Enable(T100FALSE);
+        return T100TRUE;
+    }
+    return T100FALSE;
+}
+
 }

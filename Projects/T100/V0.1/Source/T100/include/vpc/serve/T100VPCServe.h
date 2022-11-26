@@ -18,10 +18,16 @@ class T100VPCServe
 
         T100BOOL            running();
 
+        T100BOOL            createCallback();
+
+        T100WORD            getReturn();
+
     protected:
+        T100WORD            m_return;
 
     private:
-        T100QU32::T100QU32*           m_host          = T100NULL;
+        T100QU32::T100QU32*                 m_host          = T100NULL;
+        T100QU32::T100QU32Interface*        m_callback          = T100NULL;
 
 };
 

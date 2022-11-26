@@ -19,9 +19,27 @@ const long T100VPCFrame::ID_MENUITEM_ABOUT = wxNewId();
 const long T100VPCFrame::ID_STATUSBAR1 = wxNewId();
 //*)
 
+const long T100VPCFrame::ID_THREAD_START = wxNewId();
+const long T100VPCFrame::ID_THREAD_STOP = wxNewId();
+const long T100VPCFrame::ID_THREAD_QUIT = wxNewId();
+const long T100VPCFrame::ID_DEBUG_REGISTER_UPDATE = wxNewId();
+const long T100VPCFrame::ID_DEBUG_MEMORY_UPDATE = wxNewId();
+const long T100VPCFrame::ID_DEBUG_PORT_UPDATE = wxNewId();
+const long T100VPCFrame::ID_DEBUG_PAUSE = wxNewId();
+
+
 BEGIN_EVENT_TABLE(T100VPCFrame,wxFrame)
 	//(*EventTable(T100VPCFrame)
 	//*)
+	EVT_THREAD(ID_THREAD_START, T100VPCFrame::OnThreadStart)
+	EVT_THREAD(ID_THREAD_STOP, T100VPCFrame::OnThreadStop)
+	EVT_THREAD(ID_THREAD_QUIT, T100VPCFrame::OnThreadQuit)
+	//
+	EVT_THREAD(ID_DEBUG_REGISTER_UPDATE, T100VPCFrame::OnDebugRegisterUpdate)
+	EVT_THREAD(ID_DEBUG_MEMORY_UPDATE, T100VPCFrame::OnDebugMemoryUpdate)
+	EVT_THREAD(ID_DEBUG_PORT_UPDATE, T100VPCFrame::OnDebugPortUpdate)
+	//
+	EVT_THREAD(ID_DEBUG_PAUSE, T100VPCFrame::OnDebugPause)
 END_EVENT_TABLE()
 
 T100VPCFrame::T100VPCFrame(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
@@ -116,6 +134,42 @@ void T100VPCFrame::OnSetupMenuSelected(wxCommandEvent& event)
 void T100VPCFrame::OnAboutMenuSelected(wxCommandEvent& event)
 {
     T100VPCCallback::frame_menu_about();
+}
+
+
+void T100VPCFrame::OnThreadStart(wxThreadEvent& event)
+{
+
+}
+
+void T100VPCFrame::OnThreadStop(wxThreadEvent& event)
+{
+    T100VPCCallback::notify_thread_stop();
+}
+
+void T100VPCFrame::OnThreadQuit(wxThreadEvent& event)
+{
+
+}
+
+void T100VPCFrame::OnDebugRegisterUpdate(wxThreadEvent& event)
+{
+
+}
+
+void T100VPCFrame::OnDebugMemoryUpdate(wxThreadEvent& event)
+{
+
+}
+
+void T100VPCFrame::OnDebugPortUpdate(wxThreadEvent& event)
+{
+
+}
+
+void T100VPCFrame::OnDebugPause(wxThreadEvent& event)
+{
+
 }
 
 }

@@ -33,15 +33,16 @@ static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_REAL_MULTIPLE_TEST_ST
 static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_REAL_SHARE_TEST_START                = L"Assembly real produce share test is starting ... ";
 static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_REAL_SHARE_TEST_STOP                 = L"Assembly real produce share test is stopped . ";
 
-static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_REAL_STACK_TEST_START                = L"Assembly real produce stack test is starting ... ";
-static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_REAL_STACK_TEST_STOP                 = L"Assembly real produce stack test is stopped . ";
-
 
 static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_VIRTUAL_BASIC_TEST_START             = L"Assembly virtual produce basic test is starting ... ";
 static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_VIRTUAL_BASIC_TEST_STOP              = L"Assembly virtual produce basic test is stopped . ";
 
 static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_VIRTUAL_SHARE_TEST_START             = L"Assembly virtual produce share test is starting ... ";
 static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_VIRTUAL_SHARE_TEST_STOP              = L"Assembly virtual produce share test is stopped . ";
+
+
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_PROGRAM_STACK_TEST_START             = L"Assembly produce program stack test is starting ... ";
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_PROGRAM_STACK_TEST_STOP              = L"Assembly produce program stack test is stopped . ";
 
 
 

@@ -1,5 +1,8 @@
 #include "T100VPCServe.h"
 
+#include "T100VPCLink.h"
+
+
 namespace T100VPC{
 
 T100VPCServe::T100VPCServe()
@@ -19,6 +22,10 @@ T100BOOL T100VPCServe::start()
     }
 
     m_host = T100NEW T100QU32::T100QU32();
+
+    if(!createCallback()){
+        return T100FALSE;
+    }
 
     if(!m_host->create()){
         return T100FALSE;
@@ -41,6 +48,27 @@ T100BOOL T100VPCServe::running()
         return m_host->running();
     }
     return T100FALSE;
+}
+
+T100BOOL T100VPCServe::createCallback()
+{
+    if(!m_callback){
+        m_callback = T100NEW T100VPCLink();
+    }
+
+    if(m_host){
+        m_host->setCallback(m_callback);
+        return T100TRUE;
+    }
+    return T100FALSE;
+}
+
+T100WORD T100VPCServe::getReturn()
+{
+    if(m_host){
+        m_return = m_host->getReturn();
+    }
+    return m_return;
 }
 
 }

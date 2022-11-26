@@ -48,13 +48,6 @@ T100BOOL T100AssemblyRealTest::do_test()
         }
     }
 
-    if(result){
-        value = test_stack();
-        if(!value){
-            result = T100FALSE;
-        }
-    }
-
     return result;
 }
 
@@ -204,45 +197,5 @@ T100BOOL T100AssemblyRealTest::test_share()
     show_result(result, T100TEST_HINT_ASSEMBLY_PRODUCE_REAL_SHARE_TEST_STOP);
     return result;
 }
-
-T100BOOL T100AssemblyRealTest::test_stack()
-{
-    T100BOOL        result          = T100TRUE;
-    T100BOOL        value;
-
-    T100Library::T100Log::info(T100TEST_HINT_ASSEMBLY_PRODUCE_REAL_STACK_TEST_START);
-
-    T100STRING          source;
-    T100STRING          target;
-    T100STRING          confirm;
-    T100Assembly        assembly;
-
-    source  = T100ThisAppSetup::getTestResources(L"assembly\\real\\test_stack.txt");
-    confirm = T100ThisAppSetup::getTestResources(L"assembly\\real\\test_stack.bin");
-    target  = T100ThisAppSetup::getTestBuild(L"test_stack.bin");
-
-    value = assembly.run(source, target);
-    if(!value){
-        result = T100FALSE;
-    }
-
-    if(result){
-        value = T100Library::T100TestTools::Exists(target.to_wstring());
-        if(!value){
-            result = T100FALSE;
-        }
-    }
-
-    if(result){
-        value = T100Library::T100FileTools::compare(target.to_wstring(), confirm.to_wstring());
-        if(!value){
-            result = T100FALSE;
-        }
-    }
-
-    show_result(result, T100TEST_HINT_ASSEMBLY_PRODUCE_REAL_STACK_TEST_STOP);
-    return result;
-}
-
 
 }

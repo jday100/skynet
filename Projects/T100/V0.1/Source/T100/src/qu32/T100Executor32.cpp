@@ -19,6 +19,18 @@ T100Executor32::~T100Executor32()
 
 T100BOOL T100Executor32::start()
 {
+    for(T100PRELOAD_ITEM*   item : T100QU32Setup::getPreloadFiles()){
+        if(item){
+            if(item->ISRUN){
+                m_host->getCU32()->setCBR(item->OFFSET);
+                m_host->getCU32()->setCOR(0);
+            }
+            //m_host->getCU32()->setCOR(item->OFFSET);
+            break;
+        }else{
+            return T100FALSE;
+        }
+    }
     return T100Thread::start();
 }
 

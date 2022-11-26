@@ -31,6 +31,10 @@ class T100VPCView
 
         T100VPCConfigDialog*        getConfig();
 
+    public:
+        T100BOOL                    start();
+        T100BOOL                    stop();
+
     protected:
         T100VOID                    create();
         T100VOID                    destroy();

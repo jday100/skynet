@@ -20,9 +20,11 @@ class T100VPC
         T100VOID                    setView(T100VPCView*);
         T100VPCView*                getView();
 
-        T100VOID                    show();
+        T100BOOL                    show();
         T100BOOL                    run();
         T100VOID                    quit();
+
+        T100WORD                    getReturn();
 
     protected:
         T100VOID                    create();

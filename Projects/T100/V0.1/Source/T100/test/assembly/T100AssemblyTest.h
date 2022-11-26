@@ -12,6 +12,8 @@
 #include "T100AssemblyRealTest.h"
 #include "T100AssemblyVirtualTest.h"
 
+#include "T100AssemblyProgramTest.h"
+
 
 namespace T100Assembly{
 
@@ -31,6 +33,8 @@ class T100AssemblyTest : public T100Library::T100Test
 
         T100AssemblyRealTest                test_real;
         T100AssemblyVirtualTest             test_virtual;
+
+        T100AssemblyProgramTest             test_program;
 
     private:
         static T100WSTRING                  m_name;

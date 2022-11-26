@@ -1,5 +1,6 @@
 MODE	REAL
 
 CODE
+    MOVE    AAR         1
 	HALT
 END

@@ -1,8 +1,6 @@
 #include "T100VPCApp.h"
 
-#include "T100VPCServe.h"
-#include "T100VPCView.h"
-#include "T100VPCCallback.h"
+#include "T100VPC.h"
 
 namespace T100VPC{
 
@@ -21,45 +19,21 @@ T100VPCApp::~T100VPCApp()
 
 T100VOID T100VPCApp::create()
 {
-    m_serve     = T100NEW T100VPCServe();
-    m_view      = T100NEW T100VPCView();
-
-    T100VPCCallback::init(m_serve, m_view);
+    m_vpc = T100NEW T100VPC();
 }
 
 T100VOID T100VPCApp::destroy()
 {
-    T100SAFE_DELETE(m_view);
-    T100SAFE_DELETE(m_serve);
-}
-
-T100VOID T100VPCApp::setServe(T100VPCServe* serve)
-{
-    m_serve = serve;
-}
-
-T100VPCServe* T100VPCApp::getServe()
-{
-    return m_serve;
-}
-
-T100VOID T100VPCApp::setView(T100VPCView* view)
-{
-    m_view = view;
-}
-
-T100VPCView* T100VPCApp::getView()
-{
-    return m_view;
+    T100SAFE_DELETE(m_vpc);
 }
 
 T100BOOL T100VPCApp::show()
 {
-    if(!m_view){
+    if(!m_vpc){
         return T100FALSE;
     }
 
-    return m_view->show();
+    return m_vpc->show();
 }
 
 }

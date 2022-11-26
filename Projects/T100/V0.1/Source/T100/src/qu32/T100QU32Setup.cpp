@@ -36,6 +36,11 @@ T100QU32Setup::~T100QU32Setup()
     //dtor
 }
 
+T100VOID T100QU32Setup::setRomFile(T100STRING file)
+{
+    m_rom_file = file;
+}
+
 T100STRING T100QU32Setup::getRomFile()
 {
     return m_build_path + L"\\" + m_rom_file;

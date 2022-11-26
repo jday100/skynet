@@ -1,0 +1,9 @@
+MODE 	REAL
+
+DATA
+END
+
+CODE
+	MOVE 	AAR		1
+	HALT
+END

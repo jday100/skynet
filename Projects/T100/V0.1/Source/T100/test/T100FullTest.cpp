@@ -212,6 +212,7 @@ T100BOOL T100FullTest::test_full()
         item->ISRUN     = T100TRUE;
 
         T100QU32::T100QU32Setup::getPreloadFiles().push_back(item);
+        T100QU32::T100QU32Setup::NEED_LOAD_ROM = T100FALSE;
 
         wxThreadEvent   event(wxEVT_THREAD, T100Frame::ID_THREAD_VPC);
         wxQueueEvent(wxGetApp().getManager()->getFrame(), event.Clone());
@@ -222,7 +223,16 @@ T100BOOL T100FullTest::test_full()
         temp->wait();
     }
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(10000));
+    if(result){
+        wxFrame*    frame       = wxGetApp().getManager()->getFrame();
+        T100Frame*  temp        = (T100Frame*)frame;
+
+        if(1 != temp->getReturn()){
+            result = T100FALSE;
+        }
+    }
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
     show_result(result, T100TEST_HINT_FULL_TEST_STOP);
     return result;

@@ -1,0 +1,11 @@
+MODE 	REAL
+
+CODE
+	MOVE 	SSR	    1000
+	MOVE 	SPR 	0
+	//
+	PUSH	AAR
+	POP	    ABR
+	//
+	HALT
+END

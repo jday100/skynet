@@ -16,6 +16,18 @@ class T100VPCFrame: public wxFrame
 		T100VPCFrame(wxWindow* parent,wxWindowID id=wxID_ANY,const wxPoint& pos=wxDefaultPosition,const wxSize& size=wxDefaultSize);
 		virtual ~T100VPCFrame();
 
+
+        static const long ID_THREAD_START;
+		static const long ID_THREAD_STOP;
+		static const long ID_THREAD_QUIT;
+
+		static const long ID_DEBUG_REGISTER_UPDATE;
+		static const long ID_DEBUG_MEMORY_UPDATE;
+		static const long ID_DEBUG_PORT_UPDATE;
+
+		static const long ID_DEBUG_PAUSE;
+
+
 		//(*Declarations(T100VPCFrame)
 		wxMenu* Menu11;
 		wxMenu* Menu1;
@@ -45,6 +57,8 @@ class T100VPCFrame: public wxFrame
 		static const long ID_STATUSBAR1;
 		//*)
 
+
+
 	private:
 
 		//(*Handlers(T100VPCFrame)
@@ -56,6 +70,16 @@ class T100VPCFrame: public wxFrame
 		void OnSetupMenuSelected(wxCommandEvent& event);
 		void OnAboutMenuSelected(wxCommandEvent& event);
 		//*)
+
+		void OnThreadStart(wxThreadEvent& event);
+		void OnThreadStop(wxThreadEvent& event);
+		void OnThreadQuit(wxThreadEvent& event);
+
+		void OnDebugRegisterUpdate(wxThreadEvent& event);
+		void OnDebugMemoryUpdate(wxThreadEvent& event);
+		void OnDebugPortUpdate(wxThreadEvent& event);
+
+		void OnDebugPause(wxThreadEvent& event);
 
 	protected:
 

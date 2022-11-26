@@ -180,8 +180,20 @@ T100BOOL T100QU32::nextReturn()
 
 T100BOOL T100QU32::halt()
 {
-    m_executor->stop();
-    return T100TRUE;
+    T100BOOL        result          = T100TRUE;
+    T100BOOL        value;
+
+    value = m_executor->stop();
+
+    if(value){
+        m_return = m_au->getAAR();
+        if(!m_callback->notify_stop()){
+            result = T100FALSE;
+        }
+    }else{
+        result = T100FALSE;
+    }
+    return result;
 }
 
 T100BOOL T100QU32::load(T100STRING file, T100WORD location)

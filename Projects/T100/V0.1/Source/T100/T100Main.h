@@ -28,7 +28,8 @@ class T100Frame: public wxFrame
         T100Frame(wxWindow* parent,wxWindowID id = -1);
         virtual ~T100Frame();
 
-        T100VOID    wait();
+        T100VOID            wait();
+        T100WORD            getReturn();
 
         static const long ID_THREAD_FONT;
         static const long ID_THREAD_VPC;
@@ -38,6 +39,7 @@ class T100Frame: public wxFrame
         void OnThreadVPC(wxThreadEvent& event);
 
     private:
+        T100WORD                    m_return;
         std::mutex                  m_mutex;
         std::condition_variable     m_condition;
 

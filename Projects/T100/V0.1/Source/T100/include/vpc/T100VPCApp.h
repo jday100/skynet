@@ -7,21 +7,13 @@
 
 
 namespace T100VPC{
-class T100VPCServe;
-class T100VPCView;
-
+class T100VPC;
 
 class T100VPCApp : public T100Library::T100AppBase
 {
     public:
         T100VPCApp(T100ThisAppManager*);
         virtual ~T100VPCApp();
-
-        T100VOID            setServe(T100VPCServe*);
-        T100VPCServe*       getServe();
-
-        T100VOID            setView(T100VPCView*);
-        T100VPCView*        getView();
 
         T100BOOL            show();
 
@@ -30,8 +22,7 @@ class T100VPCApp : public T100Library::T100AppBase
         T100VOID            destroy();
 
     private:
-        T100VPCServe*       m_serve         = T100NULL;
-        T100VPCView*        m_view          = T100NULL;
+        T100VPC*            m_vpc           = T100NULL;
 
 };
 

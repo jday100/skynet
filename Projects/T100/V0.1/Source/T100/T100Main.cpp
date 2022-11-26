@@ -178,14 +178,13 @@ void T100Frame::OnThreadVPC(wxThreadEvent& event)
     T100BOOL        value;
 
     T100STRING      file;
-    T100VPC::T100VPC*       vpc         = T100NULL;
 
-    vpc     = T100NEW T100VPC::T100VPC();
+    m_vpc   = T100NEW T100VPC::T100VPC();
 
-    vpc->getView()->setCallback(this, (T100WxWidgets::T100FRAME_CALLBACK)&T100Frame::vpc_quit);
+    m_vpc->getView()->setCallback(this, (T100WxWidgets::T100FRAME_CALLBACK)&T100Frame::vpc_quit);
 
     //vpc->show();
-    vpc->run();
+    m_vpc->run();
 }
 
 T100BOOL T100Frame::font_quit(void* d)
@@ -201,7 +200,7 @@ T100BOOL T100Frame::vpc_quit(void* d)
 {
     m_condition.notify_all();
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(10000));
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
     if(m_vpc){
         m_vpc->quit();
@@ -213,4 +212,12 @@ T100VOID T100Frame::wait()
     std::unique_lock<std::mutex>        locker(m_mutex);
     m_condition.wait(locker);
     locker.unlock();
+}
+
+T100WORD T100Frame::getReturn()
+{
+    if(m_vpc){
+        return m_vpc->getReturn();
+    }
+    return 0;
 }

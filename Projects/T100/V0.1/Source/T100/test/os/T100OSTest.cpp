@@ -5,7 +5,8 @@ namespace T100OS{
 T100WSTRING         T100OSTest::m_name                      = L"os";
 
 T100OSTest::T100OSTest(T100Test* parent)
-    :T100Test(parent, m_name)
+    :T100Test(parent, m_name),
+    test_rom(this)
 {
     //ctor
 }

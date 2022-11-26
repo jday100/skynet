@@ -28,6 +28,7 @@ class T100QU32Setup : public T100Library::T100AppSetup
 
         static T100BOOL                 NEED_LOAD_ROM;
 
+        static T100VOID                 setRomFile(T100STRING);
         static T100STRING               getRomFile();
         static T100PRELOAD_VECTOR&      getPreloadFiles();
 

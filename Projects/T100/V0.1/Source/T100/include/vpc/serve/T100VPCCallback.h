@@ -30,7 +30,7 @@ class T100VPCCallback
         static T100BOOL             frame_menu_about(void* = T100NULL);
 
     public:
-
+        static T100BOOL             notify_thread_stop(void* = T100NULL);
 
     protected:
         static T100VPCServe*        m_serve;
