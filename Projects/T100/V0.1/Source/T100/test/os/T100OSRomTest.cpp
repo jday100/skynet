@@ -74,6 +74,7 @@ T100BOOL T100OSRomTest::test_rom()
     }
 
     if(result){
+        T100QU32::T100QU32Setup::clear();
         T100QU32::T100QU32Setup::NEED_LOAD_ROM = T100TRUE;
         T100QU32::T100QU32Setup::setRomFile(target);
 

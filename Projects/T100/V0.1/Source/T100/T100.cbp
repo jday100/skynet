@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-T" />
+				<Option parameters="-T -u=full" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -96,6 +96,7 @@
 					<Add directory="test/vdisk" />
 					<Add directory="include/assembly/syntax/sentence" />
 					<Add directory="." />
+					<Add directory="test/full" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -185,6 +186,9 @@
 					<Add directory="test/vdisk" />
 					<Add directory="include/assembly/syntax/sentence" />
 					<Add directory="include/qu32/order/program" />
+					<Add directory="include/qu32/order" />
+					<Add directory="include/qu32/order/control" />
+					<Add directory="test/full" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -226,6 +230,7 @@
 		<Unit filename="docs/assembly/T100Addressing.txt" />
 		<Unit filename="docs/assembly/T100Keyword.txt" />
 		<Unit filename="docs/assembly/T100Order.txt" />
+		<Unit filename="docs/assembly/T100Virtual.txt" />
 		<Unit filename="docs/os/mm.txt" />
 		<Unit filename="include/al/T100AL.h" />
 		<Unit filename="include/al/T100ALApp.h" />
@@ -302,6 +307,7 @@
 		<Unit filename="include/assembly/syntax/T100SentenceMode.h" />
 		<Unit filename="include/assembly/syntax/T100SentenceProcedure.h" />
 		<Unit filename="include/assembly/syntax/T100SentenceVariable.h" />
+		<Unit filename="include/assembly/syntax/T100SentenceVariableNew.h" />
 		<Unit filename="include/assembly/syntax/calculate/T100SentenceAdd.h" />
 		<Unit filename="include/assembly/syntax/calculate/T100SentenceAnd.h" />
 		<Unit filename="include/assembly/syntax/calculate/T100SentenceDiv.h" />
@@ -312,9 +318,12 @@
 		<Unit filename="include/assembly/syntax/calculate/T100SentenceXor.h" />
 		<Unit filename="include/assembly/syntax/control/T100SentenceCmt.h" />
 		<Unit filename="include/assembly/syntax/control/T100SentenceDebug.h" />
+		<Unit filename="include/assembly/syntax/control/T100SentenceEnter.h" />
 		<Unit filename="include/assembly/syntax/control/T100SentenceHalt.h" />
+		<Unit filename="include/assembly/syntax/control/T100SentenceLgd.h" />
 		<Unit filename="include/assembly/syntax/control/T100SentenceLock.h" />
 		<Unit filename="include/assembly/syntax/control/T100SentenceNop.h" />
+		<Unit filename="include/assembly/syntax/control/T100SentenceQuit.h" />
 		<Unit filename="include/assembly/syntax/control/T100SentenceUnlock.h" />
 		<Unit filename="include/assembly/syntax/program/T100SentenceCall.h" />
 		<Unit filename="include/assembly/syntax/program/T100SentenceInt.h" />
@@ -502,8 +511,12 @@
 		<Unit filename="include/qu32/T100AU32.h" />
 		<Unit filename="include/qu32/T100CU32.h" />
 		<Unit filename="include/qu32/T100Executor32.h" />
+		<Unit filename="include/qu32/T100Gdt32.h" />
 		<Unit filename="include/qu32/T100Interrupt32.h" />
 		<Unit filename="include/qu32/T100Memory32.h" />
+		<Unit filename="include/qu32/T100MemoryBase.h" />
+		<Unit filename="include/qu32/T100MemoryReal.h" />
+		<Unit filename="include/qu32/T100MemoryVirtaul.h" />
 		<Unit filename="include/qu32/T100Port32.h" />
 		<Unit filename="include/qu32/T100QU32.h" />
 		<Unit filename="include/qu32/T100QU32Common.h" />
@@ -512,6 +525,7 @@
 		<Unit filename="include/qu32/T100QU32Setup.h" />
 		<Unit filename="include/qu32/T100QU32Timer.h" />
 		<Unit filename="include/qu32/T100Register32.h" />
+		<Unit filename="include/qu32/T100Vmm32.h" />
 		<Unit filename="include/qu32/device/T100AUDevice.h" />
 		<Unit filename="include/qu32/device/T100BlockDevice.h" />
 		<Unit filename="include/qu32/device/T100CUDevice.h" />
@@ -521,6 +535,7 @@
 		<Unit filename="include/qu32/device/T100PortDevice.h" />
 		<Unit filename="include/qu32/order/T100AllOrders.h" />
 		<Unit filename="include/qu32/order/T100Order.h" />
+		<Unit filename="include/qu32/order/T100OrderBase.h" />
 		<Unit filename="include/qu32/order/calculate/T100OrderAdd.h" />
 		<Unit filename="include/qu32/order/calculate/T100OrderAnd.h" />
 		<Unit filename="include/qu32/order/calculate/T100OrderDiv.h" />
@@ -531,9 +546,12 @@
 		<Unit filename="include/qu32/order/calculate/T100OrderXor.h" />
 		<Unit filename="include/qu32/order/control/T100OrderCmt.h" />
 		<Unit filename="include/qu32/order/control/T100OrderDebug.h" />
+		<Unit filename="include/qu32/order/control/T100OrderEnter.h" />
 		<Unit filename="include/qu32/order/control/T100OrderHalt.h" />
+		<Unit filename="include/qu32/order/control/T100OrderLgd.h" />
 		<Unit filename="include/qu32/order/control/T100OrderLock.h" />
 		<Unit filename="include/qu32/order/control/T100OrderNop.h" />
+		<Unit filename="include/qu32/order/control/T100OrderQuit.h" />
 		<Unit filename="include/qu32/order/control/T100OrderUnlock.h" />
 		<Unit filename="include/qu32/order/program/T100OrderCall.h" />
 		<Unit filename="include/qu32/order/program/T100OrderInt.h" />
@@ -668,6 +686,7 @@
 		<Unit filename="src/assembly/syntax/T100SentenceMode.cpp" />
 		<Unit filename="src/assembly/syntax/T100SentenceProcedure.cpp" />
 		<Unit filename="src/assembly/syntax/T100SentenceVariable.cpp" />
+		<Unit filename="src/assembly/syntax/T100SentenceVariableNew.cpp" />
 		<Unit filename="src/assembly/syntax/calculate/T100SentenceAdd.cpp" />
 		<Unit filename="src/assembly/syntax/calculate/T100SentenceAnd.cpp" />
 		<Unit filename="src/assembly/syntax/calculate/T100SentenceDiv.cpp" />
@@ -678,9 +697,12 @@
 		<Unit filename="src/assembly/syntax/calculate/T100SentenceXor.cpp" />
 		<Unit filename="src/assembly/syntax/control/T100SentenceCmt.cpp" />
 		<Unit filename="src/assembly/syntax/control/T100SentenceDebug.cpp" />
+		<Unit filename="src/assembly/syntax/control/T100SentenceEnter.cpp" />
 		<Unit filename="src/assembly/syntax/control/T100SentenceHalt.cpp" />
+		<Unit filename="src/assembly/syntax/control/T100SentenceLgd.cpp" />
 		<Unit filename="src/assembly/syntax/control/T100SentenceLock.cpp" />
 		<Unit filename="src/assembly/syntax/control/T100SentenceNop.cpp" />
+		<Unit filename="src/assembly/syntax/control/T100SentenceQuit.cpp" />
 		<Unit filename="src/assembly/syntax/control/T100SentenceUnlock.cpp" />
 		<Unit filename="src/assembly/syntax/program/T100SentenceCall.cpp" />
 		<Unit filename="src/assembly/syntax/program/T100SentenceInt.cpp" />
@@ -843,8 +865,12 @@
 		<Unit filename="src/qu32/T100AU32.cpp" />
 		<Unit filename="src/qu32/T100CU32.cpp" />
 		<Unit filename="src/qu32/T100Executor32.cpp" />
+		<Unit filename="src/qu32/T100Gdt32.cpp" />
 		<Unit filename="src/qu32/T100Interrupt32.cpp" />
 		<Unit filename="src/qu32/T100Memory32.cpp" />
+		<Unit filename="src/qu32/T100MemoryBase.cpp" />
+		<Unit filename="src/qu32/T100MemoryReal.cpp" />
+		<Unit filename="src/qu32/T100MemoryVirtaul.cpp" />
 		<Unit filename="src/qu32/T100Port32.cpp" />
 		<Unit filename="src/qu32/T100QU32.cpp" />
 		<Unit filename="src/qu32/T100QU32Interface.cpp" />
@@ -852,6 +878,7 @@
 		<Unit filename="src/qu32/T100QU32Setup.cpp" />
 		<Unit filename="src/qu32/T100QU32Timer.cpp" />
 		<Unit filename="src/qu32/T100Register32.cpp" />
+		<Unit filename="src/qu32/T100Vmm32.cpp" />
 		<Unit filename="src/qu32/device/T100AUDevice.cpp" />
 		<Unit filename="src/qu32/device/T100BlockDevice.cpp" />
 		<Unit filename="src/qu32/device/T100CUDevice.cpp" />
@@ -860,6 +887,7 @@
 		<Unit filename="src/qu32/device/T100PageDevice.cpp" />
 		<Unit filename="src/qu32/device/T100PortDevice.cpp" />
 		<Unit filename="src/qu32/order/T100Order.cpp" />
+		<Unit filename="src/qu32/order/T100OrderBase.cpp" />
 		<Unit filename="src/qu32/order/calculate/T100OrderAdd.cpp" />
 		<Unit filename="src/qu32/order/calculate/T100OrderAnd.cpp" />
 		<Unit filename="src/qu32/order/calculate/T100OrderDiv.cpp" />
@@ -870,9 +898,12 @@
 		<Unit filename="src/qu32/order/calculate/T100OrderXor.cpp" />
 		<Unit filename="src/qu32/order/control/T100OrderCmt.cpp" />
 		<Unit filename="src/qu32/order/control/T100OrderDebug.cpp" />
+		<Unit filename="src/qu32/order/control/T100OrderEnter.cpp" />
 		<Unit filename="src/qu32/order/control/T100OrderHalt.cpp" />
+		<Unit filename="src/qu32/order/control/T100OrderLgd.cpp" />
 		<Unit filename="src/qu32/order/control/T100OrderLock.cpp" />
 		<Unit filename="src/qu32/order/control/T100OrderNop.cpp" />
+		<Unit filename="src/qu32/order/control/T100OrderQuit.cpp" />
 		<Unit filename="src/qu32/order/control/T100OrderUnlock.cpp" />
 		<Unit filename="src/qu32/order/program/T100OrderCall.cpp" />
 		<Unit filename="src/qu32/order/program/T100OrderInt.cpp" />
@@ -932,8 +963,6 @@
 		<Unit filename="test/T100AppTest.h" />
 		<Unit filename="test/T100AppTestThread.cpp" />
 		<Unit filename="test/T100AppTestThread.h" />
-		<Unit filename="test/T100FullTest.cpp" />
-		<Unit filename="test/T100FullTest.h" />
 		<Unit filename="test/T100ThisAppTest.cpp" />
 		<Unit filename="test/T100ThisAppTest.h" />
 		<Unit filename="test/T100ThisAppTestHint.cpp" />
@@ -965,6 +994,12 @@
 		<Unit filename="test/font/T100FontBuilderTest.h" />
 		<Unit filename="test/font/T100FontBuilderTestHint.cpp" />
 		<Unit filename="test/font/T100FontBuilderTestHint.h" />
+		<Unit filename="test/full/T100FullTest.cpp" />
+		<Unit filename="test/full/T100FullTest.h" />
+		<Unit filename="test/full/T100FullTestHint.cpp" />
+		<Unit filename="test/full/T100FullTestHint.h" />
+		<Unit filename="test/full/T100VirtualTest.cpp" />
+		<Unit filename="test/full/T100VirtualTest.h" />
 		<Unit filename="test/library/T100LibraryTest.cpp" />
 		<Unit filename="test/library/T100LibraryTest.h" />
 		<Unit filename="test/library/T100LibraryTestHint.cpp" />
@@ -989,6 +1024,7 @@
 		<Unit filename="test/os/T100OSTest.h" />
 		<Unit filename="test/os/T100OSTestHint.cpp" />
 		<Unit filename="test/os/T100OSTestHint.h" />
+		<Unit filename="test/resources/assembly/program/test_stack.bin" />
 		<Unit filename="test/resources/assembly/program/test_stack.txt" />
 		<Unit filename="test/resources/assembly/real/test_basic.bin" />
 		<Unit filename="test/resources/assembly/real/test_basic.txt" />
@@ -1015,10 +1051,16 @@
 		<Unit filename="test/resources/assembly/virtual/test_slave.txt" />
 		<Unit filename="test/resources/assembly/virtual/test_virtual.e" />
 		<Unit filename="test/resources/assembly/virtual/test_virtual.txt" />
+		<Unit filename="test/resources/full/test_full.bin" />
+		<Unit filename="test/resources/full/test_full.txt" />
+		<Unit filename="test/resources/full/test_real_basic.bin" />
+		<Unit filename="test/resources/full/test_real_basic.txt" />
+		<Unit filename="test/resources/full/test_real_stack.bin" />
+		<Unit filename="test/resources/full/test_real_stack.txt" />
+		<Unit filename="test/resources/full/test_virtual_basic.bin" />
+		<Unit filename="test/resources/full/test_virtual_basic.txt" />
 		<Unit filename="test/resources/os/test_rom.bin" />
 		<Unit filename="test/resources/os/test_rom.txt" />
-		<Unit filename="test/resources/test_full.bin" />
-		<Unit filename="test/resources/test_full.txt" />
 		<Unit filename="test/resources/vpc/test_qu32.txt" />
 		<Unit filename="test/vdisk/T100VDiskTest.cpp" />
 		<Unit filename="test/vdisk/T100VDiskTest.h" />

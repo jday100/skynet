@@ -19,6 +19,10 @@
 #include "T100OrderCmt.h"
 #include "T100OrderDebug.h"
 //
+#include "T100OrderLgd.h"
+#include "T100OrderEnter.h"
+#include "T100OrderQuit.h"
+//
 #include "T100OrderCall.h"
 #include "T100OrderRet.h"
 #include "T100OrderInt.h"

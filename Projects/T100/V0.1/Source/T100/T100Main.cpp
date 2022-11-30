@@ -202,9 +202,6 @@ T100BOOL T100Frame::vpc_quit(void* d)
 
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
-    if(m_vpc){
-        m_vpc->quit();
-    }
 }
 
 T100VOID T100Frame::wait()

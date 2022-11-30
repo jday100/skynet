@@ -86,7 +86,7 @@ READ_NEXT:
     switch(m_item.type){
     case T100KEYWORD_VARIABLE:
         {
-            m_sentence = T100NEW T100SentenceVariable(this);
+            m_sentence = T100NEW T100SentenceVariableNew(this);
 
             m_sentence->value = m_item.value;
             result = m_sentence->parse();
@@ -378,6 +378,39 @@ T100BOOL T100SentenceScanner::parseOrder()
     case T100KEYWORD_DEBUG:
         {
             m_sentence = T100NEW T100SentenceDebug(this);
+
+            m_sentence->value = m_item.value;
+            result = m_sentence->parse();
+            if(result){
+                result = parseTail();
+            }
+        }
+        break;
+    case T100KEYWORD_LGD:
+        {
+            m_sentence = T100NEW T100SentenceLgd(this);
+
+            m_sentence->value = m_item.value;
+            result = m_sentence->parse();
+            if(result){
+                result = parseTail();
+            }
+        }
+        break;
+    case T100KEYWORD_ENTER:
+        {
+            m_sentence = T100NEW T100SentenceEnter(this);
+
+            m_sentence->value = m_item.value;
+            result = m_sentence->parse();
+            if(result){
+                result = parseTail();
+            }
+        }
+        break;
+    case T100KEYWORD_QUIT:
+        {
+            m_sentence = T100NEW T100SentenceQuit(this);
 
             m_sentence->value = m_item.value;
             result = m_sentence->parse();

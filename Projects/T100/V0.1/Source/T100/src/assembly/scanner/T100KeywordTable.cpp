@@ -33,6 +33,10 @@ T100VOID T100KeywordTable::create()
     m_keywords[T100STRING(L"CMT")]          = T100KEYWORD_CMT;
     m_keywords[T100STRING(L"DBG")]          = T100KEYWORD_DEBUG;
 
+    m_keywords[T100STRING(L"LGD")]          = T100KEYWORD_LGD;
+    m_keywords[T100STRING(L"ENTER")]        = T100KEYWORD_ENTER;
+    m_keywords[T100STRING(L"QUIT")]         = T100KEYWORD_QUIT;
+
     m_keywords[T100STRING(L"CALL")]         = T100KEYWORD_CALL;
     m_keywords[T100STRING(L"RET")]          = T100KEYWORD_RETURN;
     m_keywords[T100STRING(L"INT")]          = T100KEYWORD_INT;
@@ -45,6 +49,7 @@ T100VOID T100KeywordTable::create()
 
     m_keywords[T100STRING(L"PUSH")]         = T100KEYWORD_PUSH;
     m_keywords[T100STRING(L"POP")]          = T100KEYWORD_POP;
+    m_keywords[T100STRING(L"ALL")]          = T100KEYWORD_ALL;
 
     m_keywords[T100STRING(L"IN")]           = T100KEYWORD_IN;
     m_keywords[T100STRING(L"OUT")]          = T100KEYWORD_OUT;

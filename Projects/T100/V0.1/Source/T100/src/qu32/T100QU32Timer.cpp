@@ -44,6 +44,15 @@ T100BOOL T100QU32Timer::OnTimer()
         m_host->getCallback()->notify_register_update(T100Component::T100CCR, value);
     }
 
+    if(m_host->getNotifier().m_ssr){
+        value = m_host->getCU32()->m_ssr.getValue();
+        m_host->getCallback()->notify_register_update(T100Component::T100SSR, value);
+    }
+    if(m_host->getNotifier().m_spr){
+        value = m_host->getCU32()->m_spr.getValue();
+        m_host->getCallback()->notify_register_update(T100Component::T100SPR, value);
+    }
+
     if(m_host->getNotifier().m_aar){
         value = m_host->getAU32()->getAAR();
         m_host->getCallback()->notify_register_update(T100Component::T100AAR, value);

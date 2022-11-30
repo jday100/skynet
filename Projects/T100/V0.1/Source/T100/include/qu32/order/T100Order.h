@@ -3,6 +3,7 @@
 
 #include "T100OrderTypes.h"
 #include "T100QU32Common.h"
+
 #include "T100QU32.h"
 
 namespace T100QU32{

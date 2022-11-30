@@ -41,6 +41,8 @@ class T100QU32Setup : public T100Library::T100AppSetup
         static T100WORD                 getRomBase();
         static T100WORD                 getRomSize();
 
+        static T100VOID                 clear();
+
     protected:
         static T100VOID                 setRamBase(T100WORD);
         static T100VOID                 setRamSize(T100WORD);

@@ -22,147 +22,80 @@ T100Memory32::~T100Memory32()
 
 T100VOID T100Memory32::create()
 {
-    m_rom_base      = T100QU32Setup::getRomBase();
-    m_rom_length    = T100QU32Setup::getRomSize();
-    m_rom_limit     = m_rom_base + m_rom_length;
-
-    m_ram_base      = T100QU32Setup::getRamBase();
-    m_ram_length    = T100QU32Setup::getRamSize();
-    m_ram_limit     = m_ram_base + m_ram_length;
-
-    m_rom.resize(m_rom_length);
-    m_ram.resize(m_ram_length);
+    m_real      = T100NEW T100MemoryReal(m_host);
+    m_memory    = m_real;
 }
 
 T100VOID T100Memory32::destroy()
 {
-    m_rom.clear();
-    m_ram.clear();
+    T100SAFE_DELETE(m_virtual);
+    T100SAFE_DELETE(m_real);
+}
+
+T100MemoryReal* T100Memory32::getMemory()
+{
+    return m_real;
 }
 
 T100BOOL T100Memory32::read(T100WORD offset, T100WORD& value)
 {
-    T100WORD    base    = 0;
-
-    if(m_host){
-        base    = m_host->getCU32()->getCBR();
-    }
-    return raw_read(base, offset, value);
+    return m_memory->read(offset, value);
 }
 
 T100BOOL T100Memory32::write(T100WORD offset, T100WORD value)
 {
-    T100WORD    base    = 0;
-
-    if(m_host){
-        base    = m_host->getCU32()->getCBR();
-    }
-    return raw_write(base, offset, value);
+    return m_memory->write(offset, value);
 }
 
-T100BOOL T100Memory32::raw_read(T100WORD base, T100WORD temp, T100WORD& value)
+T100BOOL T100Memory32::raw_read(T100WORD base, T100WORD offset, T100WORD& value)
 {
-    T100BOOL        result          = T100TRUE;
-    T100WORD        offset;
-    T100WORD        os;
-
-    offset = base + temp;
-
-    if(offset >= m_ram_limit){
-        result = T100FALSE;
-    }else if(offset >= m_rom_limit){
-        if(offset < m_ram_base){
-            result = T100FALSE;
-        }else{
-            os = offset - m_ram_base;
-            if(os >= m_ram_length){
-                result = T100FALSE;
-            }else{
-                value = m_ram[os];
-            }
-        }
-    }else{
-        if(offset < m_rom_base){
-            result = T100FALSE;
-        }else{
-            os = offset - m_rom_base;
-            if(os >= m_rom_length){
-                result = T100FALSE;
-            }else{
-                value = m_rom[os];
-            }
-        }
-    }
-    return result;
+    return m_memory->raw_read(base, offset, value);
 }
 
-T100BOOL T100Memory32::raw_write(T100WORD base, T100WORD temp, T100WORD value)
+T100BOOL T100Memory32::raw_write(T100WORD base, T100WORD offset, T100WORD value)
 {
-    T100BOOL        result          = T100TRUE;
-    T100WORD        offset;
-    T100WORD        os;
-
-    offset = base + temp;
-
-    if(offset >= m_ram_limit){
-        result = T100FALSE;
-    }else if(offset >= m_rom_limit){
-        if(offset < m_ram_base){
-            result = T100FALSE;
-        }else{
-            os = offset - m_ram_base;
-            if(os >= m_ram_length){
-                result = T100FALSE;
-            }else{
-                m_ram[os] = value;
-                notify(offset, value);
-            }
-        }
-    }else{
-        /*ROM OR FLASH?*/
-        if(offset < m_rom_base){
-            result = T100FALSE;
-        }else{
-            os = offset - m_rom_base;
-            if(os >= m_rom_length){
-                result = T100FALSE;
-            }else{
-                m_rom[os] = value;
-                notify(offset, value);
-            }
-        }
-    }
-    return result;
+    return m_memory->raw_write(base, offset, value);
 }
 
 T100BOOL T100Memory32::load(T100STRING file, T100WORD location)
 {
-    T100BOOL        result          = T100FALSE;
-    T100WORD        value;
-
-    if(location >= m_ram_base){
-        value   = location - m_ram_base;
-        result  = T100Library::T100FileTools::load(file.to_wstring(), m_ram, value);
-    }else if(location >= m_rom_base){
-        value   = location - m_rom_base;
-        result  = T100Library::T100FileTools::load(file.to_wstring(), m_rom, value);
-    }else{
-        return T100FALSE;
-    }
-    return result;
+    return m_real->load(file, location);
 }
 
-T100BOOL T100Memory32::notify(T100WORD offset, T100WORD value)
+T100WORD T100Memory32::getRomBase()
 {
-    T100BOOL        result          = T100TRUE;
+    return m_real->m_rom_base;
+}
 
-    if(T100QU32Setup::DEBUG){
-        if(offset >= T100QU32Setup::MEMORY_WINDOW_BEGIN
-           && offset <= T100QU32Setup::MEMORY_WINDOW_END){
-            m_host->getNotifier().notify_memory_update(offset, value);
-        }
+T100WORD T100Memory32::getRomLength()
+{
+    return m_real->m_rom_length;
+}
+
+T100WORD T100Memory32::getRamBase()
+{
+    return m_real->m_ram_base;
+}
+
+T100WORD T100Memory32::getRamLength()
+{
+    return m_real->m_ram_length;
+}
+
+T100BOOL T100Memory32::enter()
+{
+    if(!m_virtual){
+        m_virtual = T100NEW T100MemoryVirtaul(m_host);
     }
-    return result;
+
+    m_memory = m_virtual;
+    return T100TRUE;
+}
+
+T100BOOL T100Memory32::quit()
+{
+    m_memory = m_real;
+    return T100TRUE;
 }
 
 }

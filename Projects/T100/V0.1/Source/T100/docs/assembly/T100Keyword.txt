@@ -31,7 +31,15 @@
     UNLOCK
     HALT
     QUIT
-    LGDT
+
+    LGD
+    ENTER
+    QUIT
+
+    START
+    STOP
+
+    SYSTEM
 
     CALL
     RETURN
@@ -52,11 +60,13 @@
     OUT
 
 三、寄存器
+    ALL
+
     COR
     CBR
     CCR
     CSR
-    CGDTR
+    GDR
 
     AAR
     ABR

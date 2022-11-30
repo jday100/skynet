@@ -1,11 +1,48 @@
-MODE 	REAL
+MODE    REAL
 
 CODE
-	MOVE 	SSR	    1000
-	MOVE 	SPR 	0
-	//
-	PUSH	AAR
-	POP	    ABR
-	//
-	HALT
+    MOVE    SSR     1000
+    //
+    MOVE    AAR     SSR
+    MOVE    ABR     1000
+    SUB
+    JNZ     ERROR
+    //
+    MOVE    SPR     0
+    MOVE    ACR     SPR
+    JNZ     ERROR
+    //
+    MOVE    AAR     11
+    PUSH    AAR
+    //
+    MOVE    AAR     SPR
+    MOVE    ABR     1
+    SUB
+    JNZ     ERROR
+    //
+    MOVE    AAR     1000
+    MOVE    ABR     #AAR
+    MOVE    AAR     11
+    SUB
+    JNZ     ERROR
+    //
+    POP     ABR
+    MOVE    AAR     11
+    SUB
+    JNZ     ERROR
+    //
+    MOVE    AAR     SSR
+    MOVE    ABR     1000
+    SUB
+    JNZ     ERROR
+    //
+    MOVE    ACR     SPR
+    JNZ     ERROR
+    //
+    MOVE    AAR     1
+    //
+    HALT
+    //
+ERROR:
+    MOVE    AAR     0
 END

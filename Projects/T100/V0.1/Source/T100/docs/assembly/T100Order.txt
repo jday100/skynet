@@ -18,8 +18,11 @@
     4、Lock
     5、Unlock
     6、Halt
-    7、Quit
-    8、LGDT
+    Start
+    Stop
+    Enter
+    Quit
+    LGD
 
 三、编程指令：
     1、Call

@@ -12,6 +12,8 @@ class T100ComplexusParser : public T100ParserBase
         T100ComplexusParser(T100SentenceBase*);
         virtual ~T100ComplexusParser();
 
+        T100BOOL            parse(T100OPERATOR_COMPLEXUS&);
+
     protected:
 
     private:

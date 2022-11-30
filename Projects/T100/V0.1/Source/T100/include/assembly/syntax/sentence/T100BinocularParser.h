@@ -12,7 +12,7 @@ class T100BinocularParser : public T100ParserBase
         T100BinocularParser(T100SentenceBase*);
         virtual ~T100BinocularParser();
 
-        T100BOOL            parse(T100OPERATOR&);
+        T100BOOL            parse(::T100SentenceBase::T100OPERATOR_BINOCULAR&);
 
     protected:
 

@@ -1,0 +1,21 @@
+MODE    REAL
+
+DATA
+    gd_head         INTEGER[2]  {1073743872, 0}
+END
+
+CODE
+    LGD         gd_head
+    //
+    ENTER
+    //
+    JUMP        ENTRANCE
+    //
+ENTRANCE:
+    //
+    MOVE        AAR         1
+    //
+    HALT
+    //
+END
+

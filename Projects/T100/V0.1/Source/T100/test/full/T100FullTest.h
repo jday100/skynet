@@ -2,6 +2,7 @@
 #define T100FULLTEST_H
 
 #include "T100Test.h"
+#include "T100VirtualTest.h"
 
 namespace T100{
 
@@ -21,6 +22,12 @@ class T100FullTest : public T100Library::T100Test
         T100BOOL                    do_test();
 
         T100BOOL                    test_full();
+
+        T100BOOL                    test_real_basic();
+
+        T100BOOL                    test_real_stack();
+
+        T100VirtualTest             test_virtual;
 
     private:
         static T100WSTRING          m_name;

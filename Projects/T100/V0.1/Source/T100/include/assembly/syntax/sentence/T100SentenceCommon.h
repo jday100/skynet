@@ -77,6 +77,8 @@ typedef enum{
     T100DATA_FLOAT,
     T100DATA_STRING,
     //
+    T100DATA_ALL,
+    //
     T100DATA_COR,
     T100DATA_CBR,
     T100DATA_CCR,

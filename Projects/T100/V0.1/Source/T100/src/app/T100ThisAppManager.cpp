@@ -50,7 +50,11 @@ T100BOOL T100ThisAppManager::start()
     if(m_info.TEST){
         T100AppTest         test(this);
 
-        test.run();
+        if(m_info.UNIT){
+            test.unit(m_info.NAME);
+        }else{
+            test.run();
+        }
     }
 
     if(m_info.FONT){

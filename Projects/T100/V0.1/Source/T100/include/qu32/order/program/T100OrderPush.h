@@ -1,17 +1,17 @@
 #ifndef T100ORDERPUSH_H
 #define T100ORDERPUSH_H
 
-#include "T100Order.h"
+#include "T100OrderBase.h"
 
 namespace T100QU32{
 
-class T100OrderPush : public T100Order
+class T100OrderPush : public T100OrderBase
 {
     public:
         T100OrderPush(T100QU32*, T100Executor32*);
         virtual ~T100OrderPush();
 
-
+        T100SentenceBase::T100OPERATOR_BUILD        target;
 
     protected:
         T100BOOL            run();

@@ -253,6 +253,24 @@ T100VOID T100Executor32::execute()
             result = debug.execute(value);
         }
         break;
+    case T100Component::T100ORDER_LGD:
+        {
+            T100OrderLgd        lgd(m_host, this);
+            result = lgd.execute(value);
+        }
+        break;
+    case T100Component::T100ORDER_ENTER:
+        {
+            T100OrderEnter      enter(m_host, this);
+            result = enter.execute(value);
+        }
+        break;
+    case T100Component::T100ORDER_QUIT:
+        {
+            T100OrderQuit       quit(m_host, this);
+            result = quit.execute(value);
+        }
+        break;
     case T100Component::T100ORDER_CALL:
         {
             T100OrderCall       call(m_host, this);

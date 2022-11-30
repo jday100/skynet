@@ -24,6 +24,8 @@ typedef enum{
     T100AMF,
     T100AOF,
     //
+    T100GDR,
+    //
     T100REGISTER_MAX
 }T100REGISTER_TYPE;
 
@@ -61,6 +63,10 @@ typedef enum{
     T100ORDER_PUSH,
     T100ORDER_POP,
     //
+    T100ORDER_LGD,
+    T100ORDER_ENTER,
+    T100ORDER_QUIT,
+    //
     T100ORDER_IN,
     T100ORDER_OUT,
     T100ORDER_MOVE,
@@ -73,6 +79,7 @@ typedef enum{
     T100DATA_INTEGER,
     T100DATA_FLOAT,
     T100DATA_STRING,
+    T100DATA_ALL,
     T100DATA_COR,
     T100DATA_CBR,
     T100DATA_CCR,
@@ -85,6 +92,7 @@ typedef enum{
     T100DATA_ACF,
     T100DATA_AMF,
     T100DATA_AOF,
+    T100DATA_LDG,
     T100DATA_LABEL,
     T100DATA_PROCEDURE,
     T100DATA_VARIABLE,
@@ -95,6 +103,8 @@ typedef enum{
     T_NONE          = 1,
     //IMM
     T_IMM,
+    //
+    T_ALL,
     //
     T_COR,
     T_CBR,
@@ -111,6 +121,8 @@ typedef enum{
     T_ACF,
     T_AMF,
     T_AOF,
+    //
+    T_LGD,
     //
     //MEM
     T_MEM,

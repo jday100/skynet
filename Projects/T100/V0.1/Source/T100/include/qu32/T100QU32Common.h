@@ -10,6 +10,8 @@ namespace T100QU32{
     class T100T100Device;
 }
 
+#define     T100GDT_VECTOR                      std::vector<T100GDT_ITEM*>
+
 #define     T100PRELOAD_VECTOR                  std::vector<T100PRELOAD_ITEM*>
 
 #define     T100DEVICE_VECTOR                   std::vector<T100Device*>
@@ -49,6 +51,11 @@ typedef struct{
     T100WORD            LENGTH;
     T100BOOL            ISRUN;
 }T100PRELOAD_ITEM;
+
+typedef struct{
+    T100WORD            OFFSET;
+    T100WORD            VALUE;
+}T100GDT_ITEM;
 
 }
 

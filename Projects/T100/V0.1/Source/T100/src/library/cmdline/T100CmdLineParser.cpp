@@ -179,6 +179,8 @@ SWITCH_READ_NEXT:
                             if(!value){
                                 return T100FALSE;
                             }
+
+                            goto READ_NEXT;
                         }
                         break;
                     default:

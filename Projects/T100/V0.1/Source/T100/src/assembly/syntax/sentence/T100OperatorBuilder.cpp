@@ -467,4 +467,31 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
     return T100TRUE;
 }
 
+
+T100BOOL T100OperatorBuilder::buildAll(T100Assembly::T100BuildInfo* info, T100OPERATOR& target, T100OPERATOR_BUILD& build)
+{
+    T100BOOL        result          = T100FALSE;
+
+    switch(target.DATA_TYPE){
+    case T100Component::T100DATA_ALL:
+        {
+            build.FLAG      = T100FALSE;
+            switch(target.PREFIX_TYPE){
+            case P_NONE:
+                {
+                    build.TYPE      = T100Component::T_ALL;
+                }
+                break;
+            default:
+                return T100FALSE;
+            }
+        }
+        break;
+    default:
+        return this->build(info, target, build);
+    }
+
+    return T100TRUE;
+}
+
 }

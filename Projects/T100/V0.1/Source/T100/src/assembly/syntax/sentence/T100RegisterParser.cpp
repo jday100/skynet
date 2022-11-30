@@ -39,6 +39,20 @@ T100BOOL T100RegisterParser::parse(T100OPERATOR& op)
             getParent()->setLoaded(T100FALSE);
         }
         break;
+    case T100Assembly::T100KEYWORD_SSR:
+        {
+            op.DATA_TYPE    = T100DATA_SSR;
+            op.PREFIX_TYPE  = getParent()->m_type;
+            getParent()->setLoaded(T100FALSE);
+        }
+        break;
+    case T100Assembly::T100KEYWORD_SPR:
+        {
+            op.DATA_TYPE    = T100DATA_SPR;
+            op.PREFIX_TYPE  = getParent()->m_type;
+            getParent()->setLoaded(T100FALSE);
+        }
+        break;
     case T100Assembly::T100KEYWORD_AAR:
         {
             op.DATA_TYPE    = T100DATA_AAR;
@@ -90,6 +104,23 @@ T100BOOL T100RegisterParser::parse(T100OPERATOR& op)
         break;
     default:
         return T100FALSE;
+    }
+
+    return T100TRUE;
+}
+
+T100BOOL T100RegisterParser::parseAll(T100OPERATOR& op)
+{
+    switch(getParent()->m_item->type){
+    case T100Assembly::T100KEYWORD_ALL:
+        {
+            op.DATA_TYPE    = T100DATA_ALL;
+            op.PREFIX_TYPE  = getParent()->m_type;
+            getParent()->setLoaded(T100FALSE);
+        }
+        break;
+    default:
+        return parse(op);
     }
 
     return T100TRUE;

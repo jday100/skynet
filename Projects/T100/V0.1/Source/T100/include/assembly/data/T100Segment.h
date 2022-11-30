@@ -14,6 +14,7 @@ class T100Segment
     friend class T100RealMerger;
     friend class T100BuildInfo;
     friend class T100SentenceVariable;
+    friend class T100SentenceVariableNew;
     public:
         T100Segment();
         virtual ~T100Segment();

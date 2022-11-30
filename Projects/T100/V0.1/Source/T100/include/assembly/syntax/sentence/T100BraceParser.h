@@ -12,6 +12,8 @@ class T100BraceParser : public T100ParserBase
         T100BraceParser(T100SentenceBase*);
         virtual ~T100BraceParser();
 
+        T100BOOL            parse(::T100SentenceBase::T100OPERATOR_COMPLEXUS&);
+
     protected:
 
     private:

@@ -76,7 +76,7 @@ T100BOOL T100QU32Test::test_qu32()
     }
 
     if(result){
-        value = host.stop();
+        value = host.wait();
         if(!value){
             result = T100FALSE;
         }

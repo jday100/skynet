@@ -7,6 +7,8 @@
 #include "T100Log.h"
 #include "T100Console.h"
 
+#define     T100TEST_UNIT_HASH      std::unordered_map<T100WSTRING, T100Test*>
+
 namespace T100Library{
 class T100Test;
 
@@ -22,6 +24,7 @@ class T100Test : public T100Class
         static wchar_t**            argv;
 
         virtual T100BOOL            test_all();
+        virtual T100BOOL            test_unit(T100WSTRING);
 
         virtual T100VOID            list();
 
@@ -69,6 +72,8 @@ class T100Test : public T100Class
         static T100WORD             m_index;
         static T100WORD             m_success;
         static T100WORD             m_failure;
+
+        static T100TEST_UNIT_HASH   m_unit_hash;
 
         T100Vessel<T100WSTRING, T100Test*>          m_tests;
         T100Vessel<T100WSTRING, T100TEST_CALL>      m_test_call;

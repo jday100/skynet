@@ -1,11 +1,14 @@
 #include "T100AssemblyProgramTest.h"
 
+#include "T100App.h"
+#include "T100Main.h"
+
 #include "T100ThisAppSetup.h"
 #include "T100AssemblyTestHint.h"
 #include "T100FileTools.h"
 #include "T100TestTools.h"
 #include "T100Assembly.h"
-
+#include "T100QU32Setup.h"
 
 namespace T100Assembly{
 
@@ -68,6 +71,35 @@ T100BOOL T100AssemblyProgramTest::test_stack()
     if(result){
         value = T100Library::T100FileTools::compare(target.to_wstring(), confirm.to_wstring());
         if(!value){
+            result = T100FALSE;
+        }
+    }
+
+    if(result){
+        T100QU32::T100PRELOAD_ITEM* item    = T100NEW T100QU32::T100PRELOAD_ITEM();
+
+        item->FILE      = target;
+        item->OFFSET    = T100MEMORY_RAM_BASE + 2048;
+        item->ISRUN     = T100TRUE;
+
+        T100QU32::T100QU32Setup::clear();
+        T100QU32::T100QU32Setup::getPreloadFiles().push_back(item);
+        T100QU32::T100QU32Setup::NEED_LOAD_ROM = T100FALSE;
+
+        wxThreadEvent   event(wxEVT_THREAD, T100Frame::ID_THREAD_VPC);
+        wxQueueEvent(wxGetApp().getManager()->getFrame(), event.Clone());
+
+        wxFrame*    frame       = wxGetApp().getManager()->getFrame();
+        T100Frame*  temp        = (T100Frame*)frame;
+
+        temp->wait();
+    }
+
+    if(result){
+        wxFrame*    frame       = wxGetApp().getManager()->getFrame();
+        T100Frame*  temp        = (T100Frame*)frame;
+
+        if(1 != temp->getReturn()){
             result = T100FALSE;
         }
     }

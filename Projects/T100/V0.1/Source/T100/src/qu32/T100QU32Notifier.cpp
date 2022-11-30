@@ -29,6 +29,8 @@ T100VOID T100QU32Notifier::init()
     m_cor       = T100FALSE;
     m_cbr       = T100FALSE;
     m_ccr       = T100FALSE;
+    m_ssr       = T100FALSE;
+    m_spr       = T100FALSE;
     m_aar       = T100FALSE;
     m_abr       = T100FALSE;
     m_acr       = T100FALSE;
@@ -74,6 +76,16 @@ T100VOID T100QU32Notifier::notify_register_cbr()
 T100VOID T100QU32Notifier::notify_register_ccr()
 {
     m_ccr = T100TRUE;
+}
+
+T100VOID T100QU32Notifier::notify_register_ssr()
+{
+    m_ssr = T100TRUE;
+}
+
+T100VOID T100QU32Notifier::notify_register_spr()
+{
+    m_spr = T100TRUE;
 }
 
 T100VOID T100QU32Notifier::notify_register_aar()

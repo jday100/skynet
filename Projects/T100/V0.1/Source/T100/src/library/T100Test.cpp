@@ -11,6 +11,8 @@ T100WORD        T100Test::m_index           = 0;
 T100WORD        T100Test::m_success         = 0;
 T100WORD        T100Test::m_failure         = 0;
 
+T100TEST_UNIT_HASH      T100Test::m_unit_hash;
+
 
 T100Test::T100Test(T100Test* parent, T100WSTRING name)
     :T100Class(),
@@ -139,6 +141,44 @@ T100BOOL T100Test::test_all()
     }
 
     out_test_end(m_name, result);
+
+    return result;
+}
+
+T100BOOL T100Test::test_unit(T100WSTRING name)
+{
+    T100BOOL        result          = T100TRUE;
+    T100TEST_UNIT_HASH::iterator    it;
+
+    if(L"all" == name){
+        return test_all();
+    }
+
+    it = m_unit_hash.find(name);
+
+    if(m_unit_hash.end() == it){
+        result = T100FALSE;
+    }else{
+        T100Test*   test = T100NULL;
+
+        test = it->second;
+
+        if(test){
+            result = test->test_all();
+        }else{
+            result = T100FALSE;
+        }
+    }
+
+    T100Test*   test    = T100NULL;
+
+    test = m_tests[name];
+
+    if(test){
+        result = test->test_all();
+    }else{
+        result = T100FALSE;
+    }
 
     return result;
 }

@@ -36,6 +36,11 @@ T100QU32Setup::~T100QU32Setup()
     //dtor
 }
 
+T100VOID T100QU32Setup::clear()
+{
+    m_files.clear();
+}
+
 T100VOID T100QU32Setup::setRomFile(T100STRING file)
 {
     m_rom_file = file;

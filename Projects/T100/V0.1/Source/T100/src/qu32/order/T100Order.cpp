@@ -452,6 +452,8 @@ T100BOOL T100Order::loadOperator(T100Component::T100OPERATOR_SINGLE& op)
     case T100Component::T_COR:
     case T100Component::T_CBR:
     case T100Component::T_CCR:
+    case T100Component::T_SSR:
+    case T100Component::T_SPR:
     case T100Component::T_AAR:
     case T100Component::T_ABR:
     case T100Component::T_ACR:
@@ -688,6 +690,8 @@ T100BOOL T100Order::setOperator(T100Component::T100OPERATOR_SINGLE& op, T100WORD
     case T100Component::T_COR:
     case T100Component::T_CBR:
     case T100Component::T_CCR:
+    case T100Component::T_SSR:
+    case T100Component::T_SPR:
     case T100Component::T_AAR:
     case T100Component::T_ABR:
     case T100Component::T_ACR:
@@ -745,6 +749,16 @@ T100BOOL T100Order::setRegister(T100Component::T100OPERATOR_SINGLE& op, T100WORD
     case T100Component::T_CCR:
         {
             getHost()->getCU32()->setCCR(value);
+        }
+        break;
+    case T100Component::T_SSR:
+        {
+            getHost()->getCU32()->setSSR(value);
+        }
+        break;
+    case T100Component::T_SPR:
+        {
+            getHost()->getCU32()->setSPR(value);
         }
         break;
     case T100Component::T_AAR:
@@ -914,6 +928,18 @@ T100BOOL T100Order::loadRegister(T100Component::T100OPERATOR_SINGLE& op)
         {
             op.ADDR_TYPE        = T100Component::A_IMM;
             op.VALUE            = getHost()->getCU32()->getCBR();
+        }
+        break;
+    case T100Component::T_SSR:
+        {
+            op.ADDR_TYPE        = T100Component::A_IMM;
+            op.VALUE            = getHost()->getCU32()->getSSR();
+        }
+        break;
+    case T100Component::T_SPR:
+        {
+            op.ADDR_TYPE        = T100Component::A_IMM;
+            op.VALUE            = getHost()->getCU32()->getSPR();
         }
         break;
     case T100Component::T_CCR:

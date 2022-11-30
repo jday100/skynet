@@ -21,6 +21,9 @@ class T100QU32Notifier
         T100VOID                notify_register_cbr();
         T100VOID                notify_register_ccr();
 
+        T100VOID                notify_register_ssr();
+        T100VOID                notify_register_spr();
+
         T100VOID                notify_register_aar();
         T100VOID                notify_register_abr();
         T100VOID                notify_register_acr();
@@ -47,6 +50,8 @@ class T100QU32Notifier
         std::atomic_bool        m_cor;
         std::atomic_bool        m_cbr;
         std::atomic_bool        m_ccr;
+        std::atomic_bool        m_ssr;
+        std::atomic_bool        m_spr;
         std::atomic_bool        m_aar;
         std::atomic_bool        m_abr;
         std::atomic_bool        m_acr;

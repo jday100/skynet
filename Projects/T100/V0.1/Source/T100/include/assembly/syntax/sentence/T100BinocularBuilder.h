@@ -13,7 +13,7 @@ class T100BinocularBuilder : public T100BuilderBase
         T100BinocularBuilder(T100SentenceBase*);
         virtual ~T100BinocularBuilder();
 
-        T100BOOL            build();
+        T100BOOL            build(T100Assembly::T100BuildInfo*, T100OPERATOR_BINOCULAR&, T100OPERATOR_BINOCULAR_BUILD&);
 
     protected:
 

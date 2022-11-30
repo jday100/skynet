@@ -48,6 +48,14 @@ T100AU32* T100QU32::getAU32()
     return m_au;
 }
 
+T100Gdt32* T100QU32::getGdt32()
+{
+    if(!m_gdt){
+        m_gdt = T100NEW T100Gdt32(this);
+    }
+    return m_gdt;
+}
+
 T100Memory32* T100QU32::getMemory32()
 {
     return m_memory;
@@ -74,8 +82,10 @@ T100BOOL T100QU32::start()
         return T100FALSE;
     }
 
-    if(!m_callback->notify_start()){
-        return T100FALSE;
+    if(m_callback){
+        if(!m_callback->notify_start()){
+            return T100FALSE;
+        }
     }
     return m_executor->start();
 }
@@ -88,8 +98,10 @@ T100BOOL T100QU32::stop()
     value = m_executor->stop();
 
     if(value){
-        if(!m_callback->notify_stop()){
-            result = T100FALSE;
+        if(m_callback){
+            if(!m_callback->notify_stop()){
+                result = T100FALSE;
+            }
         }
     }else{
         result = T100FALSE;
@@ -98,6 +110,7 @@ T100BOOL T100QU32::stop()
     T100SAFE_DELETE(m_executor);
     T100SAFE_DELETE(m_interrupt);
     T100SAFE_DELETE(m_port);
+    T100SAFE_DELETE(m_gdt);
     T100SAFE_DELETE(m_memory);
     T100SAFE_DELETE(m_au);
     T100SAFE_DELETE(m_cu);
@@ -187,8 +200,10 @@ T100BOOL T100QU32::halt()
 
     if(value){
         m_return = m_au->getAAR();
-        if(!m_callback->notify_stop()){
-            result = T100FALSE;
+        if(m_callback){
+            if(!m_callback->notify_stop()){
+                result = T100FALSE;
+            }
         }
     }else{
         result = T100FALSE;

@@ -67,15 +67,15 @@ T100BOOL T100MemoryDevice::out(T100WORD offset, T100WORD value)
                 break;
             case T100MEMORYMODE_ROM:
                 {
-                    m_data[1] = m_host->getMemory32()->m_rom_base;
-                    m_data[2] = m_host->getMemory32()->m_rom_length;
+                    m_data[1] = m_host->getMemory32()->getRomBase();
+                    m_data[2] = m_host->getMemory32()->getRomLength();
                     m_data[3] = 32;
                 }
                 break;
             case T100MEMORYMODE_RAM:
                 {
-                    m_data[1] = m_host->getMemory32()->m_ram_base;
-                    m_data[2] = m_host->getMemory32()->m_ram_length;
+                    m_data[1] = m_host->getMemory32()->getRamBase();
+                    m_data[2] = m_host->getMemory32()->getRamLength();
                     m_data[3] = 32;
                 }
                 break;

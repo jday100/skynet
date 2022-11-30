@@ -37,11 +37,15 @@
 #include "T100SentencePush.h"
 #include "T100SentencePop.h"
 
+#include "T100SentenceLgd.h"
+#include "T100SentenceEnter.h"
+#include "T100SentenceQuit.h"
+
 #include "T100SentenceIn.h"
 #include "T100SentenceOut.h"
 #include "T100SentenceMove.h"
 
-#include "T100SentenceVariable.h"
+#include "T100SentenceVariableNew.h"
 #include "T100SentenceLabel.h"
 #include "T100SentenceProcedure.h"
 #include "T100SentenceComment.h"

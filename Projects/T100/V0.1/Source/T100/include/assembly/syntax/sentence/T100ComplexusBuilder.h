@@ -13,7 +13,7 @@ class T100ComplexusBuilder : public T100BuilderBase
         T100ComplexusBuilder(T100SentenceBase*);
         virtual ~T100ComplexusBuilder();
 
-        T100BOOL            build();
+        T100BOOL            build(T100Assembly::T100BuildInfo*, T100OPERATOR_COMPLEXUS&, T100OPERATOR_COMPLEXUS_BUILD&);
 
     protected:
 

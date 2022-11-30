@@ -8,7 +8,10 @@ T100SentenceBase::T100SentenceBase(T100Assembly::T100SentenceScanner* scanner)
     :T100Assembly::T100Sentence(scanner),
     m_scanner(scanner),
     m_operator_parser(this),
+    m_complexus_parser(this),
+    m_binocular_parser(this),
     m_register_parser(this),
+    m_number_parser(this),
     m_expression_parser(this),
     m_variable_parser(this),
     m_label_parser(this),
@@ -32,9 +35,24 @@ T100OperatorParser& T100SentenceBase::getOperatorParser()
     return m_operator_parser;
 }
 
+T100ComplexusParser& T100SentenceBase::getComplexusParser()
+{
+    return m_complexus_parser;
+}
+
+T100BinocularParser& T100SentenceBase::getBinocularParser()
+{
+    return m_binocular_parser;
+}
+
 T100RegisterParser& T100SentenceBase::getRegisterParser()
 {
     return m_register_parser;
+}
+
+T100NumberParser& T100SentenceBase::getNumberParser()
+{
+    return m_number_parser;
 }
 
 T100ExpressionParser& T100SentenceBase::getExpressionParser()
@@ -81,6 +99,83 @@ T100BinocularBuilder& T100SentenceBase::getBinocularBuilder()
 T100DoubleBuilder& T100SentenceBase::getDoubleBuilder()
 {
     return m_double_builder;
+}
+
+T100BOOL T100SentenceBase::parseBrackets(::T100SentenceBase::T100OPERATOR& op)
+{
+    T100BOOL        result          = T100FALSE;
+
+    setLoaded(T100FALSE);
+
+READ_NEXT:
+    if(!isLoaded()){
+        result = read();
+        if(!result){
+            return T100FALSE;
+        }
+    }
+
+    switch(m_item->type){
+    case T100Component::T100TOKEN_BR:
+        {
+            return T100TRUE;
+        }
+        break;
+    case T100Component::T100TOKEN_EOF:
+        {
+            m_token->type   = T100Component::T100TOKEN_ERROR;
+            m_token->err    = T100Assembly::T100ERROR_SENTENCE;
+            //
+            return T100FALSE;
+        }
+        break;
+    case T100Component::T100TOKEN_SPACE:
+        {
+            setLoaded(T100FALSE);
+            goto READ_NEXT;
+        }
+        break;
+    case T100Assembly::T100CHAR_OPEN_BRACKETS:
+        {
+            result = read();
+            if(!result){
+                return T100FALSE;
+            }
+
+            if(T100Assembly::T100CONSTANT_INTEGER == m_item->type){
+                T100WORD        value;
+
+                value = std::stoll(m_item->value.to_wstring());
+
+                result = read();
+                if(!result){
+                    return T100FALSE;
+                }
+
+                if(T100Assembly::T100CHAR_CLOSED_BRACKETS == m_item->type){
+                    op.ISARRAY  = T100TRUE;
+                    op.LENGTH   = value;
+
+                    setLoaded(T100FALSE);
+                    return T100TRUE;
+                }else{
+                    m_token->type   = T100Component::T100TOKEN_ERROR;
+                    m_token->err    = T100Assembly::T100ERROR_SENTENCE;
+                    //
+                    return T100FALSE;
+                }
+            }else{
+                m_token->type   = T100Component::T100TOKEN_ERROR;
+                m_token->err    = T100Assembly::T100ERROR_SENTENCE;
+                //
+                return T100FALSE;
+            }
+        }
+        break;
+    default:
+        return T100TRUE;
+    }
+    return T100FALSE;
 }
 
 }

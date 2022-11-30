@@ -64,6 +64,32 @@ T100WORD T100CU32::getCCR()
     return m_ccr.getValue();
 }
 
+T100VOID T100CU32::setSSR(T100WORD value)
+{
+    m_ssr.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getNotifier().notify_register_ssr();
+    }
+}
+
+T100WORD T100CU32::getSSR()
+{
+    return m_ssr.getValue();
+}
+
+T100VOID T100CU32::setSPR(T100WORD value)
+{
+    m_spr.setValue(value);
+    if(T100QU32Setup::DEBUG){
+        m_host->getNotifier().notify_register_spr();
+    }
+}
+
+T100WORD T100CU32::getSPR()
+{
+    return m_spr.getValue();
+}
+
 T100WORD T100CU32::step()
 {
     T100BOOL        result;

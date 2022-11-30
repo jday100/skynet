@@ -969,6 +969,34 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100Component::T100OPE
             }
         }
         break;
+    case T100Component::T100DATA_SSR:
+        {
+            info.OPERATOR_FLAG      = T100FALSE;
+            switch(target.ADDR_TYPE){
+            case T100Component::S_NONE:
+                {
+                    info.OPERATOR_TYPE      = T100Component::T_SSR;
+                }
+                break;
+            default:
+                return T100FALSE;
+            }
+        }
+        break;
+    case T100Component::T100DATA_SPR:
+        {
+            info.OPERATOR_FLAG      = T100FALSE;
+            switch(target.ADDR_TYPE){
+            case T100Component::S_NONE:
+                {
+                    info.OPERATOR_TYPE      = T100Component::T_SPR;
+                }
+                break;
+            default:
+                return T100FALSE;
+            }
+        }
+        break;
     case T100Component::T100DATA_AAR:
         {
             info.OPERATOR_FLAG      = T100FALSE;
@@ -1761,6 +1789,34 @@ T100BOOL T100Sentence::buildComplexus(T100BuildInfo* code, T100Component::T100OP
                 case T100Component::S_VAL:
                     {
                         info.BASE_TYPE      = T100Component::I_CCR;
+                    }
+                    break;
+                default:
+                    return T100FALSE;
+                }
+            }
+            break;
+        case T100Component::T100DATA_SSR:
+            {
+                info.BASE_FLAG      = T100FALSE;
+                switch(op.BASE.ADDR_TYPE){
+                case T100Component::S_NONE:
+                    {
+                        info.BASE_TYPE      = T100Component::T_SSR;
+                    }
+                    break;
+                default:
+                    return T100FALSE;
+                }
+            }
+            break;
+        case T100Component::T100DATA_SPR:
+            {
+                info.BASE_FLAG      = T100FALSE;
+                switch(op.BASE.ADDR_TYPE){
+                case T100Component::S_NONE:
+                    {
+                        info.BASE_TYPE      = T100Component::T_SPR;
                     }
                     break;
                 default:

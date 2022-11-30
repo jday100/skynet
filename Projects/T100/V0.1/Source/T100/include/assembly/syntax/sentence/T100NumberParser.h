@@ -12,6 +12,8 @@ class T100NumberParser : public T100ParserBase
         T100NumberParser(T100SentenceBase*);
         virtual ~T100NumberParser();
 
+        T100BOOL            parse(::T100SentenceBase::T100OPERATOR&);
+
     protected:
 
     private:

@@ -12,6 +12,8 @@ class T100AppTest : public T100WxWidgets::T100WxApp
 
         T100BOOL            run();
 
+        T100BOOL            unit(T100WSTRING);
+
     protected:
 
     private:

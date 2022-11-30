@@ -15,6 +15,8 @@ class T100OperatorBuilder : public T100BuilderBase
 
         T100BOOL            build(T100Assembly::T100BuildInfo*, T100OPERATOR&, T100OPERATOR_BUILD&);
 
+        T100BOOL            buildAll(T100Assembly::T100BuildInfo*, T100OPERATOR&, T100OPERATOR_BUILD&);
+
     protected:
 
     private:

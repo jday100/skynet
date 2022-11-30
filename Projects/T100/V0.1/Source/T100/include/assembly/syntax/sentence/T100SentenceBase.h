@@ -47,7 +47,11 @@ class T100SentenceBase : public T100Assembly::T100Sentence
 
     public:
         T100OperatorParser&         getOperatorParser();
+        T100ComplexusParser&        getComplexusParser();
+        T100BinocularParser&        getBinocularParser();
+
         T100RegisterParser&         getRegisterParser();
+        T100NumberParser&           getNumberParser();
         T100ExpressionParser&       getExpressionParser();
 
         T100VariableParser&         getVariableParser();
@@ -62,13 +66,18 @@ class T100SentenceBase : public T100Assembly::T100Sentence
         T100BinocularBuilder&       getBinocularBuilder();
         T100DoubleBuilder&          getDoubleBuilder();
 
+    protected:
+        T100BOOL                    parseBrackets(::T100SentenceBase::T100OPERATOR&);
+
     private:
         T100Assembly::T100SentenceScanner*          m_scanner           = T100NULL;
 
         T100OperatorParser                          m_operator_parser;
+        T100ComplexusParser                         m_complexus_parser;
+        T100BinocularParser                         m_binocular_parser;
 
         T100RegisterParser                          m_register_parser;
-
+        T100NumberParser                            m_number_parser;
         T100ExpressionParser                        m_expression_parser;
 
         T100VariableParser                          m_variable_parser;

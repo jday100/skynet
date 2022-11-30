@@ -15,6 +15,7 @@ class T100CU32
     friend class T100OrderJnz;
     friend class T100OrderJump;
     friend class T100OrderLoop;
+    friend class T100OrderBase;
     friend class T100QU32Timer;
     friend class T100Executor32;
     friend class T100Interrupt32;
@@ -27,6 +28,12 @@ class T100CU32
         T100WORD                    getCCR();
 
         T100VOID                    setCCR(T100WORD);
+
+        T100VOID                    setSSR(T100WORD);
+        T100WORD                    getSSR();
+
+        T100VOID                    setSPR(T100WORD);
+        T100WORD                    getSPR();
 
         T100WORD                    step();
         T100WORD                    getCurrent();

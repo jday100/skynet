@@ -12,7 +12,9 @@ class T100OperatorParser : public T100ParserBase
         T100OperatorParser(T100SentenceBase*);
         virtual ~T100OperatorParser();
 
-        T100BOOL                parse(T100OPERATOR& op);
+        T100BOOL                parse(T100OPERATOR&);
+
+        T100BOOL                parseAll(T100OPERATOR&);
 
     protected:
 
