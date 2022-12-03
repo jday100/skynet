@@ -11,6 +11,8 @@ class T100AU32
 {
     friend class T100Order;
     friend class T100OrderBase;
+    friend class T100OrderOrigin;
+    friend class T100OrderOperator;
     public:
         T100AU32(T100QU32*);
         virtual ~T100AU32();

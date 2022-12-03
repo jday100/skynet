@@ -419,12 +419,13 @@ T100BOOL T100SentenceVariableNew::setDefine()
     vd->NAME        = target.NAME;
     vd->LENGTH      = target.LENGTH;
     vd->VALUE       = target.VALUE;
-    //vd->TYPE        = target.DATA_TYPE;
+    vd->BASE_TYPE   = target.DATA_TYPE;
     vd->ISARRAY     = target.ISARRAY;
     vd->ISSHARE     = target.ISSHARE;
 
     //test
     vd->OFFSET      = 0;
+    vd->TYPE        = getType(target.DATA_TYPE);
 
     result = T100ProduceInfo::getVariableDrawer().setVariableDefine(target.NAME, vd);
     if(!result){
@@ -467,7 +468,26 @@ T100BOOL T100SentenceVariableNew::buildInteger(T100BuildInfo* info)
     T100WORD        offset;
 
     if(target.ISARRAY){
-        result = info->getData()->setArray(offset, target.LENGTH);
+        switch(target.DATA_TYPE){
+        case ::T100SentenceBase::T100DATA_INTEGER:
+            {
+                result = info->getData()->setArrayInteger(offset, target.LENGTH, m_integer);
+            }
+            break;
+        case ::T100SentenceBase::T100DATA_FLOAT:
+            {
+                result = info->getData()->setArrayFloat(offset, target.LENGTH, m_float);
+            }
+            break;
+        case ::T100SentenceBase::T100DATA_STRING:
+            {
+                result = info->getData()->setArrayString(offset, target.LENGTH, m_string);
+            }
+            break;
+        default:
+            result = T100FALSE;
+        }
+
         if(result){
             result = info->setVariable(target.NAME, offset);
         }
@@ -487,7 +507,7 @@ T100BOOL T100SentenceVariableNew::buildInteger(T100BuildInfo* info)
 
                 vd->NAME        = target.NAME;
                 vd->LENGTH      = target.LENGTH;
-                //vd->TYPE        = target.DATA_TYPE;
+                vd->BASE_TYPE   = target.DATA_TYPE;
                 vd->OFFSET      = offset;
                 vd->ISVIRTUAL   = info->getData()->isVirtual;
                 vd->ISSHARE     = info->getData()->isShare;
@@ -528,7 +548,7 @@ T100BOOL T100SentenceVariableNew::buildInteger(T100BuildInfo* info)
 
             vd->NAME        = target.NAME;
             vd->LENGTH      = target.LENGTH;
-            //vd->TYPE        = target.DATA_TYPE;
+            vd->BASE_TYPE   = target.DATA_TYPE;
             vd->OFFSET      = offset;
             vd->ISVIRTUAL   = info->getData()->isVirtual;
             vd->ISSHARE     = info->getData()->isShare;

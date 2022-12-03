@@ -69,6 +69,8 @@ class T100SentenceBase : public T100Assembly::T100Sentence
     protected:
         T100BOOL                    parseBrackets(::T100SentenceBase::T100OPERATOR&);
 
+        T100Component::T100DATA_TYPE        getType(::T100SentenceBase::T100DATA_TYPE);
+
     private:
         T100Assembly::T100SentenceScanner*          m_scanner           = T100NULL;
 

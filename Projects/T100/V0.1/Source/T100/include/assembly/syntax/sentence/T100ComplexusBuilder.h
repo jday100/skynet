@@ -15,6 +15,8 @@ class T100ComplexusBuilder : public T100BuilderBase
 
         T100BOOL            build(T100Assembly::T100BuildInfo*, T100OPERATOR_COMPLEXUS&, T100OPERATOR_COMPLEXUS_BUILD&);
 
+        T100BOOL            build(T100Assembly::T100BuildInfo*, T100OPERATOR_COMPLEXUS&, T100Component::T100ORDER_TYPE);
+
     protected:
 
     private:

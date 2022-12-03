@@ -25,6 +25,7 @@ T100BOOL T100SentenceQuit::parse()
     T100BOOL        result          = T100TRUE;
 
     setLoaded(T100FALSE);
+    result = getComplexusParser().parse(target);
 
     if(result){
         type            = T100SENTENCE_QUIT;
@@ -36,14 +37,11 @@ T100BOOL T100SentenceQuit::parse()
 
 T100BOOL T100SentenceQuit::build(T100BuildInfo* info)
 {
-    T100WORD_BITS       order;
+    T100BOOL            result;
 
-    order.BYTE0.BYTE    = T100Component::T100ORDER_QUIT;
+    result = getComplexusBuilder().build(info, target, T100Component::T100ORDER_QUIT);
 
-    info->setValue(order.WORD);
-    info->next();
-
-    return T100TRUE;
+    return result;
 }
 
 }

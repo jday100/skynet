@@ -40,6 +40,20 @@ READ_NEXT:
             return T100FALSE;
         }
         break;
+    case T100Assembly::T100CHAR_POUND:
+        {
+            getParent()->m_type     = P_VALUE;
+            getParent()->setLoaded(T100FALSE);
+            goto READ_NEXT;
+        }
+        break;
+    case T100Assembly::T100CHAR_EMAIL:
+        {
+            getParent()->m_type     = P_ADDRESS;
+            getParent()->setLoaded(T100FALSE);
+            goto READ_NEXT;
+        }
+        break;
     case T100Assembly::T100KEYWORD_COR:
     case T100Assembly::T100KEYWORD_CBR:
     case T100Assembly::T100KEYWORD_CCR:
@@ -97,7 +111,7 @@ READ_NEXT:
         {
             getParent()->setLoaded(T100FALSE);
             //test
-            //result = getParent()->getNumberParser().parse(op);
+            result = getParent()->getOperatorParser().parse(op.OPERATOR);
             if(!result){
                 return T100FALSE;
             }

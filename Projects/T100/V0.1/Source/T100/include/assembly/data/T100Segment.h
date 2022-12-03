@@ -29,6 +29,10 @@ class T100Segment
         T100BOOL                    setString(T100WORD&, T100STRING);
         T100BOOL                    setArray(T100WORD&, T100WORD);
 
+        T100BOOL                    setArrayInteger(T100WORD&, T100WORD, T100WORD_VECTOR&);
+        T100BOOL                    setArrayFloat(T100WORD&, T100WORD, T100FLOAT_VECTOR&);
+        T100BOOL                    setArrayString(T100WORD&, T100WORD, T100STRING_VECTOR&);
+
         T100VOID                    setName(T100STRING);
         T100STRING                  getName();
 

@@ -75,30 +75,30 @@ READ_NEXT:
             op.BASE.USED        = T100FALSE;
             op.PREFIX_TYPE      = P_NONE;
             op.TYPE             = ::T100SentenceBase::T100OPERATOR_ONE_ONE;
-            return getParent()->getRegisterParser().parse(op.OFFSET);
+            return getParent()->getRegisterParser().parse(op.OPERATOR);
         }
         break;
     case T100Assembly::T100CONSTANT_INTEGER:
     case T100Assembly::T100CONSTANT_FLOAT:
         {
-            op.OFFSET.USED      = T100TRUE;
+            op.OPERATOR.USED    = T100TRUE;
             op.PREFIX_TYPE      = P_NONE;
             op.TYPE             = ::T100SentenceBase::T100OPERATOR_ONE_ONE;
-            return getParent()->getExpressionParser().parse(op.OFFSET);
+            return getParent()->getExpressionParser().parse(op.OPERATOR);
         }
         break;
     case T100Assembly::T100KEYWORD_VARIABLE:
         {
-            op.OFFSET.USED      = T100TRUE;
+            op.OPERATOR.USED    = T100TRUE;
             op.PREFIX_TYPE      = P_NONE;
             op.TYPE             = ::T100SentenceBase::T100OPERATOR_ONE_ONE;
-            return getParent()->getVariableParser().parse(op.OFFSET);
+            return getParent()->getVariableParser().parse(op.OPERATOR);
         }
         break;
     case T100Assembly::T100KEYWORD_LABEL:
         {
-            op.OFFSET.USED      = T100TRUE;
-            return getParent()->getLabelParser().parse(op.OFFSET);
+            op.OPERATOR.USED    = T100TRUE;
+            return getParent()->getLabelParser().parse(op.OPERATOR);
         }
         break;
     case T100Assembly::T100CHAR_OPEN_BRACE:

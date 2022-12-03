@@ -25,6 +25,7 @@ T100BOOL T100SentenceEnter::parse()
     T100BOOL        result          = T100TRUE;
 
     setLoaded(T100FALSE);
+    result = getComplexusParser().parse(target);
 
     if(result){
         type            = T100SENTENCE_ENTER;
@@ -36,14 +37,11 @@ T100BOOL T100SentenceEnter::parse()
 
 T100BOOL T100SentenceEnter::build(T100BuildInfo* info)
 {
-    T100WORD_BITS       order;
+    T100BOOL            result;
 
-    order.BYTE0.BYTE    = T100Component::T100ORDER_ENTER;
+    result = getComplexusBuilder().build(info, target, T100Component::T100ORDER_ENTER);
 
-    info->setValue(order.WORD);
-    info->next();
-
-    return T100TRUE;
+    return result;
 }
 
 

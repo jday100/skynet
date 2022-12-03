@@ -95,6 +95,45 @@ T100BOOL T100Segment::setArray(T100WORD& offset, T100WORD length)
     return T100TRUE;
 }
 
+T100BOOL T100Segment::setArrayInteger(T100WORD& offset, T100WORD length, T100WORD_VECTOR& value)
+{
+    T100WORD        size;
+
+    if(length > value.size()){
+        return T100FALSE;
+    }
+
+    size    = m_offset + length;
+
+    if(0 != m_length && size > m_length){
+        return T100FALSE;
+    }
+
+    m_mem.resize(size);
+    offset      = m_offset + m_location;
+    m_offset    = size;
+
+    T100WORD        index;
+
+    index       = offset;
+
+    for(T100WORD item : value){
+        m_mem[index++] = item;
+    }
+
+    return T100TRUE;
+}
+
+T100BOOL T100Segment::setArrayFloat(T100WORD& offset, T100WORD length, T100FLOAT_VECTOR& value)
+{
+    return T100FALSE;
+}
+
+T100BOOL T100Segment::setArrayString(T100WORD& offset, T100WORD length, T100STRING_VECTOR& value)
+{
+    return T100FALSE;
+}
+
 T100VOID T100Segment::setName(T100STRING name)
 {
     m_name = name;

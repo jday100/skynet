@@ -159,7 +159,8 @@ READ_NEXT:
     case T100KEYWORD_LABEL:
         {
             op.USED     = T100TRUE;
-            return parseVariable(op);
+            //return parseVariable(op);
+            return parseLabel(op);
         }
         break;
     case T100Component::T100TOKEN_EOF:

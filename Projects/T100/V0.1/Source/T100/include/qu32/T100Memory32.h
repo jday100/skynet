@@ -18,6 +18,7 @@ class T100Memory32
     friend class T100QU32;
     friend class T100Order;
     friend class T100OrderBase;
+    friend class T100OrderOperator;
     friend class T100Interrupt32;
     friend class T100MemoryDevice;
     public:

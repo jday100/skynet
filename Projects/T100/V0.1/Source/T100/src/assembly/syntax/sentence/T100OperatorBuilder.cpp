@@ -22,7 +22,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
     T100BOOL        result          = T100FALSE;
 
     switch(target.DATA_TYPE){
-    case T100Component::T100DATA_COR:
+    case T100DATA_COR:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
@@ -46,7 +46,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_CBR:
+    case T100DATA_CBR:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
@@ -70,7 +70,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_CCR:
+    case T100DATA_CCR:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
@@ -94,7 +94,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_AAR:
+    case T100DATA_AAR:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
@@ -118,7 +118,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_ABR:
+    case T100DATA_ABR:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
@@ -142,7 +142,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_ACR:
+    case T100DATA_ACR:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
@@ -166,7 +166,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_ADR:
+    case T100DATA_ADR:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
@@ -190,7 +190,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_ACF:
+    case T100DATA_ACF:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
@@ -204,7 +204,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_AMF:
+    case T100DATA_AMF:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
@@ -218,7 +218,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_AOF:
+    case T100DATA_AOF:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
@@ -232,7 +232,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_INTEGER:
+    case T100DATA_INTEGER:
         {
             build.FLAG      = T100TRUE;
             build.VALUE     = target.VALUE;
@@ -260,7 +260,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_FLOAT:
+    case T100DATA_FLOAT:
         {
             build.FLAG      = T100TRUE;
             build.VALUE     = target.VALUE;
@@ -279,13 +279,13 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_STRING:
+    case T100DATA_STRING:
         {
             //
             return T100FALSE;
         }
         break;
-    case T100Component::T100DATA_LABEL:
+    case T100DATA_LABEL:
         {
             build.FLAG      = T100TRUE;
 
@@ -322,7 +322,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             }
         }
         break;
-    case T100Component::T100DATA_VARIABLE:
+    case T100DATA_VARIABLE:
         {
             T100WORD        offset;
 
@@ -369,9 +369,9 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
 
             build.VALUE     = offset;
 
-            switch(vd->TYPE){
-            case T100Component::T100DATA_INTEGER:
-            case T100Component::T100DATA_FLOAT:
+            switch(vd->BASE_TYPE){
+            case T100DATA_INTEGER:
+            case T100DATA_FLOAT:
                 {
                     switch(target.PREFIX_TYPE){
                     case P_NONE:

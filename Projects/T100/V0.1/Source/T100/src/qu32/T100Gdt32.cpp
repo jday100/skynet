@@ -20,7 +20,7 @@ T100QU32* T100Gdt32::getHost()
     return m_host;
 }
 
-T100BOOL T100Gdt32::enter()
+T100BOOL T100Gdt32::enter(T100WORD base, T100WORD offset)
 {
     T100BOOL        result          = T100FALSE;
 
@@ -29,13 +29,18 @@ T100BOOL T100Gdt32::enter()
     return result;
 }
 
-T100BOOL T100Gdt32::quit()
+T100BOOL T100Gdt32::quit(T100WORD base, T100WORD offset)
 {
     T100BOOL        result          = T100FALSE;
 
     result = getHost()->getMemory32()->quit();
 
     return result;
+}
+
+T100BOOL T100Gdt32::load(T100WORD offset, T100WORD length)
+{
+    return T100TRUE;
 }
 
 T100BOOL T100Gdt32::getEntry(T100WORD index, T100WORD& value)

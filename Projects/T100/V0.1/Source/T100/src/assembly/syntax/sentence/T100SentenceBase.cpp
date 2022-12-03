@@ -178,4 +178,21 @@ READ_NEXT:
     return T100FALSE;
 }
 
+T100Component::T100DATA_TYPE T100SentenceBase::getType(::T100SentenceBase::T100DATA_TYPE type)
+{
+    T100Component::T100DATA_TYPE        result;
+
+    switch(type){
+    case T100DATA_INTEGER:
+        {
+            result = T100Component::T100DATA_INTEGER;
+        }
+        break;
+    default:
+        result = T100Component::T100DATA_NONE;
+    }
+
+    return result;
+}
+
 }

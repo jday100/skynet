@@ -13,11 +13,13 @@ class T100Gdt32
         T100Gdt32(T100QU32*);
         virtual ~T100Gdt32();
 
+        T100BOOL            load(T100WORD, T100WORD);
+
         T100BOOL            getEntry(T100WORD, T100WORD&);
 
-        T100BOOL            enter();
+        T100BOOL            enter(T100WORD, T100WORD);
 
-        T100BOOL            quit();
+        T100BOOL            quit(T100WORD, T100WORD);
 
         T100QU32*           getHost();
 

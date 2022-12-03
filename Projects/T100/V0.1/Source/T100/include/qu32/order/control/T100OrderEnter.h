@@ -11,6 +11,8 @@ class T100OrderEnter : public T100OrderBase
         T100OrderEnter(T100QU32*, T100Executor32*);
         virtual ~T100OrderEnter();
 
+        T100SentenceBase::T100OPERATOR_COMPLEXUS_BUILD      target;
+
     protected:
         T100BOOL            run();
 

@@ -15,7 +15,16 @@ T100OrderQuit::~T100OrderQuit()
 
 T100BOOL T100OrderQuit::run()
 {
+    T100BOOL        result          = T100TRUE;
 
+    result = parseMonoBuild(target);
+    if(!result){
+        return T100FALSE;
+    }
+
+    result = getGdt()->quit(target.BASE.VALUE, target.OPERATOR.VALUE);
+
+    return result;
 }
 
 T100VOID T100OrderQuit::log()

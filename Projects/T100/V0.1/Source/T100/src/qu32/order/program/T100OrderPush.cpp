@@ -20,7 +20,7 @@ T100BOOL T100OrderPush::run()
     result = loadOperatorAllBuild(target);
 
     if(result){
-        result = getOperatorValue(target);
+        result = getOperatorSource(target);
     }
 
     if(result){

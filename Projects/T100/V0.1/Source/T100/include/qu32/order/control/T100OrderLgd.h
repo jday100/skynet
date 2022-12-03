@@ -11,7 +11,7 @@ class T100OrderLgd : public T100OrderBase
         T100OrderLgd(T100QU32*, T100Executor32*);
         virtual ~T100OrderLgd();
 
-        T100SentenceBase::T100OPERATOR_BUILD        target;
+        T100SentenceBase::T100OPERATOR_COMPLEXUS_BUILD      target;
 
     protected:
         T100BOOL            run();

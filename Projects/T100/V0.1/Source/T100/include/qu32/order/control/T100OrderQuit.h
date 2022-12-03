@@ -11,6 +11,8 @@ class T100OrderQuit : public T100OrderBase
         T100OrderQuit(T100QU32*, T100Executor32*);
         virtual ~T100OrderQuit();
 
+        T100SentenceBase::T100OPERATOR_COMPLEXUS_BUILD      target;
+
     protected:
         T100BOOL            run();
         T100VOID            log();

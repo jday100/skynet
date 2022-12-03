@@ -155,6 +155,27 @@ typedef enum{
 
 }T100OPERATE_TYPE;
 
+/*
+0       0       @0      #0
+a       a       @a      #a
+A       A       @A      #A
+COR     COR     @COR    #COR
+{0}     {0}     @{0}    #{0}
+{0:0}   {0:0}   @{0:0}  #{0:0}
+{0:0}   {0:0}   {0:@0}  {0:#0}
+{0:0}   {0:0}   {@0:0}  {#0:0}
+*/
+/*
+0       IMM     ADD     IND
+a       VAl     ADD     IND
+A       VAL     ADD     IND
+COR     VAl     ADD     IND
+{0}     VAl     ADD     IND
+{0:0}   VAl     ADD     IND
+{0:0}   VAL     VAL     VAL
+{0:0}   VAL     VAL     VAL
+*/
+
 typedef enum{
     P_NONE          = 0,
     P_ADDRESS,      //@
@@ -164,11 +185,21 @@ typedef enum{
 }T100PREFIX_TYPE;
 
 typedef enum{
+    A_NONE          = 0,
+    A_IMM,          //IMMEDIATE
+    A_MEM,          //MEMORY
+    A_IND,          //INDIRECT
+    A_MAX
+}T100ADDRESSING_TYPE;
+
+typedef enum{
     T100OPERATOR_NONE           = 1,
     T100OPERATOR_ONE_ONE,
     T100OPERATOR_THREE_THREE,
     T100OPERATOR_MAX
 }T100OPERATOR_TYPE;
+
+////
 
 typedef struct{
     T100STRING                  NAME;
@@ -183,7 +214,7 @@ typedef struct{
 
 typedef struct{
     T100OPERATOR                BASE;
-    T100OPERATOR                OFFSET;
+    T100OPERATOR                OPERATOR;
     T100BOOL                    USED                = T100FALSE;
     T100PREFIX_TYPE             PREFIX_TYPE;
     T100OPERATOR_TYPE           TYPE;
@@ -200,7 +231,7 @@ typedef struct{
 typedef struct{
     T100BOOL                    USED;
     T100BYTE                    TYPE;
-    T100PREFIX_TYPE             PREFIX_TYPE;
+    T100ADDRESSING_TYPE         ADDR_TYPE;
     T100WORD                    INTERIM_OFFSET      = 0;
     T100WORD                    OFFSET              = 0;
     T100WORD                    VALUE               = 0;
@@ -211,7 +242,7 @@ typedef struct{
 
 typedef struct{
     T100BYTE                    OFFSET              = 0;
-    T100BYTE                    TYPE;
+    T100ADDRESSING_TYPE         ADDR_TYPE;
     T100OPERATOR_BUILD          BASE;
     T100OPERATOR_BUILD          OPERATOR;
 }T100OPERATOR_COMPLEXUS_BUILD;
@@ -220,13 +251,12 @@ typedef struct{
     T100OPERATOR_COMPLEXUS_BUILD        TARGET;
     T100OPERATOR_COMPLEXUS_BUILD        SOURCE;
     T100OPERATOR_TYPE                   TYPE;
+    T100WORD                            VALUE;
 }T100OPERATOR_BINOCULAR_BUILD;
 
 typedef struct{
-    T100BOOL                    USED                = T100FALSE;
     T100OPERATOR_BUILD          BASE;
     T100OPERATOR_BUILD          OPERATOR;
-    T100WORD                    TYPE;
     T100WORD                    VALUE;
 }T100OPERATOR_DOUBLE_BUILD;
 

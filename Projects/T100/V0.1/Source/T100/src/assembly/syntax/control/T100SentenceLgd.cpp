@@ -26,7 +26,7 @@ T100BOOL T100SentenceLgd::parse()
     T100BOOL        result          = T100TRUE;
 
     setLoaded(T100FALSE);
-    result = getOperatorParser().parse(target);
+    result = getComplexusParser().parse(target);
 
     if(result){
         type            = T100SENTENCE_LGD;
@@ -39,16 +39,8 @@ T100BOOL T100SentenceLgd::parse()
 T100BOOL T100SentenceLgd::build(T100BuildInfo* info)
 {
     T100BOOL            result;
-    T100WORD_BITS       order;
-    ::T100SentenceBase::T100OPERATOR_BUILD      build;
 
-    order.BYTE0.BYTE    = T100Component::T100ORDER_LGD;
-
-    result = getOperatorBuilder().build(info, target, build);
-    if(!result){
-        return T100FALSE;
-    }
-
+    result = getComplexusBuilder().build(info, target, T100Component::T100ORDER_LGD);
 
     return result;
 }

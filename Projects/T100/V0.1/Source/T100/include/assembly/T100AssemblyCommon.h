@@ -8,6 +8,7 @@
 #include "T100StringHash.h"
 #include "T100StringEqual.h"
 
+#include "T100SentenceCommon.h"
 
 namespace T100Assembly{
 
@@ -280,6 +281,7 @@ typedef struct{
     T100WORD            LENGTH;
     T100WORD            OFFSET;
     T100Component::T100DATA_TYPE            TYPE;
+    ::T100SentenceBase::T100DATA_TYPE       BASE_TYPE;
     T100BOOL            ISARRAY             = T100FALSE;
 }T100VARIABLE_DEFINE;
 

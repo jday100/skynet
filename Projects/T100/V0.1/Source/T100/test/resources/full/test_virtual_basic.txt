@@ -2,18 +2,21 @@ MODE    REAL
 
 DATA
     gd_head         INTEGER[2]  {1073743872, 0}
+    code_index      INTEGER     0
 END
 
 CODE
-    LGD         gd_head
+    LGD         {@gd_head:2}
     //
-    ENTER
-    //
-    JUMP        ENTRANCE
+    ENTER       {code_index:@ENTRANCE}
     //
 ENTRANCE:
     //
     MOVE        AAR         1
+    //
+    QUIT        {code_index:@EXPORT}
+    //
+EXPORT:
     //
     HALT
     //

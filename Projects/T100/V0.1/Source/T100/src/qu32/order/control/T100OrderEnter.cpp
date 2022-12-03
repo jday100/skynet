@@ -17,7 +17,12 @@ T100BOOL T100OrderEnter::run()
 {
     T100BOOL        result          = T100TRUE;
 
-    result = getGdt()->enter();
+    result = parseMonoBuild(target);
+    if(!result){
+        return T100FALSE;
+    }
+
+    result = getGdt()->enter(target.BASE.VALUE, target.OPERATOR.VALUE);
 
     return result;
 }
