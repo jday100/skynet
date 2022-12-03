@@ -109,6 +109,8 @@ typedef enum{
     T_IMM,
     //
     //REG
+    T_ALL,
+
     T_COR,
     T_CBR,
     T_CCR,
@@ -232,6 +234,7 @@ typedef struct{
     T100BOOL                    USED;
     T100BYTE                    TYPE;
     T100ADDRESSING_TYPE         ADDR_TYPE;
+    T100WORD                    DEVIANT             = 0;
     T100WORD                    INTERIM_OFFSET      = 0;
     T100WORD                    OFFSET              = 0;
     T100WORD                    VALUE               = 0;

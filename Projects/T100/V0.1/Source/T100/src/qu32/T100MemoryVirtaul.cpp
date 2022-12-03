@@ -48,7 +48,7 @@ T100BOOL T100MemoryVirtaul::raw_read(T100WORD base, T100WORD offset, T100WORD& v
     T100WORD        total;
 
     //test
-    index   = 1;
+    index   = 0;
 
     m_gdt->getEntry(index, os);
 

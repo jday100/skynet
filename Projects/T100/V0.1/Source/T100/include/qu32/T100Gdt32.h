@@ -3,6 +3,8 @@
 
 #include "T100QU32Common.h"
 
+#define     T100GDT_ITEM_LENGTH         2
+
 namespace T100QU32{
 class T100QU32;
 
@@ -28,6 +30,8 @@ class T100Gdt32
         T100WORD            m_length;
 
         T100WORD            m_index;
+
+        T100BOOL            loadGdtItem(T100WORD&);
 
     private:
         T100QU32*           m_host          = T100NULL;

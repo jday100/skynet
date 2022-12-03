@@ -29,6 +29,7 @@ T100BOOL T100ComplexusBuilder::build(T100Assembly::T100BuildInfo* info, T100OPER
     }
 
     if(result){
+        build.OPERATOR.DEVIANT = build.BASE.DEVIANT;
         result = getParent()->getOperatorBuilder().build(info, op.OPERATOR, build.OPERATOR);
     }
 

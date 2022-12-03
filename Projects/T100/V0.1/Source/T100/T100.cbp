@@ -1006,6 +1006,7 @@
 		<Unit filename="test/assembly/T100AssemblyVirtualTest.cpp" />
 		<Unit filename="test/assembly/T100AssemblyVirtualTest.h" />
 		<Unit filename="test/build/test_full.bin" />
+		<Unit filename="test/build/test_virtual_basic.bin" />
 		<Unit filename="test/font/T100FontBuilderTest.cpp" />
 		<Unit filename="test/font/T100FontBuilderTest.h" />
 		<Unit filename="test/font/T100FontBuilderTestHint.cpp" />

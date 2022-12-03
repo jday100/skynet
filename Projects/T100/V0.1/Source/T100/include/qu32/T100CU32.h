@@ -18,6 +18,7 @@ class T100CU32
     friend class T100OrderBase;
     friend class T100OrderOrigin;
     friend class T100OrderOperator;
+    friend class T100Gdt32;
     friend class T100QU32Timer;
     friend class T100Executor32;
     friend class T100Interrupt32;

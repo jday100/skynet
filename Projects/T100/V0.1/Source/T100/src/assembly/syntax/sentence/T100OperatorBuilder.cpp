@@ -28,7 +28,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_COR;
+                    build.TYPE      = T_COR;
                 }
                 break;
             case P_ADDRESS:
@@ -38,7 +38,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                 break;
             case P_VALUE:
                 {
-                    build.TYPE      = T100Component::I_COR;
+                    build.TYPE      = I_COR;
                 }
                 break;
             default:
@@ -52,7 +52,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_CBR;
+                    build.TYPE      = T_CBR;
                 }
                 break;
             case P_ADDRESS:
@@ -62,7 +62,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                 break;
             case P_VALUE:
                 {
-                    build.TYPE      = T100Component::I_CBR;
+                    build.TYPE      = I_CBR;
                 }
                 break;
             default:
@@ -76,7 +76,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_CCR;
+                    build.TYPE      = T_CCR;
                 }
                 break;
             case P_ADDRESS:
@@ -86,7 +86,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                 break;
             case P_VALUE:
                 {
-                    build.TYPE      = T100Component::I_CCR;
+                    build.TYPE      = I_CCR;
                 }
                 break;
             default:
@@ -100,7 +100,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_AAR;
+                    build.TYPE      = T_AAR;
                 }
                 break;
             case P_ADDRESS:
@@ -110,7 +110,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                 break;
             case P_VALUE:
                 {
-                    build.TYPE      = T100Component::I_AAR;
+                    build.TYPE      = I_AAR;
                 }
                 break;
             default:
@@ -124,7 +124,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_ABR;
+                    build.TYPE      = T_ABR;
                 }
                 break;
             case P_ADDRESS:
@@ -134,7 +134,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                 break;
             case P_VALUE:
                 {
-                    build.TYPE      = T100Component::I_ABR;
+                    build.TYPE      = I_ABR;
                 }
                 break;
             default:
@@ -148,7 +148,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_ACR;
+                    build.TYPE      = T_ACR;
                 }
                 break;
             case P_ADDRESS:
@@ -158,7 +158,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                 break;
             case P_VALUE:
                 {
-                    build.TYPE      = T100Component::I_ACR;
+                    build.TYPE      = I_ACR;
                 }
                 break;
             default:
@@ -172,7 +172,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_ADR;
+                    build.TYPE      = T_ADR;
                 }
                 break;
             case P_ADDRESS:
@@ -182,7 +182,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                 break;
             case P_VALUE:
                 {
-                    build.TYPE      = T100Component::I_ADR;
+                    build.TYPE      = I_ADR;
                 }
                 break;
             default:
@@ -196,7 +196,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_ACF;
+                    build.TYPE      = T_ACF;
                 }
                 break;
             default:
@@ -210,7 +210,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_AMF;
+                    build.TYPE      = T_AMF;
                 }
                 break;
             default:
@@ -224,7 +224,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_AOF;
+                    build.TYPE      = T_AOF;
                 }
                 break;
             default:
@@ -236,23 +236,22 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
         {
             build.FLAG      = T100TRUE;
             build.VALUE     = target.VALUE;
-            build.OFFSET++;
-            build.OFFSET    = build.OFFSET;
+            build.DEVIANT++;
 
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_IMM;
+                    build.TYPE      = T_IMM;
                 }
                 break;
             case P_ADDRESS:
                 {
-                    build.TYPE      = T100Component::T_COR;
+                    build.TYPE      = T_COR;
                 }
                 break;
             case P_VALUE:
                 {
-                    build.TYPE      = T100Component::T_IMM;
+                    build.TYPE      = T_IMM;
                 }
                 break;
             default:
@@ -264,13 +263,12 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
         {
             build.FLAG      = T100TRUE;
             build.VALUE     = target.VALUE;
-            build.OFFSET++;
-            build.OFFSET    = build.OFFSET;
+            build.DEVIANT++;
 
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_IMM;
+                    build.TYPE      = T_IMM;
                 }
                 break;
             default:
@@ -295,7 +293,7 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                 {
                     T100WORD        offset;
 
-                    build.TYPE      = T100Component::T_IMM;
+                    build.TYPE      = T_IMM;
 
                     result = info->getLabel(target.NAME, offset);
 
@@ -303,13 +301,12 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                     item->NAME              = target.NAME;
 
                     //test
-                    build.OFFSET++;
-                    build.OFFSET            = build.OFFSET;
+                    build.DEVIANT++;
 
                     T100WORD        temp;
 
-                    temp            = info->getOffset() + build.OFFSET;
-                    item->OFFSET    = info->getOffset() + build.OFFSET;
+                    temp            = info->getOffset() + build.DEVIANT;
+                    item->OFFSET    = info->getOffset() + build.DEVIANT;
 
                     info->addLabelCall(item);
 
@@ -356,9 +353,8 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
             T100VARIABLE_CALL* item     = T100NEW T100VARIABLE_CALL();
 
             item->NAME                  = target.NAME;
-            build.OFFSET++;
-            build.OFFSET                = build.OFFSET;
-            item->OFFSET                = info->getOffset() + build.OFFSET;
+            build.DEVIANT++;
+            item->OFFSET                = info->getOffset() + build.DEVIANT;
 
             info->addVariableCall(item);
 
@@ -378,16 +374,16 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                         {
                             if(build.ARRAY){
                                 if(target.ISSHARE){
-                                    build.TYPE      = T100Component::ST_ARR;
+                                    build.TYPE      = ST_ARR;
                                 }else{
-                                    build.TYPE      = T100Component::T_ARR;
+                                    build.TYPE      = T_ARR;
                                 }
-                                build.OFFSET++;
+                                build.DEVIANT++;
                             }else{
                                 if(target.ISSHARE){
-                                    build.TYPE      = T100Component::ST_MEM;
+                                    build.TYPE      = ST_MEM;
                                 }else{
-                                    build.TYPE      = T100Component::T_MEM;
+                                    build.TYPE      = T_MEM;
                                 }
                             }
                         }
@@ -395,9 +391,9 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                     case P_ADDRESS:
                         {
                             if(target.ISSHARE){
-                                build.TYPE      = T100Component::ST_IMM;
+                                build.TYPE      = ST_IMM;
                             }else{
-                                build.TYPE      = T100Component::T_IMM;
+                                build.TYPE      = T_IMM;
                             }
 
                             if(build.ARRAY){
@@ -409,16 +405,16 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                         {
                             if(build.ARRAY){
                                 if(target.ISSHARE){
-                                    build.TYPE      = T100Component::SI_ARR;
+                                    build.TYPE      = SI_ARR;
                                 }else{
-                                    build.TYPE      = T100Component::I_ARR;
+                                    build.TYPE      = I_ARR;
                                 }
-                                build.OFFSET++;
+                                build.DEVIANT++;
                             }else{
                                 if(target.ISSHARE){
-                                    build.TYPE      = T100Component::SI_MEM;
+                                    build.TYPE      = SI_MEM;
                                 }else{
-                                    build.TYPE      = T100Component::I_MEM;
+                                    build.TYPE      = I_MEM;
                                 }
                             }
                         }
@@ -426,40 +422,38 @@ T100BOOL T100OperatorBuilder::build(T100Assembly::T100BuildInfo* info, T100OPERA
                     }
                 }
                 break;
+            case T100DATA_STRING:
+                {
+                    switch(target.PREFIX_TYPE){
+                    case P_NONE:
+                    case P_ADDRESS:
+                        {
+                            if(target.ISSHARE){
+                                build.TYPE      = ST_IMM;
+                            }else{
+                                build.TYPE      = T_IMM;
+                            }
+                        }
+                        break;
+                    case P_VALUE:
+                        {
+                            if(target.ISSHARE){
+                                build.TYPE      = ST_MEM;
+                            }else{
+                                build.TYPE      = T_MEM;
+                            }
+                        }
+                        break;
+                    default:
+                        return T100FALSE;
+                    }
+                }
+                break;
             default:
                 return T100FALSE;
             }
         }
         break;
-    /*
-    case T100Component::T100DATA_STRING:
-        {
-            switch(target.PREFIX_TYPE){
-            case P_NONE:
-            case P_ADDRESS:
-                {
-                    if(target.ISSHARE){
-                        build.TYPE      = T100Component::ST_IMM;
-                    }else{
-                        build.TYPE      = T100Component::T_IMM;
-                    }
-                }
-                break;
-            case P_VALUE:
-                {
-                    if(target.ISSHARE){
-                        build.TYPE      = T100Component::ST_MEM;
-                    }else{
-                        build.TYPE      = T100Component::T_MEM;
-                    }
-                }
-                break;
-            default:
-                return T100FALSE;
-            }
-        }
-        break;
-    */
     default:
         return T100FALSE;
     }
@@ -473,13 +467,13 @@ T100BOOL T100OperatorBuilder::buildAll(T100Assembly::T100BuildInfo* info, T100OP
     T100BOOL        result          = T100FALSE;
 
     switch(target.DATA_TYPE){
-    case T100Component::T100DATA_ALL:
+    case T100DATA_ALL:
         {
             build.FLAG      = T100FALSE;
             switch(target.PREFIX_TYPE){
             case P_NONE:
                 {
-                    build.TYPE      = T100Component::T_ALL;
+                    build.TYPE      = T_ALL;
                 }
                 break;
             default:
