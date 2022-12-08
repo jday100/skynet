@@ -1,0 +1,22 @@
+PROC=MEMORY_INIT
+    CMT     3050010
+    MOVE    memory_init_result_offset           AAR
+    //
+    MOVE    ACR                                 hard_memory_inited_flag
+    JNZ     MEMORY_INIT_ERROR
+    //
+    MOVE    memory_order_offset                 hard_device_order_offset
+    MOVE    memory_data1_offset                 hard_device_data1_offset
+    MOVE    memory_data2_offset                 hard_device_data2_offset
+    MOVE    memory_data3_offset                 hard_device_data3_offset
+    //
+    MOVE    hard_memory_inited_flag             1
+    //
+    CMT     3050020
+    MOVE    #memory_init_result_offset          1
+    RET
+    //
+MEMORY_INIT_ERROR:
+    CMT     3050030
+    MOVE    #memory_init_result_offset          0
+END

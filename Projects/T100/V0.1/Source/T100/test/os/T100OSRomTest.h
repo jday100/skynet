@@ -12,9 +12,18 @@ class T100OSRomTest : public T100Library::T100Test
         virtual ~T100OSRomTest();
 
     protected:
+        T100BOOL                    init();
+        T100BOOL                    uninit();
+
+        T100BOOL                    init_vdisk();
+
         T100BOOL                    do_test();
 
         T100BOOL                    test_rom();
+
+        T100BOOL                    do_rom();
+        T100BOOL                    do_boot();
+        T100BOOL                    do_vdisk();
 
     private:
         static T100WSTRING          m_name;

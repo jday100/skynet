@@ -1,0 +1,220 @@
+//ROM_DATA
+//0G
+DATA=ROM_DATA
+    rom_device_mode_type                        INTEGER     1
+    rom_device_mode_set                         INTEGER     2
+    rom_device_mode_get                         INTEGER     3
+    //
+    rom_device_type_cu                          INTEGER     1
+    rom_device_type_au                          INTEGER     2
+    rom_device_type_port                        INTEGER     3
+    rom_device_type_memory                      INTEGER     4
+    rom_device_type_display                     INTEGER     5
+    rom_device_type_disk                        INTEGER     6
+    rom_device_type_keyboard                    INTEGER     7
+    rom_device_type_mouse                       INTEGER     8
+    rom_device_type_net                         INTEGER     9
+    rom_device_type_usb                         INTEGER     10
+    rom_device_type_joystick                    INTEGER     11
+    rom_device_type_printer                     INTEGER     12
+    rom_device_type_mic                         INTEGER     13
+    rom_device_type_sound                       INTEGER     14
+    rom_device_type_video                       INTEGER     15
+    rom_device_type_cdrom                       INTEGER     16
+    rom_device_type_dvd                         INTEGER     17
+    rom_device_type_phone                       INTEGER     18
+    rom_device_type_max                         INTEGER     19
+    //
+    rom_device_max                              INTEGER     8           //256
+    //
+    //
+    rom_start_message                           STRING      "Starting..."
+    rom_error_message                           STRING      "ROM ERROR!"
+    //
+    rom_location_offset                         INTEGER     1074266112
+    rom_part_location_low_offset                INTEGER     1074266108
+    rom_part_location_high_offset               INTEGER     1074266109
+    rom_part_length_low_offset                  INTEGER     1074266110
+    rom_part_length_high_offset                 INTEGER     1074266111
+    //
+    display_mode_read                           INTEGER     14
+    display_mode_write                          INTEGER     15
+    //
+    disk_mode_get                               INTEGER     13
+    disk_mode_block                             INTEGER     14
+    disk_mode_read                              INTEGER     17
+    disk_mode_write                             INTEGER     18
+    //
+    disk_block_index_limit                      INTEGER     16
+    disk_block_size                             INTEGER     1024
+    disk_block_limit                            INTEGER     16384
+    //
+    int068_mode_print                           INTEGER     1
+    int069_mode_disk_read                       INTEGER     7
+    //
+
+END
+
+//INT_TABLE
+//1073741824
+DATA=INT_TABLE      VIRTUAL     LOCATION=1073741824     LENGTH=1024
+    //
+    int000                                      INTEGER[4]              //fatal error
+    int001                                      INTEGER[4]              //cu error
+    int002                                      INTEGER[4]              //au error
+    int003                                      INTEGER[4]              //port error
+    int004                                      INTEGER[240]            //reserve
+    //
+    int064                                      INTEGER[4]              //cu
+    int065                                      INTEGER[4]              //au
+    int066                                      INTEGER[4]              //port
+    int067                                      INTEGER[4]              //memory
+    int068                                      INTEGER[4]              //display
+    int069                                      INTEGER[4]              //disk
+    int070                                      INTEGER[4]              //keyboard
+    int071                                      INTEGER[4]              //mouse
+    int072                                      INTEGER[4]              //net
+    int073                                      INTEGER[4]              //usb
+    int074                                      INTEGER[4]              //joystick
+    int075                                      INTEGER[4]              //printer
+    int076                                      INTEGER[4]              //phone
+    int077                                      INTEGER[4]              //sound
+    int078                                      INTEGER[4]              //video
+    int079                                      INTEGER[160]            //reserve
+    //
+    int128                                      INTEGER[4]              //software
+    //
+END
+
+//ROM_DATA
+//1073742848
+DATA=ROM_DATA   VIRTUAL     LOCATION=1073742848     LENGTH=1024
+    rom_result                                  INTEGER     0
+    //
+    rom_show_info_result                        INTEGER     0
+    rom_show_info_result_offset                 INTEGER     0
+    //
+    hard_device_order_offset                    INTEGER     0
+    hard_device_data1_offset                    INTEGER     0
+    hard_device_data2_offset                    INTEGER     0
+    hard_device_data3_offset                    INTEGER     0
+    //
+    hard_init_result                            INTEGER     0
+    hard_init_result_offset                     INTEGER     0
+    //
+    hard_scan_result                            INTEGER     0
+    hard_scan_result_offset                     INTEGER     0
+    //
+    hard_scan_type_result                       INTEGER     0
+    //
+    hard_cpu_cu_inited_flag                     INTEGER     0
+    hard_cpu_au_inited_flag                     INTEGER     0
+    hard_port_inited_flag                       INTEGER     0
+    hard_memory_inited_flag                     INTEGER     0
+    //
+    hard_display_inited_flag                    INTEGER     0
+    hard_disk_inited_flag                       INTEGER     0
+    hard_keyboard_inited_flag                   INTEGER     0
+    hard_mouse_inited_flag                      INTEGER     0
+    //
+    //CU
+    cpu_cu_init_result                          INTEGER     0
+    cpu_cu_init_result_offset                   INTEGER     0
+    //
+    cpu_cu_order_offset                         INTEGER     0
+    cpu_cu_data1_offset                         INTEGER     0
+    cpu_cu_data2_offset                         INTEGER     0
+    cpu_cu_data3_offset                         INTEGER     0
+    //
+    //AU
+    cpu_au_init_result                          INTEGER     0
+    cpu_au_init_result_offset                   INTEGER     0
+    //
+    cpu_au_order_offset                         INTEGER     0
+    cpu_au_data1_offset                         INTEGER     0
+    cpu_au_data2_offset                         INTEGER     0
+    cpu_au_data3_offset                         INTEGER     0
+    //
+    //PORT
+    port_init_result                            INTEGER     0
+    port_init_result_offset                     INTEGER     0
+    //
+    port_order_offset                           INTEGER     0
+    port_data1_offset                           INTEGER     0
+    port_data2_offset                           INTEGER     0
+    port_data3_offset                           INTEGER     0
+    //
+    //MEMORY
+    memory_init_result                          INTEGER     0
+    memory_init_result_offset                   INTEGER     0
+    //
+    memory_order_offset                         INTEGER     0
+    memory_data1_offset                         INTEGER     0
+    memory_data2_offset                         INTEGER     0
+    memory_data3_offset                         INTEGER     0
+    //
+    //DISPLAY
+    display_init_result                         INTEGER     0
+    display_init_result_offset                  INTEGER     0
+    //
+    display_order_offset                        INTEGER     0
+    display_data1_offset                        INTEGER     0
+    display_data2_offset                        INTEGER     0
+    display_data3_offset                        INTEGER     0
+    //
+    display_put_result                          INTEGER     0
+    display_put_result_offset                   INTEGER     0
+    //
+    display_print_result                        INTEGER     0
+    display_print_result_offset                 INTEGER     0
+    display_print_target_offset                 INTEGER     0
+    //
+    //DISK
+    disk_init_result                            INTEGER     0
+    disk_init_result_offset                     INTEGER     0
+    //
+    disk_order_offset                           INTEGER     0
+    disk_data1_offset                           INTEGER     0
+    disk_data2_offset                           INTEGER     0
+    disk_data3_offset                           INTEGER     0
+    //
+    disk_block_length                           INTEGER     0
+    disk_length_low                             INTEGER     0
+    disk_length_high                            INTEGER     0
+    disk_block_offset                           INTEGER     0
+    //
+    disk_read_result_offset                     INTEGER     0
+    disk_write_result_offset                    INTEGER     0
+    //
+    disk_read_id_low                            INTEGER     0
+    disk_read_id_high                           INTEGER     0
+    disk_read_source_offset                     INTEGER     0
+    disk_read_target_offset                     INTEGER     0
+    //
+    //KEYBOARD
+    keyboard_init_result                        INTEGER     0
+    keyboard_init_result_offset                 INTEGER     0
+    //
+    keyboard_order_offset                       INTEGER     0
+    keyboard_data1_offset                       INTEGER     0
+    keyboard_data2_offset                       INTEGER     0
+    keyboard_data3_offset                       INTEGER     0
+    //
+    //MOUSE
+    mouse_init_result                           INTEGER     0
+    mouse_init_result_offset                    INTEGER     0
+    //
+    mouse_order_offset                          INTEGER     0
+    mouse_data1_offset                          INTEGER     0
+    mouse_data2_offset                          INTEGER     0
+    mouse_data3_offset                          INTEGER     0
+    //
+    //INT
+    int_init_result_offset                      INTEGER     0
+    //
+    int068_result                               INTEGER     0
+    int068_result_offset                        INTEGER     0
+    //
+
+
+END

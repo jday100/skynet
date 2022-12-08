@@ -16,6 +16,11 @@ class T100ThisAppSetup : public T100Library::T100AppSetup
         static T100STRING           getTestStores(T100STRING);
         static T100STRING           getTestWork(T100STRING);
 
+        static T100STRING           getResources(T100STRING);
+        static T100STRING           getBuild(T100STRING);
+        static T100STRING           getStores(T100STRING);
+        static T100STRING           getWork(T100STRING);
+
         static T100STRING           APP_TEST_PATH;
 
     protected:

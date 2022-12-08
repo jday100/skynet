@@ -44,6 +44,9 @@ static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_VIRTUAL_SHARE_TEST_ST
 static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_PROGRAM_STACK_TEST_START             = L"Assembly produce program stack test is starting ... ";
 static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_PROGRAM_STACK_TEST_STOP              = L"Assembly produce program stack test is stopped . ";
 
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_PROGRAM_VARIABLE_TEST_START          = L"Assembly produce program variable test is starting ... ";
+static T100WSTRING          T100TEST_HINT_ASSEMBLY_PRODUCE_PROGRAM_VARIABLE_TEST_STOP           = L"Assembly produce program variable test is stopped . ";
+
 
 
 class T100AssemblyTestHint : public T100Library::T100Hint

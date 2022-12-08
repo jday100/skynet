@@ -30,6 +30,11 @@ T100VOID T100Interrupt32::destroy()
 
 }
 
+T100QU32* T100Interrupt32::getHost()
+{
+    return m_host;
+}
+
 T100VOID T100Interrupt32::interrupt(T100BYTE id)
 {
     icall(id);
@@ -37,7 +42,7 @@ T100VOID T100Interrupt32::interrupt(T100BYTE id)
 
 T100VOID T100Interrupt32::call(T100WORD base, T100WORD offset)
 {
-    push();
+    pushAll();
 
     m_host->getCU32()->setCBR(base);
     m_host->getCU32()->setCOR(offset);
@@ -45,14 +50,14 @@ T100VOID T100Interrupt32::call(T100WORD base, T100WORD offset)
 
 T100VOID T100Interrupt32::call(T100WORD offset)
 {
-    push();
+    pushAll();
 
     m_host->getCU32()->setCOR(offset);
 }
 
 T100VOID T100Interrupt32::ret()
 {
-    pop();
+    popAll();
 }
 
 T100VOID T100Interrupt32::icall(T100BYTE id)
@@ -60,7 +65,7 @@ T100VOID T100Interrupt32::icall(T100BYTE id)
     if(m_locked)return;
     m_locked = T100TRUE;
 
-    push();
+    pushAll();
 
     T100BOOL        result;
     T100WORD        base;
@@ -85,7 +90,7 @@ T100VOID T100Interrupt32::icall(T100BYTE id)
 
 T100VOID T100Interrupt32::iret()
 {
-    pop();
+    popAll();
 
     m_locked = T100FALSE;
 }
@@ -133,5 +138,142 @@ T100VOID T100Interrupt32::pop()
     data->clear();
     T100SAFE_DELETE(data);
 }
+
+T100BOOL T100Interrupt32::pushAll()
+{
+    T100BOOL        result          = T100TRUE;
+    T100WORD        value;
+
+    value   = getHost()->getCU32()->getCurrent();
+    result  = getHost()->getCU32()->push(value);
+    if(!result){
+        return T100FALSE;
+    }
+
+    value   = getHost()->getCU32()->getCBR();
+    result  = getHost()->getCU32()->push(value);
+    if(!result){
+        return T100FALSE;
+    }
+
+    value   = getHost()->getCU32()->getCCR();
+    result  = getHost()->getCU32()->push(value);
+    if(!result){
+        return T100FALSE;
+    }
+
+    value   = getHost()->getAU32()->getAAR();
+    result  = getHost()->getCU32()->push(value);
+    if(!result){
+        return T100FALSE;
+    }
+
+    value   = getHost()->getAU32()->getABR();
+    result  = getHost()->getCU32()->push(value);
+    if(!result){
+        return T100FALSE;
+    }
+
+    value   = getHost()->getAU32()->getACR();
+    result  = getHost()->getCU32()->push(value);
+    if(!result){
+        return T100FALSE;
+    }
+
+    value   = getHost()->getAU32()->getADR();
+    result  = getHost()->getCU32()->push(value);
+    if(!result){
+        return T100FALSE;
+    }
+
+    value   = getHost()->getAU32()->getACF();
+    result  = getHost()->getCU32()->push(value);
+    if(!result){
+        return T100FALSE;
+    }
+
+    value   = getHost()->getAU32()->getAMF();
+    result  = getHost()->getCU32()->push(value);
+    if(!result){
+        return T100FALSE;
+    }
+
+    value   = getHost()->getAU32()->getAOF();
+    result  = getHost()->getCU32()->push(value);
+    if(!result){
+        return T100FALSE;
+    }
+
+    return result;
+}
+
+T100BOOL T100Interrupt32::popAll()
+{
+    T100BOOL        result          = T100TRUE;
+    T100WORD        value;
+
+    result  = getHost()->getCU32()->pop(value);
+    if(!result){
+        return T100FALSE;
+    }
+    getHost()->getAU32()->setAOF(value);
+
+    result  = getHost()->getCU32()->pop(value);
+    if(!result){
+        return T100FALSE;
+    }
+    getHost()->getAU32()->setAMF(value);
+
+    result  = getHost()->getCU32()->pop(value);
+    if(!result){
+        return T100FALSE;
+    }
+    getHost()->getAU32()->setACF(value);
+
+    result  = getHost()->getCU32()->pop(value);
+    if(!result){
+        return T100FALSE;
+    }
+    getHost()->getAU32()->setADR(value);
+
+    result  = getHost()->getCU32()->pop(value);
+    if(!result){
+        return T100FALSE;
+    }
+    getHost()->getAU32()->setACR(value);
+
+    result  = getHost()->getCU32()->pop(value);
+    if(!result){
+        return T100FALSE;
+    }
+    getHost()->getAU32()->setABR(value);
+
+    result  = getHost()->getCU32()->pop(value);
+    if(!result){
+        return T100FALSE;
+    }
+    getHost()->getAU32()->setAAR(value);
+
+    result  = getHost()->getCU32()->pop(value);
+    if(!result){
+        return T100FALSE;
+    }
+    getHost()->getCU32()->setCCR(value);
+
+    result  = getHost()->getCU32()->pop(value);
+    if(!result){
+        return T100FALSE;
+    }
+    getHost()->getCU32()->setCBR(value);
+
+    result  = getHost()->getCU32()->pop(value);
+    if(!result){
+        return T100FALSE;
+    }
+    getHost()->getCU32()->m_cor.setValue(value);
+
+    return result;
+}
+
 
 }

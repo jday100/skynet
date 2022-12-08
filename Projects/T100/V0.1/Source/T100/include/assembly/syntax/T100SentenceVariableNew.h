@@ -14,7 +14,8 @@ class T100SentenceVariableNew : public T100SentenceBase::T100SentenceBase
 
         static T100VOID         init();
 
-        ::T100SentenceBase::T100OPERATOR      target;
+        ::T100SentenceBase::T100OPERATOR        source;
+        ::T100SentenceBase::T100OPERATOR        target;
 
         T100BOOL                parse();
 

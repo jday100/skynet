@@ -65,7 +65,8 @@
     COR
     CBR
     CCR
-    CSR
+    SSR
+    SPR
     GDR
 
     AAR

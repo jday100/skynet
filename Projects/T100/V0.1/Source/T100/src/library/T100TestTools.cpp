@@ -24,6 +24,20 @@ T100BOOL T100TestTools::Exists(T100WSTRING path)
     return file.exists();
 }
 
+T100BOOL T100TestTools::Remove(T100WSTRING name)
+{
+    T100BOOL        result          = T100TRUE;
+    T100BOOL        value;
+
+    T100File        file(name);
+
+    if(file.exists()){
+        result = file.remove();
+    }
+
+    return result;
+}
+
 T100BOOL T100TestTools::CleanAndCreate(T100File& file)
 {
     T100BOOL        result          = T100TRUE;

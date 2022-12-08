@@ -284,7 +284,7 @@ T100BOOL T100BuildInfo::addLabelCall(T100LABEL_CALL* call)
         break;
     case T100SEGMENT_DATA:
         {
-
+            result = m_data->addLabelCall(call);
         }
         break;
     default:

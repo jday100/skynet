@@ -31,6 +31,8 @@ T100VOID T100AppTestThread::run()
     }else{
         test_app.test_unit(m_name);
     }
+
+    exit(0);
 }
 
 }

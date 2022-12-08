@@ -1,0 +1,24 @@
+PROC=KEYBOARD_INIT
+    CMT     3090010
+    MOVE    keyboard_init_result_offset         AAR
+    //
+    MOVE    ACR                                 hard_keyboard_inited_flag
+    JNZ     KEYBOARD_INIT_ERROR
+    //
+    MOVE    keyboard_order_offset               hard_device_order_offset
+    MOVE    keyboard_data1_offset               hard_device_data1_offset
+    MOVE    keyboard_data2_offset               hard_device_data2_offset
+    MOVE    keyboard_data3_offset               hard_device_data3_offset
+    //
+    MOVE    hard_keyboard_inited_flag           1
+    //
+    CMT     3090020
+    MOVE    #keyboard_init_result_offset        1
+    RET
+    //
+KEYBOARD_INIT_ERROR:
+    CMT     3090030
+    MOVE    #keyboard_init_result_offset        0
+END
+
+

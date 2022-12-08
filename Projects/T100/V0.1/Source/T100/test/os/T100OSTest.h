@@ -13,6 +13,12 @@ class T100OSTest : public T100Library::T100Test
         virtual ~T100OSTest();
 
     protected:
+        T100BOOL                    init();
+        T100BOOL                    uninit();
+
+        T100BOOL                    init_font();
+        T100BOOL                    init_vdisk();
+
         T100OSRomTest               test_rom;
 
     private:

@@ -1,18 +1,10 @@
 MODE    REAL
 
 CODE
-//
-ROM_INIT:
-    CMT     30010
+    CMT     50010
     //
-ROM_SUCCESS:
     MOVE    AAR                                 1
-    HALT
     //
-ROM_ERROR:
-    HALT
-    //
-ROM_FATAL_ERROR:
     HALT
     //
 END

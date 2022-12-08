@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-T -u=full" />
+				<Option parameters="-T -u=os.rom" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -221,6 +221,7 @@
 		<Unit filename="T100Main.cpp" />
 		<Unit filename="T100Main.h" />
 		<Unit filename="build/.gitkeep" />
+		<Unit filename="build/rom.bin" />
 		<Unit filename="cmd.txt" />
 		<Unit filename="docs/.gitkeep" />
 		<Unit filename="docs/T100.txt" />
@@ -1006,6 +1007,7 @@
 		<Unit filename="test/assembly/T100AssemblyVirtualTest.cpp" />
 		<Unit filename="test/assembly/T100AssemblyVirtualTest.h" />
 		<Unit filename="test/build/test_full.bin" />
+		<Unit filename="test/build/test_variable.bin" />
 		<Unit filename="test/build/test_virtual_basic.bin" />
 		<Unit filename="test/font/T100FontBuilderTest.cpp" />
 		<Unit filename="test/font/T100FontBuilderTest.h" />
@@ -1043,6 +1045,7 @@
 		<Unit filename="test/os/T100OSTestHint.h" />
 		<Unit filename="test/resources/assembly/program/test_stack.bin" />
 		<Unit filename="test/resources/assembly/program/test_stack.txt" />
+		<Unit filename="test/resources/assembly/program/test_variable.txt" />
 		<Unit filename="test/resources/assembly/real/test_basic.bin" />
 		<Unit filename="test/resources/assembly/real/test_basic.txt" />
 		<Unit filename="test/resources/assembly/real/test_import.txt" />
@@ -1076,6 +1079,7 @@
 		<Unit filename="test/resources/full/test_real_stack.txt" />
 		<Unit filename="test/resources/full/test_virtual_basic.bin" />
 		<Unit filename="test/resources/full/test_virtual_basic.txt" />
+		<Unit filename="test/resources/os/test_boot.txt" />
 		<Unit filename="test/resources/os/test_rom.bin" />
 		<Unit filename="test/resources/os/test_rom.txt" />
 		<Unit filename="test/resources/vpc/test_qu32.txt" />
@@ -1090,6 +1094,22 @@
 		<Unit filename="test/vpc/T100VPCTestHint.cpp" />
 		<Unit filename="test/vpc/T100VPCTestHint.h" />
 		<Unit filename="work/.gitkeep" />
+		<Unit filename="work/AOS/boot/boot.txt" />
+		<Unit filename="work/AOS/cmt.txt" />
+		<Unit filename="work/AOS/fs/part.txt" />
+		<Unit filename="work/AOS/init/init.txt" />
+		<Unit filename="work/AOS/lib/string.txt" />
+		<Unit filename="work/AOS/rom/data.txt" />
+		<Unit filename="work/AOS/rom/hard/au.txt" />
+		<Unit filename="work/AOS/rom/hard/cu.txt" />
+		<Unit filename="work/AOS/rom/hard/disk.txt" />
+		<Unit filename="work/AOS/rom/hard/display.txt" />
+		<Unit filename="work/AOS/rom/hard/hard.txt" />
+		<Unit filename="work/AOS/rom/hard/keyboard.txt" />
+		<Unit filename="work/AOS/rom/hard/memory.txt" />
+		<Unit filename="work/AOS/rom/hard/mouse.txt" />
+		<Unit filename="work/AOS/rom/hard/port.txt" />
+		<Unit filename="work/AOS/rom/int.txt" />
 		<Unit filename="work/AOS/rom/rom.txt" />
 		<Unit filename="wxsmith/T100FontFrame.wxs" />
 		<Unit filename="wxsmith/T100FontPanel.wxs" />

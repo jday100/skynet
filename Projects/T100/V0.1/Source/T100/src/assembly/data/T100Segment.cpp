@@ -95,11 +95,39 @@ T100BOOL T100Segment::setArray(T100WORD& offset, T100WORD length)
     return T100TRUE;
 }
 
+T100BOOL T100Segment::setArrayInteger(T100WORD& offset, T100WORD length, T100WORD value)
+{
+    T100WORD        size;
+    T100WORD        index;
+
+    index   = m_offset;
+
+    size    = m_offset + length;
+
+    if(0 != m_length && size > m_length){
+        return T100FALSE;
+    }
+
+    m_mem.resize(size);
+    offset      = m_offset + m_location;
+    m_offset    = size;
+
+    for(int i=0;i<length;i++){
+        m_mem[index++] = value;
+    }
+
+    return T100TRUE;
+}
+
 T100BOOL T100Segment::setArrayInteger(T100WORD& offset, T100WORD length, T100WORD_VECTOR& value)
 {
     T100WORD        size;
+    T100WORD        index;
 
-    if(length > value.size()){
+    index   = m_offset;
+    size    = value.size();
+
+    if(length < value.size()){
         return T100FALSE;
     }
 
@@ -112,10 +140,6 @@ T100BOOL T100Segment::setArrayInteger(T100WORD& offset, T100WORD length, T100WOR
     m_mem.resize(size);
     offset      = m_offset + m_location;
     m_offset    = size;
-
-    T100WORD        index;
-
-    index       = offset;
 
     for(T100WORD item : value){
         m_mem[index++] = item;

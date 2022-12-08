@@ -43,9 +43,15 @@ class T100CU32
 
         T100QU32*                   getHost();
 
+        T100BOOL                    push(T100WORD);
+        T100BOOL                    pop(T100WORD&);
+
     protected:
         T100VOID                    setCOR(T100WORD);
         T100VOID                    setCBR(T100WORD);
+
+        T100VOID                    setGDR(T100WORD);
+        T100WORD                    getGDR();
 
     private:
         T100QU32*                   m_host          = T100NULL;
@@ -63,6 +69,8 @@ class T100CU32
 
         T100Register32              m_ssr;          //ss
         T100Register32              m_spr;          //sp
+
+        T100Register32              m_gdr;
 
 };
 

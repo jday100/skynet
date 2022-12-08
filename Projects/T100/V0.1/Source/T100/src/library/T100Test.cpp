@@ -86,6 +86,8 @@ T100VOID T100Test::add()
 T100VOID T100Test::append(T100WSTRING name, T100Test* test)
 {
     m_tests.push_back(name, test);
+
+    m_unit_hash[name] = test;
 }
 
 T100VOID T100Test::remove(T100WSTRING name, T100Test* test)

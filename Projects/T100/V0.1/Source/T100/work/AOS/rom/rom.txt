@@ -1,0 +1,60 @@
+IMPORT  "data.txt"
+IMPORT  "int.txt"
+IMPORT  "hard\hard.txt"
+
+MODE    REAL
+
+CODE
+    //
+ROM_INIT:
+    CMT     30010
+    //
+    MOVE    SSR                                 1073760256
+    //
+    MOVE    AAR                                 @rom_result
+    CALL    HARD_INIT
+    MOVE    ACR                                 rom_result
+    JZ      ROM_FATAL_ERROR
+    //
+    CMT     30020
+    MOVE    AAR                                 @rom_result
+    CALL    INT_INIT
+    MOVE    ACR                                 rom_result
+    JZ      ROM_FATAL_ERROR
+    //
+    CMT     30030
+    MOVE    AAR                                 @rom_result
+    CALL    ROM_SHOW_INFO
+    MOVE    ACR                                 rom_result
+    JZ      ROM_ERROR
+    //
+ROM_SUCCESS:
+    MOVE    AAR                                 1
+    //
+    HALT
+    //
+ROM_ERROR:
+    //
+    MOVE    AAR                                 0
+    HALT
+    //
+ROM_FATAL_ERROR:
+    //
+    MOVE    AAR                                 0
+    HALT
+    //
+END
+
+PROC=ROM_SHOW_INFO
+    CMT     33010
+    MOVE    rom_show_info_result_offset         AAR
+    //
+    MOVE    AAR                                 @rom_show_info_result
+    MOVE    ABR                                 1
+    MOVE    ACR                                 @rom_start_message
+    //
+    INT     68
+    //
+    CMT     33020
+    MOVE    #rom_show_info_result_offset        1
+END

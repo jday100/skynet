@@ -1,0 +1,47 @@
+0
+
+
+1   lib
+                    word            1010010
+                    dword           1020010
+                    string          1030010
+                    io              1040010
+
+2   fs
+            fs              20010
+                    part            2010010
+
+3   rom
+            rom             30010
+                    int             3010010
+                                            3010010010
+                    hard            3020010
+                            cu              3030010
+                            au              3040010
+                            memory          3050010
+                            port            3060010
+                            disk            3070010
+                            display         3080010
+                            keyboard        3090010
+                            mouse           3100010
+
+
+4   fs
+            fs              40010
+                    item            4010010
+                    table           4020010
+                    file            4030010
+                    path            4040010
+
+5   boot
+                            50010
+
+
+6
+
+
+7   kernel
+
+8
+
+9

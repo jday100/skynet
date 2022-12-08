@@ -45,4 +45,5 @@ CODE
     //
 ERROR:
     MOVE    AAR     0
+    HALT
 END

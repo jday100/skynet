@@ -1,0 +1,23 @@
+PROC=CPU_CU_INIT
+    CMT     3030010
+    MOVE    cpu_cu_init_result_offset           AAR
+    //
+    MOVE    ACR                                 hard_cpu_cu_inited_flag
+    JNZ     CPU_CU_INIT_ERROR
+    //
+    CMT     3030020
+    MOVE    cpu_cu_order_offset                 hard_device_order_offset
+    MOVE    cpu_cu_data1_offset                 hard_device_data1_offset
+    MOVE    cpu_cu_data2_offset                 hard_device_data2_offset
+    MOVE    cpu_cu_data2_offset                 hard_device_data3_offset
+    //
+    MOVE    hard_cpu_cu_inited_flag             1
+    //
+    CMT     3030030
+    MOVE    #cpu_cu_init_result_offset          1
+    RET
+    //
+CPU_CU_INIT_ERROR:
+    CMT     3030040
+    MOVE    #cpu_cu_init_result_offset          0
+END

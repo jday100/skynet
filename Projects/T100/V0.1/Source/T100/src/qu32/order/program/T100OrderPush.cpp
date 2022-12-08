@@ -1,5 +1,7 @@
 #include "T100OrderPush.h"
 
+#include "T100BitTypes.h"
+
 namespace T100QU32{
 
 T100OrderPush::T100OrderPush(T100QU32* host, T100Executor32* exec)
@@ -15,9 +17,12 @@ T100OrderPush::~T100OrderPush()
 
 T100BOOL T100OrderPush::run()
 {
-    T100BOOL        result          = T100FALSE;
+    T100BOOL            result          = T100FALSE;
+    T100WORD_BITS       order;
 
-    result = loadOperatorAllBuild(target);
+    order.WORD  = m_order;
+
+    result = loadOperatorAllBuild(order.BYTE3.BYTE, target);
 
     if(result){
         result = getOperatorSource(target);

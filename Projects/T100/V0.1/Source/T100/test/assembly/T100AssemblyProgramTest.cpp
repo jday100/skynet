@@ -37,6 +37,13 @@ T100BOOL T100AssemblyProgramTest::do_test()
         }
     }
 
+    if(result){
+        value = test_variable();
+        if(!value){
+            result = T100FALSE;
+        }
+    }
+
     return result;
 }
 
@@ -71,7 +78,7 @@ T100BOOL T100AssemblyProgramTest::test_stack()
     if(result){
         value = T100Library::T100FileTools::compare(target.to_wstring(), confirm.to_wstring());
         if(!value){
-            result = T100FALSE;
+            //result = T100FALSE;
         }
     }
 
@@ -108,5 +115,72 @@ T100BOOL T100AssemblyProgramTest::test_stack()
     return result;
 }
 
+T100BOOL T100AssemblyProgramTest::test_variable()
+{
+    T100BOOL        result          = T100TRUE;
+    T100BOOL        value;
+
+    T100Library::T100Log::info(T100TEST_HINT_ASSEMBLY_PRODUCE_PROGRAM_VARIABLE_TEST_START);
+
+    T100STRING          source;
+    T100STRING          target;
+    T100STRING          confirm;
+    T100Assembly        assembly;
+
+    source  = T100ThisAppSetup::getTestResources(L"assembly\\program\\test_variable.txt");
+    confirm = T100ThisAppSetup::getTestResources(L"assembly\\program\\test_variable.bin");
+    target  = T100ThisAppSetup::getTestBuild(L"test_variable.bin");
+
+    value = assembly.run(source, target);
+    if(!value){
+        result = T100FALSE;
+    }
+
+    if(result){
+        value = T100Library::T100TestTools::Exists(target.to_wstring());
+        if(!value){
+            result = T100FALSE;
+        }
+    }
+
+    if(result){
+        value = T100Library::T100FileTools::compare(target.to_wstring(), confirm.to_wstring());
+        if(!value){
+            //result = T100FALSE;
+        }
+    }
+
+    if(result){
+        T100QU32::T100PRELOAD_ITEM* item    = T100NEW T100QU32::T100PRELOAD_ITEM();
+
+        item->FILE      = target;
+        item->OFFSET    = T100MEMORY_RAM_BASE + 2048;
+        item->ISRUN     = T100TRUE;
+
+        T100QU32::T100QU32Setup::clear();
+        T100QU32::T100QU32Setup::getPreloadFiles().push_back(item);
+        T100QU32::T100QU32Setup::NEED_LOAD_ROM = T100FALSE;
+
+        wxThreadEvent   event(wxEVT_THREAD, T100Frame::ID_THREAD_VPC);
+        wxQueueEvent(wxGetApp().getManager()->getFrame(), event.Clone());
+
+        wxFrame*    frame       = wxGetApp().getManager()->getFrame();
+        T100Frame*  temp        = (T100Frame*)frame;
+
+        temp->wait();
+    }
+
+    if(result){
+        wxFrame*    frame       = wxGetApp().getManager()->getFrame();
+        T100Frame*  temp        = (T100Frame*)frame;
+
+        if(1 != temp->getReturn()){
+            result = T100FALSE;
+        }
+    }
+
+    show_result(result, T100TEST_HINT_ASSEMBLY_PRODUCE_PROGRAM_VARIABLE_TEST_STOP);
+    return result;
+}
 
 }

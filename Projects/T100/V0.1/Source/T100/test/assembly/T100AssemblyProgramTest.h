@@ -16,6 +16,8 @@ class T100AssemblyProgramTest : public T100Library::T100Test
 
         T100BOOL                    test_stack();
 
+        T100BOOL                    test_variable();
+
     private:
         static T100WSTRING          m_name;
 

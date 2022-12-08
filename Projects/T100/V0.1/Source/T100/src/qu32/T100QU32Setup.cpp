@@ -48,7 +48,10 @@ T100VOID T100QU32Setup::setRomFile(T100STRING file)
 
 T100STRING T100QU32Setup::getRomFile()
 {
-    return m_build_path + L"\\" + m_rom_file;
+    if(m_rom_file.empty()){
+        return m_build_path + L"\\" + L"rom.bin";
+    }
+    return m_rom_file;
 }
 
 T100STRING T100QU32Setup::getBuild()

@@ -1,0 +1,74 @@
+MODE    REAL
+
+DATA
+    a       INTEGER
+    b       INTEGER     0
+    c       INTEGER     11
+    //
+    array_a INTEGER[2]
+    array_b INTEGER[2]  0
+    array_c INTEGER[2]  11
+    array_d INTEGER[2]  {22, 33}
+    //
+    label   INTEGER     @TEST_START
+END
+
+CODE
+TEST_START:
+    MOVE    ACR         a
+    JNZ     TEST_ERROR
+    //
+    MOVE    ACR         b
+    JNZ     TEST_ERROR
+    //
+    MOVE    AAR         11
+    MOVE    ABR         c
+    SUB
+    JNZ     TEST_ERROR
+    //
+    MOVE    ACR         array_a[0]
+    JNZ     TEST_ERROR
+    //
+    MOVE    ACR         array_a[1]
+    JNZ     TEST_ERROR
+    //
+    MOVE    ACR         array_b[0]
+    JNZ     TEST_ERROR
+    //
+    MOVE    ACR         array_b[1]
+    JNZ     TEST_ERROR
+    //
+    MOVE    AAR         11
+    MOVE    ABR         array_c[0]
+    SUB
+    JNZ     TEST_ERROR
+    //
+    MOVE    AAR         11
+    MOVE    ABR         array_c[1]
+    SUB
+    JNZ     TEST_ERROR
+    //
+    MOVE    AAR         22
+    MOVE    ABR         array_d[0]
+    SUB
+    JNZ     TEST_ERROR
+    //
+    MOVE    AAR         33
+    MOVE    ABR         array_d[1]
+    SUB
+    JNZ     TEST_ERROR
+    //
+    DBG
+    MOVE    AAR         14
+    MOVE    ABR         label
+    SUB
+    JNZ     TEST_ERROR
+    //
+    MOVE    AAR         1
+    HALT
+    //
+TEST_ERROR:
+    MOVE    AAR         0
+    HALT
+END
+

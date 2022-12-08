@@ -1265,6 +1265,10 @@ T100BOOL T100Sentence::buildOperator(T100BuildInfo* code, T100Component::T100OPE
             info.OPERATOR_OFFSET        = info.OFFSET;
             item->OFFSET                = code->getOffset() + info.OPERATOR_OFFSET;
 
+            T100WORD    temp;
+
+            temp = item->OFFSET;
+
             code->addVariableCall(item);
 
             //test
@@ -2086,6 +2090,11 @@ T100BOOL T100Sentence::buildInfo(T100Component::T100ORDER_TYPE type, T100BuildIn
 
             if(info.TARGET.OPERATOR_FLAG){
                 code->setValue(info.TARGET.OPERATOR_VALUE);
+                code->next();
+            }
+
+            if(info.SOURCE.OPERATOR_FLAG){
+                code->setValue(info.SOURCE.OPERATOR_VALUE);
                 code->next();
             }
         }

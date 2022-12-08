@@ -1,5 +1,7 @@
 #include "T100OrderPop.h"
 
+#include "T100BitTypes.h"
+
 namespace T100QU32{
 
 T100OrderPop::T100OrderPop(T100QU32* host, T100Executor32* exec)
@@ -15,9 +17,12 @@ T100OrderPop::~T100OrderPop()
 
 T100BOOL T100OrderPop::run()
 {
-    T100BOOL        result          = T100FALSE;
+    T100BOOL            result          = T100FALSE;
+    T100WORD_BITS       order;
 
-    result = loadOperatorAllBuild(target);
+    order.WORD  = m_order;
+
+    result = loadOperatorAllBuild(order.BYTE3.BYTE, target);
 
     if(result){
         T100WORD    base;
@@ -35,9 +40,12 @@ T100BOOL T100OrderPop::run()
         }
         offset  = ssr + spr;
 
-        getHost()->getMemory32()->read(offset, target.VALUE);
+        result = getHost()->getMemory32()->read(offset, target.VALUE);
 
-        result = setOperatorTarget(target);
+        if(result){
+            result = setOperatorTarget(target);
+        }
+
         if(result){
             getHost()->getCU32()->setSPR(spr);
         }

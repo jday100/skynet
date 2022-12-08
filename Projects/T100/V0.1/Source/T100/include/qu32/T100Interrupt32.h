@@ -36,8 +36,13 @@ class T100Interrupt32
         T100VOID                    create();
         T100VOID                    destroy();
 
+        T100QU32*                   getHost();
+
         T100VOID                    push();
         T100VOID                    pop();
+
+        T100BOOL                    pushAll();
+        T100BOOL                    popAll();
 
     private:
         T100QU32*                   m_host          = T100NULL;

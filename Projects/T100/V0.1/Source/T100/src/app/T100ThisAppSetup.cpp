@@ -67,3 +67,52 @@ T100STRING T100ThisAppSetup::getTestWork(T100STRING path)
     }
     return result.str();
 }
+
+
+T100STRING T100ThisAppSetup::getResources(T100STRING path)
+{
+    std::wstringstream      result;
+
+    if(path.empty()){
+        result << m_resources.to_wstring() << L"\\" << L"error";
+    }else{
+        result << m_resources.to_wstring() << L"\\" << path.to_wstring();
+    }
+    return result.str();
+}
+
+T100STRING T100ThisAppSetup::getBuild(T100STRING path)
+{
+    std::wstringstream      result;
+
+    if(path.empty()){
+        result << m_build.to_wstring() << L"\\" << L"error";
+    }else{
+        result << m_build.to_wstring() << L"\\" << path.to_wstring();
+    }
+    return result.str();
+}
+
+T100STRING T100ThisAppSetup::getStores(T100STRING path)
+{
+    std::wstringstream      result;
+
+    if(path.empty()){
+        result << m_stores.to_wstring() << L"\\" << L"error";
+    }else{
+        result << m_stores.to_wstring() << L"\\" << path.to_wstring();
+    }
+    return result.str();
+}
+
+T100STRING T100ThisAppSetup::getWork(T100STRING path)
+{
+    std::wstringstream      result;
+
+    if(path.empty()){
+        result << m_work.to_wstring() << L"\\" << L"error";
+    }else{
+        result << m_work.to_wstring() << L"\\" << path.to_wstring();
+    }
+    return result.str();
+}

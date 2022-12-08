@@ -90,6 +90,16 @@ T100WORD T100CU32::getSPR()
     return m_spr.getValue();
 }
 
+T100VOID T100CU32::setGDR(T100WORD value)
+{
+    m_gdr.setValue(value);
+}
+
+T100WORD T100CU32::getGDR()
+{
+    return m_gdr.getValue();
+}
+
 T100WORD T100CU32::step()
 {
     T100BOOL        result;
@@ -110,6 +120,56 @@ T100WORD T100CU32::getCurrent()
 T100QU32* T100CU32::getHost()
 {
     return m_host;
+}
+
+T100BOOL T100CU32::push(T100WORD value)
+{
+    T100BOOL        result          = T100FALSE;
+    T100WORD        offset;
+    T100WORD        spr;
+
+    if(0 == m_ssr.getValue()){
+        return T100FALSE;
+    }
+
+    spr     = m_spr.getValue();
+    offset  = m_ssr.getValue() + spr;
+
+    result  = getHost()->getMemory32()->write(offset, value);
+    if(result){
+        spr++;
+        m_spr.setValue(spr);
+    }
+
+    return result;
+}
+
+T100BOOL T100CU32::pop(T100WORD& value)
+{
+    T100BOOL        result          = T100FALSE;
+    T100WORD        offset;
+    T100WORD        spr;
+
+    if(0 == m_ssr.getValue()){
+        return T100FALSE;
+    }
+
+    spr     = m_spr.getValue();
+
+    if(0 < spr){
+        spr--;
+    }else{
+        return T100FALSE;
+    }
+
+    offset  = m_ssr.getValue() + spr;
+
+    result  = getHost()->getMemory32()->read(offset, value);
+    if(result){
+        m_spr.setValue(spr);
+    }
+
+    return result;
 }
 
 }

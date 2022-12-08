@@ -4,7 +4,7 @@
 #include "T100StringTools.h"
 #include "T100ProduceInfo.h"
 #include "T100VariableDrawer.h"
-
+#include "T100BracketsParser.h"
 
 namespace T100Assembly{
 
@@ -80,7 +80,7 @@ READ_NEXT:
             target.LENGTH       = 1;
             target.VALUE        = 0;
 
-            return parseBrackets(target);
+            return getBracketsParser().parse(target);
         }
         break;
     case T100Assembly::T100KEYWORD_FLOAT:
@@ -89,7 +89,7 @@ READ_NEXT:
             target.LENGTH       = 1;
             target.VALUE        = 0.0;
 
-            return parseBrackets(target);
+            return getBracketsParser().parse(target);
         }
         break;
     case T100Assembly::T100KEYWORD_STRING:
@@ -97,7 +97,7 @@ READ_NEXT:
             target.DATA_TYPE    = ::T100SentenceBase::T100DATA_STRING;
             target.LENGTH       = 1;
 
-            return parseBrackets(target);
+            return getBracketsParser().parse(target);
         }
         break;
     case T100Component::T100TOKEN_EOF:
@@ -287,6 +287,19 @@ READ_NEXT:
             goto READ_NEXT;
         }
         break;
+    case T100Assembly::T100CONSTANT_INTEGER:
+        {
+            if(::T100SentenceBase::T100DATA_INTEGER == target.DATA_TYPE){
+                target.VALUE = T100Library::T100StringTools::to_long(m_item->value.to_wstring());
+
+                setLoaded(T100FALSE);
+                return T100TRUE;
+            }else{
+                //
+                return T100FALSE;
+            }
+        }
+        break;
     case T100Assembly::T100CHAR_OPEN_BRACE:
         {
 INTEGER_READ_NEXT:
@@ -471,7 +484,11 @@ T100BOOL T100SentenceVariableNew::buildInteger(T100BuildInfo* info)
         switch(target.DATA_TYPE){
         case ::T100SentenceBase::T100DATA_INTEGER:
             {
-                result = info->getData()->setArrayInteger(offset, target.LENGTH, m_integer);
+                if(m_integer.empty()){
+                    result = info->getData()->setArrayInteger(offset, target.LENGTH, target.VALUE);
+                }else{
+                    result = info->getData()->setArrayInteger(offset, target.LENGTH, m_integer);
+                }
             }
             break;
         case ::T100SentenceBase::T100DATA_FLOAT:
@@ -489,56 +506,6 @@ T100BOOL T100SentenceVariableNew::buildInteger(T100BuildInfo* info)
         }
 
         if(result){
-            result = info->setVariable(target.NAME, offset);
-        }
-    }else{
-        if(::T100SentenceBase::P_ADDRESS == target.PREFIX_TYPE){
-            result = info->getData()->setWord(offset, target.VALUE);
-
-            if(result){
-                info->setVariable(target.NAME, offset);
-
-                T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(target.NAME);
-
-                if(!vd){
-                    //
-                    return T100FALSE;
-                }
-
-                vd->NAME        = target.NAME;
-                vd->LENGTH      = target.LENGTH;
-                vd->BASE_TYPE   = target.DATA_TYPE;
-                vd->OFFSET      = offset;
-                vd->ISVIRTUAL   = info->getData()->isVirtual;
-                vd->ISSHARE     = info->getData()->isShare;
-
-                result = T100ProduceInfo::getVariableDrawer().setVariableDefine(target.NAME, vd);
-
-                if(!result){
-                    //
-                    return T100FALSE;
-                }
-
-                result = info->getLabel(target.NAME, offset);
-
-                T100LABEL_CALL* item    = T100NEW T100LABEL_CALL();
-                item->NAME              = target.NAME;
-                //test
-                item->OFFSET            = info->getOffset() - 1;
-
-                info->addLabelCall(item);
-
-                return T100TRUE;
-            }
-
-            return T100FALSE;
-        }
-
-        result = info->getData()->setWord(offset, target.VALUE);
-
-        if(result){
-            info->setVariable(target.NAME, offset);
-
             T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(target.NAME);
 
             if(!vd){
@@ -552,10 +519,85 @@ T100BOOL T100SentenceVariableNew::buildInteger(T100BuildInfo* info)
             vd->OFFSET      = offset;
             vd->ISVIRTUAL   = info->getData()->isVirtual;
             vd->ISSHARE     = info->getData()->isShare;
+
+            result = T100ProduceInfo::getVariableDrawer().setVariableDefine(target.NAME, vd);
+
+            if(!result){
+                //
+                return T100FALSE;
+            }
         }
 
         if(result){
             result = info->setVariable(target.NAME, offset);
+        }
+    }else if(::T100SentenceBase::P_ADDRESS == target.PREFIX_TYPE){
+        result = info->getLabel(STRING, offset);
+
+        T100LABEL_CALL* item    = T100NEW T100LABEL_CALL();
+        item->NAME              = STRING;
+        //test
+        item->OFFSET            = info->getOffset();
+
+        info->addLabelCall(item);
+
+        target.VALUE    = offset;
+        result = info->getData()->setWord(offset, target.VALUE);
+
+        if(result){
+            result = info->setVariable(target.NAME, offset);
+        }
+
+        if(result){
+            T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(target.NAME);
+
+            if(!vd){
+                //
+                return T100FALSE;
+            }
+
+            vd->NAME        = target.NAME;
+            vd->LENGTH      = target.LENGTH;
+            vd->BASE_TYPE   = target.DATA_TYPE;
+            vd->OFFSET      = offset;
+            vd->ISVIRTUAL   = info->getData()->isVirtual;
+            vd->ISSHARE     = info->getData()->isShare;
+
+            result = T100ProduceInfo::getVariableDrawer().setVariableDefine(target.NAME, vd);
+
+            if(!result){
+                //
+                return T100FALSE;
+            }
+        }
+    }else{
+        result = info->getData()->setWord(offset, target.VALUE);
+
+        if(result){
+            result = info->setVariable(target.NAME, offset);
+        }
+
+        if(result){
+            T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(target.NAME);
+
+            if(!vd){
+                //
+                return T100FALSE;
+            }
+
+            vd->NAME        = target.NAME;
+            vd->LENGTH      = target.LENGTH;
+            vd->BASE_TYPE   = target.DATA_TYPE;
+            vd->OFFSET      = offset;
+            vd->ISVIRTUAL   = info->getData()->isVirtual;
+            vd->ISSHARE     = info->getData()->isShare;
+
+            result = T100ProduceInfo::getVariableDrawer().setVariableDefine(target.NAME, vd);
+
+            if(!result){
+                //
+                return T100FALSE;
+            }
         }
     }
 
