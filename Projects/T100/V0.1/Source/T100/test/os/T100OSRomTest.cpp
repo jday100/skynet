@@ -184,11 +184,14 @@ T100BOOL T100OSRomTest::do_rom()
 
     T100STRING      source;
     T100STRING      target;
+    T100STRING      path;
     T100Assembly::T100Assembly      assembly;
 
     source  = T100ThisAppSetup::getWork(L"AOS\\rom\\rom.txt");
     target  = T100ThisAppSetup::getBuild(L"rom.bin");
+    path    = T100ThisAppSetup::getWork(L"AOS");
 
+    assembly.getProduce().getClassPathDrawer().append(path);
     value = assembly.run(source, target);
     if(!value){
         result = T100FALSE;

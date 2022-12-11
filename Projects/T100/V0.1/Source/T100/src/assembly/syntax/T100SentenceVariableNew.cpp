@@ -5,6 +5,7 @@
 #include "T100ProduceInfo.h"
 #include "T100VariableDrawer.h"
 #include "T100BracketsParser.h"
+#include "T100String32Tools.h"
 
 namespace T100Assembly{
 
@@ -611,7 +612,36 @@ T100BOOL T100SentenceVariableNew::buildFloat(T100BuildInfo* info)
 
 T100BOOL T100SentenceVariableNew::buildString(T100BuildInfo* info)
 {
+    T100BOOL        result          = T100TRUE;
+    T100WORD        offset;
 
+    //test
+    T100STRING      temp;
+
+    if(!T100Library::T100String32Tools::format(STRING, temp)){
+        return T100FALSE;
+    }
+
+    result = info->getData()->setString(offset, temp);
+    if(result){
+        result = info->setVariable(target.NAME, offset);
+    }
+
+    if(result){
+        T100VARIABLE_DEFINE* vd = T100ProduceInfo::getVariableDrawer().getVariableDefine(target.NAME);
+        if(!vd){
+            //
+            return T100FALSE;
+        }
+
+        vd->NAME        = target.NAME;
+        vd->BASE_TYPE   = target.DATA_TYPE;
+        vd->OFFSET      = offset;
+        vd->ISVIRTUAL   = info->getData()->isVirtual;
+        vd->ISSHARE     = info->getData()->isShare;
+    }
+
+    return result;
 }
 
 }

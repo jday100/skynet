@@ -118,7 +118,7 @@ T100BOOL T100String::operator!=(const T100String& str)
     return m_wstring != str.m_wstring;
 }
 
-T100String& T100String::operator+=(const T100WCHAR ch)
+T100String T100String::operator+=(const T100WCHAR ch)
 {
     m_wstring   += ch;
     m_string32  += ch;
@@ -126,15 +126,15 @@ T100String& T100String::operator+=(const T100WCHAR ch)
     return *this;
 }
 
-T100String& T100String::operator+(const T100WCHAR ch)
+T100String T100String::operator+(const T100WCHAR ch)
 {
-    T100String& result = *this;
+    T100String result = *this;
     result += ch;
 
     return result;
 }
 
-T100String& T100String::operator+=(const T100String& str)
+T100String T100String::operator+=(const T100String& str)
 {
     m_wstring   += str.m_wstring;
     m_string32  += str.m_string32;
@@ -142,9 +142,9 @@ T100String& T100String::operator+=(const T100String& str)
     return *this;
 }
 
-T100String& T100String::operator+(const T100String& str)
+T100String T100String::operator+(const T100String& str)
 {
-    T100String& result = *this;
+    T100String result = *this;
     result += str;
 
     return result;

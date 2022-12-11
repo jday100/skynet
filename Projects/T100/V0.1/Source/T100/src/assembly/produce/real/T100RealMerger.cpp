@@ -353,6 +353,10 @@ T100BOOL T100RealMerger::relocate(T100RealInfo& info)
 
                 info.getCode().getMem()[offset] = temp + os;
             }else{
+                //test
+                T100STRING  temp;
+
+                temp = item->NAME;
                 return T100FALSE;
             }
         }else{

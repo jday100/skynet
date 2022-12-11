@@ -22,7 +22,11 @@ class T100VPCCallback
         static T100BOOL             frame_menu_quit(void* = T100NULL);
 
         static T100BOOL             frame_menu_hardware(void* = T100NULL);
-        static T100BOOL             frame_menu_hardware_select(void* = T100NULL);
+        static T100BOOL             frame_menu_hardware_setup(void* = T100NULL);
+        static T100BOOL             frame_menu_hardware_append(void* = T100NULL);
+        static T100BOOL             frame_menu_hardware_remove(void* = T100NULL);
+        static T100BOOL             frame_menu_hardware_finish(void* = T100NULL);
+
         static T100BOOL             frame_menu_setup(void* = T100NULL);
 
         static T100BOOL             frame_menu_debug(void* = T100NULL);

@@ -59,11 +59,11 @@ class T100String : public T100Class
         T100BOOL            operator == (const T100String&);
         T100BOOL            operator != (const T100String&);
 
-        T100String&         operator += (const T100WCHAR);
-        T100String&         operator +  (const T100WCHAR);
+        T100String          operator += (const T100WCHAR);
+        T100String          operator +  (const T100WCHAR);
 
-        T100String&         operator += (const T100String&);
-        T100String&         operator +  (const T100String&);
+        T100String          operator += (const T100String&);
+        T100String          operator +  (const T100String&);
 
         T100WCHAR           operator [] (const T100WORD);
 

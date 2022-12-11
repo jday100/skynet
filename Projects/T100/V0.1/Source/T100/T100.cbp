@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-T -u=os.rom" />
+				<Option parameters="-V" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -97,6 +97,7 @@
 					<Add directory="include/assembly/syntax/sentence" />
 					<Add directory="." />
 					<Add directory="test/full" />
+					<Add directory="include/vpc/view/dialog/config/hardware" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -189,6 +190,7 @@
 					<Add directory="include/qu32/order" />
 					<Add directory="include/qu32/order/control" />
 					<Add directory="test/full" />
+					<Add directory="include/vpc/view/dialog/config/hardware" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -600,6 +602,7 @@
 		<Unit filename="include/vpc/data/T100MouseInfo.h" />
 		<Unit filename="include/vpc/data/T100PortDeviceInfo.h" />
 		<Unit filename="include/vpc/data/T100RegisterEventData.h" />
+		<Unit filename="include/vpc/data/T100VPCAllDevices.h" />
 		<Unit filename="include/vpc/device/T100Disk.h" />
 		<Unit filename="include/vpc/device/T100Display.h" />
 		<Unit filename="include/vpc/device/T100DisplayBlockDevice.h" />
@@ -609,12 +612,17 @@
 		<Unit filename="include/vpc/serve/T100VPCCallback.h" />
 		<Unit filename="include/vpc/serve/T100VPCLink.h" />
 		<Unit filename="include/vpc/serve/T100VPCServe.h" />
-		<Unit filename="include/vpc/view/T100VPCConfigDialog.h" />
 		<Unit filename="include/vpc/view/T100VPCFrame.h" />
 		<Unit filename="include/vpc/view/T100VPCScreen.h" />
 		<Unit filename="include/vpc/view/T100VPCView.h" />
+		<Unit filename="include/vpc/view/dialog/config/hardware/T100VPCConfigHardwareAppendDialog.h" />
+		<Unit filename="include/vpc/view/dialog/config/hardware/T100VPCConfigHardwareDialog.h" />
+		<Unit filename="include/vpc/view/dialog/config/hardware/T100VPCDiskSetupDialog.h" />
 		<Unit filename="include/wxwidgets/T100WxApp.h" />
 		<Unit filename="include/wxwidgets/T100WxAppManager.h" />
+		<Unit filename="include/wxwidgets/vpc/dialog/config/hardware/T100VPCConfigHardwareAppendDemoDialog.h" />
+		<Unit filename="include/wxwidgets/vpc/dialog/config/hardware/T100VPCConfigHardwareDemoDialog.h" />
+		<Unit filename="include/wxwidgets/vpc/dialog/config/hardware/T100VPCDiskSetupDemoDialog.h" />
 		<Unit filename="licence.txt" />
 		<Unit filename="logs/.gitkeep" />
 		<Unit filename="resource.rc">
@@ -968,12 +976,17 @@
 		<Unit filename="src/vpc/serve/T100VPCCallback.cpp" />
 		<Unit filename="src/vpc/serve/T100VPCLink.cpp" />
 		<Unit filename="src/vpc/serve/T100VPCServe.cpp" />
-		<Unit filename="src/vpc/view/T100VPCConfigDialog.cpp" />
 		<Unit filename="src/vpc/view/T100VPCFrame.cpp" />
 		<Unit filename="src/vpc/view/T100VPCScreen.cpp" />
 		<Unit filename="src/vpc/view/T100VPCView.cpp" />
+		<Unit filename="src/vpc/view/dialog/config/hardware/T100VPCConfigHardwareAppendDialog.cpp" />
+		<Unit filename="src/vpc/view/dialog/config/hardware/T100VPCConfigHardwareDialog.cpp" />
+		<Unit filename="src/vpc/view/dialog/config/hardware/T100VPCDiskSetupDialog.cpp" />
 		<Unit filename="src/wxwidgets/T100WxApp.cpp" />
 		<Unit filename="src/wxwidgets/T100WxAppManager.cpp" />
+		<Unit filename="src/wxwidgets/vpc/dialog/config/hardware/T100VPCConfigHardwareAppendDemoDialog.cpp" />
+		<Unit filename="src/wxwidgets/vpc/dialog/config/hardware/T100VPCConfigHardwareDemoDialog.cpp" />
+		<Unit filename="src/wxwidgets/vpc/dialog/config/hardware/T100VPCDiskSetupDemoDialog.cpp" />
 		<Unit filename="stores/.gitkeep" />
 		<Unit filename="test/.gitkeep" />
 		<Unit filename="test/T100AppTest.cpp" />
@@ -1098,6 +1111,7 @@
 		<Unit filename="work/AOS/cmt.txt" />
 		<Unit filename="work/AOS/fs/part.txt" />
 		<Unit filename="work/AOS/init/init.txt" />
+		<Unit filename="work/AOS/lib/io.txt" />
 		<Unit filename="work/AOS/lib/string.txt" />
 		<Unit filename="work/AOS/rom/data.txt" />
 		<Unit filename="work/AOS/rom/hard/au.txt" />
@@ -1113,7 +1127,9 @@
 		<Unit filename="work/AOS/rom/rom.txt" />
 		<Unit filename="wxsmith/T100FontFrame.wxs" />
 		<Unit filename="wxsmith/T100FontPanel.wxs" />
-		<Unit filename="wxsmith/T100VPCConfigDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCConfigHardwareAppendDemoDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCConfigHardwareDemoDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCDiskSetupDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCFrame.wxs" />
 		<Unit filename="wxsmith/T100VPCScreen.wxs" />
 		<Unit filename="wxsmith/T100frame.wxs" />
@@ -1127,7 +1143,9 @@
 					<wxPanel wxs="wxsmith/T100FontPanel.wxs" src="src\font\view\T100FontPanel.cpp" hdr="include\font\view\T100FontPanel.h" fwddecl="0" i18n="1" name="T100FontPanel" language="CPP" />
 					<wxFrame wxs="wxsmith/T100VPCFrame.wxs" src="src\vpc\view\T100VPCFrame.cpp" hdr="include\vpc\view\T100VPCFrame.h" fwddecl="0" i18n="1" name="T100VPCFrame" language="CPP" />
 					<wxFrame wxs="wxsmith/T100VPCScreen.wxs" src="src\vpc\view\T100VPCScreen.cpp" hdr="include\vpc\view\T100VPCScreen.h" fwddecl="0" i18n="1" name="T100VPCScreen" language="CPP" />
-					<wxDialog wxs="wxsmith/T100VPCConfigDialog.wxs" src="src\vpc\view\T100VPCConfigDialog.cpp" hdr="include\vpc\view\T100VPCConfigDialog.h" fwddecl="0" i18n="1" name="T100VPCConfigDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100VPCConfigHardwareDemoDialog.wxs" src="src\wxwidgets\vpc\dialog\config\hardware\T100VPCConfigHardwareDemoDialog.cpp" hdr="include\wxwidgets\vpc\dialog\config\hardware\T100VPCConfigHardwareDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCConfigHardwareDemoDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100VPCConfigHardwareAppendDemoDialog.wxs" src="src\wxwidgets\vpc\dialog\config\hardware\T100VPCConfigHardwareAppendDemoDialog.cpp" hdr="include\wxwidgets\vpc\dialog\config\hardware\T100VPCConfigHardwareAppendDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCConfigHardwareAppendDemoDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100VPCDiskSetupDemoDialog.wxs" src="src\wxwidgets\vpc\dialog\config\hardware\T100VPCDiskSetupDemoDialog.cpp" hdr="include\wxwidgets\vpc\dialog\config\hardware\T100VPCDiskSetupDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCDiskSetupDemoDialog" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

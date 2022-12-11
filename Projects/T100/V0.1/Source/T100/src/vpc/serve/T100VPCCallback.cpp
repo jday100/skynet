@@ -2,7 +2,8 @@
 
 #include "T100VPCServe.h"
 #include "T100VPCView.h"
-#include "T100VPCConfigDialog.h"
+#include "T100VPCConfigHardwareDialog.h"
+#include "T100VPCConfigHardwareAppendDialog.h"
 
 
 namespace T100VPC{
@@ -89,10 +90,29 @@ T100BOOL T100VPCCallback::frame_menu_hardware(void* d)
         return T100FALSE;
     }
 
-    m_view->getConfig()->Show();
+    m_view->getHardwareDialog()->Show();
 }
 
-T100BOOL T100VPCCallback::frame_menu_hardware_select(void* d)
+T100BOOL T100VPCCallback::frame_menu_hardware_setup(void* d)
+{
+
+}
+
+T100BOOL T100VPCCallback::frame_menu_hardware_append(void* d)
+{
+    if(m_serve->running()){
+        return T100FALSE;
+    }
+
+    m_view->getHardwareDialog()->getAppendDialog()->Show();
+}
+
+T100BOOL T100VPCCallback::frame_menu_hardware_remove(void* d)
+{
+
+}
+
+T100BOOL T100VPCCallback::frame_menu_hardware_finish(void* d)
 {
 
 }

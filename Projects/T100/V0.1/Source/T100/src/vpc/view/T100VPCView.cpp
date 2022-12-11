@@ -2,8 +2,8 @@
 
 #include "T100VPCFrame.h"
 #include "T100VPCScreen.h"
-#include "T100VPCConfigDialog.h"
 #include "T100VPCCallback.h"
+#include "T100VPCConfigHardwareDialog.h"
 
 
 namespace T100VPC{
@@ -40,14 +40,17 @@ T100VPCFrame* T100VPCView::getFrame()
     return m_frame;
 }
 
+T100VPCConfigHardwareDialog* T100VPCView::getHardwareDialog()
+{
+    if(!m_hardware){
+        m_hardware = T100NEW T100VPCConfigHardwareDialog(m_frame);
+    }
+    return m_hardware;
+}
+
 T100VPCScreen* T100VPCView::getScreen()
 {
     return m_screen;
-}
-
-T100VPCConfigDialog* T100VPCView::getConfig()
-{
-    return m_config;
 }
 
 T100BOOL T100VPCView::show()

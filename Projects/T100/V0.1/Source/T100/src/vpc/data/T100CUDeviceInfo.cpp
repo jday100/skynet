@@ -25,4 +25,44 @@ T100VOID T100CUDeviceInfo::destroy()
 
 }
 
+T100WORD T100CUDeviceInfo::count()
+{
+
+}
+
+T100BOOL T100CUDeviceInfo::verify()
+{
+
+}
+
+T100BOOL T100CUDeviceInfo::append(T100CUDeviceInfo* info)
+{
+
+}
+
+T100BOOL T100CUDeviceInfo::remove(T100CUDeviceInfo* info)
+{
+
+}
+
+T100BOOL T100CUDeviceInfo::getDeviceInfos(T100DEVICE_INFO_VECTOR& infos)
+{
+
+}
+
+T100BOOL T100CUDeviceInfo::setup()
+{
+
+}
+
+T100BOOL T100CUDeviceInfo::append(T100DeviceInfo* info)
+{
+
+}
+
+T100BOOL T100CUDeviceInfo::remove(T100DeviceInfo* info)
+{
+
+}
+
 }

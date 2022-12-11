@@ -1,66 +1,66 @@
 PROC=DISPLAY_INIT
     CMT     3080010
-    MOVE    display_init_result_offset          AAR
+    MOVE    display_init_result_offset                  AAR
     //
-    MOVE    ACR                                 hard_display_inited_flag
+    MOVE    ACR                                         hard_display_inited_flag
     JNZ     DISPLAY_INIT_ERROR
     //
-    MOVE    display_order_offset                hard_device_order_offset
-    MOVE    display_data1_offset                hard_device_data1_offset
-    MOVE    display_data2_offset                hard_device_data2_offset
-    MOVE    display_data3_offset                hard_device_data3_offset
+    MOVE    display_order_offset                        hard_device_order_offset
+    MOVE    display_data1_offset                        hard_device_data1_offset
+    MOVE    display_data2_offset                        hard_device_data2_offset
+    MOVE    display_data3_offset                        hard_device_data3_offset
     //
-    MOVE    hard_display_inited_flag            1
+    MOVE    hard_display_inited_flag                    1
     //
     CMT     3080020
-    MOVE    #display_init_result_offset         1
+    MOVE    #display_init_result_offset                 1
     RET
     //
 DISPLAY_INIT_ERROR:
     CMT     3080030
-    MOVE    #display_init_result_offset         0
+    MOVE    #display_init_result_offset                 0
 END
 
 PROC=DISPLAY_PUT
     CMT     3081010
-    MOVE    display_put_result_offset           AAR
+    MOVE    display_put_result_offset                   AAR
     //
-    OUT     display_data3_offset                ABR
-    OUT     display_order_offset                display_mode_write
+    OUT     display_data3_offset                        ABR
+    OUT     display_order_offset                        display_mode_write
     //
     CMT     3081020
-    MOVE    #display_put_result_offset          1
+    MOVE    #display_put_result_offset                  1
     RET
     //
 DISPLAY_PUT_ERROR:
     CMT     3081030
-    MOVE    #display_put_result_offset          0
+    MOVE    #display_put_result_offset                  0
 END
 
 PROC=DISPLAY_PRINT
     CMT     3082010
-    MOVE    display_print_result_offset         AAR
-    MOVE    display_print_target_offset         ABR
+    MOVE    display_print_result_offset                 AAR
+    MOVE    display_print_target_offset                 ABR
     //
-    MOVE    CCR                                 #display_print_target_offset
+    MOVE    CCR                                         #display_print_target_offset
 DISPLAY_PRINT_NEXT:
     CMT     3082020
-    MOVE    AAR                                 display_print_target_offset
-    MOVE    ABR                                 1
+    MOVE    AAR                                         display_print_target_offset
+    MOVE    ABR                                         1
     ADD
-    MOVE    display_print_target_offset         ACR
+    MOVE    display_print_target_offset                 ACR
     //
-    OUT     display_data3_offset                #ACR
-    OUT     display_order_offset                display_mode_write
+    OUT     display_data3_offset                        #ACR
+    OUT     display_order_offset                        display_mode_write
     //
     LOOP    DISPLAY_PRINT_NEXT
     //
     CMT     3082030
-    MOVE    #display_print_result_offset        1
+    MOVE    #display_print_result_offset                1
     RET
     //
 DISPLAY_PRINT_ERROR:
     CMT     3082040
-    MOVE    #display_print_result_offset        0
+    MOVE    #display_print_result_offset                0
 END
 

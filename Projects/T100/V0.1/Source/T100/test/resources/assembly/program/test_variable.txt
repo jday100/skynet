@@ -58,7 +58,6 @@ TEST_START:
     SUB
     JNZ     TEST_ERROR
     //
-    DBG
     MOVE    AAR         14
     MOVE    ABR         label
     SUB
