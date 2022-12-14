@@ -30,6 +30,8 @@ class T100CU32
         T100WORD                    getCBR();
         T100WORD                    getCCR();
 
+        T100WORD                    getGDR();
+
         T100VOID                    setCCR(T100WORD);
 
         T100VOID                    setSSR(T100WORD);
@@ -51,7 +53,6 @@ class T100CU32
         T100VOID                    setCBR(T100WORD);
 
         T100VOID                    setGDR(T100WORD);
-        T100WORD                    getGDR();
 
     private:
         T100QU32*                   m_host          = T100NULL;

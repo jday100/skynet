@@ -33,12 +33,12 @@ class T100Memory32
         T100BOOL                read(T100WORD, T100WORD&);
         T100BOOL                write(T100WORD, T100WORD);
 
+        T100BOOL                raw_read(T100WORD, T100WORD, T100WORD&);
+        T100BOOL                raw_write(T100WORD, T100WORD, T100WORD);
+
     protected:
         T100VOID                create();
         T100VOID                destroy();
-
-        T100BOOL                raw_read(T100WORD, T100WORD, T100WORD&);
-        T100BOOL                raw_write(T100WORD, T100WORD, T100WORD);
 
         T100BOOL                load(T100STRING, T100WORD);
 

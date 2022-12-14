@@ -36,12 +36,15 @@ class T100VPCConfigHardwareDialog : public wxDialog
         static const long ID_BUTTON_FINISH;
 
     private:
+        void OnListViewItemSelect(wxListEvent& event);
         void OnButtonSetupClick(wxCommandEvent& event);
         void OnButtonAppendClick(wxCommandEvent& event);
         void OnButtonRemoveClick(wxCommandEvent& event);
         void OnButtonFinishClick(wxCommandEvent& event);
 
     private:
+        T100DeviceInfo*     m_current           = T100NULL;
+
         T100VPCConfigHardwareAppendDialog*      m_append_dialog         = T100NULL;
 
     private:

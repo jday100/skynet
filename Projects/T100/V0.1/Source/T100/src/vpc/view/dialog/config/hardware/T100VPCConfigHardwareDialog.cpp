@@ -25,6 +25,7 @@ T100VPCConfigHardwareDialog::T100VPCConfigHardwareDialog(wxWindow* parent, wxWin
 {
     //ctor
     BuildContent(parent,id,pos,size);
+    load();
 }
 
 T100VPCConfigHardwareDialog::~T100VPCConfigHardwareDialog()
@@ -47,13 +48,13 @@ void T100VPCConfigHardwareDialog::BuildContent(wxWindow* parent,wxWindowID id,co
 	BoxSizer2->Add(ListView, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer1->Add(BoxSizer2, 1, wxALL|wxEXPAND, 5);
 	BoxSizer3 = new wxBoxSizer(wxHORIZONTAL);
-	SetupButton = new wxButton(this, ID_BUTTON_SETUP, _("ÉèÖÃ"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_SETUP"));
+	SetupButton = new wxButton(this, ID_BUTTON_SETUP, _("è®¾ç½®"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_SETUP"));
 	BoxSizer3->Add(SetupButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	AppendButton = new wxButton(this, ID_BUTTON_APPEND, _("Ìí¼Ó"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_APPEND"));
+	AppendButton = new wxButton(this, ID_BUTTON_APPEND, _("æ·»åŠ "), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_APPEND"));
 	BoxSizer3->Add(AppendButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	RemoveButton = new wxButton(this, ID_BUTTON_REMOVE, _("É¾³ý"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_REMOVE"));
+	RemoveButton = new wxButton(this, ID_BUTTON_REMOVE, _("åˆ é™¤"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_REMOVE"));
 	BoxSizer3->Add(RemoveButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	FinishButton = new wxButton(this, ID_BUTTON_FINISH, _("Íê³É"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_FINISH"));
+	FinishButton = new wxButton(this, ID_BUTTON_FINISH, _("å®Œæˆ"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_FINISH"));
 	BoxSizer3->Add(FinishButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer1->Add(BoxSizer3, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	SetSizer(BoxSizer1);
@@ -61,17 +62,33 @@ void T100VPCConfigHardwareDialog::BuildContent(wxWindow* parent,wxWindowID id,co
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
 
-    Connect(ID_BUTTON_SETUP,    wxEVT_COMMAND_BUTTON_CLICKED,   (wxObjectEventFunction)&T100VPCConfigHardwareDialog::OnButtonSetupClick);
+    Connect(ID_LISTVIEW,        wxEVT_COMMAND_LIST_ITEM_SELECTED,   (wxObjectEventFunction)&T100VPCConfigHardwareDialog::OnListViewItemSelect);
+	Connect(ID_BUTTON_SETUP,    wxEVT_COMMAND_BUTTON_CLICKED,   (wxObjectEventFunction)&T100VPCConfigHardwareDialog::OnButtonSetupClick);
 	Connect(ID_BUTTON_APPEND,   wxEVT_COMMAND_BUTTON_CLICKED,   (wxObjectEventFunction)&T100VPCConfigHardwareDialog::OnButtonAppendClick);
 	Connect(ID_BUTTON_REMOVE,   wxEVT_COMMAND_BUTTON_CLICKED,   (wxObjectEventFunction)&T100VPCConfigHardwareDialog::OnButtonRemoveClick);
 	Connect(ID_BUTTON_FINISH,   wxEVT_COMMAND_BUTTON_CLICKED,   (wxObjectEventFunction)&T100VPCConfigHardwareDialog::OnButtonFinishClick);
 
-    //ImageList->Add(wxIcon(wxT("wxwin16x16_xpm")), wxBITMAP_TYPE_ICO_RESOURCE);
-    //ListView->SetImageList(ImageList, wxIMAGE_LIST_NORMAL);
+}
+
+void T100VPCConfigHardwareDialog::OnListViewItemSelect(wxListEvent& event)
+{
+    T100LONG        index;
+    wxUIntPtr       data;
+
+    index = event.GetIndex();
+
+    data = ListView->GetItemData(index);
+
+    if(data){
+        m_current = (T100DeviceInfo*)data;
+    }
 }
 
 void T100VPCConfigHardwareDialog::OnButtonSetupClick(wxCommandEvent& event)
 {
+    if(m_current){
+        m_current->setup();
+    }
     T100VPCCallback::frame_menu_hardware_setup();
 }
 
@@ -82,6 +99,9 @@ void T100VPCConfigHardwareDialog::OnButtonAppendClick(wxCommandEvent& event)
 
 void T100VPCConfigHardwareDialog::OnButtonRemoveClick(wxCommandEvent& event)
 {
+    if(m_current){
+        m_current->remove(m_current);
+    }
     T100VPCCallback::frame_menu_hardware_remove();
 }
 
@@ -101,8 +121,13 @@ T100VPCConfigHardwareAppendDialog* T100VPCConfigHardwareDialog::getAppendDialog(
 
 T100BOOL T100VPCConfigHardwareDialog::load()
 {
+    T100BOOL        result          = T100FALSE;
+
     for(T100DeviceInfo* item : T100VPCSetup::getDevices()){
-        ListView->InsertItem(ListView->GetItemCount(), item->name.to_wstring());
+        result = item->insert(ListView);
+        if(!result){
+            return T100FALSE;
+        }
     }
     return T100TRUE;
 }

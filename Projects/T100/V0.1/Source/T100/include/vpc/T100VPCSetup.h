@@ -9,6 +9,7 @@ namespace T100VPC{
 
 class T100VPCSetup : public T100QU32::T100QU32Setup
 {
+    friend class T100MemoryInfo;
     public:
         T100VPCSetup();
         virtual ~T100VPCSetup();

@@ -40,9 +40,9 @@ void T100VPCConfigHardwareAppendDialog::BuildContent(wxWindow* parent, wxWindowI
 	BoxSizer2->Add(ListView, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer1->Add(BoxSizer2, 1, wxALL|wxEXPAND, 5);
 	BoxSizer3 = new wxBoxSizer(wxHORIZONTAL);
-	AppendButton = new wxButton(this, ID_BUTTON_APPEND, _("Ìí¼Ó"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_APPEND"));
+	AppendButton = new wxButton(this, ID_BUTTON_APPEND, _("æ·»åŠ "), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_APPEND"));
 	BoxSizer3->Add(AppendButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	FinishButton = new wxButton(this, ID_BUTTON_FINISH, _("Íê³É"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_FINISH"));
+	FinishButton = new wxButton(this, ID_BUTTON_FINISH, _("å®Œæˆ"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_BUTTON_FINISH"));
 	BoxSizer3->Add(FinishButton, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	BoxSizer1->Add(BoxSizer3, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	SetSizer(BoxSizer1);
@@ -68,26 +68,35 @@ T100VOID T100VPCConfigHardwareAppendDialog::load()
     m_keyboard  = T100NEW T100KeyboardInfo();
     m_mouse     = T100NEW T100MouseInfo();
 
-    ListView->InsertItem(ListView->GetItemCount(), m_cu->name.to_wstring());
-    ListView->InsertItem(ListView->GetItemCount(), m_au->name.to_wstring());
-    ListView->InsertItem(ListView->GetItemCount(), m_memory->name.to_wstring());
-    ListView->InsertItem(ListView->GetItemCount(), m_port->name.to_wstring());
+    m_cu->insert(ListView);
+    m_au->insert(ListView);
+    m_memory->insert(ListView);
+    m_port->insert(ListView);
 
-    ListView->InsertItem(ListView->GetItemCount(), m_display->name.to_wstring());
-    ListView->InsertItem(ListView->GetItemCount(), m_disk->name.to_wstring());
-    ListView->InsertItem(ListView->GetItemCount(), m_keyboard->name.to_wstring());
-    ListView->InsertItem(ListView->GetItemCount(), m_mouse->name.to_wstring());
+    m_display->insert(ListView);
+    m_disk->insert(ListView);
+    m_keyboard->insert(ListView);
+    m_mouse->insert(ListView);
 }
 
 void T100VPCConfigHardwareAppendDialog::OnListViewItemSelect(wxListEvent& event)
 {
-    m_current   = m_disk;
+    T100LONG        index;
+    wxUIntPtr       data;
+
+    index = event.GetIndex();
+
+    data = ListView->GetItemData(index);
+
+    if(data){
+        m_current = (T100DeviceInfo*)data;
+    }
 }
 
 void T100VPCConfigHardwareAppendDialog::OnButtonAppendClick(wxCommandEvent& event)
 {
     if(m_current){
-        if(m_current->verify()){
+        if(!m_current->verify()){
             m_current->setup();
         }
     }

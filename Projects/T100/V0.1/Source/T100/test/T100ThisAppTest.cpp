@@ -12,7 +12,8 @@ T100ThisAppTest::T100ThisAppTest()
     test_vdisk(this),
     test_vpc(this),
     test_full(this),
-    test_os(this)
+    test_os(this),
+    test_deploy(this)
 {
     //ctor
 }

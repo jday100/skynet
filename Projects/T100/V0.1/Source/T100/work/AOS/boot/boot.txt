@@ -1,1 +1,9 @@
+MODE    REAL
 
+DATA
+END
+
+CODE
+    CMT     1
+    HALT
+END

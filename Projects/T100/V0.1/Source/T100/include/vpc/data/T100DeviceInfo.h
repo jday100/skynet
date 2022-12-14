@@ -1,10 +1,12 @@
 #ifndef T100DEVICEINFO_H
 #define T100DEVICEINFO_H
 
+#include <wx/listctrl.h>
 #include "T100Common.h"
 #include "T100VPCCommon.h"
 #include "T100String.h"
 #include "T100DeviceTypes.h"
+#include "T100VPCSetup.h"
 
 
 namespace T100VPC{
@@ -28,7 +30,10 @@ class T100DeviceInfo
 
         virtual T100BOOL        setup() = 0;
 
+        virtual T100BOOL        insert(wxListView*) = 0;
+
     protected:
+        virtual T100VOID        init() = 0;
 
     private:
 };

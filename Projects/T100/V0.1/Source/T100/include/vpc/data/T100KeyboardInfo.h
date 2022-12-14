@@ -20,7 +20,11 @@ class T100KeyboardInfo : public T100DeviceInfo
 
         T100BOOL            setup();
 
+        T100BOOL            insert(wxListView*);
+
     protected:
+        T100VOID            init();
+
         T100BOOL            append(T100DeviceInfo*);
         T100BOOL            remove(T100DeviceInfo*);
 

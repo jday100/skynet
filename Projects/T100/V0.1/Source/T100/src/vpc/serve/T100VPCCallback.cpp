@@ -1,10 +1,15 @@
 #include "T100VPCCallback.h"
 
+#include <wx/log.h>
+
 #include "T100VPCServe.h"
 #include "T100VPCView.h"
 #include "T100VPCConfigHardwareDialog.h"
 #include "T100VPCConfigHardwareAppendDialog.h"
 
+#include "T100VPCDisplay.h"
+
+#include "T100VPCDebugFrame.h"
 
 namespace T100VPC{
 
@@ -31,6 +36,7 @@ T100BOOL T100VPCCallback::init(T100VPCServe* serve, T100VPCView* view)
     m_view      = view;
 
     m_serve->createCallback();
+    m_serve->init();
 
     return T100TRUE;
 }
@@ -43,16 +49,19 @@ T100BOOL T100VPCCallback::frame_menu_start(void* d)
         return T100FALSE;
     }
 
+    m_view->show();
+
     result = m_view->start();
-    if(result){
-        result = m_view->show();
-        if(result){
-            result = m_serve->start();
-        }
+    if(!result){
+        return T100FALSE;
     }
+
+    result = m_serve->start();
+
     if(!result){
         m_view->stop();
     }
+
     return result;
 }
 
@@ -65,9 +74,11 @@ T100BOOL T100VPCCallback::frame_menu_stop(void* d)
     }
 
     result = m_view->stop();
-    if(result){
-        result = m_serve->stop();
+    if(!result){
+        return T100FALSE;
     }
+
+    result = m_serve->stop();
 
     if(!result){
         m_view->start();
@@ -77,11 +88,19 @@ T100BOOL T100VPCCallback::frame_menu_stop(void* d)
 
 T100BOOL T100VPCCallback::frame_menu_quit(void* d)
 {
+    T100BOOL        result;
+
     if(m_serve->running()){
-        m_serve->stop();
+        result = m_serve->stop();
+        if(result){
+            result = m_view->stop();
+        }
     }
 
-    m_view->quit();
+    if(result){
+        result = m_view->quit();
+    }
+    return result;
 }
 
 T100BOOL T100VPCCallback::frame_menu_hardware(void* d)
@@ -109,25 +128,194 @@ T100BOOL T100VPCCallback::frame_menu_hardware_append(void* d)
 
 T100BOOL T100VPCCallback::frame_menu_hardware_remove(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100VPCCallback::frame_menu_hardware_finish(void* d)
 {
-
+    return T100TRUE;
 }
 
 T100BOOL T100VPCCallback::frame_menu_setup(void* d)
 {
+    if(m_serve->running()){
+        return T100FALSE;
+    }
 
+    //m_view->getSetupDialog()->Show();
 }
 
 T100BOOL T100VPCCallback::frame_menu_debug(void* d)
 {
-
+    m_view->ShowDebugFrame();
 }
 
 T100BOOL T100VPCCallback::frame_menu_about(void* d)
+{
+    wxLogMessage(
+                    "Virtual Computer \n"
+                    "\n"
+                    "Author: ZhengFeng Qu\n"
+                    "\n"
+                    "JiangSu China\n"
+                    "\n"
+                    L"Copyright ©2020-2022"
+                 );
+}
+
+///
+T100BOOL T100VPCCallback::debug_button_run_click(void* d)
+{
+    if(m_serve->m_host){
+        m_serve->m_host->run();
+    }else{
+        T100QU32::T100QU32Setup::DEBUG_MODE   = T100QU32::T100EXECUTOR_MODE_RUN;
+    }
+}
+
+T100BOOL T100VPCCallback::debug_button_pause_click(void* d)
+{
+    if(m_serve->m_host){
+        m_serve->m_host->pause();
+    }else{
+        T100QU32::T100QU32Setup::DEBUG_MODE   = T100QU32::T100EXECUTOR_MODE_STEP;
+        T100QU32::T100QU32Setup::DEBUG_STATE  = T100QU32::T100EXECUTOR_STATE_PAUSE;
+    }
+}
+
+T100BOOL T100VPCCallback::debug_button_step_click(void* d)
+{
+    if(m_serve->m_host){
+        m_serve->m_host->step();
+    }else{
+        T100QU32::T100QU32Setup::DEBUG_MODE   = T100QU32::T100EXECUTOR_MODE_STEP;
+    }
+}
+
+T100BOOL T100VPCCallback::debug_button_next_click(void* d)
+{
+    if(m_serve->m_host){
+        m_serve->m_host->next();
+    }else{
+        T100QU32::T100QU32Setup::DEBUG_MODE   = T100QU32::T100EXECUTOR_MODE_NEXT;
+    }
+}
+
+T100BOOL T100VPCCallback::debug_button_comment_click(void* d)
+{
+    if(m_serve->m_host){
+        m_serve->m_host->nextComment();
+    }else{
+        T100QU32::T100QU32Setup::DEBUG_MODE   = T100QU32::T100EXECUTOR_MODE_NEXT_COMMENT;
+    }
+}
+
+T100BOOL T100VPCCallback::debug_button_call_click(void* d)
+{
+    if(m_serve->m_host){
+        m_serve->m_host->nextCall();
+    }else{
+        T100QU32::T100QU32Setup::DEBUG_MODE   = T100QU32::T100EXECUTOR_MODE_NEXT_CALL;
+    }
+}
+
+T100BOOL T100VPCCallback::debug_button_return_click(void* d)
+{
+    if(m_serve->m_host){
+        m_serve->m_host->nextReturn();
+    }else{
+        T100QU32::T100QU32Setup::DEBUG_MODE   = T100QU32::T100EXECUTOR_MODE_NEXT_RETURN;
+    }
+}
+
+T100BOOL T100VPCCallback::debug_memory_offset_update(void* d)
+{
+    if(!d)return T100FALSE;
+    if(!m_serve->m_host)return T100FALSE;
+
+    T100VPCDebugFrame*      frame   = T100NULL;
+
+    frame = static_cast<T100VPCDebugFrame*>(d);
+    if(!frame)return T100FALSE;
+
+    wxString    temp;
+    T100LONG    value;
+
+    temp = frame->MemoryOffsetComboBox->GetValue();
+    if(!temp.ToLongLong(&value)){
+        return T100FALSE;
+    }
+
+    T100VPCSetup::MEMORY_WINDOW_BEGIN   = value;
+    T100VPCSetup::MEMORY_WINDOW_END     = T100VPCSetup::MEMORY_WINDOW_BEGIN + frame->MemoryListView->GetCountPerPage();
+
+    frame->MemoryScrollBar->SetThumbPosition(value);
+
+    frame->updateMemory(m_serve->m_host->getMemory32());
+
+    return T100TRUE;
+}
+
+T100BOOL T100VPCCallback::debug_port_offset_update(void* d)
+{
+    if(!d)return T100FALSE;
+    if(!m_serve->m_host)return T100FALSE;
+
+    T100VPCDebugFrame*      frame   = T100NULL;
+
+    frame = static_cast<T100VPCDebugFrame*>(d);
+    if(!frame)return T100FALSE;
+
+    wxString    temp;
+    T100LONG    value;
+
+    temp = frame->PortOffsetComboBox->GetValue();
+    if(!temp.ToLongLong(&value)){
+        return T100FALSE;
+    }
+
+    T100VPCSetup::PORT_WINDOW_BEGIN     = value;
+    T100VPCSetup::PORT_WINDOW_END       = T100VPCSetup::PORT_WINDOW_BEGIN + frame->PortListView->GetCountPerPage();
+
+    frame->PortScrollBar->SetThumbPosition(value);
+
+    frame->updatePort(m_serve->m_host->getPort32());
+
+    return T100TRUE;
+}
+
+///
+T100BOOL T100VPCCallback::debug_port_update(void* d)
+{
+    if(!d)return T100FALSE;
+    if(!m_serve->m_host)return T100FALSE;
+
+    T100VPCDebugFrame*      frame   = T100NULL;
+
+    frame = static_cast<T100VPCDebugFrame*>(d);
+    if(!frame)return T100FALSE;
+
+    frame->updatePort(m_serve->m_host->getPort32());
+
+    return T100TRUE;
+}
+
+T100BOOL T100VPCCallback::debug_notify_start(void* d)
+{
+    T100VPCDebugFrame*      frame   = T100NULL;
+
+    frame = static_cast<T100VPCDebugFrame*>(d);
+
+    if(frame){
+        frame->updateMemory(m_serve->m_host->getMemory32());
+        frame->updatePort(m_serve->m_host->getPort32());
+        return T100TRUE;
+    }
+
+    return T100FALSE;
+}
+
+T100BOOL T100VPCCallback::debug_notify_stop(void* d)
 {
 
 }
@@ -149,6 +337,32 @@ T100BOOL T100VPCCallback::notify_thread_stop(void* d)
     }
 
     return result;
+}
+
+T100BOOL T100VPCCallback::serve_create_display(void* d)
+{
+    if(!d){
+        return T100FALSE;
+    }
+
+    T100QU32::T100QU32*     host        = T100NULL;
+    T100VPCHost*            frame       = T100NULL;
+
+    host    = static_cast<T100QU32::T100QU32*>(d);
+    frame   = m_view->getHostFrame();
+
+    T100VPCDisplay*    display     = T100NULL;
+
+    display = T100NEW T100VPCDisplay(host, frame);
+    if(!display){
+        return T100FALSE;
+    }
+
+    if(!display->create()){
+        return T100FALSE;
+    }
+
+    return T100TRUE;
 }
 
 }

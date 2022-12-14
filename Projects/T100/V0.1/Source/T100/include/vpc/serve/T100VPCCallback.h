@@ -33,6 +33,29 @@ class T100VPCCallback
 
         static T100BOOL             frame_menu_about(void* = T100NULL);
 
+
+        static T100BOOL             serve_create_display(void* = T100NULL);
+
+    public:
+        static T100BOOL             debug_button_run_click(void* = T100NULL);
+        static T100BOOL             debug_button_pause_click(void* = T100NULL);
+        static T100BOOL             debug_button_step_click(void* = T100NULL);
+        static T100BOOL             debug_button_next_click(void* = T100NULL);
+        static T100BOOL             debug_button_comment_click(void* = T100NULL);
+        static T100BOOL             debug_button_call_click(void* = T100NULL);
+        static T100BOOL             debug_button_return_click(void* = T100NULL);
+
+        static T100BOOL             debug_memory_offset_update(void* = T100NULL);
+        static T100BOOL             debug_port_offset_update(void* = T100NULL);
+
+
+        //
+        static T100BOOL             debug_port_update(void* = T100NULL);
+
+
+        static T100BOOL             debug_notify_start(void* = T100NULL);
+        static T100BOOL             debug_notify_stop(void* = T100NULL);
+
     public:
         static T100BOOL             notify_thread_stop(void* = T100NULL);
 

@@ -19,8 +19,10 @@
 					<object class="sizeritem">
 						<object class="wxTextCtrl" name="ID_TEXTCTRL_FILE_NAME" variable="FileNameTextCtrl" member="yes">
 							<value>Text</value>
+							<handler function="OnFileNameTextCtrlText" entry="EVT_TEXT" />
+							<handler function="OnFileNameTextCtrlTextEnter" entry="EVT_TEXT_ENTER" />
 						</object>
-						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<flag>wxALL|wxALIGN_LEFT</flag>
 						<border>5</border>
 						<option>1</option>
 					</object>
@@ -32,7 +34,27 @@
 						<border>5</border>
 					</object>
 					<object class="sizeritem">
-						<object class="wxComboBox" name="ID_COMBOBOX_FILE_PATH" variable="FilePathComboBox" member="yes" />
+						<object class="wxBoxSizer" variable="BoxSizer2" member="no">
+							<object class="sizeritem">
+								<object class="wxComboBox" name="ID_COMBOBOX_FILE_PATH" variable="FilePathComboBox" member="yes">
+									<size>300,-1</size>
+									<handler function="OnFilePathComboBoxSelected" entry="EVT_COMBOBOX" />
+									<handler function="OnFilePathComboBoxTextUpdated" entry="EVT_TEXT" />
+									<handler function="OnFilePathComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+							<object class="sizeritem">
+								<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
+									<label>Label</label>
+									<handler function="OnButton1Click" entry="EVT_BUTTON" />
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
+						</object>
 						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 						<border>5</border>
 						<option>1</option>
@@ -45,13 +67,17 @@
 						<border>5</border>
 					</object>
 					<object class="sizeritem">
-						<object class="wxComboBox" name="ID_COMBOBOX_FILE_LENGTH" variable="FileLengthComboBox" member="yes" />
-						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<object class="wxComboBox" name="ID_COMBOBOX_FILE_LENGTH" variable="FileLengthComboBox" member="yes">
+							<handler function="OnFileLengthComboBoxSelected" entry="EVT_COMBOBOX" />
+							<handler function="OnFileLengthComboBoxTextUpdated" entry="EVT_TEXT" />
+							<handler function="OnFileLengthComboBoxTextEnter" entry="EVT_TEXT_ENTER" />
+						</object>
+						<flag>wxALL|wxALIGN_LEFT</flag>
 						<border>5</border>
 						<option>1</option>
 					</object>
 				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<flag>wxALL|wxEXPAND</flag>
 				<border>5</border>
 				<option>1</option>
 			</object>

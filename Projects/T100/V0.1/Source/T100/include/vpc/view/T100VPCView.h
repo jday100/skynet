@@ -6,7 +6,10 @@
 
 namespace T100VPC{
 class T100VPCFrame;
+class T100VPCHost;
 class T100VPCScreen;
+class T100VPCDebugFrame;
+class T100VPCConfigSetupDialog;
 class T100VPCConfigHardwareDialog;
 
 
@@ -24,11 +27,15 @@ class T100VPCView
         T100BOOL                    run();
         T100BOOL                    quit();
 
+        T100BOOL                    ShowDebugFrame();
+
         T100VOID                    setFrame(T100VPCFrame*);
         T100VPCFrame*               getFrame();
 
+        T100VPCHost*                getHostFrame();
         T100VPCScreen*              getScreen();
 
+        T100VPCConfigSetupDialog*           getSetupDialog();
         T100VPCConfigHardwareDialog*        getHardwareDialog();
 
     public:
@@ -41,8 +48,10 @@ class T100VPCView
 
     private:
         T100VPCFrame*               m_frame         = T100NULL;
-        T100VPCScreen*              m_screen        = T100NULL;
+        T100VPCHost*                m_host          = T100NULL;
+        T100VPCDebugFrame*          m_debug         = T100NULL;
 
+        T100VPCConfigSetupDialog*               m_setup             = T100NULL;
         T100VPCConfigHardwareDialog*            m_hardware          = T100NULL;
 
         wxFrame*                                m_parent            = T100NULL;

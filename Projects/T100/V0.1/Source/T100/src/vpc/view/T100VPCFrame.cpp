@@ -92,6 +92,7 @@ void T100VPCFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& po
 	Connect(ID_MENUITEM_HARDWARE,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100VPCFrame::OnHardwareMenuSelected);
 	Connect(ID_MENUITEM_SETUP,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100VPCFrame::OnSetupMenuSelected);
 	Connect(ID_MENUITEM_ABOUT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100VPCFrame::OnAboutMenuSelected);
+	Connect(wxID_ANY,wxEVT_CLOSE_WINDOW,(wxObjectEventFunction)&T100VPCFrame::OnClose);
 	//*)
 }
 
@@ -172,4 +173,11 @@ void T100VPCFrame::OnDebugPause(wxThreadEvent& event)
 
 }
 
+void T100VPCFrame::OnClose(wxCloseEvent& event)
+{
+    T100VPCCallback::frame_menu_quit();
 }
+
+}
+
+

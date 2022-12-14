@@ -69,6 +69,7 @@ class T100VPCFrame: public wxFrame
 		void OnHardwareMenuSelected(wxCommandEvent& event);
 		void OnSetupMenuSelected(wxCommandEvent& event);
 		void OnAboutMenuSelected(wxCommandEvent& event);
+		void OnClose(wxCloseEvent& event);
 		//*)
 
 		void OnThreadStart(wxThreadEvent& event);

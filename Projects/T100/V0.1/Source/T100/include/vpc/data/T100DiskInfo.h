@@ -8,6 +8,7 @@ namespace T100VPC{
 
 class T100DiskInfo : public T100DeviceInfo
 {
+    friend class T100VPCDiskSetupDialog;
     public:
         T100DiskInfo();
         virtual ~T100DiskInfo();
@@ -23,7 +24,11 @@ class T100DiskInfo : public T100DeviceInfo
 
         T100BOOL            setup();
 
+        T100BOOL            insert(wxListView*);
+
     protected:
+        T100VOID            init();
+
         T100BOOL            append(T100DeviceInfo*);
         T100BOOL            remove(T100DeviceInfo*);
 
@@ -33,6 +38,10 @@ class T100DiskInfo : public T100DeviceInfo
 
     private:
         T100VPCDiskSetupDialog*         m_setup         = T100NULL;
+
+        T100STRING          m_name;
+        T100STRING          m_file;
+        T100DWORD           m_length;
 
 };
 

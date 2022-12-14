@@ -2,6 +2,7 @@
 #define T100VPCSERVE_H
 
 #include "T100Common.h"
+#include "T100DeviceInfo.h"
 #include "T100QU32.h"
 
 
@@ -9,6 +10,7 @@ namespace T100VPC{
 
 class T100VPCServe
 {
+    friend class T100VPCCallback;
     public:
         T100VPCServe();
         virtual ~T100VPCServe();
@@ -24,6 +26,13 @@ class T100VPCServe
 
     protected:
         T100WORD            m_return;
+
+        T100BOOL            load();
+
+        T100BOOL            init();
+
+        T100BOOL            createDevice(T100QU32::T100QU32*, T100DeviceInfo*);
+
 
     private:
         T100QU32::T100QU32*                 m_host          = T100NULL;
