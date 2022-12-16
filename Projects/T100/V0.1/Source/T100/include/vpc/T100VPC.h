@@ -2,6 +2,8 @@
 #define T100VPC_H
 
 #include "T100Common.h"
+#include "T100VPCLog.h"
+
 
 namespace T100VPC{
 class T100VPCServe;
@@ -29,6 +31,8 @@ class T100VPC
     protected:
         T100VOID                    create();
         T100VOID                    destroy();
+
+        T100VOID                    init();
 
     private:
         T100VPCServe*               m_serve         = T100NULL;

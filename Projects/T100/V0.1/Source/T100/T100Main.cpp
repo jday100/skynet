@@ -22,6 +22,7 @@
 #include "T100FontFrame.h"
 #include "T100FontPanel.h"
 
+#include "T100App.h"
 #include "T100VPCView.h"
 
 
@@ -57,12 +58,14 @@ const long T100Frame::idMenuAbout = wxNewId();
 const long T100Frame::ID_STATUSBAR1 = wxNewId();
 //*)
 
+const long T100Frame::ID_THREAD_CLOSE = wxNewId();
 const long T100Frame::ID_THREAD_FONT = wxNewId();
 const long T100Frame::ID_THREAD_VPC = wxNewId();
 
 BEGIN_EVENT_TABLE(T100Frame,wxFrame)
     //(*EventTable(T100Frame)
     //*)
+    EVT_THREAD(ID_THREAD_CLOSE, T100Frame::OnThreadClose)
     EVT_THREAD(ID_THREAD_FONT, T100Frame::OnThreadFont)
     EVT_THREAD(ID_THREAD_VPC, T100Frame::OnThreadVPC)
 
@@ -202,6 +205,14 @@ T100BOOL T100Frame::vpc_quit(void* d)
 
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
+}
+
+void T100Frame::OnThreadClose(wxThreadEvent& event)
+{
+    T100WORD        id;
+
+    id = event.GetInt();
+    wxGetApp().getManager()->close(id);
 }
 
 T100VOID T100Frame::wait()

@@ -96,6 +96,8 @@ T100BOOL T100VPCView::quit()
     if(m_callback){
         (m_parent->*m_callback)(T100NULL);
     }
+
+    return T100TRUE;
 }
 
 T100VOID T100VPCView::setCallback(wxFrame* frame, T100WxWidgets::T100FRAME_CALLBACK callback)

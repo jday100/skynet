@@ -14,10 +14,13 @@ class T100AppTestThread : public T100Library::T100Thread
 
         T100VOID            unit(T100WSTRING);
 
+        T100VOID            list();
+
     protected:
         T100VOID            run();
 
     private:
+        T100BOOL            m_list          = T100FALSE;
         T100WSTRING         m_name;
 
 };

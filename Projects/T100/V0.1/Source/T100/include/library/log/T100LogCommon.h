@@ -3,11 +3,15 @@
 
 #include "T100Class.h"
 #include "T100Common.h"
+#include "T100SafeVector.h"
 #include "T100DataStructure.h"
 
 #define         T100LOG_QUEUE                       std::queue<T100WSTRING>
 
 #define         T100LOG_VECTOR                      std::vector<T100LogBase*>
+
+#define         T100LOG_SAFE_VECTOR                 T100Library::T100SafeVector<T100LogBase*>
+
 
 namespace T100Library{
 class T100LogBase;

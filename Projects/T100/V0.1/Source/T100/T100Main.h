@@ -31,10 +31,12 @@ class T100Frame: public wxFrame
         T100VOID            wait();
         T100WORD            getReturn();
 
+        static const long ID_THREAD_CLOSE;
         static const long ID_THREAD_FONT;
         static const long ID_THREAD_VPC;
 
     protected:
+        void OnThreadClose(wxThreadEvent& event);
         void OnThreadFont(wxThreadEvent& event);
         void OnThreadVPC(wxThreadEvent& event);
 

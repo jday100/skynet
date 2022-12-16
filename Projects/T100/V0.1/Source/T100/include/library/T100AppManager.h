@@ -15,6 +15,8 @@ class T100AppManager : public T100Class
 
         virtual T100BOOL            stop();
 
+        virtual T100BOOL            quit();
+
     protected:
 
     private:

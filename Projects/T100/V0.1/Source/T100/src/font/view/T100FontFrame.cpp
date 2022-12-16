@@ -5,6 +5,11 @@
 #include <wx/string.h>
 //*)
 
+#include "T100ThisAppCommon.h"
+#include "T100App.h"
+#include "T100Main.h"
+
+
 namespace T100FontBuilder{
 
 //(*IdInit(T100FontFrame)
@@ -28,6 +33,8 @@ void T100FontFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& p
 	SetClientSize(wxSize(406,550));
 	Move(wxDefaultPosition);
 	FontPanel = new T100FontPanel(this,ID_CUSTOM_FONT_PANEL,wxPoint(192,296),wxDefaultSize);
+
+	Connect(wxID_ANY,wxEVT_CLOSE_WINDOW,(wxObjectEventFunction)&T100FontFrame::OnClose);
 	//*)
 }
 
@@ -37,4 +44,14 @@ T100FontFrame::~T100FontFrame()
 	//*)
 }
 
+void T100FontFrame::OnClose(wxCloseEvent& event)
+{
+    wxThreadEvent   temp(wxEVT_THREAD, T100Frame::ID_THREAD_CLOSE);
+
+    temp.SetInt(T100APP_FONT_BUILDER);
+    wxQueueEvent(wxGetApp().getManager()->getFrame(), temp.Clone());
 }
+
+}
+
+

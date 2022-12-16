@@ -30,3 +30,12 @@ T100BOOL T100AppTest::unit(T100WSTRING name)
 
     return T100FALSE;
 }
+
+T100BOOL T100AppTest::list()
+{
+    T100::T100AppTestThread*  thread = T100NEW T100::T100AppTestThread();
+
+    thread->list();
+
+    return T100FALSE;
+}

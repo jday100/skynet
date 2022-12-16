@@ -2,6 +2,10 @@
 
 #include <wx/log.h>
 
+#include "T100ThisAppCommon.h"
+#include "T100App.h"
+#include "T100Main.h"
+
 #include "T100VPCServe.h"
 #include "T100VPCView.h"
 #include "T100VPCConfigHardwareDialog.h"
@@ -95,11 +99,21 @@ T100BOOL T100VPCCallback::frame_menu_quit(void* d)
         if(result){
             result = m_view->stop();
         }
+    }else{
+        result = T100TRUE;
     }
 
     if(result){
-        result = m_view->quit();
+        //result = m_view->quit();
     }
+
+    if(result){
+        wxThreadEvent   event(wxEVT_THREAD, T100Frame::ID_THREAD_CLOSE);
+
+        event.SetInt(T100APP_VPC);
+        wxQueueEvent(wxGetApp().getManager()->getFrame(), event.Clone());
+    }
+
     return result;
 }
 

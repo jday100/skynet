@@ -1,0 +1,20 @@
+设置字符集：
+
+一、编辑器
+“Settings”->“Editor”->“Encoding settings”->“Encoding”
+
+Use encoding when opening files: UTF-8
+
+Use this encoding:
+
+As default encoding(bypassing C::B's auto-detection)
+
+二、编译器
+“Settings”->“Compiler”->“Compiler settings”->“Other compiler options”
+
+-fexec-charset=GBK
+-finput-charset=UTF-8
+
+
+设置wx全局变量
+“Settings”->“Global variables”->“wx”

@@ -21,7 +21,7 @@ T100BOOL T100VDiskConsole::run()
     T100VDiskCmdLineParser*                 parser          = T100NEW T100VDiskCmdLineParser();
     T100Library::T100ConsoleTerminal*       console         = T100NEW T100Library::T100ConsoleTerminal(parser);
 
-    return T100TRUE;
+    return console->run();
 }
 
 }

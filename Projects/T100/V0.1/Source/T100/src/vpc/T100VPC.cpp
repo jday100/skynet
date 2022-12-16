@@ -5,12 +5,16 @@
 #include "T100VPCLink.h"
 #include "T100VPCCallback.h"
 
+#include "T100LogFile.h"
+#include "T100LogConsole.h"
+
 
 namespace T100VPC{
 
 T100VPC::T100VPC()
 {
     //ctor
+    init();
     create();
 }
 
@@ -33,6 +37,20 @@ T100VOID T100VPC::destroy()
 {
     T100SAFE_DELETE(m_view);
     T100SAFE_DELETE(m_serve);
+}
+
+T100VOID T100VPC::init()
+{
+    T100WSTRING         file;
+
+    file    = L"logs\\vpc.log";
+
+    if(!T100VPCLog::running()){
+        T100VPCLog::append(T100NEW T100Library::T100LogConsole());
+        T100VPCLog::append(T100NEW T100Library::T100LogFile(file));
+
+        T100VPCLog::start();
+    }
 }
 
 T100VOID T100VPC::setServe(T100VPCServe* serve)

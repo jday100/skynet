@@ -1,0 +1,7 @@
+一、编译选项
+1、__LOG__
+2、__CONSOLE__
+3、__LINUX__
+4、__WINDOWS__
+5、__LEAK__
+6、__WXWIDGETS__

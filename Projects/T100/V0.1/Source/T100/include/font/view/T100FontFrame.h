@@ -28,6 +28,7 @@ class T100FontFrame: public wxFrame
 	private:
 
 		//(*Handlers(T100FontFrame)
+		void OnClose(wxCloseEvent& event);
 		//*)
 
 	protected:

@@ -22,12 +22,24 @@ T100VOID T100AppTestThread::unit(T100WSTRING name)
     start();
 }
 
+T100VOID T100AppTestThread::list()
+{
+    m_name.clear();
+    m_list = T100TRUE;
+
+    start();
+}
+
 T100VOID T100AppTestThread::run()
 {
     T100::T100ThisAppTest        test_app;
 
     if(m_name.empty()){
-        test_app.test_all();
+        if(m_list){
+            test_app.list();
+        }else{
+            test_app.test_all();
+        }
     }else{
         test_app.test_unit(m_name);
     }

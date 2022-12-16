@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-T -u=deploy" />
+				<Option parameters="-F" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -101,6 +101,7 @@
 					<Add directory="test/deploy" />
 					<Add directory="include/vpc/view/frame/debug" />
 					<Add directory="include/vpc/view/dialog/config" />
+					<Add directory="include/library/safe" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -197,6 +198,7 @@
 					<Add directory="test/deploy" />
 					<Add directory="include/vpc/view/frame/debug" />
 					<Add directory="include/vpc/view/dialog/config" />
+					<Add directory="include/library/safe" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -240,11 +242,15 @@
 		<Unit filename="docs/assembly/T100Keyword.txt" />
 		<Unit filename="docs/assembly/T100Order.txt" />
 		<Unit filename="docs/assembly/T100Virtual.txt" />
+		<Unit filename="docs/env/T100.txt" />
+		<Unit filename="docs/env/codeblocks.txt" />
+		<Unit filename="docs/env/wx.txt" />
 		<Unit filename="docs/os/mm.txt" />
 		<Unit filename="include/al/T100AL.h" />
 		<Unit filename="include/al/T100ALApp.h" />
 		<Unit filename="include/app/T100ThisAppCmdLineParser.h" />
 		<Unit filename="include/app/T100ThisAppCmdLineResult.h" />
+		<Unit filename="include/app/T100ThisAppCommon.h" />
 		<Unit filename="include/app/T100ThisAppManager.h" />
 		<Unit filename="include/app/T100ThisAppSetup.h" />
 		<Unit filename="include/assembly/T100Assembly.h" />
@@ -489,6 +495,7 @@
 		<Unit filename="include/library/T100StringTools.h" />
 		<Unit filename="include/library/T100Test.h" />
 		<Unit filename="include/library/T100TestCommon.h" />
+		<Unit filename="include/library/T100TestNew.h" />
 		<Unit filename="include/library/T100TestTools.h" />
 		<Unit filename="include/library/T100TextFile.h" />
 		<Unit filename="include/library/T100TextFileReader.h" />
@@ -517,6 +524,8 @@
 		<Unit filename="include/library/log/T100LogCommon.h" />
 		<Unit filename="include/library/log/T100LogConsole.h" />
 		<Unit filename="include/library/log/T100LogFile.h" />
+		<Unit filename="include/library/log/T100LogNew.h" />
+		<Unit filename="include/library/safe/T100SafeVector.h" />
 		<Unit filename="include/qu32/T100AU32.h" />
 		<Unit filename="include/qu32/T100CU32.h" />
 		<Unit filename="include/qu32/T100Executor32.h" />
@@ -596,6 +605,7 @@
 		<Unit filename="include/vpc/T100VPC.h" />
 		<Unit filename="include/vpc/T100VPCApp.h" />
 		<Unit filename="include/vpc/T100VPCCommon.h" />
+		<Unit filename="include/vpc/T100VPCLog.h" />
 		<Unit filename="include/vpc/T100VPCSetup.h" />
 		<Unit filename="include/vpc/data/T100AUDeviceInfo.h" />
 		<Unit filename="include/vpc/data/T100CUDeviceInfo.h" />
@@ -870,6 +880,7 @@
 		<Unit filename="src/library/T100StringHash.cpp" />
 		<Unit filename="src/library/T100StringTools.cpp" />
 		<Unit filename="src/library/T100Test.cpp" />
+		<Unit filename="src/library/T100TestNew.cpp" />
 		<Unit filename="src/library/T100TestTools.cpp" />
 		<Unit filename="src/library/T100TextFile.cpp" />
 		<Unit filename="src/library/T100TextFileReader.cpp" />
@@ -894,6 +905,7 @@
 		<Unit filename="src/library/log/T100LogBase.cpp" />
 		<Unit filename="src/library/log/T100LogConsole.cpp" />
 		<Unit filename="src/library/log/T100LogFile.cpp" />
+		<Unit filename="src/library/log/T100LogNew.cpp" />
 		<Unit filename="src/qu32/T100AU32.cpp" />
 		<Unit filename="src/qu32/T100CU32.cpp" />
 		<Unit filename="src/qu32/T100Executor32.cpp" />
@@ -970,6 +982,7 @@
 		<Unit filename="src/vdisk/view/T100VDiskView.cpp" />
 		<Unit filename="src/vpc/T100VPC.cpp" />
 		<Unit filename="src/vpc/T100VPCApp.cpp" />
+		<Unit filename="src/vpc/T100VPCLog.cpp" />
 		<Unit filename="src/vpc/T100VPCSetup.cpp" />
 		<Unit filename="src/vpc/data/T100AUDeviceInfo.cpp" />
 		<Unit filename="src/vpc/data/T100CUDeviceInfo.cpp" />

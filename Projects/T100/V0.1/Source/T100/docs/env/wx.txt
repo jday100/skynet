@@ -1,0 +1,4 @@
+编译：
+mingw32-make -f makefile.gcc BUILD=release UNICODE=1 SHARED=0
+
+mingw32-make -f makefile.gcc BUILD=debug UNICODE=1 SHARED=0

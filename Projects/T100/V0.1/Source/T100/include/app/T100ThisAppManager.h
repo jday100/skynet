@@ -34,6 +34,8 @@ class T100ThisAppManager : public T100WxWidgets::T100WxAppManager
 
         T100BOOL                parse(int&, wxChar**);
 
+        T100BOOL                close(T100WORD);
+
     protected:
         T100VOID                create();
         T100VOID                destroy();

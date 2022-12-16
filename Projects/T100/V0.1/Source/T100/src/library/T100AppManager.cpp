@@ -22,4 +22,9 @@ T100BOOL T100AppManager::stop()
     return T100FALSE;
 }
 
+T100BOOL T100AppManager::quit()
+{
+    return T100FALSE;
+}
+
 }

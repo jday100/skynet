@@ -5,6 +5,7 @@
 #include "T100LogConsole.h"
 #include "T100AppTest.h"
 
+#include "T100ThisAppCommon.h"
 #include "T100ThisAppCmdLineParser.h"
 
 #include "T100Main.h"
@@ -52,6 +53,8 @@ T100BOOL T100ThisAppManager::start()
 
         if(m_info.UNIT){
             test.unit(m_info.NAME);
+        }else if(m_info.LIST){
+            test.list();
         }else{
             test.run();
         }
@@ -91,4 +94,22 @@ T100BOOL T100ThisAppManager::parse(int& argc, wxChar** argv)
     T100ThisAppCmdLineParser    cmd;
 
     return cmd.parse(argc, argv, m_info);
+}
+
+T100BOOL T100ThisAppManager::close(T100WORD id)
+{
+    switch(id){
+    case T100APP_VPC:
+        {
+            T100SAFE_DELETE(m_vpc);
+        }
+        break;
+    case T100APP_FONT_BUILDER:
+        {
+            T100SAFE_DELETE(m_font);
+        }
+        break;
+    }
+
+    quit();
 }

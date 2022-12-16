@@ -86,6 +86,11 @@ T100BOOL T100ThisAppCmdLineParser::setSwitch(T100Library::T100CmdLineSwitch& inf
             data.VPC        = T100TRUE;
         }
         break;
+    case L'l':
+        {
+            data.LIST       = T100TRUE;
+        }
+        break;
     default:
         result = T100FALSE;
     }
@@ -104,7 +109,7 @@ T100BOOL T100ThisAppCmdLineParser::setOption(T100Library::T100CmdLineOption& inf
             data.NAME   = info.value;
         }
         break;
-    case L'l':
+    case L'p':
         {
             data.PATHS.push_back(info.value);
         }

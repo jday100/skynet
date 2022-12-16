@@ -28,7 +28,7 @@ T100VOID T100ConsoleTerminal::create()
     switch(m_type){
     case T100CONSOLE_TYPE_LINUX:
         {
-            m_console = T100NEW T100ConsoleWindows();
+            m_console = T100NEW T100ConsoleLinux();
         }
         break;
     default:
