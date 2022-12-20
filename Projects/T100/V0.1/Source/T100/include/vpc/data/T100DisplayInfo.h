@@ -8,6 +8,7 @@ namespace T100VPC{
 
 class T100DisplayInfo : public T100DeviceInfo
 {
+    friend class T100VPCDisplay;
     friend class T100VPCDisplaySetupDialog;
     public:
         T100DisplayInfo();

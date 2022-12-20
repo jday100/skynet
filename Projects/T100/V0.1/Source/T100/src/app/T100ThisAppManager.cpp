@@ -7,11 +7,12 @@
 
 #include "T100ThisAppCommon.h"
 #include "T100ThisAppCmdLineParser.h"
+#include "T100ThisAppHelp.h"
 
 #include "T100Main.h"
 #include "T100FontApp.h"
 #include "T100VPCApp.h"
-#include "T100VDiskConsole.h"
+#include "T100VDiskConsoleApp.h"
 #include "T100AssemblyApp.h"
 
 
@@ -48,7 +49,16 @@ T100BOOL T100ThisAppManager::start()
 
     m_frame = T100NEW T100Frame(0);
 
+    if(m_info.HELP){
+        T100ThisAppHelp     help;
+
+        help.show();
+        return quit();
+    }
+
     if(m_info.TEST){
+        m_info.RUNNING      = T100TRUE;
+
         T100AppTest         test(this);
 
         if(m_info.UNIT){
@@ -61,23 +71,35 @@ T100BOOL T100ThisAppManager::start()
     }
 
     if(m_info.FONT){
-        m_font = T100NEW T100FontBuilder::T100FontApp(this);
+        m_info.RUNNING      = T100TRUE;
+
+        m_font = T100NEW T100FontBuilder::T100FontApp(this, m_info.QUIT);
         m_font->show();
     }
 
     if(m_info.VDISK){
-        m_vdisk = T100NEW T100VDisk::T100VDiskConsole(this);
+        m_info.RUNNING      = T100TRUE;
+
+        m_vdisk = T100NEW T100VDisk::T100VDiskConsoleApp(this, m_info.QUIT);
         m_vdisk->run();
     }
 
     if(m_info.ASSEMBLY){
+        m_info.RUNNING      = T100TRUE;
+
         m_assembly  = T100NEW T100Assembly::T100AssemblyApp(this);
         result      = m_assembly->run(m_info);
     }
 
     if(m_info.VPC){
-        m_vpc = T100NEW T100VPC::T100VPCApp(this);
+        m_info.RUNNING      = T100TRUE;
+
+        m_vpc = T100NEW T100VPC::T100VPCApp(this, m_info.QUIT);
         m_vpc->show();
+    }
+
+    if(!m_info.RUNNING){
+        quit();
     }
 
     return T100TRUE;
@@ -107,6 +129,11 @@ T100BOOL T100ThisAppManager::close(T100WORD id)
     case T100APP_FONT_BUILDER:
         {
             T100SAFE_DELETE(m_font);
+        }
+        break;
+    case T100APP_VDISK:
+        {
+            T100SAFE_DELETE(m_vdisk);
         }
         break;
     }

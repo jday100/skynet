@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxPanel" name="T100VPCDemoPanel">
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<handler function="OnPaint" entry="EVT_PAINT" />
+		<handler function="OnEraseBackground" entry="EVT_ERASE_BACKGROUND" />
+		<handler function="OnKeyDown" entry="EVT_KEY_DOWN" />
+		<handler function="OnKeyUp" entry="EVT_KEY_UP" />
+		<handler function="OnChar" entry="EVT_CHAR" />
+		<handler function="OnSetFocus" entry="EVT_SET_FOCUS" />
+		<handler function="OnKillFocus" entry="EVT_KILL_FOCUS" />
+		<handler function="OnMouseMove" entry="EVT_MOTION" />
+	</object>
+</wxsmith>

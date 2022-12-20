@@ -13,6 +13,8 @@ class T100Help : public T100Class
         T100Help();
         virtual ~T100Help();
 
+        virtual T100VOID            show() = 0;
+
     protected:
 
     private:

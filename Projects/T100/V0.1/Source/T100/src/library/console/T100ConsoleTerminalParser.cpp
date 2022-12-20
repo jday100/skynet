@@ -53,4 +53,9 @@ T100BOOL T100ConsoleTerminalParser::parse(T100CONSOLE_COMMAND_VECTOR& cmds)
     return T100FALSE;
 }
 
+T100BOOL T100ConsoleTerminalParser::quit()
+{
+    return T100TRUE;
+}
+
 }

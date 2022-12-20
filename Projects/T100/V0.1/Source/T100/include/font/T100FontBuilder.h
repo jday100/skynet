@@ -6,6 +6,7 @@
 #include "T100Common.h"
 
 namespace T100FontBuilder{
+class T100FontApp;
 class T100FontServe;
 class T100FontView;
 
@@ -13,7 +14,7 @@ class T100FontView;
 class T100FontBuilder
 {
     public:
-        T100FontBuilder();
+        T100FontBuilder(T100FontApp* = T100NULL);
         virtual ~T100FontBuilder();
 
         T100VOID                    setServe(T100FontServe*);
@@ -30,6 +31,7 @@ class T100FontBuilder
         T100VOID                    destroy();
 
     private:
+        T100FontApp*                m_app           = T100NULL;
         T100FontServe*              m_serve         = T100NULL;
         T100FontView*               m_view          = T100NULL;
 

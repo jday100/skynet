@@ -15,6 +15,8 @@ class T100WxAppManager : public T100Library::T100AppManager
 
         wxFrame*            getFrame();
 
+        T100BOOL            quit(T100WORD = 0);
+
     protected:
         wxFrame*            m_frame         = T100NULL;
 

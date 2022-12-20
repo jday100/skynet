@@ -27,7 +27,6 @@ PROC=INT_INIT
     MOVE    int067[0]                                   0
     MOVE    int067[1]                                   @INT067
     //
-    DBG
     MOVE    int068[0]                                   0
     MOVE    int068[1]                                   @INT068
     //
@@ -129,6 +128,8 @@ INT068:
     LOCK
     //
     CMT     3010680010
+    MOVE    int068_result_offset                        AAR
+    MOVE    int068_target_offset                        ACR
     //
     MOVE    ACR                                         hard_display_inited_flag
     JZ      INT068_ERROR
@@ -136,7 +137,7 @@ INT068:
     CMT     3010680020
     MOVE    int068_result_offset                        AAR
     MOVE    AAR                                         @int068_result
-    MOVE    ABR                                         ACR
+    MOVE    ABR                                         int068_target_offset
     CALL    DISPLAY_PRINT
     MOVE    ACR                                         int068_result
     MOVE    #int068_result_offset                       ACR
@@ -252,7 +253,6 @@ INT069_READ:
     MOVE    ACR                                         int069_disk_buffer_offset
     MOVE    ADR                                         disk_block_size
     CALL    IO_COPY
-    DBG
     MOVE    ACR                                         int069_result
     JZ      INT069_ERROR
     //

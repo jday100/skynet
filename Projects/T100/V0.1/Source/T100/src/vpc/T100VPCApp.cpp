@@ -4,8 +4,8 @@
 
 namespace T100VPC{
 
-T100VPCApp::T100VPCApp(T100ThisAppManager* obj)
-    :T100Library::T100AppBase(obj)
+T100VPCApp::T100VPCApp(T100ThisAppManager* obj, T100BOOL quit)
+    :T100Library::T100AppBase(obj, quit)
 {
     //ctor
     create();
@@ -19,7 +19,7 @@ T100VPCApp::~T100VPCApp()
 
 T100VOID T100VPCApp::create()
 {
-    m_vpc = T100NEW T100VPC();
+    m_vpc = T100NEW T100VPC(this);
 }
 
 T100VOID T100VPCApp::destroy()

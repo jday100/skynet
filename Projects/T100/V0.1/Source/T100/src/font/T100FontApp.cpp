@@ -5,8 +5,8 @@
 
 namespace T100FontBuilder{
 
-T100FontApp::T100FontApp(T100ThisAppManager* obj)
-    :T100WxWidgets::T100WxApp((T100WxWidgets::T100WxAppManager*)obj)
+T100FontApp::T100FontApp(T100ThisAppManager* obj, T100BOOL quit)
+    :T100WxWidgets::T100WxApp((T100WxWidgets::T100WxAppManager*)obj, quit)
 {
     //ctor
     create();
@@ -20,7 +20,7 @@ T100FontApp::~T100FontApp()
 
 T100VOID T100FontApp::create()
 {
-    m_builder = T100NEW T100FontBuilder();
+    m_builder = T100NEW T100FontBuilder(this);
 }
 
 T100VOID T100FontApp::destroy()

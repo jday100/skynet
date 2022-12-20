@@ -43,7 +43,7 @@ class T100Display : public T100QU32::T100Device
         T100VOID            create();
         T100VOID            destroy();
 
-        T100QU32::T100QU32*           getHost();
+        T100QU32::T100QU32*             getHost();
 
         T100DisplayBlockDevice          m_block_device;
         T100DisplayPageDevice           m_page_device;

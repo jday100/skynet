@@ -3,14 +3,12 @@
 #include <windows.h>
 #include "T100Log.h"
 #include "T100AppThread.h"
+#include "T100AppManager.h"
 
 namespace T100Library{
 
-T100APP_VECTOR          T100AppBase::m_apps;
-std::atomic_int         T100AppBase::m_count = 0;
-
-T100AppBase::T100AppBase(T100AppManager* obj)
-    :m_manager(obj)
+T100AppBase::T100AppBase(T100AppManager* obj, T100BOOL quit)
+    :m_manager(obj), m_quit(quit)
 {
     //ctor
     create();
@@ -24,8 +22,6 @@ T100AppBase::~T100AppBase()
 
 T100VOID T100AppBase::create()
 {
-    m_count = 0;
-
     open();
 }
 
@@ -36,7 +32,7 @@ T100VOID T100AppBase::destroy()
 
 T100VOID T100AppBase::quit()
 {
-    exit(0);
+
 }
 
 T100VOID T100AppBase::wait()
@@ -52,16 +48,12 @@ T100VOID T100AppBase::wait()
 
 T100VOID T100AppBase::open()
 {
-    m_count++;
+    m_manager->open();
 }
 
 T100VOID T100AppBase::close()
 {
-    m_count--;
-
-    if(0 < m_count){
-        wait();
-    }
+    m_manager->close();
 }
 
 T100VOID T100AppBase::getCmdLine(int& argc, wchar_t**& argv)

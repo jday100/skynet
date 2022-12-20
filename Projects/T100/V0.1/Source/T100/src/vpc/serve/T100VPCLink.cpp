@@ -37,6 +37,9 @@ T100BOOL T100VPCLink::init(T100VPCServe* serve, T100VPCView* view)
 
 T100BOOL T100VPCLink::notify_start()
 {
+    wxThreadEvent       event(wxEVT_THREAD, T100VPCFrame::ID_THREAD_START);
+    wxQueueEvent(m_view->getFrame(), event.Clone());
+
     return T100TRUE;
 }
 
@@ -50,21 +53,58 @@ T100BOOL T100VPCLink::notify_stop()
 
 T100BOOL T100VPCLink::notify_register_update(T100WORD type, T100WORD value)
 {
+    wxThreadEvent       event(wxEVT_THREAD, T100VPCFrame::ID_DEBUG_REGISTER_UPDATE);
+
+    T100RegisterEventData*      data    = T100NEW T100RegisterEventData();
+
+    data->TYPE  = type;
+    data->VALUE = value;
+
+    event.SetEventObject(data);
+
+    wxQueueEvent(m_view->getFrame(), event.Clone());
+
     return T100TRUE;
 }
 
 T100BOOL T100VPCLink::notify_memory_update(T100WORD offset, T100WORD value)
 {
+    wxThreadEvent       event(wxEVT_THREAD, T100VPCFrame::ID_DEBUG_MEMORY_UPDATE);
+
+    T100EventData*      data    = T100NEW T100EventData();
+
+    data->OFFSET    = offset;
+    data->VALUE     = value;
+
+    event.SetEventObject(data);
+
+    wxQueueEvent(m_view->getFrame(), event.Clone());
+
     return T100TRUE;
 }
 
 T100BOOL T100VPCLink::notify_port_update(T100WORD offset, T100WORD value)
 {
+    wxThreadEvent       event(wxEVT_THREAD, T100VPCFrame::ID_DEBUG_PORT_UPDATE);
+
+    T100EventData*      data    = T100NEW T100EventData();
+
+    data->OFFSET    = offset;
+    data->VALUE     = value;
+
+    event.SetEventObject(data);
+
+    wxQueueEvent(m_view->getFrame(), event.Clone());
+
     return T100TRUE;
 }
 
 T100BOOL T100VPCLink::notify_debug_pause()
 {
+    wxThreadEvent       event(wxEVT_THREAD, T100VPCFrame::ID_DEBUG_PAUSE);
+
+    wxQueueEvent(m_view->getFrame(), event.Clone());
+
     return T100TRUE;
 }
 

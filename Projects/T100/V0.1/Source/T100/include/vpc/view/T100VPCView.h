@@ -28,6 +28,7 @@ class T100VPCView
         T100BOOL                    quit();
 
         T100BOOL                    ShowDebugFrame();
+        T100VPCDebugFrame*          getDebugFrame();
 
         T100VOID                    setFrame(T100VPCFrame*);
         T100VPCFrame*               getFrame();

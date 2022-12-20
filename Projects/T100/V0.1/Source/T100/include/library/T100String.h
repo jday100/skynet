@@ -51,8 +51,8 @@ class T100String : public T100Class
         T100WORD            length();
         T100VOID            clear();
 
-        T100STDSTRING&      to_std_string();
-        T100WSTRING&        to_wstring();
+        T100STDSTRING       to_std_string();
+        T100WSTRING         to_wstring();
         T100String32&       to_string32();
 
     public:

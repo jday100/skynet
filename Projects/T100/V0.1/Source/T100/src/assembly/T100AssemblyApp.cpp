@@ -32,6 +32,10 @@ T100BOOL T100AssemblyApp::run(T100ThisAppCmdLineResult& info)
 
     result = assembly.run(source, target);
 
+    if(m_quit){
+        quit();
+    }
+
     return result;
 }
 

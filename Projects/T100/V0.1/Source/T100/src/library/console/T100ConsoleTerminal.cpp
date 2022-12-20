@@ -75,7 +75,7 @@ T100BOOL T100ConsoleTerminal::run()
 {
     m_thread = T100NEW T100ConsoleTerminalThread(this);
     m_thread->start();
-    return T100FALSE;
+    return T100TRUE;
 }
 
 T100VOID T100ConsoleTerminal::wait()

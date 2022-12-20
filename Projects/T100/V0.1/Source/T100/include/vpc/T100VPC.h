@@ -6,6 +6,7 @@
 
 
 namespace T100VPC{
+class T100VPCApp;
 class T100VPCServe;
 class T100VPCView;
 
@@ -13,7 +14,7 @@ class T100VPCView;
 class T100VPC
 {
     public:
-        T100VPC();
+        T100VPC(T100VPCApp* = T100NULL);
         virtual ~T100VPC();
 
         T100VOID                    setServe(T100VPCServe*);
@@ -35,6 +36,7 @@ class T100VPC
         T100VOID                    init();
 
     private:
+        T100VPCApp*                 m_app           = T100NULL;
         T100VPCServe*               m_serve         = T100NULL;
         T100VPCView*                m_view          = T100NULL;
 

@@ -95,6 +95,7 @@ T100BOOL T100DeployTest::deploy_font()
     if(!value){
         wxThreadEvent   event(wxEVT_THREAD, T100Frame::ID_THREAD_FONT);
 
+        event.SetString(file.to_wstring());
         wxQueueEvent(wxGetApp().getManager()->getFrame(), event.Clone());
 
         wxFrame*    frame       = wxGetApp().getManager()->getFrame();
@@ -183,9 +184,9 @@ T100BOOL T100DeployTest::deploy_init()
     T100STRING      path;
     T100Assembly::T100Assembly      assembly;
 
-    source  = T100ThisAppSetup::getWork(L"AOS\\rom\\rom.txt");
-    target  = T100ThisAppSetup::getBuild(L"rom.bin");
-    path    = T100ThisAppSetup::getWork(L"AOS");
+    source  = T100ThisAppSetup::getWork(L"AOS\\kernel\\init.txt");
+    target  = T100ThisAppSetup::getBuild(L"init.bin");
+    path    = T100ThisAppSetup::getWork(L"AOS\\kernel");
 
     assembly.getProduce().getClassPathDrawer().append(path);
     value = assembly.run(source, target);
@@ -214,9 +215,9 @@ T100BOOL T100DeployTest::deploy_kernel()
     T100STRING      path;
     T100Assembly::T100Assembly      assembly;
 
-    source  = T100ThisAppSetup::getWork(L"AOS\\rom\\rom.txt");
-    target  = T100ThisAppSetup::getBuild(L"rom.bin");
-    path    = T100ThisAppSetup::getWork(L"AOS");
+    source  = T100ThisAppSetup::getWork(L"AOS\\kernel\\kernel.txt");
+    target  = T100ThisAppSetup::getBuild(L"kernel.knl");
+    path    = T100ThisAppSetup::getWork(L"AOS\\kernel");
 
     assembly.getProduce().getClassPathDrawer().append(path);
     value = assembly.run(source, target);
@@ -242,7 +243,10 @@ T100BOOL T100DeployTest::deploy_vdisk()
 
     T100STRING      cmd;
     T100STRING      file;
+    T100STRING      path;
     T100STRING      boot;
+    T100STRING      init;
+    T100STRING      kernel;
     T100VDisk::T100VDiskCmdLineParser       parser;
     T100Library::T100ConsoleTerminal        console(&parser);
 
@@ -277,6 +281,32 @@ T100BOOL T100DeployTest::deploy_vdisk()
             }
         }
 
+        if(result){
+            path    = L":system";
+            cmd     = L"mkdir first " + path;
+            value   = console.exec(cmd.to_wstring());
+            if(!value){
+                result = T100FALSE;
+            }
+        }
+
+        if(result){
+            init    = T100ThisAppSetup::getBuild(L"init.bin");
+            cmd     = L"copy " + init + L" first :system:init.bin";
+            value   = console.exec(cmd.to_wstring());
+            if(!value){
+                result = T100FALSE;
+            }
+        }
+
+        if(result){
+            kernel  = T100ThisAppSetup::getBuild(L"kernel.knl");
+            cmd     = L"copy " + kernel + L" first :system:kernel.knl";
+            value   = console.exec(cmd.to_wstring());
+            if(!value){
+                result = T100FALSE;
+            }
+        }
 
         cmd     = L"quit";
         value   = console.exec(cmd.to_wstring());
@@ -308,7 +338,8 @@ T100BOOL T100DeployTest::deploy_run()
 
     if(result){
         T100QU32::T100QU32Setup::clear();
-        T100QU32::T100QU32Setup::NEED_LOAD_ROM = T100TRUE;
+        T100QU32::T100QU32Setup::DEBUG          = T100TRUE;
+        T100QU32::T100QU32Setup::NEED_LOAD_ROM  = T100TRUE;
         T100QU32::T100QU32Setup::setRomFile(target);
 
         wxThreadEvent   event(wxEVT_THREAD, T100Frame::ID_THREAD_VPC);

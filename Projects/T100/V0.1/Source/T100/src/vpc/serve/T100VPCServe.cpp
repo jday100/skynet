@@ -193,11 +193,7 @@ T100BOOL T100VPCServe::createDevice(T100QU32::T100QU32* host, T100DeviceInfo* in
         break;
     case T100Component::T100DEVICE_DISPLAY:
         {
-            //T100Display*    display;
-
-            //display     = T100NEW T100VPCDisplay(host);
-
-            T100VPCCallback::serve_create_display(host);
+            T100VPCCallback::serve_create_display(info);
         }
         break;
     case T100Component::T100DEVICE_KEYBOARD:

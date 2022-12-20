@@ -214,6 +214,7 @@ DATA=ROM_DATA   VIRTUAL     LOCATION=1073743872     LENGTH=1024
     //
     int068_result                                       INTEGER     0
     int068_result_offset                                INTEGER     0
+    int068_target_offset                                INTEGER     0
     //
     int069_result                                       INTEGER     0
     int069_result_offset                                INTEGER     0

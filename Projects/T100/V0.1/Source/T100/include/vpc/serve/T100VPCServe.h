@@ -15,23 +15,23 @@ class T100VPCServe
         T100VPCServe();
         virtual ~T100VPCServe();
 
-        T100BOOL            start();
-        T100BOOL            stop();
+        T100BOOL                start();
+        T100BOOL                stop();
 
-        T100BOOL            running();
+        T100BOOL                running();
 
-        T100BOOL            createCallback();
+        T100BOOL                createCallback();
 
-        T100WORD            getReturn();
+        T100WORD                getReturn();
 
     protected:
-        T100WORD            m_return;
+        T100WORD                m_return;
 
-        T100BOOL            load();
+        T100BOOL                load();
 
-        T100BOOL            init();
+        T100BOOL                init();
 
-        T100BOOL            createDevice(T100QU32::T100QU32*, T100DeviceInfo*);
+        T100BOOL                createDevice(T100QU32::T100QU32*, T100DeviceInfo*);
 
 
     private:

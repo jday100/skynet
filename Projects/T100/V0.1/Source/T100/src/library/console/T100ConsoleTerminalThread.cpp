@@ -30,6 +30,7 @@ T100VOID T100ConsoleTerminalThread::run()
         m_console->getline(line);
 
         if(L"quit" == line){
+            m_console->getParser()->quit();
             return;
         }
 

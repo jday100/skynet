@@ -11,6 +11,8 @@ class T100ThisAppCmdLineResult : public T100Library::T100CmdLineResult
         T100ThisAppCmdLineResult();
         virtual ~T100ThisAppCmdLineResult();
 
+        T100BOOL                RUNNING         = T100FALSE;
+
         T100BOOL                TEST            = T100FALSE;
         T100BOOL                HELP            = T100FALSE;
 

@@ -1,6 +1,9 @@
 #include "T100VDiskCmdLineParser.h"
 
 #include "T100File.h"
+#include "T100ThisAppCommon.h"
+#include "T100App.h"
+#include "T100Main.h"
 
 namespace T100VDisk{
 
@@ -430,10 +433,13 @@ T100BOOL T100VDiskCmdLineParser::fs_copy(T100WSTRING source, T100WSTRING name, T
 
 T100BOOL T100VDiskCmdLineParser::quit()
 {
+    T100BOOL        result          = T100TRUE;
+
     if(m_vdisk){
-        return m_vdisk->close();
+        result = m_vdisk->close();
     }
-    return T100TRUE;
+
+    return result;
 }
 
 }

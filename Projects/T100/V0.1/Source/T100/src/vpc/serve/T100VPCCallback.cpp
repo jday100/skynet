@@ -13,6 +13,7 @@
 
 #include "T100VPCDisplay.h"
 
+#include "T100RegisterEventData.h"
 #include "T100VPCDebugFrame.h"
 
 namespace T100VPC{
@@ -242,6 +243,21 @@ T100BOOL T100VPCCallback::debug_button_return_click(void* d)
     }
 }
 
+T100BOOL T100VPCCallback::debug_register_update(void* d)
+{
+    T100RegisterEventData*      data            = T100NULL;
+
+    data = static_cast<T100RegisterEventData*>(d);
+
+    if(data){
+        m_view->getDebugFrame()->OnRegisterUpdate(data->TYPE, data->VALUE);
+        T100SAFE_DELETE(data);
+        return T100TRUE;
+    }
+
+    return T100FALSE;
+}
+
 T100BOOL T100VPCCallback::debug_memory_offset_update(void* d)
 {
     if(!d)return T100FALSE;
@@ -361,13 +377,15 @@ T100BOOL T100VPCCallback::serve_create_display(void* d)
 
     T100QU32::T100QU32*     host        = T100NULL;
     T100VPCHost*            frame       = T100NULL;
+    T100DisplayInfo*        info        = T100NULL;
 
-    host    = static_cast<T100QU32::T100QU32*>(d);
+    host    = m_serve->m_host;
+    info    = static_cast<T100DisplayInfo*>(d);
     frame   = m_view->getHostFrame();
 
     T100VPCDisplay*    display     = T100NULL;
 
-    display = T100NEW T100VPCDisplay(host, frame);
+    display = T100NEW T100VPCDisplay(host, frame, info);
     if(!display){
         return T100FALSE;
     }

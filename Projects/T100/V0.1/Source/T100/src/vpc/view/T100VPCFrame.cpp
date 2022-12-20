@@ -155,7 +155,7 @@ void T100VPCFrame::OnThreadQuit(wxThreadEvent& event)
 
 void T100VPCFrame::OnDebugRegisterUpdate(wxThreadEvent& event)
 {
-
+    T100VPCCallback::debug_register_update(event.GetEventObject());
 }
 
 void T100VPCFrame::OnDebugMemoryUpdate(wxThreadEvent& event)

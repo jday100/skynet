@@ -63,11 +63,15 @@ T100BOOL T100FullTest::init_font()
 {
     T100BOOL        result          = T100TRUE;
     T100BOOL        value;
+    T100STRING      file;
 
     T100Library::T100Log::info(T100TEST_HINT_FULL_TEST_FONT_INIT_START);
 
+    file    = T100ThisAppSetup::getTestStores(L"test_font.fnt");
+
     wxThreadEvent   event(wxEVT_THREAD, T100Frame::ID_THREAD_FONT);
 
+    event.SetString(file.to_wstring());
     wxQueueEvent(wxGetApp().getManager()->getFrame(), event.Clone());
 
     wxFrame*    frame       = wxGetApp().getManager()->getFrame();
@@ -75,9 +79,7 @@ T100BOOL T100FullTest::init_font()
 
     item->wait();
 
-    T100STRING      file;
 
-    file    = T100ThisAppSetup::getTestStores(L"test_font.fnt");
 
     value = T100Library::T100TestTools::Exists(file.to_wstring());
     if(!value){

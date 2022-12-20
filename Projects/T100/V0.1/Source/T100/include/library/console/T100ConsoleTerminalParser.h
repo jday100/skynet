@@ -22,6 +22,8 @@ class T100ConsoleTerminalParser
         virtual T100BOOL            split(T100WSTRING&, T100CONSOLE_COMMAND_VECTOR&);
         virtual T100BOOL            parse(T100CONSOLE_COMMAND_VECTOR&);
 
+        virtual T100BOOL            quit();
+
     private:
         T100ConsoleTerminal*        m_console           = T100NULL;
 

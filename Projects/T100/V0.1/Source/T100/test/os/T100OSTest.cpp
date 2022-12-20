@@ -61,6 +61,7 @@ T100BOOL T100OSTest::init_font()
     if(!value){
         wxThreadEvent   event(wxEVT_THREAD, T100Frame::ID_THREAD_FONT);
 
+        event.SetString(file.to_wstring());
         wxQueueEvent(wxGetApp().getManager()->getFrame(), event.Clone());
 
         wxFrame*    frame       = wxGetApp().getManager()->getFrame();

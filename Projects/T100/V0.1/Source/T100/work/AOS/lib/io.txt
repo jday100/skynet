@@ -14,6 +14,8 @@ PROC=IO_COPY
     MOVE    io_copy_target_offset                       ACR
     MOVE    io_copy_length                              ADR
     //
+    PUSH    CCR
+    //
     MOVE    AAR                                         io_copy_length
     MOVE    ABR                                         1
     SUB
@@ -34,6 +36,8 @@ IO_COPY_NEXT:
     MOVE    io_copy_target_offset                       ACR
     //
     LOOP    IO_COPY_NEXT
+    //
+    POP     CCR
     //
     CMT     1040030
     MOVE    #io_copy_result_offset                      1

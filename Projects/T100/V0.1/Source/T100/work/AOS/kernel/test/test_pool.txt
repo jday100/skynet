@@ -1,0 +1,223 @@
+DATA
+    test_pool_result                                    INTEGER
+    test_pool_result_offset                             INTEGER
+    //
+    test_pool_buffer_offset                             INTEGER     1116160
+    test_pool_buffer_length                             INTEGER     16
+    //
+    test_pool_target_offset                             INTEGER     1132544
+    test_pool_target_current_offset                     INTEGER
+    test_pool_target_current_length                     INTEGER     113
+    //
+    test_pool_target_value                              INTEGER
+    //
+    test_pool_length_small                              INTEGER     100
+    test_pool_length_big                                INTEGER     128
+    //
+    test_pool_check_result_offset                       INTEGER
+    test_pool_check_offset                              INTEGER
+    //
+    test_pool_length_1                                  INTEGER     112
+    test_pool_buffer_current_offset_1                   INTEGER     1116161
+    test_pool_buffer_current_limit_1                    INTEGER     1116176
+    test_pool_buffer_current_residue_1                  INTEGER     0
+    test_pool_read_index_1                              INTEGER     16
+    test_pool_parse_next_length_1                       INTEGER     0
+    //
+    test_pool_length_2                                  INTEGER     96
+    test_pool_buffer_current_offset_2                   INTEGER     1116161
+    test_pool_buffer_current_limit_2                    INTEGER     1116176
+    test_pool_buffer_current_residue_2                  INTEGER     0
+    test_pool_read_index_2                              INTEGER     32
+    test_pool_parse_next_length_2                       INTEGER     0
+    //
+END
+
+PROC=TEST_POOL
+    MOVE    test_pool_result_offset                     AAR
+    //
+    CMT     111
+    DBG
+    MOVE    AAR                                         @test_pool_result
+    MOVE    ABR                                         test_pool_buffer_offset
+    MOVE    ACR                                         test_pool_buffer_length
+    MOVE    ADR                                         test_pool_length_big
+    CALL    POOL_INIT
+    MOVE    ACR                                         test_pool_result
+    JZ      TEST_POOL_ERROR
+    //
+    CMT     222
+    //
+    MOVE    test_pool_target_current_offset             test_pool_target_offset
+    MOVE    AAR                                         @test_pool_result
+    MOVE    ABR                                         test_pool_target_current_offset
+    MOVE    ACR                                         1
+    CALL    POOL_PARSE_NEXT
+    MOVE    ACR                                         test_pool_result
+    JZ      TEST_POOL_ERROR
+    //
+    MOVE    AAR                                         test_pool_target_current_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    test_pool_target_current_offset             ACR
+    //
+    CMT     223
+    DBG
+    MOVE    AAR                                         @test_pool_result
+    MOVE    ABR                                         @test_pool_length_1
+    CALL    TEST_POOL_CHECK
+    MOVE    ACR                                         test_pool_result
+    JZ      TEST_POOL_ERROR
+    //
+    CMT     333
+    //
+    MOVE    AAR                                         @test_pool_result
+    MOVE    ABR                                         test_pool_target_current_offset
+    MOVE    ACR                                         16
+    CALL    POOL_PARSE_NEXT
+    MOVE    ACR                                         test_pool_result
+    JZ      TEST_POOL_ERROR
+    //
+    MOVE    AAR                                         test_pool_target_current_offset
+    MOVE    ABR                                         16
+    ADD
+    MOVE    test_pool_target_current_offset             ACR
+    //
+    CMT     334
+    DBG
+    MOVE    AAR                                         @test_pool_result
+    MOVE    ABR                                         @test_pool_length_2
+    CALL    TEST_POOL_CHECK
+    MOVE    ACR                                         test_pool_result
+    JZ      TEST_POOL_ERROR
+    //
+    CMT     444
+    //
+    MOVE    AAR                                         @test_pool_result
+    MOVE    ABR                                         test_pool_target_current_offset
+    MOVE    ACR                                         32
+    CALL    POOL_PARSE_NEXT
+    MOVE    ACR                                         test_pool_result
+    JZ      TEST_POOL_ERROR
+    //
+    MOVE    AAR                                         test_pool_target_current_offset
+    MOVE    ABR                                         32
+    ADD
+    MOVE    test_pool_target_current_offset             ACR
+    //
+    CMT     555
+    //
+    MOVE    AAR                                         @test_pool_result
+    MOVE    ABR                                         test_pool_target_current_offset
+    MOVE    ACR                                         64
+    CALL    POOL_PARSE_NEXT
+    MOVE    ACR                                         test_pool_result
+    JZ      TEST_POOL_ERROR
+    //
+    MOVE    AAR                                         test_pool_target_current_offset
+    MOVE    ABR                                         64
+    ADD
+    MOVE    test_pool_target_current_offset             ACR
+    //
+    MOVE    AAR                                         test_pool_target_current_length
+    MOVE    ABR                                         1
+    SUB
+    MOVE    CCR                                         ACR
+    //
+    MOVE    test_pool_target_current_offset             test_pool_buffer_offset
+    MOVE    test_pool_target_value                      0
+
+    CMT     666
+TEST_POOL_NEXT:
+    MOVE    AAR                                         #test_pool_target_current_offset
+    MOVE    ABR                                         test_pool_target_value
+    SUB
+    JNZ     TEST_POOL_ERROR
+    //
+    MOVE    AAR                                         test_pool_target_current_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    test_pool_target_current_offset             ACR
+    //
+    MOVE    AAR                                         test_pool_target_value
+    ADD
+    MOVE    test_pool_target_value                      ACR
+    //
+    LOOP    TEST_POOL_NEXT
+    //
+    CMT     1
+    DBG
+    MOVE    #test_pool_result_offset                    1
+    RET
+TEST_POOL_ERROR:
+    CMT     0
+    DBG
+    MOVE    AAR                                         CCR
+    MOVE    #test_pool_result_offset                    0
+END
+
+PROC=TEST_POOL_CHECK
+    MOVE    test_pool_check_result_offset               AAR
+    MOVE    test_pool_check_offset                      ABR
+    //
+    MOVE    AAR                                         #test_pool_check_offset
+    MOVE    ABR                                         pool_length
+    SUB
+    JNZ     TEST_POOL_CHECK_ERROR
+    //
+    MOVE    AAR                                         test_pool_check_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    test_pool_check_offset                      ACR
+    //
+    MOVE    AAR                                         #test_pool_check_offset
+    MOVE    ABR                                         pool_buffer_current_offset
+    SUB
+    JNZ     TEST_POOL_CHECK_ERROR
+    //
+    MOVE    AAR                                         test_pool_check_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    test_pool_check_offset                      ACR
+    //
+    MOVE    AAR                                         #test_pool_check_offset
+    MOVE    ABR                                         pool_buffer_current_limit
+    SUB
+    JNZ     TEST_POOL_CHECK_ERROR
+    //
+    MOVE    AAR                                         test_pool_check_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    test_pool_check_offset                      ACR
+    //
+    MOVE    AAR                                         #test_pool_check_offset
+    MOVE    ABR                                         pool_buffer_current_residue
+    SUB
+    JNZ     TEST_POOL_CHECK_ERROR
+    //
+    MOVE    AAR                                         test_pool_check_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    test_pool_check_offset                      ACR
+    //
+    MOVE    AAR                                         #test_pool_check_offset
+    MOVE    ABR                                         pool_read_index
+    SUB
+    JNZ     TEST_POOL_CHECK_ERROR
+    //
+    MOVE    AAR                                         test_pool_check_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    test_pool_check_offset                      ACR
+    //
+    MOVE    AAR                                         #test_pool_check_offset
+    MOVE    ABR                                         pool_parse_next_length
+    SUB
+    //JNZ     TEST_POOL_CHECK_ERROR
+    //
+    //
+    MOVE    #test_pool_check_result_offset              1
+    RET
+TEST_POOL_CHECK_ERROR:
+    MOVE    #test_pool_check_result_offset              0
+END

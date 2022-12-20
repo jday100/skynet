@@ -32,7 +32,6 @@ ROM_INIT:
     //
 ROM_DISPLAY_END:
     CMT     30040
-    DBG
     MOVE    AAR                                         @rom_result
     MOVE    ABR                                         @disk_buffer
     MOVE    ACR                                         @rom_boot_part_location_low
@@ -55,7 +54,9 @@ ROM_DISPLAY_END:
     MOVE    ACR                                         rom_result
     JZ      ROM_ERROR
     //
-
+    CMT     30060
+    JUMP    {rom_location_offset:0}
+    HALT
     //
 ROM_DISPLAY_ERROR:
     CMT     30090
@@ -171,6 +172,7 @@ END
 
 PROC=ROM_BOOT_PART_LOAD
     CMT     35010
+    DBG
     MOVE    rom_boot_part_load_result_offset            AAR
     MOVE    rom_boot_part_load_location_offset          ABR
     MOVE    rom_boot_part_load_location_low             ACR
@@ -202,6 +204,8 @@ ROM_BOOT_PART_LOAD_NEXT:
     MOVE    ABR                                         1
     ADD
     MOVE    rom_boot_part_load_index                    ACR
+    //
+    DBG
     //
     LOOP    ROM_BOOT_PART_LOAD_NEXT
     //

@@ -11,7 +11,7 @@ class T100FontBuilder;
 class T100FontApp : public T100WxWidgets::T100WxApp
 {
     public:
-        T100FontApp(T100ThisAppManager*);
+        T100FontApp(T100ThisAppManager*, T100BOOL = T100FALSE);
         virtual ~T100FontApp();
 
         T100VOID                show();

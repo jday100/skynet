@@ -4,18 +4,21 @@
 #include "T100AppBase.h"
 
 namespace T100VDisk{
+class T100VDiskConsoleApp;
 
-class T100VDiskConsole : public ::T100Library::T100AppBase
+class T100VDiskConsole
 {
     public:
-        T100VDiskConsole(T100Library::T100AppManager*);
+        T100VDiskConsole(T100VDiskConsoleApp* = T100NULL);
         virtual ~T100VDiskConsole();
 
-        T100BOOL                run();
+        T100BOOL                    run();
 
     protected:
 
     private:
+        T100VDiskConsoleApp*        m_app           = T100NULL;
+
 };
 
 }

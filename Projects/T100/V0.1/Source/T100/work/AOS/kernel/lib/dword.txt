@@ -1,0 +1,811 @@
+DATA    //    VIRTUAL     LOCATION=1069056
+    dword_word_mul_result                               INTEGER
+    dword_word_mul_result_offset                        INTEGER
+    dword_word_mul_source_low_offset                    INTEGER
+    dword_word_mul_source_high_offset                   INTEGER
+    dword_word_mul_target                               INTEGER
+    dword_word_mul_value_low_offset                     INTEGER
+    dword_word_mul_value_high_offset                    INTEGER
+    //
+    dword_word_mul_source_low                           INTEGER
+    dword_word_mul_source_high                          INTEGER
+    dword_word_mul_value_low                            INTEGER
+    dword_word_mul_value_high                           INTEGER
+    //
+    dword_word_mul_mask                                 INTEGER
+    dword_word_mul_bit                                  INTEGER
+    dword_word_mul_temp_low                             INTEGER
+    dword_word_mul_temp_high                            INTEGER
+    dword_word_mul_result                               INTEGER
+    dword_word_mul_middle_low                           INTEGER
+    dword_word_mul_middle_high                          INTEGER
+    //
+    dword_shl_result                                    INTEGER
+    dword_shl_result_offset                             INTEGER
+    //
+    dword_shl_source_low_offset                         INTEGER
+    dword_shl_source_high_offset                        INTEGER
+    dword_shl_target                                    INTEGER
+    dword_shl_source_low                                INTEGER
+    dword_shl_source_high                               INTEGER
+    dword_shl_value_low_offset                          INTEGER
+    dword_shl_value_high_offset                         INTEGER
+    dword_shl_value_low                                 INTEGER
+    dword_shl_value_high                                INTEGER
+    dword_shl_temp_low                                  INTEGER
+    dword_shl_temp_high                                 INTEGER
+    dword_shl_middle_low                                INTEGER
+    dword_shl_middle_high                               INTEGER
+    dword_shl_mask                                      INTEGER
+    //
+    dword_add_result                                    INTEGER
+    dword_add_result_offset                             INTEGER
+    //
+    dword_add_source_low_offset                         INTEGER
+    dword_add_source_high_offset                        INTEGER
+    dword_add_target_low_offset                         INTEGER
+    dword_add_target_high_offset                        INTEGER
+    dword_add_value_low_offset                          INTEGER
+    dword_add_value_high_offset                         INTEGER
+    //
+    dword_add_source_low                                INTEGER
+    dword_add_source_high                               INTEGER
+    dword_add_target_low                                INTEGER
+    dword_add_target_high                               INTEGER
+    dword_add_value_low                                 INTEGER
+    dword_add_value_high                                INTEGER
+    //
+    dword_add_temp_low                                  INTEGER
+    dword_add_temp_high                                 INTEGER
+    //
+    dword_word_add_result                               INTEGER
+    dword_word_add_result_offset                        INTEGER
+    dword_word_add_source_low_offset                    INTEGER
+    dword_word_add_source_high_offset                   INTEGER
+    dword_word_add_target                               INTEGER
+    dword_word_add_value_low_offset                     INTEGER
+    dword_word_add_value_high_offset                    INTEGER
+    //
+    dword_word_add_source_low                           INTEGER
+    dword_word_add_source_high                          INTEGER
+    dword_word_add_value_low                            INTEGER
+    dword_word_add_value_high                           INTEGER
+    //
+    dword_word_div_result                               INTEGER
+    dword_word_div_result_offset                        INTEGER
+    //
+    dword_word_div_source_low_offset                    INTEGER
+    dword_word_div_source_high_offset                   INTEGER
+    dword_word_div_target                               INTEGER
+    dword_word_div_source_low                           INTEGER
+    dword_word_div_source_high                          INTEGER
+    dword_word_div_value_low_offset                     INTEGER
+    dword_word_div_value_high_offset                    INTEGER
+    //
+    dword_word_div_quotient_low                         INTEGER
+    dword_word_div_quotient_high                        INTEGER
+    dword_word_div_residue_low                          INTEGER
+    dword_word_div_residue_high                         INTEGER
+    //
+    dword_word_div_middle                               INTEGER
+    dword_word_div_middle_quotient                      INTEGER
+    dword_word_div_middle_residue                       INTEGER
+    dword_word_div_mask                                 INTEGER
+    dword_word_div_value_low                            INTEGER
+    dword_word_div_value_high                           INTEGER
+    dword_word_div_value_residue_low_offset             INTEGER
+    dword_word_div_value_residue_high_offset            INTEGER
+    //
+    dword_equal_result_offset                           INTEGER
+    dword_equal_source_offset                           INTEGER
+    dword_equal_target_offset                           INTEGER
+    //
+    dword_equal_source_low                              INTEGER
+    dword_equal_source_high                             INTEGER
+    dword_equal_target_low                              INTEGER
+    dword_equal_target_high                             INTEGER
+    //
+END
+
+PROC=DWORD_WORD_MUL
+    MOVE    dword_word_mul_result_offset                AAR
+    MOVE    dword_word_mul_source_low_offset            ABR
+    MOVE    dword_word_mul_target                       ACR
+    MOVE    dword_word_mul_value_low_offset             ADR
+    //
+    MOVE    AAR                                         dword_word_mul_source_low_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_word_mul_source_high_offset           ACR
+    MOVE    AAR                                         dword_word_mul_value_low_offset
+    ADD
+    MOVE    dword_word_mul_value_high_offset            ACR
+    //
+    MOVE    ACR                                         dword_word_mul_target
+    JZ      DWORD_WORD_MUL_ZERO
+    //
+    MOVE    dword_word_mul_source_low                   #dword_word_mul_source_low_offset
+    MOVE    dword_word_mul_source_high                  #dword_word_mul_source_high_offset
+    //
+    MOVE    dword_word_mul_value_low                    0
+    MOVE    dword_word_mul_value_high                   0
+    //
+    MOVE    dword_word_mul_mask                         1
+    MOVE    dword_word_mul_bit                          0
+    //
+    MOVE    CCR                                         31
+DWORD_WORD_MUL_NEXT:
+    MOVE    AAR                                         dword_word_mul_target
+    MOVE    ABR                                         dword_word_mul_mask
+    AND
+    JZ      DWORD_WORD_MUL_STEP
+    //
+    MOVE    AAR                                         @dword_word_mul_result
+    MOVE    ABR                                         @dword_word_mul_source_low
+    MOVE    ACR                                         dword_word_mul_bit
+    MOVE    ADR                                         @dword_word_mul_temp_low
+    CALL    DWORD_WORD_SHL
+    MOVE    ACR                                         dword_word_mul_result
+    JZ      DWORD_WORD_MUL_ERROR
+    //
+    MOVE    AAR                                         @dword_word_mul_result
+    MOVE    ABR                                         @dword_word_mul_value_low
+    MOVE    ACR                                         @dword_word_mul_temp_low
+    MOVE    ADR                                         @dword_word_mul_middle_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                         dword_word_mul_result
+    JZ      DWORD_WORD_MUL_ERROR
+    //
+    MOVE    dword_word_mul_value_low                    dword_word_mul_middle_low
+    MOVE    dword_word_mul_value_high                   dword_word_mul_middle_high
+    //
+DWORD_WORD_MUL_STEP:
+    MOVE    AAR                                         dword_word_mul_mask
+    MOVE    ABR                                         2
+    MUL
+    MOVE    dword_word_mul_mask                         ACR
+    //
+    MOVE    AAR                                         dword_word_mul_bit
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_word_mul_bit                          ACR
+    //
+    LOOP    DWORD_WORD_MUL_NEXT
+    //
+    MOVE    #dword_word_mul_value_low_offset            dword_word_mul_value_low
+    MOVE    #dword_word_mul_value_high_offset           dword_word_mul_value_high
+    //
+    MOVE    #dword_word_mul_result_offset               1
+    RET
+    //
+DWORD_WORD_MUL_ZERO:
+    MOVE    #dword_word_mul_value_low_offset            0
+    MOVE    #dword_word_mul_value_high_offset           0
+    //
+    MOVE    #dword_word_mul_result_offset               1
+    RET
+    //
+DWORD_WORD_MUL_ERROR:
+    MOVE    #dword_word_mul_result_offset               0
+END
+
+
+PROC=DWORD_WORD_SHL
+    MOVE    dword_shl_result_offset                     AAR
+    MOVE    dword_shl_source_low_offset                 ABR
+    MOVE    dword_shl_target                            ACR
+    MOVE    dword_shl_value_low_offset                  ADR
+    //
+    MOVE    AAR                                         dword_shl_source_low_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_shl_source_high_offset                ACR
+    MOVE    AAR                                         dword_shl_value_low_offset
+    ADD
+    MOVE    dword_shl_value_high_offset                 ACR
+    //
+    MOVE    dword_shl_source_low                        #dword_shl_source_low_offset
+    MOVE    dword_shl_source_high                       #dword_shl_source_high_offset
+    //
+    MOVE    dword_shl_value_low                         dword_shl_source_low
+    MOVE    dword_shl_value_high                        dword_shl_source_high
+    MOVE    ACR                                         dword_shl_target
+    JZ      DWORD_SHL_END
+    //
+    MOVE    AAR                                         dword_shl_target
+    MOVE    ABR                                         32
+    SUB
+    MOVE    ACR                                         AMF
+    JZ      DWORD_SHL_ERROR
+    //
+    MOVE    ABR                                         2
+    MUL
+    MOVE    ABR                                         ACR
+    MOVE    AAR                                         @DWORD_SHL_START
+    ADD
+    JUMP    ACR
+    //
+DWORD_SHL_START:
+    JUMP    DWORD_SHL_NEXT
+    JUMP    DWORD_SHL_ONE
+    JUMP    DWORD_SHL_TWO
+    JUMP    DWORD_SHL_THREE
+    JUMP    DWORD_SHL_FOUR
+    JUMP    DWORD_SHL_FIVE
+    JUMP    DWORD_SHL_SIX
+    JUMP    DWORD_SHL_SEVEN
+    JUMP    DWORD_SHL_EIGHT
+    JUMP    DWORD_SHL_NINE
+    JUMP    DWORD_SHL_TEN
+    JUMP    DWORD_SHL_ELEVEN
+    JUMP    DWORD_SHL_TWELVE
+    JUMP    DWORD_SHL_THIRTEEN
+    JUMP    DWORD_SHL_FOURTEEN
+    JUMP    DWORD_SHL_FIFTEEN
+    JUMP    DWORD_SHL_SIXTEEN
+    JUMP    DWORD_SHL_SEVENTEEN
+    JUMP    DWORD_SHL_EIGHTEEN
+    JUMP    DWORD_SHL_NINETEEN
+    JUMP    DWORD_SHL_TWENTY
+    JUMP    DWORD_SHL_TWENTY_ONE
+    JUMP    DWORD_SHL_TWENTY_TWO
+    JUMP    DWORD_SHL_TWENTY_THREE
+    JUMP    DWORD_SHL_TWENTY_FOUR
+    JUMP    DWORD_SHL_TWENTY_FIVE
+    JUMP    DWORD_SHL_TWENTY_SIX
+    JUMP    DWORD_SHL_TWENTY_SEVEN
+    JUMP    DWORD_SHL_TWENTY_EIGHT
+    JUMP    DWORD_SHL_TWENTY_NINE
+    JUMP    DWORD_SHL_THIRTY
+    JUMP    DWORD_SHL_THIRTY_ONE
+    //
+DWORD_SHL_ONE:
+    MOVE    dword_shl_mask                              2
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWO:
+    MOVE    dword_shl_mask                              4
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_THREE:
+    MOVE    dword_shl_mask                              8
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_FOUR:
+    MOVE    dword_shl_mask                              16
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_FIVE:
+    MOVE    dword_shl_mask                              32
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_SIX:
+    MOVE    dword_shl_mask                              64
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_SEVEN:
+    MOVE    dword_shl_mask                              128
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_EIGHT:
+    MOVE    dword_shl_mask                              256
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_NINE:
+    MOVE    dword_shl_mask                              512
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TEN:
+    MOVE    dword_shl_mask                              1024
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_ELEVEN:
+    MOVE    dword_shl_mask                              2048
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWELVE:
+    MOVE    dword_shl_mask                              4096
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_THIRTEEN:
+    MOVE    dword_shl_mask                              8192
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_FOURTEEN:
+    MOVE    dword_shl_mask                              16384
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_FIFTEEN:
+    MOVE    dword_shl_mask                              32768
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_SIXTEEN:
+    MOVE    dword_shl_mask                              65536
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_SEVENTEEN:
+    MOVE    dword_shl_mask                              131072
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_EIGHTEEN:
+    MOVE    dword_shl_mask                              262144
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_NINETEEN:
+    MOVE    dword_shl_mask                              524288
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWENTY:
+    MOVE    dword_shl_mask                              1048576
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWENTY_ONE:
+    MOVE    dword_shl_mask                              2097152
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWENTY_TWO:
+    MOVE    dword_shl_mask                              4194304
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWENTY_THREE:
+    MOVE    dword_shl_mask                              8388608
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWENTY_FOUR:
+    MOVE    dword_shl_mask                              16777216
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWENTY_FIVE:
+    MOVE    dword_shl_mask                              33554432
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWENTY_SIX:
+    MOVE    dword_shl_mask                              67108864
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWENTY_SEVEN:
+    MOVE    dword_shl_mask                              134217728
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWENTY_EIGHT:
+    MOVE    dword_shl_mask                              268435456
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_TWENTY_NINE:
+    MOVE    dword_shl_mask                              536870912
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_THIRTY:
+    MOVE    dword_shl_mask                              1073741824
+    JUMP    DWORD_SHL_NEXT
+DWORD_SHL_THIRTY_ONE:
+    MOVE    dword_shl_mask                              2147483648
+    //
+DWORD_SHL_NEXT:
+    MOVE    ACR                                         dword_shl_source_low
+    JZ      DWORD_SHL_HIGH
+    MOVE    AAR                                         dword_shl_source_low
+    MOVE    ABR                                         dword_shl_mask
+    MUL
+    MOVE    dword_shl_value_low                         ACR
+    MOVE    dword_shl_value_high                        ADR
+    //
+DWORD_SHL_HIGH:
+    MOVE    ACR                                         dword_shl_source_high
+    JZ      DWORD_SHL_END
+    MOVE    AAR                                         dword_shl_source_high
+    MOVE    ABR                                         dword_shl_mask
+    MUL
+    MOVE    dword_shl_temp_low                          ACR
+    MOVE    dword_shl_temp_high                         ADR
+    MOVE    ACR                                         dword_shl_temp_high
+    JNZ     DWORD_SHL_ERROR
+    MOVE    dword_shl_temp_high                         dword_shl_temp_low
+    MOVE    dword_shl_temp_low                          0
+    //
+    MOVE    AAR                                         @dword_shl_result
+    MOVE    ABR                                         @dword_shl_value_low
+    MOVE    ACR                                         @dword_shl_temp_low
+    MOVE    ADR                                         @dword_shl_middle_low
+    CALL    DWORD_ADD
+    MOVE    ACR                                         dword_shl_result
+    JZ      DWORD_SHL_ERROR
+    //
+    MOVE    dword_shl_value_low                         dword_shl_middle_low
+    MOVE    dword_shl_value_high                        dword_shl_middle_high
+    //
+DWORD_SHL_END:
+    MOVE    #dword_shl_value_low_offset                 dword_shl_value_low
+    MOVE    #dword_shl_value_high_offset                dword_shl_value_high
+    //
+    MOVE    #dword_shl_result_offset                    1
+    RET
+DWORD_SHL_ERROR:
+    MOVE    #dword_shl_result_offset                    0
+END
+
+PROC=DWORD_ADD
+    MOVE    dword_add_result_offset                     AAR
+    MOVE    dword_add_source_low_offset                 ABR
+    MOVE    dword_add_target_low_offset                 ACR
+    MOVE    dword_add_value_low_offset                  ADR
+    //
+    MOVE    AAR                                         dword_add_source_low_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_add_source_high_offset                ACR
+    MOVE    AAR                                         dword_add_target_low_offset
+    ADD
+    MOVE    dword_add_target_high_offset                ACR
+    MOVE    AAR                                         dword_add_value_low_offset
+    ADD
+    MOVE    dword_add_value_high_offset                 ACR
+    //
+    MOVE    dword_add_source_low                        #dword_add_source_low_offset
+    MOVE    dword_add_source_high                       #dword_add_source_high_offset
+    //
+    MOVE    dword_add_target_low                        #dword_add_target_low_offset
+    MOVE    dword_add_target_high                       #dword_add_target_high_offset
+    //
+    MOVE    dword_add_value_low                         0
+    MOVE    dword_add_value_high                        0
+    //
+    MOVE    ACR                                         dword_add_source_low
+    JZ      DWORD_ADD_SOURCE_LOW_ZERO
+    MOVE    ACR                                         dword_add_target_low
+    JZ      DWORD_ADD_TARGET_LOW_ZERO
+    //
+    MOVE    AAR                                         dword_add_source_low
+    MOVE    ABR                                         dword_add_target_low
+    ADD
+    MOVE    dword_add_value_low                         ACR
+    MOVE    ACR                                         ACF
+    JZ      DWORD_ADD_HIGH
+    MOVE    AAR                                         dword_add_value_high
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_add_value_high                        ACR
+    MOVE    ACR                                         ACF
+    JNZ     DWORD_ADD_ERROR
+    //
+    JUMP    DWORD_ADD_HIGH
+    //
+DWORD_ADD_SOURCE_LOW_ZERO:
+    MOVE    dword_add_value_low                         dword_add_target_low
+    JUMP    DWORD_ADD_HIGH
+    //
+DWORD_ADD_TARGET_LOW_ZERO:
+    MOVE    dword_add_value_low                         dword_add_source_low
+    //
+DWORD_ADD_HIGH:
+    MOVE    ACR                                         dword_add_source_high
+    JZ      DWORD_ADD_SOURCE_HIGH_ZERO
+    //
+    MOVE    ACR                                         dword_add_target_high
+    JZ      DWORD_ADD_TARGET_HIGH_ZERO:
+    //
+    MOVE    AAR                                         dword_add_source_high
+    MOVE    ABR                                         dword_add_target_high
+    ADD
+    MOVE    dword_add_temp_high                         ACR
+    MOVE    ACR                                         ACF
+    JNZ     DWORD_ADD_ERROR
+    //
+    MOVE    AAR                                         dword_add_value_high
+    MOVE    ABR                                         dword_add_temp_high
+    ADD
+    MOVE    dword_add_value_high                        ACR
+    MOVE    ACR                                         ACF
+    JNZ     DWORD_ADD_ERROR
+    JUMP    DWORD_ADD_END
+    //
+DWORD_ADD_SOURCE_HIGH_ZERO:
+    MOVE    AAR                                         dword_add_target_high
+    JUMP    DWORD_ADD_HIGH_ADD
+    //
+DWORD_ADD_TARGET_HIGH_ZERO:
+    MOVE    AAR                                         dword_add_source_high
+DWORD_ADD_HIGH_ADD:
+    MOVE    ABR                                         dword_add_value_high
+    ADD
+    MOVE    dword_add_value_high                        ACR
+    MOVE    ACR                                         ACF
+    JNZ     DWORD_ADD_ERROR
+    //
+DWORD_ADD_END:
+    MOVE    #dword_add_value_low_offset                 dword_add_value_low
+    MOVE    #dword_add_value_high_offset                dword_add_value_high
+    //
+    MOVE    #dword_add_result_offset                    1
+    RET
+DWORD_ADD_ERROR:
+    MOVE    #dword_add_result_offset                    0
+END
+
+
+
+PROC=DWORD_WORD_ADD
+    MOVE    dword_word_add_result_offset                AAR
+    MOVE    dword_word_add_source_low_offset            ABR
+    MOVE    dword_word_add_target                       ACR
+    MOVE    dword_word_add_value_low_offset             ADR
+    //
+    MOVE    AAR                                         dword_word_add_source_low_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_word_add_source_high_offset           ACR
+    MOVE    AAR                                         dword_word_add_value_low_offset
+    ADD
+    MOVE    dword_word_add_value_high_offset            ACR
+    //
+    MOVE    dword_word_add_source_low                   #dword_word_add_source_low_offset
+    MOVE    dword_word_add_source_high                  #dword_word_add_source_high_offset
+    //
+    MOVE    dword_word_add_value_low                    dword_word_add_source_low
+    MOVE    dword_word_add_value_high                   dword_word_add_source_high
+    //
+    MOVE    ACR                                         dword_word_add_target
+    JZ      DWORD_WORD_ADD_END
+    //
+    MOVE    AAR                                         dword_word_add_source_low
+    MOVE    ABR                                         dword_word_add_target
+    ADD
+    MOVE    dword_word_add_value_low                    ACR
+    MOVE    ACR                                         ACF
+    JZ      DWORD_WORD_ADD_END
+    MOVE    AAR                                         dword_word_add_source_high
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_word_add_value_high                   ACR
+    MOVE    ACR                                         ACF
+    JNZ     DWORD_WORD_ADD_ERROR
+    //
+DWORD_WORD_ADD_END:
+    MOVE    #dword_word_add_value_low_offset            dword_word_add_value_low
+    MOVE    #dword_word_add_value_high_offset           dword_word_add_value_high
+    MOVE    #dword_word_add_result_offset               1
+    RET
+    //
+DWORD_WORD_ADD_ERROR:
+    MOVE    #dword_word_add_result_offset               0
+    //
+END
+
+PROC=DWORD_WORD_DIV
+    MOVE    dword_word_div_result_offset                AAR
+    MOVE    dword_word_div_source_low_offset            ABR
+    MOVE    dword_word_div_target                       ACR
+    MOVE    dword_word_div_value_low_offset             ADR
+    //
+    MOVE    ACR                                         dword_word_div_target
+    JZ      DWORD_WORD_DIV_ERROR
+    //
+    MOVE    AAR                                         dword_word_div_source_low_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_word_div_source_high_offset           ACR
+    MOVE    AAR                                         dword_word_div_value_low_offset
+    ADD
+    MOVE    dword_word_div_value_high_offset            ACR
+    //
+    MOVE    dword_word_div_source_low                   #dword_word_div_source_low_offset
+    MOVE    dword_word_div_source_high                  #dword_word_div_source_high_offset
+    //
+    MOVE    AAR                                         dword_word_div_target
+    MOVE    ABR                                         1
+    SUB
+    JZ      DWORD_WORD_DIV_ONE
+    //
+    MOVE    #dword_word_div_value_high_offset           0
+    MOVE    ACR                                         dword_word_div_source_high
+    JZ      DWORD_WORD_DIV_HIGH_ZERO
+    //
+    MOVE    AAR                                         dword_word_div_source_high
+    MOVE    ABR                                         dword_word_div_target
+    DIV
+    MOVE    dword_word_div_quotient_high                ACR
+    MOVE    dword_word_div_residue_high                 ADR
+    //
+    MOVE    #dword_word_div_value_high_offset           dword_word_div_quotient_high
+    MOVE    dword_word_div_value_high                   dword_word_div_quotient_high
+    MOVE    ACR                                         dword_word_div_residue_high
+    JZ      DWORD_WORD_DIV_HIGH_ZERO
+    //
+    MOVE    AAR                                         dword_word_div_residue_high
+    MOVE    ABR                                         2
+    MUL
+    MOVE    dword_word_div_middle                       ACR
+    //
+    MOVE    CCR                                         31
+    MOVE    dword_word_div_value_low                    0
+    MOVE    dword_word_div_mask                         2147483648
+    //
+DWORD_WORD_DIV_NEXT:
+    MOVE    AAR                                         dword_word_div_source_low
+    MOVE    ABR                                         dword_word_div_mask
+    AND
+    JZ      DWORD_WORD_DIV_BIT_ZERO
+    //
+    MOVE    AAR                                         dword_word_div_middle
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_word_div_middle                       ACR
+    //
+DWORD_WORD_DIV_BIT_ZERO:
+    MOVE    AAR                                         dword_word_div_middle
+    MOVE    ABR                                         dword_word_div_target
+    SUB
+    MOVE    dword_word_div_middle_residue               ACR
+    //
+    MOVE    ACR                                         AMF
+    JNZ     DWORD_WORD_DIV_ZERO
+    //
+    MOVE    AAR                                         dword_word_div_value_low
+    MOVE    ABR                                         dword_word_div_mask
+    ADD
+    MOVE    dword_word_div_value_low                    ACR
+    //
+    MOVE    dword_word_div_middle                       dword_word_div_middle_residue
+    //
+DWORD_WORD_DIV_ZERO:
+    MOVE    AAR                                         dword_word_div_mask
+    MOVE    ABR                                         2
+    DIV
+    MOVE    dword_word_div_mask                         ACR
+    //
+    MOVE    AAR                                         dword_word_div_middle
+    MOVE    ABR                                         2
+    MUL
+    MOVE    dword_word_div_middle                       ACR
+    //
+    LOOP    DWORD_WORD_DIV_NEXT
+    //
+    MOVE    #dword_word_div_value_low_offset            dword_word_div_value_low
+    MOVE    #dword_word_div_value_high_offset           dword_word_div_value_high
+    JUMP    DWORD_WORD_DIV_END
+    //
+DWORD_WORD_DIV_ONE:
+    MOVE    #dword_word_div_value_low_offset            dword_word_div_source_low
+    MOVE    #dword_word_div_value_high_offset           dword_word_div_source_high
+    //
+DWORD_WORD_DIV_END:
+    MOVE    #dword_word_div_result_offset               1
+    RET
+    //
+DWORD_WORD_DIV_HIGH_ZERO:
+    MOVE    AAR                                         dword_word_div_source_low
+    MOVE    ABR                                         dword_word_div_target
+    DIV
+    MOVE    #dword_word_div_value_low_offset            ACR
+    //
+    JUMP    DWORD_WORD_DIV_END
+DWORD_WORD_DIV_ERROR:
+    MOVE    #dword_word_div_result_offset               0
+END
+
+PROC=DWORD_EQUAL
+    MOVE    dword_equal_result_offset                   AAR
+    MOVE    dword_equal_source_offset                   ABR
+    MOVE    dword_equal_target_offset                   ACR
+    //
+    MOVE    dword_equal_source_low                      #dword_equal_source_offset
+    MOVE    AAR                                         dword_equal_source_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_equal_source_high                     #ACR
+    //
+    MOVE    dword_equal_target_low                      #dword_equal_target_offset
+    MOVE    AAR                                         dword_equal_target_offset
+    ADD
+    MOVE    dword_equal_target_high                     #ACR
+    //
+    MOVE    AAR                                         dword_equal_source_low
+    MOVE    ABR                                         dword_equal_target_low
+    SUB
+    JNZ     DWORD_EQUAL_ERROR
+    //
+    MOVE    AAR                                         dword_equal_source_high
+    MOVE    ABR                                         dword_equal_target_high
+    SUB
+    JNZ     DWORD_EQUAL_ERROR
+    //
+    MOVE    #dword_equal_result_offset                  1
+    RET
+DWORD_EQUAL_ERROR:
+    MOVE    #dword_equal_result_offset                  0
+END
+
+PROC=DWORD_WORD_DIV2
+    MOVE    dword_word_div_result_offset                AAR
+    MOVE    dword_word_div_source_low_offset            ABR
+    MOVE    dword_word_div_target                       ACR
+    MOVE    dword_word_div_value_low_offset             ADR
+    //
+    MOVE    ACR                                         dword_word_div_target
+    JZ      DWORD_WORD_DIV2_ERROR
+    //
+    MOVE    AAR                                         dword_word_div_source_low_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_word_div_source_high_offset           ACR
+    MOVE    AAR                                         dword_word_div_value_low_offset
+    ADD
+    MOVE    dword_word_div_value_high_offset            ACR
+    MOVE    AAR                                         ACR
+    ADD
+    MOVE    dword_word_div_value_residue_low_offset     ACR
+    MOVE    AAR                                         ACR
+    ADD
+    MOVE    dword_word_div_value_residue_high_offset    ACR
+    //
+    MOVE    dword_word_div_source_low                   #dword_word_div_source_low_offset
+    MOVE    dword_word_div_source_high                  #dword_word_div_source_high_offset
+    //
+    MOVE    AAR                                         dword_word_div_target
+    MOVE    ABR                                         1
+    SUB
+    JZ      DWORD_WORD_DIV2_ONE
+    //
+    MOVE    #dword_word_div_value_high_offset           0
+    MOVE    ACR                                         dword_word_div_source_high
+    JZ      DWORD_WORD_DIV2_HIGH_ZERO
+    //
+    MOVE    AAR                                         dword_word_div_source_high
+    MOVE    ABR                                         dword_word_div_target
+    DIV
+    MOVE    dword_word_div_quotient_high                ACR
+    MOVE    dword_word_div_residue_high                 ADR
+    //
+    MOVE    #dword_word_div_value_high_offset           dword_word_div_quotient_high
+    MOVE    dword_word_div_value_high                   dword_word_div_quotient_high
+    MOVE    ACR                                         dword_word_div_residue_high
+    JZ      DWORD_WORD_DIV2_HIGH_ZERO
+    //
+    MOVE    AAR                                         dword_word_div_residue_high
+    MOVE    ABR                                         2
+    MUL
+    MOVE    dword_word_div_middle                       ACR
+    //
+    MOVE    CCR                                         31
+    MOVE    dword_word_div_value_low                    0
+    MOVE    dword_word_div_mask                         2147483648
+    //
+DWORD_WORD_DIV2_NEXT:
+    MOVE    AAR                                         dword_word_div_source_low
+    MOVE    ABR                                         dword_word_div_mask
+    AND
+    JZ      DWORD_WORD_DIV2_BIT_ZERO
+    //
+    MOVE    AAR                                         dword_word_div_middle
+    MOVE    ABR                                         1
+    ADD
+    MOVE    dword_word_div_middle                       ACR
+    //
+DWORD_WORD_DIV2_BIT_ZERO:
+    MOVE    AAR                                         dword_word_div_middle
+    MOVE    ABR                                         dword_word_div_target
+    SUB
+    MOVE    dword_word_div_middle_residue               ACR
+    //
+    MOVE    ACR                                         AMF
+    JNZ     DWORD_WORD_DIV2_ZERO
+    //
+    MOVE    AAR                                         dword_word_div_value_low
+    MOVE    ABR                                         dword_word_div_mask
+    ADD
+    MOVE    dword_word_div_value_low                    ACR
+    //
+    MOVE    dword_word_div_middle                       dword_word_div_middle_residue
+    //
+DWORD_WORD_DIV2_ZERO:
+    MOVE    AAR                                         dword_word_div_mask
+    MOVE    ABR                                         2
+    DIV
+    MOVE    dword_word_div_mask                         ACR
+    //
+    MOVE    AAR                                         dword_word_div_middle
+    MOVE    ABR                                         2
+    MUL
+    MOVE    dword_word_div_middle                       ACR
+    //
+    LOOP    DWORD_WORD_DIV2_NEXT
+    //
+    MOVE    #dword_word_div_value_low_offset            dword_word_div_value_low
+    MOVE    #dword_word_div_value_high_offset           dword_word_div_value_high
+    MOVE    #dword_word_div_value_residue_low_offset    dword_word_div_residue_low
+    MOVE    #dword_word_div_value_residue_high_offset   dword_word_div_residue_high
+    JUMP    DWORD_WORD_DIV2_END
+    //
+DWORD_WORD_DIV2_ONE:
+    MOVE    #dword_word_div_value_low_offset            dword_word_div_source_low
+    MOVE    #dword_word_div_value_high_offset           dword_word_div_source_high
+    MOVE    #dword_word_div_value_residue_low_offset    0
+    MOVE    #dword_word_div_value_residue_high_offset   0
+    //
+DWORD_WORD_DIV2_END:
+    MOVE    #dword_word_div_result_offset               1
+    RET
+    //
+DWORD_WORD_DIV2_HIGH_ZERO:
+    MOVE    AAR                                         dword_word_div_source_low
+    MOVE    ABR                                         dword_word_div_target
+    DIV
+    MOVE    #dword_word_div_value_low_offset            ACR
+    MOVE    #dword_word_div_value_residue_low_offset    ADR
+    MOVE    #dword_word_div_value_residue_high_offset   0
+    //
+    JUMP    DWORD_WORD_DIV2_END
+DWORD_WORD_DIV2_ERROR:
+    MOVE    #dword_word_div_result_offset               0
+END

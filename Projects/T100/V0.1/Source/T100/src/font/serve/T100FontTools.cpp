@@ -220,7 +220,7 @@ T100BOOL T100FontTools::capture(wxPaintDC& dc)
 
     background = dc.GetTextBackground();
 
-    for(int m=0;m<m_begin;m++){
+    for(int m=0;m<m_height;m++){
         for(int n=0;n<m_width;n++){
             dc.GetPixel(n, m, &colour);
             if(background == colour){

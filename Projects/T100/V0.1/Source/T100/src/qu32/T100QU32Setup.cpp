@@ -20,7 +20,7 @@ T100STRING                  T100QU32Setup::m_stores_path                = L"stor
 T100STRING                  T100QU32Setup::m_resources_path             = L"resources";
 
 T100BOOL                    T100QU32Setup::NEED_LOAD_ROM                = T100TRUE;
-T100STRING                  T100QU32Setup::m_rom_file                   = L"rom.bin";
+T100STRING                  T100QU32Setup::m_rom_file                   = L"";
 T100WORD                    T100QU32Setup::m_ram_base                   = 1024 * 1024 * 1024;
 T100WORD                    T100QU32Setup::m_ram_size                   = 1024 * 1024;
 T100WORD                    T100QU32Setup::m_rom_base                   = 0;

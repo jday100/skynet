@@ -131,7 +131,8 @@ void T100Frame::OnThreadFont(wxThreadEvent& event)
     m_builder   = T100NEW T100FontBuilder::T100FontBuilder();
     m_builder->show();
 
-    file    = T100ThisAppSetup::getTestStores(L"test_font.fnt");
+    //file    = T100ThisAppSetup::getTestStores(L"test_font.fnt");
+    file    = event.GetString().ToStdWstring();
     panel   = m_builder->getView()->getFrame()->FontPanel;
 
     panel->setCallback(this, (T100WxWidgets::T100FRAME_CALLBACK)&T100Frame::font_quit);

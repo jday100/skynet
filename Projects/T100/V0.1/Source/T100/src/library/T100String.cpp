@@ -89,7 +89,7 @@ T100VOID T100String::clear()
     m_string32.clear();
 }
 
-T100STDSTRING& T100String::to_std_string()
+T100STDSTRING T100String::to_std_string()
 {
     T100STDSTRING   result;
 
@@ -98,7 +98,7 @@ T100STDSTRING& T100String::to_std_string()
     return result;
 }
 
-T100WSTRING& T100String::to_wstring()
+T100WSTRING T100String::to_wstring()
 {
     return m_wstring;
 }

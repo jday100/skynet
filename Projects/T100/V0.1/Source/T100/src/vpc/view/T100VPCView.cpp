@@ -124,6 +124,9 @@ T100BOOL T100VPCView::start()
     }
 
     if(result){
+        if(T100VPCSetup::DEBUG){
+            ShowDebugFrame();
+        }
         return T100TRUE;
     }
     return T100FALSE;
@@ -141,13 +144,22 @@ T100BOOL T100VPCView::stop()
 
 T100BOOL T100VPCView::ShowDebugFrame()
 {
-    m_debug = T100NEW T100VPCDebugFrame(m_frame);
+    if(!m_debug){
+        m_debug = T100NEW T100VPCDebugFrame(m_frame);
+    }
 
     T100VPCSetup::DEBUG         = T100TRUE;
     T100VPCSetup::DEBUG_MODE    = T100QU32::T100EXECUTOR_MODE_RUN;
     T100VPCSetup::DEBUG_STATE   = T100QU32::T100EXECUTOR_STATE_PAUSE;
 
     m_debug->Show();
+
+    return T100TRUE;
+}
+
+T100VPCDebugFrame* T100VPCView::getDebugFrame()
+{
+    return m_debug;
 }
 
 }

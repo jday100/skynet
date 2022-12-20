@@ -12,7 +12,7 @@ typedef     T100BOOL (wxFrame::*T100FRAME_CALLBACK)(void*);
 class T100WxApp : public T100Library::T100AppBase
 {
     public:
-        T100WxApp(T100WxAppManager*);
+        T100WxApp(T100WxAppManager*, T100BOOL = T100FALSE);
         virtual ~T100WxApp();
 
     protected:

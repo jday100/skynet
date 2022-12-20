@@ -12,7 +12,7 @@ class T100VPC;
 class T100VPCApp : public T100Library::T100AppBase
 {
     public:
-        T100VPCApp(T100ThisAppManager*);
+        T100VPCApp(T100ThisAppManager*, T100BOOL = T100FALSE);
         virtual ~T100VPCApp();
 
         T100BOOL            show();

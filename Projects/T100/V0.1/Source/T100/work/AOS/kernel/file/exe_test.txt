@@ -1,0 +1,399 @@
+IMPORT  "exe_file_mini.txt"
+
+DATA
+    exe_load_test_result                                    INTEGER
+    exe_load_test_result_offset                             INTEGER
+    //
+    exe_load_test_head_result                               INTEGER
+    exe_load_test_head_result_offset                        INTEGER
+    //
+    exe_load_test_table_result                              INTEGER
+    exe_load_test_table_result_offset                       INTEGER
+    exe_load_test_table_offset                              INTEGER
+    //
+
+    //
+
+    //
+
+END
+
+PROC=EXE_LOAD_TEST
+    MOVE    exe_load_test_result_offset                     AAR
+    //
+    MOVE    AAR                                             @exe_load_test_result
+    CALL    EXE_LOAD_TEST_HEAD
+    MOVE    ACR                                             exe_load_test_result
+    JZ      EXE_LOAD_TEST_ERROR
+    //
+    MOVE    AAR                                             @exe_load_test_result
+    CALL    EXE_LOAD_TEST_TABLE
+    MOVE    ACR                                             exe_load_test_result
+    JZ      EXE_LOAD_TEST_ERROR
+    //
+    CMT     1
+    //DBG
+    MOVE    #exe_load_test_result_offset                    1
+    RET
+EXE_LOAD_TEST_ERROR:
+    CMT     0
+    //DBG
+    MOVE    #exe_load_test_result_offset                    0
+END
+
+PROC=EXE_LOAD_TEST_HEAD
+    MOVE    exe_load_test_head_result_offset                AAR
+    //
+    MOVE    AAR                                             exe_file_head_sign
+    MOVE    ABR                                             exe_head_sign
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_type
+    MOVE    ABR                                             exe_head_type
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_code_count
+    MOVE    ABR                                             exe_head_code_count
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_code_table_offset
+    MOVE    ABR                                             exe_head_code_table_offset
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_code_table_length
+    MOVE    ABR                                             exe_head_code_table_length
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_code_offset
+    MOVE    ABR                                             exe_head_code_offset
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_code_length
+    MOVE    ABR                                             exe_head_code_length
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    //
+    MOVE    AAR                                             exe_file_head_data_count
+    MOVE    ABR                                             exe_head_data_count
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_data_table_offset
+    MOVE    ABR                                             exe_head_data_table_offset
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_data_table_length
+    MOVE    ABR                                             exe_head_data_table_length
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_data_offset
+    MOVE    ABR                                             exe_head_data_offset
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_data_length
+    MOVE    ABR                                             exe_head_data_length
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    //
+    MOVE    AAR                                             exe_file_head_share_code_count
+    MOVE    ABR                                             exe_head_share_code_count
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_share_code_table_offset
+    MOVE    ABR                                             exe_head_share_code_table_offset
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_share_code_table_length
+    MOVE    ABR                                             exe_head_share_code_table_length
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_share_code_offset
+    MOVE    ABR                                             exe_head_share_code_offset
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_share_code_length
+    MOVE    ABR                                             exe_head_share_code_length
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    //
+    MOVE    AAR                                             exe_file_head_share_data_count
+    MOVE    ABR                                             exe_head_share_data_count
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_share_data_table_offset
+    MOVE    ABR                                             exe_head_share_data_table_offset
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_share_data_table_length
+    MOVE    ABR                                             exe_head_share_data_table_length
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_share_data_offset
+    MOVE    ABR                                             exe_head_share_data_offset
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_share_data_length
+    MOVE    ABR                                             exe_head_share_data_length
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    //
+    MOVE    AAR                                             exe_file_head_expanded_count
+    MOVE    ABR                                             exe_head_expanded_count
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_expanded_table_offset
+    MOVE    ABR                                             exe_head_expanded_table_offset
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_expanded_table_length
+    MOVE    ABR                                             exe_head_expanded_table_length
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_expanded_offset
+    MOVE    ABR                                             exe_head_expanded_offset
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    AAR                                             exe_file_head_expanded_length
+    MOVE    ABR                                             exe_head_expanded_length
+    SUB
+    JNZ     EXE_LOAD_TEST_HEAD_ERROR
+    //
+    MOVE    #exe_load_test_head_result_offset               1
+    RET
+EXE_LOAD_TEST_HEAD_ERROR:
+    MOVE    #exe_load_test_head_result_offset               0
+END
+
+PROC=EXE_LOAD_TEST_TABLE
+    MOVE    exe_load_test_table_result_offset               AAR
+    //
+    MOVE    exe_load_test_table_offset                      exe_file_code_table_offset
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_code_table_value_index
+    SUB
+    MOVE    AAR                                             0
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_code_table_value_offset
+    SUB
+    MOVE    AAR                                             1
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_code_table_value_length
+    SUB
+    MOVE    AAR                                             2
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    //
+    MOVE    exe_load_test_table_offset                      exe_file_data_table_offset
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_data_table_value_index
+    SUB
+    MOVE    AAR                                             3
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_data_table_value_offset
+    SUB
+    MOVE    AAR                                             4
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_data_table_value_length
+    SUB
+    MOVE    AAR                                             5
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    //
+    MOVE    exe_load_test_table_offset                      exe_file_share_data_table_offset
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_share_data_table_value_index
+    SUB
+    MOVE    AAR                                             6
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_share_data_table_value_offset
+    SUB
+    MOVE    AAR                                             7
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    SUB
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_share_data_table_value_length
+    SUB
+    MOVE    AAR                                             8
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_share_data_table_value_location
+    SUB
+    MOVE    AAR                                             9
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             0
+    SUB
+    MOVE    AAR                                             10
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             0
+    SUB
+    MOVE    AAR                                             11
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    //
+    MOVE    exe_load_test_table_offset                      exe_file_code_offset
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_code_order_cmt
+    SUB
+    MOVE    AAR                                             12
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    //DBG
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_code_order_cmt_value
+    SUB
+    MOVE    AAR                                             13
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_code_order_halt
+    SUB
+    MOVE    AAR                                             14
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    //
+    MOVE    exe_load_test_table_offset                      exe_file_share_data_offset
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_share_data_location_low
+    SUB
+    MOVE    AAR                                             15
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_share_data_location_high
+    SUB
+    MOVE    AAR                                             16
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_share_data_length_low
+    SUB
+    MOVE    AAR                                             17
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    MOVE    AAR                                             exe_load_test_table_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    exe_load_test_table_offset                      ACR
+    //
+    MOVE    AAR                                             #exe_load_test_table_offset
+    MOVE    ABR                                             exe_file_share_data_length_high
+    SUB
+    MOVE    AAR                                             18
+    JNZ     EXE_LOAD_TEST_TABLE_ERROR
+    //
+    CMT     1
+    //DBG
+    MOVE    #exe_load_test_table_result_offset              1
+    RET
+EXE_LOAD_TEST_TABLE_ERROR:
+    CMT     0
+    //DBG
+    MOVE    ABR                                             AAR
+    MOVE    #exe_load_test_table_result_offset              0
+    //DBG
+END

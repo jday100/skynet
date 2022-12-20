@@ -1,5 +1,6 @@
 #include "T100FontBuilder.h"
 
+#include "T100FontApp.h"
 #include "T100FontServe.h"
 #include "T100FontView.h"
 #include "T100FontCallback.h"
@@ -7,7 +8,8 @@
 
 namespace T100FontBuilder{
 
-T100FontBuilder::T100FontBuilder()
+T100FontBuilder::T100FontBuilder(T100FontApp* app)
+    :m_app(app)
 {
     //ctor
     create();
@@ -66,6 +68,10 @@ T100VOID T100FontBuilder::quit()
 {
     if(m_view){
         m_view->quit();
+    }
+
+    if(m_app){
+        m_app->quit();
     }
 }
 

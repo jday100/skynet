@@ -8,10 +8,13 @@
 #include "T100LogFile.h"
 #include "T100LogConsole.h"
 
+#include "T100VPCApp.h"
+
 
 namespace T100VPC{
 
-T100VPC::T100VPC()
+T100VPC::T100VPC(T100VPCApp* app)
+    :m_app(app)
 {
     //ctor
     init();
@@ -85,6 +88,10 @@ T100VOID T100VPC::quit()
 {
     if(m_view){
         m_view->quit();
+    }
+
+    if(m_app){
+        m_app->quit();
     }
 }
 

@@ -18,4 +18,11 @@ wxFrame* T100WxAppManager::getFrame()
     return m_frame;
 }
 
+T100BOOL T100WxAppManager::quit(T100WORD value)
+{
+    //m_frame->Destroy();
+
+    return T100AppManager::quit(value);
+}
+
 }

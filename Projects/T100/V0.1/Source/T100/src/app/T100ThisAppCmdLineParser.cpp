@@ -61,6 +61,11 @@ T100BOOL T100ThisAppCmdLineParser::setSwitch(T100Library::T100CmdLineSwitch& inf
     T100BOOL        result          = T100TRUE;
 
     switch(info.value){
+    case L'?':
+        {
+            data.HELP       = T100TRUE;
+        }
+        break;
     case L'T':
         {
             data.TEST       = T100TRUE;
