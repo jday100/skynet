@@ -260,7 +260,6 @@ PROC=FILE_READ_INDEX
     JNZ     FILE_READ_INDEX_ERROR
     //
     CMT     40050530
-    //DBG
     MOVE    AAR                                             #file_read_index_location_offset
     //
     MOVE    AAR                                             @file_read_index_result
@@ -271,7 +270,6 @@ PROC=FILE_READ_INDEX
     JZ      FILE_READ_INDEX_ERROR
     //
     CMT     40050540
-    //DBG
     MOVE    AAR                                             file_read_index_middle_low
     MOVE    AAR                                             file_read_index_middle_high
     //
@@ -283,7 +281,6 @@ PROC=FILE_READ_INDEX
     JZ      FILE_READ_INDEX_ERROR
     //
     CMT     40050550
-    //DBG
     MOVE    AAR                                             file_read_index_index
     MOVE    AAR                                             file_read_index_location_low
     MOVE    AAR                                             file_read_index_location_high

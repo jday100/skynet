@@ -77,6 +77,10 @@ END
 
 CODE
     CMT     50010
+    //
+    MOVE    SSR                                     1074429952
+    MOVE    SPR                                     0
+    //
     MOVE    AAR                                     @boot_result
     MOVE    ABR                                     boot_start_message
     CALL    BOOT_SHOW_INFO
@@ -96,6 +100,7 @@ CODE
     JZ      BOOT_ERROR
     //
     CMT     50040
+    DBG
     JUMP    {boot_file_load_buffer_offset:0}
     //
 BOOT_ERROR:
@@ -187,7 +192,6 @@ PROC=BOOT_INIT_SEARCH
     JZ      BOOT_INIT_SEARCH_ERROR
     //
     CMT     54020
-    //DBG
     MOVE    AAR                                     @boot_init_search_result
     MOVE    ABR                                     boot_init_file
     MOVE    ACR                                     @boot_init_search_location_low
@@ -210,13 +214,11 @@ PROC=BOOT_INIT_SEARCH
     JZ      BOOT_INIT_SEARCH_ERROR
     //
     CMT     54050
-    //DBG
     MOVE    #boot_init_search_result_offset         1
     RET
     //
 BOOT_INIT_SEARCH_ERROR:
     CMT     54060
-    //DBG
     MOVE    #boot_init_search_result_offset         0
 END
 

@@ -1,0 +1,37 @@
+DATA
+    test_boot_get_part_result_offset                        INTEGER     0
+    //
+
+END
+
+PROC=TEST_BOOT_GET_PART
+    CMT     1
+    MOVE    test_boot_get_part_result_offset                AAR
+    //
+    MOVE    AAR                                                     boot_part_location_low
+    MOVE    ABR                                                     1
+    SUB
+    JNZ     TEST_BOOT_GET_PART_ERROR
+    //
+    CMT     2
+    MOVE    ACR                                                     boot_part_location_high
+    JNZ     TEST_BOOT_GET_PART_ERROR
+    //
+    CMT     3
+    MOVE    AAR                                                     boot_part_length_low
+    MOVE    ABR                                                     1023
+    SUB
+    JNZ     TEST_BOOT_GET_PART_ERROR
+    //
+    CMT     4
+    MOVE    ACR                                                     boot_part_length_high
+    JNZ     TEST_BOOT_GET_PART_ERROR
+    //
+    CMT     2
+    MOVE    #test_boot_get_part_result_offset               1
+    RET
+    //
+TEST_BOOT_GET_PART_ERROR:
+    CMT     10
+    MOVE    #test_boot_get_part_result_offset               0
+END

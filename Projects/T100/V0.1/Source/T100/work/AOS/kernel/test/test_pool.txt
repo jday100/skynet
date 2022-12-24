@@ -37,7 +37,6 @@ PROC=TEST_POOL
     MOVE    test_pool_result_offset                     AAR
     //
     CMT     111
-    DBG
     MOVE    AAR                                         @test_pool_result
     MOVE    ABR                                         test_pool_buffer_offset
     MOVE    ACR                                         test_pool_buffer_length
@@ -62,7 +61,6 @@ PROC=TEST_POOL
     MOVE    test_pool_target_current_offset             ACR
     //
     CMT     223
-    DBG
     MOVE    AAR                                         @test_pool_result
     MOVE    ABR                                         @test_pool_length_1
     CALL    TEST_POOL_CHECK
@@ -84,7 +82,6 @@ PROC=TEST_POOL
     MOVE    test_pool_target_current_offset             ACR
     //
     CMT     334
-    DBG
     MOVE    AAR                                         @test_pool_result
     MOVE    ABR                                         @test_pool_length_2
     CALL    TEST_POOL_CHECK
@@ -146,12 +143,10 @@ TEST_POOL_NEXT:
     LOOP    TEST_POOL_NEXT
     //
     CMT     1
-    DBG
     MOVE    #test_pool_result_offset                    1
     RET
 TEST_POOL_ERROR:
     CMT     0
-    DBG
     MOVE    AAR                                         CCR
     MOVE    #test_pool_result_offset                    0
 END

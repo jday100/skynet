@@ -166,11 +166,9 @@ END
 
 PROC=INIT_LOAD
     CMT     7010010
-    DBG
     MOVE    init_load_result_offset                     AAR
     //
     CMT     7010020
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_TEST_PART
     //
@@ -191,7 +189,6 @@ PROC=INIT_LOAD
     JZ      INIT_LOAD_ERROR
     //
     CMT     7010050
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_TEST_HANDLE
     //
@@ -209,62 +206,52 @@ PROC=INIT_LOAD
     JZ      INIT_LOAD_ERROR
     //
     CMT     7010080
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_TEST_HEAD
     //
     CMT     7010090
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_LOCALE
     MOVE    ACR                                         init_load_result
     JZ      INIT_LOAD_ERROR
     //
     CMT     7010100
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_CODE_TABLE
     MOVE    ACR                                         init_load_result
     JZ      INIT_LOAD_ERROR
     //
     CMT     7010110
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_TEST_CODE_TABLE
     //
     CMT     7010120
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_DATA_TABLE
     MOVE    ACR                                         init_load_result
     JZ      INIT_LOAD_ERROR
     //
     CMT     7010130
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_TEST_DATA_TABLE
     //
     CMT     7010140
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_SHARE_CODE_TABLE
     MOVE    ACR                                         init_load_result
     JZ      INIT_LOAD_ERROR
     //
     CMT     7010150
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_TEST_SHARE_CODE_TABLE
     //
     CMT     7010160
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_SHARE_DATA_TABLE
     MOVE    ACR                                         init_load_result
     JZ      INIT_LOAD_ERROR
     //
     CMT     7010170
-    DBG
     MOVE    AAR                                         @init_load_result
     CALL    INIT_LOAD_TEST_SHARE_DATA_TABLE
     //
@@ -344,7 +331,6 @@ END
 
 PROC=INIT_LOAD_HEAD
     CMT     7010400
-    DBG
     MOVE    init_load_head_result_offset                AAR
     MOVE    init_load_head_offset                       ABR
     //
@@ -362,12 +348,10 @@ PROC=INIT_LOAD_HEAD
     JNZ     INIT_LOAD_HEAD_ERROR
     //
     CMT     7010420
-    DBG
     MOVE    AAR                                         @init_load_head_result
     CALL    INIT_LOAD_TEST_READ_INDEX_ONE
     //
     CMT     7010430
-    DBG
     MOVE    AAR                                         @init_load_head_result
     CALL    INIT_LOAD_TEST_PARSE_NEXT_ONE
     //
@@ -381,7 +365,6 @@ END
 
 PROC=INIT_LOAD_LOCALE
     CMT     7010500
-    DBG
     MOVE    init_load_locale_result_offset              AAR
     //
     CMT     7010510
@@ -405,7 +388,6 @@ END
 
 PROC=INIT_LOAD_CODE_TABLE
     CMT     7010600
-    DBG
     MOVE    init_load_code_table_result_offset          AAR
     //
     MOVE    ACR                                         init_load_exe_head_code_count
@@ -421,12 +403,10 @@ PROC=INIT_LOAD_CODE_TABLE
     JZ      INIT_LOAD_CODE_TABLE_ERROR
     //
     CMT     7010610
-    DBG
     MOVE    AAR                                         @init_load_code_table_result
     CALL    INIT_LOAD_TEST_READ_INDEX_ONE
     //
     CMT     7010620
-    DBG
     MOVE    AAR                                         @init_load_code_table_result
     CALL    INIT_LOAD_TEST_PARSE_NEXT_TWO
     //
@@ -441,7 +421,6 @@ END
 
 PROC=INIT_LOAD_DATA_TABLE
     CMT     7010700
-    DBG
     MOVE    init_load_data_table_result_offset          AAR
     //
     MOVE    ACR                                         init_load_exe_head_data_count
@@ -467,7 +446,6 @@ END
 
 PROC=INIT_LOAD_SHARE_CODE_TABLE
     CMT     7010800
-    DBG
     MOVE    init_load_share_code_table_result_offset    AAR
     //
     MOVE    AAR                                         init_load_exe_head_share_code_count
@@ -493,7 +471,6 @@ END
 
 PROC=INIT_LOAD_SHARE_DATA_TABLE
     CMT     7010900
-    DBG
     MOVE    init_load_share_data_table_result_offset    AAR
     //
     MOVE    ACR                                         init_load_exe_head_share_data_count
@@ -509,12 +486,10 @@ PROC=INIT_LOAD_SHARE_DATA_TABLE
     JZ      INIT_LOAD_SHARE_DATA_TABLE_ERROR
     //
     CMT     7010910
-    DBG
     MOVE    AAR                                         @init_load_share_data_table_result
     CALL    INIT_LOAD_TEST_READ_INDEX_ONE
     //
     CMT     7010920
-    DBG
     MOVE    AAR                                         @init_load_share_data_table_result
     CALL    INIT_LOAD_TEST_PARSE_NEXT_THREE
     //
@@ -529,7 +504,6 @@ END
 
 PROC=INIT_LOAD_CODE
     CMT     7011000
-    DBG
     MOVE    init_load_code_result_offset                AAR
     //
     MOVE    AAR                                         @init_load_code_result
@@ -554,7 +528,6 @@ END
 
 PROC=INIT_LOAD_DATA
     CMT     7011100
-    DBG
     MOVE    init_load_data_result_offset                AAR
     //
     MOVE    ACR                                         init_load_exe_head_data_count
@@ -584,7 +557,6 @@ END
 
 PROC=INIT_LOAD_SHARE_CODE
     CMT     7011200
-    DBG
     MOVE    init_load_share_code_result_offset          AAR
     //
     MOVE    ACR                                         init_load_exe_head_share_code_count
@@ -614,7 +586,6 @@ END
 
 PROC=INIT_LOAD_SHARE_DATA
     CMT     7011300
-    DBG
     MOVE    init_load_share_data_result_offset          AAR
     //
     MOVE    ACR                                         init_load_exe_head_share_data_count
@@ -653,7 +624,6 @@ END
 //
 PROC=INIT_LOAD_PARSE_NEXT
     CMT     7011400
-    DBG
     MOVE    init_load_parse_next_result_offset          AAR
     MOVE    init_load_parse_next_buffer_offset          ABR
     MOVE    init_load_parse_next_length                 ACR
@@ -684,7 +654,6 @@ INIT_LOAD_PARSE_NEXT_START:
     //
     //
     CMT     7011450
-    DBG
     //MOVE    init_load_exe_buffer_current_length         init_load_parse_next_length
 INIT_LOAD_PARSE_NEXT_NEXT:
     CMT     7011460
@@ -729,7 +698,6 @@ INIT_LOAD_PARSE_NEXT_ZERO:
     JZ      INIT_LOAD_PARSE_NEXT_ERROR
     //
     CMT     7011510
-    DBG
     MOVE    AAR                                         init_load_exe_buffer_current_offset
     MOVE    ABR                                         init_load_exe_buffer_current_length
     ADD
@@ -804,7 +772,6 @@ PROC=INIT_LOAD_READ_INDEX
     JZ      INIT_LOAD_READ_INDEX_ERROR
     //
     CMT     7011630
-    DBG
     MOVE    AAR                                         init_load_exe_length
     MOVE    ABR                                         init_load_exe_buffer_length
     SUB
@@ -843,7 +810,6 @@ END
 
 PROC=INIT_LOAD_TABLE
     CMT     7011700
-    DBG
     MOVE    init_load_table_result_offset               AAR
     MOVE    init_load_table_count                       ABR
     MOVE    init_load_table_buffer_offset               ACR
@@ -881,7 +847,6 @@ END
 
 PROC=INIT_LOAD_SHARE_TABLE
     CMT     7011800
-    DBG
     MOVE    init_load_share_table_result_offset         AAR
     MOVE    init_load_share_table_count                 ABR
     MOVE    init_load_share_table_buffer_offset         ACR
@@ -1012,7 +977,6 @@ END
 
 PROC=INIT_LOAD_SHARE_SEGMENTS
     CMT     7012000
-    DBG
     MOVE    init_load_share_segments_result_offset      AAR
     MOVE    init_load_share_segments_count              ABR
     MOVE    init_load_share_segments_table_offset       ACR

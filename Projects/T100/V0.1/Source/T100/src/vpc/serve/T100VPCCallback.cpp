@@ -258,7 +258,7 @@ T100BOOL T100VPCCallback::debug_register_update(void* d)
     return T100FALSE;
 }
 
-T100BOOL T100VPCCallback::debug_memory_offset_update(void* d)
+T100BOOL T100VPCCallback::debug_memory_base_update(void* d)
 {
     if(!d)return T100FALSE;
     if(!m_serve->m_host)return T100FALSE;
@@ -271,7 +271,7 @@ T100BOOL T100VPCCallback::debug_memory_offset_update(void* d)
     wxString    temp;
     T100LONG    value;
 
-    temp = frame->MemoryOffsetComboBox->GetValue();
+    temp = frame->MemoryBaseComboBox->GetValue();
     if(!temp.ToLongLong(&value)){
         return T100FALSE;
     }
@@ -282,6 +282,68 @@ T100BOOL T100VPCCallback::debug_memory_offset_update(void* d)
     frame->MemoryScrollBar->SetThumbPosition(value);
 
     frame->updateMemory(m_serve->m_host->getMemory32());
+
+    return T100TRUE;
+}
+
+T100BOOL T100VPCCallback::debug_memory_offset_update(void* d)
+{
+    if(!d)return T100FALSE;
+    if(!m_serve->m_host)return T100FALSE;
+
+    T100VPCDebugFrame*      frame   = T100NULL;
+
+    frame = static_cast<T100VPCDebugFrame*>(d);
+    if(!frame)return T100FALSE;
+
+    wxString    temp;
+    T100LONG    base;
+    T100LONG    offset;
+
+    temp = frame->MemoryBaseComboBox->GetValue();
+    if(!temp.ToLongLong(&base)){
+        return T100FALSE;
+    }
+
+    temp = frame->MemoryOffsetComboBox->GetValue();
+    if(!temp.ToLongLong(&offset)){
+        return T100FALSE;
+    }
+
+    T100VPCSetup::MEMORY_WINDOW_BEGIN   = base + offset;
+    T100VPCSetup::MEMORY_WINDOW_END     = T100VPCSetup::MEMORY_WINDOW_BEGIN + frame->MemoryListView->GetCountPerPage();
+
+    frame->MemoryScrollBar->SetThumbPosition(base + offset);
+
+    frame->updateMemory(m_serve->m_host->getMemory32());
+
+    return T100TRUE;
+}
+
+T100BOOL T100VPCCallback::debug_port_base_update(void* d)
+{
+    if(!d)return T100FALSE;
+    if(!m_serve->m_host)return T100FALSE;
+
+    T100VPCDebugFrame*      frame   = T100NULL;
+
+    frame = static_cast<T100VPCDebugFrame*>(d);
+    if(!frame)return T100FALSE;
+
+    wxString    temp;
+    T100LONG    value;
+
+    temp = frame->PortBaseComboBox->GetValue();
+    if(!temp.ToLongLong(&value)){
+        return T100FALSE;
+    }
+
+    T100VPCSetup::PORT_WINDOW_BEGIN     = value;
+    T100VPCSetup::PORT_WINDOW_END       = T100VPCSetup::PORT_WINDOW_BEGIN + frame->PortListView->GetCountPerPage();
+
+    frame->PortScrollBar->SetThumbPosition(value);
+
+    frame->updatePort(m_serve->m_host->getPort32());
 
     return T100TRUE;
 }
@@ -297,17 +359,23 @@ T100BOOL T100VPCCallback::debug_port_offset_update(void* d)
     if(!frame)return T100FALSE;
 
     wxString    temp;
-    T100LONG    value;
+    T100LONG    base;
+    T100LONG    offset;
 
-    temp = frame->PortOffsetComboBox->GetValue();
-    if(!temp.ToLongLong(&value)){
+    temp = frame->PortBaseComboBox->GetValue();
+    if(!temp.ToLongLong(&base)){
         return T100FALSE;
     }
 
-    T100VPCSetup::PORT_WINDOW_BEGIN     = value;
+    temp = frame->PortOffsetComboBox->GetValue();
+    if(!temp.ToLongLong(&offset)){
+        return T100FALSE;
+    }
+
+    T100VPCSetup::PORT_WINDOW_BEGIN     = base + offset;
     T100VPCSetup::PORT_WINDOW_END       = T100VPCSetup::PORT_WINDOW_BEGIN + frame->PortListView->GetCountPerPage();
 
-    frame->PortScrollBar->SetThumbPosition(value);
+    frame->PortScrollBar->SetThumbPosition(base + offset);
 
     frame->updatePort(m_serve->m_host->getPort32());
 

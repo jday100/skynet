@@ -73,6 +73,12 @@ T100VOID T100Interrupt32::icall(T100BYTE id)
     T100WORD        root;
     T100WORD        value;
 
+    T100WORD        ssr;
+    T100WORD        spr;
+
+    ssr     = m_host->getCU32()->getSSR();
+    spr     = m_host->getCU32()->getSPR();
+
     root    = T100QU32Setup::getRamBase();
     value   = root + id * 4;
 
@@ -84,12 +90,34 @@ T100VOID T100Interrupt32::icall(T100BYTE id)
     result  = m_host->getMemory32()->raw_read(0, value + 1, offset);
     if(!result)return;
 
+    result  = getStack(value);
+    if(!result)return;
+
+    result  = m_host->getCU32()->push(ssr);
+    if(!result)return;
+
+    result  = m_host->getCU32()->push(spr);
+    if(!result)return;
+
     m_host->getCU32()->setCBR(base);
     m_host->getCU32()->setCOR(offset);
 }
 
 T100VOID T100Interrupt32::iret()
 {
+    T100BOOL    result;
+    T100WORD    ssr;
+    T100WORD    spr;
+
+    result = m_host->getCU32()->pop(spr);
+    if(!result)return;
+
+    result = m_host->getCU32()->pop(ssr);
+    if(!result)return;
+
+    m_host->getCU32()->setSSR(ssr);
+    m_host->getCU32()->setSPR(spr);
+
     popAll();
 
     m_locked = T100FALSE;
@@ -273,6 +301,31 @@ T100BOOL T100Interrupt32::popAll()
     getHost()->getCU32()->m_cor.setValue(value);
 
     return result;
+}
+
+T100BOOL T100Interrupt32::getStack(T100WORD base)
+{
+    T100BOOL        result          = T100FALSE;
+    T100WORD        offset;
+    T100WORD        ssr;
+    T100WORD        spr;
+
+    offset  = base + 2;
+
+    result  = getHost()->getMemory32()->raw_read(0, offset, ssr);
+    if(!result){
+        return T100FALSE;
+    }
+
+    result  = getHost()->getMemory32()->raw_read(0, ssr, spr);
+    if(!result){
+        return T100FALSE;
+    }
+
+    m_host->getCU32()->setSSR(ssr);
+    m_host->getCU32()->setSPR(spr);
+
+    return T100TRUE;
 }
 
 

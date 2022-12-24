@@ -1,0 +1,284 @@
+IMPORT  "fs\fs.txt"
+
+MODE    REAL
+
+//
+//boot      50010
+//
+
+DATA
+    boot_result                             INTEGER     0
+    boot_message                            STRING      "booting..."
+    boot_error_message                      STRING      "boot error!"
+    boot_base                               INTEGER
+    boot_part_search_result                 INTEGER
+    boot_init_search_result                 INTEGER
+    boot_init_search_location               INTEGER
+    boot_file_load_result                   INTEGER
+    boot_init_location                      INTEGER
+    //
+    boot_show_info_result                   INTEGER
+    boot_show_info_result_offset            INTEGER
+    //
+    boot_show_error_result                  INTEGER
+    boot_show_error_result_offset           INTEGER
+    //
+    boot_get_part_result_offset             INTEGER
+    boot_part_location_low                  INTEGER
+    boot_part_location_high                 INTEGER
+    boot_part_length_low                    INTEGER
+    boot_part_length_high                   INTEGER
+    //
+    rom_part_location_low_offset            INTEGER     1074266108
+    rom_part_location_high_offset           INTEGER     1074266109
+    rom_part_length_low_offset              INTEGER     1074266110
+    rom_part_length_high_offset             INTEGER     1074266111
+    //
+    boot_init_search_result                 INTEGER
+    boot_init_search_result_offset          INTEGER
+    //
+    boot_init_file                          STRING      ":system:init.bin"
+    boot_init_search_location_low           INTEGER
+    boot_init_search_location_high          INTEGER
+    boot_init_search_index                  INTEGER
+    boot_init_search_offset                 INTEGER
+    boot_init_search_item_location_low      INTEGER
+    boot_init_search_item_location_high     INTEGER
+    boot_init_search_item_length_low        INTEGER
+    boot_init_search_item_length_high       INTEGER
+    boot_init_search_item_properties        INTEGER[2]
+    //
+    boot_file_load_result                   INTEGER
+    boot_file_load_result_offset            INTEGER
+    boot_file_load_handle_offset            INTEGER
+    //
+    boot_file_load_item_location_low        INTEGER
+    boot_file_load_item_location_high       INTEGER
+    //
+    boot_file_load_buffer_offset            INTEGER     1074282496
+    boot_file_load_location_temp_low        INTEGER
+    boot_file_load_location_temp_high       INTEGER
+    //
+    disk_mode_get                           INTEGER     13
+    disk_mode_block                         INTEGER     14
+    disk_mode_read                          INTEGER     17
+    disk_mode_write                         INTEGER     18
+    disk_block_index_limit                  INTEGER     16
+    disk_block_length                       INTEGER     1024
+    disk_block_limit                        INTEGER     16384
+    //
+    int069_mode_disk_read                   INTEGER     7
+END
+
+DATA    VIRTUAL     LOCATION=16384      LENGTH=16384        //
+    boot_init_buffer                        INTEGER     0
+END
+
+CODE
+    CMT     50010
+    MOVE    AAR                                     @boot_result
+    MOVE    ABR                                     boot_message
+    CALL    BOOT_SHOW_INFO
+    MOVE    ACR                                     boot_result
+    JZ      BOOT_ERROR
+    //
+    CMT     50020
+    MOVE    AAR                                     @boot_result
+    CALL    BOOT_GET_PART
+    MOVE    ACR                                     boot_result
+    JZ      BOOT_ERROR
+    //
+    CMT     50030
+    MOVE    AAR                                     @boot_result
+    CALL    BOOT_INIT_SEARCH
+    MOVE    ACR                                     boot_result
+    JZ      BOOT_ERROR
+    //
+    CMT     50040
+    JUMP    {boot_file_load_buffer_offset:0}
+    //
+BOOT_ERROR:
+    CMT     50050
+    MOVE    AAR                                     @boot_result
+    MOVE    ABR                                     boot_error_message
+    CALL    BOOT_SHOW_ERROR
+    MOVE    ACR                                     boot_result
+    //
+    CMT     50060
+    HALT
+END
+
+PROC=BOOT_SHOW_INFO
+    CMT     51010
+    MOVE    boot_show_info_result_offset            AAR
+    MOVE    AAR                                     @{CBR:@boot_show_info_result}
+    MOVE    ACR                                     @{CBR:ABR}
+    MOVE    ABR                                     1
+    INT     68
+    MOVE    ACR                                     boot_show_info_result
+    JZ      BOOT_SHOW_INFO_ERROR
+    //
+    CMT     51020
+    MOVE    #boot_show_info_result_offset           1
+    RET
+    //
+BOOT_SHOW_INFO_ERROR:
+    CMT     51030
+    MOVE    #boot_show_info_result_offset           0
+END
+
+PROC=BOOT_SHOW_ERROR
+    CMT     52010
+    MOVE    boot_show_error_result_offset           AAR
+    MOVE    AAR                                     @{CBR:@boot_show_error_result}
+    MOVE    ACR                                     @{CBR:ABR}
+    MOVE    ABR                                     1
+    INT     68
+    MOVE    ACR                                     boot_show_error_result
+    JZ      BOOT_SHOW_ERROR_ERROR
+    //
+    CMT     52020
+    MOVE    #boot_show_error_result_offset          1
+    RET
+    //
+BOOT_SHOW_ERROR_ERROR:
+    CMT     52030
+    MOVE    #boot_show_error_result_offset          0
+END
+
+PROC=BOOT_GET_PART
+    CMT     53010
+    MOVE    boot_get_part_result_offset             AAR
+    MOVE    boot_part_location_low                  {0:rom_part_location_low_offset}
+    MOVE    boot_part_location_high                 {0:rom_part_location_high_offset}
+    MOVE    boot_part_length_low                    {0:rom_part_length_low_offset}
+    MOVE    boot_part_length_high                   {0:rom_part_length_high_offset}
+    //
+    MOVE    ACR                                     boot_part_location_low
+    JZ      BOOT_GET_PART_ERROR
+    //
+    CMT     53020
+    MOVE    AAR                                     boot_part_length_low
+    MOVE    ABR                                     4
+    SUB
+    MOVE    ACR                                     AMF
+    JNZ     BOOT_GET_PART_ERROR
+    //
+    CMT     53030
+    MOVE    #boot_get_part_result_offset            1
+    RET
+    //
+BOOT_GET_PART_ERROR:
+    CMT     53040
+    MOVE    #boot_get_part_result_offset            0
+END
+
+PROC=BOOT_INIT_SEARCH
+    CMT     54010
+    MOVE    boot_init_search_result_offset          AAR
+    //
+    MOVE    AAR                                     @boot_init_search_result
+    MOVE    ABR                                     @boot_part_location_low
+    MOVE    ACR                                     @boot_part_length_low
+    CALL    FS_PART_INIT
+    MOVE    ACR                                     boot_init_search_result
+    JZ      BOOT_INIT_SEARCH_ERROR
+    //
+    CMT     54020
+    //DBG
+    MOVE    AAR                                     @boot_init_search_result
+    MOVE    ABR                                     boot_init_file
+    MOVE    ACR                                     @boot_init_search_location_low
+    CALL    FS_FILE_OPEN
+    MOVE    ACR                                     boot_init_search_result
+    JZ      BOOT_INIT_SEARCH_ERROR
+    //
+    CMT     54030
+    MOVE    AAR                                     @boot_init_search_result
+    MOVE    ABR                                     @boot_init_search_location_low
+    CALL    BOOT_FILE_LOAD
+    MOVE    ACR                                     boot_init_search_result
+    JZ      BOOT_INIT_SEARCH_ERROR
+    //
+    CMT     54040
+    MOVE    AAR                                     @boot_init_search_result
+    MOVE    ABR                                     @boot_init_search_location_low
+    CALL    FS_FILE_CLOSE
+    MOVE    ACR                                     boot_init_search_result
+    JZ      BOOT_INIT_SEARCH_ERROR
+    //
+    CMT     54050
+    //DBG
+    MOVE    #boot_init_search_result_offset         1
+    RET
+    //
+BOOT_INIT_SEARCH_ERROR:
+    CMT     54060
+    //DBG
+    MOVE    #boot_init_search_result_offset         0
+END
+
+PROC=BOOT_FILE_LOAD
+    CMT     55010
+    MOVE    boot_file_load_result_offset            AAR
+    MOVE    boot_file_load_handle_offset            ABR
+    //
+    //MOVE    boot_file_load_buffer_offset            @{CBR:@boot_init_buffer}
+    //
+    MOVE    AAR                                     ABR
+    MOVE    ABR                                     4
+    ADD
+    MOVE    boot_file_load_item_location_low        #ACR
+    //
+    MOVE    AAR                                     ACR
+    MOVE    ABR                                     1
+    ADD
+    MOVE    boot_file_load_item_location_high       #ACR
+    //
+    CMT     55020
+    MOVE    AAR                                     @boot_file_load_result
+    CALL    ITEM_EQUAL_ISEND
+    MOVE    ACR                                     boot_file_load_result
+    JNZ     BOOT_FILE_LOAD_ERROR
+    //
+BOOT_FILE_LOAD_NEXT:
+    CMT     55030
+    MOVE    AAR                                     @boot_file_load_result
+    MOVE    ABR                                     boot_file_load_item_location_low
+    MOVE    ACR                                     boot_file_load_item_location_high
+    MOVE    ADR                                     boot_file_load_buffer_offset
+    CALL    FILE_READ
+    MOVE    ACR                                     boot_file_load_result
+    JZ      BOOT_FILE_LOAD_ERROR
+    //
+    CMT     55040
+    MOVE    AAR                                     @boot_file_load_result
+    MOVE    ABR                                     @boot_file_load_item_location_low
+    MOVE    ACR                                     @boot_file_load_location_temp_low
+    CALL    TABLE_SEARCH
+    MOVE    ACR                                     boot_file_load_result
+    JZ      BOOT_FILE_LOAD_ERROR
+    //
+    CMT     55050
+    MOVE    AAR                                     @boot_file_load_result
+    MOVE    ABR                                     @boot_file_load_location_temp_low
+    CALL    ITEM_EQUAL_ISEND
+    MOVE    ACR                                     boot_file_load_result
+    JNZ     BOOT_FILE_LOAD_END
+    //
+    CMT     55060
+    MOVE    boot_file_load_item_location_low        boot_file_load_location_temp_low
+    MOVE    boot_file_load_item_location_high       boot_file_load_location_temp_high
+    //
+    CMT     55070
+    JUMP    BOOT_FILE_LOAD_NEXT
+    //
+BOOT_FILE_LOAD_END:
+    CMT     55080
+    MOVE    #boot_file_load_result_offset           1
+    RET
+    //
+BOOT_FILE_LOAD_ERROR:
+    CMT     55090
+    MOVE    #boot_file_load_result_offset           0
+END

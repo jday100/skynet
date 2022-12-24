@@ -1,0 +1,65 @@
+DATA
+    test_fs_file_open_result_offset                         INTEGER     0
+    test_fs_file_open_handle_offset                         INTEGER     0
+    //
+    test_path_search_split_result_offset                    INTEGER     0
+    test_path_search_split_size_address                     INTEGER     0
+    test_path_search_split_array_offset_address             INTEGER     0
+    test_path_search_split_array_buffer_offset_address      INTEGER     0
+    test_path_search_split_array_address                    INTEGER     0
+    test_path_search_split_array_buffer_address             INTEGER     0
+    //
+
+END
+
+PROC=TEST_FS_FILE_OPEN
+    CMT     1
+    MOVE    test_fs_file_open_result_offset                 AAR
+    MOVE    test_fs_file_open_handle_offset                 ABR
+    //
+    CMT     2
+    MOVE    #test_fs_file_open_result_offset                1
+    RET
+    //
+TEST_FS_FILE_OPEN_ERROR:
+    CMT     10
+    MOVE    #test_fs_file_open_result_offset                0
+END
+
+
+PROC=TEST_PATH_SEARCH_SPLIT
+    CMT     1
+    DBG
+    MOVE    test_path_search_split_result_offset                    AAR
+    MOVE    test_path_search_split_size_address                     ABR
+    //
+    MOVE    AAR                                                     1
+    ADD
+    MOVE    test_path_search_split_array_offset_address             ACR
+    //
+    MOVE    ABR                                                     ACR
+    ADD
+    MOVE    test_path_search_split_array_buffer_offset_address      ACR
+    //
+    MOVE    ABR                                                     ACR
+    ADD
+    MOVE    test_path_search_split_array_address                    ACR
+    //
+    MOVE    ABR                                                     ACR
+    MOVE    AAR                                                     100
+    ADD
+    MOVE    test_path_search_split_array_buffer_address             ACR
+    //
+    MOVE    AAR                                                     #test_path_search_split_size_address
+    MOVE    ABR                                                     2
+    SUB
+    JNZ     TEST_PATH_SEARCH_SPLIT_ERROR
+    //
+    CMT     2
+    MOVE    #test_path_search_split_result_offset           1
+    RET
+    //
+TEST_PATH_SEARCH_SPLIT_ERROR:
+    CMT     10
+    MOVE    #test_path_search_split_result_offset           0
+END

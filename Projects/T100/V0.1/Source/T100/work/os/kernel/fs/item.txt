@@ -1,0 +1,254 @@
+IMPORT  "..\lib\string.txt"
+
+DATA
+    item_bad_low                                            INTEGER     4294967295
+    item_bad_high                                           INTEGER     4294967295
+    item_end_low                                            INTEGER     4294967040
+    item_end_high                                           INTEGER     4294967295
+    //
+    item_init_result_offset                                 INTEGER
+    //
+    item_search_result                                      INTEGER
+    item_search_result_offset                               INTEGER
+    //
+    item_search_name_offset                                 INTEGER
+    item_search_handle_offset                               INTEGER
+    item_search_location_low_offset                         INTEGER
+    item_search_location_high_offset                        INTEGER
+    //
+    item_search_middle_low                                  INTEGER
+    item_search_middle_high                                 INTEGER
+    //
+    item_search_value_location_low                          INTEGER
+    item_search_value_location_high                         INTEGER
+    item_search_value_properties                            INTEGER[2]
+    //
+    item_search_value_location_low_offset                   INTEGER
+    item_search_value_location_high_offset                  INTEGER
+    item_search_value_index_offset                          INTEGER
+    item_search_value_offset_offset                         INTEGER
+    item_search_item_location_low_offset                    INTEGER
+    item_search_item_location_high_offset                   INTEGER
+    item_search_item_length_low_offset                      INTEGER
+    item_search_item_length_high_offset                     INTEGER
+    item_search_item_properties_offset                      INTEGER[2]
+    //
+    item_search_loop                                        INTEGER
+    item_search_index                                       INTEGER
+    item_search_location_low                                INTEGER
+    item_search_location_high                               INTEGER
+    item_search_buffer_offset                               INTEGER
+    //
+    item_equal_isbad_result_offset                          INTEGER
+    item_equal_isbad_source_offset                          INTEGER
+    //
+    item_equal_isend_result_offset                          INTEGER
+    item_equal_isend_source_offset                          INTEGER
+    //
+END
+
+DATA
+    item_disk_buffer                                        INTEGER[1024]
+END
+
+PROC=ITEM_INIT
+    CMT     40030010
+    MOVE    item_init_result_offset                         AAR
+
+    MOVE    #item_init_result_offset                        1
+    RET
+ITEM_INIT_ERROR:
+    CMT     40030030
+    MOVE    #item_init_result_offset                        0
+END
+
+//
+//result_offset
+//location_low_offset
+//name_offset
+//handle_offset
+//
+//handle
+//
+//value_location_low
+//value_location_high
+//value_index
+//value_offset
+//item_location_low
+//item_location_high
+//item_length_low
+//item_length_high
+//item_properties[2]
+//
+PROC=ITEM_SEARCH
+    CMT     40030110
+    MOVE    item_search_result_offset                       AAR
+    MOVE    item_search_location_low_offset                 ABR
+    MOVE    item_search_name_offset                         ACR
+    MOVE    item_search_handle_offset                       ADR
+    //
+    CMT     40030120
+    MOVE    AAR                                             item_search_location_low_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    item_search_location_high_offset                ACR
+    MOVE    item_search_value_location_low_offset           item_search_handle_offset
+    MOVE    AAR                                             item_search_handle_offset
+    ADD
+    MOVE    item_search_value_location_high_offset          ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    item_search_value_index_offset                  ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    item_search_value_offset_offset                 ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    item_search_item_location_low_offset            ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    item_search_item_location_high_offset           ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    item_search_item_length_low_offset              ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    item_search_item_length_high_offset             ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    item_search_item_properties_offset[0]           ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    item_search_item_properties_offset[1]           ACR
+    //
+    CMT     40030130
+    MOVE    AAR                                             @item_search_result
+    MOVE    ABR                                             item_search_location_low_offset
+    MOVE    ACR                                             @item_search_middle_low
+    CALL    FS_RELATIVE_LOCATION
+    MOVE    ACR                                             item_search_result
+    JZ      ITEM_SEARCH_ERROR
+    //
+    CMT     40030140
+    MOVE    AAR                                             @item_search_result
+    MOVE    ABR                                             @item_search_middle_low
+    MOVE    ACR                                             @item_search_value_location_low
+    CALL    FS_ABSOLUTE_LOCATION
+    MOVE    ACR                                             item_search_result
+    JZ      ITEM_SEARCH_ERROR
+    //
+    CMT     40030150
+    MOVE    item_search_location_low                        item_search_value_location_low
+    MOVE    item_search_location_high                       item_search_value_location_high
+    //
+    //
+    MOVE    CCR                                             15
+    MOVE    item_search_index                               0
+    //
+ITEM_SEARCH_NEXT:
+    CMT     40030160
+    MOVE    AAR                                             @{CBR:@item_search_result}
+    MOVE    ABR                                             int069_disk_read
+    MOVE    ACR                                             @{CBR:@item_disk_buffer}
+    MOVE    ADR                                             @{CBR:@item_search_index}
+    INT     69
+    MOVE    ACR                                             item_search_result
+    JZ      ITEM_SEARCH_ERROR
+    //
+    CMT     40030170
+    MOVE    item_search_buffer_offset                       @item_disk_buffer
+    MOVE    item_search_loop                                CCR
+    MOVE    CCR                                             15
+    //
+ITEM_SEARCH_ITEM_NEXT:
+    CMT     40030180
+    MOVE    AAR                                             @item_search_result
+    MOVE    ABR                                             item_search_name_offset
+    MOVE    ACR                                             item_search_buffer_offset
+    CALL    STRING_EQUAL
+    MOVE    ACR                                             item_search_result
+    JZ      ITEM_SEARCH_ITEM_FALSE
+    //
+    CMT     40030190
+    MOVE    AAR                                             item_search_buffer_offset
+    MOVE    ABR                                             254
+    ADD
+    MOVE    item_search_value_properties[0]                 #ACR
+    MOVE    AAR                                             ACR
+    MOVE    ABR                                             1
+    ADD
+    MOVE    item_search_value_properties[1]                 #ACR
+    //
+    MOVE    ACR                                             item_search_value_properties[0]
+    JZ      ITEM_SEARCH_ITEM_FALSE
+    //
+    CMT     40030200
+    MOVE    AAR                                             item_search_buffer_offset
+    MOVE    ABR                                             250
+    ADD
+    MOVE    #item_search_item_location_low_offset           #ACR
+    MOVE    AAR                                             ACR
+    MOVE    ABR                                             1
+    ADD
+    MOVE    #item_search_item_location_high_offset          #ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    #item_search_item_length_low_offset             #ACR
+    MOVE    AAR                                             ACR
+    ADD
+    MOVE    #item_search_item_length_high_offset            #ACR
+    MOVE    #item_search_item_properties_offset[0]          item_search_value_properties[0]
+    MOVE    #item_search_item_properties_offset[1]          item_search_value_properties[1]
+    //
+    CMT     40030210
+    JUMP    ITEM_SEARCH_TRUE
+    //
+ITEM_SEARCH_ITEM_FALSE:
+    CMT     40030220
+    MOVE    AAR                                             item_search_buffer_offset
+    MOVE    ABR                                             256
+    ADD
+    MOVE    item_search_buffer_offset                       ACR
+    //
+    CMT     40030230
+    LOOP    ITEM_SEARCH_ITEM_NEXT
+    //
+    CMT     40030240
+    MOVE    CCR                                             item_search_loop
+    //
+    MOVE    AAR                                             item_search_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    item_search_index                               ACR
+    //
+    CMT     40030250
+    LOOP    ITEM_SEARCH_NEXT
+    //
+ITEM_SEARCH_ERROR:
+    CMT     40030260
+    MOVE    #item_search_result_offset                      0
+    RET
+ITEM_SEARCH_TRUE:
+    CMT     40030270
+    MOVE    #item_search_result_offset                      1
+END
+
+PROC=ITEM_EQUAL_ISBAD
+    CMT     40030310
+    MOVE    item_equal_isbad_result_offset                  AAR
+    MOVE    item_equal_isbad_source_offset                  ABR
+    //
+    MOVE    ACR                                             @item_bad_low
+    CALL    DWORD_EQUAL
+    CMT     40030320
+END
+
+PROC=ITEM_EQUAL_ISEND
+    CMT     40030410
+    MOVE    item_equal_isend_result_offset                  AAR
+    MOVE    item_equal_isend_source_offset                  ABR
+    //
+    MOVE    ACR                                             @item_end_low
+    CALL    DWORD_EQUAL
+    CMT     40030420
+END

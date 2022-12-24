@@ -1,5 +1,8 @@
 #include "T100OrderAll.h"
 
+#include "T100BitTypes.h"
+
+
 namespace T100QU32{
 
 T100OrderAll::T100OrderAll(T100QU32* host, T100Executor32* exec)
@@ -145,6 +148,47 @@ T100BOOL T100OrderAll::loadAllRegister(T100SentenceBase::T100OPERATOR_BUILD& bui
     default:
         return T100FALSE;
     }
+    return result;
+}
+
+T100BOOL T100OrderAll::parsePushAllBuild()
+{
+    T100BOOL            result          = T100FALSE;
+    T100WORD_BITS       order;
+    T100SentenceBase::T100OPERATOR_BUILD        build;
+
+    order.WORD  = m_order;
+
+    result = loadOperatorAllBuild(order.BYTE3.BYTE, build);
+
+    if(result){
+        result = getOperatorSource(build);
+    }
+
+    if(result){
+        result = getHost()->getCU32()->push(build.VALUE);
+    }
+    return result;
+}
+
+T100BOOL T100OrderAll::parsePopAllBuild()
+{
+    T100BOOL            result          = T100FALSE;
+    T100WORD_BITS       order;
+    T100SentenceBase::T100OPERATOR_BUILD        build;
+
+    order.WORD  = m_order;
+
+    result = loadOperatorAllBuild(order.BYTE3.BYTE, build);
+
+    if(result){
+        result = getHost()->getCU32()->pop(build.VALUE);
+    }
+
+    if(result){
+        result = setOperatorTarget(build);
+    }
+
     return result;
 }
 

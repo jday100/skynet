@@ -41,12 +41,25 @@ T100BOOL T100Executor32::stop()
 
 T100VOID T100Executor32::run()
 {
-    do{
-        if(T100QU32Setup::DEBUG){
-            m_host->getNotifier().m_timer.setHost(m_host);
-            m_host->getNotifier().start();
-        }
+    if(T100QU32Setup::DEBUG){
+        m_host->getNotifier().m_timer.setHost(m_host);
+        m_host->getNotifier().start();
+    }
 
+    for(T100PRELOAD_ITEM*   item : T100QU32Setup::getPreloadFiles()){
+        if(item){
+            if(item->ISRUN){
+                m_host->getCU32()->setCBR(item->OFFSET);
+                m_host->getCU32()->setCOR(0);
+            }
+            //m_host->getCU32()->setCOR(item->OFFSET);
+            break;
+        }else{
+            return;
+        }
+    }
+
+    do{
         if(T100EXECUTOR_STATE_PAUSE == T100QU32Setup::DEBUG_STATE){
             std::unique_lock<std::mutex>    locker(m_mutex);
 

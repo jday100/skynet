@@ -31,6 +31,8 @@ DATA=ROM_DATA
     rom_start_message                                   STRING      "Starting..."
     rom_error_message                                   STRING      "ROM ERROR!"
     //
+    rom_stack_offset                                    INTEGER     1073745920
+    //
     rom_location_offset                                 INTEGER     1074266112
     rom_part_location_low_offset                        INTEGER     1074266108
     rom_part_location_high_offset                       INTEGER     1074266109

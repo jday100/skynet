@@ -1,0 +1,51 @@
+IMPORT  "test\test_data.txt"
+
+PROC=TEST_ROM_BOOT_PART_SEARCH
+    CMT     1
+    MOVE    test_rom_boot_part_search_result_offset                 AAR
+    //
+    MOVE    AAR                                                     #rom_part_location_low_offset
+    MOVE    ABR                                                     1
+    SUB
+    JNZ     TEST_ROM_BOOT_PART_SEARCH_ERROR
+    //
+    CMT     2
+    MOVE    ACR                                                     #rom_part_location_high_offset
+    JNZ     TEST_ROM_BOOT_PART_SEARCH_ERROR
+    //
+    CMT     3
+    MOVE    AAR                                                     #rom_part_length_low_offset
+    MOVE    ABR                                                     1023
+    SUB
+    JNZ     TEST_ROM_BOOT_PART_SEARCH_ERROR
+    //
+    CMT     4
+    MOVE    ACR                                                     #rom_part_length_high_offset
+    JNZ     TEST_ROM_BOOT_PART_SEARCH_ERROR
+    //
+    CMT     10
+    MOVE    #test_rom_boot_part_search_result_offset                1
+    RET
+    //
+TEST_ROM_BOOT_PART_SEARCH_ERROR:
+    CMT     20
+    MOVE    #test_rom_boot_part_search_result_offset                0
+END
+
+PROC=TEST_ROM_BOOT_PART_SEARCH_READ
+    CMT     1
+    MOVE    test_rom_boot_part_search_read_result_offset            AAR
+    //
+    MOVE    AAR                                                     #rom_boot_part_search_disk_buffer_offset
+    MOVE    ABR                                                     5
+    SUB
+    JNZ     TEST_ROM_BOOT_PART_SEARCH_READ_ERROR
+    //
+    CMT     10
+    MOVE    #test_rom_boot_part_search_read_result_offset           1
+    RET
+    //
+TEST_ROM_BOOT_PART_SEARCH_READ_ERROR:
+    CMT     20
+    MOVE    #test_rom_boot_part_search_read_result_offset           0
+END

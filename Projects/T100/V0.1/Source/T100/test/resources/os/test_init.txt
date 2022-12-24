@@ -1,0 +1,10 @@
+MODE    REAL
+
+CODE
+    CMT     60010
+    //
+    MOVE    AAR                                 1
+    //
+    HALT
+    //
+END

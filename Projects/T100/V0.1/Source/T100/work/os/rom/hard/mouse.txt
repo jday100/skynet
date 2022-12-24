@@ -1,0 +1,15 @@
+PROC=MOUSE_INIT
+    CMT     3100010
+    MOVE    mouse_init_result_return            AAR
+    //
+    MOVE    mouse_order_offset                  hard_device_order_offset
+    MOVE    mouse_data1_offset                  hard_device_data1_offset
+    MOVE    mouse_data2_offset                  hard_device_data2_offset
+    MOVE    mouse_data3_offset                  hard_device_data3_offset
+    //
+    MOVE    hard_mouse_inited_flag              1
+    //
+    MOVE    #mouse_init_result_return           1
+    //
+    CMT     3101000
+END

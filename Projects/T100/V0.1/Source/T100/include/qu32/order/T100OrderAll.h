@@ -15,6 +15,10 @@ class T100OrderAll : public T100OrderOperator
 
         T100BOOL        loadOperatorAllBuild(T100BYTE, T100SentenceBase::T100OPERATOR_BUILD&);
 
+        //
+        T100BOOL        parsePushAllBuild();
+        T100BOOL        parsePopAllBuild();
+
     protected:
         T100BOOL        loadAllRegister(T100SentenceBase::T100OPERATOR_BUILD&);
 

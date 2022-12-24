@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-T -u=deploy" />
+				<Option parameters="-T -u=os.init" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -653,6 +653,7 @@
 		<Unit filename="include/wxwidgets/vpc/dialog/config/hardware/T100VPCDiskSetupDemoDialog.h" />
 		<Unit filename="include/wxwidgets/vpc/dialog/config/hardware/T100VPCDisplaySetupDemoDialog.h" />
 		<Unit filename="include/wxwidgets/vpc/dialog/config/hardware/T100VPCMemorySetupDemoDialog.h" />
+		<Unit filename="include/wxwidgets/vpc/frame/debug/T100VPCDebugDemoFrame.h" />
 		<Unit filename="include/wxwidgets/vpc/panel/T100VPCDemoPanel.h" />
 		<Unit filename="licence.txt" />
 		<Unit filename="logs/.gitkeep" />
@@ -1035,8 +1036,10 @@
 		<Unit filename="src/wxwidgets/vpc/dialog/config/hardware/T100VPCDiskSetupDemoDialog.cpp" />
 		<Unit filename="src/wxwidgets/vpc/dialog/config/hardware/T100VPCDisplaySetupDemoDialog.cpp" />
 		<Unit filename="src/wxwidgets/vpc/dialog/config/hardware/T100VPCMemorySetupDemoDialog.cpp" />
+		<Unit filename="src/wxwidgets/vpc/frame/debug/T100VPCDebugDemoFrame.cpp" />
 		<Unit filename="src/wxwidgets/vpc/panel/T100VPCDemoPanel.cpp" />
 		<Unit filename="stores/.gitkeep" />
+		<Unit filename="stores/vdisk.vdk" />
 		<Unit filename="test/.gitkeep" />
 		<Unit filename="test/T100AppTest.cpp" />
 		<Unit filename="test/T100AppTest.h" />
@@ -1103,6 +1106,8 @@
 		<Unit filename="test/os/T100OSInitTest.h" />
 		<Unit filename="test/os/T100OSKernelTest.cpp" />
 		<Unit filename="test/os/T100OSKernelTest.h" />
+		<Unit filename="test/os/T100OSLibTest.cpp" />
+		<Unit filename="test/os/T100OSLibTest.h" />
 		<Unit filename="test/os/T100OSRomTest.cpp" />
 		<Unit filename="test/os/T100OSRomTest.h" />
 		<Unit filename="test/os/T100OSTest.cpp" />
@@ -1146,8 +1151,8 @@
 		<Unit filename="test/resources/full/test_virtual_basic.bin" />
 		<Unit filename="test/resources/full/test_virtual_basic.txt" />
 		<Unit filename="test/resources/os/test_boot.txt" />
-		<Unit filename="test/resources/os/test_rom.bin" />
-		<Unit filename="test/resources/os/test_rom.txt" />
+		<Unit filename="test/resources/os/test_init.txt" />
+		<Unit filename="test/resources/os/test_kernel.txt" />
 		<Unit filename="test/resources/vpc/test_qu32.txt" />
 		<Unit filename="test/vdisk/T100VDiskTest.cpp" />
 		<Unit filename="test/vdisk/T100VDiskTest.h" />
@@ -1206,11 +1211,45 @@
 		<Unit filename="work/AOS/rom/hard/port.txt" />
 		<Unit filename="work/AOS/rom/int.txt" />
 		<Unit filename="work/AOS/rom/rom.txt" />
+		<Unit filename="work/BOS/boot/boot.txt" />
+		<Unit filename="work/BOS/fs/file.txt" />
+		<Unit filename="work/BOS/fs/fs.txt" />
+		<Unit filename="work/BOS/fs/item.txt" />
+		<Unit filename="work/BOS/fs/part.txt" />
+		<Unit filename="work/BOS/fs/path.txt" />
+		<Unit filename="work/BOS/fs/table.txt" />
+		<Unit filename="work/BOS/init/init.txt" />
+		<Unit filename="work/BOS/init/init_load.txt" />
+		<Unit filename="work/BOS/kernel/kernel.txt" />
+		<Unit filename="work/BOS/kernel/mm.txt" />
+		<Unit filename="work/BOS/lib/dword.txt" />
+		<Unit filename="work/BOS/lib/io.txt" />
+		<Unit filename="work/BOS/lib/string.txt" />
+		<Unit filename="work/BOS/mm.txt" />
+		<Unit filename="work/BOS/rom/data.txt" />
+		<Unit filename="work/BOS/rom/hard/au.txt" />
+		<Unit filename="work/BOS/rom/hard/cu.txt" />
+		<Unit filename="work/BOS/rom/hard/disk.txt" />
+		<Unit filename="work/BOS/rom/hard/display.txt" />
+		<Unit filename="work/BOS/rom/hard/hard.txt" />
+		<Unit filename="work/BOS/rom/hard/keyboard.txt" />
+		<Unit filename="work/BOS/rom/hard/memory.txt" />
+		<Unit filename="work/BOS/rom/hard/mouse.txt" />
+		<Unit filename="work/BOS/rom/hard/port.txt" />
+		<Unit filename="work/BOS/rom/int.txt" />
+		<Unit filename="work/BOS/rom/rom.txt" />
+		<Unit filename="work/BOS/share.txt" />
+		<Unit filename="work/BOS/test/boot/test_boot.txt" />
+		<Unit filename="work/BOS/test/boot/test_fs.txt" />
+		<Unit filename="work/BOS/test/lib/test_string_split.txt" />
+		<Unit filename="work/BOS/test/rom/test_rom.txt" />
+		<Unit filename="work/BOS/test/test_data.txt" />
 		<Unit filename="wxsmith/T100FontFrame.wxs" />
 		<Unit filename="wxsmith/T100FontPanel.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigHardwareAppendDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigHardwareDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigSetupDemoDialog.wxs" />
+		<Unit filename="wxsmith/T100VPCDebugDemoFrame.wxs" />
 		<Unit filename="wxsmith/T100VPCDemoPanel.wxs" />
 		<Unit filename="wxsmith/T100VPCDiskSetupDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCDisplaySetupDemoDialog.wxs" />
@@ -1235,6 +1274,7 @@
 					<wxDialog wxs="wxsmith/T100VPCMemorySetupDemoDialog.wxs" src="src\wxwidgets\vpc\dialog\config\hardware\T100VPCMemorySetupDemoDialog.cpp" hdr="include\wxwidgets\vpc\dialog\config\hardware\T100VPCMemorySetupDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCMemorySetupDemoDialog" language="CPP" />
 					<wxDialog wxs="wxsmith/T100VPCConfigSetupDemoDialog.wxs" src="src\wxwidgets\vpc\dialog\config\T100VPCConfigSetupDemoDialog.cpp" hdr="include\wxwidgets\vpc\dialog\config\T100VPCConfigSetupDemoDialog.h" fwddecl="0" i18n="1" name="T100VPCConfigSetupDemoDialog" language="CPP" />
 					<wxPanel wxs="wxsmith/T100VPCDemoPanel.wxs" src="src\wxwidgets\vpc\panel\T100VPCDemoPanel.cpp" hdr="include\wxwidgets\vpc\panel\T100VPCDemoPanel.h" fwddecl="0" i18n="1" name="T100VPCDemoPanel" language="CPP" />
+					<wxFrame wxs="wxsmith/T100VPCDebugDemoFrame.wxs" src="src\wxwidgets\vpc\frame\debug\T100VPCDebugDemoFrame.cpp" hdr="include\wxwidgets\vpc\frame\debug\T100VPCDebugDemoFrame.h" fwddecl="0" i18n="1" name="T100VPCDebugDemoFrame" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

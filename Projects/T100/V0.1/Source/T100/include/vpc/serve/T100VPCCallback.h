@@ -47,7 +47,9 @@ class T100VPCCallback
 
 
         static T100BOOL             debug_register_update(void* = T100NULL);
+        static T100BOOL             debug_memory_base_update(void* = T100NULL);
         static T100BOOL             debug_memory_offset_update(void* = T100NULL);
+        static T100BOOL             debug_port_base_update(void* = T100NULL);
         static T100BOOL             debug_port_offset_update(void* = T100NULL);
 
 

@@ -375,7 +375,7 @@ T100BOOL T100RealMerger::relocate(T100RealInfo& info)
 
                 info.getCode().getMem()[offset] = temp + os;
             }else{
-                //T100TestTools::Print(item->name.to_wstring());
+                T100Library::T100TestTools::Print(item->NAME.to_wstring());
                 return T100FALSE;
             }
         }else{

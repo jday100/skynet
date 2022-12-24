@@ -1,0 +1,8 @@
+DATA=TEST_DATA       VIRTUAL     LOCATION=1073772544     LENGTH=1024
+    test_rom_boot_part_search_result                    INTEGER     0
+    test_rom_boot_part_search_result_offset             INTEGER     0
+    //
+    test_rom_boot_part_search_read_result               INTEGER     0
+    test_rom_boot_part_search_read_result_offset        INTEGER     0
+    //
+END

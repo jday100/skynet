@@ -1,0 +1,165 @@
+DATA
+    mem_copy_result                                             INTEGER
+    mem_copy_result_offset                                      INTEGER
+    //
+    mem_copy_source                                             INTEGER
+    mem_copy_target                                             INTEGER
+    mem_copy_length                                             INTEGER
+    //
+    mem_copy_absolute_result                                    INTEGER
+    mem_copy_absolute_result_offset                             INTEGER
+    //
+    mem_copy_absolute_source                                    INTEGER
+    mem_copy_absolute_target                                    INTEGER
+    mem_copy_absolute_length                                    INTEGER
+    //
+    mem_init_result_offset                                      INTEGER
+    mem_init_buffer_offset                                      INTEGER
+    mem_init_buffer_length                                      INTEGER
+    mem_init_handle_offset                                      INTEGER
+    mem_init_buffer_limit                                       INTEGER
+    //
+    mem_init_buffer_offset_offset                               INTEGER
+    mem_init_buffer_length_offset                               INTEGER
+    mem_init_buffer_limit_offset                                INTEGER
+    mem_init_buffer_current_offset_offset                       INTEGER
+    //
+    mem_allot_result                                            INTEGER
+    mem_allot_result_offset                                     INTEGER
+    mem_allot_handle_offset                                     INTEGER
+    mem_allot_length                                            INTEGER
+    mem_allot_target_offset                                     INTEGER
+    //
+    mem_allot_limit                                             INTEGER
+    mem_allot_buffer_limit_offset                               INTEGER
+    mem_allot_current_offset_offset                             INTEGER
+    //
+END
+
+
+PROC=MEM_COPY
+    MOVE    mem_copy_result_offset                              AAR
+    MOVE    mem_copy_source                                     ABR
+    MOVE    mem_copy_target                                     ACR
+    MOVE    mem_copy_length                                     ADR
+    //
+    MOVE    AAR                                                 mem_copy_length
+    MOVE    ABR                                                 1
+    SUB
+    MOVE    CCR                                                 ACR
+MEM_COPY_NEXT:
+    MOVE    #mem_copy_target                                    #mem_copy_source
+    MOVE    AAR                                                 mem_copy_source
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    mem_copy_source                                     ACR
+    MOVE    AAR                                                 mem_copy_target
+    ADD
+    MOVE    mem_copy_target                                     ACR
+    LOOP    MEM_COPY_NEXT
+    //
+    MOVE    #mem_copy_result_offset                             1
+    RET
+MEM_COPY_ERROR:
+    MOVE    #mem_copy_result_offset                             0
+END
+
+PROC=MEM_COPY_ABSOLUTE
+    MOVE    mem_copy_absolute_result_offset                     AAR
+    MOVE    mem_copy_absolute_source                            ABR
+    MOVE    mem_copy_absolute_target                            ACR
+    MOVE    mem_copy_absolute_length                            ADR
+    //
+    MOVE    AAR                                                 mem_copy_absolute_length
+    MOVE    ABR                                                 1
+    SUB
+    MOVE    CCR                                                 ACR
+MEM_COPY_ABSOLUTE_NEXT:
+    //MOVE    #{CBR:mem_copy_absolute_target}                     #{CBR:mem_copy_absolute_source}
+    MOVE    {0:#mem_copy_absolute_target}                       {0:#mem_copy_absolute_source}
+    MOVE    AAR                                                 mem_copy_absolute_source
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    mem_copy_absolute_source                            ACR
+    MOVE    AAR                                                 mem_copy_absolute_target
+    ADD
+    MOVE    mem_copy_absolute_target                            ACR
+    LOOP    MEM_COPY_ABSOLUTE_NEXT
+    //
+    MOVE    #mem_copy_absolute_result_offset                    1
+    RET
+MEM_COPY_ABSOLUTE_ERROR:
+    MOVE    #mem_copy_absolute_result_offset                    0
+END
+
+PROC=MEM_INIT
+    MOVE    mem_init_result_offset                              AAR
+    MOVE    mem_init_buffer_offset                              ABR
+    MOVE    mem_init_buffer_length                              ACR
+    MOVE    mem_init_handle_offset                              ADR
+    //
+    MOVE    mem_init_buffer_offset_offset                       mem_init_handle_offset
+    //
+    MOVE    AAR                                                 mem_init_handle_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    mem_init_buffer_length_offset                       ACR
+    //
+    MOVE    AAR                                                 ACR
+    ADD
+    MOVE    mem_init_buffer_limit_offset                        ACR
+    //
+    MOVE    AAR                                                 ACR
+    ADD
+    MOVE    mem_init_buffer_current_offset_offset               ACR
+    //
+    MOVE    AAR                                                 mem_init_buffer_offset
+    MOVE    ABR                                                 mem_init_buffer_length
+    ADD
+    MOVE    mem_init_buffer_limit                               ACR
+    //
+    MOVE    #mem_init_buffer_offset_offset                      mem_init_buffer_offset
+    MOVE    #mem_init_buffer_length_offset                      mem_init_buffer_length
+    MOVE    #mem_init_buffer_limit_offset                       mem_init_buffer_limit
+    MOVE    #mem_init_buffer_current_offset_offset              mem_init_buffer_offset
+    //
+    MOVE    #mem_init_result_offset                             1
+    RET
+MEM_INIT_ERROR:
+    MOVE    #mem_init_result_offset                             0
+END
+
+PROC=MEM_ALLOT
+    MOVE    mem_allot_result_offset                             AAR
+    MOVE    mem_allot_handle_offset                             ABR
+    MOVE    mem_allot_length                                    ACR
+    MOVE    mem_allot_target_offset                             ADR
+    //
+    MOVE    AAR                                                 mem_allot_handle_offset
+    MOVE    ABR                                                 2
+    ADD
+    MOVE    mem_allot_buffer_limit_offset                       ACR
+    //
+    MOVE    AAR                                                 ACR
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    mem_allot_current_offset_offset                     ACR
+    //
+    MOVE    AAR                                                 #mem_allot_current_offset_offset
+    MOVE    ABR                                                 mem_allot_length
+    ADD
+    MOVE    mem_allot_limit                                     ACR
+    //
+    MOVE    AAR                                                 #mem_allot_buffer_limit_offset
+    MOVE    ABR                                                 ACR
+    SUB
+    MOVE    ACR                                                 AMF
+    JNZ     MEM_ALLOT_ERROR
+    //
+    MOVE    #mem_allot_target_offset                            mem_allot_limit
+    //
+    MOVE    #mem_allot_result_offset                            1
+    RET
+MEM_ALLOT_ERROR:
+    MOVE    #mem_allot_result_offset                            0
+END

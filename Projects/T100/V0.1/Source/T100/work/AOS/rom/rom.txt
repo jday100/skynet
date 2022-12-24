@@ -11,7 +11,7 @@ CODE
 ROM_INIT:
     CMT     30010
     //
-    MOVE    SSR                                         1073760256
+    MOVE    SSR                                         1073745920
     //
     MOVE    AAR                                         @rom_result
     CALL    HARD_INIT
@@ -172,7 +172,6 @@ END
 
 PROC=ROM_BOOT_PART_LOAD
     CMT     35010
-    DBG
     MOVE    rom_boot_part_load_result_offset            AAR
     MOVE    rom_boot_part_load_location_offset          ABR
     MOVE    rom_boot_part_load_location_low             ACR
@@ -205,7 +204,6 @@ ROM_BOOT_PART_LOAD_NEXT:
     ADD
     MOVE    rom_boot_part_load_index                    ACR
     //
-    DBG
     //
     LOOP    ROM_BOOT_PART_LOAD_NEXT
     //

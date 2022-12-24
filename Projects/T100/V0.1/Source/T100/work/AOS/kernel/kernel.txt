@@ -2,6 +2,7 @@ IMPORT  "share.txt"
 
 CODE
     CMT     111
+    //
     MOVE    AAR                                         boot_part_location_low
     //
     HALT

@@ -36,14 +36,22 @@ const long T100VPCDebugFrame::ID_STATICTEXT12 = wxNewId();
 const long T100VPCDebugFrame::ID_COMBOBOX_SPR = wxNewId();
 const long T100VPCDebugFrame::ID_STATICTEXT13 = wxNewId();
 const long T100VPCDebugFrame::ID_COMBOBOX_GDR = wxNewId();
+
+const long T100VPCDebugFrame::ID_STATICTEXT14 = wxNewId();
+const long T100VPCDebugFrame::ID_COMBOBOX_MEMORY_BASE = wxNewId();
 const long T100VPCDebugFrame::ID_COMBOBOX_MEMORY_OFFSET = wxNewId();
+const long T100VPCDebugFrame::ID_STATICTEXT15 = wxNewId();
 const long T100VPCDebugFrame::ID_COMBOBOX12 = wxNewId();
 const long T100VPCDebugFrame::ID_LISTVIEW_MEMORY = wxNewId();
 const long T100VPCDebugFrame::ID_SCROLLBAR_MEMORY = wxNewId();
+const long T100VPCDebugFrame::ID_STATICTEXT16 = wxNewId();
+const long T100VPCDebugFrame::ID_COMBOBOX_PORT_BASE = wxNewId();
 const long T100VPCDebugFrame::ID_COMBOBOX_PORT_OFFSET = wxNewId();
+const long T100VPCDebugFrame::ID_STATICTEXT17 = wxNewId();
 const long T100VPCDebugFrame::ID_COMBOBOX14 = wxNewId();
 const long T100VPCDebugFrame::ID_LISTVIEW_PORT = wxNewId();
 const long T100VPCDebugFrame::ID_SCROLLBAR_PORT = wxNewId();
+
 const long T100VPCDebugFrame::ID_BUTTON_RUN = wxNewId();
 const long T100VPCDebugFrame::ID_BUTTON_STEP = wxNewId();
 const long T100VPCDebugFrame::ID_BUTTON_NEXT = wxNewId();
@@ -73,7 +81,7 @@ T100VPCDebugFrame::~T100VPCDebugFrame()
 T100VOID T100VPCDebugFrame::create()
 {
 
-    MemoryOffsetComboBox->AppendText(_("1073743872"));
+    MemoryBaseComboBox->AppendText(_("1073743872"));
 
     init();
 
@@ -170,8 +178,14 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	BoxSizer1->Add(StaticBoxSizer1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer2 = new wxStaticBoxSizer(wxVERTICAL, this, _("Memory："));
 	BoxSizer3 = new wxBoxSizer(wxHORIZONTAL);
-	MemoryOffsetComboBox = new wxComboBox(this, ID_COMBOBOX_MEMORY_OFFSET, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_MEMORY_OFFSET"));
-	BoxSizer3->Add(MemoryOffsetComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StaticText14 = new wxStaticText(this, ID_STATICTEXT14, _("Offset："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT14"));
+	BoxSizer3->Add(StaticText14, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	MemoryBaseComboBox = new wxComboBox(this, ID_COMBOBOX_MEMORY_BASE, wxEmptyString, wxDefaultPosition, wxSize(150,-1), 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_MEMORY_BASE"));
+	BoxSizer3->Add(MemoryBaseComboBox, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	MemoryOffsetComboBox = new wxComboBox(this, ID_COMBOBOX_MEMORY_OFFSET, wxEmptyString, wxDefaultPosition, wxSize(150,-1), 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_MEMORY_OFFSET"));
+	BoxSizer3->Add(MemoryOffsetComboBox, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StaticText15 = new wxStaticText(this, ID_STATICTEXT15, _("Label"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT15"));
+	BoxSizer3->Add(StaticText15, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	ComboBox12 = new wxComboBox(this, ID_COMBOBOX12, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX12"));
 	BoxSizer3->Add(ComboBox12, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer2->Add(BoxSizer3, 0, wxALL|wxEXPAND, 5);
@@ -185,8 +199,14 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	BoxSizer1->Add(StaticBoxSizer2, 1, wxALL|wxEXPAND, 5);
 	StaticBoxSizer5 = new wxStaticBoxSizer(wxVERTICAL, this, _("Port："));
 	BoxSizer4 = new wxBoxSizer(wxHORIZONTAL);
-	PortOffsetComboBox = new wxComboBox(this, ID_COMBOBOX_PORT_OFFSET, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_PORT_OFFSET"));
-	BoxSizer4->Add(PortOffsetComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StaticText16 = new wxStaticText(this, ID_STATICTEXT16, _("Offset："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT16"));
+	BoxSizer4->Add(StaticText16, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	PortBaseComboBox = new wxComboBox(this, ID_COMBOBOX_PORT_BASE, wxEmptyString, wxDefaultPosition, wxSize(150,-1), 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_PORT_BASE"));
+	BoxSizer4->Add(PortBaseComboBox, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	PortOffsetComboBox = new wxComboBox(this, ID_COMBOBOX_PORT_OFFSET, wxEmptyString, wxDefaultPosition, wxSize(150,-1), 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_PORT_OFFSET"));
+	BoxSizer4->Add(PortOffsetComboBox, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StaticText17 = new wxStaticText(this, ID_STATICTEXT17, _("Label"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT17"));
+	BoxSizer4->Add(StaticText17, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	ComboBox14 = new wxComboBox(this, ID_COMBOBOX14, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX14"));
 	BoxSizer4->Add(ComboBox14, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer5->Add(BoxSizer4, 0, wxALL|wxEXPAND, 5);
@@ -258,6 +278,9 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	Connect(ID_COMBOBOX_GDR,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugFrame::OnGDRComboBoxSelected);
 	Connect(ID_COMBOBOX_GDR,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugFrame::OnGDRComboBoxTextUpdated);
 	Connect(ID_COMBOBOX_GDR,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugFrame::OnGDRComboBoxTextEnter);
+	Connect(ID_COMBOBOX_MEMORY_BASE,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugFrame::OnMemoryBaseComboBoxSelected);
+	Connect(ID_COMBOBOX_MEMORY_BASE,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugFrame::OnMemoryBaseComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_MEMORY_BASE,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugFrame::OnMemoryBaseComboBoxTextEnter);
 	Connect(ID_COMBOBOX_MEMORY_OFFSET,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugFrame::OnMemoryOffsetComboBoxSelected);
 	Connect(ID_COMBOBOX_MEMORY_OFFSET,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugFrame::OnMemoryOffsetComboBoxTextUpdated);
 	Connect(ID_COMBOBOX_MEMORY_OFFSET,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugFrame::OnMemoryOffsetComboBoxTextEnter);
@@ -269,6 +292,9 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_PAGEUP,(wxObjectEventFunction)&T100VPCDebugFrame::OnMemoryScrollBarScrollPageUp);
 	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_PAGEDOWN,(wxObjectEventFunction)&T100VPCDebugFrame::OnMemoryScrollBarScrollPageDown);
 	Connect(ID_SCROLLBAR_MEMORY,wxEVT_SCROLL_CHANGED,(wxObjectEventFunction)&T100VPCDebugFrame::OnMemoryScrollBarScrollChanged);
+	Connect(ID_COMBOBOX_PORT_BASE,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugFrame::OnPortBaseComboBoxSelected);
+	Connect(ID_COMBOBOX_PORT_BASE,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugFrame::OnPortBaseComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_PORT_BASE,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugFrame::OnPortBaseComboBoxTextEnter);
 	Connect(ID_COMBOBOX_PORT_OFFSET,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugFrame::OnPortOffsetComboBoxSelected);
 	Connect(ID_COMBOBOX_PORT_OFFSET,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugFrame::OnPortOffsetComboBoxTextUpdated);
 	Connect(ID_COMBOBOX_PORT_OFFSET,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugFrame::OnPortOffsetComboBoxTextEnter);
@@ -481,6 +507,24 @@ void T100VPCDebugFrame::OnGDRComboBoxTextEnter(wxCommandEvent& event)
 {
 }
 
+void T100VPCDebugFrame::OnMemoryBaseComboBoxSelected(wxCommandEvent& event)
+{
+    T100VPCCallback::debug_memory_base_update(this);
+}
+
+void T100VPCDebugFrame::OnMemoryBaseComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugFrame::OnMemoryBaseComboBoxTextEnter(wxCommandEvent& event)
+{
+    if(T100VPCCallback::debug_memory_base_update(this)){
+        if(!find(MemoryBaseComboBox)){
+            MemoryBaseComboBox->Append(MemoryBaseComboBox->GetValue());
+        }
+    }
+}
+
 void T100VPCDebugFrame::OnMemoryOffsetComboBoxSelected(wxCommandEvent& event)
 {
     T100VPCCallback::debug_memory_offset_update(this);
@@ -519,6 +563,40 @@ void T100VPCDebugFrame::OnMemoryScrollBarScrollChanged(wxScrollEvent& event)
     T100VPCCallback::debug_notify_start(this);
 }
 
+void T100VPCDebugFrame::OnMemoryScrollBarScrollLineUp(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugFrame::OnMemoryScrollBarScroll(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugFrame::OnMemoryScrollBarScrollTop(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugFrame::OnMemoryScrollBarScrollBottom(wxScrollEvent& event)
+{
+}
+
+void T100VPCDebugFrame::OnPortBaseComboBoxSelected(wxCommandEvent& event)
+{
+    T100VPCCallback::debug_port_base_update(this);
+}
+
+void T100VPCDebugFrame::OnPortBaseComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugFrame::OnPortBaseComboBoxTextEnter(wxCommandEvent& event)
+{
+    if(T100VPCCallback::debug_port_base_update(this)){
+        if(!find(PortBaseComboBox)){
+            PortBaseComboBox->Append(PortBaseComboBox->GetValue());
+        }
+    }
+}
+
 void T100VPCDebugFrame::OnPortOffsetComboBoxSelected(wxCommandEvent& event)
 {
     T100VPCCallback::debug_port_offset_update(this);
@@ -535,22 +613,6 @@ void T100VPCDebugFrame::OnPortOffsetComboBoxTextEnter(wxCommandEvent& event)
             PortOffsetComboBox->Append(PortOffsetComboBox->GetValue());
         }
     }
-}
-
-void T100VPCDebugFrame::OnMemoryScrollBarScrollLineUp(wxScrollEvent& event)
-{
-}
-
-void T100VPCDebugFrame::OnMemoryScrollBarScroll(wxScrollEvent& event)
-{
-}
-
-void T100VPCDebugFrame::OnMemoryScrollBarScrollTop(wxScrollEvent& event)
-{
-}
-
-void T100VPCDebugFrame::OnMemoryScrollBarScrollBottom(wxScrollEvent& event)
-{
 }
 
 void T100VPCDebugFrame::OnPortScrollBarScroll(wxScrollEvent& event)
@@ -640,6 +702,16 @@ T100BOOL T100VPCDebugFrame::OnRegisterUpdate(T100WORD type, T100WORD value)
     case T100Component::T100CCR:
         {
             CCRComboBox->SetValue(std::to_string(value));
+        }
+        break;
+    case T100Component::T100SSR:
+        {
+            SSRComboBox->SetValue(std::to_string(value));
+        }
+        break;
+    case T100Component::T100SPR:
+        {
+            SPRComboBox->SetValue(std::to_string(value));
         }
         break;
     case T100Component::T100AAR:

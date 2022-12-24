@@ -1,0 +1,40 @@
+DATA=IO_DATA        //VIRTUAL     LOCATION=1073747968     LENGTH=1024
+    io_copy_result_offset                           INTEGER
+    io_copy_source_offset                           INTEGER
+    io_copy_target_offset                           INTEGER
+    io_copy_length                                  INTEGER
+    //
+END
+
+
+PROC=IO_COPY
+    CMT     1040010
+    MOVE    io_copy_result_offset                           AAR
+    MOVE    io_copy_source_offset                           ABR
+    MOVE    io_copy_target_offset                           ACR
+    MOVE    io_copy_length                                  ADR
+    //
+    MOVE    AAR                                             io_copy_length
+    MOVE    ABR                                             1
+    SUB
+    MOVE    CCR                                             ACR
+    //
+IO_COPY_NEXT:
+    CMT     1040020
+    IN      #io_copy_target_offset                          io_copy_source_offset
+    //
+    MOVE    AAR                                             io_copy_source_offset
+    MOVE    ABR                                             1
+    ADD
+    MOVE    io_copy_source_offset                           ACR
+    //
+    MOVE    AAR                                             io_copy_target_offset
+    //MOVE    ABR                                             1
+    ADD
+    MOVE    io_copy_target_offset                           ACR
+    //
+    LOOP    IO_COPY_NEXT
+    //
+    CMT     1040030
+    MOVE    #io_copy_result_offset                          1
+END

@@ -102,7 +102,6 @@ PROC=INIT_LOAD_TEST_HANDLE
     //      32
     //
     CMT     700001020
-    DBG
     MOVE    AAR                                         init_load_handle_item_length_low
     MOVE    ABR                                         32
     SUB
@@ -124,7 +123,6 @@ PROC=INIT_LOAD_TEST_HEAD
     CMT     700003000
     MOVE    init_load_test_head_result_offset           AAR
     //
-    DBG
     MOVE    AAR                                         init_load_exe_head_sign
     MOVE    ABR                                         9
     SUB
@@ -170,7 +168,6 @@ END
 
 PROC=INIT_LOAD_TEST_CODE_TABLE
     CMT     700004000
-    DBG
     MOVE    init_load_test_code_table_result_offset     AAR
     //
     MOVE    init_load_test_code_table_buffer_offset     init_load_exe_code_table_buffer_offset
@@ -210,7 +207,6 @@ END
 
 PROC=INIT_LOAD_TEST_DATA_TABLE
     CMT     700005000
-    DBG
     MOVE    init_load_test_data_table_result_offset     AAR
     //
     MOVE    ACR                                         init_load_exe_head_data_count
@@ -263,7 +259,6 @@ END
 
 PROC=INIT_LOAD_TEST_SHARE_CODE_TABLE
     CMT     700006000
-    DBG
     MOVE    init_load_test_share_code_table_result_offset       AAR
     //
     MOVE    ACR                                                 init_load_exe_head_share_code_count
@@ -316,7 +311,6 @@ END
 
 PROC=INIT_LOAD_TEST_SHARE_DATA_TABLE
     CMT     700007000
-    DBG
     MOVE    init_load_test_share_data_table_result_offset       AAR
     //
     MOVE    ACR                                                 init_load_exe_head_share_data_count
@@ -349,7 +343,6 @@ PROC=INIT_LOAD_TEST_READ_INDEX_ONE
     CMT     700002000
     MOVE    init_load_test_read_index_one_result_offset         AAR
     //
-    DBG
     MOVE    AAR                                                 {CBR:@init_disk_buffer}
     MOVE    ABR                                                 9
     SUB
@@ -367,7 +360,6 @@ PROC=INIT_LOAD_TEST_READ_INDEX_TWO
     CMT     700002000
     MOVE    init_load_test_read_index_two_result_offset         AAR
     //
-    DBG
     MOVE    AAR                                                 {CBR:@init_disk_buffer}
     MOVE    ABR                                                 9
     SUB
@@ -385,7 +377,6 @@ PROC=INIT_LOAD_TEST_PARSE_NEXT_ONE
     CMT     700010000
     MOVE    init_load_test_parse_next_one_result_offset         AAR
     //
-    DBG
     MOVE    AAR                                                 init_load_exe_buffer_offset
     MOVE    ABR                                                 5950
     SUB
@@ -439,7 +430,6 @@ PROC=INIT_LOAD_TEST_PARSE_NEXT_TWO
     CMT     700011000
     MOVE    init_load_test_parse_next_two_result_offset         AAR
     //
-    DBG
     MOVE    AAR                                                 init_load_exe_buffer_offset
     MOVE    ABR                                                 5950
     SUB
@@ -493,7 +483,6 @@ PROC=INIT_LOAD_TEST_PARSE_NEXT_THREE
     CMT     700012000
     MOVE    init_load_test_parse_next_three_result_offset       AAR
     //
-    DBG
     MOVE    AAR                                                 init_load_exe_buffer_offset
     MOVE    ABR                                                 5950
     SUB
@@ -545,7 +534,6 @@ END
 
 PROC=INIT_LOAD_TEST_CODE
     CMT     700013000
-    DBG
     MOVE    init_load_test_code_result_offset                   AAR
     //
     CMT     700013010
@@ -582,7 +570,6 @@ END
 
 PROC=INIT_LOAD_TEST_DATA
     CMT     700014000
-    DBG
     MOVE    init_load_test_data_result_offset                   AAR
     //
     CMT     700014010
@@ -624,7 +611,6 @@ END
 
 PROC=INIT_LOAD_TEST_SHARE_CODE
     CMT     700015000
-    DBG
     MOVE    init_load_test_share_code_result_offset             AAR
     //
     CMT     1
@@ -666,7 +652,6 @@ END
 
 PROC=INIT_LOAD_TEST_SHARE_DATA
     CMT     700016000
-    DBG
     MOVE    init_load_test_share_data_result_offset             AAR
     //
     CMT     700016010

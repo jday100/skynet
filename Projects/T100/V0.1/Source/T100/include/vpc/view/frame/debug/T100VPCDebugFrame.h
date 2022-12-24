@@ -60,13 +60,15 @@ class T100VPCDebugFrame : public wxFrame
 
 		wxComboBox*         ComboBox12;
 		wxComboBox*         ComboBox14;
+		wxComboBox*         MemoryBaseComboBox;
 		wxComboBox*         MemoryOffsetComboBox;
+		wxComboBox*         PortBaseComboBox;
 		wxComboBox*         PortOffsetComboBox;
 		wxListView*         MemoryListView;
 		wxListView*         PortListView;
 		wxScrollBar*        MemoryScrollBar;
 		wxScrollBar*        PortScrollBar;
-		wxStaticText*       StaticText10;
+
 		wxStaticText*       StaticText1;
 		wxStaticText*       StaticText2;
 		wxStaticText*       StaticText3;
@@ -76,9 +78,15 @@ class T100VPCDebugFrame : public wxFrame
 		wxStaticText*       StaticText7;
 		wxStaticText*       StaticText8;
 		wxStaticText*       StaticText9;
+		wxStaticText*       StaticText10;
 		wxStaticText*       StaticText11;
 		wxStaticText*       StaticText12;
 		wxStaticText*       StaticText13;
+
+		wxStaticText*       StaticText14;
+		wxStaticText*       StaticText15;
+		wxStaticText*       StaticText16;
+		wxStaticText*       StaticText17;
 
     private:
         static const long ID_STATICTEXT1;
@@ -107,11 +115,19 @@ class T100VPCDebugFrame : public wxFrame
 		static const long ID_COMBOBOX_SPR;
 		static const long ID_STATICTEXT13;
 		static const long ID_COMBOBOX_GDR;
-		static const long ID_COMBOBOX_MEMORY_OFFSET;
+
+		static const long ID_STATICTEXT14;
+		static const long ID_COMBOBOX_MEMORY_BASE;
+        static const long ID_COMBOBOX_MEMORY_OFFSET;
+		static const long ID_STATICTEXT15;
 		static const long ID_COMBOBOX12;
 		static const long ID_LISTVIEW_MEMORY;
 		static const long ID_SCROLLBAR_MEMORY;
+
+		static const long ID_STATICTEXT16;
+		static const long ID_COMBOBOX_PORT_BASE;
 		static const long ID_COMBOBOX_PORT_OFFSET;
+		static const long ID_STATICTEXT17;
 		static const long ID_COMBOBOX14;
 		static const long ID_LISTVIEW_PORT;
 		static const long ID_SCROLLBAR_PORT;
@@ -165,6 +181,9 @@ class T100VPCDebugFrame : public wxFrame
 		void OnGDRComboBoxTextUpdated(wxCommandEvent& event);
 		void OnGDRComboBoxTextEnter(wxCommandEvent& event);
 
+		void OnMemoryBaseComboBoxSelected(wxCommandEvent& event);
+		void OnMemoryBaseComboBoxTextUpdated(wxCommandEvent& event);
+		void OnMemoryBaseComboBoxTextEnter(wxCommandEvent& event);
 		void OnMemoryOffsetComboBoxSelected(wxCommandEvent& event);
 		void OnMemoryOffsetComboBoxTextUpdated(wxCommandEvent& event);
 		void OnMemoryOffsetComboBoxTextEnter(wxCommandEvent& event);
@@ -172,13 +191,17 @@ class T100VPCDebugFrame : public wxFrame
 		void OnMemoryScrollBarScrollPageUp(wxScrollEvent& event);
 		void OnMemoryScrollBarScrollPageDown(wxScrollEvent& event);
 		void OnMemoryScrollBarScrollChanged(wxScrollEvent& event);
-		void OnPortOffsetComboBoxSelected(wxCommandEvent& event);
-		void OnPortOffsetComboBoxTextUpdated(wxCommandEvent& event);
-		void OnPortOffsetComboBoxTextEnter(wxCommandEvent& event);
 		void OnMemoryScrollBarScrollLineUp(wxScrollEvent& event);
 		void OnMemoryScrollBarScroll(wxScrollEvent& event);
 		void OnMemoryScrollBarScrollTop(wxScrollEvent& event);
 		void OnMemoryScrollBarScrollBottom(wxScrollEvent& event);
+
+		void OnPortBaseComboBoxSelected(wxCommandEvent& event);
+		void OnPortBaseComboBoxTextUpdated(wxCommandEvent& event);
+		void OnPortBaseComboBoxTextEnter(wxCommandEvent& event);
+		void OnPortOffsetComboBoxSelected(wxCommandEvent& event);
+		void OnPortOffsetComboBoxTextUpdated(wxCommandEvent& event);
+		void OnPortOffsetComboBoxTextEnter(wxCommandEvent& event);
 		void OnPortScrollBarScroll(wxScrollEvent& event);
 		void OnPortScrollBarScrollTop(wxScrollEvent& event);
 		void OnPortScrollBarScrollBottom(wxScrollEvent& event);
@@ -187,6 +210,7 @@ class T100VPCDebugFrame : public wxFrame
 		void OnPortScrollBarScrollPageUp(wxScrollEvent& event);
 		void OnPortScrollBarScrollPageDown(wxScrollEvent& event);
 		void OnPortScrollBarScrollChanged(wxScrollEvent& event);
+
 		void OnRunButtonClick(wxCommandEvent& event);
 		void OnPauseButtonClick(wxCommandEvent& event);
 		void OnStepButtonClick(wxCommandEvent& event);

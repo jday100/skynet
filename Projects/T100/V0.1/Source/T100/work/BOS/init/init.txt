@@ -1,0 +1,193 @@
+IMPORT  "share.txt"
+IMPORT  "fs\fs.txt"
+IMPORT  "init_load.txt"
+
+IMPORT  "test\boot\test_fs.txt"
+
+
+MODE    REAL
+
+DATA
+    int069_mode_disk_read                                   INTEGER     7
+    disk_block_index_limit                                  INTEGER     16
+    disk_block_length                                       INTEGER     1024
+    //
+    init_result                                             INTEGER     0
+    init_start_message                                      STRING      "initing..."
+    init_error_message                                      STRING      "init error!"
+    //
+    init_part_location_low                                  INTEGER     0
+    init_part_location_high                                 INTEGER     0
+    init_part_length_low                                    INTEGER     0
+    init_part_length_high                                   INTEGER     0
+    //
+    init_kernel_file                                        STRING      ":system:kernel.knl"
+    //
+    init_print_result                                       INTEGER     0
+    init_print_result_offset                                INTEGER     0
+    //
+    init_show_info_result                                   INTEGER     0
+    init_show_info_result_offset                            INTEGER     0
+    //
+    init_get_part_result                                    INTEGER     0
+    init_get_part_result_offset                             INTEGER     0
+    init_get_part_location_low_offset                       INTEGER     1074266108
+    init_get_part_location_high_offset                      INTEGER     1074266109
+    init_get_part_length_low_offset                         INTEGER     1074266110
+    init_get_part_length_high_offset                        INTEGER     1074266111
+    //
+    init_load_kernel_result                                 INTEGER     0
+    init_load_kernel_result_offset                          INTEGER     0
+    //
+    init_load_kernel_location_low                           INTEGER     0
+    init_load_kernel_location_high                          INTEGER     0
+    init_load_kernel_index                                  INTEGER     0
+    init_load_kernel_offset                                 INTEGER     0
+    init_load_kernel_item_location_low                      INTEGER     0
+    init_load_kernel_item_location_high                     INTEGER     0
+    init_load_kernel_item_length_low                        INTEGER     0
+    init_load_kernel_item_length_high                       INTEGER     0
+    init_load_kernel_item_properties                        INTEGER[2]
+    //
+END
+
+DATA
+    init_disk_buffer                                        INTEGER[1024]
+END
+
+CODE
+    CMT     70010
+    DBG
+    //
+    //
+    MOVE    AAR                                             @init_result
+    CALL    INIT_SHOW_INFO
+    MOVE    ACR                                             init_result
+    JZ      INIT_ERROR
+    //
+    CMT     70020
+    MOVE    AAR                                             @init_result
+    CALL    INIT_GET_PART
+    MOVE    ACR                                             init_result
+    JZ      INIT_ERROR
+    //
+    CMT     70030
+    MOVE    AAR                                             @init_result
+    CALL    INIT_LOAD_KERNEL
+    MOVE    ACR                                             init_result
+    JZ      INIT_ERROR
+    //
+    //
+INIT_ERROR:
+    CMT     70050
+    DBG
+    HALT
+END
+
+PROC=INIT_SHOW_INFO
+    CMT     71010
+    MOVE    init_show_info_result_offset                    AAR
+    MOVE    AAR                                             @init_show_info_result
+    MOVE    ABR                                             init_start_message
+    CALL    INIT_PRINT
+    MOVE    ACR                                             init_show_info_result
+    JZ      INIT_SHOW_INFO_ERROR
+    //
+    CMT     71020
+    MOVE    #init_show_info_result_offset                   1
+    RET
+INIT_SHOW_INFO_ERROR:
+    CMT     71030
+    MOVE    #init_show_info_result_offset                   0
+END
+
+PROC=INIT_PRINT
+    CMT     74010
+    MOVE    init_print_result_offset                        AAR
+    MOVE    AAR                                             @{CBR:@init_print_result}
+    MOVE    ACR                                             @{CBR:ABR}
+    MOVE    ABR                                             1
+    INT     68
+    MOVE    ACR                                             init_print_result
+    JZ      INIT_PRINT_ERROR
+    //
+    CMT     74020
+    MOVE    #init_print_result_offset                       1
+    RET
+INIT_PRINT_ERROR:
+    CMT     74030
+    MOVE    #init_print_result_offset                       0
+END
+
+PROC=INIT_GET_PART
+    CMT     72010
+    MOVE    init_get_part_result_offset                     AAR
+    //
+    MOVE    init_part_location_low                          {0:init_get_part_location_low_offset}
+    MOVE    init_part_location_high                         {0:init_get_part_location_high_offset}
+    MOVE    init_part_length_low                            {0:init_get_part_length_low_offset}
+    MOVE    init_part_length_high                           {0:init_get_part_length_high_offset}
+    //
+    MOVE    ACR                                             init_part_location_low
+    JZ      INIT_GET_PART_ERROR
+    //
+    CMT     72020
+    MOVE    AAR                                             init_part_length_low
+    MOVE    ABR                                             4
+    SUB
+    MOVE    ACR                                             AMF
+    JNZ     INIT_GET_PART_ERROR
+    //
+    MOVE    boot_part_location_low                          init_part_location_low
+    MOVE    boot_part_location_high                         init_part_location_high
+    MOVE    boot_part_length_low                            init_part_length_low
+    MOVE    boot_part_length_high                           init_part_length_high
+    //
+    CMT     72030
+    MOVE    #init_get_part_result_offset                    1
+    RET
+INIT_GET_PART_ERROR:
+    CMT     72040
+    MOVE    #init_get_part_result_offset                    0
+END
+
+PROC=INIT_LOAD_KERNEL
+    CMT     73010
+    MOVE    init_load_kernel_result_offset                  AAR
+    //
+    MOVE    AAR                                             @init_load_kernel_result
+    MOVE    ABR                                             @init_part_location_low
+    MOVE    ACR                                             @init_part_length_low
+    CALL    FS_PART_INIT
+    MOVE    ACR                                             init_load_kernel_result
+    JZ      INIT_LOAD_KERNEL_ERROR
+    //
+    CMT     73020
+    MOVE    AAR                                             @init_load_kernel_result
+    MOVE    ABR                                             @init_load_kernel_location_low
+    CALL    FS_FILE_OPEN
+    MOVE    ACR                                             init_load_kernel_result
+    JZ      INIT_LOAD_KERNEL_ERROR
+    //
+    CMT     73030
+    MOVE    AAR                                             @init_load_kernel_result
+    MOVE    ABR                                             @init_load_kernel_location_low
+    CALL    INIT_EXE_LOAD
+    MOVE    ACR                                             init_load_kernel_result
+    JZ      INIT_LOAD_KERNEL_ERROR
+    //
+    CMT     73040
+    MOVE    AAR                                             @init_load_kernel_result
+    MOVE    ABR                                             @init_load_kernel_location_low
+    CALL    FS_FILE_CLOSE
+    MOVE    ACR                                             init_load_kernel_result
+    JZ      INIT_LOAD_KERNEL_ERROR
+    //
+    CMT     73040
+    MOVE    #init_load_kernel_result_offset                 1
+    RET
+    //
+INIT_LOAD_KERNEL_ERROR:
+    CMT     73050
+    MOVE    #init_load_kernel_result_offset                 0
+END

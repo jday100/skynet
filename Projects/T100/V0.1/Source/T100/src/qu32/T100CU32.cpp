@@ -126,21 +126,24 @@ T100BOOL T100CU32::push(T100WORD value)
 {
     T100BOOL        result          = T100FALSE;
     T100WORD        offset;
+    T100WORD        ssr;
     T100WORD        spr;
 
-    if(0 == m_ssr.getValue()){
+    ssr     = m_ssr.getValue();
+
+    if(0 == ssr){
         return T100FALSE;
     }
 
-    spr     = m_spr.getValue();
-    offset  = m_ssr.getValue() + spr;
+    spr     = m_spr.getValue() + 1;
+    offset  = ssr + spr;
 
-    result  = getHost()->getMemory32()->write(offset, value);
+    result  = getHost()->getMemory32()->raw_write(0, offset, value);
+
     if(result){
-        spr++;
-        m_spr.setValue(spr);
+        setSPR(spr);
+        result = getHost()->getMemory32()->raw_write(0, ssr, spr);
     }
-
     return result;
 }
 
@@ -148,25 +151,28 @@ T100BOOL T100CU32::pop(T100WORD& value)
 {
     T100BOOL        result          = T100FALSE;
     T100WORD        offset;
+    T100WORD        ssr;
     T100WORD        spr;
 
-    if(0 == m_ssr.getValue()){
+    ssr     = m_ssr.getValue();
+
+    if(0 == ssr){
         return T100FALSE;
     }
 
     spr     = m_spr.getValue();
 
     if(0 < spr){
-        spr--;
+        offset  = ssr + spr;
+        result  = getHost()->getMemory32()->raw_read(0, offset, value);
     }else{
         return T100FALSE;
     }
 
-    offset  = m_ssr.getValue() + spr;
-
-    result  = getHost()->getMemory32()->read(offset, value);
     if(result){
-        m_spr.setValue(spr);
+        spr--;
+        setSPR(spr);
+        result = getHost()->getMemory32()->raw_write(0, ssr, spr);
     }
 
     return result;

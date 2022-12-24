@@ -1,0 +1,7 @@
+DATA
+
+END
+
+CODE
+    HALT
+END

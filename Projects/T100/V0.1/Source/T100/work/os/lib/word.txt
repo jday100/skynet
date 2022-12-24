@@ -1,0 +1,99 @@
+DATA    //      VIRTUAL     LOCATION=1069056
+    word_shl_word_result_offset                         INTEGER
+    word_shl_word_source                                INTEGER
+    word_shl_word_target                                INTEGER
+    word_shl_word_value_offset                          INTEGER
+    word_shl_word_value_low                             INTEGER
+    word_shl_word_value_high                            INTEGER
+    //
+    word_shl_dword_result_offset                        INTEGER
+    word_shl_dword_source                               INTEGER
+    word_shl_dword_target                               INTEGER
+    word_shl_dword_value_low_offset                     INTEGER
+    word_shl_dword_value_high_offset                    INTEGER
+    word_shl_dword_value_low                            INTEGER
+    word_shl_dword_value_high                           INTEGER
+END
+
+PROC=WORD_SHL_WORD
+    MOVE    word_shl_word_result_offset                 AAR
+    MOVE    word_shl_word_source                        ABR
+    MOVE    word_shl_word_target                        ACR
+    MOVE    word_shl_word_value_offset                  ADR
+    //
+    MOVE    word_shl_word_value_low                     word_shl_word_source
+    MOVE    word_shl_word_value_high                    0
+    //
+    MOVE    ACR                                         word_shl_word_target
+    JZ      WORD_SHL_WORD_END
+    //
+    MOVE    AAR                                         word_shl_word_target
+    MOVE    ABR                                         1
+    SUB
+    MOVE    CCR                                         ACR
+    //
+WORD_SHL_WORD_NEXT:
+    MOVE    AAR                                         word_shl_word_value_low
+    MOVE    ABR                                         2
+    MUL
+    MOVE    word_shl_word_value_low                     ACR
+    MOVE    word_shl_word_value_high                    ADR
+    //
+    MOVE    ACR                                         AOF
+    JNZ     WORD_SHL_WORD_ERROR
+    LOOP    WORD_SHL_WORD_NEXT
+    //
+    MOVE    ACR                                         word_shl_word_value_high
+    JNZ     WORD_SHL_WORD_ERROR
+    //
+WORD_SHL_WORD_END:
+    MOVE    #word_shl_word_value_offset                 word_shl_word_value_low
+    MOVE    #word_shl_word_result_offset                1
+    RET
+    //
+WORD_SHL_WORD_ERROR:
+    MOVE    #word_shl_word_result_offset                0
+END
+
+PROC=WORD_SHL_DWORD
+    MOVE    word_shl_dword_result_offset                AAR
+    MOVE    word_shl_dword_source                       ABR
+    MOVE    word_shl_dword_target                       ACR
+    MOVE    word_shl_dword_value_low_offset             ADR
+    //
+    MOVE    AAR                                         ADR
+    MOVE    ABR                                         1
+    ADD
+    MOVE    word_shl_dword_value_high_offset            ACR
+    //
+    MOVE    word_shl_dword_value_low                    word_shl_dword_source
+    MOVE    word_shl_dword_value_high                   0
+    //
+    MOVE    ACR                                         word_shl_dword_target
+    JZ      WORD_SHL_DWORD_END
+    //
+    MOVE    AAR                                         word_shl_dword_target
+    MOVE    ABR                                         1
+    SUB
+    MOVE    CCR                                         ACR
+    //
+WORD_SHL_DWORD_NEXT:
+    MOVE    AAR                                         word_shl_dword_value_low
+    MOVE    ABR                                         2
+    MUL
+    MOVE    word_shl_dword_value_low                    ACR
+    MOVE    word_shl_dword_value_high                   ADR
+    //
+    MOVE    ACR                                         AOF
+    JNZ     WORD_SHL_DWORD_ERROR
+    LOOP    WORD_SHL_DWORD_NEXT
+    //
+WORD_SHL_DWORD_END:
+    MOVE    #word_shl_dword_value_low_offset            word_shl_dword_value_low
+    MOVE    #word_shl_dword_value_high_offset           word_shl_dword_value_high
+    //
+    MOVE    #word_shl_dword_result_offset               1
+    RET
+WORD_SHL_DWORD_ERROR:
+    MOVE    #word_shl_dword_result_offset               0
+END

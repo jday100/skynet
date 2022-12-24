@@ -92,6 +92,7 @@ T100BOOL T100AssemblyProgramTest::test_stack()
         T100QU32::T100QU32Setup::clear();
         T100QU32::T100QU32Setup::getPreloadFiles().push_back(item);
         T100QU32::T100QU32Setup::NEED_LOAD_ROM = T100FALSE;
+        T100QU32::T100QU32Setup::DEBUG = T100TRUE;
 
         wxThreadEvent   event(wxEVT_THREAD, T100Frame::ID_THREAD_VPC);
         wxQueueEvent(wxGetApp().getManager()->getFrame(), event.Clone());

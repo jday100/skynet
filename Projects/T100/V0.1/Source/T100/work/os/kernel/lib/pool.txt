@@ -1,0 +1,221 @@
+DATA
+    pool_init_result                                    INTEGER
+    pool_init_result_offset                             INTEGER
+    //
+    pool_length                                         INTEGER
+    //
+    pool_buffer_offset                                  INTEGER
+    pool_buffer_length                                  INTEGER
+    pool_buffer_limit                                   INTEGER
+    //
+    pool_buffer_current_offset                          INTEGER
+    pool_buffer_current_limit                           INTEGER
+    pool_buffer_current_length                          INTEGER
+    pool_buffer_current_value                           INTEGER
+    pool_buffer_current_residue                         INTEGER
+    //
+    pool_read_result                                    INTEGER
+    pool_read_result_offset                             INTEGER
+    //
+    pool_read_value                                     INTEGER
+    pool_read_buffer_current_offset                     INTEGER
+    pool_read_index                                     INTEGER
+    pool_read_length                                    INTEGER
+    //
+    pool_parse_next_result                              INTEGER
+    pool_parse_next_result_offset                       INTEGER
+    //
+    pool_parse_next_buffer_offset                       INTEGER
+    pool_parse_next_length                              INTEGER
+    //
+END
+
+PROC=POOL_INIT
+    MOVE    pool_init_result_offset                     AAR
+    MOVE    pool_buffer_offset                          ABR
+    MOVE    pool_buffer_length                          ACR
+    MOVE    pool_length                                 ADR
+    //
+    MOVE    AAR                                         pool_buffer_offset
+    MOVE    ABR                                         pool_buffer_length
+    ADD
+    MOVE    pool_buffer_limit                           ACR
+    //
+    MOVE    pool_buffer_current_offset                  pool_buffer_offset
+    MOVE    pool_buffer_current_limit                   pool_buffer_offset
+    MOVE    pool_buffer_current_length                  0
+    MOVE    pool_buffer_current_residue                 0
+    //
+    MOVE    pool_read_index                             0
+    //
+    MOVE    #pool_init_result_offset                    1
+    RET
+POOL_INIT_ERROR:
+    MOVE    #pool_init_result_offset                    0
+END
+
+PROC=POOL_READ
+    MOVE    pool_read_result_offset                     AAR
+    //
+    MOVE    ACR                                         pool_length
+    JZ      POOL_READ_ERROR
+    //
+    MOVE    AAR                                         pool_buffer_length
+    MOVE    ABR                                         pool_length
+    SUB
+    MOVE    pool_read_value                             ACR
+    MOVE    ACR                                         AMF
+    JZ      POOL_READ_LAST
+    //
+    MOVE    pool_length                                 pool_read_value
+    MOVE    pool_read_length                            pool_buffer_length
+    JUMP    POOL_READ_START
+    //
+POOL_READ_LAST:
+    MOVE    pool_read_length                            pool_length
+    MOVE    pool_length                                 0
+    //
+POOL_READ_START:
+    MOVE    AAR                                         pool_read_length
+    MOVE    ABR                                         1
+    SUB
+    MOVE    CCR                                         ACR
+    //
+    MOVE    pool_read_buffer_current_offset             pool_buffer_offset
+POOL_READ_NEXT:
+    MOVE    #pool_read_buffer_current_offset            pool_read_index
+    //
+    MOVE    AAR                                         pool_read_buffer_current_offset
+    MOVE    ABR                                         1
+    ADD
+    MOVE    pool_read_buffer_current_offset             ACR
+    //
+    MOVE    AAR                                         pool_read_index
+    ADD
+    MOVE    pool_read_index                             ACR
+    //
+    LOOP    POOL_READ_NEXT
+    //
+    DBG
+    MOVE    AAR                                         pool_buffer_offset
+    MOVE    ABR                                         pool_read_length
+    ADD
+    MOVE    pool_buffer_current_limit                   ACR
+    //
+    MOVE    #pool_read_result_offset                    1
+    RET
+POOL_READ_EOF:
+    MOVE    #pool_read_result_offset                    2
+    RET
+POOL_READ_ERROR:
+    MOVE    #pool_read_result_offset                    0
+END
+
+//
+//设置文件长度
+//
+//设置目标地址
+//设置读取长度
+//
+//设置剩余长度
+//
+//开始
+//判断剩余长度
+//为0，结束
+//不为0，判断缓冲区是否越界
+//是，判断文件剩余长度是否为0
+//是，跳转EOF
+//否，读，调整文件剩余长度和缓冲区边界
+//否，计算长度和余数，复制数据，调整边界和长度
+//跳转开始
+//
+
+PROC=POOL_PARSE_NEXT
+    DBG
+    MOVE    pool_parse_next_result_offset               AAR
+    MOVE    pool_parse_next_buffer_offset               ABR
+    MOVE    pool_parse_next_length                      ACR
+    //
+    MOVE    pool_buffer_current_residue                 pool_parse_next_length
+POOL_PARSE_NEXT_START:
+    MOVE    ACR                                         pool_buffer_current_residue
+    JZ      POOL_PARSE_NEXT_END
+    //
+    MOVE    AAR                                         pool_buffer_current_limit
+    MOVE    ABR                                         pool_buffer_offset
+    SUB
+    JNZ     POOL_PARSE_NEXT_RESIDUE
+    //
+    DBG
+    MOVE    AAR                                         @pool_parse_next_result
+    CALL    POOL_READ
+    MOVE    ACR                                         pool_parse_next_result
+    JZ      POOL_PARSE_NEXT_ERROR
+    //
+    DBG
+POOL_PARSE_NEXT_RESIDUE:
+    MOVE    AAR                                         pool_buffer_current_offset
+    MOVE    ABR                                         pool_buffer_current_residue
+    ADD
+    MOVE    pool_buffer_current_value                   ACR
+    //
+    MOVE    AAR                                         pool_buffer_current_limit
+    MOVE    ABR                                         ACR
+    SUB
+    MOVE    pool_buffer_current_residue                 ACR
+    MOVE    ACR                                         AMF
+    JNZ     POOL_PARSE_NEXT_ZERO
+    //
+    MOVE    pool_buffer_current_length                  pool_parse_next_length
+    MOVE    pool_buffer_current_residue                 0
+    JUMP    POOL_PARSE_NEXT_COPY
+POOL_PARSE_NEXT_ZERO:
+    MOVE    AAR                                         pool_buffer_current_limit
+    MOVE    ABR                                         pool_buffer_current_offset
+    SUB
+    MOVE    pool_buffer_current_length                  ACR
+    MOVE    ACR                                         AMF
+    JNZ     POOL_PARSE_NEXT_ERROR
+    //
+POOL_PARSE_NEXT_COPY:
+    MOVE    AAR                                         @pool_parse_next_result
+    MOVE    ABR                                         pool_parse_next_buffer_offset
+    MOVE    ACR                                         pool_buffer_current_length
+    CALL    MEM_COPY
+    MOVE    ACR                                         pool_parse_next_result
+    JZ      POOL_PARSE_NEXT_ERROR
+    //
+    DBG
+    MOVE    AAR                                         pool_parse_next_buffer_offset
+    MOVE    ABR                                         pool_buffer_current_length
+    ADD
+    MOVE    pool_parse_next_buffer_offset               ACR
+    //
+    MOVE    AAR                                         pool_buffer_current_offset
+    ADD
+    MOVE    pool_buffer_current_offset                  ACR
+    //
+    MOVE    AAR                                         pool_buffer_current_offset
+    MOVE    ABR                                         pool_buffer_current_limit
+    SUB
+    JNZ     POOL_PARSE_NEXT_CONTINUE
+    //
+    MOVE    pool_buffer_current_offset                  pool_buffer_offset
+    MOVE    pool_buffer_current_limit                   pool_buffer_offset
+    //
+POOL_PARSE_NEXT_CONTINUE:
+    LOOP    POOL_PARSE_NEXT_START
+    //
+POOL_PARSE_NEXT_END:
+    DBG
+    MOVE    #pool_parse_next_result_offset              1
+    RET
+POOL_PARSE_NEXT_EOF:
+    DBG
+    MOVE    #pool_parse_next_result_offset              2
+    RET
+POOL_PARSE_NEXT_ERROR:
+    DBG
+    MOVE    #pool_parse_next_result_offset              0
+END
+

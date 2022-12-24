@@ -1,0 +1,267 @@
+DATA    //DATA=STRING_DATA    VIRTUAL     LOCATION=1060874    //1059850+1024
+    string_equal_result_offset                      INTEGER
+    string_equal_source_offset                      INTEGER
+    string_equal_target_offset                      INTEGER
+    //
+    string_split_result_offset                      INTEGER
+    string_split_string_parameter_offset            INTEGER
+    string_split_mask_parameter_offset              INTEGER
+    string_split_size_parameter_offset              INTEGER
+    string_split_array_parameter_offset             INTEGER
+    string_split_array_buffer_parameter_offset      INTEGER
+    //
+    string_split_string_offset                      INTEGER
+    string_split_mask                               INTEGER
+    string_split_size                               INTEGER
+    string_split_array_offset                       INTEGER
+    string_split_array_buffer_offset                INTEGER
+    string_split_length                             INTEGER
+    string_split_offset                             INTEGER
+    //
+    string_first_result                             INTEGER
+    string_first_result_offset                      INTEGER
+    string_first_string_offset                      INTEGER
+    string_first_value_offset                       INTEGER
+    //
+    string_init_result_offset                       INTEGER
+    string_init_string_offset                       INTEGER
+    string_init_length                              INTEGER
+    string_init_string_length                       INTEGER
+    //
+END
+
+PROC=STRING_EQUAL
+    CMT     10010
+    MOVE    string_equal_result_offset      AAR
+    MOVE    string_equal_source_offset      ABR
+    MOVE    string_equal_target_offset      ACR
+    //
+    MOVE    AAR                             #string_equal_source_offset
+    MOVE    ABR                             #string_equal_target_offset
+    SUB
+    JNZ     STRING_EQUAL_FALSE
+    //
+    CMT     10020
+    MOVE    CCR                             #string_equal_source_offset
+STRING_EQUAL_NEXT:
+    CMT     10030
+    MOVE    AAR                             string_equal_source_offset
+    MOVE    ABR                             1
+    ADD
+    MOVE    string_equal_source_offset      ACR
+    //
+    MOVE    AAR                             string_equal_target_offset
+    ADD
+    MOVE    string_equal_target_offset      ACR
+    //
+    CMT     10040
+    MOVE    AAR                             #string_equal_source_offset
+    MOVE    ABR                             #string_equal_target_offset
+    SUB
+    JNZ     STRING_EQUAL_FALSE
+    CMT     10050
+    LOOP    STRING_EQUAL_NEXT
+    //
+    CMT     10060
+    MOVE    #string_equal_result_offset     1
+    RET
+STRING_EQUAL_FALSE:
+    CMT     10070
+    MOVE    #string_equal_result_offset     0
+END
+
+//
+//result_offset
+//string_offset
+//mask_offset
+//size_offset
+//array_offset
+//array_buffer_offset
+//
+PROC=STRING_SPLIT
+    CMT     10080
+    MOVE    string_split_result_offset                          AAR
+    MOVE    string_split_string_parameter_offset                ABR
+    MOVE    string_split_mask_parameter_offset                  ACR
+    MOVE    string_split_size_parameter_offset                  ADR
+    //
+    MOVE    AAR                                                 ADR
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_array_parameter_offset                 #ACR
+    //
+    MOVE    AAR                                                 ACR
+    ADD
+    MOVE    string_split_array_buffer_parameter_offset          #ACR
+    //
+    MOVE    ACR                                                 #string_split_string_parameter_offset
+    JZ      STRING_SPLIT_FALSE
+    CMT     10090
+    MOVE    ACR                                                 #string_split_mask_parameter_offset
+    JZ      STRING_SPLIT_FALSE
+    //
+    CMT     10100
+    MOVE    string_split_string_offset                          string_split_string_parameter_offset
+    MOVE    AAR                                                 string_split_mask_parameter_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_mask                                   #ACR
+    MOVE    string_split_size                                   0
+    MOVE    string_split_array_offset                           string_split_array_parameter_offset
+    MOVE    string_split_array_buffer_offset                    string_split_array_buffer_parameter_offset
+    //
+    MOVE    CCR                                                 #string_split_string_offset
+    MOVE    AAR                                                 string_split_string_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_string_offset                          ACR
+    MOVE    string_split_offset                                 string_split_array_buffer_offset
+    //
+    MOVE    AAR                                                 string_split_array_buffer_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_array_buffer_offset                    ACR
+STRING_SPLIT_SPLIT:
+    CMT     10110
+    MOVE    ACR                                                 #string_split_string_offset
+    JZ      STRING_SPLIT_EQUAL
+    CMT     10120
+    MOVE    AAR                                                 #string_split_string_offset
+    MOVE    ABR                                                 string_split_mask
+    SUB
+    JNZ     STRING_SPLIT_NEXT
+    //
+    CMT     10130
+    MOVE    ACR                                                 string_split_length
+    JZ      STRING_SPLIT_JUMP
+    //
+    CMT     10140
+    MOVE    AAR                                                 string_split_size
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_size                                   ACR
+    //
+    MOVE    #string_split_array_offset                          string_split_offset
+    MOVE    AAR                                                 string_split_array_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_array_offset                           ACR
+    //
+    MOVE    #string_split_array_buffer_offset                   0
+    MOVE    #string_split_offset                                string_split_length
+    MOVE    string_split_length                                 0
+    MOVE    AAR                                                 string_split_array_buffer_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_array_buffer_offset                    ACR
+    MOVE    string_split_offset                                 ACR
+    JUMP    STRING_SPLIT_EQUAL
+STRING_SPLIT_NEXT:
+    CMT     10150
+    MOVE    AAR                                                 string_split_length
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_length                                 ACR
+STRING_SPLIT_EQUAL:
+    CMT     10160
+    MOVE    #string_split_array_buffer_offset                   #string_split_string_offset
+    MOVE    AAR                                                 string_split_array_buffer_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_array_buffer_offset                    ACR
+    MOVE    ACR                                                 #string_split_string_offset
+    JNZ     STRING_SPLIT_JUMP
+    CMT     10170
+    MOVE    #string_split_offset                                string_split_length
+    MOVE    #string_split_array_offset                          string_split_offset
+    MOVE    AAR                                                 string_split_array_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_array_offset                           ACR
+    MOVE    AAR                                                 string_split_size
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_split_size                                   ACR
+STRING_SPLIT_JUMP:
+    CMT     10180
+    MOVE    AAR                                                 string_split_string_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    AAR                                                 ACR
+    MOVE    string_split_string_offset                          ACR
+    LOOP    STRING_SPLIT_SPLIT
+    MOVE    #string_split_size_parameter_offset                 string_split_size
+    CMT     10190
+    MOVE    #string_split_result_offset                         1
+    RET
+STRING_SPLIT_FALSE:
+    CMT     10200
+    MOVE    #string_split_result_offset                         0
+END
+
+PROC=STRING_FIRST
+    MOVE    string_first_result_offset                          AAR
+    MOVE    string_first_string_offset                          ABR
+    MOVE    string_first_value_offset                            ACR
+    //
+    MOVE    ACR                                                 #string_first_string_offset
+    JZ      STRING_FIRST_ERROR
+    //
+    MOVE    AAR                                                 @string_first_result
+    MOVE    ABR                                                 string_first_value_offset
+    MOVE    ACR                                                 3
+    CALL    STRING_INIT
+    MOVE    ACR                                                 string_first_result
+    JZ      STRING_FIRST_ERROR
+    //
+    MOVE    AAR                                                 string_first_value_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_first_value_offset                           ACR
+    //
+    MOVE    AAR                                                 string_first_string_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    #string_first_value_offset                          #ACR
+    //
+    MOVE    #string_first_result_offset                         1
+    RET
+STRING_FIRST_ERROR:
+    MOVE    #string_first_result_offset                         0
+END
+
+PROC=STRING_INIT
+    MOVE    string_init_result_offset                           AAR
+    MOVE    string_init_string_offset                           ABR
+    MOVE    string_init_length                                  ACR
+    //
+    MOVE    AAR                                                 string_init_length
+    MOVE    ABR                                                 2
+    SUB
+    MOVE    string_init_string_length                           ACR
+    MOVE    ACR                                                 AMF
+    JNZ     STRING_INIT_ERROR
+    //
+    MOVE    #string_init_string_offset                          string_init_string_length
+    MOVE    AAR                                                 string_init_string_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_init_string_offset                           ACR
+    //
+    MOVE    CCR                                                 string_init_string_length
+STRING_INIT_NEXT:
+    MOVE    #string_init_string_offset                          0
+    MOVE    AAR                                                 string_init_string_offset
+    MOVE    ABR                                                 1
+    ADD
+    MOVE    string_init_string_offset                           ACR
+    LOOP    STRING_INIT_NEXT
+    //
+    MOVE    #string_init_result_offset                          1
+    RET
+STRING_INIT_ERROR:
+    MOVE    #string_init_result_offset                          0
+END
+
+
+

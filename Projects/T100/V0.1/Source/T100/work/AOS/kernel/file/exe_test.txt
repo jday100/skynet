@@ -32,12 +32,10 @@ PROC=EXE_LOAD_TEST
     JZ      EXE_LOAD_TEST_ERROR
     //
     CMT     1
-    //DBG
     MOVE    #exe_load_test_result_offset                    1
     RET
 EXE_LOAD_TEST_ERROR:
     CMT     0
-    //DBG
     MOVE    #exe_load_test_result_offset                    0
 END
 
@@ -327,7 +325,6 @@ PROC=EXE_LOAD_TEST_TABLE
     ADD
     MOVE    exe_load_test_table_offset                      ACR
     //
-    //DBG
     MOVE    AAR                                             #exe_load_test_table_offset
     MOVE    ABR                                             exe_file_code_order_cmt_value
     SUB
@@ -387,13 +384,10 @@ PROC=EXE_LOAD_TEST_TABLE
     JNZ     EXE_LOAD_TEST_TABLE_ERROR
     //
     CMT     1
-    //DBG
     MOVE    #exe_load_test_table_result_offset              1
     RET
 EXE_LOAD_TEST_TABLE_ERROR:
     CMT     0
-    //DBG
     MOVE    ABR                                             AAR
     MOVE    #exe_load_test_table_result_offset              0
-    //DBG
 END

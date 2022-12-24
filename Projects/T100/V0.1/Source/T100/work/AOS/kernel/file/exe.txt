@@ -157,7 +157,6 @@ END
 //
 PROC=EXE_LOAD
     CMT     40060010
-    //DBG
     MOVE    exe_load_result_offset                          AAR
     MOVE    exe_load_handle_offset                          ABR
     //
@@ -190,28 +189,24 @@ PROC=EXE_LOAD
     JZ      EXE_LOAD_ERROR
     //
     CMT     40060050
-    //DBG
     MOVE    AAR                                             @exe_load_result
     CALL    EXE_LOAD_CODE_TABLE
     MOVE    ACR                                             exe_load_result
     JZ      EXE_LOAD_ERROR
     //
     CMT     40060060
-    //DBG
     MOVE    AAR                                             @exe_load_result
     CALL    EXE_LOAD_DATA_TABLE
     MOVE    ACR                                             exe_load_result
     JZ      EXE_LOAD_ERROR
     //
     CMT     40060070
-    //DBG
     MOVE    AAR                                             @exe_load_result
     CALL    EXE_LOAD_SHARE_CODE_TABLE
     MOVE    ACR                                             exe_load_result
     JZ      EXE_LOAD_ERROR
     //
     CMT     40060080
-    //DBG
     MOVE    AAR                                             @exe_load_result
     CALL    EXE_LOAD_SHARE_DATA_TABLE
     MOVE    ACR                                             exe_load_result
@@ -223,47 +218,40 @@ PROC=EXE_LOAD
     JZ      EXE_LOAD_ERROR
     //
     CMT     40060090
-    //DBG
     MOVE    AAR                                             @exe_load_result
     CALL    EXE_LOAD_CODE
     MOVE    ACR                                             exe_load_result
     JZ      EXE_LOAD_ERROR
     //
     CMT     40060100
-    //DBG
     MOVE    AAR                                             @exe_load_result
     CALL    EXE_LOAD_DATA
     MOVE    ACR                                             exe_load_result
     JZ      EXE_LOAD_ERROR
     //
     CMT     40060110
-    //DBG
     MOVE    AAR                                             @exe_load_result
     CALL    EXE_LOAD_SHARE_CODE
     MOVE    ACR                                             exe_load_result
     JZ      EXE_LOAD_ERROR
     //
     CMT     40060120
-    //DBG
     MOVE    AAR                                             @exe_load_result
     CALL    EXE_LOAD_SHARE_DATA
     MOVE    ACR                                             exe_load_result
     JZ      EXE_LOAD_ERROR
     //
     CMT     40060130
-    //DBG
     MOVE    #exe_load_result_offset                         1
     RET
 EXE_LOAD_ERROR:
     CMT     40060140
-    //DBG
     MOVE    #exe_load_result_offset                         0
 END
 
 
 PROC=EXE_INIT
     CMT     40060210
-    //DBG
     MOVE    exe_init_result_offset                          AAR
     //
     MOVE    exe_code_buffer_offset                          1083392     //1067008+16384
@@ -297,7 +285,6 @@ END
 
 PROC=EXE_LOAD_HEAD
     CMT     40060310
-    //DBG
     MOVE    exe_load_head_result_offset                     AAR
     MOVE    exe_load_head_offset                            ABR
     //
@@ -309,7 +296,6 @@ PROC=EXE_LOAD_HEAD
     JZ      EXE_LOAD_HEAD_ERROR
     //
     CMT     40060320
-    //DBG
     MOVE    AAR                                             exe_head_sign
     MOVE    ABR                                             exe_head_sign_flag
     SUB
@@ -330,7 +316,6 @@ END
 
 PROC=EXE_LOAD_CODE_TABLE
     CMT     40060410
-    //DBG
     MOVE    exe_load_code_table_result_offset               AAR
     //
     MOVE    exe_code_table_buffer_offset                    exe_table_buffer_current_offset
@@ -343,12 +328,10 @@ PROC=EXE_LOAD_CODE_TABLE
     JZ      EXE_LOAD_CODE_TABLE_ERROR
     //
     CMT     40060420
-    //DBG
     MOVE    #exe_load_code_table_result_offset              1
     RET
 EXE_LOAD_CODE_TABLE_ERROR:
     CMT     40060430
-    //DBG
     MOVE    #exe_load_code_table_result_offset              0
 END
 
@@ -370,7 +353,6 @@ PROC=EXE_LOAD_DATA_TABLE
     RET
 EXE_LOAD_DATA_TABLE_ERROR:
     CMT     40060530
-    //DBG
     MOVE    #exe_load_data_table_result_offset              0
 END
 
@@ -495,7 +477,6 @@ END
 
 PROC=EXE_LOAD_TABLE
     CMT     40061210
-    //DBG
     MOVE    exe_load_table_result_offset                    AAR
     MOVE    exe_load_table_count                            ABR
     MOVE    exe_load_table_buffer_offset                    ACR
@@ -504,13 +485,11 @@ PROC=EXE_LOAD_TABLE
     JZ      EXE_LOAD_TABLE_END
     //
     CMT     40061220
-    //DBG
     MOVE    AAR                                             exe_load_table_count
     MOVE    ABR                                             3
     MUL
     MOVE    exe_load_table_value                            ACR
     //
-    //DBG
     MOVE    AAR                                             @exe_load_table_result
     MOVE    ABR                                             exe_load_table_buffer_offset
     CALL    EXE_PARSE_NEXT
@@ -518,7 +497,6 @@ PROC=EXE_LOAD_TABLE
     JZ      EXE_LOAD_TABLE_ERROR
     //
     CMT     40061230
-    //DBG
     MOVE    AAR                                             exe_table_buffer_current_offset
     MOVE    ABR                                             exe_load_table_value
     ADD
@@ -526,18 +504,15 @@ PROC=EXE_LOAD_TABLE
     //
 EXE_LOAD_TABLE_END:
     CMT     40061240
-    //DBG
     MOVE    #exe_load_table_result_offset                   1
     RET
 EXE_LOAD_TABLE_ERROR:
     CMT     40061250
-    //DBG
     MOVE    #exe_load_table_result_offset                   0
 END
 
 PROC=EXE_LOAD_SHARE_TABLE
     CMT     40061310
-    //DBG
     MOVE    exe_load_share_table_result_offset              AAR
     MOVE    exe_load_share_table_count                      ABR
     MOVE    exe_load_share_table_buffer_offset              ACR
@@ -553,7 +528,6 @@ PROC=EXE_LOAD_SHARE_TABLE
     //
 EXE_LOAD_SHARE_TABLE_NEXT:
     CMT     40061330
-    //DBG
     MOVE    AAR                                             @exe_load_share_table_result
     MOVE    ABR                                             exe_load_share_table_buffer_offset
     MOVE    ACR                                             5
@@ -570,14 +544,12 @@ EXE_LOAD_SHARE_TABLE_NEXT:
     ADD
     MOVE    exe_load_share_table_buffer_offset              ACR
     //
-    //DBG
     MOVE    AAR                                             #exe_table_buffer_current_offset
     MOVE    ABR                                             1
     ADD
     MOVE    exe_load_share_table_length                     ACR
     //
     CMT     40061350
-    //DBG
     MOVE    AAR                                             @exe_load_share_table_result
     MOVE    ABR                                             exe_load_share_table_buffer_offset
     MOVE    ACR                                             exe_load_share_table_length
@@ -586,7 +558,6 @@ EXE_LOAD_SHARE_TABLE_NEXT:
     JZ      EXE_LOAD_SHARE_TABLE_ERROR
     //
     CMT     40061360
-    //DBG
     MOVE    AAR                                             exe_load_share_table_buffer_offset
     MOVE    ABR                                             exe_load_share_table_length
     ADD
@@ -742,7 +713,6 @@ PROC=EXE_READ_INDEX
     JZ      EXE_READ_INDEX_ERROR
     //
     CMT     40061740
-    //DBG
     MOVE    AAR                                             exe_length
     MOVE    ABR                                             exe_buffer_length
     SUB
@@ -776,12 +746,10 @@ EXE_READ_INDEX_EOF:
     //
 EXE_READ_INDEX_END:
     CMT     40061780
-    //DBG
     MOVE    #exe_read_index_result_offset                   1
     RET
 EXE_READ_INDEX_ERROR:
     CMT     40061790
-    //DBG
     MOVE    #exe_read_index_result_offset                   0
 END
 
@@ -793,7 +761,6 @@ END
 //
 PROC=EXE_PARSE_NEXT
     CMT     40061810
-    //DBG
     MOVE    exe_parse_next_result_offset                    AAR
     MOVE    exe_parse_next_buffer_offset                    ABR
     MOVE    exe_parse_next_length                           ACR
@@ -820,7 +787,6 @@ EXE_PARSE_NEXT_START:
     MOVE    ACR                                             exe_parse_next_result
     JZ      EXE_PARSE_NEXT_ERROR
     //
-    //DBG
     MOVE    exe_buffer_current_length                       exe_parse_next_length
 EXE_PARSE_NEXT_NEXT:
     CMT     40061850
@@ -864,7 +830,6 @@ EXE_PARSE_NEXT_ZERO:
     JZ      EXE_PARSE_NEXT_ERROR
     //
     CMT     40061890
-    //DBG
     MOVE    AAR                                             exe_buffer_current_offset
     MOVE    ABR                                             exe_buffer_current_length
     ADD

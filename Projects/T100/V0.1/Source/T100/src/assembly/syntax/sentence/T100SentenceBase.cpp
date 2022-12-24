@@ -188,6 +188,11 @@ T100Component::T100DATA_TYPE T100SentenceBase::getType(::T100SentenceBase::T100D
             result = T100Component::T100DATA_INTEGER;
         }
         break;
+    case T100DATA_STRING:
+        {
+            result = T100Component::T100DATA_STRING;
+        }
+        break;
     default:
         result = T100Component::T100DATA_NONE;
     }

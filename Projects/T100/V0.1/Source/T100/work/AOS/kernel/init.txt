@@ -66,27 +66,25 @@ END
 
 CODE
     CMT     70010
+    //
     MOVE    AAR                                         @init_result
     CALL    INIT_SHOW_INFO
     MOVE    ACR                                         init_result
     JZ      INIT_ERROR
     //
     CMT     70020
-    DBG
     MOVE    AAR                                         @init_result
     CALL    INIT_GET_PART_INFO
     MOVE    ACR                                         init_result
     JZ      INIT_ERROR
     //
     CMT     70030
-    DBG
     MOVE    AAR                                         @init_result
     CALL    INIT_LOAD_KERNEL
     MOVE    ACR                                         init_result
     JZ      INIT_ERROR
     //
     CMT     70040
-    DBG
     //JUMP    {init_file_load_buffer_offset:0}
     //
     MOVE    AAR                                         CBR
@@ -150,7 +148,6 @@ END
 
 PROC=INIT_LOAD_KERNEL
     CMT     73010
-    DBG
     MOVE    init_load_kernel_result_offset              AAR
     //
     MOVE    AAR                                         @init_load_kernel_result

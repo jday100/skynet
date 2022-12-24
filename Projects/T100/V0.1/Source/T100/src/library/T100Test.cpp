@@ -156,7 +156,7 @@ T100BOOL T100Test::test_unit(T100WSTRING name)
         return test_all();
     }
 
-    /*
+
     it = m_unit_hash.find(name);
 
     if(m_unit_hash.end() == it){
@@ -172,8 +172,8 @@ T100BOOL T100Test::test_unit(T100WSTRING name)
             result = T100FALSE;
         }
     }
-    */
 
+    /*
     T100Test*   test    = T100NULL;
 
     test = m_tests[name];
@@ -183,7 +183,7 @@ T100BOOL T100Test::test_unit(T100WSTRING name)
     }else{
         result = T100FALSE;
     }
-
+    */
     return result;
 }
 

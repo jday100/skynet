@@ -44,6 +44,8 @@ class T100Interrupt32
         T100BOOL                    pushAll();
         T100BOOL                    popAll();
 
+        T100BOOL                    getStack(T100WORD);
+
     private:
         T100QU32*                   m_host          = T100NULL;
 

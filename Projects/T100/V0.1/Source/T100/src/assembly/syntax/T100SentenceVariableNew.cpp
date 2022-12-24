@@ -635,6 +635,7 @@ T100BOOL T100SentenceVariableNew::buildString(T100BuildInfo* info)
         }
 
         vd->NAME        = target.NAME;
+        vd->TYPE        = getType(target.DATA_TYPE);
         vd->BASE_TYPE   = target.DATA_TYPE;
         vd->OFFSET      = offset;
         vd->ISVIRTUAL   = info->getData()->isVirtual;

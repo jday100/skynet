@@ -96,7 +96,6 @@ POOL_READ_NEXT:
     //
     LOOP    POOL_READ_NEXT
     //
-    DBG
     MOVE    AAR                                         pool_buffer_offset
     MOVE    ABR                                         pool_read_length
     ADD
@@ -131,7 +130,6 @@ END
 //
 
 PROC=POOL_PARSE_NEXT
-    DBG
     MOVE    pool_parse_next_result_offset               AAR
     MOVE    pool_parse_next_buffer_offset               ABR
     MOVE    pool_parse_next_length                      ACR
@@ -146,13 +144,11 @@ POOL_PARSE_NEXT_START:
     SUB
     JNZ     POOL_PARSE_NEXT_RESIDUE
     //
-    DBG
     MOVE    AAR                                         @pool_parse_next_result
     CALL    POOL_READ
     MOVE    ACR                                         pool_parse_next_result
     JZ      POOL_PARSE_NEXT_ERROR
     //
-    DBG
 POOL_PARSE_NEXT_RESIDUE:
     MOVE    AAR                                         pool_buffer_current_offset
     MOVE    ABR                                         pool_buffer_current_residue
@@ -185,7 +181,6 @@ POOL_PARSE_NEXT_COPY:
     MOVE    ACR                                         pool_parse_next_result
     JZ      POOL_PARSE_NEXT_ERROR
     //
-    DBG
     MOVE    AAR                                         pool_parse_next_buffer_offset
     MOVE    ABR                                         pool_buffer_current_length
     ADD
@@ -207,15 +202,12 @@ POOL_PARSE_NEXT_CONTINUE:
     LOOP    POOL_PARSE_NEXT_START
     //
 POOL_PARSE_NEXT_END:
-    DBG
     MOVE    #pool_parse_next_result_offset              1
     RET
 POOL_PARSE_NEXT_EOF:
-    DBG
     MOVE    #pool_parse_next_result_offset              2
     RET
 POOL_PARSE_NEXT_ERROR:
-    DBG
     MOVE    #pool_parse_next_result_offset              0
 END
 

@@ -1,0 +1,75 @@
+IMPORT  "lib\string.txt"
+
+MODE    REAL
+
+DATA
+    test_lib_result                                         INTEGER     0
+    //
+    test_string_split_result                                INTEGER     0
+    test_string_split_result_offset                         INTEGER     0
+    //
+    test_string_split_source                                STRING      ":test:test:test"
+    test_string_split_mask                                  STRING      ":"
+    //
+    test_string_split_size                                  INTEGER     0
+    test_string_split_array_offset                          INTEGER     0
+    test_string_split_array_buffer_offset                   INTEGER     0
+    //
+    test_string_split_array                                 INTEGER[100]
+    test_string_split_array_buffer                          INTEGER[1024]
+    //
+
+END
+
+CODE
+    MOVE    AAR                                             CBR
+    MOVE    ABR                                             10240
+    ADD
+    MOVE    SSR                                             ACR
+    MOVE    SPR                                             0
+    //
+    CMT     1
+    //
+    MOVE    AAR                                             @test_lib_result
+    CALL    TEST_STRING_SPLIT
+    MOVE    ACR                                             test_lib_result
+    JZ      TEST_LIB_ERROR
+    //
+    CMT     2
+    MOVE    AAR                                             1
+    HALT
+    //
+TEST_LIB_ERROR:
+    CMT     10
+    MOVE    AAR                                             0
+    HALT
+END
+
+PROC=TEST_STRING_SPLIT
+    CMT     11
+    MOVE    test_string_split_result_offset                 AAR
+    //
+    MOVE    test_string_split_array_offset                  @test_string_split_array
+    MOVE    test_string_split_array_buffer_offset           @test_string_split_array_buffer
+    //
+    MOVE    AAR                                             @test_string_split_result
+    MOVE    ABR                                             test_string_split_source
+    MOVE    ACR                                             test_string_split_mask
+    MOVE    ADR                                             @test_string_split_size
+    CALL    STRING_SPLIT
+    MOVE    ACR                                             test_string_split_result
+    JZ      TEST_STRING_SPLIT_ERROR
+    //
+    MOVE    AAR                                             test_string_split_size
+    MOVE    ABR                                             3
+    SUB
+    JNZ     TEST_STRING_SPLIT_ERROR
+    //
+    CMT     12
+    MOVE    #test_string_split_result_offset                1
+    RET
+    //
+TEST_STRING_SPLIT_ERROR:
+    CMT     13
+    MOVE    #test_string_split_result_offset                0
+END

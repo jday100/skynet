@@ -1,49 +1,79 @@
 MODE    REAL
 
+DATA
+    ssr_offset              INTEGER
+END
+
 CODE
-    MOVE    SSR     1000
+    MOVE    AAR             CBR
+    MOVE    ABR             1000
+    ADD
+    MOVE    ssr_offset      ACR
+
+    MOVE    SSR             ssr_offset
     //
-    MOVE    AAR     SSR
-    MOVE    ABR     1000
+    MOVE    AAR             SSR
+    MOVE    ABR             1073744872
     SUB
     JNZ     ERROR
     //
-    MOVE    SPR     0
-    MOVE    ACR     SPR
+    MOVE    SPR             0
+    MOVE    ACR             SPR
     JNZ     ERROR
     //
-    MOVE    AAR     11
+    MOVE    AAR             11
     PUSH    AAR
     //
-    MOVE    AAR     SPR
-    MOVE    ABR     1
+    MOVE    AAR             SSR
+    MOVE    ABR             ssr_offset
     SUB
     JNZ     ERROR
     //
-    MOVE    AAR     1000
-    MOVE    ABR     #AAR
-    MOVE    AAR     11
+    MOVE    AAR             SPR
+    MOVE    ABR             1
+    SUB
+    JNZ     ERROR
+    //
+    MOVE    AAR             {0:ssr_offset}
+    SUB
+    JNZ     ERROR
+    //
+    MOVE    AAR             ssr_offset
+    ADD
+    MOVE    AAR             {0:ACR}
+    MOVE    ABR             11
     SUB
     JNZ     ERROR
     //
     POP     ABR
-    MOVE    AAR     11
+    MOVE    AAR             11
     SUB
     JNZ     ERROR
     //
-    MOVE    AAR     SSR
-    MOVE    ABR     1000
+    MOVE    AAR             SSR
+    MOVE    ABR             ssr_offset
     SUB
     JNZ     ERROR
     //
-    MOVE    ACR     SPR
+    MOVE    ACR             SPR
     JNZ     ERROR
     //
-    MOVE    AAR     1
+    MOVE    ACR             {0:ssr_offset}
+    JNZ     ERROR
+    //
+    MOVE    AAR             ssr_offset
+    MOVE    ABR             1
+    ADD
+    MOVE    AAR             {0:ACR}
+    MOVE    ABR             11
+    SUB
+    JNZ     ERROR
+    //
+    MOVE    AAR             1
     //
     HALT
     //
 ERROR:
-    MOVE    AAR     0
+    MOVE    AAR             0
     HALT
 END
