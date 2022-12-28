@@ -33,22 +33,22 @@ T100VOID T100IDE::destroy()
 
 T100VOID T100IDE::setServe(T100IDEServe* serve)
 {
-
+    m_serve = serve;
 }
 
 T100IDEServe* T100IDE::getServe()
 {
-
+    return m_serve;
 }
 
 T100VOID T100IDE::setView(T100IDEView* view)
 {
-
+    m_view = view;
 }
 
 T100IDEView* T100IDE::getView()
 {
-
+    return m_view;
 }
 
 T100VOID T100IDE::show()

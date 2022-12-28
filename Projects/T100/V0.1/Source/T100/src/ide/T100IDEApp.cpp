@@ -34,4 +34,12 @@ T100VOID T100IDEApp::show()
     }
 }
 
+T100IDEView* T100IDEApp::getView()
+{
+    if(m_ide){
+        return m_ide->getView();
+    }
+    return T100NULL;
+}
+
 }

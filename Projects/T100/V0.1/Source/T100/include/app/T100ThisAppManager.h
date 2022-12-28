@@ -47,6 +47,8 @@ class T100ThisAppManager : public T100WxWidgets::T100WxAppManager
 
         T100BOOL                close(T100WORD);
 
+        T100IDE::T100IDEApp*    getIDE();
+
     protected:
         T100VOID                create();
         T100VOID                destroy();

@@ -1,6 +1,7 @@
 #include "T100EditorApp.h"
 
 #include "T100Editor.h"
+#include "T100EditorView.h"
 
 namespace T100Editor{
 
@@ -20,6 +21,7 @@ T100EditorApp::~T100EditorApp()
 T100VOID T100EditorApp::create()
 {
     m_editor    = T100NEW T100Editor(this);
+    m_editor->getView()->create();
 }
 
 T100VOID T100EditorApp::destroy()

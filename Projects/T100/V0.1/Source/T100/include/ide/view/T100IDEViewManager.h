@@ -20,6 +20,7 @@ class T100IDEViewManager
         T100VOID                create();
         T100VOID                destroy();
 
+        T100VOID                init();
 
     private:
         wxAuiManager*           m_aui           = T100NULL;

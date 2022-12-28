@@ -10,6 +10,7 @@ namespace T100IDE{
 T100IDEView::T100IDEView()
 {
     //ctor
+    create();
 }
 
 T100IDEView::~T100IDEView()
@@ -37,6 +38,11 @@ T100VOID T100IDEView::destroy()
     T100SAFE_DELETE(m_frame);
     T100SAFE_DELETE(m_manager);
     T100SAFE_DELETE(m_platen);
+}
+
+T100IDEMainFrame* T100IDEView::getFrame()
+{
+    return m_frame;
 }
 
 T100VOID T100IDEView::show()

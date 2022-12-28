@@ -2,6 +2,8 @@
 #define T100MDITEXTDOCUMENT_H
 
 #include "T100MDIDocumentBase.h"
+#include "T100Editor.h"
+
 
 namespace T100IDE{
 
@@ -11,7 +13,19 @@ class T100MDITextDocument : public T100MDIDocumentBase
         T100MDITextDocument();
         virtual ~T100MDITextDocument();
 
+        T100BOOL                    OnCreate(const wxString& path, long flags);
+
+        T100BOOL                    IsModified() const;
+        T100VOID                    Modify(T100BOOL mod);
+
     protected:
+        T100VOID                    create();
+        T100VOID                    destroy();
+
+        T100Editor::T100Editor*     GetEditor() const;
+
+        T100BOOL                    DoSaveDocument(const wxString& filename);
+        T100BOOL                    DoOpenDocument(const wxString& filename);
 
     private:
 

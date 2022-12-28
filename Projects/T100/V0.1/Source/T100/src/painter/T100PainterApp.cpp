@@ -1,6 +1,7 @@
 #include "T100PainterApp.h"
 
 #include "T100Painter.h"
+#include "T100PainterView.h"
 
 namespace T100Painter{
 
@@ -20,6 +21,7 @@ T100PainterApp::~T100PainterApp()
 T100VOID T100PainterApp::create()
 {
     m_painter   = T100NEW T100Painter(this);
+    m_painter->getView()->create();
 }
 
 T100VOID T100PainterApp::destroy()

@@ -164,3 +164,9 @@ T100BOOL T100ThisAppManager::close(T100WORD id)
 
     quit();
 }
+
+
+T100IDE::T100IDEApp* T100ThisAppManager::getIDE()
+{
+    return m_ide;
+}

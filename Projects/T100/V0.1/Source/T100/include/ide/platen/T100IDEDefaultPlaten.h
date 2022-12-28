@@ -14,10 +14,17 @@ class T100IDEDefaultPlaten : public T100IDEPlatenBase
 
         T100BOOL            create();
 
+        T100VOID            show_project(T100BOOL = T100TRUE);
+
     protected:
         T100VOID            destroy();
 
+        T100BOOL            create_menu();
+
+        T100BOOL            create_project();
+
     private:
+        wxMenu*             m_menu_view             = T100NULL;
 
 };
 

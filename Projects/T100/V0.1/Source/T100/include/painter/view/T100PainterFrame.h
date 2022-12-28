@@ -2,8 +2,11 @@
 #define T100PAINTERFRAME_H
 
 #include <wx/frame.h>
+#include "T100Common.h"
 
 namespace T100Painter{
+class T100PainterCanvas;
+
 
 class T100PainterFrame : public wxFrame
 {
@@ -12,8 +15,11 @@ class T100PainterFrame : public wxFrame
         virtual ~T100PainterFrame();
 
     protected:
+        T100VOID                create();
+        T100VOID                destroy();
 
     private:
+        T100PainterCanvas*      m_canvas            = T100NULL;
 
         void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);
 

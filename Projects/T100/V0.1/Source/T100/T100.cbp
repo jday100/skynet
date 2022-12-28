@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-P" />
+				<Option parameters="-E" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -109,6 +109,9 @@
 					<Add directory="include/painter/serve" />
 					<Add directory="include/painter/view" />
 					<Add directory="include/ide/mdi/frame" />
+					<Add directory="include/painter/store" />
+					<Add directory="include/painter/element" />
+					<Add directory="include/painter/element/graphics" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -212,6 +215,9 @@
 					<Add directory="include/painter/serve" />
 					<Add directory="include/painter/view" />
 					<Add directory="include/ide/mdi/frame" />
+					<Add directory="include/painter/store" />
+					<Add directory="include/painter/element" />
+					<Add directory="include/painter/element/graphics" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -439,6 +445,7 @@
 		<Unit filename="include/data/console/T100ConsoleStringToken.h" />
 		<Unit filename="include/editor/T100Editor.h" />
 		<Unit filename="include/editor/T100EditorApp.h" />
+		<Unit filename="include/editor/serve/T100EditorCallback.h" />
 		<Unit filename="include/editor/serve/T100EditorServe.h" />
 		<Unit filename="include/editor/view/T100EditorFrame.h" />
 		<Unit filename="include/editor/view/T100EditorView.h" />
@@ -454,6 +461,7 @@
 		<Unit filename="include/font/view/T100FontView.h" />
 		<Unit filename="include/ide/T100IDE.h" />
 		<Unit filename="include/ide/T100IDEApp.h" />
+		<Unit filename="include/ide/T100IDECommon.h" />
 		<Unit filename="include/ide/callback/T100IDECallbackBase.h" />
 		<Unit filename="include/ide/callback/T100IDECallbackManager.h" />
 		<Unit filename="include/ide/callback/T100IDECallbackProject.h" />
@@ -461,8 +469,11 @@
 		<Unit filename="include/ide/debug/T100IDEDebugger.h" />
 		<Unit filename="include/ide/mdi/T100MDIDocumentBase.h" />
 		<Unit filename="include/ide/mdi/T100MDIViewBase.h" />
+		<Unit filename="include/ide/mdi/doc/T100MDIPaintDocument.h" />
 		<Unit filename="include/ide/mdi/doc/T100MDITextDocument.h" />
+		<Unit filename="include/ide/mdi/frame/T100MDIPaintFrame.h" />
 		<Unit filename="include/ide/mdi/frame/T100MDITextFrame.h" />
+		<Unit filename="include/ide/mdi/view/T100MDIPaintView.h" />
 		<Unit filename="include/ide/mdi/view/T100MDITextView.h" />
 		<Unit filename="include/ide/platen/T100IDEDefaultPlaten.h" />
 		<Unit filename="include/ide/project/T100Project.h" />
@@ -554,7 +565,12 @@
 		<Unit filename="include/library/safe/T100SafeVector.h" />
 		<Unit filename="include/painter/T100Painter.h" />
 		<Unit filename="include/painter/T100PainterApp.h" />
+		<Unit filename="include/painter/T100PainterCommon.h" />
+		<Unit filename="include/painter/element/T100ElementBase.h" />
+		<Unit filename="include/painter/element/graphics/T100ElementCircle.h" />
 		<Unit filename="include/painter/serve/T100PainterServe.h" />
+		<Unit filename="include/painter/store/T100PainterStore.h" />
+		<Unit filename="include/painter/view/T100PainterCanvas.h" />
 		<Unit filename="include/painter/view/T100PainterFrame.h" />
 		<Unit filename="include/painter/view/T100PainterView.h" />
 		<Unit filename="include/qu32/T100AU32.h" />
@@ -673,6 +689,8 @@
 		<Unit filename="include/vpc/view/dialog/config/hardware/T100VPCMemorySetupDialog.h" />
 		<Unit filename="include/vpc/view/frame/debug/T100VPCDebugFrame.h" />
 		<Unit filename="include/vpc/view/panel/T100VPCPanel.h" />
+		<Unit filename="include/wxwidgets/T100EditCtrl.h" />
+		<Unit filename="include/wxwidgets/T100PaintCtrl.h" />
 		<Unit filename="include/wxwidgets/T100WxApp.h" />
 		<Unit filename="include/wxwidgets/T100WxAppManager.h" />
 		<Unit filename="include/wxwidgets/vpc/dialog/config/T100VPCConfigSetupDemoDialog.h" />
@@ -851,6 +869,7 @@
 		<Unit filename="src/data/console/T100ConsoleStringToken.cpp" />
 		<Unit filename="src/editor/T100Editor.cpp" />
 		<Unit filename="src/editor/T100EditorApp.cpp" />
+		<Unit filename="src/editor/serve/T100EditorCallback.cpp" />
 		<Unit filename="src/editor/serve/T100EditorServe.cpp" />
 		<Unit filename="src/editor/view/T100EditorFrame.cpp" />
 		<Unit filename="src/editor/view/T100EditorView.cpp" />
@@ -873,8 +892,11 @@
 		<Unit filename="src/ide/debug/T100IDEDebugger.cpp" />
 		<Unit filename="src/ide/mdi/T100MDIDocumentBase.cpp" />
 		<Unit filename="src/ide/mdi/T100MDIViewBase.cpp" />
+		<Unit filename="src/ide/mdi/doc/T100MDIPaintDocument.cpp" />
 		<Unit filename="src/ide/mdi/doc/T100MDITextDocument.cpp" />
+		<Unit filename="src/ide/mdi/frame/T100MDIPaintFrame.cpp" />
 		<Unit filename="src/ide/mdi/frame/T100MDITextFrame.cpp" />
+		<Unit filename="src/ide/mdi/view/T100MDIPaintView.cpp" />
 		<Unit filename="src/ide/mdi/view/T100MDITextView.cpp" />
 		<Unit filename="src/ide/platen/T100IDEDefaultPlaten.cpp" />
 		<Unit filename="src/ide/project/T100Project.cpp" />
@@ -954,7 +976,11 @@
 		<Unit filename="src/library/log/T100LogNew.cpp" />
 		<Unit filename="src/painter/T100Painter.cpp" />
 		<Unit filename="src/painter/T100PainterApp.cpp" />
+		<Unit filename="src/painter/element/T100ElementBase.cpp" />
+		<Unit filename="src/painter/element/graphics/T100ElementCircle.cpp" />
 		<Unit filename="src/painter/serve/T100PainterServe.cpp" />
+		<Unit filename="src/painter/store/T100PainterStore.cpp" />
+		<Unit filename="src/painter/view/T100PainterCanvas.cpp" />
 		<Unit filename="src/painter/view/T100PainterFrame.cpp" />
 		<Unit filename="src/painter/view/T100PainterView.cpp" />
 		<Unit filename="src/qu32/T100AU32.cpp" />
@@ -1069,6 +1095,8 @@
 		<Unit filename="src/vpc/view/dialog/config/hardware/T100VPCMemorySetupDialog.cpp" />
 		<Unit filename="src/vpc/view/frame/debug/T100VPCDebugFrame.cpp" />
 		<Unit filename="src/vpc/view/panel/T100VPCPanel.cpp" />
+		<Unit filename="src/wxwidgets/T100EditCtrl.cpp" />
+		<Unit filename="src/wxwidgets/T100PaintCtrl.cpp" />
 		<Unit filename="src/wxwidgets/T100WxApp.cpp" />
 		<Unit filename="src/wxwidgets/T100WxAppManager.cpp" />
 		<Unit filename="src/wxwidgets/vpc/dialog/config/T100VPCConfigSetupDemoDialog.cpp" />

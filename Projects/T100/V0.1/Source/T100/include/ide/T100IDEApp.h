@@ -6,7 +6,7 @@ class T100ThisAppManager;
 
 namespace T100IDE{
 class T100IDE;
-
+class T100IDEView;
 
 class T100IDEApp : public T100WxWidgets::T100WxApp
 {
@@ -15,6 +15,8 @@ class T100IDEApp : public T100WxWidgets::T100WxApp
         virtual ~T100IDEApp();
 
         T100VOID            show();
+
+        T100IDEView*        getView();
 
     protected:
         T100VOID            create();

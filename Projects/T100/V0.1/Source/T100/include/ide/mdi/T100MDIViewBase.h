@@ -3,9 +3,9 @@
 
 #include <wx/docmdi.h>
 #include "T100Common.h"
-class T100IDEView;
 
 namespace T100IDE{
+class T100IDEView;
 
 class T100MDIViewBase : public wxView
 {
