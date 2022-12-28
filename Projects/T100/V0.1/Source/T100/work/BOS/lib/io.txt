@@ -21,8 +21,9 @@ PROC=IO_COPY
     SUB
     MOVE    CCR                                         ACR
     //
-IO_COPY_NEXT:
     CMT     1040020
+IO_COPY_NEXT:
+    //
     IN      #io_copy_target_offset                      io_copy_source_offset
     //
     MOVE    AAR                                         io_copy_source_offset
@@ -31,7 +32,6 @@ IO_COPY_NEXT:
     MOVE    io_copy_source_offset                       ACR
     //
     MOVE    AAR                                         io_copy_target_offset
-    //MOVE    ABR                                       1
     ADD
     MOVE    io_copy_target_offset                       ACR
     //

@@ -100,7 +100,6 @@ CODE
     JZ      BOOT_ERROR
     //
     CMT     50040
-    DBG
     JUMP    {boot_file_load_buffer_offset:0}
     //
 BOOT_ERROR:

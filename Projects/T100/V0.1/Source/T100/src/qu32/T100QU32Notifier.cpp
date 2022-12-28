@@ -26,6 +26,8 @@ T100VOID T100QU32Notifier::destroy()
 
 T100VOID T100QU32Notifier::init()
 {
+    m_cmt       = T100FALSE;
+
     m_cor       = T100FALSE;
     m_cbr       = T100FALSE;
     m_ccr       = T100FALSE;
@@ -121,6 +123,12 @@ T100VOID T100QU32Notifier::notify_register_amf()
 T100VOID T100QU32Notifier::notify_register_aof()
 {
     m_aof = T100TRUE;
+}
+
+T100VOID T100QU32Notifier::notify_cmt_update(T100WORD value)
+{
+    m_cmt_id    = value;
+    m_cmt       = T100TRUE;
 }
 
 T100VOID T100QU32Notifier::notify_memory_update(T100WORD offset, T100WORD value)

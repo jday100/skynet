@@ -41,6 +41,19 @@ DATA
     file_read_middle_low                                    INTEGER
     file_read_middle_high                                   INTEGER
     //
+    //
+    file_read_index_result                                  INTEGER
+    file_read_index_result_offset                           INTEGER
+    //
+    file_read_index_location_offset                         INTEGER
+    file_read_index_index                                   INTEGER
+    file_read_index_location_low                            INTEGER
+    file_read_index_location_high                           INTEGER
+    file_read_index_buffer_offset                           INTEGER
+    //
+    file_read_index_middle_low                              INTEGER
+    file_read_index_middle_high                             INTEGER
+    //
 END
 
 //
@@ -162,6 +175,9 @@ FILE_LOAD_NEXT:
     MOVE    ACR                                             file_load_result
     JZ      FILE_LOAD_ERROR
     //
+    MOVE    file_load_location_low                          file_load_value_location_low
+    MOVE    file_load_location_high                         file_load_value_location_high
+    //
     CMT     4033060
     MOVE    AAR                                             file_load_buffer_offset
     MOVE    ABR                                             16384
@@ -219,7 +235,6 @@ FILE_READ_NEXT:
     CMT     4034040
     MOVE    AAR                                             @{CBR:@file_read_result}
     MOVE    ABR                                             int069_mode_disk_read
-    //MOVE    ACR                                             @{CBR:@file_disk_buffer}
     MOVE    ACR                                             file_read_buffer_offset
     MOVE    ADR                                             @{CBR:@file_read_index}
     INT     69
@@ -236,6 +251,7 @@ FILE_READ_NEXT:
     MOVE    ABR                                             1
     ADD
     MOVE    file_read_index                                 ACR
+    //
     LOOP    FILE_READ_NEXT
     //
     CMT     4034060
@@ -247,4 +263,64 @@ FILE_READ_ERROR:
 END
 
 
-
+PROC=FILE_READ_INDEX
+    CMT     40050510
+    MOVE    file_read_index_result_offset                   AAR
+    MOVE    file_read_index_location_offset                 ABR
+    MOVE    file_read_index_index                           ACR
+    MOVE    file_read_index_buffer_offset                   ADR
+    //
+    MOVE    AAR                                             @file_read_index_result
+    MOVE    ABR                                             file_read_index_location_offset
+    CALL    ITEM_EQUAL_ISEND
+    MOVE    ACR                                             file_read_index_result
+    JNZ     FILE_READ_INDEX_ERROR
+    //
+    CMT     40050520
+    MOVE    AAR                                             15
+    MOVE    ABR                                             file_read_index_index
+    SUB
+    MOVE    ACR                                             AMF
+    JNZ     FILE_READ_INDEX_ERROR
+    //
+    CMT     40050530
+    MOVE    AAR                                             #file_read_index_location_offset
+    //
+    MOVE    AAR                                             @file_read_index_result
+    MOVE    ABR                                             file_read_index_location_offset
+    MOVE    ACR                                             @file_read_index_middle_low
+    CALL    FS_RELATIVE_LOCATION
+    MOVE    ACR                                             file_read_index_result
+    JZ      FILE_READ_INDEX_ERROR
+    //
+    CMT     40050540
+    MOVE    AAR                                             file_read_index_middle_low
+    MOVE    AAR                                             file_read_index_middle_high
+    //
+    MOVE    AAR                                             @file_read_index_result
+    MOVE    ABR                                             @file_read_index_middle_low
+    MOVE    ACR                                             @file_read_index_location_low
+    CALL    FS_ABSOLUTE_LOCATION
+    MOVE    ACR                                             file_read_index_result
+    JZ      FILE_READ_INDEX_ERROR
+    //
+    CMT     40050550
+    MOVE    AAR                                             file_read_index_index
+    MOVE    AAR                                             file_read_index_location_low
+    MOVE    AAR                                             file_read_index_location_high
+    //
+    MOVE    AAR                                             @{CBR:@file_read_index_result}
+    MOVE    ABR                                             int069_mode_disk_read
+    MOVE    ACR                                             file_read_index_buffer_offset
+    MOVE    ADR                                             @{CBR:@file_read_index_index}
+    INT     69
+    MOVE    ACR                                             file_read_index_result
+    JZ      FILE_READ_INDEX_ERROR
+    //
+    CMT     40050560
+    MOVE    #file_read_index_result_offset                  1
+    RET
+FILE_READ_INDEX_ERROR:
+    CMT     40050570
+    MOVE    #file_read_index_result_offset                  0
+END

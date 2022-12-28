@@ -3,6 +3,7 @@ IMPORT  "fs\fs.txt"
 IMPORT  "init_load.txt"
 
 IMPORT  "test\boot\test_fs.txt"
+IMPORT  "test\init\test_init.txt"
 
 
 MODE    REAL
@@ -77,9 +78,24 @@ CODE
     MOVE    ACR                                             init_result
     JZ      INIT_ERROR
     //
+    CMT     70040
+    MOVE    AAR                                             @init_result
+    CALL    INIT_LOAD_GD
+    MOVE    ACR                                             init_result
+    JZ      INIT_ERROR
+    //
+    CMT     70050
+    MOVE    AAR                                             CBR
+    MOVE    ABR                                             65536
+    ADD
+    //JUMP    {ACR:0}
+    //
+    ENTER   {0:ACR}
+
+    HALT
     //
 INIT_ERROR:
-    CMT     70050
+    CMT     70090
     DBG
     HALT
 END
@@ -164,15 +180,22 @@ PROC=INIT_LOAD_KERNEL
     //
     CMT     73020
     MOVE    AAR                                             @init_load_kernel_result
-    MOVE    ABR                                             @init_load_kernel_location_low
+    MOVE    ABR                                             @init_kernel_file
+    MOVE    ACR                                             @init_load_kernel_location_low
     CALL    FS_FILE_OPEN
+    MOVE    ACR                                             init_load_kernel_result
+    JZ      INIT_LOAD_KERNEL_ERROR
+    //
+    CMT     73925
+    MOVE    AAR                                             @init_load_kernel_result
+    CALL    TEST_INIT_FILE_OPEN
     MOVE    ACR                                             init_load_kernel_result
     JZ      INIT_LOAD_KERNEL_ERROR
     //
     CMT     73030
     MOVE    AAR                                             @init_load_kernel_result
     MOVE    ABR                                             @init_load_kernel_location_low
-    CALL    INIT_EXE_LOAD
+    CALL    INIT_LOAD
     MOVE    ACR                                             init_load_kernel_result
     JZ      INIT_LOAD_KERNEL_ERROR
     //

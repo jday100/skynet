@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-T -u=os.init" />
+				<Option parameters="-P" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -103,6 +103,12 @@
 					<Add directory="include/vpc/view/dialog/config" />
 					<Add directory="include/library/safe" />
 					<Add directory="include/vpc/view/panel" />
+					<Add directory="include/wxwidgets/vpc/frame/debug" />
+					<Add directory="include/library/capacity" />
+					<Add directory="include/painter" />
+					<Add directory="include/painter/serve" />
+					<Add directory="include/painter/view" />
+					<Add directory="include/ide/mdi/frame" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -201,6 +207,11 @@
 					<Add directory="include/vpc/view/dialog/config" />
 					<Add directory="include/library/safe" />
 					<Add directory="include/vpc/view/panel" />
+					<Add directory="include/library/capacity" />
+					<Add directory="include/painter" />
+					<Add directory="include/painter/serve" />
+					<Add directory="include/painter/view" />
+					<Add directory="include/ide/mdi/frame" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -233,6 +244,9 @@
 		<Unit filename="T100Main.cpp" />
 		<Unit filename="T100Main.h" />
 		<Unit filename="build/.gitkeep" />
+		<Unit filename="build/boot.bin" />
+		<Unit filename="build/init.bin" />
+		<Unit filename="build/kernel.knl" />
 		<Unit filename="build/rom.bin" />
 		<Unit filename="cmd.txt" />
 		<Unit filename="docs/.gitkeep" />
@@ -426,6 +440,7 @@
 		<Unit filename="include/editor/T100Editor.h" />
 		<Unit filename="include/editor/T100EditorApp.h" />
 		<Unit filename="include/editor/serve/T100EditorServe.h" />
+		<Unit filename="include/editor/view/T100EditorFrame.h" />
 		<Unit filename="include/editor/view/T100EditorView.h" />
 		<Unit filename="include/font/T100FontApp.h" />
 		<Unit filename="include/font/T100FontBuilder.h" />
@@ -446,15 +461,17 @@
 		<Unit filename="include/ide/debug/T100IDEDebugger.h" />
 		<Unit filename="include/ide/mdi/T100MDIDocumentBase.h" />
 		<Unit filename="include/ide/mdi/T100MDIViewBase.h" />
-		<Unit filename="include/ide/mdi/doc/T100TextDocument.h" />
-		<Unit filename="include/ide/mdi/view/T100TextView.h" />
-		<Unit filename="include/ide/platen/T100DefaultPlaten.h" />
+		<Unit filename="include/ide/mdi/doc/T100MDITextDocument.h" />
+		<Unit filename="include/ide/mdi/frame/T100MDITextFrame.h" />
+		<Unit filename="include/ide/mdi/view/T100MDITextView.h" />
+		<Unit filename="include/ide/platen/T100IDEDefaultPlaten.h" />
 		<Unit filename="include/ide/project/T100Project.h" />
 		<Unit filename="include/ide/serve/T100IDEServe.h" />
 		<Unit filename="include/ide/serve/T100IDEServeBase.h" />
 		<Unit filename="include/ide/serve/T100IDEServeProject.h" />
 		<Unit filename="include/ide/store/T100IDEStore.h" />
 		<Unit filename="include/ide/store/T100IDEStoreBase.h" />
+		<Unit filename="include/ide/view/T100IDEMainFrame.h" />
 		<Unit filename="include/ide/view/T100IDEPlatenBase.h" />
 		<Unit filename="include/ide/view/T100IDEPlatenManager.h" />
 		<Unit filename="include/ide/view/T100IDEView.h" />
@@ -508,6 +525,12 @@
 		<Unit filename="include/library/T100Unicode.h" />
 		<Unit filename="include/library/T100Vessel.h" />
 		<Unit filename="include/library/T100Writer.h" />
+		<Unit filename="include/library/capacity/T100CapacityCharScanner.h" />
+		<Unit filename="include/library/capacity/T100CapacityCharToken.h" />
+		<Unit filename="include/library/capacity/T100CapacityCommon.h" />
+		<Unit filename="include/library/capacity/T100CapacityParser.h" />
+		<Unit filename="include/library/capacity/T100CapacityScanner.h" />
+		<Unit filename="include/library/capacity/T100CapacityToken.h" />
 		<Unit filename="include/library/cmdline/T100CmdLineCharScanner.h" />
 		<Unit filename="include/library/cmdline/T100CmdLineCommon.h" />
 		<Unit filename="include/library/cmdline/T100CmdLineParser.h" />
@@ -529,6 +552,11 @@
 		<Unit filename="include/library/log/T100LogFile.h" />
 		<Unit filename="include/library/log/T100LogNew.h" />
 		<Unit filename="include/library/safe/T100SafeVector.h" />
+		<Unit filename="include/painter/T100Painter.h" />
+		<Unit filename="include/painter/T100PainterApp.h" />
+		<Unit filename="include/painter/serve/T100PainterServe.h" />
+		<Unit filename="include/painter/view/T100PainterFrame.h" />
+		<Unit filename="include/painter/view/T100PainterView.h" />
 		<Unit filename="include/qu32/T100AU32.h" />
 		<Unit filename="include/qu32/T100CU32.h" />
 		<Unit filename="include/qu32/T100Executor32.h" />
@@ -824,6 +852,7 @@
 		<Unit filename="src/editor/T100Editor.cpp" />
 		<Unit filename="src/editor/T100EditorApp.cpp" />
 		<Unit filename="src/editor/serve/T100EditorServe.cpp" />
+		<Unit filename="src/editor/view/T100EditorFrame.cpp" />
 		<Unit filename="src/editor/view/T100EditorView.cpp" />
 		<Unit filename="src/font/T100FontApp.cpp" />
 		<Unit filename="src/font/T100FontBuilder.cpp" />
@@ -844,15 +873,17 @@
 		<Unit filename="src/ide/debug/T100IDEDebugger.cpp" />
 		<Unit filename="src/ide/mdi/T100MDIDocumentBase.cpp" />
 		<Unit filename="src/ide/mdi/T100MDIViewBase.cpp" />
-		<Unit filename="src/ide/mdi/doc/T100TextDocument.cpp" />
-		<Unit filename="src/ide/mdi/view/T100TextView.cpp" />
-		<Unit filename="src/ide/platen/T100DefaultPlaten.cpp" />
+		<Unit filename="src/ide/mdi/doc/T100MDITextDocument.cpp" />
+		<Unit filename="src/ide/mdi/frame/T100MDITextFrame.cpp" />
+		<Unit filename="src/ide/mdi/view/T100MDITextView.cpp" />
+		<Unit filename="src/ide/platen/T100IDEDefaultPlaten.cpp" />
 		<Unit filename="src/ide/project/T100Project.cpp" />
 		<Unit filename="src/ide/serve/T100IDEServe.cpp" />
 		<Unit filename="src/ide/serve/T100IDEServeBase.cpp" />
 		<Unit filename="src/ide/serve/T100IDEServeProject.cpp" />
 		<Unit filename="src/ide/store/T100IDEStore.cpp" />
 		<Unit filename="src/ide/store/T100IDEStoreBase.cpp" />
+		<Unit filename="src/ide/view/T100IDEMainFrame.cpp" />
 		<Unit filename="src/ide/view/T100IDEPlatenBase.cpp" />
 		<Unit filename="src/ide/view/T100IDEPlatenManager.cpp" />
 		<Unit filename="src/ide/view/T100IDEView.cpp" />
@@ -899,6 +930,11 @@
 		<Unit filename="src/library/T100Timer.cpp" />
 		<Unit filename="src/library/T100Unicode.cpp" />
 		<Unit filename="src/library/T100Writer.cpp" />
+		<Unit filename="src/library/capacity/T100CapacityCharScanner.cpp" />
+		<Unit filename="src/library/capacity/T100CapacityCharToken.cpp" />
+		<Unit filename="src/library/capacity/T100CapacityParser.cpp" />
+		<Unit filename="src/library/capacity/T100CapacityScanner.cpp" />
+		<Unit filename="src/library/capacity/T100CapacityToken.cpp" />
 		<Unit filename="src/library/cmdline/T100CmdLineCharScanner.cpp" />
 		<Unit filename="src/library/cmdline/T100CmdLineParser.cpp" />
 		<Unit filename="src/library/cmdline/T100CmdLineStringScanner.cpp" />
@@ -916,6 +952,11 @@
 		<Unit filename="src/library/log/T100LogConsole.cpp" />
 		<Unit filename="src/library/log/T100LogFile.cpp" />
 		<Unit filename="src/library/log/T100LogNew.cpp" />
+		<Unit filename="src/painter/T100Painter.cpp" />
+		<Unit filename="src/painter/T100PainterApp.cpp" />
+		<Unit filename="src/painter/serve/T100PainterServe.cpp" />
+		<Unit filename="src/painter/view/T100PainterFrame.cpp" />
+		<Unit filename="src/painter/view/T100PainterView.cpp" />
 		<Unit filename="src/qu32/T100AU32.cpp" />
 		<Unit filename="src/qu32/T100CU32.cpp" />
 		<Unit filename="src/qu32/T100Executor32.cpp" />
@@ -1074,6 +1115,8 @@
 		<Unit filename="test/build/test_full.bin" />
 		<Unit filename="test/build/test_variable.bin" />
 		<Unit filename="test/build/test_virtual_basic.bin" />
+		<Unit filename="test/deploy/T100DeployBTest.cpp" />
+		<Unit filename="test/deploy/T100DeployBTest.h" />
 		<Unit filename="test/deploy/T100DeployTest.cpp" />
 		<Unit filename="test/deploy/T100DeployTest.h" />
 		<Unit filename="test/deploy/T100DeployTestHint.cpp" />
@@ -1088,6 +1131,8 @@
 		<Unit filename="test/full/T100FullTestHint.h" />
 		<Unit filename="test/full/T100VirtualTest.cpp" />
 		<Unit filename="test/full/T100VirtualTest.h" />
+		<Unit filename="test/library/T100CapacityTest.cpp" />
+		<Unit filename="test/library/T100CapacityTest.h" />
 		<Unit filename="test/library/T100LibraryTest.cpp" />
 		<Unit filename="test/library/T100LibraryTest.h" />
 		<Unit filename="test/library/T100LibraryTestHint.cpp" />
@@ -1220,10 +1265,11 @@
 		<Unit filename="work/BOS/fs/table.txt" />
 		<Unit filename="work/BOS/init/init.txt" />
 		<Unit filename="work/BOS/init/init_load.txt" />
+		<Unit filename="work/BOS/kernel/gd.txt" />
 		<Unit filename="work/BOS/kernel/kernel.txt" />
-		<Unit filename="work/BOS/kernel/mm.txt" />
 		<Unit filename="work/BOS/lib/dword.txt" />
 		<Unit filename="work/BOS/lib/io.txt" />
+		<Unit filename="work/BOS/lib/mem.txt" />
 		<Unit filename="work/BOS/lib/string.txt" />
 		<Unit filename="work/BOS/mm.txt" />
 		<Unit filename="work/BOS/rom/data.txt" />
@@ -1241,6 +1287,8 @@
 		<Unit filename="work/BOS/share.txt" />
 		<Unit filename="work/BOS/test/boot/test_boot.txt" />
 		<Unit filename="work/BOS/test/boot/test_fs.txt" />
+		<Unit filename="work/BOS/test/init/test_init.txt" />
+		<Unit filename="work/BOS/test/init/test_init_load.txt" />
 		<Unit filename="work/BOS/test/lib/test_string_split.txt" />
 		<Unit filename="work/BOS/test/rom/test_rom.txt" />
 		<Unit filename="work/BOS/test/test_data.txt" />

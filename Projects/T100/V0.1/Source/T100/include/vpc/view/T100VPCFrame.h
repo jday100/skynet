@@ -21,6 +21,7 @@ class T100VPCFrame: public wxFrame
 		static const long ID_THREAD_STOP;
 		static const long ID_THREAD_QUIT;
 
+		static const long ID_DEBUG_CMT_UPDATE;
 		static const long ID_DEBUG_REGISTER_UPDATE;
 		static const long ID_DEBUG_MEMORY_UPDATE;
 		static const long ID_DEBUG_PORT_UPDATE;
@@ -76,6 +77,7 @@ class T100VPCFrame: public wxFrame
 		void OnThreadStop(wxThreadEvent& event);
 		void OnThreadQuit(wxThreadEvent& event);
 
+		void OnDebugCmtUpdate(wxThreadEvent& event);
 		void OnDebugRegisterUpdate(wxThreadEvent& event);
 		void OnDebugMemoryUpdate(wxThreadEvent& event);
 		void OnDebugPortUpdate(wxThreadEvent& event);

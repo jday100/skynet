@@ -1,0 +1,17 @@
+DATA
+    test_init_file_open_result_offset                       INTEGER     0
+    //
+END
+
+PROC=TEST_INIT_FILE_OPEN
+    CMT     1
+    MOVE    test_init_file_open_result_offset               AAR
+    //
+    CMT     2
+    MOVE    #test_init_file_open_result_offset              1
+    RET
+    //
+TEST_INIT_FILE_OPEN_ERROR:
+    CMT     10
+    MOVE    #test_init_file_open_result_offset              0
+END

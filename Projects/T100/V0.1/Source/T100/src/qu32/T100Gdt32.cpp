@@ -97,7 +97,7 @@ T100BOOL T100Gdt32::loadGdtItem(T100WORD& offset)
 
     result = getHost()->getMemory32()->read(offset, value);
     if(result){
-        item->VALUE     = value;
+        item->LENGTH    = value;
         offset++;
     }else{
         T100SAFE_DELETE(item);

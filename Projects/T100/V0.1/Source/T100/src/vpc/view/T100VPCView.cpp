@@ -8,6 +8,8 @@
 #include "T100VPCHost.h"
 #include "T100VPCDebugFrame.h"
 
+#include "T100VPCDebugDemoFrame.h"
+
 namespace T100VPC{
 
 T100VPCView::T100VPCView()
@@ -147,6 +149,12 @@ T100BOOL T100VPCView::ShowDebugFrame()
     if(!m_debug){
         m_debug = T100NEW T100VPCDebugFrame(m_frame);
     }
+
+    /*
+    T100VPCDebugDemoFrame* frame = T100NEW T100VPCDebugDemoFrame(m_frame);
+
+    frame->Show();
+    */
 
     T100VPCSetup::DEBUG         = T100TRUE;
     T100VPCSetup::DEBUG_MODE    = T100QU32::T100EXECUTOR_MODE_RUN;

@@ -22,6 +22,7 @@ const long T100VPCFrame::ID_STATUSBAR1 = wxNewId();
 const long T100VPCFrame::ID_THREAD_START = wxNewId();
 const long T100VPCFrame::ID_THREAD_STOP = wxNewId();
 const long T100VPCFrame::ID_THREAD_QUIT = wxNewId();
+const long T100VPCFrame::ID_DEBUG_CMT_UPDATE = wxNewId();
 const long T100VPCFrame::ID_DEBUG_REGISTER_UPDATE = wxNewId();
 const long T100VPCFrame::ID_DEBUG_MEMORY_UPDATE = wxNewId();
 const long T100VPCFrame::ID_DEBUG_PORT_UPDATE = wxNewId();
@@ -35,6 +36,7 @@ BEGIN_EVENT_TABLE(T100VPCFrame,wxFrame)
 	EVT_THREAD(ID_THREAD_STOP, T100VPCFrame::OnThreadStop)
 	EVT_THREAD(ID_THREAD_QUIT, T100VPCFrame::OnThreadQuit)
 	//
+	EVT_THREAD(ID_DEBUG_CMT_UPDATE, T100VPCFrame::OnDebugCmtUpdate)
 	EVT_THREAD(ID_DEBUG_REGISTER_UPDATE, T100VPCFrame::OnDebugRegisterUpdate)
 	EVT_THREAD(ID_DEBUG_MEMORY_UPDATE, T100VPCFrame::OnDebugMemoryUpdate)
 	EVT_THREAD(ID_DEBUG_PORT_UPDATE, T100VPCFrame::OnDebugPortUpdate)
@@ -151,6 +153,11 @@ void T100VPCFrame::OnThreadStop(wxThreadEvent& event)
 void T100VPCFrame::OnThreadQuit(wxThreadEvent& event)
 {
 
+}
+
+void T100VPCFrame::OnDebugCmtUpdate(wxThreadEvent& event)
+{
+    T100VPCCallback::debug_cmt_update((void*)&event);
 }
 
 void T100VPCFrame::OnDebugRegisterUpdate(wxThreadEvent& event)

@@ -1,0 +1,116 @@
+//T100QU32Common.h
+
+GDT
+1、ROM
+    ROM CODE
+        Base :      0
+        Length :    1G
+
+    ROM DATA
+        Base :      1G + 2K
+        Length :    1K
+
+    ROM STACK
+        Base :      1G + 8K
+        Length :    16K
+
+2、INT
+    INT TABLE
+        Base :      1G
+        Length :    1K
+
+    INT CODE
+        Base :      0
+        Length :    1G
+
+    INT DATA
+        Base :      1G + 4K
+        Length :    2K
+
+    INT STACK
+        Base :      1G + 8K
+        Length :    16K
+
+3、KERNEL
+    KERNEL CODE
+        Base :      1G + 64K
+        Length :    ?
+
+    KERNEL DATA
+        Base :      1G + 64k
+        Length :    ?
+
+    KERNEL STACK
+        Base :      1G + 64K + ? + 1K
+        Length :    256K
+
+
+
+
+1G + 128K = 1073872896
+|
+|
+|           KERNEL
+|
+|
+1G + 256K = 1074003968
+|
+|
+|           BOOT    /   GDT
+|
+|
+1G + 320K = 1074069504
+|
+|
+|           BOOT STACK  /   INIT BUFFER
+|
+|
+1G + 512K = 1074266112
+|
+|
+|           INIT
+|
+|
+1G + 640K = 1074397184
+|
+|
+|           CODE
+|
+|
+1G + 656K = 1074413568
+|
+|
+|           DATA
+|
+|
+1G + 672K = 1074429952
+|
+|
+|           SHARE CODE
+|
+|
+1G + 688K = 1074446336
+|
+|
+|           SHARE DATA
+|
+|
+1G + 704K
+|
+|
+|
+|
+|
+1G + 896K = 1074659328
+|
+|
+|           INIT STACK
+|
+|
+1G + 1M = 1074790400
+|
+|
+|
+|
+|
+4G

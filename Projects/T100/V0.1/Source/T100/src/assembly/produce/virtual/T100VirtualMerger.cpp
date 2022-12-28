@@ -369,6 +369,7 @@ T100BOOL T100VirtualMerger::mergeCode(T100SegmentCode* source, T100SegmentCode*&
             }
         }else{
             codes_vector.push_back(source);
+            result = T100TRUE;
         }
     }else{
         T100SEGMENT_KEY* key = T100NEW T100SEGMENT_KEY();
@@ -387,7 +388,14 @@ T100BOOL T100VirtualMerger::mergeCode(T100SegmentCode* source, T100SegmentCode*&
             }else{
                 codes_hash[*key] = source;
                 codes_vector.push_back(source);
+
+                result = T100TRUE;
             }
+        }else{
+            codes_hash[*key] = source;
+            codes_vector.push_back(source);
+
+            result = T100TRUE;
         }
     }
     return result;

@@ -21,6 +21,17 @@ namespace T100VPC{
     class T100VPCApp;
 }
 
+namespace T100Editor{
+    class T100EditorApp;
+}
+
+namespace T100Painter{
+    class T100PainterApp;
+}
+
+namespace T100IDE{
+    class T100IDEApp;
+}
 
 class T100ThisAppManager : public T100WxWidgets::T100WxAppManager
 {
@@ -45,6 +56,9 @@ class T100ThisAppManager : public T100WxWidgets::T100WxAppManager
         T100VDisk::T100VDiskConsoleApp*     m_vdisk         = T100NULL;
         T100Assembly::T100AssemblyApp*      m_assembly      = T100NULL;
         T100VPC::T100VPCApp*                m_vpc           = T100NULL;
+        T100Editor::T100EditorApp*          m_editor        = T100NULL;
+        T100Painter::T100PainterApp*        m_painter       = T100NULL;
+        T100IDE::T100IDEApp*                m_ide           = T100NULL;
 
     private:
         T100ThisAppCmdLineResult            m_info;

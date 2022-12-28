@@ -243,6 +243,23 @@ T100BOOL T100VPCCallback::debug_button_return_click(void* d)
     }
 }
 
+T100BOOL T100VPCCallback::debug_cmt_update(void* d)
+{
+    wxThreadEvent*      data        = T100NULL;
+
+    data = static_cast<wxThreadEvent*>(d);
+
+    if(data){
+        T100WORD        id;
+
+        id = data->GetInt();
+        m_view->getDebugFrame()->OnCmtUpdate(id);
+        return T100TRUE;
+    }
+
+    return T100FALSE;
+}
+
 T100BOOL T100VPCCallback::debug_register_update(void* d)
 {
     T100RegisterEventData*      data            = T100NULL;

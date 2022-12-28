@@ -29,6 +29,7 @@ class T100VPCDebugFrame : public wxFrame
         T100BOOL            save();
 
     public:
+        T100BOOL            OnCmtUpdate(T100WORD);
         T100BOOL            OnRegisterUpdate(T100WORD, T100WORD);
         T100BOOL            OnMemoryUpdate(T100WORD, T100WORD);
         T100BOOL            OnPortUpdate(T100WORD, T100WORD);
@@ -41,6 +42,9 @@ class T100VPCDebugFrame : public wxFrame
 		wxButton*           ReturnButton;
 		wxButton*           RunButton;
 		wxButton*           StepButton;
+
+		wxComboBox*         CmtComboBox;
+		wxComboBox*         ComboBox15;
 
 		wxComboBox*         AARComboBox;
 		wxComboBox*         ABRComboBox;
@@ -87,6 +91,9 @@ class T100VPCDebugFrame : public wxFrame
 		wxStaticText*       StaticText15;
 		wxStaticText*       StaticText16;
 		wxStaticText*       StaticText17;
+
+		wxStaticText*       StaticText18;
+		wxStaticText*       StaticText19;
 
     private:
         static const long ID_STATICTEXT1;
@@ -139,6 +146,15 @@ class T100VPCDebugFrame : public wxFrame
 		static const long ID_BUTTON_RETURN;
 		static const long ID_BUTTON_PAUSE;
 
+		static const long ID_STATICTEXT18;
+		static const long ID_COMBOBOX_CMT;
+		static const long ID_STATICTEXT19;
+		static const long ID_COMBOBOX15;
+
+
+		void OnCmtComboBoxSelected(wxCommandEvent& event);
+		void OnCmtComboBoxTextUpdated(wxCommandEvent& event);
+		void OnCmtComboBoxTextEnter(wxCommandEvent& event);
 
 		void OnCORComboBoxSelected(wxCommandEvent& event);
 		void OnCORComboBoxTextUpdated(wxCommandEvent& event);

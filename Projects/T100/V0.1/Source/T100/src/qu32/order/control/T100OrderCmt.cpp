@@ -21,6 +21,8 @@ T100BOOL T100OrderCmt::run()
 
     if(T100QU32Setup::DEBUG){
         T100Library::T100TestTools::Print(std::to_wstring(id));
+
+        getHost()->getNotifier().notify_cmt_update(id);
     }
 
     getHost()->getExecutor32()->pauseComment();

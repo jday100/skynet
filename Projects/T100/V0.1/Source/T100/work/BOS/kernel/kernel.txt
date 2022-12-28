@@ -1,0 +1,71 @@
+DATA
+    kernel_result                                           INTEGER
+    //
+    kernel_start_message                                    STRING      "kernel is starting..."
+    //
+    kernel_show_info_result                                 INTEGER
+    kernel_show_info_result_offset                          INTEGER
+    //
+    kernel_print_result                                     INTEGER
+    kernel_print_result_offset                              INTEGER
+    //
+END
+
+CODE
+    CMT     1
+    DBG
+    //
+    MOVE    SSR                                             1074659328
+    MOVE    SPR                                             0
+    //
+    MOVE    AAR                                             @kernel_result
+    CALL    KERNEL_SHOW_INFO
+    MOVE    ACR                                             kernel_result
+    JZ      KERNEL_START_ERROR
+    //
+    CMT     2
+    MOVE    AAR                                             1
+    //
+    HALT
+    //
+KERNEL_START_ERROR:
+    CMT     9
+    MOVE    AAR                                             0
+    HALT
+END
+
+
+PROC=KERNEL_SHOW_INFO
+    CMT     71010
+    MOVE    kernel_show_info_result_offset                  AAR
+    MOVE    AAR                                             @kernel_show_info_result
+    MOVE    ABR                                             kernel_start_message
+    CALL    KERNEL_PRINT
+    MOVE    ACR                                             kernel_show_info_result
+    JZ      KERNEL_SHOW_INFO_ERROR
+    //
+    CMT     71020
+    MOVE    #kernel_show_info_result_offset                 1
+    RET
+KERNEL_SHOW_INFO_ERROR:
+    CMT     71030
+    MOVE    #kernel_show_info_result_offset                 0
+END
+
+PROC=KERNEL_PRINT
+    CMT     74010
+    MOVE    kernel_print_result_offset                      AAR
+    MOVE    AAR                                             @{CBR:@kernel_print_result}
+    MOVE    ACR                                             @{CBR:ABR}
+    MOVE    ABR                                             1
+    INT     68
+    MOVE    ACR                                             kernel_print_result
+    JZ      KERNEL_PRINT_ERROR
+    //
+    CMT     74020
+    MOVE    #kernel_print_result_offset                     1
+    RET
+KERNEL_PRINT_ERROR:
+    CMT     74030
+    MOVE    #kernel_print_result_offset                     0
+END

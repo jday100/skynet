@@ -33,6 +33,7 @@ class T100QU32Notifier
         T100VOID                notify_register_amf();
         T100VOID                notify_register_aof();
 
+        T100VOID                notify_cmt_update(T100WORD);
         T100VOID                notify_memory_update(T100WORD, T100WORD);
         T100VOID                notify_port_update(T100WORD, T100WORD);
 
@@ -43,9 +44,12 @@ class T100QU32Notifier
         T100VOID                init();
 
     private:
+        T100WORD                m_cmt_id;
         T100QU32Timer           m_timer;
 
         std::atomic_bool        m_running;
+
+        std::atomic_bool        m_cmt;
 
         std::atomic_bool        m_cor;
         std::atomic_bool        m_cbr;

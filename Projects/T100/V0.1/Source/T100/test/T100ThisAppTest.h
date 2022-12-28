@@ -10,6 +10,7 @@
 #include "T100FullTest.h"
 #include "T100OSTest.h"
 #include "T100DeployTest.h"
+#include "T100DeployBTest.h"
 
 
 namespace T100{
@@ -32,6 +33,7 @@ class T100ThisAppTest : public T100Library::T100Test
         T100OS::T100OSTest                      test_os;
 
         T100::T100DeployTest                    test_deploy;
+        T100::T100DeployBTest                   test_deploy_b;
 
     private:
         static T100WSTRING                      m_name;

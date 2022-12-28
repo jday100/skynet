@@ -14,6 +14,9 @@
 #include "T100VPCApp.h"
 #include "T100VDiskConsoleApp.h"
 #include "T100AssemblyApp.h"
+#include "T100EditorApp.h"
+#include "T100PainterApp.h"
+#include "T100IDEApp.h"
 
 
 T100ThisAppManager::T100ThisAppManager()
@@ -68,6 +71,27 @@ T100BOOL T100ThisAppManager::start()
         }else{
             test.run();
         }
+    }
+
+    if(m_info.EDITOR){
+        m_info.RUNNING      = T100TRUE;
+
+        m_editor    = T100NEW T100Editor::T100EditorApp(this, m_info.QUIT);
+        m_editor->show();
+    }
+
+    if(m_info.PAINTER){
+        m_info.RUNNING      = T100TRUE;
+
+        m_painter   = T100NEW T100Painter::T100PainterApp(this, m_info.QUIT);
+        m_painter->show();
+    }
+
+    if(m_info.IDE){
+        m_info.RUNNING      = T100TRUE;
+
+        m_ide       = T100NEW T100IDE::T100IDEApp(this, m_info.QUIT);
+        m_ide->show();
     }
 
     if(m_info.FONT){

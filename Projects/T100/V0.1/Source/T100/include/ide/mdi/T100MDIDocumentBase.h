@@ -1,8 +1,14 @@
 #ifndef T100MDIDOCUMENTBASE_H
 #define T100MDIDOCUMENTBASE_H
 
+#include <wx/docmdi.h>
+#include "T100Common.h"
 
-class T100MDIDocumentBase
+namespace T100IDE{
+class T100IDEServe;
+
+
+class T100MDIDocumentBase : public wxDocument
 {
     public:
         T100MDIDocumentBase();
@@ -12,5 +18,7 @@ class T100MDIDocumentBase
 
     private:
 };
+
+}
 
 #endif // T100MDIDOCUMENTBASE_H

@@ -65,6 +65,23 @@ PROC=TEST_STRING_SPLIT
     SUB
     JNZ     TEST_STRING_SPLIT_ERROR
     //
+    //
+    MOVE    test_string_split_array_offset                  @test_string_split_array
+    MOVE    test_string_split_array_buffer_offset           @test_string_split_array_buffer
+    //
+    MOVE    AAR                                             @test_string_split_result
+    MOVE    ABR                                             test_string_split_source
+    MOVE    ACR                                             test_string_split_mask
+    MOVE    ADR                                             @test_string_split_size
+    CALL    STRING_SPLIT
+    MOVE    ACR                                             test_string_split_result
+    JZ      TEST_STRING_SPLIT_ERROR
+    //
+    MOVE    AAR                                             test_string_split_size
+    MOVE    ABR                                             3
+    SUB
+    JNZ     TEST_STRING_SPLIT_ERROR
+    //
     CMT     12
     MOVE    #test_string_split_result_offset                1
     RET

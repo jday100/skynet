@@ -51,6 +51,17 @@ T100BOOL T100VPCLink::notify_stop()
     return T100TRUE;
 }
 
+T100BOOL T100VPCLink::notify_cmt_update(T100WORD value)
+{
+    wxThreadEvent       event(wxEVT_THREAD, T100VPCFrame::ID_DEBUG_CMT_UPDATE);
+
+    event.SetInt(value);
+
+    wxQueueEvent(m_view->getFrame(), event.Clone());
+
+    return T100TRUE;
+}
+
 T100BOOL T100VPCLink::notify_register_update(T100WORD type, T100WORD value)
 {
     wxThreadEvent       event(wxEVT_THREAD, T100VPCFrame::ID_DEBUG_REGISTER_UPDATE);

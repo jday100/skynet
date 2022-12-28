@@ -52,6 +52,11 @@ const long T100VPCDebugFrame::ID_COMBOBOX14 = wxNewId();
 const long T100VPCDebugFrame::ID_LISTVIEW_PORT = wxNewId();
 const long T100VPCDebugFrame::ID_SCROLLBAR_PORT = wxNewId();
 
+const long T100VPCDebugFrame::ID_STATICTEXT18 = wxNewId();
+const long T100VPCDebugFrame::ID_COMBOBOX_CMT = wxNewId();
+const long T100VPCDebugFrame::ID_STATICTEXT19 = wxNewId();
+const long T100VPCDebugFrame::ID_COMBOBOX15 = wxNewId();
+
 const long T100VPCDebugFrame::ID_BUTTON_RUN = wxNewId();
 const long T100VPCDebugFrame::ID_BUTTON_STEP = wxNewId();
 const long T100VPCDebugFrame::ID_BUTTON_NEXT = wxNewId();
@@ -102,6 +107,7 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	wxBoxSizer* BoxSizer4;
 	wxBoxSizer* BoxSizer5;
 	wxBoxSizer* BoxSizer6;
+	wxBoxSizer* BoxSizer7;
 	wxFlexGridSizer* FlexGridSizer1;
 	wxFlexGridSizer* FlexGridSizer2;
 	wxStaticBoxSizer* StaticBoxSizer1;
@@ -109,11 +115,26 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	wxStaticBoxSizer* StaticBoxSizer3;
 	wxStaticBoxSizer* StaticBoxSizer4;
 	wxStaticBoxSizer* StaticBoxSizer5;
+	wxStaticBoxSizer* StaticBoxSizer6;
 
 	Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
 	SetClientSize(wxDefaultSize);
 	Move(wxDefaultPosition);
 	BoxSizer1 = new wxBoxSizer(wxVERTICAL);
+
+    BoxSizer7 = new wxBoxSizer(wxHORIZONTAL);
+	StaticBoxSizer6 = new wxStaticBoxSizer(wxHORIZONTAL, this, _("状态："));
+	StaticText18 = new wxStaticText(this, ID_STATICTEXT18, _("Label"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT18"));
+	StaticBoxSizer6->Add(StaticText18, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	CmtComboBox = new wxComboBox(this, ID_COMBOBOX_CMT, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX_CMT"));
+	StaticBoxSizer6->Add(CmtComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	StaticText19 = new wxStaticText(this, ID_STATICTEXT19, _("Label"), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT19"));
+	StaticBoxSizer6->Add(StaticText19, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	ComboBox15 = new wxComboBox(this, ID_COMBOBOX15, wxEmptyString, wxDefaultPosition, wxDefaultSize, 0, 0, 0, wxDefaultValidator, _T("ID_COMBOBOX15"));
+	StaticBoxSizer6->Add(ComboBox15, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	BoxSizer7->Add(StaticBoxSizer6, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 0);
+	BoxSizer1->Add(BoxSizer7, 0, wxALL|wxEXPAND, 5);
+
 	StaticBoxSizer1 = new wxStaticBoxSizer(wxHORIZONTAL, this, _("CPU："));
 	StaticBoxSizer3 = new wxStaticBoxSizer(wxHORIZONTAL, this, _("CU："));
 	FlexGridSizer1 = new wxFlexGridSizer(0, 4, 0, 0);
@@ -175,7 +196,7 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	FlexGridSizer2->Add(ADRComboBox, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer4->Add(FlexGridSizer2, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	StaticBoxSizer1->Add(StaticBoxSizer4, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	BoxSizer1->Add(StaticBoxSizer1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	BoxSizer1->Add(StaticBoxSizer1, 1, wxALL|wxEXPAND, 5);
 	StaticBoxSizer2 = new wxStaticBoxSizer(wxVERTICAL, this, _("Memory："));
 	BoxSizer3 = new wxBoxSizer(wxHORIZONTAL);
 	StaticText14 = new wxStaticText(this, ID_STATICTEXT14, _("Offset："), wxDefaultPosition, wxDefaultSize, 0, _T("ID_STATICTEXT14"));
@@ -237,6 +258,10 @@ void T100VPCDebugFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoin
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
+
+	Connect(ID_COMBOBOX_CMT,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugFrame::OnCmtComboBoxSelected);
+	Connect(ID_COMBOBOX_CMT,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugFrame::OnCmtComboBoxTextUpdated);
+	Connect(ID_COMBOBOX_CMT,wxEVT_COMMAND_TEXT_ENTER,(wxObjectEventFunction)&T100VPCDebugFrame::OnCmtComboBoxTextEnter);
 
 	Connect(ID_COMBOBOX_COR,wxEVT_COMMAND_COMBOBOX_SELECTED,(wxObjectEventFunction)&T100VPCDebugFrame::OnCORComboBoxSelected);
 	Connect(ID_COMBOBOX_COR,wxEVT_COMMAND_TEXT_UPDATED,(wxObjectEventFunction)&T100VPCDebugFrame::OnCORComboBoxTextUpdated);
@@ -349,6 +374,18 @@ T100BOOL T100VPCDebugFrame::initList()
     init(PortListView, 0);
 
     return T100TRUE;
+}
+
+void T100VPCDebugFrame::OnCmtComboBoxSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugFrame::OnCmtComboBoxTextUpdated(wxCommandEvent& event)
+{
+}
+
+void T100VPCDebugFrame::OnCmtComboBoxTextEnter(wxCommandEvent& event)
+{
 }
 
 void T100VPCDebugFrame::OnCORComboBoxSelected(wxCommandEvent& event)
@@ -684,6 +721,14 @@ void T100VPCDebugFrame::OnCallButtonClick(wxCommandEvent& event)
 void T100VPCDebugFrame::OnReturnButtonClick(wxCommandEvent& event)
 {
     T100VPCCallback::debug_button_return_click();
+}
+
+//
+
+T100BOOL T100VPCDebugFrame::OnCmtUpdate(T100WORD value)
+{
+    CmtComboBox->SetValue(std::to_wstring(value));
+    return T100TRUE;
 }
 
 T100BOOL T100VPCDebugFrame::OnRegisterUpdate(T100WORD type, T100WORD value)

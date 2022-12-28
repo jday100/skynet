@@ -5,6 +5,7 @@
 #include "T100StringTest.h"
 #include "T100LogTest.h"
 #include "T100TestTest.h"
+#include "T100CapacityTest.h"
 
 
 namespace T100Library{
@@ -19,6 +20,8 @@ class T100LibraryTest : public T100Test
         T100StringTest          test_string;
         T100LogTest             test_log;
         T100TestTest            test_test;
+
+        T100CapacityTest        test_capacity;
 
     private:
         static T100WSTRING      m_name;

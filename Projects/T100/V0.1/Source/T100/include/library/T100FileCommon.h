@@ -17,6 +17,15 @@ typedef enum{
     T100FILE_TEXT,          //TXT
     T100FILE_BINARY,        //BIN
     //
+    T100FILE_PICTURE,       //PIC
+    T100FILE_DRAWING,       //DRW
+    T100FILE_CHART,         //CHT
+    T100FILE_MAP,           //MAP
+    T100FILE_GRAPH,         //GRP
+    T100FILE_BITMAP,        //BMP
+    T100FILE_PHOTO,         //PHT
+    T100FILE_ICON,          //ICO
+    //
     T100FILE_DOCUMENT,      //DOC
     T100FILE_DATABASE,      //DAT
     T100FILE_LOG,           //LOG

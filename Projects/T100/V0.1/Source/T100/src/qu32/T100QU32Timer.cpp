@@ -83,6 +83,10 @@ T100BOOL T100QU32Timer::OnTimer()
         m_host->getCallback()->notify_register_update(T100Component::T100AOF, value);
     }
 
+    if(m_host->getNotifier().m_cmt){
+        m_host->getCallback()->notify_cmt_update(m_host->getNotifier().m_cmt_id);
+    }
+
     m_host->getNotifier().init();
     return T100TRUE;
 }

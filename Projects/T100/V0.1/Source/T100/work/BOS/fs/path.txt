@@ -150,13 +150,11 @@ PROC=PATH_SEARCH
     JNZ     PATH_SEARCH_FIRST_ROOT
     //
     CMT     4041050
-    DBG
     MOVE    path_search_location_low                        fs_path_current_low
     MOVE    path_search_location_high                       fs_path_current_high
     //
 PATH_SEARCH_SPLIT:
     CMT     4041070
-    DBG
     MOVE    path_search_split_array_offset                  @path_search_split_array
     MOVE    path_search_split_array_buffer_offset           @path_search_split_array_buffer
     //

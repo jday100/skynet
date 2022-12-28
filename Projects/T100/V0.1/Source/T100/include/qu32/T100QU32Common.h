@@ -54,7 +54,7 @@ typedef struct{
 
 typedef struct{
     T100WORD            OFFSET;
-    T100WORD            VALUE;
+    T100WORD            LENGTH;
 }T100GDT_ITEM;
 
 }

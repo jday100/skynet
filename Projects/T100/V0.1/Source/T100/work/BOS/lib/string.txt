@@ -108,6 +108,7 @@ PROC=STRING_SPLIT
     ADD
     MOVE    string_split_mask                                   #ACR
     MOVE    string_split_size                                   0
+    MOVE    string_split_length                                 0
     MOVE    string_split_array_offset                           string_split_array_parameter_offset
     MOVE    string_split_array_buffer_offset                    string_split_array_buffer_parameter_offset
     //

@@ -29,7 +29,6 @@ END
 
 PROC=TEST_PATH_SEARCH_SPLIT
     CMT     1
-    DBG
     MOVE    test_path_search_split_result_offset                    AAR
     MOVE    test_path_search_split_size_address                     ABR
     //

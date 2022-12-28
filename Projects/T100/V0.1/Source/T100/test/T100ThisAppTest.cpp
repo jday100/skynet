@@ -13,7 +13,8 @@ T100ThisAppTest::T100ThisAppTest()
     test_vpc(this),
     test_full(this),
     test_os(this),
-    test_deploy(this)
+    test_deploy(this),
+    test_deploy_b(this)
 {
     //ctor
 }

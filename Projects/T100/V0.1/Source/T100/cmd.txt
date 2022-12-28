@@ -8,6 +8,7 @@
 -I      ide         run ide
 -A      assembly    run assembly compiler
 -E      editor      run editor
+-P      painter     run painter
 -L      log         setup log
 -R      error       setup error
 

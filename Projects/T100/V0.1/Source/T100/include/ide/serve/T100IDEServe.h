@@ -1,6 +1,9 @@
 #ifndef T100IDESERVE_H
 #define T100IDESERVE_H
 
+#include "T100Common.h"
+
+namespace T100IDE{
 
 class T100IDEServe
 {
@@ -12,5 +15,7 @@ class T100IDEServe
 
     private:
 };
+
+}
 
 #endif // T100IDESERVE_H

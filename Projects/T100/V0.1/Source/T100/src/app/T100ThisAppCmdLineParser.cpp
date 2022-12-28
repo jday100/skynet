@@ -66,6 +66,21 @@ T100BOOL T100ThisAppCmdLineParser::setSwitch(T100Library::T100CmdLineSwitch& inf
             data.HELP       = T100TRUE;
         }
         break;
+    case L'E':
+        {
+            data.EDITOR     = T100TRUE;
+        }
+        break;
+    case L'P':
+        {
+            data.PAINTER    = T100TRUE;
+        }
+        break;
+    case L'I':
+        {
+            data.IDE        = T100TRUE;
+        }
+        break;
     case L'T':
         {
             data.TEST       = T100TRUE;
