@@ -2,7 +2,8 @@
 #define T100PAINTERVIEW_H
 
 #include <wx/window.h>
-#include "T100Common.h"
+#include "T100String.h"
+#include "T100PainterCommon.h"
 #include "T100PaintCtrl.h"
 
 namespace T100Painter{
@@ -15,6 +16,14 @@ class T100PainterView
         T100PainterView();
         virtual ~T100PainterView();
 
+        T100BOOL                NewFile();
+        T100BOOL                OpenFile(T100STRING&);
+        T100BOOL                LoadFile(T100PAINTER_ELEMENT_VECTOR*);
+        T100BOOL                SaveFile();
+        T100BOOL                SaveAsFile();
+        T100BOOL                CloseFile();
+
+    public:
         T100VOID                setParent(wxWindow*);
 
         T100BOOL                create();

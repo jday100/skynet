@@ -13,9 +13,9 @@ T100ElementCircle::~T100ElementCircle()
     //dtor
 }
 
-T100BOOL T100ElementCircle::draw()
+T100BOOL T100ElementCircle::draw(wxDC& dc)
 {
-
+    dc.DrawCircle(100, 100, 10);
 }
 
 }

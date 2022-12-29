@@ -12,7 +12,7 @@ class T100ElementCircle : public T100ElementBase
         T100ElementCircle();
         virtual ~T100ElementCircle();
 
-        T100BOOL            draw();
+        T100BOOL            draw(wxDC&);
 
     protected:
 

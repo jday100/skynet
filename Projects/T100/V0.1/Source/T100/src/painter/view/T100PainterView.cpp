@@ -1,5 +1,6 @@
 #include "T100PainterView.h"
 
+#include <wx/filedlg.h>
 #include "T100PainterFrame.h"
 
 namespace T100Painter{
@@ -42,6 +43,26 @@ T100VOID T100PainterView::show()
     if(m_frame){
         m_frame->Show();
     }
+}
+
+///
+
+T100BOOL T100PainterView::OpenFile(T100STRING& file)
+{
+    wxFileDialog        dialog(m_frame, _("Please select a file"), "", "", "Diagram files(*.dgm)|*.dgm", wxFD_OPEN, wxDefaultPosition, wxDefaultSize, _("Select a file:"));
+
+    if(wxID_CANCEL == dialog.ShowModal())return T100FALSE;
+
+    file = dialog.GetPath().ToStdWstring();
+
+    return T100TRUE;
+}
+
+T100BOOL T100PainterView::LoadFile(T100PAINTER_ELEMENT_VECTOR* elements)
+{
+    m_paint->Load(elements);
+    m_paint->Refresh();
+    return T100TRUE;
 }
 
 }

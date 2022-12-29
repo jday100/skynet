@@ -1,5 +1,9 @@
 #include "T100EditorCallback.h"
 
+#include "T100EditorServe.h"
+#include "T100EditorView.h"
+
+
 namespace T100Editor{
 
 T100EditorServe*        T100EditorCallback::m_serve             = T100NULL;

@@ -18,13 +18,16 @@ class T100PainterCanvas : public wxScrolledWindow
                      const wxString& name = wxPanelNameStr);
         virtual ~T100PainterCanvas();
 
-        T100PAINTER_ELEMENT_VECTOR&     getElements();
+        T100BOOL            Load(T100PAINTER_ELEMENT_VECTOR*);
 
     protected:
         void OnPaint(wxPaintEvent& event);
 
     private:
-        T100PAINTER_ELEMENT_VECTOR      m_elements;
+        T100VOID            create();
+        T100VOID            destroy();
+
+        T100PAINTER_ELEMENT_VECTOR*         m_elements          = T100NULL;
 
         DECLARE_EVENT_TABLE()
 };

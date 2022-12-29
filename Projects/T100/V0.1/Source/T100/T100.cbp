@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-E" />
+				<Option parameters="-P" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -112,6 +112,9 @@
 					<Add directory="include/painter/store" />
 					<Add directory="include/painter/element" />
 					<Add directory="include/painter/element/graphics" />
+					<Add directory="include/library/transducer" />
+					<Add directory="include/painter/diagram" />
+					<Add directory="include/painter/diagram/V1" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -218,6 +221,9 @@
 					<Add directory="include/painter/store" />
 					<Add directory="include/painter/element" />
 					<Add directory="include/painter/element/graphics" />
+					<Add directory="include/library/transducer" />
+					<Add directory="include/painter/diagram" />
+					<Add directory="include/painter/diagram/V1" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -563,11 +569,19 @@
 		<Unit filename="include/library/log/T100LogFile.h" />
 		<Unit filename="include/library/log/T100LogNew.h" />
 		<Unit filename="include/library/safe/T100SafeVector.h" />
+		<Unit filename="include/library/transducer/T100TransducerBase.h" />
+		<Unit filename="include/library/transducer/T100TransducerSource.h" />
+		<Unit filename="include/library/transducer/T100TransducerTarget.h" />
 		<Unit filename="include/painter/T100Painter.h" />
 		<Unit filename="include/painter/T100PainterApp.h" />
 		<Unit filename="include/painter/T100PainterCommon.h" />
+		<Unit filename="include/painter/diagram/T100DiagramBase.h" />
+		<Unit filename="include/painter/diagram/V1/T100DiagramV1.h" />
+		<Unit filename="include/painter/diagram/V1/T100DiagramV1Source.h" />
+		<Unit filename="include/painter/diagram/V1/T100DiagramV1Target.h" />
 		<Unit filename="include/painter/element/T100ElementBase.h" />
 		<Unit filename="include/painter/element/graphics/T100ElementCircle.h" />
+		<Unit filename="include/painter/serve/T100PainterCallback.h" />
 		<Unit filename="include/painter/serve/T100PainterServe.h" />
 		<Unit filename="include/painter/store/T100PainterStore.h" />
 		<Unit filename="include/painter/view/T100PainterCanvas.h" />
@@ -974,10 +988,18 @@
 		<Unit filename="src/library/log/T100LogConsole.cpp" />
 		<Unit filename="src/library/log/T100LogFile.cpp" />
 		<Unit filename="src/library/log/T100LogNew.cpp" />
+		<Unit filename="src/library/transducer/T100TransducerBase.cpp" />
+		<Unit filename="src/library/transducer/T100TransducerSource.cpp" />
+		<Unit filename="src/library/transducer/T100TransducerTarget.cpp" />
 		<Unit filename="src/painter/T100Painter.cpp" />
 		<Unit filename="src/painter/T100PainterApp.cpp" />
+		<Unit filename="src/painter/diagram/T100DiagramBase.cpp" />
+		<Unit filename="src/painter/diagram/V1/T100DiagramV1.cpp" />
+		<Unit filename="src/painter/diagram/V1/T100DiagramV1Source.cpp" />
+		<Unit filename="src/painter/diagram/V1/T100DiagramV1Target.cpp" />
 		<Unit filename="src/painter/element/T100ElementBase.cpp" />
 		<Unit filename="src/painter/element/graphics/T100ElementCircle.cpp" />
+		<Unit filename="src/painter/serve/T100PainterCallback.cpp" />
 		<Unit filename="src/painter/serve/T100PainterServe.cpp" />
 		<Unit filename="src/painter/store/T100PainterStore.cpp" />
 		<Unit filename="src/painter/view/T100PainterCanvas.cpp" />

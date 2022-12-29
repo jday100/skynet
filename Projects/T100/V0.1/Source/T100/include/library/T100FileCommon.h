@@ -17,14 +17,23 @@ typedef enum{
     T100FILE_TEXT,          //TXT
     T100FILE_BINARY,        //BIN
     //
-    T100FILE_PICTURE,       //PIC
-    T100FILE_DRAWING,       //DRW
-    T100FILE_CHART,         //CHT
-    T100FILE_MAP,           //MAP
-    T100FILE_GRAPH,         //GRP
-    T100FILE_BITMAP,        //BMP
-    T100FILE_PHOTO,         //PHT
-    T100FILE_ICON,          //ICO
+    T100FILE_BITMAP,        //BMP   位图
+    T100FILE_ICON,          //ICO   图标
+    //
+    T100FILE_PICTURE,       //PIC   图片
+    T100FILE_GRAPH,         //GRP   图片
+    //
+    T100FILE_DIAGRAM,       //DGM   流程图
+    T100FILE_DRAWING,       //DRW   图形
+    T100FILE_CHART,         //CHT   图表
+    T100FILE_MAP,           //MAP   地图
+    T100FILE_PHOTO,         //PHT   照片
+    //
+    T100FILE_VIDEO,
+    T100FILE_MOVIE,
+    T100FILE_AUDIO,
+    T100FILE_SOUND,
+    T100FILE_MUSIC,
     //
     T100FILE_DOCUMENT,      //DOC
     T100FILE_DATABASE,      //DAT

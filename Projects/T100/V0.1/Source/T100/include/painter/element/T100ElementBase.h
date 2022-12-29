@@ -1,6 +1,7 @@
 #ifndef T100ELEMENTBASE_H
 #define T100ELEMENTBASE_H
 
+#include <wx/dc.h>
 #include "T100Common.h"
 
 namespace T100Painter{
@@ -11,7 +12,7 @@ class T100ElementBase
         T100ElementBase();
         virtual ~T100ElementBase();
 
-        virtual T100BOOL            draw() = 0;
+        virtual T100BOOL            draw(wxDC&) = 0;
 
     protected:
 

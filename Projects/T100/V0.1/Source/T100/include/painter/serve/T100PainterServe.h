@@ -1,8 +1,8 @@
 #ifndef T100PAINTERSERVE_H
 #define T100PAINTERSERVE_H
 
-#include "T100Common.h"
 #include "T100String.h"
+#include "T100PainterCommon.h"
 
 namespace T100Painter{
 
@@ -12,6 +12,13 @@ class T100PainterServe
         T100PainterServe();
         virtual ~T100PainterServe();
 
+        T100BOOL            NewFile(T100STRING&, T100PAINTER_ELEMENT_VECTOR*&);
+        T100BOOL            OpenFile(T100STRING, T100PAINTER_ELEMENT_VECTOR*&);
+        T100BOOL            SaveFile();
+        T100BOOL            SaveAsFile();
+        T100BOOL            CloseFile();
+
+    public:
         T100BOOL            SaveFile(T100STRING);
         T100BOOL            LoadFile(T100STRING);
 
@@ -20,8 +27,12 @@ class T100PainterServe
 
 
     protected:
+        T100VOID            create();
+        T100VOID            destroy();
 
     private:
+        T100PAINTER_ELEMENT_VECTOR      m_elements;
+
 };
 
 }
