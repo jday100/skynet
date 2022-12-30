@@ -23,6 +23,10 @@ class T100PainterCanvas : public wxScrolledWindow
     protected:
         void OnPaint(wxPaintEvent& event);
 
+        void OnMouseLeftDown(wxMouseEvent& event);
+        void OnMouseLeftUp(wxMouseEvent& event);
+        void OnMouseMoving(wxMoveEvent& event);
+
     private:
         T100VOID            create();
         T100VOID            destroy();

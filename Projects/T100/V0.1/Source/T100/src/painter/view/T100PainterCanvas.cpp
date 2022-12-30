@@ -2,12 +2,17 @@
 
 #include <wx/dcbuffer.h>
 #include "T100ElementBase.h"
-
+#include "T100PainterCallback.h"
 
 namespace T100Painter{
 
 BEGIN_EVENT_TABLE(T100PainterCanvas,wxScrolledWindow)
     EVT_PAINT(T100PainterCanvas::OnPaint)
+    //
+    EVT_LEFT_DOWN(T100PainterCanvas::OnMouseLeftDown)
+    EVT_LEFT_UP(T100PainterCanvas::OnMouseLeftUp)
+    EVT_MOVING(T100PainterCanvas::OnMouseMoving)
+    //
 END_EVENT_TABLE()
 
 T100PainterCanvas::T100PainterCanvas(wxWindow *parent, wxWindowID winid, const wxPoint& pos,
@@ -49,6 +54,21 @@ void T100PainterCanvas::OnPaint(wxPaintEvent& event)
     for(T100ElementBase* item : *m_elements){
         item->draw(dc);
     }
+}
+
+void T100PainterCanvas::OnMouseLeftDown(wxMouseEvent& event)
+{
+    T100PainterCallback::canvas_mouse_left_down(&event);
+}
+
+void T100PainterCanvas::OnMouseLeftUp(wxMouseEvent& event)
+{
+    T100PainterCallback::canvas_mouse_left_up(&event);
+}
+
+void T100PainterCanvas::OnMouseMoving(wxMoveEvent& event)
+{
+    T100PainterCallback::canvas_mouse_moving();
 }
 
 }

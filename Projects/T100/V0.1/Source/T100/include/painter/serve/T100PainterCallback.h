@@ -31,7 +31,18 @@ class T100PainterCallback
         static T100BOOL                     frame_menu_copy(void* = T100NULL);
         static T100BOOL                     frame_menu_paste(void* = T100NULL);
 
+        static T100BOOL                     frame_menu_elements(void* = T100NULL);
+
         static T100BOOL                     frame_menu_about(void* = T100NULL);
+
+        ///
+        static T100BOOL                     serve_element_init(void* = T100NULL);
+        static T100BOOL                     serve_element_select(void* = T100NULL);
+
+        //
+        static T100BOOL                     canvas_mouse_left_down(void* = T100NULL);
+        static T100BOOL                     canvas_mouse_left_up(void* = T100NULL);
+        static T100BOOL                     canvas_mouse_moving(void* = T100NULL);
 
     protected:
 

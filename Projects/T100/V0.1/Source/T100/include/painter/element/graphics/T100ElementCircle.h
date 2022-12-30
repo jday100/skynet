@@ -13,10 +13,24 @@ class T100ElementCircle : public T100ElementBase
         virtual ~T100ElementCircle();
 
         T100BOOL            draw(wxDC&);
+        T100ElementCircle*  Clone();
+
+        T100BOOL            MouseLeftDown(T100INT, T100INT);
+        T100BOOL            MouseLeftUp(T100INT, T100INT);
+        T100BOOL            MouseMoving();
 
     protected:
+        T100VOID            create();
+        T100VOID            destroy();
 
     private:
+        T100WORD            m_origin_x;
+        T100WORD            m_origin_y;
+
+        T100WORD            m_target_x;
+        T100WORD            m_target_y;
+
+        T100FLOAT           m_radius;
 };
 
 }

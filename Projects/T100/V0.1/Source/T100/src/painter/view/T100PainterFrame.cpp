@@ -20,6 +20,8 @@ const long T100PainterFrame::ID_MENUITEM_CUT = wxNewId();
 const long T100PainterFrame::ID_MENUITEM_COPY = wxNewId();
 const long T100PainterFrame::ID_MENUITEM_PASTE = wxNewId();
 
+const long T100PainterFrame::ID_MENUITEM_ELEMENTS = wxNewId();
+
 const long T100PainterFrame::ID_MENUITEM_ABOUT = wxNewId();
 
 
@@ -43,6 +45,7 @@ void T100PainterFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint
 {
 
 	Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
+	SetClientSize(wxDefaultSize);
 	Move(wxDefaultPosition);
 
 	create();
@@ -63,6 +66,7 @@ T100BOOL T100PainterFrame::create_menu()
     wxMenuBar*      menuBar         = T100NEW wxMenuBar();
     wxMenu*         menuFile        = T100NEW wxMenu();
     wxMenu*         menuEdit        = T100NEW wxMenu();
+    wxMenu*         menuView        = T100NEW wxMenu();
     wxMenu*         menuHelp        = T100NEW wxMenu();
 
     menuFile->Append(ID_MENUITEM_NEW, wxT("New"));
@@ -70,8 +74,8 @@ T100BOOL T100PainterFrame::create_menu()
     menuFile->Append(ID_MENUITEM_OPEN, wxT("Open"));
     menuFile->Append(ID_MENUITEM_CLOSE, wxT("Close"));
     menuFile->AppendSeparator();
-    menuFile->Append(ID_MENUITEM_OPEN, wxT("Save"));
-    menuFile->Append(ID_MENUITEM_CLOSE, wxT("Save as…"));
+    menuFile->Append(ID_MENUITEM_SAVE, wxT("Save"));
+    menuFile->Append(ID_MENUITEM_SAVE_AS, wxT("Save as…"));
     menuFile->AppendSeparator();
     menuFile->Append(ID_MENUITEM_QUIT, wxT("Quit"));
 
@@ -87,6 +91,10 @@ T100BOOL T100PainterFrame::create_menu()
     menuEdit->Append(ID_MENUITEM_PASTE, wxT("Paste"));
 
     menuBar->Append(menuEdit, wxT("Edit"));
+
+    menuView->Append(ID_MENUITEM_ELEMENTS, wxT("Elements"));
+
+    menuBar->Append(menuView, wxT("View"));
 
     menuHelp->Append(ID_MENUITEM_ABOUT, wxT("About…"));
 
@@ -109,7 +117,13 @@ T100BOOL T100PainterFrame::create_menu()
     Connect(ID_MENUITEM_COPY,       wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuCopySelected);
     Connect(ID_MENUITEM_PASTE,      wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuPasteSelected);
 
+    Connect(ID_MENUITEM_ELEMENTS,   wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuElementsSelected);
+
     Connect(ID_MENUITEM_ABOUT,      wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuAboutSelected);
+
+    ////
+    Connect(wxID_ANY,               wxEVT_CLOSE_WINDOW,             (wxObjectEventFunction)&T100PainterFrame::OnClose);
+
 
     return T100TRUE;
 }
@@ -169,9 +183,21 @@ void T100PainterFrame::OnMenuPasteSelected(wxCommandEvent& event)
     T100PainterCallback::frame_menu_paste();
 }
 
+void T100PainterFrame::OnMenuElementsSelected(wxCommandEvent& event)
+{
+    T100PainterCallback::frame_menu_elements();
+}
+
 void T100PainterFrame::OnMenuAboutSelected(wxCommandEvent& event)
 {
     T100PainterCallback::frame_menu_about();
+}
+
+///
+
+void T100PainterFrame::OnClose(wxCloseEvent& event)
+{
+    T100PainterCallback::frame_menu_quit();
 }
 
 }

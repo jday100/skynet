@@ -49,6 +49,11 @@ T100BOOL T100PainterServe::OpenFile(T100STRING file, T100PAINTER_ELEMENT_VECTOR*
     return T100TRUE;
 }
 
+T100PAINTER_ELEMENT_VECTOR* T100PainterServe::GetElements()
+{
+    return &m_elements;
+}
+
 T100BOOL T100PainterServe::SaveFile(T100STRING filename)
 {
 

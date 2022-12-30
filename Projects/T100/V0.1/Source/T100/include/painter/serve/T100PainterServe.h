@@ -18,6 +18,8 @@ class T100PainterServe
         T100BOOL            SaveAsFile();
         T100BOOL            CloseFile();
 
+        T100PAINTER_ELEMENT_VECTOR*     GetElements();
+
     public:
         T100BOOL            SaveFile(T100STRING);
         T100BOOL            LoadFile(T100STRING);

@@ -1,6 +1,9 @@
 #ifndef T100DIAGRAMBASE_H
 #define T100DIAGRAMBASE_H
 
+#include "T100PainterCommon.h"
+
+namespace T100Painter{
 
 class T100DiagramBase
 {
@@ -8,9 +11,13 @@ class T100DiagramBase
         T100DiagramBase();
         virtual ~T100DiagramBase();
 
+        virtual T100BOOL            Load(T100PAINTER_ELEMENT_VECTOR*) = 0;
+
     protected:
 
     private:
 };
+
+}
 
 #endif // T100DIAGRAMBASE_H

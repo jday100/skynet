@@ -27,6 +27,8 @@ class T100PainterFrame : public wxFrame
         static const long ID_MENUITEM_COPY;
         static const long ID_MENUITEM_PASTE;
 
+        static const long ID_MENUITEM_ELEMENTS;
+
         static const long ID_MENUITEM_ABOUT;
 
     protected:
@@ -43,7 +45,11 @@ class T100PainterFrame : public wxFrame
         void OnMenuCopySelected(wxCommandEvent& event);
         void OnMenuPasteSelected(wxCommandEvent& event);
 
+        void OnMenuElementsSelected(wxCommandEvent& event);
+
         void OnMenuAboutSelected(wxCommandEvent& event);
+
+        void OnClose(wxCloseEvent& event);
 
     protected:
         T100VOID                create();
