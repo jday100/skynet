@@ -100,7 +100,7 @@ T100BOOL T100PainterCallback::frame_menu_save_as(void* d)
 
     if(result){
         diagram     = T100NEW T100DiagramV1();
-        result      = m_store->SaveAsFile(file, diagram);
+        result      = m_store->SaveAsFile(file, elements, diagram);
         T100SAFE_DELETE(diagram);
     }
 
@@ -147,7 +147,7 @@ T100BOOL T100PainterCallback::frame_menu_about(void* d)
 
 }
 
-T100BOOL T100PainterCallback::serve_element_init(void* d)
+T100BOOL T100PainterCallback::view_element_init(void* d)
 {
     T100BOOL                result;
     T100ElementBase*        element         = T100NULL;
@@ -159,7 +159,7 @@ T100BOOL T100PainterCallback::serve_element_init(void* d)
     return result;
 }
 
-T100BOOL T100PainterCallback::serve_element_select(void* d)
+T100BOOL T100PainterCallback::view_element_select(void* d)
 {
     T100BOOL        result;
     T100STRING*     key             = T100NULL;

@@ -32,6 +32,8 @@ class T100ElementBase
         T100STRING                  m_label;
         T100STRING                  m_key;
 
+        T100WORD                    m_type          = 0;
+
     private:
 
 };

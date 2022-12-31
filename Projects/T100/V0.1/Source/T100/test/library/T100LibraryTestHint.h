@@ -38,6 +38,9 @@ static T100WSTRING          T100TEST_HINT_LIBRARY_TEST_TEST_STOP                
 static T100WSTRING          T100TEST_HINT_LIBRARY_CAPACITY_TEST_START                       = L"Library capacity test is starting ... ";
 static T100WSTRING          T100TEST_HINT_LIBRARY_CAPACITY_TEST_STOP                        = L"Library capacity test is stopped . ";
 
+static T100WSTRING          T100TEST_HINT_LIBRARY_TRANSDUCER_TEST_START                     = L"Library transducer test is starting ... ";
+static T100WSTRING          T100TEST_HINT_LIBRARY_TRANSDUCER_TEST_STOP                      = L"Library transducer test is stopped . ";
+
 
 class T100LibraryTestHint : public T100Hint
 {

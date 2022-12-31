@@ -32,13 +32,6 @@ T100BOOL T100PainterServe::NewFile(T100STRING& file, T100PAINTER_ELEMENT_VECTOR*
     m_elements.clear();
     elements = &m_elements;
 
-    //test
-    T100ElementCircle*  circle;
-
-    circle = T100NEW T100ElementCircle();
-
-    m_elements.append(circle);
-
     return T100TRUE;
 }
 

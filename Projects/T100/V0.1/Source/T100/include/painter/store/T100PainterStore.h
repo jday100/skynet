@@ -17,7 +17,7 @@ class T100PainterStore
         virtual ~T100PainterStore();
 
         //
-        T100BOOL                SaveAsFile(T100STRING, T100DiagramV1*);
+        T100BOOL                SaveAsFile(T100STRING, T100PAINTER_ELEMENT_VECTOR*, T100DiagramV1*);
         //
 
         T100BOOL                OpenFile(T100STRING, T100PAINTER_ELEMENT_VECTOR*);

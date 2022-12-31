@@ -107,7 +107,7 @@ void T100PainterElementsPanel::OnPanel1ListCtrlItemSelect(wxListEvent& event)
     key = (T100STRING*)ptr;
 
     if(key){
-        T100PainterCallback::serve_element_select(key);
+        T100PainterCallback::view_element_select(key);
     }
 }
 

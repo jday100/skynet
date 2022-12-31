@@ -1,10 +1,10 @@
 #ifndef T100DIAGRAMV1_H
 #define T100DIAGRAMV1_H
 
-#include "T100FileReader.h"
-#include "T100FileWriter.h"
+#include "T100BufferedFileReader.h"
+#include "T100BufferedFileWriter.h"
 #include "T100DiagramBase.h"
-
+#include "T100ElementTransducerSource.h"
 
 namespace T100Painter{
 
@@ -16,9 +16,14 @@ class T100DiagramV1 : public T100DiagramBase
 
         T100BOOL            Load(T100PAINTER_ELEMENT_VECTOR*);
 
-        T100BOOL            Save(T100Library::T100FileWriter*);
+        T100BOOL            Save(T100PAINTER_ELEMENT_VECTOR*);
+
+        ///
+
+        T100BOOL            Save(T100Library::T100BufferedFileWriter*, T100PAINTER_ELEMENT_VECTOR*);
 
     protected:
+        T100ElementTransducerSource&        getSource(T100ElementBase*);
 
     private:
 };

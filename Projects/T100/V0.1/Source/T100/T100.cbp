@@ -562,6 +562,9 @@
 		<Unit filename="include/library/console/T100ConsoleTerminalThread.h" />
 		<Unit filename="include/library/console/T100ConsoleWindows.h" />
 		<Unit filename="include/library/file/T100BufferedFile.h" />
+		<Unit filename="include/library/file/T100BufferedFileReader.h" />
+		<Unit filename="include/library/file/T100BufferedFileStream.h" />
+		<Unit filename="include/library/file/T100BufferedFileWriter.h" />
 		<Unit filename="include/library/file/T100File.h" />
 		<Unit filename="include/library/file/T100FileCommon.h" />
 		<Unit filename="include/library/file/T100FileReader.h" />
@@ -587,6 +590,7 @@
 		<Unit filename="include/painter/T100PainterApp.h" />
 		<Unit filename="include/painter/T100PainterCommon.h" />
 		<Unit filename="include/painter/diagram/T100DiagramBase.h" />
+		<Unit filename="include/painter/diagram/V1/T100AllSourceV1.h" />
 		<Unit filename="include/painter/diagram/V1/T100DiagramV1.h" />
 		<Unit filename="include/painter/diagram/V1/T100DiagramV1Common.h" />
 		<Unit filename="include/painter/diagram/V1/T100DiagramV1Source.h" />
@@ -594,7 +598,11 @@
 		<Unit filename="include/painter/element/T100AllElements.h" />
 		<Unit filename="include/painter/element/T100ElementBase.h" />
 		<Unit filename="include/painter/element/T100ElementManager.h" />
+		<Unit filename="include/painter/element/T100ElementTransducer.h" />
+		<Unit filename="include/painter/element/T100ElementTransducerSource.h" />
+		<Unit filename="include/painter/element/T100ElementTransducerTarget.h" />
 		<Unit filename="include/painter/element/graphics/T100ElementCircle.h" />
+		<Unit filename="include/painter/element/graphics/T100ElementCircleSource.h" />
 		<Unit filename="include/painter/serve/T100PainterCallback.h" />
 		<Unit filename="include/painter/serve/T100PainterServe.h" />
 		<Unit filename="include/painter/store/T100PainterStore.h" />
@@ -993,6 +1001,9 @@
 		<Unit filename="src/library/console/T100ConsoleTerminalThread.cpp" />
 		<Unit filename="src/library/console/T100ConsoleWindows.cpp" />
 		<Unit filename="src/library/file/T100BufferedFile.cpp" />
+		<Unit filename="src/library/file/T100BufferedFileReader.cpp" />
+		<Unit filename="src/library/file/T100BufferedFileStream.cpp" />
+		<Unit filename="src/library/file/T100BufferedFileWriter.cpp" />
 		<Unit filename="src/library/file/T100File.cpp" />
 		<Unit filename="src/library/file/T100FileReader.cpp" />
 		<Unit filename="src/library/file/T100FileStream.cpp" />
@@ -1019,7 +1030,11 @@
 		<Unit filename="src/painter/diagram/V1/T100DiagramV1Target.cpp" />
 		<Unit filename="src/painter/element/T100ElementBase.cpp" />
 		<Unit filename="src/painter/element/T100ElementManager.cpp" />
+		<Unit filename="src/painter/element/T100ElementTransducer.cpp" />
+		<Unit filename="src/painter/element/T100ElementTransducerSource.cpp" />
+		<Unit filename="src/painter/element/T100ElementTransducerTarget.cpp" />
 		<Unit filename="src/painter/element/graphics/T100ElementCircle.cpp" />
+		<Unit filename="src/painter/element/graphics/T100ElementCircleSource.cpp" />
 		<Unit filename="src/painter/serve/T100PainterCallback.cpp" />
 		<Unit filename="src/painter/serve/T100PainterServe.cpp" />
 		<Unit filename="src/painter/store/T100PainterStore.cpp" />
@@ -1217,6 +1232,8 @@
 		<Unit filename="test/library/T100StringTest.h" />
 		<Unit filename="test/library/T100TestTest.cpp" />
 		<Unit filename="test/library/T100TestTest.h" />
+		<Unit filename="test/library/T100TransducerTest.cpp" />
+		<Unit filename="test/library/T100TransducerTest.h" />
 		<Unit filename="test/library/test/T100TestDemoTest.cpp" />
 		<Unit filename="test/library/test/T100TestDemoTest.h" />
 		<Unit filename="test/os/T100OSBootTest.cpp" />
@@ -1366,6 +1383,7 @@
 		<Unit filename="work/BOS/test/lib/test_string_split.txt" />
 		<Unit filename="work/BOS/test/rom/test_rom.txt" />
 		<Unit filename="work/BOS/test/test_data.txt" />
+		<Unit filename="work/test.dgm" />
 		<Unit filename="wxsmith/T100FontFrame.wxs" />
 		<Unit filename="wxsmith/T100FontPanel.wxs" />
 		<Unit filename="wxsmith/T100PainterDemoFrame.wxs" />

@@ -18,7 +18,7 @@ T100ElementManager::~T100ElementManager()
 
 T100VOID T100ElementManager::init()
 {
-    T100PainterCallback::serve_element_init(T100NEW T100ElementCircle());
+    T100PainterCallback::view_element_init(T100NEW T100ElementCircle());
 }
 
 T100BOOL T100ElementManager::Append(T100ElementBase* element)

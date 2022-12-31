@@ -8,6 +8,7 @@ namespace T100Painter{
 
 class T100ElementCircle : public T100ElementBase
 {
+    friend class T100ElementCircleSource;
     public:
         T100ElementCircle();
         virtual ~T100ElementCircle();

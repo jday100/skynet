@@ -12,4 +12,16 @@ T100TransducerBase::~T100TransducerBase()
     //dtor
 }
 
+T100BOOL T100TransducerBase::serialize(T100TransducerSource& source, T100TransducerTarget& target)
+{
+    source.setTarget(&target);
+    return source.serialize();
+}
+
+T100BOOL T100TransducerBase::deserialize(T100TransducerSource& source, T100TransducerTarget& target)
+{
+    source.setTarget(&target);
+    return source.deserialize();
+}
+
 }
