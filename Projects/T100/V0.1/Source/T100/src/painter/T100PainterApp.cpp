@@ -33,6 +33,7 @@ T100VOID T100PainterApp::show()
 {
     if(m_painter){
         m_painter->show();
+        m_painter->NewFile();
     }
 }
 

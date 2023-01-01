@@ -1,6 +1,7 @@
 #include "T100ElementCircle.h"
 
 #include "T100Planimetry.h"
+#include "T100ElementCommon.h"
 
 
 namespace T100Painter{
@@ -23,6 +24,7 @@ T100VOID T100ElementCircle::create()
     m_name  = L"Circle";
     m_label = L"Circle";
     m_key   = L"elements.circle";
+    m_type  = T100ELEMENT_CIRCLE;
 }
 
 T100VOID T100ElementCircle::destroy()

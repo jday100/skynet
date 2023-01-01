@@ -21,6 +21,7 @@ class T100PainterCanvas : public wxScrolledWindow
         T100BOOL            Load(T100PAINTER_ELEMENT_VECTOR*);
 
     protected:
+        void OnEraseBackGround(wxEraseEvent& event);
         void OnPaint(wxPaintEvent& event);
 
         void OnMouseLeftDown(wxMouseEvent& event);

@@ -79,4 +79,9 @@ T100VOID T100Painter::quit()
 
 }
 
+T100VOID T100Painter::NewFile()
+{
+    T100PainterCallback::frame_menu_new();
+}
+
 }

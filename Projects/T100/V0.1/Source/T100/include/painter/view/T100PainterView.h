@@ -11,6 +11,8 @@
 
 #include "T100PainterElementsPanel.h"
 
+#include "T100DiagramInfo.h"
+
 namespace T100Painter{
 class T100PainterFrame;
 
@@ -20,6 +22,12 @@ class T100PainterView
     public:
         T100PainterView();
         virtual ~T100PainterView();
+
+        T100BOOL                close();
+
+        T100BOOL                LoadFile(T100DiagramInfo*);
+
+        ///
 
         T100BOOL                NewFile();
         T100BOOL                OpenFile(T100STRING&);

@@ -1,11 +1,11 @@
 #include "T100ElementCircleSource.h"
 
-#include "T100TransducerTarget.h"
+#include "T100ElementTransducerTarget.h"
 
 namespace T100Painter{
 
 T100ElementCircleSource::T100ElementCircleSource(T100ElementCircle* element)
-    :T100ElementTransducerSource(), m_element(element)
+    :T100ElementSourceBase(), m_element(element)
 {
     //ctor
 }
@@ -19,8 +19,8 @@ T100BOOL T100ElementCircleSource::serialize()
 {
     T100BOOL        result          = T100FALSE;
 
-    result = m_target->setWORD(m_element->m_type);
-    if(!result)return T100FALSE;
+    //result = m_target->setWORD(m_element->getType());
+    //if(!result)return T100FALSE;
 
     result = m_target->setWORD(m_element->m_origin_x);
     if(!result)return T100FALSE;

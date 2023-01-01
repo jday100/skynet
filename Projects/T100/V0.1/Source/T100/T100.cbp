@@ -119,6 +119,7 @@
 					<Add directory="include/math/planimetry" />
 					<Add directory="include/math/matrix" />
 					<Add directory="include/library/file" />
+					<Add directory="include/painter/data" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -232,6 +233,7 @@
 					<Add directory="include/math/planimetry" />
 					<Add directory="include/math/matrix" />
 					<Add directory="include/library/file" />
+					<Add directory="include/painter/data" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -589,15 +591,26 @@
 		<Unit filename="include/painter/T100Painter.h" />
 		<Unit filename="include/painter/T100PainterApp.h" />
 		<Unit filename="include/painter/T100PainterCommon.h" />
+		<Unit filename="include/painter/data/T100DiagramInfo.h" />
+		<Unit filename="include/painter/data/T100DiagramInfoV1.h" />
+		<Unit filename="include/painter/diagram/T100Diagram.h" />
 		<Unit filename="include/painter/diagram/T100DiagramBase.h" />
+		<Unit filename="include/painter/diagram/T100DiagramCommon.h" />
+		<Unit filename="include/painter/diagram/T100DiagramSource.h" />
+		<Unit filename="include/painter/diagram/T100DiagramSourceBase.h" />
+		<Unit filename="include/painter/diagram/T100DiagramTransducer.h" />
+		<Unit filename="include/painter/diagram/T100DiagramTransducerSource.h" />
+		<Unit filename="include/painter/diagram/T100DiagramTransducerTarget.h" />
 		<Unit filename="include/painter/diagram/V1/T100AllSourceV1.h" />
 		<Unit filename="include/painter/diagram/V1/T100DiagramV1.h" />
 		<Unit filename="include/painter/diagram/V1/T100DiagramV1Common.h" />
 		<Unit filename="include/painter/diagram/V1/T100DiagramV1Source.h" />
-		<Unit filename="include/painter/diagram/V1/T100DiagramV1Target.h" />
 		<Unit filename="include/painter/element/T100AllElements.h" />
 		<Unit filename="include/painter/element/T100ElementBase.h" />
+		<Unit filename="include/painter/element/T100ElementCommon.h" />
 		<Unit filename="include/painter/element/T100ElementManager.h" />
+		<Unit filename="include/painter/element/T100ElementSource.h" />
+		<Unit filename="include/painter/element/T100ElementSourceBase.h" />
 		<Unit filename="include/painter/element/T100ElementTransducer.h" />
 		<Unit filename="include/painter/element/T100ElementTransducerSource.h" />
 		<Unit filename="include/painter/element/T100ElementTransducerTarget.h" />
@@ -1024,12 +1037,21 @@
 		<Unit filename="src/math/planimetry/T100Planimetry.cpp" />
 		<Unit filename="src/painter/T100Painter.cpp" />
 		<Unit filename="src/painter/T100PainterApp.cpp" />
+		<Unit filename="src/painter/data/T100DiagramInfo.cpp" />
+		<Unit filename="src/painter/data/T100DiagramInfoV1.cpp" />
+		<Unit filename="src/painter/diagram/T100Diagram.cpp" />
 		<Unit filename="src/painter/diagram/T100DiagramBase.cpp" />
+		<Unit filename="src/painter/diagram/T100DiagramSource.cpp" />
+		<Unit filename="src/painter/diagram/T100DiagramSourceBase.cpp" />
+		<Unit filename="src/painter/diagram/T100DiagramTransducer.cpp" />
+		<Unit filename="src/painter/diagram/T100DiagramTransducerSource.cpp" />
+		<Unit filename="src/painter/diagram/T100DiagramTransducerTarget.cpp" />
 		<Unit filename="src/painter/diagram/V1/T100DiagramV1.cpp" />
 		<Unit filename="src/painter/diagram/V1/T100DiagramV1Source.cpp" />
-		<Unit filename="src/painter/diagram/V1/T100DiagramV1Target.cpp" />
 		<Unit filename="src/painter/element/T100ElementBase.cpp" />
 		<Unit filename="src/painter/element/T100ElementManager.cpp" />
+		<Unit filename="src/painter/element/T100ElementSource.cpp" />
+		<Unit filename="src/painter/element/T100ElementSourceBase.cpp" />
 		<Unit filename="src/painter/element/T100ElementTransducer.cpp" />
 		<Unit filename="src/painter/element/T100ElementTransducerSource.cpp" />
 		<Unit filename="src/painter/element/T100ElementTransducerTarget.cpp" />

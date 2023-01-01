@@ -136,4 +136,16 @@ T100BOOL T100PainterView::Append(wxString panel, T100ElementBase* element)
     return result;
 }
 
+T100BOOL T100PainterView::close()
+{
+
+}
+
+T100BOOL T100PainterView::LoadFile(T100DiagramInfo* diagram)
+{
+    m_paint->Load(diagram->getElements());
+    m_paint->Refresh();
+    return T100TRUE;
+}
+
 }

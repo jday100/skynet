@@ -1,12 +1,12 @@
 #ifndef T100ELEMENTCIRCLESOURCE_H
 #define T100ELEMENTCIRCLESOURCE_H
 
-#include "T100ElementTransducerSource.h"
+#include "T100ElementSourceBase.h"
 #include "T100ElementCircle.h"
 
 namespace T100Painter{
 
-class T100ElementCircleSource : public T100ElementTransducerSource
+class T100ElementCircleSource : public T100ElementSourceBase
 {
     public:
         T100ElementCircleSource(T100ElementCircle*);

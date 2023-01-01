@@ -27,6 +27,7 @@ class T100Painter
 
         T100VOID                show();
         T100VOID                quit();
+        T100VOID                NewFile();
 
     protected:
         T100VOID                create();

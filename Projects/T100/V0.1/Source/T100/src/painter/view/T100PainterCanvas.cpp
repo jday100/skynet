@@ -1,5 +1,6 @@
 #include "T100PainterCanvas.h"
 
+#include <wx/dcclient.h>
 #include <wx/dcbuffer.h>
 #include "T100ElementBase.h"
 #include "T100PainterCallback.h"
@@ -8,6 +9,7 @@ namespace T100Painter{
 
 BEGIN_EVENT_TABLE(T100PainterCanvas,wxScrolledWindow)
     EVT_PAINT(T100PainterCanvas::OnPaint)
+    EVT_ERASE_BACKGROUND(T100PainterCanvas::OnEraseBackGround)
     //
     EVT_LEFT_DOWN(T100PainterCanvas::OnMouseLeftDown)
     EVT_LEFT_UP(T100PainterCanvas::OnMouseLeftUp)
@@ -31,7 +33,9 @@ T100PainterCanvas::~T100PainterCanvas()
 
 T100VOID T100PainterCanvas::create()
 {
+    SetBackgroundStyle(wxBG_STYLE_PAINT);
 
+    SetBackgroundColour(*wxWHITE);
 }
 
 T100VOID T100PainterCanvas::destroy()
@@ -45,11 +49,17 @@ T100BOOL T100PainterCanvas::Load(T100PAINTER_ELEMENT_VECTOR* elements)
     return T100TRUE;
 }
 
+void T100PainterCanvas::OnEraseBackGround(wxEraseEvent& event)
+{
+
+}
+
 void T100PainterCanvas::OnPaint(wxPaintEvent& event)
 {
     if(!m_elements)return;
 
-    wxBufferedPaintDC       dc(this);
+    //wxAutoBufferedPaintDC       dc(this);
+    wxClientDC      dc(this);
 
     for(T100ElementBase* item : *m_elements){
         item->draw(dc);

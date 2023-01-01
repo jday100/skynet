@@ -7,6 +7,7 @@
 #include "T100ElementBase.h"
 
 #include "T100DiagramV1.h"
+#include "T100DiagramInfo.h"
 
 
 namespace T100Painter{
@@ -35,13 +36,33 @@ T100VOID T100PainterCallback::init(T100PainterStore* store, T100PainterServe* se
 
 T100BOOL T100PainterCallback::frame_menu_new(void* d)
 {
-    T100BOOL        result;
-    T100STRING      file;
-    T100PAINTER_ELEMENT_VECTOR*     elements            = T100NULL;
+    T100BOOL                result;
+    T100STRING              file;
+    T100DiagramInfo*        diagram         = T100NULL;
 
-    result = m_serve->NewFile(file, elements);
+    result = m_serve->opened();
     if(result){
-        result = m_view->LoadFile(elements);
+        if(result){
+            result = m_store->close();
+        }
+
+        if(result){
+            result = m_serve->close();
+        }
+
+        if(result){
+            result = m_view->close();
+        }
+    }else{
+        result = T100TRUE;
+    }
+
+    if(result){
+        result = m_serve->NewFile(file, diagram);
+    }
+
+    if(result){
+        result = m_view->LoadFile(diagram);
     }
 
     return result;
@@ -59,7 +80,7 @@ T100BOOL T100PainterCallback::frame_menu_open(void* d)
     }
 
     if(result){
-        result = m_store->OpenFile(file, elements);
+        result = m_store->OpenFile(file, elements, T100NULL);
     }
 
     if(result){
@@ -85,23 +106,20 @@ T100BOOL T100PainterCallback::frame_menu_save(void* d)
 
 T100BOOL T100PainterCallback::frame_menu_save_as(void* d)
 {
-    T100BOOL        result;
-    T100STRING      file;
-    T100DiagramV1*                  diagram             = T100NULL;
-    T100PAINTER_ELEMENT_VECTOR*     elements            = T100NULL;
+    T100BOOL                result;
+    T100STRING              file;
+    T100DiagramInfo*        diagram             = T100NULL;
 
     result = m_view->SaveAsFile(file);
     if(result){
-        elements = m_serve->GetElements();
-        if(!elements){
+        diagram = m_serve->getCurrent();
+        if(!diagram){
             result = T100FALSE;
         }
     }
 
     if(result){
-        diagram     = T100NEW T100DiagramV1();
-        result      = m_store->SaveAsFile(file, elements, diagram);
-        T100SAFE_DELETE(diagram);
+        result = m_store->SaveAsFile(file, diagram);
     }
 
     return result;
@@ -202,7 +220,8 @@ T100BOOL T100PainterCallback::canvas_mouse_left_up(void* d)
     if(current){
         result = current->MouseLeftUp(event->GetPosition().x, event->GetPosition().y);
         if(result){
-            m_serve->GetElements()->append(current->Clone());
+            m_serve->getCurrent()->getElements()->append(current->Clone());
+            m_view->getElementManager()->Deselect();
             m_view->getPaintCtrl()->Refresh();
         }
     }

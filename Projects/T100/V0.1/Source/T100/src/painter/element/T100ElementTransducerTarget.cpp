@@ -3,7 +3,7 @@
 namespace T100Painter{
 
 T100ElementTransducerTarget::T100ElementTransducerTarget(T100Library::T100BufferedFileWriter* writer)
-    :T100Library::T100TransducerTarget(), m_writer(writer)
+    :T100DiagramTransducerTarget(writer)
 {
     //ctor
 }

@@ -16,6 +16,8 @@ class T100ElementManager
         T100BOOL            Append(T100ElementBase*);
 
         T100BOOL            Select(T100STRING);
+        T100BOOL            Deselect();
+
         T100ElementBase*    GetCurrent();
 
     protected:

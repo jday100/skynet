@@ -17,6 +17,7 @@ class T100ElementBase
         T100STRING                  getName();
         T100STRING                  getLabel();
         T100STRING                  getKey();
+        T100WORD                    getType();
 
         virtual T100BOOL            Append(wxListView*);
 

@@ -37,6 +37,12 @@ T100BOOL T100ElementManager::Select(T100STRING key)
     return T100TRUE;
 }
 
+T100BOOL T100ElementManager::Deselect()
+{
+    m_current = T100NULL;
+    return T100TRUE;
+}
+
 T100ElementBase* T100ElementManager::GetCurrent()
 {
     return m_current;

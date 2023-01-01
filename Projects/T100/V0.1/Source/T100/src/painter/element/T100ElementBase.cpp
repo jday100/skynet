@@ -27,6 +27,11 @@ T100STRING T100ElementBase::getKey()
     return m_key;
 }
 
+T100WORD T100ElementBase::getType()
+{
+    return m_type;
+}
+
 T100BOOL T100ElementBase::Append(wxListView* panel)
 {
     T100BOOL        result;
