@@ -8,6 +8,7 @@ typedef enum{
     T100ELEMENT_NONE            = 0,
     //
     T100ELEMENT_CIRCLE,
+    T100ELEMENT_RECTANGLE,
     //
     T100ELEMENT_MAX
 }T100ELEMENT_TYPE;

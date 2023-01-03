@@ -14,16 +14,21 @@ class T100DiagramSourceBase : public T100DiagramTransducerSource
         T100DiagramSourceBase();
         virtual ~T100DiagramSourceBase();
 
-        T100VOID        SetDiagramInfo(T100DiagramInfo*);
+        T100VOID                SetDiagramInfo(T100DiagramInfo*);
+        T100DiagramInfo*        GetDiagramInfo();
 
     protected:
         T100DiagramInfo*        m_diagram           = T100NULL;
+
+        T100BOOL        LoadDiagramHead();
+        T100BOOL        LoadElements();
+        T100BOOL        LoadElement(T100ElementBase*&);
 
         T100BOOL        SaveDiagramHead();
         T100BOOL        SaveElements();
         T100BOOL        SaveElement(T100ElementBase*);
 
-        T100ElementSourceBase*      getElementSource(T100ElementBase*);
+        T100ElementSourceBase*      getElementSource(T100WORD);
 
     private:
 };

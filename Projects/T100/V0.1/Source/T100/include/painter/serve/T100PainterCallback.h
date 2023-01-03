@@ -2,6 +2,7 @@
 #define T100PAINTERCALLBACK_H
 
 #include "T100Common.h"
+#include "T100PainterTransverter.h"
 
 namespace T100Painter{
 class T100PainterStore;
@@ -42,7 +43,7 @@ class T100PainterCallback
         //
         static T100BOOL                     canvas_mouse_left_down(void* = T100NULL);
         static T100BOOL                     canvas_mouse_left_up(void* = T100NULL);
-        static T100BOOL                     canvas_mouse_moving(void* = T100NULL);
+        static T100BOOL                     canvas_mouse_move(void* = T100NULL);
 
     protected:
 
@@ -50,6 +51,8 @@ class T100PainterCallback
         static T100PainterStore*            m_store;
         static T100PainterServe*            m_serve;
         static T100PainterView*             m_view;
+
+        static T100Component::T100PainterTransverter        m_manager;
 
 };
 

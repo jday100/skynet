@@ -18,4 +18,9 @@ T100VOID T100ElementSourceBase::setElement(T100ElementBase* element)
     m_element = element;
 }
 
+T100ElementBase* T100ElementSourceBase::getElement()
+{
+    return m_element;
+}
+
 }

@@ -28,26 +28,6 @@ T100VOID T100PainterServe::destroy()
 
 }
 
-T100BOOL T100PainterServe::NewFile(T100STRING& file, T100PAINTER_ELEMENT_VECTOR*& elements)
-{
-    m_elements.clear();
-    elements = &m_elements;
-
-    return T100TRUE;
-}
-
-T100BOOL T100PainterServe::OpenFile(T100STRING file, T100PAINTER_ELEMENT_VECTOR*& elements)
-{
-    elements = &m_elements;
-
-    return T100TRUE;
-}
-
-T100PAINTER_ELEMENT_VECTOR* T100PainterServe::GetElements()
-{
-    return &m_elements;
-}
-
 T100BOOL T100PainterServe::SaveFile(T100STRING filename)
 {
 
@@ -83,6 +63,14 @@ T100BOOL T100PainterServe::NewFile(T100STRING& file, T100DiagramInfo*& diagram)
 {
     file        = L"unnamed.dgm";
     diagram     = T100NEW T100DiagramInfoV1();
+    m_current   = diagram;
+    m_opened    = T100TRUE;
+
+    return T100TRUE;
+}
+
+T100BOOL T100PainterServe::OpenFile(T100DiagramInfo* diagram)
+{
     m_current   = diagram;
     m_opened    = T100TRUE;
 

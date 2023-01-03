@@ -13,6 +13,8 @@ class T100Planimetry
 
         static T100FLOAT            Dist(T100FLOAT, T100FLOAT, T100FLOAT, T100FLOAT);
 
+        static T100BOOL             Hit(T100FLOAT, T100FLOAT, T100FLOAT, T100FLOAT, T100FLOAT, T100FLOAT);
+
     protected:
 
     private:

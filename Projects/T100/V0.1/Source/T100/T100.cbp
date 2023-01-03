@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-P" />
+				<Option parameters="-I" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -120,6 +120,7 @@
 					<Add directory="include/math/matrix" />
 					<Add directory="include/library/file" />
 					<Add directory="include/painter/data" />
+					<Add directory="include/component/painter" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -234,6 +235,7 @@
 					<Add directory="include/math/matrix" />
 					<Add directory="include/library/file" />
 					<Add directory="include/painter/data" />
+					<Add directory="include/component/painter" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -441,6 +443,11 @@
 		<Unit filename="include/component/font/T100FontFile.h" />
 		<Unit filename="include/component/font/T100FontFileReader.h" />
 		<Unit filename="include/component/font/T100FontFileWriter.h" />
+		<Unit filename="include/component/painter/T100CanvasTransverter.h" />
+		<Unit filename="include/component/painter/T100PainterTransverter.h" />
+		<Unit filename="include/component/painter/T100State.h" />
+		<Unit filename="include/component/painter/T100StateData.h" />
+		<Unit filename="include/component/painter/T100StateTransverter.h" />
 		<Unit filename="include/component/vdisk/T100VDisk.h" />
 		<Unit filename="include/component/vdisk/T100VDiskCommon.h" />
 		<Unit filename="include/component/vdisk/T100VDiskFile.h" />
@@ -616,6 +623,8 @@
 		<Unit filename="include/painter/element/T100ElementTransducerTarget.h" />
 		<Unit filename="include/painter/element/graphics/T100ElementCircle.h" />
 		<Unit filename="include/painter/element/graphics/T100ElementCircleSource.h" />
+		<Unit filename="include/painter/element/graphics/T100ElementRectangle.h" />
+		<Unit filename="include/painter/element/graphics/T100ElementRectangleSource.h" />
 		<Unit filename="include/painter/serve/T100PainterCallback.h" />
 		<Unit filename="include/painter/serve/T100PainterServe.h" />
 		<Unit filename="include/painter/store/T100PainterStore.h" />
@@ -902,6 +911,11 @@
 		<Unit filename="src/component/font/T100FontFile.cpp" />
 		<Unit filename="src/component/font/T100FontFileReader.cpp" />
 		<Unit filename="src/component/font/T100FontFileWriter.cpp" />
+		<Unit filename="src/component/painter/T100CanvasTransverter.cpp" />
+		<Unit filename="src/component/painter/T100PainterTransverter.cpp" />
+		<Unit filename="src/component/painter/T100State.cpp" />
+		<Unit filename="src/component/painter/T100StateData.cpp" />
+		<Unit filename="src/component/painter/T100StateTransverter.cpp" />
 		<Unit filename="src/component/vdisk/T100VDisk.cpp" />
 		<Unit filename="src/component/vdisk/T100VDiskFile.cpp" />
 		<Unit filename="src/component/vdisk/T100VDiskPart.cpp" />
@@ -1057,6 +1071,8 @@
 		<Unit filename="src/painter/element/T100ElementTransducerTarget.cpp" />
 		<Unit filename="src/painter/element/graphics/T100ElementCircle.cpp" />
 		<Unit filename="src/painter/element/graphics/T100ElementCircleSource.cpp" />
+		<Unit filename="src/painter/element/graphics/T100ElementRectangle.cpp" />
+		<Unit filename="src/painter/element/graphics/T100ElementRectangleSource.cpp" />
 		<Unit filename="src/painter/serve/T100PainterCallback.cpp" />
 		<Unit filename="src/painter/serve/T100PainterServe.cpp" />
 		<Unit filename="src/painter/store/T100PainterStore.cpp" />

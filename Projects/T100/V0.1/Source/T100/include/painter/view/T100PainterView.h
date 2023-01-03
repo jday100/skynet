@@ -25,16 +25,11 @@ class T100PainterView
 
         T100BOOL                close();
 
-        T100BOOL                LoadFile(T100DiagramInfo*);
-
-        ///
-
-        T100BOOL                NewFile();
         T100BOOL                OpenFile(T100STRING&);
-        T100BOOL                LoadFile(T100PAINTER_ELEMENT_VECTOR*);
-        T100BOOL                SaveFile();
+
         T100BOOL                SaveAsFile(T100STRING&);
-        T100BOOL                CloseFile();
+
+        T100BOOL                LoadFile(T100DiagramInfo*);
 
         T100BOOL                Quit();
 
@@ -48,6 +43,9 @@ class T100PainterView
 
     public:
         T100VOID                setParent(wxWindow*);
+
+        T100VOID                setManager(wxAuiManager*);
+
 
         T100BOOL                create();
 

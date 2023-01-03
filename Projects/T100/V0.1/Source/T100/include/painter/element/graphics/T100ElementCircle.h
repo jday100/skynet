@@ -5,7 +5,6 @@
 
 namespace T100Painter{
 
-
 class T100ElementCircle : public T100ElementBase
 {
     friend class T100ElementCircleSource;
@@ -13,12 +12,14 @@ class T100ElementCircle : public T100ElementBase
         T100ElementCircle();
         virtual ~T100ElementCircle();
 
+        T100VOID            Clear();
         T100BOOL            draw(wxDC&);
         T100ElementCircle*  Clone();
+        T100BOOL            Hit(T100INT, T100INT);
 
         T100BOOL            MouseLeftDown(T100INT, T100INT);
         T100BOOL            MouseLeftUp(T100INT, T100INT);
-        T100BOOL            MouseMoving();
+        T100BOOL            MouseMove(T100INT, T100INT);
 
     protected:
         T100VOID            create();

@@ -70,6 +70,14 @@ T100BOOL T100FileReader::opened()
     return m_opened;
 }
 
+T100BOOL T100FileReader::eof()
+{
+    if(m_opened){
+        return m_ifs->eof();
+    }
+    return T100FALSE;
+}
+
 T100BOOL T100FileReader::seek(T100DWORD seek)
 {
     if(m_opened){

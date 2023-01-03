@@ -21,6 +21,8 @@ class T100IDEView
 
         T100IDEMainFrame*           getFrame();
 
+        T100IDEViewManager*         getViewManager();
+
     protected:
         T100VOID                    create();
         T100VOID                    destroy();

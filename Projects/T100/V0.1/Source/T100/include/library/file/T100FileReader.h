@@ -17,6 +17,7 @@ class T100FileReader : public T100Reader
         T100BOOL                        close();
         T100BOOL                        opened();
 
+        T100BOOL                        eof();
         T100BOOL                        seek(T100DWORD);
 
         T100BOOL                        read(T100WORD*, T100WORD&);

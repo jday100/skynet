@@ -13,12 +13,16 @@ class T100Diagram : public T100DiagramBase
         T100Diagram();
         virtual ~T100Diagram();
 
+        T100BOOL            Load(T100Library::T100BufferedFileReader*, T100DiagramInfo*&);
+
+        ///
+
         T100BOOL                Load(T100Library::T100BufferedFileReader*, T100PAINTER_ELEMENT_VECTOR*);
 
         T100BOOL                Save(T100Library::T100BufferedFileWriter*, T100PAINTER_ELEMENT_VECTOR*);
 
     protected:
-        T100DiagramSourceBase*          getDiagramSource(T100DiagramSourceBase&);
+        T100DiagramSourceBase*          getDiagramSource(T100WORD, T100WORD);
 
     private:
 };

@@ -15,6 +15,11 @@ T100ElementSource::~T100ElementSource()
     //dtor
 }
 
+T100WORD T100ElementSource::getType()
+{
+    return m_type;
+}
+
 T100BOOL T100ElementSource::serialize()
 {
     T100BOOL        result          = T100FALSE;
@@ -26,7 +31,15 @@ T100BOOL T100ElementSource::serialize()
 
 T100BOOL T100ElementSource::deserialize()
 {
+    T100BOOL        result          = T100FALSE;
 
+    if(m_element){
+        result = m_target->getWORD(m_element->m_type);
+    }else{
+        result = m_target->getWORD(m_type);
+    }
+
+    return result;
 }
 
 }

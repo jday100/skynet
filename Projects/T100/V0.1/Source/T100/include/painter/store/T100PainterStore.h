@@ -19,15 +19,11 @@ class T100PainterStore
 
         T100BOOL                close();
 
+        T100BOOL                OpenFile(T100STRING, T100DiagramInfo*&);
+
         T100BOOL                SaveAsFile(T100STRING, T100DiagramInfo*);
 
-        //
-        T100BOOL                OpenFile(T100STRING, T100PAINTER_ELEMENT_VECTOR*, T100DiagramV1*);
-
-        T100BOOL                SaveAsFile(T100STRING, T100PAINTER_ELEMENT_VECTOR*, T100DiagramV1*);
-
     protected:
-        T100DiagramBase*        getDiagram(T100Library::T100FileReader*);
 
     private:
         T100Library::T100File*              m_file              = T100NULL;

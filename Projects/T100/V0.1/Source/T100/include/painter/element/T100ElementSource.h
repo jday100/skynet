@@ -14,9 +14,13 @@ class T100ElementSource : public T100ElementSourceBase
         T100BOOL        serialize();
         T100BOOL        deserialize();
 
+        T100WORD        getType();
+
     protected:
 
     private:
+        T100WORD        m_type          = 0;
+
 };
 
 }

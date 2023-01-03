@@ -14,11 +14,13 @@ class T100ElementTransducerTarget : public T100DiagramTransducerTarget
         T100ElementTransducerTarget(T100Library::T100BufferedFileWriter*);
         virtual ~T100ElementTransducerTarget();
 
+        /*
         T100BOOL        setWORD(T100WORD);
         T100BOOL        getWORD(T100WORD&);
 
         T100BOOL        setFLOAT(T100FLOAT);
         T100BOOL        getFLOAT(T100FLOAT&);
+        */
 
     protected:
 

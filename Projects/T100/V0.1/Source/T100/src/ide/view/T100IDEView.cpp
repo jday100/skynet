@@ -27,6 +27,7 @@ T100VOID T100IDEView::create()
 
     m_frame     = T100NEW T100IDEMainFrame(m_manager->getDocManager(), m_parent);
     m_frame->setView(this);
+    m_manager->getAuiManager()->SetFrame(m_frame);
 
     if(m_platen){
         m_platen->getDefault()->create();
@@ -43,6 +44,11 @@ T100VOID T100IDEView::destroy()
 T100IDEMainFrame* T100IDEView::getFrame()
 {
     return m_frame;
+}
+
+T100IDEViewManager* T100IDEView::getViewManager()
+{
+    return m_manager;
 }
 
 T100VOID T100IDEView::show()

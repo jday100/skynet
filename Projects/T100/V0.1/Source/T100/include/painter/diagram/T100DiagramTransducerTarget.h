@@ -20,6 +20,9 @@ class T100DiagramTransducerTarget : public T100Library::T100TransducerTarget
         T100BOOL        setFLOAT(T100FLOAT);
         T100BOOL        getFLOAT(T100FLOAT&);
 
+        T100BOOL        reset();
+        T100BOOL        eof();
+
     protected:
         T100Library::T100BufferedFileReader*        m_reader            = T100NULL;
         T100Library::T100BufferedFileWriter*        m_writer            = T100NULL;

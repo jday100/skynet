@@ -9,12 +9,16 @@
 #include "T100DiagramV1.h"
 #include "T100DiagramInfo.h"
 
+#include "T100TestTools.h"
+
 
 namespace T100Painter{
 
 T100PainterStore*       T100PainterCallback::m_store            = T100NULL;
 T100PainterServe*       T100PainterCallback::m_serve            = T100NULL;
 T100PainterView*        T100PainterCallback::m_view             = T100NULL;
+
+T100Component::T100PainterTransverter        T100PainterCallback::m_manager;
 
 
 T100PainterCallback::T100PainterCallback()
@@ -70,21 +74,41 @@ T100BOOL T100PainterCallback::frame_menu_new(void* d)
 
 T100BOOL T100PainterCallback::frame_menu_open(void* d)
 {
-    T100BOOL        result;
-    T100STRING      file;
-    T100PAINTER_ELEMENT_VECTOR*     elements            = T100NULL;
+    T100BOOL                result;
+    T100STRING              file;
+    T100DiagramInfo*        diagram         = T100NULL;
 
-    result = m_view->OpenFile(file);
+    result = m_serve->opened();
     if(result){
-        result = m_serve->OpenFile(file, elements);
+        if(result){
+            result = m_store->close();
+        }
+
+        if(result){
+            result = m_serve->close();
+        }
+
+        if(result){
+            result = m_view->close();
+        }
+    }else{
+        result = T100TRUE;
     }
 
     if(result){
-        result = m_store->OpenFile(file, elements, T100NULL);
+        result = m_view->OpenFile(file);
     }
 
     if(result){
-        result = m_view->LoadFile(elements);
+        result = m_store->OpenFile(file, diagram);
+    }
+
+    if(result){
+        result = m_serve->OpenFile(diagram);
+    }
+
+    if(result){
+        result = m_view->LoadFile(diagram);
     }
 
     return result;
@@ -201,6 +225,11 @@ T100BOOL T100PainterCallback::canvas_mouse_left_down(void* d)
 
     if(current){
         current->MouseLeftDown(event->GetPosition().x, event->GetPosition().y);
+        m_view->getPaintCtrl()->Select(current);
+    }else{
+        if(m_view->getPaintCtrl()->Hit(event->GetPosition().x, event->GetPosition().y)){
+        }
+        m_view->getPaintCtrl()->Refresh();
     }
 
     return T100TRUE;
@@ -220,6 +249,7 @@ T100BOOL T100PainterCallback::canvas_mouse_left_up(void* d)
     if(current){
         result = current->MouseLeftUp(event->GetPosition().x, event->GetPosition().y);
         if(result){
+            m_view->getPaintCtrl()->Deselect();
             m_serve->getCurrent()->getElements()->append(current->Clone());
             m_view->getElementManager()->Deselect();
             m_view->getPaintCtrl()->Refresh();
@@ -229,17 +259,34 @@ T100BOOL T100PainterCallback::canvas_mouse_left_up(void* d)
     return T100TRUE;
 }
 
-T100BOOL T100PainterCallback::canvas_mouse_moving(void* d)
+T100BOOL T100PainterCallback::canvas_mouse_move(void* d)
 {
-    T100ElementBase*    current         = T100NULL;
+    T100BOOL                result          = T100FALSE;
+    wxMouseEvent*           event           = T100NULL;
+    T100ElementManager*     manager         = T100NULL;
+    T100ElementBase*        current         = T100NULL;
 
-    current = m_view->getElementManager()->GetCurrent();
+    event   = static_cast<wxMouseEvent*>(d);
+    if(!event)return T100FALSE;
 
+    manager = m_view->getElementManager();
+    if(!manager)return T100FALSE;
+
+    current = m_view->getPaintCtrl()->GetCurrent();
     if(current){
-        current->MouseMoving();
+        T100INT     x, y, vx, vy;
+
+        x   = event->GetPosition().x;
+        y   = event->GetPosition().y;
+
+        result = m_view->getPaintCtrl()->GetVirtualPosition(x, y, vx, vy);
+        result = current->MouseMove(vx, vy);
+        m_view->getPaintCtrl()->MouseMove(vx, vy);
+        //T100Library::T100TestTools::Print(L"Refresh");
+        m_view->getPaintCtrl()->Refresh();
     }
 
-    return T100TRUE;
+    return result;
 }
 
 }

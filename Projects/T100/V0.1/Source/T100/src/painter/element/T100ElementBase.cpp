@@ -1,5 +1,7 @@
 #include "T100ElementBase.h"
 
+#include <wx/textctrl.h>
+
 namespace T100Painter{
 
 T100ElementBase::T100ElementBase()
@@ -15,6 +17,13 @@ T100ElementBase::~T100ElementBase()
 T100STRING T100ElementBase::getName()
 {
     return m_name;
+}
+
+T100VOID T100ElementBase::setLabel(T100STRING label)
+{
+    m_label = label;
+    //
+    m_name  = label;
 }
 
 T100STRING T100ElementBase::getLabel()
@@ -60,7 +69,7 @@ T100BOOL T100ElementBase::MouseLeftUp(T100INT, T100INT)
     return T100TRUE;
 }
 
-T100BOOL T100ElementBase::MouseMoving()
+T100BOOL T100ElementBase::MouseMove(T100INT, T100INT)
 {
     return T100TRUE;
 }

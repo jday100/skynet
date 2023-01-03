@@ -7,6 +7,8 @@
 #include "T100Painter.h"
 #include "T100PainterView.h"
 
+#include "T100IDEViewManager.h"
+
 namespace T100IDE{
 
 IMPLEMENT_DYNAMIC_CLASS(T100MDIPaintView, wxView)
@@ -48,9 +50,21 @@ T100BOOL T100MDIPaintView::OnCreate(wxDocument* doc, long flags)
     m_frame = T100NEW T100MDIPaintFrame(doc, this, wxStaticCast(m_view->getFrame(), wxMDIParentFrame));
     wxASSERT(m_frame == GetFrame());
 
+    wxBoxSizer* BoxSizer1;
+
+    BoxSizer1 = T100NEW wxBoxSizer(wxHORIZONTAL);
+
     m_painter   = T100NEW T100Painter::T100Painter();
+
     m_painter->getView()->setParent(m_frame);
+    m_painter->getView()->setManager(m_view->getViewManager()->getAuiManager());
     m_painter->getView()->create();
+
+    BoxSizer1->Add(m_painter->getView()->getPaintCtrl(), 1, wxALL|wxEXPAND, 5);
+
+    m_frame->SetSizer(BoxSizer1);
+    BoxSizer1->Fit(m_frame);
+    BoxSizer1->SetSizeHints(m_frame);
 
     m_frame->Show();
 

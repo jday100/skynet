@@ -17,19 +17,10 @@ class T100PainterServe
         T100BOOL                opened();
 
         T100BOOL                NewFile(T100STRING&, T100DiagramInfo*&);
+        T100BOOL                OpenFile(T100DiagramInfo*);
         T100BOOL                close();
 
         T100DiagramInfo*        getCurrent();
-
-        //////
-
-        T100BOOL            NewFile(T100STRING&, T100PAINTER_ELEMENT_VECTOR*&);
-        T100BOOL            OpenFile(T100STRING, T100PAINTER_ELEMENT_VECTOR*&);
-        T100BOOL            SaveFile();
-        T100BOOL            SaveAsFile();
-        T100BOOL            CloseFile();
-
-        T100PAINTER_ELEMENT_VECTOR*     GetElements();
 
     public:
         T100BOOL            SaveFile(T100STRING);

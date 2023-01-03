@@ -12,6 +12,7 @@ class T100ElementSourceBase : public T100ElementTransducerSource
         virtual ~T100ElementSourceBase();
 
         T100VOID                setElement(T100ElementBase*);
+        T100ElementBase*        getElement();
 
     protected:
         T100ElementBase*        m_element           = T100NULL;

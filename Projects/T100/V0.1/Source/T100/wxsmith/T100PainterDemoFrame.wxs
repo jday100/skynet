@@ -3,6 +3,9 @@
 	<object class="wxFrame" name="T100PainterDemoFrame">
 		<pos_arg>1</pos_arg>
 		<size_arg>1</size_arg>
+		<handler function="OnPaint" entry="EVT_PAINT" />
+		<handler function="OnEraseBackground" entry="EVT_ERASE_BACKGROUND" />
+		<handler function="OnResize" entry="EVT_SIZE" />
 		<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW1" variable="ScrolledWindow1" member="yes">
 			<pos>384,304</pos>
 		</object>

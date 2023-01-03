@@ -26,6 +26,9 @@ class T100PainterDemoFrame: public wxFrame
 	private:
 
 		//(*Handlers(T100PainterDemoFrame)
+		void OnPaint(wxPaintEvent& event);
+		void OnEraseBackground(wxEraseEvent& event);
+		void OnResize(wxSizeEvent& event);
 		//*)
 
 	protected:
