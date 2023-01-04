@@ -14,6 +14,8 @@ class T100IDEDefaultPlaten : public T100IDEPlatenBase
 
         T100BOOL            create();
 
+        T100BOOL            show();
+
         T100VOID            show_project(T100BOOL = T100TRUE);
 
     protected:

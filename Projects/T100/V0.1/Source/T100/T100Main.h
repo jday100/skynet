@@ -40,6 +40,8 @@ class T100Frame: public wxFrame
         void OnThreadFont(wxThreadEvent& event);
         void OnThreadVPC(wxThreadEvent& event);
 
+        void OnResize(wxSizeEvent& event);
+
     private:
         T100WORD                    m_return;
         std::mutex                  m_mutex;

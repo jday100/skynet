@@ -31,6 +31,8 @@ T100VOID T100IDEViewManager::create()
 
 T100VOID T100IDEViewManager::destroy()
 {
+    m_aui->UnInit();
+
     T100SAFE_DELETE(m_doc);
     T100SAFE_DELETE(m_aui);
 }

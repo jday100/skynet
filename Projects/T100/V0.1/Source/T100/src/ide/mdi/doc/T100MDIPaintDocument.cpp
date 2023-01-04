@@ -8,9 +8,10 @@
 
 namespace T100IDE{
 
-IMPLEMENT_DYNAMIC_CLASS(T100MDIPaintDocument, wxDocument)
+IMPLEMENT_DYNAMIC_CLASS(T100MDIPaintDocument, T100MDIDocumentBase)
 
 T100MDIPaintDocument::T100MDIPaintDocument()
+    :T100MDIDocumentBase()
 {
     //ctor
     create();

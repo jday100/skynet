@@ -6,9 +6,10 @@
 
 namespace T100IDE{
 
-IMPLEMENT_DYNAMIC_CLASS(T100MDITextDocument, wxDocument)
+IMPLEMENT_DYNAMIC_CLASS(T100MDITextDocument, T100MDIDocumentBase)
 
 T100MDITextDocument::T100MDITextDocument()
+    :T100MDIDocumentBase()
 {
     //ctor
     create();

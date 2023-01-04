@@ -2,7 +2,7 @@
 #define T100IDEVIEW_H
 
 #include <wx/frame.h>
-#include "T100Common.h"
+#include "T100IDECommon.h"
 
 namespace T100IDE{
 class T100IDEPlatenManager;
@@ -22,6 +22,7 @@ class T100IDEView
         T100IDEMainFrame*           getFrame();
 
         T100IDEViewManager*         getViewManager();
+        T100IDEPlatenManager*       getPlatenManager();
 
     protected:
         T100VOID                    create();

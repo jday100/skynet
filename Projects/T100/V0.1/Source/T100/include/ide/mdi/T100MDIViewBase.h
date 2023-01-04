@@ -18,6 +18,7 @@ class T100MDIViewBase : public wxView
 
 
     private:
+        DECLARE_EVENT_TABLE()
 };
 
 }

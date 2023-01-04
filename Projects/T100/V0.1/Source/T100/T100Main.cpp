@@ -25,6 +25,8 @@
 #include "T100App.h"
 #include "T100VPCView.h"
 
+#include "T100TestTools.h"
+
 
 //helper functions
 enum wxbuildinfoformat {
@@ -68,6 +70,8 @@ BEGIN_EVENT_TABLE(T100Frame,wxFrame)
     EVT_THREAD(ID_THREAD_CLOSE, T100Frame::OnThreadClose)
     EVT_THREAD(ID_THREAD_FONT, T100Frame::OnThreadFont)
     EVT_THREAD(ID_THREAD_VPC, T100Frame::OnThreadVPC)
+
+    EVT_SIZE(T100Frame::OnResize)
 
 END_EVENT_TABLE()
 
@@ -189,6 +193,11 @@ void T100Frame::OnThreadVPC(wxThreadEvent& event)
 
     //vpc->show();
     m_vpc->run();
+}
+
+void T100Frame::OnResize(wxSizeEvent& event)
+{
+    T100Library::T100TestTools::Print(L"Resize");
 }
 
 T100BOOL T100Frame::font_quit(void* d)

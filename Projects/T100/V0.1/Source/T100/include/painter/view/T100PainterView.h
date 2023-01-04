@@ -41,8 +41,12 @@ class T100PainterView
 
         T100WxWidgets::T100PaintCtrl*       getPaintCtrl();
 
+        T100VOID                            setElementsPanel(T100PainterElementsPanel*);
+        T100PainterElementsPanel*           getElementsPanel();
+
     public:
         T100VOID                setParent(wxWindow*);
+        T100VOID                setRootFrame(wxFrame*);
 
         T100VOID                setManager(wxAuiManager*);
 
@@ -59,6 +63,7 @@ class T100PainterView
         wxAuiManager*           m_manager           = T100NULL;
         T100ElementManager*     m_elements          = T100NULL;
         T100PainterFrame*       m_frame             = T100NULL;
+        wxFrame*                m_root              = T100NULL;
 
         T100WxWidgets::T100PaintCtrl*       m_paint             = T100NULL;
 

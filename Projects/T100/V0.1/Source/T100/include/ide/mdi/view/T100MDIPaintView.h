@@ -17,6 +17,7 @@ class T100MDIPaintView : public T100MDIViewBase
 
         T100BOOL                        OnCreate(wxDocument* doc, long flags);
         T100VOID                        OnDraw(wxDC* dc);
+        T100VOID                        OnUpdate(wxView* sender, wxObject* hint = T100NULL);
         T100BOOL                        OnClose(T100BOOL deleteWindow = T100TRUE);
 
     protected:

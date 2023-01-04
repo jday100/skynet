@@ -15,6 +15,8 @@ class T100IDEPlatenBase
 
         virtual T100BOOL            create() = 0;
 
+        virtual T100BOOL            show() = 0;
+
     protected:
         T100IDEView*                m_view          = T100NULL;
 

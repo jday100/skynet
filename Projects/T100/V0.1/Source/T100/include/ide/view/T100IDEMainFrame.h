@@ -24,8 +24,12 @@ class T100IDEMainFrame : public wxDocMDIParentFrame
         T100IDEView*        getView();
 
     protected:
+        void OnResize(wxSizeEvent& event);
 
     private:
+        T100VOID            create();
+        T100VOID            destroy();
+
         T100IDEView*        m_view          = T100NULL;
 
         DECLARE_EVENT_TABLE()

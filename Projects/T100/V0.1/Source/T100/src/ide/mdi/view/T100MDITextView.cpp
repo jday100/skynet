@@ -9,13 +9,14 @@
 
 namespace T100IDE{
 
-IMPLEMENT_DYNAMIC_CLASS(T100MDITextView, wxView)
+IMPLEMENT_DYNAMIC_CLASS(T100MDITextView, T100MDIViewBase)
 
-BEGIN_EVENT_TABLE(T100MDITextView, wxView)
+BEGIN_EVENT_TABLE(T100MDITextView, T100MDIViewBase)
 END_EVENT_TABLE()
 
 
 T100MDITextView::T100MDITextView()
+    :T100MDIViewBase()
 {
     //ctor
     create();

@@ -3,6 +3,7 @@
 namespace T100IDE{
 
 T100MDIDocumentBase::T100MDIDocumentBase()
+    :wxDocument()
 {
     //ctor
 }

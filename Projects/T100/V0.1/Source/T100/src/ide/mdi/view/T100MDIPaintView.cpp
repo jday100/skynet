@@ -8,16 +8,19 @@
 #include "T100PainterView.h"
 
 #include "T100IDEViewManager.h"
+#include "T100IDEPlatenManager.h"
+
 
 namespace T100IDE{
 
-IMPLEMENT_DYNAMIC_CLASS(T100MDIPaintView, wxView)
+IMPLEMENT_DYNAMIC_CLASS(T100MDIPaintView, T100MDIViewBase)
 
-BEGIN_EVENT_TABLE(T100MDIPaintView, wxView)
+BEGIN_EVENT_TABLE(T100MDIPaintView, T100MDIViewBase)
 END_EVENT_TABLE()
 
 
 T100MDIPaintView::T100MDIPaintView()
+    :T100MDIViewBase()
 {
     //ctor
     create();
@@ -57,6 +60,14 @@ T100BOOL T100MDIPaintView::OnCreate(wxDocument* doc, long flags)
     m_painter   = T100NEW T100Painter::T100Painter();
 
     m_painter->getView()->setParent(m_frame);
+
+    if(m_view->getPlatenManager()->Exists(T100IDE_TYPE_PAINTER)){
+        T100IDEPainterPlaten*   platen = static_cast<T100IDEPainterPlaten*>(m_view->getPlatenManager()->getPlaten(T100IDE_TYPE_PAINTER));
+        m_painter->getView()->setElementsPanel(platen->getElementsPanel());
+    }else{
+        m_painter->getView()->setRootFrame(wxStaticCast(m_view->getFrame(), wxMDIParentFrame));
+    }
+
     m_painter->getView()->setManager(m_view->getViewManager()->getAuiManager());
     m_painter->getView()->create();
 
@@ -66,12 +77,22 @@ T100BOOL T100MDIPaintView::OnCreate(wxDocument* doc, long flags)
     BoxSizer1->Fit(m_frame);
     BoxSizer1->SetSizeHints(m_frame);
 
+    m_painter->NewFile();
+
     m_frame->Show();
+
+
+    m_view->getPlatenManager()->Change(T100IDE_TYPE_PAINTER, m_painter);
 
     return T100TRUE;
 }
 
 T100VOID T100MDIPaintView::OnDraw(wxDC* dc)
+{
+
+}
+
+T100VOID T100MDIPaintView::OnUpdate(wxView* sender, wxObject* hint)
 {
 
 }

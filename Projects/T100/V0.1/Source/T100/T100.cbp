@@ -498,7 +498,10 @@
 		<Unit filename="include/ide/mdi/frame/T100MDITextFrame.h" />
 		<Unit filename="include/ide/mdi/view/T100MDIPaintView.h" />
 		<Unit filename="include/ide/mdi/view/T100MDITextView.h" />
+		<Unit filename="include/ide/platen/T100IDEAllPlatens.h" />
 		<Unit filename="include/ide/platen/T100IDEDefaultPlaten.h" />
+		<Unit filename="include/ide/platen/T100IDEEditorPlaten.h" />
+		<Unit filename="include/ide/platen/T100IDEPainterPlaten.h" />
 		<Unit filename="include/ide/project/T100Project.h" />
 		<Unit filename="include/ide/serve/T100IDEServe.h" />
 		<Unit filename="include/ide/serve/T100IDEServeBase.h" />
@@ -965,6 +968,8 @@
 		<Unit filename="src/ide/mdi/view/T100MDIPaintView.cpp" />
 		<Unit filename="src/ide/mdi/view/T100MDITextView.cpp" />
 		<Unit filename="src/ide/platen/T100IDEDefaultPlaten.cpp" />
+		<Unit filename="src/ide/platen/T100IDEEditorPlaten.cpp" />
+		<Unit filename="src/ide/platen/T100IDEPainterPlaten.cpp" />
 		<Unit filename="src/ide/project/T100Project.cpp" />
 		<Unit filename="src/ide/serve/T100IDEServe.cpp" />
 		<Unit filename="src/ide/serve/T100IDEServeBase.cpp" />
