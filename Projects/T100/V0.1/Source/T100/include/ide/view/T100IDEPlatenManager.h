@@ -15,7 +15,8 @@ class T100IDEPlatenManager
         T100IDEPlatenManager(T100IDEView*);
         virtual ~T100IDEPlatenManager();
 
-        T100IDEPlatenBase*          getDefault();
+        T100IDEDefaultPlaten*       getDefault();
+        T100IDEPlatenBase*          getCurrent();
 
         T100BOOL                    Change(T100IDE_TYPE, void*);
 

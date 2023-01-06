@@ -38,6 +38,21 @@ T100VOID T100PainterCallback::init(T100PainterStore* store, T100PainterServe* se
     m_view      = view;
 }
 
+T100PainterStore* T100PainterCallback::getStore()
+{
+    return m_store;
+}
+
+T100PainterServe* T100PainterCallback::getServe()
+{
+    return m_serve;
+}
+
+T100PainterView* T100PainterCallback::getView()
+{
+    return m_view;
+}
+
 T100BOOL T100PainterCallback::frame_menu_new(void* d)
 {
     T100BOOL                result;
@@ -184,6 +199,11 @@ T100BOOL T100PainterCallback::frame_menu_elements(void* d)
     m_view->ShowElements();
 }
 
+T100BOOL T100PainterCallback::frame_menu_properties(void* d)
+{
+    m_view->ShowProperties();
+}
+
 T100BOOL T100PainterCallback::frame_menu_about(void* d)
 {
 
@@ -210,6 +230,9 @@ T100BOOL T100PainterCallback::view_element_select(void* d)
 
     if(key){
         result = m_view->getElementManager()->Select(*key);
+        if(result){
+            m_view->getPaintCtrl()->Change(T100CANVAS_STATE_PAINT);
+        }
     }
 }
 
@@ -287,6 +310,97 @@ T100BOOL T100PainterCallback::canvas_mouse_move(void* d)
     }
 
     return result;
+}
+
+//////
+
+T100BOOL T100PainterCallback::canvas_state_paint_paint(void* d)
+{
+
+}
+
+T100BOOL T100PainterCallback::canvas_state_paint_mouse_left_down(void* d)
+{
+    wxMouseEvent*       event           = T100NULL;
+    T100ElementBase*    current         = T100NULL;
+
+    event   = static_cast<wxMouseEvent*>(d);
+    if(!event)return T100FALSE;
+
+    current = m_view->getElementManager()->GetCurrent();
+
+    if(current){
+        current->MouseLeftDown(event->GetPosition().x, event->GetPosition().y);
+        m_view->getPaintCtrl()->Select(current);
+    }else{
+        if(m_view->getPaintCtrl()->Hit(event->GetPosition().x, event->GetPosition().y)){
+            m_view->getPaintCtrl()->Change(T100CANVAS_STATE_SELECTED);
+        }
+        m_view->getPaintCtrl()->Refresh();
+    }
+
+    return T100TRUE;
+}
+
+T100BOOL T100PainterCallback::canvas_state_paint_mouse_left_up(void* d)
+{
+    T100BOOL            result;
+    wxMouseEvent*       event           = T100NULL;
+    T100ElementBase*    current         = T100NULL;
+
+    event   = static_cast<wxMouseEvent*>(d);
+    if(!event)return T100FALSE;
+
+    current = m_view->getElementManager()->GetCurrent();
+
+    if(current){
+        result = current->MouseLeftUp(event->GetPosition().x, event->GetPosition().y);
+        if(result){
+            m_view->getPaintCtrl()->Deselect();
+            m_serve->getCurrent()->getElements()->append(current->Clone());
+            m_view->getElementManager()->Deselect();
+
+            m_view->getPaintCtrl()->Change(T100CANVAS_STATE_NONE);
+            m_view->getPaintCtrl()->Refresh();
+        }
+    }
+
+    return T100TRUE;
+}
+
+T100BOOL T100PainterCallback::canvas_state_paint_mouse_move(void* d)
+{
+
+}
+
+T100BOOL T100PainterCallback::canvas_state_paint_mouse_left_dclick(void* d)
+{
+
+}
+
+T100BOOL T100PainterCallback::canvas_state_selected_paint(void* d)
+{
+
+}
+
+T100BOOL T100PainterCallback::canvas_state_selected_mouse_left_down(void* d)
+{
+
+}
+
+T100BOOL T100PainterCallback::canvas_state_selected_mouse_left_up(void* d)
+{
+
+}
+
+T100BOOL T100PainterCallback::canvas_state_selected_mouse_move(void* d)
+{
+
+}
+
+T100BOOL T100PainterCallback::canvas_state_selected_mouse_left_dclick(void* d)
+{
+
 }
 
 }

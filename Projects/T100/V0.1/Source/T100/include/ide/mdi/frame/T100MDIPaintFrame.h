@@ -3,6 +3,7 @@
 
 #include <wx/docmdi.h>
 #include "T100Common.h"
+#include "T100Painter.h"
 
 namespace T100IDE{
 
@@ -20,9 +21,14 @@ class T100MDIPaintFrame : public wxDocMDIChildFrame
                        const wxString& name = wxFrameNameStr);
         virtual ~T100MDIPaintFrame();
 
+        T100VOID            setPainter(T100Painter::T100Painter*);
+
     protected:
+        void OnSetFocus(wxFocusEvent& event);
 
     private:
+        T100Painter::T100Painter*       m_painter           = T100NULL;
+
         DECLARE_EVENT_TABLE()
 };
 

@@ -33,6 +33,8 @@ class T100PainterCanvas : public wxScrolledWindow
 
         T100BOOL            GetVirtualPosition(T100INT, T100INT, T100INT&, T100INT&);
 
+        T100BOOL            Change(T100CANVAS_STATE);
+
     public:
         static const long ID_TITLE;
 

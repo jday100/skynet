@@ -21,6 +21,7 @@ const long T100PainterFrame::ID_MENUITEM_COPY = wxNewId();
 const long T100PainterFrame::ID_MENUITEM_PASTE = wxNewId();
 
 const long T100PainterFrame::ID_MENUITEM_ELEMENTS = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_PROPERTIES = wxNewId();
 
 const long T100PainterFrame::ID_MENUITEM_ABOUT = wxNewId();
 
@@ -93,6 +94,7 @@ T100BOOL T100PainterFrame::create_menu()
     menuBar->Append(menuEdit, wxT("Edit"));
 
     menuView->Append(ID_MENUITEM_ELEMENTS, wxT("Elements"));
+    menuView->Append(ID_MENUITEM_PROPERTIES, wxT("Properties"));
 
     menuBar->Append(menuView, wxT("View"));
 
@@ -104,25 +106,26 @@ T100BOOL T100PainterFrame::create_menu()
 
     //
 
-    Connect(ID_MENUITEM_NEW,        wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuNewSelected);
-    Connect(ID_MENUITEM_OPEN,       wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuOpenSelected);
-    Connect(ID_MENUITEM_CLOSE,      wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuCloseSelected);
-    Connect(ID_MENUITEM_SAVE,       wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuSaveSelected);
-    Connect(ID_MENUITEM_SAVE_AS,    wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuSaveAsSelected);
-    Connect(ID_MENUITEM_QUIT,       wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuQuitSelected);
+    Connect(ID_MENUITEM_NEW,            wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuNewSelected);
+    Connect(ID_MENUITEM_OPEN,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuOpenSelected);
+    Connect(ID_MENUITEM_CLOSE,          wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuCloseSelected);
+    Connect(ID_MENUITEM_SAVE,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuSaveSelected);
+    Connect(ID_MENUITEM_SAVE_AS,        wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuSaveAsSelected);
+    Connect(ID_MENUITEM_QUIT,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuQuitSelected);
 
-    Connect(ID_MENUITEM_UNDO,       wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuUndoSelected);
-    Connect(ID_MENUITEM_REDO,       wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuRedoSelected);
-    Connect(ID_MENUITEM_CUT,        wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuCutSelected);
-    Connect(ID_MENUITEM_COPY,       wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuCopySelected);
-    Connect(ID_MENUITEM_PASTE,      wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuPasteSelected);
+    Connect(ID_MENUITEM_UNDO,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuUndoSelected);
+    Connect(ID_MENUITEM_REDO,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuRedoSelected);
+    Connect(ID_MENUITEM_CUT,            wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuCutSelected);
+    Connect(ID_MENUITEM_COPY,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuCopySelected);
+    Connect(ID_MENUITEM_PASTE,          wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuPasteSelected);
 
-    Connect(ID_MENUITEM_ELEMENTS,   wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuElementsSelected);
+    Connect(ID_MENUITEM_ELEMENTS,       wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuElementsSelected);
+    Connect(ID_MENUITEM_PROPERTIES,     wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuPropertiesSelected);
 
-    Connect(ID_MENUITEM_ABOUT,      wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuAboutSelected);
+    Connect(ID_MENUITEM_ABOUT,          wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuAboutSelected);
 
     ////
-    Connect(wxID_ANY,               wxEVT_CLOSE_WINDOW,             (wxObjectEventFunction)&T100PainterFrame::OnClose);
+    Connect(wxID_ANY,                   wxEVT_CLOSE_WINDOW,             (wxObjectEventFunction)&T100PainterFrame::OnClose);
 
 
     return T100TRUE;
@@ -186,6 +189,11 @@ void T100PainterFrame::OnMenuPasteSelected(wxCommandEvent& event)
 void T100PainterFrame::OnMenuElementsSelected(wxCommandEvent& event)
 {
     T100PainterCallback::frame_menu_elements();
+}
+
+void T100PainterFrame::OnMenuPropertiesSelected(wxCommandEvent& event)
+{
+    T100PainterCallback::frame_menu_properties();
 }
 
 void T100PainterFrame::OnMenuAboutSelected(wxCommandEvent& event)

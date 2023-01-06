@@ -17,6 +17,9 @@ class T100PainterCallback
         virtual ~T100PainterCallback();
 
         static T100VOID                     init(T100PainterStore*, T100PainterServe*, T100PainterView*);
+        static T100PainterStore*            getStore();
+        static T100PainterServe*            getServe();
+        static T100PainterView*             getView();
 
     public:
         static T100BOOL                     frame_menu_new(void* = T100NULL);
@@ -33,6 +36,7 @@ class T100PainterCallback
         static T100BOOL                     frame_menu_paste(void* = T100NULL);
 
         static T100BOOL                     frame_menu_elements(void* = T100NULL);
+        static T100BOOL                     frame_menu_properties(void* = T100NULL);
 
         static T100BOOL                     frame_menu_about(void* = T100NULL);
 
@@ -44,6 +48,19 @@ class T100PainterCallback
         static T100BOOL                     canvas_mouse_left_down(void* = T100NULL);
         static T100BOOL                     canvas_mouse_left_up(void* = T100NULL);
         static T100BOOL                     canvas_mouse_move(void* = T100NULL);
+
+    public:
+        static T100BOOL                     canvas_state_paint_paint(void* = T100NULL);
+        static T100BOOL                     canvas_state_paint_mouse_left_down(void* = T100NULL);
+        static T100BOOL                     canvas_state_paint_mouse_left_up(void* = T100NULL);
+        static T100BOOL                     canvas_state_paint_mouse_move(void* = T100NULL);
+        static T100BOOL                     canvas_state_paint_mouse_left_dclick(void* = T100NULL);
+
+        static T100BOOL                     canvas_state_selected_paint(void* = T100NULL);
+        static T100BOOL                     canvas_state_selected_mouse_left_down(void* = T100NULL);
+        static T100BOOL                     canvas_state_selected_mouse_left_up(void* = T100NULL);
+        static T100BOOL                     canvas_state_selected_mouse_move(void* = T100NULL);
+        static T100BOOL                     canvas_state_selected_mouse_left_dclick(void* = T100NULL);
 
     protected:
 

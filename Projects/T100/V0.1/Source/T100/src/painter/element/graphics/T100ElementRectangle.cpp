@@ -87,4 +87,15 @@ T100BOOL T100ElementRectangle::MouseMove(T100INT x, T100INT y)
     return T100TRUE;
 }
 
+T100BOOL T100ElementRectangle::Update(wxListView* panel)
+{
+    T100LONG        parent;
+    T100LONG        index;
+    wxUIntPtr       ptr;
+
+    parent  = panel->GetItemCount();
+
+    index   = panel->InsertItem(parent, L"Rectangle");
+}
+
 }

@@ -2,6 +2,7 @@
 #define T100PAINTER_H
 
 #include "T100Common.h"
+#include "T100PainterTransverter.h"
 
 namespace T100Painter{
 class T100PainterApp;
@@ -15,6 +16,10 @@ class T100Painter
     public:
         T100Painter(T100PainterApp* = T100NULL);
         virtual ~T100Painter();
+
+        T100PainterState*       getCurrent();
+
+        T100VOID                reset();
 
         T100VOID                setStore(T100PainterStore*);
         T100PainterStore*       getStore();
@@ -38,6 +43,8 @@ class T100Painter
         T100PainterStore*       m_store         = T100NULL;
         T100PainterServe*       m_serve         = T100NULL;
         T100PainterView*        m_view          = T100NULL;
+
+        T100Component::T100PainterTransverter       m_transverter;
 
 };
 

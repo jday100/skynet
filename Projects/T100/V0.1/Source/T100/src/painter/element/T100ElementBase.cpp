@@ -59,6 +59,11 @@ T100BOOL T100ElementBase::Append(wxListView* panel)
     return T100TRUE;
 }
 
+T100BOOL T100ElementBase::Update(wxListView* panel)
+{
+    return T100TRUE;
+}
+
 T100BOOL T100ElementBase::MouseLeftDown(T100INT, T100INT)
 {
     return T100TRUE;

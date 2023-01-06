@@ -22,6 +22,7 @@ T100BOOL T100PainterView::create()
         m_paint     = T100NEW T100WxWidgets::T100PaintCtrl(m_parent);
         if(m_root){
             m_elements_panel    = T100NEW T100PainterElementsPanel(m_root);
+            m_properties_panel  = T100NEW T100PainterPropertiesPanel(m_root);
             m_elements          = T100NEW T100ElementManager();
             m_elements->init();
         }
@@ -31,10 +32,12 @@ T100BOOL T100PainterView::create()
 
         m_paint     = T100NEW T100WxWidgets::T100PaintCtrl(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxVSCROLL|wxHSCROLL|wxALWAYS_SHOW_SB, _T("ID_SCROLLEDWINDOW1"));
         m_elements_panel    = T100NEW T100PainterElementsPanel(m_frame);
+        m_properties_panel  = T100NEW T100PainterPropertiesPanel(m_frame);
 
         m_manager->SetFrame(m_frame);
         m_manager->AddPane(m_paint, wxAuiPaneInfo().Name(wxT("Paint")).CenterPane());
         m_manager->AddPane(m_elements_panel, wxAuiPaneInfo().Name(wxT("Elements")).Left());
+        m_manager->AddPane(m_properties_panel, wxAuiPaneInfo().Name(wxT("Properties")).Left());
 
         m_elements      = T100NEW T100ElementManager();
         m_elements->init();
@@ -107,6 +110,12 @@ T100BOOL T100PainterView::ShowElements()
     m_manager->Update();
 }
 
+T100BOOL T100PainterView::ShowProperties()
+{
+    m_manager->GetPane(m_properties_panel).Show();
+    m_manager->Update();
+}
+
 T100BOOL T100PainterView::Quit()
 {
     if(m_manager){
@@ -132,6 +141,16 @@ T100VOID T100PainterView::setElementsPanel(T100PainterElementsPanel* panel)
 T100PainterElementsPanel* T100PainterView::getElementsPanel()
 {
     return m_elements_panel;
+}
+
+T100VOID T100PainterView::setPropertiesPanel(T100PainterPropertiesPanel* panel)
+{
+    m_properties_panel = panel;
+}
+
+T100PainterPropertiesPanel* T100PainterView::getPropertiesPanel()
+{
+    return m_properties_panel;
 }
 
 T100WxWidgets::T100PaintCtrl* T100PainterView::getPaintCtrl()

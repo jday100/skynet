@@ -18,6 +18,8 @@ class T100IDEDefaultPlaten : public T100IDEPlatenBase
 
         T100VOID            show_project(T100BOOL = T100TRUE);
 
+        wxMenuBar*          CreateMainMenuBar();
+
     protected:
         T100VOID            destroy();
 

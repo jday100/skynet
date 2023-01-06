@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-I" />
+				<Option parameters="-P" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -447,6 +447,7 @@
 		<Unit filename="include/component/painter/T100PainterTransverter.h" />
 		<Unit filename="include/component/painter/T100State.h" />
 		<Unit filename="include/component/painter/T100StateData.h" />
+		<Unit filename="include/component/painter/T100StateObject.h" />
 		<Unit filename="include/component/painter/T100StateTransverter.h" />
 		<Unit filename="include/component/vdisk/T100VDisk.h" />
 		<Unit filename="include/component/vdisk/T100VDiskCommon.h" />
@@ -615,6 +616,7 @@
 		<Unit filename="include/painter/diagram/V1/T100DiagramV1.h" />
 		<Unit filename="include/painter/diagram/V1/T100DiagramV1Common.h" />
 		<Unit filename="include/painter/diagram/V1/T100DiagramV1Source.h" />
+		<Unit filename="include/painter/diagram/V1/T100DiagramV1Target.h" />
 		<Unit filename="include/painter/element/T100AllElements.h" />
 		<Unit filename="include/painter/element/T100ElementBase.h" />
 		<Unit filename="include/painter/element/T100ElementCommon.h" />
@@ -630,11 +632,18 @@
 		<Unit filename="include/painter/element/graphics/T100ElementRectangleSource.h" />
 		<Unit filename="include/painter/serve/T100PainterCallback.h" />
 		<Unit filename="include/painter/serve/T100PainterServe.h" />
+		<Unit filename="include/painter/serve/T100PainterState.h" />
+		<Unit filename="include/painter/serve/T100StateAlone.h" />
+		<Unit filename="include/painter/serve/T100StateEmbed.h" />
+		<Unit filename="include/painter/store/T100CanvasState.h" />
+		<Unit filename="include/painter/store/T100CanvasStatePaint.h" />
+		<Unit filename="include/painter/store/T100CanvasStateSelected.h" />
 		<Unit filename="include/painter/store/T100PainterStore.h" />
 		<Unit filename="include/painter/view/T100PainterCanvas.h" />
 		<Unit filename="include/painter/view/T100PainterFrame.h" />
 		<Unit filename="include/painter/view/T100PainterView.h" />
 		<Unit filename="include/painter/view/panel/T100PainterElementsPanel.h" />
+		<Unit filename="include/painter/view/panel/T100PainterPropertiesPanel.h" />
 		<Unit filename="include/qu32/T100AU32.h" />
 		<Unit filename="include/qu32/T100CU32.h" />
 		<Unit filename="include/qu32/T100Executor32.h" />
@@ -757,6 +766,7 @@
 		<Unit filename="include/wxwidgets/T100WxAppManager.h" />
 		<Unit filename="include/wxwidgets/painter/frame/T100PainterDemoFrame.h" />
 		<Unit filename="include/wxwidgets/painter/panel/T100PainterElementsDemoPanel.h" />
+		<Unit filename="include/wxwidgets/painter/panel/T100PainterPropertiesDemoPanel.h" />
 		<Unit filename="include/wxwidgets/vpc/dialog/config/T100VPCConfigSetupDemoDialog.h" />
 		<Unit filename="include/wxwidgets/vpc/dialog/config/hardware/T100VPCConfigHardwareAppendDemoDialog.h" />
 		<Unit filename="include/wxwidgets/vpc/dialog/config/hardware/T100VPCConfigHardwareDemoDialog.h" />
@@ -918,6 +928,7 @@
 		<Unit filename="src/component/painter/T100PainterTransverter.cpp" />
 		<Unit filename="src/component/painter/T100State.cpp" />
 		<Unit filename="src/component/painter/T100StateData.cpp" />
+		<Unit filename="src/component/painter/T100StateObject.cpp" />
 		<Unit filename="src/component/painter/T100StateTransverter.cpp" />
 		<Unit filename="src/component/vdisk/T100VDisk.cpp" />
 		<Unit filename="src/component/vdisk/T100VDiskFile.cpp" />
@@ -1067,6 +1078,7 @@
 		<Unit filename="src/painter/diagram/T100DiagramTransducerTarget.cpp" />
 		<Unit filename="src/painter/diagram/V1/T100DiagramV1.cpp" />
 		<Unit filename="src/painter/diagram/V1/T100DiagramV1Source.cpp" />
+		<Unit filename="src/painter/diagram/V1/T100DiagramV1Target.cpp" />
 		<Unit filename="src/painter/element/T100ElementBase.cpp" />
 		<Unit filename="src/painter/element/T100ElementManager.cpp" />
 		<Unit filename="src/painter/element/T100ElementSource.cpp" />
@@ -1080,11 +1092,18 @@
 		<Unit filename="src/painter/element/graphics/T100ElementRectangleSource.cpp" />
 		<Unit filename="src/painter/serve/T100PainterCallback.cpp" />
 		<Unit filename="src/painter/serve/T100PainterServe.cpp" />
+		<Unit filename="src/painter/serve/T100PainterState.cpp" />
+		<Unit filename="src/painter/serve/T100StateAlone.cpp" />
+		<Unit filename="src/painter/serve/T100StateEmbed.cpp" />
+		<Unit filename="src/painter/store/T100CanvasState.cpp" />
+		<Unit filename="src/painter/store/T100CanvasStatePaint.cpp" />
+		<Unit filename="src/painter/store/T100CanvasStateSelected.cpp" />
 		<Unit filename="src/painter/store/T100PainterStore.cpp" />
 		<Unit filename="src/painter/view/T100PainterCanvas.cpp" />
 		<Unit filename="src/painter/view/T100PainterFrame.cpp" />
 		<Unit filename="src/painter/view/T100PainterView.cpp" />
 		<Unit filename="src/painter/view/panel/T100PainterElementsPanel.cpp" />
+		<Unit filename="src/painter/view/panel/T100PainterPropertiesPanel.cpp" />
 		<Unit filename="src/qu32/T100AU32.cpp" />
 		<Unit filename="src/qu32/T100CU32.cpp" />
 		<Unit filename="src/qu32/T100Executor32.cpp" />
@@ -1203,6 +1222,7 @@
 		<Unit filename="src/wxwidgets/T100WxAppManager.cpp" />
 		<Unit filename="src/wxwidgets/painter/frame/T100PainterDemoFrame.cpp" />
 		<Unit filename="src/wxwidgets/painter/panel/T100PainterElementsDemoPanel.cpp" />
+		<Unit filename="src/wxwidgets/painter/panel/T100PainterPropertiesDemoPanel.cpp" />
 		<Unit filename="src/wxwidgets/vpc/dialog/config/T100VPCConfigSetupDemoDialog.cpp" />
 		<Unit filename="src/wxwidgets/vpc/dialog/config/hardware/T100VPCConfigHardwareAppendDemoDialog.cpp" />
 		<Unit filename="src/wxwidgets/vpc/dialog/config/hardware/T100VPCConfigHardwareDemoDialog.cpp" />
@@ -1431,6 +1451,7 @@
 		<Unit filename="wxsmith/T100FontPanel.wxs" />
 		<Unit filename="wxsmith/T100PainterDemoFrame.wxs" />
 		<Unit filename="wxsmith/T100PainterElementsDemoPanel.wxs" />
+		<Unit filename="wxsmith/T100PainterPropertiesDemoPanel.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigHardwareAppendDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigHardwareDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigSetupDemoDialog.wxs" />
@@ -1462,6 +1483,7 @@
 					<wxFrame wxs="wxsmith/T100VPCDebugDemoFrame.wxs" src="src\wxwidgets\vpc\frame\debug\T100VPCDebugDemoFrame.cpp" hdr="include\wxwidgets\vpc\frame\debug\T100VPCDebugDemoFrame.h" fwddecl="0" i18n="1" name="T100VPCDebugDemoFrame" language="CPP" />
 					<wxPanel wxs="wxsmith/T100PainterElementsDemoPanel.wxs" src="src\wxwidgets\painter\panel\T100PainterElementsDemoPanel.cpp" hdr="include\wxwidgets\painter\panel\T100PainterElementsDemoPanel.h" fwddecl="0" i18n="1" name="T100PainterElementsDemoPanel" language="CPP" />
 					<wxFrame wxs="wxsmith/T100PainterDemoFrame.wxs" src="src\wxwidgets\painter\frame\T100PainterDemoFrame.cpp" hdr="include\wxwidgets\painter\frame\T100PainterDemoFrame.h" fwddecl="0" i18n="1" name="T100PainterDemoFrame" language="CPP" />
+					<wxPanel wxs="wxsmith/T100PainterPropertiesDemoPanel.wxs" src="src\wxwidgets\painter\panel\T100PainterPropertiesDemoPanel.cpp" hdr="include\wxwidgets\painter\panel\T100PainterPropertiesDemoPanel.h" fwddecl="0" i18n="1" name="T100PainterPropertiesDemoPanel" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

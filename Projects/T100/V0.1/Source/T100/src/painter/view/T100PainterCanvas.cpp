@@ -7,6 +7,8 @@
 
 #include "T100TestTools.h"
 
+#include "T100CanvasState.h"
+
 namespace T100Painter{
 
 const long T100PainterCanvas::ID_TITLE = wxNewId();
@@ -43,6 +45,8 @@ T100VOID T100PainterCanvas::create()
     SetBackgroundStyle(wxBG_STYLE_PAINT);
 
     SetBackgroundColour(*wxWHITE);
+
+    m_manager.Change(T100CANVAS_STATE_NONE);
 }
 
 T100VOID T100PainterCanvas::destroy()
@@ -78,6 +82,15 @@ void T100PainterCanvas::OnEraseBackGround(wxEraseEvent& event)
 
 void T100PainterCanvas::OnPaint(wxPaintEvent& event)
 {
+    T100CanvasState*        current         = T100NULL;
+
+    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    if(!current)return;
+
+    current->OnPaint(event);
+    //
+
+
     T100Library::T100TestTools::Print(L"Paint");
 
     wxAutoBufferedPaintDC       dc(this);
@@ -121,25 +134,51 @@ T100BOOL T100PainterCanvas::Hit(T100INT x, T100INT y)
 
 void T100PainterCanvas::OnMouseLeftDown(wxMouseEvent& event)
 {
+    T100CanvasState*        current         = T100NULL;
+
+    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    if(!current)return;
+
+    current->OnMouseLeftDown(event);
+
     T100Library::T100TestTools::Print(L"MouseLeftDown");
-    T100PainterCallback::canvas_mouse_left_down(&event);
 }
 
 void T100PainterCanvas::OnMouseLeftUp(wxMouseEvent& event)
 {
+    T100CanvasState*        current         = T100NULL;
+
+    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    if(!current)return;
+
+    current->OnMouseLeftUp(event);
+
     T100Library::T100TestTools::Print(L"MouseLeftUp");
-    T100PainterCallback::canvas_mouse_left_up(&event);
 }
 
 void T100PainterCanvas::OnMouseMove(wxMouseEvent& event)
 {
+    T100CanvasState*        current         = T100NULL;
+
+    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    if(!current)return;
+
+    current->OnMouseMove(event);
+
     T100Library::T100TestTools::Print(L"MouseMove");
-    T100PainterCallback::canvas_mouse_move(&event);
 }
 
 void T100PainterCanvas::OnMouseLeftDClick(wxMouseEvent& event)
 {
     T100BOOL        result;
+
+    T100CanvasState*        current         = T100NULL;
+
+    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    if(!current)return;
+
+    current->OnMouseLeftDClick(event);
+    return;
 
     T100Library::T100TestTools::Print(L"MouseLeftDClick");
     result = Hit(event.GetPosition().x, event.GetPosition().y);
@@ -225,6 +264,12 @@ T100BOOL T100PainterCanvas::GetVirtualPosition(T100INT x, T100INT y, T100INT& vx
     vx  = x + sx * 10;
     vy  = y + sy * 10;
 
+    return T100TRUE;
+}
+
+T100BOOL T100PainterCanvas::Change(T100CANVAS_STATE state)
+{
+    m_manager.Change(state);
     return T100TRUE;
 }
 

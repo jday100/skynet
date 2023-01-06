@@ -4,6 +4,7 @@
 #include "T100PainterView.h"
 #include "T100IDEView.h"
 #include "T100IDEViewManager.h"
+#include "T100IDEPlatenManager.h"
 
 namespace T100IDE{
 
@@ -39,6 +40,7 @@ T100VOID T100IDEPainterPlaten::destroy()
 
 T100BOOL T100IDEPainterPlaten::show()
 {
+    set_menu();
     m_view->getViewManager()->getAuiManager()->Update();
 
     return T100TRUE;
@@ -47,6 +49,39 @@ T100BOOL T100IDEPainterPlaten::show()
 T100Painter::T100PainterElementsPanel* T100IDEPainterPlaten::getElementsPanel()
 {
     return m_panel;
+}
+
+T100VOID T100IDEPainterPlaten::set_menu()
+{
+    /*
+    wxMDIParentFrame*       frame           = T100NULL;
+    wxMenuBar*              menuBar         = T100NULL;
+
+    frame   = wxStaticCast(m_view->getFrame(), wxMDIParentFrame);
+    if(!frame)return;
+
+    menuBar = m_view->getPlatenManager()->getDefault()->CreateMainMenuBar();
+    if(!menuBar)return;
+
+    menuBar->GetMenu(0)->InsertSeparator(1);
+
+    frame->SetMenuBar(menuBar);
+    */
+
+    wxMDIParentFrame*       frame           = T100NULL;
+    wxMenuBar*              menuBar         = T100NULL;
+
+    frame   = wxStaticCast(m_view->getFrame(), wxMDIParentFrame);
+    if(!frame)return;
+
+    menuBar = frame->GetMenuBar();
+
+    menuBar->GetMenu(0)->InsertSeparator(2);
+
+    menuBar->GetMenu(0)->Insert(3, wxID_SAVE);
+    menuBar->GetMenu(0)->Insert(4, wxID_SAVEAS);
+    menuBar->GetMenu(0)->Insert(5, wxID_CLOSE);
+
 }
 
 }

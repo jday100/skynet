@@ -18,4 +18,17 @@ T100BOOL T100PainterTransverter::Change(T100State* state)
 
 }
 
+T100BOOL T100PainterTransverter::Change(T100WORD state)
+{
+
+}
+
+T100Painter::T100PainterState* T100PainterTransverter::GetCurrent()
+{
+    T100Painter::T100PainterState*          current         = T100NULL;
+
+
+    return current;
+}
+
 }

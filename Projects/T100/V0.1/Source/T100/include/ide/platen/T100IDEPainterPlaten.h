@@ -18,15 +18,17 @@ class T100IDEPainterPlaten : public T100IDEPlatenBase
 
         T100BOOL            show();
 
-        T100Painter::T100PainterElementsPanel*      getElementsPanel();
+        T100Painter::T100PainterElementsPanel*          getElementsPanel();
 
     protected:
         T100VOID            destroy();
 
+        T100VOID            set_menu();
+
     private:
         void*               m_data          = T100NULL;
 
-        T100Painter::T100Painter*           m_painter           = T100NULL;
+        T100Painter::T100Painter*                       m_painter           = T100NULL;
         T100Painter::T100PainterElementsPanel*          m_panel             = T100NULL;
 };
 

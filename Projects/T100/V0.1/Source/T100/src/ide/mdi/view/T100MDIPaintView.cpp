@@ -79,6 +79,7 @@ T100BOOL T100MDIPaintView::OnCreate(wxDocument* doc, long flags)
 
     m_painter->NewFile();
 
+    m_frame->setPainter(m_painter);
     m_frame->Show();
 
 

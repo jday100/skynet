@@ -83,4 +83,26 @@ T100BOOL T100IDEDefaultPlaten::create_menu()
     return T100TRUE;
 }
 
+wxMenuBar* T100IDEDefaultPlaten::CreateMainMenuBar()
+{
+    wxMenuBar*  menuBar     = T100NEW wxMenuBar();
+    wxMenu*     menuFile    = T100NEW wxMenu();
+    wxMenu*     menuHelp    = T100NEW wxMenu();
+
+    //File
+    menuFile->Append(wxID_NEW);
+    menuFile->Append(wxID_OPEN);
+    menuFile->AppendSeparator();
+    menuFile->Append(wxID_EXIT);
+
+    menuBar->Append(menuFile, wxGetStockLabel(wxID_FILE));
+
+    //Help
+    menuHelp->Append(wxID_ABOUT);
+
+    menuBar->Append(menuHelp, wxGetStockLabel(wxID_HELP));
+
+    return menuBar;
+}
+
 }

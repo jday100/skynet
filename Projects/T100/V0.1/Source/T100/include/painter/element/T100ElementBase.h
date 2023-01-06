@@ -23,6 +23,7 @@ class T100ElementBase
         T100WORD                    getType();
 
         virtual T100BOOL            Append(wxListView*);
+        virtual T100BOOL            Update(wxListView*);
         virtual T100VOID            Clear() = 0;
 
         virtual T100BOOL            draw(wxDC&) = 0;

@@ -10,6 +10,7 @@
 #include "T100ElementManager.h"
 
 #include "T100PainterElementsPanel.h"
+#include "T100PainterPropertiesPanel.h"
 
 #include "T100DiagramInfo.h"
 
@@ -34,6 +35,7 @@ class T100PainterView
         T100BOOL                Quit();
 
         T100BOOL                ShowElements();
+        T100BOOL                ShowProperties();
 
         T100BOOL                Append(wxString, T100ElementBase*);
 
@@ -44,9 +46,14 @@ class T100PainterView
         T100VOID                            setElementsPanel(T100PainterElementsPanel*);
         T100PainterElementsPanel*           getElementsPanel();
 
+        T100VOID                            setPropertiesPanel(T100PainterPropertiesPanel*);
+        T100PainterPropertiesPanel*         getPropertiesPanel();
+
     public:
         T100VOID                setParent(wxWindow*);
         T100VOID                setRootFrame(wxFrame*);
+
+        T100VOID                setMenu(wxFrame*);
 
         T100VOID                setManager(wxAuiManager*);
 
@@ -65,9 +72,10 @@ class T100PainterView
         T100PainterFrame*       m_frame             = T100NULL;
         wxFrame*                m_root              = T100NULL;
 
-        T100WxWidgets::T100PaintCtrl*       m_paint             = T100NULL;
+        T100WxWidgets::T100PaintCtrl*       m_paint                 = T100NULL;
 
-        T100PainterElementsPanel*           m_elements_panel    = T100NULL;
+        T100PainterElementsPanel*           m_elements_panel        = T100NULL;
+        T100PainterPropertiesPanel*         m_properties_panel      = T100NULL;
 
 };
 

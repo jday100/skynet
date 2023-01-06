@@ -21,6 +21,8 @@ class T100ElementCircle : public T100ElementBase
         T100BOOL            MouseLeftUp(T100INT, T100INT);
         T100BOOL            MouseMove(T100INT, T100INT);
 
+        T100BOOL            Update(wxListView*);
+
     protected:
         T100VOID            create();
         T100VOID            destroy();

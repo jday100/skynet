@@ -12,14 +12,13 @@ class T100StateTransverter
         T100StateTransverter();
         virtual ~T100StateTransverter();
 
-        virtual T100State*      GetCurrent();
+        virtual T100State*      GetCurrent() = 0;
         virtual T100BOOL        Change(T100State*);
 
     protected:
+        T100WORD                m_current           = 0;
 
     private:
-        T100State*              m_current           = T100NULL;
-
 };
 
 }

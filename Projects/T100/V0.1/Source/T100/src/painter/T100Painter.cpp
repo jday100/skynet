@@ -28,6 +28,12 @@ T100VOID T100Painter::create()
     m_view      = T100NEW T100PainterView();
 
     T100PainterCallback::init(m_store, m_serve, m_view);
+
+    if(m_app){
+        m_transverter.Change(T100PAINTER_STATE_EMBED);
+    }else{
+        m_transverter.Change(T100PAINTER_STATE_ALONE);
+    }
 }
 
 T100VOID T100Painter::destroy()
@@ -35,6 +41,11 @@ T100VOID T100Painter::destroy()
     T100SAFE_DELETE(m_view);
     T100SAFE_DELETE(m_serve);
     T100SAFE_DELETE(m_store);
+}
+
+T100VOID T100Painter::reset()
+{
+    T100PainterCallback::init(m_store, m_serve, m_view);
 }
 
 T100VOID T100Painter::setStore(T100PainterStore* store)
@@ -82,6 +93,11 @@ T100VOID T100Painter::quit()
 T100VOID T100Painter::NewFile()
 {
     T100PainterCallback::frame_menu_new();
+}
+
+T100PainterState* T100Painter::getCurrent()
+{
+    return m_transverter.GetCurrent();
 }
 
 }

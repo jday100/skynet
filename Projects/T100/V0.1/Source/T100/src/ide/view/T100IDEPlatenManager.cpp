@@ -27,7 +27,15 @@ T100VOID T100IDEPlatenManager::destroy()
     T100SAFE_DELETE(m_current);
 }
 
-T100IDEPlatenBase* T100IDEPlatenManager::getDefault()
+T100IDEDefaultPlaten* T100IDEPlatenManager::getDefault()
+{
+    if(!m_default){
+        m_default   = T100NEW T100IDEDefaultPlaten(m_view);
+    }
+    return m_default;
+}
+
+T100IDEPlatenBase* T100IDEPlatenManager::getCurrent()
 {
     return m_current;
 }
