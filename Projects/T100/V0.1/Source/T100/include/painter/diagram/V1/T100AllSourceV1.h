@@ -4,4 +4,6 @@
 #include "T100ElementCircleSource.h"
 #include "T100ElementRectangleSource.h"
 
+#include "T100ElementModuleSource.h"
+
 #endif // T100ALLSOURCEV1_H

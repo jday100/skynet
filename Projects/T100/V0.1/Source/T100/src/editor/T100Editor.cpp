@@ -66,4 +66,19 @@ T100VOID T100Editor::quit()
 
 }
 
+T100EditorState* T100Editor::GetCurrent()
+{
+
+}
+
+T100VOID T100Editor::Reset()
+{
+    T100EditorCallback::init(m_serve, m_view);
+}
+
+T100BOOL T100Editor::Change(T100EDITOR_STATE state)
+{
+
+}
+
 }

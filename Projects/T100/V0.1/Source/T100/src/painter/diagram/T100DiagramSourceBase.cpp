@@ -135,14 +135,19 @@ T100ElementSourceBase* T100DiagramSourceBase::getElementSource(T100WORD type)
     T100ElementSourceBase*      result          = T100NULL;
 
     switch(type){
-    case T100ELEMENT_CIRCLE:
+    case T100ELEMENT_GRAPHICS_CIRCLE:
         {
             result = T100NEW T100ElementCircleSource(T100NULL);
         }
         break;
-    case T100ELEMENT_RECTANGLE:
+    case T100ELEMENT_GRAPHICS_RECTANGLE:
         {
             result = T100NEW T100ElementRectangleSource(T100NULL);
+        }
+        break;
+    case T100ELEMENT_DIAGRAM_MODULE:
+        {
+            result = T100NEW T100ElementModuleSource(T100NULL);
         }
         break;
     }

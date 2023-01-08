@@ -12,7 +12,6 @@ T100Painter::T100Painter(T100PainterApp* app)
     :m_app(app)
 {
     //ctor
-    create();
 }
 
 T100Painter::~T100Painter()
@@ -21,7 +20,7 @@ T100Painter::~T100Painter()
     destroy();
 }
 
-T100VOID T100Painter::create()
+T100BOOL T100Painter::create()
 {
     m_store     = T100NEW T100PainterStore();
     m_serve     = T100NEW T100PainterServe();
@@ -30,10 +29,12 @@ T100VOID T100Painter::create()
     T100PainterCallback::init(m_store, m_serve, m_view);
 
     if(m_app){
-        m_transverter.Change(T100PAINTER_STATE_EMBED);
-    }else{
         m_transverter.Change(T100PAINTER_STATE_ALONE);
+    }else{
+        m_transverter.Change(T100PAINTER_STATE_EMBED);
     }
+
+    return m_transverter.GetCurrent()->Create();
 }
 
 T100VOID T100Painter::destroy()

@@ -121,6 +121,8 @@
 					<Add directory="include/library/file" />
 					<Add directory="include/painter/data" />
 					<Add directory="include/component/painter" />
+					<Add directory="include/component/editor" />
+					<Add directory="include/painter/element/diagram" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -236,6 +238,8 @@
 					<Add directory="include/library/file" />
 					<Add directory="include/painter/data" />
 					<Add directory="include/component/painter" />
+					<Add directory="include/component/editor" />
+					<Add directory="include/painter/element/diagram" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -438,6 +442,10 @@
 		<Unit filename="include/component/compiler/T100SymbolFileReader.h" />
 		<Unit filename="include/component/compiler/T100SymbolFileWriter.h" />
 		<Unit filename="include/component/compiler/T100SymbolInfo.h" />
+		<Unit filename="include/component/editor/T100EditorState.h" />
+		<Unit filename="include/component/editor/T100EditorStateAlone.h" />
+		<Unit filename="include/component/editor/T100EditorStateEmbed.h" />
+		<Unit filename="include/component/editor/T100EditorTransverter.h" />
 		<Unit filename="include/component/font/T100Font.h" />
 		<Unit filename="include/component/font/T100FontCommon.h" />
 		<Unit filename="include/component/font/T100FontFile.h" />
@@ -469,6 +477,7 @@
 		<Unit filename="include/data/console/T100ConsoleStringToken.h" />
 		<Unit filename="include/editor/T100Editor.h" />
 		<Unit filename="include/editor/T100EditorApp.h" />
+		<Unit filename="include/editor/T100EditorCommon.h" />
 		<Unit filename="include/editor/serve/T100EditorCallback.h" />
 		<Unit filename="include/editor/serve/T100EditorServe.h" />
 		<Unit filename="include/editor/view/T100EditorFrame.h" />
@@ -626,6 +635,8 @@
 		<Unit filename="include/painter/element/T100ElementTransducer.h" />
 		<Unit filename="include/painter/element/T100ElementTransducerSource.h" />
 		<Unit filename="include/painter/element/T100ElementTransducerTarget.h" />
+		<Unit filename="include/painter/element/diagram/T100ElementModule.h" />
+		<Unit filename="include/painter/element/diagram/T100ElementModuleSource.h" />
 		<Unit filename="include/painter/element/graphics/T100ElementCircle.h" />
 		<Unit filename="include/painter/element/graphics/T100ElementCircleSource.h" />
 		<Unit filename="include/painter/element/graphics/T100ElementRectangle.h" />
@@ -636,6 +647,7 @@
 		<Unit filename="include/painter/serve/T100StateAlone.h" />
 		<Unit filename="include/painter/serve/T100StateEmbed.h" />
 		<Unit filename="include/painter/store/T100CanvasState.h" />
+		<Unit filename="include/painter/store/T100CanvasStateCommon.h" />
 		<Unit filename="include/painter/store/T100CanvasStatePaint.h" />
 		<Unit filename="include/painter/store/T100CanvasStateSelected.h" />
 		<Unit filename="include/painter/store/T100PainterStore.h" />
@@ -920,6 +932,10 @@
 		<Unit filename="src/component/compiler/T100SymbolFileReader.cpp" />
 		<Unit filename="src/component/compiler/T100SymbolFileWriter.cpp" />
 		<Unit filename="src/component/compiler/T100SymbolInfo.cpp" />
+		<Unit filename="src/component/editor/T100EditorState.cpp" />
+		<Unit filename="src/component/editor/T100EditorStateAlone.cpp" />
+		<Unit filename="src/component/editor/T100EditorStateEmbed.cpp" />
+		<Unit filename="src/component/editor/T100EditorTransverter.cpp" />
 		<Unit filename="src/component/font/T100Font.cpp" />
 		<Unit filename="src/component/font/T100FontFile.cpp" />
 		<Unit filename="src/component/font/T100FontFileReader.cpp" />
@@ -1086,6 +1102,8 @@
 		<Unit filename="src/painter/element/T100ElementTransducer.cpp" />
 		<Unit filename="src/painter/element/T100ElementTransducerSource.cpp" />
 		<Unit filename="src/painter/element/T100ElementTransducerTarget.cpp" />
+		<Unit filename="src/painter/element/diagram/T100ElementModule.cpp" />
+		<Unit filename="src/painter/element/diagram/T100ElementModuleSource.cpp" />
 		<Unit filename="src/painter/element/graphics/T100ElementCircle.cpp" />
 		<Unit filename="src/painter/element/graphics/T100ElementCircleSource.cpp" />
 		<Unit filename="src/painter/element/graphics/T100ElementRectangle.cpp" />
@@ -1096,6 +1114,7 @@
 		<Unit filename="src/painter/serve/T100StateAlone.cpp" />
 		<Unit filename="src/painter/serve/T100StateEmbed.cpp" />
 		<Unit filename="src/painter/store/T100CanvasState.cpp" />
+		<Unit filename="src/painter/store/T100CanvasStateCommon.cpp" />
 		<Unit filename="src/painter/store/T100CanvasStatePaint.cpp" />
 		<Unit filename="src/painter/store/T100CanvasStateSelected.cpp" />
 		<Unit filename="src/painter/store/T100PainterStore.cpp" />

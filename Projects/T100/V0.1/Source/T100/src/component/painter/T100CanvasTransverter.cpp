@@ -17,29 +17,7 @@ T100CanvasTransverter::~T100CanvasTransverter()
 
 T100Painter::T100CanvasState* T100CanvasTransverter::GetCurrent()
 {
-    T100Painter::T100CanvasState*        result          = T100NULL;
-
-    switch(m_current){
-    case T100Painter::T100CANVAS_STATE_NONE:
-        {
-
-        }
-        break;
-    case T100Painter::T100CANVAS_STATE_PAINT:
-        {
-            result = m_paint;
-        }
-        break;
-    case T100Painter::T100CANVAS_STATE_SELECTED:
-        {
-            result = m_selected;
-        }
-        break;
-    default:
-        break;
-    }
-
-    return result;
+    return m_state;
 }
 
 T100VOID T100CanvasTransverter::Change(T100WORD state)
@@ -48,6 +26,16 @@ T100VOID T100CanvasTransverter::Change(T100WORD state)
     case T100Painter::T100CANVAS_STATE_NONE:
         {
             m_current   = state;
+            m_state     = T100NULL;
+        }
+        break;
+    case T100Painter::T100CANVAS_STATE_COMMON:
+        {
+            if(!m_common){
+                m_common = T100NEW T100Painter::T100CanvasStateCommon();
+            }
+            m_current   = state;
+            m_state     = m_common;
         }
         break;
     case T100Painter::T100CANVAS_STATE_PAINT:
@@ -56,6 +44,7 @@ T100VOID T100CanvasTransverter::Change(T100WORD state)
                 m_paint = T100NEW T100Painter::T100CanvasStatePaint();
             }
             m_current   = state;
+            m_state     = m_paint;
         }
         break;
     case T100Painter::T100CANVAS_STATE_SELECTED:
@@ -64,6 +53,7 @@ T100VOID T100CanvasTransverter::Change(T100WORD state)
                 m_selected  = T100NEW T100Painter::T100CanvasStateSelected();
             }
             m_current   = state;
+            m_state     = m_selected;
         }
         break;
     default:

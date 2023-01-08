@@ -28,6 +28,7 @@ typedef enum{
 typedef enum{
     T100CANVAS_STATE_NONE           = 0,
     //
+    T100CANVAS_STATE_COMMON,
     T100CANVAS_STATE_PAINT,
     T100CANVAS_STATE_SELECTED,
     //

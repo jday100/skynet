@@ -14,7 +14,9 @@ class T100PainterState : public T100Component::T100State
         T100PainterState();
         virtual ~T100PainterState();
 
-        virtual T100VOID            Reset() = 0;
+        virtual T100BOOL            Create() = 0;
+
+        //virtual T100VOID            Reset() = 0;
 
         virtual T100VOID            SetMenu() = 0;
         virtual T100VOID            ResetMenu() = 0;

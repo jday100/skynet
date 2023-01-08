@@ -1,5 +1,7 @@
 #include "T100DiagramTransducerTarget.h"
 
+#include "T100String32Tools.h"
+
 namespace T100Painter{
 
 T100DiagramTransducerTarget::T100DiagramTransducerTarget(T100Library::T100BufferedFileReader* reader)
@@ -80,6 +82,52 @@ T100BOOL T100DiagramTransducerTarget::getFLOAT(T100FLOAT& value)
         }
     }
     return T100FALSE;
+}
+
+T100BOOL T100DiagramTransducerTarget::setSTRING(T100STRING& value)
+{
+    T100Library::T100String32&      source          = value.to_string32();
+    T100WORD        length          = 0;
+    T100WORD*       data            = T100NULL;
+
+    length  = source.raw_length();
+    data    = source.raw_data();
+
+    if(2 > length)return T100FALSE;
+
+    return m_writer->write(data, length);
+}
+
+T100BOOL T100DiagramTransducerTarget::getSTRING(T100STRING& value)
+{
+    T100WORD        size            = 0;
+    T100WORD        length          = 0;
+    T100WORD        residue         = 0;
+    T100WORD*       data            = T100NULL;
+    T100WORD*       start           = T100NULL;
+
+
+    if(!getWORD(size))return T100FALSE;
+
+    length      = size + 2;
+    residue     = size + 1;
+
+    T100WORD        buffer[length];
+
+    data    = buffer;
+    start   = data + 1;
+
+    if(!m_reader->read(start, residue))return T100FALSE;
+
+    if(0 == buffer[residue]){
+        data[0] = size;
+    }else{
+        return T100FALSE;
+    }
+
+    value = T100Library::T100String32Tools::to_string32(data, length);
+
+    return T100TRUE;
 }
 
 }

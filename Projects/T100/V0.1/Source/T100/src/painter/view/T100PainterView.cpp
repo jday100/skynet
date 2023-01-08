@@ -46,6 +46,39 @@ T100BOOL T100PainterView::create()
     return T100TRUE;
 }
 
+T100BOOL T100PainterView::create_alone()
+{
+    m_manager   = T100NEW wxAuiManager();
+    m_frame     = T100NEW T100PainterFrame(T100NULL, wxID_ANY, wxDefaultPosition, wxSize(800, 600));
+
+    m_paint     = T100NEW T100WxWidgets::T100PaintCtrl(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxVSCROLL|wxHSCROLL|wxALWAYS_SHOW_SB, _T("ID_SCROLLEDWINDOW1"));
+    m_elements_panel    = T100NEW T100PainterElementsPanel(m_frame);
+    m_properties_panel  = T100NEW T100PainterPropertiesPanel(m_frame);
+
+    m_manager->SetFrame(m_frame);
+    m_manager->AddPane(m_paint, wxAuiPaneInfo().Name(wxT("Paint")).CenterPane());
+    m_manager->AddPane(m_elements_panel, wxAuiPaneInfo().Name(wxT("Elements")).BestSize(400, -1).Left());
+    m_manager->AddPane(m_properties_panel, wxAuiPaneInfo().Name(wxT("Properties")).BestSize(400, -1).Left());
+
+    m_elements      = T100NEW T100ElementManager();
+    m_elements->init();
+
+    return T100TRUE;
+}
+
+T100BOOL T100PainterView::create_embed()
+{
+    m_paint     = T100NEW T100WxWidgets::T100PaintCtrl(m_parent);
+    if(m_root){
+        m_elements_panel    = T100NEW T100PainterElementsPanel(m_root);
+        m_properties_panel  = T100NEW T100PainterPropertiesPanel(m_root);
+        m_elements          = T100NEW T100ElementManager();
+        m_elements->init();
+    }
+
+    return T100TRUE;
+}
+
 T100VOID T100PainterView::destroy()
 {
     T100SAFE_DELETE(m_paint);
@@ -173,7 +206,7 @@ T100BOOL T100PainterView::Append(wxString panel, T100ElementBase* element)
 
 T100BOOL T100PainterView::close()
 {
-
+    return T100TRUE;
 }
 
 T100BOOL T100PainterView::LoadFile(T100DiagramInfo* diagram)

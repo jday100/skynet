@@ -1,6 +1,7 @@
 #ifndef T100DIAGRAMTRANSDUCERTARGET_H
 #define T100DIAGRAMTRANSDUCERTARGET_H
 
+#include "T100String.h"
 #include "T100BufferedFileReader.h"
 #include "T100BufferedFileWriter.h"
 #include "T100TransducerTarget.h"
@@ -19,6 +20,9 @@ class T100DiagramTransducerTarget : public T100Library::T100TransducerTarget
 
         T100BOOL        setFLOAT(T100FLOAT);
         T100BOOL        getFLOAT(T100FLOAT&);
+
+        T100BOOL        setSTRING(T100STRING&);
+        T100BOOL        getSTRING(T100STRING&);
 
         T100BOOL        reset();
         T100BOOL        eof();

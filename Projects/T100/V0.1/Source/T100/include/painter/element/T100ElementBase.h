@@ -2,6 +2,7 @@
 #define T100ELEMENTBASE_H
 
 #include <wx/listctrl.h>
+#include <wx/propgrid/propgrid.h>
 #include <wx/dc.h>
 #include "T100Common.h"
 #include "T100String.h"
@@ -20,10 +21,13 @@ class T100ElementBase
         T100STRING                  getName();
         T100STRING                  getLabel();
         T100STRING                  getKey();
+        T100STRING                  getPanel();
         T100WORD                    getType();
 
+
         virtual T100BOOL            Append(wxListView*);
-        virtual T100BOOL            Update(wxListView*);
+        virtual T100BOOL            Update(wxPropertyGrid*);
+        virtual T100BOOL            Update(wxPropertyGridEvent&);
         virtual T100VOID            Clear() = 0;
 
         virtual T100BOOL            draw(wxDC&) = 0;
@@ -34,14 +38,21 @@ class T100ElementBase
         virtual T100BOOL            MouseLeftUp(T100INT, T100INT);
         virtual T100BOOL            MouseMove(T100INT, T100INT);
 
+        virtual T100BOOL            Move(T100INT, T100INT);
+
     protected:
         T100STRING                  m_name;
         T100STRING                  m_label;
         T100STRING                  m_key;
+        T100STRING                  m_panel;
 
         T100WORD                    m_type          = 0;
 
     private:
+        T100WORD                    m_starting_x    = 0;
+        T100WORD                    m_starting_y    = 0;
+        T100WORD                    m_ending_x      = 0;
+        T100WORD                    m_ending_y      = 0;
 
 };
 

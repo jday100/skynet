@@ -21,8 +21,12 @@ class T100PainterTransverter : public T100StateTransverter
         T100Painter::T100PainterState*          GetCurrent();
 
     protected:
+        T100Painter::T100PainterState*          m_state             = T100NULL;
 
     private:
+        T100Painter::T100StateAlone*            m_alone             = T100NULL;
+        T100Painter::T100StateEmbed*            m_embed             = T100NULL;
+
 };
 
 }

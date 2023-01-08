@@ -46,7 +46,7 @@ T100VOID T100PainterCanvas::create()
 
     SetBackgroundColour(*wxWHITE);
 
-    m_manager.Change(T100CANVAS_STATE_NONE);
+    m_manager.Change(T100CANVAS_STATE_COMMON);
 }
 
 T100VOID T100PainterCanvas::destroy()
@@ -72,6 +72,7 @@ T100VOID T100PainterCanvas::Deselect()
 T100BOOL T100PainterCanvas::Load(T100PAINTER_ELEMENT_VECTOR* elements)
 {
     m_elements = elements;
+    m_manager.Change(T100CANVAS_STATE_COMMON);
     return T100TRUE;
 }
 
@@ -87,31 +88,7 @@ void T100PainterCanvas::OnPaint(wxPaintEvent& event)
     current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
     if(!current)return;
 
-    current->OnPaint(event);
-    //
-
-
-    T100Library::T100TestTools::Print(L"Paint");
-
-    wxAutoBufferedPaintDC       dc(this);
-    //wxClientDC      dc(this);
-
-    dc.Clear();
-    DoPrepareDC(dc);
-
-
-    if(!m_elements)return;
-
-    for(T100ElementBase* item : *m_elements){
-        item->draw(dc);
-    }
-
-    dc.SetPen(*wxRED_PEN);
-
-    if(m_current){
-        T100Library::T100TestTools::Print(L"Paint...");
-        m_current->draw(dc);
-    }
+    current->OnPaint(event, this);
 }
 
 T100BOOL T100PainterCanvas::Hit(T100INT x, T100INT y)

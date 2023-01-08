@@ -11,6 +11,14 @@ class T100StateAlone : public T100PainterState
         T100StateAlone();
         virtual ~T100StateAlone();
 
+        T100BOOL            Create();
+
+        T100VOID            SetMenu();
+        T100VOID            ResetMenu();
+
+        T100PainterElementsPanel*       GetElementsPanel();
+        T100PainterPropertiesPanel*     GetPropertiesPanel();
+
     protected:
 
     private:

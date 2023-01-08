@@ -1,15 +1,15 @@
-#ifndef T100CANVASSTATESELECTED_H
-#define T100CANVASSTATESELECTED_H
+#ifndef T100CANVASSTATECOMMON_H
+#define T100CANVASSTATECOMMON_H
 
 #include "T100CanvasState.h"
 
 namespace T100Painter{
 
-class T100CanvasStateSelected : public T100CanvasState
+class T100CanvasStateCommon : public T100CanvasState
 {
     public:
-        T100CanvasStateSelected();
-        virtual ~T100CanvasStateSelected();
+        T100CanvasStateCommon();
+        virtual ~T100CanvasStateCommon();
 
         T100VOID            OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas);
 
@@ -25,4 +25,4 @@ class T100CanvasStateSelected : public T100CanvasState
 
 }
 
-#endif // T100CANVASSTATESELECTED_H
+#endif // T100CANVASSTATECOMMON_H

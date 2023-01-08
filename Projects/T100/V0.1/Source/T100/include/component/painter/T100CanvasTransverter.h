@@ -2,6 +2,7 @@
 #define T100CANVASTRANSVERTER_H
 
 #include "T100StateTransverter.h"
+#include "T100CanvasStateCommon.h"
 #include "T100CanvasStatePaint.h"
 #include "T100CanvasStateSelected.h"
 
@@ -17,8 +18,10 @@ class T100CanvasTransverter : public T100StateTransverter
         T100VOID            Change(T100WORD);
 
     protected:
+        T100Painter::T100CanvasState*               m_state         = T100NULL;
 
     private:
+        T100Painter::T100CanvasStateCommon*         m_common        = T100NULL;
         T100Painter::T100CanvasStatePaint*          m_paint         = T100NULL;
         T100Painter::T100CanvasStateSelected*       m_selected      = T100NULL;
 

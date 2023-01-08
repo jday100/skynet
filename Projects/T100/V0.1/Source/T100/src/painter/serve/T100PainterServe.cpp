@@ -56,7 +56,7 @@ T100BOOL T100PainterServe::opened()
 
 T100BOOL T100PainterServe::close()
 {
-
+    return T100TRUE;
 }
 
 T100BOOL T100PainterServe::NewFile(T100STRING& file, T100DiagramInfo*& diagram)

@@ -10,6 +10,9 @@ namespace T100Painter{
 
 class T100PainterCanvas : public wxScrolledWindow
 {
+    friend class T100CanvasStateCommon;
+    friend class T100CanvasStatePaint;
+    friend class T100CanvasStateSelected;
     public:
         T100PainterCanvas(wxWindow *parent,
                      wxWindowID winid = wxID_ANY,

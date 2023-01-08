@@ -17,6 +17,8 @@ class T100Painter
         T100Painter(T100PainterApp* = T100NULL);
         virtual ~T100Painter();
 
+        T100BOOL                create();
+
         T100PainterState*       getCurrent();
 
         T100VOID                reset();
@@ -35,7 +37,6 @@ class T100Painter
         T100VOID                NewFile();
 
     protected:
-        T100VOID                create();
         T100VOID                destroy();
 
     private:

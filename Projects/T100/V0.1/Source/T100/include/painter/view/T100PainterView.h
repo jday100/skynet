@@ -24,6 +24,12 @@ class T100PainterView
         T100PainterView();
         virtual ~T100PainterView();
 
+
+        T100BOOL                create_alone();
+
+        T100BOOL                create_embed();
+
+
         T100BOOL                close();
 
         T100BOOL                OpenFile(T100STRING&);

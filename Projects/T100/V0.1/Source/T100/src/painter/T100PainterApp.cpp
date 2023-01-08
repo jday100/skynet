@@ -20,8 +20,13 @@ T100PainterApp::~T100PainterApp()
 
 T100VOID T100PainterApp::create()
 {
+    T100BOOL    result;
+
     m_painter   = T100NEW T100Painter(this);
-    m_painter->getView()->create();
+    result = m_painter->create();
+    if(!result){
+        T100SAFE_DELETE(m_painter);
+    }
 }
 
 T100VOID T100PainterApp::destroy()

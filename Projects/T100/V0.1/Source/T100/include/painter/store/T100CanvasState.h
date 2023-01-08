@@ -5,6 +5,7 @@
 #include "T100State.h"
 
 namespace T100Painter{
+class T100PainterCanvas;
 
 class T100CanvasState : public T100Component::T100State
 {
@@ -12,7 +13,7 @@ class T100CanvasState : public T100Component::T100State
         T100CanvasState();
         virtual ~T100CanvasState();
 
-        virtual T100VOID        OnPaint(wxPaintEvent& event) = 0;
+        virtual T100VOID        OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas) = 0;
 
         virtual T100VOID        OnMouseLeftDown(wxMouseEvent& event) = 0;
         virtual T100VOID        OnMouseLeftUp(wxMouseEvent& event) = 0;

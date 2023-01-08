@@ -25,8 +25,9 @@ T100VOID T100ElementCircle::create()
 {
     m_name  = L"Circle";
     m_label = L"Circle";
+    m_panel = L"Graphic";
     m_key   = L"elements.circle";
-    m_type  = T100ELEMENT_CIRCLE;
+    m_type  = T100ELEMENT_GRAPHICS_CIRCLE;
 }
 
 T100VOID T100ElementCircle::destroy()
@@ -105,15 +106,16 @@ T100BOOL T100ElementCircle::MouseMove(T100INT x, T100INT y)
     return T100TRUE;
 }
 
-T100BOOL T100ElementCircle::Update(wxListView* panel)
+T100BOOL T100ElementCircle::Update(wxPropertyGrid* panel)
 {
-    T100LONG        parent;
-    T100LONG        index;
-    wxUIntPtr       ptr;
+    panel->Clear();
 
-    parent  = panel->GetItemCount();
+    panel->Append(T100NEW wxIntProperty(wxT("X"), wxPG_LABEL, m_origin_x));
+    panel->Append(T100NEW wxIntProperty(wxT("Y"), wxPG_LABEL, m_origin_y));
 
-    index   = panel->InsertItem(parent, L"Circle");
+    panel->Append(T100NEW wxFloatProperty(wxT("Radius"), wxPG_LABEL, m_radius));
+
+    return T100TRUE;
 }
 
 }

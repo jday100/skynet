@@ -1,5 +1,6 @@
 #include "T100CanvasStatePaint.h"
 
+#include <wx/dcbuffer.h>
 #include "T100PainterCallback.h"
 #include "T100PainterView.h"
 #include "T100PainterServe.h"
@@ -19,9 +20,24 @@ T100CanvasStatePaint::~T100CanvasStatePaint()
     //dtor
 }
 
-T100VOID T100CanvasStatePaint::OnPaint(wxPaintEvent& event)
+T100VOID T100CanvasStatePaint::OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas)
 {
-    T100PainterCallback::canvas_state_paint_paint(&event);
+    wxAutoBufferedPaintDC       dc(canvas);
+
+    dc.Clear();
+    canvas->DoPrepareDC(dc);
+
+    if(!canvas->m_elements)return;
+
+    for(T100ElementBase* item : *(canvas->m_elements)){
+        item->draw(dc);
+    }
+
+    dc.SetPen(*wxRED_PEN);
+
+    if(canvas->m_current){
+        canvas->m_current->draw(dc);
+    }
 }
 
 T100VOID T100CanvasStatePaint::OnMouseLeftDown(wxMouseEvent& event)
@@ -49,6 +65,7 @@ T100VOID T100CanvasStatePaint::OnMouseLeftUp(wxMouseEvent& event)
             T100PainterCallback::getView()->getPaintCtrl()->Deselect();
             T100PainterCallback::getServe()->getCurrent()->getElements()->append(current->Clone());
             T100PainterCallback::getView()->getElementManager()->Deselect();
+            T100PainterCallback::getView()->getPropertiesPanel()->setElement(current);
             T100PainterCallback::getView()->getPaintCtrl()->Refresh();
 
             T100PainterCallback::getView()->getPaintCtrl()->Change(T100CANVAS_STATE_SELECTED);

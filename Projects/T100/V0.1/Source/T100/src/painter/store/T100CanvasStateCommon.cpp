@@ -1,22 +1,25 @@
-#include "T100CanvasStateSelected.h"
+#include "T100CanvasStateCommon.h"
 
-#include <wx/dcbuffer.h>
 #include "T100PainterCallback.h"
 #include "T100PainterView.h"
+#include "T100ElementBase.h"
+
+#include <wx/dcbuffer.h>
 
 namespace T100Painter{
 
-T100CanvasStateSelected::T100CanvasStateSelected()
+T100CanvasStateCommon::T100CanvasStateCommon()
     :T100CanvasState()
 {
     //ctor
 }
 
-T100CanvasStateSelected::~T100CanvasStateSelected()
+T100CanvasStateCommon::~T100CanvasStateCommon()
 {
     //dtor
 }
-T100VOID T100CanvasStateSelected::OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas)
+
+T100VOID T100CanvasStateCommon::OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas)
 {
     wxAutoBufferedPaintDC       dc(canvas);
 
@@ -28,15 +31,9 @@ T100VOID T100CanvasStateSelected::OnPaint(wxPaintEvent& event, T100PainterCanvas
     for(T100ElementBase* item : *(canvas->m_elements)){
         item->draw(dc);
     }
-
-    dc.SetPen(*wxRED_PEN);
-
-    if(canvas->m_current){
-        canvas->m_current->draw(dc);
-    }
 }
 
-T100VOID T100CanvasStateSelected::OnMouseLeftDown(wxMouseEvent& event)
+T100VOID T100CanvasStateCommon::OnMouseLeftDown(wxMouseEvent& event)
 {
     T100BOOL                result;
     T100ElementBase*        current             = T100NULL;
@@ -54,34 +51,25 @@ T100VOID T100CanvasStateSelected::OnMouseLeftDown(wxMouseEvent& event)
         if(!current)return;
 
         T100PainterCallback::getView()->getPropertiesPanel()->setElement(current);
+        T100PainterCallback::getView()->getPaintCtrl()->Change(T100CANVAS_STATE_SELECTED);
     }else{
         T100PainterCallback::getView()->getPropertiesPanel()->Clear();
-        T100PainterCallback::getView()->getPaintCtrl()->Change(T100CANVAS_STATE_COMMON);
     }
 
     T100PainterCallback::getView()->getPaintCtrl()->Refresh();
 }
 
-T100VOID T100CanvasStateSelected::OnMouseLeftUp(wxMouseEvent& event)
+T100VOID T100CanvasStateCommon::OnMouseLeftUp(wxMouseEvent& event)
 {
 
 }
 
-T100VOID T100CanvasStateSelected::OnMouseMove(wxMouseEvent& event)
+T100VOID T100CanvasStateCommon::OnMouseMove(wxMouseEvent& event)
 {
-    T100ElementBase*        current         = T100NULL;
 
-    if(event.ButtonIsDown(wxMOUSE_BTN_LEFT)){
-        current = T100PainterCallback::getView()->getPaintCtrl()->GetCurrent();
-        if(!current)return;
-
-        current->Move(event.GetPosition().x, event.GetPosition().y);
-
-        T100PainterCallback::getView()->getPaintCtrl()->Refresh();
-    }
 }
 
-T100VOID T100CanvasStateSelected::OnMouseLeftDClick(wxMouseEvent& event)
+T100VOID T100CanvasStateCommon::OnMouseLeftDClick(wxMouseEvent& event)
 {
 
 }

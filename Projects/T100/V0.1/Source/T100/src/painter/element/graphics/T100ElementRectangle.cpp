@@ -22,8 +22,9 @@ T100VOID T100ElementRectangle::create()
 {
     m_name  = L"Rectangle";
     m_label = L"Rectangle";
+    m_panel = L"Graphic";
     m_key   = L"elements.rectangle";
-    m_type  = T100ELEMENT_RECTANGLE;
+    m_type  = T100ELEMENT_GRAPHICS_RECTANGLE;
 }
 
 T100VOID T100ElementRectangle::destroy()
@@ -87,15 +88,12 @@ T100BOOL T100ElementRectangle::MouseMove(T100INT x, T100INT y)
     return T100TRUE;
 }
 
-T100BOOL T100ElementRectangle::Update(wxListView* panel)
+T100BOOL T100ElementRectangle::Update(wxPropertyGrid* panel)
 {
     T100LONG        parent;
     T100LONG        index;
     wxUIntPtr       ptr;
 
-    parent  = panel->GetItemCount();
-
-    index   = panel->InsertItem(parent, L"Rectangle");
 }
 
 }

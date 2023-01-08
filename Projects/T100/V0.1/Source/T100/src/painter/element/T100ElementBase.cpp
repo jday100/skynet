@@ -19,6 +19,11 @@ T100STRING T100ElementBase::getName()
     return m_name;
 }
 
+T100STRING T100ElementBase::getPanel()
+{
+    return m_panel;
+}
+
 T100VOID T100ElementBase::setLabel(T100STRING label)
 {
     m_label = label;
@@ -59,13 +64,21 @@ T100BOOL T100ElementBase::Append(wxListView* panel)
     return T100TRUE;
 }
 
-T100BOOL T100ElementBase::Update(wxListView* panel)
+T100BOOL T100ElementBase::Update(wxPropertyGrid* panel)
 {
     return T100TRUE;
 }
 
-T100BOOL T100ElementBase::MouseLeftDown(T100INT, T100INT)
+T100BOOL T100ElementBase::Update(wxPropertyGridEvent& event)
 {
+    return T100TRUE;
+}
+
+T100BOOL T100ElementBase::MouseLeftDown(T100INT x, T100INT y)
+{
+    m_starting_x    = x;
+    m_starting_y    = y;
+
     return T100TRUE;
 }
 
@@ -76,6 +89,19 @@ T100BOOL T100ElementBase::MouseLeftUp(T100INT, T100INT)
 
 T100BOOL T100ElementBase::MouseMove(T100INT, T100INT)
 {
+    return T100TRUE;
+}
+
+T100BOOL T100ElementBase::Move(T100INT x, T100INT y)
+{
+    T100INT     dx, dy;
+
+    dx = x - m_starting_x;
+    dy = y = m_starting_y;
+
+    m_starting_x    = x;
+    m_starting_y    = y;
+
     return T100TRUE;
 }
 

@@ -26,6 +26,16 @@ T100VOID T100EditorCallback::init(T100EditorServe* serve, T100EditorView* view)
     m_view      = view;
 }
 
+T100EditorServe* T100EditorCallback::getServe()
+{
+    return m_serve;
+}
+
+T100EditorView* T100EditorCallback::getView()
+{
+    return m_view;
+}
+
 T100BOOL T100EditorCallback::frame_menu_new(void* d)
 {
 

@@ -3,6 +3,7 @@
 
 #include "T100PainterState.h"
 
+
 namespace T100Painter{
 
 class T100StateEmbed : public T100PainterState
@@ -10,6 +11,14 @@ class T100StateEmbed : public T100PainterState
     public:
         T100StateEmbed();
         virtual ~T100StateEmbed();
+
+        T100BOOL            Create();
+
+        T100VOID            SetMenu();
+        T100VOID            ResetMenu();
+
+        T100PainterElementsPanel*       GetElementsPanel();
+        T100PainterPropertiesPanel*     GetPropertiesPanel();
 
     protected:
 

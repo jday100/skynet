@@ -11,7 +11,7 @@ class T100CanvasStatePaint : public T100CanvasState
         T100CanvasStatePaint();
         virtual ~T100CanvasStatePaint();
 
-        T100VOID            OnPaint(wxPaintEvent& event);
+        T100VOID            OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas);
 
         T100VOID            OnMouseLeftDown(wxMouseEvent& event);
         T100VOID            OnMouseLeftUp(wxMouseEvent& event);

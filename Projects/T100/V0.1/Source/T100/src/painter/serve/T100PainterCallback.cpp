@@ -216,7 +216,7 @@ T100BOOL T100PainterCallback::view_element_init(void* d)
 
     element = static_cast<T100ElementBase*>(d);
     if(element){
-        result = m_view->Append(wxT("Elements"), element);
+        result = m_view->Append(element->getPanel().to_wstring(), element);
     }
     return result;
 }

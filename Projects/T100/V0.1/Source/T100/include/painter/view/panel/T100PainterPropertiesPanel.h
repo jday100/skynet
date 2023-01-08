@@ -1,7 +1,7 @@
 #ifndef T100PAINTERPROPERTIESPANEL_H
 #define T100PAINTERPROPERTIESPANEL_H
 
-#include <wx/listctrl.h>
+#include <wx/propgrid/propgrid.h>
 #include <wx/panel.h>
 #include <wx/sizer.h>
 #include "T100Common.h"
@@ -15,12 +15,16 @@ class T100PainterPropertiesPanel : public wxPanel
         T100PainterPropertiesPanel(wxWindow* parent,wxWindowID id=wxID_ANY,const wxPoint& pos=wxDefaultPosition,const wxSize& size=wxDefaultSize);
         virtual ~T100PainterPropertiesPanel();
 
-        wxListView*             ListView;
+        wxPropertyGrid*         PropertyGrid;
 
         T100BOOL                setElement(T100ElementBase*);
 
+        T100VOID                Clear();
+
     protected:
-        static const long ID_LISTVIEW;
+        static const long ID_PROPERTYGRID;
+
+        void OnChanged(wxPropertyGridEvent& event);
 
     private:
         T100ElementBase*        m_element           = T100NULL;

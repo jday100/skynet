@@ -21,7 +21,7 @@ class T100ElementRectangle : public T100ElementBase
         T100BOOL                    MouseLeftUp(T100INT, T100INT);
         T100BOOL                    MouseMove(T100INT, T100INT);
 
-        T100BOOL                    Update(wxListView*);
+        T100BOOL                    Update(wxPropertyGrid*);
 
     protected:
         T100VOID                    create();

@@ -14,6 +14,9 @@ class T100EditorCallback
         T100EditorCallback();
         virtual ~T100EditorCallback();
 
+        static T100EditorServe*         getServe();
+        static T100EditorView*          getView();
+
         static T100VOID                 init(T100EditorServe*, T100EditorView*);
 
     public:

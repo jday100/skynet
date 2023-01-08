@@ -20,7 +20,7 @@ T100PainterStore::~T100PainterStore()
 
 T100BOOL T100PainterStore::close()
 {
-
+    return T100TRUE;
 }
 
 T100BOOL T100PainterStore::OpenFile(T100STRING file, T100DiagramInfo*& info)

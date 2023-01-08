@@ -72,7 +72,7 @@ T100BOOL T100PainterFrame::create_menu()
 
     menuFile->Append(ID_MENUITEM_NEW, wxT("New"));
     menuFile->AppendSeparator();
-    menuFile->Append(ID_MENUITEM_OPEN, wxT("Open"));
+    menuFile->Append(ID_MENUITEM_OPEN, wxT("Open…"));
     menuFile->Append(ID_MENUITEM_CLOSE, wxT("Close"));
     menuFile->AppendSeparator();
     menuFile->Append(ID_MENUITEM_SAVE, wxT("Save"));
