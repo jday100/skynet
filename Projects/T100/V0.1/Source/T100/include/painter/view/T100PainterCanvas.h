@@ -13,6 +13,7 @@ class T100PainterCanvas : public wxScrolledWindow
     friend class T100CanvasStateCommon;
     friend class T100CanvasStatePaint;
     friend class T100CanvasStateSelected;
+    friend class T100CanvasStateSizing;
     public:
         T100PainterCanvas(wxWindow *parent,
                      wxWindowID winid = wxID_ANY,
@@ -23,6 +24,9 @@ class T100PainterCanvas : public wxScrolledWindow
         virtual ~T100PainterCanvas();
 
         T100BOOL            Load(T100PAINTER_ELEMENT_VECTOR*);
+
+
+        T100BOOL            Remove(T100ElementBase*);
 
         T100VOID            Select(T100ElementBase*);
         T100VOID            Deselect();
@@ -37,6 +41,8 @@ class T100PainterCanvas : public wxScrolledWindow
         T100BOOL            GetVirtualPosition(T100INT, T100INT, T100INT&, T100INT&);
 
         T100BOOL            Change(T100CANVAS_STATE);
+
+        T100BOOL            Resize(T100WORD, T100WORD);
 
     public:
         static const long ID_TITLE;
@@ -54,7 +60,14 @@ class T100PainterCanvas : public wxScrolledWindow
         void OnMouseMove(wxMouseEvent& event);
         void OnMouseLeftDClick(wxMouseEvent& event);
 
+        void OnKeyUp(wxKeyEvent& event);
+
         void OnResize(wxSizeEvent& event);
+
+        void OnScrollBottom(wxScrollWinEvent& event);
+        void OnScrollLineDown(wxScrollWinEvent& event);
+        void OnScrollPageDown(wxScrollWinEvent& event);
+        void OnScrollThumbTrack(wxScrollWinEvent& event);
 
     private:
         T100VOID            create();

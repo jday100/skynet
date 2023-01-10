@@ -24,6 +24,9 @@ class T100ElementBase
         T100STRING                  getPanel();
         T100WORD                    getType();
 
+        T100WORD                    getTailX();
+        T100WORD                    getTailY();
+
 
         virtual T100BOOL            Append(wxListView*);
         virtual T100BOOL            Update(wxPropertyGrid*);
@@ -38,6 +41,8 @@ class T100ElementBase
         virtual T100BOOL            MouseLeftUp(T100INT, T100INT);
         virtual T100BOOL            MouseMove(T100INT, T100INT);
 
+        virtual T100VOID            Resize(wxDC&);
+        virtual T100VOID            Position();
         virtual T100BOOL            Move(T100INT, T100INT);
 
     protected:
@@ -48,11 +53,32 @@ class T100ElementBase
 
         T100WORD                    m_type          = 0;
 
-    private:
+        T100BOOL                    m_inited        = T100FALSE;
+
+        T100WORD                    m_name_x        = 0;
+        T100WORD                    m_name_y        = 0;
+
+        T100WORD                    m_name_width;
+        T100WORD                    m_name_height;
+
+        T100WORD                    m_origin_x      = 0;
+        T100WORD                    m_origin_y      = 0;
+
+        T100WORD                    m_tail_x        = 0;
+        T100WORD                    m_tail_y        = 0;
+
+        T100WORD                    m_width         = 0;
+        T100WORD                    m_height        = 0;
+
         T100WORD                    m_starting_x    = 0;
         T100WORD                    m_starting_y    = 0;
         T100WORD                    m_ending_x      = 0;
         T100WORD                    m_ending_y      = 0;
+
+
+        T100VOID                    draw_text(wxDC&);
+
+    private:
 
 };
 

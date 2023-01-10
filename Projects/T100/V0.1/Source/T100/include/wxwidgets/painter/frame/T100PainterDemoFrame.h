@@ -29,6 +29,14 @@ class T100PainterDemoFrame: public wxFrame
 		void OnPaint(wxPaintEvent& event);
 		void OnEraseBackground(wxEraseEvent& event);
 		void OnResize(wxSizeEvent& event);
+		void OnKeyDown(wxKeyEvent& event);
+		void OnKeyUp(wxKeyEvent& event);
+		void OnChar(wxKeyEvent& event);
+		void OnScrollBar1Scroll(wxScrollEvent& event);
+		void OnScrollBar1ScrollBottom(wxScrollEvent& event);
+		void OnScrollBar1ScrollLineDown(wxScrollEvent& event);
+		void OnScrollBar1ScrollPageDown(wxScrollEvent& event);
+		void OnScrollBar1ScrollChanged(wxScrollEvent& event);
 		//*)
 
 	protected:

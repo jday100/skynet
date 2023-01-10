@@ -21,7 +21,7 @@ class T100SafeVector
             m_vector.push_back(value);
         }
 
-        void remove(const Type value)
+        bool remove(const Type value)
         {
             std::lock_guard<std::mutex>     lock(m_mutex);
 
@@ -31,9 +31,11 @@ class T100SafeVector
             {
                 if(value == (*it)){
                     m_vector.erase(it);
-                    return;
+                    return true;
                 }
             }
+
+            return false;
         }
 
         typename std::vector<Type>::iterator begin()

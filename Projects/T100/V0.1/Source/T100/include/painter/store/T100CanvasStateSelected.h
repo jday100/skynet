@@ -18,6 +18,8 @@ class T100CanvasStateSelected : public T100CanvasState
         T100VOID            OnMouseMove(wxMouseEvent& event);
         T100VOID            OnMouseLeftDClick(wxMouseEvent& event);
 
+        T100VOID            OnKeyUp(wxKeyEvent& event);
+
     protected:
 
     private:

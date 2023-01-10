@@ -46,6 +46,16 @@ T100WORD T100ElementBase::getType()
     return m_type;
 }
 
+T100WORD T100ElementBase::getTailX()
+{
+    return m_tail_x;
+}
+
+T100WORD T100ElementBase::getTailY()
+{
+    return m_tail_y;
+}
+
 T100BOOL T100ElementBase::Append(wxListView* panel)
 {
     T100BOOL        result;
@@ -92,12 +102,29 @@ T100BOOL T100ElementBase::MouseMove(T100INT, T100INT)
     return T100TRUE;
 }
 
+T100VOID T100ElementBase::Resize(wxDC& dc)
+{
+
+}
+
+T100VOID T100ElementBase::Position()
+{
+    m_origin_x  = m_starting_x;
+    m_origin_y  = m_starting_y;
+
+    m_tail_x    = m_origin_x + m_width;
+    m_tail_y    = m_origin_y + m_height;
+}
+
 T100BOOL T100ElementBase::Move(T100INT x, T100INT y)
 {
     T100INT     dx, dy;
 
-    dx = x - m_starting_x;
-    dy = y = m_starting_y;
+    dx  = x - m_starting_x;
+    dy  = y - m_starting_y;
+
+    m_origin_x  = m_origin_x + dx;
+    m_origin_y  = m_origin_y + dy;
 
     m_starting_x    = x;
     m_starting_y    = y;

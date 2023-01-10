@@ -49,6 +49,9 @@ class T100PainterElementsPanel : public wxPanel
         void OnPanel2ListCtrlItemSelect(wxListEvent& event);
         void OnPanel2ListCtrlItemDeselect(wxListEvent& event);
 
+        void OnPanel3ListCtrlItemSelect(wxListEvent& event);
+        void OnPanel3ListCtrlItemDeselect(wxListEvent& event);
+
         void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);
 
 		DECLARE_EVENT_TABLE()

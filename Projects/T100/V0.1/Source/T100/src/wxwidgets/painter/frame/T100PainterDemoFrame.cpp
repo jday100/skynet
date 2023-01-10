@@ -29,6 +29,9 @@ void T100PainterDemoFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxP
 
 	Connect(wxEVT_PAINT,(wxObjectEventFunction)&T100PainterDemoFrame::OnPaint);
 	Connect(wxEVT_ERASE_BACKGROUND,(wxObjectEventFunction)&T100PainterDemoFrame::OnEraseBackground);
+	Connect(wxEVT_KEY_DOWN,(wxObjectEventFunction)&T100PainterDemoFrame::OnKeyDown);
+	Connect(wxEVT_KEY_UP,(wxObjectEventFunction)&T100PainterDemoFrame::OnKeyUp);
+	Connect(wxEVT_CHAR,(wxObjectEventFunction)&T100PainterDemoFrame::OnChar);
 	Connect(wxEVT_SIZE,(wxObjectEventFunction)&T100PainterDemoFrame::OnResize);
 	//*)
 }
@@ -49,5 +52,37 @@ void T100PainterDemoFrame::OnEraseBackground(wxEraseEvent& event)
 }
 
 void T100PainterDemoFrame::OnResize(wxSizeEvent& event)
+{
+}
+
+void T100PainterDemoFrame::OnKeyDown(wxKeyEvent& event)
+{
+}
+
+void T100PainterDemoFrame::OnKeyUp(wxKeyEvent& event)
+{
+}
+
+void T100PainterDemoFrame::OnChar(wxKeyEvent& event)
+{
+}
+
+void T100PainterDemoFrame::OnScrollBar1Scroll(wxScrollEvent& event)
+{
+}
+
+void T100PainterDemoFrame::OnScrollBar1ScrollBottom(wxScrollEvent& event)
+{
+}
+
+void T100PainterDemoFrame::OnScrollBar1ScrollLineDown(wxScrollEvent& event)
+{
+}
+
+void T100PainterDemoFrame::OnScrollBar1ScrollPageDown(wxScrollEvent& event)
+{
+}
+
+void T100PainterDemoFrame::OnScrollBar1ScrollChanged(wxScrollEvent& event)
 {
 }

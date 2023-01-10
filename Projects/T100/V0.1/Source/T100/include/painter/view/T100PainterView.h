@@ -38,6 +38,8 @@ class T100PainterView
 
         T100BOOL                LoadFile(T100DiagramInfo*);
 
+        T100BOOL                UpdateMenu();
+
         T100BOOL                Quit();
 
         T100BOOL                ShowElements();

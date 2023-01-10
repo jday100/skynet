@@ -1,0 +1,19 @@
+DATA
+    init_gd_rom_base                                        INTEGER     0
+    init_gd_rom_length                                      INTEGER     0
+    init_gd_int_base                                        INTEGER     0
+    init_gd_int_length                                      INTEGER     0
+    init_gd_int_table_base                                  INTEGER     0
+    init_gd_int_table_length                                INTEGER     0
+    init_gd_rom_data_base                                   INTEGER     0
+    init_gd_rom_data_length                                 INTEGER     0
+    init_gd_int_data_base                                   INTEGER     0
+    init_gd_int_data_length                                 INTEGER     0
+    init_gd_kernel_base                                     INTEGER     0
+    init_gd_kernel_length                                   INTEGER     0
+    init_gd_kernel_data_base                                INTEGER     0
+    init_gd_kernel_data_length                              INTEGER     0
+END
+
+PROC=INIT_GD_LOAD
+END

@@ -206,7 +206,11 @@ T100BOOL T100PainterView::Append(wxString panel, T100ElementBase* element)
 
 T100BOOL T100PainterView::close()
 {
-    return T100TRUE;
+    if(m_frame){
+        m_frame->reset_menu();
+        return T100TRUE;
+    }
+    return T100FALSE;
 }
 
 T100BOOL T100PainterView::LoadFile(T100DiagramInfo* diagram)
@@ -214,6 +218,15 @@ T100BOOL T100PainterView::LoadFile(T100DiagramInfo* diagram)
     m_paint->Load(diagram->getElements());
     m_paint->Refresh();
     return T100TRUE;
+}
+
+T100BOOL T100PainterView::UpdateMenu()
+{
+    if(m_frame){
+        m_frame->update_menu();
+        return T100TRUE;
+    }
+    return T100FALSE;
 }
 
 }

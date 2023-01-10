@@ -1,15 +1,15 @@
-#ifndef T100CANVASSTATECOMMON_H
-#define T100CANVASSTATECOMMON_H
+#ifndef T100CANVASSTATESIZING_H
+#define T100CANVASSTATESIZING_H
 
 #include "T100CanvasState.h"
 
 namespace T100Painter{
 
-class T100CanvasStateCommon : public T100CanvasState
+class T100CanvasStateSizing : public T100CanvasState
 {
     public:
-        T100CanvasStateCommon();
-        virtual ~T100CanvasStateCommon();
+        T100CanvasStateSizing();
+        virtual ~T100CanvasStateSizing();
 
         T100VOID            OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas);
 
@@ -27,4 +27,4 @@ class T100CanvasStateCommon : public T100CanvasState
 
 }
 
-#endif // T100CANVASSTATECOMMON_H
+#endif // T100CANVASSTATESIZING_H

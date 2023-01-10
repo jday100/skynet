@@ -6,4 +6,6 @@
 
 #include "T100ElementModule.h"
 
+#include "T100ElementText.h"
+
 #endif // T100ALLELEMENTS_H

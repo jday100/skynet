@@ -53,6 +53,8 @@ T100VOID T100CanvasStateSelected::OnMouseLeftDown(wxMouseEvent& event)
         current = T100PainterCallback::getView()->getPaintCtrl()->GetCurrent();
         if(!current)return;
 
+        current->MouseLeftDown(vx, vy);
+
         T100PainterCallback::getView()->getPropertiesPanel()->setElement(current);
     }else{
         T100PainterCallback::getView()->getPropertiesPanel()->Clear();
@@ -64,18 +66,41 @@ T100VOID T100CanvasStateSelected::OnMouseLeftDown(wxMouseEvent& event)
 
 T100VOID T100CanvasStateSelected::OnMouseLeftUp(wxMouseEvent& event)
 {
+    T100BOOL                result;
+    T100ElementBase*        current             = T100NULL;
+    T100INT                 x, y, vx, vy;
 
+    x   = event.GetPosition().x;
+    y   = event.GetPosition().y;
+
+    result = T100PainterCallback::getView()->getPaintCtrl()->GetVirtualPosition(x, y, vx, vy);
+    if(!result)return;
+
+    current = T100PainterCallback::getView()->getPaintCtrl()->GetCurrent();
+    if(!current)return;
+
+    current->MouseLeftUp(vx, vy);
+    current->Move(vx, vy);
 }
 
 T100VOID T100CanvasStateSelected::OnMouseMove(wxMouseEvent& event)
 {
+    T100BOOL                result;
     T100ElementBase*        current         = T100NULL;
 
     if(event.ButtonIsDown(wxMOUSE_BTN_LEFT)){
+        T100INT             x, y, vx, vy;
+
+        x   = event.GetPosition().x;
+        y   = event.GetPosition().y;
+
+        result = T100PainterCallback::getView()->getPaintCtrl()->GetVirtualPosition(x, y, vx, vy);
+        if(!result)return;
+
         current = T100PainterCallback::getView()->getPaintCtrl()->GetCurrent();
         if(!current)return;
 
-        current->Move(event.GetPosition().x, event.GetPosition().y);
+        current->Move(vx, vy);
 
         T100PainterCallback::getView()->getPaintCtrl()->Refresh();
     }
@@ -83,6 +108,31 @@ T100VOID T100CanvasStateSelected::OnMouseMove(wxMouseEvent& event)
 
 T100VOID T100CanvasStateSelected::OnMouseLeftDClick(wxMouseEvent& event)
 {
+
+}
+
+T100VOID T100CanvasStateSelected::OnKeyUp(wxKeyEvent& event)
+{
+    T100BOOL                result;
+    T100ElementBase*        current         = T100NULL;
+
+    switch(event.GetKeyCode()){
+    case WXK_DELETE:
+        {
+            current = T100PainterCallback::getView()->getPaintCtrl()->GetCurrent();
+            if(!current)return;
+
+            result = T100PainterCallback::getView()->getPaintCtrl()->Remove(current);
+
+            if(result){
+                T100PainterCallback::getView()->getPropertiesPanel()->Clear();
+                T100PainterCallback::getView()->getPaintCtrl()->Change(T100CANVAS_STATE_COMMON);
+
+                T100PainterCallback::getView()->getPaintCtrl()->Refresh();
+            }
+        }
+        break;
+    }
 
 }
 

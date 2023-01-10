@@ -2,6 +2,8 @@
 
 #include "T100Planimetry.h"
 #include "T100ElementCommon.h"
+#include "T100PainterView.h"
+#include "T100PainterCallback.h"
 
 namespace T100Painter{
 
@@ -24,6 +26,9 @@ T100VOID T100ElementModule::create()
     m_panel = L"Diagram";
     m_key   = L"elements.module";
     m_type  = T100ELEMENT_DIAGRAM_MODULE;
+
+    m_width     = 50;
+    m_height    = 100;
 }
 
 T100VOID T100ElementModule::destroy()
@@ -42,11 +47,21 @@ T100VOID T100ElementModule::Clear()
 
 T100BOOL T100ElementModule::draw(wxDC& dc)
 {
-    dc.DrawRectangle(m_starting_x, m_starting_y, m_ending_x - m_starting_x, m_ending_y - m_starting_y);
+    T100INT     w, h;
+
+    Resize(dc);
+
+    dc.DrawRectangle(m_origin_x, m_origin_y, m_width, m_height);
 
     wxString name = m_name.to_wstring();
 
-    dc.DrawText(name, m_starting_x, m_starting_y);
+    dc.DrawText(name, m_name_x, m_name_y);
+
+    T100PainterCallback::getView()->getPaintCtrl()->GetVirtualSize(&w, &h);
+
+    if(m_tail_x > w || m_tail_y > h){
+        T100PainterCallback::getView()->getPaintCtrl()->Resize(m_tail_x, m_tail_y);
+    }
 }
 
 T100ElementModule* T100ElementModule::Clone()
@@ -64,7 +79,7 @@ T100ElementModule* T100ElementModule::Clone()
 
 T100BOOL T100ElementModule::Hit(T100INT x, T100INT y)
 {
-    return T100Math::T100Planimetry::Hit(m_starting_x, m_starting_y, m_ending_x, m_ending_y, x, y);
+    return T100Math::T100Planimetry::Hit(m_origin_x, m_origin_y, m_tail_x, m_tail_y, x, y);
 }
 
 T100BOOL T100ElementModule::MouseLeftDown(T100INT x, T100INT y)
@@ -72,60 +87,98 @@ T100BOOL T100ElementModule::MouseLeftDown(T100INT x, T100INT y)
     m_starting_x    = x;
     m_starting_y    = y;
 
-    m_ending_x      = m_starting_x + 50;
-    m_ending_y      = m_starting_y + 100;
-
     return T100TRUE;
 }
 
 T100BOOL T100ElementModule::MouseLeftUp(T100INT x, T100INT y)
 {
+    m_ending_x      = x;
+    m_ending_y      = y;
+
     return T100TRUE;
 }
 
 T100BOOL T100ElementModule::MouseMove(T100INT x, T100INT y)
 {
+    T100INT     dx, dy;
+
+    dx  = m_ending_x - m_starting_x;
+    dy  = m_ending_y - m_starting_y;
+
+    m_origin_x  += dx;
+    m_origin_y  += dy;
+
     return T100TRUE;
 }
 
 T100BOOL T100ElementModule::Update(wxPropertyGrid* panel)
 {
+    T100WORD        index       = 1;
+
     panel->Clear();
 
-    panel->Append(T100NEW wxStringProperty(wxT("Name"), wxT("Name"), m_name.to_wstring()));
+    if(!m_inited){
+        m_pg_name   = T100NEW wxStringProperty(wxT("Name"), wxPG_LABEL, m_name.to_wstring());
+        m_properties[L"Name"] = index++;
 
-    panel->Append(T100NEW wxIntProperty(wxT("X"), wxPG_LABEL, m_starting_x));
-    panel->Append(T100NEW wxIntProperty(wxT("Y"), wxPG_LABEL, m_starting_y));
+        m_pg_x      = T100NEW wxIntProperty(wxT("X"), wxPG_LABEL, m_origin_x);
+        m_properties[L"X"] = index++;
+
+        m_pg_y      = T100NEW wxIntProperty(wxT("Y"), wxPG_LABEL, m_origin_y);
+        m_properties[L"Y"] = index++;
+
+        //m_inited = T100TRUE;
+    }
+
+    panel->Append(m_pg_name);
+    panel->Append(m_pg_x);
+    panel->Append(m_pg_y);
 
     return T100TRUE;
 }
 
 T100BOOL T100ElementModule::Update(wxPropertyGridEvent& event)
 {
-    T100INT     i;
+    T100WORD        index           = 0;
 
+    index   = m_properties[event.GetPropertyName().ToStdWstring()];
 
-    i = event.GetColumn();
-
-    i = event.GetId();
-
-    i = event.GetInt();
-
-    i = event.GetSelection();
-
-
-    switch(event.GetSelection()){
-    case 0:
-        {
-            m_name = event.GetPropertyValue().GetString().ToStdWstring();
-        }
-        break;
+    switch(index){
     case 1:
         {
-            m_name = event.GetPropertyValue().GetString().ToStdWstring();
+            m_name  = m_pg_name->GetValueAsString().ToStdWstring();
         }
         break;
+    case 2:
+        {
+            m_origin_x  = m_pg_x->GetValue().GetInteger();
+        }
+        break;
+    case 3:
+        {
+            m_origin_y  = m_pg_y->GetValue().GetInteger();
+        }
+        break;
+    default:
+        return T100FALSE;
     }
+    return T100TRUE;
+}
+
+T100VOID T100ElementModule::Resize(wxDC& dc)
+{
+    wxCoord     x, y;
+
+    dc.GetMultiLineTextExtent(m_name.to_wstring(), &x, &y);
+
+    m_width     = x > m_width ? x : m_width;
+    m_height    = y > m_height ? y : m_height;
+
+    m_name_x    = (m_width - x) / 2 + m_origin_x;
+    m_name_y    = (m_height - y) / 2 + m_origin_y;
+
+    m_tail_x    = m_origin_x + m_width;
+    m_tail_y    = m_origin_y + m_height;
 }
 
 }

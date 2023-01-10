@@ -54,20 +54,37 @@ T100VOID T100CanvasStatePaint::OnMouseLeftDown(wxMouseEvent& event)
 
 T100VOID T100CanvasStatePaint::OnMouseLeftUp(wxMouseEvent& event)
 {
-    T100BOOL            result;
-    T100ElementBase*    current         = T100NULL;
+    T100BOOL                result;
+    T100ElementBase*        element             = T100NULL;
+    T100ElementBase*        current             = T100NULL;
+    T100INT                 x, y;
+    T100INT                 vx, vy;
 
-    current = T100PainterCallback::getView()->getElementManager()->GetCurrent();
+    element = T100PainterCallback::getView()->getElementManager()->GetCurrent();
 
-    if(current){
-        result = current->MouseLeftUp(event.GetPosition().x, event.GetPosition().y);
+    if(element){
+        x       = event.GetPosition().x;
+        y       = event.GetPosition().y;
+        result  = T100PainterCallback::getView()->getPaintCtrl()->GetVirtualPosition(x, y, vx, vy);
+        if(!result)return;
+
+        result = element->MouseLeftUp(vx, vy);
         if(result){
-            T100PainterCallback::getView()->getPaintCtrl()->Deselect();
-            T100PainterCallback::getServe()->getCurrent()->getElements()->append(current->Clone());
+            current = element->Clone();
+            if(!current)return;
+
+            current->Position();
+
+            T100PainterCallback::getServe()->getCurrent()->getElements()->append(current);
+            T100PainterCallback::getView()->getPaintCtrl()->Select(current);
             T100PainterCallback::getView()->getElementManager()->Deselect();
             T100PainterCallback::getView()->getPropertiesPanel()->setElement(current);
+
+            T100PainterCallback::getView()->getPaintCtrl()->Resize(current->getTailX(), current->getTailY());
+
             T100PainterCallback::getView()->getPaintCtrl()->Refresh();
 
+            T100PainterCallback::getView()->getPaintCtrl()->SetFocus();
             T100PainterCallback::getView()->getPaintCtrl()->Change(T100CANVAS_STATE_SELECTED);
         }
     }
@@ -98,6 +115,11 @@ T100VOID T100CanvasStatePaint::OnMouseMove(wxMouseEvent& event)
 }
 
 T100VOID T100CanvasStatePaint::OnMouseLeftDClick(wxMouseEvent& event)
+{
+
+}
+
+T100VOID T100CanvasStatePaint::OnKeyUp(wxKeyEvent& event)
 {
 
 }

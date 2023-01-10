@@ -22,7 +22,14 @@ BEGIN_EVENT_TABLE(T100PainterCanvas,wxScrolledWindow)
     EVT_MOTION(T100PainterCanvas::OnMouseMove)
     EVT_LEFT_DCLICK(T100PainterCanvas::OnMouseLeftDClick)
     //
+    EVT_KEY_UP(T100PainterCanvas::OnKeyUp)
+    //
     EVT_SIZE(T100PainterCanvas::OnResize)
+    //
+    EVT_SCROLLWIN_BOTTOM(T100PainterCanvas::OnScrollBottom)
+    EVT_SCROLLWIN_LINEDOWN(T100PainterCanvas::OnScrollLineDown)
+    EVT_SCROLLWIN_PAGEDOWN(T100PainterCanvas::OnScrollPageDown)
+    EVT_SCROLLWIN_THUMBTRACK(T100PainterCanvas::OnScrollThumbTrack)
     //
 END_EVENT_TABLE()
 
@@ -67,6 +74,15 @@ T100VOID T100PainterCanvas::Select(T100ElementBase* element)
 T100VOID T100PainterCanvas::Deselect()
 {
     m_current = T100NULL;
+}
+
+T100BOOL T100PainterCanvas::Remove(T100ElementBase* element)
+{
+    if(m_elements->remove(element)){
+        m_current   = T100NULL;
+        return T100TRUE;
+    }
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCanvas::Load(T100PAINTER_ELEMENT_VECTOR* elements)
@@ -142,7 +158,7 @@ void T100PainterCanvas::OnMouseMove(wxMouseEvent& event)
 
     current->OnMouseMove(event);
 
-    T100Library::T100TestTools::Print(L"MouseMove");
+    //T100Library::T100TestTools::Print(L"MouseMove");
 }
 
 void T100PainterCanvas::OnMouseLeftDClick(wxMouseEvent& event)
@@ -162,6 +178,16 @@ void T100PainterCanvas::OnMouseLeftDClick(wxMouseEvent& event)
     if(result){
         Edit();
     }
+}
+
+void T100PainterCanvas::OnKeyUp(wxKeyEvent& event)
+{
+    T100CanvasState*        current         = T100NULL;
+
+    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    if(!current)return;
+
+    current->OnKeyUp(event);
 }
 
 void T100PainterCanvas::Edit()
@@ -248,6 +274,61 @@ T100BOOL T100PainterCanvas::Change(T100CANVAS_STATE state)
 {
     m_manager.Change(state);
     return T100TRUE;
+}
+
+T100BOOL T100PainterCanvas::Resize(T100WORD width, T100WORD height)
+{
+    T100INT     x, y;
+    T100WORD    w, h;
+
+    GetViewStart(&x, &y);
+
+    w = width / 10 + 5;
+    h = height / 10 + 5;
+
+    SetScrollbars(10, 10, w, h, x, y);
+}
+
+T100VOID T100PainterCanvas::OnScrollBottom(wxScrollWinEvent& event)
+{
+    T100Library::T100TestTools::Print(L"ScrollBottom");
+}
+
+T100VOID T100PainterCanvas::OnScrollLineDown(wxScrollWinEvent& event)
+{
+    T100Library::T100TestTools::Print(L"ScrollLineDown");
+
+    T100INT     go;
+
+    go = event.GetOrientation();
+
+    T100INT     vx, vy;
+    T100INT     line;
+
+    GetVirtualSize(&vx, &vy);
+
+
+    if(wxHORIZONTAL == go){
+        line = GetScrollLines(wxHORIZONTAL);
+
+    }else if(wxVERTICAL == go){
+        line = GetScrollLines(wxVERTICAL);
+
+
+        line = event.GetPosition();
+    }
+
+    event.Skip();
+}
+
+T100VOID T100PainterCanvas::OnScrollPageDown(wxScrollWinEvent& event)
+{
+    T100Library::T100TestTools::Print(L"ScrollPageDown");
+}
+
+T100VOID T100PainterCanvas::OnScrollThumbTrack(wxScrollWinEvent& event)
+{
+    T100Library::T100TestTools::Print(L"ScrollThumbTrack");
 }
 
 }

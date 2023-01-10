@@ -5,6 +5,9 @@
 		<size_arg>1</size_arg>
 		<handler function="OnPaint" entry="EVT_PAINT" />
 		<handler function="OnEraseBackground" entry="EVT_ERASE_BACKGROUND" />
+		<handler function="OnKeyDown" entry="EVT_KEY_DOWN" />
+		<handler function="OnKeyUp" entry="EVT_KEY_UP" />
+		<handler function="OnChar" entry="EVT_CHAR" />
 		<handler function="OnResize" entry="EVT_SIZE" />
 		<object class="wxScrolledWindow" name="ID_SCROLLEDWINDOW1" variable="ScrolledWindow1" member="yes">
 			<pos>384,304</pos>

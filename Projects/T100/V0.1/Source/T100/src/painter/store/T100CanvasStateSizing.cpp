@@ -1,4 +1,4 @@
-#include "T100CanvasStateCommon.h"
+#include "T100CanvasStateSizing.h"
 
 #include "T100PainterCallback.h"
 #include "T100PainterView.h"
@@ -8,18 +8,18 @@
 
 namespace T100Painter{
 
-T100CanvasStateCommon::T100CanvasStateCommon()
+T100CanvasStateSizing::T100CanvasStateSizing()
     :T100CanvasState()
 {
     //ctor
 }
 
-T100CanvasStateCommon::~T100CanvasStateCommon()
+T100CanvasStateSizing::~T100CanvasStateSizing()
 {
     //dtor
 }
 
-T100VOID T100CanvasStateCommon::OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas)
+T100VOID T100CanvasStateSizing::OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas)
 {
     wxAutoBufferedPaintDC       dc(canvas);
 
@@ -31,9 +31,15 @@ T100VOID T100CanvasStateCommon::OnPaint(wxPaintEvent& event, T100PainterCanvas* 
     for(T100ElementBase* item : *(canvas->m_elements)){
         item->draw(dc);
     }
+
+    dc.SetPen(*wxRED_PEN);
+
+    if(canvas->m_current){
+        canvas->m_current->draw(dc);
+    }
 }
 
-T100VOID T100CanvasStateCommon::OnMouseLeftDown(wxMouseEvent& event)
+T100VOID T100CanvasStateSizing::OnMouseLeftDown(wxMouseEvent& event)
 {
     T100BOOL                result;
     T100ElementBase*        current             = T100NULL;
@@ -59,22 +65,22 @@ T100VOID T100CanvasStateCommon::OnMouseLeftDown(wxMouseEvent& event)
     T100PainterCallback::getView()->getPaintCtrl()->Refresh();
 }
 
-T100VOID T100CanvasStateCommon::OnMouseLeftUp(wxMouseEvent& event)
+T100VOID T100CanvasStateSizing::OnMouseLeftUp(wxMouseEvent& event)
 {
 
 }
 
-T100VOID T100CanvasStateCommon::OnMouseMove(wxMouseEvent& event)
+T100VOID T100CanvasStateSizing::OnMouseMove(wxMouseEvent& event)
 {
 
 }
 
-T100VOID T100CanvasStateCommon::OnMouseLeftDClick(wxMouseEvent& event)
+T100VOID T100CanvasStateSizing::OnMouseLeftDClick(wxMouseEvent& event)
 {
 
 }
 
-T100VOID T100CanvasStateCommon::OnKeyUp(wxKeyEvent& event)
+T100VOID T100CanvasStateSizing::OnKeyUp(wxKeyEvent& event)
 {
 
 }

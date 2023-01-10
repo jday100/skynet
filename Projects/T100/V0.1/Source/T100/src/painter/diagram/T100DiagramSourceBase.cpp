@@ -150,6 +150,11 @@ T100ElementSourceBase* T100DiagramSourceBase::getElementSource(T100WORD type)
             result = T100NEW T100ElementModuleSource(T100NULL);
         }
         break;
+    case T100ELEMENT_TEXT:
+        {
+            result = T100NEW T100ElementTextSource(T100NULL);
+        }
+        break;
     }
 
     return result;

@@ -84,6 +84,10 @@ T100BOOL T100PainterCallback::frame_menu_new(void* d)
         result = m_view->LoadFile(diagram);
     }
 
+    if(result){
+        result = m_view->UpdateMenu();
+    }
+
     return result;
 }
 
@@ -131,7 +135,26 @@ T100BOOL T100PainterCallback::frame_menu_open(void* d)
 
 T100BOOL T100PainterCallback::frame_menu_close(void* d)
 {
+    T100BOOL                result;
 
+    result = m_serve->opened();
+    if(result){
+        if(result){
+            result = m_store->close();
+        }
+
+        if(result){
+            result = m_serve->close();
+        }
+
+        if(result){
+            result = m_view->close();
+        }
+    }else{
+        result = T100FALSE;
+    }
+
+    return result;
 }
 
 T100BOOL T100PainterCallback::frame_menu_save(void* d)

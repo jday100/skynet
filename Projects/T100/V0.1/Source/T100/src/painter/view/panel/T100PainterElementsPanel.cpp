@@ -69,7 +69,7 @@ void T100PainterElementsPanel::BuildContent(wxWindow* parent,wxWindowID id,const
 	BoxSizer4->SetSizeHints(Panel3);
 	Notebook1->AddPage(Panel1, _("Graphic"), false);
 	Notebook1->AddPage(Panel2, _("Diagram"), false);
-	Notebook1->AddPage(Panel3, _("Page name"), false);
+	Notebook1->AddPage(Panel3, _("Other"), false);
 	BoxSizer1->Add(Notebook1, 1, wxALL|wxEXPAND, 5);
 	SetSizer(BoxSizer1);
 	BoxSizer1->Fit(this);
@@ -83,6 +83,9 @@ void T100PainterElementsPanel::BuildContent(wxWindow* parent,wxWindowID id,const
     Connect(ID_LISTVIEW2,wxEVT_COMMAND_LIST_ITEM_SELECTED,(wxObjectEventFunction)&T100PainterElementsPanel::OnPanel2ListCtrlItemSelect);
 	Connect(ID_LISTVIEW2,wxEVT_COMMAND_LIST_ITEM_DESELECTED,(wxObjectEventFunction)&T100PainterElementsPanel::OnPanel2ListCtrlItemDeselect);
 
+    Connect(ID_LISTVIEW3,wxEVT_COMMAND_LIST_ITEM_SELECTED,(wxObjectEventFunction)&T100PainterElementsPanel::OnPanel3ListCtrlItemSelect);
+	Connect(ID_LISTVIEW3,wxEVT_COMMAND_LIST_ITEM_DESELECTED,(wxObjectEventFunction)&T100PainterElementsPanel::OnPanel3ListCtrlItemDeselect);
+
 }
 
 T100BOOL T100PainterElementsPanel::Append(wxString panel, T100ElementBase* element)
@@ -91,6 +94,8 @@ T100BOOL T100PainterElementsPanel::Append(wxString panel, T100ElementBase* eleme
         element->Append(ListView1);
     }else if(wxT("Diagram") == panel){
         element->Append(ListView2);
+    }else if(wxT("Other") == panel){
+        element->Append(ListView3);
     }
 
     return T100TRUE;
@@ -137,9 +142,35 @@ void T100PainterElementsPanel::OnPanel2ListCtrlItemSelect(wxListEvent& event)
     if(key){
         T100PainterCallback::view_element_select(key);
     }
+
+    event.Skip();
 }
 
 void T100PainterElementsPanel::OnPanel2ListCtrlItemDeselect(wxListEvent& event)
+{
+
+}
+
+void T100PainterElementsPanel::OnPanel3ListCtrlItemSelect(wxListEvent& event)
+{
+    T100LONG        index;
+    wxUIntPtr       ptr;
+    T100STRING*     key         = T100NULL;
+
+    index = event.GetIndex();
+
+    ptr = ListView3->GetItemData(index);
+
+    key = (T100STRING*)ptr;
+
+    if(key){
+        T100PainterCallback::view_element_select(key);
+    }
+
+    event.Skip();
+}
+
+void T100PainterElementsPanel::OnPanel3ListCtrlItemDeselect(wxListEvent& event)
 {
 
 }

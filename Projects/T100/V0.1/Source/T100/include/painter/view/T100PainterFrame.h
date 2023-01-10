@@ -9,6 +9,7 @@ namespace T100Painter{
 
 class T100PainterFrame : public wxFrame
 {
+    friend class T100PainterView;
     public:
         T100PainterFrame(wxWindow* parent,wxWindowID id=wxID_ANY,const wxPoint& pos=wxDefaultPosition,const wxSize& size=wxDefaultSize);
         virtual ~T100PainterFrame();
@@ -58,6 +59,8 @@ class T100PainterFrame : public wxFrame
         T100VOID                destroy();
 
         T100BOOL                create_menu();
+        T100BOOL                update_menu();
+        T100BOOL                reset_menu();
 
     private:
 

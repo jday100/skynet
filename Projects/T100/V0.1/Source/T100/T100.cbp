@@ -123,6 +123,7 @@
 					<Add directory="include/component/painter" />
 					<Add directory="include/component/editor" />
 					<Add directory="include/painter/element/diagram" />
+					<Add directory="include/painter/element/other" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -240,6 +241,7 @@
 					<Add directory="include/component/painter" />
 					<Add directory="include/component/editor" />
 					<Add directory="include/painter/element/diagram" />
+					<Add directory="include/painter/element/other" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -641,6 +643,8 @@
 		<Unit filename="include/painter/element/graphics/T100ElementCircleSource.h" />
 		<Unit filename="include/painter/element/graphics/T100ElementRectangle.h" />
 		<Unit filename="include/painter/element/graphics/T100ElementRectangleSource.h" />
+		<Unit filename="include/painter/element/other/T100ElementText.h" />
+		<Unit filename="include/painter/element/other/T100ElementTextSource.h" />
 		<Unit filename="include/painter/serve/T100PainterCallback.h" />
 		<Unit filename="include/painter/serve/T100PainterServe.h" />
 		<Unit filename="include/painter/serve/T100PainterState.h" />
@@ -650,6 +654,7 @@
 		<Unit filename="include/painter/store/T100CanvasStateCommon.h" />
 		<Unit filename="include/painter/store/T100CanvasStatePaint.h" />
 		<Unit filename="include/painter/store/T100CanvasStateSelected.h" />
+		<Unit filename="include/painter/store/T100CanvasStateSizing.h" />
 		<Unit filename="include/painter/store/T100PainterStore.h" />
 		<Unit filename="include/painter/view/T100PainterCanvas.h" />
 		<Unit filename="include/painter/view/T100PainterFrame.h" />
@@ -776,6 +781,7 @@
 		<Unit filename="include/wxwidgets/T100PaintCtrl.h" />
 		<Unit filename="include/wxwidgets/T100WxApp.h" />
 		<Unit filename="include/wxwidgets/T100WxAppManager.h" />
+		<Unit filename="include/wxwidgets/T100WxDC.h" />
 		<Unit filename="include/wxwidgets/painter/frame/T100PainterDemoFrame.h" />
 		<Unit filename="include/wxwidgets/painter/panel/T100PainterElementsDemoPanel.h" />
 		<Unit filename="include/wxwidgets/painter/panel/T100PainterPropertiesDemoPanel.h" />
@@ -1108,6 +1114,8 @@
 		<Unit filename="src/painter/element/graphics/T100ElementCircleSource.cpp" />
 		<Unit filename="src/painter/element/graphics/T100ElementRectangle.cpp" />
 		<Unit filename="src/painter/element/graphics/T100ElementRectangleSource.cpp" />
+		<Unit filename="src/painter/element/other/T100ElementText.cpp" />
+		<Unit filename="src/painter/element/other/T100ElementTextSource.cpp" />
 		<Unit filename="src/painter/serve/T100PainterCallback.cpp" />
 		<Unit filename="src/painter/serve/T100PainterServe.cpp" />
 		<Unit filename="src/painter/serve/T100PainterState.cpp" />
@@ -1117,6 +1125,7 @@
 		<Unit filename="src/painter/store/T100CanvasStateCommon.cpp" />
 		<Unit filename="src/painter/store/T100CanvasStatePaint.cpp" />
 		<Unit filename="src/painter/store/T100CanvasStateSelected.cpp" />
+		<Unit filename="src/painter/store/T100CanvasStateSizing.cpp" />
 		<Unit filename="src/painter/store/T100PainterStore.cpp" />
 		<Unit filename="src/painter/view/T100PainterCanvas.cpp" />
 		<Unit filename="src/painter/view/T100PainterFrame.cpp" />
@@ -1239,6 +1248,7 @@
 		<Unit filename="src/wxwidgets/T100PaintCtrl.cpp" />
 		<Unit filename="src/wxwidgets/T100WxApp.cpp" />
 		<Unit filename="src/wxwidgets/T100WxAppManager.cpp" />
+		<Unit filename="src/wxwidgets/T100WxDC.cpp" />
 		<Unit filename="src/wxwidgets/painter/frame/T100PainterDemoFrame.cpp" />
 		<Unit filename="src/wxwidgets/painter/panel/T100PainterElementsDemoPanel.cpp" />
 		<Unit filename="src/wxwidgets/painter/panel/T100PainterPropertiesDemoPanel.cpp" />
@@ -1437,6 +1447,7 @@
 		<Unit filename="work/BOS/fs/path.txt" />
 		<Unit filename="work/BOS/fs/table.txt" />
 		<Unit filename="work/BOS/init/init.txt" />
+		<Unit filename="work/BOS/init/init_gd.txt" />
 		<Unit filename="work/BOS/init/init_load.txt" />
 		<Unit filename="work/BOS/kernel/gd.txt" />
 		<Unit filename="work/BOS/kernel/kernel.txt" />

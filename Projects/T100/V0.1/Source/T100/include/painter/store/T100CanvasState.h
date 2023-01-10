@@ -20,6 +20,8 @@ class T100CanvasState : public T100Component::T100State
         virtual T100VOID        OnMouseMove(wxMouseEvent& event) = 0;
         virtual T100VOID        OnMouseLeftDClick(wxMouseEvent& event) = 0;
 
+        virtual T100VOID        OnKeyUp(wxKeyEvent& event) = 0;
+
     protected:
 
     private:

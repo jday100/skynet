@@ -56,6 +56,7 @@ T100BOOL T100PainterServe::opened()
 
 T100BOOL T100PainterServe::close()
 {
+    m_opened    = T100FALSE;
     return T100TRUE;
 }
 

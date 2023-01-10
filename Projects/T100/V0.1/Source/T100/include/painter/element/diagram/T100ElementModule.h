@@ -1,6 +1,8 @@
 #ifndef T100ELEMENTMODULE_H
 #define T100ELEMENTMODULE_H
 
+#include <wx/propgrid/propgrid.h>
+#include "T100ElementCommon.h"
 #include "T100ElementBase.h"
 
 namespace T100Painter{
@@ -24,16 +26,18 @@ class T100ElementModule : public T100ElementBase
         T100BOOL                Update(wxPropertyGrid*);
         T100BOOL                Update(wxPropertyGridEvent&);
 
+        T100VOID                Resize(wxDC&);
+
     protected:
         T100VOID                create();
         T100VOID                destroy();
 
     private:
-        T100WORD                m_starting_x;
-        T100WORD                m_starting_y;
+        wxStringProperty*       m_pg_name       = T100NULL;
+        wxIntProperty*          m_pg_x          = T100NULL;
+        wxIntProperty*          m_pg_y          = T100NULL;
 
-        T100WORD                m_ending_x;
-        T100WORD                m_ending_y;
+        T100ELEMENT_PROPERTY_HASH               m_properties;
 
 };
 

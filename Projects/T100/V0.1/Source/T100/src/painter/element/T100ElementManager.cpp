@@ -22,6 +22,8 @@ T100VOID T100ElementManager::init()
     T100PainterCallback::view_element_init(T100NEW T100ElementRectangle());
 
     T100PainterCallback::view_element_init(T100NEW T100ElementModule());
+
+    T100PainterCallback::view_element_init(T100NEW T100ElementText());
 }
 
 T100BOOL T100ElementManager::Append(T100ElementBase* element)

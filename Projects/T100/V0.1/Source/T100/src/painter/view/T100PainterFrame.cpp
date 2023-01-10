@@ -66,6 +66,36 @@ T100BOOL T100PainterFrame::create_menu()
 {
     wxMenuBar*      menuBar         = T100NEW wxMenuBar();
     wxMenu*         menuFile        = T100NEW wxMenu();
+    wxMenu*         menuHelp        = T100NEW wxMenu();
+
+    menuFile->Append(ID_MENUITEM_NEW, wxT("New"));
+    menuFile->AppendSeparator();
+    menuFile->Append(ID_MENUITEM_OPEN, wxT("Open…"));
+    menuFile->AppendSeparator();
+    menuFile->Append(ID_MENUITEM_QUIT, wxT("Quit"));
+
+    menuBar->Append(menuFile, wxT("File"));
+
+    menuHelp->Append(ID_MENUITEM_ABOUT, wxT("About…"));
+
+    menuBar->Append(menuHelp, wxT("Help"));
+
+    SetMenuBar(menuBar);
+
+    Connect(ID_MENUITEM_NEW,            wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuNewSelected);
+    Connect(ID_MENUITEM_OPEN,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuOpenSelected);
+    Connect(ID_MENUITEM_QUIT,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuQuitSelected);
+
+    Connect(ID_MENUITEM_ABOUT,          wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuAboutSelected);
+
+    return T100TRUE;
+}
+
+/*
+T100BOOL T100PainterFrame::create_menu()
+{
+    wxMenuBar*      menuBar         = T100NEW wxMenuBar();
+    wxMenu*         menuFile        = T100NEW wxMenu();
     wxMenu*         menuEdit        = T100NEW wxMenu();
     wxMenu*         menuView        = T100NEW wxMenu();
     wxMenu*         menuHelp        = T100NEW wxMenu();
@@ -130,6 +160,89 @@ T100BOOL T100PainterFrame::create_menu()
 
     return T100TRUE;
 }
+*/
+
+T100BOOL T100PainterFrame::update_menu()
+{
+    wxMenuBar*      menuBar         = T100NULL;
+
+    menuBar = GetMenuBar();
+
+    wxMenu*         menuEdit        = T100NEW wxMenu();
+    wxMenu*         menuView        = T100NEW wxMenu();
+
+    wxMenu*         menuFile        = T100NULL;
+
+    menuFile    = menuBar->GetMenu(0);
+
+    menuFile->Insert(3, ID_MENUITEM_CLOSE, wxT("Close"));
+    menuFile->InsertSeparator(4);
+    menuFile->Insert(5, ID_MENUITEM_SAVE, wxT("Save"));
+    menuFile->Insert(6, ID_MENUITEM_SAVE_AS, wxT("Save as…"));
+
+    menuEdit->Append(ID_MENUITEM_UNDO, wxT("Undo"));
+    menuEdit->Append(ID_MENUITEM_REDO, wxT("Redo"));
+    menuEdit->AppendSeparator();
+    menuEdit->Append(ID_MENUITEM_CUT, wxT("Cut"));
+    menuEdit->Append(ID_MENUITEM_COPY, wxT("Copy"));
+    menuEdit->Append(ID_MENUITEM_PASTE, wxT("Paste"));
+
+    menuBar->Insert(1, menuEdit, wxT("Edit"));
+
+    menuView->Append(ID_MENUITEM_ELEMENTS, wxT("Elements"));
+    menuView->Append(ID_MENUITEM_PROPERTIES, wxT("Properties"));
+
+    menuBar->Insert(2, menuView, wxT("View"));
+
+    Connect(ID_MENUITEM_CLOSE,          wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuCloseSelected);
+    Connect(ID_MENUITEM_SAVE,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuSaveSelected);
+    Connect(ID_MENUITEM_SAVE_AS,        wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuSaveAsSelected);
+
+    Connect(ID_MENUITEM_UNDO,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuUndoSelected);
+    Connect(ID_MENUITEM_REDO,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuRedoSelected);
+    Connect(ID_MENUITEM_CUT,            wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuCutSelected);
+    Connect(ID_MENUITEM_COPY,           wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuCopySelected);
+    Connect(ID_MENUITEM_PASTE,          wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuPasteSelected);
+
+    Connect(ID_MENUITEM_ELEMENTS,       wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuElementsSelected);
+    Connect(ID_MENUITEM_PROPERTIES,     wxEVT_COMMAND_MENU_SELECTED,    (wxObjectEventFunction)&T100PainterFrame::OnMenuPropertiesSelected);
+
+    return T100TRUE;
+}
+
+T100BOOL T100PainterFrame::reset_menu()
+{
+    wxMenuBar*      menuBar         = T100NULL;
+    wxMenu*         menuFile        = T100NULL;
+
+    menuBar = GetMenuBar();
+
+    menuBar->Remove(1);
+    menuBar->Remove(1);
+
+    menuFile    = menuBar->GetMenu(0);
+
+    menuFile->Remove(ID_MENUITEM_CLOSE);
+    menuFile->Remove(ID_MENUITEM_SAVE);
+    menuFile->Remove(ID_MENUITEM_SAVE_AS);
+
+
+    Disconnect(ID_MENUITEM_CLOSE);
+    Disconnect(ID_MENUITEM_SAVE);
+    Disconnect(ID_MENUITEM_SAVE_AS);
+
+    Disconnect(ID_MENUITEM_UNDO);
+    Disconnect(ID_MENUITEM_REDO);
+    Disconnect(ID_MENUITEM_CUT);
+    Disconnect(ID_MENUITEM_COPY);
+    Disconnect(ID_MENUITEM_PASTE);
+
+    Disconnect(ID_MENUITEM_ELEMENTS);
+    Disconnect(ID_MENUITEM_PROPERTIES);
+
+    return T100TRUE;
+}
+
 
 void T100PainterFrame::OnMenuNewSelected(wxCommandEvent& event)
 {
