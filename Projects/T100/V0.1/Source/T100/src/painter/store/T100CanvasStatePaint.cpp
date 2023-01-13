@@ -42,14 +42,25 @@ T100VOID T100CanvasStatePaint::OnPaint(wxPaintEvent& event, T100PainterCanvas* c
 
 T100VOID T100CanvasStatePaint::OnMouseLeftDown(wxMouseEvent& event)
 {
+    T100BOOL                result;
     T100ElementBase*        current             = T100NULL;
+    T100INT                 x, y, vx, vy;
+
+    x   = event.GetPosition().x;
+    y   = event.GetPosition().y;
+
+    result = T100PainterCallback::getView()->getPaintCtrl()->GetVirtualPosition(x, y, vx, vy);
+    if(!result)return;
 
     current = T100PainterCallback::getView()->getElementManager()->GetCurrent();
+    if(!current)return;
 
-    if(current){
-        current->MouseLeftDown(event.GetPosition().x, event.GetPosition().y);
-        T100PainterCallback::getView()->getPaintCtrl()->Select(current);
-    }
+    T100PainterCallback::getView()->getPaintCtrl()->Select(current);
+
+    current->SetPaintStarting(vx, vy);
+
+
+    //T100PainterCallback::getView()->getPaintCtrl()->Refresh();
 }
 
 T100VOID T100CanvasStatePaint::OnMouseLeftUp(wxMouseEvent& event)
@@ -68,7 +79,7 @@ T100VOID T100CanvasStatePaint::OnMouseLeftUp(wxMouseEvent& event)
         result  = T100PainterCallback::getView()->getPaintCtrl()->GetVirtualPosition(x, y, vx, vy);
         if(!result)return;
 
-        result = element->MouseLeftUp(vx, vy);
+        result = element->SetEnding(vx, vy);
         if(result){
             current = element->Clone();
             if(!current)return;
@@ -93,11 +104,9 @@ T100VOID T100CanvasStatePaint::OnMouseLeftUp(wxMouseEvent& event)
 T100VOID T100CanvasStatePaint::OnMouseMove(wxMouseEvent& event)
 {
     T100BOOL                result          = T100FALSE;
-    T100ElementManager*     manager         = T100NULL;
     T100ElementBase*        current         = T100NULL;
 
-    manager = T100PainterCallback::getView()->getElementManager();
-    if(!manager)return;
+    if(!event.ButtonIsDown(wxMOUSE_BTN_LEFT))return;
 
     current = T100PainterCallback::getView()->getPaintCtrl()->GetCurrent();
     if(current){
@@ -107,9 +116,7 @@ T100VOID T100CanvasStatePaint::OnMouseMove(wxMouseEvent& event)
         y   = event.GetPosition().y;
 
         result = T100PainterCallback::getView()->getPaintCtrl()->GetVirtualPosition(x, y, vx, vy);
-        result = current->MouseMove(vx, vy);
-        T100PainterCallback::getView()->getPaintCtrl()->MouseMove(vx, vy);
-        //T100Library::T100TestTools::Print(L"Refresh");
+        result = current->PaintMove(vx, vy);
         T100PainterCallback::getView()->getPaintCtrl()->Refresh();
     }
 }

@@ -17,22 +17,20 @@ class T100ElementRectangle : public T100ElementBase
         T100ElementRectangle*       Clone();
         T100BOOL                    Hit(T100INT, T100INT);
 
-        T100BOOL                    MouseLeftDown(T100INT, T100INT);
-        T100BOOL                    MouseLeftUp(T100INT, T100INT);
-        T100BOOL                    MouseMove(T100INT, T100INT);
-
         T100BOOL                    Update(wxPropertyGrid*);
+        T100BOOL                    Move();
+        T100VOID                    Position();
+
+        T100BOOL                    SetPaintStarting(T100INT, T100INT);
+
+        T100BOOL                    PaintMove(T100INT, T100INT);
+        T100BOOL                    SelectedMove(T100INT, T100INT);
 
     protected:
         T100VOID                    create();
         T100VOID                    destroy();
 
     private:
-        T100WORD                    m_starting_x;
-        T100WORD                    m_starting_y;
-
-        T100WORD                    m_ending_x;
-        T100WORD                    m_ending_y;
 
 };
 

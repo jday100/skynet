@@ -19,14 +19,15 @@ class T100ElementText : public T100ElementBase
 
         T100BOOL            Hit(T100INT, T100INT);
 
-        T100BOOL            MouseLeftDown(T100INT, T100INT);
-        T100BOOL            MouseLeftUp(T100INT, T100INT);
-        T100BOOL            MouseMove(T100INT, T100INT);
-
         T100BOOL            Update(wxPropertyGrid*);
         T100BOOL            Update(wxPropertyGridEvent&);
 
         T100VOID            Resize(wxDC&);
+
+        T100BOOL            SetPaintStarting(T100INT, T100INT);
+
+        T100BOOL            PaintMove(T100INT, T100INT);
+        T100BOOL            SelectedMove(T100INT, T100INT);
 
     protected:
         T100VOID            create();

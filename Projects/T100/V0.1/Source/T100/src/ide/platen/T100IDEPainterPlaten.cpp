@@ -8,8 +8,8 @@
 
 namespace T100IDE{
 
-T100IDEPainterPlaten::T100IDEPainterPlaten(T100IDEView* view, void* data)
-    :T100IDEPlatenBase(view), m_data(data)
+T100IDEPainterPlaten::T100IDEPainterPlaten(T100IDEView* view)
+    :T100IDEPlatenBase(view)
 {
     //ctor
 }
@@ -21,13 +21,18 @@ T100IDEPainterPlaten::~T100IDEPainterPlaten()
 
 T100BOOL T100IDEPainterPlaten::create()
 {
-    m_painter   = static_cast<T100Painter::T100Painter*>(m_data);
     if(!m_painter)return T100FALSE;
 
-    m_panel   = m_painter->getView()->getElementsPanel();
-    if(!m_panel)return T100FALSE;
+    m_elements_panel    = m_painter->getView()->getElementsPanel();
+    if(!m_elements_panel)return T100FALSE;
 
-    m_view->getViewManager()->getAuiManager()->AddPane(m_panel, wxAuiPaneInfo().Name(wxT("Name")).DefaultPane().Left());
+    m_view->getViewManager()->getAuiManager()->AddPane(m_elements_panel, wxAuiPaneInfo().Name(wxT("Elements")).DefaultPane().Left());
+
+    m_properties_panel  = m_painter->getView()->getPropertiesPanel();
+    if(!m_properties_panel)return T100FALSE;
+
+    m_view->getViewManager()->getAuiManager()->AddPane(m_properties_panel, wxAuiPaneInfo().Name(wxT("Properties")).DefaultPane().Left());
+
     m_view->getViewManager()->getAuiManager()->Update();
 
     return T100TRUE;
@@ -41,14 +46,33 @@ T100VOID T100IDEPainterPlaten::destroy()
 T100BOOL T100IDEPainterPlaten::show()
 {
     set_menu();
+
+    m_view->getViewManager()->getAuiManager()->GetPane(m_elements_panel).Show();
+    m_view->getViewManager()->getAuiManager()->GetPane(m_properties_panel).Show();
+
     m_view->getViewManager()->getAuiManager()->Update();
 
     return T100TRUE;
 }
 
+T100BOOL T100IDEPainterPlaten::hide()
+{
+
+    m_view->getViewManager()->getAuiManager()->GetPane(m_elements_panel).Hide();
+    m_view->getViewManager()->getAuiManager()->GetPane(m_properties_panel).Hide();
+
+    m_view->getViewManager()->getAuiManager()->Update();
+    return T100TRUE;
+}
+
 T100Painter::T100PainterElementsPanel* T100IDEPainterPlaten::getElementsPanel()
 {
-    return m_panel;
+    return m_elements_panel;
+}
+
+T100Painter::T100PainterPropertiesPanel* T100IDEPainterPlaten::getPropertiesPanel()
+{
+    return m_properties_panel;
 }
 
 T100VOID T100IDEPainterPlaten::set_menu()
@@ -82,6 +106,11 @@ T100VOID T100IDEPainterPlaten::set_menu()
     menuBar->GetMenu(0)->Insert(4, wxID_SAVEAS);
     menuBar->GetMenu(0)->Insert(5, wxID_CLOSE);
 
+}
+
+T100VOID T100IDEPainterPlaten::setPainter(T100Painter::T100Painter* painter)
+{
+    m_painter = painter;
 }
 
 }

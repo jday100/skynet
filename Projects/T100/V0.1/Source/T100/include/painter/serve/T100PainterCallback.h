@@ -41,6 +41,10 @@ class T100PainterCallback
         static T100BOOL                     frame_menu_about(void* = T100NULL);
 
         ///
+        static T100BOOL                     serve_file_load(void* = T100NULL);
+        static T100BOOL                     serve_file_save(void* = T100NULL);
+
+        ///
         static T100BOOL                     view_element_init(void* = T100NULL);
         static T100BOOL                     view_element_select(void* = T100NULL);
 

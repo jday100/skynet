@@ -82,31 +82,26 @@ T100BOOL T100ElementModule::Hit(T100INT x, T100INT y)
     return T100Math::T100Planimetry::Hit(m_origin_x, m_origin_y, m_tail_x, m_tail_y, x, y);
 }
 
-T100BOOL T100ElementModule::MouseLeftDown(T100INT x, T100INT y)
+T100BOOL T100ElementModule::PaintMove(T100INT x, T100INT y)
 {
-    m_starting_x    = x;
-    m_starting_y    = y;
-
     return T100TRUE;
 }
 
-T100BOOL T100ElementModule::MouseLeftUp(T100INT x, T100INT y)
-{
-    m_ending_x      = x;
-    m_ending_y      = y;
-
-    return T100TRUE;
-}
-
-T100BOOL T100ElementModule::MouseMove(T100INT x, T100INT y)
+T100BOOL T100ElementModule::SelectedMove(T100INT x, T100INT y)
 {
     T100INT     dx, dy;
 
-    dx  = m_ending_x - m_starting_x;
-    dy  = m_ending_y - m_starting_y;
+    dx  = x - m_starting_x;
+    dy  = y - m_starting_y;
 
     m_origin_x  += dx;
     m_origin_y  += dy;
+
+    m_tail_x    = m_origin_x + m_width;
+    m_tail_y    = m_origin_y + m_height;
+
+    m_starting_x    = x;
+    m_starting_y    = y;
 
     return T100TRUE;
 }
@@ -179,6 +174,15 @@ T100VOID T100ElementModule::Resize(wxDC& dc)
 
     m_tail_x    = m_origin_x + m_width;
     m_tail_y    = m_origin_y + m_height;
+}
+
+T100BOOL T100ElementModule::SetPaintStarting(T100INT x, T100INT y)
+{
+    m_starting_x    = x;
+    m_starting_y    = y;
+
+    Position();
+    return T100TRUE;
 }
 
 }

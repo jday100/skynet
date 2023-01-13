@@ -23,16 +23,16 @@ class T100PainterServe
         T100DiagramInfo*        getCurrent();
 
     public:
-        T100BOOL            SaveFile(T100STRING);
-        T100BOOL            LoadFile(T100STRING);
+        T100BOOL                SaveFile(T100STRING);
+        T100BOOL                LoadFile(T100STRING);
 
-        T100BOOL            IsModified();
-        T100VOID            DiscardEdits();
+        T100BOOL                IsModified();
+        T100VOID                DiscardEdits();
 
 
     protected:
-        T100VOID            create();
-        T100VOID            destroy();
+        T100VOID                create();
+        T100VOID                destroy();
 
     private:
         std::atomic_bool        m_opened;

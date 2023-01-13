@@ -15,6 +15,9 @@ class T100DiagramTransducerTarget : public T100Library::T100TransducerTarget
         T100DiagramTransducerTarget(T100Library::T100BufferedFileWriter*);
         virtual ~T100DiagramTransducerTarget();
 
+        T100BOOL        setINTEGER(T100INT);
+        T100BOOL        getINTEGER(T100INT&);
+
         T100BOOL        setWORD(T100WORD);
         T100BOOL        getWORD(T100WORD&);
 

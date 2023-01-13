@@ -79,12 +79,7 @@ T100BOOL T100ElementBase::Update(wxPropertyGrid* panel)
     return T100TRUE;
 }
 
-T100BOOL T100ElementBase::Update(wxPropertyGridEvent& event)
-{
-    return T100TRUE;
-}
-
-T100BOOL T100ElementBase::MouseLeftDown(T100INT x, T100INT y)
+T100BOOL T100ElementBase::SetSelectedStarting(T100INT x, T100INT y)
 {
     m_starting_x    = x;
     m_starting_y    = y;
@@ -92,12 +87,15 @@ T100BOOL T100ElementBase::MouseLeftDown(T100INT x, T100INT y)
     return T100TRUE;
 }
 
-T100BOOL T100ElementBase::MouseLeftUp(T100INT, T100INT)
+T100BOOL T100ElementBase::SetEnding(T100INT x, T100INT y)
 {
+    m_ending_x      = x;
+    m_ending_y      = y;
+
     return T100TRUE;
 }
 
-T100BOOL T100ElementBase::MouseMove(T100INT, T100INT)
+T100BOOL T100ElementBase::Update(wxPropertyGridEvent& event)
 {
     return T100TRUE;
 }
@@ -116,18 +114,15 @@ T100VOID T100ElementBase::Position()
     m_tail_y    = m_origin_y + m_height;
 }
 
-T100BOOL T100ElementBase::Move(T100INT x, T100INT y)
+T100BOOL T100ElementBase::Move()
 {
     T100INT     dx, dy;
 
-    dx  = x - m_starting_x;
-    dy  = y - m_starting_y;
+    dx  = m_ending_x - m_starting_x;
+    dy  = m_ending_y - m_starting_y;
 
     m_origin_x  = m_origin_x + dx;
     m_origin_y  = m_origin_y + dy;
-
-    m_starting_x    = x;
-    m_starting_y    = y;
 
     return T100TRUE;
 }

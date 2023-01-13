@@ -1,5 +1,6 @@
 #include "T100PainterServe.h"
 
+#include "T100PainterCallback.h"
 #include "T100ElementCircle.h"
 #include "T100DiagramInfoV1.h"
 
@@ -30,17 +31,17 @@ T100VOID T100PainterServe::destroy()
 
 T100BOOL T100PainterServe::SaveFile(T100STRING filename)
 {
-
+    T100PainterCallback::serve_file_save(&filename);
 }
 
 T100BOOL T100PainterServe::LoadFile(T100STRING filename)
 {
-
+    T100PainterCallback::serve_file_load(&filename);
 }
 
 T100BOOL T100PainterServe::IsModified()
 {
-
+    return T100FALSE;
 }
 
 T100VOID T100PainterServe::DiscardEdits()

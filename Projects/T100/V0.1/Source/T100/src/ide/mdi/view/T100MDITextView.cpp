@@ -48,11 +48,13 @@ T100BOOL T100MDITextView::OnCreate(wxDocument* doc, long flags)
 
     m_frame = T100NEW T100MDITextFrame(doc, this, wxStaticCast(m_view->getFrame(), wxMDIParentFrame));
     wxASSERT(m_frame == GetFrame());
+    m_frame->setView(m_view);
 
     m_editor    = T100NEW T100Editor::T100Editor();
     m_editor->getView()->setParent(m_frame);
     m_editor->getView()->create();
 
+    m_frame->setEditor(m_editor);
     m_frame->Show();
 
     return T100TRUE;

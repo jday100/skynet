@@ -120,6 +120,8 @@ void T100PainterElementsPanel::OnPanel1ListCtrlItemSelect(wxListEvent& event)
     if(key){
         T100PainterCallback::view_element_select(key);
     }
+
+    event.Skip();
 }
 
 void T100PainterElementsPanel::OnPanel1ListCtrlItemDeselect(wxListEvent& event)
@@ -143,7 +145,7 @@ void T100PainterElementsPanel::OnPanel2ListCtrlItemSelect(wxListEvent& event)
         T100PainterCallback::view_element_select(key);
     }
 
-    event.Skip();
+    //event.Skip();
 }
 
 void T100PainterElementsPanel::OnPanel2ListCtrlItemDeselect(wxListEvent& event)

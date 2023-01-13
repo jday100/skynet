@@ -78,15 +78,7 @@ T100BOOL T100ElementCircle::Hit(T100INT x, T100INT y)
     return T100FALSE;
 }
 
-T100BOOL T100ElementCircle::MouseLeftDown(T100INT x, T100INT y)
-{
-    m_origin_x  = x;
-    m_origin_y  = y;
-
-    return T100TRUE;
-}
-
-T100BOOL T100ElementCircle::MouseLeftUp(T100INT x, T100INT y)
+T100BOOL T100ElementCircle::PaintMove(T100INT x, T100INT y)
 {
     m_target_x  = x;
     m_target_y  = y;
@@ -96,12 +88,18 @@ T100BOOL T100ElementCircle::MouseLeftUp(T100INT x, T100INT y)
     return T100TRUE;
 }
 
-T100BOOL T100ElementCircle::MouseMove(T100INT x, T100INT y)
+T100BOOL T100ElementCircle::SelectedMove(T100INT x, T100INT y)
 {
-    m_target_x  = x;
-    m_target_y  = y;
+    T100INT     dx, dy;
 
-    m_radius    = T100Math::T100Planimetry::Dist(m_origin_x, m_origin_y, m_target_x, m_target_y);
+    dx  = x - m_starting_x;
+    dy  = y - m_starting_y;
+
+    m_origin_x  += dx;
+    m_origin_y  += dy;
+
+    m_starting_x    = x;
+    m_starting_y    = y;
 
     return T100TRUE;
 }
@@ -114,6 +112,17 @@ T100BOOL T100ElementCircle::Update(wxPropertyGrid* panel)
     panel->Append(T100NEW wxIntProperty(wxT("Y"), wxPG_LABEL, m_origin_y));
 
     panel->Append(T100NEW wxFloatProperty(wxT("Radius"), wxPG_LABEL, m_radius));
+
+    return T100TRUE;
+}
+
+T100BOOL T100ElementCircle::SetPaintStarting(T100INT x, T100INT y)
+{
+    m_origin_x      = x;
+    m_origin_y      = y;
+
+    m_starting_x    = x;
+    m_starting_y    = y;
 
     return T100TRUE;
 }

@@ -17,22 +17,23 @@ class T100ElementCircle : public T100ElementBase
         T100ElementCircle*  Clone();
         T100BOOL            Hit(T100INT, T100INT);
 
-        T100BOOL            MouseLeftDown(T100INT, T100INT);
-        T100BOOL            MouseLeftUp(T100INT, T100INT);
-        T100BOOL            MouseMove(T100INT, T100INT);
-
         T100BOOL            Update(wxPropertyGrid*);
+
+        T100BOOL            SetPaintStarting(T100INT, T100INT);
+
+        T100BOOL            PaintMove(T100INT, T100INT);
+        T100BOOL            SelectedMove(T100INT, T100INT);
 
     protected:
         T100VOID            create();
         T100VOID            destroy();
 
     private:
-        T100WORD            m_origin_x;
-        T100WORD            m_origin_y;
+        T100INT             m_origin_x;
+        T100INT             m_origin_y;
 
-        T100WORD            m_target_x;
-        T100WORD            m_target_y;
+        T100INT             m_target_x;
+        T100INT             m_target_y;
 
         T100FLOAT           m_radius;
 };

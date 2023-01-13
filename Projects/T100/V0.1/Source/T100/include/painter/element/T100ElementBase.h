@@ -37,13 +37,16 @@ class T100ElementBase
         virtual T100ElementBase*    Clone() = 0;
         virtual T100BOOL            Hit(T100INT, T100INT) = 0;
 
-        virtual T100BOOL            MouseLeftDown(T100INT, T100INT);
-        virtual T100BOOL            MouseLeftUp(T100INT, T100INT);
-        virtual T100BOOL            MouseMove(T100INT, T100INT);
-
         virtual T100VOID            Resize(wxDC&);
         virtual T100VOID            Position();
-        virtual T100BOOL            Move(T100INT, T100INT);
+        virtual T100BOOL            Move();
+
+        virtual T100BOOL            PaintMove(T100INT, T100INT) = 0;
+        virtual T100BOOL            SelectedMove(T100INT, T100INT) = 0;
+
+        virtual T100BOOL            SetPaintStarting(T100INT, T100INT) = 0;
+        virtual T100BOOL            SetSelectedStarting(T100INT, T100INT);
+        virtual T100BOOL            SetEnding(T100INT, T100INT);
 
     protected:
         T100STRING                  m_name;
@@ -55,25 +58,25 @@ class T100ElementBase
 
         T100BOOL                    m_inited        = T100FALSE;
 
-        T100WORD                    m_name_x        = 0;
-        T100WORD                    m_name_y        = 0;
+        T100INT                     m_name_x        = 0;
+        T100INT                     m_name_y        = 0;
 
         T100WORD                    m_name_width;
         T100WORD                    m_name_height;
 
-        T100WORD                    m_origin_x      = 0;
-        T100WORD                    m_origin_y      = 0;
+        T100INT                     m_origin_x      = 0;
+        T100INT                     m_origin_y      = 0;
 
-        T100WORD                    m_tail_x        = 0;
-        T100WORD                    m_tail_y        = 0;
+        T100INT                     m_tail_x        = 0;
+        T100INT                     m_tail_y        = 0;
 
         T100WORD                    m_width         = 0;
         T100WORD                    m_height        = 0;
 
-        T100WORD                    m_starting_x    = 0;
-        T100WORD                    m_starting_y    = 0;
-        T100WORD                    m_ending_x      = 0;
-        T100WORD                    m_ending_y      = 0;
+        T100INT                     m_starting_x    = 0;
+        T100INT                     m_starting_y    = 0;
+        T100INT                     m_ending_x      = 0;
+        T100INT                     m_ending_y      = 0;
 
 
         T100VOID                    draw_text(wxDC&);

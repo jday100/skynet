@@ -36,6 +36,11 @@ T100BOOL T100IDEDefaultPlaten::show()
     return T100TRUE;
 }
 
+T100BOOL T100IDEDefaultPlaten::hide()
+{
+    return T100TRUE;
+}
+
 T100BOOL T100IDEDefaultPlaten::create_menu()
 {
     T100IDEMainFrame* frame     = T100NULL;

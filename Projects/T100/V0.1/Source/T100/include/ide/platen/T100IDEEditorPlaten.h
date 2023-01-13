@@ -15,6 +15,7 @@ class T100IDEEditorPlaten : public T100IDEPlatenBase
         T100BOOL            create();
 
         T100BOOL            show();
+        T100BOOL            hide();
 
     protected:
         T100VOID            destroy();

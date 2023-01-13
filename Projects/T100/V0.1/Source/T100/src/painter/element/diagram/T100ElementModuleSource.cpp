@@ -26,16 +26,16 @@ T100BOOL T100ElementModuleSource::serialize()
     result = m_target->setSTRING(m_element->m_name);
     if(!result)return T100FALSE;
 
-    result = m_target->setWORD(m_element->m_starting_x);
+    result = m_target->setINTEGER(m_element->m_origin_x);
     if(!result)return T100FALSE;
 
-    result = m_target->setWORD(m_element->m_starting_y);
+    result = m_target->setINTEGER(m_element->m_origin_y);
     if(!result)return T100FALSE;
 
-    result = m_target->setWORD(m_element->m_ending_x);
+    result = m_target->setWORD(m_element->m_width);
     if(!result)return T100FALSE;
 
-    result = m_target->setWORD(m_element->m_ending_y);
+    result = m_target->setWORD(m_element->m_height);
     if(!result)return T100FALSE;
 
     return result;
@@ -51,16 +51,16 @@ T100BOOL T100ElementModuleSource::deserialize()
 
         result = m_target->getSTRING(m_element->m_name);
         if(result){
-            result = m_target->getWORD(m_element->m_starting_x);
+            result = m_target->getINTEGER(m_element->m_origin_x);
         }
         if(result){
-            result = m_target->getWORD(m_element->m_starting_y);
+            result = m_target->getINTEGER(m_element->m_origin_y);
         }
         if(result){
-            result = m_target->getWORD(m_element->m_ending_x);
+            result = m_target->getWORD(m_element->m_width);
         }
         if(result){
-            result = m_target->getWORD(m_element->m_ending_y);
+            result = m_target->getWORD(m_element->m_height);
         }
         if(!result){
             T100SAFE_DELETE(m_element);

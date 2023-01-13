@@ -17,7 +17,7 @@ T100ConsoleLinux::~T100ConsoleLinux()
 
 T100VOID T100ConsoleLinux::create()
 {
-    setlocale(LC_ALL, "");
+    //setlocale(LC_ALL, "");
 }
 
 T100VOID T100ConsoleLinux::destroy()

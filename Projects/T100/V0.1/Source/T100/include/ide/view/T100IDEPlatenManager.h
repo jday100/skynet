@@ -18,7 +18,7 @@ class T100IDEPlatenManager
         T100IDEDefaultPlaten*       getDefault();
         T100IDEPlatenBase*          getCurrent();
 
-        T100BOOL                    Change(T100IDE_TYPE, void*);
+        T100BOOL                    Change(T100IDE_TYPE);
 
         T100BOOL                    Exists(T100IDE_TYPE);
 

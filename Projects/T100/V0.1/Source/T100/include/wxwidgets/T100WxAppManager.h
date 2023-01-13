@@ -21,6 +21,8 @@ class T100WxAppManager : public T100Library::T100AppManager
         wxFrame*            m_frame         = T100NULL;
 
     private:
+        T100VOID            create();
+        T100VOID            destroy();
 
 };
 

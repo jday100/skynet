@@ -6,6 +6,7 @@
 #include "T100Painter.h"
 
 namespace T100IDE{
+class T100IDEView;
 
 class T100MDIPaintFrame : public wxDocMDIChildFrame
 {
@@ -21,12 +22,14 @@ class T100MDIPaintFrame : public wxDocMDIChildFrame
                        const wxString& name = wxFrameNameStr);
         virtual ~T100MDIPaintFrame();
 
-        T100VOID            setPainter(T100Painter::T100Painter*);
+        T100VOID        setView(T100IDEView*);
+        T100VOID        setPainter(T100Painter::T100Painter*);
 
     protected:
         void OnSetFocus(wxFocusEvent& event);
 
     private:
+        T100IDEView*                    m_view              = T100NULL;
         T100Painter::T100Painter*       m_painter           = T100NULL;
 
         DECLARE_EVENT_TABLE()

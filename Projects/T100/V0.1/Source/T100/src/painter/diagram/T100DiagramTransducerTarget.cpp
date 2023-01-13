@@ -41,6 +41,31 @@ T100BOOL T100DiagramTransducerTarget::eof()
     return T100FALSE;
 }
 
+T100BOOL T100DiagramTransducerTarget::setINTEGER(T100INT value)
+{
+    T100WORD*       data            = T100NULL;
+
+    data = (T100WORD*)&value;
+
+    return m_writer->write(data, 1);
+}
+
+T100BOOL T100DiagramTransducerTarget::getINTEGER(T100INT& value)
+{
+    T100WORD        length;
+    T100WORD*       data            = T100NULL;
+
+    length  = 1;
+    data    = (T100WORD*)&value;
+
+    if(m_reader->read(data, length)){
+        if(1 == length){
+            return T100TRUE;
+        }
+    }
+    return T100FALSE;
+}
+
 T100BOOL T100DiagramTransducerTarget::setWORD(T100WORD value)
 {
     return m_writer->write(&value, 1);

@@ -50,6 +50,8 @@ T100VOID T100CanvasStateCommon::OnMouseLeftDown(wxMouseEvent& event)
         current = T100PainterCallback::getView()->getPaintCtrl()->GetCurrent();
         if(!current)return;
 
+        current->SetSelectedStarting(vx, vy);
+
         T100PainterCallback::getView()->getPropertiesPanel()->setElement(current);
         T100PainterCallback::getView()->getPaintCtrl()->Change(T100CANVAS_STATE_SELECTED);
     }else{

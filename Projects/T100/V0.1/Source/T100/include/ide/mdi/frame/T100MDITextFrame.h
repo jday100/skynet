@@ -3,8 +3,10 @@
 
 #include <wx/docmdi.h>
 #include "T100Common.h"
+#include "T100Editor.h"
 
 namespace T100IDE{
+class T100IDEView;
 
 class T100MDITextFrame : public wxDocMDIChildFrame
 {
@@ -20,9 +22,16 @@ class T100MDITextFrame : public wxDocMDIChildFrame
                        const wxString& name = wxFrameNameStr);
         virtual ~T100MDITextFrame();
 
+        T100VOID        setView(T100IDEView*);
+        T100VOID        setEditor(T100Editor::T100Editor*);
+
     protected:
+        void OnSetFocus(wxFocusEvent& event);
 
     private:
+        T100IDEView*                    m_view              = T100NULL;
+        T100Editor::T100Editor*         m_editor            = T100NULL;
+
         DECLARE_EVENT_TABLE()
 };
 

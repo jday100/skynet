@@ -1,6 +1,7 @@
 #ifndef T100PAINTER_H
 #define T100PAINTER_H
 
+#include <wx/docmdi.h>
 #include "T100Common.h"
 #include "T100PainterTransverter.h"
 
@@ -36,11 +37,16 @@ class T100Painter
         T100VOID                quit();
         T100VOID                NewFile();
 
+        T100VOID                setParent(wxFrame*);
+        T100VOID                setRootFrame(wxMDIParentFrame*);
+
     protected:
         T100VOID                destroy();
 
     private:
         T100PainterApp*         m_app           = T100NULL;
+        wxFrame*                m_parent        = T100NULL;
+        wxMDIParentFrame*       m_root          = T100NULL;
         T100PainterStore*       m_store         = T100NULL;
         T100PainterServe*       m_serve         = T100NULL;
         T100PainterView*        m_view          = T100NULL;

@@ -6,11 +6,23 @@ T100WxAppManager::T100WxAppManager()
     :T100Library::T100AppManager()
 {
     //ctor
+    create();
 }
 
 T100WxAppManager::~T100WxAppManager()
 {
     //dtor
+    destroy();
+}
+
+T100VOID T100WxAppManager::create()
+{
+    wxLocale(wxLANGUAGE_CHINESE_SIMPLIFIED);
+}
+
+T100VOID T100WxAppManager::destroy()
+{
+
 }
 
 wxFrame* T100WxAppManager::getFrame()

@@ -52,6 +52,7 @@ T100BOOL T100MDIPaintView::OnCreate(wxDocument* doc, long flags)
 
     m_frame = T100NEW T100MDIPaintFrame(doc, this, wxStaticCast(m_view->getFrame(), wxMDIParentFrame));
     wxASSERT(m_frame == GetFrame());
+    m_frame->setView(m_view);
 
     wxBoxSizer* BoxSizer1;
 
@@ -59,17 +60,26 @@ T100BOOL T100MDIPaintView::OnCreate(wxDocument* doc, long flags)
 
     m_painter   = T100NEW T100Painter::T100Painter();
 
-    m_painter->getView()->setParent(m_frame);
+    m_painter->setParent(m_frame);
+    m_painter->setRootFrame(wxStaticCast(m_view->getFrame(), wxMDIParentFrame));
+
+    m_painter->create();
+    m_painter->getView()->setManager(m_view->getViewManager()->getAuiManager());
 
     if(m_view->getPlatenManager()->Exists(T100IDE_TYPE_PAINTER)){
         T100IDEPainterPlaten*   platen = static_cast<T100IDEPainterPlaten*>(m_view->getPlatenManager()->getPlaten(T100IDE_TYPE_PAINTER));
-        m_painter->getView()->setElementsPanel(platen->getElementsPanel());
-    }else{
-        m_painter->getView()->setRootFrame(wxStaticCast(m_view->getFrame(), wxMDIParentFrame));
-    }
 
-    m_painter->getView()->setManager(m_view->getViewManager()->getAuiManager());
-    m_painter->getView()->create();
+        m_painter->getView()->setElementsPanel(platen->getElementsPanel());
+        m_painter->getView()->setPropertiesPanel(platen->getPropertiesPanel());
+
+        platen->setPainter(m_painter);
+    }else{
+        T100IDEPainterPlaten*   platen = static_cast<T100IDEPainterPlaten*>(m_view->getPlatenManager()->getPlaten(T100IDE_TYPE_PAINTER));
+
+        platen->setPainter(m_painter);
+
+        platen->create();
+    }
 
     BoxSizer1->Add(m_painter->getView()->getPaintCtrl(), 1, wxALL|wxEXPAND, 5);
 
@@ -83,7 +93,7 @@ T100BOOL T100MDIPaintView::OnCreate(wxDocument* doc, long flags)
     m_frame->Show();
 
 
-    m_view->getPlatenManager()->Change(T100IDE_TYPE_PAINTER, m_painter);
+    m_view->getPlatenManager()->Change(T100IDE_TYPE_PAINTER);
 
     return T100TRUE;
 }

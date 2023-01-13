@@ -53,7 +53,7 @@ T100VOID T100CanvasStateSelected::OnMouseLeftDown(wxMouseEvent& event)
         current = T100PainterCallback::getView()->getPaintCtrl()->GetCurrent();
         if(!current)return;
 
-        current->MouseLeftDown(vx, vy);
+        current->SetSelectedStarting(vx, vy);
 
         T100PainterCallback::getView()->getPropertiesPanel()->setElement(current);
     }else{
@@ -79,8 +79,8 @@ T100VOID T100CanvasStateSelected::OnMouseLeftUp(wxMouseEvent& event)
     current = T100PainterCallback::getView()->getPaintCtrl()->GetCurrent();
     if(!current)return;
 
-    current->MouseLeftUp(vx, vy);
-    current->Move(vx, vy);
+    current->SetEnding(vx, vy);
+    current->Move();
 }
 
 T100VOID T100CanvasStateSelected::OnMouseMove(wxMouseEvent& event)
@@ -100,7 +100,7 @@ T100VOID T100CanvasStateSelected::OnMouseMove(wxMouseEvent& event)
         current = T100PainterCallback::getView()->getPaintCtrl()->GetCurrent();
         if(!current)return;
 
-        current->Move(vx, vy);
+        current->SelectedMove(vx, vy);
 
         T100PainterCallback::getView()->getPaintCtrl()->Refresh();
     }

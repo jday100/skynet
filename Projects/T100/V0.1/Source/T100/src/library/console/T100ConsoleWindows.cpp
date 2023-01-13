@@ -20,7 +20,7 @@ T100ConsoleWindows::~T100ConsoleWindows()
 
 T100VOID T100ConsoleWindows::create()
 {
-    setlocale(LC_ALL, "");
+    //setlocale(LC_ALL, "");
 }
 
 T100VOID T100ConsoleWindows::destroy()
