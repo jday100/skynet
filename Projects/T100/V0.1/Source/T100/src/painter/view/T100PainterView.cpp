@@ -158,6 +158,11 @@ T100BOOL T100PainterView::Quit()
     if(m_frame){
         m_frame->Destroy();
     }
+
+    if(m_callback){
+        (m_callback_frame->*m_callback)(T100NULL);
+    }
+
     return T100TRUE;
 }
 
@@ -193,7 +198,7 @@ T100WxWidgets::T100PaintCtrl* T100PainterView::getPaintCtrl()
 
 T100BOOL T100PainterView::Append(wxString panel, T100ElementBase* element)
 {
-    T100BOOL        result;
+    T100BOOL        result          = T100FALSE;
 
     result = m_elements_panel->Append(panel, element);
 
@@ -204,18 +209,31 @@ T100BOOL T100PainterView::Append(wxString panel, T100ElementBase* element)
     return result;
 }
 
-T100BOOL T100PainterView::close()
+T100BOOL T100PainterView::CloseFile()
 {
-    if(m_frame){
-        m_frame->reset_menu();
-        return T100TRUE;
+    T100BOOL        result          = T100TRUE;
+
+    if(m_paint){
+        m_paint->Clear();
     }
-    return T100FALSE;
+
+    if(m_frame){
+        result = m_frame->reset_menu();
+    }else{
+        result = T100FALSE;
+    }
+
+    if(m_properties_panel){
+        m_properties_panel->Clear();
+    }
+
+    return result;
 }
 
 T100BOOL T100PainterView::LoadFile(T100DiagramInfo* diagram)
 {
     m_paint->Load(diagram->getElements());
+    m_paint->Change(T100CANVAS_STATE_COMMON);
     m_paint->Refresh();
     return T100TRUE;
 }
@@ -228,5 +246,12 @@ T100BOOL T100PainterView::UpdateMenu()
     }
     return T100FALSE;
 }
+
+T100VOID T100PainterView::setCallback(wxFrame* frame, T100WxWidgets::T100FRAME_CALLBACK callback)
+{
+    m_callback_frame    = frame;
+    m_callback          = callback;
+}
+
 
 }

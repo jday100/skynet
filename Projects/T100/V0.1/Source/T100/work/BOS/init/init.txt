@@ -1,6 +1,7 @@
 IMPORT  "share.txt"
 IMPORT  "fs\fs.txt"
 IMPORT  "init_load.txt"
+IMPORT  "init_gd.txt"
 
 IMPORT  "test\boot\test_fs.txt"
 IMPORT  "test\init\test_init.txt"
@@ -67,31 +68,31 @@ CODE
     JZ      INIT_ERROR
     //
     CMT     70020
+    DBG
     MOVE    AAR                                             @init_result
     CALL    INIT_GET_PART
     MOVE    ACR                                             init_result
     JZ      INIT_ERROR
     //
     CMT     70030
+    DBG
     MOVE    AAR                                             @init_result
     CALL    INIT_LOAD_KERNEL
     MOVE    ACR                                             init_result
     JZ      INIT_ERROR
     //
     CMT     70040
+    DBG
     MOVE    AAR                                             @init_result
-    CALL    INIT_LOAD_GD
+    CALL    INIT_GD_LOAD
     MOVE    ACR                                             init_result
     JZ      INIT_ERROR
     //
     CMT     70050
-    MOVE    AAR                                             CBR
-    MOVE    ABR                                             65536
-    ADD
-    //JUMP    {ACR:0}
+    DBG
+    ENTER   {init_gd_kernel_item_index:0}
     //
-    ENTER   {0:ACR}
-
+    CMT     70080
     HALT
     //
 INIT_ERROR:

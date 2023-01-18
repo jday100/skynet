@@ -2,6 +2,8 @@
 
 #include "T100PainterCommon.h"
 
+#include "T100TestTools.h"
+
 namespace T100Component{
 
 T100CanvasTransverter::T100CanvasTransverter()
@@ -15,18 +17,33 @@ T100CanvasTransverter::~T100CanvasTransverter()
     //dtor
 }
 
+T100WORD T100CanvasTransverter::GetState()
+{
+    return m_current;
+}
+
 T100Painter::T100CanvasState* T100CanvasTransverter::GetCurrent()
 {
+    std::lock_guard<std::mutex>     lock(m_mutex);
+
+    if(!m_state){
+        T100Library::T100TestTools::Print(L"NULL");
+    }
     return m_state;
 }
 
 T100VOID T100CanvasTransverter::Change(T100WORD state)
 {
+    std::lock_guard<std::mutex>     lock(m_mutex);
+
     switch(state){
     case T100Painter::T100CANVAS_STATE_NONE:
         {
+            if(!m_none){
+                m_none  = T100NEW T100Painter::T100CanvasStateNone();
+            }
             m_current   = state;
-            m_state     = T100NULL;
+            m_state     = m_none;
         }
         break;
     case T100Painter::T100CANVAS_STATE_COMMON:

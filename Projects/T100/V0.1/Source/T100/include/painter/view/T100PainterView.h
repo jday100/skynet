@@ -4,6 +4,7 @@
 #include <wx/window.h>
 #include <wx/aui/aui.h>
 #include "T100String.h"
+#include "T100WxApp.h"
 #include "T100PainterCommon.h"
 #include "T100PaintCtrl.h"
 
@@ -24,23 +25,25 @@ class T100PainterView
         T100PainterView();
         virtual ~T100PainterView();
 
+        T100VOID        setCallback(wxFrame*, T100WxWidgets::T100FRAME_CALLBACK);
 
         T100BOOL                create_alone();
 
         T100BOOL                create_embed();
 
-
-        T100BOOL                close();
-
         T100BOOL                OpenFile(T100STRING&);
 
-        T100BOOL                SaveAsFile(T100STRING&);
+        T100BOOL                CloseFile();
 
         T100BOOL                LoadFile(T100DiagramInfo*);
 
-        T100BOOL                UpdateMenu();
+        T100BOOL                Save();
+
+        T100BOOL                SaveAsFile(T100STRING&);
 
         T100BOOL                Quit();
+
+        T100BOOL                UpdateMenu();
 
         T100BOOL                ShowElements();
         T100BOOL                ShowProperties();
@@ -84,6 +87,9 @@ class T100PainterView
 
         T100PainterElementsPanel*           m_elements_panel        = T100NULL;
         T100PainterPropertiesPanel*         m_properties_panel      = T100NULL;
+
+        wxFrame*                            m_callback_frame        = T100NULL;
+        T100WxWidgets::T100FRAME_CALLBACK   m_callback              = T100NULL;
 
 };
 

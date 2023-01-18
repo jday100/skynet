@@ -2,6 +2,7 @@
 
 #include "T100AllElements.h"
 #include "T100PainterCallback.h"
+#include "T100TestTools.h"
 
 namespace T100Painter{
 
@@ -41,6 +42,8 @@ T100BOOL T100ElementManager::Select(T100STRING key)
 
     if(m_current){
         m_current->Clear();
+    }else{
+        T100Library::T100TestTools::Print(L"NULL");
     }
 
     return T100TRUE;

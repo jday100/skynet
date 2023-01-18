@@ -1,6 +1,9 @@
 #ifndef T100THISAPPMANAGER_H
 #define T100THISAPPMANAGER_H
 
+#pragma comment(linker, "/STACK:10000000")
+#pragma comment(linker, "/HEAP:10000000")
+
 #include <wx/wx.h>
 #include "T100WxAppManager.h"
 #include "T100ThisAppCmdLineResult.h"

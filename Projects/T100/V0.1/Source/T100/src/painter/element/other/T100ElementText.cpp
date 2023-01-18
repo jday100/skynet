@@ -62,6 +62,8 @@ T100BOOL T100ElementText::draw(wxDC& dc)
     if(m_tail_x > w || m_tail_y > h){
         T100PainterCallback::getView()->getPaintCtrl()->Resize(m_tail_x, m_tail_y);
     }
+
+    return T100TRUE;
 }
 
 T100ElementText* T100ElementText::Clone()

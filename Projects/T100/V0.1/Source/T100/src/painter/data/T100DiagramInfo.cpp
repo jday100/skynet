@@ -24,7 +24,17 @@ T100VOID T100DiagramInfo::create()
 
 T100VOID T100DiagramInfo::destroy()
 {
+    m_elements.clear();
+}
 
+T100VOID T100DiagramInfo::setFile(T100STRING file)
+{
+    m_file = file;
+}
+
+T100STRING T100DiagramInfo::getFile()
+{
+    return m_file;
 }
 
 T100DIAGRAM_HEAD* T100DiagramInfo::getHead()

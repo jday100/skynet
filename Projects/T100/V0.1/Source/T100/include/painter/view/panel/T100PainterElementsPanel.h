@@ -6,6 +6,7 @@
 #include <wx/panel.h>
 #include <wx/sizer.h>
 #include "T100Common.h"
+#include "T100ElementListCtrlData.h"
 
 namespace T100Painter{
 class T100ElementBase;
@@ -17,6 +18,8 @@ class T100PainterElementsPanel : public wxPanel
         virtual ~T100PainterElementsPanel();
 
         T100BOOL            Append(wxString, T100ElementBase*);
+
+        T100ElementListCtrlData*        getData(wxListEvent& event);
 
     public:
 

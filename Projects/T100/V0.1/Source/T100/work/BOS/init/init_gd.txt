@@ -9,11 +9,214 @@ DATA
     init_gd_rom_data_length                                 INTEGER     0
     init_gd_int_data_base                                   INTEGER     0
     init_gd_int_data_length                                 INTEGER     0
+    init_gd_gd_table_base                                   INTEGER     0
+    init_gd_gd_table_length                                 INTEGER     0
     init_gd_kernel_base                                     INTEGER     0
     init_gd_kernel_length                                   INTEGER     0
     init_gd_kernel_data_base                                INTEGER     0
     init_gd_kernel_data_length                              INTEGER     0
+    //
+    init_gd_rom_item_index                                  INTEGER     0
+    init_gd_int_item_index                                  INTEGER     0
+    init_gd_int_table_item_index                            INTEGER     0
+    init_gd_rom_data_item_index                             INTEGER     0
+    init_gd_int_data_item_index                             INTEGER     0
+    init_gd_gd_table_item_index                             INTEGER     0
+    init_gd_kernel_item_index                               INTEGER     0
+    init_gd_kernel_data_item_index                          INTEGER     0
+    //
+    init_gd_init_result                                     INTEGER     0
+    init_gd_init_result_offset                              INTEGER     0
+    //
+    init_gd_set_table_result                                INTEGER     0
+    init_gd_set_table_result_offset                         INTEGER     0
+    init_gd_set_table_index                                 INTEGER     0
+    //
+    init_gd_load_result                                     INTEGER     0
+    init_gd_load_result_offset                              INTEGER     0
+    //
+
 END
 
+PROC=INIT_GD_INIT
+    CMT     1
+    DBG
+    MOVE    init_gd_init_result_offset                      AAR
+    //
+    MOVE    init_gd_rom_base                                0
+    MOVE    init_gd_rom_length                              1073741824
+    MOVE    init_gd_rom_item_index                          0
+    //
+    MOVE    init_gd_int_base                                0
+    MOVE    init_gd_int_length                              1073741824
+    MOVE    init_gd_int_item_index                          1
+    //
+    MOVE    init_gd_int_table_base                          1073741824
+    MOVE    init_gd_int_table_length                        1024
+    MOVE    init_gd_int_table_item_index                    2
+    //
+    MOVE    init_gd_rom_data_base                           1073743872
+    MOVE    init_gd_rom_data_length                         1024
+    MOVE    init_gd_rom_data_item_index                     3
+    //
+    MOVE    init_gd_int_data_base                           1073745920
+    MOVE    init_gd_int_data_length                         1024
+    MOVE    init_gd_int_data_item_index                     4
+    //
+    MOVE    init_gd_gd_table_base                           1073747968
+    MOVE    init_gd_gd_table_length                         65536
+    MOVE    init_gd_gd_table_item_index                     5
+    //
+    MOVE    init_gd_kernel_base                             1073872896
+    MOVE    init_gd_kernel_length                           262144
+    MOVE    init_gd_kernel_item_index                       6
+    //
+    MOVE    init_gd_kernel_data_base                        1074135040
+    MOVE    init_gd_kernel_data_length                      262144
+    MOVE    init_gd_kernel_data_item_index                  7
+    //
+    CMT     2
+    DBG
+    MOVE    #init_gd_init_result_offset                     1
+    RET
+    //
+INIT_GD_INIT_ERROR:
+    CMT     10
+    DBG
+    MOVE    #init_gd_init_result_offset                     0
+END
+
+
+PROC=INIT_GD_SET_TABLE
+    CMT     1
+    DBG
+    MOVE    init_gd_set_table_result_offset                 AAR
+    //
+    MOVE    init_gd_set_table_index                         init_gd_gd_table_base
+    //
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_rom_base
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_rom_length
+    //
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_int_base
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_int_length
+    //
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_int_table_base
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_int_table_length
+    //
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_rom_data_base
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_rom_data_length
+    //
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_int_data_base
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_int_data_length
+    //
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_gd_table_base
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_gd_table_length
+    //
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_kernel_base
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_kernel_length
+    //
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_kernel_data_base
+    MOVE    AAR                                             init_gd_set_table_index
+    MOVE    ABR                                             1
+    ADD
+    MOVE    init_gd_set_table_index                         ACR
+    MOVE    {0:#init_gd_set_table_index}                    init_gd_kernel_data_length
+    //
+    CMT     2
+    DBG
+    MOVE    #init_gd_set_table_result_offset                1
+    RET
+    //
+INIT_GD_SET_TABLE_ERROR:
+    CMT     10
+    DBG
+    MOVE    #init_gd_set_table_result_offset                0
+END
+
+
 PROC=INIT_GD_LOAD
+    CMT     1
+    DBG
+    MOVE    init_gd_load_result_offset                      AAR
+    //
+    MOVE    AAR                                             @init_gd_load_result
+    CALL    INIT_GD_INIT
+    MOVE    ACR                                             init_gd_load_result
+    JZ      INIT_GD_LOAD_ERROR
+    //
+    CMT     2
+    DBG
+    MOVE    AAR                                             @init_gd_load_result
+    CALL    INIT_GD_SET_TABLE
+    MOVE    ACR                                             init_gd_load_result
+    JZ      INIT_GD_LOAD_ERROR
+    //
+    CMT     3
+    DBG
+    LGD     {init_gd_gd_table_base:65536}
+    //
+    CMT     4
+    DBG
+    MOVE    #init_gd_load_result_offset                     1
+    RET
+INIT_GD_LOAD_ERROR:
+    CMT     10
+    DBG
+    MOVE    #init_gd_load_result_offset                     0
 END

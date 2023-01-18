@@ -1,7 +1,9 @@
 #ifndef T100CANVASTRANSVERTER_H
 #define T100CANVASTRANSVERTER_H
 
+#include <mutex>
 #include "T100StateTransverter.h"
+#include "T100CanvasStateNone.h"
 #include "T100CanvasStateCommon.h"
 #include "T100CanvasStatePaint.h"
 #include "T100CanvasStateSelected.h"
@@ -15,6 +17,8 @@ class T100CanvasTransverter : public T100StateTransverter
         T100CanvasTransverter();
         virtual ~T100CanvasTransverter();
 
+        T100WORD                            GetState();
+
         T100Painter::T100CanvasState*       GetCurrent();
         T100VOID            Change(T100WORD);
 
@@ -22,6 +26,9 @@ class T100CanvasTransverter : public T100StateTransverter
         T100Painter::T100CanvasState*               m_state         = T100NULL;
 
     private:
+        std::mutex          m_mutex;
+
+        T100Painter::T100CanvasStateNone*           m_none          = T100NULL;
         T100Painter::T100CanvasStateCommon*         m_common        = T100NULL;
         T100Painter::T100CanvasStatePaint*          m_paint         = T100NULL;
         T100Painter::T100CanvasStateSelected*       m_selected      = T100NULL;

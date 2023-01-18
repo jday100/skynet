@@ -1,10 +1,13 @@
 #include "T100PainterCallback.h"
 
+#include <wx/log.h>
+
 #include "T100PainterStore.h"
 #include "T100PainterServe.h"
 #include "T100PainterView.h"
 
 #include "T100ElementBase.h"
+#include "T100ElementListCtrlData.h"
 
 #include "T100DiagramV1.h"
 #include "T100DiagramInfo.h"
@@ -62,15 +65,11 @@ T100BOOL T100PainterCallback::frame_menu_new(void* d)
     result = m_serve->opened();
     if(result){
         if(result){
-            result = m_store->close();
+            result = m_serve->CloseFile();
         }
 
         if(result){
-            result = m_serve->close();
-        }
-
-        if(result){
-            result = m_view->close();
+            result = m_view->CloseFile();
         }
     }else{
         result = T100TRUE;
@@ -100,15 +99,11 @@ T100BOOL T100PainterCallback::frame_menu_open(void* d)
     result = m_serve->opened();
     if(result){
         if(result){
-            result = m_store->close();
+            result = m_serve->CloseFile();
         }
 
         if(result){
-            result = m_serve->close();
-        }
-
-        if(result){
-            result = m_view->close();
+            result = m_view->CloseFile();
         }
     }else{
         result = T100TRUE;
@@ -123,11 +118,15 @@ T100BOOL T100PainterCallback::frame_menu_open(void* d)
     }
 
     if(result){
-        result = m_serve->OpenFile(diagram);
+        result = m_serve->OpenFile(file, diagram);
     }
 
     if(result){
         result = m_view->LoadFile(diagram);
+    }
+
+    if(result){
+        result = m_view->UpdateMenu();
     }
 
     return result;
@@ -140,18 +139,18 @@ T100BOOL T100PainterCallback::frame_menu_close(void* d)
     result = m_serve->opened();
     if(result){
         if(result){
-            result = m_store->close();
+            result = m_view->CloseFile();
         }
 
         if(result){
-            result = m_serve->close();
-        }
-
-        if(result){
-            result = m_view->close();
+            result = m_serve->CloseFile();
         }
     }else{
         result = T100FALSE;
+    }
+
+    if(result){
+        m_view->getPaintCtrl()->Refresh();
     }
 
     return result;
@@ -159,11 +158,23 @@ T100BOOL T100PainterCallback::frame_menu_close(void* d)
 
 T100BOOL T100PainterCallback::frame_menu_save(void* d)
 {
-    T100BOOL        result;
-    T100STRING      file;
-    T100PAINTER_ELEMENT_VECTOR*     elements            = T100NULL;
+    T100BOOL                result;
+    T100STRING              file;
+    T100DiagramInfo*        diagram             = T100NULL;
 
+    result = m_serve->opened();
+    if(!result)return T100FALSE;
 
+    diagram = m_serve->getCurrent();
+    if(!diagram)return T100FALSE;
+
+    file    = diagram->getFile();
+
+    if(result){
+        result = m_store->SaveAsFile(file, diagram);
+    }
+
+    return result;
 }
 
 T100BOOL T100PainterCallback::frame_menu_save_as(void* d)
@@ -190,31 +201,32 @@ T100BOOL T100PainterCallback::frame_menu_save_as(void* d)
 T100BOOL T100PainterCallback::frame_menu_quit(void* d)
 {
     m_view->Quit();
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::frame_menu_undo(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::frame_menu_redo(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::frame_menu_cut(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::frame_menu_copy(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::frame_menu_paste(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::frame_menu_elements(void* d)
@@ -225,11 +237,12 @@ T100BOOL T100PainterCallback::frame_menu_elements(void* d)
 T100BOOL T100PainterCallback::frame_menu_properties(void* d)
 {
     m_view->ShowProperties();
+    return T100TRUE;
 }
 
 T100BOOL T100PainterCallback::frame_menu_about(void* d)
 {
-
+    return T100TRUE;
 }
 
 T100BOOL T100PainterCallback::serve_file_load(void* d)
@@ -250,7 +263,7 @@ T100BOOL T100PainterCallback::serve_file_load(void* d)
     }
 
     if(result){
-        result = m_serve->OpenFile(diagram);
+        result = m_serve->OpenFile(*file, diagram);
     }
 
     if(result){
@@ -300,16 +313,32 @@ T100BOOL T100PainterCallback::view_element_init(void* d)
 T100BOOL T100PainterCallback::view_element_select(void* d)
 {
     T100BOOL        result;
-    T100STRING*     key             = T100NULL;
+    T100ElementListCtrlData*        data            = T100NULL;
 
-    key = static_cast<T100STRING*>(d);
+    //T100Library::T100TestTools::Print(L"3");
+    //T100Library::T100TestTools::Print(m_view);
+    //T100Library::T100TestTools::Print(L"4");
 
-    if(key){
-        result = m_view->getElementManager()->Select(*key);
+    if(!m_serve->opened()){
+        return T100FALSE;
+    }
+
+
+    data    = static_cast<T100ElementListCtrlData*>(d);
+
+    if(data){
+        //T100Library::T100TestTools::Print(m_view);
+
+        //m_view->getElementManager();
+        result = m_view->getElementManager()->Select(data->KEY);
+
         if(result){
             m_view->getPaintCtrl()->Change(T100CANVAS_STATE_PAINT);
+            return T100TRUE;
         }
     }
+
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::canvas_mouse_left_down(void* d)
@@ -356,7 +385,7 @@ T100BOOL T100PainterCallback::canvas_mouse_move(void* d)
 
 T100BOOL T100PainterCallback::canvas_state_paint_paint(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::canvas_state_paint_mouse_left_down(void* d)
@@ -384,37 +413,37 @@ T100BOOL T100PainterCallback::canvas_state_paint_mouse_left_up(void* d)
 
 T100BOOL T100PainterCallback::canvas_state_paint_mouse_move(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::canvas_state_paint_mouse_left_dclick(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::canvas_state_selected_paint(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::canvas_state_selected_mouse_left_down(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::canvas_state_selected_mouse_left_up(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::canvas_state_selected_mouse_move(void* d)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100PainterCallback::canvas_state_selected_mouse_left_dclick(void* d)
 {
-
+    return T100FALSE;
 }
 
 }

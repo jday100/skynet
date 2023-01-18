@@ -2,9 +2,13 @@
 
 #include <wx/intl.h>
 #include <wx/string.h>
+#include <wx/log.h>
 
 #include "T100PainterCallback.h"
 #include "T100ElementBase.h"
+#include "T100ElementListCtrlData.h"
+
+#include "T100TestTools.h"
 
 
 namespace T100Painter{
@@ -101,27 +105,34 @@ T100BOOL T100PainterElementsPanel::Append(wxString panel, T100ElementBase* eleme
     return T100TRUE;
 }
 
+T100ElementListCtrlData* T100PainterElementsPanel::getData(wxListEvent& event)
+{
+    wxUIntPtr       ptr;
+    T100ElementListCtrlData*        data        = T100NULL;
+
+    ptr     = event.GetData();
+    data    = (T100ElementListCtrlData*)ptr;
+
+    return data;
+}
+
 void T100PainterElementsPanel::OnNotebook1PageChanged(wxNotebookEvent& event)
 {
 }
 
 void T100PainterElementsPanel::OnPanel1ListCtrlItemSelect(wxListEvent& event)
 {
-    T100LONG        index;
-    wxUIntPtr       ptr;
-    T100STRING*     key         = T100NULL;
+    T100ElementListCtrlData*        data            = T100NULL;
 
-    index = event.GetIndex();
+    //T100Library::T100TestTools::Print(L"1");
+    data    = getData(event);
 
-    ptr = ListView1->GetItemData(index);
-
-    key = (T100STRING*)ptr;
-
-    if(key){
-        T100PainterCallback::view_element_select(key);
+    if(data){
+        //T100Library::T100TestTools::Print(L"2");
+        T100PainterCallback::view_element_select(data);
     }
 
-    event.Skip();
+    //T100Library::T100TestTools::Print(L"5");
 }
 
 void T100PainterElementsPanel::OnPanel1ListCtrlItemDeselect(wxListEvent& event)
@@ -131,21 +142,15 @@ void T100PainterElementsPanel::OnPanel1ListCtrlItemDeselect(wxListEvent& event)
 
 void T100PainterElementsPanel::OnPanel2ListCtrlItemSelect(wxListEvent& event)
 {
-    T100LONG        index;
-    wxUIntPtr       ptr;
-    T100STRING*     key         = T100NULL;
+    T100ElementListCtrlData*        data            = T100NULL;
 
-    index = event.GetIndex();
 
-    ptr = ListView2->GetItemData(index);
+    data    = getData(event);
 
-    key = (T100STRING*)ptr;
-
-    if(key){
-        T100PainterCallback::view_element_select(key);
+    if(data){
+        T100PainterCallback::view_element_select(data);
     }
 
-    //event.Skip();
 }
 
 void T100PainterElementsPanel::OnPanel2ListCtrlItemDeselect(wxListEvent& event)
@@ -155,21 +160,15 @@ void T100PainterElementsPanel::OnPanel2ListCtrlItemDeselect(wxListEvent& event)
 
 void T100PainterElementsPanel::OnPanel3ListCtrlItemSelect(wxListEvent& event)
 {
-    T100LONG        index;
-    wxUIntPtr       ptr;
-    T100STRING*     key         = T100NULL;
+    T100ElementListCtrlData*        data            = T100NULL;
 
-    index = event.GetIndex();
 
-    ptr = ListView3->GetItemData(index);
+    data    = getData(event);
 
-    key = (T100STRING*)ptr;
-
-    if(key){
-        T100PainterCallback::view_element_select(key);
+    if(data){
+        T100PainterCallback::view_element_select(data);
     }
 
-    event.Skip();
 }
 
 void T100PainterElementsPanel::OnPanel3ListCtrlItemDeselect(wxListEvent& event)

@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-I" />
+				<Option parameters="-T -u=painter" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -124,6 +124,8 @@
 					<Add directory="include/component/editor" />
 					<Add directory="include/painter/element/diagram" />
 					<Add directory="include/painter/element/other" />
+					<Add directory="test/widget" />
+					<Add directory="test/painter" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -137,11 +139,15 @@
 			<Target title="Release">
 				<Option output="bin/Release/T100" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
-				<Option type="0" />
+				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="-T -u=painter" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
-					<Add option="-O2" />
+					<Add option="-pg" />
+					<Add option="-Og" />
+					<Add option="-g" />
+					<Add option="-D__LEAK__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
 					<Add directory="include/common" />
 					<Add directory="include/libaray" />
@@ -159,6 +165,7 @@
 					<Add directory="include/library/log" />
 					<Add directory="include/wxwidgets" />
 					<Add directory="include/app" />
+					<Add directory="include" />
 					<Add directory="test/library" />
 					<Add directory="include/library/console" />
 					<Add directory="include/assembly/data" />
@@ -205,6 +212,12 @@
 					<Add directory="include/ide/view" />
 					<Add directory="include/vdisk/console" />
 					<Add directory="include/qu32" />
+					<Add directory="include/qu32/device" />
+					<Add directory="include/qu32/order" />
+					<Add directory="include/qu32/order/calculate" />
+					<Add directory="include/qu32/order/control" />
+					<Add directory="include/qu32/order/program" />
+					<Add directory="include/qu32/order/transfer" />
 					<Add directory="include/data/console" />
 					<Add directory="test/library/test" />
 					<Add directory="test/vpc" />
@@ -212,9 +225,7 @@
 					<Add directory="test/font" />
 					<Add directory="test/vdisk" />
 					<Add directory="include/assembly/syntax/sentence" />
-					<Add directory="include/qu32/order/program" />
-					<Add directory="include/qu32/order" />
-					<Add directory="include/qu32/order/control" />
+					<Add directory="." />
 					<Add directory="test/full" />
 					<Add directory="include/vpc/view/dialog/config/hardware" />
 					<Add directory="test/deploy" />
@@ -222,6 +233,7 @@
 					<Add directory="include/vpc/view/dialog/config" />
 					<Add directory="include/library/safe" />
 					<Add directory="include/vpc/view/panel" />
+					<Add directory="include/wxwidgets/vpc/frame/debug" />
 					<Add directory="include/library/capacity" />
 					<Add directory="include/painter" />
 					<Add directory="include/painter/serve" />
@@ -242,13 +254,16 @@
 					<Add directory="include/component/editor" />
 					<Add directory="include/painter/element/diagram" />
 					<Add directory="include/painter/element/other" />
+					<Add directory="test/widget" />
+					<Add directory="test/painter" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
 				</ResourceCompiler>
 				<Linker>
-					<Add option="-s" />
+					<Add option="-pg -lgmon" />
 					<Add library="libwxmsw30u.a" />
+					<Add library="iconv" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -262,12 +277,118 @@
 			<Add option="-DwxUSE_UNICODE" />
 			<Add option="-Wall" />
 			<Add directory="$(#wx)/include" />
+			<Add directory="include/common" />
+			<Add directory="include/libaray" />
+			<Add directory="include/library" />
+			<Add directory="include/assembly" />
+			<Add directory="include/component" />
+			<Add directory="test" />
+			<Add directory="include/font" />
+			<Add directory="include/vdisk" />
+			<Add directory="include/vpc" />
+			<Add directory="include/editor" />
+			<Add directory="include/ide" />
+			<Add directory="include/al" />
+			<Add directory="include/assembly/scanner" />
+			<Add directory="include/library/log" />
+			<Add directory="include/wxwidgets" />
+			<Add directory="include/app" />
+			<Add directory="include" />
+			<Add directory="test/library" />
+			<Add directory="include/library/console" />
+			<Add directory="include/assembly/data" />
+			<Add directory="include/data/cmdline" />
+			<Add directory="include/library/cmdline" />
+			<Add directory="test/assembly" />
+			<Add directory="include/assembly/produce/real" />
+			<Add directory="include/assembly/produce/virtual" />
+			<Add directory="include/assembly/produce" />
+			<Add directory="include/assembly/syntax" />
+			<Add directory="include/assembly/syntax/calculate" />
+			<Add directory="include/assembly/syntax/control" />
+			<Add directory="include/assembly/syntax/program" />
+			<Add directory="include/assembly/syntax/transfer" />
+			<Add directory="include/vpc/data" />
+			<Add directory="include/vpc/device" />
+			<Add directory="include/vpc/order" />
+			<Add directory="include/vpc/qu32" />
+			<Add directory="include/vpc/serve" />
+			<Add directory="include/vpc/view" />
+			<Add directory="include/vpc/order/calculate" />
+			<Add directory="include/vpc/order/control" />
+			<Add directory="include/vpc/order/program" />
+			<Add directory="include/vpc/order/transfer" />
+			<Add directory="include/component/vdisk" />
+			<Add directory="include/component/font" />
+			<Add directory="include/component/compiler" />
+			<Add directory="include/font/serve" />
+			<Add directory="include/font/view" />
+			<Add directory="include/vdisk/serve" />
+			<Add directory="include/vdisk/view" />
+			<Add directory="include/editor/serve" />
+			<Add directory="include/editor/view" />
+			<Add directory="include/ide/callback" />
+			<Add directory="include/ide/data" />
+			<Add directory="include/ide/debug" />
+			<Add directory="include/ide/mdi" />
+			<Add directory="include/ide/mdi/doc" />
+			<Add directory="include/ide/mdi/view" />
+			<Add directory="include/ide/platen" />
+			<Add directory="include/ide/project" />
+			<Add directory="include/ide/serve" />
+			<Add directory="include/ide/store" />
+			<Add directory="include/ide/view" />
+			<Add directory="include/vdisk/console" />
+			<Add directory="include/qu32" />
+			<Add directory="include/qu32/device" />
+			<Add directory="include/qu32/order" />
+			<Add directory="include/qu32/order/calculate" />
+			<Add directory="include/qu32/order/control" />
+			<Add directory="include/qu32/order/program" />
+			<Add directory="include/qu32/order/transfer" />
+			<Add directory="include/data/console" />
+			<Add directory="test/library/test" />
+			<Add directory="test/vpc" />
+			<Add directory="test/os" />
+			<Add directory="test/font" />
+			<Add directory="test/vdisk" />
+			<Add directory="include/assembly/syntax/sentence" />
+			<Add directory="." />
+			<Add directory="test/full" />
+			<Add directory="include/vpc/view/dialog/config/hardware" />
+			<Add directory="test/deploy" />
+			<Add directory="include/vpc/view/frame/debug" />
+			<Add directory="include/vpc/view/dialog/config" />
+			<Add directory="include/library/safe" />
+			<Add directory="include/vpc/view/panel" />
+			<Add directory="include/wxwidgets/vpc/frame/debug" />
+			<Add directory="include/library/capacity" />
+			<Add directory="include/painter" />
+			<Add directory="include/painter/serve" />
+			<Add directory="include/painter/view" />
+			<Add directory="include/ide/mdi/frame" />
+			<Add directory="include/painter/store" />
+			<Add directory="include/painter/element" />
+			<Add directory="include/painter/element/graphics" />
+			<Add directory="include/library/transducer" />
+			<Add directory="include/painter/diagram" />
+			<Add directory="include/painter/diagram/V1" />
+			<Add directory="include/painter/view/panel" />
+			<Add directory="include/math/planimetry" />
+			<Add directory="include/math/matrix" />
+			<Add directory="include/library/file" />
+			<Add directory="include/painter/data" />
+			<Add directory="include/component/painter" />
+			<Add directory="include/component/editor" />
+			<Add directory="include/painter/element/diagram" />
+			<Add directory="include/painter/element/other" />
 		</Compiler>
 		<ResourceCompiler>
 			<Add directory="$(#wx)/include" />
 		</ResourceCompiler>
 		<Linker>
 			<Add option="-mthreads" />
+			<Add library="iconv" />
 		</Linker>
 		<Unit filename="T100App.cpp" />
 		<Unit filename="T100App.h" />
@@ -615,6 +736,7 @@
 		<Unit filename="include/painter/T100PainterCommon.h" />
 		<Unit filename="include/painter/data/T100DiagramInfo.h" />
 		<Unit filename="include/painter/data/T100DiagramInfoV1.h" />
+		<Unit filename="include/painter/data/T100ElementListCtrlData.h" />
 		<Unit filename="include/painter/diagram/T100Diagram.h" />
 		<Unit filename="include/painter/diagram/T100DiagramBase.h" />
 		<Unit filename="include/painter/diagram/T100DiagramCommon.h" />
@@ -652,6 +774,7 @@
 		<Unit filename="include/painter/serve/T100StateEmbed.h" />
 		<Unit filename="include/painter/store/T100CanvasState.h" />
 		<Unit filename="include/painter/store/T100CanvasStateCommon.h" />
+		<Unit filename="include/painter/store/T100CanvasStateNone.h" />
 		<Unit filename="include/painter/store/T100CanvasStatePaint.h" />
 		<Unit filename="include/painter/store/T100CanvasStateSelected.h" />
 		<Unit filename="include/painter/store/T100CanvasStateSizing.h" />
@@ -1091,6 +1214,7 @@
 		<Unit filename="src/painter/T100PainterApp.cpp" />
 		<Unit filename="src/painter/data/T100DiagramInfo.cpp" />
 		<Unit filename="src/painter/data/T100DiagramInfoV1.cpp" />
+		<Unit filename="src/painter/data/T100ElementListCtrlData.cpp" />
 		<Unit filename="src/painter/diagram/T100Diagram.cpp" />
 		<Unit filename="src/painter/diagram/T100DiagramBase.cpp" />
 		<Unit filename="src/painter/diagram/T100DiagramSource.cpp" />
@@ -1123,6 +1247,7 @@
 		<Unit filename="src/painter/serve/T100StateEmbed.cpp" />
 		<Unit filename="src/painter/store/T100CanvasState.cpp" />
 		<Unit filename="src/painter/store/T100CanvasStateCommon.cpp" />
+		<Unit filename="src/painter/store/T100CanvasStateNone.cpp" />
 		<Unit filename="src/painter/store/T100CanvasStatePaint.cpp" />
 		<Unit filename="src/painter/store/T100CanvasStateSelected.cpp" />
 		<Unit filename="src/painter/store/T100CanvasStateSizing.cpp" />
@@ -1342,6 +1467,10 @@
 		<Unit filename="test/os/T100OSTest.h" />
 		<Unit filename="test/os/T100OSTestHint.cpp" />
 		<Unit filename="test/os/T100OSTestHint.h" />
+		<Unit filename="test/painter/T100PainterTest.cpp" />
+		<Unit filename="test/painter/T100PainterTest.h" />
+		<Unit filename="test/painter/T100PainterTestHint.cpp" />
+		<Unit filename="test/painter/T100PainterTestHint.h" />
 		<Unit filename="test/resources/assembly/program/test_stack.bin" />
 		<Unit filename="test/resources/assembly/program/test_stack.txt" />
 		<Unit filename="test/resources/assembly/program/test_variable.txt" />
@@ -1392,6 +1521,12 @@
 		<Unit filename="test/vpc/T100VPCTest.h" />
 		<Unit filename="test/vpc/T100VPCTestHint.cpp" />
 		<Unit filename="test/vpc/T100VPCTestHint.h" />
+		<Unit filename="test/widget/T100PaintCtrlTest.cpp" />
+		<Unit filename="test/widget/T100PaintCtrlTest.h" />
+		<Unit filename="test/widget/T100WidgetTest.cpp" />
+		<Unit filename="test/widget/T100WidgetTest.h" />
+		<Unit filename="test/widget/T100WidgetTestHint.cpp" />
+		<Unit filename="test/widget/T100WidgetTestHint.h" />
 		<Unit filename="work/.gitkeep" />
 		<Unit filename="work/AOS/boot/boot.txt" />
 		<Unit filename="work/AOS/cmt.txt" />

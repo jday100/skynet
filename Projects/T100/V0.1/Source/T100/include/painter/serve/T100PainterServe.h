@@ -17,8 +17,11 @@ class T100PainterServe
         T100BOOL                opened();
 
         T100BOOL                NewFile(T100STRING&, T100DiagramInfo*&);
-        T100BOOL                OpenFile(T100DiagramInfo*);
-        T100BOOL                close();
+        T100BOOL                OpenFile(T100STRING&, T100DiagramInfo*);
+        T100BOOL                CloseFile();
+        T100BOOL                Save();
+        T100BOOL                SaveAs();
+        T100BOOL                Quit();
 
         T100DiagramInfo*        getCurrent();
 
@@ -26,6 +29,7 @@ class T100PainterServe
         T100BOOL                SaveFile(T100STRING);
         T100BOOL                LoadFile(T100STRING);
 
+        T100VOID                setModified(T100BOOL);
         T100BOOL                IsModified();
         T100VOID                DiscardEdits();
 
@@ -36,6 +40,7 @@ class T100PainterServe
 
     private:
         std::atomic_bool        m_opened;
+        std::atomic_bool        m_modified;
 
         T100DiagramInfo*        m_current           = T100NULL;
 

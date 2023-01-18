@@ -5,6 +5,8 @@
 #include "T100BufferedFileWriter.h"
 
 #include "T100Diagram.h"
+#include "T100DiagramV1.h"
+#include "T100DiagramInfoV1.h"
 
 namespace T100Painter{
 
@@ -16,11 +18,6 @@ T100PainterStore::T100PainterStore()
 T100PainterStore::~T100PainterStore()
 {
     //dtor
-}
-
-T100BOOL T100PainterStore::close()
-{
-    return T100TRUE;
 }
 
 T100BOOL T100PainterStore::OpenFile(T100STRING file, T100DiagramInfo*& info)

@@ -25,6 +25,11 @@
 #include "T100App.h"
 #include "T100VPCView.h"
 
+#include "T100PaintCtrl.h"
+
+#include "T100Painter.h"
+#include "T100PainterView.h"
+
 #include "T100TestTools.h"
 
 
@@ -63,6 +68,7 @@ const long T100Frame::ID_STATUSBAR1 = wxNewId();
 const long T100Frame::ID_THREAD_CLOSE = wxNewId();
 const long T100Frame::ID_THREAD_FONT = wxNewId();
 const long T100Frame::ID_THREAD_VPC = wxNewId();
+const long T100Frame::ID_THREAD_PAINT = wxNewId();
 
 BEGIN_EVENT_TABLE(T100Frame,wxFrame)
     //(*EventTable(T100Frame)
@@ -70,6 +76,7 @@ BEGIN_EVENT_TABLE(T100Frame,wxFrame)
     EVT_THREAD(ID_THREAD_CLOSE, T100Frame::OnThreadClose)
     EVT_THREAD(ID_THREAD_FONT, T100Frame::OnThreadFont)
     EVT_THREAD(ID_THREAD_VPC, T100Frame::OnThreadVPC)
+    EVT_THREAD(ID_THREAD_PAINT, T100Frame::OnThreadPaint)
 
     EVT_SIZE(T100Frame::OnResize)
 
@@ -193,6 +200,22 @@ void T100Frame::OnThreadVPC(wxThreadEvent& event)
 
     //vpc->show();
     m_vpc->run();
+}
+
+void T100Frame::OnThreadPaint(wxThreadEvent& event)
+{
+    T100BOOL        result          = T100TRUE;
+    T100BOOL        value;
+
+    T100Painter::T100Painter*       painter         = T100NULL;
+
+    painter     = T100NEW T100Painter::T100Painter();
+
+    painter->create();
+
+    painter->getView()->setCallback(this, (T100WxWidgets::T100FRAME_CALLBACK)&T100Frame::vpc_quit);
+
+    painter->show();
 }
 
 void T100Frame::OnResize(wxSizeEvent& event)

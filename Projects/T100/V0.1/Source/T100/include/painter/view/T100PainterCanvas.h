@@ -1,6 +1,7 @@
 #ifndef T100PAINTERCANVAS_H
 #define T100PAINTERCANVAS_H
 
+#include <mutex>
 #include <wx/scrolwin.h>
 #include <wx/textctrl.h>
 #include "T100PainterCommon.h"
@@ -24,6 +25,7 @@ class T100PainterCanvas : public wxScrolledWindow
         virtual ~T100PainterCanvas();
 
         T100BOOL            Load(T100PAINTER_ELEMENT_VECTOR*);
+        T100VOID            Clear();
 
 
         T100BOOL            Remove(T100ElementBase*);
@@ -40,6 +42,7 @@ class T100PainterCanvas : public wxScrolledWindow
 
         T100BOOL            GetVirtualPosition(T100INT, T100INT, T100INT&, T100INT&);
 
+        T100CANVAS_STATE    GetState();
         T100BOOL            Change(T100CANVAS_STATE);
 
         T100BOOL            Resize(T100WORD, T100WORD);
@@ -72,6 +75,8 @@ class T100PainterCanvas : public wxScrolledWindow
     private:
         T100VOID            create();
         T100VOID            destroy();
+
+        std::mutex          m_mutex;
 
         T100Component::T100CanvasTransverter                    m_manager;
         wxTextCtrl*         m_title         = T100NULL;

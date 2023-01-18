@@ -1,6 +1,7 @@
 #include "T100ElementBase.h"
 
 #include <wx/textctrl.h>
+#include "T100ElementListCtrlData.h"
 
 namespace T100Painter{
 
@@ -63,12 +64,16 @@ T100BOOL T100ElementBase::Append(wxListView* panel)
     T100LONG        index;
     wxUIntPtr       ptr;
 
+    T100ElementListCtrlData*    data        = T100NULL;
+
     parent  = panel->GetItemCount();
 
     index   = panel->InsertItem(parent, m_label.to_wstring());
 
-    ptr     = (wxUIntPtr)&m_key;
+    data    = T100NEW T100ElementListCtrlData();
+    data->KEY   = m_key;
 
+    ptr     = (wxUIntPtr)data;
     panel->SetItemPtrData(index, ptr);
 
     return T100TRUE;

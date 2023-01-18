@@ -44,6 +44,7 @@ T100VOID T100ElementRectangle::Clear()
 T100BOOL T100ElementRectangle::draw(wxDC& dc)
 {
     dc.DrawRectangle(wxRect(wxPoint(m_origin_x, m_origin_y), wxPoint(m_tail_x, m_tail_y)));
+    return T100TRUE;
 }
 
 T100ElementRectangle* T100ElementRectangle::Clone()

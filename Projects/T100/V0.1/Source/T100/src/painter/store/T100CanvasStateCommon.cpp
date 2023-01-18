@@ -21,7 +21,7 @@ T100CanvasStateCommon::~T100CanvasStateCommon()
 
 T100VOID T100CanvasStateCommon::OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas)
 {
-    wxAutoBufferedPaintDC       dc(canvas);
+    wxBufferedPaintDC       dc(canvas);
 
     dc.Clear();
     canvas->DoPrepareDC(dc);

@@ -21,7 +21,7 @@ T100CanvasStateSizing::~T100CanvasStateSizing()
 
 T100VOID T100CanvasStateSizing::OnPaint(wxPaintEvent& event, T100PainterCanvas* canvas)
 {
-    wxAutoBufferedPaintDC       dc(canvas);
+    wxBufferedPaintDC       dc(canvas);
 
     dc.Clear();
     canvas->DoPrepareDC(dc);

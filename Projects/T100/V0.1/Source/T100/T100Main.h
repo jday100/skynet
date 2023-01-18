@@ -34,11 +34,13 @@ class T100Frame: public wxFrame
         static const long ID_THREAD_CLOSE;
         static const long ID_THREAD_FONT;
         static const long ID_THREAD_VPC;
+        static const long ID_THREAD_PAINT;
 
     protected:
         void OnThreadClose(wxThreadEvent& event);
         void OnThreadFont(wxThreadEvent& event);
         void OnThreadVPC(wxThreadEvent& event);
+        void OnThreadPaint(wxThreadEvent& event);
 
         void OnResize(wxSizeEvent& event);
 

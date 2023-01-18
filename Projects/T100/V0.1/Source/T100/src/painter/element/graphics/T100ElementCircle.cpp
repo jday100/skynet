@@ -44,13 +44,8 @@ T100VOID T100ElementCircle::Clear()
 
 T100BOOL T100ElementCircle::draw(wxDC& dc)
 {
-    /*
-    T100Library::T100TestTools::Print(&m_origin_x);
-    T100Library::T100TestTools::Print(&m_origin_y);
-    T100Library::T100TestTools::Print(&m_radius);
-    */
-
     dc.DrawCircle(m_origin_x, m_origin_y, m_radius);
+    return T100TRUE;
 }
 
 T100ElementCircle* T100ElementCircle::Clone()
@@ -60,7 +55,9 @@ T100ElementCircle* T100ElementCircle::Clone()
     result = T100NEW T100ElementCircle();
 
     if(result){
-        *result = *this;
+        result->m_origin_x  = m_origin_x;
+        result->m_origin_y  = m_origin_y;
+        result->m_radius    = m_radius;
     }
 
     return result;

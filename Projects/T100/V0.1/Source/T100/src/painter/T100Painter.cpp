@@ -32,9 +32,9 @@ T100BOOL T100Painter::create()
     T100PainterCallback::init(m_store, m_serve, m_view);
 
     if(m_app){
-        m_transverter.Change(T100PAINTER_STATE_ALONE);
-    }else{
         m_transverter.Change(T100PAINTER_STATE_EMBED);
+    }else{
+        m_transverter.Change(T100PAINTER_STATE_ALONE);
     }
 
     return m_transverter.GetCurrent()->Create();

@@ -49,11 +49,11 @@ T100PainterCanvas::~T100PainterCanvas()
 
 T100VOID T100PainterCanvas::create()
 {
-    SetBackgroundStyle(wxBG_STYLE_PAINT);
+    //SetBackgroundStyle(wxBG_STYLE_PAINT);
 
-    SetBackgroundColour(*wxWHITE);
+    //SetBackgroundColour(*wxWHITE);
 
-    m_manager.Change(T100CANVAS_STATE_COMMON);
+    m_manager.Change(T100CANVAS_STATE_NONE);
 }
 
 T100VOID T100PainterCanvas::destroy()
@@ -63,16 +63,19 @@ T100VOID T100PainterCanvas::destroy()
 
 T100ElementBase* T100PainterCanvas::GetCurrent()
 {
+    std::lock_guard<std::mutex>     lock(m_mutex);
     return m_current;
 }
 
 T100VOID T100PainterCanvas::Select(T100ElementBase* element)
 {
+    std::lock_guard<std::mutex>     lock(m_mutex);
     m_current = element;
 }
 
 T100VOID T100PainterCanvas::Deselect()
 {
+    std::lock_guard<std::mutex>     lock(m_mutex);
     m_current = T100NULL;
 }
 
@@ -92,6 +95,12 @@ T100BOOL T100PainterCanvas::Load(T100PAINTER_ELEMENT_VECTOR* elements)
     return T100TRUE;
 }
 
+T100VOID T100PainterCanvas::Clear()
+{
+    m_elements  = T100NULL;
+    m_manager.Change(T100CANVAS_STATE_NONE);
+}
+
 void T100PainterCanvas::OnEraseBackGround(wxEraseEvent& event)
 {
 
@@ -101,10 +110,17 @@ void T100PainterCanvas::OnPaint(wxPaintEvent& event)
 {
     T100CanvasState*        current         = T100NULL;
 
-    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    std::lock_guard<std::mutex>     lock(m_mutex);
+
+    T100Library::T100TestTools::Print(L"Paint");
+
+
+    current = m_manager.GetCurrent();
     if(!current)return;
 
     current->OnPaint(event, this);
+
+    T100Library::T100TestTools::Print(L"Paint");
 }
 
 T100BOOL T100PainterCanvas::Hit(T100INT x, T100INT y)
@@ -129,7 +145,7 @@ void T100PainterCanvas::OnMouseLeftDown(wxMouseEvent& event)
 {
     T100CanvasState*        current         = T100NULL;
 
-    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    current = m_manager.GetCurrent();
     if(!current)return;
 
     current->OnMouseLeftDown(event);
@@ -141,7 +157,7 @@ void T100PainterCanvas::OnMouseLeftUp(wxMouseEvent& event)
 {
     T100CanvasState*        current         = T100NULL;
 
-    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    current = m_manager.GetCurrent();
     if(!current)return;
 
     current->OnMouseLeftUp(event);
@@ -153,7 +169,9 @@ void T100PainterCanvas::OnMouseMove(wxMouseEvent& event)
 {
     T100CanvasState*        current         = T100NULL;
 
-    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    //T100Library::T100TestTools::Print(L"1");
+
+    current = m_manager.GetCurrent();
     if(!current)return;
 
     current->OnMouseMove(event);
@@ -167,7 +185,7 @@ void T100PainterCanvas::OnMouseLeftDClick(wxMouseEvent& event)
 
     T100CanvasState*        current         = T100NULL;
 
-    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    current = m_manager.GetCurrent();
     if(!current)return;
 
     current->OnMouseLeftDClick(event);
@@ -184,7 +202,7 @@ void T100PainterCanvas::OnKeyUp(wxKeyEvent& event)
 {
     T100CanvasState*        current         = T100NULL;
 
-    current = static_cast<T100CanvasState*>(m_manager.GetCurrent());
+    current = m_manager.GetCurrent();
     if(!current)return;
 
     current->OnKeyUp(event);
@@ -270,8 +288,46 @@ T100BOOL T100PainterCanvas::GetVirtualPosition(T100INT x, T100INT y, T100INT& vx
     return T100TRUE;
 }
 
+T100CANVAS_STATE T100PainterCanvas::GetState()
+{
+    T100CANVAS_STATE        result;
+
+    switch(m_manager.GetState()){
+    case 0:
+        {
+            result = T100CANVAS_STATE_NONE;
+        }
+        break;
+    case 1:
+        {
+            result = T100CANVAS_STATE_COMMON;
+        }
+        break;
+    case 2:
+        {
+            result = T100CANVAS_STATE_PAINT;
+        }
+        break;
+    case 3:
+        {
+            result = T100CANVAS_STATE_SELECTED;
+        }
+        break;
+    case 4:
+        {
+            result = T100CANVAS_STATE_SIZING;
+        }
+        break;
+    }
+
+    return result;
+}
+
 T100BOOL T100PainterCanvas::Change(T100CANVAS_STATE state)
 {
+    //return T100FALSE;
+    T100Library::T100TestTools::Print(&m_manager);
+
     m_manager.Change(state);
     return T100TRUE;
 }
@@ -297,6 +353,8 @@ T100VOID T100PainterCanvas::OnScrollBottom(wxScrollWinEvent& event)
 T100VOID T100PainterCanvas::OnScrollLineDown(wxScrollWinEvent& event)
 {
     T100Library::T100TestTools::Print(L"ScrollLineDown");
+
+    return;
 
     T100INT     go;
 
