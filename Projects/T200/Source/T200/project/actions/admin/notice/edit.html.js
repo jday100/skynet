@@ -1,0 +1,66 @@
+const { error, log } = require('../../../../library/T200Lib.js');
+const T200Error = require('../../../../library/T200Error.js');
+
+const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
+const T200Notice = require('../../../models/T200Notice.js');
+const T200HomeAdminBiz = require('../../../biz/T200HomeAdminBiz.js');
+
+async function do_notice_edit(request, response, cookie, session, resource) {
+    log(__filename, "do_notice_edit");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
+
+
+        let nid = cookie.get("nid");
+        if(nid && 0 < nid){
+            do_notice_modify(request, response, cookie, session, resource, AdminBiz);
+        }else{
+            do_notice_add(request, response, cookie, session, resource, AdminBiz).then(function(){
+                response.type("json");
+                resolve();
+            }, function(err){
+                response.type("json");
+                reject();
+            });
+        }
+  
+    });
+
+    return promise;
+}
+
+async function do_notice_add(request, response, cookie, session, resource, AdminBiz) {
+    log(__filename, "do_notice_add");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let notice = new T200Notice();
+  
+        notice.user_id = session.get("userid");
+        notice.title = request.get("title");
+        notice.content = request.get("content");
+        
+        if(T200HttpsForm.verify_id(notice.user_id)
+            && T200HttpsForm.verify_text(notice.title)
+            && T200HttpsForm.verify_text(notice.content)){
+                notice._values = notice.values();
+                AdminBiz.add(notice).then(resolve, reject);
+        }
+    });
+
+    return promise;
+}
+
+async function do_notice_modify(request, response, cookie, session, resource, AdminBiz) {
+    log(__filename, "do_notice_modify");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+
+    });
+
+    return promise;
+}
+
+
+global.action.use_post('/admin/notice/edit', do_notice_edit);
+

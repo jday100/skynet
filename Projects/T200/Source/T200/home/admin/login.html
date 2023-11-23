@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="generator" content="Bluefish 2.2.10">
+    <meta name="author" content="user">
+    <meta name="date" content="2023-10-27T18:30:03+0800">
+    <meta name="copyright" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta http-equiv="expires" content="0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/stage.css">
+
+
+    <script src="/js/t200.js"></script>
+    <script src="/js/t200home.js"></script>
+
+</head>
+
+<body>
+
+    <div>
+
+        <nav>
+            <div>
+                <a href="/">Home</a> |
+                <a href="/about.html">About</a>
+            </div>
+            <div id="nav_right">
+                <a href="/login.html">Login</a> |
+                <a href="/register.html">Register</a>
+            </div>
+        </nav>
+
+        <header>
+            <img src="/images/home.gif" />
+        </header>
+
+        <nav class="nav_channel">
+            <a href="/">Home</a> -
+            <a href="/house/index.html">House</a> -
+            <a href="/job/index.html">Job</a> -
+            <a href="/trading/index.html">Trading</a> -
+            <a href="/exchange/index.html">Exchange</a>
+        </nav>
+
+        <form id="form">
+            <input type="hidden" name="test">
+            <div class="form_title">
+                Login
+            </div>
+            <div class="form_msg">
+                Hello
+            </div>
+            <div id="main">
+                <div>
+                    <label >Username:</label>
+                    <input type="text" name="username">
+                </div>
+                <div>
+                    <label >Password:</label>
+                    <input type="text" name="password">
+                </div>
+                <div class="button">
+                    <button id="submit">Submit</button>
+                </div>
+            </div>
+            <div class="form_msg">
+                <a href="/forget.html">Forget</a>
+            </div>
+        </form>
+
+        <footer>
+
+        </footer>
+
+    </div>
+
+</body>
+
+<script>
+    $.win.onload = function(){
+        $.id('form').onsubmit = function(){
+            return false;
+        };
+        $.id('submit').onclick = function(){
+            let data = formtostring('form');
+            $.post('/admin/login', data, function(){
+                forward("/admin/index.html");
+            }, function(){
+                alert('Login Failure!');
+            });
+        };
+    };
+</script>
+
+</html>

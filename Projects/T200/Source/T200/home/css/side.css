@@ -1,0 +1,171 @@
+nav a {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.nav_channel {
+	justify-content:left;
+}
+
+body > div > div {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+body > div > div > fieldset {
+    width: 200px;
+    min-height: 600px;
+}
+
+body > div > div > fieldset + fieldset{
+    width: 800px;
+    min-height: 600px;
+}
+
+.menu {
+    line-height: 35px;
+    border-bottom: 1px solid darkgray;
+    
+}
+
+.menu_group {
+    margin-top: -10px;
+}
+
+.menu_title {
+
+}
+
+.menu_item {
+    margin-left: 30px;
+}
+
+.publish {
+    width: 780px;
+    line-height: 50px;
+    display:flex;
+	justify-content:right;
+	align-items:center;
+}
+
+.search_box {
+    line-height: 50px;
+    display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.search_button {
+    margin-left: 20px;
+}
+
+
+.list_box {
+    width: 780px;
+    display:flex;
+	justify-content:center;
+	align-items:center;
+    flex-direction:column;
+}
+
+.paging_top_box {
+    width: 766px;
+    line-height: 50px;
+    display:flex;
+	justify-content:center;
+	align-items:center;
+    border-bottom: 1px solid darkgray;
+}
+
+.paging_bottom_box {
+    width: 766px;
+    line-height: 50px;
+    display:flex;
+	justify-content:center;
+	align-items:center;
+    border-top: 1px solid darkgray;
+}
+
+.pages {
+    width: 200px;
+    display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
+
+.item_box {
+    width: 760px;
+}
+
+.item {
+    width: 760px;
+	height: 35px;
+    display:flex;
+	justify-content:space-between;
+	align-items:center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.item_left {
+
+}
+
+.item_right {
+    
+}
+
+
+.form_title {
+    width: 760px;
+    line-height: 50px;
+    display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.form_msg {
+    width: 710px;
+    line-height: 50px;
+    margin-left: 50px;
+}
+
+.form_box {
+    display:flex;
+	justify-content:center;
+	align-items:center;
+    flex-direction:column;
+}
+
+.form {
+    display:flex;
+	justify-content:center;
+	align-items:center;
+    flex-direction:column;
+}
+
+.form_label {
+    width: 100px;
+    text-align:center;
+}
+
+.form_item {
+    width: 760px;
+    line-height: 25px;
+    display:flex;
+	justify-content:center;
+	align-items:top;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form_value {
+    width: 650px;
+}
+
+.form_button {
+    margin: 10px;
+}
