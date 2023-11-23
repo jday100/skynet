@@ -10,6 +10,7 @@ class T200HttpsRequest {
         this.req = req;
         this.data = "";
         this.req.events = {};
+        this.req.values = {};
         req.on('data', this.merge_data);
         req.on('end', this.parse_data);
     }

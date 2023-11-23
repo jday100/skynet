@@ -8,7 +8,7 @@ async function do_index(request, response, cookie, session, resource) {
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let view = new T200HomeView(resource);
-        let HomeIndex = new T200HomeIndex();
+        let HomeIndex = new T200HomeIndex(request, cookie, session);
 
         return HomeIndex.load_index().then(function(data){
             console.log(data);

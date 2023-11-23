@@ -11,8 +11,8 @@ const T200Exchange = require('../models/T200Exchange.js');
 
 
 class T200HomeIndex extends T200HomeVisitorBiz {
-    constructor() {
-        super();
+    constructor(request, cookie, session) {
+        super(request, cookie, session);
     }
 
     load_index() {
