@@ -4,17 +4,12 @@ function login() {
     forward("/");
 }
 
-
-function logout() {
-
-}
-
 function reload() {
     location.reload();
 }
 
 function logout() {
-    $.set_cookie('sid', '');
+    $.set_cookie('sid', 0);
     location.reload();
 }
 

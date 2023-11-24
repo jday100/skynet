@@ -24,6 +24,10 @@ body > div > div > fieldset + fieldset{
     min-height: 600px;
 }
 
+fieldset > div > details {
+    
+}
+
 .menu {
     line-height: 35px;
     border-bottom: 1px solid darkgray;

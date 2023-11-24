@@ -55,7 +55,7 @@
             <fieldset>
                 <legend>My</legend>
                 <div>
-                    <details class="menu">
+                    <details open class="menu">
                         <summary>Person</summary>
                         <div class="menu_group">
                             <div class="menu_item">
@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </details>
-                    <details open class="menu">
+                    <details class="menu">
                         <summary>Trading</summary>
                         <div class="menu_group">
                             <div class="menu_item">
@@ -116,52 +116,9 @@
             </fieldset>
             
             <fieldset>
-                <legend>Trading - Sell</legend>
+                <legend>Profile</legend>
                 <div>
-                    <div class="publish">
-                        <button><a href="/content/trading/sell_edit.html">Publish</a></button>
-                    </div>
-                    <div id="list_box">
-                        <form id="form">
-                            <div class="search_box">
-                
-                                <input type="hidden" name="test">
-                                <input type="text" name="search">
-                                <button class="search_button">Search</button>
-                        
-                            </div>
-                            <div class="list_box">
-                                <div class="paging_top_box">
-                                    <div class="paging">
-                                        <a href="">1</a>
-                                        <a href="">2</a>
-                                        <a href="">3</a>
-                                        <a href="">4</a>
-                                        <a href="">5</a>
-                                    </div>
-                                </div>
-                                <div class="item_box">
-                                    <div class="item">
-                                        <div>
-                                            <a href="">unpublished</a>
-                                        </div>
-                                        <div>
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="paging_bottom_box">
-                                    <div class="paging">
-                                        <a href="">1</a>
-                                        <a href="">2</a>
-                                        <a href="">3</a>
-                                        <a href="">4</a>
-                                        <a href="">5</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
                 </div>
             </fieldset>
         </div>
@@ -177,13 +134,6 @@
 <script>
     $.win.onload = function(){
         nav_check();
-
-        let result = formtostring("form");
-        $.post('/content/trading/sell/list', result, function(data){
-            $.id("list_box").innerHTML = data;
-        }, function(){
-            alert("Load Failure!");
-        });
     };
 </script>
 
