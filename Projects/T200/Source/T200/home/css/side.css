@@ -31,7 +31,7 @@ body > div > div > fieldset + fieldset{
 }
 
 .menu_group {
-    margin-top: -10px;
+    margin-top: -5px
 }
 
 .menu_title {
@@ -40,6 +40,7 @@ body > div > div > fieldset + fieldset{
 
 .menu_item {
     margin-left: 30px;
+    line-height: 25px;
 }
 
 .publish {
@@ -116,6 +117,8 @@ body > div > div > fieldset + fieldset{
 
 .item_box {
     width: 760px;
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
 }
 
 .item {

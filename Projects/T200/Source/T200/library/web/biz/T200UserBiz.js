@@ -5,8 +5,8 @@ const T200ForumBiz = require('./T200ForumBiz.js');
 
 
 class T200UserBiz extends T200ForumBiz {
-    constructor() {
-        super();
+    constructor(request, cookie, session) {
+        super(request, cookie, session);
     }
 
     verify_logined(cookie, session) {

@@ -1,3 +1,4 @@
+const { error, log } = require('../../T200Lib.js');
 const T200Error = require('../../T200Error.js');
 
 
@@ -52,6 +53,7 @@ class T200StoreBase {
     }
 
     query(sql) {
+        log(__filename, "query", sql);
         let self = this;
         let promise = new Promise(function(resolve, reject){
             if(self.check()){
@@ -65,6 +67,7 @@ class T200StoreBase {
     }
 
     execute(sql) {
+        log(__filename, "execute", sql);
         let self = this;
         let promise = new Promise(function(resolve, reject){
             if(self.check()){
