@@ -70,13 +70,33 @@ body > div > div > fieldset + fieldset{
     flex-direction:column;
 }
 
+.list_group {
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+}
+
+.list_item {
+    width: 780px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paging {
+    width: 200px;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
 .paging_top_box {
     width: 766px;
     line-height: 50px;
     display:flex;
 	justify-content:center;
 	align-items:center;
-    border-bottom: 1px solid darkgray;
 }
 
 .paging_bottom_box {
@@ -85,10 +105,9 @@ body > div > div > fieldset + fieldset{
     display:flex;
 	justify-content:center;
 	align-items:center;
-    border-top: 1px solid darkgray;
 }
 
-.pages {
+.paging {
     width: 200px;
     display:flex;
 	justify-content:space-between;

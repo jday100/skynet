@@ -49,6 +49,10 @@ body > div > fieldset > div > fieldset > div {
 
 .notice {
     height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .region {
@@ -67,7 +71,6 @@ body > div > fieldset > div > fieldset > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .notice > div > div {

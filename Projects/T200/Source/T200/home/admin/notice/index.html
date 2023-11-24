@@ -33,7 +33,7 @@
                 <a href="/">Home</a> |
                 <a href="/about.html">About</a>
             </div>
-            <div>
+            <div id="nav_right">
                 <a href="/login.html">Login</a> |
                 <a href="/register.html">Register</a>
             </div>
@@ -104,41 +104,45 @@
                         <div class="publish">
                             <button><a href="/admin/notice/edit.html">Publish</a></button>
                         </div>
-                        <div class="search_box">
-                            <form id="form">
-                                <input type="text">
-                                <button class="search_button">Search</button>
-                            </form>
-                        </div>
-                        <div id="list_box" class="list_box">
-                            <div class="paging_top_box">
-                                <div class="pages">
-                                    <a href="">1</a>
-                                    <a href="">2</a>
-                                    <a href="">3</a>
-                                    <a href="">4</a>
-                                    <a href="">5</a>
-                                </div>
+              
+                        <form id="list_box" class="list_form" onsubmit="return false;">
+                            <div class="search_box">
+                
+                                    <input type="hidden" name="test">
+                                    <input type="text" name="search">
+                                    <button class="search_button">Search</button>
+                            
                             </div>
-                            <div class="item_box">
-                                <div class="item">
-                                    <div>
-                                        <a href="">unpublished</a>
+                            <div class="list_box">
+                                <div class="paging_top_box">
+                                    <div class="pages">
+                                        <a href="">1</a>
+                                        <a href="">2</a>
+                                        <a href="">3</a>
+                                        <a href="">4</a>
+                                        <a href="">5</a>
                                     </div>
-                                    <div>
+                                </div>
+                                <div class="item_box">
+                                    <div class="item">
+                                        <div>
+                                            <a href="">unpublished</a>
+                                        </div>
+                                        <div>
 
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="paging_bottom_box">
-                                <div class="pages">
-                                    <a href="">1</a>
-                                    <a href="">2</a>
-                                    <a href="">3</a>
-                                    <a href="">4</a>
-                                    <a href="">5</a>
+                                <div class="paging_bottom_box">
+                                    <div class="pages">
+                                        <a href="">1</a>
+                                        <a href="">2</a>
+                                        <a href="">3</a>
+                                        <a href="">4</a>
+                                        <a href="">5</a>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
          
                 </div>
@@ -157,7 +161,7 @@
     $.win.onload = function(){
         nav_check();
 
-        let result = formtostring("form");
+        let result = formtostring("list_box");
         $.post('/admin/notice/list', result, function(data){
             $.id("list_box").innerHTML = data;
         }, function(){

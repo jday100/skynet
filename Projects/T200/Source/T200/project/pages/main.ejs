@@ -3,7 +3,7 @@
     <div class="notice">
         <%
             let i = 0;
-            let k = notices.lenght;
+            let k = notices.length;
             for(let m=0;m<3;m++){
                 %>
                 <div>
@@ -12,7 +12,7 @@
                         if(i < k){
                             %>
                                 <div>
-                                    <a href="/notice/notice.html"><%=notices[i].title%></a>
+                                    <a onclick="hit('nid', <%=notices[i].id%>)" href="/notice/notice.html"><%=notices[i].title%></a>
                                 </div>
                             <%
                         }else{
