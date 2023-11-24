@@ -5,8 +5,8 @@ const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
 const T200Notice = require('../../../models/T200Notice.js');
 const T200HomeAdminBiz = require('../../../biz/T200HomeAdminBiz.js');
 
-async function do_notice_edit(request, response, cookie, session, resource) {
-    log(__filename, "do_notice_edit");
+async function do_admin_notice_edit(request, response, cookie, session, resource) {
+    log(__filename, "do_admin_notice_edit");
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
@@ -14,9 +14,9 @@ async function do_notice_edit(request, response, cookie, session, resource) {
 
         let nid = cookie.get("nid");
         if(nid && 0 < nid){
-            do_notice_modify(request, response, cookie, session, resource, AdminBiz);
+            do_admin_notice_modify(request, response, cookie, session, resource, AdminBiz);
         }else{
-            do_notice_add(request, response, cookie, session, resource, AdminBiz).then(function(){
+            do_admin_notice_add(request, response, cookie, session, resource, AdminBiz).then(function(){
                 response.type("json");
                 resolve();
             }, function(err){
@@ -30,8 +30,8 @@ async function do_notice_edit(request, response, cookie, session, resource) {
     return promise;
 }
 
-async function do_notice_add(request, response, cookie, session, resource, AdminBiz) {
-    log(__filename, "do_notice_add");
+async function do_admin_notice_add(request, response, cookie, session, resource, AdminBiz) {
+    log(__filename, "do_admin_notice_add");
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let notice = new T200Notice();
@@ -51,8 +51,8 @@ async function do_notice_add(request, response, cookie, session, resource, Admin
     return promise;
 }
 
-async function do_notice_modify(request, response, cookie, session, resource, AdminBiz) {
-    log(__filename, "do_notice_modify");
+async function do_admin_notice_modify(request, response, cookie, session, resource, AdminBiz) {
+    log(__filename, "do_admin_notice_modify");
     let self = this;
     let promise = new Promise(function(resolve, reject){
 
@@ -62,5 +62,5 @@ async function do_notice_modify(request, response, cookie, session, resource, Ad
 }
 
 
-global.action.use_post('/admin/notice/edit', do_notice_edit);
+global.action.use_post('/admin/notice/edit', do_admin_notice_edit);
 
