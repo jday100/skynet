@@ -85,7 +85,7 @@
                             </div>
                         </div>
                     </details>
-                    <details open class="menu">
+                    <details class="menu">
                         <summary>Trading</summary>
                         <div class="menu_group">
                             <div class="menu_item">
@@ -104,7 +104,7 @@
                             </div>
                         </div>
                     </details>
-                    <details class="menu">
+                    <details open class="menu">
                         <summary>Note</summary>
                         <div class="menu_group">
                             <div class="menu_item">
@@ -116,10 +116,10 @@
             </fieldset>
             
             <fieldset>
-                <legend>Trading - Sell</legend>
+                <legend>Note</legend>
                 <div>
                     <div class="publish">
-                        <button><a href="/content/trading/sell_edit.html">Publish</a></button>
+                        <button><a href="/content/note/edit.html">Publish</a></button>
                     </div>
                     <div id="list_box">
                         <form id="form">
@@ -179,7 +179,7 @@
         nav_check();
 
         let result = formtostring("form");
-        $.post('/content/trading/sell/list', result, function(data){
+        $.post('/content/note/list', result, function(data){
             $.id("list_box").innerHTML = data;
         }, function(){
             alert("Load Failure!");

@@ -4,15 +4,15 @@ const T200Error = require('../../library/T200Error.js');
 const T200HomeVisitorModel = require('./T200HomeVisitorModel.js');
 
 
-class T200Trading extends T200HomeVisitorModel {
+class T200Note extends T200HomeVisitorModel {
     constructor() {
         super();
-        this._table = "";
+        this._table = "note";
         this._key = "id";
 
         this.status = 0;
     }
-
+    
     fields() {
         return "user_id, status, title, content";
     }
@@ -22,9 +22,9 @@ class T200Trading extends T200HomeVisitorModel {
     }
 
     list_fields() {
-        return "title, create_time";
+        return "id, title, create_time";
     }
-    
+
     fulltext_result_fields() {
         return "id, title, create_time";
     }
@@ -32,7 +32,6 @@ class T200Trading extends T200HomeVisitorModel {
     fulltext_fields() {
         return "title, content";
     }
-
 }
 
-module.exports = T200Trading;
+module.exports = T200Note;
