@@ -9,10 +9,29 @@ class T200House extends T200HomeVisitorModel {
         super();
         this._table = "";
         this._key = "id";
+
+        this.status = 0;
+    }
+
+    fields() {
+        return "user_id, status, title, content";
+    }
+
+    values() {
+        return `${this.user_id}, ${this.status}, '${this.title}', '${this.content}'`;
     }
 
     list_fields() {
         return "title, create_time";
+    }
+
+    
+    fulltext_result_fields() {
+        return "id, title, create_time";
+    }
+
+    fulltext_fields() {
+        return "title, content";
     }
 
 }

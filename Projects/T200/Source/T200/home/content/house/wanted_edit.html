@@ -119,7 +119,7 @@
                 <legend>House</legend>
                 <div>
                     <div class="form_title">
-                        Rent
+                        Wanted
                     </div>
                     <div class="form_msg">
                         hello
@@ -159,7 +159,7 @@
 
         $.id("submit").onclick = function(){
             let result = formtostring("form");
-            $.post('/content/house/rent/edit', result, function(){
+            $.post('/content/house/wanted/edit', result, function(){
                 alert('Save Success!');
             }, function(){
                 alert('Save Failure!');

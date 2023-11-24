@@ -33,7 +33,7 @@
                 <a href="/">Home</a> |
                 <a href="/about.html">About</a>
             </div>
-            <div>
+            <div id="nav_right">
                 <a href="/login.html">Login</a> |
                 <a href="/register.html">Register</a>
             </div>
@@ -55,43 +55,61 @@
             <fieldset>
                 <legend>My</legend>
                 <div>
-                    <details>
+                    <details class="menu">
                         <summary>Person</summary>
-                        <div>
-                            <a href="">Profile</a>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="">Profile</a>
+                            </div>
                         </div>
                     </details>
-                    <details>
+                    <details open class="menu">
                         <summary>House</summary>
-                        <div>
-                            <a href="/content/house/rent.html">Rent</a>
-                            <a href="">Wanted</a>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/content/house/rent.html">Rent</a>
+                            </div>
+                            <div class="menu_item">
+                                <a href="/content/house/wanted.html">Wanted</a>
+                            </div>
                         </div>
                     </details>
-                    <details>
+                    <details class="menu">
                         <summary>Job</summary>
-                        <div>
-                            <a href="">Recruit</a>
-                            <a href="">Wanted</a>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/content/job/recruit.html">Recruit</a>
+                            </div>
+                            <div class="menu_item">
+                                <a href="/content/job/wanted.html">Wanted</a>
+                            </div>
                         </div>
                     </details>
-                    <details>
+                    <details class="menu">
                         <summary>Trading</summary>
-                        <div>
-                            <a href="">Sell</a>
-                            <a href="">Buy</a>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/content/trading/sell.html">Sell</a>
+                            </div>
+                            <div class="menu_item">
+                                <a href="/content/trading/buy.html">Buy</a>
+                            </div>
                         </div>
                     </details>
-                    <details>
+                    <details class="menu">
                         <summary>Exchange</summary>
-                        <div>
-                            <a href="">Exchange</a>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/content/exchange/index.html">Exchange</a>
+                            </div>
                         </div>
                     </details>
-                    <details>
+                    <details class="menu">
                         <summary>Note</summary>
-                        <div>
-                            <a href="">Note</a>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/content/note/index.html">Note</a>
+                            </div>
                         </div>
                     </details>
                 </div>
@@ -100,114 +118,50 @@
             <fieldset>
                 <legend>House - Rent</legend>
                 <div>
-                    <div>
-                        <button>Publish</button>
+                    <div class="publish">
+                        <button><a href="/content/house/rent_edit.html">Publish</a></button>
                     </div>
-                    <form>
-                        <div>
-                            <input type="text">
-                            <button>Search</button>
-                        </div>
-                        <div>
-                            Hello
-                        </div>
-                        <div>
-                            <div>
-                                1 2 3 4 5
+                    <div id="list_box">
+                        <form id="form">
+                            <div class="search_box">
+                
+                                <input type="hidden" name="test">
+                                <input type="text" name="search">
+                                <button class="search_button">Search</button>
+                        
                             </div>
-                            <div>
-                                <button>Delete</button>
-                            </div>
-                            <div>
-                                <div>
-                                    <div>
-                                        <a href="">presentation data</a>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox">
+                            <div class="list_box">
+                                <div class="paging_top_box">
+                                    <div class="paging">
+                                        <a href="">1</a>
+                                        <a href="">2</a>
+                                        <a href="">3</a>
+                                        <a href="">4</a>
+                                        <a href="">5</a>
                                     </div>
                                 </div>
-                                <div>
-                                    <div>
-                                        <a href="">presentation data</a>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <a href="">presentation data</a>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox">
+                                <div class="item_box">
+                                    <div class="item">
+                                        <div>
+                                            <a href="">unpublished</a>
+                                        </div>
+                                        <div>
+
+                                        </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <div>
-                                        <a href="">presentation data</a>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <a href="">presentation data</a>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <a href="">presentation data</a>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <a href="">presentation data</a>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <a href="">presentation data</a>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <a href="">presentation data</a>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox">
-                                    </div>
-                                </div>
-                                <div>
-                                    <div>
-                                        <a href="">presentation data</a>
-                                    </div>
-                                    <div>
-                                        <input type="checkbox">
+                                <div class="paging_bottom_box">
+                                    <div class="paging">
+                                        <a href="">1</a>
+                                        <a href="">2</a>
+                                        <a href="">3</a>
+                                        <a href="">4</a>
+                                        <a href="">5</a>
                                     </div>
                                 </div>
                             </div>
-                            <div>
-                                <button>Delete</button>
-                            </div>
-                            <div>
-                                1 2 3 4 5
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </fieldset>
         </div>
@@ -219,5 +173,18 @@
     </div>
 
 </body>
+
+<script>
+    $.win.onload = function(){
+        nav_check();
+
+        let result = formtostring("form");
+        $.post('/content/house/rent/list', result, function(data){
+            $.id("list_box").innerHTML = data;
+        }, function(){
+            alert("Load Failure!");
+        });
+    };
+</script>
 
 </html>
