@@ -1,0 +1,83 @@
+.account_box {
+    margin-bottom: 10px;
+}
+
+.profile_box {
+    margin-bottom: 10px;
+}
+
+
+.account_box > div {
+    width: 770px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile_box > div {
+    width: 770px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.account_box > div > div {
+    width: 770px;    
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile_box > div > div {
+    width: 770px;    
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right_item {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.label{
+    width: 100px;
+}
+
+.value {
+    width: 200px;
+}
+
+.button {
+    width: 60px;
+}
+
+.region {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.region > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    width: 550px;
+    min-height: 200px;
+    margin-left: 100px;
+}

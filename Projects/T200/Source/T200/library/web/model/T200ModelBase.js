@@ -17,7 +17,7 @@ class T200ModelBase {
     }
 
     merge_select_by_key(value) {
-        return `select ${this._fields} from ${this._table} where ${this._key} = ${value} order by ${this._key}`;
+        return `select ${this._fields} from ${this._table} where ${this._key} = ${value}`;
     }
 }
 
