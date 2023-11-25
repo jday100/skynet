@@ -11,7 +11,7 @@ async function do_register(request, response, cookie, session, resource) {
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let visitor = new T200Visitor();
-        let VisitorBiz = new T200HomeVisitorBiz();
+        let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
 
         let pwd1 = request.get("password1");
         let pwd2 = request.get("password2");

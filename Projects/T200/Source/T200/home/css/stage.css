@@ -16,6 +16,14 @@ body > div > div > fieldset + fieldset{
     min-height: 600px;
 }
 
+nav a {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.nav_channel {
+	justify-content:left;
+}
 
 form {
     width: 1024px;
@@ -80,6 +88,13 @@ form > div > div > button {
     line-height: 35px;
     align-items: normal;
     margin-bottom: 5px;
+}
+
+.form_redirect {
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*

@@ -22,7 +22,7 @@ function nav_check() {
 }
 
 function forward(action) {
-    $.id('main').innerHTML = `<div><a href="${action}">跳转</a></div>`;
+    $.id('main').innerHTML = `<div class="form_redirect"><a href="${action}">Redirect</a></div>`;
     $.win.location = action;
 }
 

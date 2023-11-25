@@ -63,15 +63,18 @@ class T200HttpsDispatcher {
                 done(self.request, self.response, self.cookie, self.session, self.resource).then(function(data){
                     resolve(data);
                 }, function(err){
+                    self.response.status(500);
                     reject(err);
                 });
             }else{
                 return self.assign_path(action).then(function(data){
                     resolve(data);
                 }, function(err){
+                    self.response.status(404);
                     reject(err);
                 }).catch(function(err){
                     console.log(err);
+                    self.response.status(500);
                     reject(err);
                 });
             }
@@ -90,7 +93,8 @@ class T200HttpsDispatcher {
                 done(self.request, self.response, self.cookie, self.session, self.resource).then(function(data){
                     resolve(data);
                 }, function(err){
-                    reject();
+                    self.response.status(500);
+                    reject(500);
                 });
             }else{
                 self.response.status(500);

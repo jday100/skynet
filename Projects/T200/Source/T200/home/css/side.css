@@ -8,14 +8,15 @@ nav a {
 }
 
 body > div > div {
-    width: 1000px;
+    width: 1024px;
     display: flex;
     justify-content: center;
     align-items: top;
+    margin-bottom: 10px;
 }
 
 body > div > div > fieldset {
-    width: 200px;
+    width: 164px;
     min-height: 600px;
 }
 
@@ -35,7 +36,7 @@ fieldset > div > details {
 }
 
 .menu_group {
-    margin-top: -5px
+    margin-top: 0px
 }
 
 .menu_title {
@@ -45,10 +46,11 @@ fieldset > div > details {
 .menu_item {
     margin-left: 30px;
     line-height: 25px;
+    margin-bottom: 5px;
 }
 
 .publish {
-    width: 780px;
+    width: 800px;
     line-height: 50px;
     display:flex;
 	justify-content:right;
@@ -68,7 +70,7 @@ fieldset > div > details {
 
 
 .list_box {
-    width: 780px;
+    width: 800px;
     display:flex;
 	justify-content:center;
 	align-items:center;
@@ -97,7 +99,7 @@ fieldset > div > details {
 }
 
 .paging_top_box {
-    width: 766px;
+    width: 800px;
     line-height: 50px;
     display:flex;
 	justify-content:center;
@@ -105,7 +107,7 @@ fieldset > div > details {
 }
 
 .paging_bottom_box {
-    width: 766px;
+    width: 800px;
     line-height: 50px;
     display:flex;
 	justify-content:center;
@@ -120,13 +122,13 @@ fieldset > div > details {
 }
 
 .item_box {
-    width: 760px;
+    width: 800px;
     border-top: 1px solid darkgray;
     border-bottom: 1px solid darkgray;
 }
 
 .item {
-    width: 760px;
+    width: 800px;
 	height: 35px;
     display:flex;
 	justify-content:space-between;
@@ -146,7 +148,7 @@ fieldset > div > details {
 
 
 .form_title {
-    width: 760px;
+    width: 800px;
     line-height: 50px;
     display:flex;
 	justify-content:center;
@@ -154,7 +156,7 @@ fieldset > div > details {
 }
 
 .form_msg {
-    width: 710px;
+    width: 750px;
     line-height: 50px;
     margin-left: 50px;
 }
@@ -174,12 +176,12 @@ fieldset > div > details {
 }
 
 .form_label {
-    width: 100px;
+    width: 92px;
     text-align:center;
 }
 
 .form_item {
-    width: 760px;
+    width: 800px;
     line-height: 25px;
     display:flex;
 	justify-content:center;
@@ -189,7 +191,7 @@ fieldset > div > details {
 }
 
 .form_value {
-    width: 650px;
+    width: 700px;
 }
 
 .form_button {

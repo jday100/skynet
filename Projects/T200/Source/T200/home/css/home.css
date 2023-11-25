@@ -139,6 +139,13 @@ form > div > div > button {
     margin-bottom: 5px;
 }
 
+.form_redirect {
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*
 input[type="email"] {
     width: 220px;
@@ -327,3 +334,12 @@ input[type="email"] + button {
     width: 60px;
     margin-left: 20px;
 }
+
+/*
+#main > div {
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+*/

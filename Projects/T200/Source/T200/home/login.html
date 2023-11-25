@@ -66,7 +66,7 @@
                 </div>
                 <div>
                     <label >Password:</label>
-                    <input type="text" name="password">
+                    <input type="password" name="password">
                 </div>
                 <div class="button">
                     <button id="submit">Submit</button>
@@ -93,6 +93,7 @@
         $.id('form').onsubmit = function(){
             return false;
         };
+        
         $.id('submit').onclick = function(){
             let data = formtostring('form');
             $.post('/login', data, function(){
