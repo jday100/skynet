@@ -37,15 +37,19 @@ async function do_content_job_wanted_add(request, response, cookie, session, res
         let job = new T200Job();
   
         job.user_id = session.get("userid");
+        job.city_id = session.get("cityid");
         job.title = request.get("title");
         job.content = request.get("content");
         
         if(T200HttpsForm.verify_id(job.user_id)
+            && T200HttpsForm.verify_id(job.city_id)
             && T200HttpsForm.verify_text(job.title)
             && T200HttpsForm.verify_text(job.content)){
                 job._table = "job_wanted";
                 job._values = job.values();
                 UserBiz.add(job).then(resolve, reject);
+        }else{
+            reject();
         }
     });
 

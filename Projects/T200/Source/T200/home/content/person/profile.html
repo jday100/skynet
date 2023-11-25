@@ -21,7 +21,9 @@
 
 
     <script src="/js/t200.js"></script>
-    <script src="/js/t200home.js"></script>
+    <script src="/js/t200home.js"></script>    
+    <script src="/js/t200region.js"></script>
+    <script src="/js/t200person.js"></script>
 
 </head>
 
@@ -275,6 +277,10 @@
         let result = formtostring("form");
         $.post('/content/person/profile', result, function(data){
             $.id("list_box").innerHTML = data;
+            let script = data.match(/<script>([\s\S]*)<\/script>/)[1];
+            let element = document.createElement('script');
+            element.innerHTML = script;
+            document.head.appendChild(element);
         }, function(){
             alert("Load Failure!");
         });

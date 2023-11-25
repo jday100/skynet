@@ -37,15 +37,19 @@ async function do_content_house_rent_add(request, response, cookie, session, res
         let house = new T200House();
   
         house.user_id = session.get("userid");
+        house.city_id = session.get("cityid");
         house.title = request.get("title");
         house.content = request.get("content");
         
         if(T200HttpsForm.verify_id(house.user_id)
+            && T200HttpsForm.verify_id(house.city_id)
             && T200HttpsForm.verify_text(house.title)
             && T200HttpsForm.verify_text(house.content)){
                 house._table = "house_rent";
                 house._values = house.values();
                 UserBiz.add(house).then(resolve, reject);
+        }else{
+            reject();
         }
     });
 

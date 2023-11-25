@@ -37,15 +37,19 @@ async function do_content_trading_buy_add(request, response, cookie, session, re
         let trading = new T200Trading();
   
         trading.user_id = session.get("userid");
+        trading.city_id = session.get("cityid");
         trading.title = request.get("title");
         trading.content = request.get("content");
         
         if(T200HttpsForm.verify_id(trading.user_id)
+            && T200HttpsForm.verify_id(trading.city_id)
             && T200HttpsForm.verify_text(trading.title)
             && T200HttpsForm.verify_text(trading.content)){
                 trading._table = "trading_buy";
                 trading._values = trading.values();
                 UserBiz.add(trading).then(resolve, reject);
+        }else{
+            reject();
         }
     });
 

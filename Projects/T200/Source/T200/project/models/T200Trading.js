@@ -10,15 +10,16 @@ class T200Trading extends T200HomeVisitorModel {
         this._table = "";
         this._key = "id";
 
+        this.city_id = 0;
         this.status = 0;
     }
 
     fields() {
-        return "user_id, status, title, content";
+        return "user_id, city_id, status, title, content";
     }
 
     values() {
-        return `${this.user_id}, ${this.status}, '${this.title}', '${this.content}'`;
+        return `${this.user_id}, ${this.city_id}, ${this.status}, '${this.title}', '${this.content}'`;
     }
 
     list_fields() {

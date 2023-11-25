@@ -23,7 +23,7 @@ class T200VisitorModel extends T200SearchModel {
     }
     
     merge_login() {
-        return `select ${this._key}, username from ${this._table} where username = '${this.username}' and password = '${this.password}'`;
+        return `select ${this._key}, city_id, username from ${this._table} where username = '${this.username}' and password = '${this.password}'`;
     }
 
     merge_login_update() {

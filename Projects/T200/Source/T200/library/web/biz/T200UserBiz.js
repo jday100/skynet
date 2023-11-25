@@ -72,32 +72,54 @@ class T200UserBiz extends T200ForumBiz {
         return promise;
     }
 
-    /*
-    login(user) {
+    
+    modify(sql) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.check().then(function(){
-                self.store.connected().then(function(){
-                    self.store.query(user.merge_login()).then(function(){
-                        self.store.execute(user.merge_login_update()).then(function(){
-                            
+            if(self.check()){
+                if(self.store.is_connected()){
+                    return self.modify_done(sql).then(resolve, reject);
+                }else{
+                    return self.store.connect().then(function(){
+                        return self.modify_done(sql).then(resolve, reject);
+                    }, function(err){
+                        reject();
+                    }).catch(function(err){
+                        console.log(err);
+                        reject();
+                    }).finally(function(){
+                        self.store.disconnect().then(function(){
+
                         }, function(){
 
                         });
-                    }, function(){
-
                     });
-                }, function(){
+                }
+            }else{
+                reject();
+            }
+        });
 
-                });
-            }, function(){
+        return promise;
+    }
 
+    modify_done(sql) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            return self.store.execute(sql).then(function(data){
+                if(data && 0 == data.warningStatus){
+                    resolve(true);
+                }else{
+                    reject();
+                }            
+            }, function(err){
+                reject();
             });
         });
 
         return promise;
     }
-    */
+
 
 }
 

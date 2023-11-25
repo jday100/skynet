@@ -81,3 +81,67 @@
     min-height: 200px;
     margin-left: 100px;
 }
+
+#nickname_box {
+    padding-left: 200px;
+}
+
+#nickname_form > div {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form > div > label {
+    width: 100px;
+}
+
+form > div > input {
+    width: 200px;
+}
+
+#password_box {
+    padding-left: 200px;
+}
+
+#password_form > div {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#password_form > div > label {
+    width: 150px;
+}
+
+#email_form > div {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nationality_form > div {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#location_form > div {
+    width: 400px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#location_box {
+    padding-left: 200px;
+}
+
+#location_form > div > select {
+    width: 200px
+}

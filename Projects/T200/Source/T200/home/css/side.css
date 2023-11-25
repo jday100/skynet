@@ -197,3 +197,15 @@ fieldset > div > details {
 .form_button {
     margin: 10px;
 }
+
+.region_item {
+    width: 800px;
+    line-height: 35px;
+    display:flex;
+	justify-content:left;
+	align-items:center;
+}
+
+.region_value {
+    width: 200px;
+}

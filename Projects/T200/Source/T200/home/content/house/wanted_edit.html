@@ -20,7 +20,9 @@
 
 
     <script src="/js/t200.js"></script>
+    <script src="/js/t200region.js"></script>    
     <script src="/js/t200home.js"></script>
+    <script src="/js/t200person.js"></script>
 
 </head>
 
@@ -128,6 +130,13 @@
                     <div class="form_box">
                         <form id="form" class="form">
                             <input type="hidden" name="test">
+                            <div class="region_item">
+                                <label class="form_label">Location:</label>
+                                <label class="form_label">Region:</label>
+                                <input disabled class="region_value" type="text" id="region">
+                                <label class="form_label">City:</label>
+                                <input disabled class="region_value" type="text" id="city">
+                            </div>
                             <div class="form_item">
                                 <label class="form_label">Title:</label>
                                 <input class="form_value" type="text" name="title">
@@ -156,6 +165,8 @@
 <script>
     $.win.onload = function(){
         nav_check();
+
+        update_region();
 
         $.id("submit").onclick = function(){
             let result = formtostring("form");

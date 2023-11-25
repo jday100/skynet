@@ -4,6 +4,7 @@ const T200Error = require('../../library/T200Error.js');
 const T200HttpsForm = require('../../library/net/T200HttpsForm.js');
 const T200Visitor = require('../models/T200Visitor.js');
 const T200HomeVisitorBiz = require('../biz/T200HomeVisitorBiz.js');
+const T200HomeUserBiz = require('../biz/T200HomeUserBiz.js');
 
 
 async function do_login(request, response, cookie, session, resource) {
@@ -49,9 +50,35 @@ function set_data(cookie, session, data) {
     let result = {};
 
     result.userid = data[0].user_id;
+    result.cityid = data[0].city_id;
     result.username = data[0].username;
 
     session.set(sid, result);
 }
 
+
+async function do_content_person_region(request, response, cookie, session, resource) {
+    log(__filename, "do_content_person_region");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        let city_id = session.get("cityid");
+
+        if(T200HttpsForm.verify_id(city_id)){
+            response.type("json");
+            response.success(city_id);
+            resolve(city_id);
+        }else{
+            response.type("json");
+            reject();
+        }
+    
+    });
+
+    return promise;
+}
+
+
 global.action.use_post('/login', do_login);
+global.action.use_post('/content/person/region', do_content_person_region);

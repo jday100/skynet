@@ -53,3 +53,23 @@ function turning(id, obj, url) {
         alert("Load Failure!");
     });
 }
+
+function update_region() {
+    let result = ``;
+    $.post('/content/person/region', result, function(data){
+        set_region(data);
+    }, function(){
+        alert("Load Failure!");
+    });
+}
+
+function set_region(value) {
+    let result = city[value];
+
+    if(undefined == result){
+
+    }else{
+        $.id("region").value = result[1];
+        $.id("city").value = result[2];
+    }
+}
