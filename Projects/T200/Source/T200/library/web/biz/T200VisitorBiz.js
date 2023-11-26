@@ -23,6 +23,12 @@ class T200VisitorBiz extends T200SearchBiz {
                     }).catch(function(err){
                         console.log(err);
                         reject();
+                    }).finally(function(){
+                        self.store.disconnect().then(function(){
+
+                        }, function(){
+
+                        });
                     });
                 }
             }else{
@@ -66,6 +72,12 @@ class T200VisitorBiz extends T200SearchBiz {
                     }).catch(function(err){
                         console.log(err);
                         reject();
+                    }).finally(function(){
+                        self.store.disconnect().then(function(){
+
+                        }, function(){
+
+                        });
                     });
                 }
             }else{
@@ -112,6 +124,12 @@ class T200VisitorBiz extends T200SearchBiz {
                     }).catch(function(err){
                         console.log(err);
                         reject();
+                    }).finally(function(){
+                        self.store.disconnect().then(function(){
+
+                        }, function(){
+
+                        });
                     });
                 }
             }else{

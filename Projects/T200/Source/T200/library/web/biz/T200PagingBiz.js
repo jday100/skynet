@@ -26,6 +26,12 @@ class T200PagingBiz extends T200BizBase {
                     }).catch(function(err){
                         console.log(err);
                         reject();
+                    }).finally(function(){
+                        self.store.disconnect().then(function(){
+
+                        }, function(){
+
+                        });
                     });
                 }
             }else{

@@ -82,7 +82,12 @@ cities['china']                 = china;
 cities['japan']                 = japan;
 cities['south korea']           = south_korea;
 
+///home
 
+let city_list = [
+    ['south korea',             'seoul'],
+    ['japan',                   'tokyo']
+];
 
 
 ///function
@@ -136,4 +141,26 @@ function region_change(value) {
         }
         $.id('city').innerHTML = result;
     }
+}
+
+function region_setting() {
+    let result = "";
+    city_list.forEach(item => {
+        let region = cities[item[0]];
+
+        if(region){
+            let city = region[item[1]];
+
+            if(city){
+                //for(let i=0;i<20;i++)
+                result += `<a href="/region/city.html?id=${city}">${item[1]}</a>`;
+            }else{
+                alert('Load Error');
+            }
+        }else{
+            alert('Load Error');
+        }
+    });
+
+    $.id('region_box').innerHTML = result;    
 }

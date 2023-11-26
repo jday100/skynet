@@ -56,14 +56,23 @@ body > div > fieldset > div > fieldset > div {
 }
 
 .region {
-    height: 50px;
+    height: auto;
+    min-height: 50px;
     line-height: 30px;
     display: block;
+    word-break: break-all;
+    word-wrap: break-word;
 }
 
 .region > a {
     margin-left: 5px;
     margin-right: 5px;
+}
+
+.region_title {
+    width: 1024px;
+    line-height: 35px;
+    font-weight: bold;
 }
 
 

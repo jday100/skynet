@@ -22,6 +22,10 @@ class T200PagingModel extends T200ModelBase {
         return `select ${this._fields} from ${this._table} order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${this._offset}`;
     }
 
+    merge_city_list() {
+        return `select ${this._fields} from ${this._table} where city_id = ${this.city_id} order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${this._offset}`;
+    }
+
     merge_count() {
         return `select count(${this._key}) as total from ${this._table}`;
     }
