@@ -1,32 +1,30 @@
 const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
-const T200HomeVisitorModel = require('./T200HomeVisitorModel.js');
+const T200HomeUserModel = require('./T200HomeUserModel.js');
 
 
-class T200House extends T200HomeVisitorModel {
+class T200UserExchange extends T200HomeUserModel {
     constructor() {
         super();
-        this._table = "";
+        this._table = "exchange";
         this._key = "id";
 
-        this.city_id = 0;
         this.status = 0;
     }
 
     fields() {
-        return "user_id, city_id, status, title, content";
+        return "user_id, status, title, content";
     }
 
     values() {
-        return `${this.user_id}, ${this.city_id}, ${this.status}, '${this.title}', '${this.content}'`;
+        return `${this.user_id}, ${this.status}, '${this.title}', '${this.content}'`;
     }
 
     list_fields() {
         return "id, title, create_time";
     }
 
-    
     fulltext_result_fields() {
         return "id, title, create_time";
     }
@@ -37,4 +35,4 @@ class T200House extends T200HomeVisitorModel {
 
 }
 
-module.exports = T200House;
+module.exports = T200UserExchange;

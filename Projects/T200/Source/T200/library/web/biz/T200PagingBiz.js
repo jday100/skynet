@@ -10,6 +10,9 @@ class T200PagingBiz extends T200BizBase {
         this.request = request;
         this.cookie = cookie;
         this.session = session;
+
+        this._paging_count_name = "merge_paging_count";
+        this._paging_list_name = "merge_paging_list";
     }
 
     list(user) {
@@ -71,10 +74,15 @@ class T200PagingBiz extends T200BizBase {
             let result = false;
             if(self.check()){
                 if(self.store.is_connected()){
-                    self.count_done(model).then(function(total){
+                    return self.count_done(model).then(function(total){
                         model._total = total
-                        self.paging_done(model).then(function(){
-
+                        return self.paging_done(model).then(function(value){
+                            model.data = value;
+                            
+                            let data = {};
+                            data.paging = model.paging;
+                            data.values = model.data;
+                            resolve(data);
                         }, function(){
 
                         });
@@ -86,7 +94,7 @@ class T200PagingBiz extends T200BizBase {
                         return self.count_done(model).then(function(total){
                             model._total = total;
                             return self.paging_done(model).then(function(value){
-                                model.values = value;
+                                model.data = value;
                                 result = true;
                             }, function(){
     
@@ -106,7 +114,7 @@ class T200PagingBiz extends T200BizBase {
                         if(result){
                             let data = {};
                             data.paging = model.paging;
-                            data.values = model.values;
+                            data.values = model.data;
                             resolve(data);
                         }else{
                             reject();

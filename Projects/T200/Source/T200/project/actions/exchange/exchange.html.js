@@ -3,26 +3,25 @@ const T200Error = require('../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../library/net/T200HttpsForm.js');
 const T200HomeView = require('../../view/T200HomeView.js');
-const T200UserHouse = require('../../models/T200UserHouse.js');
+const T200UserExchange = require('../../models/T200UserExchange.js');
 const T200HomeUserBiz = require('../../biz/T200HomeUserBiz.js');
 
 
-async function do_house_rent_list(request, response, cookie, session, resource) {
-    log(__filename, "do_house_rent_list");
+async function do_exchange_board(request, response, cookie, session, resource) {
+    log(__filename, "do_exchange_board");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let house = new T200UserHouse();
+        let exchange = new T200UserExchange();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
-        house._table = "house_rent";
-        house._fields = house.board_fields();
-        house._order_direction = "DESC";
-        UserBiz.board(house).then(function(result){
+        exchange._fields = exchange.board_fields();
+        exchange._order_direction = "DESC";
+        UserBiz.board(exchange).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};
             data.paging = result.paging;
-            data.houses = result.values;
-            return view.render_file("house/rent.ejs", data).then(function (value) {
+            data.exchanges = result.values;
+            return view.render_file("exchange/exchange.ejs", data).then(function (value) {
                 response.type("json");
                 resolve(value);
             }, function (err) {
@@ -40,4 +39,4 @@ async function do_house_rent_list(request, response, cookie, session, resource) 
 }
 
 
-global.action.use_post('/house/rent/list', do_house_rent_list);
+global.action.use_post('/exchange/board', do_exchange_board);

@@ -13,7 +13,10 @@ class T200HomeCreate {
             user_id int, \
             status int not null default 0, \
             parent_id int default 0, \
-            city_id int default 0,\
+            region_id int default 0, \
+            region_name varchar(100), \
+            city_id int default 0, \
+            city_name varchar(100), \
             title varchar(255), \
             content text, \
             create_time timestamp not null default current_timestamp, \
@@ -27,7 +30,10 @@ class T200HomeCreate {
             user_id int, \
             status int not null default 0, \
             parent_id int default 0, \
-            city_id int default 0,\
+            region_id int default 0, \
+            region_name varchar(100), \
+            city_id int default 0, \
+            city_name varchar(100), \
             title varchar(255), \
             content text, \
             create_time timestamp not null default current_timestamp, \
@@ -41,7 +47,10 @@ class T200HomeCreate {
             user_id int, \
             status int not null default 0, \
             parent_id int default 0, \
-            city_id int default 0,\
+            region_id int default 0, \
+            region_name varchar(100), \
+            city_id int default 0, \
+            city_name varchar(100), \
             title varchar(255), \
             content text, \
             create_time timestamp not null default current_timestamp, \
@@ -55,7 +64,10 @@ class T200HomeCreate {
             user_id int, \
             status int not null default 0, \
             parent_id int default 0, \
-            city_id int default 0,\
+            region_id int default 0, \
+            region_name varchar(100), \
+            city_id int default 0, \
+            city_name varchar(100), \
             title varchar(255), \
             content text, \
             create_time timestamp not null default current_timestamp, \
@@ -69,7 +81,10 @@ class T200HomeCreate {
             user_id int, \
             status int not null default 0, \
             parent_id int default 0, \
-            city_id int default 0,\
+            region_id int default 0, \
+            region_name varchar(100), \
+            city_id int default 0, \
+            city_name varchar(100), \
             title varchar(255), \
             content text, \
             create_time timestamp not null default current_timestamp, \
@@ -83,7 +98,10 @@ class T200HomeCreate {
             user_id int, \
             status int not null default 0, \
             parent_id int default 0, \
-            city_id int default 0,\
+            region_id int default 0, \
+            region_name varchar(100), \
+            city_id int default 0, \
+            city_name varchar(100), \
             title varchar(255), \
             content text, \
             create_time timestamp not null default current_timestamp, \
@@ -133,8 +151,10 @@ class T200HomeCreate {
             city_id int default 0, \
             status int not null default 0, \
             username varchar(50) UNIQUE, \
+            nickname varchar(100), \
             password varchar(100), \
             email varchar(100) UNIQUE, \
+            intro varchar(255), \
             create_time timestamp not null default current_timestamp \
             ) character set utf8`;
     }

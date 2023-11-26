@@ -225,6 +225,7 @@ input[type="email"] + button {
 }
 
 .list_box {
+    width: 1000px;
     justify-content: flex-start;
     flex-direction: column;
     min-height: 600px;
@@ -279,7 +280,7 @@ input[type="email"] + button {
 }
 
 .forum_box {
-    width: 1000px;
+    width: 1022px;
     min-height: 200px;
     display: flex;
     justify-content: space-between;
@@ -291,7 +292,7 @@ input[type="email"] + button {
 
 
 .forum_person {
-    width: 200px;
+    width: 201px;
     padding: 10px;
 }
 
@@ -304,7 +305,7 @@ input[type="email"] + button {
 }
 
 .forum_article {
-    width: 780px;
+    width: 800px;
     min-height: 180px;
     border-left: 1px solid darkgray;
 }
@@ -324,7 +325,7 @@ input[type="email"] + button {
 }
 
 .reply_box {
-    width: 1000px;
+    width: 1022px;
     min-height: 100px;
     display: flex;
     justify-content: center;
@@ -334,9 +335,14 @@ input[type="email"] + button {
 }
 
 .reply_content {
-    width: 730px;
+    width: 720px;
     min-height: 100px;
     border-left: 1px solid darkgray;
+}
+
+.reply_content > textarea {
+    width: 720px;
+    min-height: 90px;
 }
 
 .reply_button {

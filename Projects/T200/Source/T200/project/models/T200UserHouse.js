@@ -1,10 +1,10 @@
 const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
-const T200HomeVisitorModel = require('./T200HomeVisitorModel.js');
+const T200HomeUserModel = require('./T200HomeUserModel.js');
 
 
-class T200House extends T200HomeVisitorModel {
+class T200UserHouse extends T200HomeUserModel {
     constructor() {
         super();
         this._table = "";
@@ -37,4 +37,4 @@ class T200House extends T200HomeVisitorModel {
 
 }
 
-module.exports = T200House;
+module.exports = T200UserHouse;
