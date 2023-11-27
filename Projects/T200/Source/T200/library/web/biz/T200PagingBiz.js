@@ -15,6 +15,29 @@ class T200PagingBiz extends T200BizBase {
         this._paging_list_name = "merge_paging_list";
     }
 
+
+    paging(model) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            self.command(model.paging_count_sql).then(function(){
+                self.list(model.paging_list_sql).then(function(){
+                    
+                }, function(){
+
+                });
+            }, function(){
+
+            });
+        });
+
+        return promise;
+    }
+
+
+
+
+
+    /*
     list(user) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -200,6 +223,7 @@ class T200PagingBiz extends T200BizBase {
 
         return promise;
     }
+    */
 }
 
 module.exports = T200PagingBiz;

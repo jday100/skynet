@@ -9,6 +9,28 @@ class T200VisitorBiz extends T200SearchBiz {
         super(request, cookie, session);
     }
 
+    register() {
+
+    }
+
+    login(model) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            self.load(model.merge_login()).then(function(data){
+                if(data && 1 == data.length){
+                    resolve();
+                }else{
+                    reject();
+                }
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    /*
     register(user) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -139,6 +161,7 @@ class T200VisitorBiz extends T200SearchBiz {
 
         return promise;
     }
+    */
 }
 
 module.exports = T200VisitorBiz;

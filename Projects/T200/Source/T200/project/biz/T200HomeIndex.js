@@ -72,7 +72,7 @@ class T200HomeIndex extends T200HomeVisitorBiz {
 
             notice._fields = notice.list_fields();
             notice._order_direction = "DESC";
-            return self.load(notice.merge_list()).then(function(notices){
+            return self.list(notice.merge_list()).then(function(notices){
                 data.notices = notices;
                 resolve(data);
             }, function(){
@@ -90,7 +90,7 @@ class T200HomeIndex extends T200HomeVisitorBiz {
             house._table = "house_rent";
             house._fields = house.list_fields();
             house._order_direction = "DESC";
-            return self.load(house.merge_list()).then(function(values){
+            return self.list(house.merge_list()).then(function(values){
                 data.house_rents = values;
                 resolve(data);
             }, function(){
@@ -108,7 +108,7 @@ class T200HomeIndex extends T200HomeVisitorBiz {
             house._table = "house_wanted";
             house._fields = house.list_fields();
             house._order_direction = "DESC";
-            return self.load(house.merge_list()).then(function(values){
+            return self.list(house.merge_list()).then(function(values){
                 data.house_wanteds = values;
                 resolve(data);
             }, function(){
@@ -126,7 +126,7 @@ class T200HomeIndex extends T200HomeVisitorBiz {
             job._table = "job_recruit";
             job._fields = job.list_fields();
             job._order_direction = "DESC";
-            return self.load(job.merge_list()).then(function(values){
+            return self.list(job.merge_list()).then(function(values){
                 data.job_recruits = values;
                 resolve(data);
             }, function(){
@@ -144,7 +144,7 @@ class T200HomeIndex extends T200HomeVisitorBiz {
             job._table = "job_wanted";
             job._fields = job.list_fields();
             job._order_direction = "DESC";
-            return self.load(job.merge_list()).then(function(values){
+            return self.list(job.merge_list()).then(function(values){
                 data.job_wanteds = values;
                 resolve(data);
             }, function(){
@@ -162,7 +162,7 @@ class T200HomeIndex extends T200HomeVisitorBiz {
             trading._table = "trading_sell";
             trading._fields = trading.list_fields();
             trading._order_direction = "DESC";
-            return self.load(trading.merge_list()).then(function(values){
+            return self.list(trading.merge_list()).then(function(values){
                 data.trading_sells = values;
                 resolve(data);
             }, function(){
@@ -180,7 +180,7 @@ class T200HomeIndex extends T200HomeVisitorBiz {
             trading._table = "trading_buy";
             trading._fields = trading.list_fields();
             trading._order_direction = "DESC";
-            return self.load(trading.merge_list()).then(function(values){
+            return self.list(trading.merge_list()).then(function(values){
                 data.trading_buys = values;
                 resolve(data);
             }, function(){
@@ -198,7 +198,7 @@ class T200HomeIndex extends T200HomeVisitorBiz {
 
             exchange._fields = exchange.list_fields();
             exchange._order_direction = "DESC";
-            return self.load(exchange.merge_list()).then(function(values){
+            return self.list(exchange.merge_list()).then(function(values){
                 data.exchanges = values;
                 resolve(data);
             }, function(err){

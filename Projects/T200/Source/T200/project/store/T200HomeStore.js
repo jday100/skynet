@@ -10,6 +10,106 @@ class T200HomeStore extends T200StoreBiz {
         this._client = global.database.client();
     }
 
+
+    select(sql) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            if(self.check()){
+                let result = false;
+                let data;
+                if(self.is_connected()){
+                    self.query(sql).then(function(value){
+                        resolve(value);
+                    }, function(err){
+                        reject();
+                    }).finally(function(){
+
+                    });
+                }else{
+                    self.connect().then(function(){
+                        return self.query(sql).then(function(value){
+                            result = true;
+                            data = value;
+                        }, function(err){
+
+                        }).finally(function(){
+                            return self.disconnect().then(function(){
+
+                            }, function(err){
+                                result = false;
+                            });
+                        });
+                    }, function(err){
+                        
+                    }).finally(function(){
+                        if(result){
+                            resolve(data);
+                        }else{
+                            reject();
+                        }
+                    });
+                }
+            }else{
+                reject();
+            }
+        });
+         
+        return promise;
+    }
+
+
+    command(sql) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            if(self.check()){
+                let result = false;
+                let data;
+                if(self.is_connected()){
+                    self.execute(sql).then(function(value){
+                        resolve(value);
+                    }, function(err){
+                        reject();
+                    }).finally(function(){
+
+                    });
+                }else{
+                    self.connect().then(function(){
+                        self.execute(sql).then(function(value){
+                            result = true;
+                            data = value;
+                        }, function(err){
+
+                        }).finally(function(){
+                            self.disconnect().then(function(){
+
+                            }, function(err){
+                                result = false;
+                            });
+                        });
+                    }, function(err){
+                        
+                    }).finally(function(){
+                        if(result){
+                            resolve(data);
+                        }else{
+                            reject();
+                        }
+                    });
+                }
+            }else{
+                reject();
+            }
+        });
+         
+        return promise;
+    }
+
+
+
+
+
+
+    /*
     load(sql) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -95,6 +195,8 @@ class T200HomeStore extends T200StoreBiz {
 
         return promise;
     }
+    */
+
 }
 
 module.exports = T200HomeStore;

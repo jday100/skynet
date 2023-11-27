@@ -10,7 +10,22 @@ class T200SearchBiz extends T200PagingBiz {
 
         this.search = request.get("search");
     }
+
+
+    fulltext(model) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            self.paging(model).then(function(){
+                
+            }, function(){
+
+            });
+        });
+
+        return promise;
+    }
     
+    /*
     fulltext(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -102,6 +117,7 @@ class T200SearchBiz extends T200PagingBiz {
 
         return promise;
     }
+    */
 }
 
 module.exports = T200SearchBiz;

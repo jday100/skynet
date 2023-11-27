@@ -51,6 +51,8 @@ class T200DBClient {
                     resolve(data);
                 }, function(err){
                     reject(T200Error.build());
+                }).catch(function(err){
+                    reject(T200Error.build());
                 });
             }
         });

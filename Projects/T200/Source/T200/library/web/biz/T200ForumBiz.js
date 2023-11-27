@@ -11,7 +11,21 @@ class T200ForumBiz extends T200SearchBiz {
         this._paging_count_name = "merge_board_count";
         this._paging_list_name = "merge_board_list";
     }
+
+    board(model) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            self.paging(model).then(function(){
+                
+            }, function(){
+
+            });
+        });
+
+        return promise;
+    }
     
+    /*
     board(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -57,6 +71,7 @@ class T200ForumBiz extends T200SearchBiz {
 
         return promise;
     }
+    */
 
 }
 
