@@ -59,7 +59,7 @@ function update_region() {
     $.post('/content/person/region', result, function(data){
         set_region(data);
     }, function(){
-        alert("Load Failure!");
+        alert("Please set the location in the profile first!");
     });
 }
 
@@ -71,5 +71,24 @@ function set_region(value) {
     }else{
         $.id("region").value = result[1];
         $.id("city").value = result[2];
+    }
+}
+
+function query_id() {
+    let query = location.search;
+
+    if(null == query){
+
+    }else{
+        if(-1 != query.indexOf("?")) {
+            let str = query.slice(1);
+            let values = str.split("=");
+
+            if(2 == values.length){
+                if("id" == values[0]){
+                    $.set_cookie("id", values[1]);
+                }
+            }
+        }
     }
 }

@@ -46,8 +46,9 @@ async function do_content_house_wanted_add(request, response, cookie, session, r
             && T200HttpsForm.verify_text(house.title)
             && T200HttpsForm.verify_text(house.content)){
                 house._table = "house_wanted";
+                house._fields = house.fields();
                 house._values = house.values();
-                UserBiz.add(house).then(resolve, reject);
+                UserBiz.append(house.merge_insert()).then(resolve, reject);
         }else{
             reject();
         }

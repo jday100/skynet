@@ -52,7 +52,7 @@
         </nav>
 
         <fieldset class="title">
-            <legend>House - Rent</legend>
+            <legend>House - Wanted</legend>
             <div id="list_box" class="list_box">
             </div>
         </fieldset>
@@ -69,8 +69,10 @@
     $.win.onload = function () {
         nav_check();
 
+        query_id();
+
         let data = "test=";
-        $.post('/house/rent/list', data, function (result) {
+        $.post('/house/wanted/list', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
             alert('Login Failure!');

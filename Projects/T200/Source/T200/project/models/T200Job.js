@@ -23,7 +23,7 @@ class T200Job extends T200HomeVisitorModel {
     }
 
     list_fields() {
-        return "title, create_time";
+        return "id, title, create_time";
     }
 
     fulltext_result_fields() {

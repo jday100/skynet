@@ -46,8 +46,9 @@ async function do_content_job_wanted_add(request, response, cookie, session, res
             && T200HttpsForm.verify_text(job.title)
             && T200HttpsForm.verify_text(job.content)){
                 job._table = "job_wanted";
+                job._fields = job.fields();
                 job._values = job.values();
-                UserBiz.add(job).then(resolve, reject);
+                UserBiz.append(job.merge_insert()).then(resolve, reject);
         }else{
             reject();
         }

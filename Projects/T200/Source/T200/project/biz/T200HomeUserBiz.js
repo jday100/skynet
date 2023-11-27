@@ -11,7 +11,7 @@ class T200HomeUserBiz extends T200UserBiz {
         this.store = new T200HomeStore();
     }
 
-    
+    /*
     add(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -47,6 +47,7 @@ class T200HomeUserBiz extends T200UserBiz {
 
         return promise;
     }
+    */
 }
 
 module.exports = T200HomeUserBiz;

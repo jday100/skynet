@@ -7,31 +7,45 @@ const T200UserExchange = require('../../models/T200UserExchange.js');
 const T200HomeUserBiz = require('../../biz/T200HomeUserBiz.js');
 
 
-async function do_exchange_board(request, response, cookie, session, resource) {
-    log(__filename, "do_exchange_board");
+async function do_exchange_list(request, response, cookie, session, resource) {
+    log(__filename, "do_exchange_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let exchange = new T200UserExchange();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
-        exchange._fields = exchange.board_fields();
-        exchange._order_direction = "DESC";
-        UserBiz.board(exchange).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.exchanges = result.values;
-            return view.render_file("exchange/exchange.ejs", data).then(function (value) {
-                response.type("json");
-                resolve(value);
+        let item = cookie.get("id");
+
+        if(undefined == item){
+
+        }else{
+            exchange.id = item._value;
+        }
+
+        if(T200HttpsForm.verify_id(exchange.id)){
+            exchange._fields = exchange.board_fields();
+            exchange._order_direction = "DESC";
+            exchange.board_count_sql = exchange.merge_board_count(exchange.id);
+            exchange.board_list_sql = exchange.merge_board_list(exchange.id);
+            UserBiz.board(exchange).then(function(result){
+                let view = new T200HomeView(resource);
+                let data = {};
+                data.paging = result.paging;
+                data.exchanges = result.values;
+                return view.render_file("exchange/exchange.ejs", data).then(function (value) {
+                    response.type("json");
+                    resolve(value);
+                }, function (err) {
+                    response.type("json");
+                    reject();
+                });
             }, function (err) {
                 response.type("json");
                 reject();
             });
-        }, function (err) {
-            response.type("json");
-            reject();
-        });
+        }else{
+            
+        }
   
     });
 
@@ -39,4 +53,4 @@ async function do_exchange_board(request, response, cookie, session, resource) {
 }
 
 
-global.action.use_post('/exchange/board', do_exchange_board);
+global.action.use_post('/exchange/list', do_exchange_list);

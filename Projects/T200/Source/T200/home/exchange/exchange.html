@@ -69,8 +69,10 @@
     $.win.onload = function () {
         nav_check();
 
+        query_id();
+
         let data = "test=";
-        $.post('/exchange/board', data, function (result) {
+        $.post('/exchange/list', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
             alert('Login Failure!');

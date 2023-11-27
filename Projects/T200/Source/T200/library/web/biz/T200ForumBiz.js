@@ -15,10 +15,12 @@ class T200ForumBiz extends T200SearchBiz {
     board(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.paging(model).then(function(){
-                
-            }, function(){
-
+            model.paging_count_sql = model.board_count_sql;
+            model.paging_list_sql = model.board_list_sql;
+            self.paging(model).then(function(data){
+                resolve(data);
+            }, function(err){
+                reject();
             });
         });
 

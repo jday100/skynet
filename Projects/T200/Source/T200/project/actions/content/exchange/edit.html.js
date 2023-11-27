@@ -43,8 +43,9 @@ async function do_content_exchange_add(request, response, cookie, session, resou
         if(T200HttpsForm.verify_id(exchange.user_id)
             && T200HttpsForm.verify_text(exchange.title)
             && T200HttpsForm.verify_text(exchange.content)){
+                exchange._fields = exchange.fields();
                 exchange._values = exchange.values();
-                UserBiz.add(exchange).then(resolve, reject);
+                UserBiz.append(exchange.merge_insert()).then(resolve, reject);
         }
     });
 

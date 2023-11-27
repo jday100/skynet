@@ -69,6 +69,8 @@
     $.win.onload = function () {
         nav_check();
 
+        query_id();
+
         let data = "test=";
         $.post('/house/rent/list', data, function (result) {
             $.id("list_box").innerHTML = result;

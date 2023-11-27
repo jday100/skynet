@@ -1,0 +1,70 @@
+<%
+    jobs.forEach(item => {
+        if(0 == item.parent_id){
+            %>
+                <div class="forum_box">
+                    <div class="forum_person">
+                        <div class="forum_user">
+                            user
+                        </div>
+                        <div class="forum_intro">
+                            intro
+                        </div>
+                    </div>
+                    <div class="forum_article">
+                        <div>
+                            <%=item.title%>
+                        </div>
+                        <div>
+                            <%=item.content%>
+                        </div>
+                        <div>
+                            reply
+                        </div>
+                    </div>
+                </div>
+            <%
+        }else{
+            %>
+            <div class="forum_box">
+                <div class="forum_person">
+                    <div class="forum_user">
+                        user
+                    </div>
+                    <div class="forum_intro">
+                        intro
+                    </div>
+                </div>
+                <div class="forum_article">
+                    <div class="forum_title">
+                        @user
+                    </div>
+                    <div class="forum_content">
+                        <%=item.content%>
+                    </div>
+                    <div class="forum_footer">
+                        reply
+                    </div>
+                </div>
+            </div>
+            <%
+        }
+    });
+%>
+
+
+<div>
+    1 2 3 4 5
+</div>
+
+<div class="reply_box">
+    <div class="forum_person">
+        Reply
+    </div>
+    <div class="reply_content">
+        <textarea></textarea>
+    </div>
+    <div class="reply_button">
+        <button>Reply</button>
+    </div>
+</div>

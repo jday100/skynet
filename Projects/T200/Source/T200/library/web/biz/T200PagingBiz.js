@@ -19,9 +19,14 @@ class T200PagingBiz extends T200BizBase {
     paging(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.command(model.paging_count_sql).then(function(){
-                self.list(model.paging_list_sql).then(function(){
-                    
+            self.count(model.paging_count_sql).then(function(total){
+                model._total = total;
+                self.calculate(model);
+                return self.list(model.paging_list_sql).then(function(value){
+                    let data = {};
+                    data.paging = model.paging;
+                    data.values = value;
+                    resolve(data);
                 }, function(){
 
                 });
@@ -34,6 +39,41 @@ class T200PagingBiz extends T200BizBase {
     }
 
 
+    calculate(model) {
+        //let page = model._page;
+        let page = this.request.get("page");
+        let total = model._total;
+
+        let prev = page - 1;
+        let next = page + 1;
+
+        let paging = {};
+
+        paging.first = 1;
+        paging.last = Math.ceil(total / model._page_size);
+        if(0 == paging.last){
+            paging.last = 1;
+        }
+
+        paging.prev = prev < paging.first ? paging.first : prev;
+        paging.next = next > paging.last ? paging.last : next;
+
+        let head = Math.floor(page / model._page_size) * model._page_size;
+        let tail = head + model._page_size;
+
+        head = 0 == head ? 1 : head;
+        paging.pages = new Array();
+
+        for(let i = head;i <= tail;i++){
+            if(i > paging.last){
+                break;
+            }else{
+                paging.pages.push(i);
+            }
+        }
+
+        model.paging = paging;
+    }
 
 
 

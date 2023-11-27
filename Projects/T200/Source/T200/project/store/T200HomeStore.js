@@ -74,13 +74,13 @@ class T200HomeStore extends T200StoreBiz {
                     });
                 }else{
                     self.connect().then(function(){
-                        self.execute(sql).then(function(value){
+                        return self.execute(sql).then(function(value){
                             result = true;
                             data = value;
                         }, function(err){
 
                         }).finally(function(){
-                            self.disconnect().then(function(){
+                            return self.disconnect().then(function(){
 
                             }, function(err){
                                 result = false;

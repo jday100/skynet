@@ -10,7 +10,7 @@ base:
     search
     list
     load
-
+    count
 
 paging:
     paging
@@ -126,7 +126,27 @@ class T200BizBase {
         return promise;
     }
 
+    count(sql) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            if(self.check()) {
+                self.store.select(sql).then(function(data){
+                    if(data && 1 == data.length){
+                        let total = Number(data[0].total);
+                        resolve(total);
+                    }else{
+                        reject();
+                    }
+                }, function(err){
+                    reject();
+                });
+            }else{
+                reject();
+            }
+        });
 
+        return promise;
+    }
 
 
 

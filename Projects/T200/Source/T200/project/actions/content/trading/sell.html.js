@@ -17,6 +17,8 @@ async function do_content_trading_sell_list(request, response, cookie, session, 
         trading._table = "trading_sell";
         trading._fields = trading.list_fields();
         trading._order_direction = "DESC";
+        trading.paging_count_sql = trading.merge_count();
+        trading.paging_list_sql = trading.merge_paging();
         UserBiz.paging(trading).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};

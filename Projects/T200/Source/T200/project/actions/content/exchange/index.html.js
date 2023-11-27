@@ -17,6 +17,8 @@ async function do_content_exchange_list(request, response, cookie, session, reso
 
         exchange._fields = exchange.list_fields();
         exchange._order_direction = "DESC";
+        exchange.paging_count_sql = exchange.merge_count();
+        exchange.paging_list_sql = exchange.merge_paging();
         UserBiz.paging(exchange).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};

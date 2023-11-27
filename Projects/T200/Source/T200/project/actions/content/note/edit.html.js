@@ -43,8 +43,9 @@ async function do_content_note_add(request, response, cookie, session, resource,
         if(T200HttpsForm.verify_id(note.user_id)
             && T200HttpsForm.verify_text(note.title)
             && T200HttpsForm.verify_text(note.content)){
+                note._fields = note.fields();
                 note._values = note.values();
-                UserBiz.add(note).then(resolve, reject);
+                UserBiz.append(note.merge_insert()).then(resolve, reject);
         }
     });
 

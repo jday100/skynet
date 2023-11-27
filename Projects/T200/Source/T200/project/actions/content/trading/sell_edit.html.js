@@ -46,8 +46,9 @@ async function do_content_trading_sell_add(request, response, cookie, session, r
             && T200HttpsForm.verify_text(trading.title)
             && T200HttpsForm.verify_text(trading.content)){
                 trading._table = "trading_sell";
+                trading._fields = trading.fields();
                 trading._values = trading.values();
-                UserBiz.add(trading).then(resolve, reject);
+                UserBiz.append(trading.merge_insert()).then(resolve, reject);
         }else{
             reject();
         }

@@ -14,26 +14,34 @@ async function do_house_rent_list(request, response, cookie, session, resource) 
         let house = new T200UserHouse();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
-        house._table = "house_rent";
-        house._fields = house.board_fields();
-        house._order_direction = "DESC";
-        UserBiz.board(house).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.houses = result.values;
-            return view.render_file("house/rent.ejs", data).then(function (value) {
-                response.type("json");
-                resolve(value);
+        house.id = cookie.get("id")._value;
+
+        if(T200HttpsForm.verify_id(house.id)){
+            house._table = "house_rent";
+            house._fields = house.board_fields();
+            house._order_direction = "DESC";
+            house.board_count_sql = house.merge_board_count(house.id);
+            house.board_list_sql = house.merge_board_list(house.id);
+            UserBiz.board(house).then(function(result){
+                let view = new T200HomeView(resource);
+                let data = {};
+                data.paging = result.paging;
+                data.houses = result.values;
+                return view.render_file("house/rent.ejs", data).then(function (value) {
+                    response.type("json");
+                    resolve(value);
+                }, function (err) {
+                    response.type("json");
+                    reject();
+                });
             }, function (err) {
                 response.type("json");
                 reject();
             });
-        }, function (err) {
-            response.type("json");
+        }else{
             reject();
-        });
-  
+        }
+
     });
 
     return promise;
