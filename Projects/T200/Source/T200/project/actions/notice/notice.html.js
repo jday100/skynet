@@ -14,7 +14,13 @@ async function do_notice_get(request, response, cookie, session, resource) {
         let notice = new T200Notice();
         let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
 
-        notice.id = cookie.get("nid")._value;
+        let item = cookie.get("nid");
+
+        if(undefined == item){
+
+        }else{
+            notice.id = item._value;
+        }
 
         if(T200HttpsForm.verify_id(notice.id)){
             notice._fields = notice.view_fields();

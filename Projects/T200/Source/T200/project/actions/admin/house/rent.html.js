@@ -17,6 +17,8 @@ async function do_admin_house_rent_list(request, response, cookie, session, reso
         house._table = "house_rent";
         house._fields = house.list_fields();
         house._order_direction = "DESC";
+        house.paging_count_sql = house.merge_count();
+        house.paging_list_sql = house.merge_paging();
         AdminBiz.paging(house).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};

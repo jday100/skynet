@@ -16,6 +16,8 @@ async function do_admin_note_list(request, response, cookie, session, resource) 
 
         note._fields = note.list_fields();
         note._order_direction = "DESC";
+        note.paging_count_sql = note.merge_count();
+        note.paging_list_sql = note.merge_paging();
         AdminBiz.paging(note).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};

@@ -17,6 +17,8 @@ async function do_admin_job_wanted_list(request, response, cookie, session, reso
         job._table = "job_wanted";
         job._fields = job.list_fields();
         job._order_direction = "DESC";
+        job.paging_count_sql = job.merge_count();
+        job.paging_list_sql = job.merge_paging();
         AdminBiz.paging(job).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};

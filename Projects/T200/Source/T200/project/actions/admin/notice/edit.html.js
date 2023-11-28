@@ -43,8 +43,9 @@ async function do_admin_notice_add(request, response, cookie, session, resource,
         if(T200HttpsForm.verify_id(notice.user_id)
             && T200HttpsForm.verify_text(notice.title)
             && T200HttpsForm.verify_text(notice.content)){
+                notice._fields= notice.fields();
                 notice._values = notice.values();
-                AdminBiz.add(notice).then(resolve, reject);
+                AdminBiz.append(notice.merge_insert()).then(resolve, reject);
         }
     });
 

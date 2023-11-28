@@ -48,8 +48,8 @@ function set_data(cookie, session, data) {
 
     let result = {};
 
-    result.userid = data[0].user_id;
-    result.username = data[0].username;
+    result.userid = data.user_id;
+    result.username = data.username;
 
     session.set(sid, result);
 }

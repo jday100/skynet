@@ -44,7 +44,7 @@ async function do_admin_note_add(request, response, cookie, session, resource, A
             && T200HttpsForm.verify_text(note.title)
             && T200HttpsForm.verify_text(note.content)){
                 note._values = note.values();
-                AdminBiz.add(note).then(resolve, reject);
+                AdminBiz.append(note.merge_insert()).then(resolve, reject);
         }
     });
 
