@@ -136,6 +136,8 @@ fieldset > div > details {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+
+    background-color :darksalmon;
 }
 
 .item_left {
@@ -208,4 +210,18 @@ fieldset > div > details {
 
 .region_value {
     width: 200px;
+}
+
+.control_panel {
+    display:flex;
+	justify-content:right;
+	align-items:center;
+}
+
+.status_box {
+    margin-left: 30px;
+}
+
+.approve_button {
+    margin-left: 10px;
 }

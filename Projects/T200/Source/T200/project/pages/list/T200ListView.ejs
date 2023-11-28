@@ -1,0 +1,109 @@
+<div id="list_box" class="list_box">
+    <div class="list_search">
+        <input type="text">
+        <button onclick="list_hit_search();">Search</button>
+    </div>
+    <div>
+        <div>
+            <%
+                if(paging.first){
+                    %>
+                        <a href="#" onclick="list_hit_page();">First</a>
+                    <%
+                }
+                if(paging.pages){
+                    paging.pages.forEach(item => {
+                        %>
+                            <a href="#" onclick="list_hit_page();"><%=item%></a>
+                        <%
+                    });
+                }
+                if(paging.last){
+                    %>
+                        <a href="#" onclick="list_hit_page();">Last</a>
+                    <%
+                }
+            %>
+        </div>
+    </div>
+    <div class="list_group">
+        <form id="form" onsubmit="return false;">
+            <input type="hidden" name="test">
+            <div class="list_control_panel">
+                <select onchange="list_change_status();">
+                    <option>All</option>
+                </select>
+                <button onclick="list_hit_delete();">Delete</button>
+                <button onclick="list_hit_edit();">Edit</button>
+                <button onclick="list_hit_update();">Update</button>
+
+                <%
+                    list_buttons.forEach(button => {
+                        %>
+                            <button class="list_button" onclick="<%=button[1]%>('<%=button[2]%>', $.id('<%=button[2]%>'), '<%=button[4]%>');"><%=button[0]%></button>
+                        <%
+                    });
+                %>
+            </div>
+
+
+            <%
+                let i = 0;
+                values.forEach(item => {
+                    %>
+                        <div class="list_item">
+                            <div class="list_item_left">
+                    <%
+                        item_left.forEach(left => {
+                            if(left[1]){
+                                %>
+                                    <a href="<%=left[2]%>"><%=item[left[0]]%></a>
+                                <%
+                            }else{
+                                %>
+                                    <a href=""></a>
+                                <%
+                            }
+                        });
+                    %>
+                            </div>
+                            <div class="list_item_right">
+                    <%
+                        item_right.forEach(right => {
+                            if(right[1]){
+                                %>
+                                    <a href="<%=right[2]%>"><%=item[right[0]]%></a>
+                                <%
+                            }else{
+                                if(right[3]){
+                                    %>
+                                        <input type="hidden" id="<%=right[4]%><%=i%>" value="<%=item[right[0]]%>">
+                                        <input disabled type="text" id="<%=right[5]%><%=i%>" value="">
+                                    <%
+                                }else{
+                                    %>
+                                        <%=item[right[0]]%>
+                                    <%
+                                }
+                                
+                            }
+                        });
+                    %>          <input type="checkbox" name="ids" value="<%=item.id%>">              
+                            </div>
+                        </div>
+                    <%
+                    i++;
+                });
+            %>
+        
+            <div>
+                Edit
+            </div>
+        </form>
+    </div>
+    <div>
+        <div>
+            1 2 3 4 5
+        </div>
+    </div>
+</div>

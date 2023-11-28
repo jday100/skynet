@@ -14,7 +14,7 @@ async function do_notice_get(request, response, cookie, session, resource) {
         let notice = new T200Notice();
         let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
 
-        let item = cookie.get("nid");
+        let item = cookie.get("id");
 
         if(undefined == item){
 

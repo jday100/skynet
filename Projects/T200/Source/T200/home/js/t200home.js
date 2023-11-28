@@ -1,3 +1,10 @@
+var StatusType = {
+    unreviewed : 0,
+    reviewed : 1,
+    deleted : -1
+};
+
+
 function login() {
     $.set_cookie('sid', 1);
     alert('Login Success!');
@@ -91,4 +98,71 @@ function query_id() {
             }
         }
     }
+}
+
+function update_status() {
+    for(let i=0;i<10;i++){
+        let obj = $.id('id'+i);
+
+        if(undefined == obj){
+            //alert(1);
+        }else{
+            let value;
+            switch(obj.value){
+                case '-1':
+                    value = 'deleted';
+                    break;
+                case '0':
+                    value = 'unreviewed';
+                    break;
+                case '1':
+                    value = 'reviewed';
+                    break;
+            }
+            $.id('status'+i).value = value;
+        }
+    }
+}
+
+
+function hit_delete(id, obj, url) {
+    let result = `test=&page=${id}`;
+    $.post(url, result, function(data){
+        obj.innerHTML = data;
+    }, function(){
+        alert("Load Failure!");
+    });
+}
+
+
+function hit_approve(id, obj, url) {
+    let result = `test=&page=${id}`;
+    $.post(url, result, function(data){
+        obj.innerHTML = data;
+    }, function(){
+        alert("Load Failure!");
+    });
+}
+
+
+function change_status() {
+
+}
+
+function update_time() {
+    for(let i=0;i<10;i++){
+        let obj = $.id('time'+i);
+
+        if(undefined == obj){
+            //alert(1);
+        }else{
+            let value = show_time(obj.value);
+            $.id('time_title'+i).value = value;
+        }
+    }
+}
+
+
+function show_time(value) {
+    return value;
 }

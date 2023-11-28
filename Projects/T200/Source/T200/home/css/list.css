@@ -1,0 +1,37 @@
+.list_box {
+
+}
+
+.list_search {
+
+}
+
+.list_msg {
+
+}
+
+.list_control_panel {
+    display:flex;
+	justify-content:right;
+	align-items:center;
+}
+
+.list_group {
+
+}
+
+.list_item {
+
+}
+
+.list_item_left {
+
+}
+
+.list_item_right {
+    
+}
+
+.list_button {
+    margin-left: 10px;
+}

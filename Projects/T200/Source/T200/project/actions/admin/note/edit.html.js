@@ -43,6 +43,7 @@ async function do_admin_note_add(request, response, cookie, session, resource, A
         if(T200HttpsForm.verify_id(note.user_id)
             && T200HttpsForm.verify_text(note.title)
             && T200HttpsForm.verify_text(note.content)){
+                note._fields = note.fields();
                 note._values = note.values();
                 AdminBiz.append(note.merge_insert()).then(resolve, reject);
         }

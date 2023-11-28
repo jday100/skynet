@@ -126,6 +126,7 @@
                             <div class="search_box">
                 
                                 <input type="hidden" name="test">
+                                <input type="hidden" name="page" value="1">
                                 <input type="text" name="search">
                                 <button class="search_button">Search</button>
                         
@@ -181,6 +182,8 @@
         let result = formtostring("form");
         $.post('/admin/notice/list', result, function(data){
             $.id("list_box").innerHTML = data;
+            update_status();
+            update_time();
         }, function(){
             alert("Load Failure!");
         });

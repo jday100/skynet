@@ -8,9 +8,9 @@ log_start(__filename, "test_database");
 let setup = new T200DBSetup();
 let database = new T200Database();
 
-database.setup.database = "home";
-database.setup.user = "home";
-database.setup.password = "home123";
+setup.database = "home";
+setup.user = "home";
+setup.password = "home123";
 
 let result = false;
 
@@ -64,7 +64,7 @@ database.start(setup).then(function(){
 
 }, function(){
     log(__filename, "database start failure");
-}).catch(function(){
+}).catch(function(err){
     log(__filename, "database start error");
 }).finally(function(){
     if(result){
