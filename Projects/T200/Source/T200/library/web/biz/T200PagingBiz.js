@@ -11,6 +11,8 @@ class T200PagingBiz extends T200BizBase {
         this.cookie = cookie;
         this.session = session;
 
+        this._page = request.get("page");
+
         this._paging_count_name = "merge_paging_count";
         this._paging_list_name = "merge_paging_list";
     }
@@ -22,6 +24,8 @@ class T200PagingBiz extends T200BizBase {
             self.count(model.paging_count_sql).then(function(total){
                 model._total = total;
                 self.calculate(model);
+                model._offset = model.paging.offset;
+                model.paging_list_sql = model.merge_paging(model.offset);
                 return self.list(model.paging_list_sql).then(function(value){
                     let data = {};
                     data.paging = model.paging;
@@ -71,6 +75,8 @@ class T200PagingBiz extends T200BizBase {
                 paging.pages.push(i);
             }
         }
+
+        paging.offset = (page - 1) * model._page_size;
 
         model.paging = paging;
     }
