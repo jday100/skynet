@@ -25,7 +25,7 @@ class T200PagingBiz extends T200BizBase {
                 model._total = total;
                 self.calculate(model);
                 model._offset = model.paging.offset;
-                model.paging_list_sql = model.merge_paging(model.offset);
+                model.paging_list_sql = model.merge_paging(model._offset);
                 return self.list(model.paging_list_sql).then(function(value){
                     let data = {};
                     data.paging = model.paging;

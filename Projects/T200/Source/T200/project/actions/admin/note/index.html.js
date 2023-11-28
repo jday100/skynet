@@ -16,10 +16,14 @@ async function do_admin_note_list(request, response, cookie, session, resource) 
         let note = new T200AdminNote();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        let status = request.get("status");
+
         note._fields = note.list_fields();
         note._order_direction = "DESC";
-        note.paging_count_sql = note.merge_count();
-        note.paging_list_sql = note.merge_paging();
+        note.paging_count_sql = note.merge_status_count(status);
+        //note.paging_list_sql = note.merge_status_paging(status);
+        note.status = status;
+        note.merge_paging = note.merge_status_paging_test;
         AdminBiz.paging(note).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};
@@ -27,6 +31,8 @@ async function do_admin_note_list(request, response, cookie, session, resource) 
             data.values = result.values;
             
             let list = new T200ListView(resource);
+
+            list._change_status_url = "/admin/note/list";
 
             return list.show(data).then(function(value){
                 response.type("json");
@@ -119,6 +125,42 @@ async function do_admin_note_approve(request, response, cookie, session, resourc
 }
 
 
+async function do_admin_note_remove(request, response, cookie, session, resource) {
+    log(__filename, "do_admin_note_remove");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let note = new T200AdminNote();
+        let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
+
+        note.ids = request.get("ids");
+        note.status = -1;
+
+        if(T200HttpsForm.verify_ids(note.ids)
+            && T200HttpsForm.verify_status(note.status)){
+            
+            AdminBiz.modify(note.merge_status_update()).then(function(result){
+                if(result){
+                    response.type("json");
+                    resolve();
+                }else{
+                    response.type("json");
+                    reject();
+                }
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+
+        }else{
+            reject(T200Error.build(1));
+        }
+    });
+
+    return promise;
+}
+
+
 global.action.use_post('/admin/note/list', do_admin_note_list);
 global.action.use_post('/admin/note/search', do_admin_note_search);
 global.action.use_post('/admin/note/approve', do_admin_note_approve);
+global.action.use_post('/admin/note/remove', do_admin_note_remove);

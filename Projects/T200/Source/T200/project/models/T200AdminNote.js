@@ -14,6 +14,31 @@ class T200AdminNote extends T200HomeAdminModel {
     }
 
 
+    merge_status_count(value) {
+        if(undefined == value){
+            return `select count(${this._key}) as total from ${this._table}`;
+        }
+        return `select count(${this._key}) as total from ${this._table} where status = ${value}`;
+    }
+
+    merge_status_paging_test(value) {
+        if(undefined == this.status){
+            return `select ${this._fields} from ${this._table} order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${value}`;
+        }
+        return `select ${this._fields} from ${this._table} where status = ${this.status} order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${value}`;
+    }
+
+    merge_status_paging(value) {
+        if(undefined == value){
+            return `select ${this._fields} from ${this._table} order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${this._offset}`;
+        }
+        return `select ${this._fields} from ${this._table} where status = ${value} order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${this._offset}`;
+    }
+
+    merge_select_by_status(value) {
+        return `select ${this._fields} from ${this._table} where status = ${value} order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${this._offset}`;
+    }
+
     merge_status_update() {
         return `update ${this._table} set status = ${this.status} where id in (${this.ids})`;
     }

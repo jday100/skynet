@@ -19,7 +19,7 @@ class T200ListView {
 
     list_buttons() {
         return [
-            ['Delete', 'list_hit_delete', '', '', ''],
+            ['Delete', 'list_hit_delete', 'form', 'list_box', '/admin/note/remove'],
             ['Approve', 'list_hit_approve', 'form', 'list_box', '/admin/note/approve']
         ];
     }
@@ -47,6 +47,8 @@ class T200ListView {
             data.item_left = self.item_left();
             data.item_right = self.item_right();
             data.list_buttons = self.list_buttons();
+
+            data.change_status_url = self._change_status_url;
             return self.view.render_file(file, data).then(function(result){
                 resolve(result);
             }, function(err){
