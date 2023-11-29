@@ -3,34 +3,61 @@ const T200Error = require('../../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
 const T200HomeView = require('../../../view/T200HomeView.js');
-const T200Job = require('../../../models/T200Job.js');
+const T200AdminJobRecruit = require('../../../models/T200AdminJobRecruit.js');
 const T200HomeAdminBiz = require('../../../biz/T200HomeAdminBiz.js');
+
+const T200ListView = require('../../../../library/web/view/T200ListView.js');
 
 
 async function do_admin_job_recruit_list(request, response, cookie, session, resource) {
     log(__filename, "do_admin_job_recruit_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let job = new T200Job();
+        let job = new T200AdminJobRecruit();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        job._table = "job_recruit";
-        job._fields = job.list_fields();
+        
+        let status = request.get("status");
+
+        switch(status){
+            case '1':
+                job.status = request.get("status1");
+                break;
+            case '2':
+                job.status = request.get("status2");
+                break;
+            default:
+                job.status = status;
+        }
+
+        job._fields = job.list_status_fields();
         job._order_direction = "DESC";
-        job.paging_count_sql = job.merge_count();
-        job.paging_list_sql = job.merge_paging();
+        job.paging_count_sql = job.merge_status_count(job.status);
+        job.merge_paging = job.merge_status_paging_test;
         AdminBiz.paging(job).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};
             data.paging = result.paging;
-            data.jobs = result.values;
-            return view.render_file("admin/job/recruit_index.ejs", data).then(function (value) {
+            data.values = result.values;
+            data.status = job.status;
+            let list = new T200ListView(resource);
+
+            list._list_url = "/admin/job/recruit/list";
+            list._search_url = "/admin/job/recruit/search";
+            list._change_status_url = "/admin/job/recruit/list";
+
+            data.item_left = job.set_item_left();
+            data.item_right = job.set_item_right();
+            data.list_buttons = job.set_list_buttons();
+
+            return list.show(data).then(function(value){
                 response.type("json");
                 resolve(value);
-            }, function (err) {
+            }, function(){
                 response.type("json");
                 reject();
             });
+           
         }, function (err) {
             response.type("json");
             reject();
@@ -45,30 +72,136 @@ async function do_admin_job_recruit_search(request, response, cookie, session, r
     log(__filename, "do_admin_job_recruit_search");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let job = new T200Job();
+        let job = new T200AdminJobRecruit();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        job._table = "job_recruit";
-        job._fields = job.fulltext_result_fields();
-        job._search_fields = job.fulltext_fields();
-        job._order_direction = "DESC";
-        AdminBiz.fulltext(job).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.jobs = result.values;
-            return view.render_file("admin/job/recruit_index.ejs", data).then(function (value) {
-                response.type("json");
-                resolve(value);
+        let status = request.get("status");
+        let search = request.get("search");
+
+        switch(status){
+            case '1':
+                job.status = request.get("status1");
+                break;
+            case '2':
+                job.status = request.get("status2");
+                break;
+            default:
+                job.status = status;
+        }
+
+        if(T200HttpsForm.verify_text(search)){
+            job._search = search;
+            job._fields = job.fulltext_result_fields();
+            job._search_fields = job.fulltext_fields();
+            job._order_direction = "DESC";
+            job.fulltext_count_sql = job.merge_fulltext_count(job.status, search);
+   
+            job.merge_paging = job.merge_fulltext_test;
+            AdminBiz.fulltext(job).then(function(result){
+                let view = new T200HomeView(resource);
+                let data = {};
+                data.paging = result.paging;
+                data.values = result.values;
+                data.status = job.status;
+
+                let list = new T200ListView(resource);
+
+                list._list_url = "/admin/job/recruit/list";
+                list._search_url = "/admin/job/recruit/search";
+                list._change_status_url = "/admin/job/recruit/list";
+
+                data.item_left = job.set_item_left();
+                data.item_right = job.set_item_right();
+                data.list_buttons = job.set_list_buttons();
+    
+                return list.show(data).then(function(value){
+                    response.type("json");
+                    resolve(value);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+     
             }, function (err) {
                 response.type("json");
                 reject();
             });
-        }, function (err) {
-            response.type("json");
-            reject();
-        });
 
+        }else{
+            reject(T200Error.build(1));
+        }
+
+    });
+
+    return promise;
+}
+
+
+
+async function do_admin_job_recruit_approve(request, response, cookie, session, resource) {
+    log(__filename, "do_admin_job_recruit_approve");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let job = new T200AdminJobRecruit();
+        let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
+
+        job.ids = request.get("ids");
+        job.status = 1;
+
+        if(T200HttpsForm.verify_ids(job.ids)
+            && T200HttpsForm.verify_id(job.status)){
+            
+            AdminBiz.modify(job.merge_status_update()).then(function(result){
+                if(result){
+                    response.type("json");
+                    resolve();
+                }else{
+                    response.type("json");
+                    reject();
+                }
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+
+        }else{
+            reject(T200Error.build(1));
+        }
+    });
+
+    return promise;
+}
+
+
+async function do_admin_job_recruit_remove(request, response, cookie, session, resource) {
+    log(__filename, "do_admin_job_recruit_remove");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let job = new T200AdminJobRecruit();
+        let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
+
+        job.ids = request.get("ids");
+        job.status = -1;
+
+        if(T200HttpsForm.verify_ids(job.ids)
+            && T200HttpsForm.verify_status(job.status)){
+            
+            AdminBiz.modify(job.merge_status_update()).then(function(result){
+                if(result){
+                    response.type("json");
+                    resolve();
+                }else{
+                    response.type("json");
+                    reject();
+                }
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+
+        }else{
+            reject(T200Error.build(1));
+        }
     });
 
     return promise;
@@ -77,3 +210,5 @@ async function do_admin_job_recruit_search(request, response, cookie, session, r
 
 global.action.use_post('/admin/job/recruit/list', do_admin_job_recruit_list);
 global.action.use_post('/admin/job/recruit/search', do_admin_job_recruit_search);
+global.action.use_post('/admin/job/recruit/approve', do_admin_job_recruit_approve);
+global.action.use_post('/admin/job/recruit/remove', do_admin_job_recruit_remove);

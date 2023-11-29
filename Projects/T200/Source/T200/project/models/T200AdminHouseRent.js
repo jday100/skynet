@@ -4,10 +4,10 @@ const T200Error = require('../../library/T200Error.js');
 const T200HomeAdminModel = require('./T200HomeAdminModel.js');
 
 
-class T200AdminNote extends T200HomeAdminModel {
+class T200AdminHouseRent extends T200HomeAdminModel {
     constructor() {
         super();
-        this._table = "note";
+        this._table = "house_rent";
         this._key = "id";
 
         this.status = 0;
@@ -15,7 +15,7 @@ class T200AdminNote extends T200HomeAdminModel {
 
     set_item_left() {
         return [
-            ['Title', 'title', true, '/admin/note/note.html', 'list_title']
+            ['Title', 'title', true, '/admin/house/rent.html', 'list_title']
         ];
     }
 
@@ -29,8 +29,8 @@ class T200AdminNote extends T200HomeAdminModel {
 
     set_list_buttons() {
         return [
-            ['Delete', 'list_hit_delete', 'form', 'list_box', '/admin/note/remove'],
-            ['Approve', 'list_hit_approve', 'form', 'list_box', '/admin/note/approve']
+            ['Delete', 'list_hit_delete', 'form', 'list_box', '/admin/house/rent/remove'],
+            ['Approve', 'list_hit_approve', 'form', 'list_box', '/admin/house/rent/approve']
         ];
     }
 
@@ -98,4 +98,4 @@ class T200AdminNote extends T200HomeAdminModel {
     }
 }
 
-module.exports = T200AdminNote;
+module.exports = T200AdminHouseRent;

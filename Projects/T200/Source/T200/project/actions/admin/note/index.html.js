@@ -45,6 +45,10 @@ async function do_admin_note_list(request, response, cookie, session, resource) 
             list._search_url = "/admin/note/search";
             list._change_status_url = "/admin/note/list";
 
+            data.item_left = note.set_item_left();
+            data.item_right = note.set_item_right();
+            data.list_buttons = note.set_list_buttons();
+
             return list.show(data).then(function(value){
                 response.type("json");
                 resolve(value);
@@ -104,6 +108,10 @@ async function do_admin_note_search(request, response, cookie, session, resource
                 list._list_url = "/admin/note/list";
                 list._search_url = "/admin/note/search";
                 list._change_status_url = "/admin/note/list";
+
+                data.item_left = note.set_item_left();
+                data.item_right = note.set_item_right();
+                data.list_buttons = note.set_list_buttons();
     
                 return list.show(data).then(function(value){
                     response.type("json");

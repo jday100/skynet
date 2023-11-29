@@ -4,10 +4,10 @@ const T200Error = require('../../library/T200Error.js');
 const T200HomeAdminModel = require('./T200HomeAdminModel.js');
 
 
-class T200AdminNote extends T200HomeAdminModel {
+class T200AdminJobRecruit extends T200HomeAdminModel {
     constructor() {
         super();
-        this._table = "note";
+        this._table = "job_recruit";
         this._key = "id";
 
         this.status = 0;
@@ -15,7 +15,7 @@ class T200AdminNote extends T200HomeAdminModel {
 
     set_item_left() {
         return [
-            ['Title', 'title', true, '/admin/note/note.html', 'list_title']
+            ['Title', 'title', true, '/admin/job/recruit.html', 'list_title']
         ];
     }
 
@@ -29,16 +29,14 @@ class T200AdminNote extends T200HomeAdminModel {
 
     set_list_buttons() {
         return [
-            ['Delete', 'list_hit_delete', 'form', 'list_box', '/admin/note/remove'],
-            ['Approve', 'list_hit_approve', 'form', 'list_box', '/admin/note/approve']
+            ['Delete', 'list_hit_delete', 'form', 'list_box', '/admin/job/recruit/remove'],
+            ['Approve', 'list_hit_approve', 'form', 'list_box', '/admin/job/recruit/approve']
         ];
     }
 
     merge_fulltext_test(value) {
         if(undefined == this.status || '' == this.status){
             return `select ${this._fields} from ${this._table} t1 inner join person t2 on t1.user_id = t1.user_id where match(${this._search_fields}) against('${this._search}') order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${this._offset}`;
-   
-            //return `select ${this._fields} from ${this._table} t1 inner join person t2 on t1.user_id = t1.user_id order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${value}`;
         }
         return `select ${this._fields} from ${this._table} t1 inner join person t2 on t1.user_id = t1.user_id where match(${this._search_fields}) against('${this._search}') and t1.status = ${this.status} order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${this._offset}`;
     }
@@ -98,4 +96,4 @@ class T200AdminNote extends T200HomeAdminModel {
     }
 }
 
-module.exports = T200AdminNote;
+module.exports = T200AdminJobRecruit;

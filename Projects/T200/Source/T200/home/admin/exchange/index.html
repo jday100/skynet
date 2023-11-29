@@ -17,10 +17,11 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/side.css">
-
+    <link rel="stylesheet" href="/css/list.css">
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+    <script src="/js/list.js"></script>
 
 </head>
 
@@ -179,6 +180,8 @@
         let result = formtostring("form");
         $.post('/admin/exchange/list', result, function(data){
             $.id("list_box").innerHTML = data;
+            update_status();
+            update_time();
         }, function(){
             alert("Load Failure!");
         });

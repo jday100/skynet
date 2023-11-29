@@ -3,34 +3,60 @@ const T200Error = require('../../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
 const T200HomeView = require('../../../view/T200HomeView.js');
-const T200Trading = require('../../../models/T200Trading.js');
+const T200AdminTradingBuy = require('../../../models/T200AdminTradingBuy.js');
 const T200HomeAdminBiz = require('../../../biz/T200HomeAdminBiz.js');
+
+const T200ListView = require('../../../../library/web/view/T200ListView.js');
 
 
 async function do_admin_trading_buy_list(request, response, cookie, session, resource) {
     log(__filename, "do_admin_trading_buy_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let trading = new T200Trading();
+        let trading = new T200AdminTradingBuy();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        trading._table = "trading_buy";
-        trading._fields = trading.list_fields();
+        let status = request.get("status");
+
+        switch(status){
+            case '1':
+                trading.status = request.get("status1");
+                break;
+            case '2':
+                trading.status = request.get("status2");
+                break;
+            default:
+                trading.status = status;
+        }
+
+        trading._fields = trading.list_status_fields();
         trading._order_direction = "DESC";
-        trading.paging_count_sql = trading.merge_count();
-        trading.paging_list_sql = trading.merge_paging();
+        trading.paging_count_sql = trading.merge_status_count(trading.status);
+        trading.merge_paging = trading.merge_status_paging_test;
         AdminBiz.paging(trading).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};
             data.paging = result.paging;
-            data.tradings = result.values;
-            return view.render_file("admin/trading/buy_index.ejs", data).then(function (value) {
+            data.values = result.values;
+            data.status = trading.status;
+            let list = new T200ListView(resource);
+
+            list._list_url = "/admin/trading/buy/list";
+            list._search_url = "/admin/trading/buy/search";
+            list._change_status_url = "/admin/trading/buy/list";
+
+            data.item_left = trading.set_item_left();
+            data.item_right = trading.set_item_right();
+            data.list_buttons = trading.set_list_buttons();
+
+            return list.show(data).then(function(value){
                 response.type("json");
                 resolve(value);
-            }, function (err) {
+            }, function(){
                 response.type("json");
                 reject();
             });
+           
         }, function (err) {
             response.type("json");
             reject();
@@ -45,29 +71,64 @@ async function do_admin_trading_buy_search(request, response, cookie, session, r
     log(__filename, "do_admin_trading_buy_search");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let trading = new T200Trading();
+        let trading = new T200AdminTradingBuy();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        trading._table = "trading_buy";
-        trading._fields = trading.fulltext_result_fields();
-        trading._search_fields = trading.fulltext_fields();
-        trading._order_direction = "DESC";
-        AdminBiz.fulltext(trading).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.tradings = result.values;
-            return view.render_file("admin/trading/buy_index.ejs", data).then(function (value) {
-                response.type("json");
-                resolve(value);
+        let status = request.get("status");
+        let search = request.get("search");
+
+        switch(status){
+            case '1':
+                trading.status = request.get("status1");
+                break;
+            case '2':
+                trading.status = request.get("status2");
+                break;
+            default:
+                trading.status = status;
+        }
+
+        if(T200HttpsForm.verify_text(search)){
+            trading._search = search;
+            trading._fields = trading.fulltext_result_fields();
+            trading._search_fields = trading.fulltext_fields();
+            trading._order_direction = "DESC";
+            trading.fulltext_count_sql = trading.merge_fulltext_count(trading.status, search);
+   
+            trading.merge_paging = trading.merge_fulltext_test;
+            AdminBiz.fulltext(trading).then(function(result){
+                let view = new T200HomeView(resource);
+                let data = {};
+                data.paging = result.paging;
+                data.values = result.values;
+                data.status = trading.status;
+
+                let list = new T200ListView(resource);
+
+                list._list_url = "/admin/trading/buy/list";
+                list._search_url = "/admin/trading/buy/search";
+                list._change_status_url = "/admin/trading/buy/list";
+
+                data.item_left = trading.set_item_left();
+                data.item_right = trading.set_item_right();
+                data.list_buttons = trading.set_list_buttons();
+    
+                return list.show(data).then(function(value){
+                    response.type("json");
+                    resolve(value);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+     
             }, function (err) {
                 response.type("json");
                 reject();
             });
-        }, function (err) {
-            response.type("json");
-            reject();
-        });
+
+        }else{
+            reject(T200Error.build(1));
+        }
 
     });
 
@@ -75,5 +136,78 @@ async function do_admin_trading_buy_search(request, response, cookie, session, r
 }
 
 
+async function do_admin_trading_buy_approve(request, response, cookie, session, resource) {
+    log(__filename, "do_admin_trading_buy_approve");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let trading = new T200AdminTradingBuy();
+        let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
+
+        trading.ids = request.get("ids");
+        trading.status = 1;
+
+        if(T200HttpsForm.verify_ids(trading.ids)
+            && T200HttpsForm.verify_id(trading.status)){
+            
+            AdminBiz.modify(trading.merge_status_update()).then(function(result){
+                if(result){
+                    response.type("json");
+                    resolve();
+                }else{
+                    response.type("json");
+                    reject();
+                }
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+
+        }else{
+            reject(T200Error.build(1));
+        }
+    });
+
+    return promise;
+}
+
+
+async function do_admin_trading_buy_remove(request, response, cookie, session, resource) {
+    log(__filename, "do_admin_trading_buy_remove");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let trading = new T200AdminTradingBuy();
+        let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
+
+        trading.ids = request.get("ids");
+        trading.status = -1;
+
+        if(T200HttpsForm.verify_ids(trading.ids)
+            && T200HttpsForm.verify_status(trading.status)){
+            
+            AdminBiz.modify(trading.merge_status_update()).then(function(result){
+                if(result){
+                    response.type("json");
+                    resolve();
+                }else{
+                    response.type("json");
+                    reject();
+                }
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+
+        }else{
+            reject(T200Error.build(1));
+        }
+    });
+
+    return promise;
+}
+
+
+
 global.action.use_post('/admin/trading/buy/list', do_admin_trading_buy_list);
 global.action.use_post('/admin/trading/buy/search', do_admin_trading_buy_search);
+global.action.use_post('/admin/trading/buy/approve', do_admin_trading_buy_approve);
+global.action.use_post('/admin/trading/buy/remove', do_admin_trading_buy_remove);

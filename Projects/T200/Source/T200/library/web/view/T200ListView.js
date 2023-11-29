@@ -17,6 +17,7 @@ class T200ListView {
         this._update_url = "";
     }
 
+    /*
     list_buttons() {
         return [
             ['Delete', 'list_hit_delete', 'form', 'list_box', '/admin/note/remove'],
@@ -38,16 +39,19 @@ class T200ListView {
             ['CreateTime', 'create_time', false, '', 'list_time', true, 'time', 'time_title', 'list_time']
         ];
     }
+    */
 
     show(data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let file = "list/T200ListView.ejs";
     
+            /*
             data.item_left = self.item_left();
             data.item_right = self.item_right();
             data.list_buttons = self.list_buttons();
-
+            */
+           
             data.list_url = self._list_url;
             data.search_url = self._search_url;
             data.change_status_url = self._change_status_url;
