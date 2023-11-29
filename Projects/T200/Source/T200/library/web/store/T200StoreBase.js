@@ -106,6 +106,22 @@ class T200StoreBase {
 
         return promise;
     }
+
+
+    ///
+    /*
+    inner_join(model1, fields1, model2, fields2, where, order, limit) {
+
+    }
+    inner_join(article, user, on(equal(article.userid, user.userid)), where(equel(user.userid, 1)), desc(user.userid). limit(10), offset(0))
+
+    select(fields(*), from('article'), inner_join());
+
+
+    select * from table t1 inner join person t2 on t1.userid = t2.userid where match() against() order by userid desc limit 1 offset 1;
+
+    select(fields(*), from(table), inner_join(person), on(equal(userid, userid)), where(match(), against()), order(desc(userid)), limit(1), offset(1));
+    */
 }
 
 module.exports = T200StoreBase;

@@ -1,0 +1,107 @@
+register
+    select username from person where username = 'username';
+    select email from person where email = 'email';
+
+    insert into person (username, password, email) values('', '', '');
+
+login
+    select username, nickname, region_id, city_id from person where username = '' and password = '';
+
+forget
+    select email from person where username = '';
+
+index
+    select id, title from notice where status = 1 order by id desc limit 9;
+    select id, title, nickname, t1.create_time from house_rent t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 5;
+    select id, title, nickname, t1.create_time from house_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 5;
+    select id, title, nickname, t1.create_time from job_recruit t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 5;
+    select id, title, nickname, t1.create_time from job_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 5;
+    select id, title, nickname, t1.create_time from trading_sell t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 5;
+    select id, title, nickname, t1.create_time from trading_buy t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 5;
+    select id, title, nickname, t1.create_time from exchange t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 5;
+
+
+channel
+    select id, title, nickname, t1.create_time from house_rent t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, nickname, t1.create_time from house_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, nickname, t1.create_time from job_recruit t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, nickname, t1.create_time from job_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, nickname, t1.create_time from trading_sell t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, nickname, t1.create_time from trading_buy t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, nickname, t1.create_time from exchange t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 10 offset 0;
+
+forum
+    select id, parent_id, title, content, nickname, intro, t1.create_time from house_rent t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and (id = 1 or parent_id = 1)  order by t1.id limit 10 offset 0;
+    select id, parent_id, title, content, nickname, intro, t1.create_time from house_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and (id = 1 or parent_id = 1)  order by t1.id limit 10 offset 0;
+    select id, parent_id, title, content, nickname, intro, t1.create_time from job_recruit t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and (id = 1 or parent_id = 1)  order by t1.id limit 10 offset 0;
+    select id, parent_id, title, content, nickname, intro, t1.create_time from job_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and (id = 1 or parent_id = 1)  order by t1.id limit 10 offset 0;
+    select id, parent_id, title, content, nickname, intro, t1.create_time from trading_sell t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and (id = 1 or parent_id = 1)  order by t1.id limit 10 offset 0;
+    select id, parent_id, title, content, nickname, intro, t1.create_time from trading_buy t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and (id = 1 or parent_id = 1)  order by t1.id limit 10 offset 0;
+    select id, parent_id, title, content, nickname, intro, t1.create_time from exchange t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and (id = 1 or parent_id = 1)  order by t1.id limit 10 offset 0;
+
+    insert into house_rent (title, content, parent_id, user_id, status, create_time) values('', '', 1, 1, 1, '');
+    insert into house_wanted (title, content, parent_id, user_id, status, create_time) values('', '', 1, 1, 1, '');
+    insert into job_recruit (title, content, parent_id, user_id, status, create_time) values('', '', 1, 1, 1, '');
+    insert into job_wanted (title, content, parent_id, user_id, status, create_time) values('', '', 1, 1, 1, '');
+    insert into trading_sell (title, content, parent_id, user_id, status, create_time) values('', '', 1, 1, 1, '');
+    insert into trading_buy (title, content, parent_id, user_id, status, create_time) values('', '', 1, 1, 1, '');
+    insert into exchange (title, content, parent_id, user_id, status, create_time) values('', '', 1, 1, 1, '');
+
+region
+    select id, title, nickname, t1.create_time from house_rent t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.city_id = 1 and parent_id = 0 order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from house_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.city_id = 1 and parent_id = 0  order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from job_recruit t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.city_id = 1 and parent_id = 0  order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from job_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.city_id = 1 and parent_id = 0  order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from trading_sell t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.city_id = 1 and parent_id = 0  order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from trading_buy t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.city_id = 1 and parent_id = 0  order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from exchange t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and parent_id = 0 order by t1.id desc limit 10;
+
+    select id, title, nickname, t1.create_time from house_rent t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.region_id = 1 and parent_id = 0 order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from house_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.region_id = 1 and parent_id = 0  order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from job_recruit t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.region_id = 1 and parent_id = 0  order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from job_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.region_id = 1 and parent_id = 0  order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from trading_sell t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.region_id = 1 and parent_id = 0  order by t1.id desc limit 10;
+    select id, title, nickname, t1.create_time from trading_buy t1 inner join person t2 on t1.user_id = t2.user_id where t1.status = 1 and t2.status = 1 and t1.region_id = 1 and parent_id = 0  order by t1.id desc limit 10;
+
+content
+    select id, title, create_time, status from house_rent where user_id = 1 and parent_id = 0 order by id desc limit 10 offset 0;
+    select id, title, create_time, status from house_wanted where user_id = 1 and parent_id = 0 order by id desc limit 10 offset 0;
+    select id, title, create_time, status from job_recruit where user_id = 1 and parent_id = 0 order by id desc limit 10 offset 0;
+    select id, title, create_time, status from job_wanted where user_id = 1 and parent_id = 0 order by id desc limit 10 offset 0;
+    select id, title, create_time, status from trading_sell where user_id = 1 and parent_id = 0 order by id desc limit 10 offset 0;
+    select id, title, create_time, status from trading_buy where user_id = 1 and parent_id = 0 order by id desc limit 10 offset 0;
+    select id, title, create_time, status from exchange where user_id = 1 and parent_id = 0 order by id desc limit 10 offset 0;
+
+    insert into house_rent (title, content, region_id, city_id, user_id, status, create_time) values('', '', 1, 1, 1, 0, '');
+    insert into house_wanted (title, content, region_id, city_id, user_id, status, create_time) values('', '', 1, 1, 1, 0, '');
+    insert into job_recruit (title, content, region_id, city_id, user_id, status, create_time) values('', '', 1, 1, 1, 0, '');
+    insert into job_wanted (title, content, region_id, city_id, user_id, status, create_time) values('', '', 1, 1, 1, 0, '');
+    insert into trading_sell (title, content, region_id, city_id, user_id, status, create_time) values('', '', 1, 1, 1, 0, '');
+    insert into trading_buy (title, content, region_id, city_id, user_id, status, create_time) values('', '', 1, 1, 1, 0, '');
+    insert into exchange (title, content, user_id, status, create_time) values('', '', 1, 0, '');
+
+    update house_rent set status = -1 where user_id = 1 and id in (1);
+    update house_wanted set status = -1 where user_id = 1 and id in (1);
+    update job_recruit set status = -1 where user_id = 1 and id in (1);
+    update job_wanted set status = -1 where user_id = 1 and id in (1);
+    update trading_sell set status = -1 where user_id = 1 and id in (1);
+    update trading_buy set status = -1 where user_id = 1 and id in (1);
+    update exchange set status = -1 where user_id = 1 and id in (1);
+
+
+admin
+    select id, title, username, t1.create_time from house_rent t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from house_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from job_recruit t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from job_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from trading_sell t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from trading_buy t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from exchange t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 order by t1.id desc limit 10 offset 0;
+
+    update house_rent set status = -1 where id in (1);
+    update house_wanted set status = -1 where id in (1);
+    update job_recruit set status = -1 where id in (1);
+    update job_wanted set status = -1 where id in (1);
+    update trading_sell set status = -1 where id in (1);
+    update trading_buy set status = -1 where id in (1);
+    update exchange set status = -1 where id in (1);
