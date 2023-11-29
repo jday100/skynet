@@ -31,11 +31,11 @@ class T200PagingBiz extends T200BizBase {
                     data.paging = model.paging;
                     data.values = value;
                     resolve(data);
-                }, function(){
-
+                }, function(err){
+                    reject();
                 });
-            }, function(){
-
+            }, function(err){
+                reject();
             });
         });
 

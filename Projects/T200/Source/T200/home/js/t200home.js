@@ -164,5 +164,20 @@ function update_time() {
 
 
 function show_time(value) {
-    return value;
+    let cdate = new Date(value);
+
+    let result = "";
+
+    result = cdate.getFullYear().toString() 
+        + "-"
+        + ("0" + (cdate.getMonth() + 1).toString()).slice(-2) 
+        + "-"
+        + ("0" + cdate.getDate().toString()).slice(-2)
+        + " "
+        + ("0" + cdate.getHours().toString()).slice(-2)
+        + ":"
+        + ("0" + cdate.getMinutes().toString()).slice(-2)
+        + ":"
+        + ("0" + cdate.getSeconds().toString()).slice(-2);
+    return result;
 }

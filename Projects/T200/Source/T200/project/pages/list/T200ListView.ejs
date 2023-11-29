@@ -1,10 +1,163 @@
 <div id="list_box" class="list_box">
     <div class="list_search">
-        <input type="text">
-        <button onclick="list_hit_search();">Search</button>
+        <input type="text" id="search_key">
+        <button onclick="list_hit_search('form', $.id('list_box'), '<%=search_url%>');">Search</button>
     </div>
     <div>
-        <div>
+        <div class="list_paging_group">
+            <%
+                if(paging.first){
+                    %>
+                        <a href="#" onclick="list_hit_page('form', 1, $.id('list_box'), '<%=list_url%>');">First</a>
+                    <%
+                }
+                if(paging.pages){
+                    paging.pages.forEach(item => {
+                        %>
+                            <a href="#" onclick="list_hit_page('form', <%=item%>, $.id('list_box'), '<%=list_url%>');"><%=item%></a>
+                        <%
+                    });
+                }
+                if(paging.last){
+                    %>
+                        <a href="#" onclick="list_hit_page('form', <%=paging.last%>, $.id('list_box'), '<%=list_url%>');">Last</a>
+                    <%
+                }
+            %>
+        </div>
+    </div>
+    <div class="list_group">
+        <form id="form" onsubmit="return false;">
+            <input type="hidden" name="test">
+            <input type="hidden" id="search" name="search">
+            <input type="hidden" id="page" name="page" value="1">
+            <input type="hidden" id="status" name="status">
+            <div class="list_control_panel">
+                <select name="status1" onchange="list_change_status(1, 'form', $.id('list_box'), '<%=change_status_url%>');">
+                    <option <%=null == status?'selected':''%> value="">All</option>
+                    <option <%='0' == status?'selected':''%> value="0">Unreviewed</option>
+                    <option <%='1' == status?'selected':''%> value="1">Reviewed</option>
+                    <option <%='-1' == status?'selected':''%> value="-1">Deleted</option>
+                </select>
+
+                <%
+                    list_buttons.forEach(button => {
+                        %>
+                            <button class="list_button" onclick="<%=button[1]%>('<%=button[2]%>', $.id('<%=button[2]%>'), '<%=button[4]%>');"><%=button[0]%></button>
+                        <%
+                    });
+                %>
+                <button class="list_button" onclick="list_select_all();">All</button>
+            </div>
+
+            <div class="list_item">
+                <div class="list_item_left">
+                        <%
+                            item_left.forEach(left => {
+                                %>
+                                    <div class="<%=left[4]%>">
+                                        <%=left[0]%>
+                                    </div>
+                                <%
+                            });
+                        %>
+                </div>
+                <div class="list_item_right">
+                    <%
+                        item_right.forEach(right => {
+                            %>
+                                <div class="<%=right[4]%>">
+                                    <%=right[0]%>
+                                </div>
+                            <%
+                        });
+                    %> 
+                </div>
+            </div>
+
+            <%
+                let i = 0;
+                values.forEach(item => {
+                    %>
+                        <div class="list_item">
+                            <div class="list_item_left">
+                                <%
+                                    item_left.forEach(left => {
+                                        if(left[2]){
+                                            %>
+                                                <a class="<%=left[4]%>" href="<%=left[3]%>"><%=item[left[1]]%></a>
+                                            <%
+                                        }else{
+                                            %>
+                                                <div class="<%=left[4]%>">
+                                                    <%=item[left[1]]%>
+                                                </div>
+                                            <%
+                                        }
+                                    });
+                                %>
+                            </div>
+                            <div class="list_item_right">
+                                <%
+                                    item_right.forEach(right => {
+                                        if(right[2]){
+                                            %>
+                                                <div class="<%=right[4]%>">
+                                                    <a href="<%=right[3]%>"><%=item[right[1]]%></a>
+                                                </div>
+                                            <%
+                                        }else{
+                                            if(right[5]){
+                                                %>
+                                                    <input type="hidden" id="<%=right[6]%><%=i%>" value="<%=item[right[1]]%>">
+                                                    <input disabled class="<%=right[4]%>" type="text" id="<%=right[7]%><%=i%>" value="">
+                                                <%
+                                            }else{
+                                                %>
+                                                    <div>
+                                                        <%=item[right[1]]%>
+                                                    </div>
+                                                <%
+                                            }
+                                            
+                                        }
+                                    });
+                                %>          
+                                <input type="checkbox" name="ids" value="<%=item.id%>">              
+                            </div>
+                        </div>
+                    <%
+                    i++;
+                });
+
+                if(0 == i){
+                    %>  
+                        Empty
+                    <%
+                }
+            %>
+        
+            <div class="list_control_panel">
+                <select name="status2" onchange="list_change_status(2, 'form', $.id('list_box'), '<%=change_status_url%>');">
+                    <option <%=null == status?'selected':''%> value="">All</option>
+                    <option <%='0' == status?'selected':''%> value="0">Unreviewed</option>
+                    <option <%='1' == status?'selected':''%> value="1">Reviewed</option>
+                    <option <%='-1' == status?'selected':''%> value="-1">Deleted</option>
+                </select>
+
+                <%
+                    list_buttons.forEach(button => {
+                        %>
+                            <button class="list_button" onclick="<%=button[1]%>('<%=button[2]%>', $.id('<%=button[2]%>'), '<%=button[4]%>');"><%=button[0]%></button>
+                        <%
+                    });
+                %>
+                <button class="list_button" onclick="list_select_all();">All</button>
+            </div>
+        </form>
+    </div>
+    <div>
+        <div class="list_paging_group">
             <%
                 if(paging.first){
                     %>
@@ -24,88 +177,6 @@
                     <%
                 }
             %>
-        </div>
-    </div>
-    <div class="list_group">
-        <form id="form" onsubmit="return false;">
-            <input type="hidden" name="test">
-            <input type="hidden" name="page" value="1">
-            <div class="list_control_panel">
-                <select name="status" onchange="list_change_status('form', $.id('list_box'), '<%=change_status_url%>');">
-                    <option value="">All</option>
-                    <option value="0">Unreviewed</option>
-                    <option value="1">Reviewed</option>
-                    <option value="-1">Deleted</option>
-                </select>
-
-                <%
-                    list_buttons.forEach(button => {
-                        %>
-                            <button class="list_button" onclick="<%=button[1]%>('<%=button[2]%>', $.id('<%=button[2]%>'), '<%=button[4]%>');"><%=button[0]%></button>
-                        <%
-                    });
-                %>
-                <button class="list_button" onclick="list_select_all();">All</button>
-            </div>
-
-
-            <%
-                let i = 0;
-                values.forEach(item => {
-                    %>
-                        <div class="list_item">
-                            <div class="list_item_left">
-                    <%
-                        item_left.forEach(left => {
-                            if(left[1]){
-                                %>
-                                    <a href="<%=left[2]%>"><%=item[left[0]]%></a>
-                                <%
-                            }else{
-                                %>
-                                    <a href=""></a>
-                                <%
-                            }
-                        });
-                    %>
-                            </div>
-                            <div class="list_item_right">
-                    <%
-                        item_right.forEach(right => {
-                            if(right[1]){
-                                %>
-                                    <a href="<%=right[2]%>"><%=item[right[0]]%></a>
-                                <%
-                            }else{
-                                if(right[3]){
-                                    %>
-                                        <input type="hidden" id="<%=right[4]%><%=i%>" value="<%=item[right[0]]%>">
-                                        <input disabled type="text" id="<%=right[5]%><%=i%>" value="">
-                                    <%
-                                }else{
-                                    %>
-                                        <%=item[right[0]]%>
-                                    <%
-                                }
-                                
-                            }
-                        });
-                    %>          <input type="checkbox" name="ids" value="<%=item.id%>">              
-                            </div>
-                        </div>
-                    <%
-                    i++;
-                });
-            %>
-        
-            <div>
-                Edit
-            </div>
-        </form>
-    </div>
-    <div>
-        <div>
-            1 2 3 4 5
         </div>
     </div>
 </div>

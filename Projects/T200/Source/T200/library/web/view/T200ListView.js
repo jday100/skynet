@@ -27,15 +27,15 @@ class T200ListView {
 
     item_left() {
         return [
-            ['title', true, '/admin/note/note.html']
+            ['Title', 'title', true, '/admin/note/note.html', 'list_title']
         ];
     }
 
     item_right() {
         return [
-            ['status', false, '', true, 'id', 'status'],
-            ['username', true, '', false],
-            ['create_time', false, '', false]
+            ['Status', 'status', false, '', 'list_status', true, 'id', 'status', 'list_status'],
+            ['Username', 'username', true, '', 'list_name', false],
+            ['CreateTime', 'create_time', false, '', 'list_time', true, 'time', 'time_title', 'list_time']
         ];
     }
 
@@ -48,7 +48,10 @@ class T200ListView {
             data.item_right = self.item_right();
             data.list_buttons = self.list_buttons();
 
+            data.list_url = self._list_url;
+            data.search_url = self._search_url;
             data.change_status_url = self._change_status_url;
+            
             return self.view.render_file(file, data).then(function(result){
                 resolve(result);
             }, function(err){

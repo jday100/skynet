@@ -18,20 +18,31 @@ async function do_admin_note_list(request, response, cookie, session, resource) 
 
         let status = request.get("status");
 
-        note._fields = note.list_fields();
+        switch(status){
+            case '1':
+                note.status = request.get("status1");
+                break;
+            case '2':
+                note.status = request.get("status2");
+                break;
+            default:
+                note.status = status;
+        }
+
+        note._fields = note.list_status_fields();
         note._order_direction = "DESC";
-        note.paging_count_sql = note.merge_status_count(status);
-        //note.paging_list_sql = note.merge_status_paging(status);
-        note.status = status;
+        note.paging_count_sql = note.merge_status_count(note.status);
         note.merge_paging = note.merge_status_paging_test;
         AdminBiz.paging(note).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};
             data.paging = result.paging;
             data.values = result.values;
-            
+            data.status = note.status;
             let list = new T200ListView(resource);
 
+            list._list_url = "/admin/note/list";
+            list._search_url = "/admin/note/search";
             list._change_status_url = "/admin/note/list";
 
             return list.show(data).then(function(value){
@@ -59,22 +70,49 @@ async function do_admin_note_search(request, response, cookie, session, resource
         let note = new T200AdminNote();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        if(true){
+        let status = request.get("status");
+        let search = request.get("search");
+
+        switch(status){
+            case '1':
+                note.status = request.get("status1");
+                break;
+            case '2':
+                note.status = request.get("status2");
+                break;
+            default:
+                note.status = status;
+        }
+
+        if(T200HttpsForm.verify_text(search)){
+            note._search = search;
             note._fields = note.fulltext_result_fields();
             note._search_fields = note.fulltext_fields();
             note._order_direction = "DESC";
+            note.fulltext_count_sql = note.merge_fulltext_count(note.status, search);
+            //note.fulltext_list_sql = note.merge_fulltext_paging(note.status, search);
+            note.merge_paging = note.merge_fulltext_test;
             AdminBiz.fulltext(note).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.paging = result.paging;
-                data.notes = result.values;
-                return view.render_file("admin/note/index.ejs", data).then(function (value) {
+                data.values = result.values;
+                data.status = note.status;
+
+                let list = new T200ListView(resource);
+
+                list._list_url = "/admin/note/list";
+                list._search_url = "/admin/note/search";
+                list._change_status_url = "/admin/note/list";
+    
+                return list.show(data).then(function(value){
                     response.type("json");
                     resolve(value);
-                }, function (err) {
+                }, function(){
                     response.type("json");
                     reject();
                 });
+     
             }, function (err) {
                 response.type("json");
                 reject();
