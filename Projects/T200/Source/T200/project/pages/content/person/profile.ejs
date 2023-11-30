@@ -103,6 +103,7 @@
                         <div class="label">
                             City:
                         </div>
+                        <input type="hidden" id="location_city_id" value="<%=profile.city_id%>">
                         <div id="location_city" class="value">
                             city
                         </div>
@@ -130,13 +131,10 @@
             <form id="intro_form">
                 <input type='hidden' name='test'>
                 <div class="left_item">
-                    <textarea id="intro" class="intro"></textarea>
+                    <textarea disabled id="intro" class="intro"></textarea>
                 </div>
             </form>
         </div>
     </div>
 </fieldset>
 
-<script>
-    region_init(<%=profile.city_id%>);
-</script>

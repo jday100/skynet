@@ -30,8 +30,8 @@ class T200VisitorBiz extends T200SearchBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             self.load(model.merge_login()).then(function(data){
-                if(data && 1 == data.length){
-                    resolve(data[0]);
+                if(data){
+                    resolve(data);
                 }else{
                     reject();
                 }

@@ -277,10 +277,13 @@
         let result = formtostring("form");
         $.post('/content/person/profile', result, function(data){
             $.id("list_box").innerHTML = data;
+            region_init($.id("location_city_id").value);
+            /*
             let script = data.match(/<script>([\s\S]*)<\/script>/)[1];
             let element = document.createElement('script');
             element.innerHTML = script;
             document.head.appendChild(element);
+            */
         }, function(){
             alert("Load Failure!");
         });

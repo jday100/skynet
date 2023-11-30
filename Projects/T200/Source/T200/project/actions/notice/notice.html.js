@@ -27,8 +27,8 @@ async function do_notice_get(request, response, cookie, session, resource) {
             VisitorBiz.load(notice.merge_select_by_key(notice.id)).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
-                if(result && 1 == result.length){
-                    data.notice = result[0];
+                if(result){
+                    data.notice = result;
                     return view.render_file("notice/notice.ejs", data).then(function (value) {
                         response.type("json");
                         resolve(value);
