@@ -181,3 +181,27 @@ function show_time(value) {
         + ("0" + cdate.getSeconds().toString()).slice(-2);
     return result;
 }
+
+function update_content_status() {
+    for(let i=0;i<10;i++){
+        let obj = $.id('id'+i);
+
+        if(undefined == obj){
+            //alert(1);
+        }else{
+            let value;
+            switch(obj.value){
+                case '-1':
+                    value = 'deleted';
+                    break;
+                case '0':
+                    value = 'unreviewed';
+                    break;
+                case '1':
+                    value = 'reviewed';
+                    break;
+            }
+            $.id('status'+i).value = value;
+        }
+    }
+}

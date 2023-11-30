@@ -3,34 +3,61 @@ const T200Error = require('../../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
 const T200HomeView = require('../../../view/T200HomeView.js');
-const T200Note = require('../../../models/T200Note.js');
+const T200UserNote = require('../../../models/T200UserNote.js');
 const T200HomeUserBiz = require('../../../biz/T200HomeUserBiz.js');
+
+const T200ListView = require('../../../../library/web/view/T200ListView.js');
 
 
 async function do_content_note_list(request, response, cookie, session, resource) {
     log(__filename, "do_content_note_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let note = new T200Note();
+        let note = new T200UserNote();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
 
-        note._fields = note.list_fields();
+        let status = request.get("status");
+
+        switch(status){
+            case '1':
+                note.status = request.get("status1");
+                break;
+            case '2':
+                note.status = request.get("status2");
+                break;
+            default:
+                note.status = status;
+        }
+
+        note._fields = note.list_status_fields();
         note._order_direction = "DESC";
-        note.paging_count_sql = note.merge_count();
-        note.paging_list_sql = note.merge_paging();
+        note.paging_count_sql = note.merge_status_count(note.status);
+        note.merge_paging = note.merge_status_paging_test;
         UserBiz.paging(note).then(function(result){
             let view = new T200HomeView(resource);
             let data = {};
             data.paging = result.paging;
-            data.notes = result.values;
-            return view.render_file("content/note/index.ejs", data).then(function (value) {
+            data.values = result.values;
+            data.status = note.status;
+            let list = new T200ListView(resource);
+
+            list._list_url = "/content/note/list";
+            list._search_url = "/content/note/search";
+            list._change_status_url = "/content/note/list";
+
+            data.item_left = note.set_item_left();
+            data.item_right = note.set_item_right();
+            data.list_buttons = note.set_list_buttons();
+
+            return list.show(data).then(function(value){
                 response.type("json");
                 resolve(value);
-            }, function (err) {
+            }, function(){
                 response.type("json");
                 reject();
             });
+           
         }, function (err) {
             response.type("json");
             reject();
@@ -45,30 +72,137 @@ async function do_content_note_search(request, response, cookie, session, resour
     log(__filename, "do_content_note_search");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let note = new T200Note();
+        let note = new T200UserNote();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
  
-        note._fields = note.fulltext_result_fields();
-        note._search_fields = note.fulltext_fields();
-        note._order_direction = "DESC";
-        UserBiz.fulltext(note).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.notes = result.values;
-            return view.render_file("content/note/index.ejs", data).then(function (value) {
-                response.type("json");
-                resolve(value);
+        let status = request.get("status");
+        let search = request.get("search");
+
+        switch(status){
+            case '1':
+                note.status = request.get("status1");
+                break;
+            case '2':
+                note.status = request.get("status2");
+                break;
+            default:
+                note.status = status;
+        }
+
+        if(T200HttpsForm.verify_text(search)){
+            note._search = search;
+            note._fields = note.fulltext_result_fields();
+            note._search_fields = note.fulltext_fields();
+            note._order_direction = "DESC";
+            note.fulltext_count_sql = note.merge_fulltext_count(note.status, search);
+   
+            note.merge_paging = note.merge_fulltext_test;
+            UserBiz.fulltext(note).then(function(result){
+                let view = new T200HomeView(resource);
+                let data = {};
+                data.paging = result.paging;
+                data.values = result.values;
+                data.status = note.status;
+
+                let list = new T200ListView(resource);
+
+                list._list_url = "/content/note/list";
+                list._search_url = "/content/note/search";
+                list._change_status_url = "/content/note/list";
+
+                data.item_left = note.set_item_left();
+                data.item_right = note.set_item_right();
+                data.list_buttons = note.set_list_buttons();
+    
+                return list.show(data).then(function(value){
+                    response.type("json");
+                    resolve(value);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+     
             }, function (err) {
                 response.type("json");
                 reject();
             });
-        }, function (err) {
-            response.type("json");
-            reject();
-        });
 
+        }else{
+            reject(T200Error.build(1));
+        }
+
+    });
+
+    return promise;
+}
+
+
+
+async function do_content_note_publish(request, response, cookie, session, resource) {
+    log(__filename, "do_content_note_publish");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let note = new T200UserNote();
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        note.ids = request.get("ids");
+        note.status = 1;
+
+        if(T200HttpsForm.verify_ids(note.ids)
+            && T200HttpsForm.verify_id(note.status)){
+            
+            UserBiz.modify(note.merge_status_update()).then(function(result){
+                if(result){
+                    response.type("json");
+                    resolve();
+                }else{
+                    response.type("json");
+                    reject();
+                }
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+
+        }else{
+            reject(T200Error.build(1));
+        }
+    });
+
+    return promise;
+}
+
+
+async function do_content_note_remove(request, response, cookie, session, resource) {
+    log(__filename, "do_content_note_remove");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let note = new T200UserNote();
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        note.ids = request.get("ids");
+        note.status = -1;
+
+        if(T200HttpsForm.verify_ids(note.ids)
+            && T200HttpsForm.verify_status(note.status)){
+            
+            UserBiz.modify(note.merge_status_update()).then(function(result){
+                if(result){
+                    response.type("json");
+                    resolve();
+                }else{
+                    response.type("json");
+                    reject();
+                }
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+
+        }else{
+            reject(T200Error.build(1));
+        }
     });
 
     return promise;
@@ -77,3 +211,5 @@ async function do_content_note_search(request, response, cookie, session, resour
 
 global.action.use_post('/content/note/list', do_content_note_list);
 global.action.use_post('/content/note/search', do_content_note_search);
+global.action.use_post('/content/note/publish', do_content_note_publish);
+global.action.use_post('/content/note/remove', do_content_note_remove);

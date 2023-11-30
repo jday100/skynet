@@ -62,6 +62,15 @@ function list_hit_approve(id, obj, url) {
     });
 }
 
+function list_hit_publish(id, obj, url) {
+    let result = formtostring(id);
+    $.post(url, result, function(data){
+        reload();
+    }, function(){
+        alert("Save Failure!");
+    });
+}
+
 var list_select_status = true;
 
 function list_select_all() {

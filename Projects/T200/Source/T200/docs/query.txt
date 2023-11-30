@@ -72,6 +72,14 @@ content
     select id, title, create_time, status from trading_buy where user_id = 1 and parent_id = 0 order by id desc limit 10 offset 0;
     select id, title, create_time, status from exchange where user_id = 1 and parent_id = 0 order by id desc limit 10 offset 0;
 
+    select id, title, create_time, status from house_rent where user_id = 1 and parent_id = 0 and match() against() order by id desc limit 10 offset 0;
+    select id, title, create_time, status from house_wanted where user_id = 1 and parent_id = 0 and match() against() order by id desc limit 10 offset 0;
+    select id, title, create_time, status from job_recruit where user_id = 1 and parent_id = 0 and match() against() order by id desc limit 10 offset 0;
+    select id, title, create_time, status from job_wanted where user_id = 1 and parent_id = 0 and match() against() order by id desc limit 10 offset 0;
+    select id, title, create_time, status from trading_sell where user_id = 1 and parent_id = 0 and match() against() order by id desc limit 10 offset 0;
+    select id, title, create_time, status from trading_buy where user_id = 1 and parent_id = 0 and match() against() order by id desc limit 10 offset 0;
+    select id, title, create_time, status from exchange where user_id = 1 and parent_id = 0 and match() against() order by id desc limit 10 offset 0;
+
     insert into house_rent (title, content, region_id, city_id, user_id, status, create_time) values('', '', 1, 1, 1, 0, '');
     insert into house_wanted (title, content, region_id, city_id, user_id, status, create_time) values('', '', 1, 1, 1, 0, '');
     insert into job_recruit (title, content, region_id, city_id, user_id, status, create_time) values('', '', 1, 1, 1, 0, '');
@@ -98,6 +106,14 @@ admin
     select id, title, username, t1.create_time from trading_buy t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 order by t1.id desc limit 10 offset 0;
     select id, title, username, t1.create_time from exchange t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 order by t1.id desc limit 10 offset 0;
 
+    select id, title, username, t1.create_time from house_rent t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 and match() against() order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from house_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 and match() against() order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from job_recruit t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 and match() against() order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from job_wanted t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 and match() against() order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from trading_sell t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 and match() against() order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from trading_buy t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 and match() against() order by t1.id desc limit 10 offset 0;
+    select id, title, username, t1.create_time from exchange t1 inner join person t2 on t1.user_id = t2.user_id where t1.parent_id = 0 and match() against() order by t1.id desc limit 10 offset 0;
+
     update house_rent set status = -1 where id in (1);
     update house_wanted set status = -1 where id in (1);
     update job_recruit set status = -1 where id in (1);
@@ -105,3 +121,11 @@ admin
     update trading_sell set status = -1 where id in (1);
     update trading_buy set status = -1 where id in (1);
     update exchange set status = -1 where id in (1);
+
+
+notice
+    select id, title, create_time from notice where status = 1 order by id desc limit 10 offset 0;
+
+    select id, title, create_time from notice where status = 1 and match() against() order by id desc limit 10 offset 0;
+
+    select id, title, content, create_time from notice where status = 1 and id = 1;

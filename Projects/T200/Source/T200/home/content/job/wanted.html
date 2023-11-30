@@ -17,10 +17,11 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/side.css">
-
+    <link rel="stylesheet" href="/css/list.css">
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+    <script src="/js/list.js"></script>
 
 </head>
 
@@ -126,6 +127,7 @@
                             <div class="search_box">
                 
                                 <input type="hidden" name="test">
+                                <input type="hidden" name="page" value="1">
                                 <input type="text" name="search">
                                 <button class="search_button">Search</button>
                         
@@ -181,6 +183,8 @@
         let result = formtostring("form");
         $.post('/content/job/wanted/list', result, function(data){
             $.id("list_box").innerHTML = data;
+            update_content_status();
+            update_time();
         }, function(){
             alert("Load Failure!");
         });

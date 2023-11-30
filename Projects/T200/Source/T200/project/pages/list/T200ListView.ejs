@@ -161,19 +161,19 @@
             <%
                 if(paging.first){
                     %>
-                        <a href="#" onclick="list_hit_page();">First</a>
+                        <a href="#" onclick="list_hit_page('form', 1, $.id('list_box'), '<%=list_url%>');">First</a>
                     <%
                 }
                 if(paging.pages){
                     paging.pages.forEach(item => {
                         %>
-                            <a href="#" onclick="list_hit_page();"><%=item%></a>
+                            <a href="#" onclick="list_hit_page('form', <%=item%>, $.id('list_box'), '<%=list_url%>');"><%=item%></a>
                         <%
                     });
                 }
                 if(paging.last){
                     %>
-                        <a href="#" onclick="list_hit_page();">Last</a>
+                        <a href="#" onclick="list_hit_page('form', <%=paging.last%>, $.id('list_box'), '<%=list_url%>');">Last</a>
                     <%
                 }
             %>

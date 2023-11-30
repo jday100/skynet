@@ -76,26 +76,133 @@ async function do_content_exchange_search(request, response, cookie, session, re
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
  
-        exchange._fields = exchange.fulltext_result_fields();
-        exchange._search_fields = exchange.fulltext_fields();
-        exchange._order_direction = "DESC";
-        UserBiz.fulltext(exchange).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.exchanges = result.values;
-            return view.render_file("content/exchange/index.ejs", data).then(function (value) {
-                response.type("json");
-                resolve(value);
+        let status = request.get("status");
+        let search = request.get("search");
+
+        switch(status){
+            case '1':
+                exchange.status = request.get("status1");
+                break;
+            case '2':
+                exchange.status = request.get("status2");
+                break;
+            default:
+                exchange.status = status;
+        }
+
+        if(T200HttpsForm.verify_text(search)){
+            exchange._search = search;
+            exchange._fields = exchange.fulltext_result_fields();
+            exchange._search_fields = exchange.fulltext_fields();
+            exchange._order_direction = "DESC";
+            exchange.fulltext_count_sql = exchange.merge_fulltext_count(exchange.status, search);
+   
+            exchange.merge_paging = exchange.merge_fulltext_test;
+            UserBiz.fulltext(exchange).then(function(result){
+                let view = new T200HomeView(resource);
+                let data = {};
+                data.paging = result.paging;
+                data.values = result.values;
+                data.status = exchange.status;
+
+                let list = new T200ListView(resource);
+
+                list._list_url = "/content/exchange/list";
+                list._search_url = "/content/exchange/search";
+                list._change_status_url = "/content/exchange/list";
+
+                data.item_left = exchange.set_item_left();
+                data.item_right = exchange.set_item_right();
+                data.list_buttons = exchange.set_list_buttons();
+    
+                return list.show(data).then(function(value){
+                    response.type("json");
+                    resolve(value);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+     
             }, function (err) {
                 response.type("json");
                 reject();
             });
-        }, function (err) {
-            response.type("json");
-            reject();
-        });
 
+        }else{
+            reject(T200Error.build(1));
+        }
+
+    });
+
+    return promise;
+}
+
+
+
+async function do_content_exchange_publish(request, response, cookie, session, resource) {
+    log(__filename, "do_content_exchange_publish");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let exchange = new T200UserExchange();
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        exchange.ids = request.get("ids");
+        exchange.status = 1;
+
+        if(T200HttpsForm.verify_ids(exchange.ids)
+            && T200HttpsForm.verify_id(exchange.status)){
+            
+            UserBiz.modify(exchange.merge_status_update()).then(function(result){
+                if(result){
+                    response.type("json");
+                    resolve();
+                }else{
+                    response.type("json");
+                    reject();
+                }
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+
+        }else{
+            reject(T200Error.build(1));
+        }
+    });
+
+    return promise;
+}
+
+
+async function do_content_exchange_remove(request, response, cookie, session, resource) {
+    log(__filename, "do_content_exchange_remove");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let exchange = new T200UserExchange();
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        exchange.ids = request.get("ids");
+        exchange.status = -1;
+
+        if(T200HttpsForm.verify_ids(exchange.ids)
+            && T200HttpsForm.verify_status(exchange.status)){
+            
+            UserBiz.modify(exchange.merge_status_update()).then(function(result){
+                if(result){
+                    response.type("json");
+                    resolve();
+                }else{
+                    response.type("json");
+                    reject();
+                }
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+
+        }else{
+            reject(T200Error.build(1));
+        }
     });
 
     return promise;
@@ -104,3 +211,5 @@ async function do_content_exchange_search(request, response, cookie, session, re
 
 global.action.use_post('/content/exchange/list', do_content_exchange_list);
 global.action.use_post('/content/exchange/search', do_content_exchange_search);
+global.action.use_post('/content/exchange/publish', do_content_exchange_publish);
+global.action.use_post('/content/exchange/remove', do_content_exchange_remove);
