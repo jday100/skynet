@@ -49,10 +49,18 @@
                 <legend>Admin</legend>
                 <div>
                     <details class="menu">
-                        <summary>Person</summary>
+                        <summary>Admin</summary>
                         <div class="menu_group">
                             <div class="menu_item">
                                 <a href="/admin/person/profile.html">Profile</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="menu">
+                        <summary>Person</summary>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/admin/person/index.html">Person</a>
                             </div>
                         </div>
                     </details>
@@ -118,47 +126,17 @@
             
             <fieldset>
                 <legend>Exchange</legend>
+
                 <div>
+                    <div class="side_title">
+                        Exchange
+                    </div>
                     <div id="list_box">
                         <form id="form">
-                            <div class="search_box">
-                
-                                <input type="hidden" name="test">
-                                <input type="hidden" name="page" value="1">
-                                <input type="text" name="search">
-                                <button class="search_button">Search</button>
-                        
-                            </div>
-                            <div class="list_box">
-                                <div class="paging_top_box">
-                                    <div class="paging">
-                                        <a href="">1</a>
-                                        <a href="">2</a>
-                                        <a href="">3</a>
-                                        <a href="">4</a>
-                                        <a href="">5</a>
-                                    </div>
-                                </div>
-                                <div class="item_box">
-                                    <div class="item">
-                                        <div>
-                                            <a href="">unpublished</a>
-                                        </div>
-                                        <div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="paging_bottom_box">
-                                    <div class="paging">
-                                        <a href="">1</a>
-                                        <a href="">2</a>
-                                        <a href="">3</a>
-                                        <a href="">4</a>
-                                        <a href="">5</a>
-                                    </div>
-                                </div>
-                            </div>
+                            <input type="hidden" name="test">
+                            <input type="hidden" name="page" value="1">
+                            <input type="hidden" name="search">
+                            <input type="hidden" name="status">
                         </form>
                     </div>
                 </div>

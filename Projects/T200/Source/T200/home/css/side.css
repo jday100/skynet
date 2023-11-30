@@ -49,6 +49,15 @@ fieldset > div > details {
     margin-bottom: 5px;
 }
 
+.side_title {
+    width: 800px;
+    font-weight: bold;
+    line-height: 50px;
+    display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
 .publish {
     width: 800px;
     line-height: 50px;
