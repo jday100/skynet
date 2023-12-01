@@ -72,7 +72,7 @@
         query_id();
 
         let data = "test=";
-        $.post('/house/wanted/list', data, function (result) {
+        $.post('/house/wanted/board', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
             alert('Login Failure!');

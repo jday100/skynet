@@ -21,6 +21,7 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+    <script src="/js/t200region.js"></script>
 
 </head>
 
@@ -51,15 +52,21 @@
             <a href="/exchange/index.html">Exchange</a>
         </nav>
 
+        <fieldset>
+            <legend><a href="/region/index.html">Region</a></legend>
+            <div id="region_box" class="region">
+            </div>
+        </fieldset>
+
         <fieldset class="title">
-            <legend><a href="/house/rent.html">House - Rent</a></legend>
-            <div id="list_box" class="list_box">
-                <form id="form" class="list_form">
-                    <input type="hidden" name="test">
-                    <input type="hidden" name="page" value="1">
-                    <input type="hidden" name="search">
-                </form>
-            </div>              
+            <legend><a href="/house/index.html">House</a></legend>
+            <div class="channel">
+                <div id="list_box">
+                    <form id="form" class="list_form">
+                        <input type="hidden" name="test">
+                    </form>
+                </div>
+            </div>
         </fieldset>
 
         <footer>
@@ -74,13 +81,13 @@
     $.win.onload = function () {
         nav_check();
 
-        query_id();
+        region_setting();
 
         let data = formtostring('form');
-        $.post('/house/rent/board', data, function (result) {
+        $.post('/house/rent/list', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
-            alert('Login Failure!');
+            alert('Load Failure!');
         });
     };
 </script>

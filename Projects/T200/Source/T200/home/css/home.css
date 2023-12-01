@@ -376,3 +376,23 @@ input[type="email"] + button {
     align-items: center;
 }
 */
+
+.channel_box {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.channel_group {
+
+}
+
+.channel_item {
+    width: 1000px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
