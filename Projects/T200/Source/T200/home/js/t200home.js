@@ -52,10 +52,20 @@ function hit_search(id, obj, url) {
     });
 }
 
+function hit_reply(id, obj, url) {
+    let result = formtostring(id);
+    $.post(url, result, function(data){
+        reload();
+    }, function(){
+        alert("Save Failure!");
+    });
+}
+
 function turning(id, obj, url) {
     let result = `test=&page=${id}`;
     $.post(url, result, function(data){
         obj.innerHTML = data;
+        update_time();
     }, function(){
         alert("Load Failure!");
     });

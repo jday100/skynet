@@ -34,8 +34,6 @@ form {
     padding-bottom: 20px;
 }
 
-
-
 .channel {
     width: 1000px;
 }
@@ -132,6 +130,13 @@ form > div > div > button {
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
+}
+
+.form_none {
+    background-color: unset;
+    width: unset;
+    min-height: unset;
+    padding-bottom: unset;
 }
 
 .form_title {
@@ -260,9 +265,14 @@ input[type="email"] + button {
 
 .list_item {
     width: 1000px;
+    line-height: 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.list_time {
+    width: 125px;
 }
 
 .paging {
@@ -349,6 +359,14 @@ input[type="email"] + button {
     width: 60px;
     margin-left: 20px;
 }
+
+.exchange_channel {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}    
 
 /*
 #main > div {
