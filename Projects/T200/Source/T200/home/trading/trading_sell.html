@@ -52,8 +52,17 @@
         </nav>
 
         <fieldset class="title">
-            <legend>House - Rent</legend>
+            <legend>
+                <a href="/trading/index.html">Trading</a>
+                 - 
+                <a href="/trading/sell.html">Sell</a>
+            </legend>
             <div id="list_box" class="list_box">
+                <form id="form" class="list_form">
+                    <input type="hidden" name="test">
+                    <input type="hidden" name="page" value="1">
+                    <input type="hidden" name="search">
+                </form>
             </div>
         </fieldset>
 
@@ -72,10 +81,10 @@
         query_id();
 
         let data = "test=";
-        $.post('/trading/sell/list', data, function (result) {
+        $.post('/trading/sell/board', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
-            alert('Login Failure!');
+            alert('Load Failure!');
         });
     };
 </script>

@@ -52,8 +52,14 @@
         </nav>
 
         <fieldset class="title">
-            <legend><a href="/exchange/index.html">Exchange</a></legend>
-            <div class="exchange_channel">
+            <legend>
+                <a href="/house/index.html">House</a>
+                 - 
+                <a href="/house/wanted.html">Wanted</a>
+                 - 
+                <a href="/house/wanted_short.html">Short</a>
+            </legend>
+            <div class="channel_box">
                 <div>
                     <input type="text">
                     <button>Search</button>
@@ -81,11 +87,11 @@
         nav_check();
 
         let data = formtostring('form');
-        $.post('/exchange/list', data, function (result) {
+        $.post('/house/wanted/short', data, function (result) {
             $.id("list_box").innerHTML = result;
             update_time();
         }, function () {
-            alert('Login Failure!');
+            alert('Load Failure!');
         });
     };
 </script>

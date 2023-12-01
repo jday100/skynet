@@ -52,7 +52,11 @@
         </nav>
 
         <fieldset class="title">
-            <legend><a href="/house/rent.html">House - Rent</a></legend>
+            <legend>
+                <a href="/house/index.html">House</a>
+                 - 
+                <a href="/house/rent.html">Rent</a>
+            </legend>    
             <div id="list_box" class="list_box">
                 <form id="form" class="list_form">
                     <input type="hidden" name="test">
@@ -80,7 +84,7 @@
         $.post('/house/rent/board', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
-            alert('Login Failure!');
+            alert('Load Failure!');
         });
     };
 </script>

@@ -52,8 +52,17 @@
         </nav>
 
         <fieldset class="title">
-            <legend>House - Wanted</legend>
+            <legend>
+                <a href="/house/index.html">House</a>
+                 - 
+                <a href="/house/wanted.html">Wanted</a>
+            </legend>  
             <div id="list_box" class="list_box">
+                <form id="form" class="list_form">
+                    <input type="hidden" name="test">
+                    <input type="hidden" name="page" value="1">
+                    <input type="hidden" name="search">
+                </form>
             </div>
         </fieldset>
 
@@ -71,11 +80,11 @@
 
         query_id();
 
-        let data = "test=";
+        let data = formtostring('form');
         $.post('/house/wanted/board', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
-            alert('Login Failure!');
+            alert('Load Failure!');
         });
     };
 </script>
