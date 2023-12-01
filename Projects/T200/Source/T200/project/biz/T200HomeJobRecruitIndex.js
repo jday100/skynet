@@ -2,10 +2,10 @@ const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
 const T200HomeUserBiz = require('./T200HomeUserBiz.js');
-const T200UserHouseRent = require('../models/T200UserHouseRent.js');
+const T200UserJobRecruit = require('../models/T200UserJobRecruit.js');
 
 
-class T200HomeHouseRentIndex extends T200HomeUserBiz {
+class T200HomeJobRecruitIndex extends T200HomeUserBiz {
     constructor(request, cookie, session) {
         super(request, cookie, session);
     }
@@ -16,12 +16,12 @@ class T200HomeHouseRentIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let data = {};
 
-            self.load_rent_long(data).then(function(){
+            self.load_recruit_full(data).then(function(){
 
             }, function(err){
                 return error();
             }).then(function(){
-                return self.load_rent_short(data);
+                return self.load_recruit_part(data);
             }, function(){
                 return error();
             }).then(function(){
@@ -37,14 +37,14 @@ class T200HomeHouseRentIndex extends T200HomeUserBiz {
 
     
 
-    load_rent_long(data) {
+    load_recruit_full(data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let house = new T200UserHouseRent();
-            house._fields = house.list_fields();
-            house._order_direction = "DESC";
-            return self.list(house.merge_list()).then(function(values){
-                data.house_rents = values;
+            let job = new T200UserJobRecruit();
+            job._fields = job.list_fields();
+            job._order_direction = "DESC";
+            return self.list(job.merge_list()).then(function(values){
+                data.recruit_fulls = values;
                 resolve(data);
             }, function(){
                 reject();
@@ -54,14 +54,14 @@ class T200HomeHouseRentIndex extends T200HomeUserBiz {
         return promise;
     }
 
-    load_rent_short(data) {
+    load_recruit_part(data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let house = new T200UserHouseRent();
-            house._fields = house.list_fields();
-            house._order_direction = "DESC";
-            return self.list(house.merge_list()).then(function(values){
-                data.house_wanteds = values;
+            let job = new T200UserJobRecruit();
+            job._fields = job.list_fields();
+            job._order_direction = "DESC";
+            return self.list(job.merge_list()).then(function(values){
+                data.recruit_parts = values;
                 resolve(data);
             }, function(){
                 reject();
@@ -73,4 +73,4 @@ class T200HomeHouseRentIndex extends T200HomeUserBiz {
 
 }
 
-module.exports = T200HomeHouseRentIndex;
+module.exports = T200HomeJobRecruitIndex;
