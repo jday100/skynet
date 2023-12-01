@@ -13,9 +13,26 @@ class T200HttpsSession {
         global.session = {};
     }
 
+    key(name, value) {
+        log(__filename, "Session key", name);
+        global.session[name] = value;
+    }
+
     set(name, value) {
         log(__filename, "Session set", name);
-        global.session[name] = value;
+        let sid = this.cookie.get('sid');
+
+        if(sid){
+            let data = global.session[sid._value];
+
+            if(data){
+                data[name] = value;
+            }else{
+                throw T200Error.build(1);
+            }
+        }else{
+            throw T200Error.build(1);
+        }
     }
 
     get(name) {

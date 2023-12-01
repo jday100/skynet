@@ -12,6 +12,8 @@ class T200VisitorBiz extends T200SearchBiz {
     register(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
+            model._fields = model.register_fields();
+            model._values = model.register_values();
             self.append(model.merge_register()).then(function(data){
                 if(data && 0 == data.warningStatus){
                     resolve();
@@ -29,6 +31,7 @@ class T200VisitorBiz extends T200SearchBiz {
     login(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
+            model._fields = model.login_fields();
             self.load(model.merge_login()).then(function(data){
                 if(data){
                     resolve(data);
@@ -46,9 +49,10 @@ class T200VisitorBiz extends T200SearchBiz {
     admin_login(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.load(model.merge_login()).then(function(data){
-                if(data && 1 == data.length){
-                    resolve(data[0]);
+            model._fields = model.admin_login_fields();
+            self.load(model.merge_admin_login()).then(function(data){
+                if(data){
+                    resolve(data);
                 }else{
                     reject();
                 }

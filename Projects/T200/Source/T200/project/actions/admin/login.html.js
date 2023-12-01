@@ -2,7 +2,7 @@ const { error, log } = require('../../../library/T200Lib.js');
 const T200Error = require('../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../library/net/T200HttpsForm.js');
-const T200Visitor = require('../../models/T200Visitor.js');
+const T200VisitorPerson = require('../../models/T200VisitorPerson.js');
 const T200HomeVisitorBiz = require('../../biz/T200HomeVisitorBiz.js');
 
 
@@ -10,16 +10,16 @@ async function do_admin_login(request, response, cookie, session, resource) {
     log(__filename, "do_admin_login");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let visitor = new T200Visitor();
+        let person = new T200VisitorPerson();
         let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
 
-        visitor.username = request.get('username');
-        visitor.password = request.get('password');
+        person.username = request.get('username');
+        person.password = request.get('password');
 
-        if(T200HttpsForm.verify_text(visitor.username)
-            && T200HttpsForm.verify_text(visitor.password)){
+        if(T200HttpsForm.verify_text(person.username)
+            && T200HttpsForm.verify_text(person.password)){
 
-            VisitorBiz.admin_login(visitor).then(function(data){
+            VisitorBiz.admin_login(person).then(function(data){
                 set_data(cookie, session, data);
 
                 response.type('json');
@@ -30,7 +30,7 @@ async function do_admin_login(request, response, cookie, session, resource) {
                 response.data('failure');
                 reject(err);
             }).catch(function(err){
-                console.log(err);
+                reject();
             });
 
         }else{

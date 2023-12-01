@@ -148,6 +148,7 @@ class T200HomeCreate {
     create_person() {
         return `create table if not exists person ( \
             user_id int primary key auto_increment, \
+            region_id int default 0, \
             city_id int default 0, \
             status int not null default 0, \
             username varchar(50) UNIQUE, \

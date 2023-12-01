@@ -31,10 +31,12 @@ async function do_login(request, response, cookie, session, resource) {
                 response.data('failure');
                 reject(err);
             }).catch(function(err){
-                console.log(err);
+                response.type('json');
+                reject();
             });
 
         }else{
+            response.type('json');
             reject(T200Error.build(1));
         }
     });
@@ -52,8 +54,9 @@ function set_data(cookie, session, data) {
     result.userid = data.user_id;
     result.cityid = data.city_id;
     result.username = data.username;
+    result.password = data.password;
 
-    session.set(sid, result);
+    session.key(sid, result);
 }
 
 

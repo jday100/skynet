@@ -29,8 +29,6 @@ async function do_register(request, response, cookie, session, resource) {
             && T200HttpsForm.verify_text(visitor.password)
             && T200HttpsForm.verify_email(visitor.email)){
 
-            visitor._fields = visitor.fields();
-            visitor._values = visitor.values();
             VisitorBiz.register(visitor).then(function(data){
                 response.type('json');
                 response.data('success');

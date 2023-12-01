@@ -1,89 +1,151 @@
-function OR() {
+const { log } = require('../T200Lib.js');
+const T200Error = require('../T200Error.js');
 
-}
 
-function AND() {
+class T200SQL {
+    constructor() {
 
-}
+    }
 
-function NOT() {
+    static CTEATE(value) {
+        return `create ${value} `;
+    }
 
-}
+    static DROP(value) {
+        return `drop ${value} `;
+    }
 
-function EQUAL(left, right) {
-    return `${left} = ${right}`;
-}
+    static ALTER(value) {
+        return `alter ${value} `;
+    }
 
-function SELECT(fields, from, where, order, limit, offset) {
-    //return `select ${fields} ${from} ${where} ${order} ${limit} ${offset}`;
-    let result = "select ";
+    static SELECT(fields, from, where, order, limit, offset) {
+        let result = "select ";
 
-    result += fields;
-    result += " ";
-    result += from;
-    result += " ";
-    result += undefined == where ? "" : where + " ";
-    result += undefined == order ? "" : order + " ";
-    result += undefined == limit ? "" : limit + " ";
-    result += undefined == offset ? "" : offset + " ";
-
-    return result;
-}
-
-function INSERT() {
-
-}
-
-function DELETE() {
-
-}
-
-function UPDATE() {
-
-}
-
-function AS() {
-
-}
-
-function FROM(name) {
-    return `from ${name}`;
-}
-
-function WHERE(value) {
-    return `where ${value}`;
-}
-
-function ON() {
-
-}
-
-function ORDER(value) {
-    return `order by ${value}`;
-}
-
-function DESC(name) {
-    return `${name} desc`;
-}
-
-function LIMIT(value) {
-    return `limit ${value}`;
-}
-
-function OFFSET(value) {
-    return `offset ${value}`;
-}
-
-function MATCH() {
-
-}
-
-function AGAINST() {
-
-}
-
-function INNER_JOIN() {
+        result += fields;
+        result += from;
+        result += undefined == where ? "" : where;
+        result += undefined == order ? "" : order;
+        result += undefined == limit ? "" : limit;
+        result += undefined == offset ? "" : offset;
     
+        return result;
+    }
+
+    static INSERT(name, fields, values) {
+        return `insert into ${name} (${fields}) ${values} `;
+    }
+
+    static DELETE(value) {
+        return `delete ${value} `;
+    }
+
+    static UPDATE(name, set, where) {
+        return `update ${name} ${set} ${where} `;
+    }
+
+    ///
+    static NAME(value) {
+        return `${value} `;
+    }
+
+    static NAME_VALUE(items) {
+        let result = "";
+        let k = items.length;
+        for(let i=0;i<k;i++){
+            result += this.ASSIGN(items[i][0], items[i][1]);
+            if(i < k - 1){
+                result += ",";
+            }
+        }
+        return result;
+    }
+
+    static SET(value) {
+        return `set ${value}`;
+    }
+
+    static ASSIGN(left, right) {
+        return `${left} = ${right} `;
+    }
+
+    static FIELDS(items) {
+        return `${items} `;
+    }
+
+    static VALUES(value) {
+        return `values (${value}) `;
+    }
+
+    static FROM(value) {
+        return `from ${value} `;
+    }
+
+    static WHERE(value) {
+        return `where ${value} `;
+    }
+
+    static ORDER(value) {
+        return `order by ${value} `;
+    }
+
+    static DESC(value) {
+        return `${value} desc `;
+    }
+
+    static LIMIT(value) {
+        return `limit ${value} `;
+    }
+
+    static OFFSET(value) {
+        return `offset ${value} `;
+    }
+
+    static MATCH(value) {
+        return `match(${value}) `;
+    }
+
+    static AGAINST(value) {
+        return `against(${value}) `;
+    }
+
+    ///
+    static AND(left, right) {
+        return `${left} and ${right} `;
+    }
+
+    static OR(left, right) {
+        return `${left} or ${right} `;
+    }
+
+    static NOT(value) {
+        return `!${value} `;
+    }
+
+    ///
+    static EQUAL(left, right) {
+        return `${left} = ${right} `;
+    }
+
+    static GREATER_THAN(left, right) {
+        return `${left} > ${right} `;
+    }
+
+    static LESS_THAN(left, right) {
+        return `${left} < ${right} `;
+    }
+
+    static GREATER_EQUAL(left, right)  {
+        return `${left} >= ${right} `;
+    }
+
+    static LESS_EQUAL(left, right) {
+        return `${left} <= ${right} `;
+    }
+
+    static STRING(value) {
+        return `'${value}'`;
+    }
 }
 
-module.exports = { SELECT, FROM, WHERE, ORDER, DESC, LIMIT, OFFSET, EQUAL};
+module.exports = T200SQL;

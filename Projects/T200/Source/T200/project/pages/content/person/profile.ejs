@@ -19,8 +19,8 @@
                 <div class="label">
                     Nickname:
                 </div>
-                <div class="value">
-                    nickname
+                <div class="value" id="profile_nickname">
+                    <%=profile.nickname%>
                 </div>
             </div>
             <div>
@@ -131,7 +131,7 @@
             <form id="intro_form">
                 <input type='hidden' name='test'>
                 <div class="left_item">
-                    <textarea disabled id="intro" class="intro"></textarea>
+                    <textarea disabled id="intro" class="intro"><%=profile.intro%></textarea>
                 </div>
             </form>
         </div>

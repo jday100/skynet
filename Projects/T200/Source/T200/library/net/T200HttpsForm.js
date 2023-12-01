@@ -47,6 +47,38 @@ class T200HttpsForm {
         return false;
     }
 
+    static verify_text(value) {
+        if(value){
+            return true;
+        }
+
+        return false;
+    }
+
+    static verify_text_50(value) {
+        if(value && 50 >= value.length){
+            return true;
+        }
+
+        return false;
+    }
+
+    static verify_text_100(value) {
+        if(value && 100 >= value.length){
+            return true;
+        }
+
+        return false;
+    }
+
+    static verify_text_255(value) {
+        if(value && 255 >= value.length){
+            return true;
+        }
+
+        return false;
+    }
+
     static verify_email(value) {
         if(value){
             return true;

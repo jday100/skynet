@@ -1,13 +1,14 @@
 function nickname_edit() {
     $.id("nickname_box").innerHTML = " \
         <form id='nickname_form'> \
+            <input type='hidden' name='test'> \
             <div> \
                 <label>Password</label> \
                 <input type='password' name='password'> \
             </div> \
             <div> \
                 <label>Nickname</label> \
-                <input type='text' name='nickname'> \
+                <input type='text' id='nickname' name='nickname'> \
             </div> \
         </form> \
     ";
@@ -19,7 +20,8 @@ function nickname_save() {
     let result = formtostring("nickname_form");
     $.post('/content/person/nickname/save', result, function(data){
         alert("Save Success!");
-        $.id("nickname").disabled = true;
+        $.id("profile_nickname").innerHTML = $.id("nickname").value;
+        $.id("nickname_box").innerHTML = "";
         $.id("nickname_button").innerHTML = "Edit";
         $.id("nickname_button").onclick = nickname_edit;
     }, function(){
@@ -30,17 +32,18 @@ function nickname_save() {
 function password_edit() {
     $.id("password_box").innerHTML = " \
         <form id='password_form'> \
+            <input type='hidden' name='test'> \
             <div> \
                 <label>Old Password</label> \
                 <input type='password' name='opwd'> \
             </div> \
             <div> \
                 <label>New Password</label> \
-                <input type='password' name='npwd1'> \
+                <input type='password' name='pwd1'> \
             </div> \
             <div> \
                 <label>New Password</label> \
-                <input type='password' name='npwd2'> \
+                <input type='password' name='pwd2'> \
             </div> \
         </form> \
     ";
@@ -62,18 +65,21 @@ function password_save() {
 
 function email_edit() {
     $.id("email_box").innerHTML = " \
-        <form id='email_form'> \
+        <form id='email_form' onsubmit='return false;'> \
+            <input type='hidden' name='test'> \
             <div> \
-                <label>Old Password</label> \
-                <input type='password' name='opwd'> \
+                <label>Password</label> \
+                <input class='email_value' type='password' name='password'> \
             </div> \
             <div> \
-                <label>New Password</label> \
-                <input type='password' name='npwd1'> \
+                <label>New Email</label> \
+                <input class='email' type='email' id='email' name='email'> \
+                <button class='send_button' onclick='send_email();'>Send</button> \
             </div> \
             <div> \
-                <label>New Password</label> \
-                <input type='password' name='npwd2'> \
+                <label>Code</label> \
+                <input class='code' type='password' name='code'> \
+                <div class='space'></div> \
             </div> \
         </form> \
     ";
@@ -96,6 +102,7 @@ function email_save() {
 function nationality_edit() {
     $.id("nationality_box").innerHTML = " \
         <form id='nationality_form'> \
+            <input type='hidden' name='test'> \
             <div> \
                 <label>Old Password</label> \
                 <input type='password' name='opwd'> \
@@ -131,11 +138,11 @@ function location_edit() {
                     <select id='continent' onchange='continent_change(this.value);'></select> \
                 </div> \
                 <div> \
-                    <label>Continent:</label> \
+                    <label>Region:</label> \
                     <select id='region' onchange='region_change(this.value);'></select> \
                 </div> \
                 <div> \
-                    <label>Continent:</label> \
+                    <label>City:</label> \
                     <select id='city' name='city'></select> \
                 </div> \
             </form> \
@@ -190,4 +197,9 @@ function region_init(value) {
         $.id("location_region").innerHTML = result[1];
         $.id("location_city").innerHTML = result[2];
     }
+}
+
+
+function send_email() {
+
 }
