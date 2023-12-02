@@ -2,7 +2,7 @@ const { error, log } = require('../../../../library/T200Lib.js');
 const T200Error = require('../../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
-const T200Exchange = require('../../../models/T200Exchange.js');
+const T200UserExchange = require('../../../models/T200UserExchange.js');
 const T200HomeUserBiz = require('../../../biz/T200HomeUserBiz.js');
 
 async function do_content_exchange_edit(request, response, cookie, session, resource) {
@@ -34,7 +34,7 @@ async function do_content_exchange_add(request, response, cookie, session, resou
     log(__filename, "do_content_exchange_add");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let exchange = new T200Exchange();
+        let exchange = new T200UserExchange();
   
         exchange.user_id = session.get("userid");
         exchange.title = request.get("title");
@@ -43,9 +43,9 @@ async function do_content_exchange_add(request, response, cookie, session, resou
         if(T200HttpsForm.verify_id(exchange.user_id)
             && T200HttpsForm.verify_text(exchange.title)
             && T200HttpsForm.verify_text(exchange.content)){
-                exchange._fields = exchange.fields();
-                exchange._values = exchange.values();
-                UserBiz.append(exchange.merge_insert()).then(resolve, reject);
+                exchange._fields = exchange.append_fields();
+                exchange._values = exchange.append_values();
+                UserBiz.append(exchange.merge_user_insert()).then(resolve, reject);
         }
     });
 

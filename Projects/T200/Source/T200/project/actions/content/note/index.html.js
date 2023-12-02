@@ -16,7 +16,7 @@ async function do_content_note_list(request, response, cookie, session, resource
         let note = new T200UserNote();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
-
+        
         let status = request.get("status");
 
         switch(status){
@@ -30,39 +30,43 @@ async function do_content_note_list(request, response, cookie, session, resource
                 note.status = status;
         }
 
-        note._fields = note.list_status_fields();
-        note._order_direction = "DESC";
-        note.paging_count_sql = note.merge_status_count(note.status);
-        note.merge_paging = note.merge_status_paging_test;
-        UserBiz.paging(note).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.values = result.values;
-            data.status = note.status;
-            let list = new T200ListView(resource);
+        note.user_id = session.get("userid");
 
-            list._list_url = "/content/note/list";
-            list._search_url = "/content/note/search";
-            list._change_status_url = "/content/note/list";
+        if(true){
+            note._fields = note.content_list_fields();
+            note.paging_count_sql = note.merge_user_paging_count();
+            note.merge_paging = note.merge_user_paging_list;
+            UserBiz.paging(note).then(function(result){
+                let data = {};
 
-            data.item_left = note.set_item_left();
-            data.item_right = note.set_item_right();
-            data.list_buttons = note.set_list_buttons();
+                data.paging = result.paging;
+                data.values = result.values;
+                data.status = note.status;
+                data.item_left = note.set_item_left();
+                data.item_right = note.set_item_right();
+                data.list_buttons = note.set_list_buttons();
 
-            return list.show(data).then(function(value){
-                response.type("json");
-                resolve(value);
+                let list_box = new T200ListView(resource);
+
+                list_box._list_url = "/content/note/list";
+                list_box._search_url = "/content/note/search";
+                list_box._change_status_url = "/content/note/list";
+
+                return list_box.show(data).then(function(value){
+                    response.type("json");
+                    resolve(value);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
             }, function(){
                 response.type("json");
                 reject();
             });
-           
-        }, function (err) {
+        }else{
             response.type("json");
             reject();
-        });
-    
+        }
     });
 
     return promise;
@@ -75,7 +79,7 @@ async function do_content_note_search(request, response, cookie, session, resour
         let note = new T200UserNote();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
- 
+        
         let status = request.get("status");
         let search = request.get("search");
 
@@ -90,45 +94,45 @@ async function do_content_note_search(request, response, cookie, session, resour
                 note.status = status;
         }
 
-        if(T200HttpsForm.verify_text(search)){
-            note._search = search;
-            note._fields = note.fulltext_result_fields();
-            note._search_fields = note.fulltext_fields();
-            note._order_direction = "DESC";
-            note.fulltext_count_sql = note.merge_fulltext_count(note.status, search);
-   
-            note.merge_paging = note.merge_fulltext_test;
-            UserBiz.fulltext(note).then(function(result){
-                let view = new T200HomeView(resource);
-                let data = {};
-                data.paging = result.paging;
-                data.values = result.values;
-                data.status = note.status;
+        note.user_id = session.get("userid");
 
-                let list = new T200ListView(resource);
+        if(T200HttpsForm.verify_id(note.user_id)
+            //&& T200HttpsForm.verify_status(note.status)
+            && T200HttpsForm.verify_text(search)){
+                note.search = search;
+                note._fields = note.content_list_fields();
+                note._search_fields = note.content_fulltext_fields();
+                note.fulltext_count_sql = note.merge_user_fulltext_count();
+                note.merge_fulltext = note.merge_user_fulltext_list;
+                UserBiz.fulltext(note).then(function(result){
+                    let data = {};
 
-                list._list_url = "/content/note/list";
-                list._search_url = "/content/note/search";
-                list._change_status_url = "/content/note/list";
-
-                data.item_left = note.set_item_left();
-                data.item_right = note.set_item_right();
-                data.list_buttons = note.set_list_buttons();
+                    data.paging = result.paging;
+                    data.values = result.values;
+                    data.status = note.status;
+                    data.item_left = note.set_item_left();
+                    data.item_right = note.set_item_right();
+                    data.list_buttons = note.set_list_buttons();
     
-                return list.show(data).then(function(value){
-                    response.type("json");
-                    resolve(value);
+                    let list_box = new T200ListView(resource);
+    
+                    list_box._list_url = "/content/note/list";
+                    list_box._search_url = "/content/note/search";
+                    list_box._change_status_url = "/content/note/list";
+    
+                    return list_box.show(data).then(function(value){
+                        response.type("json");
+                        resolve(value);
+                    }, function(){
+                        response.type("json");
+                        reject();
+                    });
                 }, function(){
                     response.type("json");
                     reject();
                 });
-     
-            }, function (err) {
-                response.type("json");
-                reject();
-            });
-
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
 
@@ -138,7 +142,6 @@ async function do_content_note_search(request, response, cookie, session, resour
 }
 
 
-
 async function do_content_note_publish(request, response, cookie, session, resource) {
     log(__filename, "do_content_note_publish");
     let self = this;
@@ -146,13 +149,15 @@ async function do_content_note_publish(request, response, cookie, session, resou
         let note = new T200UserNote();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        note.user_id = session.get("userid");
         note.ids = request.get("ids");
         note.status = 1;
 
-        if(T200HttpsForm.verify_ids(note.ids)
+        if(T200HttpsForm.verify_id(note.user_id)
+            && T200HttpsForm.verify_ids(note.ids)
             && T200HttpsForm.verify_id(note.status)){
-            
-            UserBiz.modify(note.merge_status_update()).then(function(result){
+            note._name_value = note.modify_status_array();
+            UserBiz.modify(note.merge_user_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -181,13 +186,15 @@ async function do_content_note_remove(request, response, cookie, session, resour
         let note = new T200UserNote();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        note.user_id = session.get("userid");
         note.ids = request.get("ids");
         note.status = -1;
 
-        if(T200HttpsForm.verify_ids(note.ids)
+        if(T200HttpsForm.verify_id(note.user_id)
+            && T200HttpsForm.verify_ids(note.ids)
             && T200HttpsForm.verify_status(note.status)){
-            
-            UserBiz.modify(note.merge_status_update()).then(function(result){
+            note._name_value = note.modify_status_array();
+            UserBiz.modify(note.merge_user_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();

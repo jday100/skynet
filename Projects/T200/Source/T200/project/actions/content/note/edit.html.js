@@ -2,7 +2,7 @@ const { error, log } = require('../../../../library/T200Lib.js');
 const T200Error = require('../../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
-const T200Note = require('../../../models/T200Note.js');
+const T200UserNote = require('../../../models/T200UserNote.js');
 const T200HomeUserBiz = require('../../../biz/T200HomeUserBiz.js');
 
 async function do_content_note_edit(request, response, cookie, session, resource) {
@@ -34,7 +34,7 @@ async function do_content_note_add(request, response, cookie, session, resource,
     log(__filename, "do_content_note_add");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let note = new T200Note();
+        let note = new T200UserNote();
   
         note.user_id = session.get("userid");
         note.title = request.get("title");
@@ -43,9 +43,9 @@ async function do_content_note_add(request, response, cookie, session, resource,
         if(T200HttpsForm.verify_id(note.user_id)
             && T200HttpsForm.verify_text(note.title)
             && T200HttpsForm.verify_text(note.content)){
-                note._fields = note.fields();
-                note._values = note.values();
-                UserBiz.append(note.merge_insert()).then(resolve, reject);
+                note._fields = note.append_fields();
+                note._values = note.append_values();
+                UserBiz.append(note.merge_user_insert()).then(resolve, reject);
         }
     });
 
