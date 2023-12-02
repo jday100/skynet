@@ -2,7 +2,7 @@ const { error, log } = require('../../../../library/T200Lib.js');
 const T200Error = require('../../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
-const T200Trading = require('../../../models/T200Trading.js');
+const T200UserTradingBuy = require('../../../models/T200UserTradingBuy.js');
 const T200HomeUserBiz = require('../../../biz/T200HomeUserBiz.js');
 
 async function do_content_trading_buy_edit(request, response, cookie, session, resource) {
@@ -34,21 +34,22 @@ async function do_content_trading_buy_add(request, response, cookie, session, re
     log(__filename, "do_content_trading_buy_add");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let trading = new T200Trading();
+        let trading = new T200UserTradingBuy();
   
         trading.user_id = session.get("userid");
+        //trading.region_id = session.get("regionid");
         trading.city_id = session.get("cityid");
         trading.title = request.get("title");
         trading.content = request.get("content");
         
         if(T200HttpsForm.verify_id(trading.user_id)
+            //&& T200HttpsForm.verify_id(trading.region_id)
             && T200HttpsForm.verify_id(trading.city_id)
             && T200HttpsForm.verify_text(trading.title)
             && T200HttpsForm.verify_text(trading.content)){
-                trading._table = "trading_buy";
-                trading._fields = trading.fields();
-                trading._values = trading.values();
-                UserBiz.append(trading.merge_insert()).then(resolve, reject);
+                trading._fields = trading.append_fields();
+                trading._values = trading.append_values();
+                UserBiz.append(trading.merge_user_insert()).then(resolve, reject);
         }else{
             reject();
         }

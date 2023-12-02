@@ -2,7 +2,7 @@ const { error, log } = require('../../../../library/T200Lib.js');
 const T200Error = require('../../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
-const T200Job = require('../../../models/T200Job.js');
+const T200UserJobWanted = require('../../../models/T200UserJobWanted.js');
 const T200HomeUserBiz = require('../../../biz/T200HomeUserBiz.js');
 
 async function do_content_job_wanted_edit(request, response, cookie, session, resource) {
@@ -34,21 +34,22 @@ async function do_content_job_wanted_add(request, response, cookie, session, res
     log(__filename, "do_content_job_wanted_add");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let job = new T200Job();
+        let job = new T200UserJobWanted();
   
         job.user_id = session.get("userid");
+        //job.region_id = session.get("regionid");
         job.city_id = session.get("cityid");
         job.title = request.get("title");
         job.content = request.get("content");
         
         if(T200HttpsForm.verify_id(job.user_id)
+            //&& T200HttpsForm.verify_id(job.region_id)
             && T200HttpsForm.verify_id(job.city_id)
             && T200HttpsForm.verify_text(job.title)
             && T200HttpsForm.verify_text(job.content)){
-                job._table = "job_wanted";
-                job._fields = job.fields();
-                job._values = job.values();
-                UserBiz.append(job.merge_insert()).then(resolve, reject);
+                job._fields = job.append_fields();
+                job._values = job.append_values();
+                UserBiz.append(job.merge_user_insert()).then(resolve, reject);
         }else{
             reject();
         }

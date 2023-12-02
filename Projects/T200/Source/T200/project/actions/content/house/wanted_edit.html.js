@@ -2,7 +2,7 @@ const { error, log } = require('../../../../library/T200Lib.js');
 const T200Error = require('../../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
-const T200House = require('../../../models/T200House.js');
+const T200UserHouseWanted = require('../../../models/T200UserHouseWanted.js');
 const T200HomeUserBiz = require('../../../biz/T200HomeUserBiz.js');
 
 async function do_content_house_wanted_edit(request, response, cookie, session, resource) {
@@ -34,21 +34,22 @@ async function do_content_house_wanted_add(request, response, cookie, session, r
     log(__filename, "do_content_house_wanted_add");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let house = new T200House();
+        let house = new T200UserHouseWanted();
   
         house.user_id = session.get("userid");
+        //house.region_id = session.get("regionid");
         house.city_id = session.get("cityid");
         house.title = request.get("title");
         house.content = request.get("content");
         
         if(T200HttpsForm.verify_id(house.user_id)
+            //&& T200HttpsForm.verify_id(house.region_id)
             && T200HttpsForm.verify_id(house.city_id)
             && T200HttpsForm.verify_text(house.title)
             && T200HttpsForm.verify_text(house.content)){
-                house._table = "house_wanted";
-                house._fields = house.fields();
-                house._values = house.values();
-                UserBiz.append(house.merge_insert()).then(resolve, reject);
+                house._fields = house.append_fields();
+                house._values = house.append_values();
+                UserBiz.append(house.merge_user_insert()).then(resolve, reject);
         }else{
             reject();
         }
