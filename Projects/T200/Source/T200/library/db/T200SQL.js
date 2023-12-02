@@ -19,11 +19,12 @@ class T200SQL {
         return `alter ${value} `;
     }
 
-    static SELECT(fields, from, where, order, limit, offset) {
+    static SELECT(fields, from, join, where, order, limit, offset) {
         let result = "select ";
 
         result += fields;
         result += from;
+        result += undefined == join ? "" : join;
         result += undefined == where ? "" : where;
         result += undefined == order ? "" : order;
         result += undefined == limit ? "" : limit;
@@ -33,7 +34,7 @@ class T200SQL {
     }
 
     static INSERT(name, fields, values) {
-        return `insert into ${name} (${fields}) ${values} `;
+        return `insert into ${name}(${fields})${values} `;
     }
 
     static DELETE(value) {
@@ -41,9 +42,22 @@ class T200SQL {
     }
 
     static UPDATE(name, set, where) {
-        return `update ${name} ${set} ${where} `;
+        return `update ${name}${set}${where} `;
     }
 
+    ///
+    static INNER(name, on) {
+        return `inner join ${name} on ${on} `;
+    }
+
+    static ALIAS(name, value) {
+        return `${name} ${value} `;
+    }
+
+    static PREFIX(name, value) {
+        return `${value}.${name} `;
+    }
+    
     ///
     static NAME(value) {
         return `${value} `;
@@ -59,6 +73,14 @@ class T200SQL {
             }
         }
         return result;
+    }
+
+    static COUNT(name) {
+        return `count(${name}) `;
+    }
+
+    static AS(field, name) {
+        return `${field} as ${name} `;
     }
 
     static SET(value) {
@@ -123,6 +145,10 @@ class T200SQL {
     }
 
     ///
+    static IN(name, value) {
+        return `${name} in (${value}) `;
+    }
+
     static EQUAL(left, right) {
         return `${left} = ${right} `;
     }

@@ -1,6 +1,8 @@
 const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
+const T200SQL = require('../../library/db/T200SQL.js');
+
 const T200HomeUserModel = require('./T200HomeUserModel.js');
 
 
@@ -9,10 +11,48 @@ class T200UserHouseRent extends T200HomeUserModel {
         super();
         this._table = "house_rent";
         this._key = "id";
+        this._id = "user_id";
 
         this.city_id = 0;
         this.status = 0;
+
+        this._person_table = "person";
     }
+
+    append_fields() {
+        return [
+            'user_id',
+            'title',
+            'content'
+        ];
+    }
+
+    append_values() {
+        return [
+            this.user_id,
+            `'${this.title}'`,
+            `'${this.content}'`
+        ];
+    }
+
+    content_list_fields() {
+        return [
+            'id',
+            'title',
+            T200SQL.PREFIX('status', 't1'),
+            T200SQL.PREFIX('create_time', 't1'),
+            T200SQL.PREFIX('username', 't2')
+        ];
+    }
+
+    modify_status_array() {
+        return [
+            ['status', this.status]
+        ];
+    }
+
+
+    /////////////////
 
     set_item_left() {
         return [
