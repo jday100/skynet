@@ -16,7 +16,7 @@ class T200SearchBiz extends T200PagingBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             model.paging_count_sql = model.fulltext_count_sql;
-            model.paging_list_sql = model.fulltext_list_sql;
+            model.merge_paging = model.merge_fulltext;
             self.paging(model).then(function(data){
                 resolve(data);
             }, function(err){

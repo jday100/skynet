@@ -45,14 +45,18 @@ class T200UserHouseRent extends T200HomeUserModel {
         ];
     }
 
+    content_fulltext_fields() {
+        return [
+            'title',
+            'content'
+        ];
+    }
+
     modify_status_array() {
         return [
             ['status', this.status]
         ];
     }
-
-
-    /////////////////
 
     set_item_left() {
         return [
@@ -74,6 +78,11 @@ class T200UserHouseRent extends T200HomeUserModel {
             ['Publish', 'list_hit_publish', 'form', 'list_box', '/content/house/rent/publish']
         ];
     }
+
+
+    /////////////////
+
+/*
 
     merge_fulltext_test(value) {
         if(undefined == this.status || '' == this.status){
@@ -136,7 +145,7 @@ class T200UserHouseRent extends T200HomeUserModel {
         return "title, content";
     }
 
-
+*/
 }
 
 module.exports = T200UserHouseRent;
