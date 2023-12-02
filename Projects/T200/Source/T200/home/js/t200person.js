@@ -3,11 +3,11 @@ function nickname_edit() {
         <form id='nickname_form'> \
             <input type='hidden' name='test'> \
             <div> \
-                <label>Password</label> \
+                <label>Password:</label> \
                 <input type='password' name='password'> \
             </div> \
             <div> \
-                <label>Nickname</label> \
+                <label>Nickname:</label> \
                 <input type='text' id='nickname' name='nickname'> \
             </div> \
         </form> \
@@ -34,15 +34,15 @@ function password_edit() {
         <form id='password_form'> \
             <input type='hidden' name='test'> \
             <div> \
-                <label>Old Password</label> \
+                <label>Old Password:</label> \
                 <input type='password' name='opwd'> \
             </div> \
             <div> \
-                <label>New Password</label> \
+                <label>New Password:</label> \
                 <input type='password' name='pwd1'> \
             </div> \
             <div> \
-                <label>New Password</label> \
+                <label>New Password:</label> \
                 <input type='password' name='pwd2'> \
             </div> \
         </form> \
@@ -68,18 +68,19 @@ function email_edit() {
         <form id='email_form' onsubmit='return false;'> \
             <input type='hidden' name='test'> \
             <div> \
-                <label>Password</label> \
+                <label>Password:</label> \
                 <input class='email_value' type='password' name='password'> \
+                <div class='pwd_space'></div> \
             </div> \
             <div> \
-                <label>New Email</label> \
+                <label>New Email:</label> \
                 <input class='email' type='email' id='email' name='email'> \
                 <button class='send_button' onclick='send_email();'>Send</button> \
             </div> \
             <div> \
-                <label>Code</label> \
+                <label>Code:</label> \
                 <input class='code' type='password' name='code'> \
-                <div class='space'></div> \
+                <div class='code_space'></div> \
             </div> \
         </form> \
     ";
@@ -104,15 +105,18 @@ function nationality_edit() {
         <form id='nationality_form'> \
             <input type='hidden' name='test'> \
             <div> \
-                <label>Old Password</label> \
-                <input type='password' name='opwd'> \
+                <label>Continent:</label> \
+                <select id='nationality_continent' onchange='nationality_continent_change(this.value);'></select> \
             </div> \
             <div> \
-                <label>New Password</label> \
-                <input type='password' name='npwd1'> \
+                <label>Country:</label> \
+                <select id='country' name='country'></select> \
             </div> \
         </form> \
     ";
+
+    nationality_continent_init($.id("nationality_continent"));
+
     $.id("nationality_button").innerHTML = "Save";
     $.id("nationality_button").onclick = nationality_save;
 }
@@ -139,7 +143,7 @@ function location_edit() {
                 </div> \
                 <div> \
                     <label>Region:</label> \
-                    <select id='region' onchange='region_change(this.value);'></select> \
+                    <select id='region' name='region' onchange='region_change(this.value);'></select> \
                 </div> \
                 <div> \
                     <label>City:</label> \
@@ -187,6 +191,15 @@ function intro_save() {
     });
 }
 
+function nationality_init(value) {
+    let result = city[value];
+
+    if(undefined == result){
+
+    }else{
+        $.id("nationality_country").innerHTML = result[1];
+    }
+}
 
 function region_init(value) {
     let result = city[value];

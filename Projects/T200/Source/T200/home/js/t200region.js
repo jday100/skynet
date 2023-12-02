@@ -164,3 +164,39 @@ function region_setting() {
 
     $.id('region_box').innerHTML = result;    
 }
+
+
+function nationality_continent_init(obj, value) {
+    let items = continents;
+
+    if(undefined == items){
+        
+    }else{
+        let result = "";
+
+        items.forEach(item => {
+            if(value == item){
+                result += `<option selected value='${item}'>${item}</option>`;
+            }else{
+                result += `<option value='${item}'>${item}</option>`;
+            }
+        });
+        obj.innerHTML = result;
+        obj.value = "";
+    }
+}
+
+function nationality_continent_change(value) {
+    let items = regions[value];
+
+    if(undefined == items){
+
+    }else{
+        let result = "";
+        items.forEach(item => {
+            result += `<option value='${item}'>${item}</option>`;
+        });
+        $.id('country').innerHTML = result;
+        $.id('country').value = "";
+    }
+}

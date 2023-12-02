@@ -28,6 +28,20 @@ class T200UserPerson extends T200HomeUserModel {
             ['password', `'${this.password}'`]
         ];
     }
+
+    modify_region_array() {
+        return [
+            //['region_id', `${this.region_id}`],
+            ['city_id', `${this.city_id}`]
+        ];
+    }
+
+    modify_intro_array() {
+        return [
+            ['intro', `'${this.intro}'`]
+        ];
+    }
+
 }
 
 module.exports = T200UserPerson;

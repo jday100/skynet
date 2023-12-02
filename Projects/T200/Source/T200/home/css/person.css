@@ -155,11 +155,11 @@ form > div > input {
 }
 
 .email_value {
-    width: 300px;
+    width: 200px;
 }
 
 .email {
-    width: 220px;
+    width: 200px;
 }
 
 .send_button {
@@ -171,6 +171,14 @@ form > div > input {
     width: 100px;
 }
 
-.space {
-    width: 200px;
+.pwd_space {
+    width: 80px;
+}
+
+.code_space {
+    width: 180px;
+}
+
+#nationality_form > div > select {
+    width: 200px
 }

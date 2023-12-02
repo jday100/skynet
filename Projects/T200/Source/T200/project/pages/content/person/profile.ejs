@@ -72,7 +72,8 @@
                 <div class="label">
                     Nationality:
                 </div>
-                <div class="value">
+                <input type="hidden" id="nationality_country_id" value="<%=profile.city_id%>">
+                <div id="nationality_country" class="value">
                     country
                 </div>
             </div>
@@ -131,7 +132,7 @@
             <form id="intro_form">
                 <input type='hidden' name='test'>
                 <div class="left_item">
-                    <textarea disabled id="intro" class="intro"><%=profile.intro%></textarea>
+                    <textarea disabled id="intro" name="intro" class="intro"><%=profile.intro%></textarea>
                 </div>
             </form>
         </div>
