@@ -18,7 +18,7 @@ class T200CookieItem {
     }
 
     to_string() {
-        return `${this._name}=${this._value}; Expires=${this._expires}`;
+        return `${this._name}=${this._value}; path=${this._path}; Expires=${this._expires};`;
     }
 
     parse(msg) {

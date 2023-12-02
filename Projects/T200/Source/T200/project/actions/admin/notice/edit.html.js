@@ -2,7 +2,7 @@ const { error, log } = require('../../../../library/T200Lib.js');
 const T200Error = require('../../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
-const T200Notice = require('../../../models/T200Notice.js');
+const T200AdminNotice = require('../../../models/T200AdminNotice.js');
 const T200HomeAdminBiz = require('../../../biz/T200HomeAdminBiz.js');
 
 async function do_admin_notice_edit(request, response, cookie, session, resource) {
@@ -34,7 +34,7 @@ async function do_admin_notice_add(request, response, cookie, session, resource,
     log(__filename, "do_admin_notice_add");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let notice = new T200Notice();
+        let notice = new T200AdminNotice();
   
         notice.user_id = session.get("userid");
         notice.title = request.get("title");
@@ -43,9 +43,9 @@ async function do_admin_notice_add(request, response, cookie, session, resource,
         if(T200HttpsForm.verify_id(notice.user_id)
             && T200HttpsForm.verify_text(notice.title)
             && T200HttpsForm.verify_text(notice.content)){
-                notice._fields= notice.fields();
-                notice._values = notice.values();
-                AdminBiz.append(notice.merge_insert()).then(resolve, reject);
+                notice._fields= notice.append_fields();
+                notice._values = notice.append_values();
+                AdminBiz.append(notice.merge_admin_insert()).then(resolve, reject);
         }
     });
 

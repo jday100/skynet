@@ -50,13 +50,13 @@ class T200VisitorModel extends T200SearchModel {
         return T200SQL.SELECT(
             T200SQL.FIELDS(this._fields), T200SQL.FROM(this._table),
             T200SQL.WHERE(
-                T200SQL.AND(
+                //T200SQL.AND(
                     T200SQL.AND(
                         T200SQL.EQUAL("username", `'${this.username}'`), 
                         T200SQL.EQUAL("password", `'${this.password}'`)
-                    ),
-                    T200SQL.EQUAL("status", 1)
-                )
+                    )//,
+                    //T200SQL.EQUAL("status", 1)
+                //)
             )
         );
     }

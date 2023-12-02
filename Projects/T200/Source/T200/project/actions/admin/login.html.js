@@ -2,6 +2,8 @@ const { error, log } = require('../../../library/T200Lib.js');
 const T200Error = require('../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../library/net/T200HttpsForm.js');
+const T200CookieItem = require('../../../library/net/T200CookieItem.js');
+
 const T200VisitorPerson = require('../../models/T200VisitorPerson.js');
 const T200HomeVisitorBiz = require('../../biz/T200HomeVisitorBiz.js');
 
@@ -46,12 +48,20 @@ function set_data(cookie, session, data) {
 
     cookie.set('sid', sid);
 
+
+    let item = new T200CookieItem('sid', sid);
+
+    item._path = "/admin/";
+    
+    cookie.set_item(item);
+
+
     let result = {};
 
     result.userid = data.user_id;
     result.username = data.username;
 
-    session.set(sid, result);
+    session.key(sid, result);
 }
 
 global.action.use_post('/admin/login', do_admin_login);

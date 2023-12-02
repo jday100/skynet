@@ -52,6 +52,11 @@ class T200HttpsCookie {
         return this.cookies[name];
     }
 
+    set_item(item) {
+        let msg = item.to_string();
+        this.res.setHeader('Set-Cookie', msg);
+    }
+
 
     #parse(msg) {
         log(__filename, "cookie parse", msg);
