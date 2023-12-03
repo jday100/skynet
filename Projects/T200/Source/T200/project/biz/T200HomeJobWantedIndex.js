@@ -42,9 +42,8 @@ class T200HomeJobWantedIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobWanted();
             job._fields = job.list_fields();
-            job._order_direction = "DESC";
-            return self.list(job.merge_list()).then(function(values){
-                data.wanted_fulls = values;
+            return self.list(job.merge_user_paging_type_list()).then(function(values){
+                data.job_fulls = values;
                 resolve(data);
             }, function(){
                 reject();
@@ -59,9 +58,8 @@ class T200HomeJobWantedIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobWanted();
             job._fields = job.list_fields();
-            job._order_direction = "DESC";
-            return self.list(job.merge_list()).then(function(values){
-                data.wanted_parts = values;
+            return self.list(job.merge_user_paging_type_list()).then(function(values){
+                data.job_parts = values;
                 resolve(data);
             }, function(){
                 reject();
