@@ -16,6 +16,7 @@ async function do_admin_trading_buy_list(request, response, cookie, session, res
         let trading = new T200AdminTradingBuy();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+
         let status = request.get("status");
 
         switch(status){
@@ -29,38 +30,44 @@ async function do_admin_trading_buy_list(request, response, cookie, session, res
                 trading.status = status;
         }
 
-        trading._fields = trading.list_status_fields();
-        trading._order_direction = "DESC";
-        trading.paging_count_sql = trading.merge_status_count(trading.status);
-        trading.merge_paging = trading.merge_status_paging_test;
-        AdminBiz.paging(trading).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.values = result.values;
-            data.status = trading.status;
-            let list = new T200ListView(resource);
+        if(true){
+            trading._fields = trading.admin_list_fields();
+            trading.paging_count_sql = trading.merge_admin_paging_count();
+            trading.merge_paging = trading.merge_admin_paging_list;
+            AdminBiz.paging(trading).then(function(result){
+                let data = {};
+                
+                data.paging = result.paging;
+                data.values = result.values;
+                data.status = trading.status;
 
-            list._list_url = "/admin/trading/buy/list";
-            list._search_url = "/admin/trading/buy/search";
-            list._change_status_url = "/admin/trading/buy/list";
+                data.item_left = trading.set_item_left();
+                data.item_right = trading.set_item_right();
+                data.list_buttons = trading.set_list_buttons();
 
-            data.item_left = trading.set_item_left();
-            data.item_right = trading.set_item_right();
-            data.list_buttons = trading.set_list_buttons();
+                let list_box = new T200ListView(resource);
 
-            return list.show(data).then(function(value){
-                response.type("json");
-                resolve(value);
-            }, function(){
+                list_box._list_url = "/admin/trading/buy/list";
+                list_box._search_url = "/admin/trading/buy/search";
+                list_box._change_status_url = "/admin/trading/buy/list";
+
+                return list_box.show(data).then(function(value){
+                    response.type("json");
+                    resolve(value);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+        
+            }, function (err) {
                 response.type("json");
                 reject();
             });
-           
-        }, function (err) {
+
+        }else{
             response.type("json");
-            reject();
-        });
+            reject(T200Error.build(1));
+        }
     
     });
 
@@ -73,6 +80,7 @@ async function do_admin_trading_buy_search(request, response, cookie, session, r
     let promise = new Promise(function(resolve, reject){
         let trading = new T200AdminTradingBuy();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
+
 
         let status = request.get("status");
         let search = request.get("search");
@@ -89,31 +97,29 @@ async function do_admin_trading_buy_search(request, response, cookie, session, r
         }
 
         if(T200HttpsForm.verify_text(search)){
-            trading._search = search;
-            trading._fields = trading.fulltext_result_fields();
-            trading._search_fields = trading.fulltext_fields();
-            trading._order_direction = "DESC";
-            trading.fulltext_count_sql = trading.merge_fulltext_count(trading.status, search);
-   
-            trading.merge_paging = trading.merge_fulltext_test;
+            trading.search = search;
+            trading._fields = trading.admin_list_fields();
+            trading._search_fields = trading.admin_fulltext_fields();
+            trading.fulltext_count_sql = trading.merge_admin_fulltext_count();
+            trading.merge_fulltext = trading.merge_admin_fulltext_list;
             AdminBiz.fulltext(trading).then(function(result){
-                let view = new T200HomeView(resource);
                 let data = {};
+
                 data.paging = result.paging;
                 data.values = result.values;
                 data.status = trading.status;
 
-                let list = new T200ListView(resource);
-
-                list._list_url = "/admin/trading/buy/list";
-                list._search_url = "/admin/trading/buy/search";
-                list._change_status_url = "/admin/trading/buy/list";
-
                 data.item_left = trading.set_item_left();
                 data.item_right = trading.set_item_right();
                 data.list_buttons = trading.set_list_buttons();
+
+                let list_box = new T200ListView(resource);
+
+                list_box._list_url = "/admin/trading/buy/list";
+                list_box._search_url = "/admin/trading/buy/search";
+                list_box._change_status_url = "/admin/trading/buy/list";
     
-                return list.show(data).then(function(value){
+                return list_box.show(data).then(function(value){
                     response.type("json");
                     resolve(value);
                 }, function(){
@@ -127,9 +133,9 @@ async function do_admin_trading_buy_search(request, response, cookie, session, r
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
-
     });
 
     return promise;
@@ -143,13 +149,15 @@ async function do_admin_trading_buy_approve(request, response, cookie, session, 
         let trading = new T200AdminTradingBuy();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        trading.user_id = session.get("userid");
         trading.ids = request.get("ids");
         trading.status = 1;
 
-        if(T200HttpsForm.verify_ids(trading.ids)
+        if(T200HttpsForm.verify_id(trading.user_id)
+            && T200HttpsForm.verify_ids(trading.ids)
             && T200HttpsForm.verify_id(trading.status)){
-            
-            AdminBiz.modify(trading.merge_status_update()).then(function(result){
+            trading._name_value = trading.modify_status_array();
+            AdminBiz.modify(trading.merge_admin_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -163,6 +171,7 @@ async function do_admin_trading_buy_approve(request, response, cookie, session, 
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
@@ -178,13 +187,15 @@ async function do_admin_trading_buy_remove(request, response, cookie, session, r
         let trading = new T200AdminTradingBuy();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        trading.user_id = session.get("userid");
         trading.ids = request.get("ids");
         trading.status = -1;
 
-        if(T200HttpsForm.verify_ids(trading.ids)
+        if(T200HttpsForm.verify_id(trading.user_id)
+            && T200HttpsForm.verify_ids(trading.ids)
             && T200HttpsForm.verify_status(trading.status)){
-            
-            AdminBiz.modify(trading.merge_status_update()).then(function(result){
+            trading._name_value = trading.modify_status_array();
+            AdminBiz.modify(trading.merge_admin_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -198,13 +209,13 @@ async function do_admin_trading_buy_remove(request, response, cookie, session, r
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
 
     return promise;
 }
-
 
 
 global.action.use_post('/admin/trading/buy/list', do_admin_trading_buy_list);

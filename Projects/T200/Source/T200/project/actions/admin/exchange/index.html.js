@@ -30,38 +30,44 @@ async function do_admin_exchange_list(request, response, cookie, session, resour
                 exchange.status = status;
         }
 
-        exchange._fields = exchange.list_status_fields();
-        exchange._order_direction = "DESC";
-        exchange.paging_count_sql = exchange.merge_status_count(exchange.status);
-        exchange.merge_paging = exchange.merge_status_paging_test;
-        AdminBiz.paging(exchange).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.values = result.values;
-            data.status = exchange.status;
-            let list = new T200ListView(resource);
+        if(true){
+            exchange._fields = exchange.admin_list_fields();
+            exchange.paging_count_sql = exchange.merge_admin_paging_count();
+            exchange.merge_paging = exchange.merge_admin_paging_list;
+            AdminBiz.paging(exchange).then(function(result){
+                let data = {};
+                
+                data.paging = result.paging;
+                data.values = result.values;
+                data.status = exchange.status;
 
-            list._list_url = "/admin/exchange/list";
-            list._search_url = "/admin/exchange/search";
-            list._change_status_url = "/admin/exchange/list";
+                data.item_left = exchange.set_item_left();
+                data.item_right = exchange.set_item_right();
+                data.list_buttons = exchange.set_list_buttons();
 
-            data.item_left = exchange.set_item_left();
-            data.item_right = exchange.set_item_right();
-            data.list_buttons = exchange.set_list_buttons();
+                let list_box = new T200ListView(resource);
 
-            return list.show(data).then(function(value){
-                response.type("json");
-                resolve(value);
-            }, function(){
+                list_box._list_url = "/admin/exchange/list";
+                list_box._search_url = "/admin/exchange/search";
+                list_box._change_status_url = "/admin/exchange/list";
+
+                return list_box.show(data).then(function(value){
+                    response.type("json");
+                    resolve(value);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+        
+            }, function (err) {
                 response.type("json");
                 reject();
             });
-           
-        }, function (err) {
+
+        }else{
             response.type("json");
-            reject();
-        });
+            reject(T200Error.build(1));
+        }
     
     });
 
@@ -75,7 +81,7 @@ async function do_admin_exchange_search(request, response, cookie, session, reso
         let exchange = new T200AdminExchange();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
- 
+
         let status = request.get("status");
         let search = request.get("search");
 
@@ -91,31 +97,29 @@ async function do_admin_exchange_search(request, response, cookie, session, reso
         }
 
         if(T200HttpsForm.verify_text(search)){
-            exchange._search = search;
-            exchange._fields = exchange.fulltext_result_fields();
-            exchange._search_fields = exchange.fulltext_fields();
-            exchange._order_direction = "DESC";
-            exchange.fulltext_count_sql = exchange.merge_fulltext_count(exchange.status, search);
-   
-            exchange.merge_paging = exchange.merge_fulltext_test;
+            exchange.search = search;
+            exchange._fields = exchange.admin_list_fields();
+            exchange._search_fields = exchange.admin_fulltext_fields();
+            exchange.fulltext_count_sql = exchange.merge_admin_fulltext_count();
+            exchange.merge_fulltext = exchange.merge_admin_fulltext_list;
             AdminBiz.fulltext(exchange).then(function(result){
-                let view = new T200HomeView(resource);
                 let data = {};
+
                 data.paging = result.paging;
                 data.values = result.values;
                 data.status = exchange.status;
 
-                let list = new T200ListView(resource);
-
-                list._list_url = "/admin/exchange/list";
-                list._search_url = "/admin/exchange/search";
-                list._change_status_url = "/admin/exchange/list";
-
                 data.item_left = exchange.set_item_left();
                 data.item_right = exchange.set_item_right();
                 data.list_buttons = exchange.set_list_buttons();
+
+                let list_box = new T200ListView(resource);
+
+                list_box._list_url = "/admin/exchange/list";
+                list_box._search_url = "/admin/exchange/search";
+                list_box._change_status_url = "/admin/exchange/list";
     
-                return list.show(data).then(function(value){
+                return list_box.show(data).then(function(value){
                     response.type("json");
                     resolve(value);
                 }, function(){
@@ -129,9 +133,9 @@ async function do_admin_exchange_search(request, response, cookie, session, reso
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
-
     });
 
     return promise;
@@ -145,13 +149,15 @@ async function do_admin_exchange_approve(request, response, cookie, session, res
         let exchange = new T200AdminExchange();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        exchange.user_id = session.get("userid");
         exchange.ids = request.get("ids");
         exchange.status = 1;
 
-        if(T200HttpsForm.verify_ids(exchange.ids)
+        if(T200HttpsForm.verify_id(exchange.user_id)
+            && T200HttpsForm.verify_ids(exchange.ids)
             && T200HttpsForm.verify_id(exchange.status)){
-            
-            AdminBiz.modify(exchange.merge_status_update()).then(function(result){
+            exchange._name_value = exchange.modify_status_array();
+            AdminBiz.modify(exchange.merge_admin_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -165,6 +171,7 @@ async function do_admin_exchange_approve(request, response, cookie, session, res
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
@@ -180,13 +187,15 @@ async function do_admin_exchange_remove(request, response, cookie, session, reso
         let exchange = new T200AdminExchange();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        exchange.user_id = session.get("userid");
         exchange.ids = request.get("ids");
         exchange.status = -1;
 
-        if(T200HttpsForm.verify_ids(exchange.ids)
+        if(T200HttpsForm.verify_id(exchange.user_id)
+            && T200HttpsForm.verify_ids(exchange.ids)
             && T200HttpsForm.verify_status(exchange.status)){
-            
-            AdminBiz.modify(exchange.merge_status_update()).then(function(result){
+            exchange._name_value = exchange.modify_status_array();
+            AdminBiz.modify(exchange.merge_admin_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -200,13 +209,13 @@ async function do_admin_exchange_remove(request, response, cookie, session, reso
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
 
     return promise;
 }
-
 
 
 global.action.use_post('/admin/exchange/list', do_admin_exchange_list);

@@ -16,6 +16,7 @@ async function do_admin_note_list(request, response, cookie, session, resource) 
         let note = new T200AdminNote();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+
         let status = request.get("status");
 
         switch(status){
@@ -29,39 +30,45 @@ async function do_admin_note_list(request, response, cookie, session, resource) 
                 note.status = status;
         }
 
-        note._fields = note.list_status_fields();
-        note._order_direction = "DESC";
-        note.paging_count_sql = note.merge_status_count(note.status);
-        note.merge_paging = note.merge_status_paging_test;
-        AdminBiz.paging(note).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.values = result.values;
-            data.status = note.status;
-            let list = new T200ListView(resource);
+        if(true){
+            note._fields = note.admin_list_fields();
+            note.paging_count_sql = note.merge_admin_paging_count();
+            note.merge_paging = note.merge_admin_paging_list;
+            AdminBiz.paging(note).then(function(result){
+                let data = {};
+                
+                data.paging = result.paging;
+                data.values = result.values;
+                data.status = note.status;
 
-            list._list_url = "/admin/note/list";
-            list._search_url = "/admin/note/search";
-            list._change_status_url = "/admin/note/list";
+                data.item_left = note.set_item_left();
+                data.item_right = note.set_item_right();
+                data.list_buttons = note.set_list_buttons();
 
-            data.item_left = note.set_item_left();
-            data.item_right = note.set_item_right();
-            data.list_buttons = note.set_list_buttons();
+                let list_box = new T200ListView(resource);
 
-            return list.show(data).then(function(value){
-                response.type("json");
-                resolve(value);
-            }, function(){
+                list_box._list_url = "/admin/note/list";
+                list_box._search_url = "/admin/note/search";
+                list_box._change_status_url = "/admin/note/list";
+
+                return list_box.show(data).then(function(value){
+                    response.type("json");
+                    resolve(value);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+        
+            }, function (err) {
                 response.type("json");
                 reject();
             });
-           
-        }, function (err) {
-            response.type("json");
-            reject();
-        });
 
+        }else{
+            response.type("json");
+            reject(T200Error.build(1));
+        }
+    
     });
 
     return promise;
@@ -73,6 +80,7 @@ async function do_admin_note_search(request, response, cookie, session, resource
     let promise = new Promise(function(resolve, reject){
         let note = new T200AdminNote();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
+
 
         let status = request.get("status");
         let search = request.get("search");
@@ -89,31 +97,29 @@ async function do_admin_note_search(request, response, cookie, session, resource
         }
 
         if(T200HttpsForm.verify_text(search)){
-            note._search = search;
-            note._fields = note.fulltext_result_fields();
-            note._search_fields = note.fulltext_fields();
-            note._order_direction = "DESC";
-            note.fulltext_count_sql = note.merge_fulltext_count(note.status, search);
-            //note.fulltext_list_sql = note.merge_fulltext_paging(note.status, search);
-            note.merge_paging = note.merge_fulltext_test;
+            note.search = search;
+            note._fields = note.admin_list_fields();
+            note._search_fields = note.admin_fulltext_fields();
+            note.fulltext_count_sql = note.merge_admin_fulltext_count();
+            note.merge_fulltext = note.merge_admin_fulltext_list;
             AdminBiz.fulltext(note).then(function(result){
-                let view = new T200HomeView(resource);
                 let data = {};
+
                 data.paging = result.paging;
                 data.values = result.values;
                 data.status = note.status;
 
-                let list = new T200ListView(resource);
-
-                list._list_url = "/admin/note/list";
-                list._search_url = "/admin/note/search";
-                list._change_status_url = "/admin/note/list";
-
                 data.item_left = note.set_item_left();
                 data.item_right = note.set_item_right();
                 data.list_buttons = note.set_list_buttons();
+
+                let list_box = new T200ListView(resource);
+
+                list_box._list_url = "/admin/note/list";
+                list_box._search_url = "/admin/note/search";
+                list_box._change_status_url = "/admin/note/list";
     
-                return list.show(data).then(function(value){
+                return list_box.show(data).then(function(value){
                     response.type("json");
                     resolve(value);
                 }, function(){
@@ -127,13 +133,13 @@ async function do_admin_note_search(request, response, cookie, session, resource
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
 
     return promise;
 }
-
 
 
 async function do_admin_note_approve(request, response, cookie, session, resource) {
@@ -143,13 +149,15 @@ async function do_admin_note_approve(request, response, cookie, session, resourc
         let note = new T200AdminNote();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        note.user_id = session.get("userid");
         note.ids = request.get("ids");
         note.status = 1;
 
-        if(T200HttpsForm.verify_ids(note.ids)
+        if(T200HttpsForm.verify_id(note.user_id)
+            && T200HttpsForm.verify_ids(note.ids)
             && T200HttpsForm.verify_id(note.status)){
-            
-            AdminBiz.modify(note.merge_status_update()).then(function(result){
+            note._name_value = note.modify_status_array();
+            AdminBiz.modify(note.merge_admin_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -163,6 +171,7 @@ async function do_admin_note_approve(request, response, cookie, session, resourc
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
@@ -178,13 +187,15 @@ async function do_admin_note_remove(request, response, cookie, session, resource
         let note = new T200AdminNote();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        note.user_id = session.get("userid");
         note.ids = request.get("ids");
         note.status = -1;
 
-        if(T200HttpsForm.verify_ids(note.ids)
+        if(T200HttpsForm.verify_id(note.user_id)
+            && T200HttpsForm.verify_ids(note.ids)
             && T200HttpsForm.verify_status(note.status)){
-            
-            AdminBiz.modify(note.merge_status_update()).then(function(result){
+            note._name_value = note.modify_status_array();
+            AdminBiz.modify(note.merge_admin_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -198,6 +209,7 @@ async function do_admin_note_remove(request, response, cookie, session, resource
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
