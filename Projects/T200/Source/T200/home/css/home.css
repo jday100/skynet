@@ -360,6 +360,25 @@ input[type="email"] + button {
     margin-left: 20px;
 }
 
+.reply_form {
+    width: 800px;
+    min-height: 50px;
+    padding-bottom: 0;
+}
+
+.reply_group {
+    width: 800px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction:unset;
+}
+
+.reply_group > textarea {
+    width: 700px;
+    min-height: 80px;
+}
+
 .exchange_channel {
     width: 1000px;
     display: flex;

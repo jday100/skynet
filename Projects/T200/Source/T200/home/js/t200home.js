@@ -61,6 +61,45 @@ function hit_reply(id, obj, url) {
     });
 }
 
+function show_reply(id, url) {
+    if('reply' == $.id("reply"+id).textContent){
+        let result = " \
+            <form id='"
+            + "form_" + id +
+            "' class='reply_form' onsubmit='return false;'> \
+            <input type='hidden' name='test'> \
+            <input type='hidden' name='id' value='"
+            + id +
+            "'> \
+            <div class='reply_group'> \
+            <textarea name='content'></textarea> \
+            <button class='reply_button' onclick='reply_save(\""
+            + id +
+            "\", \""
+            + url +
+            "\");'>Save</button> \
+            </div> \
+            </form> \
+        ";
+        $.id("reply_box" + id).innerHTML = result;
+        $.id("reply" + id).textContent = "hidden";
+    }else{
+        $.id("reply_box" + id).innerHTML = "";
+        $.id("reply" + id).textContent = "reply";
+    }
+}
+
+function reply_save(id, url) {
+    let result = formtostring('form_' + id);
+    $.post(url, result, function(data){
+        alert("Save Success!");
+        $.id("reply_box" + id).innerHTML = "";
+        $.id("reply" + id).textContent = "reply";
+    }, function(){
+        alert("Save Failure!");
+    });
+}
+
 function turning(id, obj, url) {
     let result = `test=&page=${id}`;
     $.post(url, result, function(data){

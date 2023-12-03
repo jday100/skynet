@@ -35,6 +35,26 @@ class T200UserExchange extends T200HomeUserModel {
         ];
     }
 
+    reply_fields() {
+        return [
+            'user_id',
+            'parent_id',
+            'status',
+            'title',
+            'content'
+        ];
+    }
+
+    reply_values() {
+        return [
+            this.user_id,
+            this.parent_id,
+            this.status,
+            `'${this.title}'`,
+            `'${this.content}'`
+        ];
+    }
+
     content_list_fields() {
         return [
             'id',

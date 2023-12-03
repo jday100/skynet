@@ -42,10 +42,13 @@
                         @user
                     </div>
                     <div class="forum_content">
-                        <%=item.content%>
+                        <pre><%=item.content%></pre>
                     </div>
                     <div class="forum_footer">
-                        reply
+                        <button id="reply<%=item.id%>" onclick="show_reply('<%=item.id%>', '/exchange/reply');">reply</button>
+                    </div>
+                    <div id="reply_box<%=item.id%>">
+
                     </div>
                 </div>
             </div>
