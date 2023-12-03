@@ -30,38 +30,44 @@ async function do_admin_house_rent_list(request, response, cookie, session, reso
                 house.status = status;
         }
 
-        house._fields = house.list_status_fields();
-        house._order_direction = "DESC";
-        house.paging_count_sql = house.merge_status_count(house.status);
-        house.merge_paging = house.merge_status_paging_test;
-        AdminBiz.paging(house).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.values = result.values;
-            data.status = house.status;
-            let list = new T200ListView(resource);
+        if(true){
+            house._fields = house.admin_list_fields();
+            house.paging_count_sql = house.merge_admin_paging_count();
+            house.merge_paging = house.merge_admin_paging_list;
+            AdminBiz.paging(house).then(function(result){
+                let data = {};
+                
+                data.paging = result.paging;
+                data.values = result.values;
+                data.status = house.status;
 
-            list._list_url = "/admin/house/rent/list";
-            list._search_url = "/admin/house/rent/search";
-            list._change_status_url = "/admin/house/rent/list";
+                data.item_left = house.set_item_left();
+                data.item_right = house.set_item_right();
+                data.list_buttons = house.set_list_buttons();
 
-            data.item_left = house.set_item_left();
-            data.item_right = house.set_item_right();
-            data.list_buttons = house.set_list_buttons();
+                let list_box = new T200ListView(resource);
 
-            return list.show(data).then(function(value){
-                response.type("json");
-                resolve(value);
-            }, function(){
+                list_box._list_url = "/admin/house/rent/list";
+                list_box._search_url = "/admin/house/rent/search";
+                list_box._change_status_url = "/admin/house/rent/list";
+
+                return list_box.show(data).then(function(value){
+                    response.type("json");
+                    resolve(value);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+        
+            }, function (err) {
                 response.type("json");
                 reject();
             });
-           
-        }, function (err) {
+
+        }else{
             response.type("json");
-            reject();
-        });
+            reject(T200Error.build(1));
+        }
     
     });
 
@@ -91,31 +97,29 @@ async function do_admin_house_rent_search(request, response, cookie, session, re
         }
 
         if(T200HttpsForm.verify_text(search)){
-            house._search = search;
-            house._fields = house.fulltext_result_fields();
-            house._search_fields = house.fulltext_fields();
-            house._order_direction = "DESC";
-            house.fulltext_count_sql = house.merge_fulltext_count(house.status, search);
-   
-            house.merge_paging = house.merge_fulltext_test;
+            house.search = search;
+            house._fields = house.admin_list_fields();
+            house._search_fields = house.admin_fulltext_fields();
+            house.fulltext_count_sql = house.merge_admin_fulltext_count();
+            house.merge_fulltext = house.merge_admin_fulltext_list;
             AdminBiz.fulltext(house).then(function(result){
-                let view = new T200HomeView(resource);
                 let data = {};
+
                 data.paging = result.paging;
                 data.values = result.values;
                 data.status = house.status;
 
-                let list = new T200ListView(resource);
-
-                list._list_url = "/admin/house/rent/list";
-                list._search_url = "/admin/house/rent/search";
-                list._change_status_url = "/admin/house/rent/list";
-
                 data.item_left = house.set_item_left();
                 data.item_right = house.set_item_right();
                 data.list_buttons = house.set_list_buttons();
+
+                let list_box = new T200ListView(resource);
+
+                list_box._list_url = "/admin/house/rent/list";
+                list_box._search_url = "/admin/house/rent/search";
+                list_box._change_status_url = "/admin/house/rent/list";
     
-                return list.show(data).then(function(value){
+                return list_box.show(data).then(function(value){
                     response.type("json");
                     resolve(value);
                 }, function(){
@@ -129,9 +133,9 @@ async function do_admin_house_rent_search(request, response, cookie, session, re
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
-
     });
 
     return promise;
@@ -145,13 +149,15 @@ async function do_admin_house_rent_approve(request, response, cookie, session, r
         let house = new T200AdminHouseRent();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        house.user_id = session.get("userid");
         house.ids = request.get("ids");
         house.status = 1;
 
-        if(T200HttpsForm.verify_ids(house.ids)
+        if(T200HttpsForm.verify_id(house.user_id)
+            && T200HttpsForm.verify_ids(house.ids)
             && T200HttpsForm.verify_id(house.status)){
-            
-            AdminBiz.modify(house.merge_status_update()).then(function(result){
+            house._name_value = house.modify_status_array();
+            AdminBiz.modify(house.merge_admin_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -165,6 +171,7 @@ async function do_admin_house_rent_approve(request, response, cookie, session, r
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
@@ -180,13 +187,15 @@ async function do_admin_house_rent_remove(request, response, cookie, session, re
         let house = new T200AdminHouseRent();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        house.user_id = session.get("userid");
         house.ids = request.get("ids");
         house.status = -1;
 
-        if(T200HttpsForm.verify_ids(house.ids)
+        if(T200HttpsForm.verify_id(house.user_id)
+            && T200HttpsForm.verify_ids(house.ids)
             && T200HttpsForm.verify_status(house.status)){
-            
-            AdminBiz.modify(house.merge_status_update()).then(function(result){
+            house._name_value = house.modify_status_array();
+            AdminBiz.modify(house.merge_admin_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -200,6 +209,7 @@ async function do_admin_house_rent_remove(request, response, cookie, session, re
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });

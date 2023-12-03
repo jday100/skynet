@@ -100,12 +100,11 @@ async function do_admin_person_search(request, response, cookie, session, resour
         if(T200HttpsForm.verify_id(person.user_id)
             //&& T200HttpsForm.verify_status(person.status)
             && T200HttpsForm.verify_text(search)){
-                person.search = search;
+                person.username = search;
                 person._fields = person.admin_list_fields();
-                person._search_fields = person.admin_person_fulltext_fields();
-                person.fulltext_count_sql = person.merge_admin_person_fulltext_count();
-                person.merge_fulltext = person.merge_admin_person_fulltext_list;
-                AdminBiz.fulltext(person).then(function(result){
+                person.paging_count_sql = person.merge_admin_person_search_count();
+                person.merge_paging = person.merge_admin_person_search_list;
+                AdminBiz.paging(person).then(function(result){
                     let data = {};
 
                     data.paging = result.paging;

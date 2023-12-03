@@ -16,7 +16,7 @@ async function do_admin_job_recruit_list(request, response, cookie, session, res
         let job = new T200AdminJobRecruit();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        
+
         let status = request.get("status");
 
         switch(status){
@@ -30,38 +30,44 @@ async function do_admin_job_recruit_list(request, response, cookie, session, res
                 job.status = status;
         }
 
-        job._fields = job.list_status_fields();
-        job._order_direction = "DESC";
-        job.paging_count_sql = job.merge_status_count(job.status);
-        job.merge_paging = job.merge_status_paging_test;
-        AdminBiz.paging(job).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.values = result.values;
-            data.status = job.status;
-            let list = new T200ListView(resource);
+        if(true){
+            job._fields = job.admin_list_fields();
+            job.paging_count_sql = job.merge_admin_paging_count();
+            job.merge_paging = job.merge_admin_paging_list;
+            AdminBiz.paging(job).then(function(result){
+                let data = {};
+                
+                data.paging = result.paging;
+                data.values = result.values;
+                data.status = job.status;
 
-            list._list_url = "/admin/job/recruit/list";
-            list._search_url = "/admin/job/recruit/search";
-            list._change_status_url = "/admin/job/recruit/list";
+                data.item_left = job.set_item_left();
+                data.item_right = job.set_item_right();
+                data.list_buttons = job.set_list_buttons();
 
-            data.item_left = job.set_item_left();
-            data.item_right = job.set_item_right();
-            data.list_buttons = job.set_list_buttons();
+                let list_box = new T200ListView(resource);
 
-            return list.show(data).then(function(value){
-                response.type("json");
-                resolve(value);
-            }, function(){
+                list_box._list_url = "/admin/job/recruit/list";
+                list_box._search_url = "/admin/job/recruit/search";
+                list_box._change_status_url = "/admin/job/recruit/list";
+
+                return list_box.show(data).then(function(value){
+                    response.type("json");
+                    resolve(value);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+        
+            }, function (err) {
                 response.type("json");
                 reject();
             });
-           
-        }, function (err) {
+
+        }else{
             response.type("json");
-            reject();
-        });
+            reject(T200Error.build(1));
+        }
     
     });
 
@@ -74,6 +80,7 @@ async function do_admin_job_recruit_search(request, response, cookie, session, r
     let promise = new Promise(function(resolve, reject){
         let job = new T200AdminJobRecruit();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
+
 
         let status = request.get("status");
         let search = request.get("search");
@@ -90,31 +97,29 @@ async function do_admin_job_recruit_search(request, response, cookie, session, r
         }
 
         if(T200HttpsForm.verify_text(search)){
-            job._search = search;
-            job._fields = job.fulltext_result_fields();
-            job._search_fields = job.fulltext_fields();
-            job._order_direction = "DESC";
-            job.fulltext_count_sql = job.merge_fulltext_count(job.status, search);
-   
-            job.merge_paging = job.merge_fulltext_test;
+            job.search = search;
+            job._fields = job.admin_list_fields();
+            job._search_fields = job.admin_fulltext_fields();
+            job.fulltext_count_sql = job.merge_admin_fulltext_count();
+            job.merge_fulltext = job.merge_admin_fulltext_list;
             AdminBiz.fulltext(job).then(function(result){
-                let view = new T200HomeView(resource);
                 let data = {};
+
                 data.paging = result.paging;
                 data.values = result.values;
                 data.status = job.status;
 
-                let list = new T200ListView(resource);
-
-                list._list_url = "/admin/job/recruit/list";
-                list._search_url = "/admin/job/recruit/search";
-                list._change_status_url = "/admin/job/recruit/list";
-
                 data.item_left = job.set_item_left();
                 data.item_right = job.set_item_right();
                 data.list_buttons = job.set_list_buttons();
+
+                let list_box = new T200ListView(resource);
+
+                list_box._list_url = "/admin/job/recruit/list";
+                list_box._search_url = "/admin/job/recruit/search";
+                list_box._change_status_url = "/admin/job/recruit/list";
     
-                return list.show(data).then(function(value){
+                return list_box.show(data).then(function(value){
                     response.type("json");
                     resolve(value);
                 }, function(){
@@ -128,14 +133,13 @@ async function do_admin_job_recruit_search(request, response, cookie, session, r
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
-
     });
 
     return promise;
 }
-
 
 
 async function do_admin_job_recruit_approve(request, response, cookie, session, resource) {
@@ -145,13 +149,15 @@ async function do_admin_job_recruit_approve(request, response, cookie, session, 
         let job = new T200AdminJobRecruit();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        job.user_id = session.get("userid");
         job.ids = request.get("ids");
         job.status = 1;
 
-        if(T200HttpsForm.verify_ids(job.ids)
+        if(T200HttpsForm.verify_id(job.user_id)
+            && T200HttpsForm.verify_ids(job.ids)
             && T200HttpsForm.verify_id(job.status)){
-            
-            AdminBiz.modify(job.merge_status_update()).then(function(result){
+            job._name_value = job.modify_status_array();
+            AdminBiz.modify(job.merge_admin_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -165,6 +171,7 @@ async function do_admin_job_recruit_approve(request, response, cookie, session, 
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
@@ -180,13 +187,15 @@ async function do_admin_job_recruit_remove(request, response, cookie, session, r
         let job = new T200AdminJobRecruit();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
+        job.user_id = session.get("userid");
         job.ids = request.get("ids");
         job.status = -1;
 
-        if(T200HttpsForm.verify_ids(job.ids)
+        if(T200HttpsForm.verify_id(job.user_id)
+            && T200HttpsForm.verify_ids(job.ids)
             && T200HttpsForm.verify_status(job.status)){
-            
-            AdminBiz.modify(job.merge_status_update()).then(function(result){
+            job._name_value = job.modify_status_array();
+            AdminBiz.modify(job.merge_admin_status_update()).then(function(result){
                 if(result){
                     response.type("json");
                     resolve();
@@ -200,6 +209,7 @@ async function do_admin_job_recruit_remove(request, response, cookie, session, r
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
