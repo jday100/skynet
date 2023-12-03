@@ -80,7 +80,7 @@
 
         query_id();
 
-        let data = "test=";
+        let data = formtostring('form');
         $.post('/trading/sell/board', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
