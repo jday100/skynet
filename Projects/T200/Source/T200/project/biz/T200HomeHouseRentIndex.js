@@ -42,9 +42,8 @@ class T200HomeHouseRentIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseRent();
             house._fields = house.list_fields();
-            house._order_direction = "DESC";
-            return self.list(house.merge_list()).then(function(values){
-                data.house_rents = values;
+            return self.list(house.merge_user_paging_type_list()).then(function(values){
+                data.house_longs = values;
                 resolve(data);
             }, function(){
                 reject();
@@ -59,9 +58,8 @@ class T200HomeHouseRentIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseRent();
             house._fields = house.list_fields();
-            house._order_direction = "DESC";
-            return self.list(house.merge_list()).then(function(values){
-                data.house_wanteds = values;
+            return self.list(house.merge_user_paging_type_list()).then(function(values){
+                data.house_shorts = values;
                 resolve(data);
             }, function(){
                 reject();

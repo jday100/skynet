@@ -1,6 +1,8 @@
 const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
+const T200SQL = require('../../library/db/T200SQL.js');
+
 const T200HomeVisitorModel = require('./T200HomeVisitorModel.js');
 
 
@@ -9,8 +11,11 @@ class T200Exchange extends T200HomeVisitorModel {
         super();
         this._table = "exchange";
         this._key = "id";
+        this._id = "user_id";
 
         this.status = 0;
+
+        this._person_table = "person";
     }
 
     fields() {
@@ -22,7 +27,11 @@ class T200Exchange extends T200HomeVisitorModel {
     }
 
     list_fields() {
-        return "id, title, create_time";
+        return [
+            "id",
+            "title",
+            T200SQL.PREFIX("create_time", "t1")
+        ];
     }
 
     fulltext_result_fields() {

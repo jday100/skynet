@@ -1,70 +1,71 @@
-<%
-    houses.forEach(item => {
-        if(0 == item.parent_id){
-            %>
-                <div class="forum_box">
-                    <div class="forum_person">
-                        <div class="forum_user">
-                            user
-                        </div>
-                        <div class="forum_intro">
-                            intro
-                        </div>
-                    </div>
-                    <div class="forum_article">
+<fieldset>
+    <legend><a href="/house/wanted_long.html">Long</a></legend>
+    <div class="channel_box">
+        <%
+            let k = house_longs.length;
+            for(let i=0;i<10;i++){
+                if(i < k){
+                    %>
+                    <div class="channel_item">
                         <div>
-                            <%=item.title%>
+                            <a target="_blank" href="/house/house_rent.html?id=<%=house_longs[i].id%>"><%=house_longs[i].title%></a>
                         </div>
                         <div>
-                            <%=item.content%>
+                            <a href=""><%="user"%></a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }else{
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/house/house_rent.html">unpublished</a>
                         </div>
                         <div>
-                            reply
+                            <a href="">any</a>
+                            2023-10-10 10:10                                
                         </div>
                     </div>
-                </div>
-            <%
-        }else{
-            %>
-            <div class="forum_box">
-                <div class="forum_person">
-                    <div class="forum_user">
-                        user
-                    </div>
-                    <div class="forum_intro">
-                        intro
-                    </div>
-                </div>
-                <div class="forum_article">
-                    <div class="forum_title">
-                        @user
-                    </div>
-                    <div class="forum_content">
-                        <%=item.content%>
-                    </div>
-                    <div class="forum_footer">
-                        reply
-                    </div>
-                </div>
-            </div>
-            <%
-        }
-    });
-%>
-
-
-<div>
-    1 2 3 4 5
-</div>
-
-<div class="reply_box">
-    <div class="forum_person">
-        Reply
+                    <%
+                }
+            }
+        %>
     </div>
-    <div class="reply_content">
-        <textarea></textarea>
+</fieldset>
+
+<fieldset>
+    <legend><a href="/house/wanted_short.html">Short</a></legend>
+    <div class="channel_box">
+        <%
+            k = house_shorts.length;
+            for(let i=0;i<10;i++){
+                if(i < k){
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/house/house_rent.html?id=<%=house_shorts[i].id%>"><%=house_shorts[i].title%></a>
+                        </div>
+                        <div>
+                            <a href=""><%="user"%></a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }else{
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/house/house_rent.html">unpublished</a>
+                        </div>
+                        <div>
+                            <a href="">any</a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }
+            }
+        %>
     </div>
-    <div class="reply_button">
-        <button>Reply</button>
-    </div>
-</div>
+</fieldset>
