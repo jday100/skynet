@@ -64,11 +64,10 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let house = new T200House();
-            house.city_id = id;
             house._table = "house_rent";
+            house.city_id = id;
             house._fields = house.list_fields();
-            house._order_direction = "DESC";
-            return self.load(house.merge_city_list()).then(function(values){
+            return self.list(house.merge_multiple_list()).then(function(values){
                 data.house_rents = values;
                 resolve(data);
             }, function(){
@@ -83,11 +82,10 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let house = new T200House();
-            house.city_id = id;
             house._table = "house_wanted";
+            house.city_id = id;
             house._fields = house.list_fields();
-            house._order_direction = "DESC";
-            return self.load(house.merge_city_list()).then(function(values){
+            return self.list(house.merge_multiple_list()).then(function(values){
                 data.house_wanteds = values;
                 resolve(data);
             }, function(){
@@ -102,11 +100,10 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200Job();
-            job.city_id = id;
             job._table = "job_recruit";
+            job.city_id = id;
             job._fields = job.list_fields();
-            job._order_direction = "DESC";
-            return self.load(job.merge_city_list()).then(function(values){
+            return self.list(job.merge_multiple_list()).then(function(values){
                 data.job_recruits = values;
                 resolve(data);
             }, function(){
@@ -121,11 +118,10 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200Job();
-            job.city_id = id;
             job._table = "job_wanted";
+            job.city_id = id;
             job._fields = job.list_fields();
-            job._order_direction = "DESC";
-            return self.load(job.merge_city_list()).then(function(values){
+            return self.list(job.merge_multiple_list()).then(function(values){
                 data.job_wanteds = values;
                 resolve(data);
             }, function(){
@@ -140,11 +136,10 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let trading = new T200Trading();
-            trading.city_id = id;
             trading._table = "trading_sell";
+            trading.city_id = id;
             trading._fields = trading.list_fields();
-            trading._order_direction = "DESC";
-            return self.load(trading.merge_city_list()).then(function(values){
+            return self.list(trading.merge_multiple_list()).then(function(values){
                 data.trading_sells = values;
                 resolve(data);
             }, function(){
@@ -159,11 +154,10 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let trading = new T200Trading();
-            trading.city_id = id;
             trading._table = "trading_buy";
+            trading.city_id = id;
             trading._fields = trading.list_fields();
-            trading._order_direction = "DESC";
-            return self.load(trading.merge_city_list()).then(function(values){
+            return self.list(trading.merge_multiple_list()).then(function(values){
                 data.trading_buys = values;
                 resolve(data);
             }, function(){
@@ -180,8 +174,7 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
             let exchange = new T200Exchange();
 
             exchange._fields = exchange.list_fields();
-            exchange._order_direction = "DESC";
-            return self.load(exchange.merge_list()).then(function(values){
+            return self.list(exchange.merge_multiple_list()).then(function(values){
                 data.exchanges = values;
                 resolve(data);
             }, function(err){

@@ -15,10 +15,9 @@ async function do_exchange_list(request, response, cookie, session, resource) {
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         if(true){
-            exchange._fields = exchange.board_fields();
-            exchange._order_direction = "DESC";
-            exchange.paging_count_sql = exchange.merge_count(exchange.id);
-            exchange.paging_list_sql = exchange.merge_paging(exchange.id);
+            exchange._fields = exchange.list_fields();
+            exchange.paging_count_sql = exchange.merge_user_paging_type_count();
+            exchange.merge_paging = exchange.merge_user_paging_type_list;
             UserBiz.paging(exchange).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
@@ -36,7 +35,8 @@ async function do_exchange_list(request, response, cookie, session, resource) {
                 reject();
             });
         }else{
-            
+            response.type("json");
+            reject();
         }
   
     });

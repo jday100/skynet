@@ -62,118 +62,13 @@
         <fieldset class="title">
             <legend><a href="/trading/index.html">Trading</a></legend>
             <div class="channel">
-                <fieldset>
-                    <legend><a href="/trading/sell.html">Sell</a></legend>
-                    <div>
-
-                        <div>
-                            <div>
-                                <a href="/trading/trading_sell.html">1</a>
-                            </div>
-                            <div>
-                                <a href="">user</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/trading/trading_sell.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/trading/trading_sell.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/trading/trading_sell.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/trading/trading_sell.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend><a href="/trading/buy.html">Buy</a></legend>
-                    <div>
-
-                        <div>
-                            <div>
-                                <a href="/trading/trading_buy.html">2</a>
-                            </div>
-                            <div>
-                                <a href="">user</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/trading/trading_buy.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/trading/trading_buy.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/trading/trading_buy.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/trading/trading_buy.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                    </div>
-                </fieldset>
+                <div id="list_box">
+                    <form id="form" class="list_form">
+                        <input type="hidden" name="test">
+                        <input type="hidden" name="page" value="1">
+                        <input type="hidden" name="search">
+                    </form>
+                </div> 
             </div>
         </fieldset>
 
@@ -188,6 +83,14 @@
 <script>
     $.win.onload = function () {
         nav_check();
+
+        let data = formtostring('form');
+        $.post('/trading/list', data, function (result) {
+            $.id("list_box").innerHTML = result;
+            update_time();
+        }, function () {
+            alert('Load Failure!');
+        });
     };
 </script>
 
