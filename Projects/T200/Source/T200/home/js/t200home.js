@@ -4,21 +4,34 @@ var StatusType = {
     deleted : -1
 };
 
-
+/*
 function login() {
     $.set_cookie('sid', 1);
     alert('Login Success!');
     forward("/");
+}
+*/
+
+function logout() {
+    let url = "/logout";
+    let result = "test=";
+    $.post(url, result, function(data){
+        location.reload();
+    }, function(){
+        alert("Logout Failure!");
+    });
 }
 
 function reload() {
     location.reload();
 }
 
+/*
 function logout() {
     $.set_cookie('sid', 0);
     location.reload();
 }
+*/
 
 function nav_check() {
     let sid = $.cookie('sid');

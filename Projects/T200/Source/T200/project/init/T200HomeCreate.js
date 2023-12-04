@@ -148,15 +148,26 @@ class T200HomeCreate {
     create_person() {
         return `create table if not exists person ( \
             user_id int primary key auto_increment, \
+            continent_id int default 0, \
+            continent_name varchar(100), \
             region_id int default 0, \
+            region_name varchar(100), \
             city_id int default 0, \
+            city_name varchar(100), \
             status int not null default 0, \
             username varchar(50) UNIQUE, \
             nickname varchar(100), \
             password varchar(100), \
             email varchar(100) UNIQUE, \
+            gender int not null default 0, \
+            year int, \
+            month int, \
+            day int, \
             intro varchar(255), \
-            create_time timestamp not null default current_timestamp \
+            create_time datetime not null default current_timestamp, \
+            modify_time timestamp not null default current_timestamp, \
+            login_time datetime, \
+            ip varchar(20)
             ) character set utf8`;
     }
 

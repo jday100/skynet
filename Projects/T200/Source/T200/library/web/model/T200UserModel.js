@@ -11,6 +11,24 @@ class T200UserModel extends T200ForumModel {
         super();
     }
 
+    flash_logout_values() {
+        this._name_value = [
+            [this._key, this._key]
+        ];
+    }
+
+    merge_user_logout() {
+        return T200SQL.UPDATE(
+            T200SQL.NAME(this._table),
+            T200SQL.SET(
+                T200SQL.NAME_VALUE(this._name_value)
+            ),
+            T200SQL.WHERE(
+                T200SQL.EQUAL(this._key, this.user_id)
+            )
+        );
+    }
+
     merge_user_insert() {
         return T200SQL.INSERT(
             T200SQL.NAME(this._table), 

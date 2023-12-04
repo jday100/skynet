@@ -1,0 +1,115 @@
+biz
+    T200BizBase
+        select
+
+        insert
+
+        update
+
+        delete
+
+        select_multiple
+
+    T200PagingBiz
+        list
+
+        paging
+
+    T200SearchBiz
+        search
+
+        fulltext
+
+    T200ForumBiz
+        board
+
+
+    T200VisitorBiz
+        visitor_list
+
+        visitor_paging
+
+        visitor_search
+
+        visitor_login
+
+    T200UserBiz
+        user_paging
+
+        user_search
+
+        user_fulltext
+
+        user_login
+
+    T200AdminBiz
+        admin_paging
+
+        admin_search
+
+        admin_fulltext
+
+
+Model
+    T200ModelBase
+        merge_select
+
+        merge_insert
+
+        merge_update
+
+        merge_delete
+
+    T200PagingModel
+        merge_list
+
+        merge_paging_count
+        merge_paging_list
+
+    T200SearchModel
+        merge_search_count
+        merge_search_list
+
+        merge_fulltext_count
+        merge_fulltext_list
+
+
+    T200ForumModel
+        merge_board_count
+        merge_board_list
+
+
+    T200VisitorModel
+        merge_visitor_list
+
+        merge_visitor_paging_count
+        merge_visitor_paging_list
+
+        merge_visitor_search_count
+        merge_visitor_search_list
+
+        merge_visitor_login
+
+    T200UserModel
+        merge_user_paging_count
+        merge_user_paging_list
+
+        merge_user_search_count
+        merge_user_search_list
+
+        merge_user_fulltext_count
+        merge_user_fulltext_list
+
+        merge_user_login
+
+    T200AdminModel
+        merge_admin_paging_count
+        merge_admin_paging_list
+
+        merge_admin_search_count
+        merge_admin_search_list
+
+        merge_admin_fulltext_count
+        merge_admin_fulltext_list
+
+

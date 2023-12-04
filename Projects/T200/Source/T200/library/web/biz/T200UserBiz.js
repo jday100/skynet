@@ -24,6 +24,21 @@ class T200UserBiz extends T200ForumBiz {
         }
     }
 
+
+    logout(model) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            model.flash_logout_values();
+            self.modify(model.merge_user_logout()).then(function(data){
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
     
     get_one(model, value) {
         let self = this;

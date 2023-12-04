@@ -3,6 +3,7 @@ const T200Error = require('../../library/T200Error.js');
 
 const T200HttpsForm = require('../../library/net/T200HttpsForm.js');
 const T200Visitor = require('../models/T200Visitor.js');
+const T200UserPerson = require('../models/T200UserPerson.js');
 const T200HomeVisitorBiz = require('../biz/T200HomeVisitorBiz.js');
 const T200HomeUserBiz = require('../biz/T200HomeUserBiz.js');
 
@@ -60,6 +61,47 @@ function set_data(cookie, session, data) {
 }
 
 
+
+async function do_logout(request, response, cookie, session, resource) {
+    log(__filename, "do_logout");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let person = new T200UserPerson();
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        person.user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(person.user_id)){
+            UserBiz.logout(person).then(function(data){
+                clear_data(cookie, session, person);
+
+                response.type('json');
+                response.data('success');
+                resolve();
+            }, function(err){
+                response.type('json');
+                response.data('failure');
+                reject(err);
+            }).catch(function(err){
+                response.type('json');
+                reject();
+            });
+
+        }else{
+            response.type('json');
+            reject(T200Error.build(1));
+        }
+    });
+
+    return promise;
+}
+
+
+function clear_data(cookie, session, person) {
+    cookie.set("sid", "0");
+}
+
+
 async function do_content_person_region(request, response, cookie, session, resource) {
     log(__filename, "do_content_person_region");
     let self = this;
@@ -84,4 +126,5 @@ async function do_content_person_region(request, response, cookie, session, reso
 
 
 global.action.use_post('/login', do_login);
+global.action.use_post('/logout', do_logout);
 global.action.use_post('/content/person/region', do_content_person_region);
