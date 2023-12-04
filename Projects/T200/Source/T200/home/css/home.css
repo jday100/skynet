@@ -415,3 +415,27 @@ input[type="email"] + button {
     justify-content: space-between;
     align-items: center;
 }
+
+.channel > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.channel > fieldset > div {
+    width: 484px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.channel > fieldset > div > div {
+    width: 484px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
