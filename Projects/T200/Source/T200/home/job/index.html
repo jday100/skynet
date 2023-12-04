@@ -62,118 +62,13 @@
         <fieldset class="title">
             <legend><a href="/job/index.html">Job</a></legend>
             <div class="channel">
-                <fieldset>
-                    <legend><a href="/job/recruit.html">Recruit</a></legend>
-                    <div>
-
-                        <div>
-                            <div>
-                                <a href="/job/job_recruit.html">3</a>
-                            </div>
-                            <div>
-                                <a href="">user</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/job/job_recruit.html">1</a>
-                            </div>
-                            <div>
-                                <a href="">user</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/job/job_recruit.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/job/job_recruit.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/job/job_recruit.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend><a href="/job/wanted.html">Wanted</a></legend>
-                    <div>
-
-                        <div>
-                            <div>
-                                <a href="/job/job_wanted.html">2</a>
-                            </div>
-                            <div>
-                                <a href="">user</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/job/job_wanted.html">1</a>
-                            </div>
-                            <div>
-                                <a href="">user</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/job/job_wanted.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/job/job_wanted.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                        <div>
-                            <div>
-                                <a href="/job/job_wanted.html">unpublished</a>
-                            </div>
-                            <div>
-                                <a href="">any</a>
-                                2023-10-10 10:10
-                            </div>
-                        </div>
-
-                    </div>
-                </fieldset>
+                <div id="list_box">
+                    <form id="form" class="list_form">
+                        <input type="hidden" name="test">
+                        <input type="hidden" name="page" value="1">
+                        <input type="hidden" name="search">
+                    </form>
+                </div>        
             </div>
         </fieldset>
 
@@ -188,6 +83,14 @@
 <script>
     $.win.onload = function () {
         nav_check();
+
+        let data = formtostring('form');
+        $.post('/job/list', data, function (result) {
+            $.id("list_box").innerHTML = result;
+            update_time();
+        }, function () {
+            alert('Load Failure!');
+        });
     };
 </script>
 
