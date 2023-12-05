@@ -38,11 +38,12 @@ async function do_register(request, response, cookie, session, resource) {
                 response.data('failure');
                 reject(err);
             }).catch(function(err){
-                console.log(err);
+                response.type('json');
                 reject(err);
             });
 
         }else{
+            response.type('json');
             reject(T200Error.build(1));
         }
     });

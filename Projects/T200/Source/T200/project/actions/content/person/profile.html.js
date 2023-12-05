@@ -17,7 +17,7 @@ async function do_content_person_profile(request, response, cookie, session, res
         person.user_id = session.get("userid");
 
         if(T200HttpsForm.verify_id(person.user_id)){
-            person._fields = person.profile_fields();
+            person.flash_profile_fields();
             UserBiz.load(person.merge_select_by_key()).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};

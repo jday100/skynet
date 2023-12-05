@@ -67,7 +67,6 @@ class T200DBClient {
                 reject(T200Error.build());
             }else{
                 return self._conn.query(sql).then(function(data){
-
                     resolve(data);
                 }, function(err){
                     reject(T200Error.build());

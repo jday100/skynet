@@ -12,14 +12,10 @@ class T200VisitorBiz extends T200SearchBiz {
     register(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            model._fields = model.register_fields();
-            model._values = model.register_values();
+            model.flash_register_fields();
+            model.flash_register_values();
             self.append(model.merge_register()).then(function(data){
-                if(data && 0 == data.warningStatus){
-                    resolve();
-                }else{
-                    reject();
-                }
+                resolve();
             }, function(err){
                 reject();
             });
@@ -31,7 +27,7 @@ class T200VisitorBiz extends T200SearchBiz {
     login(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            model._fields = model.login_fields();
+            model.flash_login_fields();
             self.load(model.merge_login()).then(function(data){
                 if(data){
                     resolve(data);

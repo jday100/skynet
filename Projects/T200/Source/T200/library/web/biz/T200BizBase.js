@@ -52,7 +52,15 @@ class T200BizBase {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             if(self.check()) {
-                self.store.command(sql).then(resolve, reject);
+                self.store.command(sql).then(function(data){
+                    if(data && 0 == data.warningStatus){
+                        resolve();
+                    }else{
+                        reject();
+                    }
+                }, function(err){
+                    reject();
+                })
             }else{
                 reject();
             }

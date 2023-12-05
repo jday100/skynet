@@ -32,15 +32,16 @@ async function do_content_house_rent_list(request, response, cookie, session, re
 
         house.user_id = session.get("userid");
 
-        if(true){
-            house._fields = house.content_list_fields();
-            house.paging_count_sql = house.merge_user_paging_count();
-            house.merge_paging = house.merge_user_paging_list;
-            UserBiz.paging(house).then(function(result){
+        if(T200HttpsForm.verify_id(house.user_id)){
+            house.flash_content_paging_fields();
+            house.merge_paging_count = house.merge_user_paging_count;
+            house.merge_paging_list = house.merge_user_paging_list;
+            UserBiz.paging2(house).then(function(result){
                 let data = {};
 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = house.status;
                 data.item_left = house.set_item_left();
                 data.item_right = house.set_item_right();
@@ -59,7 +60,7 @@ async function do_content_house_rent_list(request, response, cookie, session, re
                     response.type("json");
                     reject();
                 });
-            }, function(){
+            }, function(err){
                 response.type("json");
                 reject();
             });
@@ -99,16 +100,17 @@ async function do_content_house_rent_search(request, response, cookie, session, 
         if(T200HttpsForm.verify_id(house.user_id)
             //&& T200HttpsForm.verify_status(house.status)
             && T200HttpsForm.verify_text(search)){
-                house.search = search;
-                house._fields = house.content_list_fields();
-                house._search_fields = house.content_fulltext_fields();
-                house.fulltext_count_sql = house.merge_user_fulltext_count();
-                house.merge_fulltext = house.merge_user_fulltext_list;
-                UserBiz.fulltext(house).then(function(result){
+                house._search = search;
+                house.flash_content_paging_fields();
+                house.flash_content_fulltext_fields();
+                house.merge_fulltext_count = house.merge_user_fulltext_count;
+                house.merge_fulltext_list = house.merge_user_fulltext_list;
+                UserBiz.fulltext2(house).then(function(result){
                     let data = {};
 
                     data.paging = result.paging;
                     data.values = result.values;
+                    data.search = house._search;
                     data.status = house.status;
                     data.item_left = house.set_item_left();
                     data.item_right = house.set_item_right();
@@ -156,21 +158,17 @@ async function do_content_house_rent_publish(request, response, cookie, session,
         if(T200HttpsForm.verify_id(house.user_id)
             && T200HttpsForm.verify_ids(house.ids)
             && T200HttpsForm.verify_id(house.status)){
-            house._name_value = house.modify_status_array();
-            UserBiz.modify(house.merge_user_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
-            }, function (err) {
+
+            house.flash_content_status_update();
+            UserBiz.modify(house.merge_user_status_update()).then(function(){
+                response.type("json");
+                resolve();
+            }, function(){
                 response.type("json");
                 reject();
             });
-
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
@@ -193,21 +191,18 @@ async function do_content_house_rent_remove(request, response, cookie, session, 
         if(T200HttpsForm.verify_id(house.user_id)
             && T200HttpsForm.verify_ids(house.ids)
             && T200HttpsForm.verify_status(house.status)){
-            house._name_value = house.modify_status_array();
-            UserBiz.modify(house.merge_user_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            
+            house.flash_content_status_update();
+            UserBiz.modify(house.merge_user_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });

@@ -18,31 +18,32 @@ class T200VisitorModel extends T200SearchModel {
         );
     }
 
-    register_fields() {
-        return `username, password, email`;
+
+    flash_register_fields() {
+        this._fields = "username, password, email, status";
     }
 
-    register_values() {
-        return `'${this.username}', '${this.password}', '${this.email}'`;
+    flash_register_values() {
+        this._values = `'${this.username}', '${this.password}', '${this.email}', 1`;
     }
     
     merge_login() {
         return T200SQL.SELECT(
             T200SQL.FIELDS(this._fields), T200SQL.FROM(this._table),
             T200SQL.WHERE(
-                //T200SQL.AND(
+                T200SQL.AND(
                     T200SQL.AND(
                         T200SQL.EQUAL("username", `'${this.username}'`), 
                         T200SQL.EQUAL("password", `'${this.password}'`)
-                    //),
-                    //T200SQL.EQUAL("status", 1)
+                    ),
+                    T200SQL.EQUAL("status", 1)
                 )
             )
         );
     }
 
-    login_fields() {
-        return `user_id, region_id, city_id, username, password`;
+    flash_login_fields() {
+        this._fields = "user_id, status, continent_id, region_id, city_id, username, password, nickname";
     }
 
     ///

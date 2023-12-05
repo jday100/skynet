@@ -34,6 +34,14 @@ class T200ModelBase {
             )
         );
     }
+
+    merge_insert() {
+        return T200SQL.INSERT(
+            T200SQL.NAME(this._table), 
+            T200SQL.FIELDS(this._fields),
+            T200SQL.VALUES(this._values)
+        );
+    }
 }
 
 module.exports = T200ModelBase;

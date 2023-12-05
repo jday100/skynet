@@ -29,9 +29,9 @@
     <div class="list_group">
         <form id="form" onsubmit="return false;">
             <input type="hidden" name="test">
-            <input type="hidden" id="search" name="search">
-            <input type="hidden" id="page" name="page" value="1">
-            <input type="hidden" id="status" name="status">
+            <input type="hidden" id="search" name="search" value="<%=search%>">
+            <input type="hidden" id="page" name="page" value="<%=paging.page%>">
+            <input type="hidden" id="status" name="status" value="<%=status%>">
             <div class="list_control_panel">
                 <select name="status1" onchange="list_change_status(1, 'form', $.id('list_box'), '<%=change_status_url%>');">
                     <option <%=null == status?'selected':''%> value="">All</option>

@@ -54,6 +54,7 @@ function set_data(cookie, session, data) {
 
     result.userid = data.user_id;
     result.cityid = data.city_id;
+    result.status = data.status;
     result.username = data.username;
     result.password = data.password;
 
