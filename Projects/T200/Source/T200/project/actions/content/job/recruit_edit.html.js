@@ -37,18 +37,20 @@ async function do_content_job_recruit_add(request, response, cookie, session, re
         let job = new T200UserJobRecruit();
   
         job.user_id = session.get("userid");
+        job.status = session.get("status");
         //job.region_id = session.get("regionid");
         job.city_id = session.get("cityid");
         job.title = request.get("title");
         job.content = request.get("content");
         
         if(T200HttpsForm.verify_id(job.user_id)
+            && T200HttpsForm.verify_id(job.status)
             //&& T200HttpsForm.verify_id(job.region_id)
             && T200HttpsForm.verify_id(job.city_id)
             && T200HttpsForm.verify_text(job.title)
             && T200HttpsForm.verify_text(job.content)){
-                job._fields = job.append_fields();
-                job._values = job.append_values();
+                job.flash_content_append_fields();
+                job.flash_content_append_values();
                 UserBiz.append(job.merge_user_insert()).then(resolve, reject);
         }else{
             reject();

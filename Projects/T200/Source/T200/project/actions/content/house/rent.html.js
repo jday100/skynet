@@ -16,7 +16,6 @@ async function do_content_house_rent_list(request, response, cookie, session, re
         let house = new T200UserHouseRent();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
-        
         let status = request.get("status");
 
         switch(status){

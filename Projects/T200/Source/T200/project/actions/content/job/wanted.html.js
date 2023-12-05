@@ -32,15 +32,16 @@ async function do_content_job_wanted_list(request, response, cookie, session, re
 
         job.user_id = session.get("userid");
 
-        if(true){
-            job._fields = job.content_list_fields();
-            job.paging_count_sql = job.merge_user_paging_count();
-            job.merge_paging = job.merge_user_paging_list;
-            UserBiz.paging(job).then(function(result){
+        if(T200HttpsForm.verify_id(job.user_id)){
+            job.flash_content_paging_fields();
+            job.merge_paging_count = job.merge_user_paging_count;
+            job.merge_paging_list = job.merge_user_paging_list;
+            UserBiz.paging2(job).then(function(result){
                 let data = {};
 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = job.status;
                 data.item_left = job.set_item_left();
                 data.item_right = job.set_item_right();
@@ -99,16 +100,17 @@ async function do_content_job_wanted_search(request, response, cookie, session, 
         if(T200HttpsForm.verify_id(job.user_id)
             //&& T200HttpsForm.verify_status(job.status)
             && T200HttpsForm.verify_text(search)){
-                job.search = search;
-                job._fields = job.content_list_fields();
-                job._search_fields = job.content_fulltext_fields();
-                job.fulltext_count_sql = job.merge_user_fulltext_count();
-                job.merge_fulltext = job.merge_user_fulltext_list;
-                UserBiz.fulltext(job).then(function(result){
+                job._search = search;
+                job.flash_content_paging_fields();
+                job.flash_content_fulltext_fields();
+                job.merge_fulltext_count = job.merge_user_fulltext_count;
+                job.merge_fulltext_list = job.merge_user_fulltext_list;
+                UserBiz.fulltext2(job).then(function(result){
                     let data = {};
 
                     data.paging = result.paging;
                     data.values = result.values;
+                    data.search = job._search;
                     data.status = job.status;
                     data.item_left = job.set_item_left();
                     data.item_right = job.set_item_right();
@@ -156,21 +158,17 @@ async function do_content_job_wanted_publish(request, response, cookie, session,
         if(T200HttpsForm.verify_id(job.user_id)
             && T200HttpsForm.verify_ids(job.ids)
             && T200HttpsForm.verify_id(job.status)){
-            job._name_value = job.modify_status_array();
-            UserBiz.modify(job.merge_user_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            job.flash_content_status_update();
+            UserBiz.modify(job.merge_user_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
@@ -193,21 +191,17 @@ async function do_content_job_wanted_remove(request, response, cookie, session, 
         if(T200HttpsForm.verify_id(job.user_id)
             && T200HttpsForm.verify_ids(job.ids)
             && T200HttpsForm.verify_status(job.status)){
-            job._name_value = job.modify_status_array();
-            UserBiz.modify(job.merge_user_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            job.flash_content_status_update();
+            UserBiz.modify(job.merge_user_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
