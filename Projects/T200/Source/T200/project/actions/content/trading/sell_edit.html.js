@@ -37,18 +37,20 @@ async function do_content_trading_sell_add(request, response, cookie, session, r
         let trading = new T200UserTradingSell();
   
         trading.user_id = session.get("userid");
+        trading.status = session.get("status");
         //trading.region_id = session.get("regionid");
         trading.city_id = session.get("cityid");
         trading.title = request.get("title");
         trading.content = request.get("content");
         
         if(T200HttpsForm.verify_id(trading.user_id)
+            && T200HttpsForm.verify_id(trading.status)
             //&& T200HttpsForm.verify_id(trading.region_id)
             && T200HttpsForm.verify_id(trading.city_id)
             && T200HttpsForm.verify_text(trading.title)
             && T200HttpsForm.verify_text(trading.content)){
-                trading._fields = trading.append_fields();
-                trading._values = trading.append_values();
+                trading.flash_content_append_fields();
+                trading.flash_content_append_values();
                 UserBiz.append(trading.merge_user_insert()).then(resolve, reject);
         }else{
             reject();

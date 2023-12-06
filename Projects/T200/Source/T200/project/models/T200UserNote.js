@@ -18,41 +18,43 @@ class T200UserNote extends T200HomeUserModel {
         this._person_table = "person";
     }
 
-    append_fields() {
-        return [
+    flash_content_append_fields() {
+        this._fields = [
             'user_id',
+            'status',
             'title',
             'content'
         ];
     }
 
-    append_values() {
-        return [
+    flash_content_append_values() {
+        this._values = [
             this.user_id,
+            this.status,
             `'${this.title}'`,
             `'${this.content}'`
         ];
     }
 
-    content_list_fields() {
-        return [
+    flash_content_paging_fields() {
+        this._fields = [
             'id',
             'title',
             T200SQL.PREFIX('status', 't1'),
-            T200SQL.PREFIX('create_time', 't1'),
-            T200SQL.PREFIX('username', 't2')
+            T200SQL.PREFIX('username', 't2'),
+            T200SQL.PREFIX('create_time', 't1')            
         ];
     }
 
-    content_fulltext_fields() {
-        return [
+    flash_content_fulltext_fields() {
+        this._fulltext_fields = [
             'title',
             'content'
         ];
     }
 
-    modify_status_array() {
-        return [
+    flash_content_status_update() {
+        this._name_value = [
             ['status', this.status]
         ];
     }

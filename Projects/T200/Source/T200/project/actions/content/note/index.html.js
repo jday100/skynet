@@ -32,15 +32,16 @@ async function do_content_note_list(request, response, cookie, session, resource
 
         note.user_id = session.get("userid");
 
-        if(true){
-            note._fields = note.content_list_fields();
-            note.paging_count_sql = note.merge_user_paging_count();
-            note.merge_paging = note.merge_user_paging_list;
-            UserBiz.paging(note).then(function(result){
+        if(T200HttpsForm.verify_id(note.user_id)){
+            note.flash_content_paging_fields();
+            note.merge_paging_count = note.merge_user_paging_count;
+            note.merge_paging_list = note.merge_user_paging_list;
+            UserBiz.paging2(note).then(function(result){
                 let data = {};
 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = note.status;
                 data.item_left = note.set_item_left();
                 data.item_right = note.set_item_right();
@@ -99,16 +100,17 @@ async function do_content_note_search(request, response, cookie, session, resour
         if(T200HttpsForm.verify_id(note.user_id)
             //&& T200HttpsForm.verify_status(note.status)
             && T200HttpsForm.verify_text(search)){
-                note.search = search;
-                note._fields = note.content_list_fields();
-                note._search_fields = note.content_fulltext_fields();
-                note.fulltext_count_sql = note.merge_user_fulltext_count();
-                note.merge_fulltext = note.merge_user_fulltext_list;
-                UserBiz.fulltext(note).then(function(result){
+                note._search = search;
+                note.flash_content_paging_fields();
+                note.flash_content_fulltext_fields();
+                note.merge_fulltext_count = note.merge_user_fulltext_count;
+                note.merge_fulltext_list = note.merge_user_fulltext_list;
+                UserBiz.fulltext2(note).then(function(result){
                     let data = {};
 
                     data.paging = result.paging;
                     data.values = result.values;
+                    data.search = note._search;
                     data.status = note.status;
                     data.item_left = note.set_item_left();
                     data.item_right = note.set_item_right();
@@ -156,21 +158,17 @@ async function do_content_note_publish(request, response, cookie, session, resou
         if(T200HttpsForm.verify_id(note.user_id)
             && T200HttpsForm.verify_ids(note.ids)
             && T200HttpsForm.verify_id(note.status)){
-            note._name_value = note.modify_status_array();
-            UserBiz.modify(note.merge_user_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            note.flash_content_status_update();
+            UserBiz.modify(note.merge_user_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
@@ -193,21 +191,17 @@ async function do_content_note_remove(request, response, cookie, session, resour
         if(T200HttpsForm.verify_id(note.user_id)
             && T200HttpsForm.verify_ids(note.ids)
             && T200HttpsForm.verify_status(note.status)){
-            note._name_value = note.modify_status_array();
-            UserBiz.modify(note.merge_user_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            note.flash_content_status_update();
+            UserBiz.modify(note.merge_user_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });

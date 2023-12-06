@@ -37,14 +37,18 @@ async function do_content_exchange_add(request, response, cookie, session, resou
         let exchange = new T200UserExchange();
   
         exchange.user_id = session.get("userid");
+        exchange.status = session.get("status");
+        exchange.city_id = session.get("cityid");
         exchange.title = request.get("title");
         exchange.content = request.get("content");
         
         if(T200HttpsForm.verify_id(exchange.user_id)
+            && T200HttpsForm.verify_id(exchange.status)
+            && T200HttpsForm.verify_id(exchange.city_id)
             && T200HttpsForm.verify_text(exchange.title)
             && T200HttpsForm.verify_text(exchange.content)){
-                exchange._fields = exchange.append_fields();
-                exchange._values = exchange.append_values();
+                exchange.flash_content_append_fields();
+                exchange.flash_content_append_values();
                 UserBiz.append(exchange.merge_user_insert()).then(resolve, reject);
         }
     });

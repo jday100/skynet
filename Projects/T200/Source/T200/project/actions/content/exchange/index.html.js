@@ -32,15 +32,16 @@ async function do_content_exchange_list(request, response, cookie, session, reso
 
         exchange.user_id = session.get("userid");
 
-        if(true){
-            exchange._fields = exchange.content_list_fields();
-            exchange.paging_count_sql = exchange.merge_user_paging_count();
-            exchange.merge_paging = exchange.merge_user_paging_list;
-            UserBiz.paging(exchange).then(function(result){
+        if(T200HttpsForm.verify_id(exchange.user_id)){
+            exchange.flash_content_paging_fields();
+            exchange.merge_paging_count = exchange.merge_user_paging_count;
+            exchange.merge_paging_list = exchange.merge_user_paging_list;
+            UserBiz.paging2(exchange).then(function(result){
                 let data = {};
 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = exchange.status;
                 data.item_left = exchange.set_item_left();
                 data.item_right = exchange.set_item_right();
@@ -99,16 +100,17 @@ async function do_content_exchange_search(request, response, cookie, session, re
         if(T200HttpsForm.verify_id(exchange.user_id)
             //&& T200HttpsForm.verify_status(exchange.status)
             && T200HttpsForm.verify_text(search)){
-                exchange.search = search;
-                exchange._fields = exchange.content_list_fields();
-                exchange._search_fields = exchange.content_fulltext_fields();
-                exchange.fulltext_count_sql = exchange.merge_user_fulltext_count();
-                exchange.merge_fulltext = exchange.merge_user_fulltext_list;
-                UserBiz.fulltext(exchange).then(function(result){
+                exchange._search = search;
+                exchange.flash_content_paging_fields();
+                exchange.flash_content_fulltext_fields();
+                exchange.merge_fulltext_count = exchange.merge_user_fulltext_count;
+                exchange.merge_fulltext_list = exchange.merge_user_fulltext_list;
+                UserBiz.fulltext2(exchange).then(function(result){
                     let data = {};
 
                     data.paging = result.paging;
                     data.values = result.values;
+                    data.search = exchange._search;
                     data.status = exchange.status;
                     data.item_left = exchange.set_item_left();
                     data.item_right = exchange.set_item_right();
@@ -156,21 +158,17 @@ async function do_content_exchange_publish(request, response, cookie, session, r
         if(T200HttpsForm.verify_id(exchange.user_id)
             && T200HttpsForm.verify_ids(exchange.ids)
             && T200HttpsForm.verify_id(exchange.status)){
-            exchange._name_value = exchange.modify_status_array();
-            UserBiz.modify(exchange.merge_user_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            exchange.flash_content_status_update();
+            UserBiz.modify(exchange.merge_user_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
@@ -193,21 +191,17 @@ async function do_content_exchange_remove(request, response, cookie, session, re
         if(T200HttpsForm.verify_id(exchange.user_id)
             && T200HttpsForm.verify_ids(exchange.ids)
             && T200HttpsForm.verify_status(exchange.status)){
-            exchange._name_value = exchange.modify_status_array();
-            UserBiz.modify(exchange.merge_user_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            exchange.flash_content_status_update();
+            UserBiz.modify(exchange.merge_user_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });

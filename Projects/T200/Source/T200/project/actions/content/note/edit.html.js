@@ -37,14 +37,16 @@ async function do_content_note_add(request, response, cookie, session, resource,
         let note = new T200UserNote();
   
         note.user_id = session.get("userid");
+        note.status = session.get("status");
         note.title = request.get("title");
         note.content = request.get("content");
         
         if(T200HttpsForm.verify_id(note.user_id)
+            && T200HttpsForm.verify_text(note.status)
             && T200HttpsForm.verify_text(note.title)
             && T200HttpsForm.verify_text(note.content)){
-                note._fields = note.append_fields();
-                note._values = note.append_values();
+                note.flash_content_append_fields();
+                note.flash_content_append_values();
                 UserBiz.append(note.merge_user_insert()).then(resolve, reject);
         }
     });
