@@ -160,6 +160,7 @@ class T200HomeCreate {
             city_name varchar(100), \
             status int not null default 0, \
             username varchar(50) UNIQUE, \
+            nickname_id int not null default 0, \
             nickname varchar(100), \
             password varchar(100), \
             email varchar(100) UNIQUE, \
@@ -171,8 +172,19 @@ class T200HomeCreate {
             create_time datetime not null default current_timestamp, \
             modify_time timestamp not null default current_timestamp, \
             login_time datetime, \
-            ip varchar(20)
+            ip varchar(20) \
             ) character set utf8`;
+    }
+
+    create_nickname() {
+        return `create table if not exists nickname ( 
+            nickname_id int primary key auto_increment, 
+            user_id int not null default 0, 
+            status int not null default 0, 
+            nickname varchar(255), 
+            ip varchar(20),
+            create_time timestamp not null default current_timestamp 
+        ) character set utf8`;
     }
 
     create_advert() {
@@ -242,6 +254,15 @@ class T200HomeCreate {
                 log(__filename, "create table person success");
             }, function(){
                 log(__filename, "create table person failure");
+                return error();
+            }).then(function(){
+                return db.execute(self.create_nickname()).then(function(){
+                    log(__filename, "create table nickname success");
+                }, function(){
+                    log(__filename, "create table nickname failure");
+                    return error();
+                });
+            }, function(){
                 return error();
             }).then(function(){
                 return db.execute(self.create_house_rent()).then(function(){

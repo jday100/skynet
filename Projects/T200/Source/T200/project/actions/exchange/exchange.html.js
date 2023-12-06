@@ -23,9 +23,9 @@ async function do_exchange_board(request, response, cookie, session, resource) {
         }
 
         if(T200HttpsForm.verify_id(exchange.id)){
-            exchange._fields = exchange.board_fields();
-            exchange.board_count_sql = exchange.merge_board_count(exchange.id);
-            exchange.merge_board = exchange.merge_board_list;
+            exchange.flash_user_board_fields();
+            exchange.merge_board_count = exchange.merge_user_board_count;
+            exchange.merge_board_list = exchange.merge_user_board_list;
             UserBiz.board(exchange).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
@@ -43,7 +43,8 @@ async function do_exchange_board(request, response, cookie, session, resource) {
                 reject();
             });
         }else{
-            
+            response.type("json");
+            reject();
         }
   
     });

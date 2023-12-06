@@ -19,6 +19,8 @@ function logout() {
         location.reload();
     }, function(){
         alert("Logout Failure!");
+        $.set_cookie('sid', 0);
+        location.reload();
     });
 }
 
@@ -224,6 +226,19 @@ function update_time() {
     }
 }
 
+function update_times(name) {
+    for(let i=0;i<10;i++){
+        let obj = $.id(name+i);
+
+        if(undefined == obj){
+            //alert(1);
+        }else{
+            let value = show_short_time(obj.value);
+            $.id(name+"_time"+i).innerHTML = value;
+        }
+    }
+}
+
 
 function show_time(value) {
     let cdate = new Date(value);
@@ -241,6 +256,58 @@ function show_time(value) {
         + ("0" + cdate.getMinutes().toString()).slice(-2)
         + ":"
         + ("0" + cdate.getSeconds().toString()).slice(-2);
+    return result;
+}
+
+
+function show_short_time(value) {
+    let ndate = new Date();
+    let cdate = new Date(value);
+
+    let result = "";
+
+    if(ndate.getFullYear() == cdate.getFullYear()){
+        if(ndate.getMonth() == cdate.getMonth()){
+            if(ndate.getDate() == cdate.getDate()){
+                result = ("0" + cdate.getHours().toString()).slice(-2)
+                    + ":"
+                    + ("0" + cdate.getMinutes().toString()).slice(-2)
+                    + ":"
+                    + ("0" + cdate.getSeconds().toString()).slice(-2);
+            }else{
+                result = ("0" + cdate.getDate().toString()).slice(-2)
+                    + " "
+                    + ("0" + cdate.getHours().toString()).slice(-2)
+                    + ":"
+                    + ("0" + cdate.getMinutes().toString()).slice(-2)
+                    + ":"
+                    + ("0" + cdate.getSeconds().toString()).slice(-2);
+            }
+        }else{
+            result = ("0" + (cdate.getMonth() + 1).toString()).slice(-2) 
+                    + "-"
+                    + ("0" + cdate.getDate().toString()).slice(-2)
+                    + " "
+                    + ("0" + cdate.getHours().toString()).slice(-2)
+                    + ":"
+                    + ("0" + cdate.getMinutes().toString()).slice(-2)
+                    + ":"
+                    + ("0" + cdate.getSeconds().toString()).slice(-2);
+        }
+    }else{
+        result = cdate.getFullYear().toString() 
+                + "-"
+                + ("0" + (cdate.getMonth() + 1).toString()).slice(-2) 
+                + "-"
+                + ("0" + cdate.getDate().toString()).slice(-2)
+                + " "
+                + ("0" + cdate.getHours().toString()).slice(-2)
+                + ":"
+                + ("0" + cdate.getMinutes().toString()).slice(-2)
+                + ":"
+                + ("0" + cdate.getSeconds().toString()).slice(-2);
+    }
+
     return result;
 }
 

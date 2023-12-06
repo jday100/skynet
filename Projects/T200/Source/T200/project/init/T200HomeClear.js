@@ -70,6 +70,10 @@ class T200HomeClear {
         return `drop table if exists person`;
     }
 
+    drop_nickname() {
+        return `drop table if exists nickname`;
+    }
+
     drop_region() {
         return `drop table if exists region`;
     }
@@ -89,6 +93,15 @@ class T200HomeClear {
                 log(__filename, "drop table person success");
             }, function(){
                 log(__filename, "drop table person failure");
+                return error();
+            }).then(function(){
+                return db.execute(self.drop_nickname()).then(function(){
+                    log(__filename, "drop table nickname success");
+                }, function(){
+                    log(__filename, "drop table nickname failure");
+                    return error();
+                });
+            }, function(){
                 return error();
             }).then(function(){
                 return db.execute(self.drop_house_rent()).then(function(){

@@ -42,31 +42,6 @@ class T200PagingBiz extends T200BizBase {
     }
 
 
-    paging(model) {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            self.count(model.paging_count_sql).then(function(total){
-                model._total = total;
-                self.calculate(model);
-                model._offset = model.paging.offset;
-                model.paging_list_sql = model.merge_paging(model._offset);
-                return self.list(model.paging_list_sql).then(function(value){
-                    let data = {};
-                    data.paging = model.paging;
-                    data.values = value;
-                    resolve(data);
-                }, function(err){
-                    reject();
-                });
-            }, function(err){
-                reject();
-            });
-        });
-
-        return promise;
-    }
-
-
     calculate(model) {
         //let page = model._page;
         let page = this.request.get("page");

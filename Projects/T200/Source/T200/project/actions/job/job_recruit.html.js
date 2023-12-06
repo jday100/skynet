@@ -23,9 +23,9 @@ async function do_job_recruit_board(request, response, cookie, session, resource
         }
 
         if(T200HttpsForm.verify_id(job.id)){
-            job._fields = job.board_fields();
-            job.board_count_sql = job.merge_board_count(job.id);
-            job.merge_board = job.merge_board_list;
+            job.flash_user_board_fields();
+            job.merge_board_count = job.merge_user_board_count;
+            job.merge_board_list = job.merge_user_board_list;
             UserBiz.board(job).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};

@@ -23,9 +23,9 @@ async function do_trading_buy_board(request, response, cookie, session, resource
         }
 
         if(T200HttpsForm.verify_id(trading.id)){
-            trading._fields = trading.board_fields();
-            trading.board_count_sql = trading.merge_board_count(trading.id);
-            trading.merge_board = trading.merge_board_list;
+            trading.flash_user_board_fields();
+            trading.merge_board_count = trading.merge_user_board_count;
+            trading.merge_board_list = trading.merge_user_board_list;
             UserBiz.board(trading).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};

@@ -23,9 +23,9 @@ async function do_house_rent_board(request, response, cookie, session, resource)
         }
 
         if(T200HttpsForm.verify_id(house.id)){
-            house._fields = house.board_fields();
-            house.board_count_sql = house.merge_board_count(house.id);
-            house.merge_board = house.merge_board_list;
+            house.flash_user_board_fields();
+            house.merge_board_count = house.merge_user_board_count;
+            house.merge_board_list = house.merge_user_board_list;
             UserBiz.board(house).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};

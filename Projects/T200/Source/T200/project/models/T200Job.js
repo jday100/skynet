@@ -31,6 +31,7 @@ class T200Job extends T200HomeVisitorModel {
         return [
             "id",
             "title",
+            "nickname",
             T200SQL.PREFIX("create_time", "t1")
         ];
     }

@@ -443,3 +443,13 @@ input[type="email"] + button {
     justify-content: space-between;
     align-items: center;
 }
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.time {
+    margin-left: 10px;
+}
