@@ -30,17 +30,18 @@ async function do_admin_person_list(request, response, cookie, session, resource
                 person.status = status;
         }
 
-        person.user_id = session.get("userid");
+        let user_id = session.get("userid");
 
-        if(true){
-            person._fields = person.admin_list_fields();
-            person.paging_count_sql = person.merge_admin_person_paging_count();
-            person.merge_paging = person.merge_admin_person_paging_list;
-            AdminBiz.paging(person).then(function(result){
+        if(T200HttpsForm.verify_id(user_id)){
+            person.flash_admin_paging_fields();
+            person.merge_paging_count = person.merge_admin_person_paging_count;
+            person.merge_paging_list = person.merge_admin_person_paging_list;
+            AdminBiz.paging2(person).then(function(result){
                 let data = {};
 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = person.status;
                 data.item_left = person.set_item_left();
                 data.item_right = person.set_item_right();
@@ -95,20 +96,21 @@ async function do_admin_person_search(request, response, cookie, session, resour
                 person.status = status;
         }
 
-        person.user_id = session.get("userid");
+        let user_id = session.get("userid");
 
-        if(T200HttpsForm.verify_id(person.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             //&& T200HttpsForm.verify_status(person.status)
             && T200HttpsForm.verify_text(search)){
                 person.username = search;
-                person._fields = person.admin_list_fields();
-                person.paging_count_sql = person.merge_admin_person_search_count();
-                person.merge_paging = person.merge_admin_person_search_list;
-                AdminBiz.paging(person).then(function(result){
+                person.flash_admin_paging_fields();
+                person.merge_paging_count = person.merge_admin_person_search_count;
+                person.merge_paging_list = person.merge_admin_person_search_list;
+                AdminBiz.paging2(person).then(function(result){
                     let data = {};
 
                     data.paging = result.paging;
                     data.values = result.values;
+                    data.search = person.username;
                     data.status = person.status;
                     data.item_left = person.set_item_left();
                     data.item_right = person.set_item_right();
@@ -149,28 +151,24 @@ async function do_admin_person_approve(request, response, cookie, session, resou
         let person = new T200AdminPerson();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        person.user_id = session.get("userid");
+        let user_id = session.get("userid");
         person.ids = request.get("ids");
         person.status = 1;
 
-        if(T200HttpsForm.verify_id(person.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(person.ids)
             && T200HttpsForm.verify_id(person.status)){
-            person._name_value = person.modify_status_array();
-            AdminBiz.modify(person.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            person.flash_admin_status_update();
+            AdminBiz.modify(person.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });
@@ -186,28 +184,24 @@ async function do_admin_person_remove(request, response, cookie, session, resour
         let person = new T200AdminPerson();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        person.user_id = session.get("userid");
+        let user_id = session.get("userid");
         person.ids = request.get("ids");
         person.status = -1;
 
-        if(T200HttpsForm.verify_id(person.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(person.ids)
             && T200HttpsForm.verify_status(person.status)){
-            person._name_value = person.modify_status_array();
-            AdminBiz.modify(person.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            person.flash_admin_status_update();
+            AdminBiz.modify(person.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
             });
 
         }else{
+            response.type("json");
             reject(T200Error.build(1));
         }
     });

@@ -30,15 +30,18 @@ async function do_admin_exchange_list(request, response, cookie, session, resour
                 exchange.status = status;
         }
 
-        if(true){
-            exchange._fields = exchange.admin_list_fields();
-            exchange.paging_count_sql = exchange.merge_admin_paging_count();
-            exchange.merge_paging = exchange.merge_admin_paging_list;
-            AdminBiz.paging(exchange).then(function(result){
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)){
+            exchange.flash_admin_paging_fields();
+            exchange.merge_paging_count = exchange.merge_admin_paging_count;
+            exchange.merge_paging_list = exchange.merge_admin_paging_list;
+            AdminBiz.paging2(exchange).then(function(result){
                 let data = {};
                 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = exchange.status;
 
                 data.item_left = exchange.set_item_left();
@@ -96,17 +99,21 @@ async function do_admin_exchange_search(request, response, cookie, session, reso
                 exchange.status = status;
         }
 
-        if(T200HttpsForm.verify_text(search)){
-            exchange.search = search;
-            exchange._fields = exchange.admin_list_fields();
-            exchange._search_fields = exchange.admin_fulltext_fields();
-            exchange.fulltext_count_sql = exchange.merge_admin_fulltext_count();
-            exchange.merge_fulltext = exchange.merge_admin_fulltext_list;
-            AdminBiz.fulltext(exchange).then(function(result){
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)
+            && T200HttpsForm.verify_text(search)){
+            exchange._search = search;
+            exchange.flash_admin_paging_fields();
+            exchange.flash_admin_fulltext_fields();
+            exchange.merge_fulltext_count = exchange.merge_admin_fulltext_count;
+            exchange.merge_fulltext_list = exchange.merge_admin_fulltext_list;
+            AdminBiz.fulltext2(exchange).then(function(result){
                 let data = {};
 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = exchange._search;
                 data.status = exchange.status;
 
                 data.item_left = exchange.set_item_left();
@@ -149,22 +156,17 @@ async function do_admin_exchange_approve(request, response, cookie, session, res
         let exchange = new T200AdminExchange();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        exchange.user_id = session.get("userid");
+        let user_id = session.get("userid");
         exchange.ids = request.get("ids");
         exchange.status = 1;
 
-        if(T200HttpsForm.verify_id(exchange.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(exchange.ids)
             && T200HttpsForm.verify_id(exchange.status)){
-            exchange._name_value = exchange.modify_status_array();
-            AdminBiz.modify(exchange.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            exchange.flash_admin_status_update();
+            AdminBiz.modify(exchange.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
@@ -187,22 +189,17 @@ async function do_admin_exchange_remove(request, response, cookie, session, reso
         let exchange = new T200AdminExchange();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        exchange.user_id = session.get("userid");
+        let user_id = session.get("userid");
         exchange.ids = request.get("ids");
         exchange.status = -1;
 
-        if(T200HttpsForm.verify_id(exchange.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(exchange.ids)
             && T200HttpsForm.verify_status(exchange.status)){
-            exchange._name_value = exchange.modify_status_array();
-            AdminBiz.modify(exchange.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            exchange.flash_admin_status_update();
+            AdminBiz.modify(exchange.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();

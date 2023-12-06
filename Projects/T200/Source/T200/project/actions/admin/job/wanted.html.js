@@ -30,15 +30,18 @@ async function do_admin_job_wanted_list(request, response, cookie, session, reso
                 job.status = status;
         }
 
-        if(true){
-            job._fields = job.admin_list_fields();
-            job.paging_count_sql = job.merge_admin_paging_count();
-            job.merge_paging = job.merge_admin_paging_list;
-            AdminBiz.paging(job).then(function(result){
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)){
+            job.flash_admin_paging_fields();
+            job.merge_paging_count = job.merge_admin_paging_count;
+            job.merge_paging_list = job.merge_admin_paging_list;
+            AdminBiz.paging2(job).then(function(result){
                 let data = {};
                 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = job.status;
 
                 data.item_left = job.set_item_left();
@@ -96,17 +99,21 @@ async function do_admin_job_wanted_search(request, response, cookie, session, re
                 job.status = status;
         }
 
-        if(T200HttpsForm.verify_text(search)){
-            job.search = search;
-            job._fields = job.admin_list_fields();
-            job._search_fields = job.admin_fulltext_fields();
-            job.fulltext_count_sql = job.merge_admin_fulltext_count();
-            job.merge_fulltext = job.merge_admin_fulltext_list;
-            AdminBiz.fulltext(job).then(function(result){
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)
+            && T200HttpsForm.verify_text(search)){
+            job._search = search;
+            job.flash_admin_paging_fields();
+            job.flash_admin_fulltext_fields();
+            job.merge_fulltext_count = job.merge_admin_fulltext_count;
+            job.merge_fulltext_list = job.merge_admin_fulltext_list;
+            AdminBiz.fulltext2(job).then(function(result){
                 let data = {};
 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = job._search;
                 data.status = job.status;
 
                 data.item_left = job.set_item_left();
@@ -149,22 +156,17 @@ async function do_admin_job_wanted_approve(request, response, cookie, session, r
         let job = new T200AdminJobWanted();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        job.user_id = session.get("userid");
+        let user_id = session.get("userid");
         job.ids = request.get("ids");
         job.status = 1;
 
-        if(T200HttpsForm.verify_id(job.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(job.ids)
             && T200HttpsForm.verify_id(job.status)){
-            job._name_value = job.modify_status_array();
-            AdminBiz.modify(job.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            job.flash_admin_status_update();
+            AdminBiz.modify(job.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
@@ -187,22 +189,17 @@ async function do_admin_job_wanted_remove(request, response, cookie, session, re
         let job = new T200AdminJobWanted();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        job.user_id = session.get("userid");
+        let user_id = session.get("userid");
         job.ids = request.get("ids");
         job.status = -1;
 
-        if(T200HttpsForm.verify_id(job.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(job.ids)
             && T200HttpsForm.verify_status(job.status)){
-            job._name_value = job.modify_status_array();
-            AdminBiz.modify(job.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            job.flash_admin_status_update();
+            AdminBiz.modify(job.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();

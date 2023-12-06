@@ -15,24 +15,24 @@ class T200AdminPerson extends T200HomeAdminModel {
         this.status = 0;
     }
 
-    append_fields() {
-        return [
+    flash_admin_append_fields() {
+        this._fields = [
             'user_id',
             'title',
             'content'
         ];
     }
 
-    append_values() {
-        return [
+    flash_admin_append_values() {
+        this._values = [
             this.user_id,
             `'${this.title}'`,
             `'${this.content}'`
         ];
     }
 
-    admin_list_fields() {
-        return [
+    flash_admin_paging_fields() {
+        this._fields = [
             T200SQL.AS('user_id', 'id'),
             'city_id',
             'status',
@@ -44,14 +44,14 @@ class T200AdminPerson extends T200HomeAdminModel {
     }
 
     admin_person_fulltext_fields() {
-        return [
+        this._fulltext_fields = [
             'title',
             'content'
         ];
     }
 
-    modify_status_array() {
-        return [
+    flash_admin_status_update() {
+        this._name_value = [
             ['status', this.status]
         ];
     }

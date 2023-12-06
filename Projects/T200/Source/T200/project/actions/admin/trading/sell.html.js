@@ -30,15 +30,18 @@ async function do_admin_trading_sell_list(request, response, cookie, session, re
                 trading.status = status;
         }
 
-        if(true){
-            trading._fields = trading.admin_list_fields();
-            trading.paging_count_sql = trading.merge_admin_paging_count();
-            trading.merge_paging = trading.merge_admin_paging_list;
-            AdminBiz.paging(trading).then(function(result){
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)){
+            trading.flash_admin_paging_fields();
+            trading.merge_paging_count = trading.merge_admin_paging_count;
+            trading.merge_paging_list = trading.merge_admin_paging_list;
+            AdminBiz.paging2(trading).then(function(result){
                 let data = {};
                 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = trading.status;
 
                 data.item_left = trading.set_item_left();
@@ -96,17 +99,21 @@ async function do_admin_trading_sell_search(request, response, cookie, session, 
                 trading.status = status;
         }
 
-        if(T200HttpsForm.verify_text(search)){
-            trading.search = search;
-            trading._fields = trading.admin_list_fields();
-            trading._search_fields = trading.admin_fulltext_fields();
-            trading.fulltext_count_sql = trading.merge_admin_fulltext_count();
-            trading.merge_fulltext = trading.merge_admin_fulltext_list;
-            AdminBiz.fulltext(trading).then(function(result){
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)
+            && T200HttpsForm.verify_text(search)){
+            trading._search = search;
+            trading.flash_admin_paging_fields();
+            trading.flash_admin_fulltext_fields();
+            trading.merge_fulltext_count = trading.merge_admin_fulltext_count;
+            trading.merge_fulltext_list = trading.merge_admin_fulltext_list;
+            AdminBiz.fulltext2(trading).then(function(result){
                 let data = {};
 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = trading.status;
 
                 data.item_left = trading.set_item_left();
@@ -149,22 +156,17 @@ async function do_admin_trading_sell_approve(request, response, cookie, session,
         let trading = new T200AdminTradingSell();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        trading.user_id = session.get("userid");
+        let user_id = session.get("userid");
         trading.ids = request.get("ids");
         trading.status = 1;
 
-        if(T200HttpsForm.verify_id(trading.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(trading.ids)
             && T200HttpsForm.verify_id(trading.status)){
-            trading._name_value = trading.modify_status_array();
-            AdminBiz.modify(trading.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            trading.flash_admin_status_update();
+            AdminBiz.modify(trading.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
@@ -187,22 +189,17 @@ async function do_admin_trading_sell_remove(request, response, cookie, session, 
         let trading = new T200AdminTradingSell();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        trading.user_id = session.get("userid");
+        let user_id = session.get("userid");
         trading.ids = request.get("ids");
         trading.status = -1;
 
-        if(T200HttpsForm.verify_id(trading.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(trading.ids)
             && T200HttpsForm.verify_status(trading.status)){
-            trading._name_value = trading.modify_status_array();
-            AdminBiz.modify(trading.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            trading.flash_admin_status_update();
+            AdminBiz.modify(trading.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();

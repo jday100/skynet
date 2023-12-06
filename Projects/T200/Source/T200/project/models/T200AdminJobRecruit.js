@@ -18,42 +18,26 @@ class T200AdminJobRecruit extends T200HomeAdminModel {
         this._person_table = "person";
     }
 
-    append_fields() {
-        return [
-            'user_id',
-            'title',
-            'content'
-        ];
-    }
-
-    append_values() {
-        return [
-            this.user_id,
-            `'${this.title}'`,
-            `'${this.content}'`
-        ];
-    }
-
     
-    admin_list_fields() {
-        return [
+    flash_admin_paging_fields() {
+        this._fields = [
             'id',
             'title',
             T200SQL.PREFIX('status', 't1'),
-            T200SQL.PREFIX('create_time', 't1'),
-            T200SQL.PREFIX('username', 't2')
+            T200SQL.PREFIX('username', 't2'),
+            T200SQL.PREFIX('create_time', 't1')            
         ];
     }
 
-    admin_fulltext_fields() {
-        return [
+    flash_admin_fulltext_fields() {
+        this._fulltext_fields = [
             'title',
             'content'
         ];
     }
 
-    modify_status_array() {
-        return [
+    flash_admin_status_update() {
+        this._name_value = [
             ['status', this.status]
         ];
     }

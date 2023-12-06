@@ -29,15 +29,18 @@ async function do_admin_notice_list(request, response, cookie, session, resource
                 notice.status = status;
         }
 
-        if(true){
-            notice._fields = notice.admin_list_fields();
-            notice.paging_count_sql = notice.merge_admin_paging_count();
-            notice.merge_paging = notice.merge_admin_paging_list;
-            AdminBiz.paging(notice).then(function(result){
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)){
+            notice.flash_admin_paging_fields();
+            notice.merge_paging_count = notice.merge_admin_paging_count;
+            notice.merge_paging_list = notice.merge_admin_paging_list;
+            AdminBiz.paging2(notice).then(function(result){
                 let data = {};
                 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = notice.status;
 
                 data.item_left = notice.set_item_left();
@@ -94,18 +97,21 @@ async function do_admin_notice_search(request, response, cookie, session, resour
                 notice.status = status;
         }
 
-        if(//T200HttpsForm.verify_status(notice.status)
-            T200HttpsForm.verify_text(search)){
-            notice.search = search;
-            notice._fields = notice.admin_list_fields();
-            notice._search_fields = notice.admin_fulltext_fields();
-            notice.fulltext_count_sql = notice.merge_admin_fulltext_count();
-            notice.merge_fulltext = notice.merge_admin_fulltext_list;
-            AdminBiz.fulltext(notice).then(function(result){
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)
+            && T200HttpsForm.verify_text(search)){
+            notice._search = search;
+            notice.flash_admin_paging_fields();
+            notice.flash_admin_fulltext_fields();
+            notice.merge_fulltext_count = notice.merge_admin_fulltext_count;
+            notice.merge_fulltext_list = notice.merge_admin_fulltext_list;
+            AdminBiz.fulltext2(notice).then(function(result){
                 let data = {};
 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = notice._search;
                 data.status = notice.status;
 
                 data.item_left = notice.set_item_left();
@@ -148,22 +154,17 @@ async function do_admin_notice_approve(request, response, cookie, session, resou
         let notice = new T200AdminNotice();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        notice.user_id = session.get("userid");
+        let user_id = session.get("userid");
         notice.ids = request.get("ids");
         notice.status = 1;
 
-        if(T200HttpsForm.verify_id(notice.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(notice.ids)
             && T200HttpsForm.verify_id(notice.status)){
-            notice._name_value = notice.modify_status_array();
-            AdminBiz.modify(notice.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            notice.flash_admin_status_update();
+            AdminBiz.modify(notice.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
@@ -186,22 +187,17 @@ async function do_admin_notice_remove(request, response, cookie, session, resour
         let notice = new T200AdminNotice();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        notice.user_id = session.get("userid");
+        let user_id = session.get("userid");
         notice.ids = request.get("ids");
         notice.status = -1;
 
-        if(T200HttpsForm.verify_id(notice.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(notice.ids)
             && T200HttpsForm.verify_status(notice.status)){
-            notice._name_value = notice.modify_status_array();
-            AdminBiz.modify(notice.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            notice.flash_admin_status_update();
+            AdminBiz.modify(notice.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();

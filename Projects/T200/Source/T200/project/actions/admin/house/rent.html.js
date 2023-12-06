@@ -30,15 +30,18 @@ async function do_admin_house_rent_list(request, response, cookie, session, reso
                 house.status = status;
         }
 
-        if(true){
-            house._fields = house.admin_list_fields();
-            house.paging_count_sql = house.merge_admin_paging_count();
-            house.merge_paging = house.merge_admin_paging_list;
-            AdminBiz.paging(house).then(function(result){
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)){
+            house.flash_admin_paging_fields();
+            house.merge_paging_count = house.merge_admin_paging_count;
+            house.merge_paging_list = house.merge_admin_paging_list;
+            AdminBiz.paging2(house).then(function(result){
                 let data = {};
                 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = "";
                 data.status = house.status;
 
                 data.item_left = house.set_item_left();
@@ -96,17 +99,21 @@ async function do_admin_house_rent_search(request, response, cookie, session, re
                 house.status = status;
         }
 
-        if(T200HttpsForm.verify_text(search)){
-            house.search = search;
-            house._fields = house.admin_list_fields();
-            house._search_fields = house.admin_fulltext_fields();
-            house.fulltext_count_sql = house.merge_admin_fulltext_count();
-            house.merge_fulltext = house.merge_admin_fulltext_list;
-            AdminBiz.fulltext(house).then(function(result){
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)
+            && T200HttpsForm.verify_text(search)){
+            house._search = search;
+            house.flash_admin_paging_fields();
+            house.flash_admin_fulltext_fields();
+            house.merge_fulltext_count = house.merge_admin_fulltext_count;
+            house.merge_fulltext_list = house.merge_admin_fulltext_list;
+            AdminBiz.fulltext2(house).then(function(result){
                 let data = {};
 
                 data.paging = result.paging;
                 data.values = result.values;
+                data.search = house._search;
                 data.status = house.status;
 
                 data.item_left = house.set_item_left();
@@ -149,22 +156,17 @@ async function do_admin_house_rent_approve(request, response, cookie, session, r
         let house = new T200AdminHouseRent();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        house.user_id = session.get("userid");
+        let user_id = session.get("userid");
         house.ids = request.get("ids");
         house.status = 1;
 
-        if(T200HttpsForm.verify_id(house.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(house.ids)
             && T200HttpsForm.verify_id(house.status)){
-            house._name_value = house.modify_status_array();
-            AdminBiz.modify(house.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            house.flash_admin_status_update();
+            AdminBiz.modify(house.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();
@@ -187,22 +189,17 @@ async function do_admin_house_rent_remove(request, response, cookie, session, re
         let house = new T200AdminHouseRent();
         let AdminBiz = new T200HomeAdminBiz(request, cookie, session);
 
-        house.user_id = session.get("userid");
+        let user_id = session.get("userid");
         house.ids = request.get("ids");
         house.status = -1;
 
-        if(T200HttpsForm.verify_id(house.user_id)
+        if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_ids(house.ids)
             && T200HttpsForm.verify_status(house.status)){
-            house._name_value = house.modify_status_array();
-            AdminBiz.modify(house.merge_admin_status_update()).then(function(result){
-                if(result){
-                    response.type("json");
-                    resolve();
-                }else{
-                    response.type("json");
-                    reject();
-                }
+            house.flash_admin_status_update();
+            AdminBiz.modify(house.merge_admin_status_update()).then(function(){
+                response.type("json");
+                resolve();
             }, function (err) {
                 response.type("json");
                 reject();

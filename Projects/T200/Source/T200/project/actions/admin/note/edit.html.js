@@ -43,8 +43,8 @@ async function do_admin_note_add(request, response, cookie, session, resource, A
         if(T200HttpsForm.verify_id(note.user_id)
             && T200HttpsForm.verify_text(note.title)
             && T200HttpsForm.verify_text(note.content)){
-                note._fields = note.append_fields();
-                note._values = note.append_values();
+                note.flash_admin_append_fields();
+                note.flash_admin_append_values();
                 AdminBiz.append(note.merge_admin_insert()).then(resolve, reject);
         }
     });
