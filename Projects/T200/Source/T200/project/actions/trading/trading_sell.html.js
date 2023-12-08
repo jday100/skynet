@@ -52,5 +52,86 @@ async function do_trading_sell_board(request, response, cookie, session, resourc
     return promise;
 }
 
+async function do_trading_sell_reply(request, response, cookie, session, resource) {
+    log(__filename, "do_trading_sell_reply");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let trading = new T200UserTradingSell();
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        trading.user_id = session.get("userid");
+        trading.parent_id = request.get("id");
+        trading.title = `@${trading.parent_id}`;
+        trading.content = request.get("content");
+        trading.status = 1;
+
+        if(T200HttpsForm.verify_id(trading.user_id)
+            && T200HttpsForm.verify_id(trading.parent_id)
+            && T200HttpsForm.verify_id(trading.status)
+            && T200HttpsForm.verify_text(trading.content)){
+            trading.flash_reply_fields();
+            trading.flash_reply_values();
+            UserBiz.append(trading.merge_user_insert()).then(function(){
+                do_trading_sell_board_panel(trading, UserBiz, cookie, resource).then(function(result){
+                    response.type("json");
+                    resolve(result);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+        }else{
+            response.type("json");
+            reject();  
+        }
+  
+    });
+
+    return promise;
+}
+
+
+function do_trading_sell_board_panel(trading, UserBiz, cookie, resource) {
+    log(__filename, "do_trading_sell_board_panel");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let item = cookie.get("id");
+
+        if(undefined == item){
+
+        }else{
+            trading.id = item._value;
+        }
+
+        if(T200HttpsForm.verify_id(trading.id)){
+            trading.flash_user_board_fields();
+            trading.merge_board_count = trading.merge_user_board_count;
+            trading.merge_board_list = trading.merge_user_board_list;
+            UserBiz.board(trading).then(function(result){
+                let view = new T200HomeView(resource);
+                let data = {};
+                data.paging = result.paging;
+                data.tradings = result.values;
+                return view.render_file("trading/trading_sell.ejs", data).then(function (value) {
+                    resolve(value);
+                }, function (err) {
+                    reject();
+                });
+            }, function (err) {
+                reject();
+            });
+        }else{
+            reject();
+        }
+  
+    });
+
+    return promise;
+}
+
 
 global.action.use_post('/trading/sell/board', do_trading_sell_board);
+global.action.use_post('/trading/sell/reply', do_trading_sell_reply);

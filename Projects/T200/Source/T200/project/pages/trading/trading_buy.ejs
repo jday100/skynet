@@ -21,12 +21,13 @@ tradings.forEach(item => {
                         <%=item.content%>
                     </div>
                     <div>
-                        reply
+                        
                     </div>
                 </div>
             </div>
         <%
     }else{
+        id = item.parent_id;
         %>
         <div class="forum_box">
             <div class="forum_person">
@@ -39,13 +40,13 @@ tradings.forEach(item => {
             </div>
             <div class="forum_article">
                 <div class="forum_title">
-                    @user
+                    <%=item.title%>
                 </div>
                 <div class="forum_content">
                     <pre><%=item.content%></pre>
                 </div>
                 <div class="forum_footer">
-                    <button id="reply<%=item.id%>" onclick="show_reply('<%=item.id%>', '/exchange/reply');">reply</button>
+                    <button id="reply<%=item.id%>" onclick="show_reply('<%=id%>', '<%=item.id%>', '<%=paging.page%>', 'list_box', '/trading/buy/reply');">reply</button>
                 </div>
                 <div id="reply_box<%=item.id%>">
 
@@ -63,18 +64,18 @@ tradings.forEach(item => {
     if(paging){ 
         if(paging.first){ 
 %>
-    <a href="#" onclick="turning(1, $.id('list_box'), '/exchange/board');">First</a>
+    <a href="#" onclick="turning(1, $.id('list_box'), '/trading/buy/board');">First</a>
     <% 
         } 
         if(paging.pages){ 
             paging.pages.forEach(item=> {
     %>
-        <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/exchange/board');"><%=item%></a>
+        <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/trading/buy/board');"><%=item%></a>
     <% 
         }); 
     } 
         if(paging.last){ %>
-            <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/exchange/board');">Last</a>
+            <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/trading/buy/board');">Last</a>
 <% 
         } 
     } 
@@ -88,11 +89,12 @@ tradings.forEach(item => {
     <form id="reply_form" class="form_none">
         <input type="hidden" name="test">
         <input type="hidden" id="id" name="id" value="<%=id%>">
+        <input type="hidden" name="page" value="<%=paging.page%>">
         <div class="reply_content">
             <textarea name="content"></textarea>
         </div>
     </form>
     <div class="reply_button">
-        <button onclick="hit_reply('reply_form', '', '/exchange/reply');">Reply</button>
+        <button onclick="hit_reply('reply_form', $.id('list_box'), '/trading/buy/reply');">Reply</button>
     </div>    
 </div>
