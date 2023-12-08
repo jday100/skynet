@@ -39,6 +39,26 @@ class T200UserHouseRent extends T200HomeUserModel {
         ];
     }
 
+    flash_reply_fields() {
+        this._fields = [
+            'user_id',
+            'parent_id',
+            'status',
+            'title',
+            'content'
+        ];
+    }
+
+    flash_reply_values() {
+        this._values = [
+            this.user_id,
+            this.parent_id,
+            this.status,
+            `'${this.title}'`,
+            `'${this.content}'`
+        ];
+    }
+
 
     flash_content_paging_fields() {
         this._fields = [
