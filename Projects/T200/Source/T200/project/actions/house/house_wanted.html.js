@@ -53,4 +53,86 @@ async function do_house_wanted_board(request, response, cookie, session, resourc
 }
 
 
+async function do_house_wanted_reply(request, response, cookie, session, resource) {
+    log(__filename, "do_house_wanted_reply");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let house = new T200UserHouseWanted();
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        house.user_id = session.get("userid");
+        house.parent_id = request.get("id");
+        house.title = `@${house.parent_id}`;
+        house.content = request.get("content");
+        house.status = 1;
+
+        if(T200HttpsForm.verify_id(house.user_id)
+            && T200HttpsForm.verify_id(house.parent_id)
+            && T200HttpsForm.verify_id(house.status)
+            && T200HttpsForm.verify_text(house.content)){
+            house.flash_reply_fields();
+            house.flash_reply_values();
+            UserBiz.append(house.merge_user_insert()).then(function(){
+                do_house_wanted_board_panel(house, UserBiz, cookie, resource).then(function(result){
+                    response.type("json");
+                    resolve(result);
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+        }else{
+            response.type("json");
+            reject();  
+        }
+  
+    });
+
+    return promise;
+}
+
+
+function do_house_wanted_board_panel(house, UserBiz, cookie, resource) {
+    log(__filename, "do_house_wanted_board_panel");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let item = cookie.get("id");
+
+        if(undefined == item){
+
+        }else{
+            house.id = item._value;
+        }
+
+        if(T200HttpsForm.verify_id(house.id)){
+            house.flash_user_board_fields();
+            house.merge_board_count = house.merge_user_board_count;
+            house.merge_board_list = house.merge_user_board_list;
+            UserBiz.board(house).then(function(result){
+                let view = new T200HomeView(resource);
+                let data = {};
+                data.paging = result.paging;
+                data.houses = result.values;
+                return view.render_file("house/house_wanted.ejs", data).then(function (value) {
+                    resolve(value);
+                }, function (err) {
+                    reject();
+                });
+            }, function (err) {
+                reject();
+            });
+        }else{
+            reject();
+        }
+  
+    });
+
+    return promise;
+}
+
+
 global.action.use_post('/house/wanted/board', do_house_wanted_board);
+global.action.use_post('/house/wanted/reply', do_house_wanted_reply);
