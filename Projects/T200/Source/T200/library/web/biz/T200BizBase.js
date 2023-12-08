@@ -53,8 +53,10 @@ class T200BizBase {
         let promise = new Promise(function(resolve, reject){
             if(self.check()) {
                 self.store.command(sql).then(function(data){
-                    if(data && 0 == data.warningStatus){
-                        resolve();
+                    if(data && 0 == data.warningStatus
+                        && 1 == data.affectedRows){
+                        let id = Number(data.insertId);
+                        resolve(id);
                     }else{
                         reject();
                     }

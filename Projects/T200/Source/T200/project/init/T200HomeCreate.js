@@ -183,7 +183,8 @@ class T200HomeCreate {
             status int not null default 0, 
             nickname varchar(255), 
             ip varchar(20),
-            create_time timestamp not null default current_timestamp 
+            create_time timestamp not null default current_timestamp,
+            fulltext (nickname) with parser ngram 
         ) character set utf8`;
     }
 

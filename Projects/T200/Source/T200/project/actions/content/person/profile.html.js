@@ -1,9 +1,12 @@
 const { error, log } = require('../../../../library/T200Lib.js');
 const T200Error = require('../../../../library/T200Error.js');
 
+const T200Dotter = require('../../../../library/T200Dotter.js');
+
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
 const T200HomeView = require('../../../view/T200HomeView.js');
 const T200UserPerson = require('../../../models/T200UserPerson.js');
+const T200UserNickname = require('../../../models/T200UserNickname.js');
 const T200HomeUserBiz = require('../../../biz/T200HomeUserBiz.js');
 
 
@@ -43,49 +46,83 @@ async function do_content_person_profile(request, response, cookie, session, res
     return promise;
 }
 
-async function do_content_person_nickname_save(request, response, cookie, session, resource) {
+function do_content_person_nickname_save(request, response, cookie, session, resource) {
     log(__filename, "do_content_person_nickname_save");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let person = new T200UserPerson();
+        let dotter = resource.dotter;
+        let nickname = new T200UserNickname();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
-        person.user_id = session.get("userid");
-        person.password = request.get("password");
-        person.nickname = request.get("nickname");
+        dotter.hit(1);
 
-        if(T200HttpsForm.verify_id(person.user_id)
-            && T200HttpsForm.verify_text(person.password)
-            && T200HttpsForm.verify_text(person.nickname)){
+        let user_id = session.get("userid");
+        let pwd1 = request.get("password");
+        let pwd2 = session.get("password");
+        nickname.nickname = request.get("nickname");
 
-            let password = session.get("password");
+        dotter.hit(2);
 
-            if(undefined == password
-                || password != person.password){
-                    
-                response.type("json");
-                reject();
-            }else{
-                delete person.password;
-                person._name_value = person.modify_nickname_array();
-                UserBiz.modify(person.merge_update_by_key()).then(function(result){
-                    response.type("json");
-                    if(result){
-                        resolve();
-                    }else{
+        if(T200HttpsForm.verify_text(pwd1)
+                && T200HttpsForm.verify_text(pwd2)
+                && T200HttpsForm.verify_id(user_id)
+                && pwd1 == pwd2
+                && T200HttpsForm.verify_text(nickname.nickname)){
+
+                    dotter.hit(3);
+
+                    nickname.flash_content_search_fields();
+                    return UserBiz.search(nickname.merge_content_status_search()).then(function(data){
+                        dotter.hit(4);
+                        if(data && 0 == data.length){
+                            dotter.hit(5);
+                            nickname.user_id = user_id;
+                            nickname.status = 1;
+                            nickname.flash_content_append_fields();
+                            nickname.flash_content_append_values();
+                            dotter.hit(6);
+                            return UserBiz.append(nickname.merge_user_insert()).then(function(result){
+                                let id = result;
+                                dotter.hit(7);
+    
+                                if(T200HttpsForm.verify_id(id)){
+                                    let person = new T200UserPerson();
+    
+                                    dotter.hit(8);
+                                    person.user_id = user_id;
+                                    person.nickname_id = id;
+                                    person.nickname = nickname.nickname;
+                                    person.flash_content_nickname_update();
+                                    return UserBiz.modify(person.merge_update_by_key()).then(function(){
+                                        dotter.hit(9);
+                                        response.type("json");
+                                        resolve();
+                                    }, function(){
+                                        response.type("json");
+                                        reject();
+                                    })
+                                }else{
+                                    response.type("json");
+                                    reject();
+                                }
+                            }, function(){
+                                response.type("json");
+                                reject();
+                            });
+                        }else{
+                            response.type("json");
+                            reject();
+                        }
+                        
+                    }, function(){
+                        response.type("json");
                         reject();
-                    }
-                }, function(){
-                    response.type("json");
-                    reject();
-                });
-            }
-
+                    });
+                    dotter.hit(4);
         }else{
             response.type("json");
             reject();
         }
-  
     });
 
     return promise;

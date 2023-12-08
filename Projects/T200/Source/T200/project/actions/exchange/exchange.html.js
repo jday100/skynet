@@ -68,8 +68,8 @@ async function do_exchange_reply(request, response, cookie, session, resource) {
             && T200HttpsForm.verify_id(exchange.parent_id)
             && T200HttpsForm.verify_id(exchange.status)
             && T200HttpsForm.verify_text(exchange.content)){
-            exchange._fields = exchange.reply_fields();
-            exchange._values = exchange.reply_values();
+            exchange.flash_reply_fields();
+            exchange.flash_reply_values();
             UserBiz.append(exchange.merge_user_insert()).then(function(result){
                 response.type("json");
                 resolve();

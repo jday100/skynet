@@ -322,7 +322,7 @@ class T200UserModel extends T200ForumModel {
                 )
             ),
             where,
-            T200SQL.ORDER(T200SQL.DESC(this._key)),
+            T200SQL.ORDER(this._key),
             T200SQL.LIMIT(this._page_size),
             T200SQL.OFFSET(this._offset)
         );

@@ -39,7 +39,7 @@ class T200UserBiz extends T200ForumBiz {
         return promise;
     }
 
-    
+    /*
     get_one(model, value) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -86,8 +86,8 @@ class T200UserBiz extends T200ForumBiz {
 
         return promise;
     }
-
-    
+    */
+    /*
     modify(sql) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -134,7 +134,7 @@ class T200UserBiz extends T200ForumBiz {
 
         return promise;
     }
-
+    */
 
 }
 

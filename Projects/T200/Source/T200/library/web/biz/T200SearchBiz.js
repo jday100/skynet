@@ -8,7 +8,7 @@ class T200SearchBiz extends T200PagingBiz {
     constructor(request, cookie, session) {
         super(request, cookie, session);
 
-        this.search = request.get("search");
+        this._search = request.get("search");
     }
 
     fulltext2(model) {
