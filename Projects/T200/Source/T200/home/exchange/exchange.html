@@ -56,7 +56,8 @@
             <div id="list_box" class="list_box">
                 <form id="form" class="list_form">
                     <input type="hidden" name="test">
-                    <input type="hidden" name="page" value="1">
+                    <input type="hidden" id="id" name="id" value="">
+                    <input type="hidden" id="page" name="page" value="1">
                 </form>
             </div>
         </fieldset>
@@ -74,12 +75,15 @@
         nav_check();
 
         query_id();
-
+        /*
+        query_pid();
+        query_page();
+        */
         let data = formtostring('form');
         $.post('/exchange/board', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
-            alert('Login Failure!');
+            alert('Load Failure!');
         });
     };
 </script>

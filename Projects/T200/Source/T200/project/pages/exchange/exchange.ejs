@@ -21,12 +21,13 @@
                             <%=item.content%>
                         </div>
                         <div>
-                            reply
+                            
                         </div>
                     </div>
                 </div>
             <%
         }else{
+            id = item.parent_id;
             %>
             <div class="forum_box">
                 <div class="forum_person">
@@ -39,13 +40,13 @@
                 </div>
                 <div class="forum_article">
                     <div class="forum_title">
-                        @user
+                        <%=item.title%>
                     </div>
                     <div class="forum_content">
                         <pre><%=item.content%></pre>
                     </div>
                     <div class="forum_footer">
-                        <button id="reply<%=item.id%>" onclick="show_reply('<%=item.id%>', '/exchange/reply');">reply</button>
+                        <button id="reply<%=item.id%>" onclick="show_reply('<%=id%>', '<%=item.id%>', '<%=paging.page%>', 'list_box', '/exchange/reply');">reply</button>
                     </div>
                     <div id="reply_box<%=item.id%>">
 
@@ -88,11 +89,12 @@
         <form id="reply_form" class="form_none">
             <input type="hidden" name="test">
             <input type="hidden" id="id" name="id" value="<%=id%>">
+            <input type="hidden" name="page" value="<%=paging.page%>">
             <div class="reply_content">
                 <textarea name="content"></textarea>
             </div>
         </form>
         <div class="reply_button">
-            <button onclick="hit_reply('reply_form', '', '/exchange/reply');">Reply</button>
+            <button onclick="hit_reply('reply_form', $.id('list_box'), '/exchange/reply');">Reply</button>
         </div>    
 </div>

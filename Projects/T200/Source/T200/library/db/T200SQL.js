@@ -137,7 +137,7 @@ class T200SQL {
     }
 
     static OR(left, right) {
-        return `${left} or ${right} `;
+        return `(${left} or ${right}) `;
     }
 
     static NOT(value) {

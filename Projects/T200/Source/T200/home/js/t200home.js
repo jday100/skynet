@@ -24,6 +24,16 @@ function logout() {
     });
 }
 
+function flush(page) {
+    let loc = location;
+
+    let url = location.origin + location.pathname;
+
+    let search = "?page=" + page;
+
+    location.href = url + search;
+}
+
 function reload() {
     location.reload();
 }
@@ -70,27 +80,31 @@ function hit_search(id, obj, url) {
 function hit_reply(id, obj, url) {
     let result = formtostring(id);
     $.post(url, result, function(data){
-        reload();
+        obj.innerHTML = data;
     }, function(){
         alert("Save Failure!");
     });
 }
 
-function show_reply(id, url) {
+function show_reply(parent_id, id, page, obj, url) {
     if('reply' == $.id("reply"+id).textContent){
         let result = " \
             <form id='"
             + "form_" + id +
             "' class='reply_form' onsubmit='return false;'> \
             <input type='hidden' name='test'> \
+            <input type='hidden' name='page' value='"
+            + page + 
+            "'> \
             <input type='hidden' name='id' value='"
-            + id +
+            + parent_id +
             "'> \
             <div class='reply_group'> \
             <textarea name='content'></textarea> \
             <button class='reply_button' onclick='reply_save(\""
             + id +
-            "\", \""
+            "\"," +
+            "$.id(\"" + obj + "\"),\""
             + url +
             "\");'>Save</button> \
             </div> \
@@ -104,12 +118,15 @@ function show_reply(id, url) {
     }
 }
 
-function reply_save(id, url) {
+function reply_save(id, obj, url) {
     let result = formtostring('form_' + id);
     $.post(url, result, function(data){
         alert("Save Success!");
-        $.id("reply_box" + id).innerHTML = "";
+        /*$.id("reply_box" + id).innerHTML = "";
         $.id("reply" + id).textContent = "reply";
+        */
+       /*reload();*/
+        obj.innerHTML = data;
     }, function(){
         alert("Save Failure!");
     });
@@ -158,6 +175,45 @@ function query_id() {
             if(2 == values.length){
                 if("id" == values[0]){
                     $.set_cookie("id", values[1]);
+                }
+            }
+        }
+    }
+}
+
+function query_pid() {
+    let query = location.search;
+
+    if(null == query){
+
+    }else{
+        if(-1 != query.indexOf("?")) {
+            let str = query.slice(1);
+            let values = str.split("=");
+
+            if(2 == values.length){
+                if("id" == values[0]){
+                    $.set_cookie("id", values[1]);
+                    $.id("id").value = values[1];
+                }
+            }
+        }
+    }
+}
+
+function query_page() {
+    let query = location.search;
+
+    if(null == query){
+
+    }else{
+        if(-1 != query.indexOf("?")) {
+            let str = query.slice(1);
+            let values = str.split("=");
+
+            if(2 == values.length){
+                if("page" == values[0]){
+                    $.id("page").value = values[1];
                 }
             }
         }

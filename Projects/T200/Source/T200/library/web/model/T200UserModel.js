@@ -277,9 +277,15 @@ class T200UserModel extends T200ForumModel {
                                     1
                                 )
                             ),
-                            T200SQL.EQUAL(
-                                "parent_id",
-                                this.parent_id
+                            T200SQL.OR(
+                                T200SQL.EQUAL(
+                                    this._key,
+                                    this[this._key]
+                                ),
+                                T200SQL.EQUAL(
+                                    "parent_id",
+                                    this[this._key]
+                                )
                             )
                         )
                     );
