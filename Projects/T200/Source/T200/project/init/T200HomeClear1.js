@@ -5,7 +5,23 @@ const T200Error = require('../../library/T200Error.js');
 class T200HomeClear {
     constructor() {
         this.tables = [
-            'person'
+            'house_rent',
+            'house_wanted',
+            'job_recruit',
+            'job_wanted',
+            'trading_sell',
+            'trading_buy',
+            'exchange',
+            'admin',
+            'setting',
+            'advert',
+            'notice',
+            'note',
+            'person',
+            'nickname',
+            'continent',
+            'region',
+            'city'
             ];
     }
 

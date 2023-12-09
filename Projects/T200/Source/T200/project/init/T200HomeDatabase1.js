@@ -8,6 +8,7 @@ const T200Database = require('../../library/db/T200Database.js');
 const T200DBClient = require('../../library/db/T200DBClient.js');
 
 const T200HomeClear = require('./T200HomeClear1.js');
+const T200HomeCreate = require('./T200HomeCreate1.js');
 
 
 class T200HomeDatabase extends T200Database {
@@ -28,23 +29,27 @@ class T200HomeDatabase extends T200Database {
                 self.dotter.hit(2);
                 return self.run().then(function(){
                     self.dotter.hit(15);
-                    resolve();
+                    result = true;
                 }, function(err){
                     self.dotter.hit(15);
-                }).then(function(){
-                    self.dotter.hit(16);
-                }, function(){
-                    self.dotter.hit(16);
                 }).finally(function(){
                     self.dotter.hit(16);
                     return self.stop(function(){
                         self.dotter.hit(17);
                     }, function(err){
+                        result = false;
                         return error();
                     });
                 });
             }, function(err){
                 return error();
+            }).finally(function(){
+                if(result){
+                    resolve();
+                }else{
+                    self.dotter.failure(18);
+                    reject();
+                }
             });
         });
 
@@ -63,6 +68,7 @@ class T200HomeDatabase extends T200Database {
                 self.dotter.hit(4);
                 return self.clear(client).then(function(){
                     self.dotter.hit(10);
+                    result = true;
                 }, function(err){
                     return error();
                 }).then(function(){
@@ -73,26 +79,27 @@ class T200HomeDatabase extends T200Database {
                 }).then(function(){
                     self.dotter.hit(12);
                 }, function(err){
-
-                });
-                /*
+                    result = false;
                 }).finally(function(){
                     self.dotter.hit(13);
-                    / *
+                    
                     return client.disconnect().then(function(){
                         self.dotter.hit(14);
                     }, function(err){
+                        result = false;
                         return error();
                     });
-                    * /
+                    
                 });
-                */
+
             }, function(err){
-
-            }).then(function(){
-                self.dotter.hit(14);
-            }, function(){
-
+                
+            }).finally(function(){
+                if(result){
+                    resolve();
+                }else{
+                    reject();
+                }
             });
         });
 
@@ -121,8 +128,12 @@ class T200HomeDatabase extends T200Database {
     create(client) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            resolve();
-
+            let HomeCreate = new T200HomeCreate();
+            return HomeCreate.create(client).then(function(){
+                resolve();
+            }, function(){
+                reject();
+            });
         });
 
         return promise;
@@ -138,7 +149,7 @@ HomeDatabase.init().then(function(){
 }, function(){
     log(__filename, "Home Database init failure");
 }).finally(function(){
-    self.dotter.hit(18);
+    HomeDatabase.dotter.hit(18);
     if(HomeDatabase.dotter.judge()){
         log(__filename, "Result:", "true");
     }else{

@@ -32,7 +32,7 @@ class T200Dotter {
 
         for(let item of this._values){
             console.log(item);
-            if(prev < item){
+            if(prev <= item){
                 
             }else{
                 result = false;
