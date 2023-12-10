@@ -31,6 +31,14 @@ class T200HttpsForm {
         return false;
     }
 
+    static verify_zero(value) {
+        if(0 == value){
+            return true;
+        }
+
+        return false;
+    }
+
     static verify_ids(value) {
         if(value){
             return true;

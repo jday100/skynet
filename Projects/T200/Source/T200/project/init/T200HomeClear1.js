@@ -18,7 +18,7 @@ class T200HomeClear {
             'notice',
             'note',
             'person',
-            'nickname',
+            'identity',
             'continent',
             'region',
             'city'

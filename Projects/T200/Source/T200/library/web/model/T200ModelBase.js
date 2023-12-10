@@ -23,6 +23,15 @@ class T200ModelBase {
         );
     }
 
+    merge_select_by_id() {
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields), T200SQL.FROM(this._table),
+            T200SQL.WHERE(
+                T200SQL.EQUAL(this._id, this[this._id])
+            )
+        );
+    }
+
     merge_update_by_key() {
         return T200SQL.UPDATE(
             T200SQL.NAME(this._table), 

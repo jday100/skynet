@@ -96,8 +96,12 @@
         
         $.id('submit').onclick = function(){
             let data = formtostring('form');
-            $.post('/login', data, function(){
-                forward("/content/index.html");
+            $.post('/login', data, function(flag){
+                if(flag){
+                    forward("/content/index.html");
+                }else{
+                    forward("/content/person/profile_init.html");
+                }
             }, function(){
                 alert('Login Failure!');
             });

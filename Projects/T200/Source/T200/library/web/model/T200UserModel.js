@@ -252,15 +252,9 @@ class T200UserModel extends T200ForumModel {
                                     1
                                 )
                             ),
-                            T200SQL.OR(
-                                T200SQL.EQUAL(
-                                    this._key,
-                                    this[this._key]
-                                ),
-                                T200SQL.EQUAL(
-                                    "parent_id",
-                                    this[this._key]
-                                )
+                            T200SQL.EQUAL(
+                                "parent_id",
+                                this[this._key]
                             )
                         )
                     );
@@ -277,15 +271,9 @@ class T200UserModel extends T200ForumModel {
                                     1
                                 )
                             ),
-                            T200SQL.OR(
-                                T200SQL.EQUAL(
-                                    this._key,
-                                    this[this._key]
-                                ),
-                                T200SQL.EQUAL(
-                                    "parent_id",
-                                    this[this._key]
-                                )
+                            T200SQL.EQUAL(
+                                "parent_id",
+                                this[this._key]
                             )
                         )
                     );
@@ -302,7 +290,7 @@ class T200UserModel extends T200ForumModel {
                 T200SQL.ALIAS(this._table, "t1")
                 ),
             T200SQL.INNER(
-                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.ALIAS(this._identity_table, "t2"), 
                 T200SQL.EQUAL(
                     T200SQL.PREFIX(this._id, "t1"), 
                     T200SQL.PREFIX(this._id, "t2")
@@ -321,7 +309,7 @@ class T200UserModel extends T200ForumModel {
                 T200SQL.ALIAS(this._table, "t1")
                 ),
             T200SQL.INNER(
-                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.ALIAS(this._identity_table, "t2"), 
                 T200SQL.EQUAL(
                     T200SQL.PREFIX(this._id, "t1"), 
                     T200SQL.PREFIX(this._id, "t2")

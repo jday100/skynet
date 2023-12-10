@@ -25,8 +25,7 @@ async function do_login(request, response, cookie, session, resource) {
                 set_data(cookie, session, data);
 
                 response.type('json');
-                response.data('success');
-                resolve();
+                resolve(data.identity_id);
             }, function(err){
                 response.type('json');
                 response.data('failure');
@@ -57,6 +56,7 @@ function set_data(cookie, session, data) {
     result.status = data.status;
     result.username = data.username;
     result.password = data.password;
+    result.flag = data.flag;
 
     session.key(sid, result);
 }

@@ -43,7 +43,14 @@ class T200VisitorModel extends T200SearchModel {
     }
 
     flash_login_fields() {
-        this._fields = "user_id, status, continent_id, region_id, city_id, username, password, nickname";
+        this._fields = [
+            "user_id",
+            "status",
+            "city_id",
+            "username",
+            "password",
+            "flag"
+        ];
     }
 
     ///

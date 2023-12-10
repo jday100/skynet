@@ -53,6 +53,10 @@ function nav_check() {
     }
 }
 
+function redirect(action) {
+    $.win.location = action;
+}
+
 function forward(action) {
     $.id('main').innerHTML = `<div class="form_redirect"><a href="${action}">Redirect</a></div>`;
     $.win.location = action;

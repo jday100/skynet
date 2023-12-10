@@ -17,6 +17,7 @@ class T200Trading extends T200HomeVisitorModel {
         this.status = 0;
 
         this._person_table = "person";
+        this._identity_table = "identity";
     }
 
     fields() {

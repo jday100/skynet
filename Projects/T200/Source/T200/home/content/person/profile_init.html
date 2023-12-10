@@ -140,14 +140,26 @@
 </body>
 
 <script>
+    function save() {
+        let result = formtostring("form");
+        $.post('/content/person/profile/init/save', result, function(data){
+            redirect("/content/person/identity_init.html");
+        }, function(){
+            alert("Save Failure!");
+            redirect("/content/person/identity_init.html");
+        });
+    }
+
+
     $.win.onload = function () {
         nav_check();
 
         let result = formtostring("form");
-        $.post('/content/person/profile', result, function(data){
+        $.post('/content/person/profile/init', result, function(data){
             $.id("list_box").innerHTML = data;
-            nationality_init($.id("location_city_id").value);
-            region_init($.id("location_city_id").value);
+            /*nationality_init($.id("location_city_id").value);
+            region_init($.id("location_city_id").value);*/
+            $.id("submit").onclick = save;
         }, function(){
             alert("Load Failure!");
         });

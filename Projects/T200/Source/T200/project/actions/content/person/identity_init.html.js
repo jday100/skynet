@@ -1,0 +1,95 @@
+const { error, log } = require('../../../../library/T200Lib.js');
+const T200Error = require('../../../../library/T200Error.js');
+
+const T200Dotter = require('../../../../library/T200Dotter.js');
+
+const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
+const T200HomeView = require('../../../view/T200HomeView.js');
+const T200UserPerson = require('../../../models/T200UserPerson.js');
+const T200UserNickname = require('../../../models/T200UserNickname.js');
+
+const T200UserIdentity = require('../../../models/T200UserIdentity.js');
+
+const T200HomeUserBiz = require('../../../biz/T200HomeUserBiz.js');
+
+
+async function do_content_person_identity_init(request, response, cookie, session, resource) {
+    log(__filename, "do_content_person_identity_init");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let identity = new T200UserIdentity();
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        identity.user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(identity.user_id)){
+            identity.flash_content_identity_fields();
+            UserBiz.list(identity.merge_select_by_id()).then(function(result){
+                let view = new T200HomeView(resource);
+                let data = {};
+                if(result && 1 == result.length){
+                    data.identity = result[0];
+                }else{
+                    data.identity = {};
+                }
+                return view.render_file("content/person/identity_init.ejs", data).then(function (value) {
+                    response.type("json");
+                    resolve(value);
+                }, function (err) {
+                    response.type("json");
+                    reject();
+                });
+            }, function (err) {
+                response.type("json");
+                reject();
+            });
+        }else{
+            response.type("json");
+            reject();
+        }
+    
+    });
+
+    return promise;
+}
+
+
+async function do_content_person_identity_init_save(request, response, cookie, session, resource) {
+    log(__filename, "do_content_person_identity_init_save");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let person = new T200UserPerson();
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        person.user_id = session.get("userid");
+        person.intro = request.get("intro");
+
+        if(T200HttpsForm.verify_id(person.user_id)
+            && T200HttpsForm.verify_text(person.intro)){
+            person._name_value = person.modify_intro_array();
+            UserBiz.modify(person.merge_update_by_key()).then(function(result){
+                response.type("json");
+                if(result){
+                    resolve();
+                }else{
+                    reject();
+                }
+            }, function(){
+                response.type("json");
+                reject();
+            });
+        }else{
+            response.type("json");
+            reject();
+        }
+  
+    });
+
+    return promise;
+}
+
+
+
+global.action.use_post('/content/person/identity/init', do_content_person_identity_init);
+global.action.use_post('/content/person/identity/init/save', do_content_person_identity_init_save);
+
