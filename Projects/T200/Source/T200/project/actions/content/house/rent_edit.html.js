@@ -37,6 +37,7 @@ async function do_content_house_rent_add(request, response, cookie, session, res
         let house = new T200UserHouseRent();
   
         house.user_id = session.get("userid");
+        house.identity_id = session.get("identityid");
         house.status = session.get("status");
         //house.region_id = session.get("regionid");
         house.city_id = session.get("cityid");
@@ -51,8 +52,25 @@ async function do_content_house_rent_add(request, response, cookie, session, res
             && T200HttpsForm.verify_text(house.content)){
                 house.flash_content_append_fields();
                 house.flash_content_append_values();
-                UserBiz.append(house.merge_user_insert()).then(resolve, reject);
+                UserBiz.append(house.merge_user_insert()).then(function(id){
+                    house.parent_id = id;
+                    house.id = id;
+                    if(T200HttpsForm.verify_id(house.parent_id)){
+                        house.flash_content_parent_update();
+                        UserBiz.modify(house.merge_update_by_key()).then(function(){
+                            response.type("json");
+                            resolve();
+                        }, function(){
+                            response.type("json");
+                            reject();
+                        });
+                    }
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
         }else{
+            response.type("json");
             reject();
         }
     });

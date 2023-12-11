@@ -82,6 +82,53 @@ function email_save() {
     });
 }
 
+function location_edit() {
+    $.id("location_box").innerHTML = `
+        <form id='location_form' onsubmit="return false;">
+            <input type="hidden" name="test">
+            <div>
+                <dl>
+                    <dd>
+                        <div>
+                            <label>Continent:</label>
+                            <select id="continent" name="continent" onchange="continent_change(this, 'region');">
+                            </select>
+                        </div>
+                        <div>
+                            <label>Region:</label>
+                            <select id="region" name="region" onchange="region_change(this,'city');">
+                            </select>
+                        </div>
+                        <div>
+                            <label>City:</label>
+                            <select id="city" name="city">
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </form>
+    `;
+
+    $.id("location_button").innerHTML = "Save";
+    $.id("location_button").onclick = location_save;
+
+    continent_init($.id("continent"));
+}
+
+function location_save() {
+    let result = formtostring("location_form");
+    $.post('/content/person/location/save', result, function(data){
+        alert("Save Success!");
+        //$.id("location_title").value = $.id("email").value;
+        $.id("location_box").innerHTML = "";
+        $.id("location_button").innerHTML = "Edit";
+        $.id("location_button").onclick = location_edit;        
+    }, function(){
+        alert("Save Failure!");
+    });
+}
+
 function send_email() {
 
 }

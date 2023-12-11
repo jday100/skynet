@@ -24,6 +24,7 @@ class T200UserHouseRent extends T200HomeUserModel {
         this._fields = [
             'user_id',
             'status',
+            'identity_id',
             'city_id',
             'title',
             'content'
@@ -34,6 +35,7 @@ class T200UserHouseRent extends T200HomeUserModel {
         this._values = [
             this.user_id,
             this.status,
+            this.identity_id,
             this.city_id,
             `'${this.title}'`,
             `'${this.content}'`
@@ -81,6 +83,12 @@ class T200UserHouseRent extends T200HomeUserModel {
     flash_content_status_update() {
         this._name_value = [
             ['status', this.status]
+        ];
+    }
+
+    flash_content_parent_update() {
+        this._name_value = [
+            ['parent_id', this.parent_id]
         ];
     }
 

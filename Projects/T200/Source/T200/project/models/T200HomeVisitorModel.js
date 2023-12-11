@@ -51,7 +51,7 @@ class T200HomeVisitorModel extends T200VisitorModel {
                         )
                     ),
                     T200SQL.EQUAL(
-                        "parent_id",
+                        "parent_type",
                         0
                     )
                 )

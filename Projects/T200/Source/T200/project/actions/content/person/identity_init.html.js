@@ -118,14 +118,41 @@ async function do_content_person_identity_init_append(request, response, cookie,
         identity.nickname = request.get("nickname");
         identity.city_id = request.get("city");
         identity.intro = request.get("intro");
+        identity.status = session.get("status");
 
 
         if(T200HttpsForm.verify_id(identity.user_id)
+            && T200HttpsForm.verify_id(identity.status)
             && T200HttpsForm.verify_text(identity.nickname)
             && T200HttpsForm.verify_empty(identity.intro)){
                 identity.flash_content_append_fields();
                 identity.flash_content_append_values();
-                UserBiz.append(identity.merge_user_insert()).then(resolve, reject);
+                UserBiz.append(identity.merge_user_insert()).then(function(id){
+                    let person = new T200UserPerson();
+
+                    person.user_id = identity.user_id;
+                    person.identity_id = id;
+                    if(T200HttpsForm.verify_id(person.user_id)
+                        && T200HttpsForm.verify_id(person.identity_id)){
+                        person.flash_content_profile_identity_update();
+                        UserBiz.modify(person.merge_update_by_key()).then(function(){
+                            response.type("json");
+                            resolve();
+                        }, function(){
+                            response.type("json");
+                            reject();
+                        });
+                    }else{
+                        response.type("json");
+                        reject();
+                    }
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+        }else{
+            response.type("json");
+            reject();
         }
     });
 
