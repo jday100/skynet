@@ -25,7 +25,7 @@
 
 #list_box > div > div > div label {
     display: block;
-    width: 100px;
+    width: 120px;
 }
 
 #list_box > div > div > div input {
@@ -102,7 +102,7 @@ form > div > div > div {
 
 form > div > div > div label {
     display: block;
-    width: 100px;
+    width: 120px;
 }
 
 form > div > div > div input {
@@ -124,7 +124,7 @@ form > div > button {
 }
 
 textarea {
-    margin-left: 100px;
+    margin-left: 120px;
     
 }
 

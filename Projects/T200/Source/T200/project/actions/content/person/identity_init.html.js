@@ -80,9 +80,6 @@ async function do_content_person_identity_init_save(request, response, cookie, s
         identity.city_id = request.get("city");
         identity.intro = request.get("intro");
 
-        //test
-        identity.city_id = 20000;
-
         if(T200HttpsForm.verify_null(identity_id)
             && T200HttpsForm.verify_id(identity.user_id)
             && T200HttpsForm.verify_text(identity.nickname)
@@ -122,8 +119,6 @@ async function do_content_person_identity_init_append(request, response, cookie,
         identity.city_id = request.get("city");
         identity.intro = request.get("intro");
 
-        //test
-        identity.city_id = 20000;
 
         if(T200HttpsForm.verify_id(identity.user_id)
             && T200HttpsForm.verify_text(identity.nickname)

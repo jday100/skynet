@@ -146,8 +146,8 @@
         let result = formtostring("form");
         $.post('/content/person/profile', result, function(data){
             $.id("list_box").innerHTML = data;
-            nationality_init($.id("location_city_id").value);
-            region_init($.id("location_city_id").value);
+            /*nationality_init($.id("location_city_id").value);
+            region_init($.id("location_city_id").value);*/
         }, function(){
             alert("Load Failure!");
         });

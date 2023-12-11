@@ -66,6 +66,10 @@ async function do_content_person_profile_init_save(request, response, cookie, se
 
         if(T200HttpsForm.verify_zero(flag)
             && T200HttpsForm.verify_id(person.user_id)
+            && T200HttpsForm.verify_null(person.gender)
+            && T200HttpsForm.verify_id(person.year)
+            && T200HttpsForm.verify_id(person.month)
+            && T200HttpsForm.verify_id(person.day)
             && T200HttpsForm.verify_empty(person.intro)){
             person.flash_content_profile_init_update();
             UserBiz.modify(person.merge_update_by_key()).then(function(result){

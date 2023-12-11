@@ -24,6 +24,30 @@
         </div>
     </div>
 </div>
+<div>
+    <div>
+        <div>
+            <label>Create Time:</label>
+            <input disabled type="text" value="<%=profile.create_time%>">
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <div>
+            <label>Modify Time:</label>
+            <input disabled type="text" value="<%=profile.modify_time%>">
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <div>
+            <label>Nickname:</label>
+            <input disabled type="text" value="<%=profile.nickname%>">
+        </div>
+    </div>
+</div>
 <form id="form" onsubmit="return false;">
 <input type="hidden" name="test">
 <div>
@@ -38,7 +62,7 @@
                 <dd>
                     <div class="country">
                         <label>Continent:</label>
-                        <select id="continent" name="continent">
+                        <select id="continent" name="continent" onchange="continent_change(this, 'country');">
 
                         </select>
                     </div>
@@ -59,6 +83,7 @@
         <div>
             <label>Gender:</label>
             <select name="gender">
+                <option value="0">unset</option>
                 <option value="1">male</option>
                 <option value="2">female</option>
             </select>

@@ -85,3 +85,60 @@ function email_save() {
 function send_email() {
 
 }
+
+function date_init(year, month, day) {
+    let result = "";
+    for(let i=1920;i<=2023;i++){
+        result += `
+            <option value="${i}">${i}</option>
+        `;
+    }
+    year.innerHTML = result;
+
+    result = "";
+    for(let i=1;i<=12;i++){
+        result += `
+            <option value="${i}">${i}</option>
+        `;
+    }
+    month.innerHTML = result;
+
+    result = "";
+    for(let i=1;i<=31;i++){
+        result += `
+            <option value="${i}">${i}</option>
+        `;
+    }
+    day.innerHTML = result;
+}
+
+
+function continent_change(obj, id) {
+    let items = regions[obj.value];
+
+    if(undefined == items){
+
+    }else{
+        let result = "";
+        items.forEach(item => {
+            result += `<option value='${item}'>${item}</option>`;
+        });
+        $.id(id).innerHTML = result;
+        $.id(id).value = "";
+    }
+}
+
+function region_change(obj, id) {
+    let items = cities[obj.value];
+
+    if(undefined == items){
+
+    }else{
+        let result = "";
+
+        for(let item in items){
+            result += `<option value='${items[item]}'>${item}</option>`;
+        }
+        $.id(id).innerHTML = result;
+    }
+}
