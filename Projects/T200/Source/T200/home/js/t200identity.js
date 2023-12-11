@@ -1,0 +1,87 @@
+function password_edit() {
+    $.id("password_box").innerHTML = `
+        <form id='password_form'>
+            <input type="hidden" name="test">
+            <div>
+                <dl>
+                    <dd>
+                        <div>
+                            <label style="width: 150px;">Old Password:</label>
+                            <input type="password" name="opwd">
+                        </div>
+                        <div>
+                            <label style="width: 150px;">New Password:</label>
+                            <input type="password" name="pwd1">
+                        </div>
+                        <div>
+                            <label style="width: 150px;">New Password:</label>
+                            <input type="password" name="pwd2">
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </form>
+    `;
+
+    $.id("password_button").innerHTML = "Save";
+    $.id("password_button").onclick = password_save;
+}
+
+function password_save() {
+    let result = formtostring("password_form");
+    $.post('/content/person/password/save', result, function(data){
+        alert("Save Success!");
+        $.id("password_box").innerHTML = "";
+        $.id("password_button").innerHTML = "Edit";
+        $.id("password_button").onclick = password_edit;
+    }, function(){
+        alert("Save Failure!");
+    });
+}
+
+function email_edit() {
+    $.id("email_box").innerHTML = `
+        <form id='email_form' onsubmit="return false;">
+            <input type="hidden" name="test">
+            <div>
+                <dl>
+                    <dd>
+                        <div>
+                            <label>Password:</label>
+                            <input type="password" name="password">
+                        </div>
+                        <div>
+                            <label>Email:</label>
+                            <input type="text" id="email" name="email">
+                            <button onclick="send_email();">Send</button>
+                        </div>
+                        <div>
+                            <label>Code:</label>
+                            <input style="width: 100px;" type="password" name="code">
+                        </div>
+                    </dd>
+                </dl>                
+            </div>
+        </form>
+    `;
+
+    $.id("email_button").innerHTML = "Save";
+    $.id("email_button").onclick = email_save;
+}
+
+function email_save() {
+    let result = formtostring("email_form");
+    $.post('/content/person/email/save', result, function(data){
+        alert("Save Success!");
+        $.id("email_title").value = $.id("email").value;
+        $.id("email_box").innerHTML = "";
+        $.id("email_button").innerHTML = "Edit";
+        $.id("email_button").onclick = email_edit;        
+    }, function(){
+        alert("Save Failure!");
+    });
+}
+
+function send_email() {
+
+}

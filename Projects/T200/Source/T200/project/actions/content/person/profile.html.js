@@ -171,30 +171,38 @@ async function do_content_person_email_save(request, response, cookie, session, 
     log(__filename, "do_content_person_email_save");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let person = new T200Person();
+        let person = new T200UserPerson();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        let password = request.get("password");
+        let pwd = session.get("password");
+        let code = request.get("code");
+
         person.user_id = session.get("userid");
-        person.city_id = request.get("city");
+        person.email = request.get("email");
 
         if(T200HttpsForm.verify_id(person.user_id)
-            && T200HttpsForm.verify_id(person.city_id)){
-            UserBiz.modify(person.merge_city_update()).then(function(result){
-                response.type("json");
-                if(result){
-                    resolve();
-                }else{
+            && T200HttpsForm.verify_text(password)
+            && T200HttpsForm.verify_text(pwd)
+            && T200HttpsForm.verify_email(person.email)
+            && pwd == password){
+                person.flash_content_profile_email_update();
+                UserBiz.modify(person.merge_update_by_key()).then(function(result){
+                    response.type("json");
+                    if(result){
+                        resolve();
+                    }else{
+                        reject();
+                    }
+                }, function(){
+                    response.type("json");
                     reject();
-                }
-            }, function(){
-                response.type("json");
-                reject();
-            });
+                });
         }else{
             response.type("json");
             reject();
         }
-  
+
     });
 
     return promise;

@@ -23,7 +23,11 @@ class T200UserPerson extends T200HomeUserModel {
         ];
     }
 
-
+    flash_content_profile_email_update() {
+        this._name_value = [
+            ['email', `'${this.email}'`]
+        ];
+    }
 
     ////////////////////////
 

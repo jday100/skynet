@@ -127,3 +127,65 @@ textarea {
     margin-left: 100px;
     
 }
+
+label {
+    width: 100px;
+    display:block;
+}
+
+input {
+    width: 200px;
+}
+
+.account {
+
+}
+
+
+#account > div {
+    width: 770px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#account > div > div {
+    line-height: 35px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.profile {
+
+}
+
+
+#profile > div {
+    width: 770px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#profile > div > div {
+    line-height: 35px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+dl > dd > div {
+    line-height: 35px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+button {
+    width: 60px;
+    margin-left: 20px;
+}

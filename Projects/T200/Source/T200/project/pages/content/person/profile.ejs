@@ -1,140 +1,104 @@
-<div>
-    Hello
-</div>
-<div>
-    <div>
+<fieldset>
+    <legend>Account</legend>
+    <div id="account">
         <div>
-            <label>Username:</label>
-            <input disabled type="text" value="username">
+            Hello
         </div>
-    </div>
-</div>
-<div>
-    <div>
         <div>
-            <label>Password:</label>
+            <div>
+                <label>Username:</label>
+                <input disabled type="text" value="<%=profile.username%>">
+            </div>
         </div>
-        <button>Edit</button>
-    </div>
-    <div>
         <div>
-            <dl>
-                <dd>
-                    <div class="country">
-                        <label>Country</label>
-                        <input type="text" value="text">
-                    </div>
-                    
-                    <div class="country">
-                        <label>Country</label>
-                        <input type="text" value="text">
-                    </div>
-                </dd>
-            </dl>
+            <div>
+                <label>Password:</label>
+            </div>
+            <button id="password_button" onclick="password_edit();">Edit</button>
         </div>
-    </div>
-</div>
-<div>
-    <div>
-        <div>
-            <label>Email:</label>
-            <input disabled type="text" value="email">
-        </div>
-        <button>Edit</button>
-    </div>
-    <div>
-        <div>
-            <dl>
-                <dd>
-                    <div class="country">
-                        <label>Country</label>
-                        <input type="text" value="text">
-                    </div>
-                    
-                    <div class="country">
-                        <label>Country</label>
-                        <input type="text" value="text">
-                    </div>
-                </dd>
-            </dl>
-        </div>
-    </div>
-</div>
-<div>
-    <div>
-        <div>
-            <label>Country</label>
-        </div>
-        <button>Edit</button>
-    </div>
-    <div>
-        <div>
-            <dl>
-                
-                <dd>
-                    <div class="country">
-                        <label>Country</label>
-                        <input style="width:100px" type="text" value="text">
-                        <label style="margin-left:20px">Country</label>
-                        <input style="width:200px" type="text" value="text">
-                    </div>
-            
-                </dd>
-        </dl>
-        </div>
-    </div>
-    <div>
-        <div>
-            <dl>
-                <dd>
-                    <div class="country">
-                        <label>Country</label>
-                        <input type="text" value="text">
-                    </div>
-                    
-                    <div class="country">
-                        <label>Country</label>
-                        <input type="text" value="text">
-                    </div>
-                </dd>
-            </dl>
-        </div>
-    </div>
-</div>
-<div>
-    <div>
-        <div>
-            <label>Gender:</label>
-            <input style="width:50px" disabled type="text" value="sex">
-        </div>
-        <button>Edit</button>
-    </div>
-    <div>
-        <div>
-            <dl>
-                <dd>
-                    <div class="country">
-                        <label>Country</label>
-                        <input type="text" value="text">
-                    </div>
-                    
-                    <div class="country">
-                        <label>Country</label>
-                        <input type="text" value="text">
-                    </div>
-                </dd>
-            </dl>
-        </div>
-    </div>
-</div>
-<div>
-    <div>
-        <div>
-            <label>Birth:</label>
-            <input style="width:35px" disabled type="text" value="2023"> - 
-            <input style="width:15px" disabled type="text" value="10"> - 
-            <input style="width:15px" disabled type="text" value="10">
-        </div>
+        <div id="password_box">
 
+        </div>
+        <div>
+            <div>
+                <label>Email:</label>
+                <input disabled type="text" id="email_title" value="<%=profile.email%>">
+            </div>
+            <button id="email_button" onclick="email_edit();">Edit</button>
+        </div>
+        <div id="email_box">
+
+        </div>
     </div>
-</div>
+</fieldset>
+<fieldset style="margin-top:20px">
+    <legend>Profile</legend>
+    <div id="profile">
+        <div>
+            Hello
+        </div>
+        <div>
+            <div>
+                <label>Nation:</label>
+                <input type="text" value="username">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label>Location:</label>
+            </div>
+            <button>Edit</button>
+        </div>
+        <div>
+            <div>
+                <dl>
+                    <dd>
+                        <div>
+                            <label>Nation:</label>
+                            <input type="text" value="username">
+                        </div>
+                        <div>
+                            <label>Nation:</label>
+                            <input type="text" value="username">
+                        </div>
+                        <div>
+                            <label>Nation:</label>
+                            <input type="text" value="username">
+                        </div>
+                    </dd>
+                </dl>
+                
+            </div>
+        </div>
+        <div>
+            <div>
+                <dl>
+                    <dd>
+                        <div>
+                            <label>Nation:</label>
+                            <input type="text" value="username">
+                        </div>
+                        <div>
+                            <label>Nation:</label>
+                            <input type="text" value="username">
+                        </div>
+                        <div>
+                            <label>Nation:</label>
+                            <input type="text" value="username">
+                        </div>
+                    </dd>
+                </dl>
+                
+            </div>
+        </div>
+        <div>
+            <div>
+                <label>Intro:</label>
+            </div>
+            <button>Edit</button>
+        </div>
+        <div>
+            <textarea rows="10" cols="80"></textarea>
+        </div>
+    </div>
+</fieldset>
