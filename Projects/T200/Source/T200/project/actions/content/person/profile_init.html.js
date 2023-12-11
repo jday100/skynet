@@ -58,12 +58,16 @@ async function do_content_person_profile_init_save(request, response, cookie, se
 
         let flag = session.get("flag");
         person.user_id = session.get("userid");
+        person.gender = request.get("gender");
+        person.year = request.get("year");
+        person.month = request.get("month");
+        person.day = request.get("day");
         person.intro = request.get("intro");
 
         if(T200HttpsForm.verify_zero(flag)
             && T200HttpsForm.verify_id(person.user_id)
-            && T200HttpsForm.verify_text(person.intro)){
-            person._name_value = person.modify_intro_array();
+            && T200HttpsForm.verify_empty(person.intro)){
+            person.flash_content_profile_init_update();
             UserBiz.modify(person.merge_update_by_key()).then(function(result){
                 response.type("json");
                 if(result){

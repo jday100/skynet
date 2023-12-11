@@ -15,6 +15,14 @@ class T200HttpsForm {
         return false;
     }    
 
+    static verify_null(value) {
+        if(undefined == value || null == value){
+            return false;
+        }
+
+        return true;
+    }
+
     static verify_status(value) {
         if(value){
             return true;
@@ -61,6 +69,14 @@ class T200HttpsForm {
         }
 
         return false;
+    }
+
+    static verify_empty(value) {
+        if(undefined == value){
+            return false;
+        }
+
+        return true;
     }
 
     static verify_text_50(value) {

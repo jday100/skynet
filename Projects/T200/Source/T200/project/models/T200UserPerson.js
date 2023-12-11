@@ -13,6 +13,20 @@ class T200UserPerson extends T200HomeUserModel {
         this.status = 0;
     }
 
+    flash_content_profile_init_update() {
+        this._name_value = [
+            ['gender', this.gender],
+            ['year', this.year],
+            ['month', this.month],
+            ['day', this.day],
+            ['intro', `'${this.intro}'`]
+        ];
+    }
+
+
+
+    ////////////////////////
+
     flash_profile_fields() {
         this._fields = "user_id, continent_id, region_id, city_id, status, username, nickname, email, gender, year, month, day, intro, create_time, modify_time, login_time, ip";
     }

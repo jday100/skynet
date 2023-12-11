@@ -20,29 +20,42 @@ async function do_content_person_identity_init(request, response, cookie, sessio
         let identity = new T200UserIdentity();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        let identity_id = session.get("identityid");
+        let username = session.get("username");
         identity.user_id = session.get("userid");
 
-        if(T200HttpsForm.verify_id(identity.user_id)){
-            identity.flash_content_identity_fields();
-            UserBiz.list(identity.merge_select_by_id()).then(function(result){
+
+        if(T200HttpsForm.verify_id(identity.user_id)
+            && T200HttpsForm.verify_null(identity_id)){
                 let view = new T200HomeView(resource);
                 let data = {};
-                if(result && 1 == result.length){
-                    data.identity = result[0];
-                }else{
+                if(0 == identity_id){
                     data.identity = {};
+                    data.identity.username = username;
+                    return view.render_file("content/person/identity_init.ejs", data).then(function (value) {
+                        response.type("json");
+                        resolve(value);
+                    }, function (err) {
+                        response.type("json");
+                        reject();
+                    });
+                }else{
+                    identity.identity_id = identity_id;
+                    identity.flash_content_identity_fields();
+                    UserBiz.load(identity.merge_select_by_id()).then(function(result){
+                        data.identity = result;
+                        return view.render_file("content/person/identity_init.ejs", data).then(function (value) {
+                            response.type("json");
+                            resolve(value);
+                        }, function (err) {
+                            response.type("json");
+                            reject();
+                        });
+                    }, function(){
+                        response.type("json");
+                        reject();
+                    });
                 }
-                return view.render_file("content/person/identity_init.ejs", data).then(function (value) {
-                    response.type("json");
-                    resolve(value);
-                }, function (err) {
-                    response.type("json");
-                    reject();
-                });
-            }, function (err) {
-                response.type("json");
-                reject();
-            });
         }else{
             response.type("json");
             reject();
@@ -58,31 +71,77 @@ async function do_content_person_identity_init_save(request, response, cookie, s
     log(__filename, "do_content_person_identity_init_save");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let person = new T200UserPerson();
+        let identity = new T200UserIdentity();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
-        person.user_id = session.get("userid");
-        person.intro = request.get("intro");
+        let identity_id = session.get("identityid");
+        identity.user_id = session.get("userid");
+        identity.nickname = request.get("nickname");
+        identity.city_id = request.get("city");
+        identity.intro = request.get("intro");
 
-        if(T200HttpsForm.verify_id(person.user_id)
-            && T200HttpsForm.verify_text(person.intro)){
-            person._name_value = person.modify_intro_array();
-            UserBiz.modify(person.merge_update_by_key()).then(function(result){
-                response.type("json");
-                if(result){
+        //test
+        identity.city_id = 20000;
+
+        if(T200HttpsForm.verify_null(identity_id)
+            && T200HttpsForm.verify_id(identity.user_id)
+            && T200HttpsForm.verify_text(identity.nickname)
+            && T200HttpsForm.verify_empty(identity.intro)){
+
+            if(identity_id && 0 < identity_id){
+                do_content_person_identity_init_modify(request, response, cookie, session, resource, UserBiz);
+            }else{
+                do_content_person_identity_init_append(request, response, cookie, session, resource, UserBiz).then(function(){
+                    response.type("json");
                     resolve();
-                }else{
+                }, function(err){
+                    response.type("json");
                     reject();
-                }
-            }, function(){
-                response.type("json");
-                reject();
-            });
+                });
+            }
+
         }else{
             response.type("json");
             reject();
         }
   
+    });
+
+    return promise;
+}
+
+
+async function do_content_person_identity_init_append(request, response, cookie, session, resource, UserBiz) {
+    log(__filename, "do_content_person_identity_init_append");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let identity = new T200UserIdentity();
+  
+        identity.user_id = session.get("userid");
+        identity.nickname = request.get("nickname");
+        identity.city_id = request.get("city");
+        identity.intro = request.get("intro");
+
+        //test
+        identity.city_id = 20000;
+
+        if(T200HttpsForm.verify_id(identity.user_id)
+            && T200HttpsForm.verify_text(identity.nickname)
+            && T200HttpsForm.verify_empty(identity.intro)){
+                identity.flash_content_append_fields();
+                identity.flash_content_append_values();
+                UserBiz.append(identity.merge_user_insert()).then(resolve, reject);
+        }
+    });
+
+    return promise;
+}
+
+async function do_content_person_identity_init_modify(request, response, cookie, session, resource, UserBiz) {
+    log(__filename, "do_content_person_identity_init_modify");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+
     });
 
     return promise;

@@ -25,6 +25,7 @@
     </div>
 </div>
 <form id="form" onsubmit="return false;">
+<input type="hidden" name="test">
 <div>
     <div>
         <div>
@@ -37,12 +38,16 @@
                 <dd>
                     <div class="country">
                         <label>Continent:</label>
-                        <input type="text" value="text">
+                        <select id="continent" name="continent">
+
+                        </select>
                     </div>
                     
                     <div class="country">
                         <label>Country:</label>
-                        <input type="text" value="text">
+                        <select id="country" name="country">
+                            
+                        </select>
                     </div>
                 </dd>
             </dl>
@@ -53,9 +58,9 @@
     <div>
         <div>
             <label>Gender:</label>
-            <select>
-                <option>male</option>
-                <option>female</option>
+            <select name="gender">
+                <option value="1">male</option>
+                <option value="2">female</option>
             </select>
         </div>
     </div>
@@ -64,13 +69,13 @@
     <div>
         <div>
             <label>Birth:</label>
-            <select style="width:70px;">
+            <select style="width:70px;" id="year" name="year">
                 <option>2023</option>
             </select>
-            <select style="width:50px; margin-left: 20px;">
+            <select style="width:50px; margin-left: 20px;" id="month" name="month">
                 <option>1</option>
             </select>
-            <select style="width:50px; margin-left: 20px;">
+            <select style="width:50px; margin-left: 20px;" id="day" name="day">
                 <option>1</option>
             </select>
         </div>
@@ -87,7 +92,7 @@
 <div>
     <div>
         <div>
-            <textarea rows="10" cols="80"></textarea>
+            <textarea name="intro" rows="10" cols="80"></textarea>
         </div>
     </div>
 </div>

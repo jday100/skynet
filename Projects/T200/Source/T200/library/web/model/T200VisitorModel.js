@@ -47,6 +47,7 @@ class T200VisitorModel extends T200SearchModel {
             "user_id",
             "status",
             "city_id",
+            "identity_id",
             "username",
             "password",
             "flag"

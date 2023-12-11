@@ -142,11 +142,10 @@
 <script>
     function save() {
         let result = formtostring("form");
-        $.post('/content/person/profile/init/save', result, function(data){
-            redirect("/content/person/identity_init.html");
+        $.post('/content/person/identity/init/save', result, function(data){
+            redirect("/content/person/profile.html");
         }, function(){
             alert("Save Failure!");
-            redirect("/content/person/identity_init.html");
         });
     }
 
@@ -158,6 +157,8 @@
             $.id("list_box").innerHTML = data;
             /*nationality_init($.id("location_city_id").value);
             region_init($.id("location_city_id").value);*/
+
+            continent_init($.id("continent"));
             $.id("submit").onclick = save;
         }, function(){
             alert("Load Failure!");

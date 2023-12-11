@@ -146,7 +146,6 @@
             redirect("/content/person/identity_init.html");
         }, function(){
             alert("Save Failure!");
-            redirect("/content/person/identity_init.html");
         });
     }
 
@@ -159,6 +158,8 @@
             $.id("list_box").innerHTML = data;
             /*nationality_init($.id("location_city_id").value);
             region_init($.id("location_city_id").value);*/
+
+            continent_init($.id("continent"));
             $.id("submit").onclick = save;
         }, function(){
             alert("Load Failure!");

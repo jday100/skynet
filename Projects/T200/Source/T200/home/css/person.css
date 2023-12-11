@@ -51,6 +51,17 @@
     width: 100px;
 }
 
+.region {
+    line-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.region > input {
+    width: 100px;
+}
+
 dl {
     margin-top: 0;
     margin-bottom: 0;
