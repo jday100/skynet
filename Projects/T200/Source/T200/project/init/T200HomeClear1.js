@@ -19,6 +19,7 @@ class T200HomeClear {
             'note',
             'person',
             'identity',
+            'invitation',
             'continent',
             'region',
             'city'

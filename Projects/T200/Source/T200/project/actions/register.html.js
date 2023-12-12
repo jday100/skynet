@@ -3,6 +3,7 @@ const T200Error = require('../../library/T200Error.js');
 
 const T200HttpsForm = require('../../library/net/T200HttpsForm.js');
 const T200Visitor = require('../models/T200Visitor.js');
+const T200Invitation = require('../models/T200Invitation.js');
 const T200HomeVisitorBiz = require('../biz/T200HomeVisitorBiz.js');
 
 
@@ -28,20 +29,28 @@ async function do_register(request, response, cookie, session, resource) {
         if(T200HttpsForm.verify_text(visitor.username)
             && T200HttpsForm.verify_text(visitor.password)
             && T200HttpsForm.verify_email(visitor.email)){
+            
+            let invitation = new T200Invitation();
 
-            VisitorBiz.register(visitor).then(function(data){
+            invitation.invite = invite;
+            invitation.flash_invitation_fields();
+            VisitorBiz.load(invitation.merge_select_by_field("invite")).then(function(data){
+                VisitorBiz.register(visitor).then(function(){
+                    response.type('json');
+                    response.data('success');
+                    resolve();
+                }, function(err){
+                    response.type('json');
+                    response.data('failure');
+                    reject(err);
+                }).catch(function(err){
+                    response.type('json');
+                    reject(err);
+                });
+            }, function(){
                 response.type('json');
-                response.data('success');
-                resolve();
-            }, function(err){
-                response.type('json');
-                response.data('failure');
-                reject(err);
-            }).catch(function(err){
-                response.type('json');
-                reject(err);
+                reject(T200Error.build(1));
             });
-
         }else{
             response.type('json');
             reject(T200Error.build(1));

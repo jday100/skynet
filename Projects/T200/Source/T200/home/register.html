@@ -122,6 +122,9 @@
     }
 
     function verify() {
+        $.id("username_img").src = "";
+        $.id("email_img").src = "";
+        
         let data = formtostring('form');
         $.post('/register/verify', data, function(result){
             if(result && 0 < result.length){

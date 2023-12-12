@@ -328,6 +328,22 @@ class T200HomeCreate {
         `;
     }
 
+    merge_invitation_sql() {
+        return `
+            create table if not exists invitation (
+                id int primary key auto_increment,
+                user_id int,
+                status int not null default 0,
+                invite int not null default 0,
+                create_time datetime not null default current_timestamp,
+                using_time datetime,
+                expiry_time datetime,
+                INDEX(user_id),
+                INDEX(status)
+            ) character set utf8
+        `;
+    }
+
     merge_advert_sql() {
         return `
             create table if not exists advert (
@@ -550,8 +566,18 @@ class T200HomeCreate {
             let sql = self.merge_person_sql();
 
             client.execute(sql).then(function(){
-                resolve();
+            
             }, function(err){
+                return error();
+            }).then(function(){
+                sql = `insert into person (status, username, password, email)
+                        values(1, 'admin', '1', 'admin@admin.com')`;
+                return client.execute(sql);
+            }, function(){
+                return error();
+            }).then(function(){
+                resolve();
+            }, function(){
                 reject();
             });
 
@@ -568,6 +594,32 @@ class T200HomeCreate {
             client.execute(sql).then(function(){
                 resolve();
             }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_invitation(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_invitation_sql();
+
+            client.execute(sql).then(function(){
+            
+            }, function(err){
+                return error();
+            }).then(function(){
+                sql = `insert into invitation (user_id, status, invite, using_time, expiry_time) 
+                        values(1, 1, 111111, current_timestamp, current_timestamp)`;
+                return client.execute(sql);            
+            }, function(){
+                return error();
+            }).then(function(){
+                resolve();
+            }, function(){
                 reject();
             });
 
@@ -721,6 +773,10 @@ class T200HomeCreate {
                 return error();
             }).then(function(){
                 return self.create_identity(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_invitation(client);
             }, function(){
                 return error();
             }).then(function(){
