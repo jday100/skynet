@@ -52,4 +52,67 @@ async function do_register(request, response, cookie, session, resource) {
 }
 
 
+async function do_register_verify(request, response, cookie, session, resource) {
+    log(__filename, "do_register_verify");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let visitor = new T200Visitor();
+        let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
+
+        let result = new Array();
+
+        let username = request.get("username");
+        let email = request.get("email");
+
+        if(T200HttpsForm.verify_text(username)){
+            visitor.username = username;
+            visitor.flash_visitor_fields();
+            VisitorBiz.load(visitor.merge_select_by_field('username')).then(function(){
+                result.push(1);
+            }, function(){
+             
+            }).finally(function(){
+                if(T200HttpsForm.verify_email(email)){
+                    visitor.email = email;
+                    visitor.flash_visitor_fields();
+                    VisitorBiz.load(visitor.merge_select_by_field('email')).then(function(){
+                        result.push(2);
+                        response.type("json");
+                        resolve(result);
+                    }, function(){
+                        response.type("json");
+                        resolve(result);
+                    });
+                }else{
+                    result.push(2);
+                    response.type("json");
+                    reject(result);
+                }
+            });
+        }else{
+            result.push(1);
+            if(T200HttpsForm.verify_email(email)){
+                visitor.email = email;
+                visitor.flash_visitor_fields();
+                VisitorBiz.load(visitor.merge_select_by_field('email')).then(function(){
+                    result.push(2);
+                    response.type("json");
+                    resolve(result);
+                }, function(){
+                    response.type("json");
+                    resolve(result);
+                });
+            }else{
+                result.push(2);
+                response.type("json");
+                reject(result);
+            }
+        }
+    });
+
+    return promise;
+}
+
+
 global.action.use_post('/register', do_register);
+global.action.use_post('/register/verify', do_register_verify);

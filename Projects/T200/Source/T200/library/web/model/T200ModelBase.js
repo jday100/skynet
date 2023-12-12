@@ -14,6 +14,15 @@ class T200ModelBase {
         this._values = "";
     }
 
+    merge_select_by_field(field) {
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields), T200SQL.FROM(this._table),
+            T200SQL.WHERE(
+                T200SQL.EQUAL(field, `'${this[field]}'`)
+            )
+        );
+    }
+
     merge_select_by_key() {
         return T200SQL.SELECT(
             T200SQL.FIELDS(this._fields), T200SQL.FROM(this._table),

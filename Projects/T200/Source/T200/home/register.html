@@ -63,6 +63,7 @@
                 <div>
                     <label >Username:</label>
                     <input type="text" name="username">
+                    <img id="username_img">
                 </div>
                 <div>
                     <label >Password:</label>
@@ -74,8 +75,9 @@
                 </div>
                 <div>
                     <label >Email:</label>
-                    <input class="normal_email" type="email" name="email">
-                    <button>Send</button>
+                    <input class="normal_email" type="email" name="email">                    
+                    <img id="email_img" style="width: 16px;">
+                    <button class="button">Send</button>
                 </div>
                 <div>
                     <label >Code:</label>
@@ -103,18 +105,55 @@
 </body>
 
 <script>
+    function success() {
+        $.id("username_img").src = "/images/tick.png";
+        $.id("email_img").src = "/images/tick.png";
+    }
+
+    function failure(flag) {
+        switch(flag){
+            case 1:
+                $.id("username_img").src = "/images/cross.png";
+                break;
+            case 2: 
+                $.id("email_img").src = "/images/cross.png";
+                break;
+        }
+    }
+
+    function verify() {
+        let data = formtostring('form');
+        $.post('/register/verify', data, function(result){
+            if(result){
+                result.forEach(item => {
+                    failure(item);
+                });
+            }else{
+                success();
+                register();
+            }
+        }, function(err){
+            failure(err);
+        });
+    }
+
+    function register() {
+        let data = formtostring('form');
+        $.post('/register', data, function(){
+            forward("/login.html");
+        }, function(){
+            alert('Register Failure!');
+        });
+    }
+
+
     $.win.onload = function(){
         $.id('form').onsubmit = function(){
             return false;
         };
         $.id('submit').onclick = function(){
-            let data = formtostring('form');
-            $.post('/register', data, function(){
-                forward("/login.html");
-            }, function(){
-                alert('Register Failure!');
-            });
-        };
+            verify();
+        }
     };
 </script>
 

@@ -10,6 +10,12 @@ class T200Visitor extends T200HomeVisitorModel {
         this._table = "person";
         this._key = "user_id";
     }
+
+    flash_visitor_fields() {
+        this._fields = [
+            'user_id'
+        ];
+    }
 }
 
 module.exports = T200Visitor;

@@ -127,7 +127,7 @@ form > div > div > label {
 }
 
 form > div > div > input {
-    width: 292px;
+    width: 200px;
 }
 
 form > div > div > button {
@@ -171,7 +171,7 @@ input[type="email"] {
 */
 
 .normal_email {
-    width: 220px;
+    width: 200px;
 }
 
 .code {
@@ -184,7 +184,7 @@ input[type="email"] {
     margin-bottom: 10px;
 }
 
-input[type="email"] + button {
+input[type="email"] + img + button {
     width: 60px;
     margin-left: 10px;
 }
