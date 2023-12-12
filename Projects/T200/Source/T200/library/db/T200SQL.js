@@ -50,6 +50,10 @@ class T200SQL {
         return `inner join ${name} on ${on} `;
     }
 
+    static LEFT(name, on) {
+        return `left join ${name} on ${on} `;
+    }
+
     static ALIAS(name, value) {
         return `${name} ${value} `;
     }

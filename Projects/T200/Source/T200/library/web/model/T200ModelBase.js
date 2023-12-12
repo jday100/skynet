@@ -53,6 +53,18 @@ class T200ModelBase {
         );
     }
 
+    merge_update_by_id() {
+        return T200SQL.UPDATE(
+            T200SQL.NAME(this._table), 
+            T200SQL.SET(
+                T200SQL.NAME_VALUE(this._name_value)
+            ),
+            T200SQL.WHERE(
+                T200SQL.EQUAL(this._id, this[this._id])
+            )
+        );
+    }
+
     merge_insert() {
         return T200SQL.INSERT(
             T200SQL.NAME(this._table), 

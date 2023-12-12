@@ -41,19 +41,21 @@
             <div>
                 <label>Nationality:</label>
             </div>
-            <button>Edit</button>
+            <button id="nationality_button" onclick="nationality_edit();">Edit</button>
         </div>
-        <div>
+        <div id="nationality_box">
             <div>
                 <dl>
                     <dd>
                         <div>
                             <label>Continent:</label>
-                            <input type="text" value="">
+                            <input type="hidden" id="continent_id" value="<%=profile.continent_id%>">
+                            <input type="text" id="continent_name" value="">
                         </div>
                         <div>
                             <label>Country:</label>
-                            <input type="text" value="">
+                            <input type="hidden" id="country_id" value="<%=profile.country_id%>">
+                            <input type="text" id="contry_name" value="">
                         </div>
                     </dd>
                 </dl>

@@ -29,6 +29,15 @@ class T200UserPerson extends T200HomeUserModel {
         ];
     }
 
+    flash_content_profile_nationality_update() {
+        this._name_value = [
+            ['continent_id', this.continent_id],
+            ['continent_name', `'${this.continent_name}'`],
+            ['country_id', this.country_id],
+            ['country_name', `'${this.country}'`]
+        ];
+    }
+
     flash_content_profile_identity_update() {
         this._name_value = [
             ['identity_id', this.identity_id]

@@ -13,7 +13,7 @@
     <div>
         <div>
             <label>Nickname:</label>
-            <input type="text" name="nickname" value="<%=identity.nickname%>">
+            <input disabled type="text" name="nickname" value="<%=identity.nickname%>">
         </div>
         <button id="nickname_button" onclick="">Edit</button>
     </div>
@@ -23,31 +23,25 @@
         <div>
             <label>Location:</label>
         </div>
-        <button id="location_button" onclick="">Edit</button>
+        <button id="location_button" onclick="location_edit();">Edit</button>
     </div>
-    <div>
+    <div id="location_box">
         <div>
             <dl>
                 <dd>
                     <div class="region">
                         <label>Continent:</label>
-                        <select id="continent" name="continent" onchange="continent_change(this, 'region');">
-
-                        </select>
+                        <input disabled type="text" value="">
                     </div>
                     
                     <div class="region">
                         <label>Region:</label>
-                        <select id="region" name="region" onchange="region_change(this, 'city');">
-                            
-                        </select>
+                        <input disabled type="text" value="">
                     </div>
 
                     <div class="region">
                         <label>City:</label>
-                        <select id="city" name="city">
-                            
-                        </select>
+                        <input disabled type="text" value="">
                     </div>
                 </dd>
             </dl>
@@ -59,13 +53,16 @@
         <div>
             <label>Intro:</label>
         </div>
-        <button>Edit</button>
+        <button id="intro_button" onclick="intro_edit();">Edit</button>
     </div>
 </div>
 <div>
+    <form id="intro_form">
+    <input type="hidden" name="test">
     <div>
         <div>
-            <textarea name="intro" rows="10" cols="80"></textarea>
+            <textarea disabled id="intro" name="intro" rows="10" cols="80"><%=identity.intro%></textarea>
         </div>
     </div>
+    </form>
 </div>

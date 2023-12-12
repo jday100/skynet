@@ -146,6 +146,10 @@
         let result = formtostring("form");
         $.post('/content/person/profile', result, function(data){
             $.id("list_box").innerHTML = data;
+
+            show_contient('contient_id', 'continent_name');
+            show_country('country_id', 'country_name');
+
             /*nationality_init($.id("location_city_id").value);
             region_init($.id("location_city_id").value);*/
         }, function(){

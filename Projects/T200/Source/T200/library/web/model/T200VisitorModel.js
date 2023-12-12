@@ -29,6 +29,48 @@ class T200VisitorModel extends T200SearchModel {
     
     merge_login() {
         return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields), 
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+            ),
+            T200SQL.LEFT(
+                T200SQL.ALIAS(this._identity_table, "t2"),
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"), 
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            T200SQL.WHERE(
+                T200SQL.AND(
+                    T200SQL.AND(
+                        T200SQL.EQUAL("username", `'${this.username}'`), 
+                        T200SQL.EQUAL("password", `'${this.password}'`)
+                    ),
+                    T200SQL.EQUAL(
+                        T200SQL.PREFIX("status", "t1"), 
+                        1
+                    )
+                )
+            )
+        );
+    }
+
+    flash_login_fields() {
+        this._fields = [
+            T200SQL.PREFIX("user_id", "t1"),
+            T200SQL.PREFIX("status", "t1"),
+            T200SQL.PREFIX("city_id", "t2"),
+            T200SQL.PREFIX("identity_id", "t1"),
+            "username",
+            "password",
+            T200SQL.PREFIX("flag", "t1")
+        ];
+    }
+    
+
+    /*
+    merge_login() {
+        return T200SQL.SELECT(
             T200SQL.FIELDS(this._fields), T200SQL.FROM(this._table),
             T200SQL.WHERE(
                 T200SQL.AND(
@@ -53,6 +95,7 @@ class T200VisitorModel extends T200SearchModel {
             "flag"
         ];
     }
+    */
 
     ///
     merge_admin_login() {

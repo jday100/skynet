@@ -76,6 +76,23 @@ class T200UserIdentity extends T200HomeUserModel {
         ];
     }
 
+    flash_content_identity_location_update() {
+        this._name_value = [
+            ['continent_id', this.continent_id],
+            ['continent_name', `'${this.continent_name}'`],
+            ['region_id', this.region_id],
+            ['region_name', `'${this.region_name}'`],
+            ['city_id', this.city_id],
+            ['city_name', `'${this.city_name}'`]
+        ];
+    }
+
+    flash_content_identity_intro_update() {
+        this._name_value = [
+            ['intro', `'${this.intro}'`]
+        ];
+    }
+
     set_item_left() {
         return [
             ['Title', 'title', true, '/content/note/note.html', 'list_title']

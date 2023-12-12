@@ -60,7 +60,9 @@ async function do_house_rent_reply(request, response, cookie, session, resource)
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         house.user_id = session.get("userid");
+        house.identity_id = session.get("identityid");
         house.parent_id = request.get("id");
+        house.city_id = session.get("cityid");
         house.title = `@${house.parent_id}`;
         house.content = request.get("content");
         house.status = 1;

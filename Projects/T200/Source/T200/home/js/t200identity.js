@@ -82,6 +82,49 @@ function email_save() {
     });
 }
 
+function nationality_edit() {
+    $.id("nationality_box").innerHTML = `
+        <form id='nationality_form' onsubmit="return false;">
+            <input type="hidden" name="test">
+            <div>
+                <dl>
+                    <dd>
+                        <div>
+                            <label>Continent:</label>
+                            <select id="continent" name="continent" onchange="continent_change(this, 'country');">
+                            </select>
+                        </div>
+                        <div>
+                            <label>Country:</label>
+                            <select id="country" name="country">
+                            </select>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+        </form>
+    `;
+
+    $.id("nationality_button").innerHTML = "Save";
+    $.id("nationality_button").onclick = nationality_save;
+
+    continent_init($.id("continent"));
+}
+
+function nationality_save() {
+    let result = formtostring("nationality_form");
+    $.post('/content/person/nationality/save', result, function(data){
+        alert("Save Success!");
+        //$.id("location_title").value = $.id("email").value;
+        $.id("nationality_box").innerHTML = "";
+        $.id("nationality_button").innerHTML = "Edit";
+        $.id("nationality_button").onclick = nationality_edit;        
+    }, function(){
+        alert("Save Failure!");
+    });
+}
+
+
 function location_edit() {
     $.id("location_box").innerHTML = `
         <form id='location_form' onsubmit="return false;">
@@ -118,12 +161,31 @@ function location_edit() {
 
 function location_save() {
     let result = formtostring("location_form");
-    $.post('/content/person/location/save', result, function(data){
+    $.post('/content/person/identity/location/save', result, function(data){
         alert("Save Success!");
         //$.id("location_title").value = $.id("email").value;
         $.id("location_box").innerHTML = "";
         $.id("location_button").innerHTML = "Edit";
         $.id("location_button").onclick = location_edit;        
+    }, function(){
+        alert("Save Failure!");
+    });
+}
+
+
+function intro_edit() {
+    $.id("intro").disabled = false;
+    $.id("intro_button").innerHTML = "Save";
+    $.id("intro_button").onclick = intro_save; 
+}
+
+function intro_save() {
+    let result = formtostring("intro_form");
+    $.post('/content/person/identity/intro/save', result, function(data){
+        alert("Save Success!");
+        $.id("intro").disabled = true;
+        $.id("intro_button").innerHTML = "Edit";
+        $.id("intro_button").onclick = intro_edit;        
     }, function(){
         alert("Save Failure!");
     });
@@ -188,4 +250,12 @@ function region_change(obj, id) {
         }
         $.id(id).innerHTML = result;
     }
+}
+
+function show_contient(source, target) {
+
+}
+
+function show_country(source, target) {
+
 }

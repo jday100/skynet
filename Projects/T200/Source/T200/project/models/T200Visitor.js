@@ -9,6 +9,9 @@ class T200Visitor extends T200HomeVisitorModel {
         super();
         this._table = "person";
         this._key = "user_id";
+        this._id = "identity_id";
+
+        this._identity_table = "identity";
     }
 
     flash_visitor_fields() {

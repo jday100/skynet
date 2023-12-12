@@ -214,21 +214,24 @@ async function do_content_person_nationality_save(request, response, cookie, ses
     log(__filename, "do_content_person_nationality_save");
     let self = this;
     let promise = new Promise(function(resolve, reject){
-        let person = new T200Person();
+        let person = new T200UserPerson();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         person.user_id = session.get("userid");
-        person.city_id = request.get("city");
+        person.continent_id = request.get("continent");
+        person.country_id = request.get("country");
+
+        //test
+        person.continent_id = 1;
+        person.country_id = 1;
 
         if(T200HttpsForm.verify_id(person.user_id)
-            && T200HttpsForm.verify_id(person.city_id)){
-            UserBiz.modify(person.merge_city_update()).then(function(result){
+            && T200HttpsForm.verify_id(person.continent_id)
+            && T200HttpsForm.verify_id(person.country_id)){
+            person.flash_content_profile_nationality_update();
+            UserBiz.modify(person.merge_update_by_key()).then(function(result){
                 response.type("json");
-                if(result){
-                    resolve();
-                }else{
-                    reject();
-                }
+                resolve();
             }, function(){
                 response.type("json");
                 reject();

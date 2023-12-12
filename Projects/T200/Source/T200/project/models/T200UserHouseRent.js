@@ -45,7 +45,10 @@ class T200UserHouseRent extends T200HomeUserModel {
     flash_reply_fields() {
         this._fields = [
             'user_id',
+            'identity_id',
             'parent_id',
+            'parent_type',
+            'city_id',
             'status',
             'title',
             'content'
@@ -55,7 +58,10 @@ class T200UserHouseRent extends T200HomeUserModel {
     flash_reply_values() {
         this._values = [
             this.user_id,
+            this.identity_id,
             this.parent_id,
+            1,
+            this.city_id,
             this.status,
             `'${this.title}'`,
             `'${this.content}'`

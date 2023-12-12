@@ -106,7 +106,7 @@ function nationality_edit() {
             <input type='hidden' name='test'> \
             <div> \
                 <label>Continent:</label> \
-                <select id='nationality_continent' onchange='nationality_continent_change(this.value);'></select> \
+                <select id='continent' onchange='continent_change(this.value);'></select> \
             </div> \
             <div> \
                 <label>Country:</label> \
