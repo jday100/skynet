@@ -28,7 +28,8 @@
     <div>
         <div>
             <label>Create Time:</label>
-            <input disabled type="text" value="<%=profile.create_time%>">
+            <input disabled type="text" id="create_time_title" value="">
+            <input type="hidden" id="create_time" value="<%=profile.create_time%>">
         </div>
     </div>
 </div>
@@ -36,7 +37,8 @@
     <div>
         <div>
             <label>Modify Time:</label>
-            <input disabled type="text" value="<%=profile.modify_time%>">
+            <input disabled type="text" id="modify_time_title" value="">
+            <input type="hidden" id="modify_time" value="<%=profile.modify_time%>">
         </div>
     </div>
 </div>
@@ -62,14 +64,14 @@
                 <dd>
                     <div class="country">
                         <label>Continent:</label>
-                        <select id="continent" name="continent" onchange="continent_change(this, 'country');">
+                        <select style="display:block;width: 150px;" id="continent" name="continent" onchange="continent_change(this, 'country');">
 
                         </select>
                     </div>
                     
                     <div class="country">
                         <label>Country:</label>
-                        <select id="country" name="country">
+                        <select style="display:block;width: 150px;" id="country" name="country">
                             
                         </select>
                     </div>

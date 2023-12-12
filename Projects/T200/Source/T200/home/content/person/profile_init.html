@@ -156,10 +156,16 @@
         let result = formtostring("form");
         $.post('/content/person/profile/init', result, function(data){
             $.id("list_box").innerHTML = data;
-            /*nationality_init($.id("location_city_id").value);
-            region_init($.id("location_city_id").value);*/
+
+            show_date('create_time', 'create_time_title');
+            show_date('modify_time', 'modify_time_title');
 
             continent_init($.id("continent"));
+
+
+
+
+            
             /*region_init($.id("country"));*/
             date_init($.id("year"), $.id("month"), $.id("day"));
             $.id("submit").onclick = save;

@@ -124,7 +124,7 @@
     function verify() {
         let data = formtostring('form');
         $.post('/register/verify', data, function(result){
-            if(result){
+            if(result && 0 < result.length){
                 result.forEach(item => {
                     failure(item);
                 });

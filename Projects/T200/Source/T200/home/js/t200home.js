@@ -320,6 +320,29 @@ function show_time(value) {
 }
 
 
+function show_date(source, target) {
+    let value = $.id(source).value;
+
+    let cdate = new Date(value);
+
+    let result = "";
+
+    result = cdate.getFullYear().toString() 
+        + "-"
+        + ("0" + (cdate.getMonth() + 1).toString()).slice(-2) 
+        + "-"
+        + ("0" + cdate.getDate().toString()).slice(-2)
+        + " "
+        + ("0" + cdate.getHours().toString()).slice(-2)
+        + ":"
+        + ("0" + cdate.getMinutes().toString()).slice(-2)
+        + ":"
+        + ("0" + cdate.getSeconds().toString()).slice(-2);
+    
+    $.id(target).value = result;
+}
+
+
 function show_short_time(value) {
     let ndate = new Date();
     let cdate = new Date(value);
