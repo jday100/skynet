@@ -1,4 +1,3 @@
-
 body > div > div {
     width: 1000px;
     display: flex;
@@ -120,4 +119,23 @@ input[type="email"] {
 input[type="email"] + button {
     width: 60px;
     margin-left: 10px;
+}
+
+.setting_box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.setting_box > label {
+    display: block;
+    width: 80px;
+}
+
+.setting_box > input {
+    margin-right: 50px;
+}
+
+fieldset {
+    margin-bottom: 20px;
 }

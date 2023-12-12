@@ -18,6 +18,15 @@ class T200AdminSetting extends T200HomeAdminModel {
         this._person_table = "person";
     }
 
+    flash_admin_list_fields() {
+        this._fields = [
+            'setting_id',
+            'name',
+            'content',
+            'status'
+        ];
+    }
+
     flash_admin_append_fields() {
         this._fields = [
             'user_id',
@@ -56,6 +65,27 @@ class T200AdminSetting extends T200HomeAdminModel {
         this._name_value = [
             ['status', this.status]
         ];
+    }
+
+    merge_admin_setting_list() {
+        let where;
+
+        where = T200SQL.WHERE(
+                    T200SQL.EQUAL(
+                        'status',
+                        1
+                    )
+                );
+
+        
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields),
+            T200SQL.FROM(this._table),
+            where,
+            T200SQL.ORDER(T200SQL.DESC(this._key)),
+            T200SQL.LIMIT(this._page_size),
+            T200SQL.OFFSET(this._offset)
+        );
     }
 
 }
