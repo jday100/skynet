@@ -74,7 +74,7 @@ class T200UserHouseRent extends T200HomeUserModel {
             'id',
             'title',
             T200SQL.PREFIX('status', 't1'),            
-            T200SQL.PREFIX('username', 't2'),
+            T200SQL.PREFIX('nickname', 't2'),
             T200SQL.PREFIX('create_time', 't1')
         ];
     }
@@ -107,7 +107,7 @@ class T200UserHouseRent extends T200HomeUserModel {
     set_item_right() {
         return [
             ['Status', 'status', false, '', 'list_status', true, 'id', 'status', 'list_status'],
-            ['Username', 'username', true, '', 'list_name', false],
+            ['Nickname', 'nickname', true, '', 'list_name', false],
             ['CreateTime', 'create_time', false, '', 'list_time', true, 'time', 'time_title', 'list_time']
         ];
     }

@@ -37,6 +37,7 @@ async function do_content_house_wanted_add(request, response, cookie, session, r
         let house = new T200UserHouseWanted();
   
         house.user_id = session.get("userid");
+        house.identity_id = session.get("identityid");
         house.status = session.get("status");
         //house.region_id = session.get("regionid");
         house.city_id = session.get("cityid");

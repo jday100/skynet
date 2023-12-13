@@ -45,6 +45,7 @@ class T200UserIdentity extends T200HomeUserModel {
             'region_id',
             'city_id',
             'nickname',
+            'intro',
             'ip'
         ];
     }
@@ -57,6 +58,7 @@ class T200UserIdentity extends T200HomeUserModel {
             this.region_id,
             this.city_id,
             `'${this.nickname}'`,
+            `'${this.intro}'`,
             `'${this.ip}'`
         ];
     }

@@ -52,13 +52,19 @@ class T200UserModel extends T200ForumModel {
         if(undefined == this.status || '' == this.status){
             where = T200SQL.WHERE(
                         T200SQL.AND(
-                            T200SQL.EQUAL(
-                                T200SQL.PREFIX(this._id, 't1'), 
-                                this.user_id
+                            T200SQL.AND(
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX(this._id, 't1'), 
+                                    this.user_id
+                                ),
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("status", 't2'), 
+                                    1
+                                )
                             ),
                             T200SQL.EQUAL(
-                                T200SQL.PREFIX("status", 't2'), 
-                                1
+                                T200SQL.PREFIX("parent_type", 't1'), 
+                                0
                             )
                         )
                     );
@@ -75,9 +81,15 @@ class T200UserModel extends T200ForumModel {
                                     this.user_id
                                 )
                             ),
-                            T200SQL.EQUAL(
-                                T200SQL.PREFIX("status", "t2"), 
-                                1
+                            T200SQL.AND(
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("status", "t2"), 
+                                    1
+                                ),
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("parent_type", "t1"), 
+                                    0
+                                )
                             )
                         )
                     );
@@ -94,7 +106,7 @@ class T200UserModel extends T200ForumModel {
                 T200SQL.ALIAS(this._table, "t1")
                 ),
             T200SQL.INNER(
-                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.ALIAS(this._identity_table, "t2"), 
                 T200SQL.EQUAL(
                     T200SQL.PREFIX(this._id, "t1"), 
                     T200SQL.PREFIX(this._id, "t2")
@@ -113,7 +125,7 @@ class T200UserModel extends T200ForumModel {
                 T200SQL.ALIAS(this._table, "t1")
                 ),
             T200SQL.INNER(
-                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.ALIAS(this._identity_table, "t2"), 
                 T200SQL.EQUAL(
                     T200SQL.PREFIX(this._id, "t1"), 
                     T200SQL.PREFIX(this._id, "t2")
@@ -161,7 +173,7 @@ class T200UserModel extends T200ForumModel {
                             ),
                             T200SQL.ALIAS(
                                 T200SQL.MATCH(this._fulltext_fields),
-                                T200SQL.AGAINST(this._search)
+                                T200SQL.AGAINST(T200SQL.STRING(this._search))
                             )
                         )
                     );
@@ -185,7 +197,7 @@ class T200UserModel extends T200ForumModel {
                                 ),
                                 T200SQL.ALIAS(
                                     T200SQL.MATCH(this._fulltext_fields),
-                                    T200SQL.AGAINST(this._search)
+                                    T200SQL.AGAINST(T200SQL.STRING(this._search))
                                 )
                             )
                         )
@@ -204,7 +216,7 @@ class T200UserModel extends T200ForumModel {
                 T200SQL.ALIAS(this._table, "t1")
                 ),
             T200SQL.INNER(
-                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.ALIAS(this._identity_table, "t2"), 
                 T200SQL.EQUAL(
                     T200SQL.PREFIX(this._id, "t1"), 
                     T200SQL.PREFIX(this._id, "t2")
@@ -223,7 +235,7 @@ class T200UserModel extends T200ForumModel {
                 T200SQL.ALIAS(this._table, "t1")
                 ),
             T200SQL.INNER(
-                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.ALIAS(this._identity_table, "t2"), 
                 T200SQL.EQUAL(
                     T200SQL.PREFIX(this._id, "t1"), 
                     T200SQL.PREFIX(this._id, "t2")

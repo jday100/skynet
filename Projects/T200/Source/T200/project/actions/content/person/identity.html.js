@@ -20,6 +20,8 @@ async function do_content_person_identity(request, response, cookie, session, re
         let identity = new T200UserIdentity();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        let username = session.get("username");
+
         identity.user_id = session.get("userid");
         identity.identity_id = session.get("identityid");
 
@@ -34,7 +36,7 @@ async function do_content_person_identity(request, response, cookie, session, re
                 }else{
                     data.identity = {};
                 }
-                data.identity.username = identity.username;
+                data.identity.username = username;
                 return view.render_file("content/person/identity.ejs", data).then(function (value) {
                     response.type("json");
                     resolve(value);

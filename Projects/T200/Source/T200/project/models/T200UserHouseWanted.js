@@ -17,6 +17,7 @@ class T200UserHouseWanted extends T200HomeUserModel {
         this.status = 0;
 
         this._person_table = "person";
+        this._identity_table = "identity";
     }
 
 
@@ -25,6 +26,7 @@ class T200UserHouseWanted extends T200HomeUserModel {
         this._fields = [
             'user_id',
             'status',
+            'identity_id',
             'city_id',
             'title',
             'content'
@@ -35,6 +37,7 @@ class T200UserHouseWanted extends T200HomeUserModel {
         this._values = [
             this.user_id,
             this.status,
+            this.identity_id,
             this.city_id,
             `'${this.title}'`,
             `'${this.content}'`
@@ -66,7 +69,7 @@ class T200UserHouseWanted extends T200HomeUserModel {
             'id',
             'title',
             T200SQL.PREFIX('status', 't1'),
-            T200SQL.PREFIX('username', 't2'),
+            T200SQL.PREFIX('nickname', 't2'),
             T200SQL.PREFIX('create_time', 't1')            
         ];
     }
@@ -93,7 +96,7 @@ class T200UserHouseWanted extends T200HomeUserModel {
     set_item_right() {
         return [
             ['Status', 'status', false, '', 'list_status', true, 'id', 'status', 'list_status'],
-            ['Username', 'username', true, '', 'list_name', false],
+            ['Nickname', 'nickname', true, '', 'list_name', false],
             ['CreateTime', 'create_time', false, '', 'list_time', true, 'time', 'time_title', 'list_time']
         ];
     }
