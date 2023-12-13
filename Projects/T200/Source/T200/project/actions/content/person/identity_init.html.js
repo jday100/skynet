@@ -77,12 +77,17 @@ async function do_content_person_identity_init_save(request, response, cookie, s
         let identity_id = session.get("identityid");
         identity.user_id = session.get("userid");
         identity.nickname = request.get("nickname");
+        identity.continent_id = request.get("continent");
+        identity.region_id = request.get("region");
         identity.city_id = request.get("city");
         identity.intro = request.get("intro");
 
         if(T200HttpsForm.verify_null(identity_id)
             && T200HttpsForm.verify_id(identity.user_id)
             && T200HttpsForm.verify_text(identity.nickname)
+            && T200HttpsForm.verify_id(identity.continent_id)
+            && T200HttpsForm.verify_id(identity.region_id)
+            && T200HttpsForm.verify_id(identity.city_id)
             && T200HttpsForm.verify_empty(identity.intro)){
 
             if(identity_id && 0 < identity_id){
@@ -113,18 +118,26 @@ async function do_content_person_identity_init_append(request, response, cookie,
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let identity = new T200UserIdentity();
+
+        let identity_id = session.get("identityid");
   
         identity.user_id = session.get("userid");
         identity.nickname = request.get("nickname");
+        identity.continent_id = request.get("continent");
+        identity.region_id = request.get("region");
         identity.city_id = request.get("city");
         identity.intro = request.get("intro");
         identity.status = session.get("status");
 
 
-        if(T200HttpsForm.verify_id(identity.user_id)
-            && T200HttpsForm.verify_id(identity.status)
-            && T200HttpsForm.verify_text(identity.nickname)
-            && T200HttpsForm.verify_empty(identity.intro)){
+        if(T200HttpsForm.verify_null(identity_id)
+                && T200HttpsForm.verify_id(identity.user_id)
+                && T200HttpsForm.verify_id(identity.status)
+                && T200HttpsForm.verify_text(identity.nickname)
+                && T200HttpsForm.verify_id(identity.continent_id)
+                && T200HttpsForm.verify_id(identity.region_id)
+                && T200HttpsForm.verify_id(identity.city_id)
+                && T200HttpsForm.verify_empty(identity.intro)){
                 identity.flash_content_append_fields();
                 identity.flash_content_append_values();
                 UserBiz.append(identity.merge_user_insert()).then(function(id){

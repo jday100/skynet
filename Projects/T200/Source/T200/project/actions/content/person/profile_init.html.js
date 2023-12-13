@@ -58,6 +58,8 @@ async function do_content_person_profile_init_save(request, response, cookie, se
 
         let flag = session.get("flag");
         person.user_id = session.get("userid");
+        person.continent_id = request.get("continent");
+        person.country_id = request.get("country");
         person.gender = request.get("gender");
         person.year = request.get("year");
         person.month = request.get("month");

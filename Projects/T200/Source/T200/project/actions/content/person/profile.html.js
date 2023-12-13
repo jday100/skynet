@@ -221,10 +221,6 @@ async function do_content_person_nationality_save(request, response, cookie, ses
         person.continent_id = request.get("continent");
         person.country_id = request.get("country");
 
-        //test
-        person.continent_id = 1;
-        person.country_id = 1;
-
         if(T200HttpsForm.verify_id(person.user_id)
             && T200HttpsForm.verify_id(person.continent_id)
             && T200HttpsForm.verify_id(person.country_id)){
@@ -324,4 +320,4 @@ global.action.use_post('/content/person/email/save', do_content_person_email_sav
 
 global.action.use_post('/content/person/nationality/save', do_content_person_nationality_save);
 global.action.use_post('/content/person/location/save', do_content_person_location_save);
-global.action.use_post('/content/person/intro/save', do_content_person_intro_save);
+global.action.use_post('/content/person/profile/intro/save', do_content_person_intro_save);

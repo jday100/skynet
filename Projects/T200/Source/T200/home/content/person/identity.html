@@ -24,6 +24,8 @@
     <script src="/js/t200home.js"></script>    
     <script src="/js/t200region.js"></script>
     <script src="/js/t200identity.js"></script>
+    <script src="/js/t200vessel.js"></script>
+    <script src="/js/t200region_dev.js"></script>
 
 </head>
 
@@ -146,8 +148,10 @@
         let result = formtostring("form");
         $.post('/content/person/identity', result, function(data){
             $.id("list_box").innerHTML = data;
-            /*nationality_init($.id("location_city_id").value);
-            region_init($.id("location_city_id").value);*/
+
+            show_continent('continent_id', 'continent_name');
+            show_region('continent_id', 'region_id', 'region_name');
+            show_city('continent_id', 'region_id', 'city_id', 'city_name');
         }, function(){
             alert("Load Failure!");
         });

@@ -23,6 +23,8 @@
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>    
     <script src="/js/t200region.js"></script>
+    <script src="/js/t200vessel.js"></script>
+    <script src="/js/t200region_dev.js"></script>
     <script src="/js/t200identity.js"></script>
 
 </head>
@@ -160,13 +162,8 @@
             show_date('create_time', 'create_time_title');
             show_date('modify_time', 'modify_time_title');
 
-            continent_init($.id("continent"));
+            continents_dev_init($.id("continent"));
 
-
-
-
-            
-            /*region_init($.id("country"));*/
             date_init($.id("year"), $.id("month"), $.id("day"));
             $.id("submit").onclick = save;
         }, function(){

@@ -21,16 +21,16 @@ async function do_content_person_identity(request, response, cookie, session, re
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         identity.user_id = session.get("userid");
-        identity.username = session.get("username");
+        identity.identity_id = session.get("identityid");
 
         if(T200HttpsForm.verify_id(identity.user_id)
-            && T200HttpsForm.verify_text(identity.username)){
+            && T200HttpsForm.verify_id(identity.identity_id)){
             identity.flash_content_identity_fields();
-            UserBiz.list(identity.merge_select_by_id()).then(function(result){
+            UserBiz.load(identity.merge_select_by_key()).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
-                if(result && 1 == result.length){
-                    data.identity = result[0];
+                if(result){
+                    data.identity = result;
                 }else{
                     data.identity = {};
                 }
@@ -133,17 +133,13 @@ async function do_content_person_identity_location_save(request, response, cooki
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         identity.user_id = session.get("userid");
-        //identity.continent_id = request.get("continent");
-        //identity.region_id = request.get("region");
+        identity.continent_id = request.get("continent");
+        identity.region_id = request.get("region");
         identity.city_id = request.get("city");
 
-        //test
-        identity.continent_id = 1;
-        identity.region_id = 1;
-
         if(T200HttpsForm.verify_id(identity.user_id)
-            //&& T200HttpsForm.verify_id(person.region_id)
-            //&& T200HttpsForm.verify_id(person.region_id)
+            && T200HttpsForm.verify_id(identity.continent_id)
+            && T200HttpsForm.verify_id(identity.region_id)
             && T200HttpsForm.verify_id(identity.city_id)){
             identity.flash_content_identity_location_update();
             UserBiz.modify(identity.merge_update_by_id()).then(function(result){

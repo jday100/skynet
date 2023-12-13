@@ -23,6 +23,9 @@ class T200UserIdentity extends T200HomeUserModel {
         this._fields = [
             'identity_id',
             'user_id',
+            'continent_id',
+            'region_id',
+            'city_id',
             'nickname',
             'intro'
         ];
@@ -38,6 +41,8 @@ class T200UserIdentity extends T200HomeUserModel {
         this._fields = [
             'user_id',
             'status',
+            'continent_id',
+            'region_id',
             'city_id',
             'nickname',
             'ip'
@@ -48,6 +53,8 @@ class T200UserIdentity extends T200HomeUserModel {
         this._values = [
             this.user_id,
             this.status,
+            this.continent_id,
+            this.region_id,
             this.city_id,
             `'${this.nickname}'`,
             `'${this.ip}'`

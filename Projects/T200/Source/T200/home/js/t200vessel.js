@@ -10,8 +10,8 @@ class T200Vessel {
         this._array = new Array();
         if(items){
             items.forEach(item => {
-                self._key_value[item[0]] = item[1];
-                self._value_key[item[1]] = item[0];
+                self._key_value[item[0]] = item;
+                self._value_key[item[1]] = item;
                 self._array.push(item);
             });
         }
@@ -27,7 +27,7 @@ class T200Vessel {
         return value;
     }
 
-    at(index){
+    at(index) {
         let value;
         let length = this._array.length;
 
@@ -37,6 +37,10 @@ class T200Vessel {
             value = this._array.at(index);
         }
         return value;
+    }
+
+    array() {
+        return this._array;
     }
 }
 

@@ -31,17 +31,20 @@
                 <dd>
                     <div class="region">
                         <label>Continent:</label>
-                        <input disabled type="text" value="">
+                        <input type="hidden" id="continent_id" value="<%=identity.continent_id%>">
+                        <input disabled type="text" id="continent_name" value="">
                     </div>
                     
                     <div class="region">
                         <label>Region:</label>
-                        <input disabled type="text" value="">
+                        <input type="hidden" id="region_id" value="<%=identity.region_id%>">
+                        <input disabled type="text" id="region_name" value="">
                     </div>
 
                     <div class="region">
                         <label>City:</label>
-                        <input disabled type="text" value="">
+                        <input type="hidden" id="city_id" value="<%=identity.city_id%>">
+                        <input disabled type="text" id="city_name" value="">
                     </div>
                 </dd>
             </dl>

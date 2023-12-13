@@ -234,3 +234,8 @@ fieldset > div > details {
 .approve_button {
     margin-left: 10px;
 }
+
+
+dl select {
+    width: 150px;
+}

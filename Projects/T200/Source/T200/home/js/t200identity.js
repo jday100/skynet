@@ -91,7 +91,7 @@ function nationality_edit() {
                     <dd>
                         <div>
                             <label>Continent:</label>
-                            <select id="continent" name="continent" onchange="continent_change(this, 'country');">
+                            <select id="continent" name="continent" onchange="continent_dev_change(this, 'country');">
                             </select>
                         </div>
                         <div>
@@ -108,15 +108,39 @@ function nationality_edit() {
     $.id("nationality_button").innerHTML = "Save";
     $.id("nationality_button").onclick = nationality_save;
 
-    continent_init($.id("continent"));
+    continents_dev_init($.id("continent"));
 }
 
 function nationality_save() {
     let result = formtostring("nationality_form");
     $.post('/content/person/nationality/save', result, function(data){
         alert("Save Success!");
-        //$.id("location_title").value = $.id("email").value;
-        $.id("nationality_box").innerHTML = "";
+        let continent_id = $.id("continent").value;
+        let continent_name = $.id("continent").options[$.id("continent").selectedIndex].text;
+        let country_id = $.id("country").value;
+        let country_name = $.id("country").options[$.id("country").selectedIndex].text;
+        $.id("nationality_box").innerHTML = `
+        <div>
+            <dl>
+                <dd>
+                    <div>
+                        <label>Continent:</label>
+                        <input type="hidden" id="continent_id" value="">
+                        <input disabled type="text" id="continent_name" value="">
+                    </div>
+                    <div>
+                        <label>Country:</label>
+                        <input type="hidden" id="country_id" value="">
+                        <input disabled type="text" id="country_name" value="">
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        `;
+        $.id("continent_id").value = continent_id;
+        $.id("continent_name").value = continent_name;
+        $.id("country_id").value = country_id;
+        $.id("country_name").value = country_name;
         $.id("nationality_button").innerHTML = "Edit";
         $.id("nationality_button").onclick = nationality_edit;        
     }, function(){
@@ -134,12 +158,12 @@ function location_edit() {
                     <dd>
                         <div>
                             <label>Continent:</label>
-                            <select id="continent" name="continent" onchange="continent_change(this, 'region');">
+                            <select id="continent" name="continent" onchange="continent_dev_change(this, 'region');">
                             </select>
                         </div>
                         <div>
                             <label>Region:</label>
-                            <select id="region" name="region" onchange="region_change(this,'city');">
+                            <select id="region" name="region" onchange="region_dev_change('continent', 'region', 'city');">
                             </select>
                         </div>
                         <div>
@@ -156,15 +180,52 @@ function location_edit() {
     $.id("location_button").innerHTML = "Save";
     $.id("location_button").onclick = location_save;
 
-    continent_init($.id("continent"));
+    continents_dev_init($.id("continent"));
 }
 
 function location_save() {
     let result = formtostring("location_form");
     $.post('/content/person/identity/location/save', result, function(data){
         alert("Save Success!");
-        //$.id("location_title").value = $.id("email").value;
-        $.id("location_box").innerHTML = "";
+
+        let continent_id = $.id("continent").value;
+        let continent_name = $.id("continent").options[$.id("continent").selectedIndex].text;
+        let region_id = $.id("region").value;
+        let region_name = $.id("region").options[$.id("region").selectedIndex].text;
+        let city_id = $.id("city").value;
+        let city_name = $.id("city").options[$.id("city").selectedIndex].text;
+        
+        $.id("location_box").innerHTML = `
+        <div>
+            <dl>
+                <dd>
+                    <div class="region">
+                        <label>Continent:</label>
+                        <input type="hidden" id="continent_id" value="">
+                        <input disabled type="text" id="continent_name" value="">
+                    </div>
+                    
+                    <div class="region">
+                        <label>Region:</label>
+                        <input type="hidden" id="region_id" value="">
+                        <input disabled type="text" id="region_name" value="">
+                    </div>
+
+                    <div class="region">
+                        <label>City:</label>
+                        <input type="hidden" id="city_id" value="">
+                        <input disabled type="text" id="city_name" value="">
+                    </div>
+                </dd>
+            </dl>
+        </div>
+        `;
+        $.id("continent_id").value = continent_id;
+        $.id("continent_name").value = continent_name;
+        $.id("region_id").value = region_id;
+        $.id("region_name").value = region_name;
+        $.id("city_id").value = city_id;
+        $.id("city_name").value = city_name;
         $.id("location_button").innerHTML = "Edit";
         $.id("location_button").onclick = location_edit;        
     }, function(){
@@ -186,6 +247,24 @@ function intro_save() {
         $.id("intro").disabled = true;
         $.id("intro_button").innerHTML = "Edit";
         $.id("intro_button").onclick = intro_edit;        
+    }, function(){
+        alert("Save Failure!");
+    });
+}
+
+function profile_intro_edit() {
+    $.id("intro").disabled = false;
+    $.id("intro_button").innerHTML = "Save";
+    $.id("intro_button").onclick = profile_intro_save; 
+}
+
+function profile_intro_save() {
+    let result = formtostring("intro_form");
+    $.post('/content/person/profile/intro/save', result, function(data){
+        alert("Save Success!");
+        $.id("intro").disabled = true;
+        $.id("intro_button").innerHTML = "Edit";
+        $.id("intro_button").onclick = profile_intro_edit;        
     }, function(){
         alert("Save Failure!");
     });
@@ -252,10 +331,3 @@ function region_change(obj, id) {
     }
 }
 
-function show_contient(source, target) {
-
-}
-
-function show_country(source, target) {
-
-}

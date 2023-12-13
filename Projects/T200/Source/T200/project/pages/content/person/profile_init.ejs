@@ -42,14 +42,6 @@
         </div>
     </div>
 </div>
-<div>
-    <div>
-        <div>
-            <label>Nickname:</label>
-            <input disabled type="text" value="<%=profile.nickname%>">
-        </div>
-    </div>
-</div>
 <form id="form" onsubmit="return false;">
 <input type="hidden" name="test">
 <div>
@@ -64,7 +56,7 @@
                 <dd>
                     <div class="country">
                         <label>Continent:</label>
-                        <select style="display:block;width: 150px;" id="continent" name="continent" onchange="continent_change(this, 'country');">
+                        <select style="display:block;width: 150px;" id="continent" name="continent" onchange="continent_dev_change(this, 'country');">
 
                         </select>
                     </div>

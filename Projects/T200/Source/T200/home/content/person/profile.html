@@ -24,6 +24,8 @@
     <script src="/js/t200home.js"></script>    
     <script src="/js/t200region.js"></script>
     <script src="/js/t200identity.js"></script>
+    <script src="/js/t200vessel.js"></script>
+    <script src="/js/t200region_dev.js"></script>
 
 </head>
 
@@ -147,11 +149,8 @@
         $.post('/content/person/profile', result, function(data){
             $.id("list_box").innerHTML = data;
 
-            show_contient('contient_id', 'continent_name');
-            show_country('country_id', 'country_name');
-
-            /*nationality_init($.id("location_city_id").value);
-            region_init($.id("location_city_id").value);*/
+            show_continent('continent_id', 'continent_name');
+            show_country('continent_id', 'country_id', 'country_name');
         }, function(){
             alert("Load Failure!");
         });

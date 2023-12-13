@@ -31,14 +31,14 @@
                 <dd>
                     <div class="region">
                         <label>Continent:</label>
-                        <select style="display:block;width: 150px;" id="continent" name="continent" onchange="continent_change(this, 'region');">
+                        <select style="display:block;width: 150px;" id="continent" name="continent" onchange="continent_dev_change(this, 'region');">
 
                         </select>
                     </div>
                     
                     <div class="region">
                         <label>Region:</label>
-                        <select style="display:block;width: 150px;" id="region" name="region" onchange="region_change(this, 'city');">
+                        <select style="display:block;width: 150px;" id="region" name="region" onchange="region_dev_change('continent', 'region', 'city');">
                             
                         </select>
                     </div>
