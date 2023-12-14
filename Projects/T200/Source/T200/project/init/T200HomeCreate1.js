@@ -316,7 +316,6 @@ class T200HomeCreate {
                 city_id int default 0,
                 city_name varchar(100),
                 intro varchar(255),
-                flag int not null default 0,
                 ip varchar(20),
                 create_time datetime not null default current_timestamp,
                 modify_time timestamp not null default current_timestamp,

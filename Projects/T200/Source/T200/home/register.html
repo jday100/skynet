@@ -68,10 +68,12 @@
                 <div>
                     <label >Password:</label>
                     <input type="password" name="password1">
+                    <img id="password1_img">
                 </div>
                 <div>
                     <label >Password:</label>
                     <input type="password" name="password2">
+                    <img id="password2_img">
                 </div>
                 <div>
                     <label >Email:</label>
@@ -80,12 +82,14 @@
                     <button class="button">Send</button>
                 </div>
                 <div>
-                    <label >Code:</label>
+                    <label >AuthCode:</label>
                     <input class="code" type="password" name="authcode">
+                    <img id="auth_img">
                 </div>
                 <div>
-                    <label >Code:</label>
+                    <label >InviteCode:</label>
                     <input class="code" type="password" name="invitecode">
+                    <img id="invite_img">
                 </div>
                 <div class="button">
                     <button id="submit">Submit</button>
@@ -116,14 +120,34 @@
                 $.id("username_img").src = "/images/cross.png";
                 break;
             case 2: 
+                $.id("password1_img").src = "/images/cross.png";
+                break;
+            case 3: 
+                $.id("password2_img").src = "/images/cross.png";
+                break;
+            case 4: 
                 $.id("email_img").src = "/images/cross.png";
+                break;
+            case 5: 
+                $.id("auth_img").src = "/images/cross.png";
+                break;
+            case 6: 
+                $.id("invite_img").src = "/images/cross.png";
+                break;
+            case 10: 
+                $.id("password1_img").src = "/images/cross.png";
+                $.id("password2_img").src = "/images/cross.png";
                 break;
         }
     }
 
     function verify() {
         $.id("username_img").src = "";
+        $.id("password1_img").src = "";
+        $.id("password2_img").src = "";
         $.id("email_img").src = "";
+        $.id("auth_img").src = "";
+        $.id("invite_img").src = "";
         
         let data = formtostring('form');
         $.post('/register/verify', data, function(result){
