@@ -21,7 +21,8 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
-    <script src="/js/t200region.js"></script>
+    <script src="/js/t200vessel.js"></script>
+    <script src="/js/t200region_dev.js"></script>
 
 </head>
 
@@ -55,26 +56,7 @@
         <fieldset>
             <legend><a href="/region/index.html">Region</a></legend>
             <div id="region_box" class="region">
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
-                <a href="">City</a>
+
             </div>
         </fieldset>
 
@@ -87,15 +69,12 @@
                         <% k=house_rents.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
                                 <div>
-                                    <a target="_blank" href="/house/house_rent.html">
-                                        <%=house_rents[i].title%>
-                                    </a>
+                                    <a target="_blank" href="/house/house_rent.html?id=<%=house_rents[i].id%>"><%=house_rents[i].title%></a>
                                 </div>
-                                <div>
-                                    <a href="">
-                                        <%="user"%>
-                                    </a>
-                                    2023-10-10 10:10
+                                <div class="right">
+                                    <a href=""><%=house_rents[i].nickname%></a>
+                                    <div class="time" id="house_rents_time<%=i%>"></div>
+                                    <input type="hidden" id="house_rents<%=i%>" value="<%=house_rents[i].create_time%>">                            
                                 </div>
                             </div>
                             <% }else{ %>
@@ -117,15 +96,12 @@
                         <% k=house_wanteds.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
                                 <div>
-                                    <a target="_blank" href="/house/house_wanted.html">
-                                        <%=house_wanteds[i].title%>
-                                    </a>
+                                    <a target="_blank" href="/house/house_wanted.html?id=<%=house_wanteds[i].id%>"><%=house_wanteds[i].title%></a>
                                 </div>
-                                <div>
-                                    <a href="">
-                                        <%="user"%>
-                                    </a>
-                                    2023-10-10 10:10
+                                <div class="right">
+                                    <a href=""><%=house_wanteds[i].nickname%></a>
+                                    <div class="time" id="house_wanteds_time<%=i%>"></div>
+                                    <input type="hidden" id="house_wanteds<%=i%>" value="<%=house_wanteds[i].create_time%>">                                                          
                                 </div>
                             </div>
                             <% }else{ %>
@@ -153,15 +129,12 @@
                         <% k=job_recruits.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
                                 <div>
-                                    <a target="_blank" href="/job/job_recruit.html">
-                                        <%=job_recruits[i].title%>
-                                    </a>
+                                    <a target="_blank" href="/job/job_recruit.html?id=<%=job_recruits[i].id%>"><%=job_recruits[i].title%></a>
                                 </div>
-                                <div>
-                                    <a href="">
-                                        <%="user"%>
-                                    </a>
-                                    2023-10-10 10:10
+                                <div class="right">
+                                    <a href=""><%=job_recruits[i].nickname%></a>
+                                    <div class="time" id="job_recruits_time<%=i%>"></div>
+                                    <input type="hidden" id="job_recruits<%=i%>" value="<%=job_recruits[i].create_time%>">                             
                                 </div>
                             </div>
                             <% }else{ %>
@@ -183,15 +156,12 @@
                         <% k=job_wanteds.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
                                 <div>
-                                    <a target="_blank" href="/job/job_wanted.html">
-                                        <%=job_wanteds[i].title%>
-                                    </a>
+                                    <a target="_blank" href="/job/job_wanted.html?id=<%=job_wanteds[i].id%>"><%=job_wanteds[i].title%></a>
                                 </div>
-                                <div>
-                                    <a href="">
-                                        <%="user"%>
-                                    </a>
-                                    2023-10-10 10:10
+                                <div class="right">
+                                    <a href=""><%=job_wanteds[i].nickname%></a>
+                                    <div class="time" id="job_wanteds_time<%=i%>"></div>
+                                    <input type="hidden" id="job_wanteds<%=i%>" value="<%=job_wanteds[i].create_time%>">                                 
                                 </div>
                             </div>
                             <% }else{ %>
@@ -219,15 +189,12 @@
                         <% k=trading_sells.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
                                 <div>
-                                    <a target="_blank" href="/trading/trading_sell.html">
-                                        <%=trading_sells[i].title%>
-                                    </a>
+                                    <a target="_blank" href="/trading/trading_sell.html?id=<%=trading_sells[i].id%>"><%=trading_sells[i].title%></a>
                                 </div>
-                                <div>
-                                    <a href="">
-                                        <%="user"%>
-                                    </a>
-                                    2023-10-10 10:10
+                                <div class="right">
+                                    <a href=""><%=trading_sells[i].nickname%></a>
+                                    <div class="time" id="trading_sells_time<%=i%>"></div>
+                                    <input type="hidden" id="trading_sells<%=i%>" value="<%=trading_sells[i].create_time%>">                               
                                 </div>
                             </div>
                             <% }else{ %>
@@ -249,15 +216,12 @@
                         <% k=trading_buys.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
                                 <div>
-                                    <a target="_blank" href="/trading/trading_buy.html">
-                                        <%=trading_buys[i].title%>
-                                    </a>
+                                    <a target="_blank" href="/trading/trading_buy.html?id=<%=trading_buys[i].id%>"><%=trading_buys[i].title%></a>
                                 </div>
-                                <div>
-                                    <a href="">
-                                        <%="user"%>
-                                    </a>
-                                    2023-10-10 10:10
+                                <div class="right">
+                                    <a href=""><%=trading_buys[i].nickname%></a>
+                                    <div class="time" id="trading_buys_time<%=i%>"></div>
+                                    <input type="hidden" id="trading_buys<%=i%>" value="<%=trading_buys[i].create_time%>">                               
                                 </div>
                             </div>
                             <% }else{ %>
@@ -284,15 +248,12 @@
                         <% k=exchanges.length; for(let i=0;i<5;i++){ let m=i * 2; if(m < k){ %>
                             <div>
                                 <div>
-                                    <a target="_blank" href="/exchange/exchange.html">
-                                        <%=exchanges[m].title%>
-                                    </a>
+                                    <a target="_blank" href="/exchange/exchange.html?id=<%=exchanges[m].id%>"><%=exchanges[m].title%></a>
                                 </div>
-                                <div>
-                                    <a href="">
-                                        <%="user"%>
-                                    </a>
-                                    2023-10-10 10:10
+                                <div class="right">
+                                    <a href=""><%=exchanges[m].nickname%></a>
+                                    <div class="time" id="exchanges_time<%=m%>"></div>
+                                    <input type="hidden" id="exchanges<%=m%>" value="<%=exchanges[m].create_time%>">                               
                                 </div>
                             </div>
                             <% }else{ %>
@@ -313,15 +274,12 @@
                         <% k=exchanges.length; for(let i=0;i<5;i++){ let m=(i * 2) + 1; if(m < k){ %>
                             <div>
                                 <div>
-                                    <a target="_blank" href="/exchange/exchange.html">
-                                        <%=exchanges[m].title%>
-                                    </a>
+                                    <a target="_blank" href="/exchange/exchange.html?id=<%=exchanges[m].id%>"><%=exchanges[m].title%></a>
                                 </div>
-                                <div>
-                                    <a href="">
-                                        <%="user"%>
-                                    </a>
-                                    2023-10-10 10:10
+                                <div class="right">
+                                    <a href=""><%=exchanges[m].nickname%></a>
+                                    <div class="time" id="exchanges_time<%=m%>"></div>
+                                    <input type="hidden" id="exchanges<%=m%>" value="<%=exchanges[m].create_time%>">                                 
                                 </div>
                             </div>
                             <% }else{ %>
@@ -352,7 +310,16 @@
     $.win.onload = function () {
         nav_check();
 
-        region_setting();
+        region_dev_init();
+
+        
+        update_times("house_rents");
+        update_times("house_wanteds");
+        update_times("job_recruits");
+        update_times("job_wanteds");
+        update_times("trading_sells");
+        update_times("trading_buys");
+        update_times("exchanges");
     };
 </script>
 

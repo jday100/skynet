@@ -21,7 +21,8 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
-    <script src="/js/t200region.js"></script>
+    <script src="/js/t200vessel.js"></script>
+    <script src="/js/t200region_dev.js"></script>
 
 </head>
 
@@ -66,7 +67,7 @@
     $.win.onload = function(){
         nav_check();
 
-        region_setting();
+        region_dev_init();
 
         update_times("house_rents");
         update_times("house_wanteds");

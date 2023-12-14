@@ -28,6 +28,12 @@ let continents_dev = new T200Vessel([
 ]);
 
 
+///home
+
+let cities_list = [
+    ['asia',            'south korea',              'seoul'],
+    ['asia',            'japan',                    'tokyo']
+];
 
 
 ///function
@@ -139,4 +145,32 @@ function show_city(continent, region, source, target) {
             $.id(target).value = robj[2].key($.id(source).value)[1];
         }
     }
+}
+
+
+function region_dev_init() {
+    let result = "";
+    cities_list.forEach(item => {
+        let continent = continents_dev.value(item[0]);
+
+        if(undefined == continent){
+
+        }else{
+            let region = continent[2].value(item[1]);
+            
+            if(undefined == region){
+
+            }else{
+                let city = region[2].value(item[2]);
+
+                if(undefined == city){
+
+                }else{
+                    result += `<a href="/region/city.html?id=${city[0]}">${item[2]}</a>`;
+                }
+            }
+        }
+    });
+
+    $.id('region_box').innerHTML = result;   
 }
