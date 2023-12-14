@@ -11,6 +11,7 @@ class T200UserHouseRent extends T200HomeUserModel {
         super();
         this._table = "house_rent";
         this._key = "id";
+        this._user_id = "user_id";
         this._id = "identity_id";
 
         this.city_id = 0;

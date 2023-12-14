@@ -11,7 +11,8 @@ class T200UserHouseWanted extends T200HomeUserModel {
         super();
         this._table = "house_wanted";
         this._key = "id";
-        this._id = "user_id";
+        this._user_id = "user_id";
+        this._id = "identity_id";
 
         this.city_id = 0;
         this.status = 0;
@@ -84,6 +85,12 @@ class T200UserHouseWanted extends T200HomeUserModel {
     flash_content_status_update() {
         this._name_value = [
             ['status', this.status]
+        ];
+    }
+
+    flash_content_parent_update() {
+        this._name_value = [
+            ['parent_id', this.parent_id]
         ];
     }
 

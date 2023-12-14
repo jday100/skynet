@@ -69,6 +69,21 @@ async function do_logout(request, response, cookie, session, resource) {
         let person = new T200UserPerson();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        person.user_id = session.get("userid");
+        if(T200HttpsForm.verify_id(person.user_id)){
+            UserBiz.logout(person).then(function(){
+                clear_data(cookie, session, person);
+
+                response.type('json');
+                resolve();
+            }, function(){
+                response.type('json');
+                reject();
+            });
+        }else{
+            response.type('json');
+            reject();
+        }
         
     });
 

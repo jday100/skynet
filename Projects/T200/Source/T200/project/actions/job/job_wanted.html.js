@@ -60,12 +60,16 @@ async function do_job_wanted_reply(request, response, cookie, session, resource)
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         job.user_id = session.get("userid");
+        job.identity_id = session.get("identityid");
+        job.city_id = session.get("cityid");
         job.parent_id = request.get("id");
         job.title = `@${job.parent_id}`;
         job.content = request.get("content");
         job.status = 1;
 
         if(T200HttpsForm.verify_id(job.user_id)
+            && T200HttpsForm.verify_id(job.identity_id)
+            && T200HttpsForm.verify_id(job.city_id)
             && T200HttpsForm.verify_id(job.parent_id)
             && T200HttpsForm.verify_id(job.status)
             && T200HttpsForm.verify_text(job.content)){

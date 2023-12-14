@@ -60,12 +60,16 @@ async function do_exchange_reply(request, response, cookie, session, resource) {
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         exchange.user_id = session.get("userid");
+        exchange.identity_id = session.get("identityid");
+        exchange.city_id = session.get("cityid");
         exchange.parent_id = request.get("id");
         exchange.title = `@${exchange.parent_id}`;
         exchange.content = request.get("content");
         exchange.status = 1;
 
         if(T200HttpsForm.verify_id(exchange.user_id)
+            && T200HttpsForm.verify_id(exchange.identity_id)
+            && T200HttpsForm.verify_id(exchange.city_id)
             && T200HttpsForm.verify_id(exchange.parent_id)
             && T200HttpsForm.verify_id(exchange.status)
             && T200HttpsForm.verify_text(exchange.content)){

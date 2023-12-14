@@ -37,19 +37,40 @@ async function do_content_exchange_add(request, response, cookie, session, resou
         let exchange = new T200UserExchange();
   
         exchange.user_id = session.get("userid");
+        exchange.identity_id = session.get("identityid");
         exchange.status = session.get("status");
         exchange.city_id = session.get("cityid");
         exchange.title = request.get("title");
         exchange.content = request.get("content");
         
         if(T200HttpsForm.verify_id(exchange.user_id)
+            && T200HttpsForm.verify_id(exchange.identity_id)
             && T200HttpsForm.verify_id(exchange.status)
             && T200HttpsForm.verify_id(exchange.city_id)
             && T200HttpsForm.verify_text(exchange.title)
             && T200HttpsForm.verify_text(exchange.content)){
                 exchange.flash_content_append_fields();
                 exchange.flash_content_append_values();
-                UserBiz.append(exchange.merge_user_insert()).then(resolve, reject);
+                UserBiz.append(exchange.merge_user_insert()).then(function(id){
+                    exchange.parent_id = id;
+                    exchange.id = id;
+                    if(T200HttpsForm.verify_id(exchange.parent_id)){
+                        exchange.flash_content_parent_update();
+                        UserBiz.modify(exchange.merge_update_by_key()).then(function(){
+                            response.type("json");
+                            resolve();
+                        }, function(){
+                            response.type("json");
+                            reject();
+                        });
+                    }
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
+        }else{
+            response.type("json");
+            reject();
         }
     });
 

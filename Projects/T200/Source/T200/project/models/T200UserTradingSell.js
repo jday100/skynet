@@ -11,7 +11,8 @@ class T200UserTradingSell extends T200HomeUserModel {
         super();
         this._table = "trading_sell";
         this._key = "id";
-        this._id = "user_id";
+        this._user_id = "user_id";
+        this._id = "identity_id";
 
         this.city_id = 0;
         this.status = 0;
@@ -25,6 +26,7 @@ class T200UserTradingSell extends T200HomeUserModel {
         this._fields = [
             'user_id',
             'status',
+            'identity_id',
             'city_id',
             'title',
             'content'
@@ -35,6 +37,7 @@ class T200UserTradingSell extends T200HomeUserModel {
         this._values = [
             this.user_id,
             this.status,
+            this.identity_id,
             this.city_id,
             `'${this.title}'`,
             `'${this.content}'`
@@ -44,7 +47,10 @@ class T200UserTradingSell extends T200HomeUserModel {
     flash_reply_fields() {
         this._fields = [
             'user_id',
+            'identity_id',
             'parent_id',
+            'parent_type',
+            'city_id',
             'status',
             'title',
             'content'
@@ -54,7 +60,10 @@ class T200UserTradingSell extends T200HomeUserModel {
     flash_reply_values() {
         this._values = [
             this.user_id,
+            this.identity_id,
             this.parent_id,
+            1,
+            this.city_id,
             this.status,
             `'${this.title}'`,
             `'${this.content}'`
@@ -81,6 +90,12 @@ class T200UserTradingSell extends T200HomeUserModel {
     flash_content_status_update() {
         this._name_value = [
             ['status', this.status]
+        ];
+    }
+
+    flash_content_parent_update() {
+        this._name_value = [
+            ['parent_id', this.parent_id]
         ];
     }
 

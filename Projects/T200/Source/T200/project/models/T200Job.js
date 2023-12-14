@@ -11,7 +11,7 @@ class T200Job extends T200HomeVisitorModel {
         super();
         this._table = "";
         this._key = "id";
-        this._id = "user_id";
+        this._id = "identity_id";
 
         this.city_id = 0;
         this.status = 0;

@@ -61,12 +61,16 @@ async function do_house_wanted_reply(request, response, cookie, session, resourc
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         house.user_id = session.get("userid");
+        house.identity_id = session.get("identityid");
+        house.city_id = session.get("cityid");
         house.parent_id = request.get("id");
         house.title = `@${house.parent_id}`;
         house.content = request.get("content");
         house.status = 1;
 
         if(T200HttpsForm.verify_id(house.user_id)
+            && T200HttpsForm.verify_id(house.identity_id)
+            && T200HttpsForm.verify_id(house.city_id)
             && T200HttpsForm.verify_id(house.parent_id)
             && T200HttpsForm.verify_id(house.status)
             && T200HttpsForm.verify_text(house.content)){

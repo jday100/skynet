@@ -45,6 +45,7 @@ async function do_content_house_rent_add(request, response, cookie, session, res
         house.content = request.get("content");
         
         if(T200HttpsForm.verify_id(house.user_id)
+            && T200HttpsForm.verify_id(house.identity_id)
             && T200HttpsForm.verify_id(house.status)
             //&& T200HttpsForm.verify_id(house.region_id)
             && T200HttpsForm.verify_id(house.city_id)

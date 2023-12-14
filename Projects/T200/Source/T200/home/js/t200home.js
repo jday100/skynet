@@ -18,7 +18,6 @@ function logout() {
     $.post(url, result, function(data){
         location.reload();
     }, function(){
-        alert("Logout Failure!");
         $.set_cookie('sid', 0);
         location.reload();
     });

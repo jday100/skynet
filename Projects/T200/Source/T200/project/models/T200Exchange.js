@@ -11,7 +11,7 @@ class T200Exchange extends T200HomeVisitorModel {
         super();
         this._table = "exchange";
         this._key = "id";
-        this._id = "user_id";
+        this._id = "identity_id";
 
         this.status = 0;
 

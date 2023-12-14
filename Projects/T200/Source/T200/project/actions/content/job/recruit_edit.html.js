@@ -37,6 +37,7 @@ async function do_content_job_recruit_add(request, response, cookie, session, re
         let job = new T200UserJobRecruit();
   
         job.user_id = session.get("userid");
+        job.identity_id = session.get("identityid");
         job.status = session.get("status");
         //job.region_id = session.get("regionid");
         job.city_id = session.get("cityid");
@@ -44,6 +45,7 @@ async function do_content_job_recruit_add(request, response, cookie, session, re
         job.content = request.get("content");
         
         if(T200HttpsForm.verify_id(job.user_id)
+            && T200HttpsForm.verify_id(job.identity_id)
             && T200HttpsForm.verify_id(job.status)
             //&& T200HttpsForm.verify_id(job.region_id)
             && T200HttpsForm.verify_id(job.city_id)
@@ -51,8 +53,25 @@ async function do_content_job_recruit_add(request, response, cookie, session, re
             && T200HttpsForm.verify_text(job.content)){
                 job.flash_content_append_fields();
                 job.flash_content_append_values();
-                UserBiz.append(job.merge_user_insert()).then(resolve, reject);
+                UserBiz.append(job.merge_user_insert()).then(function(id){
+                    job.parent_id = id;
+                    job.id = id;
+                    if(T200HttpsForm.verify_id(job.parent_id)){
+                        job.flash_content_parent_update();
+                        UserBiz.modify(job.merge_update_by_key()).then(function(){
+                            response.type("json");
+                            resolve();
+                        }, function(){
+                            response.type("json");
+                            reject();
+                        });
+                    }
+                }, function(){
+                    response.type("json");
+                    reject();
+                });
         }else{
+            response.type("json");
             reject();
         }
     });

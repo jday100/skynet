@@ -61,12 +61,16 @@ async function do_trading_buy_reply(request, response, cookie, session, resource
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         trading.user_id = session.get("userid");
+        trading.identity_id = session.get("identityid");
+        trading.city_id = session.get("cityid");
         trading.parent_id = request.get("id");
         trading.title = `@${trading.parent_id}`;
         trading.content = request.get("content");
         trading.status = 1;
 
         if(T200HttpsForm.verify_id(trading.user_id)
+            && T200HttpsForm.verify_id(trading.identity_id)
+            && T200HttpsForm.verify_id(trading.city_id)
             && T200HttpsForm.verify_id(trading.parent_id)
             && T200HttpsForm.verify_id(trading.status)
             && T200HttpsForm.verify_text(trading.content)){

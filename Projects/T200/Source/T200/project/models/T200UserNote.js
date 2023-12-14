@@ -11,17 +11,20 @@ class T200UserNote extends T200HomeUserModel {
         super();
         this._table = "note";
         this._key = "id";
-        this._id = "user_id";
+        this._user_id = "user_id";
+        this._id = "identity_id";
 
         this.status = 0;
 
         this._person_table = "person";
+        this._identity_table = "identity";
     }
 
     flash_content_append_fields() {
         this._fields = [
             'user_id',
             'status',
+            'identity_id',
             'title',
             'content'
         ];
@@ -31,6 +34,7 @@ class T200UserNote extends T200HomeUserModel {
         this._values = [
             this.user_id,
             this.status,
+            this.identity_id,
             `'${this.title}'`,
             `'${this.content}'`
         ];
