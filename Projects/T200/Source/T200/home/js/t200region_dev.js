@@ -174,3 +174,17 @@ function region_dev_init() {
 
     $.id('region_box').innerHTML = result;   
 }
+
+function region_dev_setting(id) {
+    let result = "";
+
+
+    $.id('region_box').innerHTML = result;   
+}
+
+function city_dev_setting(id) {
+    let result = "";
+
+
+    $.id('region_box').innerHTML = result;   
+}

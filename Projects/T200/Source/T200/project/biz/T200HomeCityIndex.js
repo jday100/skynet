@@ -67,7 +67,7 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
             house._table = "house_rent";
             house.city_id = id;
             house._fields = house.list_fields();
-            return self.list(house.merge_multiple_list()).then(function(values){
+            return self.list(house.merge_city_list()).then(function(values){
                 data.house_rents = values;
                 resolve(data);
             }, function(){
@@ -85,7 +85,7 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
             house._table = "house_wanted";
             house.city_id = id;
             house._fields = house.list_fields();
-            return self.list(house.merge_multiple_list()).then(function(values){
+            return self.list(house.merge_city_list()).then(function(values){
                 data.house_wanteds = values;
                 resolve(data);
             }, function(){
@@ -103,7 +103,7 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
             job._table = "job_recruit";
             job.city_id = id;
             job._fields = job.list_fields();
-            return self.list(job.merge_multiple_list()).then(function(values){
+            return self.list(job.merge_city_list()).then(function(values){
                 data.job_recruits = values;
                 resolve(data);
             }, function(){
@@ -121,7 +121,7 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
             job._table = "job_wanted";
             job.city_id = id;
             job._fields = job.list_fields();
-            return self.list(job.merge_multiple_list()).then(function(values){
+            return self.list(job.merge_city_list()).then(function(values){
                 data.job_wanteds = values;
                 resolve(data);
             }, function(){
@@ -139,7 +139,7 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
             trading._table = "trading_sell";
             trading.city_id = id;
             trading._fields = trading.list_fields();
-            return self.list(trading.merge_multiple_list()).then(function(values){
+            return self.list(trading.merge_city_list()).then(function(values){
                 data.trading_sells = values;
                 resolve(data);
             }, function(){
@@ -157,7 +157,7 @@ class T200HomeCityIndex extends T200HomeVisitorBiz {
             trading._table = "trading_buy";
             trading.city_id = id;
             trading._fields = trading.list_fields();
-            return self.list(trading.merge_multiple_list()).then(function(values){
+            return self.list(trading.merge_city_list()).then(function(values){
                 data.trading_buys = values;
                 resolve(data);
             }, function(){

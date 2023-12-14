@@ -62,6 +62,96 @@ class T200HomeVisitorModel extends T200VisitorModel {
             T200SQL.LIMIT(this._page_size)
         );
     }
+
+    merge_region_list() {
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields),
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+            ),
+            T200SQL.INNER(
+                T200SQL.ALIAS(this._identity_table, "t2"),
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"),
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            T200SQL.WHERE(
+                T200SQL.AND(
+                    T200SQL.AND(
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("status", "t1"),
+                            1
+                        ),
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("status", "t2"),
+                            1
+                        )
+                    ),
+                    T200SQL.AND(
+                        T200SQL.EQUAL(
+                            "parent_type",
+                            0
+                        ),
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("region_id", "t1"),
+                            this.region_id
+                        )
+                    )
+                    
+                )
+            ),
+            T200SQL.ORDER(
+                T200SQL.DESC(T200SQL.PREFIX("id", "t1"))
+            ),
+            T200SQL.LIMIT(this._page_size)
+        );
+    }
+        
+    merge_city_list() {
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields),
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+            ),
+            T200SQL.INNER(
+                T200SQL.ALIAS(this._identity_table, "t2"),
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"),
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            T200SQL.WHERE(
+                T200SQL.AND(
+                    T200SQL.AND(
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("status", "t1"),
+                            1
+                        ),
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("status", "t2"),
+                            1
+                        )
+                    ),
+                    T200SQL.AND(
+                        T200SQL.EQUAL(
+                            "parent_type",
+                            0
+                        ),
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("city_id", "t1"),
+                            this.city_id
+                        )
+                    )
+                    
+                )
+            ),
+            T200SQL.ORDER(
+                T200SQL.DESC(T200SQL.PREFIX("id", "t1"))
+            ),
+            T200SQL.LIMIT(this._page_size)
+        );
+    }
 }
 
 module.exports = T200HomeVisitorModel;

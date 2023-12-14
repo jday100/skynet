@@ -61,10 +61,10 @@
         </fieldset>
 
         <fieldset class="title">
-            <legend><a href="/house/index.html">House</a></legend>
+            <legend><a href="/house/city_index.html?id=<%=city_id%>">House</a></legend>
             <div class="channel">
                 <fieldset>
-                    <legend><a href="/house/rent.html">Rent</a></legend>
+                    <legend><a href="/house/city_rent.html?id=<%=city_id%>">Rent</a></legend>
                     <div>
                         <% k=house_rents.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
@@ -310,8 +310,7 @@
     $.win.onload = function () {
         nav_check();
 
-        region_dev_init();
-
+        city_dev_setting(<%=city_id%>);
         
         update_times("house_rents");
         update_times("house_wanteds");
