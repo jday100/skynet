@@ -26,7 +26,7 @@ async function do_content_person_identity_init(request, response, cookie, sessio
 
 
         if(T200HttpsForm.verify_id(identity.user_id)
-            && T200HttpsForm.verify_null(identity_id)){
+            && T200HttpsForm.verify_zero(identity_id)){
                 let view = new T200HomeView(resource);
                 let data = {};
                 if(0 == identity_id){
@@ -149,6 +149,7 @@ async function do_content_person_identity_init_append(request, response, cookie,
                         && T200HttpsForm.verify_id(person.identity_id)){
                         person.flash_content_profile_identity_update();
                         UserBiz.modify(person.merge_update_by_key()).then(function(){
+                            session.set("identityid", person.identity_id);
                             response.type("json");
                             resolve();
                         }, function(){

@@ -15,6 +15,47 @@ async function do_register(request, response, cookie, session, resource) {
         let visitor = new T200Visitor();
         let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
 
+        let username = request.get("username");
+        let pwd1 = request.get("password1");
+        let pwd2 = request.get("password2");
+        let email = request.get("email");
+        let auth = request.get("authcode");
+        let invite = request.get("invitecode");
+
+        if(T200HttpsForm.verify_texts(2, 50, username)
+            && T200HttpsForm.verify_texts(6, 50, pwd1)
+            && T200HttpsForm.verify_texts(6, 50, pwd2)
+            && T200HttpsForm.verify_email(email)
+            && T200HttpsForm.verify_texts_6(auth)
+            && T200HttpsForm.verify_texts_12(invite)
+            && pwd1 == pwd2){
+
+            let invitation = new T200Invitation();
+
+            invitation.invite = invite;
+            invitation.flash_invitation_fields();
+            VisitorBiz.load(invitation.merge_select_by_field("invite")).then(function(){
+                visitor.username = username;
+                visitor.password = T200Crypto.sha1(pwd1);
+                visitor.email = email;
+                visitor.invite = invite;
+                VisitorBiz.register(visitor).then(function(){
+                    response.type('json');
+                    resolve();
+                }, function(){
+                    response.type('json');
+                    reject();
+                });
+            }, function(){
+                response.type('json');
+                reject();
+            });
+
+        }else{
+            response.type('json');
+            reject();
+        }
+
     });
 
     return promise;
@@ -36,19 +77,19 @@ async function do_register_verify(request, response, cookie, session, resource) 
         let auth = request.get("authcode");
         let invite = request.get("invitecode");
 
-        if(T200HttpsForm.verify_text_50(username)){
+        if(T200HttpsForm.verify_texts(2, 50, username)){
             
         }else{
             result.push(1);
         }
 
-        if(T200HttpsForm.verify_text_100(pwd1)){
+        if(T200HttpsForm.verify_texts(6, 50, pwd1)){
             
         }else{
             result.push(2);
         }
 
-        if(T200HttpsForm.verify_text_100(pwd2)){
+        if(T200HttpsForm.verify_texts(6, 50, pwd2)){
 
         }else{
             result.push(3);
@@ -66,13 +107,13 @@ async function do_register_verify(request, response, cookie, session, resource) 
             result.push(4);
         }
 
-        if(T200HttpsForm.verify_text(auth)){
+        if(T200HttpsForm.verify_texts_6(auth)){
 
         }else{
             result.push(5);
         }
 
-        if(T200HttpsForm.verify_text(invite)){
+        if(T200HttpsForm.verify_texts_12(invite)){
 
         }else{
             result.push(6);

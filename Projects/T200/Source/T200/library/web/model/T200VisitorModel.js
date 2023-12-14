@@ -20,11 +20,11 @@ class T200VisitorModel extends T200SearchModel {
 
 
     flash_register_fields() {
-        this._fields = "username, password, email, status";
+        this._fields = "username, password, email, invite, status";
     }
 
     flash_register_values() {
-        this._values = `'${this.username}', '${this.password}', '${this.email}', 1`;
+        this._values = `'${this.username}', '${this.password}', '${this.email}', ${this.invite}, 1`;
     }
     
     merge_login() {
@@ -66,36 +66,15 @@ class T200VisitorModel extends T200SearchModel {
             T200SQL.PREFIX("flag", "t1")
         ];
     }
-    
 
-    /*
-    merge_login() {
-        return T200SQL.SELECT(
-            T200SQL.FIELDS(this._fields), T200SQL.FROM(this._table),
-            T200SQL.WHERE(
-                T200SQL.AND(
-                    T200SQL.AND(
-                        T200SQL.EQUAL("username", `'${this.username}'`), 
-                        T200SQL.EQUAL("password", `'${this.password}'`)
-                    ),
-                    T200SQL.EQUAL("status", 1)
-                )
-            )
-        );
-    }
-
-    flash_login_fields() {
-        this._fields = [
-            "user_id",
-            "status",
-            "city_id",
-            "identity_id",
-            "username",
-            "password",
-            "flag"
+    flash_login_update() {
+        this._name_value = [
+            ['login_time',  'current_timestamp'],
+            ['ip',          `'${this.ip}'`]
         ];
     }
-    */
+  
+
 
     ///
     merge_admin_login() {

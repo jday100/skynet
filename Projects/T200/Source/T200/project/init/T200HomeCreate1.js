@@ -292,6 +292,7 @@ class T200HomeCreate {
                 month int,
                 day int,
                 intro varchar(255),
+                invite bigint not null default 0,
                 flag int not null default 0,
                 create_time datetime not null default current_timestamp,
                 modify_time timestamp not null default current_timestamp,
@@ -330,7 +331,7 @@ class T200HomeCreate {
                 id int primary key auto_increment,
                 user_id int,
                 status int not null default 0,
-                invite int not null default 0,
+                invite bigint not null default 0,
                 create_time datetime not null default current_timestamp,
                 using_time datetime,
                 expiry_time datetime,
@@ -609,7 +610,7 @@ class T200HomeCreate {
                 return error();
             }).then(function(){
                 sql = `insert into invitation (user_id, status, invite, using_time, expiry_time) 
-                        values(1, 1, 111111, current_timestamp, current_timestamp)`;
+                        values(1, 1, 111111111111, current_timestamp, current_timestamp)`;
                 return client.execute(sql);            
             }, function(){
                 return error();

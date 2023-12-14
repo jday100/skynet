@@ -55,7 +55,7 @@ class T200UserModel extends T200ForumModel {
                             T200SQL.AND(
                                 T200SQL.EQUAL(
                                     T200SQL.PREFIX(this._id, 't1'), 
-                                    this.user_id
+                                    this.identity_id
                                 ),
                                 T200SQL.EQUAL(
                                     T200SQL.PREFIX("status", 't2'), 
@@ -78,7 +78,7 @@ class T200UserModel extends T200ForumModel {
                                 ),
                                 T200SQL.EQUAL(
                                     T200SQL.PREFIX(this._id, 't1'), 
-                                    this.user_id
+                                    this.identity_id
                                 )
                             ),
                             T200SQL.AND(

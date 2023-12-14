@@ -27,14 +27,23 @@ class T200VisitorBiz extends T200SearchBiz {
     login(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
+            let result;
             model.flash_login_fields();
             self.load(model.merge_login()).then(function(data){
+                result = data;
                 if(data){
-                    resolve(data);
-                }else{
-                    reject();
+                    model.user_id = data.user_id;
                 }
             }, function(err){
+                return error();
+            }).then(function(){
+                model.flash_login_update();
+                return self.modify(model.merge_update_by_key());
+            }, function(){
+                return error();
+            }).then(function(){
+                resolve(result);
+            }, function(){
                 reject();
             });
         });

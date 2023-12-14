@@ -30,8 +30,10 @@ async function do_content_house_rent_list(request, response, cookie, session, re
         }
 
         house.user_id = session.get("userid");
+        house.identity_id = session.get("identityid");
 
-        if(T200HttpsForm.verify_id(house.user_id)){
+        if(T200HttpsForm.verify_id(house.user_id)
+            && T200HttpsForm.verify_id(house.identity_id)){
             house.flash_content_paging_fields();
             house.merge_paging_count = house.merge_user_paging_count;
             house.merge_paging_list = house.merge_user_paging_list;

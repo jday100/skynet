@@ -1,7 +1,9 @@
 const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
+const T200Crypto = require('../../library/crypto/T200Crypto.js');
 const T200HttpsForm = require('../../library/net/T200HttpsForm.js');
+
 const T200Visitor = require('../models/T200Visitor.js');
 const T200UserPerson = require('../models/T200UserPerson.js');
 const T200HomeVisitorBiz = require('../biz/T200HomeVisitorBiz.js');
@@ -15,29 +17,25 @@ async function do_login(request, response, cookie, session, resource) {
         let visitor = new T200Visitor();
         let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
 
-        visitor.username = request.get('username');
-        visitor.password = request.get('password');
+        visitor.username = request.get("username");
+        let password = request.get("password");
 
-        if(T200HttpsForm.verify_text(visitor.username)
-            && T200HttpsForm.verify_text(visitor.password)){
-
+        if(T200HttpsForm.verify_texts(2, 50, visitor.username)
+            && T200HttpsForm.verify_texts(6, 50, password)){
+            visitor.password = T200Crypto.sha1(password);
+            visitor.ip = request.req.ip;
             VisitorBiz.login(visitor).then(function(data){
                 set_data(cookie, session, data);
 
                 response.type('json');
                 resolve(data.identity_id);
-            }, function(err){
-                response.type('json');
-                response.data('failure');
-                reject(err);
-            }).catch(function(err){
+            }, function(){
                 response.type('json');
                 reject();
             });
-
         }else{
             response.type('json');
-            reject(T200Error.build(1));
+            reject();
         }
     });
 
@@ -71,28 +69,7 @@ async function do_logout(request, response, cookie, session, resource) {
         let person = new T200UserPerson();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
-        person.user_id = session.get("userid");
-
-        if(T200HttpsForm.verify_id(person.user_id)){
-            UserBiz.logout(person).then(function(data){
-                clear_data(cookie, session, person);
-
-                response.type('json');
-                response.data('success');
-                resolve();
-            }, function(err){
-                response.type('json');
-                response.data('failure');
-                reject(err);
-            }).catch(function(err){
-                response.type('json');
-                reject();
-            });
-
-        }else{
-            response.type('json');
-            reject(T200Error.build(1));
-        }
+        
     });
 
     return promise;

@@ -21,7 +21,8 @@ class T200UserPerson extends T200HomeUserModel {
             ['year', this.year],
             ['month', this.month],
             ['day', this.day],
-            ['intro', `'${this.intro}'`]
+            ['intro', `'${this.intro}'`],
+            ['flag', 1]
         ];
     }
 

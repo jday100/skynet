@@ -79,6 +79,27 @@ class T200HttpsForm {
         return true;
     }
 
+    static verify_texts_6(value) {
+        if(value && 6 == value.length){
+            return true;
+        }
+        return false;
+    }
+
+    static verify_texts_12(value) {
+        if(value && 12 == value.length){
+            return true;
+        }
+        return false;
+    }
+
+    static verify_texts(short, long, value) {
+        if(value && short <= value.length && long >= value.length){
+            return true;
+        }
+        return false;
+    }
+
     static verify_text_50(value) {
         if(value && 50 >= value.length){
             return true;

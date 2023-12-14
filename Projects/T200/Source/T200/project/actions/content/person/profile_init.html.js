@@ -77,6 +77,7 @@ async function do_content_person_profile_init_save(request, response, cookie, se
             UserBiz.modify(person.merge_update_by_key()).then(function(result){
                 response.type("json");
                 if(result){
+                    session.set('flag', 1);
                     resolve();
                 }else{
                     reject();
