@@ -51,22 +51,24 @@
             <a href="/exchange/index.html">Exchange</a>
         </nav>
 
-
-
-        <fieldset>
-            <legend><a href="/region/index.html">Region</a></legend>
-            <div class="region">
-
-            </div>
-        </fieldset>
-
         <fieldset class="title">
-            <legend><a id="house" href="/house/index_city.html">House</a></legend>
-            <div class="channel">
+            <legend>
+                <a id="house" href="/house/index.html">House</a>
+                 - 
+                <a id="rent" href="/house/rent.html">Rent</a>
+                 - 
+                <a href="">Long</a>
+            </legend>
+            <div class="channel_box">
+                <div>
+                    <input type="text">
+                    <button>Search</button>
+                </div>
                 <div id="list_box">
                     <form id="form" class="list_form">
                         <input type="hidden" name="test">
                         <input type="hidden" id="id" name="id" value="">
+                        <input type="hidden" name="page" value="1">
                         <input type="hidden" name="search">
                     </form>
                 </div>              
@@ -85,10 +87,10 @@
     $.win.onload = function () {
         nav_check();
 
-        update_id("/house/index_city.html", "house", "id");
+        update_city_id("/house/index_city.html", "house", "/house/rent_city.html", "rent", "id");
 
         let data = formtostring('form');
-        $.post('/house/city/list', data, function (result) {
+        $.post('/house/rent/long/city', data, function (result) {
             $.id("list_box").innerHTML = result;
             update_time();
         }, function () {

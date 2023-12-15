@@ -204,6 +204,50 @@ function query_pid() {
     }
 }
 
+function update_id(url, name, id) {
+    let query = location.search;
+
+    if(null == query){
+
+    }else{
+        if(-1 != query.indexOf("?")) {
+            let str = query.slice(1);
+            let values = str.split("=");
+
+            if(2 == values.length){
+                if("id" == values[0]){
+                    $.set_cookie("id", values[1]);
+                    $.id(id).value = values[1];
+                    $.id(name).href = `${url}?id=${values[1]}`;
+                }
+            }
+        }
+    }
+}
+
+function update_city_id(parent_url, parent_name, child_url, child_name, id) {
+    let query = location.search;
+
+    if(null == query){
+
+    }else{
+        if(-1 != query.indexOf("?")) {
+            let str = query.slice(1);
+            let values = str.split("=");
+
+            if(2 == values.length){
+                if("id" == values[0]){
+                    $.set_cookie("id", values[1]);
+                    $.id(id).value = values[1];
+
+                    $.id(parent_name).href = `${parent_url}?id=${values[1]}`;
+                    $.id(child_name).href = `${child_url}?id=${values[1]}`;
+                }
+            }
+        }
+    }
+}
+
 function query_page() {
     let query = location.search;
 

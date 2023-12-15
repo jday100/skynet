@@ -4,22 +4,22 @@ const T200Error = require('../../../library/T200Error.js');
 const T200HttpsForm = require('../../../library/net/T200HttpsForm.js');
 const T200HomeView = require('../../view/T200HomeView.js');
 
-const T200HomeHouseCityIndex = require('../../biz/T200HomeHouseCityIndex.js');
+const T200HomeHouseRentCityIndex = require('../../biz/T200HomeHouseRentCityIndex.js');
 
 
-async function do_house_city_list(request, response, cookie, session, resource) {
-    log(__filename, "do_house_city_list");
+async function do_house_rent_city_list(request, response, cookie, session, resource) {
+    log(__filename, "do_house_rent_city_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let view = new T200HomeView(resource);
-        let HouseIndex = new T200HomeHouseCityIndex(request, cookie, session);
+        let HouseRentIndex = new T200HomeHouseRentCityIndex(request, cookie, session);
 
         let city_id = request.get("id");
 
         if(T200HttpsForm.verify_id(city_id)){
-            return HouseIndex.load_index(city_id).then(function(data){
+            return HouseRentIndex.load_index(city_id).then(function(data){
                 data.city_id = city_id;
-                return view.render_file('house/index_city.ejs', data);
+                return view.render_file('house/rent_city.ejs', data);
             }, function(err){
                 return error();
             }).then(function(result){
@@ -41,4 +41,4 @@ async function do_house_city_list(request, response, cookie, session, resource) 
 }
 
 
-global.action.use_post('/house/city/list', do_house_city_list);
+global.action.use_post('/house/rent/city/list', do_house_rent_city_list);
