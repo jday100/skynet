@@ -1,0 +1,71 @@
+<fieldset>
+    <legend><a href="/job/wanted_full.html">Full</a></legend>
+    <div class="channel_box">
+        <%
+            let k = job_fulls.length;
+            for(let i=0;i<10;i++){
+                if(i < k){
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/house/house_rent.html?id=<%=job_fulls[i].id%>"><%=job_fulls[i].title%></a>
+                        </div>
+                        <div>
+                            <a href=""><%="user"%></a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }else{
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/house/house_rent.html">unpublished</a>
+                        </div>
+                        <div>
+                            <a href="">any</a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }
+            }
+        %>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend><a href="/job/wanted_part.html">Part</a></legend>
+    <div class="channel_box">
+        <%
+            k = job_parts.length;
+            for(let i=0;i<10;i++){
+                if(i < k){
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/house/house_rent.html?id=<%=job_parts[i].id%>"><%=job_parts[i].title%></a>
+                        </div>
+                        <div>
+                            <a href=""><%="user"%></a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }else{
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/house/house_rent.html">unpublished</a>
+                        </div>
+                        <div>
+                            <a href="">any</a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }
+            }
+        %>
+    </div>
+</fieldset>
