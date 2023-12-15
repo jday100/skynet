@@ -53,11 +53,11 @@
 
         <fieldset class="title">
             <legend>
-                <a href="/house/index.html">House</a>
+                <a id="house" href="/house/index.html">House</a>
                  - 
-                <a href="/house/rent.html">Rent</a>
+                <a id="rent" href="/house/rent.html">Rent</a>
                  - 
-                <a href="/house/rent_short.html">Short</a>
+                <a href="">Short</a>
             </legend>
             <div class="channel_box">
                 <div>
@@ -67,6 +67,7 @@
                 <div id="list_box">
                     <form id="form" class="list_form">
                         <input type="hidden" name="test">
+                        <input type="hidden" id="id" name="id" value="">
                         <input type="hidden" name="page" value="1">
                         <input type="hidden" name="search">
                     </form>
@@ -86,8 +87,10 @@
     $.win.onload = function () {
         nav_check();
 
+        update_city_id("/house/index_city.html", "house", "/house/rent_city.html", "rent", "id");
+
         let data = formtostring('form');
-        $.post('/house/rent/short', data, function (result) {
+        $.post('/house/rent/short/city', data, function (result) {
             $.id("list_box").innerHTML = result;
             update_time();
         }, function () {

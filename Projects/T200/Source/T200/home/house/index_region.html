@@ -61,12 +61,12 @@
         </fieldset>
 
         <fieldset class="title">
-            <legend><a href="/house/index.html">House</a></legend>
+            <legend><a id="house" href="/house/index.html">House</a></legend>
             <div class="channel">
                 <div id="list_box">
                     <form id="form" class="list_form">
                         <input type="hidden" name="test">
-                        <input type="hidden" name="page" value="1">
+                        <input type="hidden" id="id" name="id" value="">
                         <input type="hidden" name="search">
                     </form>
                 </div>              
@@ -84,6 +84,8 @@
 <script>
     $.win.onload = function () {
         nav_check();
+
+        update_id("/house/index_region.html", "house", "id");
 
         let data = formtostring('form');
         $.post('/house/region/list', data, function (result) {

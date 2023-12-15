@@ -88,10 +88,10 @@
 
         region_setting();
 
-        update_city_id("/house/index_city.html", "house", "/house/rent_city.html", "rent", "id");
+        update_city_id("/house/index_region.html", "house", "/house/rent_region.html", "rent", "id");
 
         let data = formtostring('form');
-        $.post('/house/rent/city/list', data, function (result) {
+        $.post('/house/rent/region/list', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
             alert('Load Failure!');

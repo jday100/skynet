@@ -60,15 +60,17 @@
 
         <fieldset class="title">
             <legend>
-                <a id="house" href="/house/index.html">House</a>
+                <a id="trading" href="/trading/index.html">Trading</a>
                  - 
-                <a id="rent" href="/house/rent.html">Rent</a>
+                <a id="sell" href="/trading/Sell.html">Sell</a>
             </legend>
             <div class="channel">
                 <div id="list_box">
                     <form id="form" class="list_form">
                         <input type="hidden" name="test">
                         <input type="hidden" id="id" name="id">
+                        <input type="hidden" name="page" value="1">
+                        <input type="hidden" name="search">
                     </form>
                 </div>
             </div>
@@ -88,10 +90,10 @@
 
         region_setting();
 
-        update_city_id("/house/index_city.html", "house", "/house/rent_city.html", "rent", "id");
+        update_city_id("/trading/index_region.html", "trading", "/trading/sell_region.html", "sell", "id");
 
         let data = formtostring('form');
-        $.post('/house/rent/city/list', data, function (result) {
+        $.post('/trading/sell/region/list', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
             alert('Load Failure!');

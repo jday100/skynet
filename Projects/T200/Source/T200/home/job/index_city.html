@@ -21,7 +21,6 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
-    <script src="/js/t200region.js"></script>
 
 </head>
 
@@ -52,25 +51,25 @@
             <a href="/exchange/index.html">Exchange</a>
         </nav>
 
+
         <fieldset>
             <legend><a href="/region/index.html">Region</a></legend>
-            <div id="region_box" class="region">
+            <div class="region">
+
             </div>
         </fieldset>
 
         <fieldset class="title">
-            <legend>
-                <a id="house" href="/house/index.html">House</a>
-                 - 
-                <a id="rent" href="/house/rent.html">Rent</a>
-            </legend>
+            <legend><a id="job" href="/job/index.html">Job</a></legend>
             <div class="channel">
                 <div id="list_box">
                     <form id="form" class="list_form">
                         <input type="hidden" name="test">
-                        <input type="hidden" id="id" name="id">
+                        <input type="hidden" id="id" name="id" value="">
+                        <input type="hidden" name="page" value="1">
+                        <input type="hidden" name="search">
                     </form>
-                </div>
+                </div>        
             </div>
         </fieldset>
 
@@ -86,13 +85,12 @@
     $.win.onload = function () {
         nav_check();
 
-        region_setting();
-
-        update_city_id("/house/index_city.html", "house", "/house/rent_city.html", "rent", "id");
+        update_id("/job/index_city.html", "job", "id");
 
         let data = formtostring('form');
-        $.post('/house/rent/city/list', data, function (result) {
+        $.post('/job/city/list', data, function (result) {
             $.id("list_box").innerHTML = result;
+            update_time();
         }, function () {
             alert('Load Failure!');
         });

@@ -60,14 +60,15 @@
 
         <fieldset class="title">
             <legend>
-                <a href="/house/index.html">House</a>
+                <a id="house" href="/house/index.html">House</a>
                  - 
-                <a href="/house/wanted.html">Wanted</a>
+                <a id="wanted" href="/house/wanted.html">Wanted</a>
             </legend>
             <div class="channel">
                 <div id="list_box">
                     <form id="form" class="list_form">
                         <input type="hidden" name="test">
+                        <input type="hidden" id="id" name="id">
                     </form>
                 </div>
             </div>
@@ -87,8 +88,10 @@
 
         region_setting();
 
+        update_city_id("/house/index_city.html", "house", "/house/wanted_city.html", "wanted", "id");
+
         let data = formtostring('form');
-        $.post('/house/wanted/list', data, function (result) {
+        $.post('/house/wanted/city/list', data, function (result) {
             $.id("list_box").innerHTML = result;
         }, function () {
             alert('Load Failure!');
