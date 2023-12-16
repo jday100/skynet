@@ -1,6 +1,7 @@
 const { error, log } = require('../../../library/T200Lib.js');
 const T200Error = require('../../../library/T200Error.js');
 
+const T200Crypto = require('../../../library/crypto/T200Crypto.js');
 const T200HttpsForm = require('../../../library/net/T200HttpsForm.js');
 const T200CookieItem = require('../../../library/net/T200CookieItem.js');
 
@@ -15,12 +16,14 @@ async function do_admin_login(request, response, cookie, session, resource) {
         let person = new T200VisitorPerson();
         let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
 
+        let password = request.get('password');
         person.username = request.get('username');
-        person.password = request.get('password');
+        
 
-        if(T200HttpsForm.verify_text(person.username)
-            && T200HttpsForm.verify_text(person.password)){
-
+        if(T200HttpsForm.verify_texts(2, 50, person.username)
+            && T200HttpsForm.verify_texts(6, 50, password)){
+            person.password = T200Crypto.sha1(password);
+            person.ip = request.req.ip;
             VisitorBiz.admin_login(person).then(function(data){
                 set_data(cookie, session, data);
 
@@ -32,10 +35,12 @@ async function do_admin_login(request, response, cookie, session, resource) {
                 response.data('failure');
                 reject(err);
             }).catch(function(err){
+                response.type('json');
                 reject();
             });
 
         }else{
+            response.type('json');
             reject(T200Error.build(1));
         }
     });

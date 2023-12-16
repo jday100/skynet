@@ -285,6 +285,7 @@ class T200HomeCreate {
                 country_name varchar(100),
                 username varchar(50) UNIQUE,
                 identity_id int not null default 0,
+                nickname varchar(100),
                 password varchar(100),
                 email varchar(100) UNIQUE,
                 gender int not null default 0,
@@ -568,7 +569,7 @@ class T200HomeCreate {
                 return error();
             }).then(function(){
                 sql = `insert into person (status, username, password, email)
-                        values(1, 'admin', '1', 'admin@admin.com')`;
+                        values(1, 'admin', '3d4f2bf07dc1be38b20cd6e46949a1071f9d0e3d', 'admin@admin.com')`;
                 return client.execute(sql);
             }, function(){
                 return error();

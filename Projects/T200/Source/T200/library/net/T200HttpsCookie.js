@@ -41,7 +41,6 @@ class T200HttpsCookie {
 
     set(name, value) {
         log(__filename, "Cookie set", name);
-        //this.res.setHeader('Set-Cookie', `${name}=${value};`);
         let cookie = new T200CookieItem(name, value);
         let msg = cookie.to_string();
         this.res.setHeader('Set-Cookie', msg);

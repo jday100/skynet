@@ -93,7 +93,27 @@ class T200VisitorModel extends T200SearchModel {
     }
 
     admin_login_fields() {
-        return `user_id, city_id, username`;
+        return `user_id, username`;
+    }
+
+    flash_admin_login_update() {
+        this._name_value = [
+            ['login_time',  'current_timestamp'],
+            ['ip',          `'${this.ip}'`]
+        ];
+    }
+
+    
+    merge_admin_update() {
+        return T200SQL.UPDATE(
+            T200SQL.NAME(this._table), 
+            T200SQL.SET(
+                T200SQL.NAME_VALUE(this._name_value)
+            ),
+            T200SQL.WHERE(
+                T200SQL.EQUAL(this._key, this[this._key])
+            )
+        );
     }
 }
 

@@ -16,9 +16,10 @@ function logout() {
     let url = "/logout";
     let result = "test=";
     $.post(url, result, function(data){
+        $.set_path_cookie('sid', 0, '/');
         location.reload();
     }, function(){
-        $.set_cookie('sid', 0);
+        $.set_path_cookie('sid', 0, '/');
         location.reload();
     });
 }

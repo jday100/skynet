@@ -27,22 +27,28 @@ class T200AdminModel extends T200ForumModel {
 
         if(undefined == this.status || '' == this.status){
             where = T200SQL.WHERE(
-                        T200SQL.EQUAL(
-                            T200SQL.PREFIX("status", 't2'), 
-                            1
+                        T200SQL.AND(
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("status", 't2'), 
+                                1
+                            ),
+                            T200SQL.EQUAL("parent_type", 0)
                         )
                     );
         }else{
             where = T200SQL.WHERE(
                         T200SQL.AND(
-                            T200SQL.EQUAL(
-                                T200SQL.PREFIX("status", "t1"), 
-                                this.status
+                            T200SQL.AND(
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("status", "t1"), 
+                                    this.status
+                                ),
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("status", "t2"), 
+                                    1
+                                )
                             ),
-                            T200SQL.EQUAL(
-                                T200SQL.PREFIX("status", "t2"), 
-                                1
-                            )
+                            T200SQL.EQUAL("parent_type", 0)
                         )
                     );
         }

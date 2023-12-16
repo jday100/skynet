@@ -11,20 +11,17 @@ class T200UserNote extends T200HomeUserModel {
         super();
         this._table = "note";
         this._key = "id";
-        this._user_id = "user_id";
-        this._id = "identity_id";
+        this._id = "user_id";
 
         this.status = 0;
 
         this._person_table = "person";
-        this._identity_table = "identity";
     }
 
     flash_content_append_fields() {
         this._fields = [
             'user_id',
             'status',
-            'identity_id',
             'title',
             'content'
         ];
@@ -34,7 +31,6 @@ class T200UserNote extends T200HomeUserModel {
         this._values = [
             this.user_id,
             this.status,
-            this.identity_id,
             `'${this.title}'`,
             `'${this.content}'`
         ];
@@ -82,6 +78,87 @@ class T200UserNote extends T200HomeUserModel {
             ['Delete', 'list_hit_delete', 'form', 'list_box', '/content/note/remove'],
             ['Publish', 'list_hit_publish', 'form', 'list_box', '/content/note/publish']
         ];
+    }
+
+    
+    merge_user_paging_where() {
+        let where;
+
+        if(undefined == this.status || '' == this.status){
+            where = T200SQL.WHERE(
+                            T200SQL.AND(
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX(this._id, 't1'), 
+                                    this.user_id
+                                ),
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("status", 't2'), 
+                                    1
+                                )
+                            )                       
+                    );
+        }else{
+            where = T200SQL.WHERE(
+                        T200SQL.AND(
+                            T200SQL.AND(
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("status", "t1"), 
+                                    this.status
+                                ),
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX(this._id, 't1'), 
+                                    this.user_id
+                                )
+                            ),
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("status", "t2"), 
+                                1
+                            )
+                        )
+                    );
+        }
+
+        return where;
+    }
+
+    merge_user_paging_count() {
+        let where = this.merge_user_paging_where();
+        return T200SQL.SELECT(
+            T200SQL.AS(T200SQL.COUNT(this._key), 'total'),
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+                ),
+            T200SQL.INNER(
+                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"), 
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            where
+        );
+    }
+
+    merge_user_paging_list() {
+        let where = this.merge_user_paging_where();
+        
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields),
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+                ),
+            T200SQL.INNER(
+                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"), 
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            where,
+            T200SQL.ORDER(T200SQL.DESC(this._key)),
+            T200SQL.LIMIT(this._page_size),
+            T200SQL.OFFSET(this._offset)
+        );
     }
 
 }

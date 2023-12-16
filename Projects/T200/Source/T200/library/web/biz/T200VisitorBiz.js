@@ -30,9 +30,11 @@ class T200VisitorBiz extends T200SearchBiz {
             let result;
             model.flash_login_fields();
             self.load(model.merge_login()).then(function(data){
-                result = data;
                 if(data){
+                    result = data;
                     model.user_id = data.user_id;
+                }else{
+                    return error();
                 }
             }, function(err){
                 return error();
@@ -54,14 +56,25 @@ class T200VisitorBiz extends T200SearchBiz {
     admin_login(model) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
+            let result;
             model._fields = model.admin_login_fields();
             self.load(model.merge_admin_login()).then(function(data){
                 if(data){
-                    resolve(data);
+                    result = data;
+                    model.user_id = data.user_id;
                 }else{
-                    reject();
+                    return error();
                 }
             }, function(err){
+                return error();
+            }).then(function(){
+                model.flash_admin_login_update();
+                return self.modify(model.merge_admin_update());
+            }, function(){
+                return error();
+            }).then(function(){
+                resolve(result);
+            }, function(){
                 reject();
             });
         });

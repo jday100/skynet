@@ -3,6 +3,7 @@ const T200Error = require('../T200Error.js');
 
 const urlparse = require('url');
 const querystring = require('querystring');
+const { unlink } = require('fs');
 
 class T200HttpsRequest {
     constructor(req) {
@@ -54,6 +55,14 @@ class T200HttpsRequest {
     get(name) {
         log(__filename, "Request get", name);
         return this.req.values[name];
+    }
+
+    get_bool(name) {
+        let value = this.req.values[name];
+        if(undefined == value || null == value){
+            return false;
+        }
+        return true;
     }
 }
 

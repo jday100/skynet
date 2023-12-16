@@ -1,12 +1,12 @@
 body > div > div {
-    width: 1000px;
+    width: 1024px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
 }
 
 body > div > div > fieldset {
-    width: 200px;
+    width: 164px;
     min-height: 600px;
 }
 
@@ -24,7 +24,7 @@ nav a {
 	justify-content:left;
 }
 
-form {
+.form {
     width: 1024px;
     min-height: 200px;
     background-color: lightpink;
@@ -33,6 +33,15 @@ form {
     align-items: center;
     flex-direction: column;
     padding-bottom: 20px;
+}
+
+form {
+    width: 770px;
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 

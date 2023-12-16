@@ -72,6 +72,14 @@
                         </div>
                     </details>
                     <details class="menu">
+                        <summary>Invitation</summary>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/admin/invitation/index.html">Invite</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="menu">
                         <summary>Notice</summary>
                         <div class="menu_group">
                             <div class="menu_item">
@@ -159,6 +167,16 @@
         let result = formtostring("form");
         $.post('/admin/global', result, function(data){
             $.id("list_box").innerHTML = data;
+
+            $.id('submit').onclick = function(){
+                let data = formtostring('form');
+                $.post('/admin/global/save', data, function(flag){
+                    alert('Save Success!');
+                    reload();
+                }, function(err){
+                    alert('Save Failure!');
+                });
+            };
         }, function(){
             alert("Load Failure!");
         });

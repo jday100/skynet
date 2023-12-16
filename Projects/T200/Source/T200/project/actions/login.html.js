@@ -8,6 +8,7 @@ const T200Visitor = require('../models/T200Visitor.js');
 const T200UserPerson = require('../models/T200UserPerson.js');
 const T200HomeVisitorBiz = require('../biz/T200HomeVisitorBiz.js');
 const T200HomeUserBiz = require('../biz/T200HomeUserBiz.js');
+const T200CookieItem = require('../../library/net/T200CookieItem.js');
 
 
 async function do_login(request, response, cookie, session, resource) {
@@ -92,7 +93,9 @@ async function do_logout(request, response, cookie, session, resource) {
 
 
 function clear_data(cookie, session, person) {
-    cookie.set("sid", "0");
+    let item = new T200CookieItem("sid", "0");
+    item._path = "/";
+    cookie.set_item(item);
 }
 
 

@@ -23,6 +23,15 @@ class T200 {
         document.cookie = `${name}=${value}`;
     }
 
+    set_path_cookie(name, value, path) {
+        document.cookie = `${name}=${value};path=${path};`;
+    }
+
+    clear_cookie(name, value, path) {
+        let time = Date.now();
+        document.cookie = `${name}=${value}; path=${path}; Expires=${time};`;
+    }
+
     static create() {
         return new T200();
     }

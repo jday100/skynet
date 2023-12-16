@@ -34,7 +34,6 @@ class T200AdminPerson extends T200HomeAdminModel {
     flash_admin_paging_fields() {
         this._fields = [
             T200SQL.AS('user_id', 'id'),
-            'city_id',
             'status',
             'username',
             'nickname',
