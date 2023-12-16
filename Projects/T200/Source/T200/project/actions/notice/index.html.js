@@ -16,10 +16,9 @@ async function do_notice_list(request, response, cookie, session, resource) {
 
         if(true){
             notice._fields = notice.list_fields();
-            notice._order_direction = "DESC";
-            notice.paging_count_sql = notice.merge_count();
-            notice.paging_list_sql = notice.merge_paging();
-            VisitorBiz.paging(notice).then(function(result){
+            notice.merge_paging_count = notice.merge_count;
+            notice.merge_paging_list = notice.merge_paging;
+            VisitorBiz.paging2(notice).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.paging = result.paging;

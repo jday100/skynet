@@ -87,6 +87,8 @@ body > div > fieldset > div > fieldset > div {
 .notice > div > div {
     width: 333px;
     line-height: 35px;
+    overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 body > div > fieldset > div > fieldset > div > div {
@@ -273,6 +275,12 @@ input[type="email"] + img + button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.list_item > div {
+    width: 600px;
+    overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .list_time {

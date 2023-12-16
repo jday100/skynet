@@ -38,7 +38,8 @@
 }
 
 .list_item_left {
-
+    overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .list_item_right {
@@ -83,4 +84,6 @@
 
 .list_name {
     width: 100px;
+    overflow: hidden;
+	text-overflow: ellipsis;
 }

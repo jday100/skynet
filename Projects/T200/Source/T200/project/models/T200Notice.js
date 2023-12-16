@@ -13,6 +13,24 @@ class T200Notice extends T200HomeVisitorModel {
         this.status = 0;
     }
 
+    flash_append_fields() {
+        this._fields = [
+            'user_id',
+            'status',
+            'title',
+            'content'
+        ];
+    }
+
+    flash_append_values() {
+        this._values = [
+            this.user_id,
+            this.status,
+            `'${this.title}'`,
+            `'${this.content}'`,
+        ];
+    }
+
     fields() {
         return "user_id, status, title, content";
     }

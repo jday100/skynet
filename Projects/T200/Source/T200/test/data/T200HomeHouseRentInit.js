@@ -2,10 +2,10 @@ const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
 const T200Moken = require('../../library/T200Moken.js');
-const T200Notice = require('../../project/models/T200Notice.js');
+const T200House = require('../../project/models/T200House.js');
 
 
-class T200HomeNoticeInit {
+class T200HomeHouseRentInit {
     constructor() {
 
     }
@@ -50,4 +50,4 @@ class T200HomeNoticeInit {
     }
 }
 
-module.exports = T200HomeNoticeInit;
+module.exports = T200HomeHouseRentInit;
