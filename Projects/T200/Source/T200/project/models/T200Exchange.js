@@ -19,6 +19,29 @@ class T200Exchange extends T200HomeVisitorModel {
         this._identity_table = "identity";
     }
 
+    flash_append_fields() {
+        this._fields = [
+            'user_id',
+            'status',
+            'parent_type',
+            'parent_id',
+            'title',
+            'content'
+        ];
+    }
+
+    flash_append_values() {
+        this._values = [
+            this.user_id,
+            this.status,
+            this.parent_type,
+            this.parent_id,
+            `'${this.title}'`,
+            `'${this.content}'`
+        ];
+    }
+
+
     fields() {
         return "user_id, status, title, content";
     }

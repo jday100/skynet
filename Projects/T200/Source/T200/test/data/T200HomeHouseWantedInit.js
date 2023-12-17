@@ -5,7 +5,7 @@ const T200Moken = require('../../library/T200Moken.js');
 const T200House = require('../../project/models/T200House.js');
 
 
-class T200HomeHouseRentInit {
+class T200HomeHouseWantedInit {
     constructor() {
 
     }
@@ -35,7 +35,7 @@ class T200HomeHouseRentInit {
                 house.title = title;
                 house.content = content;
 
-                house._table = "house_rent";
+                house._table = "house_wanted";
                 house.flash_append_fields();
                 house.flash_append_values();
 
@@ -59,4 +59,4 @@ class T200HomeHouseRentInit {
     }
 }
 
-module.exports = T200HomeHouseRentInit;
+module.exports = T200HomeHouseWantedInit;

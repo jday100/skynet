@@ -2,10 +2,10 @@ const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
 const T200Moken = require('../../library/T200Moken.js');
-const T200House = require('../../project/models/T200House.js');
+const T200Job = require('../../project/models/T200Job.js');
 
 
-class T200HomeHouseRentInit {
+class T200HomeJobRecruitInit {
     constructor() {
 
     }
@@ -13,7 +13,7 @@ class T200HomeHouseRentInit {
     execute(client) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            let house = new T200House();
+            let job = new T200Job();
             let result = false;
 
             for(let i=0;i<1000;i++){
@@ -21,25 +21,25 @@ class T200HomeHouseRentInit {
                 let status = T200Moken.mock_int(0, 1);
                 let parent_type = T200Moken.mock_int(0, 1);
                 let parent_id = T200Moken.mock_int(1, 100);
-                let type_long = T200Moken.mock_int(0, 1);
-                let type_short = T200Moken.mock_int(0, 1);
+                let type_full = T200Moken.mock_int(0, 1);
+                let type_part = T200Moken.mock_int(0, 1);
                 let title = T200Moken.mock_chinese(6, 255);
                 let content = T200Moken.mock_chinese(6, 1024);
 
-                house.user_id = user_id;
-                house.status = status;
-                house.parent_type = parent_type;
-                house.parent_id = parent_id;
-                house.type_long = type_long;
-                house.type_short = type_short;
-                house.title = title;
-                house.content = content;
+                job.user_id = user_id;
+                job.status = status;
+                job.parent_type = parent_type;
+                job.parent_id = parent_id;
+                job.type_full = type_full;
+                job.type_part = type_part;
+                job.title = title;
+                job.content = content;
 
-                house._table = "house_rent";
-                house.flash_append_fields();
-                house.flash_append_values();
+                job._table = "job_recruit";
+                job.flash_append_fields();
+                job.flash_append_values();
 
-                await client.execute(house.merge_insert()).then(function(){
+                await client.execute(job.merge_insert()).then(function(){
                     result = true;
                 }, function(){
                     result = false;
@@ -59,4 +59,4 @@ class T200HomeHouseRentInit {
     }
 }
 
-module.exports = T200HomeHouseRentInit;
+module.exports = T200HomeJobRecruitInit;

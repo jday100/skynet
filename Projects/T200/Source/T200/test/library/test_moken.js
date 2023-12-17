@@ -20,3 +20,9 @@ for(let i=0;i<100;i++){
 for(let i=0;i<100;i++){
     console.log(T200Moken.mock_chinese(6, 50));
 }
+
+let moken = new T200Moken();
+
+for(let i=0;i<10;i++){
+    console.log(moken.mock_unique(1, 10));
+}
