@@ -1,0 +1,121 @@
+.nav_channel {
+	justify-content:left;
+}
+
+.notice_box {
+    height: 100px;
+}
+
+.region_box {
+    height: 50px;
+}
+
+.home_box {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+
+}
+
+.home_box > div {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+
+.home_box > div > fieldset {
+    width: 400px;
+}
+
+.home_box > div > fieldset > div {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home_box > div > fieldset > div > div {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item_left {
+    width: 300px;
+}
+
+.item_right {
+    width: 100px;
+}
+
+.home_form {
+    width: 1024px;
+    background-color: lightpink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.home_form > .form_title {
+    width: 400px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+.home_form > .form_msg {
+    width: 400px;
+    line-height: 30px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home_form > div > div {
+    width: 400px;
+    line-height: 35px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.home_form > div > div > label {
+    width: 92px;
+    display: block;
+}
+
+.home_form > div > div > input {
+    width: 284px;
+}
+
+.home_form > div > div > button {
+    width: 60px;
+}
+
+.home_form > div > div > div {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.code {
+    width: 200px;
+}
+
+
+.home_form img {
+    width: 16px;
+}

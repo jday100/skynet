@@ -54,22 +54,47 @@
         <form id="form" class="home_form">
             <input type="hidden" name="test">
             <div class="form_title">
-                Login
+                Register
             </div>
             <div class="form_msg">
                 Hello
             </div>
             <div id="main">
                 <div>
-                    <label >Username:</label>
+                    <label>Username:</label>
                     <input type="text" name="username">
+                    <img id="username_img"/>
                 </div>
                 <div>
-                    <label >Password:</label>
-                    <input type="password" name="password">
+                    <label>Password:</label>
+                    <input type="password" name="password1">
+                    <img id="username_img"/>
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" name="password2">
+                    <img id="username_img"/>
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" name="email">
+                    <img id="username_img"/>
+                </div>
+                <div>
+                    <label>AuthCode:</label>
+                    <input style="width: 150px;" type="password" name="auth">
+                    <img id="username_img"/>
+                    <button style="margin-left: 50px;">Send</button>
+                </div>
+                <div>
+                    <label>InviteCode:</label>
+                    <input style="width: 150px;" type="password" name="invite">
+                    <img id="username_img"/>
                 </div>
                 <div class="button">
-                    <button id="submit">Submit</button>
+                    <div>
+                        <button id="submit">Submit</button>
+                    </div>
                 </div>
             </div>
             <div class="form_msg">
@@ -89,20 +114,20 @@
 </body>
 
 <script>
-    $.win.onload = function(){
-        $.id('form').onsubmit = function(){
+    $.win.onload = function () {
+        $.id('form').onsubmit = function () {
             return false;
         };
-        
-        $.id('submit').onclick = function(){
+
+        $.id('submit').onclick = function () {
             let data = formtostring('form');
-            $.post('/login', data, function(flag){
-                if(flag){
+            $.post('/login', data, function (flag) {
+                if (flag) {
                     forward("/content/index.html");
-                }else{
+                } else {
                     forward("/content/person/profile_init.html");
                 }
-            }, function(err){
+            }, function (err) {
                 alert('Login Failure!');
             });
         };

@@ -1,0 +1,44 @@
+body {
+    background-color:aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    line-height: 30px;
+}
+
+a {
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+    color:blue;
+}
+
+body > div {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+body > div > nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header + nav {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+header {
+    height: 200px;
+}
+
+footer {
+    height: 50px;
+}

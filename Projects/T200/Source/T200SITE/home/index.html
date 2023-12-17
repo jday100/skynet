@@ -25,9 +25,7 @@
 </head>
 
 <body>
-
     <div>
-
         <nav>
             <div>
                 <a href="/">Home</a> |
@@ -51,62 +49,60 @@
             <a href="/exchange/index.html">Exchange</a>
         </nav>
 
-        <form id="form" class="home_form">
-            <input type="hidden" name="test">
-            <div class="form_title">
-                Login
-            </div>
-            <div class="form_msg">
-                Hello
-            </div>
-            <div id="main">
+        <div>
+            <fieldset class="notice_box">
+                <legend>Notice</legend>
                 <div>
-                    <label >Username:</label>
-                    <input type="text" name="username">
+
                 </div>
+            </fieldset>
+            <fieldset class="region_box">
+                <legend>Region</legend>
                 <div>
-                    <label >Password:</label>
-                    <input type="password" name="password">
+                    
                 </div>
-                <div class="button">
-                    <button id="submit">Submit</button>
+            </fieldset>
+            <fieldset class="home_box">
+                <legend>House</legend>
+                <div>
+                    <fieldset>
+                        <legend>Rent</legend>
+                        <div>
+                            <div>
+                                <div class="item_left">
+                                    title
+                                </div>
+                                <div class="item_right">
+                                    username
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Wanted</legend>
+                        <div>
+                            <div>
+                                <div class="item_left">
+                                    title
+                                </div>
+                                <div class="item_right">
+                                    username
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
                 </div>
-            </div>
-            <div class="form_msg">
-                <a href="/forget.html">Forget</a>
-            </div>
-            <div class="form_msg">
-                <a href="/register.html">Register</a>
-            </div>
-        </form>
+            </fieldset>
+        </div>
 
         <footer>
 
         </footer>
-
     </div>
-
 </body>
 
 <script>
-    $.win.onload = function(){
-        $.id('form').onsubmit = function(){
-            return false;
-        };
-        
-        $.id('submit').onclick = function(){
-            let data = formtostring('form');
-            $.post('/login', data, function(flag){
-                if(flag){
-                    forward("/content/index.html");
-                }else{
-                    forward("/content/person/profile_init.html");
-                }
-            }, function(err){
-                alert('Login Failure!');
-            });
-        };
-    };
+
 </script>
 
 </html>
