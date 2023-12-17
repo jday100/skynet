@@ -320,10 +320,16 @@ input[type="email"] + img + button {
 
 .forum_user {
     line-height: 35px;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .forum_intro {
     min-height: 145px;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .forum_article {
@@ -452,12 +458,30 @@ input[type="email"] + img + button {
     align-items: center;
 }
 
+.left {
+    width: 300px;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .right {
+    width: 184px;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .time {
     margin-left: 10px;
+}
+
+
+.right > a {
+    overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
 }

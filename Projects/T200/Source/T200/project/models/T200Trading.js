@@ -23,6 +23,7 @@ class T200Trading extends T200HomeVisitorModel {
     flash_append_fields() {
         this._fields = [
             'user_id',
+            'identity_id',
             'status',
             'parent_type',
             'parent_id',
@@ -34,6 +35,7 @@ class T200Trading extends T200HomeVisitorModel {
     flash_append_values() {
         this._values = [
             this.user_id,
+            this.identity_id,
             this.status,
             this.parent_type,
             this.parent_id,

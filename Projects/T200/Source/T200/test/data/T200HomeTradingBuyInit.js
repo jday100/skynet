@@ -18,13 +18,19 @@ class T200HomeTradingBuyInit {
 
             for(let i=0;i<1000;i++){
                 let user_id = T200Moken.mock_int(1, 1000);
+                let identity_id = T200Moken.mock_int(1, 1000);
                 let status = T200Moken.mock_int(0, 1);
                 let parent_type = T200Moken.mock_int(0, 1);
                 let parent_id = T200Moken.mock_int(1, 100);
                 let title = T200Moken.mock_chinese(6, 255);
                 let content = T200Moken.mock_chinese(6, 1024);
 
+                if(0 == parent_type){
+                    parent_id = i + 1;
+                }
+
                 trading.user_id = user_id;
+                trading.identity_id = identity_id;
                 trading.status = status;
                 trading.parent_type = parent_type;
                 trading.parent_id = parent_id;
