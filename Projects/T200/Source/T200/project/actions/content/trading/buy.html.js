@@ -31,8 +31,10 @@ async function do_content_trading_buy_list(request, response, cookie, session, r
         }
 
         trading.user_id = session.get("userid");
+        trading.identity_id = session.get("identityid");
 
-        if(T200HttpsForm.verify_id(trading.user_id)){
+        if(T200HttpsForm.verify_id(trading.user_id)
+            && T200HttpsForm.verify_id(trading.identity_id)){
             trading.flash_content_paging_fields();
             trading.merge_paging_count = trading.merge_user_paging_count;
             trading.merge_paging_list = trading.merge_user_paging_list;
@@ -96,9 +98,10 @@ async function do_content_trading_buy_search(request, response, cookie, session,
         }
 
         trading.user_id = session.get("userid");
+        trading.identity_id = session.get("identityid");
 
         if(T200HttpsForm.verify_id(trading.user_id)
-            //&& T200HttpsForm.verify_status(trading.status)
+            && T200HttpsForm.verify_id(trading.identity_id)
             && T200HttpsForm.verify_text(search)){
                 trading._search = search;
                 trading.flash_content_paging_fields();
@@ -152,10 +155,12 @@ async function do_content_trading_buy_publish(request, response, cookie, session
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         trading.user_id = session.get("userid");
+        trading.identity_id = session.get("identityid");
         trading.ids = request.get("ids");
         trading.status = 1;
 
         if(T200HttpsForm.verify_id(trading.user_id)
+            && T200HttpsForm.verify_id(trading.identity_id)
             && T200HttpsForm.verify_ids(trading.ids)
             && T200HttpsForm.verify_id(trading.status)){
             trading.flash_content_status_update();
@@ -185,10 +190,12 @@ async function do_content_trading_buy_remove(request, response, cookie, session,
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         trading.user_id = session.get("userid");
+        trading.identity_id = session.get("identityid");
         trading.ids = request.get("ids");
         trading.status = -1;
 
         if(T200HttpsForm.verify_id(trading.user_id)
+            && T200HttpsForm.verify_id(trading.identity_id)
             && T200HttpsForm.verify_ids(trading.ids)
             && T200HttpsForm.verify_status(trading.status)){
             trading.flash_content_status_update();

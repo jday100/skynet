@@ -101,7 +101,7 @@ class T200UserTradingBuy extends T200HomeUserModel {
 
     set_item_left() {
         return [
-            ['Title', 'title', true, '/content/trading/buy.html', 'list_title']
+            ['Title', 'title', true, '/trading/trading_buy.html', 'list_title', true, 'id', 'id']
         ];
     }
 

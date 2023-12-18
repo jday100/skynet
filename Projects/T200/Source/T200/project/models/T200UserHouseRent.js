@@ -105,7 +105,7 @@ class T200UserHouseRent extends T200HomeUserModel {
 
     set_item_left() {
         return [
-            ['Title', 'title', true, '/content/house/rent.html', 'list_title']
+            ['Title', 'title', true, '/house/house_rent.html', 'list_title', true, 'id', 'id']
         ];
     }
 

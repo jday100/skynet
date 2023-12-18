@@ -100,7 +100,7 @@ class T200UserExchange extends T200HomeUserModel {
 
     set_item_left() {
         return [
-            ['Title', 'title', true, '/content/exchange/exchange.html', 'list_title']
+            ['Title', 'title', true, '/exchange/exchange.html', 'list_title', true, 'id', 'id']
         ];
     }
 

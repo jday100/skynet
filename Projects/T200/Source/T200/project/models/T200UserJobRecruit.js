@@ -106,7 +106,7 @@ class T200UserJobRecruit extends T200HomeUserModel {
 
     set_item_left() {
         return [
-            ['Title', 'title', true, '/content/job/recruit.html', 'list_title']
+            ['Title', 'title', true, '/job/job_recruit.html', 'list_title', true, 'id', 'id']
         ];
     }
 

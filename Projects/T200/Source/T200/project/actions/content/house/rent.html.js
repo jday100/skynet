@@ -97,9 +97,10 @@ async function do_content_house_rent_search(request, response, cookie, session, 
         }
 
         house.user_id = session.get("userid");
+        house.identity_id = session.get("identityid");
 
         if(T200HttpsForm.verify_id(house.user_id)
-            //&& T200HttpsForm.verify_status(house.status)
+            && T200HttpsForm.verify_status(house.identity_id)
             && T200HttpsForm.verify_text(search)){
                 house._search = search;
                 house.flash_content_paging_fields();
@@ -153,10 +154,12 @@ async function do_content_house_rent_publish(request, response, cookie, session,
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         house.user_id = session.get("userid");
+        house.identity_id = session.get("identityid");
         house.ids = request.get("ids");
         house.status = 1;
 
         if(T200HttpsForm.verify_id(house.user_id)
+            && T200HttpsForm.verify_id(house.identity_id)
             && T200HttpsForm.verify_ids(house.ids)
             && T200HttpsForm.verify_id(house.status)){
 
@@ -186,10 +189,12 @@ async function do_content_house_rent_remove(request, response, cookie, session, 
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         house.user_id = session.get("userid");
+        house.identity_id = session.get("identityid");
         house.ids = request.get("ids");
         house.status = -1;
 
         if(T200HttpsForm.verify_id(house.user_id)
+            && T200HttpsForm.verify_id(house.identity_id)
             && T200HttpsForm.verify_ids(house.ids)
             && T200HttpsForm.verify_status(house.status)){
             

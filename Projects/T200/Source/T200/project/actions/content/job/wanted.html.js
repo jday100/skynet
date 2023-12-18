@@ -31,8 +31,10 @@ async function do_content_job_wanted_list(request, response, cookie, session, re
         }
 
         job.user_id = session.get("userid");
+        job.identity_id = session.get("identityid");
 
-        if(T200HttpsForm.verify_id(job.user_id)){
+        if(T200HttpsForm.verify_id(job.user_id)
+            && T200HttpsForm.verify_id(job.identity_id)){
             job.flash_content_paging_fields();
             job.merge_paging_count = job.merge_user_paging_count;
             job.merge_paging_list = job.merge_user_paging_list;
@@ -96,9 +98,10 @@ async function do_content_job_wanted_search(request, response, cookie, session, 
         }
 
         job.user_id = session.get("userid");
+        job.identity_id = session.get("identityid");
 
         if(T200HttpsForm.verify_id(job.user_id)
-            //&& T200HttpsForm.verify_status(job.status)
+            && T200HttpsForm.verify_id(job.identity_id)
             && T200HttpsForm.verify_text(search)){
                 job._search = search;
                 job.flash_content_paging_fields();
@@ -152,10 +155,12 @@ async function do_content_job_wanted_publish(request, response, cookie, session,
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         job.user_id = session.get("userid");
+        job.identity_id = session.get("identityid");
         job.ids = request.get("ids");
         job.status = 1;
 
         if(T200HttpsForm.verify_id(job.user_id)
+            && T200HttpsForm.verify_id(job.identity_id)
             && T200HttpsForm.verify_ids(job.ids)
             && T200HttpsForm.verify_id(job.status)){
             job.flash_content_status_update();
@@ -185,10 +190,12 @@ async function do_content_job_wanted_remove(request, response, cookie, session, 
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         job.user_id = session.get("userid");
+        job.identity_id = session.get("identityid");
         job.ids = request.get("ids");
         job.status = -1;
 
         if(T200HttpsForm.verify_id(job.user_id)
+            && T200HttpsForm.verify_id(job.identity_id)
             && T200HttpsForm.verify_ids(job.ids)
             && T200HttpsForm.verify_status(job.status)){
             job.flash_content_status_update();

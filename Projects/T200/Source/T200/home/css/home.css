@@ -477,7 +477,7 @@ input[type="email"] + img + button {
 .right {
     width: 184px;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     overflow: hidden;
 	text-overflow: ellipsis;

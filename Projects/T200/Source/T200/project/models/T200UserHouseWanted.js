@@ -106,7 +106,7 @@ class T200UserHouseWanted extends T200HomeUserModel {
 
     set_item_left() {
         return [
-            ['Title', 'title', true, '/content/house/wanted.html', 'list_title']
+            ['Title', 'title', true, '/house/house_wanted.html', 'list_title', true, 'id', 'id']
         ];
     }
 
