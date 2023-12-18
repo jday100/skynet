@@ -1,8 +1,9 @@
 body {
-    background-color:aqua;
+    background-color:aquamarine;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0;
 }
 
 nav {
@@ -10,14 +11,24 @@ nav {
 }
 
 a {
+    text-decoration: none;
     font-weight: bold;
     margin-left: 5px;
     margin-right: 5px;
     color:blue;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
+fieldset {
+    border: 1px solid darkgray;
+}
+
 body > div {
     width: 1024px;
+    background-color: aqua;
     margin: 0 auto;
 }
 
@@ -41,4 +52,5 @@ header {
 
 footer {
     height: 50px;
+    background-color: bisque;
 }

@@ -1,0 +1,74 @@
+body > div > div {
+	width: 1024px;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    margin-bottom: 10px;
+}
+
+body > div > div > fieldset {
+    width: 164px;
+    min-height: 600px;
+}
+
+body > div > div > fieldset + fieldset{
+    width: 800px;
+    min-height: 600px;
+}
+
+.nav_channel {
+	justify-content:left;
+}
+
+.menu_box > details {
+    line-height: 35px;
+    border-bottom: 1px solid darkgray;
+}
+
+.menu_box > details > div {
+    margin-top: 0px
+}
+
+.menu_box > details > div > div {
+    margin-left: 30px;
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+
+.panel_box {
+    width: 770px;
+}
+
+.panel_msg {
+    display: flex;
+    justify-content: left;
+    align-items: top;
+}
+
+.panel_item {
+    width: 770px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+.panel_box label {
+    width: 100px;
+    display: block;
+}
+
+
+.panel_box input {
+    width: 200px;
+}
+
+.panel_box button {
+    width: 60px;
+}
+
+
+.panel_box .item_left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}

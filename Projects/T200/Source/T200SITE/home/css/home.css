@@ -6,6 +6,36 @@
     height: 100px;
 }
 
+.notice_box > div {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.notice_box > div > div {
+    width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notice_box > div > div > div {
+    width: 333px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notice_box .item_left {
+    width: 200px;
+}
+
+.notice_box .item_right {
+    width: 100px;
+}
+
 .region_box {
     height: 50px;
 }
@@ -15,22 +45,24 @@
     display: flex;
     justify-content: center;
     align-items: top;
-
+    border: 0px;
+    border-top: 1px solid darkgray;
 }
 
 .home_box > div {
-    height: 200px;
+    width: 1024px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: top;
 }
 
 .home_box > div > fieldset {
-    width: 400px;
+    width: 500px;
 }
 
 .home_box > div > fieldset > div {
-    width: 400px;
+    width: 480px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +70,8 @@
 }
 
 .home_box > div > fieldset > div > div {
-    width: 400px;
+    width: 480px;
+    line-height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -118,4 +151,9 @@
 
 .home_form img {
     width: 16px;
+}
+
+
+.form_redirect {
+    width: 400px;
 }
