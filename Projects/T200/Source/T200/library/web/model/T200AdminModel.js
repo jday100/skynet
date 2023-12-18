@@ -122,7 +122,7 @@ class T200AdminModel extends T200ForumModel {
                             ),
                             T200SQL.ALIAS(
                                 T200SQL.MATCH(this._fulltext_fields),
-                                T200SQL.AGAINST(this._search)
+                                T200SQL.AGAINST(T200SQL.STRING(this._search))
                             )
                         )
                     );
@@ -140,7 +140,7 @@ class T200AdminModel extends T200ForumModel {
                                 ),
                                 T200SQL.ALIAS(
                                     T200SQL.MATCH(this._fulltext_fields),
-                                    T200SQL.AGAINST(this._search)
+                                    T200SQL.AGAINST(T200SQL.STRING(this._search))
                                 )
                             )
                         )

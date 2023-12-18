@@ -20,6 +20,7 @@ class T200AdminSetting extends T200HomeAdminModel {
 
     flash_admin_list_fields() {
         this._fields = [
+            'id',
             'setting_id',
             'name',
             'content',
@@ -66,6 +67,12 @@ class T200AdminSetting extends T200HomeAdminModel {
     flash_admin_status_update() {
         this._name_value = [
             ['status', this.status]
+        ];
+    }
+
+    flash_admin_content_update() {
+        this._name_value = [
+            ['content', `'${this.content}'`]
         ];
     }
 

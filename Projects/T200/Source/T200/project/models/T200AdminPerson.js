@@ -57,7 +57,7 @@ class T200AdminPerson extends T200HomeAdminModel {
 
     set_item_left() {
         return [
-            ['Username', 'username', true, '/admin/person/person.html', 'list_name']
+            ['Username', 'username', true, '/admin/person/person.html', 'list_name', true, 'id', 'id']
         ];
     }
 

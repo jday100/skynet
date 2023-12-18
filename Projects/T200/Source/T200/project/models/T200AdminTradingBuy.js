@@ -24,6 +24,7 @@ class T200AdminTradingBuy extends T200HomeAdminModel {
             'id',
             'title',
             T200SQL.PREFIX('status', 't1'),
+            T200SQL.PREFIX('user_id', 't2'),
             T200SQL.PREFIX('username', 't2'),
             T200SQL.PREFIX('create_time', 't1')            
         ];
@@ -44,14 +45,14 @@ class T200AdminTradingBuy extends T200HomeAdminModel {
 
     set_item_left() {
         return [
-            ['Title', 'title', true, '/admin/trading/buy.html', 'list_title']
+            ['Title', 'title', true, '/trading/trading_buy.html', 'list_title', true, 'id', 'id']
         ];
     }
 
     set_item_right() {
         return [
             ['Status', 'status', false, '', 'list_status', true, 'id', 'status', 'list_status'],
-            ['Username', 'username', true, '', 'list_name', false],
+            ['Username', 'username', true, '', 'list_name', true, 'id', 'user_id'],
             ['CreateTime', 'create_time', false, '', 'list_time', true, 'time', 'time_title', 'list_time']
         ];
     }

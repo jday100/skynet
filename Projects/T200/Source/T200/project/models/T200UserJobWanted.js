@@ -28,6 +28,8 @@ class T200UserJobWanted extends T200HomeUserModel {
             'status',
             'identity_id',
             'city_id',
+            'type_full',
+            'type_part',
             'title',
             'content'
         ];
@@ -39,6 +41,8 @@ class T200UserJobWanted extends T200HomeUserModel {
             this.status,
             this.identity_id,
             this.city_id,
+            this.type_full,
+            this.type_part,
             `'${this.title}'`,
             `'${this.content}'`
         ];

@@ -292,7 +292,7 @@ input[type="email"] + img + button {
 }
 
 .paging {
-    width: 200px;
+    width: 400px;
     line-height: 50px;
     display: flex;
     justify-content: space-between;

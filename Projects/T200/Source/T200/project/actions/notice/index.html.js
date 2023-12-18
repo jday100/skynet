@@ -24,6 +24,7 @@ async function do_notice_list(request, response, cookie, session, resource) {
                 let data = {};
                 data.paging = result.paging;
                 data.notices = result.values;
+                data.search = "";
                 return view.render_file("notice/index.ejs", data).then(function (value) {
                     response.type("json");
                     resolve(value);
@@ -51,29 +52,35 @@ async function do_notice_search(request, response, cookie, session, resource) {
         let notice = new T200Notice();
         let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
 
+        let search = request.get("search");
 
-        notice._fields = notice.fulltext_result_fields();
-        notice._search_fields = notice.fulltext_fields();
-        notice._order_direction = "DESC";
-        notice.fulltext_count_sql = notice.merge_fulltext_count();
-        notice.fulltext_list_sql = notice.merge_fulltext_paging();
-        VisitorBiz.fulltext(notice).then(function(result){
-            let view = new T200HomeView(resource);
-            let data = {};
-            data.paging = result.paging;
-            data.notices = result.values;
-            return view.render_file("notice/index.ejs", data).then(function (value) {
-                response.type("json");
-                resolve(value);
+        if(T200HttpsForm.verify_text(search)){
+            notice._search = search;
+            notice.flash_paging_fields();
+            notice.flash_fulltext_fields();
+            notice.merge_fulltext_count = notice.merge_fulltext_count;
+            notice.merge_fulltext_list = notice.merge_fulltext_list;
+            VisitorBiz.fulltext2(notice).then(function(result){
+                let view = new T200HomeView(resource);
+                let data = {};
+                data.paging = result.paging;
+                data.notices = result.values;
+                data.search = notice._search;
+                return view.render_file("notice/index.ejs", data).then(function (value) {
+                    response.type("json");
+                    resolve(value);
+                }, function (err) {
+                    response.type("json");
+                    reject();
+                });
             }, function (err) {
                 response.type("json");
                 reject();
             });
-        }, function (err) {
+        }else{
             response.type("json");
             reject();
-        });
-
+        }
     });
 
     return promise;

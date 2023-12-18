@@ -84,9 +84,15 @@
                                 <%
                                     item_left.forEach(left => {
                                         if(left[2]){
+                                            if(left[5]){
+                                            %>
+                                                <a class="<%=left[4]%>" href="<%=left[3]%>?<%=left[6]%>=<%=item[left[7]]%>"><%=item[left[1]]%></a> 
+                                            <%
+                                            }else{
                                             %>
                                                 <a class="<%=left[4]%>" href="<%=left[3]%>"><%=item[left[1]]%></a>
-                                            <%
+                                            <%  
+                                            }
                                         }else{
                                             %>
                                                 <div class="<%=left[4]%>">
@@ -101,11 +107,19 @@
                                 <%
                                     item_right.forEach(right => {
                                         if(right[2]){
+                                            if(right[5]){
+                                            %>
+                                                <div class="<%=right[4]%>">
+                                                    <a href="<%=right[3]%>?<%=right[6]%>=<%=item[right[7]]%>"><%=item[right[1]]%></a>
+                                                </div>
+                                            <%
+                                            }else{
                                             %>
                                                 <div class="<%=right[4]%>">
                                                     <a href="<%=right[3]%>"><%=item[right[1]]%></a>
                                                 </div>
                                             <%
+                                            }
                                         }else{
                                             if(right[5]){
                                                 %>

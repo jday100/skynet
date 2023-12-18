@@ -1,6 +1,7 @@
 const { error, log } = require('../../T200Lib.js');
 const T200Error = require('../../T200Error.js');
 
+const T200SQL = require('../../db/T200SQL.js');
 const T200ModelBase = require('./T200ModelBase.js');
 
 
@@ -27,11 +28,26 @@ class T200PagingModel extends T200ModelBase {
     }
 
     merge_count() {
-        return `select count(${this._key}) as total from ${this._table}`;
+        return T200SQL.SELECT(
+            T200SQL.AS(T200SQL.COUNT(this._key), 'total'),
+            T200SQL.FROM(this._table),
+            T200SQL.WHERE(
+                T200SQL.EQUAL("status", 1)
+            )
+        );
     }
 
     merge_paging() {
-        return `select ${this._fields} from ${this._table} order by ${this._key} ${this._order_direction} limit ${this._page_size} offset ${this._offset}`;
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields),
+            T200SQL.FROM(this._table),
+            T200SQL.WHERE(
+                T200SQL.EQUAL("status", 1)
+            ),
+            T200SQL.ORDER(T200SQL.DESC(this._key)),
+            T200SQL.LIMIT(this._page_size),
+            T200SQL.OFFSET(this._offset)
+        );
     }
 }
 

@@ -43,6 +43,19 @@ async function do_content_job_recruit_add(request, response, cookie, session, re
         job.city_id = session.get("cityid");
         job.title = request.get("title");
         job.content = request.get("content");
+
+        let type = request.get("type");
+
+        if(1 == type){
+            job.type_full = 1;
+            job.type_part = 0;
+        }else if(2 == type){
+            job.type_full = 0;
+            job.type_part = 1;
+        }else if(0 == type){
+            job.type_full = 1;
+            job.type_part = 1;
+        }
         
         if(T200HttpsForm.verify_id(job.user_id)
             && T200HttpsForm.verify_id(job.identity_id)

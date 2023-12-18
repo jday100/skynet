@@ -33,6 +33,17 @@ function list_hit_delete(id, obj, url) {
     });
 }
 
+function list_reload(id, obj, url) {
+    let result = formtostring(id);
+    $.post(url, result, function(data){
+        obj.innerHTML = data;
+        update_status();
+        update_time();
+    }, function(){
+        alert("Load Failure!");
+    });
+}
+
 function list_hit_edit() {
 
 }

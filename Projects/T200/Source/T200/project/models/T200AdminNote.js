@@ -40,6 +40,7 @@ class T200AdminNote extends T200HomeAdminModel {
             'id',
             'title',
             T200SQL.PREFIX('status', 't1'),
+            T200SQL.PREFIX('user_id', 't2'),
             T200SQL.PREFIX('username', 't2'),
             T200SQL.PREFIX('create_time', 't1')            
         ];
@@ -60,14 +61,14 @@ class T200AdminNote extends T200HomeAdminModel {
 
     set_item_left() {
         return [
-            ['Title', 'title', true, '/admin/note/note.html', 'list_title']
+            ['Title', 'title', true, '/admin/note/note.html', 'list_title', true, 'id', 'id']
         ];
     }
 
     set_item_right() {
         return [
             ['Status', 'status', false, '', 'list_status', true, 'id', 'status', 'list_status'],
-            ['Username', 'username', true, '', 'list_name', false],
+            ['Username', 'username', true, '/admin/person/persion.html', 'list_name', true, 'id', 'user_id'],
             ['CreateTime', 'create_time', false, '', 'list_time', true, 'time', 'time_title', 'list_time']
         ];
     }
@@ -84,28 +85,22 @@ class T200AdminNote extends T200HomeAdminModel {
 
         if(undefined == this.status || '' == this.status){
             where = T200SQL.WHERE(
-                        T200SQL.AND(
-                            T200SQL.EQUAL(
-                                T200SQL.PREFIX("status", 't2'), 
-                                1
-                            ),
-                            T200SQL.EQUAL("parent_type", 0)
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("status", 't2'), 
+                            1
                         )
                     );
         }else{
             where = T200SQL.WHERE(
                         T200SQL.AND(
-                            T200SQL.AND(
-                                T200SQL.EQUAL(
-                                    T200SQL.PREFIX("status", "t1"), 
-                                    this.status
-                                ),
-                                T200SQL.EQUAL(
-                                    T200SQL.PREFIX("status", "t2"), 
-                                    1
-                                )
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("status", "t1"), 
+                                this.status
                             ),
-                            T200SQL.EQUAL("parent_type", 0)
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("status", "t2"), 
+                                1
+                            )
                         )
                     );
         }

@@ -17,7 +17,7 @@ class T200HomeInvitationInit {
             let result = false;
 
             for(let i=0;i<1000;i++){
-                let user_id = T200Moken.mock_int(1, 1000);
+                let user_id = T200Moken.mock_int(0, 1000);
                 let status = T200Moken.mock_int(0, 1);
                 let invite = T200Moken.mock_int(111111111111, 999999999999);
 

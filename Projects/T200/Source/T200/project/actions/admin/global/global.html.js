@@ -25,7 +25,7 @@ async function do_admin_global(request, response, cookie, session, resource) {
                 let view = new T200HomeView(resource);
                 let data = JSON.parse(result.content);
 
-                data.id = 0;
+                data.id = result.id;
 
                 return view.render_file("admin/global/global.ejs", data).then(function(value){
                     response.type("json");
@@ -79,7 +79,13 @@ async function do_admin_global_save(request, response, cookie, session, resource
 
         if(T200HttpsForm.verify_id(user_id)){
             if(id && 0 < id){
-                do_admin_setting_modify(request, response, cookie, session, resource, AdminBiz);
+                do_admin_setting_modify(request, response, cookie, session, resource, AdminBiz).then(function(){
+                    response.type("json");
+                    resolve();
+                }, function(err){
+                    response.type("json");
+                    reject();
+                });
             }else{
                 do_admin_setting_append(request, response, cookie, session, resource, AdminBiz).then(function(){
                     response.type("json");
@@ -134,11 +140,35 @@ async function do_admin_setting_append(request, response, cookie, session, resou
     return promise;
 }
 
-async function do_admin_setting_modify(request, response, cookie, session, resource, UserBiz) {
+async function do_admin_setting_modify(request, response, cookie, session, resource, AdminBiz) {
     log(__filename, "do_admin_setting_modify");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        let setting = new T200AdminSetting();
+  
+        let user_id = session.get("userid");
 
+        setting.id = request.get("id");
+        setting.setting_id = 1000000;
+        setting.status = 1;
+        setting.name = "1000000";
+        setting.content = "1";
+        
+        if(T200HttpsForm.verify_id(user_id)
+            && T200HttpsForm.verify_id(setting.setting_id)
+            && T200HttpsForm.verify_id(setting.status)
+            && T200HttpsForm.verify_text(setting.name)
+            && T200HttpsForm.verify_text(setting.content)){
+                setting.content = merge_json(request);
+                setting.flash_admin_content_update();
+                AdminBiz.modify(setting.merge_update_by_key()).then(function(id){
+                    resolve();
+                }, function(){
+                    reject();
+                });
+        }else{
+            reject();
+        }
     });
 
     return promise;
@@ -148,14 +178,14 @@ function merge_json(request) {
     let result;
     let obj = {};
 
-    obj.site = request.get_bool("site");
-    obj.register = request.get_bool("register");
-    obj.login = request.get_bool("login");
-    obj.publish = request.get_bool("publish");
-    obj.reply = request.get_bool("reply");
-    obj.list = request.get_bool("list");
-    obj.search = request.get_bool("search");
-    obj.board = request.get_bool("board");
+    obj.site = 1 == request.get("site") ? true : false;
+    obj.register = 1 == request.get("register") ? true : false;
+    obj.login = 1 == request.get("login") ? true : false;
+    obj.publish = 1 == request.get("publish") ? true : false;
+    obj.reply = 1 == request.get("reply") ? true : false;
+    obj.list = 1 == request.get("list") ? true : false;
+    obj.search = 1 == request.get("search") ? true : false;
+    obj.board = 1 == request.get("board") ? true : false;
 
     result = JSON.stringify(obj);
     return result;

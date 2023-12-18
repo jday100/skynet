@@ -31,6 +31,21 @@ class T200Notice extends T200HomeVisitorModel {
         ];
     }
 
+    flash_paging_fields() {
+        this._fields = [
+            'id',
+            'title',
+            'create_time'         
+        ];
+    }
+
+    flash_fulltext_fields() {
+        this._fulltext_fields = [
+            'title',
+            'content'
+        ];
+    }
+
     fields() {
         return "user_id, status, title, content";
     }

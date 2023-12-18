@@ -83,6 +83,7 @@
         let data = "{}";
         $.post('/notice/notice', data, function(result){
             $.id("list_box").innerHTML = result;
+            $.id("time_title").innerHTML = show_time($.id("time").value);
         }, function(){
             alert('Load Failure!');
         });

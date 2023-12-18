@@ -1,6 +1,7 @@
 <form id="form" class="list_form" onsubmit="return false;">
     <input type="hidden" name="test">
     <input type="hidden" name="page" value="1">
+    <input type="hidden" name="search" value="<%=search%>">
     <div class="search_box">
         <input type="text" name="search">
         <button id="search" class="search_button" onclick="hit_search('form', $.id('list_box'), '/notice/search');">Search</button>

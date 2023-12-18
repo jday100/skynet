@@ -461,7 +461,3 @@ function update_content_status() {
         }
     }
 }
-
-function update_status(url, value) {
-
-}
