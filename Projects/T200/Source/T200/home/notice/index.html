@@ -129,6 +129,7 @@
         let data = formtostring('form');
         $.post('/notice/list', data, function(result){
             $.id("list_box").innerHTML = result;
+            update_time();
         }, function(){
             alert('List Failure!');
         });

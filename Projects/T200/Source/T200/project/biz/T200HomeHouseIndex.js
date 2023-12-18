@@ -51,7 +51,7 @@ class T200HomeHouseIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseRent();
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_type_list()).then(function(values){
+            return self.list(house.merge_user_paging_long_list()).then(function(values){
                 data.rent_longs = values;
                 resolve(data);
             }, function(){
@@ -67,7 +67,7 @@ class T200HomeHouseIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseRent();
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_type_list()).then(function(values){
+            return self.list(house.merge_user_paging_short_list()).then(function(values){
                 data.rent_shorts = values;
                 resolve(data);
             }, function(){
@@ -83,7 +83,7 @@ class T200HomeHouseIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseWanted();
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_type_list()).then(function(values){
+            return self.list(house.merge_user_paging_long_list()).then(function(values){
                 data.wanted_longs = values;
                 resolve(data);
             }, function(){
@@ -99,7 +99,7 @@ class T200HomeHouseIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseWanted();
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_type_list()).then(function(values){
+            return self.list(house.merge_user_paging_short_list()).then(function(values){
                 data.wanted_shorts = values;
                 resolve(data);
             }, function(){

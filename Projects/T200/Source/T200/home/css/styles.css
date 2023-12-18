@@ -9,6 +9,11 @@ body {
     color:black;
 }
 
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
 a {
     text-decoration: none;
     font-weight: bold;

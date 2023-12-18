@@ -30,17 +30,20 @@
     <div class="list_group">
         <% 
         if(0 < notices.length){ 
+            let i = 0;
             notices.forEach(item=> {
         %>
             <div class="list_item">
-                <div>
-                    <a onclick="hit('nid', <%=item.id%>);" href="/notice/notice.html"><%=item.title%></a>
+                <div class="item_left">
+                    <a href="/notice/notice.html?id=<%=item.id%>"><%=item.title%></a>
                 </div>
-                <div>
-                    2023-10-10 10:10
+                <div class="item_right">
+                    <input type="hidden" id="time<%=i%>" value="<%=item.create_time%>">
+                    <input disabled class="list_time" type="text" id="time_title<%=i%>" value="">
                 </div>
             </div>
         <% 
+            i++;
             }); 
         }else{ 
             %>

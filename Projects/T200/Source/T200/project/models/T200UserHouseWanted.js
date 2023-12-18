@@ -29,6 +29,8 @@ class T200UserHouseWanted extends T200HomeUserModel {
             'status',
             'identity_id',
             'city_id',
+            'type_long',
+            'type_short',
             'title',
             'content'
         ];
@@ -40,6 +42,8 @@ class T200UserHouseWanted extends T200HomeUserModel {
             this.status,
             this.identity_id,
             this.city_id,
+            this.type_long,
+            this.type_short,
             `'${this.title}'`,
             `'${this.content}'`
         ];
@@ -119,6 +123,90 @@ class T200UserHouseWanted extends T200HomeUserModel {
             ['Delete', 'list_hit_delete', 'form', 'list_box', '/content/house/wanted/remove'],
             ['Publish', 'list_hit_publish', 'form', 'list_box', '/content/house/wanted/publish']
         ];
+    }
+
+    merge_user_paging_long_list() {
+        let where;
+
+        where = T200SQL.WHERE(
+                    T200SQL.AND(
+                        T200SQL.AND(
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("status", 't1'), 
+                                1
+                            ),
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("status", 't2'), 
+                                1
+                            )
+                        ),
+                        T200SQL.EQUAL(
+                            "type_long",
+                            1
+                        )
+                    )  
+                );
+
+        
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields),
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+                ),
+            T200SQL.INNER(
+                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"), 
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            where,
+            T200SQL.ORDER(T200SQL.DESC(this._key)),
+            T200SQL.LIMIT(this._page_size),
+            T200SQL.OFFSET(this._offset)
+        );
+    }
+
+    merge_user_paging_short_list() {
+        let where;
+
+        where = T200SQL.WHERE(
+                    T200SQL.AND(
+                        T200SQL.AND(
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("status", 't1'), 
+                                1
+                            ),
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("status", 't2'), 
+                                1
+                            )
+                        ),
+                        T200SQL.EQUAL(
+                            "type_short",
+                            1
+                        )
+                    )  
+                );
+
+        
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields),
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+                ),
+            T200SQL.INNER(
+                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"), 
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            where,
+            T200SQL.ORDER(T200SQL.DESC(this._key)),
+            T200SQL.LIMIT(this._page_size),
+            T200SQL.OFFSET(this._offset)
+        );
     }
 
 }

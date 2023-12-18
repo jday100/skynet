@@ -43,6 +43,19 @@ async function do_content_house_rent_add(request, response, cookie, session, res
         house.city_id = session.get("cityid");
         house.title = request.get("title");
         house.content = request.get("content");
+
+        let type = request.get("type");
+
+        if(1 == type){
+            house.type_long = 1;
+            house.type_short = 0;
+        }else if(2 == type){
+            house.type_long = 0;
+            house.type_short = 1;
+        }else if(0 == type){
+            house.type_long = 1;
+            house.type_short = 1;
+        }
         
         if(T200HttpsForm.verify_id(house.user_id)
             && T200HttpsForm.verify_id(house.identity_id)

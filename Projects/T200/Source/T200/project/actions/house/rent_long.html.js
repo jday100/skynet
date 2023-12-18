@@ -16,8 +16,8 @@ async function do_house_rent_long_list(request, response, cookie, session, resou
 
         if(true){
             house._fields = house.list_fields();
-            house.merge_paging_count = house.merge_user_paging_type_count;
-            house.merge_paging_list = house.merge_user_paging_type_list;
+            house.merge_paging_count = house.merge_user_paging_long_count;
+            house.merge_paging_list = house.merge_user_paging_long_list;
             UserBiz.paging2(house).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};

@@ -215,6 +215,7 @@ input[type="email"] + img + button {
     line-height: 50px;
     font-weight: bold;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .notice_content {
@@ -222,6 +223,7 @@ input[type="email"] + img + button {
     min-height: 500px;
     line-height: 30px;
     text-align: left;
+    word-wrap: break-word;
 }
 
 .notice_pre {
@@ -277,10 +279,12 @@ input[type="email"] + img + button {
     align-items: center;
 }
 
-.list_item > div {
-    width: 600px;
+.list_item .item_left {
+    width: 850px;
+    text-align: left;
     overflow: hidden;
 	text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .list_time {
@@ -319,17 +323,14 @@ input[type="email"] + img + button {
 }
 
 .forum_user {
+    font-weight: bold;
     line-height: 35px;
-    overflow: hidden;
-	text-overflow: ellipsis;
-    white-space: nowrap;
+    word-break: break-all;
 }
 
 .forum_intro {
     min-height: 145px;
-    overflow: hidden;
-	text-overflow: ellipsis;
-    white-space: nowrap;
+    word-break: break-all;
 }
 
 .forum_article {
@@ -339,7 +340,7 @@ input[type="email"] + img + button {
 }
 
 .forum_title {
-
+    font-weight: bold;
 }
 
 .forum_content {
@@ -432,6 +433,14 @@ input[type="email"] + img + button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.channel_item .item_left {
+    width: 750px;
+    text-align: left;
+    overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .channel > div > div {

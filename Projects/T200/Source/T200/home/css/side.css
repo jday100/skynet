@@ -201,6 +201,20 @@ fieldset > div > details {
     margin-bottom: 5px;
 }
 
+.form_select {
+    width: 800px;
+    line-height: 25px;
+    display:flex;
+	justify-content:left;
+	align-items:center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form_select select {
+    width: 100px;
+}
+
 .form_value {
     width: 700px;
 }
