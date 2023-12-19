@@ -17,7 +17,7 @@ async function do_house_wanted_region_list(request, response, cookie, session, r
         let region_id = request.get("id");
 
         if(T200HttpsForm.verify_id(region_id)){
-            return HouseWantedIndex.load_index().then(function(data){
+            return HouseWantedIndex.load_index(region_id).then(function(data){
                 data.region_id = region_id;
                 return view.render_file('house/wanted_region.ejs', data);
             }, function(err){

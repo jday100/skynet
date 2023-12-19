@@ -7,18 +7,18 @@
             if(paging){ 
                 if(paging.first){ 
         %>
-            <a href="#" onclick="turning(1, $.id('list_box'), '/exchange/list');">First</a>
+            <a href="#" onclick="turning(1, $.id('list_box'), '/house/wanted/long/region/list');">First</a>
             <% 
                 } 
                 if(paging.pages){ 
                     paging.pages.forEach(item=> {
             %>
-                <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/exchange/list');"><%=item%></a>
+                <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/house/wanted/long/region/list');"><%=item%></a>
             <% 
                 }); 
             } 
                 if(paging.last){ %>
-                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/exchange/list');">Last</a>
+                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/house/wanted/long/region/list');">Last</a>
         <% 
                 } 
             } 
@@ -32,7 +32,7 @@
         %>
             <div class="list_item">
                 <div>
-                    <a href="/exchange/exchange.html?id=<%=item.id%>"><%=item.title%></a>
+                    <a href="/house/house_wanted.html?id=<%=item.id%>"><%=item.title%></a>
                 </div>
                 <div>
                     <input type="hidden" id="time<%=i%>" value="<%=item.create_time%>">
@@ -46,7 +46,7 @@
             %>
                 <div class="list_item">
                     <div>
-                        <a href="/exchange/exchange.html">unpublished</a>
+                        <a href="/house/house_wanted.html">unpublished</a>
                     </div>
                     <div>
                         2023-10-10 10:10
@@ -63,18 +63,18 @@
             if(paging){ 
                 if(paging.first){ 
         %>
-            <a href="#" onclick="turning(1, $.id('list_box'), '/exchange/list');">First</a>
+            <a href="#" onclick="turning(1, $.id('list_box'), '/house/wanted/long/region/list');">First</a>
             <% 
                 } 
                 if(paging.pages){ 
                     paging.pages.forEach(item=> {
             %>
-                <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/exchange/list');"><%=item%></a>
+                <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/house/wanted/long/region/list');"><%=item%></a>
             <% 
                 }); 
             } 
                 if(paging.last){ %>
-                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/exchange/list');">Last</a>
+                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/house/wanted/long/region/list');">Last</a>
         <% 
                 } 
             } 

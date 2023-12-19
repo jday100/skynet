@@ -19,9 +19,9 @@ async function do_house_wanted_long_region_list(request, response, cookie, sessi
         if(T200HttpsForm.verify_id(region_id)){
             house.region_id = region_id;
             house._fields = house.list_fields();
-            house.paging_count_sql = house.merge_user_paging_type_count();
-            house.merge_paging = house.merge_user_paging_type_list;
-            UserBiz.paging(house).then(function(result){
+            house.merge_paging_count = house.merge_user_paging_long_region_count;
+            house.merge_paging_list = house.merge_user_paging_long_region_list;
+            UserBiz.paging2(house).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.region_id = region_id;
@@ -49,4 +49,4 @@ async function do_house_wanted_long_region_list(request, response, cookie, sessi
 }
 
 
-global.action.use_post('/house/wanted/long/region', do_house_wanted_long_region_list);
+global.action.use_post('/house/wanted/long/region/list', do_house_wanted_long_region_list);

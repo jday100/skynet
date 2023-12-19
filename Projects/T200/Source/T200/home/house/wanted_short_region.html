@@ -90,7 +90,7 @@
         update_city_id("/house/index_region.html", "house", "/house/wanted_region.html", "wanted", "id");
 
         let data = formtostring('form');
-        $.post('/house/wanted/short/region', data, function (result) {
+        $.post('/house/wanted/short/region/list', data, function (result) {
             $.id("list_box").innerHTML = result;
             update_time();
         }, function () {

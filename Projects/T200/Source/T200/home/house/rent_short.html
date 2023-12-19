@@ -87,7 +87,7 @@
         nav_check();
 
         let data = formtostring('form');
-        $.post('/house/rent/short', data, function (result) {
+        $.post('/house/rent/short/list', data, function (result) {
             $.id("list_box").innerHTML = result;
             update_time();
         }, function () {

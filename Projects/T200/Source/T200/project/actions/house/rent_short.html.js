@@ -45,4 +45,4 @@ async function do_house_rent_short_list(request, response, cookie, session, reso
 }
 
 
-global.action.use_post('/house/rent/short', do_house_rent_short_list);
+global.action.use_post('/house/rent/short/list', do_house_rent_short_list);

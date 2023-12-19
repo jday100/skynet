@@ -93,6 +93,8 @@
         let data = formtostring('form');
         $.post('/house/wanted/city/list', data, function (result) {
             $.id("list_box").innerHTML = result;
+            update_times("house_longs");
+            update_times("house_shorts");
         }, function () {
             alert('Load Failure!');
         });

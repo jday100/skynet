@@ -7,12 +7,13 @@
                 if(i < k){
                     %>
                     <div class="channel_item">
-                        <div>
+                        <div class="item_left">
                             <a target="_blank" href="/house/house_wanted.html?id=<%=house_longs[i].id%>"><%=house_longs[i].title%></a>
                         </div>
-                        <div>
-                            <a href=""><%="user"%></a>
-                            2023-10-10 10:10                                
+                        <div class="right">
+                            <a href="/person/person.html"><%=house_longs[i].nickname%></a>
+                            <div class="time" id="house_longs_time<%=i%>"></div>
+                            <input type="hidden" id="house_longs<%=i%>" value="<%=house_longs[i].create_time%>">                                                          
                         </div>
                     </div>
                     <%
@@ -43,12 +44,13 @@
                 if(i < k){
                     %>
                     <div class="channel_item">
-                        <div>
+                        <div class="item_left">
                             <a target="_blank" href="/house/house_wanted.html?id=<%=house_shorts[i].id%>"><%=house_shorts[i].title%></a>
                         </div>
-                        <div>
-                            <a href=""><%="user"%></a>
-                            2023-10-10 10:10                                
+                        <div class="right">
+                            <a href="/person/person.html"><%=house_shorts[i].nickname%></a>
+                            <div class="time" id="house_shorts_time<%=i%>"></div>
+                            <input type="hidden" id="house_shorts<%=i%>" value="<%=house_shorts[i].create_time%>">                                                          
                         </div>
                     </div>
                     <%

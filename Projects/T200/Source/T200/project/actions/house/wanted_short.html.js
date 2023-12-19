@@ -16,9 +16,9 @@ async function do_house_wanted_short_list(request, response, cookie, session, re
 
         if(true){
             house._fields = house.list_fields();
-            house.paging_count_sql = house.merge_user_paging_type_count();
-            house.merge_paging = house.merge_user_paging_type_list;
-            UserBiz.paging(house).then(function(result){
+            house.merge_paging_count = house.merge_user_paging_short_count;
+            house.merge_paging_list = house.merge_user_paging_short_list;
+            UserBiz.paging2(house).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.paging = result.paging;
@@ -45,4 +45,4 @@ async function do_house_wanted_short_list(request, response, cookie, session, re
 }
 
 
-global.action.use_post('/house/wanted/short', do_house_wanted_short_list);
+global.action.use_post('/house/wanted/short/list', do_house_wanted_short_list);

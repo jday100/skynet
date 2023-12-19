@@ -17,9 +17,9 @@ async function do_house_wanted_city_list(request, response, cookie, session, res
         let city_id = request.get("id");
 
         if(T200HttpsForm.verify_id(city_id)){
-            return HouseWantedIndex.load_index().then(function(data){
+            return HouseWantedIndex.load_index(city_id).then(function(data){
                 data.city_id = city_id;
-                return view.render_file('house/wanted.ejs', data);
+                return view.render_file('house/wanted_city.ejs', data);
             }, function(err){
                 return error();
             }).then(function(result){
