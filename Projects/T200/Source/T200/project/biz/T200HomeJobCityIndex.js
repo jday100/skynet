@@ -11,26 +11,26 @@ class T200HomeJobIndex extends T200HomeUserBiz {
         super(request, cookie, session);
     }
 
-    load_index() {
+    load_index(id) {
         log(__filename, "load");
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let data = {};
 
-            self.load_recruit_full(data).then(function(){
+            self.load_recruit_full(id, data).then(function(){
 
             }, function(err){
                 return error();
             }).then(function(){
-                return self.load_recruit_part(data);
+                return self.load_recruit_part(id, data);
             }, function(){
                 return error();
             }).then(function(){
-                return self.load_wanted_full(data);
+                return self.load_wanted_full(id, data);
             }, function(){
                 return error();
             }).then(function(){
-                return self.load_wanted_part(data);
+                return self.load_wanted_part(id, data);
             }, function(){
                 return error();
             }).then(function(){
@@ -46,12 +46,14 @@ class T200HomeJobIndex extends T200HomeUserBiz {
 
     
 
-    load_recruit_full(data) {
+    load_recruit_full(id, data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobRecruit();
+            job.city_id = id;
+            job._type = "type_full";
             job._fields = job.list_fields();
-            return self.list(job.merge_user_paging_type_list()).then(function(values){
+            return self.list(job.merge_user_paging_city_type_list()).then(function(values){
                 data.recruit_fulls = values;
                 resolve(data);
             }, function(){
@@ -62,12 +64,14 @@ class T200HomeJobIndex extends T200HomeUserBiz {
         return promise;
     }
 
-    load_recruit_part(data) {
+    load_recruit_part(id, data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobRecruit();
+            job.city_id = id;
+            job._type = "type_part";
             job._fields = job.list_fields();
-            return self.list(job.merge_user_paging_type_list()).then(function(values){
+            return self.list(job.merge_user_paging_city_type_list()).then(function(values){
                 data.recruit_parts = values;
                 resolve(data);
             }, function(){
@@ -78,12 +82,14 @@ class T200HomeJobIndex extends T200HomeUserBiz {
         return promise;
     }
 
-    load_wanted_full(data) {
+    load_wanted_full(id, data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobWanted();
+            job.city_id = id;
+            job._type = "type_full";
             job._fields = job.list_fields();
-            return self.list(job.merge_user_paging_type_list()).then(function(values){
+            return self.list(job.merge_user_paging_city_type_list()).then(function(values){
                 data.wanted_fulls = values;
                 resolve(data);
             }, function(){
@@ -94,12 +100,14 @@ class T200HomeJobIndex extends T200HomeUserBiz {
         return promise;
     }
 
-    load_wanted_part(data) {
+    load_wanted_part(id, data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobWanted();
+            job.city_id = id;
+            job._type = "type_part";
             job._fields = job.list_fields();
-            return self.list(job.merge_user_paging_type_list()).then(function(values){
+            return self.list(job.merge_user_paging_city_type_list()).then(function(values){
                 data.wanted_parts = values;
                 resolve(data);
             }, function(){

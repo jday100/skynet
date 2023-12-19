@@ -18,10 +18,11 @@ async function do_job_recruit_full_city_list(request, response, cookie, session,
 
         if(T200HttpsForm.verify_id(city_id)){
             job.city_id = city_id;
+            job._type = "type_full";
             job._fields = job.list_fields();
-            job.paging_count_sql = job.merge_user_paging_type_count();
-            job.merge_paging = job.merge_user_paging_type_list;
-            UserBiz.paging(job).then(function(result){
+            job.merge_paging_count = job.merge_user_paging_city_type_count;
+            job.merge_paging_list = job.merge_user_paging_city_type_list;
+            UserBiz.paging2(job).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.city_id = city_id;
@@ -49,4 +50,4 @@ async function do_job_recruit_full_city_list(request, response, cookie, session,
 }
 
 
-global.action.use_post('/job/recruit/full/city', do_job_recruit_full_city_list);
+global.action.use_post('/job/recruit/full/city/list', do_job_recruit_full_city_list);

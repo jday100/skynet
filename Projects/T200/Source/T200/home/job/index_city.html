@@ -90,7 +90,10 @@
         let data = formtostring('form');
         $.post('/job/city/list', data, function (result) {
             $.id("list_box").innerHTML = result;
-            update_time();
+            update_times("recruit_fulls");
+            update_times("recruit_parts");
+            update_times("wanted_fulls");
+            update_times("wanted_parts");
         }, function () {
             alert('Load Failure!');
         });

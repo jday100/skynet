@@ -61,11 +61,13 @@ async function do_job_recruit_reply(request, response, cookie, session, resource
         let job = new T200UserJobRecruit();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        let nickname = request.get("nickname");
+
         job.user_id = session.get("userid");
         job.identity_id = session.get("identityid");
         job.city_id = session.get("cityid");
-        job.parent_id = request.get("id");
-        job.title = `@${job.parent_id}`;
+        job.parent_id = request.get("parentid");
+        job.title = `@${nickname}`;
         job.content = request.get("content");
         job.status = 1;
 
@@ -74,6 +76,7 @@ async function do_job_recruit_reply(request, response, cookie, session, resource
             && T200HttpsForm.verify_id(job.city_id)
             && T200HttpsForm.verify_id(job.parent_id)
             && T200HttpsForm.verify_id(job.status)
+            && T200HttpsForm.verify_text(nickname)
             && T200HttpsForm.verify_text(job.content)){
             job.flash_reply_fields();
             job.flash_reply_values();

@@ -87,7 +87,7 @@
         nav_check();
 
         let data = formtostring('form');
-        $.post('/job/recruit/full', data, function (result) {
+        $.post('/job/recruit/full/list', data, function (result) {
             $.id("list_box").innerHTML = result;
             update_time();
         }, function () {

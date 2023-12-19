@@ -50,6 +50,7 @@ class T200HomeJobIndex extends T200HomeUserBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobRecruit();
+            job._type = "type_full";
             job._fields = job.list_fields();
             return self.list(job.merge_user_paging_type_list()).then(function(values){
                 data.recruit_fulls = values;
@@ -66,6 +67,7 @@ class T200HomeJobIndex extends T200HomeUserBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobRecruit();
+            job._type = "type_part";
             job._fields = job.list_fields();
             return self.list(job.merge_user_paging_type_list()).then(function(values){
                 data.recruit_parts = values;
@@ -82,6 +84,7 @@ class T200HomeJobIndex extends T200HomeUserBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobWanted();
+            job._type = "type_full";
             job._fields = job.list_fields();
             return self.list(job.merge_user_paging_type_list()).then(function(values){
                 data.wanted_fulls = values;
@@ -98,6 +101,7 @@ class T200HomeJobIndex extends T200HomeUserBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobWanted();
+            job._type = "type_part";
             job._fields = job.list_fields();
             return self.list(job.merge_user_paging_type_list()).then(function(values){
                 data.wanted_parts = values;
