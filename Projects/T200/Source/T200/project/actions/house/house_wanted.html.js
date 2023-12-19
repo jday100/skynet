@@ -60,11 +60,13 @@ async function do_house_wanted_reply(request, response, cookie, session, resourc
         let house = new T200UserHouseWanted();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        let nickname = request.get("nickname");
+
         house.user_id = session.get("userid");
         house.identity_id = session.get("identityid");
         house.city_id = session.get("cityid");
-        house.parent_id = request.get("id");
-        house.title = `@${house.parent_id}`;
+        house.parent_id = request.get("parentid");
+        house.title = `@${nickname}`;
         house.content = request.get("content");
         house.status = 1;
 
@@ -73,6 +75,7 @@ async function do_house_wanted_reply(request, response, cookie, session, resourc
             && T200HttpsForm.verify_id(house.city_id)
             && T200HttpsForm.verify_id(house.parent_id)
             && T200HttpsForm.verify_id(house.status)
+            && T200HttpsForm.verify_text(nickname)
             && T200HttpsForm.verify_text(house.content)){
             house.flash_reply_fields();
             house.flash_reply_values();

@@ -90,7 +90,10 @@
         let data = formtostring('form');
         $.post('/house/region/list', data, function (result) {
             $.id("list_box").innerHTML = result;
-            update_time();
+            update_times("rent_longs");
+            update_times("rent_shorts");
+            update_times("wanted_longs");
+            update_times("wanted_shorts");
         }, function () {
             alert('Load Failure!');
         });

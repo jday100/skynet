@@ -12,7 +12,7 @@ class T200UserExchange extends T200HomeUserModel {
         this._table = "exchange";
         this._key = "id";
         this._user_id = "user_id";
-        this._id = "user_id";
+        this._id = "identity_id";
 
         this.status = 0;
 
@@ -40,6 +40,24 @@ class T200UserExchange extends T200HomeUserModel {
             this.city_id,
             `'${this.title}'`,
             `'${this.content}'`
+        ];
+    }
+
+    flash_visitor_paging_fields() {
+        this._fields = [
+            'id',
+            'title',
+            T200SQL.PREFIX('status', 't1'),
+            T200SQL.PREFIX('identity_id', 't2'),
+            T200SQL.PREFIX('nickname', 't2'),
+            T200SQL.PREFIX('create_time', 't1')            
+        ];
+    }
+
+    flash_visitor_fulltext_fields() {
+        this._fulltext_fields = [
+            'title',
+            'content'
         ];
     }
 

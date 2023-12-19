@@ -14,11 +14,11 @@ async function do_house_region_list(request, response, cookie, session, resource
         let view = new T200HomeView(resource);
         let HouseIndex = new T200HomeHouseRegionIndex(request, cookie, session);
 
-        let city_id = request.get("id");
+        let region_id = request.get("id");
 
-        if(T200HttpsForm.verify_id(city_id)){
-            return HouseIndex.load_index(city_id).then(function(data){
-                data.city_id = city_id;
+        if(T200HttpsForm.verify_id(region_id)){
+            return HouseIndex.load_index(region_id).then(function(data){
+                data.region_id = region_id;
                 return view.render_file('house/index_region.ejs', data);
             }, function(err){
                 return error();

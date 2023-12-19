@@ -59,11 +59,13 @@ async function do_exchange_reply(request, response, cookie, session, resource) {
         let exchange = new T200UserExchange();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        let nickname = request.get("nickname");
+
         exchange.user_id = session.get("userid");
         exchange.identity_id = session.get("identityid");
         exchange.city_id = session.get("cityid");
-        exchange.parent_id = request.get("id");
-        exchange.title = `@${exchange.parent_id}`;
+        exchange.parent_id = request.get("parentid");
+        exchange.title = `@${nickname}`;
         exchange.content = request.get("content");
         exchange.status = 1;
 
@@ -72,6 +74,7 @@ async function do_exchange_reply(request, response, cookie, session, resource) {
             && T200HttpsForm.verify_id(exchange.city_id)
             && T200HttpsForm.verify_id(exchange.parent_id)
             && T200HttpsForm.verify_id(exchange.status)
+            && T200HttpsForm.verify_text(nickname)
             && T200HttpsForm.verify_text(exchange.content)){
             exchange.flash_reply_fields();
             exchange.flash_reply_values();

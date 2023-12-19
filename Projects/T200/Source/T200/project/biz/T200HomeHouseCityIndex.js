@@ -51,8 +51,9 @@ class T200HomeHouseCityIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseRent();
             house.city_id = id;
+            house._type = "type_long";
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_city_list()).then(function(values){
+            return self.list(house.merge_user_paging_city_type_list()).then(function(values){
                 data.rent_longs = values;
                 resolve(data);
             }, function(){
@@ -68,8 +69,9 @@ class T200HomeHouseCityIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseRent();
             house.city_id = id;
+            house._type = "type_short";
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_city_list()).then(function(values){
+            return self.list(house.merge_user_paging_city_type_list()).then(function(values){
                 data.rent_shorts = values;
                 resolve(data);
             }, function(){
@@ -85,8 +87,9 @@ class T200HomeHouseCityIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseWanted();
             house.city_id = id;
+            house._type = "type_long";
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_city_list()).then(function(values){
+            return self.list(house.merge_user_paging_city_type_list()).then(function(values){
                 data.wanted_longs = values;
                 resolve(data);
             }, function(){
@@ -102,8 +105,9 @@ class T200HomeHouseCityIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseWanted();
             house.city_id = id;
+            house._type = "type_short";
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_city_list()).then(function(values){
+            return self.list(house.merge_user_paging_city_type_list()).then(function(values){
                 data.wanted_shorts = values;
                 resolve(data);
             }, function(){

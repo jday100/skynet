@@ -154,7 +154,7 @@ class T200UserHouseWanted extends T200HomeUserModel {
                 T200SQL.ALIAS(this._table, "t1")
                 ),
             T200SQL.INNER(
-                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.ALIAS(this._identity_table, "t2"), 
                 T200SQL.EQUAL(
                     T200SQL.PREFIX(this._id, "t1"), 
                     T200SQL.PREFIX(this._id, "t2")
@@ -196,7 +196,7 @@ class T200UserHouseWanted extends T200HomeUserModel {
                 T200SQL.ALIAS(this._table, "t1")
                 ),
             T200SQL.INNER(
-                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.ALIAS(this._identity_table, "t2"), 
                 T200SQL.EQUAL(
                     T200SQL.PREFIX(this._id, "t1"), 
                     T200SQL.PREFIX(this._id, "t2")

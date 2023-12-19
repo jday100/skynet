@@ -1,7 +1,7 @@
     <form id="form" class="list_form" onsubmit="return false;">
         <input type="hidden" name="test">
         <input type="hidden" name="page" value="1">
-        <input type="hidden" name="search">
+        <input type="hidden" id="search" name="search" value="<%=search%>">
         <div class="paging">
             <% 
                 if(paging){ 
@@ -31,10 +31,10 @@
                 exchanges.forEach(item=> {
             %>
                 <div class="list_item">
-                    <div>
+                    <div class="item_left">
                         <a href="/exchange/exchange.html?id=<%=item.id%>"><%=item.title%></a>
                     </div>
-                    <div>
+                    <div class="item_right">
                         <input type="hidden" id="time<%=i%>" value="<%=item.create_time%>">
                         <input disabled class="list_time" type="text" id="time_title<%=i%>" value="">
                     </div>

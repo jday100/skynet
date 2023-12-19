@@ -10,18 +10,18 @@ class T200HomeHouseRentIndex extends T200HomeUserBiz {
         super(request, cookie, session);
     }
 
-    load_index() {
+    load_index(id) {
         log(__filename, "load");
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let data = {};
 
-            self.load_rent_long(data).then(function(){
+            self.load_rent_long(id, data).then(function(){
 
             }, function(err){
                 return error();
             }).then(function(){
-                return self.load_rent_short(data);
+                return self.load_rent_short(id, data);
             }, function(){
                 return error();
             }).then(function(){
@@ -37,12 +37,13 @@ class T200HomeHouseRentIndex extends T200HomeUserBiz {
 
     
 
-    load_rent_long(data) {
+    load_rent_long(id, data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseRent();
+            house.region_id = id;
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_type_list()).then(function(values){
+            return self.list(house.merge_user_paging_long_region_list()).then(function(values){
                 data.house_longs = values;
                 resolve(data);
             }, function(){
@@ -53,12 +54,13 @@ class T200HomeHouseRentIndex extends T200HomeUserBiz {
         return promise;
     }
 
-    load_rent_short(data) {
+    load_rent_short(id, data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let house = new T200UserHouseRent();
+            house.region_id = id;
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_type_list()).then(function(values){
+            return self.list(house.merge_user_paging_short_region_list()).then(function(values){
                 data.house_shorts = values;
                 resolve(data);
             }, function(){

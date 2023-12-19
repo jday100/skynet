@@ -49,4 +49,4 @@ async function do_house_rent_long_city_list(request, response, cookie, session, 
 }
 
 
-global.action.use_post('/house/rent/long/city', do_house_rent_long_city_list);
+global.action.use_post('/house/rent/long/city/list', do_house_rent_long_city_list);

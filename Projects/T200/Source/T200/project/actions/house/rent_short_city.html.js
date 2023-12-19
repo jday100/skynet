@@ -19,9 +19,9 @@ async function do_house_rent_short_city_list(request, response, cookie, session,
         if(T200HttpsForm.verify_id(city_id)){
             house.city_id = city_id;
             house._fields = house.list_fields();
-            house.paging_count_sql = house.merge_user_paging_type_count();
-            house.merge_paging = house.merge_user_paging_type_list;
-            UserBiz.paging(house).then(function(result){
+            house.merge_paging_count = house.merge_user_paging_short_city_count;
+            house.merge_paging_list = house.merge_user_paging_short_city_list;
+            UserBiz.paging2(house).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.city_id = city_id;
@@ -49,4 +49,4 @@ async function do_house_rent_short_city_list(request, response, cookie, session,
 }
 
 
-global.action.use_post('/house/rent/short/city', do_house_rent_short_city_list);
+global.action.use_post('/house/rent/short/city/list', do_house_rent_short_city_list);

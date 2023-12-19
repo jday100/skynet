@@ -55,8 +55,8 @@
             <legend><a href="/exchange/index.html">Exchange</a></legend>
             <div class="exchange_channel">
                 <div>
-                    <input type="text">
-                    <button>Search</button>
+                    <input type="text" id="search_text" value="">
+                    <button id="search_button">Search</button>
                 </div>
                 <div id="list_box">
                     <form id="form" class="list_form">
@@ -87,6 +87,17 @@
         }, function () {
             alert('Load Failure!');
         });
+
+        $.id("search_button").onclick = function(){
+            $.id("search").value = $.id("search_text").value;
+            let data = formtostring('form');
+            $.post('/exchange/search', data, function(result){
+                $.id("list_box").innerHTML = result;
+                update_time();
+            }, function(){
+                alert('Search Failure!');
+            });
+        };
     };
 </script>
 

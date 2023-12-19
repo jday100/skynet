@@ -21,6 +21,8 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+    <script src="/js/t200vessel.js"></script>
+    <script src="/js/t200region_dev.js"></script>
 
 </head>
 
@@ -55,7 +57,7 @@
 
         <fieldset>
             <legend><a href="/region/index.html">Region</a></legend>
-            <div class="region">
+            <div id="region_box" class="region">
 
             </div>
         </fieldset>
@@ -85,10 +87,15 @@
     $.win.onload = function () {
         nav_check();
 
+        region_dev_init();
+
         let data = formtostring('form');
         $.post('/house/list', data, function (result) {
             $.id("list_box").innerHTML = result;
-            update_time();
+            update_times("rent_longs");
+            update_times("rent_shorts");
+            update_times("wanted_longs");
+            update_times("wanted_shorts");
         }, function () {
             alert('Load Failure!');
         });

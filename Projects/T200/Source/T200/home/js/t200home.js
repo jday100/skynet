@@ -90,7 +90,7 @@ function hit_reply(id, obj, url) {
     });
 }
 
-function show_reply(parent_id, id, page, obj, url) {
+function show_reply(parent_id, id, page, nickname, obj, url) {
     if('reply' == $.id("reply"+id).textContent){
         let result = " \
             <form id='"
@@ -114,6 +114,22 @@ function show_reply(parent_id, id, page, obj, url) {
             </div> \
             </form> \
         ";
+
+
+        result = `
+            <form id='form_${id}' class='reply_form' onsubmit='return false;'>
+                <input type='hidden' name='test'>
+                <input type='hidden' name='page' value='${page}'>
+                <input type='hidden' name='parentid' value='${parent_id}'>
+                <input type='hidden' name='nickname' value='${nickname}'>
+                <div class='reply_group'>
+                    <textarea name='content'></textarea>
+                    <button class='reply_button' onclick='reply_save(${id}, $.id(\"${obj}\"), \"${url}\");'>Save</button>
+                </div>
+            </form>
+        `;
+
+
         $.id("reply_box" + id).innerHTML = result;
         $.id("reply" + id).textContent = "hidden";
     }else{
