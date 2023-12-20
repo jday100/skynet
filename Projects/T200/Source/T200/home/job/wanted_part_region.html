@@ -90,7 +90,7 @@
         update_city_id("/job/index_region.html", "job", "/job/wanted_region.html", "wanted", "id");
 
         let data = formtostring('form');
-        $.post('/job/wanted/part/region', data, function (result) {
+        $.post('/job/wanted/part/region/list', data, function (result) {
             $.id("list_box").innerHTML = result;
             update_time();
         }, function () {

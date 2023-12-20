@@ -17,7 +17,7 @@ async function do_job_recruit_region_list(request, response, cookie, session, re
         let region_id = request.get("id");
 
         if(T200HttpsForm.verify_id(region_id)){
-            return JobRecruitIndex.load_index().then(function(data){
+            return JobRecruitIndex.load_index(region_id).then(function(data){
                 data.region_id = region_id;
                 return view.render_file('job/recruit_region.ejs', data);
             }, function(err){

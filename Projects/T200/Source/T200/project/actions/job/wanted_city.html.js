@@ -17,7 +17,7 @@ async function do_job_wanted_city_list(request, response, cookie, session, resou
         let city_id = request.get("id");
 
         if(T200HttpsForm.verify_id(city_id)){
-            return JobWantedIndex.load_index().then(function(data){
+            return JobWantedIndex.load_index(city_id).then(function(data){
                 data.city_id = city_id;
                 return view.render_file('job/wanted_city.ejs', data);
             }, function(err){

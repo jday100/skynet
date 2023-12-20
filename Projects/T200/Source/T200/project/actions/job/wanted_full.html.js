@@ -15,10 +15,11 @@ async function do_job_wanted_full_list(request, response, cookie, session, resou
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         if(true){
+            job._type = "type_full";
             job._fields = job.list_fields();
-            job.paging_count_sql = job.merge_user_paging_type_count();
-            job.merge_paging = job.merge_user_paging_type_list;
-            UserBiz.paging(job).then(function(result){
+            job.merge_paging_count = job.merge_user_paging_type_count;
+            job.merge_paging_list = job.merge_user_paging_type_list;
+            UserBiz.paging2(job).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.paging = result.paging;
@@ -45,4 +46,4 @@ async function do_job_wanted_full_list(request, response, cookie, session, resou
 }
 
 
-global.action.use_post('/job/wanted/full', do_job_wanted_full_list);
+global.action.use_post('/job/wanted/full/list', do_job_wanted_full_list);

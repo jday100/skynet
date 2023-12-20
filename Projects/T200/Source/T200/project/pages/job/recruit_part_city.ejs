@@ -7,18 +7,18 @@
             if(paging){ 
                 if(paging.first){ 
         %>
-            <a href="#" onclick="turning(1, $.id('list_box'), '/exchange/list');">First</a>
+            <a href="#" onclick="turning(1, $.id('list_box'), '/job/recruit/part/city/list');">First</a>
             <% 
                 } 
                 if(paging.pages){ 
                     paging.pages.forEach(item=> {
             %>
-                <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/exchange/list');"><%=item%></a>
+                <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/job/recruit/part/city/list');"><%=item%></a>
             <% 
                 }); 
             } 
                 if(paging.last){ %>
-                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/exchange/list');">Last</a>
+                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/job/recruit/part/city/list');">Last</a>
         <% 
                 } 
             } 
@@ -31,8 +31,8 @@
             jobs.forEach(item=> {
         %>
             <div class="list_item">
-                <div>
-                    <a href="/exchange/exchange.html?id=<%=item.id%>"><%=item.title%></a>
+                <div class="item_left">
+                    <a href="/job/job_recruit.html?id=<%=item.id%>"><%=item.title%></a>
                 </div>
                 <div>
                     <input type="hidden" id="time<%=i%>" value="<%=item.create_time%>">
@@ -46,7 +46,7 @@
             %>
                 <div class="list_item">
                     <div>
-                        <a href="/exchange/exchange.html">unpublished</a>
+                        <a href="/job/job_recruit.html">unpublished</a>
                     </div>
                     <div>
                         2023-10-10 10:10
@@ -63,18 +63,18 @@
             if(paging){ 
                 if(paging.first){ 
         %>
-            <a href="#" onclick="turning(1, $.id('list_box'), '/exchange/list');">First</a>
+            <a href="#" onclick="turning(1, $.id('list_box'), '/job/recruit/part/city/list');">First</a>
             <% 
                 } 
                 if(paging.pages){ 
                     paging.pages.forEach(item=> {
             %>
-                <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/exchange/list');"><%=item%></a>
+                <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/job/recruit/part/city/list');"><%=item%></a>
             <% 
                 }); 
             } 
                 if(paging.last){ %>
-                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/exchange/list');">Last</a>
+                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/job/recruit/part/city/list');">Last</a>
         <% 
                 } 
             } 

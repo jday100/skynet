@@ -7,12 +7,13 @@
                 if(i < k){
                     %>
                     <div class="channel_item">
-                        <div>
-                            <a target="_blank" href="/house/house_rent.html?id=<%=job_fulls[i].id%>"><%=job_fulls[i].title%></a>
+                        <div class="left">
+                            <a target="_blank" href="/job/job_recruit.html?id=<%=job_fulls[i].id%>"><%=job_fulls[i].title%></a>
                         </div>
-                        <div>
-                            <a href=""><%="user"%></a>
-                            2023-10-10 10:10                                
+                        <div class="right">
+                            <a href="/person/person.html"><%=job_fulls[i].nickname%></a>
+                            <div class="time" id="job_fulls_time<%=i%>"></div>
+                            <input type="hidden" id="job_fulls<%=i%>" value="<%=job_fulls[i].create_time%>">                                                          
                         </div>
                     </div>
                     <%
@@ -20,7 +21,7 @@
                     %>
                     <div class="channel_item">
                         <div>
-                            <a target="_blank" href="/house/house_rent.html">unpublished</a>
+                            <a target="_blank" href="/job/job_recruit.html">unpublished</a>
                         </div>
                         <div>
                             <a href="">any</a>
@@ -43,12 +44,13 @@
                 if(i < k){
                     %>
                     <div class="channel_item">
-                        <div>
-                            <a target="_blank" href="/house/house_rent.html?id=<%=job_parts[i].id%>"><%=job_parts[i].title%></a>
+                        <div class="left">
+                            <a target="_blank" href="/job/job_recruit.html?id=<%=job_parts[i].id%>"><%=job_parts[i].title%></a>
                         </div>
-                        <div>
-                            <a href=""><%="user"%></a>
-                            2023-10-10 10:10                                
+                        <div class="right">
+                            <a href="/person/person.html"><%=job_parts[i].nickname%></a>
+                            <div class="time" id="job_parts_time<%=i%>"></div>
+                            <input type="hidden" id="job_parts<%=i%>" value="<%=job_parts[i].create_time%>">                                                          
                         </div>
                     </div>
                     <%
@@ -56,7 +58,7 @@
                     %>
                     <div class="channel_item">
                         <div>
-                            <a target="_blank" href="/house/house_rent.html">unpublished</a>
+                            <a target="_blank" href="/job/job_recruit.html">unpublished</a>
                         </div>
                         <div>
                             <a href="">any</a>

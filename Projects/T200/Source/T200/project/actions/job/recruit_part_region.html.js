@@ -18,10 +18,11 @@ async function do_job_recruit_part_region_list(request, response, cookie, sessio
 
         if(T200HttpsForm.verify_id(region_id)){
             job.region_id = region_id;
+            job._type = "type_part";
             job._fields = job.list_fields();
-            job.paging_count_sql = job.merge_user_paging_type_count();
-            job.merge_paging = job.merge_user_paging_type_list;
-            UserBiz.paging(job).then(function(result){
+            job.merge_paging_count = job.merge_user_paging_region_type_count;
+            job.merge_paging_list = job.merge_user_paging_region_type_list;
+            UserBiz.paging2(job).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.region_id = region_id;
@@ -49,4 +50,4 @@ async function do_job_recruit_part_region_list(request, response, cookie, sessio
 }
 
 
-global.action.use_post('/job/recruit/part/region', do_job_recruit_part_region_list);
+global.action.use_post('/job/recruit/part/region/list', do_job_recruit_part_region_list);
