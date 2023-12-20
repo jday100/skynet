@@ -162,6 +162,17 @@ function turning(id, obj, url) {
     });
 }
 
+function turning_page(id, obj, url) {
+    $.id("page").value = id;
+    let result = formtostring("form");
+    $.post(url, result, function(data){
+        obj.innerHTML = data;
+        update_time();
+    }, function(){
+        alert("Load Failure!");
+    });
+}
+
 function update_region() {
     let result = ``;
     $.post('/content/person/region', result, function(data){
@@ -199,6 +210,27 @@ function query_id() {
             }
         }
     }
+}
+
+function get_id() {
+    let query = location.search;
+
+    if(null == query){
+        
+    }else{
+        if(-1 != query.indexOf("?")) {
+            let str = query.slice(1);
+            let values = str.split("=");
+
+            if(2 == values.length){
+                if("id" == values[0]){
+                    return values[1];
+                }
+            }
+        }
+    }
+
+    return 0;
 }
 
 function query_pid() {

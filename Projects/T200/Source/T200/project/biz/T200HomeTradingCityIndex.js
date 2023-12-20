@@ -11,18 +11,18 @@ class T200HomeTradingIndex extends T200HomeUserBiz {
         super(request, cookie, session);
     }
 
-    load_index() {
+    load_index(id) {
         log(__filename, "load");
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let data = {};
 
-            self.load_trading_sell(data).then(function(){
+            self.load_trading_sell(id, data).then(function(){
 
             }, function(err){
                 return error();
             }).then(function(){
-                return self.load_trading_buy(data);
+                return self.load_trading_buy(id, data);
             }, function(){
                 return error();
             }).then(function(){
@@ -38,12 +38,13 @@ class T200HomeTradingIndex extends T200HomeUserBiz {
 
     
 
-    load_trading_sell(data) {
+    load_trading_sell(id, data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let trading = new T200UserTradingSell();
+            trading.city_id = id;
             trading._fields = trading.list_fields();
-            return self.list(trading.merge_user_paging_type_list()).then(function(values){
+            return self.list(trading.merge_user_paging_city_list()).then(function(values){
                 data.trading_sells = values;
                 resolve(data);
             }, function(){
@@ -54,12 +55,13 @@ class T200HomeTradingIndex extends T200HomeUserBiz {
         return promise;
     }
 
-    load_trading_buy(data) {
+    load_trading_buy(id, data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let trading = new T200UserTradingBuy();
+            trading.city_id = id;
             trading._fields = trading.list_fields();
-            return self.list(trading.merge_user_paging_type_list()).then(function(values){
+            return self.list(trading.merge_user_paging_city_list()).then(function(values){
                 data.trading_buys = values;
                 resolve(data);
             }, function(){

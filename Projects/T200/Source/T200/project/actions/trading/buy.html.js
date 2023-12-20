@@ -16,9 +16,9 @@ async function do_trading_buy_list(request, response, cookie, session, resource)
 
         if(true){
             trading._fields = trading.list_fields();
-            trading.paging_count_sql = trading.merge_user_paging_type_count();
-            trading.merge_paging = trading.merge_user_paging_type_list;
-            UserBiz.paging(trading).then(function(result){
+            trading.merge_paging_count = trading.merge_user_paging_home_count;
+            trading.merge_paging_list = trading.merge_user_paging_home_list;
+            UserBiz.paging2(trading).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.paging = result.paging;

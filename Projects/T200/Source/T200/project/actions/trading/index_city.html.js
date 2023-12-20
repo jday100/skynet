@@ -17,7 +17,7 @@ async function do_trading_city_list(request, response, cookie, session, resource
         let city_id = request.get("id");
 
         if(T200HttpsForm.verify_id(city_id)){
-            return TradingIndex.load_index().then(function(data){
+            return TradingIndex.load_index(city_id).then(function(data){
                 data.city_id = city_id;
                 return view.render_file('trading/index_city.ejs', data);
             }, function(err){

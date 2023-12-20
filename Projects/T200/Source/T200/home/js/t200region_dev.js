@@ -18,6 +18,8 @@ let asia_dev = new T200Vessel([
 ]);
 
 
+let regions_dev = new T200Vessel();
+
 let continents_dev = new T200Vessel([
     [100,       'asia',             asia_dev],
     [101,       'america'],
@@ -187,4 +189,69 @@ function city_dev_setting(id) {
 
 
     $.id('region_box').innerHTML = result;   
+}
+
+
+function regions_setting() {
+    let result = "";
+    continents_dev.array().forEach(item => {
+        result += merge_region_panel(item);
+    });
+
+    $.id('list_box').innerHTML = result;
+}
+
+function merge_region_panel(item) {
+    let result = "";
+
+    result += `
+        <fieldset>
+            <legend>${item[1]}</legend>
+            <div>
+        `;
+
+    let obj = item[2];
+
+    if(undefined == obj){
+
+    }else{
+        obj.array().forEach(region => {
+            result += merge_region(region[0], region[1]);
+        });
+    }
+    
+    result += `    
+            </div>
+        </fieldset>
+    `;
+
+    return result;
+}
+
+function cities_setting(id) {
+    let region = regions_dev.key(id);
+
+    if(undefined == region){
+        return;
+    }
+    let result = merge_city_panel(region);
+    $.id('list_box').innerHTML = result;
+}
+
+function merge_city_panel(region) {
+    let result = "";
+
+    region.array().forEarch(item => {
+        result += merge_city(item[0], item[1]);
+    });
+
+    return result;
+}
+
+function merge_region(id, name) {
+    return `<a href='/region/regions.html?id=${id}'>${name}</a>`;
+}
+
+function merge_city(id, name) {
+    return `<a href='/region/city.html?id=${id}'>${name}</a>`;
 }

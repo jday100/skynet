@@ -17,7 +17,7 @@ async function do_trading_region_list(request, response, cookie, session, resour
         let region_id = request.get("id");
 
         if(T200HttpsForm.verify_id(region_id)){
-            return TradingIndex.load_index().then(function(data){
+            return TradingIndex.load_index(region_id).then(function(data){
                 data.region_id = region_id;
                 return view.render_file('trading/index_region.ejs', data);
             }, function(err){

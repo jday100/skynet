@@ -494,3 +494,18 @@ input[type="email"] + img + button {
 	text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+.region_box {
+    width: 1000px;
+    display: block;
+}
+
+.region_box div {
+    width: 970px;
+    display: block;
+}
+
+.region_box a {
+    margin-left: 5px;
+    margin-right: 5px;
+}

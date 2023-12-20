@@ -19,9 +19,9 @@ async function do_trading_sell_region_list(request, response, cookie, session, r
         if(T200HttpsForm.verify_id(region_id)){
             trading.region_id = region_id;
             trading._fields = trading.list_fields();
-            trading.paging_count_sql = trading.merge_user_paging_type_count();
-            trading.merge_paging = trading.merge_user_paging_type_list;
-            UserBiz.paging(trading).then(function(result){
+            trading.merge_paging_count = trading.merge_user_paging_region_count;
+            trading.merge_paging_list = trading.merge_user_paging_region_list;
+            UserBiz.paging2(trading).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.region_id = region_id;

@@ -64,7 +64,11 @@
                  - 
                 <a id="sell" href="/trading/Sell.html">Sell</a>
             </legend>
-            <div class="channel">
+            <div class="channel_box">
+                <div>
+                    <input type="text">
+                    <button>Search</button>
+                </div>
                 <div id="list_box">
                     <form id="form" class="list_form">
                         <input type="hidden" name="test">
@@ -72,7 +76,7 @@
                         <input type="hidden" name="page" value="1">
                         <input type="hidden" name="search">
                     </form>
-                </div>
+                </div> 
             </div>
         </fieldset>
 
@@ -95,6 +99,7 @@
         let data = formtostring('form');
         $.post('/trading/sell/region/list', data, function (result) {
             $.id("list_box").innerHTML = result;
+            update_time();
         }, function () {
             alert('Load Failure!');
         });

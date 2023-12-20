@@ -43,7 +43,7 @@ class T200HomeTradingIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let trading = new T200UserTradingSell();
             trading._fields = trading.list_fields();
-            return self.list(trading.merge_user_paging_type_list()).then(function(values){
+            return self.list(trading.merge_user_paging_home_list()).then(function(values){
                 data.trading_sells = values;
                 resolve(data);
             }, function(){
@@ -59,7 +59,7 @@ class T200HomeTradingIndex extends T200HomeUserBiz {
         let promise = new Promise(function(resolve, reject){
             let trading = new T200UserTradingBuy();
             trading._fields = trading.list_fields();
-            return self.list(trading.merge_user_paging_type_list()).then(function(values){
+            return self.list(trading.merge_user_paging_home_list()).then(function(values){
                 data.trading_buys = values;
                 resolve(data);
             }, function(){

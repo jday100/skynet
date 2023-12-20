@@ -87,7 +87,8 @@
         let data = formtostring('form');
         $.post('/trading/list', data, function (result) {
             $.id("list_box").innerHTML = result;
-            update_time();
+            update_times("trading_sells");
+            update_times("trading_buys");
         }, function () {
             alert('Load Failure!');
         });

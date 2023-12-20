@@ -21,6 +21,8 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+    <script src="/js/t200vessel.js"></script>
+    <script src="/js/t200region_dev.js"></script>
 
 </head>
 
@@ -53,53 +55,9 @@
 
         <fieldset class="title">
             <legend>Region</legend>
-            
-            <fieldset>
-                <legend>Asia</legend>
-                <div>
-                    <a href="/region/cities.html">South Korea</a>
-                    <a href="">Japan</a>
-                    <a href="">China</a>
-                    <a href="">Singapore</a>
-                    <a href="">Other</a>
-                </div>
-            </fieldset>
+            <div id="list_box" class="region_box">
 
-            <fieldset>
-                <legend>America</legend>
-                <div>
-                    
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Europe</legend>
-                <div>
-                    
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Oceania</legend>
-                <div>
-                    
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Africa</legend>
-                <div>
-                    
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend>Other</legend>
-                <div>
-                    
-                </div>
-            </fieldset>
-            
+            </div>            
         </fieldset>
         
         <footer>
@@ -113,6 +71,8 @@
 <script>
     $.win.onload = function(){
         nav_check();
+
+        regions_setting();
     };
 </script>
 
