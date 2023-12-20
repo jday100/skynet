@@ -1,0 +1,1263 @@
+
+
+    目录: C:\zoo\work\web
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         2023/12/8     10:13                docs                                                                 
+d-----         2023/12/8     10:13                home                                                                 
+d-----        2023/12/16     18:34                library                                                              
+d-----         2023/12/8     10:23                node_modules                                                         
+d-----        2023/12/17     11:57                project                                                              
+d-----         2023/12/8     10:13                storages                                                             
+d-----        2023/12/16     20:13                test                                                                 
+-a----         2023/12/8     10:23          13638 package-lock.json                                                    
+-a----         2023/12/8     10:08            310 package.json                                                         
+-a----         2023/12/8     10:08            416 T200Home.js                                                          
+
+
+    目录: C:\zoo\work\web\docs
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08            520 draft.txt                                                            
+-a----         2023/12/8     10:08          15534 query.txt                                                            
+-a----         2023/12/8     10:08           1747 store.txt                                                            
+
+
+    目录: C:\zoo\work\web\home
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        2023/12/12     18:30                admin                                                                
+d-----         2023/12/8     10:13                content                                                              
+d-----         2023/12/8     10:13                css                                                                  
+d-----         2023/12/8     10:13                exchange                                                             
+d-----        2023/12/15     13:25                house                                                                
+d-----        2023/12/12      9:50                images                                                               
+d-----        2023/12/15     13:53                job                                                                  
+d-----        2023/12/12     20:22                js                                                                   
+d-----         2023/12/8     10:13                notice                                                               
+d-----         2023/12/8     10:13                region                                                               
+d-----        2023/12/15     14:05                trading                                                              
+-a----         2023/12/8     10:08           1903 about.html                                                           
+-a----        2023/12/12     11:21           3186 login.html                                                           
+-a----        2023/12/14     12:48           5715 register.html                                                        
+
+
+    目录: C:\zoo\work\web\home\admin
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         2023/12/8     10:13                exchange                                                             
+d-----         2023/12/8     10:13                global                                                               
+d-----         2023/12/8     10:13                house                                                                
+d-----        2023/12/18     20:07                invitation                                                           
+d-----         2023/12/8     10:13                job                                                                  
+d-----         2023/12/8     10:13                note                                                                 
+d-----         2023/12/8     10:13                notice                                                               
+d-----         2023/12/8     10:13                person                                                               
+d-----         2023/12/8     10:13                trading                                                              
+-a----         2023/12/8     10:08              0 forget.html                                                          
+-a----        2023/12/12     19:08           6035 index.html                                                           
+-a----        2023/12/16     11:30           3012 login.html                                                           
+
+
+    目录: C:\zoo\work\web\home\admin\exchange
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/16     13:36           6940 index.html                                                           
+
+
+    目录: C:\zoo\work\web\home\admin\global
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/16     13:37           7007 global.html                                                          
+
+
+    目录: C:\zoo\work\web\home\admin\house
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/16     13:37           6948 rent.html                                                            
+-a----        2023/12/16     13:37           6956 wanted.html                                                          
+
+
+    目录: C:\zoo\work\web\home\admin\invitation
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     20:08           7508 edit.html                                                            
+-a----        2023/12/12     19:09           7136 index.html                                                           
+
+
+    目录: C:\zoo\work\web\home\admin\job
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/16     13:41           6951 recruit.html                                                         
+-a----        2023/12/16     13:41           6950 wanted.html                                                          
+
+
+    目录: C:\zoo\work\web\home\admin\note
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/16     13:41           7502 edit.html                                                            
+-a----        2023/12/16     13:40           7073 index.html                                                           
+
+
+    目录: C:\zoo\work\web\home\admin\notice
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/16     13:40           7508 edit.html                                                            
+-a----        2023/12/16     13:40           7091 index.html                                                           
+
+
+    目录: C:\zoo\work\web\home\admin\person
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/16     13:40           6946 index.html                                                           
+-a----        2023/12/16     13:40           6042 profile.html                                                         
+
+
+    目录: C:\zoo\work\web\home\admin\trading
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/16     13:40           6951 buy.html                                                             
+-a----        2023/12/16     13:40           6954 sell.html                                                            
+
+
+    目录: C:\zoo\work\web\home\content
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         2023/12/8     10:13                exchange                                                             
+d-----         2023/12/8     10:13                house                                                                
+d-----         2023/12/8     10:13                job                                                                  
+d-----         2023/12/8     10:13                note                                                                 
+d-----         2023/12/9     18:21                person                                                               
+d-----         2023/12/8     10:13                trading                                                              
+-a----        2023/12/13     19:14           5011 index.html                                                           
+
+
+    目录: C:\zoo\work\web\home\content\exchange
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/13     19:16           6497 edit.html                                                            
+-a----        2023/12/13     19:16           6092 index.html                                                           
+
+
+    目录: C:\zoo\work\web\home\content\house
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/13     19:17           6102 rent.html                                                            
+-a----        2023/12/18     14:16           7590 rent_edit.html                                                       
+-a----        2023/12/13     19:17           6110 wanted.html                                                          
+-a----        2023/12/18     14:26           7594 wanted_edit.html                                                     
+
+
+    目录: C:\zoo\work\web\home\content\job
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/13     19:17           6106 recruit.html                                                         
+-a----        2023/12/18     14:37           7593 recruit_edit.html                                                    
+-a----        2023/12/13     19:17           6102 wanted.html                                                          
+-a----        2023/12/18     14:37           7589 wanted_edit.html                                                     
+
+
+    目录: C:\zoo\work\web\home\content\note
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/13     19:17           6485 edit.html                                                            
+-a----        2023/12/13     19:18           6074 index.html                                                           
+
+
+    目录: C:\zoo\work\web\home\content\person
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/13     15:42           5848 identity.html                                                        
+-a----        2023/12/13     14:32           6021 identity_init.html                                                   
+-a----        2023/12/13     15:00           5772 profile.html                                                         
+-a----        2023/12/13     14:40           6218 profile_init.html                                                    
+
+
+    目录: C:\zoo\work\web\home\content\trading
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/13     19:18           6106 buy.html                                                             
+-a----        2023/12/13     19:18           7124 buy_edit.html                                                        
+-a----        2023/12/13     19:18           6110 sell.html                                                            
+-a----        2023/12/13     19:18           7126 sell_edit.html                                                       
+
+
+    目录: C:\zoo\work\web\home\css
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/20     13:43           8271 home.css                                                             
+-a----        2023/12/17     14:39           1255 list.css                                                             
+-a----        2023/12/11     17:15           2919 person.css                                                           
+-a----        2023/12/18     14:13           3787 side.css                                                             
+-a----        2023/12/16     13:44           2350 stage.css                                                            
+-a----        2023/12/18     12:12           1148 styles.css                                                           
+
+
+    目录: C:\zoo\work\web\home\exchange
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/19     13:18           2550 exchange.html                                                        
+-a----        2023/12/19     12:44           3145 index.html                                                           
+
+
+    目录: C:\zoo\work\web\home\house
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     18:27           2523 house_rent.html                                                      
+-a----         2023/12/8     18:54           2513 house_wanted.html                                                    
+-a----        2023/12/19     13:58           2994 index.html                                                           
+-a----        2023/12/19     14:35           2939 index_city.html                                                      
+-a----        2023/12/19     14:36           2938 index_region.html                                                    
+-a----        2023/12/19     14:05           2818 rent.html                                                            
+-a----        2023/12/19     14:50           3010 rent_city.html                                                       
+-a----         2023/12/8     10:08           2862 rent_long.html                                                       
+-a----        2023/12/19     14:59           3047 rent_long_city.html                                                  
+-a----        2023/12/19     15:03           3053 rent_long_region.html                                                
+-a----        2023/12/15     13:14           2931 rent_region.html                                                     
+-a----        2023/12/19     19:59           2870 rent_short.html                                                      
+-a----        2023/12/19     15:23           3049 rent_short_city.html                                                 
+-a----        2023/12/19     15:29           3055 rent_short_region.html                                               
+-a----        2023/12/19     20:53           2824 wanted.html                                                          
+-a----        2023/12/19     20:11           3022 wanted_city.html                                                     
+-a----        2023/12/19     20:25           2875 wanted_long.html                                                     
+-a----        2023/12/19     20:13           3059 wanted_long_city.html                                                
+-a----        2023/12/19     20:20           3065 wanted_long_region.html                                              
+-a----        2023/12/15     13:23           2943 wanted_region.html                                                   
+-a----        2023/12/19     20:49           2878 wanted_short.html                                                    
+-a----        2023/12/19     20:34           3061 wanted_short_city.html                                               
+-a----        2023/12/19     20:44           3067 wanted_short_region.html                                             
+
+
+    目录: C:\zoo\work\web\home\images
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/12      9:44            613 cross.png                                                            
+-a----         2023/12/8     10:08          28728 home.gif                                                             
+-a----        2023/12/12      9:50            601 tick.png                                                             
+
+
+    目录: C:\zoo\work\web\home\job
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/19     21:26           2840 index.html                                                           
+-a----        2023/12/19     21:15           2987 index_city.html                                                      
+-a----        2023/12/19     21:16           2991 index_region.html                                                    
+-a----         2023/12/8     10:08           2563 job_recruit.html                                                     
+-a----         2023/12/8     10:08           2560 job_wanted.html                                                      
+-a----        2023/12/20      9:54           2814 recruit.html                                                         
+-a----        2023/12/19     21:46           3007 recruit_city.html                                                    
+-a----        2023/12/19     22:11           2869 recruit_full.html                                                    
+-a----        2023/12/19     21:53           3049 recruit_full_city.html                                               
+-a----        2023/12/19     22:01           3055 recruit_full_region.html                                             
+-a----        2023/12/20      9:34           2869 recruit_part.html                                                    
+-a----        2023/12/20      9:21           3049 recruit_part_city.html                                               
+-a----        2023/12/20      9:29           3063 recruit_part_region.html                                             
+-a----        2023/12/20      9:47           3013 recruit_region.html                                                  
+-a----        2023/12/20     10:43           2811 wanted.html                                                          
+-a----        2023/12/20      9:55           3001 wanted_city.html                                                     
+-a----        2023/12/20     10:14           2865 wanted_full.html                                                     
+-a----        2023/12/20     10:01           3043 wanted_full_city.html                                                
+-a----        2023/12/20     10:08           3049 wanted_full_region.html                                              
+-a----        2023/12/20     10:32           2865 wanted_part.html                                                     
+-a----        2023/12/20     10:19           3043 wanted_part_city.html                                                
+-a----        2023/12/20     10:26           3049 wanted_part_region.html                                              
+-a----        2023/12/20     10:36           3007 wanted_region.html                                                   
+
+
+    目录: C:\zoo\work\web\home\js
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     18:45           2161 list.js                                                              
+-a----        2023/12/16     10:42           2238 t200.js                                                              
+-a----        2023/12/20     13:58          13210 t200home.js                                                          
+-a----        2023/12/13     16:25          11304 t200identity.js                                                      
+-a----        2023/12/12     12:16           7141 t200person.js                                                        
+-a----         2023/12/8     10:08           4099 t200region.js                                                        
+-a----        2023/12/20     13:55           5942 t200region_dev.js                                                    
+-a----        2023/12/13     13:56            921 t200vessel.js                                                        
+-a----        2023/12/12     20:43            333 t200vessel_dev.js                                                    
+
+
+    目录: C:\zoo\work\web\home\notice
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     12:28           5064 index.html                                                           
+-a----        2023/12/18     21:25           2520 notice.html                                                          
+
+
+    目录: C:\zoo\work\web\home\region
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           3057 cities.html                                                          
+-a----         2023/12/8     10:08          20124 city.html                                                            
+-a----        2023/12/20     13:40           2065 index.html                                                           
+-a----         2023/12/8     10:08              0 region.html                                                          
+-a----        2023/12/20     13:57           2106 regions.html                                                         
+
+
+    目录: C:\zoo\work\web\home\trading
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/20     11:54           3112 buy.html                                                             
+-a----        2023/12/20     11:22           3244 buy_city.html                                                        
+-a----        2023/12/20     11:39           3250 buy_region.html                                                      
+-a----        2023/12/20     12:19           2758 index.html                                                           
+-a----        2023/12/20     12:06           2787 index_city.html                                                      
+-a----        2023/12/20     12:11           2791 index_region.html                                                    
+-a----        2023/12/20     12:30           3115 sell.html                                                            
+-a----        2023/12/20     12:21           3237 sell_city.html                                                       
+-a----        2023/12/20     12:26           3243 sell_region.html                                                     
+-a----         2023/12/8     10:08           2567 trading_buy.html                                                     
+-a----         2023/12/8     10:08           2570 trading_sell.html                                                    
+
+
+    目录: C:\zoo\work\web\library
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        2023/12/14     11:44                crypto                                                               
+d-----         2023/12/8     10:13                db                                                                   
+d-----         2023/12/8     10:13                fs                                                                   
+d-----         2023/12/8     10:13                net                                                                  
+d-----         2023/12/8     10:13                template                                                             
+d-----         2023/12/8     10:13                web                                                                  
+-a----         2023/12/8     21:24           1051 T200Dotter.js                                                        
+-a----         2023/12/8     10:08            189 T200Error.js                                                         
+-a----         2023/12/8     10:08            507 T200Lib.js                                                           
+-a----        2023/12/16     18:37            288 T200Math.js                                                          
+-a----        2023/12/17     13:01           1826 T200Moken.js                                                         
+
+
+    目录: C:\zoo\work\web\library\crypto
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/14     11:59            429 T200Crypto.js                                                        
+
+
+    目录: C:\zoo\work\web\library\db
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           1792 T200Database.js                                                      
+-a----         2023/12/8     10:08           3685 T200DBClient.js                                                      
+-a----         2023/12/8     10:08            232 T200DBSetup.js                                                       
+-a----         2023/12/8     10:08           2067 T200Mariadb.js                                                       
+-a----         2023/12/8     10:08           2045 T200Mysql.js                                                         
+-a----        2023/12/12     14:13           3677 T200SQL.js                                                           
+
+
+    目录: C:\zoo\work\web\library\fs
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08            934 T200File.js                                                          
+-a----         2023/12/8     10:08            988 T200Path.js                                                          
+
+
+    目录: C:\zoo\work\web\library\net
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           1770 T200CookieItem.js                                                    
+-a----         2023/12/8     10:08            494 T200HttpsAction.js                                                   
+-a----        2023/12/16     10:26           2817 T200HttpsCookie.js                                                   
+-a----         2023/12/9     13:34           9237 T200HttpsDispatcher.js                                               
+-a----        2023/12/14     14:07           2479 T200HttpsForm.js                                                     
+-a----        2023/12/16     13:03           1778 T200HttpsRequest.js                                                  
+-a----         2023/12/8     10:08           2604 T200HttpsResource.js                                                 
+-a----         2023/12/8     10:08           3217 T200HttpsResponse.js                                                 
+-a----        2023/12/18     12:02           3133 T200HttpsServer.js                                                   
+-a----        2023/12/14     12:20           1364 T200HttpsSession.js                                                  
+-a----         2023/12/8     10:08            321 T200HttpsSetup.js                                                    
+-a----         2023/12/8     10:08            348 T200SessionItem.js                                                   
+
+
+    目录: C:\zoo\work\web\library\template
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08            660 T200EJS.js                                                           
+
+
+    目录: C:\zoo\work\web\library\web
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         2023/12/8     10:13                biz                                                                  
+d-----         2023/12/8     10:13                model                                                                
+d-----         2023/12/8     10:13                store                                                                
+d-----         2023/12/8     10:13                view                                                                 
+
+
+    目录: C:\zoo\work\web\library\web\biz
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08            333 T200AdminBiz.js                                                      
+-a----         2023/12/8     10:08           4078 T200BizBase.js                                                       
+-a----         2023/12/8     10:08            896 T200ForumBiz.js                                                      
+-a----         2023/12/8     10:08           2386 T200PagingBiz.js                                                     
+-a----         2023/12/8     10:08            849 T200SearchBiz.js                                                     
+-a----         2023/12/8     10:08           4045 T200UserBiz.js                                                       
+-a----        2023/12/16     11:08           2576 T200VisitorBiz.js                                                    
+
+
+    目录: C:\zoo\work\web\library\web\model
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     18:58           6209 T200AdminModel.js                                                    
+-a----         2023/12/8     10:08            302 T200ForumModel.js                                                    
+-a----        2023/12/12     13:03           1994 T200ModelBase.js                                                     
+-a----        2023/12/18     20:51           1619 T200PagingModel.js                                                   
+-a----        2023/12/18     21:15           2138 T200SearchModel.js                                                   
+-a----        2023/12/20     11:02          14128 T200UserModel.js                                                     
+-a----        2023/12/16     11:21           3341 T200VisitorModel.js                                                  
+
+
+    目录: C:\zoo\work\web\library\web\store
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           2972 T200StoreBase.js                                                     
+
+
+    目录: C:\zoo\work\web\library\web\view
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           2008 T200ListView.js                                                      
+-a----         2023/12/8     10:08            627 T200ViewBase.js                                                                                                                
+
+
+    目录: C:\zoo\work\web\project
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        2023/12/15     19:57                actions                                                              
+d-----        2023/12/15     20:19                biz                                                                  
+d-----         2023/12/8     10:13                init                                                                 
+d-----        2023/12/17     12:08                models                                                               
+d-----         2023/12/8     10:13                pages                                                                
+d-----         2023/12/8     10:13                store                                                                
+d-----         2023/12/8     10:13                view                                                                 
+-a----         2023/12/8     10:08           3151 T200HomeServer.js                                                    
+-a----         2023/12/8     10:08            274 T200HomeSetup.js                                                     
+
+
+    目录: C:\zoo\work\web\project\actions
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        2023/12/12     18:56                admin                                                                
+d-----         2023/12/8     10:13                content                                                              
+d-----         2023/12/8     10:13                exchange                                                             
+d-----        2023/12/15     18:32                house                                                                
+d-----        2023/12/15     19:43                job                                                                  
+d-----         2023/12/8     10:13                notice                                                               
+d-----         2023/12/8     10:13                region                                                               
+d-----        2023/12/15     19:58                trading                                                              
+-a----         2023/12/8     10:08            291 app.js                                                               
+-a----         2023/12/8     10:08            988 index.js                                                             
+-a----        2023/12/16     10:44           3872 login.html.js                                                        
+-a----        2023/12/14     14:22           5117 register.html.js                                                     
+
+
+    目录: C:\zoo\work\web\project\actions\admin
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         2023/12/8     10:13                exchange                                                             
+d-----        2023/12/12     18:34                global                                                               
+d-----         2023/12/8     10:13                house                                                                
+d-----        2023/12/12     18:56                invitation                                                           
+d-----         2023/12/8     10:13                job                                                                  
+d-----         2023/12/8     10:13                note                                                                 
+d-----         2023/12/8     10:13                notice                                                               
+d-----         2023/12/8     10:13                person                                                               
+d-----         2023/12/8     10:13                trading                                                              
+-a----        2023/12/16     11:15           2219 login.html.js                                                        
+
+
+    目录: C:\zoo\work\web\project\actions\admin\exchange
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           7781 index.html.js                                                        
+
+
+    目录: C:\zoo\work\web\project\actions\admin\global
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     19:48           6924 global.html.js                                                       
+
+
+    目录: C:\zoo\work\web\project\actions\admin\house
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           7696 rent.html.js                                                         
+-a----         2023/12/8     10:08           7752 wanted.html.js                                                       
+
+
+    目录: C:\zoo\work\web\project\actions\admin\invitation
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/12     19:04           7669 index.html.js                                                        
+
+
+    目录: C:\zoo\work\web\project\actions\admin\job
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           7634 recruit.html.js                                                      
+-a----         2023/12/8     10:08           7606 wanted.html.js                                                       
+
+
+    目录: C:\zoo\work\web\project\actions\admin\note
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           2279 edit.html.js                                                         
+-a----         2023/12/8     10:08           7489 index.html.js                                                        
+
+
+    目录: C:\zoo\work\web\project\actions\admin\notice
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           2325 edit.html.js                                                         
+-a----         2023/12/8     10:08           7627 index.html.js                                                        
+
+
+    目录: C:\zoo\work\web\project\actions\admin\person
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           7721 index.html.js                                                        
+
+
+    目录: C:\zoo\work\web\project\actions\admin\trading
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           7814 buy.html.js                                                          
+-a----         2023/12/8     10:08           7829 sell.html.js                                                         
+
+
+    目录: C:\zoo\work\web\project\actions\content
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         2023/12/8     10:13                exchange                                                             
+d-----         2023/12/8     10:13                house                                                                
+d-----         2023/12/8     10:13                job                                                                  
+d-----         2023/12/8     10:13                note                                                                 
+d-----        2023/12/10     18:57                person                                                               
+d-----         2023/12/8     10:13                trading                                                              
+
+
+    目录: C:\zoo\work\web\project\actions\content\exchange
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/14     19:13           3502 edit.html.js                                                         
+-a----         2023/12/8     10:08           7995 index.html.js                                                        
+
+
+    目录: C:\zoo\work\web\project\actions\content\house
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     22:05           8289 rent.html.js                                                         
+-a----        2023/12/18     14:20           3922 rent_edit.html.js                                                    
+-a----         2023/12/8     10:08           7920 wanted.html.js                                                       
+-a----        2023/12/18     14:28           3853 wanted_edit.html.js                                                  
+
+
+    目录: C:\zoo\work\web\project\actions\content\job
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     22:15           8195 recruit.html.js                                                      
+-a----        2023/12/18     14:40           3874 recruit_edit.html.js                                                 
+-a----        2023/12/18     22:17           8161 wanted.html.js                                                       
+-a----        2023/12/18     14:38           3861 wanted_edit.html.js                                                  
+
+
+    目录: C:\zoo\work\web\project\actions\content\note
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           2391 edit.html.js                                                         
+-a----         2023/12/8     10:08           7667 index.html.js                                                        
+
+
+    目录: C:\zoo\work\web\project\actions\content\person
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/13     18:39           8044 identity.html.js                                                     
+-a----        2023/12/18     21:43           7750 identity_init.html.js                                                
+-a----        2023/12/13     15:35          12003 profile.html.js                                                      
+-a----        2023/12/14     15:07           3879 profile_init.html.js                                                 
+
+
+    目录: C:\zoo\work\web\project\actions\content\trading
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     22:32           8433 buy.html.js                                                          
+-a----        2023/12/14     19:12           3634 buy_edit.html.js                                                     
+-a----        2023/12/18     22:34           8467 sell.html.js                                                         
+-a----        2023/12/14     19:13           3647 sell_edit.html.js                                                    
+
+
+    目录: C:\zoo\work\web\project\actions\exchange
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/19     12:55           5188 exchange.html.js                                                     
+-a----        2023/12/19     12:44           3569 index.html.js                                                        
+
+
+    目录: C:\zoo\work\web\project\actions\house
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/19     14:11           5020 house_rent.html.js                                                   
+-a----        2023/12/19     14:16           5058 house_wanted.html.js                                                 
+-a----         2023/12/8     10:08           1207 index.html.js                                                        
+-a----        2023/12/15     11:38           1522 index_city.html.js                                                   
+-a----        2023/12/19     14:37           1548 index_region.html.js                                                 
+-a----         2023/12/8     10:08           1246 rent.html.js                                                         
+-a----        2023/12/15     12:15           1561 rent_city.html.js                                                    
+-a----        2023/12/18     13:36           1819 rent_long.html.js                                                    
+-a----        2023/12/19     14:55           2010 rent_long_city.html.js                                               
+-a----        2023/12/19     15:06           2036 rent_long_region.html.js                                             
+-a----        2023/12/15     18:25           1580 rent_region.html.js                                                  
+-a----        2023/12/19     19:58           1831 rent_short.html.js                                                   
+-a----        2023/12/19     15:27           2017 rent_short_city.html.js                                              
+-a----        2023/12/19     15:32           2043 rent_short_region.html.js                                            
+-a----         2023/12/8     10:08           1266 wanted.html.js                                                       
+-a----        2023/12/19     20:11           1581 wanted_city.html.js                                                  
+-a----        2023/12/19     20:27           1840 wanted_long.html.js                                                  
+-a----        2023/12/19     20:14           2025 wanted_long_city.html.js                                             
+-a----        2023/12/19     20:22           2052 wanted_long_region.html.js                                           
+-a----        2023/12/19     20:34           1607 wanted_region.html.js                                                
+-a----        2023/12/19     20:50           1847 wanted_short.html.js                                                 
+-a----        2023/12/19     20:35           2033 wanted_short_city.html.js                                            
+-a----        2023/12/19     20:45           2054 wanted_short_region.html.js                                          
+
+
+    目录: C:\zoo\work\web\project\actions\job
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           1187 index.html.js                                                        
+-a----        2023/12/19     20:57           1502 index_city.html.js                                                   
+-a----        2023/12/19     21:17           1528 index_region.html.js                                                 
+-a----        2023/12/19     21:40           4961 job_recruit.html.js                                                  
+-a----        2023/12/19     21:44           4940 job_wanted.html.js                                                   
+-a----         2023/12/8     10:08           1256 recruit.html.js                                                      
+-a----        2023/12/19     21:47           1571 recruit_city.html.js                                                 
+-a----        2023/12/19     22:09           1852 recruit_full.html.js                                                 
+-a----        2023/12/19     21:58           2036 recruit_full_city.html.js                                            
+-a----        2023/12/19     22:04           2062 recruit_full_region.html.js                                          
+-a----        2023/12/20      9:37           1852 recruit_part.html.js                                                 
+-a----        2023/12/20      9:25           2036 recruit_part_city.html.js                                            
+-a----        2023/12/20      9:31           2062 recruit_part_region.html.js                                          
+-a----        2023/12/20      9:40           1597 recruit_region.html.js                                               
+-a----         2023/12/8     10:08           1246 wanted.html.js                                                       
+-a----        2023/12/20      9:56           1561 wanted_city.html.js                                                  
+-a----        2023/12/20     10:16           1844 wanted_full.html.js                                                  
+-a----        2023/12/20     10:04           2028 wanted_full_city.html.js                                             
+-a----        2023/12/20     10:11           2054 wanted_full_region.html.js                                           
+-a----        2023/12/20     10:33           1844 wanted_part.html.js                                                  
+-a----        2023/12/20     10:22           2028 wanted_part_city.html.js                                             
+-a----        2023/12/20     10:27           2036 wanted_part_region.html.js                                           
+-a----        2023/12/20     10:37           1587 wanted_region.html.js                                                
+
+
+    目录: C:\zoo\work\web\project\actions\notice
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     21:15           3401 index.html.js                                                        
+-a----         2023/12/8     10:08           2141 notice.html.js                                                       
+
+
+    目录: C:\zoo\work\web\project\actions\region
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/15      0:07           2351 region_index.js                                                      
+
+
+    目录: C:\zoo\work\web\project\actions\trading
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/20     11:53           1825 buy.html.js                                                          
+-a----        2023/12/20     11:05           2003 buy_city.html.js                                                     
+-a----        2023/12/20     11:40           2029 buy_region.html.js                                                   
+-a----         2023/12/8     10:08           1227 index.html.js                                                        
+-a----        2023/12/20     11:56           1542 index_city.html.js                                                   
+-a----        2023/12/20     12:12           1568 index_region.html.js                                                 
+-a----        2023/12/20     12:31           1833 sell.html.js                                                         
+-a----        2023/12/20     12:22           2011 sell_city.html.js                                                    
+-a----        2023/12/20     12:27           2037 sell_region.html.js                                                  
+-a----        2023/12/20     12:35           5119 trading_buy.html.js                                                  
+-a----        2023/12/20     12:36           5134 trading_sell.html.js                                                 
+
+
+    目录: C:\zoo\work\web\project\biz
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           1564 T200HomeAdminBiz.js                                                  
+-a----        2023/12/14     23:57           5902 T200HomeCityIndex.js                                                 
+-a----        2023/12/19     14:29           3827 T200HomeHouseCityIndex.js                                            
+-a----        2023/12/18     13:01           3473 T200HomeHouseIndex.js                                                
+-a----        2023/12/19     14:41           3835 T200HomeHouseRegionIndex.js                                          
+-a----        2023/12/15     12:09           2197 T200HomeHouseRentCityIndex.js                                        
+-a----        2023/12/19     14:01           2095 T200HomeHouseRentIndex.js                                            
+-a----        2023/12/19     15:20           2197 T200HomeHouseRentRegionIndex.js                                      
+-a----        2023/12/19     20:04           2209 T200HomeHouseWantedCityIndex.js                                      
+-a----        2023/12/19     20:54           2115 T200HomeHouseWantedIndex.js                                          
+-a----        2023/12/19     20:33           2213 T200HomeHouseWantedRegionIndex.js                                    
+-a----         2023/12/8     10:08           6678 T200HomeIndex.js                                                     
+-a----        2023/12/19     21:02           3773 T200HomeJobCityIndex.js                                              
+-a----        2023/12/19     21:34           3595 T200HomeJobIndex.js                                                  
+-a----        2023/12/19     21:50           2255 T200HomeJobRecruitCityIndex.js                                       
+-a----        2023/12/20      9:50           2165 T200HomeJobRecruitIndex.js                                           
+-a----        2023/12/20      9:43           2261 T200HomeJobRecruitRegionIndex.js                                     
+-a----        2023/12/19     21:22           3789 T200HomeJobRegionIndex.js                                            
+-a----        2023/12/20      9:58           2245 T200HomeJobWantedCityIndex.js                                        
+-a----        2023/12/20     10:44           2155 T200HomeJobWantedIndex.js                                            
+-a----        2023/12/20     10:39           2253 T200HomeJobWantedRegionIndex.js                                      
+-a----        2023/12/15      0:12           5930 T200HomeRegionIndex.js                                               
+-a----        2023/12/20     11:57           2283 T200HomeTradingCityIndex.js                                          
+-a----        2023/12/20     12:16           2195 T200HomeTradingIndex.js                                              
+-a----        2023/12/20     12:13           2291 T200HomeTradingRegionIndex.js                                        
+-a----         2023/12/8     10:08            476 T200HomeUserBiz.js                                                   
+-a----         2023/12/8     10:08            491 T200HomeVisitorBiz.js                                                
+
+
+    目录: C:\zoo\work\web\project\init
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           9713 T200HomeClear.js                                                     
+-a----        2023/12/12     17:59           1499 T200HomeClear1.js                                                    
+-a----         2023/12/8     10:08          16107 T200HomeCreate.js                                                    
+-a----        2023/12/17     11:21          25733 T200HomeCreate1.js                                                   
+-a----         2023/12/8     10:08           3318 T200HomeDatabase.js                                                  
+-a----         2023/12/8     22:20           4930 T200HomeDatabase1.js                                                 
+
+
+    目录: C:\zoo\work\web\project\models
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/17     12:01           1456 T200Admin.js                                                         
+-a----        2023/12/18     20:14           1924 T200AdminExchange.js                                                 
+-a----        2023/12/18     20:19           1932 T200AdminHouseRent.js                                                
+-a----        2023/12/18     20:19           1944 T200AdminHouseWanted.js                                              
+-a----        2023/12/18     20:06           3985 T200AdminInvitation.js                                               
+-a----        2023/12/18     20:24           1936 T200AdminJobRecruit.js                                               
+-a----        2023/12/18     20:24           1930 T200AdminJobWanted.js                                                
+-a----        2023/12/18     20:37           4409 T200AdminNote.js                                                     
+-a----        2023/12/18     20:40           4420 T200AdminNotice.js                                                   
+-a----        2023/12/18     20:16           6457 T200AdminPerson.js                                                   
+-a----        2023/12/18     19:40           2980 T200AdminSetting.js                                                  
+-a----        2023/12/18     21:33           1915 T200AdminTradingBuy.js                                               
+-a----        2023/12/18     21:31           2271 T200AdminTradingSell.js                                              
+-a----        2023/12/17     12:09           1325 T200Advert.js                                                        
+-a----        2023/12/17     14:02           1648 T200Exchange.js                                                      
+-a----         2023/12/8     10:08            341 T200HomeAdminModel.js                                                
+-a----        2023/12/20     11:41          22787 T200HomeUserModel.js                                                 
+-a----        2023/12/15      0:11           5000 T200HomeVisitorModel.js                                              
+-a----        2023/12/17     14:08           1803 T200House.js                                                         
+-a----        2023/12/17     12:07            831 T200Identity.js                                                      
+-a----        2023/12/17     12:13            974 T200Invitation.js                                                    
+-a----        2023/12/17     14:11           1791 T200Job.js                                                           
+-a----        2023/12/17     13:07           1180 T200Note.js                                                          
+-a----        2023/12/18     20:58           1613 T200Notice.js                                                        
+-a----        2023/12/16     20:44           1282 T200Person.js                                                        
+-a----        2023/12/17     12:03           1421 T200Setting.js                                                       
+-a----        2023/12/17     14:12           1693 T200Trading.js                                                       
+-a----        2023/12/19     12:25           3581 T200UserExchange.js                                                  
+-a----        2023/12/19     15:39          29890 T200UserHouseRent.js                                                 
+-a----        2023/12/19     20:50          28498 T200UserHouseWanted.js                                               
+-a----        2023/12/13     18:35           3843 T200UserIdentity.js                                                  
+-a----        2023/12/18     22:39           3263 T200UserJobRecruit.js                                                
+-a----        2023/12/18     22:39           3247 T200UserJobWanted.js                                                 
+-a----         2023/12/8     10:08           2820 T200UserNickname.js                                                  
+-a----        2023/12/18     22:40           8826 T200UserNote.js                                                      
+-a----        2023/12/14     15:05           2567 T200UserPerson.js                                                    
+-a----        2023/12/20     12:36           3154 T200UserTradingBuy.js                                                
+-a----        2023/12/18     22:41           3165 T200UserTradingSell.js                                               
+-a----        2023/12/12     13:44            569 T200Visitor.js                                                       
+-a----         2023/12/8     10:08            398 T200VisitorIndex.js                                                  
+-a----         2023/12/8     10:08            400 T200VisitorPerson.js                                                 
+
+
+    目录: C:\zoo\work\web\project\pages
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        2023/12/12     18:36                admin                                                                
+d-----         2023/12/8     10:13                content                                                              
+d-----         2023/12/8     10:13                exchange                                                             
+d-----        2023/12/15     21:06                house                                                                
+d-----        2023/12/15     20:29                job                                                                  
+d-----         2023/12/8     10:13                list                                                                 
+d-----         2023/12/8     10:13                notice                                                               
+d-----         2023/12/8     10:13                region                                                               
+d-----        2023/12/15     20:31                trading                                                              
+-a----        2023/12/14     20:08           2190 index.ejs                                                            
+-a----        2023/12/18     21:52          15738 main.ejs                                                             
+
+
+    目录: C:\zoo\work\web\project\pages\admin
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         2023/12/8     10:13                exchange                                                             
+d-----        2023/12/12     18:36                global                                                               
+d-----         2023/12/8     10:13                house                                                                
+d-----         2023/12/8     10:13                job                                                                  
+d-----         2023/12/8     10:13                note                                                                 
+d-----         2023/12/8     10:13                notice                                                               
+d-----         2023/12/8     10:13                trading                                                              
+
+
+    目录: C:\zoo\work\web\project\pages\admin\exchange
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     18:12           3242 index.ejs                                                            
+
+
+    目录: C:\zoo\work\web\project\pages\admin\global
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     19:22           2797 global.ejs                                                           
+
+
+    目录: C:\zoo\work\web\project\pages\admin\house
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           3246 rent_index.ejs                                                       
+-a----         2023/12/8     10:08           3246 wanted_index.ejs                                                     
+
+
+    目录: C:\zoo\work\web\project\pages\admin\job
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           3242 recruit_index.ejs                                                    
+-a----         2023/12/8     10:08           3242 wanted_index.ejs                                                     
+
+
+    目录: C:\zoo\work\web\project\pages\admin\note
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           3244 index.ejs                                                            
+
+
+    目录: C:\zoo\work\web\project\pages\admin\notice
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           4979 index.ejs                                                            
+
+
+    目录: C:\zoo\work\web\project\pages\admin\trading
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           3250 buy_index.ejs                                                        
+-a----         2023/12/8     10:08           3250 sell_index.ejs                                                       
+
+
+    目录: C:\zoo\work\web\project\pages\content
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----         2023/12/8     10:13                exchange                                                             
+d-----         2023/12/8     10:13                house                                                                
+d-----         2023/12/8     10:13                job                                                                  
+d-----         2023/12/8     10:13                note                                                                 
+d-----        2023/12/13     16:22                person                                                               
+d-----         2023/12/8     10:13                trading                                                              
+
+
+    目录: C:\zoo\work\web\project\pages\content\exchange
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           3252 index.ejs                                                            
+
+
+    目录: C:\zoo\work\web\project\pages\content\house
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           3246 rent_index.ejs                                                       
+-a----         2023/12/8     10:08           3246 wanted_index.ejs                                                     
+
+
+    目录: C:\zoo\work\web\project\pages\content\job
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           3242 recruit_index.ejs                                                    
+-a----         2023/12/8     10:08           3242 wanted_index.ejs                                                     
+
+
+    目录: C:\zoo\work\web\project\pages\content\note
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           3244 index.ejs                                                            
+
+
+    目录: C:\zoo\work\web\project\pages\content\person
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/13     15:45           2140 identity.ejs                                                         
+-a----        2023/12/13     14:43           1962 identity_init.ejs                                                    
+-a----        2023/12/13     15:32           2530 profile.ejs                                                          
+-a----        2023/12/13     14:25           3095 profile_init.ejs                                                     
+
+
+    目录: C:\zoo\work\web\project\pages\content\trading
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08           3250 buy_index.ejs                                                        
+-a----         2023/12/8     10:08           3250 sell_index.ejs                                                       
+
+
+    目录: C:\zoo\work\web\project\pages\exchange
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/19     13:08           3363 exchange.ejs                                                         
+-a----        2023/12/19     12:41           3099 index.ejs                                                            
+
+
+    目录: C:\zoo\work\web\project\pages\house
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/19     14:12           3370 house_rent.ejs                                                       
+-a----        2023/12/19     14:16           3380 house_wanted.ejs                                                     
+-a----        2023/12/19     13:54           7372 index.ejs                                                            
+-a----        2023/12/19     21:13           7402 index_city.ejs                                                       
+-a----        2023/12/19     14:42           7350 index_region.ejs                                                     
+-a----        2023/12/19     14:07           3105 rent.ejs                                                             
+-a----        2023/12/19     21:51           3137 rent_city.ejs                                                        
+-a----        2023/12/18     14:24           2720 rent_long.ejs                                                        
+-a----        2023/12/20     11:24           2834 rent_long_city.ejs                                                   
+-a----        2023/12/19     15:09           2828 rent_long_region.ejs                                                 
+-a----        2023/12/19     15:23           3069 rent_region.ejs                                                      
+-a----        2023/12/19     19:58           2756 rent_short.ejs                                                       
+-a----        2023/12/19     15:29           2768 rent_short_city.ejs                                                  
+-a----        2023/12/19     15:34           2780 rent_short_region.ejs                                                
+-a----        2023/12/19     20:55           3117 wanted.ejs                                                           
+-a----        2023/12/19     20:08           3073 wanted_city.ejs                                                      
+-a----        2023/12/19     20:30           2766 wanted_long.ejs                                                      
+-a----        2023/12/19     20:19           2778 wanted_long_city.ejs                                                 
+-a----        2023/12/19     20:24           2790 wanted_long_region.ejs                                               
+-a----        2023/12/19     20:43           3117 wanted_region.ejs                                                    
+-a----        2023/12/19     20:53           2772 wanted_short.ejs                                                     
+-a----        2023/12/19     20:39           2802 wanted_short_city.ejs                                                
+-a----        2023/12/19     20:48           2814 wanted_short_region.ejs                                              
+
+
+    目录: C:\zoo\work\web\project\pages\job
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/19     21:37           7385 index.ejs                                                            
+-a----        2023/12/19     21:13           7385 index_city.ejs                                                       
+-a----        2023/12/19     21:25           7385 index_region.ejs                                                     
+-a----        2023/12/19     21:41           3013 job_recruit.ejs                                                      
+-a----        2023/12/19     21:45           3008 job_wanted.ejs                                                       
+-a----        2023/12/20      9:53           3066 recruit.ejs                                                          
+-a----        2023/12/20      9:46           3056 recruit_city.ejs                                                     
+-a----        2023/12/20     10:48           2750 recruit_full.ejs                                                     
+-a----        2023/12/20     10:48           2782 recruit_full_city.ejs                                                
+-a----        2023/12/20     10:48           2794 recruit_full_region.ejs                                              
+-a----        2023/12/20     10:48           2750 recruit_part.ejs                                                     
+-a----        2023/12/20     10:48           2780 recruit_part_city.ejs                                                
+-a----        2023/12/20     10:48           2792 recruit_part_region.ejs                                              
+-a----        2023/12/20      9:46           3056 recruit_region.ejs                                                   
+-a----        2023/12/20     10:46           3060 wanted.ejs                                                           
+-a----        2023/12/20     10:00           3050 wanted_city.ejs                                                      
+-a----        2023/12/20     10:49           2742 wanted_full.ejs                                                      
+-a----        2023/12/20     10:49           2772 wanted_full_city.ejs                                                 
+-a----        2023/12/20     10:49           2784 wanted_full_region.ejs                                               
+-a----        2023/12/20     10:49           2742 wanted_part.ejs                                                      
+-a----        2023/12/20     10:49           2772 wanted_part_city.ejs                                                 
+-a----        2023/12/20     10:49           2784 wanted_part_region.ejs                                               
+-a----        2023/12/20     10:42           3050 wanted_region.ejs                                                    
+
+
+    目录: C:\zoo\work\web\project\pages\list
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     20:18           9377 T200ListView.ejs                                                     
+
+
+    目录: C:\zoo\work\web\project\pages\notice
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/18     21:05           2934 index.ejs                                                            
+-a----        2023/12/18     21:22            253 notice.ejs                                                           
+
+
+    目录: C:\zoo\work\web\project\pages\region
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/19     21:08          15560 city.ejs                                                             
+-a----        2023/12/20     14:03          15487 region.ejs                                                           
+
+
+    目录: C:\zoo\work\web\project\pages\trading
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/20     11:52           2736 buy.ejs                                                              
+-a----        2023/12/20     11:37           2872 buy_city.ejs                                                         
+-a----        2023/12/20     11:45           2876 buy_region.ejs                                                       
+-a----        2023/12/20     12:18           3139 index.ejs                                                            
+-a----        2023/12/20     12:10           3139 index_city.ejs                                                       
+-a----        2023/12/20     12:14           3139 index_region.ejs                                                     
+-a----        2023/12/20     12:32           2744 sell.ejs                                                             
+-a----        2023/12/20     12:28           2870 sell_city.ejs                                                        
+-a----        2023/12/20     12:29           2882 sell_region.ejs                                                      
+-a----        2023/12/20     12:37           3017 trading_buy.ejs                                                      
+-a----        2023/12/20     12:37           3022 trading_sell.ejs                                                     
+
+
+    目录: C:\zoo\work\web\project\store
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08            294 T200HomeDBSetup.js                                                   
+-a----         2023/12/8     10:08           6073 T200HomeStore.js                                                     
+
+
+    目录: C:\zoo\work\web\project\view
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08            338 T200HomeVIew.js                                                      
+
+
+    目录: C:\zoo\work\web\storages
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08              0 .gitkeep                                                             
+
+
+    目录: C:\zoo\work\web\test
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+d-----        2023/12/17     11:09                data                                                                 
+d-----         2023/12/8     10:13                home                                                                 
+d-----        2023/12/16     18:39                library                                                              
+-a----         2023/12/8     10:08           2581 test_db.js                                                           
+-a----        2023/12/16     20:23            182 test_letter.js                                                       
+-a----         2023/12/8     10:08          10536 test_promise.js                                                      
+-a----         2023/12/8     10:08           1899 test_test.js                                                         
+
+
+    目录: C:\zoo\work\web\test\data
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/17     12:31           1551 T200HomeAdminInit.js                                                 
+-a----        2023/12/17     11:15           1403 T200HomeAdvertInit.js                                                
+-a----        2023/12/17     14:02           1979 T200HomeExchangeInit.js                                              
+-a----        2023/12/17     14:08           2198 T200HomeHouseRentInit.js                                             
+-a----        2023/12/17     14:09           2204 T200HomeHouseWantedInit.js                                           
+-a----        2023/12/17     11:22           1631 T200HomeIdentityInit.js                                              
+-a----        2023/12/18     20:04           1472 T200HomeInvitationInit.js                                            
+-a----        2023/12/17     14:10           2164 T200HomeJobRecruitInit.js                                            
+-a----        2023/12/17     14:10           2161 T200HomeJobWantedInit.js                                             
+-a----        2023/12/17     11:33           1483 T200HomeNoteInit.js                                                  
+-a----        2023/12/16     19:36           1509 T200HomeNoticeInit.js                                                
+-a----        2023/12/16     20:39           2192 T200HomePersonInit.js                                                
+-a----        2023/12/17     13:13           1598 T200HomeSettingInit.js                                               
+-a----        2023/12/17     11:56           6436 T200HomeTest.js                                                      
+-a----        2023/12/17     14:11           2018 T200HomeTradingBuyInit.js                                            
+-a----        2023/12/17     14:12           2021 T200HomeTradingSellInit.js                                           
+
+
+    目录: C:\zoo\work\web\test\home
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----         2023/12/8     10:08              0 test_home.js                                                         
+
+
+    目录: C:\zoo\work\web\test\library
+
+
+Mode                 LastWriteTime         Length Name                                                                 
+----                 -------------         ------ ----                                                                 
+-a----        2023/12/16     10:59            224 test_crypto.js                                                       
+-a----         2023/12/8     10:08           2296 test_database.js                                                     
+-a----         2023/12/8     10:08           1020 test_file.js                                                         
+-a----         2023/12/8     10:08           1668 test_mariadb.js                                                      
+-a----        2023/12/17     12:35            597 test_moken.js                                                        
+-a----         2023/12/8     10:08              0 test_mysql.js                                                        
+-a----         2023/12/8     10:08           1188 test_path.js                                                         
+-a----         2023/12/8     10:08           1600 test_promise.js                                                      
+-a----         2023/12/8     10:08            317 test_server.js                                                       
+-a----         2023/12/8     10:08            811 test_sql.js                                                          
+
+
