@@ -142,42 +142,24 @@ class T200UserModel extends T200ForumModel {
     merge_user_paging_home_where() {
         let where;
 
-        if(undefined == this.status || '' == this.status){
-            where = T200SQL.WHERE(
+        where = T200SQL.WHERE(
+                    T200SQL.AND(
                         T200SQL.AND(
                             T200SQL.EQUAL(
-                                T200SQL.PREFIX("status", 't2'), 
+                                T200SQL.PREFIX("status", "t1"), 
                                 1
                             ),
                             T200SQL.EQUAL(
-                                T200SQL.PREFIX("parent_type", 't1'), 
-                                0
-                            )
-                        )                        
-                    );
-        }else{
-            where = T200SQL.WHERE(
-                        T200SQL.AND(
-                            T200SQL.AND(
-                                T200SQL.EQUAL(
-                                    T200SQL.PREFIX("status", "t1"), 
-                                    this.status
-                                ),
-                                T200SQL.EQUAL(1, 1)
+                                T200SQL.PREFIX("status", "t2"), 
+                                1
                             ),
-                            T200SQL.AND(
-                                T200SQL.EQUAL(
-                                    T200SQL.PREFIX("status", "t2"), 
-                                    1
-                                ),
-                                T200SQL.EQUAL(
-                                    T200SQL.PREFIX("parent_type", "t1"), 
-                                    0
-                                )
-                            )
-                        )
-                    );
-        }
+                        ),
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("parent_type", "t1"), 
+                            0
+                        )                        
+                    )
+                );        
 
         return where;
     }

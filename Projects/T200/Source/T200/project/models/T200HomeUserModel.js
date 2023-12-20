@@ -214,46 +214,27 @@ class T200HomeUserModel extends T200UserModel {
     merge_user_paging_type_where() {
         let where;
 
-        if(undefined == this.status || '' == this.status){
-            where = T200SQL.WHERE(
+        where = T200SQL.WHERE(
+                    T200SQL.AND(
                         T200SQL.AND(
-                            T200SQL.AND(
-                                T200SQL.EQUAL(
-                                    T200SQL.PREFIX("status", 't2'), 
-                                    1
-                                ),
-                                T200SQL.EQUAL(
-                                    T200SQL.PREFIX("parent_type", 't1'), 
-                                    0
-                                )
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("status", "t1"), 
+                                1
                             ),
-                            T200SQL.EQUAL(this._type, 1)
-                        )
-                                      
-                    );
-        }else{
-            where = T200SQL.WHERE(
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("status", "t2"), 
+                                1
+                            )
+                        ),   
                         T200SQL.AND(
-                            T200SQL.AND(
-                                T200SQL.EQUAL(
-                                    T200SQL.PREFIX("status", "t1"), 
-                                    this.status
-                                ),
-                                T200SQL.EQUAL(
-                                    T200SQL.PREFIX("status", "t2"), 
-                                    1
-                                )
-                            ),   
-                            T200SQL.AND(
-                                T200SQL.EQUAL(
-                                    T200SQL.PREFIX("parent_type", "t1"), 
-                                    0
-                                ),
-                                T200SQL.EQUAL(this._type, 1)  
-                            )                                                         
-                        )
-                    );
-        }
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("parent_type", "t1"), 
+                                0
+                            ),
+                            T200SQL.EQUAL(this._type, 1)  
+                        )                                                         
+                    )
+                );        
 
         return where;
     }

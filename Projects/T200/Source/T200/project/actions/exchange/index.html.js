@@ -17,8 +17,8 @@ async function do_exchange_list(request, response, cookie, session, resource) {
         if(true){
             exchange.status = 1;
             exchange.flash_visitor_paging_fields();
-            exchange.merge_paging_count = exchange.merge_user_paging_type_count;
-            exchange.merge_paging_list = exchange.merge_user_paging_type_list;
+            exchange.merge_paging_count = exchange.merge_user_paging_home_count;
+            exchange.merge_paging_list = exchange.merge_user_paging_home_list;
             UserBiz.paging2(exchange).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};

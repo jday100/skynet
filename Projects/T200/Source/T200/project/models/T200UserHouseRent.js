@@ -336,9 +336,15 @@ class T200UserHouseRent extends T200HomeUserModel {
                                 1
                             )
                         ),
-                        T200SQL.EQUAL(
-                            "type_long",
-                            1
+                        T200SQL.AND(
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("parent_type", 't1'), 
+                                0
+                            ),
+                            T200SQL.EQUAL(
+                                "type_long",
+                                1
+                            )
                         )
                     )  
                 );
