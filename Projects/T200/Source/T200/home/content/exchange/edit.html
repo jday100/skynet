@@ -21,6 +21,7 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+    <script src="/js/t200editor.js"></script>
 
 </head>
 
@@ -137,11 +138,61 @@
                             </div>
                             <div class="form_item">
                                 <label class="form_label">Content:</label>
+                                <div id="editor">
+
+                                </div>
+                            </div>
+                            <div id="upload">
+
+                            </div>
+                            <div class="form_item">
+                                <label class="form_label">Content:</label>
                                 <textarea class="form_value" name="content" rows="25"></textarea>
+                            </div>
+                            <div class="upload">
+                                <label>Upload Files:</label>
+                                <div>
+                                    <div>
+                                        <div>
+                                            <label>FileName:</label>
+                                            FileName
+                                        </div>
+                                        <div>
+                                            <button>Insert</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <label>FileName:</label>
+                                            FileName
+                                        </div>
+                                        <div>
+                                            <button>Insert</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <label>FileName:</label>
+                                            FileName
+                                        </div>
+                                        <div>
+                                            <button>Insert</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div>
+                                            <label>FileName:</label>
+                                            FileName
+                                        </div>
+                                        <div>
+                                            <button>Insert</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="form_item">
                                 <label class="form_label">Upload:</label>
-                                <input id="file" type="file" name="file" multiple="multiple">
+                                <input id="file" type="file" class="form_value" name="file" multiple="multiple">
                             </div>
                             <div class="form_item">
                                 <input type="button" class="form_button" id="submit" value="submit">
@@ -163,6 +214,10 @@
 <script>
     $.win.onload = function(){
         nav_check();
+
+        let editor = new T200Editor('editor', 'WebEditor', 700, 300);
+
+        editor.upload('upload');
 
         $.id("file").onchange = function(){
             let form = $.id('form');

@@ -18,7 +18,7 @@
                             <%=item.title%>
                         </div>
                         <div>
-                            <%=item.content%>
+                            <%=item.content%><img src="/images/home.gif" />
                         </div>
                         <div>
                             
@@ -43,7 +43,7 @@
                         <%=item.title%>
                     </div>
                     <div class="forum_content">
-                        <pre><%=item.content%></pre>
+                        <%- item.content%><img src="/images/home.gif" />
                     </div>
                     <div class="forum_footer">
                         <button id="reply<%=item.id%>" onclick="show_reply('<%=id%>', '<%=item.id%>', '<%=paging.page%>', '<%=item.nickname%>', 'list_box', '/exchange/reply');">reply</button>

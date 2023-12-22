@@ -343,6 +343,20 @@ class T200HomeCreate {
         `;
     }
 
+    merge_datum_sql() {
+        return `
+            create table if not exists datum (
+                id int primary key auto_increment,
+                user_id int,
+                status int not null default 0,
+                name varchar(255),
+                create_time datetime not null default current_timestamp,
+                INDEX(user_id),
+                INDEX(status)
+            ) character set utf8
+        `;
+    }
+
     merge_advert_sql() {
         return `
             create table if not exists advert (
@@ -627,6 +641,22 @@ class T200HomeCreate {
         return promise;
     }
 
+    create_datum(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_datum_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
     create_advert(client) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -772,6 +802,10 @@ class T200HomeCreate {
                 return error();
             }).then(function(){
                 return self.create_identity(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_datum(client);
             }, function(){
                 return error();
             }).then(function(){

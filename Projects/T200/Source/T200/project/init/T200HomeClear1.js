@@ -20,6 +20,7 @@ class T200HomeClear {
             'person',
             'identity',
             'invitation',
+            'datum',
             'continent',
             'region',
             'city'

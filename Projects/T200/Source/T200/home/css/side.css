@@ -253,3 +253,27 @@ fieldset > div > details {
 dl select {
     width: 150px;
 }
+
+
+.upload {
+    width: 800px;
+    display:flex;
+	justify-content:center;
+	align-items:center;
+}
+
+.upload > div {
+    width: 700px;
+    display:flex;
+	justify-content:center;
+	align-items:center;
+    flex-direction: column;
+}
+
+.upload > div > div {
+    line-height: 25px;
+    width: 700px;
+    display:flex;
+	justify-content:space-between;
+	align-items:center;
+}

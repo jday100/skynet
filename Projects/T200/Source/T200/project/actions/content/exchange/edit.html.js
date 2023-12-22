@@ -3,7 +3,9 @@ const T200Error = require('../../../../library/T200Error.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
 const T200UserExchange = require('../../../models/T200UserExchange.js');
+const T200UserDatum = require('../../../models/T200UserDatum.js');
 const T200HomeUserBiz = require('../../../biz/T200HomeUserBiz.js');
+const T200Database = require('../../../../library/db/T200Database.js');
 
 async function do_content_exchange_edit(request, response, cookie, session, resource) {
     log(__filename, "do_content_exchange_edit");
@@ -91,10 +93,40 @@ async function do_content_exchange_modify(request, response, cookie, session, re
 async function do_content_exchange_upload(request, response, cookie, session, resource) {
     log(__filename, "do_content_exchange_upload");
     let self = this;
-    let promise = new Promise(function(resolve, reject){
+    let promise = new Promise(async function(resolve, reject){
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        let user_id = session.get("userid");
         let files = request.get_files();
+
+        if(user_id && 0 < user_id && files && 0 < files.file.length){
+            let result = false;
+            await files.file.forEach(async item => {
+                let datum = new T200UserDatum();
+                
+                datum.user_id = user_id;
+                datum.flash_content_append_fields();
+                datum.flash_content_append_values();
+                return await UserBiz.append(datum.merge_insert()).then(function(){
+                    result = true;
+                }, function(){
+                    result = false;
+                });
+
+                if(!result)return;
+            });
+
+            if(result){
+                response.type("json");
+                resolve();
+            }else{
+                response.type("json");
+                reject();
+            }
+        }else{
+            response.type("json");
+            reject();
+        }
 
     });
 
