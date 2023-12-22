@@ -10,12 +10,12 @@ class T200HttpsDispatcher {
 
     }
 
-    run(req, res) {
+    run() {
         log(__filename, "dispatcher run");
 
             let self = this;
         let promise = new Promise(function(resolve, reject){
-            return self.dispense(req).then(function(data){
+            return self.dispense().then(function(data){
                 log(__filename, "dispense success");
                 resolve(data);
             }, function(err){
@@ -29,13 +29,13 @@ class T200HttpsDispatcher {
         return promise;
     }
 
-    dispense(req) {
+    dispense() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let flag;
-            let data = url.parse(req.url, true);
+            let data = url.parse(self.request.req.url, true);
 
-            flag = req.method;
+            flag = self.request.req.method;
 
             log(__filename, "dispense", flag);
 

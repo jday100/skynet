@@ -129,7 +129,7 @@
                     </div>
                     <hr class="line">
                     <div class="form_box">
-                        <form id="form" class="form">
+                        <form id="form" action="/content/exchange/upload" method="post" class="form" enctype="multipart/form-data">
                             <input type="hidden" name="test">
                             <div class="form_item">
                                 <label class="form_label">Title:</label>
@@ -138,6 +138,10 @@
                             <div class="form_item">
                                 <label class="form_label">Content:</label>
                                 <textarea class="form_value" name="content" rows="25"></textarea>
+                            </div>
+                            <div class="form_item">
+                                <label class="form_label">Upload:</label>
+                                <input id="file" type="file" name="file" multiple="multiple">
                             </div>
                             <div class="form_item">
                                 <input type="button" class="form_button" id="submit" value="submit">
@@ -159,6 +163,19 @@
 <script>
     $.win.onload = function(){
         nav_check();
+
+        $.id("file").onchange = function(){
+            let form = $.id('form');
+            let data = new FormData(form);
+            data.contentType = false;
+            data.enctype="multipart/form-data";
+
+            $.upload('/content/exchange/upload', data, function(){
+                alert('Save Success!');
+            }, function(){
+                alert('Save Failure!');
+            });
+        };
 
         $.id("submit").onclick = function(){
             let result = formtostring("form");

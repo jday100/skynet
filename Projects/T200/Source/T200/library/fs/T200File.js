@@ -36,6 +36,21 @@ class T200File {
 
         return promise;
     }
+
+    static save(file, data) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            fs.writeFile(file, data, function(err){
+                if(err){
+                    reject(T200Error.build());
+                }else{
+                    resolve();
+                }
+            });
+        });
+
+        return promise;
+    }
 }
 
 module.exports = T200File;

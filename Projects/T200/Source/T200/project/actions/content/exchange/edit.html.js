@@ -88,5 +88,19 @@ async function do_content_exchange_modify(request, response, cookie, session, re
 }
 
 
+async function do_content_exchange_upload(request, response, cookie, session, resource) {
+    log(__filename, "do_content_exchange_upload");
+    let self = this;
+    let promise = new Promise(function(resolve, reject){
+        let UserBiz = new T200HomeUserBiz(request, cookie, session);
+
+        let files = request.get_files();
+
+    });
+
+    return promise;
+}
+
 global.action.use_post('/content/exchange/edit', do_content_exchange_edit);
+global.action.use_post('/content/exchange/upload', do_content_exchange_upload);
 

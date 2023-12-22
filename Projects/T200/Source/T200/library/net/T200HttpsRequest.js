@@ -1,6 +1,7 @@
 const { error, log } = require('../T200Lib.js');
 const T200Error = require('../T200Error.js');
 
+const formidable = require('formidable');
 const urlparse = require('url');
 const querystring = require('querystring');
 const { unlink } = require('fs');
@@ -8,12 +9,16 @@ const { unlink } = require('fs');
 class T200HttpsRequest {
     constructor(req) {
         this.events = {};
+        req.request = this;
         this.req = req;
         this.data = "";
         this.req.events = {};
         this.req.values = {};
-        req.on('data', this.merge_data);
-        req.on('end', this.parse_data);
+    }
+
+    load() {
+        this.req.on('data', this.merge_data);
+        this.req.on('end', this.parse_data);
     }
 
     on(name, callback) {
@@ -32,17 +37,19 @@ class T200HttpsRequest {
         if("GET" == this.method){
             let result = urlparse.parse(this.url, true);
             if(null == result.search){
-
+                this.request.fields = {};
             }else{
                 if(-1 != result.search.indexOf("?")){
                     let  str = result.search.slice(1);
     
-                    this.values = querystring.parse(str);
+                    this.request.fields = querystring.parse(str);
+                }else{
+                    this.request.fields = {};
                 }
             }
             
         }else if("POST" == this.method){
-            this.values = querystring.parse(this.data);
+            this.request.fields = querystring.parse(this.data);
         }
 
         let load = this.events['load'];
@@ -54,15 +61,29 @@ class T200HttpsRequest {
 
     get(name) {
         log(__filename, "Request get", name);
-        return this.req.values[name];
+        //return this.req.values[name];
+        //return this.fields[name][0];
+
+        let result = this.fields[name];
+
+        if(undefined == result){
+            return undefined;
+        }else if(result instanceof Array){
+            return result[0];
+        }
+        return result;
     }
 
     get_bool(name) {
-        let value = this.req.values[name];
+        let value = this.req.fields[name];
         if(undefined == value || null == value){
             return false;
         }
         return true;
+    }
+
+    get_files() {
+        return this.files;
     }
 }
 

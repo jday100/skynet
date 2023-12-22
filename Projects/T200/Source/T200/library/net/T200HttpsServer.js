@@ -2,6 +2,7 @@ const { error, log } = require('../T200Lib.js');
 const T200Error = require('../T200Error.js');
 
 const http = require('http');
+const formidable = require('formidable');
 
 const T200HttpsSetup = require('./T200HttpsSetup.js');
 
@@ -55,8 +56,55 @@ class T200HttpsServer {
             let server = http.createServer();
 
             server.on('request', function(req, res){
+                let dispatcher = new T200HttpsDispatcher();
 
-                self.distribute(req, res);
+                let request = new T200HttpsRequest(req);
+                let response = new T200HttpsResponse(res);
+                let cookie = new T200HttpsCookie(req, res);
+
+                cookie.load();
+
+                let session = new T200HttpsSession(cookie);
+
+                dispatcher.resource = self.resource;
+                dispatcher.request = request;
+                dispatcher.response = response;
+                dispatcher.cookie = cookie;
+                dispatcher.session = session;
+                
+                if(session.empty()){
+                    request.on("load", function(){
+                        self.distribute(dispatcher);
+                    });
+
+                    request.load();
+                }else{
+                    let user_id = session.get("userid");
+
+                    if(user_id && 0 < user_id){
+                        let form = new formidable.IncomingForm();
+
+                        self.resource.merge_storages(user_id).then(function(data){
+                            form.uploadDir = data;
+                            //form.keepExtensions = true;
+        
+                            form.parse(req, function(err, fields, files){
+                                if(err){
+                                    response.error();
+                                }else{
+                                    request.fields = fields;
+                                    request.files = files;
+                                    self.distribute(dispatcher);
+                                }
+                            });
+                        }, function(){
+                            response.error();
+                        });
+                        
+                    }else{
+                        response.error();
+                    }                    
+                }
 
             });
 
@@ -69,37 +117,22 @@ class T200HttpsServer {
         return promise;
     }
 
-    distribute(req, res) {
+    distribute(dispatcher) {
         log(__filename, "distribute");
         let self = this;
-        let request = new T200HttpsRequest(req);
 
-        request.on('load', function(){
-            log(__filename, "request load");
-            let dispatcher = new T200HttpsDispatcher();
-
-            dispatcher.request = request;
-            dispatcher.response = new T200HttpsResponse(res);
-            dispatcher.resource = self.resource;
-            dispatcher.cookie = new T200HttpsCookie(req, res);
-            dispatcher.cookie.load();
-            dispatcher.session = new T200HttpsSession(dispatcher.cookie);
-
-            dispatcher.run(req, res).then(function(data){
-                log(__filename, "dispatcher run success");
-                dispatcher.response.success(data);
-            }, function(err){
-                log(__filename, "dispatcher run failure", err);
-                dispatcher.response.failure();
-            }).catch(function(err){
-                log(__filename, "dispatcher run error");
-                dispatcher.response.error();
-            }).finally(function(){
-                dispatcher.response.SEND_END();
-            });
-
-        });
-        
+        dispatcher.run().then(function(data){
+            log(__filename, "dispatcher run success");
+            dispatcher.response.success(data);
+        }, function(err){
+            log(__filename, "dispatcher run failure", err);
+            dispatcher.response.failure();
+        }).catch(function(err){
+            log(__filename, "dispatcher run error");
+            dispatcher.response.error();
+        }).finally(function(){
+            dispatcher.response.SEND_END();
+        });        
     }
 
 }

@@ -69,6 +69,12 @@ class T200HttpsResource {
         return T200File.load(real);
     }
 
+    save_file(file, data) {
+        let real = T200Path.join_root(file);
+        log(__filename, "save_file", file);
+        return T200File.save(real, data);
+    }
+
     merge_index(url) {
         let files = global.setup.https.index.split(',');
         let result = new Array();
@@ -100,6 +106,31 @@ class T200HttpsResource {
     merge_pages(url) {
         log(__filename, "merge_pages", url);
         return path.join(global.setup.https.pages, "/" + url);
+    }
+
+    merge_storages(id) {
+        log(__filename, "merge_pages");
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let result = "";
+            if(id && 0 < id){
+                result = T200Path.join_root(`storages/${id}/`);
+    
+                return T200Path.exists(result).then(function(){
+                    resolve(result);
+                }, function(){
+                    return T200Path.create(result).then(function(){
+                        resolve(result);
+                    }, function(){
+                        reject();
+                    });
+                });
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
     }
 
 }

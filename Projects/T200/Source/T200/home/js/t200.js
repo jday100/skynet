@@ -85,6 +85,26 @@ class T200 {
             }
         });
     }
+
+    upload(url, data ,success, failure) {
+        let xhr = new XMLHttpRequest();
+
+        xhr.open('POST', url, true);
+        //xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+        xhr.send(data);
+        xhr.addEventListener('load', function(){
+            if(200 == xhr.status){
+                let flag = JSON.parse(xhr.response);
+                if('success' == flag.result){
+                    success(flag.data);
+                }else{
+                    failure();
+                }
+            }else{
+                failure();
+            }
+        });
+    }
 }
 
 window.$ = T200.create();
