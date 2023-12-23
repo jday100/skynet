@@ -6,7 +6,7 @@ class T200Editor {
     #create(parent, name, width, height) {
         this._name = name;
         let result = `
-            <iframe id="${name}_iframe", style="width:${width}px;height:${height}px" marginWidth="0" marginHeight="0"></iframe>
+            <iframe id="${name}_iframe", style="width:${width}px;height:${height}px;background-color:white;" marginWidth="0" marginHeight="0"></iframe>
             <textarea id="${name}" style="width:0px;height:0px;display:none;" name="${name}">
         `;
 

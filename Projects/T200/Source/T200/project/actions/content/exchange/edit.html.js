@@ -1,6 +1,8 @@
 const { error, log } = require('../../../../library/T200Lib.js');
 const T200Error = require('../../../../library/T200Error.js');
 
+const sharp = require('sharp');
+const T200Path = require('../../../../library/fs/T200Path.js');
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
 const T200UserExchange = require('../../../models/T200UserExchange.js');
 const T200UserDatum = require('../../../models/T200UserDatum.js');
@@ -103,19 +105,34 @@ async function do_content_exchange_upload(request, response, cookie, session, re
             let result = false;
             let data = new Array();
             for(let item of files.file){
-                let datum = new T200UserDatum();
-                
-                datum.user_id = user_id;
-                datum.name = `${user_id}/${item.newFilename}`;
-                datum.flash_content_append_fields();
-                datum.flash_content_append_values();
-                await UserBiz.append(datum.merge_insert()).then(function(){
-                    result = true;
-                    data.push(datum.name);
-                }, function(){
-                    result = false;
-                });
 
+                (async function(item){
+                    let datum = new T200UserDatum();
+                
+                    datum.user_id = user_id;
+                    datum.name = `${user_id}/${item.newFilename}`;
+
+                    let file = T200Path.join_root(`storages/${datum.name}`);
+                    let target = T200Path.join_root(`storages/${user_id}/${item.originalFilename}`);
+
+                    await sharp(file).resize(800, null).toFile(target, async function(err, info){
+                        if(err){
+
+                        }else{
+                            datum.flash_content_append_fields();
+                            datum.flash_content_append_values();
+                            await UserBiz.append(datum.merge_insert()).then(function(){
+                                result = true;
+                                data.push(datum.name);
+                            }, function(){
+                                result = false;
+                            });
+            
+                        }
+                    });
+                })(item);
+                
+                
                 if(!result)break;
             }
 

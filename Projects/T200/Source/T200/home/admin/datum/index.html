@@ -17,10 +17,11 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/side.css">
-
+    <link rel="stylesheet" href="/css/list.css">
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+    <script src="/js/list.js"></script>
 
 </head>
 
@@ -43,26 +44,47 @@
             <img src="/images/home.gif" />
         </header>
 
-        <nav class="nav_channel">
-            <a href="/">Home</a> -
-            <a href="/house/index.html">House</a> -
-            <a href="/job/index.html">Job</a> -
-            <a href="/trading/index.html">Trading</a> -
-            <a href="/exchange/index.html">Exchange</a>
-        </nav>
-
         <div>
             <fieldset>
-                <legend>My</legend>
+                <legend>Admin</legend>
                 <div>
+                    <details class="menu">
+                        <summary>Global</summary>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/admin/global/global.html">Global</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="menu">
+                        <summary>Admin</summary>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/admin/person/profile.html">Profile</a>
+                            </div>
+                        </div>
+                    </details>
                     <details class="menu">
                         <summary>Person</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/person/profile.html">Profile</a>
+                                <a href="/admin/person/index.html">Person</a>
                             </div>
+                        </div>
+                    </details>
+                    <details class="menu">
+                        <summary>Invitation</summary>
+                        <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/person/identity.html">Identity</a>
+                                <a href="/admin/invitation/index.html">Invite</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="menu">
+                        <summary>Notice</summary>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/admin/notice/index.html">Notice</a>
                             </div>
                         </div>
                     </details>
@@ -70,10 +92,10 @@
                         <summary>House</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/house/rent.html">Rent</a>
+                                <a href="/admin/house/rent.html">Rent</a>
                             </div>
                             <div class="menu_item">
-                                <a href="/content/house/wanted.html">Wanted</a>
+                                <a href="/admin/house/wanted.html">Wanted</a>
                             </div>
                         </div>
                     </details>
@@ -81,10 +103,10 @@
                         <summary>Job</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/job/recruit.html">Recruit</a>
+                                <a href="/admin/job/recruit.html">Recruit</a>
                             </div>
                             <div class="menu_item">
-                                <a href="/content/job/wanted.html">Wanted</a>
+                                <a href="/admin/job/wanted.html">Wanted</a>
                             </div>
                         </div>
                     </details>
@@ -92,10 +114,10 @@
                         <summary>Trading</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/trading/sell.html">Sell</a>
+                                <a href="/admin/trading/sell.html">Sell</a>
                             </div>
                             <div class="menu_item">
-                                <a href="/content/trading/buy.html">Buy</a>
+                                <a href="/admin/trading/buy.html">Buy</a>
                             </div>
                         </div>
                     </details>
@@ -103,15 +125,15 @@
                         <summary>Exchange</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/exchange/index.html">Exchange</a>
+                                <a href="/admin/exchange/index.html">Exchange</a>
                             </div>
                         </div>
                     </details>
-                    <details class="menu">
+                    <details open class="menu">
                         <summary>Storage</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/datum/index.html">Datum</a>
+                                <a href="/admin/datum/index.html">Datum</a>
                             </div>
                         </div>
                     </details>
@@ -119,7 +141,7 @@
                         <summary>Note</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/note/index.html">Note</a>
+                                <a href="/admin/note/index.html">Note</a>
                             </div>
                         </div>
                     </details>
@@ -127,9 +149,19 @@
             </fieldset>
             
             <fieldset>
-                <legend>My</legend>
+                <legend>Datum</legend>
                 <div>
-
+                    <div class="side_title">
+                        Datum
+                    </div>
+                    <div id="list_box">
+                        <form id="form">
+                            <input type="hidden" name="test">
+                            <input type="hidden" name="page" value="1">
+                            <input type="hidden" name="search">
+                            <input type="hidden" name="status">
+                        </form>
+                    </div>
                 </div>
             </fieldset>
         </div>
@@ -145,6 +177,15 @@
 <script>
     $.win.onload = function(){
         nav_check();
+
+        let result = formtostring("form");
+        $.post('/admin/datum/list', result, function(data){
+            $.id("list_box").innerHTML = data;
+            update_status();
+            update_time();
+        }, function(){
+            alert("Load Failure!");
+        });
     };
 </script>
 
