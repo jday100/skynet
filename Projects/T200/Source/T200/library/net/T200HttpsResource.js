@@ -133,6 +133,11 @@ class T200HttpsResource {
         return promise;
     }
 
+    merge_store() {
+        log(__filename, "merge_store");
+        return "storages";
+    }
+
 }
 
 module.exports = T200HttpsResource;

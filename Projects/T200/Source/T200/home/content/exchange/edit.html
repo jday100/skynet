@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/side.css">
+    <link rel="stylesheet" href="/css/editor.css">
 
 
     <script src="/js/t200.js"></script>
@@ -130,7 +131,7 @@
                     </div>
                     <hr class="line">
                     <div class="form_box">
-                        <form id="form" action="/content/exchange/upload" method="post" class="form" enctype="multipart/form-data">
+                        <form id="form" class="form" enctype="multipart/form-data" onsubmit="return false;">
                             <input type="hidden" name="test">
                             <div class="form_item">
                                 <label class="form_label">Title:</label>
@@ -142,57 +143,11 @@
 
                                 </div>
                             </div>
-                            <div id="upload">
+                            <div class="form_item">
+                                <label class="form_label"></label>
+                                <div id="upload" class="form_value" >
 
-                            </div>
-                            <div class="form_item">
-                                <label class="form_label">Content:</label>
-                                <textarea class="form_value" name="content" rows="25"></textarea>
-                            </div>
-                            <div class="upload">
-                                <label>Upload Files:</label>
-                                <div>
-                                    <div>
-                                        <div>
-                                            <label>FileName:</label>
-                                            FileName
-                                        </div>
-                                        <div>
-                                            <button>Insert</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <label>FileName:</label>
-                                            FileName
-                                        </div>
-                                        <div>
-                                            <button>Insert</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <label>FileName:</label>
-                                            FileName
-                                        </div>
-                                        <div>
-                                            <button>Insert</button>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>
-                                            <label>FileName:</label>
-                                            FileName
-                                        </div>
-                                        <div>
-                                            <button>Insert</button>
-                                        </div>
-                                    </div>
                                 </div>
-                            </div>
-                            <div class="form_item">
-                                <label class="form_label">Upload:</label>
-                                <input id="file" type="file" class="form_value" name="file" multiple="multiple">
                             </div>
                             <div class="form_item">
                                 <input type="button" class="form_button" id="submit" value="submit">
@@ -215,9 +170,9 @@
     $.win.onload = function(){
         nav_check();
 
-        let editor = new T200Editor('editor', 'WebEditor', 700, 300);
+        let editor = new T200Editor('editor', 'content', 700, 300);
 
-        editor.upload('upload');
+        editor.upload('upload', 'file');
 
         $.id("file").onchange = function(){
             let form = $.id('form');
@@ -225,14 +180,24 @@
             data.contentType = false;
             data.enctype="multipart/form-data";
 
-            $.upload('/content/exchange/upload', data, function(){
+            $.upload('/content/exchange/upload', data, function(result){
+                if(result && 0 < result.length){
+                    let id = 0;
+                    result.forEach(item => {
+                        let url = `/images/upload?id=${item}`;
+                        editor.file(id, url);
+                        id++;
+                    });
+                }
                 alert('Save Success!');
             }, function(){
                 alert('Save Failure!');
+                //editor.file(0, "/images/home.gif");
             });
         };
 
         $.id("submit").onclick = function(){
+            editor.flush();
             let result = formtostring("form");
             $.post('/content/exchange/edit', result, function(){
                 alert('Save Success!');

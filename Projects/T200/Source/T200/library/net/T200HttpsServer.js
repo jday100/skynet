@@ -72,7 +72,7 @@ class T200HttpsServer {
                 dispatcher.cookie = cookie;
                 dispatcher.session = session;
                 
-                if(session.empty()){
+                if(session.empty() || "GET" == req.method){
                     request.on("load", function(){
                         self.distribute(dispatcher);
                     });

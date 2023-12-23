@@ -101,27 +101,30 @@ async function do_content_exchange_upload(request, response, cookie, session, re
 
         if(user_id && 0 < user_id && files && 0 < files.file.length){
             let result = false;
-            await files.file.forEach(async item => {
+            let data = new Array();
+            for(let item of files.file){
                 let datum = new T200UserDatum();
                 
                 datum.user_id = user_id;
+                datum.name = `${user_id}/${item.newFilename}`;
                 datum.flash_content_append_fields();
                 datum.flash_content_append_values();
-                return await UserBiz.append(datum.merge_insert()).then(function(){
+                await UserBiz.append(datum.merge_insert()).then(function(){
                     result = true;
+                    data.push(datum.name);
                 }, function(){
                     result = false;
                 });
 
-                if(!result)return;
-            });
+                if(!result)break;
+            }
 
             if(result){
                 response.type("json");
-                resolve();
+                resolve(data);
             }else{
                 response.type("json");
-                reject();
+                reject(data);
             }
         }else{
             response.type("json");
