@@ -6,6 +6,7 @@ class T200HttpsAction {
     constructor() {
         this.get = {};
         this.post = {};
+        this.socket = {};
     }
 
     use_get(action, callback) {
@@ -16,6 +17,11 @@ class T200HttpsAction {
     use_post(action, callback) {
         log(__filename, "use_post", action);
         this.post[action] = callback;
+    }
+
+    use_socket(action, callback) {
+        log(__filename, "use_socket", action);
+        this.socket[action] = callback;
     }
 }
 

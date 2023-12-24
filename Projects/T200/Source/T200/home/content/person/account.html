@@ -17,11 +17,15 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/side.css">
-    <link rel="stylesheet" href="/css/list.css">
+    <link rel="stylesheet" href="/css/person.css">
+
 
     <script src="/js/t200.js"></script>
-    <script src="/js/t200home.js"></script>
-    <script src="/js/list.js"></script>
+    <script src="/js/t200home.js"></script>    
+    <script src="/js/t200region.js"></script>
+    <script src="/js/t200identity.js"></script>
+    <script src="/js/t200vessel.js"></script>
+    <script src="/js/t200region_dev.js"></script>
 
 </head>
 
@@ -56,7 +60,7 @@
             <fieldset>
                 <legend>My</legend>
                 <div>
-                    <details class="menu">
+                    <details open class="menu">
                         <summary>Person</summary>
                         <div class="menu_group">
                             <div class="menu_item">
@@ -81,7 +85,7 @@
                             </div>
                         </div>
                     </details>
-                    <details open class="menu">
+                    <details class="menu">
                         <summary>Job</summary>
                         <div class="menu_group">
                             <div class="menu_item">
@@ -121,24 +125,13 @@
                     </details>
                 </div>
             </fieldset>
-            
+
             <fieldset>
-                <legend>Job - Recruit</legend>
-                <div>
-                    <div class="side_title">
-                        Job - Recruit
-                    </div>
-                    <div class="publish">
-                        <button><a href="/content/job/recruit_edit.html">Publish</a></button>
-                    </div>
-                    <div id="list_box">
-                        <form id="form">
-                            <input type="hidden" name="test">
-                            <input type="hidden" name="page" value="1">
-                            <input type="hidden" name="search">
-                            <input type="hidden" name="status">
-                        </form>
-                    </div>
+                <legend>Profile</legend>
+                <div id="list_box">
+                    <form id="form">
+                        <input type="hidden" name="test">
+                    </form>
                 </div>
             </fieldset>
         </div>
@@ -152,14 +145,15 @@
 </body>
 
 <script>
-    $.win.onload = function(){
+    $.win.onload = function () {
         nav_check();
 
         let result = formtostring("form");
-        $.post('/content/job/recruit/list', result, function(data){
+        $.post('/content/person/account', result, function(data){
             $.id("list_box").innerHTML = data;
-            update_content_status();
-            update_time();
+
+            show_continent('continent_id', 'continent_name');
+            show_country('continent_id', 'country_id', 'country_name');
         }, function(){
             alert("Load Failure!");
         });

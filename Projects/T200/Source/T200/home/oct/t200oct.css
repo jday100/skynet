@@ -1,0 +1,55 @@
+.oct_box {
+    width: 16px;
+    height: 16px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.oct_panel {
+    width: 200px;
+    height: 600px;
+    border: 1px solid black;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: antiquewhite;
+}
+
+.oct_send_box {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    position: fixed;
+    right: 200px;
+    bottom: 0;
+    background-color: antiquewhite;
+}
+
+.oct_send_dialog {
+    width: 600px;
+    height: 400px;
+}
+
+.oct_send_dialog > iframe {
+    width: 600px;
+    height: 400px;
+}
+
+.oct_send_text {
+    width: 600px;
+    height: 170px;
+}
+
+.oct_send_text > iframe {
+    width: 600px;
+    height: 170px;
+}
+
+.oct_send_button {
+    width: 600px;
+    height: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}

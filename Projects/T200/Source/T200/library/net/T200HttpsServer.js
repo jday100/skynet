@@ -1,6 +1,7 @@
 const { error, log } = require('../T200Lib.js');
 const T200Error = require('../T200Error.js');
 
+const url = require('url');
 const http = require('http');
 const formidable = require('formidable');
 
@@ -56,54 +57,20 @@ class T200HttpsServer {
             let server = http.createServer();
 
             server.on('request', function(req, res){
-                let dispatcher = new T200HttpsDispatcher();
+                if('GET' == req.method){
+                    let data = url.parse(req.url, true);
+                    let action = data.pathname;
+                    let done = global.action.socket[action];
 
-                let request = new T200HttpsRequest(req);
-                let response = new T200HttpsResponse(res);
-                let cookie = new T200HttpsCookie(req, res);
-
-                cookie.load();
-
-                let session = new T200HttpsSession(cookie);
-
-                dispatcher.resource = self.resource;
-                dispatcher.request = request;
-                dispatcher.response = response;
-                dispatcher.cookie = cookie;
-                dispatcher.session = session;
-                
-                if(session.empty() || "GET" == req.method){
-                    request.on("load", function(){
-                        self.distribute(dispatcher);
-                    });
-
-                    request.load();
-                }else{
-                    let user_id = session.get("userid");
-
-                    if(user_id && 0 < user_id){
-                        let form = new formidable.IncomingForm();
-
-                        self.resource.merge_storages(user_id).then(function(data){
-                            form.uploadDir = data;
-                            //form.keepExtensions = true;
-        
-                            form.parse(req, function(err, fields, files){
-                                if(err){
-                                    response.error();
-                                }else{
-                                    request.fields = fields;
-                                    request.files = files;
-                                    self.distribute(dispatcher);
-                                }
-                            });
-                        }, function(){
-                            response.error();
-                        });
+                    if(done){
+                        console.log(1);
+                        //res.end("hello");
                         
                     }else{
-                        response.error();
-                    }                    
+                        self.web(req, res);
+                    }
+                }else{
+                    self.web(req, res);
                 }
 
             });
@@ -115,6 +82,60 @@ class T200HttpsServer {
         });
 
         return promise;
+    }
+
+    web(req, res) {
+        let self = this;
+
+        let dispatcher = new T200HttpsDispatcher();
+
+        let request = new T200HttpsRequest(req);
+        let response = new T200HttpsResponse(res);
+        let cookie = new T200HttpsCookie(req, res);
+
+        cookie.load();
+
+        let session = new T200HttpsSession(cookie);
+
+        dispatcher.resource = self.resource;
+        dispatcher.request = request;
+        dispatcher.response = response;
+        dispatcher.cookie = cookie;
+        dispatcher.session = session;
+        
+        if(session.empty() || "GET" == req.method){
+            request.on("load", function(){
+                self.distribute(dispatcher);
+            });
+
+            request.load();
+        }else{
+            let user_id = session.get("userid");
+
+            if(user_id && 0 < user_id){
+                let form = new formidable.IncomingForm();
+
+                self.resource.merge_storages(user_id).then(function(data){
+                    form.uploadDir = data;
+                    //form.keepExtensions = true;
+
+                    form.parse(req, function(err, fields, files){
+                        if(err){
+                            response.error();
+                        }else{
+                            request.fields = fields;
+                            request.files = files;
+                            self.distribute(dispatcher);
+                        }
+                    });
+                }, function(){
+                    response.error();
+                });
+                
+            }else{
+                response.error();
+            }                    
+        }
     }
 
     distribute(dispatcher) {

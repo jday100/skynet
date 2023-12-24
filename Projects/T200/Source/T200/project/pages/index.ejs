@@ -17,12 +17,15 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/oct/t200oct.css">
 
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
     <script src="/js/t200vessel.js"></script>
     <script src="/js/t200region_dev.js"></script>
+
+    <script src="/oct/t200oct.js"></script>
 
 </head>
 
@@ -76,6 +79,8 @@
         update_times("trading_sells");
         update_times("trading_buys");
         update_times("exchanges");
+
+        new T200Oct();
     };
 </script>
 

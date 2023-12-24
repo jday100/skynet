@@ -12,8 +12,7 @@ class T200HttpsDispatcher {
 
     run() {
         log(__filename, "dispatcher run");
-
-            let self = this;
+        let self = this;
         let promise = new Promise(function(resolve, reject){
             return self.dispense().then(function(data){
                 log(__filename, "dispense success");

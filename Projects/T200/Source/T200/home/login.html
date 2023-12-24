@@ -21,6 +21,7 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+    <script src="/js/t200locale.js"></script>
 
 </head>
 
@@ -90,6 +91,10 @@
 
 <script>
     $.win.onload = function(){
+        let locale = new T200Locale();
+
+        locale.flush();
+
         $.id('form').onsubmit = function(){
             return false;
         };
