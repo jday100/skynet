@@ -6,6 +6,7 @@ const http = require('http');
 const formidable = require('formidable');
 
 const T200WebSocket = require('../ws/T200WebSocket.js');
+const T200WSServer = require('../ws/T200WSServer.js');
 
 const T200HttpsSetup = require('./T200HttpsSetup.js');
 
@@ -28,6 +29,7 @@ class T200HttpsServer {
         log(__filename, "https server start");
 
         global.action = new T200HttpsAction();
+        global.wsserver = new T200WSServer();
         this.resource = new T200HttpsResource();
 
         let self = this;

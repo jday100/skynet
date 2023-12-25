@@ -5,6 +5,8 @@ const http = require('http');
 
 const T200HttpsSetup = require('../library/net/T200HttpsSetup.js');
 
+const T200WSServer = require('../library/ws/T200WSServer.js');
+
 const T200HttpsAction = require('../library/net/T200HttpsAction.js');
 const T200HttpsCookie = require('../library/net/T200HttpsCookie.js');
 const T200HttpsSession = require('../library/net/T200HttpsSession.js');
@@ -33,6 +35,7 @@ class T200HomeServer extends T200HttpsServer {
         let self = this;
 
         global.action = new T200HttpsAction();
+        global.wsserver = new T200WSServer();
         this.resource = new T200HttpsResource();
 
         let promise = new Promise(function(resolve, reject){

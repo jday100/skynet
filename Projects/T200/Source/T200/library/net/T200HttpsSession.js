@@ -66,10 +66,10 @@ class T200HttpsSession {
             if(data){
                 return data[name];
             }else{
-                throw T200Error.build(1);
+                //throw T200Error.build(1);
             }
         }else{
-            throw T200Error.build(1);
+            //throw T200Error.build(1);
         }
     }
 

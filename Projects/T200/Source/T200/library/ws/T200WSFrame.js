@@ -145,6 +145,25 @@ class T200WSFrame {
             target.push(source[i] ^ mask[i % 4]);
         }
     }
+
+    static text(value) {
+        let length = value.length;
+
+        if(125 < length) {
+
+        }else{
+            let frame = Buffer.alloc(length + 2);
+
+            frame[0] = 0b10000001;
+            frame[1] = length;
+
+            for(let i=0;i<length;i++){
+                frame[i+2] = value[i];
+            }
+
+            return frame;
+        }
+    }
 }
 
 module.exports = T200WSFrame;

@@ -1,5 +1,10 @@
 const T200WSFrame = require('./T200WSFrame.js');
 
+const T200HttpsCookie = require('../net/T200HttpsCookie.js');
+const T200HttpsSession = require('../net/T200HttpsSession.js');
+const T200HttpsRequest = require('../net/T200HttpsRequest.js');
+const T200HttpsForm = require('../net/T200HttpsForm.js');
+
 
 class T200WebSocket {
     constructor(server) {
@@ -18,21 +23,37 @@ class T200WebSocket {
     upgrade(req, res) {
         let self = this;
 
+        let request = new T200HttpsRequest(req);
+        let cookie = new T200HttpsCookie(req, res);
+
+        cookie.load();
+
+        let session = new T200HttpsSession(cookie);
+
         console.log('upgrade');
 
-        res.write(T200WSFrame.upgrade(req));
+        let user_id = session.get("userid");
+        let identity_id = session.get("identityid");
 
-        res.on('data', function(chunk){
-            self.data(res, chunk);
-        });
+        if(T200HttpsForm.verify_id(user_id)
+            && T200HttpsForm.verify_id(identity_id)){
 
-        res.on('end', function(){
-            self.end();
-        });
-
-        res.on('error', function(){
-            self.error();
-        });
+            res.write(T200WSFrame.upgrade(req));
+            res.id = identity_id;
+            global.wsserver.append(identity_id, req, res);
+    
+            res.on('data', function(chunk){
+                self.data(res, chunk);
+            });
+    
+            res.on('end', function(){
+                self.end();
+            });
+    
+            res.on('error', function(){
+                self.error();
+            });
+        }
     }
 
     data(res, chunk) {
@@ -40,9 +61,11 @@ class T200WebSocket {
         console.log('data');
         let frame = T200WSFrame.parse(chunk);
 
+        frame.source = res.id;
+
         switch(frame.opcode){
             case 1:
-                self.command(frame.text);
+                self.command(res.id, frame.text);
                 break;
             case 2:
                 break;
@@ -60,21 +83,37 @@ class T200WebSocket {
         console.log('error');
     }
 
-    command(text) {
+    command(id, text) {
         let self = this;
         let cmd = JSON.parse(text);
 
         if(cmd){
             switch(cmd.command){
                 case 'send':
-                    self.send(cmd);
+                    self.send(id, cmd);
                     break;
             }
         }
     }
 
-    send(cmd) {
+    send(id, cmd) {
         console.log(cmd.data);
+
+        let obj = global.wsserver.get(cmd.id);
+
+        if(obj){
+            let frame = {};
+
+            frame.command = "receive";
+            frame.data = cmd.data;
+            frame.id = id;
+
+            let result = JSON.stringify(frame);
+
+            let data = T200WSFrame.text(result);
+            
+            obj.res.write(data);
+        }
     }
 
 }

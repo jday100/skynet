@@ -9,12 +9,17 @@ class T200OctClient {
 
         ws.onopen = function(event) {
             alert('open');
-            ws.send(T200OctClient.message("hello"));
+            let cmd = T200OctClient.message("hello");
+            cmd.id = 1;
+            ws.send(T200OctClient.command(cmd));
         };
 
         ws.onmessage = function(event) {
             alert('message');
-            ws.send('nice to meet you');
+    
+            let cmd = T200OctClient.message("nice to meet you");
+            cmd.id = 1;
+            ws.send(T200OctClient.command(cmd));
         };
 
         ws.onclose = function(event) {
@@ -32,8 +37,7 @@ class T200OctClient {
         cmd.command = "send";
         cmd.data = msg;
 
-        let result = T200OctClient.command(cmd);
-        return result;
+        return cmd;
     }
 }
 
