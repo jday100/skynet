@@ -5,6 +5,8 @@ const url = require('url');
 const http = require('http');
 const formidable = require('formidable');
 
+const T200WebSocket = require('../ws/T200WebSocket.js');
+
 const T200HttpsSetup = require('./T200HttpsSetup.js');
 
 const T200HttpsAction = require('./T200HttpsAction.js');
@@ -74,6 +76,9 @@ class T200HttpsServer {
                 }
 
             });
+
+
+            let ws = new T200WebSocket(server);
 
             server.on('listen', function(){
                 log(__filename, "Https Server listen success");

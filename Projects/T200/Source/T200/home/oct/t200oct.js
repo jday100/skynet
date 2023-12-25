@@ -8,16 +8,32 @@ class T200OctClient {
         let ws = new WebSocket("ws://localhost:8888/oct/server");
 
         ws.onopen = function(event) {
-            alert(1);
+            alert('open');
+            ws.send(T200OctClient.message("hello"));
         };
 
         ws.onmessage = function(event) {
-            alert(2);
+            alert('message');
+            ws.send('nice to meet you');
         };
 
         ws.onclose = function(event) {
-            alert(3);
+            alert('close');
         }
+    }
+
+    static command(cmd) {
+        return JSON.stringify(cmd);
+    }
+
+    static message(msg) {
+        let cmd = {};
+
+        cmd.command = "send";
+        cmd.data = msg;
+
+        let result = T200OctClient.command(cmd);
+        return result;
     }
 }
 
