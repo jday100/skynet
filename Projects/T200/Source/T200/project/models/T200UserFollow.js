@@ -24,16 +24,14 @@ class T200UserFollow extends T200HomeUserModel {
     flash_content_append_fields() {
         this._fields = [
             'user_id',
-            'status',
-            'name'
+            'identity_id'
         ];
     }
 
     flash_content_append_values() {
         this._values = [
             this.user_id,
-            this.status,
-            `'${this.name}'`
+            this.identity_id
         ];
     }
 

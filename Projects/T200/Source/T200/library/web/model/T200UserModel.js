@@ -14,6 +14,7 @@ class T200UserModel extends T200ForumModel {
     flash_user_board_fields() {
         this._fields = [
             "id",
+            T200SQL.PREFIX("identity_id", "t2"),
             "nickname",
             "intro",
             "title",

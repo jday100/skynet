@@ -12,6 +12,9 @@
                         <div class="forum_intro">
                             <%=item.intro%>
                         </div>
+                        <div>
+                            <button>follow</button>
+                        </div>
                     </div>
                     <div class="forum_article">
                         <div>
@@ -36,6 +39,12 @@
                     </div>
                     <div class="forum_intro">
                         <%=item.intro%>
+                    </div>
+                    <div id="follow<%=item.id%>">
+                        <button onclick="hit_follow('follow<%=item.id%>', <%=item.identity_id%>);">follow</button>
+                    </div>
+                    <div id="follow">
+                        <button onclick="hit_message(<%=item.identity_id%>, '<%=item.nickname%>');">Message</button>
                     </div>
                 </div>
                 <div class="forum_article">

@@ -190,3 +190,7 @@ function oct_receive_message(cmd) {
 
     $.id(`oct_send_dialog`).contentDocument.body.innerHTML = result;
 }
+
+function oct_open_message(id) {
+    alert(id);
+}

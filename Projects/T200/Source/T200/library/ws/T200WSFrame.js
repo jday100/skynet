@@ -149,8 +149,20 @@ class T200WSFrame {
     static text(value) {
         let length = value.length;
 
-        if(125 < length) {
+        if(125 < length && 65536 > length) {
+            let frame = Buffer.alloc(length + 4);
 
+            frame[0] = 0b10000001;
+            frame[1] = 126;
+            frame[2] = (length & 0b1111111100000000) >> 4;
+            frame[3] = length & 0b11111111;
+
+            for(let i=0;i<length;i++){
+                let data = value.charCodeAt(i);
+                frame[i+4] = data;
+            }
+
+            return frame;
         }else{
             let frame = Buffer.alloc(length + 2);
 

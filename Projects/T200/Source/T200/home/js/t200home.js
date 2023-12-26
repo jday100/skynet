@@ -81,6 +81,20 @@ function hit_search(id, obj, url) {
     });
 }
 
+function hit_follow(name, id) {
+    let result = `test=&id=${id}`;
+    let url = "/content/person/follow";
+    $.post(url, result, function(data){
+        $.id(name).innerHTML = "";
+    }, function(){
+        alert("Follow Failure!");
+    });
+}
+
+function hit_message(id, name) {
+    oct_open_message(id, name);
+}
+
 function hit_reply(id, obj, url) {
     let result = formtostring(id);
     $.post(url, result, function(data){

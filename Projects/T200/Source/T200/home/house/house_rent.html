@@ -17,11 +17,11 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/home.css">
-
+    <link rel="stylesheet" href="/oct/t200oct_dev.css">
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
-
+    <script src="/oct/t200oct_dev.js"></script>
 </head>
 
 <body>
@@ -82,6 +82,8 @@
         let data = formtostring('form');
         $.post('/house/rent/board', data, function (result) {
             $.id("list_box").innerHTML = result;
+
+            new T200Oct();
         }, function () {
             alert('Load Failure!');
         });

@@ -163,3 +163,11 @@ function oct_flash_click() {
         flag != flag;
     }, 1000);
 }
+
+function oct_open_message(id, name) {
+    //alert(name);
+
+    oct_box_click($.id('oct_box'));
+
+    oct_item_click($.id(`item${id}`));
+}
