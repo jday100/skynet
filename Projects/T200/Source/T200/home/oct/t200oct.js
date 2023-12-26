@@ -27,6 +27,9 @@ class T200OctClient {
                     case 'list':
                         T200OctClient.list(cmd);
                         break;
+                    case 'receive':
+                        T200OctClient.receive(cmd);
+                        break;
                 }
             }
         };
@@ -34,6 +37,8 @@ class T200OctClient {
         ws.onclose = function(event) {
             alert('close');
         }
+
+        this.ws = ws;
     }
 
     static command(cmd) {
@@ -60,6 +65,20 @@ class T200OctClient {
     static list(cmd) {
         if(cmd && cmd.data){
             oct_box_click($.id('oct_box'));
+        }
+    }
+
+    static receive(cmd) {
+        if(cmd && cmd.data){
+            oct_receive_message(cmd);
+        }
+    }
+
+    send(value) {
+        if(value && this.ws){
+            let cmd = T200OctClient.message(value);
+            cmd.id = 1;
+            this.ws.send(T200OctClient.command(cmd));
         }
     }
 }
@@ -151,10 +170,23 @@ function oct_send() {
     let result = $.id(`oct_send_text`).contentDocument.body.innerHTML;
     $.id('oct_send_text_value').value = result;
 
-    let data = formtostring('oct_send_form');
-    $.post('/oct/send', data, function(result){
- 
-    }, function(err){
-        
-    });
+   if(oct_client){
+    oct_client.send(result);
+   }
+}
+
+
+function oct_receive_message(cmd) {
+    let result = $.id(`oct_send_dialog`).contentDocument.body.innerHTML;
+
+    result += `
+        <div>
+            Hello
+        </div
+        <div>
+            message
+        </div>
+    `;
+
+    $.id(`oct_send_dialog`).contentDocument.body.innerHTML = result;
 }

@@ -22,6 +22,7 @@
     align-items: center;
 }
 
+
 .oct_send_box {
     width: 600px;
     height: 600px;
@@ -33,23 +34,23 @@
 }
 
 .oct_send_dialog {
-    width: 600px;
-    height: 400px;
+    width: 596px;
+    height: 396px;
 }
 
 .oct_send_dialog > iframe {
-    width: 600px;
-    height: 400px;
+    width: 596px;
+    height: 396px;
 }
 
 .oct_send_text {
     width: 600px;
-    height: 170px;
+    height: 140px;
 }
 
 .oct_send_text > iframe {
     width: 600px;
-    height: 170px;
+    height: 140px;
 }
 
 .oct_send_button {
@@ -58,4 +59,21 @@
     display: flex;
     justify-content: right;
     align-items: center;
+}
+
+
+.oct_dialog_right {
+    width: 580px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: column;
+}
+
+.oct_dialog_right div {
+    width: 580px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    flex-direction: column;
 }
