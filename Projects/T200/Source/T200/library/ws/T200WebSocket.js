@@ -5,6 +5,10 @@ const T200HttpsSession = require('../net/T200HttpsSession.js');
 const T200HttpsRequest = require('../net/T200HttpsRequest.js');
 const T200HttpsForm = require('../net/T200HttpsForm.js');
 
+const T200HomeView = require('../../project/view/T200HomeView.js');
+const T200UserFollow = require('../../project/models/T200UserFollow.js');
+const T200HomeUserBiz = require('../../project/biz/T200HomeUserBiz.js');
+
 
 class T200WebSocket {
     constructor(server) {
@@ -24,6 +28,9 @@ class T200WebSocket {
         let self = this;
 
         let request = new T200HttpsRequest(req);
+
+        request.load();
+        
         let cookie = new T200HttpsCookie(req, res);
 
         cookie.load();
@@ -38,9 +45,22 @@ class T200WebSocket {
         if(T200HttpsForm.verify_id(user_id)
             && T200HttpsForm.verify_id(identity_id)){
 
-            res.write(T200WSFrame.upgrade(req));
+            let obj = {};
+
+            obj.request = request;
+            obj.cookie = cookie;
+            obj.session = session;
+
+            obj.req = req;
+            obj.res = res;
+
+            obj.user_id = user_id;
+            obj.id = identity_id;
             res.id = identity_id;
-            global.wsserver.append(identity_id, req, res);
+
+            global.wsserver.append(obj);
+
+            res.write(T200WSFrame.upgrade(req));
     
             res.on('data', function(chunk){
                 self.data(res, chunk);
@@ -92,6 +112,9 @@ class T200WebSocket {
                 case 'send':
                     self.send(id, cmd);
                     break;
+                case 'load':
+                    self.load(id);
+                    break;
             }
         }
     }
@@ -114,6 +137,54 @@ class T200WebSocket {
             
             obj.res.write(data);
         }
+    }
+
+    load(id) {
+        let self = this;
+        let obj = global.wsserver.get(id);
+
+        if(obj){
+            let follow = new T200UserFollow();
+            let UserBiz = new T200HomeUserBiz(obj.request, obj.cookie, obj.session);
+
+            follow.user_id = obj.user_id;
+
+            if(T200HttpsForm.verify_id(follow.user_id)){
+                follow.flash_user_list_fields();
+                UserBiz.list(follow.merge_user_list()).then(function(data){
+                    self.list(id, data);
+                }, function(err){
+                    self.error(id);
+                });
+            }else{
+
+            }
+        }
+    }
+
+    list(id, data) {
+        let self = this;
+        let obj = global.wsserver.get(id);
+
+        if(obj){
+            let frame = {};
+
+            frame.command = "list";
+            frame.data = data;
+            frame.id = id;
+
+            let value = JSON.stringify(frame);
+
+            let result = T200WSFrame.text(value);
+            
+            obj.res.write(result);
+        }
+        
+    }
+
+
+    error(id) {
+
     }
 
 }

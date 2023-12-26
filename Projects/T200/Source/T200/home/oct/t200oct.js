@@ -8,18 +8,27 @@ class T200OctClient {
         let ws = new WebSocket("ws://localhost:8888/oct/server");
 
         ws.onopen = function(event) {
-            alert('open');
-            let cmd = T200OctClient.message("hello");
-            cmd.id = 1;
+            let cmd = T200OctClient.load();
             ws.send(T200OctClient.command(cmd));
         };
 
         ws.onmessage = function(event) {
-            alert('message');
+            
+            /*alert('message');
     
             let cmd = T200OctClient.message("nice to meet you");
             cmd.id = 1;
-            ws.send(T200OctClient.command(cmd));
+            ws.send(T200OctClient.command(cmd));*/
+
+            let cmd = JSON.parse(event.data);
+
+            if(cmd){
+                switch(cmd.command){
+                    case 'list':
+                        T200OctClient.list(cmd);
+                        break;
+                }
+            }
         };
 
         ws.onclose = function(event) {
@@ -39,6 +48,20 @@ class T200OctClient {
 
         return cmd;
     }
+
+    static load() {
+        let cmd = {};
+
+        cmd.command = "load";
+
+        return cmd;
+    }
+
+    static list(cmd) {
+        if(cmd && cmd.data){
+            oct_box_click($.id('oct_box'));
+        }
+    }
 }
 
 
@@ -51,7 +74,7 @@ class T200Oct {
         let node = document.createElement("div");
         document.body.appendChild(node);
 
-        node.innerHTML = "<div class='oct_box' onclick='oct_box_click(this);'><img src='/oct/oct.png'></div>";
+        node.innerHTML = "<div id='oct_box' class='oct_box' onclick='oct_box_click(this);'><img src='/oct/oct.png'></div>";
 
         oct_client = new T200OctClient("/oct/server", 8888);
     }

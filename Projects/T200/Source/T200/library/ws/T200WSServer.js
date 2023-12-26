@@ -3,13 +3,8 @@ class T200WSServer {
         this.sockets = {};
     }
 
-    append(key, req, res) {
-        let obj = {};
-
-        obj.req = req;
-        obj.res = res;
-
-        this.sockets[key] = obj;
+    append(obj) {
+        this.sockets[obj.id] = obj;
     }
 
     get(key) {

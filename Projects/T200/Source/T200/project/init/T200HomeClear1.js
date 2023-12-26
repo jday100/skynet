@@ -21,6 +21,8 @@ class T200HomeClear {
             'identity',
             'invitation',
             'datum',
+            'follow',
+            'message',
             'continent',
             'region',
             'city'

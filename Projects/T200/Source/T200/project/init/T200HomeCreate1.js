@@ -357,6 +357,34 @@ class T200HomeCreate {
         `;
     }
 
+
+    merge_follow_sql() {
+        return `
+            create table if not exists follow (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                create_time datetime not null default current_timestamp,
+                INDEX(user_id)
+            ) character set utf8
+        `;
+    }
+
+
+    merge_message_sql() {
+        return `
+            create table if not exists datum (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                status int not null default 0,
+                content text,
+                create_time datetime not null default current_timestamp,
+                INDEX(user_id)
+            ) character set utf8
+        `;
+    }
+
     merge_advert_sql() {
         return `
             create table if not exists advert (
@@ -657,6 +685,38 @@ class T200HomeCreate {
         return promise;
     }
 
+    create_follow(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_follow_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_message(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_message_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
     create_advert(client) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -806,6 +866,14 @@ class T200HomeCreate {
                 return error();
             }).then(function(){
                 return self.create_datum(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_follow(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_message(client);
             }, function(){
                 return error();
             }).then(function(){

@@ -158,11 +158,25 @@ class T200WSFrame {
             frame[1] = length;
 
             for(let i=0;i<length;i++){
-                frame[i+2] = value[i];
+                let data = value.charCodeAt(i);
+                frame[i+2] = data;
             }
 
             return frame;
-        }
+        
+
+            /*
+            let frame = new Uint8Array();
+
+            frame.push(0b10000001);
+            frame.push(length);
+
+            for(let i=0;i<length;i++){
+                frame.push(value[i]);
+            }
+            return frame;
+            */
+        }   
     }
 }
 
