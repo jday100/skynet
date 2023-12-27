@@ -11,8 +11,15 @@ async function do_index(request, response, cookie, session, resource) {
         let view = new T200HomeView(resource);
         let HomeIndex = new T200HomeIndex(request, cookie, session);
 
+        let logined = false;
+        let user_id = session.get("userid");
+
+        if(T200HttpsForm.verify_id(user_id)){
+            logined = true;
+        }
+
         return HomeIndex.load_index().then(function(data){
-            console.log(data);
+            data.logined = logined;
             return view.render_file('index.ejs', data);
         }, function(err){
             return error();

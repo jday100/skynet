@@ -333,6 +333,12 @@ input[type="email"] + img + button {
     word-break: break-all;
 }
 
+.forum_button {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
 .forum_article {
     width: 800px;
     min-height: 180px;

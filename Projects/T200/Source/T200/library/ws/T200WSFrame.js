@@ -105,7 +105,34 @@ class T200WSFrame {
         let length = T200WSFrame.parse_length(chunk);
 
         if(126 == length){
+            if(1 == mask){
+                frame.mask = new Array();
+                frame.mask.push(chunk[4]);
+                frame.mask.push(chunk[5]);
+                frame.mask.push(chunk[6]);
+                frame.mask.push(chunk[7]);
 
+                length = chunk[2] << 8;
+                length += chunk[3];
+
+                frame.text = new Array();
+
+                for(let i=0;i<length;i++){
+                    frame.text.push(chunk[8 + i]);
+                }
+
+                let text = new Array();
+                T200WSFrame.mask(frame.text, frame.mask, text);
+
+                frame.text = "";
+
+                for(let i=0;i<length;i++){
+                    let value = String.fromCharCode(text[i]);
+                    frame.text += value;
+                }
+            }else{
+                
+            }
         }else if(127 == length){
 
         }else if(126 > length){
@@ -128,7 +155,8 @@ class T200WSFrame {
                 frame.text = "";
 
                 for(let i=0;i<length;i++){
-                    frame.text += String.fromCharCode(text[i]);
+                    let value = String.fromCharCode(text[i]);
+                    frame.text += value;
                 }
             }else{
                 
@@ -154,8 +182,8 @@ class T200WSFrame {
 
             frame[0] = 0b10000001;
             frame[1] = 126;
-            frame[2] = (length & 0b1111111100000000) >> 4;
-            frame[3] = length & 0b11111111;
+            frame[3] = length & 255;
+            frame[2] = length >> 8;
 
             for(let i=0;i<length;i++){
                 let data = value.charCodeAt(i);

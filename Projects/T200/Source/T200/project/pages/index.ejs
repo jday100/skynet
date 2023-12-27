@@ -25,7 +25,14 @@
     <script src="/js/t200vessel.js"></script>
     <script src="/js/t200region_dev.js"></script>
 
-    <script src="/oct/t200oct.js"></script>
+    <%
+        if(logined){
+            %>
+                <script src="/oct/t200oct.js"></script>
+            <%
+        }
+    %>    
+
     <script src="/js/t200localize.js"></script>
 
 </head>
@@ -81,8 +88,16 @@
         update_times("trading_buys");
         update_times("exchanges");
 
-        new T200Oct();
-
+        
+        <%
+            if(logined){
+                %>
+                    new T200Oct();
+                <%
+            }
+        %>  
+        
+        
         let localize = new T200Localize();
     };
 </script>

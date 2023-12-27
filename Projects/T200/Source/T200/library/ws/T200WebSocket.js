@@ -73,6 +73,8 @@ class T200WebSocket {
             res.on('error', function(){
                 self.error();
             });
+        }else{
+            res.end();
         }
     }
 
