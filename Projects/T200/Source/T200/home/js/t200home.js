@@ -49,7 +49,7 @@ function nav_check() {
     let sid = $.cookie('sid');
 
     if(sid && 0 < sid){
-        $.id('nav_right').innerHTML = '<a href="/content/index.html">My</a> | <a href="#" onclick="logout();">Logout</a>';
+        $.id('nav_right').innerHTML = '<a href="/content/index.html" locale="my">My</a> | <a href="#" onclick="logout();" locale="logout">Logout</a>';
     }
 }
 
