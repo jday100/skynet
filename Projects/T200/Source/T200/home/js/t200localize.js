@@ -83,6 +83,20 @@ class T200Localize {
                     }else{
                         element.innerHTML = value;
                     }  
+                }else if('OPTION' == element.nodeName){
+                    let value = obj[element.getAttribute('locale')];
+                    if(undefined == value){
+
+                    }else{
+                        element.innerHTML = value;
+                    }  
+                }else if('INPUT' == element.nodeName){
+                    let value = obj[element.getAttribute('locale')];
+                    if(undefined == value){
+
+                    }else{
+                        element.value = value;
+                    }  
                 }
             });
         }, function(){

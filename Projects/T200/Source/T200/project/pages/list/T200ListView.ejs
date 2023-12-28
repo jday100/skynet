@@ -1,14 +1,14 @@
 <div id="list_box" class="list_box">
     <div class="list_search">
         <input type="text" id="search_key">
-        <button onclick="list_hit_search('form', $.id('list_box'), '<%=search_url%>');">Search</button>
+        <button onclick="list_hit_search('form', $.id('list_box'), '<%=search_url%>');" locale="search">Search</button>
     </div>
     <div>
         <div class="list_paging_group">
             <%
                 if(paging.first){
                     %>
-                        <a href="#" onclick="list_hit_page('form', 1, $.id('list_box'), '<%=list_url%>');">First</a>
+                        <a href="#" onclick="list_hit_page('form', 1, $.id('list_box'), '<%=list_url%>');" locale="first">First</a>
                     <%
                 }
                 if(paging.pages){
@@ -20,7 +20,7 @@
                 }
                 if(paging.last){
                     %>
-                        <a href="#" onclick="list_hit_page('form', <%=paging.last%>, $.id('list_box'), '<%=list_url%>');">Last</a>
+                        <a href="#" onclick="list_hit_page('form', <%=paging.last%>, $.id('list_box'), '<%=list_url%>');" locale="last">Last</a>
                     <%
                 }
             %>
@@ -34,10 +34,10 @@
             <input type="hidden" id="status" name="status" value="<%=status%>">
             <div class="list_control_panel">
                 <select name="status1" onchange="list_change_status(1, 'form', $.id('list_box'), '<%=change_status_url%>');">
-                    <option <%=null == status?'selected':''%> value="">All</option>
-                    <option <%='0' == status?'selected':''%> value="0">Unreviewed</option>
-                    <option <%='1' == status?'selected':''%> value="1">Reviewed</option>
-                    <option <%='-1' == status?'selected':''%> value="-1">Deleted</option>
+                    <option <%=null == status?'selected':''%> value="" locale="all">All</option>
+                    <option <%='0' == status?'selected':''%> value="0" locale="unreviewed">Unreviewed</option>
+                    <option <%='1' == status?'selected':''%> value="1" locale="reviewed">Reviewed</option>
+                    <option <%='-1' == status?'selected':''%> value="-1" locale="deleted">Deleted</option>
                 </select>
 
                 <%
@@ -47,7 +47,7 @@
                         <%
                     });
                 %>
-                <button class="list_button" onclick="list_select_all();">All</button>
+                <button class="list_button" onclick="list_select_all();" locale="all">All</button>
             </div>
 
             <div class="list_title_item">
@@ -153,10 +153,10 @@
         
             <div class="list_control_panel">
                 <select name="status2" onchange="list_change_status(2, 'form', $.id('list_box'), '<%=change_status_url%>');">
-                    <option <%=null == status?'selected':''%> value="">All</option>
-                    <option <%='0' == status?'selected':''%> value="0">Unreviewed</option>
-                    <option <%='1' == status?'selected':''%> value="1">Reviewed</option>
-                    <option <%='-1' == status?'selected':''%> value="-1">Deleted</option>
+                    <option <%=null == status?'selected':''%> value="" locale="all">All</option>
+                    <option <%='0' == status?'selected':''%> value="0" locale="unreviewed">Unreviewed</option>
+                    <option <%='1' == status?'selected':''%> value="1" locale="reviewed">Reviewed</option>
+                    <option <%='-1' == status?'selected':''%> value="-1" locale="deleted">Deleted</option>
                 </select>
 
                 <%
@@ -166,7 +166,7 @@
                         <%
                     });
                 %>
-                <button class="list_button" onclick="list_select_all();">All</button>
+                <button class="list_button" onclick="list_select_all();" locale="all">All</button>
             </div>
         </form>
     </div>
@@ -175,7 +175,7 @@
             <%
                 if(paging.first){
                     %>
-                        <a href="#" onclick="list_hit_page('form', 1, $.id('list_box'), '<%=list_url%>');">First</a>
+                        <a href="#" onclick="list_hit_page('form', 1, $.id('list_box'), '<%=list_url%>');" locale="first">First</a>
                     <%
                 }
                 if(paging.pages){
@@ -187,7 +187,7 @@
                 }
                 if(paging.last){
                     %>
-                        <a href="#" onclick="list_hit_page('form', <%=paging.last%>, $.id('list_box'), '<%=list_url%>');">Last</a>
+                        <a href="#" onclick="list_hit_page('form', <%=paging.last%>, $.id('list_box'), '<%=list_url%>');" locale="last">Last</a>
                     <%
                 }
             %>

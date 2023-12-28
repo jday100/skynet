@@ -112,7 +112,7 @@ class T200UserDatum extends T200HomeUserModel {
 
     set_item_left() {
         return [
-            ['Name', 'name', true, '/exchange/exchange.html', 'list_title', true, 'id', 'id']
+            ['Name', 'name', true, '/datum/datum.html', 'list_title', true, 'id', 'id']
         ];
     }
 
@@ -126,8 +126,8 @@ class T200UserDatum extends T200HomeUserModel {
 
     set_list_buttons() {
         return [
-            ['Delete', 'list_hit_delete', 'form', 'list_box', '/content/exchange/remove'],
-            ['Publish', 'list_hit_publish', 'form', 'list_box', '/content/exchange/publish']
+            ['Delete', 'list_hit_delete', 'form', 'list_box', '/content/datum/remove'],
+            ['Publish', 'list_hit_publish', 'form', 'list_box', '/content/datum/publish']
         ];
     }
 

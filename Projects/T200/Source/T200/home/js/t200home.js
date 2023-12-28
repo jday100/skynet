@@ -520,6 +520,7 @@ function update_content_status() {
                     break;
             }
             $.id('status'+i).value = value;
+            $.id('status'+i).setAttribute("locale", value);
         }
     }
 }
