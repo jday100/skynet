@@ -21,6 +21,7 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+    <script src="/js/t200localize.js"></script>
 
 </head>
 
@@ -30,12 +31,12 @@
 
         <nav>
             <div>
-                <a href="/">Home</a> |
-                <a href="/about.html">About</a>
+                <a href="/" locale="home">Home</a> |
+                <a href="/about.html" locale="about">About</a>
             </div>
             <div id="nav_right">
-                <a target="_blank" href="/login.html">Login</a> |
-                <a href="/register.html">Register</a>
+                <a target="_blank" href="/login.html" locale="login">Login</a> |
+                <a href="/register.html" locale="register">Register</a>
             </div>
         </nav>
 
@@ -44,77 +45,85 @@
         </header>
 
         <nav class="nav_channel">
-            <a href="/">Home</a> -
-            <a href="/house/index.html">House</a> -
-            <a href="/job/index.html">Job</a> -
-            <a href="/trading/index.html">Trading</a> -
-            <a href="/exchange/index.html">Exchange</a>
+            <a href="/" locale="home">Home</a> -
+            <a href="/house/index.html" locale="house">House</a> -
+            <a href="/job/index.html" locale="job">Job</a> -
+            <a href="/trading/index.html" locale="trading">Trading</a> -
+            <a href="/exchange/index.html" locale="exchange">Exchange</a>
         </nav>
 
         <div>
             <fieldset>
-                <legend>My</legend>
+                <legend locale="my">My</legend>
                 <div>
                     <details class="menu">
-                        <summary>Person</summary>
+                        <summary locale="person">Person</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/person/profile.html">Profile</a>
+                                <a href="/content/person/profile.html" locale="profile">Profile</a>
                             </div>
                             <div class="menu_item">
-                                <a href="/content/person/identity.html">Identity</a>
+                                <a href="/content/person/identity.html" locale="identity">Identity</a>
                             </div>
                             <div class="menu_item">
-                                <a href="/content/person/account.html">Account</a>
+                                <a href="/content/person/account.html" locale="account">Account</a>
                             </div>
                         </div>
                     </details>
                     <details class="menu">
-                        <summary>House</summary>
+                        <summary locale="house">House</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/house/rent.html">Rent</a>
+                                <a href="/content/house/rent.html" locale="rent">Rent</a>
                             </div>
                             <div class="menu_item">
-                                <a href="/content/house/wanted.html">Wanted</a>
+                                <a href="/content/house/wanted.html" locale="house_wanted">Wanted</a>
                             </div>
                         </div>
                     </details>
                     <details class="menu">
-                        <summary>Job</summary>
+                        <summary locale="job">Job</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/job/recruit.html">Recruit</a>
+                                <a href="/content/job/recruit.html" locale="recruit">Recruit</a>
                             </div>
                             <div class="menu_item">
-                                <a href="/content/job/wanted.html">Wanted</a>
+                                <a href="/content/job/wanted.html" locale="job_wanted">Wanted</a>
                             </div>
                         </div>
                     </details>
                     <details class="menu">
-                        <summary>Trading</summary>
+                        <summary locale="trading">Trading</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/trading/sell.html">Sell</a>
+                                <a href="/content/trading/sell.html" locale="sell">Sell</a>
                             </div>
                             <div class="menu_item">
-                                <a href="/content/trading/buy.html">Buy</a>
+                                <a href="/content/trading/buy.html" locale="buy">Buy</a>
                             </div>
                         </div>
                     </details>
                     <details class="menu">
-                        <summary>Exchange</summary>
+                        <summary locale="exchange">Exchange</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/exchange/index.html">Exchange</a>
+                                <a href="/content/exchange/index.html" locale="exchange">Exchange</a>
+                            </div>
+                        </div>
+                    </details>
+                    <details class="menu">
+                        <summary locale="storage">Storage</summary>
+                        <div class="menu_group">
+                            <div class="menu_item">
+                                <a href="/content/datum/index.html" locale="datum">Datum</a>
                             </div>
                         </div>
                     </details>
                     <details open class="menu">
-                        <summary>Note</summary>
+                        <summary locale="note">Note</summary>
                         <div class="menu_group">
                             <div class="menu_item">
-                                <a href="/content/note/index.html">Note</a>
+                                <a href="/content/note/index.html" locale="note">Note</a>
                             </div>
                         </div>
                     </details>
@@ -122,12 +131,12 @@
             </fieldset>
             
             <fieldset>
-                <legend>Note</legend>
+                <legend locale="note">Note</legend>
                 <div>
-                    <div class="form_title">
+                    <div class="form_title" locale="note">
                         Note
                     </div>
-                    <div class="form_msg">
+                    <div class="form_msg" locale="note_msg">
                         hello
                     </div>
                     <hr class="line">
@@ -135,15 +144,15 @@
                         <form id="form" class="form">
                             <input type="hidden" name="test">
                             <div class="form_item">
-                                <label class="form_label">Title:</label>
+                                <label class="form_label" locale="title_label">Title:</label>
                                 <input class="form_value" type="text" name="title">
                             </div>
                             <div class="form_item">
-                                <label class="form_label">Content:</label>
+                                <label class="form_label" locale="content_label">Content:</label>
                                 <textarea class="form_value" name="content" rows="25"></textarea>
                             </div>
                             <div class="form_item">
-                                <input type="button" class="form_button" id="submit" value="submit">
+                                <input type="button" class="form_button" id="submit" value="submit" locale="submit">
                             </div>
                         </form>
                     </div>
@@ -162,6 +171,8 @@
 <script>
     $.win.onload = function(){
         nav_check();
+
+        let localize = new T200Localize();
 
         $.id("submit").onclick = function(){
             let result = formtostring("form");

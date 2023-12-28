@@ -1,10 +1,10 @@
-<div>
+<div locale="identity_msg">
     Hello
 </div>
 <div>
     <div>
         <div>
-            <label>Username:</label>
+            <label locale="username_label">Username:</label>
             <input disabled type="text" value="<%=identity.username%>">
         </div>
     </div>
@@ -12,37 +12,37 @@
 <div>
     <div>
         <div>
-            <label>Nickname:</label>
+            <label locale="nickname_label">Nickname:</label>
             <input disabled type="text" name="nickname" value="<%=identity.nickname%>">
         </div>
-        <button id="nickname_button" onclick="">Edit</button>
+        <button id="nickname_button" onclick="" locale="edit">Edit</button>
     </div>
 </div>
 <div>
     <div>
         <div>
-            <label>Location:</label>
+            <label locale="location_label">Location:</label>
         </div>
-        <button id="location_button" onclick="location_edit();">Edit</button>
+        <button id="location_button" onclick="location_edit();" locale="edit">Edit</button>
     </div>
     <div id="location_box">
         <div>
             <dl>
                 <dd>
                     <div class="region">
-                        <label>Continent:</label>
+                        <label locale="continent_label">Continent:</label>
                         <input type="hidden" id="continent_id" value="<%=identity.continent_id%>">
                         <input disabled type="text" id="continent_name" value="">
                     </div>
                     
                     <div class="region">
-                        <label>Region:</label>
+                        <label locale="region_label">Region:</label>
                         <input type="hidden" id="region_id" value="<%=identity.region_id%>">
                         <input disabled type="text" id="region_name" value="">
                     </div>
 
                     <div class="region">
-                        <label>City:</label>
+                        <label locale="city_label">City:</label>
                         <input type="hidden" id="city_id" value="<%=identity.city_id%>">
                         <input disabled type="text" id="city_name" value="">
                     </div>
@@ -54,9 +54,9 @@
 <div>
     <div>
         <div>
-            <label>Intro:</label>
+            <label locale="intro_label">Intro:</label>
         </div>
-        <button id="intro_button" onclick="intro_edit();">Edit</button>
+        <button id="intro_button" onclick="intro_edit();" locale="edit">Edit</button>
     </div>
 </div>
 <div>

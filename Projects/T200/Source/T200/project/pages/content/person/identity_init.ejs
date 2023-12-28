@@ -1,10 +1,10 @@
-<div>
+<div locale="identity_init_msg">
     Hello
 </div>
 <div>
     <div>
         <div>
-            <label>Username:</label>
+            <label locale="username_label">Username:</label>
             <input disabled type="text" value="<%=identity.username%>">
         </div>
     </div>
@@ -14,7 +14,7 @@
 <div>
     <div>
         <div>
-            <label>Nickname:</label>
+            <label locale="nickname_label">Nickname:</label>
             <input type="text" name="nickname" value="<%=identity.nickname%>">
         </div>
     </div>
@@ -22,7 +22,7 @@
 <div>
     <div>
         <div>
-            <label>Location:</label>
+            <label locale="location_label">Location:</label>
         </div>
     </div>
     <div>
@@ -30,21 +30,21 @@
             <dl>
                 <dd>
                     <div class="region">
-                        <label>Continent:</label>
+                        <label locale="continent_label">Continent:</label>
                         <select style="display:block;width: 150px;" id="continent" name="continent" onchange="continent_dev_change(this, 'region');">
 
                         </select>
                     </div>
                     
                     <div class="region">
-                        <label>Region:</label>
+                        <label locale="region_label">Region:</label>
                         <select style="display:block;width: 150px;" id="region" name="region" onchange="region_dev_change('continent', 'region', 'city');">
                             
                         </select>
                     </div>
 
                     <div class="region">
-                        <label>City:</label>
+                        <label locale="city_label">City:</label>
                         <select style="display:block;width: 150px;" id="city" name="city">
                             
                         </select>
@@ -57,7 +57,7 @@
 <div>
     <div>
         <div>
-            <label>Intro:</label>
+            <label locale="intro_label">Intro:</label>
         </div>
     </div>
 </div>
@@ -69,6 +69,6 @@
     </div>
 </div>
 <div>
-    <button id="submit">Save</button>
+    <button id="submit" locale="save">Save</button>
 </div>
 </form>

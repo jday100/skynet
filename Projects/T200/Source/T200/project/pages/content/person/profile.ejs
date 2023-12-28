@@ -1,30 +1,30 @@
 <fieldset>
-    <legend>Account</legend>
+    <legend locale="account">Account</legend>
     <div id="account">
-        <div>
+        <div locale="account_msg">
             Hello
         </div>
         <div>
             <div>
-                <label>Username:</label>
+                <label locale="username_label">Username:</label>
                 <input disabled type="text" value="<%=profile.username%>">
             </div>
         </div>
         <div>
             <div>
-                <label>Password:</label>
+                <label locale="password_label">Password:</label>
             </div>
-            <button id="password_button" onclick="password_edit();">Edit</button>
+            <button id="password_button" onclick="password_edit();" locale="edit">Edit</button>
         </div>
         <div id="password_box">
 
         </div>
         <div>
             <div>
-                <label>Email:</label>
+                <label locale="email_label">Email:</label>
                 <input disabled type="text" id="email_title" value="<%=profile.email%>">
             </div>
-            <button id="email_button" onclick="email_edit();">Edit</button>
+            <button id="email_button" onclick="email_edit();" locale="edit">Edit</button>
         </div>
         <div id="email_box">
 
@@ -32,28 +32,28 @@
     </div>
 </fieldset>
 <fieldset style="margin-top:20px">
-    <legend>Profile</legend>
+    <legend locale="profile">Profile</legend>
     <div id="profile">
-        <div>
+        <div locale="account_msg">
             Hello
         </div>
         <div>
             <div>
-                <label>Nationality:</label>
+                <label locale="nationality_label">Nationality:</label>
             </div>
-            <button id="nationality_button" onclick="nationality_edit();">Edit</button>
+            <button id="nationality_button" onclick="nationality_edit();" locale="edit">Edit</button>
         </div>
         <div id="nationality_box">
             <div>
                 <dl>
                     <dd>
                         <div>
-                            <label>Continent:</label>
+                            <label locale="continent_label">Continent:</label>
                             <input type="hidden" id="continent_id" value="<%=profile.continent_id%>">
                             <input disabled type="text" id="continent_name" value="">
                         </div>
                         <div>
-                            <label>Country:</label>
+                            <label locale="country_label">Country:</label>
                             <input type="hidden" id="country_id" value="<%=profile.country_id%>">
                             <input disabled type="text" id="country_name" value="">
                         </div>
@@ -64,9 +64,9 @@
         </div>
         <div>
             <div>
-                <label>Intro:</label>
+                <label locale="intro_label">Intro:</label>
             </div>
-            <button id="intro_button" onclick="profile_intro_edit();">Edit</button>
+            <button id="intro_button" onclick="profile_intro_edit();" locale="edit">Edit</button>
         </div>
         <form id="intro_form">
         <input type="hidden" name="test">
