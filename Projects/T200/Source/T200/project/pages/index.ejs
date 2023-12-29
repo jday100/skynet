@@ -77,6 +77,8 @@
 </body>
 
 <script>
+    let oct_client;
+
     $.win.onload = function(){
         nav_check();
 
@@ -94,7 +96,7 @@
         <%
             if(logined){
                 %>
-                    new T200Oct();
+                    oct_client = new T200Oct();
                 <%
             }
         %>  

@@ -31,7 +31,8 @@ class T200Editor {
             <div id="${id}_list" style="width:100%">
             </div
             <div style="width:100%">
-            <input type="file" id="${id}" name="${id}" multiple="multiple">
+            <input type="hidden" id="file_count" value="0">
+            <input type="file" id="${id}" name="${id}">
             </div>
         `;
 

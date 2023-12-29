@@ -196,13 +196,14 @@
             data.contentType = false;
             data.enctype="multipart/form-data";
 
-            $.upload('/content/exchange/upload', data, function(result){
+            $.upload('/content/datum/upload', data, function(result){
                 if(result && 0 < result.length){
-                    let id = 0;
+                    let id = $.id('file_count').value;
                     result.forEach(item => {
                         let url = `/images/upload?id=${item}`;
                         editor.file(id, url);
                         id++;
+                        $.id('file_count').value = id;
                     });
                 }
                 alert('Save Success!');

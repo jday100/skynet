@@ -15,6 +15,11 @@
     width: 100px;
 }
 
+.form_value > div > div > div > input {
+    width: 500px;
+}
+
+
 .form_value > div > div > div + div {
     display: flex;
     justify-content: right;

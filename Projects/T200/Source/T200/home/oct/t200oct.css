@@ -17,6 +17,13 @@
 }
 
 .oct_panel > div {
+    width: 200px;
+    height: 600px;
+    line-height: 25px;
+    overflow: auto;
+}
+
+.oct_panel > div > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -63,17 +70,18 @@
 
 
 .oct_dialog_right {
-    width: 580px;
+    width: 550px;
     display: flex;
-    justify-content: right;
-    align-items: center;
+    justify-content: center;
+    align-items:flex-end;
     flex-direction: column;
 }
 
 .oct_dialog_right div {
-    width: 580px;
+    width: 550px;
     display: flex;
-    justify-content: right;
-    align-items: center;
+    justify-content: center;
+    align-items:flex-end;
     flex-direction: column;
 }
+
