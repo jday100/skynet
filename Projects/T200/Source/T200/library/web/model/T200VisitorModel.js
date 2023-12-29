@@ -59,7 +59,12 @@ class T200VisitorModel extends T200SearchModel {
         this._fields = [
             T200SQL.PREFIX("user_id", "t1"),
             T200SQL.PREFIX("status", "t1"),
+            T200SQL.PREFIX("continent_id", "t2"),
+            T200SQL.PREFIX("continent_name", "t2"),
+            T200SQL.PREFIX("region_id", "t2"),
+            T200SQL.PREFIX("region_name", "t2"),
             T200SQL.PREFIX("city_id", "t2"),
+            T200SQL.PREFIX("city_name", "t2"),
             T200SQL.PREFIX("identity_id", "t1"),
             "username",
             "password",

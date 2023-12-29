@@ -105,6 +105,22 @@ class T200Localize {
     }
 
     flush() {
-        alert(1);
+        //alert(1);
+    }
+
+    static script(url) {
+        let language = navigator.language;
+        let result;
+        let name;
+        if("zh-CN" == language || "zh" == language){
+            name = `${url}.zh-CN`;
+        }else{
+            name = url;
+        }
+
+        result = `<script src="${name}"></script>`;
+        
+        //$.id("head").innerHTML += result;
+        document.writeln(result);
     }
 }

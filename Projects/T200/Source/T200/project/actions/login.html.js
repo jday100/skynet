@@ -63,7 +63,12 @@ function set_data(cookie, session, data) {
     let result = {};
 
     result.userid = data.user_id;
+    result.continentid = data.continent_id;
+    result.continent = data.continent_name;
+    result.regionid = data.region_id;
+    result.region = data.region_name;
     result.cityid = data.city_id;
+    result.city = data.city_name;
     result.identityid = data.identity_id;
     result.status = data.status;
     result.username = data.username;

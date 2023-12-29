@@ -43,14 +43,24 @@ async function do_content_exchange_add(request, response, cookie, session, resou
         exchange.user_id = session.get("userid");
         exchange.identity_id = session.get("identityid");
         exchange.status = session.get("status");
+        exchange.continent_id = session.get("continentid");
+        exchange.continent_name = session.get("continent");
+        exchange.region_id = session.get("regionid");
+        exchange.region_name = session.get("region");
         exchange.city_id = session.get("cityid");
+        exchange.city_name = session.get("city");
         exchange.title = request.get("title");
         exchange.content = request.get("content");
         
         if(T200HttpsForm.verify_id(exchange.user_id)
             && T200HttpsForm.verify_id(exchange.identity_id)
             && T200HttpsForm.verify_id(exchange.status)
+            && T200HttpsForm.verify_id(exchange.continent_id)
+            && T200HttpsForm.verify_text(exchange.continent_name)
+            && T200HttpsForm.verify_id(exchange.region_id)
+            && T200HttpsForm.verify_text(exchange.region_name)
             && T200HttpsForm.verify_id(exchange.city_id)
+            && T200HttpsForm.verify_text(exchange.city_name)
             && T200HttpsForm.verify_text(exchange.title)
             && T200HttpsForm.verify_text(exchange.content)){
                 exchange.flash_content_append_fields();

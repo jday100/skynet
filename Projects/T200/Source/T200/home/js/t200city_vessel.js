@@ -5,11 +5,17 @@ class T200CityLoader {
 
     #load(citis_dev, home_dev, data) {
         data.array().forEach(element => {
-            if(element[2]){
-                home_dev.append(element[0], element[1], element[3]);
+            let obj = {};
+
+            obj.key= element[0];
+            obj.value = element[1];
+            obj.data = element[3];
+
+            if(element[2]){                
+                home_dev.append(obj.key, obj.value, obj);
             }
 
-            citis_dev.append(element[0], element[1], element[3]);
+            citis_dev.append(obj.key, obj.value, obj);
         });
     }
 }
@@ -21,13 +27,20 @@ class T200RegionLoader {
 
     #load(cities_dev, regions_dev, countries_dev, home_dev, data) {
         data.array().forEach(element => {
-            if(element[2]){
-                countries_dev.append(element[0], element[1], element[3]);
+            let obj = {};
+
+            obj.key = element[0];
+            obj.value = element[1];
+            obj.name = element[2];
+            obj.data = element[4];
+
+            if(element[3]){
+                countries_dev.append(obj.key, obj.value, obj);
             }
 
-            regions_dev.append(element[0], element[1], element[3]);
+            regions_dev.append(obj.key, obj.value, obj);
 
-            new T200CityLoader(cities_dev, home_dev, element[3]);
+            new T200CityLoader(cities_dev, home_dev, element[4]);
         });
     }
 }
@@ -39,8 +52,15 @@ class T200ContinentLoader {
 
     #load(cities_dev, regions_dev, countries_dev, home_dev, data) {
         data.array().forEach(element => {
-            continents_dev.append(element[0], element[1], element[2]);
-            new T200RegionLoader(cities_dev, regions_dev, countries_dev, home_dev, element[2]);
+            let obj = {};
+
+            obj.key = element[0];
+            obj.value = element[1];
+            obj.name = element[2];
+            obj.data = element[3];
+
+            continents_dev.append(obj.key, obj.value, obj);
+            new T200RegionLoader(cities_dev, regions_dev, countries_dev, home_dev, element[3]);
         });
     }
 }

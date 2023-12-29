@@ -39,8 +39,12 @@ async function do_content_house_rent_add(request, response, cookie, session, res
         house.user_id = session.get("userid");
         house.identity_id = session.get("identityid");
         house.status = session.get("status");
-        //house.region_id = session.get("regionid");
+        house.continent_id = session.get("continentid");
+        house.continent_name = session.get("continent");
+        house.region_id = session.get("regionid");
+        house.region_name = session.get("region");
         house.city_id = session.get("cityid");
+        house.city_name = session.get("city");
         house.title = request.get("title");
         house.content = request.get("content");
 
@@ -60,8 +64,12 @@ async function do_content_house_rent_add(request, response, cookie, session, res
         if(T200HttpsForm.verify_id(house.user_id)
             && T200HttpsForm.verify_id(house.identity_id)
             && T200HttpsForm.verify_id(house.status)
-            //&& T200HttpsForm.verify_id(house.region_id)
+            && T200HttpsForm.verify_id(house.continent_id)
+            && T200HttpsForm.verify_text(house.continent_name)
+            && T200HttpsForm.verify_id(house.region_id)
+            && T200HttpsForm.verify_text(house.region_name)
             && T200HttpsForm.verify_id(house.city_id)
+            && T200HttpsForm.verify_text(house.city_name)
             && T200HttpsForm.verify_text(house.title)
             && T200HttpsForm.verify_text(house.content)){
                 house.flash_content_append_fields();
