@@ -69,7 +69,7 @@ class T200HttpsRequest {
         if(undefined == result){
             return undefined;
         }else if(result instanceof Array){
-            return result[0];
+            return result;
         }
         return result;
     }

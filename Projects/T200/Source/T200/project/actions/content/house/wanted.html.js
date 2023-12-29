@@ -151,10 +151,12 @@ async function do_content_house_wanted_publish(request, response, cookie, sessio
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         house.user_id = session.get("userid");
+        house.identity_id = session.get("identityid");
         house.ids = request.get("ids");
         house.status = 1;
 
         if(T200HttpsForm.verify_id(house.user_id)
+            && T200HttpsForm.verify_id(house.identity_id)
             && T200HttpsForm.verify_ids(house.ids)
             && T200HttpsForm.verify_id(house.status)){
             house.flash_content_status_update();
@@ -183,10 +185,12 @@ async function do_content_house_wanted_remove(request, response, cookie, session
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         house.user_id = session.get("userid");
+        house.identity_id = session.get("identityid");
         house.ids = request.get("ids");
         house.status = -1;
 
-        if(T200HttpsForm.verify_id(house.user_id)
+        if(T200HttpsForm.verify_id(house.user_id)        
+            && T200HttpsForm.verify_id(house.identity_id)
             && T200HttpsForm.verify_ids(house.ids)
             && T200HttpsForm.verify_status(house.status)){
             house.flash_content_status_update();

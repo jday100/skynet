@@ -152,10 +152,12 @@ async function do_content_exchange_publish(request, response, cookie, session, r
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         exchange.user_id = session.get("userid");
+        exchange.identity_id = session.get("identityid");
         exchange.ids = request.get("ids");
         exchange.status = 1;
 
         if(T200HttpsForm.verify_id(exchange.user_id)
+            && T200HttpsForm.verify_id(exchange.identity_id)
             && T200HttpsForm.verify_ids(exchange.ids)
             && T200HttpsForm.verify_id(exchange.status)){
             exchange.flash_content_status_update();
@@ -185,10 +187,12 @@ async function do_content_exchange_remove(request, response, cookie, session, re
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
         exchange.user_id = session.get("userid");
+        exchange.identity_id = session.get("identityid");
         exchange.ids = request.get("ids");
         exchange.status = -1;
 
         if(T200HttpsForm.verify_id(exchange.user_id)
+            && T200HttpsForm.verify_id(exchange.identity_id)
             && T200HttpsForm.verify_ids(exchange.ids)
             && T200HttpsForm.verify_status(exchange.status)){
             exchange.flash_content_status_update();
