@@ -78,16 +78,22 @@ async function do_content_person_identity_init_save(request, response, cookie, s
         identity.user_id = session.get("userid");
         identity.nickname = request.get("nickname");
         identity.continent_id = request.get("continent");
+        identity.continent_name = request.get("continent_title");
         identity.region_id = request.get("region");
+        identity.region_name = request.get("region_title");
         identity.city_id = request.get("city");
+        identity.city_name = request.get("city_title");
         identity.intro = request.get("intro");
 
         if(T200HttpsForm.verify_null(identity_id)
             && T200HttpsForm.verify_id(identity.user_id)
             && T200HttpsForm.verify_text(identity.nickname)
             && T200HttpsForm.verify_id(identity.continent_id)
+            && T200HttpsForm.verify_text_100(identity.continent_name)
             && T200HttpsForm.verify_id(identity.region_id)
+            && T200HttpsForm.verify_text_100(identity.region_name)
             && T200HttpsForm.verify_id(identity.city_id)
+            && T200HttpsForm.verify_text_100(identity.city_name)
             && T200HttpsForm.verify_empty(identity.intro)){
 
             if(identity_id && 0 < identity_id){
@@ -124,8 +130,11 @@ async function do_content_person_identity_init_append(request, response, cookie,
         identity.user_id = session.get("userid");
         identity.nickname = request.get("nickname");
         identity.continent_id = request.get("continent");
+        identity.continent_name = request.get("continent_title");
         identity.region_id = request.get("region");
+        identity.region_name = request.get("region_title");
         identity.city_id = request.get("city");
+        identity.city_name = request.get("city_title");
         identity.intro = request.get("intro");
         identity.status = session.get("status");
 
@@ -135,8 +144,11 @@ async function do_content_person_identity_init_append(request, response, cookie,
                 && T200HttpsForm.verify_id(identity.status)
                 && T200HttpsForm.verify_text(identity.nickname)
                 && T200HttpsForm.verify_id(identity.continent_id)
+                && T200HttpsForm.verify_text_100(identity.continent_name)
                 && T200HttpsForm.verify_id(identity.region_id)
+                && T200HttpsForm.verify_text_100(identity.region_name)
                 && T200HttpsForm.verify_id(identity.city_id)
+                && T200HttpsForm.verify_text_100(identity.city_name)
                 && T200HttpsForm.verify_empty(identity.intro)){
                 identity.flash_content_append_fields();
                 identity.flash_content_append_values();

@@ -4,14 +4,14 @@
     <input type="hidden" name="search" value="<%=search%>">
     <div class="search_box">
         <input type="text" name="search">
-        <button id="search" class="search_button" onclick="hit_search('form', $.id('list_box'), '/notice/search');">Search</button>
+        <button id="search" class="search_button" onclick="hit_search('form', $.id('list_box'), '/notice/search');" locale="search">Search</button>
     </div>
     <div class="paging">
         <% 
             if(paging){ 
                 if(paging.first){ 
         %>
-            <a href="#" onclick="turning(1, $.id('list_box'), '/notice/list');">First</a>
+            <a href="#" onclick="turning(1, $.id('list_box'), '/notice/list');" locale="first">First</a>
             <% 
                 } 
                 if(paging.pages){ 
@@ -22,7 +22,7 @@
                 }); 
             } 
                 if(paging.last){ %>
-                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/notice/list');">Last</a>
+                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/notice/list');" locale="last">Last</a>
         <% 
                 } 
             } 
@@ -67,7 +67,7 @@
             if(paging){ 
                 if(paging.first){ 
         %>
-            <a href="#" onclick="turning(1, $.id('list_box'), '/notice/list');">First</a>
+            <a href="#" onclick="turning(1, $.id('list_box'), '/notice/list');" locale="first">First</a>
             <% 
                 } 
                 if(paging.pages){ 
@@ -78,7 +78,7 @@
                 }); 
             } 
                 if(paging.last){ %>
-                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/notice/list');">Last</a>
+                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/notice/list');" locale="last">Last</a>
         <% 
                 } 
             } 

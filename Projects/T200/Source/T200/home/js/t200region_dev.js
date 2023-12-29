@@ -67,13 +67,23 @@ function continent_dev_change(obj, id) {
     if(undefined == region || undefined == region[2]){
         $.id(id).innerHTML = "";
         $.id(id).value = "";
+        $.id("continent_title").value = "";
     }else{
         let result = "";
         region[2].array().forEach(item => {
             result += `<option value='${item[0]}'>${item[1]}</option>`;
         });
+        $.id("continent_title").value = obj.options[obj.selectedIndex].text;
         $.id(id).innerHTML = result;
         $.id(id).value = "";
+    }
+}
+
+function country_dev_change(obj, id) {
+    if(undefined == obj){
+
+    }else{
+        $.id(id).value = obj.options[obj.selectedIndex].text;
     }
 }
 
@@ -84,20 +94,31 @@ function region_dev_change(continent, region, id) {
     if(undefined == regions && undefined == regions[2]){
         $.id(id).innerHTML = "";
         $.id(id).value = "";
+        $.id("region_title").value = "";
     }else{
         let cities = regions[2].key($.id(region).value);
 
         if(undefined == cities || undefined == cities[2]){
             $.id(id).innerHTML = "";
             $.id(id).value = "";
+            $.id("region_title").value = "";
         }else{
             let result = "";
             cities[2].array().forEach(item => {
                 result += `<option value='${item[0]}'>${item[1]}</option>`;
             });
+            $.id("region_title").value = $.id("region").options[$.id("region").selectedIndex].text;
             $.id(id).innerHTML = result;
             $.id(id).value = "";
         }
+    }
+}
+
+function city_dev_change(obj, id) {
+    if(undefined == obj){
+
+    }else{
+        $.id(id).value = obj.options[obj.selectedIndex].text;
     }
 }
 

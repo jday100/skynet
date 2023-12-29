@@ -31,6 +31,7 @@
                 <dd>
                     <div class="region">
                         <label locale="continent_label">Continent:</label>
+                        <input type="hidden" id="continent_title" name="continent_title">                        
                         <select style="display:block;width: 150px;" id="continent" name="continent" onchange="continent_dev_change(this, 'region');">
 
                         </select>
@@ -38,6 +39,7 @@
                     
                     <div class="region">
                         <label locale="region_label">Region:</label>
+                        <input type="hidden" id="region_title" name="region_title">
                         <select style="display:block;width: 150px;" id="region" name="region" onchange="region_dev_change('continent', 'region', 'city');">
                             
                         </select>
@@ -45,7 +47,8 @@
 
                     <div class="region">
                         <label locale="city_label">City:</label>
-                        <select style="display:block;width: 150px;" id="city" name="city">
+                        <input type="hidden" id="city_title" name="city_title">
+                        <select style="display:block;width: 150px;" id="city" name="city" onchange="city_dev_change(this, 'city_title');">
                             
                         </select>
                     </div>

@@ -103,9 +103,17 @@
             let data = formtostring('form');
             $.post('/login', data, function(flag){
                 if(flag){
-                    forward("/content/index.html");
-                }else{
-                    forward("/content/person/profile_init.html");
+                    switch(flag){
+                        case 1:
+                            forward("/content/index.html");
+                            break;
+                        case 2:
+                            forward("/content/person/profile_init.html");
+                            break;
+                        case 3:
+                            forward("/content/person/identity_init.html");
+                            break;
+                    }
                 }
             }, function(err){
                 alert('Login Failure!');

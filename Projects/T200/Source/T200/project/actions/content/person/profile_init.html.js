@@ -59,7 +59,9 @@ async function do_content_person_profile_init_save(request, response, cookie, se
         let flag = session.get("flag");
         person.user_id = session.get("userid");
         person.continent_id = request.get("continent");
+        person.continent_name = request.get("continent_title");
         person.country_id = request.get("country");
+        person.country_name = request.get("country_title");
         person.gender = request.get("gender");
         person.year = request.get("year");
         person.month = request.get("month");
@@ -68,6 +70,10 @@ async function do_content_person_profile_init_save(request, response, cookie, se
 
         if(T200HttpsForm.verify_zero(flag)
             && T200HttpsForm.verify_id(person.user_id)
+            && T200HttpsForm.verify_id(person.continent_id)
+            && T200HttpsForm.verify_text_100(person.continent_name)
+            && T200HttpsForm.verify_id(person.country_id)
+            && T200HttpsForm.verify_text_100(person.country_id)
             && T200HttpsForm.verify_null(person.gender)
             && T200HttpsForm.verify_id(person.year)
             && T200HttpsForm.verify_id(person.month)

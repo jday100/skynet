@@ -56,6 +56,7 @@
                 <dd>
                     <div class="country">
                         <label locale="continent_label">Continent:</label>
+                        <input type="hidden" id="continent_title" name="continent_title">
                         <select style="display:block;width: 150px;" id="continent" name="continent" onchange="continent_dev_change(this, 'country');">
 
                         </select>
@@ -63,7 +64,8 @@
                     
                     <div class="country">
                         <label locale="country_label">Country:</label>
-                        <select style="display:block;width: 150px;" id="country" name="country">
+                        <input type="hidden" id="country_title" name="country_title">
+                        <select style="display:block;width: 150px;" id="country" name="country" onchange="country_dev_change(this, 'country_title');">
                             
                         </select>
                     </div>

@@ -29,7 +29,19 @@ async function do_login(request, response, cookie, session, resource) {
                 set_data(cookie, session, data);
 
                 response.type('json');
-                resolve(data.identity_id);
+
+                let result = 0;
+
+                if(T200HttpsForm.verify_id(data.flag)){
+                    if(T200HttpsForm.verify_id(data.identity_id)){
+                        result = 1;
+                    }else{
+                        result = 3;
+                    }
+                }else{
+                    result = 2;
+                }
+                resolve(result);
             }, function(){
                 response.type('json');
                 reject();

@@ -16,7 +16,9 @@ class T200UserPerson extends T200HomeUserModel {
     flash_content_profile_init_update() {
         this._name_value = [
             ['continent_id', this.continent_id],
+            ['continent_name', `'${this.continent_name}'`],
             ['country_id', this.country_id],
+            ['country_name', `'${this.country_name}'`],
             ['gender', this.gender],
             ['year', this.year],
             ['month', this.month],
