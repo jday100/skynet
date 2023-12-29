@@ -39,6 +39,18 @@ class T200Vessel {
         return value;
     }
 
+    append(key, name, value) {
+        let data = {};
+
+        data.key = key;
+        data.value = name;
+        data.data = value;
+
+        this._key_value[key] = data;
+        this._value_key[name] = data;
+        this._array.push(data);
+    }
+
     array() {
         return this._array;
     }

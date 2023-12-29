@@ -23,7 +23,9 @@
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
     <script src="/js/t200vessel.js"></script>
-    <script src="/js/t200region_dev.js"></script>
+
+    <script src="/js/t200city_vessel.js"></script>
+    <script src="/js/t200city_dev.js"></script>
 
     <%
         if(logined){
@@ -78,7 +80,7 @@
     $.win.onload = function(){
         nav_check();
 
-        region_dev_init();
+        home_dev_init();
 
         update_times("house_rents");
         update_times("house_wanteds");
