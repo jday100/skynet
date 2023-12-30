@@ -1,8 +1,9 @@
+<input type="hidden" id="id" name="id" value="<%=region_id%>">
 <fieldset class="title">
-    <legend><a href="/job/recruit.html">Recruit</a></legend>
+    <legend><a href="/job/recruit_region.html?id=<%=region_id%>" locale="recruit">Recruit</a></legend>
     <div class="channel">
         <fieldset>
-            <legend><a href="/job/recruit_full.html">Full</a></legend>
+            <legend><a href="/job/recruit_full_region.html?id=<%=region_id%>" locale="full">Full</a></legend>
             <div>
                 <%
                     k = recruit_fulls.length;
@@ -38,7 +39,7 @@
             </div>
         </fieldset>
         <fieldset>
-            <legend><a href="/job/recruit_part.html">Part</a></legend>
+            <legend><a href="/job/recruit_part_region.html?id=<%=region_id%>" locale="part">Part</a></legend>
             <div>
                 <%
                     k = recruit_parts.length;
@@ -77,10 +78,10 @@
 </fieldset>
 
 <fieldset class="title">
-    <legend><a href="/job/wanted.html">Wanted</a></legend>
+    <legend><a href="/job/wanted_region.html?id=<%=region_id%>" locale="job_wanted">Wanted</a></legend>
     <div class="channel">
         <fieldset>
-            <legend><a href="/job/wanted_full.html">Full</a></legend>
+            <legend><a href="/job/wanted_full_region.html?id=<%=region_id%>" locale="full">Full</a></legend>
             <div>
                 <%
                     k = wanted_fulls.length;
@@ -116,7 +117,7 @@
             </div>
         </fieldset>
         <fieldset>
-            <legend><a href="/job/wanted_part.html">Part</a></legend>
+            <legend><a href="/job/wanted_part_region.html?id=<%=region_id%>" locale="part">Part</a></legend>
             <div>
                 <%
                     k = wanted_parts.length;

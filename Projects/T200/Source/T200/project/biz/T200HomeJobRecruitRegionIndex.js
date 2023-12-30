@@ -59,7 +59,7 @@ class T200HomeJobRecruitIndex extends T200HomeUserBiz {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let job = new T200UserJobRecruit();
-            job.city_id = id;
+            job.region_id = id;
             job._type = "type_part";
             job._fields = job.list_fields();
             return self.list(job.merge_user_paging_region_type_list()).then(function(values){

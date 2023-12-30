@@ -1,5 +1,6 @@
+<input type="hidden" id="id" name="id" value="<%=city_id%>">
 <fieldset>
-    <legend><a href="/job/wanted_full.html">Full</a></legend>
+    <legend><a href="/job/wanted_full_city.html?id=<%=city_id%>" locale="full">Full</a></legend>
     <div class="channel_box">
         <%
             let k = job_fulls.length;
@@ -36,7 +37,7 @@
 </fieldset>
 
 <fieldset>
-    <legend><a href="/job/wanted_part.html">Part</a></legend>
+    <legend><a href="/job/wanted_part_city.html?id=<%=city_id%>" locale="part">Part</a></legend>
     <div class="channel_box">
         <%
             k = job_parts.length;

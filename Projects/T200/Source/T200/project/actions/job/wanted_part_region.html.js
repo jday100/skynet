@@ -7,8 +7,8 @@ const T200UserJobWanted = require('../../models/T200UserJobWanted.js');
 const T200HomeUserBiz = require('../../biz/T200HomeUserBiz.js');
 
 
-async function do_job_wanted_part_list(request, response, cookie, session, resource) {
-    log(__filename, "do_job_wanted_part_list");
+async function do_job_wanted_part_region_list(request, response, cookie, session, resource) {
+    log(__filename, "do_job_wanted_part_region_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let job = new T200UserJobWanted();
