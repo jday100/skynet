@@ -97,7 +97,7 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend><a href="/house/wanted_city.html" locale="house_wanted">Wanted</a></legend>
+                    <legend><a href="/house/wanted_city.html?id=<%=city_id%>" locale="house_wanted">Wanted</a></legend>
                     <div>
                         <% k=house_wanteds.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
@@ -127,10 +127,10 @@
         </fieldset>
 
         <fieldset class="title">
-            <legend><a href="/job/index_city.html" locale="job">Job</a></legend>
+            <legend><a href="/job/index_city.html?id=<%=city_id%>" locale="job">Job</a></legend>
             <div class="channel">
                 <fieldset>
-                    <legend><a href="/job/recruit_city.html" locale="recruit">Recruit</a></legend>
+                    <legend><a href="/job/recruit_city.html?id=<%=city_id%>" locale="recruit">Recruit</a></legend>
                     <div>
                         <% k=job_recruits.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
@@ -157,7 +157,7 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend><a href="/job/wanted_city.html" locale="job_wanted">Wanted</a></legend>
+                    <legend><a href="/job/wanted_city.html?id=<%=city_id%>" locale="job_wanted">Wanted</a></legend>
                     <div>
                         <% k=job_wanteds.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
@@ -187,10 +187,10 @@
         </fieldset>
 
         <fieldset class="title">
-            <legend><a href="/trading/index_city.html" locale="trading">Trading</a></legend>
+            <legend><a href="/trading/index_city.html?id=<%=city_id%>" locale="trading">Trading</a></legend>
             <div class="channel">
                 <fieldset>
-                    <legend><a href="/trading/sell_city.html" locale="sell">Sell</a></legend>
+                    <legend><a href="/trading/sell_city.html?id=<%=city_id%>" locale="sell">Sell</a></legend>
                     <div>
                         <% k=trading_sells.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
@@ -217,7 +217,7 @@
                     </div>
                 </fieldset>
                 <fieldset>
-                    <legend><a href="/trading/buy_city.html" locale="buy">Buy</a></legend>
+                    <legend><a href="/trading/buy_city.html?id=<%=city_id%>" locale="buy">Buy</a></legend>
                     <div>
                         <% k=trading_buys.length; for(let i=0;i<5;i++){ if(i < k){ %>
                             <div>
