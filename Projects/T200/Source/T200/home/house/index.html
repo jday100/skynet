@@ -21,8 +21,14 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+
     <script src="/js/t200vessel.js"></script>
-    <script src="/js/t200region_dev.js"></script>
+    <script src="/js/t200city_vessel.js"></script>
+
+    <script src="/js/t200localize.js"></script>
+    <script>
+        T200Localize.script("/js/t200city_dev.js");
+    </script>
 
 </head>
 
@@ -32,12 +38,12 @@
 
         <nav>
             <div>
-                <a href="/">Home</a> |
-                <a href="/about.html">About</a>
+                <a href="/" locale="home">Home</a> |
+                <a href="/about.html" locale="about">About</a>
             </div>
             <div id="nav_right">
-                <a target="_blank" href="/login.html">Login</a> |
-                <a href="/register.html">Register</a>
+                <a target="_blank" href="/login.html" locale="login">Login</a> |
+                <a href="/register.html" locale="register">Register</a>
             </div>
         </nav>
 
@@ -46,24 +52,24 @@
         </header>
 
         <nav class="nav_channel">
-            <a href="/">Home</a> -
-            <a href="/house/index.html">House</a> -
-            <a href="/job/index.html">Job</a> -
-            <a href="/trading/index.html">Trading</a> -
-            <a href="/exchange/index.html">Exchange</a>
+            <a href="/" locale="home">Home</a> -
+            <a href="/house/index.html" locale="house">House</a> -
+            <a href="/job/index.html" locale="job">Job</a> -
+            <a href="/trading/index.html" locale="trading">Trading</a> -
+            <a href="/exchange/index.html" locale="exchange">Exchange</a>
         </nav>
 
 
 
         <fieldset>
-            <legend><a href="/region/index.html">Region</a></legend>
+            <legend><a href="/region/index.html" locale="region">Region</a></legend>
             <div id="region_box" class="region">
 
             </div>
         </fieldset>
 
         <fieldset class="title">
-            <legend><a href="/house/index.html">House</a></legend>
+            <legend><a href="/house/index.html" locale="house">House</a></legend>
             <div class="channel">
                 <div id="list_box">
                     <form id="form" class="list_form">
@@ -87,7 +93,7 @@
     $.win.onload = function () {
         nav_check();
 
-        region_dev_init();
+        home_dev_init();
 
         let data = formtostring('form');
         $.post('/house/list', data, function (result) {
@@ -96,6 +102,8 @@
             update_times("rent_shorts");
             update_times("wanted_longs");
             update_times("wanted_shorts");
+
+            let localize = new T200Localize();
         }, function () {
             alert('Load Failure!');
         });

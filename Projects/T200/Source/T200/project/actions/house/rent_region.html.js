@@ -19,7 +19,7 @@ async function do_house_rent_region_list(request, response, cookie, session, res
         if(T200HttpsForm.verify_id(region_id)){
             return HouseRentIndex.load_index(region_id).then(function(data){
                 data.region_id = region_id;
-                return view.render_file('house/rent.ejs', data);
+                return view.render_file('house/rent_region.ejs', data);
             }, function(err){
                 return error();
             }).then(function(result){

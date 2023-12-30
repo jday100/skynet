@@ -1,5 +1,6 @@
+<input type="hidden" id="id" name="id" value="<%=region_id%>">
 <fieldset>
-    <legend><a href="/house/rent_long.html">Long</a></legend>
+    <legend><a href="/house/rent_long_region.html?id=<%=region_id%>" locale="long">Long</a></legend>
     <div class="channel_box">
         <%
             let k = house_longs.length;
@@ -36,7 +37,7 @@
 </fieldset>
 
 <fieldset>
-    <legend><a href="/house/rent_short.html">Short</a></legend>
+    <legend><a href="/house/rent_short_region.html?id=<%=region_id%>" locale="short">Short</a></legend>
     <div class="channel_box">
         <%
             k = house_shorts.length;

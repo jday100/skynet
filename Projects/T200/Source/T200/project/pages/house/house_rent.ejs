@@ -57,7 +57,7 @@
                         <pre><%=item.content%></pre>
                     </div>
                     <div class="forum_footer">
-                        <button id="reply<%=item.id%>" onclick="show_reply('<%=id%>', '<%=item.id%>', '<%=paging.page%>', '<%=item.nickname%>', 'list_box', '/house/rent/reply');">reply</button>
+                        <button id="reply<%=item.id%>" onclick="show_reply('<%=id%>', '<%=item.id%>', '<%=paging.page%>', '<%=item.nickname%>', 'list_box', '/house/rent/reply');" locale="reply">reply</button>
                     </div>
                     <div id="reply_box<%=item.id%>">
 
@@ -75,7 +75,7 @@
         if(paging){ 
             if(paging.first){ 
     %>
-        <a href="#" onclick="turning(1, $.id('list_box'), '/house/rent/board');">First</a>
+        <a href="#" onclick="turning(1, $.id('list_box'), '/house/rent/board');" locale="first">First</a>
         <% 
             } 
             if(paging.pages){ 
@@ -86,7 +86,7 @@
             }); 
         } 
             if(paging.last){ %>
-                <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/house/rent/board');">Last</a>
+                <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/house/rent/board');" locale="last">Last</a>
     <% 
             } 
         } 
@@ -94,7 +94,7 @@
 </div>   
 
 <div class="reply_box">
-        <div class="forum_person">
+        <div class="forum_person" locale="reply">
             Reply
         </div>
         <form id="reply_form" class="form_none">
@@ -106,6 +106,6 @@
             </div>
         </form>
         <div class="reply_button">
-            <button onclick="hit_reply('reply_form', $.id('list_box'), '/house/rent/reply');">Reply</button>
+            <button onclick="hit_reply('reply_form', $.id('list_box'), '/house/rent/reply');" locale="reply">Reply</button>
         </div>    
 </div>

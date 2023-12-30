@@ -22,6 +22,7 @@
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
     <script src="/oct/t200oct_dev.js"></script>
+    <script src="/js/t200localize.js"></script>
 </head>
 
 <body>
@@ -30,12 +31,12 @@
 
         <nav>
             <div>
-                <a href="/">Home</a> |
-                <a href="/about.html">About</a>
+                <a href="/" locale="home">Home</a> |
+                <a href="/about.html" locale="about">About</a>
             </div>
             <div id="nav_right">
-                <a target="_blank" href="/login.html">Login</a> |
-                <a href="/register.html">Register</a>
+                <a target="_blank" href="/login.html" locale="login">Login</a> |
+                <a href="/register.html" locale="register">Register</a>
             </div>
         </nav>
 
@@ -44,18 +45,18 @@
         </header>
 
         <nav class="nav_channel">
-            <a href="/">Home</a> -
-            <a href="/house/index.html">House</a> -
-            <a href="/job/index.html">Job</a> -
-            <a href="/trading/index.html">Trading</a> -
-            <a href="/exchange/index.html">Exchange</a>
+            <a href="/" locale="home">Home</a> -
+            <a href="/house/index.html" locale="house">House</a> -
+            <a href="/job/index.html" locale="job">Job</a> -
+            <a href="/trading/index.html" locale="trading">Trading</a> -
+            <a href="/exchange/index.html" locale="exchange">Exchange</a>
         </nav>
 
         <fieldset class="title">
             <legend>
-                <a href="/house/index.html">House</a>
+                <a href="/house/index.html" locale="house">House</a>
                  - 
-                <a href="/house/rent.html">Rent</a>
+                <a href="/house/rent.html" locale="rent">Rent</a>
             </legend>    
             <div id="list_box" class="list_box">
                 <form id="form" class="list_form">
@@ -84,6 +85,8 @@
             $.id("list_box").innerHTML = result;
 
             new T200Oct();
+
+            let localize = new T200Localize();
         }, function () {
             alert('Load Failure!');
         });
