@@ -21,7 +21,7 @@ async function do_house_wanted_long_city_list(request, response, cookie, session
             house._fields = house.list_fields();
             house.merge_paging_count = house.merge_user_paging_long_city_count;
             house.merge_paging_list = house.merge_user_paging_long_city_list;
-            UserBiz.paging(house).then(function(result){
+            UserBiz.paging2(house).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 data.city_id = city_id;

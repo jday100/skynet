@@ -1,9 +1,9 @@
 <input type="hidden" id="id" name="id" value="<%=city_id%>">
 <fieldset class="title">
-    <legend><a href="/house/rent_city.html" locale="rent">Rent</a></legend>
+    <legend><a href="/house/rent_city.html?id=<%=city_id%>" locale="rent">Rent</a></legend>
     <div class="channel">
         <fieldset>
-            <legend><a href="/house/rent_long_city.html" locale="long">Long</a></legend>
+            <legend><a href="/house/rent_long_city.html?id=<%=city_id%>" locale="long">Long</a></legend>
             <div>
                 <%
                     k = rent_longs.length;
@@ -39,7 +39,7 @@
             </div>
         </fieldset>
         <fieldset>
-            <legend><a href="/house/rent_short_city.html" locale="short">Short</a></legend>
+            <legend><a href="/house/rent_short_city.html?id=<%=city_id%>" locale="short">Short</a></legend>
             <div>
                 <%
                     k = rent_shorts.length;
@@ -78,10 +78,10 @@
 </fieldset>
 
 <fieldset class="title">
-    <legend><a href="/house/wanted_city.html" locale="house_wanted">Wanted</a></legend>
+    <legend><a href="/house/wanted_city.html?id=<%=city_id%>" locale="house_wanted">Wanted</a></legend>
     <div class="channel">
         <fieldset>
-            <legend><a href="/house/wanted_long_city.html" locale="long">Long</a></legend>
+            <legend><a href="/house/wanted_long_city.html?id=<%=city_id%>" locale="long">Long</a></legend>
             <div>
                 <%
                     k = wanted_longs.length;
@@ -117,7 +117,7 @@
             </div>
         </fieldset>
         <fieldset>
-            <legend><a href="/house/wanted_short_city.html" locale="short">Short</a></legend>
+            <legend><a href="/house/wanted_short_city.html?id=<%=city_id%>" locale="short">Short</a></legend>
             <div>
                 <%
                     k = wanted_shorts.length;
