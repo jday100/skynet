@@ -7,7 +7,7 @@
             if(paging){ 
                 if(paging.first){ 
         %>
-            <a href="#" onclick="turning(1, $.id('list_box'), '/trading/buy/list');">First</a>
+            <a href="#" onclick="turning(1, $.id('list_box'), '/trading/buy/list');" locale="first">First</a>
             <% 
                 } 
                 if(paging.pages){ 
@@ -18,7 +18,7 @@
                 }); 
             } 
                 if(paging.last){ %>
-                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/trading/buy/list');">Last</a>
+                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/trading/buy/list');" locale="last">Last</a>
         <% 
                 } 
             } 
@@ -63,7 +63,7 @@
             if(paging){ 
                 if(paging.first){ 
         %>
-            <a href="#" onclick="turning(1, $.id('list_box'), '/trading/buy/list');">First</a>
+            <a href="#" onclick="turning(1, $.id('list_box'), '/trading/buy/list');" locale="first">First</a>
             <% 
                 } 
                 if(paging.pages){ 
@@ -74,7 +74,7 @@
                 }); 
             } 
                 if(paging.last){ %>
-                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/trading/buy/list');">Last</a>
+                    <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/trading/buy/list');" locale="last">Last</a>
         <% 
                 } 
             } 

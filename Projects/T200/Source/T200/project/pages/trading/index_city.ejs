@@ -1,6 +1,6 @@
 <input type="hidden" id="id" name="id" value="<%=city_id%>">
 <fieldset>
-    <legend><a href="/trading/sell.html" locale="sell">Sell</a></legend>
+    <legend><a href="/trading/sell_city.html?id=<%=city_id%>" locale="sell">Sell</a></legend>
     <div class="channel_box">
         <%
             let k = trading_sells.length;
@@ -37,7 +37,7 @@
 </fieldset>
 
 <fieldset>
-    <legend><a href="/trading/buy.html" locale="buy">Buy</a></legend>
+    <legend><a href="/trading/buy_city.html?id=<%=city_id%>" locale="buy">Buy</a></legend>
     <div class="channel_box">
         <%
             k = trading_buys.length;
