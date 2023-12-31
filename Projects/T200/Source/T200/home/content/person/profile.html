@@ -22,11 +22,15 @@
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>    
-    <script src="/js/t200region.js"></script>
     <script src="/js/t200identity.js"></script>
+
     <script src="/js/t200vessel.js"></script>
-    <script src="/js/t200region_dev.js"></script>
+    <script src="/js/t200city_vessel.js"></script>
+
     <script src="/js/t200localize.js"></script>
+    <script>
+        T200Localize.script("/js/t200city_dev.js");
+    </script>
 
 </head>
 
@@ -154,7 +158,7 @@
             $.id("list_box").innerHTML = data;
 
             show_continent('continent_id', 'continent_name');
-            show_country('continent_id', 'country_id', 'country_name');
+            show_country('country_id', 'country_name');
 
             let localize = new T200Localize();
         }, function(){

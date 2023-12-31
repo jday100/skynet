@@ -122,12 +122,20 @@ async function do_content_person_region(request, response, cookie, session, reso
     let promise = new Promise(function(resolve, reject){
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
+        let region_id = session.get("regionid");
         let city_id = session.get("cityid");
 
-        if(T200HttpsForm.verify_id(city_id)){
+        if(T200HttpsForm.verify_id(region_id)
+            && T200HttpsForm.verify_id(city_id)){
+            
+            let data = {};
+
+            data.region_id = region_id;
+            data.city_id = city_id;
+
             response.type("json");
-            response.success(city_id);
-            resolve(city_id);
+            response.success(data);
+            resolve(data);
         }else{
             response.type("json");
             reject();

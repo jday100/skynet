@@ -196,14 +196,31 @@ function update_region() {
     });
 }
 
-function set_region(value) {
-    let result = city[value];
-
-    if(undefined == result){
+function set_region(data) {
+    if(undefined == data || undefined == regions_dev || undefined == cities_dev){
 
     }else{
-        $.id("region").value = result[1];
-        $.id("city").value = result[2];
+        let region = regions_dev.key(data.region_id);
+
+        if(undefined == region){
+            return;
+        }else{
+            $.id("region").value = region.name;
+        }
+
+        let city = cities_dev.key(data.city_id);
+
+        if(undefined == city){
+
+        }else{
+            let obj = JSON.parse(city.data);
+
+            if(undefined == obj){
+
+            }else{
+                $.id("city").value = obj.name;
+            }
+        }
     }
 }
 
