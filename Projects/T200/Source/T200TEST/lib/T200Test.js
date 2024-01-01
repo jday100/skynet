@@ -1,3 +1,7 @@
+const T200Setup = require('../project/T200Setup.js');
+
+const T200Path = require(T200Setup.external('./library/fs/T200Path.js'));
+
 const { Builder } = require("selenium-webdriver");
 
 const T200Browser = require('./T200Browser');
@@ -31,9 +35,20 @@ class T200Test {
             let browsers = T200Browser.build(browser);
 
             for(let element of browsers){
+                element.root = this;
                 element.run(source, method);
             }
         }
+    }
+
+    start() {
+        setTimeout(() => {
+            const T200Home = require(T200Setup.external('./T200Home.js'));
+        });
+    }
+
+    stop() {
+
     }
 }
 

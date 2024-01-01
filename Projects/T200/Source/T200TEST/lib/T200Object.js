@@ -14,7 +14,11 @@ class T200Object {
         let result = new Array();
 
         for(let element of names){
-            if(element && element.startsWith("test_")){
+            if(element 
+                && (
+                    element.startsWith("test_") 
+                    || element.startsWith("run_")
+                )){
                 result.push(element);
             }
         }

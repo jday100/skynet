@@ -2,11 +2,17 @@ const T200Setup = require('../project/T200Setup.js');
 
 const T200Path = require(T200Setup.external('./library/fs/T200Path.js'));
 const T200Source = require('./T200Source.js');
+const { Builder } = require("selenium-webdriver");
 
 
 class T200Browser {
     constructor(browser) {
-
+        this.event = {};
+        switch(browser){
+            case 'firefox':
+                this.browser = new Builder().forBrowser('firefox').build();
+                break;
+        }
     }
 
     static build(browser) {
@@ -51,7 +57,21 @@ class T200Browser {
         return result;
     }
 
+    on(name, callback) {
+        this.event[name] = callback;
+    }
+
     run(source, method) {
+        let self = this;
+
+        this.on("start", function(){
+            self.root.start();
+        });
+
+        this.on("stop", function(){
+
+        });
+
         if(undefined == source){
             source = "";
             
@@ -63,14 +83,24 @@ class T200Browser {
                 obj.run(source, method);
             });
         }else{
-            T200Dir.is_dir(source).then(function(){
+            T200Path.is_dir(source).then(function(result){
+                if(result){
 
+                }else{
+                    let obj = new T200Source();
+                    obj.browser = self;
+
+                    self.event['start']();
+                    obj.run(source, method);
+                }
             }, function(){
-                let obj = new T200Source();
-    
-                obj.run(source, method);
+                
             });
         }
+    }
+
+    get(url) {
+        this.browser.get(url);
     }
 }
 

@@ -12,12 +12,10 @@ class T200Source {
     }
 
     run(source, method) {
+        let self = this;
         if(undefined == source){
             return;
         }
-
-        //test
-        source = "./case/T200About.js";
 
         T200File.exists(source).then(function(){
             source = "../" + source;
@@ -36,6 +34,7 @@ class T200Source {
                     if(undefined == methods){
 
                     }else{
+                        obj.browser = self.browser;
                         for(let element of methods){
                             obj[element]();
                         }

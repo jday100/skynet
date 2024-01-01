@@ -6,6 +6,7 @@ class T200Setup {
 
     }
 
+    static type = "web";
     static project = "../../web/";
 
     static external(file) {
