@@ -18,16 +18,16 @@ class T200LoginWeb {
 
     create() {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
+        let promise = new Promise(async function(resolve, reject){
             for(let obj of self.objects){
-                self.#create_define(obj).then(function(){
-
-                }, function(){
+                await self.#create_define(obj).then(function(){
+                    //resolve();
+                }, function(err){
 
                 });
             }
-            self.#create_page().then(function(){
-
+            self.#create_page().then(function(page){
+                resolve(page);
             }, function(){
 
             });
@@ -39,19 +39,15 @@ class T200LoginWeb {
     #create_define(name) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let file = T200Resource.merge_define(name);
+            let file = T200Resource.merge_object_define(name);
 
             if(file){
-                let define = new T200Define();
+                T200Define.create(file).then(function(obj){
+                    self.object_values.push(obj);
+                    resolve();
+                }, function(err){
 
-                if(define) {
-                    define.create(file).then(function(obj){
-                        self.object_values.push(obj);
-                        resolve();
-                    }, function(){
-
-                    });
-                }
+                });        
             }
         });
 
@@ -64,7 +60,7 @@ class T200LoginWeb {
             let page = new T200Page();
 
             page.create(self).then(function(){
-                
+                resolve(page);
             }, function(){
 
             });

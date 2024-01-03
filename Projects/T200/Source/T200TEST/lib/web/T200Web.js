@@ -18,7 +18,8 @@ class T200Web {
                     let web_obj = new WebClass();
 
                     if(web_obj){
-                        web_obj.create().then(function(){
+                        web_obj.create().then(function(page){
+                            self.page = page;
                             resolve();
                         }, function(){
 
@@ -34,7 +35,11 @@ class T200Web {
     test(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            resolve();
+            self.page.test(browser).then(function(){
+                resolve();
+            }, function(){
+
+            });
         });
 
         return promise;

@@ -3,9 +3,12 @@ class T200Link {
 
     }
 
-    create() {
+    create(element) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
+            self.type = element.type;
+            self.url = element.value;
+            self.locate = '[locale="home"]';
             resolve();
         });
 
@@ -17,13 +20,13 @@ class T200Link {
         let promise = new Promise(function(resolve, reject){
             browser.get("http://localhost:8888/register.html").then(function(){
                 browser.sleep(1000);
-                let obj = browser.locate_css('a[locale="home"]');
+                let obj = browser.locate_css(`a${self.locate}`);
                 if(obj){
                     obj.click().then(function(){
                         browser.sleep(1000);
 
                         browser.get_current_url().then(function(url){
-                            if("http://localhost:8888/" == url){
+                            if(self.url == url){
                                 resolve();
                             }else{
                                 reject();

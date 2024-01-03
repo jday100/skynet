@@ -14,8 +14,12 @@ class T200Resource {
         return path.join(__dirname, `../project/home/${file}.web.js`);
     }
 
-    static merge_define(file) {
-        return path.join(__dirname, `../project/define/${file}.define`);
+    static merge_object_define(file) {
+        return path.join(__dirname, `../project/define/object/${file}.define`);
+    }
+
+    static merge_web_define(file) {
+        return path.join(__dirname, `../project/define/web/${file}.define`);
     }
 }
 
