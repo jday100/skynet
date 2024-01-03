@@ -2,7 +2,7 @@ const T200Setup = require('../project/T200Setup.js');
 
 const T200Path = require(T200Setup.external('./library/fs/T200Path.js'));
 const T200Source = require('./T200Source.js');
-const { Builder } = require("selenium-webdriver");
+const { Builder, By, until } = require("selenium-webdriver");
 
 
 class T200Browser {
@@ -69,7 +69,7 @@ class T200Browser {
         });
 
         this.on("stop", function(){
-
+            self.root.stop();
         });
 
         if(undefined == source){
@@ -92,6 +92,7 @@ class T200Browser {
 
                     self.event['start']();
                     obj.run(source, method);
+                    self.event['stop']();
                 }
             }, function(){
                 
@@ -101,6 +102,30 @@ class T200Browser {
 
     get(url) {
         this.browser.get(url);
+    }
+
+    id(name) {
+        return By.id(name);
+    }
+
+    field(name, value) {
+        return By.findElement("locale='home'");
+    }
+
+    find(name) {
+        return this.browser.findElement(name);
+    }
+
+    by() {
+        return By;
+    }
+
+    css(name) {
+        return By.css(name);
+    }
+
+    untils() {
+        return until;
     }
 }
 

@@ -21,6 +21,6 @@ const T200Test = require('./lib/T200Test');
 let test = new T200Test();
 
 //test.run();
-test.run('firefox', './case/web/T200Register.js');
+test.run('firefox', './case/web/T200RegisterCase.js');
 
 

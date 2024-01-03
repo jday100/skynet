@@ -1,0 +1,49 @@
+{
+    "name"  : "nav",
+    "fields"    : [
+        {
+            "name"  : "home",
+            "type"  : "link",
+            "value" : "/"
+        },{
+            "name"  : "about",
+            "type"  : "link",
+            "value" : "/about.html"
+        },{
+            "name"  : "login",
+            "type"  : "link",
+            "value" : "/login.html"
+        },{
+            "name"  : "register",
+            "type"  : "link",
+            "value" : "/register.html"
+        },{
+            "name"  : "my",
+            "type"  : "link",
+            "value" : "/content/index.html"
+        },{
+            "name"  : "logout",
+            "type"  : "button"
+        },{
+            "name"  : "home",
+            "type"  : "link",
+            "value" : "/"
+        },{
+            "name"  : "house",
+            "type"  : "link",
+            "value" : "/house/index.html"
+        },{
+            "name"  : "job",
+            "type"  : "link",
+            "value" : "/job/index.html"
+        },{
+            "name"  : "trading",
+            "type"  : "link",
+            "value" : "/trading/index.html"
+        },{
+            "name"  : "exchange",
+            "type"  : "link",
+            "value" : "/exchange/index.html"
+        }
+    ]
+}

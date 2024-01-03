@@ -6,6 +6,9 @@ const { Builder } = require("selenium-webdriver");
 
 const T200Browser = require('./T200Browser');
 
+const process = require('child_process');
+
+
 class T200Test {
     constructor() {
 
@@ -24,6 +27,7 @@ class T200Test {
     }
 
     run(browser, source, method) {
+        let self = this;
         if(undefined == browser){
             let browser = "all";
             let browsers = T200Browser.build(browser);
@@ -42,13 +46,23 @@ class T200Test {
     }
 
     start() {
+        let self = this;
         setTimeout(() => {
-            const T200Home = require(T200Setup.external('./T200Home.js'));
+            ///const T200Home = require(T200Setup.external('./T200Home.js'));
+
+            self.server = process.exec(`cd ../web/ && node ./T200Home.js`);
         });
     }
 
     stop() {
+        let self = this;
 
+        if(undefined == self.server){
+
+        }else{
+            self.server.kill();
+        }
+        
     }
 }
 
