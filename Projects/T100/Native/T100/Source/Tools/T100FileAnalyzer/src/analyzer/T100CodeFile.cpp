@@ -1,7 +1,7 @@
 #include "T100CodeFile.h"
 
-T100CodeFile::T100CodeFile(T100FileReader&  reader)
-    :m_reader(reader)
+T100CodeFile::T100CodeFile(T100ByteBuffer&  buffer)
+    :m_buffer(buffer)
 {
     //ctor
 }
@@ -17,15 +17,13 @@ int T100CodeFile::run() {
     int length      = 1024;
     char buffer[length];
 
-    result = m_reader.open();
 
-    if(0 == result){
-        size = m_reader.read(length, buffer);
-
-        result = m_reader.close();
-    }else{
-
-    }
 
     return result;
+}
+
+int T100CodeFile::parse() {
+    char        byte;
+
+    byte = m_buffer.getByte();
 }

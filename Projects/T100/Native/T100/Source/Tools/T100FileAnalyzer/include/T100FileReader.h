@@ -1,6 +1,8 @@
 #ifndef T100FILEREADER_H
 #define T100FILEREADER_H
 
+#include <fstream>
+
 
 class T100FileReader
 {
@@ -17,6 +19,8 @@ class T100FileReader
     protected:
 
     private:
+        char*               m_file          = nullptr;
+        std::ifstream*      m_ifs           = nullptr;
 };
 
 #endif // T100FILEREADER_H

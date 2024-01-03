@@ -4,7 +4,7 @@
 
 
 T100CmdLine::T100CmdLine(int argc, char** argv)
-    :m_argc(argc),m_argv(argv)
+    :m_argc(argc),m_argv(argv),m_status(0)
 {
     //ctor
 }
@@ -32,6 +32,7 @@ int T100CmdLine::run() {
                 result = parse(str);
                 break;
             default:
+                result = parse_string(str);
                 break;
             }
         }
@@ -54,10 +55,29 @@ int T100CmdLine::parse(char* str) {
 }
 
 int T100CmdLine::parse_value(char letter) {
-    int result;
+    int result  = 0;
 
     switch(letter){
+    case 'o':
+    case 'O':
+        m_status        = 1;
+        break;
+    }
 
+    return result;
+}
+
+int T100CmdLine::parse_string(char* str) {
+    int result  = 0;
+
+    switch(m_status){
+    case 0:
+        m_file          = str;
+        break;
+    case 1:
+        m_out           = str;
+        m_status        = 0;
+        break;
     }
 
     return result;
