@@ -3,37 +3,48 @@ class T200Link {
 
     }
 
-    test() {
-        //page_url
-
-        /*
-        let obj = browser.find(browser.css('a[locale="home"));
-
-        if(undefined == obj){
-
-        }else{
-            for(let item of obj){
-                test_click(item);
-            }
-        }
-        */
-    }
-
-    test_click(obj) {
-        /*
-        obj.click();
-        browser.sleep(1000);
-        browser.getCurrentUrl().then(function(data){
-            if(url == data){
-                result = true;
-            }else{
-                result = false;
-            }
-
-            reset(page_url);
+    create() {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            resolve();
         });
-        */
+
+        return promise;
     }
+
+    test(browser) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            browser.get("http://localhost:8888/register.html").then(function(){
+                browser.sleep(1000);
+                let obj = browser.locate_css('a[locale="home"]');
+                if(obj){
+                    obj.click().then(function(){
+                        browser.sleep(1000);
+
+                        browser.get_current_url().then(function(url){
+                            if("http://localhost:8888/" == url){
+                                resolve();
+                            }else{
+                                reject();
+                            }
+                        }, function(){
+                            reject();
+                        });    
+                    },function(){
+                        reject();
+                    });                                    
+                }else{
+                    reject();
+                }
+            }, function(){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
 }
 
 module.exports = T200Link;

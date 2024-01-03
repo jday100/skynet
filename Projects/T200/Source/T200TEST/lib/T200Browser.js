@@ -58,6 +58,42 @@ class T200Browser {
 
         return promise;
     }
+
+    get(url) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            self.browsers[0].get(url).then(function(){
+                self.browsers[0].getCurrentUrl().then(function(url){
+                    self.current_url = url;
+                    resolve();
+                }, function(){
+                    self.current_url = '';
+                    reject();
+                });
+            }, function(){
+                self.current_url = '';
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    sleep(value) {
+        this.browsers[0].sleep(value);
+    }
+
+    locate() {
+
+    }
+
+    locate_css(value) {
+        return this.browsers[0].findElement(By.css(value));
+    }
+
+    get_current_url() {
+        return this.browsers[0].getCurrentUrl();
+    }
 }
 
 module.exports = T200Browser;
