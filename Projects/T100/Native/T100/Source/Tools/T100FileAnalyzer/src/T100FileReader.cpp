@@ -38,11 +38,13 @@ int T100FileReader::close() {
 
 
 int T100FileReader::read(int length, char* buffer) {
-    int result;
+    int result = 0;
     if(m_ifs){
         int size;
 
         size = m_ifs->read(buffer, length).gcount();
+
+        result = size;
     }
 
     return result;

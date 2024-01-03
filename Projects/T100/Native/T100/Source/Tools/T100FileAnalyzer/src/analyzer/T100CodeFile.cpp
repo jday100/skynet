@@ -1,5 +1,8 @@
 #include "T100CodeFile.h"
 
+#include <iostream>
+
+
 T100CodeFile::T100CodeFile(T100ByteBuffer&  buffer)
     :m_buffer(buffer)
 {
@@ -13,11 +16,10 @@ T100CodeFile::~T100CodeFile()
 
 int T100CodeFile::run() {
     int result;
-    int size;
-    int length      = 1024;
-    char buffer[length];
 
-
+    while(m_buffer.load()){
+        parse();
+    }
 
     return result;
 }
@@ -26,4 +28,10 @@ int T100CodeFile::parse() {
     char        byte;
 
     byte = m_buffer.getByte();
+
+    switch(byte){
+    default:
+        std::cout << byte;
+        break;
+    }
 }
