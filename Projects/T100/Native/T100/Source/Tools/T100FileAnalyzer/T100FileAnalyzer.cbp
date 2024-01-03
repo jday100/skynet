@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100FileAnalyzer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100FileAnalyzer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="-i filename" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/analyzer" />
+					<Add directory="include/lib" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100FileAnalyzer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="include/analyzer" />
+					<Add directory="include/lib" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/T100CmdLine.h" />
+		<Unit filename="include/T100FileAnalyzer.h" />
+		<Unit filename="include/T100FileReader.h" />
+		<Unit filename="include/analyzer/T100CodeFile.h" />
+		<Unit filename="include/lib/T100ByteBuffer.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/T100CmdLine.cpp" />
+		<Unit filename="src/T100FileAnalyzer.cpp" />
+		<Unit filename="src/T100FileReader.cpp" />
+		<Unit filename="src/analyzer/T100CodeFile.cpp" />
+		<Unit filename="src/lib/T100ByteBuffer.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
