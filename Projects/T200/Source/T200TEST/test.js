@@ -1,25 +1,25 @@
-const T200Register = require('./project/home/T200Register.js');
+const { Builder, By, until } = require('selenium-webdriver');
 
-let register = new T200Register();
+let browser = new Builder().forBrowser('firefox').build();
 
+browser.get('http://localhost:8888/register.html').then(function(){
+    browser.sleep(1000);
 
-
-
-
-
-
-/*
-const T200Define = require('./lib/T200Define.js');
-
-let name = "./project/define/T200Person.txt";
-
-
-T200Define.create(name).then(function(data){
-    let obj = JSON.parse(data);
-
+    let obj = browser.findElement(By.css('a[locale="home"]'));
     
-}, function(){
-
+    if(undefined == obj){
+    
+    }else{
+        obj.click();
+    
+        browser.sleep(1000);
+    
+        //console.log(browser.getCurrentUrl());
+        browser.getCurrentUrl().then(function(data){
+            console.log(data);
+            //browser.quit();
+        });
+    }
 });
 
-*/
+

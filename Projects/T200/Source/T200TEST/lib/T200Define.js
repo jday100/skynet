@@ -11,23 +11,20 @@ class T200Define {
     static create(file) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let name = "";
-            let flag = false;
-            for(let letter of file){
-                if(false == flag){
-                    name += letter.toUpperCase();
-                    flag = true;
-                }else{
-                    name += letter;
-                }
-            }
-            let real = `./project/define/T200${name}.txt`;
+            T200File.load(file).then(function(data){
+                let value = data.toString();
 
-            T200File.load(real).then(function(data){
-                resolve(data);
+                let obj = JSON.parse(value);
+
+                if(obj){
+                    resolve(obj);
+                }else{
+                    reject();
+                }
+                
             }, function(){
                 reject();
-            })
+            });
         });
 
         return promise;
