@@ -77,6 +77,37 @@ class T200Path {
         let name = "../../" + file;
         return path.join(__dirname, name);
     }
+
+    static list(dir) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let result_dirs = new Array();
+            let result_files = new Array();
+            try{
+                const files = fs.readdirSync(dir);
+
+                for(let file of files){
+                    let name = `${dir}\\${file}`;
+                    const stat = fs.statSync(name);
+
+                    if(stat.isDirectory()){
+                        result_dirs.push(file);
+                    }else{
+                        result_files.push(file);
+                    }
+                }
+
+                let result = {};
+                result.dirs = result_dirs;
+                result.files = result_files;
+                resolve(result);
+            }catch(err){
+                reject(T200Error.build());
+            };
+        });
+
+        return promise;
+    }
     
 }
 

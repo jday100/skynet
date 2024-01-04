@@ -1,49 +1,54 @@
 const T200Setup = require('../project/T200Setup.js');
 const T200Object = require('./T200Object.js');
-
-const T200File = require(T200Setup.external('./library/fs/T200File.js'));
-
-const T200Obejct = require('./T200Object.js');
+const T200Resource = require('./T200Resource.js');
 
 
 class T200Source {
-    constructor() {
-
+    constructor(name) {
+        this.name = name;
     }
 
-    run(source, method) {
+    create() {
         let self = this;
-        if(undefined == source){
-            return;
-        }
+        let promise = new Promise(function(resolve, reject){
+            let file = T200Resource.merge_case(self.name);
 
-        T200File.exists(source).then(function(){
-            source = "../" + source;
-            const target = require(source);
-
-            if(undefined == target){
-
+            if(undefined == file){
+                reject();
             }else{
-                let obj = new target();
+                const CaseClass = require(file);
 
-                if(undefined == obj){
-
+                if(undefined == CaseClass){
+                    reject();
                 }else{
-                    let methods = T200Object.methods(obj);
-
-                    if(undefined == methods){
-
+                    let obj = new CaseClass();
+    
+                    if(undefined == obj){
+                        reject();
                     }else{
-                        obj.browser = self.browser;
-                        for(let element of methods){
-                            obj[element]();
-                        }
+                        obj.create().then(function(){
+                            self.object = obj;
+                            let methods = T200Object.methods(obj);
+        
+                            resolve(methods);
+                        }, function(err){
+                            reject();
+                        });                        
                     }
                 }
-            }
-        }, function(){
-
+            }            
         });
+
+        return promise;
+    }
+
+    run(browser, method) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            self.object[method](browser);
+        });
+
+        return promise;
     }
 }
 

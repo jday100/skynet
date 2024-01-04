@@ -3,51 +3,57 @@ const { Builder, By, until } = require("selenium-webdriver");
 
 class T200Browser {
     constructor() {
-        this.browsers = new Array();
+        //this.browsers = new Array();
     }
 
-    create(name) {
+    static create(name) {
         let self =this;
         let promise = new Promise(function(resolve, reject){
+            let result;
             if(undefined == name){
                 let name = "all";
-                self.#create_browser(name);
+                result = self.#create_browser(name);
             }else{
-                self.#create_browser(name);
+                result = self.#create_browser(name);
             }
 
-            resolve();
+            resolve(result);
         });    
         
         return promise;
     }
 
-    #create_browser(name) {
+    static #create_browser(name) {
+        let browsers = new Array();
         let browser;
         switch(name){
             case 'all':
                 browser = new Builder().forBrowser('firefox').build();
                 if(browser){
-                    this.browsers.push(browser);
+                    browsers.push(browser);
                 }
+                /*
                 browser = new Builder().forBrowser('chrome').build();
                 if(browser){
-                    this.browsers.push(browser);
+                    browsers.push(browser);
                 }
+                */
                 break;
             case 'firefox':
                 browser = new Builder().forBrowser('firefox').build();
                 if(browser){
-                    this.browsers.push(browser);
+                    browsers.push(browser);
                 }
                 break;
             case 'chrome':
                 browser = new Builder().forBrowser('chrome').build();
                 if(browser){
-                    this.browsers.push(browser);
+                    browsers.push(browser);
                 }
                 break;
         }
+
+        return browsers;
     }
 
     test(web) {

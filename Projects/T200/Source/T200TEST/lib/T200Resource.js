@@ -7,7 +7,11 @@ class T200Resource {
     }
 
     static merge_case(file) {
-        return path.join(__dirname, `../case/web/${file}.case.js`);
+        return path.join(__dirname, `../case/web/${file}`);
+    }
+
+    static merge_case_dir(dir) {
+        return path.join(__dirname, `../case/web/${dir}`);
     }
 
     static merge_web(file) {
