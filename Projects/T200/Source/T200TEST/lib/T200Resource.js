@@ -29,6 +29,10 @@ class T200Resource {
     static merge_web_define(file) {
         return path.join(__dirname, `../project/define/web/${file}.define`);
     }
+
+    static merge_web_module(file) {
+        return path.join(__dirname, `../project/module/web/${file}.module.js`);
+    }
 }
 
 module.exports = T200Resource;

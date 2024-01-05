@@ -18,6 +18,7 @@ class T200Web {
                     let WebObj = new WebClass();
 
                     if(WebObj){
+                        WebObj.name = self.name;
                         WebObj.create().then(function(page){
                             self.page = page;
                             resolve();

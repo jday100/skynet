@@ -8,22 +8,23 @@ class T200Page {
 
     create(web) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
-            //test
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            self.web = web;
 
-            let element = {};
+            for(let module of web.module_values){
+                await self.#create_module(module).then(function(){
 
-            element.url = "http://localhost:8888/login.html";
-            element.type = "link";
-            element.value = "http://localhost:8888/";
-            element.locate_type = "css";
-            element.locate_value = 'a[locale="home"]';
+                }, function(){
+                    result = false;
+                });
+            }
 
-            self.#create_element(element).then(function(){
+            if(result){
                 resolve();
-            }, function(){
+            }else{
                 reject();
-            });
+            }
         });
 
         return promise;
@@ -32,6 +33,7 @@ class T200Page {
     #create_element(element) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
+            element.url = self.web.name;
             switch(element.type){
                 case 'link':
                     let obj = new T200Link();
@@ -47,6 +49,62 @@ class T200Page {
         });
 
         return promise;        
+    }
+
+    #create_module(module) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            for(let obj of module.values){
+                await self.#create_fields(obj).then(function(){
+
+                }, function(){
+                    result = false;
+                });
+                if(!result)break;
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #create_fields(module) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            for(let field of module.fields){
+                await self.#create_field(field).then(function(){
+
+                }, function(){
+                    result = false;
+                });
+                if(!result)break;
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #create_field(field) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            self.#create_element(field).then(resolve, reject);
+        });
+
+        return promise;
     }
 
     run(browser) {

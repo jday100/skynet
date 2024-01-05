@@ -3,6 +3,7 @@ const { Builder, By, until } = require("selenium-webdriver");
 class T200Browser {
     constructor(browser) {
         this.browser = browser;
+        this.root = "http://localhost:8888";
     }
 
     static create(name) {
@@ -56,7 +57,7 @@ class T200Browser {
                     self.current_url = "";
                     reject();
                 });
-            }, function(){
+            }, function(err){
                 self.current_url = "";
                 reject();
             });

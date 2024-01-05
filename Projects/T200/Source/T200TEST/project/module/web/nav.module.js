@@ -1,3 +1,7 @@
+const T200Resource = require('../../../lib/T200Resource.js');
+const T200Define = require('../../../lib/T200Define.js');
+
+
 class T200NavModule {
     constructor() {
         this.name = "nav";
@@ -7,13 +11,13 @@ class T200NavModule {
     create() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.#create_module(self.name).then(resolve, reject);
+            self.#create_define(self.name).then(resolve, reject);
         });
 
         return promise;
     }
 
-    #create_module(name) {
+    #create_define(name) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let file = T200Resource.merge_web_define(name);

@@ -20,9 +20,9 @@ class T200Link {
     run(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            browser.get(self.url).then(function(){
+            browser.get(`${browser.root}/${self.url}`).then(function(){
 
-            }, function(){
+            }, function(err){
 
             }).then(function(){
                 return browser.sleep(1000);
@@ -57,7 +57,7 @@ class T200Link {
             },function(){
 
             }).finally(function(){
-                return browser.get(self.url);
+                return browser.get(`${browser.root}/${self.url}`);
             });
         });
 
