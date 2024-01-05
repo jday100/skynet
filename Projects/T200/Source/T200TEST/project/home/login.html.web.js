@@ -31,8 +31,8 @@ class T200LoginWeb {
             }
 
             if(result){
-                await self.#create_page().then(function(){
-                    resolve();
+                await self.#create_page().then(function(page){
+                    resolve(page);
                 }, function(){
                     reject();
                 });
@@ -56,6 +56,37 @@ class T200LoginWeb {
                 }, function(){
                     reject();
                 });
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #create_module(name) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let ModuleSource = T200Resource.merge_web_module(name);
+
+            if(ModuleSource){
+                const ModuleClass = require(ModuleSource);
+
+                if(ModuleClass){
+                    let ModuleObj = new ModuleClass();
+
+                    if(ModuleObj){
+                        ModuleObj.create().then(function(){
+                            resolve();
+                        }, function(){
+                            reject();
+                        });
+                    }else{
+                        reject();
+                    }
+                }else{
+                    reject();
+                }
             }else{
                 reject();
             }

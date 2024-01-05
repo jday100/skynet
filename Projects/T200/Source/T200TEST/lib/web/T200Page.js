@@ -1,3 +1,6 @@
+const T200Link  = require('./elements/T200Link.js');
+
+
 class T200Page {
     constructor() {
         this.elements = new Array();
@@ -6,10 +9,44 @@ class T200Page {
     create(web) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            resolve();
+            //test
+
+            let element = {};
+
+            element.url = "http://localhost:8888/login.html";
+            element.type = "link";
+            element.value = "http://localhost:8888/";
+            element.locate_type = "css";
+            element.locate_value = 'a[locale="home"]';
+
+            self.#create_element(element).then(function(){
+                resolve();
+            }, function(){
+                reject();
+            });
         });
 
         return promise;
+    }
+
+    #create_element(element) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            switch(element.type){
+                case 'link':
+                    let obj = new T200Link();
+    
+                    obj.create(element).then(function(){
+                        self.elements.push(obj);
+                        resolve();
+                    }, function(){
+                        reject();
+                    });
+                    break;
+            }
+        });
+
+        return promise;        
     }
 
     run(browser) {
@@ -20,7 +57,7 @@ class T200Page {
             for(let element of self.elements){
                 await element.run(browser).then(function(){
 
-                }, function(){
+                }, function(err){
                     result = false;
                 });
             }

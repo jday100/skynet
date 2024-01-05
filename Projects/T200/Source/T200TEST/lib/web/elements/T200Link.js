@@ -29,7 +29,7 @@ class T200Link {
             },function(){
 
             }).then(function(){
-                return browser.locate(self.locate_type, self.locale_value);
+                return browser.locate(self.locate_type, self.locate_value);
             },function(){
 
             }).then(function(element){

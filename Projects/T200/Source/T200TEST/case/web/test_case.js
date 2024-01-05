@@ -18,7 +18,7 @@ class T200WebTestCase {
         return promise;
     }
 
-    test_case() {
+    test_case(browser) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
@@ -26,8 +26,12 @@ class T200WebTestCase {
                 let web = new T200Web(url);
 
                 if(web){
-                    await web.create().then(function(){
+                    await web.create().then(async function(){
+                        await web.run(browser).then(function(){
 
+                        },function(err){
+                            result = false;
+                        });
                     }, function(err){
                         result = false;
                     });
