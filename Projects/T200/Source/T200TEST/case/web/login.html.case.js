@@ -23,7 +23,16 @@ class T200LoginCase {
     }
 
     run_login(browser) {
-        
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            self.web.test(browser).then(function(){
+                resolve();
+            }, function(){
+
+            });
+        });
+
+        return promise;
     }
 }
 

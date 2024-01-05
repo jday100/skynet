@@ -2,8 +2,8 @@ const { Builder, By, until } = require("selenium-webdriver");
 
 
 class T200Browser {
-    constructor() {
-        //this.browsers = new Array();
+    constructor(browser) {
+        this.browser = browser;
     }
 
     static create(name) {
@@ -30,25 +30,29 @@ class T200Browser {
             case 'all':
                 browser = new Builder().forBrowser('firefox').build();
                 if(browser){
-                    browsers.push(browser);
+                    let obj = new T200Browser(browser);
+                    browsers.push(obj);
                 }
                 /*
                 browser = new Builder().forBrowser('chrome').build();
                 if(browser){
-                    browsers.push(browser);
+                    let obj = new T200Browser(browser);
+                    browsers.push(obj);
                 }
                 */
                 break;
             case 'firefox':
                 browser = new Builder().forBrowser('firefox').build();
                 if(browser){
-                    browsers.push(browser);
+                    let obj = new T200Browser(browser);
+                    browsers.push(obj);
                 }
                 break;
             case 'chrome':
                 browser = new Builder().forBrowser('chrome').build();
                 if(browser){
-                    browsers.push(browser);
+                    let obj = new T200Browser(browser);
+                    browsers.push(obj);
                 }
                 break;
         }
@@ -68,8 +72,8 @@ class T200Browser {
     get(url) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.browsers[0].get(url).then(function(){
-                self.browsers[0].getCurrentUrl().then(function(url){
+            self.browser.get(url).then(function(){
+                self.browser.getCurrentUrl().then(function(url){
                     self.current_url = url;
                     resolve();
                 }, function(){
@@ -86,7 +90,7 @@ class T200Browser {
     }
 
     sleep(value) {
-        this.browsers[0].sleep(value);
+        return this.browser.sleep(value);
     }
 
     locate() {
@@ -94,11 +98,11 @@ class T200Browser {
     }
 
     locate_css(value) {
-        return this.browsers[0].findElement(By.css(value));
+        return this.browser.findElement(By.css(value));
     }
 
     get_current_url() {
-        return this.browsers[0].getCurrentUrl();
+        return this.browser.getCurrentUrl();
     }
 }
 

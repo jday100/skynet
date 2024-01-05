@@ -1,3 +1,5 @@
+const T200Log = require('../../T200Log.js');
+
 class T200Link {
     constructor() {
 
@@ -18,29 +20,35 @@ class T200Link {
     test(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            browser.get("http://localhost:8888/register.html").then(function(){
-                browser.sleep(1000);
-                let obj = browser.locate_css(`a${self.locate}`);
-                if(obj){
-                    obj.click().then(function(){
-                        browser.sleep(1000);
+            T200Log.log("link test");
+            return browser.get("http://localhost:8888/register.html").then(function(){
+                return browser.sleep(1000).then(function(){
+                    T200Log.log("link test locate");
+                    let obj = browser.locate_css(`a${self.locate}`);
+                    if(obj){
+                        return obj.click().then(function(){
+                            return browser.sleep(1000).then(function(){
+                                return browser.get_current_url().then(function(url){
+                                    if(self.url == url){
+                                        resolve();
+                                    }else{
+                                        reject();
+                                    }
+                                }, function(){
+                                    reject();
+                                });    
+                            }, function(err){
 
-                        browser.get_current_url().then(function(url){
-                            if(self.url == url){
-                                resolve();
-                            }else{
-                                reject();
-                            }
-                        }, function(){
+                            });
+                            
+                        },function(){
                             reject();
-                        });    
-                    },function(){
+                        });                                    
+                    }else{
                         reject();
-                    });                                    
-                }else{
-                    reject();
-                }
-            }, function(){
+                    }
+                });                
+            }, function(err){
                 reject();
             });
         });

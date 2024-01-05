@@ -35,7 +35,7 @@ class T200Web {
     test(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.page.test(browser).then(function(){
+            return self.page.test(browser).then(function(){
                 resolve();
             }, function(){
 
