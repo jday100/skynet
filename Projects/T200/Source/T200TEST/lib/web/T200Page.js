@@ -6,7 +6,7 @@ class T200Page {
     create(web) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-
+            resolve();
         });
 
         return promise;

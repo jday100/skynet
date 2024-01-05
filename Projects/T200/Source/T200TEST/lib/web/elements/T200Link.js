@@ -20,8 +20,45 @@ class T200Link {
     run(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
+            browser.get(self.url).then(function(){
 
-            resolve();
+            }, function(){
+
+            }).then(function(){
+                return browser.sleep(1000);
+            },function(){
+
+            }).then(function(){
+                return browser.locate(self.locate_type, self.locale_value);
+            },function(){
+
+            }).then(function(element){
+                if(element){
+                    return browser.click(element);
+                }else{
+
+                }
+            },function(){
+
+            }).then(function(){
+                return browser.sleep(1000);
+            },function(){
+
+            }).then(function(){
+                return browser.get_current_url();
+            },function(){
+
+            }).then(function(url){
+                if(self.value == url){
+                    resolve();
+                }else{
+                    reject();
+                }
+            },function(){
+
+            }).finally(function(){
+                return browser.get(self.url);
+            });
         });
 
         return promise;

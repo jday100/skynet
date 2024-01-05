@@ -28,7 +28,7 @@ class T200WebTestCase {
                 if(web){
                     await web.create().then(function(){
 
-                    }, function(){
+                    }, function(err){
                         result = false;
                     });
                 }
