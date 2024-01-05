@@ -1,4 +1,3 @@
-const T200Setup = require('../project/T200Setup.js');
 const T200Object = require('./T200Object.js');
 const T200Resource = require('./T200Resource.js');
 
@@ -11,32 +10,32 @@ class T200Source {
     create() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let file = T200Resource.merge_case(self.name);
+            let CaseSource = T200Resource.merge_case(self.name);
 
-            if(undefined == file){
-                reject();
-            }else{
-                const CaseClass = require(file);
+            if(CaseSource){
+                const CaseClass = require(CaseSource);
 
-                if(undefined == CaseClass){
-                    reject();
-                }else{
-                    let obj = new CaseClass();
-    
-                    if(undefined == obj){
-                        reject();
-                    }else{
-                        obj.create().then(function(){
-                            self.object = obj;
-                            let methods = T200Object.methods(obj);
-        
-                            resolve(methods);
-                        }, function(err){
+                if(CaseClass){
+                    let CaseObj = new CaseClass();
+
+                    if(CaseObj){
+                        CaseObj.create().then(function(){
+                            self.object = CaseObj;
+                            self.methods = T200Object.methods(CaseObj);
+
+                            resolve(self.methods);
+                        }, function(){
                             reject();
-                        });                        
+                        });
+                    }else{
+                        reject();
                     }
+                }else{
+                    reject();
                 }
-            }            
+            }else{
+                reject();
+            }
         });
 
         return promise;
@@ -45,7 +44,7 @@ class T200Source {
     run(browser, method) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.object[method](browser);
+            self.object[method](browser).then(resolve, reject);
         });
 
         return promise;

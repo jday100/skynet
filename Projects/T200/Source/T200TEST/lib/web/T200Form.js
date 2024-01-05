@@ -1,14 +1,6 @@
-
-
 class T200Form {
     constructor() {
 
-    }
-
-    test() {
-        set();
-        click();
-        verify();
     }
 }
 

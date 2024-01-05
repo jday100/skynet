@@ -6,6 +6,10 @@ class T200Resource {
 
     }
 
+    static merge_test_case(dir) {
+        return path.join(__dirname, `../case/web/${dir}`);
+    }
+
     static merge_case(file) {
         return path.join(__dirname, `../case/web/${file}`);
     }

@@ -11,12 +11,16 @@ class T200LoginCase {
         let promise = new Promise(function(resolve, reject){
             let web = new T200Web(self.url);
 
-            web.create().then(function(){
-                self.web = web;
-                resolve();
-            }, function(){
+            if(web){
+                web.create().then(function(){
+                    self.web = web;
+                    resolve();
+                }, function(){
+                    reject();
+                });
+            }else{
                 reject();
-            });
+            }
         });
 
         return promise;
@@ -25,11 +29,7 @@ class T200LoginCase {
     run_login(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.web.test(browser).then(function(){
-                resolve();
-            }, function(){
-
-            });
+            self.web.run(browser).then(resolve, reject);  
         });
 
         return promise;

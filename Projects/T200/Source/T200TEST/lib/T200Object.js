@@ -1,9 +1,3 @@
-/*
-let name = Object.getOwnPropertyNames(Object.getPrototypeOf(test));
-
-console.log(name);
-*/
-
 class T200Object {
     constructor() {
 

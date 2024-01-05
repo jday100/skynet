@@ -1,5 +1,4 @@
 const T200Setup = require('../project/T200Setup.js');
-
 const T200File = require(T200Setup.external('./library/fs/T200File.js'));
 
 
@@ -13,7 +12,6 @@ class T200Define {
         let promise = new Promise(function(resolve, reject){
             T200File.load(file).then(function(data){
                 let value = data.toString();
-
                 let obj = JSON.parse(value);
 
                 if(obj){
@@ -21,7 +19,6 @@ class T200Define {
                 }else{
                     reject();
                 }
-                
             }, function(){
                 reject();
             });
