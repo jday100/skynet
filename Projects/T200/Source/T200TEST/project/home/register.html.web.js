@@ -2,6 +2,8 @@ const T200Resource = require('../../lib/T200Resource.js');
 const T200Define = require('../../lib/T200Define.js');
 const T200Page = require('../../lib/web/T200Page.js');
 
+const T200Store = require('../../lib/db/T200Store.js');
+
 
 class T200RegisterWeb {
     constructor() {
@@ -43,7 +45,19 @@ class T200RegisterWeb {
     
                     if(!result)break;
                 }
-            }           
+            }     
+            
+            if(result){
+                await self.#create_store().then(async function(){
+                    await self.#clear_data().then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                }, function(err){
+                    result = false;
+                });
+            } 
 
             if(result){
                 await self.#create_page().then(function(page){
@@ -54,6 +68,34 @@ class T200RegisterWeb {
             }else{
                 reject();
             }
+            
+        });
+
+        return promise;
+    }
+
+    #clear_data() {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = "select * from person";
+            
+            self.store.connect().then(function(){
+                self.store.execute(sql).then(function(){
+
+                },function(){
+
+                }).finally(function(){
+                    self.store.disconnect().then(function(){
+
+                    },function(){
+    
+                    });
+                });
+            },function(){
+
+            });
+
+            resolve();
         });
 
         return promise;
@@ -126,6 +168,24 @@ class T200RegisterWeb {
 
         return promise;
     }
+
+
+    #create_store() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let store = new T200Store();
+
+            await store.create().then(function(){
+                self.store = store;
+                resolve();
+            }, function(){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
 }
 
 module.exports = T200RegisterWeb;

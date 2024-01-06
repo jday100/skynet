@@ -1,6 +1,7 @@
 {
     "name"  : "register_form",
     "type"  : "form",
+    "submit"    : "submit",
     "fields"    : [
         {
             "name"  : "username",
@@ -10,11 +11,46 @@
                 "value" : "username"
             }
         },{
-            "name"  : "password",
+            "name"  : "password1",
             "type"  : "password",
             "locate"    : {
                 "type"  : "name",
-                "value" : "password"
+                "value" : "password1"
+            }
+        },{
+            "name"  : "password2",
+            "type"  : "password",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "password2"
+            }
+        },{
+            "name"  : "email",
+            "type"  : "email",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "email"
+            }
+        },{
+            "name"  : "authcode",
+            "type"  : "password",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "authcode"
+            }
+        },{
+            "name"  : "invitecode",
+            "type"  : "password",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "invitecode"
+            }
+        },{
+            "name"  : "send",
+            "type"  : "button",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "button[locale=\"send\"]"
             }
         }
     ],
@@ -26,6 +62,16 @@
                 "type"  : "id",
                 "value" : "submit"
             }
+        }
+    ],
+    "data"  : [
+        {
+            "username"  : "111111",
+            "password1" : "111111",
+            "password2" : "111111",
+            "email"     : "1@1.com",
+            "authcode"  : "111111",
+            "invitecode"    : "111111111111"
         }
     ]
 }

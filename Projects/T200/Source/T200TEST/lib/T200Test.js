@@ -1,6 +1,12 @@
 const T200Resource = require('./T200Resource.js');
 const T200Browser = require('./T200Browser.js');
 const T200Source = require('./T200Source.js');
+const process = require('child_process');
+
+const T200Setup = require('../project/T200Setup.js');
+const T200Database = require(T200Setup.external('./library/db/T200Database.js'));
+
+const T200DBSetup = require('../project/T200DBSetup.js');
 
 
 class T200Test {
@@ -10,8 +16,15 @@ class T200Test {
 
     run(browser, source, method) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
-            self.#done(browser, source, method).then(resolve, reject);
+        let promise = new Promise(async function(resolve, reject){
+            await self.#start().then(async function(){
+                await self.#done(browser, source, method).then(resolve, reject).finally(async function(){
+                    await self.#stop();
+                });
+            }, function(){
+
+            })
+            
         });
 
         return promise;
@@ -100,6 +113,38 @@ class T200Test {
                 resolve();
             }else{
                 reject();
+            }
+        });
+
+        return promise;
+    }
+
+
+    #start() {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                self.server = process.exec(`cd ../web/ && node ./T200Home.js`);
+
+                global.database = new T200Database();
+                global.database.setup = new T200DBSetup();
+
+                global.database.start();
+                resolve();
+            });
+        });
+
+        return promise;
+    }
+
+    #stop() {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            if(undefined == self.server){
+
+            }else{
+                self.server.kill();
+                resolve();
             }
         });
 

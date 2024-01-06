@@ -22,12 +22,12 @@ class T200Text extends T200Input {
         return promise;
     }
 
-    run(browser) {
+    run(browser, data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             browser.locate(self.locate.type, self.locate.value).then(function(element){
                 if(element){
-                    element.sendKeys("hello");
+                    element.sendKeys(data);
                     resolve();
                 }else{
                     reject();

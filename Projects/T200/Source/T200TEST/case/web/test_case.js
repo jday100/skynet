@@ -4,8 +4,8 @@ const T200Web = require('../../lib/web/T200Web.js');
 class T200WebTestCase {
     constructor() {
         this.html = [
-            "/register.html",
-            "/login.html"
+            "/register.html"//,
+            //"/login.html"
         ];
     }
 

@@ -2,9 +2,9 @@ const T200Resource = require('../../../lib/T200Resource.js');
 const T200Define = require('../../../lib/T200Define.js');
 
 
-class T200LoginModule {
+class T200RegisterModule {
     constructor() {
-        this.name = "login_form";
+        this.name = "register_form";
         this.values = new Array();
     }
 
@@ -38,4 +38,4 @@ class T200LoginModule {
     }
 }
 
-module.exports = T200LoginModule;
+module.exports = T200RegisterModule;

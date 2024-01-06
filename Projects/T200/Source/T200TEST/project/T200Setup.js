@@ -10,7 +10,8 @@ class T200Setup {
     static project = "../../web/";
 
     static external(file) {
-        return path.join(T200Setup.project, file);
+        let name = path.join(__dirname, T200Setup.project);
+        return path.join(name, file);
     }
 }
 
