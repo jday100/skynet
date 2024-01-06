@@ -42,7 +42,7 @@ class T200WebBase {
             if(result){
                 await self.#create_page().then(function(page){
                     resolve(page);
-                }, function(){
+                }, function(err){
                     reject();
                 });
             }else{
@@ -113,7 +113,7 @@ class T200WebBase {
             page.create(self).then(function(){
                 self.page = page;
                 resolve(page);
-            }, function(){
+            }, function(err){
                 reject();
             });
         });

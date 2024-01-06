@@ -11,7 +11,8 @@ class T200LoginWeb extends T200WebBase {
 
         this.modules = [
             "nav",
-            "channel"
+            "channel",
+            "login_form"
         ];
     }
 }

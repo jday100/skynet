@@ -1,4 +1,5 @@
 const T200Link  = require('./elements/T200Link.js');
+const T200Form  = require('./T200Form.js');
 
 
 class T200Page {
@@ -15,7 +16,7 @@ class T200Page {
             for(let module of web.module_values){
                 await self.#create_module(module).then(function(){
 
-                }, function(){
+                }, function(err){
                     result = false;
                 });
             }
@@ -45,6 +46,8 @@ class T200Page {
                         reject();
                     });
                     break;
+                case 'text':
+                    break;
             }
         });
 
@@ -59,7 +62,7 @@ class T200Page {
             for(let obj of module.values){
                 await self.#create_fields(obj).then(function(){
 
-                }, function(){
+                }, function(err){
                     result = false;
                 });
                 if(!result)break;
@@ -79,13 +82,22 @@ class T200Page {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
-            for(let field of module.fields){
-                await self.#create_field(field).then(function(){
 
-                }, function(){
+            if(undefined == module.type){
+                for(let field of module.fields){
+                    await self.#create_field(field).then(function(){
+    
+                    }, function(err){
+                        result = false;
+                    });
+                    if(!result)break;
+                }
+            }else if("form" == module.type){
+                await self.#create_form(module).then(function(){
+
+                }, function(err){
                     result = false;
                 });
-                if(!result)break;
             }
 
             if(result){
@@ -93,6 +105,22 @@ class T200Page {
             }else{
                 reject();
             }
+        });
+
+        return promise;
+    }
+
+    #create_form(module) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let form = new T200Form();
+
+            form.create(module).then(function(){
+                self.elements.push(form);   
+                resolve();  
+            }, function(err){
+                reject();
+            });
         });
 
         return promise;

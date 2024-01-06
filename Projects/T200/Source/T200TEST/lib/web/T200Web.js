@@ -22,7 +22,7 @@ class T200Web {
                         WebObj.create().then(function(page){
                             self.page = page;
                             resolve();
-                        }, function(){
+                        }, function(err){
                             reject();
                         });
                     }else{

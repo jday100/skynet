@@ -26,7 +26,7 @@ class T200Test {
                 }else{
                     self.#execute().then(resolve, reject);
                 }
-            }, function(){
+            }, function(err){
                 reject();
             });
         });
@@ -70,14 +70,14 @@ class T200Test {
                 if(source){
                     source.create().then(function(){
                         self.#execute(source).then(resolve, reject);
-                    }, function(){
-
+                    }, function(err){
+                        reject();
                     });
                 }else{
-
+                    reject();
                 }
             }else{
-
+                reject();
             }
         });
 
