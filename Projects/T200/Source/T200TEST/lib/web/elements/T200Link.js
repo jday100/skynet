@@ -7,10 +7,11 @@ class T200Link {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             self.url = element.url;
+            self.name = element.name;
             self.type = element.type;
+            self.target = element.target;
             self.value = element.value;
-            self.locate_type = element.locate_type;
-            self.locate_value = element.locate_value;
+            self.locate = element.locate;
             resolve();
         });
 
@@ -20,7 +21,7 @@ class T200Link {
     run(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            browser.get(`${browser.root}/${self.url}`).then(function(){
+            browser.get(`${browser.root}${self.url}`).then(function(){
 
             }, function(err){
 
@@ -29,12 +30,12 @@ class T200Link {
             },function(){
 
             }).then(function(){
-                return browser.locate(self.locate_type, self.locate_value);
+                return browser.locate(self.locate.type, self.locate.value);
             },function(){
 
             }).then(function(element){
                 if(element){
-                    return browser.click(element);
+                    return browser.click(self.target, element);
                 }else{
 
                 }
@@ -49,15 +50,17 @@ class T200Link {
             },function(){
 
             }).then(function(url){
-                if(self.value == url){
+                let result = `${browser.root}${self.value}`;
+                if(result == url){
                     resolve();
                 }else{
+                    console.log(`${self.name} ${result}`);
                     reject();
                 }
             },function(){
 
             }).finally(function(){
-                return browser.get(`${browser.root}/${self.url}`);
+                return browser.get(`${browser.root}${self.url}`);
             });
         });
 

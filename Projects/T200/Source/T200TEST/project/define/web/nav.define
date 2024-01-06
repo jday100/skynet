@@ -5,26 +5,35 @@
             "name"  : "home",
             "type"  : "link",
             "value" : "/",
-            "locate_type"   : "css",
-            "locate_value"  : "a[locale=\"home\"]"
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"home\"]"
+            }
         },{
             "name"  : "about",
             "type"  : "link",
             "value" : "/about.html",
-            "locate_type"   : "css",
-            "locate_value"  : "a[locale=\"about\"]"
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"about\"]"
+            }
         },{
             "name"  : "login",
             "type"  : "link",
             "value" : "/login.html",
-            "locate_type"   : "css",
-            "locate_value"  : "a[locale=\"login\"]"
+            "target"    : "blank",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"login\"]"
+            }
         },{
             "name"  : "register",
             "type"  : "link",
             "value" : "/register.html",
-            "locate_type"   : "css",
-            "locate_value"  : "a[locale=\"register\"]"
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"register\"]"
+            }
         }
     ]
 }

@@ -1,18 +1,13 @@
-const T200Resource = require('../../lib/T200Resource.js');
-const T200Define = require('../../lib/T200Define.js');
-const T200Page = require('../../lib/web/T200Page.js');
+const T200Resource = require('../T200Resource.js');
+const T200Define = require('../T200Define.js');
+const T200Page = require('./T200Page.js');
 
 
-class T200RegisterWeb {
+class T200WebBase {
     constructor() {
-        this.objects = [
-            "person"
-        ];
+        this.objects = new Array();
 
-        this.modules = [
-            "nav",
-            "channel"
-        ];
+        this.modules = new Array();
 
         this.object_values = new Array();
         this.module_values = new Array();
@@ -127,4 +122,4 @@ class T200RegisterWeb {
     }
 }
 
-module.exports = T200RegisterWeb;
+module.exports = T200WebBase;
