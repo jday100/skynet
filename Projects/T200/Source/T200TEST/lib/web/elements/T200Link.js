@@ -35,7 +35,7 @@ class T200Link {
 
             }).then(function(element){
                 if(element){
-                    return browser.click(self.target, element);
+                    return browser.click(element, self.target);
                 }else{
 
                 }

@@ -1,0 +1,31 @@
+{
+    "name"  : "register_form",
+    "type"  : "form",
+    "fields"    : [
+        {
+            "name"  : "username",
+            "type"  : "text",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "username"
+            }
+        },{
+            "name"  : "password",
+            "type"  : "password",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "password"
+            }
+        }
+    ],
+    "buttons"   : [
+        {
+            "name"  : "submit",
+            "type"  : "button",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "submit"
+            }
+        }
+    ]
+}

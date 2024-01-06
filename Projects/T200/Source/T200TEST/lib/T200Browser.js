@@ -100,6 +100,24 @@ class T200Browser {
                         reject();
                     }
                     break;
+                case 'name':
+                    result = self.browser.findElement(By.name(value));
+
+                    if(result){
+                        resolve(result);
+                    }else{
+                        reject();
+                    }
+                    break;
+                case 'id':
+                    result = self.browser.findElement(By.id(value));
+
+                    if(result){
+                        resolve(result);
+                    }else{
+                        reject();
+                    }
+                    break;
                 default:
                     reject();
             }
@@ -108,7 +126,7 @@ class T200Browser {
         return promise;
     }
 
-    click(target, element) {
+    click(element, target) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             element.click().then(function(){
@@ -116,7 +134,7 @@ class T200Browser {
                     self.browser.getCurrentUrl().then(function(url){
                         self.current_url = url;
                         resolve();
-                    }, function(){
+                    }, function(err){
                         self.current_url = "";
                         reject();
                     });

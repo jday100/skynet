@@ -11,7 +11,8 @@ class T200RegisterWeb {
 
         this.modules = [
             "nav",
-            "channel"
+            "channel",
+            "register_form"
         ];
 
         this.object_values = new Array();

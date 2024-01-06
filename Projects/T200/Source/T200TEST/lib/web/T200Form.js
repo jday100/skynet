@@ -6,7 +6,7 @@ const T200Button = require('./elements/T200Button.js');
 
 class T200Form {
     constructor() {
-        this.elements = new Array();
+        this.button_index = 0;
 
         this.field_values = new Array();
         this.button_values = new Array();
@@ -64,7 +64,7 @@ class T200Form {
                     obj = new T200Text();
     
                     obj.create(element).then(function(){
-                        self.elements.push(obj);
+                        self.field_values.push(obj);
                         resolve();
                     }, function(err){
                         reject();
@@ -74,7 +74,7 @@ class T200Form {
                     obj = new T200Password();
     
                     obj.create(element).then(function(){
-                        self.elements.push(obj);
+                        self.field_values.push(obj);
                         resolve();
                     }, function(err){
                         reject();
@@ -84,7 +84,7 @@ class T200Form {
                     obj = new T200Email();
     
                     obj.create(element).then(function(){
-                        self.elements.push(obj);
+                        self.field_values.push(obj);
                         resolve();
                     }, function(err){
                         reject();
@@ -94,7 +94,7 @@ class T200Form {
                     obj = new T200Button();
     
                     obj.create(element).then(function(){
-                        self.elements.push(obj);
+                        self.button_values.push(obj);
                         resolve();
                     }, function(err){
                         reject();
@@ -109,18 +109,51 @@ class T200Form {
         return promise;        
     }
 
+    #create_button(element) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let obj = new T200Button();
+    
+            obj.create(element).then(function(){
+                self.button_values.push(obj);
+                resolve();
+            }, function(err){
+                reject();
+            });
+          
+        });
+
+        return promise;        
+    }
+
     
     run(browser) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
 
-            for(let element of self.elements){
-                await element.run(browser).then(function(){
+            for(let field of self.field_values){
+                await field.run(browser).then(function(){
 
                 }, function(err){
                     result = false;
                 });
+            }
+
+            if(self.button_index >= self.buttons.length){
+                result = false;
+            }else{
+                let button = self.button_values[self.button_index++];
+
+                if(button){
+                    await button.run(browser).then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                }else{
+                    result = false;
+                }
             }
 
             if(result){

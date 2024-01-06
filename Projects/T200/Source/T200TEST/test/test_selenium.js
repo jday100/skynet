@@ -10,7 +10,9 @@ browser.getAllWindowHandles().then(function(wins){
 
         browser.switchTo().window(win);
 
-        browser.findElement(By.className(""));
+        let element = browser.findElement(By.className(""));
+
+        element.sendKeys("");
     }    
 }, function(){
 
