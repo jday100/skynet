@@ -18,6 +18,7 @@ class T200Form {
         let promise = new Promise(async function(resolve, reject){
             self.name = module.name;
             self.type = module.type;
+            self.value = module.value;
             self.submit = module.submit;
             self.fields = module.fields;
             self.buttons = module.buttons;         
@@ -241,7 +242,17 @@ class T200Form {
                             }, function(err){
                                 result = false;
                             }).then(function(){
-        
+                                return browser.get_current_url();
+                            }, function(err){
+                                result = false;
+                            }).then(function(url){
+                                let result = `${browser.root}${self.value}`;
+                                if(result == url){
+                                    resolve();
+                                }else{
+                                    console.log(`${self.name} ${result}`);
+                                    reject();
+                                }
                             }, function(err){
                                 result = false;
                             });

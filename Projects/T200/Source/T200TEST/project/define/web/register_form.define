@@ -2,6 +2,7 @@
     "name"  : "register_form",
     "type"  : "form",
     "submit"    : "submit",
+    "value"     : "/login.html",
     "fields"    : [
         {
             "name"  : "username",

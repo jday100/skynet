@@ -77,13 +77,13 @@ class T200RegisterWeb {
     #clear_data() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let sql = "select * from person";
+            let sql = "delete from person where user_id != 1";
             
             self.store.connect().then(function(){
                 self.store.execute(sql).then(function(){
 
-                },function(){
-
+                },function(err){
+                    console.log(err);
                 }).finally(function(){
                     self.store.disconnect().then(function(){
 
