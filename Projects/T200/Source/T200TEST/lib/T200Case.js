@@ -1,23 +1,35 @@
-const T200Web = require('./web/T200Web.js');
+const T200Resource = require('./T200Resource.js');
 
 
 class T200Case {
     constructor() {
-        this.url = "";
+
     }
 
     create() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let web = new T200Web(self.url);
+            let PageSource = T200Resource.merge_web_page(self.url);
 
-            if(web){
-                web.create().then(function(){
-                    self.web = web;
-                    resolve();
-                }, function(){
+            if(PageSource){
+                let PageClass = require(PageSource);
+
+                if(PageClass){
+                    let PageObj = new PageClass(self.url);
+
+                    if(PageObj){
+                        PageObj.create().then(function(){
+                            self.page = PageObj;
+                            resolve();
+                        }, function(err){
+                            reject();
+                        });
+                    }else{
+                        reject();
+                    }
+                }else{
                     reject();
-                });
+                }                
             }else{
                 reject();
             }
@@ -26,10 +38,18 @@ class T200Case {
         return promise;
     }
 
-    run_login(browser) {
+    run(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.web.run(browser).then(resolve, reject);  
+            if(self.page){
+                self.page.run(browser).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                });
+            }else{
+                reject();
+            }
         });
 
         return promise;

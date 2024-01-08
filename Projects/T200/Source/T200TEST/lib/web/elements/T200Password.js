@@ -1,12 +1,8 @@
-const T200Input = require('./T200Input.js');
-
-
-class T200Password extends T200Input {
+class T200Password {
     constructor() {
-        super();
+
     }
 
-    
     create(element) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -22,19 +18,48 @@ class T200Password extends T200Input {
         return promise;
     }
 
-    run(browser, data) {
+    run(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            browser.locate(self.locate.type, self.locate.value).then(function(element){
-                if(element){
-                    element.sendKeys(data);
+            browser.get(browser.url(self.url)).then(function(){
+
+            }, function(err){
+
+            }).then(function(){
+                return browser.sleep(1000);
+            }, function(err){
+
+            }).then(function(){
+                return browser.locate(self.locate);
+            }, function(err){
+
+            }).then(function(element){
+                if(undefined == element){
+
+                }else{
+                    return element.click();
+                }
+            }, function(err){
+
+            }).then(function(){
+                return browser.sleep(1000);
+            }, function(err){
+
+            }).then(function(){
+                return browser.get_current_url();
+            }, function(err){
+
+            }).then(function(url){
+                if(browser.current_url == browser.url(self.value)){
                     resolve();
                 }else{
                     reject();
                 }
-            },function(err){
-                reject();
-            })
+            }, function(err){
+
+            }).finally(function(){
+                return browser.get(browser.url(self.url));
+            });
         });
 
         return promise;

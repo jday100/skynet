@@ -45,7 +45,8 @@ class T200HttpsServer {
 
         let self = this;
         let promise = new Promise(function(resolve, reject){
-
+            global.server.stop();
+            resolve();
         });
 
         return promise;
@@ -59,6 +60,7 @@ class T200HttpsServer {
             T200HttpsSession.clear();
 
             let server = http.createServer();
+            global.server = server;
 
             server.on('request', function(req, res){
                 if('GET' == req.method){
@@ -86,6 +88,7 @@ class T200HttpsServer {
                 log(__filename, "Https Server listen success");
             });
             server.listen(8888);
+            resolve();
         });
 
         return promise;

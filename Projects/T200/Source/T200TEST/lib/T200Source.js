@@ -1,35 +1,25 @@
 const T200Object = require('./T200Object.js');
-const T200Resource = require('./T200Resource.js');
 
 
 class T200Source {
-    constructor(name) {
-        this.name = name;
+    constructor() {
+
     }
 
-    create() {
+    static create(file) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let CaseSource = T200Resource.merge_case(self.name);
+            let WebClass = require(file);
 
-            if(CaseSource){
-                const CaseClass = require(CaseSource);
+            if(WebClass){
+                let WebObj = new WebClass();
 
-                if(CaseClass){
-                    let CaseObj = new CaseClass();
-
-                    if(CaseObj){
-                        CaseObj.create().then(function(){
-                            self.object = CaseObj;
-                            self.methods = T200Object.methods(CaseObj);
-
-                            resolve(self.methods);
-                        }, function(){
-                            reject();
-                        });
-                    }else{
+                if(WebObj){
+                    WebObj.create().then(function(){
+                        resolve(WebObj);
+                    }, function(err){
                         reject();
-                    }
+                    });
                 }else{
                     reject();
                 }
@@ -41,10 +31,29 @@ class T200Source {
         return promise;
     }
 
-    run(browser, method) {
+    static run(browser, obj) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
-            self.object[method](browser).then(resolve, reject);
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            let methods = T200Object.run(obj);
+
+            if(methods){
+                for(let method of methods){
+                    await obj[method](browser).then(function(){
+                        
+                    }, function(err){
+                        reject();
+                    });
+                    if(!result)break;
+                }
+                if(result){
+                    resolve();
+                }else{
+                    reject();
+                }
+            }else{
+                reject();
+            }
         });
 
         return promise;

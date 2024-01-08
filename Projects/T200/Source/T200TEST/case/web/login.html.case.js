@@ -1,38 +1,10 @@
-const T200Web = require('../../lib/web/T200Web.js');
+const T200Case = require('../../lib/T200Case.js');
 
 
-class T200LoginCase {
+class T200LoginCase extends T200Case {
     constructor() {
+        super();
         this.url = "/login.html";
-    }
-
-    create() {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            let web = new T200Web(self.url);
-
-            if(web){
-                web.create().then(function(){
-                    self.web = web;
-                    resolve();
-                }, function(){
-                    reject();
-                });
-            }else{
-                reject();
-            }
-        });
-
-        return promise;
-    }
-
-    run_login(browser) {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            self.web.run(browser).then(resolve, reject);  
-        });
-
-        return promise;
     }
 }
 

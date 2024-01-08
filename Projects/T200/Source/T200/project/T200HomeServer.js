@@ -21,6 +21,8 @@ const T200HomeSetup = require('./T200HomeSetup.js');
 const T200HomeDBSetup = require('./store/T200HomeDBSetup.js');
 const T200Database = require('../library/db/T200Database.js');
 
+//const process = require('child_process');
+
 
 class T200HomeServer extends T200HttpsServer {
     constructor() {
@@ -31,8 +33,15 @@ class T200HomeServer extends T200HttpsServer {
 
     start() {
         log(__filename, "start");
-
         let self = this;
+
+        process.on("SIGINT", function(){
+            self.stop();
+        });
+
+        process.on("SIGTERM", function(){
+            self.stop();
+        });
 
         global.action = new T200HttpsAction();
         global.wsserver = new T200WSServer();
@@ -40,13 +49,27 @@ class T200HomeServer extends T200HttpsServer {
 
         let promise = new Promise(function(resolve, reject){
             self.load().then(function(){
-                self.run().then(resolve, reject);
+
+                //process.emit('SIGINT');
+                self.run().then(function(){
+                    //process.emit('SIGINT');
+                    resolve();
+                }, function(){
+                    reject();
+                });
             }, function(err){
                 if(reject)reject(err);
             });
         });
 
         return promise;
+    }
+
+    stop() {
+        console.log('stop');
+
+        global.server.close();
+        global.database.stop();
     }
 
 

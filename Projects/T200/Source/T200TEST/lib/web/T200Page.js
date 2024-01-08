@@ -1,21 +1,29 @@
 const T200Link  = require('./elements/T200Link.js');
 const T200Form  = require('./T200Form.js');
+const T200Source = require('../T200Source.js');
+const T200Resource = require('../T200Resource.js');
 
 
 class T200Page {
-    constructor() {
+    constructor(name) {
+        this.name = name;
         this.elements = new Array();
+
+        this.objects = new Array();
+        this.modules = new Array();
+
+        this.object_values = new Array();
+        this.module_values = new Array();
     }
 
-    create(web) {
+    create() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
-            self.web = web;
 
-            for(let module of web.module_values){
-                await self.#create_module(module).then(function(){
-
+            for(let name of self.module_defines){
+                await self.#create_module(name).then(function(){
+                    
                 }, function(err){
                     result = false;
                 });
@@ -31,10 +39,85 @@ class T200Page {
         return promise;
     }
 
-    #create_element(element) {
+    #create_module(name) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            element.url = self.web.name;
+            let ModuleSource = T200Resource.merge_web_module(name);
+
+            if(ModuleSource){
+                const ModuleClass = require(ModuleSource);
+
+                if(ModuleClass){
+                    let ModuleObj = new ModuleClass(self);
+
+                    if(ModuleObj){
+                        ModuleObj.create().then(function(){
+                            self.module_values.push(ModuleObj);
+                            resolve();
+                        }, function(){
+                            reject();
+                        });
+                    }else{
+                        reject();
+                    }
+                }else{
+                    reject();
+                }
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #create_define(define) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            
+        });
+
+        return promise;
+    }
+
+    create_fields(obj) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            switch(obj.type){
+                case undefined:
+                    for(let field of obj.fields){
+                        await self.#create_field(field).then(function(){
+
+                        }, function(err){
+                            result = false;
+                        });
+                        if(!result)break;
+                    }
+                    if(result){
+                        resolve();
+                    }else{
+                        reject();
+                    }
+                    break;
+                case 'form':
+                    await self.#create_form(obj).then(function(){
+                        resolve();
+                    }, function(){
+                        reject();
+                    });
+                    break;
+            }
+        });
+
+        return promise;
+    }
+
+    #create_field(element) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            element.url = self.name;
             switch(element.type){
                 case 'link':
                     let obj = new T200Link();
@@ -51,65 +134,10 @@ class T200Page {
             }
         });
 
-        return promise;        
+        return promise;  
     }
 
-    #create_module(module) {
-        let self = this;
-        let promise = new Promise(async function(resolve, reject){
-            let result = true;
-
-            for(let obj of module.values){
-                await self.#create_fields(obj).then(function(){
-
-                }, function(err){
-                    result = false;
-                });
-                if(!result)break;
-            }
-
-            if(result){
-                resolve();
-            }else{
-                reject();
-            }
-        });
-
-        return promise;
-    }
-
-    #create_fields(module) {
-        let self = this;
-        let promise = new Promise(async function(resolve, reject){
-            let result = true;
-
-            if(undefined == module.type){
-                for(let field of module.fields){
-                    await self.#create_field(field).then(function(){
     
-                    }, function(err){
-                        result = false;
-                    });
-                    if(!result)break;
-                }
-            }else if("form" == module.type){
-                await self.#create_form(module).then(function(){
-
-                }, function(err){
-                    result = false;
-                });
-            }
-
-            if(result){
-                resolve();
-            }else{
-                reject();
-            }
-        });
-
-        return promise;
-    }
-
     #create_form(module) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -121,15 +149,6 @@ class T200Page {
             }, function(err){
                 reject();
             });
-        });
-
-        return promise;
-    }
-
-    #create_field(field) {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            self.#create_element(field).then(resolve, reject);
         });
 
         return promise;

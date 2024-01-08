@@ -1,3 +1,4 @@
+const T200Source = require('../T200Source.js');
 const T200Resource = require('../T200Resource.js');
 
 
@@ -9,28 +10,15 @@ class T200Web {
     create() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let WebSource = T200Resource.merge_web(self.name);
+            let file = T200Resource.merge_test_unit(self.name);
 
-            if(WebSource){
-                const WebClass = require(WebSource);
-
-                if(WebClass){
-                    let WebObj = new WebClass();
-
-                    if(WebObj){
-                        WebObj.name = self.name;
-                        WebObj.create().then(function(page){
-                            self.page = page;
-                            resolve();
-                        }, function(err){
-                            reject();
-                        });
-                    }else{
-                        reject();
-                    }
-                }else{
+            if(file){
+                T200Source.create(file).then(function(obj){
+                    self.object = obj;
+                    resolve();
+                }, function(err){
                     reject();
-                }
+                }); 
             }else{
                 reject();
             }
@@ -42,7 +30,15 @@ class T200Web {
     run(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.page.run(browser).then(resolve, reject);
+            if(self.object){
+                self.object.run(browser).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                }); 
+            }else{
+                reject();
+            }
         });
 
         return promise;

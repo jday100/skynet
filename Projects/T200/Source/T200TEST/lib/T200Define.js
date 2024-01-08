@@ -19,7 +19,7 @@ class T200Define {
                 }else{
                     reject();
                 }
-            }, function(){
+            }, function(err){
                 reject();
             });
         });

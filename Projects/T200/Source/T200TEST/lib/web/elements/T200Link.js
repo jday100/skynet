@@ -21,46 +21,44 @@ class T200Link {
     run(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            browser.get(`${browser.root}${self.url}`).then(function(){
+            browser.get(browser.url(self.url)).then(function(){
 
             }, function(err){
 
             }).then(function(){
                 return browser.sleep(1000);
-            },function(){
+            }, function(err){
 
             }).then(function(){
-                return browser.locate(self.locate.type, self.locate.value);
-            },function(){
+                return browser.locate(self.locate);
+            }, function(err){
 
             }).then(function(element){
-                if(element){
-                    return browser.click(element, self.target);
-                }else{
+                if(undefined == element){
 
+                }else{
+                    return element.click();
                 }
-            },function(){
+            }, function(err){
 
             }).then(function(){
                 return browser.sleep(1000);
-            },function(){
+            }, function(err){
 
             }).then(function(){
                 return browser.get_current_url();
-            },function(){
+            }, function(err){
 
             }).then(function(url){
-                let result = `${browser.root}${self.value}`;
-                if(result == url){
+                if(browser.current_url == browser.url(self.value)){
                     resolve();
                 }else{
-                    console.log(`${self.name} ${result}`);
                     reject();
                 }
-            },function(){
+            }, function(err){
 
             }).finally(function(){
-                return browser.get(`${browser.root}${self.url}`);
+                return browser.get(browser.url(self.url));
             });
         });
 

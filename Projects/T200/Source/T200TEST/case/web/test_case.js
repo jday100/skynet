@@ -4,12 +4,38 @@ const T200Web = require('../../lib/web/T200Web.js');
 class T200WebTestCase {
     constructor() {
         this.html = [
-            "/register.html"//,
-            //"/login.html"
+            "/register.html",
+            "/login.html"
         ];
+
+        this.cases = new Array();
     }
 
     create() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            for(let url of self.html){
+                let web = new T200Web(url);
+
+                if(web){
+                    await web.create().then(function(){
+                        self.cases.push(web);
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                }else{
+                    reject();
+                }
+            }
+        });
+
+        return promise;
+    }
+
+    test_case(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             resolve();
@@ -18,26 +44,19 @@ class T200WebTestCase {
         return promise;
     }
 
-    test_case(browser) {
+    run(browser) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
-            for(let url of self.html){
-                let web = new T200Web(url);
 
-                if(web){
-                    await web.create().then(async function(){
-                        await web.run(browser).then(function(){
-
-                        },function(err){
-                            result = false;
-                        });
-                    }, function(err){
-                        result = false;
-                    });
-                }
+            for(let web of self.cases){
+                await web.run(browser).then(function(){
+                    
+                }, function(err){
+                    result = false;
+                });
+                if(!result)break;
             }
-
             if(result){
                 resolve();
             }else{

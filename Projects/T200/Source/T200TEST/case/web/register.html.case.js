@@ -6,7 +6,6 @@ class T200RegisterCase extends T200Case {
         super();
         this.url = "/register.html";
     }
-    
 }
 
 module.exports = T200RegisterCase;

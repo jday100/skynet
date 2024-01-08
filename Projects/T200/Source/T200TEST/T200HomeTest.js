@@ -1,9 +1,9 @@
 /*
 test.run();
 test.run('firefox');
-test.run('firefox', '/case');
-test.run('firefox', '/case/T200Web.js');
-test.run('firefox', '/case/T200Web.js', 'method');
+test.run('firefox', '/', 'run');
+test.run('firefox', '/login.html', 'run');
+test.run('firefox', '/login.html', 'test_case');
 */
 
 const T200Test = require('./lib/T200Test.js');

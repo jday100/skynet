@@ -1,7 +1,7 @@
 const T200Text = require('./elements/T200Text.js');
-const T200Password = require('./elements/T200Password.js');
 const T200Email = require('./elements/T200Email.js');
 const T200Button = require('./elements/T200Button.js');
+const T200Password = require('./elements/T200Password.js');
 
 
 class T200Form {
