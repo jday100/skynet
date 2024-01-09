@@ -16,6 +16,11 @@ class T200Resource {
         return path.join(__dirname, file);
     }
 
+    static merge_test_data(name) {
+        let file = `../project/data/${name}.define`;
+        return path.join(__dirname, file);
+    }
+
     static merge_web_page(name) {
         let file = `../project/home${name}.page.js`;
         return path.join(__dirname, file);

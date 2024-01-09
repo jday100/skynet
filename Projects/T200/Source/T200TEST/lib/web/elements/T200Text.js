@@ -29,7 +29,7 @@ class T200Text {
                 }
             },function(err){
                 reject();
-            })
+            });
         });
 
         return promise;

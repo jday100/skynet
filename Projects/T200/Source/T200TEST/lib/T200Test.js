@@ -1,5 +1,6 @@
 const child = require('child_process');
 
+const T200Data = require('./T200Data.js');
 const T200Source = require('./T200Source.js');
 const T200Browser = require('./T200Browser.js');
 const T200Resource = require('./T200Resource.js');
@@ -148,12 +149,28 @@ class T200Test {
     #start_test(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            T200Browser.create(browser).then(function(browsers){
+            T200Browser.create(browser).then(async function(browsers){
                 self.browsers = browsers;
-                resolve();
+                await self.#load_data().then(resolve, reject);
             }, function(err){
                 reject();
             });
+        });
+
+        return promise;
+    }
+
+    #load_data() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let data = new T200Data();
+
+            await data.create().then(function(){
+                self.data = data;
+                resolve();
+            }, function(err){
+                reject();
+            })
         });
 
         return promise;
