@@ -2,6 +2,7 @@ const T200Link  = require('./elements/T200Link.js');
 const T200Form  = require('./T200Form.js');
 const T200Source = require('../T200Source.js');
 const T200Resource = require('../T200Resource.js');
+const T200Store = require('../db/T200Store.js');
 
 
 class T200Page {
@@ -22,7 +23,7 @@ class T200Page {
             let result = true;
 
             for(let name of self.module_defines){
-                await self.#create_module(name).then(function(){
+                await self.create_module(name).then(function(){
                     
                 }, function(err){
                     result = false;
@@ -39,7 +40,7 @@ class T200Page {
         return promise;
     }
 
-    #create_module(name) {
+    create_module(name) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let ModuleSource = T200Resource.merge_web_module(name);
@@ -147,6 +148,22 @@ class T200Page {
                 self.elements.push(form);   
                 resolve();  
             }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    create_store() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let store = new T200Store();
+
+            await store.create().then(function(){
+                self.store = store;
+                resolve();
+            }, function(){
                 reject();
             });
         });

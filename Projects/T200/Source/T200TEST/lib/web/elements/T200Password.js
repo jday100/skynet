@@ -18,48 +18,18 @@ class T200Password {
         return promise;
     }
 
-    run(browser) {
+    run(browser, data) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            browser.get(browser.url(self.url)).then(function(){
-
-            }, function(err){
-
-            }).then(function(){
-                return browser.sleep(1000);
-            }, function(err){
-
-            }).then(function(){
-                return browser.locate(self.locate);
-            }, function(err){
-
-            }).then(function(element){
-                if(undefined == element){
-
-                }else{
-                    return element.click();
-                }
-            }, function(err){
-
-            }).then(function(){
-                return browser.sleep(1000);
-            }, function(err){
-
-            }).then(function(){
-                return browser.get_current_url();
-            }, function(err){
-
-            }).then(function(url){
-                if(browser.current_url == browser.url(self.value)){
-                    resolve();
+            browser.locate(self.locate).then(function(element){
+                if(element){
+                    element.input(data).then(resolve, reject);
                 }else{
                     reject();
                 }
-            }, function(err){
-
-            }).finally(function(){
-                return browser.get(browser.url(self.url));
-            });
+            },function(err){
+                reject();
+            })
         });
 
         return promise;

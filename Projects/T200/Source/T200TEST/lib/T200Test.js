@@ -4,6 +4,10 @@ const T200Source = require('./T200Source.js');
 const T200Browser = require('./T200Browser.js');
 const T200Resource = require('./T200Resource.js');
 
+const T200Setup = require('../project/T200Setup.js');
+const T200Database = require(T200Setup.external('./library/db/T200Database.js'));
+const T200DBSetup = require('../project/T200DBSetup.js');
+
 
 class T200Test {
     constructor() {
@@ -31,7 +35,7 @@ class T200Test {
                 }).finally(function(){
                     self.#stop_test().then(function(){
 
-                    }, function(){
+                    }, function(err){
     
                     });
                 });                
@@ -115,7 +119,14 @@ class T200Test {
     #start_db() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            resolve();
+            setTimeout(function(){
+                let database = new T200Database();
+                database.setup = new T200DBSetup();
+    
+                database.start();
+                global.database = database;
+                resolve();
+            });            
         });
 
         return promise;
@@ -124,7 +135,11 @@ class T200Test {
     #stop_db() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            resolve();
+            if(global.database){
+                global.database.stop();
+            }else{
+                reject();
+            }
         });
 
         return promise;

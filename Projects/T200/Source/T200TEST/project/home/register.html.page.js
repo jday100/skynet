@@ -18,6 +18,75 @@ class T200RegisterPage extends T200Page {
         this.objects = new Array();
         this.modules = new Array();
     }
+
+    create() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            for(let name of self.module_defines){
+                await self.create_module(name).then(function(){
+                    
+                }, function(err){
+                    result = false;
+                });
+            }
+
+            if(result){
+                await self.create_store().then(async function(){
+                    await self.#clear_data().then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                }, function(err){
+                    result = false;
+                });
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #clear_data() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            let sql = "delete from person where user_id != 1";
+            
+            await self.store.connect().then(async function(){
+                await self.store.execute(sql).then(function(){
+
+                },function(err){
+                    console.log(err);
+                    result = false;
+                }).finally(async function(){
+                    await self.store.disconnect().then(function(){
+
+                    },function(err){
+                        result = false;
+                    });
+                });
+            },function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+   
 }
 
 module.exports = T200RegisterPage;

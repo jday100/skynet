@@ -28,13 +28,12 @@ class T200Form {
             if(undefined == module.data){
 
             }else{
-                /*
                 await self.#create_datas(module.data).then(function(){
 
                 }, function(){
                     result = false;
                 });
-                */
+                
                self.data_values = module.data;
             }            
 
