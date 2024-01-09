@@ -1,6 +1,6 @@
 class T200DBSetup {
     constructor() {
-        this.type = "mariadb";
+        this.type = "mysql";
         this.host = "localhost";
         this.port = 3306;
         this.database = "home";

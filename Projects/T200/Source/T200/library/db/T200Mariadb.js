@@ -2,6 +2,7 @@ const T200Error = require('../T200Error.js');
 const mariadb = require('mariadb');
 
 const T200DBClient = require('./T200DBClient.js');
+const T200MariadbClient = require('./T200MariadbClient.js');
 
 
 class T200Mariadb {
@@ -78,7 +79,7 @@ class T200Mariadb {
     }
 
     client() {
-        return new T200DBClient(this);
+        return new T200DBClient(new T200MariadbClient(this));
     }
 
 }

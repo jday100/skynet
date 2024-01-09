@@ -1,131 +1,34 @@
-const T200Error = require('../T200Error.js');
-
 class T200DBClient {
-    constructor(db) {
-        this.database = db;
+    constructor(client) {
+        this._client = client;
     }
 
     connect() {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            if(undefined == self.database){
-                reject(T200Error.build());
-            }else{
-                return self.database.connect().then(function(conn){
-                    self._conn = conn;
-                    resolve();
-                }, function(err){
-                    reject(T200Error.build());
-                });
-            }
-        });
-
-        return promise;
+        return this._client.connect();
     }
 
     disconnect() {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            if(undefined == self.database){
-                reject(T200Error.build());
-            }else{
-                return self.database.disconnect(self._conn).then(function(){
-                    delete self._conn;
-                    resolve();
-                }, function(err){
-                    reject(err);
-                });
-            }
-        });
-
-        return promise;
+        return this._client.disconnect();
     }
 
     query(sql) {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            if(undefined == self.database){
-                reject(T200Error.build());
-            }else{
-                self._conn.query(sql).then(function(data){
-                    resolve(data);
-                }, function(err){
-                    reject(T200Error.build());
-                }).catch(function(err){
-                    reject(T200Error.build());
-                });
-            }
-        });
-
-        return promise;
+        return this._client.query(sql);
     }
 
-    async execute(sql) {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            if(undefined == self.database){
-                reject(T200Error.build());
-            }else{
-                return self._conn.query(sql).then(function(data){
-                    resolve(data);
-                }, function(err){
-                    reject(T200Error.build());
-                });
-            }
-        });
-
-        return promise;
+    execute(sql) {
+        return this._client.execute(sql);
     }
 
     begin() {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            if(undefined == self.database){
-                reject(T200Error.build());
-            }else{
-                self._conn.beginTransaction().then(function(){
-                    resolve();
-                }, function(err){
-                    reject(T200Error.build());
-                });
-            }
-        });
-
-        return promise;
+        return this._client.begin();
     }
 
     commit() {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            if(undefined == self.database){
-                reject(T200Error.build());
-            }else{
-                self._conn.commit().then(function(){
-                    resolve();
-                }, function(err){
-                    reject(T200Error.build());
-                });
-            }
-        });
-
-        return promise;
+        return this._client.commit();
     }
 
     rollback() {
-        let self = this;
-        let promise = new Promise(function(resolve, reject){
-            if(undefined == self.database){
-                reject(T200Error.build());
-            }else{
-                self._conn.rollback().then(function(){
-                    resolve();
-                }, function(err){
-                    reject(T200Error.build());
-                });
-            }
-        });
-
-        return promise;
+        return this._client.rollback();
     }
 }
 

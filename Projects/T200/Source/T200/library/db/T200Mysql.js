@@ -2,6 +2,7 @@ const T200Error = require('../T200Error.js');
 const mysql = require('mysql');
 
 const T200DBClient = require('./T200DBClient.js');
+const T200MysqlClient = require('./T200MysqlClient.js');
 
 
 class T200Mysql {
@@ -36,7 +37,9 @@ class T200Mysql {
             if(undefined == self.pool){
                 reject(T200Error.build());
             }else{
-                self.pool.end().then(resolve, reject);
+                self.pool.end(function(err){
+                    resolve();
+                });
             }
         });
 
@@ -49,10 +52,12 @@ class T200Mysql {
             if(undefined == self.pool){
                 reject(T200Error.build());
             }else{
-                self.pool.getConnection().then(function(conn){
-                    resolve(conn);
-                }, function(err){
-                    reject(T200Error.build());
+                self.pool.getConnection(function(err, conn){
+                    if(err){
+                        reject(T200Error.build());
+                    }else{
+                        resolve(conn);
+                    }
                 });
             }
         });
@@ -66,11 +71,8 @@ class T200Mysql {
             if(undefined == self.pool){
                 reject(T200Error.build());
             }else{
-                conn.end().then(function(){
-                    resolve();
-                }, function(err){
-                    reject(T200Error.build());
-                });
+                conn.release();
+                resolve();
             }
         });
 
@@ -78,7 +80,7 @@ class T200Mysql {
     }
 
     client() {
-        return new T200DBClient(this);
+        return new T200DBClient(new T200MysqlClient(this));
     }
 }
 

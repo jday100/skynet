@@ -22,7 +22,7 @@ class T200Test {
                 self.#start_test(browser).then(function(){
                     self.#run_test(source, method).then(function(){
 
-                    }, function(){
+                    }, function(err){
 
                     }).finally(function(){
                         self.#stop().then(function(){
