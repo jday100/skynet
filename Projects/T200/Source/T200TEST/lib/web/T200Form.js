@@ -245,12 +245,13 @@ class T200Form {
                             }, function(err){
                                 result = false;
                             }).then(function(url){
-                                let result = `${browser.root}${self.value}`;
-                                if(result == url){
-                                    resolve();
+                                let value = `${browser.root}${self.value}`;
+                                if(value == url){
+                                    //resolve();
                                 }else{
-                                    console.log(`${self.name} ${result}`);
-                                    reject();
+                                    console.log(`${self.name} ${value}`);
+                                    result = false;
+                                    //reject();
                                 }
                             }, function(err){
                                 result = false;
@@ -259,7 +260,7 @@ class T200Form {
                             result = false;
                         }
                     }, function(err){
-
+                        result = false;
                     });
                 }
  

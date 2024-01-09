@@ -54,6 +54,23 @@ class T200Case {
 
         return promise;
     }
+
+    test_case(browser) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            if(self.page){
+                self.page.test_case(browser).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                });
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
 }
 
 module.exports = T200Case;

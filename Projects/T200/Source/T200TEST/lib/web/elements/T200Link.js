@@ -50,7 +50,7 @@ class T200Link {
             }, function(err){
 
             }).then(function(url){
-                if(browser.current_url == browser.url(self.value)){
+                if(url == browser.url(self.value)){
                     resolve();
                 }else{
                     reject();

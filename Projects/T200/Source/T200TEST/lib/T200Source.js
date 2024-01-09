@@ -58,6 +58,26 @@ class T200Source {
 
         return promise;
     }
+
+    
+    static test(browser, obj) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+     
+            if(obj){          
+                    await obj.test_case(browser).then(function(){
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });              
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
 }
 
 module.exports = T200Source;

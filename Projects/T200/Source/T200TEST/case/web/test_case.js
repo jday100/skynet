@@ -5,7 +5,8 @@ class T200WebTestCase {
     constructor() {
         this.html = [
             "/register.html",
-            "/login.html"
+            "/login.html",
+            "/content/person/profile_init.html"
         ];
 
         this.cases = new Array();
