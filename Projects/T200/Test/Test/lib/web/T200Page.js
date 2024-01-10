@@ -195,6 +195,29 @@ class T200Page {
     }
 
 
+    test_case1(browser) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            for(let element of self.elements){
+                await element.run(browser).then(function(){
+
+                }, function(err){
+                    result = false;
+                });
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
     test_case(browser) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){

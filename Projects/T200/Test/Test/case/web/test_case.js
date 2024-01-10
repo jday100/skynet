@@ -4,7 +4,8 @@ const T200Web = require('../../lib/web/T200Web.js');
 class T200WebTestCase {
     constructor() {
         this.html = [
-            "/link.html"
+            "/link.html",
+            "/form.html"
         ];
 
         this.cases = new Array();

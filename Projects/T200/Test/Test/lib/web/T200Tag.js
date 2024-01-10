@@ -6,7 +6,8 @@ class T200Tag {
     get(url) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.browser.get(self.browser.url(url)).then(function(){
+            let page = self.browser.url(url);
+            self.browser.get(page).then(function(){
 
             }, function(err){
 
@@ -18,8 +19,41 @@ class T200Tag {
                 return self.browser.get_current_url();
             }, function(err){
 
-            }).then(function(value){
-                if(value == self.browser.url(self.url)){
+            }).then(function(url){
+                if(url == page){
+                    resolve();
+                }else{
+                    reject();
+                }
+            }, function(err){
+
+            });
+        });
+
+        return promise;
+    }
+
+    click() {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            self.browser.locate(self.locate).then(function(element){
+                if(undefined == element){
+
+                }else{
+                    return element.click();
+                }                
+            }, function(err){
+
+            }).then(function(){
+                return self.browser.sleep(1000);
+            }, function(err){
+
+            }).then(function(){
+                return self.browser.get_current_url();
+            }, function(err){
+
+            }).then(function(url){
+                if(url == self.browser.url(self.value)){
                     resolve();
                 }else{
                     reject();
@@ -32,46 +66,35 @@ class T200Tag {
         return promise;
     }
 
-    click() {
+    change(handle) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            self.browser.locate(self.locate).then(function(element){
-                return element;
+            self.browser.change(handle).then(function(){
+
             }, function(err){
 
-            }).then(function(element){
-                if(undefined == element){
-                    reject();
+            }).then(function(){
+                return self.browser.get_current_url();
+            }, function(err){
+
+            }).then(function(url){
+                if(url == self.browser.url(self.value)){
+                    resolve();
                 }else{
-                    return element.click();
-                }
-            }, function(err){
-
-            }).then(function(){
-                return self.browser.sleep(1000);
-            }, function(err){
-
-            }).then(function(){
-                if(undefined == self.target){
-                    return undefined;
-                }else if("blank" == self.target){
-                    return self.browser.get_new_window();
-                }
-            }, function(err){
-
-            }).then(function(win){
-                if(undefined == win){
                     reject();
-                }else{
-                    return self.browser.get_current_url();
                 }
             }, function(err){
-
-            }).then(function(){
-                
-            }, function(err){
-
+                reject();
             });
+        });
+
+        return promise;
+    }
+
+    get_new_window() {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            resolve();
         });
 
         return promise;
