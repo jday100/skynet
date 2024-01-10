@@ -1,6 +1,9 @@
-class T200Link {
-    constructor() {
+const T200Tag = require('../T200Tag.js');
 
+
+class T200Link extends T200Tag {
+    constructor() {
+        super();
     }
 
     create(element) {
