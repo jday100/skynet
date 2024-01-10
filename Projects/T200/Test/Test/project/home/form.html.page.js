@@ -2,7 +2,7 @@ const T200Page = require('../../lib/web/T200Page.js');
 const T200Form  = require('../../lib/web/T200Form.js');
 
 
-class T200LoginPage extends T200Page {
+class T200FormPage extends T200Page {
     constructor(name) {
         super(name);
 
@@ -11,9 +11,7 @@ class T200LoginPage extends T200Page {
         ];
 
         this.module_defines = [
-            "nav",
-            "channel",
-            "login_form"
+            "form"
         ];
 
         this.objects = new Array();
@@ -50,4 +48,4 @@ class T200LoginPage extends T200Page {
     }
 }
 
-module.exports = T200LoginPage;
+module.exports = T200FormPage;

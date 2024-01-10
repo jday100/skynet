@@ -37,8 +37,22 @@ class T200WebTestCase {
 
     test_case(browser) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
-            resolve();
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            for(let web of self.cases){
+                await web.test_case(browser).then(function(){
+                    
+                }, function(err){
+                    result = false;
+                });
+                if(!result)break;
+            }
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;

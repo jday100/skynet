@@ -153,6 +153,11 @@ class T200Browser {
         return self.browser.close();
     }
 
+    close() {
+        let self = this;
+        return self.browser.close();
+    }
+
 }
 
 module.exports = T200Browser;

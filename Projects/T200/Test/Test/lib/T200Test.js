@@ -6,6 +6,7 @@ const T200Browser = require('./T200Browser.js');
 const T200Resource = require('./T200Resource.js');
 
 const T200Setup = require('../project/T200Setup.js');
+const { error } = require(T200Setup.external('./library/T200Lib.js'));
 const T200Database = require(T200Setup.external('./library/db/T200Database.js'));
 const T200DBSetup = require('../project/T200DBSetup.js');
 
@@ -26,7 +27,7 @@ class T200Test {
                     }, function(err){
                         result = false;
                     }).finally(async function(){
-                        await self.#stop().then(function(){
+                        await self.#stop_test().then(function(){
 
                         }, function(err){
                             result = false;
@@ -35,7 +36,7 @@ class T200Test {
                 }, function(err){
                     result = false;
                 }).finally(async function(){
-                    await self.#stop_test().then(function(){
+                    await self.#stop().then(function(){
 
                     }, function(err){
                         result = false;
@@ -100,16 +101,16 @@ class T200Test {
         let promise = new Promise(function(resolve, reject){
             self.#start_db().then(function(){
 
-            }, function(){
-
+            }, function(err){
+                return error();
             }).then(function(){
                 return self.#start_web();
-            }, function(){
-
+            }, function(err){
+                return error();
             }).then(function(){
                 resolve();
-            }, function(){
-
+            }, function(err){
+                reject();
             });
         });
 
@@ -118,20 +119,25 @@ class T200Test {
 
     #stop() {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
-            self.#stop_web().then(function(){
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            await self.#stop_web().then(function(){
 
             }, function(err){
-
-            }).then(function(){
+                result = false;
+            }).finally(function(){
                 return self.#stop_db();
-            }, function(err){
-
             }).then(function(){
-                resolve();
+
             }, function(err){
-                reject();
+                result = false;
             });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;
@@ -153,11 +159,13 @@ class T200Test {
     #stop_web() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let result = self.server.kill(SIGTERM);
+            let result = self.server.kill('SIGTERM');
 
+            self.server.emit('SIGINT');
             self.server.emit('SIGTERM');
 
-            process.emit(SIGINT);
+            process.emit('SIGINT');
+            process.emit('SIGTERM');
             resolve();
         });
 
@@ -167,13 +175,16 @@ class T200Test {
     #start_db() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            setTimeout(function(){
+            setTimeout(async function(){
                 let database = new T200Database();
                 database.setup = new T200DBSetup();
-    
-                database.start();
-                global.database = database;
-                resolve();
+
+                database.start().then(function(){
+                    global.database = database;
+                    resolve();
+                }, function(err){
+                    reject();
+                });
             });            
         });
 
@@ -225,8 +236,22 @@ class T200Test {
 
     #stop_test() {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
-            resolve();
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            for(let browser of self.browsers){
+                await browser.close().then(function(){
+
+                }, function(err){
+                    result = false;
+                });
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;
@@ -240,7 +265,11 @@ class T200Test {
                 if(undefined == source){
                     await self.#search(browser).then(resolve, reject);
                 }else{
-                    await self.#execute(browser, source, method).then(resolve, reject);
+                    if(source.endsWith('/')){
+                        await self.#search_test(browser, source, method).then(resolve, reject);
+                    }else{
+                        await self.#execute(browser, source, method).then(resolve, reject);
+                    }                    
                 }
             }
             
@@ -258,6 +287,29 @@ class T200Test {
             if(file){
                 T200Source.create(file).then(function(obj){
                     T200Source.run(browser, obj).then(function(){
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                }, function(err){
+                    reject();
+                });
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #search_test(browser, source, method) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let file = T200Resource.merge_test_case(source);
+
+            if(file){
+                T200Source.create(file).then(function(obj){
+                    T200Source.test(browser, obj).then(function(){
                         resolve();
                     }, function(err){
                         reject();
@@ -300,11 +352,11 @@ class T200Test {
                 T200Source.create(file).then(function(obj){
                     T200Source.test(browser, obj).then(function(){
                         resolve();
-                    }, function(){
+                    }, function(err){
                         reject();
                     });
-                }, function(){
-
+                }, function(err){
+                    reject();
                 });
             }else{
                 reject();

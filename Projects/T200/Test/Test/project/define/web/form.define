@@ -1,22 +1,15 @@
 {
-    "name"  : "login_form",
+    "name"  : "form",
     "type"  : "form",
     "submit"    : "submit",
-    "value"     : "/content/person/profile_init.html",
+    "value"     : "/form",
     "fields"    : [
         {
-            "name"  : "username",
+            "name"  : "text",
             "type"  : "text",
             "locate"    : {
                 "type"  : "name",
-                "value" : "username"
-            }
-        },{
-            "name"  : "password",
-            "type"  : "password",
-            "locate"    : {
-                "type"  : "name",
-                "value" : "password"
+                "value" : "text"
             }
         }
     ],
@@ -25,15 +18,14 @@
             "name"  : "submit",
             "type"  : "button",
             "locate"    : {
-                "type"  : "id",
+                "type"  : "name",
                 "value" : "submit"
             }
         }
     ],
     "data"  : [
         {
-            "username"  : "111111",
-            "password"  : "111111"
+            "text"  : "111111"
         }
     ]
 }
