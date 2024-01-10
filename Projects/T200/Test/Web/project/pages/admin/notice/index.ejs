@@ -1,0 +1,119 @@
+<form id="form">
+    <div class="search_box">
+        <input type="hidden" name="test">
+        <input type="hidden" name="page" value="1">
+        <input type="text" name="search">
+        <button class="search_button">Search</button>
+    </div>
+    <div>
+        <div class="paging_top_box">
+            <div class="paging">
+                <% 
+                if(paging){ 
+                    if(paging.first){ 
+                %>
+                    <a href="#" onclick="turning(1, $.id('list_box'), '/admin/notice/list');">First</a>
+                    <% 
+                        } 
+                        if(paging.pages){ 
+                            paging.pages.forEach(item=> {
+                    %>
+                        <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/admin/notice/list');"><%=item%></a>
+                    <% 
+                        }); 
+                    } 
+                        if(paging.last){ %>
+                            <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/admin/notice/list');">Last</a>
+                <% 
+                        } 
+                    } 
+                %>
+            </div>
+        </div>
+        
+        <div class="item_box">
+            <div class="control_panel">
+                <button onclick="hit_delete('form', $.id('list_box'), '/admin/notice/list');">Delete</button>
+                <select class="status_box" onchange="change_status('form', $.id('list_box'), '/admin/notice/list');">
+                    <option>All</option>
+                    <option>Unreviewed</option>
+                    <option>Reviewed</option>
+                    <option>Deleted</option>
+                </select>
+                <button onclick="hit_approve('form', $.id('list_box'), '/admin/notice/list');" class="approve_button">Approve</button>
+            </div>
+ 
+                <% 
+                if(0 < notices.length){ 
+                    let i = 0;
+                    
+                    notices.forEach(item=> {
+                        let value = "id" + i;
+                        let title = "status" + i;
+                %>
+                    <div class="item">
+                        <div>
+                            <a target="_blank" onclick="hit('nid', <%=item.id%>);" href="/notice/notice.html?id=<%=item.id%>"><%=item.title%></a>
+                        </div>
+                        <div>
+                            <input type="hidden" id="<%=value%>" value="<%=item.status%>">
+                            <input disabled type="text" id="<%=title%>" value="">
+
+                            <input type="hidden" id="time<%=i%>" value="<%=item.create_time%>">
+                            <input disabled type="text" id="time_title<%=i%>" value="">
+                            <input type="checkbox" name="ids" value="">
+                        </div>
+                    </div>
+                <% 
+                    i++;
+                    }); 
+                }else{ 
+                    %>
+                        <div class="item">
+                            <div>
+                                <a href="/notice/notice.html">unpublished</a>
+                            </div>
+                            <div>
+                                2023-10-10 10:10
+                            </div>
+                        </div>
+                    <% 
+                } 
+                %>
+                <div class="control_panel">
+                    <button>Delete</button>
+                    <select class="status_box">
+                        <option>All</option>
+                        <option>Unreviewed</option>
+                        <option>Reviewed</option>
+                        <option>Deleted</option>
+                    </select>
+                    <button class="approve_button">Approve</button>
+                </div>
+        </div>
+        <div class="paging_bottom_box">
+            <div class="paging">
+                <% 
+                if(paging){ 
+                    if(paging.first){ 
+                %>
+                    <a href="#" onclick="turning(1, $.id('list_box'), '/admin/notice/list');">First</a>
+                    <% 
+                        } 
+                        if(paging.pages){ 
+                            paging.pages.forEach(item=> {
+                    %>
+                        <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/admin/notice/list');"><%=item%></a>
+                    <% 
+                        }); 
+                    } 
+                        if(paging.last){ %>
+                            <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/admin/notice/list');">Last</a>
+                <% 
+                        } 
+                    } 
+                %>
+            </div>
+        </div>
+    </div>
+</form>

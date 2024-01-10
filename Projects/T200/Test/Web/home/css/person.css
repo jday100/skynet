@@ -1,0 +1,191 @@
+#list_box > div {
+    width: 800px;
+    line-height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+}
+
+#list_box > div > div {
+    width: 800px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#list_box > div > div > div {
+    width: 700px;
+    line-height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+#list_box > div > div > div label {
+    display: block;
+    width: 120px;
+}
+
+#list_box > div > div > div input {
+    width: 200px;
+}
+
+#list_box > div > div > div select {
+    width: 100px;
+}
+
+#list_box > div > div button {
+    width: 60px;
+}
+
+.country {
+    line-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.country > input {
+    width: 100px;
+}
+
+.region {
+    line-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.region > input {
+    width: 100px;
+}
+
+dl {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#list_box > div > button {
+    width: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+form > div {
+    width: 800px;
+    line-height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+form > div > div {
+    width: 800px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form > div > div > div {
+    width: 700px;
+    line-height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+form > div > div > div label {
+    display: block;
+    width: 120px;
+}
+
+form > div > div > div input {
+    width: 200px;
+}
+
+form > div > div > div select {
+    width: 100px;
+}
+
+form > div > div button {
+    width: 60px;
+}
+
+form > div > button {
+    width: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+textarea {
+    margin-left: 120px;
+    
+}
+
+label {
+    width: 100px;
+    display:block;
+}
+
+input {
+    width: 200px;
+}
+
+.account {
+
+}
+
+
+#account > div {
+    width: 770px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#account > div > div {
+    line-height: 35px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.profile {
+
+}
+
+
+#profile > div {
+    width: 770px;
+    line-height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#profile > div > div {
+    line-height: 35px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+dl > dd > div {
+    line-height: 35px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+button {
+    width: 60px;
+    margin-left: 20px;
+}

@@ -1,0 +1,79 @@
+<form id="form" onsubmit="return false;">
+<input type="hidden" name="test">
+<input type="hidden" name="id" value="<%=id%>">
+<fieldset>
+    <legend>Site</legend>
+    <div class="setting_box">
+        <label>Open</label>
+        <input type="radio" name="site" value="1" <%=site ? "checked" : ""%>>
+        <label>Close</label>
+        <input type="radio" name="site" value="0" <%=site ? "" : "checked"%>>
+    </div>
+</fieldset>
+<fieldset>
+    <legend>Register</legend>
+    <div class="setting_box">
+        <label>Open</label>
+        <input type="radio" name="register" value="1" <%=register ? "checked" : ""%>>
+        <label>Close</label>
+        <input type="radio" name="register" value="0" <%=register ? "" : "checked"%>>
+    </div>
+</fieldset>
+<fieldset>
+    <legend>Login</legend>
+    <div class="setting_box">
+        <label>Open</label>
+        <input type="radio" name="login" value="1" <%=login ? "checked" : ""%>>
+        <label>Close</label>
+        <input type="radio" name="login" value="0" <%=login ? "" : "checked"%>>
+    </div>
+</fieldset>                       
+<fieldset>
+    <legend>Publish</legend>
+    <div class="setting_box">
+        <label>Open</label>
+        <input type="radio" name="publish" value="1" <%=publish ? "checked" : ""%>>
+        <label>Close</label>
+        <input type="radio" name="publish" value="0" <%=publish ? "" : "checked"%>>
+    </div>
+</fieldset>         
+<fieldset>
+    <legend>Reply</legend>
+    <div class="setting_box">
+        <label>Open</label>
+        <input type="radio" name="reply" value="1" <%=reply ? "checked" : ""%>>
+        <label>Close</label>
+        <input type="radio" name="reply" value="0" <%=reply ? "" : "checked"%>>
+    </div>
+</fieldset>       
+<fieldset>
+    <legend>List</legend>
+    <div class="setting_box">
+        <label>Open</label>
+        <input type="radio" name="list" value="1" <%=list ? "checked" : ""%>>
+        <label>Close</label>
+        <input type="radio" name="list" value="0" <%=list ? "" : "checked"%>>
+    </div>
+</fieldset>       
+<fieldset>
+    <legend>Search</legend>
+    <div class="setting_box">
+        <label>Open</label>
+        <input type="radio" name="search" value="1" <%=search ? "checked" : ""%>>
+        <label>Close</label>
+        <input type="radio" name="search" value="0" <%=search ? "" : "checked"%>>
+    </div>
+</fieldset>       
+<fieldset>
+    <legend>Board</legend>
+    <div class="setting_box">
+        <label>Open</label>
+        <input type="radio" name="board" value="1" <%=board ? "checked" : ""%>>
+        <label>Close</label>
+        <input type="radio" name="board" value="0" <%=board ? "" : "checked"%>>
+    </div>
+</fieldset>
+<div>
+    <button id="submit">Save</button>
+</div>
+</form>

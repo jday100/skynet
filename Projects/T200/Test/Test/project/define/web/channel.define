@@ -1,0 +1,46 @@
+{
+    "name"  : "channel",
+    "fields"    : [
+        {
+            "name"  : "home",
+            "type"  : "link",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "css",
+                "value" : ".nav_channel > a[locale=\"home\"]"
+            }
+        },{
+            "name"  : "house",
+            "type"  : "link",
+            "value" : "/house/index.html",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"house\"]"
+            }
+        },{
+            "name"  : "job",
+            "type"  : "link",
+            "value" : "/job/index.html",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"job\"]"
+            }
+        },{
+            "name"  : "trading",
+            "type"  : "link",
+            "value" : "/trading/index.html",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"trading\"]"
+            }
+        },{
+            "name"  : "exchange",
+            "type"  : "link",
+            "value" : "/exchange/index.html",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"exchange\"]"
+            }
+        }
+    ]
+}

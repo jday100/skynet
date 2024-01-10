@@ -1,0 +1,155 @@
+<fieldset class="title">
+    <legend><a href="/house/rent.html" locale="rent">Rent</a></legend>
+    <div class="channel">
+        <fieldset>
+            <legend><a href="/house/rent_long.html" locale="long">Long</a></legend>
+            <div>
+                <%
+                    k = rent_longs.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/house/house_rent.html?id=<%=rent_longs[i].id%>"><%=rent_longs[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=rent_longs[i].nickname%></a>
+                                    <div class="time" id="rent_longs_time<%=i%>"></div>
+                                    <input type="hidden" id="rent_longs<%=i%>" value="<%=rent_longs[i].create_time%>">                                                          
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/house/house_rent.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><a href="/house/rent_short.html" locale="short">Short</a></legend>
+            <div>
+                <%
+                    k = rent_shorts.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/house/house_rent.html?id=<%=rent_shorts[i].id%>"><%=rent_shorts[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=rent_shorts[i].nickname%></a>
+                                    <div class="time" id="rent_shorts_time<%=i%>"></div>
+                                    <input type="hidden" id="rent_shorts<%=i%>" value="<%=rent_shorts[i].create_time%>">                                                          
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/house/house_rent.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+    </div>
+</fieldset>
+
+<fieldset class="title">
+    <legend><a href="/house/wanted.html" locale="house_wanted">Wanted</a></legend>
+    <div class="channel">
+        <fieldset>
+            <legend><a href="/house/wanted_long.html" locale="long">Long</a></legend>
+            <div>
+                <%
+                    k = wanted_longs.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/house/house_wanted.html?id=<%=wanted_longs[i].id%>"><%=wanted_longs[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=wanted_longs[i].nickname%></a>
+                                    <div class="time" id="wanted_longs_time<%=i%>"></div>
+                                    <input type="hidden" id="wanted_longs<%=i%>" value="<%=wanted_longs[i].create_time%>">                                                          
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/house/house_wanted.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><a href="/house/wanted_short.html" locale="short">Short</a></legend>
+            <div>
+                <%
+                    k = wanted_shorts.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/house/house_wanted.html?id=<%=wanted_shorts[i].id%>"><%=wanted_shorts[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=wanted_shorts[i].nickname%></a>
+                                    <div class="time" id="wanted_shorts_time<%=i%>"></div>
+                                    <input type="hidden" id="wanted_shorts<%=i%>" value="<%=wanted_shorts[i].create_time%>">                                                          
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/house/house_wanted.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+    </div>
+</fieldset>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta name="generator" content="Bluefish 2.2.10">
+    <meta name="author" content="user">
+    <meta name="date" content="2023-10-27T18:30:03+0800">
+    <meta name="copyright" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta http-equiv="expires" content="0">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/home.css">
+
+
+    <script src="/js/t200.js"></script>
+    <script src="/js/t200home.js"></script>
+
+    <script src="/js/t200vessel.js"></script>
+    <script src="/js/t200city_vessel.js"></script>
+
+    <script src="/js/t200localize.js"></script>
+    <script>
+        T200Localize.script("/js/t200city_dev.js");
+    </script>
+
+</head>
+
+<body>
+
+    <div>
+
+        <nav>
+            <div>
+                <a href="/" locale="home">Home</a> |
+                <a href="/about.html" locale="about">About</a>
+            </div>
+            <div id="nav_right">
+                <a target="_blank" href="/login.html" locale="login">Login</a> |
+                <a href="/register.html" locale="register">Register</a>
+            </div>
+        </nav>
+
+        <header>
+            <img src="/images/home.gif" />
+        </header>
+
+        <nav class="nav_channel">
+            <a href="/" locale="home">Home</a> -
+            <a href="/house/index.html" locale="house">House</a> -
+            <a href="/job/index.html" locale="job">Job</a> -
+            <a href="/trading/index.html" locale="trading">Trading</a> -
+            <a href="/exchange/index.html" locale="exchange">Exchange</a>
+        </nav>
+
+
+
+        <fieldset>
+            <legend><a href="/region/index.html" locale="region">Region</a></legend>
+            <div id="region_box" class="region">
+
+            </div>
+        </fieldset>
+
+        <fieldset class="title">
+            <legend><a id="house" href="/house/index_city.html" locale="house">House</a></legend>
+            <div class="channel">
+                <div id="list_box">
+                    <form id="form" class="list_form">
+                        <input type="hidden" name="test">
+                        <input type="hidden" id="id" name="id" value="">
+                        <input type="hidden" name="search">
+                    </form>
+                </div>              
+            </div>
+        </fieldset>
+
+        <footer>
+
+        </footer>
+
+    </div>
+
+</body>
+
+<script>
+    $.win.onload = function () {
+        nav_check();
+        
+        update_id("/house/index_city.html", "house", "id");
+        
+        let data = formtostring('form');
+        $.post('/house/city/list', data, function (result) {
+            $.id("list_box").innerHTML = result;
+            update_times("rent_longs");
+            update_times("rent_shorts");
+            update_times("wanted_longs");
+            update_times("wanted_shorts");
+
+            let localize = new T200Localize();
+            city_dev_setting($.id('id').value);
+        }, function () {
+            alert('Load Failure!');
+        });
+    };
+</script>
+
+</html>

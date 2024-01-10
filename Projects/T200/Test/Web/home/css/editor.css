@@ -1,0 +1,27 @@
+.form_value > div > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form_value > div > div > div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.form_value > div > div > div > label {
+    width: 100px;
+}
+
+.form_value > div > div > div > input {
+    width: 500px;
+}
+
+
+.form_value > div > div > div + div {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}

@@ -1,0 +1,155 @@
+<fieldset class="title">
+    <legend><a href="/job/recruit.html" locale="recruit">Recruit</a></legend>
+    <div class="channel">
+        <fieldset>
+            <legend><a href="/job/recruit_full.html" locale="full">Full</a></legend>
+            <div>
+                <%
+                    k = recruit_fulls.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/job/job_recruit.html?id=<%=recruit_fulls[i].id%>"><%=recruit_fulls[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=recruit_fulls[i].nickname%></a>
+                                    <div class="time" id="recruit_fulls_time<%=i%>"></div>
+                                    <input type="hidden" id="recruit_fulls<%=i%>" value="<%=recruit_fulls[i].create_time%>">                                                          
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/job/job_recruit.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><a href="/job/recruit_part.html" locale="part">Part</a></legend>
+            <div>
+                <%
+                    k = recruit_parts.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/job/job_recruit.html?id=<%=recruit_parts[i].id%>"><%=recruit_parts[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=recruit_parts[i].nickname%></a>
+                                    <div class="time" id="recruit_parts_time<%=i%>"></div>
+                                    <input type="hidden" id="recruit_parts<%=i%>" value="<%=recruit_parts[i].create_time%>">                                                          
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/job/job_recruit.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+    </div>
+</fieldset>
+
+<fieldset class="title">
+    <legend><a href="/job/wanted.html" locale="job_wanted">Wanted</a></legend>
+    <div class="channel">
+        <fieldset>
+            <legend><a href="/job/wanted_full.html" locale="full">Full</a></legend>
+            <div>
+                <%
+                    k = wanted_fulls.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/job/job_wanted.html?id=<%=wanted_fulls[i].id%>"><%=wanted_fulls[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=wanted_fulls[i].nickname%></a>
+                                    <div class="time" id="wanted_fulls_time<%=i%>"></div>
+                                    <input type="hidden" id="wanted_fulls<%=i%>" value="<%=wanted_fulls[i].create_time%>">                                                          
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/job/job_wanted.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><a href="/job/wanted_part.html" locale="part">Part</a></legend>
+            <div>
+                <%
+                    k = wanted_parts.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/job/job_wanted.html?id=<%=wanted_parts[i].id%>"><%=wanted_parts[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=wanted_parts[i].nickname%></a>
+                                    <div class="time" id="wanted_parts_time<%=i%>"></div>
+                                    <input type="hidden" id="wanted_parts<%=i%>" value="<%=wanted_parts[i].create_time%>">                                                          
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/job/job_wanted.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+    </div>
+</fieldset>

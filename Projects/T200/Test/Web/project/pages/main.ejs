@@ -1,0 +1,352 @@
+<fieldset>
+    <legend><a href="/notice/index.html" locale="notice">Notice</a></legend>
+    <div class="notice">
+        <%
+            let i = 0;
+            let k = notices.length;
+            for(let m=0;m<3;m++){
+                %>
+                <div>
+                <%
+                    for(let n=0;n<3;n++){
+                        if(i < k){
+                            %>
+                                <div>
+                                    <a target="_blank" onclick="hit('nid', <%=notices[i].id%>)" href="/notice/notice.html?id=<%=notices[i].id%>"><%=notices[i].title%></a>
+                                </div>
+                            <%
+                        }else{
+                            %>
+                                <div>
+                                    <a target="_blank" href="/notice/notice.html">unpublished</a>
+                                </div>
+                            <%
+                        }
+                        i++;
+                    }
+                %>
+                </div>
+                <%
+            }
+        %>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend><a href="/region/index.html" locale="region">Region</a></legend>
+    <div id="region_box" class="region">
+
+    </div>
+</fieldset>
+
+<fieldset class="title">
+    <legend><a href="/house/index.html" locale="house">House</a></legend>
+    <div class="channel">
+        <fieldset>
+            <legend><a href="/house/rent.html" locale="rent">Rent</a></legend>
+            <div>
+                <%
+                    k = house_rents.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/house/house_rent.html?id=<%=house_rents[i].id%>"><%=house_rents[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=house_rents[i].nickname%></a>
+                                    <div class="time" id="house_rents_time<%=i%>"></div>
+                                    <input type="hidden" id="house_rents<%=i%>" value="<%=house_rents[i].create_time%>">                            
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/house/house_rent.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><a href="/house/wanted.html" locale="house_wanted">Wanted</a></legend>
+            <div>
+                <%
+                    k = house_wanteds.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/house/house_wanted.html?id=<%=house_wanteds[i].id%>"><%=house_wanteds[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=house_wanteds[i].nickname%></a>
+                                    <div class="time" id="house_wanteds_time<%=i%>"></div>
+                                    <input type="hidden" id="house_wanteds<%=i%>" value="<%=house_wanteds[i].create_time%>">                                                          
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/house/house_wanted.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+    </div>
+</fieldset>
+
+<fieldset class="title">
+    <legend><a href="/job/index.html" locale="job">Job</a></legend>
+    <div class="channel">
+        <fieldset>
+            <legend><a href="/job/recruit.html" locale="recruit">Recruit</a></legend>
+            <div>
+                <%
+                    k = job_recruits.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/job/job_recruit.html?id=<%=job_recruits[i].id%>"><%=job_recruits[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=job_recruits[i].nickname%></a>
+                                    <div class="time" id="job_recruits_time<%=i%>"></div>
+                                    <input type="hidden" id="job_recruits<%=i%>" value="<%=job_recruits[i].create_time%>">                             
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/job/job_recruit.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><a href="/job/wanted.html" locale="job_wanted">Wanted</a></legend>
+            <div>
+                <%
+                    k = job_wanteds.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/job/job_wanted.html?id=<%=job_wanteds[i].id%>"><%=job_wanteds[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=job_wanteds[i].nickname%></a>
+                                    <div class="time" id="job_wanteds_time<%=i%>"></div>
+                                    <input type="hidden" id="job_wanteds<%=i%>" value="<%=job_wanteds[i].create_time%>">                                 
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/job/job_wanted.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+    </div>
+</fieldset>
+
+<fieldset class="title">
+    <legend><a href="/trading/index.html" locale="trading">Trading</a></legend>
+    <div class="channel">
+        <fieldset>
+            <legend><a href="/trading/sell.html" locale="sell">Sell</a></legend>
+            <div>
+                <%
+                    k = trading_sells.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/trading/trading_sell.html?id=<%=trading_sells[i].id%>"><%=trading_sells[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=trading_sells[i].nickname%></a>
+                                    <div class="time" id="trading_sells_time<%=i%>"></div>
+                                    <input type="hidden" id="trading_sells<%=i%>" value="<%=trading_sells[i].create_time%>">                               
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/trading/trading_sell.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><a href="/trading/buy.html" locale="buy">Buy</a></legend>
+            <div>
+                <%
+                    k = trading_buys.length;
+                    for(let i=0;i<5;i++){
+                        if(i < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/trading/trading_buy.html?id=<%=trading_buys[i].id%>"><%=trading_buys[i].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=trading_buys[i].nickname%></a>
+                                    <div class="time" id="trading_buys_time<%=i%>"></div>
+                                    <input type="hidden" id="trading_buys<%=i%>" value="<%=trading_buys[i].create_time%>">                               
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/trading/trading_buy.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+    </div>
+</fieldset>
+
+<fieldset class="title">
+    <legend><a href="/exchange/index.html" locale="exchange">Exchange</a></legend>
+    <div class="channel">
+        <fieldset>
+            <div>
+                <%
+                    k = exchanges.length;
+                    for(let i=0;i<5;i++){
+                        let m = i * 2;
+                        if(m < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/exchange/exchange.html?id=<%=exchanges[m].id%>"><%=exchanges[m].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=exchanges[m].nickname%></a>
+                                    <div class="time" id="exchanges_time<%=m%>"></div>
+                                    <input type="hidden" id="exchanges<%=m%>" value="<%=exchanges[m].create_time%>">                               
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/exchange/exchange.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+        <fieldset>
+            <div>
+                <%
+                    k = exchanges.length;
+                    for(let i=0;i<5;i++){
+                        let m = (i * 2) + 1;
+                        if(m < k){
+                            %>
+                            <div>
+                                <div class="left">
+                                    <a target="_blank" href="/exchange/exchange.html?id=<%=exchanges[m].id%>"><%=exchanges[m].title%></a>
+                                </div>
+                                <div class="right">
+                                    <a href="/person/person.html"><%=exchanges[m].nickname%></a>
+                                    <div class="time" id="exchanges_time<%=m%>"></div>
+                                    <input type="hidden" id="exchanges<%=m%>" value="<%=exchanges[m].create_time%>">                                 
+                                </div>
+                            </div>
+                            <%
+                        }else{
+                            %>
+                            <div>
+                                <div>
+                                    <a target="_blank" href="/exchange/exchange.html">unpublished</a>
+                                </div>
+                                <div>
+                                    <a href="">any</a>
+                                    2023-10-10 10:10                                
+                                </div>
+                            </div>
+                            <%
+                        }
+                    }
+                %>
+            </div>
+        </fieldset>
+    </div>
+</fieldset>

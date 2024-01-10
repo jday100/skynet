@@ -1,0 +1,74 @@
+<input type="hidden" id="id" name="id" value="<%=city_id%>">
+<fieldset>
+    <legend><a href="/job/wanted_full_city.html?id=<%=city_id%>" locale="full">Full</a></legend>
+    <div class="channel_box">
+        <%
+            let k = job_fulls.length;
+            for(let i=0;i<10;i++){
+                if(i < k){
+                    %>
+                    <div class="channel_item">
+                        <div class="left">
+                            <a target="_blank" href="/job/job_wanted.html?id=<%=job_fulls[i].id%>"><%=job_fulls[i].title%></a>
+                        </div>
+                        <div class="right">
+                            <a href="/person/person.html"><%=job_fulls[i].nickname%></a>
+                            <div class="time" id="job_fulls_time<%=i%>"></div>
+                            <input type="hidden" id="job_fulls<%=i%>" value="<%=job_fulls[i].create_time%>">                                                          
+                        </div>
+                    </div>
+                    <%
+                }else{
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/job/job_wanted.html">unpublished</a>
+                        </div>
+                        <div>
+                            <a href="">any</a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }
+            }
+        %>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend><a href="/job/wanted_part_city.html?id=<%=city_id%>" locale="part">Part</a></legend>
+    <div class="channel_box">
+        <%
+            k = job_parts.length;
+            for(let i=0;i<10;i++){
+                if(i < k){
+                    %>
+                    <div class="channel_item">
+                        <div class="left">
+                            <a target="_blank" href="/job/job_wanted.html?id=<%=job_parts[i].id%>"><%=job_parts[i].title%></a>
+                        </div>
+                        <div class="right">
+                            <a href="/person/person.html"><%=job_parts[i].nickname%></a>
+                            <div class="time" id="job_parts_time<%=i%>"></div>
+                            <input type="hidden" id="job_parts<%=i%>" value="<%=job_parts[i].create_time%>">                                                          
+                        </div>
+                    </div>
+                    <%
+                }else{
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/job/job_wanted.html">unpublished</a>
+                        </div>
+                        <div>
+                            <a href="">any</a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }
+            }
+        %>
+    </div>
+</fieldset>

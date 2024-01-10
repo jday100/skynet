@@ -1,0 +1,123 @@
+<div locale="profile_init_msg">
+    Hello
+</div>
+<div>
+    <div>
+        <div>
+            <label locale="username_label">Username:</label>
+            <input disabled type="text" value="<%=profile.username%>">
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <div>
+            <label locale="password_label">Password:</label>
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <div>
+            <label locale="email_label">Email:</label>
+            <input disabled type="text" value="<%=profile.email%>">
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <div>
+            <label locale="create_time_label">Create Time:</label>
+            <input disabled type="text" id="create_time_title" value="">
+            <input type="hidden" id="create_time" value="<%=profile.create_time%>">
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <div>
+            <label locale="modify_time_label">Modify Time:</label>
+            <input disabled type="text" id="modify_time_title" value="">
+            <input type="hidden" id="modify_time" value="<%=profile.modify_time%>">
+        </div>
+    </div>
+</div>
+<form id="form" onsubmit="return false;">
+<input type="hidden" name="test">
+<div>
+    <div>
+        <div>
+            <label locale="nationality_label">Nationality:</label>
+        </div>
+    </div>
+    <div>
+        <div>
+            <dl>
+                <dd>
+                    <div class="country">
+                        <label locale="continent_label">Continent:</label>
+                        <input type="hidden" id="continent_title" name="continent_title">
+                        <select style="display:block;width: 150px;" id="continent" name="continent" onchange="continent_dev_change(this, 'country');">
+
+                        </select>
+                    </div>
+                    
+                    <div class="country">
+                        <label locale="country_label">Country:</label>
+                        <input type="hidden" id="country_title" name="country_title">
+                        <select style="display:block;width: 150px;" id="country" name="country" onchange="country_dev_change(this, 'country_title');">
+                            
+                        </select>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <div>
+            <label locale="gender_label">Gender:</label>
+            <select name="gender">
+                <option value="0" locale="unset">unset</option>
+                <option value="1" locale="male">male</option>
+                <option value="2" locale="female">female</option>
+            </select>
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <div>
+            <label locale="birth">Birth:</label>
+            <select style="width:70px;" id="year" name="year">
+                <option>2023</option>
+            </select>
+            <select style="width:50px; margin-left: 20px;" id="month" name="month">
+                <option>1</option>
+            </select>
+            <select style="width:50px; margin-left: 20px;" id="day" name="day">
+                <option>1</option>
+            </select>
+        </div>
+
+    </div>
+</div>
+<div>
+    <div>
+        <div>
+            <label locale="intro_label">Intro:</label>
+        </div>
+    </div>
+</div>
+<div>
+    <div>
+        <div>
+            <textarea name="intro" rows="10" cols="80"></textarea>
+        </div>
+    </div>
+</div>
+<div>
+    <button id="submit" locale="save">Save</button>
+</div>
+</form>

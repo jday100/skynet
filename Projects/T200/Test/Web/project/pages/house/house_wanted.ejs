@@ -1,0 +1,100 @@
+<%
+    let id = 0;
+    houses.forEach(item => {
+        if(0 == item.parent_id){
+            id = item.id;
+            %>
+                <div class="forum_box">
+                    <div class="forum_person">
+                        <div class="forum_user">
+                            <%=item.nickname%>
+                        </div>
+                        <div class="forum_intro">
+                            <%=item.intro%>
+                        </div>
+                    </div>
+                    <div class="forum_article">
+                        <div>
+                            <%=item.title%>
+                        </div>
+                        <div>
+                            <%=item.content%>
+                        </div>
+                        <div>
+                            
+                        </div>
+                    </div>
+                </div>
+            <%
+        }else{
+            id = item.parent_id;
+            %>
+            <div class="forum_box">
+                <div class="forum_person">
+                    <div class="forum_user">
+                        <%=item.nickname%>
+                    </div>
+                    <div class="forum_intro">
+                        <%=item.intro%>
+                    </div>
+                </div>
+                <div class="forum_article">
+                    <div class="forum_title">
+                        <%=item.title%>
+                    </div>
+                    <div class="forum_content">
+                        <pre><%=item.content%></pre>
+                    </div>
+                    <div class="forum_footer">
+                        <button id="reply<%=item.id%>" onclick="show_reply('<%=id%>', '<%=item.id%>', '<%=paging.page%>', '<%=item.nickname%>', 'list_box', '/house/wanted/reply');" locale="reply">reply</button>
+                    </div>
+                    <div id="reply_box<%=item.id%>">
+
+                    </div>
+                </div>
+            </div>
+            <%
+        }
+    });
+%>
+
+
+<div class="paging">
+    <% 
+        if(paging){ 
+            if(paging.first){ 
+    %>
+        <a href="#" onclick="turning(1, $.id('list_box'), '/house/wanted/board');" locale="first">First</a>
+        <% 
+            } 
+            if(paging.pages){ 
+                paging.pages.forEach(item=> {
+        %>
+            <a href="#" onclick="turning(<%=item%>, $.id('list_box'), '/house/wanted/board');"><%=item%></a>
+        <% 
+            }); 
+        } 
+            if(paging.last){ %>
+                <a href="#" onclick="turning(<%=paging.last%>, $.id('list_box'), '/house/wanted/board');" locale="last">Last</a>
+    <% 
+            } 
+        } 
+    %>
+</div>   
+
+<div class="reply_box">
+        <div class="forum_person" locale="reply">
+            Reply
+        </div>
+        <form id="reply_form" class="form_none">
+            <input type="hidden" name="test">
+            <input type="hidden" id="id" name="id" value="<%=id%>">
+            <input type="hidden" name="page" value="<%=paging.page%>">
+            <div class="reply_content">
+                <textarea name="content"></textarea>
+            </div>
+        </form>
+        <div class="reply_button">
+            <button onclick="hit_reply('reply_form', $.id('list_box'), '/house/wanted/reply');" locale="reply">Reply</button>
+        </div>    
+</div>

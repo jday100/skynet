@@ -1,0 +1,78 @@
+<fieldset>
+    <legend locale="account">Account</legend>
+    <div id="account">
+        <div locale="account_msg">
+            Hello
+        </div>
+        <div>
+            <div>
+                <label locale="username_label">Username:</label>
+                <input disabled type="text" value="<%=profile.username%>">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label locale="password_label">Password:</label>
+            </div>
+            <button id="password_button" onclick="password_edit();" locale="edit">Edit</button>
+        </div>
+        <div id="password_box">
+
+        </div>
+        <div>
+            <div>
+                <label locale="email_label">Email:</label>
+                <input disabled type="text" id="email_title" value="<%=profile.email%>">
+            </div>
+            <button id="email_button" onclick="email_edit();" locale="edit">Edit</button>
+        </div>
+        <div id="email_box">
+
+        </div>
+    </div>
+</fieldset>
+<fieldset style="margin-top:20px">
+    <legend locale="profile">Profile</legend>
+    <div id="profile">
+        <div locale="account_msg">
+            Hello
+        </div>
+        <div>
+            <div>
+                <label locale="nationality_label">Nationality:</label>
+            </div>
+            <button id="nationality_button" onclick="nationality_edit();" locale="edit">Edit</button>
+        </div>
+        <div id="nationality_box">
+            <div>
+                <dl>
+                    <dd>
+                        <div>
+                            <label locale="continent_label">Continent:</label>
+                            <input type="hidden" id="continent_id" value="<%=profile.continent_id%>">
+                            <input disabled type="text" id="continent_name" value="">
+                        </div>
+                        <div>
+                            <label locale="country_label">Country:</label>
+                            <input type="hidden" id="country_id" value="<%=profile.country_id%>">
+                            <input disabled type="text" id="country_name" value="">
+                        </div>
+                    </dd>
+                </dl>
+                
+            </div>
+        </div>
+        <div>
+            <div>
+                <label locale="intro_label">Intro:</label>
+            </div>
+            <button id="intro_button" onclick="profile_intro_edit();" locale="edit">Edit</button>
+        </div>
+        <form id="intro_form">
+        <input type="hidden" name="test">
+        <div>
+            <textarea style="margin-left: 0px;" disabled id="intro" name="intro" rows="10" cols="80"><%=profile.intro%></textarea>
+        </div>
+        </form>
+    </div>
+</fieldset>

@@ -1,0 +1,74 @@
+<input type="hidden" id="id" name="id" value="<%=city_id%>">
+<fieldset>
+    <legend><a href="/trading/sell_city.html?id=<%=city_id%>" locale="sell">Sell</a></legend>
+    <div class="channel_box">
+        <%
+            let k = trading_sells.length;
+            for(let i=0;i<10;i++){
+                if(i < k){
+                    %>
+                    <div class="channel_item">
+                        <div class="item_left">
+                            <a target="_blank" href="/trading/trading_sell.html?id=<%=trading_sells[i].id%>"><%=trading_sells[i].title%></a>
+                        </div>
+                        <div class="right">
+                            <a href="/person/person.html"><%=trading_sells[i].nickname%></a>
+                            <div class="time" id="trading_sells_time<%=i%>"></div>
+                            <input type="hidden" id="trading_sells<%=i%>" value="<%=trading_sells[i].create_time%>">                                                          
+                        </div>
+                    </div>
+                    <%
+                }else{
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/trading/trading_sell.html">unpublished</a>
+                        </div>
+                        <div>
+                            <a href="">any</a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }
+            }
+        %>
+    </div>
+</fieldset>
+
+<fieldset>
+    <legend><a href="/trading/buy_city.html?id=<%=city_id%>" locale="buy">Buy</a></legend>
+    <div class="channel_box">
+        <%
+            k = trading_buys.length;
+            for(let i=0;i<10;i++){
+                if(i < k){
+                    %>
+                    <div class="channel_item">
+                        <div class="item_left">
+                            <a target="_blank" href="/trading/trading_buy.html?id=<%=trading_buys[i].id%>"><%=trading_buys[i].title%></a>
+                        </div>
+                        <div class="right">
+                            <a href="/person/person.html"><%=trading_buys[i].nickname%></a>
+                            <div class="time" id="trading_buys_time<%=i%>"></div>
+                            <input type="hidden" id="trading_buys<%=i%>" value="<%=trading_buys[i].create_time%>">                                                          
+                        </div>
+                    </div>
+                    <%
+                }else{
+                    %>
+                    <div class="channel_item">
+                        <div>
+                            <a target="_blank" href="/trading/trading_buy.html">unpublished</a>
+                        </div>
+                        <div>
+                            <a href="">any</a>
+                            2023-10-10 10:10                                
+                        </div>
+                    </div>
+                    <%
+                }
+            }
+        %>
+    </div>
+</fieldset>

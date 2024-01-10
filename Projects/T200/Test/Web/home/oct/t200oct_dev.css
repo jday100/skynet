@@ -1,0 +1,87 @@
+.oct_box {
+    width: 16px;
+    height: 16px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.oct_panel {
+    width: 200px;
+    height: 600px;
+    border: 1px solid black;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background-color: antiquewhite;
+}
+
+.oct_panel > div {
+    width: 200px;
+    height: 600px;
+    line-height: 25px;
+    overflow: auto;
+}
+
+.oct_panel > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.oct_send_box {
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+    position: fixed;
+    right: 200px;
+    bottom: 0;
+    background-color: antiquewhite;
+}
+
+.oct_send_dialog {
+    width: 596px;
+    height: 396px;
+}
+
+.oct_send_dialog > iframe {
+    width: 596px;
+    height: 396px;
+}
+
+.oct_send_text {
+    width: 600px;
+    height: 140px;
+}
+
+.oct_send_text > iframe {
+    width: 600px;
+    height: 140px;
+}
+
+.oct_send_button {
+    width: 600px;
+    height: 30px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+
+.oct_dialog_right {
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    flex-direction: column;
+}
+
+.oct_dialog_right div {
+    width: 550px;
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    flex-direction: column;
+}
+
