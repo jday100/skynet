@@ -9,13 +9,13 @@ class T200Case {
     create() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let PageSource = T200Resource.merge_web_page(self.url);
+            let PageSource = T200Resource.merge_web_page(self.name);
 
             if(PageSource){
                 let PageClass = require(PageSource);
 
                 if(PageClass){
-                    let PageObj = new PageClass(self.url);
+                    let PageObj = new PageClass(self.name);
 
                     if(PageObj){
                         PageObj.create().then(function(){

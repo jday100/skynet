@@ -1,0 +1,14 @@
+{
+    "name"  : "link",
+    "fields"    : [
+        {
+            "name"  : "home",
+            "type"  : "link",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "body > a"
+            }
+        }
+    ]
+}

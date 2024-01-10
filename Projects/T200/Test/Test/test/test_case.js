@@ -11,7 +11,7 @@ const T200Test = require('../lib/T200Test.js');
 
 let home = new T200Test();
 
-home.test('firefox', '/register.html').then(function(){
+home.test('firefox', '/link.html').then(function(){
     console.log("Success");
 }, function(){
     console.log("Failure");

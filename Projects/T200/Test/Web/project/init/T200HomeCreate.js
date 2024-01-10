@@ -7,405 +7,909 @@ class T200HomeCreate {
 
     }
 
-   create_house_rent() {
-        return "create table if not exists house_rent ( \
-            id int primary key auto_increment, \
-            user_id int, \
-            status int not null default 0, \
-            parent_id int default 0, \
-            region_id int default 0, \
-            region_name varchar(100), \
-            city_id int default 0, \
-            city_name varchar(100), \
-            title varchar(255), \
-            content text, \
-            create_time timestamp not null default current_timestamp, \
-            fulltext (title, content) with parser ngram \
-            ) character set utf8";
-   }
-
-    create_house_wanted() {
-        return "create table if not exists house_wanted ( \
-            id int primary key auto_increment, \
-            user_id int, \
-            status int not null default 0, \
-            parent_id int default 0, \
-            region_id int default 0, \
-            region_name varchar(100), \
-            city_id int default 0, \
-            city_name varchar(100), \
-            title varchar(255), \
-            content text, \
-            create_time timestamp not null default current_timestamp, \
-            fulltext (title, content) with parser ngram \
-            ) character set utf8";
+    merge_house_rent_sql() {
+        return `
+            create table if not exists house_rent (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                status int not null default 0,
+                parent_type int default 0,
+                parent_id int default 0,
+                type_long int default 0,
+                type_short int default 0,
+                continent_id int default 0,
+                continet_name varchar(100),
+                region_id int default 0,
+                region_name varchar(100),
+                city_id int default 0,
+                city_name varchar(100),
+                title varchar(255),
+                content text,
+                create_time datetime not null default current_timestamp,
+                modify_time timestamp not null default current_timestamp,
+                INDEX(user_id),
+                INDEX(identity_id),
+                INDEX(parent_type),
+                INDEX(parent_id),
+                INDEX(continent_id),
+                INDEX(region_id),
+                INDEX(city_id),
+                INDEX(status),
+                INDEX(type_long),
+                INDEX(type_short),
+                fulltext (title, content) with parser ngram
+            ) character set utf8
+        `;
     }
 
-    create_job_recruit() {
-        return "create table if not exists job_recruit ( \
-            id int primary key auto_increment, \
-            user_id int, \
-            status int not null default 0, \
-            parent_id int default 0, \
-            region_id int default 0, \
-            region_name varchar(100), \
-            city_id int default 0, \
-            city_name varchar(100), \
-            title varchar(255), \
-            content text, \
-            create_time timestamp not null default current_timestamp, \
-            fulltext (title, content) with parser ngram \
-            ) character set utf8";
+    merge_house_wanted_sql() {
+        return `
+            create table if not exists house_wanted (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                status int not null default 0,
+                parent_type int default 0,
+                parent_id int default 0,
+                type_long int default 0,
+                type_short int default 0,
+                continent_id int default 0,
+                continet_name varchar(100),
+                region_id int default 0,
+                region_name varchar(100),
+                city_id int default 0,
+                city_name varchar(100),
+                title varchar(255),
+                content text,
+                create_time datetime not null default current_timestamp,
+                modify_time timestamp not null default current_timestamp,
+                INDEX(user_id),
+                INDEX(identity_id),
+                INDEX(parent_type),
+                INDEX(parent_id),
+                INDEX(continent_id),
+                INDEX(region_id),
+                INDEX(city_id),
+                INDEX(status),
+                INDEX(type_long),
+                INDEX(type_short),
+                fulltext (title, content) with parser ngram
+            ) character set utf8
+        `;
     }
 
-    create_job_wanted() {
-        return "create table if not exists job_wanted ( \
-            id int primary key auto_increment, \
-            user_id int, \
-            status int not null default 0, \
-            parent_id int default 0, \
-            region_id int default 0, \
-            region_name varchar(100), \
-            city_id int default 0, \
-            city_name varchar(100), \
-            title varchar(255), \
-            content text, \
-            create_time timestamp not null default current_timestamp, \
-            fulltext (title, content) with parser ngram \
-            ) character set utf8";
+    merge_job_recruit_sql() {
+        return `
+            create table if not exists job_recruit (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                status int not null default 0,
+                parent_type int default 0,
+                parent_id int default 0,
+                type_full int default 0,
+                type_part int default 0,
+                continent_id int default 0,
+                continet_name varchar(100),
+                region_id int default 0,
+                region_name varchar(100),
+                city_id int default 0,
+                city_name varchar(100),
+                title varchar(255),
+                content text,
+                create_time datetime not null default current_timestamp,
+                modify_time timestamp not null default current_timestamp,
+                INDEX(user_id),
+                INDEX(identity_id),
+                INDEX(parent_type),
+                INDEX(parent_id),
+                INDEX(continent_id),
+                INDEX(region_id),
+                INDEX(city_id),
+                INDEX(status),
+                INDEX(type_full),
+                INDEX(type_part),
+                fulltext (title, content) with parser ngram
+            ) character set utf8
+        `;
     }
 
-    create_trading_sell() {
-        return "create table if not exists trading_sell ( \
-            id int primary key auto_increment, \
-            user_id int, \
-            status int not null default 0, \
-            parent_id int default 0, \
-            region_id int default 0, \
-            region_name varchar(100), \
-            city_id int default 0, \
-            city_name varchar(100), \
-            title varchar(255), \
-            content text, \
-            create_time timestamp not null default current_timestamp, \
-            fulltext (title, content) with parser ngram \
-            ) character set utf8";
+    merge_job_wanted_sql() {
+        return `
+            create table if not exists job_wanted (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                status int not null default 0,
+                parent_type int default 0,
+                parent_id int default 0,
+                type_full int default 0,
+                type_part int default 0,
+                continent_id int default 0,
+                continet_name varchar(100),
+                region_id int default 0,
+                region_name varchar(100),
+                city_id int default 0,
+                city_name varchar(100),
+                title varchar(255),
+                content text,
+                create_time datetime not null default current_timestamp,
+                modify_time timestamp not null default current_timestamp,
+                INDEX(user_id),
+                INDEX(identity_id),
+                INDEX(parent_type),
+                INDEX(parent_id),
+                INDEX(continent_id),
+                INDEX(region_id),
+                INDEX(city_id),
+                INDEX(status),
+                INDEX(type_full),
+                INDEX(type_part),
+                fulltext (title, content) with parser ngram
+            ) character set utf8
+        `;
     }
 
-    create_trading_buy() {
-        return "create table if not exists trading_buy ( \
-            id int primary key auto_increment, \
-            user_id int, \
-            status int not null default 0, \
-            parent_id int default 0, \
-            region_id int default 0, \
-            region_name varchar(100), \
-            city_id int default 0, \
-            city_name varchar(100), \
-            title varchar(255), \
-            content text, \
-            create_time timestamp not null default current_timestamp, \
-            fulltext (title, content) with parser ngram \
-            ) character set utf8";
+    merge_trading_sell_sql() {
+        return `
+            create table if not exists trading_sell (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                status int not null default 0,
+                parent_type int default 0,
+                parent_id int default 0,
+                continent_id int default 0,
+                continet_name varchar(100),
+                region_id int default 0,
+                region_name varchar(100),
+                city_id int default 0,
+                city_name varchar(100),
+                title varchar(255),
+                content text,
+                create_time datetime not null default current_timestamp,
+                modify_time timestamp not null default current_timestamp,
+                INDEX(user_id),
+                INDEX(identity_id),
+                INDEX(parent_type),
+                INDEX(parent_id),
+                INDEX(continent_id),
+                INDEX(region_id),
+                INDEX(city_id),
+                INDEX(status),
+                fulltext (title, content) with parser ngram
+            ) character set utf8
+        `;
     }
 
-    create_exchange() {
-        return "create table if not exists exchange ( \
-            id int primary key auto_increment, \
-            user_id int, \
-            status int not null default 0, \
-            parent_id int default 0, \
-            region_id int default 0, \
-            region_name varchar(100), \
-            city_id int default 0, \
-            city_name varchar(100), \
-            title varchar(255), \
-            content text, \
-            create_time timestamp not null default current_timestamp, \
-            fulltext (title, content) with parser ngram \
-            ) character set utf8";
+    merge_trading_buy_sql() {
+        return `
+            create table if not exists trading_buy (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                status int not null default 0,
+                parent_type int default 0,
+                parent_id int default 0,
+                continent_id int default 0,
+                continet_name varchar(100),
+                region_id int default 0,
+                region_name varchar(100),
+                city_id int default 0,
+                city_name varchar(100),
+                title varchar(255),
+                content text,
+                create_time datetime not null default current_timestamp,
+                modify_time timestamp not null default current_timestamp,
+                INDEX(user_id),
+                INDEX(identity_id),
+                INDEX(parent_type),
+                INDEX(parent_id),
+                INDEX(continent_id),
+                INDEX(region_id),
+                INDEX(city_id),
+                INDEX(status),
+                fulltext (title, content) with parser ngram
+            ) character set utf8
+        `;
+    }
+
+    merge_exchange_sql() {
+        return `
+            create table if not exists exchange (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                status int not null default 0,
+                parent_type int default 0,
+                parent_id int default 0,
+                continent_id int default 0,
+                continet_name varchar(100),
+                region_id int default 0,
+                region_name varchar(100),
+                city_id int default 0,
+                city_name varchar(100),
+                title varchar(255),
+                content text,
+                create_time datetime not null default current_timestamp,
+                modify_time timestamp not null default current_timestamp,
+                INDEX(user_id),
+                INDEX(identity_id),
+                INDEX(parent_type),
+                INDEX(parent_id),
+                INDEX(continent_id),
+                INDEX(region_id),
+                INDEX(city_id),
+                INDEX(status),
+                fulltext (title, content) with parser ngram
+            ) character set utf8
+        `;
     }
 
     ///
-    create_admin() {
-        return `create table if not exists admin ( \
-            id int primary key auto_increment, \
-            user_id int default 0 UNIQUE, \
-            status int not null default 0, \
-            remark text, \
-            permission text, \
-            create_time timestamp not null default current_timestamp \
-            ) character set utf8`;
+    merge_admin_sql() {
+        return `
+            create table if not exists admin (
+                id int primary key auto_increment,
+                user_id int default 0 UNIQUE,
+                status int not null default 0,
+                remark text,
+                permission text,
+                create_time timestamp not null default current_timestamp
+            ) character set utf8
+        `;
     }
 
-    create_setting() {
-        return `create table if not exists setting ( \
-            id int primary key auto_increment, \
-            setting_id int default 0 UNIQUE, \
-            status int not null default 0, \
-            name varchar(255), \
-            content text, \
-            modify_time timestamp not null default current_timestamp \
-            ) character set utf8`;
+    merge_setting_sql() {
+        return `
+            create table if not exists setting (
+                id int primary key auto_increment,
+                setting_id int default 0 UNIQUE,
+                status int not null default 0,
+                name varchar(255),
+                content text,
+                modify_time timestamp not null default current_timestamp
+            ) character set utf8
+        `;
     }
 
-    create_person() {
-        return `create table if not exists person ( \
-            user_id int primary key auto_increment, \
-            continent_id int default 0, \
-            continent_name varchar(100), \
-            region_id int default 0, \
-            region_name varchar(100), \
-            city_id int default 0, \
-            city_name varchar(100), \
-            status int not null default 0, \
-            username varchar(50) UNIQUE, \
-            nickname_id int not null default 0, \
-            nickname varchar(100), \
-            password varchar(100), \
-            email varchar(100) UNIQUE, \
-            gender int not null default 0, \
-            year int, \
-            month int, \
-            day int, \
-            intro varchar(255), \
-            create_time datetime not null default current_timestamp, \
-            modify_time timestamp not null default current_timestamp, \
-            login_time datetime, \
-            ip varchar(20) \
-            ) character set utf8`;
+    merge_person_sql() {
+        return `
+            create table if not exists person (
+                user_id int primary key auto_increment,
+                status int not null default 0,
+                continent_id int default 0,
+                continent_name varchar(100),
+                country_id int default 0,
+                country_name varchar(100),
+                username varchar(50) UNIQUE,
+                identity_id int not null default 0,
+                nickname varchar(100),
+                password varchar(100),
+                email varchar(100) UNIQUE,
+                gender int not null default 0,
+                year int,
+                month int,
+                day int,
+                intro varchar(255),
+                invite bigint not null default 0,
+                flag int not null default 0,
+                create_time datetime not null default current_timestamp,
+                modify_time timestamp not null default current_timestamp,
+                login_time datetime,
+                ip varchar(20),
+                INDEX (ip)
+            ) character set utf8
+        `;
     }
 
-    create_nickname() {
-        return `create table if not exists nickname ( 
-            nickname_id int primary key auto_increment, 
-            user_id int not null default 0, 
-            status int not null default 0, 
-            nickname varchar(255), 
-            ip varchar(20),
-            create_time timestamp not null default current_timestamp,
-            fulltext (nickname) with parser ngram 
-        ) character set utf8`;
+    merge_identity_sql() {
+        return `
+            create table if not exists identity (
+                identity_id int primary key auto_increment,
+                user_id int not null default 0,
+                status int not null default 0,
+                nickname varchar(100),
+                continent_id int default 0,
+                continent_name varchar(100),
+                region_id int default 0,
+                region_name varchar(100),
+                city_id int default 0,
+                city_name varchar(100),
+                intro varchar(255),
+                flag int not null default 0,
+                ip varchar(20),
+                create_time datetime not null default current_timestamp,
+                modify_time timestamp not null default current_timestamp,
+                fulltext (nickname) with parser ngram 
+            ) character set utf8
+        `;
     }
 
-    create_advert() {
-        return `create table if not exists advert ( \
-            id int primary key auto_increment, \
-            status int not null default 0, \
-            name varchar(255), \
-            create_time timestamp not null default current_timestamp \
-            ) character set utf8`;
+    merge_invitation_sql() {
+        return `
+            create table if not exists invitation (
+                id int primary key auto_increment,
+                user_id int,
+                status int not null default 0,
+                invite bigint not null default 0,
+                create_time datetime not null default current_timestamp,
+                using_time datetime,
+                expiry_time datetime,
+                INDEX(user_id),
+                INDEX(status)
+            ) character set utf8
+        `;
     }
 
-    create_notice() {
-        return "create table if not exists notice ( \
-            id int primary key auto_increment, \
-            user_id int, \
-            status int not null default 0, \
-            title varchar(255), \
-            content text, \
-            create_time timestamp not null default current_timestamp, \
-            fulltext (title, content) with parser ngram \
-            ) character set utf8";
+    merge_datum_sql() {
+        return `
+            create table if not exists datum (
+                id int primary key auto_increment,
+                user_id int,
+                status int not null default 0,
+                name varchar(255),
+                create_time datetime not null default current_timestamp,
+                INDEX(user_id),
+                INDEX(status)
+            ) character set utf8
+        `;
     }
 
-    create_note() {
-        return `create table if not exists note ( \
-            id int primary key auto_increment, \
-            user_id int, \
-            status int not null default 0, \
-            title varchar(255), \
-            content text, \
-            create_time timestamp not null default current_timestamp, \
-            fulltext (title, content) with parser ngram \
-            ) character set utf8`;
+
+    merge_follow_sql() {
+        return `
+            create table if not exists follow (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                create_time datetime not null default current_timestamp,
+                INDEX(user_id)
+            ) character set utf8
+        `;
     }
 
-    create_region() {
-        return `create table if not exists region ( \
-            id int primary key auto_increment, \
-            name varchar(255), \
-            content text \
-            ) character set utf8`;
+
+    merge_message_sql() {
+        return `
+            create table if not exists datum (
+                id int primary key auto_increment,
+                user_id int,
+                identity_id int,
+                status int not null default 0,
+                content text,
+                create_time datetime not null default current_timestamp,
+                INDEX(user_id)
+            ) character set utf8
+        `;
     }
 
-    create_city() {
-        return `create table if not exists city ( \
-            id int primary key auto_increment, \
-            region_id int, \
-            level int, \
-            name varchar(255), \
-            content text \
-            ) character set utf8`;
+    merge_advert_sql() {
+        return `
+            create table if not exists advert (
+                id int primary key auto_increment,
+                status int not null default 0,
+                name varchar(255),
+                content text,
+                create_time timestamp not null default current_timestamp
+            ) character set utf8
+        `;
     }
 
-    create_index_cities() {
-        return `create table if not exists index_cities ( \
-            id int primary key auto_increment, \
-            city_id int, \
-            level int, \
-            intro varchar(255) \
-            ) character set utf8`;
+    merge_notice_sql() {
+        return `
+            create table if not exists notice (
+                id int primary key auto_increment,
+                user_id int,
+                status int not null default 0,
+                title varchar(255),
+                content text,
+                create_time timestamp not null default current_timestamp,
+                fulltext (title, content) with parser ngram
+            ) character set utf8
+        `;
     }
 
-    create(db) {
+    merge_note_sql() {
+        return `
+            create table if not exists note (
+                id int primary key auto_increment,
+                user_id int,
+                status int not null default 0,
+                title varchar(255),
+                content text,
+                create_time timestamp not null default current_timestamp,
+                fulltext (title, content) with parser ngram
+            ) character set utf8
+        `;
+    }
+
+    merge_continent_sql() {
+        return `
+            create table if not exists continent (
+                id int primary key auto_increment,
+                name varchar(100),
+                content varchar(255)
+            ) character set utf8
+        `;
+    }
+
+    merge_region_sql() {
+        return `
+            create table if not exists region (
+                id int primary key auto_increment,
+                name varchar(100),
+                content varchar(255)
+            ) character set utf8
+        `;
+    }
+
+    merge_city_sql() {
+        return `
+            create table if not exists city (
+                id int primary key auto_increment,
+                region_id int not null default 0,
+                name varchar(100),
+                content varchar(255)
+            ) character set utf8
+        `;
+    }
+
+
+
+    create_house_rent(client) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            return db.execute(self.create_person()).then(function(){
-                log(__filename, "create table person success");
-            }, function(){
-                log(__filename, "create table person failure");
+            let sql = self.merge_house_rent_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    create_house_wanted(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_house_wanted_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_job_recruit(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_job_recruit_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_job_wanted(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_job_wanted_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_trading_sell(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_trading_sell_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_trading_buy(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_trading_buy_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_exchange(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_exchange_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_admin(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_admin_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_setting(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_setting_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_person(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_person_sql();
+
+            client.execute(sql).then(function(){
+            
+            }, function(err){
                 return error();
             }).then(function(){
-                return db.execute(self.create_nickname()).then(function(){
-                    log(__filename, "create table nickname success");
-                }, function(){
-                    log(__filename, "create table nickname failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_house_rent()).then(function(){
-                    log(__filename, "create table house rent success");
-                }, function(){
-                    log(__filename, "create table house rent failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_house_wanted()).then(function(){
-                    log(__filename, "create table house wanted success");
-                }, function(){
-                    log(__filename, "create table house wanted failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_job_recruit()).then(function(){
-                    log(__filename, "create table job recruit success");
-                }, function(){
-                    log(__filename, "create table job recruit failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_job_wanted()).then(function(){
-                    log(__filename, "create table job wanted success");
-                }, function(){
-                    log(__filename, "create table job wanted failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_trading_sell()).then(function(){
-                    log(__filename, "create table trading sell success");
-                }, function(){
-                    log(__filename, "create table trading sell failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_trading_buy()).then(function(){
-                    log(__filename, "create table trading buy success");
-                }, function(){
-                    log(__filename, "create table trading buy failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_exchange()).then(function(){
-                    log(__filename, "create table exchange success");
-                }, function(){
-                    log(__filename, "create table exchange failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_admin()).then(function(){
-                    log(__filename, "create table admin success");
-                }, function(){
-                    log(__filename, "create table admin failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_setting()).then(function(){
-                    log(__filename, "create table setting success");
-                }, function(){
-                    log(__filename, "create table setting failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_advert()).then(function(){
-                    log(__filename, "create table advert success");
-                }, function(){
-                    log(__filename, "create table advert failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_notice()).then(function(){
-                    log(__filename, "create table notice success");
-                }, function(){
-                    log(__filename, "create table notice failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_note()).then(function(){
-                    log(__filename, "create table note success");
-                }, function(){
-                    log(__filename, "create table note failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_region()).then(function(){
-                    log(__filename, "create table region success");
-                }, function(){
-                    log(__filename, "create table region failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_city()).then(function(){
-                    log(__filename, "create table city success");
-                }, function(){
-                    log(__filename, "create table city failure");
-                    return error();
-                });
-            }, function(){
-                return error();
-            }).then(function(){
-                return db.execute(self.create_index_cities()).then(function(){
-                    log(__filename, "create table index_cities success");
-                }, function(){
-                    log(__filename, "create table index_cities failure");
-                    return error();
-                });
+                sql = `insert into person (status, username, password, email)
+                        values(1, 'admin', '3d4f2bf07dc1be38b20cd6e46949a1071f9d0e3d', 'admin@admin.com')`;
+                return client.execute(sql);
             }, function(){
                 return error();
             }).then(function(){
                 resolve();
             }, function(){
                 reject();
-                return error();
             });
+
+        });
+
+        return promise;
+    }
+
+    create_identity(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_identity_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_invitation(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_invitation_sql();
+
+            client.execute(sql).then(function(){
+            
+            }, function(err){
+                return error();
+            }).then(function(){
+                sql = `insert into invitation (user_id, status, invite, using_time, expiry_time) 
+                        values(1, 1, 111111111111, current_timestamp, current_timestamp)`;
+                return client.execute(sql);            
+            }, function(){
+                return error();
+            }).then(function(){
+                resolve();
+            }, function(){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_datum(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_datum_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_follow(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_follow_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_message(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_message_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_advert(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_advert_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_notice(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_notice_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_note(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_note_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_continent(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_continent_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+    create_region(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_region_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+
+    create_city(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_city_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
+
+
+    async create(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            
+            self.create_house_rent(client).then(function(){
+
+            }, function(err){
+                return error();
+            }).then(function(){
+                return self.create_house_wanted(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_job_recruit(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_job_wanted(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_trading_sell(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_trading_buy(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_exchange(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_admin(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_setting(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_person(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_identity(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_datum(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_follow(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_message(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_invitation(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_advert(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_notice(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_note(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_continent(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_region(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_city(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                resolve();
+            }, function(){
+                reject();
+            });
+
         });
 
         return promise;
