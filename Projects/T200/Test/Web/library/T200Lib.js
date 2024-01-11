@@ -22,5 +22,9 @@ function log_stop(file, msg) {
     console.log(`[ ${file} ]\n\t: { ${msg} } [stop]`);
 }
 
+function sleep(value) {
+    Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, value);
+}
+
 
 module.exports = { error, log, log_start, log_stop };

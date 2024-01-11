@@ -1,9 +1,16 @@
 const child = require('child_process');
 
-let server = child.exec(`cd ../web/ && node ./T200Home.js`);
+let server = child.exec(`cd ../web/ && node ./test_server.js`);
+
+server.on('exit', (code, signal) => {
+    console.log('exit');
+});
 
 setTimeout(() => {
-    //let result = server.kill('SIGTERM');
-    let result = server.kill();
-    console.log(result);
+    //server.kill(process.SIGINT);
+
+    //process.kill(server.pid, 'SIGINT');
+
+    server.kill();
+
 }, 5000);

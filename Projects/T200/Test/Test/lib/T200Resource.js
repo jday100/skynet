@@ -35,6 +35,16 @@ class T200Resource {
         let file = `../project/define/web/${name}.define`;
         return path.join(__dirname, file);
     }
+    
+    static merge_flow_define(name) {
+        let file = `../project/define/flow/${name}.flow`;
+        return path.join(__dirname, file);
+    }
+
+    static merge_flow_parser(name) {
+        let file = `../project/flow/${name}.parser.js`;
+        return path.join(__dirname, file);
+    }
 }
 
 module.exports = T200Resource;

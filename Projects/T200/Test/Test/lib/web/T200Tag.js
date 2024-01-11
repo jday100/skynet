@@ -1,6 +1,25 @@
+const T200Flow = require('../flow/T200Flow.js');
+
+
 class T200Tag {
     constructor() {
 
+    }
+
+    create_flow() {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let flow = new T200Flow(self.type);
+
+            flow.create().then(function(){
+                self.flow = flow;
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
     }
 
     get(url) {

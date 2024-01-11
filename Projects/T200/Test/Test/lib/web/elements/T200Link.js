@@ -15,13 +15,30 @@ class T200Link extends T200Tag {
             self.target = element.target;
             self.value = element.value;
             self.locate = element.locate;
-            resolve();
+            
+            self.create_flow().then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
         });
 
         return promise;
     }
 
+
+    
     run(browser) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            self.browser = browser;
+            self.flow.execute(browser, self).then(resolve, reject);
+        });
+
+        return promise;
+    }
+
+    run2(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             self.browser = browser;
