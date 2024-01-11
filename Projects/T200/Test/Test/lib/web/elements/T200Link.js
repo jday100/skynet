@@ -15,8 +15,27 @@ class T200Link extends T200Tag {
             self.target = element.target;
             self.value = element.value;
             self.locate = element.locate;
+
+            let name = self.type;
+
+            switch(self.target){
+                case undefined:
+                    break;
+                case 'blank':
+                    name = "link_blank";
+                    break;
+                case 'self':
+                    //name = "link_blank";
+                    break;
+                case 'parent':
+                    //name = "link_blank";
+                    break;
+                case 'top':
+                    //name = "link_blank";
+                    break;
+            }
             
-            self.create_flow().then(function(){
+            self.create_flow(name).then(function(){
                 resolve();
             }, function(err){
                 reject();

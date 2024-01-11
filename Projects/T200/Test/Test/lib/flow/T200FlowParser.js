@@ -52,6 +52,41 @@ class T200FlowParser {
                         result = false;
                     });
                     break;
+                case 'save_window':
+                    await self.#save_window(browser, element, step).then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                    break;
+                case 'save_all_windows':
+                    await self.#save_all_windows(browser, element, step).then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                    break;
+                case 'get_new_window':
+                    await self.#get_new_window(element, step).then(function(win){
+
+                    }, function(err){
+                        result = false;
+                    });
+                    break;
+                case 'change':
+                    await self.#change(browser, element, step).then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                    break;
+                case 'close':
+                    await self.#close(browser, element, step).then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                    break;
                 default:
                     break;
             };
@@ -98,6 +133,74 @@ class T200FlowParser {
     #click(element) {
         return element.click();
     }
+
+    #save_window(browser, element, step) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            browser.get_window().then(function(handle){
+                element[step.value] = handle;
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    #save_all_windows(browser, element, step) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            browser.get_all_windows().then(function(handles){
+                element[step.value] = handles;
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    #get_new_window(element, step) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let result = new Array();
+
+            for(let win of element[step.new_values]){
+                let flag = false;
+                for(let old of element[step.old_values]){
+                    if(win == old){
+                        flag = true;
+                        break;
+                    }
+                }
+                if(flag){
+
+                }else{
+                    result.push(win);
+                }
+            }
+
+            if(1 == result.length){
+                element[step.value] = result[0];
+                resolve(result[0]);
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #change(browser, element, step) {
+        return browser.change(element[step.value]);
+    }
+
+    #close(browser, element, step) {
+        return browser.close();
+    }
+
 
 }
 

@@ -6,10 +6,10 @@ class T200Tag {
 
     }
 
-    create_flow() {
+    create_flow(name) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            let flow = new T200Flow(self.type);
+            let flow = new T200Flow(name);
 
             flow.create().then(function(){
                 self.flow = flow;

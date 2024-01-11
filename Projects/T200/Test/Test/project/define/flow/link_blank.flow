@@ -1,0 +1,49 @@
+{
+    "name"  : "link",
+    "steps" : [
+            {
+                "type"  : "get",
+                "value" : "url"
+            },{
+                "type"  : "wait",
+                "value" : "1000"
+            },{
+                "type"  : "get_url",
+                "value" : "url"
+            },{
+                "type"  : "save_window",
+                "value" : "value"
+            },{
+                "type"  : "save_all_windows",
+                "value" : "old_wins"
+            },{
+                "type"  : "find",
+                "value" : "locate"
+            },{
+                "type"  : "click"
+            },{
+                "type"  : "wait",
+                "value" : "1000"
+            },{
+                "type"  : "save_all_windows",
+                "value" : "new_wins"
+            },{
+                "type"  : "get_new_window",
+                "old_values"   : "old_wins",
+                "new_values"   : "new_wins",
+                "value" : "win"
+            },{
+                "type"  : "change",
+                "value" : "win"
+            },{
+                "type"  : "get_url",
+                "value" : "value"
+            },{
+                "type"  : "close",
+                "value" : "win"
+            },{
+                "type"  : "change",
+                "value" : "value"
+            }
+    ]
+}
