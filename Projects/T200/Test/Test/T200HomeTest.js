@@ -14,7 +14,9 @@ let home = new T200Test();
 
 home.run('all', '/link.html', 'test_case').then(function(){
     console.log("Success");
-}, function(){
+}, function(err){
     console.log("Failure");
+}).finally(function(){
+    home.report();
 });
 

@@ -2,7 +2,7 @@
     "name"  : "link",
     "fields"    : [
         {
-            "name"  : "home",
+            "name"  : "home1",
             "type"  : "link",
             "value" : "/",
             "locate"    : {
@@ -10,7 +10,7 @@
                 "value" : "home1"
             }
         },{
-            "name"  : "home",
+            "name"  : "home2",
             "type"  : "link",
             "value" : "/",
             "locate"    : {
@@ -18,7 +18,7 @@
                 "value" : "home1"
             }
         },{
-            "name"  : "home",
+            "name"  : "home3",
             "type"  : "link",
             "value" : "/",
             "locate"    : {
@@ -26,7 +26,7 @@
                 "value" : "home1"
             }
         },{
-            "name"  : "home",
+            "name"  : "home4",
             "type"  : "link",
             "value" : "/",
             "locate"    : {
@@ -34,7 +34,7 @@
                 "value" : "a[locale=\"home1\"]"
             }
         },{
-            "name"  : "home",
+            "name"  : "home5",
             "type"  : "link",
             "target": "blank",
             "value" : "/",
@@ -43,7 +43,7 @@
                 "value" : "home2"
             }
         },{
-            "name"  : "home",
+            "name"  : "home6",
             "type"  : "link",
             "target": "blank",
             "value" : "/",
@@ -52,7 +52,7 @@
                 "value" : "home2"
             }
         },{
-            "name"  : "home",
+            "name"  : "home7",
             "type"  : "link",
             "target": "blank",
             "value" : "/",
@@ -61,7 +61,7 @@
                 "value" : "home2"
             }
         },{
-            "name"  : "home",
+            "name"  : "home8",
             "type"  : "link",
             "target": "blank",
             "value" : "/",
@@ -70,7 +70,7 @@
                 "value" : "a[locale=\"home2\"]"
             }
         },{
-            "name"  : "home",
+            "name"  : "home9",
             "type"  : "link",
             "target": "self",
             "value" : "/",
@@ -79,7 +79,7 @@
                 "value" : "home3"
             }
         },{
-            "name"  : "home",
+            "name"  : "home10",
             "type"  : "link",
             "target": "self",
             "value" : "/",
@@ -88,7 +88,7 @@
                 "value" : "home3"
             }
         },{
-            "name"  : "home",
+            "name"  : "home11",
             "type"  : "link",
             "target": "self",
             "value" : "/",
@@ -97,7 +97,7 @@
                 "value" : "home3"
             }
         },{
-            "name"  : "home",
+            "name"  : "home12",
             "type"  : "link",
             "target": "self",
             "value" : "/",
@@ -106,7 +106,7 @@
                 "value" : "a[locale=\"home3\"]"
             }
         },{
-            "name"  : "home",
+            "name"  : "home13",
             "type"  : "link",
             "target": "top",
             "value" : "/",
@@ -115,7 +115,7 @@
                 "value" : "home4"
             }
         },{
-            "name"  : "home",
+            "name"  : "home14",
             "type"  : "link",
             "target": "top",
             "value" : "/",
@@ -124,7 +124,7 @@
                 "value" : "home4"
             }
         },{
-            "name"  : "home",
+            "name"  : "home15",
             "type"  : "link",
             "target": "top",
             "value" : "/",
@@ -133,7 +133,7 @@
                 "value" : "home4"
             }
         },{
-            "name"  : "home",
+            "name"  : "home16",
             "type"  : "link",
             "target": "top",
             "value" : "/",
@@ -142,7 +142,7 @@
                 "value" : "a[locale=\"home4\"]"
             }
         },{
-            "name"  : "home",
+            "name"  : "home17",
             "type"  : "link",
             "target": "parent",
             "value" : "/",
@@ -151,7 +151,7 @@
                 "value" : "home5"
             }
         },{
-            "name"  : "home",
+            "name"  : "home18",
             "type"  : "link",
             "target": "parent",
             "value" : "/",
@@ -160,7 +160,7 @@
                 "value" : "home5"
             }
         },{
-            "name"  : "home",
+            "name"  : "home19",
             "type"  : "link",
             "target": "parent",
             "value" : "/",
@@ -169,7 +169,7 @@
                 "value" : "home5"
             }
         },{
-            "name"  : "home",
+            "name"  : "home20",
             "type"  : "link",
             "target": "parent",
             "value" : "/",

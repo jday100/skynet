@@ -3,6 +3,7 @@ const T200Form  = require('./T200Form.js');
 const T200Source = require('../T200Source.js');
 const T200Resource = require('../T200Resource.js');
 const T200Store = require('../db/T200Store.js');
+const T200Final = require('../report/T200Final.js');
 
 
 class T200Page {
@@ -22,13 +23,21 @@ class T200Page {
         let promise = new Promise(async function(resolve, reject){
             let result = true;
 
-            for(let name of self.module_defines){
-                await self.create_module(name).then(function(){
-                    
-                }, function(err){
-                    result = false;
-                });
-            }
+            await self.#create_page().then(function(){
+
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                for(let name of self.module_defines){
+                    await self.create_module(name).then(function(){
+                        
+                    }, function(err){
+                        result = false;
+                    });
+                }
+            }            
 
             if(result){
                 resolve();
@@ -72,10 +81,17 @@ class T200Page {
         return promise;
     }
 
-    #create_define(define) {
+    #create_page(define) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            
+            let project = global.final.find_project(self.project);
+
+            if(project){
+                global.final.append_page(project, self);
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;
@@ -122,7 +138,8 @@ class T200Page {
             switch(element.type){
                 case 'link':
                     let obj = new T200Link();
-    
+                    obj.project = self.project;
+                    obj.page = self.name;
                     obj.create(element).then(function(){
                         self.elements.push(obj);
                         resolve();

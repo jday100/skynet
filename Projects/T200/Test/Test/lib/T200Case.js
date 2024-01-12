@@ -18,7 +18,8 @@ class T200Case {
                     let PageObj = new PageClass(self.name);
 
                     if(PageObj){
-                        PageObj.create().then(function(){
+                        PageObj.project = self.project;
+                        PageObj.create().then(function(){                            
                             self.page = PageObj;
                             resolve();
                         }, function(err){

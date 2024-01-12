@@ -4,6 +4,9 @@ const T200Data = require('./T200Data.js');
 const T200Source = require('./T200Source.js');
 const T200Browser = require('./T200Browser.js');
 const T200Resource = require('./T200Resource.js');
+const T200Final = require('./report/T200Final.js');
+const T200Report = require('./report/T200Report.js');
+
 
 const T200Setup = require('../project/T200Setup.js');
 const { error } = require(T200Setup.external('./library/T200Lib.js'));
@@ -99,6 +102,7 @@ class T200Test {
     #start() {
         let self = this;
         let promise = new Promise(function(resolve, reject){
+            global.final = new T200Final();
             self.#start_db().then(function(){
 
             }, function(err){
@@ -207,6 +211,7 @@ class T200Test {
     #start_test(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
+            global.final.append_project(T200Setup.name);
             T200Browser.create(browser).then(async function(browsers){
                 self.browsers = browsers;
                 await self.#load_data().then(resolve, reject);
@@ -286,6 +291,7 @@ class T200Test {
 
             if(file){
                 T200Source.create(file).then(function(obj){
+                    obj.project = T200Setup.name;
                     T200Source.run(browser, obj).then(function(){
                         resolve();
                     }, function(err){
@@ -364,6 +370,12 @@ class T200Test {
         });
 
         return promise;
+    }
+
+    report() {
+        let result = new T200Report();
+
+        result.report();
     }
 }
 

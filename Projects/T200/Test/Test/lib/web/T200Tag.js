@@ -6,6 +6,22 @@ class T200Tag {
 
     }
 
+    create_tag() {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let page = global.final.find_page(self.project, self.page);
+
+            if(page){
+                global.final.append_entry(page, self);
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
     create_flow(name) {
         let self = this;
         let promise = new Promise(function(resolve, reject){

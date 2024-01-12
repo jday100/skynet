@@ -5,6 +5,7 @@ class T200LinkCase extends T200Case {
     constructor() {
         super();
         this.name = "/link.html";
+        this.path = __dirname;
     }
 }
 

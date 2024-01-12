@@ -12,7 +12,7 @@
                 "value" : "url"
             },{
                 "type"  : "save_window",
-                "value" : "value"
+                "value" : "old"
             },{
                 "type"  : "save_all_windows",
                 "value" : "old_wins"
@@ -43,7 +43,7 @@
                 "value" : "win"
             },{
                 "type"  : "change",
-                "value" : "value"
+                "value" : "old"
             }
     ]
 }
