@@ -68,7 +68,7 @@ class T200Link extends T200Tag {
                 global.final.set_entry(self.project, self.page, self.name, true);
                 resolve();
             }, function(err){
-                global.final.set_entry(self.project, self.page, self.name, false);
+                global.final.set_failure(self.project, self.page, self.name);
                 reject();
             });
         });

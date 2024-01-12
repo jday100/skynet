@@ -12,6 +12,7 @@ class T200Final {
 
         let project = {};
         project.name = name;
+        project.status = true;
         this.result.projects.push(project);
     }
 
@@ -35,6 +36,7 @@ class T200Final {
 
         let obj = {};
         obj.name = page.name;
+        obj.status = true;
         project.pages.push(obj);
     }
 
@@ -60,6 +62,7 @@ class T200Final {
 
         let obj = {};
         obj.name = entry.name;
+        obj.status = false;
         page.entries.push(obj);
     }
 
@@ -86,6 +89,47 @@ class T200Final {
             entry.status = value;
             return true;
         }
+        return false;
+    }
+
+    set_failure(project, page, name) {
+        if(undefined == this.result.projects){
+            return false;
+        }
+
+        let obj;
+        for(let item of this.result.projects){
+            if(item.name == project){
+                obj = item;
+                break;
+            }
+        }
+
+        if(undefined == obj || undefined == obj.pages){
+            return false;
+        }
+
+        let value;
+        for(let item of obj.pages){
+            if(item.name == page){
+                value = item;
+                break;
+            }
+        }
+
+        if(undefined == value || undefined == value.entries){
+            return false;
+        }
+
+        for(let item of value.entries){
+            if(item.name == name){
+                item.status = false;
+                value.status = false;
+                obj.status = false;
+                return true;
+            }
+        }
+
         return false;
     }
 }

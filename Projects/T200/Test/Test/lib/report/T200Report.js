@@ -26,7 +26,8 @@ class T200Report {
     }
 
     #print_page(page) {
-        console.log(`\tPage : ${page.name}\t${page.status}`);
+        let status = page.status ? "pass" : "error";
+        console.log(`\tPage : ${page.name}\t${status}`);
 
         if(undefined == page.entries){
             return;
