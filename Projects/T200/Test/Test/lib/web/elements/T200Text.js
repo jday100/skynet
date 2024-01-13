@@ -1,3 +1,6 @@
+const T200Data = require('../../T200Data.js');
+
+
 class T200Text {
     constructor() {
 
@@ -5,14 +8,37 @@ class T200Text {
 
     create(element) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
+        let promise = new Promise(async function(resolve, reject){
             self.url = element.url;
             self.name = element.name;
             self.type = element.type;
             self.target = element.target;
             self.value = element.value;
             self.locate = element.locate;
-            resolve();
+
+            let data = {};
+
+            data.type = element.type;
+            self.data = data;
+
+            await self.#create_data().then(function(){
+                resolve();
+            }, function(){
+                reject();
+            });            
+        });
+
+        return promise;
+    }
+
+    #create_data() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            if(T200Data.build(self.data)){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;

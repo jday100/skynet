@@ -31,13 +31,13 @@ class T200Data {
         return promise;
     }
 
-    static build(field, values) {
+    static build(field) {
         let result = true;
         switch(field.type){
             case undefined:
                 break;
             case 'text':
-                T200Data.#build_text(field, values);
+                T200Data.#build_text(field);
                 break;
             default:
                 result = false;
@@ -46,13 +46,47 @@ class T200Data {
         return result;
     }
 
-    static #build_text(field, values) {
-        let min = 1;
-        let max = 50;
+    static #build_text(field) {
+        let result = new Array();
+        let min;
+        let max;
 
-        let result = T200Moken.mock_chinese(min, max);
+        min = undefined == field.min ? 0 : field.min;
+        max = undefined == field.max ? 50 : field.max;
 
-        values[field.name] = result;
+        if(undefined == field.empty || field.empty == true){
+            result.push('');
+
+            let mid = min + (max - min) / 2;
+
+            if(0 == min){
+
+            }else{
+                result.push(T200Moken.mock_chinese(min, min));
+            }
+            result.push(T200Moken.mock_chinese(mid, mid));
+            if(0 == max){
+
+            }else{
+                result.push(T200Moken.mock_chinese(max, max));
+            }
+        }else{
+            let mid = min + (max - min) / 2;
+
+            if(0 == min){
+
+            }else{
+                result.push(T200Moken.mock_chinese(min, min));
+            }
+            result.push(T200Moken.mock_chinese(mid, mid));
+            if(0 == max){
+
+            }else{
+                result.push(T200Moken.mock_chinese(max, max));
+            }
+        }
+
+        field.values = result;
     }
 }
 

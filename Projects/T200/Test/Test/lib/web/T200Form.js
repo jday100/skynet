@@ -284,48 +284,58 @@ class T200Form {
 
     #test_pass() {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
+        let promise = new Promise(async function(resolve, reject){
             //get
             //data
             //set data
             //click
             //wait
             //verify
+            let result = true;
 
-            self.browser.get(self.browser.url(self.page)).then(function(){
+            do{
+                await self.browser.get(self.browser.url(self.page)).then(function(){
 
-            }, function(err){
+                }, function(err){
 
-            }).then(function(){
-                return self.#build_datas();
-            }, function(err){
+                }).then(function(){
+                    return self.#build_datas();
+                }, function(err){
 
-            }).then(function(){
-                return self.#set_datas();
-            }, function(err){
+                }).then(function(){
+                    return self.#set_datas();
+                }, function(err){
 
-            }).then(function(){
-                return self.#click();
-            }, function(err){
+                }).then(function(flag){
+                    self.flag = flag;
+                    return self.#click();
+                }, function(err){
 
-            }).then(function(){
-                return self.browser.sleep(1000);
-            }, function(err){
+                }).then(function(){
+                    return self.browser.sleep(1000);
+                }, function(err){
 
-            }).then(function(){
-                return self.browser.get_current_url();
-            }, function(err){
+                }).then(function(){
+                    return self.browser.get_current_url();
+                }, function(err){
 
-            }).then(function(url){
-                let value = self.browser.url(self.value);
-                if(url == value){
-                    resolve();
-                }else{
-                    reject();
-                }
-            }, function(err){
+                }).then(function(url){
+                    let value = self.browser.url(self.value);
+                    if(url == value){
+                        
+                    }else{
+                        result = false;
+                    }
+                }, function(err){
 
-            });
+                });
+            }while(self.flag);
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;        
@@ -351,18 +361,30 @@ class T200Form {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
+            let flag = false;
 
             for(let field of self.field_values){
-                let value = self.values[field.name];
-                await field.run(self.browser, value).then(function(){
+                if(undefined == field.index){
+                    field.index = 0;
+                }
 
-                }, function(err){
-                    result = false;
-                });
+                if(field.index < field.data.values.length - 1){
+                    flag = true;
+                    let value = field.data.values[field.index];
+                    await field.run(self.browser, value).then(function(){
+                        if(field.index < field.data.values.length - 1){
+                            field.index++;
+                        }
+                    }, function(err){
+                        result = false;
+                    });
+                }else{
+                    
+                }
             }
             
             if(result){
-                resolve();
+                resolve(flag);
             }else{
                 reject();
             }
@@ -392,22 +414,10 @@ class T200Form {
         return promise;        
     }
 
-    #build_datas(datas) {
+    #build_datas() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            let result = true;
-
-            self.values = {};
-
-            for(let field of self.fields){
-                T200Data.build(field, self.values);
-            }
-
-            if(result){
-                resolve();
-            }else{
-                reject();
-            }
+            resolve();
         });
 
         return promise;        
