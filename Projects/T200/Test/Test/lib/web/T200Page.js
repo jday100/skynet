@@ -162,6 +162,7 @@ class T200Page {
             let form = new T200Form();
 
             form.create(module).then(function(){
+                form.page = self.name;
                 self.elements.push(form);   
                 resolve();  
             }, function(err){

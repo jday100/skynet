@@ -7,7 +7,7 @@ class T200FormPage extends T200Page {
         super(name);
 
         this.object_defines = [
-            "person"
+            "form"
         ];
 
         this.module_defines = [
@@ -46,6 +46,72 @@ class T200FormPage extends T200Page {
 
         return promise;
     }
+
+    
+    test_case(browser) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            await browser.get(browser.url(self.name)).then(function(){
+                return browser.sleep(1000);
+            }, function(err){
+                result = fasle;
+            }).then(async function(){
+                for(let element of self.elements){
+                    await element.test_case(browser).then(function(){
+    
+                    }, function(err){
+                        result = false;
+                    });
+                }
+            }, function(err){
+                result = false;
+            });         
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    /*
+    test_case(browser) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            await browser.get(browser.url(self.name)).then(function(){
+                return browser.sleep(1000);
+            }, function(err){
+                result = fasle;
+            }).then(async function(){
+                for(let element of self.elements){
+                    await element.run(browser).then(function(){
+    
+                    }, function(err){
+                        result = false;
+                    });
+                }
+            }, function(err){
+                result = false;
+            });         
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+    */
+
 }
 
 module.exports = T200FormPage;

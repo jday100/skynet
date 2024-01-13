@@ -12,7 +12,7 @@ const T200Test = require('./lib/T200Test.js');
 
 let home = new T200Test();
 
-home.run('all', '/link.html', 'test_case').then(function(){
+home.run('all', '/form.html', 'test_case').then(function(){
     console.log("Success");
 }, function(err){
     console.log("Failure");
