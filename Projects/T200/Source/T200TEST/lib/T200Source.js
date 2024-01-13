@@ -1,4 +1,5 @@
 const T200Object = require('./T200Object.js');
+const T200Setup = require('../project/T200Setup.js');
 
 
 class T200Source {
@@ -15,6 +16,7 @@ class T200Source {
                 let WebObj = new WebClass();
 
                 if(WebObj){
+                    WebObj.project = T200Setup.name;
                     WebObj.create().then(function(){
                         resolve(WebObj);
                     }, function(err){

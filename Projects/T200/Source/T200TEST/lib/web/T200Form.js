@@ -2,6 +2,7 @@ const T200Text = require('./elements/T200Text.js');
 const T200Email = require('./elements/T200Email.js');
 const T200Button = require('./elements/T200Button.js');
 const T200Password = require('./elements/T200Password.js');
+const T200Data = require('../T200Data.js');
 
 
 class T200Form {
@@ -179,45 +180,6 @@ class T200Form {
     }
 
     
-    run1(browser) {
-        let self = this;
-        let promise = new Promise(async function(resolve, reject){
-            let result = true;
-
-            for(let field of self.field_values){
-                await field.run(browser).then(function(){
-
-                }, function(err){
-                    result = false;
-                });
-            }
-
-            if(self.button_index >= self.buttons.length){
-                result = false;
-            }else{
-                let button = self.button_values[self.button_index++];
-
-                if(button){
-                    await button.run(browser).then(function(){
-
-                    }, function(err){
-                        result = false;
-                    });
-                }else{
-                    result = false;
-                }
-            }
-
-            if(result){
-                resolve();
-            }else{
-                reject();
-            }
-        });
-
-        return promise;
-    }
-
     run(browser) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
@@ -286,6 +248,166 @@ class T200Form {
             }
 
             reject();
+        });
+
+        return promise;        
+    }
+
+    test_case(browser) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            self.browser = browser;
+            let result = true;
+            await self.#test_pass().then(function(){
+
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                await self.#test_error().then(function(){
+                    result = false;
+                }, function(err){
+                    
+                })
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;        
+    }
+
+    #test_pass() {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            //get
+            //data
+            //set data
+            //click
+            //wait
+            //verify
+
+            self.browser.get(self.browser.url(self.page)).then(function(){
+
+            }, function(err){
+
+            }).then(function(){
+                return self.#build_datas();
+            }, function(err){
+
+            }).then(function(){
+                return self.#set_datas();
+            }, function(err){
+
+            }).then(function(){
+                return self.#click();
+            }, function(err){
+
+            }).then(function(){
+                return self.browser.sleep(1000);
+            }, function(err){
+
+            }).then(function(){
+                return self.browser.get_current_url();
+            }, function(err){
+
+            }).then(function(url){
+                let value = self.browser.url(self.value);
+                if(url == value){
+                    resolve();
+                }else{
+                    reject();
+                }
+            }, function(err){
+
+            });
+        });
+
+        return promise;        
+    }
+
+    #test_error(name) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            //get
+            //data
+            //set data
+            //click
+            //wait
+            //verify
+            reject();
+        });
+
+        return promise;        
+    }
+
+    
+    #set_datas() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            for(let field of self.field_values){
+                let value = self.values[field.name];
+                await field.run(self.browser, value).then(function(){
+
+                }, function(err){
+                    result = false;
+                });
+            }
+            
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;       
+    }
+
+    #click() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            await self.#find_button(self.submit).then(async function(button){
+                if(button){
+                    await button.run(self.browser).then(function(){
+                        resolve();
+                    }, function(err){
+                        reject();
+                    })
+                }else{
+                    reject();
+                }
+            }, function(err){
+                reject();
+            });                
+        });
+
+        return promise;        
+    }
+
+    #build_datas(datas) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            self.values = {};
+
+            for(let field of self.fields){
+                T200Data.build(field, self.values);
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;        

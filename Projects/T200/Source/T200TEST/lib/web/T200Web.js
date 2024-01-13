@@ -43,6 +43,23 @@ class T200Web {
 
         return promise;
     }
+
+    test_case(browser) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            if(self.object){
+                await self.object.test_case(browser).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                }); 
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
 }
 
 module.exports = T200Web;

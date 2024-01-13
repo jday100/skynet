@@ -8,65 +8,74 @@ class T200Link extends T200Tag {
 
     create(element) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
+        let promise = new Promise(async function(resolve, reject){
             self.url = element.url;
             self.name = element.name;
             self.type = element.type;
             self.target = element.target;
             self.value = element.value;
             self.locate = element.locate;
-            resolve();
+
+            let name = self.type;
+
+            switch(self.target){
+                case undefined:
+                    break;
+                case 'blank':
+                    name = "link_blank";
+                    break;
+                case 'self':
+                    //name = "link_blank";
+                    break;
+                case 'parent':
+                    //name = "link_blank";
+                    break;
+                case 'top':
+                    //name = "link_blank";
+                    break;
+            }
+            
+            let result = true;
+            await self.create_flow(name).then(function(){
+
+            }, function(err){
+                result = false;
+            });
+
+            await self.create_tag().then(function(){
+
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;
     }
 
+
+    
     run(browser) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
-            browser.get(browser.url(self.url)).then(function(){
-
+            self.browser = browser;
+            self.flow.execute(browser, self).then(function(){
+                global.final.set_entry(self.project, self.page, self.name, true);
+                resolve();
             }, function(err){
-
-            }).then(function(){
-                return browser.sleep(1000);
-            }, function(err){
-
-            }).then(function(){
-                return browser.locate(self.locate);
-            }, function(err){
-
-            }).then(function(element){
-                if(undefined == element){
-
-                }else{
-                    return element.click();
-                }
-            }, function(err){
-
-            }).then(function(){
-                return browser.sleep(1000);
-            }, function(err){
-
-            }).then(function(){
-                return browser.get_current_url();
-            }, function(err){
-
-            }).then(function(url){
-                if(url == browser.url(self.value)){
-                    resolve();
-                }else{
-                    reject();
-                }
-            }, function(err){
-
-            }).finally(function(){
-                return browser.get(browser.url(self.url));
+                global.final.set_failure(self.project, self.page, self.name);
+                reject();
             });
         });
 
         return promise;
     }
+
 }
 
 module.exports = T200Link;

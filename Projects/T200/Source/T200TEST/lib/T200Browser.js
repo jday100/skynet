@@ -132,6 +132,32 @@ class T200Browser {
     url(url) {
         return `${this.root}${url}`;
     }
+
+    get_window() {
+        let self = this;
+        return self.browser.getWindowHandle();
+    }
+
+    get_all_windows() {
+        let self = this;
+        return self.browser.getAllWindowHandles();
+    }
+
+    change(handle) {
+        let self = this;
+        return self.browser.switchTo().window(handle);
+    }
+
+    close_window() {
+        let self = this;
+        return self.browser.close();
+    }
+
+    close() {
+        let self = this;
+        return self.browser.close();
+    }
+
 }
 
 module.exports = T200Browser;

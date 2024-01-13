@@ -6,6 +6,7 @@ class T200Setup {
 
     }
 
+    static name = "home";
     static type = "web";
     static project = "../../web/";
 
