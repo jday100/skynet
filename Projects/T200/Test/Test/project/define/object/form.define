@@ -1,9 +1,0 @@
-{
-    "name"  : "form",
-    "fields"    : [
-        {
-            "name"  : "name",
-            "type"  : "text"
-        }
-    ]
-}

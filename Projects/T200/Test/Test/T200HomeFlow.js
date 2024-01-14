@@ -2,7 +2,7 @@ const T200Test = require('./library/T200Test.js');
 
 let home = new T200Test();
 
-home.run().then(function(){
+home.flow().then(function(){
     console.log('success');
 }, function(err){
     console.log('failure');
