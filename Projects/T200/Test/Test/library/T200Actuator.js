@@ -112,15 +112,11 @@ class T200Actuator {
     #web_stop() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            if(undefined == type){
-                await self.#disp_web_all().then(function(){
-
-                }, function(err){
-                    
-                });
-            }else{
-
-            }
+            await self.#disp_web_all().then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });            
         });
 
         return promise;
@@ -140,14 +136,10 @@ class T200Actuator {
         return promise;
     }
 
-    #disp_web_all(type, source, method, subdir) {
+    #disp_web_all() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            if(undefined == type){
-
-            }else{
-
-            }
+            resolve();
         });
 
         return promise;
@@ -179,12 +171,12 @@ class T200Actuator {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             if(undefined == source){
-                await self.#web_search();
+                await self.#web_search().then(resolve, reject);
             }else{
                 if(source.endsWith('/')){
-                    await self.#web_search(browser, project, source, method, subdir);
+                    await self.#web_search(browser, project, source, method, subdir).then(resolve, reject);
                 }else{
-                    await self.#web_done(browser, project, source, method);
+                    await self.#web_done(browser, project, source, method).then(resolve, reject);
                 }
             }
         });
@@ -196,12 +188,12 @@ class T200Actuator {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             if(undefined == source){
-                await self.#web_search();
+                await self.#web_search().then(resolve, reject);
             }else{
                 if(source.endsWith('/')){
-                    await self.#web_search(browser, source, method, subdir);
+                    await self.#web_search(browser, source, method, subdir).then(resolve, reject);
                 }else{
-                    await self.#web_done(browser, source, method);
+                    await self.#web_done(browser, source, method).then(resolve, reject);
                 }
             }
         });
@@ -212,17 +204,25 @@ class T200Actuator {
     #web_done(browser, project, source, method) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            global.final.append_project(project);
             T200Source.create_web(project, source).then(function(obj){
                 obj.test_unit(browser).then(function(){
 
                 }, function(err){
-
+                    result = false;
                 }).finally(function(){
        
                 });
             }, function(err){
-
+                result = false;
             });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;

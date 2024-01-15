@@ -20,7 +20,7 @@ class T200Source {
                     if(WebObj){
                         WebObj.project = project;
                         await WebObj.create().then(function(){
-                            resolve();
+                            resolve(WebObj);
                         }, function(err){
                             reject();
                         });
@@ -47,7 +47,7 @@ class T200Source {
                 let WebClass = require(file);
 
                 if(WebClass){
-                    let WebObj = new WebClass();
+                    let WebObj = new WebClass(source);
 
                     if(WebObj){
                         WebObj.project = project;

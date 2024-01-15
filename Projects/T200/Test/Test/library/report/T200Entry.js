@@ -1,6 +1,10 @@
-class T200Entry {
-    constructor() {
+const T200Vessel = require('../T200Vessel.js');
 
+
+class T200Entry {
+    constructor(name) {
+        this.name = name;
+        this.values = new T200Vessel();
     }
 }
 

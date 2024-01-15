@@ -3,6 +3,9 @@ const T200Actuator = require('./T200Actuator.js');
 const T200DBLoader = require('./T200DBLoader.js');
 const T200WebLoader = require('./T200WebLoader.js');
 
+const T200Final = require('./report/T200Final.js');
+const T200Report = require('./report/T200Report.js');
+
 
 class T200Test {
     constructor() {
@@ -95,10 +98,11 @@ class T200Test {
     #start() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            let db = new T200DBLoader();
-            await db.start().then(async function(){
-                let web = new T200WebLoader();
-                await web.start().then(function(){
+            global.final = new T200Final();
+            self.database = new T200DBLoader();
+            await self.database.start().then(async function(){
+                self.server = new T200WebLoader();
+                await self.server.start().then(function(){
                     resolve();
                 }, function(err){
                     reject();
@@ -114,20 +118,24 @@ class T200Test {
     #stop() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            let db = new T200DBLoader();
-            await db.start().then(async function(){
-                let web = new T200WebLoader();
-                await web.start().then(function(){
-                    
+            await self.database.stop().then(async function(){
+                await self.server.stop().then(function(){
+                    resolve();
                 }, function(err){
-
+                    reject();
                 });
             }, function(err){
-
+                reject();
             });
         });
 
         return promise;
+    }
+
+    report() {
+        let result = new T200Report();
+
+        result.report();
     }
 }
 
