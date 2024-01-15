@@ -61,13 +61,13 @@ class T200Test {
         return promise;
     }
 
-    unit(category, type, name, method, subdir) {
+    unit(category, project, type, source, method, subdir) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
             await self.#start().then(async function(){
                 let act = new T200Actuator();
-                await act.test_unit(category, type, name, method, subdir).then(function(){
+                await act.test_unit(category, project, type, source, method, subdir).then(function(){
                     
                 }, function(err){
                     result = false;

@@ -13,10 +13,19 @@ class T200WebLoader {
             setTimeout(function(){
                 thread.exec(`cd ../web/ && node ./T200Home.js`, function(err, stdin , stdout){
                     console.log(err);
+
+                    //test
                     resolve();
+                    return;
+
+                    if(err){
+                        reject();
+                    }else{
+                        resolve();
+                    }
                 });
 
-                resolve();
+                //resolve();
             });
         });
 

@@ -1,3 +1,6 @@
+const T200Source = require('./T200Source.js');
+
+
 class T200Case {
     constructor() {
 
@@ -6,7 +9,12 @@ class T200Case {
     create() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-
+            await T200Source.create_web_page(self.project, self.name).then(function(obj){
+                self.page = obj;
+                resolve();
+            }, function(err){
+                reject();
+            });
         });
 
         return promise;
@@ -24,7 +32,15 @@ class T200Case {
     test_unit(browser) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-
+            if(self.page){
+                await self.page.test_unit(browser).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                });
+            }else{
+                reject();
+            }
         });
 
         return promise;
