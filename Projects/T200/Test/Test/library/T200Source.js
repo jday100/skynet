@@ -101,6 +101,38 @@ class T200Source {
 
         return promise;
     }
+
+    static create_flow_parser(name) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let file = T200Resource.merge_flow_parser(name);
+
+            if(file){
+                let WebClass = require(file);
+
+                if(WebClass){
+                    let WebObj = new WebClass();
+
+                    if(WebObj){
+                        WebObj.project = project;
+                        await WebObj.create().then(function(){
+                            resolve(WebObj);
+                        }, function(err){
+                            reject();
+                        });
+                    }else{
+                        reject();
+                    }
+                }else{
+                    reject();
+                }
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
 }
 
 module.exports = T200Source;

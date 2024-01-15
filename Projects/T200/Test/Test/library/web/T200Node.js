@@ -1,6 +1,14 @@
 class T200Node {
-    constructor() {
+    constructor(node) {
+        this.node = node;
+    }
 
+    click() {
+        return this.node.click();
+    }
+
+    input(data) {
+        return this.node.sendKeys(data);
     }
 }
 

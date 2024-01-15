@@ -4,7 +4,8 @@ const T200Source = require('../T200Source.js');
 
 class T200Page {
     constructor() {
-
+        this.define_values = new Array();
+        this.module_values = new Array();
     }
 
     create() {
@@ -59,8 +60,8 @@ class T200Page {
         let promise = new Promise(async function(resolve, reject){
             let result = true;
             for(let name of self.modules){
-                await T200Source.create_web_module(self.project, name).then(function(){
-
+                await T200Source.create_web_module(self.project, name).then(function(value){
+                    self.module_values.push(value);
                 }, function(err){
                     result = false;
                 });

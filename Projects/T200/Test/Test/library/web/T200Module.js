@@ -9,8 +9,8 @@ class T200Module {
     create() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await T200Define.create_web_module(self.project, self.name).then(function(){
-
+            await T200Define.create_web_module(self.project, self.name).then(function(value){
+                self.define_value = value;
             }, function(err){
 
             }).then(function(value){

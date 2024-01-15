@@ -10,6 +10,7 @@ class T200WebLoader {
     start() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
+            let result = true;
             setTimeout(function(){
                 thread.exec(`cd ../web/ && node ./T200Home.js`, function(err, stdin , stdout){
                     console.log(err);
@@ -26,6 +27,11 @@ class T200WebLoader {
                 });
 
                 //resolve();
+                setTimeout(function(){
+                    if(result){
+                        resolve();
+                    }
+                }, 5000);
             });
         });
 
