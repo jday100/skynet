@@ -33,7 +33,7 @@ class T200Report {
             return;
         }
 
-        for(let entry of page.values){
+        for(let entry of page.values.array()){
             this.#print_entry(entry);
         }
     }

@@ -206,8 +206,8 @@ class T200Actuator {
         let promise = new Promise(async function(resolve, reject){
             let result = true;
             global.final.append_project(project);
-            T200Source.create_web(project, source).then(function(obj){
-                obj.test_unit(browser).then(function(){
+            await T200Source.create_web(project, source).then(async function(obj){
+                await obj.test_unit(browser).then(function(){
 
                 }, function(err){
                     result = false;

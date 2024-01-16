@@ -22,11 +22,11 @@ class T200Page {
             }, function(err){
 
             }).then(async function(){
-                return await self.#create_modules();
+                return await self.#create_page();                
             }, function(err){
 
             }).then(async function(){
-                return await self.#create_page();
+                return await self.#create_modules();
             }, function(err){
 
             }).then(function(){

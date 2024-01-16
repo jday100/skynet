@@ -43,9 +43,9 @@ class T200Link extends T200Tag {
         let promise = new Promise(async function(resolve, reject){
             self.browser = browser;
             await self.flow.run(browser, self.tag).then(function(){
-
+                global.final.entry_success(self.project, self.page, self.tag.name);
             }, function(err){
-
+                global.final.entry_failure(self.project, self.page, self.tag.name);
             }).then(function(){
                 resolve();
             }, function(err){

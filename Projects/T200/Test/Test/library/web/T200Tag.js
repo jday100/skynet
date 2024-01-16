@@ -19,7 +19,7 @@ class T200Tag {
     create_tag() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            global.final.append_entry(self.project, self.page, self.name);
+            global.final.append_entry(self.project, self.page, self.tag.name);
             resolve();
         });
 
