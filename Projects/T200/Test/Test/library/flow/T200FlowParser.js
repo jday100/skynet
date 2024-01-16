@@ -18,28 +18,28 @@ class T200FlowParser {
             let result = true;
             switch(step.type){
                 case 'get':
-                    await self.#get(browser, element, step).then(function(){
+                    await self.#get(browser, tag, step).then(function(){
 
                     }, function(err){
                         result = false;
                     });
                     break;
                 case 'wait':
-                    await self.#wait(browser, element, step).then(function(){
+                    await self.#wait(browser, tag, step).then(function(){
 
                     }, function(err){
                         result = false;
                     });
                     break;
                 case 'get_url':
-                    await self.#get_url(browser, element, step).then(function(url){
+                    await self.#get_url(browser, tag, step).then(function(url){
 
                     }, function(err){
                         result = false;
                     });
                     break;
                 case 'find':
-                    await self.#find(browser, element, step).then(function(obj){
+                    await self.#find(browser, tag, step).then(function(obj){
                         self.element = obj;
                     }, function(err){
                         result = false;
@@ -53,35 +53,35 @@ class T200FlowParser {
                     });
                     break;
                 case 'save_window':
-                    await self.#save_window(browser, element, step).then(function(){
+                    await self.#save_window(browser, tag, step).then(function(){
 
                     }, function(err){
                         result = false;
                     });
                     break;
                 case 'save_all_windows':
-                    await self.#save_all_windows(browser, element, step).then(function(){
+                    await self.#save_all_windows(browser, tag, step).then(function(){
 
                     }, function(err){
                         result = false;
                     });
                     break;
                 case 'get_new_window':
-                    await self.#get_new_window(element, step).then(function(win){
+                    await self.#get_new_window(tag, step).then(function(win){
 
                     }, function(err){
                         result = false;
                     });
                     break;
                 case 'change':
-                    await self.#change(browser, element, step).then(function(){
+                    await self.#change(browser, tag, step).then(function(){
 
                     }, function(err){
                         result = false;
                     });
                     break;
                 case 'close':
-                    await self.#close(browser, element, step).then(function(){
+                    await self.#close(browser, tag, step).then(function(){
 
                     }, function(err){
                         result = false;

@@ -12,7 +12,7 @@ class T200Flow {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             await T200Define.create_web_flow(self.name).then(function(value){
-                self.value = value;
+                self.flow = value;
             }, function(err){
 
             }).then(function(){
@@ -36,7 +36,7 @@ class T200Flow {
             let result = true;
             if(self.flow && self.flow.steps){
                 for(let step of self.flow.steps){
-                    await self.parser.parse(browser, element, step).then(function(){
+                    await self.parser.parse(browser, tag, step).then(function(){
 
                     }, function(err){
                         result = false;

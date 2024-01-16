@@ -6,15 +6,16 @@ class T200Module {
 
     }
 
-    create() {
+    create(page) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
+            self.parent = page;
             await T200Define.create_web_module(self.project, self.name).then(function(value){
                 self.define_value = value;
             }, function(err){
 
             }).then(function(value){
-
+                return self.parent.create_fields(self.define_value);
             }, function(err){
 
             }).then(function(){

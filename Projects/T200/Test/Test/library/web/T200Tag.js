@@ -1,3 +1,6 @@
+const T200Flow = require('../flow/T200Flow.js');
+
+
 class T200Tag {
     constructor() {
 
@@ -7,57 +10,29 @@ class T200Tag {
     create() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await T200Define.create_module(self.name).then(function(){
-
-            }, function(err){
-
-            }).then(function(){
-
-            }, function(err){
-
-            }).then(function(){
-                resolve();
-            }, function(err){
-                reject();
-            });
+            
         });
 
         return promise;
     }
 
-    #create_tag() {
+    create_tag() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await T200Define.create_module(self.name).then(function(){
-
-            }, function(err){
-
-            }).then(function(){
-
-            }, function(err){
-
-            }).then(function(){
-                resolve();
-            }, function(err){
-                reject();
-            });
+            global.final.append_entry(self.project, self.page, self.name);
+            resolve();
         });
 
         return promise;
     }
 
-    #create_flow() {
+    create_flow(name) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await T200Define.create_module(self.name).then(function(){
+            let flow = new T200Flow(name);
 
-            }, function(err){
-
-            }).then(function(){
-
-            }, function(err){
-
-            }).then(function(){
+            await flow.create().then(function(){
+                self.flow = flow;
                 resolve();
             }, function(err){
                 reject();

@@ -70,7 +70,7 @@ class T200Source {
         return promise;
     }
 
-    static create_web_module(project, source) {
+    static create_web_module(page, project, source) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let file = T200Resource.merge_web_module(project, source);
@@ -83,7 +83,7 @@ class T200Source {
 
                     if(WebObj){
                         WebObj.project = project;
-                        await WebObj.create().then(function(){
+                        await WebObj.create(page).then(function(){
                             resolve(WebObj);
                         }, function(err){
                             reject();
@@ -114,7 +114,6 @@ class T200Source {
                     let WebObj = new WebClass();
 
                     if(WebObj){
-                        WebObj.project = project;
                         await WebObj.create().then(function(){
                             resolve(WebObj);
                         }, function(err){

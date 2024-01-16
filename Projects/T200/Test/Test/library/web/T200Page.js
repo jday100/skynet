@@ -1,6 +1,8 @@
 const T200Define = require('../T200Define.js');
 const T200Source = require('../T200Source.js');
 
+const T200Link = require('./tags/T200Link.js');
+
 
 class T200Page {
     constructor(name) {
@@ -42,8 +44,8 @@ class T200Page {
         let promise = new Promise(async function(resolve, reject){
             let result = true;
             for(let name of self.defines){
-                await T200Define.create_page(name).then(function(){
-
+                await T200Define.create_web_page(name).then(function(value){
+                    self.define_values.push(value);
                 }, function(err){
                     result = false;
                 });
@@ -64,7 +66,7 @@ class T200Page {
         let promise = new Promise(async function(resolve, reject){
             let result = true;
             for(let name of self.modules){
-                await T200Source.create_web_module(self.project, name).then(function(value){
+                await T200Source.create_web_module(self, self.project, name).then(function(value){
                     self.module_values.push(value);
                 }, function(err){
                     result = false;
@@ -91,19 +93,88 @@ class T200Page {
         return promise;
     }
 
-    create_fields() {
+    create_fields(tag) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
+            let result = true;
 
+            switch(tag.type){
+                case undefined:
+                    for(let field of tag.fields){
+                        await self.#create_field(field).then(function(){
+
+                        }, function(err){
+                            result = false;
+                        });
+                        if(!result)break;
+                    }
+                    if(result){
+                        resolve();
+                    }else{
+                        reject();
+                    }
+                    break;
+                case 'form':
+                    await self.#create_form(tag).then(function(){
+
+                    }, function(err){
+
+                    });
+                    break;
+            }
         });
 
         return promise;
     }
 
-    create_field() {
+    #create_field(tag) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
+            tag.url = self.name;
+            switch(tag.type){
+                case 'link':
+                    let value = new T200Link();
+                    self.#create_tag(tag, value).then(function(){
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+            }
+        });
 
+        return promise;
+    }
+
+    #create_tag(tag, value) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            value.project = self.project;
+            value.page = self.name;
+            await value.create(tag).then(function(){
+                self.tags.push(value);
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    #create_form(tag) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let form = new T200Form();
+
+            form.project = self.project;
+            form.page = self.name;
+            await form.create(tag).then(function(){
+                self.tags.push(form);
+                resolve();
+            }, function(err){
+                reject();
+            });
         });
 
         return promise;

@@ -116,7 +116,7 @@ class T200Browser {
         return this.browser.getAllWindowHandles();
     }
 
-    change(hangle) {
+    change(handle) {
         return this.browser.switchTo().window(handle);
     }
 

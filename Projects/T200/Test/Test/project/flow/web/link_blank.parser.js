@@ -1,4 +1,4 @@
-const T200FlowParser = require('../../lib/flow/T200FlowParser.js');
+const T200FlowParser = require('../../../library/flow/T200FlowParser.js');
 
 
 class T200LinkBlankParser extends T200FlowParser {
