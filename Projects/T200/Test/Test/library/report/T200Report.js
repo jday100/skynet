@@ -14,7 +14,8 @@ class T200Report {
     }
 
     #print_project(project) {
-        console.log(`Project : ${project.name}`);
+        let status = project.status ? "pass" : "error";
+        console.log(`Project : ${project.name}\t\t\t\t${status}`);
 
         if(undefined == project.values){
             return;
@@ -27,7 +28,7 @@ class T200Report {
 
     #print_page(page) {
         let status = page.status ? "pass" : "error";
-        console.log(`\tPage : ${page.name}\t${status}`);
+        console.log(`\tPage : ${page.name}\t\t${status}`);
 
         if(undefined == page.values){
             return;
@@ -40,7 +41,7 @@ class T200Report {
 
     #print_entry(entry) {
         let status = entry.status ? "pass" : "error";
-        console.log(`\t\tEntry : ${entry.name}\t${status}`);
+        console.log(`\t\tEntry : ${entry.name}\t\t${status}`);
     }
 }
 

@@ -9,7 +9,9 @@ class T200Final {
     }
 
     append_project(name) {
-        this.result.projects.append(name, name, new T200Entry(name));
+        let entry = new T200Entry(name);
+        entry.status = true;
+        this.result.projects.append(name, name, entry);
     }
 
     project(name) {
@@ -20,7 +22,9 @@ class T200Final {
         let value = this.result.projects.key(project);
 
         if(value){
-            value.values.append(name, name, new T200Entry(name));
+            let entry = new T200Entry(name);
+            entry.status = true;
+            value.values.append(name, name, entry);
         }
     }
 
