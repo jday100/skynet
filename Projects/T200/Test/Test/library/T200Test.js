@@ -1,4 +1,6 @@
 const T200Setup = require('../project/T200Setup');
+const { error } = require(T200Setup.external('./library/T200Lib.js'));
+
 const T200Actuator = require('./T200Actuator.js');
 const T200DBLoader = require('./T200DBLoader.js');
 const T200WebLoader = require('./T200WebLoader.js');
@@ -33,13 +35,13 @@ class T200Test {
         return promise;
     }
 
-    flow() {
+    flow(category, project, type, source, method, subdir) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
             await self.#start().then(async function(){
                 let act = new T200Actuator();
-                await act.test_flow().then(function(){
+                await act.test_flow(category, project, type, source, method, subdir).then(function(){
                     
                 }, function(err){
                     result = false;
@@ -104,8 +106,12 @@ class T200Test {
                 self.server = new T200WebLoader();
                 await self.server.start().then(function(){
                     resolve();
-                }, function(err){
-                    reject();
+                }, async function(err){
+                    await self.database.stop().then(async function(){
+                        reject();
+                    }, function(err){
+                        reject();
+                    });
                 });
             }, function(err){
                 reject();
@@ -118,15 +124,24 @@ class T200Test {
     #stop() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
+            let result = true;
             await self.database.stop().then(async function(){
-                await self.server.stop().then(function(){
-                    resolve();
-                }, function(err){
-                    reject();
-                });
+                
             }, function(err){
-                reject();
+                result = false;
             });
+
+            await self.server.stop().then(function(){
+            
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;

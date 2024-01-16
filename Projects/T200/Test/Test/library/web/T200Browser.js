@@ -40,7 +40,13 @@ class T200Browser {
     static #create_all_browsers() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-
+            await self.#create_browser('firefox').then(function(browser){
+                let result = new Array();
+                result.push(browser);
+                resolve(result);
+            }, function(err){
+                reject();
+            });
         });
 
         return promise;

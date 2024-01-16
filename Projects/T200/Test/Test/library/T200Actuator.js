@@ -13,21 +13,21 @@ class T200Actuator {
             switch(category){
                 case undefined:
                 case 'all':
-                    await self.#test_all(project, type, source, method, subdir).then(function(){
-
+                    await self.#test_unit_all(project, type, source, method, subdir).then(function(){
+                        resolve();
                     }, function(err){
-    
+                        reject();
                     });
                     break;
                 case 'app':
-                    await self.#test_app(project, type, source, method, subdir).then(function(){
-
+                    await self.#test_unit_app(project, type, source, method, subdir).then(function(){
+                        resolve();
                     }, function(err){
-    
+                        reject();
                     });
                     break;
                 case 'web':
-                    await self.#test_web(project, type, source, method, subdir).then(function(){
+                    await self.#test_unit_web(project, type, source, method, subdir).then(function(){
                         resolve();
                     }, function(err){
                         reject();
@@ -39,7 +39,39 @@ class T200Actuator {
         return promise;
     }
 
-    test_flow() {
+    test_flow(category, project, type, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            switch(category){
+                case undefined:
+                case 'all':
+                    await self.#test_flow_all(project, type, source, method, subdir).then(function(){
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                case 'app':
+                    await self.#test_flow_app(project, type, source, method, subdir).then(function(){
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                case 'web':
+                    await self.#test_flow_web(project, type, source, method, subdir).then(function(){
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+            }            
+        });
+
+        return promise;
+    }
+
+    #test_flow_all() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
 
@@ -48,7 +80,7 @@ class T200Actuator {
         return promise;
     }
 
-    #test_all() {
+    #test_flow_app() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
 
@@ -57,7 +89,37 @@ class T200Actuator {
         return promise;
     }
 
-    #test_app() {
+    #test_flow_web(project, type, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            await self.#web_start(type).then(async function(){
+                await self.#web_run(project, source, method, subdir).then(function(){
+
+                }, function(err){
+                    result = false;
+                }).finally(async function(){
+                    await self.#web_stop().then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                });
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #test_unit_all() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
 
@@ -66,7 +128,16 @@ class T200Actuator {
         return promise;
     }
 
-    #test_web(project, type, source, method, subdir) {
+    #test_unit_app() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+
+        });
+
+        return promise;
+    }
+
+    #test_unit_web(project, type, source, method, subdir) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
@@ -122,10 +193,10 @@ class T200Actuator {
         return promise;
     }
 
-    #create_web(type, source, method, subdir) {
+    #create_web(type) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await T200Browser.create('firefox').then(function(browsers){
+            await T200Browser.create(type).then(function(browsers){
                 self.browsers = browsers;
                 resolve();
             }, function(err){

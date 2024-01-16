@@ -9,8 +9,8 @@ class T200Case {
     create() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await T200Source.create_web_page(self.project, self.name).then(function(obj){
-                self.page = obj;
+            await T200Source.create_web_page(self.project, self.name).then(function(value){
+                self.page = value;
                 resolve();
             }, function(err){
                 reject();

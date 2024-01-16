@@ -10,7 +10,7 @@ class T200Tag {
     create() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            
+            resolve();
         });
 
         return promise;

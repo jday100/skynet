@@ -40,13 +40,13 @@ class T200FlowParser {
                     break;
                 case 'find':
                     await self.#find(browser, tag, step).then(function(obj){
-                        self.element = obj;
+                        self.node = obj;
                     }, function(err){
                         result = false;
                     });
                     break;
                 case 'click':
-                    await self.#click(self.element).then(function(){
+                    await self.#click(self.node).then(function(){
 
                     }, function(err){
                         result = false;
@@ -103,19 +103,19 @@ class T200FlowParser {
 
 
     
-    #get(browser, link, step) {
-        return browser.get(browser.url(link[step.value]));
+    #get(browser, tag, step) {
+        return browser.get(browser.url(tag[step.value]));
     }
 
-    #wait(browser, link, step) {
+    #wait(browser, tag, step) {
         return browser.sleep(step.value);
     }
 
-    #get_url(browser, link, step) {
+    #get_url(browser, tag, step) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
-            browser.get_current_url().then(function(url){
-                if(url == browser.url(link[step.value])){
+        let promise = new Promise(async function(resolve, reject){
+            await browser.get_current_url().then(function(url){
+                if(url == browser.url(tag[step.value])){
                     resolve();
                 }else{
                     reject();
@@ -128,19 +128,19 @@ class T200FlowParser {
         return promise;
     }
 
-    #find(browser, link, step) {
-        return browser.locate(link[step.value]);
+    #find(browser, tag, step) {
+        return browser.locate(tag[step.value]);
     }
 
-    #click(element) {
-        return element.click();
+    #click(node) {
+        return node.click();
     }
 
-    #save_window(browser, element, step) {
+    #save_window(browser, tag, step) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
-            browser.get_window().then(function(handle){
-                element[step.value] = handle;
+        let promise = new Promise(async function(resolve, reject){
+            await browser.get_window().then(function(handle){
+                tag[step.value] = handle;
                 resolve();
             }, function(err){
                 reject();
@@ -150,11 +150,11 @@ class T200FlowParser {
         return promise;
     }
 
-    #save_all_windows(browser, element, step) {
+    #save_all_windows(browser, tag, step) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
-            browser.get_all_windows().then(function(handles){
-                element[step.value] = handles;
+        let promise = new Promise(async function(resolve, reject){
+            await browser.get_all_windows().then(function(handles){
+                tag[step.value] = handles;
                 resolve();
             }, function(err){
                 reject();
@@ -164,14 +164,14 @@ class T200FlowParser {
         return promise;
     }
 
-    #get_new_window(element, step) {
+    #get_new_window(tag, step) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
             let result = new Array();
 
-            for(let win of element[step.new_values]){
+            for(let win of tag[step.new_values]){
                 let flag = false;
-                for(let old of element[step.old_values]){
+                for(let old of tag[step.old_values]){
                     if(win == old){
                         flag = true;
                         break;
@@ -185,7 +185,7 @@ class T200FlowParser {
             }
 
             if(1 == result.length){
-                element[step.value] = result[0];
+                tag[step.value] = result[0];
                 resolve(result[0]);
             }else{
                 reject();
@@ -195,11 +195,11 @@ class T200FlowParser {
         return promise;
     }
 
-    #change(browser, element, step) {
-        return browser.change(element[step.value]);
+    #change(browser, tag, step) {
+        return browser.change(tag[step.value]);
     }
 
-    #close(browser, element, step) {
+    #close(browser, tag, step) {
         return browser.close();
     }
 }

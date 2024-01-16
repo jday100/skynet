@@ -108,19 +108,21 @@ class T200Page {
                         });
                         if(!result)break;
                     }
-                    if(result){
-                        resolve();
-                    }else{
-                        reject();
-                    }
+                    
                     break;
                 case 'form':
                     await self.#create_form(tag).then(function(){
 
                     }, function(err){
-
+                        result = false;
                     });
                     break;
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
             }
         });
 
@@ -130,16 +132,23 @@ class T200Page {
     #create_field(tag) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
+            let result = true;
             tag.url = self.name;
             switch(tag.type){
                 case 'link':
                     let value = new T200Link();
-                    self.#create_tag(tag, value).then(function(){
-                        resolve();
+                    await self.#create_tag(tag, value).then(function(){
+                        
                     }, function(err){
-                        reject();
+                        result = false;
                     });
                     break;
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
             }
         });
 
@@ -183,7 +192,7 @@ class T200Page {
     test_flow(browser) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-
+            resolve();
         });
 
         return promise;
