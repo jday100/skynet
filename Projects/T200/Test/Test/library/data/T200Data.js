@@ -28,8 +28,8 @@ class T200Data {
         let min;
         let max;
 
-        min = undefined == field.min ? 0 : field.min;
-        max = undefined == field.max ? 50 : field.max;
+        min = undefined == field.length.min ? 0 : Number(field.length.min);
+        max = undefined == field.length.max ? 50 : Number(field.length.max);
 
         if(undefined == field.empty || field.empty == true){
             result.push('');

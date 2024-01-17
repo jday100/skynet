@@ -14,12 +14,23 @@ class T200Input extends T200Tag {
 
             let data = {};
 
+            data = field.value;
+
             data.type = field.type;
+            //data.empty = field.empty;
             self.data = data;
 
-            await self.#build_data(data).then(function(){
+            await self.create_tag().then(function(){
+
+            }, function(err){
+
+            }).then(function(){
+                return self.#build_data(data);
+            }, function(err){
+
+            }).then(function(){
                 resolve();
-            }, function(){
+            }, function(err){
                 reject();
             });            
         });

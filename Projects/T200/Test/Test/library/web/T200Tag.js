@@ -7,7 +7,7 @@ class T200Tag {
     }
 
     
-    create1() {
+    create() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             resolve();
@@ -19,7 +19,7 @@ class T200Tag {
     create_tag() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            global.final.append_entry(self.project, self.page, self.tag.name);
+            global.final.append_entry(self.project, self.page, self.field.name);
             resolve();
         });
 

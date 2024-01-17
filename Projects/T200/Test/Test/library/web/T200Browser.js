@@ -133,6 +133,10 @@ class T200Browser {
     close() {
         return this.browser.close();
     }
+
+    html() {
+        return this.browser.getPageSource();
+    }
 }
 
 module.exports = T200Browser;

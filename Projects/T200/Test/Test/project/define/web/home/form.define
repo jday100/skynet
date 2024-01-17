@@ -7,6 +7,14 @@
         {
             "name"  : "text",
             "type"  : "text",
+            "empty" : "false",
+            "value" : {
+                "empty" : "false",
+                "length": {
+                    "min"   : "2",
+                    "max"   : "50"
+                }
+            },
             "locate"    : {
                 "type"  : "name",
                 "value" : "text"

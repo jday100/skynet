@@ -73,13 +73,12 @@ class T200Form {
 
     #create_tag(tag) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
+        let promise = new Promise(async function(resolve, reject){
             let value;
             switch(tag.type){
                 case 'text':
                     value = new T200Text();
-    
-                    value.create(tag).then(function(){
+                    await self.#create_entry(tag, value).then(function(){
                         self.tags.push(value);
                         resolve();
                     }, function(err){
@@ -89,7 +88,7 @@ class T200Form {
                 case 'password':
                     value = new T200Password();
     
-                    value.create(tag).then(function(){
+                    await self.#create_entry(tag, value).then(function(){
                         self.tags.push(value);
                         resolve();
                     }, function(err){
@@ -99,7 +98,7 @@ class T200Form {
                 case 'email':
                     value = new T200Email();
     
-                    value.create(tag).then(function(){
+                    await self.#create_entry(tag, value).then(function(){
                         self.tags.push(value);
                         resolve();
                     }, function(err){
@@ -109,7 +108,7 @@ class T200Form {
                 case 'button':
                     value = new T200Button();
     
-                    value.create(tag).then(function(){
+                    await self.#create_entry(tag, value).then(function(){
                         self.buttons.push(value);
                         resolve();
                     }, function(err){
@@ -123,6 +122,21 @@ class T200Form {
         });
 
         return promise;        
+    }
+
+    #create_entry(tag, value) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            value.project = self.project;
+            value.page = self.page;
+            await value.create(tag).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
     }
 
     #create_buttons() {
@@ -244,23 +258,38 @@ class T200Form {
                 }).then(function(url){
                     let value = self.browser.url(self.module.define_value.value);
                     if(url == value){
-                        
+                        return self.#verify();
                     }else{
                         result = false;
                     }
                 }, function(err){
 
+                }).then(function(){
+                    
+                }, function(err){
+                    self.flag = false;
+                    result = false;
                 });
             }while(self.flag);
 
-            if(result){
+            if(result){                
                 resolve();
             }else{
+                self.#set_error();
                 reject();
             }
         });
 
         return promise;
+    }
+
+    #set_error() {
+        let self = this;
+
+        for(let tag of self.tags){
+            global.final.entry_failure(self.project, self.page, tag.field.name);
+        }
+        
     }
 
     #test_error(name) {
@@ -273,6 +302,23 @@ class T200Form {
             //wait
             //verify
             reject();
+        });
+
+        return promise;        
+    }
+
+    #verify() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            await self.browser.html().then(async function(html){
+                await self.module.verify(html).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                });
+            }, function(err){
+                reject();
+            });
         });
 
         return promise;        
