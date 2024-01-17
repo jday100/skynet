@@ -1,6 +1,7 @@
 const T200Define = require('../T200Define.js');
 const T200Source = require('../T200Source.js');
 
+const T200Form = require('./T200Form.js');
 const T200Link = require('./tags/T200Link.js');
 
 
@@ -93,14 +94,14 @@ class T200Page {
         return promise;
     }
 
-    create_fields(tag) {
+    create_fields(module) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
 
-            switch(tag.type){
+            switch(module.define_value.type){
                 case undefined:
-                    for(let field of tag.fields){
+                    for(let field of module.define_value.fields){
                         await self.#create_field(field).then(function(){
 
                         }, function(err){
@@ -111,7 +112,7 @@ class T200Page {
                     
                     break;
                 case 'form':
-                    await self.#create_form(tag).then(function(){
+                    await self.#create_form(module).then(function(){
 
                     }, function(err){
                         result = false;
@@ -171,14 +172,14 @@ class T200Page {
         return promise;
     }
 
-    #create_form(tag) {
+    #create_form(module) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let form = new T200Form();
 
             form.project = self.project;
             form.page = self.name;
-            await form.create(tag).then(function(){
+            await form.create(module).then(function(){
                 self.tags.push(form);
                 resolve();
             }, function(err){
@@ -213,7 +214,7 @@ class T200Page {
                 result = false;
             }).then(async function(){
                 for(let tag of self.tags){
-                    await tag.run(browser).then(function(){
+                    await tag.test_unit(browser).then(function(){
 
                     }, function(err){
                         result = false;

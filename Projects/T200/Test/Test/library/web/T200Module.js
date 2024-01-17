@@ -15,7 +15,7 @@ class T200Module {
             }, function(err){
 
             }).then(function(value){
-                return self.parent.create_fields(self.define_value);
+                return self.parent.create_fields(self);
             }, function(err){
 
             }).then(function(){
