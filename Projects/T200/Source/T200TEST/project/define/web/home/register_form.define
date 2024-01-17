@@ -1,0 +1,152 @@
+{
+    "name"  : "form",
+    "type"  : "form",
+    "submit"    : "submit",
+    "value"     : "/login.html",
+    "verify"    : "false",
+    "data"      : "",
+    "fields"    : [
+        {
+            "name"  : "username",
+            "type"  : "text",
+            "empty" : "false",
+            "value" : {
+                "empty" : "false",
+                "length": {
+                    "min"   : "2",
+                    "max"   : "50"
+                }
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "username"
+            }
+        },{
+            "name"  : "password1",
+            "type"  : "password",
+            "empty" : "false",
+            "value" : {
+                "empty" : "false",
+                "length": {
+                    "min"   : "6",
+                    "max"   : "50"
+                }
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "password1"
+            }
+        },{
+            "name"  : "password2",
+            "type"  : "password",
+            "empty" : "false",
+            "value" : {
+                "empty" : "false",
+                "length": {
+                    "min"   : "6",
+                    "max"   : "50"
+                }
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "password2"
+            }
+        },{
+            "name"  : "email",
+            "type"  : "email",
+            "empty" : "false",
+            "value" : {
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "email"
+            }
+        },{
+            "name"  : "auth",
+            "type"  : "password",
+            "empty" : "false",
+            "value" : {
+                "empty" : "false",
+                "length": {
+                    "min"   : "2",
+                    "max"   : "50"
+                }
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "authcode"
+            }
+        },{
+            "name"  : "invite",
+            "type"  : "password",
+            "empty" : "false",
+            "value" : {
+                "empty" : "false",
+                "length": {
+                    "min"   : "12",
+                    "max"   : "12"
+                }
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "invitecode"
+            }
+        }
+    ],
+    "buttons"   : [
+        {
+            "name"  : "submit",
+            "type"  : "button",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "submit"
+            }
+        },{
+            "name"  : "send",
+            "type"  : "button",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "button[locale=\"send\"]"
+            }
+        }
+    ],
+    "datas"  : [
+        {
+            "username"  : "111111",
+            "password1" : "111111",
+            "password2" : "111111",
+            "email"     : "111111@111111.com",
+            "auth"      : "111111",
+            "invite"    : "111111111111"
+        },{
+            "username"  : "222222",
+            "password1" : "222222",
+            "password2" : "222222",
+            "email"     : "222222@222222.com",
+            "auth"      : "222222",
+            "invite"    : "111111111111"
+        },{
+            "username"  : "333333",
+            "password1" : "333333",
+            "password2" : "333333",
+            "email"     : "333333@333333.com",
+            "auth"      : "333333",
+            "invite"    : "111111111111"
+        },{
+            "username"  : "444444",
+            "password1" : "444444",
+            "password2" : "444444",
+            "email"     : "444444@444444.com",
+            "auth"      : "444444",
+            "invite"    : "111111111111"
+        },{
+            "username"  : "555555",
+            "password1" : "555555",
+            "password2" : "555555",
+            "email"     : "555555@555555.com",
+            "auth"      : "555555",
+            "invite"    : "111111111111"
+        }
+    ]
+}

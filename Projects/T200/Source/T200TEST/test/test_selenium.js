@@ -28,3 +28,5 @@ browser.getWindowHandle().then(function(win){
 }, function(){
 
 });
+
+browser.getPageSource();

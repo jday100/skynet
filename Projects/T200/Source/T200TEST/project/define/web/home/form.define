@@ -1,0 +1,39 @@
+{
+    "name"  : "form",
+    "type"  : "form",
+    "submit"    : "submit",
+    "value"     : "/form",
+    "fields"    : [
+        {
+            "name"  : "text",
+            "type"  : "text",
+            "empty" : "false",
+            "value" : {
+                "empty" : "false",
+                "length": {
+                    "min"   : "2",
+                    "max"   : "50"
+                }
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "text"
+            }
+        }
+    ],
+    "buttons"   : [
+        {
+            "name"  : "submit",
+            "type"  : "button",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "submit"
+            }
+        }
+    ],
+    "data"  : [
+        {
+            "text"  : "111111"
+        }
+    ]
+}

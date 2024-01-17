@@ -1,0 +1,182 @@
+{
+    "name"  : "link",
+    "fields"    : [
+        {
+            "name"  : "home1",
+            "type"  : "link",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "home1"
+            }
+        },{
+            "name"  : "home2",
+            "type"  : "link",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "home1"
+            }
+        },{
+            "name"  : "home3",
+            "type"  : "link",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "class",
+                "value" : "home1"
+            }
+        },{
+            "name"  : "home4",
+            "type"  : "link",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"home1\"]"
+            }
+        },{
+            "name"  : "home5",
+            "type"  : "link",
+            "target": "blank",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "home2"
+            }
+        },{
+            "name"  : "home6",
+            "type"  : "link",
+            "target": "blank",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "home2"
+            }
+        },{
+            "name"  : "home7",
+            "type"  : "link",
+            "target": "blank",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "class",
+                "value" : "home2"
+            }
+        },{
+            "name"  : "home8",
+            "type"  : "link",
+            "target": "blank",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"home2\"]"
+            }
+        },{
+            "name"  : "home9",
+            "type"  : "link",
+            "target": "self",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "home3"
+            }
+        },{
+            "name"  : "home10",
+            "type"  : "link",
+            "target": "self",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "home3"
+            }
+        },{
+            "name"  : "home11",
+            "type"  : "link",
+            "target": "self",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "class",
+                "value" : "home3"
+            }
+        },{
+            "name"  : "home12",
+            "type"  : "link",
+            "target": "self",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"home3\"]"
+            }
+        },{
+            "name"  : "home13",
+            "type"  : "link",
+            "target": "top",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "home4"
+            }
+        },{
+            "name"  : "home14",
+            "type"  : "link",
+            "target": "top",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "home4"
+            }
+        },{
+            "name"  : "home15",
+            "type"  : "link",
+            "target": "top",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "class",
+                "value" : "home4"
+            }
+        },{
+            "name"  : "home16",
+            "type"  : "link",
+            "target": "top",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"home4\"]"
+            }
+        },{
+            "name"  : "home17",
+            "type"  : "link",
+            "target": "parent",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "home5"
+            }
+        },{
+            "name"  : "home18",
+            "type"  : "link",
+            "target": "parent",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "home5"
+            }
+        },{
+            "name"  : "home19",
+            "type"  : "link",
+            "target": "parent",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "class",
+                "value" : "home5"
+            }
+        },{
+            "name"  : "home20",
+            "type"  : "link",
+            "target": "parent",
+            "value" : "/",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"home5\"]"
+            }
+        }
+    ]
+}
