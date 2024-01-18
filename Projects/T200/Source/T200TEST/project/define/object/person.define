@@ -1,0 +1,72 @@
+{
+    "name"  : "person",
+    "fields"    : [
+        {
+            "name"  : "user_id",
+            "type"  : "integer"
+        },{
+            "name"  : "status",
+            "type"  : "integer"
+        },{
+            "name"  : "continent_id",
+            "type"  : "integer"
+        },{
+            "name"  : "continent_name",
+            "type"  : "string"
+        },{
+            "name"  : "country_id",
+            "type"  : "integer"
+        },{
+            "name"  : "country_name",
+            "type"  : "integer"
+        },{
+            "name"  : "username",
+            "type"  : "string"
+        },{
+            "name"  : "identity_id",
+            "type"  : "integer"
+        },{
+            "name"  : "nickname",
+            "type"  : "string"
+        },{
+            "name"  : "password",
+            "type"  : "password"
+        },{
+            "name"  : "email",
+            "type"  : "email"
+        },{
+            "name"  : "gender",
+            "type"  : "integer"
+        },{
+            "name"  : "year",
+            "type"  : "integer"
+        },{
+            "name"  : "month",
+            "type"  : "integer"
+        },{
+            "name"  : "day",
+            "type"  : "integer"
+        },{
+            "name"  : "intro",
+            "type"  : "string"
+        },{
+            "name"  : "invite",
+            "type"  : "integer"
+        },{
+            "name"  : "flag",
+            "type"  : "integer"
+        },{
+            "name"  : "create_time",
+            "type"  : "timestamp"
+        },{
+            "name"  : "modify_time",
+            "type"  : "timestamp"
+        },{
+            "name"  : "login_time",
+            "type"  : "timestamp"
+        },{
+            "name"  : "ip",
+            "type"  : "string"
+        }
+    ]
+}

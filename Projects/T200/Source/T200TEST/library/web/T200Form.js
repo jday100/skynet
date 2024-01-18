@@ -212,10 +212,124 @@ class T200Form {
         return promise;        
     }
 
-    run(browser) {
+    test_flow(browser) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            
+            let result = true;
+            self.browser = browser;
+            await self.#set_datas3().then(function(){
+
+            }, function(err){
+                result = false;
+            }).then(function(){
+                return self.#click();
+            }, function(err){
+                result = false;
+            }).then(function(){
+                return self.browser.sleep(1000);
+            }, function(err){
+                result = false;
+            }).then(function(){
+                return self.browser.get_current_url();
+            }, function(err){
+                result = false;
+            }).then(function(url){
+                let value = self.browser.url(self.module.define_value.value);
+                if(url == value){
+                       
+                }else{
+                    result = false;
+                }
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                self.#set_pass();
+                resolve();
+            }else{
+                self.#set_error();
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #set_datas3() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            for(let tag of self.tags){
+                await self.#get_data(tag).then(async function(value){
+                    await tag.run(self.browser, value).then(function(){
+    
+                    }, function(err){
+                        result = false;
+                    });
+                }, function(err){
+                    result = false;
+                });
+
+                if(!result)break;
+            }
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #get_data(tag) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            if(undefined == tag.field.value.object){
+                let data = {};
+                data = tag.field.value;
+                data.type = tag.field.type;
+                await self.#build_data(data).then(function(){
+                    if(0 < data.values.length){
+                        resolve(data.values[0]);
+                    }else{
+                        result = false;
+                    }
+                }, function(err){
+                    result = false;
+                });
+            }else{
+                await global.data.get(tag.field.value.object.name).then(function(data){
+                    if(data){
+                        if(1 == data.datas.length){
+                            let item = data.datas[0];
+                            let value = item[tag.field.value.object.field];
+    
+                            if(value){
+                                resolve(value);
+                            }else{
+                                result = false;
+                            }
+                        }else{
+                            result = false;
+                        }
+                    }else{
+                        result = false;
+                    }
+                }, function(err){
+                    result = true;
+                });
+            }            
+
+            if(result){
+    
+            }else{
+                reject();
+            }
         });
 
         return promise;
@@ -515,7 +629,11 @@ class T200Form {
     #build_data(data) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            resolve(data);
+            if(T200Data.build(data)){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;        

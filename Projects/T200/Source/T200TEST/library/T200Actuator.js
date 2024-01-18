@@ -1,4 +1,5 @@
 const T200Source = require('./T200Source.js');
+const T200Data = require('./data/T200Data.js');
 const T200Browser = require('./web/T200Browser.js');
 
 
@@ -42,6 +43,7 @@ class T200Actuator {
     test_flow(category, project, type, source, method, subdir) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
+            global.data = new T200Data();
             switch(category){
                 case undefined:
                 case 'all':

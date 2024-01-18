@@ -11,6 +11,10 @@
             "type"  : "text",
             "empty" : "false",
             "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "username"
+                },
                 "empty" : "false",
                 "length": {
                     "min"   : "2",
@@ -26,6 +30,10 @@
             "type"  : "password",
             "empty" : "false",
             "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "password"
+                },
                 "empty" : "false",
                 "length": {
                     "min"   : "6",
@@ -40,7 +48,11 @@
             "name"  : "password2",
             "type"  : "password",
             "empty" : "false",
-            "value" : {
+            "value" : {                
+                "object": {
+                    "name"  : "person",
+                    "field" : "password"
+                },
                 "empty" : "false",
                 "length": {
                     "min"   : "6",
@@ -56,6 +68,10 @@
             "type"  : "email",
             "empty" : "false",
             "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "email"
+                },
                 "empty" : "false"
             },
             "locate"    : {
@@ -69,8 +85,8 @@
             "value" : {
                 "empty" : "false",
                 "length": {
-                    "min"   : "2",
-                    "max"   : "50"
+                    "min"   : "6",
+                    "max"   : "6"
                 }
             },
             "locate"    : {
@@ -82,6 +98,10 @@
             "type"  : "password",
             "empty" : "false",
             "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "invite"
+                },
                 "empty" : "false",
                 "length": {
                     "min"   : "12",

@@ -6,7 +6,7 @@ class T200RegisterPage extends T200Page {
         super(name);
 
         this.defines = [
-            
+            "person"
         ];
 
         this.modules = [
@@ -14,13 +14,43 @@ class T200RegisterPage extends T200Page {
         ];
     }
 
-    test_flow(browser) {
+    
+    #load_data() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
 
-            await browser.get(browser.url(self.name)).then(function(){
+            for(let name of self.defines){
+                await global.data.load(name).then(function(){
 
+                }, function(err){
+                    result = false;
+                });
+
+                if(!result)break;
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    test_flow(browser) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            self.browser = browser;
+            await self.#load_data().then(function(){
+
+            }, function(err){
+                result = false;
+            }).then(function(){
+                return browser.get(browser.url(self.name))
             }, function(err){
                 result = false;
             }).then(function(){
@@ -28,13 +58,11 @@ class T200RegisterPage extends T200Page {
             }, function(err){
                 result = false;
             }).then(async function(){
-                for(let tag of self.tags){
-                    await tag.test_unit(browser).then(function(){
-
-                    }, function(err){
-                        result = false;
-                    });
-                }
+                return self.#test_page();
+            }, function(err){
+                result = false;
+            }).then(async function(){
+                
             }, function(err){
                 result = false;
             });
@@ -43,6 +71,52 @@ class T200RegisterPage extends T200Page {
                 resolve();
             }else{
                 reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #test() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            let form;
+
+            for(let tag of self.tags){
+                if("register_form" == tag.module.name){
+                    form = tag;
+                    break;
+                }
+            }
+
+            if(undefined == form){
+                reject();
+            }else{
+                await form.test_flow(self.browser).then(resolve, reject);
+            }
+        });
+
+        return promise;
+    }
+
+    #test_page() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            let form;
+
+            for(let tag of self.tags){
+                if("register_form" == tag.module.name){
+                    form = tag;
+                    break;
+                }
+            }
+
+            if(undefined == form){
+                reject();
+            }else{
+                await form.test_flow(self.browser).then(resolve, reject);
             }
         });
 

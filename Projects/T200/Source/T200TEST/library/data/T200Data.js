@@ -1,3 +1,4 @@
+const T200Define = require('../T200Define.js');
 const T200Setup = require('../../project/T200Setup.js');
 const { error } = require(T200Setup.external('./library/T200Lib.js'));
 const T200Moken = require(T200Setup.external('./library/T200Moken.js'));
@@ -5,7 +6,48 @@ const T200Moken = require(T200Setup.external('./library/T200Moken.js'));
 
 class T200Data {
     constructor() {
+        this.dataset = {};
+    }
 
+    load(name) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let value = self.dataset[name];
+
+            if(undefined == value){
+                await T200Define.load_data(name).then(function(obj){
+                    self.dataset[name] = obj;
+                    resolve();
+                }, function(err){
+                    reject();
+                });
+            }else{
+                resolve();
+            }            
+        });
+
+        return promise;
+    }
+
+    
+    get(name) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let value = self.dataset[name];
+
+            if(undefined == value){
+                await T200Define.load_data(name).then(function(obj){
+                    self.dataset[name] = obj;
+                    resolve(obj);
+                }, function(err){
+                    reject();
+                });
+            }else{
+                resolve(value);
+            }            
+        });
+
+        return promise;
     }
 
     static build(field) {

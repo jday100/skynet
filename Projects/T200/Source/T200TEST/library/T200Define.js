@@ -8,7 +8,33 @@ class T200Define {
 
     }
 
-    static create_web_page(project, name) {
+    static load_data(name) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let file = T200Resource.merge_data(name);
+
+            if(file){
+                await T200File.load(file).then(function(data){
+                    let value = data.toString();
+                    let JsonObj = JSON.parse(value);
+
+                    if(JsonObj){
+                        resolve(JsonObj);
+                    }else{
+                        reject();
+                    }
+                }, function(err){
+                    reject();
+                });
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    static create_web_page(name) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let file = T200Resource.merge_object_define(name);

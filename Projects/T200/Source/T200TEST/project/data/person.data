@@ -1,0 +1,22 @@
+{
+    "name"  : "person",
+    "datas" : [
+        {
+            "status"            : "1",
+            "continent_id"      : "100",
+            "continent_name"    : "",
+            "country_id"        : "1000",
+            "country_name"      : "",
+            "username"          : "skynet",
+            "nickname"          : "T100",
+            "password"          : "111111",
+            "email"             : "skynet@skynet.com",
+            "gender"            : "1",
+            "year"              : "2020",
+            "month"             : "10",
+            "day"               : "30",
+            "intro"             : "",
+            "invite"            : "111111111111"
+        }
+    ]
+}
