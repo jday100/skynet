@@ -193,7 +193,33 @@ class T200Page {
     test_flow(browser) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            resolve();
+            let result = true;
+
+            await browser.get(browser.url(self.name)).then(function(){
+
+            }, function(err){
+                result = false;
+            }).then(function(){
+                return browser.sleep(1000);
+            }, function(err){
+                result = false;
+            }).then(async function(){
+                for(let tag of self.tags){
+                    await tag.test_unit(browser).then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                }
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;

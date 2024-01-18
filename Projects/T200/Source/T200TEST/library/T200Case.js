@@ -40,7 +40,15 @@ class T200Case {
     test_flow(browser) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-
+            if(self.page){
+                await self.page.test_flow(browser).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                });
+            }else{
+                reject();
+            }
         });
 
         return promise;

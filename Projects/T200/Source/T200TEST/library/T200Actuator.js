@@ -94,7 +94,7 @@ class T200Actuator {
         let promise = new Promise(async function(resolve, reject){
             let result = true;
             await self.#web_start(type).then(async function(){
-                await self.#web_run(project, source, method, subdir).then(function(){
+                await self.#web_flow_run(project, source, method, subdir).then(function(){
 
                 }, function(err){
                     result = false;
@@ -279,6 +279,99 @@ class T200Actuator {
             global.final.append_project(project);
             await T200Source.create_web(project, source).then(async function(obj){
                 await obj.test_unit(browser).then(function(){
+
+                }, function(err){
+                    result = false;
+                }).finally(function(){
+       
+                });
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #web_flow_run(project, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            for(let browser of self.browsers){
+                await self.#web_flow_test(browser, project, source, method, subdir).then(function(){
+        
+                }, function(err){
+                    result = false;
+                });
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #web_flow_test(browser, project, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            if(undefined == source){
+                await self.#web_flow_search(browser, project, source, method, subdir).then(resolve, reject);
+            }else{
+                if(source.endsWith('/')){
+                    await self.#web_flow_search(browser, project, source, method, subdir).then(resolve, reject);
+                }else{
+                    await self.#web_flow_done(browser, project, source, method).then(resolve, reject);
+                }
+            }
+        });
+
+        return promise;
+    }
+
+    #web_flow_search(browser, project, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            global.final.append_project(project);
+            await T200Source.create_web_case(project, source).then(async function(obj){
+                await obj.test_flow(browser).then(function(){
+
+                }, function(err){
+                    result = false;
+                }).finally(function(){
+       
+                });
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #web_flow_done(browser, project, source, method) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            global.final.append_project(project);
+            await T200Source.create_web(project, source).then(async function(obj){
+                await obj.test_flow(browser).then(function(){
 
                 }, function(err){
                     result = false;
