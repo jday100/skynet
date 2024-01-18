@@ -185,7 +185,7 @@ class T200Actuator {
     #web_stop() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await self.#disp_web_all().then(function(){
+            await self.#destroy_web_all().then(function(){
                 resolve();
             }, function(err){
                 reject();
@@ -209,10 +209,19 @@ class T200Actuator {
         return promise;
     }
 
-    #disp_web_all() {
+    #destroy_web_all() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            resolve();
+            let result = true;
+            for(let browser of self.browsers){
+                await browser.close();
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
         });
 
         return promise;

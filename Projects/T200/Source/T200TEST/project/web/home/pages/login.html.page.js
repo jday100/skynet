@@ -1,7 +1,7 @@
 const T200Page = require('../../../../library/web/T200Page.js');
 
 
-class T200RegisterPage extends T200Page {
+class T200LoginPage extends T200Page {
     constructor(name) {
         super(name);
 
@@ -10,7 +10,7 @@ class T200RegisterPage extends T200Page {
         ];
 
         this.modules = [
-            "register_form"
+            "login_form"
         ];
     }
 
@@ -84,7 +84,7 @@ class T200RegisterPage extends T200Page {
             let form;
 
             for(let tag of self.tags){
-                if("register_form" == tag.module.name){
+                if("login_form" == tag.module.name){
                     form = tag;
                     break;
                 }
@@ -107,7 +107,7 @@ class T200RegisterPage extends T200Page {
             let form;
 
             for(let tag of self.tags){
-                if("register_form" == tag.module.name){
+                if("login_form" == tag.module.name){
                     form = tag;
                     break;
                 }
@@ -124,4 +124,4 @@ class T200RegisterPage extends T200Page {
     }
 }
 
-module.exports = T200RegisterPage;
+module.exports = T200LoginPage;

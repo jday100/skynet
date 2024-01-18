@@ -195,12 +195,12 @@ class T200Page {
         let promise = new Promise(async function(resolve, reject){
             let result = true;
 
-            await browser.get(browser.url(self.name)).then(function(){
+            await browser.sleep(500).then(function(){
 
             }, function(err){
                 result = false;
             }).then(function(){
-                return browser.sleep(1000);
+                return browser.sleep(500);
             }, function(err){
                 result = false;
             }).then(async function(){

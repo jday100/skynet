@@ -1,0 +1,77 @@
+{
+    "name"  : "form",
+    "type"  : "form",
+    "submit"    : "submit",
+    "value"     : "/content/person/profile_init.html",
+    "verify"    : "false",
+    "data"      : "",
+    "fields"    : [
+        {
+            "name"  : "username",
+            "type"  : "text",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "username"
+                },
+                "empty" : "false",
+                "length": {
+                    "min"   : "2",
+                    "max"   : "50"
+                }
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "username"
+            }
+        },{
+            "name"  : "password",
+            "type"  : "password",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "password"
+                },
+                "empty" : "false",
+                "length": {
+                    "min"   : "6",
+                    "max"   : "50"
+                }
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "password"
+            }
+        }
+    ],
+    "buttons"   : [
+        {
+            "name"  : "submit",
+            "type"  : "button",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "submit"
+            }
+        }
+    ],
+    "datas"  : [
+        {
+            "username"  : "111111",
+            "password"  : "111111"
+        },{
+            "username"  : "222222",
+            "password"  : "222222"
+        },{
+            "username"  : "333333",
+            "password"  : "333333"
+        },{
+            "username"  : "444444",
+            "password"  : "444444"
+        },{
+            "username"  : "555555",
+            "password"  : "555555"
+        }
+    ]
+}

@@ -7,8 +7,8 @@ class T200HomeWeb extends T200Web {
         super();
 
         this.html = [
-            "/register.html"//,
-            //"/login.html"
+            "/register.html",
+            "/login.html"
         ]
     }
 
