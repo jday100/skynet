@@ -1,17 +1,38 @@
-const T200Input = require('./T200Input.js');
+const T200Tag = require('../T200Tag.js');
 
 
-class T200Button extends T200Input {
+class T200Menu extends T200Tag {
     constructor() {
         super();
     }
 
-    create(field) {
+    create(tag) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            self.field = field;
-            self.tag = field;
+            self.tag = tag;
+            self.field = tag;
+
+            let result = true;
+
             await  self.create_tag().then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    run2(browser) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            self.browser = browser;
+            await self.tag.run(browser).then(function(){
+                global.final.entry_success(self.project, self.page, self.tag.name);
+            }, function(err){
+                global.final.entry_failure(self.project, self.page, self.tag.name);
+            }).then(function(){
                 resolve();
             }, function(err){
                 reject();
@@ -45,4 +66,4 @@ class T200Button extends T200Input {
     }
 }
 
-module.exports = T200Button;
+module.exports = T200Menu;

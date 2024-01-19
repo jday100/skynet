@@ -3,6 +3,8 @@ const T200Source = require('../T200Source.js');
 
 const T200Form = require('./T200Form.js');
 const T200Link = require('./tags/T200Link.js');
+const T200Menu = require('./tags/T200Menu.js');
+const T200Button = require('./tags/T200Button.js');
 
 
 class T200Page {
@@ -101,6 +103,9 @@ class T200Page {
 
             switch(module.define_value.type){
                 case undefined:
+                case 'menu':
+                case 'button':
+                case 'list':
                     for(let field of module.define_value.fields){
                         await self.#create_field(field).then(function(){
 
@@ -134,10 +139,27 @@ class T200Page {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
+            let value;
             tag.url = self.name;
             switch(tag.type){
                 case 'link':
-                    let value = new T200Link();
+                    value = new T200Link();
+                    await self.#create_tag(tag, value).then(function(){
+                        
+                    }, function(err){
+                        result = false;
+                    });
+                    break;
+                case 'menu':
+                    value = new T200Menu();
+                    await self.#create_tag(tag, value).then(function(){
+                        
+                    }, function(err){
+                        result = false;
+                    });
+                    break;
+                case 'button':
+                    value = new T200Button();
                     await self.#create_tag(tag, value).then(function(){
                         
                     }, function(err){

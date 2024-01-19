@@ -10,10 +10,12 @@ class T200HomeWeb extends T200Web {
             "/register.html",
             "/login.html",
             "/content/person/profile_init.html",
-            "/content/person/identity_init.html"
+            "/content/person/identity_init.html",
+            "/content/person/profile.html",
+            "/content/house/rent.html"
         ]
 
-        this.next = "/content/person/profile_init_html";
+        this.next = "";
     }
 
     create() {

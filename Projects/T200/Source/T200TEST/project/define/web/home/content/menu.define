@@ -1,0 +1,32 @@
+{
+    "name"  : "menu",
+    "type"  : "menu",
+    "fields"    : [
+        {
+            "name"  : "person",
+            "show"  : "true",
+            "type"  : "menu",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "summary[locale=\"person\"]"
+            }
+        },{
+            "name"  : "house",
+            "show"  : "true",
+            "type"  : "menu",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "summary[locale=\"house\"]"
+            }
+        },{
+            "name"  : "rent",
+            "show"  : "true",
+            "type"  : "menu",
+            "value" : "/content/house/rent.html",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "a[locale=\"rent\"]"
+            }
+        }
+    ]
+}
