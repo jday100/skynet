@@ -1,0 +1,154 @@
+{
+    "name"  : "form",
+    "type"  : "form",
+    "submit"    : "submit",
+    "value"     : "/content/person/profile.html",
+    "verify"    : "false",
+    "data"      : "",
+    "fields"    : [
+        {
+            "name"  : "username",
+            "show"  : "true",
+            "type"  : "text",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "username"
+                },
+                "empty" : "false",
+                "length": {
+                    "min"   : "2",
+                    "max"   : "50"
+                }
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "username"
+            }
+        },{
+            "name"  : "nickname",
+            "type"  : "text",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "identity",
+                    "field" : "nickname"
+                },
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "nickname"
+            }
+        },{
+            "name"  : "continent",
+            "type"  : "select",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "identity",
+                    "field" : "continent_id"
+                },
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "continent"
+            }
+        },{
+            "name"  : "region",
+            "type"  : "select",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "identity",
+                    "field" : "region_id"
+                },
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "region"
+            }
+        },{
+            "name"  : "city",
+            "type"  : "select",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "identity",
+                    "field" : "city_id"
+                },
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "city"
+            }
+        },{
+            "name"  : "intro",
+            "type"  : "string",
+            "empty" : "true",
+            "value" : {
+                "object": {
+                    "name"  : "identity",
+                    "field" : "intro"
+                },
+                "empty" : "true"
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "intro"
+            }
+        }
+    ],
+    "buttons"   : [
+        {
+            "name"  : "submit",
+            "type"  : "button",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "submit"
+            }
+        }
+    ],
+    "datas"  : [
+        {
+            "username"  : "111111",
+            "nickname"  : "111111",
+            "continent" : "100",
+            "region"    : "1002",
+            "city"      : "20000",
+            "intro"     : ""
+        },{
+            "username"  : "222222",
+            "password1" : "222222",
+            "password2" : "222222",
+            "email"     : "222222@222222.com",
+            "auth"      : "222222",
+            "invite"    : "111111111111"
+        },{
+            "username"  : "333333",
+            "password1" : "333333",
+            "password2" : "333333",
+            "email"     : "333333@333333.com",
+            "auth"      : "333333",
+            "invite"    : "111111111111"
+        },{
+            "username"  : "444444",
+            "password1" : "444444",
+            "password2" : "444444",
+            "email"     : "444444@444444.com",
+            "auth"      : "444444",
+            "invite"    : "111111111111"
+        },{
+            "username"  : "555555",
+            "password1" : "555555",
+            "password2" : "555555",
+            "email"     : "555555@555555.com",
+            "auth"      : "555555",
+            "invite"    : "111111111111"
+        }
+    ]
+}

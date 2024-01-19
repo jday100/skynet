@@ -1,0 +1,51 @@
+{
+    "name"  : "identity",
+    "fields"    : [
+        {
+            "name"  : "identity_id",
+            "type"  : "integer"
+        },{
+            "name"  : "user_id",
+            "type"  : "integer"
+        },{
+            "name"  : "status",
+            "type"  : "integer"
+        },{
+            "name"  : "nickname",
+            "type"  : "string"
+        },{
+            "name"  : "continent_id",
+            "type"  : "integer"
+        },{
+            "name"  : "continent_name",
+            "type"  : "string"
+        },{
+            "name"  : "region_id",
+            "type"  : "integer"
+        },{
+            "name"  : "region_name",
+            "type"  : "string"
+        },{
+            "name"  : "city_id",
+            "type"  : "integer"
+        },{
+            "name"  : "city_name",
+            "type"  : "string"
+        },{
+            "name"  : "flag",
+            "type"  : "integer"
+        },{
+            "name"  : "intro",
+            "type"  : "string"
+        },{
+            "name"  : "ip",
+            "type"  : "string"
+        },{
+            "name"  : "create_time",
+            "type"  : "timestamp"
+        },{
+            "name"  : "modify_time",
+            "type"  : "timestamp"
+        }
+    ]
+}
