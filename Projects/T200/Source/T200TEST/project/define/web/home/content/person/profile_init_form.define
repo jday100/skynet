@@ -2,12 +2,13 @@
     "name"  : "form",
     "type"  : "form",
     "submit"    : "submit",
-    "value"     : "/login.html",
+    "value"     : "/content/person/identity_init.html",
     "verify"    : "false",
     "data"      : "",
     "fields"    : [
         {
             "name"  : "username",
+            "show"  : "true",
             "type"  : "text",
             "empty" : "false",
             "value" : {
@@ -26,45 +27,8 @@
                 "value" : "username"
             }
         },{
-            "name"  : "password1",
-            "type"  : "password",
-            "empty" : "false",
-            "value" : {
-                "object": {
-                    "name"  : "person",
-                    "field" : "password"
-                },
-                "empty" : "false",
-                "length": {
-                    "min"   : "6",
-                    "max"   : "50"
-                }
-            },
-            "locate"    : {
-                "type"  : "name",
-                "value" : "password1"
-            }
-        },{
-            "name"  : "password2",
-            "type"  : "password",
-            "empty" : "false",
-            "value" : {                
-                "object": {
-                    "name"  : "person",
-                    "field" : "password"
-                },
-                "empty" : "false",
-                "length": {
-                    "min"   : "6",
-                    "max"   : "50"
-                }
-            },
-            "locate"    : {
-                "type"  : "name",
-                "value" : "password2"
-            }
-        },{
             "name"  : "email",
+            "show"  : "true",
             "type"  : "email",
             "empty" : "false",
             "value" : {
@@ -79,38 +43,137 @@
                 "value" : "email"
             }
         },{
-            "name"  : "auth",
-            "type"  : "password",
+            "name"  : "create_time",
+            "show"  : "true",
+            "type"  : "timestamp",
             "empty" : "false",
             "value" : {
-                "empty" : "false",
-                "length": {
-                    "min"   : "6",
-                    "max"   : "6"
-                }
+                "empty" : "false"
             },
             "locate"    : {
-                "type"  : "name",
-                "value" : "authcode"
+                "type"  : "id",
+                "value" : "create_time"
             }
         },{
-            "name"  : "invite",
-            "type"  : "password",
+            "name"  : "modify_time",
+            "show"  : "true",
+            "type"  : "timestamp",
             "empty" : "false",
             "value" : {
                 "object": {
                     "name"  : "person",
-                    "field" : "invite"
+                    "field" : "modify_time"
                 },
-                "empty" : "false",
-                "length": {
-                    "min"   : "12",
-                    "max"   : "12"
-                }
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "modify_time"
+            }
+        },{
+            "name"  : "continent",
+            "type"  : "select",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "continent_id"
+                },
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "continent"
+            }
+        },{
+            "name"  : "country",
+            "type"  : "select",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "country_id"
+                },
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "country"
+            }
+        },{
+            "name"  : "gender",
+            "type"  : "select",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "gender"
+                },
+                "empty" : "false"
             },
             "locate"    : {
                 "type"  : "name",
-                "value" : "invitecode"
+                "value" : "gender"
+            }
+        },{
+            "name"  : "year",
+            "type"  : "select",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "year"
+                },
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "year"
+            }
+        },{
+            "name"  : "month",
+            "type"  : "select",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "month"
+                },
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "month"
+            }
+        },{
+            "name"  : "day",
+            "type"  : "select",
+            "empty" : "false",
+            "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "day"
+                },
+                "empty" : "false"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "day"
+            }
+        },{
+            "name"  : "intro",
+            "type"  : "string",
+            "empty" : "true",
+            "value" : {
+                "object": {
+                    "name"  : "person",
+                    "field" : "intro"
+                },
+                "empty" : "true"
+            },
+            "locate"    : {
+                "type"  : "name",
+                "value" : "intro"
             }
         }
     ],
@@ -122,23 +185,19 @@
                 "type"  : "id",
                 "value" : "submit"
             }
-        },{
-            "name"  : "send",
-            "type"  : "button",
-            "locate"    : {
-                "type"  : "css",
-                "value" : "button[locale=\"send\"]"
-            }
         }
     ],
     "datas"  : [
         {
             "username"  : "111111",
-            "password1" : "111111",
-            "password2" : "111111",
             "email"     : "111111@111111.com",
-            "auth"      : "111111",
-            "invite"    : "111111111111"
+            "continent" : "100",
+            "country"   : "1000",
+            "gender"    : "1",
+            "year"      : "2020",
+            "month"     : "10",
+            "day"       : "30",
+            "intro"     : ""
         },{
             "username"  : "222222",
             "password1" : "222222",

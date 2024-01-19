@@ -1,4 +1,4 @@
-const T200Case = require('../../../library/T200Case.js');
+const T200Case = require('../../../../../library/T200Case.js');
 
 
 class T200ProfileInitCase extends T200Case {

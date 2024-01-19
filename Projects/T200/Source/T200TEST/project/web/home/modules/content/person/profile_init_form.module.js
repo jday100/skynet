@@ -1,10 +1,10 @@
-const T200Module = require('../../../../library/web/T200Module.js');
+const T200Module = require('../../../../../../library/web/T200Module.js');
 
 
-class T200RegisterFormModule extends T200Module {
+class T200ProfileInitFormModule extends T200Module {
     constructor() {
         super();
-        this.name = "register_form";
+        this.name = "content/person/profile_init_form";
     }
 
     verify(value) {
@@ -30,4 +30,4 @@ class T200RegisterFormModule extends T200Module {
     }
 }
 
-module.exports = T200RegisterFormModule;
+module.exports = T200ProfileInitFormModule;

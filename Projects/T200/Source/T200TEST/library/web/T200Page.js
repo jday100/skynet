@@ -205,7 +205,7 @@ class T200Page {
                 result = false;
             }).then(async function(){
                 for(let tag of self.tags){
-                    await tag.test_unit(browser).then(function(){
+                    await tag.test_flow(browser).then(function(){
 
                     }, function(err){
                         result = false;

@@ -5,6 +5,7 @@ const T200Data = require('../data/T200Data.js');
 
 const T200Text = require('./tags/T200Text.js');
 const T200Email = require('./tags/T200Email.js');
+const T200Select = require('./tags/T200Select.js');
 const T200Button = require('./tags/T200Button.js');
 const T200Password = require('./tags/T200Password.js');
 
@@ -109,6 +110,9 @@ class T200Form {
             let value;
             tag.data = self.data;
             switch(tag.type){
+                case 'timestamp':
+                case 'integer':
+                case 'string':
                 case 'text':
                     value = new T200Text();
                     await self.#create_entry(tag, value).then(function(){
@@ -143,6 +147,16 @@ class T200Form {
     
                     await self.#create_entry(tag, value).then(function(){
                         self.buttons.push(value);
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                case 'select':
+                    value = new T200Select();
+    
+                    await self.#create_entry(tag, value).then(function(){
+                        self.tags.push(value);
                         resolve();
                     }, function(err){
                         reject();
@@ -262,15 +276,25 @@ class T200Form {
             let result = true;
 
             for(let tag of self.tags){
-                await self.#get_data(tag).then(async function(value){
-                    await tag.run(self.browser, value).then(function(){
-    
+                if(undefined == tag.field.show || "false" == tag.field.show){
+                    await self.#get_data(tag).then(async function(value){
+                        await tag.run(self.browser, value).then(async function(){
+                            if(tag instanceof T200Select){
+                                await self.browser.sleep(500).then(function(){
+                                    
+                                }, function(err){
+                                    result = false;
+                                });
+                            }
+                        }, function(err){
+                            result = false;
+                        });
                     }, function(err){
                         result = false;
                     });
-                }, function(err){
-                    result = false;
-                });
+                }else{
+                    continue;
+                }                
 
                 if(!result)break;
             }
@@ -309,10 +333,10 @@ class T200Form {
                             let item = data.datas[0];
                             let value = item[tag.field.value.object.field];
     
-                            if(value){
-                                resolve(value);
-                            }else{
+                            if(undefined == value){
                                 result = false;
+                            }else{
+                                resolve(value);
                             }
                         }else{
                             result = false;

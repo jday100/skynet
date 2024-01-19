@@ -1,0 +1,13 @@
+{
+    "name"  : "form",
+    "type"  : "auto",
+    "dataset"   : [
+        {
+            "username"  : "333333",
+            "password"  : "333333"
+        },{
+            "username"  : "444444",
+            "password"  : "444444"
+        }
+    ]
+}

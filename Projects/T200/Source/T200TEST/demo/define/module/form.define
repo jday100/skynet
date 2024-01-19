@@ -1,0 +1,48 @@
+{
+    "name"      : "form",
+    "type"      : "form",
+    "target"    : "",
+    "action"    : "",
+    "method"    : "post",
+    "fields"    : [
+        {
+            "name"  : "username",
+            "type"  : {
+                "field" : "input",
+                "type"  : "text"
+            },
+            "value" : {
+                "object"    : "user",
+                "field"     : "username"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "username"
+            }
+        },{
+            "name"  : "password",
+            "type"  : {
+                "field" : "input",
+                "type"  : "password"
+            },
+            "value" : {
+                "object"    : "user",
+                "field"     : "password"
+            },
+            "locate"    : {
+                "type"  : "id",
+                "value" : "password"
+            }
+        }
+    ],
+    "buttons"       : [
+        {
+            "name"  : "submit",
+            "type"  : "submit",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "submit"
+            }
+        }
+    ]
+}

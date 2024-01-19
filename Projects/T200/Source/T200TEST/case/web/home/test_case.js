@@ -8,8 +8,11 @@ class T200HomeWeb extends T200Web {
 
         this.html = [
             "/register.html",
-            "/login.html"
+            "/login.html",
+            "/content/person/profile_init.html"
         ]
+
+        this.next = "/content/person/profile_init_html";
     }
 
     create() {
