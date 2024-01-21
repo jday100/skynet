@@ -43,12 +43,14 @@
 		<Unit filename="include/T100FileAnalyzer.h" />
 		<Unit filename="include/T100FileReader.h" />
 		<Unit filename="include/analyzer/T100CodeFile.h" />
+		<Unit filename="include/analyzer/T100DosFile.h" />
 		<Unit filename="include/lib/T100ByteBuffer.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/T100CmdLine.cpp" />
 		<Unit filename="src/T100FileAnalyzer.cpp" />
 		<Unit filename="src/T100FileReader.cpp" />
 		<Unit filename="src/analyzer/T100CodeFile.cpp" />
+		<Unit filename="src/analyzer/T100DosFile.cpp" />
 		<Unit filename="src/lib/T100ByteBuffer.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

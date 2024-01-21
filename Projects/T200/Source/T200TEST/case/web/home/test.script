@@ -1,0 +1,11 @@
+{
+    "flow"  : [
+        "/register.html",
+        "/login.html",
+        "/content/person/profile_init.html",
+        "/content/person/identity_init.html",
+        "/content/person/profile.html",
+        "/content/house/rent.html",
+        "/content/house/rent_edit.html"
+    ]
+}

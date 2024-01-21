@@ -1,10 +1,10 @@
-const T200Case = require('../../../library/T200Case.js');
+const T200Case = require('../../../../../library/T200Case.js');
 
 
-class T200RegisterCase extends T200Case {
+class T200HouseRentEditCase extends T200Case {
     constructor() {
         super();
-        this.name = "/login.html";
+        this.name = "/content/house/rent_edit.html";
     }
 
     test_unit(browser) {
@@ -68,35 +68,6 @@ class T200RegisterCase extends T200Case {
 
         return promise; 
     }
-
-    test_view(browser) {
-        let self = this;
-        let promise = new Promise(async function(resolve, reject){
-            if(self.page){
-                await self.create_store().then(function(){
-
-                }, function(err){
-
-                }).then(function(){
-                    return self.#clear_data();
-                }, function(err){
-
-                }).then(function(){
-                    return self.page.test_view(browser);
-                }, function(err){
-
-                }).then(function(){
-                    resolve();
-                }, function(err){
-                    reject();
-                });
-            }else{
-                reject();
-            }
-        });
-
-        return promise;
-    }
 }
 
-module.exports = T200RegisterCase;
+module.exports = T200HouseRentEditCase;

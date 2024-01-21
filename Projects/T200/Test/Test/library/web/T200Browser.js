@@ -1,7 +1,6 @@
 const { Builder, By, until } = require("selenium-webdriver");
-const T200WebSetup = require('../../project/T200WebSetup.js');
+const T200WebSetup = require('../../config/T200WebSetup.js');
 const T200Node = require('./T200Node.js');
-const { elementTextContains } = require("selenium-webdriver/lib/until.js");
 
 
 class T200Browser {

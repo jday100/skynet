@@ -403,7 +403,189 @@ class T200Actuator {
         return promise;
     }
 
+    test_method(category, project, type, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            global.data = new T200Data();
+            switch(category){
+                case undefined:
+                case 'all':
+                    await self.#test_method_all(project, type, source, method, subdir).then(function(){
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                case 'app':
+                    await self.#test_method_app(project, type, source, method, subdir).then(function(){
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                case 'web':
+                    await self.#test_method_web(project, type, source, method, subdir).then(function(){
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+            }            
+        });
 
+        return promise;
+    }
+
+    #test_method_all() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+
+        });
+
+        return promise;
+    }
+
+    #test_method_app() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+
+        });
+
+        return promise;
+    }
+
+    #test_method_web(project, type, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            await self.#web_start(type).then(async function(){
+                await self.#web_method_run(project, source, method, subdir).then(function(){
+
+                }, function(err){
+                    result = false;
+                }).finally(async function(){
+                    await self.#web_stop().then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                });
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #web_method_run(project, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            for(let browser of self.browsers){
+                await self.#web_method_test(browser, project, source, method, subdir).then(function(){
+        
+                }, function(err){
+                    result = false;
+                });
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #web_method_test(browser, project, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            if(undefined == source){
+                await self.#web_method_search(browser, project, source, method, subdir).then(resolve, reject);
+            }else{
+                if(source.endsWith('/')){
+                    await self.#web_method_search(browser, project, source, method, subdir).then(resolve, reject);
+                }else{
+                    await self.#web_method_done(browser, project, source, method).then(resolve, reject);
+                }
+            }
+        });
+
+        return promise;
+    }
+
+    #web_method_search(browser, project, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            global.final.append_project(project);
+            await T200Source.create_web_case(project, source).then(async function(obj){
+                if(undefined == method){
+                    await obj.test_flow(browser).then(function(){
+
+                    }, function(err){
+                        result = false;
+                    }).finally(function(){
+           
+                    });
+                }else{
+                    await obj[method](browser).then(function(){
+
+                    }, function(err){
+                        result = false;
+                    }).finally(function(){
+           
+                    });
+                }                
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    #web_method_done(browser, project, source, method) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            global.final.append_project(project);
+            await T200Source.create_web_case(project, source).then(async function(obj){
+                await obj.test_flow(browser).then(function(){
+
+                }, function(err){
+                    result = false;
+                }).finally(function(){
+       
+                });
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
 }
 
 module.exports = T200Actuator;

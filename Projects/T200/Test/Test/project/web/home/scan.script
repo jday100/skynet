@@ -1,0 +1,15 @@
+{
+    "all":[
+        "login",
+        "/content/house/rent_edit.html"
+    ],
+    "login":[
+        {
+            "name"  : "/login.html",
+            "data"  : {
+                "username"  : "skynet",
+                "password"  : "111111"
+            }
+        }
+    ]
+}

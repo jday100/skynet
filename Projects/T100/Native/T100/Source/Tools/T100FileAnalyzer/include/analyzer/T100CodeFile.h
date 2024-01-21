@@ -15,8 +15,10 @@ class T100CodeFile
     protected:
         int parse();
 
+        T100ByteBuffer&             m_buffer;
+
     private:
-        T100ByteBuffer              m_buffer;
+
 };
 
 #endif // T100CODEFILE_H

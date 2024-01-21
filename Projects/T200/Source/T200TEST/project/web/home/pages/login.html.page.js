@@ -122,6 +122,43 @@ class T200LoginPage extends T200Page {
 
         return promise;
     }
+
+    test_view(browser) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            self.browser = browser;
+            await self.#load_data().then(function(){
+
+            }, function(err){
+                result = false;
+            }).then(function(){
+                //return browser.get(browser.url(self.name))
+            }, function(err){
+                result = false;
+            }).then(function(){
+                //return browser.sleep(1000);
+            }, function(err){
+                result = false;
+            }).then(async function(){
+                return self.#test_page();
+            }, function(err){
+                result = false;
+            }).then(async function(){
+                
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
 }
 
 module.exports = T200LoginPage;

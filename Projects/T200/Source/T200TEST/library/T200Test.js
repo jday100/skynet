@@ -97,6 +97,37 @@ class T200Test {
         return promise;
     }
 
+    test(category, project, type, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            await self.#start().then(async function(){
+                let act = new T200Actuator();
+                await act.test_method(category, project, type, source, method, subdir).then(function(){
+                    
+                }, function(err){
+                    result = false;
+                }).finally(async function(){
+                    await self.#stop().then(function(){
+                        
+                    }, function(err){
+                        result = false;
+                    });
+                });
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
     #start() {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
