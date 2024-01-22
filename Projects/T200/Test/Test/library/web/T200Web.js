@@ -1,0 +1,43 @@
+const T200Resource = require('../core/T200Resource.js');
+
+
+class T200Web {
+    constructor() {
+
+    }
+
+    create(project, source) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let file = T200Resource.merge_case("web", project, source);
+
+            if(file){
+                const CaseClass = require(file);
+
+                if(CaseClass){
+                    let CaseObj = new CaseClass();
+
+                    if(CaseObj){
+                        CaseObj.category = "web";
+                        CaseObj.project = project;
+                        await CaseObj.create().then(function(){
+                            resolve(CaseObj);
+                        }, function(err){
+                            reject();
+                        });
+                    }else{
+                        reject();
+                    }
+                }else{
+                    reject();
+                }
+            }else{
+                reject();
+            }
+        });
+        
+        return promise;
+    }
+}
+
+module.exports = T200Web;

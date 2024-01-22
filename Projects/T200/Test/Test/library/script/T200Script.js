@@ -2,6 +2,8 @@ const T200Resource = require('../core/T200Resource.js');
 const T200Setup = require('../../config/T200Setup.js');
 const T200File = require(T200Setup.external('./library/fs/T200File.js'));
 
+const T200ScriptParser = require('./T200ScriptParser.js');
+
 
 class T200Script {
     constructor(script) {
@@ -37,14 +39,17 @@ class T200Script {
 
     run(method) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
-            let flow = self.script[method];
-
-            if(flow){
-
-            }else{
+        let promise = new Promise(async function(resolve, reject){
+            let script = new T200ScriptParser(self.script);
+            let name = undefined == method ? "all" : method;
+            script.category = self.category;
+            script.project = self.project;
+            script.type = self.type;
+            await script.run(name).then(function(){
+                resolve();
+            }, function(err){
                 reject();
-            }
+            });
         });
         
         return promise;

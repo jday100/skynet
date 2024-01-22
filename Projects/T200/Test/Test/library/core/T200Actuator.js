@@ -41,6 +41,9 @@ class T200Actuator {
         let promise = new Promise(async function(resolve, reject){
             if(source.endsWith(".script")){
                 await T200Source.create_script(category, project, source).then(async function(script){
+                    script.category = category;
+                    script.project = project;
+                    script.type = type;
                     await script.run(method).then(function(){
                         resolve();
                     }, function(err){

@@ -1,4 +1,5 @@
 const T200Actuator = require('./T200Actuator.js');
+const T200Final = require('../report/T200Final.js');
 const T200Script = require('../script/T200Script.js');
 const T200Sketch = require('../sketch/T200Sketch.js');
 
@@ -38,6 +39,7 @@ class T200Test {
     run(category, project, type, source, method, subdir) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
+            global.final = new T200Final();
             let actuator = new T200Actuator();
 
             await actuator.run(category, project, type, source, method, subdir).then(function(){
