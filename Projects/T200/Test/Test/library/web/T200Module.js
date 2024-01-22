@@ -6,7 +6,7 @@ const T200Form = require('./T200Form.js');
 
 class T200Module {
     constructor() {
-
+        this.values = new Array();
     }
 
     create(page) {
@@ -112,10 +112,10 @@ class T200Module {
 
             form.category = self.category;
             form.project = self.project;
-            form.page = self.name;
-
+            form.page = self.page;
+            form.name = self.name;
             await form.create(self).then(function(){
-
+                self.values.push(form);
             }, function(err){
                 result = false;
             });

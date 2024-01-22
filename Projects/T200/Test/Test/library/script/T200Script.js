@@ -42,6 +42,7 @@ class T200Script {
         let promise = new Promise(async function(resolve, reject){
             let script = new T200ScriptParser(self.script);
             let name = undefined == method ? "all" : method;
+            script.browser = self.browser;
             script.category = self.category;
             script.project = self.project;
             script.type = self.type;

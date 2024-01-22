@@ -22,6 +22,7 @@ class T200Input extends T200Tag {
 
         return promise;
     }
+    
 }
 
 module.exports = T200Input;

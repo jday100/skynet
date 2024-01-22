@@ -67,7 +67,7 @@ class T200ScriptParser {
             let web = new T200Web();
 
             await web.create(self.project, item.name).then(async function(){
-                await web.run(browser).then(function(){
+                await web.run(self.browser).then(function(){
                     resolve();
                 }, function(err){
                     reject();

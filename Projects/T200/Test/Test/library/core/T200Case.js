@@ -19,6 +19,19 @@ class T200Case {
 
         return promise;
     }
+
+    run(browser){
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            await self.page.run(browser).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
 }
 
 module.exports = T200Case;

@@ -11,6 +11,7 @@ const T200Password = require('./tags/T200Password.js');
 class T200Form {
     constructor() {
         this.tags = new Array();
+        this.buttons = new Array();
     }
 
     create(module){
@@ -127,6 +128,74 @@ class T200Form {
             value.project = self.project;
             value.page = self.page;
             await value.create(field).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    #find_button(name) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            for(let button of self.buttons){
+                if(name == button.name){
+                    resolve(button);
+                    return;
+                }
+            }
+
+            reject();
+        });
+
+        return promise;        
+    }
+
+    #tag_input(){
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+
+            let data;
+
+            for(let tag of self.tags){
+                await tag.run(self.browser, data).then(function(){
+
+                }, function(err){
+                    result = false;
+                });
+                if(!result)break;
+            }
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
+    run(browser){
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            self.browser = browser;
+            await self.#tag_input().then(function(){
+  
+            }, function(err){
+
+            }).then(function(){
+                return self.#find_button("submit");
+            }, function(err){
+     
+            }).then(function(button){
+                return button.click();
+            }, function(err){
+ 
+            }).then(function(){
                 resolve();
             }, function(err){
                 reject();

@@ -1,5 +1,7 @@
 const T200Source = require('./T200Source.js');
 
+const T200Browser = require('../web/T200Browser.js');
+
 
 class T200Actuator {
     constructor() {
@@ -44,7 +46,7 @@ class T200Actuator {
                     script.category = category;
                     script.project = project;
                     script.type = type;
-                    await script.run(method).then(function(){
+                    await self.#done_category(script, category, project, type, source, method, subdir).then(function(){
                         resolve();
                     }, function(err){
                         reject();
@@ -57,6 +59,58 @@ class T200Actuator {
             }else{
 
             }
+        });
+
+        return promise;
+    }
+
+    #done_category(script, category, project, type, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            switch(category){
+                case undefined:
+                    break;
+                case 'web':
+                    await self.#done_web(script, type, source, method, subdir).then(function(){
+                        
+                    }, function(err){
+                        result = false;
+                    });
+                    break;
+            }
+            if(result){
+                resolve();
+            }else{
+                reject();
+            } 
+        });
+
+        return promise;
+    }
+
+    #done_web(script, type, source, method, subdir) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            await T200Browser.create(type).then(async function(browsers){
+                for(let browser of browsers){
+                    script.browser = browser;
+                    await script.run(method).then(function(){
+                        
+                    }, function(err){
+                        result = false;
+                    });
+                }
+            }, function(err){
+                result = false;
+            });
+
+            if(result){
+                resolve();
+            }else{
+                reject();
+            }            
         });
 
         return promise;

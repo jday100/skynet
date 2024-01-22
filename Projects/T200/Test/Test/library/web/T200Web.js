@@ -21,6 +21,7 @@ class T200Web {
                         CaseObj.category = "web";
                         CaseObj.project = project;
                         await CaseObj.create().then(function(){
+                            self.value = CaseObj;
                             resolve(CaseObj);
                         }, function(err){
                             reject();
@@ -36,6 +37,19 @@ class T200Web {
             }
         });
         
+        return promise;
+    }
+
+    run(browser){
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            await self.value.run(browser).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
         return promise;
     }
 }
