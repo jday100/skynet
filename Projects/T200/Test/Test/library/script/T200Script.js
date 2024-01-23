@@ -18,11 +18,40 @@ class T200Script {
             if(file){
                 let script = {};
 
-                script.all = new Array();
-                script.all.push("step1");
-                script.all.push("step2");
+                script.all = {};
+                script.all.flow = new Array();
 
-                let result = JSON.stringify(script);
+                let opt1 = {};
+                let opt2 = {};
+                let opt3 = {};
+
+                opt1.name = "get";
+                opt1.value = "/login.html";
+
+                script.all.flow.push(opt1);
+
+                opt2.name = "form";
+                opt2.value = "form";
+
+                script.all.flow.push(opt2);
+
+                opt3.name = "verify";
+                opt3.verify = {};
+                opt3.verify.type = "alert";
+                opt3.verify.success = "";
+                opt3.verify.failure = "";
+
+                script.all.flow.push(opt3);
+
+                script.all.dataset = new Array();
+
+                let data = {};
+                data.username = "skynet";
+                data.password = "111111";
+
+                script.all.dataset.push(data);
+
+                let result = JSON.stringify(script, "", "\t");
 
                 await T200File.save(file, result).then(function(){
                     resolve();

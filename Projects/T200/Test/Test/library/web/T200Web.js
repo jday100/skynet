@@ -52,6 +52,19 @@ class T200Web {
 
         return promise;
     }
+
+    form(browser){
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            await self.value.form(browser).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
 }
 
 module.exports = T200Web;

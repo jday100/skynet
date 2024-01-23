@@ -35,6 +35,11 @@ class T200Resource {
         let file = `../../project/define/${name}.define`;
         return path.join(__dirname, file);
     }
+
+    static merge_sketch(category, project, name) {
+        let file = `../../sketch/${category}/${project}/${name}.json`;
+        return path.join(__dirname, file);
+    }
 }
 
 module.exports = T200Resource;

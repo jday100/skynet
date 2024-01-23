@@ -1,4 +1,4 @@
-const HtmlParser = require('htmlparser');
+const HtmlParser = require('htmlparser2');
 
 
 class T200HtmlParser {
@@ -17,13 +17,140 @@ class T200HtmlParser {
 
             parser.parseComplete(html);
 
-            let result = JSON.stringify(handler.dom);
+            //let result = JSON.stringify(handler.dom);
 
-            console.log(result);
+            //console.log(result);
+
+            let result = {};
+            self.#traversal(handler.dom[0], result);
+
+            let value = JSON.stringify(result, "", "\t");
+
+            console.log(value);
+
+            resolve(value);
         });
 
         return promise;
     }
+
+    #traversal(node, result) {
+        if('tag' == node.type){
+            console.log(node.name);
+            this.#done(node, result);
+
+            if(undefined == node.children || 0 == node.children.lenght){
+
+            }else{     
+                result.children = new Array();          
+                for(let child of node.children){
+                    let item = {};
+                    this.#traversal(child, item);
+                    result.children.push(item);
+                }                
+            }
+        }else{
+            console.log(node.name);
+        }
+    }
+
+    #done(node, result) {
+        switch(node.name){
+            case 'a':
+                this.#link(node, result);
+                break;
+            case 'div':
+                break;
+            case 'form':
+                this.#form(node, result);
+                break;
+            case 'input':
+                this.#input(node, result);
+                break;
+            case 'nav':
+                this.#nav(node, result);
+                break;
+            case 'text':
+                this.#text(node, result);
+                break;
+            case 'password':
+                this.#password(node, result);
+                break;
+        }
+    }
+
+    #link(node, result) {
+        result.type = "link";
+        if(undefined == node.attribs["locale"]){
+            
+        }else{
+            result.locate = new Array();
+            
+            let locate = {};
+
+            locate.type = "css";
+            locate.value = `${node.name}[locale=\"${node.attribs["locale"]}\"]`;
+
+            result.locate.push(locate);
+        }
+
+        if(undefined == node.attribs["href"]){
+
+        }else{
+            result.url = node.attribs["href"];
+        }
+
+        if(undefined == node.attribs["target"]){
+
+        }else{
+            result.target = node.attribs["target"];
+        }
+    }
+
+    #form(node, result) {
+        result.type = "form";
+        result.name = node.name;
+    }
+
+    #input(node, result) {
+        result.type = "input";
+
+        result.locate = new Array();
+        if(undefined == node.attribs["locale"]){
+            
+        }else{            
+            let locate = {};
+
+            locate.type = "css";
+            locate.value = `${node.name}[locale=\"${node.attribs["locale"]}\"]`;
+
+            result.locate.push(locate);
+        }
+
+        if(undefined == node.attribs["name"]){
+            
+        }else{            
+            let locate = {};
+
+            locate.type = "name";
+            locate.value = node.attribs["name"];
+
+            result.locate.push(locate);
+        }
+    }
+
+    #nav(node, result) {
+        result.type = "nav";
+    }
+
+    #text(node, result) {
+        result.type = "text";
+    }
+
+    #password(node, result) {
+        result.type = "password";
+    }
+
 }
 
 module.exports = T200HtmlParser;

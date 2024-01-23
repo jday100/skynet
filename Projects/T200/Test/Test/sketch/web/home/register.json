@@ -1,0 +1,491 @@
+{
+	"children": [
+		{
+			"children": [
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{
+					"children": []
+				},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{},
+		{
+			"children": [
+				{},
+				{
+					"children": [
+						{},
+						{
+							"type": "nav",
+							"children": [
+								{},
+								{
+									"children": [
+										{},
+										{
+											"type": "link",
+											"locate": [
+												{
+													"type": "css",
+													"value": "a[locale=\"home\"]"
+												}
+											],
+											"url": "/",
+											"children": [
+												{}
+											]
+										},
+										{},
+										{
+											"type": "link",
+											"locate": [
+												{
+													"type": "css",
+													"value": "a[locale=\"about\"]"
+												}
+											],
+											"url": "/about.html",
+											"children": [
+												{}
+											]
+										},
+										{}
+									]
+								},
+								{},
+								{
+									"children": [
+										{},
+										{
+											"type": "link",
+											"locate": [
+												{
+													"type": "css",
+													"value": "a[locale=\"login\"]"
+												}
+											],
+											"url": "/login.html",
+											"target": "_blank",
+											"children": [
+												{}
+											]
+										},
+										{},
+										{
+											"type": "link",
+											"locate": [
+												{
+													"type": "css",
+													"value": "a[locale=\"register\"]"
+												}
+											],
+											"url": "/register.html",
+											"children": [
+												{}
+											]
+										},
+										{}
+									]
+								},
+								{}
+							]
+						},
+						{},
+						{
+							"children": [
+								{},
+								{
+									"children": []
+								},
+								{}
+							]
+						},
+						{},
+						{
+							"type": "nav",
+							"children": [
+								{},
+								{
+									"type": "link",
+									"locate": [
+										{
+											"type": "css",
+											"value": "a[locale=\"home\"]"
+										}
+									],
+									"url": "/",
+									"children": [
+										{}
+									]
+								},
+								{},
+								{
+									"type": "link",
+									"locate": [
+										{
+											"type": "css",
+											"value": "a[locale=\"house\"]"
+										}
+									],
+									"url": "/house/index.html",
+									"children": [
+										{}
+									]
+								},
+								{},
+								{
+									"type": "link",
+									"locate": [
+										{
+											"type": "css",
+											"value": "a[locale=\"job\"]"
+										}
+									],
+									"url": "/job/index.html",
+									"children": [
+										{}
+									]
+								},
+								{},
+								{
+									"type": "link",
+									"locate": [
+										{
+											"type": "css",
+											"value": "a[locale=\"trading\"]"
+										}
+									],
+									"url": "/trading/index.html",
+									"children": [
+										{}
+									]
+								},
+								{},
+								{
+									"type": "link",
+									"locate": [
+										{
+											"type": "css",
+											"value": "a[locale=\"exchange\"]"
+										}
+									],
+									"url": "/exchange/index.html",
+									"children": [
+										{}
+									]
+								},
+								{}
+							]
+						},
+						{},
+						{
+							"type": "form",
+							"name": "form",
+							"children": [
+								{},
+								{
+									"type": "input",
+									"locate": [
+										{
+											"type": "name",
+											"value": "test"
+										}
+									],
+									"children": []
+								},
+								{},
+								{
+									"children": [
+										{}
+									]
+								},
+								{},
+								{
+									"children": [
+										{}
+									]
+								},
+								{},
+								{
+									"children": [
+										{},
+										{
+											"children": [
+												{},
+												{
+													"children": [
+														{}
+													]
+												},
+												{},
+												{
+													"type": "input",
+													"locate": [
+														{
+															"type": "name",
+															"value": "username"
+														}
+													],
+													"children": []
+												},
+												{},
+												{
+													"children": []
+												},
+												{}
+											]
+										},
+										{},
+										{
+											"children": [
+												{},
+												{
+													"children": [
+														{}
+													]
+												},
+												{},
+												{
+													"type": "input",
+													"locate": [
+														{
+															"type": "name",
+															"value": "password1"
+														}
+													],
+													"children": []
+												},
+												{},
+												{
+													"children": []
+												},
+												{}
+											]
+										},
+										{},
+										{
+											"children": [
+												{},
+												{
+													"children": [
+														{}
+													]
+												},
+												{},
+												{
+													"type": "input",
+													"locate": [
+														{
+															"type": "name",
+															"value": "password2"
+														}
+													],
+													"children": []
+												},
+												{},
+												{
+													"children": []
+												},
+												{}
+											]
+										},
+										{},
+										{
+											"children": [
+												{},
+												{
+													"children": [
+														{}
+													]
+												},
+												{},
+												{
+													"type": "input",
+													"locate": [
+														{
+															"type": "name",
+															"value": "email"
+														}
+													],
+													"children": []
+												},
+												{},
+												{
+													"children": []
+												},
+												{},
+												{
+													"children": [
+														{}
+													]
+												},
+												{}
+											]
+										},
+										{},
+										{
+											"children": [
+												{},
+												{
+													"children": [
+														{}
+													]
+												},
+												{},
+												{
+													"type": "input",
+													"locate": [
+														{
+															"type": "name",
+															"value": "authcode"
+														}
+													],
+													"children": []
+												},
+												{},
+												{
+													"children": []
+												},
+												{}
+											]
+										},
+										{},
+										{
+											"children": [
+												{},
+												{
+													"children": [
+														{}
+													]
+												},
+												{},
+												{
+													"type": "input",
+													"locate": [
+														{
+															"type": "name",
+															"value": "invitecode"
+														}
+													],
+													"children": []
+												},
+												{},
+												{
+													"children": []
+												},
+												{}
+											]
+										},
+										{},
+										{
+											"children": [
+												{},
+												{
+													"children": [
+														{}
+													]
+												},
+												{}
+											]
+										},
+										{}
+									]
+								},
+								{},
+								{
+									"children": [
+										{},
+										{
+											"type": "link",
+											"locate": [
+												{
+													"type": "css",
+													"value": "a[locale=\"login\"]"
+												}
+											],
+											"url": "/login.html",
+											"children": [
+												{}
+											]
+										},
+										{}
+									]
+								},
+								{}
+							]
+						},
+						{},
+						{
+							"children": [
+								{}
+							]
+						},
+						{}
+					]
+				},
+				{},
+				{},
+				{}
+			]
+		}
+	]
+}

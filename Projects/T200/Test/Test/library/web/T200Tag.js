@@ -7,7 +7,7 @@ class T200Tag {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             self.field = field;
-
+            self.name = field.name;
             resolve();
         });
 

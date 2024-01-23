@@ -21,6 +21,14 @@ class T200Form {
             self.module = module;
 
             await self.#create_tags().then(function(){
+            
+            }, function(err){
+        
+            }).then(function(){
+                return self.#create_buttons();
+            }, function(err){
+    
+            }).then(function(){
                 resolve();
             }, function(err){
                 reject();
@@ -54,15 +62,36 @@ class T200Form {
         return promise;
     }
 
+    #create_buttons(){
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let result = true;
+            for(let field of self.module.define_value.buttons){
+                await self.#create_tag(field).then(function(){
+
+                }, function(err){
+                    result = false;
+                });
+
+                if(!result)break;
+            }
+
+            if(result){
+                resolve(self);
+            }else{
+                reject();
+            }
+        });
+
+        return promise;
+    }
+
     #create_tag(field) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let value;
             field.data = self.data;
             switch(field.type){
-                case 'timestamp':
-                case 'integer':
-                case 'string':
                 case 'text':
                     value = new T200Text();
                     await self.#create_entry(field, value).then(function(){
@@ -160,6 +189,9 @@ class T200Form {
 
             let data;
 
+            //test
+            data = "skynet";
+
             for(let tag of self.tags){
                 await tag.run(self.browser, data).then(function(){
 
@@ -192,13 +224,44 @@ class T200Form {
             }, function(err){
      
             }).then(function(button){
-                return button.click();
+                return button.click(browser);
             }, function(err){
  
+            }).then(function(){
+                return browser.sleep(1000);
+            }, function(err){
+                
+            }).then(function(){
+                return self.#verify();
+            }, function(err){
+                
             }).then(function(){
                 resolve();
             }, function(err){
                 reject();
+            });
+        });
+
+        return promise;
+    }
+
+    #verify() {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            await self.browser.alert().then(async function(alert){
+                await alert.getText().then(function(text){
+                    if('Login Failure!' == text){
+
+                    }else{
+
+                    }
+
+                    alert.accept().then(resolve, reject);
+                }, function(err){
+
+                });
+            }, function(err){
+
             });
         });
 

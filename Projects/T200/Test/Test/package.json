@@ -12,7 +12,7 @@
     "child_process": "^1.0.2",
     "chromedriver": "^120.0.1",
     "geckodriver": "^4.3.0",
-    "htmlparser": "^1.7.7",
+    "htmlparser2": "^9.1.0",
     "mariadb": "^3.2.3",
     "mocha": "^10.2.0",
     "mysql": "^2.18.1",

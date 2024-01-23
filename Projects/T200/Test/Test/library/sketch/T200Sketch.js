@@ -1,5 +1,8 @@
 const T200Browser = require('../web/T200Browser.js');
 const T200HtmlParser = require('./T200HtmlParser.js');
+const T200Resource = require('../core/T200Resource.js');
+const T200Setup = require('../../config/T200Setup.js');
+const T200File = require(T200Setup.external('./library/fs/T200File.js'));
 
 
 class T200Sketch {
@@ -45,14 +48,18 @@ class T200Sketch {
                 return self.#parse(html);
             }, function(err){
 
+            }).then(function(value){
+                return self.#save(value, category, project, name);
+            }, function(err){
+
             }).then(function(){
                 return browser.close();
             }, function(err){
 
             }).then(function(){
-    
+                resolve();
             }, function(err){
-
+                reject();
             });
         });
 
@@ -61,10 +68,33 @@ class T200Sketch {
 
     static #parse(html) {
         let self = this;
-        let promise = new Promise(function(resolve, reject){
+        let promise = new Promise(async function(resolve, reject){
             let parser = new T200HtmlParser();
 
-            parser.parse(html);
+            await parser.parse(html).then(function(value){
+                resolve(value);
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    static #save(value, category, project, name) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let file = T200Resource.merge_sketch(category, project, name);
+
+            if(file){
+                await T200File.save(file, value).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                });
+            }else{
+                reject();
+            }
         });
 
         return promise;

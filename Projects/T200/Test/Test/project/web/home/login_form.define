@@ -1,3 +1,39 @@
 {
-    
+    "name"  : "form",
+    "type"  : "form",
+    "submit"    : "submit",
+    "value"     : [
+        "/content/person/profile_init.html",
+        "/content/person/identity_init.html",
+        "/content/person/profile.html"
+    ],
+    "verify"    : "false",
+    "data"      : "true",
+    "fields"    : [
+        {
+            "name"  : "username",
+            "type"  : "text",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "username"
+            }
+        },{
+            "name"  : "password",
+            "type"  : "password",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "password"
+            }
+        }
+    ],
+    "buttons"   : [
+        {
+            "name"  : "submit",
+            "type"  : "button",
+            "locate"    : {
+                "type"  : "id",
+                "value" : "submit"
+            }
+        }
+    ]
 }

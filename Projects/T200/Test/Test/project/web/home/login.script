@@ -1,1 +1,28 @@
-{"all":["step1","step2"]}
+{
+	"all": {
+		"flow": [
+			{
+				"name": "get",
+				"value": "/login.html"
+			},
+			{
+				"name": "form",
+				"value": "submit"
+			},
+			{
+				"name": "verify",
+				"verify": {
+					"type": "alert",
+					"success": "",
+					"failure": ""
+				}
+			}
+		],
+		"dataset": [
+			{
+				"username": "skynet",
+				"password": "111111"
+			}
+		]
+	}
+}
