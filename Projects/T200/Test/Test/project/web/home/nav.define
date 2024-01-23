@@ -1,0 +1,21 @@
+{
+    "name"  : "nav",
+    "verify"    : "false",
+    "fields"    : [
+        {
+            "name"  : "username",
+            "type"  : "link",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "username"
+            }
+        },{
+            "name"  : "password",
+            "type"  : "link",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "password"
+            }
+        }
+    ]
+}

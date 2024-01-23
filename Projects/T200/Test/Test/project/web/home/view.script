@@ -1,3 +1,56 @@
 {
-    
+	"all": {
+		"flow": [
+			{
+				"name": "get",
+				"value": "/home.html"
+			},
+			{
+				"name": "verify",
+				"verify": {
+					"type"	: "text",
+					"unit"	: "run",
+					"page"	: "house_rent",
+					"module": "first",
+					"form"	: "",
+					"locate": 
+							{
+								"type"	: "css",
+								"value"	: "html > body > div > fieldset > div > fieldset > div > div > div > a",
+								"index"	: "0"
+							},
+					"success": "出租一套",
+					"failure": ""
+				}
+			},
+			{
+				"name": "get",
+				"value": "/house/index.html"
+			},
+			{
+				"name": "verify",
+				"verify": {
+					"type"	: "text",
+					"unit"	: "run",
+					"page"	: "house_index",
+					"module": "first",
+					"form"	: "",
+					"locate": 
+							{
+								"type"	: "css",
+								"value"	: "html > body > div > fieldset > div > div > fieldset > div > fieldset > div > div > div > a",
+								"index"	: "0"
+							},
+					"success": "出租一套",
+					"failure": ""
+				}
+			}
+		],
+		"dataset": [
+			{
+				"username": "skynet",
+				"password": "111111"
+			}
+		]
+	}
 }

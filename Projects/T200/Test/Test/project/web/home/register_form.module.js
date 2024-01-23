@@ -7,7 +7,7 @@ class T200RegisterFormModule extends T200Module {
         this.name = "register_form";
     }
 
-    run(browser){
+    run(browser, options){
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
@@ -23,7 +23,7 @@ class T200RegisterFormModule extends T200Module {
             if(undefined == form){
                 reject();
             }else{
-                await form.run(browser).then(resolve, reject);
+                await form.run(browser, options).then(resolve, reject);
             }
         });
 

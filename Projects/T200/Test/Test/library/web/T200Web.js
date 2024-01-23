@@ -40,10 +40,10 @@ class T200Web {
         return promise;
     }
 
-    run(browser){
+    run(browser, options){
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await self.value.run(browser).then(function(){
+            await self.value.run(browser, options).then(function(){
                 resolve();
             }, function(err){
                 reject();
@@ -53,10 +53,10 @@ class T200Web {
         return promise;
     }
 
-    form(browser){
+    form(browser, options){
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await self.value.form(browser).then(function(){
+            await self.value.form(browser, options).then(function(){
                 resolve();
             }, function(err){
                 reject();

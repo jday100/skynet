@@ -30,12 +30,12 @@ class T200LoginPage extends T200Page {
     }
 
 
-    form(browser){
+    form(browser, options){
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let module = self.module_values[0];
 
-            await module.run(browser).then(function(){
+            await module.run(browser, options).then(function(){
                 resolve();
             }, function(err){
                 reject();

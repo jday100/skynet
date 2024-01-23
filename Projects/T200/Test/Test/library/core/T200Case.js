@@ -20,23 +20,31 @@ class T200Case {
         return promise;
     }
 
-    run(browser){
+    run(browser, options){
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await self.page.run(browser).then(function(){
-                resolve();
-            }, function(err){
-                reject();
-            });
+            if(options && options.page){
+                await self.page[options.page](browser, options).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                });
+            }else{
+                await self.page.run(browser, options).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                });
+            }            
         });
 
         return promise;
     }
 
-    form(browser){
+    form(browser, options){
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            await self.page.form(browser).then(function(){
+            await self.page.form(browser, options).then(function(){
                 resolve();
             }, function(err){
                 reject();

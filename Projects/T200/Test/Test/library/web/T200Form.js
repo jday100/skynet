@@ -182,7 +182,7 @@ class T200Form {
         return promise;        
     }
 
-    #tag_input(){
+    #tag_input(options){
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             let result = true;
@@ -193,6 +193,7 @@ class T200Form {
             data = "skynet";
 
             for(let tag of self.tags){
+                data = options.step.data[tag.name];
                 await tag.run(self.browser, data).then(function(){
 
                 }, function(err){
@@ -211,11 +212,11 @@ class T200Form {
         return promise;
     }
 
-    run(browser){
+    run(browser, options){
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             self.browser = browser;
-            await self.#tag_input().then(function(){
+            await self.#tag_input(options).then(function(){
   
             }, function(err){
 
@@ -232,7 +233,7 @@ class T200Form {
             }, function(err){
                 
             }).then(function(){
-                return self.#verify();
+                return self.#verify(options);
             }, function(err){
                 
             }).then(function(){
@@ -245,27 +246,71 @@ class T200Form {
         return promise;
     }
 
-    #verify() {
+    #verify(options) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            await self.#verify_failure(options.failure).then(function(){
+
+            }, function(err){
+
+            }).then(function(){
+                return self.#verify_success(options.success);
+            }, function(err){
+
+            }).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+        });
+
+        return promise;
+    }
+
+    #verify_success(options) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
             await self.browser.alert().then(async function(alert){
                 await alert.getText().then(function(text){
                     if('Login Failure!' == text){
-
+    
                     }else{
-
+    
                     }
-
+    
                     alert.accept().then(resolve, reject);
                 }, function(err){
-
+    
                 });
             }, function(err){
-
+    
             });
         });
 
-        return promise;
+        return promise;        
+    }
+
+    #verify_failure(options) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            await self.browser.alert().then(async function(alert){
+                await alert.getText().then(function(text){
+                    if('Login Failure!' == text){
+    
+                    }else{
+    
+                    }
+    
+                    alert.accept().then(resolve, reject);
+                }, function(err){
+    
+                });
+            }, function(err){
+    
+            });
+        });
+
+        return promise;   
     }
 }
 

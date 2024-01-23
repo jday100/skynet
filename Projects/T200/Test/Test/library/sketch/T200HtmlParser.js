@@ -22,6 +22,7 @@ class T200HtmlParser {
             //console.log(result);
 
             let result = {};
+            result.value = "";
             self.#traversal(handler.dom[0], result);
 
             let value = JSON.stringify(result, "", "\t");
@@ -45,6 +46,7 @@ class T200HtmlParser {
                 result.children = new Array();          
                 for(let child of node.children){
                     let item = {};
+                    item.value = result.value;
                     this.#traversal(child, item);
                     result.children.push(item);
                 }                
@@ -55,11 +57,13 @@ class T200HtmlParser {
     }
 
     #done(node, result) {
+        result.value += node.name + " > ";
         switch(node.name){
             case 'a':
                 this.#link(node, result);
                 break;
             case 'div':
+                this.#div(node, result);
                 break;
             case 'form':
                 this.#form(node, result);
@@ -75,7 +79,24 @@ class T200HtmlParser {
                 break;
             case 'password':
                 this.#password(node, result);
-                break;
+                break;   
+        }
+    }
+
+    #div(node, result) {
+        result.type = "div";
+        result.name = node.name;
+
+        if(undefined == node.attribs["id"]){
+
+        }else{
+            result.id = node.attribs["id"];
+        }
+
+        if(undefined == node.attribs["class"]){
+
+        }else{
+            result.class = node.attribs["class"];
         }
     }
 
@@ -104,6 +125,10 @@ class T200HtmlParser {
 
         }else{
             result.target = node.attribs["target"];
+        }
+
+        if(node.children && 1 == node.children.length){
+            result.text = node.children[0].data;
         }
     }
 

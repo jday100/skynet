@@ -1,10 +1,10 @@
 const T200Module = require('../../../library/web/T200Module.js');
 
 
-class T200LoginFormModule extends T200Module {
+class T200NavModule extends T200Module {
     constructor() {
         super();
-        this.name = "login_form";
+        this.name = "nav";
     }
 
     run(browser, options){
@@ -22,4 +22,4 @@ class T200LoginFormModule extends T200Module {
     }
 }
 
-module.exports = T200LoginFormModule;
+module.exports = T200NavModule;

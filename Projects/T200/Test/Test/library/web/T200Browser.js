@@ -105,6 +105,26 @@ class T200Browser {
         return promise;
     }
 
+    find(locate) {
+        let self = this;
+        let result;
+
+        switch(locate.type){
+            case 'css':
+                return self.browser.findElements(By.css(locate.value));
+                break;
+            case 'class':
+                return self.browser.findElements(By.className(locate.value));
+                break;
+            case 'name':
+                return self.browser.findElements(By.name(locate.value));
+                break;
+            case 'id':
+                return self.browser.findElements(By.id(locate.value));
+                break;
+        }       
+    }
+
     get_current_url() {
         return this.browser.getCurrentUrl();
     }

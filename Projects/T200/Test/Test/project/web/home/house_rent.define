@@ -1,0 +1,20 @@
+{
+    "name"  : "house_rent",
+    "fields"    : [
+        {
+            "name"  : "username",
+            "type"  : "link",
+            "locate"    : {
+                "type"  : "css",
+                "value" : "html > body > div > fieldset > div > fieldset > div > div > div > a"
+            }
+        },{
+            "name"  : "password",
+            "type"  : "link",
+            "locate"    : {
+                "type"  : "name",
+                "value" : "password"
+            }
+        }
+    ]
+}

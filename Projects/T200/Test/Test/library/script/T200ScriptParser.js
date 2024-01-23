@@ -1,4 +1,5 @@
 const T200Web = require('../web/T200Web.js');
+const T200Options = require('../T200Options.js');
 
 
 class T200ScriptParser {
@@ -67,6 +68,13 @@ class T200ScriptParser {
                         result = false;
                     });
                     break;
+                case 'verify':
+                    await self.#verify(item).then(function(){
+
+                    }, function(err){
+                        result = false;
+                    });
+                    break;
             }
 
             if(result){
@@ -107,7 +115,24 @@ class T200ScriptParser {
             if(undefined == self.web){
                 reject();
             }else{
-                await self.web.form(self.browser).then(function(){
+                await self.web.form(self.browser, T200Options.form(item)).then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                });       
+            }            
+        });
+        
+        return promise;
+    }
+
+    #verify(item) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            if(undefined == self.web){
+                reject();
+            }else{
+                await self.web.run(self.browser, T200Options.verify(item)).then(function(){
                     resolve();
                 }, function(err){
                     reject();

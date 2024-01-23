@@ -3,7 +3,7 @@ const T200Test = require('./library/core/T200Test.js');
 let Home = new T200Test();
 
 
-Home.run("web", "home", "firefox", "login.script").then(function(){
+Home.run("web", "home", "firefox", "view.script").then(function(){
     console.log("success");
 }, function(err){
     console.log("failure");

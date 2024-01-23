@@ -1,15 +1,35 @@
 {
-    "all":[
-        {
-            "name"  : "/register.html",
-            "data"  : {
-                "username"  : "skynet",
-                "password1" : "111111",
-                "password2" : "111111",
-                "email"     : "skynet@skynet.com",
-                "auth"      : "111111",
-                "invite"    : "111111111111"
-            }
-        }
-    ]
+    "all"   : {
+        "flow"  : [
+            {
+                "name"  : "get",
+                "value" : "/register.html"
+            },
+            {
+                "name"  : "form",
+                "value" : "submit",
+                "data"  : {
+                    "username"  : "skynet",
+                    "password1" : "111111",
+                    "password2" : "111111",
+                    "email"     : "skynet@skynet.com",
+                    "auth"      : "111111",
+                    "invite"    : "111111111111"
+                }
+            },
+			{
+				"name": "verify",
+				"verify": {
+                    "success"   : {
+                        "type"  : "url",
+                        "url"   : "/login.html"
+                    },
+                    "failure"   : {
+                        "type"  : "alert",
+                        "value" : "Register Failure!"
+                    }
+				}
+			}
+        ]        
+    }
 }

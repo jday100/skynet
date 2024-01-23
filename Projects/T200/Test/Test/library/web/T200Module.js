@@ -3,6 +3,13 @@ const T200Define = require('../core/T200Define.js');
 
 const T200Form = require('./T200Form.js');
 
+const T200Link = require('./tags/T200Link.js');
+const T200Text = require('./tags/T200Text.js');
+const T200Email = require('./tags/T200Email.js');
+const T200Select = require('./tags/T200Select.js');
+const T200Button = require('./tags/T200Button.js');
+const T200Password = require('./tags/T200Password.js');
+
 
 class T200Module {
     constructor() {
@@ -90,14 +97,87 @@ class T200Module {
     #create_field(field) {
         let self = this;
         let promise = new Promise(async function(resolve, reject){
-            let result = true;
-
-
-            if(result){
-                resolve();
-            }else{
-                reject();
+            let value;
+            field.data = self.data;
+            switch(field.type){
+                case 'link':
+                    value = new T200Link();
+                    await self.#create_entry(field, value).then(function(){
+                        self.values.push(value);
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                case 'text':
+                    value = new T200Text();
+                    await self.#create_entry(field, value).then(function(){
+                        self.values.push(value);
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                case 'password':
+                    value = new T200Password();
+    
+                    await self.#create_entry(field, value).then(function(){
+                        self.values.push(value);
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                case 'email':
+                    value = new T200Email();
+    
+                    await self.#create_entry(field, value).then(function(){
+                        self.values.push(value);
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                case 'button':
+                    value = new T200Button();
+    
+                    await self.#create_entry(field, value).then(function(){
+                        self.values.push(value);
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                case 'select':
+                    value = new T200Select();
+    
+                    await self.#create_entry(field, value).then(function(){
+                        self.values.push(value);
+                        resolve();
+                    }, function(err){
+                        reject();
+                    });
+                    break;
+                default:
+                    reject();
+                    break;
             }
+        });
+
+        return promise;        
+    }
+
+    
+    #create_entry(field, value) {
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            value.project = self.project;
+            value.page = self.page;
+            await value.create(field).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
         });
 
         return promise;
