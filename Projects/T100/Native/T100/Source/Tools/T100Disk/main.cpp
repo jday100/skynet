@@ -7,7 +7,7 @@ int main()
 {
     T100Disk disk;
 
-    disk.list();
+    disk.list_usb();
 
     cout << "Hello world!" << endl;
     return 0;

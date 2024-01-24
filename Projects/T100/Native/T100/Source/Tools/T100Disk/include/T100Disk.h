@@ -10,6 +10,8 @@ class T100Disk
 
         void list();
 
+        void list_usb();
+
     protected:
 
     private:

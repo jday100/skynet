@@ -1,0 +1,9 @@
+cmd
+cmd -o floppy.img
+cmd -b -o floppy.img
+cmd -c -i file -o file
+cmd -mkdir /dir
+
+cmd -f -b boot -i floppy.img
+
+cmd -f -i floppy.img
