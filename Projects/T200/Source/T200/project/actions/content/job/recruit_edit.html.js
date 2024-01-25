@@ -39,8 +39,12 @@ async function do_content_job_recruit_add(request, response, cookie, session, re
         job.user_id = session.get("userid");
         job.identity_id = session.get("identityid");
         job.status = session.get("status");
-        //job.region_id = session.get("regionid");
+        job.continent_id = session.get("continentid");
+        job.continent_name = session.get("continent");
+        job.region_id = session.get("regionid");
+        job.region_name = session.get("region");
         job.city_id = session.get("cityid");
+        job.city_name = session.get("city");
         job.title = request.get("title");
         job.content = request.get("content");
 
@@ -60,8 +64,12 @@ async function do_content_job_recruit_add(request, response, cookie, session, re
         if(T200HttpsForm.verify_id(job.user_id)
             && T200HttpsForm.verify_id(job.identity_id)
             && T200HttpsForm.verify_id(job.status)
-            //&& T200HttpsForm.verify_id(job.region_id)
+            && T200HttpsForm.verify_id(job.continent_id)
+            && T200HttpsForm.verify_text(job.continent_name)
+            && T200HttpsForm.verify_id(job.region_id)
+            && T200HttpsForm.verify_text(job.region_name)
             && T200HttpsForm.verify_id(job.city_id)
+            && T200HttpsForm.verify_text(job.city_name)
             && T200HttpsForm.verify_text(job.title)
             && T200HttpsForm.verify_text(job.content)){
                 job.flash_content_append_fields();

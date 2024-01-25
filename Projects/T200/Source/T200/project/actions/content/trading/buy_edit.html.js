@@ -39,16 +39,24 @@ async function do_content_trading_buy_add(request, response, cookie, session, re
         trading.user_id = session.get("userid");
         trading.identity_id = session.get("identityid");
         trading.status = session.get("status");
-        //trading.region_id = session.get("regionid");
+        trading.continent_id = session.get("continentid");
+        trading.continent_name = session.get("continent");
+        trading.region_id = session.get("regionid");
+        trading.region_name = session.get("region");
         trading.city_id = session.get("cityid");
+        trading.city_name = session.get("city");
         trading.title = request.get("title");
         trading.content = request.get("content");
         
         if(T200HttpsForm.verify_id(trading.user_id)
             && T200HttpsForm.verify_id(trading.identity_id)
             && T200HttpsForm.verify_id(trading.status)
-            //&& T200HttpsForm.verify_id(trading.region_id)
+            && T200HttpsForm.verify_id(trading.continent_id)
+            && T200HttpsForm.verify_text(trading.continent_name)
+            && T200HttpsForm.verify_id(trading.region_id)
+            && T200HttpsForm.verify_text(trading.region_name)
             && T200HttpsForm.verify_id(trading.city_id)
+            && T200HttpsForm.verify_text(trading.city_name)
             && T200HttpsForm.verify_text(trading.title)
             && T200HttpsForm.verify_text(trading.content)){
                 trading.flash_content_append_fields();

@@ -27,7 +27,12 @@ class T200UserTradingSell extends T200HomeUserModel {
             'user_id',
             'status',
             'identity_id',
+            'continent_id',
+            'continet_name',
+            'region_id',
+            'region_name',
             'city_id',
+            'city_name',
             'title',
             'content'
         ];
@@ -38,7 +43,12 @@ class T200UserTradingSell extends T200HomeUserModel {
             this.user_id,
             this.status,
             this.identity_id,
+            this.continent_id,
+            `'${this.continent_name}'`,
+            this.region_id,
+            `'${this.region_name}'`,
             this.city_id,
+            `'${this.city_name}'`,
             `'${this.title}'`,
             `'${this.content}'`
         ];

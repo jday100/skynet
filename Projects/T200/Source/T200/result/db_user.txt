@@ -1,0 +1,185 @@
+index.html
+        notice => ( select id, status, title, create_time from notice where status = 1  order by id desc  limit 9  )
+        house_rent => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        house_wanted => ( select id,title,nickname,t1.create_time  from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        job_recruit => ( select id,title,nickname,t1.create_time  from job_recruit t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        job_wanted => ( select id,title,nickname,t1.create_time  from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        trading_sell => ( select id,title,nickname,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        trading_buy => ( select id,title,nickname,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        exchange => ( select id,title,nickname,t1.create_time  from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 10  )
+
+register.html
+        => ( select user_id from person where username = '111111'   )
+        => ( select user_id from person where email = '1@1.com'   )
+        => ( select id from invitation where invite = '111111111111'   )
+        => ( select id from invitation where invite = '111111111111'   )
+        => ( insert into person (username, password, email, invite, status )values ('111111', '3d4f2bf07dc1be38b20cd6e46949a1071f9d0e3d', '1@1.com', 111111111111, 1)   )
+
+login.html
+        => ( select t1.user_id ,t1.status ,t2.continent_id ,t2.continent_name ,t2.region_id ,t2.region_name ,t2.city_id ,t2.city_name ,t1.identity_id ,username,password,t1.flag  from person t1  left join identity t2  on t1.identity_id  = t2.identity_id   where username = '111111'  and password = '3d4f2bf07dc1be38b20cd6e46949a1071f9d0e3d'   and t1.status  = 1    )
+	    => ( update person set login_time = current_timestamp ,ip = 'undefined' where user_id = 3    )
+
+content/person/profile_init.html
+        => ( update person set continent_id = 100 ,continent_name = 'Asia' ,country_id = 1002 ,country_name = 'South Korea' ,gender = 1 ,year = 2020 ,month = 10 ,day = 30 ,intro = '111111' ,flag = 1 where user_id = 3    )
+
+content/person/identity_init.html
+        => ( insert into identity (user_id,status,continent_id,continent_name,region_id,region_name,city_id,city_name,nickname,intro,ip )values (3,1,100,'Asia',1002,'South Korea',30000,'Seoul','111111','111111','undefined')   )
+        => ( update person set identity_id = 2 where user_id = 3    )
+
+content/person/profile.html
+        => ( select user_id,continent_id,country_id,status,username,email,gender,year,month,day,intro,create_time,modify_time,login_time,ip from person where user_id = 3   )
+        => ( update person set password = '3d4f2bf07dc1be38b20cd6e46949a1071f9d0e3d' where user_id = 3    )
+
+        => ( update person set continent_id = 100 ,continent_name = 'Asia' ,country_id = 1001 ,country_name = 'Japan' where user_id = 3    )
+        => ( update person set intro = '222222' where user_id = 3    )
+
+
+content/person/identity.html
+        => ( select identity_id,user_id,continent_id,region_id,city_id,nickname,intro from identity where identity_id = 2   )
+
+        => ( update identity set continent_id = 100 ,continent_name = 'Asia' ,region_id = 1001 ,region_name = 'Japan' ,city_id = 20000 ,city_name = 'Tokyo' where user_id = 3    )
+        => ( update identity set intro = '222222' where user_id = 3    )
+
+content/house/rent.html
+        => ( select count(id)  as total from house_rent t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1    )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from house_rent t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+        => ( select count(id)  as total from house_rent t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1    )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from house_rent t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+        => ( select count(id)  as total from house_rent t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = -1  and t1.user_id  = 3   and t2.status  = 1    )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from house_rent t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = -1  and t1.user_id  = 3   and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+content/house/rent_edit.html
+        => ( insert into house_rent (user_id,status,identity_id,continent_id,continet_name,region_id,region_name,city_id,city_name,type_long,type_short,title,content )values (3,1,2,100,'Asia',1001,'Japan',20000,'Tokyo',1,0,'1111','11111')   )
+        => ( update house_rent set parent_id = 6 where id = 6    )
+
+content/house/wanted.html
+        => ( select count(id)  as total from house_wanted t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1    )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from house_wanted t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+        => ( select count(id)  as total from house_wanted t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1    )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from house_wanted t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+content/house/wanted_edit.html
+        => ( insert into house_wanted (user_id,status,identity_id,continent_id,continet_name,region_id,region_name,city_id,city_name,type_long,type_short,title,content )values (3,1,2,100,'Asia',1001,'Japan',20000,'Tokyo',1,0,'1111','1111')   )
+        => ( update house_wanted set parent_id = 3 where id = 3    )
+
+content/job/recruit.html
+        => ( select count(id)  as total from job_recruit t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1    )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from job_recruit t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+        => ( select count(id)  as total from job_recruit t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1    )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from job_recruit t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+content/job/recruit_edit.html
+        => ( insert into job_recruit (user_id,status,identity_id,continent_id,continet_name,region_id,region_name,city_id,city_name,type_full,type_part,title,content )values (3,1,2,100,'Asia',1001,'Japan',20000,'Tokyo',1,0,'111111','11111')   )
+	=> ( update job_recruit set parent_id = 2 where id = 2    )
+
+content/job/wanted.html
+	=> ( select count(id)  as total from job_wanted t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1    )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from job_wanted t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+        => ( select count(id)  as total from job_wanted t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1    )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from job_wanted t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+content/job/wanted_edit.html
+        => ( insert into job_wanted (user_id,status,identity_id,continent_id,continet_name,region_id,region_name,city_id,city_name,type_full,type_part,title,content )values (3,1,2,100,'Asia',1001,'Japan',20000,'Tokyo',1,0,'11111','11111')   ) 
+	=> ( update job_wanted set parent_id = 2 where id = 2    )
+
+content/trading/sell.html
+        => ( select count(id)  as total from trading_sell t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from trading_sell t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+        => ( select count(id)  as total from trading_sell t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from trading_sell t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+content/trading/sell_edit.html
+        => ( insert into trading_sell (user_id,status,identity_id,continent_id,continet_name,region_id,region_name,city_id,city_name,title,content )values (3,1,2,100,'Asia',1001,'Japan',20000,'Tokyo','111111','111111')   )
+	=> ( update trading_sell set parent_id = 4 where id = 4    )
+
+content/trading/buy.html
+        => ( select count(id)  as total from trading_buy t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from trading_buy t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+        => ( select count(id)  as total from trading_buy t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from trading_buy t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+content/trading/buy_edit.html
+        => ( insert into trading_buy (user_id,status,identity_id,continent_id,continet_name,region_id,region_name,city_id,city_name,title,content )values (3,1,2,100,'Asia',1001,'Japan',20000,'Tokyo','111111','111111')   )
+	=> ( update trading_buy set parent_id = 1 where id = 1    )
+
+content/exchange/index.html
+        => ( select count(id)  as total from exchange t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from exchange t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.user_id  = 3  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+        => ( select count(id)  as total from exchange t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from exchange t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+content/exchange/edit.html
+        => ( insert into exchange (user_id,status,identity_id,continent_id,continet_name,region_id,region_name,city_id,city_name,title,content )values (3,1,2,100,'Asia',1001,'Japan',20000,'Tokyo','11111','1111')   )
+	=> ( update exchange set parent_id = 1 where id = 1    )
+
+content/datum/index.html
+        => ( select count(id)  as total from datum t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.user_id  = 3  and t2.status  = 1    )
+	=> ( select id,name,t1.status ,t2.username ,t1.create_time  from datum t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.user_id  = 3  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+        => ( select count(id)  as total from datum t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1    )
+	=> ( select id,name,t1.status ,t2.username ,t1.create_time  from datum t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+content/note/index.html
+        => ( select count(id)  as total from note t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.user_id  = 3  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.username ,t1.create_time  from note t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.user_id  = 3  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+        => ( select count(id)  as total from note t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.username ,t1.create_time  from note t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t1.user_id  = 3   and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+content/note/edit.html
+        => ( insert into note (user_id,status,title,content )values (3,1,'1111','1111')   )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

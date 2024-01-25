@@ -1,0 +1,95 @@
+admin/global/global.html
+    => ( select id,setting_id,name,content,status from setting where status = 1  and setting_id = 1000000    )
+    => ( insert into setting (setting_id,status,name,content )values (1000000,1,'1000000','{"site":true,"register":true,"login":true,"publish":true,"reply":true,"list":true,"search":true,"board":true}')   )
+    => ( update setting set content = '{"site":true,"register":false,"login":true,"publish":false,"reply":true,"list":false,"search":true,"board":false}' where id = 1    )
+
+admin/person/index.html
+    => ( select count(user_id)  as total from person  ) 
+	=> ( select user_id as id ,status,username,nickname,email,create_time from person order by user_id desc  limit 10 offset 0  )
+    => ( select count(user_id)  as total from person where status = 0   )
+	=> ( select user_id as id ,status,username,nickname,email,create_time from person where status = 0  order by user_id desc  limit 10 offset 0  )
+
+admin/invitation/index.html
+    => ( select count(id)  as total from invitation t1  left join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1   )
+	=> ( select id,t1.invite ,t1.status ,t2.user_id ,t2.username ,t1.create_time  from invitation t1  left join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1  order by id desc  limit 10 offset 0  )
+    => ( select count(id)  as total from invitation t1  left join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1    )
+	=> ( select id,t1.invite ,t1.status ,t2.user_id ,t2.username ,t1.create_time  from invitation t1  left join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+admin/notice/index.html
+    => ( select count(id)  as total from notice t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1   )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from notice t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1  order by id desc  limit 10 offset 0  )
+    => ( select count(id)  as total from notice t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from notice t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+admin/notice/edit.html
+    => ( insert into notice (user_id,title,content )values (3,'111','1111111111111')   )
+
+admin/house/rent.html
+    => ( select count(id)  as total from house_rent t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1   )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from house_rent t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1  order by id desc  limit 10 offset 0  )
+    => ( select count(id)  as total from house_rent t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from house_rent t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+admin/house/wanted.html
+    => ( select count(id)  as total from house_wanted t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1   )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from house_wanted t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1  order by id desc  limit 10 offset 0  )
+    => ( select count(id)  as total from house_wanted t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from house_wanted t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+admin/job/recruit.html
+    => ( select count(id)  as total from job_recruit t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1   )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from job_recruit t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1  order by id desc  limit 10 offset 0  )
+    => ( select count(id)  as total from job_recruit t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1    ) 
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from job_recruit t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+
+admin/job/wanted.html
+    => ( select count(id)  as total from job_wanted t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1   )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from job_wanted t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1  order by id desc  limit 10 offset 0  )
+    => ( select count(id)  as total from job_wanted t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from job_wanted t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+admin/trading/sell.html
+    => ( select count(id)  as total from trading_sell t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1   )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from trading_sell t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1  order by id desc  limit 10 offset 0  )
+    => ( select count(id)  as total from trading_sell t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from trading_sell t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+admin/trading/buy.html
+    => ( select count(id)  as total from trading_buy t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1   )
+    => ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from trading_buy t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1  order by id desc  limit 10 offset 0  )
+    => ( select count(id)  as total from trading_buy t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from trading_buy t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+admin/exchange/index.html
+    => ( select count(id)  as total from exchange t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1   )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from exchange t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1  order by id desc  limit 10 offset 0  )
+    => ( select count(id)  as total from exchange t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from exchange t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+admin/note/index.html
+    => ( select count(id)  as total from note t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1   )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from note t1  inner join person t2  on t1.user_id  = t2.user_id   where t2.status  = 1  order by id desc  limit 10 offset 0  )
+    => ( select count(id)  as total from note t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1    )
+	=> ( select id,title,t1.status ,t2.user_id ,t2.username ,t1.create_time  from note t1  inner join person t2  on t1.user_id  = t2.user_id   where t1.status  = 0  and t2.status  = 1   order by id desc  limit 10 offset 0  )
+
+admin/note/edit.html
+    => ( insert into note (user_id,title,content )values (3,'1','1')   )    
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+

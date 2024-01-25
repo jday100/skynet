@@ -76,10 +76,22 @@ class T200AdminPerson extends T200HomeAdminModel {
     }
     
     merge_admin_person_paging_count() {
+        let where;
+
+        if(undefined == this.status || '' == this.status){
+            where = "";
+        }else{
+            where = T200SQL.WHERE(
+                        T200SQL.EQUAL(
+                            'status',
+                            this.status
+                        )
+                    );
+        }
         return T200SQL.SELECT(
             T200SQL.AS(T200SQL.COUNT(this._key), 'total'),
-            T200SQL.FROM(this._table)//,
-            //T200SQL.WHERE(T200SQL.EQUAL(this._id, this.user_id))
+            T200SQL.FROM(this._table),
+            where
         );
     }
 
