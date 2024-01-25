@@ -91,12 +91,14 @@ function nationality_edit() {
                     <dd>
                         <div>
                             <label>Continent:</label>
+                            <input type="hidden" id="continent_title" name="continent_title">
                             <select id="continent" name="continent" onchange="continent_dev_change(this, 'country');">
                             </select>
                         </div>
                         <div>
                             <label>Country:</label>
-                            <select id="country" name="country">
+                            <input type="hidden" id="country_title" name="country_title">
+                            <select id="country" name="country" onchange="country_dev_change(this, 'country_title');">
                             </select>
                         </div>
                     </dd>
@@ -158,17 +160,20 @@ function location_edit() {
                     <dd>
                         <div>
                             <label>Continent:</label>
+                            <input type="hidden" id="continent_title" name="continent_title"> 
                             <select id="continent" name="continent" onchange="continent_dev_change(this, 'region');">
                             </select>
                         </div>
                         <div>
                             <label>Region:</label>
-                            <select id="region" name="region" onchange="region_dev_change('continent', 'region', 'city');">
+                            <input type="hidden" id="region_title" name="region_title">
+                            <select id="region" name="region" onchange="region_dev_change('region', 'city');">
                             </select>
                         </div>
                         <div>
                             <label>City:</label>
-                            <select id="city" name="city">
+                            <input type="hidden" id="city_title" name="city_title">
+                            <select id="city" name="city" onchange="city_dev_change(this, 'city_title');">
                             </select>
                         </div>
                     </dd>

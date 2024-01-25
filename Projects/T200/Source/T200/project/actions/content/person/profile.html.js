@@ -2,6 +2,7 @@ const { error, log } = require('../../../../library/T200Lib.js');
 const T200Error = require('../../../../library/T200Error.js');
 
 const T200Dotter = require('../../../../library/T200Dotter.js');
+const T200Crypto = require('../../../../library/crypto/T200Crypto.js');
 
 const T200HttpsForm = require('../../../../library/net/T200HttpsForm.js');
 const T200HomeView = require('../../../view/T200HomeView.js');
@@ -135,12 +136,14 @@ async function do_content_person_password_save(request, response, cookie, sessio
             && T200HttpsForm.verify_text(pwd2)
             && T200HttpsForm.verify_text(pwd)
             && T200HttpsForm.verify_text(person.user_id)){
-
-            if(pwd1 == pwd2 && opwd == pwd){
-                person.password = pwd1;
+            
+            let spwd =  T200Crypto.sha1(opwd);
+            if(pwd1 == pwd2 && spwd == pwd){
+                let npwd = T200Crypto.sha1(pwd1);
+                person.password = npwd;
                 person._name_value = person.modify_password_array();
                 UserBiz.modify(person.merge_update_by_key()).then(function(result){
-                    session.set('password', pwd1);
+                    session.set('password', npwd);
                     response.type("json");
                     if(result){
                         resolve();
@@ -219,10 +222,14 @@ async function do_content_person_nationality_save(request, response, cookie, ses
 
         person.user_id = session.get("userid");
         person.continent_id = request.get("continent");
+        person.continent_name = request.get("continent_title");
         person.country_id = request.get("country");
+        person.country_name = request.get("country_title");
 
         if(T200HttpsForm.verify_id(person.user_id)
+            && T200HttpsForm.verify_text(person.continent_name)
             && T200HttpsForm.verify_id(person.continent_id)
+            && T200HttpsForm.verify_text(person.country_name)
             && T200HttpsForm.verify_id(person.country_id)){
             person.flash_content_profile_nationality_update();
             UserBiz.modify(person.merge_update_by_key()).then(function(result){

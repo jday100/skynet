@@ -106,11 +106,13 @@ function nationality_edit() {
             <input type='hidden' name='test'> \
             <div> \
                 <label>Continent:</label> \
-                <select id='continent' onchange='continent_change(this.value);'></select> \
+                <input type=\"hidden\" id=\"continent_title\" name=\"continent_title\"> \
+                <select id='continent' onchange=\"continent_dev_change(this, 'country');\"></select> \
             </div> \
             <div> \
                 <label>Country:</label> \
-                <select id='country' name='country'></select> \
+                <input type=\"hidden\" id=\"country_title\" name=\"country_title\"> \
+                <select id='country' name='country' onchange=\"country_dev_change(this, 'country_title');\"></select> \
             </div> \
         </form> \
     ";

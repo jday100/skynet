@@ -136,13 +136,19 @@ async function do_content_person_identity_location_save(request, response, cooki
 
         identity.user_id = session.get("userid");
         identity.continent_id = request.get("continent");
+        identity.continent_name = request.get("continent_title");
         identity.region_id = request.get("region");
+        identity.region_name = request.get("region_title");
         identity.city_id = request.get("city");
+        identity.city_name = request.get("city_title");
 
         if(T200HttpsForm.verify_id(identity.user_id)
             && T200HttpsForm.verify_id(identity.continent_id)
+            && T200HttpsForm.verify_text(identity.continent_name)
             && T200HttpsForm.verify_id(identity.region_id)
-            && T200HttpsForm.verify_id(identity.city_id)){
+            && T200HttpsForm.verify_text(identity.region_name)
+            && T200HttpsForm.verify_id(identity.city_id)
+            && T200HttpsForm.verify_text(identity.city_name)){
             identity.flash_content_identity_location_update();
             UserBiz.modify(identity.merge_update_by_id()).then(function(result){
                 response.type("json");

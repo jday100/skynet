@@ -39,7 +39,7 @@ class T200UserPerson extends T200HomeUserModel {
             ['continent_id', this.continent_id],
             ['continent_name', `'${this.continent_name}'`],
             ['country_id', this.country_id],
-            ['country_name', `'${this.country}'`]
+            ['country_name', `'${this.country_name}'`]
         ];
     }
 
