@@ -101,6 +101,23 @@ class T200UserHouseRent extends T200HomeUserModel {
         ];
     }
 
+    flash_paging_fields() {
+        this._fields = [
+            'id',
+            'title',
+            T200SQL.PREFIX('status', 't1'),            
+            T200SQL.PREFIX('nickname', 't2'),
+            T200SQL.PREFIX('create_time', 't1')
+        ];
+    }
+
+    flash_fulltext_fields() {
+        this._fulltext_fields = [
+            'title',
+            'content'
+        ];
+    }
+
     flash_content_status_update() {
         this._name_value = [
             ['status', this.status]
@@ -304,9 +321,15 @@ class T200UserHouseRent extends T200HomeUserModel {
                                 1
                             )
                         ),
-                        T200SQL.EQUAL(
-                            "type_long",
-                            1
+                        T200SQL.AND(
+                            T200SQL.EQUAL(
+                                T200SQL.PREFIX("parent_type", 't1'), 
+                                0
+                            ),
+                            T200SQL.EQUAL(
+                                "type_long",
+                                1
+                            )
                         )
                     )  
                 );
@@ -358,6 +381,115 @@ class T200UserHouseRent extends T200HomeUserModel {
                         )
                     )  
                 );
+
+        
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields),
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+                ),
+            T200SQL.INNER(
+                T200SQL.ALIAS(this._identity_table, "t2"), 
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"), 
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            where,
+            T200SQL.ORDER(T200SQL.DESC(this._key)),
+            T200SQL.LIMIT(this._page_size),
+            T200SQL.OFFSET(this._offset)
+        );
+    }
+
+
+    merge_user_fulltext_long_count() {
+        let where;
+
+        where = T200SQL.WHERE(
+                    T200SQL.AND(
+                        T200SQL.AND(
+                            T200SQL.AND(
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("status", 't1'), 
+                                    1
+                                ),
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("status", 't2'), 
+                                    1
+                                )
+                            ),
+                            T200SQL.AND(
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("parent_type", 't1'), 
+                                    0
+                                ),
+                                T200SQL.EQUAL(
+                                    "type_long",
+                                    1
+                                )
+                            )                        
+                        ),
+                        T200SQL.ALIAS(
+                            T200SQL.MATCH(this._fulltext_fields),
+                            T200SQL.AGAINST(T200SQL.STRING(this._search))
+                        )  
+                    )                      
+                );
+
+        
+        return T200SQL.SELECT(
+            T200SQL.AS(
+                T200SQL.COUNT(this._key), 
+                'total'
+            ),
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+                ),
+            T200SQL.INNER(
+                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"), 
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            where
+        );
+    }
+
+    merge_user_fulltext_long_list() {
+        let where;
+
+        where = T200SQL.WHERE(
+            T200SQL.AND(
+                T200SQL.AND(
+                    T200SQL.AND(
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("status", 't1'), 
+                            1
+                        ),
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("status", 't2'), 
+                            1
+                        )
+                    ),
+                    T200SQL.AND(
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("parent_type", 't1'), 
+                            0
+                        ),
+                        T200SQL.EQUAL(
+                            "type_long",
+                            1
+                        )
+                    )                        
+                ),
+                T200SQL.ALIAS(
+                    T200SQL.MATCH(this._fulltext_fields),
+                    T200SQL.AGAINST(T200SQL.STRING(this._search))
+                )  
+            )                      
+        );
 
         
         return T200SQL.SELECT(
@@ -476,7 +608,113 @@ class T200UserHouseRent extends T200HomeUserModel {
     }
 
 
+    merge_user_fulltext_short_count() {
+        let where;
 
+        where = T200SQL.WHERE(
+                    T200SQL.AND(
+                        T200SQL.AND(
+                            T200SQL.AND(
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("status", 't1'), 
+                                    1
+                                ),
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("status", 't2'), 
+                                    1
+                                )
+                            ),
+                            T200SQL.AND(
+                                T200SQL.EQUAL(
+                                    T200SQL.PREFIX("parent_type", 't1'), 
+                                    0
+                                ),
+                                T200SQL.EQUAL(
+                                    "type_short",
+                                    1
+                                )
+                            )                        
+                        ),
+                        T200SQL.ALIAS(
+                            T200SQL.MATCH(this._fulltext_fields),
+                            T200SQL.AGAINST(T200SQL.STRING(this._search))
+                        )  
+                    )                      
+                );
+
+        
+        return T200SQL.SELECT(
+            T200SQL.AS(
+                T200SQL.COUNT(this._key), 
+                'total'
+            ),
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+                ),
+            T200SQL.INNER(
+                T200SQL.ALIAS(this._person_table, "t2"), 
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"), 
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            where
+        );
+    }
+
+    merge_user_fulltext_short_list() {
+        let where;
+
+        where = T200SQL.WHERE(
+            T200SQL.AND(
+                T200SQL.AND(
+                    T200SQL.AND(
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("status", 't1'), 
+                            1
+                        ),
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("status", 't2'), 
+                            1
+                        )
+                    ),
+                    T200SQL.AND(
+                        T200SQL.EQUAL(
+                            T200SQL.PREFIX("parent_type", 't1'), 
+                            0
+                        ),
+                        T200SQL.EQUAL(
+                            "type_short",
+                            1
+                        )
+                    )                        
+                ),
+                T200SQL.ALIAS(
+                    T200SQL.MATCH(this._fulltext_fields),
+                    T200SQL.AGAINST(T200SQL.STRING(this._search))
+                )  
+            )                      
+        );
+
+        
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields),
+            T200SQL.FROM(
+                T200SQL.ALIAS(this._table, "t1")
+                ),
+            T200SQL.INNER(
+                T200SQL.ALIAS(this._identity_table, "t2"), 
+                T200SQL.EQUAL(
+                    T200SQL.PREFIX(this._id, "t1"), 
+                    T200SQL.PREFIX(this._id, "t2")
+                )
+            ),
+            where,
+            T200SQL.ORDER(T200SQL.DESC(this._key)),
+            T200SQL.LIMIT(this._page_size),
+            T200SQL.OFFSET(this._offset)
+        );
+    }
 
 
     merge_user_paging_long_city_count() {

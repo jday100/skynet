@@ -1,6 +1,8 @@
 const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
+const T200SQL = require('../../library/db/T200SQL.js');
+
 const T200HomeVisitorModel = require('./T200HomeVisitorModel.js');
 
 
@@ -73,6 +75,38 @@ class T200Notice extends T200HomeVisitorModel {
 
     fulltext_fields() {
         return "title, content";
+    }
+
+    merge_notice_where() {
+        let where;
+
+        if(undefined == this.status || '' == this.status){
+            where = T200SQL.WHERE(
+                        T200SQL.EQUAL(
+                            this._key,
+                            this[this._key]                        
+                        )
+                    );
+        }else{
+            where = T200SQL.WHERE(
+                        T200SQL.AND(
+                            T200SQL.EQUAL(
+                                "status",
+                                this.status
+                            ),
+                            T200SQL.EQUAL(
+                                this._key, 
+                                this[this._key]
+                            )                            
+                        )
+                    );
+        }
+
+        return T200SQL.SELECT(
+            T200SQL.FIELDS(this._fields),
+            T200SQL.FROM(this._table),
+            where
+        );
     }
 
 }

@@ -73,9 +73,11 @@ function hit(name, value) {
 }
 
 function hit_search(id, obj, url) {
+    $.id('search').value = $.id('search_input').value;
     let result = formtostring(id);
     $.post(url, result, function(data){
         obj.innerHTML = data;
+        update_time();
     }, function(){
         alert("Search Failure!");
     });

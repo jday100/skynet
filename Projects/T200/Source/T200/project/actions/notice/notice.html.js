@@ -22,9 +22,11 @@ async function do_notice_get(request, response, cookie, session, resource) {
             notice.id = item._value;
         }
 
+        notice.status = 1;
+
         if(T200HttpsForm.verify_id(notice.id)){
             notice._fields = notice.view_fields();
-            VisitorBiz.load(notice.merge_select_by_key(notice.id)).then(function(result){
+            VisitorBiz.load(notice.merge_notice_where()).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};
                 if(result){

@@ -1,10 +1,10 @@
 <form id="form" class="list_form" onsubmit="return false;">
     <input type="hidden" name="test">
     <input type="hidden" name="page" value="1">
-    <input type="hidden" name="search" value="<%=search%>">
+    <input type="hidden" id="search" name="search" value="<%=search%>">
     <div class="search_box">
-        <input type="text" name="search">
-        <button id="search" class="search_button" onclick="hit_search('form', $.id('list_box'), '/notice/search');" locale="search">Search</button>
+        <input type="text" id="search_input" name="search_input">
+        <button id="search_button" class="search_button" onclick="hit_search('form', $.id('list_box'), '/notice/search');" locale="search">Search</button>
     </div>
     <div class="paging">
         <% 

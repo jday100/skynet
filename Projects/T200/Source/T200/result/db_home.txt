@@ -1,0 +1,71 @@
+index.html
+        notice => ( select id, status, title, create_time from notice where status = 1  order by id desc  limit 9  )
+        house_rent => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        house_wanted => ( select id,title,nickname,t1.create_time  from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        job_recruit => ( select id,title,nickname,t1.create_time  from job_recruit t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        job_wanted => ( select id,title,nickname,t1.create_time  from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        trading_sell => ( select id,title,nickname,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        trading_buy => ( select id,title,nickname,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 5  )
+        exchange => ( select id,title,nickname,t1.create_time  from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 10  )
+
+notice/index.html
+        => ( select count(id)  as total from notice where status = 1   )
+        => ( select id, status, title, create_time from notice where status = 1  order by id desc  limit 10 offset 0  )
+	=> ( select count(id)  as total from notice where status = 1  and match(title,content)  against('1111')     ) 
+	=> ( select id,title,create_time from notice where status = 1  and match(title,content)  against('1111')    order by id desc  limit 10 offset 0  )
+
+notice/notice.html
+        => ( select title, content, create_time from notice where status = 1  and id = 2    )
+
+region/city.html
+        => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.city_id  = 20000    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.city_id  = 20000    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from job_recruit t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.city_id  = 20000    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.city_id  = 20000    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.city_id  = 20000    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.city_id  = 20000    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 10  )
+
+region/region.html
+        => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1001    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1001    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from job_recruit t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1001    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1001    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1001    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1001    order by t1.id  desc  limit 10  )
+        => ( select id,title,nickname,t1.create_time  from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 10  )
+
+house/index.html
+        => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_long = 1    order by id desc  limit 10 offset 0  )
+        => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_short = 1    order by id desc  limit 10 offset 0  )
+        => ( select id,title,nickname,t1.create_time  from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_long = 1    order by id desc  limit 10 offset 0  )
+        => ( select id,title,nickname,t1.create_time  from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_short = 1    order by id desc  limit 10 offset 0  )
+
+house/rent.html
+        => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_long = 1    order by id desc  limit 10 offset 0  )
+        => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_short = 1    order by id desc  limit 10 offset 0  )
+
+house/rent_long.html
+        => ( select count(id)  as total from house_rent t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_long = 1     )
+        => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_long = 1    order by id desc  limit 10 offset 0  )
+
+        => ( select count(id)  as total from house_rent t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_long = 1    and match(title,content)  against('11')     )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_long = 1    and match(title,content)  against('11')    order by id desc  limit 10 offset 0  )
+
+
+house/rent_short.html
+        => ( select count(id)  as total from house_rent t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_short = 1     )
+        => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_short = 1    order by id desc  limit 10 offset 0  )
+
+        => ( select count(id)  as total from house_rent t1  inner join person t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_short = 1    and match(title,content)  against('11')     )
+        => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_short = 1    and match(title,content)  against('11')    order by id desc  limit 10 offset 0  )
+
+house/house_rent.html
+        => ( select count(id)  as total from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_id = 6    )
+        => ( select id,t2.identity_id ,nickname,intro,title,content,parent_id,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_id = 6   order by id limit 10 offset 0  )
+
+house/house_wanted.html
+        => ( select count(id)  as total from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_id = 4    )
+        => ( select id,t2.identity_id ,nickname,intro,title,content,parent_id,t1.create_time  from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_id = 4   order by id limit 10 offset 0  )
+
+
