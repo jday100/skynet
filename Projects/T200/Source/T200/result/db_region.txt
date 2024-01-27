@@ -73,7 +73,11 @@ job/recruit_full_region.html
 	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from job_recruit t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_full = 1    and t1.region_id  = 1001  and match(title,content)  against('11')     order by id desc  limit 10 offset 0  )
 
 job/recruit_part_region.html
+    => ( select count(id)  as total from job_recruit t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001    and type_part = 1    )
+	=> ( select id,title,nickname,t1.create_time  from job_recruit t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001    and type_part = 1   order by id desc  limit 10 offset 0  )
 
+    => ( select count(id)  as total from job_recruit t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_part = 1    and t1.region_id  = 1001  and match(title,content)  against('111')      )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from job_recruit t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_part = 1    and t1.region_id  = 1001  and match(title,content)  against('111')     order by id desc  limit 10 offset 0  )
 
 job/wanted_region.html
     => ( select id,title,nickname,t1.create_time  from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001    and type_full = 1   order by id desc  limit 10 offset 0  )
@@ -87,6 +91,27 @@ job/wanted_full_region.html
 	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_full = 1    and t1.region_id  = 1001  and match(title,content)  against('11')     order by id desc  limit 10 offset 0  )
 
 job/wanted_part_region.html
+    => ( select count(id)  as total from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001    and type_part = 1    )
+	=> ( select id,title,nickname,t1.create_time  from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001    and type_part = 1   order by id desc  limit 10 offset 0  )
 
+    => ( select count(id)  as total from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_part = 1    and t1.region_id  = 1001  and match(title,content)  against('11')      )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and type_part = 1    and t1.region_id  = 1001  and match(title,content)  against('11')     order by id desc  limit 10 offset 0  )
 
+trading/index_region.html
+    => ( select id,title,nickname,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001    order by id desc  limit 10 offset 0  )
+	=> ( select id,title,nickname,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001    order by id desc  limit 10 offset 0  )
+
+trading/sell_region.html
+    => ( select count(id)  as total from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001     )
+	=> ( select id,title,nickname,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001    order by id desc  limit 10 offset 0  )
+
+    => ( select count(id)  as total from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001  and match(title,content)  against('111')       )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001  and match(title,content)  against('111')      order by id desc  limit 10 offset 0  )
+
+trading/buy_region.html
+    => ( select count(id)  as total from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001     )
+    => ( select id,title,nickname,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001    order by id desc  limit 10 offset 0  )
+
+    => ( select count(id)  as total from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001  and match(title,content)  against('1111')       )
+    => ( select id,title,t1.status ,t2.nickname ,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1001  and match(title,content)  against('1111')      order by id desc  limit 10 offset 0  )
 
