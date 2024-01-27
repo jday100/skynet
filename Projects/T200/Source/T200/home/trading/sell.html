@@ -73,8 +73,8 @@
             </legend>
             <div class="channel_box">
                 <div>
-                    <input type="text">
-                    <button locale="search">Search</button>
+                    <input type="text" id="search_input">
+                    <button locale="search" onclick="hit_search('form', $.id('list_box'), '/trading/sell/search');">Search</button>
                 </div>
                 <div id="list_box">
                     <form id="form" class="list_form">

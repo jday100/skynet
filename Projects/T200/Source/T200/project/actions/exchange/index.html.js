@@ -61,8 +61,8 @@ async function do_exchange_search(request, response, cookie, session, resource) 
             exchange.status = 1;
             exchange.flash_visitor_paging_fields();
             exchange.flash_visitor_fulltext_fields();
-            exchange.merge_fulltext_count = exchange.merge_user_fulltext_type_count;
-            exchange.merge_fulltext_list = exchange.merge_user_fulltext_type_list;
+            exchange.merge_fulltext_count = exchange.merge_home_fulltext_count;
+            exchange.merge_fulltext_list = exchange.merge_home_fulltext_list;
             UserBiz.fulltext2(exchange).then(function(result){
                 let view = new T200HomeView(resource);
                 let data = {};

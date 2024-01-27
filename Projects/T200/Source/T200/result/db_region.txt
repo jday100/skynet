@@ -1,0 +1,30 @@
+region/index.html
+
+region/regions.html
+
+region/cities.html
+
+region/region.html
+    => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1002    order by t1.id  desc  limit 10  )
+    => ( select id,title,nickname,t1.create_time  from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1002    order by t1.id  desc  limit 10  )
+    => ( select id,title,nickname,t1.create_time  from job_recruit t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1002    order by t1.id  desc  limit 10  )
+    => ( select id,title,nickname,t1.create_time  from job_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1002    order by t1.id  desc  limit 10  )
+    => ( select id,title,nickname,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1002    order by t1.id  desc  limit 10  )
+    => ( select id,title,nickname,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0  and t1.region_id  = 1002    order by t1.id  desc  limit 10  )
+    => ( select id,title,nickname,t1.create_time  from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_type = 0   order by t1.id  desc  limit 10  )
+
+house/index_region.html
+	=> ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1002    and type_long = 1   order by id desc  limit 10 offset 0  )
+    => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1002    and type_short = 1   order by id desc  limit 10 offset 0  )
+    => ( select id,title,nickname,t1.create_time  from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1002    and type_long = 1   order by id desc  limit 10 offset 0  )
+    => ( select id,title,nickname,t1.create_time  from house_wanted t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1002    and type_short = 1   order by id desc  limit 10 offset 0  )
+
+house/rent_region.html
+    => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1002    and t1.type_long  = 1   order by id desc  limit 10 offset 0  )
+    => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1002    and t1.type_short  = 1   order by id desc  limit 10 offset 0  )
+
+house/rent_long_region.html
+    => ( select count(id)  as total from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1002    and t1.type_long  = 1    )
+    => ( select id,title,nickname,t1.create_time  from house_rent t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t2.status  = 1  and t1.status  = 1   and t1.parent_type  = 0  and t1.region_id  = 1002    and t1.type_long  = 1   order by id desc  limit 10 offset 0  )
+
+

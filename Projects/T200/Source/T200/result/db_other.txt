@@ -1,0 +1,38 @@
+trading/index.html
+    => ( select id,title,nickname,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   order by id desc  limit 10 offset 0  )
+    => ( select id,title,nickname,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   order by id desc  limit 10 offset 0  )
+
+trading/sell.html
+    => ( select count(id)  as total from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0    )
+	=> ( select id,title,nickname,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   order by id desc  limit 10 offset 0  )
+
+    => ( select count(id)  as total from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   and match(title,content)  against('11')     )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   and match(title,content)  against('11')    order by id desc  limit 10 offset 0  )
+
+trading/trading_sell.html
+    => ( select count(id)  as total from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_id = 4    )
+	=> ( select id,t2.identity_id ,nickname,intro,title,content,parent_id,t1.create_time  from trading_sell t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_id = 4   order by id limit 10 offset 0  )
+
+trading/buy.html
+    => ( select count(id)  as total from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0    )
+	=> ( select id,title,nickname,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   order by id desc  limit 10 offset 0  )
+
+    => ( select count(id)  as total from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   and match(title,content)  against('111')     )
+	=> ( select id,title,t1.status ,t2.nickname ,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   and match(title,content)  against('111')    order by id desc  limit 10 offset 0  )
+
+trading/trading_buy.html
+    => ( select count(id)  as total from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_id = 1    )
+	=> ( select id,t2.identity_id ,nickname,intro,title,content,parent_id,t1.create_time  from trading_buy t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_id = 1   order by id limit 10 offset 0  )
+
+exchange/index.html
+    => ( select count(id)  as total from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0    )
+	=> ( select id,title,t1.status ,t2.identity_id ,t2.nickname ,t1.create_time  from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   order by id desc  limit 10 offset 0  )
+
+    => ( select count(id)  as total from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   and match(title,content)  against('11')     )
+	=> ( select id,title,t1.status ,t2.identity_id ,t2.nickname ,t1.create_time  from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and t1.parent_type  = 0   and match(title,content)  against('11')    order by id desc  limit 10 offset 0  )
+
+exchange/exchange.html
+    => ( select count(id)  as total from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_id = 1    )
+	=> ( select id,t2.identity_id ,nickname,intro,title,content,parent_id,t1.create_time  from exchange t1  inner join identity t2  on t1.identity_id  = t2.identity_id   where t1.status  = 1  and t2.status  = 1   and parent_id = 1   order by id limit 10 offset 0  )
+
+
