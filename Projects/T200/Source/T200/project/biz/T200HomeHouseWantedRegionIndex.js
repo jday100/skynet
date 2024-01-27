@@ -43,7 +43,7 @@ class T200HomeHouseWantedIndex extends T200HomeUserBiz {
             let house = new T200UserHouseWanted();
             house.region_id = id;
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_city_long_list()).then(function(values){
+            return self.list(house.merge_user_paging_region_long_list()).then(function(values){
                 data.house_longs = values;
                 resolve(data);
             }, function(){
@@ -60,7 +60,7 @@ class T200HomeHouseWantedIndex extends T200HomeUserBiz {
             let house = new T200UserHouseWanted();
             house.region_id = id;
             house._fields = house.list_fields();
-            return self.list(house.merge_user_paging_city_short_list()).then(function(values){
+            return self.list(house.merge_user_paging_region_short_list()).then(function(values){
                 data.house_shorts = values;
                 resolve(data);
             }, function(){
