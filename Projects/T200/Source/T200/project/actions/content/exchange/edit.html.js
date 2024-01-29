@@ -121,6 +121,7 @@ async function do_content_exchange_upload(request, response, cookie, session, re
                 
                     datum.user_id = user_id;
                     datum.name = `${user_id}/${item.newFilename}`;
+                    datum.filename = item.originalFilename;
 
                     let file = T200Path.join_root(`storages/${datum.name}`);
                     let target = T200Path.join_root(`storages/${user_id}/${item.originalFilename}`);
@@ -129,6 +130,7 @@ async function do_content_exchange_upload(request, response, cookie, session, re
                         if(err){
 
                         }else{
+                            datum.fullpath = target;
                             datum.flash_content_append_fields();
                             datum.flash_content_append_values();
                             await UserBiz.append(datum.merge_insert()).then(function(){

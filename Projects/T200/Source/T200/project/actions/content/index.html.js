@@ -150,16 +150,18 @@ async function do_content_datum_upload(request, response, cookie, session, resou
             let datum = new T200UserDatum();
 
             datum.user_id = user_id;
-            datum.name = `${user_id}/${files.file[0].newFilename}`;
+            let name = `${user_id}/${files.file[0].newFilename}`;
+            datum.name = datum.encrypt(name);
+            datum.filename = files.file[0].originalFilename;
 
-
-            let file = T200Path.join_root(`storages/${datum.name}`);
+            let file = T200Path.join_root(`storages/${name}`);
             let target = T200Path.join_root(`storages/${user_id}/${files.file[0].originalFilename}`);
             sharp(file).resize(800, null).toFile(target, function(err, info){
                 if(err){
                     response.type("json");
                     reject();
                 }else{
+                    datum.fullpath = target;
                     datum.flash_content_append_fields();
                     datum.flash_content_append_values();
                     UserBiz.append(datum.merge_insert()).then(function(){

@@ -1,6 +1,7 @@
 const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
+const T200Crypto = require('../../library/crypto/T200Crypto.js');
 const T200HttpsForm = require('../../library/net/T200HttpsForm.js');
 const T200HomeView = require('../view/T200HomeView.js');
 const T200HomeIndex = require('../biz/T200HomeIndex.js');
@@ -41,11 +42,13 @@ async function do_datum(request, response, cookie, session, resource) {
     let promise = new Promise(function(resolve, reject){
         let name = request.get("id");
 
-        if(T200HttpsForm.verify_text(name)){
+        let value = T200Crypto.decrypt_aes(name);
+
+        if(T200HttpsForm.verify_text(value)){
             let dir = resource.merge_store();
 
             if(dir){
-                let file = `${dir}/${name}`;
+                let file = `${dir}/${value}`;
 
                 resource.load_file(file).then(function(data){
                     resolve(data);

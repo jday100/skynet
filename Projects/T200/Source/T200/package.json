@@ -10,9 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.1.9",
+    "emailjs": "^4.0.3",
     "formidable": "^3.5.1",
     "mariadb": "^3.2.2",
     "mysql": "^2.18.1",
+    "redis": "^4.6.12",
     "sharp": "^0.33.1",
     "uuid": "^9.0.1",
     "ws": "^8.15.1"

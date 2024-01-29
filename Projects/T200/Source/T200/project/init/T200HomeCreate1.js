@@ -350,6 +350,8 @@ class T200HomeCreate {
                 user_id int,
                 status int not null default 0,
                 name varchar(255),
+                filename varchar(255),
+                fullpath varchar(1024),
                 create_time datetime not null default current_timestamp,
                 INDEX(user_id),
                 INDEX(status)

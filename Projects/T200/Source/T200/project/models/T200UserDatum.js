@@ -2,6 +2,7 @@ const { error, log } = require('../../library/T200Lib.js');
 const T200Error = require('../../library/T200Error.js');
 
 const T200SQL = require('../../library/db/T200SQL.js');
+const T200Crypto = require('../../library/crypto/T200Crypto.js');
 
 const T200HomeUserModel = require('./T200HomeUserModel.js');
 
@@ -21,11 +22,24 @@ class T200UserDatum extends T200HomeUserModel {
     }
 
 
+    encrypt(name) {
+        let result = T200Crypto.encrypt_aes(name);
+
+        return result;
+    }
+
+    decrypt() {
+
+    }
+
+
     flash_content_append_fields() {
         this._fields = [
             'user_id',
             'status',
-            'name'
+            'name',
+            'filename',
+            'fullpath'
         ];
     }
 
@@ -33,7 +47,9 @@ class T200UserDatum extends T200HomeUserModel {
         this._values = [
             this.user_id,
             this.status,
-            `'${this.name}'`
+            `'${this.name}'`,
+            `'${this.filename}'`,
+            `'${this.fullpath}'`
         ];
     }
 
