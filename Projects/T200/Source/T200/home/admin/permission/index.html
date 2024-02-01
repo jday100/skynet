@@ -17,10 +17,11 @@
 
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/side.css">
-
+    <link rel="stylesheet" href="/css/list.css">
 
     <script src="/js/t200.js"></script>
     <script src="/js/t200home.js"></script>
+    <script src="/js/list.js"></script>
 
 </head>
 
@@ -162,9 +163,23 @@
             </fieldset>
             
             <fieldset>
-                <legend>Index</legend>
-                <div>
+                <legend>Admin</legend>
 
+                <div>
+                    <div class="side_title">
+                        Admin
+                    </div>
+                    <div class="publish">
+                        <button><a href="/admin/permission/append.html">Append</a></button>
+                    </div>
+                    <div id="list_box">
+                        <form id="form">
+                            <input type="hidden" name="test">
+                            <input type="hidden" name="page" value="1">
+                            <input type="hidden" name="search">
+                            <input type="hidden" name="status">
+                        </form>
+                    </div>
                 </div>
             </fieldset>
         </div>
@@ -180,6 +195,15 @@
 <script>
     $.win.onload = function(){
         nav_check();
+
+        let result = formtostring("form");
+        $.post('/admin/permission/list', result, function(data){
+            $.id("list_box").innerHTML = data;
+            update_status();
+            update_time();
+        }, function(){
+            alert("Load Failure!");
+        });
     };
 </script>
 

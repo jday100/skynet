@@ -106,7 +106,7 @@ function hit_reply(id, obj, url) {
     });
 }
 
-function show_reply(parent_id, id, page, nickname, obj, url) {
+function show_reply(parent_id, parent_nickname, id, page, nickname, obj, url) {
     if('reply' == $.id("reply"+id).textContent){
         let result = " \
             <form id='"
@@ -137,6 +137,7 @@ function show_reply(parent_id, id, page, nickname, obj, url) {
                 <input type='hidden' name='test'>
                 <input type='hidden' name='page' value='${page}'>
                 <input type='hidden' name='parentid' value='${parent_id}'>
+                <input type='hidden' name='parentnickname' value='${parent_nickname}'>
                 <input type='hidden' name='nickname' value='${nickname}'>
                 <div class='reply_group'>
                     <textarea name='content'></textarea>

@@ -45,7 +45,8 @@ class T200UserPerson extends T200HomeUserModel {
 
     flash_content_profile_identity_update() {
         this._name_value = [
-            ['identity_id', this.identity_id]
+            ['identity_id', this.identity_id],
+            ['nickname', this.nickname]
         ];
     }
 

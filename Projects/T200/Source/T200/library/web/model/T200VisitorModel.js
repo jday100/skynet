@@ -68,6 +68,7 @@ class T200VisitorModel extends T200SearchModel {
             T200SQL.PREFIX("identity_id", "t1"),
             "username",
             "password",
+            T200SQL.PREFIX("nickname", "t1"),
             T200SQL.PREFIX("flag", "t1")
         ];
     }

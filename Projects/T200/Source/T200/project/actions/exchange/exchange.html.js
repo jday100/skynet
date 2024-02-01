@@ -65,6 +65,7 @@ async function do_exchange_reply(request, response, cookie, session, resource) {
         exchange.identity_id = session.get("identityid");
         exchange.city_id = session.get("cityid");
         exchange.parent_id = request.get("parentid");
+        exchange.parent_nickname = request.get("parentnickname");
         exchange.title = `@${nickname}`;
         exchange.content = request.get("content");
         exchange.status = 1;
@@ -75,6 +76,7 @@ async function do_exchange_reply(request, response, cookie, session, resource) {
             && T200HttpsForm.verify_id(exchange.parent_id)
             && T200HttpsForm.verify_id(exchange.status)
             && T200HttpsForm.verify_text(nickname)
+            && T200HttpsForm.verify_text(exchange.parent_nickname)
             && T200HttpsForm.verify_text(exchange.content)){
             exchange.flash_reply_fields();
             exchange.flash_reply_values();

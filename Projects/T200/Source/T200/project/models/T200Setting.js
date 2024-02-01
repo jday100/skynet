@@ -35,6 +35,15 @@ class T200Setting extends T200HomeVisitorModel {
         ];
     }
 
+    flash_fields() {
+        this._fields = [
+            'setting_id',
+            'status',
+            'name',
+            'content'
+        ];
+    }
+
     fields() {
         return "user_id, city_id, status, title, content";
     }

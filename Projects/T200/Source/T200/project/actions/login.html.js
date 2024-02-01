@@ -15,6 +15,16 @@ async function do_login(request, response, cookie, session, resource) {
     log(__filename, "do_login");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.login){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+        
         let visitor = new T200Visitor();
         let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
 
@@ -73,6 +83,7 @@ function set_data(cookie, session, data) {
     result.status = data.status;
     result.username = data.username;
     result.password = data.password;
+    result.nickname = data.nickname;
     result.flag = data.flag;
 
     session.key(sid, result);

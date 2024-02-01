@@ -12,6 +12,16 @@ async function do_register(request, response, cookie, session, resource) {
     log(__filename, "do_register");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.register){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let visitor = new T200Visitor();
         let VisitorBiz = new T200HomeVisitorBiz(request, cookie, session);
 

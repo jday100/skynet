@@ -63,6 +63,14 @@ class T200HttpsServer {
             global.server = server;
 
             server.on('request', function(req, res){
+                if(global.setup.server){
+                    if(global.setup.server.site){
+
+                    }else{
+                        res.end("Close");
+                        return;
+                    }
+                }
                 if('GET' == req.method){
                     let data = url.parse(req.url, true);
                     let action = data.pathname;

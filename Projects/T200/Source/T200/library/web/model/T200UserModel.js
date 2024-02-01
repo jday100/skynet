@@ -20,6 +20,8 @@ class T200UserModel extends T200ForumModel {
             "title",
             "content",
             "parent_id",
+            "parent_type",
+            "parent_nickname",
             T200SQL.PREFIX("create_time", "t1")
         ];
     }

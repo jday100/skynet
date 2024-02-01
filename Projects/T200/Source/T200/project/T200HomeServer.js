@@ -20,6 +20,9 @@ const T200HttpsServer = require('../library/net/T200HttpsServer.js');
 const T200HomeSetup = require('./T200HomeSetup.js');
 const T200HomeDBSetup = require('./store/T200HomeDBSetup.js');
 const T200Database = require('../library/db/T200Database.js');
+const T200HomeStore = require('./store/T200HomeStore.js');
+const T200Setting = require('./models/T200Setting.js');
+
 
 //const process = require('child_process');
 
@@ -93,12 +96,65 @@ class T200HomeServer extends T200HttpsServer {
 
             database.setup = new T200HomeDBSetup();
 
-            database.start().then(function(){
+            database.start().then(async function(){
                 global.database = database;
-                if(resolve)resolve();
+                await self.load_setting().then(function(){
+                    resolve();
+                }, function(err){
+                    reject();
+                });
             }, function(err){
                 if(reject)reject(err);
             });
+        });
+
+        return promise;
+    }
+
+    load_setting() {
+        log(__filename, "load_setting");
+
+        let self = this;
+        let promise = new Promise(async function(resolve, reject){
+            let store = new T200HomeStore();
+            let setting = new T200Setting();
+
+            setting.setting_id = '1000000';
+            setting.flash_fields();
+            await store.select(setting.merge_select_by_field("setting_id")).then(function(value){
+                if(value){
+                    if(1 == value.length){
+                        let item = value[0];
+
+                        if(item){
+                            let content = item.content;
+
+                            if(content){
+                                let result = JSON.parse(content);
+
+                                if(result){
+                                    global.setup.server = result;
+                                    resolve();
+                                }else{
+                                    reject();
+                                }
+
+                            }else{
+                                reject();
+                            }
+                        }else{
+                            reject();
+                        }
+                    }else{
+                        resolve();
+                    }
+                }else{
+                    reject();
+                }
+            }, function(err){
+                reject();
+            });
+            
         });
 
         return promise;

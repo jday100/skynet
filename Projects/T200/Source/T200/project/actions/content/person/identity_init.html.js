@@ -157,11 +157,14 @@ async function do_content_person_identity_init_append(request, response, cookie,
 
                     person.user_id = identity.user_id;
                     person.identity_id = id;
+                    person.nickname = identity.nickname;
                     if(T200HttpsForm.verify_id(person.user_id)
-                        && T200HttpsForm.verify_id(person.identity_id)){
+                        && T200HttpsForm.verify_id(person.identity_id)
+                        && T200HttpsForm.verify_text(person.nickname)){
                         person.flash_content_profile_identity_update();
                         UserBiz.modify(person.merge_update_by_key()).then(function(){
                             session.set("identityid", person.identity_id);
+                            session.set("nickname", person.nickname);
                             session.set("continentid", identity.continent_id);
                             session.set("continent", identity.continent_name);
                             session.set("regionid", identity.region_id);

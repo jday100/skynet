@@ -224,6 +224,7 @@ class T200HomeCreate {
                 status int not null default 0,
                 parent_type int default 0,
                 parent_id int default 0,
+                parent_nickname varchar(100),
                 continent_id int default 0,
                 continet_name varchar(100),
                 region_id int default 0,
@@ -253,6 +254,20 @@ class T200HomeCreate {
             create table if not exists admin (
                 id int primary key auto_increment,
                 user_id int default 0 UNIQUE,
+                status int not null default 0,
+                remark text,
+                permission text,
+                group_id int,
+                create_time timestamp not null default current_timestamp
+            ) character set utf8
+        `;
+    }
+
+    merge_admin_group_sql() {
+        return `
+            create table if not exists admin_group (
+                id int primary key auto_increment,
+                name varchar(100),
                 status int not null default 0,
                 remark text,
                 permission text,
@@ -587,6 +602,22 @@ class T200HomeCreate {
         return promise;
     }
 
+    create_admin_group(client) {
+        let self = this;
+        let promise = new Promise(function(resolve, reject){
+            let sql = self.merge_admin_group_sql();
+
+            client.execute(sql).then(function(){
+                resolve();
+            }, function(err){
+                reject();
+            });
+
+        });
+
+        return promise;
+    }
+
     create_setting(client) {
         let self = this;
         let promise = new Promise(function(resolve, reject){
@@ -852,6 +883,10 @@ class T200HomeCreate {
                 return error();
             }).then(function(){
                 return self.create_admin(client);
+            }, function(){
+                return error();
+            }).then(function(){
+                return self.create_admin_group(client);
             }, function(){
                 return error();
             }).then(function(){

@@ -42,6 +42,7 @@ async function do_content_exchange_add(request, response, cookie, session, resou
   
         exchange.user_id = session.get("userid");
         exchange.identity_id = session.get("identityid");
+        exchange.parent_nickname = session.get("nickname");
         exchange.status = session.get("status");
         exchange.continent_id = session.get("continentid");
         exchange.continent_name = session.get("continent");
@@ -54,6 +55,7 @@ async function do_content_exchange_add(request, response, cookie, session, resou
         
         if(T200HttpsForm.verify_id(exchange.user_id)
             && T200HttpsForm.verify_id(exchange.identity_id)
+            && T200HttpsForm.verify_text(exchange.parent_nickname)
             && T200HttpsForm.verify_id(exchange.status)
             && T200HttpsForm.verify_id(exchange.continent_id)
             && T200HttpsForm.verify_text(exchange.continent_name)

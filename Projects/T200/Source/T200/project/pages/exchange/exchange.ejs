@@ -1,8 +1,10 @@
 <%
     let id = 0;
+    let nickname = "";
     exchanges.forEach(item => {
-        if(0 == item.parent_id){
-            id = item.id;
+        if(0 == item.parent_type){
+            id = item.parent_id;
+            nickname = item.parent_nickname;
             %>
                 <div class="forum_box">
                     <div class="forum_person">
@@ -18,7 +20,7 @@
                             <%=item.title%>
                         </div>
                         <div>
-                            <%=item.content%>
+                            <%- item.content%>
                         </div>
                         <div>
                             
@@ -28,6 +30,7 @@
             <%
         }else{
             id = item.parent_id;
+            nickname = item.parent_nickname;
             %>
             <div class="forum_box">
                 <div class="forum_person">
@@ -46,7 +49,7 @@
                         <%- item.content%>
                     </div>
                     <div class="forum_footer">
-                        <button id="reply<%=item.id%>" onclick="show_reply('<%=id%>', '<%=item.id%>', '<%=paging.page%>', '<%=item.nickname%>', 'list_box', '/exchange/reply');" locale="reply">reply</button>
+                        <button id="reply<%=item.id%>" onclick="show_reply('<%=id%>', '<%=nickname%>', '<%=item.id%>', '<%=paging.page%>', '<%=item.nickname%>', 'list_box', '/exchange/reply');" locale="reply">reply</button>
                     </div>
                     <div id="reply_box<%=item.id%>">
 
@@ -88,8 +91,10 @@
         </div>
         <form id="reply_form" class="form_none">
             <input type="hidden" name="test">
-            <input type="hidden" id="id" name="id" value="<%=id%>">
             <input type="hidden" name="page" value="<%=paging.page%>">
+            <input type="hidden" id="parentid" name="parentid" value="<%=id%>">
+            <input type="hidden" id="nickname" name="nickname" value="<%=nickname%>">
+            <input type="hidden" id="parentnickname" name="parentnickname" value="<%=nickname%>">
             <div class="reply_content">
                 <textarea name="content"></textarea>
             </div>
