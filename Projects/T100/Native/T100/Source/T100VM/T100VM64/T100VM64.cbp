@@ -21,6 +21,8 @@
 					<Add directory="include/serve" />
 					<Add directory="include/view" />
 					<Add directory="include" />
+					<Add directory="include/order" />
+					<Add directory="include/library" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -44,6 +46,8 @@
 					<Add directory="include/serve" />
 					<Add directory="include/view" />
 					<Add directory="include" />
+					<Add directory="include/order" />
+					<Add directory="include/library" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -78,6 +82,9 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/T100VM64Host.h" />
 		<Unit filename="include/device/T100Device.h" />
+		<Unit filename="include/library/T100File.h" />
+		<Unit filename="include/library/T100String.h" />
+		<Unit filename="include/order/T100Order.h" />
 		<Unit filename="include/serve/T100VM64Serve.h" />
 		<Unit filename="include/view/T100VM64View.h" />
 		<Unit filename="include/vm/T100Bus64.h" />
@@ -94,6 +101,9 @@
 		</Unit>
 		<Unit filename="src/T100VM64Host.cpp" />
 		<Unit filename="src/device/T100Device.cpp" />
+		<Unit filename="src/library/T100File.cpp" />
+		<Unit filename="src/library/T100String.cpp" />
+		<Unit filename="src/order/T100Order.cpp" />
 		<Unit filename="src/serve/T100VM64Serve.cpp" />
 		<Unit filename="src/view/T100VM64View.cpp" />
 		<Unit filename="src/vm/T100Bus64.cpp" />
