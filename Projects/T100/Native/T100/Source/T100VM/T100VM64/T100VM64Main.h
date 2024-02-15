@@ -28,15 +28,18 @@ class T100VM64Frame: public wxFrame
         //(*Handlers(T100VM64Frame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
+        void OnMenuItemNew(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(T100VM64Frame)
+        static const long ID_MENUITEM_NEW;
         static const long idMenuQuit;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
         //*)
 
         //(*Declarations(T100VM64Frame)
+        wxMenuItem* MenuItem3;
         wxStatusBar* StatusBar1;
         //*)
 

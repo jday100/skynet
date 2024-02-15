@@ -2,12 +2,13 @@
 #define T100CPU64_H
 
 #include "T100Register64.h"
+#include "T100Bus64.h"
 
 
 class T100Cpu64
 {
     public:
-        T100Cpu64();
+        T100Cpu64(T100Bus64*);
         virtual ~T100Cpu64();
 
 
@@ -54,9 +55,15 @@ class T100Cpu64
         T100Register64          CR3;
 
 
+
+    public:
+        T100BOOL                run();
+
+
     protected:
 
     private:
+        T100Bus64*              m_bus           = T100NULL;
 };
 
 #endif // T100CPU64_H
