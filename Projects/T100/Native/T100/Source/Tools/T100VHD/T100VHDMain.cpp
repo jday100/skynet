@@ -15,6 +15,8 @@
 #include <wx/string.h>
 //*)
 
+#include "T100VHD.h"
+
 //helper functions
 enum wxbuildinfoformat {
     short_f, long_f };
@@ -42,6 +44,7 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*IdInit(T100VHDFrame)
+const long T100VHDFrame::ID_MENUITEM_NEW = wxNewId();
 const long T100VHDFrame::idMenuQuit = wxNewId();
 const long T100VHDFrame::idMenuAbout = wxNewId();
 const long T100VHDFrame::ID_STATUSBAR1 = wxNewId();
@@ -64,6 +67,8 @@ T100VHDFrame::T100VHDFrame(wxWindow* parent,wxWindowID id)
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
+    MenuItemNew = new wxMenuItem(Menu1, ID_MENUITEM_NEW, _("New"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemNew);
     MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
     Menu1->Append(MenuItem1);
     MenuBar1->Append(Menu1, _("&File"));
@@ -79,6 +84,7 @@ T100VHDFrame::T100VHDFrame(wxWindow* parent,wxWindowID id)
     StatusBar1->SetStatusStyles(1,__wxStatusBarStyles_1);
     SetStatusBar(StatusBar1);
 
+    Connect(ID_MENUITEM_NEW,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100VHDFrame::OnMenuItemNewSelected);
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100VHDFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100VHDFrame::OnAbout);
     //*)
@@ -99,4 +105,15 @@ void T100VHDFrame::OnAbout(wxCommandEvent& event)
 {
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
+}
+
+void T100VHDFrame::OnMenuItemNewSelected(wxCommandEvent& event)
+{
+    T100INT64       length;
+
+    length      = 1024 * 1024 * 1024;
+
+    T100VHD         vhd("test.vhd", length);
+
+    vhd.create();
 }
