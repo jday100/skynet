@@ -16,6 +16,7 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/vhd" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -34,6 +35,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/vhd" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -65,9 +67,11 @@
 		<Unit filename="T100VHDApp.h" />
 		<Unit filename="T100VHDMain.cpp" />
 		<Unit filename="T100VHDMain.h" />
+		<Unit filename="include/vhd/T100VHD.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/vhd/T100VHD.cpp" />
 		<Unit filename="wxsmith/T100VHDframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
