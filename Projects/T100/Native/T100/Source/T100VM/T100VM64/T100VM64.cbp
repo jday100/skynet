@@ -16,6 +16,10 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/vm" />
+					<Add directory="include/device" />
+					<Add directory="include/serve" />
+					<Add directory="include/view" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -34,6 +38,10 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/vm" />
+					<Add directory="include/device" />
+					<Add directory="include/serve" />
+					<Add directory="include/view" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -65,9 +73,29 @@
 		<Unit filename="T100VM64App.h" />
 		<Unit filename="T100VM64Main.cpp" />
 		<Unit filename="T100VM64Main.h" />
+		<Unit filename="include/device/T100Device.h" />
+		<Unit filename="include/serve/T100VM64Serve.h" />
+		<Unit filename="include/view/T100VM64View.h" />
+		<Unit filename="include/vm/T100Cpu.h" />
+		<Unit filename="include/vm/T100Cpu32.h" />
+		<Unit filename="include/vm/T100Cpu64.h" />
+		<Unit filename="include/vm/T100Memory64.h" />
+		<Unit filename="include/vm/T100Port64.h" />
+		<Unit filename="include/vm/T100QU64.h" />
+		<Unit filename="include/vm/T100Register64.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/device/T100Device.cpp" />
+		<Unit filename="src/serve/T100VM64Serve.cpp" />
+		<Unit filename="src/view/T100VM64View.cpp" />
+		<Unit filename="src/vm/T100Cpu.cpp" />
+		<Unit filename="src/vm/T100Cpu32.cpp" />
+		<Unit filename="src/vm/T100Cpu64.cpp" />
+		<Unit filename="src/vm/T100Memory64.cpp" />
+		<Unit filename="src/vm/T100Port64.cpp" />
+		<Unit filename="src/vm/T100QU64.cpp" />
+		<Unit filename="src/vm/T100Register64.cpp" />
 		<Unit filename="wxsmith/T100VM64frame.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
