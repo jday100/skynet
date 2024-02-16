@@ -25,6 +25,7 @@
 				</ResourceCompiler>
 				<Linker>
 					<Add library="libwxmsw30ud.a" />
+					<Add library="ole32" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -81,6 +82,8 @@
 		<Unit filename="src/library/T100File.cpp" />
 		<Unit filename="src/library/T100String.cpp" />
 		<Unit filename="src/vhd/T100VHD.cpp" />
+		<Unit filename="t.vhd" />
+		<Unit filename="test.vhd" />
 		<Unit filename="wxsmith/T100VHDframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

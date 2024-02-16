@@ -37,6 +37,10 @@ class T100VHD
         T100BOOL            create();
 
     protected:
+        T100VHD_FILE        m_file_head;
+
+        T100BOOL            fixed();
+
 
     private:
         T100INT64           m_length            = 0;

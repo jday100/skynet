@@ -11,13 +11,14 @@ class T100File
         T100File(T100STRING);
         virtual ~T100File();
 
-        T100BOOL            create(T100INT64);
+        T100BOOL            create();
+        T100BOOL            remove();
 
         T100BOOL            open();
         T100BOOL            close();
 
-        T100BOOL            read();
-        T100BOOL            write();
+        T100BOOL            read(T100BYTE*, T100INT32&);
+        T100BOOL            write(T100BYTE*, T100INT32);
 
         T100BOOL            seek(T100INT64);
 
@@ -25,6 +26,7 @@ class T100File
 
     private:
         T100STRING          m_filename;
+        std::fstream*       m_fs            = T100NULL;
 };
 
 #endif // T100FILE_H
