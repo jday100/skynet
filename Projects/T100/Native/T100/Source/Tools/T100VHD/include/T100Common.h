@@ -12,10 +12,10 @@
 #define     T100TRUE                true
 #define     T100FALSE               false
 
-#define     T100INT8                    unsigned char
-#define     T100INT16                   unsigned short
-#define     T100INT32                   unsigned int
-#define     T100INT64                   unsigned long long
+#define     T100INT8                unsigned char
+#define     T100INT16               unsigned short
+#define     T100INT32               unsigned int
+#define     T100INT64               unsigned long long
 
 #define     T100BYTE                T100INT8
 

@@ -5,8 +5,14 @@
 #include <string.h>
 #include <sys/time.h>
 #include "T100File.h"
+#include "T100ByteTools.h"
 
 #include <windows.h>
+
+typedef union{
+    T100BYTE        DATA[16];
+    GUID            VALUE;
+}T100GUID_MIX;
 
 
 T100VHD::T100VHD(T100STRING file, T100INT64 length)
@@ -65,8 +71,14 @@ T100BOOL T100VHD::fixed()
     INT16           major       = 1;
     INT16           minor       = 0;
 
-    memcpy(m_file_head.HEAD.FILE_FORMAT_VERSION, (void*)&major, 2);
-    memcpy(m_file_head.HEAD.FILE_FORMAT_VERSION + 2, (void*)&minor, 2);
+    INT16           majvalue;
+    INT16           minvalue;
+
+    majvalue    = ntohs(major);
+    minvalue    = ntohs(minor);
+
+    memcpy(m_file_head.HEAD.FILE_FORMAT_VERSION, (void*)&majvalue, 2);
+    memcpy(m_file_head.HEAD.FILE_FORMAT_VERSION + 2, (void*)&minvalue, 2);
 
     memset(m_file_head.HEAD.DATA_OFFSET, 0xff, 8);
 
@@ -79,7 +91,11 @@ T100BOOL T100VHD::fixed()
     if(-1 == result){
         return T100FALSE;
     }
-    memcpy(m_file_head.HEAD.TIME_STAMP, (void*)&(current.tv_sec), 4);
+
+    T100INT32       sec;
+
+    sec     = ntohl(current.tv_sec);
+    memcpy(m_file_head.HEAD.TIME_STAMP, (void*)&sec, 4);
 
     std::string     app         = "vpc ";
 
@@ -88,27 +104,40 @@ T100BOOL T100VHD::fixed()
     major   = 5;
     minor   = 0;
 
-    memcpy(m_file_head.HEAD.CREATOR_VERSION, (void*)&major, 2);
-    memcpy(m_file_head.HEAD.CREATOR_VERSION + 2, (void*)&minor, 2);
+    majvalue    = ntohs(major);
+    minvalue    = ntohs(minor);
+
+    memcpy(m_file_head.HEAD.CREATOR_VERSION, (void*)&majvalue, 2);
+    memcpy(m_file_head.HEAD.CREATOR_VERSION + 2, (void*)&minvalue, 2);
 
     std::string     host        = "Wi2k";
 
     memcpy(m_file_head.HEAD.CREATOR_HOST_OS, host.data(), 4);
 
-    memcpy(m_file_head.HEAD.ORIGINAL_SIZE, (void*)&m_length, 8);
-    memcpy(m_file_head.HEAD.CURRENT_SIZE, (void*)&m_length, 8);
+    T100INT64       size;
+
+    size = T100ByteTools::swop(m_length);
+
+    memcpy(m_file_head.HEAD.ORIGINAL_SIZE, (void*)&size, 8);
+    memcpy(m_file_head.HEAD.CURRENT_SIZE, (void*)&size, 8);
 
     INT16           cylinder        = 2080;
+    INT16           temp;
 
-    memcpy(m_file_head.HEAD.DISK_GEOMETRY, (void*)&cylinder, 2);
+    temp    = ntohs(cylinder);
+
+    memcpy(m_file_head.HEAD.DISK_GEOMETRY, (void*)&temp, 2);
 
     m_file_head.HEAD.DISK_GEOMETRY[2]   = 16;
     m_file_head.HEAD.DISK_GEOMETRY[3]   = 63;
 
 
     INT32           type        = 2;
+    INT32           tvalue;
 
-    memcpy(m_file_head.HEAD.DISK_TYPE, (void*)&type, 4);
+    tvalue  = ntohl(type);
+
+    memcpy(m_file_head.HEAD.DISK_TYPE, (void*)&tvalue, 4);
 
     m_file_head.HEAD.SAVED_STATE    = 0;
 
@@ -119,7 +148,13 @@ T100BOOL T100VHD::fixed()
     HRESULT     value   = CoCreateGuid(&guid);
 
     if(S_OK == value){
-        memcpy(m_file_head.HEAD.UNIQUE_ID, (void*)&guid, 8);
+        T100GUID_MIX    source;
+        T100GUID_MIX    target;
+
+        source.VALUE    = guid;
+
+        T100ByteTools::swop(source.DATA, target.DATA, 16);
+        memcpy(m_file_head.HEAD.UNIQUE_ID, (void*)&target.VALUE, 16);
     }else{
         return T100FALSE;
     }
@@ -147,7 +182,10 @@ T100BOOL T100VHD::fixed()
         index   += 4;
     }
 
-    memcpy(m_file_head.HEAD.CHECKSUM, (void*)&total, 4);
+    T100INT32   ivalue;
+
+    ivalue  = ntohl(total);
+    memcpy(m_file_head.HEAD.CHECKSUM, (void*)&ivalue, 4);
 
     return T100TRUE;
 }
