@@ -9,7 +9,7 @@ const T200HomeAdminModel = require('./T200HomeAdminModel.js');
 class T200AdminGroup extends T200HomeAdminModel {
     constructor() {
         super();
-        this._table = "group";
+        this._table = "admin_group";
         this._key = "id";
         this._id = "user_id";
 
@@ -21,7 +21,7 @@ class T200AdminGroup extends T200HomeAdminModel {
     flash_admin_paging_fields() {
         this._fields = [
             'id',
-            'title',
+            'name',
             T200SQL.PREFIX('status', 't1'),
             T200SQL.PREFIX('user_id', 't2'),
             T200SQL.PREFIX('username', 't2'),

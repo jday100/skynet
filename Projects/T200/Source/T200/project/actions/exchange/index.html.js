@@ -11,6 +11,16 @@ async function do_exchange_list(request, response, cookie, session, resource) {
     log(__filename, "do_exchange_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.list){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let exchange = new T200UserExchange();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
@@ -51,6 +61,16 @@ async function do_exchange_search(request, response, cookie, session, resource) 
     log(__filename, "do_exchange_search");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.search){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let exchange = new T200UserExchange();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 

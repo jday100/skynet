@@ -11,6 +11,16 @@ async function do_job_wanted_board(request, response, cookie, session, resource)
     log(__filename, "do_job_wanted_board");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.board){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let job = new T200UserJobWanted();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
@@ -56,6 +66,16 @@ async function do_job_wanted_reply(request, response, cookie, session, resource)
     log(__filename, "do_job_wanted_reply");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.reply){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let job = new T200UserJobWanted();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 

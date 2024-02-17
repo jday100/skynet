@@ -65,7 +65,7 @@
                                 <a href="/admin/permission/group.html">Group</a>
                             </div>
                             <div class="menu_item">
-                                <a href="/admin/permission/permission.html">Permission</a>
+                                <a href="/admin/permission/index.html">Permission</a>
                             </div>
                         </div>
                     </details>
@@ -162,9 +162,11 @@
             </fieldset>
             
             <fieldset>
-                <legend>Index</legend>
-                <div>
-
+                <legend>Advert</legend>
+                <div id="list_box">
+                    <form id="form">
+                        <input type="hidden" name="test">
+                    </form>
                 </div>
             </fieldset>
         </div>
@@ -180,6 +182,12 @@
 <script>
     $.win.onload = function(){
         nav_check();
+        let result = formtostring("form");
+        $.post('/admin/advert/list', result, function(data){
+            $.id("list_box").innerHTML = data;
+        }, function(){
+            alert("Load Failure!");
+        });
     };
 </script>
 

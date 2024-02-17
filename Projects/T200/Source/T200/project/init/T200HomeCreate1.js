@@ -267,6 +267,7 @@ class T200HomeCreate {
         return `
             create table if not exists admin_group (
                 id int primary key auto_increment,
+                user_id int,
                 name varchar(100),
                 status int not null default 0,
                 remark text,

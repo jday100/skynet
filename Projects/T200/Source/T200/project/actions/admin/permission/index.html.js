@@ -9,8 +9,8 @@ const T200HomeAdminBiz = require('../../../biz/T200HomeAdminBiz.js');
 const T200ListView = require('../../../../library/web/view/T200ListView.js');
 
 
-async function do_admin_group_list(request, response, cookie, session, resource) {
-    log(__filename, "do_admin_group_list");
+async function do_admin_permission_list(request, response, cookie, session, resource) {
+    log(__filename, "do_admin_permission_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let group = new T200AdminGroup();
@@ -77,8 +77,8 @@ async function do_admin_group_list(request, response, cookie, session, resource)
     return promise;
 }
 
-async function do_admin_group_search(request, response, cookie, session, resource) {
-    log(__filename, "do_admin_group_search");
+async function do_admin_permission_search(request, response, cookie, session, resource) {
+    log(__filename, "do_admin_permission_search");
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let exchange = new T200AdminGroup();
@@ -149,8 +149,8 @@ async function do_admin_group_search(request, response, cookie, session, resourc
 }
 
 
-async function do_admin_group_approve(request, response, cookie, session, resource) {
-    log(__filename, "do_admin_group_approve");
+async function do_admin_permission_approve(request, response, cookie, session, resource) {
+    log(__filename, "do_admin_permission_approve");
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let exchange = new T200AdminExchange();
@@ -182,8 +182,8 @@ async function do_admin_group_approve(request, response, cookie, session, resour
 }
 
 
-async function do_admin_group_remove(request, response, cookie, session, resource) {
-    log(__filename, "do_admin_group_remove");
+async function do_admin_permission_remove(request, response, cookie, session, resource) {
+    log(__filename, "do_admin_permission_remove");
     let self = this;
     let promise = new Promise(function(resolve, reject){
         let exchange = new T200AdminExchange();
@@ -215,7 +215,7 @@ async function do_admin_group_remove(request, response, cookie, session, resourc
 }
 
 
-global.action.use_post('/admin/group/list', do_admin_group_list);
-global.action.use_post('/admin/group/search', do_admin_group_search);
-global.action.use_post('/admin/group/approve', do_admin_group_approve);
-global.action.use_post('/admin/group/remove', do_admin_group_remove);
+global.action.use_post('/admin/permission/list', do_admin_permission_list);
+global.action.use_post('/admin/permission/search', do_admin_permission_search);
+global.action.use_post('/admin/permission/approve', do_admin_permission_approve);
+global.action.use_post('/admin/permission/remove', do_admin_permission_remove);

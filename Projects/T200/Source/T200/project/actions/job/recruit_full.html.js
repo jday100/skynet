@@ -11,6 +11,16 @@ async function do_job_recruit_full_list(request, response, cookie, session, reso
     log(__filename, "do_job_recruit_full_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.list){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let job = new T200UserJobRecruit();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
@@ -49,6 +59,16 @@ async function do_job_recruit_full_search(request, response, cookie, session, re
     log(__filename, "do_job_recruit_full_search");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.search){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let job = new T200UserJobRecruit();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 

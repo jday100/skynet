@@ -39,14 +39,14 @@ async function do_admin_global(request, response, cookie, session, resource) {
                 let data = {};
 
                 data.id = 0;
-                data.site = false;
-                data.register = false;
-                data.login = false;
-                data.publish = false;
-                data.reply = false;
-                data.list = false;
-                data.search = false;
-                data.board = false;
+                data.site = true;
+                data.register = true;
+                data.login = true;
+                data.publish = true;
+                data.reply = true;
+                data.list = true;
+                data.search = true;
+                data.board = true;
 
                 return view.render_file("admin/global/global.ejs", data).then(function(value){
                     response.type("json");
@@ -128,7 +128,13 @@ async function do_admin_setting_append(request, response, cookie, session, resou
                 setting.flash_admin_append_fields();
                 setting.flash_admin_append_values();
                 AdminBiz.append(setting.merge_admin_insert()).then(function(id){
-                    resolve();
+                    let result = JSON.parse(setting.content);
+                    if(result){
+                        global.setup.server = result;
+                        resolve();
+                    }else{
+                        reject();
+                    }
                 }, function(){
                     reject();
                 });
@@ -162,7 +168,13 @@ async function do_admin_setting_modify(request, response, cookie, session, resou
                 setting.content = merge_json(request);
                 setting.flash_admin_content_update();
                 AdminBiz.modify(setting.merge_update_by_key()).then(function(id){
-                    resolve();
+                    let result = JSON.parse(setting.content);
+                    if(result){
+                        global.setup.server = result;
+                        resolve();
+                    }else{
+                        reject();
+                    }
                 }, function(){
                     reject();
                 });

@@ -9,6 +9,16 @@ async function do_content_job_recruit_edit(request, response, cookie, session, r
     log(__filename, "do_content_job_recruit_edit");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.publish){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+        
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
 

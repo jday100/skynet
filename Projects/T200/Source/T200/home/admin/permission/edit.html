@@ -65,7 +65,7 @@
                                 <a href="/admin/permission/group.html">Group</a>
                             </div>
                             <div class="menu_item">
-                                <a href="/admin/permission/permission.html">Permission</a>
+                                <a href="/admin/permission/index.html">Permission</a>
                             </div>
                         </div>
                     </details>
@@ -162,9 +162,43 @@
             </fieldset>
             
             <fieldset>
-                <legend>Index</legend>
+                <legend>Group</legend>
                 <div>
-
+                    <div class="form_title">
+                        Group
+                    </div>
+                    <div class="form_msg">
+                        hello
+                    </div>
+                    <hr class="line">
+                    <div class="form_box">
+                        <form id="form" class="form">
+                            <input type="hidden" name="test">
+                            <div class="form_item">
+                                <label class="form_label">Title:</label>
+                                <input class="form_value" type="text" name="title">
+                            </div>
+                            <div class="form_item">
+                                <label class="form_label">Content:</label>
+                                <textarea class="form_value" name="content" rows="25"></textarea>
+                            </div>
+                            <div class="form_item">
+                                <label class="form_label">Content:</label>
+                                
+                            </div>
+                            <div class="form_item">
+                                <label class="form_label">Content:</label>
+                                
+                            </div>
+                            <div class="form_item">
+                                <label class="form_label">Content:</label>
+                                
+                            </div>
+                            <div class="form_item">
+                                <input type="button" class="form_button" id="submit" value="submit">
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </fieldset>
         </div>
@@ -180,6 +214,15 @@
 <script>
     $.win.onload = function(){
         nav_check();
+
+        $.id("submit").onclick = function(){
+            let result = formtostring("form");
+            $.post('/admin/group/edit', result, function(){
+                alert('Save Success!');
+            }, function(){
+                alert('Save Failure!');
+            });
+        };
     };
 </script>
 

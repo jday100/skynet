@@ -142,7 +142,17 @@
             <fieldset>
                 <legend>Profile</legend>
                 <div>
-
+                    <div class="side_title">
+                        Profile
+                    </div>
+                    <div id="list_box">
+                        <form id="form">
+                            <input type="hidden" name="test">
+                            <input type="hidden" name="page" value="1">
+                            <input type="hidden" name="search">
+                            <input type="hidden" name="status">
+                        </form>
+                    </div>
                 </div>
             </fieldset>
         </div>
@@ -158,6 +168,15 @@
 <script>
     $.win.onload = function(){
         nav_check();
+
+        let result = formtostring("form");
+        $.post('/admin/person/profile', result, function(data){
+            $.id("list_box").innerHTML = data;
+            update_status();
+            update_time();
+        }, function(){
+            alert("Load Failure!");
+        });
     };
 </script>
 

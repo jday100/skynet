@@ -63,6 +63,11 @@ class T200HttpsServer {
             global.server = server;
 
             server.on('request', function(req, res){
+                console.log(req.connection.remoteAddress);
+                console.log(req.socket.remoteAddress);
+                //console.log(req.connection.socket.remoteAddress);
+                console.log(req.headers['x-forwarded-for']);
+
                 if(global.setup.server){
                     if(global.setup.server.site){
 

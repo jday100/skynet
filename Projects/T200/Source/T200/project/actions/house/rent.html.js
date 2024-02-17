@@ -11,6 +11,16 @@ async function do_house_rent_list(request, response, cookie, session, resource) 
     log(__filename, "do_house_rent_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.list){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let view = new T200HomeView(resource);
         let HouseRentIndex = new T200HomeHouseRentIndex(request, cookie, session);
 

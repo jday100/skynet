@@ -131,6 +131,7 @@ input[type="email"] + button {
 }
 
 .setting_box {
+    width: 700px;
     display: flex;
     justify-content: left;
     align-items: center;

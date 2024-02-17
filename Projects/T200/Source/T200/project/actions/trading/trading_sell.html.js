@@ -11,6 +11,16 @@ async function do_trading_sell_board(request, response, cookie, session, resourc
     log(__filename, "do_trading_sell_board");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.board){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let trading = new T200UserTradingSell();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 
@@ -56,6 +66,16 @@ async function do_trading_sell_reply(request, response, cookie, session, resourc
     log(__filename, "do_trading_sell_reply");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.reply){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let trading = new T200UserTradingSell();
         let UserBiz = new T200HomeUserBiz(request, cookie, session);
 

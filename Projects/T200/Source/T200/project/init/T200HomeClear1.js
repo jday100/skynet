@@ -13,6 +13,7 @@ class T200HomeClear {
             'trading_buy',
             'exchange',
             'admin',
+            'admin_group',
             'setting',
             'advert',
             'notice',

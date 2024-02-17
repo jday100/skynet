@@ -11,6 +11,16 @@ async function do_job_wanted_list(request, response, cookie, session, resource) 
     log(__filename, "do_job_wanted_list");
     let self = this;
     let promise = new Promise(function(resolve, reject){
+        if(global.setup.server){
+            if(global.setup.server.list){
+
+            }else{
+                response.type('json');
+                reject('Close');
+                return;
+            }
+        }
+
         let view = new T200HomeView(resource);
         let JobWantedIndex = new T200HomeJobWantedIndex(request, cookie, session);
 
