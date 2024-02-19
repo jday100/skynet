@@ -30,12 +30,6 @@ T100VHD::~T100VHD()
 
 T100BOOL T100VHD::create()
 {
-    T100VHDTest     vhd;
-
-    vhd.checksum();
-
-    return T100FALSE;
-
     T100BOOL        result;
     T100File        file(m_filename);
 
@@ -72,6 +66,7 @@ T100BOOL T100VHD::fixed()
 {
     std::string     cookie      = "conectix";
 
+    memset(m_file_head.DATA, 0, 512);
     memcpy(m_file_head.HEAD.COOKIE, cookie.data(), 8);
 
     memset(m_file_head.HEAD.FEATURES, 0, 4);
@@ -105,7 +100,7 @@ T100BOOL T100VHD::fixed()
     sec     = ntohl(current.tv_sec);
     memcpy(m_file_head.HEAD.TIME_STAMP, (void*)&sec, 4);
 
-    std::string     app         = "vpc ";
+    std::string     app         = "win ";
 
     memcpy(m_file_head.HEAD.CREATOR_APPLICATION, app.data(), 4);
 
@@ -175,25 +170,14 @@ T100BOOL T100VHD::fixed()
 
     index   = m_file_head.HEAD.COOKIE;
 
-    for(int i=0;i<16;i++){
-        item    = *index;
-        total   += item;
-
-        index   += 4;
+    for(int i=0;i<512;i++){
+        total   += *index;
+        index++;
     }
 
-    index   += 4;
-    for(int i=0;i<5;i++){
-        item    = *index;
-        total   += item;
+    item    = ntohl(~total);
 
-        index   += 4;
-    }
-
-    T100INT32   ivalue;
-
-    ivalue  = ntohl(total);
-    memcpy(m_file_head.HEAD.CHECKSUM, (void*)&ivalue, 4);
+    memcpy(m_file_head.HEAD.CHECKSUM, (void*)&item, 4);
 
     return T100TRUE;
 }
