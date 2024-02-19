@@ -9,6 +9,8 @@
 
 #include <windows.h>
 
+#include "T100VHDTest.h"
+
 typedef union{
     T100BYTE        DATA[16];
     GUID            VALUE;
@@ -28,6 +30,12 @@ T100VHD::~T100VHD()
 
 T100BOOL T100VHD::create()
 {
+    T100VHDTest     vhd;
+
+    vhd.checksum();
+
+    return T100FALSE;
+
     T100BOOL        result;
     T100File        file(m_filename);
 

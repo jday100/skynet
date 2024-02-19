@@ -15,10 +15,12 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
+					<Add option="-D_WIN32_WINNT=0x0602" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 					<Add directory="include/vhd" />
 					<Add directory="include/library" />
 					<Add directory="include" />
+					<Add directory="include/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -27,6 +29,9 @@
 					<Add library="libwxmsw30ud.a" />
 					<Add library="ole32" />
 					<Add library="ws2_32" />
+					<Add library="virtdisk" />
+					<Add library="uuid" />
+					<Add library="rpcrt4" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -77,6 +82,8 @@
 		<Unit filename="include/library/T100ByteTools.h" />
 		<Unit filename="include/library/T100File.h" />
 		<Unit filename="include/library/T100String.h" />
+		<Unit filename="include/test/T100VHDTest.h" />
+		<Unit filename="include/vhd/T100MSvhd.h" />
 		<Unit filename="include/vhd/T100VHD.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
@@ -84,6 +91,8 @@
 		<Unit filename="src/library/T100ByteTools.cpp" />
 		<Unit filename="src/library/T100File.cpp" />
 		<Unit filename="src/library/T100String.cpp" />
+		<Unit filename="src/test/T100VHDTest.cpp" />
+		<Unit filename="src/vhd/T100MSvhd.cpp" />
 		<Unit filename="src/vhd/T100VHD.cpp" />
 		<Unit filename="t.vhd" />
 		<Unit filename="test.vhd" />
