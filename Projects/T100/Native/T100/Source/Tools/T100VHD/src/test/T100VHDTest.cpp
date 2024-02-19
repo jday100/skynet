@@ -20,9 +20,11 @@ T100BOOL T100VHDTest::checksum()
 {
     T100MSvhd       vhd;
 
-    vhd.create();
+    //vhd.create();
 
-    return T100FALSE;
+    //return T100FALSE;
+
+    //0xff,   0xff,   0xe9,   0x29,
 
     T100BYTE        data[512]   = {
         0x63,   0x6f,   0x6e,   0x65,   0x63,   0x74,   0x69,   0x78,
@@ -33,7 +35,8 @@ T100BOOL T100VHDTest::checksum()
         0x00,   0x00,   0x00,   0x00,   0x40,   0x00,   0x00,   0x00,
         0x00,   0x00,   0x00,   0x00,   0x40,   0x00,   0x00,   0x00,
         0x08,   0x20,   0x10,   0x3f,   0x00,   0x00,   0x00,   0x02,
-        0xff,   0xff,   0xe9,   0x29,   0x75,   0x50,   0x5d,   0x21,
+        //
+        0x00,   0x00,   0x00,   0x00,   0x75,   0x50,   0x5d,   0x21,
         0x36,   0xf9,   0xfd,   0x43,   0xa1,   0x11,   0x63,   0x0b,
         0x20,   0xbf,   0x68,   0x74
     };
@@ -41,30 +44,15 @@ T100BOOL T100VHDTest::checksum()
 
     T100BYTE*       index           = T100NULL;
     T100INT32       total           = 0;
-    T100INT32       item;
+    T100BYTE        value;
+    T100INT32       result          = 0;
 
     index   = data;
 
-    for(int i=0;i<16;i++){
-        item    = *index;
-        total   += ntohl(item);
-
-        index   += 4;
+    for(int i=0;i<512;i++){
+        total   += *index;
+        index++;
     }
 
-    index   += 4;
-    for(int i=0;i<5;i++){
-        item    = *index;
-        total   += ntohl(item);
-
-        index   += 4;
-    }
-
-    T100INT32   result;
-
-    //totol = 5846
-
-    result  = ntohl(total);
-
-    memcpy(data + 508, (void*)&result, 4);
+    result  = ~total;
 }
