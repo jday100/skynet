@@ -28,7 +28,7 @@ T100VHD::~T100VHD()
     //dtor
 }
 
-T100BOOL T100VHD::create()
+T100BOOL T100VHD::create(T100VHD_STORAGE_TYPE type)
 {
     T100BOOL        result;
     T100File        file(m_filename);

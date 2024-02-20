@@ -2,6 +2,8 @@
 #define T100VHD_H
 
 #include "T100Common.h"
+#include "T100VHDCommon.h"
+
 
 typedef struct{
     T100BYTE        COOKIE[8];
@@ -34,7 +36,7 @@ class T100VHD
         T100VHD(T100STRING, T100INT64);
         virtual ~T100VHD();
 
-        T100BOOL            create();
+        T100BOOL            create(T100VHD_STORAGE_TYPE);
 
     protected:
         T100VHD_FILE        m_file_head;

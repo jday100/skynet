@@ -16,6 +16,7 @@
 //*)
 
 #include "T100VHD.h"
+#include "T100CreateDialog.h"
 
 //helper functions
 enum wxbuildinfoformat {
@@ -109,6 +110,15 @@ void T100VHDFrame::OnAbout(wxCommandEvent& event)
 
 void T100VHDFrame::OnMenuItemNewSelected(wxCommandEvent& event)
 {
+    T100CreateDialog            dialog(this);
+
+    if(wxAPPLY == dialog.ShowModal()){
+
+    }else{
+
+    }
+
+    /*
     T100INT64       length;
 
     length      = 1024 * 1024 * 1024;
@@ -116,4 +126,6 @@ void T100VHDFrame::OnMenuItemNewSelected(wxCommandEvent& event)
     T100VHD         vhd("test.vhd", length);
 
     vhd.create();
+    */
+
 }
