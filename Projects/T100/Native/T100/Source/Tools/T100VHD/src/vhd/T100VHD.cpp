@@ -1,7 +1,6 @@
 #include "T100VHD.h"
 
 #include <stdio.h>
-#include <guiddef.h>
 #include <string.h>
 #include <sys/time.h>
 #include "T100File.h"

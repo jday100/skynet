@@ -1,8 +1,33 @@
 #ifndef T100VHD_H
 #define T100VHD_H
 
+#include <guiddef.h>
 #include "T100Common.h"
 #include "T100VHDCommon.h"
+
+
+typedef struct{
+    T100BYTE        COOKIE[8];
+    T100INT64       FEATURES;
+    T100INT16       FILE_FORMAT_MAJOR;
+    T100INT16       FILE_FORMAT_MINOR;
+    T100BYTE        DATA_OFFSET[8];
+    T100INT32       TIME_STAMP;
+    T100BYTE        CREATE_APPLICATION[4];
+    T100INT16       CREATE_VERSION_MAJOR;
+    T100INT16       CREATE_VERSION_MINOR;
+    T100BYTE        CREATE_HOST_OS;
+    T100INT64       ORIGINAL_SIZE;
+    T100INT64       CURRENT_SIZE;
+    T100INT16       DISK_GEOMETRY_CYLINDER;
+    T100INT8        DISK_GEOMETRY_HEADS;
+    T100INT8        DISK_GEOMETRY_SECTORS;
+    T100INT32       DISK_TYPE;
+    T100INT32       CHECKSUM;
+    GUID            UNIQUE_ID;
+    T100BYTE        SAVED_STATE;
+    T100BYTE        RESERVED[427];
+}T100VHD_FOOTER;
 
 
 typedef struct{
@@ -27,6 +52,7 @@ typedef struct{
 typedef union{
     T100BYTE        DATA[512];
     T100VHD_HEAD    HEAD;
+    T100VHD_FOOTER  FOOTER;
 }T100VHD_FILE;
 
 
