@@ -1,5 +1,8 @@
 #include "T100ByteTools.h"
 
+#include "windows.h"
+
+
 T100ByteTools::T100ByteTools()
 {
     //ctor
@@ -8,6 +11,16 @@ T100ByteTools::T100ByteTools()
 T100ByteTools::~T100ByteTools()
 {
     //dtor
+}
+
+T100INT16 T100ByteTools::swop(T100INT16 value)
+{
+    return ntohs(value);
+}
+
+T100INT32 T100ByteTools::swop(T100INT32 value)
+{
+    return ntohl(value);
 }
 
 T100INT64 T100ByteTools::swop(T100INT64 value)

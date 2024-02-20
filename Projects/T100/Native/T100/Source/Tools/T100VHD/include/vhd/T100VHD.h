@@ -8,7 +8,7 @@
 
 typedef struct{
     T100BYTE        COOKIE[8];
-    T100INT64       FEATURES;
+    T100INT32       FEATURES;
     T100INT16       FILE_FORMAT_MAJOR;
     T100INT16       FILE_FORMAT_MINOR;
     T100BYTE        DATA_OFFSET[8];
@@ -16,7 +16,7 @@ typedef struct{
     T100BYTE        CREATE_APPLICATION[4];
     T100INT16       CREATE_VERSION_MAJOR;
     T100INT16       CREATE_VERSION_MINOR;
-    T100BYTE        CREATE_HOST_OS;
+    T100BYTE        CREATE_HOST_OS[4];
     T100INT64       ORIGINAL_SIZE;
     T100INT64       CURRENT_SIZE;
     T100INT16       DISK_GEOMETRY_CYLINDER;
@@ -68,7 +68,27 @@ class T100VHD
         T100VHD_FILE        m_file_head;
 
         T100BOOL            fixed();
+        T100BOOL            dynamic();
 
+        T100BOOL            fixed1();
+        T100BOOL            create1(T100VHD_STORAGE_TYPE);
+
+    protected:
+        T100BOOL            setCookie();
+        T100BOOL            setFeatures();
+        T100BOOL            setFileFormatVersion();
+        T100BOOL            setDataOffset();
+        T100BOOL            setTimeStamp();
+        T100BOOL            setCreateApplication();
+        T100BOOL            setCreateVersion();
+        T100BOOL            setCreateHostOS();
+        T100BOOL            setOriginalSize();
+        T100BOOL            setCurrentSize();
+        T100BOOL            setDiskGeometry();
+        T100BOOL            setDiskType();
+        T100BOOL            setUniqueID();
+        T100BOOL            setSavedState();
+        T100BOOL            setCheckSum();
 
     private:
         T100INT64           m_length            = 0;

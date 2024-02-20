@@ -16,6 +16,8 @@ class T100ByteTools
         T100ByteTools();
         virtual ~T100ByteTools();
 
+        static T100INT16            swop(T100INT16);
+        static T100INT32            swop(T100INT32);
         static T100INT64            swop(T100INT64);
         static T100VOID             swop(T100BYTE*, T100BYTE*, T100INT32);
 

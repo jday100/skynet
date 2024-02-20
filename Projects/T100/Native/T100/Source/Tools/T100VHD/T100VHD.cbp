@@ -118,6 +118,7 @@
 		<Unit filename="src/vhd/T100VHDBase.cpp" />
 		<Unit filename="src/vhd/T100VHDX.cpp" />
 		<Unit filename="t.vhd" />
+		<Unit filename="temp.vhd" />
 		<Unit filename="test.vhd" />
 		<Unit filename="wxsmith/T100CreateDialog.wxs" />
 		<Unit filename="wxsmith/T100VHDframe.wxs" />
