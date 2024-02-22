@@ -1,152 +1,135 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <wxsmith>
 	<object class="wxDialog" name="T100CreateDialog">
-		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
-			<orient>wxVERTICAL</orient>
+		<centered>1</centered>
+		<id_arg>0</id_arg>
+		<object class="wxStaticBoxSizer" variable="StaticBoxSizer1" member="no">
+			<label>VHD</label>
 			<object class="sizeritem">
-				<object class="wxStaticBoxSizer" variable="StaticBoxSizer1" member="no">
-					<label>File:</label>
-					<object class="sizeritem">
-						<object class="wxBoxSizer" variable="BoxSizer2" member="no">
-							<object class="sizeritem">
-								<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
-									<label>Label</label>
-								</object>
-								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-								<border>5</border>
-								<option>1</option>
-							</object>
-							<object class="sizeritem">
-								<object class="wxComboBox" name="ID_COMBOBOX1" variable="ComboBox1" member="yes" />
-								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-								<border>5</border>
-								<option>1</option>
-							</object>
-							<object class="sizeritem">
-								<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
-									<label>Label</label>
-								</object>
-								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-								<border>5</border>
-								<option>1</option>
-							</object>
-							<object class="sizeritem">
-								<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes">
-									<value>Text</value>
-								</object>
-								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-								<border>5</border>
-								<option>1</option>
-							</object>
-							<object class="sizeritem">
-								<object class="wxButton" name="ID_BUTTON1" variable="Button1" member="yes">
-									<label>Label</label>
-								</object>
-								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-								<border>5</border>
-								<option>1</option>
-							</object>
-						</object>
-						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-						<border>5</border>
-						<option>1</option>
-					</object>
-				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-				<border>5</border>
-				<option>1</option>
-			</object>
-			<object class="sizeritem">
-				<object class="wxStaticBoxSizer" variable="StaticBoxSizer2" member="no">
-					<label>Label</label>
-					<object class="sizeritem">
-						<object class="wxBoxSizer" variable="BoxSizer3" member="no">
-							<orient>wxVERTICAL</orient>
-							<object class="sizeritem">
-								<object class="wxRadioButton" name="ID_RADIOBUTTON1" variable="RadioButton1" member="yes">
-									<label>VHD</label>
-								</object>
-								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-								<border>5</border>
-								<option>1</option>
-							</object>
-							<object class="sizeritem">
-								<object class="wxRadioButton" name="ID_RADIOBUTTON2" variable="RadioButton2" member="yes">
-									<label>VHDX</label>
-								</object>
-								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-								<border>5</border>
-								<option>1</option>
-							</object>
-						</object>
-						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-						<border>5</border>
-						<option>1</option>
-					</object>
-				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-				<border>5</border>
-				<option>1</option>
-			</object>
-			<object class="sizeritem">
-				<object class="wxStaticBoxSizer" variable="StaticBoxSizer3" member="no">
-					<label>Label</label>
+				<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+					<orient>wxVERTICAL</orient>
 					<object class="sizeritem">
 						<object class="wxBoxSizer" variable="BoxSizer4" member="no">
-							<orient>wxVERTICAL</orient>
 							<object class="sizeritem">
-								<object class="wxRadioButton" name="ID_RADIOBUTTON3" variable="RadioButton3" member="yes">
-									<label>固定大小</label>
+								<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+									<label>Length:</label>
+									<size>50,-1</size>
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
+							<object class="sizeritem">
+								<object class="wxComboBox" name="ID_COMBOBOX_FILE_LENGTH" variable="ComboBoxFileLength" member="yes">
+									<handler function="OnComboBoxFileLengthSelected" entry="EVT_COMBOBOX" />
+									<handler function="OnComboBoxFileLengthTextUpdated" entry="EVT_TEXT" />
+									<handler function="OnComboBoxFileLengthTextEnter" entry="EVT_TEXT_ENTER" />
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
+						</object>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBoxSizer" variable="BoxSizer5" member="no">
+							<object class="sizeritem">
+								<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+									<label>File:</label>
+									<size>50,-1</size>
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
+							<object class="sizeritem">
+								<object class="wxTextCtrl" name="ID_TEXTCTRL_FILE_NAME" variable="TextCtrlFileName" member="yes">
+									<size>300,-1</size>
+									<handler function="OnTextCtrlFileNameText" entry="EVT_TEXT" />
+									<handler function="OnTextCtrlFileNameTextEnter" entry="EVT_TEXT_ENTER" />
 								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
 							</object>
 							<object class="sizeritem">
-								<object class="wxRadioButton" name="ID_RADIOBUTTON4" variable="RadioButton4" member="yes">
-									<label>动态扩展</label>
+								<object class="wxButton" name="ID_BUTTON_BROWSE" variable="ButtonFileBrowse" member="yes">
+									<label>Browse...</label>
+									<size>80,25</size>
+									<handler function="OnButtonFileBrowseClick" entry="EVT_BUTTON" />
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+							</object>
+						</object>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticBoxSizer" variable="StaticBoxSizer2" member="no">
+							<label>Type:</label>
+							<object class="sizeritem">
+								<object class="wxBoxSizer" variable="BoxSizer2" member="no">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<object class="wxRadioButton" name="ID_RADIOBUTTON_FILE_TYPE_VHD" variable="RadioButtonFileTypeVHD" member="yes">
+											<label>VHD</label>
+											<handler function="OnRadioButtonFileTypeVHDSelect" entry="EVT_RADIOBUTTON" />
+										</object>
+										<flag>wxALIGN_LEFT</flag>
+									</object>
+									<object class="sizeritem">
+										<object class="wxRadioButton" name="ID_RADIOBUTTON_FILE_TYPE_VHDX" variable="RadioButtonFileTypeVHDX" member="yes">
+											<label>VHDX</label>
+											<handler function="OnRadioButtonFileTypeVHDXSelect" entry="EVT_RADIOBUTTON" />
+										</object>
+										<flag>wxALIGN_LEFT</flag>
+									</object>
 								</object>
 								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 								<border>5</border>
 								<option>1</option>
 							</object>
 						</object>
-						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<flag>wxALL|wxEXPAND</flag>
 						<border>5</border>
 						<option>1</option>
 					</object>
-				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-				<border>5</border>
-				<option>1</option>
-			</object>
-			<object class="sizeritem">
-				<object class="wxStaticBoxSizer" variable="StaticBoxSizer4" member="no">
-					<label>Label</label>
-				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-				<border>5</border>
-				<option>1</option>
-			</object>
-			<object class="sizeritem">
-				<object class="wxStaticBoxSizer" variable="StaticBoxSizer5" member="no">
-					<label>Label</label>
-				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-				<border>5</border>
-				<option>1</option>
-			</object>
-			<object class="sizeritem">
-				<object class="wxStaticBoxSizer" variable="StaticBoxSizer6" member="no">
-					<label>Label</label>
-				</object>
-				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
-				<border>5</border>
-				<option>1</option>
-			</object>
-			<object class="sizeritem">
-				<object class="wxStaticBoxSizer" variable="StaticBoxSizer7" member="no">
-					<label>Label</label>
+					<object class="sizeritem">
+						<object class="wxStaticBoxSizer" variable="StaticBoxSizer3" member="no">
+							<label>Storage:</label>
+							<object class="sizeritem">
+								<object class="wxBoxSizer" variable="BoxSizer3" member="no">
+									<orient>wxVERTICAL</orient>
+									<object class="sizeritem">
+										<object class="wxRadioButton" name="ID_RADIOBUTTON_FILE_STORAGE_FIXED" variable="RadioButtonFileStorageFixed" member="yes">
+											<label>Fixed</label>
+											<handler function="OnRadioButtonFileStorageFixedSelect" entry="EVT_RADIOBUTTON" />
+										</object>
+										<flag>wxALL|wxALIGN_LEFT</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+									<object class="sizeritem">
+										<object class="wxRadioButton" name="ID_RADIOBUTTON_FILE_STORAGE_DYNAMIC" variable="RadioButtonFileStorageDynamic" member="yes">
+											<label>Dynamic</label>
+											<handler function="OnRadioButtonFileStorageDynamicSelect" entry="EVT_RADIOBUTTON" />
+										</object>
+										<flag>wxALL|wxALIGN_LEFT</flag>
+										<border>5</border>
+										<option>1</option>
+									</object>
+								</object>
+								<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								<border>5</border>
+								<option>1</option>
+							</object>
+						</object>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
 				</object>
 				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
 				<border>5</border>

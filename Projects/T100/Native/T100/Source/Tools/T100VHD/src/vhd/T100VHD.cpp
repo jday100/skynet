@@ -27,6 +27,16 @@ T100VHD::~T100VHD()
     //dtor
 }
 
+T100VOID T100VHD::setValue(T100VOID* value)
+{
+    m_value     = value;
+}
+
+T100VOID T100VHD::setCreateCallback(T100THREAD_CALLBACK callback)
+{
+    m_callback  = callback;
+}
+
 T100BOOL T100VHD::setCookie()
 {
     T100STRING      cookie      = "conectix";
@@ -198,7 +208,7 @@ T100BOOL T100VHD::create(T100VHD_STORAGE_TYPE type)
     result  = disk.create();
 
     if(result){
-        result  = disk.seek(m_length);
+        result  = disk.state_seek(m_length, (T100FILE_CALLBACK)m_callback, m_value);
 
         if(result){
             switch(type){

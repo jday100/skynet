@@ -23,6 +23,8 @@
 					<Add directory="include/test" />
 					<Add directory="include/fs" />
 					<Add directory="include/device" />
+					<Add directory="include/wx" />
+					<Add directory="../T100VHD" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -51,6 +53,7 @@
 					<Add directory="include" />
 					<Add directory="include/fs" />
 					<Add directory="include/device" />
+					<Add directory="include/wx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -80,6 +83,8 @@
 		</Linker>
 		<Unit filename="T100CreateDialog.cpp" />
 		<Unit filename="T100CreateDialog.h" />
+		<Unit filename="T100CreateProgressDialog.cpp" />
+		<Unit filename="T100CreateProgressDialog.h" />
 		<Unit filename="T100VHDApp.cpp" />
 		<Unit filename="T100VHDApp.h" />
 		<Unit filename="T100VHDMain.cpp" />
@@ -93,14 +98,18 @@
 		<Unit filename="include/fs/T100MSfat.h" />
 		<Unit filename="include/fs/T100MSntfs.h" />
 		<Unit filename="include/library/T100ByteTools.h" />
+		<Unit filename="include/library/T100CapacityTools.h" />
 		<Unit filename="include/library/T100File.h" />
 		<Unit filename="include/library/T100String.h" />
+		<Unit filename="include/library/T100Thread.h" />
 		<Unit filename="include/test/T100VHDTest.h" />
 		<Unit filename="include/vhd/T100MSvhd.h" />
 		<Unit filename="include/vhd/T100VHD.h" />
 		<Unit filename="include/vhd/T100VHDBase.h" />
 		<Unit filename="include/vhd/T100VHDCommon.h" />
 		<Unit filename="include/vhd/T100VHDX.h" />
+		<Unit filename="include/wx/T100WXCreateThread.h" />
+		<Unit filename="include/wx/T100WXRunThread.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
@@ -110,17 +119,22 @@
 		<Unit filename="src/fs/T100MSfat.cpp" />
 		<Unit filename="src/fs/T100MSntfs.cpp" />
 		<Unit filename="src/library/T100ByteTools.cpp" />
+		<Unit filename="src/library/T100CapacityTools.cpp" />
 		<Unit filename="src/library/T100File.cpp" />
 		<Unit filename="src/library/T100String.cpp" />
+		<Unit filename="src/library/T100Thread.cpp" />
 		<Unit filename="src/test/T100VHDTest.cpp" />
 		<Unit filename="src/vhd/T100MSvhd.cpp" />
 		<Unit filename="src/vhd/T100VHD.cpp" />
 		<Unit filename="src/vhd/T100VHDBase.cpp" />
 		<Unit filename="src/vhd/T100VHDX.cpp" />
+		<Unit filename="src/wx/T100WXCreateThread.cpp" />
+		<Unit filename="src/wx/T100WXRunThread.cpp" />
 		<Unit filename="t.vhd" />
 		<Unit filename="temp.vhd" />
 		<Unit filename="test.vhd" />
 		<Unit filename="wxsmith/T100CreateDialog.wxs" />
+		<Unit filename="wxsmith/T100CreateProgressDialog.wxs" />
 		<Unit filename="wxsmith/T100VHDframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
@@ -129,6 +143,7 @@
 				<resources>
 					<wxFrame wxs="wxsmith/T100VHDframe.wxs" src="T100VHDMain.cpp" hdr="T100VHDMain.h" fwddecl="0" i18n="1" name="T100VHDFrame" language="CPP" />
 					<wxDialog wxs="wxsmith/T100CreateDialog.wxs" src="T100CreateDialog.cpp" hdr="T100CreateDialog.h" fwddecl="0" i18n="1" name="T100CreateDialog" language="CPP" />
+					<wxDialog wxs="wxsmith/T100CreateProgressDialog.wxs" src="T100CreateProgressDialog.cpp" hdr="T100CreateProgressDialog.h" fwddecl="0" i18n="1" name="T100CreateProgressDialog" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

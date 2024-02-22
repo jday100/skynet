@@ -4,6 +4,7 @@
 #include <fstream>
 #include "T100Common.h"
 
+typedef     (*T100FILE_CALLBACK)(T100VOID*, T100BYTE);
 
 class T100File
 {
@@ -21,6 +22,8 @@ class T100File
         T100BOOL            write(T100BYTE*, T100INT32);
 
         T100BOOL            seek(T100INT64);
+
+        T100BOOL            state_seek(T100INT64, T100FILE_CALLBACK, T100VOID*);
 
     protected:
 

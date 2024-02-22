@@ -89,3 +89,29 @@ T100BOOL T100File::seek(T100INT64 offset)
 
     return T100FALSE;
 }
+
+T100BOOL T100File::state_seek(T100INT64 offset, T100FILE_CALLBACK run, T100VOID* data)
+{
+    if(m_fs){
+        if(run){
+            T100INT64   value   = 128LL * 1024 * 1024;
+            T100INT64   index   = 0LL;
+            T100BYTE    range;
+
+            value   = value > offset ? offset : value;
+            for(T100INT64 i=0LL;i<offset;i+=value){
+                m_fs->seekg(value, std::ios_base::seekdir::_S_cur);
+                index   += value;
+                range   = (index * 100) / offset;
+                run(data, range);
+            }
+
+            //m_fs->seekg(offset, std::ios_base::seekdir::_S_beg);
+        }else{
+            m_fs->seekg(offset);
+        }
+        return T100TRUE;
+    }
+
+    return T100FALSE;
+}

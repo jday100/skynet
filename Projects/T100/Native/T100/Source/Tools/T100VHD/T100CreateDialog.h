@@ -11,6 +11,11 @@
 #include <wx/textctrl.h>
 //*)
 
+#include "T100Common.h"
+#include "T100VDISKCommon.h"
+#include "T100VHDCommon.h"
+
+
 class T100CreateDialog: public wxDialog
 {
 	public:
@@ -19,37 +24,55 @@ class T100CreateDialog: public wxDialog
 		virtual ~T100CreateDialog();
 
 		//(*Declarations(T100CreateDialog)
-		wxButton* Button1;
-		wxComboBox* ComboBox1;
-		wxRadioButton* RadioButton1;
-		wxRadioButton* RadioButton2;
-		wxRadioButton* RadioButton3;
-		wxRadioButton* RadioButton4;
+		wxButton* ButtonFileBrowse;
+		wxComboBox* ComboBoxFileLength;
+		wxRadioButton* RadioButtonFileStorageDynamic;
+		wxRadioButton* RadioButtonFileStorageFixed;
+		wxRadioButton* RadioButtonFileTypeVHD;
+		wxRadioButton* RadioButtonFileTypeVHDX;
 		wxStaticText* StaticText1;
 		wxStaticText* StaticText2;
-		wxTextCtrl* TextCtrl1;
+		wxTextCtrl* TextCtrlFileName;
 		//*)
 
     private:
+        T100STRING                          m_filename;
+        T100INT64                           m_length                = 0LL;
+        T100VDISK_TYPE                      m_type                  = T100VDISK_TYPE_NONE;
+        T100VDISK_STORAGE_TYPE              m_storage               = T100VDISK_STORAGE_TYPE_NONE;
+
         void OnButtonApplyClick(wxCommandEvent& event);
 
 	protected:
+	    T100VOID            create();
+	    T100VOID            destroy();
 
 		//(*Identifiers(T100CreateDialog)
 		static const long ID_STATICTEXT1;
-		static const long ID_COMBOBOX1;
+		static const long ID_COMBOBOX_FILE_LENGTH;
 		static const long ID_STATICTEXT2;
-		static const long ID_TEXTCTRL1;
-		static const long ID_BUTTON1;
-		static const long ID_RADIOBUTTON1;
-		static const long ID_RADIOBUTTON2;
-		static const long ID_RADIOBUTTON3;
-		static const long ID_RADIOBUTTON4;
+		static const long ID_TEXTCTRL_FILE_NAME;
+		static const long ID_BUTTON_BROWSE;
+		static const long ID_RADIOBUTTON_FILE_TYPE_VHD;
+		static const long ID_RADIOBUTTON_FILE_TYPE_VHDX;
+		static const long ID_RADIOBUTTON_FILE_STORAGE_FIXED;
+		static const long ID_RADIOBUTTON_FILE_STORAGE_DYNAMIC;
 		//*)
 
 	private:
 
 		//(*Handlers(T100CreateDialog)
+		void OnRadioButton1Select(wxCommandEvent& event);
+		void OnButtonFileBrowseClick(wxCommandEvent& event);
+		void OnRadioButtonFileTypeVHDSelect(wxCommandEvent& event);
+		void OnRadioButtonFileTypeVHDXSelect(wxCommandEvent& event);
+		void OnRadioButtonFileStorageFixedSelect(wxCommandEvent& event);
+		void OnRadioButtonFileStorageDynamicSelect(wxCommandEvent& event);
+		void OnComboBoxFileLengthSelected(wxCommandEvent& event);
+		void OnComboBoxFileLengthTextUpdated(wxCommandEvent& event);
+		void OnComboBoxFileLengthTextEnter(wxCommandEvent& event);
+		void OnTextCtrlFileNameText(wxCommandEvent& event);
+		void OnTextCtrlFileNameTextEnter(wxCommandEvent& event);
 		//*)
 
 		DECLARE_EVENT_TABLE()

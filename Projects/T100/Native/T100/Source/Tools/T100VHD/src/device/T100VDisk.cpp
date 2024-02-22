@@ -15,6 +15,16 @@ T100VDisk::~T100VDisk()
     //dtor
 }
 
+T100VOID T100VDisk::setValue(T100VOID* value)
+{
+    m_value     = value;
+}
+
+T100VOID T100VDisk::setCreateCallback(T100THREAD_CALLBACK callback)
+{
+    m_callback  = callback;
+}
+
 T100BOOL T100VDisk::create(T100VDISK_TYPE vdisk, T100VDISK_STORAGE_TYPE type)
 {
     switch(vdisk){
@@ -35,7 +45,8 @@ T100BOOL T100VDisk::create(T100VDISK_TYPE vdisk, T100VDISK_STORAGE_TYPE type)
                 }
                 break;
             }
-
+            vhd.setValue(m_value);
+            vhd.setCreateCallback(m_callback);
             vhd.create(vhd_type);
         }
         break;

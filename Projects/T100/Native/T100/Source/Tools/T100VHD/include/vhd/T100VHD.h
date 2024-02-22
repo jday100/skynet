@@ -5,6 +5,8 @@
 #include "T100Common.h"
 #include "T100VHDCommon.h"
 
+#include "T100WXRunThread.h"
+
 
 typedef struct{
     T100BYTE        COOKIE[8];
@@ -62,37 +64,42 @@ class T100VHD
         T100VHD(T100STRING, T100INT64);
         virtual ~T100VHD();
 
-        T100BOOL            create(T100VHD_STORAGE_TYPE);
+        T100BOOL                create(T100VHD_STORAGE_TYPE);
+
+        T100VOID                setValue(T100VOID*);
+        T100VOID                setCreateCallback(T100THREAD_CALLBACK);
 
     protected:
-        T100VHD_FILE        m_file_head;
+        T100VHD_FILE            m_file_head;
+        T100VOID*               m_value             = T100NULL;
+        T100THREAD_CALLBACK     m_callback          = T100NULL;
 
-        T100BOOL            fixed();
-        T100BOOL            dynamic();
+        T100BOOL                fixed();
+        T100BOOL                dynamic();
 
-        T100BOOL            fixed1();
-        T100BOOL            create1(T100VHD_STORAGE_TYPE);
+        T100BOOL                fixed1();
+        T100BOOL                create1(T100VHD_STORAGE_TYPE);
 
     protected:
-        T100BOOL            setCookie();
-        T100BOOL            setFeatures();
-        T100BOOL            setFileFormatVersion();
-        T100BOOL            setDataOffset();
-        T100BOOL            setTimeStamp();
-        T100BOOL            setCreateApplication();
-        T100BOOL            setCreateVersion();
-        T100BOOL            setCreateHostOS();
-        T100BOOL            setOriginalSize();
-        T100BOOL            setCurrentSize();
-        T100BOOL            setDiskGeometry();
-        T100BOOL            setDiskType();
-        T100BOOL            setUniqueID();
-        T100BOOL            setSavedState();
-        T100BOOL            setCheckSum();
+        T100BOOL                setCookie();
+        T100BOOL                setFeatures();
+        T100BOOL                setFileFormatVersion();
+        T100BOOL                setDataOffset();
+        T100BOOL                setTimeStamp();
+        T100BOOL                setCreateApplication();
+        T100BOOL                setCreateVersion();
+        T100BOOL                setCreateHostOS();
+        T100BOOL                setOriginalSize();
+        T100BOOL                setCurrentSize();
+        T100BOOL                setDiskGeometry();
+        T100BOOL                setDiskType();
+        T100BOOL                setUniqueID();
+        T100BOOL                setSavedState();
+        T100BOOL                setCheckSum();
 
     private:
-        T100INT64           m_length            = 0;
-        T100STRING          m_filename;
+        T100INT64               m_length            = 0;
+        T100STRING              m_filename;
 };
 
 #endif // T100VHD_H
