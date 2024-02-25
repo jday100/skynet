@@ -57,7 +57,7 @@ T100CreateDialog::T100CreateDialog(wxWindow* parent,wxWindowID id)
 	BoxSizer1->Add(BoxSizer5, 1, wxALL|wxEXPAND, 5);
 	StaticBoxSizer2 = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Type:"));
 	BoxSizer2 = new wxBoxSizer(wxVERTICAL);
-	RadioButtonFileTypeVHD = new wxRadioButton(this, ID_RADIOBUTTON_FILE_TYPE_VHD, _("VHD"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON_FILE_TYPE_VHD"));
+	RadioButtonFileTypeVHD = new wxRadioButton(this, ID_RADIOBUTTON_FILE_TYPE_VHD, _("VHD"), wxDefaultPosition, wxDefaultSize, wxRB_GROUP, wxDefaultValidator, _T("ID_RADIOBUTTON_FILE_TYPE_VHD"));
 	BoxSizer2->Add(RadioButtonFileTypeVHD, 0, wxALIGN_LEFT, 0);
 	RadioButtonFileTypeVHDX = new wxRadioButton(this, ID_RADIOBUTTON_FILE_TYPE_VHDX, _("VHDX"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON_FILE_TYPE_VHDX"));
 	BoxSizer2->Add(RadioButtonFileTypeVHDX, 0, wxALIGN_LEFT, 0);
@@ -65,7 +65,7 @@ T100CreateDialog::T100CreateDialog(wxWindow* parent,wxWindowID id)
 	BoxSizer1->Add(StaticBoxSizer2, 1, wxALL|wxEXPAND, 5);
 	StaticBoxSizer3 = new wxStaticBoxSizer(wxHORIZONTAL, this, _("Storage:"));
 	BoxSizer3 = new wxBoxSizer(wxVERTICAL);
-	RadioButtonFileStorageFixed = new wxRadioButton(this, ID_RADIOBUTTON_FILE_STORAGE_FIXED, _("Fixed"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON_FILE_STORAGE_FIXED"));
+	RadioButtonFileStorageFixed = new wxRadioButton(this, ID_RADIOBUTTON_FILE_STORAGE_FIXED, _("Fixed"), wxDefaultPosition, wxDefaultSize, wxRB_GROUP, wxDefaultValidator, _T("ID_RADIOBUTTON_FILE_STORAGE_FIXED"));
 	BoxSizer3->Add(RadioButtonFileStorageFixed, 1, wxALL|wxALIGN_LEFT, 5);
 	RadioButtonFileStorageDynamic = new wxRadioButton(this, ID_RADIOBUTTON_FILE_STORAGE_DYNAMIC, _("Dynamic"), wxDefaultPosition, wxDefaultSize, 0, wxDefaultValidator, _T("ID_RADIOBUTTON_FILE_STORAGE_DYNAMIC"));
 	BoxSizer3->Add(RadioButtonFileStorageDynamic, 1, wxALL|wxALIGN_LEFT, 5);

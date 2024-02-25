@@ -17,7 +17,7 @@ typedef union{
 
 
 T100VHD::T100VHD(T100STRING file, T100INT64 length)
-    :m_filename(file), m_length(length)
+    :T100VHDBase(), m_filename(file), m_length(length)
 {
     //ctor
 }
@@ -239,6 +239,11 @@ T100BOOL T100VHD::create(T100VHD_STORAGE_TYPE type)
     }
 
     return result;
+}
+
+T100VOID T100VHD::cancel()
+{
+
 }
 
 T100BOOL T100VHD::fixed()

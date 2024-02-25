@@ -75,6 +75,7 @@
 									<object class="sizeritem">
 										<object class="wxRadioButton" name="ID_RADIOBUTTON_FILE_TYPE_VHD" variable="RadioButtonFileTypeVHD" member="yes">
 											<label>VHD</label>
+											<style>wxRB_GROUP</style>
 											<handler function="OnRadioButtonFileTypeVHDSelect" entry="EVT_RADIOBUTTON" />
 										</object>
 										<flag>wxALIGN_LEFT</flag>
@@ -105,6 +106,7 @@
 									<object class="sizeritem">
 										<object class="wxRadioButton" name="ID_RADIOBUTTON_FILE_STORAGE_FIXED" variable="RadioButtonFileStorageFixed" member="yes">
 											<label>Fixed</label>
+											<style>wxRB_GROUP</style>
 											<handler function="OnRadioButtonFileStorageFixedSelect" entry="EVT_RADIOBUTTON" />
 										</object>
 										<flag>wxALL|wxALIGN_LEFT</flag>

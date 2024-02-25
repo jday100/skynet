@@ -14,6 +14,7 @@ class T100VDisk
         virtual ~T100VDisk();
 
         T100BOOL                create(T100VDISK_TYPE, T100VDISK_STORAGE_TYPE);
+        T100VOID                cancel();
 
         T100VOID                setValue(T100VOID*);
         T100VOID                setCreateCallback(T100THREAD_CALLBACK);

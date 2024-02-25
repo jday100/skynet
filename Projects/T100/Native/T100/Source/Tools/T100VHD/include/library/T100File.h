@@ -1,6 +1,7 @@
 #ifndef T100FILE_H
 #define T100FILE_H
 
+#include <atomic>
 #include <fstream>
 #include "T100Common.h"
 
@@ -24,12 +25,14 @@ class T100File
         T100BOOL            seek(T100INT64);
 
         T100BOOL            state_seek(T100INT64, T100FILE_CALLBACK, T100VOID*);
+        T100BOOL            state_cancel();
 
     protected:
 
     private:
         T100STRING          m_filename;
         std::fstream*       m_fs            = T100NULL;
+        std::atomic_bool    m_cancel;
 };
 
 #endif // T100FILE_H

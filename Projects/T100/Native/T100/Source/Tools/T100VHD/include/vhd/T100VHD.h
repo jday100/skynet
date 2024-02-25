@@ -3,9 +3,7 @@
 
 #include <guiddef.h>
 #include "T100Common.h"
-#include "T100VHDCommon.h"
-
-#include "T100WXRunThread.h"
+#include "T100VHDBase.h"
 
 
 typedef struct{
@@ -58,13 +56,14 @@ typedef union{
 }T100VHD_FILE;
 
 
-class T100VHD
+class T100VHD : public T100VHDBase
 {
     public:
         T100VHD(T100STRING, T100INT64);
         virtual ~T100VHD();
 
         T100BOOL                create(T100VHD_STORAGE_TYPE);
+        T100VOID                cancel();
 
         T100VOID                setValue(T100VOID*);
         T100VOID                setCreateCallback(T100THREAD_CALLBACK);

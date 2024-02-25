@@ -20,6 +20,11 @@ T100VOID T100VDisk::setValue(T100VOID* value)
     m_value     = value;
 }
 
+T100VOID T100VDisk::cancel()
+{
+
+}
+
 T100VOID T100VDisk::setCreateCallback(T100THREAD_CALLBACK callback)
 {
     m_callback  = callback;
