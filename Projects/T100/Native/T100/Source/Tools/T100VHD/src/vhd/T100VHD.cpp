@@ -3,12 +3,13 @@
 #include <stdio.h>
 #include <string.h>
 #include <sys/time.h>
-#include "T100File.h"
 #include "T100ByteTools.h"
 
 #include <windows.h>
 
 #include "T100VHDTest.h"
+#include "T100VHDCallback.h"
+
 
 typedef union{
     T100BYTE        DATA[16];
@@ -30,11 +31,6 @@ T100VHD::~T100VHD()
 T100VOID T100VHD::setValue(T100VOID* value)
 {
     m_value     = value;
-}
-
-T100VOID T100VHD::setCreateCallback(T100THREAD_CALLBACK callback)
-{
-    m_callback  = callback;
 }
 
 T100BOOL T100VHD::setCookie()
@@ -203,12 +199,13 @@ T100BOOL T100VHD::setCheckSum()
 T100BOOL T100VHD::create(T100VHD_STORAGE_TYPE type)
 {
     T100BOOL        result;
-    T100File        disk(m_filename);
 
-    result  = disk.create();
+    m_disk  = T100NEW T100File(m_filename);
+
+    result  = m_disk->create();
 
     if(result){
-        result  = disk.state_seek(m_length, (T100FILE_CALLBACK)m_callback, m_value);
+        result  = m_disk->state_seek(m_length, (T100FILE_CALLBACK)((T100VHDCallback*)m_callback)->getCreateCallback(), m_value);
 
         if(result){
             switch(type){
@@ -227,14 +224,17 @@ T100BOOL T100VHD::create(T100VHD_STORAGE_TYPE type)
             }
 
             if(result){
-                result  = disk.write(m_file_head.DATA, 512);
+                result  = m_disk->write(m_file_head.DATA, 512);
             }
         }
 
         if(result){
-            result  = disk.close();
+            result  = m_disk->close();
+            if(result){
+                m_callback->create_finished(m_value, 0);
+            }
         }else{
-            result  = disk.remove();
+            result  = m_disk->remove();
         }
     }
 
@@ -243,7 +243,7 @@ T100BOOL T100VHD::create(T100VHD_STORAGE_TYPE type)
 
 T100VOID T100VHD::cancel()
 {
-
+    m_disk->state_cancel();
 }
 
 T100BOOL T100VHD::fixed()

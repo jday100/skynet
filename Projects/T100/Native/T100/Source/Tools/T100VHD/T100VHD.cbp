@@ -95,6 +95,7 @@
 		<Unit filename="include/device/T100Disk.h" />
 		<Unit filename="include/device/T100DiskBase.h" />
 		<Unit filename="include/device/T100VDisk.h" />
+		<Unit filename="include/device/T100VDiskCallback.h" />
 		<Unit filename="include/fs/T100MSfat.h" />
 		<Unit filename="include/fs/T100MSntfs.h" />
 		<Unit filename="include/library/T100ByteTools.h" />
@@ -106,6 +107,7 @@
 		<Unit filename="include/vhd/T100MSvhd.h" />
 		<Unit filename="include/vhd/T100VHD.h" />
 		<Unit filename="include/vhd/T100VHDBase.h" />
+		<Unit filename="include/vhd/T100VHDCallback.h" />
 		<Unit filename="include/vhd/T100VHDCommon.h" />
 		<Unit filename="include/vhd/T100VHDX.h" />
 		<Unit filename="include/wx/T100WXCreateThread.h" />
@@ -116,6 +118,7 @@
 		<Unit filename="src/device/T100Disk.cpp" />
 		<Unit filename="src/device/T100DiskBase.cpp" />
 		<Unit filename="src/device/T100VDisk.cpp" />
+		<Unit filename="src/device/T100VDiskCallback.cpp" />
 		<Unit filename="src/fs/T100MSfat.cpp" />
 		<Unit filename="src/fs/T100MSntfs.cpp" />
 		<Unit filename="src/library/T100ByteTools.cpp" />
@@ -127,6 +130,7 @@
 		<Unit filename="src/vhd/T100MSvhd.cpp" />
 		<Unit filename="src/vhd/T100VHD.cpp" />
 		<Unit filename="src/vhd/T100VHDBase.cpp" />
+		<Unit filename="src/vhd/T100VHDCallback.cpp" />
 		<Unit filename="src/vhd/T100VHDX.cpp" />
 		<Unit filename="src/wx/T100WXCreateThread.cpp" />
 		<Unit filename="src/wx/T100WXRunThread.cpp" />

@@ -3,6 +3,7 @@
 
 #include <guiddef.h>
 #include "T100Common.h"
+#include "T100File.h"
 #include "T100VHDBase.h"
 
 
@@ -66,12 +67,10 @@ class T100VHD : public T100VHDBase
         T100VOID                cancel();
 
         T100VOID                setValue(T100VOID*);
-        T100VOID                setCreateCallback(T100THREAD_CALLBACK);
 
     protected:
         T100VHD_FILE            m_file_head;
         T100VOID*               m_value             = T100NULL;
-        T100THREAD_CALLBACK     m_callback          = T100NULL;
 
         T100BOOL                fixed();
         T100BOOL                dynamic();
@@ -97,6 +96,7 @@ class T100VHD : public T100VHDBase
         T100BOOL                setCheckSum();
 
     private:
+        T100File*               m_disk              = T100NULL;
         T100INT64               m_length            = 0;
         T100STRING              m_filename;
 };

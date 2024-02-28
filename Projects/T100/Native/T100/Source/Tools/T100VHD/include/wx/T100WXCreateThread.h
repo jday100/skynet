@@ -6,6 +6,7 @@
 #include "T100WXRunThread.h"
 #include "T100VDISKCommon.h"
 #include "T100VHDCommon.h"
+#include "T100VDisk.h"
 
 
 class T100WXCreateThread : public T100WXRunThread
@@ -19,10 +20,11 @@ class T100WXCreateThread : public T100WXRunThread
         T100VDISK_TYPE              m_type                  = T100VDISK_TYPE_NONE;
         T100VDISK_STORAGE_TYPE      m_storage               = T100VDISK_STORAGE_TYPE_NONE;
 
-        T100VOID                    setCallback(T100THREAD_CALLBACK);
+        T100VOID                    setCallback(T100VDiskCallback*);
         T100VOID                    setValue(T100VOID*);
 
         virtual T100VOID            wait();
+        virtual T100VOID            cancel();
 
     protected:
         virtual T100VOID            run();
@@ -30,9 +32,10 @@ class T100WXCreateThread : public T100WXRunThread
         static T100VOID             callback(T100VOID*, T100BYTE);
 
     private:
+        T100VDisk*                  m_vdisk             = T100NULL;
         std::mutex                  m_mutex;
         std::condition_variable     m_condition;
-        T100THREAD_CALLBACK         m_callback          = T100NULL;
+        T100VDiskCallback*          m_callback          = T100NULL;
         T100VOID*                   m_value             = T100NULL;
 };
 

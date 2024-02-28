@@ -4,6 +4,7 @@
 #include "T100Common.h"
 #include "T100VHDCommon.h"
 #include "T100WXRunThread.h"
+#include "T100VDiskCallback.h"
 
 
 class T100VHDBase
@@ -16,9 +17,11 @@ class T100VHDBase
         virtual T100VOID            cancel() = 0;
 
         virtual T100VOID            setValue(T100VOID*) = 0;
-        virtual T100VOID            setCreateCallback(T100THREAD_CALLBACK) = 0;
+
+        virtual T100VOID            setCallback(T100VDiskCallback*);
 
     protected:
+        T100VDiskCallback*          m_callback          = T100NULL;
 
     private:
 };

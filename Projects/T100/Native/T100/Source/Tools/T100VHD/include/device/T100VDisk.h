@@ -5,6 +5,8 @@
 #include "T100VDISKCommon.h"
 
 #include "T100WXRunThread.h"
+#include "T100VHDBase.h"
+#include "T100VDiskCallback.h"
 
 
 class T100VDisk
@@ -17,14 +19,15 @@ class T100VDisk
         T100VOID                cancel();
 
         T100VOID                setValue(T100VOID*);
-        T100VOID                setCreateCallback(T100THREAD_CALLBACK);
+        T100VOID                setCallback(T100VDiskCallback*);
 
     protected:
         T100VOID*               m_value             = T100NULL;
-        T100THREAD_CALLBACK     m_callback          = T100NULL;
+        T100VDiskCallback*      m_callback          = T100NULL;
     private:
         T100STRING              m_filename;
         T100INT64               m_length;
+        T100VHDBase*            m_base              = T100NULL;
 };
 
 #endif // T100VDISK_H

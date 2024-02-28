@@ -21,7 +21,7 @@ T100VOID T100WXCreateThread::setValue(T100VOID* value)
     m_value     = value;
 }
 
-T100VOID T100WXCreateThread::setCallback(T100THREAD_CALLBACK callback)
+T100VOID T100WXCreateThread::setCallback(T100VDiskCallback* callback)
 {
     m_callback  = callback;
 }
@@ -37,13 +37,16 @@ T100VOID T100WXCreateThread::callback(T100VOID* frame, T100BYTE range)
 
 T100VOID T100WXCreateThread::run()
 {
-    T100VDisk           disk(m_filename, m_length);
+    m_vdisk     = T100NEW T100VDisk(m_filename, m_length);
 
-    disk.setValue(m_value);
-    disk.setCreateCallback((T100THREAD_CALLBACK)&T100WXCreateThread::callback);
-    disk.create(m_type, m_storage);
+    m_vdisk->setValue(m_value);
+    m_vdisk->setCallback(m_callback);
+    m_vdisk->create(m_type, m_storage);
 
     m_condition.notify_all();
+
+    T100DELETE  m_vdisk;
+    m_vdisk = T100NULL;
 }
 
 T100VOID T100WXCreateThread::wait()
@@ -52,4 +55,9 @@ T100VOID T100WXCreateThread::wait()
 
     m_condition.wait(locker);
     locker.unlock();
+}
+
+T100VOID T100WXCreateThread::cancel()
+{
+    m_vdisk->cancel();
 }

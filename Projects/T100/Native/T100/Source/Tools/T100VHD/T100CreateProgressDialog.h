@@ -30,6 +30,7 @@ class T100CreateProgressDialog: public wxDialog
         T100VDISK_STORAGE_TYPE              m_storage               = T100VDISK_STORAGE_TYPE_NONE;
 
         static const long ID_THREAD_PROGRESS;
+        static const long ID_THREAD_FINISHED;
 
 	protected:
 	    T100VOID            create();
@@ -41,10 +42,12 @@ class T100CreateProgressDialog: public wxDialog
 
 		T100WXCreateThread*     m_thread            = T100NULL;
 
-		void    progress(T100VOID*, T100BYTE);
+		static void    progress(T100VOID*, T100BYTE);
+		static void    finished(T100VOID*, T100BYTE);
 
 		void    OnButtonCancelClick(wxCommandEvent& event);
 		void    OnThreadProgress(wxThreadEvent& event);
+		void    OnThreadFinished(wxThreadEvent& event);
 
 	private:
 

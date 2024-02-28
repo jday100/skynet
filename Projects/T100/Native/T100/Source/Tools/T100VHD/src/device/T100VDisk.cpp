@@ -22,20 +22,22 @@ T100VOID T100VDisk::setValue(T100VOID* value)
 
 T100VOID T100VDisk::cancel()
 {
-
+    m_base->cancel();
 }
 
-T100VOID T100VDisk::setCreateCallback(T100THREAD_CALLBACK callback)
+T100VOID T100VDisk::setCallback(T100VDiskCallback* callback)
 {
     m_callback  = callback;
 }
 
 T100BOOL T100VDisk::create(T100VDISK_TYPE vdisk, T100VDISK_STORAGE_TYPE type)
 {
+    T100BOOL        result      = T100FALSE;
+
     switch(vdisk){
     case T100VDISK_TYPE_VHD:
         {
-            T100VHD                     vhd(m_filename, m_length);
+            m_base  = T100NEW T100VHD(m_filename, m_length);
             T100VHD_STORAGE_TYPE        vhd_type;
 
             switch(type){
@@ -50,9 +52,14 @@ T100BOOL T100VDisk::create(T100VDISK_TYPE vdisk, T100VDISK_STORAGE_TYPE type)
                 }
                 break;
             }
-            vhd.setValue(m_value);
-            vhd.setCreateCallback(m_callback);
-            vhd.create(vhd_type);
+            m_base->setValue(m_value);
+            m_base->setCallback(m_callback);
+            result  = m_base->create(vhd_type);
+
+            if(m_base){
+                T100DELETE  m_base;
+                m_base  = T100NULL;
+            }
         }
         break;
     case T100VDISK_TYPE_VHDX:
@@ -61,4 +68,6 @@ T100BOOL T100VDisk::create(T100VDISK_TYPE vdisk, T100VDISK_STORAGE_TYPE type)
         }
         break;
     }
+
+    return result;
 }

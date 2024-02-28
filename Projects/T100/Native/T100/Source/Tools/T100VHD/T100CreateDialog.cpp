@@ -120,6 +120,9 @@ T100VOID T100CreateDialog::create()
 
     ComboBoxFileLength->Append(options);
 
+    m_type      = T100VDISK_TYPE_VHD;
+    m_storage   = T100VDISK_STORAGE_TYPE_FIXED;
+
 }
 
 T100VOID T100CreateDialog::destroy()

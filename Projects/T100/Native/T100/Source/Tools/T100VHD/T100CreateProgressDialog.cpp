@@ -5,17 +5,21 @@
 #include <wx/string.h>
 //*)
 
+#include "T100VHDCallback.h"
+
 
 //(*IdInit(T100CreateProgressDialog)
 const long T100CreateProgressDialog::ID_GAUGE1 = wxNewId();
 //*)
 
 const long T100CreateProgressDialog::ID_THREAD_PROGRESS = wxNewId();
+const long T100CreateProgressDialog::ID_THREAD_FINISHED = wxNewId();
 
 BEGIN_EVENT_TABLE(T100CreateProgressDialog,wxDialog)
 	//(*EventTable(T100CreateProgressDialog)
 	//*)
 	EVT_THREAD(ID_THREAD_PROGRESS, T100CreateProgressDialog::OnThreadProgress)
+	EVT_THREAD(ID_THREAD_FINISHED, T100CreateProgressDialog::OnThreadFinished)
 END_EVENT_TABLE()
 
 T100CreateProgressDialog::T100CreateProgressDialog(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
@@ -72,19 +76,28 @@ void T100CreateProgressDialog::OnInit(wxInitDialogEvent& event)
     m_thread->m_storage   = m_storage;
 
     m_thread->setValue(this);
-    m_thread->setCallback((T100THREAD_CALLBACK)&T100CreateProgressDialog::progress);
+
+    T100VHDCallback*    callback    = T100NEW T100VHDCallback();
+
+    callback->setCreateCallback((T100THREAD_CALLBACK)&T100CreateProgressDialog::progress);
+    callback->setCreateFinishedCallback((T100THREAD_CALLBACK)&T100CreateProgressDialog::finished);
+
+    m_thread->setCallback(callback);
     m_thread->start();
 }
 
 void T100CreateProgressDialog::OnClose(wxCloseEvent& event)
 {
+    m_thread->cancel();
     m_thread->wait();
     Destroy();
 }
 
 void T100CreateProgressDialog::OnButtonCancelClick(wxCommandEvent& event)
 {
-
+    m_thread->cancel();
+    m_thread->wait();
+    Destroy();
 }
 
 void T100CreateProgressDialog::OnThreadProgress(wxThreadEvent& event)
@@ -102,11 +115,23 @@ void T100CreateProgressDialog::OnThreadProgress(wxThreadEvent& event)
     }
 }
 
+void T100CreateProgressDialog::OnThreadFinished(wxThreadEvent& event)
+{
+    Destroy();
+}
+
 void T100CreateProgressDialog::progress(T100VOID* frame, T100BYTE range)
 {
     wxThreadEvent       event(wxEVT_THREAD, T100CreateProgressDialog::ID_THREAD_PROGRESS);
 
     event.SetInt(range);
+
+    wxQueueEvent((wxEvtHandler*)frame, event.Clone());
+}
+
+void T100CreateProgressDialog::finished(T100VOID* frame, T100BYTE range)
+{
+    wxThreadEvent       event(wxEVT_THREAD, T100CreateProgressDialog::ID_THREAD_FINISHED);
 
     wxQueueEvent((wxEvtHandler*)frame, event.Clone());
 }
