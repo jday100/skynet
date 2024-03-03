@@ -71,3 +71,8 @@ T100BOOL T100VDisk::create(T100VDISK_TYPE vdisk, T100VDISK_STORAGE_TYPE type)
 
     return result;
 }
+
+T100BOOL T100VDisk::state_open()
+{
+
+}

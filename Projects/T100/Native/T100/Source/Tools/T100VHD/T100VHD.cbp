@@ -85,6 +85,8 @@
 		<Unit filename="T100CreateDialog.h" />
 		<Unit filename="T100CreateProgressDialog.cpp" />
 		<Unit filename="T100CreateProgressDialog.h" />
+		<Unit filename="T100DiskPoolPanel.cpp" />
+		<Unit filename="T100DiskPoolPanel.h" />
 		<Unit filename="T100VHDApp.cpp" />
 		<Unit filename="T100VHDApp.h" />
 		<Unit filename="T100VHDMain.cpp" />
@@ -96,6 +98,7 @@
 		<Unit filename="include/device/T100DiskBase.h" />
 		<Unit filename="include/device/T100VDisk.h" />
 		<Unit filename="include/device/T100VDiskCallback.h" />
+		<Unit filename="include/fs/T100FSBase.h" />
 		<Unit filename="include/fs/T100MSfat.h" />
 		<Unit filename="include/fs/T100MSntfs.h" />
 		<Unit filename="include/library/T100ByteTools.h" />
@@ -111,7 +114,10 @@
 		<Unit filename="include/vhd/T100VHDCommon.h" />
 		<Unit filename="include/vhd/T100VHDX.h" />
 		<Unit filename="include/wx/T100WXCreateThread.h" />
+		<Unit filename="include/wx/T100WXOpenTask.h" />
+		<Unit filename="include/wx/T100WXOpenThread.h" />
 		<Unit filename="include/wx/T100WXRunThread.h" />
+		<Unit filename="include/wx/T100WXTask.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
@@ -119,6 +125,7 @@
 		<Unit filename="src/device/T100DiskBase.cpp" />
 		<Unit filename="src/device/T100VDisk.cpp" />
 		<Unit filename="src/device/T100VDiskCallback.cpp" />
+		<Unit filename="src/fs/T100FSBase.cpp" />
 		<Unit filename="src/fs/T100MSfat.cpp" />
 		<Unit filename="src/fs/T100MSntfs.cpp" />
 		<Unit filename="src/library/T100ByteTools.cpp" />
@@ -133,12 +140,16 @@
 		<Unit filename="src/vhd/T100VHDCallback.cpp" />
 		<Unit filename="src/vhd/T100VHDX.cpp" />
 		<Unit filename="src/wx/T100WXCreateThread.cpp" />
+		<Unit filename="src/wx/T100WXOpenTask.cpp" />
+		<Unit filename="src/wx/T100WXOpenThread.cpp" />
 		<Unit filename="src/wx/T100WXRunThread.cpp" />
+		<Unit filename="src/wx/T100WXTask.cpp" />
 		<Unit filename="t.vhd" />
 		<Unit filename="temp.vhd" />
 		<Unit filename="test.vhd" />
 		<Unit filename="wxsmith/T100CreateDialog.wxs" />
 		<Unit filename="wxsmith/T100CreateProgressDialog.wxs" />
+		<Unit filename="wxsmith/T100DiskPoolPanel.wxs" />
 		<Unit filename="wxsmith/T100VHDframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
@@ -148,6 +159,7 @@
 					<wxFrame wxs="wxsmith/T100VHDframe.wxs" src="T100VHDMain.cpp" hdr="T100VHDMain.h" fwddecl="0" i18n="1" name="T100VHDFrame" language="CPP" />
 					<wxDialog wxs="wxsmith/T100CreateDialog.wxs" src="T100CreateDialog.cpp" hdr="T100CreateDialog.h" fwddecl="0" i18n="1" name="T100CreateDialog" language="CPP" />
 					<wxDialog wxs="wxsmith/T100CreateProgressDialog.wxs" src="T100CreateProgressDialog.cpp" hdr="T100CreateProgressDialog.h" fwddecl="0" i18n="1" name="T100CreateProgressDialog" language="CPP" />
+					<wxPanel wxs="wxsmith/T100DiskPoolPanel.wxs" src="T100DiskPoolPanel.cpp" hdr="T100DiskPoolPanel.h" fwddecl="0" i18n="1" name="T100DiskPoolPanel" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

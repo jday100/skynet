@@ -21,6 +21,8 @@ class T100VDisk
         T100VOID                setValue(T100VOID*);
         T100VOID                setCallback(T100VDiskCallback*);
 
+        T100BOOL                state_open();
+
     protected:
         T100VOID*               m_value             = T100NULL;
         T100VDiskCallback*      m_callback          = T100NULL;

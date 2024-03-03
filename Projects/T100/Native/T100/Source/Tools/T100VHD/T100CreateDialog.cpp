@@ -111,7 +111,7 @@ T100VOID T100CreateDialog::create()
     wxArrayString       options;
 
 
-    options.push_back(wxT("4M"));
+    options.push_back(wxT("16M"));
     options.push_back(wxT("512M"));
     options.push_back(wxT("1G"));
     options.push_back(wxT("4G"));

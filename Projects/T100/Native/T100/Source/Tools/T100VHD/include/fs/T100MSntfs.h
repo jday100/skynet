@@ -1,8 +1,10 @@
 #ifndef T100MSNTFS_H
 #define T100MSNTFS_H
 
+#include "T100FSBase.h"
 
-class T100MSntfs
+
+class T100MSntfs : public T100FSBase
 {
     public:
         T100MSntfs();

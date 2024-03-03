@@ -29,17 +29,23 @@ class T100VHDFrame: public wxFrame
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
         void OnMenuItemNewSelected(wxCommandEvent& event);
+        void OnMenuItemOpenSelected(wxCommandEvent& event);
+        void OnMenuItemCloseSelected(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(T100VHDFrame)
         static const long ID_MENUITEM_NEW;
+        static const long ID_MENUITEM_OPEN;
+        static const long ID_MENUITEM_CLOSE;
         static const long idMenuQuit;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
         //*)
 
         //(*Declarations(T100VHDFrame)
+        wxMenuItem* MenuItemClose;
         wxMenuItem* MenuItemNew;
+        wxMenuItem* MenuItemOpen;
         wxStatusBar* StatusBar1;
         //*)
 
