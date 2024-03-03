@@ -57,7 +57,7 @@ void T100Disk::list_usb() {
 
 
     //LPCSTR file = "////.//Physicaldrive4";
-    LPCSTR file = "\\.\PHYSICALDRIVE0";
+    LPCSTR file = "\\\\.\\PHYSICALDRIVE0";
 
     //HANDLE disk = CreateFile(file, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, NULL, 0);
     HANDLE disk = CreateFile(file, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, NULL, 0);
