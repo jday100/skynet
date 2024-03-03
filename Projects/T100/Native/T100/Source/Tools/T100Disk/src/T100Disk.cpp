@@ -78,7 +78,16 @@ void T100Disk::list_usb() {
                 PARTITION_INFORMATION part;
 
                 if(DeviceIoControl(disk, IOCTL_DISK_GET_PARTITION_INFO, NULL, 0, &part, sizeof(PARTITION_INFORMATION), &bytes, NULL)){
-                    //std::cout << part.StartingOffset;
+                    std::cout << part.PartitionNumber;
+                    std::cout << part.PartitionType;
+
+                    std::cout << part.StartingOffset.u.LowPart;
+                    std::cout << part.StartingOffset.u.HighPart;
+
+                    std::cout << ' ';
+                    std::cout << part.PartitionLength.u.LowPart;
+                    std::cout << ' ';
+                    std::cout << part.PartitionLength.u.HighPart;
                 }
             }
         }else{
