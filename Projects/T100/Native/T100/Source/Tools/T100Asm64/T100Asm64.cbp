@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Asm64" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100Asm64" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/library" />
+					<Add directory="include/scanner" />
+					<Add directory="include/sentence" />
+					<Add directory="include/base" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Asm64" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/library" />
+					<Add directory="include/scanner" />
+					<Add directory="include/sentence" />
+					<Add directory="include/base" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/base/T100Compiler.h" />
+		<Unit filename="include/base/T100Linker.h" />
+		<Unit filename="include/base/T100Runner.h" />
+		<Unit filename="include/base/T100Scanner.h" />
+		<Unit filename="include/base/T100Token.h" />
+		<Unit filename="include/library/T100Buffer.h" />
+		<Unit filename="include/library/T100CmdLine.h" />
+		<Unit filename="include/library/T100Command.h" />
+		<Unit filename="include/library/T100File.h" />
+		<Unit filename="include/library/T100Log.h" />
+		<Unit filename="include/library/T100PathTools.h" />
+		<Unit filename="include/library/T100String.h" />
+		<Unit filename="include/library/T100StringEqual.h" />
+		<Unit filename="include/library/T100StringHash.h" />
+		<Unit filename="include/library/T100Unicode.h" />
+		<Unit filename="include/scanner/T100Asm64FunctionScanner.h" />
+		<Unit filename="include/scanner/T100Asm64FunctionToken.h" />
+		<Unit filename="include/scanner/T100Asm64KeywordScanner.h" />
+		<Unit filename="include/scanner/T100Asm64KeywordToken.h" />
+		<Unit filename="include/scanner/T100Asm64LetterScanner.h" />
+		<Unit filename="include/scanner/T100Asm64LetterToken.h" />
+		<Unit filename="include/scanner/T100Asm64SentenceScanner.h" />
+		<Unit filename="include/scanner/T100Asm64SentenceToken.h" />
+		<Unit filename="include/scanner/T100Asm64SourceScanner.h" />
+		<Unit filename="include/scanner/T100Asm64SourceToken.h" />
+		<Unit filename="include/scanner/T100Asm64StringScanner.h" />
+		<Unit filename="include/scanner/T100Asm64StringToken.h" />
+		<Unit filename="include/scanner/T100AsmKeywordScanner.h" />
+		<Unit filename="include/sentence/T100Asm64Sentence.h" />
+		<Unit filename="main.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="src/base/T100Compiler.cpp" />
+		<Unit filename="src/base/T100Linker.cpp" />
+		<Unit filename="src/base/T100Runner.cpp" />
+		<Unit filename="src/base/T100Scanner.cpp" />
+		<Unit filename="src/base/T100Token.cpp" />
+		<Unit filename="src/library/T100Buffer.cpp" />
+		<Unit filename="src/library/T100CmdLine.cpp" />
+		<Unit filename="src/library/T100Command.cpp" />
+		<Unit filename="src/library/T100File.cpp" />
+		<Unit filename="src/library/T100Log.cpp" />
+		<Unit filename="src/library/T100PathTools.cpp" />
+		<Unit filename="src/library/T100String.cpp" />
+		<Unit filename="src/library/T100StringEqual.cpp" />
+		<Unit filename="src/library/T100StringHash.cpp" />
+		<Unit filename="src/library/T100Unicode.cpp" />
+		<Unit filename="src/scanner/T100Asm64FunctionScanner.cpp" />
+		<Unit filename="src/scanner/T100Asm64FunctionToken.cpp" />
+		<Unit filename="src/scanner/T100Asm64KeywordScanner.cpp" />
+		<Unit filename="src/scanner/T100Asm64KeywordToken.cpp" />
+		<Unit filename="src/scanner/T100Asm64LetterScanner.cpp" />
+		<Unit filename="src/scanner/T100Asm64LetterToken.cpp" />
+		<Unit filename="src/scanner/T100Asm64SentenceScanner.cpp" />
+		<Unit filename="src/scanner/T100Asm64SentenceToken.cpp" />
+		<Unit filename="src/scanner/T100Asm64SourceScanner.cpp" />
+		<Unit filename="src/scanner/T100Asm64SourceToken.cpp" />
+		<Unit filename="src/scanner/T100Asm64StringScanner.cpp" />
+		<Unit filename="src/scanner/T100Asm64StringToken.cpp" />
+		<Unit filename="src/scanner/T100AsmKeywordScanner.cpp" />
+		<Unit filename="src/sentence/T100Asm64Sentence.cpp" />
+		<Unit filename="wmain.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
