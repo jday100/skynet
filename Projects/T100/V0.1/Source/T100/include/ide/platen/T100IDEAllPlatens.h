@@ -3,6 +3,7 @@
 
 
 #include "T100IDEDefaultPlaten.h"
+#include "T100IDEProjectPlaten.h"
 #include "T100IDEEditorPlaten.h"
 #include "T100IDEPainterPlaten.h"
 

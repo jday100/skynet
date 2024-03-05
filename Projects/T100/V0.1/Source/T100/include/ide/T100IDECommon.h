@@ -10,6 +10,7 @@ typedef enum{
     T100IDE_TYPE_NONE           = 0,
     //
     T100IDE_TYPE_DEFAULT,
+    T100IDE_TYPE_PROJECT,
     T100IDE_TYPE_EDITOR,
     T100IDE_TYPE_PAINTER,
     //

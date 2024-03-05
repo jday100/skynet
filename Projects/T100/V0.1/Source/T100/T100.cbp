@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-T -u=painter" />
+				<Option parameters="-I" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -126,6 +126,11 @@
 					<Add directory="include/painter/element/other" />
 					<Add directory="test/widget" />
 					<Add directory="test/painter" />
+					<Add directory="include/project" />
+					<Add directory="include/project/serve" />
+					<Add directory="include/project/store" />
+					<Add directory="include/project/view" />
+					<Add directory="include/component/project" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -256,6 +261,11 @@
 					<Add directory="include/painter/element/other" />
 					<Add directory="test/widget" />
 					<Add directory="test/painter" />
+					<Add directory="include/project" />
+					<Add directory="include/project/serve" />
+					<Add directory="include/project/store" />
+					<Add directory="include/project/view" />
+					<Add directory="include/component/project" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -413,6 +423,7 @@
 		<Unit filename="docs/env/codeblocks.txt" />
 		<Unit filename="docs/env/wx.txt" />
 		<Unit filename="docs/os/mm.txt" />
+		<Unit filename="incluce/project/view/panel/T100ProjectProjectsPanel.h" />
 		<Unit filename="include/al/T100AL.h" />
 		<Unit filename="include/al/T100ALApp.h" />
 		<Unit filename="include/app/T100ThisAppCmdLineParser.h" />
@@ -580,6 +591,7 @@
 		<Unit filename="include/component/painter/T100StateData.h" />
 		<Unit filename="include/component/painter/T100StateObject.h" />
 		<Unit filename="include/component/painter/T100StateTransverter.h" />
+		<Unit filename="include/component/project/T100ProjectTransverter.h" />
 		<Unit filename="include/component/vdisk/T100VDisk.h" />
 		<Unit filename="include/component/vdisk/T100VDiskCommon.h" />
 		<Unit filename="include/component/vdisk/T100VDiskFile.h" />
@@ -626,16 +638,22 @@
 		<Unit filename="include/ide/mdi/T100MDIDocumentBase.h" />
 		<Unit filename="include/ide/mdi/T100MDIViewBase.h" />
 		<Unit filename="include/ide/mdi/doc/T100MDIPaintDocument.h" />
+		<Unit filename="include/ide/mdi/doc/T100MDIProjectDocument.h" />
 		<Unit filename="include/ide/mdi/doc/T100MDITextDocument.h" />
 		<Unit filename="include/ide/mdi/frame/T100MDIPaintFrame.h" />
+		<Unit filename="include/ide/mdi/frame/T100MDIProjectFrame.h" />
 		<Unit filename="include/ide/mdi/frame/T100MDITextFrame.h" />
 		<Unit filename="include/ide/mdi/view/T100MDIPaintView.h" />
+		<Unit filename="include/ide/mdi/view/T100MDIProjectView.h" />
 		<Unit filename="include/ide/mdi/view/T100MDITextView.h" />
 		<Unit filename="include/ide/platen/T100IDEAllPlatens.h" />
 		<Unit filename="include/ide/platen/T100IDEDefaultPlaten.h" />
 		<Unit filename="include/ide/platen/T100IDEEditorPlaten.h" />
 		<Unit filename="include/ide/platen/T100IDEPainterPlaten.h" />
-		<Unit filename="include/ide/project/T100Project.h" />
+		<Unit filename="include/ide/platen/T100IDEProjectPlaten.h" />
+		<Unit filename="include/ide/project/T100Project.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="include/ide/serve/T100IDEServe.h" />
 		<Unit filename="include/ide/serve/T100IDEServeBase.h" />
 		<Unit filename="include/ide/serve/T100IDEServeProject.h" />
@@ -784,6 +802,16 @@
 		<Unit filename="include/painter/view/T100PainterView.h" />
 		<Unit filename="include/painter/view/panel/T100PainterElementsPanel.h" />
 		<Unit filename="include/painter/view/panel/T100PainterPropertiesPanel.h" />
+		<Unit filename="include/project/T100Project.h" />
+		<Unit filename="include/project/T100ProjectApp.h" />
+		<Unit filename="include/project/T100ProjectCommon.h" />
+		<Unit filename="include/project/serve/T100ProjectCallback.h" />
+		<Unit filename="include/project/serve/T100ProjectServe.h" />
+		<Unit filename="include/project/serve/T100ProjectState.h" />
+		<Unit filename="include/project/serve/T100ProjectStateAlone.h" />
+		<Unit filename="include/project/serve/T100ProjectStateEmbed.h" />
+		<Unit filename="include/project/store/T100ProjectStore.h" />
+		<Unit filename="include/project/view/T100ProjectView.h" />
 		<Unit filename="include/qu32/T100AU32.h" />
 		<Unit filename="include/qu32/T100CU32.h" />
 		<Unit filename="include/qu32/T100Executor32.h" />
@@ -1075,6 +1103,7 @@
 		<Unit filename="src/component/painter/T100StateData.cpp" />
 		<Unit filename="src/component/painter/T100StateObject.cpp" />
 		<Unit filename="src/component/painter/T100StateTransverter.cpp" />
+		<Unit filename="src/component/project/T100ProjectTransverter.cpp" />
 		<Unit filename="src/component/vdisk/T100VDisk.cpp" />
 		<Unit filename="src/component/vdisk/T100VDiskFile.cpp" />
 		<Unit filename="src/component/vdisk/T100VDiskPart.cpp" />
@@ -1118,15 +1147,21 @@
 		<Unit filename="src/ide/mdi/T100MDIDocumentBase.cpp" />
 		<Unit filename="src/ide/mdi/T100MDIViewBase.cpp" />
 		<Unit filename="src/ide/mdi/doc/T100MDIPaintDocument.cpp" />
+		<Unit filename="src/ide/mdi/doc/T100MDIProjectDocument.cpp" />
 		<Unit filename="src/ide/mdi/doc/T100MDITextDocument.cpp" />
 		<Unit filename="src/ide/mdi/frame/T100MDIPaintFrame.cpp" />
+		<Unit filename="src/ide/mdi/frame/T100MDIProjectFrame.cpp" />
 		<Unit filename="src/ide/mdi/frame/T100MDITextFrame.cpp" />
 		<Unit filename="src/ide/mdi/view/T100MDIPaintView.cpp" />
+		<Unit filename="src/ide/mdi/view/T100MDIProjectView.cpp" />
 		<Unit filename="src/ide/mdi/view/T100MDITextView.cpp" />
 		<Unit filename="src/ide/platen/T100IDEDefaultPlaten.cpp" />
 		<Unit filename="src/ide/platen/T100IDEEditorPlaten.cpp" />
 		<Unit filename="src/ide/platen/T100IDEPainterPlaten.cpp" />
-		<Unit filename="src/ide/project/T100Project.cpp" />
+		<Unit filename="src/ide/platen/T100IDEProjectPlaten.cpp" />
+		<Unit filename="src/ide/project/T100Project.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="src/ide/serve/T100IDEServe.cpp" />
 		<Unit filename="src/ide/serve/T100IDEServeBase.cpp" />
 		<Unit filename="src/ide/serve/T100IDEServeProject.cpp" />
@@ -1257,6 +1292,16 @@
 		<Unit filename="src/painter/view/T100PainterView.cpp" />
 		<Unit filename="src/painter/view/panel/T100PainterElementsPanel.cpp" />
 		<Unit filename="src/painter/view/panel/T100PainterPropertiesPanel.cpp" />
+		<Unit filename="src/project/T100Project.cpp" />
+		<Unit filename="src/project/T100ProjectApp.cpp" />
+		<Unit filename="src/project/serve/T100ProjectCallback.cpp" />
+		<Unit filename="src/project/serve/T100ProjectServe.cpp" />
+		<Unit filename="src/project/serve/T100ProjectState.cpp" />
+		<Unit filename="src/project/serve/T100ProjectStateAlone.cpp" />
+		<Unit filename="src/project/serve/T100ProjectStateEmbed.cpp" />
+		<Unit filename="src/project/store/T100ProjectStore.cpp" />
+		<Unit filename="src/project/view/T100ProjectView.cpp" />
+		<Unit filename="src/project/view/panel/T100ProjectProjectsPanel.cpp" />
 		<Unit filename="src/qu32/T100AU32.cpp" />
 		<Unit filename="src/qu32/T100CU32.cpp" />
 		<Unit filename="src/qu32/T100Executor32.cpp" />
@@ -1617,6 +1662,7 @@
 		<Unit filename="wxsmith/T100PainterDemoFrame.wxs" />
 		<Unit filename="wxsmith/T100PainterElementsDemoPanel.wxs" />
 		<Unit filename="wxsmith/T100PainterPropertiesDemoPanel.wxs" />
+		<Unit filename="wxsmith/T100ProjectProjectsPanel.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigHardwareAppendDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigHardwareDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigSetupDemoDialog.wxs" />
@@ -1649,6 +1695,7 @@
 					<wxPanel wxs="wxsmith/T100PainterElementsDemoPanel.wxs" src="src\wxwidgets\painter\panel\T100PainterElementsDemoPanel.cpp" hdr="include\wxwidgets\painter\panel\T100PainterElementsDemoPanel.h" fwddecl="0" i18n="1" name="T100PainterElementsDemoPanel" language="CPP" />
 					<wxFrame wxs="wxsmith/T100PainterDemoFrame.wxs" src="src\wxwidgets\painter\frame\T100PainterDemoFrame.cpp" hdr="include\wxwidgets\painter\frame\T100PainterDemoFrame.h" fwddecl="0" i18n="1" name="T100PainterDemoFrame" language="CPP" />
 					<wxPanel wxs="wxsmith/T100PainterPropertiesDemoPanel.wxs" src="src\wxwidgets\painter\panel\T100PainterPropertiesDemoPanel.cpp" hdr="include\wxwidgets\painter\panel\T100PainterPropertiesDemoPanel.h" fwddecl="0" i18n="1" name="T100PainterPropertiesDemoPanel" language="CPP" />
+					<wxPanel wxs="wxsmith/T100ProjectProjectsPanel.wxs" src="src\project\view\panel\T100ProjectProjectsPanel.cpp" hdr="incluce\project\view\panel\T100ProjectProjectsPanel.h" fwddecl="0" i18n="1" name="T100ProjectProjectsPanel" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>
