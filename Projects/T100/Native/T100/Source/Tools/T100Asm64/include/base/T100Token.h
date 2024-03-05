@@ -1,6 +1,9 @@
 #ifndef T100TOKEN_H
 #define T100TOKEN_H
 
+#include "T100Common.h"
+#include "T100Asm64Common.h"
+
 
 class T100Token
 {
@@ -8,7 +11,10 @@ class T100Token
         T100Token();
         virtual ~T100Token();
 
+        T100ASM64_TOKEN_TYPE            type            = T100TOKEN_NONE;
+
     protected:
+        T100VOID            clear();
 
     private:
 };

@@ -17,6 +17,7 @@
 					<Add directory="include/scanner" />
 					<Add directory="include/sentence" />
 					<Add directory="include/base" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -30,6 +31,7 @@
 					<Add directory="include/scanner" />
 					<Add directory="include/sentence" />
 					<Add directory="include/base" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -40,10 +42,13 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/base/T100Asm64Common.h" />
 		<Unit filename="include/base/T100Compiler.h" />
 		<Unit filename="include/base/T100Linker.h" />
 		<Unit filename="include/base/T100Runner.h" />
 		<Unit filename="include/base/T100Scanner.h" />
+		<Unit filename="include/base/T100SentenceBase.h" />
 		<Unit filename="include/base/T100Token.h" />
 		<Unit filename="include/library/T100Buffer.h" />
 		<Unit filename="include/library/T100CmdLine.h" />
@@ -58,6 +63,7 @@
 		<Unit filename="include/scanner/T100Asm64FunctionScanner.h" />
 		<Unit filename="include/scanner/T100Asm64FunctionToken.h" />
 		<Unit filename="include/scanner/T100Asm64KeywordScanner.h" />
+		<Unit filename="include/scanner/T100Asm64KeywordTable.h" />
 		<Unit filename="include/scanner/T100Asm64KeywordToken.h" />
 		<Unit filename="include/scanner/T100Asm64LetterScanner.h" />
 		<Unit filename="include/scanner/T100Asm64LetterToken.h" />
@@ -76,6 +82,7 @@
 		<Unit filename="src/base/T100Linker.cpp" />
 		<Unit filename="src/base/T100Runner.cpp" />
 		<Unit filename="src/base/T100Scanner.cpp" />
+		<Unit filename="src/base/T100SentenceBase.cpp" />
 		<Unit filename="src/base/T100Token.cpp" />
 		<Unit filename="src/library/T100Buffer.cpp" />
 		<Unit filename="src/library/T100CmdLine.cpp" />
@@ -90,6 +97,7 @@
 		<Unit filename="src/scanner/T100Asm64FunctionScanner.cpp" />
 		<Unit filename="src/scanner/T100Asm64FunctionToken.cpp" />
 		<Unit filename="src/scanner/T100Asm64KeywordScanner.cpp" />
+		<Unit filename="src/scanner/T100Asm64KeywordTable.cpp" />
 		<Unit filename="src/scanner/T100Asm64KeywordToken.cpp" />
 		<Unit filename="src/scanner/T100Asm64LetterScanner.cpp" />
 		<Unit filename="src/scanner/T100Asm64LetterToken.cpp" />
