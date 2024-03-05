@@ -32,7 +32,7 @@ T100BOOL T100PathTools::full(T100STRING file, T100STRING& path)
     T100WCHAR           buffer[_MAX_PATH];
     T100WCHAR*          result;
 
-    result  = ::_wfullpath(buffer, file.data().c_str(), _MAX_PATH);
+    result  = ::_wfullpath(buffer, file.c_str(), _MAX_PATH);
 
     if(!result){
         return T100FALSE;
@@ -49,7 +49,7 @@ T100BOOL T100PathTools::split(T100STRING file, T100STRING& path, T100STRING& nam
     T100WCHAR           filename[_MAX_FNAME];
     T100WCHAR           ext[_MAX_EXT];
 
-    ::_wsplitpath(file.data().c_str(), drive, dir, filename, ext);
+    ::_wsplitpath(file.c_str(), drive, dir, filename, ext);
 
     path    = drive;
     path    += dir;
@@ -60,7 +60,7 @@ T100BOOL T100PathTools::split(T100STRING file, T100STRING& path, T100STRING& nam
 
     temp    = ext;
     if(0 < temp.length()){
-        name    += temp
+        name    += temp;
     }
 
     return T100TRUE;
@@ -80,7 +80,7 @@ T100BOOL T100PathTools::chdir(T100STRING path)
 {
     INT32           result;
 
-    result  = ::_wchdir(path.data().c_str());
+    result  = ::_wchdir(path.c_str());
 
     if(-1 == result){
         return T100FALSE;

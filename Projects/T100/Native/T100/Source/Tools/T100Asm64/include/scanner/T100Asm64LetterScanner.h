@@ -1,6 +1,8 @@
 #ifndef T100ASM64LETTERSCANNER_H
 #define T100ASM64LETTERSCANNER_H
 
+#include "T100File.h"
+#include "T100Buffer.h"
 #include "T100Scanner.h"
 #include "T100Asm64LetterToken.h"
 

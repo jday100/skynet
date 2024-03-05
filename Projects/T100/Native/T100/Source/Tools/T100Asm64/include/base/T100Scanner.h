@@ -11,9 +11,6 @@ class T100Scanner
         T100Scanner();
         virtual ~T100Scanner();
 
-        virtual T100VOID            setSource(T100Scanner*) = 0;
-        virtual T100Scanner*        getSource() = 0;
-
         virtual T100BOOL            next(T100Token&) = 0;
 
         virtual T100BOOL            read();

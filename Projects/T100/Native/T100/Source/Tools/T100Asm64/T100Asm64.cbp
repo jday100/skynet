@@ -18,6 +18,9 @@
 					<Add directory="include/sentence" />
 					<Add directory="include/base" />
 					<Add directory="include" />
+					<Add directory="include/data" />
+					<Add directory="include/produce" />
+					<Add directory="include/syntax" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -32,6 +35,9 @@
 					<Add directory="include/sentence" />
 					<Add directory="include/base" />
 					<Add directory="include" />
+					<Add directory="include/data" />
+					<Add directory="include/produce" />
+					<Add directory="include/syntax" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -50,6 +56,16 @@
 		<Unit filename="include/base/T100Scanner.h" />
 		<Unit filename="include/base/T100SentenceBase.h" />
 		<Unit filename="include/base/T100Token.h" />
+		<Unit filename="include/data/T100BuildInfo.h" />
+		<Unit filename="include/data/T100ParseInfo.h" />
+		<Unit filename="include/data/T100ProduceInfo.h" />
+		<Unit filename="include/data/T100Segment.h" />
+		<Unit filename="include/data/T100SegmentCode.h" />
+		<Unit filename="include/data/T100SegmentData.h" />
+		<Unit filename="include/data/T100SegmentEqual.h" />
+		<Unit filename="include/data/T100SegmentHash.h" />
+		<Unit filename="include/data/T100SegmentInfo.h" />
+		<Unit filename="include/data/T100SourceInfo.h" />
 		<Unit filename="include/library/T100Buffer.h" />
 		<Unit filename="include/library/T100CmdLine.h" />
 		<Unit filename="include/library/T100Command.h" />
@@ -60,6 +76,10 @@
 		<Unit filename="include/library/T100StringEqual.h" />
 		<Unit filename="include/library/T100StringHash.h" />
 		<Unit filename="include/library/T100Unicode.h" />
+		<Unit filename="include/produce/T100ClassPathDrawer.h" />
+		<Unit filename="include/produce/T100LabelDrawer.h" />
+		<Unit filename="include/produce/T100ProcedureDrawer.h" />
+		<Unit filename="include/produce/T100SourceDrawer.h" />
 		<Unit filename="include/scanner/T100Asm64FunctionScanner.h" />
 		<Unit filename="include/scanner/T100Asm64FunctionToken.h" />
 		<Unit filename="include/scanner/T100Asm64KeywordScanner.h" />
@@ -75,6 +95,7 @@
 		<Unit filename="include/scanner/T100Asm64StringToken.h" />
 		<Unit filename="include/scanner/T100AsmKeywordScanner.h" />
 		<Unit filename="include/sentence/T100Asm64Sentence.h" />
+		<Unit filename="include/syntax/T100SentenceComment.h" />
 		<Unit filename="main.cpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
@@ -84,6 +105,16 @@
 		<Unit filename="src/base/T100Scanner.cpp" />
 		<Unit filename="src/base/T100SentenceBase.cpp" />
 		<Unit filename="src/base/T100Token.cpp" />
+		<Unit filename="src/data/T100BuildInfo.cpp" />
+		<Unit filename="src/data/T100ParseInfo.cpp" />
+		<Unit filename="src/data/T100ProduceInfo.cpp" />
+		<Unit filename="src/data/T100Segment.cpp" />
+		<Unit filename="src/data/T100SegmentCode.cpp" />
+		<Unit filename="src/data/T100SegmentData.cpp" />
+		<Unit filename="src/data/T100SegmentEqual.cpp" />
+		<Unit filename="src/data/T100SegmentHash.cpp" />
+		<Unit filename="src/data/T100SegmentInfo.cpp" />
+		<Unit filename="src/data/T100SourceInfo.cpp" />
 		<Unit filename="src/library/T100Buffer.cpp" />
 		<Unit filename="src/library/T100CmdLine.cpp" />
 		<Unit filename="src/library/T100Command.cpp" />
@@ -94,6 +125,10 @@
 		<Unit filename="src/library/T100StringEqual.cpp" />
 		<Unit filename="src/library/T100StringHash.cpp" />
 		<Unit filename="src/library/T100Unicode.cpp" />
+		<Unit filename="src/produce/T100ClassPathDrawer.cpp" />
+		<Unit filename="src/produce/T100LabelDrawer.cpp" />
+		<Unit filename="src/produce/T100ProcedureDrawer.cpp" />
+		<Unit filename="src/produce/T100SourceDrawer.cpp" />
 		<Unit filename="src/scanner/T100Asm64FunctionScanner.cpp" />
 		<Unit filename="src/scanner/T100Asm64FunctionToken.cpp" />
 		<Unit filename="src/scanner/T100Asm64KeywordScanner.cpp" />
@@ -109,6 +144,7 @@
 		<Unit filename="src/scanner/T100Asm64StringToken.cpp" />
 		<Unit filename="src/scanner/T100AsmKeywordScanner.cpp" />
 		<Unit filename="src/sentence/T100Asm64Sentence.cpp" />
+		<Unit filename="src/syntax/T100SentenceComment.cpp" />
 		<Unit filename="wmain.cpp" />
 		<Extensions />
 	</Project>
