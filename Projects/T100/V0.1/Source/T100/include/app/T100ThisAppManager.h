@@ -24,6 +24,10 @@ namespace T100VPC{
     class T100VPCApp;
 }
 
+namespace T100PROJECT{
+    class T100ProjectApp;
+}
+
 namespace T100Editor{
     class T100EditorApp;
 }
@@ -64,6 +68,7 @@ class T100ThisAppManager : public T100WxWidgets::T100WxAppManager
         T100Editor::T100EditorApp*          m_editor        = T100NULL;
         T100Painter::T100PainterApp*        m_painter       = T100NULL;
         T100IDE::T100IDEApp*                m_ide           = T100NULL;
+        T100PROJECT::T100ProjectApp*        m_project       = T100NULL;
 
     private:
         T100ThisAppCmdLineResult            m_info;

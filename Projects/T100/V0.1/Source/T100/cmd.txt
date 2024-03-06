@@ -11,6 +11,7 @@
 -P      painter     run painter
 -L      log         setup log
 -R      error       setup error
+-N      project     run project
 
 -q      quit        quit app
 -l      list        list test units

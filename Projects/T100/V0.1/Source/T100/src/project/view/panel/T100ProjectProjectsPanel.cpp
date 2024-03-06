@@ -1,4 +1,4 @@
-#include "../../../../incluce/project/view/panel/T100ProjectProjectsPanel.h"
+#include "../../../../include/project/view/panel/T100ProjectProjectsPanel.h"
 
 //(*InternalHeaders(T100ProjectProjectsPanel)
 #include <wx/intl.h>

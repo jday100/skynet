@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="-I" />
+				<Option parameters="-N" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-std=gnu++17" />
@@ -131,6 +131,7 @@
 					<Add directory="include/project/store" />
 					<Add directory="include/project/view" />
 					<Add directory="include/component/project" />
+					<Add directory="include/project/view/panel" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -423,7 +424,6 @@
 		<Unit filename="docs/env/codeblocks.txt" />
 		<Unit filename="docs/env/wx.txt" />
 		<Unit filename="docs/os/mm.txt" />
-		<Unit filename="incluce/project/view/panel/T100ProjectProjectsPanel.h" />
 		<Unit filename="include/al/T100AL.h" />
 		<Unit filename="include/al/T100ALApp.h" />
 		<Unit filename="include/app/T100ThisAppCmdLineParser.h" />
@@ -651,9 +651,6 @@
 		<Unit filename="include/ide/platen/T100IDEEditorPlaten.h" />
 		<Unit filename="include/ide/platen/T100IDEPainterPlaten.h" />
 		<Unit filename="include/ide/platen/T100IDEProjectPlaten.h" />
-		<Unit filename="include/ide/project/T100Project.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="include/ide/serve/T100IDEServe.h" />
 		<Unit filename="include/ide/serve/T100IDEServeBase.h" />
 		<Unit filename="include/ide/serve/T100IDEServeProject.h" />
@@ -811,7 +808,9 @@
 		<Unit filename="include/project/serve/T100ProjectStateAlone.h" />
 		<Unit filename="include/project/serve/T100ProjectStateEmbed.h" />
 		<Unit filename="include/project/store/T100ProjectStore.h" />
+		<Unit filename="include/project/view/T100ProjectFrame.h" />
 		<Unit filename="include/project/view/T100ProjectView.h" />
+		<Unit filename="include/project/view/panel/T100ProjectProjectsPanel.h" />
 		<Unit filename="include/qu32/T100AU32.h" />
 		<Unit filename="include/qu32/T100CU32.h" />
 		<Unit filename="include/qu32/T100Executor32.h" />
@@ -1159,9 +1158,6 @@
 		<Unit filename="src/ide/platen/T100IDEEditorPlaten.cpp" />
 		<Unit filename="src/ide/platen/T100IDEPainterPlaten.cpp" />
 		<Unit filename="src/ide/platen/T100IDEProjectPlaten.cpp" />
-		<Unit filename="src/ide/project/T100Project.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
 		<Unit filename="src/ide/serve/T100IDEServe.cpp" />
 		<Unit filename="src/ide/serve/T100IDEServeBase.cpp" />
 		<Unit filename="src/ide/serve/T100IDEServeProject.cpp" />
@@ -1300,6 +1296,7 @@
 		<Unit filename="src/project/serve/T100ProjectStateAlone.cpp" />
 		<Unit filename="src/project/serve/T100ProjectStateEmbed.cpp" />
 		<Unit filename="src/project/store/T100ProjectStore.cpp" />
+		<Unit filename="src/project/view/T100ProjectFrame.cpp" />
 		<Unit filename="src/project/view/T100ProjectView.cpp" />
 		<Unit filename="src/project/view/panel/T100ProjectProjectsPanel.cpp" />
 		<Unit filename="src/qu32/T100AU32.cpp" />

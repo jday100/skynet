@@ -18,6 +18,7 @@ class T100ThisAppCmdLineResult : public T100Library::T100CmdLineResult
 
         T100BOOL                ASSEMBLY        = T100FALSE;
         T100BOOL                EDITOR          = T100FALSE;
+        T100BOOL                PROJECT         = T100FALSE;
         T100BOOL                PAINTER         = T100FALSE;
         T100BOOL                IDE             = T100FALSE;
         T100BOOL                FONT            = T100FALSE;

@@ -24,7 +24,7 @@ T100VOID T100ProjectApp::create()
 
     m_project   = T100NEW T100Project(this);
     result      = m_project->create();
-    if(result){
+    if(!result){
         T100SAFE_DELETE(m_project);
     }
 }

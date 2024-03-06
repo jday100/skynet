@@ -2,6 +2,9 @@
 #define T100PROJECTSTATE_H
 
 #include "T100State.h"
+#include "T100ProjectCommon.h"
+#include "T100ProjectProjectsPanel.h"
+
 
 namespace T100PROJECT{
 
@@ -15,6 +18,8 @@ class T100ProjectState : public T100Component::T100State
 
         virtual T100VOID                        SetMenu() = 0;
         virtual T100VOID                        ResetMenu() = 0;
+
+        virtual T100ProjectProjectsPanel*       GetProjectsPanel() = 0;
 
     protected:
 

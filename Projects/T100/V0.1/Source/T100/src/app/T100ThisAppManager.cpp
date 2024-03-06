@@ -14,6 +14,7 @@
 #include "T100VPCApp.h"
 #include "T100VDiskConsoleApp.h"
 #include "T100AssemblyApp.h"
+#include "T100ProjectApp.h"
 #include "T100EditorApp.h"
 #include "T100PainterApp.h"
 #include "T100IDEApp.h"
@@ -78,6 +79,13 @@ T100BOOL T100ThisAppManager::start()
 
         m_editor    = T100NEW T100Editor::T100EditorApp(this, m_info.QUIT);
         m_editor->show();
+    }
+
+    if(m_info.PROJECT){
+        m_info.RUNNING      = T100TRUE;
+
+        m_project   = T100NEW T100PROJECT::T100ProjectApp(this, m_info.QUIT);
+        m_project->show();
     }
 
     if(m_info.PAINTER){

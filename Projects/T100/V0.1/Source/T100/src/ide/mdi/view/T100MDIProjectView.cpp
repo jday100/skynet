@@ -124,7 +124,7 @@ T100BOOL T100MDIProjectView::OnClose(T100BOOL deleteWindow)
     return T100TRUE;
 }
 
-T100Project::T100Project* T100MDIProjectView::GetProject() const
+T100PROJECT::T100Project* T100MDIProjectView::GetProject() const
 {
     return m_project;
 }

@@ -7,9 +7,9 @@
 
 namespace T100IDE{
 
-//DEGIN_EVENT_TABLE(T100MDIProjectFrame, wxDocMDIChildFrame)
-    //EVT_SET_FOCUS(T100MDIProjectFrame::OnSetFocus)
-//END_EVENT_TABLE()
+BEGIN_EVENT_TABLE(T100MDIProjectFrame, wxDocMDIChildFrame)
+    EVT_SET_FOCUS(T100MDIProjectFrame::OnSetFocus)
+END_EVENT_TABLE()
 
 T100MDIProjectFrame::T100MDIProjectFrame(wxDocument *doc, wxView *view, wxMDIParentFrame *parent,
                                 wxWindowID id, const wxString& title, const wxPoint& pos,

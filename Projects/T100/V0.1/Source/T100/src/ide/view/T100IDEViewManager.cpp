@@ -1,5 +1,8 @@
 #include "T100IDEViewManager.h"
 
+#include "T100MDIProjectDocument.h"
+#include "T100MDIProjectView.h"
+
 #include "T100MDITextDocument.h"
 #include "T100MDITextView.h"
 
@@ -49,6 +52,10 @@ wxDocManager* T100IDEViewManager::getDocManager()
 
 T100VOID T100IDEViewManager::init()
 {
+    new wxDocTemplate(m_doc, "Plan", "*.pln;*.plan", "", "pln;plan",
+                      "Plan Doc", "Plan View",
+                      CLASSINFO(T100MDIProjectDocument), CLASSINFO(T100MDIProjectView));
+
     new wxDocTemplate(m_doc, "Text", "*.txt;*.text", "", "txt;text",
                       "Text Doc", "Text View",
                       CLASSINFO(T100MDITextDocument), CLASSINFO(T100MDITextView));

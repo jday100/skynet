@@ -33,7 +33,7 @@ T100BOOL T100Project::create()
 
     T100ProjectCallback::init(m_store, m_serve, m_view);
 
-    if(m_app){
+    if(m_parent){
         m_transverter.Change(T100PROJECT_STATE_EMBED);
     }else{
         m_transverter.Change(T100PROJECT_STATE_ALONE);

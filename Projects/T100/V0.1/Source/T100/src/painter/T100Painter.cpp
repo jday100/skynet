@@ -31,7 +31,7 @@ T100BOOL T100Painter::create()
 
     T100PainterCallback::init(m_store, m_serve, m_view);
 
-    if(m_app){
+    if(m_parent){
         m_transverter.Change(T100PAINTER_STATE_EMBED);
     }else{
         m_transverter.Change(T100PAINTER_STATE_ALONE);

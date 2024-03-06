@@ -16,6 +16,8 @@ class T100ProjectStateEmbed : public T100ProjectState
         T100VOID                        SetMenu();
         T100VOID                        ResetMenu();
 
+        T100ProjectProjectsPanel*       GetProjectsPanel();
+
     protected:
 
     private:

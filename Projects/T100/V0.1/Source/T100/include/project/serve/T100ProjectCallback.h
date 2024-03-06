@@ -21,6 +21,24 @@ class T100ProjectCallback
         static T100ProjectServe*            getServe();
         static T100ProjectView*             getView();
 
+    public:
+        static T100BOOL                     frame_menu_new(void* = T100NULL);
+        static T100BOOL                     frame_menu_open(void* = T100NULL);
+        static T100BOOL                     frame_menu_close(void* = T100NULL);
+        static T100BOOL                     frame_menu_save(void* = T100NULL);
+        static T100BOOL                     frame_menu_save_as(void* = T100NULL);
+        static T100BOOL                     frame_menu_quit(void* = T100NULL);
+
+        static T100BOOL                     frame_menu_undo(void* = T100NULL);
+        static T100BOOL                     frame_menu_redo(void* = T100NULL);
+        static T100BOOL                     frame_menu_cut(void* = T100NULL);
+        static T100BOOL                     frame_menu_copy(void* = T100NULL);
+        static T100BOOL                     frame_menu_paste(void* = T100NULL);
+
+        static T100BOOL                     frame_menu_projects(void* = T100NULL);
+
+        static T100BOOL                     frame_menu_about(void* = T100NULL);
+
     protected:
 
     private:

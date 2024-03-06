@@ -9,6 +9,8 @@
 
 
 namespace T100PROJECT{
+class T100ProjectFrame;
+
 
 class T100ProjectView
 {
@@ -16,6 +18,13 @@ class T100ProjectView
         T100ProjectView();
         virtual ~T100ProjectView();
 
+        T100BOOL                        Quit();
+        T100BOOL                        ShowProjects();
+
+        T100BOOL                        create_alone();
+        T100BOOL                        create_embed();
+
+        T100ProjectProjectsPanel*       getProjectCtrl();
 
     public:
         T100VOID                        setParent(wxWindow*);
@@ -32,8 +41,16 @@ class T100ProjectView
         T100VOID                        destroy();
 
     private:
-        wxWindow*                       m_parent            = T100NULL;
-        wxAuiManager*                   m_manager           = T100NULL;
+        wxWindow*                       m_parent                = T100NULL;
+        wxAuiManager*                   m_manager               = T100NULL;
+
+        T100ProjectFrame*               m_frame                 = T100NULL;
+        wxFrame*                        m_root                  = T100NULL;
+
+        T100ProjectProjectsPanel*       m_projects_panel        = T100NULL;
+
+        wxFrame*                                m_callback_frame        = T100NULL;
+        T100WxWidgets::T100FRAME_CALLBACK       m_callback              = T100NULL;
 
 };
 
