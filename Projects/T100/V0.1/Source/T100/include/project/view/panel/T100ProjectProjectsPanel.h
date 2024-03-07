@@ -33,6 +33,9 @@ class T100ProjectProjectsPanel: public wxPanel
     public:
 		static const long ID_TREECTRL_MENUITEM_PROJECT_CREATE;
 
+    protected:
+        void OnItemMenuProjectCreate(wxCommandEvent& event);
+
 	private:
 
 		//(*Handlers(T100ProjectProjectsPanel)

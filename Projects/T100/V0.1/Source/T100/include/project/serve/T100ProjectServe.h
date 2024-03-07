@@ -4,6 +4,7 @@
 #include <atomic>
 #include "T100String.h"
 #include "T100MansionInfo.h"
+#include "T100ProjectDrawer.h"
 
 namespace T100PROJECT{
 
@@ -24,6 +25,8 @@ class T100ProjectServe
 
         T100MansionInfo*        getCurrent();
 
+        T100ProjectDrawer*      getProjectDrawer();
+
     public:
         T100BOOL                SaveFile(T100STRING);
         T100BOOL                LoadFile(T100STRING);
@@ -41,6 +44,7 @@ class T100ProjectServe
         std::atomic_bool        m_modified;
 
         T100MansionInfo*        m_current           = T100NULL;
+        T100ProjectDrawer*      m_project_drawer    = T100NULL;
 };
 
 }

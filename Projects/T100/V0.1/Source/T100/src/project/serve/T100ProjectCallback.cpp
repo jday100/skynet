@@ -6,6 +6,8 @@
 #include "T100ProjectServe.h"
 #include "T100ProjectView.h"
 #include "T100MansionInfo.h"
+#include "T100ProjectInfo.h"
+#include "T100ProjectDrawer.h"
 
 
 namespace T100PROJECT{
@@ -238,6 +240,30 @@ T100BOOL T100ProjectCallback::frame_menu_projects(void* d)
 T100BOOL T100ProjectCallback::frame_menu_about(void* d)
 {
     return T100TRUE;
+}
+
+//////
+T100BOOL T100ProjectCallback::treectrl_menu_project_create(void* d)
+{
+    T100BOOL            result;
+
+
+
+    //result  = m_serve->getProjectDrawer()->Create()
+}
+
+T100BOOL T100ProjectCallback::dialog_project_create_apply(void* data)
+{
+    T100BOOL                result;
+    T100ProjectInfo*        info        = T100NULL;
+
+    info    = (T100ProjectInfo*)data;
+
+    if(info){
+        result  = m_serve->getProjectDrawer()->Create(info);
+    }
+
+    return result;
 }
 
 }

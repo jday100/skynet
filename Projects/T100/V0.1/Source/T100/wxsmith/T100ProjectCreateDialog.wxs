@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="T100ProjectCreateDialog">
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+					<label>Name:</label>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxTextCtrl" name="ID_TEXTCTRL1" variable="TextCtrl1" member="yes" />
+				<flag>wxALL|wxALIGN_LEFT</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+					<label>Type:</label>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxChoice" name="ID_CHOICE1" variable="Choice1" member="yes" />
+				<flag>wxALL|wxALIGN_LEFT</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</wxsmith>

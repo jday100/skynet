@@ -39,6 +39,10 @@ class T100ProjectCallback
 
         static T100BOOL                     frame_menu_about(void* = T100NULL);
 
+        static T100BOOL                     treectrl_menu_project_create(void* = T100NULL);
+
+        static T100BOOL                     dialog_project_create_apply(void* = T100NULL);
+
     protected:
 
     private:

@@ -9,6 +9,9 @@
 #include "T100MansionDrawer.h"
 #include "T100ProjectInfo.h"
 #include "T100TreeCtrlItemData.h"
+#include "T100ProjectCallback.h"
+
+#include "T100ProjectCreateDialog.h"
 
 
 //(*IdInit(T100ProjectProjectsPanel)
@@ -72,6 +75,10 @@ T100BOOL T100ProjectProjectsPanel::create()
     T100PROJECT::T100TreeCtrlItemData*       data        = T100NEW T100PROJECT::T100TreeCtrlItemData();
 
     TreeCtrlProjects->SetItemData(root, data);
+
+
+    Connect(ID_TREECTRL_MENUITEM_PROJECT_CREATE,        wxEVT_COMMAND_MENU_SELECTED,        (wxObjectEventFunction)&T100ProjectProjectsPanel::OnItemMenuProjectCreate);
+
 }
 
 T100VOID T100ProjectProjectsPanel::destroy()
@@ -151,4 +158,17 @@ void T100ProjectProjectsPanel::OnTreeCtrlProjectsItemMenu(wxTreeEvent& event)
             }
         }
     }
+}
+
+void T100ProjectProjectsPanel::OnItemMenuProjectCreate(wxCommandEvent& event)
+{
+    T100ProjectCreateDialog         dialog(this);
+
+    if(wxID_OK == dialog.ShowModal()){
+
+    }
+
+
+
+    T100PROJECT::T100ProjectCallback::treectrl_menu_project_create();
 }

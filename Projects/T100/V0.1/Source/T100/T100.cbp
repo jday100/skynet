@@ -135,6 +135,8 @@
 					<Add directory="include/project/mansion" />
 					<Add directory="include/project/data" />
 					<Add directory="include/project/wx" />
+					<Add directory="include/project/view/dialog" />
+					<Add directory="include/project/templates" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -273,6 +275,7 @@
 					<Add directory="include/project/mansion" />
 					<Add directory="include/project/data" />
 					<Add directory="include/project/wx" />
+					<Add directory="include/project/templates" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -819,9 +822,13 @@
 		<Unit filename="include/project/serve/T100ProjectState.h" />
 		<Unit filename="include/project/serve/T100ProjectStateAlone.h" />
 		<Unit filename="include/project/serve/T100ProjectStateEmbed.h" />
+		<Unit filename="include/project/serve/T100ProjectTemplateDrawer.h" />
 		<Unit filename="include/project/store/T100ProjectStore.h" />
+		<Unit filename="include/project/templates/T100ProjectTemplate.h" />
+		<Unit filename="include/project/templates/T100TemplateProjectEmpty.h" />
 		<Unit filename="include/project/view/T100ProjectFrame.h" />
 		<Unit filename="include/project/view/T100ProjectView.h" />
+		<Unit filename="include/project/view/dialog/T100ProjectCreateDialog.h" />
 		<Unit filename="include/project/view/panel/T100ProjectProjectsPanel.h" />
 		<Unit filename="include/project/wx/T100TreeCtrlItemData.h" />
 		<Unit filename="include/project/wx/T100TreeCtrlItemMenu.h" />
@@ -1315,9 +1322,13 @@
 		<Unit filename="src/project/serve/T100ProjectState.cpp" />
 		<Unit filename="src/project/serve/T100ProjectStateAlone.cpp" />
 		<Unit filename="src/project/serve/T100ProjectStateEmbed.cpp" />
+		<Unit filename="src/project/serve/T100ProjectTemplateDrawer.cpp" />
 		<Unit filename="src/project/store/T100ProjectStore.cpp" />
+		<Unit filename="src/project/templates/T100ProjectTemplate.cpp" />
+		<Unit filename="src/project/templates/T100TemplateProjectEmpty.cpp" />
 		<Unit filename="src/project/view/T100ProjectFrame.cpp" />
 		<Unit filename="src/project/view/T100ProjectView.cpp" />
+		<Unit filename="src/project/view/dialog/T100ProjectCreateDialog.cpp" />
 		<Unit filename="src/project/view/panel/T100ProjectProjectsPanel.cpp" />
 		<Unit filename="src/project/wx/T100TreeCtrlItemData.cpp" />
 		<Unit filename="src/project/wx/T100TreeCtrlItemMenu.cpp" />
@@ -1681,6 +1692,7 @@
 		<Unit filename="wxsmith/T100PainterDemoFrame.wxs" />
 		<Unit filename="wxsmith/T100PainterElementsDemoPanel.wxs" />
 		<Unit filename="wxsmith/T100PainterPropertiesDemoPanel.wxs" />
+		<Unit filename="wxsmith/T100ProjectCreateDialog.wxs" />
 		<Unit filename="wxsmith/T100ProjectProjectsPanel.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigHardwareAppendDemoDialog.wxs" />
 		<Unit filename="wxsmith/T100VPCConfigHardwareDemoDialog.wxs" />
@@ -1715,6 +1727,7 @@
 					<wxFrame wxs="wxsmith/T100PainterDemoFrame.wxs" src="src\wxwidgets\painter\frame\T100PainterDemoFrame.cpp" hdr="include\wxwidgets\painter\frame\T100PainterDemoFrame.h" fwddecl="0" i18n="1" name="T100PainterDemoFrame" language="CPP" />
 					<wxPanel wxs="wxsmith/T100PainterPropertiesDemoPanel.wxs" src="src\wxwidgets\painter\panel\T100PainterPropertiesDemoPanel.cpp" hdr="include\wxwidgets\painter\panel\T100PainterPropertiesDemoPanel.h" fwddecl="0" i18n="1" name="T100PainterPropertiesDemoPanel" language="CPP" />
 					<wxPanel wxs="wxsmith/T100ProjectProjectsPanel.wxs" src="src\project\view\panel\T100ProjectProjectsPanel.cpp" hdr="include\project\view\panel\T100ProjectProjectsPanel.h" fwddecl="0" i18n="1" name="T100ProjectProjectsPanel" language="CPP" />
+					<wxDialog wxs="wxsmith/T100ProjectCreateDialog.wxs" src="src\project\view\dialog\T100ProjectCreateDialog.cpp" hdr="include\project\view\dialog\T100ProjectCreateDialog.h" fwddecl="0" i18n="1" name="T100ProjectCreateDialog" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

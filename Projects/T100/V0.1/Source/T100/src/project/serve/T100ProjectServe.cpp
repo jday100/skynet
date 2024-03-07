@@ -14,12 +14,12 @@ T100ProjectServe::~T100ProjectServe()
 
 T100VOID T100ProjectServe::create()
 {
-
+    m_project_drawer    = T100NEW T100ProjectDrawer();
 }
 
 T100VOID T100ProjectServe::destroy()
 {
-
+    T100SAFE_DELETE(m_project_drawer)
 }
 
 T100BOOL T100ProjectServe::SaveFile(T100STRING file)
@@ -83,6 +83,11 @@ T100BOOL T100ProjectServe::Quit()
 }
 
 T100MansionInfo* T100ProjectServe::getCurrent()
+{
+
+}
+
+T100ProjectDrawer* T100ProjectServe::getProjectDrawer()
 {
 
 }

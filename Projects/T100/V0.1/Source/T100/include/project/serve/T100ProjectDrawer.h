@@ -1,6 +1,9 @@
 #ifndef T100PROJECTDRAWER_H
 #define T100PROJECTDRAWER_H
 
+#include "T100ProjectInfo.h"
+
+namespace T100PROJECT{
 
 class T100ProjectDrawer
 {
@@ -8,9 +11,13 @@ class T100ProjectDrawer
         T100ProjectDrawer();
         virtual ~T100ProjectDrawer();
 
+        T100BOOL            Create(T100ProjectInfo*);
+
     protected:
 
     private:
 };
+
+}
 
 #endif // T100PROJECTDRAWER_H
