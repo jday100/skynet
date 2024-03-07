@@ -3,6 +3,7 @@
 
 #include "T100Common.h"
 #include "T100Class.h"
+#include "T100DirectoryEntry.h"
 
 namespace T100Library{
 
@@ -17,6 +18,9 @@ class T100PathTools : public T100Class
         static T100BOOL             full(T100WSTRING, T100WSTRING&);
         static T100BOOL             split(T100WSTRING, T100WSTRING&, T100WSTRING&);
         static T100BOOL             chdir(T100WSTRING);
+;
+        static T100BOOL             enum_directories(T100WSTRING, T100DIRECTORY_ENTRY_VECTOR&);
+        static T100BOOL             enum_files(T100WSTRING, T100DIRECTORY_ENTRY_VECTOR&);
 
     protected:
 

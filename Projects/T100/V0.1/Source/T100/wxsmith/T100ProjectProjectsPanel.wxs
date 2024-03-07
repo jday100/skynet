@@ -3,6 +3,36 @@
 	<object class="wxPanel" name="T100ProjectProjectsPanel">
 		<pos_arg>1</pos_arg>
 		<size_arg>1</size_arg>
-		<object class="wxBoxSizer" variable="BoxSizer1" member="no" />
+		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+			<object class="sizeritem">
+				<object class="wxTreeCtrl" name="ID_TREECTRL_PROJECTS" variable="TreeCtrlProjects" member="yes">
+					<image_list>&lt;none&gt;</image_list>
+					<tree_items>
+						<item>TreeCtrlProjects</item>
+						<item>&lt;none&gt;</item>
+					</tree_items>
+					<items_text>
+						<item2>TreeCtrlProjects</item2>
+						<item2>&lt;none&gt;</item2>
+					</items_text>
+					<handler function="OnTreeCtrlProjectsBeginDrag" entry="EVT_TREE_BEGIN_DRAG" />
+					<handler function="OnTreeCtrlProjectsBeginRDrag" entry="EVT_TREE_BEGIN_RDRAG" />
+					<handler function="OnTreeCtrlProjectsEndDrag" entry="EVT_TREE_END_DRAG" />
+					<handler function="OnTreeCtrlProjectsBeginLabelEdit" entry="EVT_TREE_BEGIN_LABEL_EDIT" />
+					<handler function="OnTreeCtrlProjectsEndLabelEdit" entry="EVT_TREE_END_LABEL_EDIT" />
+					<handler function="OnTreeCtrlProjectsDeleteItem" entry="EVT_TREE_DELETE_ITEM" />
+					<handler function="OnTreeCtrlProjectsItemCollapsed" entry="EVT_TREE_ITEM_COLLAPSED" />
+					<handler function="OnTreeCtrlProjectsItemCollapsing" entry="EVT_TREE_ITEM_COLLAPSING" />
+					<handler function="OnTreeCtrlProjectsItem_bExpanded" entry="EVT_TREE_ITEM_EXPANDED" />
+					<handler function="OnTreeCtrlProjectsItem_bExpanding" entry="EVT_TREE_ITEM_EXPANDING" />
+					<handler function="OnTreeCtrlProjectsItemRightClick" entry="EVT_TREE_ITEM_RIGHT_CLICK" />
+					<handler function="OnTreeCtrlProjectsItemMiddleClick" entry="EVT_TREE_ITEM_MIDDLE_CLICK" />
+					<handler function="OnTreeCtrlProjectsItemMenu" entry="EVT_TREE_ITEM_MENU" />
+				</object>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
 	</object>
 </wxsmith>

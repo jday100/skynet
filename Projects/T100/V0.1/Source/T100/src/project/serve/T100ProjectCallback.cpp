@@ -5,6 +5,8 @@
 #include "T100ProjectStore.h"
 #include "T100ProjectServe.h"
 #include "T100ProjectView.h"
+#include "T100MansionInfo.h"
+
 
 namespace T100PROJECT{
 
@@ -50,10 +52,9 @@ T100ProjectView* T100ProjectCallback::getView()
 
 T100BOOL T100ProjectCallback::frame_menu_new(void* d)
 {
-    /*
     T100BOOL                result;
     T100STRING              file;
-    T100DiagramInfo*        diagram         = T100NULL;
+    T100MansionInfo*        mansion         = T100NULL;
 
     result = m_serve->opened();
     if(result){
@@ -69,11 +70,11 @@ T100BOOL T100ProjectCallback::frame_menu_new(void* d)
     }
 
     if(result){
-        result = m_serve->NewFile(file, diagram);
+        result = m_serve->NewFile(file, mansion);
     }
 
     if(result){
-        result = m_view->LoadFile(diagram);
+        result = m_view->LoadFile(mansion);
     }
 
     if(result){
@@ -81,7 +82,6 @@ T100BOOL T100ProjectCallback::frame_menu_new(void* d)
     }
 
     return result;
-    */
 }
 
 T100BOOL T100ProjectCallback::frame_menu_open(void* d)

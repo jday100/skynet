@@ -54,11 +54,23 @@ void T100ProjectFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint
 T100VOID T100ProjectFrame::create()
 {
     create_menu();
+
+    Connect(wxID_ANY,wxEVT_CLOSE_WINDOW,(wxObjectEventFunction)&T100ProjectFrame::OnClose);
 }
 
 T100VOID T100ProjectFrame::destroy()
 {
+    Disconnect(ID_MENUITEM_CLOSE);
+    Disconnect(ID_MENUITEM_SAVE);
+    Disconnect(ID_MENUITEM_SAVE_AS);
 
+    Disconnect(ID_MENUITEM_UNDO);
+    Disconnect(ID_MENUITEM_REDO);
+    Disconnect(ID_MENUITEM_CUT);
+    Disconnect(ID_MENUITEM_COPY);
+    Disconnect(ID_MENUITEM_PASTE);
+
+    Disconnect(ID_MENUITEM_PROJECTS);
 }
 
 T100BOOL T100ProjectFrame::create_menu()

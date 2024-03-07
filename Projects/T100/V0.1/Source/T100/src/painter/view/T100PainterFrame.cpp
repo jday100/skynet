@@ -55,6 +55,8 @@ void T100PainterFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint
 T100VOID T100PainterFrame::create()
 {
     create_menu();
+
+    Connect(wxID_ANY,wxEVT_CLOSE_WINDOW,(wxObjectEventFunction)&T100PainterFrame::OnClose);
 }
 
 T100VOID T100PainterFrame::destroy()

@@ -49,8 +49,10 @@ T100BOOL T100ProjectView::create_alone()
 
     m_projects_panel    = T100NEW T100ProjectProjectsPanel(m_frame);
 
+    m_projects_panel->create();
+
     m_manager->SetFrame(m_frame);
-    m_manager->AddPane(m_projects_panel, wxAuiPaneInfo().Name(wxT("Projects")).CenterPane());
+    m_manager->AddPane(m_projects_panel, wxAuiPaneInfo().Name(wxT("Projects")).BestSize(400, -1).Left());
 
     return T100TRUE;
 }
@@ -79,7 +81,41 @@ T100ProjectProjectsPanel* T100ProjectView::getProjectCtrl()
     return m_projects_panel;
 }
 
+T100BOOL T100ProjectView::OpenFile(T100STRING& file)
+{
+
+}
+
+T100BOOL T100ProjectView::CloseFile()
+{
+
+}
+
 T100BOOL T100ProjectView::Quit()
+{
+    if(m_manager){
+        m_manager->UnInit();
+    }
+
+    if(m_frame){
+        m_frame->Destroy();
+    }
+
+    if(m_callback){
+        (m_callback_frame->*m_callback)(T100NULL);
+    }
+
+    exit(0);
+
+    return T100TRUE;
+}
+
+T100BOOL T100ProjectView::LoadFile(T100MansionInfo* info)
+{
+
+}
+
+T100BOOL T100ProjectView::UpdateMenu()
 {
 
 }

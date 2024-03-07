@@ -1,5 +1,6 @@
 #include "T100PathTools.h"
 
+#include <io.h>
 #include <direct.h>
 
 namespace T100Library{
@@ -86,6 +87,52 @@ T100BOOL T100PathTools::chdir(T100WSTRING path)
     }
 
     return T100TRUE;
+}
+
+T100BOOL T100PathTools::enum_directories(T100WSTRING path, T100DIRECTORY_ENTRY_VECTOR& entries)
+{
+    long    handle      = 0;
+
+    struct _wfinddata_t  info;
+
+    handle  = _wfindfirst(L".", &info);
+
+    if(-1 == handle){
+
+    }else{
+        do{
+            if(info.attrib & _A_SUBDIR){
+                if(wcscmp(info.name, L".") != 0 && wcscmp(info.name, L"..") != 0){
+                    T100DirectoryEntry*     entry       = T100NEW T100DirectoryEntry(info.name);
+                    entries.push_back(entry);
+                }
+            }
+        }while(-1 != _wfindnext(handle, &info));
+        _findclose(handle);
+    }
+}
+
+T100BOOL T100PathTools::enum_files(T100WSTRING path, T100DIRECTORY_ENTRY_VECTOR& entries)
+{
+    long    handle      = 0;
+
+    struct _wfinddata_t  info;
+
+    handle  = _wfindfirst(path.c_str(), &info);
+
+    if(-1 == handle){
+
+    }else{
+        do{
+            if(info.attrib & _A_SUBDIR){
+                if(wcscmp(info.name, L".") != 0 && wcscmp(info.name, L"..") != 0){
+                    T100DirectoryEntry*     entry       = T100NEW T100DirectoryEntry(info.name);
+                    entries.push_back(entry);
+                }
+            }
+        }while(-1 != _wfindnext(handle, &info));
+        _findclose(handle);
+    }
 }
 
 }

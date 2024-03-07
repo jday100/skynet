@@ -98,7 +98,7 @@ T100VOID T100Project::quit()
 
 T100VOID T100Project::NewFile()
 {
-    //T100ProjectCallback::frame_menu_new();
+    T100ProjectCallback::frame_menu_new();
 }
 
 T100VOID T100Project::setParent(wxFrame* parent)
