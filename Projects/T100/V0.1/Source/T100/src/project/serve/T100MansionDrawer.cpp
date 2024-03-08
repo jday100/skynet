@@ -18,12 +18,19 @@ T100MansionDrawer::~T100MansionDrawer()
 
 T100VOID T100MansionDrawer::create()
 {
+    m_info              = T100NEW T100MansionInfo();
     m_project_drawer    = T100NEW T100ProjectDrawer(this);
 }
 
 T100VOID T100MansionDrawer::destroy()
 {
     T100SAFE_DELETE(m_project_drawer);
+    T100SAFE_DELETE(m_info);
+}
+
+T100STRING T100MansionDrawer::getName()
+{
+    return m_info->getName();
 }
 
 T100ProjectDrawer* T100MansionDrawer::getProjectDrawer()

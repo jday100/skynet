@@ -15,6 +15,7 @@ class T100MansionDrawer
 
         T100BOOL                    load(T100MansionInfo*, T100PROJECT_INFO_VECTOR*);
 
+        T100STRING                  getName();
         T100ProjectDrawer*          getProjectDrawer();
 
     protected:
@@ -22,6 +23,7 @@ class T100MansionDrawer
         T100VOID                    destroy();
 
     private:
+        T100MansionInfo*            m_info                      = T100NULL;
         T100ProjectDrawer*          m_project_drawer            = T100NULL;
 };
 

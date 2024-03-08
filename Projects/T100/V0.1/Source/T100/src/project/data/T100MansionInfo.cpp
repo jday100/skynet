@@ -22,6 +22,11 @@ T100VOID T100MansionInfo::destroy()
 
 }
 
+T100VOID T100MansionInfo::setName(T100STRING name)
+{
+    m_name  = name;
+}
+
 T100STRING T100MansionInfo::getName()
 {
     return m_name;

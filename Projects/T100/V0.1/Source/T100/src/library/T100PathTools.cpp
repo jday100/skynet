@@ -2,6 +2,7 @@
 
 #include <io.h>
 #include <direct.h>
+#include "T100StringTools.h"
 
 namespace T100Library{
 
@@ -66,6 +67,30 @@ T100BOOL T100PathTools::split(T100WSTRING file, T100WSTRING& path, T100WSTRING& 
     return T100TRUE;
 }
 
+T100BOOL T100PathTools::join(T100WSTRING str1, T100WSTRING str2, T100WSTRING& value)
+{
+    T100BOOL        result;
+
+    result  = T100StringTools::endsWith(str1, L"\\");
+    if(result){
+        result  = T100StringTools::startsWith(str2, L"\\");
+        if(result){
+
+        }else{
+            value   = str1 + str2;
+        }
+    }else{
+        result  = T100StringTools::startsWith(str2, L"\\");
+        if(result){
+            value   = str1 + str2;
+        }else{
+            value   = str1 + L"\\" + str2;
+        }
+    }
+
+    return T100TRUE;
+}
+
 T100WSTRING T100PathTools::getCwd()
 {
     T100WCHAR       buffer[_MAX_PATH];
@@ -74,6 +99,18 @@ T100WSTRING T100PathTools::getCwd()
     result = ::_wgetcwd(buffer, _MAX_PATH);
 
     return result;
+}
+
+T100BOOL T100PathTools::mkdir(T100WSTRING path)
+{
+    T100INT     result;
+
+    result  = ::_wmkdir(path.c_str());
+
+    if(-1 == result){
+        return T100FALSE;
+    }
+    return T100TRUE;
 }
 
 T100BOOL T100PathTools::chdir(T100WSTRING path)
@@ -85,7 +122,18 @@ T100BOOL T100PathTools::chdir(T100WSTRING path)
     if(-1 == result){
         return T100FALSE;
     }
+    return T100TRUE;
+}
 
+T100BOOL T100PathTools::rmdir(T100WSTRING path)
+{
+    T100INT     result;
+
+    result  = ::_wrmdir(path.c_str());
+
+    if(-1 == result){
+        return T100FALSE;
+    }
     return T100TRUE;
 }
 

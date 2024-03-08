@@ -15,16 +15,20 @@ class T100StringTools
         T100StringTools();
         virtual ~T100StringTools();
 
-        static T100BOOL             split(T100WSTRING, T100WSTRING, T100WSTRING_VECTOR&);
+        static T100BOOL                     startsWith(T100WSTRING, T100WSTRING);
 
-        static T100BOOL             code_convert(T100STDSTRING, T100STDSTRING, T100STDCHAR*, size_t, T100STDCHAR*, size_t);
+        static T100BOOL                     endsWith(T100WSTRING, T100WSTRING);
 
-        static T100LONG             to_long(T100WSTRING);
+        static T100BOOL                     split(T100WSTRING, T100WSTRING, T100WSTRING_VECTOR&);
 
-        static T100FLOAT            to_float(T100WSTRING);
+        static T100BOOL                     code_convert(T100STDSTRING, T100STDSTRING, T100STDCHAR*, size_t, T100STDCHAR*, size_t);
 
-        static T100STDSTRING        utf8_to_gbk(T100STDSTRING&);
-        static T100STDSTRING        gbk_to_utf8(T100STDSTRING&);
+        static T100LONG                     to_long(T100WSTRING);
+
+        static T100FLOAT                    to_float(T100WSTRING);
+
+        static T100STDSTRING                utf8_to_gbk(T100STDSTRING&);
+        static T100STDSTRING                gbk_to_utf8(T100STDSTRING&);
 
         static T100STRING_CODED_TYPE        test(T100CHAR8*);
 

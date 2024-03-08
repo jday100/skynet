@@ -20,7 +20,7 @@ T100BOOL T100TemplateProjectEmpty::Create()
 {
     T100BOOL            result;
 
-    //result  = getMansionDrawer()->getProjectDrawer()->Create(getProjectInfo());
+    result  = getMansionDrawer()->getProjectDrawer()->mkdir(getProjectInfo());
 
 
 

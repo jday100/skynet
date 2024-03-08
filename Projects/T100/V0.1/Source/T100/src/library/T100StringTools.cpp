@@ -16,6 +16,40 @@ T100StringTools::~T100StringTools()
     //dtor
 }
 
+T100BOOL T100StringTools::startsWith(T100WSTRING source, T100WSTRING target)
+{
+    T100BOOL        result;
+
+    T100INT         slength;
+    T100INT         tlength;
+
+    slength = source.length();
+    tlength = target.length();
+
+    if(slength < tlength){
+        return T100FALSE;
+    }else{
+
+    }
+}
+
+T100BOOL T100StringTools::endsWith(T100WSTRING source, T100WSTRING target)
+{
+    T100BOOL        result;
+
+    T100INT         slength;
+    T100INT         tlength;
+
+    slength = source.length();
+    tlength = target.length();
+
+    if(slength < tlength){
+        return T100FALSE;
+    }else{
+
+    }
+}
+
 T100BOOL T100StringTools::split(T100WSTRING line, T100WSTRING mask, T100WSTRING_VECTOR& strs)
 {
     T100BOOL        result          = T100TRUE;

@@ -10,6 +10,7 @@ class T100MansionDrawer;
 
 class T100ProjectDrawer
 {
+    friend class T100TemplateProjectEmpty;
     public:
         T100ProjectDrawer(T100MansionDrawer*);
         virtual ~T100ProjectDrawer();
@@ -19,6 +20,8 @@ class T100ProjectDrawer
     protected:
         T100VOID            create();
         T100VOID            destroy();
+
+        T100BOOL            mkdir(T100ProjectInfo*);
 
     private:
         T100MansionDrawer*                  m_mansion_drawer        = T100NULL;

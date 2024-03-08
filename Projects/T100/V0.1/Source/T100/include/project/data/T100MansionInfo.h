@@ -11,6 +11,7 @@ class T100MansionInfo
         T100MansionInfo();
         virtual ~T100MansionInfo();
 
+        T100VOID            setName(T100STRING);
         T100STRING          getName();
 
     protected:
