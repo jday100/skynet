@@ -137,6 +137,9 @@
 					<Add directory="include/project/wx" />
 					<Add directory="include/project/view/dialog" />
 					<Add directory="include/project/templates" />
+					<Add directory="include/library/database" />
+					<Add directory="../../ms/bin/CodeBlocks/MinGW/opt/include" />
+					<Add directory="include/project/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -276,6 +279,8 @@
 					<Add directory="include/project/data" />
 					<Add directory="include/project/wx" />
 					<Add directory="include/project/templates" />
+					<Add directory="include/library/database" />
+					<Add directory="include/project/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -701,11 +706,13 @@
 		<Unit filename="include/library/T100StringEqual.h" />
 		<Unit filename="include/library/T100StringHash.h" />
 		<Unit filename="include/library/T100StringTools.h" />
+		<Unit filename="include/library/T100Task.h" />
 		<Unit filename="include/library/T100Test.h" />
 		<Unit filename="include/library/T100TestCommon.h" />
 		<Unit filename="include/library/T100TestNew.h" />
 		<Unit filename="include/library/T100TestTools.h" />
 		<Unit filename="include/library/T100Thread.h" />
+		<Unit filename="include/library/T100ThreadTask.h" />
 		<Unit filename="include/library/T100Timer.h" />
 		<Unit filename="include/library/T100Unicode.h" />
 		<Unit filename="include/library/T100Vessel.h" />
@@ -730,6 +737,10 @@
 		<Unit filename="include/library/console/T100ConsoleTerminalParser.h" />
 		<Unit filename="include/library/console/T100ConsoleTerminalThread.h" />
 		<Unit filename="include/library/console/T100ConsoleWindows.h" />
+		<Unit filename="include/library/database/T100Database.h" />
+		<Unit filename="include/library/database/T100DatabaseBase.h" />
+		<Unit filename="include/library/database/T100SQL.h" />
+		<Unit filename="include/library/database/T100SQLite3.h" />
 		<Unit filename="include/library/file/T100BufferedFile.h" />
 		<Unit filename="include/library/file/T100BufferedFileReader.h" />
 		<Unit filename="include/library/file/T100BufferedFileStream.h" />
@@ -824,6 +835,7 @@
 		<Unit filename="include/project/serve/T100ProjectStateEmbed.h" />
 		<Unit filename="include/project/serve/T100ProjectTemplateDrawer.h" />
 		<Unit filename="include/project/store/T100ProjectStore.h" />
+		<Unit filename="include/project/task/T100WxProjectCreateTask.h" />
 		<Unit filename="include/project/templates/T100ProjectTemplate.h" />
 		<Unit filename="include/project/templates/T100TemplateProjectEmpty.h" />
 		<Unit filename="include/project/view/T100ProjectFrame.h" />
@@ -953,6 +965,7 @@
 		<Unit filename="include/wxwidgets/T100WxApp.h" />
 		<Unit filename="include/wxwidgets/T100WxAppManager.h" />
 		<Unit filename="include/wxwidgets/T100WxDC.h" />
+		<Unit filename="include/wxwidgets/T100WxThreadTask.h" />
 		<Unit filename="include/wxwidgets/painter/frame/T100PainterDemoFrame.h" />
 		<Unit filename="include/wxwidgets/painter/panel/T100PainterElementsDemoPanel.h" />
 		<Unit filename="include/wxwidgets/painter/panel/T100PainterPropertiesDemoPanel.h" />
@@ -1216,10 +1229,12 @@
 		<Unit filename="src/library/T100StringEqual.cpp" />
 		<Unit filename="src/library/T100StringHash.cpp" />
 		<Unit filename="src/library/T100StringTools.cpp" />
+		<Unit filename="src/library/T100Task.cpp" />
 		<Unit filename="src/library/T100Test.cpp" />
 		<Unit filename="src/library/T100TestNew.cpp" />
 		<Unit filename="src/library/T100TestTools.cpp" />
 		<Unit filename="src/library/T100Thread.cpp" />
+		<Unit filename="src/library/T100ThreadTask.cpp" />
 		<Unit filename="src/library/T100Timer.cpp" />
 		<Unit filename="src/library/T100Unicode.cpp" />
 		<Unit filename="src/library/T100Writer.cpp" />
@@ -1240,6 +1255,10 @@
 		<Unit filename="src/library/console/T100ConsoleTerminalParser.cpp" />
 		<Unit filename="src/library/console/T100ConsoleTerminalThread.cpp" />
 		<Unit filename="src/library/console/T100ConsoleWindows.cpp" />
+		<Unit filename="src/library/database/T100Database.cpp" />
+		<Unit filename="src/library/database/T100DatabaseBase.cpp" />
+		<Unit filename="src/library/database/T100SQL.cpp" />
+		<Unit filename="src/library/database/T100SQLite3.cpp" />
 		<Unit filename="src/library/file/T100BufferedFile.cpp" />
 		<Unit filename="src/library/file/T100BufferedFileReader.cpp" />
 		<Unit filename="src/library/file/T100BufferedFileStream.cpp" />
@@ -1324,6 +1343,7 @@
 		<Unit filename="src/project/serve/T100ProjectStateEmbed.cpp" />
 		<Unit filename="src/project/serve/T100ProjectTemplateDrawer.cpp" />
 		<Unit filename="src/project/store/T100ProjectStore.cpp" />
+		<Unit filename="src/project/task/T100WxProjectCreateTask.cpp" />
 		<Unit filename="src/project/templates/T100ProjectTemplate.cpp" />
 		<Unit filename="src/project/templates/T100TemplateProjectEmpty.cpp" />
 		<Unit filename="src/project/view/T100ProjectFrame.cpp" />
@@ -1449,6 +1469,7 @@
 		<Unit filename="src/wxwidgets/T100WxApp.cpp" />
 		<Unit filename="src/wxwidgets/T100WxAppManager.cpp" />
 		<Unit filename="src/wxwidgets/T100WxDC.cpp" />
+		<Unit filename="src/wxwidgets/T100WxThreadTask.cpp" />
 		<Unit filename="src/wxwidgets/painter/frame/T100PainterDemoFrame.cpp" />
 		<Unit filename="src/wxwidgets/painter/panel/T100PainterElementsDemoPanel.cpp" />
 		<Unit filename="src/wxwidgets/painter/panel/T100PainterPropertiesDemoPanel.cpp" />

@@ -5,6 +5,7 @@
 #include "T100String.h"
 #include "T100MansionInfo.h"
 #include "T100ProjectDrawer.h"
+#include "T100MansionDrawer.h"
 
 namespace T100PROJECT{
 
@@ -26,6 +27,7 @@ class T100ProjectServe
         T100MansionInfo*        getCurrent();
 
         T100ProjectDrawer*      getProjectDrawer();
+        T100MansionDrawer*      getMansionDrawer();
 
     public:
         T100BOOL                SaveFile(T100STRING);
@@ -44,6 +46,7 @@ class T100ProjectServe
         std::atomic_bool        m_modified;
 
         T100MansionInfo*        m_current           = T100NULL;
+        T100MansionDrawer*      m_mansion_drawer    = T100NULL;
         T100ProjectDrawer*      m_project_drawer    = T100NULL;
 };
 

@@ -8,8 +8,10 @@ namespace T100PROJECT{
 class T100TemplateProjectEmpty : public T100ProjectTemplate
 {
     public:
-        T100TemplateProjectEmpty();
+        T100TemplateProjectEmpty(T100MansionDrawer*, T100ProjectInfo*);
         virtual ~T100TemplateProjectEmpty();
+
+        T100BOOL            Create();
 
     protected:
 

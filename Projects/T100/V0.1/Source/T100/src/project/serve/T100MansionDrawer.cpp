@@ -7,11 +7,28 @@ namespace T100PROJECT{
 T100MansionDrawer::T100MansionDrawer()
 {
     //ctor
+    create();
 }
 
 T100MansionDrawer::~T100MansionDrawer()
 {
     //dtor
+    destroy();
+}
+
+T100VOID T100MansionDrawer::create()
+{
+    m_project_drawer    = T100NEW T100ProjectDrawer(this);
+}
+
+T100VOID T100MansionDrawer::destroy()
+{
+    T100SAFE_DELETE(m_project_drawer);
+}
+
+T100ProjectDrawer* T100MansionDrawer::getProjectDrawer()
+{
+    return m_project_drawer;
 }
 
 T100BOOL T100MansionDrawer::load(T100MansionInfo* mansion, T100PROJECT_INFO_VECTOR* projects)

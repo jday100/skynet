@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "T100String.h"
-
+#include "T100ProjectCommon.h"
 
 namespace T100PROJECT{
 
@@ -16,13 +16,17 @@ class T100ProjectInfo
         T100ProjectInfo();
         virtual ~T100ProjectInfo();
 
-        T100VOID            setName(T100STRING);
-        T100STRING          getName();
+        T100VOID                    setName(T100STRING);
+        T100STRING                  getName();
+
+        T100VOID                    setType(T100PROJECT_TYPE);
+        T100PROJECT_TYPE            getType();
 
     protected:
 
     private:
-        T100STRING          m_name;
+        T100STRING                  m_name;
+        T100PROJECT_TYPE            m_type          = T100PROJECT_TYPE_NONE;
 };
 
 }

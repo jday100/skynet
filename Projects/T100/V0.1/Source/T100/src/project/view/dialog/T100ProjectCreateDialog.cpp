@@ -5,8 +5,10 @@
 #include <wx/string.h>
 //*)
 
+#include "T100ProjectCommon.h"
 #include "T100ProjectCallback.h"
 #include "T100ProjectInfo.h"
+#include "T100WxProjectCreateTask.h"
 
 //(*IdInit(T100ProjectCreateDialog)
 const long T100ProjectCreateDialog::ID_STATICTEXT1 = wxNewId();
@@ -85,6 +87,26 @@ void T100ProjectCreateDialog::OnButtonApplyClick(wxCommandEvent& event)
     info    = T100NEW T100PROJECT::T100ProjectInfo();
     info->setName(TextCtrl1->GetValue().ToStdWstring());
 
+    switch(Choice1->GetSelection()){
+    case 0:
+        {
+            info->setType(T100PROJECT::T100PROJECT_TYPE_EMPTY);
+        }
+        break;
+    }
+
+    T100PROJECT::T100WxProjectCreateTask*    task            = T100NEW T100PROJECT::T100WxProjectCreateTask();
+
+    task->setProjectInfo(info);
+    task->run();
+
+    /*
+    T100BOOL            result;
+    T100PROJECT::T100ProjectInfo*       info            = T100NULL;
+
+    info    = T100NEW T100PROJECT::T100ProjectInfo();
+    info->setName(TextCtrl1->GetValue().ToStdWstring());
+
     result  = T100PROJECT::T100ProjectCallback::dialog_project_create_apply(info);
 
     if(result){
@@ -92,5 +114,6 @@ void T100ProjectCreateDialog::OnButtonApplyClick(wxCommandEvent& event)
     }else{
 
     }
+    */
 }
 

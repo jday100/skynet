@@ -5,20 +5,24 @@ namespace T100PROJECT{
 T100ProjectServe::T100ProjectServe()
 {
     //ctor
+    create();
 }
 
 T100ProjectServe::~T100ProjectServe()
 {
     //dtor
+    destroy();
 }
 
 T100VOID T100ProjectServe::create()
 {
-    m_project_drawer    = T100NEW T100ProjectDrawer();
+    m_mansion_drawer    = T100NEW T100MansionDrawer();
+    m_project_drawer    = T100NEW T100ProjectDrawer(m_mansion_drawer);
 }
 
 T100VOID T100ProjectServe::destroy()
 {
+    T100SAFE_DELETE(m_mansion_drawer);
     T100SAFE_DELETE(m_project_drawer)
 }
 
@@ -89,7 +93,12 @@ T100MansionInfo* T100ProjectServe::getCurrent()
 
 T100ProjectDrawer* T100ProjectServe::getProjectDrawer()
 {
+    return m_project_drawer;
+}
 
+T100MansionDrawer* T100ProjectServe::getMansionDrawer()
+{
+    return m_mansion_drawer;
 }
 
 }
