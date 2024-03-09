@@ -22,6 +22,8 @@ class T100MansionDrawer
         T100VOID                    create();
         T100VOID                    destroy();
 
+        T100VOID                    init();
+
     private:
         T100MansionInfo*            m_info                      = T100NULL;
         T100ProjectDrawer*          m_project_drawer            = T100NULL;

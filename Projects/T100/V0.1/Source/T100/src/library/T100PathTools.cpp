@@ -75,7 +75,7 @@ T100BOOL T100PathTools::join(T100WSTRING str1, T100WSTRING str2, T100WSTRING& va
     if(result){
         result  = T100StringTools::startsWith(str2, L"\\");
         if(result){
-
+            value   = str1 + str2.substr(1);
         }else{
             value   = str1 + str2;
         }

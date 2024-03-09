@@ -22,6 +22,12 @@ T100BOOL T100StringTools::startsWith(T100WSTRING source, T100WSTRING target)
 
     T100INT         slength;
     T100INT         tlength;
+    T100INT         sstart;
+    T100INT         sstop;
+    T100INT         tstart;
+    T100INT         tstop;
+    T100WCHAR       schar;
+    T100WCHAR       tchar;
 
     slength = source.length();
     tlength = target.length();
@@ -29,7 +35,22 @@ T100BOOL T100StringTools::startsWith(T100WSTRING source, T100WSTRING target)
     if(slength < tlength){
         return T100FALSE;
     }else{
+        sstart  = 0;
+        sstop   = tlength;
+        tstart  = 0;
+        tstop   = tlength;
 
+        for(int i=0;i<tlength;i++){
+            schar   = source[sstart++];
+            tchar   = target[tstart++];
+
+            if(schar == tchar){
+
+            }else{
+                return T100FALSE;
+            }
+        }
+        return T100TRUE;
     }
 }
 
@@ -39,6 +60,12 @@ T100BOOL T100StringTools::endsWith(T100WSTRING source, T100WSTRING target)
 
     T100INT         slength;
     T100INT         tlength;
+    T100INT         sstart;
+    T100INT         sstop;
+    T100INT         tstart;
+    T100INT         tstop;
+    T100WCHAR       schar;
+    T100WCHAR       tchar;
 
     slength = source.length();
     tlength = target.length();
@@ -46,7 +73,22 @@ T100BOOL T100StringTools::endsWith(T100WSTRING source, T100WSTRING target)
     if(slength < tlength){
         return T100FALSE;
     }else{
+        sstart  = slength - tlength;
+        sstop   = slength;
+        tstart  = 0;
+        tstop   = tlength;
 
+        for(int i=0;i<tlength;i++){
+            schar   = source[sstart++];
+            tchar   = target[tstart++];
+
+            if(schar == tchar){
+
+            }else{
+                return T100FALSE;
+            }
+        }
+        return T100TRUE;
     }
 }
 

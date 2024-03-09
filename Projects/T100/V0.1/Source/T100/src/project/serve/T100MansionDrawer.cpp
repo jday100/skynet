@@ -1,5 +1,6 @@
 #include "T100MansionDrawer.h"
 
+#include "T100Folder.h"
 #include "T100PathTools.h"
 
 namespace T100PROJECT{
@@ -20,6 +21,8 @@ T100VOID T100MansionDrawer::create()
 {
     m_info              = T100NEW T100MansionInfo();
     m_project_drawer    = T100NEW T100ProjectDrawer(this);
+
+    init();
 }
 
 T100VOID T100MansionDrawer::destroy()
@@ -36,6 +39,23 @@ T100STRING T100MansionDrawer::getName()
 T100ProjectDrawer* T100MansionDrawer::getProjectDrawer()
 {
     return m_project_drawer;
+}
+
+T100VOID T100MansionDrawer::init()
+{
+    T100Library::T100Folder             folder(m_info->getName().to_wstring());
+
+    if(folder.exists()){
+
+    }else{
+        if(T100Library::T100PathTools::mkdir(m_info->getName().to_wstring())){
+            if(folder.exists()){
+
+            }else{
+
+            }
+        }
+    }
 }
 
 T100BOOL T100MansionDrawer::load(T100MansionInfo* mansion, T100PROJECT_INFO_VECTOR* projects)
