@@ -15,6 +15,7 @@ class T100Buffer
 
         T100WCHAR*          data();
         INT32               length();
+        INT32               size();
 
         T100BOOL            next(T100WCHAR&);
 

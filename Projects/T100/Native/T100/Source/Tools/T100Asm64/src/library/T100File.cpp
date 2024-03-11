@@ -37,14 +37,14 @@ T100BOOL T100File::read(T100Buffer& buffer)
 {
     INT32       length;
 
-    length  = m_wfs->read(buffer.data(), buffer.length()).gcount();
+    length  = m_wfs->read(buffer.data(), buffer.size()).gcount();
 
     if(0 == length){
         return T100FALSE;
-    }else if(length < buffer.length()){
+    }else if(length < buffer.size()){
         buffer.setLength(length);
         return T100TRUE;
-    }else if(length == buffer.length()){
+    }else if(length == buffer.size()){
         buffer.setLength(length);
         return T100TRUE;
     }

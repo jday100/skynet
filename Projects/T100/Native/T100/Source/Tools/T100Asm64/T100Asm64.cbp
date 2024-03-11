@@ -11,6 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="work/test_asm.asm " />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include/library" />
@@ -48,6 +49,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/T100Asm64.h" />
+		<Unit filename="include/T100Asm64CmdLine.h" />
+		<Unit filename="include/T100Asm64Compiler.h" />
+		<Unit filename="include/T100Asm64Linker.h" />
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/base/T100Asm64Common.h" />
 		<Unit filename="include/base/T100Compiler.h" />
@@ -87,6 +92,7 @@
 		<Unit filename="include/scanner/T100Asm64KeywordToken.h" />
 		<Unit filename="include/scanner/T100Asm64LetterScanner.h" />
 		<Unit filename="include/scanner/T100Asm64LetterToken.h" />
+		<Unit filename="include/scanner/T100Asm64ScannerTools.h" />
 		<Unit filename="include/scanner/T100Asm64SentenceScanner.h" />
 		<Unit filename="include/scanner/T100Asm64SentenceToken.h" />
 		<Unit filename="include/scanner/T100Asm64SourceScanner.h" />
@@ -96,9 +102,11 @@
 		<Unit filename="include/scanner/T100AsmKeywordScanner.h" />
 		<Unit filename="include/sentence/T100Asm64Sentence.h" />
 		<Unit filename="include/syntax/T100SentenceComment.h" />
-		<Unit filename="main.cpp">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="main.cpp" />
+		<Unit filename="src/T100Asm64.cpp" />
+		<Unit filename="src/T100Asm64CmdLine.cpp" />
+		<Unit filename="src/T100Asm64Compiler.cpp" />
+		<Unit filename="src/T100Asm64Linker.cpp" />
 		<Unit filename="src/base/T100Compiler.cpp" />
 		<Unit filename="src/base/T100Linker.cpp" />
 		<Unit filename="src/base/T100Runner.cpp" />
@@ -136,16 +144,21 @@
 		<Unit filename="src/scanner/T100Asm64KeywordToken.cpp" />
 		<Unit filename="src/scanner/T100Asm64LetterScanner.cpp" />
 		<Unit filename="src/scanner/T100Asm64LetterToken.cpp" />
+		<Unit filename="src/scanner/T100Asm64ScannerTools.cpp" />
 		<Unit filename="src/scanner/T100Asm64SentenceScanner.cpp" />
 		<Unit filename="src/scanner/T100Asm64SentenceToken.cpp" />
 		<Unit filename="src/scanner/T100Asm64SourceScanner.cpp" />
 		<Unit filename="src/scanner/T100Asm64SourceToken.cpp" />
 		<Unit filename="src/scanner/T100Asm64StringScanner.cpp" />
 		<Unit filename="src/scanner/T100Asm64StringToken.cpp" />
-		<Unit filename="src/scanner/T100AsmKeywordScanner.cpp" />
 		<Unit filename="src/sentence/T100Asm64Sentence.cpp" />
 		<Unit filename="src/syntax/T100SentenceComment.cpp" />
-		<Unit filename="wmain.cpp" />
+		<Unit filename="wmain.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="work/test_asm.asm">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

@@ -13,11 +13,8 @@ class T100Asm64LetterScanner : public T100Scanner
         T100Asm64LetterScanner();
         virtual ~T100Asm64LetterScanner();
 
-        T100BOOL            open();
+        T100BOOL            open(T100STRING);
         T100BOOL            close();
-
-        T100VOID            setSource(T100STRING);
-        T100STRING          getSource();
 
         T100BOOL            next(T100Token&);
 

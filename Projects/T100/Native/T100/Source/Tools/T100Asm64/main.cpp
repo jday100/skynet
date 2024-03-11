@@ -1,9 +1,8 @@
-#include <iostream>
+#include "T100Asm64CmdLine.h"
 
-using namespace std;
-
-int main()
+int main(int argc, char* argv[])
 {
-    cout << "Hello world!" << endl;
-    return 0;
+    T100Asm64CmdLine        cmdline;
+
+    return cmdline.parse(argc, argv);
 }

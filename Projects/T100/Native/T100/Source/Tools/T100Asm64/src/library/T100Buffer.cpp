@@ -33,6 +33,11 @@ INT32 T100Buffer::length()
     return m_length;
 }
 
+INT32 T100Buffer::size()
+{
+    return m_size;
+}
+
 T100BOOL T100Buffer::next(T100WCHAR& letter)
 {
     if(m_index >= m_length){
