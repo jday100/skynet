@@ -16,6 +16,10 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/database" />
+					<Add directory="include/fs/file" />
+					<Add directory="include/string" />
+					<Add directory="include/app" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -34,6 +38,10 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/database" />
+					<Add directory="include/fs/file" />
+					<Add directory="include/string" />
+					<Add directory="include/app" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -65,9 +73,17 @@
 		<Unit filename="T100LibraryApp.h" />
 		<Unit filename="T100LibraryMain.cpp" />
 		<Unit filename="T100LibraryMain.h" />
+		<Unit filename="include/app/T100App.h" />
+		<Unit filename="include/database/T100Database.h" />
+		<Unit filename="include/fs/file/T100File.h" />
+		<Unit filename="include/string/T100String.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/app/T100App.cpp" />
+		<Unit filename="src/database/T100Database.cpp" />
+		<Unit filename="src/fs/file/T100File.cpp" />
+		<Unit filename="src/string/T100String.cpp" />
 		<Unit filename="wxsmith/T100Libraryframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

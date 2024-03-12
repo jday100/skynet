@@ -16,6 +16,7 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/wx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -34,6 +35,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/wx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -65,9 +67,11 @@
 		<Unit filename="T100SuiteApp.h" />
 		<Unit filename="T100SuiteMain.cpp" />
 		<Unit filename="T100SuiteMain.h" />
+		<Unit filename="include/wx/T100WxApp.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/wx/T100WxApp.cpp" />
 		<Unit filename="wxsmith/T100Suiteframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
