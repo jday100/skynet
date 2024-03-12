@@ -16,11 +16,13 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="../../T100Suite/include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 				</ResourceCompiler>
 				<Linker>
+					<Add library="../../build/libT100Suite.a" />
 					<Add library="libwxmsw30ud.a" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>

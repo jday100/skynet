@@ -42,6 +42,7 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*IdInit(T100DiskerFrame)
+const long T100DiskerFrame::ID_CUSTOM_DISK_LIST = wxNewId();
 const long T100DiskerFrame::idMenuQuit = wxNewId();
 const long T100DiskerFrame::idMenuAbout = wxNewId();
 const long T100DiskerFrame::ID_STATUSBAR1 = wxNewId();
@@ -55,6 +56,7 @@ END_EVENT_TABLE()
 T100DiskerFrame::T100DiskerFrame(wxWindow* parent,wxWindowID id)
 {
     //(*Initialize(T100DiskerFrame)
+    wxBoxSizer* BoxSizer1;
     wxMenu* Menu1;
     wxMenu* Menu2;
     wxMenuBar* MenuBar1;
@@ -62,6 +64,10 @@ T100DiskerFrame::T100DiskerFrame(wxWindow* parent,wxWindowID id)
     wxMenuItem* MenuItem2;
 
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
+    BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);
+    DiskList = new T100WxDiskList(this,ID_CUSTOM_DISK_LIST,wxDefaultPosition,wxDefaultSize);
+    BoxSizer1->Add(DiskList, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    SetSizer(BoxSizer1);
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
     MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
@@ -78,6 +84,8 @@ T100DiskerFrame::T100DiskerFrame(wxWindow* parent,wxWindowID id)
     StatusBar1->SetFieldsCount(1,__wxStatusBarWidths_1);
     StatusBar1->SetStatusStyles(1,__wxStatusBarStyles_1);
     SetStatusBar(StatusBar1);
+    BoxSizer1->Fit(this);
+    BoxSizer1->SetSizeHints(this);
 
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100DiskerFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100DiskerFrame::OnAbout);

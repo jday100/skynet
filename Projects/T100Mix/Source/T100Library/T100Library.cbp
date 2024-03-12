@@ -20,6 +20,9 @@
 					<Add directory="include/fs/file" />
 					<Add directory="include/string" />
 					<Add directory="include/app" />
+					<Add directory="include" />
+					<Add directory="include/common" />
+					<Add directory="../T100Native/include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -42,6 +45,8 @@
 					<Add directory="include/fs/file" />
 					<Add directory="include/string" />
 					<Add directory="include/app" />
+					<Add directory="include" />
+					<Add directory="include/common" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -73,7 +78,9 @@
 		<Unit filename="T100LibraryApp.h" />
 		<Unit filename="T100LibraryMain.cpp" />
 		<Unit filename="T100LibraryMain.h" />
+		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/app/T100App.h" />
+		<Unit filename="include/common/T100X86Common.h" />
 		<Unit filename="include/database/T100Database.h" />
 		<Unit filename="include/fs/file/T100File.h" />
 		<Unit filename="include/string/T100String.h" />

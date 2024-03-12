@@ -1,6 +1,7 @@
 #ifndef T100STRING_H
 #define T100STRING_H
 
+#include "T100Common.h"
 
 class T100String
 {

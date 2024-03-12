@@ -12,7 +12,9 @@
 
 //(*Headers(T100DiskerFrame)
 #include <wx/frame.h>
+#include <wx/fs/T100WxDiskList.h>
 #include <wx/menu.h>
+#include <wx/sizer.h>
 #include <wx/statusbr.h>
 //*)
 
@@ -31,12 +33,14 @@ class T100DiskerFrame: public wxFrame
         //*)
 
         //(*Identifiers(T100DiskerFrame)
+        static const long ID_CUSTOM_DISK_LIST;
         static const long idMenuQuit;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
         //*)
 
         //(*Declarations(T100DiskerFrame)
+        T100WxDiskList* DiskList;
         wxStatusBar* StatusBar1;
         //*)
 
