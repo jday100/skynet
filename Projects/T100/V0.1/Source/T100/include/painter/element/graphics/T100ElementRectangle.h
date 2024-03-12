@@ -16,6 +16,7 @@ class T100ElementRectangle : public T100ElementBase
         T100BOOL                    draw(wxDC&);
         T100ElementRectangle*       Clone();
         T100BOOL                    Hit(T100INT, T100INT);
+        T100BOOL                    Edit();
 
         T100BOOL                    Update(wxPropertyGrid*);
         T100BOOL                    Move();

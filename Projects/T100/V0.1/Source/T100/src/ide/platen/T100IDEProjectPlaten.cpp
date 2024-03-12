@@ -27,6 +27,11 @@ T100VOID T100IDEProjectPlaten::destroy()
 
 }
 
+::T100ProjectProjectsPanel* T100IDEProjectPlaten::getProjectsPanel()
+{
+    return m_projects_panel;
+}
+
 T100BOOL T100IDEProjectPlaten::show()
 {
     return T100TRUE;

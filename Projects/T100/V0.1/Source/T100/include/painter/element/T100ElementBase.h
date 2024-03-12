@@ -36,6 +36,7 @@ class T100ElementBase
         virtual T100BOOL            draw(wxDC&) = 0;
         virtual T100ElementBase*    Clone() = 0;
         virtual T100BOOL            Hit(T100INT, T100INT) = 0;
+        virtual T100BOOL            Edit() = 0;
 
         virtual T100VOID            Resize(wxDC&);
         virtual T100VOID            Position();

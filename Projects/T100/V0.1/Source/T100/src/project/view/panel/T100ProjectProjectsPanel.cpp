@@ -76,6 +76,12 @@ T100BOOL T100ProjectProjectsPanel::create()
 
     TreeCtrlProjects->SetItemData(root, data);
 
+    for(auto item : *projects){
+        if(item){
+            TreeCtrlProjects->AppendItem(root, item->getName().to_wstring());
+        }
+    }
+
 
     Connect(ID_TREECTRL_MENUITEM_PROJECT_CREATE,        wxEVT_COMMAND_MENU_SELECTED,        (wxObjectEventFunction)&T100ProjectProjectsPanel::OnItemMenuProjectCreate);
 

@@ -14,18 +14,18 @@ class T100Asm64KeywordScanner : public T100Scanner
         T100Asm64KeywordScanner();
         virtual ~T100Asm64KeywordScanner();
 
-        T100VOID            setSource(T100Scanner*);
-        T100Scanner*        getSource();
+        T100VOID                    setSource(T100Scanner*);
+        T100Scanner*                getSource();
 
-        T100BOOL            next(T100Token&);
+        T100BOOL                    next(T100Token&);
 
     protected:
         T100Asm64KeywordToken*      m_token         = T100NULL;
         T100Asm64StringToken        m_item;
         T100Asm64KeywordTable       m_table;
 
-        T100BOOL        append();
-        T100BOOL        classify();
+        T100BOOL                    append();
+        T100BOOL                    classify();
 
     private:
         T100Asm64StringScanner*     m_scanner       = T100NULL;

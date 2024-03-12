@@ -16,6 +16,7 @@ class T100ElementCircle : public T100ElementBase
         T100BOOL            draw(wxDC&);
         T100ElementCircle*  Clone();
         T100BOOL            Hit(T100INT, T100INT);
+        T100BOOL            Edit();
 
         T100BOOL            Update(wxPropertyGrid*);
 

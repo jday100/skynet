@@ -42,11 +42,14 @@ T100BOOL T100Asm64LetterScanner::close()
 
 T100BOOL T100Asm64LetterScanner::next(T100Token& token)
 {
+    T100BOOL            result;
+
     m_token = dynamic_cast<T100Asm64LetterToken*>(&token);
-    read();
+    result  = read();
 
     m_token->value  = m_item;
 
+    return result;
 }
 
 T100BOOL T100Asm64LetterScanner::read()
@@ -62,6 +65,12 @@ T100BOOL T100Asm64LetterScanner::read()
         }
     }
     result  = m_buffer->next(m_item);
+
+    if(result){
+
+    }else{
+
+    }
 
     return result;
 }

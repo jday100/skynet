@@ -63,6 +63,10 @@ T100BOOL T100ElementText::draw(wxDC& dc)
         T100PainterCallback::getView()->getPaintCtrl()->Resize(m_tail_x, m_tail_y);
     }
 
+    if(m_caret){
+        m_caret->Show();
+    }
+
     return T100TRUE;
 }
 
@@ -82,6 +86,15 @@ T100ElementText* T100ElementText::Clone()
 T100BOOL T100ElementText::Hit(T100INT x, T100INT y)
 {
     return T100Math::T100Planimetry::Hit(m_origin_x, m_origin_y, m_tail_x, m_tail_y, x, y);
+}
+
+T100BOOL T100ElementText::Edit()
+{
+    if(m_caret){
+
+    }else{
+        m_caret = T100PainterCallback::getView()->getPaintCtrl()->GetCaret();
+    }
 }
 
 T100BOOL T100ElementText::PaintMove(T100INT x, T100INT y)

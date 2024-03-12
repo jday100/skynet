@@ -7,6 +7,7 @@
 
 namespace T100PROJECT{
 
+const long T100ProjectFrame::ID_STATUSBAR = wxNewId();
 const long T100ProjectFrame::ID_MENUITEM_NEW = wxNewId();
 const long T100ProjectFrame::ID_MENUITEM_OPEN = wxNewId();
 const long T100ProjectFrame::ID_MENUITEM_CLOSE = wxNewId();
@@ -45,8 +46,17 @@ void T100ProjectFrame::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint
 {
 
 	Create(parent, id, wxEmptyString, pos, size, wxDEFAULT_FRAME_STYLE, _T("id"));
+
+
 	SetClientSize(wxDefaultSize);
 	Move(wxDefaultPosition);
+
+	StatusBar = new wxStatusBar(this, ID_STATUSBAR, 0, _T("ID_STATUSBAR"));
+    int __wxStatusBarWidths_1[1] = { -1 };
+    int __wxStatusBarStyles_1[1] = { wxSB_NORMAL };
+    StatusBar->SetFieldsCount(1,__wxStatusBarWidths_1);
+    StatusBar->SetStatusStyles(1,__wxStatusBarStyles_1);
+    SetStatusBar(StatusBar);
 
 	create();
 }

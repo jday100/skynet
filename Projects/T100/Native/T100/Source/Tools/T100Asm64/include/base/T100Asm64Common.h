@@ -1,6 +1,8 @@
 #ifndef T100ASM64COMMON_H
 #define T100ASM64COMMON_H
 
+#include "T100Common.h"
+
 typedef enum{
     T100ASCII_NONE                      = -1,
     T100ASCII_NULL                      = 0,
@@ -58,6 +60,45 @@ typedef enum{
     T100TOKEN_BR,
     //
     T100TOKEN_ASCII,
+    //
+    T100CHAR_EXCLAMATION,           //!
+    T100CHAR_DOUBLE_QUOTES,         //"
+    T100CHAR_POUND,                 //#
+    T100CHAR_DOLLAR,                //$
+    T100CHAR_PERCENT,               //%
+    T100CHAR_AND,                   //&
+    T100CHAR_APOSTROPHE,            //'
+    T100CHAR_OPEN_PARENS,           //(
+    T100CHAR_CLOSED_PARENS,         //)
+    T100CHAR_ASTERISK,              //*
+    T100CHAR_PLUS,                  //+
+    T100CHAR_COMMA,                 //,
+    T100CHAR_MINUS,                 //-
+    T100CHAR_DOT,                   //.
+    T100CHAR_SLASH,                 //"/"
+    T100CHAR_DIGIT,                 //0~9
+    T100CHAR_COLON,                 //:
+    T100CHAR_SEMICOLON,             //;
+    T100CHAR_LESSTHAN,              //<
+    T100CHAR_EQUAL,                 //=
+    T100CHAR_GREATERTHAN,           //>
+    T100CHAR_QUESTION,              //?
+    T100CHAR_EMAIL,                 //@
+    T100CHAR_UPPER,                 //A~Z
+    T100CHAR_OPEN_BRACKETS,         //[
+    T100CHAR_CLOSED_BRACKETS,       //]
+    T100CHAR_BACKSLASH,             //"\"
+    T100CHAR_CARET,                 //^
+    T100CHAR_UNDERLINE,             //_
+    T100CHAR_GRAVE,                 //'
+    T100CHAR_LOWER,                 //a~z
+    T100CHAR_OPEN_BRACE,            //{
+    T100CHAR_CLOSED_BRACE,          //}
+    T100CHAR_VERTICALBAR,           //|
+    T100CHAR_TILDE,                 //~
+    T100CHAR_UNICODE,
+    //
+    T100KEYWORD_ADD,
     //
     T100TOKEN_MAX
 }T100ASM64_TOKEN_TYPE;

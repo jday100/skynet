@@ -1,6 +1,8 @@
 #ifndef T100ELEMENTTEXT_H
 #define T100ELEMENTTEXT_H
 
+#include <wx/window.h>
+#include <wx/caret.h>
 #include <wx/propgrid/propgrid.h>
 #include "T100ElementBase.h"
 
@@ -18,6 +20,7 @@ class T100ElementText : public T100ElementBase
         T100ElementText*    Clone();
 
         T100BOOL            Hit(T100INT, T100INT);
+        T100BOOL            Edit();
 
         T100BOOL            Update(wxPropertyGrid*);
         T100BOOL            Update(wxPropertyGridEvent&);
@@ -34,6 +37,7 @@ class T100ElementText : public T100ElementBase
         T100VOID            destroy();
 
     private:
+        wxCaret*                    m_caret             = T100NULL;
         wxLongStringProperty*       m_pg_name           = T100NULL;
 
 };

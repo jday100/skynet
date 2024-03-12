@@ -46,7 +46,7 @@ T100VOID T100MansionDrawer::init()
     T100Library::T100Folder             folder(m_info->getName().to_wstring());
 
     if(folder.exists()){
-
+        m_project_drawer->Load();
     }else{
         if(T100Library::T100PathTools::mkdir(m_info->getName().to_wstring())){
             if(folder.exists()){

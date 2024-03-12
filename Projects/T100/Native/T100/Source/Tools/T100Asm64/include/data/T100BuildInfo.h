@@ -1,6 +1,7 @@
 #ifndef T100BUILDINFO_H
 #define T100BUILDINFO_H
 
+#include "T100Common.h"
 
 class T100BuildInfo
 {

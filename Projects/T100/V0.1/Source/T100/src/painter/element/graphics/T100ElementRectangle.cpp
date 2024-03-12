@@ -65,6 +65,11 @@ T100BOOL T100ElementRectangle::Hit(T100INT x, T100INT y)
     return T100Math::T100Planimetry::Hit(m_origin_x, m_origin_y, m_tail_x, m_tail_y, x, y);
 }
 
+T100BOOL T100ElementRectangle::Edit()
+{
+
+}
+
 T100BOOL T100ElementRectangle::PaintMove(T100INT x, T100INT y)
 {
     m_tail_x        = x;

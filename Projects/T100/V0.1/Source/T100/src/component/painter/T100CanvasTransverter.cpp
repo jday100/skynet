@@ -82,6 +82,15 @@ T100VOID T100CanvasTransverter::Change(T100WORD state)
             m_state     = m_sizing;
         }
         break;
+    case T100Painter::T100CANVAS_STATE_EDIT:
+        {
+            if(!m_edit){
+                m_edit  = T100NEW T100Painter::T100CanvasStateEdit();
+            }
+            m_current   = state;
+            m_state     = m_edit;
+        }
+        break;
     default:
         break;
     }

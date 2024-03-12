@@ -18,6 +18,7 @@ class T100ElementModule : public T100ElementBase
         T100BOOL                draw(wxDC&);
         T100ElementModule*      Clone();
         T100BOOL                Hit(T100INT, T100INT);
+        T100BOOL                Edit();
 
         T100BOOL                Update(wxPropertyGrid*);
         T100BOOL                Update(wxPropertyGridEvent&);

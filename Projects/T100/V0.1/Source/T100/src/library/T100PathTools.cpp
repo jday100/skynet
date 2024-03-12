@@ -143,10 +143,10 @@ T100BOOL T100PathTools::enum_directories(T100WSTRING path, T100DIRECTORY_ENTRY_V
 
     struct _wfinddata_t  info;
 
-    handle  = _wfindfirst(L".", &info);
+    handle  = _wfindfirst(path.c_str(), &info);
 
     if(-1 == handle){
-
+        return T100FALSE;
     }else{
         do{
             if(info.attrib & _A_SUBDIR){
@@ -157,6 +157,7 @@ T100BOOL T100PathTools::enum_directories(T100WSTRING path, T100DIRECTORY_ENTRY_V
             }
         }while(-1 != _wfindnext(handle, &info));
         _findclose(handle);
+        return T100TRUE;
     }
 }
 

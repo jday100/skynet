@@ -12,7 +12,7 @@ T100Asm64Compiler::~T100Asm64Compiler()
     //dtor
 }
 
-T100BOOL T100Asm64Compiler::run(T100STRING file)
+T100BOOL T100Asm64Compiler::run(T100STRING file, T100ParseInfo& info)
 {
     T100BOOL                        result;
     T100Asm64SourceToken            token;
@@ -21,11 +21,9 @@ T100BOOL T100Asm64Compiler::run(T100STRING file)
     result  = T100Asm64ScannerTools::build(file, scanner);
 
     if(result){
-
+        scanner->next(token);
     }else{
 
     }
-
-    scanner->next(token);
 
 }

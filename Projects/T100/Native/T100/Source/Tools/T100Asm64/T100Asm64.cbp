@@ -53,6 +53,7 @@
 		<Unit filename="include/T100Asm64CmdLine.h" />
 		<Unit filename="include/T100Asm64Compiler.h" />
 		<Unit filename="include/T100Asm64Linker.h" />
+		<Unit filename="include/T100Asm64Producer.h" />
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/base/T100Asm64Common.h" />
 		<Unit filename="include/base/T100Compiler.h" />
@@ -107,6 +108,7 @@
 		<Unit filename="src/T100Asm64CmdLine.cpp" />
 		<Unit filename="src/T100Asm64Compiler.cpp" />
 		<Unit filename="src/T100Asm64Linker.cpp" />
+		<Unit filename="src/T100Asm64Producer.cpp" />
 		<Unit filename="src/base/T100Compiler.cpp" />
 		<Unit filename="src/base/T100Linker.cpp" />
 		<Unit filename="src/base/T100Runner.cpp" />

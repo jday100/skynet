@@ -33,7 +33,7 @@ T100VOID T100ProjectView::setParent(wxWindow* parent)
 
 T100VOID T100ProjectView::setRootFrame(wxFrame* frame)
 {
-    //m_root = frame;
+    m_root = frame;
 }
 
 T100VOID T100ProjectView::setManager(wxAuiManager* manager)
@@ -74,6 +74,11 @@ T100VOID T100ProjectView::show()
     if(m_manager){
         m_manager->Update();
     }
+}
+
+T100VOID T100ProjectView::setProjectsPanel(::T100ProjectProjectsPanel* panel)
+{
+    m_projects_panel    = panel;
 }
 
 T100ProjectProjectsPanel* T100ProjectView::getProjectCtrl()

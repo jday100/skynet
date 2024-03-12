@@ -32,6 +32,7 @@ class T100ProjectView
         T100BOOL                        create_alone();
         T100BOOL                        create_embed();
 
+        T100VOID                        setProjectsPanel(::T100ProjectProjectsPanel*);
         T100ProjectProjectsPanel*       getProjectCtrl();
 
     public:

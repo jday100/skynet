@@ -6,7 +6,7 @@
 namespace T100PROJECT{
 
 T100ProjectDrawer::T100ProjectDrawer(T100MansionDrawer* drawer)
-    :m_mansion_drawer(drawer)
+    :m_projects(), m_mansion_drawer(drawer)
 {
     //ctor
     create();
@@ -53,6 +53,15 @@ T100BOOL T100ProjectDrawer::Create(T100ProjectInfo* info)
     result  = m_template_drawer->Create(info);
 
     return T100FALSE;
+}
+
+T100BOOL T100ProjectDrawer::Load()
+{
+    T100WSTRING                     path;
+    T100DIRECTORY_ENTRY_VECTOR      entries;
+
+    path    = m_mansion_drawer->getName().to_wstring();
+    T100Library::T100PathTools::enum_directories(path, entries);
 }
 
 }

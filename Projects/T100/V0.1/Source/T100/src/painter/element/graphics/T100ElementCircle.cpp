@@ -75,6 +75,11 @@ T100BOOL T100ElementCircle::Hit(T100INT x, T100INT y)
     return T100FALSE;
 }
 
+T100BOOL T100ElementCircle::Edit()
+{
+
+}
+
 T100BOOL T100ElementCircle::PaintMove(T100INT x, T100INT y)
 {
     m_target_x  = x;

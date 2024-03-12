@@ -5,6 +5,8 @@
 #include "T100IDEPlatenBase.h"
 #include "T100Project.h"
 
+#include "T100ProjectProjectsPanel.h"
+
 
 namespace T100IDE{
 
@@ -21,10 +23,13 @@ class T100IDEProjectPlaten : public T100IDEPlatenBase
 
         T100VOID            setProject(T100PROJECT::T100Project*);
 
+        ::T100ProjectProjectsPanel*          getProjectsPanel();
+
     protected:
         T100VOID            destroy();
 
     private:
+        ::T100ProjectProjectsPanel*          m_projects_panel            = T100NULL;
 };
 
 }

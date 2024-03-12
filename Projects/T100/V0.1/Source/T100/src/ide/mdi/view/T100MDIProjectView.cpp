@@ -69,8 +69,7 @@ T100BOOL T100MDIProjectView::OnCreate(wxDocument* doc, long flags)
     if(m_view->getPlatenManager()->Exists(T100IDE_TYPE_PROJECT)){
         T100IDEProjectPlaten*   platen = static_cast<T100IDEProjectPlaten*>(m_view->getPlatenManager()->getPlaten(T100IDE_TYPE_PROJECT));
 
-        //m_project->getView()->setElementsPanel(platen->getElementsPanel());
-        //m_project->getView()->setPropertiesPanel(platen->getPropertiesPanel());
+        m_project->getView()->setProjectsPanel(platen->getProjectsPanel());
 
         platen->setProject(m_project);
     }else{

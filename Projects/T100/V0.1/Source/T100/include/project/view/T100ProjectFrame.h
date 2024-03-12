@@ -2,6 +2,7 @@
 #define T100PROJECTFRAME_H
 
 #include <wx/frame.h>
+#include <wx/statusbr.h>
 #include "T100Common.h"
 
 
@@ -33,6 +34,8 @@ class T100ProjectFrame : public wxFrame
         static const long ID_MENUITEM_ABOUT;
 
     protected:
+        static const long ID_STATUSBAR;
+
         void OnMenuNewSelected(wxCommandEvent& event);
         void OnMenuOpenSelected(wxCommandEvent& event);
         void OnMenuCloseSelected(wxCommandEvent& event);
@@ -61,6 +64,7 @@ class T100ProjectFrame : public wxFrame
         T100BOOL                reset_menu();
 
     private:
+        wxStatusBar*            StatusBar;
 
         void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);
 

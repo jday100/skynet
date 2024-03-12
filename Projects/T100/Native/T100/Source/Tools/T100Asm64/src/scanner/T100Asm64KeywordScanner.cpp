@@ -1,5 +1,7 @@
 #include "T100Asm64KeywordScanner.h"
 
+#include "T100Asm64Common.h"
+
 T100Asm64KeywordScanner::T100Asm64KeywordScanner()
 {
     //ctor
@@ -27,10 +29,18 @@ T100BOOL T100Asm64KeywordScanner::next(T100Token& token)
 
 T100BOOL T100Asm64KeywordScanner::append()
 {
+    m_token->value  += m_item.value;
 
+    return T100TRUE;
 }
 
 T100BOOL T100Asm64KeywordScanner::classify()
 {
+    T100ASM64_TOKEN_TYPE    result          = T100TOKEN_NONE;
+    T100STRING              key;
 
+    key     = m_token->value;
+    result  = m_table.find(key);
+
+    return result;
 }
