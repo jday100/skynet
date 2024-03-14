@@ -19,11 +19,19 @@
 					<Add directory="include/view" />
 					<Add directory="include/serve" />
 					<Add directory="include/store" />
+					<Add directory="../../T100Library/include" />
+					<Add directory="../../T100Native/include" />
+					<Add directory="../../T100Suite/include" />
+					<Add directory="include/diagram" />
+					<Add directory="include" />
+					<Add directory="../T100Painter" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 				</ResourceCompiler>
 				<Linker>
+					<Add library="../../build/libT100Library.a" />
+					<Add library="../../build/libT100Suite.a" />
 					<Add library="libwxmsw30ud.a" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
@@ -40,6 +48,8 @@
 					<Add directory="include/view" />
 					<Add directory="include/serve" />
 					<Add directory="include/store" />
+					<Add directory="include/diagram" />
+					<Add directory="include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -71,12 +81,18 @@
 		<Unit filename="T100PainterApp.h" />
 		<Unit filename="T100PainterMain.cpp" />
 		<Unit filename="T100PainterMain.h" />
+		<Unit filename="include/T100Painter.h" />
+		<Unit filename="include/diagram/T100DiagramEntry.h" />
+		<Unit filename="include/serve/T100PainterEntryDrawer.h" />
 		<Unit filename="include/serve/T100PainterServe.h" />
 		<Unit filename="include/store/T100PainterStore.h" />
 		<Unit filename="include/view/T100PainterView.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/T100Painter.cpp" />
+		<Unit filename="src/diagram/T100DiagramEntry.cpp" />
+		<Unit filename="src/serve/T100PainterEntryDrawer.cpp" />
 		<Unit filename="src/serve/T100PainterServe.cpp" />
 		<Unit filename="src/store/T100PainterStore.cpp" />
 		<Unit filename="src/view/T100PainterView.cpp" />

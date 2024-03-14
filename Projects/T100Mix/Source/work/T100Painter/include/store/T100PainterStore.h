@@ -1,6 +1,7 @@
 #ifndef T100PAINTERSTORE_H
 #define T100PAINTERSTORE_H
 
+#include "T100Common.h"
 
 class T100PainterStore
 {

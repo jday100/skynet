@@ -1,16 +1,29 @@
 #ifndef T100WXPAINTCANVAS_H
 #define T100WXPAINTCANVAS_H
 
+#include <wx/scrolwin.h>
+#include "T100Common.h"
 
-class T100WxPaintCanvas
+class T100WxPaintCanvas : public wxScrolledWindow
 {
     public:
-        T100WxPaintCanvas();
+        T100WxPaintCanvas(wxWindow *parent,
+                     wxWindowID winid = wxID_ANY,
+                     const wxPoint& pos = wxDefaultPosition,
+                     const wxSize& size = wxDefaultSize,
+                     long style = wxScrolledWindowStyle,
+                     const wxString& name = wxPanelNameStr);
         virtual ~T100WxPaintCanvas();
 
     protected:
+        void OnPaint(wxPaintEvent& event);
+        void OnEraseBackGround(wxEraseEvent& event);
+
+        void OnMouseWheel(wxMouseEvent& event);
 
     private:
+
+        DECLARE_EVENT_TABLE()
 };
 
 #endif // T100WXPAINTCANVAS_H

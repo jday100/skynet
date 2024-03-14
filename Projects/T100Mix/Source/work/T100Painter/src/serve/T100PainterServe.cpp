@@ -3,9 +3,26 @@
 T100PainterServe::T100PainterServe()
 {
     //ctor
+    create();
 }
 
 T100PainterServe::~T100PainterServe()
 {
     //dtor
+    destroy();
+}
+
+T100VOID T100PainterServe::create()
+{
+    m_entry_drawer  = T100NEW T100PainterEntryDrawer();
+}
+
+T100VOID T100PainterServe::destroy()
+{
+    T100DELETE  m_entry_drawer;
+}
+
+T100PainterEntryDrawer* T100PainterServe::getEntryDrawer()
+{
+    return m_entry_drawer;
 }

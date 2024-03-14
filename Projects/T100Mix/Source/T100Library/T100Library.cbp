@@ -23,6 +23,7 @@
 					<Add directory="include" />
 					<Add directory="include/common" />
 					<Add directory="../T100Native/include" />
+					<Add directory="include/base" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -47,6 +48,35 @@
 					<Add directory="include/app" />
 					<Add directory="include" />
 					<Add directory="include/common" />
+					<Add directory="include/base" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw30u.a" />
+					<Add directory="$(#wx)/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../build/T100Library" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Release/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/database" />
+					<Add directory="include/fs/file" />
+					<Add directory="include/string" />
+					<Add directory="include/app" />
+					<Add directory="include" />
+					<Add directory="include/common" />
+					<Add directory="../T100Native/include" />
+					<Add directory="include/base" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -74,24 +104,51 @@
 		<Linker>
 			<Add option="-mthreads" />
 		</Linker>
-		<Unit filename="T100LibraryApp.cpp" />
-		<Unit filename="T100LibraryApp.h" />
-		<Unit filename="T100LibraryMain.cpp" />
-		<Unit filename="T100LibraryMain.h" />
+		<Unit filename="T100LibraryApp.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T100LibraryApp.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T100LibraryMain.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="T100LibraryMain.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/T100EntryDrawer.h" />
+		<Unit filename="include/T100EntryTub.h" />
 		<Unit filename="include/app/T100App.h" />
+		<Unit filename="include/base/T100Class.h" />
+		<Unit filename="include/base/T100Entry.h" />
+		<Unit filename="include/base/T100Object.h" />
 		<Unit filename="include/common/T100X86Common.h" />
 		<Unit filename="include/database/T100Database.h" />
 		<Unit filename="include/fs/file/T100File.h" />
 		<Unit filename="include/string/T100String.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
+			<Option target="Debug" />
+			<Option target="Release" />
 		</Unit>
+		<Unit filename="src/T100EntryDrawer.cpp" />
+		<Unit filename="src/T100EntryTub.cpp" />
 		<Unit filename="src/app/T100App.cpp" />
+		<Unit filename="src/base/T100Class.cpp" />
+		<Unit filename="src/base/T100Entry.cpp" />
+		<Unit filename="src/base/T100Object.cpp" />
 		<Unit filename="src/database/T100Database.cpp" />
 		<Unit filename="src/fs/file/T100File.cpp" />
 		<Unit filename="src/string/T100String.cpp" />
-		<Unit filename="wxsmith/T100Libraryframe.wxs" />
+		<Unit filename="wxsmith/T100Libraryframe.wxs">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 			<wxsmith version="1">
