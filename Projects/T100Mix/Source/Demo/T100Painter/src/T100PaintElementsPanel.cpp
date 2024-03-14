@@ -1,38 +1,30 @@
-#include "T100WxPaintElementsPanel.h"
+#include "../include/T100PaintElementsPanel.h"
 
+//(*InternalHeaders(T100PaintElementsPanel)
 #include <wx/intl.h>
 #include <wx/string.h>
+//*)
 
+//(*IdInit(T100PaintElementsPanel)
+const long T100PaintElementsPanel::ID_LISTVIEW1 = wxNewId();
+const long T100PaintElementsPanel::ID_LISTVIEW2 = wxNewId();
+const long T100PaintElementsPanel::ID_LISTVIEW3 = wxNewId();
+const long T100PaintElementsPanel::ID_NOTEBOOK1 = wxNewId();
+//*)
 
-const long T100WxPaintElementsPanel::ID_NOTEBOOK1 = wxNewId();
-const long T100WxPaintElementsPanel::ID_LISTVIEW1 = wxNewId();
-const long T100WxPaintElementsPanel::ID_LISTVIEW2 = wxNewId();
-const long T100WxPaintElementsPanel::ID_LISTVIEW3 = wxNewId();
-
-BEGIN_EVENT_TABLE(T100WxPaintElementsPanel,wxPanel)
-
+BEGIN_EVENT_TABLE(T100PaintElementsPanel,wxPanel)
+	//(*EventTable(T100PaintElementsPanel)
+	//*)
 END_EVENT_TABLE()
 
-
-T100WxPaintElementsPanel::T100WxPaintElementsPanel(wxWindow *parent,
-            wxWindowID winid,
-            const wxPoint& pos,
-            const wxSize& size ,
-            long style,
-            const wxString& name)
-    :wxPanel(parent, winid, pos, size, style, name)
+T100PaintElementsPanel::T100PaintElementsPanel(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
 {
-    //ctor
-    BuildContent(parent,winid,pos,size);
+	BuildContent(parent,id,pos,size);
 }
 
-T100WxPaintElementsPanel::~T100WxPaintElementsPanel()
+void T100PaintElementsPanel::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
 {
-    //dtor
-}
-
-void T100WxPaintElementsPanel::BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size)
-{
+	//(*Initialize(T100PaintElementsPanel)
 	wxBoxSizer* BoxSizer1;
 
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("id"));
@@ -44,9 +36,17 @@ void T100WxPaintElementsPanel::BuildContent(wxWindow* parent,wxWindowID id,const
 	Notebook1->AddPage(ListView1, _("Page name"), false);
 	Notebook1->AddPage(ListView2, _("Page name"), false);
 	Notebook1->AddPage(ListView3, _("Page name"), false);
-	BoxSizer1->Add(Notebook1, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	BoxSizer1->Add(Notebook1, 1, wxALL|wxEXPAND, 5);
 	SetSizer(BoxSizer1);
 	ImageList1 = new wxImageList(16, 16, 1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
+	//*)
 }
+
+T100PaintElementsPanel::~T100PaintElementsPanel()
+{
+	//(*Destroy(T100PaintElementsPanel)
+	//*)
+}
+

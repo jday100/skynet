@@ -1,6 +1,7 @@
 #ifndef T100WXPAINTELEMENTSPANEL_H
 #define T100WXPAINTELEMENTSPANEL_H
 
+#include <wx/imaglist.h>
 #include <wx/listctrl.h>
 #include <wx/notebook.h>
 #include <wx/panel.h>
@@ -20,6 +21,7 @@ class T100WxPaintElementsPanel : public wxPanel
 
     protected:
         wxNotebook*         Notebook1;
+        wxImageList*        ImageList1;
 
         wxPanel*            Panel1;
         wxPanel*            Panel2;
@@ -31,6 +33,9 @@ class T100WxPaintElementsPanel : public wxPanel
 
     protected:
         static const long ID_NOTEBOOK1;
+        static const long ID_LISTVIEW1;
+        static const long ID_LISTVIEW2;
+        static const long ID_LISTVIEW3;
 
     private:
         void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);
