@@ -24,6 +24,8 @@
 					<Add directory="include/wx/app/store" />
 					<Add directory="include/wx/app/serve" />
 					<Add directory="include/wx/app/view" />
+					<Add directory="include/wx/paint/serve" />
+					<Add directory="include/wx/paint/store" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -50,6 +52,8 @@
 					<Add directory="include/wx/app/store" />
 					<Add directory="include/wx/app/serve" />
 					<Add directory="include/wx/app/view" />
+					<Add directory="include/wx/paint/serve" />
+					<Add directory="include/wx/paint/store" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -80,6 +84,8 @@
 					<Add directory="include/wx/app/store" />
 					<Add directory="include/wx/app/serve" />
 					<Add directory="include/wx/app/view" />
+					<Add directory="include/wx/paint/serve" />
+					<Add directory="include/wx/paint/store" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -136,6 +142,8 @@
 		<Unit filename="include/wx/app/view/T100View.h" />
 		<Unit filename="include/wx/app/view/T100WxView.h" />
 		<Unit filename="include/wx/fs/T100WxDiskList.h" />
+		<Unit filename="include/wx/paint/serve/T100WxPaintElementsDrawer.h" />
+		<Unit filename="include/wx/paint/store/T100WxPaintElementsStore.h" />
 		<Unit filename="include/wx/paint/view/T100WxPaintCanvas.h" />
 		<Unit filename="include/wx/paint/view/T100WxPaintCtrl.h" />
 		<Unit filename="include/wx/paint/view/T100WxPaintElementsPanel.h" />
@@ -156,6 +164,8 @@
 		<Unit filename="src/wx/app/view/T100View.cpp" />
 		<Unit filename="src/wx/app/view/T100WxView.cpp" />
 		<Unit filename="src/wx/fs/T100WxDiskList.cpp" />
+		<Unit filename="src/wx/paint/serve/T100WxPaintElementsDrawer.cpp" />
+		<Unit filename="src/wx/paint/store/T100WxPaintElementsStore.cpp" />
 		<Unit filename="src/wx/paint/view/T100WxPaintCanvas.cpp" />
 		<Unit filename="src/wx/paint/view/T100WxPaintCtrl.cpp" />
 		<Unit filename="src/wx/paint/view/T100WxPaintElementsPanel.cpp" />

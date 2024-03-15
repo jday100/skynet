@@ -26,6 +26,12 @@
 					<Add directory="include/base" />
 					<Add directory="include/thread" />
 					<Add directory="include/task" />
+					<Add directory="include/test" />
+					<Add directory="include/log" />
+					<Add directory="include/math" />
+					<Add directory="include/time" />
+					<Add directory="include/relation/server" />
+					<Add directory="include/relation/client" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -53,6 +59,12 @@
 					<Add directory="include/base" />
 					<Add directory="include/thread" />
 					<Add directory="include/task" />
+					<Add directory="include/test" />
+					<Add directory="include/log" />
+					<Add directory="include/math" />
+					<Add directory="include/time" />
+					<Add directory="include/relation/server" />
+					<Add directory="include/relation/client" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -83,6 +95,12 @@
 					<Add directory="include/base" />
 					<Add directory="include/thread" />
 					<Add directory="include/task" />
+					<Add directory="include/test" />
+					<Add directory="include/log" />
+					<Add directory="include/math" />
+					<Add directory="include/time" />
+					<Add directory="include/relation/server" />
+					<Add directory="include/relation/client" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -133,12 +151,34 @@
 		<Unit filename="include/base/T100Class.h" />
 		<Unit filename="include/base/T100Entry.h" />
 		<Unit filename="include/base/T100Object.h" />
+		<Unit filename="include/base/T100Reader.h" />
+		<Unit filename="include/base/T100Scanner.h" />
+		<Unit filename="include/base/T100Stream.h" />
+		<Unit filename="include/base/T100Token.h" />
+		<Unit filename="include/base/T100Writer.h" />
 		<Unit filename="include/common/T100X86Common.h" />
 		<Unit filename="include/database/T100Database.h" />
+		<Unit filename="include/database/T100MySQL.h" />
+		<Unit filename="include/database/T100SQL.h" />
+		<Unit filename="include/database/T100SQLite.h" />
 		<Unit filename="include/fs/file/T100File.h" />
+		<Unit filename="include/fs/file/T100FileReader.h" />
+		<Unit filename="include/fs/file/T100FileStream.h" />
+		<Unit filename="include/fs/file/T100FileWriter.h" />
+		<Unit filename="include/log/T100Log.h" />
+		<Unit filename="include/math/T100Matrix.h" />
+		<Unit filename="include/math/T100Vector.h" />
+		<Unit filename="include/relation/client/T100Client.h" />
+		<Unit filename="include/relation/server/T100Server.h" />
 		<Unit filename="include/string/T100String.h" />
+		<Unit filename="include/string/T100String32.h" />
 		<Unit filename="include/task/T100Task.h" />
+		<Unit filename="include/task/T100ThreadTask.h" />
+		<Unit filename="include/test/T100Test.h" />
 		<Unit filename="include/thread/T100Thread.h" />
+		<Unit filename="include/time/T100Calendar.h" />
+		<Unit filename="include/time/T100Clock.h" />
+		<Unit filename="include/time/T100Timer.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 			<Option target="Debug" />
@@ -150,11 +190,33 @@
 		<Unit filename="src/base/T100Class.cpp" />
 		<Unit filename="src/base/T100Entry.cpp" />
 		<Unit filename="src/base/T100Object.cpp" />
+		<Unit filename="src/base/T100Reader.cpp" />
+		<Unit filename="src/base/T100Scanner.cpp" />
+		<Unit filename="src/base/T100Stream.cpp" />
+		<Unit filename="src/base/T100Token.cpp" />
+		<Unit filename="src/base/T100Writer.cpp" />
 		<Unit filename="src/database/T100Database.cpp" />
+		<Unit filename="src/database/T100MySQL.cpp" />
+		<Unit filename="src/database/T100SQL.cpp" />
+		<Unit filename="src/database/T100SQLite.cpp" />
 		<Unit filename="src/fs/file/T100File.cpp" />
+		<Unit filename="src/fs/file/T100FileReader.cpp" />
+		<Unit filename="src/fs/file/T100FileStream.cpp" />
+		<Unit filename="src/fs/file/T100FileWriter.cpp" />
+		<Unit filename="src/log/T100Log.cpp" />
+		<Unit filename="src/math/T100Matrix.cpp" />
+		<Unit filename="src/math/T100Vector.cpp" />
+		<Unit filename="src/relation/client/T100Client.cpp" />
+		<Unit filename="src/relation/server/T100Server.cpp" />
 		<Unit filename="src/string/T100String.cpp" />
+		<Unit filename="src/string/T100String32.cpp" />
 		<Unit filename="src/task/T100Task.cpp" />
+		<Unit filename="src/task/T100ThreadTask.cpp" />
+		<Unit filename="src/test/T100Test.cpp" />
 		<Unit filename="src/thread/T100Thread.cpp" />
+		<Unit filename="src/time/T100Calendar.cpp" />
+		<Unit filename="src/time/T100Clock.cpp" />
+		<Unit filename="src/time/T100Timer.cpp" />
 		<Unit filename="wxsmith/T100Libraryframe.wxs">
 			<Option target="Debug" />
 			<Option target="Release" />
