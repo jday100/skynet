@@ -24,6 +24,8 @@ class T100PaintCanvas : public wxScrolledWindow
 
     private:
 
+        float           m_scale         = 1.0;
+
         DECLARE_EVENT_TABLE()
 };
 

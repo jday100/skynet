@@ -24,6 +24,8 @@
 					<Add directory="include/common" />
 					<Add directory="../T100Native/include" />
 					<Add directory="include/base" />
+					<Add directory="include/thread" />
+					<Add directory="include/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -49,6 +51,8 @@
 					<Add directory="include" />
 					<Add directory="include/common" />
 					<Add directory="include/base" />
+					<Add directory="include/thread" />
+					<Add directory="include/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -77,6 +81,8 @@
 					<Add directory="include/common" />
 					<Add directory="../T100Native/include" />
 					<Add directory="include/base" />
+					<Add directory="include/thread" />
+					<Add directory="include/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -131,6 +137,8 @@
 		<Unit filename="include/database/T100Database.h" />
 		<Unit filename="include/fs/file/T100File.h" />
 		<Unit filename="include/string/T100String.h" />
+		<Unit filename="include/task/T100Task.h" />
+		<Unit filename="include/thread/T100Thread.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 			<Option target="Debug" />
@@ -145,6 +153,8 @@
 		<Unit filename="src/database/T100Database.cpp" />
 		<Unit filename="src/fs/file/T100File.cpp" />
 		<Unit filename="src/string/T100String.cpp" />
+		<Unit filename="src/task/T100Task.cpp" />
+		<Unit filename="src/thread/T100Thread.cpp" />
 		<Unit filename="wxsmith/T100Libraryframe.wxs">
 			<Option target="Debug" />
 			<Option target="Release" />

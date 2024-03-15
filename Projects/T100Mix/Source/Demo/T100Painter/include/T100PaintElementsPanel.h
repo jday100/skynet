@@ -34,8 +34,14 @@ class T100PaintElementsPanel: public wxPanel
 		//*)
 
 	private:
+	    void            create();
+	    void            destroy();
 
 		//(*Handlers(T100PaintElementsPanel)
+		void OnListView1ItemSelect(wxListEvent& event);
+		void OnListView1ItemDeselect(wxListEvent& event);
+		void OnListView1ItemFocused(wxListEvent& event);
+		void OnListView1ItemActivated(wxListEvent& event);
 		//*)
 
 	protected:

@@ -76,7 +76,6 @@
 		<Unit filename="src/T100PaintCanvas.cpp" />
 		<Unit filename="src/T100PaintCtrl.cpp" />
 		<Unit filename="src/T100PaintElementsPanel.cpp" />
-		<Unit filename="wxsmith/NewScrollingDialog.wxs" />
 		<Unit filename="wxsmith/T100PaintElementsPanel.wxs" />
 		<Unit filename="wxsmith/T100Painterframe.wxs" />
 		<Extensions>
