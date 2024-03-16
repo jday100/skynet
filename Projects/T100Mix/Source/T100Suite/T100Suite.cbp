@@ -26,6 +26,7 @@
 					<Add directory="include/wx/app/view" />
 					<Add directory="include/wx/paint/serve" />
 					<Add directory="include/wx/paint/store" />
+					<Add directory="include/wx/paint/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -54,6 +55,7 @@
 					<Add directory="include/wx/app/view" />
 					<Add directory="include/wx/paint/serve" />
 					<Add directory="include/wx/paint/store" />
+					<Add directory="include/wx/paint/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -75,8 +77,6 @@
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
 					<Add directory="include" />
-					<Add directory="../T100Library/include" />
-					<Add directory="../T100Native/include" />
 					<Add directory="include/wx" />
 					<Add directory="include/wx/fs" />
 					<Add directory="include/wx/paint/view" />
@@ -86,6 +86,9 @@
 					<Add directory="include/wx/app/view" />
 					<Add directory="include/wx/paint/serve" />
 					<Add directory="include/wx/paint/store" />
+					<Add directory="../T100Library/include" />
+					<Add directory="../T100Native/include" />
+					<Add directory="include/wx/paint/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -134,6 +137,7 @@
 		<Unit filename="include/T100XYGroupedEntryDrawer.h" />
 		<Unit filename="include/T100XYGrouper.h" />
 		<Unit filename="include/T100XYZGrouper.h" />
+		<Unit filename="include/wx/T100WxThreadTask.h" />
 		<Unit filename="include/wx/app/T100WxApp.h" />
 		<Unit filename="include/wx/app/serve/T100Serve.h" />
 		<Unit filename="include/wx/app/serve/T100WxServe.h" />
@@ -144,6 +148,7 @@
 		<Unit filename="include/wx/fs/T100WxDiskList.h" />
 		<Unit filename="include/wx/paint/serve/T100WxPaintElementsDrawer.h" />
 		<Unit filename="include/wx/paint/store/T100WxPaintElementsStore.h" />
+		<Unit filename="include/wx/paint/task/T100WxPaintElementsLoadThreadTask.h" />
 		<Unit filename="include/wx/paint/view/T100WxPaintCanvas.h" />
 		<Unit filename="include/wx/paint/view/T100WxPaintCtrl.h" />
 		<Unit filename="include/wx/paint/view/T100WxPaintElementsPanel.h" />
@@ -156,6 +161,7 @@
 		<Unit filename="src/T100XYGroupedEntryDrawer.cpp" />
 		<Unit filename="src/T100XYGrouper.cpp" />
 		<Unit filename="src/T100XYZGrouper.cpp" />
+		<Unit filename="src/wx/T100WxThreadTask.cpp" />
 		<Unit filename="src/wx/app/T100WxApp.cpp" />
 		<Unit filename="src/wx/app/serve/T100Serve.cpp" />
 		<Unit filename="src/wx/app/serve/T100WxServe.cpp" />
@@ -166,6 +172,7 @@
 		<Unit filename="src/wx/fs/T100WxDiskList.cpp" />
 		<Unit filename="src/wx/paint/serve/T100WxPaintElementsDrawer.cpp" />
 		<Unit filename="src/wx/paint/store/T100WxPaintElementsStore.cpp" />
+		<Unit filename="src/wx/paint/task/T100WxPaintElementsLoadThreadTask.cpp" />
 		<Unit filename="src/wx/paint/view/T100WxPaintCanvas.cpp" />
 		<Unit filename="src/wx/paint/view/T100WxPaintCtrl.cpp" />
 		<Unit filename="src/wx/paint/view/T100WxPaintElementsPanel.cpp" />

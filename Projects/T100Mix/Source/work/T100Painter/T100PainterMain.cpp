@@ -117,19 +117,19 @@ T100PainterFrame::~T100PainterFrame()
     //(*Destroy(T100PainterFrame)
     //*)
 
-    destroy();
     AuiManager1->UnInit();
+    destroy();
 }
 
 T100VOID T100PainterFrame::create()
 {
     T100WxPaintElementsPanel*   panel   = T100NEW T100WxPaintElementsPanel(this);
 
-    AuiManager1->AddPane(panel, wxAuiPaneInfo().Name(wxT("Elements")).DefaultPane().Left());
+    AuiManager1->AddPane(panel, wxAuiPaneInfo().Name(wxT("Elements")).Left());
 
     T100WxPaintCtrl*    paint = T100NEW T100WxPaintCtrl(this, wxID_ANY);
 
-    AuiManager1->AddPane(paint, wxAuiPaneInfo().Name(wxT("Paint")).CenterPane());
+    AuiManager1->AddPane(paint, wxAuiPaneInfo().Name(wxT("Paint")).DefaultPane().CenterPane());
 }
 
 T100VOID T100PainterFrame::destroy()

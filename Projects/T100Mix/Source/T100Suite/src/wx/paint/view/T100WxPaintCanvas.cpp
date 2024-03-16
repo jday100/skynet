@@ -27,19 +27,31 @@ T100WxPaintCanvas::~T100WxPaintCanvas()
     //dtor
 }
 
-void T100WxPaintCanvas::OnEraseBackGround(wxEraseEvent& event)
-{
-
-}
-
 void T100WxPaintCanvas::OnPaint(wxPaintEvent& event)
 {
     wxClientDC      dc(this);
 
-    dc.DrawCircle(100, 100, 10);
+    dc.DrawCircle(100, 100, 10 * m_scale);
+}
+
+void T100WxPaintCanvas::OnEraseBackGround(wxEraseEvent& event)
+{
 }
 
 void T100WxPaintCanvas::OnMouseWheel(wxMouseEvent& event)
 {
-    SetScale(GetScaleX()/10, GetScaleY()/10);
+}
+
+void T100WxPaintCanvas::OnResize(wxSizeEvent& event)
+{
+}
+
+void T100WxPaintCanvas::OnLeftDClick(wxMouseEvent& event)
+{
+}
+
+void T100WxPaintCanvas::OnLeftDown(wxMouseEvent& event)
+{
+    m_scale = 1.2 * m_scale;
+    Refresh();
 }

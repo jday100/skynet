@@ -147,6 +147,7 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/T100EntryDrawer.h" />
 		<Unit filename="include/T100EntryTub.h" />
+		<Unit filename="include/T100Unicode.h" />
 		<Unit filename="include/app/T100App.h" />
 		<Unit filename="include/base/T100Class.h" />
 		<Unit filename="include/base/T100Entry.h" />
@@ -156,6 +157,7 @@
 		<Unit filename="include/base/T100Stream.h" />
 		<Unit filename="include/base/T100Token.h" />
 		<Unit filename="include/base/T100Writer.h" />
+		<Unit filename="include/common/T100StringTypes.h" />
 		<Unit filename="include/common/T100X86Common.h" />
 		<Unit filename="include/database/T100Database.h" />
 		<Unit filename="include/database/T100MySQL.h" />
@@ -172,6 +174,7 @@
 		<Unit filename="include/relation/server/T100Server.h" />
 		<Unit filename="include/string/T100String.h" />
 		<Unit filename="include/string/T100String32.h" />
+		<Unit filename="include/string/T100StringTools.h" />
 		<Unit filename="include/task/T100Task.h" />
 		<Unit filename="include/task/T100ThreadTask.h" />
 		<Unit filename="include/test/T100Test.h" />
@@ -186,6 +189,7 @@
 		</Unit>
 		<Unit filename="src/T100EntryDrawer.cpp" />
 		<Unit filename="src/T100EntryTub.cpp" />
+		<Unit filename="src/T100Unicode.cpp" />
 		<Unit filename="src/app/T100App.cpp" />
 		<Unit filename="src/base/T100Class.cpp" />
 		<Unit filename="src/base/T100Entry.cpp" />
@@ -210,6 +214,7 @@
 		<Unit filename="src/relation/server/T100Server.cpp" />
 		<Unit filename="src/string/T100String.cpp" />
 		<Unit filename="src/string/T100String32.cpp" />
+		<Unit filename="src/string/T100StringTools.cpp" />
 		<Unit filename="src/task/T100Task.cpp" />
 		<Unit filename="src/task/T100ThreadTask.cpp" />
 		<Unit filename="src/test/T100Test.cpp" />

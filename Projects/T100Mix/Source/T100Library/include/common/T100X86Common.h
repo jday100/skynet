@@ -15,6 +15,7 @@
 #define     T100UINT32          T100UINT32_X86
 #define     T100UINT86          T100UINT64_X86
 
+#define     T100INT             T100INT32
 #define     T100BYTE            T100BYTE_X86
 #define     T100WORD            T100UINT64_X86
 

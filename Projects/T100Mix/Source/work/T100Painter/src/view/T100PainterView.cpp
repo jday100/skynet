@@ -19,7 +19,7 @@ T100VOID T100PainterView::create()
 
 T100VOID T100PainterView::destroy()
 {
-    T100DELETE  m_frame;
+    //T100SAFE_DELETE(m_frame)
 }
 
 T100VOID T100PainterView::show()

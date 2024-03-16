@@ -19,7 +19,7 @@ T100VOID T100PainterServe::create()
 
 T100VOID T100PainterServe::destroy()
 {
-    T100DELETE  m_entry_drawer;
+    T100SAFE_DELETE(m_entry_drawer)
 }
 
 T100PainterEntryDrawer* T100PainterServe::getEntryDrawer()

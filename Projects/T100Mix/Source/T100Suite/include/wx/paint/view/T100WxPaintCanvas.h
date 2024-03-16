@@ -18,10 +18,13 @@ class T100WxPaintCanvas : public wxScrolledWindow
     protected:
         void OnPaint(wxPaintEvent& event);
         void OnEraseBackGround(wxEraseEvent& event);
-
         void OnMouseWheel(wxMouseEvent& event);
+        void OnLeftDown(wxMouseEvent& event);
+        void OnLeftDClick(wxMouseEvent& event);
+        void OnResize(wxSizeEvent& event);
 
     private:
+        float           m_scale     = 1.0;
 
         DECLARE_EVENT_TABLE()
 };

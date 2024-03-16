@@ -7,6 +7,8 @@
 #include <wx/panel.h>
 #include <wx/sizer.h>
 #include "T100Common.h"
+#include "T100WxPaintElementsLoadThreadTask.h"
+
 
 class T100WxPaintElementsPanel : public wxPanel
 {
@@ -30,6 +32,12 @@ class T100WxPaintElementsPanel : public wxPanel
         wxListView*         ListView1;
         wxListView*         ListView2;
         wxListView*         ListView3;
+
+    protected:
+        T100VOID            create();
+        T100VOID            destroy();
+
+        T100WxPaintElementsLoadThreadTask*          m_load_task         = T100NULL;
 
     protected:
         static const long ID_NOTEBOOK1;

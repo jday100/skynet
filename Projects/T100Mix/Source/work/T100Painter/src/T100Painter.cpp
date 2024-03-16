@@ -21,9 +21,9 @@ T100VOID T100Painter::create()
 
 T100VOID T100Painter::destroy()
 {
-    T100DELETE  m_view;
-    T100DELETE  m_serve;
-    T100DELETE  m_store;
+    T100SAFE_DELETE(m_view)
+    T100SAFE_DELETE(m_serve)
+    T100SAFE_DELETE(m_store)
 }
 
 T100VOID T100Painter::setStore(T100PainterStore* store)
