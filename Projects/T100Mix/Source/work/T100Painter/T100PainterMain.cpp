@@ -125,7 +125,7 @@ T100VOID T100PainterFrame::create()
 {
     T100WxPaintElementsPanel*   panel   = T100NEW T100WxPaintElementsPanel(this);
 
-    AuiManager1->AddPane(panel, wxAuiPaneInfo().Name(wxT("Elements")).Left());
+    AuiManager1->AddPane(panel, wxAuiPaneInfo().Name(wxT("Elements")).MinSize(wxSize(300, -1)).Left());
 
     T100WxPaintCtrl*    paint = T100NEW T100WxPaintCtrl(this, wxID_ANY);
 

@@ -2,6 +2,7 @@
 
 #include <wx/intl.h>
 #include <wx/string.h>
+#include "T100WxEventData.h"
 
 
 const long T100WxPaintElementsPanel::ID_NOTEBOOK1 = wxNewId();
@@ -9,8 +10,10 @@ const long T100WxPaintElementsPanel::ID_LISTVIEW1 = wxNewId();
 const long T100WxPaintElementsPanel::ID_LISTVIEW2 = wxNewId();
 const long T100WxPaintElementsPanel::ID_LISTVIEW3 = wxNewId();
 
-BEGIN_EVENT_TABLE(T100WxPaintElementsPanel,wxPanel)
+const long T100WxPaintElementsPanel::ID_THREAD_IMAGE = wxNewId();
 
+BEGIN_EVENT_TABLE(T100WxPaintElementsPanel,wxPanel)
+    EVT_THREAD(ID_THREAD_IMAGE, T100WxPaintElementsPanel::OnThreadImage)
 END_EVENT_TABLE()
 
 
@@ -54,10 +57,38 @@ void T100WxPaintElementsPanel::BuildContent(wxWindow* parent,wxWindowID id,const
 
 T100VOID T100WxPaintElementsPanel::create()
 {
+    ListView1->SetImageList(ImageList1, wxIMAGE_LIST_NORMAL);
     m_load_task = T100NEW T100WxPaintElementsLoadThreadTask();
+
+    m_load_task->setWindow(this);
+    m_load_task->start();
 }
 
 T100VOID T100WxPaintElementsPanel::destroy()
 {
     T100SAFE_DELETE(m_load_task)
+}
+
+void T100WxPaintElementsPanel::OnThreadImage(wxThreadEvent& event)
+{
+    T100WxEventData*    data        = T100NULL;
+
+    data    = dynamic_cast<T100WxEventData*>(event.GetEventObject());
+
+    if(data){
+        T100VOID*   object  = data->getObject();
+
+        if(object){
+            wxImage*        image       = (wxImage*)object;
+
+            if(image){
+                ImageList1->Add(*image);
+                ListView1->InsertItem(0, wxT("test"), 0);
+            }
+
+            T100SAFE_DELETE(object)
+        }
+
+        T100SAFE_DELETE(data)
+    }
 }

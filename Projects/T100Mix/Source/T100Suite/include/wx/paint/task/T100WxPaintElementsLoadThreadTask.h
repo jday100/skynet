@@ -1,7 +1,7 @@
 #ifndef T100WXPAINTELEMENTSLOADTHREADTASK_H
 #define T100WXPAINTELEMENTSLOADTHREADTASK_H
 
-#include "T100WxThreadTask.h"
+#include "wx\T100WxThreadTask.h"
 
 class T100WxPaintElementsLoadThreadTask : public T100WxThreadTask
 {
@@ -12,6 +12,7 @@ class T100WxPaintElementsLoadThreadTask : public T100WxThreadTask
         virtual T100BOOL            run(T100VOID* = T100NULL);
 
     protected:
+        T100VOID                    send(T100VOID*);
 
     private:
 };

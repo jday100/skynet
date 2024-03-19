@@ -7,7 +7,7 @@
 #include <wx/panel.h>
 #include <wx/sizer.h>
 #include "T100Common.h"
-#include "T100WxPaintElementsLoadThreadTask.h"
+#include "wx\paint\task\T100WxPaintElementsLoadThreadTask.h"
 
 
 class T100WxPaintElementsPanel : public wxPanel
@@ -20,6 +20,8 @@ class T100WxPaintElementsPanel : public wxPanel
             long style = wxTAB_TRAVERSAL | wxNO_BORDER,
             const wxString& name = wxPanelNameStr);
         virtual ~T100WxPaintElementsPanel();
+
+        static const long ID_THREAD_IMAGE;
 
     protected:
         wxNotebook*         Notebook1;
@@ -44,6 +46,8 @@ class T100WxPaintElementsPanel : public wxPanel
         static const long ID_LISTVIEW1;
         static const long ID_LISTVIEW2;
         static const long ID_LISTVIEW3;
+
+        void OnThreadImage(wxThreadEvent& event);
 
     private:
         void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);

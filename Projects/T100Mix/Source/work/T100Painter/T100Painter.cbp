@@ -30,8 +30,8 @@
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 				</ResourceCompiler>
 				<Linker>
-					<Add library="../../build/libT100Library.a" />
 					<Add library="../../build/libT100Suite.a" />
+					<Add library="../../build/libT100Library.a" />
 					<Add library="libwxmsw30ud.a" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>

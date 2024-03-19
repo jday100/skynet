@@ -38,6 +38,7 @@
 				</ResourceCompiler>
 				<Linker>
 					<Add library="libwxmsw30ud.a" />
+					<Add library="iconv" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -84,6 +85,7 @@
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option="-g" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
 					<Add directory="include/database" />
 					<Add directory="include/fs/file" />
@@ -106,8 +108,8 @@
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
 				</ResourceCompiler>
 				<Linker>
-					<Add option="-s" />
 					<Add library="libwxmsw30u.a" />
+					<Add library="iconv" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -154,6 +156,7 @@
 		<Unit filename="include/base/T100Object.h" />
 		<Unit filename="include/base/T100Reader.h" />
 		<Unit filename="include/base/T100Scanner.h" />
+		<Unit filename="include/base/T100State.h" />
 		<Unit filename="include/base/T100Stream.h" />
 		<Unit filename="include/base/T100Token.h" />
 		<Unit filename="include/base/T100Writer.h" />
@@ -196,6 +199,7 @@
 		<Unit filename="src/base/T100Object.cpp" />
 		<Unit filename="src/base/T100Reader.cpp" />
 		<Unit filename="src/base/T100Scanner.cpp" />
+		<Unit filename="src/base/T100State.cpp" />
 		<Unit filename="src/base/T100Stream.cpp" />
 		<Unit filename="src/base/T100Token.cpp" />
 		<Unit filename="src/base/T100Writer.cpp" />

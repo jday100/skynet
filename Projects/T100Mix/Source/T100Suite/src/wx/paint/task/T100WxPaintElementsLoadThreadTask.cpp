@@ -2,6 +2,10 @@
 
 #include <wx/string.h>
 #include <wx/image.h>
+#include "common\T100StringTypes.h"
+#include "T100WxPaintElementsPanel.h"
+#include "T100WxEventData.h"
+
 
 T100WxPaintElementsLoadThreadTask::T100WxPaintElementsLoadThreadTask()
     :T100WxThreadTask()
@@ -16,8 +20,33 @@ T100WxPaintElementsLoadThreadTask::~T100WxPaintElementsLoadThreadTask()
 
 T100BOOL T100WxPaintElementsLoadThreadTask::run(T100VOID* paras)
 {
+    T100BOOL            result;
+
+    T100WCHAR*          elements[5] = {
+        L"images\\circle.png"
+    };
+
+    for(T100WCHAR* item : elements){
+        if(item){
+            wxImage*    image   = T100NEW wxImage();
+
+            result  = image->LoadFile(item, wxBITMAP_TYPE_PNG);
+            if(result){
+                send(image);
+            }else{
+                return T100FALSE;
+            }
+        }else{
+
+        }
+    }
+
+
+    /*
     T100BOOL        result;
-    wxString        elements[0]    = {};
+    wxString        elements[1]    = {
+        L"images\\circle.png"
+    };
 
     for(wxString item : elements){
         if(item.empty()){
@@ -32,5 +61,24 @@ T100BOOL T100WxPaintElementsLoadThreadTask::run(T100VOID* paras)
                 return T100FALSE;
             }
         }
+    }
+    */
+}
+
+T100VOID T100WxPaintElementsLoadThreadTask::send(T100VOID* object)
+{
+    T100WxPaintElementsPanel*   panel       = T100NULL;
+
+    panel   = dynamic_cast<T100WxPaintElementsPanel*>(getWindow());
+
+    if(panel){
+        wxThreadEvent       event(wxEVT_THREAD, panel->ID_THREAD_IMAGE);
+
+        T100WxEventData*    data        = T100NEW T100WxEventData();
+
+        data->setObject(object);
+        event.SetEventObject(data);
+
+        wxQueueEvent(getWindow(), event.Clone());
     }
 }
