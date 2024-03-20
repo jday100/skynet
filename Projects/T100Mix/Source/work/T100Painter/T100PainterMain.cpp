@@ -15,6 +15,7 @@
 #include <wx/string.h>
 //*)
 
+#include "T100PainterCallback.h"
 #include "wx\paint\view\T100WxPaintElementsPanel.h"
 #include "wx\paint\view\T100WxPaintCtrl.h"
 
@@ -155,20 +156,25 @@ void T100PainterFrame::OnResize(wxSizeEvent& event)
 
 void T100PainterFrame::OnMenuItemNewSelected(wxCommandEvent& event)
 {
+    T100PainterCallback::frame_menu_new();
 }
 
 void T100PainterFrame::OnMenuItemOpenSelected(wxCommandEvent& event)
 {
+    T100PainterCallback::frame_menu_open();
 }
 
 void T100PainterFrame::OnMenuItemSaveSelected(wxCommandEvent& event)
 {
+    T100PainterCallback::frame_menu_save();
 }
 
 void T100PainterFrame::OnMenuItemSaveAsSelected(wxCommandEvent& event)
 {
+    T100PainterCallback::frame_menu_save_as();
 }
 
 void T100PainterFrame::OnMenuItemCloseSelected(wxCommandEvent& event)
 {
+    T100PainterCallback::frame_menu_close();
 }

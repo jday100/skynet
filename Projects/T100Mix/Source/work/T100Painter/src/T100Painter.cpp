@@ -1,5 +1,7 @@
 #include "T100Painter.h"
 
+#include "T100PainterCallback.h"
+
 T100Painter::T100Painter()
 {
     //ctor
@@ -17,6 +19,8 @@ T100VOID T100Painter::create()
     m_store = T100NEW T100PainterStore();
     m_serve = T100NEW T100PainterServe();
     m_view  = T100NEW T100PainterView();
+
+    T100PainterCallback::init(m_store, m_serve, m_view);
 }
 
 T100VOID T100Painter::destroy()

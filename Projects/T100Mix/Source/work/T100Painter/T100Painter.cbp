@@ -82,6 +82,7 @@
 		<Unit filename="T100PainterMain.cpp" />
 		<Unit filename="T100PainterMain.h" />
 		<Unit filename="include/T100Painter.h" />
+		<Unit filename="include/T100PainterCallback.h" />
 		<Unit filename="include/diagram/T100DiagramEntry.h" />
 		<Unit filename="include/serve/T100PainterEntryDrawer.h" />
 		<Unit filename="include/serve/T100PainterServe.h" />
@@ -91,6 +92,7 @@
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/T100Painter.cpp" />
+		<Unit filename="src/T100PainterCallback.cpp" />
 		<Unit filename="src/diagram/T100DiagramEntry.cpp" />
 		<Unit filename="src/serve/T100PainterEntryDrawer.cpp" />
 		<Unit filename="src/serve/T100PainterServe.cpp" />

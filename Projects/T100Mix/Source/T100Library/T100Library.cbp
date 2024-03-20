@@ -32,6 +32,7 @@
 					<Add directory="include/time" />
 					<Add directory="include/relation/server" />
 					<Add directory="include/relation/client" />
+					<Add directory="include/safe" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -66,6 +67,7 @@
 					<Add directory="include/time" />
 					<Add directory="include/relation/server" />
 					<Add directory="include/relation/client" />
+					<Add directory="include/safe" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -103,6 +105,7 @@
 					<Add directory="include/time" />
 					<Add directory="include/relation/server" />
 					<Add directory="include/relation/client" />
+					<Add directory="include/safe" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -159,6 +162,9 @@
 		<Unit filename="include/base/T100State.h" />
 		<Unit filename="include/base/T100Stream.h" />
 		<Unit filename="include/base/T100Token.h" />
+		<Unit filename="include/base/T100Transducer.h" />
+		<Unit filename="include/base/T100TransducerSource.h" />
+		<Unit filename="include/base/T100TransducerTarget.h" />
 		<Unit filename="include/base/T100Writer.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
 		<Unit filename="include/common/T100X86Common.h" />
@@ -167,6 +173,8 @@
 		<Unit filename="include/database/T100SQL.h" />
 		<Unit filename="include/database/T100SQLite.h" />
 		<Unit filename="include/fs/file/T100File.h" />
+		<Unit filename="include/fs/file/T100FileBufferedReader.h" />
+		<Unit filename="include/fs/file/T100FileBufferedWriter.h" />
 		<Unit filename="include/fs/file/T100FileReader.h" />
 		<Unit filename="include/fs/file/T100FileStream.h" />
 		<Unit filename="include/fs/file/T100FileWriter.h" />
@@ -175,6 +183,7 @@
 		<Unit filename="include/math/T100Vector.h" />
 		<Unit filename="include/relation/client/T100Client.h" />
 		<Unit filename="include/relation/server/T100Server.h" />
+		<Unit filename="include/safe/T100SafeVector.h" />
 		<Unit filename="include/string/T100String.h" />
 		<Unit filename="include/string/T100String32.h" />
 		<Unit filename="include/string/T100StringTools.h" />
@@ -202,12 +211,17 @@
 		<Unit filename="src/base/T100State.cpp" />
 		<Unit filename="src/base/T100Stream.cpp" />
 		<Unit filename="src/base/T100Token.cpp" />
+		<Unit filename="src/base/T100Transducer.cpp" />
+		<Unit filename="src/base/T100TransducerSource.cpp" />
+		<Unit filename="src/base/T100TransducerTarget.cpp" />
 		<Unit filename="src/base/T100Writer.cpp" />
 		<Unit filename="src/database/T100Database.cpp" />
 		<Unit filename="src/database/T100MySQL.cpp" />
 		<Unit filename="src/database/T100SQL.cpp" />
 		<Unit filename="src/database/T100SQLite.cpp" />
 		<Unit filename="src/fs/file/T100File.cpp" />
+		<Unit filename="src/fs/file/T100FileBufferedReader.cpp" />
+		<Unit filename="src/fs/file/T100FileBufferedWriter.cpp" />
 		<Unit filename="src/fs/file/T100FileReader.cpp" />
 		<Unit filename="src/fs/file/T100FileStream.cpp" />
 		<Unit filename="src/fs/file/T100FileWriter.cpp" />
