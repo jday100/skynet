@@ -2,6 +2,7 @@
 #define T100PAINTERCALLBACK_H
 
 #include "T100Common.h"
+class T100Painter;
 class T100PainterStore;
 class T100PainterServe;
 class T100PainterView;
@@ -13,7 +14,7 @@ class T100PainterCallback
         T100PainterCallback();
         virtual ~T100PainterCallback();
 
-        static T100VOID                     init(T100PainterStore*, T100PainterServe*, T100PainterView*);
+        static T100VOID                     init(T100Painter*, T100PainterStore*, T100PainterServe*, T100PainterView*);
         static T100PainterStore*            getStore();
         static T100PainterServe*            getServe();
         static T100PainterView*             getView();
@@ -29,6 +30,7 @@ class T100PainterCallback
     protected:
 
     private:
+        static T100Painter*                 m_painter;
         static T100PainterStore*            m_store;
         static T100PainterServe*            m_serve;
         static T100PainterView*             m_view;

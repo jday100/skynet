@@ -18,6 +18,11 @@ class T100Painter
         T100VOID                    setView(T100PainterView*);
         T100PainterView*            getView();
 
+    public:
+        T100BOOL                    Opened();
+        T100BOOL                    Open();
+        T100BOOL                    Close();
+
     protected:
         T100VOID                    create();
         T100VOID                    destroy();

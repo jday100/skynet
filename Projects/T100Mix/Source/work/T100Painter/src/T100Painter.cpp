@@ -20,7 +20,7 @@ T100VOID T100Painter::create()
     m_serve = T100NEW T100PainterServe();
     m_view  = T100NEW T100PainterView();
 
-    T100PainterCallback::init(m_store, m_serve, m_view);
+    T100PainterCallback::init(this, m_store, m_serve, m_view);
 }
 
 T100VOID T100Painter::destroy()
@@ -58,4 +58,21 @@ T100VOID T100Painter::setView(T100PainterView* view)
 T100PainterView* T100Painter::getView()
 {
     return m_view;
+}
+
+T100BOOL T100Painter::Opened()
+{
+    return T100FALSE;
+}
+
+T100BOOL T100Painter::Open()
+{
+    T100BOOL            result;
+
+    result  = m_view->Open();
+}
+
+T100BOOL T100Painter::Close()
+{
+
 }

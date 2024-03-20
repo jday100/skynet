@@ -13,6 +13,9 @@ class T100PainterView
         T100VOID                show();
         wxFrame*                getFrame();
 
+    public:
+        T100BOOL                Open();
+
     protected:
         T100VOID                create();
         T100VOID                destroy();
