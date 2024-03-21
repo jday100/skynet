@@ -119,11 +119,17 @@ void T100ThreadFrame::OnMenuItemOpenSelected(wxCommandEvent& event)
     if(wxID_OK == dialog.ShowModal()){
         T100OpenThreadTask*     task    = new T100OpenThreadTask(this);
 
+        //m_gauge = new wxGauge(&StatusBar1->GetField(2));
+        m_gauge = new wxGauge(StatusBar1, wxID_ANY, 100);
         task->start();
     }
 }
 
 void T100ThreadFrame::OnThreadOpen(wxThreadEvent& event)
 {
+    int         result;
 
+    result  = event.GetInt();
+
+    m_gauge->SetValue(result);
 }

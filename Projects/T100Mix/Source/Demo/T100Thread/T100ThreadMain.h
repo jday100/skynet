@@ -16,6 +16,9 @@
 #include <wx/statusbr.h>
 //*)
 
+#include <wx/gauge.h>
+
+
 class T100ThreadFrame: public wxFrame
 {
     public:
@@ -29,6 +32,7 @@ class T100ThreadFrame: public wxFrame
         void OnThreadOpen(wxThreadEvent& event);
 
     private:
+        wxGauge*            m_gauge         = nullptr;
 
         //(*Handlers(T100ThreadFrame)
         void OnQuit(wxCommandEvent& event);

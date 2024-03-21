@@ -17,7 +17,7 @@ T100OpenThreadTask::~T100OpenThreadTask()
 
 void T100OpenThreadTask::run()
 {
-    for(int i=0;i<100;i++){
+    for(int i=0;i<=100;i++){
         sleep(1000);
         send(i);
     }
@@ -27,6 +27,8 @@ void T100OpenThreadTask::run()
 void T100OpenThreadTask::send(int value)
 {
     wxThreadEvent       event(wxEVT_THREAD, m_frame->ID_THREAD_OPEN);
+
+    event.SetInt(value);
 
     wxQueueEvent(m_frame, event.Clone());
 }
