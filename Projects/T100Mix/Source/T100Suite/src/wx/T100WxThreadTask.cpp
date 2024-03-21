@@ -20,3 +20,8 @@ wxWindow* T100WxThreadTask::getWindow()
 {
     return m_parent;
 }
+
+T100VOID T100WxThreadTask::sendEvent(wxThreadEvent& event, T100WxEventData* data)
+{
+
+}

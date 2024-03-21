@@ -65,6 +65,11 @@ T100BOOL T100Painter::Opened()
     return T100FALSE;
 }
 
+T100BOOL T100Painter::New()
+{
+
+}
+
 T100BOOL T100Painter::Open()
 {
     T100BOOL            result;
@@ -73,6 +78,21 @@ T100BOOL T100Painter::Open()
 }
 
 T100BOOL T100Painter::Close()
+{
+
+}
+
+T100BOOL T100Painter::Save()
+{
+
+}
+
+T100BOOL T100Painter::SaveAs()
+{
+
+}
+
+T100BOOL T100Painter::Quit()
 {
 
 }

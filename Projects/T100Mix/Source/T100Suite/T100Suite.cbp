@@ -181,6 +181,7 @@
 		<Unit filename="include/wx/paint/serve/canvas/T100WxPaintCanvasStateTransverter.h" />
 		<Unit filename="include/wx/paint/store/T100WxPaintElementsStore.h" />
 		<Unit filename="include/wx/paint/task/T100WxPaintElementsLoadThreadTask.h" />
+		<Unit filename="include/wx/paint/task/T100WxPaintFileLoadThreadTask.h" />
 		<Unit filename="include/wx/paint/view/T100WxPaintCanvas.h" />
 		<Unit filename="include/wx/paint/view/T100WxPaintCtrl.h" />
 		<Unit filename="include/wx/paint/view/T100WxPaintElementsPanel.h" />
@@ -222,6 +223,7 @@
 		<Unit filename="src/wx/paint/serve/canvas/T100WxPaintCanvasStateTransverter.cpp" />
 		<Unit filename="src/wx/paint/store/T100WxPaintElementsStore.cpp" />
 		<Unit filename="src/wx/paint/task/T100WxPaintElementsLoadThreadTask.cpp" />
+		<Unit filename="src/wx/paint/task/T100WxPaintFileLoadThreadTask.cpp" />
 		<Unit filename="src/wx/paint/view/T100WxPaintCanvas.cpp" />
 		<Unit filename="src/wx/paint/view/T100WxPaintCtrl.cpp" />
 		<Unit filename="src/wx/paint/view/T100WxPaintElementsPanel.cpp" />

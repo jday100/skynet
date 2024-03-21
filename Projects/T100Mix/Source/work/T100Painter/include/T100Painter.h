@@ -20,8 +20,12 @@ class T100Painter
 
     public:
         T100BOOL                    Opened();
+        T100BOOL                    New();
         T100BOOL                    Open();
         T100BOOL                    Close();
+        T100BOOL                    Save();
+        T100BOOL                    SaveAs();
+        T100BOOL                    Quit();
 
     protected:
         T100VOID                    create();
