@@ -1,0 +1,8 @@
+#ifndef T100CALLBACK_H
+#define T100CALLBACK_H
+
+#include "T100Common.h"
+
+typedef T100VOID(*T100CALLBACK)(T100VOID*);
+
+#endif // T100CALLBACK_H

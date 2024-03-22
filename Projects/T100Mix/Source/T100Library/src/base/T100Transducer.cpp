@@ -12,10 +12,10 @@ T100Transducer::~T100Transducer()
 
 T100BOOL T100Transducer::serialize(T100TransducerSource& source, T100TransducerTarget& target)
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100Transducer::deserialize(T100TransducerSource& source, T100TransducerTarget& target)
 {
-
+    return T100FALSE;
 }

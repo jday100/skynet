@@ -34,9 +34,19 @@ class T100PainterFrame: public wxFrame
         //(*Handlers(T100PainterFrame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
+        void OnMenuItemNewSelected(wxCommandEvent& event);
+        void OnMenuItemOpenSelected(wxCommandEvent& event);
+        void OnMenuItemSaveSelected(wxCommandEvent& event);
+        void OnMenuItemSaveAsSelected(wxCommandEvent& event);
+        void OnMenuItemCloseSelected(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(T100PainterFrame)
+        static const long ID_MENUITEM_NEW;
+        static const long ID_MENUITEM_OPEN;
+        static const long ID_MENUITEM_SAVE;
+        static const long ID_MENUITEM_SAVE_AS;
+        static const long ID_MENUITEM_CLOSE;
         static const long idMenuQuit;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
@@ -44,6 +54,11 @@ class T100PainterFrame: public wxFrame
 
         //(*Declarations(T100PainterFrame)
         wxAuiManager* AuiManager1;
+        wxMenuItem* MenuItemClose;
+        wxMenuItem* MenuItemNew;
+        wxMenuItem* MenuItemOpen;
+        wxMenuItem* MenuItemSave;
+        wxMenuItem* MenuItemSaveAs;
         wxStatusBar* StatusBar1;
         //*)
 

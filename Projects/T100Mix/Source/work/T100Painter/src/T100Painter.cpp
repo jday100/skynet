@@ -1,6 +1,7 @@
 #include "T100Painter.h"
 
 #include "T100PainterCallback.h"
+#include "wx\paint\task\T100WxPaintFileLoadThreadTask.h"
 
 T100Painter::T100Painter()
 {
@@ -75,6 +76,13 @@ T100BOOL T100Painter::Open()
     T100BOOL            result;
 
     result  = m_view->Open();
+
+    result  = m_store->OpenFile();
+
+    T100WxPaintFileLoadThreadTask*      task        = T100NEW T100WxPaintFileLoadThreadTask();
+
+    task->setWindow(m_view->getFrame());
+    task->start();
 }
 
 T100BOOL T100Painter::Close()

@@ -32,6 +32,7 @@
 					<Add directory="include/wx/paint/element" />
 					<Add directory="include/wx/paint/element/graphics" />
 					<Add directory="include/wx/paint/data" />
+					<Add directory="include/wx/paint/diagram/V1" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -66,6 +67,7 @@
 					<Add directory="include/wx/paint/element" />
 					<Add directory="include/wx/paint/element/graphics" />
 					<Add directory="include/wx/paint/data" />
+					<Add directory="include/wx/paint/diagram/V1" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -105,6 +107,7 @@
 					<Add directory="include/wx/paint/element" />
 					<Add directory="include/wx/paint/element/graphics" />
 					<Add directory="include/wx/paint/data" />
+					<Add directory="include/wx/paint/diagram/V1" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -164,11 +167,16 @@
 		<Unit filename="include/wx/app/view/T100WxView.h" />
 		<Unit filename="include/wx/fs/T100WxDiskList.h" />
 		<Unit filename="include/wx/paint/data/T100DiagramInfo.h" />
+		<Unit filename="include/wx/paint/data/T100DiagramInfoV1.h" />
 		<Unit filename="include/wx/paint/diagram/T100DiagramBase.h" />
 		<Unit filename="include/wx/paint/diagram/T100DiagramDrawer.h" />
+		<Unit filename="include/wx/paint/diagram/T100DiagramFile.h" />
+		<Unit filename="include/wx/paint/diagram/T100DiagramFileSource.h" />
+		<Unit filename="include/wx/paint/diagram/T100DiagramFileTarget.h" />
 		<Unit filename="include/wx/paint/diagram/T100DiagramTransducer.h" />
 		<Unit filename="include/wx/paint/diagram/T100DiagramTransducerSource.h" />
 		<Unit filename="include/wx/paint/diagram/T100DiagramTransducerTarget.h" />
+		<Unit filename="include/wx/paint/diagram/V1/T100DiagramFileV1.h" />
 		<Unit filename="include/wx/paint/element/T100PaintElementBase.h" />
 		<Unit filename="include/wx/paint/element/graphics/T100PaintElementCircle.h" />
 		<Unit filename="include/wx/paint/serve/T100WxPaintElementsDrawer.h" />
@@ -206,11 +214,16 @@
 		<Unit filename="src/wx/app/view/T100WxView.cpp" />
 		<Unit filename="src/wx/fs/T100WxDiskList.cpp" />
 		<Unit filename="src/wx/paint/data/T100DiagramInfo.cpp" />
+		<Unit filename="src/wx/paint/data/T100DiagramInfoV1.cpp" />
 		<Unit filename="src/wx/paint/diagram/T100DiagramBase.cpp" />
 		<Unit filename="src/wx/paint/diagram/T100DiagramDrawer.cpp" />
+		<Unit filename="src/wx/paint/diagram/T100DiagramFile.cpp" />
+		<Unit filename="src/wx/paint/diagram/T100DiagramFileSource.cpp" />
+		<Unit filename="src/wx/paint/diagram/T100DiagramFileTarget.cpp" />
 		<Unit filename="src/wx/paint/diagram/T100DiagramTransducer.cpp" />
 		<Unit filename="src/wx/paint/diagram/T100DiagramTransducerSource.cpp" />
 		<Unit filename="src/wx/paint/diagram/T100DiagramTransducerTarget.cpp" />
+		<Unit filename="src/wx/paint/diagram/V1/T100DiagramFileV1.cpp" />
 		<Unit filename="src/wx/paint/element/T100PaintElementBase.cpp" />
 		<Unit filename="src/wx/paint/element/graphics/T100PaintElementCircle.cpp" />
 		<Unit filename="src/wx/paint/serve/T100WxPaintElementsDrawer.cpp" />

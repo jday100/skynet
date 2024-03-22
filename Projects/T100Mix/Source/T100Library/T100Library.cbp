@@ -33,6 +33,7 @@
 					<Add directory="include/relation/server" />
 					<Add directory="include/relation/client" />
 					<Add directory="include/safe" />
+					<Add directory="include/callback" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -68,6 +69,7 @@
 					<Add directory="include/relation/server" />
 					<Add directory="include/relation/client" />
 					<Add directory="include/safe" />
+					<Add directory="include/callback" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -106,6 +108,7 @@
 					<Add directory="include/relation/server" />
 					<Add directory="include/relation/client" />
 					<Add directory="include/safe" />
+					<Add directory="include/callback" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -166,6 +169,7 @@
 		<Unit filename="include/base/T100TransducerSource.h" />
 		<Unit filename="include/base/T100TransducerTarget.h" />
 		<Unit filename="include/base/T100Writer.h" />
+		<Unit filename="include/callback/T100Callback.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
 		<Unit filename="include/common/T100X86Common.h" />
 		<Unit filename="include/database/T100Database.h" />

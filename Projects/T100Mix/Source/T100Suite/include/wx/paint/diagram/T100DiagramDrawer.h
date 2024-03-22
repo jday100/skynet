@@ -3,7 +3,7 @@
 
 #include "fs\file\T100FileBufferedReader.h"
 #include "fs\file\T100FileBufferedWriter.h"
-#include "T100PaintElementBase.h"
+#include "wx\paint\element\T100PaintElementBase.h"
 
 class T100DiagramDrawer
 {
