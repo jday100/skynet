@@ -26,3 +26,23 @@ T100PainterEntryDrawer* T100PainterServe::getEntryDrawer()
 {
     return m_entry_drawer;
 }
+
+T100BOOL T100PainterServe::Clear()
+{
+
+}
+
+T100BOOL T100PainterServe::Opened()
+{
+
+}
+
+T100BOOL T100PainterServe::Saved()
+{
+
+}
+
+T100BOOL T100PainterServe::Modified()
+{
+
+}

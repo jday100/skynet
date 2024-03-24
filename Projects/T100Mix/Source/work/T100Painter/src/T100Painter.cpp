@@ -68,7 +68,28 @@ T100BOOL T100Painter::Opened()
 
 T100BOOL T100Painter::New()
 {
+    T100BOOL            result;
 
+    result  = m_serve->Opened();
+    if(result){
+        if(m_serve->Modified()){
+            result  = m_store->Save();
+            if(result){
+
+            }else{
+                return T100FALSE;
+            }
+        }else{
+
+        }
+
+        if(result){
+            result  = m_serve->Clear();
+        }
+    }else{
+        return T100TRUE;
+    }
+    return result;
 }
 
 T100BOOL T100Painter::Open()

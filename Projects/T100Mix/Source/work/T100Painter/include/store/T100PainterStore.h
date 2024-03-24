@@ -10,6 +10,8 @@ class T100PainterStore
         T100PainterStore();
         virtual ~T100PainterStore();
 
+        T100BOOL                    Save();
+
         T100BOOL                    OpenFile();
 
         T100BOOL                    SaveFile();

@@ -10,6 +10,12 @@ class T100PainterServe
         T100PainterServe();
         virtual ~T100PainterServe();
 
+        T100BOOL                        Clear();
+
+        T100BOOL                        Opened();
+        T100BOOL                        Saved();
+        T100BOOL                        Modified();
+
         T100PainterEntryDrawer*         getEntryDrawer();
 
     protected:

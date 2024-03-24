@@ -18,7 +18,7 @@ T100WxPaintElementsLoadThreadTask::~T100WxPaintElementsLoadThreadTask()
     //dtor
 }
 
-T100BOOL T100WxPaintElementsLoadThreadTask::run(T100VOID* paras)
+T100VOID T100WxPaintElementsLoadThreadTask::run()
 {
     T100BOOL            result;
 
@@ -34,7 +34,7 @@ T100BOOL T100WxPaintElementsLoadThreadTask::run(T100VOID* paras)
             if(result){
                 send(image);
             }else{
-                return T100FALSE;
+                return;
             }
         }else{
 

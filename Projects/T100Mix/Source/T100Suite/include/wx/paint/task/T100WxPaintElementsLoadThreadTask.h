@@ -9,7 +9,7 @@ class T100WxPaintElementsLoadThreadTask : public T100WxThreadTask
         T100WxPaintElementsLoadThreadTask();
         virtual ~T100WxPaintElementsLoadThreadTask();
 
-        virtual T100BOOL            run(T100VOID* = T100NULL);
+        virtual T100VOID            run();
 
     protected:
         T100VOID                    send(T100VOID*);

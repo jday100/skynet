@@ -168,6 +168,7 @@
 		<Unit filename="include/wx/fs/T100WxDiskList.h" />
 		<Unit filename="include/wx/paint/data/T100DiagramInfo.h" />
 		<Unit filename="include/wx/paint/data/T100DiagramInfoV1.h" />
+		<Unit filename="include/wx/paint/diagram/T100Diagram.h" />
 		<Unit filename="include/wx/paint/diagram/T100DiagramBase.h" />
 		<Unit filename="include/wx/paint/diagram/T100DiagramDrawer.h" />
 		<Unit filename="include/wx/paint/diagram/T100DiagramFile.h" />
@@ -215,6 +216,7 @@
 		<Unit filename="src/wx/fs/T100WxDiskList.cpp" />
 		<Unit filename="src/wx/paint/data/T100DiagramInfo.cpp" />
 		<Unit filename="src/wx/paint/data/T100DiagramInfoV1.cpp" />
+		<Unit filename="src/wx/paint/diagram/T100Diagram.cpp" />
 		<Unit filename="src/wx/paint/diagram/T100DiagramBase.cpp" />
 		<Unit filename="src/wx/paint/diagram/T100DiagramDrawer.cpp" />
 		<Unit filename="src/wx/paint/diagram/T100DiagramFile.cpp" />

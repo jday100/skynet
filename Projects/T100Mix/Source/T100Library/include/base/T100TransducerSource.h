@@ -1,6 +1,8 @@
 #ifndef T100TRANSDUCERSOURCE_H
 #define T100TRANSDUCERSOURCE_H
 
+#include "T100Common.h"
+
 
 class T100TransducerSource
 {

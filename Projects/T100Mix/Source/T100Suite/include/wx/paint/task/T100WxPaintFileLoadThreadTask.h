@@ -10,7 +10,7 @@ class T100WxPaintFileLoadThreadTask : public T100WxThreadTask
         T100WxPaintFileLoadThreadTask();
         virtual ~T100WxPaintFileLoadThreadTask();
 
-        virtual T100BOOL            run(T100VOID* = T100NULL);
+        virtual T100VOID            run();
 
     protected:
 

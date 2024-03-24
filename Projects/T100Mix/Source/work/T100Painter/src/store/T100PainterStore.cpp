@@ -27,12 +27,14 @@ T100VOID T100PainterStore::destroy()
     T100SAFE_DELETE(m_diagram_drawer)
 }
 
+T100BOOL T100PainterStore::Save()
+{
+
+}
+
 T100BOOL T100PainterStore::OpenFile()
 {
-    T100FileBufferedReader          reader;
-    T100PAINTER_ELEMENT_VECTOR      elements;
 
-    m_diagram_drawer->Load(&reader, &elements);
 }
 
 T100BOOL T100PainterStore::SaveFile()

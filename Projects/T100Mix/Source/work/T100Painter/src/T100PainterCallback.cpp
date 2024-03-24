@@ -45,7 +45,11 @@ T100PainterView* T100PainterCallback::getView()
 
 T100BOOL T100PainterCallback::frame_menu_new(T100VOID* data)
 {
+    T100BOOL            result;
 
+    result  = m_painter->New();
+
+    return result;
 }
 
 T100BOOL T100PainterCallback::frame_menu_open(T100VOID* data)

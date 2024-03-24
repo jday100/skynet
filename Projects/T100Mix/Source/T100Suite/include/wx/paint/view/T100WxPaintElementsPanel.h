@@ -47,7 +47,11 @@ class T100WxPaintElementsPanel : public wxPanel
         static const long ID_LISTVIEW2;
         static const long ID_LISTVIEW3;
 
+    private:
         void OnThreadImage(wxThreadEvent& event);
+
+        void OnPanel1ListCtrlItemSelect(wxListEvent& event);
+        void OnPanel1ListCtrlItemDeselect(wxListEvent& event);
 
     private:
         void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);

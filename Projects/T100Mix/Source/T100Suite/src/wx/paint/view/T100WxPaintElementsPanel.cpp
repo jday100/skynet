@@ -57,6 +57,15 @@ void T100WxPaintElementsPanel::BuildContent(wxWindow* parent,wxWindowID id,const
 
 T100VOID T100WxPaintElementsPanel::create()
 {
+    Connect(ID_LISTVIEW1,wxEVT_COMMAND_LIST_ITEM_SELECTED,(wxObjectEventFunction)&T100WxPaintElementsPanel::OnPanel1ListCtrlItemSelect);
+	Connect(ID_LISTVIEW1,wxEVT_COMMAND_LIST_ITEM_DESELECTED,(wxObjectEventFunction)&T100WxPaintElementsPanel::OnPanel1ListCtrlItemDeselect);
+
+    Connect(ID_LISTVIEW2,wxEVT_COMMAND_LIST_ITEM_SELECTED,(wxObjectEventFunction)&T100WxPaintElementsPanel::OnPanel1ListCtrlItemSelect);
+	Connect(ID_LISTVIEW2,wxEVT_COMMAND_LIST_ITEM_DESELECTED,(wxObjectEventFunction)&T100WxPaintElementsPanel::OnPanel1ListCtrlItemDeselect);
+
+    Connect(ID_LISTVIEW3,wxEVT_COMMAND_LIST_ITEM_SELECTED,(wxObjectEventFunction)&T100WxPaintElementsPanel::OnPanel1ListCtrlItemSelect);
+	Connect(ID_LISTVIEW3,wxEVT_COMMAND_LIST_ITEM_DESELECTED,(wxObjectEventFunction)&T100WxPaintElementsPanel::OnPanel1ListCtrlItemDeselect);
+
     ListView1->SetImageList(ImageList1, wxIMAGE_LIST_NORMAL);
     m_load_task = T100NEW T100WxPaintElementsLoadThreadTask();
 
@@ -91,4 +100,14 @@ void T100WxPaintElementsPanel::OnThreadImage(wxThreadEvent& event)
 
         T100SAFE_DELETE(data)
     }
+}
+
+void T100WxPaintElementsPanel::OnPanel1ListCtrlItemSelect(wxListEvent& event)
+{
+    wxUIntPtr   data    = event.GetData();
+}
+
+void T100WxPaintElementsPanel::OnPanel1ListCtrlItemDeselect(wxListEvent& event)
+{
+
 }

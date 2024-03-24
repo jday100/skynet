@@ -31,11 +31,6 @@ T100VOID T100WxThreadTask::stop()
 
 }
 
-T100VOID T100WxThreadTask::run()
-{
-
-}
-
 T100VOID T100WxThreadTask::sendEvent(wxThreadEvent& event, T100WxEventData* data)
 {
 

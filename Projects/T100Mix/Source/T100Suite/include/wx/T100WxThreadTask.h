@@ -12,22 +12,22 @@ class T100WxThreadTask
         T100WxThreadTask();
         virtual ~T100WxThreadTask();
 
-        T100VOID                    start();
-        T100VOID                    stop();
+        T100VOID                        start();
+        T100VOID                        stop();
 
-        T100VOID                    setWindow(wxWindow*);
-        wxWindow*                   getWindow();
+        T100VOID                        setWindow(wxWindow*);
+        wxWindow*                       getWindow();
 
     protected:
-        virtual T100VOID            run();
+        virtual T100VOID                run() = 0;
 
-        T100VOID                    sendEvent(wxThreadEvent&, T100WxEventData* = T100NULL);
+        T100VOID                        sendEvent(wxThreadEvent&, T100WxEventData* = T100NULL);
 
     private:
-        wxWindow*                   m_parent            = T100NULL;
+        wxWindow*                       m_parent            = T100NULL;
 
-        std::function<void()>       m_method;
-        std::thread*                m_thread            = T100NULL;
+        std::function<void()>           m_method;
+        std::thread*                    m_thread            = T100NULL;
 };
 
 #endif // T100WXTHREADTASK_H

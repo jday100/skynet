@@ -1,7 +1,7 @@
 #ifndef T100STRING32_H
 #define T100STRING32_H
 
-#include "T100StringTypes.h"
+#include "common\T100StringTypes.h"
 
 
 class T100String32
