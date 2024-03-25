@@ -65,7 +65,11 @@ T100WPainterView* T100WPainter::getView()
 
 T100BOOL T100WPainter::New()
 {
+    T100BOOL            result;
 
+    result  = m_serve->destroy();
+
+    return result;
 }
 
 T100BOOL T100WPainter::Open()

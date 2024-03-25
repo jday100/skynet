@@ -121,6 +121,11 @@ T100WPainterFrame::~T100WPainterFrame()
 
 T100VOID T100WPainterFrame::create()
 {
+    m_elements_panel    = T100NEW T100WPainterElementsPanel(this);
+    m_canvas            = T100NEW T100WPainterCanvas(this);
+
+    AuiManager1->AddPane(m_elements_panel, wxAuiPaneInfo().Name(wxT("Elements")).BestSize(300, -1).Left());
+    AuiManager1->AddPane(m_canvas, wxAuiPaneInfo().Name(wxT("Canvas")).DefaultPane().CenterPane());
     SetSize(800, 600);
 }
 

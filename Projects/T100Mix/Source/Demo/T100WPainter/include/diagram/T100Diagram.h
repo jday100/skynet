@@ -3,6 +3,7 @@
 
 #include "T100File.h"
 
+#include "T100DiagramInfo.h"
 
 class T100Diagram
 {
@@ -10,8 +11,8 @@ class T100Diagram
         T100Diagram();
         virtual ~T100Diagram();
 
-        T100BOOL            Load();
-        T100BOOL            Save();
+        T100BOOL            load(T100STRING, T100DiagramInfo&);
+        T100BOOL            save(T100STRING, T100DiagramInfo&);
 
     protected:
 

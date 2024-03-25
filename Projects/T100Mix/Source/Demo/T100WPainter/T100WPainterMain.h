@@ -18,6 +18,8 @@
 //*)
 
 #include "T100Common.h"
+#include "T100WPainterCanvas.h"
+#include "T100WPainterElementsPanel.h"
 
 class T100WPainterFrame: public wxFrame
 {
@@ -59,6 +61,9 @@ class T100WPainterFrame: public wxFrame
         wxMenuItem* MenuItemSaveAs;
         wxStatusBar* StatusBar1;
         //*)
+
+        T100WPainterCanvas*                 m_canvas                    = T100NULL;
+        T100WPainterElementsPanel*          m_elements_panel            = T100NULL;
 
     private:
         T100VOID            create();

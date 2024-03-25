@@ -24,6 +24,9 @@
 					<Add directory="include/element" />
 					<Add directory="include/data" />
 					<Add directory="include/library" />
+					<Add directory="." />
+					<Add directory="include/element/graphics" />
+					<Add directory="include/diagram/V1" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -50,6 +53,8 @@
 					<Add directory="include/element" />
 					<Add directory="include/data" />
 					<Add directory="include/library" />
+					<Add directory="include/element/graphics" />
+					<Add directory="include/diagram/V1" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -85,12 +90,27 @@
 		<Unit filename="include/T100WPainter.h" />
 		<Unit filename="include/T100WPainterCallback.h" />
 		<Unit filename="include/data/T100DiagramInfo.h" />
+		<Unit filename="include/data/T100DiagramInfoV1.h" />
 		<Unit filename="include/diagram/T100Diagram.h" />
+		<Unit filename="include/diagram/T100DiagramFile.h" />
+		<Unit filename="include/diagram/T100DiagramFileSource.h" />
+		<Unit filename="include/diagram/T100DiagramTransducer.h" />
+		<Unit filename="include/diagram/T100DiagramTransducerSource.h" />
+		<Unit filename="include/diagram/T100DiagramTransducerTarget.h" />
+		<Unit filename="include/diagram/V1/T100DiagramFileV1.h" />
+		<Unit filename="include/diagram/V1/T100DiagramFileV1Source.h" />
 		<Unit filename="include/element/T100ElementBase.h" />
+		<Unit filename="include/element/graphics/T100ElementCircle.h" />
+		<Unit filename="include/library/T100BufferedFile.h" />
 		<Unit filename="include/library/T100File.h" />
+		<Unit filename="include/library/T100ThreadTask.h" />
 		<Unit filename="include/library/T100Unicode.h" />
 		<Unit filename="include/serve/T100WPainterServe.h" />
 		<Unit filename="include/store/T100WPainterStore.h" />
+		<Unit filename="include/view/T100WPainterCanvas.h" />
+		<Unit filename="include/view/T100WPainterCanvasState.h" />
+		<Unit filename="include/view/T100WPainterCanvasTransverter.h" />
+		<Unit filename="include/view/T100WPainterElementsPanel.h" />
 		<Unit filename="include/view/T100WPainterView.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
@@ -98,13 +118,29 @@
 		<Unit filename="src/T100WPainter.cpp" />
 		<Unit filename="src/T100WPainterCallback.cpp" />
 		<Unit filename="src/data/T100DiagramInfo.cpp" />
+		<Unit filename="src/data/T100DiagramInfoV1.cpp" />
 		<Unit filename="src/diagram/T100Diagram.cpp" />
+		<Unit filename="src/diagram/T100DiagramFile.cpp" />
+		<Unit filename="src/diagram/T100DiagramFileSource.cpp" />
+		<Unit filename="src/diagram/T100DiagramTransducer.cpp" />
+		<Unit filename="src/diagram/T100DiagramTransducerSource.cpp" />
+		<Unit filename="src/diagram/T100DiagramTransducerTarget.cpp" />
+		<Unit filename="src/diagram/V1/T100DiagramFileV1.cpp" />
+		<Unit filename="src/diagram/V1/T100DiagramFileV1Source.cpp" />
 		<Unit filename="src/element/T100ElementBase.cpp" />
+		<Unit filename="src/element/graphics/T100ElementCircle.cpp" />
+		<Unit filename="src/library/T100BufferedFile.cpp" />
 		<Unit filename="src/library/T100File.cpp" />
+		<Unit filename="src/library/T100ThreadTask.cpp" />
 		<Unit filename="src/library/T100Unicode.cpp" />
 		<Unit filename="src/serve/T100WPainterServe.cpp" />
 		<Unit filename="src/store/T100WPainterStore.cpp" />
+		<Unit filename="src/view/T100WPainterCanvas.cpp" />
+		<Unit filename="src/view/T100WPainterCanvasState.cpp" />
+		<Unit filename="src/view/T100WPainterCanvasTransverter.cpp" />
+		<Unit filename="src/view/T100WPainterElementsPanel.cpp" />
 		<Unit filename="src/view/T100WPainterView.cpp" />
+		<Unit filename="wxsmith/T100WPainterElementsPanel.wxs" />
 		<Unit filename="wxsmith/T100WPainterframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
@@ -112,6 +148,7 @@
 				<gui name="wxWidgets" src="T100WPainterApp.cpp" main="T100WPainterFrame" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxFrame wxs="wxsmith/T100WPainterframe.wxs" src="T100WPainterMain.cpp" hdr="T100WPainterMain.h" fwddecl="0" i18n="1" name="T100WPainterFrame" language="CPP" />
+					<wxPanel wxs="wxsmith/T100WPainterElementsPanel.wxs" src="src\view\T100WPainterElementsPanel.cpp" hdr="include\view\T100WPainterElementsPanel.h" fwddecl="0" i18n="1" name="T100WPainterElementsPanel" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

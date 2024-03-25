@@ -8,6 +8,8 @@
  **************************************************************/
 
 #include "T100WPainterApp.h"
+#include "T100WPainter.h"
+#include "T100WPainterView.h"
 
 //(*AppHeaders
 #include "T100WPainterMain.h"
@@ -16,6 +18,7 @@
 
 IMPLEMENT_APP(T100WPainterApp);
 
+/*
 bool T100WPainterApp::OnInit()
 {
     //(*AppInitialize
@@ -28,6 +31,24 @@ bool T100WPainterApp::OnInit()
     	SetTopWindow(Frame);
     }
     //*)
+    return wxsOK;
+
+}
+*/
+
+bool T100WPainterApp::OnInit()
+{
+
+    bool wxsOK = true;
+    wxInitAllImageHandlers();
+    if ( wxsOK )
+    {
+        T100WPainter* painter = new T100WPainter();
+
+        painter->getView()->show();
+    	SetTopWindow(painter->getView()->getFrame());
+    }
+
     return wxsOK;
 
 }
