@@ -9,3 +9,8 @@ T100DiagramTransducerSource::~T100DiagramTransducerSource()
 {
     //dtor
 }
+
+T100VOID T100DiagramTransducerSource::setTarget(T100DiagramTransducerTarget* target)
+{
+    m_target    = target;
+}

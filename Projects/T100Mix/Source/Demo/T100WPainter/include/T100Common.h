@@ -14,6 +14,9 @@
 #define     T100INT                 int
 #define     T100UINT                unsiged int
 
+#define     T100WORD                unsigned long
+#define     T100DWORD               unsigned long long
+
 #define     T100NEW                 new
 #define     T100DELETE              delete
 

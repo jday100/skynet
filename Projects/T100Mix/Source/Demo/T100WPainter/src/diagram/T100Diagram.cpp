@@ -2,6 +2,7 @@
 
 #include "T100BufferedFile.h"
 #include "T100DiagramTransducer.h"
+#include "T100DiagramFileSource.h"
 
 T100Diagram::T100Diagram()
 {
@@ -17,8 +18,8 @@ T100BOOL T100Diagram::load(T100STRING file, T100DiagramInfo& info)
 {
     T100BufferedFile                        diagram(file);
     T100DiagramTransducer                   transducer;
-    T100DiagramTransducerSource             source;
-    T100DiagramTransducerTarget             target;
+    T100DiagramFileSource                   source;
+    T100DiagramTransducerTarget             target(&diagram);
 
     transducer.deserialize(source, target);
 }
