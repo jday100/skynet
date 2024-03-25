@@ -5,6 +5,9 @@
 #include "T100WPainterView.h"
 #include "T100WPainterCallback.h"
 
+#include "T100WPainterMenuNewThreadTask.h"
+
+
 T100WPainter::T100WPainter()
 {
     //ctor
@@ -65,11 +68,11 @@ T100WPainterView* T100WPainter::getView()
 
 T100BOOL T100WPainter::New()
 {
-    T100BOOL            result;
+    T100WPainterMenuNewThreadTask*          task            = T100NULL;
 
-    result  = m_serve->destroy();
+    task    = T100NEW T100WPainterMenuNewThreadTask();
 
-    return result;
+    task->start();
 }
 
 T100BOOL T100WPainter::Open()

@@ -27,6 +27,7 @@
 					<Add directory="." />
 					<Add directory="include/element/graphics" />
 					<Add directory="include/diagram/V1" />
+					<Add directory="include/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -55,6 +56,7 @@
 					<Add directory="include/library" />
 					<Add directory="include/element/graphics" />
 					<Add directory="include/diagram/V1" />
+					<Add directory="include/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -89,6 +91,7 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/T100WPainter.h" />
 		<Unit filename="include/T100WPainterCallback.h" />
+		<Unit filename="include/T100WPainterCommon.h" />
 		<Unit filename="include/data/T100DiagramInfo.h" />
 		<Unit filename="include/data/T100DiagramInfoV1.h" />
 		<Unit filename="include/diagram/T100Diagram.h" />
@@ -107,6 +110,10 @@
 		<Unit filename="include/library/T100Unicode.h" />
 		<Unit filename="include/serve/T100WPainterServe.h" />
 		<Unit filename="include/store/T100WPainterStore.h" />
+		<Unit filename="include/task/T100WPainterElementsPanelLoadThreadTask.h" />
+		<Unit filename="include/task/T100WPainterMenuNewThreadTask.h" />
+		<Unit filename="include/task/T100WxEventData.h" />
+		<Unit filename="include/task/T100WxThreadTask.h" />
 		<Unit filename="include/view/T100WPainterCanvas.h" />
 		<Unit filename="include/view/T100WPainterCanvasState.h" />
 		<Unit filename="include/view/T100WPainterCanvasTransverter.h" />
@@ -135,6 +142,10 @@
 		<Unit filename="src/library/T100Unicode.cpp" />
 		<Unit filename="src/serve/T100WPainterServe.cpp" />
 		<Unit filename="src/store/T100WPainterStore.cpp" />
+		<Unit filename="src/task/T100WPainterElementsPanelLoadThreadTask.cpp" />
+		<Unit filename="src/task/T100WPainterMenuNewThreadTask.cpp" />
+		<Unit filename="src/task/T100WxEventData.cpp" />
+		<Unit filename="src/task/T100WxThreadTask.cpp" />
 		<Unit filename="src/view/T100WPainterCanvas.cpp" />
 		<Unit filename="src/view/T100WPainterCanvasState.cpp" />
 		<Unit filename="src/view/T100WPainterCanvasTransverter.cpp" />

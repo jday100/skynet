@@ -2,11 +2,14 @@
 #define T100WPAINTERELEMENTSPANEL_H
 
 //(*Headers(T100WPainterElementsPanel)
+#include <wx/imaglist.h>
 #include <wx/listctrl.h>
 #include <wx/notebook.h>
 #include <wx/panel.h>
 #include <wx/sizer.h>
 //*)
+
+#include "T100Common.h"
 
 class T100WPainterElementsPanel: public wxPanel
 {
@@ -16,11 +19,15 @@ class T100WPainterElementsPanel: public wxPanel
 		virtual ~T100WPainterElementsPanel();
 
 		//(*Declarations(T100WPainterElementsPanel)
+		wxImageList* ImageList1;
 		wxListView* ListView1;
 		wxListView* ListView2;
 		wxListView* ListView3;
 		wxNotebook* Notebook1;
 		//*)
+
+
+		static const long ID_THREAD_IMAGE;
 
 	protected:
 
@@ -32,11 +39,16 @@ class T100WPainterElementsPanel: public wxPanel
 		//*)
 
 	private:
+	    void OnThreadImage(wxThreadEvent& event);
 
 		//(*Handlers(T100WPainterElementsPanel)
+		void OnListView1ItemSelect(wxListEvent& event);
+		void OnListView1ItemDeselect(wxListEvent& event);
 		//*)
 
 	protected:
+	    T100VOID            create();
+	    T100VOID            destroy();
 
 		void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);
 

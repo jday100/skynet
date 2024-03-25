@@ -7,7 +7,11 @@
 			<object class="sizeritem">
 				<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
 					<object class="notebookpage">
-						<object class="wxListView" name="ID_LISTVIEW1" variable="ListView1" member="yes" />
+						<object class="wxListView" name="ID_LISTVIEW1" variable="ListView1" member="yes">
+							<style>wxLC_ICON</style>
+							<handler function="OnListView1ItemSelect" entry="EVT_LIST_ITEM_SELECTED" />
+							<handler function="OnListView1ItemDeselect" entry="EVT_LIST_ITEM_DESELECTED" />
+						</object>
 						<label>Page name</label>
 					</object>
 					<object class="notebookpage">
@@ -23,6 +27,18 @@
 				<border>5</border>
 				<option>1</option>
 			</object>
+		</object>
+		<object class="wxImageList" variable="ImageList1" member="yes">
+			<image_list>
+				<item>64</item>
+				<item>64</item>
+			</image_list>
+			<image_text>
+				<item2>64</item2>
+				<item2>64</item2>
+			</image_text>
+			<image_width>64</image_width>
+			<image_height>64</image_height>
 		</object>
 	</object>
 </wxsmith>
