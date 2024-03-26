@@ -28,6 +28,7 @@
 					<Add directory="include/element/graphics" />
 					<Add directory="include/diagram/V1" />
 					<Add directory="include/task" />
+					<Add directory="include/state" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -57,6 +58,7 @@
 					<Add directory="include/element/graphics" />
 					<Add directory="include/diagram/V1" />
 					<Add directory="include/task" />
+					<Add directory="include/state" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -94,6 +96,7 @@
 		<Unit filename="include/T100WPainterCommon.h" />
 		<Unit filename="include/data/T100DiagramInfo.h" />
 		<Unit filename="include/data/T100DiagramInfoV1.h" />
+		<Unit filename="include/data/T100ElementInfo.h" />
 		<Unit filename="include/diagram/T100Diagram.h" />
 		<Unit filename="include/diagram/T100DiagramFile.h" />
 		<Unit filename="include/diagram/T100DiagramFileSource.h" />
@@ -106,9 +109,15 @@
 		<Unit filename="include/element/graphics/T100ElementCircle.h" />
 		<Unit filename="include/library/T100BufferedFile.h" />
 		<Unit filename="include/library/T100File.h" />
+		<Unit filename="include/library/T100State.h" />
 		<Unit filename="include/library/T100ThreadTask.h" />
 		<Unit filename="include/library/T100Unicode.h" />
 		<Unit filename="include/serve/T100WPainterServe.h" />
+		<Unit filename="include/state/T100WPainterCanvasStateEdit.h" />
+		<Unit filename="include/state/T100WPainterCanvasStateNone.h" />
+		<Unit filename="include/state/T100WPainterCanvasStatePaint.h" />
+		<Unit filename="include/state/T100WPainterCanvasStateSelected.h" />
+		<Unit filename="include/state/T100WPainterCanvasStateSizing.h" />
 		<Unit filename="include/store/T100WPainterStore.h" />
 		<Unit filename="include/task/T100WPainterElementsPanelLoadThreadTask.h" />
 		<Unit filename="include/task/T100WPainterMenuNewThreadTask.h" />
@@ -126,6 +135,7 @@
 		<Unit filename="src/T100WPainterCallback.cpp" />
 		<Unit filename="src/data/T100DiagramInfo.cpp" />
 		<Unit filename="src/data/T100DiagramInfoV1.cpp" />
+		<Unit filename="src/data/T100ElementInfo.cpp" />
 		<Unit filename="src/diagram/T100Diagram.cpp" />
 		<Unit filename="src/diagram/T100DiagramFile.cpp" />
 		<Unit filename="src/diagram/T100DiagramFileSource.cpp" />
@@ -138,9 +148,15 @@
 		<Unit filename="src/element/graphics/T100ElementCircle.cpp" />
 		<Unit filename="src/library/T100BufferedFile.cpp" />
 		<Unit filename="src/library/T100File.cpp" />
+		<Unit filename="src/library/T100State.cpp" />
 		<Unit filename="src/library/T100ThreadTask.cpp" />
 		<Unit filename="src/library/T100Unicode.cpp" />
 		<Unit filename="src/serve/T100WPainterServe.cpp" />
+		<Unit filename="src/state/T100WPainterCanvasStateEdit.cpp" />
+		<Unit filename="src/state/T100WPainterCanvasStateNone.cpp" />
+		<Unit filename="src/state/T100WPainterCanvasStatePaint.cpp" />
+		<Unit filename="src/state/T100WPainterCanvasStateSelected.cpp" />
+		<Unit filename="src/state/T100WPainterCanvasStateSizing.cpp" />
 		<Unit filename="src/store/T100WPainterStore.cpp" />
 		<Unit filename="src/task/T100WPainterElementsPanelLoadThreadTask.cpp" />
 		<Unit filename="src/task/T100WPainterMenuNewThreadTask.cpp" />

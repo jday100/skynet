@@ -28,6 +28,8 @@ class T100WPainterCallback
         static T100VOID                 frame_menu_close(T100VOID* = T100NULL);
         static T100VOID                 frame_menu_quit(T100VOID* = T100NULL);
 
+        static T100VOID                 elements_item_select(T100VOID* = T100NULL);
+
     protected:
 
     private:

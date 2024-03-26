@@ -5,7 +5,9 @@
 #include <wx/string.h>
 //*)
 
+#include "T100ElementInfo.h"
 #include "T100WxEventData.h"
+#include "T100WPainterCallback.h"
 #include "T100WPainterElementsPanelLoadThreadTask.h"
 
 //(*IdInit(T100WPainterElementsPanel)
@@ -81,17 +83,32 @@ T100VOID T100WPainterElementsPanel::destroy()
 void T100WPainterElementsPanel::OnThreadImage(wxThreadEvent& event)
 {
     wxImage*        image;
+    long            id;
 
     image   = dynamic_cast<wxImage*>(event.GetEventObject());
 
     if(image){
-        ListView1->InsertItem(0, wxT("Test"), 0);
+        id  = ListView1->InsertItem(0, wxT("Test"), 0);
+
+        T100ElementInfo*    info        = T100NEW T100ElementInfo();
+        wxUIntPtr           data        = (wxUIntPtr)info;
+
+        info->type  = 1;
+        ListView1->SetItemPtrData(id, data);
     }
 }
 
 
 void T100WPainterElementsPanel::OnListView1ItemSelect(wxListEvent& event)
 {
+    wxUIntPtr               data            = event.GetData();
+    T100ElementInfo*        info            = T100NULL;
+
+    info    = (T100ElementInfo*)data;
+
+    int type    = info->type;
+
+    T100WPainterCallback::elements_item_select((void*)data);
 }
 
 void T100WPainterElementsPanel::OnListView1ItemDeselect(wxListEvent& event)

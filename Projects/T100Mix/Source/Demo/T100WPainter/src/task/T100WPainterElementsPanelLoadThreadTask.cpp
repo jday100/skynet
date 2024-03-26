@@ -42,6 +42,7 @@ T100VOID T100WPainterElementsPanelLoadThreadTask::run()
         event.SetEventObject(data);
 
         event.SetEventObject(image);
+        event.SetInt(1);
 
         send(event);
     }

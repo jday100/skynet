@@ -5,6 +5,8 @@
 #include "T100WPainterServe.h"
 #include "T100WPainterView.h"
 
+#include "T100ElementInfo.h"
+
 T100WPainter*           T100WPainterCallback::m_painter                 = T100NULL;
 T100WPainterStore*      T100WPainterCallback::m_store                   = T100NULL;
 T100WPainterServe*      T100WPainterCallback::m_serve                   = T100NULL;
@@ -76,4 +78,13 @@ T100VOID T100WPainterCallback::frame_menu_close(T100VOID* data)
 T100VOID T100WPainterCallback::frame_menu_quit(T100VOID* data)
 {
 
+}
+
+T100VOID T100WPainterCallback::elements_item_select(T100VOID* data)
+{
+    T100ElementInfo*        info            = T100NULL;
+
+    info    = (T100ElementInfo*)data;
+
+    //m_view->getElementsPanel()
 }

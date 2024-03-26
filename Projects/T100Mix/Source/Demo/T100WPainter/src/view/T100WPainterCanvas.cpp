@@ -16,11 +16,28 @@ T100WPainterCanvas::T100WPainterCanvas(wxWindow *parent,
     :wxScrolledWindow(parent, winid, pos, size, style, name)
 {
     //ctor
+    create();
 }
 
 T100WPainterCanvas::~T100WPainterCanvas()
 {
     //dtor
+    destroy();
+}
+
+T100VOID T100WPainterCanvas::create()
+{
+
+}
+
+T100VOID T100WPainterCanvas::destroy()
+{
+
+}
+
+T100VOID T100WPainterCanvas::Change(T100WORD state)
+{
+
 }
 
 void T100WPainterCanvas::OnEraseBackGround(wxEraseEvent& event)

@@ -12,7 +12,7 @@
 #define     T100FALSE               false
 
 #define     T100INT                 int
-#define     T100UINT                unsiged int
+#define     T100UINT                unsigned int
 
 #define     T100WORD                unsigned long
 #define     T100DWORD               unsigned long long
