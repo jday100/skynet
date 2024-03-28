@@ -10,6 +10,9 @@ class T100DiagramFileV1Source : public T100DiagramTransducerSource
         T100DiagramFileV1Source();
         virtual ~T100DiagramFileV1Source();
 
+        T100BOOL            serialize();
+        T100BOOL            deserialize();
+
     protected:
 
     private:

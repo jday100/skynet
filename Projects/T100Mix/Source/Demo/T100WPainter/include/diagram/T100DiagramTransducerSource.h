@@ -10,7 +10,10 @@ class T100DiagramTransducerSource
         T100DiagramTransducerSource();
         virtual ~T100DiagramTransducerSource();
 
-        T100VOID            setTarget(T100DiagramTransducerTarget*);
+        virtual T100VOID            setTarget(T100DiagramTransducerTarget*);
+
+        virtual T100BOOL            serialize();
+        virtual T100BOOL            deserialize();
 
     protected:
         T100DiagramTransducerTarget*            m_target            = T100NULL;

@@ -14,3 +14,13 @@ T100VOID T100DiagramTransducerSource::setTarget(T100DiagramTransducerTarget* tar
 {
     m_target    = target;
 }
+
+T100BOOL T100DiagramTransducerSource::serialize()
+{
+    return T100FALSE;
+}
+
+T100BOOL T100DiagramTransducerSource::deserialize()
+{
+    return T100FALSE;
+}

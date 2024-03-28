@@ -1,7 +1,10 @@
 #include "T100WPainterCanvasStatePaint.h"
 
 #include <wx/dcclient.h>
+#include "T100ElementBase.h"
 #include "T100WPainterCanvas.h"
+#include "T100WPainterView.h"
+#include "T100WPainterCallback.h"
 
 T100WPainterCanvasStatePaint::T100WPainterCanvasStatePaint()
     :T100WPainterCanvasState()
@@ -24,6 +27,10 @@ T100VOID T100WPainterCanvasStatePaint::OnPaint(T100WPainterCanvas* canvas, wxPai
     wxClientDC          dc(canvas);
 
     dc.DrawCircle(100, 100, 10);
+
+    if(canvas){
+        canvas->Paint();
+    }
 }
 
 T100VOID T100WPainterCanvasStatePaint::OnMouseEnter(T100WPainterCanvas* canvas, wxMouseEvent& event)
@@ -38,6 +45,14 @@ T100VOID T100WPainterCanvasStatePaint::OnMouseLeave(T100WPainterCanvas* canvas, 
 
 T100VOID T100WPainterCanvasStatePaint::OnMouseLeftDown(T100WPainterCanvas* canvas, wxMouseEvent& event)
 {
+    T100BOOL                    result;
+    T100ElementBase*            current             = T100NULL;
+    T100INT                     x, y, vx, vy;
+
+    x       = event.GetPosition().x;
+    y       = event.GetPosition().y;
+
+    T100WPainterCallback::getView()->getCanvas()->Select(current);
 
 }
 

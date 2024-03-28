@@ -26,5 +26,10 @@ T100BOOL T100Diagram::load(T100STRING file, T100DiagramInfo& info)
 
 T100BOOL T100Diagram::save(T100STRING file, T100DiagramInfo& info)
 {
+    T100BufferedFile                        diagram(file);
+    T100DiagramTransducer                   transducer;
+    T100DiagramFileSource                   source;
+    T100DiagramTransducerTarget             target(&diagram);
 
+    transducer.serialize(source, target);
 }

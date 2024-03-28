@@ -6,7 +6,8 @@
 #include "T100WPainterCallback.h"
 
 #include "T100WPainterMenuNewThreadTask.h"
-
+#include "T100WPainterMenuOpenThreadTask.h"
+#include "T100WPainterMenuSaveAsThreadTask.h"
 
 T100WPainter::T100WPainter()
 {
@@ -77,7 +78,13 @@ T100BOOL T100WPainter::New()
 
 T100BOOL T100WPainter::Open()
 {
+    m_view->Open();
 
+    T100WPainterMenuOpenThreadTask*         task            = T100NULL;
+
+    task    = T100NEW T100WPainterMenuOpenThreadTask();
+
+    task->start();
 }
 
 T100BOOL T100WPainter::Close()
@@ -92,7 +99,13 @@ T100BOOL T100WPainter::Save()
 
 T100BOOL T100WPainter::SaveAs()
 {
+    m_view->SaveAs();
 
+    T100WPainterMenuSaveAsThreadTask*       task            = T100NULL;
+
+    task    = T100NEW T100WPainterMenuSaveAsThreadTask();
+
+    task->start();
 }
 
 T100BOOL T100WPainter::Quit()

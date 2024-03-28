@@ -1,6 +1,7 @@
 #ifndef T100WPAINTERSERVE_H
 #define T100WPAINTERSERVE_H
 
+#include <atomic>
 #include "T100Common.h"
 #include "T100DiagramInfo.h"
 
@@ -13,11 +14,16 @@ class T100WPainterServe
         T100BOOL                    create();
         T100BOOL                    destroy();
 
+        T100BOOL                    opened();
+
+        T100STRING                  getFileName();
         T100DiagramInfo*            getDiagramInfo();
 
     protected:
 
     private:
+        std::atomic_bool            m_opened;
+        T100STRING                  m_filename;
         T100DiagramInfo*            m_diagram           = T100NULL;
 };
 

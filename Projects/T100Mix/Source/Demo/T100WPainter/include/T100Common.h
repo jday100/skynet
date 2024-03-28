@@ -17,6 +17,8 @@
 #define     T100WORD                unsigned long
 #define     T100DWORD               unsigned long long
 
+#define     T100FLOAT               float
+
 #define     T100NEW                 new
 #define     T100DELETE              delete
 

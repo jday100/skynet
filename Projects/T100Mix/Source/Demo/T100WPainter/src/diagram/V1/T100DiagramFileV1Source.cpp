@@ -10,3 +10,13 @@ T100DiagramFileV1Source::~T100DiagramFileV1Source()
 {
     //dtor
 }
+
+T100BOOL T100DiagramFileV1Source::serialize()
+{
+
+}
+
+T100BOOL T100DiagramFileV1Source::deserialize()
+{
+
+}

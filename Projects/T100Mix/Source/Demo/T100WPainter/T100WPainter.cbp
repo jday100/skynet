@@ -107,6 +107,7 @@
 		<Unit filename="include/diagram/V1/T100DiagramFileV1Source.h" />
 		<Unit filename="include/element/T100ElementBase.h" />
 		<Unit filename="include/element/graphics/T100ElementCircle.h" />
+		<Unit filename="include/element/graphics/T100ElementCircleSource.h" />
 		<Unit filename="include/library/T100BufferedFile.h" />
 		<Unit filename="include/library/T100File.h" />
 		<Unit filename="include/library/T100State.h" />
@@ -121,6 +122,8 @@
 		<Unit filename="include/store/T100WPainterStore.h" />
 		<Unit filename="include/task/T100WPainterElementsPanelLoadThreadTask.h" />
 		<Unit filename="include/task/T100WPainterMenuNewThreadTask.h" />
+		<Unit filename="include/task/T100WPainterMenuOpenThreadTask.h" />
+		<Unit filename="include/task/T100WPainterMenuSaveAsThreadTask.h" />
 		<Unit filename="include/task/T100WxEventData.h" />
 		<Unit filename="include/task/T100WxThreadTask.h" />
 		<Unit filename="include/view/T100WPainterCanvas.h" />
@@ -146,6 +149,7 @@
 		<Unit filename="src/diagram/V1/T100DiagramFileV1Source.cpp" />
 		<Unit filename="src/element/T100ElementBase.cpp" />
 		<Unit filename="src/element/graphics/T100ElementCircle.cpp" />
+		<Unit filename="src/element/graphics/T100ElementCircleSource.cpp" />
 		<Unit filename="src/library/T100BufferedFile.cpp" />
 		<Unit filename="src/library/T100File.cpp" />
 		<Unit filename="src/library/T100State.cpp" />
@@ -160,6 +164,8 @@
 		<Unit filename="src/store/T100WPainterStore.cpp" />
 		<Unit filename="src/task/T100WPainterElementsPanelLoadThreadTask.cpp" />
 		<Unit filename="src/task/T100WPainterMenuNewThreadTask.cpp" />
+		<Unit filename="src/task/T100WPainterMenuOpenThreadTask.cpp" />
+		<Unit filename="src/task/T100WPainterMenuSaveAsThreadTask.cpp" />
 		<Unit filename="src/task/T100WxEventData.cpp" />
 		<Unit filename="src/task/T100WxThreadTask.cpp" />
 		<Unit filename="src/view/T100WPainterCanvas.cpp" />

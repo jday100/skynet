@@ -21,5 +21,7 @@ T100BOOL T100WPainterStore::Load(T100STRING file, T100DiagramInfo& info)
 
 T100BOOL T100WPainterStore::Save(T100STRING file, T100DiagramInfo& info)
 {
+    T100Diagram         diagram;
 
+    diagram.save(file, info);
 }

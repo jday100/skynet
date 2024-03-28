@@ -3,6 +3,7 @@
 
 #include "T100Common.h"
 #include "T100WPainterMain.h"
+#include "T100WPainterCanvas.h"
 #include "T100WPainterElementsPanel.h"
 
 class T100WPainterView
@@ -11,9 +12,13 @@ class T100WPainterView
         T100WPainterView();
         virtual ~T100WPainterView();
 
+        T100BOOL                            Open();
+        T100BOOL                            SaveAs();
+
         T100BOOL                            show();
 
         T100WPainterFrame*                  getFrame();
+        T100WPainterCanvas*                 getCanvas();
 
     protected:
         T100VOID                            create();

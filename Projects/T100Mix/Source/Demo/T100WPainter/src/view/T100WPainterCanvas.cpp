@@ -2,6 +2,8 @@
 
 #include <wx/dcclient.h>
 
+const long T100WPainterCanvas::ID_THREAD_LOAD = wxNewId();
+
 BEGIN_EVENT_TABLE(T100WPainterCanvas,wxScrolledWindow)
     EVT_PAINT(T100WPainterCanvas::OnPaint)
     EVT_ERASE_BACKGROUND(T100WPainterCanvas::OnEraseBackGround)
@@ -52,10 +54,66 @@ T100VOID T100WPainterCanvas::destroy()
 
 }
 
+T100VOID T100WPainterCanvas::SetDiagramInfo(T100DiagramInfo* diagram)
+{
+    m_diagram   = diagram;
+}
+
+T100DiagramInfo* T100WPainterCanvas::GetDiagramInfo()
+{
+    return m_diagram;
+}
+
+T100VOID T100WPainterCanvas::Select(T100ElementBase* element)
+{
+    std::lock_guard<std::mutex>         lock(m_mutex);
+    m_current   = element;
+}
+
+T100VOID T100WPainterCanvas::Deselect()
+{
+    std::lock_guard<std::mutex>         lock(m_mutex);
+    m_current   = T100NULL;
+}
+
+T100VOID T100WPainterCanvas::Remove(T100ElementBase* element)
+{
+    /*
+    if(m_diagram->getElements()->erase(element)){
+        m_current   = T100NULL;
+        return T100TRUE;
+    }
+    */
+}
+
+T100ElementBase* T100WPainterCanvas::Current()
+{
+    std::lock_guard<std::mutex>         lock(m_mutex);
+    return m_current;
+}
+
 T100VOID T100WPainterCanvas::Change(T100WORD state)
 {
     m_transverter.Change(state);
     Refresh();
+}
+
+T100VOID T100WPainterCanvas::Paint()
+{
+    if(!m_diagram)return;
+
+    T100WPAINTER_ELEMENT_VECTOR*        elements            = T100NULL;
+
+    elements    = m_diagram->getElements();
+
+    if(elements){
+        wxClientDC      dc(this);
+        for(T100ElementBase* item : *elements){
+            if(item){
+                item->Draw(dc);
+            }
+        }
+    }
 }
 
 void T100WPainterCanvas::OnEraseBackGround(wxEraseEvent& event)
@@ -80,60 +138,125 @@ void T100WPainterCanvas::OnPaint(wxPaintEvent& event)
 
 void T100WPainterCanvas::OnMouseEnter(wxMouseEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnMouseEnter(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnMouseLeave(wxMouseEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnMouseLeave(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnMouseLeftDown(wxMouseEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnMouseLeftDown(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnMouseLeftUp(wxMouseEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnMouseLeftUp(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnMouseLeftDClick(wxMouseEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnMouseLeftDClick(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnMouseMove(wxMouseEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnMouseMove(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnKeyUp(wxKeyEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnKeyUp(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnResize(wxSizeEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnResize(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnScrollBottom(wxScrollWinEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnScrollBottom(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnScrollLineDown(wxScrollWinEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnScrollLineDown(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnScrollPageDown(wxScrollWinEvent& event)
 {
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
 
+    if(state){
+        state->OnScrollPageDown(this, event);
+    }
 }
 
 void T100WPainterCanvas::OnScrollThumbTrack(wxScrollWinEvent& event)
+{
+    T100WPainterCanvasState*            state           = T100NULL;
+    state   = m_transverter.GetCurrent();
+
+    if(state){
+        state->OnScrollThumbTrack(this, event);
+    }
+}
+
+void T100WPainterCanvas::OnThreadLoad(wxThreadEvent& event)
 {
 
 }

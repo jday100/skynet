@@ -10,6 +10,8 @@ class T100DiagramInfo
         T100DiagramInfo();
         virtual ~T100DiagramInfo();
 
+        T100WPAINTER_ELEMENT_VECTOR*        getElements();
+
     protected:
 
     private:
