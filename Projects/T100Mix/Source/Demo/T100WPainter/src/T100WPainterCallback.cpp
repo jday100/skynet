@@ -86,5 +86,5 @@ T100VOID T100WPainterCallback::elements_item_select(T100VOID* data)
 
     info    = (T100ElementInfo*)data;
 
-    //m_view->getElementsPanel()
+    m_view->getFrame()->getCanvas()->Change(T100CANVAS_STATE_PAINT);
 }

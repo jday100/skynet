@@ -134,6 +134,16 @@ T100VOID T100WPainterFrame::destroy()
     AuiManager1->UnInit();
 }
 
+T100WPainterCanvas* T100WPainterFrame::getCanvas()
+{
+    return m_canvas;
+}
+
+T100WPainterElementsPanel* T100WPainterFrame::getElementsPanel()
+{
+    return m_elements_panel;
+}
+
 void T100WPainterFrame::OnQuit(wxCommandEvent& event)
 {
     Close();

@@ -22,6 +22,22 @@ class T100WPainterCanvas : public wxScrolledWindow
         void OnEraseBackGround(wxEraseEvent& event);
         void OnPaint(wxPaintEvent& event);
 
+        void OnMouseEnter(wxMouseEvent& event);
+        void OnMouseLeave(wxMouseEvent& event);
+        void OnMouseLeftDown(wxMouseEvent& event);
+        void OnMouseLeftUp(wxMouseEvent& event);
+        void OnMouseLeftDClick(wxMouseEvent& event);
+        void OnMouseMove(wxMouseEvent& event);
+
+        void OnKeyUp(wxKeyEvent& event);
+
+        void OnResize(wxSizeEvent& event);
+
+        void OnScrollBottom(wxScrollWinEvent& event);
+        void OnScrollLineDown(wxScrollWinEvent& event);
+        void OnScrollPageDown(wxScrollWinEvent& event);
+        void OnScrollThumbTrack(wxScrollWinEvent& event);
+
     private:
         T100VOID                                create();
         T100VOID                                destroy();

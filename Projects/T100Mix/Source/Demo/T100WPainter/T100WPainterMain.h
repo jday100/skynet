@@ -28,6 +28,9 @@ class T100WPainterFrame: public wxFrame
         T100WPainterFrame(wxWindow* parent,wxWindowID id = -1);
         virtual ~T100WPainterFrame();
 
+        T100WPainterCanvas*                 getCanvas();
+        T100WPainterElementsPanel*          getElementsPanel();
+
     private:
 
         //(*Handlers(T100WPainterFrame)
@@ -66,8 +69,8 @@ class T100WPainterFrame: public wxFrame
         T100WPainterElementsPanel*          m_elements_panel            = T100NULL;
 
     private:
-        T100VOID            create();
-        T100VOID            destroy();
+        T100VOID                            create();
+        T100VOID                            destroy();
 
         DECLARE_EVENT_TABLE()
 };
