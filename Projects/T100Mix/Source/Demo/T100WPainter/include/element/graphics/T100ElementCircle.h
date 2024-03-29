@@ -11,6 +11,9 @@ class T100ElementCircle : public T100ElementBase
 
         T100BOOL            Draw(wxDC&);
 
+        T100VOID            SetStartingPoint(T100INT, T100INT);
+        T100VOID            SetTerminalPoint(T100INT, T100INT);
+
     protected:
         T100VOID            create();
         T100VOID            destroy();

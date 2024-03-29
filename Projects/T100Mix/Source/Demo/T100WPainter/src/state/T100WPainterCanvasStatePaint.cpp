@@ -84,7 +84,19 @@ T100VOID T100WPainterCanvasStatePaint::OnMouseLeftDClick(T100WPainterCanvas* can
 
 T100VOID T100WPainterCanvasStatePaint::OnMouseMove(T100WPainterCanvas* canvas, wxMouseEvent& event)
 {
+    T100BOOL                    result;
+    T100ElementBase*            current             = T100NULL;
+    T100INT                     x, y, vx, vy;
 
+    x       = event.GetPosition().x;
+    y       = event.GetPosition().y;
+
+    current = T100WPainterCallback::getView()->getCanvas()->Current();
+
+    if(current){
+        current->SetTerminalPoint(x, y);
+        canvas->Refresh();
+    }
 }
 
 T100VOID T100WPainterCanvasStatePaint::OnKeyUp(T100WPainterCanvas* canvas, wxKeyEvent& event)
