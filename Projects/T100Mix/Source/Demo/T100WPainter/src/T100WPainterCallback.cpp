@@ -52,7 +52,7 @@ T100WPainterView* T100WPainterCallback::getView()
 
 T100VOID T100WPainterCallback::frame_menu_new(T100VOID* data)
 {
-
+    m_painter->New();
 }
 
 T100VOID T100WPainterCallback::frame_menu_open(T100VOID* data)

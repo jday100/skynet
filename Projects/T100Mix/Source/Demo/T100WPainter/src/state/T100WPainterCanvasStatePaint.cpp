@@ -3,6 +3,7 @@
 #include <wx/dcclient.h>
 #include "T100ElementBase.h"
 #include "T100WPainterCanvas.h"
+#include "T100WPainterServe.h"
 #include "T100WPainterView.h"
 #include "T100WPainterCallback.h"
 
@@ -52,13 +53,28 @@ T100VOID T100WPainterCanvasStatePaint::OnMouseLeftDown(T100WPainterCanvas* canva
     x       = event.GetPosition().x;
     y       = event.GetPosition().y;
 
+    current = T100WPainterCallback::getServe()->getElementDrawer()->Create();
+
+    current->SetStartingPoint(x, y);
+
     T100WPainterCallback::getView()->getCanvas()->Select(current);
 
 }
 
 T100VOID T100WPainterCanvasStatePaint::OnMouseLeftUp(T100WPainterCanvas* canvas, wxMouseEvent& event)
 {
+    T100BOOL                    result;
+    T100ElementBase*            current             = T100NULL;
+    T100INT                     x, y, vx, vy;
 
+    x       = event.GetPosition().x;
+    y       = event.GetPosition().y;
+
+    current = T100WPainterCallback::getServe()->getElementDrawer()->Create();
+
+    current->SetTerminalPoint(x, y);
+
+    T100WPainterCallback::getView()->getCanvas()->Select(current);
 }
 
 T100VOID T100WPainterCanvasStatePaint::OnMouseLeftDClick(T100WPainterCanvas* canvas, wxMouseEvent& event)

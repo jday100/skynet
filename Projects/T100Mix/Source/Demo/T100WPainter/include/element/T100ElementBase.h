@@ -15,6 +15,9 @@ class T100ElementBase
 
         virtual T100BOOL            Draw(wxDC&) = 0;
 
+        virtual T100VOID            SetStartingPoint(T100INT, T100INT);
+        virtual T100VOID            SetTerminalPoint(T100INT, T100INT);
+
     protected:
 
     private:

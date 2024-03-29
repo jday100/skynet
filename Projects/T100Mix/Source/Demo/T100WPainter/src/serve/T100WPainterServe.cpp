@@ -48,3 +48,8 @@ T100BOOL T100WPainterServe::destroy()
     }
     return T100FALSE;
 }
+
+T100WPainterElementDrawer* T100WPainterServe::getElementDrawer()
+{
+    return &m_element_drawer;
+}

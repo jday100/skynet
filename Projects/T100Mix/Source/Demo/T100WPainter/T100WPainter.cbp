@@ -113,6 +113,7 @@
 		<Unit filename="include/library/T100State.h" />
 		<Unit filename="include/library/T100ThreadTask.h" />
 		<Unit filename="include/library/T100Unicode.h" />
+		<Unit filename="include/serve/T100WPainterElementDrawer.h" />
 		<Unit filename="include/serve/T100WPainterServe.h" />
 		<Unit filename="include/state/T100WPainterCanvasStateEdit.h" />
 		<Unit filename="include/state/T100WPainterCanvasStateNone.h" />
@@ -155,6 +156,7 @@
 		<Unit filename="src/library/T100State.cpp" />
 		<Unit filename="src/library/T100ThreadTask.cpp" />
 		<Unit filename="src/library/T100Unicode.cpp" />
+		<Unit filename="src/serve/T100WPainterElementDrawer.cpp" />
 		<Unit filename="src/serve/T100WPainterServe.cpp" />
 		<Unit filename="src/state/T100WPainterCanvasStateEdit.cpp" />
 		<Unit filename="src/state/T100WPainterCanvasStateNone.cpp" />

@@ -1,6 +1,7 @@
 #include "T100WPainterCanvas.h"
 
 #include <wx/dcclient.h>
+#include "T100WxEventData.h"
 
 const long T100WPainterCanvas::ID_THREAD_LOAD = wxNewId();
 
@@ -24,6 +25,8 @@ BEGIN_EVENT_TABLE(T100WPainterCanvas,wxScrolledWindow)
     EVT_SCROLLWIN_LINEDOWN(T100WPainterCanvas::OnScrollLineDown)
     EVT_SCROLLWIN_PAGEDOWN(T100WPainterCanvas::OnScrollPageDown)
     EVT_SCROLLWIN_THUMBTRACK(T100WPainterCanvas::OnScrollThumbTrack)
+    //
+    EVT_THREAD(ID_THREAD_LOAD, T100WPainterCanvas::OnThreadLoad)
 END_EVENT_TABLE()
 
 T100WPainterCanvas::T100WPainterCanvas(wxWindow *parent,
@@ -103,16 +106,20 @@ T100VOID T100WPainterCanvas::Paint()
     if(!m_diagram)return;
 
     T100WPAINTER_ELEMENT_VECTOR*        elements            = T100NULL;
+    wxClientDC                          dc(this);
 
     elements    = m_diagram->getElements();
 
     if(elements){
-        wxClientDC      dc(this);
-        for(T100ElementBase* item : *elements){
-            if(item){
-                item->Draw(dc);
+        for(T100ElementBase* element : *elements){
+            if(element){
+                element->Draw(dc);
             }
         }
+    }
+
+    if(m_current){
+        m_current->Draw(dc);
     }
 }
 
@@ -258,5 +265,16 @@ void T100WPainterCanvas::OnScrollThumbTrack(wxScrollWinEvent& event)
 
 void T100WPainterCanvas::OnThreadLoad(wxThreadEvent& event)
 {
+    T100WxEventData*        data            = T100NULL;
 
+    data    = dynamic_cast<T100WxEventData*>(event.GetEventObject());
+
+    if(data){
+        T100DiagramInfo*    diagram;
+
+        diagram = (T100DiagramInfo*)data->getData();
+        if(diagram){
+            m_diagram   = diagram;
+        }
+    }
 }

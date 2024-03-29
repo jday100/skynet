@@ -73,6 +73,7 @@ T100BOOL T100WPainter::New()
 
     task    = T100NEW T100WPainterMenuNewThreadTask();
 
+    task->setEvtHandler(m_view->getCanvas());
     task->start();
 }
 
