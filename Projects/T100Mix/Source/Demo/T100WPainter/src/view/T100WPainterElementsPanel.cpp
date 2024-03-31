@@ -42,7 +42,7 @@ void T100WPainterElementsPanel::BuildContent(wxWindow* parent,wxWindowID id,cons
 	ListView1 = new wxListView(Notebook1, ID_LISTVIEW1, wxDefaultPosition, wxDefaultSize, wxLC_ICON, wxDefaultValidator, _T("ID_LISTVIEW1"));
 	ListView2 = new wxListView(Notebook1, ID_LISTVIEW2, wxDefaultPosition, wxDefaultSize, wxLC_LIST, wxDefaultValidator, _T("ID_LISTVIEW2"));
 	ListView3 = new wxListView(Notebook1, ID_LISTVIEW3, wxDefaultPosition, wxDefaultSize, wxLC_LIST, wxDefaultValidator, _T("ID_LISTVIEW3"));
-	Notebook1->AddPage(ListView1, _("Page name"), false);
+	Notebook1->AddPage(ListView1, _("Graphics"), false);
 	Notebook1->AddPage(ListView2, _("Page name"), false);
 	Notebook1->AddPage(ListView3, _("Page name"), false);
 	BoxSizer1->Add(Notebook1, 1, wxALL|wxEXPAND, 5);
@@ -82,19 +82,20 @@ T100VOID T100WPainterElementsPanel::destroy()
 
 void T100WPainterElementsPanel::OnThreadImage(wxThreadEvent& event)
 {
-    wxImage*        image;
-    long            id;
+    T100WxEventData*        data;
+    wxImage*                image;
+    long                    id;
 
-    image   = dynamic_cast<wxImage*>(event.GetEventObject());
+    data    = dynamic_cast<T100WxEventData*>(event.GetEventObject());
 
-    if(image){
-        id  = ListView1->InsertItem(0, wxT("Test"), 0);
+    if(data){
+        id  = ListView1->InsertItem(0, data->getTitle(), 0);
 
         T100ElementInfo*    info        = T100NEW T100ElementInfo();
-        wxUIntPtr           data        = (wxUIntPtr)info;
+        wxUIntPtr           item        = (wxUIntPtr)info;
 
-        info->type  = 1;
-        ListView1->SetItemPtrData(id, data);
+        info->type  = data->getIndex();
+        ListView1->SetItemPtrData(id, item);
     }
 }
 

@@ -35,6 +35,7 @@ T100BOOL T100WPainterServe::create()
 
     m_opened    = T100TRUE;
     m_diagram   = T100NEW T100DiagramInfo();
+    m_element_drawer.SetDiagramInfo(m_diagram);
     return T100TRUE;
 }
 

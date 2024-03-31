@@ -20,3 +20,23 @@ T100VOID* T100WxEventData::getData()
 {
     return m_data;
 }
+
+T100VOID T100WxEventData::setTitle(T100STRING title)
+{
+    m_title = title;
+}
+
+T100STRING T100WxEventData::getTitle()
+{
+    return m_title;
+}
+
+T100VOID T100WxEventData::setIndex(T100INT index)
+{
+    m_index = index;
+}
+
+T100INT T100WxEventData::getIndex()
+{
+    return m_index;
+}

@@ -62,7 +62,7 @@ T100VOID T100WPainterCallback::frame_menu_open(T100VOID* data)
 
 T100VOID T100WPainterCallback::frame_menu_save(T100VOID* data)
 {
-
+    m_painter->Save();
 }
 
 T100VOID T100WPainterCallback::frame_menu_save_as(T100VOID* data)

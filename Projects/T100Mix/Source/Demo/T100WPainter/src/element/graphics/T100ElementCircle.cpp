@@ -1,5 +1,7 @@
 #include "T100ElementCircle.h"
 
+#include "T100BivectorTools.h"
+
 T100ElementCircle::T100ElementCircle()
     :T100ElementBase()
 {
@@ -38,6 +40,11 @@ T100VOID T100ElementCircle::SetTerminalPoint(T100INT x, T100INT y)
     T100ElementBase::SetTerminalPoint(x, y);
     m_target_x  = x;
     m_target_y  = y;
+
+    T100Bivector        a(m_origin_x, m_origin_y);
+    T100Bivector        b(m_target_x, m_target_y);
+
+    m_radius    = std::round(T100BivectorTools::distance(a, b));
 }
 
 T100BOOL T100ElementCircle::Draw(wxDC& dc)

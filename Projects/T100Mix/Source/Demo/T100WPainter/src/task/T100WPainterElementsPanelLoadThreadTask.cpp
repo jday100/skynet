@@ -39,11 +39,12 @@ T100VOID T100WPainterElementsPanelLoadThreadTask::run()
         wxThreadEvent           event(wxEVT_THREAD, m_panel->ID_THREAD_IMAGE);
 
         data    = T100NEW T100WxEventData();
+
+        data->setIndex(1);
+        data->setTitle(L"Circle");
+        data->setData(image);
+
         event.SetEventObject(data);
-
-        event.SetEventObject(image);
-        event.SetInt(1);
-
         send(event);
     }
 }

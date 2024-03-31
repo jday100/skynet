@@ -13,10 +13,18 @@ class T100WxEventData : public wxObject
         T100VOID            setData(T100VOID*);
         T100VOID*           getData();
 
+        T100VOID            setTitle(T100STRING);
+        T100STRING          getTitle();
+
+        T100VOID            setIndex(T100INT);
+        T100INT             getIndex();
+
     protected:
 
     private:
+        T100INT             m_index;
         T100VOID*           m_data          = T100NULL;
+        T100STRING          m_title;
 };
 
 #endif // T100WXEVENTDATA_H

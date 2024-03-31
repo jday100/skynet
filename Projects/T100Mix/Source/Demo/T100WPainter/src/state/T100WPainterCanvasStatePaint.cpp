@@ -70,11 +70,14 @@ T100VOID T100WPainterCanvasStatePaint::OnMouseLeftUp(T100WPainterCanvas* canvas,
     x       = event.GetPosition().x;
     y       = event.GetPosition().y;
 
-    current = T100WPainterCallback::getServe()->getElementDrawer()->Create();
+    current = T100WPainterCallback::getView()->getCanvas()->Current();
 
     current->SetTerminalPoint(x, y);
 
+    T100WPainterCallback::getServe()->getElementDrawer()->Append(current);
     T100WPainterCallback::getView()->getCanvas()->Select(current);
+
+    T100WPainterCallback::getView()->getCanvas()->Change(T100CANVAS_STATE_NONE);
 }
 
 T100VOID T100WPainterCanvasStatePaint::OnMouseLeftDClick(T100WPainterCanvas* canvas, wxMouseEvent& event)
@@ -88,14 +91,18 @@ T100VOID T100WPainterCanvasStatePaint::OnMouseMove(T100WPainterCanvas* canvas, w
     T100ElementBase*            current             = T100NULL;
     T100INT                     x, y, vx, vy;
 
-    x       = event.GetPosition().x;
-    y       = event.GetPosition().y;
+    if(event.LeftIsDown()){
+        x       = event.GetPosition().x;
+        y       = event.GetPosition().y;
 
-    current = T100WPainterCallback::getView()->getCanvas()->Current();
+        current = T100WPainterCallback::getView()->getCanvas()->Current();
 
-    if(current){
-        current->SetTerminalPoint(x, y);
-        canvas->Refresh();
+        if(current){
+            current->SetTerminalPoint(x, y);
+            canvas->Refresh();
+        }
+    }else{
+
     }
 }
 
