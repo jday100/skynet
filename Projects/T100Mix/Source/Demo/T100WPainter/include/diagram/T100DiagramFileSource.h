@@ -1,28 +1,29 @@
 #ifndef T100DIAGRAMFILESOURCE_H
 #define T100DIAGRAMFILESOURCE_H
 
+#include "T100DiagramInfo.h"
 #include "T100DiagramTransducerSource.h"
-
 
 class T100DiagramFileSource : public T100DiagramTransducerSource
 {
     public:
-        T100DiagramFileSource();
+        T100DiagramFileSource(T100DiagramInfo*);
         virtual ~T100DiagramFileSource();
 
-        T100BOOL            serialize();
-        T100BOOL            deserialize();
+        T100BOOL                serialize();
+        T100BOOL                deserialize();
 
-        T100WORD            getSign();
-        T100WORD            getType();
-        T100WORD            getVersion();
+        T100WORD                getSign();
+        T100WORD                getType();
+        T100WORD                getVersion();
 
     protected:
+        T100DiagramInfo*        m_diagram           = T100NULL;
 
     private:
-        T100WORD            m_sign          = 0;
-        T100WORD            m_type          = 0;
-        T100WORD            m_version       = 0;
+        T100WORD                m_sign              = 0;
+        T100WORD                m_type              = 0;
+        T100WORD                m_version           = 0;
 };
 
 #endif // T100DIAGRAMFILESOURCE_H

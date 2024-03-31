@@ -1,5 +1,7 @@
 #include "T100File.h"
 
+#include "T100Unicode.h"
+
 T100File::T100File(T100STRING filename)
     :m_filename(filename)
 {
@@ -28,11 +30,20 @@ T100BOOL T100File::opened()
     return m_opened;
 }
 
+T100BOOL T100File::eof()
+{
+    if(m_stream){
+        return m_stream->eof();
+    }
+    return T100TRUE;
+}
+
 T100BOOL T100File::open()
 {
     T100STDSTRING       name;
 
-    m_stream    = T100NEW std::wfstream(name, std::ios::in | std::ios::out | std::ios::binary);
+    name    = T100Unicode::to_string8(m_filename);
+    m_stream    = T100NEW std::wfstream(name, std::ios::in | std::ios::out | std::ios::binary | std::ios::trunc);
 
     if(m_stream){
         if(m_stream->is_open()){
@@ -91,5 +102,11 @@ T100BOOL T100File::read(T100WORD* data, T100WORD& length)
 
 T100BOOL T100File::write(T100WORD* data, T100WORD length)
 {
+    T100BOOL            result;
 
+    if(m_opened){
+        result  = m_stream->write((T100WCHAR*)data, length).good();
+        return result;
+    }
+    return T100FALSE;
 }

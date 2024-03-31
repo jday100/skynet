@@ -13,7 +13,7 @@ class T100WPainterView
         virtual ~T100WPainterView();
 
         T100BOOL                            Open();
-        T100BOOL                            SaveAs();
+        T100BOOL                            SaveAs(T100STRING&);
 
         T100BOOL                            show();
 

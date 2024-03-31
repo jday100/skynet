@@ -16,20 +16,38 @@ T100Diagram::~T100Diagram()
 
 T100BOOL T100Diagram::load(T100STRING file, T100DiagramInfo& info)
 {
+    T100BOOL                                result;
     T100BufferedFile                        diagram(file);
     T100DiagramTransducer                   transducer;
-    T100DiagramFileSource                   source;
+    T100DiagramFileSource                   source(&info);
     T100DiagramTransducerTarget             target(&diagram);
 
-    transducer.deserialize(source, target);
+    result  = diagram.open();
+    if(result){
+        transducer.deserialize(source, target);
+
+        if(result){
+            result  = diagram.close();
+        }
+    }
+    return result;
 }
 
 T100BOOL T100Diagram::save(T100STRING file, T100DiagramInfo& info)
 {
+    T100BOOL                                result;
     T100BufferedFile                        diagram(file);
     T100DiagramTransducer                   transducer;
-    T100DiagramFileSource                   source;
+    T100DiagramFileSource                   source(&info);
     T100DiagramTransducerTarget             target(&diagram);
 
-    transducer.serialize(source, target);
+    result  = diagram.open();
+    if(result){
+        transducer.serialize(source, target);
+
+        if(result){
+            result  = diagram.close();
+        }
+    }
+    return result;
 }

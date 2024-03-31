@@ -107,12 +107,15 @@ T100BOOL T100WPainter::Save()
 
 T100BOOL T100WPainter::SaveAs()
 {
-    m_view->SaveAs();
+    T100STRING      filename;
+
+    m_view->SaveAs(filename);
 
     T100WPainterMenuSaveAsThreadTask*       task            = T100NULL;
 
     task    = T100NEW T100WPainterMenuSaveAsThreadTask();
 
+    task->setFileName(filename);
     task->start();
 }
 

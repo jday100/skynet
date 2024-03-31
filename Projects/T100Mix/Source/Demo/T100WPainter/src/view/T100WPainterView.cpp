@@ -53,14 +53,14 @@ T100BOOL T100WPainterView::Open()
     return T100TRUE;
 }
 
-T100BOOL T100WPainterView::SaveAs()
+T100BOOL T100WPainterView::SaveAs(T100STRING& filename)
 {
     T100STRING          file;
     wxFileDialog        dialog(m_frame, _("Please select a file"), "", "", "Diagram files(*.dgm)|*.dgm", wxFD_SAVE, wxDefaultPosition, wxDefaultSize, _("Select a file:"));
 
     if(wxID_CANCEL == dialog.ShowModal())return T100FALSE;
 
-    file = dialog.GetPath().ToStdWstring();
+    filename    = dialog.GetPath().ToStdWstring();
 
     return T100TRUE;
 }

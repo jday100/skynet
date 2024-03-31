@@ -13,6 +13,7 @@ class T100File
         virtual ~T100File();
 
         T100BOOL                opened();
+        T100BOOL                eof();
 
         T100BOOL                open();
         T100BOOL                close();

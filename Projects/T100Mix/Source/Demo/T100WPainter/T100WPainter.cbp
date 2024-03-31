@@ -100,6 +100,7 @@
 		<Unit filename="include/data/T100DiagramInfoV1.h" />
 		<Unit filename="include/data/T100ElementInfo.h" />
 		<Unit filename="include/diagram/T100Diagram.h" />
+		<Unit filename="include/diagram/T100DiagramCommon.h" />
 		<Unit filename="include/diagram/T100DiagramFile.h" />
 		<Unit filename="include/diagram/T100DiagramFileSource.h" />
 		<Unit filename="include/diagram/T100DiagramTransducer.h" />
@@ -112,6 +113,7 @@
 		<Unit filename="include/element/graphics/T100ElementCircleSource.h" />
 		<Unit filename="include/library/T100BufferedFile.h" />
 		<Unit filename="include/library/T100File.h" />
+		<Unit filename="include/library/T100FileCommon.h" />
 		<Unit filename="include/library/T100State.h" />
 		<Unit filename="include/library/T100ThreadTask.h" />
 		<Unit filename="include/library/T100Unicode.h" />

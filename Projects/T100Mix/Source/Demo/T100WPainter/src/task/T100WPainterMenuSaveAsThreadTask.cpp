@@ -16,6 +16,11 @@ T100WPainterMenuSaveAsThreadTask::~T100WPainterMenuSaveAsThreadTask()
     //dtor
 }
 
+T100VOID T100WPainterMenuSaveAsThreadTask::setFileName(T100STRING filename)
+{
+    m_filename  = filename;
+}
+
 T100VOID T100WPainterMenuSaveAsThreadTask::run()
 {
     T100STRING              file;
@@ -24,5 +29,5 @@ T100VOID T100WPainterMenuSaveAsThreadTask::run()
     file    = T100WPainterCallback::getServe()->getFileName();
     diagram = T100WPainterCallback::getServe()->getDiagramInfo();
 
-    T100WPainterCallback::getStore()->Save(file, *diagram);
+    T100WPainterCallback::getStore()->Save(m_filename, *diagram);
 }
