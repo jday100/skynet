@@ -93,7 +93,7 @@ T100BOOL T100File::read(T100WORD* data, T100WORD& length)
     T100WORD            size;
 
     if(m_opened){
-        size    = m_stream->read((T100WCHAR*)data, length).gcount();
+        size    = m_stream->read((T100WCHAR*)data, length * 4).gcount();
         result  = m_stream->good();
         return result;
     }
@@ -105,7 +105,7 @@ T100BOOL T100File::write(T100WORD* data, T100WORD length)
     T100BOOL            result;
 
     if(m_opened){
-        result  = m_stream->write((T100WCHAR*)data, length).good();
+        result  = m_stream->write((T100WCHAR*)data, length * 4).good();
         return result;
     }
     return T100FALSE;

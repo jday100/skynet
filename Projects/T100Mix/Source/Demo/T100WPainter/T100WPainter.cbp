@@ -109,6 +109,8 @@
 		<Unit filename="include/diagram/V1/T100DiagramFileV1.h" />
 		<Unit filename="include/diagram/V1/T100DiagramFileV1Source.h" />
 		<Unit filename="include/element/T100ElementBase.h" />
+		<Unit filename="include/element/T100ElementBaseSource.h" />
+		<Unit filename="include/element/T100ElementSource.h" />
 		<Unit filename="include/element/graphics/T100ElementCircle.h" />
 		<Unit filename="include/element/graphics/T100ElementCircleSource.h" />
 		<Unit filename="include/library/T100BufferedFile.h" />
@@ -156,6 +158,8 @@
 		<Unit filename="src/diagram/V1/T100DiagramFileV1.cpp" />
 		<Unit filename="src/diagram/V1/T100DiagramFileV1Source.cpp" />
 		<Unit filename="src/element/T100ElementBase.cpp" />
+		<Unit filename="src/element/T100ElementBaseSource.cpp" />
+		<Unit filename="src/element/T100ElementSource.cpp" />
 		<Unit filename="src/element/graphics/T100ElementCircle.cpp" />
 		<Unit filename="src/element/graphics/T100ElementCircleSource.cpp" />
 		<Unit filename="src/library/T100BufferedFile.cpp" />

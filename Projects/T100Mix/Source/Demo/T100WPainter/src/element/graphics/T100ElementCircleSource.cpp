@@ -1,7 +1,9 @@
 #include "T100ElementCircleSource.h"
 
-T100ElementCircleSource::T100ElementCircleSource()
-    :T100DiagramTransducerSource()
+#include "T100DiagramTransducerTarget.h"
+
+T100ElementCircleSource::T100ElementCircleSource(T100ElementCircle* element)
+    :T100DiagramTransducerSource(), m_element(element)
 {
     //ctor
 }
@@ -13,10 +15,40 @@ T100ElementCircleSource::~T100ElementCircleSource()
 
 T100BOOL T100ElementCircleSource::serialize()
 {
-    return T100FALSE;
+    T100BOOL            result          = T100FALSE;
+
+    result  = m_target->setINTEGER(m_element->m_origin_x);
+    if(!result)return T100FALSE;
+
+    result  = m_target->setINTEGER(m_element->m_origin_y);
+    if(!result)return T100FALSE;
+
+    result  = m_target->setFLOAT(m_element->m_radius);
+    if(!result)return T100FALSE;
+
+    return result;
 }
 
 T100BOOL T100ElementCircleSource::deserialize()
 {
-    return T100FALSE;
+    T100BOOL            result          = T100FALSE;
+
+    m_element   = T100NEW T100ElementCircle();
+    if(m_element){
+        result  = m_target->getINTEGER(m_element->m_origin_x);
+        if(!result)return T100FALSE;
+
+        result  = m_target->getINTEGER(m_element->m_origin_y);
+        if(!result)return T100FALSE;
+
+        result  = m_target->getFLOAT(m_element->m_radius);
+        if(result){
+
+        }else{
+            T100DELETE m_element;
+            m_element   = T100NULL;
+        }
+    }
+
+    return result;
 }

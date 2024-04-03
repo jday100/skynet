@@ -82,12 +82,16 @@ T100BOOL T100WPainter::New()
 
 T100BOOL T100WPainter::Open()
 {
-    m_view->Open();
+
+    T100STRING      filename;
+
+    m_view->Open(filename);
 
     T100WPainterMenuOpenThreadTask*         task            = T100NULL;
 
     task    = T100NEW T100WPainterMenuOpenThreadTask();
 
+    task->setFileName(filename);
     task->start();
 }
 

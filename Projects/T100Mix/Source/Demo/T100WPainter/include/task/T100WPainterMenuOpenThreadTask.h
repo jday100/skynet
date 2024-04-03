@@ -10,10 +10,14 @@ class T100WPainterMenuOpenThreadTask : public T100WxThreadTask
         T100WPainterMenuOpenThreadTask();
         virtual ~T100WPainterMenuOpenThreadTask();
 
+        T100VOID                        setFileName(T100STRING);
+        T100STRING                      getFileName();
+
     protected:
         T100VOID                        run();
 
     private:
+        T100STRING                      m_filename;
 };
 
 #endif // T100WPAINTERMENUOPENTHREADTASK_H

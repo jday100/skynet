@@ -9,8 +9,14 @@ class T100DiagramTransducerTarget
         T100DiagramTransducerTarget(T100BufferedFile*);
         virtual ~T100DiagramTransducerTarget();
 
+        T100BOOL                    setINTEGER(T100INT);
+        T100BOOL                    getINTEGER(T100INT&);
+
         T100BOOL                    setWORD(T100WORD);
         T100BOOL                    getWORD(T100WORD&);
+
+        T100BOOL                    setFLOAT(T100FLOAT);
+        T100BOOL                    getFLOAT(T100FLOAT&);
 
         T100BOOL                    eof();
 

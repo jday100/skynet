@@ -46,8 +46,33 @@ T100BOOL T100Diagram::save(T100STRING file, T100DiagramInfo& info)
         transducer.serialize(source, target);
 
         if(result){
+            result  = saveInfo(diagram, info);
+        }
+
+        if(result){
             result  = diagram.close();
         }
     }
     return result;
+}
+
+T100BOOL T100Diagram::loadInfo()
+{
+
+}
+
+T100BOOL T100Diagram::saveInfo(T100BufferedFile& file, T100DiagramInfo& info)
+{
+    T100WPAINTER_ELEMENT_VECTOR*        elements            = T100NULL;
+
+    elements    = info.getElements();
+    if(elements){
+        for(T100ElementBase* element : *elements){
+            if(element){
+
+            }else{
+                return T100FALSE;
+            }
+        }
+    }
 }
