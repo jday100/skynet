@@ -20,6 +20,14 @@ class T100DiagramFileSource : public T100DiagramTransducerSource
     protected:
         T100DiagramInfo*        m_diagram           = T100NULL;
 
+        T100BOOL                LoadDiagramFileHead();
+        T100BOOL                LoadElements();
+        T100BOOL                LoadElement(T100ElementBase*&);
+
+        T100BOOL                SaveDiagramFileHead();
+        T100BOOL                SaveElements();
+        T100BOOL                SaveElement(T100ElementBase*&);
+
     private:
         T100WORD                m_sign              = 0;
         T100WORD                m_type              = 0;

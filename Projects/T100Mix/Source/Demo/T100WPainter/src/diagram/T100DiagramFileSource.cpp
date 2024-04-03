@@ -59,3 +59,114 @@ T100BOOL T100DiagramFileSource::deserialize()
 
     return result;
 }
+
+T100BOOL T100DiagramFileSource::LoadDiagramFileHead()
+{
+    T100DiagramFileSource           source;
+
+    source.SetDiagramInfo(m_diagram);
+    source.setTarget(m_target);
+
+    return source.deserialize();
+}
+
+T100BOOL T100DiagramFileSource::LoadElements()
+{
+    T100BOOL                            result              = T100FALSE;
+    T100WPAINTER_ELEMENT_VECTOR*        elements            = T100NULL;
+
+    elements    = m_diagram->getElements();
+    if(elements){
+        T100ElementSource           source;
+        T100ElementBaseSource*      current         = T100NULL;
+
+        source.setTarget(m_target);
+        do{
+            result  = source.deserialize();
+            if(!result){
+                if(m_target->eof()){
+                    return T100TRUE;
+                }
+                return T100FALSE;
+            }
+
+            current = getElementSource(source.getType());
+            if(!current)return T100FALSE;
+
+            current->setTarget(m_target);
+            result  = current->deserialize();
+            if(!result)return T100FALSE;
+
+            elements->append(current->getElements());
+        }while(T100TRUE);
+    }
+    return result;
+}
+
+T100BOOL T100DiagramFileSource::LoadElement(T100ElementBase*& element)
+{
+    return T100FALSE;
+}
+
+T100DiagramFileSource::SaveDiagramFileHead()
+{
+    T100DiagramFileSource           source;
+
+    source.SetDiagramInfo(m_diagram);
+    source.setTarget(m_target);
+
+    return source.serialize();
+}
+
+T100BOOL T100DiagramFileSource::SaveElements()
+{
+    T100BOOL                            result              = T100FALSE;
+    T100WPAINTER_ELEMENT_VECTOR*        elements            = T100NULL;
+
+    elements    = m_diagram->getElements();
+    if(elements){
+        for(T100ElementBase* element : *elements){
+            result  = SaveElement(element);
+            if(!result)return T100FALSE;
+        }
+        return T100TRUE;
+    }
+    return T100FALSE;
+}
+
+T100BOOL T100DiagramFileSource::SaveElement(T100ElementBase* element)
+{
+    T100BOOL                    result          = T100FALSE;
+    T100ElementBaseSource       source;
+
+    source.setElement(element);
+    source.setTarget(m_target);
+
+    result  = source.serialize();
+    if(!result)return T100FALSE;
+
+    T100ElementBaseSource*      current         = T100NULL;
+
+    current = getElementSource(element->getType());
+    if(!current)return T100FALSE;
+
+    current->setElement(element);
+    current->setTarget(m_target);
+    result  = current->serialize();
+
+    return result;
+}
+
+T100ElementBaseSource* T100DiagramFileSource::getElementSource(T100WORD type)
+{
+    T100ElementBaseSource*          result          = T100NULL;
+
+    switch(type){
+    case T100ELEMENT_GRAPHICS_CIRCLE:
+        {
+            result  = T100NEW T100ElementCircleSource(T100NULL);
+        }
+        break;
+    }
+    return result;
+}

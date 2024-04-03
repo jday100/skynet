@@ -49,9 +49,7 @@ T100BOOL T100Diagram::save(T100STRING file, T100DiagramInfo& info)
             result  = saveInfo(diagram, info);
         }
 
-        if(result){
-            result  = diagram.close();
-        }
+        result  = diagram.close() ? result : T100FALSE;
     }
     return result;
 }
@@ -75,4 +73,5 @@ T100BOOL T100Diagram::saveInfo(T100BufferedFile& file, T100DiagramInfo& info)
             }
         }
     }
+    return T100TRUE;
 }
