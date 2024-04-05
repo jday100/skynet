@@ -3,7 +3,7 @@
 #include "T100DiagramTransducerTarget.h"
 
 T100ElementCircleSource::T100ElementCircleSource(T100ElementCircle* element)
-    :T100DiagramTransducerSource(), m_element(element)
+    :T100ElementBaseSource(), m_element(element)
 {
     //ctor
 }

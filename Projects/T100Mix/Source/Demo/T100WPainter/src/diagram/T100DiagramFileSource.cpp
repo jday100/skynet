@@ -1,6 +1,13 @@
 #include "T100DiagramFileSource.h"
 
+#include "T100ElementCommon.h"
+
 #include "T100DiagramTransducerTarget.h"
+
+#include "T100ElementSource.h"
+#include "T100ElementBaseSource.h"
+
+#include "T100ElementCircleSource.h"
 
 T100DiagramFileSource::T100DiagramFileSource(T100DiagramInfo* diagram)
     :T100DiagramTransducerSource(), m_diagram(diagram)
@@ -62,9 +69,8 @@ T100BOOL T100DiagramFileSource::deserialize()
 
 T100BOOL T100DiagramFileSource::LoadDiagramFileHead()
 {
-    T100DiagramFileSource           source;
+    T100DiagramFileSource           source(m_diagram);
 
-    source.SetDiagramInfo(m_diagram);
     source.setTarget(m_target);
 
     return source.deserialize();
@@ -97,7 +103,8 @@ T100BOOL T100DiagramFileSource::LoadElements()
             result  = current->deserialize();
             if(!result)return T100FALSE;
 
-            elements->append(current->getElements());
+            //elements->append(current->getElements());
+            elements->push_back(current->getElement());
         }while(T100TRUE);
     }
     return result;
@@ -108,11 +115,10 @@ T100BOOL T100DiagramFileSource::LoadElement(T100ElementBase*& element)
     return T100FALSE;
 }
 
-T100DiagramFileSource::SaveDiagramFileHead()
+T100BOOL T100DiagramFileSource::SaveDiagramFileHead()
 {
-    T100DiagramFileSource           source;
+    T100DiagramFileSource           source(m_diagram);
 
-    source.SetDiagramInfo(m_diagram);
     source.setTarget(m_target);
 
     return source.serialize();
@@ -134,7 +140,7 @@ T100BOOL T100DiagramFileSource::SaveElements()
     return T100FALSE;
 }
 
-T100BOOL T100DiagramFileSource::SaveElement(T100ElementBase* element)
+T100BOOL T100DiagramFileSource::SaveElement(T100ElementBase*& element)
 {
     T100BOOL                    result          = T100FALSE;
     T100ElementBaseSource       source;

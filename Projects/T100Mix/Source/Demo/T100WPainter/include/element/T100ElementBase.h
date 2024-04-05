@@ -13,6 +13,8 @@ class T100ElementBase
         T100ElementBase();
         virtual ~T100ElementBase();
 
+        T100WORD                    getType();
+
         virtual T100BOOL            Draw(wxDC&) = 0;
 
         virtual T100VOID            SetStartingPoint(T100INT, T100INT);

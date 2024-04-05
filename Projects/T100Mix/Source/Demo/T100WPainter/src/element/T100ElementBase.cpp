@@ -10,6 +10,11 @@ T100ElementBase::~T100ElementBase()
     //dtor
 }
 
+T100WORD T100ElementBase::getType()
+{
+
+}
+
 T100VOID T100ElementBase::SetStartingPoint(T100INT x, T100INT y)
 {
     m_starting_x    = x;
