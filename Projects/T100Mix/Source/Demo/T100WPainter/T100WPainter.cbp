@@ -143,6 +143,7 @@
 		<Unit filename="include/diagram/V1/T100DiagramFileV1Source.h" />
 		<Unit filename="include/element/T100ElementBase.h" />
 		<Unit filename="include/element/T100ElementBaseSource.h" />
+		<Unit filename="include/element/T100ElementCommon.h" />
 		<Unit filename="include/element/T100ElementSource.h" />
 		<Unit filename="include/element/graphics/T100ElementCircle.h" />
 		<Unit filename="include/element/graphics/T100ElementCircleSource.h" />

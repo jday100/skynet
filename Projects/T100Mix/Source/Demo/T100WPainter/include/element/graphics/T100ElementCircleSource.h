@@ -10,13 +10,15 @@ class T100ElementCircleSource : public T100ElementBaseSource
         T100ElementCircleSource(T100ElementCircle*);
         virtual ~T100ElementCircleSource();
 
-        T100BOOL                serialize();
-        T100BOOL                deserialize();
+        T100BOOL                    serialize();
+        T100BOOL                    deserialize();
 
     protected:
+        T100VOID                    create();
+        T100VOID                    destroy();
 
     private:
-        T100ElementCircle*      m_element           = T100NULL;
+        T100ElementCircle*          m_element           = T100NULL;
 };
 
 #endif // T100ELEMENTCIRCLESOURCE_H

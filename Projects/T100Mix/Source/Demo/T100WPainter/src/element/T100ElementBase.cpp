@@ -12,7 +12,7 @@ T100ElementBase::~T100ElementBase()
 
 T100WORD T100ElementBase::getType()
 {
-
+    return m_type;
 }
 
 T100VOID T100ElementBase::SetStartingPoint(T100INT x, T100INT y)

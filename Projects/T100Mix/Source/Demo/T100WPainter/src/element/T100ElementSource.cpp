@@ -11,7 +11,12 @@ T100ElementSource::~T100ElementSource()
     //dtor
 }
 
-T100WORD T100ElementSource::getType()
+T100BOOL T100ElementSource::serialize()
+{
+
+}
+
+T100BOOL T100ElementSource::deserialize()
 {
 
 }

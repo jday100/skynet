@@ -21,6 +21,8 @@ class T100ElementBase
         virtual T100VOID            SetTerminalPoint(T100INT, T100INT);
 
     protected:
+        T100WORD                    m_type          = 0;
+
         T100INT                     m_starting_x;
         T100INT                     m_starting_y;
 

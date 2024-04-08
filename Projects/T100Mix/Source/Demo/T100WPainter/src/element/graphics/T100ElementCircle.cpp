@@ -1,5 +1,6 @@
 #include "T100ElementCircle.h"
 
+#include "T100ElementCommon.h"
 #include "T100BivectorTools.h"
 
 T100ElementCircle::T100ElementCircle()
@@ -17,6 +18,8 @@ T100ElementCircle::~T100ElementCircle()
 
 T100VOID T100ElementCircle::create()
 {
+    m_type      = T100ELEMENT_GRAPHICS_CIRCLE;
+
     m_origin_x  = 0;
     m_origin_y  = 0;
 

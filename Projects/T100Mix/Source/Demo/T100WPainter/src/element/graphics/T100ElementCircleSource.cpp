@@ -6,11 +6,23 @@ T100ElementCircleSource::T100ElementCircleSource(T100ElementCircle* element)
     :T100ElementBaseSource(), m_element(element)
 {
     //ctor
+    create();
 }
 
 T100ElementCircleSource::~T100ElementCircleSource()
 {
     //dtor
+    destroy();
+}
+
+T100VOID T100ElementCircleSource::create()
+{
+    T100ElementBaseSource::setElement(m_element);
+}
+
+T100VOID T100ElementCircleSource::destroy()
+{
+
 }
 
 T100BOOL T100ElementCircleSource::serialize()

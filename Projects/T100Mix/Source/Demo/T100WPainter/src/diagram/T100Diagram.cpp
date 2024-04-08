@@ -1,8 +1,13 @@
 #include "T100Diagram.h"
 
 #include "T100BufferedFile.h"
+#include "T100ElementCommon.h"
+#include "T100ElementSource.h"
+#include "T100ElementBaseSource.h"
 #include "T100DiagramTransducer.h"
 #include "T100DiagramFileSource.h"
+
+#include "T100ElementCircleSource.h"
 
 T100Diagram::T100Diagram()
 {
@@ -24,6 +29,7 @@ T100BOOL T100Diagram::load(T100STRING file, T100DiagramInfo& info)
 
     result  = diagram.open();
     if(result){
+        m_target    = &target;
         transducer.deserialize(source, target);
 
         if(result){
@@ -43,6 +49,7 @@ T100BOOL T100Diagram::save(T100STRING file, T100DiagramInfo& info)
 
     result  = diagram.open();
     if(result){
+        m_target    = &target;
         transducer.serialize(source, target);
 
         if(result){
@@ -61,17 +68,59 @@ T100BOOL T100Diagram::loadInfo()
 
 T100BOOL T100Diagram::saveInfo(T100BufferedFile& file, T100DiagramInfo& info)
 {
+    T100BOOL                            result;
     T100WPAINTER_ELEMENT_VECTOR*        elements            = T100NULL;
 
     elements    = info.getElements();
     if(elements){
         for(T100ElementBase* element : *elements){
             if(element){
-
+                result  = saveElement(element);
+                if(!result)return T100FALSE;
             }else{
                 return T100FALSE;
             }
         }
     }
     return T100TRUE;
+}
+
+T100BOOL T100Diagram::saveElement(T100ElementBase* element)
+{
+    T100BOOL                    result;
+    T100ElementBaseSource       source;
+
+    source.setElement(element);
+    source.setTarget(m_target);
+
+    result  = source.serialize();
+    if(!result)return T100FALSE;
+
+    T100ElementBaseSource*      current             = T100NULL;
+
+    current = getElementSource(element);
+    if(!current)return T100FALSE;
+
+    current->setTarget(m_target);
+    result  = current->serialize();
+
+    return result;
+}
+
+T100ElementBaseSource* T100Diagram::getElementSource(T100ElementBase* element)
+{
+    T100ElementBaseSource*          result          = T100NULL;
+    T100WORD                        type;
+
+    type    = element->getType();
+
+    switch(type){
+    case T100ELEMENT_GRAPHICS_CIRCLE:
+        {
+            result  = T100NEW T100ElementCircleSource((T100ElementCircle*)element);
+        }
+        break;
+    }
+
+    return result;
 }

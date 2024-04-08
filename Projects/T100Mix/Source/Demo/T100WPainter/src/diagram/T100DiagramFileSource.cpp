@@ -83,7 +83,7 @@ T100BOOL T100DiagramFileSource::LoadElements()
 
     elements    = m_diagram->getElements();
     if(elements){
-        T100ElementSource           source;
+        T100ElementBaseSource       source;
         T100ElementBaseSource*      current         = T100NULL;
 
         source.setTarget(m_target);

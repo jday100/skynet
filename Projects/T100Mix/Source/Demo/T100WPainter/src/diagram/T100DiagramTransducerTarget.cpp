@@ -16,7 +16,7 @@ T100BOOL T100DiagramTransducerTarget::setINTEGER(T100INT value)
     T100VOID*   data;
     T100WORD    length;
 
-    m_file->write((T100WORD*)value, 1);
+    m_file->write((T100WORD*)&value, 1);
 }
 
 T100BOOL T100DiagramTransducerTarget::getINTEGER(T100INT& value)
