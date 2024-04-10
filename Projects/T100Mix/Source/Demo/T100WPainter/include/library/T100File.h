@@ -20,8 +20,8 @@ class T100File
 
         T100BOOL                seek(T100DWORD);
 
-        T100BOOL                read(T100WORD*, T100WORD&);
-        T100BOOL                write(T100WORD*, T100WORD);
+        T100BOOL                read(T100WCHAR*, T100WORD&);
+        T100BOOL                write(T100WCHAR*, T100WORD);
 
     protected:
         T100VOID                create();
@@ -30,7 +30,7 @@ class T100File
     private:
         T100STRING              m_filename;
         std::atomic_bool        m_opened;
-        std::wfstream*          m_stream            = T100NULL;
+        std::fstream*           m_stream            = T100NULL;
 };
 
 #endif // T100FILE_H

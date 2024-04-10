@@ -275,6 +275,7 @@ void T100WPainterCanvas::OnThreadLoad(wxThreadEvent& event)
         diagram = (T100DiagramInfo*)data->getData();
         if(diagram){
             m_diagram   = diagram;
+            Refresh();
         }
     }
 }

@@ -14,6 +14,8 @@
 #define     T100INT                 int
 #define     T100UINT                unsigned int
 
+#define     T100BYTE                unsigned char
+
 #define     T100WORD                unsigned long
 #define     T100DWORD               unsigned long long
 
@@ -43,7 +45,7 @@
 #define     T100CHAR32              T100STDCHAR32
 #define     T100WCHAR               T100STDWCHAR
 
-#define     T100CHAR                T100CHAR32
+#define     T100CHAR                T100CHAR8
 
 #define     T100STRING8             T100STDSTRING8
 #define     T100STRING16            T100STDSTRING16

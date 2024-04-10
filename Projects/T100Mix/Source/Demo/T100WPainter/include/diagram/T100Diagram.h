@@ -16,12 +16,13 @@ class T100Diagram
         T100BOOL                            save(T100STRING, T100DiagramInfo&);
 
     protected:
-        T100BOOL                            loadInfo();
+        T100BOOL                            loadInfo(T100BufferedFile&, T100DiagramInfo&);
         T100BOOL                            saveInfo(T100BufferedFile&, T100DiagramInfo&);
 
+        T100BOOL                            loadElement(T100ElementBase*);
         T100BOOL                            saveElement(T100ElementBase*);
 
-        T100ElementBaseSource*              getElementSource(T100ElementBase*);
+        T100ElementBaseSource*              getElementSource(T100WORD);
 
     private:
         T100DiagramTransducerTarget*        m_target            = T100NULL;

@@ -43,7 +43,7 @@ T100BOOL T100File::open()
     T100STDSTRING       name;
 
     name    = T100Unicode::to_string8(m_filename);
-    m_stream    = T100NEW std::wfstream(name, std::ios::in | std::ios::out | std::ios::binary | std::ios::trunc);
+    m_stream    = T100NEW std::fstream(name, std::ios::in | std::ios::out | std::ios::binary);
 
     if(m_stream){
         if(m_stream->is_open()){
@@ -77,35 +77,36 @@ T100BOOL T100File::close()
 
 T100BOOL T100File::seek(T100DWORD seek)
 {
+    T100BOOL            result;
     if(m_opened){
-        if(m_stream->seekg(seek, std::ios::beg).good()){
-            return T100TRUE;
-        }
+        result  = m_stream->seekg(seek, std::ios::beg).good();
+        result  = m_stream->seekp(seek, std::ios::beg).good() ? result : T100FALSE;
     }else{
-
+        result  = T100FALSE;
     }
-    return T100FALSE;
+    return result;
 }
 
-T100BOOL T100File::read(T100WORD* data, T100WORD& length)
+T100BOOL T100File::read(T100WCHAR* data, T100WORD& length)
 {
     T100BOOL            result;
     T100WORD            size;
 
     if(m_opened){
-        size    = m_stream->read((T100WCHAR*)data, length * 2).gcount();
+        size    = m_stream->read((T100STDCHAR*)data, length * 2).gcount();
         result  = m_stream->good();
+        length  = size / 2;
         return result;
     }
     return T100FALSE;
 }
 
-T100BOOL T100File::write(T100WORD* data, T100WORD length)
+T100BOOL T100File::write(T100WCHAR* data, T100WORD length)
 {
     T100BOOL            result;
 
     if(m_opened){
-        result  = m_stream->write((T100WCHAR*)data, length * 2).good();
+        result  = m_stream->write((T100STDCHAR*)data, length * 2).good();
         return result;
     }
     return T100FALSE;

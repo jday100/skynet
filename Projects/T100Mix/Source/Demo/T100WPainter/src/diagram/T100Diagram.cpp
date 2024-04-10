@@ -33,8 +33,10 @@ T100BOOL T100Diagram::load(T100STRING file, T100DiagramInfo& info)
         transducer.deserialize(source, target);
 
         if(result){
-            result  = diagram.close();
+            result  = loadInfo(diagram, info);
         }
+
+        result  = diagram.close() ? result : T100FALSE;
     }
     return result;
 }
@@ -61,9 +63,37 @@ T100BOOL T100Diagram::save(T100STRING file, T100DiagramInfo& info)
     return result;
 }
 
-T100BOOL T100Diagram::loadInfo()
+T100BOOL T100Diagram::loadInfo(T100BufferedFile& file, T100DiagramInfo& info)
 {
+    T100BOOL                            result;
+    T100WPAINTER_ELEMENT_VECTOR*        elements            = T100NULL;
 
+    elements    = info.getElements();
+    if(elements){
+        T100ElementBaseSource           source;
+        T100ElementBaseSource*          current             = T100NULL;
+
+        source.setTarget(m_target);
+        do{
+            result  = source.deserialize();
+            if(!result){
+                if(m_target->eof()){
+                    return T100TRUE;
+                }
+                return T100FALSE;
+            }
+
+            current = getElementSource(source.getType());
+            if(!current)return T100FALSE;
+
+            current->setTarget(m_target);
+            result  = current->deserialize();
+            if(!result)return T100FALSE;
+
+            elements->push_back(current->getElement());
+        }while(T100TRUE);
+    }
+    return T100TRUE;
 }
 
 T100BOOL T100Diagram::saveInfo(T100BufferedFile& file, T100DiagramInfo& info)
@@ -85,6 +115,29 @@ T100BOOL T100Diagram::saveInfo(T100BufferedFile& file, T100DiagramInfo& info)
     return T100TRUE;
 }
 
+T100BOOL T100Diagram::loadElement(T100ElementBase* element)
+{
+    T100BOOL                    result;
+    T100ElementBaseSource       source;
+
+    source.setElement(element);
+    source.setTarget(m_target);
+
+    result  = source.deserialize();
+    if(!result)return T100FALSE;
+
+    T100ElementBaseSource*      current             = T100NULL;
+
+    current     = getElementSource(element->getType());
+    if(!current)return T100FALSE;
+
+    current->setElement(element);
+    current->setTarget(m_target);
+    result  = current->deserialize();
+
+    return result;
+}
+
 T100BOOL T100Diagram::saveElement(T100ElementBase* element)
 {
     T100BOOL                    result;
@@ -98,26 +151,24 @@ T100BOOL T100Diagram::saveElement(T100ElementBase* element)
 
     T100ElementBaseSource*      current             = T100NULL;
 
-    current = getElementSource(element);
+    current = getElementSource(element->getType());
     if(!current)return T100FALSE;
 
+    current->setElement(element);
     current->setTarget(m_target);
     result  = current->serialize();
 
     return result;
 }
 
-T100ElementBaseSource* T100Diagram::getElementSource(T100ElementBase* element)
+T100ElementBaseSource* T100Diagram::getElementSource(T100WORD type)
 {
     T100ElementBaseSource*          result          = T100NULL;
-    T100WORD                        type;
-
-    type    = element->getType();
 
     switch(type){
     case T100ELEMENT_GRAPHICS_CIRCLE:
         {
-            result  = T100NEW T100ElementCircleSource((T100ElementCircle*)element);
+            result  = T100NEW T100ElementCircleSource(T100NULL);
         }
         break;
     }

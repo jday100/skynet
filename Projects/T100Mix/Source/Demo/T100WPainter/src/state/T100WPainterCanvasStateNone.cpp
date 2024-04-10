@@ -1,5 +1,7 @@
 #include "T100WPainterCanvasStateNone.h"
 
+#include "T100WPainterCanvas.h"
+
 T100WPainterCanvasStateNone::T100WPainterCanvasStateNone()
     :T100WPainterCanvasState()
 {
@@ -18,7 +20,9 @@ T100VOID T100WPainterCanvasStateNone::OnEraseBackGround(T100WPainterCanvas* canv
 
 T100VOID T100WPainterCanvasStateNone::OnPaint(T100WPainterCanvas* canvas, wxPaintEvent& event)
 {
-
+    if(canvas){
+        canvas->Paint();
+    }
 }
 
 T100VOID T100WPainterCanvasStateNone::OnMouseEnter(T100WPainterCanvas* canvas, wxMouseEvent& event)

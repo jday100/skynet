@@ -3,6 +3,7 @@
 #include "T100ElementCircle.h"
 
 #include "T100File.h"
+#include "T100FileTest.h"
 
 void load();
 void save();
@@ -10,11 +11,16 @@ void file();
 
 int main()
 {
-    file();
+    //file();
 
-    save();
+    //save();
 
-    load();
+    //load();
+
+    T100FileTest        test;
+
+    test.save();
+    test.load();
 }
 
 void file()
@@ -34,7 +40,7 @@ void file()
         value   = 1;
         length  = 1;
         data    = &value;
-        result  = writer.write(&value, length);
+        result  = writer.write((T100WCHAR*)&value, length);
         result  = writer.close() ? result : T100FALSE;
     }
 }

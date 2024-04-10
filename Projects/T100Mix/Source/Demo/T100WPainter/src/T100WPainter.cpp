@@ -92,6 +92,7 @@ T100BOOL T100WPainter::Open()
     task    = T100NEW T100WPainterMenuOpenThreadTask();
 
     task->setFileName(filename);
+    task->setEvtHandler(m_view->getCanvas());
     task->start();
 }
 

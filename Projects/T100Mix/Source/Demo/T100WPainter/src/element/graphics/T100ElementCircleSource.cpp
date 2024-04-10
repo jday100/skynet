@@ -48,16 +48,17 @@ T100BOOL T100ElementCircleSource::deserialize()
     m_element   = T100NEW T100ElementCircle();
     if(m_element){
         result  = m_target->getINTEGER(m_element->m_origin_x);
-        if(!result)return T100FALSE;
-
-        result  = m_target->getINTEGER(m_element->m_origin_y);
-        if(!result)return T100FALSE;
-
-        result  = m_target->getFLOAT(m_element->m_radius);
         if(result){
+            result  = m_target->getINTEGER(m_element->m_origin_y);
+            if(result){
+                result  = m_target->getFLOAT(m_element->m_radius);
+            }
+        }
 
+        if(result){
+            T100ElementBaseSource::m_element    = m_element;
         }else{
-            T100DELETE m_element;
+            T100DELETE  m_element;
             m_element   = T100NULL;
         }
     }
