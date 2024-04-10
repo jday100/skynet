@@ -2,14 +2,41 @@
 #include "T100DiagramInfo.h"
 #include "T100ElementCircle.h"
 
+#include "T100File.h"
+
 void load();
 void save();
+void file();
 
 int main()
 {
+    file();
+
     save();
 
     load();
+}
+
+void file()
+{
+    T100BOOL                result;
+    T100STRING              filename;
+
+    filename    = L"text.txt";
+    T100File                writer(filename);
+    T100WORD                value;
+    T100WORD                length;
+    T100VOID*               data            = T100NULL;
+
+    result  = writer.open();
+
+    if(result){
+        value   = 1;
+        length  = 1;
+        data    = &value;
+        result  = writer.write(&value, length);
+        result  = writer.close() ? result : T100FALSE;
+    }
 }
 
 void load()

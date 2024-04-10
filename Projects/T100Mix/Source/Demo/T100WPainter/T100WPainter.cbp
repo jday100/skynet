@@ -30,6 +30,7 @@
 					<Add directory="include/task" />
 					<Add directory="include/state" />
 					<Add directory="include/math" />
+					<Add directory="include/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -61,6 +62,7 @@
 					<Add directory="include/task" />
 					<Add directory="include/state" />
 					<Add directory="include/math" />
+					<Add directory="include/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -95,6 +97,7 @@
 					<Add directory="include/task" />
 					<Add directory="include/state" />
 					<Add directory="include/math" />
+					<Add directory="include/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -170,6 +173,7 @@
 		<Unit filename="include/task/T100WPainterMenuSaveThreadTask.h" />
 		<Unit filename="include/task/T100WxEventData.h" />
 		<Unit filename="include/task/T100WxThreadTask.h" />
+		<Unit filename="include/test/T100FileTest.h" />
 		<Unit filename="include/view/T100WPainterCanvas.h" />
 		<Unit filename="include/view/T100WPainterCanvasState.h" />
 		<Unit filename="include/view/T100WPainterCanvasTransverter.h" />
@@ -221,6 +225,7 @@
 		<Unit filename="src/task/T100WPainterMenuSaveThreadTask.cpp" />
 		<Unit filename="src/task/T100WxEventData.cpp" />
 		<Unit filename="src/task/T100WxThreadTask.cpp" />
+		<Unit filename="src/test/T100FileTest.cpp" />
 		<Unit filename="src/view/T100WPainterCanvas.cpp" />
 		<Unit filename="src/view/T100WPainterCanvasState.cpp" />
 		<Unit filename="src/view/T100WPainterCanvasTransverter.cpp" />
@@ -229,6 +234,7 @@
 		<Unit filename="test.dgm">
 			<Option target="Test" />
 		</Unit>
+		<Unit filename="text.txt" />
 		<Unit filename="wxsmith/T100WPainterElementsPanel.wxs" />
 		<Unit filename="wxsmith/T100WPainterframe.wxs" />
 		<Extensions>
