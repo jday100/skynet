@@ -3,9 +3,10 @@
 #include "T100DiagramTransducerTarget.h"
 
 T100ElementCircleSource::T100ElementCircleSource(T100ElementCircle* element)
-    :T100ElementBaseSource(), m_element(element)
+    :T100ElementBaseSource()
 {
     //ctor
+    T100ElementBaseSource::setElement(element);
     create();
 }
 
@@ -27,15 +28,19 @@ T100VOID T100ElementCircleSource::destroy()
 
 T100BOOL T100ElementCircleSource::serialize()
 {
-    T100BOOL            result          = T100FALSE;
+    T100BOOL                result          = T100FALSE;
+    T100ElementCircle*      element;
 
-    result  = m_target->setINTEGER(m_element->m_origin_x);
+    element     = dynamic_cast<T100ElementCircle*>(m_element);
+    if(!element)return T100FALSE;
+
+    result  = m_target->setINTEGER(element->m_origin_x);
     if(!result)return T100FALSE;
 
-    result  = m_target->setINTEGER(m_element->m_origin_y);
+    result  = m_target->setINTEGER(element->m_origin_y);
     if(!result)return T100FALSE;
 
-    result  = m_target->setFLOAT(m_element->m_radius);
+    result  = m_target->setFLOAT(element->m_radius);
     if(!result)return T100FALSE;
 
     return result;
@@ -44,19 +49,20 @@ T100BOOL T100ElementCircleSource::serialize()
 T100BOOL T100ElementCircleSource::deserialize()
 {
     T100BOOL            result          = T100FALSE;
+    T100ElementCircle*      element;
 
-    m_element   = T100NEW T100ElementCircle();
-    if(m_element){
-        result  = m_target->getINTEGER(m_element->m_origin_x);
+    element     = T100NEW T100ElementCircle();
+    if(element){
+        result  = m_target->getINTEGER(element->m_origin_x);
         if(result){
-            result  = m_target->getINTEGER(m_element->m_origin_y);
+            result  = m_target->getINTEGER(element->m_origin_y);
             if(result){
-                result  = m_target->getFLOAT(m_element->m_radius);
+                result  = m_target->getFLOAT(element->m_radius);
             }
         }
 
         if(result){
-            T100ElementBaseSource::m_element    = m_element;
+            m_element   = element;
         }else{
             T100DELETE  m_element;
             m_element   = T100NULL;

@@ -18,7 +18,6 @@ class T100ElementCircleSource : public T100ElementBaseSource
         T100VOID                    destroy();
 
     private:
-        T100ElementCircle*          m_element           = T100NULL;
 };
 
 #endif // T100ELEMENTCIRCLESOURCE_H
