@@ -31,12 +31,41 @@ class T100PainterFrame: public wxFrame
         //*)
 
         //(*Identifiers(T100PainterFrame)
+        static const long ID_MENUITEM1;
+        static const long ID_MENUITEM2;
+        static const long ID_MENUITEM3;
+        static const long ID_MENUITEM4;
+        static const long ID_MENUITEM5;
         static const long idMenuQuit;
+        static const long ID_MENUITEM6;
+        static const long ID_MENUITEM7;
+        static const long ID_MENUITEM8;
+        static const long ID_MENUITEM9;
+        static const long ID_MENUITEM10;
+        static const long ID_MENUITEM11;
+        static const long ID_MENUITEM12;
+        static const long ID_MENUITEM13;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
         //*)
 
         //(*Declarations(T100PainterFrame)
+        wxMenu* Menu3;
+        wxMenu* Menu4;
+        wxMenu* Menu5;
+        wxMenuItem* MenuItem10;
+        wxMenuItem* MenuItem11;
+        wxMenuItem* MenuItem12;
+        wxMenuItem* MenuItem13;
+        wxMenuItem* MenuItem14;
+        wxMenuItem* MenuItem15;
+        wxMenuItem* MenuItem3;
+        wxMenuItem* MenuItem4;
+        wxMenuItem* MenuItem5;
+        wxMenuItem* MenuItem6;
+        wxMenuItem* MenuItem7;
+        wxMenuItem* MenuItem8;
+        wxMenuItem* MenuItem9;
         wxStatusBar* StatusBar1;
         //*)
 
