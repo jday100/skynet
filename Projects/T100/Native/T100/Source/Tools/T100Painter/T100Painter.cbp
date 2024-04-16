@@ -92,9 +92,11 @@
 		<Unit filename="T100PainterMain.cpp" />
 		<Unit filename="T100PainterMain.h" />
 		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/T100DataTypes.h" />
 		<Unit filename="include/T100Painter.h" />
 		<Unit filename="include/T100PainterCallback.h" />
 		<Unit filename="include/T100PainterCommon.h" />
+		<Unit filename="include/T100StringTypes.h" />
 		<Unit filename="include/canvas/T100Canvas.h" />
 		<Unit filename="include/data/T100DiagramInfo.h" />
 		<Unit filename="include/data/T100DiagramInfoV1.h" />
@@ -115,6 +117,7 @@
 		<Unit filename="include/element/graphics/T100ElementCircleSource.h" />
 		<Unit filename="include/library/T100BufferedFile.h" />
 		<Unit filename="include/library/T100File.h" />
+		<Unit filename="include/library/T100FileCommon.h" />
 		<Unit filename="include/library/T100State.h" />
 		<Unit filename="include/library/T100ThreadTask.h" />
 		<Unit filename="include/library/T100Unicode.h" />
