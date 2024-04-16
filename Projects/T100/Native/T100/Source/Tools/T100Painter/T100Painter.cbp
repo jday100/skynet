@@ -125,6 +125,12 @@
 		<Unit filename="include/math/T100BivectorTools.h" />
 		<Unit filename="include/serve/T100PainterServe.h" />
 		<Unit filename="include/store/T100PainterStore.h" />
+		<Unit filename="include/task/T100PainterMenuCloseThreadTask.h" />
+		<Unit filename="include/task/T100PainterMenuNewThreadTask.h" />
+		<Unit filename="include/task/T100PainterMenuOpenThreadTask.h" />
+		<Unit filename="include/task/T100PainterMenuQuitThreadTask.h" />
+		<Unit filename="include/task/T100PainterMenuSaveAsThreadTask.h" />
+		<Unit filename="include/task/T100PainterMenuSaveThreadTask.h" />
 		<Unit filename="include/task/T100WxEventData.h" />
 		<Unit filename="include/task/T100WxThreadTask.h" />
 		<Unit filename="include/view/T100PainterView.h" />
@@ -158,6 +164,12 @@
 		<Unit filename="src/math/T100BivectorTools.cpp" />
 		<Unit filename="src/serve/T100PainterServe.cpp" />
 		<Unit filename="src/store/T100PainterStore.cpp" />
+		<Unit filename="src/task/T100PainterMenuCloseThreadTask.cpp" />
+		<Unit filename="src/task/T100PainterMenuNewThreadTask.cpp" />
+		<Unit filename="src/task/T100PainterMenuOpenThreadTask.cpp" />
+		<Unit filename="src/task/T100PainterMenuQuitThreadTask.cpp" />
+		<Unit filename="src/task/T100PainterMenuSaveAsThreadTask.cpp" />
+		<Unit filename="src/task/T100PainterMenuSaveThreadTask.cpp" />
 		<Unit filename="src/task/T100WxEventData.cpp" />
 		<Unit filename="src/task/T100WxThreadTask.cpp" />
 		<Unit filename="src/view/T100PainterView.cpp" />

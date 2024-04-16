@@ -15,6 +15,8 @@
 #include <wx/string.h>
 //*)
 
+#include "T100PainterCallback.h"
+
 //helper functions
 enum wxbuildinfoformat {
     short_f, long_f };
@@ -42,20 +44,20 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*IdInit(T100PainterFrame)
-const long T100PainterFrame::ID_MENUITEM1 = wxNewId();
-const long T100PainterFrame::ID_MENUITEM2 = wxNewId();
-const long T100PainterFrame::ID_MENUITEM3 = wxNewId();
-const long T100PainterFrame::ID_MENUITEM4 = wxNewId();
-const long T100PainterFrame::ID_MENUITEM5 = wxNewId();
-const long T100PainterFrame::idMenuQuit = wxNewId();
-const long T100PainterFrame::ID_MENUITEM6 = wxNewId();
-const long T100PainterFrame::ID_MENUITEM7 = wxNewId();
-const long T100PainterFrame::ID_MENUITEM8 = wxNewId();
-const long T100PainterFrame::ID_MENUITEM9 = wxNewId();
-const long T100PainterFrame::ID_MENUITEM10 = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_NEW = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_OPEN = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_CLOSE = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_SAVE = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_SAVE_AS = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_QUIT = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_UNDO = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_REDO = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_CUT = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_COPY = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_PASTE = wxNewId();
 const long T100PainterFrame::ID_MENUITEM11 = wxNewId();
 const long T100PainterFrame::ID_MENUITEM12 = wxNewId();
-const long T100PainterFrame::ID_MENUITEM13 = wxNewId();
+const long T100PainterFrame::ID_MENUITEM_CONFIG = wxNewId();
 const long T100PainterFrame::idMenuAbout = wxNewId();
 const long T100PainterFrame::ID_STATUSBAR1 = wxNewId();
 //*)
@@ -71,39 +73,39 @@ T100PainterFrame::T100PainterFrame(wxWindow* parent,wxWindowID id)
     wxMenu* Menu1;
     wxMenu* Menu2;
     wxMenuBar* MenuBar1;
-    wxMenuItem* MenuItem1;
     wxMenuItem* MenuItem2;
+    wxMenuItem* MenuItemQuit;
 
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
-    MenuItem3 = new wxMenuItem(Menu1, ID_MENUITEM1, _("New"), wxEmptyString, wxITEM_NORMAL);
-    Menu1->Append(MenuItem3);
-    MenuItem4 = new wxMenuItem(Menu1, ID_MENUITEM2, _("Open"), wxEmptyString, wxITEM_NORMAL);
-    Menu1->Append(MenuItem4);
-    MenuItem5 = new wxMenuItem(Menu1, ID_MENUITEM3, _("Close"), wxEmptyString, wxITEM_NORMAL);
-    Menu1->Append(MenuItem5);
+    MenuItemNew = new wxMenuItem(Menu1, ID_MENUITEM_NEW, _("New"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemNew);
+    MenuItemOpen = new wxMenuItem(Menu1, ID_MENUITEM_OPEN, _("Open"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemOpen);
+    MenuItemClose = new wxMenuItem(Menu1, ID_MENUITEM_CLOSE, _("Close"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemClose);
     Menu1->AppendSeparator();
-    MenuItem6 = new wxMenuItem(Menu1, ID_MENUITEM4, _("Save"), wxEmptyString, wxITEM_NORMAL);
-    Menu1->Append(MenuItem6);
-    MenuItem7 = new wxMenuItem(Menu1, ID_MENUITEM5, _("Save As"), wxEmptyString, wxITEM_NORMAL);
-    Menu1->Append(MenuItem7);
+    MenuItemSave = new wxMenuItem(Menu1, ID_MENUITEM_SAVE, _("Save"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemSave);
+    MenuItemSaveAs = new wxMenuItem(Menu1, ID_MENUITEM_SAVE_AS, _("Save As"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemSaveAs);
     Menu1->AppendSeparator();
-    MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
-    Menu1->Append(MenuItem1);
+    MenuItemQuit = new wxMenuItem(Menu1, ID_MENUITEM_QUIT, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
+    Menu1->Append(MenuItemQuit);
     MenuBar1->Append(Menu1, _("&File"));
     Menu3 = new wxMenu();
-    MenuItem8 = new wxMenuItem(Menu3, ID_MENUITEM6, _("Undo"), wxEmptyString, wxITEM_NORMAL);
-    Menu3->Append(MenuItem8);
-    MenuItem9 = new wxMenuItem(Menu3, ID_MENUITEM7, _("Redo"), wxEmptyString, wxITEM_NORMAL);
-    Menu3->Append(MenuItem9);
+    MenuItemUndo = new wxMenuItem(Menu3, ID_MENUITEM_UNDO, _("Undo"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemUndo);
+    MenuItemRedo = new wxMenuItem(Menu3, ID_MENUITEM_REDO, _("Redo"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemRedo);
     Menu3->AppendSeparator();
-    MenuItem10 = new wxMenuItem(Menu3, ID_MENUITEM8, _("Cut"), wxEmptyString, wxITEM_NORMAL);
-    Menu3->Append(MenuItem10);
-    MenuItem11 = new wxMenuItem(Menu3, ID_MENUITEM9, _("Copy"), wxEmptyString, wxITEM_NORMAL);
-    Menu3->Append(MenuItem11);
-    MenuItem12 = new wxMenuItem(Menu3, ID_MENUITEM10, _("Paste"), wxEmptyString, wxITEM_NORMAL);
-    Menu3->Append(MenuItem12);
+    MenuItemCut = new wxMenuItem(Menu3, ID_MENUITEM_CUT, _("Cut"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemCut);
+    MenuItemCopy = new wxMenuItem(Menu3, ID_MENUITEM_COPY, _("Copy"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemCopy);
+    MenuItemPaste = new wxMenuItem(Menu3, ID_MENUITEM_PASTE, _("Paste"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemPaste);
     MenuBar1->Append(Menu3, _("Edit"));
     Menu4 = new wxMenu();
     MenuItem13 = new wxMenuItem(Menu4, ID_MENUITEM11, _("Toolbars"), wxEmptyString, wxITEM_NORMAL);
@@ -112,8 +114,8 @@ T100PainterFrame::T100PainterFrame(wxWindow* parent,wxWindowID id)
     Menu4->Append(MenuItem14);
     MenuBar1->Append(Menu4, _("View"));
     Menu5 = new wxMenu();
-    MenuItem15 = new wxMenuItem(Menu5, ID_MENUITEM13, _("Config"), wxEmptyString, wxITEM_NORMAL);
-    Menu5->Append(MenuItem15);
+    MenuItemConfig = new wxMenuItem(Menu5, ID_MENUITEM_CONFIG, _("Config"), wxEmptyString, wxITEM_NORMAL);
+    Menu5->Append(MenuItemConfig);
     MenuBar1->Append(Menu5, _("Setting"));
     Menu2 = new wxMenu();
     MenuItem2 = new wxMenuItem(Menu2, idMenuAbout, _("About\tF1"), _("Show info about this application"), wxITEM_NORMAL);
@@ -127,7 +129,18 @@ T100PainterFrame::T100PainterFrame(wxWindow* parent,wxWindowID id)
     StatusBar1->SetStatusStyles(2,__wxStatusBarStyles_1);
     SetStatusBar(StatusBar1);
 
-    Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnQuit);
+    Connect(ID_MENUITEM_NEW,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemNewSelected);
+    Connect(ID_MENUITEM_OPEN,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemOpenSelected);
+    Connect(ID_MENUITEM_CLOSE,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemCloseSelected);
+    Connect(ID_MENUITEM_SAVE,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemSaveSelected);
+    Connect(ID_MENUITEM_SAVE_AS,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemSaveAsSelected);
+    Connect(ID_MENUITEM_QUIT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnQuit);
+    Connect(ID_MENUITEM_UNDO,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemUndoSelected);
+    Connect(ID_MENUITEM_REDO,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemRedoSelected);
+    Connect(ID_MENUITEM_CUT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemCutSelected);
+    Connect(ID_MENUITEM_COPY,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemCopySelected);
+    Connect(ID_MENUITEM_PASTE,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemPasteSelected);
+    Connect(ID_MENUITEM_CONFIG,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemConfigSelected);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnAbout);
     //*)
 }
@@ -140,6 +153,8 @@ T100PainterFrame::~T100PainterFrame()
 
 void T100PainterFrame::OnQuit(wxCommandEvent& event)
 {
+    T100PainterCallback::frame_menu_quit();
+
     Close();
 }
 
@@ -147,4 +162,53 @@ void T100PainterFrame::OnAbout(wxCommandEvent& event)
 {
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
+}
+
+void T100PainterFrame::OnMenuItemNewSelected(wxCommandEvent& event)
+{
+    T100PainterCallback::frame_menu_new();
+}
+
+void T100PainterFrame::OnMenuItemOpenSelected(wxCommandEvent& event)
+{
+    T100PainterCallback::frame_menu_open();
+}
+
+void T100PainterFrame::OnMenuItemCloseSelected(wxCommandEvent& event)
+{
+    T100PainterCallback::frame_menu_close();
+}
+
+void T100PainterFrame::OnMenuItemSaveSelected(wxCommandEvent& event)
+{
+    T100PainterCallback::frame_menu_save();
+}
+
+void T100PainterFrame::OnMenuItemSaveAsSelected(wxCommandEvent& event)
+{
+    T100PainterCallback::frame_menu_save_as();
+}
+
+void T100PainterFrame::OnMenuItemUndoSelected(wxCommandEvent& event)
+{
+}
+
+void T100PainterFrame::OnMenuItemRedoSelected(wxCommandEvent& event)
+{
+}
+
+void T100PainterFrame::OnMenuItemCutSelected(wxCommandEvent& event)
+{
+}
+
+void T100PainterFrame::OnMenuItemCopySelected(wxCommandEvent& event)
+{
+}
+
+void T100PainterFrame::OnMenuItemPasteSelected(wxCommandEvent& event)
+{
+}
+
+void T100PainterFrame::OnMenuItemConfigSelected(wxCommandEvent& event)
+{
 }

@@ -28,23 +28,34 @@ class T100PainterFrame: public wxFrame
         //(*Handlers(T100PainterFrame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
+        void OnMenuItemNewSelected(wxCommandEvent& event);
+        void OnMenuItemOpenSelected(wxCommandEvent& event);
+        void OnMenuItemCloseSelected(wxCommandEvent& event);
+        void OnMenuItemSaveSelected(wxCommandEvent& event);
+        void OnMenuItemSaveAsSelected(wxCommandEvent& event);
+        void OnMenuItemUndoSelected(wxCommandEvent& event);
+        void OnMenuItemRedoSelected(wxCommandEvent& event);
+        void OnMenuItemCutSelected(wxCommandEvent& event);
+        void OnMenuItemCopySelected(wxCommandEvent& event);
+        void OnMenuItemPasteSelected(wxCommandEvent& event);
+        void OnMenuItemConfigSelected(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(T100PainterFrame)
-        static const long ID_MENUITEM1;
-        static const long ID_MENUITEM2;
-        static const long ID_MENUITEM3;
-        static const long ID_MENUITEM4;
-        static const long ID_MENUITEM5;
-        static const long idMenuQuit;
-        static const long ID_MENUITEM6;
-        static const long ID_MENUITEM7;
-        static const long ID_MENUITEM8;
-        static const long ID_MENUITEM9;
-        static const long ID_MENUITEM10;
+        static const long ID_MENUITEM_NEW;
+        static const long ID_MENUITEM_OPEN;
+        static const long ID_MENUITEM_CLOSE;
+        static const long ID_MENUITEM_SAVE;
+        static const long ID_MENUITEM_SAVE_AS;
+        static const long ID_MENUITEM_QUIT;
+        static const long ID_MENUITEM_UNDO;
+        static const long ID_MENUITEM_REDO;
+        static const long ID_MENUITEM_CUT;
+        static const long ID_MENUITEM_COPY;
+        static const long ID_MENUITEM_PASTE;
         static const long ID_MENUITEM11;
         static const long ID_MENUITEM12;
-        static const long ID_MENUITEM13;
+        static const long ID_MENUITEM_CONFIG;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
         //*)
@@ -53,19 +64,19 @@ class T100PainterFrame: public wxFrame
         wxMenu* Menu3;
         wxMenu* Menu4;
         wxMenu* Menu5;
-        wxMenuItem* MenuItem10;
-        wxMenuItem* MenuItem11;
-        wxMenuItem* MenuItem12;
         wxMenuItem* MenuItem13;
         wxMenuItem* MenuItem14;
-        wxMenuItem* MenuItem15;
-        wxMenuItem* MenuItem3;
-        wxMenuItem* MenuItem4;
-        wxMenuItem* MenuItem5;
-        wxMenuItem* MenuItem6;
-        wxMenuItem* MenuItem7;
-        wxMenuItem* MenuItem8;
-        wxMenuItem* MenuItem9;
+        wxMenuItem* MenuItemClose;
+        wxMenuItem* MenuItemConfig;
+        wxMenuItem* MenuItemCopy;
+        wxMenuItem* MenuItemCut;
+        wxMenuItem* MenuItemNew;
+        wxMenuItem* MenuItemOpen;
+        wxMenuItem* MenuItemPaste;
+        wxMenuItem* MenuItemRedo;
+        wxMenuItem* MenuItemSave;
+        wxMenuItem* MenuItemSaveAs;
+        wxMenuItem* MenuItemUndo;
         wxStatusBar* StatusBar1;
         //*)
 

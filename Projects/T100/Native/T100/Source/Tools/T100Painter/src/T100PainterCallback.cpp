@@ -54,3 +54,38 @@ T100VOID T100PainterCallback::frame_menu_new(T100VOID* data)
 {
     m_painter->New();
 }
+
+T100VOID T100PainterCallback::frame_menu_open(T100VOID* data)
+{
+    m_painter->Open();
+}
+
+T100VOID T100PainterCallback::frame_menu_close(T100VOID* data)
+{
+    m_painter->Close();
+}
+
+T100VOID T100PainterCallback::frame_menu_save(T100VOID* data)
+{
+    m_painter->Save();
+}
+
+T100VOID T100PainterCallback::frame_menu_save_as(T100VOID* data)
+{
+    m_painter->SaveAs();
+}
+
+T100VOID T100PainterCallback::frame_menu_quit(T100VOID* data)
+{
+    m_painter->Quit();
+}
+
+T100VOID T100PainterCallback::panel_elements_item_select(T100VOID* data)
+{
+
+}
+
+T100VOID T100PainterCallback::panel_elements_item_deselect(T100VOID* data)
+{
+
+}
