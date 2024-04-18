@@ -29,6 +29,7 @@
 					<Add directory="include/store" />
 					<Add directory="include/task" />
 					<Add directory="include/view" />
+					<Add directory="." />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -111,6 +112,7 @@
 		<Unit filename="include/diagram/V1/T100DiagramFileV1.h" />
 		<Unit filename="include/diagram/V1/T100DiagramFileV1Source.h" />
 		<Unit filename="include/element/T100ElementBase.h" />
+		<Unit filename="include/element/T100ElementBaseSource.h" />
 		<Unit filename="include/element/T100ElementCommon.h" />
 		<Unit filename="include/element/T100ElementSource.h" />
 		<Unit filename="include/element/graphics/T100ElementCircle.h" />
@@ -133,6 +135,7 @@
 		<Unit filename="include/task/T100PainterMenuSaveThreadTask.h" />
 		<Unit filename="include/task/T100WxEventData.h" />
 		<Unit filename="include/task/T100WxThreadTask.h" />
+		<Unit filename="include/view/T100PainterElementsPanel.h" />
 		<Unit filename="include/view/T100PainterView.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
@@ -152,6 +155,7 @@
 		<Unit filename="src/diagram/V1/T100DiagramFileV1.cpp" />
 		<Unit filename="src/diagram/V1/T100DiagramFileV1Source.cpp" />
 		<Unit filename="src/element/T100ElementBase.cpp" />
+		<Unit filename="src/element/T100ElementBaseSource.cpp" />
 		<Unit filename="src/element/T100ElementSource.cpp" />
 		<Unit filename="src/element/graphics/T100ElementCircle.cpp" />
 		<Unit filename="src/element/graphics/T100ElementCircleSource.cpp" />
@@ -172,7 +176,9 @@
 		<Unit filename="src/task/T100PainterMenuSaveThreadTask.cpp" />
 		<Unit filename="src/task/T100WxEventData.cpp" />
 		<Unit filename="src/task/T100WxThreadTask.cpp" />
+		<Unit filename="src/view/T100PainterElementsPanel.cpp" />
 		<Unit filename="src/view/T100PainterView.cpp" />
+		<Unit filename="wxsmith/T100PainterElementsPanel.wxs" />
 		<Unit filename="wxsmith/T100Painterframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
@@ -180,6 +186,7 @@
 				<gui name="wxWidgets" src="T100PainterApp.cpp" main="T100PainterFrame" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxFrame wxs="wxsmith/T100Painterframe.wxs" src="T100PainterMain.cpp" hdr="T100PainterMain.h" fwddecl="0" i18n="1" name="T100PainterFrame" language="CPP" />
+					<wxPanel wxs="wxsmith/T100PainterElementsPanel.wxs" src="src\view\T100PainterElementsPanel.cpp" hdr="include\view\T100PainterElementsPanel.h" fwddecl="0" i18n="1" name="T100PainterElementsPanel" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

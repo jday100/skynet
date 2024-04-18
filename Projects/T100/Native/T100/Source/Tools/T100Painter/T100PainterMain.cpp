@@ -44,6 +44,9 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*IdInit(T100PainterFrame)
+const long T100PainterFrame::ID_AUITOOLBARITEM1 = wxNewId();
+const long T100PainterFrame::ID_AUITOOLBARLABEL1 = wxNewId();
+const long T100PainterFrame::ID_AUITOOLBAR1 = wxNewId();
 const long T100PainterFrame::ID_MENUITEM_NEW = wxNewId();
 const long T100PainterFrame::ID_MENUITEM_OPEN = wxNewId();
 const long T100PainterFrame::ID_MENUITEM_CLOSE = wxNewId();
@@ -77,6 +80,13 @@ T100PainterFrame::T100PainterFrame(wxWindow* parent,wxWindowID id)
     wxMenuItem* MenuItemQuit;
 
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
+    AuiManager1 = new wxAuiManager(this, wxAUI_MGR_DEFAULT);
+    AuiToolBar1 = new wxAuiToolBar(this, ID_AUITOOLBAR1, wxPoint(61,39), wxDefaultSize, wxAUI_TB_DEFAULT_STYLE);
+    AuiToolBar1->AddTool(ID_AUITOOLBARITEM1, _("Item label"), wxNullBitmap, wxNullBitmap, wxITEM_NORMAL, wxEmptyString, wxEmptyString, NULL);
+    AuiToolBar1->AddLabel(ID_AUITOOLBARLABEL1, _("Item label"));
+    AuiToolBar1->Realize();
+    AuiManager1->AddPane(AuiToolBar1, wxAuiPaneInfo().Name(_T("PaneName0")).ToolbarPane().Caption(_("Pane caption")).Layer(10).Top().Gripper());
+    AuiManager1->Update();
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
     MenuItemNew = new wxMenuItem(Menu1, ID_MENUITEM_NEW, _("New"), wxEmptyString, wxITEM_NORMAL);
@@ -143,12 +153,29 @@ T100PainterFrame::T100PainterFrame(wxWindow* parent,wxWindowID id)
     Connect(ID_MENUITEM_CONFIG,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemConfigSelected);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnAbout);
     //*)
+    create();
 }
 
 T100PainterFrame::~T100PainterFrame()
 {
     //(*Destroy(T100PainterFrame)
     //*)
+    destroy();
+}
+
+T100VOID T100PainterFrame::create()
+{
+
+}
+
+T100VOID T100PainterFrame::destroy()
+{
+    AuiManager1->UnInit();
+}
+
+wxAuiManager* T100PainterFrame::getAuiManager()
+{
+    return AuiManager1;
 }
 
 void T100PainterFrame::OnQuit(wxCommandEvent& event)

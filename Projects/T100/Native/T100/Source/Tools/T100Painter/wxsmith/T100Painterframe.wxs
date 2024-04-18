@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <wxsmith>
 	<object class="wxFrame" name="T100PainterFrame">
+		<object class="wxAuiManager" variable="AuiManager1" member="yes">
+			<object class="AuiManagerItem">
+				<object class="wxAuiToolBar" name="ID_AUITOOLBAR1" variable="AuiToolBar1" member="yes">
+					<pos>61,39</pos>
+					<object class="AuiToolBarItem">
+						<object class="wxAuiToolBarItem" name="ID_AUITOOLBARITEM1" variable="AuiToolBarItem1" member="yes" />
+						<label>Item label</label>
+					</object>
+					<object class="AuiToolBarItem">
+						<object class="wxAuiToolBarLabel" name="ID_AUITOOLBARLABEL1" />
+						<label>Item label</label>
+					</object>
+				</object>
+				<name>PaneName0</name>
+				<standardpanetype>Toolbar</standardpanetype>
+				<caption>Pane caption</caption>
+				<captionvisible>0</captionvisible>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<layer>10</layer>
+				<dockfixed>0</dockfixed>
+				<dockabledirection></dockabledirection>
+				<resizable>0</resizable>
+				<gripper>Default</gripper>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+		</object>
 		<object class="wxMenuBar" variable="MenuBar1" member="no">
 			<object class="wxMenu" variable="Menu1" member="no">
 				<label>&amp;File</label>

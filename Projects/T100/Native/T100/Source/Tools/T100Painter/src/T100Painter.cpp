@@ -74,7 +74,14 @@ T100PainterView* T100Painter::getView()
 
 T100BOOL T100Painter::New()
 {
-    return T100FALSE;
+    T100PainterMenuNewThreadTask*           task            = T100NULL;
+
+    task    = T100NEW T100PainterMenuNewThreadTask();
+
+    task->setEvtHandler(m_view->getCanvas());
+    task->start();
+
+    return T100TRUE;
 }
 
 T100BOOL T100Painter::Open()

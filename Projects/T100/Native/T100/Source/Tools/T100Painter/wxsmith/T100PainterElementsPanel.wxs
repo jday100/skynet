@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxPanel" name="T100PainterElementsPanel">
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+			<object class="sizeritem">
+				<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
+					<object class="notebookpage">
+						<object class="wxListView" name="ID_LISTVIEW1" variable="ListView1" member="yes">
+							<style>wxLC_ICON</style>
+						</object>
+						<label>Graphics</label>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+		<object class="wxImageList" variable="ImageList1" member="yes">
+			<image_list>
+				<item>16</item>
+				<item>16</item>
+			</image_list>
+			<image_text>
+				<item2>16</item2>
+				<item2>16</item2>
+			</image_text>
+		</object>
+	</object>
+</wxsmith>

@@ -11,10 +11,12 @@
 #define T100PAINTERMAIN_H
 
 //(*Headers(T100PainterFrame)
+#include <wx/aui/aui.h>
 #include <wx/frame.h>
 #include <wx/menu.h>
 #include <wx/statusbr.h>
 //*)
+#include "T100Common.h"
 
 class T100PainterFrame: public wxFrame
 {
@@ -22,6 +24,12 @@ class T100PainterFrame: public wxFrame
 
         T100PainterFrame(wxWindow* parent,wxWindowID id = -1);
         virtual ~T100PainterFrame();
+
+        wxAuiManager*       getAuiManager();
+
+    protected:
+        T100VOID            create();
+        T100VOID            destroy();
 
     private:
 
@@ -42,6 +50,9 @@ class T100PainterFrame: public wxFrame
         //*)
 
         //(*Identifiers(T100PainterFrame)
+        static const long ID_AUITOOLBARITEM1;
+        static const long ID_AUITOOLBARLABEL1;
+        static const long ID_AUITOOLBAR1;
         static const long ID_MENUITEM_NEW;
         static const long ID_MENUITEM_OPEN;
         static const long ID_MENUITEM_CLOSE;
@@ -61,6 +72,8 @@ class T100PainterFrame: public wxFrame
         //*)
 
         //(*Declarations(T100PainterFrame)
+        wxAuiManager* AuiManager1;
+        wxAuiToolBar* AuiToolBar1;
         wxMenu* Menu3;
         wxMenu* Menu4;
         wxMenu* Menu5;
