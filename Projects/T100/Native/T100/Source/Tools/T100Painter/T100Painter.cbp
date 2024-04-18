@@ -30,6 +30,7 @@
 					<Add directory="include/task" />
 					<Add directory="include/view" />
 					<Add directory="." />
+					<Add directory="include/state" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -61,6 +62,7 @@
 					<Add directory="include/store" />
 					<Add directory="include/task" />
 					<Add directory="include/view" />
+					<Add directory="include/state" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -99,6 +101,7 @@
 		<Unit filename="include/T100PainterCommon.h" />
 		<Unit filename="include/T100StringTypes.h" />
 		<Unit filename="include/canvas/T100Canvas.h" />
+		<Unit filename="include/canvas/T100CanvasState.h" />
 		<Unit filename="include/data/T100DiagramInfo.h" />
 		<Unit filename="include/data/T100DiagramInfoV1.h" />
 		<Unit filename="include/data/T100ElementInfo.h" />
@@ -126,6 +129,11 @@
 		<Unit filename="include/math/T100Bivector.h" />
 		<Unit filename="include/math/T100BivectorTools.h" />
 		<Unit filename="include/serve/T100PainterServe.h" />
+		<Unit filename="include/state/T100CanvasStateEdit.h" />
+		<Unit filename="include/state/T100CanvasStateNone.h" />
+		<Unit filename="include/state/T100CanvasStatePaint.h" />
+		<Unit filename="include/state/T100CanvasStateSelected.h" />
+		<Unit filename="include/state/T100CanvasStateSizing.h" />
 		<Unit filename="include/store/T100PainterStore.h" />
 		<Unit filename="include/task/T100PainterMenuCloseThreadTask.h" />
 		<Unit filename="include/task/T100PainterMenuNewThreadTask.h" />
@@ -133,6 +141,7 @@
 		<Unit filename="include/task/T100PainterMenuQuitThreadTask.h" />
 		<Unit filename="include/task/T100PainterMenuSaveAsThreadTask.h" />
 		<Unit filename="include/task/T100PainterMenuSaveThreadTask.h" />
+		<Unit filename="include/task/T100PainterPanelElementsLoadThreadTask.h" />
 		<Unit filename="include/task/T100WxEventData.h" />
 		<Unit filename="include/task/T100WxThreadTask.h" />
 		<Unit filename="include/view/T100PainterElementsPanel.h" />
@@ -143,6 +152,7 @@
 		<Unit filename="src/T100Painter.cpp" />
 		<Unit filename="src/T100PainterCallback.cpp" />
 		<Unit filename="src/canvas/T100Canvas.cpp" />
+		<Unit filename="src/canvas/T100CanvasState.cpp" />
 		<Unit filename="src/data/T100DiagramInfo.cpp" />
 		<Unit filename="src/data/T100DiagramInfoV1.cpp" />
 		<Unit filename="src/data/T100ElementInfo.cpp" />
@@ -167,6 +177,11 @@
 		<Unit filename="src/math/T100Bivector.cpp" />
 		<Unit filename="src/math/T100BivectorTools.cpp" />
 		<Unit filename="src/serve/T100PainterServe.cpp" />
+		<Unit filename="src/state/T100CanvasStateEdit.cpp" />
+		<Unit filename="src/state/T100CanvasStateNone.cpp" />
+		<Unit filename="src/state/T100CanvasStatePaint.cpp" />
+		<Unit filename="src/state/T100CanvasStateSelected.cpp" />
+		<Unit filename="src/state/T100CanvasStateSizing.cpp" />
 		<Unit filename="src/store/T100PainterStore.cpp" />
 		<Unit filename="src/task/T100PainterMenuCloseThreadTask.cpp" />
 		<Unit filename="src/task/T100PainterMenuNewThreadTask.cpp" />
@@ -174,6 +189,7 @@
 		<Unit filename="src/task/T100PainterMenuQuitThreadTask.cpp" />
 		<Unit filename="src/task/T100PainterMenuSaveAsThreadTask.cpp" />
 		<Unit filename="src/task/T100PainterMenuSaveThreadTask.cpp" />
+		<Unit filename="src/task/T100PainterPanelElementsLoadThreadTask.cpp" />
 		<Unit filename="src/task/T100WxEventData.cpp" />
 		<Unit filename="src/task/T100WxThreadTask.cpp" />
 		<Unit filename="src/view/T100PainterElementsPanel.cpp" />

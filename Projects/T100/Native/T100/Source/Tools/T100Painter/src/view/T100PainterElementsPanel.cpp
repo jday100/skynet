@@ -10,6 +10,8 @@ const long T100PainterElementsPanel::ID_LISTVIEW1 = wxNewId();
 const long T100PainterElementsPanel::ID_NOTEBOOK1 = wxNewId();
 //*)
 
+const long T100PainterElementsPanel::ID_THREAD_IMAGE = wxNewId();
+
 BEGIN_EVENT_TABLE(T100PainterElementsPanel,wxPanel)
 	//(*EventTable(T100PainterElementsPanel)
 	//*)

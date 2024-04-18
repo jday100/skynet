@@ -16,6 +16,7 @@ class T100PainterView
 
         T100Canvas*                     getCanvas();
         T100PainterFrame*               getFrame();
+        T100PainterElementsPanel*       getElementsPanel();
 
     protected:
         T100VOID                        create();

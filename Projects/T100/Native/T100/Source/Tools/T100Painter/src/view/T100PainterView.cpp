@@ -19,6 +19,7 @@ T100VOID T100PainterView::create()
     m_elements_panel    = T100NEW T100PainterElementsPanel(m_frame);
 
     m_frame->getAuiManager()->AddPane(m_elements_panel, wxAuiPaneInfo().Name(wxT("Elements")).BestSize(300, -1).Left());
+    m_frame->getAuiManager()->AddPane(m_canvas, wxAuiPaneInfo().Name(wxT("Canvas")).DefaultPane().CenterPane());
     m_frame->getAuiManager()->Update();
 }
 
@@ -40,4 +41,9 @@ T100Canvas* T100PainterView::getCanvas()
 T100PainterFrame* T100PainterView::getFrame()
 {
     return m_frame;
+}
+
+T100PainterElementsPanel* T100PainterView::getElementsPanel()
+{
+    return m_elements_panel;
 }

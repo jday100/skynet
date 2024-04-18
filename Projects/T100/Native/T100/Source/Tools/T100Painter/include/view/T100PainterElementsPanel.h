@@ -22,6 +22,8 @@ class T100PainterElementsPanel: public wxPanel
 		wxNotebook* Notebook1;
 		//*)
 
+		static const long ID_THREAD_IMAGE;
+
 	protected:
 
 		//(*Identifiers(T100PainterElementsPanel)

@@ -34,6 +34,8 @@ class T100Painter
         T100VOID                    create();
         T100VOID                    destroy();
 
+        T100VOID                    init();
+
     private:
         T100PainterStore*           m_store         = T100NULL;
         T100PainterServe*           m_serve         = T100NULL;

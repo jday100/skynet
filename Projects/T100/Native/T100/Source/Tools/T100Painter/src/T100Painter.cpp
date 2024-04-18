@@ -12,6 +12,8 @@
 #include "T100PainterMenuSaveAsThreadTask.h"
 #include "T100PainterMenuQuitThreadTask.h"
 
+#include "T100PainterPanelElementsLoadThreadTask.h"
+
 T100Painter::T100Painter()
 {
     //ctor
@@ -32,6 +34,7 @@ T100VOID T100Painter::create()
 
     T100PainterCallback::init(this, m_store, m_serve, m_view);
 
+    init();
     New();
 }
 
@@ -70,6 +73,16 @@ T100VOID T100Painter::setView(T100PainterView* view)
 T100PainterView* T100Painter::getView()
 {
     return m_view;
+}
+
+T100VOID T100Painter::init()
+{
+    T100PainterPanelElementsLoadThreadTask*         task            = T100NULL;
+
+    task    = T100NEW T100PainterPanelElementsLoadThreadTask();
+
+    task->setPanel(m_view->getElementsPanel());
+    task->start();
 }
 
 T100BOOL T100Painter::New()
