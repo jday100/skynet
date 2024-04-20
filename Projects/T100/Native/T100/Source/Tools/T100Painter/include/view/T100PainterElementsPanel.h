@@ -9,6 +9,8 @@
 #include <wx/sizer.h>
 //*)
 
+#include "T100Common.h"
+
 class T100PainterElementsPanel: public wxPanel
 {
 	public:
@@ -32,11 +34,14 @@ class T100PainterElementsPanel: public wxPanel
 		//*)
 
 	private:
+	    void OnThreadImage(wxThreadEvent& event);
 
 		//(*Handlers(T100PainterElementsPanel)
 		//*)
 
 	protected:
+        T100VOID            create();
+        T100VOID            destroy();
 
 		void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);
 

@@ -26,7 +26,7 @@ T100VOID T100PainterPanelElementsLoadThreadTask::run()
     T100BOOL            result;
 
     T100STRING          names[1] = {
-                            L"images/circle.png"
+                            L"images/dot.png"
                         };
 
     for(T100STRING item : names){

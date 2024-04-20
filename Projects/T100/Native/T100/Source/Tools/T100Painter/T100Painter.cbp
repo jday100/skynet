@@ -101,7 +101,9 @@
 		<Unit filename="include/T100PainterCommon.h" />
 		<Unit filename="include/T100StringTypes.h" />
 		<Unit filename="include/canvas/T100Canvas.h" />
+		<Unit filename="include/canvas/T100CanvasCommon.h" />
 		<Unit filename="include/canvas/T100CanvasState.h" />
+		<Unit filename="include/canvas/T100CanvasTransverter.h" />
 		<Unit filename="include/data/T100DiagramInfo.h" />
 		<Unit filename="include/data/T100DiagramInfoV1.h" />
 		<Unit filename="include/data/T100ElementInfo.h" />
@@ -153,6 +155,7 @@
 		<Unit filename="src/T100PainterCallback.cpp" />
 		<Unit filename="src/canvas/T100Canvas.cpp" />
 		<Unit filename="src/canvas/T100CanvasState.cpp" />
+		<Unit filename="src/canvas/T100CanvasTransverter.cpp" />
 		<Unit filename="src/data/T100DiagramInfo.cpp" />
 		<Unit filename="src/data/T100DiagramInfoV1.cpp" />
 		<Unit filename="src/data/T100ElementInfo.cpp" />

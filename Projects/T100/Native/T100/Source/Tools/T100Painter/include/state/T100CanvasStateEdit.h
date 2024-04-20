@@ -1,6 +1,7 @@
 #ifndef T100CANVASSTATEEDIT_H
 #define T100CANVASSTATEEDIT_H
 
+#include "T100CanvasState.h"
 
 class T100CanvasStateEdit
 {

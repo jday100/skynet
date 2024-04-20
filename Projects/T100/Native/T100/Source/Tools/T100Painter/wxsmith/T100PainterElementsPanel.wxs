@@ -20,13 +20,15 @@
 		</object>
 		<object class="wxImageList" variable="ImageList1" member="yes">
 			<image_list>
-				<item>16</item>
-				<item>16</item>
+				<item>64</item>
+				<item>64</item>
 			</image_list>
 			<image_text>
-				<item2>16</item2>
-				<item2>16</item2>
+				<item2>64</item2>
+				<item2>64</item2>
 			</image_text>
+			<image_width>64</image_width>
+			<image_height>64</image_height>
 		</object>
 	</object>
 </wxsmith>
