@@ -75,7 +75,7 @@ T100VOID T100Canvas::Select(T100ElementBase* element)
 
 T100VOID T100Canvas::Remove(T100ElementBase* element)
 {
-    m_diagram->getElements()->find(element);
+    //m_diagram->getElements()->find(element);
 
 
 }
@@ -96,7 +96,7 @@ T100VOID T100Canvas::Paint()
 {
     if(!m_diagram)return;
 
-    T100CANVAS_ELEMENT_VECTOR*          elements            = T100NULL;
+    T100PAINTER_ELEMENT_VECTOR*         elements            = T100NULL;
     wxClientDC                          dc(this);
 
     elements    = m_diagram->getElements();
