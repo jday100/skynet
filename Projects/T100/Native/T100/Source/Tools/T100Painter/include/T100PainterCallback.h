@@ -31,6 +31,8 @@ class T100PainterCallback
         static T100VOID                 panel_elements_item_select(T100VOID* = T100NULL);
         static T100VOID                 panel_elements_item_deselect(T100VOID* = T100NULL);
 
+    public:
+        static T100VOID                 task_new(T100VOID* = T100NULL);
 
     protected:
 

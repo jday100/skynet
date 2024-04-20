@@ -99,25 +99,60 @@ T100BOOL T100Painter::New()
 
 T100BOOL T100Painter::Open()
 {
-    return T100FALSE;
+    T100PainterMenuOpenThreadTask*          task            = T100NULL;
+
+    task    = T100NEW T100PainterMenuOpenThreadTask();
+
+    task->setEvtHandler(m_view->getCanvas());
+    task->start();
+
+    return T100TRUE;
 }
 
 T100BOOL T100Painter::Close()
 {
-    return T100FALSE;
+    T100PainterMenuCloseThreadTask*         task            = T100NULL;
+
+    task    = T100NEW T100PainterMenuCloseThreadTask();
+
+    task->setEvtHandler(m_view->getCanvas());
+    task->start();
+
+    return T100TRUE;
 }
 
 T100BOOL T100Painter::Save()
 {
-    return T100FALSE;
+    T100PainterMenuSaveThreadTask*          task            = T100NULL;
+
+    task    = T100NEW T100PainterMenuSaveThreadTask();
+
+    task->setEvtHandler(m_view->getCanvas());
+    task->start();
+
+    return T100TRUE;
 }
 
 T100BOOL T100Painter::SaveAs()
 {
-    return T100FALSE;
+    T100PainterMenuSaveAsThreadTask*        task            = T100NULL;
+
+    task    = T100NEW T100PainterMenuSaveAsThreadTask();
+
+    task->setEvtHandler(m_view->getCanvas());
+    task->start();
+
+    return T100TRUE;
 }
 
 T100BOOL T100Painter::Quit()
 {
-    return T100FALSE;
+    T100PainterMenuQuitThreadTask*          task            = T100NULL;
+
+    task    = T100NEW T100PainterMenuQuitThreadTask();
+
+    task->setEvtHandler(m_view->getCanvas());
+    task->start();
+
+    return T100TRUE;
 }

@@ -16,6 +16,12 @@ class T100Diagram
         T100BOOL                            save(T100STRING, T100DiagramInfo&);
 
     protected:
+        T100BOOL                            loadDiagramInfo(T100DiagramInfo&, T100DiagramTransducerTarget&);
+        T100BOOL                            saveDiagramInfo(T100DiagramInfo&, T100DiagramTransducerTarget&);
+
+
+
+
         T100BOOL                            loadDiagramInfo(T100BufferedFile&, T100DiagramInfo&);
         T100BOOL                            saveDiagramInfo(T100BufferedFile&, T100DiagramInfo&);
 

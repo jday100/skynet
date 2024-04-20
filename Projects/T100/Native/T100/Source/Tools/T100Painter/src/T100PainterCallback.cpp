@@ -89,3 +89,8 @@ T100VOID T100PainterCallback::panel_elements_item_deselect(T100VOID* data)
 {
 
 }
+
+T100VOID T100PainterCallback::task_new(T100VOID* data)
+{
+
+}
