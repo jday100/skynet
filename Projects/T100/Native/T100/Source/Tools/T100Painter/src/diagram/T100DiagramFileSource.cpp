@@ -4,6 +4,8 @@
 
 #include "T100ElementSource.h"
 
+#include "T100DiagramTransducerTarget.h"
+
 
 T100DiagramFileSource::T100DiagramFileSource(T100DiagramInfo* diagram)
     :T100DiagramTransducerSource(), m_diagram(diagram)

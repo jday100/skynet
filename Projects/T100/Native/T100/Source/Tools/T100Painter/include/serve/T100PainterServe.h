@@ -13,6 +13,7 @@ class T100PainterServe
         virtual ~T100PainterServe();
 
         T100BOOL                            opened();
+        T100BOOL                            modified();
 
         T100STRING                          getFileName();
         T100DiagramInfo*                    getDiagramInfo();

@@ -24,7 +24,7 @@ T100BOOL T100Diagram::load(T100STRING file, T100DiagramInfo& info)
     T100BufferedFile                        diagram(file);
     T100DiagramTransducer                   transducer;
     T100DiagramFileSource                   source(&info);
-    T100DiagramTransducerTarget             target(&diagram);
+    T100DiagramTransducerTarget             target(diagram);
 
     result  = diagram.open();
     if(result){
@@ -46,7 +46,7 @@ T100BOOL T100Diagram::save(T100STRING file, T100DiagramInfo& info)
     T100BufferedFile                        diagram(file);
     T100DiagramTransducer                   transducer;
     T100DiagramFileSource                   source(&info);
-    T100DiagramTransducerTarget             target(&diagram);
+    T100DiagramTransducerTarget             target(diagram);
 
     result  = diagram.open();
     if(result){
@@ -54,7 +54,7 @@ T100BOOL T100Diagram::save(T100STRING file, T100DiagramInfo& info)
         transducer.serialize(source, target);
 
         if(result){
-            result  = saveDiagramInfo(diagram, info);
+            result  = saveDiagramInfo(info, target);
         }
 
         result  = diagram.close() ? result : T100FALSE;
@@ -65,19 +65,37 @@ T100BOOL T100Diagram::save(T100STRING file, T100DiagramInfo& info)
 T100BOOL T100Diagram::loadDiagramInfo(T100BufferedFile& file, T100DiagramInfo& info)
 {
     T100BOOL                                result;
-    T100ElementSource                       source;
+    T100ElementSource                       source(&info);
 
     T100DiagramTransducer                   transducer;
 
-    return transducer.serialize(source, target);
+    //return transducer.serialize(source, target);
 }
 
 T100BOOL T100Diagram::saveDiagramInfo(T100BufferedFile& file, T100DiagramInfo& info)
 {
     T100BOOL                                result;
-    T100ElementSource                       source;
+    T100ElementSource                       source(&info);
 
     T100DiagramTransducer                   transducer;
+
+    //return transducer.deserialize(source, target);
+}
+
+T100BOOL T100Diagram::loadDiagramInfo(T100DiagramInfo& info, T100DiagramTransducerTarget& target)
+{
+    T100BOOL                        result;
+    T100ElementSource               source(&info);
+    T100DiagramTransducer           transducer;
+
+    return transducer.serialize(source, target);
+}
+
+T100BOOL T100Diagram::saveDiagramInfo(T100DiagramInfo& info, T100DiagramTransducerTarget& target)
+{
+    T100BOOL                        result;
+    T100ElementSource               source(&info);
+    T100DiagramTransducer           transducer;
 
     return transducer.deserialize(source, target);
 }

@@ -5,11 +5,28 @@
 T100PainterElementDrawer::T100PainterElementDrawer()
 {
     //ctor
+    create();
 }
 
 T100PainterElementDrawer::~T100PainterElementDrawer()
 {
     //dtor
+    destroy();
+}
+
+T100VOID T100PainterElementDrawer::create()
+{
+    m_modified  = T100FALSE;
+}
+
+T100VOID T100PainterElementDrawer::destroy()
+{
+
+}
+
+T100BOOL T100PainterElementDrawer::Modified()
+{
+    return m_modified;
 }
 
 T100VOID T100PainterElementDrawer::SetDiagramInfo(T100DiagramInfo* diagram)

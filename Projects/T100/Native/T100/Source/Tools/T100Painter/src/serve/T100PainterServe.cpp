@@ -17,6 +17,11 @@ T100BOOL T100PainterServe::opened()
     return m_opened;
 }
 
+T100BOOL T100PainterServe::modified()
+{
+    return m_element_drawer.Modified();
+}
+
 T100STRING T100PainterServe::getFileName()
 {
     return m_filename;

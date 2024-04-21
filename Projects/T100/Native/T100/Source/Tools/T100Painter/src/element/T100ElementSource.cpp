@@ -1,7 +1,7 @@
 #include "T100ElementSource.h"
 
-T100ElementSource::T100ElementSource()
-    :T100DiagramTransducerSource()
+T100ElementSource::T100ElementSource(T100DiagramInfo* diagram)
+    :T100DiagramTransducerSource(), m_diagram(diagram)
 {
     //ctor
 }

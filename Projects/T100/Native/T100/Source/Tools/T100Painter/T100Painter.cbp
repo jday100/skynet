@@ -130,6 +130,7 @@
 		<Unit filename="include/library/T100Unicode.h" />
 		<Unit filename="include/math/T100Bivector.h" />
 		<Unit filename="include/math/T100BivectorTools.h" />
+		<Unit filename="include/serve/T100PainterElementDrawer.h" />
 		<Unit filename="include/serve/T100PainterServe.h" />
 		<Unit filename="include/state/T100CanvasStateEdit.h" />
 		<Unit filename="include/state/T100CanvasStateNone.h" />
@@ -179,6 +180,7 @@
 		<Unit filename="src/library/T100Unicode.cpp" />
 		<Unit filename="src/math/T100Bivector.cpp" />
 		<Unit filename="src/math/T100BivectorTools.cpp" />
+		<Unit filename="src/serve/T100PainterElementDrawer.cpp" />
 		<Unit filename="src/serve/T100PainterServe.cpp" />
 		<Unit filename="src/state/T100CanvasStateEdit.cpp" />
 		<Unit filename="src/state/T100CanvasStateNone.cpp" />

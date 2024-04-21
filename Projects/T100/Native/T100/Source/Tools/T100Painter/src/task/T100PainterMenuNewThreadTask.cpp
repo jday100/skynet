@@ -18,5 +18,5 @@ T100PainterMenuNewThreadTask::~T100PainterMenuNewThreadTask()
 
 T100VOID T100PainterMenuNewThreadTask::run()
 {
-
+    T100PainterCallback::task_new();
 }
