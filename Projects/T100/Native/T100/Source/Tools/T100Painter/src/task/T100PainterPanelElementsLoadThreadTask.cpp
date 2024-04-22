@@ -36,6 +36,24 @@ T100VOID T100PainterPanelElementsLoadThreadTask::run()
             return;
         }
     }
+
+    T100STRING          elements[1][3] = {
+                            {
+                                L"1",
+                                L"Dot",
+                                L"images/dot.png"
+                            }
+                        };
+
+    for(T100STRING* item : elements){
+        if(item){
+            T100WORD        value;
+
+            load(value, item[1], item[2]);
+        }else{
+            return;
+        }
+    }
 }
 
 T100BOOL T100PainterPanelElementsLoadThreadTask::load(T100STRING name)
@@ -51,6 +69,32 @@ T100BOOL T100PainterPanelElementsLoadThreadTask::load(T100STRING name)
         wxThreadEvent       event(wxEVT_THREAD, m_panel->ID_THREAD_IMAGE);
 
         data    = T100NEW T100WxEventData();
+        data->setData(image);
+
+        event.SetEventObject(data);
+        send(event);
+
+    }else{
+        T100DELETE  image;
+    }
+    return result;
+}
+
+T100BOOL T100PainterPanelElementsLoadThreadTask::load(T100WORD index, T100STRING title, T100STRING name)
+{
+    T100BOOL                result;
+    wxImage*                image           = T100NULL;
+    T100WxEventData*        data            = T100NULL;
+
+    image   = T100NEW wxImage();
+    result  = image->LoadFile(name, wxBITMAP_TYPE_PNG);
+
+    if(result){
+        wxThreadEvent       event(wxEVT_THREAD, m_panel->ID_THREAD_IMAGE);
+
+        data    = T100NEW T100WxEventData();
+        data->setIndex(index);
+        data->setTitle(title);
         data->setData(image);
 
         event.SetEventObject(data);

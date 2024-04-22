@@ -47,6 +47,7 @@ class T100PainterFrame: public wxFrame
         void OnMenuItemCopySelected(wxCommandEvent& event);
         void OnMenuItemPasteSelected(wxCommandEvent& event);
         void OnMenuItemConfigSelected(wxCommandEvent& event);
+        void OnResize(wxSizeEvent& event);
         //*)
 
         //(*Identifiers(T100PainterFrame)

@@ -152,6 +152,7 @@ T100PainterFrame::T100PainterFrame(wxWindow* parent,wxWindowID id)
     Connect(ID_MENUITEM_PASTE,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemPasteSelected);
     Connect(ID_MENUITEM_CONFIG,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnMenuItemConfigSelected);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100PainterFrame::OnAbout);
+    Connect(wxEVT_SIZE,(wxObjectEventFunction)&T100PainterFrame::OnResize);
     //*)
     create();
 }
@@ -238,4 +239,9 @@ void T100PainterFrame::OnMenuItemPasteSelected(wxCommandEvent& event)
 
 void T100PainterFrame::OnMenuItemConfigSelected(wxCommandEvent& event)
 {
+}
+
+void T100PainterFrame::OnResize(wxSizeEvent& event)
+{
+    AuiManager1->Update();
 }

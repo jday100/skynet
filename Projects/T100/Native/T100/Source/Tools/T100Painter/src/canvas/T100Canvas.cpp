@@ -1,6 +1,6 @@
 #include "T100Canvas.h"
 
-#include <wx/dcclient.h>
+#include <wx/dcbuffer.h>
 #include "T100WxEventData.h"
 
 const long T100Canvas::ID_THREAD_LOAD = wxNewId();
@@ -94,10 +94,14 @@ T100VOID T100Canvas::Change(T100WORD state)
 
 T100VOID T100Canvas::Paint()
 {
+    wxBufferedPaintDC                   dc(this);
+
+    dc.Clear();
+    this->DoPrepareDC(dc);
+
     if(!m_diagram)return;
 
     T100PAINTER_ELEMENT_VECTOR*         elements            = T100NULL;
-    wxClientDC                          dc(this);
 
     elements    = m_diagram->getElements();
 

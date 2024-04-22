@@ -87,6 +87,25 @@ T100VOID T100Painter::init()
 
 T100BOOL T100Painter::New()
 {
+    T100BOOL            result;
+
+    if(m_serve->opened()){
+        if(m_serve->modified()){
+            if(m_serve->getFileName() == L""){
+
+            }else{
+
+            }
+        }else{
+
+        }
+    }else{
+
+    }
+
+
+
+
     T100PainterMenuNewThreadTask*           task            = T100NULL;
 
     task    = T100NEW T100PainterMenuNewThreadTask();

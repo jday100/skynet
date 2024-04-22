@@ -16,6 +16,7 @@ class T100PainterPanelElementsLoadThreadTask : public T100WxThreadTask
         T100VOID                        run();
 
         T100BOOL                        load(T100STRING);
+        T100BOOL                        load(T100WORD, T100STRING, T100STRING);
 
     private:
         T100PainterElementsPanel*       m_panel         = T100NULL;

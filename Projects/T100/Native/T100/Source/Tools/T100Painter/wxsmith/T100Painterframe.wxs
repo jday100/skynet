@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <wxsmith>
 	<object class="wxFrame" name="T100PainterFrame">
+		<handler function="OnResize" entry="EVT_SIZE" />
 		<object class="wxAuiManager" variable="AuiManager1" member="yes">
 			<object class="AuiManagerItem">
 				<object class="wxAuiToolBar" name="ID_AUITOOLBAR1" variable="AuiToolBar1" member="yes">
