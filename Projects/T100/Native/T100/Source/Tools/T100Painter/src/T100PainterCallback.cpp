@@ -82,12 +82,32 @@ T100VOID T100PainterCallback::frame_menu_quit(T100VOID* data)
 
 T100VOID T100PainterCallback::panel_elements_item_select(T100VOID* data)
 {
+    T100BOOL                result;
+    T100ElementInfo*        info            = T100NULL;
 
+    info    = (T100ElementInfo*)data;
+
+    if(info){
+        result  = m_serve->getElementDrawer()->Select(info);
+        if(result){
+            m_view->getCanvas()->Change(T100CANVAS_STATE_PAINT);
+        }
+    }
 }
 
 T100VOID T100PainterCallback::panel_elements_item_deselect(T100VOID* data)
 {
+    T100BOOL                result;
+    T100ElementInfo*        info            = T100NULL;
 
+    info    = (T100ElementInfo*)data;
+
+    if(info){
+        result  = m_serve->getElementDrawer()->Select(info);
+        if(result){
+            m_view->getCanvas()->Change(T100CANVAS_STATE_PAINT);
+        }
+    }
 }
 
 T100VOID T100PainterCallback::task_new(T100VOID* data)

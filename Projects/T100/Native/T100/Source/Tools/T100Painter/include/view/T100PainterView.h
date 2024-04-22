@@ -12,6 +12,9 @@ class T100PainterView
         T100PainterView();
         virtual ~T100PainterView();
 
+        T100BOOL                        Open(T100STRING&);
+        T100BOOL                        SaveAs(T100STRING&);
+
         T100BOOL                        show();
 
         T100Canvas*                     getCanvas();

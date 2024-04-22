@@ -37,6 +37,8 @@ class T100PainterElementsPanel: public wxPanel
 	    void OnThreadImage(wxThreadEvent& event);
 
 		//(*Handlers(T100PainterElementsPanel)
+		void OnListView1ItemSelect(wxListEvent& event);
+		void OnListView1ItemDeselect(wxListEvent& event);
 		//*)
 
 	protected:

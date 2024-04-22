@@ -1,5 +1,8 @@
 #include "T100PainterView.h"
 
+#include <wx/filedlg.h>
+#include "T100PainterMain.h"
+
 T100PainterView::T100PainterView()
 {
     //ctor
@@ -46,4 +49,28 @@ T100PainterFrame* T100PainterView::getFrame()
 T100PainterElementsPanel* T100PainterView::getElementsPanel()
 {
     return m_elements_panel;
+}
+
+T100BOOL T100PainterView::Open(T100STRING& filename)
+{
+    T100STRING          file;
+    wxFileDialog        dialog(m_frame, _("Please select a file"), "", "", "Diagram files(*.dgm)|*.dgm", wxFD_OPEN, wxDefaultPosition, wxDefaultSize, _("Select a file:"));
+
+    if(wxID_CANCEL == dialog.ShowModal())return T100FALSE;
+
+    filename    = dialog.GetPath().ToStdWstring();
+
+    return T100TRUE;
+}
+
+T100BOOL T100PainterView::SaveAs(T100STRING& filename)
+{
+    T100STRING          file;
+    wxFileDialog        dialog(m_frame, _("Please select a file"), "", "", "Diagram files(*.dgm)|*.dgm", wxFD_SAVE, wxDefaultPosition, wxDefaultSize, _("Select a file:"));
+
+    if(wxID_CANCEL == dialog.ShowModal())return T100FALSE;
+
+    filename    = dialog.GetPath().ToStdWstring();
+
+    return T100TRUE;
 }

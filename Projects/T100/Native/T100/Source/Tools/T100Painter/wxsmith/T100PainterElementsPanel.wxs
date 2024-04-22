@@ -9,6 +9,8 @@
 					<object class="notebookpage">
 						<object class="wxListView" name="ID_LISTVIEW1" variable="ListView1" member="yes">
 							<style>wxLC_ICON</style>
+							<handler function="OnListView1ItemSelect" entry="EVT_LIST_ITEM_SELECTED" />
+							<handler function="OnListView1ItemDeselect" entry="EVT_LIST_ITEM_DESELECTED" />
 						</object>
 						<label>Graphics</label>
 					</object>

@@ -99,12 +99,20 @@ T100BOOL T100Painter::New()
 
 T100BOOL T100Painter::Open()
 {
-    T100PainterMenuOpenThreadTask*          task            = T100NULL;
+    T100BOOL            result;
+    T100STRING          filename;
 
-    task    = T100NEW T100PainterMenuOpenThreadTask();
+    result  = m_view->Open(filename);
 
-    task->setEvtHandler(m_view->getCanvas());
-    task->start();
+    if(result){
+        T100PainterMenuOpenThreadTask*          task            = T100NULL;
+
+        task    = T100NEW T100PainterMenuOpenThreadTask();
+
+        task->setFileName(filename);
+        task->setEvtHandler(m_view->getCanvas());
+        task->start();
+    }
 
     return T100TRUE;
 }
@@ -135,6 +143,12 @@ T100BOOL T100Painter::Save()
 
 T100BOOL T100Painter::SaveAs()
 {
+    T100BOOL            result;
+    T100STRING          filename;
+
+    result  = m_view->SaveAs(filename);
+
+
     T100PainterMenuSaveAsThreadTask*        task            = T100NULL;
 
     task    = T100NEW T100PainterMenuSaveAsThreadTask();

@@ -7,6 +7,7 @@
 
 #include "T100WxEventData.h"
 #include "T100ElementInfo.h"
+#include "T100PainterCallback.h"
 
 //(*IdInit(T100PainterElementsPanel)
 const long T100PainterElementsPanel::ID_LISTVIEW1 = wxNewId();
@@ -42,6 +43,9 @@ void T100PainterElementsPanel::BuildContent(wxWindow* parent,wxWindowID id,const
 	ImageList1 = new wxImageList(64, 64, 1);
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
+
+	Connect(ID_LISTVIEW1,wxEVT_COMMAND_LIST_ITEM_SELECTED,(wxObjectEventFunction)&T100PainterElementsPanel::OnListView1ItemSelect);
+	Connect(ID_LISTVIEW1,wxEVT_COMMAND_LIST_ITEM_DESELECTED,(wxObjectEventFunction)&T100PainterElementsPanel::OnListView1ItemDeselect);
 	//*)
 }
 
@@ -80,5 +84,29 @@ void T100PainterElementsPanel::OnThreadImage(wxThreadEvent& event)
 
         info->Type  = data->getIndex();
         ListView1->SetItemPtrData(id, item);
+    }
+}
+
+void T100PainterElementsPanel::OnListView1ItemSelect(wxListEvent& event)
+{
+    wxUIntPtr               data        = event.GetData();
+    T100ElementInfo*        info            = T100NULL;
+
+    info    = (T100ElementInfo*)data;
+
+    if(info){
+        T100PainterCallback::panel_elements_item_select((void*)data);
+    }
+}
+
+void T100PainterElementsPanel::OnListView1ItemDeselect(wxListEvent& event)
+{
+    wxUIntPtr               data        = event.GetData();
+    T100ElementInfo*        info            = T100NULL;
+
+    info    = (T100ElementInfo*)data;
+
+    if(info){
+        T100PainterCallback::panel_elements_item_deselect((void*)data);
     }
 }
