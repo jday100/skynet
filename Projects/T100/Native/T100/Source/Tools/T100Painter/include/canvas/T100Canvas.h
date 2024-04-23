@@ -29,6 +29,8 @@ class T100Canvas : public wxScrolledWindow
         T100VOID                Remove(T100ElementBase*);
         T100ElementBase*        Current();
 
+        T100BOOL                GetVirtualPosition(T100INT, T100INT, T100INT&, T100INT&);
+
     public:
         static const long ID_THREAD_LOAD;
 

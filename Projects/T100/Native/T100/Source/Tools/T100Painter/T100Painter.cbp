@@ -131,6 +131,7 @@
 		<Unit filename="include/math/T100Bivector.h" />
 		<Unit filename="include/math/T100BivectorTools.h" />
 		<Unit filename="include/serve/T100PainterElementDrawer.h" />
+		<Unit filename="include/serve/T100PainterElementsDrawer.h" />
 		<Unit filename="include/serve/T100PainterServe.h" />
 		<Unit filename="include/state/T100CanvasStateEdit.h" />
 		<Unit filename="include/state/T100CanvasStateNone.h" />
@@ -148,6 +149,7 @@
 		<Unit filename="include/task/T100WxEventData.h" />
 		<Unit filename="include/task/T100WxThreadTask.h" />
 		<Unit filename="include/view/T100PainterElementsPanel.h" />
+		<Unit filename="include/view/T100PainterPropertiesPanel.h" />
 		<Unit filename="include/view/T100PainterView.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
@@ -181,6 +183,7 @@
 		<Unit filename="src/math/T100Bivector.cpp" />
 		<Unit filename="src/math/T100BivectorTools.cpp" />
 		<Unit filename="src/serve/T100PainterElementDrawer.cpp" />
+		<Unit filename="src/serve/T100PainterElementsDrawer.cpp" />
 		<Unit filename="src/serve/T100PainterServe.cpp" />
 		<Unit filename="src/state/T100CanvasStateEdit.cpp" />
 		<Unit filename="src/state/T100CanvasStateNone.cpp" />
@@ -198,8 +201,10 @@
 		<Unit filename="src/task/T100WxEventData.cpp" />
 		<Unit filename="src/task/T100WxThreadTask.cpp" />
 		<Unit filename="src/view/T100PainterElementsPanel.cpp" />
+		<Unit filename="src/view/T100PainterPropertiesPanel.cpp" />
 		<Unit filename="src/view/T100PainterView.cpp" />
 		<Unit filename="wxsmith/T100PainterElementsPanel.wxs" />
+		<Unit filename="wxsmith/T100PainterPropertiesPanel.wxs" />
 		<Unit filename="wxsmith/T100Painterframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
@@ -208,6 +213,7 @@
 				<resources>
 					<wxFrame wxs="wxsmith/T100Painterframe.wxs" src="T100PainterMain.cpp" hdr="T100PainterMain.h" fwddecl="0" i18n="1" name="T100PainterFrame" language="CPP" />
 					<wxPanel wxs="wxsmith/T100PainterElementsPanel.wxs" src="src\view\T100PainterElementsPanel.cpp" hdr="include\view\T100PainterElementsPanel.h" fwddecl="0" i18n="1" name="T100PainterElementsPanel" language="CPP" />
+					<wxPanel wxs="wxsmith/T100PainterPropertiesPanel.wxs" src="src\view\T100PainterPropertiesPanel.cpp" hdr="include\view\T100PainterPropertiesPanel.h" fwddecl="0" i18n="1" name="T100PainterPropertiesPanel" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

@@ -66,6 +66,16 @@ T100VOID T100PainterElementsPanel::destroy()
 
 }
 
+T100VOID T100PainterElementsPanel::setElementsDrawer(T100PainterElementsDrawer* elements)
+{
+    m_elements_drawer   = elements;
+}
+
+T100PainterElementsDrawer* T100PainterElementsPanel::getElementsDrawer()
+{
+    return m_elements_drawer;
+}
+
 void T100PainterElementsPanel::OnThreadImage(wxThreadEvent& event)
 {
     T100WxEventData*        data;

@@ -92,6 +92,18 @@ T100VOID T100Canvas::Change(T100WORD state)
     Refresh();
 }
 
+T100BOOL T100Canvas::GetVirtualPosition(T100INT x, T100INT y, T100INT& vx, T100INT& vy)
+{
+    T100INT         sx, sy;
+
+    GetViewStart(&sx, &sy);
+
+    vx  = x + sx * 10;
+    vy  = y + sy * 10;
+
+    return T100TRUE;
+}
+
 T100VOID T100Canvas::Paint()
 {
     wxBufferedPaintDC                   dc(this);

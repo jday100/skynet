@@ -34,6 +34,8 @@ T100VOID T100Painter::create()
 
     T100PainterCallback::init(this, m_store, m_serve, m_view);
 
+    m_view->getElementsPanel()->setElementsDrawer(m_serve->getElementsDrawer());
+
     init();
     New();
 }

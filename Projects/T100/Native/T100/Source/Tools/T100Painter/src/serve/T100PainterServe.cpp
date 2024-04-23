@@ -50,3 +50,8 @@ T100PainterElementDrawer* T100PainterServe::getElementDrawer()
 {
     return &m_element_drawer;
 }
+
+T100PainterElementsDrawer* T100PainterServe::getElementsDrawer()
+{
+    return &m_elements_drawer;
+}

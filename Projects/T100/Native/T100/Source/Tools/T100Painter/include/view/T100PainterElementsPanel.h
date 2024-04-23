@@ -10,6 +10,7 @@
 //*)
 
 #include "T100Common.h"
+#include "T100PainterElementsDrawer.h"
 
 class T100PainterElementsPanel: public wxPanel
 {
@@ -18,12 +19,16 @@ class T100PainterElementsPanel: public wxPanel
 		T100PainterElementsPanel(wxWindow* parent,wxWindowID id=wxID_ANY,const wxPoint& pos=wxDefaultPosition,const wxSize& size=wxDefaultSize);
 		virtual ~T100PainterElementsPanel();
 
+		T100VOID                            setElementsDrawer(T100PainterElementsDrawer*);
+		T100PainterElementsDrawer*          getElementsDrawer();
+
 		//(*Declarations(T100PainterElementsPanel)
 		wxImageList* ImageList1;
 		wxListView* ListView1;
 		wxNotebook* Notebook1;
 		//*)
 
+    public:
 		static const long ID_THREAD_IMAGE;
 
 	protected:
@@ -42,8 +47,10 @@ class T100PainterElementsPanel: public wxPanel
 		//*)
 
 	protected:
-        T100VOID            create();
-        T100VOID            destroy();
+        T100VOID                            create();
+        T100VOID                            destroy();
+
+        T100PainterElementsDrawer*          m_elements_drawer           = T100NULL;
 
 		void BuildContent(wxWindow* parent,wxWindowID id,const wxPoint& pos,const wxSize& size);
 

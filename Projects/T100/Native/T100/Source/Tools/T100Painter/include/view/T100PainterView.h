@@ -5,6 +5,7 @@
 #include "T100Canvas.h"
 #include "T100PainterMain.h"
 #include "T100PainterElementsPanel.h"
+#include "T100PainterPropertiesPanel.h"
 
 class T100PainterView
 {
@@ -20,6 +21,7 @@ class T100PainterView
         T100Canvas*                     getCanvas();
         T100PainterFrame*               getFrame();
         T100PainterElementsPanel*       getElementsPanel();
+        T100PainterPropertiesPanel*     getPropertiesPanel();
 
     protected:
         T100VOID                        create();
@@ -29,6 +31,7 @@ class T100PainterView
         T100Canvas*                     m_canvas                = T100NULL;
         T100PainterFrame*               m_frame                 = T100NULL;
         T100PainterElementsPanel*       m_elements_panel        = T100NULL;
+        T100PainterPropertiesPanel*     m_properties_panel      = T100NULL;
 };
 
 #endif // T100PAINTERVIEW_H
