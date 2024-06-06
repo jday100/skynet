@@ -1,9 +1,17 @@
-#include <iostream>
+#include <tchar.h>
+#include <windows.h>
 
-using namespace std;
+#include "T100Win.h"
 
-int main()
+
+int WINAPI WinMain (HINSTANCE hThisInstance,
+                     HINSTANCE hPrevInstance,
+                     LPSTR lpszArgument,
+                     int nCmdShow)
 {
-    cout << "Hello world!" << endl;
+    T100Win         win;
+    TCHAR name[ ] = _T("CodeBlocksWindowsApp");
+    win.Run(hThisInstance, name, nCmdShow);
+
     return 0;
 }

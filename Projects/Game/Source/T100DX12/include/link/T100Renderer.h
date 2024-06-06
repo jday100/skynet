@@ -3,6 +3,21 @@
 
 #include "T100Common.h"
 
+#include <windows.h>
+
+#include <d3d12.h>
+#include <dxgi1_6.h>
+#include <d3dcompiler.h>
+#include <DirectXMath.h>
+
+//#include <incluce/d3dx12/d2dx12.h>
+
+
+#include <string>
+#include <wrl.h>
+#include <shellapi.h>
+
+
 class T100Renderer
 {
     public:

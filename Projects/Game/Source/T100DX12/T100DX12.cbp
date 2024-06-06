@@ -16,6 +16,8 @@
 					<Add directory="include/link" />
 					<Add directory="include/dx12" />
 					<Add directory="include" />
+					<Add directory="include/gui" />
+					<Add directory="C:/ms/llvm-mingw/include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -28,6 +30,7 @@
 					<Add directory="include/link" />
 					<Add directory="include/dx12" />
 					<Add directory="include" />
+					<Add directory="include/gui" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -43,6 +46,7 @@
 					<Add directory="include/link" />
 					<Add directory="include/dx12" />
 					<Add directory="include" />
+					<Add directory="include/gui" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -52,14 +56,20 @@
 		</Compiler>
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/dx12/T100DX12Renderer.h" />
+		<Unit filename="include/dx12/T100DX12RendererHelper.h" />
+		<Unit filename="include/gui/T100Win.h" />
 		<Unit filename="include/link/T100Renderer.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="src/dx12/T100DX12Renderer.cpp" />
+		<Unit filename="src/gui/T100Win.cpp" />
 		<Unit filename="src/link/T100Renderer.cpp" />
-		<Unit filename="test.cpp" />
+		<Unit filename="test.cpp">
+			<Option target="Release" />
+			<Option target="Test" />
+		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
