@@ -1,0 +1,6 @@
+#ifndef T100STRINGTYPES_H
+#define T100STRINGTYPES_H
+
+
+
+#endif // T100STRINGTYPES_H

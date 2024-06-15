@@ -16,6 +16,14 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include" />
+					<Add directory="include/library/string" />
+					<Add directory="include/common" />
+					<Add directory="include/library/file" />
+					<Add directory="include/suite/game" />
+					<Add directory="include/suite/render" />
+					<Add directory="include/suite/render/self" />
+					<Add directory="include/wx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -34,6 +42,14 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include" />
+					<Add directory="include/library/string" />
+					<Add directory="include/common" />
+					<Add directory="include/library/file" />
+					<Add directory="include/suite/game" />
+					<Add directory="include/suite/render" />
+					<Add directory="include/suite/render/self" />
+					<Add directory="include/wx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -65,9 +81,26 @@
 		<Unit filename="T100NativeApp.h" />
 		<Unit filename="T100NativeMain.cpp" />
 		<Unit filename="T100NativeMain.h" />
+		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/common/T100DataTypes.h" />
+		<Unit filename="include/common/T100StringTypes.h" />
+		<Unit filename="include/library/file/T100File.h" />
+		<Unit filename="include/library/string/T100WString.h" />
+		<Unit filename="include/suite/game/T100Game.h" />
+		<Unit filename="include/suite/render/T100Render.h" />
+		<Unit filename="include/suite/render/T100RenderBase.h" />
+		<Unit filename="include/suite/render/self/T100SoftRender.h" />
+		<Unit filename="include/wx/T100WxRender.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/library/file/T100File.cpp" />
+		<Unit filename="src/library/string/T100WString.cpp" />
+		<Unit filename="src/suite/game/T100Game.cpp" />
+		<Unit filename="src/suite/render/T100Render.cpp" />
+		<Unit filename="src/suite/render/T100RenderBase.cpp" />
+		<Unit filename="src/suite/render/self/T100SoftRender.cpp" />
+		<Unit filename="src/wx/T100WxRender.cpp" />
 		<Unit filename="wxsmith/T100Nativeframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -16,6 +16,9 @@
 #include <wx/statusbr.h>
 //*)
 
+#include "T100Common.h"
+#include "T100WxRender.h"
+
 class T100NativeFrame: public wxFrame
 {
     public:
@@ -28,6 +31,7 @@ class T100NativeFrame: public wxFrame
         //(*Handlers(T100NativeFrame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
+        void OnPaint(wxPaintEvent& event);
         //*)
 
         //(*Identifiers(T100NativeFrame)
@@ -39,6 +43,12 @@ class T100NativeFrame: public wxFrame
         //(*Declarations(T100NativeFrame)
         wxStatusBar* StatusBar1;
         //*)
+
+    private:
+        T100WxRender*       m_render            = T100NULL;
+
+        T100VOID            TurnOn();
+        T100VOID            TurnOff();
 
         DECLARE_EVENT_TABLE()
 };

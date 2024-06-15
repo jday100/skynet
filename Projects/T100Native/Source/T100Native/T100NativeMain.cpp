@@ -81,13 +81,27 @@ T100NativeFrame::T100NativeFrame(wxWindow* parent,wxWindowID id)
 
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100NativeFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100NativeFrame::OnAbout);
+    Connect(wxEVT_PAINT,(wxObjectEventFunction)&T100NativeFrame::OnPaint);
     //*)
+
+    TurnOn();
 }
 
 T100NativeFrame::~T100NativeFrame()
 {
     //(*Destroy(T100NativeFrame)
     //*)
+    TurnOff();
+}
+
+T100VOID T100NativeFrame::TurnOn()
+{
+    m_render    = T100NEW T100WxRender(this, wxID_ANY);
+}
+
+T100VOID T100NativeFrame::TurnOff()
+{
+    T100SAFE_DELETE(m_render)
 }
 
 void T100NativeFrame::OnQuit(wxCommandEvent& event)
@@ -99,4 +113,9 @@ void T100NativeFrame::OnAbout(wxCommandEvent& event)
 {
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
+}
+
+void T100NativeFrame::OnPaint(wxPaintEvent& event)
+{
+    m_render->Refresh();
 }
