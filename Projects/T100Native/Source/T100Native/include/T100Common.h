@@ -1,6 +1,7 @@
 #ifndef T100COMMON_H
 #define T100COMMON_H
 
+#include "T100DataTypes.h"
 
 #define     T100VOID            void
 #define     T100NULL            nullptr

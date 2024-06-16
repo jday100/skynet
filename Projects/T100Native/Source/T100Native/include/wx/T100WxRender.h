@@ -1,8 +1,10 @@
 #ifndef T100WXRENDER_H
 #define T100WXRENDER_H
 
+#include <wx/bitmap.h>
 #include <wx/window.h>
 #include "T100Common.h"
+#include "T100Render.h"
 
 class T100WxRender : public wxWindow
 {
@@ -15,12 +17,14 @@ class T100WxRender : public wxWindow
                 const wxString& name = wxPanelNameStr);
         virtual ~T100WxRender();
 
-        T100VOID            Draw();
-
     protected:
         T100VOID            OnPaint(wxPaintEvent& event);
+        T100VOID            OnSize(wxSizeEvent& event);
 
     private:
+        wxBitmap*           m_bitmap            = T100NULL;
+        T100Render*         m_render            = T100NULL;
+
         T100VOID            TurnOn();
         T100VOID            TurnOff();
 

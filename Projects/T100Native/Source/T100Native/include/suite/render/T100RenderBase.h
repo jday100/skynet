@@ -9,10 +9,17 @@ class T100RenderBase
         T100RenderBase();
         virtual ~T100RenderBase();
 
+        virtual T100BYTE*           GetData() = 0;
+
         virtual T100VOID            Start() = 0;
         virtual T100VOID            Stop() = 0;
 
         virtual T100VOID            Draw() = 0;
+
+        virtual T100VOID            SetSize(T100INT, T100INT) = 0;
+
+        virtual T100INT             GetWidth() = 0;
+        virtual T100INT             GetHeight() = 0;
 
     protected:
 

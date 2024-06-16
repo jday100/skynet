@@ -96,7 +96,13 @@ T100NativeFrame::~T100NativeFrame()
 
 T100VOID T100NativeFrame::TurnOn()
 {
+    T100INT         width, height;
+
     m_render    = T100NEW T100WxRender(this, wxID_ANY);
+
+    GetSize(&width, &height);
+
+    m_render->SetSize(width, height);
 }
 
 T100VOID T100NativeFrame::TurnOff()
