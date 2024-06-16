@@ -14,10 +14,13 @@
 #include <wx/image.h>
 //*)
 
+#include "T100Fire.h"
+
 IMPLEMENT_APP(T100NativeApp);
 
 bool T100NativeApp::OnInit()
 {
+    /*
     //(*AppInitialize
     bool wxsOK = true;
     wxInitAllImageHandlers();
@@ -29,5 +32,14 @@ bool T100NativeApp::OnInit()
     }
     //*)
     return wxsOK;
-
+    */
+    bool wxsOK = true;
+    wxInitAllImageHandlers();
+    if ( wxsOK )
+    {
+        T100Fire* fire = T100NEW T100Fire();
+        fire->Show();
+        SetTopWindow(fire->GetFrame());
+    }
+    return wxsOK;
 }

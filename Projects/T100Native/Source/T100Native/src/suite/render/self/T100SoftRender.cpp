@@ -30,6 +30,13 @@ T100VOID T100SoftRender::Draw()
     for(int i=0;i<m_length;i++){
         m_screen[i] = i % 255;
     }
+
+    for(int i=0;i<m_length;i+=4){
+        m_screen[i]   = 255;
+        m_screen[i+1] = 0;
+        m_screen[i+2] = 0;
+        m_screen[i+3] = 0;
+    }
 }
 
 T100VOID T100SoftRender::SetSize(T100INT width, T100INT height)

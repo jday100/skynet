@@ -24,6 +24,13 @@
 					<Add directory="include/suite/render" />
 					<Add directory="include/suite/render/self" />
 					<Add directory="include/wx" />
+					<Add directory="include/suite/render/common" />
+					<Add directory="include/math/vector" />
+					<Add directory="." />
+					<Add directory="include/fire" />
+					<Add directory="include/fire/view" />
+					<Add directory="include/fire/store" />
+					<Add directory="include/fire/serve" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -50,6 +57,12 @@
 					<Add directory="include/suite/render" />
 					<Add directory="include/suite/render/self" />
 					<Add directory="include/wx" />
+					<Add directory="include/suite/render/common" />
+					<Add directory="include/math/vector" />
+					<Add directory="include/fire" />
+					<Add directory="include/fire/view" />
+					<Add directory="include/fire/store" />
+					<Add directory="include/fire/serve" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -84,21 +97,35 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/common/T100DataTypes.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
+		<Unit filename="include/fire/T100Fire.h" />
+		<Unit filename="include/fire/serve/T100FireServe.h" />
+		<Unit filename="include/fire/store/T100FireStore.h" />
+		<Unit filename="include/fire/view/T100FireView.h" />
 		<Unit filename="include/library/file/T100File.h" />
 		<Unit filename="include/library/string/T100WString.h" />
+		<Unit filename="include/math/vector/T100Vector.h" />
 		<Unit filename="include/suite/game/T100Game.h" />
 		<Unit filename="include/suite/render/T100Render.h" />
 		<Unit filename="include/suite/render/T100RenderBase.h" />
+		<Unit filename="include/suite/render/common/T100Entity.h" />
+		<Unit filename="include/suite/render/common/T100Facet.h" />
 		<Unit filename="include/suite/render/self/T100SoftRender.h" />
 		<Unit filename="include/wx/T100WxRender.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/fire/T100Fire.cpp" />
+		<Unit filename="src/fire/serve/T100FireServe.cpp" />
+		<Unit filename="src/fire/store/T100FireStore.cpp" />
+		<Unit filename="src/fire/view/T100FireView.cpp" />
 		<Unit filename="src/library/file/T100File.cpp" />
 		<Unit filename="src/library/string/T100WString.cpp" />
+		<Unit filename="src/math/vector/T100Vector.cpp" />
 		<Unit filename="src/suite/game/T100Game.cpp" />
 		<Unit filename="src/suite/render/T100Render.cpp" />
 		<Unit filename="src/suite/render/T100RenderBase.cpp" />
+		<Unit filename="src/suite/render/common/T100Entity.cpp" />
+		<Unit filename="src/suite/render/common/T100Facet.cpp" />
 		<Unit filename="src/suite/render/self/T100SoftRender.cpp" />
 		<Unit filename="src/wx/T100WxRender.cpp" />
 		<Unit filename="wxsmith/T100Nativeframe.wxs" />

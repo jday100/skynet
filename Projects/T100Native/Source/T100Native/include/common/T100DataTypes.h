@@ -5,4 +5,6 @@
 #define     T100INT             int
 
 
+#define     T100FLOAT           float
+
 #endif // T100DATATYPES_H

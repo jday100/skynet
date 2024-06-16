@@ -50,7 +50,7 @@ T100VOID T100WxRender::OnPaint(wxPaintEvent& event)
 
     m_render->Draw();
 
-    m_bitmap    = T100NEW wxBitmap((const char*)m_render->GetData(), m_render->GetWidth(), m_render->GetHeight());
+    m_bitmap    = T100NEW wxBitmap((const char*)m_render->GetData(), m_render->GetWidth(), m_render->GetHeight(), 32);
 
     //test
     m_bitmap->SaveFile(_T("screen.bmp"), wxBITMAP_TYPE_BMP);
