@@ -2,6 +2,8 @@
 #define T100RENDERBASE_H
 
 #include "T100Common.h"
+#include "T100Entity.h"
+#include "T100Point.h"
 
 class T100RenderBase
 {
@@ -9,19 +11,28 @@ class T100RenderBase
         T100RenderBase();
         virtual ~T100RenderBase();
 
-        virtual T100BYTE*           GetData() = 0;
+        virtual T100BYTE*                   GetData() = 0;
 
-        virtual T100VOID            Start() = 0;
-        virtual T100VOID            Stop() = 0;
+        virtual T100VOID                    Start() = 0;
+        virtual T100VOID                    Stop() = 0;
 
-        virtual T100VOID            Draw() = 0;
+        virtual T100VOID                    Draw() = 0;
 
-        virtual T100VOID            SetSize(T100INT, T100INT) = 0;
+        virtual T100VOID                    SetSize(T100INT, T100INT) = 0;
 
-        virtual T100INT             GetWidth() = 0;
-        virtual T100INT             GetHeight() = 0;
+        virtual T100INT                     GetWidth() = 0;
+        virtual T100INT                     GetHeight() = 0;
+
+        virtual T100ENTITY_VECTOR&          GetEntities() = 0;
+
+        virtual T100VOID                    SetOrigin(T100FLOAT, T100FLOAT, T100FLOAT);
 
     protected:
+        T100INT                             m_view_width        = 0;
+        T100INT                             m_view_height       = 0;
+        T100INT                             m_view_origin_x     = 0;
+        T100INT                             m_view_origin_y     = 0;
+        T100Point                           m_origin;
 
     private:
 };

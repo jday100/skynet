@@ -18,6 +18,8 @@ T100VOID T100Fire::TurnOn()
     m_store     = T100NEW T100FireStore();
     m_serve     = T100NEW T100FireServe();
     m_view      = T100NEW T100FireView();
+
+    Load();
 }
 
 T100VOID T100Fire::TurnOff()
@@ -40,4 +42,12 @@ T100NativeFrame* T100Fire::GetFrame()
         return m_view->GetFrame();
     }
     return T100NULL;
+}
+
+T100BOOL T100Fire::Load()
+{
+    if(m_store){
+        return m_store->Load(m_serve->GetRender()->GetEntities());
+    }
+    return T100FALSE;
 }

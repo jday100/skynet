@@ -1,6 +1,7 @@
 #ifndef T100FIRESERVE_H
 #define T100FIRESERVE_H
 
+#include "T100Render.h"
 
 class T100FireServe
 {
@@ -8,9 +9,14 @@ class T100FireServe
         T100FireServe();
         virtual ~T100FireServe();
 
+        T100Render*             GetRender();
+
     protected:
+        T100Render*             m_render            = T100NULL;
 
     private:
+        T100VOID                TurnOn();
+        T100VOID                TurnOff();
 };
 
 #endif // T100FIRESERVE_H

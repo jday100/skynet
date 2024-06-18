@@ -14,6 +14,8 @@ class T100Fire : public T100Game
         T100Fire();
         virtual ~T100Fire();
 
+        T100BOOL                Load();
+
         T100VOID                Show();
 
         T100NativeFrame*        GetFrame();

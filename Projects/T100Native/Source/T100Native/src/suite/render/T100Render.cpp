@@ -48,3 +48,8 @@ T100INT T100Render::GetHeight()
 {
     return m_render->GetHeight();
 }
+
+T100ENTITY_VECTOR& T100Render::GetEntities()
+{
+    return m_render->GetEntities();
+}

@@ -9,3 +9,8 @@ T100Entity::~T100Entity()
 {
     //dtor
 }
+
+T100FACET_VECTOR& T100Entity::GetFacets()
+{
+    return m_facets;
+}
