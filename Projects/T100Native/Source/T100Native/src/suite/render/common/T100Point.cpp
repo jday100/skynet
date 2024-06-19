@@ -17,3 +17,8 @@ T100VOID T100Point::SetValue(T100FLOAT x, T100FLOAT y, T100FLOAT z)
     m_y     = y;
     m_z     = z;
 }
+
+T100Point& T100Point::operator=(const T100VectorV3& vec)
+{
+
+}
