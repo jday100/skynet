@@ -1,7 +1,7 @@
 #include "T100SoftRender.h"
 
 #include <string.h>
-
+#include "T100LinearAlgebra.h"
 #include "T100Cuboid.h"
 
 T100SoftRender::T100SoftRender()
@@ -103,4 +103,9 @@ T100VOID T100SoftRender::DrawPoint(T100Point& point, T100INT colour)
     m_screen[value++] = 255;
     m_screen[value++] = 0;
     m_screen[value++] = 0;
+}
+
+T100VOID T100SoftRender::Rotate(T100Point& source, T100Matrix3& matrix, T100Point& target)
+{
+    target  = source * matrix;
 }

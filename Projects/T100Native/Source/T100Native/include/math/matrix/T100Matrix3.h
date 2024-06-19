@@ -18,6 +18,11 @@ typedef union{
     };
 }T100FACET;
 
+
+class T100Matrix3;
+
+T100Matrix3&        operator +  (const T100Matrix3&, const T100Matrix3&);
+
 class T100Matrix3
 {
     public:
@@ -25,6 +30,9 @@ class T100Matrix3
         virtual ~T100Matrix3();
 
         T100FACET       DATA;
+
+    public:
+        T100BOOL            operator == (const T100Matrix3&);
 
     protected:
 

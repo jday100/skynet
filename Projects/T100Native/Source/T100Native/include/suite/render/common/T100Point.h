@@ -2,8 +2,9 @@
 #define T100POINT_H
 
 #include "T100Common.h"
+#include "T100VectorV3.h"
 
-class T100Point
+class T100Point : public T100VectorV3
 {
     public:
         T100Point();
@@ -14,6 +15,9 @@ class T100Point
         T100FLOAT                   m_z         = 0.0;
 
         T100VOID                    SetValue(T100FLOAT, T100FLOAT, T100FLOAT);
+
+    public:
+        T100Point&          operator =  (const T100VectorV3&);
 
     protected:
 

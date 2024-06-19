@@ -33,6 +33,7 @@
 					<Add directory="include/fire/serve" />
 					<Add directory="include/suite/model" />
 					<Add directory="include/math/matrix" />
+					<Add directory="include/math" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -67,6 +68,7 @@
 					<Add directory="include/fire/serve" />
 					<Add directory="include/suite/model" />
 					<Add directory="include/math/matrix" />
+					<Add directory="include/math" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -107,6 +109,7 @@
 		<Unit filename="include/fire/view/T100FireView.h" />
 		<Unit filename="include/library/file/T100File.h" />
 		<Unit filename="include/library/string/T100WString.h" />
+		<Unit filename="include/math/T100LinearAlgebra.h" />
 		<Unit filename="include/math/matrix/T100Matrix.h" />
 		<Unit filename="include/math/matrix/T100Matrix3.h" />
 		<Unit filename="include/math/vector/T100Vector.h" />
@@ -130,6 +133,7 @@
 		<Unit filename="src/fire/view/T100FireView.cpp" />
 		<Unit filename="src/library/file/T100File.cpp" />
 		<Unit filename="src/library/string/T100WString.cpp" />
+		<Unit filename="src/math/T100LinearAlgebra.cpp" />
 		<Unit filename="src/math/matrix/T100Matrix.cpp" />
 		<Unit filename="src/math/matrix/T100Matrix3.cpp" />
 		<Unit filename="src/math/vector/T100Vector.cpp" />

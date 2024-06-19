@@ -1,6 +1,7 @@
 #include "T100Point.h"
 
 T100Point::T100Point()
+    :T100VectorV3()
 {
     //ctor
 }

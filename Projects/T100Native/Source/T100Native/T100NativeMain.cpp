@@ -82,6 +82,8 @@ T100NativeFrame::T100NativeFrame(wxWindow* parent,wxWindowID id)
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100NativeFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100NativeFrame::OnAbout);
     Connect(wxEVT_PAINT,(wxObjectEventFunction)&T100NativeFrame::OnPaint);
+    Connect(wxEVT_KEY_DOWN,(wxObjectEventFunction)&T100NativeFrame::OnKeyDown);
+    Connect(wxEVT_CHAR,(wxObjectEventFunction)&T100NativeFrame::OnChar);
     //*)
 
     TurnOn();
@@ -124,4 +126,12 @@ void T100NativeFrame::OnAbout(wxCommandEvent& event)
 void T100NativeFrame::OnPaint(wxPaintEvent& event)
 {
     m_render->Refresh();
+}
+
+void T100NativeFrame::OnKeyDown(wxKeyEvent& event)
+{
+}
+
+void T100NativeFrame::OnChar(wxKeyEvent& event)
+{
 }

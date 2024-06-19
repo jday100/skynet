@@ -32,6 +32,8 @@ class T100NativeFrame: public wxFrame
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
         void OnPaint(wxPaintEvent& event);
+        void OnKeyDown(wxKeyEvent& event);
+        void OnChar(wxKeyEvent& event);
         //*)
 
         //(*Identifiers(T100NativeFrame)
