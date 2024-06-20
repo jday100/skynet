@@ -4,6 +4,7 @@
 #include "T100Matrix3.h"
 #include "T100Entity.h"
 #include "T100RenderBase.h"
+#include "T100SoftSpace.h"
 
 
 class T100SoftRender : public T100RenderBase
@@ -28,7 +29,13 @@ class T100SoftRender : public T100RenderBase
 
         T100ENTITY_VECTOR&          GetEntities();
 
+    public:
+        T100VOID                    Move(T100FLOAT, T100FLOAT, T100FLOAT);
+        T100VOID                    Rotate(T100FLOAT, T100FLOAT, T100FLOAT);
+
     protected:
+        T100SoftSpace               m_space;
+
         T100INT                     m_length            = 0;
 
         T100BYTE*                   m_screen            = T100NULL;

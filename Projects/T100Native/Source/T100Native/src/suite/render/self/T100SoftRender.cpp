@@ -5,7 +5,7 @@
 #include "T100Cuboid.h"
 
 T100SoftRender::T100SoftRender()
-    :T100RenderBase()
+    :T100RenderBase(), m_space()
 {
     //ctor
 }
@@ -109,3 +109,15 @@ T100VOID T100SoftRender::Rotate(T100Point& source, T100Matrix3& matrix, T100Poin
 {
     target  = source * matrix;
 }
+
+T100VOID T100SoftRender::Move(T100FLOAT x, T100FLOAT y, T100FLOAT z)
+{
+
+}
+
+T100VOID T100SoftRender::Rotate(T100FLOAT x, T100FLOAT y, T100FLOAT z)
+{
+
+}
+
+
