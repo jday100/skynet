@@ -39,6 +39,8 @@ T100VOID T100FireRender::OnKeyDown(wxKeyEvent& event)
         }
         break;
     }
+
+    Refresh();
 }
 
 T100VOID T100FireRender::OnChar(wxKeyEvent& event)
