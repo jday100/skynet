@@ -3,9 +3,10 @@
 #include <string.h>
 #include "T100LinearAlgebra.h"
 #include "T100Cuboid.h"
+#include "T100SpaceGeometry.h"
 
 T100SoftRender::T100SoftRender()
-    :T100RenderBase(), m_space()
+    :T100RenderBase(), m_entities(), m_space()
 {
     //ctor
 }
@@ -39,6 +40,9 @@ T100VOID T100SoftRender::Draw()
         m_screen[i+3] = 0;
     }
 
+    T100INT         total;
+
+    total   = m_entities.size();
 
     T100Cuboid*     cuboid      = T100NEW T100Cuboid();
 
@@ -112,7 +116,19 @@ T100VOID T100SoftRender::Rotate(T100Point& source, T100Matrix3& matrix, T100Poin
 
 T100VOID T100SoftRender::Move(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 {
+    T100Matrix3         matrix      = T100SpaceGeometry::Translate(x, y, z);
 
+    for(T100Entity* entity : m_entities){
+        if(entity){
+            for(T100Facet* facet : entity->GetFacets()){
+                if(facet){
+                    facet->m_x = facet->m_x * matrix;
+                    facet->m_y = facet->m_y * matrix;
+                    facet->m_z = facet->m_z * matrix;
+                }
+            }
+        }
+    }
 }
 
 T100VOID T100SoftRender::Rotate(T100FLOAT x, T100FLOAT y, T100FLOAT z)

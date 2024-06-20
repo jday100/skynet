@@ -9,10 +9,10 @@ class T100SpaceGeometry
         T100SpaceGeometry();
         virtual ~T100SpaceGeometry();
 
-        T100Matrix3             Translate(T100FLOAT, T100FLOAT, T100FLOAT);
-        T100Matrix3             RevolveX(T100FLOAT);
-        T100Matrix3             RevolveY(T100FLOAT);
-        T100Matrix3             RevolveZ(T100FLOAT);
+        static T100Matrix3          Translate(T100FLOAT, T100FLOAT, T100FLOAT);
+        static T100Matrix3          RevolveX(T100FLOAT);
+        static T100Matrix3          RevolveY(T100FLOAT);
+        static T100Matrix3          RevolveZ(T100FLOAT);
 
     protected:
 

@@ -19,6 +19,8 @@ class T100Render
 
         T100ENTITY_VECTOR&          GetEntities();
 
+        T100VOID                    Move(T100FLOAT, T100FLOAT, T100FLOAT);
+
     protected:
         T100RenderBase*             m_render            = T100NULL;
 

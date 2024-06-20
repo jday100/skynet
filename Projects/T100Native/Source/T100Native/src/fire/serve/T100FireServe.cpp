@@ -3,13 +3,13 @@
 T100FireServe::T100FireServe()
 {
     //ctor
-    TurnOn();
+    //TurnOn();
 }
 
 T100FireServe::~T100FireServe()
 {
     //dtor
-    TurnOff();
+    //TurnOff();
 }
 
 T100VOID T100FireServe::TurnOn()
@@ -20,6 +20,11 @@ T100VOID T100FireServe::TurnOn()
 T100VOID T100FireServe::TurnOff()
 {
     T100SAFE_DELETE(m_render)
+}
+
+T100VOID T100FireServe::SetRender(T100Render* render)
+{
+    m_render    = render;
 }
 
 T100Render* T100FireServe::GetRender()

@@ -106,6 +106,7 @@
 		<Unit filename="include/fire/T100Fire.h" />
 		<Unit filename="include/fire/serve/T100FireServe.h" />
 		<Unit filename="include/fire/store/T100FireStore.h" />
+		<Unit filename="include/fire/view/T100FireRender.h" />
 		<Unit filename="include/fire/view/T100FireView.h" />
 		<Unit filename="include/library/file/T100File.h" />
 		<Unit filename="include/library/string/T100WString.h" />
@@ -122,20 +123,24 @@
 		<Unit filename="include/suite/render/T100Render.h" />
 		<Unit filename="include/suite/render/T100RenderBase.h" />
 		<Unit filename="include/suite/render/T100SpaceBase.h" />
+		<Unit filename="include/suite/render/T100ViewBase.h" />
 		<Unit filename="include/suite/render/common/T100Entity.h" />
 		<Unit filename="include/suite/render/common/T100Facet.h" />
 		<Unit filename="include/suite/render/common/T100Light.h" />
 		<Unit filename="include/suite/render/common/T100Point.h" />
+		<Unit filename="include/suite/render/common/T100Text.h" />
 		<Unit filename="include/suite/render/common/T100Texture.h" />
 		<Unit filename="include/suite/render/self/T100SoftRender.h" />
 		<Unit filename="include/suite/render/self/T100SoftSpace.h" />
 		<Unit filename="include/wx/T100WxRender.h" />
+		<Unit filename="include/wx/T100WxView.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/fire/T100Fire.cpp" />
 		<Unit filename="src/fire/serve/T100FireServe.cpp" />
 		<Unit filename="src/fire/store/T100FireStore.cpp" />
+		<Unit filename="src/fire/view/T100FireRender.cpp" />
 		<Unit filename="src/fire/view/T100FireView.cpp" />
 		<Unit filename="src/library/file/T100File.cpp" />
 		<Unit filename="src/library/string/T100WString.cpp" />
@@ -152,14 +157,17 @@
 		<Unit filename="src/suite/render/T100Render.cpp" />
 		<Unit filename="src/suite/render/T100RenderBase.cpp" />
 		<Unit filename="src/suite/render/T100SpaceBase.cpp" />
+		<Unit filename="src/suite/render/T100ViewBase.cpp" />
 		<Unit filename="src/suite/render/common/T100Entity.cpp" />
 		<Unit filename="src/suite/render/common/T100Facet.cpp" />
 		<Unit filename="src/suite/render/common/T100Light.cpp" />
 		<Unit filename="src/suite/render/common/T100Point.cpp" />
+		<Unit filename="src/suite/render/common/T100Text.cpp" />
 		<Unit filename="src/suite/render/common/T100Texture.cpp" />
 		<Unit filename="src/suite/render/self/T100SoftRender.cpp" />
 		<Unit filename="src/suite/render/self/T100SoftSpace.cpp" />
 		<Unit filename="src/wx/T100WxRender.cpp" />
+		<Unit filename="src/wx/T100WxView.cpp" />
 		<Unit filename="wxsmith/T100Nativeframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

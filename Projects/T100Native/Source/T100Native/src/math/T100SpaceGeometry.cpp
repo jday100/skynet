@@ -12,7 +12,9 @@ T100SpaceGeometry::~T100SpaceGeometry()
 
 T100Matrix3 T100SpaceGeometry::Translate(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 {
+    T100Matrix3         matrix;
 
+    return matrix;
 }
 
 T100Matrix3 T100SpaceGeometry::RevolveX(T100FLOAT x)

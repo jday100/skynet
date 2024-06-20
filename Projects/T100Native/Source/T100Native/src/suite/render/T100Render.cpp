@@ -53,3 +53,8 @@ T100ENTITY_VECTOR& T100Render::GetEntities()
 {
     return m_render->GetEntities();
 }
+
+T100VOID T100Render::Move(T100FLOAT x, T100FLOAT y, T100FLOAT z)
+{
+    m_render->Move(x, y, z);
+}

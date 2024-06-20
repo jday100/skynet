@@ -26,6 +26,9 @@ class T100NativeFrame: public wxFrame
         T100NativeFrame(wxWindow* parent,wxWindowID id = -1);
         virtual ~T100NativeFrame();
 
+        T100VOID            SetRender(T100WxRender*);
+        T100WxRender&       GetRender();
+
     private:
 
         //(*Handlers(T100NativeFrame)

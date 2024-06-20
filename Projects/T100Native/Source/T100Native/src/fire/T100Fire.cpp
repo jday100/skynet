@@ -19,7 +19,15 @@ T100VOID T100Fire::TurnOn()
     m_serve     = T100NEW T100FireServe();
     m_view      = T100NEW T100FireView();
 
+    m_serve->SetRender(m_view->GetRender()->GetRender());
+
     Load();
+
+    int         total;
+
+    total   = m_serve->GetRender()->GetEntities().size();
+
+    m_view->GetFrame()->GetRender().DrawText(_T("Hello"));
 }
 
 T100VOID T100Fire::TurnOff()

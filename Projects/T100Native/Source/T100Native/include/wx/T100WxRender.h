@@ -17,14 +17,21 @@ class T100WxRender : public wxWindow
                 const wxString& name = wxPanelNameStr);
         virtual ~T100WxRender();
 
+        T100Render*         GetRender();
+
+        T100VOID            DrawText(wxString);
+
     protected:
         T100VOID            OnPaint(wxPaintEvent& event);
         T100VOID            OnSize(wxSizeEvent& event);
+        T100VOID            OnKeyDown(wxKeyEvent& event);
+        T100VOID            OnChar(wxKeyEvent& event);
 
-    private:
+    protected:
         wxBitmap*           m_bitmap            = T100NULL;
         T100Render*         m_render            = T100NULL;
 
+    private:
         T100VOID            TurnOn();
         T100VOID            TurnOff();
 

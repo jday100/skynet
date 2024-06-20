@@ -9,6 +9,7 @@ class T100FireServe
         T100FireServe();
         virtual ~T100FireServe();
 
+        T100VOID                SetRender(T100Render*);
         T100Render*             GetRender();
 
     protected:

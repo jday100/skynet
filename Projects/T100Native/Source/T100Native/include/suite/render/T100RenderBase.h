@@ -27,6 +27,10 @@ class T100RenderBase
 
         virtual T100VOID                    SetOrigin(T100FLOAT, T100FLOAT, T100FLOAT);
 
+    public:
+        virtual T100VOID                    Move(T100FLOAT, T100FLOAT, T100FLOAT) = 0;
+        virtual T100VOID                    Rotate(T100FLOAT, T100FLOAT, T100FLOAT) = 0;
+
     protected:
         T100INT                             m_view_width        = 0;
         T100INT                             m_view_height       = 0;

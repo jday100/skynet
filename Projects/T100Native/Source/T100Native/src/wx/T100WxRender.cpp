@@ -5,6 +5,8 @@
 BEGIN_EVENT_TABLE(T100WxRender,wxWindow)
     EVT_PAINT(T100WxRender::OnPaint)
     EVT_SIZE(T100WxRender::OnSize)
+    EVT_KEY_DOWN(T100WxRender::OnKeyDown)
+    EVT_CHAR(T100WxRender::OnChar)
 END_EVENT_TABLE()
 
 T100WxRender::T100WxRender(wxWindow *parent,
@@ -42,6 +44,11 @@ T100VOID T100WxRender::TurnOff()
     T100SAFE_DELETE(m_render)
 }
 
+T100Render* T100WxRender::GetRender()
+{
+    return m_render;
+}
+
 T100VOID T100WxRender::OnPaint(wxPaintEvent& event)
 {
     wxAutoBufferedPaintDC       dc(this);
@@ -56,6 +63,8 @@ T100VOID T100WxRender::OnPaint(wxPaintEvent& event)
     m_bitmap->SaveFile(_T("screen.bmp"), wxBITMAP_TYPE_BMP);
 
     dc.SelectObject(*m_bitmap);
+
+    dc.DrawText(_T("Hello"), wxPoint(1, 1));
 }
 
 T100VOID T100WxRender::OnSize(wxSizeEvent& event)
@@ -69,4 +78,34 @@ T100VOID T100WxRender::OnSize(wxSizeEvent& event)
     m_render->SetSize(width, height);
 
     m_bitmap    = T100NEW wxBitmap((const char*)m_render->GetData(), width, height);
+}
+
+T100VOID T100WxRender::OnKeyDown(wxKeyEvent& event)
+{
+    T100INT         key;
+
+    key     = event.GetKeyCode();
+
+    switch(key){
+    case WXK_UP:
+        {
+
+        }
+        break;
+    case WXK_DOWN:
+        {
+
+        }
+        break;
+    }
+}
+
+T100VOID T100WxRender::OnChar(wxKeyEvent& event)
+{
+
+}
+
+T100VOID T100WxRender::DrawText(wxString text)
+{
+
 }

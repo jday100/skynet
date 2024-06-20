@@ -86,14 +86,14 @@ T100NativeFrame::T100NativeFrame(wxWindow* parent,wxWindowID id)
     Connect(wxEVT_CHAR,(wxObjectEventFunction)&T100NativeFrame::OnChar);
     //*)
 
-    TurnOn();
+    //TurnOn();
 }
 
 T100NativeFrame::~T100NativeFrame()
 {
     //(*Destroy(T100NativeFrame)
     //*)
-    TurnOff();
+    //TurnOff();
 }
 
 T100VOID T100NativeFrame::TurnOn()
@@ -110,6 +110,16 @@ T100VOID T100NativeFrame::TurnOn()
 T100VOID T100NativeFrame::TurnOff()
 {
     T100SAFE_DELETE(m_render)
+}
+
+T100VOID T100NativeFrame::SetRender(T100WxRender* render)
+{
+    m_render    = render;
+}
+
+T100WxRender& T100NativeFrame::GetRender()
+{
+    return *m_render;
 }
 
 void T100NativeFrame::OnQuit(wxCommandEvent& event)
