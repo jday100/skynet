@@ -92,6 +92,9 @@ T100NativeFrame::T100NativeFrame(wxWindow* parent,wxWindowID id)
     Connect(wxEVT_PAINT,(wxObjectEventFunction)&T100NativeFrame::OnPaint);
     Connect(wxEVT_KEY_DOWN,(wxObjectEventFunction)&T100NativeFrame::OnKeyDown);
     Connect(wxEVT_CHAR,(wxObjectEventFunction)&T100NativeFrame::OnChar);
+    Connect(wxEVT_LEFT_DOWN,(wxObjectEventFunction)&T100NativeFrame::OnLeftDown);
+    Connect(wxEVT_LEFT_UP,(wxObjectEventFunction)&T100NativeFrame::OnLeftUp);
+    Connect(wxEVT_MOTION,(wxObjectEventFunction)&T100NativeFrame::OnMouseMove);
     //*)
 
     //TurnOn();
@@ -159,4 +162,16 @@ void T100NativeFrame::OnMenuItemSceneEditorSelected(wxCommandEvent& event)
     T100Editor*     editor      = T100NEW T100Editor();
 
     editor->GetView()->Show();
+}
+
+void T100NativeFrame::OnMouseMove(wxMouseEvent& event)
+{
+}
+
+void T100NativeFrame::OnLeftDown(wxMouseEvent& event)
+{
+}
+
+void T100NativeFrame::OnLeftUp(wxMouseEvent& event)
+{
 }

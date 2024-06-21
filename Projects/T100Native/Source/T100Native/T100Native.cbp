@@ -118,6 +118,7 @@
 		<Unit filename="include/editor/T100Editor.h" />
 		<Unit filename="include/editor/serve/T100EditorServe.h" />
 		<Unit filename="include/editor/store/T100EditorStore.h" />
+		<Unit filename="include/editor/view/T100EditorRender.h" />
 		<Unit filename="include/editor/view/T100EditorView.h" />
 		<Unit filename="include/editor/view/T100SceneEditorFrame.h" />
 		<Unit filename="include/fire/T100Fire.h" />
@@ -172,6 +173,7 @@
 		<Unit filename="src/editor/T100Editor.cpp" />
 		<Unit filename="src/editor/serve/T100EditorServe.cpp" />
 		<Unit filename="src/editor/store/T100EditorStore.cpp" />
+		<Unit filename="src/editor/view/T100EditorRender.cpp" />
 		<Unit filename="src/editor/view/T100EditorView.cpp" />
 		<Unit filename="src/editor/view/T100SceneEditorFrame.cpp" />
 		<Unit filename="src/fire/T100Fire.cpp" />

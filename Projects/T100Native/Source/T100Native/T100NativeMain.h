@@ -38,6 +38,9 @@ class T100NativeFrame: public wxFrame
         void OnKeyDown(wxKeyEvent& event);
         void OnChar(wxKeyEvent& event);
         void OnMenuItemSceneEditorSelected(wxCommandEvent& event);
+        void OnMouseMove(wxMouseEvent& event);
+        void OnLeftDown(wxMouseEvent& event);
+        void OnLeftUp(wxMouseEvent& event);
         //*)
 
         //(*Identifiers(T100NativeFrame)

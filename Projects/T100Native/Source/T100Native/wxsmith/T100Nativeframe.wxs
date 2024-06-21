@@ -4,6 +4,9 @@
 		<handler function="OnPaint" entry="EVT_PAINT" />
 		<handler function="OnKeyDown" entry="EVT_KEY_DOWN" />
 		<handler function="OnChar" entry="EVT_CHAR" />
+		<handler function="OnLeftDown" entry="EVT_LEFT_DOWN" />
+		<handler function="OnLeftUp" entry="EVT_LEFT_UP" />
+		<handler function="OnMouseMove" entry="EVT_MOTION" />
 		<object class="wxMenuBar" variable="MenuBar1" member="no">
 			<object class="wxMenu" variable="Menu1" member="no">
 				<label>&amp;File</label>
