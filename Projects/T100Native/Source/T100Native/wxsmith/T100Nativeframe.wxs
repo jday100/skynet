@@ -14,6 +14,13 @@
 					<handler function="OnQuit" entry="EVT_MENU" />
 				</object>
 			</object>
+			<object class="wxMenu" variable="Menu3" member="yes">
+				<label>Scene</label>
+				<object class="wxMenuItem" name="ID_MENUITEM_SCENE_EDITOR" variable="MenuItemSceneEditor" member="yes">
+					<label>Editor</label>
+					<handler function="OnMenuItemSceneEditorSelected" entry="EVT_MENU" />
+				</object>
+			</object>
 			<object class="wxMenu" variable="Menu2" member="no">
 				<label>Help</label>
 				<object class="wxMenuItem" name="idMenuAbout" variable="MenuItem2" member="no">

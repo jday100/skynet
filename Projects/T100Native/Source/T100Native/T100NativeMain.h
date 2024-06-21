@@ -37,15 +37,19 @@ class T100NativeFrame: public wxFrame
         void OnPaint(wxPaintEvent& event);
         void OnKeyDown(wxKeyEvent& event);
         void OnChar(wxKeyEvent& event);
+        void OnMenuItemSceneEditorSelected(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(T100NativeFrame)
         static const long idMenuQuit;
+        static const long ID_MENUITEM_SCENE_EDITOR;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
         //*)
 
         //(*Declarations(T100NativeFrame)
+        wxMenu* Menu3;
+        wxMenuItem* MenuItemSceneEditor;
         wxStatusBar* StatusBar1;
         //*)
 

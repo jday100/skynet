@@ -36,6 +36,10 @@
 					<Add directory="include/math" />
 					<Add directory="include/suite/game/scene" />
 					<Add directory="include/suite/game/store" />
+					<Add directory="include/editor" />
+					<Add directory="include/editor/store" />
+					<Add directory="include/editor/serve" />
+					<Add directory="include/editor/view" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -73,6 +77,10 @@
 					<Add directory="include/math" />
 					<Add directory="include/suite/game/scene" />
 					<Add directory="include/suite/game/store" />
+					<Add directory="include/editor" />
+					<Add directory="include/editor/store" />
+					<Add directory="include/editor/serve" />
+					<Add directory="include/editor/view" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -107,6 +115,11 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/common/T100DataTypes.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
+		<Unit filename="include/editor/T100Editor.h" />
+		<Unit filename="include/editor/serve/T100EditorServe.h" />
+		<Unit filename="include/editor/store/T100EditorStore.h" />
+		<Unit filename="include/editor/view/T100EditorView.h" />
+		<Unit filename="include/editor/view/T100SceneEditorFrame.h" />
 		<Unit filename="include/fire/T100Fire.h" />
 		<Unit filename="include/fire/serve/T100FireServe.h" />
 		<Unit filename="include/fire/store/T100FireStore.h" />
@@ -121,6 +134,7 @@
 		<Unit filename="include/math/matrix/T100Matrix3.h" />
 		<Unit filename="include/math/matrix/T100Matrix4.h" />
 		<Unit filename="include/math/vector/T100Vector.h" />
+		<Unit filename="include/math/vector/T100VectorH4.h" />
 		<Unit filename="include/math/vector/T100VectorV3.h" />
 		<Unit filename="include/math/vector/T100VectorV4.h" />
 		<Unit filename="include/suite/game/T100Audeo.h" />
@@ -155,6 +169,11 @@
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/editor/T100Editor.cpp" />
+		<Unit filename="src/editor/serve/T100EditorServe.cpp" />
+		<Unit filename="src/editor/store/T100EditorStore.cpp" />
+		<Unit filename="src/editor/view/T100EditorView.cpp" />
+		<Unit filename="src/editor/view/T100SceneEditorFrame.cpp" />
 		<Unit filename="src/fire/T100Fire.cpp" />
 		<Unit filename="src/fire/serve/T100FireServe.cpp" />
 		<Unit filename="src/fire/store/T100FireStore.cpp" />
@@ -169,6 +188,7 @@
 		<Unit filename="src/math/matrix/T100Matrix3.cpp" />
 		<Unit filename="src/math/matrix/T100Matrix4.cpp" />
 		<Unit filename="src/math/vector/T100Vector.cpp" />
+		<Unit filename="src/math/vector/T100VectorH4.cpp" />
 		<Unit filename="src/math/vector/T100VectorV3.cpp" />
 		<Unit filename="src/math/vector/T100VectorV4.cpp" />
 		<Unit filename="src/suite/game/T100Audeo.cpp" />
@@ -201,12 +221,14 @@
 		<Unit filename="src/wx/T100WxRender.cpp" />
 		<Unit filename="src/wx/T100WxView.cpp" />
 		<Unit filename="wxsmith/T100Nativeframe.wxs" />
+		<Unit filename="wxsmith/T100SceneEditorFrame.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="T100NativeApp.cpp" main="T100NativeFrame" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxFrame wxs="wxsmith/T100Nativeframe.wxs" src="T100NativeMain.cpp" hdr="T100NativeMain.h" fwddecl="0" i18n="1" name="T100NativeFrame" language="CPP" />
+					<wxFrame wxs="wxsmith/T100SceneEditorFrame.wxs" src="src\editor\view\T100SceneEditorFrame.cpp" hdr="include\editor\view\T100SceneEditorFrame.h" fwddecl="0" i18n="1" name="T100SceneEditorFrame" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

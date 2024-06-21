@@ -9,6 +9,8 @@
 
 #include "T100NativeMain.h"
 #include <wx/msgdlg.h>
+#include "T100Editor.h"
+#include "T100EditorView.h"
 
 //(*InternalHeaders(T100NativeFrame)
 #include <wx/intl.h>
@@ -43,6 +45,7 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 
 //(*IdInit(T100NativeFrame)
 const long T100NativeFrame::idMenuQuit = wxNewId();
+const long T100NativeFrame::ID_MENUITEM_SCENE_EDITOR = wxNewId();
 const long T100NativeFrame::idMenuAbout = wxNewId();
 const long T100NativeFrame::ID_STATUSBAR1 = wxNewId();
 //*)
@@ -67,6 +70,10 @@ T100NativeFrame::T100NativeFrame(wxWindow* parent,wxWindowID id)
     MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
     Menu1->Append(MenuItem1);
     MenuBar1->Append(Menu1, _("&File"));
+    Menu3 = new wxMenu();
+    MenuItemSceneEditor = new wxMenuItem(Menu3, ID_MENUITEM_SCENE_EDITOR, _("Editor"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemSceneEditor);
+    MenuBar1->Append(Menu3, _("Scene"));
     Menu2 = new wxMenu();
     MenuItem2 = new wxMenuItem(Menu2, idMenuAbout, _("About\tF1"), _("Show info about this application"), wxITEM_NORMAL);
     Menu2->Append(MenuItem2);
@@ -80,6 +87,7 @@ T100NativeFrame::T100NativeFrame(wxWindow* parent,wxWindowID id)
     SetStatusBar(StatusBar1);
 
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100NativeFrame::OnQuit);
+    Connect(ID_MENUITEM_SCENE_EDITOR,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100NativeFrame::OnMenuItemSceneEditorSelected);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100NativeFrame::OnAbout);
     Connect(wxEVT_PAINT,(wxObjectEventFunction)&T100NativeFrame::OnPaint);
     Connect(wxEVT_KEY_DOWN,(wxObjectEventFunction)&T100NativeFrame::OnKeyDown);
@@ -144,4 +152,11 @@ void T100NativeFrame::OnKeyDown(wxKeyEvent& event)
 
 void T100NativeFrame::OnChar(wxKeyEvent& event)
 {
+}
+
+void T100NativeFrame::OnMenuItemSceneEditorSelected(wxCommandEvent& event)
+{
+    T100Editor*     editor      = T100NEW T100Editor();
+
+    editor->GetView()->Show();
 }
