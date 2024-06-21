@@ -1,6 +1,7 @@
 #ifndef T100FILE_H
 #define T100FILE_H
 
+#include "T100Common.h"
 
 class T100File
 {

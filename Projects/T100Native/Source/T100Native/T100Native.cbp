@@ -34,6 +34,8 @@
 					<Add directory="include/suite/model" />
 					<Add directory="include/math/matrix" />
 					<Add directory="include/math" />
+					<Add directory="include/suite/game/scene" />
+					<Add directory="include/suite/game/store" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -69,6 +71,8 @@
 					<Add directory="include/suite/model" />
 					<Add directory="include/math/matrix" />
 					<Add directory="include/math" />
+					<Add directory="include/suite/game/scene" />
+					<Add directory="include/suite/game/store" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -115,13 +119,17 @@
 		<Unit filename="include/math/T100SpaceGeometry.h" />
 		<Unit filename="include/math/matrix/T100Matrix.h" />
 		<Unit filename="include/math/matrix/T100Matrix3.h" />
+		<Unit filename="include/math/matrix/T100Matrix4.h" />
 		<Unit filename="include/math/vector/T100Vector.h" />
 		<Unit filename="include/math/vector/T100VectorV3.h" />
+		<Unit filename="include/math/vector/T100VectorV4.h" />
 		<Unit filename="include/suite/game/T100Audeo.h" />
 		<Unit filename="include/suite/game/T100Game.h" />
 		<Unit filename="include/suite/game/T100Input.h" />
 		<Unit filename="include/suite/game/T100Output.h" />
 		<Unit filename="include/suite/game/T100Video.h" />
+		<Unit filename="include/suite/game/scene/T100Scene.h" />
+		<Unit filename="include/suite/game/store/T100SceneFile.h" />
 		<Unit filename="include/suite/model/T100Cuboid.h" />
 		<Unit filename="include/suite/model/T100Land.h" />
 		<Unit filename="include/suite/model/T100Sky.h" />
@@ -159,13 +167,17 @@
 		<Unit filename="src/math/T100SpaceGeometry.cpp" />
 		<Unit filename="src/math/matrix/T100Matrix.cpp" />
 		<Unit filename="src/math/matrix/T100Matrix3.cpp" />
+		<Unit filename="src/math/matrix/T100Matrix4.cpp" />
 		<Unit filename="src/math/vector/T100Vector.cpp" />
 		<Unit filename="src/math/vector/T100VectorV3.cpp" />
+		<Unit filename="src/math/vector/T100VectorV4.cpp" />
 		<Unit filename="src/suite/game/T100Audeo.cpp" />
 		<Unit filename="src/suite/game/T100Game.cpp" />
 		<Unit filename="src/suite/game/T100Input.cpp" />
 		<Unit filename="src/suite/game/T100Output.cpp" />
 		<Unit filename="src/suite/game/T100Video.cpp" />
+		<Unit filename="src/suite/game/scene/T100Scene.cpp" />
+		<Unit filename="src/suite/game/store/T100SceneFile.cpp" />
 		<Unit filename="src/suite/model/T100Cuboid.cpp" />
 		<Unit filename="src/suite/model/T100Land.cpp" />
 		<Unit filename="src/suite/model/T100Sky.cpp" />
