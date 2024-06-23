@@ -14,9 +14,11 @@ T100Editor::~T100Editor()
 
 T100VOID T100Editor::TurnOn()
 {
-    m_store     = T100NEW T100EditorStore();
-    m_serve     = T100NEW T100EditorServe();
-    m_view      = T100NEW T100EditorView();
+    m_store     = T100NEW T100EditorStore(this);
+    m_serve     = T100NEW T100EditorServe(this);
+    m_view      = T100NEW T100EditorView(this);
+
+    m_serve->SetRender(m_view->GetRender()->GetRender());
 }
 
 T100VOID T100Editor::TurnOff()

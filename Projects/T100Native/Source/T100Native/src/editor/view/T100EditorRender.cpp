@@ -1,5 +1,8 @@
 #include "T100EditorRender.h"
 
+#include "T100Editor.h"
+#include "T100EditorServe.h"
+
 BEGIN_EVENT_TABLE(T100EditorRender,T100WxRender)
     EVT_KEY_DOWN(T100EditorRender::OnKeyDown)
     EVT_CHAR(T100EditorRender::OnChar)
@@ -22,6 +25,11 @@ T100EditorRender::T100EditorRender(wxWindow *parent,
 T100EditorRender::~T100EditorRender()
 {
     //dtor
+}
+
+T100VOID T100EditorRender::SetEditor(T100Editor* editor)
+{
+    m_editor    = editor;
 }
 
 T100VOID T100EditorRender::OnKeyDown(wxKeyEvent& event)
@@ -68,6 +76,8 @@ T100VOID T100EditorRender::OnLeftDown(wxMouseEvent& event)
 
     m_begin_x   = x;
     m_begin_y   = y;
+
+    m_editor->GetServe()->Create(x, y);
 }
 
 T100VOID T100EditorRender::OnLeftUp(wxMouseEvent& event)
@@ -79,4 +89,8 @@ T100VOID T100EditorRender::OnLeftUp(wxMouseEvent& event)
 
     m_end_x     = x;
     m_end_y     = y;
+
+    m_editor->GetServe()->Finished(x, y);
+
+    Refresh();
 }

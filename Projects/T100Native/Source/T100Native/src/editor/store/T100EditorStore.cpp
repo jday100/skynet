@@ -1,6 +1,9 @@
 #include "T100EditorStore.h"
 
-T100EditorStore::T100EditorStore()
+#include "T100Editor.h"
+
+T100EditorStore::T100EditorStore(T100Editor* editor)
+    :m_editor(editor)
 {
     //ctor
 }

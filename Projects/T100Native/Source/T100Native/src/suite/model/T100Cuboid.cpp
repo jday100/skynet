@@ -98,3 +98,8 @@ T100VOID T100Cuboid::Destroy()
 {
 
 }
+
+T100VOID T100Cuboid::SetTerminus(T100FLOAT x, T100FLOAT y, T100FLOAT z)
+{
+
+}

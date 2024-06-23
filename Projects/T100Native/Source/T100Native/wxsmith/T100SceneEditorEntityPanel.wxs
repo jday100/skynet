@@ -10,6 +10,20 @@
 					<object class="notebookpage">
 						<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
 							<pos>28,40</pos>
+							<object class="wxBoxSizer" variable="BoxSizer2" member="no">
+								<object class="sizeritem">
+									<object class="wxListView" name="ID_LISTVIEW_ENTITY" variable="ListViewEntity" member="yes">
+										<style>wxLC_ICON</style>
+										<handler function="OnListViewEntityItemSelect" entry="EVT_LIST_ITEM_SELECTED" />
+										<handler function="OnListViewEntityItemDeselect" entry="EVT_LIST_ITEM_DESELECTED" />
+										<handler function="OnListViewEntityItemActivated" entry="EVT_LIST_ITEM_ACTIVATED" />
+										<handler function="OnListViewEntityItemFocused" entry="EVT_LIST_ITEM_FOCUSED" />
+									</object>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
 						</object>
 						<label>Entity</label>
 					</object>
@@ -22,6 +36,257 @@
 				<border>5</border>
 				<option>1</option>
 			</object>
+		</object>
+		<object class="wxImageList" variable="ImageList1" member="yes">
+			<image_list>
+				<item>64</item>
+				<item>64</item>
+				<item>static const char *xpm_data[] = {</item>
+				<item>&quot;64 64 52 1&quot;,</item>
+				<item>&quot;- c Black&quot;,</item>
+				<item>&quot;a c #CACACA&quot;,</item>
+				<item>&quot;. c #F7F7F7&quot;,</item>
+				<item>&quot;; c #4B4B4B&quot;,</item>
+				<item>&quot;6 c #B4B4B4&quot;,</item>
+				<item>&quot;_ c #FFFFFF&quot;,</item>
+				<item>&quot;l c #535353&quot;,</item>
+				<item>&quot;X c #DADADA&quot;,</item>
+				<item>&quot;e c #E9E9E9&quot;,</item>
+				<item>&quot;w c #979797&quot;,</item>
+				<item>&quot;g c #F1F1F1&quot;,</item>
+				<item>&quot;O c #9F9F9F&quot;,</item>
+				<item>&quot;o c #BDBDBD&quot;,</item>
+				<item>&quot;j c #EAEAEA&quot;,</item>
+				<item>&quot;= c #898989&quot;,</item>
+				<item>&quot;, c #D4D4D4&quot;,</item>
+				<item>&quot;1 c #F2F2F2&quot;,</item>
+				<item>&quot;d c #AFAFAF&quot;,</item>
+				<item>&quot;b c #DCDCDC&quot;,</item>
+				<item>&quot;h c #EBEBEB&quot;,</item>
+				<item>&quot;q c #303030&quot;,</item>
+				<item>&quot;@ c #5D5D5D&quot;,</item>
+				<item>&quot;5 c #6C6C6C&quot;,</item>
+				<item>&quot;t c #999999&quot;,</item>
+				<item>&quot;n c #E4E4E4&quot;,</item>
+				<item>&quot;# c #383838&quot;,</item>
+				<item>&quot;x c #929292&quot;,</item>
+				<item>&quot;2 c #FBFBFB&quot;,</item>
+				<item>&quot;8 c #9A9A9A&quot;,</item>
+				<item>&quot;z c #C7C7C7&quot;,</item>
+				<item>&quot;v c #D6D6D6&quot;,</item>
+				<item>&quot;c c #757575&quot;,</item>
+				<item>&quot;y c #DEDEDE&quot;,</item>
+				<item>&quot;k c #9B9B9B&quot;,</item>
+				<item>&quot;$ c #0D0D0D&quot;,</item>
+				<item>&quot;9 c #D7D7D7&quot;,</item>
+				<item>&quot;&lt; c #E6E6E6&quot;,</item>
+				<item>&quot;s c #F5F5F5&quot;,</item>
+				<item>&quot;: c #949494&quot;,</item>
+				<item>&quot;r c #A3A3A3&quot;,</item>
+				<item>&quot;&amp; c #EEEEEE&quot;,</item>
+				<item>&quot;4 c #333333&quot;,</item>
+				<item>&quot;u c #606060&quot;,</item>
+				<item>&quot;&gt; c #BABABA&quot;,</item>
+				<item>&quot;3 c #D8D8D8&quot;,</item>
+				<item>&quot;i c #777777&quot;,</item>
+				<item>&quot;* c #C2C2C2&quot;,</item>
+				<item>&quot;p c #D1D1D1&quot;,</item>
+				<item>&quot;7 c #E0E0E0&quot;,</item>
+				<item>&quot;+ c #7F7F7F&quot;,</item>
+				<item>&quot;0 c #8E8E8E&quot;,</item>
+				<item>&quot;f c #ACACAC&quot;,</item>
+				<item>&quot;________________________________________________________________&quot;,</item>
+				<item>&quot;________________________________________________________________&quot;,</item>
+				<item>&quot;________________________.XoO+@#$$#@+OoX.________________________&quot;,</item>
+				<item>&quot;_____________________&amp;*=-;:&gt;,&lt;1221&lt;,&gt;:;-=*&amp;_____________________&quot;,</item>
+				<item>&quot;___________________34-567______________765-83___________________&quot;,</item>
+				<item>&quot;_________________90-q9____________________9w-09_________________&quot;,</item>
+				<item>&quot;_______________er-ty________________________yt-re_______________&quot;,</item>
+				<item>&quot;______________Ouip____________________________piua______________&quot;,</item>
+				<item>&quot;____________sd-fg______________________________gf-dh____________&quot;,</item>
+				<item>&quot;___________jklz__________________________________zlkj___________&quot;,</item>
+				<item>&quot;__________&lt;xcv____________________________________vcx&lt;__________&quot;,</item>
+				<item>&quot;_________jx+b______________________________________b+xj_________&quot;,</item>
+				<item>&quot;________skcb________________________________________bcks________&quot;,</item>
+				<item>&quot;________dlv__________________________________________vld________&quot;,</item>
+				<item>&quot;_______a-z____________________________________________z-a_______&quot;,</item>
+				<item>&quot;______euf______________________________________________fue______&quot;,</item>
+				<item>&quot;______rig______________________________________________nir______&quot;,</item>
+				<item>&quot;_____9-p________________________________________________p-9_____&quot;,</item>
+				<item>&quot;_____0t__________________________________________________t0_____&quot;,</item>
+				<item>&quot;____3-y__________________________________________________y-3____&quot;,</item>
+				<item>&quot;____8w____________________________________________________w8____&quot;,</item>
+				<item>&quot;___&amp;-9____________________________________________________9-&amp;___&quot;,</item>
+				<item>&quot;___*5______________________________________________________5*___&quot;,</item>
+				<item>&quot;___=6______________________________________________________6=___&quot;,</item>
+				<item>&quot;__.-7______________________________________________________7-.__&quot;,</item>
+				<item>&quot;__X;________________________________________________________;X__&quot;,</item>
+				<item>&quot;__o:________________________________________________________:o__&quot;,</item>
+				<item>&quot;__O&gt;________________________________________________________&gt;O__&quot;,</item>
+				<item>&quot;__+,________________________________________________________,+__&quot;,</item>
+				<item>&quot;__@&lt;________________________________________________________&lt;@__&quot;,</item>
+				<item>&quot;__#1________________________________________________________1#__&quot;,</item>
+				<item>&quot;__$2________________________________________________________2$__&quot;,</item>
+				<item>&quot;__$2________________________________________________________2$__&quot;,</item>
+				<item>&quot;__#1________________________________________________________1#__&quot;,</item>
+				<item>&quot;__@&lt;________________________________________________________&lt;@__&quot;,</item>
+				<item>&quot;__+,________________________________________________________,+__&quot;,</item>
+				<item>&quot;__O&gt;________________________________________________________&gt;O__&quot;,</item>
+				<item>&quot;__o:________________________________________________________:o__&quot;,</item>
+				<item>&quot;__X;________________________________________________________;X__&quot;,</item>
+				<item>&quot;__.-7______________________________________________________7-.__&quot;,</item>
+				<item>&quot;___=6______________________________________________________6=___&quot;,</item>
+				<item>&quot;___*5______________________________________________________5*___&quot;,</item>
+				<item>&quot;___&amp;-9____________________________________________________9-&amp;___&quot;,</item>
+				<item>&quot;____8w____________________________________________________w8____&quot;,</item>
+				<item>&quot;____3-y__________________________________________________y-3____&quot;,</item>
+				<item>&quot;_____0t__________________________________________________t0_____&quot;,</item>
+				<item>&quot;_____9-p________________________________________________p-9_____&quot;,</item>
+				<item>&quot;______rig______________________________________________gir______&quot;,</item>
+				<item>&quot;______euf______________________________________________fue______&quot;,</item>
+				<item>&quot;_______a-z____________________________________________z-a_______&quot;,</item>
+				<item>&quot;________dlv__________________________________________vld________&quot;,</item>
+				<item>&quot;________skcb________________________________________bcks________&quot;,</item>
+				<item>&quot;_________jx+b______________________________________b+xj_________&quot;,</item>
+				<item>&quot;__________&lt;xcv____________________________________vcx&lt;__________&quot;,</item>
+				<item>&quot;___________jklz__________________________________zlkj___________&quot;,</item>
+				<item>&quot;____________sd-fg______________________________gf-ds____________&quot;,</item>
+				<item>&quot;______________auip____________________________piua______________&quot;,</item>
+				<item>&quot;_______________er-ty________________________yt-re_______________&quot;,</item>
+				<item>&quot;_________________90-w9____________________9w-09_________________&quot;,</item>
+				<item>&quot;___________________38-567______________765-83___________________&quot;,</item>
+				<item>&quot;_____________________&amp;*=-;:&gt;,&lt;1221&lt;,&gt;:;-=*&amp;_____________________&quot;,</item>
+				<item>&quot;________________________.XoO+@#$$#@+OoX.________________________&quot;,</item>
+				<item>&quot;________________________________________________________________&quot;,</item>
+				<item>&quot;________________________________________________________________&quot;</item>
+				<item>};</item>
+			</image_list>
+			<image_text>
+				<item2>64</item2>
+				<item2>64</item2>
+				<item2>static const char *xpm_data[] = {</item2>
+				<item2>&quot;64 64 52 1&quot;,</item2>
+				<item2>&quot;- c Black&quot;,</item2>
+				<item2>&quot;a c #CACACA&quot;,</item2>
+				<item2>&quot;. c #F7F7F7&quot;,</item2>
+				<item2>&quot;; c #4B4B4B&quot;,</item2>
+				<item2>&quot;6 c #B4B4B4&quot;,</item2>
+				<item2>&quot;_ c #FFFFFF&quot;,</item2>
+				<item2>&quot;l c #535353&quot;,</item2>
+				<item2>&quot;X c #DADADA&quot;,</item2>
+				<item2>&quot;e c #E9E9E9&quot;,</item2>
+				<item2>&quot;w c #979797&quot;,</item2>
+				<item2>&quot;g c #F1F1F1&quot;,</item2>
+				<item2>&quot;O c #9F9F9F&quot;,</item2>
+				<item2>&quot;o c #BDBDBD&quot;,</item2>
+				<item2>&quot;j c #EAEAEA&quot;,</item2>
+				<item2>&quot;= c #898989&quot;,</item2>
+				<item2>&quot;, c #D4D4D4&quot;,</item2>
+				<item2>&quot;1 c #F2F2F2&quot;,</item2>
+				<item2>&quot;d c #AFAFAF&quot;,</item2>
+				<item2>&quot;b c #DCDCDC&quot;,</item2>
+				<item2>&quot;h c #EBEBEB&quot;,</item2>
+				<item2>&quot;q c #303030&quot;,</item2>
+				<item2>&quot;@ c #5D5D5D&quot;,</item2>
+				<item2>&quot;5 c #6C6C6C&quot;,</item2>
+				<item2>&quot;t c #999999&quot;,</item2>
+				<item2>&quot;n c #E4E4E4&quot;,</item2>
+				<item2>&quot;# c #383838&quot;,</item2>
+				<item2>&quot;x c #929292&quot;,</item2>
+				<item2>&quot;2 c #FBFBFB&quot;,</item2>
+				<item2>&quot;8 c #9A9A9A&quot;,</item2>
+				<item2>&quot;z c #C7C7C7&quot;,</item2>
+				<item2>&quot;v c #D6D6D6&quot;,</item2>
+				<item2>&quot;c c #757575&quot;,</item2>
+				<item2>&quot;y c #DEDEDE&quot;,</item2>
+				<item2>&quot;k c #9B9B9B&quot;,</item2>
+				<item2>&quot;$ c #0D0D0D&quot;,</item2>
+				<item2>&quot;9 c #D7D7D7&quot;,</item2>
+				<item2>&quot;&lt; c #E6E6E6&quot;,</item2>
+				<item2>&quot;s c #F5F5F5&quot;,</item2>
+				<item2>&quot;: c #949494&quot;,</item2>
+				<item2>&quot;r c #A3A3A3&quot;,</item2>
+				<item2>&quot;&amp; c #EEEEEE&quot;,</item2>
+				<item2>&quot;4 c #333333&quot;,</item2>
+				<item2>&quot;u c #606060&quot;,</item2>
+				<item2>&quot;&gt; c #BABABA&quot;,</item2>
+				<item2>&quot;3 c #D8D8D8&quot;,</item2>
+				<item2>&quot;i c #777777&quot;,</item2>
+				<item2>&quot;* c #C2C2C2&quot;,</item2>
+				<item2>&quot;p c #D1D1D1&quot;,</item2>
+				<item2>&quot;7 c #E0E0E0&quot;,</item2>
+				<item2>&quot;+ c #7F7F7F&quot;,</item2>
+				<item2>&quot;0 c #8E8E8E&quot;,</item2>
+				<item2>&quot;f c #ACACAC&quot;,</item2>
+				<item2>&quot;________________________________________________________________&quot;,</item2>
+				<item2>&quot;________________________________________________________________&quot;,</item2>
+				<item2>&quot;________________________.XoO+@#$$#@+OoX.________________________&quot;,</item2>
+				<item2>&quot;_____________________&amp;*=-;:&gt;,&lt;1221&lt;,&gt;:;-=*&amp;_____________________&quot;,</item2>
+				<item2>&quot;___________________34-567______________765-83___________________&quot;,</item2>
+				<item2>&quot;_________________90-q9____________________9w-09_________________&quot;,</item2>
+				<item2>&quot;_______________er-ty________________________yt-re_______________&quot;,</item2>
+				<item2>&quot;______________Ouip____________________________piua______________&quot;,</item2>
+				<item2>&quot;____________sd-fg______________________________gf-dh____________&quot;,</item2>
+				<item2>&quot;___________jklz__________________________________zlkj___________&quot;,</item2>
+				<item2>&quot;__________&lt;xcv____________________________________vcx&lt;__________&quot;,</item2>
+				<item2>&quot;_________jx+b______________________________________b+xj_________&quot;,</item2>
+				<item2>&quot;________skcb________________________________________bcks________&quot;,</item2>
+				<item2>&quot;________dlv__________________________________________vld________&quot;,</item2>
+				<item2>&quot;_______a-z____________________________________________z-a_______&quot;,</item2>
+				<item2>&quot;______euf______________________________________________fue______&quot;,</item2>
+				<item2>&quot;______rig______________________________________________nir______&quot;,</item2>
+				<item2>&quot;_____9-p________________________________________________p-9_____&quot;,</item2>
+				<item2>&quot;_____0t__________________________________________________t0_____&quot;,</item2>
+				<item2>&quot;____3-y__________________________________________________y-3____&quot;,</item2>
+				<item2>&quot;____8w____________________________________________________w8____&quot;,</item2>
+				<item2>&quot;___&amp;-9____________________________________________________9-&amp;___&quot;,</item2>
+				<item2>&quot;___*5______________________________________________________5*___&quot;,</item2>
+				<item2>&quot;___=6______________________________________________________6=___&quot;,</item2>
+				<item2>&quot;__.-7______________________________________________________7-.__&quot;,</item2>
+				<item2>&quot;__X;________________________________________________________;X__&quot;,</item2>
+				<item2>&quot;__o:________________________________________________________:o__&quot;,</item2>
+				<item2>&quot;__O&gt;________________________________________________________&gt;O__&quot;,</item2>
+				<item2>&quot;__+,________________________________________________________,+__&quot;,</item2>
+				<item2>&quot;__@&lt;________________________________________________________&lt;@__&quot;,</item2>
+				<item2>&quot;__#1________________________________________________________1#__&quot;,</item2>
+				<item2>&quot;__$2________________________________________________________2$__&quot;,</item2>
+				<item2>&quot;__$2________________________________________________________2$__&quot;,</item2>
+				<item2>&quot;__#1________________________________________________________1#__&quot;,</item2>
+				<item2>&quot;__@&lt;________________________________________________________&lt;@__&quot;,</item2>
+				<item2>&quot;__+,________________________________________________________,+__&quot;,</item2>
+				<item2>&quot;__O&gt;________________________________________________________&gt;O__&quot;,</item2>
+				<item2>&quot;__o:________________________________________________________:o__&quot;,</item2>
+				<item2>&quot;__X;________________________________________________________;X__&quot;,</item2>
+				<item2>&quot;__.-7______________________________________________________7-.__&quot;,</item2>
+				<item2>&quot;___=6______________________________________________________6=___&quot;,</item2>
+				<item2>&quot;___*5______________________________________________________5*___&quot;,</item2>
+				<item2>&quot;___&amp;-9____________________________________________________9-&amp;___&quot;,</item2>
+				<item2>&quot;____8w____________________________________________________w8____&quot;,</item2>
+				<item2>&quot;____3-y__________________________________________________y-3____&quot;,</item2>
+				<item2>&quot;_____0t__________________________________________________t0_____&quot;,</item2>
+				<item2>&quot;_____9-p________________________________________________p-9_____&quot;,</item2>
+				<item2>&quot;______rig______________________________________________gir______&quot;,</item2>
+				<item2>&quot;______euf______________________________________________fue______&quot;,</item2>
+				<item2>&quot;_______a-z____________________________________________z-a_______&quot;,</item2>
+				<item2>&quot;________dlv__________________________________________vld________&quot;,</item2>
+				<item2>&quot;________skcb________________________________________bcks________&quot;,</item2>
+				<item2>&quot;_________jx+b______________________________________b+xj_________&quot;,</item2>
+				<item2>&quot;__________&lt;xcv____________________________________vcx&lt;__________&quot;,</item2>
+				<item2>&quot;___________jklz__________________________________zlkj___________&quot;,</item2>
+				<item2>&quot;____________sd-fg______________________________gf-ds____________&quot;,</item2>
+				<item2>&quot;______________auip____________________________piua______________&quot;,</item2>
+				<item2>&quot;_______________er-ty________________________yt-re_______________&quot;,</item2>
+				<item2>&quot;_________________90-w9____________________9w-09_________________&quot;,</item2>
+				<item2>&quot;___________________38-567______________765-83___________________&quot;,</item2>
+				<item2>&quot;_____________________&amp;*=-;:&gt;,&lt;1221&lt;,&gt;:;-=*&amp;_____________________&quot;,</item2>
+				<item2>&quot;________________________.XoO+@#$$#@+OoX.________________________&quot;,</item2>
+				<item2>&quot;________________________________________________________________&quot;,</item2>
+				<item2>&quot;________________________________________________________________&quot;</item2>
+				<item2>};</item2>
+			</image_text>
+			<image_width>64</image_width>
+			<image_height>64</image_height>
+			<image_count>1</image_count>
 		</object>
 	</object>
 </wxsmith>

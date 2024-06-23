@@ -28,6 +28,9 @@ class T100Render
 
         T100VOID                    SetOrigin(T100FLOAT, T100FLOAT, T100FLOAT);
 
+    public:
+        T100VOID                    project(T100INT, T100INT, T100FLOAT&, T100FLOAT&, T100FLOAT&);
+
     protected:
         T100RenderBase*             m_render            = T100NULL;
         T100ViewBase*               m_view              = T100NULL;

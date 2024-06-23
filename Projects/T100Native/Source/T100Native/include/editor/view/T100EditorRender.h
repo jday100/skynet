@@ -2,6 +2,7 @@
 #define T100EDITORRENDER_H
 
 #include "T100WxRender.h"
+class T100Editor;
 
 class T100EditorRender : public T100WxRender
 {
@@ -14,6 +15,8 @@ class T100EditorRender : public T100WxRender
                 const wxString& name = wxPanelNameStr);
         virtual ~T100EditorRender();
 
+        T100VOID            SetEditor(T100Editor*);
+
     protected:
         T100VOID            OnKeyDown(wxKeyEvent& event);
         T100VOID            OnChar(wxKeyEvent& event);
@@ -23,6 +26,8 @@ class T100EditorRender : public T100WxRender
         T100VOID            OnLeftUp(wxMouseEvent& event);
 
     private:
+        T100Editor*         m_editor            = T100NULL;
+
         T100INT             m_begin_x, m_begin_y;
         T100INT             m_end_x, m_end_y;
 

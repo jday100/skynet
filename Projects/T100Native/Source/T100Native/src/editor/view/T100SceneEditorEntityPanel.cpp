@@ -5,7 +5,11 @@
 #include <wx/string.h>
 //*)
 
+#include "T100Editor.h"
+#include "T100EditorServe.h"
+
 //(*IdInit(T100SceneEditorEntityPanel)
+const long T100SceneEditorEntityPanel::ID_LISTVIEW_ENTITY = wxNewId();
 const long T100SceneEditorEntityPanel::ID_PANEL1 = wxNewId();
 const long T100SceneEditorEntityPanel::ID_PANEL2 = wxNewId();
 const long T100SceneEditorEntityPanel::ID_NOTEBOOK1 = wxNewId();
@@ -25,24 +29,195 @@ void T100SceneEditorEntityPanel::BuildContent(wxWindow* parent,wxWindowID id,con
 {
 	//(*Initialize(T100SceneEditorEntityPanel)
 	wxBoxSizer* BoxSizer1;
+	wxBoxSizer* BoxSizer2;
 
 	Create(parent, id, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("id"));
 	BoxSizer1 = new wxBoxSizer(wxHORIZONTAL);
 	Notebook1 = new wxNotebook(this, ID_NOTEBOOK1, wxDefaultPosition, wxSize(204,123), 0, _T("ID_NOTEBOOK1"));
 	Panel1 = new wxPanel(Notebook1, ID_PANEL1, wxPoint(28,40), wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL1"));
+	BoxSizer2 = new wxBoxSizer(wxHORIZONTAL);
+	ListViewEntity = new wxListView(Panel1, ID_LISTVIEW_ENTITY, wxDefaultPosition, wxDefaultSize, wxLC_ICON, wxDefaultValidator, _T("ID_LISTVIEW_ENTITY"));
+	BoxSizer2->Add(ListViewEntity, 1, wxALL|wxEXPAND, 5);
+	Panel1->SetSizer(BoxSizer2);
+	BoxSizer2->Fit(Panel1);
+	BoxSizer2->SetSizeHints(Panel1);
 	Panel2 = new wxPanel(Notebook1, ID_PANEL2, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL, _T("ID_PANEL2"));
 	Notebook1->AddPage(Panel1, _("Entity"), false);
 	Notebook1->AddPage(Panel2, _("Page name"), false);
 	BoxSizer1->Add(Notebook1, 1, wxALL|wxEXPAND, 5);
 	SetSizer(BoxSizer1);
+	static const char *ImageList1_0_XPM[] = {
+	"64 64 52 1",
+	"- c Black",
+	"a c #CACACA",
+	". c #F7F7F7",
+	"; c #4B4B4B",
+	"6 c #B4B4B4",
+	"_ c #FFFFFF",
+	"l c #535353",
+	"X c #DADADA",
+	"e c #E9E9E9",
+	"w c #979797",
+	"g c #F1F1F1",
+	"O c #9F9F9F",
+	"o c #BDBDBD",
+	"j c #EAEAEA",
+	"= c #898989",
+	", c #D4D4D4",
+	"1 c #F2F2F2",
+	"d c #AFAFAF",
+	"b c #DCDCDC",
+	"h c #EBEBEB",
+	"q c #303030",
+	"@ c #5D5D5D",
+	"5 c #6C6C6C",
+	"t c #999999",
+	"n c #E4E4E4",
+	"# c #383838",
+	"x c #929292",
+	"2 c #FBFBFB",
+	"8 c #9A9A9A",
+	"z c #C7C7C7",
+	"v c #D6D6D6",
+	"c c #757575",
+	"y c #DEDEDE",
+	"k c #9B9B9B",
+	"$ c #0D0D0D",
+	"9 c #D7D7D7",
+	"< c #E6E6E6",
+	"s c #F5F5F5",
+	": c #949494",
+	"r c #A3A3A3",
+	"& c #EEEEEE",
+	"4 c #333333",
+	"u c #606060",
+	"> c #BABABA",
+	"3 c #D8D8D8",
+	"i c #777777",
+	"* c #C2C2C2",
+	"p c #D1D1D1",
+	"7 c #E0E0E0",
+	"+ c #7F7F7F",
+	"0 c #8E8E8E",
+	"f c #ACACAC",
+	"________________________________________________________________",
+	"________________________________________________________________",
+	"________________________.XoO+@#$$#@+OoX.________________________",
+	"_____________________&*=-;:>,<1221<,>:;-=*&_____________________",
+	"___________________34-567______________765-83___________________",
+	"_________________90-q9____________________9w-09_________________",
+	"_______________er-ty________________________yt-re_______________",
+	"______________Ouip____________________________piua______________",
+	"____________sd-fg______________________________gf-dh____________",
+	"___________jklz__________________________________zlkj___________",
+	"__________<xcv____________________________________vcx<__________",
+	"_________jx+b______________________________________b+xj_________",
+	"________skcb________________________________________bcks________",
+	"________dlv__________________________________________vld________",
+	"_______a-z____________________________________________z-a_______",
+	"______euf______________________________________________fue______",
+	"______rig______________________________________________nir______",
+	"_____9-p________________________________________________p-9_____",
+	"_____0t__________________________________________________t0_____",
+	"____3-y__________________________________________________y-3____",
+	"____8w____________________________________________________w8____",
+	"___&-9____________________________________________________9-&___",
+	"___*5______________________________________________________5*___",
+	"___=6______________________________________________________6=___",
+	"__.-7______________________________________________________7-.__",
+	"__X;________________________________________________________;X__",
+	"__o:________________________________________________________:o__",
+	"__O>________________________________________________________>O__",
+	"__+,________________________________________________________,+__",
+	"__@<________________________________________________________<@__",
+	"__#1________________________________________________________1#__",
+	"__$2________________________________________________________2$__",
+	"__$2________________________________________________________2$__",
+	"__#1________________________________________________________1#__",
+	"__@<________________________________________________________<@__",
+	"__+,________________________________________________________,+__",
+	"__O>________________________________________________________>O__",
+	"__o:________________________________________________________:o__",
+	"__X;________________________________________________________;X__",
+	"__.-7______________________________________________________7-.__",
+	"___=6______________________________________________________6=___",
+	"___*5______________________________________________________5*___",
+	"___&-9____________________________________________________9-&___",
+	"____8w____________________________________________________w8____",
+	"____3-y__________________________________________________y-3____",
+	"_____0t__________________________________________________t0_____",
+	"_____9-p________________________________________________p-9_____",
+	"______rig______________________________________________gir______",
+	"______euf______________________________________________fue______",
+	"_______a-z____________________________________________z-a_______",
+	"________dlv__________________________________________vld________",
+	"________skcb________________________________________bcks________",
+	"_________jx+b______________________________________b+xj_________",
+	"__________<xcv____________________________________vcx<__________",
+	"___________jklz__________________________________zlkj___________",
+	"____________sd-fg______________________________gf-ds____________",
+	"______________auip____________________________piua______________",
+	"_______________er-ty________________________yt-re_______________",
+	"_________________90-w9____________________9w-09_________________",
+	"___________________38-567______________765-83___________________",
+	"_____________________&*=-;:>,<1221<,>:;-=*&_____________________",
+	"________________________.XoO+@#$$#@+OoX.________________________",
+	"________________________________________________________________",
+	"________________________________________________________________"
+	};
+	ImageList1 = new wxImageList(64, 64, 2);
+	ImageList1->Add(wxBitmap(ImageList1_0_XPM));
 	BoxSizer1->Fit(this);
 	BoxSizer1->SetSizeHints(this);
+
+	Connect(ID_LISTVIEW_ENTITY,wxEVT_COMMAND_LIST_ITEM_SELECTED,(wxObjectEventFunction)&T100SceneEditorEntityPanel::OnListViewEntityItemSelect);
+	Connect(ID_LISTVIEW_ENTITY,wxEVT_COMMAND_LIST_ITEM_DESELECTED,(wxObjectEventFunction)&T100SceneEditorEntityPanel::OnListViewEntityItemDeselect);
+	Connect(ID_LISTVIEW_ENTITY,wxEVT_COMMAND_LIST_ITEM_ACTIVATED,(wxObjectEventFunction)&T100SceneEditorEntityPanel::OnListViewEntityItemActivated);
+	Connect(ID_LISTVIEW_ENTITY,wxEVT_COMMAND_LIST_ITEM_FOCUSED,(wxObjectEventFunction)&T100SceneEditorEntityPanel::OnListViewEntityItemFocused);
 	//*)
+
+	TurnOn();
 }
 
 T100SceneEditorEntityPanel::~T100SceneEditorEntityPanel()
 {
 	//(*Destroy(T100SceneEditorEntityPanel)
 	//*)
+
+	TurnOff();
 }
 
+T100VOID T100SceneEditorEntityPanel::TurnOn()
+{
+    ListViewEntity->SetImageList(ImageList1, wxIMAGE_LIST_NORMAL);
+
+    ListViewEntity->InsertItem(0, _T("Sphere"), 0);
+}
+
+T100VOID T100SceneEditorEntityPanel::TurnOff()
+{
+
+}
+
+T100VOID T100SceneEditorEntityPanel::SetEditor(T100Editor* editor)
+{
+    m_editor    = editor;
+}
+
+
+void T100SceneEditorEntityPanel::OnListViewEntityItemSelect(wxListEvent& event)
+{
+    m_editor->GetServe()->SetEntityID(4);
+}
+
+void T100SceneEditorEntityPanel::OnListViewEntityItemDeselect(wxListEvent& event)
+{
+}
+
+void T100SceneEditorEntityPanel::OnListViewEntityItemActivated(wxListEvent& event)
+{
+}
+
+void T100SceneEditorEntityPanel::OnListViewEntityItemFocused(wxListEvent& event)
+{
+}

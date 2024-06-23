@@ -20,3 +20,8 @@ T100VOID T100Sphere::Destroy()
 {
 
 }
+
+T100VOID T100Sphere::SetTerminus(T100FLOAT x, T100FLOAT y, T100FLOAT z)
+{
+
+}

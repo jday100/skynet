@@ -12,6 +12,8 @@ class T100Cuboid : public T100Entity
         T100VOID            Create(T100FLOAT, T100FLOAT, T100FLOAT);
         T100VOID            Destroy();
 
+        T100VOID            SetTerminus(T100FLOAT, T100FLOAT, T100FLOAT);
+
     protected:
 
     private:

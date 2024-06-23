@@ -39,6 +39,11 @@ T100VOID T100Render::SetOrigin(T100FLOAT x, T100FLOAT y, T100FLOAT z)
     m_render->SetOrigin(x, y, z);
 }
 
+T100VOID T100Render::project(T100INT x, T100INT y, T100FLOAT& a, T100FLOAT& b, T100FLOAT& c)
+{
+
+}
+
 T100VOID T100Render::Draw(T100VOID* data)
 {
     m_render->Draw();

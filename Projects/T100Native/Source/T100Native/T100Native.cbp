@@ -40,6 +40,7 @@
 					<Add directory="include/editor/store" />
 					<Add directory="include/editor/serve" />
 					<Add directory="include/editor/view" />
+					<Add directory="include/suite" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -81,6 +82,7 @@
 					<Add directory="include/editor/store" />
 					<Add directory="include/editor/serve" />
 					<Add directory="include/editor/view" />
+					<Add directory="include/suite" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -139,6 +141,7 @@
 		<Unit filename="include/math/vector/T100VectorH4.h" />
 		<Unit filename="include/math/vector/T100VectorV3.h" />
 		<Unit filename="include/math/vector/T100VectorV4.h" />
+		<Unit filename="include/suite/T100ModelTypes.h" />
 		<Unit filename="include/suite/game/T100Audeo.h" />
 		<Unit filename="include/suite/game/T100Game.h" />
 		<Unit filename="include/suite/game/T100Input.h" />

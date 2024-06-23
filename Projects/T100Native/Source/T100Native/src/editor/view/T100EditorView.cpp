@@ -1,6 +1,9 @@
 #include "T100EditorView.h"
 
-T100EditorView::T100EditorView()
+#include "T100Editor.h"
+
+T100EditorView::T100EditorView(T100Editor* editor)
+    :m_editor(editor)
 {
     //ctor
     TurnOn();
@@ -17,6 +20,9 @@ T100VOID T100EditorView::TurnOn()
     m_frame             = T100NEW T100SceneEditorFrame(0);
     m_render            = T100NEW T100EditorRender(m_frame, wxID_ANY);
     m_entity_panel      = T100NEW T100SceneEditorEntityPanel(m_frame);
+
+    m_render->SetEditor(m_editor);
+    m_entity_panel->SetEditor(m_editor);
 
     //m_render->GetRender()->SetOrigin(100, 100, 100);
     m_frame->SetRender(m_render);
@@ -38,6 +44,11 @@ T100VOID T100EditorView::Show()
     if(m_frame){
         m_frame->Show();
     }
+}
+
+T100Editor* T100EditorView::GetEditor()
+{
+    return m_editor;
 }
 
 T100SceneEditorFrame* T100EditorView::GetFrame()
