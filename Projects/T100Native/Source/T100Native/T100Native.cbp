@@ -120,6 +120,7 @@
 		<Unit filename="include/editor/store/T100EditorStore.h" />
 		<Unit filename="include/editor/view/T100EditorRender.h" />
 		<Unit filename="include/editor/view/T100EditorView.h" />
+		<Unit filename="include/editor/view/T100SceneEditorEntityPanel.h" />
 		<Unit filename="include/editor/view/T100SceneEditorFrame.h" />
 		<Unit filename="include/fire/T100Fire.h" />
 		<Unit filename="include/fire/serve/T100FireServe.h" />
@@ -175,6 +176,7 @@
 		<Unit filename="src/editor/store/T100EditorStore.cpp" />
 		<Unit filename="src/editor/view/T100EditorRender.cpp" />
 		<Unit filename="src/editor/view/T100EditorView.cpp" />
+		<Unit filename="src/editor/view/T100SceneEditorEntityPanel.cpp" />
 		<Unit filename="src/editor/view/T100SceneEditorFrame.cpp" />
 		<Unit filename="src/fire/T100Fire.cpp" />
 		<Unit filename="src/fire/serve/T100FireServe.cpp" />
@@ -223,6 +225,7 @@
 		<Unit filename="src/wx/T100WxRender.cpp" />
 		<Unit filename="src/wx/T100WxView.cpp" />
 		<Unit filename="wxsmith/T100Nativeframe.wxs" />
+		<Unit filename="wxsmith/T100SceneEditorEntityPanel.wxs" />
 		<Unit filename="wxsmith/T100SceneEditorFrame.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
@@ -231,6 +234,7 @@
 				<resources>
 					<wxFrame wxs="wxsmith/T100Nativeframe.wxs" src="T100NativeMain.cpp" hdr="T100NativeMain.h" fwddecl="0" i18n="1" name="T100NativeFrame" language="CPP" />
 					<wxFrame wxs="wxsmith/T100SceneEditorFrame.wxs" src="src\editor\view\T100SceneEditorFrame.cpp" hdr="include\editor\view\T100SceneEditorFrame.h" fwddecl="0" i18n="1" name="T100SceneEditorFrame" language="CPP" />
+					<wxPanel wxs="wxsmith/T100SceneEditorEntityPanel.wxs" src="src\editor\view\T100SceneEditorEntityPanel.cpp" hdr="include\editor\view\T100SceneEditorEntityPanel.h" fwddecl="0" i18n="1" name="T100SceneEditorEntityPanel" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

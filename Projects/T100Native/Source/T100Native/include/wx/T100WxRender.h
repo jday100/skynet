@@ -5,6 +5,7 @@
 #include <wx/window.h>
 #include "T100Common.h"
 #include "T100Render.h"
+#include "T100WxView.h"
 
 class T100WxRender : public wxWindow
 {
@@ -30,6 +31,7 @@ class T100WxRender : public wxWindow
     protected:
         wxBitmap*           m_bitmap            = T100NULL;
         T100Render*         m_render            = T100NULL;
+        T100WxView*         m_view              = T100NULL;
 
     private:
         T100VOID            TurnOn();

@@ -11,6 +11,16 @@ T100SoftSpace::~T100SoftSpace()
     //dtor
 }
 
+T100VOID T100SoftSpace::SetSpaceMatrix(T100Matrix4& matrix)
+{
+    m_space = matrix;
+}
+
+T100Matrix4& T100SoftSpace::GetSpaceMatrix()
+{
+    return m_space;
+}
+
 T100Point T100SoftSpace::Translate(T100Point& source, T100FLOAT x, T100FLOAT y, T100FLOAT z)
 {
 

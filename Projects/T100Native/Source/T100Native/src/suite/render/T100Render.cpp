@@ -24,9 +24,25 @@ T100VOID T100Render::TurnOff()
     T100SAFE_DELETE(m_render)
 }
 
-T100VOID T100Render::Draw()
+T100VOID T100Render::SetView(T100ViewBase* view)
+{
+    m_view  = view;
+}
+
+T100ViewBase* T100Render::GetView()
+{
+    return m_view;
+}
+
+T100VOID T100Render::SetOrigin(T100FLOAT x, T100FLOAT y, T100FLOAT z)
+{
+    m_render->SetOrigin(x, y, z);
+}
+
+T100VOID T100Render::Draw(T100VOID* data)
 {
     m_render->Draw();
+    m_view->Draw(data);
 }
 
 T100VOID T100Render::SetSize(T100INT width, T100INT height)

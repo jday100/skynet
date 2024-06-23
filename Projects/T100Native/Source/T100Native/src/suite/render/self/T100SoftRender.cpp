@@ -101,7 +101,7 @@ T100VOID T100SoftRender::DrawPoint(T100Point& point, T100INT colour)
 
     value   = (y * m_view_width + x) * 4;
 
-    if(value >= m_length)return;
+    if(value < 0 || value >= m_length)return;
 
     m_screen[value++] = 0;
     m_screen[value++] = 255;

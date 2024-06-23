@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxPanel" name="T100SceneEditorEntityPanel">
+		<pos_arg>1</pos_arg>
+		<size_arg>1</size_arg>
+		<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+			<object class="sizeritem">
+				<object class="wxNotebook" name="ID_NOTEBOOK1" variable="Notebook1" member="yes">
+					<size>204,123</size>
+					<object class="notebookpage">
+						<object class="wxPanel" name="ID_PANEL1" variable="Panel1" member="yes">
+							<pos>28,40</pos>
+						</object>
+						<label>Entity</label>
+					</object>
+					<object class="notebookpage">
+						<object class="wxPanel" name="ID_PANEL2" variable="Panel2" member="yes" />
+						<label>Page name</label>
+					</object>
+				</object>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</wxsmith>

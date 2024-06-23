@@ -23,6 +23,9 @@ class T100EditorRender : public T100WxRender
         T100VOID            OnLeftUp(wxMouseEvent& event);
 
     private:
+        T100INT             m_begin_x, m_begin_y;
+        T100INT             m_end_x, m_end_y;
+
         DECLARE_EVENT_TABLE()
 };
 

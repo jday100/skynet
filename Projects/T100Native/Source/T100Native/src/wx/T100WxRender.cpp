@@ -33,10 +33,12 @@ T100VOID T100WxRender::TurnOn()
 
     m_bitmap    = T100NEW wxBitmap();
     m_render    = T100NEW T100Render();
+    m_view      = T100NEW T100WxView();
 
     m_bitmap->SetWidth(100);
     m_bitmap->SetHeight(100);
 
+    m_render->SetView(m_view);
 }
 
 T100VOID T100WxRender::TurnOff()
@@ -55,7 +57,7 @@ T100VOID T100WxRender::OnPaint(wxPaintEvent& event)
 
     dc.DrawCircle(100, 100, 10);
 
-    m_render->Draw();
+    m_render->Draw(&dc);
 
     m_bitmap    = T100NEW wxBitmap((const char*)m_render->GetData(), m_render->GetWidth(), m_render->GetHeight(), 32);
 

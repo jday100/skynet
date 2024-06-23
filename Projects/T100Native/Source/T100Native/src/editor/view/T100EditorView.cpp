@@ -14,11 +14,17 @@ T100EditorView::~T100EditorView()
 
 T100VOID T100EditorView::TurnOn()
 {
-    m_frame     = T100NEW T100SceneEditorFrame(0);
-    m_render    = T100NEW T100EditorRender(m_frame, wxID_ANY);
+    m_frame             = T100NEW T100SceneEditorFrame(0);
+    m_render            = T100NEW T100EditorRender(m_frame, wxID_ANY);
+    m_entity_panel      = T100NEW T100SceneEditorEntityPanel(m_frame);
 
+    //m_render->GetRender()->SetOrigin(100, 100, 100);
     m_frame->SetRender(m_render);
     m_frame->SetClientSize(800, 600);
+
+    m_frame->AuiManager1->AddPane(m_entity_panel, wxAuiPaneInfo().Left());
+    m_frame->AuiManager1->AddPane(m_render, wxAuiPaneInfo().CenterPane());
+    m_frame->AuiManager1->Update();
 
 }
 

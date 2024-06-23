@@ -53,7 +53,10 @@ T100VOID T100EditorRender::OnChar(wxKeyEvent& event)
 
 T100VOID T100EditorRender::OnMouseMove(wxMouseEvent& event)
 {
+    T100INT         x, y;
 
+    x   = event.GetPosition().x;
+    y   = event.GetPosition().y;
 }
 
 T100VOID T100EditorRender::OnLeftDown(wxMouseEvent& event)
@@ -62,9 +65,18 @@ T100VOID T100EditorRender::OnLeftDown(wxMouseEvent& event)
 
     x   = event.GetPosition().x;
     y   = event.GetPosition().y;
+
+    m_begin_x   = x;
+    m_begin_y   = y;
 }
 
 T100VOID T100EditorRender::OnLeftUp(wxMouseEvent& event)
 {
+    T100INT         x, y;
 
+    x   = event.GetPosition().x;
+    y   = event.GetPosition().y;
+
+    m_end_x     = x;
+    m_end_y     = y;
 }
