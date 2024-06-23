@@ -2,6 +2,7 @@
 
 #include "T100Editor.h"
 #include "T100Entity.h"
+#include "T100Cuboid.h"
 #include "T100Sphere.h"
 #include "T100ModelTypes.h"
 
@@ -31,6 +32,11 @@ T100VOID T100EditorServe::Create(T100INT x, T100INT y)
     T100Entity*     entity          = T100NULL;
 
     switch(m_entity_id){
+    case T100MODEL_CUBOID:
+        {
+            entity      = T100NEW T100Cuboid();
+        }
+        break;
     case T100MODEL_SPHERE:
         {
             entity      = T100NEW T100Sphere();
