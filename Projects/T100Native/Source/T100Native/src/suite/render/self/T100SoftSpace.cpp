@@ -1,5 +1,7 @@
 #include "T100SoftSpace.h"
 
+#include <math.h>
+
 T100SoftSpace::T100SoftSpace()
     :T100SpaceBase()
 {
@@ -24,6 +26,12 @@ T100VOID T100SoftSpace::TurnOn()
     m_translate.DATA.DATA4[1][1]    = 1;
     m_translate.DATA.DATA4[2][2]    = 1;
     m_translate.DATA.DATA4[3][3]    = 1;
+
+    m_revolve_z.DATA.DATA4[0][0]    = 1;
+    m_revolve_z.DATA.DATA4[1][1]    = 1;
+    m_revolve_z.DATA.DATA4[2][2]    = 1;
+    m_revolve_z.DATA.DATA4[3][3]    = 1;
+
 }
 
 T100VOID T100SoftSpace::TurnOff()
@@ -73,4 +81,34 @@ T100VOID T100SoftSpace::Translate(T100FLOAT x, T100FLOAT y, T100FLOAT z)
     m_translate.DATA.DATA4[3][2]  += z;
 
     m_space = m_space * m_translate;
+}
+
+T100VOID T100SoftSpace::Revolve(T100FLOAT x, T100FLOAT y, T100FLOAT z)
+{
+    RevolveZ(z);
+}
+
+T100VOID T100SoftSpace::RevolveX(T100FLOAT x)
+{
+
+}
+
+T100VOID T100SoftSpace::RevolveY(T100FLOAT y)
+{
+
+}
+
+T100VOID T100SoftSpace::RevolveZ(T100FLOAT z)
+{
+    T100Matrix4     matrix;
+
+    matrix.DATA.DATA4[0][0] = cos(z);
+    matrix.DATA.DATA4[0][1] = -sin(z);
+    matrix.DATA.DATA4[1][0] = sin(z);
+    matrix.DATA.DATA4[1][1] = cos(z);
+    matrix.DATA.DATA4[2][2] = 1;
+    matrix.DATA.DATA4[3][3] = 1;
+
+    m_revolve_x = m_revolve_x * matrix;
+    m_space     = m_space * matrix;
 }

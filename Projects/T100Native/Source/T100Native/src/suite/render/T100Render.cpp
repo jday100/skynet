@@ -79,3 +79,8 @@ T100VOID T100Render::Move(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 {
     m_render->Move(x, y, z);
 }
+
+T100VOID T100Render::Rotate(T100FLOAT x, T100FLOAT y, T100FLOAT z)
+{
+    m_render->Rotate(x, y, z);
+}

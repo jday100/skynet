@@ -21,6 +21,7 @@ class T100Render
         T100ENTITY_VECTOR&          GetEntities();
 
         T100VOID                    Move(T100FLOAT, T100FLOAT, T100FLOAT);
+        T100VOID                    Rotate(T100FLOAT, T100FLOAT, T100FLOAT);
 
     public:
         T100VOID                    SetView(T100ViewBase*);

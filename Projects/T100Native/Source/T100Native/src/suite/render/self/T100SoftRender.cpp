@@ -143,7 +143,11 @@ T100VOID T100SoftRender::Move(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 
 T100VOID T100SoftRender::Rotate(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 {
+    //m_space.RevolveX(x);
+    //m_space.RevolveY(y);
+    //m_space.RevolveZ(z);
 
+    m_space.Revolve(x, y, z);
 }
 
 

@@ -23,6 +23,10 @@ class T100SoftSpace : public T100SpaceBase
         T100Point           Space(T100Point&);
 
         T100VOID            Translate(T100FLOAT, T100FLOAT, T100FLOAT);
+        T100VOID            RevolveX(T100FLOAT);
+        T100VOID            RevolveY(T100FLOAT);
+        T100VOID            RevolveZ(T100FLOAT);
+        T100VOID            Revolve(T100FLOAT, T100FLOAT, T100FLOAT);
 
     protected:
         T100Matrix4         m_space;
