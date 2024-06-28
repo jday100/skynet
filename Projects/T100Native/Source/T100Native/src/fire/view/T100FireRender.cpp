@@ -36,7 +36,7 @@ T100VOID T100FireRender::OnKeyDown(wxKeyEvent& event)
     case WXK_DOWN:
         {
             //m_render->Move(10, 10, 10);
-            m_render->Rotate(1, 0, 0.5);
+            m_render->Rotate(0, 0.5, 0.5);
         }
         break;
     }

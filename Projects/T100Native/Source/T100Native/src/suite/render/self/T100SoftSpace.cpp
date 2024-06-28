@@ -85,17 +85,38 @@ T100VOID T100SoftSpace::Translate(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 
 T100VOID T100SoftSpace::Revolve(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 {
+    RevolveX(x);
+    RevolveY(y);
     RevolveZ(z);
 }
 
 T100VOID T100SoftSpace::RevolveX(T100FLOAT x)
 {
+    T100Matrix4     matrix;
 
+    matrix.DATA.DATA4[0][0] = 1;
+    matrix.DATA.DATA4[1][1] = cos(x);
+    matrix.DATA.DATA4[1][2] = -sin(x);
+    matrix.DATA.DATA4[2][1] = sin(x);
+    matrix.DATA.DATA4[2][2] = cos(x);
+    matrix.DATA.DATA4[3][3] = 1;
+
+    m_revolve_x = m_revolve_x * matrix;
+    m_space     = m_space * matrix;
 }
 
 T100VOID T100SoftSpace::RevolveY(T100FLOAT y)
 {
+    T100Matrix4     matrix;
 
+    matrix.DATA.DATA4[0][0] = cos(y);
+    matrix.DATA.DATA4[0][2] = sin(y);
+    matrix.DATA.DATA4[1][1] = 1;
+    matrix.DATA.DATA4[2][0] = -sin(y);
+    matrix.DATA.DATA4[2][2] = cos(y);
+
+    m_revolve_y = m_revolve_y * matrix;
+    m_space     = m_space * matrix;
 }
 
 T100VOID T100SoftSpace::RevolveZ(T100FLOAT z)
@@ -109,6 +130,6 @@ T100VOID T100SoftSpace::RevolveZ(T100FLOAT z)
     matrix.DATA.DATA4[2][2] = 1;
     matrix.DATA.DATA4[3][3] = 1;
 
-    m_revolve_x = m_revolve_x * matrix;
+    m_revolve_z = m_revolve_z * matrix;
     m_space     = m_space * matrix;
 }
