@@ -1,7 +1,7 @@
 #ifndef T100SOFTRENDER_H
 #define T100SOFTRENDER_H
 
-#include "T100Matrix3.h"
+#include "T100Matrix4.h"
 #include "T100Entity.h"
 #include "T100RenderBase.h"
 #include "T100SoftSpace.h"
@@ -19,7 +19,7 @@ class T100SoftRender : public T100RenderBase
         T100VOID                    Draw();
         T100VOID                    DrawPoint(T100Point&, T100INT);
 
-        T100VOID                    Rotate(T100Point&, T100Matrix3&, T100Point&);
+        T100VOID                    Rotate(T100Point&, T100Matrix4&, T100Point&);
 
         T100VOID                    SetSize(T100INT, T100INT);
 

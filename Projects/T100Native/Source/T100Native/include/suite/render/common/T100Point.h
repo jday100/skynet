@@ -3,8 +3,12 @@
 
 #include "T100Common.h"
 #include "T100VectorV3.h"
+#include "T100Matrix4.h"
+class T100Point;
 
-class T100Point : public T100VectorV3
+T100Point       operator *  (const T100Matrix4&, const T100Point&);
+
+class T100Point
 {
     public:
         T100Point();

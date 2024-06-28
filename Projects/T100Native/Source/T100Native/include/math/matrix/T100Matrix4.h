@@ -8,6 +8,9 @@ typedef union{
     T100FLOAT           DATA4[4][4];
 }T100MATRIX4;
 
+class T100Matrix4;
+
+T100Matrix4         operator *  (const T100Matrix4&, const T100Matrix4&);
 
 class T100Matrix4
 {
@@ -20,6 +23,8 @@ class T100Matrix4
     protected:
 
     private:
+        T100VOID        TurnOn();
+        T100VOID        TurnOff();
 };
 
 #endif // T100MATRIX4_H

@@ -16,7 +16,7 @@ T100BOOL T100FireStore::Load(T100ENTITY_VECTOR& entities)
 {
     T100Cuboid*     cuboid      = T100NEW T100Cuboid();
 
-    cuboid->Create(10, 10, 10);
+    cuboid->Create(50, 50, 50);
 
     entities.push_back(cuboid);
 }

@@ -44,11 +44,13 @@ T100VOID T100SoftRender::Draw()
 
     total   = m_entities.size();
 
+    /*
     T100Cuboid*     cuboid      = T100NEW T100Cuboid();
 
     cuboid->Create(50, 50, 50);
 
     m_entities.push_back(cuboid);
+    */
 
     for(T100Entity* entity : m_entities){
         if(entity){
@@ -96,8 +98,12 @@ T100VOID T100SoftRender::DrawPoint(T100Point& point, T100INT colour)
     T100INT         x, y;
     T100INT         value;
 
-    x   = point.m_x + m_view_origin_x;
-    y   = point.m_y + m_view_origin_y;
+    T100Point       result;
+
+    result  = m_space.Space(point);
+
+    x   = result.m_x + m_view_origin_x;
+    y   = result.m_y + m_view_origin_y;
 
     value   = (y * m_view_width + x) * 4;
 
@@ -109,13 +115,14 @@ T100VOID T100SoftRender::DrawPoint(T100Point& point, T100INT colour)
     m_screen[value++] = 0;
 }
 
-T100VOID T100SoftRender::Rotate(T100Point& source, T100Matrix3& matrix, T100Point& target)
+T100VOID T100SoftRender::Rotate(T100Point& source, T100Matrix4& matrix, T100Point& target)
 {
-    target  = source * matrix;
+    target  = matrix * source;
 }
 
 T100VOID T100SoftRender::Move(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 {
+    /*
     T100Matrix3         matrix      = T100SpaceGeometry::Translate(x, y, z);
 
     for(T100Entity* entity : m_entities){
@@ -129,6 +136,9 @@ T100VOID T100SoftRender::Move(T100FLOAT x, T100FLOAT y, T100FLOAT z)
             }
         }
     }
+    */
+
+    m_space.Translate(x, y, z);
 }
 
 T100VOID T100SoftRender::Rotate(T100FLOAT x, T100FLOAT y, T100FLOAT z)
