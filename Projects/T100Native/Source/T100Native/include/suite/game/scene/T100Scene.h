@@ -9,7 +9,7 @@ class T100Scene
         T100Scene();
         virtual ~T100Scene();
 
-        T100VOID            Load();
+        virtual T100VOID            Load() = 0;
 
     protected:
 

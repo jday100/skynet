@@ -1,5 +1,7 @@
 #include "T100Fire.h"
 
+#include "T100FireScene.h"
+
 T100Fire::T100Fire()
     :T100Game()
 {
@@ -54,8 +56,12 @@ T100NativeFrame* T100Fire::GetFrame()
 
 T100BOOL T100Fire::Load()
 {
-    if(m_store){
-        return m_store->Load(m_serve->GetRender()->GetEntities());
-    }
+    T100FireScene*      scene           = T100NULL;
+
+    scene   = T100NEW T100FireScene();
+    scene->SetRender(m_serve->GetRender());
+
+    scene->Load();
+
     return T100FALSE;
 }

@@ -2,6 +2,7 @@
 #define T100WXVIEW_H
 
 #include "T100ViewBase.h"
+#include "T100RenderBase.h"
 
 class T100WxView : public T100ViewBase
 {
@@ -9,9 +10,13 @@ class T100WxView : public T100ViewBase
         T100WxView();
         virtual ~T100WxView();
 
-        T100VOID            Draw(T100VOID* = T100NULL);
+        T100VOID                SetRender(T100RenderBase*);
+        T100RenderBase*         GetRender();
+
+        T100VOID                Draw(T100VOID* = T100NULL);
 
     protected:
+        T100RenderBase*         m_render            = T100NULL;
 
     private:
 };

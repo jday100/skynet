@@ -93,6 +93,16 @@ T100ENTITY_VECTOR& T100SoftRender::GetEntities()
     return m_entities;
 }
 
+T100LIGHT_VECTOR& T100SoftRender::GetLights()
+{
+    return m_lights;
+}
+
+T100CAMERA_VECTOR& T100SoftRender::GetCameras()
+{
+    return m_cameras;
+}
+
 T100VOID T100SoftRender::DrawPoint(T100Point& point, T100INT colour)
 {
     T100INT         x, y;
@@ -150,4 +160,8 @@ T100VOID T100SoftRender::Rotate(T100FLOAT x, T100FLOAT y, T100FLOAT z)
     m_space.Revolve(x, y, z);
 }
 
+T100VOID T100SoftRender::Pyramid()
+{
+
+}
 

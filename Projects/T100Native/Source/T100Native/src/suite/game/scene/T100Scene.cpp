@@ -10,7 +10,3 @@ T100Scene::~T100Scene()
     //dtor
 }
 
-T100VOID T100Scene::Load()
-{
-
-}

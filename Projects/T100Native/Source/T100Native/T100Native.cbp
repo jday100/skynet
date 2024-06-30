@@ -41,6 +41,7 @@
 					<Add directory="include/editor/serve" />
 					<Add directory="include/editor/view" />
 					<Add directory="include/suite" />
+					<Add directory="include/fire/scene" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -83,6 +84,7 @@
 					<Add directory="include/editor/serve" />
 					<Add directory="include/editor/view" />
 					<Add directory="include/suite" />
+					<Add directory="include/fire/scene" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -125,6 +127,7 @@
 		<Unit filename="include/editor/view/T100SceneEditorEntityPanel.h" />
 		<Unit filename="include/editor/view/T100SceneEditorFrame.h" />
 		<Unit filename="include/fire/T100Fire.h" />
+		<Unit filename="include/fire/scene/T100FireScene.h" />
 		<Unit filename="include/fire/serve/T100FireServe.h" />
 		<Unit filename="include/fire/store/T100FireStore.h" />
 		<Unit filename="include/fire/view/T100FireRender.h" />
@@ -163,6 +166,7 @@
 		<Unit filename="include/suite/render/common/T100Entity.h" />
 		<Unit filename="include/suite/render/common/T100Facet.h" />
 		<Unit filename="include/suite/render/common/T100Light.h" />
+		<Unit filename="include/suite/render/common/T100Line.h" />
 		<Unit filename="include/suite/render/common/T100Point.h" />
 		<Unit filename="include/suite/render/common/T100Text.h" />
 		<Unit filename="include/suite/render/common/T100Texture.h" />
@@ -182,6 +186,7 @@
 		<Unit filename="src/editor/view/T100SceneEditorEntityPanel.cpp" />
 		<Unit filename="src/editor/view/T100SceneEditorFrame.cpp" />
 		<Unit filename="src/fire/T100Fire.cpp" />
+		<Unit filename="src/fire/scene/T100FireScene.cpp" />
 		<Unit filename="src/fire/serve/T100FireServe.cpp" />
 		<Unit filename="src/fire/store/T100FireStore.cpp" />
 		<Unit filename="src/fire/view/T100FireRender.cpp" />
@@ -219,6 +224,7 @@
 		<Unit filename="src/suite/render/common/T100Entity.cpp" />
 		<Unit filename="src/suite/render/common/T100Facet.cpp" />
 		<Unit filename="src/suite/render/common/T100Light.cpp" />
+		<Unit filename="src/suite/render/common/T100Line.cpp" />
 		<Unit filename="src/suite/render/common/T100Point.cpp" />
 		<Unit filename="src/suite/render/common/T100Text.cpp" />
 		<Unit filename="src/suite/render/common/T100Texture.cpp" />

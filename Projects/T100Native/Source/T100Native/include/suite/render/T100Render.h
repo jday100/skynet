@@ -5,6 +5,8 @@
 #include "T100RenderBase.h"
 #include "T100ViewBase.h"
 #include "T100Entity.h"
+#include "T100Light.h"
+#include "T100Camera.h"
 
 class T100Render
 {
@@ -29,6 +31,9 @@ class T100Render
 
         T100VOID                    SetOrigin(T100FLOAT, T100FLOAT, T100FLOAT);
 
+        T100VOID                    Append(T100Entity*);
+        T100VOID                    AppendLight(T100Light*);
+        T100VOID                    AppendCamera(T100Camera*);
     public:
         T100VOID                    project(T100INT, T100INT, T100FLOAT&, T100FLOAT&, T100FLOAT&);
 

@@ -27,6 +27,7 @@ T100VOID T100Render::TurnOff()
 T100VOID T100Render::SetView(T100ViewBase* view)
 {
     m_view  = view;
+    m_view->SetRender(m_render);
 }
 
 T100ViewBase* T100Render::GetView()
@@ -46,7 +47,6 @@ T100VOID T100Render::project(T100INT x, T100INT y, T100FLOAT& a, T100FLOAT& b, T
 
 T100VOID T100Render::Draw(T100VOID* data)
 {
-    m_render->Draw();
     m_view->Draw(data);
 }
 
@@ -83,4 +83,19 @@ T100VOID T100Render::Move(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 T100VOID T100Render::Rotate(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 {
     m_render->Rotate(x, y, z);
+}
+
+T100VOID T100Render::Append(T100Entity* entity)
+{
+    m_render->GetEntities().push_back(entity);
+}
+
+T100VOID T100Render::AppendLight(T100Light* light)
+{
+    m_render->GetLights().push_back(light);
+}
+
+T100VOID T100Render::AppendCamera(T100Camera* camera)
+{
+    m_render->GetCameras().push_back(camera);
 }

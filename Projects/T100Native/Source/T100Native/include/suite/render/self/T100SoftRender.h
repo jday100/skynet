@@ -28,10 +28,14 @@ class T100SoftRender : public T100RenderBase
         T100INT                     GetHeight();
 
         T100ENTITY_VECTOR&          GetEntities();
+        T100LIGHT_VECTOR&           GetLights();
+        T100CAMERA_VECTOR&          GetCameras();
 
     public:
         T100VOID                    Move(T100FLOAT, T100FLOAT, T100FLOAT);
         T100VOID                    Rotate(T100FLOAT, T100FLOAT, T100FLOAT);
+
+        T100VOID                    Pyramid();
 
     protected:
         T100SoftSpace               m_space;
@@ -42,6 +46,8 @@ class T100SoftRender : public T100RenderBase
 
     private:
         T100ENTITY_VECTOR           m_entities;
+        T100LIGHT_VECTOR            m_lights;
+        T100CAMERA_VECTOR           m_cameras;
 };
 
 #endif // T100SOFTRENDER_H
