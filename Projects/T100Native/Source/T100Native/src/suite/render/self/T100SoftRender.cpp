@@ -163,5 +163,16 @@ T100VOID T100SoftRender::Rotate(T100FLOAT x, T100FLOAT y, T100FLOAT z)
 T100VOID T100SoftRender::Pyramid()
 {
 
+    for(T100Entity* entity : m_entities){
+        if(entity){
+            for(T100Facet* facet : entity->GetFacets()){
+                if(facet){
+                    DrawPoint(facet->m_x, 0);
+                    DrawPoint(facet->m_y, 0);
+                    DrawPoint(facet->m_z, 0);
+                }
+            }
+        }
+    }
 }
 

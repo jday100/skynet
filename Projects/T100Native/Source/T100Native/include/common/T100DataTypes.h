@@ -4,6 +4,8 @@
 #define     T100BYTE            unsigned char
 #define     T100INT             int
 
+#define     T100WORD            unsigned int
+
 
 #define     T100FLOAT           float
 

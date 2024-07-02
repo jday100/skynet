@@ -3,6 +3,7 @@
 
 #include "T100ViewBase.h"
 #include "T100RenderBase.h"
+#include "wx/dc.h"
 
 class T100WxView : public T100ViewBase
 {
@@ -14,6 +15,8 @@ class T100WxView : public T100ViewBase
         T100RenderBase*         GetRender();
 
         T100VOID                Draw(T100VOID* = T100NULL);
+
+        T100VOID                DrawPoint(wxDC*, T100INT, T100INT, T100WORD);
 
     protected:
         T100RenderBase*         m_render            = T100NULL;

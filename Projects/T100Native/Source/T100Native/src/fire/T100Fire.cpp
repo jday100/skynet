@@ -1,5 +1,6 @@
 #include "T100Fire.h"
 
+#include "T100BasicScene.h"
 #include "T100FireScene.h"
 
 T100Fire::T100Fire()
@@ -25,11 +26,7 @@ T100VOID T100Fire::TurnOn()
 
     Load();
 
-    int         total;
-
-    total   = m_serve->GetRender()->GetEntities().size();
-
-    m_view->GetFrame()->GetRender().DrawText(_T("Hello"));
+    Run();
 }
 
 T100VOID T100Fire::TurnOff()
@@ -56,12 +53,38 @@ T100NativeFrame* T100Fire::GetFrame()
 
 T100BOOL T100Fire::Load()
 {
+    Load_Basic();
+
+    return T100FALSE;
+}
+
+T100VOID T100Fire::Load_Basic()
+{
+    T100BasicScene*     scene           = T100NULL;
+
+    scene   = T100NEW T100BasicScene();
+    scene->SetRender(m_serve->GetRender());
+
+    scene->Load();
+}
+
+T100VOID T100Fire::Load_Fire()
+{
     T100FireScene*      scene           = T100NULL;
 
     scene   = T100NEW T100FireScene();
     scene->SetRender(m_serve->GetRender());
 
     scene->Load();
+}
 
-    return T100FALSE;
+T100VOID T100Fire::Run()
+{
+    int         total;
+
+    total   = m_serve->GetRender()->GetEntities().size();
+
+    m_view->GetFrame()->GetRender().DrawText(_T("Hello"));
+
+    m_view->GetRender()->Refresh();
 }

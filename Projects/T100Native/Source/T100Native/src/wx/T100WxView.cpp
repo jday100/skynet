@@ -36,6 +36,15 @@ T100VOID T100WxView::Draw(T100VOID* data)
     for(int m = 0;m < m_height;m++){
         for(int n = 0;n < m_width;n++){
             m_render->Pyramid();
+
+            DrawPoint(dc, n, m, 0);
         }
+    }
+}
+
+T100VOID T100WxView::DrawPoint(wxDC* dc, T100INT x, T100INT y, T100WORD colour)
+{
+    if(dc){
+        dc->DrawPoint(x, y);
     }
 }

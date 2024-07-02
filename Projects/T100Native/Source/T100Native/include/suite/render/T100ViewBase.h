@@ -14,6 +14,8 @@ class T100ViewBase
         virtual T100RenderBase*     GetRender() = 0;
         virtual T100VOID            Draw(T100VOID* = T100NULL) = 0;
 
+        virtual T100VOID            SetSize(T100INT, T100INT);
+
     protected:
         T100INT                     m_width         = 400;
         T100INT                     m_height        = 300;

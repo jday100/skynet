@@ -53,6 +53,7 @@ T100VOID T100Render::Draw(T100VOID* data)
 T100VOID T100Render::SetSize(T100INT width, T100INT height)
 {
     m_render->SetSize(width, height);
+    m_view->SetSize(width, height);
 }
 
 T100BYTE* T100Render::GetData()

@@ -15,6 +15,7 @@ class T100Fire : public T100Game
         virtual ~T100Fire();
 
         T100BOOL                Load();
+        T100VOID                Run();
 
         T100VOID                Show();
 
@@ -24,6 +25,9 @@ class T100Fire : public T100Game
         T100FireStore*          m_store         = T100NULL;
         T100FireServe*          m_serve         = T100NULL;
         T100FireView*           m_view          = T100NULL;
+
+        T100VOID                Load_Basic();
+        T100VOID                Load_Fire();
 
     private:
         T100VOID                TurnOn();
