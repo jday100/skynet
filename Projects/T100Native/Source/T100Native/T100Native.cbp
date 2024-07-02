@@ -127,6 +127,7 @@
 		<Unit filename="include/editor/view/T100SceneEditorEntityPanel.h" />
 		<Unit filename="include/editor/view/T100SceneEditorFrame.h" />
 		<Unit filename="include/fire/T100Fire.h" />
+		<Unit filename="include/fire/scene/T100BasicScene.h" />
 		<Unit filename="include/fire/scene/T100FireScene.h" />
 		<Unit filename="include/fire/serve/T100FireServe.h" />
 		<Unit filename="include/fire/store/T100FireStore.h" />
@@ -186,6 +187,7 @@
 		<Unit filename="src/editor/view/T100SceneEditorEntityPanel.cpp" />
 		<Unit filename="src/editor/view/T100SceneEditorFrame.cpp" />
 		<Unit filename="src/fire/T100Fire.cpp" />
+		<Unit filename="src/fire/scene/T100BasicScene.cpp" />
 		<Unit filename="src/fire/scene/T100FireScene.cpp" />
 		<Unit filename="src/fire/serve/T100FireServe.cpp" />
 		<Unit filename="src/fire/store/T100FireStore.cpp" />

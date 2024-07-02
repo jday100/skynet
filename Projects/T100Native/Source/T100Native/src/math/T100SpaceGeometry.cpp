@@ -31,3 +31,8 @@ T100Matrix3 T100SpaceGeometry::RevolveZ(T100FLOAT z)
 {
 
 }
+
+T100BOOL T100SpaceGeometry::Cross(T100Line& line, T100Facet& facet)
+{
+
+}

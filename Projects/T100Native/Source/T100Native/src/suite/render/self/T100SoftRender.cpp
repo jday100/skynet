@@ -56,9 +56,9 @@ T100VOID T100SoftRender::Draw()
         if(entity){
             for(T100Facet* facet : entity->GetFacets()){
                 if(facet){
-                    DrawPoint(facet->m_x, 0);
-                    DrawPoint(facet->m_y, 0);
-                    DrawPoint(facet->m_z, 0);
+                    DrawPoint(facet->m_a, 0);
+                    DrawPoint(facet->m_b, 0);
+                    DrawPoint(facet->m_c, 0);
                 }
             }
         }
@@ -167,9 +167,9 @@ T100VOID T100SoftRender::Pyramid()
         if(entity){
             for(T100Facet* facet : entity->GetFacets()){
                 if(facet){
-                    DrawPoint(facet->m_x, 0);
-                    DrawPoint(facet->m_y, 0);
-                    DrawPoint(facet->m_z, 0);
+                    DrawPoint(facet->m_a, 0);
+                    DrawPoint(facet->m_b, 0);
+                    DrawPoint(facet->m_c, 0);
                 }
             }
         }

@@ -32,53 +32,53 @@ T100VOID T100Cuboid::Create(T100FLOAT x, T100FLOAT y, T100FLOAT z)
     hy  = y / 2.0;
     hz  = z / 2.0;
 
-    face11->m_x.SetValue(-hx, hy, hz);
-    face11->m_y.SetValue(hx, hy, hz);
-    face11->m_z.SetValue(hx, -hy, hz);
+    face11->m_a.SetValue(-hx, hy, hz);
+    face11->m_b.SetValue(hx, hy, hz);
+    face11->m_c.SetValue(hx, -hy, hz);
 
-    face12->m_x.SetValue(-hx, hy, hz);
-    face12->m_y.SetValue(hx, -hy, hz);
-    face12->m_z.SetValue(-hx, -hy, hz);
+    face12->m_a.SetValue(-hx, hy, hz);
+    face12->m_b.SetValue(hx, -hy, hz);
+    face12->m_c.SetValue(-hx, -hy, hz);
 
-    face21->m_x.SetValue(-hx, hy, -hz);
-    face21->m_y.SetValue(hx, hy, -hz);
-    face21->m_z.SetValue(hx, -hy, -hz);
+    face21->m_a.SetValue(-hx, hy, -hz);
+    face21->m_b.SetValue(hx, hy, -hz);
+    face21->m_c.SetValue(hx, -hy, -hz);
 
-    face22->m_x.SetValue(-hx, hy, -hz);
-    face22->m_y.SetValue(hx, -hy, -hz);
-    face22->m_z.SetValue(-hx, -hy, -hz);
+    face22->m_a.SetValue(-hx, hy, -hz);
+    face22->m_b.SetValue(hx, -hy, -hz);
+    face22->m_c.SetValue(-hx, -hy, -hz);
 
-    face31->m_x.SetValue(hx, hy, hz);
-    face31->m_y.SetValue(hx, hy, -hz);
-    face31->m_z.SetValue(hx, -hy, -hz);
+    face31->m_a.SetValue(hx, hy, hz);
+    face31->m_b.SetValue(hx, hy, -hz);
+    face31->m_c.SetValue(hx, -hy, -hz);
 
-    face32->m_x.SetValue(hx, hy, hz);
-    face32->m_y.SetValue(hx, -hy, -hz);
-    face32->m_z.SetValue(hx, -hy, hz);
+    face32->m_a.SetValue(hx, hy, hz);
+    face32->m_b.SetValue(hx, -hy, -hz);
+    face32->m_c.SetValue(hx, -hy, hz);
 
-    face41->m_x.SetValue(-hx, hy, hz);
-    face41->m_y.SetValue(-hx, hy, -hz);
-    face41->m_z.SetValue(-hx, -hy, -hz);
+    face41->m_a.SetValue(-hx, hy, hz);
+    face41->m_b.SetValue(-hx, hy, -hz);
+    face41->m_c.SetValue(-hx, -hy, -hz);
 
-    face42->m_x.SetValue(-hx, hy, hz);
-    face42->m_y.SetValue(-hx, -hy, -hz);
-    face42->m_z.SetValue(-hx, -hy, hz);
+    face42->m_a.SetValue(-hx, hy, hz);
+    face42->m_b.SetValue(-hx, -hy, -hz);
+    face42->m_c.SetValue(-hx, -hy, hz);
 
-    face51->m_x.SetValue(-hx, hy, -hz);
-    face51->m_y.SetValue(hx, hy, -hz);
-    face51->m_z.SetValue(-hx, hy, hz);
+    face51->m_a.SetValue(-hx, hy, -hz);
+    face51->m_b.SetValue(hx, hy, -hz);
+    face51->m_c.SetValue(-hx, hy, hz);
 
-    face52->m_x.SetValue(-hx, hy, -hz);
-    face52->m_y.SetValue(hx, hy, hz);
-    face52->m_z.SetValue(-hx, hy, hz);
+    face52->m_a.SetValue(-hx, hy, -hz);
+    face52->m_b.SetValue(hx, hy, hz);
+    face52->m_c.SetValue(-hx, hy, hz);
 
-    face61->m_x.SetValue(-hx, -hy, -hz);
-    face61->m_y.SetValue(hx, -hy, -hz);
-    face61->m_z.SetValue(hx, -hy, hz);
+    face61->m_a.SetValue(-hx, -hy, -hz);
+    face61->m_b.SetValue(hx, -hy, -hz);
+    face61->m_c.SetValue(hx, -hy, hz);
 
-    face62->m_x.SetValue(-hx, -hy, -hz);
-    face62->m_y.SetValue(hx, -hy, hz);
-    face62->m_z.SetValue(-hx, -hy, hz);
+    face62->m_a.SetValue(-hx, -hy, -hz);
+    face62->m_b.SetValue(hx, -hy, hz);
+    face62->m_c.SetValue(-hx, -hy, hz);
 
     m_facets.push_back(face11);
     m_facets.push_back(face12);

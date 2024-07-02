@@ -2,6 +2,8 @@
 #define T100SPACEGEOMETRY_H
 
 #include "T100Matrix3.h"
+#include "T100Line.h"
+#include "T100Facet.h"
 
 class T100SpaceGeometry
 {
@@ -13,6 +15,9 @@ class T100SpaceGeometry
         static T100Matrix3          RevolveX(T100FLOAT);
         static T100Matrix3          RevolveY(T100FLOAT);
         static T100Matrix3          RevolveZ(T100FLOAT);
+
+
+        static T100BOOL             Cross(T100Line&, T100Facet&);
 
     protected:
 

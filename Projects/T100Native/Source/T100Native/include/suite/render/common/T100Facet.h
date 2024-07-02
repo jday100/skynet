@@ -12,9 +12,9 @@ class T100Facet
         T100Facet();
         virtual ~T100Facet();
 
-        T100Point               m_x;
-        T100Point               m_y;
-        T100Point               m_z;
+        T100Point               m_a;
+        T100Point               m_b;
+        T100Point               m_c;
 
     protected:
 
