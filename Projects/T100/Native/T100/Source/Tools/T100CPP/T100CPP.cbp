@@ -16,6 +16,10 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/library" />
+					<Add directory="include/native" />
+					<Add directory="include/suite" />
+					<Add directory="include/T100CPP" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -34,6 +38,10 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/library" />
+					<Add directory="include/native" />
+					<Add directory="include/suite" />
+					<Add directory="include/T100CPP" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -65,9 +73,17 @@
 		<Unit filename="T100CPPApp.h" />
 		<Unit filename="T100CPPMain.cpp" />
 		<Unit filename="T100CPPMain.h" />
+		<Unit filename="include/T100CPP/T100CPP.h" />
+		<Unit filename="include/library/T100Library.h" />
+		<Unit filename="include/native/T100Native.h" />
+		<Unit filename="include/suite/T100Suite.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/T100CPP/T100CPP.cpp" />
+		<Unit filename="src/library/T100Library.cpp" />
+		<Unit filename="src/native/T100Native.cpp" />
+		<Unit filename="src/suite/T100Suite.cpp" />
 		<Unit filename="wxsmith/T100CPPframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
