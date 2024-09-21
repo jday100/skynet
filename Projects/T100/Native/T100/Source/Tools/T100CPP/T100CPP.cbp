@@ -20,6 +20,12 @@
 					<Add directory="include/native" />
 					<Add directory="include/suite" />
 					<Add directory="include/T100CPP" />
+					<Add directory="include/T100CPP/compiler" />
+					<Add directory="include/T100CPP/parser" />
+					<Add directory="include/T100CPP/scanner" />
+					<Add directory="include/T100CPP/part" />
+					<Add directory="include/T100CPP/generator" />
+					<Add directory="include/T100CPP/combiner" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -42,6 +48,12 @@
 					<Add directory="include/native" />
 					<Add directory="include/suite" />
 					<Add directory="include/T100CPP" />
+					<Add directory="include/T100CPP/compiler" />
+					<Add directory="include/T100CPP/parser" />
+					<Add directory="include/T100CPP/scanner" />
+					<Add directory="include/T100CPP/part" />
+					<Add directory="include/T100CPP/generator" />
+					<Add directory="include/T100CPP/combiner" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -74,14 +86,39 @@
 		<Unit filename="T100CPPMain.cpp" />
 		<Unit filename="T100CPPMain.h" />
 		<Unit filename="include/T100CPP/T100CPP.h" />
+		<Unit filename="include/T100CPP/combiner/T100CPPCombiner.h" />
+		<Unit filename="include/T100CPP/compiler/T100CPPCompiler.h" />
+		<Unit filename="include/T100CPP/generator/T100CPPGenerator.h" />
+		<Unit filename="include/T100CPP/parser/T100CPPParser.h" />
+		<Unit filename="include/T100CPP/part/T100CPPPart.h" />
+		<Unit filename="include/T100CPP/scanner/T100CPPElementScanner.h" />
+		<Unit filename="include/T100CPP/scanner/T100CPPKeywordScanner.h" />
+		<Unit filename="include/T100CPP/scanner/T100CPPPartScanner.h" />
+		<Unit filename="include/T100CPP/scanner/T100CPPProjectScanner.h" />
+		<Unit filename="include/T100CPP/scanner/T100CPPScanner.h" />
+		<Unit filename="include/T100CPP/scanner/T100CPPSentenceScanner.h" />
+		<Unit filename="include/library/T100Common.h" />
 		<Unit filename="include/library/T100Library.h" />
+		<Unit filename="include/library/T100String.h" />
 		<Unit filename="include/native/T100Native.h" />
 		<Unit filename="include/suite/T100Suite.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/T100CPP/T100CPP.cpp" />
+		<Unit filename="src/T100CPP/combiner/T100CPPCombiner.cpp" />
+		<Unit filename="src/T100CPP/compiler/T100CPPCompiler.cpp" />
+		<Unit filename="src/T100CPP/generator/T100CPPGenerator.cpp" />
+		<Unit filename="src/T100CPP/parser/T100CPPParser.cpp" />
+		<Unit filename="src/T100CPP/part/T100CPPPart.cpp" />
+		<Unit filename="src/T100CPP/scanner/T100CPPElementScanner.cpp" />
+		<Unit filename="src/T100CPP/scanner/T100CPPKeywordScanner.cpp" />
+		<Unit filename="src/T100CPP/scanner/T100CPPPartScanner.cpp" />
+		<Unit filename="src/T100CPP/scanner/T100CPPProjectScanner.cpp" />
+		<Unit filename="src/T100CPP/scanner/T100CPPScanner.cpp" />
+		<Unit filename="src/T100CPP/scanner/T100CPPSentenceScanner.cpp" />
 		<Unit filename="src/library/T100Library.cpp" />
+		<Unit filename="src/library/T100String.cpp" />
 		<Unit filename="src/native/T100Native.cpp" />
 		<Unit filename="src/suite/T100Suite.cpp" />
 		<Unit filename="wxsmith/T100CPPframe.wxs" />
