@@ -28,6 +28,7 @@
 					<Add directory="include/T100CPP/combiner" />
 					<Add directory="include/T100CPP/cppfile" />
 					<Add directory="include/T100CPP/cppfile/executable" />
+					<Add directory="include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -58,6 +59,7 @@
 					<Add directory="include/T100CPP/combiner" />
 					<Add directory="include/T100CPP/cppfile" />
 					<Add directory="include/T100CPP/cppfile/executable" />
+					<Add directory="include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -103,6 +105,8 @@
 		<Unit filename="include/T100CPP/scanner/T100CPPProjectScanner.h" />
 		<Unit filename="include/T100CPP/scanner/T100CPPScanner.h" />
 		<Unit filename="include/T100CPP/scanner/T100CPPSentenceScanner.h" />
+		<Unit filename="include/library/T100Buffer.h" />
+		<Unit filename="include/library/T100CharSet.h" />
 		<Unit filename="include/library/T100Common.h" />
 		<Unit filename="include/library/T100Library.h" />
 		<Unit filename="include/library/T100String.h" />
@@ -125,6 +129,8 @@
 		<Unit filename="src/T100CPP/scanner/T100CPPProjectScanner.cpp" />
 		<Unit filename="src/T100CPP/scanner/T100CPPScanner.cpp" />
 		<Unit filename="src/T100CPP/scanner/T100CPPSentenceScanner.cpp" />
+		<Unit filename="src/library/T100Buffer.cpp" />
+		<Unit filename="src/library/T100CharSet.cpp" />
 		<Unit filename="src/library/T100Library.cpp" />
 		<Unit filename="src/library/T100String.cpp" />
 		<Unit filename="src/native/T100Native.cpp" />
