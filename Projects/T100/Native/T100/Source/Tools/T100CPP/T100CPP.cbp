@@ -32,6 +32,8 @@
 					<Add directory="include/library/file" />
 					<Add directory="include/suite/compile/token" />
 					<Add directory="include/T100CPP/token" />
+					<Add directory="include/suite/test/cpptest" />
+					<Add directory="include/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -66,6 +68,8 @@
 					<Add directory="include/library/file" />
 					<Add directory="include/suite/compile/token" />
 					<Add directory="include/T100CPP/token" />
+					<Add directory="include/suite/test/cpptest" />
+					<Add directory="include/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -137,6 +141,8 @@
 		<Unit filename="include/suite/compile/token/T100PartToken.h" />
 		<Unit filename="include/suite/compile/token/T100ProjectToken.h" />
 		<Unit filename="include/suite/compile/token/T100SentenceToken.h" />
+		<Unit filename="include/suite/test/cpptest/T100Test.h" />
+		<Unit filename="include/test/T100CPPTest.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
@@ -179,6 +185,8 @@
 		<Unit filename="src/suite/compile/token/T100PartToken.cpp" />
 		<Unit filename="src/suite/compile/token/T100ProjectToken.cpp" />
 		<Unit filename="src/suite/compile/token/T100SentenceToken.cpp" />
+		<Unit filename="src/suite/test/cpptest/T100Test.cpp" />
+		<Unit filename="src/test/T100CPPTest.cpp" />
 		<Unit filename="test/test_main.cpp">
 			<Option target="Release" />
 		</Unit>
