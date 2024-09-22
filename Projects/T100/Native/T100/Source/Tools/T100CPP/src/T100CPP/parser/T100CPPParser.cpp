@@ -1,5 +1,7 @@
 #include "T100CPPParser.h"
 
+#include "T100CPPScanner.h"
+
 T100CPPParser::T100CPPParser()
 {
     //ctor
@@ -12,5 +14,7 @@ T100CPPParser::~T100CPPParser()
 
 T100BOOL T100CPPParser::done()
 {
-    return T100FALSE;
+    T100CPPScanner          scanner;
+
+    return scanner.done();
 }

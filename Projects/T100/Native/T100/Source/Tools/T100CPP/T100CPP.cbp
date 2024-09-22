@@ -30,6 +30,8 @@
 					<Add directory="include/T100CPP/cppfile/executable" />
 					<Add directory="include" />
 					<Add directory="include/library/file" />
+					<Add directory="include/suite/compile/token" />
+					<Add directory="include/T100CPP/token" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -62,6 +64,8 @@
 					<Add directory="include/T100CPP/cppfile/executable" />
 					<Add directory="include" />
 					<Add directory="include/library/file" />
+					<Add directory="include/suite/compile/token" />
+					<Add directory="include/T100CPP/token" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -107,6 +111,11 @@
 		<Unit filename="include/T100CPP/scanner/T100CPPProjectScanner.h" />
 		<Unit filename="include/T100CPP/scanner/T100CPPScanner.h" />
 		<Unit filename="include/T100CPP/scanner/T100CPPSentenceScanner.h" />
+		<Unit filename="include/T100CPP/token/T100CPPElementToken.h" />
+		<Unit filename="include/T100CPP/token/T100CPPKeywordToken.h" />
+		<Unit filename="include/T100CPP/token/T100CPPPartToken.h" />
+		<Unit filename="include/T100CPP/token/T100CPPProjectToken.h" />
+		<Unit filename="include/T100CPP/token/T100CPPSentenceToken.h" />
 		<Unit filename="include/library/T100Buffer.h" />
 		<Unit filename="include/library/T100CharSet.h" />
 		<Unit filename="include/library/T100Common.h" />
@@ -114,13 +123,20 @@
 		<Unit filename="include/library/T100Library.h" />
 		<Unit filename="include/library/T100Scanner.h" />
 		<Unit filename="include/library/T100Setting.h" />
+		<Unit filename="include/library/T100State.h" />
 		<Unit filename="include/library/T100String.h" />
+		<Unit filename="include/library/T100Token.h" />
 		<Unit filename="include/library/file/T100File.h" />
 		<Unit filename="include/library/file/T100FileReader.h" />
 		<Unit filename="include/library/file/T100FileWriter.h" />
 		<Unit filename="include/native/T100Native.h" />
 		<Unit filename="include/suite/T100GrammarScanner.h" />
 		<Unit filename="include/suite/T100Suite.h" />
+		<Unit filename="include/suite/compile/token/T100ElementToken.h" />
+		<Unit filename="include/suite/compile/token/T100KeywordToken.h" />
+		<Unit filename="include/suite/compile/token/T100PartToken.h" />
+		<Unit filename="include/suite/compile/token/T100ProjectToken.h" />
+		<Unit filename="include/suite/compile/token/T100SentenceToken.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
@@ -138,19 +154,31 @@
 		<Unit filename="src/T100CPP/scanner/T100CPPProjectScanner.cpp" />
 		<Unit filename="src/T100CPP/scanner/T100CPPScanner.cpp" />
 		<Unit filename="src/T100CPP/scanner/T100CPPSentenceScanner.cpp" />
+		<Unit filename="src/T100CPP/token/T100CPPElementToken.cpp" />
+		<Unit filename="src/T100CPP/token/T100CPPKeywordToken.cpp" />
+		<Unit filename="src/T100CPP/token/T100CPPPartToken.cpp" />
+		<Unit filename="src/T100CPP/token/T100CPPProjectToken.cpp" />
+		<Unit filename="src/T100CPP/token/T100CPPSentenceToken.cpp" />
 		<Unit filename="src/library/T100Buffer.cpp" />
 		<Unit filename="src/library/T100CharSet.cpp" />
 		<Unit filename="src/library/T100Info.cpp" />
 		<Unit filename="src/library/T100Library.cpp" />
 		<Unit filename="src/library/T100Scanner.cpp" />
 		<Unit filename="src/library/T100Setting.cpp" />
+		<Unit filename="src/library/T100State.cpp" />
 		<Unit filename="src/library/T100String.cpp" />
+		<Unit filename="src/library/T100Token.cpp" />
 		<Unit filename="src/library/file/T100File.cpp" />
 		<Unit filename="src/library/file/T100FileReader.cpp" />
 		<Unit filename="src/library/file/T100FileWriter.cpp" />
 		<Unit filename="src/native/T100Native.cpp" />
 		<Unit filename="src/suite/T100GrammarScanner.cpp" />
 		<Unit filename="src/suite/T100Suite.cpp" />
+		<Unit filename="src/suite/compile/token/T100ElementToken.cpp" />
+		<Unit filename="src/suite/compile/token/T100KeywordToken.cpp" />
+		<Unit filename="src/suite/compile/token/T100PartToken.cpp" />
+		<Unit filename="src/suite/compile/token/T100ProjectToken.cpp" />
+		<Unit filename="src/suite/compile/token/T100SentenceToken.cpp" />
 		<Unit filename="test/test_main.cpp">
 			<Option target="Release" />
 		</Unit>
