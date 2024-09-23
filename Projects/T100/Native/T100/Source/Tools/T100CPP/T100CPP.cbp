@@ -40,6 +40,9 @@
 					<Add directory="include/library/console" />
 					<Add directory="include/native/software/platform/windows" />
 					<Add directory="include/test/library" />
+					<Add directory="include/suite/compile/scanner" />
+					<Add directory="include/library/container" />
+					<Add directory="include/T100CPP/data" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -82,6 +85,9 @@
 					<Add directory="include/library/console" />
 					<Add directory="include/native/software/platform/windows" />
 					<Add directory="include/test/library" />
+					<Add directory="include/suite/compile/scanner" />
+					<Add directory="include/library/container" />
+					<Add directory="include/T100CPP/data" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -122,9 +128,11 @@
 		<Unit filename="include/T100CPP/compiler/T100CPPCompiler.h" />
 		<Unit filename="include/T100CPP/cppfile/T100CPPFile.h" />
 		<Unit filename="include/T100CPP/cppfile/executable/T100CPPExecutableFile.h" />
+		<Unit filename="include/T100CPP/data/T100CPPPartInfo.h" />
 		<Unit filename="include/T100CPP/generator/T100CPPGenerator.h" />
 		<Unit filename="include/T100CPP/parser/T100CPPParser.h" />
 		<Unit filename="include/T100CPP/part/T100CPPPart.h" />
+		<Unit filename="include/T100CPP/scanner/T100CPPByteScanner.h" />
 		<Unit filename="include/T100CPP/scanner/T100CPPElementScanner.h" />
 		<Unit filename="include/T100CPP/scanner/T100CPPKeywordScanner.h" />
 		<Unit filename="include/T100CPP/scanner/T100CPPPartScanner.h" />
@@ -149,16 +157,22 @@
 		<Unit filename="include/library/T100WString.h" />
 		<Unit filename="include/library/console/T100Console.h" />
 		<Unit filename="include/library/console/T100ConsoleBase.h" />
+		<Unit filename="include/library/container/T100GroupedVessel.h" />
+		<Unit filename="include/library/container/T100LayeredVessel.h" />
+		<Unit filename="include/library/container/T100Vessel.h" />
 		<Unit filename="include/library/file/T100File.h" />
 		<Unit filename="include/library/file/T100FileReader.h" />
 		<Unit filename="include/library/file/T100FileWriter.h" />
+		<Unit filename="include/library/file/T100TextFileReader.h" />
 		<Unit filename="include/library/log/T100Logger.h" />
 		<Unit filename="include/native/T100Native.h" />
 		<Unit filename="include/native/software/platform/windows/T100WindowsConsole.h" />
 		<Unit filename="include/suite/T100AppState.h" />
 		<Unit filename="include/suite/T100GrammarScanner.h" />
 		<Unit filename="include/suite/T100Suite.h" />
+		<Unit filename="include/suite/compile/scanner/T100FileScanner.h" />
 		<Unit filename="include/suite/compile/token/T100ElementToken.h" />
+		<Unit filename="include/suite/compile/token/T100FileDataToken.h" />
 		<Unit filename="include/suite/compile/token/T100KeywordToken.h" />
 		<Unit filename="include/suite/compile/token/T100PartToken.h" />
 		<Unit filename="include/suite/compile/token/T100ProjectToken.h" />
@@ -179,9 +193,11 @@
 		<Unit filename="src/T100CPP/compiler/T100CPPCompiler.cpp" />
 		<Unit filename="src/T100CPP/cppfile/T100CPPFile.cpp" />
 		<Unit filename="src/T100CPP/cppfile/executable/T100CPPExecutableFile.cpp" />
+		<Unit filename="src/T100CPP/data/T100CPPPartInfo.cpp" />
 		<Unit filename="src/T100CPP/generator/T100CPPGenerator.cpp" />
 		<Unit filename="src/T100CPP/parser/T100CPPParser.cpp" />
 		<Unit filename="src/T100CPP/part/T100CPPPart.cpp" />
+		<Unit filename="src/T100CPP/scanner/T100CPPByteScanner.cpp" />
 		<Unit filename="src/T100CPP/scanner/T100CPPElementScanner.cpp" />
 		<Unit filename="src/T100CPP/scanner/T100CPPKeywordScanner.cpp" />
 		<Unit filename="src/T100CPP/scanner/T100CPPPartScanner.cpp" />
@@ -205,16 +221,22 @@
 		<Unit filename="src/library/T100WString.cpp" />
 		<Unit filename="src/library/console/T100Console.cpp" />
 		<Unit filename="src/library/console/T100ConsoleBase.cpp" />
+		<Unit filename="src/library/container/T100GroupedVessel.cpp" />
+		<Unit filename="src/library/container/T100LayeredVessel.cpp" />
+		<Unit filename="src/library/container/T100Vessel.cpp" />
 		<Unit filename="src/library/file/T100File.cpp" />
 		<Unit filename="src/library/file/T100FileReader.cpp" />
 		<Unit filename="src/library/file/T100FileWriter.cpp" />
+		<Unit filename="src/library/file/T100TextFileReader.cpp" />
 		<Unit filename="src/library/log/T100Logger.cpp" />
 		<Unit filename="src/native/T100Native.cpp" />
 		<Unit filename="src/native/software/platform/windows/T100WindowsConsole.cpp" />
 		<Unit filename="src/suite/T100AppState.cpp" />
 		<Unit filename="src/suite/T100GrammarScanner.cpp" />
 		<Unit filename="src/suite/T100Suite.cpp" />
+		<Unit filename="src/suite/compile/scanner/T100FileScanner.cpp" />
 		<Unit filename="src/suite/compile/token/T100ElementToken.cpp" />
+		<Unit filename="src/suite/compile/token/T100FileDataToken.cpp" />
 		<Unit filename="src/suite/compile/token/T100KeywordToken.cpp" />
 		<Unit filename="src/suite/compile/token/T100PartToken.cpp" />
 		<Unit filename="src/suite/compile/token/T100ProjectToken.cpp" />
