@@ -1,6 +1,6 @@
 #include "T100CPPThisApp.h"
 
-#include "T100CPPTest.h"
+#include "T100ThisTest.h"
 
 T100CPPThisApp::T100CPPThisApp()
 {
@@ -14,10 +14,13 @@ T100CPPThisApp::~T100CPPThisApp()
 
 T100BOOL T100CPPThisApp::run(T100CPPState& state)
 {
-    if(state.TEST == T100TRUE){
-        T100CPPTest         cpp_test;
+    //test
+    state.TEST  = T100TRUE;
 
-        cpp_test.run();
+    if(state.TEST == T100TRUE){
+        T100ThisTest         this_test;
+
+        this_test.run();
     }
     return T100FALSE;
 }

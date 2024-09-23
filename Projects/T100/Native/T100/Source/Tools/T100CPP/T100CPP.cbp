@@ -36,6 +36,10 @@
 					<Add directory="include/suite/test/cpptest" />
 					<Add directory="include/test" />
 					<Add directory="include/test/scanner" />
+					<Add directory="include/library/log" />
+					<Add directory="include/library/console" />
+					<Add directory="include/native/software/platform/windows" />
+					<Add directory="include/test/library" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -74,6 +78,10 @@
 					<Add directory="include/suite/test/cpptest" />
 					<Add directory="include/test" />
 					<Add directory="include/test/scanner" />
+					<Add directory="include/library/log" />
+					<Add directory="include/library/console" />
+					<Add directory="include/native/software/platform/windows" />
+					<Add directory="include/test/library" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -137,10 +145,15 @@
 		<Unit filename="include/library/T100State.h" />
 		<Unit filename="include/library/T100String.h" />
 		<Unit filename="include/library/T100Token.h" />
+		<Unit filename="include/library/T100WString.h" />
+		<Unit filename="include/library/console/T100Console.h" />
+		<Unit filename="include/library/console/T100ConsoleBase.h" />
 		<Unit filename="include/library/file/T100File.h" />
 		<Unit filename="include/library/file/T100FileReader.h" />
 		<Unit filename="include/library/file/T100FileWriter.h" />
+		<Unit filename="include/library/log/T100Logger.h" />
 		<Unit filename="include/native/T100Native.h" />
+		<Unit filename="include/native/software/platform/windows/T100WindowsConsole.h" />
 		<Unit filename="include/suite/T100AppState.h" />
 		<Unit filename="include/suite/T100GrammarScanner.h" />
 		<Unit filename="include/suite/T100Suite.h" />
@@ -151,6 +164,8 @@
 		<Unit filename="include/suite/compile/token/T100SentenceToken.h" />
 		<Unit filename="include/suite/test/cpptest/T100Test.h" />
 		<Unit filename="include/test/T100CPPTest.h" />
+		<Unit filename="include/test/T100ThisTest.h" />
+		<Unit filename="include/test/library/T100ConsoleTest.h" />
 		<Unit filename="include/test/scanner/T100CPPScannerTest.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
@@ -185,10 +200,15 @@
 		<Unit filename="src/library/T100State.cpp" />
 		<Unit filename="src/library/T100String.cpp" />
 		<Unit filename="src/library/T100Token.cpp" />
+		<Unit filename="src/library/T100WString.cpp" />
+		<Unit filename="src/library/console/T100Console.cpp" />
+		<Unit filename="src/library/console/T100ConsoleBase.cpp" />
 		<Unit filename="src/library/file/T100File.cpp" />
 		<Unit filename="src/library/file/T100FileReader.cpp" />
 		<Unit filename="src/library/file/T100FileWriter.cpp" />
+		<Unit filename="src/library/log/T100Logger.cpp" />
 		<Unit filename="src/native/T100Native.cpp" />
+		<Unit filename="src/native/software/platform/windows/T100WindowsConsole.cpp" />
 		<Unit filename="src/suite/T100AppState.cpp" />
 		<Unit filename="src/suite/T100GrammarScanner.cpp" />
 		<Unit filename="src/suite/T100Suite.cpp" />
@@ -199,6 +219,8 @@
 		<Unit filename="src/suite/compile/token/T100SentenceToken.cpp" />
 		<Unit filename="src/suite/test/cpptest/T100Test.cpp" />
 		<Unit filename="src/test/T100CPPTest.cpp" />
+		<Unit filename="src/test/T100ThisTest.cpp" />
+		<Unit filename="src/test/library/T100ConsoleTest.cpp" />
 		<Unit filename="src/test/scanner/T100CPPScannerTest.cpp" />
 		<Unit filename="test/test_main.cpp">
 			<Option target="Release" />
