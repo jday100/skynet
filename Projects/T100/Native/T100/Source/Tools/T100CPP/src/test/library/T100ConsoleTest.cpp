@@ -22,5 +22,9 @@ T100BOOL T100ConsoleTest::run()
 
     console.out(msg);
 
+    msg = L"你好";
+
+    console.out(msg);
+
     return T100FALSE;
 }

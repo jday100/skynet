@@ -2,6 +2,7 @@
 #define T100CPPSCANNER_H
 
 #include "T100Common.h"
+#include "T100WString.h"
 #include "T100CPPKeywordScanner.h"
 #include "T100CPPElementScanner.h"
 #include "T100CPPSentenceScanner.h"
@@ -14,10 +15,10 @@ class T100CPPScanner
         T100CPPScanner();
         virtual ~T100CPPScanner();
 
-        T100BOOL            done();
+        T100BOOL            done(T100WString);
 
     protected:
-        T100BOOL            create();
+        T100BOOL            create(T100WString);
         T100BOOL            destroy();
 
         T100BOOL            execute();

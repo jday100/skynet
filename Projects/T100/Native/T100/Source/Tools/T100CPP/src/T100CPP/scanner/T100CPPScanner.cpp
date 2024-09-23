@@ -10,7 +10,7 @@ T100CPPScanner::~T100CPPScanner()
     //dtor
 }
 
-T100BOOL T100CPPScanner::create()
+T100BOOL T100CPPScanner::create(T100WString file)
 {
     m_keyword_scanner       = T100NEW T100CPPKeywordScanner();
     m_element_scanner       = T100NEW T100CPPElementScanner();
@@ -26,11 +26,11 @@ T100BOOL T100CPPScanner::destroy()
     return T100FALSE;
 }
 
-T100BOOL T100CPPScanner::done()
+T100BOOL T100CPPScanner::done(T100WString path)
 {
     T100BOOL        result          = T100FALSE;
 
-    result  = create();
+    result  = create(path);
 
     if(result){
         result = execute();

@@ -13,14 +13,14 @@ T100CPPCompiler::~T100CPPCompiler()
     //dtor
 }
 
-T100BOOL T100CPPCompiler::done()
+T100BOOL T100CPPCompiler::done(T100WString path)
 {
     T100CPPParser           parser;
     T100CPPGenerator        generator;
 
     T100BOOL                result          = T100FALSE;
 
-    result  = parser.done();
+    result  = parser.done(path);
 
     if(result){
         result  = generator.done();

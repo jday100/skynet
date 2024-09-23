@@ -9,6 +9,7 @@ class T100WString
 {
     public:
         T100WString();
+        T100WString(wchar_t*);
         virtual ~T100WString();
 
         wchar_t*        data();

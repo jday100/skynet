@@ -2,6 +2,7 @@
 #define T100CPP_H
 
 #include "T100Common.h"
+#include "T100WString.h"
 
 class T100CPP
 {
@@ -9,9 +10,9 @@ class T100CPP
         T100CPP();
         virtual ~T100CPP();
 
-        T100BOOL            compile();
+        T100BOOL            compile(T100WString);
 
-        T100BOOL            decompile();
+        T100BOOL            decompile(T100WString);
 
     protected:
 

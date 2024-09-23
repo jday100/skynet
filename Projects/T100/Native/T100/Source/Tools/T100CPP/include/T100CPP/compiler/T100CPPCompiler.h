@@ -2,6 +2,7 @@
 #define T100CPPCOMPILER_H
 
 #include "T100Common.h"
+#include "T100WString.h"
 
 class T100CPPCompiler
 {
@@ -9,7 +10,7 @@ class T100CPPCompiler
         T100CPPCompiler();
         virtual ~T100CPPCompiler();
 
-        T100BOOL            done();
+        T100BOOL            done(T100WString);
 
     protected:
 

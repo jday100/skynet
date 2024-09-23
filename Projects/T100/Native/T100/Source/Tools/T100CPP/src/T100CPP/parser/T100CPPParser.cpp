@@ -12,9 +12,9 @@ T100CPPParser::~T100CPPParser()
     //dtor
 }
 
-T100BOOL T100CPPParser::done()
+T100BOOL T100CPPParser::done(T100WString path)
 {
     T100CPPScanner          scanner;
 
-    return scanner.done();
+    return scanner.done(path);
 }

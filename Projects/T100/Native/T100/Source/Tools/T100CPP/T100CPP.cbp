@@ -115,6 +115,7 @@
 		<Unit filename="T100CPPMain.h" />
 		<Unit filename="include/T100CPP/T100CPP.h" />
 		<Unit filename="include/T100CPP/T100CPPCommon.h" />
+		<Unit filename="include/T100CPP/T100CPPSetting.h" />
 		<Unit filename="include/T100CPP/T100CPPState.h" />
 		<Unit filename="include/T100CPP/T100CPPThisApp.h" />
 		<Unit filename="include/T100CPP/combiner/T100CPPCombiner.h" />
@@ -171,6 +172,7 @@
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/T100CPP/T100CPP.cpp" />
+		<Unit filename="src/T100CPP/T100CPPSetting.cpp" />
 		<Unit filename="src/T100CPP/T100CPPState.cpp" />
 		<Unit filename="src/T100CPP/T100CPPThisApp.cpp" />
 		<Unit filename="src/T100CPP/combiner/T100CPPCombiner.cpp" />
