@@ -11,6 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="-T" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-g" />
@@ -34,6 +35,7 @@
 					<Add directory="include/T100CPP/token" />
 					<Add directory="include/suite/test/cpptest" />
 					<Add directory="include/test" />
+					<Add directory="include/test/scanner" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -48,6 +50,7 @@
 				<Option object_output="obj/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
+				<Option parameters="-T" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-O2" />
@@ -70,6 +73,7 @@
 					<Add directory="include/T100CPP/token" />
 					<Add directory="include/suite/test/cpptest" />
 					<Add directory="include/test" />
+					<Add directory="include/test/scanner" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -102,6 +106,9 @@
 		<Unit filename="T100CPPMain.cpp" />
 		<Unit filename="T100CPPMain.h" />
 		<Unit filename="include/T100CPP/T100CPP.h" />
+		<Unit filename="include/T100CPP/T100CPPCommon.h" />
+		<Unit filename="include/T100CPP/T100CPPState.h" />
+		<Unit filename="include/T100CPP/T100CPPThisApp.h" />
 		<Unit filename="include/T100CPP/combiner/T100CPPCombiner.h" />
 		<Unit filename="include/T100CPP/compiler/T100CPPCompiler.h" />
 		<Unit filename="include/T100CPP/cppfile/T100CPPFile.h" />
@@ -134,6 +141,7 @@
 		<Unit filename="include/library/file/T100FileReader.h" />
 		<Unit filename="include/library/file/T100FileWriter.h" />
 		<Unit filename="include/native/T100Native.h" />
+		<Unit filename="include/suite/T100AppState.h" />
 		<Unit filename="include/suite/T100GrammarScanner.h" />
 		<Unit filename="include/suite/T100Suite.h" />
 		<Unit filename="include/suite/compile/token/T100ElementToken.h" />
@@ -143,10 +151,13 @@
 		<Unit filename="include/suite/compile/token/T100SentenceToken.h" />
 		<Unit filename="include/suite/test/cpptest/T100Test.h" />
 		<Unit filename="include/test/T100CPPTest.h" />
+		<Unit filename="include/test/scanner/T100CPPScannerTest.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/T100CPP/T100CPP.cpp" />
+		<Unit filename="src/T100CPP/T100CPPState.cpp" />
+		<Unit filename="src/T100CPP/T100CPPThisApp.cpp" />
 		<Unit filename="src/T100CPP/combiner/T100CPPCombiner.cpp" />
 		<Unit filename="src/T100CPP/compiler/T100CPPCompiler.cpp" />
 		<Unit filename="src/T100CPP/cppfile/T100CPPFile.cpp" />
@@ -178,6 +189,7 @@
 		<Unit filename="src/library/file/T100FileReader.cpp" />
 		<Unit filename="src/library/file/T100FileWriter.cpp" />
 		<Unit filename="src/native/T100Native.cpp" />
+		<Unit filename="src/suite/T100AppState.cpp" />
 		<Unit filename="src/suite/T100GrammarScanner.cpp" />
 		<Unit filename="src/suite/T100Suite.cpp" />
 		<Unit filename="src/suite/compile/token/T100ElementToken.cpp" />
@@ -187,6 +199,7 @@
 		<Unit filename="src/suite/compile/token/T100SentenceToken.cpp" />
 		<Unit filename="src/suite/test/cpptest/T100Test.cpp" />
 		<Unit filename="src/test/T100CPPTest.cpp" />
+		<Unit filename="src/test/scanner/T100CPPScannerTest.cpp" />
 		<Unit filename="test/test_main.cpp">
 			<Option target="Release" />
 		</Unit>

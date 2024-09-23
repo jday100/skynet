@@ -11,11 +11,17 @@
 #define T100CPPAPP_H
 
 #include <wx/app.h>
+#include "T100CPPState.h"
 
 class T100CPPApp : public wxApp
 {
     public:
         virtual bool OnInit();
+        virtual void OnInitCmdLine(wxCmdLineParser& parser);
+        virtual bool OnCmdLineError(wxCmdLineParser& parser);
+        virtual bool OnCmdLineParsed(wxCmdLineParser& parser);
+
+        T100CPPState        m_state;
 };
 
 #endif // T100CPPAPP_H
