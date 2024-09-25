@@ -170,7 +170,9 @@
 		<Unit filename="include/suite/T100AppState.h" />
 		<Unit filename="include/suite/T100GrammarScanner.h" />
 		<Unit filename="include/suite/T100Suite.h" />
+		<Unit filename="include/suite/compile/scanner/T100BufferScanner.h" />
 		<Unit filename="include/suite/compile/scanner/T100FileScanner.h" />
+		<Unit filename="include/suite/compile/token/T100BufferDataToken.h" />
 		<Unit filename="include/suite/compile/token/T100ElementToken.h" />
 		<Unit filename="include/suite/compile/token/T100FileDataToken.h" />
 		<Unit filename="include/suite/compile/token/T100KeywordToken.h" />
@@ -234,7 +236,9 @@
 		<Unit filename="src/suite/T100AppState.cpp" />
 		<Unit filename="src/suite/T100GrammarScanner.cpp" />
 		<Unit filename="src/suite/T100Suite.cpp" />
+		<Unit filename="src/suite/compile/scanner/T100BufferScanner.cpp" />
 		<Unit filename="src/suite/compile/scanner/T100FileScanner.cpp" />
+		<Unit filename="src/suite/compile/token/T100BufferDataToken.cpp" />
 		<Unit filename="src/suite/compile/token/T100ElementToken.cpp" />
 		<Unit filename="src/suite/compile/token/T100FileDataToken.cpp" />
 		<Unit filename="src/suite/compile/token/T100KeywordToken.cpp" />
