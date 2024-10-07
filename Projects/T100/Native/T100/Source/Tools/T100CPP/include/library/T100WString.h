@@ -19,6 +19,9 @@ class T100WString
 
         std::iostream operator<<(T100WString&);
 
+    public:
+        char*           ToStdChars();
+
     protected:
 
     private:

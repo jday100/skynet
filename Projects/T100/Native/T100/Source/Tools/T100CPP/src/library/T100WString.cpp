@@ -44,3 +44,8 @@ wchar_t* T100WString::data()
 {
     return m_wstring.data();
 }
+
+char* T100WString::ToStdChars()
+{
+
+}
