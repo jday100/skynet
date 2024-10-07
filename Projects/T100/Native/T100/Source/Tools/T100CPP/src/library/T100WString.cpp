@@ -21,7 +21,21 @@ T100WString::~T100WString()
     //dtor
 }
 
-T100WString& T100WString::operator=(wchar_t msg[0])
+T100WString& T100WString::operator=(const T100WString& msg)
+{
+    this->m_wstring = msg.m_wstring;
+    return *this;
+}
+
+T100WString& T100WString::operator+(const T100WString& msg)
+{
+    for(wchar_t item : msg.m_wstring){
+        this->m_wstring.push_back(item);
+    }
+    return *this;
+}
+
+T100WString& T100WString::operator=(const wchar_t msg[0])
 {
     int len         = 0;
 

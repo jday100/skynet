@@ -30,7 +30,10 @@ T100BOOL T100FileTest::text_test()
 T100BOOL T100FileTest::binary_test()
 {
     T100WString                 name;
-    T100File                    file;
+
+    name    = T100CPPSetting::GetTest(L"");
+
+    T100File                    file(name);
     T100BYTE*                   data        = T100NULL;
     T100INTEGER                 length      = 0;
 

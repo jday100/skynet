@@ -14,8 +14,9 @@ class T100WString
 
         wchar_t*        data();
 
-        T100WString&    operator=(T100WString&);
-        T100WString&    operator=(wchar_t[]);
+        T100WString&    operator=(const T100WString&);
+        T100WString&    operator+(const T100WString&);
+        T100WString&    operator=(const wchar_t[]);
 
         std::iostream operator<<(T100WString&);
 

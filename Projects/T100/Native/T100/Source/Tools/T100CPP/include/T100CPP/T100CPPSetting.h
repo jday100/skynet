@@ -9,7 +9,10 @@ class T100CPPSetting : public T100Setting
         T100CPPSetting();
         virtual ~T100CPPSetting();
 
-        T100WString         TEST_PATH       = L"test";
+        //T100WString         TEST_PATH       = L"test";
+        static T100WString      TEST_PATH;
+
+        static T100WString      GetTest(T100WString);
 
     protected:
 
