@@ -3,6 +3,7 @@
 
 #include "T100Common.h"
 #include "T100EditorMainMenu.h"
+#include "T100EditorMain.h"
 
 class T100EditorView
 {
@@ -22,12 +23,16 @@ class T100EditorView
 
         T100BOOL            quit();
 
+        T100VOID*           getFrame();
+        wxAuiManager*       getAuiManager();
+
     protected:
         T100VOID            create();
         T100VOID            destroy();
 
     private:
         T100EditorMainMenu*         m_main_menu         = T100NULL;
+        T100EditorFrame*            m_main_frame        = T100NULL;
 };
 
 #endif // T100EDITORVIEW_H

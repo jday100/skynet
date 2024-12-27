@@ -1,20 +1,25 @@
 #include "T100EditorView.h"
 
 #include <wx/filedlg.h>
+#include "T100EditorCtrl.h"
 
 T100EditorView::T100EditorView()
 {
     //ctor
+    create();
 }
 
 T100EditorView::~T100EditorView()
 {
     //dtor
+    destroy();
 }
 
 T100VOID T100EditorView::create()
 {
-    m_main_menu = T100NEW T100EditorMainMenu();
+    m_main_menu     = T100NEW T100EditorMainMenu();
+    m_main_frame    = T100NEW T100EditorFrame(0);
+
 }
 
 T100VOID T100EditorView::destroy()
@@ -22,9 +27,29 @@ T100VOID T100EditorView::destroy()
     T100SAFE_DELETE m_main_menu;
 }
 
+T100VOID* T100EditorView::getFrame()
+{
+    if(m_main_frame){
+        return m_main_frame;
+    }
+
+    return T100NULL;
+}
+
+wxAuiManager* T100EditorView::getAuiManager()
+{
+    if(m_main_frame){
+        return m_main_frame->getAuiManager();
+    }
+
+    return T100NULL;
+}
+
 T100BOOL T100EditorView::show()
 {
-
+    if(m_main_frame){
+        m_main_frame->Show();
+    }
 }
 
 T100BOOL T100EditorView::hide()
@@ -34,7 +59,12 @@ T100BOOL T100EditorView::hide()
 
 T100BOOL T100EditorView::renew()
 {
+    //m_manager->AddPane(m_projects_panel, wxAuiPaneInfo().Name(wxT("Projects")).BestSize(400, -1).Left());
 
+    T100EditorCtrl*     editor          = T100NEW T100EditorCtrl((wxWindow*)getFrame());
+
+    getAuiManager()->AddPane(editor, wxAuiPaneInfo().Name(wxT("unnamed")).BestSize(400, -1).Center());
+    getAuiManager()->Update();
 }
 
 T100BOOL T100EditorView::open()

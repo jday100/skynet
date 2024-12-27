@@ -14,10 +14,13 @@
 #include <wx/image.h>
 //*)
 
+#include "T100Editor.h"
+
 IMPLEMENT_APP(T100EditorApp);
 
 bool T100EditorApp::OnInit()
 {
+    /*DONT DELETE THIS
     //(*AppInitialize
     bool wxsOK = true;
     wxInitAllImageHandlers();
@@ -29,5 +32,17 @@ bool T100EditorApp::OnInit()
     }
     //*)
     return wxsOK;
+    */
 
+    //(*AppInitialize
+    bool wxsOK = true;
+    wxInitAllImageHandlers();
+    if ( wxsOK )
+    {
+        T100Editor* editor = new T100Editor();
+        editor->run();
+        SetTopWindow((wxWindow*)editor->getFrame());
+    }
+    //*)
+    return wxsOK;
 }

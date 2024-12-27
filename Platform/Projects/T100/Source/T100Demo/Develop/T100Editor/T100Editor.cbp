@@ -21,6 +21,8 @@
 					<Add directory="include/store" />
 					<Add directory="include/wx" />
 					<Add directory="../../../T100Native/include" />
+					<Add directory="include" />
+					<Add directory="." />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -43,6 +45,7 @@
 					<Add directory="include/serve" />
 					<Add directory="include/store" />
 					<Add directory="include/wx" />
+					<Add directory="include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -74,6 +77,7 @@
 		<Unit filename="T100EditorApp.h" />
 		<Unit filename="T100EditorMain.cpp" />
 		<Unit filename="T100EditorMain.h" />
+		<Unit filename="include/T100Editor.h" />
 		<Unit filename="include/serve/T100EditorCallback.h" />
 		<Unit filename="include/serve/T100EditorServe.h" />
 		<Unit filename="include/store/T100EditorStore.h" />
@@ -83,6 +87,7 @@
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/T100Editor.cpp" />
 		<Unit filename="src/serve/T100EditorCallback.cpp" />
 		<Unit filename="src/serve/T100EditorServe.cpp" />
 		<Unit filename="src/store/T100EditorStore.cpp" />

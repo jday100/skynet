@@ -24,6 +24,8 @@ class T100EditorFrame: public wxFrame
         T100EditorFrame(wxWindow* parent,wxWindowID id = -1);
         virtual ~T100EditorFrame();
 
+        wxAuiManager*           getAuiManager();
+
     private:
 
         //(*Handlers(T100EditorFrame)
@@ -58,7 +60,7 @@ class T100EditorFrame: public wxFrame
         //*)
 
         //(*Declarations(T100EditorFrame)
-        wxAuiManager* AuiManager1;
+        wxAuiManager* AuiManager;
         wxAuiNotebook* AuiNotebook1;
         wxAuiToolBar* AuiToolBar1;
         wxMenu* Menu3;

@@ -80,14 +80,14 @@ T100EditorFrame::T100EditorFrame(wxWindow* parent,wxWindowID id)
     wxMenuItem* MenuItem2;
 
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
-    AuiManager1 = new wxAuiManager(this, wxAUI_MGR_DEFAULT);
+    AuiManager = new wxAuiManager(this, wxAUI_MGR_DEFAULT);
     AuiToolBar1 = new wxAuiToolBar(this, ID_AUITOOLBAR1, wxPoint(135,253), wxDefaultSize, wxAUI_TB_DEFAULT_STYLE);
     AuiToolBar1->AddTool(ID_AUITOOLBARITEM1, _("Item label"), wxNullBitmap, wxNullBitmap, wxITEM_NORMAL, wxEmptyString, wxEmptyString, NULL);
     AuiToolBar1->Realize();
-    AuiManager1->AddPane(AuiToolBar1, wxAuiPaneInfo().Name(_T("PaneName0")).ToolbarPane().Caption(_("Pane caption")).Layer(10).Top().Gripper());
+    AuiManager->AddPane(AuiToolBar1, wxAuiPaneInfo().Name(_T("PaneName0")).ToolbarPane().Caption(_("Pane caption")).Layer(10).Top().Gripper());
     AuiNotebook1 = new wxAuiNotebook(this, ID_AUINOTEBOOK1, wxPoint(89,266), wxDefaultSize, wxAUI_NB_DEFAULT_STYLE);
-    AuiManager1->AddPane(AuiNotebook1, wxAuiPaneInfo().Name(_T("PaneName1")).DefaultPane().Caption(_("Pane caption")).CaptionVisible().Left());
-    AuiManager1->Update();
+    AuiManager->AddPane(AuiNotebook1, wxAuiPaneInfo().Name(_T("PaneName1")).DefaultPane().Caption(_("Pane caption")).CaptionVisible().Left());
+    AuiManager->Update();
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
     MenuItemNew = new wxMenuItem(Menu1, ID_MENUITEM_NEW, _("New"), wxEmptyString, wxITEM_NORMAL);
@@ -155,6 +155,11 @@ T100EditorFrame::~T100EditorFrame()
 {
     //(*Destroy(T100EditorFrame)
     //*)
+}
+
+wxAuiManager* T100EditorFrame::getAuiManager()
+{
+    return AuiManager;
 }
 
 void T100EditorFrame::OnQuit(wxCommandEvent& event)
