@@ -15,6 +15,7 @@
 					<Add option="-g" />
 					<Add directory="include/common" />
 					<Add directory="include" />
+					<Add directory="include/io/file" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -26,6 +27,7 @@
 					<Add option="-O2" />
 					<Add directory="include/common" />
 					<Add directory="include" />
+					<Add directory="include/io/file" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -39,9 +41,11 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/common/T100DataTypes.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
+		<Unit filename="include/io/file/T100File.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/common/T100DataTypes.cpp" />
 		<Unit filename="src/common/T100StringTypes.cpp" />
+		<Unit filename="src/io/file/T100File.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
