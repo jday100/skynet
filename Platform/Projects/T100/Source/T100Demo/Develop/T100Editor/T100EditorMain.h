@@ -42,11 +42,29 @@ class T100EditorFrame: public wxFrame
         static const long ID_MENUITEM_SAVE;
         static const long ID_MENUITEM_SAVE_AS;
         static const long idMenuQuit;
+        static const long ID_MENUITEM1;
+        static const long ID_MENUITEM2;
+        static const long ID_MENUITEM3;
+        static const long ID_MENUITEM4;
+        static const long ID_MENUITEM5;
+        static const long ID_MENUITEM6;
+        static const long ID_MENUITEM7;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
         //*)
 
         //(*Declarations(T100EditorFrame)
+        wxMenu* Menu3;
+        wxMenu* Menu4;
+        wxMenu* Menu5;
+        wxMenu* Menu6;
+        wxMenuItem* MenuItem3;
+        wxMenuItem* MenuItem4;
+        wxMenuItem* MenuItem5;
+        wxMenuItem* MenuItem6;
+        wxMenuItem* MenuItem7;
+        wxMenuItem* MenuItem8;
+        wxMenuItem* MenuItem9;
         wxMenuItem* MenuItemClose;
         wxMenuItem* MenuItemNew;
         wxMenuItem* MenuItemOpen;
