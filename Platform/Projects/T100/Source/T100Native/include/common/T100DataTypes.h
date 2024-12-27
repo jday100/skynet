@@ -2,15 +2,10 @@
 #define T100DATATYPES_H
 
 
-class T100DataTypes
-{
-    public:
-        T100DataTypes();
-        virtual ~T100DataTypes();
-
-    protected:
-
-    private:
-};
+#define     T100VOID            void
+#define     T100NULL            nullptr
+#define     T100BOOL            bool
+#define     T100TRUE            true
+#define     T100FALSE           false
 
 #endif // T100DATATYPES_H

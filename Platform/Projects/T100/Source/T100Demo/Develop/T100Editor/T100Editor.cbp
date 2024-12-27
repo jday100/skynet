@@ -20,6 +20,7 @@
 					<Add directory="include/serve" />
 					<Add directory="include/store" />
 					<Add directory="include/wx" />
+					<Add directory="../../../T100Native/include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
