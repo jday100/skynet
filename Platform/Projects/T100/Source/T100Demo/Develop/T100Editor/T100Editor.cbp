@@ -16,6 +16,10 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/store" />
+					<Add directory="include/wx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -34,6 +38,10 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/store" />
+					<Add directory="include/wx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -65,9 +73,19 @@
 		<Unit filename="T100EditorApp.h" />
 		<Unit filename="T100EditorMain.cpp" />
 		<Unit filename="T100EditorMain.h" />
+		<Unit filename="include/serve/T100EditorServe.h" />
+		<Unit filename="include/store/T100EditorStore.h" />
+		<Unit filename="include/view/T100EditorMainMenu.h" />
+		<Unit filename="include/view/T100EditorView.h" />
+		<Unit filename="include/wx/T100EditorCtrl.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/serve/T100EditorServe.cpp" />
+		<Unit filename="src/store/T100EditorStore.cpp" />
+		<Unit filename="src/view/T100EditorMainMenu.cpp" />
+		<Unit filename="src/view/T100EditorView.cpp" />
+		<Unit filename="src/wx/T100EditorCtrl.cpp" />
 		<Unit filename="wxsmith/T100Editorframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
