@@ -74,6 +74,7 @@
 		<Unit filename="T100EditorApp.h" />
 		<Unit filename="T100EditorMain.cpp" />
 		<Unit filename="T100EditorMain.h" />
+		<Unit filename="include/serve/T100EditorCallback.h" />
 		<Unit filename="include/serve/T100EditorServe.h" />
 		<Unit filename="include/store/T100EditorStore.h" />
 		<Unit filename="include/view/T100EditorMainMenu.h" />
@@ -82,6 +83,7 @@
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/serve/T100EditorCallback.cpp" />
 		<Unit filename="src/serve/T100EditorServe.cpp" />
 		<Unit filename="src/store/T100EditorStore.cpp" />
 		<Unit filename="src/view/T100EditorMainMenu.cpp" />

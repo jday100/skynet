@@ -29,3 +29,8 @@ T100BOOL T100EditorView::hide()
 {
 
 }
+
+T100BOOL T100EditorView::open()
+{
+
+}

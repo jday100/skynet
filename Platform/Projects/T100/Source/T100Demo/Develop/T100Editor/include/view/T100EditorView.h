@@ -13,6 +13,8 @@ class T100EditorView
         T100BOOL            show();
         T100BOOL            hide();
 
+        T100BOOL            open();
+
     protected:
         T100VOID            create();
         T100VOID            destroy();

@@ -41,7 +41,15 @@ wxString wxbuildinfo(wxbuildinfoformat format)
     return wxbuild;
 }
 
+
+#include "T100EditorCallback.h"
+
 //(*IdInit(T100EditorFrame)
+const long T100EditorFrame::ID_MENUITEM_NEW = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_OPEN = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_CLOSE = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_SAVE = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_SAVE_AS = wxNewId();
 const long T100EditorFrame::idMenuQuit = wxNewId();
 const long T100EditorFrame::idMenuAbout = wxNewId();
 const long T100EditorFrame::ID_STATUSBAR1 = wxNewId();
@@ -64,6 +72,18 @@ T100EditorFrame::T100EditorFrame(wxWindow* parent,wxWindowID id)
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
+    MenuItemNew = new wxMenuItem(Menu1, ID_MENUITEM_NEW, _("New"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemNew);
+    MenuItemOpen = new wxMenuItem(Menu1, ID_MENUITEM_OPEN, _("Open..."), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemOpen);
+    MenuItemClose = new wxMenuItem(Menu1, ID_MENUITEM_CLOSE, _("Close"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemClose);
+    Menu1->AppendSeparator();
+    MenuItemSave = new wxMenuItem(Menu1, ID_MENUITEM_SAVE, _("Save"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemSave);
+    MenuItemSaveAs = new wxMenuItem(Menu1, ID_MENUITEM_SAVE_AS, _("Save As..."), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemSaveAs);
+    Menu1->AppendSeparator();
     MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
     Menu1->Append(MenuItem1);
     MenuBar1->Append(Menu1, _("&File"));
@@ -79,6 +99,11 @@ T100EditorFrame::T100EditorFrame(wxWindow* parent,wxWindowID id)
     StatusBar1->SetStatusStyles(1,__wxStatusBarStyles_1);
     SetStatusBar(StatusBar1);
 
+    Connect(ID_MENUITEM_NEW,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemNewSelected);
+    Connect(ID_MENUITEM_OPEN,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemOpenSelected);
+    Connect(ID_MENUITEM_CLOSE,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemCloseSelected);
+    Connect(ID_MENUITEM_SAVE,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemSaveSelected);
+    Connect(ID_MENUITEM_SAVE_AS,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemSaveAsSelected);
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnAbout);
     //*)
@@ -99,4 +124,29 @@ void T100EditorFrame::OnAbout(wxCommandEvent& event)
 {
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
+}
+
+void T100EditorFrame::OnMenuItemNewSelected(wxCommandEvent& event)
+{
+    T100EditorCallback::OnMenuNewSelected();
+}
+
+void T100EditorFrame::OnMenuItemOpenSelected(wxCommandEvent& event)
+{
+    T100EditorCallback::OnMenuOpenSelected();
+}
+
+void T100EditorFrame::OnMenuItemCloseSelected(wxCommandEvent& event)
+{
+    T100EditorCallback::OnMenuCloseSelected();
+}
+
+void T100EditorFrame::OnMenuItemSaveSelected(wxCommandEvent& event)
+{
+    T100EditorCallback::OnMenuSaveSelected();
+}
+
+void T100EditorFrame::OnMenuItemSaveAsSelected(wxCommandEvent& event)
+{
+    T100EditorCallback::OnMenuSaveAsSelected();
 }
