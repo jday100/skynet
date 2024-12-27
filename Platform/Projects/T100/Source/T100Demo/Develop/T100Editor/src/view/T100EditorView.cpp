@@ -30,7 +30,32 @@ T100BOOL T100EditorView::hide()
 
 }
 
+T100BOOL T100EditorView::renew()
+{
+
+}
+
 T100BOOL T100EditorView::open()
+{
+
+}
+
+T100BOOL T100EditorView::close()
+{
+
+}
+
+T100BOOL T100EditorView::save()
+{
+
+}
+
+T100BOOL T100EditorView::save_as()
+{
+
+}
+
+T100BOOL T100EditorView::quit()
 {
 
 }

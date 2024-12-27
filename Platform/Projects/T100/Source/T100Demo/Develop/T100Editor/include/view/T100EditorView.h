@@ -13,7 +13,14 @@ class T100EditorView
         T100BOOL            show();
         T100BOOL            hide();
 
+        T100BOOL            renew();
         T100BOOL            open();
+        T100BOOL            close();
+
+        T100BOOL            save();
+        T100BOOL            save_as();
+
+        T100BOOL            quit();
 
     protected:
         T100VOID            create();
