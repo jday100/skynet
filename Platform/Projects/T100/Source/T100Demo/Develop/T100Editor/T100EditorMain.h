@@ -17,6 +17,8 @@
 #include <wx/statusbr.h>
 //*)
 
+#include "T100Common.h"
+
 class T100EditorFrame: public wxFrame
 {
     public:
@@ -25,6 +27,10 @@ class T100EditorFrame: public wxFrame
         virtual ~T100EditorFrame();
 
         wxAuiManager*           getAuiManager();
+
+    private:
+        T100VOID                create();
+        T100VOID                destroy();
 
     private:
 

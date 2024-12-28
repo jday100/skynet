@@ -149,12 +149,26 @@ T100EditorFrame::T100EditorFrame(wxWindow* parent,wxWindowID id)
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnAbout);
     //*)
+
+    create();
 }
 
 T100EditorFrame::~T100EditorFrame()
 {
     //(*Destroy(T100EditorFrame)
     //*)
+
+    destroy();
+}
+
+T100VOID T100EditorFrame::create()
+{
+
+}
+
+T100VOID T100EditorFrame::destroy()
+{
+    AuiManager->UnInit();
 }
 
 wxAuiManager* T100EditorFrame::getAuiManager()

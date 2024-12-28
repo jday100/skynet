@@ -73,8 +73,8 @@ T100BOOL T100EditorView::open()
 
     if(wxID_CANCEL == dialog.ShowModal())return T100FALSE;
 
-    //FileComboBox->Append(FileComboBox->GetValue());
-    //FileComboBox->SetValue(dialog.GetPath());
+    wxString    result      = dialog.GetPath();
+
 }
 
 T100BOOL T100EditorView::close()
