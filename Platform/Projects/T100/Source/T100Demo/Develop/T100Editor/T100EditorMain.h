@@ -42,6 +42,13 @@ class T100EditorFrame: public wxFrame
         void OnMenuItemCloseSelected(wxCommandEvent& event);
         void OnMenuItemSaveSelected(wxCommandEvent& event);
         void OnMenuItemSaveAsSelected(wxCommandEvent& event);
+        void OnMenuItemUndoSelected(wxCommandEvent& event);
+        void OnMenuItemRedoSelected(wxCommandEvent& event);
+        void OnMenuItemCutSelected(wxCommandEvent& event);
+        void OnMenuItemCopySelected(wxCommandEvent& event);
+        void OnMenuItemPasteSelected(wxCommandEvent& event);
+        void OnMenuItemFindSelected(wxCommandEvent& event);
+        void OnMenuItemReplaceSelected(wxCommandEvent& event);
         //*)
 
         //(*Identifiers(T100EditorFrame)
@@ -54,13 +61,13 @@ class T100EditorFrame: public wxFrame
         static const long ID_MENUITEM_SAVE;
         static const long ID_MENUITEM_SAVE_AS;
         static const long idMenuQuit;
-        static const long ID_MENUITEM1;
-        static const long ID_MENUITEM2;
-        static const long ID_MENUITEM3;
-        static const long ID_MENUITEM4;
-        static const long ID_MENUITEM5;
-        static const long ID_MENUITEM6;
-        static const long ID_MENUITEM7;
+        static const long ID_MENUITEM_UNDO;
+        static const long ID_MENUITEM_REDO;
+        static const long ID_MENUITEM_CUT;
+        static const long ID_MENUITEM_COPY;
+        static const long ID_MENUITEM_PASTE;
+        static const long ID_MENUITEM_FIND;
+        static const long ID_MENUITEM_REPLACE;
         static const long idMenuAbout;
         static const long ID_STATUSBAR1;
         //*)
@@ -73,18 +80,18 @@ class T100EditorFrame: public wxFrame
         wxMenu* Menu4;
         wxMenu* Menu5;
         wxMenu* Menu6;
-        wxMenuItem* MenuItem3;
-        wxMenuItem* MenuItem4;
-        wxMenuItem* MenuItem5;
-        wxMenuItem* MenuItem6;
-        wxMenuItem* MenuItem7;
-        wxMenuItem* MenuItem8;
-        wxMenuItem* MenuItem9;
         wxMenuItem* MenuItemClose;
+        wxMenuItem* MenuItemCopy;
+        wxMenuItem* MenuItemCut;
+        wxMenuItem* MenuItemFind;
         wxMenuItem* MenuItemNew;
         wxMenuItem* MenuItemOpen;
+        wxMenuItem* MenuItemPaste;
+        wxMenuItem* MenuItemRedo;
+        wxMenuItem* MenuItemReplace;
         wxMenuItem* MenuItemSave;
         wxMenuItem* MenuItemSaveAs;
+        wxMenuItem* MenuItemUndo;
         wxStatusBar* StatusBar1;
         //*)
 

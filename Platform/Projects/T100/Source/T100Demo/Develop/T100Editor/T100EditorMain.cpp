@@ -54,13 +54,13 @@ const long T100EditorFrame::ID_MENUITEM_CLOSE = wxNewId();
 const long T100EditorFrame::ID_MENUITEM_SAVE = wxNewId();
 const long T100EditorFrame::ID_MENUITEM_SAVE_AS = wxNewId();
 const long T100EditorFrame::idMenuQuit = wxNewId();
-const long T100EditorFrame::ID_MENUITEM1 = wxNewId();
-const long T100EditorFrame::ID_MENUITEM2 = wxNewId();
-const long T100EditorFrame::ID_MENUITEM3 = wxNewId();
-const long T100EditorFrame::ID_MENUITEM4 = wxNewId();
-const long T100EditorFrame::ID_MENUITEM5 = wxNewId();
-const long T100EditorFrame::ID_MENUITEM6 = wxNewId();
-const long T100EditorFrame::ID_MENUITEM7 = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_UNDO = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_REDO = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_CUT = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_COPY = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_PASTE = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_FIND = wxNewId();
+const long T100EditorFrame::ID_MENUITEM_REPLACE = wxNewId();
 const long T100EditorFrame::idMenuAbout = wxNewId();
 const long T100EditorFrame::ID_STATUSBAR1 = wxNewId();
 //*)
@@ -106,26 +106,26 @@ T100EditorFrame::T100EditorFrame(wxWindow* parent,wxWindowID id)
     Menu1->Append(MenuItem1);
     MenuBar1->Append(Menu1, _("&File"));
     Menu3 = new wxMenu();
-    MenuItem3 = new wxMenuItem(Menu3, ID_MENUITEM1, _("Undo"), wxEmptyString, wxITEM_NORMAL);
-    Menu3->Append(MenuItem3);
-    MenuItem4 = new wxMenuItem(Menu3, ID_MENUITEM2, _("Redo"), wxEmptyString, wxITEM_NORMAL);
-    Menu3->Append(MenuItem4);
+    MenuItemUndo = new wxMenuItem(Menu3, ID_MENUITEM_UNDO, _("Undo"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemUndo);
+    MenuItemRedo = new wxMenuItem(Menu3, ID_MENUITEM_REDO, _("Redo"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemRedo);
     Menu3->AppendSeparator();
-    MenuItem5 = new wxMenuItem(Menu3, ID_MENUITEM3, _("Cut"), wxEmptyString, wxITEM_NORMAL);
-    Menu3->Append(MenuItem5);
-    MenuItem6 = new wxMenuItem(Menu3, ID_MENUITEM4, _("Copy"), wxEmptyString, wxITEM_NORMAL);
-    Menu3->Append(MenuItem6);
-    MenuItem7 = new wxMenuItem(Menu3, ID_MENUITEM5, _("Paste"), wxEmptyString, wxITEM_NORMAL);
-    Menu3->Append(MenuItem7);
+    MenuItemCut = new wxMenuItem(Menu3, ID_MENUITEM_CUT, _("Cut"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemCut);
+    MenuItemCopy = new wxMenuItem(Menu3, ID_MENUITEM_COPY, _("Copy"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemCopy);
+    MenuItemPaste = new wxMenuItem(Menu3, ID_MENUITEM_PASTE, _("Paste"), wxEmptyString, wxITEM_NORMAL);
+    Menu3->Append(MenuItemPaste);
     MenuBar1->Append(Menu3, _("Edit"));
     Menu4 = new wxMenu();
     MenuBar1->Append(Menu4, _("View"));
     Menu5 = new wxMenu();
-    MenuItem8 = new wxMenuItem(Menu5, ID_MENUITEM6, _("Find"), wxEmptyString, wxITEM_NORMAL);
-    Menu5->Append(MenuItem8);
+    MenuItemFind = new wxMenuItem(Menu5, ID_MENUITEM_FIND, _("Find"), wxEmptyString, wxITEM_NORMAL);
+    Menu5->Append(MenuItemFind);
     Menu5->AppendSeparator();
-    MenuItem9 = new wxMenuItem(Menu5, ID_MENUITEM7, _("Replace"), wxEmptyString, wxITEM_NORMAL);
-    Menu5->Append(MenuItem9);
+    MenuItemReplace = new wxMenuItem(Menu5, ID_MENUITEM_REPLACE, _("Replace"), wxEmptyString, wxITEM_NORMAL);
+    Menu5->Append(MenuItemReplace);
     MenuBar1->Append(Menu5, _("Search"));
     Menu6 = new wxMenu();
     MenuBar1->Append(Menu6, _("Settings"));
@@ -147,6 +147,13 @@ T100EditorFrame::T100EditorFrame(wxWindow* parent,wxWindowID id)
     Connect(ID_MENUITEM_SAVE,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemSaveSelected);
     Connect(ID_MENUITEM_SAVE_AS,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemSaveAsSelected);
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnQuit);
+    Connect(ID_MENUITEM_UNDO,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemUndoSelected);
+    Connect(ID_MENUITEM_REDO,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemRedoSelected);
+    Connect(ID_MENUITEM_CUT,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemCutSelected);
+    Connect(ID_MENUITEM_COPY,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemCopySelected);
+    Connect(ID_MENUITEM_PASTE,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemPasteSelected);
+    Connect(ID_MENUITEM_FIND,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemFindSelected);
+    Connect(ID_MENUITEM_REPLACE,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnMenuItemReplaceSelected);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100EditorFrame::OnAbout);
     //*)
 
@@ -210,4 +217,32 @@ void T100EditorFrame::OnMenuItemSaveSelected(wxCommandEvent& event)
 void T100EditorFrame::OnMenuItemSaveAsSelected(wxCommandEvent& event)
 {
     T100EditorCallback::OnMenuSaveAsSelected();
+}
+
+void T100EditorFrame::OnMenuItemUndoSelected(wxCommandEvent& event)
+{
+}
+
+void T100EditorFrame::OnMenuItemRedoSelected(wxCommandEvent& event)
+{
+}
+
+void T100EditorFrame::OnMenuItemCutSelected(wxCommandEvent& event)
+{
+}
+
+void T100EditorFrame::OnMenuItemCopySelected(wxCommandEvent& event)
+{
+}
+
+void T100EditorFrame::OnMenuItemPasteSelected(wxCommandEvent& event)
+{
+}
+
+void T100EditorFrame::OnMenuItemFindSelected(wxCommandEvent& event)
+{
+}
+
+void T100EditorFrame::OnMenuItemReplaceSelected(wxCommandEvent& event)
+{
 }

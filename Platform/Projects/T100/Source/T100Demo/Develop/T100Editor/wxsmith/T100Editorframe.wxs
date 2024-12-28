@@ -75,21 +75,26 @@
 			</object>
 			<object class="wxMenu" variable="Menu3" member="yes">
 				<label>Edit</label>
-				<object class="wxMenuItem" name="ID_MENUITEM1" variable="MenuItem3" member="yes">
+				<object class="wxMenuItem" name="ID_MENUITEM_UNDO" variable="MenuItemUndo" member="yes">
 					<label>Undo</label>
+					<handler function="OnMenuItemUndoSelected" entry="EVT_MENU" />
 				</object>
-				<object class="wxMenuItem" name="ID_MENUITEM2" variable="MenuItem4" member="yes">
+				<object class="wxMenuItem" name="ID_MENUITEM_REDO" variable="MenuItemRedo" member="yes">
 					<label>Redo</label>
+					<handler function="OnMenuItemRedoSelected" entry="EVT_MENU" />
 				</object>
 				<object class="separator" />
-				<object class="wxMenuItem" name="ID_MENUITEM3" variable="MenuItem5" member="yes">
+				<object class="wxMenuItem" name="ID_MENUITEM_CUT" variable="MenuItemCut" member="yes">
 					<label>Cut</label>
+					<handler function="OnMenuItemCutSelected" entry="EVT_MENU" />
 				</object>
-				<object class="wxMenuItem" name="ID_MENUITEM4" variable="MenuItem6" member="yes">
+				<object class="wxMenuItem" name="ID_MENUITEM_COPY" variable="MenuItemCopy" member="yes">
 					<label>Copy</label>
+					<handler function="OnMenuItemCopySelected" entry="EVT_MENU" />
 				</object>
-				<object class="wxMenuItem" name="ID_MENUITEM5" variable="MenuItem7" member="yes">
+				<object class="wxMenuItem" name="ID_MENUITEM_PASTE" variable="MenuItemPaste" member="yes">
 					<label>Paste</label>
+					<handler function="OnMenuItemPasteSelected" entry="EVT_MENU" />
 				</object>
 			</object>
 			<object class="wxMenu" variable="Menu4" member="yes">
@@ -97,12 +102,14 @@
 			</object>
 			<object class="wxMenu" variable="Menu5" member="yes">
 				<label>Search</label>
-				<object class="wxMenuItem" name="ID_MENUITEM6" variable="MenuItem8" member="yes">
+				<object class="wxMenuItem" name="ID_MENUITEM_FIND" variable="MenuItemFind" member="yes">
 					<label>Find</label>
+					<handler function="OnMenuItemFindSelected" entry="EVT_MENU" />
 				</object>
 				<object class="separator" />
-				<object class="wxMenuItem" name="ID_MENUITEM7" variable="MenuItem9" member="yes">
+				<object class="wxMenuItem" name="ID_MENUITEM_REPLACE" variable="MenuItemReplace" member="yes">
 					<label>Replace</label>
+					<handler function="OnMenuItemReplaceSelected" entry="EVT_MENU" />
 				</object>
 			</object>
 			<object class="wxMenu" variable="Menu6" member="yes">
