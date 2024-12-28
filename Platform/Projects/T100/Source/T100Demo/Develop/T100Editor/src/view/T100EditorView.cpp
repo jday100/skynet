@@ -45,6 +45,24 @@ wxAuiManager* T100EditorView::getAuiManager()
     return T100NULL;
 }
 
+T100VOID T100EditorView::getCurrent()
+{
+
+}
+
+T100BOOL T100EditorView::load(T100WString& filename)
+{
+    T100EditorCtrl*     editor          = T100NULL;
+
+
+    wxFrame*    frame  = m_main_frame->getAuiManager()->GetPane(wxT("center")).CenterPane().frame;
+}
+
+T100BOOL T100EditorView::save(T100WString& filename)
+{
+
+}
+
 T100BOOL T100EditorView::show()
 {
     if(m_main_frame){
@@ -67,7 +85,7 @@ T100BOOL T100EditorView::renew()
     getAuiManager()->Update();
 }
 
-T100BOOL T100EditorView::open()
+T100BOOL T100EditorView::open(T100WString& filename)
 {
     wxFileDialog        dialog(T100NULL, _("Please select a file"), "", "", "All files(*.*)|*.*", wxFD_OPEN, wxDefaultPosition, wxDefaultSize, _("Select a file:"));
 
@@ -75,6 +93,9 @@ T100BOOL T100EditorView::open()
 
     wxString    result      = dialog.GetPath();
 
+    //filename    = result.ToStdWstring();
+
+    return T100TRUE;
 }
 
 T100BOOL T100EditorView::close()

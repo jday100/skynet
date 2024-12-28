@@ -11,7 +11,7 @@ class T100EditorServe
         virtual ~T100EditorServe();
 
         T100BOOL            renew();
-        T100BOOL            open();
+        T100BOOL            open(T100WString&);
         T100BOOL            close();
 
         T100BOOL            save();

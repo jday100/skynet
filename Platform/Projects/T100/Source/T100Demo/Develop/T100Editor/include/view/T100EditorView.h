@@ -11,11 +11,14 @@ class T100EditorView
         T100EditorView();
         virtual ~T100EditorView();
 
+        T100BOOL            load(T100WString&);
+        T100BOOL            save(T100WString&);
+
         T100BOOL            show();
         T100BOOL            hide();
 
         T100BOOL            renew();
-        T100BOOL            open();
+        T100BOOL            open(T100WString&);
         T100BOOL            close();
 
         T100BOOL            save();
@@ -25,6 +28,8 @@ class T100EditorView
 
         T100VOID*           getFrame();
         wxAuiManager*       getAuiManager();
+
+        T100VOID            getCurrent();
 
     protected:
         T100VOID            create();

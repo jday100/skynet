@@ -21,7 +21,21 @@ T100VOID T100EditorCallback::OnMenuNewSelected()
 
 T100VOID T100EditorCallback::OnMenuOpenSelected()
 {
-    m_view->open();
+    T100BOOL            result          = T100FALSE;
+    T100WString         filename;
+
+    result  = m_view->open(filename);
+    if(result){
+        result  = m_serve->open(filename);
+    }
+
+    if(result){
+        result  = m_view->renew();
+    }
+
+    if(result){
+        result  = m_view->load(filename);
+    }
 }
 
 T100VOID T100EditorCallback::OnMenuCloseSelected()
