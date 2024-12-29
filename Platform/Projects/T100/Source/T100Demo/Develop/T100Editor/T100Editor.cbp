@@ -23,6 +23,7 @@
 					<Add directory="../../../T100Native/include" />
 					<Add directory="include" />
 					<Add directory="." />
+					<Add directory="include/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -47,6 +48,7 @@
 					<Add directory="include/store" />
 					<Add directory="include/wx" />
 					<Add directory="include" />
+					<Add directory="include/task" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -79,12 +81,19 @@
 		<Unit filename="T100EditorMain.cpp" />
 		<Unit filename="T100EditorMain.h" />
 		<Unit filename="include/T100Editor.h" />
+		<Unit filename="include/T100EditorCommon.h" />
 		<Unit filename="include/serve/T100EditorCallback.h" />
 		<Unit filename="include/serve/T100EditorServe.h" />
 		<Unit filename="include/store/T100EditorStore.h" />
+		<Unit filename="include/task/T100LoadTask.h" />
+		<Unit filename="include/task/T100SaveTask.h" />
+		<Unit filename="include/task/T100Task.h" />
+		<Unit filename="include/task/T100WxThreadTask.h" />
 		<Unit filename="include/view/T100EditorMainMenu.h" />
 		<Unit filename="include/view/T100EditorView.h" />
+		<Unit filename="include/view/T100EditorWindowsManager.h" />
 		<Unit filename="include/wx/T100EditorCtrl.h" />
+		<Unit filename="include/wx/T100MainPanel.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
@@ -92,16 +101,24 @@
 		<Unit filename="src/serve/T100EditorCallback.cpp" />
 		<Unit filename="src/serve/T100EditorServe.cpp" />
 		<Unit filename="src/store/T100EditorStore.cpp" />
+		<Unit filename="src/task/T100LoadTask.cpp" />
+		<Unit filename="src/task/T100SaveTask.cpp" />
+		<Unit filename="src/task/T100Task.cpp" />
+		<Unit filename="src/task/T100WxThreadTask.cpp" />
 		<Unit filename="src/view/T100EditorMainMenu.cpp" />
 		<Unit filename="src/view/T100EditorView.cpp" />
+		<Unit filename="src/view/T100EditorWindowsManager.cpp" />
 		<Unit filename="src/wx/T100EditorCtrl.cpp" />
+		<Unit filename="src/wx/T100MainPanel.cpp" />
 		<Unit filename="wxsmith/T100Editorframe.wxs" />
+		<Unit filename="wxsmith/T100MainPanel.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 			<wxsmith version="1">
 				<gui name="wxWidgets" src="T100EditorApp.cpp" main="T100EditorFrame" init_handlers="necessary" language="CPP" />
 				<resources>
 					<wxFrame wxs="wxsmith/T100Editorframe.wxs" src="T100EditorMain.cpp" hdr="T100EditorMain.h" fwddecl="0" i18n="1" name="T100EditorFrame" language="CPP" />
+					<wxPanel wxs="wxsmith/T100MainPanel.wxs" src="src\wx\T100MainPanel.cpp" hdr="include\wx\T100MainPanel.h" fwddecl="0" i18n="1" name="T100MainPanel" language="CPP" />
 				</resources>
 			</wxsmith>
 		</Extensions>

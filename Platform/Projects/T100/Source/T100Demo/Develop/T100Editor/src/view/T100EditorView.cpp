@@ -1,7 +1,10 @@
 #include "T100EditorView.h"
 
 #include <wx/filedlg.h>
+#include "T100EditorCommon.h"
 #include "T100EditorCtrl.h"
+
+#include "T100MainPanel.h"
 
 T100EditorView::T100EditorView()
 {
@@ -20,6 +23,11 @@ T100VOID T100EditorView::create()
     m_main_menu     = T100NEW T100EditorMainMenu();
     m_main_frame    = T100NEW T100EditorFrame(0);
 
+    T100MainPanel*  panel = T100NEW T100MainPanel(m_main_frame);
+    m_manager       = T100NEW T100EditorWindowsManager(panel);
+
+    getAuiManager()->AddPane(panel, wxAuiPaneInfo().Name(wxT("center")).BestSize(400, -1).Center());
+    getAuiManager()->Update();
 }
 
 T100VOID T100EditorView::destroy()
@@ -55,7 +63,15 @@ T100BOOL T100EditorView::load(T100WString& filename)
     T100EditorCtrl*     editor          = T100NULL;
 
 
-    wxFrame*    frame  = m_main_frame->getAuiManager()->GetPane(wxT("center")).CenterPane().frame;
+    editor  = m_manager->getCurrent();
+
+    if(editor){
+        wxString        result;
+
+        result  = filename.to_wstring();
+        editor->LoadFile(result);
+    }
+
 }
 
 T100BOOL T100EditorView::save(T100WString& filename)
@@ -77,11 +93,7 @@ T100BOOL T100EditorView::hide()
 
 T100BOOL T100EditorView::renew()
 {
-    //m_manager->AddPane(m_projects_panel, wxAuiPaneInfo().Name(wxT("Projects")).BestSize(400, -1).Left());
-
-    T100EditorCtrl*     editor          = T100NEW T100EditorCtrl((wxWindow*)getFrame());
-
-    getAuiManager()->AddPane(editor, wxAuiPaneInfo().Name(wxT("unnamed")).BestSize(400, -1).Center());
+    m_manager->renew();
     getAuiManager()->Update();
 
     return T100TRUE;

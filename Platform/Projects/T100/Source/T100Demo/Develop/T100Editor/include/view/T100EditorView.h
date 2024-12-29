@@ -4,6 +4,7 @@
 #include "T100Common.h"
 #include "T100EditorMainMenu.h"
 #include "T100EditorMain.h"
+#include "T100EditorWindowsManager.h"
 
 class T100EditorView
 {
@@ -38,6 +39,8 @@ class T100EditorView
     private:
         T100EditorMainMenu*         m_main_menu         = T100NULL;
         T100EditorFrame*            m_main_frame        = T100NULL;
+
+        T100EditorWindowsManager*   m_manager           = T100NULL;
 };
 
 #endif // T100EDITORVIEW_H

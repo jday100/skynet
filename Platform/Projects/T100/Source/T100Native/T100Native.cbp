@@ -17,6 +17,7 @@
 					<Add directory="include" />
 					<Add directory="include/io/file" />
 					<Add directory="include/string" />
+					<Add directory="include/thread" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -30,6 +31,7 @@
 					<Add directory="include" />
 					<Add directory="include/io/file" />
 					<Add directory="include/string" />
+					<Add directory="include/thread" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -47,6 +49,7 @@
 					<Add directory="include" />
 					<Add directory="include/io/file" />
 					<Add directory="include/string" />
+					<Add directory="include/thread" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -61,6 +64,7 @@
 		<Unit filename="include/string/T100String16.h" />
 		<Unit filename="include/string/T100String32.h" />
 		<Unit filename="include/string/T100Unicode.h" />
+		<Unit filename="include/thread/T100Thread.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
@@ -69,6 +73,7 @@
 		<Unit filename="src/string/T100String16.cpp" />
 		<Unit filename="src/string/T100String32.cpp" />
 		<Unit filename="src/string/T100Unicode.cpp" />
+		<Unit filename="src/thread/T100Thread.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
