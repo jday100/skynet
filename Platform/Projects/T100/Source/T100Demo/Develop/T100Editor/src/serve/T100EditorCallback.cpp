@@ -14,6 +14,13 @@ T100EditorCallback::~T100EditorCallback()
     //dtor
 }
 
+T100VOID T100EditorCallback::init(T100EditorView* view, T100EditorServe* serve, T100EditorStore* store)
+{
+    m_view  = view;
+    m_serve = serve;
+    m_store = store;
+}
+
 T100VOID T100EditorCallback::OnMenuNewSelected()
 {
 

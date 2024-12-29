@@ -1,6 +1,7 @@
 #ifndef T100STRING16_H
 #define T100STRING16_H
 
+#include "T100Common.h"
 
 class T100String16
 {
@@ -8,9 +9,13 @@ class T100String16
         T100String16();
         virtual ~T100String16();
 
+    public:
+        T100String16&           operator  = (const T100WSTRING&);
+
     protected:
 
     private:
+        T100STRING16            m_value;
 };
 
 #endif // T100STRING16_H

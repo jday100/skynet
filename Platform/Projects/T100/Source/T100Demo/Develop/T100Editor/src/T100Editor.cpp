@@ -1,5 +1,7 @@
 #include "T100Editor.h"
 
+#include "T100EditorCallback.h"
+
 T100Editor::T100Editor()
 {
     //ctor
@@ -17,6 +19,8 @@ T100VOID T100Editor::create()
     m_store     = T100NEW T100EditorStore();
     m_serve     = T100NEW T100EditorServe();
     m_view      = T100NEW T100EditorView();
+
+    T100EditorCallback::init(m_view, m_serve, m_store);
 }
 
 T100VOID T100Editor::destroy()

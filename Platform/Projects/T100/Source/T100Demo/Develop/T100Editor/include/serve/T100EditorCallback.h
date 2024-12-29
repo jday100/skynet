@@ -12,6 +12,8 @@ class T100EditorCallback
         T100EditorCallback();
         virtual ~T100EditorCallback();
 
+        static T100VOID                 init(T100EditorView*, T100EditorServe*, T100EditorStore*);
+
         static T100VOID                 OnMenuNewSelected();
         static T100VOID                 OnMenuOpenSelected();
         static T100VOID                 OnMenuCloseSelected();

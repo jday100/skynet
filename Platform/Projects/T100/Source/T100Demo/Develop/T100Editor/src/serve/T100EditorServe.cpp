@@ -17,7 +17,7 @@ T100BOOL T100EditorServe::renew()
 
 T100BOOL T100EditorServe::open(T100WString& filename)
 {
-
+    return T100TRUE;
 }
 
 T100BOOL T100EditorServe::close()

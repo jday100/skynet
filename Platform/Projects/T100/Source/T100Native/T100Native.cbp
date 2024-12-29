@@ -60,6 +60,7 @@
 		<Unit filename="include/io/file/T100File.h" />
 		<Unit filename="include/string/T100String16.h" />
 		<Unit filename="include/string/T100String32.h" />
+		<Unit filename="include/string/T100Unicode.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
@@ -67,6 +68,7 @@
 		<Unit filename="src/io/file/T100File.cpp" />
 		<Unit filename="src/string/T100String16.cpp" />
 		<Unit filename="src/string/T100String32.cpp" />
+		<Unit filename="src/string/T100Unicode.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

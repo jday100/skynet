@@ -83,6 +83,8 @@ T100BOOL T100EditorView::renew()
 
     getAuiManager()->AddPane(editor, wxAuiPaneInfo().Name(wxT("unnamed")).BestSize(400, -1).Center());
     getAuiManager()->Update();
+
+    return T100TRUE;
 }
 
 T100BOOL T100EditorView::open(T100WString& filename)
@@ -93,7 +95,7 @@ T100BOOL T100EditorView::open(T100WString& filename)
 
     wxString    result      = dialog.GetPath();
 
-    //filename    = result.ToStdWstring();
+    filename    = result.ToStdWstring();
 
     return T100TRUE;
 }
