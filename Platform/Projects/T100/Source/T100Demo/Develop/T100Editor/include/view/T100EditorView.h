@@ -27,6 +27,15 @@ class T100EditorView
 
         T100BOOL            quit();
 
+        T100BOOL            undo();
+        T100BOOL            redo();
+        T100BOOL            cut();
+        T100BOOL            copy();
+        T100BOOL            paste();
+
+        T100BOOL            find();
+        T100BOOL            replace();
+
         T100VOID*           getFrame();
         wxAuiManager*       getAuiManager();
 

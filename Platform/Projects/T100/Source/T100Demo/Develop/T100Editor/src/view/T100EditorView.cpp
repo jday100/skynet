@@ -133,3 +133,38 @@ T100BOOL T100EditorView::quit()
 {
 
 }
+
+T100BOOL T100EditorView::undo()
+{
+    m_manager->getCurrent()->Undo();
+}
+
+T100BOOL T100EditorView::redo()
+{
+    m_manager->getCurrent()->Redo();
+}
+
+T100BOOL T100EditorView::cut()
+{
+    m_manager->getCurrent()->Cut();
+}
+
+T100BOOL T100EditorView::copy()
+{
+    m_manager->getCurrent()->Copy();
+}
+
+T100BOOL T100EditorView::paste()
+{
+    m_manager->getCurrent()->Paste();
+}
+
+T100BOOL T100EditorView::find()
+{
+
+}
+
+T100BOOL T100EditorView::replace()
+{
+
+}

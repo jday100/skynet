@@ -20,6 +20,15 @@ class T100EditorCallback
         static T100VOID                 OnMenuSaveSelected();
         static T100VOID                 OnMenuSaveAsSelected();
 
+        static T100VOID                 OnMenuUndoSelected();
+        static T100VOID                 OnMenuRedoSelected();
+        static T100VOID                 OnMenuCutSelected();
+        static T100VOID                 OnMenuCopySelected();
+        static T100VOID                 OnMenuPasteSelected();
+
+        static T100VOID                 OnMenuFindSelected();
+        static T100VOID                 OnMenuReplaceSelected();
+
     protected:
 
     private:

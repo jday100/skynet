@@ -221,28 +221,35 @@ void T100EditorFrame::OnMenuItemSaveAsSelected(wxCommandEvent& event)
 
 void T100EditorFrame::OnMenuItemUndoSelected(wxCommandEvent& event)
 {
+    T100EditorCallback::OnMenuUndoSelected();
 }
 
 void T100EditorFrame::OnMenuItemRedoSelected(wxCommandEvent& event)
 {
+    T100EditorCallback::OnMenuRedoSelected();
 }
 
 void T100EditorFrame::OnMenuItemCutSelected(wxCommandEvent& event)
 {
+    T100EditorCallback::OnMenuCutSelected();
 }
 
 void T100EditorFrame::OnMenuItemCopySelected(wxCommandEvent& event)
 {
+    T100EditorCallback::OnMenuCopySelected();
 }
 
 void T100EditorFrame::OnMenuItemPasteSelected(wxCommandEvent& event)
 {
+    T100EditorCallback::OnMenuPasteSelected();
 }
 
 void T100EditorFrame::OnMenuItemFindSelected(wxCommandEvent& event)
 {
+    T100EditorCallback::OnMenuFindSelected();
 }
 
 void T100EditorFrame::OnMenuItemReplaceSelected(wxCommandEvent& event)
 {
+    T100EditorCallback::OnMenuReplaceSelected();
 }

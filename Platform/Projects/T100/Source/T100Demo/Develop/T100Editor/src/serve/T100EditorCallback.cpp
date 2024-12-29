@@ -59,3 +59,38 @@ T100VOID T100EditorCallback::OnMenuSaveAsSelected()
 {
 
 }
+
+T100VOID T100EditorCallback::OnMenuUndoSelected()
+{
+    m_view->undo();
+}
+
+T100VOID T100EditorCallback::OnMenuRedoSelected()
+{
+    m_view->redo();
+}
+
+T100VOID T100EditorCallback::OnMenuCutSelected()
+{
+    m_view->cut();
+}
+
+T100VOID T100EditorCallback::OnMenuCopySelected()
+{
+    m_view->copy();
+}
+
+T100VOID T100EditorCallback::OnMenuPasteSelected()
+{
+    m_view->paste();
+}
+
+T100VOID T100EditorCallback::OnMenuFindSelected()
+{
+    m_view->find();
+}
+
+T100VOID T100EditorCallback::OnMenuReplaceSelected()
+{
+    m_view->replace();
+}
