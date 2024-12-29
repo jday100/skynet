@@ -47,7 +47,6 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 //(*IdInit(T100EditorFrame)
 const long T100EditorFrame::ID_AUITOOLBARITEM1 = wxNewId();
 const long T100EditorFrame::ID_AUITOOLBAR1 = wxNewId();
-const long T100EditorFrame::ID_AUINOTEBOOK1 = wxNewId();
 const long T100EditorFrame::ID_MENUITEM_NEW = wxNewId();
 const long T100EditorFrame::ID_MENUITEM_OPEN = wxNewId();
 const long T100EditorFrame::ID_MENUITEM_CLOSE = wxNewId();
@@ -85,8 +84,6 @@ T100EditorFrame::T100EditorFrame(wxWindow* parent,wxWindowID id)
     AuiToolBar1->AddTool(ID_AUITOOLBARITEM1, _("Item label"), wxNullBitmap, wxNullBitmap, wxITEM_NORMAL, wxEmptyString, wxEmptyString, NULL);
     AuiToolBar1->Realize();
     AuiManager->AddPane(AuiToolBar1, wxAuiPaneInfo().Name(_T("PaneName0")).ToolbarPane().Caption(_("Pane caption")).Layer(10).Top().Gripper());
-    AuiNotebook1 = new wxAuiNotebook(this, ID_AUINOTEBOOK1, wxPoint(89,266), wxDefaultSize, wxAUI_NB_DEFAULT_STYLE);
-    AuiManager->AddPane(AuiNotebook1, wxAuiPaneInfo().Name(_T("PaneName1")).DefaultPane().Caption(_("Pane caption")).CaptionVisible().Left());
     AuiManager->Update();
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();

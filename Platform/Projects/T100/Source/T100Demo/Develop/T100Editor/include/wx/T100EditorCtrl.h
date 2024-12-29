@@ -13,8 +13,12 @@ class T100EditorCtrl : public wxStyledTextCtrl
         virtual ~T100EditorCtrl();
 
     protected:
+        static const long ID_STC_MODIFIED;
+
+        void OnModified(wxStyledTextEvent& event);
 
     private:
+        DECLARE_EVENT_TABLE()
 };
 
 #endif // T100EDITORCTRL_H

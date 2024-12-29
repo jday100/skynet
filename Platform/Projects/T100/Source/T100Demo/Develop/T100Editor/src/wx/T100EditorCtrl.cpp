@@ -1,5 +1,11 @@
 #include "T100EditorCtrl.h"
 
+const long T100EditorCtrl::ID_STC_MODIFIED = wxNewId();
+
+BEGIN_EVENT_TABLE(T100EditorCtrl,wxStyledTextCtrl)
+    EVT_STC_MODIFIED(ID_STC_MODIFIED, T100EditorCtrl::OnModified)
+END_EVENT_TABLE()
+
 T100EditorCtrl::T100EditorCtrl(wxWindow *parent, wxWindowID id,
                      const wxPoint& pos,
                      const wxSize& size, long style,
@@ -12,4 +18,9 @@ T100EditorCtrl::T100EditorCtrl(wxWindow *parent, wxWindowID id,
 T100EditorCtrl::~T100EditorCtrl()
 {
     //dtor
+}
+
+void T100EditorCtrl::OnModified(wxStyledTextEvent& event)
+{
+
 }

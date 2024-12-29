@@ -54,7 +54,6 @@ class T100EditorFrame: public wxFrame
         //(*Identifiers(T100EditorFrame)
         static const long ID_AUITOOLBARITEM1;
         static const long ID_AUITOOLBAR1;
-        static const long ID_AUINOTEBOOK1;
         static const long ID_MENUITEM_NEW;
         static const long ID_MENUITEM_OPEN;
         static const long ID_MENUITEM_CLOSE;
@@ -74,7 +73,6 @@ class T100EditorFrame: public wxFrame
 
         //(*Declarations(T100EditorFrame)
         wxAuiManager* AuiManager;
-        wxAuiNotebook* AuiNotebook1;
         wxAuiToolBar* AuiToolBar1;
         wxMenu* Menu3;
         wxMenu* Menu4;

@@ -25,21 +25,6 @@
 				<destroyonclose>0</destroyonclose>
 				<firstadd>0</firstadd>
 			</object>
-			<object class="AuiManagerItem">
-				<object class="wxAuiNotebook" name="ID_AUINOTEBOOK1" variable="AuiNotebook1" member="yes">
-					<pos>89,266</pos>
-				</object>
-				<name>PaneName1</name>
-				<caption>Pane caption</caption>
-				<minimizebutton>0</minimizebutton>
-				<maximizebutton>0</maximizebutton>
-				<pinbutton>0</pinbutton>
-				<dockdirection>Left</dockdirection>
-				<dockfixed>0</dockfixed>
-				<dockabledirection></dockabledirection>
-				<destroyonclose>0</destroyonclose>
-				<firstadd>0</firstadd>
-			</object>
 		</object>
 		<object class="wxMenuBar" variable="MenuBar1" member="no">
 			<object class="wxMenu" variable="Menu1" member="no">
