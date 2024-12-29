@@ -18,7 +18,7 @@ T100String16& T100String16::operator=(const T100WSTRING& str)
     return *this;
 }
 
-T100WSTRING& T100String16::to_wstring()
+T100WSTRING T100String16::to_wstring()
 {
     T100WSTRING         result;
 

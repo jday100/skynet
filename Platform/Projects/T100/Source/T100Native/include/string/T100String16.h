@@ -9,7 +9,7 @@ class T100String16
         T100String16();
         virtual ~T100String16();
 
-        T100WSTRING&            to_wstring();
+        T100WSTRING             to_wstring();
 
     public:
         T100String16&           operator  = (const T100WSTRING&);
