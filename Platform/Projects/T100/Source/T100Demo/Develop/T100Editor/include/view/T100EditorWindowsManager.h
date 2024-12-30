@@ -17,6 +17,8 @@ class T100EditorWindowsManager
         T100BOOL                    renew();
         T100EditorCtrl*             getCurrent();
 
+        T100BOOL                    quit();
+
     protected:
 
     private:

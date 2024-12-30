@@ -23,6 +23,9 @@ T100VOID T100EditorCallback::init(T100EditorView* view, T100EditorServe* serve, 
 
 T100VOID T100EditorCallback::OnMenuNewSelected()
 {
+    T100BOOL            result          = T100FALSE;
+
+    result  = m_view->renew();
 
 }
 
@@ -47,17 +50,26 @@ T100VOID T100EditorCallback::OnMenuOpenSelected()
 
 T100VOID T100EditorCallback::OnMenuCloseSelected()
 {
+    T100BOOL        result          = T100FALSE;
 
+    result  = m_view->close();
 }
 
 T100VOID T100EditorCallback::OnMenuSaveSelected()
 {
+    T100BOOL        result          = T100FALSE;
 
+    result  = m_view->save();
 }
 
 T100VOID T100EditorCallback::OnMenuSaveAsSelected()
 {
+    T100BOOL        result          = T100FALSE;
 
+    result  = m_view->save_as();
+    if(result){
+        result  = m_view->save();
+    }
 }
 
 T100VOID T100EditorCallback::OnMenuUndoSelected()

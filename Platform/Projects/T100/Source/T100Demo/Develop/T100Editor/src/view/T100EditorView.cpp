@@ -26,7 +26,7 @@ T100VOID T100EditorView::create()
     T100MainPanel*  panel = T100NEW T100MainPanel(m_main_frame);
     m_manager       = T100NEW T100EditorWindowsManager(panel);
 
-    getAuiManager()->AddPane(panel, wxAuiPaneInfo().Name(wxT("center")).BestSize(400, -1).Center());
+    getAuiManager()->AddPane(panel, wxAuiPaneInfo().Name(wxT("center")).BestSize(400, -1).CloseButton(T100FALSE).Center());
     getAuiManager()->Update();
 }
 
@@ -53,9 +53,9 @@ wxAuiManager* T100EditorView::getAuiManager()
     return T100NULL;
 }
 
-T100VOID T100EditorView::getCurrent()
+T100EditorCtrl* T100EditorView::getCurrent()
 {
-
+    return m_manager->getCurrent();
 }
 
 T100BOOL T100EditorView::load(T100WString& filename)
@@ -76,7 +76,16 @@ T100BOOL T100EditorView::load(T100WString& filename)
 
 T100BOOL T100EditorView::save(T100WString& filename)
 {
+    T100EditorCtrl*     editor          = T100NULL;
 
+    editor  = m_manager->getCurrent();
+
+    if(editor){
+        wxString        result;
+
+        result  = filename.to_wstring();
+        editor->SaveFile();
+    }
 }
 
 T100BOOL T100EditorView::show()
@@ -88,7 +97,9 @@ T100BOOL T100EditorView::show()
 
 T100BOOL T100EditorView::hide()
 {
-
+    if(m_main_frame){
+        m_main_frame->Hide();
+    }
 }
 
 T100BOOL T100EditorView::renew()
@@ -114,24 +125,46 @@ T100BOOL T100EditorView::open(T100WString& filename)
 
 T100BOOL T100EditorView::close()
 {
+    T100EditorCtrl*     editor          = T100NULL;
 
+    editor  = m_manager->getCurrent();
+
+    if(editor){
+        editor->Destroy();
+    }
 }
 
 T100BOOL T100EditorView::save()
 {
+    T100EditorCtrl*     editor          = T100NULL;
 
+    editor  = m_manager->getCurrent();
+
+    if(editor){
+        editor->SaveFile();
+    }
 }
 
 T100BOOL T100EditorView::save_as()
 {
-    wxFileDialog        dialog(T100NULL, _("Please select a file"), "", "", "Diagram files(*.dgm)|*.dgm", wxFD_SAVE, wxDefaultPosition, wxDefaultSize, _("Select a file:"));
+    wxFileDialog        dialog(T100NULL, _("Please input a file name"), "", "", "All files(*.*)|*.*", wxFD_SAVE, wxDefaultPosition, wxDefaultSize, _("Input a file name:"));
 
     if(wxID_CANCEL == dialog.ShowModal())return T100FALSE;
+
+    T100WString         filename;
+    T100EditorCtrl*     editor          = T100NULL;
+
+    filename    = dialog.GetPath().ToStdWstring();
+    editor      = m_manager->getCurrent();
+
+    if(editor){
+        editor->SaveFile(dialog.GetPath());
+    }
 }
 
 T100BOOL T100EditorView::quit()
 {
-
+    m_manager->quit();
 }
 
 T100BOOL T100EditorView::undo()

@@ -39,7 +39,7 @@ class T100EditorView
         T100VOID*           getFrame();
         wxAuiManager*       getAuiManager();
 
-        T100VOID            getCurrent();
+        T100EditorCtrl*     getCurrent();
 
     protected:
         T100VOID            create();

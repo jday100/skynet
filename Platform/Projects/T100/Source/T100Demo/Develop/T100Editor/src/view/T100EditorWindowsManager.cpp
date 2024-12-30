@@ -29,3 +29,8 @@ T100EditorCtrl* T100EditorWindowsManager::getCurrent()
 {
     return m_windows[0];
 }
+
+T100BOOL T100EditorWindowsManager::quit()
+{
+
+}

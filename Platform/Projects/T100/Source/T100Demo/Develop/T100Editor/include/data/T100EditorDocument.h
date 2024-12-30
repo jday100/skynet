@@ -9,6 +9,15 @@ class T100EditorDocument
         T100EditorDocument();
         virtual ~T100EditorDocument();
 
+        T100VOID                setFileName(T100WString&);
+        T100WString&            getFileName();
+
+        T100VOID                setExtension(T100WString&);
+        T100WString&            getExtension();
+
+        T100VOID                setPath(T100WString&);
+        T100WString&            getPath();
+
     protected:
 
     private:
