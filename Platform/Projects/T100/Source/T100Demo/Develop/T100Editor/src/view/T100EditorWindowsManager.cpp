@@ -19,6 +19,7 @@ T100BOOL T100EditorWindowsManager::renew()
     if(editor){
         m_windows.push_back(editor);
         m_parent->Notebook->AddPage(editor, wxT("unnamed"));
+        m_current   = editor;
         return T100TRUE;
     }
 
@@ -27,7 +28,7 @@ T100BOOL T100EditorWindowsManager::renew()
 
 T100EditorCtrl* T100EditorWindowsManager::getCurrent()
 {
-    return m_windows[0];
+    return m_current;
 }
 
 T100BOOL T100EditorWindowsManager::quit()

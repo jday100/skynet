@@ -24,6 +24,7 @@ class T100EditorWindowsManager
     private:
         T100MainPanel*              m_parent            = T100NULL;
         T100EDITOR_CTRL_VECTOR      m_windows;
+        T100EditorCtrl*             m_current           = T100NULL;
 };
 
 #endif // T100EDITORWINDOWSMANAGER_H

@@ -1,5 +1,7 @@
 #include "T100EditorCallback.h"
 
+#include "T100EditorDocument.h"
+
 T100EditorView*         T100EditorCallback::m_view          = T100NULL;
 T100EditorServe*        T100EditorCallback::m_serve         = T100NULL;
 T100EditorStore*        T100EditorCallback::m_store         = T100NULL;
@@ -31,20 +33,22 @@ T100VOID T100EditorCallback::OnMenuNewSelected()
 
 T100VOID T100EditorCallback::OnMenuOpenSelected()
 {
-    T100BOOL            result          = T100FALSE;
-    T100WString         filename;
+    T100BOOL                result          = T100FALSE;
+    T100EditorDocument      document;
 
-    result  = m_view->open(filename);
-    if(result){
-        result  = m_serve->open(filename);
-    }
-
+    result  = m_view->open(document);
     if(result){
         result  = m_view->renew();
     }
 
     if(result){
-        result  = m_view->load(filename);
+        result  = m_view->load_file(document);
+    }
+
+    if(result){
+
+    }else{
+        result  = m_view->close();
     }
 }
 
@@ -64,11 +68,12 @@ T100VOID T100EditorCallback::OnMenuSaveSelected()
 
 T100VOID T100EditorCallback::OnMenuSaveAsSelected()
 {
-    T100BOOL        result          = T100FALSE;
+    T100BOOL                result          = T100FALSE;
+    T100EditorDocument      document;
 
-    result  = m_view->save_as();
+    result  = m_view->save_as(document);
     if(result){
-        result  = m_view->save();
+        result  = m_view->save_file(document);
     }
 }
 

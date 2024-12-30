@@ -58,34 +58,33 @@ T100EditorCtrl* T100EditorView::getCurrent()
     return m_manager->getCurrent();
 }
 
-T100BOOL T100EditorView::load(T100WString& filename)
+T100BOOL T100EditorView::load_file(T100EditorDocument& document)
 {
+    T100BOOL            result          = T100FALSE;
     T100EditorCtrl*     editor          = T100NULL;
 
 
     editor  = m_manager->getCurrent();
 
     if(editor){
-        wxString        result;
-
-        result  = filename.to_wstring();
-        editor->LoadFile(result);
+        result  = editor->LoadFile(document.getPath().to_wstring());
     }
 
+    return result;
 }
 
-T100BOOL T100EditorView::save(T100WString& filename)
+T100BOOL T100EditorView::save_file(T100EditorDocument& document)
 {
+    T100BOOL            result          = T100FALSE;
     T100EditorCtrl*     editor          = T100NULL;
 
     editor  = m_manager->getCurrent();
 
     if(editor){
-        wxString        result;
-
-        result  = filename.to_wstring();
-        editor->SaveFile();
+        result  = editor->SaveFile(document.getPath().to_wstring());
     }
+
+    return result;
 }
 
 T100BOOL T100EditorView::show()
@@ -110,56 +109,72 @@ T100BOOL T100EditorView::renew()
     return T100TRUE;
 }
 
-T100BOOL T100EditorView::open(T100WString& filename)
+T100BOOL T100EditorView::open(T100EditorDocument& document)
 {
     wxFileDialog        dialog(T100NULL, _("Please select a file"), "", "", "All files(*.*)|*.*", wxFD_OPEN, wxDefaultPosition, wxDefaultSize, _("Select a file:"));
 
     if(wxID_CANCEL == dialog.ShowModal())return T100FALSE;
 
-    wxString    result      = dialog.GetPath();
+    T100WString         filename;
+    T100WString         path;
 
-    filename    = result.ToStdWstring();
+    filename    = dialog.GetFilename().ToStdWstring();
+    path        = dialog.GetPath().ToStdWstring();
+
+    document.setFileName(filename);
+    document.setPath(path);
 
     return T100TRUE;
 }
 
 T100BOOL T100EditorView::close()
 {
+    T100BOOL            result          = T100FALSE;
     T100EditorCtrl*     editor          = T100NULL;
 
     editor  = m_manager->getCurrent();
 
     if(editor){
-        editor->Destroy();
+        result  = editor->Destroy();
+    }
+
+    if(result){
+
     }
 }
 
 T100BOOL T100EditorView::save()
 {
+    T100BOOL            result          = T100FALSE;
     T100EditorCtrl*     editor          = T100NULL;
 
     editor  = m_manager->getCurrent();
 
     if(editor){
-        editor->SaveFile();
+        result  = editor->SaveFile();
+    }
+
+    if(result){
+
     }
 }
 
-T100BOOL T100EditorView::save_as()
+T100BOOL T100EditorView::save_as(T100EditorDocument& document)
 {
     wxFileDialog        dialog(T100NULL, _("Please input a file name"), "", "", "All files(*.*)|*.*", wxFD_SAVE, wxDefaultPosition, wxDefaultSize, _("Input a file name:"));
 
     if(wxID_CANCEL == dialog.ShowModal())return T100FALSE;
 
     T100WString         filename;
-    T100EditorCtrl*     editor          = T100NULL;
+    T100WString         path;
 
-    filename    = dialog.GetPath().ToStdWstring();
-    editor      = m_manager->getCurrent();
+    filename    = dialog.GetFilename().ToStdWstring();
+    path        = dialog.GetPath().ToStdWstring();
 
-    if(editor){
-        editor->SaveFile(dialog.GetPath());
-    }
+    document.setFileName(filename);
+    document.setPath(path);
+
+    return T100TRUE;
 }
 
 T100BOOL T100EditorView::quit()

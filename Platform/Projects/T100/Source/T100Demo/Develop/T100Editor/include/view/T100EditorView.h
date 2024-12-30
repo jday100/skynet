@@ -2,6 +2,7 @@
 #define T100EDITORVIEW_H
 
 #include "T100Common.h"
+#include "T100EditorDocument.h"
 #include "T100EditorMainMenu.h"
 #include "T100EditorMain.h"
 #include "T100EditorWindowsManager.h"
@@ -12,18 +13,18 @@ class T100EditorView
         T100EditorView();
         virtual ~T100EditorView();
 
-        T100BOOL            load(T100WString&);
-        T100BOOL            save(T100WString&);
+        T100BOOL            load_file(T100EditorDocument&);
+        T100BOOL            save_file(T100EditorDocument&);
 
         T100BOOL            show();
         T100BOOL            hide();
 
         T100BOOL            renew();
-        T100BOOL            open(T100WString&);
+        T100BOOL            open(T100EditorDocument&);
         T100BOOL            close();
 
         T100BOOL            save();
-        T100BOOL            save_as();
+        T100BOOL            save_as(T100EditorDocument&);
 
         T100BOOL            quit();
 
