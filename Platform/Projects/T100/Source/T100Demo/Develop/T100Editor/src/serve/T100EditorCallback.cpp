@@ -106,3 +106,8 @@ T100VOID T100EditorCallback::OnMenuReplaceSelected()
 {
     m_view->replace();
 }
+
+T100VOID T100EditorCallback::OnMenuQuitSelected()
+{
+    m_view->quit();
+}

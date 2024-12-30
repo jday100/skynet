@@ -182,7 +182,8 @@ wxAuiManager* T100EditorFrame::getAuiManager()
 
 void T100EditorFrame::OnQuit(wxCommandEvent& event)
 {
-    Close();
+    //Close();
+    T100EditorCallback::OnMenuQuitSelected();
 }
 
 void T100EditorFrame::OnAbout(wxCommandEvent& event)

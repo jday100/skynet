@@ -165,6 +165,7 @@ T100BOOL T100EditorView::save_as()
 T100BOOL T100EditorView::quit()
 {
     m_manager->quit();
+    m_main_frame->Close();
 }
 
 T100BOOL T100EditorView::undo()

@@ -29,6 +29,8 @@ class T100EditorCallback
         static T100VOID                 OnMenuFindSelected();
         static T100VOID                 OnMenuReplaceSelected();
 
+        static T100VOID                 OnMenuQuitSelected();
+
     protected:
 
     private:
