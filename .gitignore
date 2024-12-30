@@ -99,3 +99,6 @@
 /Platform/Projects/T100/Source/T100Suite/T100Suite.layout
 /Platform/Projects/T100/Source/T100Demo/Develop/T100Editor/T100Editor.layout
 /Platform/Projects/T100/Source/build/libT100Native.a
+/Platform/Projects/T100/Source/build/T100Editor.exe
+/Platform/Projects/T100/Source/build/wxmsw30u_gcc_custom.dll
+/Platform/Projects/T100/Source/build/wxmsw30ud_gcc_custom.dll
