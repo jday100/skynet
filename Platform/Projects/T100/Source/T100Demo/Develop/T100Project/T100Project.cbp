@@ -16,6 +16,13 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/store" />
+					<Add directory="include/girder" />
+					<Add directory="include/mdi/view/text" />
+					<Add directory="include/mdi/view" />
+					<Add directory="include/wx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -34,6 +41,13 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/store" />
+					<Add directory="include/girder" />
+					<Add directory="include/mdi/view/text" />
+					<Add directory="include/mdi/view" />
+					<Add directory="include/wx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -65,9 +79,23 @@
 		<Unit filename="T100ProjectApp.h" />
 		<Unit filename="T100ProjectMain.cpp" />
 		<Unit filename="T100ProjectMain.h" />
+		<Unit filename="include/girder/T100ProjectGirder.h" />
+		<Unit filename="include/mdi/view/T100ProjectMDIView.h" />
+		<Unit filename="include/mdi/view/text/T100ProjectTextView.h" />
+		<Unit filename="include/serve/T100ProjectServe.h" />
+		<Unit filename="include/store/T100ProjectStore.h" />
+		<Unit filename="include/view/T100ProjectView.h" />
+		<Unit filename="include/wx/T100WXProjectCtrl.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/girder/T100ProjectGirder.cpp" />
+		<Unit filename="src/mdi/view/T100ProjectMDIView.cpp" />
+		<Unit filename="src/mdi/view/text/T100ProjectTextView.cpp" />
+		<Unit filename="src/serve/T100ProjectServe.cpp" />
+		<Unit filename="src/store/T100ProjectStore.cpp" />
+		<Unit filename="src/view/T100ProjectView.cpp" />
+		<Unit filename="src/wx/T100WXProjectCtrl.cpp" />
 		<Unit filename="wxsmith/T100Projectframe.wxs" />
 		<Extensions>
 			<wxsmith version="1">
