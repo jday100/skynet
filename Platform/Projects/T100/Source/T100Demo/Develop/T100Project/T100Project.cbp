@@ -28,6 +28,7 @@
 					<Add directory="include/mdi/document/text" />
 					<Add directory="include/mdi/document" />
 					<Add directory="../../../T100Native/include" />
+					<Add directory="include/platen" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -57,6 +58,7 @@
 					<Add directory="include/mdi/frame/text" />
 					<Add directory="include/mdi/document/text" />
 					<Add directory="include/mdi/document" />
+					<Add directory="include/platen" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -95,10 +97,12 @@
 		<Unit filename="include/mdi/frame/text/T100ProjectTextFrame.h" />
 		<Unit filename="include/mdi/view/T100ProjectMDIView.h" />
 		<Unit filename="include/mdi/view/text/T100ProjectTextView.h" />
+		<Unit filename="include/platen/T100ProjectAllPlatens.h" />
 		<Unit filename="include/serve/T100ProjectServe.h" />
 		<Unit filename="include/store/T100ProjectStore.h" />
 		<Unit filename="include/view/T100ProjectMDIMainFrame.h" />
 		<Unit filename="include/view/T100ProjectView.h" />
+		<Unit filename="include/view/T100ProjectViewManager.h" />
 		<Unit filename="include/wx/T100WXProjectCtrl.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
@@ -114,6 +118,7 @@
 		<Unit filename="src/store/T100ProjectStore.cpp" />
 		<Unit filename="src/view/T100ProjectMDIMainFrame.cpp" />
 		<Unit filename="src/view/T100ProjectView.cpp" />
+		<Unit filename="src/view/T100ProjectViewManager.cpp" />
 		<Unit filename="src/wx/T100WXProjectCtrl.cpp" />
 		<Unit filename="wxsmith/T100Projectframe.wxs" />
 		<Extensions>
