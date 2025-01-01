@@ -1,18 +1,20 @@
 #ifndef T100PROJECTMDICHILDFRAME_H
 #define T100PROJECTMDICHILDFRAME_H
 
-#include <wx/mdi.h>
+#include <wx/docmdi.h>
 
-class T100ProjectMDIChildFrame : public wxMDIChildFrame
+class T100ProjectMDIChildFrame : public wxDocMDIChildFrame
 {
     public:
-        T100ProjectMDIChildFrame(wxMDIParentFrame *parent,
-                    wxWindowID id,
-                    const wxString& title,
-                    const wxPoint& pos = wxDefaultPosition,
-                    const wxSize& size = wxDefaultSize,
-                    long style = wxDEFAULT_FRAME_STYLE,
-                    const wxString& name = wxFrameNameStr);
+        T100ProjectMDIChildFrame(wxDocument *doc,
+                       wxView *view,
+                       wxMDIParentFrame *parent,
+                       wxWindowID id,
+                       const wxString& title,
+                       const wxPoint& pos = wxDefaultPosition,
+                       const wxSize& size = wxDefaultSize,
+                       long style = wxDEFAULT_FRAME_STYLE,
+                       const wxString& name = wxFrameNameStr);
         virtual ~T100ProjectMDIChildFrame();
 
     protected:

@@ -14,12 +14,14 @@ T100ProjectView::~T100ProjectView()
 
 T100VOID T100ProjectView::create()
 {
-    m_frame = T100NEW T100ProjectMDIMainFrame(0, wxID_ANY, wxT(""));
+    m_manager   = T100NEW T100ProjectViewManager();
+    m_frame = T100NEW T100ProjectMDIMainFrame(m_manager->getDocManager(), 0, wxID_ANY, wxT(""));
 }
 
 T100VOID T100ProjectView::destroy()
 {
     T100SAFE_DELETE m_frame;
+    T100SAFE_DELETE m_manager;
 }
 
 wxFrame* T100ProjectView::getFrame()
