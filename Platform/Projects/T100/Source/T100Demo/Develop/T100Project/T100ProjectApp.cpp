@@ -14,10 +14,13 @@
 #include <wx/image.h>
 //*)
 
+#include "T100ProjectGirder.h"
+
 IMPLEMENT_APP(T100ProjectApp);
 
 bool T100ProjectApp::OnInit()
 {
+    /*DONT DELETE THIS
     //(*AppInitialize
     bool wxsOK = true;
     wxInitAllImageHandlers();
@@ -29,5 +32,17 @@ bool T100ProjectApp::OnInit()
     }
     //*)
     return wxsOK;
+    */
 
+    //(*AppInitialize
+    bool wxsOK = true;
+    wxInitAllImageHandlers();
+    if ( wxsOK )
+    {
+        T100ProjectGirder*  girder = new T100ProjectGirder();
+        girder->getView()->show();
+        SetTopWindow(girder->getView()->getFrame());
+    }
+    //*)
+    return wxsOK;
 }

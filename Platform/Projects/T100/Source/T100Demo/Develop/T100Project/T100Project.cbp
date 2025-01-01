@@ -24,6 +24,10 @@
 					<Add directory="include/mdi/view" />
 					<Add directory="include/wx" />
 					<Add directory="include/mdi/frame" />
+					<Add directory="include/mdi/frame/text" />
+					<Add directory="include/mdi/document/text" />
+					<Add directory="include/mdi/document" />
+					<Add directory="../../../T100Native/include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -50,6 +54,9 @@
 					<Add directory="include/mdi/view" />
 					<Add directory="include/wx" />
 					<Add directory="include/mdi/frame" />
+					<Add directory="include/mdi/frame/text" />
+					<Add directory="include/mdi/document/text" />
+					<Add directory="include/mdi/document" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -82,7 +89,10 @@
 		<Unit filename="T100ProjectMain.cpp" />
 		<Unit filename="T100ProjectMain.h" />
 		<Unit filename="include/girder/T100ProjectGirder.h" />
+		<Unit filename="include/mdi/document/T100ProjectMDIDocument.h" />
+		<Unit filename="include/mdi/document/text/T100ProjectTextDocument.h" />
 		<Unit filename="include/mdi/frame/T100ProjectMDIChildFrame.h" />
+		<Unit filename="include/mdi/frame/text/T100ProjectTextFrame.h" />
 		<Unit filename="include/mdi/view/T100ProjectMDIView.h" />
 		<Unit filename="include/mdi/view/text/T100ProjectTextView.h" />
 		<Unit filename="include/serve/T100ProjectServe.h" />
@@ -94,7 +104,10 @@
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/girder/T100ProjectGirder.cpp" />
+		<Unit filename="src/mdi/document/T100ProjectMDIDocument.cpp" />
+		<Unit filename="src/mdi/document/text/T100ProjectTextDocument.cpp" />
 		<Unit filename="src/mdi/frame/T100ProjectMDIChildFrame.cpp" />
+		<Unit filename="src/mdi/frame/text/T100ProjectTextFrame.cpp" />
 		<Unit filename="src/mdi/view/T100ProjectMDIView.cpp" />
 		<Unit filename="src/mdi/view/text/T100ProjectTextView.cpp" />
 		<Unit filename="src/serve/T100ProjectServe.cpp" />
