@@ -98,9 +98,12 @@
 		<Unit filename="include/mdi/view/T100ProjectMDIView.h" />
 		<Unit filename="include/mdi/view/text/T100ProjectTextView.h" />
 		<Unit filename="include/platen/T100ProjectAllPlatens.h" />
+		<Unit filename="include/platen/T100ProjectDefaultPlaten.h" />
 		<Unit filename="include/serve/T100ProjectServe.h" />
 		<Unit filename="include/store/T100ProjectStore.h" />
 		<Unit filename="include/view/T100ProjectMDIMainFrame.h" />
+		<Unit filename="include/view/T100ProjectPlatenBase.h" />
+		<Unit filename="include/view/T100ProjectPlatenManager.h" />
 		<Unit filename="include/view/T100ProjectView.h" />
 		<Unit filename="include/view/T100ProjectViewManager.h" />
 		<Unit filename="include/wx/T100WXProjectCtrl.h" />
@@ -114,9 +117,12 @@
 		<Unit filename="src/mdi/frame/text/T100ProjectTextFrame.cpp" />
 		<Unit filename="src/mdi/view/T100ProjectMDIView.cpp" />
 		<Unit filename="src/mdi/view/text/T100ProjectTextView.cpp" />
+		<Unit filename="src/platen/T100ProjectDefaultPlaten.cpp" />
 		<Unit filename="src/serve/T100ProjectServe.cpp" />
 		<Unit filename="src/store/T100ProjectStore.cpp" />
 		<Unit filename="src/view/T100ProjectMDIMainFrame.cpp" />
+		<Unit filename="src/view/T100ProjectPlatenBase.cpp" />
+		<Unit filename="src/view/T100ProjectPlatenManager.cpp" />
 		<Unit filename="src/view/T100ProjectView.cpp" />
 		<Unit filename="src/view/T100ProjectViewManager.cpp" />
 		<Unit filename="src/wx/T100WXProjectCtrl.cpp" />

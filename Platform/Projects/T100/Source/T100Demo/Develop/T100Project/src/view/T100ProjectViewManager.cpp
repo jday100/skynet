@@ -17,6 +17,7 @@ T100ProjectViewManager::~T100ProjectViewManager()
 
 T100VOID T100ProjectViewManager::create()
 {
+    m_aui   = T100NEW wxAuiManager();
     m_doc   = T100NEW wxDocManager();
 
     init();
@@ -24,7 +25,20 @@ T100VOID T100ProjectViewManager::create()
 
 T100VOID T100ProjectViewManager::destroy()
 {
+    m_aui->UnInit();
 
+    T100SAFE_DELETE m_doc;
+    T100SAFE_DELETE m_aui;
+}
+
+wxAuiManager* T100ProjectViewManager::getAuiManager()
+{
+    return m_aui;
+}
+
+wxDocManager* T100ProjectViewManager::getDocManager()
+{
+    return m_doc;
 }
 
 T100VOID T100ProjectViewManager::init()
@@ -34,7 +48,4 @@ T100VOID T100ProjectViewManager::init()
                       CLASSINFO(T100ProjectTextDocument), CLASSINFO(T100ProjectTextView));
 }
 
-wxDocManager* T100ProjectViewManager::getDocManager()
-{
-    return m_doc;
-}
+

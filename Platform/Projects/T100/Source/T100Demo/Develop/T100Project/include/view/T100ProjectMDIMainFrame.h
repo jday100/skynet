@@ -17,6 +17,7 @@ class T100ProjectMDIMainFrame : public wxDocMDIParentFrame
         virtual ~T100ProjectMDIMainFrame();
 
     protected:
+        void Resize(wxSizeEvent& event);
 
     private:
         DECLARE_EVENT_TABLE()

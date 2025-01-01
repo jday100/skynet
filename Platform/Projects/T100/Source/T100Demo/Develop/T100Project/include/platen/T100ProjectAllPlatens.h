@@ -1,5 +1,6 @@
 #ifndef T100PROJECTALLPLATENS_H
 #define T100PROJECTALLPLATENS_H
 
+#include "T100ProjectDefaultPlaten.h"
 
 #endif // T100PROJECTALLPLATENS_H
