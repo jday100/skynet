@@ -103,3 +103,8 @@
 /Platform/Projects/T100/Source/build/wxmsw30u_gcc_custom.dll
 /Platform/Projects/T100/Source/build/wxmsw30ud_gcc_custom.dll
 /Platform/Projects/T100/Source/T100Suite/T100Suite.depend
+/Platform/Projects/T100/Source/T100Demo/Develop/T100CLCompiler/bin
+/Platform/Projects/T100/Source/T100Demo/Develop/T100CLCompiler/obj
+/Platform/Projects/T100/Source/T100Demo/Develop/T100CLCompiler/T100CLCompiler.depend
+/Platform/Projects/T100/Source/build/libT100Library.a
+/Platform/Projects/T100/Source/build/libT100Suite.a
