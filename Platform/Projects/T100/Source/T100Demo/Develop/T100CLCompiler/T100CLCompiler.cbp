@@ -13,7 +13,17 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/parser" />
+					<Add directory="include/analyzer" />
+					<Add directory="include/generator" />
+					<Add directory="../../../T100Native/include" />
+					<Add directory="../../../T100Suite/include" />
 				</Compiler>
+				<Linker>
+					<Add library="../../../build/libT100Suite.a" />
+					<Add library="../../../build/libT100Native.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100CLCompiler" prefix_auto="1" extension_auto="1" />
@@ -22,6 +32,10 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="include/parser" />
+					<Add directory="include/analyzer" />
+					<Add directory="include/generator" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +46,29 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/T100CLCompiler.h" />
+		<Unit filename="include/analyzer/T100CLAnalyzer.h" />
+		<Unit filename="include/generator/T100CLGenerator.h" />
+		<Unit filename="include/parser/T100CLCharParser.h" />
+		<Unit filename="include/parser/T100CLKeywordParser.h" />
+		<Unit filename="include/parser/T100CLParser.h" />
+		<Unit filename="include/parser/T100CLParserTools.h" />
+		<Unit filename="include/parser/T100CLSegmentParser.h" />
+		<Unit filename="include/parser/T100CLSentenceParser.h" />
+		<Unit filename="include/parser/T100CLSourceParser.h" />
+		<Unit filename="include/parser/T100CLStringParser.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/T100CLCompiler.cpp" />
+		<Unit filename="src/analyzer/T100CLAnalyzer.cpp" />
+		<Unit filename="src/generator/T100CLGenerator.cpp" />
+		<Unit filename="src/parser/T100CLCharParser.cpp" />
+		<Unit filename="src/parser/T100CLKeywordParser.cpp" />
+		<Unit filename="src/parser/T100CLParser.cpp" />
+		<Unit filename="src/parser/T100CLParserTools.cpp" />
+		<Unit filename="src/parser/T100CLSegmentParser.cpp" />
+		<Unit filename="src/parser/T100CLSentenceParser.cpp" />
+		<Unit filename="src/parser/T100CLSourceParser.cpp" />
+		<Unit filename="src/parser/T100CLStringParser.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -21,6 +21,11 @@
 					<Add directory="include/develop/application/interact/gui" />
 					<Add directory="include/develop/application/interact/gui/wxwidgets" />
 					<Add directory="include/develop/application/interact/gui/wxwidgets/widget" />
+					<Add directory="include/develop/compiler" />
+					<Add directory="include/develop/compiler/analyzer" />
+					<Add directory="include/develop/compiler/parser" />
+					<Add directory="include/develop/compiler/generator" />
+					<Add directory="include/develop/compiler/data" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -44,6 +49,11 @@
 					<Add directory="include/develop/application/interact/gui" />
 					<Add directory="include/develop/application/interact/gui/wxwidgets" />
 					<Add directory="include/develop/application/interact/gui/wxwidgets/widget" />
+					<Add directory="include/develop/compiler" />
+					<Add directory="include/develop/compiler/analyzer" />
+					<Add directory="include/develop/compiler/parser" />
+					<Add directory="include/develop/compiler/generator" />
+					<Add directory="include/develop/compiler/data" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -70,12 +80,20 @@
 					<Add directory="include/develop/application/interact/gui" />
 					<Add directory="include/develop/application/interact/gui/wxwidgets" />
 					<Add directory="include/develop/application/interact/gui/wxwidgets/widget" />
+					<Add directory="include/develop/compiler" />
+					<Add directory="include/develop/compiler/analyzer" />
+					<Add directory="include/develop/compiler/parser" />
+					<Add directory="include/develop/compiler/generator" />
+					<Add directory="../T100Native/include" />
+					<Add directory="include" />
+					<Add directory="include/develop/compiler/data" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 				</ResourceCompiler>
 				<Linker>
 					<Add library="libwxmsw30ud.a" />
+					<Add library="../build/libT100Native.a" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -121,6 +139,20 @@
 		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXDrawCtrl.h" />
 		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXEditCtrl.h" />
 		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXSourceCtrl.h" />
+		<Unit filename="include/develop/compiler/T100Compiler.h" />
+		<Unit filename="include/develop/compiler/analyzer/T100Analyzer.h" />
+		<Unit filename="include/develop/compiler/data/T100AnalyzerInfo.h" />
+		<Unit filename="include/develop/compiler/data/T100GeneratorInfo.h" />
+		<Unit filename="include/develop/compiler/data/T100ParserInfo.h" />
+		<Unit filename="include/develop/compiler/generator/T100Generator.h" />
+		<Unit filename="include/develop/compiler/parser/T100CharParser.h" />
+		<Unit filename="include/develop/compiler/parser/T100KeywordParser.h" />
+		<Unit filename="include/develop/compiler/parser/T100Parser.h" />
+		<Unit filename="include/develop/compiler/parser/T100ParserBase.h" />
+		<Unit filename="include/develop/compiler/parser/T100SegmentParser.h" />
+		<Unit filename="include/develop/compiler/parser/T100SentenceParser.h" />
+		<Unit filename="include/develop/compiler/parser/T100SourceParser.h" />
+		<Unit filename="include/develop/compiler/parser/T100StringParser.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 			<Option target="Debug" />
@@ -135,6 +167,20 @@
 		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXDrawCtrl.cpp" />
 		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXEditCtrl.cpp" />
 		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXSourceCtrl.cpp" />
+		<Unit filename="src/develop/compiler/T100Compiler.cpp" />
+		<Unit filename="src/develop/compiler/analyzer/T100Analyzer.cpp" />
+		<Unit filename="src/develop/compiler/data/T100AnalyzerInfo.cpp" />
+		<Unit filename="src/develop/compiler/data/T100GeneratorInfo.cpp" />
+		<Unit filename="src/develop/compiler/data/T100ParserInfo.cpp" />
+		<Unit filename="src/develop/compiler/generator/T100Generator.cpp" />
+		<Unit filename="src/develop/compiler/parser/T100CharParser.cpp" />
+		<Unit filename="src/develop/compiler/parser/T100KeywordParser.cpp" />
+		<Unit filename="src/develop/compiler/parser/T100Parser.cpp" />
+		<Unit filename="src/develop/compiler/parser/T100ParserBase.cpp" />
+		<Unit filename="src/develop/compiler/parser/T100SegmentParser.cpp" />
+		<Unit filename="src/develop/compiler/parser/T100SentenceParser.cpp" />
+		<Unit filename="src/develop/compiler/parser/T100SourceParser.cpp" />
+		<Unit filename="src/develop/compiler/parser/T100StringParser.cpp" />
 		<Unit filename="wxsmith/T100Suiteframe.wxs">
 			<Option target="Debug" />
 			<Option target="Release" />
