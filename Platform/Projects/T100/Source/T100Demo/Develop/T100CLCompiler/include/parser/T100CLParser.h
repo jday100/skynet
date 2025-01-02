@@ -2,7 +2,7 @@
 #define T100CLPARSER_H
 
 #include "develop/compiler/parser/T100Parser.h"
-#include "T100CLCharParser.h"
+#include "T100CLFileParser.h"
 #include "T100CLSourceParser.h"
 
 class T100CLParser : public T100Parser
@@ -18,7 +18,7 @@ class T100CLParser : public T100Parser
         T100VOID                    destroy();
 
     private:
-        T100CLCharParser*           m_file              = T100NULL;
+        T100CLFileParser*           m_file              = T100NULL;
         T100CLSourceParser*         m_source            = T100NULL;
 };
 

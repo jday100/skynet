@@ -1,0 +1,32 @@
+#include "T100CLFileParser.h"
+
+T100CLFileParser::T100CLFileParser()
+    :T100ParserBase()
+{
+    //ctor
+}
+
+T100CLFileParser::~T100CLFileParser()
+{
+    //dtor
+}
+
+T100VOID T100CLFileParser::setSource(T100ParserBase* parser)
+{
+
+}
+
+T100ParserBase* T100CLFileParser::getSource()
+{
+    m_parser;
+}
+
+T100BOOL T100CLFileParser::open()
+{
+
+}
+
+T100BOOL T100CLFileParser::close()
+{
+
+}

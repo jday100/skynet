@@ -9,6 +9,9 @@ class T100ParserBase : public T100State
         T100ParserBase();
         virtual ~T100ParserBase();
 
+        virtual T100VOID            setSource(T100ParserBase*) = 0;
+        virtual T100ParserBase*     getSource() = 0;
+
     protected:
 
     private:

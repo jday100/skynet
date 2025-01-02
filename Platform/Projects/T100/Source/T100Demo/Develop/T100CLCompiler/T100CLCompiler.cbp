@@ -51,7 +51,9 @@
 		<Unit filename="include/T100CLCompiler.h" />
 		<Unit filename="include/analyzer/T100CLAnalyzer.h" />
 		<Unit filename="include/generator/T100CLGenerator.h" />
+		<Unit filename="include/parser/T100CLByteParser.h" />
 		<Unit filename="include/parser/T100CLCharParser.h" />
+		<Unit filename="include/parser/T100CLFileParser.h" />
 		<Unit filename="include/parser/T100CLKeywordParser.h" />
 		<Unit filename="include/parser/T100CLParser.h" />
 		<Unit filename="include/parser/T100CLParserTools.h" />
@@ -63,7 +65,9 @@
 		<Unit filename="src/T100CLCompiler.cpp" />
 		<Unit filename="src/analyzer/T100CLAnalyzer.cpp" />
 		<Unit filename="src/generator/T100CLGenerator.cpp" />
+		<Unit filename="src/parser/T100CLByteParser.cpp" />
 		<Unit filename="src/parser/T100CLCharParser.cpp" />
+		<Unit filename="src/parser/T100CLFileParser.cpp" />
 		<Unit filename="src/parser/T100CLKeywordParser.cpp" />
 		<Unit filename="src/parser/T100CLParser.cpp" />
 		<Unit filename="src/parser/T100CLParserTools.cpp" />

@@ -1,6 +1,7 @@
 #include "T100CLStringParser.h"
 
 T100CLStringParser::T100CLStringParser()
+    :T100StringParser()
 {
     //ctor
 }
@@ -8,4 +9,19 @@ T100CLStringParser::T100CLStringParser()
 T100CLStringParser::~T100CLStringParser()
 {
     //dtor
+}
+
+T100VOID T100CLStringParser::setSource(T100ParserBase* parser)
+{
+
+}
+
+T100ParserBase* T100CLStringParser::getSource()
+{
+    return m_parser;
+}
+
+T100BOOL T100CLStringParser::next()
+{
+
 }
