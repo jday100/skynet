@@ -30,3 +30,8 @@ T100BOOL T100CLFileParser::close()
 {
 
 }
+
+T100BOOL T100CLFileParser::next()
+{
+
+}

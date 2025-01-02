@@ -13,7 +13,7 @@ T100CLStringParser::~T100CLStringParser()
 
 T100VOID T100CLStringParser::setSource(T100ParserBase* parser)
 {
-
+    m_parser    = dynamic_cast<T100CLCharParser*>(parser);
 }
 
 T100ParserBase* T100CLStringParser::getSource()
@@ -23,5 +23,5 @@ T100ParserBase* T100CLStringParser::getSource()
 
 T100BOOL T100CLStringParser::next()
 {
-
+    m_parser->next();
 }

@@ -23,5 +23,5 @@ T100ParserBase* T100CLSentenceParser::getSource()
 
 T100BOOL T100CLSentenceParser::next()
 {
-
+    m_parser->next();
 }

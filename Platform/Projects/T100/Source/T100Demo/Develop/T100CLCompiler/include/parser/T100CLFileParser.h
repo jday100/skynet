@@ -15,6 +15,8 @@ class T100CLFileParser : public T100ParserBase
         T100BOOL                open();
         T100BOOL                close();
 
+        T100BOOL                next();
+
     protected:
 
     private:

@@ -24,16 +24,34 @@ T100BOOL T100CLParserTools::create(T100CLSourceParser*& source, T100CLFileParser
     file_parser     = T100NEW T100CLFileParser();
 
     byte_parser     = T100NEW T100CLByteParser();
+    if(byte_parser){
+        byte_parser->setSource(file_parser);
+    }
 
     char_parser     = T100NEW T100CLCharParser();
+    if(char_parser){
+        char_parser->setSource(byte_parser);
+    }
 
     string_parser   = T100NEW T100CLStringParser();
+    if(string_parser){
+        string_parser->setSource(char_parser);
+    }
 
     keyword_parser  = T100NEW T100CLKeywordParser();
+    if(keyword_parser){
+        keyword_parser->setSource(string_parser);
+    }
 
     sentence_parser = T100NEW T100CLSentenceParser();
+    if(sentence_parser){
+        sentence_parser->setSource(keyword_parser);
+    }
 
     segment_parser  = T100NEW T100CLSegmentParser();
+    if(segment_parser){
+        segment_parser->setSource(sentence_parser);
+    }
 
     source_parser   = T100NEW T100CLSourceParser();
     if(source_parser){
