@@ -6,7 +6,7 @@
 class T100ProjectDefaultPlaten : public T100ProjectPlatenBase
 {
     public:
-        T100ProjectDefaultPlaten();
+        T100ProjectDefaultPlaten(T100ProjectView*);
         virtual ~T100ProjectDefaultPlaten();
 
         T100BOOL            create();
@@ -16,6 +16,7 @@ class T100ProjectDefaultPlaten : public T100ProjectPlatenBase
         T100BOOL            hide();
 
     protected:
+        T100BOOL            create_menu();
 
     private:
 };

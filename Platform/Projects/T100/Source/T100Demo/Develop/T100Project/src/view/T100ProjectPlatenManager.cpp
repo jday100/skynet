@@ -15,7 +15,7 @@ T100ProjectPlatenManager::~T100ProjectPlatenManager()
 
 T100VOID T100ProjectPlatenManager::create()
 {
-    m_default   = T100NEW T100ProjectDefaultPlaten();
+    m_default   = T100NEW T100ProjectDefaultPlaten(m_view);
 }
 
 T100VOID T100ProjectPlatenManager::destroy()

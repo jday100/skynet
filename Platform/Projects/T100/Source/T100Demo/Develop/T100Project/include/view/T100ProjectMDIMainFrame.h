@@ -2,6 +2,7 @@
 #define T100PROJECTMDIMAINFRAME_H
 
 #include <wx/docmdi.h>
+#include "T100ProjectView.h"
 
 class T100ProjectMDIMainFrame : public wxDocMDIParentFrame
 {
@@ -16,10 +17,15 @@ class T100ProjectMDIMainFrame : public wxDocMDIParentFrame
                         const wxString& name = wxFrameNameStr);
         virtual ~T100ProjectMDIMainFrame();
 
+        T100VOID                    setView(T100ProjectView*);
+
     protected:
-        void Resize(wxSizeEvent& event);
+        void OnResize(wxSizeEvent& event);
+        void OnClose(wxCloseEvent& event);
 
     private:
+        T100ProjectView*            m_view          = T100NULL;
+
         DECLARE_EVENT_TABLE()
 };
 

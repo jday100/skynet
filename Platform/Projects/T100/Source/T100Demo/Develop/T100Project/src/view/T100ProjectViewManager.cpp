@@ -25,9 +25,9 @@ T100VOID T100ProjectViewManager::create()
 
 T100VOID T100ProjectViewManager::destroy()
 {
-    m_aui->UnInit();
+    //m_aui->UnInit();
 
-    T100SAFE_DELETE m_doc;
+    //T100SAFE_DELETE m_doc;
     T100SAFE_DELETE m_aui;
 }
 

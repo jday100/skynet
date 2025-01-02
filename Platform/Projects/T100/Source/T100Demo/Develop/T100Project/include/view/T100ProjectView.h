@@ -3,9 +3,9 @@
 
 #include <wx/wx.h>
 #include "T100Common.h"
-#include "T100ProjectMDIMainFrame.h"
-#include "T100ProjectViewManager.h"
-//#include "T100ProjectPlatenManager.h"
+
+class T100ProjectMDIMainFrame;
+class T100ProjectViewManager;
 class T100ProjectPlatenManager;
 
 class T100ProjectView
@@ -14,14 +14,19 @@ class T100ProjectView
         T100ProjectView();
         virtual ~T100ProjectView();
 
-        T100BOOL                show();
-        T100BOOL                hide();
+        T100BOOL                        show();
+        T100BOOL                        hide();
 
-        wxFrame*                getFrame();
+        T100BOOL                        close();
+
+        wxFrame*                        getFrame();
+
+        T100ProjectViewManager*         getViewManager();
+        T100ProjectPlatenManager*       getPlatenManager();
 
     protected:
-        T100VOID                create();
-        T100VOID                destroy();
+        T100VOID                        create();
+        T100VOID                        destroy();
 
     private:
         T100ProjectMDIMainFrame*        m_frame             = T100NULL;

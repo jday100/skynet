@@ -1,7 +1,11 @@
 #include "T100ProjectMDIMainFrame.h"
 
+#include "T100ProjectViewManager.h"
+
 BEGIN_EVENT_TABLE(T100ProjectMDIMainFrame,wxDocMDIParentFrame)
-    EVT_SIZE(T100ProjectMDIMainFrame::Resize)
+    EVT_SIZE(T100ProjectMDIMainFrame::OnResize)
+
+    EVT_CLOSE(T100ProjectMDIMainFrame::OnClose)
 END_EVENT_TABLE()
 
 T100ProjectMDIMainFrame::T100ProjectMDIMainFrame(wxDocManager *manager,
@@ -22,7 +26,17 @@ T100ProjectMDIMainFrame::~T100ProjectMDIMainFrame()
     //dtor
 }
 
-void T100ProjectMDIMainFrame::Resize(wxSizeEvent& event)
+T100VOID T100ProjectMDIMainFrame::setView(T100ProjectView* view)
 {
+    m_view  = view;
+}
 
+void T100ProjectMDIMainFrame::OnResize(wxSizeEvent& event)
+{
+    m_view->getViewManager()->getAuiManager()->Update();
+}
+
+void T100ProjectMDIMainFrame::OnClose(wxCloseEvent& event)
+{
+    m_view->close();
 }
