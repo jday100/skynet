@@ -10,7 +10,7 @@ class T100Parser
         T100Parser();
         virtual ~T100Parser();
 
-        T100BOOL            parse(T100WString, T100ParserInfo&);
+        virtual T100BOOL            parse(T100WString, T100ParserInfo&);
 
     protected:
 

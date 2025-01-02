@@ -86,11 +86,11 @@
 					<Add directory="include/develop/compiler/analyzer" />
 					<Add directory="include/develop/compiler/parser" />
 					<Add directory="include/develop/compiler/generator" />
-					<Add directory="../T100Library/include" />
-					<Add directory="../T100Native/include" />
 					<Add directory="include" />
 					<Add directory="include/develop/compiler/data" />
 					<Add directory="include/develop/compiler/token" />
+					<Add directory="../T100Library/include" />
+					<Add directory="../T100Native/include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -144,6 +144,7 @@
 		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXEditCtrl.h" />
 		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXSourceCtrl.h" />
 		<Unit filename="include/develop/compiler/T100Compiler.h" />
+		<Unit filename="include/develop/compiler/T100CompilerCommon.h" />
 		<Unit filename="include/develop/compiler/analyzer/T100Analyzer.h" />
 		<Unit filename="include/develop/compiler/data/T100AnalyzerInfo.h" />
 		<Unit filename="include/develop/compiler/data/T100GeneratorInfo.h" />

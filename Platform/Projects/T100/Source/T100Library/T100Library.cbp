@@ -61,6 +61,7 @@
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 					<Add directory="include/math" />
 					<Add directory="include/state" />
+					<Add directory="../T100Native/include" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />

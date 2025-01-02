@@ -17,11 +17,13 @@
 					<Add directory="include/parser" />
 					<Add directory="include/analyzer" />
 					<Add directory="include/generator" />
-					<Add directory="../../../T100Native/include" />
 					<Add directory="../../../T100Suite/include" />
+					<Add directory="../../../T100Library/include" />
+					<Add directory="../../../T100Native/include" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../build/libT100Suite.a" />
+					<Add library="../../../build/libT100Library.a" />
 					<Add library="../../../build/libT100Native.a" />
 				</Linker>
 			</Target>
