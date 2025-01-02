@@ -20,6 +20,7 @@
 					<Add directory="../../../T100Suite/include" />
 					<Add directory="../../../T100Library/include" />
 					<Add directory="../../../T100Native/include" />
+					<Add directory="include/token" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../build/libT100Suite.a" />
@@ -38,6 +39,7 @@
 					<Add directory="include/parser" />
 					<Add directory="include/analyzer" />
 					<Add directory="include/generator" />
+					<Add directory="include/token" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -61,6 +63,7 @@
 		<Unit filename="include/parser/T100CLSentenceParser.h" />
 		<Unit filename="include/parser/T100CLSourceParser.h" />
 		<Unit filename="include/parser/T100CLStringParser.h" />
+		<Unit filename="include/token/T100CLSourceToken.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/T100CLCompiler.cpp" />
 		<Unit filename="src/analyzer/T100CLAnalyzer.cpp" />
@@ -75,6 +78,7 @@
 		<Unit filename="src/parser/T100CLSentenceParser.cpp" />
 		<Unit filename="src/parser/T100CLSourceParser.cpp" />
 		<Unit filename="src/parser/T100CLStringParser.cpp" />
+		<Unit filename="src/token/T100CLSourceToken.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

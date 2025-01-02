@@ -1,6 +1,7 @@
 #include "T100SourceToken.h"
 
 T100SourceToken::T100SourceToken()
+    :T100Token()
 {
     //ctor
 }

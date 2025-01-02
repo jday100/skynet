@@ -1,9 +1,9 @@
 #ifndef T100PARSERBASE_H
 #define T100PARSERBASE_H
 
-#include "state/T100State.h"
+#include "state/T100Scanner.h"
 
-class T100ParserBase : public T100State
+class T100ParserBase : public T100Scanner
 {
     public:
         T100ParserBase();

@@ -21,7 +21,7 @@ T100ParserBase* T100CLFileParser::getSource()
     m_parser;
 }
 
-T100BOOL T100CLFileParser::open()
+T100BOOL T100CLFileParser::open(T100WString filename)
 {
 
 }
@@ -31,7 +31,7 @@ T100BOOL T100CLFileParser::close()
 
 }
 
-T100BOOL T100CLFileParser::next()
+T100BOOL T100CLFileParser::next(T100State& state, T100Token& token)
 {
 
 }

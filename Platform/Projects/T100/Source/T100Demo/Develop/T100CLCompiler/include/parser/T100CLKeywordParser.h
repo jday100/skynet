@@ -13,7 +13,7 @@ class T100CLKeywordParser : public T100KeywordParser
         virtual T100VOID            setSource(T100ParserBase*);
         virtual T100ParserBase*     getSource();
 
-        virtual T100BOOL            next();
+        virtual T100BOOL            next(T100State&, T100Token&);
 
     protected:
 

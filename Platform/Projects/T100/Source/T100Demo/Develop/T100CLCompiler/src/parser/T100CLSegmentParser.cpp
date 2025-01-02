@@ -21,7 +21,7 @@ T100ParserBase* T100CLSegmentParser::getSource()
     return m_parser;
 }
 
-T100BOOL T100CLSegmentParser::next()
+T100BOOL T100CLSegmentParser::next(T100State& state, T100Token& token)
 {
-    m_parser->next();
+    m_parser->next(state, token);
 }

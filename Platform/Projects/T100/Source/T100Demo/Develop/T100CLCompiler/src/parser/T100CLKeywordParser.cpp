@@ -21,7 +21,7 @@ T100ParserBase* T100CLKeywordParser::getSource()
     return m_parser;
 }
 
-T100BOOL T100CLKeywordParser::next()
+T100BOOL T100CLKeywordParser::next(T100State& state, T100Token& token)
 {
-    m_parser->next();
+    m_parser->next(state, token);
 }

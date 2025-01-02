@@ -1,7 +1,7 @@
 #include "T100ParserBase.h"
 
 T100ParserBase::T100ParserBase()
-    :T100State()
+    :T100Scanner()
 {
     //ctor
 }
