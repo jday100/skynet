@@ -13,6 +13,10 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/scene" />
+					<Add directory="include/skybox" />
+					<Add directory="include/character" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +26,10 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="include/scene" />
+					<Add directory="include/skybox" />
+					<Add directory="include/character" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -37,7 +45,15 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="include/T100FireGame.h" />
+		<Unit filename="include/character/T100FireCharacter.h" />
+		<Unit filename="include/scene/T100FireScene.h" />
+		<Unit filename="include/skybox/T100FireSkyBox.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/T100FireGame.cpp" />
+		<Unit filename="src/character/T100FireCharacter.cpp" />
+		<Unit filename="src/scene/T100FireScene.cpp" />
+		<Unit filename="src/skybox/T100FireSkyBox.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
