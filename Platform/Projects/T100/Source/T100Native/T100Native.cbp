@@ -82,6 +82,8 @@
 		<Unit filename="include/io/file/T100FileWriter.h" />
 		<Unit filename="include/io/file/binary/T100BinaryFileReader.h" />
 		<Unit filename="include/string/T100String16.h" />
+		<Unit filename="include/string/T100String16Equal.h" />
+		<Unit filename="include/string/T100String16Hash.h" />
 		<Unit filename="include/string/T100String32.h" />
 		<Unit filename="include/string/T100Unicode.h" />
 		<Unit filename="include/thread/T100Thread.h" />
@@ -99,6 +101,8 @@
 		<Unit filename="src/io/file/T100FileWriter.cpp" />
 		<Unit filename="src/io/file/binary/T100BinaryFileReader.cpp" />
 		<Unit filename="src/string/T100String16.cpp" />
+		<Unit filename="src/string/T100String16Equal.cpp" />
+		<Unit filename="src/string/T100String16Hash.cpp" />
 		<Unit filename="src/string/T100String32.cpp" />
 		<Unit filename="src/string/T100Unicode.cpp" />
 		<Unit filename="src/thread/T100Thread.cpp" />

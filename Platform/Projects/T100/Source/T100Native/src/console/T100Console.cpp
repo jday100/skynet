@@ -1,5 +1,11 @@
 #include "T100Console.h"
 
+#ifdef __WINDOWS__
+    #include "windows/console/T100ConsoleWindows.h"
+#else
+
+#endif // __WINDOWS__
+
 T100Console::T100Console()
 {
     //ctor
@@ -15,7 +21,6 @@ T100Console::~T100Console()
 T100VOID T100Console::create()
 {
 #ifdef __WINDOWS__
-    #include "windows/console/T100ConsoleWindows.h"
     m_console   = T100NEW T100ConsoleWindows();
 #else
 

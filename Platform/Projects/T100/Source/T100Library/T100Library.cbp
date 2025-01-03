@@ -19,6 +19,7 @@
 					<Add directory="include/math" />
 					<Add directory="include/state" />
 					<Add directory="../T100Native/include" />
+					<Add directory="include/vessel" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -40,6 +41,7 @@
 					<Add directory="include/math" />
 					<Add directory="include/state" />
 					<Add directory="../T100Native/include" />
+					<Add directory="include/vessel" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -64,6 +66,7 @@
 					<Add directory="include/math" />
 					<Add directory="include/state" />
 					<Add directory="../T100Native/include" />
+					<Add directory="include/vessel" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -110,6 +113,7 @@
 		<Unit filename="include/state/T100Scanner.h" />
 		<Unit filename="include/state/T100State.h" />
 		<Unit filename="include/state/T100Token.h" />
+		<Unit filename="include/vessel/T100Vessel.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 			<Option target="Debug" />

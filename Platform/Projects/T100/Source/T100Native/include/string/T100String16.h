@@ -5,6 +5,8 @@
 
 class T100String16
 {
+    friend class T100String16Hash;
+    friend class T100String16Equal;
     public:
         T100String16();
         T100String16(const char*);
