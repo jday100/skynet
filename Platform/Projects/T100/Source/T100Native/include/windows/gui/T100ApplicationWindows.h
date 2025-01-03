@@ -17,6 +17,8 @@ class T100ApplicationWindows
 
         int                 run();
 
+        HWND                getHWND();
+
     protected:
         //TCHAR               m_name[]    = _T("CodeBlocksWindowsApp");
         HINSTANCE           m_hthis_instance;

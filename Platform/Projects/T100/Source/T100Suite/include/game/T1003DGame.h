@@ -1,6 +1,7 @@
 #ifndef T1003DGAME_H
 #define T1003DGAME_H
 
+#include <windows.h>
 #include "T100Common.h"
 #include "graph/render/T100Renderer.h"
 
@@ -10,9 +11,13 @@ class T1003DGame
         T1003DGame();
         virtual ~T1003DGame();
 
+        T100VOID                setHWND(HWND);
+
         virtual T100BOOL        run();
 
     protected:
+        HWND                    m_hwnd;
+
         T100Renderer            m_renderer;
 
         T100BOOL                show_lobby();

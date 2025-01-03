@@ -65,6 +65,11 @@ T100VOID T100ApplicationWindows::Create()
                              );
 }
 
+HWND T100ApplicationWindows::getHWND()
+{
+    return m_hwnd;
+}
+
 T100VOID T100ApplicationWindows::Show()
 {
     ShowWindow(m_hwnd, m_ncmd_show);
