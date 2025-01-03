@@ -12,6 +12,7 @@
 #include "string/T100String32.h"
 
 #define     T100WString             T100String16
+#define     T100WChar               T100STDCHAR16
 
 
 #endif // T100COMMON_H

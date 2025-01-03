@@ -23,15 +23,18 @@ T100ParserBase* T100CLFileParser::getSource()
 
 T100BOOL T100CLFileParser::open(T100WString filename)
 {
-
+    m_file.open(filename);
 }
 
 T100BOOL T100CLFileParser::close()
 {
-
+    m_file.close();
 }
 
 T100BOOL T100CLFileParser::next(T100State& state, T100Token& token)
 {
+    T100WChar*      data;
+    T100WORD        length;
 
+    m_file.read(data, length);
 }

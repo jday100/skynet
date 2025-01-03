@@ -11,6 +11,9 @@ class T100String16
         virtual ~T100String16();
 
         T100WSTRING             to_wstring();
+        T100STRING16&           value();
+
+        T100VOID                clear();
 
     public:
         T100String16&           operator  = (const T100WSTRING&);

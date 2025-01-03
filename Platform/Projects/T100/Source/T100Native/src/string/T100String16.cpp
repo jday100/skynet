@@ -31,3 +31,13 @@ T100WSTRING T100String16::to_wstring()
     result = T100Unicode::to_wstring(m_value);
     return result;
 }
+
+T100STRING16& T100String16::value()
+{
+    return m_value;
+}
+
+T100VOID T100String16::clear()
+{
+    m_value.clear();
+}

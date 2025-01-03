@@ -1,7 +1,7 @@
 #ifndef T100CLFILEPARSER_H
 #define T100CLFILEPARSER_H
 
-#include "io/file/T100File.h"
+#include "io/file/T100FileReader.h"
 #include "develop/compiler/parser/T100ParserBase.h"
 
 class T100CLFileParser : public T100ParserBase
@@ -21,7 +21,7 @@ class T100CLFileParser : public T100ParserBase
     protected:
 
     private:
-        T100File                m_file;
+        T100FileReader          m_file;
         T100ParserBase*         m_parser            = T100NULL;
 
 };
