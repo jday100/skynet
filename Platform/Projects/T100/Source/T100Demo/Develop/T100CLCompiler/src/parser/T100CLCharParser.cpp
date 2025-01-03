@@ -33,5 +33,20 @@ T100BOOL T100CLCharParser::read()
 
 T100BOOL T100CLCharParser::next(T100State& state, T100Token& token)
 {
-    m_parser->next(state, token);
+    T100BOOL            result;
+
+    m_state     = &state;
+    m_token     = dynamic_cast<T100CLCharToken*>(&token);
+
+    if(m_token){
+        if(!isLoaded()){
+            result  = read();
+        }
+
+        if(result){
+            m_token->value  = m_item.value;
+            return T100TRUE;
+        }
+    }
+    return T100FALSE;
 }

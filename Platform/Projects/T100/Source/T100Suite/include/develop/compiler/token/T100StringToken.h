@@ -1,8 +1,9 @@
 #ifndef T100STRINGTOKEN_H
 #define T100STRINGTOKEN_H
 
+#include "state/T100Token.h"
 
-class T100StringToken
+class T100StringToken : public T100Token
 {
     public:
         T100StringToken();
