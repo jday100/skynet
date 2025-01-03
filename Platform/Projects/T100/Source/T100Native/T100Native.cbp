@@ -20,6 +20,8 @@
 					<Add directory="include/thread" />
 					<Add directory="include/io" />
 					<Add directory="include/io/file/binary" />
+					<Add directory="include/console" />
+					<Add directory="include/windows/console" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -36,6 +38,8 @@
 					<Add directory="include/thread" />
 					<Add directory="include/io" />
 					<Add directory="include/io/file/binary" />
+					<Add directory="include/console" />
+					<Add directory="include/windows/console" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -49,6 +53,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-D__WINDOWS__" />
 					<Add directory="include/common" />
 					<Add directory="include" />
 					<Add directory="include/io/file" />
@@ -56,6 +61,8 @@
 					<Add directory="include/thread" />
 					<Add directory="include/io" />
 					<Add directory="include/io/file/binary" />
+					<Add directory="include/console" />
+					<Add directory="include/windows/console" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -66,6 +73,8 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/common/T100DataTypes.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
+		<Unit filename="include/console/T100Console.h" />
+		<Unit filename="include/console/T100ConsoleBase.h" />
 		<Unit filename="include/io/T100Reader.h" />
 		<Unit filename="include/io/T100Writer.h" />
 		<Unit filename="include/io/file/T100File.h" />
@@ -76,10 +85,13 @@
 		<Unit filename="include/string/T100String32.h" />
 		<Unit filename="include/string/T100Unicode.h" />
 		<Unit filename="include/thread/T100Thread.h" />
+		<Unit filename="include/windows/console/T100ConsoleWindows.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="src/console/T100Console.cpp" />
+		<Unit filename="src/console/T100ConsoleBase.cpp" />
 		<Unit filename="src/io/T100Reader.cpp" />
 		<Unit filename="src/io/T100Writer.cpp" />
 		<Unit filename="src/io/file/T100File.cpp" />
@@ -90,6 +102,7 @@
 		<Unit filename="src/string/T100String32.cpp" />
 		<Unit filename="src/string/T100Unicode.cpp" />
 		<Unit filename="src/thread/T100Thread.cpp" />
+		<Unit filename="src/windows/console/T100ConsoleWindows.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

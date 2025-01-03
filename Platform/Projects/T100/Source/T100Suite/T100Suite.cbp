@@ -29,6 +29,7 @@
 					<Add directory="include/develop/compiler/token" />
 					<Add directory="include/develop/test" />
 					<Add directory="include/develop/log" />
+					<Add directory="include/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -60,6 +61,7 @@
 					<Add directory="include/develop/compiler/token" />
 					<Add directory="include/develop/test" />
 					<Add directory="include/develop/log" />
+					<Add directory="include/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -97,6 +99,7 @@
 					<Add directory="../T100Native/include" />
 					<Add directory="include/develop/test" />
 					<Add directory="include/develop/log" />
+					<Add directory="include/test" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -171,7 +174,15 @@
 		<Unit filename="include/develop/compiler/token/T100SourceToken.h" />
 		<Unit filename="include/develop/compiler/token/T100StringToken.h" />
 		<Unit filename="include/develop/log/T100Log.h" />
+		<Unit filename="include/develop/log/T100LogBase.h" />
+		<Unit filename="include/develop/log/T100LogCommon.h" />
+		<Unit filename="include/develop/log/T100LogConsole.h" />
+		<Unit filename="include/develop/log/T100LogFile.h" />
 		<Unit filename="include/develop/test/T100Test.h" />
+		<Unit filename="include/test/T100SuiteTest.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 			<Option target="Debug" />
@@ -207,7 +218,14 @@
 		<Unit filename="src/develop/compiler/token/T100SourceToken.cpp" />
 		<Unit filename="src/develop/compiler/token/T100StringToken.cpp" />
 		<Unit filename="src/develop/log/T100Log.cpp" />
+		<Unit filename="src/develop/log/T100LogBase.cpp" />
+		<Unit filename="src/develop/log/T100LogConsole.cpp" />
+		<Unit filename="src/develop/log/T100LogFile.cpp" />
 		<Unit filename="src/develop/test/T100Test.cpp" />
+		<Unit filename="src/test/T100SuiteTest.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="wxsmith/T100Suiteframe.wxs">
 			<Option target="Debug" />
 			<Option target="Release" />
