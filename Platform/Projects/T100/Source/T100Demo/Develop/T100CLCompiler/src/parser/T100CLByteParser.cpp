@@ -1,5 +1,7 @@
 #include "T100CLByteParser.h"
 
+#include "T100CLFileToken.h"
+
 T100CLByteParser::T100CLByteParser()
     :T100ParserBase()
 {
@@ -23,5 +25,7 @@ T100ParserBase* T100CLByteParser::getSource()
 
 T100BOOL T100CLByteParser::next(T100State& state, T100Token& token)
 {
-    m_parser->next(state, token);
+    T100CLFileToken         data;
+
+    m_parser->next(state, data);
 }

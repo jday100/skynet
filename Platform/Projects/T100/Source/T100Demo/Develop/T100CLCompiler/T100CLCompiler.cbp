@@ -63,6 +63,7 @@
 		<Unit filename="include/parser/T100CLSentenceParser.h" />
 		<Unit filename="include/parser/T100CLSourceParser.h" />
 		<Unit filename="include/parser/T100CLStringParser.h" />
+		<Unit filename="include/token/T100CLFileToken.h" />
 		<Unit filename="include/token/T100CLSourceToken.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/T100CLCompiler.cpp" />
@@ -78,6 +79,7 @@
 		<Unit filename="src/parser/T100CLSentenceParser.cpp" />
 		<Unit filename="src/parser/T100CLSourceParser.cpp" />
 		<Unit filename="src/parser/T100CLStringParser.cpp" />
+		<Unit filename="src/token/T100CLFileToken.cpp" />
 		<Unit filename="src/token/T100CLSourceToken.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

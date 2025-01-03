@@ -1,5 +1,7 @@
 #include "T100CLFileParser.h"
 
+#include "T100CLFileToken.h"
+
 T100CLFileParser::T100CLFileParser()
     :T100ParserBase()
 {
@@ -23,18 +25,22 @@ T100ParserBase* T100CLFileParser::getSource()
 
 T100BOOL T100CLFileParser::open(T100WString filename)
 {
-    m_file.open(filename);
+    return m_file.open(filename);
 }
 
 T100BOOL T100CLFileParser::close()
 {
-    m_file.close();
+    return m_file.close();
 }
 
 T100BOOL T100CLFileParser::next(T100State& state, T100Token& token)
 {
-    T100WChar*      data;
-    T100WORD        length;
+    T100BOOL            result      = T100FALSE;
+    T100CLFileToken*    data        = T100NULL;
 
-    m_file.read(data, length);
+    data    = dynamic_cast<T100CLFileToken*>(&token);
+    if(data){
+        result  = m_file.read(data->value, data->length);
+    }
+    return result;
 }
