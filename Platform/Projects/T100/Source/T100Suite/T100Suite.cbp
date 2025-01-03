@@ -27,6 +27,8 @@
 					<Add directory="include/develop/compiler/generator" />
 					<Add directory="include/develop/compiler/data" />
 					<Add directory="include/develop/compiler/token" />
+					<Add directory="include/develop/test" />
+					<Add directory="include/develop/log" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -56,6 +58,8 @@
 					<Add directory="include/develop/compiler/generator" />
 					<Add directory="include/develop/compiler/data" />
 					<Add directory="include/develop/compiler/token" />
+					<Add directory="include/develop/test" />
+					<Add directory="include/develop/log" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -91,6 +95,8 @@
 					<Add directory="include/develop/compiler/token" />
 					<Add directory="../T100Library/include" />
 					<Add directory="../T100Native/include" />
+					<Add directory="include/develop/test" />
+					<Add directory="include/develop/log" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -164,6 +170,8 @@
 		<Unit filename="include/develop/compiler/token/T100SentenceToken.h" />
 		<Unit filename="include/develop/compiler/token/T100SourceToken.h" />
 		<Unit filename="include/develop/compiler/token/T100StringToken.h" />
+		<Unit filename="include/develop/log/T100Log.h" />
+		<Unit filename="include/develop/test/T100Test.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 			<Option target="Debug" />
@@ -198,6 +206,8 @@
 		<Unit filename="src/develop/compiler/token/T100SentenceToken.cpp" />
 		<Unit filename="src/develop/compiler/token/T100SourceToken.cpp" />
 		<Unit filename="src/develop/compiler/token/T100StringToken.cpp" />
+		<Unit filename="src/develop/log/T100Log.cpp" />
+		<Unit filename="src/develop/test/T100Test.cpp" />
 		<Unit filename="wxsmith/T100Suiteframe.wxs">
 			<Option target="Debug" />
 			<Option target="Release" />

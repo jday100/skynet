@@ -52,6 +52,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/T100CLCommon.h" />
 		<Unit filename="include/T100CLCompiler.h" />
 		<Unit filename="include/analyzer/T100CLAnalyzer.h" />
 		<Unit filename="include/generator/T100CLGenerator.h" />
