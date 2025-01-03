@@ -9,7 +9,7 @@ class T100CLFileToken : public T100Token
         T100CLFileToken();
         virtual ~T100CLFileToken();
 
-        T100WChar       value[1024];
+        T100BYTE        value[1024];
         T100WORD        length          = 1024;
 
     protected:

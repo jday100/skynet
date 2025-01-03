@@ -21,6 +21,7 @@
 					<Add directory="../../../T100Library/include" />
 					<Add directory="../../../T100Native/include" />
 					<Add directory="include/token" />
+					<Add directory="include/test" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../build/libT100Suite.a" />
@@ -40,6 +41,7 @@
 					<Add directory="include/analyzer" />
 					<Add directory="include/generator" />
 					<Add directory="include/token" />
+					<Add directory="include/test" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -63,8 +65,15 @@
 		<Unit filename="include/parser/T100CLSentenceParser.h" />
 		<Unit filename="include/parser/T100CLSourceParser.h" />
 		<Unit filename="include/parser/T100CLStringParser.h" />
+		<Unit filename="include/test/T100CLTest.h" />
+		<Unit filename="include/token/T100CLByteToken.h" />
+		<Unit filename="include/token/T100CLCharToken.h" />
 		<Unit filename="include/token/T100CLFileToken.h" />
+		<Unit filename="include/token/T100CLKeywordToken.h" />
+		<Unit filename="include/token/T100CLSegmentToken.h" />
+		<Unit filename="include/token/T100CLSentenceToken.h" />
 		<Unit filename="include/token/T100CLSourceToken.h" />
+		<Unit filename="include/token/T100CLStringToken.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/T100CLCompiler.cpp" />
 		<Unit filename="src/analyzer/T100CLAnalyzer.cpp" />
@@ -79,8 +88,15 @@
 		<Unit filename="src/parser/T100CLSentenceParser.cpp" />
 		<Unit filename="src/parser/T100CLSourceParser.cpp" />
 		<Unit filename="src/parser/T100CLStringParser.cpp" />
+		<Unit filename="src/test/T100CLTest.cpp" />
+		<Unit filename="src/token/T100CLByteToken.cpp" />
+		<Unit filename="src/token/T100CLCharToken.cpp" />
 		<Unit filename="src/token/T100CLFileToken.cpp" />
+		<Unit filename="src/token/T100CLKeywordToken.cpp" />
+		<Unit filename="src/token/T100CLSegmentToken.cpp" />
+		<Unit filename="src/token/T100CLSentenceToken.cpp" />
 		<Unit filename="src/token/T100CLSourceToken.cpp" />
+		<Unit filename="src/token/T100CLStringToken.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

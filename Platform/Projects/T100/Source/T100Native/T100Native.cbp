@@ -19,6 +19,7 @@
 					<Add directory="include/string" />
 					<Add directory="include/thread" />
 					<Add directory="include/io" />
+					<Add directory="include/io/file/binary" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -34,6 +35,7 @@
 					<Add directory="include/string" />
 					<Add directory="include/thread" />
 					<Add directory="include/io" />
+					<Add directory="include/io/file/binary" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -53,6 +55,7 @@
 					<Add directory="include/string" />
 					<Add directory="include/thread" />
 					<Add directory="include/io" />
+					<Add directory="include/io/file/binary" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -68,6 +71,7 @@
 		<Unit filename="include/io/file/T100File.h" />
 		<Unit filename="include/io/file/T100FileReader.h" />
 		<Unit filename="include/io/file/T100FileWriter.h" />
+		<Unit filename="include/io/file/binary/T100BinaryFileReader.h" />
 		<Unit filename="include/string/T100String16.h" />
 		<Unit filename="include/string/T100String32.h" />
 		<Unit filename="include/string/T100Unicode.h" />
@@ -81,6 +85,7 @@
 		<Unit filename="src/io/file/T100File.cpp" />
 		<Unit filename="src/io/file/T100FileReader.cpp" />
 		<Unit filename="src/io/file/T100FileWriter.cpp" />
+		<Unit filename="src/io/file/binary/T100BinaryFileReader.cpp" />
 		<Unit filename="src/string/T100String16.cpp" />
 		<Unit filename="src/string/T100String32.cpp" />
 		<Unit filename="src/string/T100Unicode.cpp" />

@@ -44,7 +44,7 @@ T100Generator* T100Compiler::getGenerator()
     return m_generator;
 }
 
-T100BOOL T100Compiler::run()
+T100BOOL T100Compiler::run(T100WString in, T100WString out)
 {
     T100WString             filename;
     T100WString             output;
@@ -56,9 +56,9 @@ T100BOOL T100Compiler::run()
     filename    = "test";
     output      = "out";
 
-    m_parser->parse(filename, parser);
+    m_parser->parse(in, parser);
 
     m_analyzer->analyse(parser, analyzer);
 
-    m_generator->generate(analyzer, generator, output);
+    m_generator->generate(analyzer, generator, out);
 }

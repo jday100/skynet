@@ -1,20 +1,8 @@
-#include "T100CLParser.h"
-#include "T100CLAnalyzer.h"
-#include "T100CLGenerator.h"
-
-#include "T100CLCompiler.h"
+#include "T100CLTest.h"
 
 int main()
 {
-    T100CLParser            parser;
-    T100CLAnalyzer          analyzer;
-    T100CLGenerator         generator;
+    T100CLTest      cltest;
 
-    T100CLCompiler          compiler;
-
-    compiler.setParser(&parser);
-    compiler.setAnalyzer(&analyzer);
-    compiler.setGenerator(&generator);
-
-    compiler.run();
+    cltest.test();
 }

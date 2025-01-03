@@ -21,7 +21,7 @@ class T100Compiler
         T100VOID                setGenerator(T100Generator*);
         T100Generator*          getGenerator();
 
-        T100BOOL                run();
+        T100BOOL                run(T100WString, T100WString);
 
     protected:
 
