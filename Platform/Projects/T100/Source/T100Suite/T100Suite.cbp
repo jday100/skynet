@@ -30,6 +30,9 @@
 					<Add directory="include/develop/test" />
 					<Add directory="include/develop/log" />
 					<Add directory="include/test" />
+					<Add directory="include/game" />
+					<Add directory="include/graph" />
+					<Add directory="include/graph/render" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -62,6 +65,9 @@
 					<Add directory="include/develop/test" />
 					<Add directory="include/develop/log" />
 					<Add directory="include/test" />
+					<Add directory="include/game" />
+					<Add directory="include/graph" />
+					<Add directory="include/graph/render" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -100,6 +106,9 @@
 					<Add directory="include/develop/test" />
 					<Add directory="include/develop/log" />
 					<Add directory="include/test" />
+					<Add directory="include/game" />
+					<Add directory="include/graph" />
+					<Add directory="include/graph/render" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -138,6 +147,9 @@
 					<Add directory="include" />
 					<Add directory="../T100Native/include" />
 					<Add directory="../T100Library/include" />
+					<Add directory="include/game" />
+					<Add directory="include/graph" />
+					<Add directory="include/graph/render" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -218,6 +230,13 @@
 		<Unit filename="include/develop/log/T100LogConsole.h" />
 		<Unit filename="include/develop/log/T100LogFile.h" />
 		<Unit filename="include/develop/test/T100Test.h" />
+		<Unit filename="include/game/T1003DGame.h" />
+		<Unit filename="include/game/T100Character.h" />
+		<Unit filename="include/game/T100Game.h" />
+		<Unit filename="include/game/T100Scene.h" />
+		<Unit filename="include/game/T100SkyBox.h" />
+		<Unit filename="include/graph/T100Graph.h" />
+		<Unit filename="include/graph/render/T100Renderer.h" />
 		<Unit filename="include/test/T100SuiteTest.h">
 			<Option target="Debug" />
 			<Option target="Release" />
@@ -263,6 +282,13 @@
 		<Unit filename="src/develop/log/T100LogConsole.cpp" />
 		<Unit filename="src/develop/log/T100LogFile.cpp" />
 		<Unit filename="src/develop/test/T100Test.cpp" />
+		<Unit filename="src/game/T1003DGame.cpp" />
+		<Unit filename="src/game/T100Character.cpp" />
+		<Unit filename="src/game/T100Game.cpp" />
+		<Unit filename="src/game/T100Scene.cpp" />
+		<Unit filename="src/game/T100SkyBox.cpp" />
+		<Unit filename="src/graph/T100Graph.cpp" />
+		<Unit filename="src/graph/render/T100Renderer.cpp" />
 		<Unit filename="src/test/T100SuiteTest.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />

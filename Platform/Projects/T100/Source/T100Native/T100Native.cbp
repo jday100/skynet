@@ -22,6 +22,9 @@
 					<Add directory="include/io/file/binary" />
 					<Add directory="include/console" />
 					<Add directory="include/windows/console" />
+					<Add directory="include/windows/dx12" />
+					<Add directory="include/windows/gui" />
+					<Add directory="include/test" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -40,6 +43,9 @@
 					<Add directory="include/io/file/binary" />
 					<Add directory="include/console" />
 					<Add directory="include/windows/console" />
+					<Add directory="include/windows/dx12" />
+					<Add directory="include/windows/gui" />
+					<Add directory="include/test" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -63,6 +69,30 @@
 					<Add directory="include/io/file/binary" />
 					<Add directory="include/console" />
 					<Add directory="include/windows/console" />
+					<Add directory="include/windows/dx12" />
+					<Add directory="include/windows/gui" />
+					<Add directory="include/test" />
+				</Compiler>
+			</Target>
+			<Target title="Test">
+				<Option output="bin/Debug/T100Native" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/common" />
+					<Add directory="include" />
+					<Add directory="include/io/file" />
+					<Add directory="include/string" />
+					<Add directory="include/thread" />
+					<Add directory="include/io" />
+					<Add directory="include/io/file/binary" />
+					<Add directory="include/console" />
+					<Add directory="include/windows/console" />
+					<Add directory="include/windows/dx12" />
+					<Add directory="include/windows/gui" />
+					<Add directory="include/test" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -86,8 +116,11 @@
 		<Unit filename="include/string/T100String16Hash.h" />
 		<Unit filename="include/string/T100String32.h" />
 		<Unit filename="include/string/T100Unicode.h" />
+		<Unit filename="include/test/T100NativeTest.h" />
 		<Unit filename="include/thread/T100Thread.h" />
 		<Unit filename="include/windows/console/T100ConsoleWindows.h" />
+		<Unit filename="include/windows/dx12/T100DX12.h" />
+		<Unit filename="include/windows/gui/T100ApplicationWindows.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
@@ -105,8 +138,14 @@
 		<Unit filename="src/string/T100String16Hash.cpp" />
 		<Unit filename="src/string/T100String32.cpp" />
 		<Unit filename="src/string/T100Unicode.cpp" />
+		<Unit filename="src/test/T100NativeTest.cpp" />
+		<Unit filename="src/test/main.cpp">
+			<Option target="Test" />
+		</Unit>
 		<Unit filename="src/thread/T100Thread.cpp" />
 		<Unit filename="src/windows/console/T100ConsoleWindows.cpp" />
+		<Unit filename="src/windows/dx12/T100DX12.cpp" />
+		<Unit filename="src/windows/gui/T100ApplicationWindows.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

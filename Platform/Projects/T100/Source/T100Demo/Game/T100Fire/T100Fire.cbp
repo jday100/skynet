@@ -17,7 +17,15 @@
 					<Add directory="include/scene" />
 					<Add directory="include/skybox" />
 					<Add directory="include/character" />
+					<Add directory="../../../T100Native/include" />
+					<Add directory="../../../T100Library/include" />
+					<Add directory="../../../T100Suite/include" />
 				</Compiler>
+				<Linker>
+					<Add library="../../../build/libT100Native.a" />
+					<Add library="../../../build/libT100Library.a" />
+					<Add library="../../../build/libT100Suite.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100Fire" prefix_auto="1" extension_auto="1" />
