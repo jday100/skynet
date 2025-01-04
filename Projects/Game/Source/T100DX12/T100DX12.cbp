@@ -56,13 +56,17 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/demo/T100DX12Demo.h" />
 		<Unit filename="include/dx12/T100DX12Renderer.h" />
+		<Unit filename="include/game/T100Camera.h" />
 		<Unit filename="include/game/T100Game.h" />
 		<Unit filename="include/game/T100GameHelper.h" />
+		<Unit filename="include/game/T100Timer.h" />
 		<Unit filename="include/gui/T100Frame.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/demo/T100DX12Demo.cpp" />
 		<Unit filename="src/dx12/T100DX12Renderer.cpp" />
+		<Unit filename="src/game/T100Camera.cpp" />
 		<Unit filename="src/game/T100Game.cpp" />
+		<Unit filename="src/game/T100Timer.cpp" />
 		<Unit filename="src/gui/T100Frame.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
