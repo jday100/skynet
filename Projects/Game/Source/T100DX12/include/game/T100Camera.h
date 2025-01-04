@@ -1,6 +1,7 @@
 #ifndef T100CAMERA_H
 #define T100CAMERA_H
 
+#include "directxmath.h"
 #include "T100Common.h"
 using namespace DirectX;
 
