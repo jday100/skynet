@@ -1,4 +1,4 @@
-#include "T100Frame.h"
+#include "T100Game.h"
 
 int WINAPI WinMain (
                     HINSTANCE hThisInstance,
@@ -7,12 +7,12 @@ int WINAPI WinMain (
                     int nCmdShow
                     )
 {
-    T100Frame           frame(hThisInstance, hPrevInstance, lpszArgument, nCmdShow);
+    T100Game        game(hThisInstance, hPrevInstance, lpszArgument, nCmdShow);
 
-    frame.Create(_T("CodeBlocksWindowsApp"), _T("Code::Blocks Template Windows App"));
+    game.Create(_T("CodeBlocksWindowsApp"), _T("Code::Blocks Template Windows App"));
 
-    frame.Show();
+    game.Show();
 
-    return frame.Run();
+    return game.Run();
 }
 
