@@ -127,6 +127,7 @@
 		<Unit filename="include/windows/console/T100ConsoleWindows.h" />
 		<Unit filename="include/windows/dx12/T100DX12.h" />
 		<Unit filename="include/windows/dx12/T100DX12Helper.h" />
+		<Unit filename="include/windows/dx12/T100DX12Mesh.h" />
 		<Unit filename="include/windows/gui/T100ApplicationWindows.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
@@ -152,6 +153,7 @@
 		<Unit filename="src/thread/T100Thread.cpp" />
 		<Unit filename="src/windows/console/T100ConsoleWindows.cpp" />
 		<Unit filename="src/windows/dx12/T100DX12.cpp" />
+		<Unit filename="src/windows/dx12/T100DX12Mesh.cpp" />
 		<Unit filename="src/windows/gui/T100ApplicationWindows.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -12,6 +12,7 @@
 #include <shellapi.h>
 
 #include "T100Common.h"
+#include "T100DX12Mesh.h"
 
 class T100DX12
 {
@@ -22,9 +23,15 @@ class T100DX12
         T100VOID            start();
         T100VOID            stop();
 
+        T100BOOL            load();
+        T100BOOL            release();
+
         T100VOID            render();
 
         T100BOOL            run();
+
+    protected:
+        T100DX12Mesh        m_mesh;
 
     protected:
         UINT                m_width;

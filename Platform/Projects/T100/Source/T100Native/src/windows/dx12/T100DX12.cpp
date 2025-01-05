@@ -273,3 +273,28 @@ void T100DX12::WaitForPreviousFrame()
 
     m_frameIndex    = m_swapChain->GetCurrentBackBufferIndex();
 }
+
+T100BOOL T100DX12::load()
+{
+    auto indexDesc          = D3D12_RESOURCE_DESC::
+
+
+
+    auto indexDesc          = CD3DX12_RESOURCE_DESC::Buffer(size);
+
+
+
+
+    int size    = 1;
+    ThrowIfFailed(D3DCreateBlob(size, &m_mesh.VERTEX));
+    CopyMemory(m_mesh.Vertex->getBUfferPointer(), m_mesh.data(), size);
+
+    m_mesh.VertexBuffer = d3dUtil::CreateDefaultBUffer(md3ddevice.Get().
+                                                       mCommandList.Get(), m_mesh.VERTEX.data(), size,
+                                                       m_mesh.VertexBufferUploader);
+}
+
+T100BOOL T100DX12::release()
+{
+
+}
