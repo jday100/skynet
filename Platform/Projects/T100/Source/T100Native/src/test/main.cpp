@@ -1,5 +1,4 @@
-#include "T100ApplicationWindows.h"
-#include "T100DX12.h"
+#include "T100ApplicationWindow.h"
 
 int WINAPI WinMain(
                   HINSTANCE hThisInstance,
@@ -8,15 +7,10 @@ int WINAPI WinMain(
                   int nCmdShow
                   )
 {
-    T100ApplicationWindows      app(hThisInstance, hPrevInstance, lpszArgument, nCmdShow);
+    T100ApplicationWindow       app(hThisInstance, hPrevInstance, lpszArgument, nCmdShow);
 
-
-    app.Create();
-    T100DX12                    dx12(app.getHWND());
-
-    dx12.start();
-    dx12.render();
+    app.Create(_T("CodeBlocksWindowsApp"), _T("Code::Blocks Template Windows App"), DefaultWindowProcedure);
     app.Show();
 
-    return app.run();
+    return app.Run();
 }
