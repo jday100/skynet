@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-DUNICODE" />
 					<Add directory="include/gui" />
 					<Add directory="include/dx12" />
 					<Add directory="include/renderer" />
@@ -56,15 +57,18 @@
 		<Unit filename="include/dx12/d3d12sdklayers.h" />
 		<Unit filename="include/dx12/d3d12shader.h" />
 		<Unit filename="include/dx12/d3dcompiler.h" />
+		<Unit filename="include/dx12/dxgi.h" />
 		<Unit filename="include/game/T100Game.h" />
 		<Unit filename="include/game/T100Timer.h" />
 		<Unit filename="include/gui/T100Frame.h" />
 		<Unit filename="include/renderer/T100DX12Helper.h" />
 		<Unit filename="include/renderer/T100DX12Renderer.h" />
 		<Unit filename="include/renderer/T100DeviceResources.h" />
+		<Unit filename="include/renderer/T100Size.h" />
 		<Unit filename="include/renderer/d3dx12.h" />
 		<Unit filename="include/renderer/directxmath.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/T100Size.cpp" />
 		<Unit filename="src/demo/T100Demo.cpp" />
 		<Unit filename="src/dx12/T100DX12.cpp" />
 		<Unit filename="src/game/T100Game.cpp" />

@@ -1,8 +1,10 @@
 #ifndef T100DX12HELPER_H
 #define T100DX12HELPER_H
 
-#include <math.h>
 #include <stdexcept>
+#include <string>
+#include <math.h>
+
 #include <d3d12.h>
 
 
@@ -47,6 +49,7 @@ inline float ConvertDipsToPixels(float dips, float dpi)
 	}
 #endif
 
-#define NAME_D3D12_OBJECT(x) DX::SetName(x.Get(), L#x)
+
+#define NAME_D3D12_OBJECT(x) SetName(x.Get(), L#x)
 
 #endif // T100DX12HELPER_H

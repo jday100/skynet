@@ -20,7 +20,7 @@ class T100Frame
         T100Frame(HINSTANCE, HINSTANCE, LPSTR, int);
         virtual ~T100Frame();
 
-        T100VOID            Create(LPSTR name, LPSTR title, WNDPROC wndproc = DefaultWindowProcedure);
+        T100VOID            Create(LPCWSTR name, LPCWSTR title, WNDPROC wndproc = DefaultWindowProcedure);
         T100VOID            Destroy();
 
         int                 Run();
@@ -28,15 +28,21 @@ class T100Frame
         T100BOOL            Show();
         HWND                GetHWND();
 
+        UINT32              GetWidth();
+        UINT32              GetHeight();
+
     protected:
         HINSTANCE           m_hthis_instance;
         HINSTANCE           m_hprev_instance;
         LPSTR               m_lpsz_argument;
         int                 m_ncmd_show;
 
-        LPSTR               m_name;
+        LPCWSTR             m_name;
         HWND                m_hwnd;
         WNDCLASSEX          m_wincl;
+
+        UINT32              m_width;
+        UINT32              m_height;
 
     private:
 };

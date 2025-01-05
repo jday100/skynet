@@ -1,5 +1,10 @@
 #include "T100DeviceResources.h"
 
+#include <winerror.h>
+#include <minwindef.h>
+#include "T100DX12Helper.h"
+
+
 static const bool   SupportHighResolutions      = false;
 
 static const float  DPIThreshold                = 192.0f;
@@ -53,10 +58,10 @@ T100DeviceResources::T100DeviceResources(DXGI_FORMAT backBufferFormat, DXGI_FORM
     m_d3dRenderTargetSize(),
     m_outputSize(),
     m_logicalSize(),
-    m_nativeOrientation(DisplayOrientations::None),
-    m_currentOrientation(DisplayOrientations::None),
+    m_nativeOrientation(),
+    m_currentOrientation(),
     m_dpi(-1.0f),
-    m_effectiveDpi(-1.0f),
+    m_effectiveDPI(-1.0f),
     m_deviceRemoved(false)
 {
     //ctor
@@ -91,7 +96,7 @@ T100VOID T100DeviceResources::CreateDeviceResources()
 
     ComPtr<IDXGIAdapter1>       adapter;
 
-    GetHardwareAdapter(*adapter);
+    GetHardwareAdapter(&adapter);
 
     HRESULT hr = D3D12CreateDevice(
                                    adapter.Get(),
@@ -129,7 +134,7 @@ T100VOID T100DeviceResources::CreateDeviceResources()
     rtvHeapDesc.Type                    = D3D12_DESCRIPTOR_HEAP_TYPE_RTV;
     rtvHeapDesc.Flags                   = D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
 
-    ThrowIfFailed(m_d3dDevice->CreateDescriptionHeap(&rtvHeapDesc, IID_PPV_ARGS(&m_rtvHeap)));
+    ThrowIfFailed(m_d3dDevice->CreateDescriptorHeap(&rtvHeapDesc, IID_PPV_ARGS(&m_rtvHeap)));
     NAME_D3D12_OBJECT(m_rtvHeap);
 
     m_rtvDescriptorSize     = m_d3dDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
@@ -186,7 +191,7 @@ T100VOID T100DeviceResources::CreateWindowSizeDependentResources()
     {
         HRESULT hr = m_swapChain->ResizeBuffers(c_frameCount, backBufferWidth, backBufferHeight, m_backBufferFormat, 0);
 
-        if(hr == DXGI_ERROR_DEVIE_REMOVED || hr == DXGI_ERROR_DEVIDE_RESET)
+        if(hr == DXGI_ERROR_DEVICE_REMOVED || hr == DXGI_ERROR_DEVICE_RESET)
         {
             m_deviceRemoved = true;
             return;
@@ -198,12 +203,12 @@ T100VOID T100DeviceResources::CreateWindowSizeDependentResources()
     }
     else
     {
-        DXGI_SCALING scaling = DisplayMetrics::SupportHighResolutions ? DXGI_SCALING_NONE : DXGI_SCALING_STRETCH;
+        DXGI_SCALING scaling = SupportHighResolutions ? DXGI_SCALING_NONE : DXGI_SCALING_STRETCH;
         DXGI_SWAP_CHAIN_DESC1           swapChainDesc = {};
 
         swapChainDesc.Width             = backBufferWidth;
         swapChainDesc.Height            = backBufferHeight;
-        swapChainDesc.FORMAT            = m_backBufferFormat;
+        swapChainDesc.Format            = m_backBufferFormat;
         swapChainDesc.Stereo            = false;
         swapChainDesc.SampleDesc.Count  = 1;
         swapChainDesc.SampleDesc.Quality    = 0;
@@ -217,10 +222,11 @@ T100VOID T100DeviceResources::CreateWindowSizeDependentResources()
         ComPtr<IDXGISwapChain1>             swapChain;
 
         ThrowIfFailed(
-                      m_dxgiFactory->CreateSwapChainForCoreWindow(
+                      m_dxgiFactory->CreateSwapChainForHwnd(
                                                                   m_commandQueue.Get(),
-                                                                  reinterpret_cast<IUnknown*>(m_window.Get()),
+                                                                  m_frame->GetHWND(),
                                                                   &swapChainDesc,
+                                                                  T100NULL,
                                                                   T100NULL,
                                                                   &swapChain
                                                                   )
@@ -304,30 +310,30 @@ T100VOID T100DeviceResources::UpdateRenderTargetSize()
 {
     m_effectiveDPI  = m_dpi;
 
-    if(!DisplayMetrics::SupportHighResolutions && m_dpi > DisplayMetrics::DpiThreshold)
+    if(!SupportHighResolutions && m_dpi > DPIThreshold)
     {
         float width = ConvertDipsToPixels(m_logicalSize.Width, m_dpi);
         float height = ConvertDipsToPixels(m_logicalSize.Height, m_dpi);
 
-        if(max(width, height) > DisplayMetrics::WidthThreshold && min(width, height) > DisplayMetrics::HeightThreshold)
+        if(max(width, height) > WidthThreshold && min(width, height) > HeightThreshold)
         {
             m_effectiveDPI /= 2.0f;
         }
     }
 
-    m_outputSize.Width      = ConvertDipsToPixels(m_logicalSize.Width, m_effectiveDpi);
-    m_outputSize.Height     = ConvertDipsToPixels(m_logicalSize.Height, m_effectiveDpi);
+    m_outputSize.Width      = ConvertDipsToPixels(m_logicalSize.Width, m_effectiveDPI);
+    m_outputSize.Height     = ConvertDipsToPixels(m_logicalSize.Height, m_effectiveDPI);
 
     m_outputSize.Width      = max(m_outputSize.Width, 1);
     m_outputSize.Height     = max(m_outputSize.Height, 1);
 }
 
-T100VOID T100DeviceResources::SetFrame(T100Frame* window)
+T100VOID T100DeviceResources::SetFrame(T100Frame* frame)
 {
     DisplayInformation^ currentDisplayInformation = DisplayInformation::GetForCurrentView();
 
-    m_window                = window;
-    m_logicalSize           = Windows::Foundation::Size(window->Bounds.Width, window->Bounds.Height);
+    m_frame                 = frame;
+    m_logicalSize           = T100Size(frame->GetWidth(), frame.GetHeight());
     m_nativeOrientation     = currentDisplayInformation->NativeOrientation;
     m_currentOrientation    = currentDisplayInformation->CurrentOrientation;
     m_dpi = currentDisplayInformation->LogicalDpi;
@@ -335,7 +341,7 @@ T100VOID T100DeviceResources::SetFrame(T100Frame* window)
     CreateWindowSizeDependentResources();
 }
 
-T100VOID T100DeviceResources::SetLogicalRect(RECT logicalRect)
+T100VOID T100DeviceResources::SetLogicalSize(Size logicalSize)
 {
     if(m_logicalSize != logicalSize)
     {
@@ -350,7 +356,7 @@ T100VOID T100DeviceResources::SetDPI(float dpi)
     {
         m_dpi = dpi;
 
-        m_logicalSize = Size(m_window->Width, m_window->Height);
+        m_logicalSize = T100Size(m_frame->GetWidth(), m_frame->GetHeight());
 
         CreateWindowSizeDependentResources();
     }
@@ -379,7 +385,7 @@ T100VOID T100DeviceResources::ValidateDevice()
     {
         ComPtr<IDXGIFactory4>       currentDXGIFactory;
 
-        ThrowIfFailed(CreateDXGIFactor1(IID_PPV_ARGS(&currentDXGIFactory)));
+        ThrowIfFailed(CreateDXGIFactory1(IID_PPV_ARGS(&currentDXGIFactory)));
 
         ComPtr<IDXGIAdapter1>       currentDefaultAdapter;
 
@@ -505,22 +511,22 @@ T100VOID T100DeviceResources::GetHardwareAdapter(IDXGIAdapter1** ppAdapter)
 	*ppAdapter = adapter.Detach();
 }
 
-size T100DeviceResources::GetOutputSize() const
+T100Size T100DeviceResources::GetOutputSize() const
 {
     return m_outputSize;
 }
 
-size T100DeviceResources::GetLogicalSize() const;
+T100Size T100DeviceResources::GetLogicalSize() const;
 {
     return m_logicalSize;
 }
 
 float T100DeviceResources::GetDPI() const
 {
-    return m_effectiveDpi;
+    return m_effectiveDPI;
 }
 
-bool T100DeviceResources::IsDeviceRemove() const
+bool T100DeviceResources::IsDeviceRemoved() const
 {
     return m_deviceRemoved;
 }
@@ -570,7 +576,7 @@ D3D12_VIEWPORT T100DeviceResources::GetScreenViewport() const
     return m_screenViewport;
 }
 
-XMFLOAT4X4 T100DeviceResources:GetOrientationTransform3D() const
+XMFLOAT4X4 T100DeviceResources::GetOrientationTransform3D() const
 {
     return m_orientationTransform3D;
 }

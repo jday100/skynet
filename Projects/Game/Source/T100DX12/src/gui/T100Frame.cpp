@@ -15,7 +15,7 @@ T100Frame::~T100Frame()
     Destroy();
 }
 
-T100VOID T100Frame::Create(LPSTR name, LPSTR title, WNDPROC wndproc)
+T100VOID T100Frame::Create(LPCWSTR name, LPCWSTR title, WNDPROC wndproc)
 {
     m_name                      = name;
 
@@ -52,6 +52,8 @@ T100VOID T100Frame::Create(LPSTR name, LPSTR title, WNDPROC wndproc)
                                  NULL
                                  );
 
+    m_width     = 544;
+    m_height    = 375;
 }
 
 T100VOID T100Frame::Destroy()
@@ -62,6 +64,16 @@ T100VOID T100Frame::Destroy()
 HWND T100Frame::GetHWND()
 {
     return m_hwnd;
+}
+
+UINT32 T100Frame::GetWidth()
+{
+    return m_width;
+}
+
+UINT32 T100Frame::GetHeight()
+{
+    return m_height;
 }
 
 int T100Frame::Run()

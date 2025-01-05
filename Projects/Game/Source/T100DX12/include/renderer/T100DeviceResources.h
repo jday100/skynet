@@ -4,21 +4,25 @@
 #include <windows.h>
 
 #include <d3d12.h>
+#include <dxgi.h>
 #include <dxgi1_6.h>
 #include <d3dx12.h>
 
 #include <wrl.h>
 
 #include "T100Common.h"
+#include "T100Size.h"
 #include "directxmath.h"
 #include "T100Frame.h"
 
 
+using namespace DirectX;
 using namespace Microsoft::WRL;
 
 
 struct T100Orientation{
 };
+
 
 static const UINT       c_frameCount        = 3;
 
@@ -36,8 +40,8 @@ class T100DeviceResources
         T100VOID                            Present();
         T100VOID                            WaitForGpu();
 
-        RECT                                GetOutputRect() const;
-        RECT                                GetLogicalRect() const;
+        T100Size                            GetOutputSize() const;
+        T100Size                            GetLogicalSize() const;
 
         float                               GetDPI() const;
         bool                                IsDeviceRemoved() const;
@@ -90,11 +94,11 @@ class T100DeviceResources
         UINT64                              m_fenceValues[c_frameCount];
         HANDLE                              m_fenceEvent;
 
-        T100Frame*                          m_window;
+        T100Frame*                          m_frame;
 
-        RECT                                m_d3dRenderTargetRect;
-        RECT                                m_outputRect;
-        RECT                                m_logicalRect;
+        T100Size                            m_d3dRenderTargetSize;
+        T100Size                            m_outputSize;
+        T100Size                            m_logicalSize;
         T100Orientation                     m_nativeOrientation;
         T100Orientation                     m_currentOrientation;
         float                               m_dpi;

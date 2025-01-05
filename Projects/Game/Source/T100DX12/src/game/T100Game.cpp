@@ -13,7 +13,7 @@ T100Game::~T100Game()
     //dtor
 }
 
-T100VOID T100Game::Create(LPSTR name, LPSTR title)
+T100VOID T100Game::Create(LPCWSTR name, LPCWSTR title)
 {
     T100Frame::Create(name, title, T100Game::GameWindowProcedure);
 

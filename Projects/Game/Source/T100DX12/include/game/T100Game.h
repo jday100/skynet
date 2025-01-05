@@ -10,7 +10,7 @@ class T100Game : public T100Frame
         T100Game(HINSTANCE, HINSTANCE, LPSTR, int);
         virtual ~T100Game();
 
-        virtual T100VOID                Create(LPSTR, LPSTR);
+        virtual T100VOID                Create(LPCWSTR, LPCWSTR);
 
     protected:
         static LRESULT CALLBACK         GameWindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
