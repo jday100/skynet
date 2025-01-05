@@ -7,6 +7,22 @@
 
 #include <d3d12.h>
 
+inline float max(float a, float b)
+{
+    if(a > b){
+        return a;
+    }
+    return b;
+}
+
+inline float min(float a, float b)
+{
+    if(a > b){
+        return b;
+    }
+    return a;
+}
+
 
 inline std::string HrToString(HRESULT hr)
 {

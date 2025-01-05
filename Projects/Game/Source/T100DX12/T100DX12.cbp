@@ -21,6 +21,10 @@
 					<Add directory="include/demo" />
 					<Add directory="include" />
 				</Compiler>
+				<Linker>
+					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libd3d12.a" />
+					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libdxgi.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100DX12" prefix_auto="1" extension_auto="1" />

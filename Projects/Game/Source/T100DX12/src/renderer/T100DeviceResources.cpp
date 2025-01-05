@@ -1,7 +1,6 @@
 #include "T100DeviceResources.h"
 
 #include <winerror.h>
-#include <minwindef.h>
 #include "T100DX12Helper.h"
 
 
@@ -126,7 +125,7 @@ T100VOID T100DeviceResources::CreateDeviceResources()
     queueDesc.Type          = D3D12_COMMAND_LIST_TYPE_DIRECT;
 
     ThrowIfFailed(m_d3dDevice->CreateCommandQueue(&queueDesc, IID_PPV_ARGS(&m_commandQueue)));
-    NAME_D3D12_OBJECT(m_commandQueue);
+    //NAME_D3D12_OBJECT(m_commandQueue);
 
     D3D12_DESCRIPTOR_HEAP_DESC          rtvHeapDesc = {};
 
@@ -135,7 +134,7 @@ T100VOID T100DeviceResources::CreateDeviceResources()
     rtvHeapDesc.Flags                   = D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
 
     ThrowIfFailed(m_d3dDevice->CreateDescriptorHeap(&rtvHeapDesc, IID_PPV_ARGS(&m_rtvHeap)));
-    NAME_D3D12_OBJECT(m_rtvHeap);
+    //NAME_D3D12_OBJECT(m_rtvHeap);
 
     m_rtvDescriptorSize     = m_d3dDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
 
@@ -146,7 +145,7 @@ T100VOID T100DeviceResources::CreateDeviceResources()
     dsvHeapDesc.Flags                   = D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
 
     ThrowIfFailed(m_d3dDevice->CreateDescriptorHeap(&dsvHeapDesc, IID_PPV_ARGS(&m_dsvHeap)));
-    NAME_D3D12_OBJECT(m_dsvHeap);
+    //NAME_D3D12_OBJECT(m_dsvHeap);
 
     for (UINT n = 0; n < c_frameCount; n++)
 	{
@@ -292,7 +291,7 @@ T100VOID T100DeviceResources::CreateWindowSizeDependentResources()
                 IID_PPV_ARGS(&m_depthStencil)
                 ));
 
-                NAME_D3D12_OBJECT(m_depthStencil);
+                //NAME_D3D12_OBJECT(m_depthStencil);
 
                 D3D12_DEPTH_STENCIL_VIEW_DESC dsvDesc = {};
                 dsvDesc.Format = m_depthBufferFormat;
@@ -330,6 +329,7 @@ T100VOID T100DeviceResources::UpdateRenderTargetSize()
 
 T100VOID T100DeviceResources::SetFrame(T100Frame* frame)
 {
+    /*
     DisplayInformation^ currentDisplayInformation = DisplayInformation::GetForCurrentView();
 
     m_frame                 = frame;
@@ -339,15 +339,18 @@ T100VOID T100DeviceResources::SetFrame(T100Frame* frame)
     m_dpi = currentDisplayInformation->LogicalDpi;
 
     CreateWindowSizeDependentResources();
+    */
 }
 
-T100VOID T100DeviceResources::SetLogicalSize(Size logicalSize)
+T100VOID T100DeviceResources::SetLogicalSize(T100Size logicalSize)
 {
+    /*
     if(m_logicalSize != logicalSize)
     {
         m_logicalSize = logicalSize;
         CreateWindowSizeDependentResources();
     }
+    */
 }
 
 T100VOID T100DeviceResources::SetDPI(float dpi)
@@ -364,11 +367,13 @@ T100VOID T100DeviceResources::SetDPI(float dpi)
 
 T100VOID T100DeviceResources::SetCurrentOrientation(T100Orientation currentOrientation)
 {
+    /*
 	if (m_currentOrientation != currentOrientation)
 	{
 		m_currentOrientation = currentOrientation;
 		CreateWindowSizeDependentResources();
 	}
+	*/
 }
 
 T100VOID T100DeviceResources::ValidateDevice()
@@ -420,7 +425,7 @@ T100VOID T100DeviceResources::WaitForGpu()
 {
     ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), m_fenceValues[m_currentFrame]));
 
-    ThrowIfFailed(m_fence->SetEventOnCompletion(m_fenceValues[m_currentFrame]));
+    ThrowIfFailed(m_fence->SetEventOnCompletion(m_fenceValues[m_currentFrame], m_fenceEvent));
     WaitForSingleObjectEx(m_fenceEvent, INFINITE, FALSE);
 
     m_fenceValues[m_currentFrame]++;
@@ -436,7 +441,7 @@ T100VOID T100DeviceResources::MoveToNextFrame()
 
     if(m_fence->GetCompletedValue() < m_fenceValues[m_currentFrame])
     {
-        ThrowIfFailed(m_fence->SetEventOnCompletion(m_fenceValues[m_currentFrame]));
+        ThrowIfFailed(m_fence->SetEventOnCompletion(m_fenceValues[m_currentFrame], m_fenceEvent));
         WaitForSingleObjectEx(m_fenceEvent, INFINITE, FALSE);
     }
 
@@ -445,6 +450,7 @@ T100VOID T100DeviceResources::MoveToNextFrame()
 
 DXGI_MODE_ROTATION T100DeviceResources::ComputeDisplayRotation()
 {
+    /*
     DXGI_MODE_ROTATION      rotation    = DXGI_MODE_ROTATION_UNSPECIFIED;
 
     switch(m_nativeOrientation)
@@ -481,7 +487,8 @@ DXGI_MODE_ROTATION T100DeviceResources::ComputeDisplayRotation()
         }
         break;
     }
-    return rotation;
+    */
+    //return rotation;
 }
 
 T100VOID T100DeviceResources::GetHardwareAdapter(IDXGIAdapter1** ppAdapter)
@@ -502,7 +509,7 @@ T100VOID T100DeviceResources::GetHardwareAdapter(IDXGIAdapter1** ppAdapter)
 
 		// 检查适配器是否支持 Direct3D 12，但不要创建
 		// 仍为实际设备。
-		if (SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_11_0, _uuidof(ID3D12Device), nullptr)))
+		if (SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_11_0, __uuidof(ID3D12Device), nullptr)))
 		{
 			break;
 		}
@@ -516,7 +523,7 @@ T100Size T100DeviceResources::GetOutputSize() const
     return m_outputSize;
 }
 
-T100Size T100DeviceResources::GetLogicalSize() const;
+T100Size T100DeviceResources::GetLogicalSize() const
 {
     return m_logicalSize;
 }

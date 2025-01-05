@@ -33,7 +33,7 @@ class T100DeviceResources
         virtual ~T100DeviceResources();
 
         T100VOID                            SetFrame(T100Frame*);
-        T100VOID                            SetLogicalRect(RECT);
+        T100VOID                            SetLogicalSize(T100Size);
         T100VOID                            SetCurrentOrientation(T100Orientation currentOrientation);
         T100VOID                            SetDPI(float dpi);
         T100VOID                            ValidateDevice();
