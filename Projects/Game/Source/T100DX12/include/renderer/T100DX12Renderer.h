@@ -19,6 +19,8 @@ class T100DX12Renderer
         virtual T100BOOL            load();
         virtual T100BOOL            release();
 
+        virtual T100BOOL            render();
+
     protected:
         HWND                        m_hwnd;
 

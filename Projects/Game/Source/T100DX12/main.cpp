@@ -1,4 +1,4 @@
-#include "T100Game.h"
+#include "T100Demo.h"
 
 int WINAPI WinMain (
                     HINSTANCE hThisInstance,
@@ -7,12 +7,12 @@ int WINAPI WinMain (
                     int nCmdShow
                     )
 {
-    T100Game        game(hThisInstance, hPrevInstance, lpszArgument, nCmdShow);
+    T100Demo        demo(hThisInstance, hPrevInstance, lpszArgument, nCmdShow);
 
-    game.Create(_T("CodeBlocksWindowsApp"), _T("Code::Blocks Template Windows App"));
+    demo.Create(_T("T100GameDemo"), _T("T100GameDemo"));
 
-    game.Show();
+    demo.Show();
 
-    return game.Run();
+    return demo.Run();
 }
 

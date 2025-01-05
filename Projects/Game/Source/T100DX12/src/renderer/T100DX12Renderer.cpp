@@ -40,3 +40,8 @@ T100BOOL T100DX12Renderer::release()
 {
 
 }
+
+T100BOOL T100DX12Renderer::render()
+{
+
+}

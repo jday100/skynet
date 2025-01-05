@@ -1,11 +1,12 @@
 #ifndef T100DEMO_H
 #define T100DEMO_H
 
+#include "T100Game.h"
 
-class T100Demo
+class T100Demo : public T100Game
 {
     public:
-        T100Demo();
+        T100Demo(HINSTANCE, HINSTANCE, LPSTR, int);
         virtual ~T100Demo();
 
     protected:

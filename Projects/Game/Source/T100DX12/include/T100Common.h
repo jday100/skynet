@@ -5,6 +5,7 @@
 #define     T100BOOL            bool
 #define     T100TRUE            true
 #define     T100FALSE           false
+#define     T100NULL            nullptr
 
 #define     T100NEW             new
 #define     T100SAFE_DELETE     delete
