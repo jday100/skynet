@@ -1,5 +1,7 @@
 #include "T100Timer.h"
 
+#include <minwindef.h>
+
 T100Timer::T100Timer()
     :m_elapsedTicks(0),
     m_totalTicks(0),
@@ -9,7 +11,7 @@ T100Timer::T100Timer()
     m_framesThisSecond(0),
     m_qpcSecondCounter(0),
     m_isFixedTimeStep(false),
-    m_targetElapedTicks(TicksPerSecond / 60)
+    m_targetElapsedTicks(TicksPerSecond / 60)
 {
     //ctor
 
@@ -54,9 +56,9 @@ UINT32 T100Timer::GetFramesPerSecond() const
     return m_framesPerSecond;
 }
 
-void T100Timer:SetFixedTimeStep(bool isFixedTimeStep)
+void T100Timer::SetFixedTimeStep(bool isFixedTimeStep)
 {
-    m_isFixedTimeStep = isFixedTimestep;
+    m_isFixedTimeStep = isFixedTimeStep;
 }
 
 void T100Timer::SetTargetElapsedTicks(UINT64 targetElapsed)

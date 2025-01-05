@@ -6,11 +6,11 @@
 #include "d3d12.h"
 #include <dxgi1_6.h>
 #include <D3Dcompiler.h>
-#include <DirectXMath.h>
 #include "d3dx12.h"
 #include <wrl.h>
 #include <shellapi.h>
 #include "T100Common.h"
+#include "DirectXMath.h"
 
 class T100Game
 {

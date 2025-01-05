@@ -1,5 +1,11 @@
 #include "T100Camera.h"
 
+#include <cmath>
+#include <minwindef.h>
+#include "T100Matrix.h"
+#include <pix.h>
+using namespace DirectX;
+
 T100Camera::T100Camera()
     :m_initialPosition(0, 0, 0),
     m_position(m_initialPosition),

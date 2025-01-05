@@ -1,6 +1,7 @@
 #ifndef T100TIMER_H
 #define T100TIMER_H
 
+#include <windows.h>
 
 class T100Timer
 {
@@ -23,7 +24,7 @@ class T100Timer
         void                SetTargetElapsedTicks(UINT64);
         void                SetTargetElapsedSeconds(double);
 
-        static count UINT64     TicksPerSecond          = 10000000;
+        static const UINT64     TicksPerSecond          = 10000000;
 
         static double       TicksToSeconds(UINT64);
         static UINT64       SecondsToTicks(double);
@@ -41,7 +42,7 @@ class T100Timer
     private:
         LARGE_INTEGER       m_qpcFrequency;
         LARGE_INTEGER       m_qpcLastTime;
-        UINT64              m_pcMaxDelta;
+        UINT64              m_qpcMaxDelta;
 
         UINT64              m_elapsedTicks;
         UINT64              m_totalTicks;

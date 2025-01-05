@@ -20,7 +20,6 @@
 					<Add directory="include/demo" />
 					<Add directory="C:/ms/llvm-mingw/include" />
 					<Add directory="C:/ms/DirectX-Graphics-Samples/Samples/Desktop/D3D12HelloWorld/src/packages/Microsoft.Direct3D.D3D12.1.613.1/build/native/include/d3dx12" />
-					<Add directory="C:/Program Files (x86)/Windows Kits/10/Include/10.0.22621.0/um" />
 				</Compiler>
 				<Linker>
 					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libd3d12.a" />
@@ -56,10 +55,12 @@
 		</Linker>
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/demo/T100DX12Demo.h" />
+		<Unit filename="include/dx12/DirectXMath.h" />
 		<Unit filename="include/dx12/T100DX12Renderer.h" />
 		<Unit filename="include/game/T100Camera.h" />
 		<Unit filename="include/game/T100Game.h" />
 		<Unit filename="include/game/T100GameHelper.h" />
+		<Unit filename="include/game/T100Matrix.h" />
 		<Unit filename="include/game/T100Timer.h" />
 		<Unit filename="include/gui/T100Frame.h" />
 		<Unit filename="main.cpp" />
@@ -67,6 +68,7 @@
 		<Unit filename="src/dx12/T100DX12Renderer.cpp" />
 		<Unit filename="src/game/T100Camera.cpp" />
 		<Unit filename="src/game/T100Game.cpp" />
+		<Unit filename="src/game/T100Matrix.cpp" />
 		<Unit filename="src/game/T100Timer.cpp" />
 		<Unit filename="src/gui/T100Frame.cpp" />
 		<Extensions>

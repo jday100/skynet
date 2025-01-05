@@ -1,8 +1,11 @@
 #ifndef T100CAMERA_H
 #define T100CAMERA_H
 
-#include "directxmath.h"
+#include <windows.h>
+#include "DirectXMath.h"
 #include "T100Common.h"
+#include "T100Matrix.h"
+
 using namespace DirectX;
 
 class T100Camera
@@ -42,7 +45,7 @@ class T100Camera
         XMFLOAT3            m_initialPosition;
         XMFLOAT3            m_position;
         float               m_yaw;
-        float               m_pitch
+        float               m_pitch;
         XMFLOAT3            m_lookDirection;
         XMFLOAT3            m_upDirection;
         float               m_moveSpeed;
