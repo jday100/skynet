@@ -23,6 +23,16 @@ T100VOID T100D3D12::destroy()
 
 }
 
+T100BOOL T100D3D12::init()
+{
+
+}
+
+T100BOOL T100D3D12::uninit()
+{
+
+}
+
 T100BOOL T100D3D12::load()
 {
 
