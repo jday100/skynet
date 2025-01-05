@@ -62,6 +62,8 @@
 		<Unit filename="include/renderer/T100DX12Helper.h" />
 		<Unit filename="include/renderer/T100DX12Renderer.h" />
 		<Unit filename="include/renderer/T100DeviceResources.h" />
+		<Unit filename="include/renderer/d3dx12.h" />
+		<Unit filename="include/renderer/directxmath.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/demo/T100Demo.cpp" />
 		<Unit filename="src/dx12/T100DX12.cpp" />

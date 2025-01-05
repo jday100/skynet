@@ -1,7 +1,26 @@
 #ifndef T100DEVICERESOURCES_H
 #define T100DEVICERESOURCES_H
 
-static count UINT       c_frameCount        = 3;
+#include <windows.h>
+
+#include <d3d12.h>
+#include <dxgi1_6.h>
+#include <d3dx12.h>
+
+#include <wrl.h>
+
+#include "T100Common.h"
+#include "directxmath.h"
+#include "T100Frame.h"
+
+
+using namespace Microsoft::WRL;
+
+
+struct T100Orientation{
+};
+
+static const UINT       c_frameCount        = 3;
 
 class T100DeviceResources
 {
@@ -9,31 +28,31 @@ class T100DeviceResources
         T100DeviceResources(DXGI_FORMAT backBufferFormat = DXGI_FORMAT_B8G8R8A8_UNORM, DXGI_FORMAT depthBufferFormat = DXGI_FORMAT_D32_FLOAT);
         virtual ~T100DeviceResources();
 
-        T100VOID            SetWindow(T100Frame*);
-        T100VOID            SetLogicalSize(size);
-        T100VOID            SetCurrentOrientation(currentOrientation);
-        T100VOID            SetDPI(float dpi);
-        T100VOID            ValidateDevice();
-        T100vOID            Present();
-        T100VOID            WaitForGpu();
+        T100VOID                            SetFrame(T100Frame*);
+        T100VOID                            SetLogicalRect(RECT);
+        T100VOID                            SetCurrentOrientation(T100Orientation currentOrientation);
+        T100VOID                            SetDPI(float dpi);
+        T100VOID                            ValidateDevice();
+        T100VOID                            Present();
+        T100VOID                            WaitForGpu();
 
-        size                GetOutputSize() const;
-        size                GetLogicalSize() const;
+        RECT                                GetOutputRect() const;
+        RECT                                GetLogicalRect() const;
 
-        float               GetDPI() const;
-        bool                IsDeviceRemove() const;
+        float                               GetDPI() const;
+        bool                                IsDeviceRemoved() const;
 
-        ID3D12Device*               GetD3DDevice() const;
-        IDXGISwapChain3*            GetSwapChain() const;
-        ID3D12Resource*             GetRenderTarget() const;
-        ID3D12Resource*             GetDepthStencil() const;
-        ID3D12CommandQueue*         GetCommandQueue() const;
-        ID3D12CommandAllocator*     GetCommandAllocator() const;
-        DXGI_FORMAT                 GetBackBufferFormat() const;
-        DXGI_FORMAT                 GetDepthBufferFormat() const;
-        D3D12_VIEWPORT              GetScreenViewport() const;
-        XMFLOAT4X4                  GetOrientationTransform3D() const;
-        UINT                        GetCurrentFrameIndex() const;
+        ID3D12Device*                       GetD3DDevice() const;
+        IDXGISwapChain3*                    GetSwapChain() const;
+        ID3D12Resource*                     GetRenderTarget() const;
+        ID3D12Resource*                     GetDepthStencil() const;
+        ID3D12CommandQueue*                 GetCommandQueue() const;
+        ID3D12CommandAllocator*             GetCommandAllocator() const;
+        DXGI_FORMAT                         GetBackBufferFormat() const;
+        DXGI_FORMAT                         GetDepthBufferFormat() const;
+        D3D12_VIEWPORT                      GetScreenViewport() const;
+        XMFLOAT4X4                          GetOrientationTransform3D() const;
+        UINT                                GetCurrentFrameIndex() const;
 
         CD3DX12_CPU_DESCRIPTOR_HANDLE       GetRenderTargetView() const;
         CD3DX12_CPU_DESCRIPTOR_HANDLE       GetDepthStencilView() const;
@@ -56,7 +75,7 @@ class T100DeviceResources
         ComPtr<IDXGISwapChain3>             m_swapChain;
         ComPtr<ID3D12Resource>              m_renderTargets[c_frameCount];
         ComPtr<ID3D12Resource>              m_depthStencil;
-        ComPtr<ID3D12DescriptorHeap>        m_rtvHeap
+        ComPtr<ID3D12DescriptorHeap>        m_rtvHeap;
         ComPtr<ID3D12DescriptorHeap>        m_dsvHeap;
         ComPtr<ID3D12CommandQueue>          m_commandQueue;
         ComPtr<ID3D12CommandAllocator>      m_commandAllocators[c_frameCount];
@@ -73,11 +92,11 @@ class T100DeviceResources
 
         T100Frame*                          m_window;
 
-        size                                m_d3dRenderTargetSize;
-        size                                m_outputSize;
-        size                                m_logicalSize;
-        displayOrientations                 m_nativeOrientation;
-        displayOrientations;                m_currentOrientation;
+        RECT                                m_d3dRenderTargetRect;
+        RECT                                m_outputRect;
+        RECT                                m_logicalRect;
+        T100Orientation                     m_nativeOrientation;
+        T100Orientation                     m_currentOrientation;
         float                               m_dpi;
 
         float                               m_effectiveDPI;

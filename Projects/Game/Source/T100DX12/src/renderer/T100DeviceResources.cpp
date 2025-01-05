@@ -322,7 +322,7 @@ T100VOID T100DeviceResources::UpdateRenderTargetSize()
     m_outputSize.Height     = max(m_outputSize.Height, 1);
 }
 
-T100VOID T100DeviceResources::SetWindow(T100Frame* window)
+T100VOID T100DeviceResources::SetFrame(T100Frame* window)
 {
     DisplayInformation^ currentDisplayInformation = DisplayInformation::GetForCurrentView();
 
@@ -335,7 +335,7 @@ T100VOID T100DeviceResources::SetWindow(T100Frame* window)
     CreateWindowSizeDependentResources();
 }
 
-T100VOID T100DeviceResources::SetLogicalSize(size logicalSize)
+T100VOID T100DeviceResources::SetLogicalRect(RECT logicalRect)
 {
     if(m_logicalSize != logicalSize)
     {
@@ -356,7 +356,7 @@ T100VOID T100DeviceResources::SetDPI(float dpi)
     }
 }
 
-T100VOID T100DeviceResources::SetCurrentOrientation()
+T100VOID T100DeviceResources::SetCurrentOrientation(T100Orientation currentOrientation)
 {
 	if (m_currentOrientation != currentOrientation)
 	{
