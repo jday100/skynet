@@ -141,11 +141,6 @@
 			<Option target="Library" />
 		</Unit>
 		<Unit filename="include/windows/gui/T100ApplicationWindow.h" />
-		<Unit filename="include/windows/gui/T100ApplicationWindows.h">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Library" />
-		</Unit>
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
@@ -180,11 +175,6 @@
 			<Option target="Library" />
 		</Unit>
 		<Unit filename="src/windows/gui/T100ApplicationWindow.cpp" />
-		<Unit filename="src/windows/gui/T100ApplicationWindows.cpp">
-			<Option target="Debug" />
-			<Option target="Release" />
-			<Option target="Library" />
-		</Unit>
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

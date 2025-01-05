@@ -19,6 +19,7 @@ class T100ApplicationWindow
         int                 Run();
 
         WINBOOL             Show();
+        HWND                GetHWND();
 
     protected:
         HINSTANCE           m_hthis_instance;

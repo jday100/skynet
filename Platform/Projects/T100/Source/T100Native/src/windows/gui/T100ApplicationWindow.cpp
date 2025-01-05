@@ -57,6 +57,11 @@ T100VOID T100ApplicationWindow::Destroy()
 
 }
 
+HWND T100ApplicationWindow::GetHWND()
+{
+    return m_hwnd;
+}
+
 int T100ApplicationWindow::Run()
 {
     MSG         message;
