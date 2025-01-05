@@ -9,23 +9,36 @@
 
 #include <tchar.h>
 #include <windows.h>
+
 #include "T100Common.h"
-class T100Game;
+
+LRESULT CALLBACK            DefaultWindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
 
 class T100Frame
 {
     public:
-        T100Frame();
+        T100Frame(HINSTANCE, HINSTANCE, LPSTR, int);
         virtual ~T100Frame();
 
-        static int                  Run(T100Game* game, HINSTANCE hInstance, int nCmdShow);
-        static HWND                 GetHwnd();
+        T100VOID            Create(LPSTR name, LPSTR title, WNDPROC wndproc = DefaultWindowProcedure);
+        T100VOID            Destroy();
+
+        int                 Run();
+
+        T100BOOL            Show();
+        HWND                GetHWND();
 
     protected:
-        static LRESULT CALLBACK     WindowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
+        HINSTANCE           m_hthis_instance;
+        HINSTANCE           m_hprev_instance;
+        LPSTR               m_lpsz_argument;
+        int                 m_ncmd_show;
+
+        LPSTR               m_name;
+        HWND                m_hwnd;
+        WNDCLASSEX          m_wincl;
 
     private:
-        static HWND                 m_hwnd;
 };
 
 #endif // T100FRAME_H

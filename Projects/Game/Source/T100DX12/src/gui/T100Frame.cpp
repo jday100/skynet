@@ -1,9 +1,10 @@
 #include "T100Frame.h"
-#include "T100Game.h"
 
-HWND T100Frame::m_hwnd      = nullptr;
-
-T100Frame::T100Frame()
+T100Frame::T100Frame(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpszArgument, int nCmdShow) :
+    m_hthis_instance(hThisInstance),
+    m_hprev_instance(hPrevInstance),
+    m_lpsz_argument(lpszArgument),
+    m_ncmd_show(nCmdShow)
 {
     //ctor
 }
@@ -11,111 +12,84 @@ T100Frame::T100Frame()
 T100Frame::~T100Frame()
 {
     //dtor
+    Destroy();
 }
 
-HWND T100Frame::GetHwnd()
+T100VOID T100Frame::Create(LPSTR name, LPSTR title, WNDPROC wndproc)
+{
+    m_name                      = name;
+
+    m_wincl.hInstance           = m_hthis_instance;
+    m_wincl.lpszClassName       = name;
+    m_wincl.lpfnWndProc         = wndproc;
+    m_wincl.style               = CS_DBLCLKS;
+    m_wincl.cbSize              = sizeof(m_wincl);
+
+    m_wincl.hIcon               = LoadIcon(NULL, IDI_APPLICATION);
+    m_wincl.hIconSm             = LoadIcon(NULL, IDI_APPLICATION);
+    m_wincl.hCursor             = LoadCursor(NULL, IDC_ARROW);
+    m_wincl.lpszMenuName        = NULL;
+    m_wincl.cbClsExtra          = 0;
+    m_wincl.cbWndExtra          = 0;
+    m_wincl.hbrBackground       = (HBRUSH)COLOR_BACKGROUND;
+
+    if(!RegisterClassEx(&m_wincl)){
+        return;
+    }
+
+    m_hwnd      = CreateWindowEx(
+                                 0,
+                                 name,
+                                 title,
+                                 WS_OVERLAPPEDWINDOW,
+                                 CW_USEDEFAULT,
+                                 CW_USEDEFAULT,
+                                 544,
+                                 375,
+                                 HWND_DESKTOP,
+                                 NULL,
+                                 m_hthis_instance,
+                                 NULL
+                                 );
+
+}
+
+T100VOID T100Frame::Destroy()
+{
+    UnregisterClass(m_name, m_hthis_instance);
+}
+
+HWND T100Frame::GetHWND()
 {
     return m_hwnd;
 }
 
-int T100Frame::Run(T100Game* game, HINSTANCE hInstance, int nCmdShow)
+int T100Frame::Run()
 {
-    int     argc;
+    MSG         message;
 
-    LPWSTR* argv = CommandLineToArgvW(GetCommandLineW(), &argc);
-    game->ParseCommandLineArgs(argv, argc);
-    LocalFree(argv);
-
-    WNDCLASSEXW      windowClass     = {0};
-
-    windowClass.cbSize          = sizeof(WNDCLASSEX);
-    windowClass.style           = CS_HREDRAW | CS_VREDRAW;
-    windowClass.lpfnWndProc     = WindowProc;
-    windowClass.hInstance       = hInstance;
-    windowClass.hCursor         = LoadCursor(NULL, IDC_ARROW);
-    windowClass.lpszClassName   = L"DXSampleClass";
-    RegisterClassExW(&windowClass);
-
-    RECT    windowRect = {0, 0,
-                            static_cast<LONG>(game->GetWidth()),
-                            static_cast<LONG>(game->GetHeight())};
-    AdjustWindowRect(&windowRect, WS_OVERLAPPEDWINDOW, FALSE);
-
-    m_hwnd  = CreateWindowW(
-                           windowClass.lpszClassName,
-                           game->GetTitle(),
-                           WS_OVERLAPPEDWINDOW,
-                           CW_USEDEFAULT,
-                           CW_USEDEFAULT,
-                           windowRect.right - windowRect.left,
-                           windowRect.bottom - windowRect.top,
-                           nullptr,
-                           nullptr,
-                           hInstance,
-                           game
-                           );
-
-    game->OnInit();
-
-    ShowWindow(m_hwnd, nCmdShow);
-
-    MSG         msg = {};
-
-    while(msg.message != WM_QUIT)
+    while(GetMessage(&message, NULL, 0, 0))
     {
-        if(PeekMessage(&msg, NULL, 0, 0, PM_REMOVE))
-        {
-            TranslateMessage(&msg);
-            DispatchMessage(&msg);
-        }
+        TranslateMessage(&message);
+        DispatchMessage(&message);
     }
-
-    game->OnDestroy();
-
-    return static_cast<char>(msg.wParam);
+    return message.wParam;
 }
 
-LRESULT CALLBACK WindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+T100BOOL T100Frame::Show()
 {
-    T100Game*   game    = reinterpret_cast<T100Game*>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
+    return ShowWindow(m_hwnd, m_ncmd_show);
+}
 
+LRESULT CALLBACK DefaultWindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
     switch(message)
     {
-    case WM_CREATE:
-        {
-            LPCREATESTRUCT  pCreateStruct = reinterpret_cast<LPCREATESTRUCT>(lParam);
-
-            SetWindowLongPtr(hwnd, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(pCreateStruct));
-        }
-        return 0;
-    case WM_KEYDOWN:
-        {
-            if(game){
-                game->OnKeyDown(static_cast<UINT8>(wParam));
-            }
-        }
-        return 0;
-    case WM_KEYUP:
-        {
-            if(game){
-                game->OnKeyUp(static_cast<UINT8>(wParam));
-            }
-        }
-        return 0;
-    case WM_PAINT:
-        {
-            if(game){
-                game->OnUpdate();
-                game->OnRender();
-            }
-        }
-        return 0;
     case WM_DESTROY:
         PostQuitMessage(0);
         break;
     default:
         return DefWindowProc(hwnd, message, wParam, lParam);
     }
-
     return 0;
 }

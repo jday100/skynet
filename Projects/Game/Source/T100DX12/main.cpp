@@ -1,13 +1,18 @@
 #include "T100Frame.h"
-#include "T100DX12Demo.h"
 
-int WINAPI WinMain (HINSTANCE hThisInstance,
-                     HINSTANCE hPrevInstance,
-                     LPSTR lpszArgument,
-                     int nCmdShow)
+int WINAPI WinMain (
+                    HINSTANCE hThisInstance,
+                    HINSTANCE hPrevInstance,
+                    LPSTR lpszArgument,
+                    int nCmdShow
+                    )
 {
-    T100DX12Demo        demo(1280, 720, L"D3D12 Bundles Sample");
+    T100Frame           frame(hThisInstance, hPrevInstance, lpszArgument, nCmdShow);
 
-    return T100Frame::Run(&demo, hThisInstance, nCmdShow);
+    frame.Create(_T("CodeBlocksWindowsApp"), _T("Code::Blocks Template Windows App"));
+
+    frame.Show();
+
+    return frame.Run();
 }
 
