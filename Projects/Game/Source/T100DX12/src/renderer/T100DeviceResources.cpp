@@ -302,5 +302,291 @@ T100VOID T100DeviceResources::CreateWindowSizeDependentResources()
 
 T100VOID T100DeviceResources::UpdateRenderTargetSize()
 {
+    m_effectiveDPI  = m_dpi;
 
+    if(!DisplayMetrics::SupportHighResolutions && m_dpi > DisplayMetrics::DpiThreshold)
+    {
+        float width = ConvertDipsToPixels(m_logicalSize.Width, m_dpi);
+        float height = ConvertDipsToPixels(m_logicalSize.Height, m_dpi);
+
+        if(max(width, height) > DisplayMetrics::WidthThreshold && min(width, height) > DisplayMetrics::HeightThreshold)
+        {
+            m_effectiveDPI /= 2.0f;
+        }
+    }
+
+    m_outputSize.Width      = ConvertDipsToPixels(m_logicalSize.Width, m_effectiveDpi);
+    m_outputSize.Height     = ConvertDipsToPixels(m_logicalSize.Height, m_effectiveDpi);
+
+    m_outputSize.Width      = max(m_outputSize.Width, 1);
+    m_outputSize.Height     = max(m_outputSize.Height, 1);
 }
+
+T100VOID T100DeviceResources::SetWindow(T100Frame* window)
+{
+    DisplayInformation^ currentDisplayInformation = DisplayInformation::GetForCurrentView();
+
+    m_window                = window;
+    m_logicalSize           = Windows::Foundation::Size(window->Bounds.Width, window->Bounds.Height);
+    m_nativeOrientation     = currentDisplayInformation->NativeOrientation;
+    m_currentOrientation    = currentDisplayInformation->CurrentOrientation;
+    m_dpi = currentDisplayInformation->LogicalDpi;
+
+    CreateWindowSizeDependentResources();
+}
+
+T100VOID T100DeviceResources::SetLogicalSize(size logicalSize)
+{
+    if(m_logicalSize != logicalSize)
+    {
+        m_logicalSize = logicalSize;
+        CreateWindowSizeDependentResources();
+    }
+}
+
+T100VOID T100DeviceResources::SetDPI(float dpi)
+{
+    if(dpi != m_dpi)
+    {
+        m_dpi = dpi;
+
+        m_logicalSize = Size(m_window->Width, m_window->Height);
+
+        CreateWindowSizeDependentResources();
+    }
+}
+
+T100VOID T100DeviceResources::SetCurrentOrientation()
+{
+	if (m_currentOrientation != currentOrientation)
+	{
+		m_currentOrientation = currentOrientation;
+		CreateWindowSizeDependentResources();
+	}
+}
+
+T100VOID T100DeviceResources::ValidateDevice()
+{
+    DXGI_ADAPTER_DESC       previousDesc;
+    {
+        ComPtr<IDXGIAdapter1>       previousDefaultAdapter;
+
+        ThrowIfFailed(m_dxgiFactory->EnumAdapters1(0, &previousDefaultAdapter));
+        ThrowIfFailed(previousDefaultAdapter->GetDesc(&previousDesc));
+    }
+
+    DXGI_ADAPTER_DESC       currentDesc;
+    {
+        ComPtr<IDXGIFactory4>       currentDXGIFactory;
+
+        ThrowIfFailed(CreateDXGIFactor1(IID_PPV_ARGS(&currentDXGIFactory)));
+
+        ComPtr<IDXGIAdapter1>       currentDefaultAdapter;
+
+        ThrowIfFailed(currentDXGIFactory->EnumAdapters1(0, &currentDefaultAdapter));
+        ThrowIfFailed(currentDefaultAdapter->GetDesc(&currentDesc));
+    }
+
+    if (previousDesc.AdapterLuid.LowPart != currentDesc.AdapterLuid.LowPart ||
+        previousDesc.AdapterLuid.HighPart != currentDesc.AdapterLuid.HighPart ||
+        FAILED(m_d3dDevice->GetDeviceRemovedReason()))
+    {
+        m_deviceRemoved = true;
+    }
+}
+
+T100VOID T100DeviceResources::Present()
+{
+    HRESULT hr = m_swapChain->Present(1, 0);
+
+    if(hr == DXGI_ERROR_DEVICE_REMOVED || hr == DXGI_ERROR_DEVICE_RESET)
+    {
+        m_deviceRemoved = true;
+    }
+    else
+    {
+        ThrowIfFailed(hr);
+        MoveToNextFrame();
+    }
+}
+
+T100VOID T100DeviceResources::WaitForGpu()
+{
+    ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), m_fenceValues[m_currentFrame]));
+
+    ThrowIfFailed(m_fence->SetEventOnCompletion(m_fenceValues[m_currentFrame]));
+    WaitForSingleObjectEx(m_fenceEvent, INFINITE, FALSE);
+
+    m_fenceValues[m_currentFrame]++;
+}
+
+T100VOID T100DeviceResources::MoveToNextFrame()
+{
+    const UINT64    currentFenceValue   = m_fenceValues[m_currentFrame];
+
+    ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), currentFenceValue));
+
+    m_currentFrame  = m_swapChain->GetCurrentBackBufferIndex();
+
+    if(m_fence->GetCompletedValue() < m_fenceValues[m_currentFrame])
+    {
+        ThrowIfFailed(m_fence->SetEventOnCompletion(m_fenceValues[m_currentFrame]));
+        WaitForSingleObjectEx(m_fenceEvent, INFINITE, FALSE);
+    }
+
+    m_fenceValues[m_currentFrame] = currentFenceValue + 1;
+}
+
+DXGI_MODE_ROTATION T100DeviceResources::ComputeDisplayRotation()
+{
+    DXGI_MODE_ROTATION      rotation    = DXGI_MODE_ROTATION_UNSPECIFIED;
+
+    switch(m_nativeOrientation)
+    {
+    case DisplayOrientations::Landscape:
+        switch(m_currentOrientation)
+        {
+        case DisplayOrientations::Landscape:
+            rotation    = DXGI_MODE_ROTATION_IDENTITY;
+            break;
+        case DisplayOrientations::Portrait:
+            rotation    = DXGI_MODE_ROTATION_ROTATE270;
+            break;
+        case DisplayOrientations:LandscapeFlipped:
+            rotation    = DXGI_MODE_ROTATION_ROTATE90;
+            break;
+        }
+        break;
+    case DisplayOrientations::Portrait:
+        switch(m_currentOrientation)
+        {
+        case DisplayOrientations::Landscape:
+            rotation    = DXGI_MODE_ROTATION_ROTATE90;
+            break;
+        case DisplayOrientations::Portrait:
+            rotation    = DXGI_MODE_ROTATION_IDENTITY;
+            break;
+        case DisplayOrientations:LandscapeFlipped:
+            rotation    = DXGI_MODE_ROTATION_ROTATE270;
+            break;
+        case DisplayOrientations:PortraitFlipped:
+            rotation    = DXGI_MODE_ROTATION_ROTATE180;
+            break;
+        }
+        break;
+    }
+    return rotation;
+}
+
+T100VOID T100DeviceResources::GetHardwareAdapter(IDXGIAdapter1** ppAdapter)
+{
+    ComPtr<IDXGIAdapter1>       adapter;
+    *ppAdapter  = T100NULL;
+
+    for (UINT adapterIndex = 0; DXGI_ERROR_NOT_FOUND != m_dxgiFactory->EnumAdapters1(adapterIndex, &adapter); adapterIndex++)
+	{
+		DXGI_ADAPTER_DESC1 desc;
+		adapter->GetDesc1(&desc);
+
+		if (desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE)
+		{
+			// 不要选择基本呈现驱动程序适配器。
+			continue;
+		}
+
+		// 检查适配器是否支持 Direct3D 12，但不要创建
+		// 仍为实际设备。
+		if (SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_11_0, _uuidof(ID3D12Device), nullptr)))
+		{
+			break;
+		}
+	}
+
+	*ppAdapter = adapter.Detach();
+}
+
+size T100DeviceResources::GetOutputSize() const
+{
+    return m_outputSize;
+}
+
+size T100DeviceResources::GetLogicalSize() const;
+{
+    return m_logicalSize;
+}
+
+float T100DeviceResources::GetDPI() const
+{
+    return m_effectiveDpi;
+}
+
+bool T100DeviceResources::IsDeviceRemove() const
+{
+    return m_deviceRemoved;
+}
+
+ID3D12Device* T100DeviceResources::GetD3DDevice() const
+{
+    return m_d3dDevice.Get();
+}
+
+IDXGISwapChain3* T100DeviceResources::GetSwapChain() const
+{
+    return m_swapChain.Get();
+}
+
+ID3D12Resource* T100DeviceResources::GetRenderTarget() const
+{
+    return m_renderTargets[m_currentFrame].Get();
+}
+
+ID3D12Resource* T100DeviceResources::GetDepthStencil() const
+{
+    return m_depthStencil.Get();
+}
+
+ID3D12CommandQueue* T100DeviceResources::GetCommandQueue() const
+{
+    return m_commandQueue.Get();
+}
+
+ID3D12CommandAllocator* T100DeviceResources::GetCommandAllocator() const
+{
+    return m_commandAllocators[m_currentFrame].Get();
+}
+
+DXGI_FORMAT T100DeviceResources::GetBackBufferFormat() const
+{
+    return m_backBufferFormat;
+}
+
+DXGI_FORMAT T100DeviceResources::GetDepthBufferFormat() const
+{
+    return m_depthBufferFormat;
+}
+
+D3D12_VIEWPORT T100DeviceResources::GetScreenViewport() const
+{
+    return m_screenViewport;
+}
+
+XMFLOAT4X4 T100DeviceResources:GetOrientationTransform3D() const
+{
+    return m_orientationTransform3D;
+}
+
+UINT T100DeviceResources::GetCurrentFrameIndex() const
+{
+    return m_currentFrame;
+}
+
+CD3DX12_CPU_DESCRIPTOR_HANDLE T100DeviceResources::GetRenderTargetView() const
+{
+    return CD3DX12_CPU_DESCRIPTOR_HANDLE(m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_currentFrame, m_rtvDescriptorSize);
+}
+
+CD3DX12_CPU_DESCRIPTOR_HANDLE T100DeviceResources::GetDepthStencilView() const
+{
+    return CD3DX12_CPU_DESCRIPTOR_HANDLE(m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
+}
+
