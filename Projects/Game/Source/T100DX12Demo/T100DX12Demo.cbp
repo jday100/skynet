@@ -17,6 +17,7 @@
 					<Add directory="include" />
 					<Add directory="include/demo" />
 					<Add directory="include/dx12" />
+					<Add directory="C:/ms/llvm-mingw/include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">

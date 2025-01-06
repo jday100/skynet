@@ -54,10 +54,10 @@ class T100D3D12Bundles : public T100DXSample
         ComPtr<ID3D12Resource>              m_texture;
         D3D12_VERTEX_BUFFER_VIEW            m_vertexBufferView;
         D3D12_INDEX_BUFFER_VIEW             m_indexBufferView;
-        StepTimer                           m_timer;
+        T100StepTimer                       m_timer;
         UINT                                m_cbvSrvDescriptorSize;
         UINT                                m_rtvDescriptorSize;
-        SimpleCamera                        m_camera;
+        T100SimpleCamera                    m_camera;
 
         std::vector<FrameResource*>         m_frameResources;
         FrameResource*                      m_pCurrentFrameResource;
@@ -72,7 +72,7 @@ class T100D3D12Bundles : public T100DXSample
         void                                LoadPipeline();
         void                                LoadAssets();
         void                                CreateFrameResources();
-        void                                PopulateCommandList(FrameResource* pFrameResource);
+        void                                PopulateCommandList(T100FrameResource* pFrameResource);
 };
 
 #endif // T100D3D12BUNDLES_H

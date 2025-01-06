@@ -6,8 +6,6 @@
 #include <d3d12.h>
 #include <wrl.h>
 
-#include "corewrappers.h"
-
 using Microsoft::WRL::ComPtr;
 
 inline std::string HrToString(HRESULT hr)
