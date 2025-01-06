@@ -3,10 +3,11 @@
 
 #include <vector>
 #include "directxmath.h"
+#include "T100DirectXMath.h"
 #include "T100DXSampleHelper.h"
 
 using namespace DirectX;
-using namespace Microsoft::WRL::ComPtr;
+using Microsoft::WRL::ComPtr;
 
 class T100FrameResource
 {

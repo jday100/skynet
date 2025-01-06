@@ -13,11 +13,11 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="C:/ms/llvm-mingw/include" />
 					<Add directory="include/gui" />
 					<Add directory="include" />
 					<Add directory="include/demo" />
 					<Add directory="include/dx12" />
-					<Add directory="C:/ms/llvm-mingw/include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -53,21 +53,12 @@
 		<Unit filename="include/dx12/T100DXSampleHelper.h" />
 		<Unit filename="include/dx12/T100SimpleCamera.h" />
 		<Unit filename="include/dx12/T100StepTimer.h" />
-		<Unit filename="include/dx12/corewrappers.h" />
-		<Unit filename="include/dx12/d3d12.h" />
-		<Unit filename="include/dx12/d3d12sdklayers.h" />
-		<Unit filename="include/dx12/d3d12shader.h" />
-		<Unit filename="include/dx12/d3dcommon.h" />
-		<Unit filename="include/dx12/d3dcompiler.h" />
 		<Unit filename="include/dx12/d3dx12.h" />
 		<Unit filename="include/dx12/directxmath.h" />
-		<Unit filename="include/dx12/dxgi.h" />
 		<Unit filename="include/dx12/occcity.h" />
 		<Unit filename="include/dx12/stdafx.h" />
 		<Unit filename="include/gui/T100App.h" />
 		<Unit filename="include/gui/T100Window.h" />
-		<Unit filename="include/wrl/def.h" />
-		<Unit filename="include/wrl/internal.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/demo/T100D3D12Bundles.cpp" />
 		<Unit filename="src/demo/T100FrameResource.cpp" />

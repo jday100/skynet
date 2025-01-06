@@ -1,6 +1,7 @@
 #ifndef T100D3D12BUNDLES_H
 #define T100D3D12BUNDLES_H
 
+#include <string.h>
 #include "T100DXSample.h"
 #include "T100StepTimer.h"
 #include "T100FrameResource.h"
@@ -12,7 +13,7 @@ using Microsoft::WRL::ComPtr;
 class T100D3D12Bundles : public T100DXSample
 {
     public:
-        T100D3D12Bundles(UINT width, UINT height, std::wstirng name);
+        T100D3D12Bundles(UINT width, UINT height, std::wstring name);
         virtual ~T100D3D12Bundles();
 
         virtual void            OnInit();
@@ -59,8 +60,8 @@ class T100D3D12Bundles : public T100DXSample
         UINT                                m_rtvDescriptorSize;
         T100SimpleCamera                    m_camera;
 
-        std::vector<FrameResource*>         m_frameResources;
-        FrameResource*                      m_pCurrentFrameResource;
+        std::vector<T100FrameResource*>     m_frameResources;
+        T100FrameResource*                  m_pCurrentFrameResource;
         UINT                                m_currentFrameResourceIndex;
 
         UINT                                m_frameIndex;

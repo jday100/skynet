@@ -4,7 +4,7 @@
 #include "occcity.h"
 
 T100D3D12Bundles::T100D3D12Bundles(UINT width, UINT height, std::wstring name) :
-    DXSample(width, height, name),
+    T100DXSample(width, height, name),
     m_frameIndex(0),
     m_viewport(0.0f, 0.0f, static_cast<float>(width), static_cast<float>(height)),
     m_scissorRect(0, 0, static_cast<LONG>(width), static_cast<LONG>(height)),
@@ -81,7 +81,7 @@ void T100D3D12Bundles::LoadPipeline()
     queueDesc.Type = D3D12_COMMAND_LIST_TYPE_DIRECT;
 
     ThrowIfFailed(m_device->CreateCommandQueue(&queueDesc, IID_PPV_ARGS(&m_commandQueue)));
-    NAME_D3D12_OBJECT(m_commandQueue);
+    //NAME_D3D12_OBJECT(m_commandQueue);
 
     DXGI_SWAP_CHAIN_DESC1 swapChainDesc = {};
     swapChainDesc.BufferCount = FrameCount;
@@ -127,7 +127,7 @@ void T100D3D12Bundles::LoadPipeline()
         cbvSrvHeapDesc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
         cbvSrvHeapDesc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
         ThrowIfFailed(m_device->CreateDescriptorHeap(&cbvSrvHeapDesc, IID_PPV_ARGS(&m_cbvSrvHeap)));
-        NAME_D3D12_OBJECT(m_cbvSrvHeap);
+        //NAME_D3D12_OBJECT(m_cbvSrvHeap);
 
         D3D12_DESCRIPTOR_HEAP_DESC samplerHeapDesc = {};
         samplerHeapDesc.NumDescriptors = 1;
@@ -175,7 +175,7 @@ void T100D3D12Bundles::LoadAssets()
         ComPtr<ID3DBlob> error;
         ThrowIfFailed(D3DX12SerializeVersionedRootSignature(&rootSignatureDesc, featureData.HighestVersion, &signature, &error));
         ThrowIfFailed(m_device->CreateRootSignature(0, signature->GetBufferPointer(), signature->GetBufferSize(), IID_PPV_ARGS(&m_rootSignature)));
-        NAME_D3D12_OBJECT(m_rootSignature);
+        //NAME_D3D12_OBJECT(m_rootSignature);
     }
 
     {
@@ -209,12 +209,12 @@ void T100D3D12Bundles::LoadAssets()
         psoDesc.SampleDesc.Count = 1;
 
         ThrowIfFailed(m_device->CreateGraphicsPipelineState(&psoDesc, IID_PPV_ARGS(&m_pipelineState1)));
-        NAME_D3D12_OBJECT(m_pipelineState1);
+        //NAME_D3D12_OBJECT(m_pipelineState1);
 
         psoDesc.PS = CD3DX12_SHADER_BYTECODE(pPixelShaderData2, pixelShaderDataLength2);
 
         ThrowIfFailed(m_device->CreateGraphicsPipelineState(&psoDesc, IID_PPV_ARGS(&m_pipelineState2)));
-        NAME_D3D12_OBJECT(m_pipelineState2);
+        //NAME_D3D12_OBJECT(m_pipelineState2);
 
         delete pVertexShaderData;
         delete pPixelShaderData1;
@@ -222,7 +222,7 @@ void T100D3D12Bundles::LoadAssets()
     }
 
     ThrowIfFailed(m_device->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, m_commandAllocator.Get(), nullptr, IID_PPV_ARGS(&m_commandList)));
-    NAME_D3D12_OBJECT(m_commandList);
+    //NAME_D3D12_OBJECT(m_commandList);
 
     CD3DX12_CPU_DESCRIPTOR_HANDLE rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart());
     for (UINT i = 0; i < FrameCount; i++)
@@ -231,7 +231,7 @@ void T100D3D12Bundles::LoadAssets()
         m_device->CreateRenderTargetView(m_renderTargets[i].Get(), nullptr, rtvHandle);
         rtvHandle.Offset(1, m_rtvDescriptorSize);
 
-        NAME_D3D12_OBJECT_INDEXED(m_renderTargets, i);
+        //NAME_D3D12_OBJECT_INDEXED(m_renderTargets, i);
     }
 
     UINT8* pMeshData;
@@ -255,7 +255,7 @@ void T100D3D12Bundles::LoadAssets()
             nullptr,
             IID_PPV_ARGS(&vertexBufferUploadHeap)));
 
-        NAME_D3D12_OBJECT(m_vertexBuffer);
+        //NAME_D3D12_OBJECT(m_vertexBuffer);
 
         D3D12_SUBRESOURCE_DATA vertexData = {};
         vertexData.pData = pMeshData + SampleAssets::VertexDataOffset;
@@ -287,7 +287,7 @@ void T100D3D12Bundles::LoadAssets()
             nullptr,
             IID_PPV_ARGS(&indexBufferUploadHeap)));
 
-        NAME_D3D12_OBJECT(m_indexBuffer);
+        //NAME_D3D12_OBJECT(m_indexBuffer);
 
         D3D12_SUBRESOURCE_DATA indexData = {};
         indexData.pData = pMeshData + SampleAssets::IndexDataOffset;
@@ -324,7 +324,7 @@ void T100D3D12Bundles::LoadAssets()
             nullptr,
             IID_PPV_ARGS(&m_texture)));
 
-        NAME_D3D12_OBJECT(m_texture);
+        //NAME_D3D12_OBJECT(m_texture);
 
         const UINT subresourceCount = textureDesc.DepthOrArraySize * textureDesc.MipLevels;
         const UINT64 uploadBufferSize = GetRequiredIntermediateSize(m_texture.Get(), 0, subresourceCount);
@@ -387,7 +387,7 @@ void T100D3D12Bundles::LoadAssets()
             IID_PPV_ARGS(&m_depthStencil)
             ));
 
-        NAME_D3D12_OBJECT(m_depthStencil);
+        //NAME_D3D12_OBJECT(m_depthStencil);
 
         m_device->CreateDepthStencilView(m_depthStencil.Get(), &depthStencilDesc, m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
     }
@@ -502,7 +502,7 @@ void T100D3D12Bundles::CreateFrameResources()
     CD3DX12_CPU_DESCRIPTOR_HANDLE cbvSrvHandle(m_cbvSrvHeap->GetCPUDescriptorHandleForHeapStart(), 1, m_cbvSrvDescriptorSize);    // Move past the SRV in slot 1.
     for (UINT i = 0; i < FrameCount; i++)
     {
-        FrameResource* pFrameResource = new FrameResource(m_device.Get(), CityRowCount, CityColumnCount);
+        T100FrameResource* pFrameResource = new T100FrameResource(m_device.Get(), CityRowCount, CityColumnCount);
 
         UINT64 cbOffset = 0;
         for (UINT j = 0; j < CityRowCount; j++)
@@ -511,7 +511,7 @@ void T100D3D12Bundles::CreateFrameResources()
             {
                 D3D12_CONSTANT_BUFFER_VIEW_DESC cbvDesc = {};
                 cbvDesc.BufferLocation = pFrameResource->m_cbvUploadHeap->GetGPUVirtualAddress() + cbOffset;
-                cbvDesc.SizeInBytes = sizeof(FrameResource::SceneConstantBuffer);
+                cbvDesc.SizeInBytes = sizeof(T100FrameResource::SceneConstantBuffer);
                 cbOffset += cbvDesc.SizeInBytes;
                 m_device->CreateConstantBufferView(&cbvDesc, cbvSrvHandle);
                 cbvSrvHandle.Offset(m_cbvSrvDescriptorSize);
@@ -525,7 +525,7 @@ void T100D3D12Bundles::CreateFrameResources()
     }
 }
 
-void T100D3D12Bundles::PopulateCommandList(FrameResource* pFrameResource)
+void T100D3D12Bundles::PopulateCommandList(T100FrameResource* pFrameResource)
 {
     ThrowIfFailed(m_pCurrentFrameResource->m_commandAllocator->Reset());
 

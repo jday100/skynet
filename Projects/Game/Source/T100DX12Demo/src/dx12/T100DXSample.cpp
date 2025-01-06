@@ -42,7 +42,7 @@ void T100DXSample::GetHardwareAdapter(
     ComPtr<IDXGIAdapter1>       adapter;
 
     ComPtr<IDXGIFactory6>       factory6;
-    if(SUCCESSED(pFactory->QueryInterface(IID_PPV_ARGS(&factory6))))
+    if(SUCCEEDED(pFactory->QueryInterface(IID_PPV_ARGS(&factory6))))
     {
         for(
             UINT adapterIndex = 0;
@@ -63,7 +63,7 @@ void T100DXSample::GetHardwareAdapter(
                 continue;
             }
 
-            if (SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_11_0, _uuidof(ID3D12Device), nullptr)))
+            if (SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_11_0, __uuidof(ID3D12Device), nullptr)))
             {
                 break;
             }
@@ -82,7 +82,7 @@ void T100DXSample::GetHardwareAdapter(
                 continue;
             }
 
-            if (SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_11_0, _uuidof(ID3D12Device), nullptr)))
+            if (SUCCEEDED(D3D12CreateDevice(adapter.Get(), D3D_FEATURE_LEVEL_11_0, __uuidof(ID3D12Device), nullptr)))
             {
                 break;
             }

@@ -1,6 +1,17 @@
 #include "T100SimpleCamera.h"
 
 #include "stdafx.h"
+#include <math.h>
+#include "T100DirectXMath.h"
+#include "T100DXSampleHelper.h"
+
+#ifndef max
+#define max(a,b)            (((a) > (b)) ? (a) : (b))
+#endif
+
+#ifndef min
+#define min(a,b)            (((a) < (b)) ? (a) : (b))
+#endif
 
 T100SimpleCamera::T100SimpleCamera() :
     m_initialPosition(0, 0, 0),
