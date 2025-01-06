@@ -16,6 +16,8 @@
 					<Add option="-DUNICODE" />
 					<Add directory="include/gui" />
 					<Add directory="include" />
+					<Add directory="include/demo" />
+					<Add directory="include/dx12" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -27,6 +29,8 @@
 					<Add option="-O2" />
 					<Add directory="include/gui" />
 					<Add directory="include" />
+					<Add directory="include/demo" />
+					<Add directory="include/dx12" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -43,9 +47,22 @@
 			<Add library="comctl32" />
 		</Linker>
 		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/demo/T100D3D12Bundles.h" />
+		<Unit filename="include/demo/T100FrameResource.h" />
+		<Unit filename="include/dx12/T100DXSample.h" />
+		<Unit filename="include/dx12/T100DXSampleHelper.h" />
+		<Unit filename="include/dx12/T100SimpleCamera.h" />
+		<Unit filename="include/dx12/T100StepTimer.h" />
+		<Unit filename="include/dx12/d3dx12.h" />
+		<Unit filename="include/dx12/occcity.h" />
 		<Unit filename="include/gui/T100App.h" />
 		<Unit filename="include/gui/T100Window.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/demo/T100D3D12Bundles.cpp" />
+		<Unit filename="src/demo/T100FrameResource.cpp" />
+		<Unit filename="src/dx12/T100DXSample.cpp" />
+		<Unit filename="src/dx12/T100SimpleCamera.cpp" />
+		<Unit filename="src/dx12/T100StepTimer.cpp" />
 		<Unit filename="src/gui/T100App.cpp" />
 		<Unit filename="src/gui/T100Window.cpp" />
 		<Extensions>
