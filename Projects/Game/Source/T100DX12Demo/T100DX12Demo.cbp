@@ -52,8 +52,19 @@
 		<Unit filename="include/dx12/T100DXSampleHelper.h" />
 		<Unit filename="include/dx12/T100SimpleCamera.h" />
 		<Unit filename="include/dx12/T100StepTimer.h" />
+		<Unit filename="include/dx12/d3d12.h" />
+		<Unit filename="include/dx12/d3d12sdklayers.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/d3d12shader.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/d3dcompiler.h" />
 		<Unit filename="include/dx12/d3dx12.h" />
+		<Unit filename="include/dx12/directxmath.h" />
+		<Unit filename="include/dx12/dxgi.h" />
 		<Unit filename="include/dx12/occcity.h" />
+		<Unit filename="include/dx12/stdafx.h" />
 		<Unit filename="include/gui/T100App.h" />
 		<Unit filename="include/gui/T100Window.h" />
 		<Unit filename="main.cpp" />
@@ -61,7 +72,6 @@
 		<Unit filename="src/demo/T100FrameResource.cpp" />
 		<Unit filename="src/dx12/T100DXSample.cpp" />
 		<Unit filename="src/dx12/T100SimpleCamera.cpp" />
-		<Unit filename="src/dx12/T100StepTimer.cpp" />
 		<Unit filename="src/gui/T100App.cpp" />
 		<Unit filename="src/gui/T100Window.cpp" />
 		<Extensions>
