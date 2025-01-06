@@ -8,10 +8,10 @@
 class T100Window
 {
     public:
-        T100Window(HINSTANCE, LPCWSTR, int, WNDPROC winproc = T100Window::DefaultWindowProcedure);
+        T100Window(HINSTANCE, LPSTR, int, WNDPROC winproc = T100Window::DefaultWindowProcedure);
         virtual ~T100Window();
 
-        T100VOID            Create(LPCWSTR);
+        T100VOID            Create(LPSTR);
         T100VOID            Destroy();
 
         T100BOOL            Show();
@@ -20,12 +20,12 @@ class T100Window
 
     protected:
         HINSTANCE           m_this_instance;
-        LPCWSTR             m_name;
-        LPCWSTR             m_title;
+        LPSTR               m_name;
+        LPSTR               m_title;
         int                 m_cmd_show;
 
         HWND                m_hwnd;
-        WNDCLASSEXW         m_wincl;
+        WNDCLASSEX          m_wincl;
         WNDPROC             m_winproc;
         MSG                 m_message;
 

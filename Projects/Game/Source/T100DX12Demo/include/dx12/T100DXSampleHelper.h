@@ -1,16 +1,13 @@
 #ifndef T100DXSAMPLEHELPER_H
 #define T100DXSAMPLEHELPER_H
 
+#include <stdexcept>
 
-class T100DXSampleHelper
+using Microsoft::WRL::ComPtr;
+
+inline std::string HrToString(HRESULT hr)
 {
-    public:
-        T100DXSampleHelper() {}
-        virtual ~T100DXSampleHelper() {}
 
-    protected:
-
-    private:
-};
+}
 
 #endif // T100DXSAMPLEHELPER_H

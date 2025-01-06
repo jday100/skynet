@@ -1,7 +1,7 @@
 #include "T100Window.h"
 
 T100Window::T100Window(HINSTANCE hThisInstance,
-                       LPCWSTR name,
+                       LPSTR name,
                        int nCmdShow,
                        WNDPROC winproc) :
     m_this_instance(hThisInstance),
@@ -35,7 +35,7 @@ T100VOID T100Window::init()
     m_wincl.cbWndExtra      = 0;
     m_wincl.hbrBackground   = (HBRUSH)COLOR_BACKGROUND;
 
-    if(!RegisterClassExW(&m_wincl)){
+    if(!RegisterClassEx(&m_wincl)){
         return;
     }
 }
@@ -45,10 +45,10 @@ T100VOID T100Window::uninit()
 
 }
 
-T100VOID T100Window::Create(LPCWSTR title)
+T100VOID T100Window::Create(LPSTR title)
 {
     m_title = title;
-    m_hwnd  = CreateWindowExW(
+    m_hwnd  = CreateWindowEx(
                               0,
                               m_name,
                               m_title,
@@ -66,7 +66,7 @@ T100VOID T100Window::Create(LPCWSTR title)
 
 T100VOID T100Window::Destroy()
 {
-    UnregisterClassW(m_name, m_this_instance);
+    UnregisterClass(m_name, m_this_instance);
 }
 
 T100BOOL T100Window::Show()
