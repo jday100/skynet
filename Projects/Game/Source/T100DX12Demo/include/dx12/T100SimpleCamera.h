@@ -2,6 +2,7 @@
 #define T100SIMPLECAMERA_H
 
 #include "stdafx.h"
+#include "T100DirectXMath.h"
 
 using namespace DirectX;
 

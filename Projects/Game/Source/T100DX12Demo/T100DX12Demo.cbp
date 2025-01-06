@@ -51,6 +51,7 @@
 		<Unit filename="include/demo/T100FrameResource.h" />
 		<Unit filename="include/dx12/T100DXSample.h" />
 		<Unit filename="include/dx12/T100DXSampleHelper.h" />
+		<Unit filename="include/dx12/T100DirectXMath.h" />
 		<Unit filename="include/dx12/T100SimpleCamera.h" />
 		<Unit filename="include/dx12/T100StepTimer.h" />
 		<Unit filename="include/dx12/d3dx12.h" />
