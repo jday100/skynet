@@ -1,6 +1,8 @@
 #ifndef T100FRAMERESOURCE_H
 #define T100FRAMERESOURCE_H
 
+#include <vector>
+#include "directxmath.h"
 #include "T100DXSampleHelper.h"
 
 using namespace DirectX;
