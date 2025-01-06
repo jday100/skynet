@@ -14,6 +14,8 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-DUNICODE" />
+					<Add option="-D_XM_SSE_INTRINSICS_" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
 					<Add directory="include/gui" />
 					<Add directory="include/dx12" />
 					<Add directory="include/renderer" />
@@ -68,6 +70,7 @@
 		<Unit filename="include/renderer/T100DX12Helper.h" />
 		<Unit filename="include/renderer/T100DX12Renderer.h" />
 		<Unit filename="include/renderer/T100DeviceResources.h" />
+		<Unit filename="include/renderer/T100DirectXMath.h" />
 		<Unit filename="include/renderer/T100ShaderStructures.h" />
 		<Unit filename="include/renderer/T100Size.h" />
 		<Unit filename="include/renderer/d3dx12.h" />

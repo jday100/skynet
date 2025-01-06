@@ -28,6 +28,7 @@ class T100DX12Renderer
         bool                        IsTracking();
 
     protected:
+        void                        ReadData(std::wstring, std::vector<byte>&);
 
     private:
         void                        LoadState();

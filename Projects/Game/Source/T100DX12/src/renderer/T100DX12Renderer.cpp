@@ -1,7 +1,9 @@
 #include "T100DX12Renderer.h"
 
-stirng      AngleKey        = "Angle";
-stirng      TrackingKey     = "Tracking";
+//#include "T100DirectXMath.h"
+
+//stirng      AngleKey        = "Angle";
+//stirng      TrackingKey     = "Tracking";
 
 T100DX12Renderer::T100DX12Renderer(const std::shared_ptr<T100DeviceResources>& deviceResources) :
     m_loadingComplete(false),
@@ -185,7 +187,7 @@ void T100DX12Renderer::CreateDeviceDependentResources()
 			nullptr,
 			IID_PPV_ARGS(&indexBufferUpload)));
 
-        NAME_D3D12_OBJECT(m_indexBuffer);
+        //NAME_D3D12_OBJECT(m_indexBuffer);
 
         {
 			D3D12_SUBRESOURCE_DATA indexData = {};
@@ -202,16 +204,16 @@ void T100DX12Renderer::CreateDeviceDependentResources()
 
 		{
 			D3D12_DESCRIPTOR_HEAP_DESC heapDesc = {};
-			heapDesc.NumDescriptors = DX::c_frameCount;
+			heapDesc.NumDescriptors = c_frameCount;
 			heapDesc.Type = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
 			// 此标志指示此描述符堆可以绑定到管道，并且其中包含的描述符可以由根表引用。
 			heapDesc.Flags = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
 			ThrowIfFailed(d3dDevice->CreateDescriptorHeap(&heapDesc, IID_PPV_ARGS(&m_cbvHeap)));
 
-            NAME_D3D12_OBJECT(m_cbvHeap);
+            //NAME_D3D12_OBJECT(m_cbvHeap);
 		}
 
-		CD3DX12_RESOURCE_DESC constantBufferDesc = CD3DX12_RESOURCE_DESC::Buffer(DX::c_frameCount * c_alignedConstantBufferSize);
+		CD3DX12_RESOURCE_DESC constantBufferDesc = CD3DX12_RESOURCE_DESC::Buffer(c_frameCount * c_alignedConstantBufferSize);
         ThrowIfFailed(d3dDevice->CreateCommittedResource(
             &uploadHeapProperties,
             D3D12_HEAP_FLAG_NONE,
@@ -220,13 +222,13 @@ void T100DX12Renderer::CreateDeviceDependentResources()
             nullptr,
             IID_PPV_ARGS(&m_constantBuffer)));
 
-        NAME_D3D12_OBJECT(m_constantBuffer);
+        //NAME_D3D12_OBJECT(m_constantBuffer);
 
         D3D12_GPU_VIRTUAL_ADDRESS cbvGpuAddress = m_constantBuffer->GetGPUVirtualAddress();
         CD3DX12_CPU_DESCRIPTOR_HANDLE cbvCpuHandle(m_cbvHeap->GetCPUDescriptorHandleForHeapStart());
         m_cbvDescriptorSize = d3dDevice->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);
 
-        for (int n = 0; n < DX::c_frameCount; n++)
+        for (int n = 0; n < c_frameCount; n++)
         {
             D3D12_CONSTANT_BUFFER_VIEW_DESC desc;
             desc.BufferLocation = cbvGpuAddress;
@@ -239,7 +241,7 @@ void T100DX12Renderer::CreateDeviceDependentResources()
 
         CD3DX12_RANGE readRange(0, 0);		// 我们不打算从 CPU 上的此资源中进行读取。
         ThrowIfFailed(m_constantBuffer->Map(0, &readRange, reinterpret_cast<void**>(&m_mappedConstantBuffer)));
-        ZeroMemory(m_mappedConstantBuffer, DX::c_frameCount * c_alignedConstantBufferSize);
+        ZeroMemory(m_mappedConstantBuffer, c_frameCount * c_alignedConstantBufferSize);
 
         ThrowIfFailed(m_commandList->Close());
 		ID3D12CommandList* ppCommandLists[] = { m_commandList.Get() };
@@ -315,6 +317,7 @@ void T100DX12Renderer::Update(T100Timer const& timer)
 
 void T100DX12Renderer::SaveState()
 {
+    /*
 	auto state = ApplicationData::Current->LocalSettings->Values;
 
 	if (state->HasKey(AngleKey))
@@ -328,10 +331,12 @@ void T100DX12Renderer::SaveState()
 
 	state->Insert(AngleKey, PropertyValue::CreateSingle(m_angle));
 	state->Insert(TrackingKey, PropertyValue::CreateBoolean(m_tracking));
+	*/
 }
 
 void T100DX12Renderer::LoadState()
 {
+    /*
 	auto state = ApplicationData::Current->LocalSettings->Values;
 	if (state->HasKey(AngleKey))
 	{
@@ -343,6 +348,7 @@ void T100DX12Renderer::LoadState()
 		m_tracking = safe_cast<IPropertyValue^>(state->Lookup(TrackingKey))->GetBoolean();
 		state->Remove(TrackingKey);
 	}
+	*/
 }
 
 void T100DX12Renderer::Rotate(float radians)
