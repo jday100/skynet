@@ -13,28 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include/dx12" />
-					<Add directory="include/gui" />
-					<Add directory="include/entity" />
-					<Add directory="include/game" />
-					<Add directory="include/file" />
-					<Add directory="include/scene" />
-					<Add directory="include/sky" />
-					<Add directory="include/ground" />
-					<Add directory="include/character" />
-					<Add directory="include/physical" />
-					<Add directory="include/collision" />
-					<Add directory="include/shadow" />
-					<Add directory="include/trajectory" />
-					<Add directory="include/effect" />
-					<Add directory="include/camera" />
-					<Add directory="C:/ms/llvm-mingw/include" />
-					<Add directory="C:/ms/DirectX-Graphics-Samples/Samples/Desktop/D3D12HelloWorld/src/packages/Microsoft.Direct3D.D3D12.1.613.1/build/native/include/d3dx12" />
 				</Compiler>
-				<Linker>
-					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libd3d12.a" />
-					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libdxgi.a" />
-				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100DX12Demo" prefix_auto="1" extension_auto="1" />
@@ -43,21 +22,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="include/dx12" />
-					<Add directory="include/gui" />
-					<Add directory="include/entity" />
-					<Add directory="include/game" />
-					<Add directory="include/file" />
-					<Add directory="include/scene" />
-					<Add directory="include/sky" />
-					<Add directory="include/ground" />
-					<Add directory="include/character" />
-					<Add directory="include/physical" />
-					<Add directory="include/collision" />
-					<Add directory="include/shadow" />
-					<Add directory="include/trajectory" />
-					<Add directory="include/effect" />
-					<Add directory="include/camera" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -73,40 +37,9 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
-		<Unit filename="include/camera/T100Camera.h" />
-		<Unit filename="include/character/T100Character.h" />
-		<Unit filename="include/collision/T100Collision.h" />
-		<Unit filename="include/dx12/T100DX12Renderer.h" />
-		<Unit filename="include/dx12/T100DX12RendererHelper.h" />
-		<Unit filename="include/effect/T100Effect.h" />
-		<Unit filename="include/entity/T100EntityBase.h" />
-		<Unit filename="include/entity/T100Sphere.h" />
-		<Unit filename="include/file/T100File.h" />
-		<Unit filename="include/game/T100Game.h" />
-		<Unit filename="include/ground/T100Ground.h" />
-		<Unit filename="include/gui/T100MainFrame.h" />
-		<Unit filename="include/physical/T100Physical.h" />
-		<Unit filename="include/scene/T100Scene.h" />
-		<Unit filename="include/shadow/T100Shadow.h" />
-		<Unit filename="include/sky/T100Sky.h" />
-		<Unit filename="include/trajectory/T100Trajectory.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/camera/T100Camera.cpp" />
-		<Unit filename="src/character/T100Character.cpp" />
-		<Unit filename="src/collision/T100Collision.cpp" />
-		<Unit filename="src/dx12/T100DX12Renderer.cpp" />
-		<Unit filename="src/effect/T100Effect.cpp" />
-		<Unit filename="src/entity/T100EntityBase.cpp" />
-		<Unit filename="src/entity/T100Sphere.cpp" />
-		<Unit filename="src/file/T100File.cpp" />
-		<Unit filename="src/game/T100Game.cpp" />
-		<Unit filename="src/ground/T100Ground.cpp" />
-		<Unit filename="src/gui/T100MainFrame.cpp" />
-		<Unit filename="src/physical/T100Physical.cpp" />
-		<Unit filename="src/scene/T100Scene.cpp" />
-		<Unit filename="src/shadow/T100Shadow.cpp" />
-		<Unit filename="src/sky/T100Sky.cpp" />
-		<Unit filename="src/trajectory/T100Trajectory.cpp" />
-		<Extensions />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
