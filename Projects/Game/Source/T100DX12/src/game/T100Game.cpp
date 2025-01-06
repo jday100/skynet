@@ -17,7 +17,7 @@ T100VOID T100Game::Create(LPCWSTR name, LPCWSTR title)
 {
     T100Frame::Create(name, title, T100Game::GameWindowProcedure);
 
-    T100Game::m_renderer    = T100NEW T100DX12Renderer(GetHWND());
+    //T100Game::m_renderer    = T100NEW T100DX12Renderer(GetHWND());
 }
 
 LRESULT CALLBACK T100Game::GameWindowProcedure(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -26,7 +26,7 @@ LRESULT CALLBACK T100Game::GameWindowProcedure(HWND hwnd, UINT message, WPARAM w
     {
     case WM_PAINT:
         if(T100Game::m_renderer){
-            T100Game::m_renderer->render();
+            T100Game::m_renderer->Render();
         }
         break;
     case WM_DESTROY:

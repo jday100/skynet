@@ -68,6 +68,7 @@
 		<Unit filename="include/renderer/T100DX12Helper.h" />
 		<Unit filename="include/renderer/T100DX12Renderer.h" />
 		<Unit filename="include/renderer/T100DeviceResources.h" />
+		<Unit filename="include/renderer/T100ShaderStructures.h" />
 		<Unit filename="include/renderer/T100Size.h" />
 		<Unit filename="include/renderer/d3dx12.h" />
 		<Unit filename="include/renderer/directxmath.h" />
