@@ -5,7 +5,6 @@
 #include "stdafx.h"
 #include <stdexcept>
 
-
 using Microsoft::WRL::ComPtr;
 
 inline std::string HrToString(HRESULT hr)
@@ -195,35 +194,6 @@ inline UINT CalculateConstantBufferByteSize(UINT byteSize)
     // Constant buffer size is required to be aligned.
     return (byteSize + (D3D12_CONSTANT_BUFFER_DATA_PLACEMENT_ALIGNMENT - 1)) & ~(D3D12_CONSTANT_BUFFER_DATA_PLACEMENT_ALIGNMENT - 1);
 }
-
-#ifdef D3D_COMPILE_STANDARD_FILE_INCLUDE
-inline Microsoft::WRL::ComPtr<ID3DBlob> CompileShader(
-    const std::wstring& filename,
-    const D3D_SHADER_MACRO* defines,
-    const std::string& entrypoint,
-    const std::string& target)
-{
-    UINT compileFlags = 0;
-#if defined(_DEBUG) || defined(DBG)
-    compileFlags = D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION;
-#endif
-
-    HRESULT hr;
-
-    Microsoft::WRL::ComPtr<ID3DBlob> byteCode = nullptr;
-    Microsoft::WRL::ComPtr<ID3DBlob> errors;
-    hr = D3DCompileFromFile(filename.c_str(), defines, D3D_COMPILE_STANDARD_FILE_INCLUDE,
-        entrypoint.c_str(), target.c_str(), compileFlags, 0, &byteCode, &errors);
-
-    if (errors != nullptr)
-    {
-        OutputDebugStringA((char*)errors->GetBufferPointer());
-    }
-    ThrowIfFailed(hr);
-
-    return byteCode;
-}
-#endif
 
 // Resets all elements in a ComPtr array.
 template<class T>

@@ -17,6 +17,11 @@
 					<Add directory="include/dx12/d3dx12" />
 					<Add directory="include/dx12" />
 				</Compiler>
+				<Linker>
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libd3d12.a" />
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libdxgi.a" />
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libd3dcompiler.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100DX12Sample" prefix_auto="1" extension_auto="1" />
