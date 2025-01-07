@@ -1,6 +1,7 @@
 #include "T100DX12Renderer.h"
 
-//#include "T100DirectXMath.h"
+#include "DirectXMath.h"
+#include "DirectXColors.h"
 
 //stirng      AngleKey        = "Angle";
 //stirng      TrackingKey     = "Tracking";
@@ -26,6 +27,11 @@ T100DX12Renderer::~T100DX12Renderer()
     //dtor
     m_constantBuffer->Unmap(0, nullptr);
     m_mappedConstantBuffer = nullptr;
+}
+
+void T100DX12Renderer::ReadData(std::wstring filename, std::vector<byte>& data)
+{
+
 }
 
 void T100DX12Renderer::CreateDeviceDependentResources()
@@ -389,7 +395,7 @@ bool T100DX12Renderer::Render()
 	// 调用 ExecuteCommandList() 后可随时重置命令列表。
 	ThrowIfFailed(m_commandList->Reset(m_deviceResources->GetCommandAllocator(), m_pipelineState.Get()));
 
-	PIXBeginEvent(m_commandList.Get(), 0, L"Draw the cube");
+	//PIXBeginEvent(m_commandList.Get(), 0, L"Draw the cube");
 	{
 		// 设置要由此帧使用的图形根签名和描述符堆。
 		m_commandList->SetGraphicsRootSignature(m_rootSignature.Get());
@@ -428,7 +434,7 @@ bool T100DX12Renderer::Render()
 			CD3DX12_RESOURCE_BARRIER::Transition(m_deviceResources->GetRenderTarget(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
 		m_commandList->ResourceBarrier(1, &presentResourceBarrier);
 	}
-	PIXEndEvent(m_commandList.Get());
+	//PIXEndEvent(m_commandList.Get());
 
 	ThrowIfFailed(m_commandList->Close());
 

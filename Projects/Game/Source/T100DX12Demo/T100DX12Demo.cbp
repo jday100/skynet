@@ -12,11 +12,11 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-march=core2" />
 					<Add option="-Wall" />
-					<Add option="-std=gnu++11" />
 					<Add option="-std=c11" />
 					<Add option="-g" />
+					<Add option="-march=core2" />
+					<Add option="-std=gnu++11" />
 					<Add option="-D_XM_NO_INTRINSICS_" />
 					<Add directory="include/gui" />
 					<Add directory="include" />
@@ -24,8 +24,7 @@
 					<Add directory="include/dx12" />
 				</Compiler>
 				<Linker>
-					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libd3d12.a" />
-					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libdxgi.a" />
+					<Add library="C:/Program Files (x86)/Windows Kits/10/Lib/10.0.20348.0/um/x86/d3d12.lib" />
 				</Linker>
 			</Target>
 			<Target title="Release">
