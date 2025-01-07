@@ -9,12 +9,23 @@
 //
 //*********************************************************
 
-#include "stdafx.h"
-#include "D3D12HelloWindow.h"
-
-_Use_decl_annotations_
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
+struct PSInput
 {
-    D3D12HelloWindow sample(1280, 720, L"D3D12 Hello Window");
-    return Win32Application::Run(&sample, hInstance, nCmdShow);
+    float4 position : SV_POSITION;
+    float4 color : COLOR;
+};
+
+PSInput VSMain(float4 position : POSITION, float4 color : COLOR)
+{
+    PSInput result;
+
+    result.position = position;
+    result.color = color;
+
+    return result;
+}
+
+float4 PSMain(PSInput input) : SV_TARGET
+{
+    return input.color;
 }

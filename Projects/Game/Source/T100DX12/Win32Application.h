@@ -9,12 +9,21 @@
 //
 //*********************************************************
 
-#include "stdafx.h"
-#include "D3D12HelloWindow.h"
+#pragma once
 
-_Use_decl_annotations_
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
+#include "DXSample.h"
+
+class DXSample;
+
+class Win32Application
 {
-    D3D12HelloWindow sample(1280, 720, L"D3D12 Hello Window");
-    return Win32Application::Run(&sample, hInstance, nCmdShow);
-}
+public:
+    static int Run(DXSample* pSample, HINSTANCE hInstance, int nCmdShow);
+    static HWND GetHwnd() { return m_hwnd; }
+
+protected:
+    static LRESULT CALLBACK WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);
+
+private:
+    static HWND m_hwnd;
+};

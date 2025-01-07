@@ -13,19 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add option="-DUNICODE" />
-					<Add option="-D_XM_NO_INTRINSICS_" />
-					<Add directory="include/gui" />
-					<Add directory="include/dx12" />
-					<Add directory="include/renderer" />
-					<Add directory="include/game" />
-					<Add directory="include/demo" />
-					<Add directory="include" />
 				</Compiler>
-				<Linker>
-					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libd3d12.a" />
-					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libdxgi.a" />
-				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100DX12" prefix_auto="1" extension_auto="1" />
@@ -34,12 +22,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="include/gui" />
-					<Add directory="include/dx12" />
-					<Add directory="include/renderer" />
-					<Add directory="include/game" />
-					<Add directory="include/demo" />
-					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -55,36 +37,19 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
-		<Unit filename="include/T100Common.h" />
-		<Unit filename="include/demo/T100Demo.h" />
-		<Unit filename="include/dx12/DirectXCollision.h" />
-		<Unit filename="include/dx12/DirectXColors.h" />
-		<Unit filename="include/dx12/DirectXMath.h" />
-		<Unit filename="include/dx12/DirectXPackedVector.h" />
-		<Unit filename="include/dx12/T100DX12.h" />
-		<Unit filename="include/dx12/d3d12.h" />
-		<Unit filename="include/dx12/d3d12sdklayers.h" />
-		<Unit filename="include/dx12/d3d12shader.h" />
-		<Unit filename="include/dx12/d3dcompiler.h" />
-		<Unit filename="include/dx12/dxgi.h" />
-		<Unit filename="include/game/T100Game.h" />
-		<Unit filename="include/game/T100Timer.h" />
-		<Unit filename="include/gui/T100Frame.h" />
-		<Unit filename="include/renderer/T100DX12Helper.h" />
-		<Unit filename="include/renderer/T100DX12Renderer.h" />
-		<Unit filename="include/renderer/T100DeviceResources.h" />
-		<Unit filename="include/renderer/T100ShaderStructures.h" />
-		<Unit filename="include/renderer/T100Size.h" />
-		<Unit filename="include/renderer/d3dx12.h" />
+		<Unit filename="D3D12HelloWindow.cpp" />
+		<Unit filename="D3D12HelloWindow.h" />
+		<Unit filename="DXSample.cpp" />
+		<Unit filename="DXSample.h" />
+		<Unit filename="DXSampleHelper.h" />
+		<Unit filename="Win32Application.cpp" />
+		<Unit filename="Win32Application.h" />
+		<Unit filename="d3dx12.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/T100Size.cpp" />
-		<Unit filename="src/demo/T100Demo.cpp" />
-		<Unit filename="src/dx12/T100DX12.cpp" />
-		<Unit filename="src/game/T100Game.cpp" />
-		<Unit filename="src/game/T100Timer.cpp" />
-		<Unit filename="src/gui/T100Frame.cpp" />
-		<Unit filename="src/renderer/T100DX12Renderer.cpp" />
-		<Unit filename="src/renderer/T100DeviceResources.cpp" />
-		<Extensions />
+		<Unit filename="stdafx.cpp" />
+		<Unit filename="stdafx.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
