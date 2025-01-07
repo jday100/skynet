@@ -5,7 +5,8 @@
 
 using namespace Microsoft::WRL;
 
-T100DXSample::T100DXSample(UINT width, UINT height, std::wstring name) :
+T100DXSample::T100DXSample(T100Window* window, UINT width, UINT height, std::wstring name) :
+    m_window(window),
     m_width(width),
     m_height(height),
     m_title(name),
@@ -97,7 +98,7 @@ void T100DXSample::GetHardwareAdapter(
 void T100DXSample::SetCustomWindowText(LPCWSTR text)
 {
     std::wstring windowText = m_title + L": " + text;
-    SetWindowText(Win32Application::GetHwnd(), windowText.c_str());
+    SetWindowTextW(m_window->GetHWND(), windowText.c_str());
 }
 
 _Use_decl_annotations_

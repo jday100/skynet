@@ -12,13 +12,21 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
+					<Add option="-march=core2" />
+					<Add option="-Wall" />
+					<Add option="-std=gnu++11" />
+					<Add option="-std=c11" />
 					<Add option="-g" />
-					<Add directory="C:/ms/llvm-mingw/include" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
 					<Add directory="include/gui" />
 					<Add directory="include" />
 					<Add directory="include/demo" />
 					<Add directory="include/dx12" />
 				</Compiler>
+				<Linker>
+					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libd3d12.a" />
+					<Add library="C:/ms/llvm-mingw/x86_64-w64-mingw32/lib/libdxgi.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100DX12Demo" prefix_auto="1" extension_auto="1" />
@@ -49,13 +57,15 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/demo/T100D3D12Bundles.h" />
 		<Unit filename="include/demo/T100FrameResource.h" />
+		<Unit filename="include/dx12/DirectXCollision.h" />
+		<Unit filename="include/dx12/DirectXColors.h" />
+		<Unit filename="include/dx12/DirectXMath.h" />
+		<Unit filename="include/dx12/DirectXPackedVector.h" />
 		<Unit filename="include/dx12/T100DXSample.h" />
 		<Unit filename="include/dx12/T100DXSampleHelper.h" />
-		<Unit filename="include/dx12/T100DirectXMath.h" />
 		<Unit filename="include/dx12/T100SimpleCamera.h" />
 		<Unit filename="include/dx12/T100StepTimer.h" />
 		<Unit filename="include/dx12/d3dx12.h" />
-		<Unit filename="include/dx12/directxmath.h" />
 		<Unit filename="include/dx12/occcity.h" />
 		<Unit filename="include/dx12/stdafx.h" />
 		<Unit filename="include/gui/T100App.h" />

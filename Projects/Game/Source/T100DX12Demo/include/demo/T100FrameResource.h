@@ -3,7 +3,6 @@
 
 #include <vector>
 #include "directxmath.h"
-#include "T100DirectXMath.h"
 #include "T100DXSampleHelper.h"
 
 using namespace DirectX;

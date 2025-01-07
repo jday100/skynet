@@ -13,10 +13,13 @@ T100FrameResource::T100FrameResource(ID3D12Device* pDevice, UINT cityRowCount, U
     ThrowIfFailed(pDevice->CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_DIRECT, IID_PPV_ARGS(&m_commandAllocator)));
     ThrowIfFailed(pDevice->CreateCommandAllocator(D3D12_COMMAND_LIST_TYPE_BUNDLE, IID_PPV_ARGS(&m_bundleAllocator)));
 
+    CD3DX12_HEAP_PROPERTIES             cd3dx12_heap_properties2(D3D12_HEAP_TYPE_UPLOAD);
+    CD3DX12_RESOURCE_DESC               desc2       = CD3DX12_RESOURCE_DESC::Buffer(sizeof(SceneConstantBuffer) * m_cityRowCount * m_cityColumnCount);
+
     ThrowIfFailed(pDevice->CreateCommittedResource(
-        &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
+        &cd3dx12_heap_properties2,
         D3D12_HEAP_FLAG_NONE,
-        &CD3DX12_RESOURCE_DESC::Buffer(sizeof(SceneConstantBuffer) * m_cityRowCount * m_cityColumnCount),
+        &desc2,
         D3D12_RESOURCE_STATE_GENERIC_READ,
         nullptr,
         IID_PPV_ARGS(&m_cbvUploadHeap)));
@@ -78,7 +81,7 @@ void T100FrameResource::PopulateCommandList(ID3D12GraphicsCommandList* pCommandL
     UINT frameResourceDescriptorOffset = 1 + (frameResourceIndex * m_cityRowCount * m_cityColumnCount);
     CD3DX12_GPU_DESCRIPTOR_HANDLE cbvSrvHandle(pCbvSrvDescriptorHeap->GetGPUDescriptorHandleForHeapStart(), frameResourceDescriptorOffset, cbvSrvDescriptorSize);
 
-    PIXBeginEvent(pCommandList, 0, L"Draw cities");
+    //PIXBeginEvent(pCommandList, 0, L"Draw cities");
     BOOL usePso1 = TRUE;
     for (UINT i = 0; i < m_cityRowCount; i++)
     {
@@ -93,7 +96,7 @@ void T100FrameResource::PopulateCommandList(ID3D12GraphicsCommandList* pCommandL
             pCommandList->DrawIndexedInstanced(numIndices, 1, 0, 0, 0);
         }
     }
-    PIXEndEvent(pCommandList);
+    //PIXEndEvent(pCommandList);
 }
 
 void XM_CALLCONV T100FrameResource::UpdateConstantBuffers(FXMMATRIX view, CXMMATRIX projection)

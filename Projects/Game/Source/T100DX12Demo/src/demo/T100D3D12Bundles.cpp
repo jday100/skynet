@@ -3,8 +3,8 @@
 #include "stdafx.h"
 #include "occcity.h"
 
-T100D3D12Bundles::T100D3D12Bundles(UINT width, UINT height, std::wstring name) :
-    T100DXSample(width, height, name),
+T100D3D12Bundles::T100D3D12Bundles(T100Window* window, UINT width, UINT height, std::wstring name) :
+    T100DXSample(window, width, height, name),
     m_frameIndex(0),
     m_viewport(0.0f, 0.0f, static_cast<float>(width), static_cast<float>(height)),
     m_scissorRect(0, 0, static_cast<LONG>(width), static_cast<LONG>(height)),
@@ -95,14 +95,14 @@ void T100D3D12Bundles::LoadPipeline()
     ComPtr<IDXGISwapChain1> swapChain;
     ThrowIfFailed(factory->CreateSwapChainForHwnd(
         m_commandQueue.Get(),        // Swap chain needs the queue so that it can force a flush on it.
-        Win32Application::GetHwnd(),
+        m_window->GetHWND(),
         &swapChainDesc,
         nullptr,
         nullptr,
         &swapChain
         ));
 
-    ThrowIfFailed(factory->MakeWindowAssociation(Win32Application::GetHwnd(), DXGI_MWA_NO_ALT_ENTER));
+    ThrowIfFailed(factory->MakeWindowAssociation(m_window->GetHWND(), DXGI_MWA_NO_ALT_ENTER));
 
     ThrowIfFailed(swapChain.As(&m_swapChain));
     m_frameIndex = m_swapChain->GetCurrentBackBufferIndex();
@@ -239,18 +239,24 @@ void T100D3D12Bundles::LoadAssets()
     ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(SampleAssets::DataFileName).c_str(), &pMeshData, &meshDataLength));
 
     {
+        CD3DX12_HEAP_PROPERTIES         cd3dx12_heap_properties1(D3D12_HEAP_TYPE_DEFAULT);
+        CD3DX12_RESOURCE_DESC           desc1       = CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::VertexDataSize);
+
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+            &cd3dx12_heap_properties1,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::VertexDataSize),
+            &desc1,
             D3D12_RESOURCE_STATE_COPY_DEST,
             nullptr,
             IID_PPV_ARGS(&m_vertexBuffer)));
 
+        CD3DX12_HEAP_PROPERTIES         cd3dx12_heap_properties2(D3D12_HEAP_TYPE_UPLOAD);
+        CD3DX12_RESOURCE_DESC           desc2       = CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::VertexDataSize);
+
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
+            &cd3dx12_heap_properties2,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::VertexDataSize),
+            &desc2,
             D3D12_RESOURCE_STATE_GENERIC_READ,
             nullptr,
             IID_PPV_ARGS(&vertexBufferUploadHeap)));
@@ -263,7 +269,9 @@ void T100D3D12Bundles::LoadAssets()
         vertexData.SlicePitch = vertexData.RowPitch;
 
         UpdateSubresources<1>(m_commandList.Get(), m_vertexBuffer.Get(), vertexBufferUploadHeap.Get(), 0, 0, 1, &vertexData);
-        m_commandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(m_vertexBuffer.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER));
+
+        CD3DX12_RESOURCE_BARRIER            resource_barrier1       = CD3DX12_RESOURCE_BARRIER::Transition(m_vertexBuffer.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER);
+        m_commandList->ResourceBarrier(1, &resource_barrier1);
 
         m_vertexBufferView.BufferLocation = m_vertexBuffer->GetGPUVirtualAddress();
         m_vertexBufferView.StrideInBytes = SampleAssets::StandardVertexStride;
@@ -271,18 +279,24 @@ void T100D3D12Bundles::LoadAssets()
     }
 
     {
+        CD3DX12_HEAP_PROPERTIES         heap3(D3D12_HEAP_TYPE_DEFAULT);
+        CD3DX12_RESOURCE_DESC           desc4       = CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::IndexDataSize);
+
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+            &heap3,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::IndexDataSize),
+            &desc4,
             D3D12_RESOURCE_STATE_COPY_DEST,
             nullptr,
             IID_PPV_ARGS(&m_indexBuffer)));
 
+        CD3DX12_HEAP_PROPERTIES         heap5(D3D12_HEAP_TYPE_UPLOAD);
+        CD3DX12_RESOURCE_DESC           desc5       = CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::IndexDataSize);
+
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
+            &heap5,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::IndexDataSize),
+            &desc5,
             D3D12_RESOURCE_STATE_GENERIC_READ,
             nullptr,
             IID_PPV_ARGS(&indexBufferUploadHeap)));
@@ -295,7 +309,9 @@ void T100D3D12Bundles::LoadAssets()
         indexData.SlicePitch = indexData.RowPitch;
 
         UpdateSubresources<1>(m_commandList.Get(), m_indexBuffer.Get(), indexBufferUploadHeap.Get(), 0, 0, 1, &indexData);
-        m_commandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(m_indexBuffer.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_INDEX_BUFFER));
+
+        CD3DX12_RESOURCE_BARRIER        resource_barrier2       = CD3DX12_RESOURCE_BARRIER::Transition(m_indexBuffer.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_INDEX_BUFFER);
+        m_commandList->ResourceBarrier(1, &resource_barrier2);
 
         m_indexBufferView.BufferLocation = m_indexBuffer->GetGPUVirtualAddress();
         m_indexBufferView.Format = SampleAssets::StandardIndexFormat;
@@ -316,8 +332,10 @@ void T100D3D12Bundles::LoadAssets()
         textureDesc.SampleDesc.Quality = 0;
         textureDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
 
+        CD3DX12_HEAP_PROPERTIES         heap6(D3D12_HEAP_TYPE_DEFAULT);
+
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+            &heap6,
             D3D12_HEAP_FLAG_NONE,
             &textureDesc,
             D3D12_RESOURCE_STATE_COPY_DEST,
@@ -329,10 +347,12 @@ void T100D3D12Bundles::LoadAssets()
         const UINT subresourceCount = textureDesc.DepthOrArraySize * textureDesc.MipLevels;
         const UINT64 uploadBufferSize = GetRequiredIntermediateSize(m_texture.Get(), 0, subresourceCount);
 
+        CD3DX12_HEAP_PROPERTIES             heap7(D3D12_HEAP_TYPE_UPLOAD);
+        CD3DX12_RESOURCE_DESC               desc7       = CD3DX12_RESOURCE_DESC::Buffer(uploadBufferSize);
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
+            &heap7,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Buffer(uploadBufferSize),
+            &desc7,
             D3D12_RESOURCE_STATE_GENERIC_READ,
             nullptr,
             IID_PPV_ARGS(&textureUploadHeap)));
@@ -343,7 +363,9 @@ void T100D3D12Bundles::LoadAssets()
         textureData.SlicePitch = SampleAssets::Textures[0].Data[0].Size;
 
         UpdateSubresources(m_commandList.Get(), m_texture.Get(), textureUploadHeap.Get(), 0, 0, subresourceCount, &textureData);
-        m_commandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(m_texture.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE));
+
+        CD3DX12_RESOURCE_BARRIER        resource_barrier8       = CD3DX12_RESOURCE_BARRIER::Transition(m_texture.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE);
+        m_commandList->ResourceBarrier(1, &resource_barrier8);
 
         D3D12_SAMPLER_DESC samplerDesc = {};
         samplerDesc.Filter = D3D12_FILTER_MIN_MAG_MIP_LINEAR;
@@ -378,10 +400,12 @@ void T100D3D12Bundles::LoadAssets()
         depthOptimizedClearValue.DepthStencil.Depth = 1.0f;
         depthOptimizedClearValue.DepthStencil.Stencil = 0;
 
+        CD3DX12_HEAP_PROPERTIES         heap8(D3D12_HEAP_TYPE_DEFAULT);
+        CD3DX12_RESOURCE_DESC           desc8       = CD3DX12_RESOURCE_DESC::Tex2D(DXGI_FORMAT_D32_FLOAT, m_width, m_height, 1, 0, 1, 0, D3D12_RESOURCE_FLAG_ALLOW_DEPTH_STENCIL);
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+            &heap8,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Tex2D(DXGI_FORMAT_D32_FLOAT, m_width, m_height, 1, 0, 1, 0, D3D12_RESOURCE_FLAG_ALLOW_DEPTH_STENCIL),
+            &desc8,
             D3D12_RESOURCE_STATE_DEPTH_WRITE,
             &depthOptimizedClearValue,
             IID_PPV_ARGS(&m_depthStencil)
@@ -448,14 +472,14 @@ void T100D3D12Bundles::OnUpdate()
 
 void T100D3D12Bundles::OnRender()
 {
-    PIXBeginEvent(m_commandQueue.Get(), 0, L"Render");
+    //PIXBeginEvent(m_commandQueue.Get(), 0, L"Render");
 
     PopulateCommandList(m_pCurrentFrameResource);
 
     ID3D12CommandList* ppCommandLists[] = { m_commandList.Get() };
     m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
 
-    PIXEndEvent(m_commandQueue.Get());
+    //PIXEndEvent(m_commandQueue.Get());
 
     ThrowIfFailed(m_swapChain->Present(1, 0));
     m_frameIndex = m_swapChain->GetCurrentBackBufferIndex();
@@ -539,7 +563,8 @@ void T100D3D12Bundles::PopulateCommandList(T100FrameResource* pFrameResource)
     m_commandList->RSSetViewports(1, &m_viewport);
     m_commandList->RSSetScissorRects(1, &m_scissorRect);
 
-    m_commandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_PRESENT, D3D12_RESOURCE_STATE_RENDER_TARGET));
+    CD3DX12_RESOURCE_BARRIER        resource_barrier9       = CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_PRESENT, D3D12_RESOURCE_STATE_RENDER_TARGET);
+    m_commandList->ResourceBarrier(1, &resource_barrier9);
 
     CD3DX12_CPU_DESCRIPTOR_HANDLE rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_frameIndex, m_rtvDescriptorSize);
     CD3DX12_CPU_DESCRIPTOR_HANDLE dsvHandle(m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
@@ -559,7 +584,8 @@ void T100D3D12Bundles::PopulateCommandList(T100FrameResource* pFrameResource)
             &m_vertexBufferView, m_cbvSrvHeap.Get(), m_cbvSrvDescriptorSize, m_samplerHeap.Get(), m_rootSignature.Get());
     }
 
-    m_commandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT));
+    CD3DX12_RESOURCE_BARRIER            resource_barrier10          = CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
+    m_commandList->ResourceBarrier(1, &resource_barrier10);
 
     ThrowIfFailed(m_commandList->Close());
 }

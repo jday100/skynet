@@ -69,6 +69,11 @@ T100VOID T100Window::Destroy()
     UnregisterClass(m_name, m_this_instance);
 }
 
+HWND T100Window::GetHWND()
+{
+    return m_hwnd;
+}
+
 T100BOOL T100Window::Show()
 {
     return ShowWindow(m_hwnd, m_cmd_show);

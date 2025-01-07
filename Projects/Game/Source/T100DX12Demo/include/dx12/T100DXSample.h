@@ -7,7 +7,7 @@
 class T100DXSample
 {
     public:
-        T100DXSample(UINT width, UINT height, std::wstring name);
+        T100DXSample(T100Window*, UINT width, UINT height, std::wstring name);
         virtual ~T100DXSample();
 
         virtual void            OnInit() = 0;
@@ -41,10 +41,13 @@ class T100DXSample
 
         bool                    m_useWarpDevice;
 
+        T100Window*             m_window            = T100NULL;
+
     private:
         std::wstring            m_assetsPath;
 
         std::wstring            m_title;
+
 };
 
 #endif // T100DXSAMPLE_H

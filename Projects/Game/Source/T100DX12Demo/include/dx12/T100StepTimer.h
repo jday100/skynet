@@ -21,7 +21,7 @@ class T100StepTimer
 
             m_qpcMaxDelta = m_qpcFrequency.QuadPart / 10;
         }
-        virtual ~T100StepTimer();
+        virtual ~T100StepTimer() {};
 
         UINT64      GetElapsedTicks() const { return m_elapsedTicks; }
         double      GetElapsedSeconds() const { return TicksToSeconds(m_elapsedTicks); }

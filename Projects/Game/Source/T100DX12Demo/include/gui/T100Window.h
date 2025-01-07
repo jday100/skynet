@@ -18,6 +18,8 @@ class T100Window
 
         T100INT             Run();
 
+        HWND                GetHWND();
+
     protected:
         HINSTANCE           m_this_instance;
         LPSTR               m_name;

@@ -2,7 +2,7 @@
 #define T100DXSAMPLEHELPER_H
 
 #include <stdexcept>
-
+#include <string>
 #include <d3d12.h>
 #include <wrl.h>
 

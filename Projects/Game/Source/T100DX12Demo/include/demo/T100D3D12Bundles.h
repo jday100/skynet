@@ -2,6 +2,7 @@
 #define T100D3D12BUNDLES_H
 
 #include <string.h>
+#include "T100Window.h"
 #include "T100DXSample.h"
 #include "T100StepTimer.h"
 #include "T100FrameResource.h"
@@ -13,7 +14,7 @@ using Microsoft::WRL::ComPtr;
 class T100D3D12Bundles : public T100DXSample
 {
     public:
-        T100D3D12Bundles(UINT width, UINT height, std::wstring name);
+        T100D3D12Bundles(T100Window*, UINT width, UINT height, std::wstring name);
         virtual ~T100D3D12Bundles();
 
         virtual void            OnInit();
