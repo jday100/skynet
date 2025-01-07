@@ -13,6 +13,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/dx12/d3dx12" />
+					<Add directory="include/dx12" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +25,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -37,7 +41,26 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="include/T100D3D12HelloTriangle.h" />
+		<Unit filename="include/T100DXSample.h" />
+		<Unit filename="include/T100DXSampleHelper.h" />
+		<Unit filename="include/T100Win32Application.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12_barriers.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12_check_feature_support.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12_core.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12_default.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12_pipeline_state_stream.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12_property_format_table.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12_render_pass.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12_resource_helpers.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12_root_signature.h" />
+		<Unit filename="include/dx12/d3dx12/d3dx12_state_object.h" />
+		<Unit filename="include/stdafx.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/T100D3D12HelloTriangle.cpp" />
+		<Unit filename="src/T100DXSample.cpp" />
+		<Unit filename="src/T100Win32Application.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
