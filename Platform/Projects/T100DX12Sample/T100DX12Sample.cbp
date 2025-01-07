@@ -53,8 +53,6 @@
 		<Unit filename="DirectXPackedVector.h" />
 		<Unit filename="FrameResource.cpp" />
 		<Unit filename="FrameResource.h" />
-		<Unit filename="PIXEventsCommon.h" />
-		<Unit filename="PIXEventsGenerated.h" />
 		<Unit filename="SimpleCamera.cpp" />
 		<Unit filename="SimpleCamera.h" />
 		<Unit filename="StepTimer.h" />
@@ -63,8 +61,6 @@
 		<Unit filename="d3dx12.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="occcity.h" />
-		<Unit filename="pix3.h" />
-		<Unit filename="pix3_win.h" />
 		<Unit filename="stdafx.cpp" />
 		<Unit filename="stdafx.h" />
 		<Extensions>
