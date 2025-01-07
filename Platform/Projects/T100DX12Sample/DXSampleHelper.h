@@ -1,10 +1,21 @@
-#ifndef T100DXSAMPLEHELPER_H
-#define T100DXSAMPLEHELPER_H
+//*********************************************************
+//
+// Copyright (c) Microsoft. All rights reserved.
+// This code is licensed under the MIT License (MIT).
+// THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
+// ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY
+// IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR
+// PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
+//
+//*********************************************************
 
-
-#include "stdafx.h"
+#pragma once
 #include <stdexcept>
 
+// Note that while ComPtr is used to manage the lifetime of resources on the CPU,
+// it has no understanding of the lifetime of resources on the GPU. Apps must account
+// for the GPU lifetime of resources to avoid destroying objects that may still be
+// referenced by the GPU.
 using Microsoft::WRL::ComPtr;
 
 inline std::string HrToString(HRESULT hr)
@@ -195,6 +206,35 @@ inline UINT CalculateConstantBufferByteSize(UINT byteSize)
     return (byteSize + (D3D12_CONSTANT_BUFFER_DATA_PLACEMENT_ALIGNMENT - 1)) & ~(D3D12_CONSTANT_BUFFER_DATA_PLACEMENT_ALIGNMENT - 1);
 }
 
+#ifdef D3D_COMPILE_STANDARD_FILE_INCLUDE
+inline Microsoft::WRL::ComPtr<ID3DBlob> CompileShader(
+    const std::wstring& filename,
+    const D3D_SHADER_MACRO* defines,
+    const std::string& entrypoint,
+    const std::string& target)
+{
+    UINT compileFlags = 0;
+#if defined(_DEBUG) || defined(DBG)
+    compileFlags = D3DCOMPILE_DEBUG | D3DCOMPILE_SKIP_OPTIMIZATION;
+#endif
+
+    HRESULT hr;
+
+    Microsoft::WRL::ComPtr<ID3DBlob> byteCode = nullptr;
+    Microsoft::WRL::ComPtr<ID3DBlob> errors;
+    hr = D3DCompileFromFile(filename.c_str(), defines, D3D_COMPILE_STANDARD_FILE_INCLUDE,
+        entrypoint.c_str(), target.c_str(), compileFlags, 0, &byteCode, &errors);
+
+    if (errors != nullptr)
+    {
+        OutputDebugStringA((char*)errors->GetBufferPointer());
+    }
+    ThrowIfFailed(hr);
+
+    return byteCode;
+}
+#endif
+
 // Resets all elements in a ComPtr array.
 template<class T>
 void ResetComPtrArray(T* comPtrArray)
@@ -215,6 +255,3 @@ void ResetUniquePtrArray(T* uniquePtrArray)
         i.reset();
     }
 }
-
-
-#endif // T100DXSAMPLEHELPER_H

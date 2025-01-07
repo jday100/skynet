@@ -9,12 +9,16 @@
 //
 //*********************************************************
 
-#include "stdafx.h"
-#include "D3D12Bundles.h"
-
-_Use_decl_annotations_
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow)
+struct PSInput
 {
-    D3D12Bundles sample(1280, 720, L"D3D12 Bundles Sample");
-    return Win32Application::Run(&sample, hInstance, nCmdShow);
+    float4 position    : SV_POSITION;
+    float2 uv        : TEXCOORD0;
+};
+
+Texture2D        g_txDiffuse : register(t0);
+SamplerState    g_sampler : register(s0);
+
+float4 PSMain(PSInput input) : SV_TARGET
+{
+    return g_txDiffuse.Sample(g_sampler, input.uv);
 }
