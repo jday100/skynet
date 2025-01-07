@@ -266,19 +266,22 @@ void D3D12Bundles::LoadAssets()
     ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(SampleAssets::DataFileName).c_str(), &pMeshData, &meshDataLength));
 
     // Create the vertex buffer.
+    CD3DX12_HEAP_PROPERTIES         vertex_heap(D3D12_HEAP_TYPE_DEFAULT);
+    CD3DX12_RESOURCE_DESC           vertex_desc         = CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::VertexDataSize);
     {
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+            &vertex_heap,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::VertexDataSize),
+            &vertex_desc,
             D3D12_RESOURCE_STATE_COPY_DEST,
             nullptr,
             IID_PPV_ARGS(&m_vertexBuffer)));
-
+        CD3DX12_HEAP_PROPERTIES     upload_heap(D3D12_HEAP_TYPE_UPLOAD);
+        CD3DX12_RESOURCE_DESC       upload_desc             = CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::VertexDataSize);
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
+            &upload_heap,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::VertexDataSize),
+            &upload_desc,
             D3D12_RESOURCE_STATE_GENERIC_READ,
             nullptr,
             IID_PPV_ARGS(&vertexBufferUploadHeap)));
@@ -293,7 +296,8 @@ void D3D12Bundles::LoadAssets()
         vertexData.SlicePitch = vertexData.RowPitch;
 
         UpdateSubresources<1>(m_commandList.Get(), m_vertexBuffer.Get(), vertexBufferUploadHeap.Get(), 0, 0, 1, &vertexData);
-        m_commandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(m_vertexBuffer.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER));
+        CD3DX12_RESOURCE_BARRIER        barrier     = CD3DX12_RESOURCE_BARRIER::Transition(m_vertexBuffer.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_VERTEX_AND_CONSTANT_BUFFER);
+        m_commandList->ResourceBarrier(1, &barrier);
 
         // Initialize the vertex buffer view.
         m_vertexBufferView.BufferLocation = m_vertexBuffer->GetGPUVirtualAddress();
@@ -303,18 +307,22 @@ void D3D12Bundles::LoadAssets()
 
     // Create the index buffer.
     {
+        CD3DX12_HEAP_PROPERTIES         index_heap(D3D12_HEAP_TYPE_DEFAULT);
+        CD3DX12_RESOURCE_DESC           index_desc              = CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::IndexDataSize);
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+            &index_heap,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::IndexDataSize),
+            &index_desc,
             D3D12_RESOURCE_STATE_COPY_DEST,
             nullptr,
             IID_PPV_ARGS(&m_indexBuffer)));
 
+        CD3DX12_HEAP_PROPERTIES         index_upload_heap(D3D12_HEAP_TYPE_UPLOAD);
+        CD3DX12_RESOURCE_DESC           index_upload_desc       = CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::IndexDataSize);
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
+            &index_upload_heap,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::IndexDataSize),
+            &index_upload_desc,
             D3D12_RESOURCE_STATE_GENERIC_READ,
             nullptr,
             IID_PPV_ARGS(&indexBufferUploadHeap)));
@@ -329,7 +337,8 @@ void D3D12Bundles::LoadAssets()
         indexData.SlicePitch = indexData.RowPitch;
 
         UpdateSubresources<1>(m_commandList.Get(), m_indexBuffer.Get(), indexBufferUploadHeap.Get(), 0, 0, 1, &indexData);
-        m_commandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(m_indexBuffer.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_INDEX_BUFFER));
+        CD3DX12_RESOURCE_BARRIER        barrier         = CD3DX12_RESOURCE_BARRIER::Transition(m_indexBuffer.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_INDEX_BUFFER);
+        m_commandList->ResourceBarrier(1, &barrier);
 
         // Describe the index buffer view.
         m_indexBufferView.BufferLocation = m_indexBuffer->GetGPUVirtualAddress();
@@ -353,8 +362,9 @@ void D3D12Bundles::LoadAssets()
         textureDesc.SampleDesc.Quality = 0;
         textureDesc.Dimension = D3D12_RESOURCE_DIMENSION_TEXTURE2D;
 
+        CD3DX12_HEAP_PROPERTIES     texture_heap(D3D12_HEAP_TYPE_DEFAULT);
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+            &texture_heap,
             D3D12_HEAP_FLAG_NONE,
             &textureDesc,
             D3D12_RESOURCE_STATE_COPY_DEST,
@@ -366,10 +376,12 @@ void D3D12Bundles::LoadAssets()
         const UINT subresourceCount = textureDesc.DepthOrArraySize * textureDesc.MipLevels;
         const UINT64 uploadBufferSize = GetRequiredIntermediateSize(m_texture.Get(), 0, subresourceCount);
 
+        CD3DX12_HEAP_PROPERTIES         sampler_heap(D3D12_HEAP_TYPE_UPLOAD);
+        CD3DX12_RESOURCE_DESC           sampler_desc        = CD3DX12_RESOURCE_DESC::Buffer(uploadBufferSize);
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_UPLOAD),
+            &sampler_heap,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Buffer(uploadBufferSize),
+            &sampler_desc,
             D3D12_RESOURCE_STATE_GENERIC_READ,
             nullptr,
             IID_PPV_ARGS(&textureUploadHeap)));
@@ -382,7 +394,8 @@ void D3D12Bundles::LoadAssets()
         textureData.SlicePitch = SampleAssets::Textures[0].Data[0].Size;
 
         UpdateSubresources(m_commandList.Get(), m_texture.Get(), textureUploadHeap.Get(), 0, 0, subresourceCount, &textureData);
-        m_commandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(m_texture.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE));
+        CD3DX12_RESOURCE_BARRIER        barrier         = CD3DX12_RESOURCE_BARRIER::Transition(m_texture.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE);
+        m_commandList->ResourceBarrier(1, &barrier);
 
         // Describe and create a sampler.
         D3D12_SAMPLER_DESC samplerDesc = {};
@@ -420,10 +433,12 @@ void D3D12Bundles::LoadAssets()
         depthOptimizedClearValue.DepthStencil.Depth = 1.0f;
         depthOptimizedClearValue.DepthStencil.Stencil = 0;
 
+        CD3DX12_HEAP_PROPERTIES     depth_heap(D3D12_HEAP_TYPE_DEFAULT);
+        CD3DX12_RESOURCE_DESC       depth_desc          = CD3DX12_RESOURCE_DESC::Tex2D(DXGI_FORMAT_D32_FLOAT, m_width, m_height, 1, 0, 1, 0, D3D12_RESOURCE_FLAG_ALLOW_DEPTH_STENCIL);
         ThrowIfFailed(m_device->CreateCommittedResource(
-            &CD3DX12_HEAP_PROPERTIES(D3D12_HEAP_TYPE_DEFAULT),
+            &depth_heap,
             D3D12_HEAP_FLAG_NONE,
-            &CD3DX12_RESOURCE_DESC::Tex2D(DXGI_FORMAT_D32_FLOAT, m_width, m_height, 1, 0, 1, 0, D3D12_RESOURCE_FLAG_ALLOW_DEPTH_STENCIL),
+            &depth_desc,
             D3D12_RESOURCE_STATE_DEPTH_WRITE,
             &depthOptimizedClearValue,
             IID_PPV_ARGS(&m_depthStencil)
@@ -617,7 +632,8 @@ void D3D12Bundles::PopulateCommandList(FrameResource* pFrameResource)
     m_commandList->RSSetScissorRects(1, &m_scissorRect);
 
     // Indicate that the back buffer will be used as a render target.
-    m_commandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_PRESENT, D3D12_RESOURCE_STATE_RENDER_TARGET));
+    CD3DX12_RESOURCE_BARRIER        barrier         = CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_PRESENT, D3D12_RESOURCE_STATE_RENDER_TARGET);
+    m_commandList->ResourceBarrier(1, &barrier);
 
     CD3DX12_CPU_DESCRIPTOR_HANDLE rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_frameIndex, m_rtvDescriptorSize);
     CD3DX12_CPU_DESCRIPTOR_HANDLE dsvHandle(m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
@@ -641,7 +657,8 @@ void D3D12Bundles::PopulateCommandList(FrameResource* pFrameResource)
     }
 
     // Indicate that the back buffer will now be used to present.
-    m_commandList->ResourceBarrier(1, &CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT));
+    CD3DX12_RESOURCE_BARRIER        present_barrier         = CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
+    m_commandList->ResourceBarrier(1, &present_barrier);
 
     ThrowIfFailed(m_commandList->Close());
 }
