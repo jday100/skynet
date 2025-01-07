@@ -208,9 +208,13 @@ void D3D12Bundles::LoadAssets()
         UINT pixelShaderDataLength2;
 
         // Load pre-compiled shaders.
-        ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(L"shader_mesh_simple_vert.cso").c_str(), &pVertexShaderData, &vertexShaderDataLength));
-        ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(L"shader_mesh_simple_pixel.cso").c_str(), &pPixelShaderData1, &pixelShaderDataLength1));
-        ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(L"shader_mesh_alt_pixel.cso").c_str(), &pPixelShaderData2, &pixelShaderDataLength2));
+        //ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(L"shader_mesh_simple_vert.cso").c_str(), &pVertexShaderData, &vertexShaderDataLength));
+        //ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(L"shader_mesh_simple_pixel.cso").c_str(), &pPixelShaderData1, &pixelShaderDataLength1));
+        //ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(L"shader_mesh_alt_pixel.cso").c_str(), &pPixelShaderData2, &pixelShaderDataLength2));
+
+        ThrowIfFailed(ReadDataFromFile(L"shader_mesh_simple_vert.cso", &pVertexShaderData, &vertexShaderDataLength));
+        ThrowIfFailed(ReadDataFromFile(L"shader_mesh_simple_pixel.cso", &pPixelShaderData1, &pixelShaderDataLength1));
+        ThrowIfFailed(ReadDataFromFile(L"shader_mesh_alt_pixel.cso", &pPixelShaderData2, &pixelShaderDataLength2));
 
         CD3DX12_RASTERIZER_DESC rasterizerStateDesc(D3D12_DEFAULT);
         rasterizerStateDesc.CullMode = D3D12_CULL_MODE_NONE;
@@ -263,7 +267,8 @@ void D3D12Bundles::LoadAssets()
     // Read in mesh data for vertex/index buffers.
     UINT8* pMeshData;
     UINT meshDataLength;
-    ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(SampleAssets::DataFileName).c_str(), &pMeshData, &meshDataLength));
+    //ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(SampleAssets::DataFileName).c_str(), &pMeshData, &meshDataLength));
+    ThrowIfFailed(ReadDataFromFile(SampleAssets::DataFileName, &pMeshData, &meshDataLength));
 
     // Create the vertex buffer.
     CD3DX12_HEAP_PROPERTIES         vertex_heap(D3D12_HEAP_TYPE_DEFAULT);

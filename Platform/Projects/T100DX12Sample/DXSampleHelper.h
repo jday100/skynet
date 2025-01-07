@@ -65,9 +65,9 @@ inline void GetAssetsPath(_Out_writes_(pathSize) WCHAR* path, UINT pathSize)
     }
 }
 
+/*
 inline HRESULT ReadDataFromFile(LPCWSTR filename, byte** data, UINT* size)
 {
-    /*
     using namespace Microsoft::WRL;
 
 #if WINVER >= _WIN32_WINNT_WIN8
@@ -108,12 +108,42 @@ inline HRESULT ReadDataFromFile(LPCWSTR filename, byte** data, UINT* size)
     }
 
     return S_OK;
-    */
+}
+*/
+
+inline HRESULT ReadDataFromFile(LPCWSTR filename, byte** data, UINT* size)
+{
+    HANDLE  file(CreateFileW(filename, GENERIC_READ, FILE_SHARE_READ, nullptr, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL | FILE_FLAG_SEQUENTIAL_SCAN | SECURITY_SQOS_PRESENT | SECURITY_ANONYMOUS, nullptr));
+
+    if(file == INVALID_HANDLE_VALUE)
+    {
+        throw std::exception();
+    }
+
+    FILE_STANDARD_INFO      fileInfo = {};
+    if(!GetFileInformationByHandleEx(file, FileStandardInfo, &fileInfo, sizeof(fileInfo)))
+    {
+        throw std::exception();
+    }
+
+    if(fileInfo.EndOfFile.HighPart != 0)
+    {
+        throw std::exception();
+    }
+
+    *data   = reinterpret_cast<byte*>(malloc(fileInfo.EndOfFile.LowPart));
+    *size   = fileInfo.EndOfFile.LowPart;
+
+    if(!ReadFile(file, *data, fileInfo.EndOfFile.LowPart, nullptr, nullptr))
+    {
+        throw std::exception();
+    }
+
+    return S_OK;
 }
 
 inline HRESULT ReadDataFromDDSFile(LPCWSTR filename, byte** data, UINT* offset, UINT* size)
 {
-    /*
     if (FAILED(ReadDataFromFile(filename, data, size)))
     {
         return E_FAIL;
@@ -168,7 +198,6 @@ inline HRESULT ReadDataFromDDSFile(LPCWSTR filename, byte** data, UINT* offset, 
     *size = *size - ddsDataOffset;
 
     return S_OK;
-    */
 }
 
 // Assign a name to the object to aid with debugging.
