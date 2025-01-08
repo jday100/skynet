@@ -10,6 +10,7 @@ class T100String16
     public:
         T100String16();
         T100String16(const char*);
+        T100String16(const wchar_t*);
         virtual ~T100String16();
 
         T100WSTRING             to_wstring();

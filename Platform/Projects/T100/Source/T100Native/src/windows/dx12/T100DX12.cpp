@@ -1,8 +1,6 @@
 #include "T100DX12.h"
 #include "T100DX12Helper.h"
 
-#include "d3dx12_root_signature.h"
-#include "d3dx12_barriers.h"
 
 T100DX12::T100DX12(HWND hwnd)
     :m_hwnd(hwnd)
@@ -276,11 +274,12 @@ void T100DX12::WaitForPreviousFrame()
 
 T100BOOL T100DX12::load()
 {
-    auto indexDesc          = D3D12_RESOURCE_DESC::
+    /*
+    //auto indexDesc          = D3D12_RESOURCE_DESC::
 
 
 
-    auto indexDesc          = CD3DX12_RESOURCE_DESC::Buffer(size);
+    //auto indexDesc          = CD3DX12_RESOURCE_DESC::Buffer(size);
 
 
 
@@ -292,6 +291,7 @@ T100BOOL T100DX12::load()
     m_mesh.VertexBuffer = d3dUtil::CreateDefaultBUffer(md3ddevice.Get().
                                                        mCommandList.Get(), m_mesh.VERTEX.data(), size,
                                                        m_mesh.VertexBufferUploader);
+    */
 }
 
 T100BOOL T100DX12::release()

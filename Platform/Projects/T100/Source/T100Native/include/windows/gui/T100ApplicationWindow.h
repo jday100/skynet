@@ -1,6 +1,13 @@
 #ifndef T100APPLICATIONWINDOW_H
 #define T100APPLICATIONWINDOW_H
 
+#if defined(UNICODE) && !defined(_UNICODE)
+    #define _UNICODE
+#elif defined(_UNICODE) && !defined(UNICODE)
+    #define UNICODE
+#endif
+
+
 #include <tchar.h>
 #include <windows.h>
 #include "T100Common.h"
@@ -13,7 +20,7 @@ class T100ApplicationWindow
         T100ApplicationWindow(HINSTANCE, HINSTANCE, LPSTR, int);
         virtual ~T100ApplicationWindow();
 
-        T100VOID            Create(LPSTR name, LPSTR title, WNDPROC wndproc = DefWindowProc);
+        T100VOID            Create(LPCWSTR name, LPCWSTR title, WNDPROC wndproc = DefaultWindowProcedure);
         T100VOID            Destroy();
 
         int                 Run();

@@ -13,6 +13,12 @@ T100String16::T100String16(const char* str)
     m_value = T100Unicode::to_string16(value);
 }
 
+T100String16::T100String16(const wchar_t* str)
+{
+    std::wstring    value   = str;
+    m_value = T100Unicode::to_string16(value);
+}
+
 T100String16::~T100String16()
 {
     //dtor

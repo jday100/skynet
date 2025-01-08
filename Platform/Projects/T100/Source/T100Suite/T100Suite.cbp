@@ -88,6 +88,7 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 					<Add directory="include/develop/application" />
 					<Add directory="include/develop/application/interact/commandline" />

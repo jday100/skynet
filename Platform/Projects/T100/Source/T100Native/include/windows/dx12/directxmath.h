@@ -1,6 +1,0 @@
-#ifndef DIRECTXMATH_H
-#define DIRECTXMATH_H
-
-
-
-#endif // DIRECTXMATH_H

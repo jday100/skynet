@@ -14,9 +14,9 @@ T100ApplicationWindow::~T100ApplicationWindow()
     //dtor
 }
 
-T100VOID T100ApplicationWindow::Create(LPSTR name, LPSTR title, WNDPROC wndproc)
+T100VOID T100ApplicationWindow::Create(LPCWSTR name, LPCWSTR title, WNDPROC wndproc)
 {
-    WNDCLASSEX          wincl;
+    WNDCLASSEXW          wincl;
 
     wincl.hInstance         = m_hthis_instance;
     wincl.lpszClassName     = name;
@@ -32,11 +32,11 @@ T100VOID T100ApplicationWindow::Create(LPSTR name, LPSTR title, WNDPROC wndproc)
     wincl.cbWndExtra        = 0;
 
     wincl.hbrBackground     = (HBRUSH)COLOR_BACKGROUND;
-    if(!RegisterClassEx(&wincl)){
+    if(!RegisterClassExW(&wincl)){
         return;
     }
 
-    m_hwnd      = CreateWindowEx(
+    m_hwnd      = CreateWindowExW(
                              0,
                              name,
                              title,

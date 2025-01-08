@@ -4,27 +4,26 @@
 #include <windows.h>
 #include "T100Common.h"
 #include "graph/render/T100Renderer.h"
+#include "windows/gui/T100ApplicationWindow.h"
 
 class T1003DGame
 {
     public:
-        T1003DGame();
+        T1003DGame(HINSTANCE, HINSTANCE, LPSTR, int);
         virtual ~T1003DGame();
 
-        T100VOID                setHWND(HWND);
+        virtual T100BOOL                create(T100WORD, T100WORD, T100WString);
+        virtual T100BOOL                destroy();
 
-        virtual T100BOOL        run();
+        virtual T100BOOL                show();
+        virtual T100INT                 run();
 
     protected:
-        HWND                    m_hwnd;
-
-        T100Renderer            m_renderer;
-
-        T100BOOL                show_lobby();
+        T100ApplicationWindow*          m_frame             = T100NULL;
 
     private:
-        T100VOID                create();
-        T100VOID                destroy();
+        T100VOID                        init(HINSTANCE, HINSTANCE, LPSTR, int);
+        T100VOID                        uninit();
 
 };
 

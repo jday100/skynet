@@ -13,7 +13,7 @@ class T100Renderer
         T100BOOL            run();
 
     protected:
-        T100DX12            m_dx12;
+        //T100DX12            m_dx12;
 
     private:
 };
