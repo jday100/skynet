@@ -8,6 +8,8 @@
 // PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
 //
 //*********************************************************
+#ifndef OCCCITY_H
+#define OCCCITY_H
 
 #pragma once
 
@@ -67,3 +69,5 @@ namespace SampleAssets
         { 0, -1, -1, 0, 18642, 0 },
     };
 }
+
+#endif // OCCCITY_H

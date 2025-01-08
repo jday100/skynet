@@ -22,6 +22,7 @@
 					<Add directory="include" />
 					<Add directory="include/demo" />
 					<Add directory="include/dx12" />
+					<Add directory="." />
 				</Compiler>
 				<Linker>
 					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libdxguid.a" />
@@ -70,8 +71,18 @@
 		<Unit filename="Win32Application.cpp" />
 		<Unit filename="Win32Application.h" />
 		<Unit filename="d3dx12.h" />
+		<Unit filename="include/demo/T100Demo.h" />
+		<Unit filename="include/demo/T100Resource.h" />
+		<Unit filename="include/dx12/T100Camera.h" />
+		<Unit filename="include/dx12/T100DX12.h" />
+		<Unit filename="include/dx12/T100Timer.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="occcity.h" />
+		<Unit filename="src/demo/T100Demo.cpp" />
+		<Unit filename="src/demo/T100Resource.cpp" />
+		<Unit filename="src/dx12/T100Camera.cpp" />
+		<Unit filename="src/dx12/T100DX12.cpp" />
+		<Unit filename="src/dx12/T100Timer.cpp" />
 		<Unit filename="stdafx.cpp" />
 		<Unit filename="stdafx.h" />
 		<Extensions>
