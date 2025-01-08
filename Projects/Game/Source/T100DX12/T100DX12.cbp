@@ -13,6 +13,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/dx12" />
+					<Add directory="include/demo" />
+					<Add directory="include/gui" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +25,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/dx12" />
+					<Add directory="include/demo" />
+					<Add directory="include/gui" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -37,7 +43,19 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="include/demo/T100Demo.h" />
+		<Unit filename="include/dx12/T100Camera.h" />
+		<Unit filename="include/dx12/T100DX12.h" />
+		<Unit filename="include/dx12/T100Timer.h" />
+		<Unit filename="include/gui/T100Application.h" />
+		<Unit filename="include/gui/T100Window.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/demo/T100Demo.cpp" />
+		<Unit filename="src/dx12/T100Camera.cpp" />
+		<Unit filename="src/dx12/T100DX12.cpp" />
+		<Unit filename="src/dx12/T100Timer.cpp" />
+		<Unit filename="src/gui/T100Application.cpp" />
+		<Unit filename="src/gui/T100Window.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
