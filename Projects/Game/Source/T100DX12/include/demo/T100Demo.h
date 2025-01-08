@@ -2,6 +2,11 @@
 #define T100DEMO_H
 
 #include "T100DX12.h"
+#include "T100Timer.h"
+#include "T100Camera.h"
+#include "T100FrameResource.h"
+
+using Microsoft::WRL::ComPtr;
 
 class T100Demo : public T100DX12
 {
@@ -40,7 +45,7 @@ class T100Demo : public T100DX12
         ComPtr<ID3D12DescriptorHeap>            m_sampleHeap;
         ComPtr<ID3D12PipelineState>             m_pipelineState1;
         ComPtr<ID3D12PipelineState>             m_pipelineState2;
-        ComPtr<ID3d12GraphicsCommandList>       m_commandList;
+        ComPtr<ID3D12GraphicsCommandList>       m_commandList;
 
         UINT                                    m_numIndices;
         ComPtr<ID3D12Resource>                  m_vertexBuffer;

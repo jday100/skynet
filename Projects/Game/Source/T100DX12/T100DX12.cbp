@@ -44,13 +44,22 @@
 			<Add library="comctl32" />
 		</Linker>
 		<Unit filename="include/demo/T100Demo.h" />
+		<Unit filename="include/demo/T100FrameResource.h" />
+		<Unit filename="include/demo/occcity.h" />
+		<Unit filename="include/dx12/DirectXCollision.h" />
+		<Unit filename="include/dx12/DirectXColors.h" />
+		<Unit filename="include/dx12/DirectXMath.h" />
+		<Unit filename="include/dx12/DirectXPackedVector.h" />
 		<Unit filename="include/dx12/T100Camera.h" />
 		<Unit filename="include/dx12/T100DX12.h" />
+		<Unit filename="include/dx12/T100DX12Helper.h" />
 		<Unit filename="include/dx12/T100Timer.h" />
+		<Unit filename="include/dx12/d3dx12.h" />
 		<Unit filename="include/gui/T100Application.h" />
 		<Unit filename="include/gui/T100Window.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/demo/T100Demo.cpp" />
+		<Unit filename="src/demo/T100FrameResource.cpp" />
 		<Unit filename="src/dx12/T100Camera.cpp" />
 		<Unit filename="src/dx12/T100DX12.cpp" />
 		<Unit filename="src/dx12/T100Timer.cpp" />
