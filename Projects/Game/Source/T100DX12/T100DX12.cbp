@@ -13,7 +13,6 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add option="-DUNICODE" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -38,17 +37,7 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
-		<Unit filename="D3D12HelloWindow.cpp" />
-		<Unit filename="D3D12HelloWindow.h" />
-		<Unit filename="DXSample.cpp" />
-		<Unit filename="DXSample.h" />
-		<Unit filename="DXSampleHelper.h" />
-		<Unit filename="Win32Application.cpp" />
-		<Unit filename="Win32Application.h" />
-		<Unit filename="d3dx12.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="stdafx.cpp" />
-		<Unit filename="stdafx.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
