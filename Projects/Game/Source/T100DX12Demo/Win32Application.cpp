@@ -14,7 +14,7 @@
 
 HWND Win32Application::m_hwnd = nullptr;
 
-int Win32Application::Run(DXSample* pSample, HINSTANCE hInstance, int nCmdShow)
+int Win32Application::Run(T100DX12* pSample, HINSTANCE hInstance, int nCmdShow)
 {
     // Parse the command line parameters
     int argc;
@@ -75,7 +75,7 @@ int Win32Application::Run(DXSample* pSample, HINSTANCE hInstance, int nCmdShow)
 // Main message handler for the sample.
 LRESULT CALLBACK Win32Application::WindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    DXSample* pSample = reinterpret_cast<DXSample*>(GetWindowLongPtr(hWnd, GWLP_USERDATA));
+    T100DX12* pSample = reinterpret_cast<T100DX12*>(GetWindowLongPtr(hWnd, GWLP_USERDATA));
 
     switch (message)
     {

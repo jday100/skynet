@@ -18,6 +18,7 @@
 					<Add option="-march=core2" />
 					<Add option="-std=gnu++11" />
 					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-DUNICODE" />
 					<Add directory="include/gui" />
 					<Add directory="include" />
 					<Add directory="include/demo" />
@@ -44,6 +45,29 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
+			<Target title="Test">
+				<Option output="bin/Debug/T100DX12Demo" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-std=c11" />
+					<Add option="-g" />
+					<Add option="-march=core2" />
+					<Add option="-std=gnu++11" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-DUNICODE" />
+					<Add directory="include/gui" />
+					<Add directory="include" />
+					<Add directory="include/demo" />
+					<Add directory="include/dx12" />
+					<Add directory="." />
+				</Compiler>
+				<Linker>
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libdxguid.a" />
+				</Linker>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
@@ -54,20 +78,11 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
-		<Unit filename="D3D12Bundles.cpp" />
-		<Unit filename="D3D12Bundles.h" />
-		<Unit filename="DXSample.cpp" />
-		<Unit filename="DXSample.h" />
 		<Unit filename="DXSampleHelper.h" />
 		<Unit filename="DirectXCollision.h" />
 		<Unit filename="DirectXColors.h" />
 		<Unit filename="DirectXMath.h" />
 		<Unit filename="DirectXPackedVector.h" />
-		<Unit filename="FrameResource.cpp" />
-		<Unit filename="FrameResource.h" />
-		<Unit filename="SimpleCamera.cpp" />
-		<Unit filename="SimpleCamera.h" />
-		<Unit filename="StepTimer.h" />
 		<Unit filename="Win32Application.cpp" />
 		<Unit filename="Win32Application.h" />
 		<Unit filename="d3dx12.h" />
