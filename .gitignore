@@ -125,3 +125,6 @@
 /Platform/Projects/T100DX12Sample/obj
 /Platform/Projects/T100DX12Sample/T100DX12Sample.layout
 /Platform/Projects/T100DX12Sample/T100DX12Sample.depend
+/Platform/Projects/T100/Source/build/libunwind.dll
+/Platform/Projects/T100/Source/build/libc++.dll
+/Platform/Projects/T100/Source/build/T100Native.exe

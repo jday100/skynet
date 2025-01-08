@@ -9,3 +9,8 @@ T100Character::~T100Character()
 {
     //dtor
 }
+
+T100BOOL T100Character::load()
+{
+
+}

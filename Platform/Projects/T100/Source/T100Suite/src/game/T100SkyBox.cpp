@@ -9,3 +9,8 @@ T100SkyBox::~T100SkyBox()
 {
     //dtor
 }
+
+T100BOOL T100SkyBox::load()
+{
+
+}

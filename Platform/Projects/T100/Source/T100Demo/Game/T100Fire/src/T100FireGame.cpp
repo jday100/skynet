@@ -1,5 +1,7 @@
 #include "T100FireGame.h"
 
+#include "T100FireScene.h"
+
 T100FireGame::T100FireGame(HINSTANCE hThisInstance, HINSTANCE hPrevInstance, LPSTR lpArgument, int nCmdShow)
     :T1003DGame(hThisInstance, hPrevInstance, lpArgument, nCmdShow)
 {
@@ -15,12 +17,12 @@ T100FireGame::~T100FireGame()
 
 T100VOID T100FireGame::init()
 {
-
+    //load();
 }
 
 T100VOID T100FireGame::uninit()
 {
-
+    release();
 }
 
 T100BOOL T100FireGame::create(T100WORD width, T100WORD height, T100WString title)
@@ -29,6 +31,22 @@ T100BOOL T100FireGame::create(T100WORD width, T100WORD height, T100WString title
 }
 
 T100BOOL T100FireGame::destroy()
+{
+
+}
+
+T100BOOL T100FireGame::load()
+{
+    T100FireScene*      scene       = T100NEW T100FireScene();
+
+    scene->load();
+
+    setScene(scene);
+
+    T1003DGame::load();
+}
+
+T100BOOL T100FireGame::release()
 {
 
 }

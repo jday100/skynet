@@ -9,7 +9,7 @@
 			<Target title="Debug">
 				<Option output="bin/Debug/T100Native" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
-				<Option type="1" />
+				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
@@ -84,11 +84,39 @@
 			<Target title="Test">
 				<Option output="bin/Debug/T100Native" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
-				<Option type="1" />
+				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-D__WINDOWS__" />
 					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-DUNICODE" />
+					<Add directory="include/common" />
+					<Add directory="include" />
+					<Add directory="include/io/file" />
+					<Add directory="include/string" />
+					<Add directory="include/thread" />
+					<Add directory="include/io" />
+					<Add directory="include/io/file/binary" />
+					<Add directory="include/console" />
+					<Add directory="include/windows/console" />
+					<Add directory="include/windows/dx12" />
+					<Add directory="include/windows/gui" />
+					<Add directory="include/test" />
+					<Add directory="include/windows/d3d12" />
+				</Compiler>
+			</Target>
+			<Target title="DX12Test">
+				<Option output="../build/T100Native" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="../build" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WINDOWS__" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-DUNICODE" />
 					<Add directory="include/common" />
 					<Add directory="include" />
 					<Add directory="include/io/file" />
@@ -134,15 +162,14 @@
 		<Unit filename="include/windows/d3d12/DirectXPackedVector.h" />
 		<Unit filename="include/windows/d3d12/T100D3D12.h" />
 		<Unit filename="include/windows/d3d12/T100D3D12Helper.h" />
+		<Unit filename="include/windows/d3d12/T100D3DX12.h" />
 		<Unit filename="include/windows/dx12/T100DX12.h" />
 		<Unit filename="include/windows/dx12/T100DX12Helper.h" />
 		<Unit filename="include/windows/dx12/T100DX12Mesh.h" />
 		<Unit filename="include/windows/dx12/d3dx12.h" />
 		<Unit filename="include/windows/gui/T100ApplicationWindow.h" />
 		<Unit filename="main.cpp">
-			<Option target="Debug" />
 			<Option target="Release" />
-			<Option target="Test" />
 		</Unit>
 		<Unit filename="src/console/T100Console.cpp" />
 		<Unit filename="src/console/T100ConsoleBase.cpp" />
@@ -163,9 +190,13 @@
 			<Option target="Release" />
 			<Option target="Test" />
 		</Unit>
+		<Unit filename="src/test/test_dx12.cpp">
+			<Option target="DX12Test" />
+		</Unit>
 		<Unit filename="src/thread/T100Thread.cpp" />
 		<Unit filename="src/windows/console/T100ConsoleWindows.cpp" />
 		<Unit filename="src/windows/d3d12/T100D3D12.cpp" />
+		<Unit filename="src/windows/d3d12/T100D3DX12.cpp" />
 		<Unit filename="src/windows/dx12/T100DX12.cpp" />
 		<Unit filename="src/windows/dx12/T100DX12Mesh.cpp" />
 		<Unit filename="src/windows/gui/T100ApplicationWindow.cpp" />

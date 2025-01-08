@@ -1,4 +1,3 @@
-#include "windows/gui/T100ApplicationWindows.h"
 #include "T1003DGame.h"
 
 int WINAPI WinMain(
@@ -8,14 +7,10 @@ int WINAPI WinMain(
                   int nCmdShow
                   )
 {
-    T100ApplicationWindows      app(hThisInstance, hPrevInstance, lpszArgument, nCmdShow);
-    T1003DGame                  game;
+    T1003DGame          game(hThisInstance, hPrevInstance, lpszArgument, nCmdShow);
 
-    app.Create();
+    game.create(1280, 720, L"D3D12 Sample");
+    game.show();
 
-    game.setHWND(app.getHWND());
-
-    app.Show();
-
-    return app.run();
+    return game.run();
 }

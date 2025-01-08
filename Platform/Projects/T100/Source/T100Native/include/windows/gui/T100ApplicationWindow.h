@@ -20,7 +20,7 @@ class T100ApplicationWindow
         T100ApplicationWindow(HINSTANCE, HINSTANCE, LPSTR, int);
         virtual ~T100ApplicationWindow();
 
-        T100VOID            Create(LPCWSTR name, LPCWSTR title, WNDPROC wndproc = DefaultWindowProcedure);
+        T100VOID            Create(LPCWSTR name, LPCWSTR title, WNDPROC wndproc = DefaultWindowProcedure, LPVOID lpParam = NULL);
         T100VOID            Destroy();
 
         int                 Run();

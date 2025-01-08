@@ -33,6 +33,7 @@
 					<Add directory="include/game" />
 					<Add directory="include/graph" />
 					<Add directory="include/graph/render" />
+					<Add directory="include/graph/render/dx12" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -68,6 +69,7 @@
 					<Add directory="include/game" />
 					<Add directory="include/graph" />
 					<Add directory="include/graph/render" />
+					<Add directory="include/graph/render/dx12" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -89,6 +91,7 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-DUNICODE" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 					<Add directory="include/develop/application" />
 					<Add directory="include/develop/application/interact/commandline" />
@@ -110,6 +113,7 @@
 					<Add directory="include/game" />
 					<Add directory="include/graph" />
 					<Add directory="include/graph/render" />
+					<Add directory="include/graph/render/dx12" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -151,6 +155,7 @@
 					<Add directory="include/game" />
 					<Add directory="include/graph" />
 					<Add directory="include/graph/render" />
+					<Add directory="include/graph/render/dx12" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -165,13 +170,15 @@
 			<Target title="GameTest">
 				<Option output="bin/Debug/T100Suite" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
-				<Option type="1" />
+				<Option type="0" />
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add option="-D__WINDOWS__" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
+					<Add option="-DUNICODE" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 					<Add directory="include/develop/application" />
 					<Add directory="include/develop/application/interact/commandline" />
@@ -193,14 +200,15 @@
 					<Add directory="include/game" />
 					<Add directory="include/graph" />
 					<Add directory="include/graph/render" />
+					<Add directory="include/graph/render/dx12" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 				</ResourceCompiler>
 				<Linker>
 					<Add library="libwxmsw30ud.a" />
-					<Add library="../build/libT100Library.a" />
 					<Add library="../build/libT100Native.a" />
+					<Add library="../build/libT100Library.a" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -240,12 +248,42 @@
 		<Unit filename="include/develop/application/T100Application.h" />
 		<Unit filename="include/develop/application/interact/commandline/T100CommandLineApplication.h" />
 		<Unit filename="include/develop/application/interact/gui/T100GUIApplication.h" />
-		<Unit filename="include/develop/application/interact/gui/wxwidgets/T100WXApplication.h" />
-		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXChartCtrl.h" />
-		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXDiagramCtrl.h" />
-		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXDrawCtrl.h" />
-		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXEditCtrl.h" />
-		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXSourceCtrl.h" />
+		<Unit filename="include/develop/application/interact/gui/wxwidgets/T100WXApplication.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXChartCtrl.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXDiagramCtrl.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXDrawCtrl.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXEditCtrl.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="include/develop/application/interact/gui/wxwidgets/widget/T100WXSourceCtrl.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
 		<Unit filename="include/develop/compiler/T100Compiler.h" />
 		<Unit filename="include/develop/compiler/T100CompilerCommon.h" />
 		<Unit filename="include/develop/compiler/analyzer/T100Analyzer.h" />
@@ -280,6 +318,7 @@
 		<Unit filename="include/game/T100SkyBox.h" />
 		<Unit filename="include/graph/T100Graph.h" />
 		<Unit filename="include/graph/render/T100Renderer.h" />
+		<Unit filename="include/graph/render/dx12/T100DX12Renderer.h" />
 		<Unit filename="include/test/T100SuiteTest.h">
 			<Option target="Debug" />
 			<Option target="Release" />
@@ -296,12 +335,42 @@
 		<Unit filename="src/develop/application/T100Application.cpp" />
 		<Unit filename="src/develop/application/interact/commandline/T100CommandLineApplication.cpp" />
 		<Unit filename="src/develop/application/interact/gui/T100GUIApplication.cpp" />
-		<Unit filename="src/develop/application/interact/gui/wxwidgets/T100WXApplication.cpp" />
-		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXChartCtrl.cpp" />
-		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXDiagramCtrl.cpp" />
-		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXDrawCtrl.cpp" />
-		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXEditCtrl.cpp" />
-		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXSourceCtrl.cpp" />
+		<Unit filename="src/develop/application/interact/gui/wxwidgets/T100WXApplication.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXChartCtrl.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXDiagramCtrl.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXDrawCtrl.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXEditCtrl.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
+		<Unit filename="src/develop/application/interact/gui/wxwidgets/widget/T100WXSourceCtrl.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+			<Option target="Library" />
+			<Option target="Test" />
+		</Unit>
 		<Unit filename="src/develop/compiler/T100Compiler.cpp" />
 		<Unit filename="src/develop/compiler/analyzer/T100Analyzer.cpp" />
 		<Unit filename="src/develop/compiler/data/T100AnalyzerInfo.cpp" />
@@ -334,6 +403,7 @@
 		<Unit filename="src/game/T100SkyBox.cpp" />
 		<Unit filename="src/graph/T100Graph.cpp" />
 		<Unit filename="src/graph/render/T100Renderer.cpp" />
+		<Unit filename="src/graph/render/dx12/T100DX12Renderer.cpp" />
 		<Unit filename="src/test/T100SuiteTest.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />

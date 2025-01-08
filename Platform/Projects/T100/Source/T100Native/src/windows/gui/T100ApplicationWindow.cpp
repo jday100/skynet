@@ -14,7 +14,7 @@ T100ApplicationWindow::~T100ApplicationWindow()
     //dtor
 }
 
-T100VOID T100ApplicationWindow::Create(LPCWSTR name, LPCWSTR title, WNDPROC wndproc)
+T100VOID T100ApplicationWindow::Create(LPCWSTR name, LPCWSTR title, WNDPROC wndproc, LPVOID lpParam)
 {
     WNDCLASSEXW          wincl;
 
@@ -48,7 +48,7 @@ T100VOID T100ApplicationWindow::Create(LPCWSTR name, LPCWSTR title, WNDPROC wndp
                              HWND_DESKTOP,
                              NULL,
                              m_hthis_instance,
-                             NULL
+                             lpParam
                              );
 }
 

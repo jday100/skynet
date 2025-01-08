@@ -16,6 +16,8 @@ class T100FireGame : public T1003DGame
         T100INT             run();
 
     protected:
+        T100BOOL            load();
+        T100BOOL            release();
 
     private:
         T100VOID            init();

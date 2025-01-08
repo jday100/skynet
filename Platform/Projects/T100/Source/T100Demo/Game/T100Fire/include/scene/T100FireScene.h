@@ -1,8 +1,9 @@
 #ifndef T100FIRESCENE_H
 #define T100FIRESCENE_H
 
+#include "game/T100Scene.h"
 
-class T100FireScene
+class T100FireScene : public T100Scene
 {
     public:
         T100FireScene();
