@@ -24,7 +24,7 @@
 					<Add directory="include/dx12" />
 				</Compiler>
 				<Linker>
-					<Add library="C:/Program Files (x86)/Windows Kits/10/Lib/10.0.20348.0/um/x86/d3d12.lib" />
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libdxguid.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
