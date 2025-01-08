@@ -4,6 +4,10 @@
 #pragma once
 #include <stdexcept>
 
+#include <windows.h>
+#include <wrl.h>
+
+using Microsoft::WRL::ComPtr;
 
 inline std::string HrToString(HRESULT hr)
 {

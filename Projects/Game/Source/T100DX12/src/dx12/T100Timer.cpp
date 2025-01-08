@@ -17,7 +17,6 @@ T100Timer::T100Timer() :
 
     m_qpcMaxDelta = m_qpcFrequency.QuadPart / 10;
 }
-}
 
 T100Timer::~T100Timer()
 {
