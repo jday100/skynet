@@ -12,6 +12,8 @@ class T100FireGame : public T100Game
     protected:
 
     private:
+        T100VOID            create();
+        T100VOID            destroy();
 };
 
 #endif // T100FIREGAME_H

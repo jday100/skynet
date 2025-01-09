@@ -21,6 +21,7 @@
 					<Add directory="include/fire" />
 					<Add directory="include/game" />
 					<Add directory="include/dx12" />
+					<Add directory="include/entity" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -43,6 +44,7 @@
 					<Add directory="include/fire" />
 					<Add directory="include/game" />
 					<Add directory="include/dx12" />
+					<Add directory="include/entity" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -85,8 +87,12 @@
 		<Unit filename="include/dx12/T100DX12Light.h" />
 		<Unit filename="include/dx12/T100DX12Mesh.h" />
 		<Unit filename="include/dx12/T100DX12Resource.h" />
+		<Unit filename="include/dx12/T100DX12Texture.h" />
 		<Unit filename="include/dx12/T100DX12Timer.h" />
 		<Unit filename="include/dx12/T100DX12Tools.h" />
+		<Unit filename="include/entity/T100Entity.h" />
+		<Unit filename="include/entity/T100Square.h" />
+		<Unit filename="include/entity/T100Triangle.h" />
 		<Unit filename="include/fire/T100FireCharacter.h" />
 		<Unit filename="include/fire/T100FireGame.h" />
 		<Unit filename="include/fire/T100FireScene.h" />
@@ -101,8 +107,12 @@
 		<Unit filename="src/dx12/T100DX12Light.cpp" />
 		<Unit filename="src/dx12/T100DX12Mesh.cpp" />
 		<Unit filename="src/dx12/T100DX12Resource.cpp" />
+		<Unit filename="src/dx12/T100DX12Texture.cpp" />
 		<Unit filename="src/dx12/T100DX12Timer.cpp" />
 		<Unit filename="src/dx12/T100DX12Tools.cpp" />
+		<Unit filename="src/entity/T100Entity.cpp" />
+		<Unit filename="src/entity/T100Square.cpp" />
+		<Unit filename="src/entity/T100Triangle.cpp" />
 		<Unit filename="src/fire/T100FireCharacter.cpp" />
 		<Unit filename="src/fire/T100FireGame.cpp" />
 		<Unit filename="src/fire/T100FireScene.cpp" />

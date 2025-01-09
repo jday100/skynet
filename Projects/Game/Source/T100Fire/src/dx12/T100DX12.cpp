@@ -645,3 +645,8 @@ T100VOID T100DX12::PopulateCommandList(T100DX12Resource* pFrameResource)
 
     ThrowIfFailed(m_commandList->Close());
 }
+
+T100VOID T100DX12::Load(T100ENTITY_VECTOR& entities)
+{
+
+}

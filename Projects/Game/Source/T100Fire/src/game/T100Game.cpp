@@ -25,6 +25,7 @@ T100VOID T100Game::Destroy()
 T100VOID T100Game::Load()
 {
     m_dx12->Init();
+    m_dx12->Load(m_scene->entities);
 }
 
 T100VOID T100Game::Release()
@@ -51,4 +52,14 @@ T100VOID T100Game::OnKeyDown(UINT8 key)
 T100VOID T100Game::OnKeyUp(UINT8 key)
 {
     m_dx12->OnKeyUp(key);
+}
+
+T100VOID T100Game::SetScene(T100Scene* scene)
+{
+    m_scene     = scene;
+}
+
+T100Scene* T100Game::GetScene()
+{
+    return m_scene;
 }

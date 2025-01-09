@@ -11,5 +11,6 @@
 #define     T100SAFE_DELETE     delete
 
 #define     T100FLOAT           float
+#define     T100UINT            unsigned int
 
 #endif // T100COMMON_H

@@ -8,6 +8,7 @@
 #include "d3d12/d3dx12.h"
 
 #include "T100Common.h"
+#include "T100Entity.h"
 #include "T100DX12Timer.h"
 #include "T100DX12Camera.h"
 #include "T100DX12Resource.h"
@@ -22,6 +23,8 @@ class T100DX12
 
         virtual T100VOID                        Create(HWND, UINT, UINT);
         virtual T100VOID                        Destroy();
+
+        virtual T100VOID                        Load(T100ENTITY_VECTOR&);
 
         virtual T100VOID                        Init();
         virtual T100VOID                        Update();
