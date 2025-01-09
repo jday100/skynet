@@ -4,7 +4,14 @@
 #include "occcity.h"
 #include "T100DX12Tools.h"
 
-T100DX12::T100DX12()
+T100DX12::T100DX12() :
+    m_frameIndex(0),
+    m_frameCounter(0),
+    m_fenceValue(0),
+    m_rtvDescriptorSize(0),
+    m_currentFrameResourceIndex(0),
+    m_pCurrentFrameResource(T100NULL),
+    m_useWarpDevice(T100FALSE)
 {
     //ctor
 }
@@ -14,9 +21,14 @@ T100DX12::~T100DX12()
     //dtor
 }
 
-T100BOOL T100DX12::Create(HWND hwnd)
+T100BOOL T100DX12::Create(HWND hwnd, UINT width, UINT height)
 {
+    m_hwnd      = hwnd;
+    m_width     = width;
+    m_height    = height;
 
+    m_viewport      = CD3DX12_VIEWPORT(0.0f, 0.0f, static_cast<float>(width), static_cast<float>(height));
+    m_scissorRect   = CD3DX12_RECT(0, 0, static_cast<LONG>(width), static_cast<LONG>(height));
 }
 
 T100BOOL T100DX12::Destroy()
@@ -26,17 +38,61 @@ T100BOOL T100DX12::Destroy()
 
 T100BOOL T100DX12::Init()
 {
+    WCHAR       assetsPath[512];
+    GetAssetsPath(assetsPath, _countof(assetsPath));
+    m_assetsPath = assetsPath;
 
+    m_aspectRatio = static_cast<float>(m_width) / static_cast<float>(m_height);
+
+    m_camera.Init({8, 8, 30});
+
+    m_load_pipeline();
+    m_load_assets();
 }
 
 T100BOOL T100DX12::Update()
 {
+    m_timer.Tick(NULL);
+
+    if (m_frameCounter == 500)
+    {
+        wchar_t         fps[64];
+        swprintf_s(fps, L"%ufps", m_timer.GetFramesPerSecond());
+        SetCustomWindowText(fps);
+        m_frameCounter = 0;
+    }
+
+    m_frameCounter++;
+
+    const UINT64        lastCompletedFence  = m_fence->GetCompletedValue();
+
+    m_currentFrameResourceIndex             = (m_currentFrameResourceIndex + 1) % FrameCount;
+    m_pCurrentFrameResource                 = m_frameResources[m_currentFrameResourceIndex];
+
+    if (m_pCurrentFrameResource->m_fenceValue != 0 && m_pCurrentFrameResource->m_fenceValue > lastCompletedFence)
+    {
+        ThrowIfFailed(m_fence->SetEventOnCompletion(m_pCurrentFrameResource->m_fenceValue, m_fenceEvent));
+        WaitForSingleObject(m_fenceEvent, INFINITE);
+    }
+
+    m_camera.Update(static_cast<float>(m_timer.GetElapsedSeconds()));
+    m_pCurrentFrameResource->UpdateConstantBuffers(m_camera.GetViewMatrix(), m_camera.GetProjectionMatrix(0.8f, m_aspectRatio));
 
 }
 
 T100BOOL T100DX12::Render()
 {
+    m_populate_command_list(m_pCurrentFrameResource);
 
+    ID3D12CommandList*          ppCommandLists[] = { m_commandList.Get() };
+    m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
+
+    ThrowIfFailed(m_swapChain->Present(1, 0));
+    m_frameIndex = m_swapChain->GetCurrentBackBufferIndex();
+
+    m_pCurrentFrameResource->m_fenceValue = m_fenceValue;
+    ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), m_fenceValue));
+    m_fenceValue++;
 }
 
 T100BOOL T100DX12::m_load_pipeline()
@@ -493,6 +549,12 @@ std::wstring T100DX12::GetAssetFullPath(LPCWSTR assetName)
     return m_assetsPath + L"..\\..\\data\\" + assetName;
 }
 
+void T100DX12::SetCustomWindowText(LPCWSTR text)
+{
+    std::wstring windowText = m_title + L": " + text;
+    SetWindowTextW(m_hwnd, windowText.c_str());
+}
+
 T100BOOL T100DX12::m_create_frame_resources()
 {
     CD3DX12_CPU_DESCRIPTOR_HANDLE           cbvSrvHandle(m_cbvSrvHeap->GetCPUDescriptorHandleForHeapStart(), 1, m_cbvSrvDescriptorSize);    // Move past the SRV in slot 1.
@@ -521,3 +583,43 @@ T100BOOL T100DX12::m_create_frame_resources()
     }
 }
 
+T100BOOL T100DX12::m_populate_command_list(T100FrameResource* pFrameResource)
+{
+    ThrowIfFailed(m_pCurrentFrameResource->m_commandAllocator->Reset());
+
+    ThrowIfFailed(m_commandList->Reset(m_pCurrentFrameResource->m_commandAllocator.Get(), m_pipelineState1.Get()));
+
+    m_commandList->SetGraphicsRootSignature(m_rootSignature.Get());
+
+    ID3D12DescriptorHeap* ppHeaps[] = { m_cbvSrvHeap.Get(), m_samplerHeap.Get() };
+    m_commandList->SetDescriptorHeaps(_countof(ppHeaps), ppHeaps);
+
+    m_commandList->RSSetViewports(1, &m_viewport);
+    m_commandList->RSSetScissorRects(1, &m_scissorRect);
+
+    CD3DX12_RESOURCE_BARRIER        barrier         = CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_PRESENT, D3D12_RESOURCE_STATE_RENDER_TARGET);
+    m_commandList->ResourceBarrier(1, &barrier);
+
+    CD3DX12_CPU_DESCRIPTOR_HANDLE rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_frameIndex, m_rtvDescriptorSize);
+    CD3DX12_CPU_DESCRIPTOR_HANDLE dsvHandle(m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
+    m_commandList->OMSetRenderTargets(1, &rtvHandle, FALSE, &dsvHandle);
+
+    const float         clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
+    m_commandList->ClearRenderTargetView(rtvHandle, clearColor, 0, nullptr);
+    m_commandList->ClearDepthStencilView(m_dsvHeap->GetCPUDescriptorHandleForHeapStart(), D3D12_CLEAR_FLAG_DEPTH, 1.0f, 0, 0, nullptr);
+
+    if (UseBundles)
+    {
+        m_commandList->ExecuteBundle(pFrameResource->m_bundle.Get());
+    }
+    else
+    {
+        pFrameResource->PopulateCommandList(m_commandList.Get(), m_pipelineState1.Get(), m_pipelineState2.Get(), m_currentFrameResourceIndex, m_numIndices, &m_indexBufferView,
+            &m_vertexBufferView, m_cbvSrvHeap.Get(), m_cbvSrvDescriptorSize, m_samplerHeap.Get(), m_rootSignature.Get());
+    }
+
+    CD3DX12_RESOURCE_BARRIER        present_barrier         = CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
+    m_commandList->ResourceBarrier(1, &present_barrier);
+
+    ThrowIfFailed(m_commandList->Close());
+}

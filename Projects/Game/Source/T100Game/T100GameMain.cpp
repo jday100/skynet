@@ -99,7 +99,8 @@ T100VOID T100GameFrame::create()
 {
     m_demo  = T100NEW T100Demo();
 
-    m_demo->Create(GetHWND());
+    m_demo->Create(GetHWND(), GetClientSize().GetWidth(), GetClientSize().GetHeight());
+    m_demo->Start();
 }
 
 T100VOID T100GameFrame::destroy()

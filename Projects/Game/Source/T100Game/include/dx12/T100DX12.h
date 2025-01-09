@@ -8,6 +8,8 @@
 #include "d3dx12/d3dx12.h"
 
 #include "T100Common.h"
+#include "T100DX12Timer.h"
+#include "T100DX12Camera.h"
 #include "T100FrameResource.h"
 
 using Microsoft::WRL::ComPtr;
@@ -18,22 +20,24 @@ class T100DX12
         T100DX12();
         virtual ~T100DX12();
 
-        virtual T100BOOL            Create(HWND);
-        virtual T100BOOL            Destroy();
+        virtual T100BOOL                        Create(HWND, UINT, UINT);
+        virtual T100BOOL                        Destroy();
 
-        virtual T100BOOL            Init();
-        virtual T100BOOL            Update();
-        virtual T100BOOL            Render();
+        virtual T100BOOL                        Init();
+        virtual T100BOOL                        Update();
+        virtual T100BOOL                        Render();
 
     protected:
+        HWND                                    m_hwnd;
+
         UINT                                    m_width;
         UINT                                    m_height;
 
-        HWND                                    m_hwnd;
-
+        float                                   m_aspectRatio;
         T100BOOL                                m_useWarpDevice;
 
         std::wstring                            GetAssetFullPath(LPCWSTR assetName);
+        void                                    SetCustomWindowText(LPCWSTR text);
 
     private:
         static const UINT                       FrameCount          = 3;
@@ -79,6 +83,10 @@ class T100DX12
         UINT64                                  m_fenceValue;
 
         std::wstring                            m_assetsPath;
+        std::wstring                            m_title;
+
+        T100DX12Timer                           m_timer;
+        T100DX12Camera                          m_camera;
 
     private:
         T100BOOL                    m_load_pipeline();

@@ -9,7 +9,8 @@ class T100Game
         T100Game();
         virtual ~T100Game();
 
-        virtual T100BOOL            Create(HWND);
+        virtual T100BOOL            Create(HWND, UINT, UINT);
+        virtual T100BOOL            Start();
         virtual T100BOOL            Render();
 
     protected:
