@@ -34,11 +34,47 @@ T100VOID T100DX12::Init()
 
 T100VOID T100DX12::Update()
 {
+    m_timer.Tick(NULL);
+
+    if (m_frameCounter == 500)
+    {
+        wchar_t         fps[64];
+        swprintf_s(fps, L"%ufps", m_timer.GetFramesPerSecond());
+        SetCustomWindowText(fps);
+        m_frameCounter = 0;
+    }
+
+    m_frameCounter++;
+
+    const UINT64        lastCompletedFence  = m_fence->GetCompletedValue();
+
+    m_currentFrameResourceIndex             = (m_currentFrameResourceIndex + 1) % m_frameCount;
+    m_pCurrentFrameResource                 = m_frameResources[m_currentFrameResourceIndex];
+
+    if (m_pCurrentFrameResource->m_fenceValue != 0 && m_pCurrentFrameResource->m_fenceValue > lastCompletedFence)
+    {
+        ThrowIfFailed(m_fence->SetEventOnCompletion(m_pCurrentFrameResource->m_fenceValue, m_fenceEvent));
+        WaitForSingleObject(m_fenceEvent, INFINITE);
+    }
+
+    m_camera.Update(static_cast<float>(m_timer.GetElapsedSeconds()));
+    m_pCurrentFrameResource->UpdateConstantBuffers(m_camera.GetViewMatrix(), m_camera.GetProjectionMatrix(0.8f, m_aspectRatio));
 
 }
 
 T100VOID T100DX12::Render()
 {
+    PopulateCommandList(m_pCurrentFrameResource);
+
+    ID3D12CommandList*          ppCommandLists[] = { m_commandList.Get() };
+    m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
+
+    ThrowIfFailed(m_swapChain->Present(1, 0));
+    m_frameIndex = m_swapChain->GetCurrentBackBufferIndex();
+
+    m_pCurrentFrameResource->m_fenceValue = m_fenceValue;
+    ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), m_fenceValue));
+    m_fenceValue++;
 
 }
 

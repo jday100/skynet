@@ -84,6 +84,7 @@
 		<Unit filename="include/dx12/T100DX12Camera.h" />
 		<Unit filename="include/dx12/T100DX12Light.h" />
 		<Unit filename="include/dx12/T100DX12Resource.h" />
+		<Unit filename="include/dx12/T100DX12Timer.h" />
 		<Unit filename="include/dx12/T100DX12Tools.h" />
 		<Unit filename="include/fire/T100FireCharacter.h" />
 		<Unit filename="include/fire/T100FireGame.h" />
@@ -98,6 +99,7 @@
 		<Unit filename="src/dx12/T100DX12Camera.cpp" />
 		<Unit filename="src/dx12/T100DX12Light.cpp" />
 		<Unit filename="src/dx12/T100DX12Resource.cpp" />
+		<Unit filename="src/dx12/T100DX12Timer.cpp" />
 		<Unit filename="src/dx12/T100DX12Tools.cpp" />
 		<Unit filename="src/fire/T100FireCharacter.cpp" />
 		<Unit filename="src/fire/T100FireGame.cpp" />

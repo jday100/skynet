@@ -8,6 +8,8 @@
 #include "d3d12/d3dx12.h"
 
 #include "T100Common.h"
+#include "T100DX12Timer.h"
+#include "T100DX12Camera.h"
 #include "T100DX12Resource.h"
 
 using Microsoft::WRL::ComPtr;
@@ -36,6 +38,7 @@ class T100DX12
         UINT                                    m_width;
         UINT                                    m_height;
 
+        float                                   m_aspectRatio;
         T100BOOL                                m_useWarpDevice;
 
         std::wstring                            GetAssetFullPath(LPCWSTR assetName);
@@ -92,6 +95,8 @@ class T100DX12
         std::wstring                            m_assetsPath;
         std::wstring                            m_title;
 
+        T100DX12Timer                           m_timer;
+        T100DX12Camera                          m_camera;
 
         T100VOID                                LoadPipeline();
         T100VOID                                LoadResource();
