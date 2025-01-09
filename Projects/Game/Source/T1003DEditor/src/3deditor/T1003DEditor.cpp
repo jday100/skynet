@@ -25,6 +25,8 @@ T100VOID T1003DEditor::uninit()
 T100VOID T1003DEditor::Create(HWND hwnd, UINT width, UINT height)
 {
     m_dx12->Create(hwnd, width, height);
+
+    m_dx12->Start();
 }
 
 T100VOID T1003DEditor::SetSize(UINT width, UINT height)
