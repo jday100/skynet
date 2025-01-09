@@ -16,6 +16,9 @@
 #include <wx/statusbr.h>
 //*)
 
+#include "T100Common.h"
+#include "T100FireGame.h"
+
 class T100FireFrame: public wxFrame
 {
     public:
@@ -24,10 +27,15 @@ class T100FireFrame: public wxFrame
         virtual ~T100FireFrame();
 
     private:
+        T100FireGame*                   m_game          = T100NULL;
 
         //(*Handlers(T100FireFrame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
+        void OnPaint(wxPaintEvent& event);
+        void OnKeyDown(wxKeyEvent& event);
+        void OnKeyUp(wxKeyEvent& event);
+        void OnResize(wxSizeEvent& event);
         //*)
 
         //(*Identifiers(T100FireFrame)
@@ -39,6 +47,9 @@ class T100FireFrame: public wxFrame
         //(*Declarations(T100FireFrame)
         wxStatusBar* StatusBar1;
         //*)
+
+        T100VOID                        create();
+        T100VOID                        destroy();
 
         DECLARE_EVENT_TABLE()
 };

@@ -81,13 +81,35 @@ T100FireFrame::T100FireFrame(wxWindow* parent,wxWindowID id)
 
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100FireFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100FireFrame::OnAbout);
+    Connect(wxEVT_PAINT,(wxObjectEventFunction)&T100FireFrame::OnPaint);
+    Connect(wxEVT_KEY_DOWN,(wxObjectEventFunction)&T100FireFrame::OnKeyDown);
+    Connect(wxEVT_KEY_UP,(wxObjectEventFunction)&T100FireFrame::OnKeyUp);
+    Connect(wxEVT_SIZE,(wxObjectEventFunction)&T100FireFrame::OnResize);
     //*)
+
+    create();
 }
 
 T100FireFrame::~T100FireFrame()
 {
     //(*Destroy(T100FireFrame)
     //*)
+
+    destroy();
+}
+
+T100VOID T100FireFrame::create()
+{
+    Maximize();
+
+    m_game  = T100NEW T100FireGame();
+
+    m_game->Create(GetHWND(), GetClientSize().GetWidth(), GetClientSize().GetHeight());
+}
+
+T100VOID T100FireFrame::destroy()
+{
+    T100SAFE_DELETE m_game;
 }
 
 void T100FireFrame::OnQuit(wxCommandEvent& event)
@@ -99,4 +121,24 @@ void T100FireFrame::OnAbout(wxCommandEvent& event)
 {
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
+}
+
+void T100FireFrame::OnPaint(wxPaintEvent& event)
+{
+    m_game->Render();
+}
+
+void T100FireFrame::OnKeyDown(wxKeyEvent& event)
+{
+    m_game->OnKeyDown(event.GetKeyCode());
+}
+
+void T100FireFrame::OnKeyUp(wxKeyEvent& event)
+{
+    m_game->OnKeyUp(event.GetKeyCode());
+}
+
+void T100FireFrame::OnResize(wxSizeEvent& event)
+{
+    m_game->SetSize(event.GetSize().GetWidth(), event.GetSize().GetHeight());
 }

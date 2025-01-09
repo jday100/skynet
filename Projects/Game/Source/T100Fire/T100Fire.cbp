@@ -16,6 +16,10 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include" />
+					<Add directory="include/fire" />
+					<Add directory="include/game" />
+					<Add directory="include/dx12" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -34,6 +38,10 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include" />
+					<Add directory="include/fire" />
+					<Add directory="include/game" />
+					<Add directory="include/dx12" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -65,9 +73,32 @@
 		<Unit filename="T100FireApp.h" />
 		<Unit filename="T100FireMain.cpp" />
 		<Unit filename="T100FireMain.h" />
+		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/dx12/T100DX12.h" />
+		<Unit filename="include/dx12/T100DX12Camera.h" />
+		<Unit filename="include/dx12/T100DX12Light.h" />
+		<Unit filename="include/dx12/T100DX12Resource.h" />
+		<Unit filename="include/dx12/T100DX12Tools.h" />
+		<Unit filename="include/fire/T100FireCharacter.h" />
+		<Unit filename="include/fire/T100FireGame.h" />
+		<Unit filename="include/fire/T100FireScene.h" />
+		<Unit filename="include/game/T100Character.h" />
+		<Unit filename="include/game/T100Game.h" />
+		<Unit filename="include/game/T100Scene.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/dx12/T100DX12.cpp" />
+		<Unit filename="src/dx12/T100DX12Camera.cpp" />
+		<Unit filename="src/dx12/T100DX12Light.cpp" />
+		<Unit filename="src/dx12/T100DX12Resource.cpp" />
+		<Unit filename="src/dx12/T100DX12Tools.cpp" />
+		<Unit filename="src/fire/T100FireCharacter.cpp" />
+		<Unit filename="src/fire/T100FireGame.cpp" />
+		<Unit filename="src/fire/T100FireScene.cpp" />
+		<Unit filename="src/game/T100Character.cpp" />
+		<Unit filename="src/game/T100Game.cpp" />
+		<Unit filename="src/game/T100Scene.cpp" />
 		<Unit filename="wxsmith/T100Fireframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
