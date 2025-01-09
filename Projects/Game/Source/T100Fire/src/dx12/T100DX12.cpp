@@ -5,6 +5,12 @@
 #include "T100DX12Tools.h"
 
 T100DX12::T100DX12() :
+    m_frameIndex(0),
+    m_frameCounter(0),
+    m_fenceValue(0),
+    m_rtvDescriptorSize(0),
+    m_currentFrameResourceIndex(0),
+    m_pCurrentFrameResource(T100NULL),
     m_useWarpDevice(T100FALSE)
 {
     //ctor
@@ -28,6 +34,13 @@ T100VOID T100DX12::Destroy()
 
 T100VOID T100DX12::Init()
 {
+    WCHAR       assetsPath[512];
+    GetAssetsPath(assetsPath, _countof(assetsPath));
+    m_assetsPath = assetsPath;
+
+    m_aspectRatio = static_cast<float>(m_width) / static_cast<float>(m_height);
+
+    m_camera.Init({8, 8, 30});
     LoadPipeline();
     LoadResource();
 }
@@ -82,16 +95,20 @@ T100VOID T100DX12::SetSize(UINT width, UINT height)
 {
     m_width     = width;
     m_height    = height;
+
+    m_viewport      = CD3DX12_VIEWPORT(0.0f, 0.0f, static_cast<float>(width), static_cast<float>(height));
+    m_scissorRect   = CD3DX12_RECT(0, 0, static_cast<LONG>(width), static_cast<LONG>(height));
+
 }
 
 T100VOID T100DX12::OnKeyDown(UINT8 key)
 {
-
+    m_camera.OnKeyDown(key);
 }
 
 T100VOID T100DX12::OnKeyUp(UINT8 key)
 {
-
+    m_camera.OnKeyUp(key);
 }
 
 T100VOID T100DX12::LoadPipeline()
@@ -488,7 +505,7 @@ std::wstring T100DX12::GetAssetFullPath(LPCWSTR assetName)
 {
     std::wcout << m_assetsPath;
     std::wcout << assetName;
-    return m_assetsPath + L"..\\..\\data\\" + assetName;
+    return m_assetsPath + L"..\\..\\resources\\" + assetName;
 }
 
 void T100DX12::SetCustomWindowText(LPCWSTR text)

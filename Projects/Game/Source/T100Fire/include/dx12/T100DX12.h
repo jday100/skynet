@@ -45,7 +45,7 @@ class T100DX12
         T100VOID                                SetCustomWindowText(LPCWSTR text);
 
     private:
-        UINT                                    m_frameCount            = 3;
+        static const UINT                       m_frameCount            = 3;
         UINT                                    m_CityRowCount          = 10;
         UINT                                    m_CityColumnCount       = 3;
         T100BOOL                                m_useBundles            = T100TRUE;
@@ -55,7 +55,7 @@ class T100DX12
         ComPtr<ID3D12CommandQueue>              m_commandQueue;
         ComPtr<ID3D12CommandAllocator>          m_commandAllocator;
 
-        ComPtr<ID3D12Resource>                  m_renderTargets[0];
+        ComPtr<ID3D12Resource>                  m_renderTargets[m_frameCount];
         ComPtr<ID3D12Resource>                  m_depthStencil;
 
         ComPtr<ID3D12RootSignature>             m_rootSignature;

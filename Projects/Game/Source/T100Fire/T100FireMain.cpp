@@ -105,6 +105,8 @@ T100VOID T100FireFrame::create()
     m_game  = T100NEW T100FireGame();
 
     m_game->Create(GetHWND(), GetClientSize().GetWidth(), GetClientSize().GetHeight());
+
+    m_game->Load();
 }
 
 T100VOID T100FireFrame::destroy()
