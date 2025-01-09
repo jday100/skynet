@@ -49,10 +49,10 @@ void T100DX12Camera::SetTurnSpeed(float radiansPerSecond)
 
 void T100DX12Camera::Reset()
 {
-    m_position = m_initialPosition;
-    m_yaw = XM_PI;
-    m_pitch = 0.0f;
-    m_lookDirection = { 0, 0, -1 };
+    m_position          = m_initialPosition;
+    m_yaw               = XM_PI;
+    m_pitch             = 0.0f;
+    m_lookDirection     = { 0, 0, -1 };
 }
 
 void T100DX12Camera::Update(float elapsedSeconds)
@@ -75,8 +75,8 @@ void T100DX12Camera::Update(float elapsedSeconds)
         move.z = XMVectorGetZ(vector);
     }
 
-    float moveInterval = m_moveSpeed * elapsedSeconds;
-    float rotateInterval = m_turnSpeed * elapsedSeconds;
+    float moveInterval      = m_moveSpeed * elapsedSeconds;
+    float rotateInterval    = m_turnSpeed * elapsedSeconds;
 
     if (m_keysPressed.left)
         m_yaw += rotateInterval;

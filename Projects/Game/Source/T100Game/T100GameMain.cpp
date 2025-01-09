@@ -84,6 +84,7 @@ T100GameFrame::T100GameFrame(wxWindow* parent,wxWindowID id)
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100GameFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100GameFrame::OnAbout);
     Connect(wxEVT_PAINT,(wxObjectEventFunction)&T100GameFrame::OnPaint);
+    Connect(wxEVT_ERASE_BACKGROUND,(wxObjectEventFunction)&T100GameFrame::OnEraseBackground);
     Connect(wxEVT_KEY_DOWN,(wxObjectEventFunction)&T100GameFrame::OnKeyDown);
     Connect(wxEVT_KEY_UP,(wxObjectEventFunction)&T100GameFrame::OnKeyUp);
     Connect(wxEVT_SIZE,(wxObjectEventFunction)&T100GameFrame::OnResize);
@@ -132,16 +133,22 @@ void T100GameFrame::OnPaint(wxPaintEvent& event)
 
 void T100GameFrame::OnKeyDown(wxKeyEvent& event)
 {
+    int key = event.GetUnicodeKey();
     m_demo->OnKeyDown(event.GetKeyCode());
     Refresh();
 }
 
 void T100GameFrame::OnKeyUp(wxKeyEvent& event)
 {
+    int key = event.GetUnicodeKey();
     m_demo->OnKeyUp(event.GetKeyCode());
     Refresh();
 }
 
 void T100GameFrame::OnResize(wxSizeEvent& event)
+{
+}
+
+void T100GameFrame::OnEraseBackground(wxEraseEvent& event)
 {
 }
