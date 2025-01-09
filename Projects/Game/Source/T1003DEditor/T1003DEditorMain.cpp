@@ -81,13 +81,41 @@ T1003DEditorFrame::T1003DEditorFrame(wxWindow* parent,wxWindowID id)
 
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T1003DEditorFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T1003DEditorFrame::OnAbout);
+    Connect(wxEVT_PAINT,(wxObjectEventFunction)&T1003DEditorFrame::OnPaint);
+    Connect(wxEVT_KEY_DOWN,(wxObjectEventFunction)&T1003DEditorFrame::OnKeyDown);
+    Connect(wxEVT_KEY_UP,(wxObjectEventFunction)&T1003DEditorFrame::OnKeyUp);
+    Connect(wxEVT_LEFT_DOWN,(wxObjectEventFunction)&T1003DEditorFrame::OnLeftDown);
+    Connect(wxEVT_LEFT_UP,(wxObjectEventFunction)&T1003DEditorFrame::OnLeftUp);
+    Connect(wxEVT_RIGHT_DOWN,(wxObjectEventFunction)&T1003DEditorFrame::OnRightDown);
+    Connect(wxEVT_RIGHT_UP,(wxObjectEventFunction)&T1003DEditorFrame::OnRightUp);
+    Connect(wxEVT_MOTION,(wxObjectEventFunction)&T1003DEditorFrame::OnMouseMove);
+    Connect(wxEVT_MOUSEWHEEL,(wxObjectEventFunction)&T1003DEditorFrame::OnMouseWheel);
+    Connect(wxEVT_SIZE,(wxObjectEventFunction)&T1003DEditorFrame::OnResize);
     //*)
+
+    create();
 }
 
 T1003DEditorFrame::~T1003DEditorFrame()
 {
     //(*Destroy(T1003DEditorFrame)
     //*)
+
+    destroy();
+}
+
+T100VOID T1003DEditorFrame::create()
+{
+    Maximize();
+
+    m_editor    = T100NEW T1003DEditor();
+
+    m_editor->Create(GetHWND(), GetClientSize().GetWidth(), GetClientSize().GetHeight());
+}
+
+T100VOID T1003DEditorFrame::destroy()
+{
+
 }
 
 void T1003DEditorFrame::OnQuit(wxCommandEvent& event)
@@ -99,4 +127,50 @@ void T1003DEditorFrame::OnAbout(wxCommandEvent& event)
 {
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
+}
+
+void T1003DEditorFrame::OnPaint(wxPaintEvent& event)
+{
+    m_editor->Render();
+}
+
+void T1003DEditorFrame::OnEraseBackground(wxEraseEvent& event)
+{
+}
+
+void T1003DEditorFrame::OnKeyDown(wxKeyEvent& event)
+{
+}
+
+void T1003DEditorFrame::OnKeyUp(wxKeyEvent& event)
+{
+}
+
+void T1003DEditorFrame::OnMouseWheel(wxMouseEvent& event)
+{
+}
+
+void T1003DEditorFrame::OnResize(wxSizeEvent& event)
+{
+    m_editor->SetSize(event.GetSize().GetWidth(), event.GetSize().GetHeight());
+}
+
+void T1003DEditorFrame::OnMouseMove(wxMouseEvent& event)
+{
+}
+
+void T1003DEditorFrame::OnLeftDown(wxMouseEvent& event)
+{
+}
+
+void T1003DEditorFrame::OnLeftUp(wxMouseEvent& event)
+{
+}
+
+void T1003DEditorFrame::OnRightDown(wxMouseEvent& event)
+{
+}
+
+void T1003DEditorFrame::OnRightUp(wxMouseEvent& event)
+{
 }

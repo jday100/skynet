@@ -16,6 +16,9 @@
 #include <wx/statusbr.h>
 //*)
 
+#include "T100Common.h"
+#include "T1003DEditor.h"
+
 class T1003DEditorFrame: public wxFrame
 {
     public:
@@ -24,10 +27,22 @@ class T1003DEditorFrame: public wxFrame
         virtual ~T1003DEditorFrame();
 
     private:
+        T1003DEditor*           m_editor            = T100NULL;
 
         //(*Handlers(T1003DEditorFrame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
+        void OnPaint(wxPaintEvent& event);
+        void OnEraseBackground(wxEraseEvent& event);
+        void OnKeyDown(wxKeyEvent& event);
+        void OnKeyUp(wxKeyEvent& event);
+        void OnMouseWheel(wxMouseEvent& event);
+        void OnResize(wxSizeEvent& event);
+        void OnMouseMove(wxMouseEvent& event);
+        void OnLeftDown(wxMouseEvent& event);
+        void OnLeftUp(wxMouseEvent& event);
+        void OnRightDown(wxMouseEvent& event);
+        void OnRightUp(wxMouseEvent& event);
         //*)
 
         //(*Identifiers(T1003DEditorFrame)
@@ -39,6 +54,9 @@ class T1003DEditorFrame: public wxFrame
         //(*Declarations(T1003DEditorFrame)
         wxStatusBar* StatusBar1;
         //*)
+
+        T100VOID                create();
+        T100VOID                destroy();
 
         DECLARE_EVENT_TABLE()
 };

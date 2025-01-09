@@ -16,6 +16,9 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include" />
+					<Add directory="include/dx12" />
+					<Add directory="include/3deditor" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -34,6 +37,9 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include" />
+					<Add directory="include/dx12" />
+					<Add directory="include/3deditor" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -65,9 +71,14 @@
 		<Unit filename="T1003DEditorApp.h" />
 		<Unit filename="T1003DEditorMain.cpp" />
 		<Unit filename="T1003DEditorMain.h" />
+		<Unit filename="include/3deditor/T1003DEditor.h" />
+		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/dx12/T100DX12.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/3deditor/T1003DEditor.cpp" />
+		<Unit filename="src/dx12/T100DX12.cpp" />
 		<Unit filename="wxsmith/T1003DEditorframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
