@@ -32,6 +32,9 @@ class T100GameFrame: public wxFrame
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
         void OnPaint(wxPaintEvent& event);
+        void OnKeyDown(wxKeyEvent& event);
+        void OnKeyUp(wxKeyEvent& event);
+        void OnResize(wxSizeEvent& event);
         //*)
 
         //(*Identifiers(T100GameFrame)

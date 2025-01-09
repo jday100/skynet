@@ -27,6 +27,9 @@ class T100DX12
         virtual T100BOOL                        Update();
         virtual T100BOOL                        Render();
 
+        virtual T100VOID                        OnKeyDown(UINT8);
+        virtual T100VOID                        OnKeyUp(UINT8);
+
     protected:
         HWND                                    m_hwnd;
 

@@ -36,6 +36,16 @@ T100BOOL T100DX12::Destroy()
 
 }
 
+T100VOID T100DX12::OnKeyDown(UINT8 key)
+{
+    m_camera.OnKeyDown(key);
+}
+
+T100VOID T100DX12::OnKeyUp(UINT8 key)
+{
+    m_camera.OnKeyUp(key);
+}
+
 T100BOOL T100DX12::Init()
 {
     WCHAR       assetsPath[512];

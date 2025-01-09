@@ -13,6 +13,9 @@ class T100Game
         virtual T100BOOL            Start();
         virtual T100BOOL            Render();
 
+        virtual T100VOID            OnKeyDown(UINT8 key);
+        virtual T100VOID            OnKeyUp(UINT8 key);
+
     protected:
         T100DX12*                   m_dx12          = T100NULL;
 

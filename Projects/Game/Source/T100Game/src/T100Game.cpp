@@ -39,3 +39,13 @@ T100BOOL T100Game::Render()
     m_dx12->Update();
     m_dx12->Render();
 }
+
+T100VOID T100Game::OnKeyDown(UINT8 key)
+{
+    m_dx12->OnKeyDown(key);
+}
+
+T100VOID T100Game::OnKeyUp(UINT8 key)
+{
+    m_dx12->OnKeyUp(key);
+}

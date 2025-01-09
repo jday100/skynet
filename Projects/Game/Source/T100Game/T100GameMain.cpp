@@ -41,6 +41,8 @@ wxString wxbuildinfo(wxbuildinfoformat format)
     return wxbuild;
 }
 
+#include <iostream>
+
 //(*IdInit(T100GameFrame)
 const long T100GameFrame::idMenuQuit = wxNewId();
 const long T100GameFrame::idMenuAbout = wxNewId();
@@ -82,6 +84,9 @@ T100GameFrame::T100GameFrame(wxWindow* parent,wxWindowID id)
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100GameFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100GameFrame::OnAbout);
     Connect(wxEVT_PAINT,(wxObjectEventFunction)&T100GameFrame::OnPaint);
+    Connect(wxEVT_KEY_DOWN,(wxObjectEventFunction)&T100GameFrame::OnKeyDown);
+    Connect(wxEVT_KEY_UP,(wxObjectEventFunction)&T100GameFrame::OnKeyUp);
+    Connect(wxEVT_SIZE,(wxObjectEventFunction)&T100GameFrame::OnResize);
     //*)
 
     create();
@@ -121,5 +126,22 @@ void T100GameFrame::OnAbout(wxCommandEvent& event)
 
 void T100GameFrame::OnPaint(wxPaintEvent& event)
 {
+    std::wcout << L"Rendering...\n";
     m_demo->Render();
+}
+
+void T100GameFrame::OnKeyDown(wxKeyEvent& event)
+{
+    m_demo->OnKeyDown(event.GetKeyCode());
+    Refresh();
+}
+
+void T100GameFrame::OnKeyUp(wxKeyEvent& event)
+{
+    m_demo->OnKeyUp(event.GetKeyCode());
+    Refresh();
+}
+
+void T100GameFrame::OnResize(wxSizeEvent& event)
+{
 }
