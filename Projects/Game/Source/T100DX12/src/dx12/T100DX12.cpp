@@ -1,5 +1,7 @@
 #include "T100DX12.h"
 
+#include <iostream>
+
 using namespace Microsoft::WRL;
 
 
@@ -24,7 +26,9 @@ T100DX12::~T100DX12()
 
 std::wstring T100DX12::GetAssetFullPath(LPCWSTR assetName)
 {
-    return m_assetsPath + assetName;
+    std::wcout << m_assetsPath;
+    std::wcout << assetName;
+    return m_assetsPath + L"..\\..\\data\\" + assetName;
 }
 
 _Use_decl_annotations_
