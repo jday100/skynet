@@ -133,14 +133,17 @@ void T100FireFrame::OnPaint(wxPaintEvent& event)
 void T100FireFrame::OnKeyDown(wxKeyEvent& event)
 {
     m_game->OnKeyDown(event.GetKeyCode());
+    Refresh();
 }
 
 void T100FireFrame::OnKeyUp(wxKeyEvent& event)
 {
     m_game->OnKeyUp(event.GetKeyCode());
+    Refresh();
 }
 
 void T100FireFrame::OnResize(wxSizeEvent& event)
 {
     m_game->SetSize(event.GetSize().GetWidth(), event.GetSize().GetHeight());
+    Refresh();
 }
