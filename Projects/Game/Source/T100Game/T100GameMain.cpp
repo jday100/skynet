@@ -103,6 +103,8 @@ T100GameFrame::~T100GameFrame()
 
 T100VOID T100GameFrame::create()
 {
+    SetSize(1280, 720);
+
     m_demo  = T100NEW T100Demo();
 
     m_demo->Create(GetHWND(), GetClientSize().GetWidth(), GetClientSize().GetHeight());

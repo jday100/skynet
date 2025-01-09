@@ -19,8 +19,8 @@ class T100DX12Camera
         void                    SetMoveSpeed(float unitsPerSecond);
         void                    SetTurnSpeed(float radiansPerSecond);
 
-        void                    OnKeyDown(WPARAM key);
-        void                    OnKeyUp(WPARAM key);
+        void                    OnKeyDown(UINT8 key);
+        void                    OnKeyUp(UINT8 key);
 
     protected:
 

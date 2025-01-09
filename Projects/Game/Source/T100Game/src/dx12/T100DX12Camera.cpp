@@ -111,7 +111,7 @@ XMMATRIX T100DX12Camera::GetProjectionMatrix(float fov, float aspectRatio, float
     return XMMatrixPerspectiveFovRH(fov, aspectRatio, nearPlane, farPlane);
 }
 
-void T100DX12Camera::OnKeyDown(WPARAM key)
+void T100DX12Camera::OnKeyDown(UINT8 key)
 {
     switch (key)
     {
@@ -145,7 +145,7 @@ void T100DX12Camera::OnKeyDown(WPARAM key)
     }
 }
 
-void T100DX12Camera::OnKeyUp(WPARAM key)
+void T100DX12Camera::OnKeyUp(UINT8 key)
 {
     switch (key)
     {
