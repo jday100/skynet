@@ -128,6 +128,7 @@ void T100FireFrame::OnAbout(wxCommandEvent& event)
 void T100FireFrame::OnPaint(wxPaintEvent& event)
 {
     m_game->Render();
+    Refresh();
 }
 
 void T100FireFrame::OnKeyDown(wxKeyEvent& event)

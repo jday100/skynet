@@ -258,6 +258,35 @@ T100VOID T100DX12::LoadResource()
         ThrowIfFailed(m_device->CreateRootSignature(0, signature->GetBufferPointer(), signature->GetBufferSize(), IID_PPV_ARGS(&m_rootSignature)));
     }
 
+    LoadFile(vertexBufferUploadHeap, indexBufferUploadHeap, textureUploadHeap);
+
+    ThrowIfFailed(m_commandList->Close());
+    ID3D12CommandList*                  ppCommandLists[] = { m_commandList.Get() };
+    m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
+
+    {
+        ThrowIfFailed(m_device->CreateFence(m_fenceValue, D3D12_FENCE_FLAG_NONE, IID_PPV_ARGS(&m_fence)));
+        m_fenceValue++;
+
+        m_fenceEvent = CreateEvent(nullptr, FALSE, FALSE, nullptr);
+        if (m_fenceEvent == nullptr)
+        {
+            ThrowIfFailed(HRESULT_FROM_WIN32(GetLastError()));
+        }
+
+        const UINT64                fenceToWaitFor = m_fenceValue;
+        ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), fenceToWaitFor));
+        m_fenceValue++;
+
+        ThrowIfFailed(m_fence->SetEventOnCompletion(fenceToWaitFor, m_fenceEvent));
+        WaitForSingleObject(m_fenceEvent, INFINITE);
+    }
+
+    CreateFrameResources();
+}
+
+T100VOID T100DX12::LoadFile(ComPtr<ID3D12Resource>& vertexBufferUploadHeap, ComPtr<ID3D12Resource>& indexBufferUploadHeap, ComPtr<ID3D12Resource>& textureUploadHeap)
+{
     {
         UINT8*                  pVertexShaderData;
         UINT8*                  pPixelShaderData1;
@@ -475,30 +504,6 @@ T100VOID T100DX12::LoadResource()
 
         m_device->CreateDepthStencilView(m_depthStencil.Get(), &depthStencilDesc, m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
     }
-
-    ThrowIfFailed(m_commandList->Close());
-    ID3D12CommandList*                  ppCommandLists[] = { m_commandList.Get() };
-    m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
-
-    {
-        ThrowIfFailed(m_device->CreateFence(m_fenceValue, D3D12_FENCE_FLAG_NONE, IID_PPV_ARGS(&m_fence)));
-        m_fenceValue++;
-
-        m_fenceEvent = CreateEvent(nullptr, FALSE, FALSE, nullptr);
-        if (m_fenceEvent == nullptr)
-        {
-            ThrowIfFailed(HRESULT_FROM_WIN32(GetLastError()));
-        }
-
-        const UINT64                fenceToWaitFor = m_fenceValue;
-        ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), fenceToWaitFor));
-        m_fenceValue++;
-
-        ThrowIfFailed(m_fence->SetEventOnCompletion(fenceToWaitFor, m_fenceEvent));
-        WaitForSingleObject(m_fenceEvent, INFINITE);
-    }
-
-    CreateFrameResources();
 }
 
 std::wstring T100DX12::GetAssetFullPath(LPCWSTR assetName)

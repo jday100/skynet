@@ -100,6 +100,9 @@ class T100DX12
 
         T100VOID                                LoadPipeline();
         T100VOID                                LoadResource();
+
+        T100VOID                                LoadFile(ComPtr<ID3D12Resource>&, ComPtr<ID3D12Resource>&, ComPtr<ID3D12Resource>&);
+
         T100VOID                                CreateFrameResources();
         T100VOID                                PopulateCommandList(T100DX12Resource* pFrameResource);
 
