@@ -16,6 +16,8 @@
 #include <wx/statusbr.h>
 //*)
 
+#include "T100Demo.h"
+
 class T100GameFrame: public wxFrame
 {
     public:
@@ -24,10 +26,12 @@ class T100GameFrame: public wxFrame
         virtual ~T100GameFrame();
 
     private:
+        T100Demo*           m_demo          = T100NULL;
 
         //(*Handlers(T100GameFrame)
         void OnQuit(wxCommandEvent& event);
         void OnAbout(wxCommandEvent& event);
+        void OnPaint(wxPaintEvent& event);
         //*)
 
         //(*Identifiers(T100GameFrame)
@@ -39,6 +43,9 @@ class T100GameFrame: public wxFrame
         //(*Declarations(T100GameFrame)
         wxStatusBar* StatusBar1;
         //*)
+
+        T100VOID            create();
+        T100VOID            destroy();
 
         DECLARE_EVENT_TABLE()
 };

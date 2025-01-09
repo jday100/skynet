@@ -81,13 +81,30 @@ T100GameFrame::T100GameFrame(wxWindow* parent,wxWindowID id)
 
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100GameFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100GameFrame::OnAbout);
+    Connect(wxEVT_PAINT,(wxObjectEventFunction)&T100GameFrame::OnPaint);
     //*)
+
+    create();
 }
 
 T100GameFrame::~T100GameFrame()
 {
     //(*Destroy(T100GameFrame)
     //*)
+
+    destroy();
+}
+
+T100VOID T100GameFrame::create()
+{
+    m_demo  = T100NEW T100Demo();
+
+    m_demo->Create(GetHWND());
+}
+
+T100VOID T100GameFrame::destroy()
+{
+    T100SAFE_DELETE m_demo;
 }
 
 void T100GameFrame::OnQuit(wxCommandEvent& event)
@@ -99,4 +116,9 @@ void T100GameFrame::OnAbout(wxCommandEvent& event)
 {
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
+}
+
+void T100GameFrame::OnPaint(wxPaintEvent& event)
+{
+    m_demo->Render();
 }
