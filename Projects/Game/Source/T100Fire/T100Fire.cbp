@@ -74,6 +74,11 @@
 		<Unit filename="T100FireMain.cpp" />
 		<Unit filename="T100FireMain.h" />
 		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/d3d12/DirectXCollision.h" />
+		<Unit filename="include/d3d12/DirectXColors.h" />
+		<Unit filename="include/d3d12/DirectXMath.h" />
+		<Unit filename="include/d3d12/DirectXPackedVector.h" />
+		<Unit filename="include/d3d12/d3dx12.h" />
 		<Unit filename="include/dx12/T100DX12.h" />
 		<Unit filename="include/dx12/T100DX12Camera.h" />
 		<Unit filename="include/dx12/T100DX12Light.h" />

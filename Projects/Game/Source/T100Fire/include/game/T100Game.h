@@ -1,8 +1,8 @@
 #ifndef T100GAME_H
 #define T100GAME_H
 
-#include <windows.h>
 #include "T100Common.h"
+#include "T100DX12.h"
 
 class T100Game
 {
@@ -13,8 +13,9 @@ class T100Game
         virtual T100VOID            Create(HWND, UINT, UINT);
         virtual T100VOID            Destroy();
 
-        virtual T100VOID            Init();
-        virtual T100VOID            Update();
+        virtual T100VOID            Load();
+        virtual T100VOID            Release();
+
         virtual T100VOID            Render();
 
         virtual T100VOID            SetSize(UINT, UINT);
@@ -25,6 +26,7 @@ class T100Game
 
 
     protected:
+        T100DX12*                   m_dx12          = T100NULL;
 
     private:
 };

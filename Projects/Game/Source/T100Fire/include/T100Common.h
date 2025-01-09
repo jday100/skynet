@@ -10,4 +10,6 @@
 #define     T100NEW             new
 #define     T100SAFE_DELETE     delete
 
+#define     T100FLOAT           float
+
 #endif // T100COMMON_H
