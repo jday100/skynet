@@ -14,6 +14,11 @@ T100Application::~T100Application()
     //dtor
 }
 
+HWND T100Application::GetHwnd()
+{
+    return m_hwnd;
+}
+
 int T100Application::Run(T100DX12* pDX12, HINSTANCE hInstance, int nCmdShow)
 {
     int             argc;

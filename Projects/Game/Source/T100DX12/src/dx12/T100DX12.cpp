@@ -88,7 +88,7 @@ void T100DX12::GetHardwareAdapter(
 void T100DX12::SetCustomWindowText(LPCWSTR text)
 {
     std::wstring windowText = m_title + L": " + text;
-    SetWindowTextW(Win32Application::GetHwnd(), windowText.c_str());
+    SetWindowTextW(T100Application::GetHwnd(), windowText.c_str());
 }
 
 _Use_decl_annotations_

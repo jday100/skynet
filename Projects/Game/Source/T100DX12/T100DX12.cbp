@@ -18,6 +18,7 @@
 					<Add directory="include/dx12" />
 					<Add directory="include/demo" />
 					<Add directory="include/gui" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">

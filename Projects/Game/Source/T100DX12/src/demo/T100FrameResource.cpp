@@ -1,5 +1,7 @@
 #include "T100FrameResource.h"
 
+#include "d3dx12.h"
+
 T100FrameResource::T100FrameResource(ID3D12Device* pDevice, UINT cityRowCount, UINT cityColumnCount) :
     m_fenceValue(0),
     m_cityRowCount(cityRowCount),

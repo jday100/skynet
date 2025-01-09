@@ -4,6 +4,7 @@
 #pragma once
 #include <stdexcept>
 
+#include <string>
 #include <windows.h>
 #include <wrl.h>
 

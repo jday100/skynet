@@ -42,7 +42,7 @@ class T100Demo : public T100DX12
         ComPtr<ID3D12DescriptorHeap>            m_rtvHeap;
         ComPtr<ID3D12DescriptorHeap>            m_cbvSrvHeap;
         ComPtr<ID3D12DescriptorHeap>            m_dsvHeap;
-        ComPtr<ID3D12DescriptorHeap>            m_sampleHeap;
+        ComPtr<ID3D12DescriptorHeap>            m_samplerHeap;
         ComPtr<ID3D12PipelineState>             m_pipelineState1;
         ComPtr<ID3D12PipelineState>             m_pipelineState2;
         ComPtr<ID3D12GraphicsCommandList>       m_commandList;

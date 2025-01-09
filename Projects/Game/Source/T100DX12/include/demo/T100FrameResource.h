@@ -1,8 +1,9 @@
 #ifndef T100FRAMERESOURCE_H
 #define T100FRAMERESOURCE_H
 
+#include <vector>
 #include <d3d12.h>
-#include "DirectXMath.h"
+#include "dx12/DirectXMath.h"
 #include "T100DX12Helper.h"
 
 using namespace DirectX;

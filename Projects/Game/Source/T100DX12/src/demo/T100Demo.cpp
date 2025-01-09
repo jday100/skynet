@@ -3,7 +3,7 @@
 #include "occcity.h"
 
 
-T100Demo::T100Demo(UINT widht, UINT height, std::wstring name) :
+T100Demo::T100Demo(UINT width, UINT height, std::wstring name) :
     T100DX12(width, height, name),
     m_frameIndex(0),
     m_viewport(0.0f, 0.0f, static_cast<float>(width), static_cast<float>(height)),
@@ -111,7 +111,7 @@ void T100Demo::LoadPipeline()
         dsvHeapDesc.Type                = D3D12_DESCRIPTOR_HEAP_TYPE_DSV;
         dsvHeapDesc.Flags               = D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
 
-        ThrowIfFailed(m_device->CreateDescriptorHeap(&dsvHeapDesc, IID_PPV_ARGS(m_dsvHeap)));
+        ThrowIfFailed(m_device->CreateDescriptorHeap(&dsvHeapDesc, IID_PPV_ARGS(&m_dsvHeap)));
 
         D3D12_DESCRIPTOR_HEAP_DESC      cbvSrvHeapDesc      = {};
 
@@ -124,11 +124,11 @@ void T100Demo::LoadPipeline()
 
         ThrowIfFailed(m_device->CreateDescriptorHeap(&cbvSrvHeapDesc, IID_PPV_ARGS(&m_cbvSrvHeap)));
 
-        D3D12_DESCRIPTOR_HEAP_DESC      sampleHeapDesc      = {};
+        D3D12_DESCRIPTOR_HEAP_DESC      samplerHeapDesc      = {};
 
-        sampleHeapDesc.NumDescriptors   = 1;
-        sampleHeapDesc.Type             = D3D12_DESCRIPTOR_HEAP_TYPE_SAMPLER;
-        sampleHeapDesc.Flags            = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
+        samplerHeapDesc.NumDescriptors  = 1;
+        samplerHeapDesc.Type            = D3D12_DESCRIPTOR_HEAP_TYPE_SAMPLER;
+        samplerHeapDesc.Flags           = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
 
         ThrowIfFailed(m_device->CreateDescriptorHeap(&samplerHeapDesc, IID_PPV_ARGS(&m_samplerHeap)));
 
@@ -511,7 +511,7 @@ void T100Demo::CreateFrameResources()
             {
                 D3D12_CONSTANT_BUFFER_VIEW_DESC         cbvDesc = {};
                 cbvDesc.BufferLocation      = pFrameResource->m_cbvUploadHeap->GetGPUVirtualAddress() + cbOffset;
-                cbvDesc.SizeInBytes         = sizeof(T100Resource::SceneConstantBuffer);
+                cbvDesc.SizeInBytes         = sizeof(T100FrameResource::SceneConstantBuffer);
                 cbOffset                    += cbvDesc.SizeInBytes;
                 m_device->CreateConstantBufferView(&cbvDesc, cbvSrvHandle);
                 cbvSrvHandle.Offset(m_cbvSrvDescriptorSize);
@@ -525,7 +525,7 @@ void T100Demo::CreateFrameResources()
     }
 }
 
-void T100Demo::PopulateCommandList(T100Resource* pFrameResource)
+void T100Demo::PopulateCommandList(T100FrameResource* pFrameResource)
 {
     ThrowIfFailed(m_pCurrentFrameResource->m_commandAllocator->Reset());
 
