@@ -15,6 +15,7 @@
 #include <wx/string.h>
 //*)
 
+#include <thread>
 #include <wx/dcclient.h>
 
 //helper functions
@@ -135,15 +136,12 @@ void T1003DEditorFrame::OnPaint(wxPaintEvent& event)
 {
     m_editor->Render();
 
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
     wxPaintDC       dc(this);
 
-    dc.SetPen(*wxWHITE_PEN);
-    dc.SetBrush(*wxWHITE_BRUSH);
-    dc.DrawLine(0, 0, 300, 300);
+    dc.DrawCircle(100, 100, 50);
 
-    wxClientDC      ddc(this);
-
-    ddc.DrawCircle(100, 100, 50);
 }
 
 void T1003DEditorFrame::OnEraseBackground(wxEraseEvent& event)
