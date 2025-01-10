@@ -36,5 +36,6 @@ T100VOID T1003DEditor::SetSize(UINT width, UINT height)
 
 T100VOID T1003DEditor::Render()
 {
+    m_dx12->Update();
     m_dx12->Render();
 }

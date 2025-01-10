@@ -24,6 +24,7 @@ class T100DX12
         virtual T100VOID            Start();
         virtual T100VOID            Stop();
 
+        virtual T100VOID            Update();
         virtual T100VOID            Render();
 
 
@@ -84,6 +85,10 @@ class T100DX12
         UINT                                        m_currentResourceIndex;
 
         T100VOID                                    LoadPipeline();
+        T100VOID                                    LoadResource();
+
+        T100VOID                                    CreateResources();
+        T100VOID                                    LoadFile(ComPtr<ID3D12Resource>&, ComPtr<ID3D12Resource>&, ComPtr<ID3D12Resource>&);
 
         T100VOID        PopulateCommandList(T100DX12Resource* pResource);
 
@@ -92,6 +97,9 @@ class T100DX12
                                            _Outptr_result_maybenull_ IDXGIAdapter1** ppAdapter,
                                            T100BOOL requestHighPerformanceAdapter = T100FALSE
                                            );
+
+        std::wstring                                m_assetsPath;
+        std::wstring                                GetAssetFullPath(LPCWSTR assetName);
 };
 
 #endif // T100DX12_H
