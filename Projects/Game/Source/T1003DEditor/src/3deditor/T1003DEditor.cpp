@@ -18,7 +18,7 @@ T1003DEditor::~T1003DEditor()
 
 T100VOID T1003DEditor::init()
 {
-    m_dx12  = T100NEW T100DX12Line();
+    m_dx12  = T100NEW T100DX12Renderer();
 }
 
 T100VOID T1003DEditor::uninit()
