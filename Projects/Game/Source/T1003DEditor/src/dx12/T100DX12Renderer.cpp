@@ -14,6 +14,11 @@ T100DX12Renderer::~T100DX12Renderer()
     //dtor
 }
 
+T100VOID T100DX12Renderer::Append(T100Entity* entity)
+{
+    m_entities.push_back(entity);
+}
+
 T100VOID T100DX12Renderer::LoadAssets()
 {
     WCHAR       assetsPath[512];
@@ -92,6 +97,33 @@ T100VOID T100DX12Renderer::LoadAssets()
                                               ));
 
     ThrowIfFailed(m_commandList->Close());
+
+    {
+        /*
+        Vertex*     triangleVertices;
+
+        Vertex      triangles[] =
+        {
+            { { 0.0f, 0.25f * m_aspectRatio, 0.0f }, { 1.0f, 0.0f, 0.0f, 1.0f } },
+            { { 0.25f, -0.25f * m_aspectRatio, 0.0f }, { 0.0f, 1.0f, 0.0f, 1.0f } },
+            { { -0.25f, -0.25f * m_aspectRatio, 0.0f }, { 0.0f, 0.0f, 1.0f, 1.0f } }
+        };
+
+
+
+        UINT vertexBufferSize     = sizeof(triangles);
+
+        if(m_entities.size() == 1){
+            triangleVertices    = m_entities[0]->vertex;
+            vertexBufferSize    = sizeof(m_entities[0]->vertex);
+        }else{
+            triangleVertices    = triangles;
+            vertexBufferSize    = sizeof(triangles);
+        }
+        */
+
+
+    }
 
     {
         Vertex      triangleVertices[] =

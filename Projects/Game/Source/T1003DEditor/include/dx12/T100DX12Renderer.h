@@ -3,6 +3,7 @@
 
 #include "d3d12/DirectXMath.h"
 #include "T100DX12Base.h"
+#include "T100Entity.h"
 
 using namespace DirectX;
 
@@ -12,19 +13,17 @@ class T100DX12Renderer : public T100DX12Base
         T100DX12Renderer();
         virtual ~T100DX12Renderer();
 
-    protected:
-        struct Vertex
-        {
-            XMFLOAT3 position;
-            XMFLOAT4 color;
-        };
+        T100VOID                            Append(T100Entity*);
 
+    protected:
         ComPtr<ID3D12RootSignature>         m_rootSignature;
         CD3DX12_VIEWPORT                    m_viewport;
         CD3DX12_RECT                        m_scissorRect;
 
         ComPtr<ID3D12Resource>              m_vertexBuffer;
         D3D12_VERTEX_BUFFER_VIEW            m_vertexBufferView;
+
+        T100DX12_ENTITY_VECTOR              m_entities;
 
     private:
         virtual T100VOID                    LoadAssets();

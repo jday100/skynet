@@ -18,6 +18,8 @@
 #include <thread>
 #include <wx/dcclient.h>
 
+#include "T100Triangle.h"
+
 //helper functions
 enum wxbuildinfoformat {
     short_f, long_f };
@@ -128,6 +130,10 @@ void T1003DEditorFrame::OnQuit(wxCommandEvent& event)
 
 void T1003DEditorFrame::OnAbout(wxCommandEvent& event)
 {
+    T100Triangle*   triangle    = T100NEW T100Triangle();
+
+    m_editor->Append(triangle);
+
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
 }

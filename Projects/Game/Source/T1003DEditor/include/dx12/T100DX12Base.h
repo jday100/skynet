@@ -9,6 +9,7 @@
 #include "d3d12/d3dx12.h"
 
 #include "T100Common.h"
+#include "T100Entity.h"
 
 using Microsoft::WRL::ComPtr;
 
@@ -23,6 +24,8 @@ class T100DX12Base
 
         virtual T100VOID                    Start();
         virtual T100VOID                    Stop();
+
+        virtual T100VOID                    Append(T100Entity*) = 0;
 
         virtual T100VOID                    Update();
         virtual T100VOID                    Render();

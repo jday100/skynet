@@ -12,6 +12,8 @@ class T1003DEditor
         virtual T100VOID            Create(HWND, UINT, UINT);
         virtual T100VOID            SetSize(UINT, UINT);
 
+        virtual T100VOID            Append(T100Entity*);
+
         virtual T100VOID            Render();
 
     protected:

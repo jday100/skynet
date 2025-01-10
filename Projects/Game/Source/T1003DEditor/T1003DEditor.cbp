@@ -22,6 +22,7 @@
 					<Add directory="include/3deditor" />
 					<Add directory="include/view" />
 					<Add directory="include/serve" />
+					<Add directory="include/entity" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -45,6 +46,7 @@
 					<Add directory="include/3deditor" />
 					<Add directory="include/view" />
 					<Add directory="include/serve" />
+					<Add directory="include/entity" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -85,6 +87,8 @@
 		<Unit filename="include/dx12/T100DX12Resource.h" />
 		<Unit filename="include/dx12/T100DX12Tools.h" />
 		<Unit filename="include/dx12/T100DX12Triangle.h" />
+		<Unit filename="include/entity/T100Entity.h" />
+		<Unit filename="include/entity/T100Triangle.h" />
 		<Unit filename="include/serve/T1003DEditorServe.h" />
 		<Unit filename="include/view/T1003DEditorView.h" />
 		<Unit filename="resource.rc">
@@ -98,6 +102,8 @@
 		<Unit filename="src/dx12/T100DX12Resource.cpp" />
 		<Unit filename="src/dx12/T100DX12Tools.cpp" />
 		<Unit filename="src/dx12/T100DX12Triangle.cpp" />
+		<Unit filename="src/entity/T100Entity.cpp" />
+		<Unit filename="src/entity/T100Triangle.cpp" />
 		<Unit filename="src/serve/T1003DEditorServe.cpp" />
 		<Unit filename="src/view/T1003DEditorView.cpp" />
 		<Unit filename="wxsmith/T1003DEditorframe.wxs" />
