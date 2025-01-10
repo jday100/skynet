@@ -35,6 +35,8 @@ T100VOID T100DX12::Start()
 
 
     LoadPipeline();
+    //LoadAssets();
+
     LoadResource();
 }
 
@@ -630,7 +632,32 @@ T100VOID T100DX12::LoadFile(ComPtr<ID3D12Resource>& vertexBufferUploadHeap, ComP
     }
 }
 
+
+T100VOID T100DX12::LoadFile1(ComPtr<ID3D12Resource>& vertexBufferUploadHeap, ComPtr<ID3D12Resource>& indexBufferUploadHeap, ComPtr<ID3D12Resource>& textureUploadHeap)
+{
+    ThrowIfFailed(m_device->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, m_commandAllocator.Get(), nullptr, IID_PPV_ARGS(&m_commandList)));
+
+}
+
 std::wstring T100DX12::GetAssetFullPath(LPCWSTR assetName)
 {
     return m_assetsPath + L"..\\..\\resources\\" + assetName;
+}
+
+T100VOID T100DX12::LoadAssets()
+{
+    ThrowIfFailed(m_device->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_DIRECT, m_commandAllocator.Get(), nullptr, IID_PPV_ARGS(&m_commandList)));
+
+    ThrowIfFailed(m_commandList->Close());
+
+    {
+        ThrowIfFailed(m_device->CreateFence(0, D3D12_FENCE_FLAG_NONE, IID_PPV_ARGS(&m_fence)));
+        m_fenceValue = 1;
+
+        m_fenceEvent = CreateEvent(nullptr, FALSE, FALSE, nullptr);
+        if (m_fenceEvent == nullptr)
+        {
+            ThrowIfFailed(HRESULT_FROM_WIN32(GetLastError()));
+        }
+    }
 }

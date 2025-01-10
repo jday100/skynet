@@ -85,10 +85,15 @@ class T100DX12
         UINT                                        m_currentResourceIndex;
 
         T100VOID                                    LoadPipeline();
+
+        T100VOID                                    LoadAssets();
+
         T100VOID                                    LoadResource();
 
         T100VOID                                    CreateResources();
         T100VOID                                    LoadFile(ComPtr<ID3D12Resource>&, ComPtr<ID3D12Resource>&, ComPtr<ID3D12Resource>&);
+
+        T100VOID                                    LoadFile1(ComPtr<ID3D12Resource>&, ComPtr<ID3D12Resource>&, ComPtr<ID3D12Resource>&);
 
         T100VOID        PopulateCommandList(T100DX12Resource* pResource);
 
