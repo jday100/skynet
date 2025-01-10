@@ -15,6 +15,8 @@
 #include <wx/string.h>
 //*)
 
+#include <wx/dcclient.h>
+
 //helper functions
 enum wxbuildinfoformat {
     short_f, long_f };
@@ -132,6 +134,16 @@ void T1003DEditorFrame::OnAbout(wxCommandEvent& event)
 void T1003DEditorFrame::OnPaint(wxPaintEvent& event)
 {
     m_editor->Render();
+
+    wxPaintDC       dc(this);
+
+    dc.SetPen(*wxWHITE_PEN);
+    dc.SetBrush(*wxWHITE_BRUSH);
+    dc.DrawLine(0, 0, 300, 300);
+
+    wxClientDC      ddc(this);
+
+    ddc.DrawCircle(100, 100, 50);
 }
 
 void T1003DEditorFrame::OnEraseBackground(wxEraseEvent& event)

@@ -1,5 +1,7 @@
 #include "T1003DEditor.h"
 
+#include "T100DX12Triangle.h"
+
 T1003DEditor::T1003DEditor()
 {
     //ctor
@@ -14,7 +16,7 @@ T1003DEditor::~T1003DEditor()
 
 T100VOID T1003DEditor::init()
 {
-    m_dx12  = T100NEW T100DX12Base();
+    m_dx12  = T100NEW T100DX12Triangle();
 }
 
 T100VOID T1003DEditor::uninit()
