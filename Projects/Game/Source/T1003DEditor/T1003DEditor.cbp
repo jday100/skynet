@@ -79,6 +79,7 @@
 		<Unit filename="include/3deditor/T1003DEditor.h" />
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/dx12/T100DX12.h" />
+		<Unit filename="include/dx12/T100DX12Base.h" />
 		<Unit filename="include/dx12/T100DX12Resource.h" />
 		<Unit filename="include/dx12/T100DX12Tools.h" />
 		<Unit filename="include/serve/T1003DEditorServe.h" />
@@ -88,6 +89,7 @@
 		</Unit>
 		<Unit filename="src/3deditor/T1003DEditor.cpp" />
 		<Unit filename="src/dx12/T100DX12.cpp" />
+		<Unit filename="src/dx12/T100DX12Base.cpp" />
 		<Unit filename="src/dx12/T100DX12Resource.cpp" />
 		<Unit filename="src/dx12/T100DX12Tools.cpp" />
 		<Unit filename="src/serve/T1003DEditorServe.cpp" />
