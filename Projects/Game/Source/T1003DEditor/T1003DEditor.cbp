@@ -87,6 +87,7 @@
 		<Unit filename="include/dx12/T100DX12Resource.h" />
 		<Unit filename="include/dx12/T100DX12Tools.h" />
 		<Unit filename="include/dx12/T100DX12Triangle.h" />
+		<Unit filename="include/entity/T100Dot.h" />
 		<Unit filename="include/entity/T100Entity.h" />
 		<Unit filename="include/entity/T100Triangle.h" />
 		<Unit filename="include/serve/T1003DEditorServe.h" />
@@ -105,6 +106,7 @@
 		<Unit filename="src/dx12/T100DX12Resource.cpp" />
 		<Unit filename="src/dx12/T100DX12Tools.cpp" />
 		<Unit filename="src/dx12/T100DX12Triangle.cpp" />
+		<Unit filename="src/entity/T100Dot.cpp" />
 		<Unit filename="src/entity/T100Entity.cpp" />
 		<Unit filename="src/entity/T100Triangle.cpp" />
 		<Unit filename="src/serve/T1003DEditorServe.cpp" />

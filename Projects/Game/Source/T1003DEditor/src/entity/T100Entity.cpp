@@ -9,3 +9,8 @@ T100Entity::~T100Entity()
 {
     //dtor
 }
+
+T100VOID T100Entity::load()
+{
+
+}

@@ -20,6 +20,8 @@
 
 #include "T100Triangle.h"
 #include "T1003DEditorMainPanel.h"
+#include "T1003DEditorView.h"
+#include "T1003DEditor.h"
 
 //helper functions
 enum wxbuildinfoformat {

@@ -17,8 +17,8 @@
 //*)
 
 #include "T100Common.h"
-#include "T1003DEditor.h"
-#include "T1003DEditorView.h"
+class T1003DEditor;
+class T1003DEditorView;
 
 class T1003DEditorFrame: public wxFrame
 {

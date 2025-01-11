@@ -23,6 +23,10 @@ class T100Entity
 
         Vertex*         vertex          = T100NULL;
 
+        T100UINT        size            = 0;
+
+        virtual T100VOID            load();
+
     protected:
 
 

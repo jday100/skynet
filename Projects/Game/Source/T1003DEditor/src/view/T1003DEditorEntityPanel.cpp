@@ -1,5 +1,6 @@
 #include "T1003DEditorEntityPanel.h"
 
+#include "T1003DEditorView.h"
 #include "T1003DEditorPropertiesPanel.h"
 
 BEGIN_EVENT_TABLE(T1003DEditorEntityPanel, wxPanel)

@@ -6,7 +6,8 @@
 #include <wx/notebook.h>
 #include <wx/listctrl.h>
 #include "T100Common.h"
-#include "T1003DEditorView.h"
+
+class T1003DEditorView;
 
 class T1003DEditorEntityPanel : public wxPanel
 {
