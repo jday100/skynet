@@ -17,6 +17,9 @@ class T1003DEditorPropertiesPanel : public wxPropertyGrid
         T100VOID                    update(T100UINT);
 
     protected:
+        T100VOID                    load_dot();
+        T100VOID                    load_line();
+        T100VOID                    load_triangle();
 
     private:
         DECLARE_EVENT_TABLE()
