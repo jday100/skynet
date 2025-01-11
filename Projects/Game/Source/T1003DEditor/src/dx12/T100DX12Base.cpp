@@ -46,8 +46,8 @@ T100VOID T100DX12Base::Render()
 {
     PopulateCommandList();
 
-     ID3D12CommandList* ppCommandLists[] = { m_commandList.Get() };
-     m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
+    ID3D12CommandList* ppCommandLists[] = { m_commandList.Get() };
+    m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
 
     ThrowIfFailed(m_swapChain->Present(1, 0));
 
