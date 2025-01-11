@@ -25,6 +25,8 @@ class T1003DEditorEntityPanel : public wxPanel
         T100VOID                    create();
         T100VOID                    destroy();
 
+        void    OnSelected(wxListEvent& event);
+
         DECLARE_EVENT_TABLE()
 };
 
