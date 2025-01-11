@@ -6,6 +6,7 @@
 #include <wx/notebook.h>
 #include <wx/listctrl.h>
 #include "T100Common.h"
+#include "T1003DEditorView.h"
 
 class T1003DEditorEntityPanel : public wxPanel
 {
@@ -18,8 +19,11 @@ class T1003DEditorEntityPanel : public wxPanel
                 const wxString& name = wxPanelNameStr);
         virtual ~T1003DEditorEntityPanel();
 
+        T100VOID                    setView(T1003DEditorView*);
+
     protected:
         wxNotebook*                 m_notebook          = T100NULL;
+        T1003DEditorView*           m_view              = T100NULL;
 
     private:
         T100VOID                    create();

@@ -24,6 +24,7 @@ T100VOID T1003DEditorView::create()
     m_properties_panel  = T100NEW T1003DEditorPropertiesPanel((wxWindow*)m_frame);
     m_main              = T100NEW T1003DEditorMainPanel((wxWindow*)m_frame);
 
+    m_entity_panel->setView(this);
 
     m_manager->AddPane(m_entity_panel, wxAuiPaneInfo().BestSize(300, -1));
     m_manager->AddPane(m_properties_panel, wxAuiPaneInfo().BestSize(300, -1));
@@ -48,7 +49,17 @@ T100VOID T1003DEditorView::setEditor(T1003DEditor* editor)
     m_main->setEditor(editor);
 }
 
-wxPanel* T1003DEditorView::getPanel()
+T1003DEditorMainPanel* T1003DEditorView::getMainPanel()
 {
     return m_main;
+}
+
+T1003DEditorEntityPanel* T1003DEditorView::getEntityPanel()
+{
+    return m_entity_panel;
+}
+
+T1003DEditorPropertiesPanel* T1003DEditorView::getPropertiesPanel()
+{
+    return m_properties_panel;
 }

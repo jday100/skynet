@@ -18,7 +18,9 @@ class T1003DEditorView
         virtual ~T1003DEditorView();
 
         T100VOID                            setEditor(T1003DEditor*);
-        wxPanel*                            getPanel();
+        T1003DEditorMainPanel*              getMainPanel();
+        T1003DEditorEntityPanel*            getEntityPanel();
+        T1003DEditorPropertiesPanel*        getPropertiesPanel();
 
     protected:
         wxAuiManager*                       m_manager           = T100NULL;

@@ -2,6 +2,7 @@
 #define T1003DEDITORPROPERTIESPANEL_H
 
 #include <wx/propgrid/propgrid.h>
+#include "T100Common.h"
 
 class T1003DEditorPropertiesPanel : public wxPropertyGrid
 {
@@ -12,6 +13,8 @@ class T1003DEditorPropertiesPanel : public wxPropertyGrid
                     long style = wxPG_DEFAULT_STYLE,
                     const wxString& name = wxPropertyGridNameStr);
         virtual ~T1003DEditorPropertiesPanel();
+
+        T100VOID                    update(T100UINT);
 
     protected:
 

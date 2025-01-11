@@ -1,5 +1,7 @@
 #include "T1003DEditorEntityPanel.h"
 
+#include "T1003DEditorPropertiesPanel.h"
+
 BEGIN_EVENT_TABLE(T1003DEditorEntityPanel, wxPanel)
 
 END_EVENT_TABLE()
@@ -51,7 +53,7 @@ T100VOID T1003DEditorEntityPanel::create()
     listCtrl->InsertItem(0, wxT("line"));
     listCtrl->InsertItem(0, wxT("triangle"));
 
-    listCtrl->Connect(wxEVT_COMMAND_LIST_ITEM_SELECTED, (wxObjectEventFunction)&T1003DEditorEntityPanel::OnSelected);
+    listCtrl->Connect(wxEVT_COMMAND_LIST_ITEM_SELECTED, (wxObjectEventFunction)&T1003DEditorEntityPanel::OnSelected, T100NULL, this);
 }
 
 T100VOID T1003DEditorEntityPanel::destroy()
@@ -59,7 +61,12 @@ T100VOID T1003DEditorEntityPanel::destroy()
 
 }
 
+T100VOID T1003DEditorEntityPanel::setView(T1003DEditorView* view)
+{
+    m_view  = view;
+}
+
 void T1003DEditorEntityPanel::OnSelected(wxListEvent& event)
 {
-
+    m_view->getPropertiesPanel()->update(1);
 }

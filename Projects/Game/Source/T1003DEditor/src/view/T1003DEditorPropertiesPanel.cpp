@@ -18,3 +18,12 @@ T1003DEditorPropertiesPanel::~T1003DEditorPropertiesPanel()
 {
     //dtor
 }
+
+T100VOID T1003DEditorPropertiesPanel::update(T100UINT id)
+{
+    Clear();
+
+    wxStringProperty* name = T100NEW wxStringProperty();
+
+    this->Append(name);
+}

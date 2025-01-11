@@ -19,6 +19,7 @@
 #include <wx/dcclient.h>
 
 #include "T100Triangle.h"
+#include "T1003DEditorMainPanel.h"
 
 //helper functions
 enum wxbuildinfoformat {
@@ -119,9 +120,9 @@ T100VOID T1003DEditorFrame::create()
     m_view->setEditor(m_editor);
 
     m_editor->Create(
-                     m_view->getPanel()->GetHWND(),
-                     m_view->getPanel()->GetClientSize().GetWidth(),
-                     m_view->getPanel()->GetClientSize().GetHeight()
+                     m_view->getMainPanel()->GetHWND(),
+                     m_view->getMainPanel()->GetClientSize().GetWidth(),
+                     m_view->getMainPanel()->GetClientSize().GetHeight()
                      );
 }
 
