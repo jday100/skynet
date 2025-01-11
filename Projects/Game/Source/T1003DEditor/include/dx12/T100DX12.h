@@ -62,23 +62,6 @@ class T100DX12
         ComPtr<ID3D12Fence>                     m_fence;
         UINT64                                  m_fenceValue;
 
-    private:
-        T100BOOL                                m_useWarpDevice;
-
-        T100VOID                                LoadPipeline();
-        T100VOID                                LoadAssets();
-        T100VOID                                LoadEntities();
-        T100VOID                                LoadEntity(T100Entity*);
-
-        T100VOID                                PopulateCommandList();
-        T100VOID                                WaitForPreviousFrame();
-
-        T100VOID        GetHardwareAdapter(
-                                           _In_ IDXGIFactory1* pFactory,
-                                           _Outptr_result_maybenull_ IDXGIAdapter1** ppAdapter,
-                                           T100BOOL requestHighPerformanceAdapter = T100FALSE
-                                           );
-
         ComPtr<ID3D12RootSignature>             m_rootSignature;
         CD3DX12_VIEWPORT                        m_viewport;
         CD3DX12_RECT                            m_scissorRect;
@@ -89,6 +72,26 @@ class T100DX12
         float                                   m_aspectRatio;
         std::wstring                            m_assetsPath;
         std::wstring                            GetAssetFullPath(LPCWSTR assetName);
+        T100VOID                                WaitForPreviousFrame();
+
+    private:
+        T100BOOL                                m_useWarpDevice;
+
+        T100VOID                                LoadPipeline();
+        virtual T100VOID                        LoadAssets();
+        virtual T100VOID                        LoadEntities();
+        virtual T100VOID                        LoadEntity(T100Entity*);
+
+        virtual T100VOID                        PopulateCommandList();
+
+
+        T100VOID        GetHardwareAdapter(
+                                           _In_ IDXGIFactory1* pFactory,
+                                           _Outptr_result_maybenull_ IDXGIAdapter1** ppAdapter,
+                                           T100BOOL requestHighPerformanceAdapter = T100FALSE
+                                           );
+
+
 };
 
 #endif // T100DX12_H

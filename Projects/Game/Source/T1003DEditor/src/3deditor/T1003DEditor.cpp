@@ -1,6 +1,7 @@
 #include "T1003DEditor.h"
 
 #include "T100DX12.h"
+#include "T100DX12Editor.h"
 #include "T100DX12Line.h"
 #include "T100DX12Triangle.h"
 #include "T100DX12Renderer.h"
@@ -19,7 +20,7 @@ T1003DEditor::~T1003DEditor()
 
 T100VOID T1003DEditor::init()
 {
-    m_dx12  = T100NEW T100DX12();
+    m_dx12  = T100NEW T100DX12Editor();
 }
 
 T100VOID T1003DEditor::uninit()
