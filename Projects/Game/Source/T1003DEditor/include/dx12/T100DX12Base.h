@@ -1,6 +1,7 @@
 #ifndef T100DX12BASE_H
 #define T100DX12BASE_H
 
+#include <vector>
 #include <windows.h>
 
 #include <d3d12.h>
