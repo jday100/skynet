@@ -92,6 +92,7 @@
 		<Unit filename="include/serve/T1003DEditorServe.h" />
 		<Unit filename="include/view/T1003DEditorEntityPanel.h" />
 		<Unit filename="include/view/T1003DEditorMainPanel.h" />
+		<Unit filename="include/view/T1003DEditorPropertiesPanel.h" />
 		<Unit filename="include/view/T1003DEditorView.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
@@ -109,6 +110,7 @@
 		<Unit filename="src/serve/T1003DEditorServe.cpp" />
 		<Unit filename="src/view/T1003DEditorEntityPanel.cpp" />
 		<Unit filename="src/view/T1003DEditorMainPanel.cpp" />
+		<Unit filename="src/view/T1003DEditorPropertiesPanel.cpp" />
 		<Unit filename="src/view/T1003DEditorView.cpp" />
 		<Unit filename="wxsmith/T1003DEditorframe.wxs" />
 		<Extensions>

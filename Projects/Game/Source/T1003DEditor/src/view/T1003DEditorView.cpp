@@ -2,6 +2,7 @@
 
 #include "T1003DEditorMainPanel.h"
 #include "T1003DEditorEntityPanel.h"
+#include "T1003DEditorPropertiesPanel.h"
 
 T1003DEditorView::T1003DEditorView(T1003DEditorFrame* frame)
     :m_frame(frame)
@@ -18,11 +19,14 @@ T1003DEditorView::~T1003DEditorView()
 
 T100VOID T1003DEditorView::create()
 {
-    m_manager       = T100NEW wxAuiManager((wxWindow*)m_frame);
-    m_entity_panel  = T100NEW T1003DEditorEntityPanel((wxWindow*)m_frame);
-    m_main          = T100NEW T1003DEditorMainPanel((wxWindow*)m_frame);
+    m_manager           = T100NEW wxAuiManager((wxWindow*)m_frame);
+    m_entity_panel      = T100NEW T1003DEditorEntityPanel((wxWindow*)m_frame);
+    m_properties_panel  = T100NEW T1003DEditorPropertiesPanel((wxWindow*)m_frame);
+    m_main              = T100NEW T1003DEditorMainPanel((wxWindow*)m_frame);
+
 
     m_manager->AddPane(m_entity_panel, wxAuiPaneInfo().BestSize(300, -1));
+    m_manager->AddPane(m_properties_panel, wxAuiPaneInfo().BestSize(300, -1));
     m_manager->AddPane(m_main, wxAuiPaneInfo().CloseButton(T100FALSE).Center());
 
 

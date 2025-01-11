@@ -9,6 +9,7 @@ class T1003DEditor;
 class T1003DEditorFrame;
 class T1003DEditorMainPanel;
 class T1003DEditorEntityPanel;
+class T1003DEditorPropertiesPanel;
 
 class T1003DEditorView
 {
@@ -25,6 +26,7 @@ class T1003DEditorView
         T1003DEditorFrame*                  m_frame             = T100NULL;
         T1003DEditorMainPanel*              m_main              = T100NULL;
         T1003DEditorEntityPanel*            m_entity_panel      = T100NULL;
+        T1003DEditorPropertiesPanel*        m_properties_panel  = T100NULL;
 
     private:
         T100VOID                            create();
