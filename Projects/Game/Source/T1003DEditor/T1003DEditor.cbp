@@ -90,6 +90,8 @@
 		<Unit filename="include/entity/T100Entity.h" />
 		<Unit filename="include/entity/T100Triangle.h" />
 		<Unit filename="include/serve/T1003DEditorServe.h" />
+		<Unit filename="include/view/T1003DEditorEntityPanel.h" />
+		<Unit filename="include/view/T1003DEditorMainPanel.h" />
 		<Unit filename="include/view/T1003DEditorView.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
@@ -105,6 +107,8 @@
 		<Unit filename="src/entity/T100Entity.cpp" />
 		<Unit filename="src/entity/T100Triangle.cpp" />
 		<Unit filename="src/serve/T1003DEditorServe.cpp" />
+		<Unit filename="src/view/T1003DEditorEntityPanel.cpp" />
+		<Unit filename="src/view/T1003DEditorMainPanel.cpp" />
 		<Unit filename="src/view/T1003DEditorView.cpp" />
 		<Unit filename="wxsmith/T1003DEditorframe.wxs" />
 		<Extensions>

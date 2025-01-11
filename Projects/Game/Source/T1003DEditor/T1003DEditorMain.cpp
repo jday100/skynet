@@ -114,13 +114,21 @@ T100VOID T1003DEditorFrame::create()
     Maximize();
 
     m_editor    = T100NEW T1003DEditor();
+    m_view      = T100NEW T1003DEditorView(this);
 
-    m_editor->Create(GetHWND(), GetClientSize().GetWidth(), GetClientSize().GetHeight());
+    m_view->setEditor(m_editor);
+
+    m_editor->Create(
+                     m_view->getPanel()->GetHWND(),
+                     m_view->getPanel()->GetClientSize().GetWidth(),
+                     m_view->getPanel()->GetClientSize().GetHeight()
+                     );
 }
 
 T100VOID T1003DEditorFrame::destroy()
 {
-
+    T100SAFE_DELETE m_view;
+    T100SAFE_DELETE m_editor;
 }
 
 void T1003DEditorFrame::OnQuit(wxCommandEvent& event)

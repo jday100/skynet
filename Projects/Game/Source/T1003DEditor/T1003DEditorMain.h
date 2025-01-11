@@ -18,6 +18,7 @@
 
 #include "T100Common.h"
 #include "T1003DEditor.h"
+#include "T1003DEditorView.h"
 
 class T1003DEditorFrame: public wxFrame
 {
@@ -28,6 +29,7 @@ class T1003DEditorFrame: public wxFrame
 
     private:
         T1003DEditor*           m_editor            = T100NULL;
+        T1003DEditorView*       m_view              = T100NULL;
 
         //(*Handlers(T1003DEditorFrame)
         void OnQuit(wxCommandEvent& event);
