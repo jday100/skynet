@@ -54,6 +54,7 @@ class T100DX12
         ComPtr<ID3D12PipelineState>             m_pipelineState;
 
         T100DX12_COMMANDLIST_VECTOR             m_commandLists;
+        ComPtr<ID3D12GraphicsCommandList>       m_commandList;
 
         ComPtr<ID3D12Resource>                  m_renderTargets[m_frameCount];
         UINT                                    m_frameIndex;
@@ -77,6 +78,17 @@ class T100DX12
                                            _Outptr_result_maybenull_ IDXGIAdapter1** ppAdapter,
                                            T100BOOL requestHighPerformanceAdapter = T100FALSE
                                            );
+
+        ComPtr<ID3D12RootSignature>             m_rootSignature;
+        CD3DX12_VIEWPORT                        m_viewport;
+        CD3DX12_RECT                            m_scissorRect;
+
+        ComPtr<ID3D12Resource>                  m_vertexBuffer;
+        D3D12_VERTEX_BUFFER_VIEW                m_vertexBufferView;
+
+        float                                   m_aspectRatio;
+        std::wstring                            m_assetsPath;
+        std::wstring                            GetAssetFullPath(LPCWSTR assetName);
 };
 
 #endif // T100DX12_H

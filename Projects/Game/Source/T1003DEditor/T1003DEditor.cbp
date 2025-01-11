@@ -80,6 +80,11 @@
 		<Unit filename="T1003DEditorMain.h" />
 		<Unit filename="include/3deditor/T1003DEditor.h" />
 		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/d3d12/DirectXCollision.h" />
+		<Unit filename="include/d3d12/DirectXColors.h" />
+		<Unit filename="include/d3d12/DirectXMath.h" />
+		<Unit filename="include/d3d12/DirectXPackedVector.h" />
+		<Unit filename="include/d3d12/d3dx12.h" />
 		<Unit filename="include/dx12/T100DX12.h" />
 		<Unit filename="include/dx12/T100DX12Base.h" />
 		<Unit filename="include/dx12/T100DX12Line.h" />
@@ -90,6 +95,8 @@
 		<Unit filename="include/entity/T100Dot.h" />
 		<Unit filename="include/entity/T100Entity.h" />
 		<Unit filename="include/entity/T100Triangle.h" />
+		<Unit filename="include/occcity.h" />
+		<Unit filename="include/serve/T1003DEditorEntityManager.h" />
 		<Unit filename="include/serve/T1003DEditorServe.h" />
 		<Unit filename="include/view/T1003DEditorEntityPanel.h" />
 		<Unit filename="include/view/T1003DEditorMainPanel.h" />
@@ -109,6 +116,7 @@
 		<Unit filename="src/entity/T100Dot.cpp" />
 		<Unit filename="src/entity/T100Entity.cpp" />
 		<Unit filename="src/entity/T100Triangle.cpp" />
+		<Unit filename="src/serve/T1003DEditorEntityManager.cpp" />
 		<Unit filename="src/serve/T1003DEditorServe.cpp" />
 		<Unit filename="src/view/T1003DEditorEntityPanel.cpp" />
 		<Unit filename="src/view/T1003DEditorMainPanel.cpp" />

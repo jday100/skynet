@@ -54,6 +54,8 @@ void T1003DEditorMainPanel::OnPaint(wxPaintEvent& event)
 {
     m_editor->Render();
 
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
     if(m_drawLine){
         wxPaintDC       dc(this);
         DrawLine(dc);
@@ -80,9 +82,11 @@ T100VOID T1003DEditorMainPanel::DrawLine(wxDC& dc)
 
     memory.Blit(wxPoint(0, 0), wxSize(m_width, m_height), &dc, wxPoint(0, 0));
 
+    //m_bitmap->SaveFile(wxT("screen1.bmp"), wxBITMAP_TYPE_BMP);
+
     memory.DrawCircle(100, 100, 50);
 
     dc.Blit(wxPoint(0, 0), wxSize(m_width, m_height), &memory, wxPoint(0, 0));
 
-    m_bitmap->SaveFile(wxT("screen.bmp"), wxBITMAP_TYPE_BMP);
+    //m_bitmap->SaveFile(wxT("screen2.bmp"), wxBITMAP_TYPE_BMP);
 }

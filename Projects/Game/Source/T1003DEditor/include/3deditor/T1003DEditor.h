@@ -1,7 +1,7 @@
 #ifndef T1003DEDITOR_H
 #define T1003DEDITOR_H
 
-#include "T100DX12Base.h"
+#include "T100DX12.h"
 
 class T1003DEditor
 {
@@ -17,7 +17,7 @@ class T1003DEditor
         virtual T100VOID            Render();
 
     protected:
-        T100DX12Base*               m_dx12          = T100NULL;
+        T100DX12*                   m_dx12          = T100NULL;
 
     private:
         T100VOID                    init();
