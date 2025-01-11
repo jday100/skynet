@@ -3,6 +3,9 @@
 #include <d3dcompiler.h>
 #include "T100DX12Tools.h"
 
+//test
+#include "T100Triangle.h"
+
 T100DX12Editor::T100DX12Editor()
     :T100DX12()
 {
@@ -28,6 +31,9 @@ T100VOID T100DX12Editor::Render()
 
 T100VOID T100DX12Editor::Append(T100Entity* entity)
 {
+    //test
+    entity  = T100NEW T100Triangle();
+
     m_entities.push_back(entity);
 }
 
@@ -62,14 +68,33 @@ T100VOID T100DX12Editor::LoadAssets()
                                                     ));
     }
 
+    //T100Triangle*       triangle            = (T100Triangle*)m_entities[0];
+    T100Triangle*           triangle        = T100NEW T100Triangle();
+
     {
         ComPtr<ID3DBlob>            vertexShader;
         ComPtr<ID3DBlob>            pixelShader;
 
         UINT        compileFlags    = 0;
 
-        ThrowIfFailed(D3DCompileFromFile(GetAssetFullPath(L"shaders.hlsl").c_str(), T100NULL, T100NULL, "VSMain", "vs_5_0", compileFlags, 0, &vertexShader, T100NULL));
-        ThrowIfFailed(D3DCompileFromFile(GetAssetFullPath(L"shaders.hlsl").c_str(), T100NULL, T100NULL, "PSMain", "ps_5_0", compileFlags, 0, &pixelShader, T100NULL));
+        //ThrowIfFailed(D3DCompileFromFile(GetAssetFullPath(L"shaders.hlsl").c_str(), T100NULL, T100NULL, "VSMain", "vs_5_0", compileFlags, 0, &vertexShader, T100NULL));
+        //ThrowIfFailed(D3DCompileFromFile(GetAssetFullPath(L"shaders.hlsl").c_str(), T100NULL, T100NULL, "PSMain", "ps_5_0", compileFlags, 0, &pixelShader, T100NULL));
+
+
+
+
+        ThrowIfFailed(D3DCompileFromFile(
+                                         GetAssetFullPath(triangle->file.c_str()).c_str(),
+                                         T100NULL, T100NULL,
+                                         triangle->vertexName.c_str(),
+                                         triangle->vertexID.c_str(),
+                                         compileFlags, 0, &vertexShader, T100NULL));
+        ThrowIfFailed(D3DCompileFromFile(
+                                         GetAssetFullPath(triangle->file.c_str()).c_str(),
+                                         T100NULL, T100NULL,
+                                         triangle->pixelName.c_str(),
+                                         triangle->pixelID.c_str(),
+                                         compileFlags, 0, &pixelShader, T100NULL));
 
         D3D12_INPUT_ELEMENT_DESC        inputElementDescs[] =
         {
@@ -111,6 +136,7 @@ T100VOID T100DX12Editor::LoadAssets()
     ThrowIfFailed(m_commandList->Close());
 
     {
+        /*
         Vertex      triangleVertices[] =
         {
             { { 0.0f, 0.25f * m_aspectRatio, 0.0f }, { 1.0f, 0.0f, 0.0f, 1.0f } },
@@ -119,6 +145,10 @@ T100VOID T100DX12Editor::LoadAssets()
         };
 
         const UINT vertexBufferSize     = sizeof(triangleVertices);
+        */
+
+        Vertex*     triangleVertices    = triangle->triangleVertices;
+        const UINT  vertexBufferSize    = triangle->Size();
 
         CD3DX12_HEAP_PROPERTIES         uploadHeap(D3D12_HEAP_TYPE_UPLOAD);
         CD3DX12_RESOURCE_DESC           resourceDesc = CD3DX12_RESOURCE_DESC::Buffer(vertexBufferSize);
@@ -140,7 +170,8 @@ T100VOID T100DX12Editor::LoadAssets()
                                           &readRange,
                                           reinterpret_cast<void**>(&pVertexDataBegin)
                                           ));
-        memcpy(pVertexDataBegin, triangleVertices, sizeof(triangleVertices));
+        //memcpy(pVertexDataBegin, triangleVertices, sizeof(triangleVertices));
+        memcpy(pVertexDataBegin, triangleVertices, vertexBufferSize);
         m_vertexBuffer->Unmap(0, T100NULL);
 
         m_vertexBufferView.BufferLocation   = m_vertexBuffer->GetGPUVirtualAddress();

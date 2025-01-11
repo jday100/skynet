@@ -15,6 +15,15 @@ class T100Triangle : public T100Entity
             { { 0.25f, -0.25f, 0.0f }, { 0.0f, 1.0f, 0.0f, 1.0f } },
             { { -0.25f, -0.25f, 0.0f }, { 0.0f, 0.0f, 1.0f, 1.0f } }
         };
+        T100WSTRING         file            = L"shaders.hlsl";
+        std::string         vertexName      = "VSMain";
+        std::string         vertexID        = "vs_5_0";
+        std::string         pixelName       = "PSMain";
+        std::string         pixelID         = "ps_5_0";
+
+        T100UINT            Size(){
+                                return sizeof(triangleVertices);
+                            }
 
     protected:
 
