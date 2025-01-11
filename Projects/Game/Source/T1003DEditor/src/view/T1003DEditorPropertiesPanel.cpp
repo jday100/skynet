@@ -36,16 +36,24 @@ T100VOID T1003DEditorPropertiesPanel::load_dot()
 {
     Clear();
 
-    wxIntProperty*      row         = T100NEW wxIntProperty(wxT("Row"), wxT("row"), 1);
-    wxIntProperty*      column      = T100NEW wxIntProperty(wxT("Column"), wxT("column"), 1);
+    wxIntProperty*          row             = T100NEW wxIntProperty(wxT("Row"), wxT("row"), 1);
+    wxIntProperty*          column          = T100NEW wxIntProperty(wxT("Column"), wxT("column"), 1);
+    wxPropertyCategory*     category        = T100NEW wxPropertyCategory(wxT("Position"));
+    wxFloatProperty*        x               = T100NEW wxFloatProperty(wxT("X"), wxT("x"));
+    wxFloatProperty*        y               = T100NEW wxFloatProperty(wxT("Y"), wxT("y"));
+    wxFloatProperty*        z               = T100NEW wxFloatProperty(wxT("Z"), wxT("z"));
 
-    wxColourProperty*   colour      = T100NEW wxColourProperty(wxT("Colour"), wxT("colour"));
-    wxFileProperty*     file        = T100NEW wxFileProperty(wxT("File"), wxT("file"));
+    wxColourProperty*       colour          = T100NEW wxColourProperty(wxT("Colour"), wxT("colour"));
+    wxFileProperty*         file            = T100NEW wxFileProperty(wxT("File"), wxT("file"));
 
     this->Append(row);
     this->Append(column);
     this->Append(colour);
     this->Append(file);
+    this->Append(category);
+    this->Append(x);
+    this->Append(y);
+    this->Append(z);
 }
 
 T100VOID T1003DEditorPropertiesPanel::load_line()
