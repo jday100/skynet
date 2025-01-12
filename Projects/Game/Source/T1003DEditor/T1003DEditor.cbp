@@ -88,6 +88,7 @@
 		<Unit filename="include/dx12/T100DX12.h" />
 		<Unit filename="include/dx12/T100DX12Base.h" />
 		<Unit filename="include/dx12/T100DX12Editor.h" />
+		<Unit filename="include/dx12/T100DX12Entities.h" />
 		<Unit filename="include/dx12/T100DX12Line.h" />
 		<Unit filename="include/dx12/T100DX12Renderer.h" />
 		<Unit filename="include/dx12/T100DX12Resource.h" />
@@ -110,6 +111,7 @@
 		<Unit filename="src/dx12/T100DX12.cpp" />
 		<Unit filename="src/dx12/T100DX12Base.cpp" />
 		<Unit filename="src/dx12/T100DX12Editor.cpp" />
+		<Unit filename="src/dx12/T100DX12Entities.cpp" />
 		<Unit filename="src/dx12/T100DX12Line.cpp" />
 		<Unit filename="src/dx12/T100DX12Renderer.cpp" />
 		<Unit filename="src/dx12/T100DX12Resource.cpp" />
