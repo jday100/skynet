@@ -71,6 +71,8 @@ void T1003DEditorMainPanel::OnLeftDown(wxMouseEvent& event)
     m_view->getEditor()->Append(m_view->getEntity());
 
     m_drawLine  = T100TRUE;
+
+    Refresh();
 }
 
 void T1003DEditorMainPanel::OnLeftUp(wxMouseEvent& event)
