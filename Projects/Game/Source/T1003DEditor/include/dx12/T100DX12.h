@@ -13,7 +13,7 @@
 
 using Microsoft::WRL::ComPtr;
 
-#define     T100DX12_COMMANDLIST_VECTOR         std::vector<ID3D12GraphicsCommandList*>
+#define     T100DX12_COMMANDLIST_VECTOR         std::vector<ComPtr<ID3D12GraphicsCommandList>>
 
 class T100DX12
 {
