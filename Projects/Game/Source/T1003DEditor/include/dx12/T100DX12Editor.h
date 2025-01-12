@@ -9,6 +9,8 @@ class T100DX12Editor : public T100DX12
         T100DX12Editor();
         virtual ~T100DX12Editor();
 
+        virtual T100VOID                    Start();
+        virtual T100VOID                    Update();
         virtual T100VOID                    Render();
 
         virtual T100VOID                    Append(T100Entity*);
@@ -21,6 +23,12 @@ class T100DX12Editor : public T100DX12
         virtual T100VOID                    LoadEntity(T100Entity*);
 
         virtual T100VOID                    PopulateCommandList();
+
+
+        virtual T100VOID                    LoadAssetsEmpty();
+        virtual T100VOID                    PopulateCommandListEmpty();
+
+
 };
 
 #endif // T100DX12EDITOR_H

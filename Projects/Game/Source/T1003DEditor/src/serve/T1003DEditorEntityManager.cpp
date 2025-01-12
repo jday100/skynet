@@ -1,6 +1,6 @@
 #include "T1003DEditorEntityManager.h"
 
-#include "T100Dot.h"
+#include "T100Triangle.h"
 
 T1003DEditorEntityManager::T1003DEditorEntityManager()
 {
@@ -14,11 +14,9 @@ T1003DEditorEntityManager::~T1003DEditorEntityManager()
 
 T100Entity* T1003DEditorEntityManager::getCurrent()
 {
-    T100Dot*        dot     = T100NEW T100Dot();
+    T100Entity*         entity          = T100NULL;
 
-    dot->row        = 1;
-    dot->column     = 1;
-    dot->load();
+    entity  = T100NEW T100Triangle();
 
-    return dot;
+    return entity;
 }

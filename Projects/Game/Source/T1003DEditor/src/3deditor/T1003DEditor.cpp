@@ -47,6 +47,7 @@ T100VOID T1003DEditor::SetSize(UINT width, UINT height)
 T100VOID T1003DEditor::Append(T100Entity* entity)
 {
     m_dx12->Append(entity);
+    m_dx12->Update();
 }
 
 T100VOID T1003DEditor::Render()

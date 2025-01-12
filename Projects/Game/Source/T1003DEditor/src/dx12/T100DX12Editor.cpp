@@ -17,9 +17,35 @@ T100DX12Editor::~T100DX12Editor()
     //dtor
 }
 
+T100VOID T100DX12Editor::Start()
+{
+    LoadPipeline();
+
+    if(0 == m_entities.size())
+    {
+        LoadAssetsEmpty();
+    }
+    else
+    {
+        LoadAssets();
+    }
+}
+
+T100VOID T100DX12Editor::Update()
+{
+    LoadAssets();
+}
+
 T100VOID T100DX12Editor::Render()
 {
-    PopulateCommandList();
+    if(0 == m_entities.size())
+    {
+        PopulateCommandListEmpty();
+    }
+    else
+    {
+        PopulateCommandList();
+    }
 
     ID3D12CommandList* ppCommandLists[] = { m_commandList.Get() };
     m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
@@ -32,7 +58,7 @@ T100VOID T100DX12Editor::Render()
 T100VOID T100DX12Editor::Append(T100Entity* entity)
 {
     //test
-    entity  = T100NEW T100Triangle();
+    //entity  = T100NEW T100Triangle();
 
     m_entities.push_back(entity);
 }
@@ -197,6 +223,34 @@ T100VOID T100DX12Editor::LoadAssets()
     }
 }
 
+T100VOID T100DX12Editor::LoadAssetsEmpty()
+{
+    ThrowIfFailed(m_device->CreateCommandList(
+                                              0,
+                                              D3D12_COMMAND_LIST_TYPE_DIRECT,
+                                              m_commandAllocator.Get(),
+                                              T100NULL,
+                                              IID_PPV_ARGS(&m_commandList)
+                                              ));
+
+    ThrowIfFailed(m_commandList->Close());
+
+    {
+        ThrowIfFailed(m_device->CreateFence(
+                                            0,
+                                            D3D12_FENCE_FLAG_NONE,
+                                            IID_PPV_ARGS(&m_fence)
+                                            ));
+        m_fenceValue = 1;
+
+        m_fenceEvent = CreateEvent(T100NULL, FALSE, FALSE, T100NULL);
+        if (m_fenceEvent == T100NULL)
+        {
+            ThrowIfFailed(HRESULT_FROM_WIN32(GetLastError()));
+        }
+    }
+}
+
 T100VOID T100DX12Editor::LoadEntities()
 {
     for(T100Entity* entity : m_entities){
@@ -235,6 +289,34 @@ T100VOID T100DX12Editor::PopulateCommandList()
     m_commandList->IASetPrimitiveTopology(D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST);
     m_commandList->IASetVertexBuffers(0, 1, &m_vertexBufferView);
     m_commandList->DrawInstanced(3, 1, 0, 0);
+
+    CD3DX12_RESOURCE_BARRIER    barrier2 = CD3DX12_RESOURCE_BARRIER::Transition(
+                                                                                m_renderTargets[m_frameIndex].Get(),
+                                                                                D3D12_RESOURCE_STATE_RENDER_TARGET,
+                                                                                D3D12_RESOURCE_STATE_PRESENT
+                                                                                );
+    m_commandList->ResourceBarrier(1, &barrier2);
+
+    ThrowIfFailed(m_commandList->Close());
+}
+
+T100VOID T100DX12Editor::PopulateCommandListEmpty()
+{
+    ThrowIfFailed(m_commandAllocator->Reset());
+
+    ThrowIfFailed(m_commandList->Reset(m_commandAllocator.Get(), m_pipelineState.Get()));
+
+    CD3DX12_RESOURCE_BARRIER    barrier1 = CD3DX12_RESOURCE_BARRIER::Transition(
+                                                                                m_renderTargets[m_frameIndex].Get(),
+                                                                                D3D12_RESOURCE_STATE_PRESENT,
+                                                                                D3D12_RESOURCE_STATE_RENDER_TARGET
+                                                                                );
+    m_commandList->ResourceBarrier(1, &barrier1);
+
+    CD3DX12_CPU_DESCRIPTOR_HANDLE rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_frameIndex, m_rtvDescriptorSize);
+
+    const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
+    m_commandList->ClearRenderTargetView(rtvHandle, clearColor, 0, nullptr);
 
     CD3DX12_RESOURCE_BARRIER    barrier2 = CD3DX12_RESOURCE_BARRIER::Transition(
                                                                                 m_renderTargets[m_frameIndex].Get(),

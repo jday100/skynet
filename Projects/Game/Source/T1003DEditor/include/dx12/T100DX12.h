@@ -71,6 +71,8 @@ class T100DX12
         ComPtr<ID3D12Resource>                  m_vertexBuffer;
         D3D12_VERTEX_BUFFER_VIEW                m_vertexBufferView;
 
+        T100VOID                                LoadPipeline();
+
         float                                   m_aspectRatio;
         std::wstring                            m_assetsPath;
         std::wstring                            GetAssetFullPath(LPCWSTR assetName);
@@ -79,7 +81,7 @@ class T100DX12
     private:
         T100BOOL                                m_useWarpDevice;
 
-        T100VOID                                LoadPipeline();
+
         virtual T100VOID                        LoadAssets();
         virtual T100VOID                        LoadEntities();
         virtual T100VOID                        LoadEntity(T100Entity*);
