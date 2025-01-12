@@ -1,5 +1,6 @@
 #include "T1003DEditor.h"
 
+#include <thread>
 #include "T100DX12.h"
 #include "T100DX12Editor.h"
 #include "T100DX12Line.h"
@@ -31,13 +32,16 @@ T100VOID T1003DEditor::uninit()
 T100VOID T1003DEditor::Create(HWND hwnd, UINT width, UINT height)
 {
     m_dx12->Create(hwnd, width, height);
-
+    m_width     = width;
+    m_height    = height;
     m_dx12->Start();
 }
 
 T100VOID T1003DEditor::SetSize(UINT width, UINT height)
 {
     m_dx12->SetSize(width, height);
+    m_width     = width;
+    m_height    = height;
 }
 
 T100VOID T1003DEditor::Append(T100Entity* entity)
@@ -49,4 +53,10 @@ T100VOID T1003DEditor::Render()
 {
     m_dx12->Update();
     m_dx12->Render();
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(500));
+
+    UINT    size    = m_width * m_height *4;
+    UINT8*  buffer  = T100NEW UINT8[size];
+    m_dx12->GetImage(&buffer);
 }

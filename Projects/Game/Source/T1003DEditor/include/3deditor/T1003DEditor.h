@@ -17,6 +17,8 @@ class T1003DEditor
         virtual T100VOID            Render();
 
     protected:
+        UINT                        m_width;
+        UINT                        m_height;
         T100DX12*                   m_dx12          = T100NULL;
 
     private:

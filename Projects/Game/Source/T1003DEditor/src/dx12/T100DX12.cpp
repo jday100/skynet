@@ -78,10 +78,34 @@ T100VOID T100DX12::Remove(T100Entity* entity)
 
 T100VOID T100DX12::SetSize(UINT width, UINT height)
 {
-
-
     m_width     = width;
     m_height    = height;
+}
+
+T100VOID T100DX12::GetImage(UINT8** ppData)
+{
+    ComPtr<ID3D12Resource>          screen;
+    UINT8*                          pData;
+    UINT                            size;
+
+    size    = m_width * m_height * 4;
+
+    ThrowIfFailed(m_swapChain->GetBuffer(2, IID_PPV_ARGS(&screen)));
+
+
+    CD3DX12_RANGE   readRange(0, 0);
+
+    /*
+    ThrowIfFailed(screen->Map(
+                                      0,
+                                      &readRange,
+                                      reinterpret_cast<void**>(&pData)
+                                      ));
+
+
+    memcpy(*ppData, pData, size);
+    screen->Unmap(0, T100NULL);
+    */
 }
 
 T100VOID T100DX12::LoadPipeline()

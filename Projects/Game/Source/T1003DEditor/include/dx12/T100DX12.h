@@ -35,6 +35,8 @@ class T100DX12
 
         virtual T100VOID                        SetSize(UINT, UINT);
 
+        virtual T100VOID                        GetImage(UINT8**);
+
     protected:
         HWND                                    m_hwnd;
         UINT                                    m_width;
