@@ -158,6 +158,7 @@ T100VOID T100DX12::LoadPipeline()
         swapChainDesc.SampleDesc.Count  = 1;
 
         ComPtr<IDXGISwapChain1>         swapChain;
+        ///*
         ThrowIfFailed(factory->CreateSwapChainForHwnd(
                                                       m_commandQueue.Get(),
                                                       m_hwnd,
@@ -166,6 +167,14 @@ T100VOID T100DX12::LoadPipeline()
                                                       T100NULL,
                                                       &swapChain
                                                       ));
+        //*/
+        /*
+        ThrowIfFailed(factory->CreateSwapChain(
+                                               m_commandQueue.Get(),
+                                               &swapChainDesc,
+                                               &swapChain
+                                               ));
+        */
         ThrowIfFailed(factory->MakeWindowAssociation(
                                                      m_hwnd,
                                                      DXGI_MWA_NO_ALT_ENTER

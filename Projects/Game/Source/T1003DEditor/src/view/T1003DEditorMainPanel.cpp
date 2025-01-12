@@ -60,6 +60,10 @@ void T1003DEditorMainPanel::OnPaint(wxPaintEvent& event)
         wxPaintDC       dc(this);
         DrawLine(dc);
     }
+
+    wxPaintDC       dc(this);
+
+    //SaveWindow(dc);
 }
 
 void T1003DEditorMainPanel::OnLeftDown(wxMouseEvent& event)
@@ -89,4 +93,18 @@ T100VOID T1003DEditorMainPanel::DrawLine(wxDC& dc)
     dc.Blit(wxPoint(0, 0), wxSize(m_width, m_height), &memory, wxPoint(0, 0));
 
     //m_bitmap->SaveFile(wxT("screen2.bmp"), wxBITMAP_TYPE_BMP);
+}
+
+T100VOID T1003DEditorMainPanel::SaveWindow(wxDC& dc)
+{
+    wxMemoryDC      memory;
+
+    memory.SelectObject(*m_bitmap);
+    memory.Blit(wxPoint(0, 0), wxSize(m_width, m_height), &dc, wxPoint(0, 0));
+
+    m_bitmap->SaveFile(wxT("screen1.bmp"), wxBITMAP_TYPE_BMP);
+
+    memory.DrawCircle(100, 100, 50);
+
+    m_bitmap->SaveFile(wxT("screen2.bmp"), wxBITMAP_TYPE_BMP);
 }

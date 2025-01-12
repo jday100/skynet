@@ -28,6 +28,8 @@ class T1003DEditorMainPanel : public wxPanel
         T1003DEditor*               m_editor            = T100NULL;
         T1003DEditorView*           m_view              = T100NULL;
 
+        T100VOID                    SaveWindow(wxDC&);
+
     private:
         T100UINT                    m_width;
         T100UINT                    m_height;
