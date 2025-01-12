@@ -1,8 +1,9 @@
 #ifndef T100DXASSETS_H
 #define T100DXASSETS_H
 
+#include "T100DXBase.h"
 
-class T100DXAssets
+class T100DXAssets : public T100DXBase
 {
     public:
         T100DXAssets();

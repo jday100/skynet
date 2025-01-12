@@ -2,7 +2,8 @@
 
 #include "T100DX12Tools.h"
 
-T100DXBase::T100DXBase()
+T100DXBase::T100DXBase() :
+    m_useWarpDevice(T100FALSE)
 {
     //ctor
 }
@@ -25,7 +26,8 @@ T100VOID T100DXBase::Destroy()
 
 T100VOID T100DXBase::Start()
 {
-
+    LoadPipeline();
+    LoadAssets();
 }
 
 T100VOID T100DXBase::Stop()
@@ -35,12 +37,16 @@ T100VOID T100DXBase::Stop()
 
 T100VOID T100DXBase::SetSize(UINT width, UINT height)
 {
-
+    m_width     = width;
+    m_height    = height;
 }
 
 T100VOID T100DXBase::Render()
 {
-
+    PopulateCommandList();
+    ExecuteCommandList();
+    SwapChainPresent();
+    WaitForPreviousFrame();
 }
 
 T100VOID T100DXBase::LoadPipeline()
@@ -50,9 +56,12 @@ T100VOID T100DXBase::LoadPipeline()
     CreateCommandQueue();
     CreateSwapChain();
     CreateRtvHeap();
-    CreateDsvHeap();
-    CreateCbvHeap();
-    CreateSamplerHeap();
+    //CreateDsvHeap();
+    //CreateCbvHeap();
+    //CreateSamplerHeap();
+
+    CreateRenderTargetView();
+
     CreateCommandAllocator();
 }
 
@@ -274,10 +283,110 @@ T100VOID T100DXBase::CreateSamplerHeap()
 
 }
 
+T100VOID T100DXBase::CreateRenderTargetView()
+{
+    CD3DX12_CPU_DESCRIPTOR_HANDLE       rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart());
+
+    for(UINT n = 0; n < m_frameCount; n++)
+    {
+        ThrowIfFailed(m_swapChain->GetBuffer(n, IID_PPV_ARGS(&m_renderTargets[n])));
+        m_device->CreateRenderTargetView(m_renderTargets[n].Get(), T100NULL, rtvHandle);
+        rtvHandle.Offset(1, m_rtvDescriptorSize);
+    }
+}
+
 T100VOID T100DXBase::CreateCommandAllocator()
 {
     ThrowIfFailed(m_device->CreateCommandAllocator(
                                                    D3D12_COMMAND_LIST_TYPE_DIRECT,
                                                    IID_PPV_ARGS(&m_commandAllocator)
                                                    ));
+}
+
+T100VOID T100DXBase::LoadAssets()
+{
+    CreateCommandList();
+    CreateFence();
+}
+
+T100VOID T100DXBase::CreateCommandList()
+{
+    ThrowIfFailed(m_device->CreateCommandList(
+                                              0,
+                                              D3D12_COMMAND_LIST_TYPE_DIRECT,
+                                              m_commandAllocator.Get(),
+                                              T100NULL,
+                                              IID_PPV_ARGS(&m_commandList)
+                                              ));
+    ThrowIfFailed(m_commandList->Close());
+}
+
+T100VOID T100DXBase::CreateFence()
+{
+    ThrowIfFailed(m_device->CreateFence(
+                                        0,
+                                        D3D12_FENCE_FLAG_NONE,
+                                        IID_PPV_ARGS(&m_fence)
+                                        ));
+    m_fenceValue        = 1;
+
+    m_fenceEvent        = CreateEvent(T100NULL, T100FALSE, T100FALSE, T100NULL);
+    if(m_fenceEvent == T100NULL)
+    {
+        ThrowIfFailed(HRESULT_FROM_WIN32(GetLastError()));
+    }
+}
+
+T100VOID T100DXBase::PopulateCommandList()
+{
+    ThrowIfFailed(m_commandAllocator->Reset());
+
+    ThrowIfFailed(m_commandList->Reset(m_commandAllocator.Get(), m_pipelineState.Get()));
+
+    CD3DX12_RESOURCE_BARRIER    barrier1 = CD3DX12_RESOURCE_BARRIER::Transition(
+                                                                                m_renderTargets[m_frameIndex].Get(),
+                                                                                D3D12_RESOURCE_STATE_PRESENT,
+                                                                                D3D12_RESOURCE_STATE_RENDER_TARGET
+                                                                                );
+    m_commandList->ResourceBarrier(1, &barrier1);
+
+    CD3DX12_CPU_DESCRIPTOR_HANDLE rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_frameIndex, m_rtvDescriptorSize);
+
+    const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
+    m_commandList->ClearRenderTargetView(rtvHandle, clearColor, 0, nullptr);
+
+    CD3DX12_RESOURCE_BARRIER    barrier2 = CD3DX12_RESOURCE_BARRIER::Transition(
+                                                                                m_renderTargets[m_frameIndex].Get(),
+                                                                                D3D12_RESOURCE_STATE_RENDER_TARGET,
+                                                                                D3D12_RESOURCE_STATE_PRESENT
+                                                                                );
+    m_commandList->ResourceBarrier(1, &barrier2);
+
+    ThrowIfFailed(m_commandList->Close());
+}
+
+T100VOID T100DXBase::ExecuteCommandList()
+{
+    ID3D12CommandList* ppCommandLists[] = {m_commandList.Get()};
+    m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
+}
+
+T100VOID T100DXBase::SwapChainPresent()
+{
+    ThrowIfFailed(m_swapChain->Present(1, 0));
+}
+
+T100VOID T100DXBase::WaitForPreviousFrame()
+{
+    const UINT64        fence = m_fenceValue;
+    ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), fence));
+    m_fenceValue++;
+
+    if(m_fence->GetCompletedValue() < fence)
+    {
+        ThrowIfFailed(m_fence->SetEventOnCompletion(fence, m_fenceEvent));
+        WaitForSingleObject(m_fenceEvent, INFINITE);
+    }
+
+    m_frameIndex = m_swapChain->GetCurrentBackBufferIndex();
 }
