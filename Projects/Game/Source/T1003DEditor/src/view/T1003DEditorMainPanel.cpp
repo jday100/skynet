@@ -8,6 +8,8 @@
 BEGIN_EVENT_TABLE(T1003DEditorMainPanel, wxPanel)
     EVT_SIZE(T1003DEditorMainPanel::OnResize)
     EVT_PAINT(T1003DEditorMainPanel::OnPaint)
+    EVT_KEY_DOWN(T1003DEditorMainPanel::OnKeyDown)
+    EVT_KEY_UP(T1003DEditorMainPanel::OnKeyUp)
     EVT_LEFT_DOWN(T1003DEditorMainPanel::OnLeftDown)
     EVT_LEFT_UP(T1003DEditorMainPanel::OnLeftUp)
 END_EVENT_TABLE()
@@ -64,6 +66,16 @@ void T1003DEditorMainPanel::OnPaint(wxPaintEvent& event)
     wxPaintDC       dc(this);
 
     //SaveWindow(dc);
+}
+
+void T1003DEditorMainPanel::OnKeyDown(wxKeyEvent& event)
+{
+
+}
+
+void T1003DEditorMainPanel::OnKeyUp(wxKeyEvent& event)
+{
+
 }
 
 void T1003DEditorMainPanel::OnLeftDown(wxMouseEvent& event)

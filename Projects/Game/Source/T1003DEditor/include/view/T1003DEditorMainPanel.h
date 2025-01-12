@@ -36,6 +36,8 @@ class T1003DEditorMainPanel : public wxPanel
         wxBitmap*                   m_bitmap            = T100NULL;
         void                        OnPaint(wxPaintEvent& event);
         void                        OnResize(wxSizeEvent& event);
+        void                        OnKeyDown(wxKeyEvent& event);
+        void                        OnKeyUp(wxKeyEvent& event);
         void                        OnLeftDown(wxMouseEvent& event);
         void                        OnLeftUp(wxMouseEvent& event);
 

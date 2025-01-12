@@ -7,6 +7,7 @@
 #include "T100DX12Line.h"
 #include "T100DX12Triangle.h"
 #include "T100DX12Renderer.h"
+#include "T100DX12Bundles.h"
 
 T1003DEditor::T1003DEditor()
 {
@@ -22,7 +23,7 @@ T1003DEditor::~T1003DEditor()
 
 T100VOID T1003DEditor::init()
 {
-    m_dx12  = T100NEW T100DX12Entities();
+    m_dx12  = T100NEW T100DX12Bundles();
 }
 
 T100VOID T1003DEditor::uninit()
@@ -60,5 +61,5 @@ T100VOID T1003DEditor::Render()
 
     UINT    size    = m_width * m_height *4;
     UINT8*  buffer  = T100NEW UINT8[size];
-    m_dx12->GetImage(&buffer);
+    //m_dx12->GetImage(&buffer);
 }

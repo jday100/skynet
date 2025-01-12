@@ -50,4 +50,3 @@ class T100DX12Resource
 };
 
 #endif // T100DX12RESOURCE_H
-
