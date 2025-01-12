@@ -23,6 +23,7 @@
 					<Add directory="include/view" />
 					<Add directory="include/serve" />
 					<Add directory="include/entity" />
+					<Add directory="include/dx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -47,6 +48,7 @@
 					<Add directory="include/view" />
 					<Add directory="include/serve" />
 					<Add directory="include/entity" />
+					<Add directory="include/dx" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -97,9 +99,16 @@
 		<Unit filename="include/dx12/T100DX12Line.h" />
 		<Unit filename="include/dx12/T100DX12Renderer.h" />
 		<Unit filename="include/dx12/T100DX12Resource.h" />
+		<Unit filename="include/dx12/T100DX12Step.h" />
 		<Unit filename="include/dx12/T100DX12Timer.h" />
 		<Unit filename="include/dx12/T100DX12Tools.h" />
 		<Unit filename="include/dx12/T100DX12Triangle.h" />
+		<Unit filename="include/dx/T100DX.h" />
+		<Unit filename="include/dx/T100DXAssets.h" />
+		<Unit filename="include/dx/T100DXBase.h" />
+		<Unit filename="include/dx/T100DXCamera.h" />
+		<Unit filename="include/dx/T100DXResource.h" />
+		<Unit filename="include/dx/T100DXTimer.h" />
 		<Unit filename="include/entity/T100Dot.h" />
 		<Unit filename="include/entity/T100Entity.h" />
 		<Unit filename="include/entity/T100Triangle.h" />
@@ -126,9 +135,16 @@
 		<Unit filename="src/dx12/T100DX12Line.cpp" />
 		<Unit filename="src/dx12/T100DX12Renderer.cpp" />
 		<Unit filename="src/dx12/T100DX12Resource.cpp" />
+		<Unit filename="src/dx12/T100DX12Step.cpp" />
 		<Unit filename="src/dx12/T100DX12Timer.cpp" />
 		<Unit filename="src/dx12/T100DX12Tools.cpp" />
 		<Unit filename="src/dx12/T100DX12Triangle.cpp" />
+		<Unit filename="src/dx/T100DX.cpp" />
+		<Unit filename="src/dx/T100DXAssets.cpp" />
+		<Unit filename="src/dx/T100DXBase.cpp" />
+		<Unit filename="src/dx/T100DXCamera.cpp" />
+		<Unit filename="src/dx/T100DXResource.cpp" />
+		<Unit filename="src/dx/T100DXTimer.cpp" />
 		<Unit filename="src/entity/T100Dot.cpp" />
 		<Unit filename="src/entity/T100Entity.cpp" />
 		<Unit filename="src/entity/T100Triangle.cpp" />
