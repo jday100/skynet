@@ -34,7 +34,7 @@ T100VOID T100DXBundles::Start()
     m_camera.Init({8, 8, 30});
 
     LoadPipeline();
-    LoadAssetsSingle();
+    LoadAssets();
 }
 
 T100VOID T100DXBundles::Update()
@@ -442,6 +442,7 @@ T100VOID T100DXBundles::LoadAssets()
     CreateIndexBuffer(indexBufferUploadHeap, pMeshData, meshDataLength);
     CreateTexture(subresourceCount, uploadBufferSize);
     CreateSampler(textureUploadHeap, pMeshData, meshDataLength, subresourceCount, uploadBufferSize);
+    CreateTextureSRV();
     CreateDepthStencilView();
     ExecuteCommandList();
     CreateFence();
