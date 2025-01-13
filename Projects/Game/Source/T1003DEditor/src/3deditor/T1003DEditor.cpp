@@ -58,7 +58,7 @@ T100VOID T1003DEditor::Append(T100Entity* entity)
 
 T100VOID T1003DEditor::Render()
 {
-    //m_dx12->Update();
+    m_dx12->Update();
     m_dx12->Render();
 
     std::this_thread::sleep_for(std::chrono::milliseconds(500));

@@ -26,9 +26,11 @@ T100VOID T100DXBundles::Start()
 {
     WCHAR       assetsPath[512];
     GetAssetsPath(assetsPath, _countof(assetsPath));
-    m_assetsPath = assetsPath;
+    m_assetsPath    = assetsPath;
 
-    m_aspectRatio = static_cast<float>(m_width) / static_cast<float>(m_height);
+    m_aspectRatio   = static_cast<float>(m_width) / static_cast<float>(m_height);
+    m_viewport      = CD3DX12_VIEWPORT(0.0f, 0.0f, static_cast<float>(m_width), static_cast<float>(m_height));
+    m_scissorRect   = CD3DX12_RECT(0, 0, static_cast<LONG>(m_width), static_cast<LONG>(m_height));
 
     m_camera.Init({8, 8, 30});
 
@@ -848,28 +850,41 @@ T100VOID T100DXBundles::UpdateFrameResource()
 
 T100VOID T100DXBundles::PopulateCommandList(T100DXResource* pFrameResource)
 {
-    ThrowIfFailed(m_commandAllocator->Reset());
+    ThrowIfFailed(m_pCurrentFrameResource->m_commandAllocator->Reset());
 
-    ThrowIfFailed(m_commandList->Reset(m_commandAllocator.Get(), m_pipelineState.Get()));
+    ThrowIfFailed(m_commandList->Reset(m_pCurrentFrameResource->m_commandAllocator.Get(), m_pipelineState1.Get()));
 
-    CD3DX12_RESOURCE_BARRIER    barrier1 = CD3DX12_RESOURCE_BARRIER::Transition(
-                                                                                m_renderTargets[m_frameIndex].Get(),
-                                                                                D3D12_RESOURCE_STATE_PRESENT,
-                                                                                D3D12_RESOURCE_STATE_RENDER_TARGET
-                                                                                );
-    m_commandList->ResourceBarrier(1, &barrier1);
+    m_commandList->SetGraphicsRootSignature(m_rootSignature.Get());
+
+    ID3D12DescriptorHeap* ppHeaps[] = { m_cbvSrvHeap.Get(), m_samplerHeap.Get() };
+    m_commandList->SetDescriptorHeaps(_countof(ppHeaps), ppHeaps);
+
+    m_commandList->RSSetViewports(1, &m_viewport);
+    m_commandList->RSSetScissorRects(1, &m_scissorRect);
+
+    CD3DX12_RESOURCE_BARRIER        barrier         = CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_PRESENT, D3D12_RESOURCE_STATE_RENDER_TARGET);
+    m_commandList->ResourceBarrier(1, &barrier);
 
     CD3DX12_CPU_DESCRIPTOR_HANDLE rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_frameIndex, m_rtvDescriptorSize);
+    CD3DX12_CPU_DESCRIPTOR_HANDLE dsvHandle(m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
+    m_commandList->OMSetRenderTargets(1, &rtvHandle, FALSE, &dsvHandle);
 
-    const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
+    const float         clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
     m_commandList->ClearRenderTargetView(rtvHandle, clearColor, 0, nullptr);
+    m_commandList->ClearDepthStencilView(m_dsvHeap->GetCPUDescriptorHandleForHeapStart(), D3D12_CLEAR_FLAG_DEPTH, 1.0f, 0, 0, nullptr);
 
-    CD3DX12_RESOURCE_BARRIER    barrier2 = CD3DX12_RESOURCE_BARRIER::Transition(
-                                                                                m_renderTargets[m_frameIndex].Get(),
-                                                                                D3D12_RESOURCE_STATE_RENDER_TARGET,
-                                                                                D3D12_RESOURCE_STATE_PRESENT
-                                                                                );
-    m_commandList->ResourceBarrier(1, &barrier2);
+    if (m_useBundles)
+    {
+        m_commandList->ExecuteBundle(pFrameResource->m_bundle.Get());
+    }
+    else
+    {
+        pFrameResource->PopulateCommandList(m_commandList.Get(), m_pipelineState1.Get(), m_pipelineState2.Get(), m_currentFrameResourceIndex, m_numIndices, &m_indexBufferView,
+            &m_vertexBufferView, m_cbvSrvHeap.Get(), m_cbvSrvDescriptorSize, m_samplerHeap.Get(), m_rootSignature.Get());
+    }
+
+    CD3DX12_RESOURCE_BARRIER        present_barrier         = CD3DX12_RESOURCE_BARRIER::Transition(m_renderTargets[m_frameIndex].Get(), D3D12_RESOURCE_STATE_RENDER_TARGET, D3D12_RESOURCE_STATE_PRESENT);
+    m_commandList->ResourceBarrier(1, &present_barrier);
 
     ThrowIfFailed(m_commandList->Close());
 }

@@ -17,10 +17,14 @@ class T100DXBundles : public T100DXBase
         virtual T100VOID                        Update();
         virtual T100VOID                        Render();
 
+        static const bool                       m_useBundles            = T100TRUE;
         UINT                                    m_cityRowCount          = 10;
         UINT                                    m_cityColumnCount       = 3;
 
     protected:
+        CD3DX12_VIEWPORT                        m_viewport;
+        CD3DX12_RECT                            m_scissorRect;
+
         ComPtr<ID3D12RootSignature>             m_rootSignature;
         ComPtr<ID3D12PipelineState>             m_pipelineState1;
         ComPtr<ID3D12PipelineState>             m_pipelineState2;

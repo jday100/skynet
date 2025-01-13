@@ -41,6 +41,11 @@ T100VOID T100DXBase::SetSize(UINT width, UINT height)
     m_height    = height;
 }
 
+T100VOID T100DXBase::Update()
+{
+
+}
+
 T100VOID T100DXBase::Render()
 {
     PopulateCommandList();

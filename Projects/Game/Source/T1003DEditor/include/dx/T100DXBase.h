@@ -26,6 +26,7 @@ class T100DXBase
 
         virtual T100VOID                        SetSize(UINT, UINT);
 
+        virtual T100VOID                        Update();
         virtual T100VOID                        Render();
 
         UINT                                    m_cityRowCount          = 10;
