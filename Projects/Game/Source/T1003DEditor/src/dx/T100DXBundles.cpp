@@ -5,7 +5,14 @@
 #include "T100DX12Tools.h"
 
 T100DXBundles::T100DXBundles()
-    :T100DXBase()
+    :T100DXBase(),
+    m_frameIndex(0),
+    m_frameCounter(0),
+    m_fenceValue(0),
+    //m_rtvDescriptorSize(0),
+    m_currentFrameResourceIndex(0),
+    m_pCurrentFrameResource(T100NULL)
+    //m_useWarpDevice(T100FALSE)
 {
     //ctor
 }
@@ -13,6 +20,20 @@ T100DXBundles::T100DXBundles()
 T100DXBundles::~T100DXBundles()
 {
     //dtor
+}
+
+T100VOID T100DXBundles::Start()
+{
+    WCHAR       assetsPath[512];
+    GetAssetsPath(assetsPath, _countof(assetsPath));
+    m_assetsPath = assetsPath;
+
+    m_aspectRatio = static_cast<float>(m_width) / static_cast<float>(m_height);
+
+    m_camera.Init({8, 8, 30});
+
+    LoadPipeline();
+    LoadAssets();
 }
 
 T100VOID T100DXBundles::Update()
@@ -291,11 +312,11 @@ T100VOID T100DXBundles::LoadAssets()
 
     CreateRootSignature();
     LoadShader(
-               pVertexShaderData,
+               &pVertexShaderData,
                vertexShaderDataLength,
-               pPixelShaderData1,
+               &pPixelShaderData1,
                pixelShaderDataLength1,
-               pPixelShaderData2,
+               &pPixelShaderData2,
                pixelShaderDataLength2
                );
     CreatePipelineState(
@@ -308,7 +329,7 @@ T100VOID T100DXBundles::LoadAssets()
                         );
     CreateCommandList();
     CreateRenderTargetView();
-    LoadMeshData(pMeshData, meshDataLength);
+    LoadMeshData(&pMeshData, meshDataLength);
     CreateVertexBuffer(vertexBufferUploadHeap, pMeshData, meshDataLength);
     CreateIndexBuffer(indexBufferUploadHeap, pMeshData, meshDataLength);
     CreateTexture(subresourceCount, uploadBufferSize);
@@ -374,26 +395,26 @@ T100VOID T100DXBundles::CreateRootSignature()
 }
 
 T100VOID T100DXBundles::LoadShader(
-                                   UINT8* pVertexShaderData,
-                                   UINT vertexShaderDataLength,
-                                   UINT8* pPixelShaderData1,
-                                   UINT pixelShaderDataLength1,
-                                   UINT8* pPixelShaderData2,
-                                   UINT pixelShaderDataLength2)
+                                   UINT8** pVertexShaderData,
+                                   UINT& vertexShaderDataLength,
+                                   UINT8** pPixelShaderData1,
+                                   UINT& pixelShaderDataLength1,
+                                   UINT8** pPixelShaderData2,
+                                   UINT& pixelShaderDataLength2)
 {
 
 
     ThrowIfFailed(ReadDataFromFile(
                                    GetAssetFullPath(L"shader_mesh_simple_vert.cso").c_str(),
-                                   &pVertexShaderData,
+                                   pVertexShaderData,
                                    &vertexShaderDataLength));
     ThrowIfFailed(ReadDataFromFile(
                                    GetAssetFullPath(L"shader_mesh_simple_pixel.cso").c_str(),
-                                   &pPixelShaderData1,
+                                   pPixelShaderData1,
                                    &pixelShaderDataLength1));
     ThrowIfFailed(ReadDataFromFile(
                                    GetAssetFullPath(L"shader_mesh_alt_pixel.cso").c_str(),
-                                   &pPixelShaderData2,
+                                   pPixelShaderData2,
                                    &pixelShaderDataLength2));
 
 }
@@ -467,9 +488,9 @@ T100VOID T100DXBundles::CreateRenderTargetView()
     }
 }
 
-T100VOID T100DXBundles::LoadMeshData(UINT8* pMeshData, UINT meshDataLength)
+T100VOID T100DXBundles::LoadMeshData(UINT8** pMeshData, UINT& meshDataLength)
 {
-    ThrowIfFailed(ReadDataFromFile(SampleAssets::DataFileName, &pMeshData, &meshDataLength));
+    ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(SampleAssets::DataFileName).c_str(), pMeshData, &meshDataLength));
 }
 
 T100VOID T100DXBundles::CreateVertexBuffer(ComPtr<ID3D12Resource> vertexBufferUploadHeap, UINT8* pMeshData, UINT meshDataLength)
@@ -754,7 +775,33 @@ T100VOID T100DXBundles::CreateFence()
 
 T100VOID T100DXBundles::CreateFrameResources()
 {
+    CD3DX12_CPU_DESCRIPTOR_HANDLE           cbvSrvHandle(
+                                                         m_cbvSrvHeap->GetCPUDescriptorHandleForHeapStart(),
+                                                         1,
+                                                         m_cbvSrvDescriptorSize);
+    for(UINT i = 0; i < m_frameCount; i++)
+    {
+        T100DXResource* pFrameResource = new T100DXResource(m_device.Get(), m_cityRowCount, m_cityColumnCount);
 
+        UINT64      cbOffset = 0;
+        for(UINT j = 0; j < m_cityRowCount; j++)
+        {
+            for(UINT k = 0; k < m_cityColumnCount; k++)
+            {
+                D3D12_CONSTANT_BUFFER_VIEW_DESC         cbvDesc = {};
+                cbvDesc.BufferLocation      = pFrameResource->m_cbvUploadHeap->GetGPUVirtualAddress() + cbOffset;
+                cbvDesc.SizeInBytes         = sizeof(T100DXResource::SceneConstantBuffer);
+                cbOffset                    += cbvDesc.SizeInBytes;
+                m_device->CreateConstantBufferView(&cbvDesc, cbvSrvHandle);
+                cbvSrvHandle.Offset(m_cbvSrvDescriptorSize);
+            }
+        }
+
+        pFrameResource->InitBundle(m_device.Get(), m_pipelineState1.Get(), m_pipelineState2.Get(), i, m_numIndices, &m_indexBufferView,
+            &m_vertexBufferView, m_cbvSrvHeap.Get(), m_cbvSrvDescriptorSize, m_samplerHeap.Get(), m_rootSignature.Get());
+
+        m_frameResources.push_back(pFrameResource);
+    }
 }
 
 T100VOID T100DXBundles::UpdateFrameTimer()
@@ -863,7 +910,7 @@ T100VOID T100DXBundles::WaitForPreviousFrame()
 
 std::wstring T100DXBundles::GetAssetFullPath(LPCWSTR assetName)
 {
-    return m_assetsPath + L"..\\..\\data\\" + assetName;
+    return m_assetsPath + L"..\\..\\resources\\" + assetName;
 }
 
 void T100DXBundles::SetCustomWindowText(LPCWSTR text)

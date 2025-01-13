@@ -12,6 +12,8 @@ class T100DXBundles : public T100DXBase
         T100DXBundles();
         virtual ~T100DXBundles();
 
+        virtual T100VOID                        Start();
+
         virtual T100VOID                        Update();
         virtual T100VOID                        Render();
 
@@ -68,11 +70,11 @@ class T100DXBundles : public T100DXBase
         T100VOID                                LoadAssets();
 
         T100VOID                                CreateRootSignature();
-        T100VOID                                LoadShader(UINT8*, UINT, UINT8*, UINT, UINT8*, UINT);
+        T100VOID                                LoadShader(UINT8**, UINT&, UINT8**, UINT&, UINT8**, UINT&);
         T100VOID                                CreatePipelineState(UINT8*, UINT, UINT8*, UINT, UINT8*, UINT);
         T100VOID                                CreateCommandList();
         T100VOID                                CreateRenderTargetView();
-        T100VOID                                LoadMeshData(UINT8*, UINT);
+        T100VOID                                LoadMeshData(UINT8**, UINT&);
         T100VOID                                CreateVertexBuffer(ComPtr<ID3D12Resource>, UINT8*, UINT);
         T100VOID                                CreateIndexBuffer(ComPtr<ID3D12Resource>, UINT8*, UINT);
         T100VOID                                CreateTexture(UINT&, UINT64&);

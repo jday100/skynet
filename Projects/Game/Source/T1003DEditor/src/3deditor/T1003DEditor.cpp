@@ -11,6 +11,7 @@
 #include "T100DX12Bundles.h"
 */
 #include "T100DXBase.h"
+#include "T100DXBundles.h"
 
 T1003DEditor::T1003DEditor()
 {
@@ -26,7 +27,7 @@ T1003DEditor::~T1003DEditor()
 
 T100VOID T1003DEditor::init()
 {
-    m_dx12  = T100NEW T100DXBase();
+    m_dx12  = T100NEW T100DXBundles();
 }
 
 T100VOID T1003DEditor::uninit()
