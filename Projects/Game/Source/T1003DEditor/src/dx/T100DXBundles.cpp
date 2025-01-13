@@ -9,10 +9,9 @@ T100DXBundles::T100DXBundles()
     m_frameIndex(0),
     m_frameCounter(0),
     m_fenceValue(0),
-    //m_rtvDescriptorSize(0),
+    m_rtvDescriptorSize(0),
     m_currentFrameResourceIndex(0),
     m_pCurrentFrameResource(T100NULL)
-    //m_useWarpDevice(T100FALSE)
 {
     //ctor
 }
@@ -397,26 +396,26 @@ T100VOID T100DXBundles::CreateRootSignature()
 }
 
 T100VOID T100DXBundles::LoadShader(
-                                   UINT8** pVertexShaderData,
+                                   UINT8** ppVertexShaderData,
                                    UINT& vertexShaderDataLength,
-                                   UINT8** pPixelShaderData1,
+                                   UINT8** ppPixelShaderData1,
                                    UINT& pixelShaderDataLength1,
-                                   UINT8** pPixelShaderData2,
+                                   UINT8** ppPixelShaderData2,
                                    UINT& pixelShaderDataLength2)
 {
 
 
     ThrowIfFailed(ReadDataFromFile(
                                    GetAssetFullPath(L"shader_mesh_simple_vert.cso").c_str(),
-                                   pVertexShaderData,
+                                   ppVertexShaderData,
                                    &vertexShaderDataLength));
     ThrowIfFailed(ReadDataFromFile(
                                    GetAssetFullPath(L"shader_mesh_simple_pixel.cso").c_str(),
-                                   pPixelShaderData1,
+                                   ppPixelShaderData1,
                                    &pixelShaderDataLength1));
     ThrowIfFailed(ReadDataFromFile(
                                    GetAssetFullPath(L"shader_mesh_alt_pixel.cso").c_str(),
-                                   pPixelShaderData2,
+                                   ppPixelShaderData2,
                                    &pixelShaderDataLength2));
 
 }
@@ -490,12 +489,12 @@ T100VOID T100DXBundles::CreateRenderTargetView()
     }
 }
 
-T100VOID T100DXBundles::LoadMeshData(UINT8** pMeshData, UINT& meshDataLength)
+T100VOID T100DXBundles::LoadMeshData(UINT8** ppMeshData, UINT& meshDataLength)
 {
-    ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(SampleAssets::DataFileName).c_str(), pMeshData, &meshDataLength));
+    ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(SampleAssets::DataFileName).c_str(), ppMeshData, &meshDataLength));
 }
 
-T100VOID T100DXBundles::CreateVertexBuffer(ComPtr<ID3D12Resource> vertexBufferUploadHeap, UINT8* pMeshData, UINT meshDataLength)
+T100VOID T100DXBundles::CreateVertexBuffer(ComPtr<ID3D12Resource>& vertexBufferUploadHeap, UINT8* pMeshData, UINT meshDataLength)
 {
     CD3DX12_HEAP_PROPERTIES         vertex_heap(D3D12_HEAP_TYPE_DEFAULT);
     CD3DX12_RESOURCE_DESC           vertex_desc         = CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::VertexDataSize);
@@ -548,7 +547,7 @@ T100VOID T100DXBundles::CreateVertexBuffer(ComPtr<ID3D12Resource> vertexBufferUp
     m_vertexBufferView.SizeInBytes          = SampleAssets::VertexDataSize;
 }
 
-T100VOID T100DXBundles::CreateIndexBuffer(ComPtr<ID3D12Resource> indexBufferUploadHeap, UINT8* pMeshData, UINT meshDataLength)
+T100VOID T100DXBundles::CreateIndexBuffer(ComPtr<ID3D12Resource>& indexBufferUploadHeap, UINT8* pMeshData, UINT meshDataLength)
 {
     CD3DX12_HEAP_PROPERTIES         index_heap(D3D12_HEAP_TYPE_DEFAULT);
     CD3DX12_RESOURCE_DESC           index_desc      = CD3DX12_RESOURCE_DESC::Buffer(SampleAssets::IndexDataSize);
@@ -630,7 +629,7 @@ T100VOID T100DXBundles::CreateTexture(UINT& subresourceCount, UINT64& uploadBuff
 }
 
 T100VOID T100DXBundles::CreateSampler(
-                                      ComPtr<ID3D12Resource> textureUploadHeap,
+                                      ComPtr<ID3D12Resource>& textureUploadHeap,
                                       UINT8* pMeshData,
                                       UINT meshDataLength,
                                       UINT subresourceCount,

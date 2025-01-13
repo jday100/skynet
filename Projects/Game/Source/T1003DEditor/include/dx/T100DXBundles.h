@@ -36,6 +36,9 @@ class T100DXBundles : public T100DXBase
         D3D12_VERTEX_BUFFER_VIEW                m_vertexBufferView;
         D3D12_INDEX_BUFFER_VIEW                 m_indexBufferView;
 
+        UINT                                    m_cbvSrvDescriptorSize;
+        UINT                                    m_rtvDescriptorSize;
+
         ComPtr<ID3D12Resource>                  m_depthStencil;
 
         std::vector<T100DXResource*>            m_frameResources;
@@ -79,10 +82,10 @@ class T100DXBundles : public T100DXBase
         T100VOID                                CreateCommandList();
         T100VOID                                CreateRenderTargetView();
         T100VOID                                LoadMeshData(UINT8**, UINT&);
-        T100VOID                                CreateVertexBuffer(ComPtr<ID3D12Resource>, UINT8*, UINT);
-        T100VOID                                CreateIndexBuffer(ComPtr<ID3D12Resource>, UINT8*, UINT);
+        T100VOID                                CreateVertexBuffer(ComPtr<ID3D12Resource>&, UINT8*, UINT);
+        T100VOID                                CreateIndexBuffer(ComPtr<ID3D12Resource>&, UINT8*, UINT);
         T100VOID                                CreateTexture(UINT&, UINT64&);
-        T100VOID                                CreateSampler(ComPtr<ID3D12Resource>, UINT8*, UINT, UINT, UINT64);
+        T100VOID                                CreateSampler(ComPtr<ID3D12Resource>&, UINT8*, UINT, UINT, UINT64);
         T100VOID                                CreateTextureSRV();
         T100VOID                                CreateDepthStencilView();
         T100VOID                                ExecuteCommandList();
