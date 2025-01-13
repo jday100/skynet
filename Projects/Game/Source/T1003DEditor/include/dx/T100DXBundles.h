@@ -3,6 +3,8 @@
 
 #include "T100DXBase.h"
 #include "T100DXResource.h"
+#include "T100DXTimer.h"
+#include "T100DXCamera.h"
 
 class T100DXBundles : public T100DXBase
 {
@@ -17,11 +19,33 @@ class T100DXBundles : public T100DXBase
         UINT                                    m_cityColumnCount       = 3;
 
     protected:
+        ComPtr<ID3D12RootSignature>             m_rootSignature;
+        ComPtr<ID3D12PipelineState>             m_pipelineState1;
+        ComPtr<ID3D12PipelineState>             m_pipelineState2;
+
+        UINT                                    m_numIndices;
+        ComPtr<ID3D12Resource>                  m_vertexBuffer;
+        ComPtr<ID3D12Resource>                  m_indexBuffer;
+        ComPtr<ID3D12Resource>                  m_texture;
+        D3D12_VERTEX_BUFFER_VIEW                m_vertexBufferView;
+        D3D12_INDEX_BUFFER_VIEW                 m_indexBufferView;
+
+        ComPtr<ID3D12Resource>                  m_depthStencil;
+
         std::vector<T100DXResource*>            m_frameResources;
         T100DXResource*                         m_pCurrentFrameResource;
         UINT                                    m_currentFrameResourceIndex;
 
-        ComPtr<ID3D12RootSignature>             m_rootSignature;
+        UINT                                    m_frameIndex;
+        UINT                                    m_frameCounter;
+        HANDLE                                  m_fenceEvent;
+        ComPtr<ID3D12Fence>                     m_fence;
+        UINT64                                  m_fenceValue;
+
+        T100DXTimer                             m_timer;
+        T100DXCamera                            m_camera;
+
+        float                                   m_aspectRatio;
 
     private:
         T100VOID                                LoadPipeline();
@@ -44,15 +68,16 @@ class T100DXBundles : public T100DXBase
         T100VOID                                LoadAssets();
 
         T100VOID                                CreateRootSignature();
-        T100VOID                                LoadShader();
-        T100VOID                                CreatePipelineState(UINT8*);
+        T100VOID                                LoadShader(UINT8*, UINT, UINT8*, UINT, UINT8*, UINT);
+        T100VOID                                CreatePipelineState(UINT8*, UINT, UINT8*, UINT, UINT8*, UINT);
         T100VOID                                CreateCommandList();
         T100VOID                                CreateRenderTargetView();
-        T100VOID                                LoadMeshData();
-        T100VOID                                CreateVertexBuffer();
-        T100VOID                                CreateIndexBuffer();
-        T100VOID                                CreateTexture();
-        T100VOID                                CreateSampler();
+        T100VOID                                LoadMeshData(UINT8*, UINT);
+        T100VOID                                CreateVertexBuffer(ComPtr<ID3D12Resource>, UINT8*, UINT);
+        T100VOID                                CreateIndexBuffer(ComPtr<ID3D12Resource>, UINT8*, UINT);
+        T100VOID                                CreateTexture(UINT&, UINT64&);
+        T100VOID                                CreateSampler(ComPtr<ID3D12Resource>, UINT8*, UINT, UINT, UINT64);
+        T100VOID                                CreateTextureSRV();
         T100VOID                                CreateDepthStencilView();
         T100VOID                                ExecuteCommandList();
         T100VOID                                CreateFence();
@@ -73,6 +98,7 @@ class T100DXBundles : public T100DXBase
         std::wstring                            m_title;
 
         std::wstring                            GetAssetFullPath(LPCWSTR assetName);
+        void                                    SetCustomWindowText(LPCWSTR text);
 
 
 };

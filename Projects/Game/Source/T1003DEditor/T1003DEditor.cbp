@@ -87,22 +87,48 @@
 		<Unit filename="include/d3d12/DirectXMath.h" />
 		<Unit filename="include/d3d12/DirectXPackedVector.h" />
 		<Unit filename="include/d3d12/d3dx12.h" />
-		<Unit filename="include/dx12/T100DX12.h" />
-		<Unit filename="include/dx12/T100DX12Base.h" />
-		<Unit filename="include/dx12/T100DX12Bundles.h" />
-		<Unit filename="include/dx12/T100DX12Camera.h" />
-		<Unit filename="include/dx12/T100DX12Editor.h" />
-		<Unit filename="include/dx12/T100DX12Entities.h" />
-		<Unit filename="include/dx12/T100DX12Entity.h" />
-		<Unit filename="include/dx12/T100DX12Line.h" />
+		<Unit filename="include/dx12/T100DX12.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Base.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Bundles.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Camera.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Editor.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Entities.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Entity.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Line.h">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="include/dx12/T100DX12Renderer.h">
 			<Option target="Release" />
 		</Unit>
-		<Unit filename="include/dx12/T100DX12Resource.h" />
-		<Unit filename="include/dx12/T100DX12Step.h" />
-		<Unit filename="include/dx12/T100DX12Timer.h" />
-		<Unit filename="include/dx12/T100DX12Tools.h" />
-		<Unit filename="include/dx12/T100DX12Triangle.h" />
+		<Unit filename="include/dx12/T100DX12Resource.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Step.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Timer.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Tools.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/dx12/T100DX12Triangle.h">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="include/dx/T100DX.h" />
 		<Unit filename="include/dx/T100DXAssets.h" />
 		<Unit filename="include/dx/T100DXBase.h" />
@@ -124,22 +150,48 @@
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/3deditor/T1003DEditor.cpp" />
-		<Unit filename="src/dx12/T100DX12.cpp" />
-		<Unit filename="src/dx12/T100DX12Base.cpp" />
-		<Unit filename="src/dx12/T100DX12Bundles.cpp" />
-		<Unit filename="src/dx12/T100DX12Camera.cpp" />
-		<Unit filename="src/dx12/T100DX12Editor.cpp" />
-		<Unit filename="src/dx12/T100DX12Entities.cpp" />
-		<Unit filename="src/dx12/T100DX12Entity.cpp" />
-		<Unit filename="src/dx12/T100DX12Line.cpp" />
+		<Unit filename="src/dx12/T100DX12.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Base.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Bundles.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Camera.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Editor.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Entities.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Entity.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Line.cpp">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="src/dx12/T100DX12Renderer.cpp">
 			<Option target="Release" />
 		</Unit>
-		<Unit filename="src/dx12/T100DX12Resource.cpp" />
-		<Unit filename="src/dx12/T100DX12Step.cpp" />
-		<Unit filename="src/dx12/T100DX12Timer.cpp" />
-		<Unit filename="src/dx12/T100DX12Tools.cpp" />
-		<Unit filename="src/dx12/T100DX12Triangle.cpp" />
+		<Unit filename="src/dx12/T100DX12Resource.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Step.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Timer.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Tools.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/dx12/T100DX12Triangle.cpp">
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="src/dx/T100DX.cpp" />
 		<Unit filename="src/dx/T100DXAssets.cpp" />
 		<Unit filename="src/dx/T100DXBase.cpp" />
