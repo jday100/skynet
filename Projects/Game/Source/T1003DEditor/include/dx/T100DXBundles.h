@@ -21,6 +21,8 @@ class T100DXBundles : public T100DXBase
         T100DXResource*                         m_pCurrentFrameResource;
         UINT                                    m_currentFrameResourceIndex;
 
+        ComPtr<ID3D12RootSignature>             m_rootSignature;
+
     private:
         T100VOID                                LoadPipeline();
 
@@ -43,7 +45,7 @@ class T100DXBundles : public T100DXBase
 
         T100VOID                                CreateRootSignature();
         T100VOID                                LoadShader();
-        T100VOID                                CreatePipelineState();
+        T100VOID                                CreatePipelineState(UINT8*);
         T100VOID                                CreateCommandList();
         T100VOID                                CreateRenderTargetView();
         T100VOID                                LoadMeshData();
@@ -66,6 +68,12 @@ class T100DXBundles : public T100DXBase
         T100VOID                                SwapChainPresent();
         T100VOID                                FenceSignal();
         T100VOID                                WaitForPreviousFrame();
+
+        std::wstring                            m_assetsPath;
+        std::wstring                            m_title;
+
+        std::wstring                            GetAssetFullPath(LPCWSTR assetName);
+
 
 };
 
