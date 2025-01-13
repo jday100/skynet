@@ -75,6 +75,7 @@ class T100DXBundles : public T100DXBase
         T100VOID                                CreateCommandAllocator();
 
         T100VOID                                LoadAssets();
+        T100VOID                                LoadAssetsSingle();
 
         T100VOID                                CreateRootSignature();
         T100VOID                                LoadShader(UINT8**, UINT&, UINT8**, UINT&, UINT8**, UINT&);
