@@ -136,6 +136,7 @@
 		<Unit filename="include/dx/T100DXCamera.h" />
 		<Unit filename="include/dx/T100DXResource.h" />
 		<Unit filename="include/dx/T100DXTimer.h" />
+		<Unit filename="include/dx/T100DXTriangle.h" />
 		<Unit filename="include/entity/T100Dot.h" />
 		<Unit filename="include/entity/T100Entity.h" />
 		<Unit filename="include/entity/T100Triangle.h" />
@@ -199,6 +200,7 @@
 		<Unit filename="src/dx/T100DXCamera.cpp" />
 		<Unit filename="src/dx/T100DXResource.cpp" />
 		<Unit filename="src/dx/T100DXTimer.cpp" />
+		<Unit filename="src/dx/T100DXTriangle.cpp" />
 		<Unit filename="src/entity/T100Dot.cpp" />
 		<Unit filename="src/entity/T100Entity.cpp" />
 		<Unit filename="src/entity/T100Triangle.cpp" />
