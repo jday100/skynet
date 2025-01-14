@@ -9,62 +9,91 @@ class T100DX12Bundles : public T100DX12Base
         T100DX12Bundles();
         virtual ~T100DX12Bundles();
 
-        virtual T100VOID                    Append(T100Entity*);
+        virtual T100VOID                        Append(T100Entity*);
+
+        static const bool                       m_useBundles            = T100TRUE;
+        UINT                                    m_cityRowCount          = 10;
+        UINT                                    m_cityColumnCount       = 3;
 
     protected:
-        ComPtr<ID3D12RootSignature>         m_rootSignature;
-        ComPtr<ID3D12PipelineState>         m_pipelineState1;
-        ComPtr<ID3D12PipelineState>         m_pipelineState2;
+        CD3DX12_VIEWPORT                        m_viewport;
+        CD3DX12_RECT                            m_scissorRect;
+
+        ComPtr<ID3D12RootSignature>             m_rootSignature;
+        ComPtr<ID3D12PipelineState>             m_pipelineState1;
+        ComPtr<ID3D12PipelineState>             m_pipelineState2;
+
+        ComPtr<ID3D12DescriptorHeap>            m_dsvHeap;
+        ComPtr<ID3D12DescriptorHeap>            m_cbvSrvHeap;
+        ComPtr<ID3D12DescriptorHeap>            m_samplerHeap;
+
+        UINT                                    m_cbvSrvDescriptorSize;
+        UINT                                    m_rtvDescriptorSize;
+
+        ComPtr<ID3D12Resource>                  m_depthStencil;
+
+        std::vector<T100DX12FrameResource*>     m_frameResources;
+        T100DX12FrameResource*                  m_pCurrentFrameResource;
+        UINT                                    m_currentFrameResourceIndex;
+
+        float                                   m_aspectRatio;
+
+        UINT                                    m_numIndices;
+        ComPtr<ID3D12Resource>                  m_vertexBuffer;
+        ComPtr<ID3D12Resource>                  m_indexBuffer;
+        ComPtr<ID3D12Resource>                  m_texture;
+        D3D12_VERTEX_BUFFER_VIEW                m_vertexBufferView;
+        D3D12_INDEX_BUFFER_VIEW                 m_indexBufferView;
 
     protected:
-        virtual T100VOID                    LoadEntity(T100Entity*);
+        virtual T100VOID                        LoadEntity(T100Entity*);
 
-        virtual T100VOID                    LoadVertexBuffer(T100Entity*);
-        virtual T100VOID                    LoadPixelBuffer(T100Entity*);
-        virtual T100VOID                    LoadTexture(T100Entity*);
+        virtual T100VOID                        LoadVertexBuffer(T100Entity*);
+        virtual T100VOID                        LoadPixelBuffer(T100Entity*);
+        virtual T100VOID                        LoadTexture(T100Entity*);
 
     protected:
-        T100VOID                            CreateRootSignature();
+        T100VOID                                CreateRootSignature();
         //T100VOID                            LoadShader(UINT8**, UINT&, UINT8**, UINT&, UINT8**, UINT&);
-        T100VOID                            CreatePipelineState(UINT8*, UINT, UINT8*, UINT, UINT8*, UINT);
-        T100VOID                            CreateCommandList();
-        T100VOID                            CreateRenderTargetView();
-        T100VOID                            LoadMeshData(UINT8**, UINT&);
-        T100VOID                            CreateVertexBuffer(ComPtr<ID3D12Resource>&, UINT8*, UINT);
-        T100VOID                            CreateIndexBuffer(ComPtr<ID3D12Resource>&, UINT8*, UINT);
-        T100VOID                            CreateTexture(UINT&, UINT64&);
-        T100VOID                            CreateSampler(ComPtr<ID3D12Resource>&, UINT8*, UINT, UINT, UINT64);
-        T100VOID                            CreateTextureSRV();
-        T100VOID                            CreateDepthStencilView();
-        T100VOID                            ExecuteCommandList();
-        T100VOID                            CreateFence();
-        T100VOID                            CreateFrameResources();
+        T100VOID                                CreatePipelineState(UINT8*, UINT, UINT8*, UINT, UINT8*, UINT);
+        T100VOID                                CreateCommandList();
+        T100VOID                                CreateRenderTargetView();
+        T100VOID                                LoadMeshData(UINT8**, UINT&);
+        T100VOID                                CreateVertexBuffer(ComPtr<ID3D12Resource>&, UINT8*, UINT);
+        T100VOID                                CreateIndexBuffer(ComPtr<ID3D12Resource>&, UINT8*, UINT);
+        T100VOID                                CreateTexture(UINT&, UINT64&);
+        T100VOID                                CreateSampler(ComPtr<ID3D12Resource>&, UINT8*, UINT, UINT, UINT64);
+        T100VOID                                CreateTextureSRV();
+        T100VOID                                CreateDepthStencilView();
+        T100VOID                                ExecuteCommandList();
+        T100VOID                                CreateFence();
+        T100VOID                                CreateFrameResources();
 
-        T100VOID                            UpdateFrameTimer();
-        T100VOID                            UpdateFence();
-        T100VOID                            UpdateCamera();
-        T100VOID                            UpdateFrameResource();
+        T100VOID                                UpdateFrameTimer();
+        T100VOID                                UpdateFence();
+        T100VOID                                UpdateCamera();
+        T100VOID                                UpdateFrameResource();
 
-        T100VOID                            PopulateCommandList(T100DX12FrameResource*);
-        T100VOID                            ExecuteCommandListRender();
-        T100VOID                            SwapChainPresent();
-        T100VOID                            FenceSignal();
-        T100VOID                            WaitForPreviousFrame();
+        T100VOID                                PopulateCommandList(T100DX12FrameResource*);
+        T100VOID                                ExecuteCommandListRender();
+        T100VOID                                SwapChainPresent();
+        T100VOID                                FenceSignal();
+        T100VOID                                WaitForPreviousFrame();
 
-        std::wstring                        m_assetsPath;
-        std::wstring                        m_title;
+        std::wstring                            m_assetsPath;
+        std::wstring                            m_title;
 
-        std::wstring                        GetAssetFullPath(LPCWSTR assetName);
-        void                                SetCustomWindowText(LPCWSTR text);
+        std::wstring                            GetAssetFullPath(LPCWSTR assetName);
+        void                                    SetCustomWindowText(LPCWSTR text);
 
 
     private:
-        T100VOID                            LoadShader(T100WSTRING, UINT8**, UINT&);
-        T100VOID                            CreatePipelineState();
-        T100VOID                            LoadMesh();
-        T100VOID                            CreateBuffer();
-        T100VOID                            CreateTexture();
-        T100VOID                            CreateSampler();
+        T100VOID                                LoadShader(T100WSTRING, UINT8**, UINT&);
+        T100VOID                                CreatePipelineState();
+        T100VOID                                LoadMesh();
+        T100VOID                                CreateBuffer();
+        T100VOID                                CreateTexture();
+        T100VOID                                CreateSampler();
 };
 
 #endif // T100DX12BUNDLES_H
