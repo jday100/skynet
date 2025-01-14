@@ -40,7 +40,6 @@ class T100DX12Base
         UINT                                m_width;
         UINT                                m_height;
 
-        T100DX12FrameResource               m_frameResource;
         T100DX12EntityManager               m_entityManager;
 
     protected:

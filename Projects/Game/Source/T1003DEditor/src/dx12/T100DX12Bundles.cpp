@@ -204,6 +204,11 @@ T100VOID T100DX12Bundles::LoadMeshData(UINT8** ppMeshData, UINT& meshDataLength)
     ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(SampleAssets::DataFileName).c_str(), ppMeshData, &meshDataLength));
 }
 
+T100VOID T100DX12Bundles::LoadMesh()
+{
+
+}
+
 T100VOID T100DX12Bundles::CreateVertexBuffer(ComPtr<ID3D12Resource>& vertexBufferUploadHeap, UINT8* pMeshData, UINT meshDataLength)
 {
     CD3DX12_HEAP_PROPERTIES         vertex_heap(D3D12_HEAP_TYPE_DEFAULT);
@@ -617,8 +622,16 @@ T100VOID T100DX12Bundles::FenceSignal()
     m_fenceValue++;
 }
 
+std::wstring T100DX12Bundles::GetAssetFullPath(LPCWSTR assetName)
+{
+    return m_assetsPath + L"..\\..\\resources\\" + assetName;
+}
 
-
+void T100DX12Bundles::SetCustomWindowText(LPCWSTR text)
+{
+    std::wstring windowText = m_title + L": " + text;
+    SetWindowTextW(m_hwnd, windowText.c_str());
+}
 
 
 

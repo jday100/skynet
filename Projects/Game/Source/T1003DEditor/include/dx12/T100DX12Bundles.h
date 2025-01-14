@@ -2,6 +2,9 @@
 #define T100DX12BUNDLES_H
 
 #include "T100DX12Base.h"
+#include "T100DX12Timer.h"
+#include "T100DX12Camera.h"
+#include "T100DX12FrameResource.h"
 
 class T100DX12Bundles : public T100DX12Base
 {
@@ -45,12 +48,12 @@ class T100DX12Bundles : public T100DX12Base
         D3D12_VERTEX_BUFFER_VIEW                m_vertexBufferView;
         D3D12_INDEX_BUFFER_VIEW                 m_indexBufferView;
 
+        T100DX12Timer                           m_timer;
+        T100DX12Camera                          m_camera;
+
+
     protected:
         virtual T100VOID                        LoadEntity(T100Entity*);
-
-        virtual T100VOID                        LoadVertexBuffer(T100Entity*);
-        virtual T100VOID                        LoadPixelBuffer(T100Entity*);
-        virtual T100VOID                        LoadTexture(T100Entity*);
 
     protected:
         T100VOID                                CreateRootSignature();
@@ -78,7 +81,6 @@ class T100DX12Bundles : public T100DX12Base
         T100VOID                                ExecuteCommandListRender();
         T100VOID                                SwapChainPresent();
         T100VOID                                FenceSignal();
-        T100VOID                                WaitForPreviousFrame();
 
         std::wstring                            m_assetsPath;
         std::wstring                            m_title;

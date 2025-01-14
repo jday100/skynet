@@ -6,7 +6,6 @@ T100DX12Base::T100DX12Base()
     :m_hwnd(T100NULL),
     m_width(0),
     m_height(0),
-    m_frameResource(),
     m_entityManager(),
     m_useWarpDevice(T100FALSE),
     m_frameIndex(0),
