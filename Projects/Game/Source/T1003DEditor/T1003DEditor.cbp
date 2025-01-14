@@ -88,6 +88,7 @@
 		<Unit filename="include/d3d12/DirectXPackedVector.h" />
 		<Unit filename="include/d3d12/d3dx12.h" />
 		<Unit filename="include/dx12/T100DX12Base.h" />
+		<Unit filename="include/dx12/T100DX12Bundles.h" />
 		<Unit filename="include/dx12/T100DX12EntityManager.h" />
 		<Unit filename="include/dx12/T100DX12FrameResource.h" />
 		<Unit filename="include/dx12/T100DX12Tools.h">
@@ -119,6 +120,7 @@
 		</Unit>
 		<Unit filename="src/3deditor/T1003DEditor.cpp" />
 		<Unit filename="src/dx12/T100DX12Base.cpp" />
+		<Unit filename="src/dx12/T100DX12Bundles.cpp" />
 		<Unit filename="src/dx12/T100DX12EntityManager.cpp" />
 		<Unit filename="src/dx12/T100DX12FrameResource.cpp" />
 		<Unit filename="src/dx12/T100DX12Tools.cpp">

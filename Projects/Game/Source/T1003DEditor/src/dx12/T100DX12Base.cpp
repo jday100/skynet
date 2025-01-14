@@ -63,6 +63,11 @@ T100VOID T100DX12Base::Stop()
 
 }
 
+T100VOID T100DX12Base::Append(T100Entity* entity)
+{
+
+}
+
 T100VOID T100DX12Base::Update()
 {
 
