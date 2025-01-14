@@ -1,7 +1,7 @@
 #ifndef T1003DEDITOR_H
 #define T1003DEDITOR_H
 
-#include "T100DXEntity.h"
+#include "T100DX12Base.h"
 #include "T100Entity.h"
 
 class T1003DEditor
@@ -20,7 +20,7 @@ class T1003DEditor
     protected:
         UINT                        m_width;
         UINT                        m_height;
-        T100DXEntity*               m_dx12          = T100NULL;
+        T100DX12Base*               m_dx12          = T100NULL;
 
     private:
         T100VOID                    init();
