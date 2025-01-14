@@ -71,3 +71,13 @@ T100VOID T1003DEditor::Render()
     UINT8*  buffer  = T100NEW UINT8[size];
     //m_dx12->GetImage(&buffer);
 }
+
+T100VOID T1003DEditor::OnKeyDown(UINT8 key)
+{
+    m_dx12->OnKeyDown(key);
+}
+
+T100VOID T1003DEditor::OnKeyUp(UINT8 key)
+{
+    m_dx12->OnKeyUp(key);
+}

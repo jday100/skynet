@@ -70,12 +70,12 @@ void T1003DEditorMainPanel::OnPaint(wxPaintEvent& event)
 
 void T1003DEditorMainPanel::OnKeyDown(wxKeyEvent& event)
 {
-
+    m_view->getEditor()->OnKeyDown(event.GetKeyCode());
 }
 
 void T1003DEditorMainPanel::OnKeyUp(wxKeyEvent& event)
 {
-
+    m_view->getEditor()->OnKeyUp(event.GetKeyCode());
 }
 
 void T1003DEditorMainPanel::OnLeftDown(wxMouseEvent& event)

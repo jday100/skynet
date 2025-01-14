@@ -35,6 +35,9 @@ class T100DX12Base
 
         virtual T100VOID                    Append(T100Entity*);
 
+        virtual T100VOID                    OnKeyDown(UINT8);
+        virtual T100VOID                    OnKeyUp(UINT8);
+
     protected:
         HWND                                m_hwnd;
         UINT                                m_width;

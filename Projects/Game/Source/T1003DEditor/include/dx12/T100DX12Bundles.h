@@ -17,6 +17,9 @@ class T100DX12Bundles : public T100DX12Base
         virtual T100VOID                        Update();
         virtual T100VOID                        Render();
 
+        virtual T100VOID                        OnKeyDown(UINT8);
+        virtual T100VOID                        OnKeyUp(UINT8);
+
         static const bool                       m_useBundles            = T100TRUE;
         UINT                                    m_cityRowCount          = 10;
         UINT                                    m_cityColumnCount       = 3;

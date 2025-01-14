@@ -52,6 +52,16 @@ T100VOID T100DX12Bundles::Render()
     FenceSignal();
 }
 
+T100VOID T100DX12Bundles::OnKeyDown(UINT8 key)
+{
+    m_camera.OnKeyDown(key);
+}
+
+T100VOID T100DX12Bundles::OnKeyUp(UINT8 key)
+{
+    m_camera.OnKeyUp(key);
+}
+
 T100VOID T100DX12Bundles::LoadPipeline()
 {
     CreateFactory();

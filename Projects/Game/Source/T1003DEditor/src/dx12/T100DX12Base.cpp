@@ -67,6 +67,16 @@ T100VOID T100DX12Base::Append(T100Entity* entity)
 
 }
 
+T100VOID T100DX12Base::OnKeyDown(UINT8 key)
+{
+
+}
+
+T100VOID T100DX12Base::OnKeyUp(UINT8 key)
+{
+
+}
+
 T100VOID T100DX12Base::Update()
 {
 
