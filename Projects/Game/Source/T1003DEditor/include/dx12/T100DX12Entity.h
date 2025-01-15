@@ -11,6 +11,7 @@
 
 #include "T100Common.h"
 #include "T100Entity.h"
+#include "T100City.h"
 
 #include "T100DX12Timer.h"
 #include "T100DX12Camera.h"
@@ -40,9 +41,9 @@ class T100DX12Entity
         virtual T100VOID                        OnKeyDown(UINT8);
         virtual T100VOID                        OnKeyUp(UINT8);
 
-        static const bool                       m_useBundles            = T100TRUE;
-        UINT                                    m_cityRowCount          = 10;
-        UINT                                    m_cityColumnCount       = 3;
+        //static const bool                       m_useBundles            = T100TRUE;
+        //UINT                                    m_cityRowCount          = 10;
+        //UINT                                    m_cityColumnCount       = 3;
 
     protected:
         HWND                                    m_hwnd;
@@ -118,7 +119,7 @@ class T100DX12Entity
         T100VOID                                CreateSwapChain();
         T100VOID                                CreateRtvHeap();
         T100VOID                                CreateDsvHeap();
-        T100VOID                                CreateCbvHeap();
+        T100VOID                                CreateCbvHeap(UINT, UINT);
         T100VOID                                CreateSamplerHeap();
         T100VOID                                CreateCommandAllocator();
 
@@ -127,26 +128,33 @@ class T100DX12Entity
 
         T100VOID                                CreateRootSignature();
         T100VOID                                LoadShader(UINT8**, UINT&, UINT8**, UINT&, UINT8**, UINT&);
-        T100VOID                                CreatePipelineState(UINT8*, UINT, UINT8*, UINT, UINT8*, UINT);
+        T100VOID                                CreatePipelineState(
+                                                                    const D3D12_INPUT_ELEMENT_DESC*, UINT,
+                                                                    UINT8*, UINT,
+                                                                    UINT8*, UINT,
+                                                                    UINT8*, UINT);
         T100VOID                                CreateCommandList();
         T100VOID                                CreateRenderTargetView();
         T100VOID                                LoadMeshData(UINT8**, UINT&);
-        T100VOID                                CreateVertexBuffer(ComPtr<ID3D12Resource>&, UINT8*, UINT);
-        T100VOID                                CreateIndexBuffer(ComPtr<ID3D12Resource>&, UINT8*, UINT);
-        T100VOID                                CreateTexture(UINT&, UINT64&);
-        T100VOID                                CreateSampler(ComPtr<ID3D12Resource>&, UINT8*, UINT, UINT, UINT64);
-        T100VOID                                CreateTextureSRV();
+        T100VOID                                CreateVertexBuffer(
+                                                                   UINT, UINT, UINT,
+                                                                   ComPtr<ID3D12Resource>&, UINT8*, UINT);
+        T100VOID                                CreateIndexBuffer(
+                                                                  UINT, UINT, const DXGI_FORMAT,
+                                                                  ComPtr<ID3D12Resource>&, UINT8*, UINT);
+        T100VOID                                CreateTexture(const T100City::TextureResource*, UINT&, UINT64&);
+        T100VOID                                CreateSampler(const T100City::TextureResource*, ComPtr<ID3D12Resource>&, UINT8*, UINT, UINT, UINT64);
+        T100VOID                                CreateTextureSRV(const T100City::TextureResource*);
         T100VOID                                CreateDepthStencilView();
         T100VOID                                ExecuteCommandList();
         T100VOID                                CreateFence();
-        T100VOID                                CreateFrameResources();
 
         T100VOID                                UpdateFrameTimer();
         T100VOID                                UpdateFence();
         T100VOID                                UpdateCamera();
         T100VOID                                UpdateFrameResource();
 
-        T100VOID                                PopulateCommandList(T100DX12FrameResource*);
+        T100VOID                                PopulateCommandList(T100BOOL, T100DX12FrameResource*);
         T100VOID                                ExecuteCommandListRender();
         T100VOID                                SwapChainPresent();
         T100VOID                                FenceSignal();
@@ -164,6 +172,11 @@ class T100DX12Entity
         T100VOID                                CreateCommandListEmpty();
         T100VOID                                PopulateCommandListEmpty();
         T100VOID                                ExecuteCommandListEmpty();
+
+        T100VOID                                LoadShaderFile(T100WSTRING, UINT8**, UINT&);
+        T100VOID                                LoadMeshFile(T100WSTRING, UINT8**, UINT&);
+
+        T100VOID                                CreateFrameResources(UINT, UINT);
 };
 
 #endif // T100DX12ENTITY_H

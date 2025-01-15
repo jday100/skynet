@@ -4,6 +4,7 @@
 #include <atomic>
 #include "T100Entity.h"
 class T100DX12Entity;
+class T100City;
 
 class T100DX12EntityManager
 {
@@ -21,6 +22,8 @@ class T100DX12EntityManager
 
     private:
         std::atomic_bool                    m_empty;
+
+        T100VOID                            LoadCity(T100City*);
 };
 
 #endif // T100DX12ENTITYMANAGER_H

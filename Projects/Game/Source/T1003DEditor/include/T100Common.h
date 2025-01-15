@@ -15,6 +15,7 @@
 #define     T100FLOAT           float
 #define     T100UINT            unsigned int
 
+#define     T100STRING          std::string;
 #define     T100WSTRING         std::wstring
 
 #endif // T100COMMON_H
