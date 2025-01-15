@@ -63,7 +63,7 @@ T100VOID T100DXEntity::Render()
 
 T100VOID T100DXEntity::Append(T100Entity* entity)
 {
-
+    m_entity_manager.Append(entity);
 }
 
 T100VOID T100DXEntity::LoadPipeline()

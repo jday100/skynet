@@ -7,6 +7,7 @@
 
 class T100DXEntity : public T100DXBase
 {
+    friend class T100DXEntityManager;
     public:
         T100DXEntity();
         virtual ~T100DXEntity();
@@ -48,9 +49,32 @@ class T100DXEntity : public T100DXBase
         T100VOID                                LoadPipeline();
         T100VOID                                LoadAssets();
 
+        T100VOID                                CreateRootSignature();
+        T100VOID                                CreatePipelineState(
+                                                                    const D3D12_INPUT_ELEMENT_DESC*, UINT,
+                                                                    UINT8*, UINT,
+                                                                    UINT8*, UINT,
+                                                                    UINT8*, UINT);
+        T100VOID                                CreateCommandList();
+        T100VOID                                CreateRenderTargetView();
+        T100VOID                                CreateVertexBuffer(
+                                                                   UINT, UINT, UINT,
+                                                                   ComPtr<ID3D12Resource>&, UINT8*, UINT);
+        T100VOID                                CreateIndexBuffer(
+                                                                  UINT, UINT, const DXGI_FORMAT,
+                                                                  ComPtr<ID3D12Resource>&, UINT8*, UINT);
+        T100VOID                                CreateTexture(const T100City::TextureResource*, UINT&, UINT64&);
+        T100VOID                                CreateSampler(const T100City::TextureResource*, ComPtr<ID3D12Resource>&, UINT8*, UINT, UINT, UINT64);
+        T100VOID                                CreateTextureSRV(const T100City::TextureResource*);
+        T100VOID                                CreateDepthStencilView();
+        //T100VOID                                ExecuteCommandList();
+        T100VOID                                CreateFence();
+
         T100VOID                                CreateDsvHeap();
         T100VOID                                CreateCbvHeap(UINT, UINT);
         T100VOID                                CreateSamplerHeap();
+
+        T100VOID                                CreateFrameResources(UINT, UINT);
 
         T100VOID                                UpdateFrameTimer();
         T100VOID                                UpdateFence();
@@ -61,6 +85,9 @@ class T100DXEntity : public T100DXBase
         T100VOID                                ExecuteCommandList();
         T100VOID                                SwapChainPresent();
         T100VOID                                FenceSignal();
+
+        T100VOID                                LoadShaderFile(T100WSTRING, UINT8**, UINT&);
+        T100VOID                                LoadMeshFile(T100WSTRING, UINT8**, UINT&);
 };
 
 #endif // T100DXENTITY_H
