@@ -101,33 +101,7 @@
 		<Unit filename="include/dx12/T100DX12Tools.h">
 			<Option target="Release" />
 		</Unit>
-		<Unit filename="include/dx/T100DX.h">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="include/dx/T100DXAssets.h">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="include/dx/T100DXBase.h">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="include/dx/T100DXBundles.h">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="include/dx/T100DXCamera.h">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="include/dx/T100DXEntity.h">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="include/dx/T100DXResource.h">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="include/dx/T100DXTimer.h">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="include/dx/T100DXTriangle.h">
-			<Option target="Release" />
-		</Unit>
+		<Unit filename="include/dx/T100DXBase.h" />
 		<Unit filename="include/entity/T100City.h" />
 		<Unit filename="include/entity/T100Dot.h" />
 		<Unit filename="include/entity/T100Entity.h" />
@@ -157,33 +131,7 @@
 		<Unit filename="src/dx12/T100DX12Tools.cpp">
 			<Option target="Release" />
 		</Unit>
-		<Unit filename="src/dx/T100DX.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="src/dx/T100DXAssets.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="src/dx/T100DXBase.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="src/dx/T100DXBundles.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="src/dx/T100DXCamera.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="src/dx/T100DXEntity.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="src/dx/T100DXResource.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="src/dx/T100DXTimer.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="src/dx/T100DXTriangle.cpp">
-			<Option target="Release" />
-		</Unit>
+		<Unit filename="src/dx/T100DXBase.cpp" />
 		<Unit filename="src/entity/T100City.cpp" />
 		<Unit filename="src/entity/T100Dot.cpp" />
 		<Unit filename="src/entity/T100Entity.cpp" />

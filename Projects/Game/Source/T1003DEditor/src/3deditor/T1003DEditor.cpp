@@ -13,10 +13,12 @@
 #include "T100DXBase.h"
 #include "T100DXBundles.h"
 #include "T100DXEntity.h"
-*/
 
 #include "T100DX12Bundles.h"
 #include "T100DX12Entity.h"
+*/
+
+#include "T100DXBase.h"
 
 T1003DEditor::T1003DEditor()
 {
@@ -32,7 +34,7 @@ T1003DEditor::~T1003DEditor()
 
 T100VOID T1003DEditor::init()
 {
-    m_dx12  = T100NEW T100DX12Entity();
+    m_dx12  = T100NEW T100DXBase();
 }
 
 T100VOID T1003DEditor::uninit()
@@ -57,7 +59,7 @@ T100VOID T1003DEditor::SetSize(UINT width, UINT height)
 
 T100VOID T1003DEditor::Append(T100Entity* entity)
 {
-    m_dx12->Append(entity);
+    //m_dx12->Append(entity);
 }
 
 T100VOID T1003DEditor::Render()
@@ -74,10 +76,10 @@ T100VOID T1003DEditor::Render()
 
 T100VOID T1003DEditor::OnKeyDown(UINT8 key)
 {
-    m_dx12->OnKeyDown(key);
+    //m_dx12->OnKeyDown(key);
 }
 
 T100VOID T1003DEditor::OnKeyUp(UINT8 key)
 {
-    m_dx12->OnKeyUp(key);
+    //m_dx12->OnKeyUp(key);
 }

@@ -3,7 +3,10 @@
 #include "T100DX12Tools.h"
 
 T100DXBase::T100DXBase() :
-    m_useWarpDevice(T100FALSE)
+    m_useWarpDevice(T100FALSE),
+    m_frameIndex(0),
+    m_rtvDescriptorSize(0),
+    m_fenceValue(0)
 {
     //ctor
 }
@@ -16,12 +19,19 @@ T100DXBase::~T100DXBase()
 T100VOID T100DXBase::Create(HWND hwnd, UINT width, UINT height)
 {
     m_hwnd      = hwnd;
-    SetSize(width, height);
+    m_width     = width;
+    m_height    = height;
 }
 
 T100VOID T100DXBase::Destroy()
 {
 
+}
+
+T100VOID T100DXBase::SetSize(UINT width, UINT height)
+{
+    m_width     = width;
+    m_height    = height;
 }
 
 T100VOID T100DXBase::Start()
@@ -35,12 +45,6 @@ T100VOID T100DXBase::Stop()
 
 }
 
-T100VOID T100DXBase::SetSize(UINT width, UINT height)
-{
-    m_width     = width;
-    m_height    = height;
-}
-
 T100VOID T100DXBase::Update()
 {
 
@@ -52,22 +56,6 @@ T100VOID T100DXBase::Render()
     ExecuteCommandList();
     SwapChainPresent();
     WaitForPreviousFrame();
-}
-
-T100VOID T100DXBase::LoadPipeline()
-{
-    CreateFactory();
-    CreateDevice();
-    CreateCommandQueue();
-    CreateSwapChain();
-    CreateRtvHeap();
-    //CreateDsvHeap();
-    //CreateCbvHeap();
-    //CreateSamplerHeap();
-
-    CreateRenderTargetView();
-
-    CreateCommandAllocator();
 }
 
 T100VOID T100DXBase::CreateFactory()
@@ -242,52 +230,6 @@ T100VOID T100DXBase::CreateRtvHeap()
     m_rtvDescriptorSize     = m_device->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_RTV);
 }
 
-T100VOID T100DXBase::CreateDsvHeap()
-{
-    D3D12_DESCRIPTOR_HEAP_DESC          dsvHeapDesc         = {};
-
-    dsvHeapDesc.NumDescriptors          = 1;
-    dsvHeapDesc.Type                    = D3D12_DESCRIPTOR_HEAP_TYPE_DSV;
-    dsvHeapDesc.Flags                   = D3D12_DESCRIPTOR_HEAP_FLAG_NONE;
-
-    ThrowIfFailed(m_device->CreateDescriptorHeap(
-                                                 &dsvHeapDesc,
-                                                 IID_PPV_ARGS(&m_dsvHeap)
-                                                 ));
-}
-
-T100VOID T100DXBase::CreateCbvHeap()
-{
-    D3D12_DESCRIPTOR_HEAP_DESC          cbvSrvHeapDesc      = {};
-
-    cbvSrvHeapDesc.NumDescriptors       =
-        m_frameCount * m_cityRowCount * m_cityColumnCount
-        + 1;
-    cbvSrvHeapDesc.Type                 = D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV;
-    cbvSrvHeapDesc.Flags                = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
-
-    ThrowIfFailed(m_device->CreateDescriptorHeap(
-                                                 &cbvSrvHeapDesc,
-                                                 IID_PPV_ARGS(&m_cbvSrvHeap)
-                                                 ));
-    m_cbvSrvDescriptorSize      = m_device->GetDescriptorHandleIncrementSize(D3D12_DESCRIPTOR_HEAP_TYPE_CBV_SRV_UAV);
-}
-
-T100VOID T100DXBase::CreateSamplerHeap()
-{
-    D3D12_DESCRIPTOR_HEAP_DESC          samplerHeapDesc     = {};
-
-    samplerHeapDesc.NumDescriptors      = 1;
-    samplerHeapDesc.Type                = D3D12_DESCRIPTOR_HEAP_TYPE_SAMPLER;
-    samplerHeapDesc.Flags               = D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE;
-
-    ThrowIfFailed(m_device->CreateDescriptorHeap(
-                                                 &samplerHeapDesc,
-                                                 IID_PPV_ARGS(&m_samplerHeap)
-                                                 ));
-
-}
-
 T100VOID T100DXBase::CreateRenderTargetView()
 {
     CD3DX12_CPU_DESCRIPTOR_HANDLE       rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart());
@@ -306,6 +248,17 @@ T100VOID T100DXBase::CreateCommandAllocator()
                                                    D3D12_COMMAND_LIST_TYPE_DIRECT,
                                                    IID_PPV_ARGS(&m_commandAllocator)
                                                    ));
+}
+
+T100VOID T100DXBase::LoadPipeline()
+{
+    CreateFactory();
+    CreateDevice();
+    CreateCommandQueue();
+    CreateSwapChain();
+    CreateRtvHeap();
+    CreateRenderTargetView();
+    CreateCommandAllocator();
 }
 
 T100VOID T100DXBase::LoadAssets()
