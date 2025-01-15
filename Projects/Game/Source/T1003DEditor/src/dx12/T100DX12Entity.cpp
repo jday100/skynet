@@ -10,6 +10,7 @@ T100DX12Entity::T100DX12Entity() :
     m_height(0),
     m_entityManager(this),
     m_useWarpDevice(T100FALSE),
+    m_aspectRatio(0),
     m_frameIndex(0),
     m_frameCounter(0),
     m_fenceValue(0),
