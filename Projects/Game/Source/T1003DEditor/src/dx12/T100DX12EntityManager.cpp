@@ -21,11 +21,14 @@ T100VOID T100DX12EntityManager::Append(T100Entity* entity)
     ComPtr<ID3D12Resource>              indexBufferUploadHeap;
     ComPtr<ID3D12Resource>              textureUploadHeap;
 
-    m_dx12->CreateDsvHeap();
-    m_dx12->CreateCbvHeap();
-    m_dx12->CreateSamplerHeap();
+    if(m_empty)
+    {
+        m_dx12->CreateDsvHeap();
+        m_dx12->CreateCbvHeap();
+        m_dx12->CreateSamplerHeap();
 
-    m_dx12->CreateRootSignature();
+        m_dx12->CreateRootSignature();
+    }
 
     {
         UINT8*                  pVertexShaderData;
@@ -57,9 +60,11 @@ T100VOID T100DX12EntityManager::Append(T100Entity* entity)
         delete pPixelShaderData1;
         delete pPixelShaderData2;
     }
-
-    m_dx12->CreateCommandList();
-    m_dx12->CreateRenderTargetView();
+    if(m_empty)
+    {
+        m_dx12->CreateCommandList();
+        m_dx12->CreateRenderTargetView();
+    }
 
     UINT8*              pMeshData;
     UINT                meshDataLength;
@@ -74,10 +79,13 @@ T100VOID T100DX12EntityManager::Append(T100Entity* entity)
     m_dx12->CreateTextureSRV();
     delete pMeshData;
 
-    m_dx12->CreateDepthStencilView();
-    m_dx12->ExecuteCommandList();
-    m_dx12->CreateFence();
-    m_dx12->CreateFrameResources();
+    if(m_empty)
+    {
+        m_dx12->CreateDepthStencilView();
+        m_dx12->ExecuteCommandList();
+        m_dx12->CreateFence();
+        m_dx12->CreateFrameResources();
+    }
 
     m_entities.push_back(entity);
     m_empty = T100FALSE;
