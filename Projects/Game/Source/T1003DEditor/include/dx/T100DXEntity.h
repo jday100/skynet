@@ -39,11 +39,19 @@ class T100DXEntity : public T100DXBase
         ComPtr<ID3D12PipelineState>             m_pipelineState1;
         ComPtr<ID3D12PipelineState>             m_pipelineState2;
 
+        ComPtr<ID3D12Resource>                  m_depthStencil;
+
         CD3DX12_VIEWPORT                        m_viewport;
         CD3DX12_RECT                            m_scissorRect;
 
+        ComPtr<ID3D12Resource>                  m_vertexBuffer;
+        ComPtr<ID3D12Resource>                  m_indexBuffer;
+        ComPtr<ID3D12Resource>                  m_texture;
         D3D12_VERTEX_BUFFER_VIEW                m_vertexBufferView;
         D3D12_INDEX_BUFFER_VIEW                 m_indexBufferView;
+
+    private:
+        std::wstring                            m_assetsPath;
 
     private:
         T100VOID                                LoadPipeline();
@@ -88,6 +96,8 @@ class T100DXEntity : public T100DXBase
 
         T100VOID                                LoadShaderFile(T100WSTRING, UINT8**, UINT&);
         T100VOID                                LoadMeshFile(T100WSTRING, UINT8**, UINT&);
+
+        std::wstring                            GetAssetFullPath(LPCWSTR assetName);
 };
 
 #endif // T100DXENTITY_H

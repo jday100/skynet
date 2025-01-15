@@ -1,5 +1,7 @@
 #include "T100DXFrameResource.h"
 
+#include "T100DX12Tools.h"
+
 T100DXFrameResource::T100DXFrameResource(ID3D12Device* pDevice, UINT cityRowCount, UINT cityColumnCount) :
     m_fenceValue(0),
     m_cityRowCount(cityRowCount),
@@ -44,4 +46,16 @@ void T100DXFrameResource::PopulateCommandList(ID3D12GraphicsCommandList* pComman
             pCommandList->DrawIndexedInstanced(numIndices, 1, 0, 0, 0);
         }
     }
+}
+
+void T100DXFrameResource::InitBundle(ID3D12Device* pDevice, ID3D12PipelineState* pPso1, ID3D12PipelineState* pPso2,
+    UINT frameResourceIndex, UINT numIndices, D3D12_INDEX_BUFFER_VIEW* pIndexBufferViewDesc, D3D12_VERTEX_BUFFER_VIEW* pVertexBufferViewDesc,
+    ID3D12DescriptorHeap* pCbvSrvDescriptorHeap, UINT cbvSrvDescriptorSize, ID3D12DescriptorHeap* pSamplerDescriptorHeap, ID3D12RootSignature* pRootSignature)
+{
+    ThrowIfFailed(pDevice->CreateCommandList(0, D3D12_COMMAND_LIST_TYPE_BUNDLE, m_bundleAllocator.Get(), pPso1, IID_PPV_ARGS(&m_bundle)));
+
+    PopulateCommandList(m_bundle.Get(), pPso1, pPso2, frameResourceIndex, numIndices, pIndexBufferViewDesc,
+        pVertexBufferViewDesc, pCbvSrvDescriptorHeap, cbvSrvDescriptorSize, pSamplerDescriptorHeap, pRootSignature);
+
+    ThrowIfFailed(m_bundle->Close());
 }

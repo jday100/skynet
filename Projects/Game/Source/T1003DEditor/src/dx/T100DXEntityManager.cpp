@@ -117,3 +117,34 @@ T100VOID T100DXEntityManager::LoadCity(T100City* city)
         m_dx12->CreateFrameResources(city->CityRowCount, city->CityColumnCount);
     }
 }
+
+T100VOID T100DXEntity::CreateFrameResources(UINT row, UINT column)
+{
+    CD3DX12_CPU_DESCRIPTOR_HANDLE           cbvSrvHandle(
+                                                         m_cbvSrvHeap->GetCPUDescriptorHandleForHeapStart(),
+                                                         1,
+                                                         m_cbvSrvDescriptorSize);
+    for(UINT i = 0; i < m_frameCount; i++)
+    {
+        T100DXFrameResource* pFrameResource = new T100DXFrameResource(m_device.Get(), row, column);
+
+        UINT64      cbOffset = 0;
+        for(UINT j = 0; j < row; j++)
+        {
+            for(UINT k = 0; k < column; k++)
+            {
+                D3D12_CONSTANT_BUFFER_VIEW_DESC         cbvDesc = {};
+                cbvDesc.BufferLocation      = pFrameResource->m_cbvUploadHeap->GetGPUVirtualAddress() + cbOffset;
+                cbvDesc.SizeInBytes         = sizeof(T100DXFrameResource::SceneConstantBuffer);
+                cbOffset                    += cbvDesc.SizeInBytes;
+                m_device->CreateConstantBufferView(&cbvDesc, cbvSrvHandle);
+                cbvSrvHandle.Offset(m_cbvSrvDescriptorSize);
+            }
+        }
+
+        pFrameResource->InitBundle(m_device.Get(), m_pipelineState1.Get(), m_pipelineState2.Get(), i, m_numIndices, &m_indexBufferView,
+            &m_vertexBufferView, m_cbvSrvHeap.Get(), m_cbvSrvDescriptorSize, m_samplerHeap.Get(), m_rootSignature.Get());
+
+        m_frameResources.push_back(pFrameResource);
+    }
+}
