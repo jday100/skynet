@@ -10,6 +10,7 @@
 #include "d3d12/d3dx12.h"
 
 #include "T100Common.h"
+#include "T100Entity.h"
 
 using Microsoft::WRL::ComPtr;
 
@@ -29,6 +30,8 @@ class T100DXBase
 
         virtual T100VOID                    Update();
         virtual T100VOID                    Render();
+
+        virtual T100VOID                    Append(T100Entity*);
 
     protected:
         HWND                                m_hwnd;

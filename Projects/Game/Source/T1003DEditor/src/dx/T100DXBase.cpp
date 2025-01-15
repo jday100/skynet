@@ -58,6 +58,11 @@ T100VOID T100DXBase::Render()
     WaitForPreviousFrame();
 }
 
+T100VOID T100DXBase::Append(T100Entity* entity)
+{
+
+}
+
 T100VOID T100DXBase::CreateFactory()
 {
     UINT        dxgiFactoryFlags        = 0;

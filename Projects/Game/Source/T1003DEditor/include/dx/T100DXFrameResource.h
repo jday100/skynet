@@ -1,0 +1,44 @@
+#ifndef T100DXFRAMERESOURCE_H
+#define T100DXFRAMERESOURCE_H
+
+#include <d3d12.h>
+#include "d3d12/d3dx12.h"
+#include "d3d12/DirectXMath.h"
+
+using namespace DirectX;
+using Microsoft::WRL::ComPtr;
+
+class T100DXFrameResource
+{
+    public:
+        T100DXFrameResource(ID3D12Device* pDevice, UINT cityRowCount, UINT cityColumnCount);
+        virtual ~T100DXFrameResource();
+
+        struct SceneConstantBuffer
+        {
+            XMFLOAT4X4 mvp;
+            FLOAT padding[48];
+        };
+
+        ComPtr<ID3D12CommandAllocator>              m_commandAllocator;
+        ComPtr<ID3D12CommandAllocator>              m_bundleAllocator;
+        ComPtr<ID3D12GraphicsCommandList>           m_bundle;
+        ComPtr<ID3D12Resource>                      m_cbvUploadHeap;
+        SceneConstantBuffer*                        m_pConstantBuffers;
+        UINT64                                      m_fenceValue;
+
+        std::vector<XMFLOAT4X4>                     m_modelMatrices;
+        UINT                                        m_cityRowCount;
+        UINT                                        m_cityColumnCount;
+
+
+        void PopulateCommandList(ID3D12GraphicsCommandList* pCommandList, ID3D12PipelineState* pPso1, ID3D12PipelineState* pPso2,
+            UINT frameResourceIndex, UINT numIndices, D3D12_INDEX_BUFFER_VIEW* pIndexBufferViewDesc, D3D12_VERTEX_BUFFER_VIEW* pVertexBufferViewDesc,
+            ID3D12DescriptorHeap* pCbvSrvDescriptorHeap, UINT cbvSrvDescriptorSize, ID3D12DescriptorHeap* pSamplerDescriptorHeap, ID3D12RootSignature* pRootSignature);
+
+    protected:
+
+    private:
+};
+
+#endif // T100DXFRAMERESOURCE_H

@@ -102,6 +102,9 @@
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="include/dx/T100DXBase.h" />
+		<Unit filename="include/dx/T100DXEntity.h" />
+		<Unit filename="include/dx/T100DXEntityManager.h" />
+		<Unit filename="include/dx/T100DXFrameResource.h" />
 		<Unit filename="include/entity/T100City.h" />
 		<Unit filename="include/entity/T100Dot.h" />
 		<Unit filename="include/entity/T100Entity.h" />
@@ -132,6 +135,9 @@
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="src/dx/T100DXBase.cpp" />
+		<Unit filename="src/dx/T100DXEntity.cpp" />
+		<Unit filename="src/dx/T100DXEntityManager.cpp" />
+		<Unit filename="src/dx/T100DXFrameResource.cpp" />
 		<Unit filename="src/entity/T100City.cpp" />
 		<Unit filename="src/entity/T100Dot.cpp" />
 		<Unit filename="src/entity/T100Entity.cpp" />
