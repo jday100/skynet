@@ -19,6 +19,7 @@
 
 class T100DX12Entity
 {
+    friend class T100DX12EntityManager;
     public:
         T100DX12Entity();
         virtual ~T100DX12Entity();
@@ -33,6 +34,8 @@ class T100DX12Entity
 
         virtual T100VOID                        Update();
         virtual T100VOID                        Render();
+
+        virtual T100VOID                        Append(T100Entity*);
 
         virtual T100VOID                        OnKeyDown(UINT8);
         virtual T100VOID                        OnKeyUp(UINT8);

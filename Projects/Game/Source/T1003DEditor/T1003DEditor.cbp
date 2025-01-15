@@ -128,6 +128,7 @@
 		<Unit filename="include/dx/T100DXTriangle.h">
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="include/entity/T100City.h" />
 		<Unit filename="include/entity/T100Dot.h" />
 		<Unit filename="include/entity/T100Entity.h" />
 		<Unit filename="include/entity/T100Triangle.h" />
@@ -183,6 +184,7 @@
 		<Unit filename="src/dx/T100DXTriangle.cpp">
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="src/entity/T100City.cpp" />
 		<Unit filename="src/entity/T100Dot.cpp" />
 		<Unit filename="src/entity/T100Entity.cpp" />
 		<Unit filename="src/entity/T100Triangle.cpp" />

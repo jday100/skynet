@@ -8,7 +8,7 @@ T100DX12Entity::T100DX12Entity() :
     m_hwnd(T100NULL),
     m_width(0),
     m_height(0),
-    m_entityManager(),
+    m_entityManager(this),
     m_useWarpDevice(T100FALSE),
     m_frameIndex(0),
     m_frameCounter(0),
@@ -104,6 +104,11 @@ T100VOID T100DX12Entity::Render()
         FenceSignal();
     }
 
+}
+
+T100VOID T100DX12Entity::Append(T100Entity* entity)
+{
+    m_entityManager.Append(entity);
 }
 
 T100VOID T100DX12Entity::OnKeyDown(UINT8 key)
@@ -881,7 +886,7 @@ T100VOID T100DX12Entity::CreateSampler(
 
     m_device->CreateSampler(&samplerDesc, m_samplerHeap->GetCPUDescriptorHandleForHeapStart());
 
-    delete pMeshData;
+    //delete pMeshData;
 }
 
 T100VOID T100DX12Entity::CreateTextureSRV()
