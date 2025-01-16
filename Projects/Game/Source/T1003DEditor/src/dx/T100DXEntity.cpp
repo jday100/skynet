@@ -54,6 +54,8 @@ T100VOID T100DXEntity::Start()
 
     if(m_entityManager.Empty())
     {
+        m_camera.Init({8, 8, 30});
+
         LoadPipelineEmpty();
         LoadAssetsEmpty();
     }
