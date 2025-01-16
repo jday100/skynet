@@ -2,8 +2,6 @@
 
 #include <thread>
 
-#include "T100DXEntity.h"
-
 T1003DEditor::T1003DEditor()
 {
     //ctor
@@ -18,7 +16,7 @@ T1003DEditor::~T1003DEditor()
 
 T100VOID T1003DEditor::init()
 {
-    m_dx12  = T100NEW T100DXEntity();
+    m_dx12  = T100NEW T100DX12();
 }
 
 T100VOID T1003DEditor::uninit()

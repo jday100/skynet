@@ -87,14 +87,8 @@
 		<Unit filename="include/d3d12/DirectXMath.h" />
 		<Unit filename="include/d3d12/DirectXPackedVector.h" />
 		<Unit filename="include/d3d12/d3dx12.h" />
-		<Unit filename="include/dx12/T100DX12Base.h">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="include/dx12/T100DX12Bundles.h">
-			<Option target="Release" />
-		</Unit>
+		<Unit filename="include/dx12/T100DX12.h" />
 		<Unit filename="include/dx12/T100DX12Camera.h" />
-		<Unit filename="include/dx12/T100DX12Entity.h" />
 		<Unit filename="include/dx12/T100DX12EntityManager.h" />
 		<Unit filename="include/dx12/T100DX12FrameResource.h" />
 		<Unit filename="include/dx12/T100DX12Timer.h" />
@@ -122,14 +116,8 @@
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/3deditor/T1003DEditor.cpp" />
-		<Unit filename="src/dx12/T100DX12Base.cpp">
-			<Option target="Release" />
-		</Unit>
-		<Unit filename="src/dx12/T100DX12Bundles.cpp">
-			<Option target="Release" />
-		</Unit>
+		<Unit filename="src/dx12/T100DX12.cpp" />
 		<Unit filename="src/dx12/T100DX12Camera.cpp" />
-		<Unit filename="src/dx12/T100DX12Entity.cpp" />
 		<Unit filename="src/dx12/T100DX12EntityManager.cpp" />
 		<Unit filename="src/dx12/T100DX12FrameResource.cpp" />
 		<Unit filename="src/dx12/T100DX12Timer.cpp" />
