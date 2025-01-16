@@ -25,7 +25,7 @@ T100DXFrameResource::T100DXFrameResource(ID3D12Device* pDevice, UINT cityRowCoun
     CD3DX12_RANGE readRange(0, 0);
     ThrowIfFailed(m_cbvUploadHeap->Map(0, &readRange, reinterpret_cast<void**>(&m_pConstantBuffers)));
 
-    SetCityPositions(8.0f, -8.0f);
+    SetCityPositions(15.0f, -15.0f);
 }
 
 T100DXFrameResource::~T100DXFrameResource()
