@@ -40,6 +40,7 @@ class T1003DEditorMainPanel : public wxPanel
         void                        OnKeyUp(wxKeyEvent& event);
         void                        OnLeftDown(wxMouseEvent& event);
         void                        OnLeftUp(wxMouseEvent& event);
+        void                        OnMouseWheel(wxMouseEvent& event);
 
         T100VOID                    create();
         T100VOID                    destroy();

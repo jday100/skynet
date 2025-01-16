@@ -130,3 +130,15 @@ T100VOID T100DX12EntityManager::LoadCity(T100City* city)
         m_dx12->CreateFrameResources(city->CityRowCount, city->CityColumnCount);
     }
 }
+
+T100VOID T100DX12EntityManager::Reset(INT value)
+{
+    if(value > 0)
+    {
+        m_dx12->ResetFrameResource(1);
+    }
+    else if(value < 0)
+    {
+        m_dx12->ResetFrameResource(-1);
+    }
+}

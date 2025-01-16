@@ -65,3 +65,8 @@ T100VOID T1003DEditor::OnKeyUp(UINT8 key)
 {
     //m_dx12->OnKeyUp(key);
 }
+
+T100VOID T1003DEditor::Reset(INT value)
+{
+    m_dx12->Reset(value);
+}

@@ -41,6 +41,10 @@ class T100DX12
         virtual T100VOID                        OnKeyDown(UINT8);
         virtual T100VOID                        OnKeyUp(UINT8);
 
+        virtual T100VOID                        Reset(INT);
+
+        virtual T100VOID                        ResetFrameResource(INT);
+
     protected:
         HWND                                    m_hwnd;
         UINT                                    m_width;

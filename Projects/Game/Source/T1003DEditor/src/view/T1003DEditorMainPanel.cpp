@@ -12,6 +12,7 @@ BEGIN_EVENT_TABLE(T1003DEditorMainPanel, wxPanel)
     EVT_KEY_UP(T1003DEditorMainPanel::OnKeyUp)
     EVT_LEFT_DOWN(T1003DEditorMainPanel::OnLeftDown)
     EVT_LEFT_UP(T1003DEditorMainPanel::OnLeftUp)
+    EVT_MOUSEWHEEL(T1003DEditorMainPanel::OnMouseWheel)
 END_EVENT_TABLE()
 
 T1003DEditorMainPanel::T1003DEditorMainPanel(wxWindow *parent,
@@ -90,6 +91,14 @@ void T1003DEditorMainPanel::OnLeftDown(wxMouseEvent& event)
 void T1003DEditorMainPanel::OnLeftUp(wxMouseEvent& event)
 {
 
+}
+
+void T1003DEditorMainPanel::OnMouseWheel(wxMouseEvent& event)
+{
+    int i = event.GetWheelRotation() / event.GetWheelDelta();
+
+    m_view->getEditor()->Reset(i);
+    Refresh();
 }
 
 T100VOID T1003DEditorMainPanel::DrawLine(wxDC& dc)

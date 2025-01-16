@@ -43,6 +43,8 @@ class T100DX12FrameResource
 
         void XM_CALLCONV UpdateConstantBuffers(FXMMATRIX view, CXMMATRIX projection);
 
+        void Reset(INT);
+
     protected:
 
     private:

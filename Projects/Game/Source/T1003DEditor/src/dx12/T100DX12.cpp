@@ -123,6 +123,12 @@ T100VOID T100DX12::OnKeyUp(UINT8 key)
     m_camera.OnKeyUp(key);
 }
 
+T100VOID T100DX12::Reset(INT value)
+{
+    m_entityManager.Reset(value);
+}
+
+
 T100VOID T100DX12::LoadPipeline()
 {
     CreateFactory();
@@ -336,6 +342,9 @@ T100VOID T100DX12::CreateDsvHeap()
 T100VOID T100DX12::CreateCbvHeap(UINT row, UINT column)
 {
     D3D12_DESCRIPTOR_HEAP_DESC          cbvSrvHeapDesc      = {};
+
+    //test
+    row     = 100;
 
     cbvSrvHeapDesc.NumDescriptors       =
         m_frameCount * row * column
@@ -1198,5 +1207,16 @@ T100VOID T100DX12::CreateFrameResources(UINT row, UINT column)
             &m_vertexBufferView, m_cbvSrvHeap.Get(), m_cbvSrvDescriptorSize, m_samplerHeap.Get(), m_rootSignature.Get());
 
         m_frameResources.push_back(pFrameResource);
+    }
+}
+
+T100VOID T100DX12::ResetFrameResource(INT value)
+{
+    if(m_entityManager.Empty())return;
+
+    //m_pCurrentFrameResource->Reset(value);
+    for(UINT i = 0; i < m_frameCount; i++)
+    {
+        m_frameResources[i]->Reset(value);
     }
 }

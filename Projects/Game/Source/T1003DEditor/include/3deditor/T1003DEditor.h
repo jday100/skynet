@@ -20,6 +20,8 @@ class T1003DEditor
         virtual T100VOID            OnKeyDown(UINT8);
         virtual T100VOID            OnKeyUp(UINT8);
 
+        virtual T100VOID            Reset(INT);
+
     protected:
         UINT                        m_width;
         UINT                        m_height;

@@ -1,5 +1,7 @@
 #include "T100DX12FrameResource.h"
 
+#include <iostream>
+
 T100DX12FrameResource::T100DX12FrameResource(ID3D12Device* pDevice, UINT cityRowCount, UINT cityColumnCount) :
     m_fenceValue(0),
     m_cityRowCount(cityRowCount),
@@ -109,4 +111,37 @@ void XM_CALLCONV T100DX12FrameResource::UpdateConstantBuffers(FXMMATRIX view, CX
             memcpy(&m_pConstantBuffers[i * m_cityColumnCount + j], &mvp, sizeof(mvp));
         }
     }
+}
+
+void T100DX12FrameResource::Reset(INT value)
+{
+    XMFLOAT4X4      mvp;
+
+    std::cout << m_cityRowCount << " " << m_cityColumnCount << std::endl;
+
+    if(value > 0)
+    {
+        m_cityRowCount++;
+
+        m_modelMatrices.resize(m_cityRowCount * m_cityColumnCount);
+        memcpy(&m_pConstantBuffers[m_cityRowCount * m_cityColumnCount - m_cityColumnCount],
+               &m_pConstantBuffers[m_cityRowCount * m_cityColumnCount - m_cityColumnCount - 1],
+               sizeof(mvp));
+        memcpy(&m_pConstantBuffers[m_cityRowCount * m_cityColumnCount - m_cityColumnCount + 1],
+               &m_pConstantBuffers[m_cityRowCount * m_cityColumnCount - m_cityColumnCount - 1],
+               sizeof(mvp));
+        memcpy(&m_pConstantBuffers[m_cityRowCount * m_cityColumnCount - m_cityColumnCount + 2],
+               &m_pConstantBuffers[m_cityRowCount * m_cityColumnCount - m_cityColumnCount - 1],
+               sizeof(mvp));
+
+    }
+    else if(value < 0)
+    {
+        m_cityRowCount--;
+        m_cityRowCount  = m_cityRowCount == 0 ? 1 : m_cityRowCount;
+
+        m_modelMatrices.resize(m_cityRowCount * m_cityColumnCount);
+    }
+
+
 }
