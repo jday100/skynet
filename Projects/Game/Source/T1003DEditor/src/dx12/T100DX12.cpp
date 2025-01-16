@@ -2,17 +2,20 @@
 
 #include "T100DX12Tools.h"
 
+
 T100DX12::T100DX12() :
     m_hwnd(T100NULL),
     m_width(0),
     m_height(0),
+    m_entityManager(this),
     m_useWarpDevice(T100FALSE),
+    m_aspectRatio(0),
     m_frameIndex(0),
-    m_rtvDescriptorSize(0),
-    m_cbvSrvDescriptorSize(0),
+    m_frameCounter(0),
     m_fenceValue(0),
-    m_fenceEvent(T100NULL),
-    m_entity_manager(this)
+    m_rtvDescriptorSize(0),
+    m_currentFrameResourceIndex(0),
+    m_pCurrentFrameResource(T100NULL)
 {
     //ctor
 }
@@ -50,16 +53,17 @@ T100VOID T100DX12::Start()
     m_viewport      = CD3DX12_VIEWPORT(0.0f, 0.0f, static_cast<float>(m_width), static_cast<float>(m_height));
     m_scissorRect   = CD3DX12_RECT(0, 0, static_cast<LONG>(m_width), static_cast<LONG>(m_height));
 
-    m_camera.Init({15, 8, 30});
-
-
-    if(m_entity_manager.Empty())
+    if(m_entityManager.Empty())
     {
+        m_camera.Init({15, 8, 30});
+
         LoadPipelineEmpty();
         LoadAssetsEmpty();
     }
     else
     {
+        m_camera.Init({15, 8, 30});
+
         LoadPipeline();
         LoadAssets();
     }
@@ -72,32 +76,64 @@ T100VOID T100DX12::Stop()
 
 T100VOID T100DX12::Update()
 {
-    if(m_entity_manager.Empty())
+    if(m_entityManager.Empty())
     {
-        DoUpdate();
+
+    }
+    else
+    {
+        UpdateFrameTimer();
+        UpdateFence();
+        UpdateCamera();
+        UpdateFrameResource();
     }
 }
 
 T100VOID T100DX12::Render()
 {
-    if(m_entity_manager.Empty())
+    if(m_entityManager.Empty())
     {
-        DoRenderEmpty();
+        PopulateCommandListEmpty();
+        ExecuteCommandListEmpty();
+        SwapChainPresent();
+        WaitForPreviousFrame();
     }
     else
     {
-        DoRender();
+        PopulateCommandList(T100TRUE, m_pCurrentFrameResource);
+        ExecuteCommandListRender();
+        SwapChainPresent();
+        FenceSignal();
     }
+
 }
 
 T100VOID T100DX12::Append(T100Entity* entity)
 {
-    m_entity_manager.Append(entity);
+    m_entityManager.Append(entity);
+}
+
+T100VOID T100DX12::OnKeyDown(UINT8 key)
+{
+    m_camera.OnKeyDown(key);
+}
+
+T100VOID T100DX12::OnKeyUp(UINT8 key)
+{
+    m_camera.OnKeyUp(key);
 }
 
 T100VOID T100DX12::LoadPipeline()
 {
-
+    CreateFactory();
+    CreateDevice();
+    CreateCommandQueue();
+    CreateSwapChain();
+    CreateRtvHeap();
+    CreateDsvHeap();
+    CreateCbvHeap(0, 0);
+    CreateSamplerHeap();
+    CreateCommandAllocator();
 }
 
 T100VOID T100DX12::LoadPipelineEmpty()
@@ -109,41 +145,6 @@ T100VOID T100DX12::LoadPipelineEmpty()
     CreateRtvHeap();
     CreateRenderTargetView();
     CreateCommandAllocator();
-}
-
-T100VOID T100DX12::LoadAssets()
-{
-
-}
-
-T100VOID T100DX12::LoadAssetsEmpty()
-{
-    CreateCommandList();
-    CreateFence();
-}
-
-T100VOID T100DX12::DoUpdate()
-{
-    UpdateFrameTimer();
-    UpdateFence();
-    UpdateCamera();
-    UpdateFrameResource();
-}
-
-T100VOID T100DX12::DoRender()
-{
-    PopulateCommandList(T100TRUE, m_pCurrentFrameResource);
-    ExecuteCommandListRender();
-    SwapChainPresent();
-    FenceSignal();
-}
-
-T100VOID T100DX12::DoRenderEmpty()
-{
-    PopulateCommandList();
-    ExecuteCommandList();
-    SwapChainPresent();
-    WaitForPreviousFrame();
 }
 
 T100VOID T100DX12::CreateFactory()
@@ -181,6 +182,81 @@ T100VOID T100DX12::CreateDevice()
                                         IID_PPV_ARGS(&m_device)
                                         ));
     }
+}
+
+_Use_decl_annotations_
+T100VOID T100DX12::GetHardwareAdapter(
+                                          IDXGIFactory1* pFactory,
+                                          IDXGIAdapter1** ppAdapter,
+                                          T100BOOL requestHighPerformanceAdapter
+                                          )
+{
+    *ppAdapter          = T100NULL;
+
+    ComPtr<IDXGIAdapter1>       adapter;
+    ComPtr<IDXGIFactory6>       factory6;
+
+    if(SUCCEEDED(pFactory->QueryInterface(IID_PPV_ARGS(&factory6))))
+    {
+        for(
+            UINT adapterIndex = 0;
+            SUCCEEDED(factory6->EnumAdapterByGpuPreference(
+                                                           adapterIndex,
+                                                           requestHighPerformanceAdapter == T100TRUE ? DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE : DXGI_GPU_PREFERENCE_UNSPECIFIED,
+                                                           IID_PPV_ARGS(&adapter)
+                                                           ));
+            ++adapterIndex
+            )
+        {
+            DXGI_ADAPTER_DESC1          desc;
+            adapter->GetDesc1(&desc);
+
+            if(desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE)
+            {
+                continue;
+            }
+
+            if(SUCCEEDED(D3D12CreateDevice(
+                                           adapter.Get(),
+                                           D3D_FEATURE_LEVEL_12_0,
+                                           __uuidof(ID3D12Device),
+                                           T100NULL
+                                           )))
+            {
+                break;
+            }
+        }
+    }
+
+    if(adapter.Get() == T100NULL)
+    {
+        for(
+            UINT adapterIndex = 0;
+            SUCCEEDED(pFactory->EnumAdapters1(adapterIndex, &adapter));
+            ++adapterIndex
+            )
+        {
+            DXGI_ADAPTER_DESC1          desc;
+            adapter->GetDesc1(&desc);
+
+            if(desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE)
+            {
+                continue;
+            }
+
+            if(SUCCEEDED(D3D12CreateDevice(
+                                           adapter.Get(),
+                                           D3D_FEATURE_LEVEL_12_0,
+                                           __uuidof(ID3D12Device),
+                                           T100NULL
+                                           )))
+            {
+                break;
+            }
+        }
+    }
+
+    *ppAdapter = adapter.Detach();
 }
 
 T100VOID T100DX12::CreateCommandQueue()
@@ -289,18 +365,6 @@ T100VOID T100DX12::CreateSamplerHeap()
 
 }
 
-T100VOID T100DX12::CreateRenderTargetView()
-{
-    CD3DX12_CPU_DESCRIPTOR_HANDLE       rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart());
-
-    for(UINT n = 0; n < m_frameCount; n++)
-    {
-        ThrowIfFailed(m_swapChain->GetBuffer(n, IID_PPV_ARGS(&m_renderTargets[n])));
-        m_device->CreateRenderTargetView(m_renderTargets[n].Get(), T100NULL, rtvHandle);
-        rtvHandle.Offset(1, m_rtvDescriptorSize);
-    }
-}
-
 T100VOID T100DX12::CreateCommandAllocator()
 {
     ThrowIfFailed(m_device->CreateCommandAllocator(
@@ -309,164 +373,172 @@ T100VOID T100DX12::CreateCommandAllocator()
                                                    ));
 }
 
-T100VOID T100DX12::SwapChainPresent()
+T100VOID T100DX12::LoadAssetsSingle()
 {
-    ThrowIfFailed(m_swapChain->Present(1, 0));
-}
+    /*
+    ComPtr<ID3D12Resource>              vertexBufferUploadHeap;
+    ComPtr<ID3D12Resource>              indexBufferUploadHeap;
+    ComPtr<ID3D12Resource>              textureUploadHeap;
 
-T100VOID T100DX12::WaitForPreviousFrame()
-{
-    const UINT64        fence = m_fenceValue;
-    ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), fence));
-    m_fenceValue++;
+    CreateRootSignature();
 
-    if(m_fence->GetCompletedValue() < fence)
     {
-        ThrowIfFailed(m_fence->SetEventOnCompletion(fence, m_fenceEvent));
-        WaitForSingleObject(m_fenceEvent, INFINITE);
+        UINT8*                  pVertexShaderData;
+        UINT8*                  pPixelShaderData1;
+        UINT8*                  pPixelShaderData2;
+        UINT                    vertexShaderDataLength;
+        UINT                    pixelShaderDataLength1;
+        UINT                    pixelShaderDataLength2;
+
+        LoadShader(
+               &pVertexShaderData,
+               vertexShaderDataLength,
+               &pPixelShaderData1,
+               pixelShaderDataLength1,
+               &pPixelShaderData2,
+               pixelShaderDataLength2
+               );
+
+        CreatePipelineState(
+                        pVertexShaderData,
+                        vertexShaderDataLength,
+                        pPixelShaderData1,
+                        pixelShaderDataLength1,
+                        pPixelShaderData2,
+                        pixelShaderDataLength2
+                        );
+
+        delete pVertexShaderData;
+        delete pPixelShaderData1;
+        delete pPixelShaderData2;
     }
 
-    m_frameIndex = m_swapChain->GetCurrentBackBufferIndex();
-}
+    CreateCommandList();
+    CreateRenderTargetView();
 
-T100VOID T100DX12::CreateCommandList()
-{
-    ThrowIfFailed(m_device->CreateCommandList(
-                                              0,
-                                              D3D12_COMMAND_LIST_TYPE_DIRECT,
-                                              m_commandAllocator.Get(),
-                                              T100NULL,
-                                              IID_PPV_ARGS(&m_commandList)
-                                              ));
-    ThrowIfFailed(m_commandList->Close());
-}
+    UINT8*              pMeshData;
+    UINT                meshDataLength;
 
-T100VOID T100DX12::CreateFence()
-{
-    ThrowIfFailed(m_device->CreateFence(
-                                        0,
-                                        D3D12_FENCE_FLAG_NONE,
-                                        IID_PPV_ARGS(&m_fence)
-                                        ));
-    m_fenceValue        = 1;
+    LoadMeshData(&pMeshData, meshDataLength);
+    CreateVertexBuffer(vertexBufferUploadHeap, pMeshData, meshDataLength);
+    CreateIndexBuffer(indexBufferUploadHeap, pMeshData, meshDataLength);
 
-    m_fenceEvent        = CreateEvent(T100NULL, T100FALSE, T100FALSE, T100NULL);
-    if(m_fenceEvent == T100NULL)
     {
-        ThrowIfFailed(HRESULT_FROM_WIN32(GetLastError()));
-    }
-}
 
-T100VOID T100DX12::PopulateCommandList()
-{
-    ThrowIfFailed(m_commandAllocator->Reset());
 
-    ThrowIfFailed(m_commandList->Reset(m_commandAllocator.Get(), m_pipelineState.Get()));
+        UINT    subresourceCount;
+        UINT64  uploadBufferSize;
 
-    CD3DX12_RESOURCE_BARRIER    barrier1 = CD3DX12_RESOURCE_BARRIER::Transition(
-                                                                                m_renderTargets[m_frameIndex].Get(),
-                                                                                D3D12_RESOURCE_STATE_PRESENT,
-                                                                                D3D12_RESOURCE_STATE_RENDER_TARGET
-                                                                                );
-    m_commandList->ResourceBarrier(1, &barrier1);
+        CreateTexture(subresourceCount, uploadBufferSize);
 
-    CD3DX12_CPU_DESCRIPTOR_HANDLE rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_frameIndex, m_rtvDescriptorSize);
+        CD3DX12_HEAP_PROPERTIES         sampler_heap(D3D12_HEAP_TYPE_UPLOAD);
+        CD3DX12_RESOURCE_DESC           sampler_desc        = CD3DX12_RESOURCE_DESC::Buffer(uploadBufferSize);
+        ThrowIfFailed(m_device->CreateCommittedResource(
+            &sampler_heap,
+            D3D12_HEAP_FLAG_NONE,
+            &sampler_desc,
+            D3D12_RESOURCE_STATE_GENERIC_READ,
+            nullptr,
+            IID_PPV_ARGS(&textureUploadHeap)));
 
-    const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
-    m_commandList->ClearRenderTargetView(rtvHandle, clearColor, 0, nullptr);
+        D3D12_SUBRESOURCE_DATA          textureData = {};
+        textureData.pData               = pMeshData + SampleAssets::Textures[0].Data[0].Offset;
+        textureData.RowPitch            = SampleAssets::Textures[0].Data[0].Pitch;
+        textureData.SlicePitch          = SampleAssets::Textures[0].Data[0].Size;
 
-    CD3DX12_RESOURCE_BARRIER    barrier2 = CD3DX12_RESOURCE_BARRIER::Transition(
-                                                                                m_renderTargets[m_frameIndex].Get(),
-                                                                                D3D12_RESOURCE_STATE_RENDER_TARGET,
-                                                                                D3D12_RESOURCE_STATE_PRESENT
-                                                                                );
-    m_commandList->ResourceBarrier(1, &barrier2);
+        UpdateSubresources(m_commandList.Get(), m_texture.Get(), textureUploadHeap.Get(), 0, 0, subresourceCount, &textureData);
+        CD3DX12_RESOURCE_BARRIER        barrier         = CD3DX12_RESOURCE_BARRIER::Transition(m_texture.Get(), D3D12_RESOURCE_STATE_COPY_DEST, D3D12_RESOURCE_STATE_PIXEL_SHADER_RESOURCE);
+        m_commandList->ResourceBarrier(1, &barrier);
 
-    ThrowIfFailed(m_commandList->Close());
-}
+        D3D12_SAMPLER_DESC              samplerDesc = {};
+        samplerDesc.Filter              = D3D12_FILTER_MIN_MAG_MIP_LINEAR;
+        samplerDesc.AddressU            = D3D12_TEXTURE_ADDRESS_MODE_WRAP;
+        samplerDesc.AddressV            = D3D12_TEXTURE_ADDRESS_MODE_WRAP;
+        samplerDesc.AddressW            = D3D12_TEXTURE_ADDRESS_MODE_WRAP;
+        samplerDesc.MinLOD              = 0;
+        samplerDesc.MaxLOD              = D3D12_FLOAT32_MAX;
+        samplerDesc.MipLODBias          = 0.0f;
+        samplerDesc.MaxAnisotropy       = 1;
+        samplerDesc.ComparisonFunc      = D3D12_COMPARISON_FUNC_ALWAYS;
+        m_device->CreateSampler(&samplerDesc, m_samplerHeap->GetCPUDescriptorHandleForHeapStart());
 
-T100VOID T100DX12::ExecuteCommandList()
-{
-    ID3D12CommandList* ppCommandLists[] = {m_commandList.Get()};
-    m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
-
-}
-
-_Use_decl_annotations_
-T100VOID T100DX12::GetHardwareAdapter(
-                                      IDXGIFactory1* pFactory,
-                                      IDXGIAdapter1** ppAdapter,
-                                      T100BOOL requestHighPerformanceAdapter
-                                      )
-{
-    *ppAdapter          = T100NULL;
-
-    ComPtr<IDXGIAdapter1>       adapter;
-    ComPtr<IDXGIFactory6>       factory6;
-
-    if(SUCCEEDED(pFactory->QueryInterface(IID_PPV_ARGS(&factory6))))
-    {
-        for(
-            UINT adapterIndex = 0;
-            SUCCEEDED(factory6->EnumAdapterByGpuPreference(
-                                                           adapterIndex,
-                                                           requestHighPerformanceAdapter == T100TRUE ? DXGI_GPU_PREFERENCE_HIGH_PERFORMANCE : DXGI_GPU_PREFERENCE_UNSPECIFIED,
-                                                           IID_PPV_ARGS(&adapter)
-                                                           ));
-            ++adapterIndex
-            )
-        {
-            DXGI_ADAPTER_DESC1          desc;
-            adapter->GetDesc1(&desc);
-
-            if(desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE)
-            {
-                continue;
-            }
-
-            if(SUCCEEDED(D3D12CreateDevice(
-                                           adapter.Get(),
-                                           D3D_FEATURE_LEVEL_12_0,
-                                           __uuidof(ID3D12Device),
-                                           T100NULL
-                                           )))
-            {
-                break;
-            }
-        }
+        D3D12_SHADER_RESOURCE_VIEW_DESC         srvDesc = {};
+        srvDesc.Shader4ComponentMapping         = D3D12_DEFAULT_SHADER_4_COMPONENT_MAPPING;
+        srvDesc.Format                          = SampleAssets::Textures->Format;
+        srvDesc.ViewDimension                   = D3D12_SRV_DIMENSION_TEXTURE2D;
+        srvDesc.Texture2D.MipLevels             = 1;
+        m_device->CreateShaderResourceView(m_texture.Get(), &srvDesc, m_cbvSrvHeap->GetCPUDescriptorHandleForHeapStart());
     }
 
-    if(adapter.Get() == T100NULL)
-    {
-        for(
-            UINT adapterIndex = 0;
-            SUCCEEDED(pFactory->EnumAdapters1(adapterIndex, &adapter));
-            ++adapterIndex
-            )
-        {
-            DXGI_ADAPTER_DESC1          desc;
-            adapter->GetDesc1(&desc);
+    delete pMeshData;
 
-            if(desc.Flags & DXGI_ADAPTER_FLAG_SOFTWARE)
-            {
-                continue;
-            }
+    CreateDepthStencilView();
 
-            if(SUCCEEDED(D3D12CreateDevice(
-                                           adapter.Get(),
-                                           D3D_FEATURE_LEVEL_12_0,
-                                           __uuidof(ID3D12Device),
-                                           T100NULL
-                                           )))
-            {
-                break;
-            }
-        }
-    }
+    ExecuteCommandList();
 
-    *ppAdapter = adapter.Detach();
+    CreateFence();
+
+    CreateFrameResources(0, 0);
+    */
 }
 
+T100VOID T100DX12::LoadAssets()
+{
+    /*
+    UINT8*          pVertexShaderData;
+    UINT8*          pPixelShaderData1;
+    UINT8*          pPixelShaderData2;
+    UINT            vertexShaderDataLength;
+    UINT            pixelShaderDataLength1;
+    UINT            pixelShaderDataLength2;
+
+    UINT8*          pMeshData;
+    UINT            meshDataLength;
+
+    UINT            subresourceCount;
+    UINT64          uploadBufferSize;
+
+    ComPtr<ID3D12Resource> vertexBufferUploadHeap;
+    ComPtr<ID3D12Resource> indexBufferUploadHeap;
+    ComPtr<ID3D12Resource> textureUploadHeap;
+
+    CreateRootSignature();
+    LoadShader(
+               &pVertexShaderData,
+               vertexShaderDataLength,
+               &pPixelShaderData1,
+               pixelShaderDataLength1,
+               &pPixelShaderData2,
+               pixelShaderDataLength2
+               );
+    CreatePipelineState(
+                        pVertexShaderData,
+                        vertexShaderDataLength,
+                        pPixelShaderData1,
+                        pixelShaderDataLength1,
+                        pPixelShaderData2,
+                        pixelShaderDataLength2
+                        );
+    CreateCommandList();
+    CreateRenderTargetView();
+    LoadMeshData(&pMeshData, meshDataLength);
+    CreateVertexBuffer(vertexBufferUploadHeap, pMeshData, meshDataLength);
+    CreateIndexBuffer(indexBufferUploadHeap, pMeshData, meshDataLength);
+    CreateTexture(subresourceCount, uploadBufferSize);
+    CreateSampler(textureUploadHeap, pMeshData, meshDataLength, subresourceCount, uploadBufferSize);
+    CreateTextureSRV();
+    CreateDepthStencilView();
+    ExecuteCommandList();
+    CreateFence();
+    CreateFrameResources(0, 0);
+    */
+}
+
+T100VOID T100DX12::LoadAssetsEmpty()
+{
+    CreateCommandListEmpty();
+    CreateFence();
+}
 
 T100VOID T100DX12::CreateRootSignature()
 {
@@ -522,19 +594,30 @@ T100VOID T100DX12::CreateRootSignature()
                                                 ));
 }
 
-T100VOID T100DX12::LoadShaderFile(
-                                  T100WSTRING filename,
-                                  UINT8** ppShaderData,
-                                  UINT& shaderDataLength)
+T100VOID T100DX12::LoadShader(
+                                   UINT8** ppVertexShaderData,
+                                   UINT& vertexShaderDataLength,
+                                   UINT8** ppPixelShaderData1,
+                                   UINT& pixelShaderDataLength1,
+                                   UINT8** ppPixelShaderData2,
+                                   UINT& pixelShaderDataLength2)
 {
 
 
     ThrowIfFailed(ReadDataFromFile(
-                                   GetAssetFullPath(filename.c_str()).c_str(),
-                                   ppShaderData,
-                                   &shaderDataLength));
-}
+                                   GetAssetFullPath(L"shader_mesh_simple_vert.cso").c_str(),
+                                   ppVertexShaderData,
+                                   &vertexShaderDataLength));
+    ThrowIfFailed(ReadDataFromFile(
+                                   GetAssetFullPath(L"shader_mesh_simple_pixel.cso").c_str(),
+                                   ppPixelShaderData1,
+                                   &pixelShaderDataLength1));
+    ThrowIfFailed(ReadDataFromFile(
+                                   GetAssetFullPath(L"shader_mesh_alt_pixel.cso").c_str(),
+                                   ppPixelShaderData2,
+                                   &pixelShaderDataLength2));
 
+}
 
 T100VOID T100DX12::CreatePipelineState(
                                              const D3D12_INPUT_ELEMENT_DESC* StandardVertexDescription,
@@ -583,12 +666,40 @@ T100VOID T100DX12::CreatePipelineState(
     //delete pPixelShaderData2;
 }
 
-T100VOID T100DX12::LoadMeshFile(
-                                T100WSTRING filename,
-                                UINT8** ppMeshData,
-                                UINT& meshDataLength)
+T100VOID T100DX12::CreateCommandList()
 {
-    ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(filename.c_str()).c_str(), ppMeshData, &meshDataLength));
+    ThrowIfFailed(m_device->CreateCommandList(
+                                              0,
+                                              D3D12_COMMAND_LIST_TYPE_DIRECT,
+                                              m_commandAllocator.Get(),
+                                              T100NULL,
+                                              IID_PPV_ARGS(&m_commandList)
+                                              ));
+
+}
+
+T100VOID T100DX12::CreateCommandListEmpty()
+{
+    ThrowIfFailed(m_device->CreateCommandList(
+                                              0,
+                                              D3D12_COMMAND_LIST_TYPE_DIRECT,
+                                              m_commandAllocator.Get(),
+                                              T100NULL,
+                                              IID_PPV_ARGS(&m_commandList)
+                                              ));
+    ThrowIfFailed(m_commandList->Close());
+}
+
+T100VOID T100DX12::CreateRenderTargetView()
+{
+    CD3DX12_CPU_DESCRIPTOR_HANDLE           rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart());
+
+    for(UINT i = 0; i < m_frameCount; i++)
+    {
+        ThrowIfFailed(m_swapChain->GetBuffer(i, IID_PPV_ARGS(&m_renderTargets[i])));
+        m_device->CreateRenderTargetView(m_renderTargets[i].Get(), T100NULL, rtvHandle);
+        rtvHandle.Offset(1, m_rtvDescriptorSize);
+    }
 }
 
 T100VOID T100DX12::CreateVertexBuffer(UINT VertexDataSize, UINT VertexDataOffset, UINT StandardVertexStride,
@@ -841,35 +952,38 @@ T100VOID T100DX12::CreateDepthStencilView()
                                      m_dsvHeap->GetCPUDescriptorHandleForHeapStart());
 }
 
-T100VOID T100DX12::CreateFrameResources(UINT row, UINT column)
+T100VOID T100DX12::ExecuteCommandList()
 {
-    CD3DX12_CPU_DESCRIPTOR_HANDLE           cbvSrvHandle(
-                                                         m_cbvSrvHeap->GetCPUDescriptorHandleForHeapStart(),
-                                                         1,
-                                                         m_cbvSrvDescriptorSize);
-    for(UINT i = 0; i < m_frameCount; i++)
+    ThrowIfFailed(m_commandList->Close());
+
+    ID3D12CommandList*      ppCommandLists[] = {m_commandList.Get()};
+
+    m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
+}
+
+T100VOID T100DX12::CreateFence()
+{
+    ThrowIfFailed(m_device->CreateFence(
+                                        m_fenceValue,
+                                        D3D12_FENCE_FLAG_NONE,
+                                        IID_PPV_ARGS(&m_fence)
+                                        ));
+    m_fenceValue++;
+
+    m_fenceEvent        = CreateEvent(T100NULL, T100FALSE, T100FALSE, T100NULL);
+    if(m_fenceEvent == T100NULL)
     {
-        T100DX12FrameResource* pFrameResource = new T100DX12FrameResource(m_device.Get(), row, column);
-
-        UINT64      cbOffset = 0;
-        for(UINT j = 0; j < row; j++)
-        {
-            for(UINT k = 0; k < column; k++)
-            {
-                D3D12_CONSTANT_BUFFER_VIEW_DESC         cbvDesc = {};
-                cbvDesc.BufferLocation      = pFrameResource->m_cbvUploadHeap->GetGPUVirtualAddress() + cbOffset;
-                cbvDesc.SizeInBytes         = sizeof(T100DX12FrameResource::SceneConstantBuffer);
-                cbOffset                    += cbvDesc.SizeInBytes;
-                m_device->CreateConstantBufferView(&cbvDesc, cbvSrvHandle);
-                cbvSrvHandle.Offset(m_cbvSrvDescriptorSize);
-            }
-        }
-
-        pFrameResource->InitBundle(m_device.Get(), m_pipelineState1.Get(), m_pipelineState2.Get(), i, m_numIndices, &m_indexBufferView,
-            &m_vertexBufferView, m_cbvSrvHeap.Get(), m_cbvSrvDescriptorSize, m_samplerHeap.Get(), m_rootSignature.Get());
-
-        m_frameResources.push_back(pFrameResource);
+        ThrowIfFailed(HRESULT_FROM_WIN32(GetLastError()));
     }
+
+    const UINT64 fenceToWaitFor     = m_fenceValue;
+
+    ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), fenceToWaitFor));
+    m_fenceValue++;
+
+    ThrowIfFailed(m_fence->SetEventOnCompletion(fenceToWaitFor, m_fenceEvent));
+    WaitForSingleObject(m_fenceEvent, INFINITE);
+
 }
 
 T100VOID T100DX12::UpdateFrameTimer()
@@ -961,11 +1075,67 @@ T100VOID T100DX12::ExecuteCommandListRender()
     m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
 }
 
+
+T100VOID T100DX12::PopulateCommandListEmpty()
+{
+    ThrowIfFailed(m_commandAllocator->Reset());
+
+    ThrowIfFailed(m_commandList->Reset(m_commandAllocator.Get(), m_pipelineState.Get()));
+
+    CD3DX12_RESOURCE_BARRIER    barrier1 = CD3DX12_RESOURCE_BARRIER::Transition(
+                                                                                m_renderTargets[m_frameIndex].Get(),
+                                                                                D3D12_RESOURCE_STATE_PRESENT,
+                                                                                D3D12_RESOURCE_STATE_RENDER_TARGET
+                                                                                );
+    m_commandList->ResourceBarrier(1, &barrier1);
+
+    CD3DX12_CPU_DESCRIPTOR_HANDLE rtvHandle(m_rtvHeap->GetCPUDescriptorHandleForHeapStart(), m_frameIndex, m_rtvDescriptorSize);
+
+    const float clearColor[] = { 0.0f, 0.2f, 0.4f, 1.0f };
+    m_commandList->ClearRenderTargetView(rtvHandle, clearColor, 0, nullptr);
+
+    CD3DX12_RESOURCE_BARRIER    barrier2 = CD3DX12_RESOURCE_BARRIER::Transition(
+                                                                                m_renderTargets[m_frameIndex].Get(),
+                                                                                D3D12_RESOURCE_STATE_RENDER_TARGET,
+                                                                                D3D12_RESOURCE_STATE_PRESENT
+                                                                                );
+    m_commandList->ResourceBarrier(1, &barrier2);
+
+    ThrowIfFailed(m_commandList->Close());
+}
+
+T100VOID T100DX12::ExecuteCommandListEmpty()
+{
+    ID3D12CommandList* ppCommandLists[] = {m_commandList.Get()};
+    m_commandQueue->ExecuteCommandLists(_countof(ppCommandLists), ppCommandLists);
+}
+
+T100VOID T100DX12::SwapChainPresent()
+{
+    ThrowIfFailed(m_swapChain->Present(1, 0));
+    m_frameIndex = m_swapChain->GetCurrentBackBufferIndex();
+}
+
 T100VOID T100DX12::FenceSignal()
 {
     m_pCurrentFrameResource->m_fenceValue = m_fenceValue;
     ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), m_fenceValue));
     m_fenceValue++;
+}
+
+T100VOID T100DX12::WaitForPreviousFrame()
+{
+    const UINT64        fence = m_fenceValue;
+    ThrowIfFailed(m_commandQueue->Signal(m_fence.Get(), fence));
+    m_fenceValue++;
+
+    if(m_fence->GetCompletedValue() < fence)
+    {
+        ThrowIfFailed(m_fence->SetEventOnCompletion(fence, m_fenceEvent));
+        WaitForSingleObject(m_fenceEvent, INFINITE);
+    }
+
+    m_frameIndex = m_swapChain->GetCurrentBackBufferIndex();
 }
 
 std::wstring T100DX12::GetAssetFullPath(LPCWSTR assetName)
@@ -977,4 +1147,56 @@ void T100DX12::SetCustomWindowText(LPCWSTR text)
 {
     std::wstring windowText = m_title + L": " + text;
     SetWindowTextW(m_hwnd, windowText.c_str());
+}
+
+T100VOID T100DX12::LoadShaderFile(
+                                        T100WSTRING filename,
+                                        UINT8** ppShaderData,
+                                        UINT& shaderDataLength)
+{
+
+
+    ThrowIfFailed(ReadDataFromFile(
+                                   GetAssetFullPath(filename.c_str()).c_str(),
+                                   ppShaderData,
+                                   &shaderDataLength));
+}
+
+T100VOID T100DX12::LoadMeshFile(
+                                      T100WSTRING filename,
+                                      UINT8** ppMeshData,
+                                      UINT& meshDataLength)
+{
+    ThrowIfFailed(ReadDataFromFile(GetAssetFullPath(filename.c_str()).c_str(), ppMeshData, &meshDataLength));
+}
+
+T100VOID T100DX12::CreateFrameResources(UINT row, UINT column)
+{
+    CD3DX12_CPU_DESCRIPTOR_HANDLE           cbvSrvHandle(
+                                                         m_cbvSrvHeap->GetCPUDescriptorHandleForHeapStart(),
+                                                         1,
+                                                         m_cbvSrvDescriptorSize);
+    for(UINT i = 0; i < m_frameCount; i++)
+    {
+        T100DX12FrameResource* pFrameResource = new T100DX12FrameResource(m_device.Get(), row, column);
+
+        UINT64      cbOffset = 0;
+        for(UINT j = 0; j < row; j++)
+        {
+            for(UINT k = 0; k < column; k++)
+            {
+                D3D12_CONSTANT_BUFFER_VIEW_DESC         cbvDesc = {};
+                cbvDesc.BufferLocation      = pFrameResource->m_cbvUploadHeap->GetGPUVirtualAddress() + cbOffset;
+                cbvDesc.SizeInBytes         = sizeof(T100DX12FrameResource::SceneConstantBuffer);
+                cbOffset                    += cbvDesc.SizeInBytes;
+                m_device->CreateConstantBufferView(&cbvDesc, cbvSrvHandle);
+                cbvSrvHandle.Offset(m_cbvSrvDescriptorSize);
+            }
+        }
+
+        pFrameResource->InitBundle(m_device.Get(), m_pipelineState1.Get(), m_pipelineState2.Get(), i, m_numIndices, &m_indexBufferView,
+            &m_vertexBufferView, m_cbvSrvHeap.Get(), m_cbvSrvDescriptorSize, m_samplerHeap.Get(), m_rootSignature.Get());
+
+        m_frameResources.push_back(pFrameResource);
+    }
 }
