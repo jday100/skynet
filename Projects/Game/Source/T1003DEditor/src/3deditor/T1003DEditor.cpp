@@ -20,6 +20,7 @@
 
 #include "T100DXBase.h"
 #include "T100DXEntity.h"
+#include "T100DX12Entity.h"
 
 T1003DEditor::T1003DEditor()
 {
@@ -35,7 +36,7 @@ T1003DEditor::~T1003DEditor()
 
 T100VOID T1003DEditor::init()
 {
-    m_dx12  = T100NEW T100DXEntity();
+    m_dx12  = T100NEW T100DX12Entity();
 }
 
 T100VOID T1003DEditor::uninit()
