@@ -1,26 +1,8 @@
 #include "T1003DEditor.h"
 
 #include <thread>
-/*
-#include "T100DX12.h"
-#include "T100DX12Editor.h"
-#include "T100DX12Entities.h"
-#include "T100DX12Line.h"
-#include "T100DX12Triangle.h"
-#include "T100DX12Renderer.h"
-#include "T100DX12Bundles.h"
 
-#include "T100DXBase.h"
-#include "T100DXBundles.h"
 #include "T100DXEntity.h"
-
-#include "T100DX12Bundles.h"
-#include "T100DX12Entity.h"
-*/
-
-#include "T100DXBase.h"
-#include "T100DXEntity.h"
-#include "T100DX12Entity.h"
 
 T1003DEditor::T1003DEditor()
 {
