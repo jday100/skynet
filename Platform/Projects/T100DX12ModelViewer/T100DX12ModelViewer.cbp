@@ -142,9 +142,9 @@
 		<Unit filename="include/model/SponzaRenderer.h" />
 		<Unit filename="include/model/TextureConvert.h" />
 		<Unit filename="include/model/glTF.h" />
+		<Unit filename="include/model/json.hpp" />
 		<Unit filename="include/modelviewer/Animateable.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="model/json.hpp" />
 		<Unit filename="src/core/BitonicSort.cpp" />
 		<Unit filename="src/core/BuddyAllocator.cpp" />
 		<Unit filename="src/core/BufferManager.cpp" />
