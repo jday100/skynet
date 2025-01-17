@@ -16,6 +16,7 @@
 
 #pragma once
 
+#include "emmintrin.h"
 #include "dx12/DirectXMath.h"
 #include "Common.h"
 
@@ -137,7 +138,13 @@ inline Color Color::FromREC709( void ) const
 inline uint32_t Color::R10G10B10A2( void ) const
 {
     XMVECTOR result = XMVectorRound(XMVectorMultiply(XMVectorSaturate(m_value), XMVectorSet(1023.0f, 1023.0f, 1023.0f, 3.0f)));
-    result = _mm_castsi128_ps(_mm_cvttps_epi32(result));
+    __m128  source;
+    __m128  target;
+
+    source = _mm_loadu_ps(result.vector4_f32);
+    target = _mm_castsi128_ps(_mm_cvttps_epi32(source));
+    _mm_storeu_ps(result.vector4_f32, target);
+
     uint32_t r = XMVectorGetIntX(result);
     uint32_t g = XMVectorGetIntY(result);
     uint32_t b = XMVectorGetIntZ(result);
@@ -148,7 +155,13 @@ inline uint32_t Color::R10G10B10A2( void ) const
 inline uint32_t Color::R8G8B8A8( void ) const
 {
     XMVECTOR result = XMVectorRound(XMVectorMultiply(XMVectorSaturate(m_value), XMVectorReplicate(255.0f)));
-    result = _mm_castsi128_ps(_mm_cvttps_epi32(result));
+    __m128  source;
+    __m128  target;
+
+    source = _mm_loadu_ps(result.vector4_f32);
+    target = _mm_castsi128_ps(_mm_cvttps_epi32(source));
+    _mm_storeu_ps(result.vector4_f32, target);
+
     uint32_t r = XMVectorGetIntX(result);
     uint32_t g = XMVectorGetIntY(result);
     uint32_t b = XMVectorGetIntZ(result);

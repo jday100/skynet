@@ -21,6 +21,7 @@
 #include <float.h>
 #include <map>
 #include <set>
+#include <Functions.inl>
 
 class VariableGroup;
 class TextContext;

@@ -16,6 +16,7 @@
 #include "pch.h"
 #include "Camera.h"
 #include <cmath>
+#include "math.h"
 
 using namespace Math;
 
@@ -53,7 +54,7 @@ void BaseCamera::Update()
 
 void Camera::UpdateProjMatrix( void )
 {
-    float Y = 1.0f / std::tanf( m_VerticalFOV * 0.5f );
+    float Y = 1.0f / tanf( m_VerticalFOV * 0.5f );
     float X = Y * m_AspectRatio;
 
     float Q1, Q2;

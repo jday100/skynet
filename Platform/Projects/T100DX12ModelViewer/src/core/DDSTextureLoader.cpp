@@ -31,7 +31,7 @@
 #include "Utility.h"
 
 struct handle_closer { void operator()(HANDLE h) { if (h) CloseHandle(h); } };
-typedef public std::unique_ptr<void, handle_closer> ScopedHandle;
+typedef std::unique_ptr<void, handle_closer> ScopedHandle;
 inline HANDLE safe_handle( HANDLE h ) { return (h == INVALID_HANDLE_VALUE) ? 0 : h; }
 
 
@@ -49,13 +49,13 @@ static HRESULT LoadTextureDataFromFile( _In_z_ const wchar_t* fileName,
     }
 
     // open the file
-#if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
-    ScopedHandle hFile( safe_handle( CreateFile2( fileName,
-                                                  GENERIC_READ,
-                                                  FILE_SHARE_READ,
-                                                  OPEN_EXISTING,
-                                                  nullptr ) ) );
-#else
+//#if (_WIN32_WINNT >= _WIN32_WINNT_WIN8)
+//    ScopedHandle hFile( safe_handle( CreateFile2( fileName,
+//                                                  GENERIC_READ,
+//                                                  FILE_SHARE_READ,
+//                                                  OPEN_EXISTING,
+//                                                  nullptr ) ) );
+//#else
     ScopedHandle hFile( safe_handle( CreateFileW( fileName,
                                                   GENERIC_READ,
                                                   FILE_SHARE_READ,
@@ -63,7 +63,7 @@ static HRESULT LoadTextureDataFromFile( _In_z_ const wchar_t* fileName,
                                                   OPEN_EXISTING,
                                                   FILE_ATTRIBUTE_NORMAL,
                                                   nullptr ) ) );
-#endif
+//#endif
 
     if ( !hFile )
     {

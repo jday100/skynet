@@ -74,6 +74,7 @@
 #pragma once
 
 #include "GpuBuffer.h"
+#include "CommandContext.h"
 
 namespace BitonicSort
 {

@@ -26,7 +26,7 @@ namespace Utility
     inline void Print( const wchar_t* msg ) { wprintf(L"%ws", msg); }
 #else
     inline void Print( const char* msg ) { OutputDebugStringA(msg); }
-    inline void Print( const wchar_t* msg ) { OutputDebugString(msg); }
+    inline void Print( const wchar_t* msg ) { OutputDebugStringW(msg); }
 #endif
 
     inline void Printf( const char* format, ... )

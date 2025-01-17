@@ -19,6 +19,7 @@
 #include "CommandContext.h"
 #include "EsramAllocator.h"
 #include "TemporalEffects.h"
+#include "ShadowBuffer.h"
 
 namespace Graphics
 {

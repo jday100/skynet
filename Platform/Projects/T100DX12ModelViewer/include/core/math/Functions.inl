@@ -14,6 +14,9 @@
 
 #pragma once
 
+#include "Common.h"
+#include "Scalar.h"
+
 namespace Math
 {
 	// To allow floats to implicitly construct Scalars, we need to clarify these operators and suppress
