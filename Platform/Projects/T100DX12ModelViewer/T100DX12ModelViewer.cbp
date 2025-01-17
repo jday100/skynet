@@ -18,6 +18,8 @@
 					<Add directory="include/modelviewer" />
 					<Add directory="include/core/math" />
 					<Add directory="include/core/util" />
+					<Add directory="build/core" />
+					<Add directory="build/model" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
