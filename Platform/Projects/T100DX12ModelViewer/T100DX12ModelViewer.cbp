@@ -110,6 +110,7 @@
 		<Unit filename="include/core/math/BoundingPlane.h" />
 		<Unit filename="include/core/math/BoundingSphere.h" />
 		<Unit filename="include/core/math/Common.h" />
+		<Unit filename="include/core/math/Frustum.h" />
 		<Unit filename="include/core/math/Functions.inl" />
 		<Unit filename="include/core/math/Matrix3.h" />
 		<Unit filename="include/core/math/Matrix4.h" />
@@ -117,7 +118,6 @@
 		<Unit filename="include/core/math/Random.h" />
 		<Unit filename="include/core/math/Scalar.h" />
 		<Unit filename="include/core/math/Transform.h" />
-		<Unit filename="include/core/math/Trustum.h" />
 		<Unit filename="include/core/math/Vector.h" />
 		<Unit filename="include/core/pch.h" />
 		<Unit filename="include/core/util/CommandLineArg.h" />
@@ -190,8 +190,8 @@
 		<Unit filename="src/core/UploadBuffer.cpp" />
 		<Unit filename="src/core/Utility.cpp" />
 		<Unit filename="src/core/math/BoundingSphere.cpp" />
+		<Unit filename="src/core/math/Frustum.cpp" />
 		<Unit filename="src/core/math/Random.cpp" />
-		<Unit filename="src/core/math/Trustum.cpp" />
 		<Unit filename="src/core/pch.cpp" />
 		<Unit filename="src/core/util/CommandLineArg.cpp" />
 		<Unit filename="src/model/Animation.cpp" />

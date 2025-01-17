@@ -1,11 +1,8 @@
 #include "pch.h"
 
-pch::pch()
-{
-    //ctor
-}
+//
+// pch.cpp
+// Include the standard header and generate the precompiled header.
+//
 
-pch::~pch()
-{
-    //dtor
-}
+#include "pch.h"
