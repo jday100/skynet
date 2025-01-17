@@ -45,9 +45,36 @@
 		</Linker>
 		<Unit filename="include/core/Texture.h" />
 		<Unit filename="include/model/Animation.h" />
+		<Unit filename="include/model/ConstantBuffers.h" />
+		<Unit filename="include/model/IndexOptimizePostTransform.h" />
+		<Unit filename="include/model/LightManager.h" />
+		<Unit filename="include/model/MeshConvert.h" />
+		<Unit filename="include/model/Model.h" />
+		<Unit filename="include/model/ModelH3D.h" />
+		<Unit filename="include/model/ModelLoader.h" />
+		<Unit filename="include/model/ParticleEffects.h" />
+		<Unit filename="include/model/Renderer.h" />
+		<Unit filename="include/model/SponzaRenderer.h" />
+		<Unit filename="include/model/TextureConvert.h" />
+		<Unit filename="include/model/glTF.h" />
+		<Unit filename="include/modelviewer/Animateable.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="model/json.hpp" />
 		<Unit filename="src/core/Texture.cpp" />
 		<Unit filename="src/model/Animation.cpp" />
+		<Unit filename="src/model/BuildH3D.cpp" />
+		<Unit filename="src/model/IndexOptimizePostTransform.cpp" />
+		<Unit filename="src/model/LightManager.cpp" />
+		<Unit filename="src/model/MeshConvert.cpp" />
+		<Unit filename="src/model/Model.cpp" />
+		<Unit filename="src/model/ModelConvert.cpp" />
+		<Unit filename="src/model/ModelH3D.cpp" />
+		<Unit filename="src/model/ModelLoader.cpp" />
+		<Unit filename="src/model/ParticleEffects.cpp" />
+		<Unit filename="src/model/Renderer.cpp" />
+		<Unit filename="src/model/SponzaRenderer.cpp" />
+		<Unit filename="src/model/TextureConvert.cpp" />
+		<Unit filename="src/model/glTF.cpp" />
 		<Unit filename="src/modelviewer/ModelViewer.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
