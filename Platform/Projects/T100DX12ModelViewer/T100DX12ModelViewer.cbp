@@ -13,6 +13,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/core" />
+					<Add directory="include/model" />
+					<Add directory="include/modelviewer" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +25,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/core" />
+					<Add directory="include/model" />
+					<Add directory="include/modelviewer" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -37,7 +43,12 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="include/core/Texture.h" />
+		<Unit filename="include/model/Animation.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/core/Texture.cpp" />
+		<Unit filename="src/model/Animation.cpp" />
+		<Unit filename="src/modelviewer/ModelViewer.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
