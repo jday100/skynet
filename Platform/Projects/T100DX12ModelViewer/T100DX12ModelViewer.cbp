@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add option="-D_XM_NO_INTRINSICS_" />
 					<Add directory="include/core" />
 					<Add directory="include/model" />
 					<Add directory="include/modelviewer" />
@@ -20,6 +21,7 @@
 					<Add directory="include/core/util" />
 					<Add directory="build/core" />
 					<Add directory="build/model" />
+					<Add directory="include" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -123,6 +125,10 @@
 		<Unit filename="include/core/math/Vector.h" />
 		<Unit filename="include/core/pch.h" />
 		<Unit filename="include/core/util/CommandLineArg.h" />
+		<Unit filename="include/dx12/DirectXCollision.h" />
+		<Unit filename="include/dx12/DirectXColors.h" />
+		<Unit filename="include/dx12/DirectXMath.h" />
+		<Unit filename="include/dx12/DirectXPackedVector.h" />
 		<Unit filename="include/model/Animation.h" />
 		<Unit filename="include/model/ConstantBuffers.h" />
 		<Unit filename="include/model/IndexOptimizePostTransform.h" />

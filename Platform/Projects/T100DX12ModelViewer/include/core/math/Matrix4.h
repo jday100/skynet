@@ -14,6 +14,7 @@
 
 #pragma once
 
+#include "Common.h"
 #include "Transform.h"
 
 namespace Math

@@ -14,6 +14,8 @@
 
 #pragma once
 
+#include "pch.h"
+
 class GpuResource
 {
     friend class CommandContext;

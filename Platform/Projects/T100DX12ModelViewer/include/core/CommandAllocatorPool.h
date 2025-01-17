@@ -21,6 +21,8 @@
 #include <mutex>
 #include <stdint.h>
 
+#include "pch.h"
+
 class CommandAllocatorPool
 {
 public:

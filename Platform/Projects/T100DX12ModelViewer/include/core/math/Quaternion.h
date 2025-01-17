@@ -14,6 +14,7 @@
 #pragma once
 
 #include "Vector.h"
+#include "Common.h"
 
 namespace Math
 {

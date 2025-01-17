@@ -16,7 +16,8 @@
 
 #pragma once
 
-#include <DirectXMath.h>
+#include "dx12/DirectXMath.h"
+#include "Common.h"
 
 using namespace DirectX;
 
