@@ -16,6 +16,8 @@
 					<Add directory="include/core" />
 					<Add directory="include/model" />
 					<Add directory="include/modelviewer" />
+					<Add directory="include/core/math" />
+					<Add directory="include/core/util" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -28,6 +30,8 @@
 					<Add directory="include/core" />
 					<Add directory="include/model" />
 					<Add directory="include/modelviewer" />
+					<Add directory="include/core/math" />
+					<Add directory="include/core/util" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -44,6 +48,21 @@
 			<Add library="comctl32" />
 		</Linker>
 		<Unit filename="include/core/Texture.h" />
+		<Unit filename="include/core/fonts/consola24.h" />
+		<Unit filename="include/core/math/BoundingBox.h" />
+		<Unit filename="include/core/math/BoundingPlane.h" />
+		<Unit filename="include/core/math/BoundingSphere.h" />
+		<Unit filename="include/core/math/Common.h" />
+		<Unit filename="include/core/math/Functions.inl" />
+		<Unit filename="include/core/math/Matrix3.h" />
+		<Unit filename="include/core/math/Matrix4.h" />
+		<Unit filename="include/core/math/Quaternion.h" />
+		<Unit filename="include/core/math/Random.h" />
+		<Unit filename="include/core/math/Scalar.h" />
+		<Unit filename="include/core/math/Transform.h" />
+		<Unit filename="include/core/math/Trustum.h" />
+		<Unit filename="include/core/math/Vector.h" />
+		<Unit filename="include/core/util/CommandLineArg.h" />
 		<Unit filename="include/model/Animation.h" />
 		<Unit filename="include/model/ConstantBuffers.h" />
 		<Unit filename="include/model/IndexOptimizePostTransform.h" />
@@ -61,6 +80,10 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="model/json.hpp" />
 		<Unit filename="src/core/Texture.cpp" />
+		<Unit filename="src/core/math/BoundingSphere.cpp" />
+		<Unit filename="src/core/math/Random.cpp" />
+		<Unit filename="src/core/math/Trustum.cpp" />
+		<Unit filename="src/core/util/CommandLineArg.cpp" />
 		<Unit filename="src/model/Animation.cpp" />
 		<Unit filename="src/model/BuildH3D.cpp" />
 		<Unit filename="src/model/IndexOptimizePostTransform.cpp" />
