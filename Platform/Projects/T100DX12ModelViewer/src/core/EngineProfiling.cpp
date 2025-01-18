@@ -1,5 +1,4 @@
 #include "EngineProfiling.h"
-
 //
 // Copyright (c) Microsoft. All rights reserved.
 // This code is licensed under the MIT License (MIT).
@@ -163,8 +162,7 @@ private:
 class GpuTimer
 {
 public:
-
-    GpuTimer::GpuTimer()
+    GpuTimer()
     {
         m_TimerIndex = GpuTimeManager::NewTimer();
     }
@@ -179,7 +177,7 @@ public:
         GpuTimeManager::StopTimer(Context, m_TimerIndex);
     }
 
-    float GpuTimer::GetTime(void)
+    float GetTime(void)
     {
         return GpuTimeManager::GetTime(m_TimerIndex);
     }

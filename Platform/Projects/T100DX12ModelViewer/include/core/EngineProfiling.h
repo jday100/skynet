@@ -19,6 +19,7 @@
 
 #include <string>
 #include "TextRenderer.h"
+#include "GpuTimeManager.h"
 
 class CommandContext;
 
@@ -63,6 +64,5 @@ private:
     CommandContext* m_Context;
 };
 #endif
-
 
 #endif // ENGINEPROFILING_H

@@ -14,6 +14,7 @@
 //
 
 #include "pch.h"
+#include <algorithm>
 #include "GraphicsCore.h"
 #include "GameCore.h"
 #include "BufferManager.h"

@@ -19,6 +19,7 @@
 #include "GpuBuffer.h"
 #include "ParticleEffectProperties.h"
 #include "ParticleShaderStructs.h"
+#include "CommandContext.h"
 
 class ParticleEffect
 {

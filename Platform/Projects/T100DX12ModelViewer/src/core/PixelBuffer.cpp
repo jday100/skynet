@@ -20,6 +20,7 @@
 #include "BufferManager.h"
 #include "CommandContext.h"
 #include "ReadbackBuffer.h"
+#include <string.h>
 #include <fstream>
 
 using namespace Graphics;
@@ -398,8 +399,10 @@ void PixelBuffer::ExportToFile( const std::wstring& FilePath )
     // Retrieve a CPU-visible pointer to the buffer memory.  Map the whole range for reading.
     void* Memory = TempBuffer.Map();
 
+    std::string fname;
+
     // Open the file and write the header followed by the texel data.
-    std::ofstream OutFile(FilePath, std::ios::out | std::ios::binary);
+    std::ofstream OutFile(fname, std::ios::out | std::ios::binary);
     OutFile.write((const char*)&m_Format, 4);
     OutFile.write((const char*)&RowPitch, 4);
     OutFile.write((const char*)&m_Width, 4);

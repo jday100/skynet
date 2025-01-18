@@ -16,7 +16,7 @@
 
 #pragma once
 
-#include "emmintrin.h"
+#include "intrin.h"
 #include "dx12/DirectXMath.h"
 #include "Common.h"
 
