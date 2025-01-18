@@ -23,6 +23,7 @@
 #include "PostEffects.h"
 #include "Display.h"
 #include "Util/CommandLineArg.h"
+#include "wrl.h"
 #include <shellapi.h>
 
 #pragma comment(lib, "runtimeobject.lib")

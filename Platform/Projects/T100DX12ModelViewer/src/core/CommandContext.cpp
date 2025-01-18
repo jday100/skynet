@@ -550,16 +550,20 @@ uint32_t CommandContext::ReadbackTexture(ReadbackBuffer& DstBuffer, PixelBuffer&
 
     // The footprint may depend on the device of the resource, but we assume there is only one device.
     D3D12_PLACED_SUBRESOURCE_FOOTPRINT PlacedFootprint;
-    g_Device->GetCopyableFootprints(&SrcBuffer.GetResource()->GetDesc(), 0, 1, 0,
+    auto desc = SrcBuffer.GetResource()->GetDesc();
+    g_Device->GetCopyableFootprints(&desc, 0, 1, 0,
         &PlacedFootprint, nullptr, nullptr, &CopySize);
 
     DstBuffer.Create(L"Readback", (uint32_t)CopySize, 1);
 
     TransitionResource(SrcBuffer, D3D12_RESOURCE_STATE_COPY_SOURCE, true);
 
+    CD3DX12_TEXTURE_COPY_LOCATION   dst_texture(DstBuffer.GetResource(), PlacedFootprint);
+    CD3DX12_TEXTURE_COPY_LOCATION   src_texture(SrcBuffer.GetResource(), 0);
+
     m_CommandList->CopyTextureRegion(
-        &CD3DX12_TEXTURE_COPY_LOCATION(DstBuffer.GetResource(), PlacedFootprint), 0, 0, 0,
-        &CD3DX12_TEXTURE_COPY_LOCATION(SrcBuffer.GetResource(), 0), nullptr);
+        &dst_texture, 0, 0, 0,
+        &src_texture, nullptr);
 
     return PlacedFootprint.Footprint.RowPitch;
 }

@@ -19,12 +19,12 @@
 #include "pch.h"
 #include <vector>
 #include <string>
-#include <ppl.h>
+//#include <ppl.h>
 
 namespace Utility
 {
     using namespace std;
-    using namespace concurrency;
+    //using namespace concurrency;
 
     typedef shared_ptr<vector<byte> > ByteArray;
     extern ByteArray NullFile;

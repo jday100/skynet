@@ -19,6 +19,7 @@
 #include "Color.h"
 #include "Math/Vector.h"
 #include <string>
+#include <windows.h>
 
 class Color;
 class GraphicsContext;

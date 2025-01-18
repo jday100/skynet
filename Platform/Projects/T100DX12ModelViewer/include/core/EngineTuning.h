@@ -16,12 +16,13 @@
 
 #pragma once
 
+#include <vector>
 #include <string>
 #include <stdint.h>
 #include <float.h>
 #include <map>
 #include <set>
-#include <Functions.inl>
+#include "functional"
 
 class VariableGroup;
 class TextContext;
@@ -91,7 +92,8 @@ private:
 class NumVar : public EngineVar
 {
 public:
-    NumVar( const std::string& path, float val, float minValue = -FLT_MAX, float maxValue = FLT_MAX, float stepSize = 1.0f, ActionCallback pfnCallback = EngineVar::DefaultActionHandler);
+    NumVar( const std::string& path, float val, float minValue = -FLT_MAX, float maxValue = FLT_MAX, float stepSize = 1.0f,
+           EngineVar::ActionCallback pfnCallback = EngineVar::DefaultActionHandler);
     NumVar& operator=( float val ) { m_Value = Clamp(val); return *this; }
     operator float() const { return m_Value; }
 

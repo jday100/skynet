@@ -18,6 +18,7 @@
 #pragma once
 
 #include "EngineTuning.h"
+#include "CommandContext.h"
 
 namespace DepthOfField
 {

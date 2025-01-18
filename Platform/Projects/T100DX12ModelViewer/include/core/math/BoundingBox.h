@@ -67,7 +67,9 @@ namespace Math
 
         friend OrientedBox operator* (const AffineTransform& xform, const OrientedBox& obb )
         {
-            return (OrientedBox&)(xform * obb.m_repr);
+            OrientedBox     temp;
+            temp.m_repr = (xform * obb.m_repr);
+            return temp;
         }
 
         Vector3 GetDimensions() const { return m_repr.GetX() + m_repr.GetY() + m_repr.GetZ(); }

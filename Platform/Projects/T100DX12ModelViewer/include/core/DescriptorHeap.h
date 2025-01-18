@@ -21,6 +21,7 @@
 #include <vector>
 #include <queue>
 #include <string>
+#include "pch.h"
 
 // This is an unbounded resource descriptor allocator.  It is intended to provide space for CPU-visible
 // resource descriptors as resources are created.  For those that need to be made shader-visible, they
