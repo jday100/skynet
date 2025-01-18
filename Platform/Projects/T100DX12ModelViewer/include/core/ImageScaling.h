@@ -15,6 +15,8 @@
 
 #pragma once
 
+#include <dxgi1_6.h>
+
 class GraphicsContext;
 class ColorBuffer;
 enum DXGI_FORMAT;

@@ -36,7 +36,9 @@ ByteArray ReadFileHelper(const wstring& fileName)
     if (fileExists == -1)
         return NullFile;
 
-    ifstream file( fileName, ios::in | ios::binary );
+    string fname;
+
+    ifstream file( fname, ios::in | ios::binary );
     if (!file)
         return NullFile;
 
@@ -126,6 +128,7 @@ ByteArray DecompressZippedFile( wstring& fileName )
     return DecompressedFile;
 }
 
+/*
 ByteArray Utility::ReadFileSync( const wstring& fileName)
 {
     return ReadFileHelperEx(make_shared<wstring>(fileName));
@@ -136,3 +139,4 @@ task<ByteArray> Utility::ReadFileAsync(const wstring& fileName)
     shared_ptr<wstring> SharedPtr = make_shared<wstring>(fileName);
     return create_task( [=] { return ReadFileHelperEx(SharedPtr); } );
 }
+*/

@@ -35,7 +35,7 @@ namespace Utility
     ByteArray ReadFileSync(const wstring& fileName);
 
     // Same as previous except that it does not block but instead returns a task.
-    task<ByteArray> ReadFileAsync(const wstring& fileName);
+    //task<ByteArray> ReadFileAsync(const wstring& fileName);
 
 } // namespace Utility
 
