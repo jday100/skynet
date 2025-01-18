@@ -19,7 +19,6 @@
 
 namespace Math
 {
-    //class BoundingSphere;
     // Orthonormal basis (just rotation via quaternion) and translation
     class OrthogonalTransform;
 
