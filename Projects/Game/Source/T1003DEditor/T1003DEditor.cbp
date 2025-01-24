@@ -91,6 +91,8 @@
 		<Unit filename="include/dx12/T100DX12Camera.h" />
 		<Unit filename="include/dx12/T100DX12EntityManager.h" />
 		<Unit filename="include/dx12/T100DX12FrameResource.h" />
+		<Unit filename="include/dx12/T100DX12Mesh.h" />
+		<Unit filename="include/dx12/T100DX12MeshManager.h" />
 		<Unit filename="include/dx12/T100DX12Timer.h" />
 		<Unit filename="include/dx12/T100DX12Tools.h">
 			<Option target="Release" />
@@ -120,6 +122,8 @@
 		<Unit filename="src/dx12/T100DX12Camera.cpp" />
 		<Unit filename="src/dx12/T100DX12EntityManager.cpp" />
 		<Unit filename="src/dx12/T100DX12FrameResource.cpp" />
+		<Unit filename="src/dx12/T100DX12Mesh.cpp" />
+		<Unit filename="src/dx12/T100DX12MeshManager.cpp" />
 		<Unit filename="src/dx12/T100DX12Timer.cpp" />
 		<Unit filename="src/dx12/T100DX12Tools.cpp">
 			<Option target="Release" />

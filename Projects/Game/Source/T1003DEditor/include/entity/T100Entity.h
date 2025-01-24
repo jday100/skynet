@@ -21,6 +21,8 @@ class T100Entity
         T100Entity();
         virtual ~T100Entity();
 
+        XMFLOAT3        position;
+
         Vertex*         vertex          = T100NULL;
 
         T100UINT        size            = 0;
