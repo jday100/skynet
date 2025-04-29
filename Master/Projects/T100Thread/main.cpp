@@ -24,9 +24,13 @@ int main()
 
     T100Test    test;
 
-    test.Start();
+    //test.Start();
 
-    test.Waiting();
+    //test.Waiting();
+
+    T100Thread thread(&T100Test::Run, &test);
+
+    thread.Waiting();
 
     return 0;
 }
