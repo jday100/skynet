@@ -13,6 +13,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/console" />
+					<Add directory="include/common" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +24,8 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/console" />
+					<Add directory="include/common" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -31,8 +35,20 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../T100Common/include" />
 		</Compiler>
+		<Unit filename="include/common/T100ConsoleCommon.h" />
+		<Unit filename="include/common/T100GraphicCommon.h" />
+		<Unit filename="include/console/T100AllConsoles.h" />
+		<Unit filename="include/console/T100Console.h" />
+		<Unit filename="include/console/T100ConsoleBase.h" />
+		<Unit filename="include/console/T100ConsoleLinux.h" />
+		<Unit filename="include/console/T100ConsoleWindows.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/console/T100Console.cpp" />
+		<Unit filename="src/console/T100ConsoleBase.cpp" />
+		<Unit filename="src/console/T100ConsoleLinux.cpp" />
+		<Unit filename="src/console/T100ConsoleWindows.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
