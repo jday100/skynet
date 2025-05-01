@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Painter" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100Painter" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/store" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/skeletal" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../build/libT100Win32.a" />
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libgdi32.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Painter" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="include/store" />
+					<Add directory="include/view" />
+					<Add directory="include/serve" />
+					<Add directory="include/skeletal" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../../../Source/T100Win32/include" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/T100Painter.h" />
+		<Unit filename="include/serve/T100PainterServe.h" />
+		<Unit filename="include/skeletal/T100PainterInvoking.h" />
+		<Unit filename="include/store/T100PainterStore.h" />
+		<Unit filename="include/view/T100PainterCanvas.h" />
+		<Unit filename="include/view/T100PainterEntityPanel.h" />
+		<Unit filename="include/view/T100PainterFrame.h" />
+		<Unit filename="include/view/T100PainterMainMenu.h" />
+		<Unit filename="include/view/T100PainterView.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/T100Painter.cpp" />
+		<Unit filename="src/serve/T100PainterServe.cpp" />
+		<Unit filename="src/skeletal/T100PainterInvoking.cpp" />
+		<Unit filename="src/store/T100PainterStore.cpp" />
+		<Unit filename="src/view/T100PainterCanvas.cpp" />
+		<Unit filename="src/view/T100PainterEntityPanel.cpp" />
+		<Unit filename="src/view/T100PainterFrame.cpp" />
+		<Unit filename="src/view/T100PainterMainMenu.cpp" />
+		<Unit filename="src/view/T100PainterView.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

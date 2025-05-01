@@ -2,26 +2,31 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="T100Win32" />
+		<Option title="T100Thread" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/T100Win32" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/T100Thread" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include" />
 				</Compiler>
+				<Linker>
+					<Add library="../../../build/libT100Win32.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/T100Win32" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/T100Thread" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="0" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -30,6 +35,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="../../../Source/T100Win32/include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
@@ -37,9 +43,9 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="include/T100ThreadFrame.h" />
 		<Unit filename="main.cpp" />
-		<Extensions>
-			<lib_finder disable_auto="1" />
-		</Extensions>
+		<Unit filename="src/T100ThreadFrame.cpp" />
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
