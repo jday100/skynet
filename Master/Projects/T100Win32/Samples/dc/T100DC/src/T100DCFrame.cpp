@@ -34,5 +34,13 @@ T100VOID T100DCFrame::OnFramePaint(T100WindowEvent& event)
 {
     T100DC      dc(this);
 
-    dc.DrawLine(T100Point(), T100Point());
+    T100Pen     pen(T100COLOUR_TYPE_RED, 50, T100LINE_SOLID);
+
+    dc.SetPen(&pen);
+
+    dc.DrawLine(T100Point(100, 100), T100Point(300, 300));
+
+    dc.DrawCircle(T100Point(300, 300), 100);
+
+    dc.DrawRoundedRectangle(T100Point(500, 100), T100Size(200, 200), 50);
 }

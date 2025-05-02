@@ -197,6 +197,7 @@ LRESULT CALLBACK T100DefaultWindowProcedure (HWND hwnd, UINT message, WPARAM wPa
         case WM_COMMAND:
         case WM_PAINT:
         case WM_SIZE:
+        case WM_CLOSE:
             {
                 if(handlerPtr){
                     handlerPtr->DispatchMessage(data);

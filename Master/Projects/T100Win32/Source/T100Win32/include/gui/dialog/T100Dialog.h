@@ -1,6 +1,7 @@
 #ifndef T100DIALOG_H
 #define T100DIALOG_H
 
+#include "T100Common.h"
 
 class T100Dialog
 {

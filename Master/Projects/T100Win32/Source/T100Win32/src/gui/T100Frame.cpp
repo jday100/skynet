@@ -18,28 +18,34 @@ T100Frame::~T100Frame()
 
 T100VOID T100Frame::Create(T100WSTRING title, T100UINT width, T100UINT height)
 {
+    HWND        hwnd;
     m_width     = width;
     m_height    = height;
 
-    WNDCLASSEX      wincl;
+    hwnd    = HWND_DESKTOP;
 
-    wincl.hInstance         = T100Win32Application::m_thisInstance;
-    wincl.lpszClassName     = L"T100Frame";
-    wincl.lpfnWndProc       = T100DefaultFrameProcedure;
-    wincl.style             = CS_DBLCLKS;
-    wincl.cbSize            = sizeof(WNDCLASSEX);
+    if(RegisterWindowClass(L"T100Frame")){
 
-    wincl.hIcon             = LoadIcon(NULL, IDI_APPLICATION);
-    wincl.hIconSm           = LoadIcon(NULL, IDI_APPLICATION);
-    wincl.hCursor           = LoadCursor(NULL, IDC_ARROW);
-    wincl.lpszMenuName      = NULL;
-    wincl.cbClsExtra        = 0;
-    wincl.cbWndExtra        = 0;
+        WNDCLASSEX      wincl;
 
-    wincl.hbrBackground     = (HBRUSH)COLOR_BACKGROUND;
+        wincl.hInstance         = T100Win32Application::m_thisInstance;
+        wincl.lpszClassName     = L"T100Frame";
+        wincl.lpfnWndProc       = T100DefaultFrameProcedure;
+        wincl.style             = CS_DBLCLKS;
+        wincl.cbSize            = sizeof(WNDCLASSEX);
 
-    if(!RegisterClassEx(&wincl)){
-        return;
+        wincl.hIcon             = LoadIcon(NULL, IDI_APPLICATION);
+        wincl.hIconSm           = LoadIcon(NULL, IDI_APPLICATION);
+        wincl.hCursor           = LoadCursor(NULL, IDC_ARROW);
+        wincl.lpszMenuName      = NULL;
+        wincl.cbClsExtra        = 0;
+        wincl.cbWndExtra        = 0;
+
+        wincl.hbrBackground     = (HBRUSH)COLOR_BACKGROUND;
+
+        if(!RegisterClassEx(&wincl)){
+            return;
+        }
     }
 
     m_hwnd = CreateWindowEx(
@@ -147,6 +153,7 @@ LRESULT CALLBACK T100DefaultFrameProcedure (HWND hwnd, UINT message, WPARAM wPar
         case WM_COMMAND:
         case WM_PAINT:
         case WM_SIZE:
+        case WM_CLOSE:
             {
                 if(handlerPtr){
                     handlerPtr->DispatchMessage(data);
@@ -159,10 +166,22 @@ LRESULT CALLBACK T100DefaultFrameProcedure (HWND hwnd, UINT message, WPARAM wPar
             {
                 LPCREATESTRUCT pCreateStruct = reinterpret_cast<LPCREATESTRUCT>(lParam);
                 SetWindowLongPtr(hwnd, GWLP_USERDATA, reinterpret_cast<LONG_PTR>(pCreateStruct->lpCreateParams));
+
+                T100EventHandler*       handlerPtr  = reinterpret_cast<T100EventHandler*>(pCreateStruct->lpCreateParams);
+                if(handlerPtr){
+                    T100WindowEvent     event(data);
+                    handlerPtr->ProcessEvent(event);
+                }
             }
             break;
         case WM_DESTROY:
-            PostQuitMessage (0);
+            {
+                if(handlerPtr){
+                    T100WindowEvent     event(data);
+                    handlerPtr->ProcessEvent(event);
+                }
+                PostQuitMessage (0);
+            }
             break;
         default:
             return DefWindowProc (hwnd, message, wParam, lParam);

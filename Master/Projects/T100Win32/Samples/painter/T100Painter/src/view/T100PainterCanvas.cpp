@@ -24,5 +24,5 @@ T100VOID T100PainterCanvas::OnCanvasPaint(T100WindowEvent& event)
 {
     T100DC      dc(this);
 
-    dc.DrawLine(T100Point(), T100Point());
+    dc.DrawLine(T100Point(100, 100), T100Point(300, 300));
 }

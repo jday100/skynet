@@ -30,9 +30,9 @@ T100VOID T100MenuFrame::init()
 
     SetMenuBarPtr(menuBarPtr);
 
-    Connect(T100EVENT_COMMAND, T100MENU_ID_RUN, (T100EVENT_CALL)&T100MenuFrame::OnMenuRun);
+    Connect(T100EVENT_MENU, T100MENU_ID_RUN, (T100EVENT_CALL)&T100MenuFrame::OnMenuRun);
 
-    Connect(T100EVENT_COMMAND, T100MENU_ID_QUIT, (T100EVENT_CALL)&T100MenuFrame::OnMenuQuit);
+    Connect(T100EVENT_MENU, T100MENU_ID_QUIT, (T100EVENT_CALL)&T100MenuFrame::OnMenuQuit);
 }
 
 T100VOID T100MenuFrame::uninit()

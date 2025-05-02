@@ -117,6 +117,32 @@ T100VOID T100EventHandler::ProcessCommand(T100Event& event)
 T100VOID T100EventHandler::ProcessEvent(T100Event& event)
 {
     switch(event.MessageID){
+    case WM_CREATE:
+        {
+            T100EVENT_CALL_DATA     data        = m_events[T100EVENT_WINDOW_CREATE];
+
+            if(data.CALL != 0){
+                if(data.HANDLER){
+                    (data.HANDLER->*data.CALL)(event);
+                }else{
+                    (this->*data.CALL)(event);
+                }
+            }
+        }
+        break;
+    case WM_DESTROY:
+        {
+            T100EVENT_CALL_DATA     data        = m_events[T100EVENT_WINDOW_DESTROY];
+
+            if(data.CALL != 0){
+                if(data.HANDLER){
+                    (data.HANDLER->*data.CALL)(event);
+                }else{
+                    (this->*data.CALL)(event);
+                }
+            }
+        }
+        break;
     case WM_COMMAND:
         {
             T100CommandEvent        cevent;
@@ -162,6 +188,23 @@ T100VOID T100EventHandler::ProcessEvent(T100Event& event)
             }
         }
         break;
+    case WM_CLOSE:
+        {
+            T100EVENT_CALL_DATA     data        = m_events[T100EVENT_WINDOW_CLOSE];
+
+            if(data.CALL != 0){
+                if(data.HANDLER){
+                    (data.HANDLER->*data.CALL)(event);
+                    DefWindowProc(event.WINDOW_HWND, event.MessageID, event.ID, event.FLAGS);
+                }else{
+                    (this->*data.CALL)(event);
+                    DefWindowProc(event.WINDOW_HWND, event.MessageID, event.ID, event.FLAGS);
+                }
+            }else{
+                DefWindowProc(event.WINDOW_HWND, event.MessageID, event.ID, event.FLAGS);
+            }
+        }
+        break;
     }
 }
 
@@ -174,6 +217,11 @@ T100VOID T100EventHandler::DispatchEvent(T100Event& event)
         }
         break;
     case WM_PAINT:
+        {
+            this->ProcessEvent(event);
+        }
+        break;
+    case WM_CLOSE:
         {
             this->ProcessEvent(event);
         }
@@ -218,6 +266,15 @@ T100VOID T100EventHandler::DispatchMessage(T100MESSAGE_DATA& data)
                 HDC hdc = BeginPaint(data.WINDOW_HWND, &ps);
                     // TODO: 在此处添加使用 hdc 的任何绘图代码...
                 EndPaint(data.WINDOW_HWND, &ps);
+            }
+        }
+        break;
+    case WM_CLOSE:
+        {
+            T100EventHandler*       handler         = m_windows[data.WINDOW_HWND];
+            T100WindowEvent         event(data);
+            if(handler){
+                handler->DispatchEvent(event);
             }
         }
         break;

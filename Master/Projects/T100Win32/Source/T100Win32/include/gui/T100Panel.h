@@ -9,6 +9,8 @@ class T100Panel : public T100Window
         T100Panel();
         virtual ~T100Panel();
 
+        T100VOID            Create(T100Window*, T100WSTRING, T100UINT, T100UINT);
+
     protected:
 
     private:

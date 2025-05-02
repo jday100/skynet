@@ -1,13 +1,9 @@
 #ifndef T100DC_H
 #define T100DC_H
 
-#include <windows.h>
-#include "T100Common.h"
-#include "gui/base/T100Point.h"
+#include "gui/dc/T100DCBase.h"
 
-class T100Window;
-
-class T100DC
+class T100DC : public T100DCBase
 {
     public:
         T100DC(T100Window*);
@@ -17,7 +13,7 @@ class T100DC
 
         T100VOID            DrawArc();
         T100VOID            DrawBitmap();
-        T100VOID            DrawCircle();
+        T100VOID            DrawCircle(T100Point, T100UINT);
         T100VOID            DrawEllipse();
         T100VOID            DrawEllipticArc();
         T100VOID            DrawIcon();
@@ -29,14 +25,11 @@ class T100DC
         T100VOID            DrawPolyPolygon();
         T100VOID            DrawRectangle();
         T100VOID            DrawRotatedText();
-        T100VOID            DrawRoundedRectangle();
+        T100VOID            DrawRoundedRectangle(T100Point, T100Size, T100FLOAT);
         T100VOID            DrawSpline();
         T100VOID            DrawText();
 
     protected:
-        T100Window*         m_windowPtr         = T100NULL;
-        HDC                 m_hdc;
-        PAINTSTRUCT         m_paintStruct;
 
     private:
         T100VOID            init();

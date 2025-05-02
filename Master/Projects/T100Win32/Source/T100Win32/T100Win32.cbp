@@ -59,6 +59,7 @@
 					<Add directory="include/gui/listctrl" />
 					<Add directory="include/gui/dock" />
 					<Add directory="include/gui/canvas" />
+					<Add directory="include/gui/base" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -106,9 +107,11 @@
 		</Linker>
 		<Unit filename="include/T100Application.h" />
 		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/T100Start.h" />
 		<Unit filename="include/T100Win32Application.h" />
 		<Unit filename="include/T100Win32Common.h" />
 		<Unit filename="include/common/T100DataTypes.h" />
+		<Unit filename="include/common/T100GraphicCommon.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
 		<Unit filename="include/gui/T100Frame.h" />
 		<Unit filename="include/gui/T100FrameBase.h" />
@@ -117,6 +120,7 @@
 		<Unit filename="include/gui/T100Window.h" />
 		<Unit filename="include/gui/T100WindowBase.h" />
 		<Unit filename="include/gui/base/T100Brush.h" />
+		<Unit filename="include/gui/base/T100Colour.h" />
 		<Unit filename="include/gui/base/T100Pen.h" />
 		<Unit filename="include/gui/base/T100Point.h" />
 		<Unit filename="include/gui/base/T100Size.h" />
@@ -125,7 +129,9 @@
 		<Unit filename="include/gui/ctrls/T100Control.h" />
 		<Unit filename="include/gui/ctrls/button/T100CheckableButton.h" />
 		<Unit filename="include/gui/dc/T100DC.h" />
+		<Unit filename="include/gui/dc/T100DCBase.h" />
 		<Unit filename="include/gui/dialog/T100Dialog.h" />
+		<Unit filename="include/gui/dialog/T100MessageBox.h" />
 		<Unit filename="include/gui/dock/T100DockInfo.h" />
 		<Unit filename="include/gui/dock/T100DockManager.h" />
 		<Unit filename="include/gui/dock/T100DockManagerBase.h" />
@@ -167,6 +173,7 @@
 		<Unit filename="src/gui/T100Window.cpp" />
 		<Unit filename="src/gui/T100WindowBase.cpp" />
 		<Unit filename="src/gui/base/T100Brush.cpp" />
+		<Unit filename="src/gui/base/T100Colour.cpp" />
 		<Unit filename="src/gui/base/T100Pen.cpp" />
 		<Unit filename="src/gui/base/T100Point.cpp" />
 		<Unit filename="src/gui/base/T100Size.cpp" />
@@ -175,7 +182,9 @@
 		<Unit filename="src/gui/ctrls/T100Control.cpp" />
 		<Unit filename="src/gui/ctrls/button/T100CheckableButton.cpp" />
 		<Unit filename="src/gui/dc/T100DC.cpp" />
+		<Unit filename="src/gui/dc/T100DCBase.cpp" />
 		<Unit filename="src/gui/dialog/T100Dialog.cpp" />
+		<Unit filename="src/gui/dialog/T100MessageBox.cpp" />
 		<Unit filename="src/gui/dock/T100DockInfo.cpp" />
 		<Unit filename="src/gui/dock/T100DockManager.cpp" />
 		<Unit filename="src/gui/dock/T100DockManagerBase.cpp" />

@@ -45,9 +45,9 @@ class T100Window : public T100WindowBase
         T100INT             Run();
 
     protected:
-        HWND                    m_hwnd;
-        T100UINT                m_width;
-        T100UINT                m_height;
+        //HWND                    m_hwnd;
+        //T100UINT                m_width;
+        //T100UINT                m_height;
 
         T100Point               m_position;
 

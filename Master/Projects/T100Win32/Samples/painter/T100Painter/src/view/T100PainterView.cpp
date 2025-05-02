@@ -22,7 +22,7 @@ T100VOID T100PainterView::Create()
 
     m_dockManager.SetFramePtr(&m_frame);
 
-    m_entityPanel.Create(&m_frame, L"", 800, 600);
+    m_entityPanel.Create(&m_frame, L"T100Panel", 800, 600);
     m_canvas.Create(&m_frame, L"", 800, 600);
 
     m_dockManager.AddPane(L"entity", &m_entityPanel, T100DockInfo().Left().MinSize(300, -1).BestSize(300, -1));
