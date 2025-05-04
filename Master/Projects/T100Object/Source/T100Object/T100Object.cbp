@@ -35,12 +35,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="include" />
+			<Add directory="include/vessel" />
 		</Compiler>
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/base/T100Object.h" />
 		<Unit filename="include/common/T100DataTypes.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
 		<Unit filename="include/object/T100ObjectTree.h" />
+		<Unit filename="include/vessel/T100Vessel.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/base/T100Object.cpp" />
 		<Unit filename="src/object/T100ObjectTree.cpp" />
