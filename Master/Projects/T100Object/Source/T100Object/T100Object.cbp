@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/base" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/base" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -32,7 +34,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/base/T100Object.h" />
+		<Unit filename="include/common/T100DataTypes.h" />
+		<Unit filename="include/common/T100StringTypes.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/base/T100Object.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
