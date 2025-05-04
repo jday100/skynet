@@ -2,30 +2,28 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="T100Object" />
+		<Option title="T100Vessel" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/T100Object" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/T100Vessel" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include/base" />
-					<Add directory="include/object" />
+					<Add directory="include/vessel" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/T100Object" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/T100Vessel" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="include/base" />
-					<Add directory="include/object" />
+					<Add directory="include/vessel" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,14 +34,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/T100Common.h" />
-		<Unit filename="include/base/T100Object.h" />
-		<Unit filename="include/common/T100DataTypes.h" />
-		<Unit filename="include/common/T100StringTypes.h" />
-		<Unit filename="include/object/T100ObjectTree.h" />
+		<Unit filename="include/vessel/T100Vessel.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/base/T100Object.cpp" />
-		<Unit filename="src/object/T100ObjectTree.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
