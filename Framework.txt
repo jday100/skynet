@@ -1,5 +1,7 @@
 应用程序通用开发框架(Qu's Framework) V4.0
 
+SDSSVI Framework
+
 本框架是对开发工作的抽象，适用于所有开发工作。
 
 框架的架构：
