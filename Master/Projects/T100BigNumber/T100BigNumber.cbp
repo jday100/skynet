@@ -2,31 +2,31 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="T100Test" />
+		<Option title="T100BigNumber" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/T100Test" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/T100BigNumber" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include/test" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
-					<Add library="../../build/libT100Obejct.a" />
+					<Add library="../../build/libT100.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/T100Test" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/T100BigNumber" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="include/test" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,15 +36,11 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="../T100Common/include" />
-			<Add directory="../T100Vessel/include" />
-			<Add directory="../T100Obejct/include" />
-			<Add directory="../T100Console" />
-			<Add directory="../T100Log/include" />
+			<Add directory="../../Source/T100/include" />
 		</Compiler>
-		<Unit filename="include/test/T100Test.h" />
+		<Unit filename="include/T100BigIntegerTest.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/test/T100Test.cpp" />
+		<Unit filename="src/T100BigIntegerTest.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

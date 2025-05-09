@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Win32" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100Win32" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/event" />
+					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/propgrid" />
+					<Add directory="include/gui/treectrl" />
+					<Add directory="include" />
+					<Add directory="include/ctrls" />
+					<Add directory="include/gui/ctrls" />
+					<Add directory="../T100Common/include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Win32" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/event" />
+					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/propgrid" />
+					<Add directory="include/gui/treectrl" />
+					<Add directory="include" />
+					<Add directory="include/ctrls" />
+					<Add directory="include/gui/ctrls" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DUNICODE" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/T100Application.h" />
+		<Unit filename="include/T100Win32Application.h" />
+		<Unit filename="include/T100Win32Common.h" />
+		<Unit filename="include/gui/T100Frame.h" />
+		<Unit filename="include/gui/T100Panel.h" />
+		<Unit filename="include/gui/T100Window.h" />
+		<Unit filename="include/gui/ctrls/T100Button.h" />
+		<Unit filename="include/gui/event/T100CommandEvent.h" />
+		<Unit filename="include/gui/event/T100EventBase.h" />
+		<Unit filename="include/gui/event/T100EventHandler.h" />
+		<Unit filename="include/gui/event/T100MouseEvent.h" />
+		<Unit filename="include/gui/menu/T100Menu.h" />
+		<Unit filename="include/gui/menu/T100MenuBar.h" />
+		<Unit filename="include/gui/menu/T100MenuItem.h" />
+		<Unit filename="include/gui/propgrid/T100PropertyGrid.h" />
+		<Unit filename="include/gui/treectrl/T100TreeCtrl.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/T100Application.cpp" />
+		<Unit filename="src/T100Win32Application.cpp" />
+		<Unit filename="src/gui/T100Frame.cpp" />
+		<Unit filename="src/gui/T100Panel.cpp" />
+		<Unit filename="src/gui/T100Window.cpp" />
+		<Unit filename="src/gui/ctrls/T100Button.cpp" />
+		<Unit filename="src/gui/event/T100CommandEvent.cpp" />
+		<Unit filename="src/gui/event/T100EventBase.cpp" />
+		<Unit filename="src/gui/event/T100EventHandler.cpp" />
+		<Unit filename="src/gui/event/T100MouseEvent.cpp" />
+		<Unit filename="src/gui/menu/T100Menu.cpp" />
+		<Unit filename="src/gui/menu/T100MenuBar.cpp" />
+		<Unit filename="src/gui/menu/T100MenuItem.cpp" />
+		<Unit filename="src/gui/propgrid/T100PropertyGrid.cpp" />
+		<Unit filename="src/gui/treectrl/T100TreeCtrl.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
