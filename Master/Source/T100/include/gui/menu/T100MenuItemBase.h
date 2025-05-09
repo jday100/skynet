@@ -6,7 +6,7 @@
 #include "T100Win32Common.h"
 #include "gui/font/T100Font.h"
 
-class T100MenuItemBase
+class T100MenuItemBase : public T100Class
 {
     public:
         T100MenuItemBase();

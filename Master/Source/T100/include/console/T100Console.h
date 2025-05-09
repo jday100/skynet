@@ -3,7 +3,7 @@
 
 #include "T100ConsoleBase.h"
 
-class T100Console
+class T100Console : public T100Class
 {
     public:
         T100Console(T100CONSOLE_TYPE = T100CONSOLE_TYPE_WINDOWS);

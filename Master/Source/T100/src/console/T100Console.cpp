@@ -3,6 +3,7 @@
 #include "console/T100AllConsoles.h"
 
 T100Console::T100Console(T100CONSOLE_TYPE type) :
+    T100Class(),
     m_type(type)
 {
     //ctor

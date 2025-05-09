@@ -1,6 +1,7 @@
 #include "gui/base/T100Brush.h"
 
-T100Brush::T100Brush()
+T100Brush::T100Brush() :
+    T100Class()
 {
     //ctor
 }

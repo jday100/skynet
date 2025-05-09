@@ -4,8 +4,9 @@
 #include <atomic>
 #include <thread>
 #include "T100Common.h"
+#include "T100Class.h"
 
-class T100Thread
+class T100Thread : public T100Class
 {
     public:
         T100Thread();

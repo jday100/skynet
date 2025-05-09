@@ -9,6 +9,7 @@ T100WINDOW_CLASS_HASH               T100EventHandler::m_windowClass;
 T100IDManager                       T100EventHandler::m_idManager;
 
 T100EventHandler::T100EventHandler() :
+    T100Class(),
     m_menus(),
     m_events(),
     m_commands()

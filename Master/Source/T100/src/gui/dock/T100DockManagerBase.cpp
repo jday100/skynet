@@ -3,6 +3,7 @@
 #include "gui/T100Frame.h"
 
 T100DockManagerBase::T100DockManagerBase() :
+    T100Class(),
     m_children(),
     m_names(),
     m_windows()

@@ -18,7 +18,7 @@ typedef struct T100DOCK_DATA{
 
 class T100Frame;
 
-class T100DockManagerBase
+class T100DockManagerBase : public T100Class
 {
     public:
         T100DockManagerBase();

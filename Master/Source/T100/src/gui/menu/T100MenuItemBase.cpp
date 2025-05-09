@@ -1,6 +1,7 @@
 #include "gui/menu/T100MenuItemBase.h"
 
 T100MenuItemBase::T100MenuItemBase() :
+    T100Class(),
     m_font(),
     m_help()
 {

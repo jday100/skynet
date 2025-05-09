@@ -3,9 +3,10 @@
 
 #include "T100Common.h"
 #include "T100Win32Common.h"
+#include "T100Class.h"
 #include "gui/base/T100Colour.h"
 
-class T100Brush
+class T100Brush : public T100Class
 {
     public:
         T100Brush();

@@ -2,7 +2,8 @@
 
 #include "gui/menu/T100MenuBar.h"
 
-T100Menu::T100Menu(T100MenuBar* menuBar, T100WSTRING label)
+T100Menu::T100Menu(T100MenuBar* menuBar, T100WSTRING label) :
+    T100Class()
 {
     //ctor
     m_menuBar   = menuBar->m_menuBar;

@@ -3,6 +3,7 @@
 #include "gui/T100Window.h"
 
 T100DCBase::T100DCBase(T100Window* parent) :
+    T100Class(),
     m_windowPtr(parent),
     m_paintStruct()
 {

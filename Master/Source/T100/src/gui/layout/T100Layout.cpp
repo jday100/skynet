@@ -1,6 +1,7 @@
 #include "gui/layout/T100Layout.h"
 
-T100Layout::T100Layout()
+T100Layout::T100Layout() :
+    T100Class()
 {
     //ctor
 }

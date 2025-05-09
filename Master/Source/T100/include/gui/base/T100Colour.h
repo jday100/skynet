@@ -2,9 +2,10 @@
 #define T100COLOUR_H
 
 #include "T100Common.h"
+#include "T100Class.h"
 #include "common/T100GraphicCommon.h"
 
-class T100Colour
+class T100Colour : public T100Class
 {
     public:
         T100Colour();

@@ -2,10 +2,11 @@
 #define T100DOCKINFO_H
 
 #include "T100Common.h"
+#include "T100Class.h"
 #include "T100Win32Common.h"
 #include "gui/base/T100Size.h"
 
-class T100DockInfo
+class T100DockInfo : public T100Class
 {
     public:
         T100DockInfo();

@@ -5,7 +5,7 @@
 
 class T100MenuBar;
 
-class T100Menu
+class T100Menu : public T100Class
 {
     friend class T100MenuItem;
     public:

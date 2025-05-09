@@ -1,6 +1,7 @@
 #include "gui/listctrl/T100ListItem.h"
 
-T100ListItem::T100ListItem(T100WSTRING label)
+T100ListItem::T100ListItem(T100WSTRING label) :
+    T100Class()
 {
     //ctor
     m_listItem.mask         = LVIF_TEXT;

@@ -1,6 +1,7 @@
 #include "object/T100ObjectTree.h"
 
-T100ObjectTree::T100ObjectTree(T100Object*)
+T100ObjectTree::T100ObjectTree(T100Object*) :
+    T100Class()
 {
     //ctor
 }

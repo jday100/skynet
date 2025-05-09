@@ -1,6 +1,7 @@
 #include "gui/event/T100EventBase.h"
 
-T100EventBase::T100EventBase()
+T100EventBase::T100EventBase() :
+    T100Class()
 {
     //ctor
 }

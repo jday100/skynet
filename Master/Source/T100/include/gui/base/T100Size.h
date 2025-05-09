@@ -2,8 +2,9 @@
 #define T100SIZE_H
 
 #include "T100Common.h"
+#include "T100Class.h"
 
-class T100Size
+class T100Size : public T100Class
 {
     public:
         T100Size();

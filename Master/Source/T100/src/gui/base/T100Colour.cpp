@@ -2,7 +2,8 @@
 
 #include <windows.h>
 
-T100Colour::T100Colour()
+T100Colour::T100Colour() :
+    T100Class()
 {
     //ctor
 }

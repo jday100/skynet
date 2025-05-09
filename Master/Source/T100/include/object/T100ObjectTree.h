@@ -6,7 +6,7 @@
 
 #define     T100OBJECT_TREE_VESSEL      T100Vessel<T100WSTRING, T100Object*>
 
-class T100ObjectTree
+class T100ObjectTree : public T100Class
 {
     public:
         T100ObjectTree(T100Object*);

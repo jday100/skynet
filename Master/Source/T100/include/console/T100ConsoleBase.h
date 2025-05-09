@@ -4,8 +4,9 @@
 #include "T100Common.h"
 #include "common/T100ConsoleCommon.h"
 #include "common/T100GraphicCommon.h"
+#include "T100Class.h"
 
-class T100ConsoleBase
+class T100ConsoleBase : public T100Class
 {
     public:
         T100ConsoleBase();

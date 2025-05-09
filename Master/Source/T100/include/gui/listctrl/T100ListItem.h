@@ -4,8 +4,9 @@
 #include <windows.h>
 #include <commctrl.h>
 #include "T100Common.h"
+#include "T100Class.h"
 
-class T100ListItem
+class T100ListItem : public T100Class
 {
     friend class T100ListCtrl;
     public:

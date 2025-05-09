@@ -2,6 +2,7 @@
 #define T100EVENTHANDLER_H
 
 #include <unordered_map>
+#include "T100Class.h"
 #include "T100Event.h"
 #include "T100AllEvents.h"
 #include "T100IDManager.h"
@@ -16,7 +17,7 @@ typedef struct{
 #define     T100EVENT_CALL_HASH                     std::unordered_map<T100UINT, T100EVENT_CALL_DATA>
 #define     T100WINDOW_CLASS_HASH                   std::unordered_map<T100WSTRING, T100BOOL>
 
-class T100EventHandler
+class T100EventHandler : public T100Class
 {
     public:
         T100EventHandler();

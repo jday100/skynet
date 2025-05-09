@@ -2,7 +2,8 @@
 
 #include <chrono>
 
-T100Thread::T100Thread()
+T100Thread::T100Thread() :
+    T100Class()
 {
     //ctor
     init();

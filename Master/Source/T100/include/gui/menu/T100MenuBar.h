@@ -3,7 +3,7 @@
 
 #include "T100Menu.h"
 
-class T100MenuBar
+class T100MenuBar : public T100Class
 {
     friend class T100Menu;
     friend class T100Frame;

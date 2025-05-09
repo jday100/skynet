@@ -1,6 +1,7 @@
 #include "gui/base/T100Pen.h"
 
-T100Pen::T100Pen()
+T100Pen::T100Pen() :
+    T100Class()
 {
     //ctor
 }

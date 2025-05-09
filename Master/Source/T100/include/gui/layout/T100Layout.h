@@ -4,7 +4,7 @@
 #include "T100Common.h"
 #include "gui/T100Window.h"
 
-class T100Layout
+class T100Layout : public T100Class
 {
     public:
         T100Layout();

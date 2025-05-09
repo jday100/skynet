@@ -4,7 +4,8 @@
 #include <codecvt>
 
 
-T100Unicode::T100Unicode()
+T100Unicode::T100Unicode() :
+    T100Class()
 {
     //ctor
 }

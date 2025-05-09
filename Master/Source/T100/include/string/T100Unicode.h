@@ -2,8 +2,9 @@
 #define T100UNICODE_H
 
 #include "T100Common.h"
+#include "T100Class.h"
 
-class T100Unicode
+class T100Unicode : public T100Class
 {
     public:
         T100Unicode();

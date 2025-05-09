@@ -10,7 +10,7 @@
 
 class T100Window;
 
-class T100DCBase
+class T100DCBase : public T100Class
 {
     public:
         T100DCBase(T100Window*);

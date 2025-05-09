@@ -1,6 +1,7 @@
 #include "gui/base/T100Size.h"
 
-T100Size::T100Size()
+T100Size::T100Size() :
+    T100Class()
 {
     //ctor
 }

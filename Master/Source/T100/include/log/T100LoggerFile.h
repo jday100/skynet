@@ -1,8 +1,9 @@
 #ifndef T100LOGGERFILE_H
 #define T100LOGGERFILE_H
 
+#include "T100LogBase.h"
 
-class T100LoggerFile
+class T100LoggerFile : public T100LogBase
 {
     public:
         T100LoggerFile();
