@@ -27,12 +27,29 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
+			<Target title="Library">
+				<Option output="../../build/T100String" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="include" />
+			<Add directory="../T100Common/include" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="include/string/T100Unicode.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/string/T100Unicode.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

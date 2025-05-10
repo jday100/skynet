@@ -16,6 +16,9 @@
 					<Add directory="include/base" />
 					<Add directory="include/object" />
 				</Compiler>
+				<Linker>
+					<Add library="../../../../build/libT100Common.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100Object" prefix_auto="1" extension_auto="1" />
@@ -31,20 +34,36 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
+			<Target title="Library">
+				<Option output="../../../../build/T100Object" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/base" />
+					<Add directory="include/object" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../build/libT100Common.a" />
+				</Linker>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 			<Add directory="include" />
 			<Add directory="include/vessel" />
+			<Add directory="../../../T100Common/include" />
+			<Add directory="../../../T100Vessel/Source/T100Vessel/include" />
 		</Compiler>
-		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/base/T100Object.h" />
-		<Unit filename="include/common/T100DataTypes.h" />
-		<Unit filename="include/common/T100StringTypes.h" />
 		<Unit filename="include/object/T100ObjectTree.h" />
-		<Unit filename="include/vessel/T100Vessel.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="src/base/T100Object.cpp" />
 		<Unit filename="src/object/T100ObjectTree.cpp" />
 		<Extensions>

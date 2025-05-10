@@ -13,7 +13,11 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/base" />
 				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100Common.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100Compiler" prefix_auto="1" extension_auto="1" />
@@ -22,17 +26,67 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/base" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../build/T100Compiler" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/base" />
+				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100Common.a" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../T100Common/include" />
+			<Add directory="include" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="include/base/T100BackEnd.h" />
+		<Unit filename="include/base/T100Builder.h" />
+		<Unit filename="include/base/T100Compiler.h" />
+		<Unit filename="include/base/T100Drawer.h" />
+		<Unit filename="include/base/T100FSM.h" />
+		<Unit filename="include/base/T100FrontEnd.h" />
+		<Unit filename="include/base/T100Merger.h" />
+		<Unit filename="include/base/T100MiddleEnd.h" />
+		<Unit filename="include/base/T100Parser.h" />
+		<Unit filename="include/base/T100Scanner.h" />
+		<Unit filename="include/base/T100Sentence.h" />
+		<Unit filename="include/base/T100State.h" />
+		<Unit filename="include/base/T100Token.h" />
+		<Unit filename="include/base/T100Transfer.h" />
+		<Unit filename="include/base/T100classifier.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/base/T100BackEnd.cpp" />
+		<Unit filename="src/base/T100Builder.cpp" />
+		<Unit filename="src/base/T100Compiler.cpp" />
+		<Unit filename="src/base/T100Drawer.cpp" />
+		<Unit filename="src/base/T100FSM.cpp" />
+		<Unit filename="src/base/T100FrontEnd.cpp" />
+		<Unit filename="src/base/T100Merger.cpp" />
+		<Unit filename="src/base/T100MiddleEnd.cpp" />
+		<Unit filename="src/base/T100Parser.cpp" />
+		<Unit filename="src/base/T100Scanner.cpp" />
+		<Unit filename="src/base/T100Sentence.cpp" />
+		<Unit filename="src/base/T100State.cpp" />
+		<Unit filename="src/base/T100Token.cpp" />
+		<Unit filename="src/base/T100Transfer.cpp" />
+		<Unit filename="src/base/T100classifier.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

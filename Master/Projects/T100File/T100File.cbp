@@ -13,7 +13,15 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/file" />
+					<Add directory="include/common" />
+					<Add directory="include/file/text" />
+					<Add directory="include/base" />
 				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100Object.a" />
+					<Add library="../../build/libT100Common.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100File" prefix_auto="1" extension_auto="1" />
@@ -22,17 +30,75 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/file" />
+					<Add directory="include/common" />
+					<Add directory="include/file/text" />
+					<Add directory="include/base" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../build/T100File" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/file" />
+					<Add directory="include/common" />
+					<Add directory="include/file/text" />
+					<Add directory="include/base" />
+				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100Object.a" />
+					<Add library="../../build/libT100Common.a" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../T100Object/Source/T100Object/include" />
+			<Add directory="../T100Vessel/Source/T100Vessel/include" />
+			<Add directory="../T100Common/include" />
+			<Add directory="include" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="include/base/T100Decoder.h" />
+		<Unit filename="include/base/T100Encoder.h" />
+		<Unit filename="include/common/T100FileCommon.h" />
+		<Unit filename="include/file/T100BinaryFile.h" />
+		<Unit filename="include/file/T100DirectoryEntry.h" />
+		<Unit filename="include/file/T100File.h" />
+		<Unit filename="include/file/T100FileAccessor.h" />
+		<Unit filename="include/file/T100FileDecoder.h" />
+		<Unit filename="include/file/T100FileEncoder.h" />
+		<Unit filename="include/file/T100FileReader.h" />
+		<Unit filename="include/file/T100FileWriter.h" />
+		<Unit filename="include/file/T100TextFile.h" />
+		<Unit filename="include/file/text/T100TextFileAccessor.h" />
+		<Unit filename="include/file/text/T100TextFileReader.h" />
+		<Unit filename="include/file/text/T100TextFileWriter.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/base/T100Decoder.cpp" />
+		<Unit filename="src/base/T100Encoder.cpp" />
+		<Unit filename="src/file/T100BinaryFile.cpp" />
+		<Unit filename="src/file/T100DirectoryEntry.cpp" />
+		<Unit filename="src/file/T100File.cpp" />
+		<Unit filename="src/file/T100FileAccessor.cpp" />
+		<Unit filename="src/file/T100FileDecoder.cpp" />
+		<Unit filename="src/file/T100FileEncoder.cpp" />
+		<Unit filename="src/file/T100FileReader.cpp" />
+		<Unit filename="src/file/T100FileWriter.cpp" />
+		<Unit filename="src/file/T100TextFile.cpp" />
+		<Unit filename="src/file/text/T100TextFileAccessor.cpp" />
+		<Unit filename="src/file/text/T100TextFileReader.cpp" />
+		<Unit filename="src/file/text/T100TextFileWriter.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

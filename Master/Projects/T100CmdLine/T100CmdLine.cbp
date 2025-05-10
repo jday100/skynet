@@ -2,31 +2,35 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="T100Test" />
+		<Option title="T100CmdLine" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/T100Test" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/T100CmdLine" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="include/test" />
+					<Add directory="include/cmdline" />
+					<Add directory="include/common" />
 				</Compiler>
 				<Linker>
-					<Add library="../../build/libT100Obejct.a" />
+					<Add library="../../build/libT100File.a" />
+					<Add library="../../build/libT100Common.a" />
+					<Add library="../../build/libT100Compiler.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/T100Test" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/T100CmdLine" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
-					<Add directory="include/test" />
+					<Add directory="include/cmdline" />
+					<Add directory="include/common" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,15 +40,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../T100Compiler/include" />
+			<Add directory="../T100File/include" />
 			<Add directory="../T100Common/include" />
-			<Add directory="../T100Vessel/Source/T100Vessel/include" />
-			<Add directory="../T100Object/Source/T100Object/include" />
-			<Add directory="../T100Console" />
-			<Add directory="../T100Log/include" />
+			<Add directory="include" />
 		</Compiler>
-		<Unit filename="include/test/T100Test.h" />
+		<Unit filename="include/cmdline/T100CmdLine.h" />
+		<Unit filename="include/cmdline/T100CmdLineDecoder.h" />
+		<Unit filename="include/common/T100CmdLineCommon.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/test/T100Test.cpp" />
+		<Unit filename="src/cmdline/T100CmdLine.cpp" />
+		<Unit filename="src/cmdline/T100CmdLineDecoder.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
