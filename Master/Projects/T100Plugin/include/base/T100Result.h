@@ -1,0 +1,14 @@
+#ifndef T100RESULT_H
+#define T100RESULT_H
+
+
+typedef enum{
+    T100RESULT_EXCEPTION    = 0,
+    T100RESULT_SUCCESS      = 1,
+    T100RESULT_FAILURE      = 2
+}T100RESULT;
+
+
+
+
+#endif // T100RESULT_H

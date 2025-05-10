@@ -7,6 +7,8 @@
 #include "log/T100Logger.h"
 //#include "console/T100Console.h"
 
+#include "base/T100Result.h"
+
 #define     T100TEST_VESSEL         T100Vessel<T100WSTRING, T100Test*>
 
 class T100Test : public T100ObjectTree
@@ -24,7 +26,7 @@ class T100Test : public T100ObjectTree
         T100VOID                SetInit(T100BOOL);
         T100VOID                SetUninit(T100BOOL);
 
-        virtual T100BOOL        TestAll();
+        virtual T100RESULT      TestAll();
         virtual T100BOOL        TestUnit(T100WSTRING);
 
         virtual T100VOID        List();
@@ -54,7 +56,7 @@ class T100Test : public T100ObjectTree
         virtual T100VOID        Destroy();
 
         virtual T100VOID        Add();
-        virtual T100BOOL        DoTest();
+        virtual T100RESULT      DoTest();
 
         virtual T100VOID        Out(T100WSTRING);
         virtual T100VOID        OutTestBegin(T100WSTRING&);

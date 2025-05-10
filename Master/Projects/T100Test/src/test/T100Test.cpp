@@ -4,6 +4,9 @@ T100Test::T100Test(T100Test* parent, T100WSTRING name) :
     T100ObjectTree(parent)
 {
     //ctor
+    if(parent){
+        parent->AddChild(name, this);
+    }
 }
 
 T100Test::~T100Test()
@@ -31,9 +34,27 @@ T100VOID T100Test::SetUninit(T100BOOL)
 
 }
 
-T100BOOL T100Test::TestAll()
+T100RESULT T100Test::TestAll()
 {
+    T100RESULT      result      = T100RESULT_SUCCESS;
 
+    for(T100ObjectTree* item : m_children.getVector()){
+        T100Test*   test    = dynamic_cast<T100Test*>(item);
+        if(test){
+            T100RESULT temp = test->TestAll();
+
+            if(temp == T100RESULT_SUCCESS){
+
+            }else{
+                result  = temp;
+            }
+        }
+    }
+
+    if(result != T100RESULT_SUCCESS){
+        return result;
+    }
+    return DoTest();
 }
 
 T100BOOL T100Test::TestUnit(T100WSTRING)
@@ -126,7 +147,7 @@ T100VOID T100Test::Add()
 
 }
 
-T100BOOL T100Test::DoTest()
+T100RESULT T100Test::DoTest()
 {
 
 }
