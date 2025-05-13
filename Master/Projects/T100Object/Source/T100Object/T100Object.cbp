@@ -60,12 +60,14 @@
 		</Compiler>
 		<Unit filename="include/base/T100Object.h" />
 		<Unit filename="include/object/T100ObjectTree.h" />
+		<Unit filename="include/object/T100ObjectTreeNode.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="src/base/T100Object.cpp" />
 		<Unit filename="src/object/T100ObjectTree.cpp" />
+		<Unit filename="src/object/T100ObjectTreeNode.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

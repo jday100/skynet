@@ -1,6 +1,7 @@
 #include "T100LogBase.h"
 
-T100LogBase::T100LogBase()
+T100LogBase::T100LogBase() :
+    T100Class()
 {
     //ctor
 }

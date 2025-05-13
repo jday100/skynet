@@ -37,7 +37,27 @@ T100VOID T100Console::uninit()
     T100SAFE_DELETE(m_consolePtr);
 }
 
-T100VOID T100Console::OutLine(T100WSTRING& msg)
+T100VOID T100Console::SetForegroundColour(T100COLOUR_TYPE type)
+{
+    m_consolePtr->SetForegroundColour(type);
+}
+
+T100COLOUR_TYPE T100Console::GetForegroundColour()
+{
+    return m_consolePtr->GetForegroundColour();
+}
+
+T100VOID T100Console::SetBackgroundColour(T100COLOUR_TYPE type)
+{
+    m_consolePtr->SetBackgroundColour(type);
+}
+
+T100COLOUR_TYPE T100Console::GetBackgroundColour()
+{
+    return m_consolePtr->GetBackgroundColour();
+}
+
+T100VOID T100Console::OutLine(T100WSTRING msg)
 {
     m_consolePtr->OutLine(msg);
 }

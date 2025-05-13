@@ -12,6 +12,8 @@ class T100Win32Capture : public T100Class
 
         HWND                Find(T100WSTRING);
 
+        T100VOID            Launch(T100WSTRING);
+
     protected:
 
     private:

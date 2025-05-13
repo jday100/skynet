@@ -11,7 +11,7 @@ class T100ConsoleLinux : public T100ConsoleBase
 
         T100VOID            Print(T100WSTRING&);
 
-        T100VOID            OutLine(T100WSTRING&);
+        T100VOID            OutLine(T100WSTRING);
         T100VOID            GetLine(T100WSTRING&);
 
     protected:

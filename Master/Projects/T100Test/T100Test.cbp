@@ -14,9 +14,15 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include/test" />
+					<Add directory="test" />
+					<Add directory="include/base" />
 				</Compiler>
 				<Linker>
-					<Add library="../../build/libT100Obejct.a" />
+					<Add library="../../build/libT100Log.a" />
+					<Add library="../../build/libT100Console.a" />
+					<Add library="../../build/libT100Object.a" />
+					<Add library="../../build/libT100Common.a" />
+					<Add library="../../build/libT100String.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -27,6 +33,8 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include/test" />
+					<Add directory="test" />
+					<Add directory="include/base" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -41,9 +49,12 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include/test" />
+					<Add directory="test" />
+					<Add directory="include/base" />
 				</Compiler>
 				<Linker>
-					<Add library="../../build/libT100Obejct.a" />
+					<Add library="../../build/libT100Object.a" />
+					<Add library="../../build/libT100Common.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -53,16 +64,29 @@
 			<Add directory="../T100Common/include" />
 			<Add directory="../T100Vessel/Source/T100Vessel/include" />
 			<Add directory="../T100Object/Source/T100Object/include" />
-			<Add directory="../T100Console" />
+			<Add directory="../T100Console/include" />
 			<Add directory="../T100Log/include" />
 			<Add directory="../T100Plugin/include" />
+			<Add directory="include" />
 		</Compiler>
+		<Unit filename="include/base/T100Hint.h" />
 		<Unit filename="include/test/T100Test.h" />
+		<Unit filename="include/test/T100TestBase.h" />
+		<Unit filename="include/test/T100TestNode.h" />
+		<Unit filename="include/test/T100TestNodeBase.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="src/base/T100Hint.cpp" />
 		<Unit filename="src/test/T100Test.cpp" />
+		<Unit filename="src/test/T100TestBase.cpp" />
+		<Unit filename="src/test/T100TestNode.cpp" />
+		<Unit filename="src/test/T100TestNodeBase.cpp" />
+		<Unit filename="test/T100TestUnitTest.cpp" />
+		<Unit filename="test/T100TestUnitTest.h" />
+		<Unit filename="test/T100TestUnitTestHint.cpp" />
+		<Unit filename="test/T100TestUnitTestHint.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

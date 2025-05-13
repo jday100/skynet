@@ -19,7 +19,7 @@ T100VOID T100ConsoleWindows::Print(T100WSTRING& msg)
     wprintf(L"%ls", msg.c_str());
 }
 
-T100VOID T100ConsoleWindows::OutLine(T100WSTRING& msg)
+T100VOID T100ConsoleWindows::OutLine(T100WSTRING msg)
 {
     wprintf(L"%ls\n", msg.c_str());
 }
@@ -68,17 +68,17 @@ T100VOID T100ConsoleWindows::SetForegroundColour(T100COLOUR_TYPE type)
             colour = FOREGROUND_BLUE;
         }
         break;
-    case T100COLOUR_TYPE_ORANGE:
+    case T100COLOUR_TYPE_YELLOW:
         {
             colour = FOREGROUND_RED | FOREGROUND_GREEN;
         }
         break;
-    case T100COLOUR_TYPE_YELLOW:
+    case T100COLOUR_TYPE_PURPLE:
         {
             colour = FOREGROUND_RED | FOREGROUND_BLUE;
         }
         break;
-    case T100COLOUR_TYPE_PURPLE:
+    case T100COLOUR_TYPE_CYAN:
         {
             colour = FOREGROUND_BLUE | FOREGROUND_GREEN;
         }

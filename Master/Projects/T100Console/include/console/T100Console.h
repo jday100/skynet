@@ -9,8 +9,14 @@ class T100Console
         T100Console(T100CONSOLE_TYPE = T100CONSOLE_TYPE_WINDOWS);
         virtual ~T100Console();
 
-        T100VOID                    OutLine(T100WSTRING&);
+        T100VOID                    OutLine(T100WSTRING);
         T100VOID                    GetLine(T100WSTRING&);
+
+        T100VOID                    SetForegroundColour(T100COLOUR_TYPE);
+        T100COLOUR_TYPE             GetForegroundColour();
+
+        T100VOID                    SetBackgroundColour(T100COLOUR_TYPE);
+        T100COLOUR_TYPE             GetBackgroundColour();
 
     protected:
 

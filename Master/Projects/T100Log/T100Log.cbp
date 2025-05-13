@@ -14,7 +14,11 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include/log" />
+					<Add directory="include/common" />
 				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100Common.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100Log" prefix_auto="1" extension_auto="1" />
@@ -24,21 +28,45 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include/log" />
+					<Add directory="include/common" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../build/T100Log" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/log" />
+					<Add directory="include/common" />
+				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100Common.a" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../T100Console/include" />
+			<Add directory="../T100Common/include" />
+			<Add directory="include" />
 		</Compiler>
+		<Unit filename="include/common/T100LogCommon.h" />
+		<Unit filename="include/common/T100SourceTypes.h" />
 		<Unit filename="include/log/T100LogBase.h" />
 		<Unit filename="include/log/T100Logger.h" />
 		<Unit filename="include/log/T100LoggerConsole.h" />
 		<Unit filename="include/log/T100LoggerFile.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="src/log/T100LogBase.cpp" />
 		<Unit filename="src/log/T100Logger.cpp" />
 		<Unit filename="src/log/T100LoggerConsole.cpp" />

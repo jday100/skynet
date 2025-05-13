@@ -31,6 +31,18 @@
 					<Add option="-s" />
 				</Linker>
 			</Target>
+			<Target title="Library">
+				<Option output="../../build/T100Thread" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/thread" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
@@ -38,7 +50,10 @@
 			<Add directory="../T100Common/include" />
 		</Compiler>
 		<Unit filename="include/thread/T100Thread.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="src/thread/T100Thread.cpp" />
 		<Extensions />
 	</Project>

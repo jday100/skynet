@@ -1,9 +1,14 @@
-#include <iostream>
-
-using namespace std;
+#include "T100TestUnitTest.h"
 
 int main()
 {
-    cout << "Hello world!" << endl;
-    return 0;
+    T100RESULT              result;
+    T100TestUnitTest        unit;
+
+    result  = unit.TestAll();
+
+    if(result == T100RESULT_SUCCESS){
+        return 0;
+    }
+    return -1;
 }
