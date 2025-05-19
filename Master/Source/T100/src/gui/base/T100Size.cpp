@@ -1,16 +1,15 @@
 #include "gui/base/T100Size.h"
 
-T100Size::T100Size() :
-    T100Class()
+T100Size::T100Size()
 {
     //ctor
 }
 
-T100Size::T100Size(T100INT x, T100INT y)
+T100Size::T100Size(T100INT w, T100INT h)
 {
     //ctor
-    m_x     = x;
-    m_y     = y;
+    width       = w;
+    height      = h;
 }
 
 T100Size::~T100Size()

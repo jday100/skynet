@@ -14,9 +14,10 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include" />
+					<Add directory="include/math/bignum" />
 				</Compiler>
 				<Linker>
-					<Add library="../../build/libT100.a" />
+					<Add library="../../build/libT100Common.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -27,6 +28,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include" />
+					<Add directory="include/math/bignum" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,11 +38,15 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="../../Source/T100/include" />
+			<Add directory="../T100Common/include" />
 		</Compiler>
 		<Unit filename="include/T100BigIntegerTest.h" />
+		<Unit filename="include/common/T100BitCommon.h" />
+		<Unit filename="include/common/T100MathCommon.h" />
+		<Unit filename="include/math/bignum/T100BigInteger.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/T100BigIntegerTest.cpp" />
+		<Unit filename="src/math/bignum/T100BigInteger.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

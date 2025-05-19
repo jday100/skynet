@@ -1,7 +1,6 @@
 #include "T100MouseEvent.h"
 
-T100MouseEvent::T100MouseEvent() :
-    T100Event()
+T100MouseEvent::T100MouseEvent()
 {
     //ctor
 }

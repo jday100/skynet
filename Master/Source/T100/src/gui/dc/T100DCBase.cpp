@@ -1,6 +1,6 @@
 #include "gui/dc/T100DCBase.h"
 
-#include "gui/T100Window.h"
+#include "gui/window/T100Window.h"
 
 T100DCBase::T100DCBase(T100Window* parent) :
     T100Class(),
@@ -33,7 +33,7 @@ T100VOID T100DCBase::SetPen(T100Pen* pen)
     SelectObject(m_hdc, pen->GetHPEN());
 }
 
-T100Pen* T100DCBase::GetPen()
+T100Pen* T100DCBase::GetPenPtr()
 {
     return m_penPtr;
 }
@@ -44,7 +44,7 @@ T100VOID T100DCBase::SetBrush(T100Brush* brush)
 
 }
 
-T100Brush* T100DCBase::GetBrush()
+T100Brush* T100DCBase::GetBrushPtr()
 {
     return m_brushPtr;
 }

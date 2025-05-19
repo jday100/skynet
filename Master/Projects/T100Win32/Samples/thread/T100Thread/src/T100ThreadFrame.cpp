@@ -11,9 +11,9 @@ T100ThreadFrame::~T100ThreadFrame()
     //dtor
 }
 
-T100VOID T100ThreadFrame::Create(T100WSTRING label, T100UINT width, T100UINT height)
+T100VOID T100ThreadFrame::Create(T100Win32Application* app, T100WSTRING label, T100UINT width, T100UINT height)
 {
-    T100Frame::Create(label, width, height);
+    T100Frame::Create(app, label, width, height);
 
     init();
 }
@@ -28,11 +28,11 @@ T100VOID T100ThreadFrame::init()
 
     T100MenuItem*       quitMenuPtr      = T100NEW T100MenuItem(fileMenuPtr, T100MENU_ID_QUIT, L"Quit");
 
-    SetMenuBarPtr(menuBarPtr);
+    SetMenuBar(menuBarPtr);
 
-    Connect(T100EVENT_COMMAND, T100MENU_ID_RUN, (T100EVENT_CALL)&T100ThreadFrame::OnMenuRun);
+    ConnectMenu(T100MENU_ID_RUN, (T100EVENT_FUNCTION)&T100ThreadFrame::OnMenuRun);
 
-    Connect(T100EVENT_COMMAND, T100MENU_ID_QUIT, (T100EVENT_CALL)&T100ThreadFrame::OnMenuQuit);
+    ConnectMenu(T100MENU_ID_QUIT, (T100EVENT_FUNCTION)&T100ThreadFrame::OnMenuQuit);
 }
 
 T100VOID T100ThreadFrame::uninit()

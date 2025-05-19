@@ -37,4 +37,5 @@ T100VOID T100PainterInvoking::MenuQuit()
 T100VOID T100PainterInvoking::FrameResize()
 {
     m_painterPtr->Resize();
+
 }

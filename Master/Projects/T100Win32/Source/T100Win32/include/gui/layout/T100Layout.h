@@ -10,14 +10,14 @@ class T100Layout
         T100Layout();
         virtual ~T100Layout();
 
-        virtual T100VOID            Update() = 0;
+        virtual T100VOID                Update() = 0;
 
-        T100VOID                    SetParentPtr(T100Window*);
-        T100VOID                    SetChildren(T100WINDOW_VECTOR&);
+        T100VOID                        SetParent(T100Window*);
+        T100VOID                        SetChildren(T100OBJECT_TREE_VECTOR&);
 
     protected:
-        T100Window*                 m_parentPtr         = T100NULL;
-        T100WINDOW_VECTOR*          m_childrenPtr       = T100NULL;
+        T100Window*                     m_parentPtr         = T100NULL;
+        T100OBJECT_TREE_VECTOR*         m_childrenPtr       = T100NULL;
 
     private:
 

@@ -17,6 +17,8 @@
 				</Compiler>
 				<Linker>
 					<Add library="../../../build/libT100Win32.a" />
+					<Add library="../../../../../Master/build/libT100Object.a" />
+					<Add library="../../../../../Master/build/libT100Common.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -36,6 +38,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add directory="../../../Source/T100Win32/include" />
+			<Add directory="../../../../../Master/Projects/T100Common/include" />
+			<Add directory="../../../../../Master/Projects/T100Object/Source/T100Object/include" />
+			<Add directory="../../../../../Master/Projects/T100Vessel/Source/T100Vessel/include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />

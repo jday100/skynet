@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100ListView" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100ListView" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../build/libT100Win32.a" />
+					<Add library="../../../../../Master/build/libT100Object.a" />
+					<Add library="../../../../../Master/build/libT100Common.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100ListView" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../../../Source/T100Win32/include" />
+			<Add directory="../../../../../Master/Projects/T100Object/Source/T100Object/include" />
+			<Add directory="../../../../../Master/Projects/T100Vessel/Source/T100Vessel/include" />
+			<Add directory="../../../../../Master/Projects/T100Common/include" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/T100ListViewFrame.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/T100ListViewFrame.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,90 @@
+#include "T100FillLayout.h"
+
+#include "gui/base/T100Size.h"
+#include "gui/window/T100Window.h"
+
+T100FillLayout::T100FillLayout(T100ORIENTATION_TYPE type) :
+    T100Layout(),
+    m_orientationType(type)
+{
+    //ctor
+}
+
+T100FillLayout::~T100FillLayout()
+{
+    //dtor
+}
+
+T100VOID T100FillLayout::SetOrientationType(T100ORIENTATION_TYPE type)
+{
+    m_orientationType   = type;
+}
+
+T100ORIENTATION_TYPE T100FillLayout::GetOrientationType()
+{
+    return m_orientationType;
+}
+
+T100VOID T100FillLayout::Update()
+{
+    if(m_parentPtr && m_childrenPtr){
+        if(m_childrenPtr->size() > 0){
+
+        }else{
+            return;
+        }
+    }else{
+        return;
+    }
+
+    switch(m_orientationType){
+    case T100HORIZONTAL:
+        {
+            UpdateHorizontal();
+        }
+        break;
+    case T100VERTICAL:
+        {
+            UpdateVertical();
+        }
+        break;
+    }
+}
+
+T100VOID T100FillLayout::UpdateHorizontal()
+{
+    T100Size        size    = m_parentPtr->GetSize();
+    T100WORD        length  = m_childrenPtr->size();
+    T100WORD        value   = size.width / length;
+
+    size.width      = value;
+    T100Point       point;
+
+    for(T100ObjectTreeNode* item : *m_childrenPtr){
+        T100Window* win     = T100Window::ConvertToWindow(item);
+        if(win){
+            win->SetSize(size);
+            win->SetPosition(point);
+            point.x += value;
+        }
+    }
+}
+
+T100VOID T100FillLayout::UpdateVertical()
+{
+    T100Size        size    = m_parentPtr->GetSize();
+    T100WORD        length  = m_childrenPtr->size();
+    T100WORD        value   = size.height / length;
+
+    size.height     = value;
+    T100Point       point;
+
+    for(T100ObjectTreeNode* item : *m_childrenPtr){
+        T100Window* win     = T100Window::ConvertToWindow(item);
+        if(win){
+            win->SetSize(size);
+            win->SetPosition(point);
+            point.y += value;
+        }
+    }
+}

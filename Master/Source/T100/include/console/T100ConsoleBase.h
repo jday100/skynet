@@ -4,9 +4,8 @@
 #include "T100Common.h"
 #include "common/T100ConsoleCommon.h"
 #include "common/T100GraphicCommon.h"
-#include "T100Class.h"
 
-class T100ConsoleBase : public T100Class
+class T100ConsoleBase
 {
     public:
         T100ConsoleBase();
@@ -14,7 +13,7 @@ class T100ConsoleBase : public T100Class
 
         virtual T100VOID                        Print(T100WSTRING&) = 0;
 
-        virtual T100VOID                        OutLine(T100WSTRING&) = 0;
+        virtual T100VOID                        OutLine(T100WSTRING) = 0;
         virtual T100VOID                        GetLine(T100WSTRING&) = 0;
 
         virtual T100VOID                        SetForegroundColour(T100COLOUR_TYPE);

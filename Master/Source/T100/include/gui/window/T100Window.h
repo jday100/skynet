@@ -1,0 +1,36 @@
+#ifndef T100WINDOW_H
+#define T100WINDOW_H
+
+#include "gui/window/T100WindowBase.h"
+#include "gui/window/T100WindowStyle.h"
+
+class T100Layout;
+class T100ApplicationEventHandler;
+
+class T100Window : public T100WindowBase
+{
+    public:
+        T100Window();
+        T100Window(T100ApplicationEventHandler*, T100Window*);
+        virtual ~T100Window();
+
+        virtual T100VOID            Create(T100ApplicationEventHandler*, T100Window*);
+
+        T100VOID                    SetLayout(T100Layout*);
+        T100Layout*                 GetLayoutPtr();
+
+        static T100Window*          ConvertToWindow(T100ObjectTreeNode*);
+
+    protected:
+        T100WindowStyle             m_style;
+        T100Layout*                 m_layoutPtr         = T100NULL;
+
+        T100BOOL                    RegisterWindowClass(HINSTANCE, T100WindowStyle*);
+        HWND                        CreateWindowInstance(HINSTANCE, T100WindowStyle*);
+
+    private:
+        T100VOID                    Init(T100ApplicationEventHandler*, T100Window*);
+        T100VOID                    CreateWindowHandler(HINSTANCE);
+};
+
+#endif // T100WINDOW_H

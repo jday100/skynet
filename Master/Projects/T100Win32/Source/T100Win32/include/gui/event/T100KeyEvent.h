@@ -1,9 +1,8 @@
 #ifndef T100KEYEVENT_H
 #define T100KEYEVENT_H
 
-#include "gui/event/T100Event.h"
 
-class T100KeyEvent : public T100Event
+class T100KeyEvent
 {
     public:
         T100KeyEvent();

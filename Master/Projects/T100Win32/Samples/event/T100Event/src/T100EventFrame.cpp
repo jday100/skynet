@@ -1,9 +1,10 @@
 #include "T100EventFrame.h"
 
-#include "gui/dialog/T100MessageBox.h"
+#include <iostream>
+#include "gui/T100MessageBox.h"
 
-T100EventFrame::T100EventFrame() :
-    T100Frame()
+T100EventFrame::T100EventFrame(T100Win32Application* app) :
+    T100Frame(app)
 {
     //ctor
 }
@@ -13,10 +14,11 @@ T100EventFrame::~T100EventFrame()
     //dtor
 }
 
-T100VOID T100EventFrame::Create(T100WSTRING label, T100UINT width, T100UINT height)
+T100VOID T100EventFrame::Create(T100WSTRING label)
 {
-    T100Frame::Create(label, width, height);
-    Connect(T100EVENT_WINDOW_CREATE, (T100EVENT_CALL)&OnFrameCreate);
+    Connect(T100EVENT_WINDOW_CREATE, (T100EVENT_FUNCTION)&OnFrameCreate);
+
+    T100Frame::Create(label);
 
     init();
 }
@@ -31,16 +33,16 @@ T100VOID T100EventFrame::init()
 
     T100MenuItem*       quitMenuPtr      = T100NEW T100MenuItem(fileMenuPtr, T100MENU_ID_QUIT, L"Quit");
 
-    SetMenuBarPtr(menuBarPtr);
+    SetMenuBar(menuBarPtr);
 
-    Connect(T100EVENT_MENU, T100MENU_ID_RUN, (T100EVENT_CALL)&T100EventFrame::OnMenuRun);
-    Connect(T100EVENT_MENU, T100MENU_ID_QUIT, (T100EVENT_CALL)&T100EventFrame::OnMenuQuit);
+    ConnectMenu(T100MENU_ID_RUN, (T100EVENT_FUNCTION)&T100EventFrame::OnMenuRun);
+    ConnectMenu(T100MENU_ID_QUIT, (T100EVENT_FUNCTION)&T100EventFrame::OnMenuQuit);
 
-    Connect(T100EVENT_WINDOW_DESTROY, (T100EVENT_CALL)&OnFrameDestroy);
+    Connect(T100EVENT_WINDOW_DESTROY, (T100EVENT_FUNCTION)&OnFrameDestroy);
 
-    Connect(T100EVENT_WINDOW_CLOSE, (T100EVENT_CALL)&OnFrameClose);
+    Connect(T100EVENT_WINDOW_CLOSE, (T100EVENT_FUNCTION)&OnFrameClose);
 
-    Connect(T100EVENT_WINDOW_SIZE, (T100EVENT_CALL)&OnFrameResize);
+    Connect(T100EVENT_WINDOW_SIZE, (T100EVENT_FUNCTION)&OnFrameResize);
 }
 
 T100VOID T100EventFrame::uninit()
@@ -60,11 +62,12 @@ T100VOID T100EventFrame::OnMenuQuit(T100CommandEvent& event)
 
 T100VOID T100EventFrame::OnFrameCreate(T100WindowEvent& event)
 {
-    ShowMessageBox(this, L"WindowCreateEvent");
+    std::cout << "WindowCreateEvent" << std::endl;
 }
 
 T100VOID T100EventFrame::OnFrameDestroy(T100WindowEvent& event)
 {
+    std::cout << "WindowDestroyEvent" << std::endl;
     ShowMessageBox(this, L"WindowDestroyEvent");
 }
 

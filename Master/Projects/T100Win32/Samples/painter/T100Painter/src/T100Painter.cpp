@@ -1,5 +1,7 @@
 #include "T100Painter.h"
 
+#include "T100PainterInvoking.h"
+
 T100Painter::T100Painter() :
     m_store(),
     m_serve(),
@@ -14,9 +16,9 @@ T100Painter::~T100Painter()
     uninit();
 }
 
-T100VOID T100Painter::Create()
+T100VOID T100Painter::Create(T100Win32Application* app)
 {
-    init();
+    init(app);
 }
 
 T100PainterStore& T100Painter::GetStore()
@@ -34,9 +36,10 @@ T100PainterView& T100Painter::GetView()
     return m_view;
 }
 
-T100VOID T100Painter::init()
+T100VOID T100Painter::init(T100Win32Application* app)
 {
-    m_view.Create();
+    T100PainterInvoking::Create(this);
+    m_view.Create(app);
 }
 
 T100VOID T100Painter::uninit()

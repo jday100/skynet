@@ -1,16 +1,15 @@
 #include "gui/base/T100Point.h"
 
-T100Point::T100Point() :
-    T100Class()
+T100Point::T100Point()
 {
     //ctor
 }
 
-T100Point::T100Point(T100INT x, T100INT y)
+T100Point::T100Point(T100INT a, T100INT b)
 {
     //ctor
-    m_x     = x;
-    m_y     = y;
+    x       = a;
+    y       = b;
 }
 
 T100Point::~T100Point()

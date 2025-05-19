@@ -1,9 +1,9 @@
 #include "T100DialogFrame.h"
 
-#include "gui/dialog/T100MessageBox.h"
+#include "gui/T100MessageBox.h"
 
-T100DialogFrame::T100DialogFrame() :
-    T100Frame()
+T100DialogFrame::T100DialogFrame(T100Win32Application* app) :
+    T100Frame(app)
 {
     //ctor
 }
@@ -13,9 +13,9 @@ T100DialogFrame::~T100DialogFrame()
     //dtor
 }
 
-T100VOID T100DialogFrame::Create(T100WSTRING label, T100UINT width, T100UINT height)
+T100VOID T100DialogFrame::Create(T100WSTRING label)
 {
-    T100Frame::Create(label, width, height);
+    T100Frame::Create(label);
 
     init();
 }
@@ -26,15 +26,17 @@ T100VOID T100DialogFrame::init()
 
     T100Menu*           fileMenuPtr     = T100NEW T100Menu(menuBarPtr, L"File");
 
+    T100MenuItem*       msgMenuPtr      = T100NEW T100MenuItem(fileMenuPtr, T100MENU_ID_RUN, L"MessageBox");
+
     T100MenuItem*       runMenuPtr      = T100NEW T100MenuItem(fileMenuPtr, T100MENU_ID_RUN, L"Run");
 
     T100MenuItem*       quitMenuPtr      = T100NEW T100MenuItem(fileMenuPtr, T100MENU_ID_QUIT, L"Quit");
 
-    SetMenuBarPtr(menuBarPtr);
+    SetMenuBar(menuBarPtr);
 
-    Connect(T100EVENT_MENU, T100MENU_ID_RUN, (T100EVENT_CALL)&T100DialogFrame::OnMenuRun);
+    ConnectMenu(T100MENU_ID_RUN, (T100EVENT_FUNCTION)&T100DialogFrame::OnMenuRun);
 
-    Connect(T100EVENT_MENU, T100MENU_ID_QUIT, (T100EVENT_CALL)&T100DialogFrame::OnMenuQuit);
+    ConnectMenu(T100MENU_ID_QUIT, (T100EVENT_FUNCTION)&T100DialogFrame::OnMenuQuit);
 }
 
 T100VOID T100DialogFrame::uninit()

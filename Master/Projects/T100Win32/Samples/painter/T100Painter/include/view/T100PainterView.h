@@ -6,7 +6,7 @@
 #include "T100PainterCanvas.h"
 #include "T100PainterMainMenu.h"
 #include "T100PainterEntityPanel.h"
-#include "gui/dock/T100DockManager.h"
+#include "gui/T100DockManager.h"
 
 class T100PainterView
 {
@@ -14,7 +14,7 @@ class T100PainterView
         T100PainterView();
         virtual ~T100PainterView();
 
-        T100VOID                    Create();
+        T100VOID                    Create(T100Win32Application*);
         T100VOID                    Destroy();
 
         T100PainterFrame&           GetFrame();

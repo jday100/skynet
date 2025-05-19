@@ -2,7 +2,7 @@
 #define T100PAINTERMAINMENU_H
 
 #include "gui/T100Frame.h"
-#include "gui/menu/T100MenuBar.h"
+#include "gui/T100MenuBar.h"
 
 class T100PainterMainMenu
 {

@@ -1,8 +1,8 @@
-#include "gui/menu/T100MenuItem.h"
+#include "gui/T100MenuItem.h"
 
-#include "gui/menu/T100Menu.h"
+#include "gui/T100Menu.h"
 
-T100MenuItem::T100MenuItem(T100Menu* menu, T100UINT id, T100WSTRING label) :
+T100MenuItem::T100MenuItem(T100Menu* menu, T100WORD id, T100WSTRING label) :
     T100MenuItemBase()
 {
     //ctor

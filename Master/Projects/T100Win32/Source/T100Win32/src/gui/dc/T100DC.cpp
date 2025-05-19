@@ -28,17 +28,17 @@ T100VOID T100DC::DrawCircle(T100Point point, T100UINT radius)
     T100INT     top;
     T100INT     bottom;
 
-    left    = point.m_x - radius;
-    right   = point.m_x + radius;
-    top     = point.m_y - radius;
-    bottom  = point.m_y + radius;
+    left    = point.x - radius;
+    right   = point.x + radius;
+    top     = point.y - radius;
+    bottom  = point.y + radius;
     Ellipse(m_hdc, left, top, right, bottom);
 }
 
 T100VOID T100DC::DrawLine(T100Point start, T100Point end)
 {
-    MoveToEx(m_hdc, start.m_x, start.m_y, T100NULL);
-    LineTo(m_hdc, end.m_x, end.m_y);
+    MoveToEx(m_hdc, start.x, start.y, T100NULL);
+    LineTo(m_hdc, end.x, end.y);
 }
 
 T100VOID T100DC::DrawRoundedRectangle(T100Point point, T100Size size, T100FLOAT radius)
@@ -48,9 +48,9 @@ T100VOID T100DC::DrawRoundedRectangle(T100Point point, T100Size size, T100FLOAT 
     T100INT     top;
     T100INT     bottom;
 
-    left    = point.m_x;
-    right   = point.m_x + size.m_x;
-    top     = point.m_y;
-    bottom  = point.m_y + size.m_y;
+    left    = point.x;
+    right   = point.x + size.width;
+    top     = point.y;
+    bottom  = point.y + size.height;
     RoundRect(m_hdc, left, top, right, bottom, radius, radius);
 }

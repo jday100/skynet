@@ -16,16 +16,15 @@ typedef     unsigned short          T100HWORD;
 typedef     unsigned int            T100WORD;
 typedef     unsigned long long      T100DWORD;
 
-typedef     unsigned int            T100UINT;
-
 //有符号
 typedef     char                    T100INT8;
 typedef     short                   T100INT16;
 typedef     int                     T100INT32;
 typedef     long long               T100INT64;
 
-typedef     int                     T100INT;
-typedef     long long               T100LONG;
+typedef     T100INT32               T100INT;
+typedef     T100INT64               T100LONG;
 typedef     float                   T100FLOAT;
+typedef     double                  T100DOUBLE;
 
 #endif // T100DATATYPES_H

@@ -1,26 +1,14 @@
 #ifndef T100EVENTBASE_H
 #define T100EVENTBASE_H
 
-#include "T100Common.h"
-#include "T100Win32Common.h"
-
-class T100EventHandler;
-
-typedef         T100VOID(T100EventHandler::*T100EVENT_CALL)(...);
+#include "gui/T100Win32Common.h"
+#include "gui/data/T100WindowMessageData.h"
 
 class T100EventBase
 {
     public:
-        T100EventBase();
-        T100EventBase(T100MESSAGE_DATA&);
+        T100EventBase(T100WindowMessageData&);
         virtual ~T100EventBase();
-
-        HWND                WINDOW_HWND;
-
-        T100UINT            ID;
-        T100UINT            FLAGS;
-
-        T100UINT            MessageID;
 
     protected:
 

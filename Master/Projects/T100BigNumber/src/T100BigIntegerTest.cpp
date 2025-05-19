@@ -1,8 +1,7 @@
 #include "T100BigIntegerTest.h"
 
 #include <iostream>
-#include "math/big/T100BigInteger.h"
-#include "math/big/T100BigIntegerByte.h"
+#include "math/bignum/T100BigInteger.h"
 
 T100BigIntegerTest::T100BigIntegerTest()
 {
@@ -34,11 +33,11 @@ T100INT T100BigIntegerTest::test()
 
 T100INT T100BigIntegerTest::byte_test()
 {
-    T100BigIntegerByte      a(L"111");
-    T100BigIntegerByte      b(L"222");
-    T100BigIntegerByte      c;
+    T100BigInteger          a(L"555");
+    T100BigInteger          b(L"666");
+    T100BigInteger          c;
 
-    T100BigIntegerByte::Addition(a, b, c);
+    T100BigInteger::Addition(a, b, c);
 
     std::wcout << c.ToWString();
 

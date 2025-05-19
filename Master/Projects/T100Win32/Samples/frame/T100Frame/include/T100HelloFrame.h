@@ -9,6 +9,8 @@ class T100HelloFrame : public T100Frame
         T100HelloFrame();
         virtual ~T100HelloFrame();
 
+        T100VOID            Create(T100Win32Application*, T100WSTRING, T100UINT, T100UINT);
+
     protected:
 
     private:

@@ -3,8 +3,8 @@
 
 #include <atomic>
 #include "T100Common.h"
-#include "T100Win32Common.h"
-#include "gui/font/T100Font.h"
+#include "gui/T100Win32Common.h"
+#include "gui/T100Font.h"
 
 class T100MenuItemBase
 {

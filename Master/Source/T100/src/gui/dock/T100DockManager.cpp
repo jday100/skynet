@@ -1,4 +1,4 @@
-#include "gui/dock/T100DockManager.h"
+#include "gui/T100DockManager.h"
 
 T100DockManager::T100DockManager() :
     T100DockManagerBase()
@@ -39,5 +39,3 @@ T100VOID T100DockManager::Update()
     UpdateLeft();
     UpdateCenter();
 }
-
-

@@ -1,9 +1,8 @@
 #ifndef T100PAINTEVENT_H
 #define T100PAINTEVENT_H
 
-#include "gui/event/T100Event.h"
 
-class T100PaintEvent : public T100Event
+class T100PaintEvent
 {
     public:
         T100PaintEvent();

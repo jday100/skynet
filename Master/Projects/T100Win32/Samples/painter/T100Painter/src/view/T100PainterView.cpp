@@ -1,5 +1,8 @@
 #include "T100PainterView.h"
 
+#include "gui/T100Win32Application.h"
+#include "gui/style/T100DockPanelStyle.h"
+
 T100PainterView::T100PainterView() :
     m_dockManager(),
     m_frame(),
@@ -15,20 +18,28 @@ T100PainterView::~T100PainterView()
     //dtor
 }
 
-T100VOID T100PainterView::Create()
+T100VOID T100PainterView::Create(T100Win32Application* app)
 {
-    m_frame.Create(L"T100Painter", 800, 600);
+    T100DockPanelStyle      style;
+
+    m_frame.Create(app, L"T100Painter");
     m_mainMenu.Create(&m_frame);
 
+    app->SetFrame(&m_frame);
     m_dockManager.SetFramePtr(&m_frame);
 
-    m_entityPanel.Create(&m_frame, L"T100Panel", 800, 600);
-    m_canvas.Create(&m_frame, L"", 800, 600);
+    m_entityPanel.Create(app, &m_frame, L"T100Panel", &style);
+    m_canvas.Create(app, &m_frame, L"canvas", &style);
 
     m_dockManager.AddPane(L"entity", &m_entityPanel, T100DockInfo().Left().MinSize(300, -1).BestSize(300, -1));
     m_dockManager.AddPane(L"canvas", &m_canvas, T100DockInfo().Center());
 
+    m_entityPanel.Show();
+    m_canvas.Show();
+
     m_dockManager.Update();
+
+
 }
 
 T100VOID T100PainterView::Destroy()

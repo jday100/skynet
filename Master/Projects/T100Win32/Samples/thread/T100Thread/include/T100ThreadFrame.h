@@ -9,7 +9,7 @@ class T100ThreadFrame : public T100Frame
         T100ThreadFrame();
         virtual ~T100ThreadFrame();
 
-        T100VOID            Create(T100WSTRING, T100UINT, T100UINT);
+        T100VOID            Create(T100Win32Application*, T100WSTRING, T100UINT, T100UINT);
 
     protected:
         T100UINT            T100MENU_ID_RUN         = T100MENU_ID_USER + 1;

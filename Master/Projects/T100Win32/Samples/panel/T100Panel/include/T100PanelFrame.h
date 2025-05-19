@@ -6,10 +6,10 @@
 class T100PanelFrame : public T100Frame
 {
     public:
-        T100PanelFrame();
+        T100PanelFrame(T100Win32Application*);
         virtual ~T100PanelFrame();
 
-        T100VOID            Create(T100WSTRING, T100UINT, T100UINT);
+        T100VOID            Create(T100WSTRING);
 
     protected:
 

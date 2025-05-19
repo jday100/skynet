@@ -18,6 +18,9 @@
 				<Linker>
 					<Add library="../../../build/libT100Win32.a" />
 					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libgdi32.a" />
+					<Add library="../../../../../Master/build/libT100Console.a" />
+					<Add library="../../../../../Master/build/libT100Object.a" />
+					<Add library="../../../../../Master/build/libT100Common.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -37,6 +40,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add directory="../../../Source/T100Win32/include" />
+			<Add directory="../../../../../Master/Projects/T100Console/include" />
+			<Add directory="../../../../../Master/Projects/T100Object/Source/T100Object/include" />
+			<Add directory="../../../../../Master/Projects/T100Vessel/Source/T100Vessel/include" />
+			<Add directory="../../../../../Master/Projects/T100Common/include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />

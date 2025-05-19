@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Menu" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100Menu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/common" />
+				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100Control.a" />
+					<Add library="../../build/libT100Window.a" />
+					<Add library="../../build/libT100Event.a" />
+					<Add library="../../../../build/libT100Object.a" />
+					<Add library="../../../../build/libT100Common.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Menu" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/common" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../build/T100Menu" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/common" />
+				</Compiler>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-DUNICODE" />
+			<Add directory="../../../T100Common/include" />
+			<Add directory="../../../T100Vessel/Source/T100Vessel/include" />
+			<Add directory="../../../T100Object/Source/T100Object/include" />
+			<Add directory="../T100Event/include" />
+			<Add directory="../T100Window/include" />
+			<Add directory="../T100Font/include" />
+			<Add directory="../T100Control/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/gui/T100Menu.h" />
+		<Unit filename="include/gui/T100MenuBar.h" />
+		<Unit filename="include/gui/T100MenuItem.h" />
+		<Unit filename="include/gui/common/T100MenuCommon.h" />
+		<Unit filename="include/gui/menu/T100MenuItemBase.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/gui/menu/T100Menu.cpp" />
+		<Unit filename="src/gui/menu/T100MenuBar.cpp" />
+		<Unit filename="src/gui/menu/T100MenuItem.cpp" />
+		<Unit filename="src/gui/menu/T100MenuItemBase.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

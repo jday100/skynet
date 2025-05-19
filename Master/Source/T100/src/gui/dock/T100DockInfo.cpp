@@ -1,4 +1,4 @@
-#include "gui/dock/T100DockInfo.h"
+#include "gui/T100DockInfo.h"
 
 T100DockInfo::T100DockInfo() :
     T100Class()

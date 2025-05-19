@@ -1,17 +1,9 @@
 #include "T100CommandEvent.h"
 
-T100CommandEvent::T100CommandEvent() :
-    T100Event()
+T100CommandEvent::T100CommandEvent()
 {
     //ctor
 }
-
-T100CommandEvent::T100CommandEvent(T100MESSAGE_DATA& data) :
-    T100Event(data)
-{
-    //ctor
-}
-
 
 T100CommandEvent::~T100CommandEvent()
 {

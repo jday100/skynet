@@ -5,13 +5,15 @@
 #include "T100PainterServe.h"
 #include "T100PainterView.h"
 
+class T100Win32Application;
+
 class T100Painter
 {
     public:
         T100Painter();
         virtual ~T100Painter();
 
-        T100VOID                    Create();
+        T100VOID                    Create(T100Win32Application*);
 
         T100PainterStore&           GetStore();
         T100PainterServe&           GetServe();
@@ -30,7 +32,7 @@ class T100Painter
         T100PainterServe            m_serve;
         T100PainterView             m_view;
 
-        T100VOID                    init();
+        T100VOID                    init(T100Win32Application*);
         T100VOID                    uninit();
 };
 

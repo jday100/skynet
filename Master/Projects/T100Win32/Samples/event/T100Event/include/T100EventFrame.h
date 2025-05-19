@@ -2,14 +2,15 @@
 #define T100EVENTFRAME_H
 
 #include "gui/T100Frame.h"
+#include "gui/T100AllEvents.h"
 
 class T100EventFrame : public T100Frame
 {
     public:
-        T100EventFrame();
+        T100EventFrame(T100Win32Application*);
         virtual ~T100EventFrame();
 
-        T100VOID            Create(T100WSTRING, T100UINT, T100UINT);
+        T100VOID            Create(T100WSTRING);
 
     protected:
         T100UINT            T100MENU_ID_RUN         = T100MENU_ID_USER + 1;

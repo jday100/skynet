@@ -2,15 +2,17 @@
 #define T100PAINTERFRAME_H
 
 #include "gui/T100Frame.h"
-#include "gui/listctrl/T100ListCtrl.h"
+#include "gui/T100ListView.h"
+#include "gui/T100AllEvents.h"
 
 class T100PainterFrame : public T100Frame
 {
     public:
         T100PainterFrame();
+        T100PainterFrame(T100Win32Application*);
         virtual ~T100PainterFrame();
 
-        T100VOID            Create(T100WSTRING, T100UINT, T100UINT);
+        T100VOID            Create(T100Win32Application*, T100WSTRING);
 
     protected:
         T100VOID            OnMenuNew(T100CommandEvent&);
@@ -19,10 +21,10 @@ class T100PainterFrame : public T100Frame
         T100VOID            OnFrameResize(T100WindowEvent&);
 
 
-        T100VOID            InitListCtrl();
+        T100VOID            InitListView();
 
     private:
-        T100ListCtrl        m_listCtrl;
+        T100ListView        m_listView;
 
         T100VOID            init();
         T100VOID            uninit();

@@ -15,7 +15,15 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="../../../build/libT100Win32.a" />
+					<Add library="../../../build/libT100Application.a" />
+					<Add library="../../../build/libT100Frame.a" />
+					<Add library="../../../build/libT100Window.a" />
+					<Add library="../../../build/libT100Control.a" />
+					<Add library="../../../build/libT100Menu.a" />
+					<Add library="../../../build/libT100Font.a" />
+					<Add library="../../../build/libT100Event.a" />
+					<Add library="../../../../../build/libT100Object.a" />
+					<Add library="../../../../../build/libT100Common.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -33,7 +41,16 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="../../../Source/T100Win32/include" />
+			<Add directory="../../../Source/T100Application/include" />
+			<Add directory="../../../Source/T100Frame/include" />
+			<Add directory="../../../Source/T100Control/include" />
+			<Add directory="../../../Source/T100Window/include" />
+			<Add directory="../../../Source/T100Font/include" />
+			<Add directory="../../../Source/T100Event/include" />
+			<Add directory="../../../Source/T100Menu/include" />
+			<Add directory="../../../../T100Object/Source/T100Object/include" />
+			<Add directory="../../../../T100Vessel/Source/T100Vessel/include" />
+			<Add directory="../../../../T100Common/include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />

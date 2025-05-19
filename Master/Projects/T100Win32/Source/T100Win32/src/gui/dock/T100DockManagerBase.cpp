@@ -33,21 +33,21 @@ T100VOID T100DockManagerBase::UpdateLeft()
 {
     T100Size        size    = m_framePtr->GetClientSize();
     T100UINT        length  = m_left.size();
-    T100UINT        value   = size.m_y / length;
+    T100UINT        value   = size.height / length;
 
-    size.m_y        = value;
+    size.height     = value;
     T100Point       point;
 
     for(T100DOCK_DATA* item : m_left){
-        m_leftSize  = 300;
+        m_leftSize  = item->INFO.GetBestSize().width;
     }
 
     for(T100DOCK_DATA* item : m_left){
-        size.m_x    = item->INFO.GetBestSize().m_x;
+        size.width      = m_leftSize;
 
         item->WINDOW->SetSize(size);
         item->WINDOW->SetPosition(point);
-        point.m_y += value;
+        point.y += value;
     }
 }
 
@@ -75,13 +75,13 @@ T100VOID T100DockManagerBase::UpdateCenter()
     T100Size        size    = m_framePtr->GetClientSize();
     T100Size        value;
 
-    value.m_x   = size.m_x - m_leftSize - m_rightSize;
-    value.m_y   = size.m_y - m_topSize - m_bottomSize;
+    value.width     = size.width - m_leftSize - m_rightSize;
+    value.height    = size.height - m_topSize - m_bottomSize;
 
     T100Point       point;
 
-    point.m_x   = m_leftSize;
-    point.m_y   = m_topSize;
+    point.x         = m_leftSize;
+    point.y         = m_topSize;
 
     m_center->WINDOW->SetSize(value);
     m_center->WINDOW->SetPosition(point);

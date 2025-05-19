@@ -1,7 +1,7 @@
 #include "gui/menu/T100MenuItemBase.h"
 
 T100MenuItemBase::T100MenuItemBase() :
-    T100Class(),
+    T100Control(),
     m_font(),
     m_help()
 {
@@ -17,8 +17,7 @@ T100MenuItemBase::~T100MenuItemBase()
 
 T100VOID T100MenuItemBase::init()
 {
-    m_enable    = T100TRUE;
-    m_checkable = T100FALSE;
+    m_enable        = T100TRUE;
 }
 
 T100VOID T100MenuItemBase::uninit()
@@ -28,17 +27,17 @@ T100VOID T100MenuItemBase::uninit()
 
 T100MENU_ITEM_TYPE T100MenuItemBase::GetMenuItemType()
 {
-    return m_type;
+    return m_menuItemType;
 }
 
 T100VOID T100MenuItemBase::Enable()
 {
-    m_enable    = T100TRUE;
+    m_enable        = T100TRUE;
 }
 
 T100VOID T100MenuItemBase::Disable()
 {
-    m_enable    = T100FALSE;
+    m_enable        = T100FALSE;
 }
 
 T100BOOL T100MenuItemBase::IsEnabled()
@@ -48,7 +47,7 @@ T100BOOL T100MenuItemBase::IsEnabled()
 
 T100VOID T100MenuItemBase::SetFont(T100Font& font)
 {
-    m_font  = font;
+    m_font      = font;
 }
 
 T100Font& T100MenuItemBase::GetFont()
@@ -64,9 +63,4 @@ T100VOID T100MenuItemBase::SetHelp(T100WSTRING& help)
 T100WSTRING& T100MenuItemBase::GetHelp()
 {
     return m_help;
-}
-
-T100BOOL T100MenuItemBase::IsCheckable()
-{
-    return m_checkable;
 }

@@ -1,38 +1,25 @@
 #ifndef T100FRAME_H
 #define T100FRAME_H
 
-#include "T100FrameBase.h"
-#include "gui/menu/T100MenuBar.h"
-#include "gui/event/T100CommandEvent.h"
-
-LRESULT CALLBACK T100DefaultFrameProcedure (HWND, UINT, WPARAM, LPARAM);
+#include "gui/T100AllEvents.h"
+#include "gui/frame/T100FrameBase.h"
+#include "gui/T100FrameStyle.h"
 
 class T100Frame : public T100FrameBase
 {
     public:
         T100Frame();
+        T100Frame(T100Win32Application*, T100Window* = T100NULL);
         virtual ~T100Frame();
 
-        T100VOID            Create(T100WSTRING, T100UINT, T100UINT);
-        T100VOID            Destroy();
-
-        T100VOID            Show();
-        T100VOID            Hide();
-
-        T100VOID            SetMenuBarPtr(T100MenuBar*);
-        T100MenuBar*        GetMenuBarPtr();
-
-        T100INT             Run();
+        T100VOID            Create(T100WSTRING, T100FrameStyle* = T100NULL);
+        T100VOID            Create(T100Win32Application*, T100WSTRING, T100FrameStyle* = T100NULL);
 
     protected:
-        T100MenuBar*        m_menuBarPtr            = T100NULL;
-
-        T100VOID            OnMenuQuit(T100CommandEvent&);
-        T100VOID            OnButtonClick(T100CommandEvent&);
+        T100VOID            OnFrameResize(T100WindowEvent&);
 
     private:
-        T100VOID            init();
-        T100VOID            uninit();
+
 };
 
 #endif // T100FRAME_H

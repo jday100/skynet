@@ -1,13 +1,13 @@
 #include "T100ObjectTreeNode.h"
 
 T100ObjectTreeNode::T100ObjectTreeNode() :
-    T100Class()
+    T100Object()
 {
     //ctor
 }
 
 T100ObjectTreeNode::T100ObjectTreeNode(T100WSTRING label, T100ObjectTreeNode* parent) :
-    T100Class()
+    T100Object(label)
 {
     //ctor
     Init(label, parent);
@@ -25,13 +25,11 @@ T100VOID T100ObjectTreeNode::Create(T100WSTRING label, T100ObjectTreeNode* paren
 
 T100VOID T100ObjectTreeNode::Destroy()
 {
-
+    m_children.clear();
 }
 
 T100VOID T100ObjectTreeNode::Init(T100WSTRING label, T100ObjectTreeNode* parent)
 {
-    m_label     = label;
-
     if(parent && this != parent){
         m_parentPtr     = parent;
         m_rootPtr       = parent->GetRootPtr();
@@ -41,19 +39,14 @@ T100VOID T100ObjectTreeNode::Init(T100WSTRING label, T100ObjectTreeNode* parent)
     }
 }
 
-T100VOID T100ObjectTreeNode::SetLabel(T100WSTRING label)
-{
-    m_label     = label;
-}
-
-T100WSTRING T100ObjectTreeNode::GetLabel()
-{
-    return m_label;
-}
-
 T100VOID T100ObjectTreeNode::AddChild(T100WSTRING label, T100ObjectTreeNode* child)
 {
-    m_children.append(label, child);
+    T100ObjectTreeNode*     node    = m_children[label];
+    if(node){
+
+    }else{
+        m_children.append(label, child);
+    }
 }
 
 T100ObjectTreeNode* T100ObjectTreeNode::GetChildPtr(T100WSTRING label)

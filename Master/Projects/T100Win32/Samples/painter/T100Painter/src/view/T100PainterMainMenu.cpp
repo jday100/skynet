@@ -19,7 +19,7 @@ T100VOID T100PainterMainMenu::Create(T100Frame* frame)
     m_newItemPtr    = T100NEW T100MenuItem(m_fileMenuPtr, T100MENU_ID_NEW, L"New");
     m_quitItemPtr   = T100NEW T100MenuItem(m_fileMenuPtr, T100MENU_ID_QUIT, L"Quit");
 
-    m_framePtr->SetMenuBarPtr(m_menuBarPtr);
+    m_framePtr->SetMenuBar(m_menuBarPtr);
 }
 
 T100VOID T100PainterMainMenu::Destroy()

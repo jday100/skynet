@@ -20,8 +20,22 @@
 					<Add directory="include/skeletal" />
 				</Compiler>
 				<Linker>
-					<Add library="../../../build/libT100Win32.a" />
+					<Add library="../../../build/libT100Dock.a" />
+					<Add library="../../../build/libT100Application.a" />
+					<Add library="../../../build/libT100Frame.a" />
+					<Add library="../../../build/libT100ListView.a" />
+					<Add library="../../../build/libT100Panel.a" />
+					<Add library="../../../build/libT100Menu.a" />
+					<Add library="../../../build/libT100Control.a" />
+					<Add library="../../../build/libT100Canvas.a" />
+					<Add library="../../../build/libT100DC.a" />
+					<Add library="../../../build/libT100Window.a" />
+					<Add library="../../../build/libT100Layout.a" />
 					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libgdi32.a" />
+					<Add library="../../../build/libT100Font.a" />
+					<Add library="../../../build/libT100Event.a" />
+					<Add library="../../../../../build/libT100Object.a" />
+					<Add library="../../../../../build/libT100Common.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -44,7 +58,23 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="../../../Source/T100Win32/include" />
+			<Add directory="../../../../T100Common/include" />
+			<Add directory="../../../../T100Vessel/Source/T100Vessel/include" />
+			<Add directory="../../../../T100Object/Source/T100Object/include" />
+			<Add directory="../../../../T100Console/include" />
+			<Add directory="../../../Source/T100Event/include" />
+			<Add directory="../../../Source/T100Window/include" />
+			<Add directory="../../../Source/T100Layout/include" />
+			<Add directory="../../../Source/T100Control/include" />
+			<Add directory="../../../Source/T100Panel/include" />
+			<Add directory="../../../Source/T100Font/include" />
+			<Add directory="../../../Source/T100Menu/include" />
+			<Add directory="../../../Source/T100DC/include" />
+			<Add directory="../../../Source/T100Canvas/include" />
+			<Add directory="../../../Source/T100Frame/include" />
+			<Add directory="../../../Source/T100ListView/include" />
+			<Add directory="../../../Source/T100Dock/include" />
+			<Add directory="../../../Source/T100Application/include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
@@ -53,6 +83,7 @@
 			<Add library="comctl32" />
 		</Linker>
 		<Unit filename="include/T100Painter.h" />
+		<Unit filename="include/T100PainterApplication.h" />
 		<Unit filename="include/serve/T100PainterServe.h" />
 		<Unit filename="include/skeletal/T100PainterInvoking.h" />
 		<Unit filename="include/store/T100PainterStore.h" />
@@ -63,6 +94,7 @@
 		<Unit filename="include/view/T100PainterView.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/T100Painter.cpp" />
+		<Unit filename="src/T100PainterApplication.cpp" />
 		<Unit filename="src/serve/T100PainterServe.cpp" />
 		<Unit filename="src/skeletal/T100PainterInvoking.cpp" />
 		<Unit filename="src/store/T100PainterStore.cpp" />

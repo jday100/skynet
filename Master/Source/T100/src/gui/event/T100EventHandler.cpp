@@ -1,18 +1,20 @@
 #include "gui/event/T100EventHandler.h"
 
-#include <windows.h>
-#include "gui/event/T100AllEvents.h"
+#include "gui/common/T100EventCommon.h"
 
-T100EVENT_WINDOW_HANDLER_HASH       T100EventHandler::m_windows;
-T100EVENT_HANDLER_HASH              T100EventHandler::m_handlers;
-T100WINDOW_CLASS_HASH               T100EventHandler::m_windowClass;
-T100IDManager                       T100EventHandler::m_idManager;
 
 T100EventHandler::T100EventHandler() :
-    T100Class(),
-    m_menus(),
-    m_events(),
-    m_commands()
+    T100ObjectTreeNode(),
+    m_menuEvents(),
+    m_events()
+{
+    //ctor
+}
+
+T100EventHandler::T100EventHandler(T100WSTRING label, T100EventHandler* parent) :
+    T100ObjectTreeNode(label, parent),
+    m_menuEvents(),
+    m_events()
 {
     //ctor
 }
@@ -22,32 +24,26 @@ T100EventHandler::~T100EventHandler()
     //dtor
 }
 
-T100VOID T100EventHandler::Register(HWND hwnd, T100EventHandler* handler)
+T100VOID T100EventHandler::Create(T100WSTRING label, T100EventHandler* handler)
 {
-    m_windows[hwnd]     = handler;
+    T100ObjectTreeNode::Create(label, handler);
 }
 
-T100VOID T100EventHandler::Register(T100UINT id, T100EventHandler* handler)
+T100VOID T100EventHandler::Destroy()
 {
-    m_handlers[id]      = handler;
+
 }
 
-T100BOOL T100EventHandler::RegisterWindowClass(T100WSTRING name)
+T100EventHandler* T100EventHandler::ConvertToEventHandler(T100ObjectTreeNode* node)
 {
-    T100BOOL    result  = m_windowClass[name];
-
-    if(!result){
-        m_windowClass[name] = T100TRUE;
-    }
-
-    return !result;
+    return dynamic_cast<T100EventHandler*>(node);
 }
 
-T100VOID T100EventHandler::Connect(T100EVENT_TYPE type, T100EVENT_CALL call, T100EventHandler* handler)
+T100VOID T100EventHandler::Connect(T100WORD type, T100EVENT_FUNCTION call, T100EventHandler* handler)
 {
-    T100EVENT_CALL_DATA     data;
+    T100EVENT_FUNCTION_DATA         data;
 
-    data.CALL       = call;
+    data.FUNCTION       = call;
 
     if(handler){
         data.HANDLER    = handler;
@@ -55,14 +51,14 @@ T100VOID T100EventHandler::Connect(T100EVENT_TYPE type, T100EVENT_CALL call, T10
         data.HANDLER    = this;
     }
 
-    m_events[type]       = data;
+    m_events[type]      = data;
 }
 
-T100VOID T100EventHandler::Connect(T100EVENT_TYPE type, T100UINT id, T100EVENT_CALL call, T100EventHandler* handler)
+T100VOID T100EventHandler::ConnectMenu(T100WORD type, T100EVENT_FUNCTION call, T100EventHandler* handler)
 {
-    T100EVENT_CALL_DATA     data;
+    T100EVENT_FUNCTION_DATA         data;
 
-    data.CALL       = call;
+    data.FUNCTION       = call;
 
     if(handler){
         data.HANDLER    = handler;
@@ -70,214 +66,89 @@ T100VOID T100EventHandler::Connect(T100EVENT_TYPE type, T100UINT id, T100EVENT_C
         data.HANDLER    = this;
     }
 
-    switch(type){
-    case T100EVENT_MENU:
-        {
-            m_menus[id]     = data;
-        }
-        break;
-    }
-    m_commands[id]      = data;
+    m_menuEvents[type]       = data;
 }
 
-T100VOID T100EventHandler::ProcessMenu(T100Event& event)
+T100VOID T100EventHandler::SendWindowMessage(T100WindowMessageData& message)
 {
-
-    T100EVENT_CALL_DATA     data        = m_menus[event.ID];
-
-    if(data.CALL != 0){
-        if(data.HANDLER){
-            (data.HANDLER->*data.CALL)(event);
-        }else{
-            (this->*data.CALL)(event);
-        }
-    }
-
+    ProcessWindowMessage(message);
 }
 
-T100VOID T100EventHandler::ProcessCommand(T100Event& event)
+T100VOID T100EventHandler::ProcessWindowMessage(T100WindowMessageData& message)
 {
-    switch(event.MessageID){
+    switch(message.MESSAGE_ID){
     case WM_COMMAND:
         {
-            T100CommandEvent        cevent;
-            T100EVENT_CALL_DATA     data        = m_commands[event.ID];
-
-            if(data.CALL != 0){
-                if(data.HANDLER){
-                    (data.HANDLER->*data.CALL)(cevent);
-                }else{
-                    (this->*data.CALL)(cevent);
-                }
-            }
+            ProcessCommand(message);
         }
         break;
-    }
-}
-
-T100VOID T100EventHandler::ProcessEvent(T100Event& event)
-{
-    switch(event.MessageID){
     case WM_CREATE:
         {
-            T100EVENT_CALL_DATA     data        = m_events[T100EVENT_WINDOW_CREATE];
-
-            if(data.CALL != 0){
-                if(data.HANDLER){
-                    (data.HANDLER->*data.CALL)(event);
-                }else{
-                    (this->*data.CALL)(event);
-                }
-            }
+            CallEvent(T100EVENT_WINDOW_CREATE, message);
         }
         break;
     case WM_DESTROY:
         {
-            T100EVENT_CALL_DATA     data        = m_events[T100EVENT_WINDOW_DESTROY];
-
-            if(data.CALL != 0){
-                if(data.HANDLER){
-                    (data.HANDLER->*data.CALL)(event);
-                }else{
-                    (this->*data.CALL)(event);
-                }
-            }
-        }
-        break;
-    case WM_COMMAND:
-        {
-            T100CommandEvent        cevent;
-            T100EVENT_CALL_DATA     data        = m_events[T100EVENT_COMMAND];
-
-            if(data.CALL != 0){
-                if(data.HANDLER){
-                    (data.HANDLER->*data.CALL)(cevent);
-                }else{
-                    (this->*data.CALL)(cevent);
-                }
-            }
-        }
-        break;
-    case WM_SIZE:
-        {
-            T100EVENT_CALL_DATA     data        = m_events[T100EVENT_WINDOW_SIZE];
-
-            if(data.CALL != 0){
-                if(data.HANDLER){
-                    (data.HANDLER->*data.CALL)(event);
-                }else{
-                    (this->*data.CALL)(event);
-                }
-            }
+            CallEvent(T100EVENT_WINDOW_DESTROY, message);
         }
         break;
     case WM_PAINT:
         {
-            T100EVENT_CALL_DATA     data        = m_events[T100EVENT_WINDOW_PAINT];
+            CallEvent(T100EVENT_WINDOW_PAINT, message);
+            PAINTSTRUCT ps;
+            HDC hdc = BeginPaint(message.WINDOW_HWND, &ps);
 
-            if(data.CALL != 0){
-                if(data.HANDLER){
-                    (data.HANDLER->*data.CALL)(event);
-                }else{
-                    (this->*data.CALL)(event);
-                }
-            }else{
-                PAINTSTRUCT ps;
-                HDC hdc = BeginPaint(event.WINDOW_HWND, &ps);
-                    // TODO: 在此处添加使用 hdc 的任何绘图代码...
-                EndPaint(event.WINDOW_HWND, &ps);
-            }
-        }
-        break;
-    case WM_CLOSE:
-        {
-            T100EVENT_CALL_DATA     data        = m_events[T100EVENT_WINDOW_CLOSE];
+            EndPaint(message.WINDOW_HWND, &ps);
 
-            if(data.CALL != 0){
-                if(data.HANDLER){
-                    (data.HANDLER->*data.CALL)(event);
-                    DefWindowProc(event.WINDOW_HWND, event.MessageID, event.ID, event.FLAGS);
-                }else{
-                    (this->*data.CALL)(event);
-                    DefWindowProc(event.WINDOW_HWND, event.MessageID, event.ID, event.FLAGS);
-                }
-            }else{
-                DefWindowProc(event.WINDOW_HWND, event.MessageID, event.ID, event.FLAGS);
-            }
-        }
-        break;
-    }
-}
-
-T100VOID T100EventHandler::DispatchEvent(T100Event& event)
-{
-    switch(event.MessageID){
-    case WM_SIZE:
-        {
-            this->ProcessEvent(event);
-        }
-        break;
-    case WM_PAINT:
-        {
-            this->ProcessEvent(event);
-        }
-        break;
-    case WM_CLOSE:
-        {
-            this->ProcessEvent(event);
-        }
-        break;
-    }
-}
-
-T100VOID T100EventHandler::DispatchMessage(T100MESSAGE_DATA& data)
-{
-    switch(data.MESSAGE){
-    case WM_COMMAND:
-        {
-            if(LOWORD(data.WINDOW_LPARAM) == 0){
-                T100MenuEvent           event(data);
-                this->ProcessMenu(event);
-            }else{
-                T100EventHandler*       handler         = m_handlers[data.WINDOW_WPARAM];
-                T100CommandEvent        event(data);
+            for(T100ObjectTreeNode* item : m_children.getVector()){
+                T100EventHandler*   handler     = ConvertToEventHandler(item);
                 if(handler){
-                    handler->DispatchEvent(event);
+                    handler->ProcessWindowMessage(message);
                 }
             }
         }
         break;
     case WM_SIZE:
         {
-            T100EventHandler*       handler         = m_windows[data.WINDOW_HWND];
-            T100WindowEvent         event(data);
-            if(handler){
-                handler->DispatchEvent(event);
+            CallEvent(T100EVENT_WINDOW_SIZE, message);
+            for(T100ObjectTreeNode* item : m_children.getVector()){
+                T100EventHandler*   handler     = ConvertToEventHandler(item);
+                if(handler){
+                    handler->ProcessWindowMessage(message);
+                }
             }
         }
         break;
-    case WM_PAINT:
-        {
-            T100EventHandler*       handler         = m_windows[data.WINDOW_HWND];//m_handlers[data.WINDOW_WPARAM];
-            T100WindowEvent         event(data);
-            if(handler){
-                handler->DispatchEvent(event);
-            }else{
-                PAINTSTRUCT ps;
-                HDC hdc = BeginPaint(data.WINDOW_HWND, &ps);
-                    // TODO: 在此处添加使用 hdc 的任何绘图代码...
-                EndPaint(data.WINDOW_HWND, &ps);
-            }
-        }
-        break;
-    case WM_CLOSE:
-        {
-            T100EventHandler*       handler         = m_windows[data.WINDOW_HWND];
-            T100WindowEvent         event(data);
-            if(handler){
-                handler->DispatchEvent(event);
-            }
-        }
-        break;
+    }
+}
+
+T100VOID T100EventHandler::ProcessCommand(T100WindowMessageData& message)
+{
+    if(LOWORD(message.WINDOW_LPARAM) == 0){
+        CallMenu((UINT)message.WINDOW_WPARAM, message);
+    }else{
+        CallEvent((T100EVENT_TYPE)message.WINDOW_WPARAM, message);
+    }
+}
+
+T100VOID T100EventHandler::CallMenu(T100WORD type, T100WindowMessageData& message)
+{
+    T100EVENT_FUNCTION_DATA&        data    = m_menuEvents[type];
+
+    if(data.HANDLER && data.FUNCTION){
+        T100Event       event(message);
+        (data.HANDLER->*(data.FUNCTION))(event);
+    }
+}
+
+T100VOID T100EventHandler::CallEvent(T100WORD type, T100WindowMessageData& message)
+{
+    T100EVENT_FUNCTION_DATA&        data    = m_events[type];
+
+    if(data.HANDLER && data.FUNCTION){
+        T100Event       event(message);
+        (data.HANDLER->*(data.FUNCTION))(event);
+    }else{
+        DefWindowProc(message.WINDOW_HWND, message.MESSAGE_ID, message.WINDOW_WPARAM, message.WINDOW_LPARAM);
     }
 }

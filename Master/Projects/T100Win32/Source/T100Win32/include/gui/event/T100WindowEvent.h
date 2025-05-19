@@ -1,13 +1,11 @@
 #ifndef T100WINDOWEVENT_H
 #define T100WINDOWEVENT_H
 
-#include "gui/event/T100Event.h"
 
-class T100WindowEvent : public T100Event
+class T100WindowEvent
 {
     public:
         T100WindowEvent();
-        T100WindowEvent(T100MESSAGE_DATA&);
         virtual ~T100WindowEvent();
 
     protected:

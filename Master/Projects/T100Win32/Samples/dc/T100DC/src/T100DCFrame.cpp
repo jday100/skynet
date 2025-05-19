@@ -1,9 +1,9 @@
 #include "T100DCFrame.h"
 
-#include "gui/dc/T100DC.h"
+#include "gui/T100DC.h"
 
-T100DCFrame::T100DCFrame() :
-    T100Frame()
+T100DCFrame::T100DCFrame(T100Win32Application* app) :
+    T100Frame(app)
 {
     //ctor
 }
@@ -13,16 +13,16 @@ T100DCFrame::~T100DCFrame()
     //dtor
 }
 
-T100VOID T100DCFrame::Create(T100WSTRING label, T100UINT width, T100UINT height)
+T100VOID T100DCFrame::Create(T100WSTRING label)
 {
-    T100Frame::Create(label, width, height);
+    T100Frame::Create(label);
 
     init();
 }
 
 T100VOID T100DCFrame::init()
 {
-    Connect(T100EVENT_WINDOW_PAINT, (T100EVENT_CALL)&OnFramePaint);
+    Connect(T100EVENT_WINDOW_PAINT, (T100EVENT_FUNCTION)&OnFramePaint);
 }
 
 T100VOID T100DCFrame::uninit()

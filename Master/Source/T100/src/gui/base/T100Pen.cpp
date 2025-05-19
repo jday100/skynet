@@ -1,17 +1,11 @@
 #include "gui/base/T100Pen.h"
 
-T100Pen::T100Pen() :
-    T100Class()
+T100Pen::T100Pen(T100Colour colour, T100WORD width, T100LINE_TYPE type)
 {
     //ctor
 }
 
-T100Pen::T100Pen(T100Colour colour, T100UINT width, T100LINE_TYPE type)
-{
-    //ctor
-}
-
-T100Pen::T100Pen(T100COLOUR_TYPE colour, T100UINT width, T100LINE_TYPE type)
+T100Pen::T100Pen(T100COLOUR_TYPE colour, T100WORD width, T100LINE_TYPE type)
 {
     //ctor
     m_pen   = CreatePen(type, width, T100Colour(colour).GetColour());

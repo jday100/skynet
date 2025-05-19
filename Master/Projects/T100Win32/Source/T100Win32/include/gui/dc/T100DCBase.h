@@ -3,10 +3,10 @@
 
 #include <windows.h>
 #include "T100Common.h"
-#include "gui/base/T100Pen.h"
-#include "gui/base/T100Size.h"
-#include "gui/base/T100Point.h"
-#include "gui/base/T100Brush.h"
+#include "gui/T100Pen.h"
+#include "gui/T100Size.h"
+#include "gui/T100Point.h"
+#include "gui/T100Brush.h"
 
 class T100Window;
 

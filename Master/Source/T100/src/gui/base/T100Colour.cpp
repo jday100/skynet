@@ -2,8 +2,7 @@
 
 #include <windows.h>
 
-T100Colour::T100Colour() :
-    T100Class()
+T100Colour::T100Colour()
 {
     //ctor
 }
@@ -59,19 +58,19 @@ T100DWORD T100Colour::Colour(T100COLOUR_TYPE type)
             result  = RGB(0, 0, 255);
         }
         break;
-    case T100COLOUR_TYPE_ORANGE:
-        {
-            result  = RGB(255, 255, 255);
-        }
-        break;
     case T100COLOUR_TYPE_YELLOW:
         {
-            result  = RGB(255, 255, 255);
+            result  = RGB(255, 255, 0);
         }
         break;
     case T100COLOUR_TYPE_PURPLE:
         {
-            result  = RGB(255, 255, 255);
+            result  = RGB(255, 0, 255);
+        }
+        break;
+    case T100COLOUR_TYPE_CYAN:
+        {
+            result  = RGB(0, 255, 255);
         }
         break;
     }

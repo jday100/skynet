@@ -2,51 +2,53 @@
 #define T100EVENTHANDLER_H
 
 #include <unordered_map>
+#include <windows.h>
+#include "T100Common.h"
+#include "object/T100ObjectTree.h"
 #include "T100Event.h"
-#include "T100AllEvents.h"
-#include "T100IDManager.h"
+#include "gui/data/T100WindowMessageData.h"
+
+class T100EventHandler;
+class T100Win32Application;
+
+typedef void(T100EventHandler::*T100EVENT_FUNCTION)(...);
 
 typedef struct{
-    T100EVENT_CALL      CALL            = 0;
-    T100EventHandler*   HANDLER         = T100NULL;
-}T100EVENT_CALL_DATA;
+    T100EventHandler*           HANDLER         = T100NULL;
+    T100EVENT_FUNCTION          FUNCTION;
+}T100EVENT_FUNCTION_DATA;
 
-#define     T100EVENT_WINDOW_HANDLER_HASH           std::unordered_map<HWND, T100EventHandler*>
-#define     T100EVENT_HANDLER_HASH                  std::unordered_map<T100UINT, T100EventHandler*>
-#define     T100EVENT_CALL_HASH                     std::unordered_map<T100UINT, T100EVENT_CALL_DATA>
-#define     T100WINDOW_CLASS_HASH                   std::unordered_map<T100WSTRING, T100BOOL>
+#define     T100EVENT_FUNCTION_DATA_HASH        std::unordered_map<int, T100EVENT_FUNCTION_DATA>
 
-class T100EventHandler
+class T100EventHandler : public T100ObjectTree
 {
     public:
         T100EventHandler();
+        T100EventHandler(T100EventHandler*);
         virtual ~T100EventHandler();
 
-        virtual T100VOID            Connect(T100EVENT_TYPE, T100EVENT_CALL, T100EventHandler* = T100NULL);
-        virtual T100VOID            Connect(T100EVENT_TYPE, T100UINT, T100EVENT_CALL, T100EventHandler* = T100NULL);
+        T100VOID                                Create(T100EventHandler*);
+        T100VOID                                Destroy();
 
-        T100VOID                    Register(HWND, T100EventHandler*);
-        T100VOID                    Register(T100UINT, T100EventHandler*);
-        T100BOOL                    RegisterWindowClass(T100WSTRING);
+        virtual T100VOID                        Connect(T100UINT, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
+        virtual T100VOID                        ConnectMenu(T100UINT, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
 
-        T100VOID                    ProcessCommand(T100Event&);
-        T100VOID                    ProcessEvent(T100Event&);
-        T100VOID                    ProcessMenu(T100Event&);
+        T100Win32Application*                   GetApplicationPtr();
 
-        T100VOID                    DispatchEvent(T100Event&);
+        T100VOID                                SendWindowMessage(T100WindowMessageData&);
 
-        T100VOID                    DispatchMessage(T100MESSAGE_DATA&);
+        T100VOID                                ProcessWindowMessage(T100WindowMessageData&);
+
+        T100EventHandler*                       ConvertToEventHandler(T100ObjectTree*);
 
     protected:
-        static T100IDManager                        m_idManager;
+        T100EVENT_FUNCTION_DATA_HASH            m_menus;
+        T100EVENT_FUNCTION_DATA_HASH            m_events;
 
     private:
-        T100EVENT_CALL_HASH                         m_menus;
-        T100EVENT_CALL_HASH                         m_events;
-        T100EVENT_CALL_HASH                         m_commands;
-        static T100EVENT_WINDOW_HANDLER_HASH        m_windows;
-        static T100EVENT_HANDLER_HASH               m_handlers;
-        static T100WINDOW_CLASS_HASH                m_windowClass;
+        T100VOID                                ProcessCommand(T100WindowMessageData&);
+        T100VOID                                CallMenu(T100UINT, T100WindowMessageData&);
+        T100VOID                                CallEvent(T100EVENT_TYPE, T100WindowMessageData&);
 };
 
 #endif // T100EVENTHANDLER_H

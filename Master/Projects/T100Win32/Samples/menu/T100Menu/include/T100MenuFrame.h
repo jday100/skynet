@@ -6,10 +6,10 @@
 class T100MenuFrame : public T100Frame
 {
     public:
-        T100MenuFrame();
+        T100MenuFrame(T100Win32Application*);
         virtual ~T100MenuFrame();
 
-        T100VOID            Create(T100WSTRING, T100UINT, T100UINT);
+        T100VOID            Create(T100WSTRING);
 
     protected:
         T100UINT            T100MENU_ID_RUN         = T100MENU_ID_USER + 1;

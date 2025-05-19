@@ -1,7 +1,6 @@
 #include "console/T100ConsoleBase.h"
 
-T100ConsoleBase::T100ConsoleBase() :
-    T100Class()
+T100ConsoleBase::T100ConsoleBase()
 {
     //ctor
 }

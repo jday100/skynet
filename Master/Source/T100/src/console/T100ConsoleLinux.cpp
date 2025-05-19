@@ -16,7 +16,7 @@ T100VOID T100ConsoleLinux::Print(T100WSTRING& msg)
     wprintf(L"%ls", msg.c_str());
 }
 
-T100VOID T100ConsoleLinux::OutLine(T100WSTRING& msg)
+T100VOID T100ConsoleLinux::OutLine(T100WSTRING msg)
 {
     wprintf(L"%ls\n", msg.c_str());
 }

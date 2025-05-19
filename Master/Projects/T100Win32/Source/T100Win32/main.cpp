@@ -1,3 +1,4 @@
-#include "T100Start.h"
+#include "gui/T100Win32Application.h"
+#include "gui/T100Start.h"
 
-START(0)
+T100StartApp(T100Win32Application)

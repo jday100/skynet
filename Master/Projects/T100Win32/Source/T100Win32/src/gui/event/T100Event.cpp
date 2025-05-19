@@ -1,13 +1,7 @@
 #include "T100Event.h"
 
-T100Event::T100Event() :
-    T100EventBase()
-{
-    //ctor
-}
-
-T100Event::T100Event(T100MESSAGE_DATA& data) :
-    T100EventBase(data)
+T100Event::T100Event(T100WindowMessageData& message) :
+    T100EventBase(message)
 {
     //ctor
 }

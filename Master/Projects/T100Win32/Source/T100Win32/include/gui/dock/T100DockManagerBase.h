@@ -4,7 +4,7 @@
 #include <vector>
 #include <unordered_map>
 #include "gui/T100Window.h"
-#include "gui/dock/T100DockInfo.h"
+#include "gui/T100DockInfo.h"
 
 typedef struct T100DOCK_DATA{
     T100WSTRING             NAME;

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Application" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100Application" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/application" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/application" />
+					<Add directory="include/gui/event" />
+				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100Frame.a" />
+					<Add library="../../build/libT100Window.a" />
+					<Add library="../../build/libT100Menu.a" />
+					<Add library="../../build/libT100Font.a" />
+					<Add library="../../build/libT100Control.a" />
+					<Add library="../../build/libT100Event.a" />
+					<Add library="../../../../build/libT100Object.a" />
+					<Add library="../../../../build/libT100Common.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Application" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/application" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/application" />
+					<Add directory="include/gui/event" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../build/T100Application" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/application" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/application" />
+					<Add directory="include/gui/event" />
+				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100Frame.a" />
+					<Add library="../../build/libT100Window.a" />
+					<Add library="../../build/libT100Event.a" />
+					<Add library="../../../../build/libT100Object.a" />
+					<Add library="../../../../build/libT100Common.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="include" />
+			<Add directory="../../../T100Common/include" />
+			<Add directory="../../../T100Vessel/Source/T100Vessel/include" />
+			<Add directory="../../../T100Object/Source/T100Object/include" />
+			<Add directory="../T100Event/include" />
+			<Add directory="../T100Font/include" />
+			<Add directory="../T100Control/include" />
+			<Add directory="../T100Menu/include" />
+			<Add directory="../T100Window/include" />
+			<Add directory="../T100Frame/include" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/application/T100Application.h" />
+		<Unit filename="include/gui/T100Start.h" />
+		<Unit filename="include/gui/T100Win32Application.h" />
+		<Unit filename="include/gui/application/T100Win32ApplicationBase.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/application/T100Application.cpp" />
+		<Unit filename="src/gui/application/T100Win32Application.cpp" />
+		<Unit filename="src/gui/application/T100Win32ApplicationBase.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
