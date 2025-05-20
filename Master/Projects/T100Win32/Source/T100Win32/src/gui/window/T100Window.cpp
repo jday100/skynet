@@ -70,14 +70,14 @@ T100VOID T100Window::Create(T100Win32Application* app, T100Window* parent, T100W
         return;
     }
 
-    T100ObjectTree::Create(parent);
+    T100ObjectTreeNode::Create(L"", parent);
 
     Create(style);
 }
 
 T100Window* T100Window::GetParentPtr()
 {
-    return dynamic_cast<T100Window*>(T100ObjectTree::GetParentPtr());
+    return dynamic_cast<T100Window*>(T100ObjectTreeNode::GetParentPtr());
 }
 
 T100VOID T100Window::SetLayout(T100Layout* layout)
@@ -93,7 +93,7 @@ T100Layout* T100Window::GetLayoutPtr()
     return m_layoutPtr;
 }
 
-T100Window* T100Window::ConvertToWindow(T100ObjectTree* node)
+T100Window* T100Window::ConvertToWindow(T100ObjectTreeNode* node)
 {
     return dynamic_cast<T100Window*>(node);
 }

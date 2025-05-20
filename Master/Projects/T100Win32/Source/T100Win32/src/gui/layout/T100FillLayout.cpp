@@ -51,13 +51,13 @@ T100VOID T100FillLayout::Update()
 T100VOID T100FillLayout::UpdateHorizontal()
 {
     T100Size        size    = m_parentPtr->GetSize();
-    T100UINT        length  = m_childrenPtr->size();
-    T100UINT        value   = size.width / length;
+    T100WORD        length  = m_childrenPtr->size();
+    T100WORD        value   = size.width / length;
 
     size.width      = value;
     T100Point       point;
 
-    for(T100ObjectTree* item : *m_childrenPtr){
+    for(T100ObjectTreeNode* item : *m_childrenPtr){
         T100Window* win     = T100Window::ConvertToWindow(item);
         if(win){
             win->SetSize(size);
@@ -70,13 +70,13 @@ T100VOID T100FillLayout::UpdateHorizontal()
 T100VOID T100FillLayout::UpdateVertical()
 {
     T100Size        size    = m_parentPtr->GetSize();
-    T100UINT        length  = m_childrenPtr->size();
-    T100UINT        value   = size.height / length;
+    T100WORD        length  = m_childrenPtr->size();
+    T100WORD        value   = size.height / length;
 
     size.height     = value;
     T100Point       point;
 
-    for(T100ObjectTree* item : *m_childrenPtr){
+    for(T100ObjectTreeNode* item : *m_childrenPtr){
         T100Window* win     = T100Window::ConvertToWindow(item);
         if(win){
             win->SetSize(size);

@@ -39,12 +39,14 @@ class T100EventHandler : public T100ObjectTreeNode
 
     protected:
         T100EVENT_FUNCTION_DATA_HASH            m_menuEvents;
+        T100EVENT_FUNCTION_DATA_HASH            m_commands;
         T100EVENT_FUNCTION_DATA_HASH            m_events;
 
     private:
         T100VOID                                ProcessCommand(T100WindowMessageData&);
         T100VOID                                CallMenu(T100WORD, T100WindowMessageData&);
         T100VOID                                CallEvent(T100WORD, T100WindowMessageData&);
+        T100VOID                                CallCommand(T100WORD, T100WindowMessageData&);
 };
 
 #endif // T100EVENTHANDLER_H

@@ -21,7 +21,7 @@ T100VOID T100DC::uninit()
 {
 }
 
-T100VOID T100DC::DrawCircle(T100Point point, T100UINT radius)
+T100VOID T100DC::DrawCircle(T100Point point, T100WORD radius)
 {
     T100INT     left;
     T100INT     right;

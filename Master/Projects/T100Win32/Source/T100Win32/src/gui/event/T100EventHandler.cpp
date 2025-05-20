@@ -4,7 +4,7 @@
 #include "T100Win32Application.h"
 
 T100EventHandler::T100EventHandler() :
-    T100ObjectTree(),
+    T100ObjectTreeNode(),
     m_menus(),
     m_events()
 {
@@ -12,7 +12,7 @@ T100EventHandler::T100EventHandler() :
 }
 
 T100EventHandler::T100EventHandler(T100EventHandler* parent) :
-    T100ObjectTree(parent),
+    T100ObjectTreeNode(L"", parent),
     m_menus(),
     m_events()
 {
@@ -26,7 +26,7 @@ T100EventHandler::~T100EventHandler()
 
 T100VOID T100EventHandler::Create(T100EventHandler* handler)
 {
-    T100ObjectTree::Create(handler);
+    T100ObjectTreeNode::Create(L"", handler);
 }
 
 T100VOID T100EventHandler::Destroy()
@@ -34,12 +34,12 @@ T100VOID T100EventHandler::Destroy()
 
 }
 
-T100EventHandler* T100EventHandler::ConvertToEventHandler(T100ObjectTree* node)
+T100EventHandler* T100EventHandler::ConvertToEventHandler(T100ObjectTreeNode* node)
 {
     return dynamic_cast<T100EventHandler*>(node);
 }
 
-T100VOID T100EventHandler::Connect(T100UINT type, T100EVENT_FUNCTION call, T100EventHandler* handler)
+T100VOID T100EventHandler::Connect(T100WORD type, T100EVENT_FUNCTION call, T100EventHandler* handler)
 {
     T100EVENT_FUNCTION_DATA         data;
 
@@ -54,7 +54,7 @@ T100VOID T100EventHandler::Connect(T100UINT type, T100EVENT_FUNCTION call, T100E
     m_events[type]      = data;
 }
 
-T100VOID T100EventHandler::ConnectMenu(T100UINT type, T100EVENT_FUNCTION call, T100EventHandler* handler)
+T100VOID T100EventHandler::ConnectMenu(T100WORD type, T100EVENT_FUNCTION call, T100EventHandler* handler)
 {
     T100EVENT_FUNCTION_DATA         data;
 
@@ -105,7 +105,7 @@ T100VOID T100EventHandler::ProcessWindowMessage(T100WindowMessageData& message)
 
             EndPaint(message.WINDOW_HWND, &ps);
 
-            for(T100ObjectTree* item : m_children.getVector()){
+            for(T100ObjectTreeNode* item : m_children.getVector()){
                 T100EventHandler*   handler     = ConvertToEventHandler(item);
                 if(handler){
                     handler->ProcessWindowMessage(message);
@@ -116,7 +116,7 @@ T100VOID T100EventHandler::ProcessWindowMessage(T100WindowMessageData& message)
     case WM_SIZE:
         {
             CallEvent(T100EVENT_WINDOW_SIZE, message);
-            for(T100ObjectTree* item : m_children.getVector()){
+            for(T100ObjectTreeNode* item : m_children.getVector()){
                 T100EventHandler*   handler     = ConvertToEventHandler(item);
                 if(handler){
                     handler->ProcessWindowMessage(message);
@@ -136,7 +136,7 @@ T100VOID T100EventHandler::ProcessCommand(T100WindowMessageData& message)
     }
 }
 
-T100VOID T100EventHandler::CallMenu(T100UINT type, T100WindowMessageData& message)
+T100VOID T100EventHandler::CallMenu(T100WORD type, T100WindowMessageData& message)
 {
     T100EVENT_FUNCTION_DATA&        data    = m_menus[type];
 

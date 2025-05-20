@@ -5,7 +5,7 @@
 #include "gui/window/T100WindowBase.h"
 #include "gui/T100AllEvents.h"
 
-#define     T100OBJECT_TREE_VECTOR          std::vector<T100ObjectTree*>
+#define     T100OBJECT_TREE_VECTOR          std::vector<T100ObjectTreeNode*>
 
 LRESULT CALLBACK DefaultWindowProcedure (HWND, UINT, WPARAM, LPARAM);
 
@@ -24,7 +24,7 @@ class T100Window : public T100WindowBase
         T100VOID                    SetLayout(T100Layout*);
         T100Layout*                 GetLayoutPtr();
 
-        static T100Window*          ConvertToWindow(T100ObjectTree*);
+        static T100Window*          ConvertToWindow(T100ObjectTreeNode*);
 
     protected:
         T100Layout*                 m_layoutPtr     = T100NULL;

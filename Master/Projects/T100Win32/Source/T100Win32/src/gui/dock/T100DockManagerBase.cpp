@@ -32,8 +32,8 @@ T100VOID T100DockManagerBase::SetFramePtr(T100Frame* frame)
 T100VOID T100DockManagerBase::UpdateLeft()
 {
     T100Size        size    = m_framePtr->GetClientSize();
-    T100UINT        length  = m_left.size();
-    T100UINT        value   = size.height / length;
+    T100WORD        length  = m_left.size();
+    T100WORD        value   = size.height / length;
 
     size.height     = value;
     T100Point       point;

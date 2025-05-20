@@ -9,8 +9,8 @@ T100FrameBase::T100FrameBase() :
     //ctor
 }
 
-T100FrameBase::T100FrameBase(T100Win32Application* app, T100WSTRING label) :
-    T100SelfLoopWindow(app, T100NULL)
+T100FrameBase::T100FrameBase(T100Win32Application* app, T100FrameStyle* style) :
+    T100SelfLoopWindow(app, T100NULL, style)
 {
     //ctor
 }
@@ -20,9 +20,12 @@ T100FrameBase::~T100FrameBase()
     //dtor
 }
 
-T100VOID T100FrameBase::Create(T100Win32Application* appPtr, T100WSTRING title)
+T100VOID T100FrameBase::Create(T100Win32Application* appPtr, T100FrameStyle* style)
 {
-    T100SelfLoopWindow::Create(appPtr, T100NULL);
+    if(!style){
+        m_style     = T100FrameStyle();
+    }
+    T100SelfLoopWindow::Create(appPtr, T100NULL, style);
 }
 
 T100VOID T100FrameBase::SetClientSize(T100Size size)

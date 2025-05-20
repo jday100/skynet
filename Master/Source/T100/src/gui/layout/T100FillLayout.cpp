@@ -53,7 +53,7 @@ T100VOID T100FillLayout::Update()
 
 T100VOID T100FillLayout::UpdateHorizontal()
 {
-    T100Size        size    = m_parentPtr->GetSize();
+    T100Size        size    = m_parentPtr->GetClientSize();
     T100WORD        length  = m_childrenPtr->size();
     T100WORD        value   = size.width / length;
 
@@ -72,7 +72,7 @@ T100VOID T100FillLayout::UpdateHorizontal()
 
 T100VOID T100FillLayout::UpdateVertical()
 {
-    T100Size        size    = m_parentPtr->GetSize();
+    T100Size        size    = m_parentPtr->GetClientSize();
     T100WORD        length  = m_childrenPtr->size();
     T100WORD        value   = size.height / length;
 

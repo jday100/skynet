@@ -16,7 +16,7 @@ T100Menu::~T100Menu()
     //dtor
 }
 
-T100VOID T100Menu::Create(T100UINT id, T100WSTRING& label)
+T100VOID T100Menu::Create(T100WORD id, T100WSTRING& label)
 {
     m_menu      = CreateMenu();
     AppendMenu(m_menu, MF_STRING, id, label.c_str());

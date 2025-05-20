@@ -10,7 +10,7 @@ class T100WindowStyle
         T100WindowStyle();
         virtual ~T100WindowStyle();
 
-        T100UINT            ClassStyle;
+        T100WORD            ClassStyle;
         WNDPROC             Procedure;
         T100WSTRING         ClassType;
 

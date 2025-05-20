@@ -11,7 +11,7 @@ class T100IDManager
         virtual ~T100IDManager();
 
         T100INT                     Next();
-        T100VOID                    Get(T100UINT, T100INT&, T100INT&);
+        T100VOID                    Get(T100WORD, T100INT&, T100INT&);
 
     protected:
 

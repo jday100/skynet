@@ -11,7 +11,7 @@ class T100Menu;
 class T100MenuItem : public T100MenuItemBase
 {
     public:
-        T100MenuItem(T100Menu*, T100UINT, T100WSTRING);
+        T100MenuItem(T100Menu*, T100WORD, T100WSTRING);
         virtual ~T100MenuItem();
 
     protected:

@@ -51,7 +51,19 @@ T100VOID T100EventHandler::Connect(T100WORD type, T100EVENT_FUNCTION call, T100E
         data.HANDLER    = this;
     }
 
-    m_events[type]      = data;
+    switch(type){
+    case T100EVENT_COMMAND:
+        {
+            m_commands[type]    = data;
+        }
+        break;
+    default:
+        {
+            m_events[type]      = data;
+        }
+        break;
+    }
+
 }
 
 T100VOID T100EventHandler::ConnectMenu(T100WORD type, T100EVENT_FUNCTION call, T100EventHandler* handler)
@@ -127,7 +139,7 @@ T100VOID T100EventHandler::ProcessCommand(T100WindowMessageData& message)
     if(LOWORD(message.WINDOW_LPARAM) == 0){
         CallMenu((UINT)message.WINDOW_WPARAM, message);
     }else{
-        CallEvent((T100EVENT_TYPE)message.WINDOW_WPARAM, message);
+        CallCommand(LOWORD(message.WINDOW_WPARAM), message);
     }
 }
 
@@ -149,6 +161,18 @@ T100VOID T100EventHandler::CallEvent(T100WORD type, T100WindowMessageData& messa
         T100Event       event(message);
         (data.HANDLER->*(data.FUNCTION))(event);
     }else{
-        DefWindowProc(message.WINDOW_HWND, message.MESSAGE_ID, message.WINDOW_WPARAM, message.WINDOW_LPARAM);
+        //DefWindowProc(message.WINDOW_HWND, message.MESSAGE_ID, message.WINDOW_WPARAM, message.WINDOW_LPARAM);
+    }
+}
+
+T100VOID T100EventHandler::CallCommand(T100WORD type, T100WindowMessageData& message)
+{
+    T100EVENT_FUNCTION_DATA&        data    = m_commands[T100EVENT_COMMAND];
+
+    if(data.HANDLER && data.FUNCTION){
+        T100Event       event(message);
+        (data.HANDLER->*(data.FUNCTION))(event);
+    }else{
+        //DefWindowProc(message.WINDOW_HWND, message.MESSAGE_ID, message.WINDOW_WPARAM, message.WINDOW_LPARAM);
     }
 }

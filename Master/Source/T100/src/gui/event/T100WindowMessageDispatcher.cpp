@@ -34,3 +34,8 @@ T100VOID T100WindowMessageDispatcher::DispatchWindowMessage(T100WindowMessageDat
         handerPtr->ProcessWindowMessage(message);
     }
 }
+
+T100EventHandler* T100WindowMessageDispatcher::GetControlHandler(T100WORD id)
+{
+    return m_controlHandlers[id];
+}

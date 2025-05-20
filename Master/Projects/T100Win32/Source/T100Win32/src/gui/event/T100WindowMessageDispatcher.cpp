@@ -14,7 +14,7 @@ T100WindowMessageDispatcher::~T100WindowMessageDispatcher()
     //dtor
 }
 
-T100BOOL T100WindowMessageDispatcher::RegisterControlHandler(T100UINT id, T100EventHandler* handler)
+T100BOOL T100WindowMessageDispatcher::RegisterControlHandler(T100WORD id, T100EventHandler* handler)
 {
     m_controlHandlers[id]   = handler;
     return T100TRUE;

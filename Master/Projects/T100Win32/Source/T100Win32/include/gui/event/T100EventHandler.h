@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include <windows.h>
 #include "T100Common.h"
-#include "object/T100ObjectTree.h"
+#include "object/T100ObjectTreeNode.h"
 #include "T100Event.h"
 #include "gui/data/T100WindowMessageData.h"
 
@@ -20,7 +20,7 @@ typedef struct{
 
 #define     T100EVENT_FUNCTION_DATA_HASH        std::unordered_map<int, T100EVENT_FUNCTION_DATA>
 
-class T100EventHandler : public T100ObjectTree
+class T100EventHandler : public T100ObjectTreeNode
 {
     public:
         T100EventHandler();
@@ -30,8 +30,8 @@ class T100EventHandler : public T100ObjectTree
         T100VOID                                Create(T100EventHandler*);
         T100VOID                                Destroy();
 
-        virtual T100VOID                        Connect(T100UINT, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
-        virtual T100VOID                        ConnectMenu(T100UINT, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
+        virtual T100VOID                        Connect(T100WORD, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
+        virtual T100VOID                        ConnectMenu(T100WORD, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
 
         T100Win32Application*                   GetApplicationPtr();
 
@@ -39,7 +39,7 @@ class T100EventHandler : public T100ObjectTree
 
         T100VOID                                ProcessWindowMessage(T100WindowMessageData&);
 
-        T100EventHandler*                       ConvertToEventHandler(T100ObjectTree*);
+        T100EventHandler*                       ConvertToEventHandler(T100ObjectTreeNode*);
 
     protected:
         T100EVENT_FUNCTION_DATA_HASH            m_menus;
@@ -47,7 +47,7 @@ class T100EventHandler : public T100ObjectTree
 
     private:
         T100VOID                                ProcessCommand(T100WindowMessageData&);
-        T100VOID                                CallMenu(T100UINT, T100WindowMessageData&);
+        T100VOID                                CallMenu(T100WORD, T100WindowMessageData&);
         T100VOID                                CallEvent(T100EVENT_TYPE, T100WindowMessageData&);
 };
 

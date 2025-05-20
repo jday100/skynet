@@ -26,11 +26,20 @@ class T100WindowBase : public T100WindowEventHandler
         T100VOID                    SetSize(T100INT, T100INT);
         T100Size                    GetSize();
 
+        T100VOID                    SetClientSize(T100Size);
+        T100VOID                    SetClientSize(T100INT, T100INT);
+        T100Size                    GetClientSize();
+
         T100VOID                    SetPosition(T100Point);
         T100Point                   GetPosition();
 
+        T100VOID                    Enable();
+        T100VOID                    Disable();
+        T100BOOL                    IsEnabled();
+
         T100VOID                    Show();
         T100VOID                    Hide();
+        T100BOOL                    IsShown();
 
     protected:
         HWND                        m_hwnd;

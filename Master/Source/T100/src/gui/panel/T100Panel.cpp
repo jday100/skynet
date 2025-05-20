@@ -6,13 +6,24 @@ T100Panel::T100Panel() :
     //ctor
 }
 
-T100Panel::T100Panel(T100Win32Application* app, T100Window* parent) :
-    T100Window((T100ApplicationEventHandler*)app, parent)
+T100Panel::T100Panel(T100Window* parent) :
+    T100Window()
 {
     //ctor
+    T100PanelStyle      style;
+    T100Window::Create(T100NULL, parent, &style);
 }
 
 T100Panel::~T100Panel()
 {
     //dtor
+}
+
+T100VOID T100Panel::Create(T100Window* parent, T100PanelStyle* style)
+{
+    if(!style){
+        T100PanelStyle      thisStyle;
+        style       = &thisStyle;
+    }
+    T100Window::Create(T100NULL, parent, style);
 }

@@ -13,6 +13,10 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/gui/event" />
+					<Add directory="include/gui" />
+					<Add directory="include/string" />
+					<Add directory="include/gui/dialog" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +26,10 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/gui/event" />
+					<Add directory="include/gui" />
+					<Add directory="include/string" />
+					<Add directory="include/gui/dialog" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -35,6 +43,10 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/gui/event" />
+					<Add directory="include/gui" />
+					<Add directory="include/string" />
+					<Add directory="include/gui/dialog" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -65,6 +77,8 @@
 		<Unit filename="include/console/T100ConsoleLinux.h" />
 		<Unit filename="include/console/T100ConsoleWindows.h" />
 		<Unit filename="include/gui/T100AllEvents.h" />
+		<Unit filename="include/gui/T100Button.h" />
+		<Unit filename="include/gui/T100ButtonStyle.h" />
 		<Unit filename="include/gui/T100Canvas.h" />
 		<Unit filename="include/gui/T100CanvasStyle.h" />
 		<Unit filename="include/gui/T100DC.h" />
@@ -78,6 +92,7 @@
 		<Unit filename="include/gui/T100Menu.h" />
 		<Unit filename="include/gui/T100MenuBar.h" />
 		<Unit filename="include/gui/T100MenuItem.h" />
+		<Unit filename="include/gui/T100MessageBox.h" />
 		<Unit filename="include/gui/T100Panel.h" />
 		<Unit filename="include/gui/T100PanelStyle.h" />
 		<Unit filename="include/gui/T100Start.h" />
@@ -96,6 +111,7 @@
 		<Unit filename="include/gui/control/T100Control.h" />
 		<Unit filename="include/gui/data/T100WindowMessageData.h" />
 		<Unit filename="include/gui/dc/T100DCBase.h" />
+		<Unit filename="include/gui/dialog/T100Dialog.h" />
 		<Unit filename="include/gui/dock/T100DockManagerBase.h" />
 		<Unit filename="include/gui/event/T100ApplicationEventHandler.h" />
 		<Unit filename="include/gui/event/T100CommandEvent.h" />
@@ -103,6 +119,7 @@
 		<Unit filename="include/gui/event/T100EventBase.h" />
 		<Unit filename="include/gui/event/T100EventHandler.h" />
 		<Unit filename="include/gui/event/T100IDManager.h" />
+		<Unit filename="include/gui/event/T100MenuEvent.h" />
 		<Unit filename="include/gui/event/T100PaintEvent.h" />
 		<Unit filename="include/gui/event/T100WindowEvent.h" />
 		<Unit filename="include/gui/event/T100WindowEventHandler.h" />
@@ -121,6 +138,7 @@
 		<Unit filename="include/log/T100LoggerConsole.h" />
 		<Unit filename="include/log/T100LoggerFile.h" />
 		<Unit filename="include/object/T100ObjectTreeNode.h" />
+		<Unit filename="include/string/T100StringTools.h" />
 		<Unit filename="include/string/T100Unicode.h" />
 		<Unit filename="include/vessel/T100Vessel.h" />
 		<Unit filename="main.cpp" />
@@ -131,7 +149,6 @@
 		<Unit filename="src/console/T100ConsoleBase.cpp" />
 		<Unit filename="src/console/T100ConsoleLinux.cpp" />
 		<Unit filename="src/console/T100ConsoleWindows.cpp" />
-		<Unit filename="src/control/T100Control.cpp" />
 		<Unit filename="src/gui/application/T100Win32Application.cpp" />
 		<Unit filename="src/gui/application/T100Win32ApplicationBase.cpp" />
 		<Unit filename="src/gui/base/T100Brush.cpp" />
@@ -139,10 +156,14 @@
 		<Unit filename="src/gui/base/T100Pen.cpp" />
 		<Unit filename="src/gui/base/T100Point.cpp" />
 		<Unit filename="src/gui/base/T100Size.cpp" />
+		<Unit filename="src/gui/button/T100Button.cpp" />
 		<Unit filename="src/gui/canvas/T100Canvas.cpp" />
+		<Unit filename="src/gui/control/T100Control.cpp" />
 		<Unit filename="src/gui/data/T100WindowMessageData.cpp" />
 		<Unit filename="src/gui/dc/T100DC.cpp" />
 		<Unit filename="src/gui/dc/T100DCBase.cpp" />
+		<Unit filename="src/gui/dialog/T100Dialog.cpp" />
+		<Unit filename="src/gui/dialog/T100MessageBox.cpp" />
 		<Unit filename="src/gui/dock/T100DockInfo.cpp" />
 		<Unit filename="src/gui/dock/T100DockManager.cpp" />
 		<Unit filename="src/gui/dock/T100DockManagerBase.cpp" />
@@ -152,6 +173,7 @@
 		<Unit filename="src/gui/event/T100EventBase.cpp" />
 		<Unit filename="src/gui/event/T100EventHandler.cpp" />
 		<Unit filename="src/gui/event/T100IDManager.cpp" />
+		<Unit filename="src/gui/event/T100MenuEvent.cpp" />
 		<Unit filename="src/gui/event/T100PaintEvent.cpp" />
 		<Unit filename="src/gui/event/T100WindowEvent.cpp" />
 		<Unit filename="src/gui/event/T100WindowEventHandler.cpp" />
@@ -168,6 +190,7 @@
 		<Unit filename="src/gui/menu/T100MenuItem.cpp" />
 		<Unit filename="src/gui/menu/T100MenuItemBase.cpp" />
 		<Unit filename="src/gui/panel/T100Panel.cpp" />
+		<Unit filename="src/gui/style/T100ButtonStyle.cpp" />
 		<Unit filename="src/gui/style/T100CanvasStyle.cpp" />
 		<Unit filename="src/gui/style/T100DockPanelStyle.cpp" />
 		<Unit filename="src/gui/style/T100FrameStyle.cpp" />
@@ -181,6 +204,7 @@
 		<Unit filename="src/log/T100LoggerConsole.cpp" />
 		<Unit filename="src/log/T100LoggerFile.cpp" />
 		<Unit filename="src/object/T100ObjectTreeNode.cpp" />
+		<Unit filename="src/string/T100StringTools.cpp" />
 		<Unit filename="src/string/T100Unicode.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

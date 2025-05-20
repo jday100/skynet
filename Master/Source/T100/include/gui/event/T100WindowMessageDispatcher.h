@@ -16,9 +16,11 @@ class T100WindowMessageDispatcher
         T100WindowMessageDispatcher();
         virtual ~T100WindowMessageDispatcher();
 
-        T100BOOL            RegisterControlHandler(T100WORD, T100EventHandler*);
-        T100BOOL            RegisterWindowHandler(HWND, T100EventHandler*);
-        T100VOID            DispatchWindowMessage(T100WindowMessageData&);
+        T100BOOL                    RegisterControlHandler(T100WORD, T100EventHandler*);
+        T100BOOL                    RegisterWindowHandler(HWND, T100EventHandler*);
+        T100VOID                    DispatchWindowMessage(T100WindowMessageData&);
+
+        T100EventHandler*           GetControlHandler(T100WORD);
 
     protected:
 

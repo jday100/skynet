@@ -2,7 +2,7 @@
 
 #include "T100Menu.h"
 
-T100MenuItem::T100MenuItem(T100Menu* menu, T100UINT id, T100WSTRING label) :
+T100MenuItem::T100MenuItem(T100Menu* menu, T100WORD id, T100WSTRING label) :
     T100MenuItemBase()
 {
     //ctor

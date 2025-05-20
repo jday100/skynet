@@ -29,9 +29,9 @@ int WINAPI WinMain (HINSTANCE hThisInstance, \
                      int nCmdShow) \
 { \
     T100Win32Application        app; \
-    Frame       frame(&app); \
+    Frame       frame; \
     app.SetFrame(&frame); \
-    frame.Create(); \
+    frame.Create(&app); \
     frame.Show(); \
     return T100Runner(app, hThisInstance, hPrevInstance, lpCmdLine, nCmdShow); \
 }

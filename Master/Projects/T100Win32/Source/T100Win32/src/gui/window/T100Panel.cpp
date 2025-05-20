@@ -39,7 +39,7 @@ T100VOID T100Panel::Create(T100WSTRING label, T100PanelStyle* style)
 T100VOID T100Panel::Create(T100Win32Application* app, T100Window* parent, T100WSTRING label, T100PanelStyle* style)
 {
     m_rootPtr   = app;
-    T100ObjectTree::Create(parent);
+    T100ObjectTreeNode::Create(label, parent);
     Create(label, style);
 }
 

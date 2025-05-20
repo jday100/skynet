@@ -76,6 +76,24 @@ T100Size T100WindowBase::GetSize()
     return T100Size(m_style.Width, m_style.Height);
 }
 
+T100VOID T100WindowBase::SetClientSize(T100Size size)
+{
+
+}
+
+T100VOID T100WindowBase::SetClientSize(T100INT width, T100INT height)
+{
+
+}
+
+T100Size T100WindowBase::GetClientSize()
+{
+    RECT        rect;
+    GetClientRect(m_hwnd, &rect);
+
+    return T100Size(rect.right - rect.left, rect.bottom - rect.top);
+}
+
 T100VOID T100WindowBase::SetPosition(T100Point value)
 {
     m_style.X   = value.x;
@@ -89,6 +107,21 @@ T100Point T100WindowBase::GetPosition()
     return T100Point(m_style.X, m_style.Y);
 }
 
+T100VOID T100WindowBase::Enable()
+{
+
+}
+
+T100VOID T100WindowBase::Disable()
+{
+
+}
+
+T100BOOL T100WindowBase::IsEnabled()
+{
+
+}
+
 T100VOID T100WindowBase::Show()
 {
     ShowWindow(m_hwnd, SW_SHOW);
@@ -97,4 +130,9 @@ T100VOID T100WindowBase::Show()
 T100VOID T100WindowBase::Hide()
 {
     ShowWindow(m_hwnd, SW_HIDE);
+}
+
+T100BOOL T100WindowBase::IsShown()
+{
+
 }

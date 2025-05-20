@@ -12,7 +12,7 @@ class T100Menu
         T100Menu(T100MenuBar*, T100WSTRING);
         virtual ~T100Menu();
 
-        T100VOID            Create(T100UINT, T100WSTRING&);
+        T100VOID            Create(T100WORD, T100WSTRING&);
 
     protected:
         HMENU               m_menuBar;

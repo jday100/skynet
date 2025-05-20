@@ -6,7 +6,7 @@
 
 typedef struct T100MESSAGE_DATA{
     HWND            WINDOW_HWND;
-    T100UINT        MESSAGE;
+    T100WORD        MESSAGE;
     WPARAM          WINDOW_WPARAM;
     LPARAM          WINDOW_LPARAM;
 }T100MESSAGE_DATA;

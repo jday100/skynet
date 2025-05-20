@@ -2,6 +2,7 @@
 #define T100APPLICATIONEVENTHANDLER_H
 
 #include "gui/event/T100EventHandler.h"
+#include "gui/event/T100IDManager.h"
 #include "gui/event/T100WindowMessageDispatcher.h"
 
 class T100Frame;
@@ -20,6 +21,7 @@ class T100ApplicationEventHandler : public T100EventHandler
         T100VOID                                SetFrame(T100Frame*);
         T100Frame*                              GetFramePtr();
 
+        T100IDManager&                          GetIDManager();
         T100WindowMessageDispatcher&            GetWindowMessageDispatcher();
         T100BOOL                                IsRegistered(T100WSTRING);
         T100BOOL                                RegisterWindowClass(T100WSTRING);
@@ -31,10 +33,15 @@ class T100ApplicationEventHandler : public T100EventHandler
         HINSTANCE                               m_thisInstance;
         T100Frame*                              m_framePtr          = T100NULL;
 
+        T100IDManager                           m_idManager;
         T100WindowMessageDispatcher             m_messageDispatcher;
 
     private:
         T100WINDOW_CLASS_HASH                   m_windowClass;
+        T100WINDOW_CLASS_HASH                   m_systemClass;
+
+        T100VOID                                init();
+        T100VOID                                uninit();
 };
 
 #endif // T100APPLICATIONEVENTHANDLER_H

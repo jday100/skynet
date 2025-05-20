@@ -13,7 +13,7 @@ class T100DC : public T100DCBase
 
         T100VOID            DrawArc();
         T100VOID            DrawBitmap();
-        T100VOID            DrawCircle(T100Point, T100UINT);
+        T100VOID            DrawCircle(T100Point, T100WORD);
         T100VOID            DrawEllipse();
         T100VOID            DrawEllipticArc();
         T100VOID            DrawIcon();

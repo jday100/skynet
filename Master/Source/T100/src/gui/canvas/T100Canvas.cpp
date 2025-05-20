@@ -7,7 +7,7 @@ T100Canvas::T100Canvas() :
 }
 
 T100Canvas::T100Canvas(T100Win32Application* app, T100Window* parent) :
-    T100Panel(app, parent)
+    T100Panel(parent)
 {
     //ctor
 }
