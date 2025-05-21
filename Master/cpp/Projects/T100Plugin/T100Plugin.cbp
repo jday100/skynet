@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Plugin" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100Plugin" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/base" />
+					<Add directory="include/plugin" />
+				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100.a" />
+					<Add library="../../build/libT100DynamicLibrary.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Plugin" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/base" />
+					<Add directory="include/plugin" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../build/T100Plugin" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/base" />
+					<Add directory="include/plugin" />
+				</Compiler>
+				<Linker>
+					<Add library="../../build/libT100Common.a" />
+					<Add library="../../build/libT100DynamicLibrary.a" />
+					<Add library="../../build/libT100.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../../Source/T100/include" />
+			<Add directory="../T100DynamicLibrary/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/base/T100Result.h" />
+		<Unit filename="include/plugin/T100Plugin.h" />
+		<Unit filename="include/plugin/T100PluginApplication.h" />
+		<Unit filename="include/plugin/T100PluginServer.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/base/T100Result.cpp" />
+		<Unit filename="src/plugin/T100Plugin.cpp" />
+		<Unit filename="src/plugin/T100PluginApplication.cpp" />
+		<Unit filename="src/plugin/T100PluginServer.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
