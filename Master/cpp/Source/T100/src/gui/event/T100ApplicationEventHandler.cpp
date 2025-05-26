@@ -20,6 +20,7 @@ T100ApplicationEventHandler::~T100ApplicationEventHandler()
 T100VOID T100ApplicationEventHandler::init()
 {
     m_systemClass[TEXT("button")]   = T100TRUE;
+    m_systemClass[TEXT("EDIT")]     = T100TRUE;
 }
 
 T100VOID T100ApplicationEventHandler::uninit()

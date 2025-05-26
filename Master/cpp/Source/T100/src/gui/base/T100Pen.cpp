@@ -20,3 +20,23 @@ HPEN T100Pen::GetHPEN()
 {
     return m_pen;
 }
+
+T100VOID T100Pen::SetColour(T100Colour colour)
+{
+    m_colour    = colour;
+}
+
+T100Colour& T100Pen::GetColour()
+{
+    return m_colour;
+}
+
+T100VOID T100Pen::SetType(T100LINE_TYPE type)
+{
+    m_type      = type;
+}
+
+T100LINE_TYPE& T100Pen::GetType()
+{
+    return m_type;
+}

@@ -22,11 +22,16 @@ T100Button::~T100Button()
     //dtor
 }
 
-T100VOID T100Button::Create(T100Window* parent, T100ButtonStyle* style)
+T100VOID T100Button::Create(T100Window* parent, T100WSTRING label, T100ButtonStyle* style)
 {
     if(!style){
         T100ButtonStyle         thisStyle;
+        thisStyle.WindowLabel   = label;
         style   = &thisStyle;
+        T100Control::Create(parent, style);
+    }else{
+        style->WindowLabel      = label;
+        T100Control::Create(parent, style);
     }
-    T100Control::Create(parent, style);
+
 }

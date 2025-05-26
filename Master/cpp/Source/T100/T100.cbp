@@ -17,7 +17,12 @@
 					<Add directory="include/gui" />
 					<Add directory="include/string" />
 					<Add directory="include/gui/dialog" />
+					<Add directory="include/gui/base" />
+					<Add directory="include/gui/textctrl" />
 				</Compiler>
+				<Linker>
+					<Add library="../../../../../../zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libcomdlg32.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100" prefix_auto="1" extension_auto="1" />
@@ -30,6 +35,8 @@
 					<Add directory="include/gui" />
 					<Add directory="include/string" />
 					<Add directory="include/gui/dialog" />
+					<Add directory="include/gui/base" />
+					<Add directory="include/gui/textctrl" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -47,6 +54,8 @@
 					<Add directory="include/gui" />
 					<Add directory="include/string" />
 					<Add directory="include/gui/dialog" />
+					<Add directory="include/gui/base" />
+					<Add directory="include/gui/textctrl" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -54,6 +63,7 @@
 			<Add option="-Wall" />
 			<Add option="-DUNICODE" />
 			<Add directory="include" />
+			<Add directory="../T100" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
@@ -99,14 +109,17 @@
 		<Unit filename="include/gui/T100Panel.h" />
 		<Unit filename="include/gui/T100PanelStyle.h" />
 		<Unit filename="include/gui/T100Start.h" />
+		<Unit filename="include/gui/T100TextBoxStyle.h" />
 		<Unit filename="include/gui/T100Win32Application.h" />
 		<Unit filename="include/gui/T100WindowEvent.h" />
 		<Unit filename="include/gui/application/T100Win32ApplicationBase.h" />
 		<Unit filename="include/gui/base/T100Brush.h" />
+		<Unit filename="include/gui/base/T100Caret.h" />
 		<Unit filename="include/gui/base/T100Colour.h" />
 		<Unit filename="include/gui/base/T100Pen.h" />
 		<Unit filename="include/gui/base/T100Point.h" />
 		<Unit filename="include/gui/base/T100Size.h" />
+		<Unit filename="include/gui/base/T100Time.h" />
 		<Unit filename="include/gui/common/T100DockCommon.h" />
 		<Unit filename="include/gui/common/T100EventCommon.h" />
 		<Unit filename="include/gui/common/T100MenuCommon.h" />
@@ -132,6 +145,7 @@
 		<Unit filename="include/gui/layout/T100Layout.h" />
 		<Unit filename="include/gui/menu/T100MenuItemBase.h" />
 		<Unit filename="include/gui/style/T100DockPanelStyle.h" />
+		<Unit filename="include/gui/textctrl/T100TextCtrl.h" />
 		<Unit filename="include/gui/window/T100SelfLoopWindow.h" />
 		<Unit filename="include/gui/window/T100Window.h" />
 		<Unit filename="include/gui/window/T100WindowBase.h" />
@@ -144,8 +158,16 @@
 		<Unit filename="include/string/T100StringTools.h" />
 		<Unit filename="include/string/T100Unicode.h" />
 		<Unit filename="include/vessel/T100Vessel.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="resource.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
 		<Unit filename="src/application/T100Application.cpp" />
+		<Unit filename="src/base/T100Caret.cpp" />
 		<Unit filename="src/base/T100Class.cpp" />
 		<Unit filename="src/base/T100Object.cpp" />
 		<Unit filename="src/console/T100Console.cpp" />
@@ -159,6 +181,7 @@
 		<Unit filename="src/gui/base/T100Pen.cpp" />
 		<Unit filename="src/gui/base/T100Point.cpp" />
 		<Unit filename="src/gui/base/T100Size.cpp" />
+		<Unit filename="src/gui/base/T100Time.cpp" />
 		<Unit filename="src/gui/button/T100Button.cpp" />
 		<Unit filename="src/gui/canvas/T100Canvas.cpp" />
 		<Unit filename="src/gui/control/T100Control.cpp" />
@@ -201,6 +224,8 @@
 		<Unit filename="src/gui/style/T100DockPanelStyle.cpp" />
 		<Unit filename="src/gui/style/T100FrameStyle.cpp" />
 		<Unit filename="src/gui/style/T100PanelStyle.cpp" />
+		<Unit filename="src/gui/style/T100TextBoxStyle.cpp" />
+		<Unit filename="src/gui/textctrl/T100TextCtrl.cpp" />
 		<Unit filename="src/gui/window/T100SelfLoopWindow.cpp" />
 		<Unit filename="src/gui/window/T100Window.cpp" />
 		<Unit filename="src/gui/window/T100WindowBase.cpp" />

@@ -3,8 +3,8 @@
 #include "gui/T100Panel.h"
 #include "gui/T100FillLayout.h"
 
-T100PanelFrame::T100PanelFrame(T100Win32Application* app) :
-    T100Frame(app)
+T100PanelFrame::T100PanelFrame() :
+    T100Frame()
 {
     //ctor
 }
@@ -14,16 +14,16 @@ T100PanelFrame::~T100PanelFrame()
     //dtor
 }
 
-T100VOID T100PanelFrame::Create(T100WSTRING label)
+T100VOID T100PanelFrame::Create(T100Win32Application* app)
 {
-    T100Frame::Create(label);
+    T100Frame::Create(app);
 
     init();
 }
 
 T100VOID T100PanelFrame::init()
 {
-    T100Panel*          panel   = T100NEW T100Panel(GetApplicationPtr(), this);
+    T100Panel*          panel   = T100NEW T100Panel(this);
 
     T100PanelStyle      style;
 

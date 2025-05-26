@@ -20,6 +20,9 @@ class T100Window : public T100WindowBase
         T100VOID                    SetLayout(T100Layout*);
         T100Layout*                 GetLayoutPtr();
 
+        T100VOID                    SetStyle(T100WindowStyle);
+        T100WindowStyle&            GetStyle();
+
         static T100Window*          ConvertToWindow(T100ObjectTreeNode*);
 
     protected:

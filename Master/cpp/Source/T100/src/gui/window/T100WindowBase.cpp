@@ -109,17 +109,17 @@ T100Point T100WindowBase::GetPosition()
 
 T100VOID T100WindowBase::Enable()
 {
-
+    EnableWindow(m_hwnd, T100TRUE);
 }
 
 T100VOID T100WindowBase::Disable()
 {
-
+    EnableWindow(m_hwnd, T100FALSE);
 }
 
 T100BOOL T100WindowBase::IsEnabled()
 {
-
+    return IsWindowEnabled(m_hwnd);
 }
 
 T100VOID T100WindowBase::Show()
@@ -134,5 +134,5 @@ T100VOID T100WindowBase::Hide()
 
 T100BOOL T100WindowBase::IsShown()
 {
-
+    return IsWindowVisible(m_hwnd);
 }

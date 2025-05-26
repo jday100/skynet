@@ -41,6 +41,16 @@ T100Layout* T100Window::GetLayoutPtr()
     return m_layoutPtr;
 }
 
+T100VOID T100Window::SetStyle(T100WindowStyle style)
+{
+    m_style = style;
+}
+
+T100WindowStyle& T100Window::GetStyle()
+{
+    return m_style;
+}
+
 T100Window* T100Window::ConvertToWindow(T100ObjectTreeNode* node)
 {
     return dynamic_cast<T100Window*>(node);

@@ -16,8 +16,16 @@ class T100Pen : public T100Class
 
         HPEN                    GetHPEN();
 
+        T100VOID                SetColour(T100Colour);
+        T100Colour&             GetColour();
+
+        T100VOID                SetType(T100LINE_TYPE);
+        T100LINE_TYPE&          GetType();
+
     protected:
         HPEN                    m_pen;
+        T100Colour              m_colour;
+        T100LINE_TYPE           m_type;
 
     private:
 };

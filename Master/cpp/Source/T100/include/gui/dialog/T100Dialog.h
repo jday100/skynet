@@ -1,12 +1,19 @@
 #ifndef T100DIALOG_H
 #define T100DIALOG_H
 
+#include "gui/window/T100SelfLoopWindow.h"
 
-class T100Dialog
+BOOL CALLBACK DefaultDialogProcedure (HWND, UINT, WPARAM, LPARAM);
+
+class T100Dialog : public T100SelfLoopWindow
 {
     public:
         T100Dialog();
         virtual ~T100Dialog();
+
+        virtual T100VOID            Create(T100Window*);
+
+        virtual T100VOID            Show();
 
     protected:
 

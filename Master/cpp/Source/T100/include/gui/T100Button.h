@@ -11,7 +11,7 @@ class T100Button : public T100Control
         T100Button(T100Window*, T100WSTRING);
         virtual ~T100Button();
 
-        T100VOID            Create(T100Window*, T100ButtonStyle* = T100NULL);
+        T100VOID            Create(T100Window*, T100WSTRING, T100ButtonStyle* = T100NULL);
 
     protected:
 
