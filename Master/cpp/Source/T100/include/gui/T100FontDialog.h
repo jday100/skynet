@@ -7,13 +7,14 @@
 class T100FontDialog : public T100Dialog
 {
     public:
-        T100FontDialog(T100SelfLoopWindow*);
+        T100FontDialog();
         virtual ~T100FontDialog();
+
+        T100VOID            Create(T100Window*);
 
     protected:
 
     private:
-        T100VOID            Init();
 };
 
 #endif // T100FONTDIALOG_H

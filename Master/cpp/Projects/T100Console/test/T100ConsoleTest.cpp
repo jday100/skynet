@@ -58,5 +58,7 @@ T100RESULT T100ConsoleTest::test_console()
     console.OutLine(L"Console Test");
     console.SetForegroundColour(colour);
 
+    console.OutLine(L"您好");
+
     return T100RESULT_SUCCESS;
 }

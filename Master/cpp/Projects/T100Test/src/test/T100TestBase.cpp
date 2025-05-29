@@ -4,7 +4,7 @@
 #include "T100Test.h"
 
 T100TestBase::T100TestBase(T100TestBase* parent, T100WSTRING name) :
-    T100ObjectTree(parent)
+    T100ObjectTreeNode(name, parent)
 {
     //ctor
     if(parent){

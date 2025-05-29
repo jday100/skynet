@@ -25,6 +25,7 @@ T100VOID T100Dialog::Show()
     HINSTANCE       instance;
     HWND            hwnd;
     T100Window*     parent      = T100NULL;
+    int             i;
 
     instance    = GetApplicationPtr()->GetThisInstance();
     parent      = ConvertToWindow(GetParentPtr());
@@ -32,7 +33,7 @@ T100VOID T100Dialog::Show()
     if(parent){
         hwnd    = parent->GetHWND();
 
-        int i = DialogBox(instance, MAKEINTRESOURCE(DLG_MAIN), hwnd, (DLGPROC)DefaultDialogProcedure);
+        i       = DialogBox(instance, MAKEINTRESOURCE(DLG_MAIN), hwnd, (DLGPROC)DefaultDialogProcedure);
     }
 }
 

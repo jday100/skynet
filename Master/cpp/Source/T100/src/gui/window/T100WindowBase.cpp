@@ -21,11 +21,23 @@ HWND T100WindowBase::GetHWND()
 T100VOID T100WindowBase::SetLabel(T100WSTRING label)
 {
     m_style.WindowLabel     = label;
+
+    SetWindowText(m_hwnd, m_style.WindowLabel.c_str());
 }
 
 T100WSTRING T100WindowBase::GetLabel()
 {
     return m_style.WindowLabel;
+}
+
+T100VOID T100WindowBase::SetFont(T100Font& font)
+{
+    m_font      = font;
+}
+
+T100Font& T100WindowBase::GetFont()
+{
+    return m_font;
 }
 
 T100VOID T100WindowBase::SetWidth(T100INT width)

@@ -3,6 +3,7 @@
 
 #include "gui/base/T100Size.h"
 #include "gui/base/T100Point.h"
+#include "gui/font/T100Font.h"
 #include "gui/window/T100WindowStyle.h"
 #include "gui/event/T100WindowEventHandler.h"
 
@@ -16,6 +17,9 @@ class T100WindowBase : public T100WindowEventHandler
 
         T100VOID                    SetLabel(T100WSTRING);
         T100WSTRING                 GetLabel();
+
+        T100VOID                    SetFont(T100Font&);
+        T100Font&                   GetFont();
 
         T100VOID                    SetWidth(T100INT);
         T100INT                     GetWidth();
@@ -43,6 +47,7 @@ class T100WindowBase : public T100WindowEventHandler
 
     protected:
         HWND                        m_hwnd;
+        T100Font                    m_font;
         T100WindowStyle             m_style;
 
     private:

@@ -14,4 +14,6 @@ T100HelloFrame::~T100HelloFrame()
 T100VOID T100HelloFrame::Create(T100Win32Application* app)
 {
     T100Frame::Create(app);
+
+    this->SetLabel(L"MyFrame");
 }

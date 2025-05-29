@@ -61,3 +61,8 @@ T100VOID T100Painter::Resize()
 {
     m_view.GetDockManager().Update();
 }
+
+T100VOID T100Painter::Select(T100WORD index)
+{
+    m_serve.Select(index);
+}

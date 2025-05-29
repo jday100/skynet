@@ -4,6 +4,7 @@
 #include <windows.h>
 #include "T100Common.h"
 #include "gui/base/T100Pen.h"
+#include "gui/font/T100Font.h"
 #include "gui/base/T100Size.h"
 #include "gui/base/T100Point.h"
 #include "gui/base/T100Brush.h"
@@ -22,12 +23,17 @@ class T100DCBase : public T100Class
         T100VOID            SetBrush(T100Brush*);
         T100Brush*          GetBrushPtr();
 
+        T100VOID            SetFont(T100Font);
+        T100Font&           GetFont();
+
     protected:
         T100Brush*          m_brushPtr          = T100NULL;
         T100Pen*            m_penPtr            = T100NULL;
         T100Window*         m_windowPtr         = T100NULL;
         HDC                 m_hdc;
         PAINTSTRUCT         m_paintStruct;
+
+        T100Font            m_font;
 
     private:
         T100VOID            init();

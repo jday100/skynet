@@ -3,7 +3,7 @@
 
 #include <atomic>
 #include "vessel/T100Vessel.h"
-#include "object/T100ObjectTree.h"
+#include "object/T100ObjectTreeNode.h"
 #include "log/T100Logger.h"
 #include "console/T100Console.h"
 
@@ -13,7 +13,7 @@ class T100Test;
 
 #define     T100TEST_VESSEL         T100Vessel<T100WSTRING, T100Test*>
 
-class T100TestBase : public T100ObjectTree
+class T100TestBase : public T100ObjectTreeNode
 {
     public:
         T100TestBase(T100TestBase*, T100WSTRING name);

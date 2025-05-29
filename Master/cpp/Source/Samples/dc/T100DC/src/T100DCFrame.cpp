@@ -43,4 +43,6 @@ T100VOID T100DCFrame::OnFramePaint(T100WindowEvent& event)
     dc.DrawCircle(T100Point(300, 300), 100);
 
     dc.DrawRoundedRectangle(T100Point(500, 100), T100Size(200, 200), 50);
+
+    dc.DrawText(L"Hello", 0, 0);
 }

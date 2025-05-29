@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include "T100Common.h"
 #include "gui/event/T100Event.h"
+#include "gui/T100NotifyEvent.h"
 #include "object/T100ObjectTreeNode.h"
 #include "gui/data/T100WindowMessageData.h"
 
@@ -30,10 +31,12 @@ class T100EventHandler : public T100ObjectTreeNode
 
         virtual T100VOID                        Connect(T100WORD, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
         virtual T100VOID                        ConnectMenu(T100WORD, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
+        virtual T100VOID                        ConnectNotify(T100WORD, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
 
         T100VOID                                SendWindowMessage(T100WindowMessageData&);
 
-        T100VOID                                ProcessWindowMessage(T100WindowMessageData&);
+        virtual T100VOID                        ProcessWindowMessage(T100WindowMessageData&);
+        virtual T100VOID                        ProcessNotifyMessage(T100WindowMessageData&);
 
         T100EventHandler*                       ConvertToEventHandler(T100ObjectTreeNode*);
 
@@ -41,12 +44,16 @@ class T100EventHandler : public T100ObjectTreeNode
         T100EVENT_FUNCTION_DATA_HASH            m_menuEvents;
         T100EVENT_FUNCTION_DATA_HASH            m_commands;
         T100EVENT_FUNCTION_DATA_HASH            m_events;
+        T100EVENT_FUNCTION_DATA_HASH            m_notifyEvents;
+
+        T100VOID                                CallNotify(T100WORD, T100NotifyEvent&);
 
     private:
         T100VOID                                ProcessCommand(T100WindowMessageData&);
         T100VOID                                CallMenu(T100WORD, T100WindowMessageData&);
         T100VOID                                CallEvent(T100WORD, T100WindowMessageData&);
         T100VOID                                CallCommand(T100WORD, T100WindowMessageData&);
+
 };
 
 #endif // T100EVENTHANDLER_H

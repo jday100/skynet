@@ -7,6 +7,7 @@ T100ConsoleWindows::T100ConsoleWindows() :
     T100ConsoleBase()
 {
     //ctor
+    setlocale(LC_ALL, "");
 }
 
 T100ConsoleWindows::~T100ConsoleWindows()

@@ -78,6 +78,16 @@ LRESULT CALLBACK DefaultSelfLoopWindowProcedure (HWND hwnd, UINT message, WPARAM
             }
         }
         break;
+    case WM_NOTIFY:
+        {
+            if(dispatcherPtr){
+                T100EventHandler*   handler     = dispatcherPtr->GetControlHandler(LOWORD(wParam));
+                if(handler){
+                    handler->ProcessNotifyMessage(data);
+                }
+            }
+        }
+        break;
     default:
         {
             if(dispatcherPtr){

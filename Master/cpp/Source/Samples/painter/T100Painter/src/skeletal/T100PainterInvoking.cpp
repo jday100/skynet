@@ -39,3 +39,8 @@ T100VOID T100PainterInvoking::FrameResize()
     m_painterPtr->Resize();
 
 }
+
+T100VOID T100PainterInvoking::EntitySelected(T100WORD index)
+{
+    m_painterPtr->Select(index);
+}

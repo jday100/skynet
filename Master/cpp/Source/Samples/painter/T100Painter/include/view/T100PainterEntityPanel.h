@@ -17,7 +17,7 @@ class T100PainterEntityPanel : public T100Panel
     protected:
         T100ListView        m_listView;
 
-        T100VOID            OnListViewItemSelected(T100WindowEvent&);
+        T100VOID            OnListViewItemSelected(T100NotifyEvent&);
 
     private:
         T100VOID            init();

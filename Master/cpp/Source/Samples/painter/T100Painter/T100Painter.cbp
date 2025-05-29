@@ -20,7 +20,7 @@
 					<Add directory="include/skeletal" />
 				</Compiler>
 				<Linker>
-					<Add library="../../../../../build/libT100.a" />
+					<Add library="../../../../build/libT100.a" />
 					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libgdi32.a" />
 				</Linker>
 			</Target>
@@ -44,7 +44,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
-			<Add directory="../../../../../Source/T100/include" />
+			<Add directory="../../../T100/include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />

@@ -25,6 +25,8 @@ class T100Painter
 
         T100VOID                    Resize();
 
+        T100VOID                    Select(T100WORD);
+
     protected:
 
     private:

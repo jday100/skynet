@@ -2,6 +2,9 @@
 
 #include "gui/T100MessageBox.h"
 #include "T100TestDialog.h"
+#include "gui/T100FontDialog.h"
+
+#include <commctrl.h>
 
 T100DialogFrame::T100DialogFrame() :
     T100Frame()
@@ -31,6 +34,8 @@ T100VOID T100DialogFrame::init()
 
     T100MenuItem*       dialogMenuPtr   = T100NEW T100MenuItem(fileMenuPtr, T100MENU_ID_DIALOG, L"Dialog");
 
+    T100MenuItem*       fontMenuPtr     = T100NEW T100MenuItem(fileMenuPtr, T100MENU_ID_FONT, L"Font");
+
     T100MenuItem*       quitMenuPtr     = T100NEW T100MenuItem(fileMenuPtr, T100MENU_ID_QUIT, L"Quit");
 
     SetMenuBar(menuBarPtr);
@@ -38,6 +43,8 @@ T100VOID T100DialogFrame::init()
     ConnectMenu(T100MENU_ID_MSGBOX, (T100EVENT_FUNCTION)&T100DialogFrame::OnMenuMsgBox);
 
     ConnectMenu(T100MENU_ID_DIALOG, (T100EVENT_FUNCTION)&T100DialogFrame::OnMenuDialog);
+
+    ConnectMenu(T100MENU_ID_FONT, (T100EVENT_FUNCTION)&T100DialogFrame::OnMenuFont);
 
     ConnectMenu(T100MENU_ID_QUIT, (T100EVENT_FUNCTION)&T100DialogFrame::OnMenuQuit);
 }
@@ -60,11 +67,20 @@ T100VOID T100DialogFrame::OnMenuMsgBox(T100CommandEvent& event)
 
 T100VOID T100DialogFrame::OnMenuDialog(T100CommandEvent& event)
 {
+    InitCommonControls();
+
     T100TestDialog      dialog;
 
     dialog.Create(this);
 
     dialog.Show();
+}
+
+T100VOID T100DialogFrame::OnMenuFont(T100CommandEvent& event)
+{
+    T100FontDialog      dialog;
+
+    //dialog.Show();
 }
 
 T100VOID T100DialogFrame::OnMenuQuit(T100CommandEvent& event)

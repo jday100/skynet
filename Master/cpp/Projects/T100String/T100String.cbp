@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/string" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/string" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -35,6 +37,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/string" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -44,11 +47,13 @@
 			<Add directory="include" />
 			<Add directory="../T100Common/include" />
 		</Compiler>
+		<Unit filename="include/string/T100StringTools.h" />
 		<Unit filename="include/string/T100Unicode.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="src/string/T100StringTools.cpp" />
 		<Unit filename="src/string/T100Unicode.cpp" />
 		<Extensions />
 	</Project>

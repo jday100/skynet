@@ -10,7 +10,10 @@ class T100EventBase : public T100Class
         T100EventBase(T100WindowMessageData&);
         virtual ~T100EventBase();
 
+        T100WindowMessageData&          GetMessageData();
+
     protected:
+        T100WindowMessageData           m_messageData;
 
     private:
 };

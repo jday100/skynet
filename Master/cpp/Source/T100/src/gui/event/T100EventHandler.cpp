@@ -1,7 +1,9 @@
 #include "gui/event/T100EventHandler.h"
 
+#include <commctrl.h>
 #include "gui/common/T100EventCommon.h"
 
+#include "console/T100Console.h";
 
 T100EventHandler::T100EventHandler() :
     T100ObjectTreeNode(),
@@ -81,6 +83,21 @@ T100VOID T100EventHandler::ConnectMenu(T100WORD type, T100EVENT_FUNCTION call, T
     m_menuEvents[type]       = data;
 }
 
+T100VOID T100EventHandler::ConnectNotify(T100WORD type, T100EVENT_FUNCTION call, T100EventHandler* handler)
+{
+    T100EVENT_FUNCTION_DATA         data;
+
+    data.FUNCTION       = call;
+
+    if(handler){
+        data.HANDLER    = handler;
+    }else{
+        data.HANDLER    = this;
+    }
+
+    m_notifyEvents[type]        = data;
+}
+
 T100VOID T100EventHandler::SendWindowMessage(T100WindowMessageData& message)
 {
     ProcessWindowMessage(message);
@@ -131,6 +148,51 @@ T100VOID T100EventHandler::ProcessWindowMessage(T100WindowMessageData& message)
             }
         }
         break;
+    case WM_MOUSEACTIVATE:
+        {
+            T100Console     console;
+
+            console.OutLine(L"WM_MOUSEACTIVATE");
+        }
+        break;
+    case WM_MOUSEMOVE:
+        {
+            T100Console     console;
+
+            console.OutLine(L"WM_MOUSEMOVE");
+        }
+        break;
+    case WM_MOUSELEAVE:
+        {
+            T100Console     console;
+
+            console.OutLine(L"WM_MOUSE LEAVE");
+        }
+        break;
+    case WM_NOTIFY:
+        {
+            CallEvent(T100EVENT_WINDOW_NOTIFY, message);
+        }
+        break;
+    default:
+        {
+
+        }
+    }
+}
+
+T100VOID T100EventHandler::ProcessNotifyMessage(T100WindowMessageData& message)
+{
+    NMHDR*  pNMHDR      = (NMHDR*)message.WINDOW_LPARAM;
+
+    switch(pNMHDR->code){
+    case NM_CLICK:
+        {
+            T100NotifyEvent     event(message);
+            event.SetID(pNMHDR->idFrom);
+            CallNotify(NM_CLICK, event);
+        }
+        break;
     }
 }
 
@@ -174,5 +236,14 @@ T100VOID T100EventHandler::CallCommand(T100WORD type, T100WindowMessageData& mes
         (data.HANDLER->*(data.FUNCTION))(event);
     }else{
         //DefWindowProc(message.WINDOW_HWND, message.MESSAGE_ID, message.WINDOW_WPARAM, message.WINDOW_LPARAM);
+    }
+}
+
+T100VOID T100EventHandler::CallNotify(T100WORD type, T100NotifyEvent& event)
+{
+    T100EVENT_FUNCTION_DATA&        data    = m_notifyEvents[type];
+
+    if(data.HANDLER && data.FUNCTION){
+        (data.HANDLER->*(data.FUNCTION))(event);
     }
 }

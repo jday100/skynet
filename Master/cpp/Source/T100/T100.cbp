@@ -102,10 +102,12 @@
 		<Unit filename="include/gui/T100FrameStyle.h" />
 		<Unit filename="include/gui/T100ListItem.h" />
 		<Unit filename="include/gui/T100ListView.h" />
+		<Unit filename="include/gui/T100ListViewStyle.h" />
 		<Unit filename="include/gui/T100Menu.h" />
 		<Unit filename="include/gui/T100MenuBar.h" />
 		<Unit filename="include/gui/T100MenuItem.h" />
 		<Unit filename="include/gui/T100MessageBox.h" />
+		<Unit filename="include/gui/T100NotifyEvent.h" />
 		<Unit filename="include/gui/T100Panel.h" />
 		<Unit filename="include/gui/T100PanelStyle.h" />
 		<Unit filename="include/gui/T100Start.h" />
@@ -116,6 +118,7 @@
 		<Unit filename="include/gui/base/T100Brush.h" />
 		<Unit filename="include/gui/base/T100Caret.h" />
 		<Unit filename="include/gui/base/T100Colour.h" />
+		<Unit filename="include/gui/base/T100Cursor.h" />
 		<Unit filename="include/gui/base/T100Pen.h" />
 		<Unit filename="include/gui/base/T100Point.h" />
 		<Unit filename="include/gui/base/T100Size.h" />
@@ -178,6 +181,7 @@
 		<Unit filename="src/gui/application/T100Win32ApplicationBase.cpp" />
 		<Unit filename="src/gui/base/T100Brush.cpp" />
 		<Unit filename="src/gui/base/T100Colour.cpp" />
+		<Unit filename="src/gui/base/T100Cursor.cpp" />
 		<Unit filename="src/gui/base/T100Pen.cpp" />
 		<Unit filename="src/gui/base/T100Point.cpp" />
 		<Unit filename="src/gui/base/T100Size.cpp" />
@@ -202,6 +206,7 @@
 		<Unit filename="src/gui/event/T100EventHandler.cpp" />
 		<Unit filename="src/gui/event/T100IDManager.cpp" />
 		<Unit filename="src/gui/event/T100MenuEvent.cpp" />
+		<Unit filename="src/gui/event/T100NotifyEvent.cpp" />
 		<Unit filename="src/gui/event/T100PaintEvent.cpp" />
 		<Unit filename="src/gui/event/T100WindowEvent.cpp" />
 		<Unit filename="src/gui/event/T100WindowEventHandler.cpp" />
@@ -223,6 +228,7 @@
 		<Unit filename="src/gui/style/T100CanvasStyle.cpp" />
 		<Unit filename="src/gui/style/T100DockPanelStyle.cpp" />
 		<Unit filename="src/gui/style/T100FrameStyle.cpp" />
+		<Unit filename="src/gui/style/T100ListViewStyle.cpp" />
 		<Unit filename="src/gui/style/T100PanelStyle.cpp" />
 		<Unit filename="src/gui/style/T100TextBoxStyle.cpp" />
 		<Unit filename="src/gui/textctrl/T100TextCtrl.cpp" />

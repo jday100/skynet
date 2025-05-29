@@ -19,6 +19,8 @@ class T100PainterInvoking
 
         static T100VOID             FrameResize();
 
+        static T100VOID             EntitySelected(T100WORD);
+
     protected:
 
     private:
