@@ -1,4 +1,4 @@
-#include "T100ConsoleLinux.h"
+#include "console/T100ConsoleLinux.h"
 
 T100ConsoleLinux::T100ConsoleLinux() :
     T100ConsoleBase()

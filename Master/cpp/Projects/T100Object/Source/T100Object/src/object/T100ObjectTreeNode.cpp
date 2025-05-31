@@ -1,4 +1,4 @@
-#include "T100ObjectTreeNode.h"
+#include "object/T100ObjectTreeNode.h"
 
 T100ObjectTreeNode::T100ObjectTreeNode() :
     T100Object()
@@ -33,7 +33,7 @@ T100VOID T100ObjectTreeNode::Init(T100WSTRING label, T100ObjectTreeNode* parent)
     if(parent && this != parent){
         m_parentPtr     = parent;
         m_rootPtr       = parent->GetRootPtr();
-        m_rootPtr->AddChild(label, this);
+        m_parentPtr->AddChild(label, this);
     }else{
         m_rootPtr       = this;
     }
@@ -45,8 +45,10 @@ T100VOID T100ObjectTreeNode::AddChild(T100WSTRING label, T100ObjectTreeNode* chi
     if(node){
 
     }else{
-        m_children.append(label, child);
+
     }
+
+    m_children.append(label, child);
 }
 
 T100ObjectTreeNode* T100ObjectTreeNode::GetChildPtr(T100WSTRING label)

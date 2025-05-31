@@ -1,4 +1,4 @@
-#include "T100DockManagerBase.h"
+#include "gui/dock/T100DockManagerBase.h"
 
 #include "gui/T100Frame.h"
 
@@ -87,6 +87,11 @@ T100VOID T100DockManagerBase::UpdateCenter()
 
     //m_center->WINDOW->SetSize(value);
     //m_center->WINDOW->SetPosition(point);
+
+    for(T100DOCK_DATA* item : m_centerWindows){
+        item->WINDOW->SetSize(value);
+        item->WINDOW->SetPosition(point);
+    }
 }
 
 T100VOID T100DockManagerBase::Classify(T100DOCK_DATA* data)
@@ -121,6 +126,7 @@ T100VOID T100DockManagerBase::Classify(T100DOCK_DATA* data)
     case T100DOCK_CENTER:
         {
             //m_center    = data;
+            m_centerWindows.push_back(data);
         }
         break;
     }

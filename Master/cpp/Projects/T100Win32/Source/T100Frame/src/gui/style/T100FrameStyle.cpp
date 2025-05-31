@@ -1,4 +1,4 @@
-#include "T100FrameStyle.h"
+#include "gui/T100FrameStyle.h"
 
 #include "gui/common/T100WindowCommon.h"
 

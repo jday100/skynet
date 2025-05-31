@@ -1,4 +1,4 @@
-#include "T100Window.h"
+#include "gui/window/T100Window.h"
 
 #include "gui/common/T100WindowCommon.h"
 #include "gui/layout/T100Layout.h"
@@ -10,11 +10,12 @@ T100Window::T100Window() :
     //ctor
 }
 
-T100Window::T100Window(T100ApplicationEventHandler* app, T100Window* parent) :
+T100Window::T100Window(T100ApplicationEventHandler* app, T100Window* parent, T100WindowStyle* style) :
     T100WindowBase()
 {
     //ctor
-    Init(app, parent);
+
+    Init(app, parent, style);
 }
 
 T100Window::~T100Window()
@@ -22,9 +23,9 @@ T100Window::~T100Window()
     //dtor
 }
 
-T100VOID T100Window::Create(T100ApplicationEventHandler* app, T100Window* parent)
+T100VOID T100Window::Create(T100ApplicationEventHandler* app, T100Window* parent, T100WindowStyle* style)
 {
-    Init(app, parent);
+    Init(app, parent, style);
 }
 
 T100VOID T100Window::SetLayout(T100Layout* layout)
@@ -40,33 +41,69 @@ T100Layout* T100Window::GetLayoutPtr()
     return m_layoutPtr;
 }
 
+T100VOID T100Window::SetStyle(T100WindowStyle style)
+{
+    m_style = style;
+}
+
+T100WindowStyle& T100Window::GetStyle()
+{
+    return m_style;
+}
+
 T100Window* T100Window::ConvertToWindow(T100ObjectTreeNode* node)
 {
     return dynamic_cast<T100Window*>(node);
 }
 
-T100VOID T100Window::Init(T100ApplicationEventHandler* app, T100Window* parent)
+T100VOID T100Window::OnWindowResize(T100WindowEvent& event)
 {
-    T100EventHandler::Create(m_label, parent);
-
-    HINSTANCE       instance;
-
-    instance    = app->GetThisInstance();
-
-    if(app->IsRegistered(T100WINDOW_TYPE_T100WINDOW)){
-        CreateWindowHandler(instance);
-    }else{
-        if(app->RegisterWindowClass(T100WINDOW_TYPE_T100WINDOW)){
-            if(RegisterWindowClass(instance, &m_style)){
-                CreateWindowHandler(instance);
-            }
-        }
+    if(m_layoutPtr){
+        m_layoutPtr->Update();
     }
 }
 
-T100VOID T100Window::CreateWindowHandler(HINSTANCE instance)
+T100VOID T100Window::Init(T100ApplicationEventHandler* app, T100Window* parent, T100WindowStyle* style)
 {
-    m_hwnd  = CreateWindowInstance(instance, &m_style);
+    if(app && parent){
+        return;
+    }
+
+    if(style){
+        m_style     = *style;
+        m_label     = m_style.WindowLabel;
+    }
+
+    HWND        hwnd;
+
+    if(app){
+        hwnd    = HWND_DESKTOP;
+        T100EventHandler::Create(m_label, app);
+    }else if(parent){
+        hwnd    = parent->GetHWND();
+        T100EventHandler::Create(m_label, parent);
+    }
+
+    HINSTANCE       instance;
+
+    instance    = GetApplicationPtr()->GetThisInstance();
+
+    if(GetApplicationPtr()->IsRegistered(m_style.ClassType)){
+        CreateWindowHandler(instance, hwnd, GetApplicationPtr());
+    }else{
+        if(GetApplicationPtr()->RegisterWindowClass(m_style.ClassType)){
+            if(RegisterWindowClass(instance, &m_style)){
+                CreateWindowHandler(instance, hwnd, GetApplicationPtr());
+            }
+        }
+    }
+
+    Connect(T100EVENT_WINDOW_SIZE, (T100EVENT_FUNCTION)&OnWindowResize);
+}
+
+T100VOID T100Window::CreateWindowHandler(HINSTANCE instance, HWND hwnd, T100VOID* data)
+{
+    m_hwnd  = CreateWindowInstance(instance, hwnd, &m_style, data);
     if(m_hwnd){
         GetApplicationPtr()->GetWindowMessageDispatcher().RegisterWindowHandler(m_hwnd, this);
     }
@@ -101,12 +138,8 @@ T100BOOL T100Window::RegisterWindowClass(HINSTANCE instance, T100WindowStyle* st
     return T100FALSE;
 }
 
-HWND T100Window::CreateWindowInstance(HINSTANCE instance, T100WindowStyle* stylePtr)
+HWND T100Window::CreateWindowInstance(HINSTANCE instance, HWND hwnd, T100WindowStyle* stylePtr, T100VOID* data)
 {
-    HWND    hwnd;
-
-    hwnd    = HWND_DESKTOP;
-
     T100WindowStyle& style = * stylePtr;
 
     m_hwnd = CreateWindowEx (
@@ -121,7 +154,7 @@ HWND T100Window::CreateWindowInstance(HINSTANCE instance, T100WindowStyle* style
            hwnd,
            stylePtr->Menu,
            instance,
-           T100NULL
+           data
            );
     return m_hwnd;
 }

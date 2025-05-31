@@ -1,4 +1,4 @@
-#include "T100DockPanelStyle.h"
+#include "gui/style/T100DockPanelStyle.h"
 
 #include "gui/common/T100WindowCommon.h"
 

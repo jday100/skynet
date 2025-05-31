@@ -79,6 +79,11 @@
 			<Add directory="../../../T100Object/Source/T100Object/include" />
 			<Add directory="../../../T100Console/include" />
 			<Add directory="../T100Event/include" />
+			<Add directory="../T100Font/include" />
+			<Add directory="../T100Application/include" />
+			<Add directory="../T100Frame/include" />
+			<Add directory="../T100Menu/include" />
+			<Add directory="../T100Control/include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />

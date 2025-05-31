@@ -1,4 +1,4 @@
-#include "T100DCBase.h"
+#include "gui/dc/T100DCBase.h"
 
 #include "gui/window/T100Window.h"
 
@@ -41,10 +41,21 @@ T100Pen* T100DCBase::GetPenPtr()
 T100VOID T100DCBase::SetBrush(T100Brush* brush)
 {
     m_brushPtr  = brush;
-
+    SelectObject(m_hdc, brush->GetHBRUSH());
 }
 
 T100Brush* T100DCBase::GetBrushPtr()
 {
     return m_brushPtr;
+}
+
+T100VOID T100DCBase::SetFont(T100Font font)
+{
+    m_font      = font;
+    SelectObject(m_hdc, font.GetHFONT());
+}
+
+T100Font& T100DCBase::GetFont()
+{
+    return m_font;
 }

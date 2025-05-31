@@ -44,3 +44,13 @@ T100VOID T100PainterInvoking::EntitySelected(T100WORD index)
 {
     m_painterPtr->Select(index);
 }
+
+T100VOID T100PainterInvoking::LeftDown()
+{
+
+}
+
+T100VOID T100PainterInvoking::LeftUp()
+{
+
+}

@@ -41,7 +41,7 @@ T100Pen* T100DCBase::GetPenPtr()
 T100VOID T100DCBase::SetBrush(T100Brush* brush)
 {
     m_brushPtr  = brush;
-
+    SelectObject(m_hdc, brush->GetHBRUSH());
 }
 
 T100Brush* T100DCBase::GetBrushPtr()

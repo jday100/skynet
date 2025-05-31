@@ -16,6 +16,9 @@ class T100DockInfo : public T100Class
         T100Size&                       GetMinSize();
         T100Size&                       GetBestSize();
 
+        T100DockInfo&                   Caption(T100WSTRING);
+        T100DockInfo&                   CloseButton(T100BOOL);
+        T100DockInfo&                   Direction();
         T100DockInfo&                   Left();
         T100DockInfo&                   Right();
         T100DockInfo&                   Top();
@@ -38,6 +41,9 @@ class T100DockInfo : public T100Class
         T100Size                        m_minSize;
         T100Size                        m_bestSize;
         T100DOCK_POSITION_TYPE          m_position      = T100DOCK_NONE;
+
+        T100WSTRING                     m_caption;
+        T100BOOL                        m_closeButton   = T100TRUE;
 };
 
 #endif // T100DOCKINFO_H

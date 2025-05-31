@@ -107,6 +107,7 @@
 		<Unit filename="include/gui/T100MenuBar.h" />
 		<Unit filename="include/gui/T100MenuItem.h" />
 		<Unit filename="include/gui/T100MessageBox.h" />
+		<Unit filename="include/gui/T100MouseEvent.h" />
 		<Unit filename="include/gui/T100NotifyEvent.h" />
 		<Unit filename="include/gui/T100Panel.h" />
 		<Unit filename="include/gui/T100PanelStyle.h" />
@@ -170,7 +171,6 @@
 			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/application/T100Application.cpp" />
-		<Unit filename="src/base/T100Caret.cpp" />
 		<Unit filename="src/base/T100Class.cpp" />
 		<Unit filename="src/base/T100Object.cpp" />
 		<Unit filename="src/console/T100Console.cpp" />
@@ -180,6 +180,7 @@
 		<Unit filename="src/gui/application/T100Win32Application.cpp" />
 		<Unit filename="src/gui/application/T100Win32ApplicationBase.cpp" />
 		<Unit filename="src/gui/base/T100Brush.cpp" />
+		<Unit filename="src/gui/base/T100Caret.cpp" />
 		<Unit filename="src/gui/base/T100Colour.cpp" />
 		<Unit filename="src/gui/base/T100Cursor.cpp" />
 		<Unit filename="src/gui/base/T100Pen.cpp" />
@@ -206,6 +207,7 @@
 		<Unit filename="src/gui/event/T100EventHandler.cpp" />
 		<Unit filename="src/gui/event/T100IDManager.cpp" />
 		<Unit filename="src/gui/event/T100MenuEvent.cpp" />
+		<Unit filename="src/gui/event/T100MouseEvent.cpp" />
 		<Unit filename="src/gui/event/T100NotifyEvent.cpp" />
 		<Unit filename="src/gui/event/T100PaintEvent.cpp" />
 		<Unit filename="src/gui/event/T100WindowEvent.cpp" />

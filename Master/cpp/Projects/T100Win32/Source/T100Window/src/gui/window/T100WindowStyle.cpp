@@ -1,11 +1,13 @@
-#include "T100WindowStyle.h"
+#include "gui/window/T100WindowStyle.h"
 
 #include "gui/common/T100WindowCommon.h"
+#include "gui/window/T100SelfLoopWindow.h"
 
 T100WindowStyle::T100WindowStyle()
 {
     //ctor
-    Procedure       = DefWindowProc;
+    //Procedure       = DefWindowProc;
+    Procedure       = DefaultSelfLoopWindowProcedure;
     ClassType       = T100WINDOW_TYPE_T100WINDOW;
     ClassStyle      = CS_DBLCLKS;
 

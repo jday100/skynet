@@ -1,4 +1,4 @@
-#include "T100FillLayout.h"
+#include "gui/T100FillLayout.h"
 
 #include "gui/base/T100Size.h"
 #include "gui/window/T100Window.h"
@@ -53,7 +53,7 @@ T100VOID T100FillLayout::Update()
 
 T100VOID T100FillLayout::UpdateHorizontal()
 {
-    T100Size        size    = m_parentPtr->GetSize();
+    T100Size        size    = m_parentPtr->GetClientSize();
     T100WORD        length  = m_childrenPtr->size();
     T100WORD        value   = size.width / length;
 
@@ -72,7 +72,7 @@ T100VOID T100FillLayout::UpdateHorizontal()
 
 T100VOID T100FillLayout::UpdateVertical()
 {
-    T100Size        size    = m_parentPtr->GetSize();
+    T100Size        size    = m_parentPtr->GetClientSize();
     T100WORD        length  = m_childrenPtr->size();
     T100WORD        value   = size.height / length;
 

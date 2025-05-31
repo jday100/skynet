@@ -1,4 +1,4 @@
-#include "T100DockManager.h"
+#include "gui/T100DockManager.h"
 
 T100DockManager::T100DockManager() :
     T100DockManagerBase()

@@ -1,4 +1,4 @@
-#include "T100PaintEvent.h"
+#include "gui/event/T100PaintEvent.h"
 
 T100PaintEvent::T100PaintEvent(T100WindowMessageData& data) :
     T100Event(data)

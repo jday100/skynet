@@ -46,7 +46,9 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-DUNICODE" />
 			<Add directory="../../../T100Common/include" />
+			<Add directory="include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
@@ -55,11 +57,13 @@
 			<Add library="comctl32" />
 		</Linker>
 		<Unit filename="include/gui/font/T100Font.h" />
+		<Unit filename="include/gui/font/T100FontTools.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="src/gui/font/T100Font.cpp" />
+		<Unit filename="src/gui/font/T100FontTools.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

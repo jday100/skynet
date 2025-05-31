@@ -1,6 +1,6 @@
 #include "gui/font/T100Font.h"
 
-#include "gui/T100FontTools.h"
+#include "gui/font/T100FontTools.h"
 
 T100Font::T100Font() :
     T100Class()

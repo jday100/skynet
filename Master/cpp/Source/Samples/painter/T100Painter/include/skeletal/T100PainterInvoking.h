@@ -21,6 +21,9 @@ class T100PainterInvoking
 
         static T100VOID             EntitySelected(T100WORD);
 
+        static T100VOID             LeftDown();
+        static T100VOID             LeftUp();
+
     protected:
 
     private:

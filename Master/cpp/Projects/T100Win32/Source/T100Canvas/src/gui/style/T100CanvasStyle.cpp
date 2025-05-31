@@ -1,4 +1,4 @@
-#include "T100CanvasStyle.h"
+#include "gui/T100CanvasStyle.h"
 
 T100CanvasStyle::T100CanvasStyle() :
     T100PanelStyle()

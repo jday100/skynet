@@ -19,7 +19,6 @@ class T100Win32Application : public T100Win32ApplicationBase
         virtual T100VOID            Destroy();
 
     protected:
-        T100Frame*                  m_frame         = T100NULL;
 
     private:
 };

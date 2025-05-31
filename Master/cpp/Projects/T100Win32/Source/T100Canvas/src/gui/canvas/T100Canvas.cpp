@@ -1,4 +1,4 @@
-#include "T100Canvas.h"
+#include "gui/T100Canvas.h"
 
 T100Canvas::T100Canvas() :
     T100Panel()
@@ -7,7 +7,7 @@ T100Canvas::T100Canvas() :
 }
 
 T100Canvas::T100Canvas(T100Win32Application* app, T100Window* parent) :
-    T100Panel(app, parent)
+    T100Panel(parent)
 {
     //ctor
 }

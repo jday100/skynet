@@ -1,6 +1,7 @@
-#include "T100Application.h"
+#include "application/T100Application.h"
 
-T100Application::T100Application()
+T100Application::T100Application() :
+    T100Class()
 {
     //ctor
 }

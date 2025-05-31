@@ -121,6 +121,135 @@ T100VOID T100EventHandler::ProcessWindowMessage(T100WindowMessageData& message)
             CallEvent(T100EVENT_WINDOW_DESTROY, message);
         }
         break;
+    case WM_MOVE:
+        {
+            CallEvent(T100EVENT_WINDOW_MOVE, message);
+        }
+        break;
+    case WM_SIZE:
+        {
+            CallEvent(T100EVENT_WINDOW_SIZE, message);
+            for(T100ObjectTreeNode* item : m_children.getVector()){
+                T100EventHandler*   handler     = ConvertToEventHandler(item);
+                if(handler){
+                    handler->ProcessWindowMessage(message);
+                }
+            }
+        }
+        break;
+    case WM_ACTIVATE:
+        {
+            CallEvent(T100EVENT_WINDOW_ACTIVATE, message);
+        }
+        break;
+    case WM_SETFOCUS:
+        {
+            CallEvent(T100EVENT_WINDOW_SET_FOCUS, message);
+        }
+        break;
+    case WM_KILLFOCUS:
+        {
+            CallEvent(T100EVENT_WINDOW_KILL_FOCUS, message);
+        }
+        break;
+    case WM_ENABLE:
+        {
+            CallEvent(T100EVENT_WINDOW_ENABLE, message);
+        }
+        break;
+    case WM_SETREDRAW:
+        {
+            CallEvent(T100EVENT_WINDOW_SET_REDRAW, message);
+        }
+        break;
+    case WM_SETTEXT:
+        {
+            CallEvent(T100EVENT_WINDOW_SET_TEXT, message);
+        }
+        break;
+    case WM_GETTEXT:
+        {
+            CallEvent(T100EVENT_WINDOW_GET_TEXT, message);
+        }
+        break;
+    case WM_GETTEXTLENGTH:
+        {
+            CallEvent(T100EVENT_WINDOW_GET_TEXT_LENGTH, message);
+        }
+        break;
+    case WM_LBUTTONDOWN:
+        {
+            CallEvent(T100EVENT_MOUSE_LEFT_DOWN, message);
+        }
+        break;
+    case WM_LBUTTONUP:
+        {
+            CallEvent(T100EVENT_MOUSE_LEFT_UP, message);
+        }
+        break;
+    case WM_LBUTTONDBLCLK:
+        {
+            CallEvent(T100EVENT_MOUSE_LEFT_DOUBLE_CLICK, message);
+        }
+        break;
+    case WM_RBUTTONDOWN:
+        {
+            CallEvent(T100EVENT_MOUSE_RIGHT_DOWN, message);
+        }
+        break;
+    case WM_RBUTTONUP:
+        {
+            CallEvent(T100EVENT_MOUSE_RIGHT_UP, message);
+        }
+        break;
+    case WM_RBUTTONDBLCLK:
+        {
+            CallEvent(T100EVENT_MOUSE_RIGHT_DOUBLE_CLICK, message);
+        }
+        break;
+    case WM_MBUTTONDOWN:
+        {
+            CallEvent(T100EVENT_MOUSE_MIDDLE_DOWN, message);
+        }
+        break;
+    case WM_MBUTTONUP:
+        {
+            CallEvent(T100EVENT_MOUSE_MIDDLE_UP, message);
+        }
+        break;
+    case WM_MBUTTONDBLCLK:
+        {
+            CallEvent(T100EVENT_MOUSE_MIDDLE_DOUBLE_CLICK, message);
+        }
+        break;
+    case WM_MOUSEWHEEL:
+        {
+            CallEvent(T100EVENT_MOUSE_WHEEL, message);
+        }
+        break;
+    case WM_MOUSEACTIVATE:
+        {
+            T100Console     console;
+
+            console.OutLine(L"WM_MOUSEACTIVATE");
+
+            CallEvent(T100EVENT_MOUSE_ENTER_WINDOW, message);
+        }
+        break;
+    case WM_MOUSEMOVE:
+        {
+            CallEvent(T100EVENT_MOUSE_MOVING, message);
+        }
+        break;
+    case WM_MOUSELEAVE:
+        {
+            T100Console     console;
+
+            console.OutLine(L"WM_MOUSE LEAVE");
+
+            CallEvent(T100EVENT_MOUSE_LEAVE_WINDOW, message);
+        }
+        break;
     case WM_PAINT:
         {
             CallEvent(T100EVENT_WINDOW_PAINT, message);
@@ -135,38 +264,6 @@ T100VOID T100EventHandler::ProcessWindowMessage(T100WindowMessageData& message)
                     handler->ProcessWindowMessage(message);
                 }
             }
-        }
-        break;
-    case WM_SIZE:
-        {
-            CallEvent(T100EVENT_WINDOW_SIZE, message);
-            for(T100ObjectTreeNode* item : m_children.getVector()){
-                T100EventHandler*   handler     = ConvertToEventHandler(item);
-                if(handler){
-                    handler->ProcessWindowMessage(message);
-                }
-            }
-        }
-        break;
-    case WM_MOUSEACTIVATE:
-        {
-            T100Console     console;
-
-            console.OutLine(L"WM_MOUSEACTIVATE");
-        }
-        break;
-    case WM_MOUSEMOVE:
-        {
-            T100Console     console;
-
-            console.OutLine(L"WM_MOUSEMOVE");
-        }
-        break;
-    case WM_MOUSELEAVE:
-        {
-            T100Console     console;
-
-            console.OutLine(L"WM_MOUSE LEAVE");
         }
         break;
     case WM_NOTIFY:

@@ -1,4 +1,4 @@
-#include "T100Win32Application.h"
+#include "gui/T100Win32Application.h"
 
 T100Win32Application::T100Win32Application() :
     T100Win32ApplicationBase()
@@ -13,14 +13,17 @@ T100Win32Application::~T100Win32Application()
 
 T100VOID T100Win32Application::Create()
 {
-    m_frame     = T100NEW T100Frame(this, L"T100Frame");
+    if(!m_framePtr){
+        T100FrameStyle          style;
+        m_framePtr      = T100NEW T100Frame(this, &style);
+    }
 
-    m_frame->Show();
+    m_framePtr->Show();
 }
 
 T100VOID T100Win32Application::Destroy()
 {
-    T100SAFE_DELETE m_frame;
+    T100SAFE_DELETE m_framePtr;
 }
 
 T100INT T100Win32ApplicationMessageLoop()

@@ -1,6 +1,7 @@
-#include "T100LoggerFile.h"
+#include "log/T100LoggerFile.h"
 
-T100LoggerFile::T100LoggerFile()
+T100LoggerFile::T100LoggerFile() :
+    T100LogBase()
 {
     //ctor
 }

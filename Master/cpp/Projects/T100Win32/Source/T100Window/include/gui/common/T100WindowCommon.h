@@ -20,21 +20,33 @@ typedef enum T100LINE_TYPE{
 }T100LINE_TYPE;
 
 typedef enum T100BRUSH_TYPE{
-    T100BRUSH_TYPE_SOLID
+    T100BRUSH_NONE          = BS_NULL,
+    T100BRUSH_SOLID         = BS_SOLID,
+    T100BRUSH_HATCHED       = BS_HATCHED,
+    T100BRUSH_PATTERN       = BS_PATTERN,
+    T100BRUSH_INDEXED       = BS_INDEXED,
+    T100BRUSH_DIBPATTERN    = BS_DIBPATTERN,
+    T100BRUSH_DIBPATTERNPT  = BS_DIBPATTERNPT,
+    T100BRUSH_PATTERN8X8    = BS_PATTERN8X8,
+    T100BRUSH_DIBPATTERN8X8 = BS_DIBPATTERN8X8,
+    T100BRUSH_MONOPATTERN   = BS_MONOPATTERN
 }T100BRUSH_TYPE;
 
 #define     T100WINDOW_TYPE_T100WINDOW                  L"T100Window"
 #define     T100WINDOW_TYPE_T100SELFLOOP_WINDOW         L"T100SelfLoopWindow"
+#define     T100WINDOW_TYPE_T100DIALOG                  L"T100Dialog"
 
 #define     T100WINDOW_TYPE_WINDOW                      L"window"
 #define     T100WINDOW_TYPE_BUTTON                      L"button"
-#define     T100WINDOW_TYPE EDIT                        L"edit"
+#define     T100WINDOW_TYPE_EDIT                        L"EDIT"
+#define     T100WINDOW_TYPE_LISTVIEW                    L"SysListView32"
 
 #define     T100WINDOW_TYPE_T100WINDOW                  L"T100Window"
 #define     T100WINDOW_TYPE_T100SELFLOOP_WINDOW         L"T100SelfLoopWindow"
 #define     T100WINDOW_TYPE_T100PANEL                   L"T100Panel"
 #define     T100WINDOW_TYPE_T100FRAME                   L"T100Frame"
 #define     T100WINDOW_TYPE_T100BUTTON                  L"T100Button"
+#define     T100WINDOW_TYPE_T100TEXTCTRL                L"T100TextCtrl"
 #define     T100WINDOW_TYPE_T100LISTVIEW                L"T100ListView"
 
 #endif // T100WINDOWCOMMON_H

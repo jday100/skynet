@@ -1,6 +1,6 @@
-#include "T100Console.h"
+#include "console/T100Console.h"
 
-#include "T100AllConsoles.h"
+#include "console/T100AllConsoles.h"
 
 T100Console::T100Console(T100CONSOLE_TYPE type) :
     m_type(type)

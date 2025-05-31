@@ -3,6 +3,7 @@
 
 #include "gui/T100Canvas.h"
 #include "gui/T100WindowEvent.h"
+#include "gui/T100MouseEvent.h"
 
 class T100Win32Application;
 
@@ -19,6 +20,8 @@ class T100PainterCanvas : public T100Canvas
 
     private:
         T100VOID            OnCanvasPaint(T100WindowEvent&);
+        T100VOID            OnMouseLeftDown(T100MouseEvent&);
+        T100VOID            OnMouseLeftUp(T100MouseEvent&);
 };
 
 #endif // T100PAINTERCANVAS_H

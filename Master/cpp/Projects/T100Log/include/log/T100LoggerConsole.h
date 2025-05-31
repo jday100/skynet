@@ -2,7 +2,7 @@
 #define T100LOGGERCONSOLE_H
 
 #include "common/T100LogCommon.h"
-#include "T100LogBase.h"
+#include "log/T100LogBase.h"
 #include "console/T100Console.h"
 
 class T100LoggerConsole : public T100LogBase

@@ -1,7 +1,7 @@
 #ifndef T100STRINGTYPES_H
 #define T100STRINGTYPES_H
 
-
+#include <vector>
 #include <string>
 #include "common/T100DataTypes.h"
 
@@ -32,5 +32,7 @@
 
 #define     T100CHAR                    T100CHAR32
 #define     T100STRING                  T100STDSTRING32
+
+#define     T100WSTRING_VECTOR          std::vector<T100WSTRING>
 
 #endif // T100STRINGTYPES_H

@@ -3,6 +3,10 @@
 
 #include "gui/dc/T100DCBase.h"
 
+#ifdef DrawText
+#undef DrawText
+#endif // DrawText
+
 class T100DC : public T100DCBase
 {
     public:
@@ -27,7 +31,7 @@ class T100DC : public T100DCBase
         T100VOID            DrawRotatedText();
         T100VOID            DrawRoundedRectangle(T100Point, T100Size, T100FLOAT);
         T100VOID            DrawSpline();
-        T100VOID            DrawText();
+        T100VOID            DrawText(T100WSTRING, T100INT, T100INT);
 
     protected:
 

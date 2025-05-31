@@ -10,8 +10,10 @@ class T100Panel : public T100Window
 {
     public:
         T100Panel();
-        T100Panel(T100Win32Application*, T100Window*);
+        T100Panel(T100Window*);
         virtual ~T100Panel();
+
+        T100VOID            Create(T100Window*, T100PanelStyle* = T100NULL);
 
     protected:
 

@@ -28,6 +28,7 @@ class T100Brush : public T100Class
         T100BRUSH_TYPE          m_type;
 
     private:
+        T100VOID                Init();
 };
 
 #endif // T100BRUSH_H

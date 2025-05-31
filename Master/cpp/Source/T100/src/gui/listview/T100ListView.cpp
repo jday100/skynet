@@ -61,7 +61,7 @@ T100VOID T100ListView::Append(T100WSTRING label)
 
 T100VOID T100ListView::ProcessWindowMessage(T100WindowMessageData& data)
 {
-
+    T100Control::ProcessWindowMessage(data);
 }
 
 T100VOID T100ListView::ProcessNotifyMessage(T100WindowMessageData& message)
@@ -78,4 +78,6 @@ T100VOID T100ListView::ProcessNotifyMessage(T100WindowMessageData& message)
         }
         break;
     }
+
+    T100Control::ProcessNotifyMessage(message);
 }

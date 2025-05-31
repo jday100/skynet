@@ -1,4 +1,4 @@
-#include "T100WindowMessageData.h"
+#include "gui/data/T100WindowMessageData.h"
 
 T100WindowMessageData::T100WindowMessageData(HWND hwnd, UINT id, WPARAM wParam, LPARAM lParam)
 {

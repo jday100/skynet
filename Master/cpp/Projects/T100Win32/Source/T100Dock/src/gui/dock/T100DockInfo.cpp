@@ -1,4 +1,4 @@
-#include "T100DockInfo.h"
+#include "gui/T100DockInfo.h"
 
 T100DockInfo::T100DockInfo() :
     T100Class()
@@ -29,6 +29,23 @@ T100Size& T100DockInfo::GetMinSize()
 T100Size& T100DockInfo::GetBestSize()
 {
     return m_bestSize;
+}
+
+T100DockInfo& T100DockInfo::Caption(T100WSTRING value)
+{
+    m_caption   = value;
+    return *this;
+}
+
+T100DockInfo& T100DockInfo::CloseButton(T100BOOL flag)
+{
+    m_closeButton   = flag;
+    return *this;
+}
+
+T100DockInfo& T100DockInfo::Direction()
+{
+
 }
 
 T100DockInfo& T100DockInfo::Left()

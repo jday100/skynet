@@ -21,6 +21,7 @@
 				<Linker>
 					<Add library="../../../../build/libT100Object.a" />
 					<Add library="../../../../build/libT100Common.a" />
+					<Add library="../../../../build/libT100Console.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -61,9 +62,11 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-DUNICODE" />
 			<Add directory="../../../T100Common/include" />
 			<Add directory="../../../T100Vessel/Source/T100Vessel/include" />
 			<Add directory="../../../T100Object/Source/T100Object/include" />
+			<Add directory="../../../T100Console/include" />
 			<Add directory="include" />
 		</Compiler>
 		<Linker>
@@ -73,25 +76,39 @@
 			<Add library="comctl32" />
 		</Linker>
 		<Unit filename="include/gui/T100AllEvents.h" />
+		<Unit filename="include/gui/T100MouseEvent.h" />
+		<Unit filename="include/gui/T100NotifyEvent.h" />
 		<Unit filename="include/gui/common/T100EventCommon.h" />
 		<Unit filename="include/gui/data/T100WindowMessageData.h" />
+		<Unit filename="include/gui/event/T100ApplicationEventHandler.h" />
 		<Unit filename="include/gui/event/T100CommandEvent.h" />
 		<Unit filename="include/gui/event/T100Event.h" />
 		<Unit filename="include/gui/event/T100EventBase.h" />
 		<Unit filename="include/gui/event/T100EventHandler.h" />
+		<Unit filename="include/gui/event/T100IDManager.h" />
+		<Unit filename="include/gui/event/T100MenuEvent.h" />
 		<Unit filename="include/gui/event/T100PaintEvent.h" />
 		<Unit filename="include/gui/event/T100WindowEvent.h" />
+		<Unit filename="include/gui/event/T100WindowEventHandler.h" />
+		<Unit filename="include/gui/event/T100WindowMessageDispatcher.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="src/gui/data/T100WindowMessageData.cpp" />
+		<Unit filename="src/gui/event/T100ApplicationEventHandler.cpp" />
 		<Unit filename="src/gui/event/T100CommandEvent.cpp" />
 		<Unit filename="src/gui/event/T100Event.cpp" />
 		<Unit filename="src/gui/event/T100EventBase.cpp" />
 		<Unit filename="src/gui/event/T100EventHandler.cpp" />
+		<Unit filename="src/gui/event/T100IDManager.cpp" />
+		<Unit filename="src/gui/event/T100MenuEvent.cpp" />
+		<Unit filename="src/gui/event/T100MouseEvent.cpp" />
+		<Unit filename="src/gui/event/T100NotifyEvent.cpp" />
 		<Unit filename="src/gui/event/T100PaintEvent.cpp" />
 		<Unit filename="src/gui/event/T100WindowEvent.cpp" />
+		<Unit filename="src/gui/event/T100WindowEventHandler.cpp" />
+		<Unit filename="src/gui/event/T100WindowMessageDispatcher.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
