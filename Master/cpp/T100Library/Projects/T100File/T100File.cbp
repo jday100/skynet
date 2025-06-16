@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100File" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100File" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/storage/file" />
+					<Add directory="include/storage/folder" />
+					<Add directory="include/storage/path" />
+					<Add directory="include/storage/filesystem" />
+					<Add directory="include/storage" />
+					<Add directory="include/storage/file/text" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../build/libT100Common.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100File" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/storage/file" />
+					<Add directory="include/storage/folder" />
+					<Add directory="include/storage/path" />
+					<Add directory="include/storage/filesystem" />
+					<Add directory="include/storage" />
+					<Add directory="include/storage/file/text" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../../build/T100File" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/storage/file" />
+					<Add directory="include/storage/folder" />
+					<Add directory="include/storage/path" />
+					<Add directory="include/storage/filesystem" />
+					<Add directory="include/storage" />
+					<Add directory="include/storage/file/text" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../build/libT100Common.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../T100Common/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Unit filename="include/storage/T100Accessor.h" />
+		<Unit filename="include/storage/T100Reader.h" />
+		<Unit filename="include/storage/T100Writer.h" />
+		<Unit filename="include/storage/file/T100File.h" />
+		<Unit filename="include/storage/file/T100FileAccessor.h" />
+		<Unit filename="include/storage/file/T100FileReader.h" />
+		<Unit filename="include/storage/file/T100FileWriter.h" />
+		<Unit filename="include/storage/file/text/T100TextFile.h" />
+		<Unit filename="include/storage/file/text/T100TextFileAccessor.h" />
+		<Unit filename="include/storage/file/text/T100TextFileReader.h" />
+		<Unit filename="include/storage/file/text/T100TextFileWriter.h" />
+		<Unit filename="include/storage/filesystem/T100FileSystemEntry.h" />
+		<Unit filename="include/storage/folder/T100Folder.h" />
+		<Unit filename="include/storage/path/T100PathTools.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/storage/T100Accessor.cpp" />
+		<Unit filename="src/storage/T100Reader.cpp" />
+		<Unit filename="src/storage/T100Writer.cpp" />
+		<Unit filename="src/storage/file/T100File.cpp" />
+		<Unit filename="src/storage/file/T100FileAccessor.cpp" />
+		<Unit filename="src/storage/file/T100FileReader.cpp" />
+		<Unit filename="src/storage/file/T100FileWriter.cpp" />
+		<Unit filename="src/storage/file/text/T100TextFile.cpp" />
+		<Unit filename="src/storage/file/text/T100TextFileAccessor.cpp" />
+		<Unit filename="src/storage/file/text/T100TextFileReader.cpp" />
+		<Unit filename="src/storage/file/text/T100TextFileWriter.cpp" />
+		<Unit filename="src/storage/filesystem/T100FileSystemEntry.cpp" />
+		<Unit filename="src/storage/folder/T100Folder.cpp" />
+		<Unit filename="src/storage/path/T100PathTools.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

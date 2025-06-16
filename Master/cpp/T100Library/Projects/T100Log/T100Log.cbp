@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100Log" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100Log" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/log" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../build/libT100Common.a" />
+					<Add library="../../../build/libT100File.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100Log" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/log" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../T100Common/include" />
+			<Add directory="../T100File/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Unit filename="include/log/T100Logger.h" />
+		<Unit filename="include/log/T100LoggerBase.h" />
+		<Unit filename="include/log/T100LoggerNormal.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/log/T100Logger.cpp" />
+		<Unit filename="src/log/T100LoggerBase.cpp" />
+		<Unit filename="src/log/T100LoggerNormal.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
