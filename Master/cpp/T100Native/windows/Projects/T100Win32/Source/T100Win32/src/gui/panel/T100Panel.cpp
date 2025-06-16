@@ -1,6 +1,9 @@
 #include "T100Panel.h"
 
-T100Panel::T100Panel()
+namespace T100WINDOWS{
+
+T100Panel::T100Panel() :
+    T100Window()
 {
     //ctor
 }
@@ -8,4 +11,6 @@ T100Panel::T100Panel()
 T100Panel::~T100Panel()
 {
     //dtor
+}
+
 }

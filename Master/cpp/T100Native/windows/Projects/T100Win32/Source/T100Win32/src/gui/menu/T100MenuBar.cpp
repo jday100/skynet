@@ -1,6 +1,9 @@
 #include "T100MenuBar.h"
 
-T100MenuBar::T100MenuBar()
+namespace T100WINDOWS{
+
+T100MenuBar::T100MenuBar() :
+    T100MenuBase()
 {
     //ctor
 }
@@ -8,4 +11,6 @@ T100MenuBar::T100MenuBar()
 T100MenuBar::~T100MenuBar()
 {
     //dtor
+}
+
 }

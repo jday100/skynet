@@ -21,6 +21,7 @@
 					<Add directory="include/storage/file/text" />
 				</Compiler>
 				<Linker>
+					<Add library="../../../build/libT100String.a" />
 					<Add library="../../../build/libT100Common.a" />
 				</Linker>
 			</Target>
@@ -65,7 +66,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add option="-fpermissive" />
 			<Add directory="../T100Common/include" />
+			<Add directory="../T100String/include" />
 			<Add directory="include" />
 		</Compiler>
 		<Unit filename="include/storage/T100Accessor.h" />

@@ -55,6 +55,8 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/base/T100Class.h" />
 		<Unit filename="include/base/T100Object.h" />
+		<Unit filename="include/base/T100Point.h" />
+		<Unit filename="include/base/T100Size.h" />
 		<Unit filename="include/common/T100Constants.h" />
 		<Unit filename="include/common/T100DataTypes.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
@@ -64,6 +66,8 @@
 		</Unit>
 		<Unit filename="src/base/T100Class.cpp" />
 		<Unit filename="src/base/T100Object.cpp" />
+		<Unit filename="src/base/T100Point.cpp" />
+		<Unit filename="src/base/T100Size.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

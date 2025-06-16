@@ -1,5 +1,6 @@
 #include "T100MenuFrame.h"
 
+#include "gui/T100MenuBar.h"
 #include "gui/T100MessageBox.h"
 
 T100MenuFrame::T100MenuFrame() :

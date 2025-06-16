@@ -1,8 +1,13 @@
 #ifndef T100MENU_H
 #define T100MENU_H
 
+#include "gui/menu/T100MenuBase.h"
 
-class T100Menu
+namespace T100WINDOWS{
+
+class T100MenuBar;
+
+class T100Menu : public T100MenuBase
 {
     public:
         T100Menu();
@@ -12,5 +17,7 @@ class T100Menu
 
     private:
 };
+
+}
 
 #endif // T100MENU_H

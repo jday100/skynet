@@ -5,6 +5,8 @@
 #include <thread>
 #include "base/T100Class.h"
 
+namespace T100LIBRARY{
+
 class T100Thread : public T100Class
 {
     public:
@@ -38,5 +40,7 @@ class T100Thread : public T100Class
         T100VOID                    init();
         T100VOID                    uninit();
 };
+
+}
 
 #endif // T100THREAD_H

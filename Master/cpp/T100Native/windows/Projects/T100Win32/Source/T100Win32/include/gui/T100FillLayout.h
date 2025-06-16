@@ -1,8 +1,11 @@
 #ifndef T100FILLLAYOUT_H
 #define T100FILLLAYOUT_H
 
+#include "gui/layout/T100Layout.h"
 
-class T100FillLayout
+namespace T100WINDOWS{
+
+class T100FillLayout : public T100Layout
 {
     public:
         T100FillLayout();
@@ -12,5 +15,7 @@ class T100FillLayout
 
     private:
 };
+
+}
 
 #endif // T100FILLLAYOUT_H

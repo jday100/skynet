@@ -1,8 +1,13 @@
 #ifndef T100CLIPBOARD_H
 #define T100CLIPBOARD_H
 
+#include "base/T100Class.h"
 
-class T100ClipBoard
+using namespace T100LIBRARY;
+
+namespace T100WINDOWS{
+
+class T100ClipBoard : T100Class
 {
     public:
         T100ClipBoard();
@@ -12,5 +17,7 @@ class T100ClipBoard
 
     private:
 };
+
+}
 
 #endif // T100CLIPBOARD_H

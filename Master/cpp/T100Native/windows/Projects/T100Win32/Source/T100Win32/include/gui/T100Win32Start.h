@@ -23,4 +23,18 @@ int WINAPI WinMain (HINSTANCE hThisInstance, \
     return T100Runner(app, hThisInstance, hPrevInstance, lpCmdLine, nCmdShow); \
 }
 
+#define     T100FrameStart(Frame) \
+int WINAPI WinMain (HINSTANCE hThisInstance, \
+                     HINSTANCE hPrevInstance, \
+                     LPSTR lpCmdLine, \
+                     int nCmdShow) \
+{ \
+    T100Win32Application        app; \
+    Frame                       frame; \
+    app.SetFrame(&frame); \
+    frame.Create(&app); \
+    frame.Show(); \
+    return T100Runner(app, hThisInstance, hPrevInstance, lpCmdLine, nCmdShow); \
+}
+
 #endif // T100WIN32START_H

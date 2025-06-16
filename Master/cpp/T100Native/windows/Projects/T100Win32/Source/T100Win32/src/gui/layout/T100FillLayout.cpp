@@ -1,6 +1,9 @@
 #include "T100FillLayout.h"
 
-T100FillLayout::T100FillLayout()
+namespace T100WINDOWS{
+
+T100FillLayout::T100FillLayout() :
+    T100Layout()
 {
     //ctor
 }
@@ -8,4 +11,6 @@ T100FillLayout::T100FillLayout()
 T100FillLayout::~T100FillLayout()
 {
     //dtor
+}
+
 }

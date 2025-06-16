@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/vessel" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,6 +23,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/vessel" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -31,7 +33,9 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../T100Common/include" />
 		</Compiler>
+		<Unit filename="include/vessel/T100Vessel.h" />
 		<Unit filename="main.cpp" />
 		<Extensions />
 	</Project>

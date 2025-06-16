@@ -1,6 +1,8 @@
 #include "T100EventFrame.h"
 
 #include <iostream>
+#include "gui/T100Menu.h"
+#include "gui/T100MenuBar.h"
 #include "gui/T100MessageBox.h"
 
 T100EventFrame::T100EventFrame() :

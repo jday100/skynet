@@ -1,6 +1,7 @@
 #ifndef T100WINDOW_H
 #define T100WINDOW_H
 
+#include "gui/layout/T100Layout.h"
 #include "gui/window/T100WindowBase.h"
 
 namespace T100WINDOWS{
@@ -15,9 +16,13 @@ class T100Window : public T100WindowBase
         virtual T100VOID            Create(T100Window*, T100WindowStyle* = T100NULL);
         virtual T100VOID            Destroy();
 
+        T100VOID                    SetLayout(T100Layout*);
+        T100Layout*                 GetLayout();
+
         static T100Window*          ConvertToWindow(T100Tree*);
 
     protected:
+        T100Layout*                 m_layout        = T100NULL;
 
     private:
         T100WindowModule            m_module;

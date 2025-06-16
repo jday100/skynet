@@ -25,6 +25,7 @@
 					<Add directory="include/gui/layout" />
 					<Add directory="include/gui/listctrl" />
 					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/dc" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../../../../build/libT100Object.a" />
@@ -50,9 +51,37 @@
 					<Add directory="include/gui/layout" />
 					<Add directory="include/gui/listctrl" />
 					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/dc" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../../../../../build/T100Win32" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/gui" />
+					<Add directory="include/gui/event" />
+					<Add directory="include/gui/handler" />
+					<Add directory="include/gui/style" />
+					<Add directory="include/gui/window" />
+					<Add directory="include/gui/data" />
+					<Add directory="include/gui/common" />
+					<Add directory="include/gui/control" />
+					<Add directory="include/gui/dock" />
+					<Add directory="include/gui/layout" />
+					<Add directory="include/gui/listctrl" />
+					<Add directory="include/gui/menu" />
+					<Add directory="include/gui/dc" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../../build/libT100Object.a" />
+					<Add library="../../../../../../build/libT100Common.a" />
 				</Linker>
 			</Target>
 		</Build>
@@ -68,6 +97,7 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="include/gui/T100AllEvents.h" />
 		<Unit filename="include/gui/T100Brush.h" />
 		<Unit filename="include/gui/T100Button.h" />
 		<Unit filename="include/gui/T100ButtonStyle.h" />
@@ -105,9 +135,11 @@
 		<Unit filename="include/gui/T100Win32Application.h" />
 		<Unit filename="include/gui/T100Win32Start.h" />
 		<Unit filename="include/gui/T100Window.h" />
+		<Unit filename="include/gui/common/T100EventCommon.h" />
 		<Unit filename="include/gui/common/T100WindowCommon.h" />
 		<Unit filename="include/gui/control/T100Control.h" />
 		<Unit filename="include/gui/data/T100WindowMessageData.h" />
+		<Unit filename="include/gui/dc/T100DCBase.h" />
 		<Unit filename="include/gui/dock/T100DockInfo.h" />
 		<Unit filename="include/gui/event/T100CommandEvent.h" />
 		<Unit filename="include/gui/event/T100Event.h" />
@@ -121,12 +153,16 @@
 		<Unit filename="include/gui/handler/T100WindowMessageDispatcher.h" />
 		<Unit filename="include/gui/layout/T100Layout.h" />
 		<Unit filename="include/gui/listctrl/T100ListItem.h" />
+		<Unit filename="include/gui/menu/T100MenuBase.h" />
 		<Unit filename="include/gui/menu/T100MenuItem.h" />
 		<Unit filename="include/gui/style/T100WindowStyle.h" />
 		<Unit filename="include/gui/window/T100SelfLoopWindow.h" />
 		<Unit filename="include/gui/window/T100WindowBase.h" />
 		<Unit filename="include/gui/window/T100WindowModule.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="src/gui/application/T100Win32Application.cpp" />
 		<Unit filename="src/gui/base/T100Time.cpp" />
 		<Unit filename="src/gui/button/T100Button.cpp" />
@@ -135,6 +171,7 @@
 		<Unit filename="src/gui/control/T100Control.cpp" />
 		<Unit filename="src/gui/data/T100WindowMessageData.cpp" />
 		<Unit filename="src/gui/dc/T100DC.cpp" />
+		<Unit filename="src/gui/dc/T100DCBase.cpp" />
 		<Unit filename="src/gui/dialog/T100Dialog.cpp" />
 		<Unit filename="src/gui/dialog/T100FontDialog.cpp" />
 		<Unit filename="src/gui/dialog/T100MessageBox.cpp" />
@@ -166,6 +203,7 @@
 		<Unit filename="src/gui/listctrl/T100ListView.cpp" />
 		<Unit filename="src/gui/menu/T100Menu.cpp" />
 		<Unit filename="src/gui/menu/T100MenuBar.cpp" />
+		<Unit filename="src/gui/menu/T100MenuBase.cpp" />
 		<Unit filename="src/gui/menu/T100MenuItem.cpp" />
 		<Unit filename="src/gui/panel/T100Panel.cpp" />
 		<Unit filename="src/gui/style/T100ButtonStyle.cpp" />

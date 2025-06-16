@@ -3,10 +3,10 @@
 #include "gui/T100TextCtrl.h"
 #include "gui/T100FontDialog.h"
 #include "editor/T100EditorFrame.h"
-#include "gui/T100OpenFileDialog.h"
-#include "gui/T100SaveFileDialog.h"
-#include "file/text/T100TextFile.h"
-#include "file/text/T100TextFileReader.h"
+#include "gui/T100OpenDialog.h"
+#include "gui/T100SaveDialog.h"
+#include "storage/file/text/T100TextFile.h"
+#include "storage/file/text/T100TextFileReader.h"
 
 #include "T100EditorAboutDialog.h"
 
@@ -39,7 +39,7 @@ T100VOID T100Editor::Open()
     Close();
     New();
 
-    T100OpenFileDialog          dialog;
+    T100OpenDialog              dialog;
 
     T100WSTRING                 filename;
 
@@ -50,9 +50,9 @@ T100VOID T100Editor::Open()
 
         if(text.IsExists()){
             T100WSTRING             result;
-            T100TextFileReader*     reader      = text.GetReader();
+            T100TextFileReader&     reader      = text.CreateReader();
 
-            reader->Read(result);
+            //reader.Read(result);
 
             /*
             if(result.find(L"\r") > 0){
@@ -85,19 +85,19 @@ T100VOID T100Editor::Save()
         T100TextFile        text(m_filename);
 
         T100WSTRING             result;
-        T100TextFileWriter*     writer      = text.GetWriter();
+        T100TextFileWriter&     writer      = text.CreateWriter();
 
         result  = m_textCtrl->GetValue();
-        writer->Write(result);
+        //writer->Write(result);
 
-        T100SAFE_DELETE writer;
+        text.DestroyWriter(writer);
 
     }
 }
 
 T100VOID T100Editor::SaveAs()
 {
-    T100SaveFileDialog          dialog;
+    T100SaveDialog              dialog;
 
     T100WSTRING                 filename;
 
@@ -112,12 +112,12 @@ T100VOID T100Editor::SaveAs()
 
         }else{
             T100WSTRING             result;
-            T100TextFileWriter*     writer      = text.GetWriter();
+            T100TextFileWriter&     writer      = text.CreateWriter();
 
             result  = m_textCtrl->GetValue();
-            writer->Write(result);
+            //writer.Write(result);
 
-            text.FreeWriter(writer);
+            text.DestroyWriter(writer);
 
             m_filename  = filename;
             m_frame->SetTitle(m_filename);

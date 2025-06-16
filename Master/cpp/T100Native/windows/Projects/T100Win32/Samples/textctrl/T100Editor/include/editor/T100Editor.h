@@ -3,7 +3,13 @@
 
 #include "base/T100Class.h"
 
-class T100TextCtrl;
+namespace T100WINDOWS{
+    class T100TextCtrl;
+}
+
+using namespace T100LIBRARY;
+using namespace T100WINDOWS;
+
 class T100EditorFrame;
 
 class T100Editor : public T100Class

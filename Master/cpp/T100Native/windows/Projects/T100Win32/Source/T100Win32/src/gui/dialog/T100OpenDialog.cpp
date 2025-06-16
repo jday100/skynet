@@ -1,6 +1,9 @@
 #include "T100OpenDialog.h"
 
-T100OpenDialog::T100OpenDialog()
+namespace T100WINDOWS{
+
+T100OpenDialog::T100OpenDialog() :
+    T100Dialog()
 {
     //ctor
 }
@@ -8,4 +11,36 @@ T100OpenDialog::T100OpenDialog()
 T100OpenDialog::~T100OpenDialog()
 {
     //dtor
+}
+
+T100VOID T100OpenDialog::SetDirectory(const T100WSTRING& value)
+{
+    m_directory     = value;
+}
+
+const T100WSTRING& T100OpenDialog::GetDirectory()
+{
+    return m_directory;
+}
+
+T100VOID T100OpenDialog::SetPath(const T100WSTRING& value)
+{
+    m_path      = value;
+}
+
+const T100WSTRING& T100OpenDialog::GetPath()
+{
+    return m_path;
+}
+
+T100VOID T100OpenDialog::SetFileName(const T100WSTRING& value)
+{
+    m_filename  = value;
+}
+
+const T100WSTRING& T100OpenDialog::GetFileName()
+{
+    return m_filename;
+}
+
 }

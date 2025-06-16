@@ -2,10 +2,10 @@
 
 #include "gui/T100FontDialog.h"
 #include "gui/T100FillLayout.h"
-#include "gui/T100OpenFileDialog.h"
-#include "gui/T100SaveFileDialog.h"
-#include "file/text/T100TextFile.h"
-#include "file/text/T100TextFileReader.h"
+#include "gui/T100OpenDialog.h"
+#include "gui/T100SaveDialog.h"
+#include "storage/file/text/T100TextFile.h"
+#include "storage/file/text/T100TextFileReader.h"
 
 T100EditorFrame::T100EditorFrame() :
     T100Frame()

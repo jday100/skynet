@@ -1,8 +1,11 @@
 #ifndef T100LEAK_H
 #define T100LEAK_H
 
+#include "base/T100Class.h"
 
-class T100Leak
+namespace T100LIBRARY{
+
+class T100Leak : public T100Class
 {
     public:
         T100Leak();
@@ -12,5 +15,7 @@ class T100Leak
 
     private:
 };
+
+}
 
 #endif // T100LEAK_H

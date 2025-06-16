@@ -47,6 +47,8 @@
 		<Unit filename="include/T100Common.h" />
 		<Unit filename="include/base/T100Class.h" />
 		<Unit filename="include/base/T100Object.h" />
+		<Unit filename="include/base/T100Point.h" />
+		<Unit filename="include/base/T100Size.h" />
 		<Unit filename="include/common/T100Constants.h" />
 		<Unit filename="include/common/T100DataTypes.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
@@ -71,14 +73,19 @@
 		<Unit filename="include/storage/filesystem/T100FileSystemEntry.h" />
 		<Unit filename="include/storage/folder/T100Folder.h" />
 		<Unit filename="include/storage/path/T100PathTools.h" />
+		<Unit filename="include/string/T100StringTools.h" />
+		<Unit filename="include/string/T100Unicode.h" />
 		<Unit filename="include/thread/T100Thread.h" />
 		<Unit filename="include/valuing/T100Leak.h" />
+		<Unit filename="include/vessel/T100Vessel.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
 		<Unit filename="src/base/T100Class.cpp" />
 		<Unit filename="src/base/T100Object.cpp" />
+		<Unit filename="src/base/T100Point.cpp" />
+		<Unit filename="src/base/T100Size.cpp" />
 		<Unit filename="src/console/T100Console.cpp" />
 		<Unit filename="src/console/T100ConsoleBase.cpp" />
 		<Unit filename="src/console/T100ConsoleNormal.cpp" />
@@ -100,6 +107,8 @@
 		<Unit filename="src/storage/filesystem/T100FileSystemEntry.cpp" />
 		<Unit filename="src/storage/folder/T100Folder.cpp" />
 		<Unit filename="src/storage/path/T100PathTools.cpp" />
+		<Unit filename="src/string/T100StringTools.cpp" />
+		<Unit filename="src/string/T100Unicode.cpp" />
 		<Unit filename="src/thread/T100Thread.cpp" />
 		<Unit filename="src/valuing/T100Leak.cpp" />
 		<Extensions>

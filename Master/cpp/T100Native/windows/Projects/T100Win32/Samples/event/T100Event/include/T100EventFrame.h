@@ -2,7 +2,9 @@
 #define T100EVENTFRAME_H
 
 #include "gui/T100Frame.h"
-#include "gui/T100AllEvents.h"
+#include "gui/common/T100EventCommon.h"
+
+using namespace T100WINDOWS;
 
 class T100EventFrame : public T100Frame
 {
@@ -13,7 +15,7 @@ class T100EventFrame : public T100Frame
         T100VOID            Create(T100Win32Application*);
 
     protected:
-        T100WORD            T100MENU_ID_RUN         = T100MENU_ID_USER + 1;
+        T100UINT            T100MENU_ID_RUN         = T100MENU_ID_USER + 1;
 
         T100VOID            OnMenuRun(T100CommandEvent&);
         T100VOID            OnMenuQuit(T100CommandEvent&);

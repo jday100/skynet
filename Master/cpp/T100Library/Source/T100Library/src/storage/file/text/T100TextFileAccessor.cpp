@@ -1,5 +1,8 @@
 #include "storage/file/text/T100TextFileAccessor.h"
 
+#include "string/T100Unicode.h"
+#include "storage/file/text/T100TextFile.h"
+
 namespace T100LIBRARY{
 
 T100TextFileAccessor::T100TextFileAccessor(const T100TextFile& file) :
@@ -19,6 +22,8 @@ T100TextFileAccessor::~T100TextFileAccessor()
 T100VOID T100TextFileAccessor::init()
 {
     T100STRING      filename;
+
+    filename    = T100Unicode::ToString8(m_textFile.GetEntryName());
 
     m_fstream   = T100NEW std::fstream(filename, std::ios::in | std::ios::out);
 }

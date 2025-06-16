@@ -3,6 +3,7 @@
 
 #include <unordered_map>
 #include "object/T100Tree.h"
+#include "gui/T100AllEvents.h"
 #include "gui/data/T100WindowMessageData.h"
 
 using namespace T100LIBRARY;

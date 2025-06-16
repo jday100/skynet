@@ -1,8 +1,11 @@
 #ifndef T100PANEL_H
 #define T100PANEL_H
 
+#include "gui/T100Window.h"
 
-class T100Panel
+namespace T100WINDOWS{
+
+class T100Panel : public T100Window
 {
     public:
         T100Panel();
@@ -12,5 +15,7 @@ class T100Panel
 
     private:
 };
+
+}
 
 #endif // T100PANEL_H

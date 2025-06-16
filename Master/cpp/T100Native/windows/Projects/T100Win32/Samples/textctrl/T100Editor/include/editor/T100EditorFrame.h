@@ -7,6 +7,8 @@
 #include "gui/T100AllEvents.h"
 #include "gui/common/T100EventCommon.h"
 
+using namespace T100WINDOWS;
+
 enum{
     T100MENU_NEW        = T100MENU_ID_USER,
     T100MENU_OPEN,
@@ -67,5 +69,6 @@ class T100EditorFrame : public T100Frame
     private:
         T100WSTRING                 m_project       = L"T100Editor";
 };
+
 
 #endif // T100EDITORFRAME_H

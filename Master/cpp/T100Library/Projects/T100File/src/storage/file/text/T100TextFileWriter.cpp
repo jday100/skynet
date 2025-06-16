@@ -1,5 +1,8 @@
 #include "storage/file/text/T100TextFileWriter.h"
 
+#include "string/T100Unicode.h"
+#include "storage/file/text/T100TextFile.h"
+
 namespace T100LIBRARY{
 
 T100TextFileWriter::T100TextFileWriter(const T100TextFile& file) :
@@ -19,6 +22,8 @@ T100TextFileWriter::~T100TextFileWriter()
 T100VOID T100TextFileWriter::init()
 {
     T100STRING      filename;
+
+    filename    = T100Unicode::ToString8(m_textFile.GetEntryName());
 
     m_ofstream  = T100NEW std::ofstream(filename, std::ios::out);
 }
