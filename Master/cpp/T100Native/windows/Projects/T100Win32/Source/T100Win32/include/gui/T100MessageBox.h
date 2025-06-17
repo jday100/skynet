@@ -1,16 +1,15 @@
 #ifndef T100MESSAGEBOX_H
 #define T100MESSAGEBOX_H
 
+#include "gui/T100Window.h"
 
-class T100MessageBox
-{
-    public:
-        T100MessageBox();
-        virtual ~T100MessageBox();
+namespace T100WINDOWS{
 
-    protected:
+#define     T100YES                     6
+#define     T100NO                      7
 
-    private:
-};
+T100INT ShowMessageBox(T100Window*, const T100WSTRING&, const T100WSTRING& = L"MessageBox", T100INT = MB_YESNO);
+
+}
 
 #endif // T100MESSAGEBOX_H

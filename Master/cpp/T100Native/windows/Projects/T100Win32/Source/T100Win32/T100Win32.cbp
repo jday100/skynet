@@ -135,12 +135,14 @@
 		<Unit filename="include/gui/T100Win32Application.h" />
 		<Unit filename="include/gui/T100Win32Start.h" />
 		<Unit filename="include/gui/T100Window.h" />
+		<Unit filename="include/gui/common/T100DockCommon.h" />
 		<Unit filename="include/gui/common/T100EventCommon.h" />
 		<Unit filename="include/gui/common/T100WindowCommon.h" />
 		<Unit filename="include/gui/control/T100Control.h" />
 		<Unit filename="include/gui/data/T100WindowMessageData.h" />
 		<Unit filename="include/gui/dc/T100DCBase.h" />
 		<Unit filename="include/gui/dock/T100DockInfo.h" />
+		<Unit filename="include/gui/dock/T100DockManagerBase.h" />
 		<Unit filename="include/gui/event/T100CommandEvent.h" />
 		<Unit filename="include/gui/event/T100Event.h" />
 		<Unit filename="include/gui/event/T100MenuEvent.h" />
@@ -179,6 +181,7 @@
 		<Unit filename="src/gui/dialog/T100SaveDialog.cpp" />
 		<Unit filename="src/gui/dock/T100DockInfo.cpp" />
 		<Unit filename="src/gui/dock/T100DockManager.cpp" />
+		<Unit filename="src/gui/dock/T100DockManagerBase.cpp" />
 		<Unit filename="src/gui/event/T100CommandEvent.cpp" />
 		<Unit filename="src/gui/event/T100Event.cpp" />
 		<Unit filename="src/gui/event/T100MenuEvent.cpp" />

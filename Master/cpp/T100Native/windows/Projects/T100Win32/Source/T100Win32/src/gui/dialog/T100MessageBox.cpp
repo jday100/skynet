@@ -1,11 +1,10 @@
 #include "T100MessageBox.h"
 
-T100MessageBox::T100MessageBox()
+namespace T100WINDOWS{
+
+T100INT ShowMessageBox(T100Window* parent, const T100WSTRING& value, const T100WSTRING& title, T100INT type)
 {
-    //ctor
+    return MessageBox(parent->GetHWND(), value.c_str(), title.c_str(), type);
 }
 
-T100MessageBox::~T100MessageBox()
-{
-    //dtor
 }

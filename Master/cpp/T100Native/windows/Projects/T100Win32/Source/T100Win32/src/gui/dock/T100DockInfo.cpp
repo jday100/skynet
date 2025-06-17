@@ -1,6 +1,9 @@
 #include "T100DockInfo.h"
 
-T100DockInfo::T100DockInfo()
+namespace T100WINDOWS{
+
+T100DockInfo::T100DockInfo() :
+    T100Class()
 {
     //ctor
 }
@@ -8,4 +11,6 @@ T100DockInfo::T100DockInfo()
 T100DockInfo::~T100DockInfo()
 {
     //dtor
+}
+
 }
