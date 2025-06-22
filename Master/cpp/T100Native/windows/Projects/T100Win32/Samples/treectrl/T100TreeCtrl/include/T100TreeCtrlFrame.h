@@ -2,7 +2,9 @@
 #define T100TREECTRLFRAME_H
 
 #include "gui/T100Frame.h"
-#include "gui/T100TreeCtrl.h"
+#include "gui/T100TreeView.h"
+
+using namespace T100WINDOWS;
 
 class T100TreeCtrlFrame : public T100Frame
 {
@@ -14,7 +16,7 @@ class T100TreeCtrlFrame : public T100Frame
         T100VOID            Create(T100Win32Application*);
 
     protected:
-        T100TreeCtrl        m_treeCtrl;
+        T100TreeView        m_treeCtrl;
 
         T100VOID            OnWindowMessage(T100WindowEvent&);
 

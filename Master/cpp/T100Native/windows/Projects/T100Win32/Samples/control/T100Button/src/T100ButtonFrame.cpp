@@ -2,6 +2,9 @@
 
 #include "gui/T100Button.h"
 #include "gui/T100FillLayout.h"
+#include "gui/T100MessageBox.h"
+
+using namespace T100WINDOWS;
 
 T100ButtonFrame::T100ButtonFrame() :
     T100Frame()
@@ -38,9 +41,16 @@ T100VOID T100ButtonFrame::init()
 
     //this->SetLayout(layout);
 
+    button1->Connect(T100EVENT_COMMAND, (T100EVENT_FUNCTION)&OnButtonClick, this);
+    button2->Connect(T100EVENT_COMMAND, (T100EVENT_FUNCTION)&OnButtonClick, this);
 }
 
 T100VOID T100ButtonFrame::uninit()
 {
 
+}
+
+T100VOID T100ButtonFrame::OnButtonClick(T100CommandEvent& event)
+{
+    ShowMessageBox(this, L"Click");
 }

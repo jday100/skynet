@@ -1,5 +1,7 @@
 #include "T100PainterMainMenu.h"
 
+#include "gui/common/T100EventCommon.h"
+
 T100PainterMainMenu::T100PainterMainMenu()
 {
     //ctor
@@ -24,8 +26,8 @@ T100VOID T100PainterMainMenu::Create(T100Frame* frame)
 
 T100VOID T100PainterMainMenu::Destroy()
 {
-    T100SAFE_DELETE m_newItemPtr;
-    T100SAFE_DELETE m_quitItemPtr;
-    T100SAFE_DELETE m_fileMenuPtr;
-    T100SAFE_DELETE m_menuBarPtr;
+    T100SAFE_DELETE(m_newItemPtr);
+    T100SAFE_DELETE(m_quitItemPtr);
+    T100SAFE_DELETE(m_fileMenuPtr);
+    T100SAFE_DELETE(m_menuBarPtr);
 }

@@ -11,6 +11,8 @@ class T100OpenDialog : public T100Dialog
         T100OpenDialog();
         virtual ~T100OpenDialog();
 
+        T100VOID                    Show();
+
         T100VOID                    SetDirectory(const T100WSTRING&);
         const T100WSTRING&          GetDirectory();
 

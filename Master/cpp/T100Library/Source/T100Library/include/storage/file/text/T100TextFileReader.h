@@ -14,7 +14,8 @@ class T100TextFileReader : public T100FileReader
         virtual ~T100TextFileReader();
 
         virtual T100VOID            Seek(T100UINT);
-        virtual T100VOID            Read();
+        virtual T100INT             Read(T100WSTRING&);
+        virtual T100VOID            Load(T100WSTRING&);
 
     protected:
         const T100TextFile&         m_textFile;

@@ -14,7 +14,11 @@ class T100MenuItem : public T100MenuBase
         T100MenuItem(T100Menu*, T100UINT, const T100WSTRING&);
         virtual ~T100MenuItem();
 
+        T100VOID            SetID(T100UINT);
+        T100UINT            GetID();
+
     protected:
+        T100UINT            m_id            = 0;
 
     private:
 };

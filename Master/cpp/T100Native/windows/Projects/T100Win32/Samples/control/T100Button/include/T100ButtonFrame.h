@@ -3,6 +3,8 @@
 
 #include "gui/T100Frame.h"
 
+using namespace T100WINDOWS;
+
 class T100ButtonFrame : public T100Frame
 {
     public:
@@ -12,6 +14,7 @@ class T100ButtonFrame : public T100Frame
         T100VOID            Create(T100Win32Application*);
 
     protected:
+        T100VOID            OnButtonClick(T100CommandEvent&);
 
     private:
         T100VOID            init();

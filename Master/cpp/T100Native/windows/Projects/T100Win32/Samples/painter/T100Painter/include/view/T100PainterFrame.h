@@ -5,6 +5,9 @@
 #include "gui/T100ListView.h"
 #include "gui/T100AllEvents.h"
 
+using namespace T100LIBRARY;
+using namespace T100WINDOWS;
+
 class T100PainterFrame : public T100Frame
 {
     public:

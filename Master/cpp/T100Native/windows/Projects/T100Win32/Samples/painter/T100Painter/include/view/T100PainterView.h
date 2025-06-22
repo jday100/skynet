@@ -8,6 +8,9 @@
 #include "T100PainterEntityPanel.h"
 #include "gui/T100DockManager.h"
 
+using namespace T100LIBRARY;
+using namespace T100WINDOWS;
+
 class T100PainterView
 {
     public:

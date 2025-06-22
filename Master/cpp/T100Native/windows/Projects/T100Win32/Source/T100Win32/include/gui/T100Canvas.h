@@ -19,7 +19,7 @@ class T100Canvas : public T100Panel
     protected:
 
     private:
-        T100VOID                    init(T100Window*);
+        T100VOID                    init(T100Window*, T100CanvasStyle*);
         T100VOID                    uninit();
 };
 

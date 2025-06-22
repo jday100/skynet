@@ -6,11 +6,13 @@ T100MenuBar::T100MenuBar() :
     T100MenuBase()
 {
     //ctor
+    m_hmenu = CreateMenu();
 }
 
 T100MenuBar::~T100MenuBar()
 {
     //dtor
+    DestroyMenu(m_hmenu);
 }
 
 }

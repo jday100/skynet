@@ -4,6 +4,8 @@
 #include "gui/T100Frame.h"
 #include "gui/T100ListView.h"
 
+using namespace T100WINDOWS;
+
 class T100ListViewFrame : public T100Frame
 {
     public:

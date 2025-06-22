@@ -10,20 +10,54 @@ T100SelfLoopWindow::T100SelfLoopWindow() :
     //ctor
 }
 
+T100SelfLoopWindow::T100SelfLoopWindow(T100Win32Application* application) :
+    T100Window()
+{
+    //ctor
+    SetRoot(application);
+    init();
+}
+
 T100SelfLoopWindow::~T100SelfLoopWindow()
 {
     //dtor
+    uninit();
+}
+
+T100VOID T100SelfLoopWindow::init()
+{
+    T100Window::Create(T100NULL, &m_style);
+}
+
+T100VOID T100SelfLoopWindow::uninit()
+{
+
 }
 
 T100VOID T100SelfLoopWindow::Create(T100Win32Application* application, T100WindowStyle* style)
 {
     SetRoot(application);
-    T100Window::Create(T100NULL, style);
+    if(style){
+        m_style     = *style;
+    }else{
+        m_style     = T100WindowStyle();
+    }
+    init();
 }
 
 T100VOID T100SelfLoopWindow::Destroy()
 {
+    T100Window::Destroy();
+}
 
+T100VOID T100SelfLoopWindow::Maximize()
+{
+    ShowWindow(m_hwnd, SW_MAXIMIZE);
+}
+
+T100VOID T100SelfLoopWindow::Minimize()
+{
+    ShowWindow(m_hwnd, SW_MINIMIZE);
 }
 
 LRESULT CALLBACK DefaultSelfLoopWindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)

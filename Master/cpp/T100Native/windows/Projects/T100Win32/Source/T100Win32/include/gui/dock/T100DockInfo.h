@@ -15,11 +15,11 @@ class T100DockInfo : public T100Class
         virtual ~T100DockInfo();
 
         T100DOCK_POSITION_TYPE          GetPosition();
-        T100Size&                       GetMaxSize();
-        T100Size&                       GetMinSize();
-        T100Size&                       GetBestSize();
+        const T100Size&                 GetMaxSize();
+        const T100Size&                 GetMinSize();
+        const T100Size&                 GetBestSize();
 
-        T100DockInfo&                   Caption(T100WSTRING);
+        T100DockInfo&                   Caption(const T100WSTRING&);
         T100DockInfo&                   CloseButton(T100BOOL);
         T100DockInfo&                   Direction();
         T100DockInfo&                   Left();
@@ -29,13 +29,13 @@ class T100DockInfo : public T100Class
         T100DockInfo&                   Center();
 
         T100DockInfo&                   MaxSize(T100INT, T100INT);
-        T100DockInfo&                   MaxSize(T100Size&);
+        T100DockInfo&                   MaxSize(const T100Size&);
 
         T100DockInfo&                   MinSize(T100INT, T100INT);
-        T100DockInfo&                   MinSize(T100Size&);
+        T100DockInfo&                   MinSize(const T100Size&);
 
         T100DockInfo&                   BestSize(T100INT, T100INT);
-        T100DockInfo&                   BestSize(T100Size&);
+        T100DockInfo&                   BestSize(const T100Size&);
 
     protected:
         T100Size                        m_maxSize;

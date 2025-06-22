@@ -1,6 +1,6 @@
 #include "T100DCFrame.h"
 
-#include "gui/dc/T100DC.h"
+#include "gui/T100DC.h"
 
 T100DCFrame::T100DCFrame() :
     T100Frame()
@@ -34,9 +34,9 @@ T100VOID T100DCFrame::OnFramePaint(T100WindowEvent& event)
 {
     T100DC      dc(this);
 
-    T100Pen     pen(T100COLOUR_RED, 50, T100LINE_SOLID);
+    T100Pen     pen(T100COLOUR4_RED, 50, T100LINE_SOLID);
 
-    dc.SetPen(&pen);
+    dc.SetPen(pen);
 
     dc.DrawLine(T100Point(100, 100), T100Point(300, 300));
 

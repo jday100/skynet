@@ -106,8 +106,8 @@ T100VOID T100EditorFrame::Create(T100Win32Application* app)
 
 T100VOID T100EditorFrame::Destroy()
 {
-    T100SAFE_DELETE m_editor;
-    T100SAFE_DELETE m_textCtrl;
+    T100SAFE_DELETE(m_editor);
+    T100SAFE_DELETE(m_textCtrl);
 }
 
 T100VOID T100EditorFrame::SetDirty()

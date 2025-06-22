@@ -15,6 +15,7 @@ class T100TextFileWriter : public T100FileWriter
 
         virtual T100VOID            Seek(T100UINT);
         virtual T100VOID            Write();
+        virtual T100VOID            Save(const T100WSTRING&);
 
     protected:
         const T100TextFile&         m_textFile;

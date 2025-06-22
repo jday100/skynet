@@ -4,6 +4,8 @@
 #include "gui/T100Win32Application.h"
 #include "T100Painter.h"
 
+using namespace T100LIBRARY;
+
 class T100PainterApplication : public T100Win32Application
 {
     public:

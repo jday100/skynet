@@ -4,6 +4,7 @@
 #include <unordered_map>
 #include "object/T100Tree.h"
 #include "gui/T100AllEvents.h"
+#include "gui/common/T100EventCommon.h"
 #include "gui/data/T100WindowMessageData.h"
 
 using namespace T100LIBRARY;
@@ -58,7 +59,7 @@ class T100EventHandler : public T100Tree
 
         virtual T100VOID                        ConnectEvent(T100UINT, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
         virtual T100VOID                        ConnectNotify(T100UINT, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
-        virtual T100VOID                        ConnectCommand(T100UINT, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
+        virtual T100VOID                        ConnectCommand(T100UINT, const T100EVENT_FUNCTION_DATA&);
 };
 
 }

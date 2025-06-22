@@ -5,7 +5,8 @@
 #include "T100PainterServe.h"
 #include "T100PainterView.h"
 
-class T100Win32Application;
+using namespace T100LIBRARY;
+using namespace T100WINDOWS;
 
 class T100Painter
 {
@@ -25,7 +26,7 @@ class T100Painter
 
         T100VOID                    Resize();
 
-        T100VOID                    Select(T100WORD);
+        T100VOID                    Select(T100UINT);
 
     protected:
 

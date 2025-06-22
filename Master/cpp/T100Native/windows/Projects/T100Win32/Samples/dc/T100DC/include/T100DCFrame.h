@@ -2,7 +2,9 @@
 #define T100DCFRAME_H
 
 #include "gui/T100Frame.h"
-#include "gui/T100WindowEvent.h"
+#include "gui/event/T100WindowEvent.h"
+
+using namespace T100WINDOWS;
 
 class T100DCFrame : public T100Frame
 {

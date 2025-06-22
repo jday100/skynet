@@ -87,9 +87,11 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-fpermissive" />
 			<Add option="-DUNICODE" />
 			<Add directory="../../../../../../T100Library/Source/T100Library/include" />
 			<Add directory="include" />
+			<Add directory="." />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
@@ -111,6 +113,7 @@
 		<Unit filename="include/gui/T100Dialog.h" />
 		<Unit filename="include/gui/T100DialogStyle.h" />
 		<Unit filename="include/gui/T100DockManager.h" />
+		<Unit filename="include/gui/T100DockPanelStyle.h" />
 		<Unit filename="include/gui/T100FillLayout.h" />
 		<Unit filename="include/gui/T100Font.h" />
 		<Unit filename="include/gui/T100FontDialog.h" />
@@ -137,6 +140,8 @@
 		<Unit filename="include/gui/T100Window.h" />
 		<Unit filename="include/gui/common/T100DockCommon.h" />
 		<Unit filename="include/gui/common/T100EventCommon.h" />
+		<Unit filename="include/gui/common/T100GraphicCommon.h" />
+		<Unit filename="include/gui/common/T100ListViewCommon.h" />
 		<Unit filename="include/gui/common/T100WindowCommon.h" />
 		<Unit filename="include/gui/control/T100Control.h" />
 		<Unit filename="include/gui/data/T100WindowMessageData.h" />
@@ -164,6 +169,10 @@
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
+		</Unit>
+		<Unit filename="resource.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
 		</Unit>
 		<Unit filename="src/gui/application/T100Win32Application.cpp" />
 		<Unit filename="src/gui/base/T100Time.cpp" />
@@ -212,6 +221,7 @@
 		<Unit filename="src/gui/style/T100ButtonStyle.cpp" />
 		<Unit filename="src/gui/style/T100CanvasStyle.cpp" />
 		<Unit filename="src/gui/style/T100DialogStyle.cpp" />
+		<Unit filename="src/gui/style/T100DockPanelStyle.cpp" />
 		<Unit filename="src/gui/style/T100FrameStyle.cpp" />
 		<Unit filename="src/gui/style/T100ListViewStyle.cpp" />
 		<Unit filename="src/gui/style/T100PanelStyle.cpp" />

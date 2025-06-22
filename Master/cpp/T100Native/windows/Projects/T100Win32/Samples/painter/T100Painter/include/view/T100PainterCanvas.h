@@ -2,19 +2,20 @@
 #define T100PAINTERCANVAS_H
 
 #include "gui/T100Canvas.h"
-#include "gui/T100WindowEvent.h"
-#include "gui/T100MouseEvent.h"
+#include "gui/event/T100WindowEvent.h"
+#include "gui/event/T100MouseEvent.h"
 
-class T100Win32Application;
+using namespace T100LIBRARY;
+using namespace T100WINDOWS;
 
 class T100PainterCanvas : public T100Canvas
 {
     public:
         T100PainterCanvas();
-        T100PainterCanvas(T100Win32Application*, T100Window*);
+        T100PainterCanvas(T100Window*);
         virtual ~T100PainterCanvas();
 
-        T100VOID            Create(T100Win32Application*, T100Window*, T100WSTRING, T100WindowStyle*);
+        T100VOID            Create(T100Window*, T100WSTRING, T100PanelStyle*);
 
     protected:
 

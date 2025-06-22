@@ -1,8 +1,11 @@
 #ifndef T100LISTVIEWSTYLE_H
 #define T100LISTVIEWSTYLE_H
 
+#include "gui/style/T100WindowStyle.h"
 
-class T100ListViewStyle
+namespace T100WINDOWS{
+
+class T100ListViewStyle : public T100WindowStyle
 {
     public:
         T100ListViewStyle();
@@ -12,5 +15,7 @@ class T100ListViewStyle
 
     private:
 };
+
+}
 
 #endif // T100LISTVIEWSTYLE_H

@@ -17,7 +17,7 @@ class T100Window;
 class T100DCBase : public T100Class
 {
     public:
-        T100DCBase();
+        T100DCBase(T100Window*);
         virtual ~T100DCBase();
 
         T100VOID                        SetPen(const T100Pen&);
@@ -35,6 +35,7 @@ class T100DCBase : public T100Class
         T100Brush                       m_brush;
         T100Font                        m_font;
         T100Window*                     m_window        = T100NULL;
+        PAINTSTRUCT                     m_paintStruct;
 
     private:
         T100VOID                        init();

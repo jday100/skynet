@@ -1,7 +1,7 @@
 #ifndef T100MENUBAR_H
 #define T100MENUBAR_H
 
-#include "gui/menu/T100MenuBase.h"
+#include "gui/T100Menu.h"
 
 namespace T100WINDOWS{
 

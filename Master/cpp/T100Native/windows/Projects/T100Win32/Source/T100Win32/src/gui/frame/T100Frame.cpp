@@ -37,6 +37,7 @@ T100VOID T100Frame::uninit()
 T100VOID T100Frame::SetMenuBar(T100MenuBar* menuBar)
 {
     m_menuBar   = menuBar;
+    SetMenu(m_hwnd, m_menuBar->GetHMENU());
 }
 
 T100MenuBar* T100Frame::GetMenuBar()
@@ -56,7 +57,7 @@ T100VOID T100Frame::Create(T100Win32Application* application, T100FrameStyle* st
 
 T100VOID T100Frame::Destroy()
 {
-
+    T100SelfLoopWindow::Destroy();
 }
 
 }

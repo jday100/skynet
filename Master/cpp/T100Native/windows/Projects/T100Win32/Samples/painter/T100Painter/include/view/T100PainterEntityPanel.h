@@ -5,14 +5,17 @@
 #include "gui/T100ListView.h"
 #include "gui/T100AllEvents.h"
 
+using namespace T100LIBRARY;
+using namespace T100WINDOWS;
+
 class T100PainterEntityPanel : public T100Panel
 {
     public:
         T100PainterEntityPanel();
-        T100PainterEntityPanel(T100Win32Application*, T100Window*);
+        T100PainterEntityPanel(T100Window*);
         virtual ~T100PainterEntityPanel();
 
-        T100VOID            Create(T100Win32Application*, T100Window*, T100WSTRING, T100PanelStyle*);
+        T100VOID            Create(T100Window*, T100WSTRING, T100PanelStyle*);
 
     protected:
         T100ListView        m_listView;

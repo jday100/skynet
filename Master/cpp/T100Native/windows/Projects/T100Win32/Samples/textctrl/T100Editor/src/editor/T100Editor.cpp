@@ -6,7 +6,6 @@
 #include "gui/T100OpenDialog.h"
 #include "gui/T100SaveDialog.h"
 #include "storage/file/text/T100TextFile.h"
-#include "storage/file/text/T100TextFileReader.h"
 
 #include "T100EditorAboutDialog.h"
 
@@ -41,6 +40,8 @@ T100VOID T100Editor::Open()
 
     T100OpenDialog              dialog;
 
+    dialog.Show();
+
     T100WSTRING                 filename;
 
     filename    = dialog.GetFileName();
@@ -50,9 +51,11 @@ T100VOID T100Editor::Open()
 
         if(text.IsExists()){
             T100WSTRING             result;
-            T100TextFileReader&     reader      = text.CreateReader();
+            T100TextFileReaderW*    reader      = text.CreateReaderW();
 
-            //reader.Read(result);
+            reader->Load(result);
+
+            text.DestroyReaderW(reader);
 
             /*
             if(result.find(L"\r") > 0){
@@ -85,7 +88,7 @@ T100VOID T100Editor::Save()
         T100TextFile        text(m_filename);
 
         T100WSTRING             result;
-        T100TextFileWriter&     writer      = text.CreateWriter();
+        T100TextFileWriter*     writer      = text.CreateWriter();
 
         result  = m_textCtrl->GetValue();
         //writer->Write(result);
@@ -99,6 +102,8 @@ T100VOID T100Editor::SaveAs()
 {
     T100SaveDialog              dialog;
 
+    dialog.Show();
+
     T100WSTRING                 filename;
 
     filename    = dialog.GetFileName();
@@ -110,18 +115,19 @@ T100VOID T100Editor::SaveAs()
 
         if(text.IsExists()){
 
-        }else{
-            T100WSTRING             result;
-            T100TextFileWriter&     writer      = text.CreateWriter();
-
-            result  = m_textCtrl->GetValue();
-            //writer.Write(result);
-
-            text.DestroyWriter(writer);
-
-            m_filename  = filename;
-            m_frame->SetTitle(m_filename);
         }
+
+        T100WSTRING             result;
+        T100TextFileWriterW*    writer      = text.CreateWriterW();
+
+        result  = m_textCtrl->GetValue();
+        *writer << result;
+
+        text.DestroyWriterW(writer);
+
+        m_filename  = filename;
+        m_frame->SetTitle(m_filename);
+
     }
 }
 
@@ -144,19 +150,17 @@ T100VOID T100Editor::Redo()
 
 T100VOID T100Editor::Cut()
 {
-    m_textCtrl->IsModified();
-
-    m_textCtrl->GetSelection();
+    m_textCtrl->Cut();
 }
 
 T100VOID T100Editor::Copy()
 {
-
+    m_textCtrl->Copy();
 }
 
 T100VOID T100Editor::Paste()
 {
-
+    m_textCtrl->Paste();
 }
 
 T100VOID T100Editor::Find()
@@ -175,9 +179,9 @@ T100VOID T100Editor::Font()
 
     dialog.Create(m_frame);
 
-    T100Font        font;
+    dialog.Show();
 
-    font    = dialog.GetFont();
+    const T100Font&        font   = dialog.GetFont();
 
     m_textCtrl->SetFont(font);
 }

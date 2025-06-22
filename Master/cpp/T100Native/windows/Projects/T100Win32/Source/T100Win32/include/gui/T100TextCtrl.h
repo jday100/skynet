@@ -19,7 +19,7 @@ class T100TextCtrl : public T100Control
         virtual T100VOID                Destroy();
 
         virtual T100VOID                SetValue(const T100WSTRING&);
-        virtual const T100WSTRING&      GetValue();
+        virtual const T100WSTRING       GetValue();
 
         T100VOID                        SetModified(T100BOOL);
         T100BOOL                        IsModified();
@@ -28,14 +28,24 @@ class T100TextCtrl : public T100Control
         const T100Font&                 GetFont();
 
         T100WSTRING                     GetSelection();
+        T100UINT                        GetLength();
+
+        T100VOID                        Append(const T100WSTRING&);
+        T100VOID                        Insert(T100UINT, const T100WSTRING&);
+        T100VOID                        Remove(T100UINT, T100UINT);
+
+        T100VOID                        Cut();
+        T100VOID                        Copy();
+        T100VOID                        Paste();
 
     protected:
+        T100WSTRING                     m_value;
         T100Font                        m_font;
 
     private:
         std::atomic_bool                m_modified;
 
-        T100VOID                        init();
+        T100VOID                        init(T100Window*);
         T100VOID                        uninit();
 };
 

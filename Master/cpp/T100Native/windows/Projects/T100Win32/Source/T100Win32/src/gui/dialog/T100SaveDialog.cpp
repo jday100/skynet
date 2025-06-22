@@ -13,6 +13,39 @@ T100SaveDialog::~T100SaveDialog()
     //dtor
 }
 
+T100VOID T100SaveDialog::init()
+{
+
+}
+
+T100VOID T100SaveDialog::uninit()
+{
+
+}
+
+T100VOID T100SaveDialog::Show()
+{
+    OPENFILENAME        ofn;
+    T100WCHAR           filename[MAX_PATH];
+
+    ZeroMemory(&ofn, sizeof(OPENFILENAME));
+
+    ofn.lStructSize     = sizeof(OPENFILENAME);
+
+    ofn.lpstrFilter     = L"All\0*.*\0";
+    ofn.nFilterIndex    = 1;
+
+    ofn.lpstrFile       = filename;
+    ofn.lpstrFile[0]    = L'\0';
+
+    ofn.nMaxFile        = sizeof(filename);
+    ofn.Flags           = OFN_PATHMUSTEXIST;
+
+    GetSaveFileName(&ofn);
+
+    m_filename  = filename;
+}
+
 T100VOID T100SaveDialog::SetDirectory(const T100WSTRING& value)
 {
     m_directory     = value;

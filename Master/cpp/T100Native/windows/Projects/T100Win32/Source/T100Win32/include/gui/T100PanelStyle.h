@@ -1,8 +1,11 @@
 #ifndef T100PANELSTYLE_H
 #define T100PANELSTYLE_H
 
+#include "gui/style/T100WindowStyle.h"
 
-class T100PanelStyle
+namespace T100WINDOWS{
+
+class T100PanelStyle : public T100WindowStyle
 {
     public:
         T100PanelStyle();
@@ -12,5 +15,7 @@ class T100PanelStyle
 
     private:
 };
+
+}
 
 #endif // T100PANELSTYLE_H

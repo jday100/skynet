@@ -3,6 +3,8 @@
 
 #include "T100Common.h"
 
+using namespace T100LIBRARY;
+
 class T100Painter;
 
 class T100PainterInvoking
@@ -19,7 +21,7 @@ class T100PainterInvoking
 
         static T100VOID             FrameResize();
 
-        static T100VOID             EntitySelected(T100WORD);
+        static T100VOID             EntitySelected(T100UINT);
 
         static T100VOID             LeftDown();
         static T100VOID             LeftUp();

@@ -81,7 +81,9 @@
 		<Unit filename="include/storage/file/text/T100TextFile.h" />
 		<Unit filename="include/storage/file/text/T100TextFileAccessor.h" />
 		<Unit filename="include/storage/file/text/T100TextFileReader.h" />
+		<Unit filename="include/storage/file/text/T100TextFileReaderW.h" />
 		<Unit filename="include/storage/file/text/T100TextFileWriter.h" />
+		<Unit filename="include/storage/file/text/T100TextFileWriterW.h" />
 		<Unit filename="include/storage/filesystem/T100FileSystemEntry.h" />
 		<Unit filename="include/storage/folder/T100Folder.h" />
 		<Unit filename="include/storage/path/T100PathTools.h" />
@@ -99,7 +101,9 @@
 		<Unit filename="src/storage/file/text/T100TextFile.cpp" />
 		<Unit filename="src/storage/file/text/T100TextFileAccessor.cpp" />
 		<Unit filename="src/storage/file/text/T100TextFileReader.cpp" />
+		<Unit filename="src/storage/file/text/T100TextFileReaderW.cpp" />
 		<Unit filename="src/storage/file/text/T100TextFileWriter.cpp" />
+		<Unit filename="src/storage/file/text/T100TextFileWriterW.cpp" />
 		<Unit filename="src/storage/filesystem/T100FileSystemEntry.cpp" />
 		<Unit filename="src/storage/folder/T100Folder.cpp" />
 		<Unit filename="src/storage/path/T100PathTools.cpp" />

@@ -24,6 +24,8 @@ class T100Window : public T100WindowBase
     protected:
         T100Layout*                 m_layout        = T100NULL;
 
+        T100VOID                    OnWindowResize(T100WindowEvent&);
+
     private:
         T100WindowModule            m_module;
 

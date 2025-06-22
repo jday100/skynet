@@ -20,6 +20,9 @@ class T100MenuBase : public T100Control
         T100VOID                    Disable();
         T100BOOL                    IsEnabled();
 
+        T100VOID                    SetLabel(const T100WSTRING&);
+        const T100WSTRING&          GetLabel();
+
         T100VOID                    SetFont(const T100Font&);
         const T100Font&             GetFont();
 
@@ -27,8 +30,9 @@ class T100MenuBase : public T100Control
         const T100WSTRING&          GetHelp();
 
     protected:
-        HMENU                       m_menu;
+        HMENU                       m_hmenu;
         T100Font                    m_font;
+        T100WSTRING                 m_label;
         T100WSTRING                 m_help;
 
     private:

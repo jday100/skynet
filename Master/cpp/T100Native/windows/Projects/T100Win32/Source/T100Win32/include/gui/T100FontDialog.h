@@ -18,6 +18,8 @@ class T100FontDialog : public T100Dialog
         T100VOID                    SetFont(const T100Font&);
         const T100Font&             GetFont();
 
+        T100VOID                    Show();
+
     protected:
         T100Font                    m_font;
 

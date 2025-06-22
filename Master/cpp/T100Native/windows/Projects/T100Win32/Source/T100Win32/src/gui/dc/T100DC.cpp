@@ -3,7 +3,7 @@
 namespace T100WINDOWS{
 
 T100DC::T100DC(T100Window* window) :
-    T100DCBase()
+    T100DCBase(window)
 {
     //ctor
     init();
@@ -42,7 +42,16 @@ T100VOID T100DC::DrawBitmap()
 
 T100VOID T100DC::DrawCircle(const T100Point& point, T100UINT radius)
 {
+    T100INT     left;
+    T100INT     right;
+    T100INT     top;
+    T100INT     bottom;
 
+    left    = point.X - radius;
+    right   = point.X + radius;
+    top     = point.Y - radius;
+    bottom  = point.Y + radius;
+    Ellipse(m_hdc, left, top, right, bottom);
 }
 
 T100VOID T100DC::DrawEllipse()

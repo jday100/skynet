@@ -25,7 +25,12 @@ T100VOID T100TextFileReader::init()
 
     filename    = T100Unicode::ToString8(m_textFile.GetEntryName());
 
-    m_ifstream  = T100NEW std::ifstream(filename, std::ios::in);
+    m_ifstream  = T100NEW std::ifstream(filename, std::ios::in | std::ios::binary);
+
+    if(m_ifstream->is_open()){
+        return;
+    }
+    return;
 }
 
 T100VOID T100TextFileReader::uninit()
@@ -41,9 +46,25 @@ T100VOID T100TextFileReader::Seek(T100UINT value)
     m_ifstream->seekg(value);
 }
 
-T100VOID T100TextFileReader::Read()
+T100INT T100TextFileReader::Read(T100WSTRING& value)
 {
+    T100STDCHAR     buffer[2048];
+    T100INT         length      = 2048;
 
+    length  = m_ifstream->read(buffer, length).gcount();
+
+    value   = (T100WCHAR*)buffer;
+
+    return length / 2;
+}
+
+T100VOID T100TextFileReader::Load(T100WSTRING& value)
+{
+    T100WSTRING         result;
+
+    while(Read(result) > 0){
+        value   += result;
+    }
 }
 
 }

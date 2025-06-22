@@ -5,6 +5,8 @@
 
 namespace T100WINDOWS{
 
+BOOL CALLBACK DefaultDialogProcedure (HWND, UINT, WPARAM, LPARAM);
+
 class T100Dialog : public T100SelfLoopWindow
 {
     public:
@@ -17,6 +19,8 @@ class T100Dialog : public T100SelfLoopWindow
     protected:
 
     private:
+        T100VOID                    init();
+        T100VOID                    uninit();
 };
 
 }

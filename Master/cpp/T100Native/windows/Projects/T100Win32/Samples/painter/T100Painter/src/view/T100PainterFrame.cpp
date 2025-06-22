@@ -12,8 +12,8 @@ T100PainterFrame::T100PainterFrame() :
 }
 
 T100PainterFrame::T100PainterFrame(T100Win32Application* app) :
-    T100Frame(app, T100NULL),
-    m_listView(app, this)
+    T100Frame(app),
+    m_listView(this)
 {
     //ctor
 }
@@ -51,7 +51,7 @@ T100VOID T100PainterFrame::uninit()
 T100VOID T100PainterFrame::InitListView()
 {
     InitCommonControls();
-    m_listView.Create((T100Win32Application*)GetApplicationPtr(), this);
+    m_listView.Create(this);
     m_listView.Show();
     //m_listCtrl.Append(L"ShowItem1");
 }

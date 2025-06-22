@@ -1,8 +1,11 @@
 #ifndef T100TREECTRLSTYLE_H
 #define T100TREECTRLSTYLE_H
 
+#include "gui/style/T100WindowStyle.h"
 
-class T100TreeCtrlStyle
+namespace T100WINDOWS{
+
+class T100TreeCtrlStyle : public T100WindowStyle
 {
     public:
         T100TreeCtrlStyle();
@@ -12,5 +15,7 @@ class T100TreeCtrlStyle
 
     private:
 };
+
+}
 
 #endif // T100TREECTRLSTYLE_H

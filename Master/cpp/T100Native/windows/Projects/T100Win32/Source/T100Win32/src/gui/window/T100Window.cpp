@@ -30,8 +30,6 @@ T100VOID T100Window::init(T100Window* parent)
     HINSTANCE                   instance;
     T100Win32Application*       application         = T100NULL;
 
-    application = GetApplication();
-
     if(parent){
         hwnd    = parent->GetHWND();
         m_root  = parent->GetRoot();
@@ -40,6 +38,7 @@ T100VOID T100Window::init(T100Window* parent)
         hwnd    = HWND_DESKTOP;
     }
 
+    application = GetApplication();
     instance    = application->GetInstance();
 
     if(application->IsRegistered(m_style.ClassType)){
@@ -52,6 +51,7 @@ T100VOID T100Window::init(T100Window* parent)
         }
     }
 
+    Connect(T100EVENT_WINDOW_SIZE, (T100EVENT_FUNCTION)&OnWindowResize);
 }
 
 T100VOID T100Window::uninit()
@@ -74,9 +74,29 @@ T100VOID T100Window::Destroy()
 
 }
 
+T100VOID T100Window::SetLayout(T100Layout* layout)
+{
+    m_layout    = layout;
+
+    m_layout->SetParent(this);
+    m_layout->SetChildren(m_children);
+}
+
+T100Layout* T100Window::GetLayout()
+{
+    return m_layout;
+}
+
 T100Window* T100Window::ConvertToWindow(T100Tree* node)
 {
     return dynamic_cast<T100Window*>(node);
+}
+
+T100VOID T100Window::OnWindowResize(T100WindowEvent& event)
+{
+    if(m_layout){
+        m_layout->Update();
+    }
 }
 
 }

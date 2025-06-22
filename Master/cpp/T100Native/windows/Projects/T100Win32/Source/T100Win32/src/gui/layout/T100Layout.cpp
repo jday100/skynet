@@ -13,4 +13,14 @@ T100Layout::~T100Layout()
     //dtor
 }
 
+T100VOID T100Layout::SetParent(T100Window* parent)
+{
+    m_parent    = parent;
+}
+
+T100VOID T100Layout::SetChildren(T100TREE_VECTOR& children)
+{
+    m_children  = &children;
+}
+
 }

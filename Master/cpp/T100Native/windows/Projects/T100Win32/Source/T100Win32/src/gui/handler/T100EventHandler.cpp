@@ -47,7 +47,7 @@ T100VOID T100EventHandler::Connect(T100UINT type, T100EVENT_FUNCTION call, T100E
     switch(type){
     case T100EVENT_COMMAND:
         {
-            ConnectCommand(type, call, handler);
+            ConnectCommand(type, data);
         }
         break;
     default:
@@ -255,7 +255,7 @@ T100VOID T100EventHandler::ProcessCommand(const T100WindowMessageData& message)
     if(LOWORD(message.WINDOW_LPARAM) == 0){
         CallMenu((T100UINT)message.WINDOW_WPARAM, message);
     }else{
-        CallCommand(LOWORD(message.WINDOW_WPARAM), message);
+        CallCommand(T100EVENT_COMMAND, message);
     }
 }
 
@@ -294,18 +294,8 @@ T100VOID T100EventHandler::ConnectNotify(T100UINT type, T100EVENT_FUNCTION call,
     m_notifyEvents[type]        = data;
 }
 
-T100VOID T100EventHandler::ConnectCommand(T100UINT type, T100EVENT_FUNCTION call, T100EventHandler* handler)
+T100VOID T100EventHandler::ConnectCommand(T100UINT type, const T100EVENT_FUNCTION_DATA& data)
 {
-    T100EVENT_FUNCTION_DATA         data;
-
-    data.FUNCTION       = call;
-
-    if(handler){
-        data.HANDLER    = handler;
-    }else{
-        data.HANDLER    = this;
-    }
-
     m_commandEvents[type]   = data;
 }
 

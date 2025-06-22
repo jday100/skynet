@@ -1,7 +1,10 @@
 #include "T100PainterCanvas.h"
 
-#include "gui/dc/T100DC.h"
+#include "gui/T100DC.h"
 #include "T100PainterInvoking.h"
+#include "gui/common/T100EventCommon.h"
+
+using namespace T100WINDOWS;
 
 T100PainterCanvas::T100PainterCanvas() :
     T100Canvas()
@@ -9,8 +12,8 @@ T100PainterCanvas::T100PainterCanvas() :
     //ctor
 }
 
-T100PainterCanvas::T100PainterCanvas(T100Win32Application* app, T100Window* parent) :
-    T100Canvas(app, parent)
+T100PainterCanvas::T100PainterCanvas(T100Window* parent) :
+    T100Canvas(parent)
 {
     //ctor
 }
@@ -20,9 +23,8 @@ T100PainterCanvas::~T100PainterCanvas()
     //dtor
 }
 
-T100VOID T100PainterCanvas::Create(T100Win32Application* app, T100Window* parent, T100WSTRING label, T100WindowStyle* style)
+T100VOID T100PainterCanvas::Create(T100Window* parent, T100WSTRING label, T100PanelStyle* style)
 {
-    //T100Canvas::Create(app, parent, label, style);
     T100Canvas::Create(parent);
 
     Connect(T100EVENT_WINDOW_PAINT, (T100EVENT_FUNCTION)&OnCanvasPaint);

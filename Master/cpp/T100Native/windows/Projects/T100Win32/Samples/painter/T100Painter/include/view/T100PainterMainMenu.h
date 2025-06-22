@@ -4,6 +4,9 @@
 #include "gui/T100Frame.h"
 #include "gui/T100MenuBar.h"
 
+using namespace T100LIBRARY;
+using namespace T100WINDOWS;
+
 class T100PainterMainMenu
 {
     public:

@@ -15,7 +15,7 @@ T100MenuBase::~T100MenuBase()
 
 HMENU T100MenuBase::GetHMENU()
 {
-    return m_menu;
+    return m_hmenu;
 }
 
 T100VOID T100MenuBase::Enable()
@@ -31,6 +31,16 @@ T100VOID T100MenuBase::Disable()
 T100BOOL T100MenuBase::IsEnabled()
 {
 
+}
+
+T100VOID T100MenuBase::SetLabel(const T100WSTRING& label)
+{
+    m_label     = label;
+}
+
+const T100WSTRING& T100MenuBase::GetLabel()
+{
+    return m_label;
 }
 
 T100VOID T100MenuBase::SetFont(const T100Font& font)
