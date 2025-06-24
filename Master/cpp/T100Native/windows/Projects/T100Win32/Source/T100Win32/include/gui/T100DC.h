@@ -17,19 +17,19 @@ class T100DC : public T100DCBase
 
         T100VOID            Clear();
 
-        T100VOID            DrawArc();
+        T100VOID            DrawArc(const T100Point&, const T100Point&, const T100Point&, const T100Point&);
         T100VOID            DrawBitmap();
         T100VOID            DrawCircle(const T100Point&, T100UINT);
-        T100VOID            DrawEllipse();
+        T100VOID            DrawEllipse(const T100Point&, const T100Size&);
         T100VOID            DrawEllipticArc();
         T100VOID            DrawIcon();
         T100VOID            DrawLabel();
         T100VOID            DrawLine(const T100Point&, const T100Point&);
         T100VOID            DrawLines();
-        T100VOID            DrawPoint();
-        T100VOID            DrawPolygon();
+        T100VOID            DrawPoint(const T100Point&);
+        T100VOID            DrawPolygon(const T100Point&, T100INT);
         T100VOID            DrawPolyPolygon();
-        T100VOID            DrawRectangle();
+        T100VOID            DrawRectangle(const T100Point&, const T100Size&);
         T100VOID            DrawRotatedText();
         T100VOID            DrawRoundedRectangle(const T100Point&, const T100Size&, T100FLOAT);
         T100VOID            DrawSpline();

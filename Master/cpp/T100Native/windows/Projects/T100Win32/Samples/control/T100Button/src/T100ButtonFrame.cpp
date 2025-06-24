@@ -37,9 +37,9 @@ T100VOID T100ButtonFrame::init()
     button2->Show();
 
 
-    //layout->SetOrientationType(T100HORIZONTAL);
+    layout->SetOrientationType(T100HORIZONTAL);
 
-    //this->SetLayout(layout);
+    this->SetLayout(layout);
 
     button1->Connect(T100EVENT_COMMAND, (T100EVENT_FUNCTION)&OnButtonClick, this);
     button2->Connect(T100EVENT_COMMAND, (T100EVENT_FUNCTION)&OnButtonClick, this);

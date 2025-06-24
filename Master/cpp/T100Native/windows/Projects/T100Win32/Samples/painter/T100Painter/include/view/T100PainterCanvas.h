@@ -15,7 +15,7 @@ class T100PainterCanvas : public T100Canvas
         T100PainterCanvas(T100Window*);
         virtual ~T100PainterCanvas();
 
-        T100VOID            Create(T100Window*, T100WSTRING, T100PanelStyle*);
+        T100VOID            Create(T100Window*, T100WSTRING, T100CanvasStyle* = T100NULL);
 
     protected:
 

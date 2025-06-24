@@ -26,6 +26,7 @@ T100Pen::T100Pen(T100COLOUR4_TYPE colour, T100UINT width, T100LINE_TYPE type) :
 T100Pen::~T100Pen()
 {
     //dtor
+    uninit();
 }
 
 T100VOID T100Pen::init()
@@ -35,7 +36,7 @@ T100VOID T100Pen::init()
 
 T100VOID T100Pen::uninit()
 {
-
+    DeleteObject(m_hpen);
 }
 
 HPEN T100Pen::GetHPEN()

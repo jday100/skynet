@@ -10,7 +10,10 @@ class T100FontDialog : public T100Dialog
 {
     public:
         T100FontDialog();
+        T100FontDialog(T100Window*);
         virtual ~T100FontDialog();
+
+        T100BOOL                    Show();
 
         virtual T100VOID            Create(T100Window*);
         virtual T100VOID            Destroy();
@@ -18,12 +21,12 @@ class T100FontDialog : public T100Dialog
         T100VOID                    SetFont(const T100Font&);
         const T100Font&             GetFont();
 
-        T100VOID                    Show();
-
     protected:
         T100Font                    m_font;
 
     private:
+        T100VOID                    init(T100Window*);
+        T100VOID                    uninit();
 };
 
 }

@@ -3,6 +3,8 @@
 
 #include "gui/T100Frame.h"
 
+using namespace T100WINDOWS;
+
 class T100HelloFrame : public T100Frame
 {
     public:

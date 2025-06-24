@@ -3,6 +3,8 @@
 
 #include "gui/T100Frame.h"
 
+using namespace T100WINDOWS;
+
 class T100ThreadFrame : public T100Frame
 {
     public:
@@ -12,7 +14,7 @@ class T100ThreadFrame : public T100Frame
         T100VOID            Create(T100Win32Application*);
 
     protected:
-        T100WORD            T100MENU_ID_RUN         = T100MENU_ID_USER + 1;
+        T100UINT            T100MENU_ID_RUN         = T100MENU_ID_USER + 1;
 
         T100VOID            OnMenuRun(T100CommandEvent&);
         T100VOID            OnMenuQuit(T100CommandEvent&);

@@ -51,14 +51,19 @@ class T100EventHandler : public T100Tree
         T100EVENT_FUNCTION_DATA_HASH            m_commandEvents;
         T100EVENT_FUNCTION_DATA_HASH            m_notifyEvents;
 
+        T100VOID                                CallNotify(T100UINT, const T100WindowMessageData&);
+
     private:
+        T100VOID                                init(T100EventHandler*);
+        T100VOID                                uninit();
+
         T100VOID                                ProcessCommand(const T100WindowMessageData&);
         T100VOID                                CallMenu(T100UINT, const T100WindowMessageData&);
         T100VOID                                CallEvent(T100UINT, const T100WindowMessageData&);
         T100VOID                                CallCommand(T100UINT, const T100WindowMessageData&);
 
-        virtual T100VOID                        ConnectEvent(T100UINT, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
-        virtual T100VOID                        ConnectNotify(T100UINT, T100EVENT_FUNCTION, T100EventHandler* = T100NULL);
+        virtual T100VOID                        ConnectEvent(T100UINT, const T100EVENT_FUNCTION_DATA&);
+        virtual T100VOID                        ConnectNotify(T100UINT, const T100EVENT_FUNCTION_DATA&);
         virtual T100VOID                        ConnectCommand(T100UINT, const T100EVENT_FUNCTION_DATA&);
 };
 

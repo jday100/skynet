@@ -48,6 +48,36 @@ class T100EditorFrame : public T100Frame
         T100Editor*                 m_editor        = T100NULL;
         T100TextCtrl*               m_textCtrl      = T100NULL;
 
+        T100MenuBar*                m_menuBar       = T100NULL;
+        T100Menu*                   m_fileMenu      = T100NULL;
+        T100Menu*                   m_editMenu      = T100NULL;
+        T100Menu*                   m_viewMenu      = T100NULL;
+        T100Menu*                   m_searchMenu    = T100NULL;
+        T100Menu*                   m_settingMenu   = T100NULL;
+        T100Menu*                   m_helpMenu      = T100NULL;
+
+        T100MenuItem*               m_newItem       = T100NULL;
+        T100MenuItem*               m_openItem      = T100NULL;
+        T100MenuItem*               m_closeItem     = T100NULL;
+        T100MenuItem*               m_saveItem      = T100NULL;
+        T100MenuItem*               m_saveAsItem    = T100NULL;
+        T100MenuItem*               m_quitItem      = T100NULL;
+
+        T100MenuItem*               m_undoItem      = T100NULL;
+        T100MenuItem*               m_redoItem      = T100NULL;
+        T100MenuItem*               m_cutItem       = T100NULL;
+        T100MenuItem*               m_copyItem      = T100NULL;
+        T100MenuItem*               m_pasteItem     = T100NULL;
+
+        T100MenuItem*               m_fontItem      = T100NULL;
+
+        T100MenuItem*               m_findItem      = T100NULL;
+        T100MenuItem*               m_replaceItem   = T100NULL;
+
+        T100MenuItem*               m_configItem    = T100NULL;
+
+        T100MenuItem*               m_aboutItem     = T100NULL;
+
     private:
         T100VOID                    OnMenuNew(T100MenuEvent&);
         T100VOID                    OnMenuOpen(T100MenuEvent&);
@@ -66,8 +96,11 @@ class T100EditorFrame : public T100Frame
         T100VOID                    OnMenuConfig(T100MenuEvent&);
         T100VOID                    OnMenuAbout(T100MenuEvent&);
 
+        T100VOID                    OnKeyDown(T100KeyEvent&);
+
     private:
         T100WSTRING                 m_project       = L"T100Editor";
+        T100WSTRING                 m_filename;
 };
 
 

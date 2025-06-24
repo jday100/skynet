@@ -23,8 +23,9 @@ T100VOID T100OpenDialog::uninit()
 
 }
 
-T100VOID T100OpenDialog::Show()
+T100BOOL T100OpenDialog::Show()
 {
+    T100BOOL            result;
     OPENFILENAME        ofn;
     T100WCHAR           filename[MAX_PATH];
 
@@ -41,9 +42,11 @@ T100VOID T100OpenDialog::Show()
     ofn.nMaxFile        = sizeof(filename);
     ofn.Flags           = OFN_FILEMUSTEXIST | OFN_PATHMUSTEXIST;
 
-    GetOpenFileName(&ofn);
+    result  = GetOpenFileName(&ofn);
 
     m_filename  = filename;
+
+    return result;
 }
 
 T100VOID T100OpenDialog::SetDirectory(const T100WSTRING& value)

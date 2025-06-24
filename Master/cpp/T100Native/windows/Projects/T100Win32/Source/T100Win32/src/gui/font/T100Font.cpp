@@ -3,18 +3,16 @@
 namespace T100WINDOWS{
 
 T100Font::T100Font() :
-    T100Class()
+    T100FontBase()
 {
     //ctor
-    m_created   = T100FALSE;
 }
 
 T100Font::T100Font(const T100WSTRING& name) :
-    T100Class(),
-    m_faceName(name)
+    T100FontBase()
 {
     //ctor
-    m_created   = T100FALSE;
+    SetFaceName(name);
     init();
 }
 
@@ -32,8 +30,8 @@ T100VOID T100Font::init()
 
     wmemcpy(lf.lfFaceName, m_faceName.c_str(), size);
 
-    lf.lfHeight         = m_height;
     lf.lfWidth          = m_width;
+    lf.lfHeight         = m_height;
     lf.lfEscapement     = m_escapement;
     lf.lfOrientation    = m_orientation;
     lf.lfWeight         = m_weight;
@@ -57,11 +55,6 @@ T100VOID T100Font::uninit()
     m_created   = T100FALSE;
 }
 
-HFONT T100Font::GetHFONT()
-{
-    return m_hfont;
-}
-
 T100VOID T100Font::Create(const T100WSTRING& name)
 {
     m_faceName  = name;
@@ -71,18 +64,6 @@ T100VOID T100Font::Create(const T100WSTRING& name)
 T100VOID T100Font::Destroy()
 {
 
-}
-
-T100VOID T100Font::SetFaceName(const T100WSTRING& value)
-{
-    m_faceName  = value;
-    uninit();
-    init();
-}
-
-const T100WSTRING& T100Font::GetFaceName()
-{
-    return m_faceName;
 }
 
 const T100Font& T100Font::operator=(const T100Font& font)

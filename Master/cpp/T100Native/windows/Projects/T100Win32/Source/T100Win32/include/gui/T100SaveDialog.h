@@ -11,7 +11,7 @@ class T100SaveDialog : public T100Dialog
         T100SaveDialog();
         virtual ~T100SaveDialog();
 
-        T100VOID                    Show();
+        T100BOOL                    Show();
 
         T100VOID                    SetDirectory(const T100WSTRING&);
         const T100WSTRING&          GetDirectory();

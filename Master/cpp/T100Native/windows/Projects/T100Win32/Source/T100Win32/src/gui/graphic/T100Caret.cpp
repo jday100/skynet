@@ -38,6 +38,8 @@ const T100Point& T100Caret::GetPosition()
 T100VOID T100Caret::SetBlinkTime(T100INT value)
 {
     m_blinkTime     = value;
+
+    SetCaretBlinkTime(m_blinkTime);
 }
 
 T100INT T100Caret::GetBlinkTime()
@@ -47,12 +49,12 @@ T100INT T100Caret::GetBlinkTime()
 
 T100VOID T100Caret::Show()
 {
-
+    ShowCaret(m_window->GetHWND());
 }
 
 T100VOID T100Caret::Hide()
 {
-
+    HideCaret(m_window->GetHWND());
 }
 
 T100BOOL T100Caret::IsShown()
@@ -60,9 +62,9 @@ T100BOOL T100Caret::IsShown()
 
 }
 
-T100VOID T100Caret::Move(T100INT, T100INT)
+T100VOID T100Caret::Move(T100INT x, T100INT y)
 {
-
+    SetCaretPos(x, y);
 }
 
 }

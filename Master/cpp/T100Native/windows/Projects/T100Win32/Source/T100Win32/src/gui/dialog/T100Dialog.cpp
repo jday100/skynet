@@ -11,20 +11,27 @@ T100Dialog::T100Dialog() :
     //ctor
 }
 
+T100Dialog::T100Dialog(T100Window* parent) :
+    T100SelfLoopWindow()
+{
+    //ctor
+    T100Tree::Create(parent);
+    init(parent);
+}
+
 T100Dialog::~T100Dialog()
 {
     //dtor
 }
 
-T100VOID T100Dialog::init()
+T100VOID T100Dialog::init(T100Window* parent)
 {
     HINSTANCE       instance;
     HWND            hwnd;
-    T100Window*     parent      = T100NULL;
     T100INT         result;
 
     instance    = GetApplication()->GetInstance();
-    parent      = ConvertToWindow(GetParent());
+    //parent      = ConvertToWindow(GetParent());
 
     if(parent){
         hwnd    = parent->GetHWND();
@@ -42,7 +49,7 @@ T100VOID T100Dialog::uninit()
 T100VOID T100Dialog::Create(T100Window* parent)
 {
     T100Tree::Create(parent);
-    init();
+    init(parent);
 }
 
 T100VOID T100Dialog::Destroy()

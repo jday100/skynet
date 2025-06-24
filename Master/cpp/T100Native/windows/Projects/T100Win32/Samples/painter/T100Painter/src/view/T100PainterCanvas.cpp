@@ -23,9 +23,9 @@ T100PainterCanvas::~T100PainterCanvas()
     //dtor
 }
 
-T100VOID T100PainterCanvas::Create(T100Window* parent, T100WSTRING label, T100PanelStyle* style)
+T100VOID T100PainterCanvas::Create(T100Window* parent, T100WSTRING label, T100CanvasStyle* style)
 {
-    T100Canvas::Create(parent);
+    T100Canvas::Create(parent, style);
 
     Connect(T100EVENT_WINDOW_PAINT, (T100EVENT_FUNCTION)&OnCanvasPaint);
     Connect(T100EVENT_MOUSE_LEFT_DOWN, (T100EVENT_FUNCTION)&OnMouseLeftDown);
@@ -35,6 +35,10 @@ T100VOID T100PainterCanvas::Create(T100Window* parent, T100WSTRING label, T100Pa
 T100VOID T100PainterCanvas::OnCanvasPaint(T100WindowEvent& event)
 {
     T100DC      dc(this);
+
+    T100Pen     pen(T100COLOUR4_RED);
+
+    dc.SetPen(pen);
 
     dc.DrawLine(T100Point(100, 100), T100Point(300, 300));
 }

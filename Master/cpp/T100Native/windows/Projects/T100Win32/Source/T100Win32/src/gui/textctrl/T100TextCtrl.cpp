@@ -157,4 +157,15 @@ T100VOID T100TextCtrl::Paste()
     SNDMSG(m_hwnd, WM_PASTE, 0, 0);
 }
 
+T100VOID T100TextCtrl::ProcessNotifyMessage(const T100WindowMessageData& message)
+{
+    switch(message.MESSAGE_ID){
+    case T100EVENT_TEXTCTRL_CHANGE:
+        {
+            CallNotify(T100EVENT_TEXTCTRL_CHANGE, message);
+        }
+        break;
+    }
+}
+
 }

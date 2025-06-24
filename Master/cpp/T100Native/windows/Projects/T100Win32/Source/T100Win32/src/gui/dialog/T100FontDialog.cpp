@@ -8,14 +8,32 @@ T100FontDialog::T100FontDialog() :
     //ctor
 }
 
+T100FontDialog::T100FontDialog(T100Window* parent) :
+    T100Dialog()
+{
+    //ctor
+    init(parent);
+}
+
 T100FontDialog::~T100FontDialog()
 {
     //dtor
 }
 
+T100VOID T100FontDialog::init(T100Window* parent)
+{
+    T100EventHandler::Create(parent);
+}
+
+T100VOID T100FontDialog::uninit()
+{
+
+}
+
 T100VOID T100FontDialog::Create(T100Window* parent)
 {
-    T100Dialog::Create(parent);
+    //T100Dialog::Create(parent);
+    T100EventHandler::Create(parent);
 }
 
 T100VOID T100FontDialog::Destroy()
@@ -33,7 +51,7 @@ const T100Font& T100FontDialog::GetFont()
     return m_font;
 }
 
-T100VOID T100FontDialog::Show()
+T100BOOL T100FontDialog::Show()
 {
     CHOOSEFONT      cf;
     LOGFONT         lf;
@@ -52,7 +70,25 @@ T100VOID T100FontDialog::Show()
 
     if(ChooseFont(&cf) == T100TRUE){
         m_font.SetFaceName(lf.lfFaceName);
+        m_font.SetWidth(lf.lfWidth);
+        m_font.SetHeight(lf.lfHeight);
+        m_font.SetEscapement(lf.lfEscapement);
+        m_font.SetOrientation(lf.lfOrientation);
+        m_font.SetWeight(lf.lfWeight);
+
+        m_font.SetItalic(lf.lfItalic);
+        m_font.SetUnderline(lf.lfUnderline);
+        m_font.SetStrikeOut(lf.lfStrikeOut);
+        m_font.SetCharSet(lf.lfCharSet);
+        m_font.SetOutPrecision(lf.lfOutPrecision);
+        m_font.SetClipPrecision(lf.lfClipPrecision);
+        m_font.SetQuality(lf.lfQuality);
+        m_font.SetPitchAndFamily(lf.lfPitchAndFamily);
+
+        return T100TRUE;
     }
+
+    return T100FALSE;
 }
 
 }

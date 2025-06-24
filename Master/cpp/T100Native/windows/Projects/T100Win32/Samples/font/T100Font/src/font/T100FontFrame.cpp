@@ -4,7 +4,7 @@
 #include "gui/T100FontTools.h"
 #include "console/T100Console.h"
 #include "gui/T100FontDialog.h"
-#include "gui/dc/T100DC.h"
+#include "gui/T100DC.h"
 #include "gui/T100Font.h"
 
 
@@ -58,7 +58,7 @@ T100VOID T100FontFrame::uninit()
 T100VOID T100FontFrame::OnMenuFonts(T100CommandEvent& event)
 {
     T100WSTRING_VECTOR      fonts;
-    T100FontTools::Get(GetHWND(), fonts);
+    T100FontTools::GetFontNames(GetHWND(), fonts);
 
     std::sort(fonts.begin(), fonts.end());
 
@@ -76,6 +76,8 @@ T100VOID T100FontFrame::OnMenuFontDialog(T100CommandEvent& event)
     T100FontDialog      dialog;
 
     dialog.Create(this);
+
+    dialog.Show();
 }
 
 T100VOID T100FontFrame::OnMenuQuit(T100CommandEvent& event)

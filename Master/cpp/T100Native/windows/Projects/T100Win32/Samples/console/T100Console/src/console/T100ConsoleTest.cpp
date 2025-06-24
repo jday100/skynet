@@ -2,6 +2,8 @@
 
 #include "console/T100Console.h"
 
+using namespace T100LIBRARY;
+
 T100ConsoleTest::T100ConsoleTest()
 {
     //ctor
@@ -22,28 +24,28 @@ void T100ConsoleTest::test()
     console.OutLine(L"hello world!");
     console.OutLine(L"hello world!");
 
-    console.SetForegroundColour(T100COLOUR_BLACK);
+    //console.SetForegroundColour(T100COLOUR_BLACK);
     console.OutLine(L"hello world!");
 
-    console.SetForegroundColour(T100COLOUR_WHITE);
+    //console.SetForegroundColour(T100COLOUR_WHITE);
     console.OutLine(L"hello world!");
 
-    console.SetForegroundColour(T100COLOUR_RED);
+    //console.SetForegroundColour(T100COLOUR_RED);
     console.OutLine(L"hello world!");
 
-    console.SetForegroundColour(T100COLOUR_GREEN);
+    //console.SetForegroundColour(T100COLOUR_GREEN);
     console.OutLine(L"hello world!");
 
-    console.SetForegroundColour(T100COLOUR_BLUE);
+    //console.SetForegroundColour(T100COLOUR_BLUE);
     console.OutLine(L"hello world!");
 
-    console.SetForegroundColour(T100COLOUR_YELLOW);
+    //console.SetForegroundColour(T100COLOUR_YELLOW);
     console.OutLine(L"hello world!");
 
-    console.SetForegroundColour(T100COLOUR_PURPLE);
+    //console.SetForegroundColour(T100COLOUR_PURPLE);
     console.OutLine(L"hello world!");
 
-    console.SetForegroundColour(T100COLOUR_CYAN);
+    //console.SetForegroundColour(T100COLOUR_CYAN);
     console.OutLine(L"hello world!");
 
     T100WSTRING     result;

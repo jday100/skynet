@@ -16,7 +16,7 @@
 					<Add directory="include/console" />
 				</Compiler>
 				<Linker>
-					<Add library="../../../Source/build/libT100Win32.a" />
+					<Add library="../../../../../../../build/libT100Library.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -36,7 +36,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
-			<Add directory="../../../Source/T100Win32/include" />
+			<Add directory="../../../../../../../T100Library/Source/T100Library/include" />
 			<Add directory="include" />
 		</Compiler>
 		<Unit filename="include/console/T100ConsoleTest.h" />

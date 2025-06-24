@@ -13,13 +13,12 @@ T100WindowFrame::~T100WindowFrame()
     //dtor
 }
 
-T100VOID T100WindowFrame::Create(T100Win32Application* app)
+T100VOID T100WindowFrame::Create(T100Win32Application* application)
 {
-    T100Frame::Create(app);
+    T100Frame::Create(application);
 
-    T100SelfLoopWindow*     window      = T100NEW T100SelfLoopWindow(GetApplicationPtr(), this);
+    T100SelfLoopWindow*     window      = T100NEW T100SelfLoopWindow(application);
 
-    window->Create(GetApplicationPtr(), this);
     window->Show();
 
     T100Panel*      panel       = T100NEW T100Panel();
@@ -27,7 +26,7 @@ T100VOID T100WindowFrame::Create(T100Win32Application* app)
     panel->Create(this);
     panel->Show();
 
-    T100Window*     w1          = T100NEW T100Window(GetApplicationPtr(), this);
+    T100Window*     w1          = T100NEW T100Window(this);
 
     //w1->Create();
     w1->Show();

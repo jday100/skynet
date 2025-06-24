@@ -9,6 +9,7 @@ class T100DockManager : public T100DockManagerBase
 {
     public:
         T100DockManager();
+        T100DockManager(T100Frame*);
         virtual ~T100DockManager();
 
         virtual T100VOID            Update();

@@ -1,7 +1,9 @@
 #include "T100FileDemo.h"
 
 #include "console/T100Console.h"
-#include "file/text/T100TextFile.h"
+#include "storage/file/text/T100TextFile.h"
+
+using namespace T100LIBRARY;
 
 T100FileDemo::T100FileDemo()
 {
@@ -29,23 +31,23 @@ void T100FileDemo::test()
         return;
     }
 
-    T100TextFileWriter*     writer      = T100NULL;
+    T100TextFileWriterW*    writer      = T100NULL;
 
-    writer  = text.GetWriter();
+    writer  = text.CreateWriterW();
 
-    writer->Write(L"hello world!");
+    *writer << L"hello world!";
 
-    text.FreeWriter(writer);
+    text.DestroyWriterW(writer);
 
-    T100TextFileReader*     reader      = T100NULL;
+    T100TextFileReaderW*    reader      = T100NULL;
 
-    reader  = text.GetReader();
+    reader  = text.CreateReaderW();
 
     T100WSTRING         result;
 
-    reader->Read(result);
+    reader->Load(result);
 
-    text.FreeReader(reader);
+    text.DestroyReaderW(reader);
 
     T100Console     console;
 

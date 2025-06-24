@@ -46,6 +46,9 @@ typedef enum T100BRUSH_TYPE{
 #define     T100WINDOW_TYPE_LISTVIEW                    L"SysListView32"
 #define     T100WINDOW_TYPE_TREECTRL                    L"SysTreeView32"
 
+#define     T100WINDOW_TYPE_T100PANE                    L"T100Pane"
+#define     T100WINDOW_TYPE_T100DOCK_WINDOW             L"T100DockWindow"
+
 #define     T100WINDOW_TYPE_T100WINDOW                  L"T100Window"
 #define     T100WINDOW_TYPE_T100SELFLOOP_WINDOW         L"T100SelfLoopWindow"
 #define     T100WINDOW_TYPE_T100PANEL                   L"T100Panel"

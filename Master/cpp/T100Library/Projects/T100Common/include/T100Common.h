@@ -1,10 +1,13 @@
 #ifndef T100COMMON_H
 #define T100COMMON_H
 
+#include <vector>
 #include "common/T100Constants.h"
 #include "common/T100StringTypes.h"
 
 namespace T100LIBRARY{
+
+#define     T100WSTRING_VECTOR              std::vector<T100WSTRING>
 
 #ifdef __LEAK__
 

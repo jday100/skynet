@@ -4,6 +4,8 @@
 #include "gui/T100Frame.h"
 #include "gui/T100AllEvents.h"
 
+using namespace T100WINDOWS;
+
 class T100FillFrame : public T100Frame
 {
     public:

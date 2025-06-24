@@ -20,7 +20,9 @@ T100PainterView::~T100PainterView()
 
 T100VOID T100PainterView::Create(T100Win32Application* app)
 {
-    T100DockPanelStyle      style;
+    T100DockPanelStyle      dockStyle;
+    T100CanvasStyle         canvasStyle(dockStyle);
+    T100PanelStyle          panelStyle(dockStyle);
 
     m_frame.Create(app);
     m_mainMenu.Create(&m_frame);
@@ -28,8 +30,8 @@ T100VOID T100PainterView::Create(T100Win32Application* app)
     app->SetFrame(&m_frame);
     m_dockManager.SetFrame(&m_frame);
 
-    m_entityPanel.Create(&m_frame, L"", dynamic_cast<T100PanelStyle*>(&style));
-    m_canvas.Create(&m_frame, L"", dynamic_cast<T100PanelStyle*>(&style));
+    m_entityPanel.Create(&m_frame, L"", &panelStyle);
+    m_canvas.Create(&m_frame, L"", &canvasStyle);
 
     m_dockManager.AddPane(L"entity", &m_entityPanel, T100DockInfo().Left().MinSize(300, -1).BestSize(300, -1));
     m_dockManager.AddPane(L"canvas", &m_canvas, T100DockInfo().Center());

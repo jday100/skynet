@@ -47,12 +47,12 @@ T100INT T100Cursor::GetBlinkTime()
 
 T100VOID T100Cursor::Show()
 {
-
+    ShowCursor(T100TRUE);
 }
 
 T100VOID T100Cursor::Hide()
 {
-
+    ShowCursor(T100FALSE);
 }
 
 T100BOOL T100Cursor::IsShown()
@@ -60,9 +60,9 @@ T100BOOL T100Cursor::IsShown()
 
 }
 
-T100VOID T100Cursor::Move(T100INT, T100INT)
+T100VOID T100Cursor::Move(T100INT x, T100INT y)
 {
-
+    SetCursorPos(x, y);
 }
 
 }

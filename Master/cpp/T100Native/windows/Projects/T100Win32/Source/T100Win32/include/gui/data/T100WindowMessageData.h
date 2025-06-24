@@ -11,6 +11,7 @@ namespace T100WINDOWS{
 class T100WindowMessageData : public T100Class
 {
     public:
+        T100WindowMessageData();
         T100WindowMessageData(HWND, UINT, WPARAM, LPARAM);
         virtual ~T100WindowMessageData();
 

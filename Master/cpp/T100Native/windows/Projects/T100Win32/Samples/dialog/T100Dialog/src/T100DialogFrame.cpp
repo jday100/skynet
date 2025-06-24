@@ -78,9 +78,9 @@ T100VOID T100DialogFrame::OnMenuDialog(T100CommandEvent& event)
 
 T100VOID T100DialogFrame::OnMenuFont(T100CommandEvent& event)
 {
-    T100FontDialog      dialog;
+    T100FontDialog      dialog(this);
 
-    //dialog.Show();
+    dialog.Show();
 }
 
 T100VOID T100DialogFrame::OnMenuQuit(T100CommandEvent& event)

@@ -3,6 +3,8 @@
 
 #include "gui/T100Dialog.h"
 
+using namespace T100WINDOWS;
+
 class T100TestDialog : public T100Dialog
 {
     public:

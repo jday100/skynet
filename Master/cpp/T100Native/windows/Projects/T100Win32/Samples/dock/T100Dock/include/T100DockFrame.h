@@ -4,6 +4,8 @@
 #include "gui/T100Frame.h"
 #include "gui/T100DockManager.h"
 
+using namespace T100WINDOWS;
+
 class T100DockFrame : public T100Frame
 {
     public:
@@ -16,6 +18,7 @@ class T100DockFrame : public T100Frame
         T100VOID            Init();
 
         T100VOID            OnResize(T100WindowEvent&);
+        T100VOID            OnMove(T100WindowEvent&);
 
     private:
         T100DockManager     m_dockManager;

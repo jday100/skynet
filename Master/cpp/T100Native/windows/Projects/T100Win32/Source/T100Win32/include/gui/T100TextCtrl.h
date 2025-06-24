@@ -8,6 +8,10 @@
 
 namespace T100WINDOWS{
 
+enum{
+    T100EVENT_TEXTCTRL_CHANGE           = EN_CHANGE
+};
+
 class T100TextCtrl : public T100Control
 {
     public:
@@ -37,6 +41,8 @@ class T100TextCtrl : public T100Control
         T100VOID                        Cut();
         T100VOID                        Copy();
         T100VOID                        Paste();
+
+        virtual T100VOID                ProcessNotifyMessage(const T100WindowMessageData& message);
 
     protected:
         T100WSTRING                     m_value;

@@ -43,44 +43,44 @@ T100VOID T100EditorFrame::Create(T100Win32Application* app)
 
     SetLayout(layout);
 
-    T100MenuBar*        menuBar         = T100NEW T100MenuBar();
-    T100Menu*           fileMenu        = T100NEW T100Menu(menuBar, L"File");
-    T100Menu*           editMenu        = T100NEW T100Menu(menuBar, L"Edit");
-    T100Menu*           viewMenu        = T100NEW T100Menu(menuBar, L"View");
-    T100Menu*           searchMenu      = T100NEW T100Menu(menuBar, L"Search");
-    T100Menu*           settingMenu     = T100NEW T100Menu(menuBar, L"Setting");
-    T100Menu*           helpMenu        = T100NEW T100Menu(menuBar, L"Help");
+    m_menuBar       = T100NEW T100MenuBar();
+    m_fileMenu      = T100NEW T100Menu(m_menuBar, L"File");
+    m_editMenu      = T100NEW T100Menu(m_menuBar, L"Edit");
+    m_viewMenu      = T100NEW T100Menu(m_menuBar, L"View");
+    m_searchMenu    = T100NEW T100Menu(m_menuBar, L"Search");
+    m_settingMenu   = T100NEW T100Menu(m_menuBar, L"Setting");
+    m_helpMenu      = T100NEW T100Menu(m_menuBar, L"Help");
 
-    T100MenuItem*       newItem         = T100NEW T100MenuItem(fileMenu, T100MENU_NEW, L"New");
-    T100MenuItem*       openItem        = T100NEW T100MenuItem(fileMenu, T100MENU_OPEN, L"Open");
-    T100MenuItem*       closeItem       = T100NEW T100MenuItem(fileMenu, T100MENU_CLOSE, L"Close");
+    m_newItem       = T100NEW T100MenuItem(m_fileMenu, T100MENU_NEW, L"New");
+    m_openItem      = T100NEW T100MenuItem(m_fileMenu, T100MENU_OPEN, L"Open");
+    m_closeItem     = T100NEW T100MenuItem(m_fileMenu, T100MENU_CLOSE, L"Close");
 
-    fileMenu->AppendSeparator();
+    m_fileMenu->AppendSeparator();
 
-    T100MenuItem*       saveItem        = T100NEW T100MenuItem(fileMenu, T100MENU_SAVE, L"Save");
-    T100MenuItem*       saveAsItem      = T100NEW T100MenuItem(fileMenu, T100MENU_SAVE_AS, L"Save as");
+    m_saveItem      = T100NEW T100MenuItem(m_fileMenu, T100MENU_SAVE, L"Save");
+    m_saveAsItem    = T100NEW T100MenuItem(m_fileMenu, T100MENU_SAVE_AS, L"Save as");
 
-    fileMenu->AppendSeparator();
+    m_fileMenu->AppendSeparator();
 
-    T100MenuItem*       quitItem        = T100NEW T100MenuItem(fileMenu, T100MENU_QUIT, L"Quit");
+    m_quitItem      = T100NEW T100MenuItem(m_fileMenu, T100MENU_QUIT, L"Quit");
 
-    T100MenuItem*       undoItem        = T100NEW T100MenuItem(editMenu, T100MENU_UNDO, L"Undo");
-    T100MenuItem*       redoItem        = T100NEW T100MenuItem(editMenu, T100MENU_REDO, L"Redo");
+    m_undoItem      = T100NEW T100MenuItem(m_editMenu, T100MENU_UNDO, L"Undo");
+    m_redoItem      = T100NEW T100MenuItem(m_editMenu, T100MENU_REDO, L"Redo");
 
-    editMenu->AppendSeparator();
+    m_editMenu->AppendSeparator();
 
-    T100MenuItem*       cutItem         = T100NEW T100MenuItem(editMenu, T100MENU_CUT, L"Cut");
-    T100MenuItem*       copyItem        = T100NEW T100MenuItem(editMenu, T100MENU_COPY, L"Copy");
-    T100MenuItem*       pasteItem       = T100NEW T100MenuItem(editMenu, T100MENU_PASTE, L"Paste");
+    m_cutItem       = T100NEW T100MenuItem(m_editMenu, T100MENU_CUT, L"Cut");
+    m_copyItem      = T100NEW T100MenuItem(m_editMenu, T100MENU_COPY, L"Copy");
+    m_pasteItem     = T100NEW T100MenuItem(m_editMenu, T100MENU_PASTE, L"Paste");
 
-    T100MenuItem*       fontItem        = T100NEW T100MenuItem(viewMenu, T100MENU_FONT, L"Font");
+    m_fontItem      = T100NEW T100MenuItem(m_viewMenu, T100MENU_FONT, L"Font");
 
-    T100MenuItem*       findItem        = T100NEW T100MenuItem(searchMenu, T100MENU_FIND, L"Find");
-    T100MenuItem*       replaceItem     = T100NEW T100MenuItem(searchMenu, T100MENU_REPLACE, L"Replace");
-    T100MenuItem*       configItem      = T100NEW T100MenuItem(settingMenu, T100MENU_CONFIG, L"Config");
-    T100MenuItem*       aboutItem       = T100NEW T100MenuItem(helpMenu, T100MENU_ABOUT, L"About");
+    m_findItem      = T100NEW T100MenuItem(m_searchMenu, T100MENU_FIND, L"Find");
+    m_replaceItem   = T100NEW T100MenuItem(m_searchMenu, T100MENU_REPLACE, L"Replace");
+    m_configItem    = T100NEW T100MenuItem(m_settingMenu, T100MENU_CONFIG, L"Config");
+    m_aboutItem     = T100NEW T100MenuItem(m_helpMenu, T100MENU_ABOUT, L"About");
 
-    SetMenuBar(menuBar);
+    SetMenuBar(m_menuBar);
 
     ConnectMenu(T100MENU_NEW,       (T100EVENT_FUNCTION)&OnMenuNew);
     ConnectMenu(T100MENU_OPEN,      (T100EVENT_FUNCTION)&OnMenuOpen);
@@ -99,6 +99,10 @@ T100VOID T100EditorFrame::Create(T100Win32Application* app)
     ConnectMenu(T100MENU_CONFIG,    (T100EVENT_FUNCTION)&OnMenuConfig);
     ConnectMenu(T100MENU_ABOUT,     (T100EVENT_FUNCTION)&OnMenuAbout);
 
+    m_textCtrl->Connect(T100EVENT_KEY_DOWN,         (T100EVENT_FUNCTION)&OnKeyDown, this);
+
+    m_textCtrl->Connect(T100EVENT_TEXTCTRL_CHANGE,  (T100EVENT_FUNCTION)&OnKeyDown, this);
+
     Maximize();
 
     m_editor->New();
@@ -112,17 +116,35 @@ T100VOID T100EditorFrame::Destroy()
 
 T100VOID T100EditorFrame::SetDirty()
 {
-
+    m_textCtrl->SetModified(T100TRUE);
+    SetTitle(m_filename);
 }
 
 T100VOID T100EditorFrame::ClearDirty()
 {
-
+    m_textCtrl->SetModified(T100FALSE);
+    SetTitle(m_filename);
 }
 
 T100VOID T100EditorFrame::SetTitle(T100WSTRING value)
 {
-    T100WSTRING result  = m_project + L" - " + value;
+    T100WSTRING     result  = m_project;
+
+    m_filename  = value;
+
+    if(value.empty()){
+        if(m_textCtrl->IsModified()){
+            result  += L" - ";
+            result  += L"*";
+        }
+    }else{
+        result  += L" - ";
+        if(m_textCtrl->IsModified()){
+            result  += L"*";
+        }
+        result  += value;
+    }
+
     SetLabel(result);
 }
 
@@ -206,4 +228,9 @@ T100VOID T100EditorFrame::OnMenuConfig(T100MenuEvent& event)
 T100VOID T100EditorFrame::OnMenuAbout(T100MenuEvent& event)
 {
     m_editor->About();
+}
+
+T100VOID T100EditorFrame::OnKeyDown(T100KeyEvent& event)
+{
+    SetDirty();
 }

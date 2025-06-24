@@ -16,6 +16,8 @@ class T100WindowBase : public T100EventHandler
 
         HWND                        GetHWND();
 
+        T100VOID                    SetLabel(const T100WSTRING&);
+
         T100VOID                    SetWidth(T100INT);
         T100INT                     GetWidth();
         T100VOID                    SetHeight(T100INT);
@@ -23,14 +25,14 @@ class T100WindowBase : public T100EventHandler
 
         T100VOID                    SetSize(const T100Size&);
         T100VOID                    SetSize(T100INT, T100INT);
-        const T100Size&             GetSize();
+        const T100Size              GetSize();
 
         T100VOID                    SetClientSize(const T100Size&);
         T100VOID                    SetClientSize(T100INT, T100INT);
         const T100Size              GetClientSize();
 
         T100VOID                    SetPosition(const T100Point&);
-        const T100Point&            GetPosition();
+        const T100Point             GetPosition();
 
         T100VOID                    Enable();
         T100VOID                    Disable();

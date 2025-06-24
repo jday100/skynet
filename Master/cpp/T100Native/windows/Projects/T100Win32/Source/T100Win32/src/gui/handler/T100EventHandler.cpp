@@ -12,14 +12,32 @@ T100EventHandler::T100EventHandler() :
     //ctor
 }
 
+T100EventHandler::T100EventHandler(T100EventHandler* parent) :
+    T100Tree()
+{
+    //ctor
+    init(parent);
+}
+
 T100EventHandler::~T100EventHandler()
 {
     //dtor
+    uninit();
+}
+
+T100VOID T100EventHandler::init(T100EventHandler* parent)
+{
+    T100Tree::Create(parent);
+}
+
+T100VOID T100EventHandler::uninit()
+{
+    T100Tree::Destroy();
 }
 
 T100VOID T100EventHandler::Create(T100EventHandler* parent)
 {
-
+    init(parent);
 }
 
 T100VOID T100EventHandler::Destroy()
@@ -50,9 +68,47 @@ T100VOID T100EventHandler::Connect(T100UINT type, T100EVENT_FUNCTION call, T100E
             ConnectCommand(type, data);
         }
         break;
+    case T100EVENT_WINDOW_CREATE:
+    case T100EVENT_WINDOW_DESTROY:
+    case T100EVENT_WINDOW_ACTIVATE:
+    case T100EVENT_WINDOW_INACTIVATE:
+    case T100EVENT_WINDOW_ENABLE:
+    case T100EVENT_WINDOW_SET_REDRAW:
+    case T100EVENT_WINDOW_SET_TEXT:
+    case T100EVENT_WINDOW_GET_TEXT:
+    case T100EVENT_WINDOW_GET_TEXT_LENGTH:
+    case T100EVENT_WINDOW_MOVE:
+    case T100EVENT_WINDOW_CLOSE:
+    case T100EVENT_WINDOW_SIZE:
+    case T100EVENT_WINDOW_SIZING:
+    case T100EVENT_WINDOW_PAINT:
+    case T100EVENT_WINDOW_ENTER:
+    case T100EVENT_WINDOW_LEAVE:
+    case T100EVENT_WINDOW_SET_FOCUS:
+    case T100EVENT_WINDOW_KILL_FOCUS:
+    case T100EVENT_MOUSE_MOVING:
+    case T100EVENT_MOUSE_LEFT_DOWN:
+    case T100EVENT_MOUSE_LEFT_UP:
+    case T100EVENT_MOUSE_LEFT_DOUBLE_CLICK:
+    case T100EVENT_MOUSE_MIDDLE_DOWN:
+    case T100EVENT_MOUSE_MIDDLE_UP:
+    case T100EVENT_MOUSE_MIDDLE_DOUBLE_CLICK:
+    case T100EVENT_MOUSE_RIGHT_DOWN:
+    case T100EVENT_MOUSE_RIGHT_UP:
+    case T100EVENT_MOUSE_RIGHT_DOUBLE_CLICK:
+    case T100EVENT_MOUSE_ENTER_WINDOW:
+    case T100EVENT_MOUSE_LEAVE_WINDOW:
+    case T100EVENT_MOUSE_WHEEL:
+    case T100EVENT_KEY_CHAR:
+    case T100EVENT_KEY_DOWN:
+    case T100EVENT_KEY_UP:
+        {
+            ConnectEvent(type, data);
+        }
+        break;
     default:
         {
-            ConnectEvent(type, call, handler);
+            ConnectNotify(type, data);
         }
         break;
     }
@@ -150,6 +206,16 @@ T100VOID T100EventHandler::ProcessWindowMessage(const T100WindowMessageData& mes
     case WM_GETTEXTLENGTH:
         {
             CallEvent(T100EVENT_WINDOW_GET_TEXT_LENGTH, message);
+        }
+        break;
+    case WM_KEYDOWN:
+        {
+            CallEvent(T100EVENT_KEY_DOWN, message);
+        }
+        break;
+    case WM_KEYUP:
+        {
+            CallEvent(T100EVENT_KEY_UP, message);
         }
         break;
     case WM_LBUTTONDOWN:
@@ -252,10 +318,37 @@ T100VOID T100EventHandler::ProcessNotifyMessage(const T100WindowMessageData& mes
 
 T100VOID T100EventHandler::ProcessCommand(const T100WindowMessageData& message)
 {
-    if(LOWORD(message.WINDOW_LPARAM) == 0){
-        CallMenu((T100UINT)message.WINDOW_WPARAM, message);
+    T100UINT        value;
+    T100UINT        high;
+    T100UINT        low;
+
+    value   = LOWORD(message.WINDOW_LPARAM);
+
+    if(value == 0){
+        high    = HIWORD(message.WINDOW_WPARAM);
+        low     = LOWORD(message.WINDOW_WPARAM);
+
+        if(high == 0){
+            CallMenu(low, message);
+        }else if(high == 1){
+            CallMenu(low, message);
+        }
+        return;
     }else{
+
+    }
+
+    T100WindowMessageData       data;
+
+    data    = message;
+
+    high    = HIWORD(message.WINDOW_WPARAM);
+
+    if(high == 0){
         CallCommand(T100EVENT_COMMAND, message);
+    }else{
+        data.MESSAGE_ID  = high;
+        ProcessNotifyMessage(data);
     }
 }
 
@@ -264,33 +357,13 @@ T100EventHandler* T100EventHandler::ConvertToEventHandler(T100Tree* node)
     return dynamic_cast<T100EventHandler*>(node);
 }
 
-T100VOID T100EventHandler::ConnectEvent(T100UINT type, T100EVENT_FUNCTION call, T100EventHandler* handler)
+T100VOID T100EventHandler::ConnectEvent(T100UINT type, const T100EVENT_FUNCTION_DATA& data)
 {
-    T100EVENT_FUNCTION_DATA         data;
-
-    data.FUNCTION       = call;
-
-    if(handler){
-        data.HANDLER    = handler;
-    }else{
-        data.HANDLER    = this;
-    }
-
     m_events[type]      = data;
 }
 
-T100VOID T100EventHandler::ConnectNotify(T100UINT type, T100EVENT_FUNCTION call, T100EventHandler* handler)
+T100VOID T100EventHandler::ConnectNotify(T100UINT type, const T100EVENT_FUNCTION_DATA& data)
 {
-    T100EVENT_FUNCTION_DATA         data;
-
-    data.FUNCTION       = call;
-
-    if(handler){
-        data.HANDLER    = handler;
-    }else{
-        data.HANDLER    = this;
-    }
-
     m_notifyEvents[type]        = data;
 }
 
@@ -312,6 +385,16 @@ T100VOID T100EventHandler::CallMenu(T100UINT type, const T100WindowMessageData& 
 T100VOID T100EventHandler::CallEvent(T100UINT type, const T100WindowMessageData& message)
 {
     T100EVENT_FUNCTION_DATA&        data        = m_events[type];
+
+    if(data.HANDLER && data.FUNCTION){
+        T100Event       event(message);
+        (data.HANDLER->*(data.FUNCTION))(event);
+    }
+}
+
+T100VOID T100EventHandler::CallNotify(T100UINT type, const T100WindowMessageData& message)
+{
+    T100EVENT_FUNCTION_DATA&        data        = m_notifyEvents[type];
 
     if(data.HANDLER && data.FUNCTION){
         T100Event       event(message);

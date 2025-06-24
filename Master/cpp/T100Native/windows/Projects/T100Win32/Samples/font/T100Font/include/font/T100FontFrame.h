@@ -3,6 +3,8 @@
 
 #include "gui/T100Frame.h"
 
+using namespace T100WINDOWS;
+
 class T100FontFrame : public T100Frame
 {
     public:
@@ -12,9 +14,9 @@ class T100FontFrame : public T100Frame
         T100VOID            Create(T100Win32Application*);
 
     protected:
-        T100WORD            T100MENU_ID_FONTS           = T100MENU_ID_USER + 1;
-        T100WORD            T100MENU_ID_FONT_DIALOG     = T100MENU_ID_USER + 2;
-        T100WORD            T100MENU_ID_QUIT            = T100MENU_ID_USER + 3;
+        T100UINT            T100MENU_ID_FONTS           = T100MENU_ID_USER + 1;
+        T100UINT            T100MENU_ID_FONT_DIALOG     = T100MENU_ID_USER + 2;
+        T100UINT            T100MENU_ID_QUIT            = T100MENU_ID_USER + 3;
 
         T100VOID            OnMenuFonts(T100CommandEvent&);
         T100VOID            OnMenuFontDialog(T100CommandEvent&);

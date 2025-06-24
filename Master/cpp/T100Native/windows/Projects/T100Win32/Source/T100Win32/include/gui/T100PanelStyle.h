@@ -5,10 +5,13 @@
 
 namespace T100WINDOWS{
 
+class T100DockPanelStyle;
+
 class T100PanelStyle : public T100WindowStyle
 {
     public:
         T100PanelStyle();
+        T100PanelStyle(const T100DockPanelStyle&);
         virtual ~T100PanelStyle();
 
     protected:

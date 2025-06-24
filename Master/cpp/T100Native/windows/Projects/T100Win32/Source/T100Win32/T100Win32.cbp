@@ -26,6 +26,7 @@
 					<Add directory="include/gui/listctrl" />
 					<Add directory="include/gui/menu" />
 					<Add directory="include/gui/dc" />
+					<Add directory="include/gui/font" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../../../../build/libT100Object.a" />
@@ -52,6 +53,7 @@
 					<Add directory="include/gui/listctrl" />
 					<Add directory="include/gui/menu" />
 					<Add directory="include/gui/dc" />
+					<Add directory="include/gui/font" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -78,6 +80,7 @@
 					<Add directory="include/gui/listctrl" />
 					<Add directory="include/gui/menu" />
 					<Add directory="include/gui/dc" />
+					<Add directory="include/gui/font" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../../../../build/libT100Object.a" />
@@ -100,6 +103,7 @@
 			<Add library="comctl32" />
 		</Linker>
 		<Unit filename="include/gui/T100AllEvents.h" />
+		<Unit filename="include/gui/T100AllStyles.h" />
 		<Unit filename="include/gui/T100Brush.h" />
 		<Unit filename="include/gui/T100Button.h" />
 		<Unit filename="include/gui/T100ButtonStyle.h" />
@@ -150,11 +154,13 @@
 		<Unit filename="include/gui/dock/T100DockManagerBase.h" />
 		<Unit filename="include/gui/event/T100CommandEvent.h" />
 		<Unit filename="include/gui/event/T100Event.h" />
+		<Unit filename="include/gui/event/T100KeyEvent.h" />
 		<Unit filename="include/gui/event/T100MenuEvent.h" />
 		<Unit filename="include/gui/event/T100MouseEvent.h" />
 		<Unit filename="include/gui/event/T100NotifyEvent.h" />
 		<Unit filename="include/gui/event/T100PaintEvent.h" />
 		<Unit filename="include/gui/event/T100WindowEvent.h" />
+		<Unit filename="include/gui/font/T100FontBase.h" />
 		<Unit filename="include/gui/handler/T100EventHandler.h" />
 		<Unit filename="include/gui/handler/T100IDManager.h" />
 		<Unit filename="include/gui/handler/T100WindowMessageDispatcher.h" />
@@ -193,12 +199,14 @@
 		<Unit filename="src/gui/dock/T100DockManagerBase.cpp" />
 		<Unit filename="src/gui/event/T100CommandEvent.cpp" />
 		<Unit filename="src/gui/event/T100Event.cpp" />
+		<Unit filename="src/gui/event/T100KeyEvent.cpp" />
 		<Unit filename="src/gui/event/T100MenuEvent.cpp" />
 		<Unit filename="src/gui/event/T100MouseEvent.cpp" />
 		<Unit filename="src/gui/event/T100NotifyEvent.cpp" />
 		<Unit filename="src/gui/event/T100PaintEvent.cpp" />
 		<Unit filename="src/gui/event/T100WindowEvent.cpp" />
 		<Unit filename="src/gui/font/T100Font.cpp" />
+		<Unit filename="src/gui/font/T100FontBase.cpp" />
 		<Unit filename="src/gui/font/T100FontTools.cpp" />
 		<Unit filename="src/gui/frame/T100Frame.cpp" />
 		<Unit filename="src/gui/graphic/T100Brush.cpp" />

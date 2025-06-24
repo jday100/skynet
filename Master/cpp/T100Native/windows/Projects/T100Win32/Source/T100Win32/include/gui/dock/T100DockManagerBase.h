@@ -46,13 +46,14 @@ class T100DockManagerBase : public T100Class
 
         T100VOID                        Classify(T100DOCK_DATA*);
 
-    private:
+    protected:
         T100DOCK_WINDOW_VECTOR          m_leftWindows;
         T100DOCK_WINDOW_VECTOR          m_rightWindows;
         T100DOCK_WINDOW_VECTOR          m_topWindows;
         T100DOCK_WINDOW_VECTOR          m_bottomWindows;
         T100DOCK_DATA*                  m_centerWindow      = T100NULL;
 
+    private:
         T100INT                         m_leftSize          = 0;
         T100INT                         m_rightSize         = 0;
         T100INT                         m_topSize           = 0;

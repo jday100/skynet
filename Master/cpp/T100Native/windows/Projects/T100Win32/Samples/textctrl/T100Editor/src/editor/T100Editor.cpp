@@ -31,6 +31,7 @@ T100VOID T100Editor::New()
 {
     m_textCtrl->SetValue(L"");
     m_filename.clear();
+    m_frame->SetTitle(m_filename);
 }
 
 T100VOID T100Editor::Open()
@@ -40,7 +41,9 @@ T100VOID T100Editor::Open()
 
     T100OpenDialog              dialog;
 
-    dialog.Show();
+    if(!dialog.Show()){
+        return;
+    }
 
     T100WSTRING                 filename;
 
@@ -88,13 +91,14 @@ T100VOID T100Editor::Save()
         T100TextFile        text(m_filename);
 
         T100WSTRING             result;
-        T100TextFileWriter*     writer      = text.CreateWriter();
+        T100TextFileWriterW*    writer      = text.CreateWriterW();
 
         result  = m_textCtrl->GetValue();
-        //writer->Write(result);
+        *writer << result;
 
-        text.DestroyWriter(writer);
+        text.DestroyWriterW(writer);
 
+        m_frame->ClearDirty();
     }
 }
 
@@ -102,7 +106,9 @@ T100VOID T100Editor::SaveAs()
 {
     T100SaveDialog              dialog;
 
-    dialog.Show();
+    if(!dialog.Show()){
+        return;
+    }
 
     T100WSTRING                 filename;
 
@@ -127,7 +133,7 @@ T100VOID T100Editor::SaveAs()
 
         m_filename  = filename;
         m_frame->SetTitle(m_filename);
-
+        m_frame->ClearDirty();
     }
 }
 
@@ -179,7 +185,9 @@ T100VOID T100Editor::Font()
 
     dialog.Create(m_frame);
 
-    dialog.Show();
+    if(!dialog.Show()){
+        return;
+    }
 
     const T100Font&        font   = dialog.GetFont();
 
