@@ -16,8 +16,9 @@
 					<Add directory="include/log" />
 				</Compiler>
 				<Linker>
-					<Add library="../../../build/libT100Common.a" />
 					<Add library="../../../build/libT100File.a" />
+					<Add library="../../../build/libT100String.a" />
+					<Add library="../../../build/libT100Common.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -38,6 +39,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 			<Add directory="../T100Common/include" />
+			<Add directory="../T100String/include" />
 			<Add directory="../T100File/include" />
 			<Add directory="include" />
 		</Compiler>

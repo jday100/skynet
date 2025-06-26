@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100ProjectPluginMain" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../build/plugins/T100ProjectPluginMain" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-DBUILD_DLL" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../build/libT100Project.a" />
+					<Add library="../../../../../build/libT100Plugin.a" />
+					<Add library="../../../../../build/libT100DynamicLibrary.a" />
+					<Add library="../../../../../build/libT100Windows.a" />
+					<Add library="../../../../../build/libT100Library.a" />
+					<Add library="user32" />
+					<Add library="gdi32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100ProjectPluginMain" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-DBUILD_DLL" />
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="user32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../../../../../T100Library/Source/T100Library/include" />
+			<Add directory="../../../../../T100Native/windows/Source/T100Windows/include" />
+			<Add directory="../../../../../T100Native/windows/Projects/T100DynamicLibrary/include" />
+			<Add directory="../../../../../T100Universal/Projects/T100Plugin/include" />
+			<Add directory="../../Source/T100Project/include" />
+		</Compiler>
+		<Unit filename="include/T100ProjectMainMenu.h" />
+		<Unit filename="include/T100ProjectMainMenuActuator.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Unit filename="src/T100ProjectMainMenu.cpp" />
+		<Unit filename="src/T100ProjectMainMenuActuator.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>

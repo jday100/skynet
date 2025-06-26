@@ -52,12 +52,15 @@
 			<Add option="-fexceptions" />
 			<Add directory="../T100Common/include" />
 			<Add directory="." />
+			<Add directory="include" />
 		</Compiler>
+		<Unit filename="include/thread/T100TaskThread.h" />
 		<Unit filename="include/thread/T100Thread.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="src/thread/T100TaskThread.cpp" />
 		<Unit filename="src/thread/T100Thread.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

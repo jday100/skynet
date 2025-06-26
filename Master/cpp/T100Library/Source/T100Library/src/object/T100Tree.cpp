@@ -36,7 +36,8 @@ T100VOID T100Tree::init(T100Tree* parent)
 
 T100VOID T100Tree::uninit()
 {
-
+    m_label.clear();
+    m_children.clear();
 }
 
 T100VOID T100Tree::Create(T100Tree* parent, const T100WSTRING& label)

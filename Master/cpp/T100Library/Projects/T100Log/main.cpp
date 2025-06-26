@@ -1,9 +1,12 @@
-#include <iostream>
+#include "log/T100Logger.h"
 
-using namespace std;
+using namespace T100LIBRARY;
 
 int main()
 {
-    cout << "Hello world!" << endl;
+    T100Logger      logger;
+
+    logger.Out(L"hello world!");
+
     return 0;
 }
