@@ -1,6 +1,7 @@
 #include "main.h"
 
 #include "T100ProjectApplication.h"
+#include "extension/T100ProjectViewExtension.h"
 #include "skeletal/T100ProjectInvoking.h"
 
 void ModuleInit(T100Win32Application* application)
@@ -61,7 +62,7 @@ void DLL_EXPORT ViewSignIn(T100VOID* value)
 
     call    = (T100VOID*)&ViewResize;
 
-    application->GetSkeletal().GetExtendedManager().Connect(L"T100Project.View.Main.Frame.Resize", call);
+    application->GetSkeletal().GetExtendedManager().Connect(T100PROJECT_VIEW_MAIN_FRAME_RESIZE, call);
 }
 
 void DLL_EXPORT ViewSignOut()

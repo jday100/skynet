@@ -86,6 +86,7 @@
 		<Unit filename="include/storage/file/text/T100TextFileWriterW.h" />
 		<Unit filename="include/storage/filesystem/T100FileSystemEntry.h" />
 		<Unit filename="include/storage/folder/T100Folder.h" />
+		<Unit filename="include/storage/folder/T100FolderTools.h" />
 		<Unit filename="include/storage/path/T100PathTools.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
@@ -106,6 +107,7 @@
 		<Unit filename="src/storage/file/text/T100TextFileWriterW.cpp" />
 		<Unit filename="src/storage/filesystem/T100FileSystemEntry.cpp" />
 		<Unit filename="src/storage/folder/T100Folder.cpp" />
+		<Unit filename="src/storage/folder/T100FolderTools.cpp" />
 		<Unit filename="src/storage/path/T100PathTools.cpp" />
 		<Extensions />
 	</Project>

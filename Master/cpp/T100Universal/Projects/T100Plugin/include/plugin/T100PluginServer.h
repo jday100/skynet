@@ -23,11 +23,23 @@ class T100PluginServer : public T100Class
 
         T100VOID*                   GetMethod(const T100WSTRING&, const T100WSTRING&);
 
+        T100VOID                    SetPath(const T100WSTRING&);
+        const T100WSTRING&          GetPath();
+
+        T100VOID                    SetPrefix(const T100WSTRING&);
+        const T100WSTRING&          GetPrefix();
+
+        T100VOID                    SetSuffix(const T100WSTRING&);
+        const T100WSTRING&          GetSuffix();
+
     protected:
         T100PLUGIN_HASH             m_plugins;
+        T100WSTRING                 m_path;
+        T100WSTRING                 m_prefix;
+        T100WSTRING                 m_suffix;
 
     private:
-        T100WSTRING                 GetFileName(const T100WSTRING&);
+        virtual T100WSTRING         GetFileName(const T100WSTRING&);
 };
 
 }

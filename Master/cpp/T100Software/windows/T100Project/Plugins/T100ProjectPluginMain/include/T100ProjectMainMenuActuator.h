@@ -11,7 +11,23 @@ class T100ProjectMainMenuActuator : public T100EventHandler
         T100ProjectMainMenuActuator(T100EventHandler*);
         virtual ~T100ProjectMainMenuActuator();
 
-        T100VOID            OnQuit(T100WindowEvent&);
+        T100VOID            OnNew(T100MenuEvent&);
+        T100VOID            OnOpen(T100MenuEvent&);
+        T100VOID            OnClose(T100MenuEvent&);
+        T100VOID            OnSave(T100MenuEvent&);
+        T100VOID            OnSaveAs(T100MenuEvent&);
+        T100VOID            OnQuit(T100MenuEvent&);
+
+        T100VOID            OnUndo(T100MenuEvent&);
+        T100VOID            OnRedo(T100MenuEvent&);
+        T100VOID            OnCut(T100MenuEvent&);
+        T100VOID            OnCopy(T100MenuEvent&);
+        T100VOID            OnPaste(T100MenuEvent&);
+
+        T100VOID            OnFind(T100MenuEvent&);
+        T100VOID            OnReplace(T100MenuEvent&);
+
+        T100VOID            OnAbout(T100MenuEvent&);
 
     protected:
 

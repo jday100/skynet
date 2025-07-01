@@ -18,7 +18,23 @@ class T100ProjectSkeletal
 
         T100VOID                    Launch();
 
+        T100VOID                    New();
+        T100VOID                    Open();
+        T100VOID                    Close();
+        T100VOID                    Save();
+        T100VOID                    SaveAs();
         T100VOID                    Quit();
+
+        T100VOID                    Undo();
+        T100VOID                    Redo();
+        T100VOID                    Cut();
+        T100VOID                    Copy();
+        T100VOID                    Paste();
+
+        T100VOID                    Find();
+        T100VOID                    Replace();
+
+        T100VOID                    About();
 
         T100VOID                    SetView(T100ProjectView*);
         T100ProjectView*            GetView();

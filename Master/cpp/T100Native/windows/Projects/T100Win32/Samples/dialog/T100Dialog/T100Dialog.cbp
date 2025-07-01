@@ -38,6 +38,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-fpermissive" />
 			<Add directory="../../../../../../../T100Library/Source/T100Library/include" />
 			<Add directory="../../../Source/T100Win32/include" />
 			<Add directory="include" />

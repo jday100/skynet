@@ -36,7 +36,9 @@ T100VOID T100Dialog::init(T100Window* parent)
     if(parent){
         hwnd    = parent->GetHWND();
 
-        result  = DialogBox(instance, MAKEINTRESOURCE(DLG_MAIN), hwnd, (DLGPROC)DefaultDialogProcedure);
+        m_hwnd  = CreateDialog(instance, m_style.WindowLabel.c_str(), hwnd, (DLGPROC)DefaultDialogProcedure);
+
+        //result  = DialogBox(instance, MAKEINTRESOURCE(DLG_MAIN), hwnd, (DLGPROC)DefaultDialogProcedure);
     }
 
 }

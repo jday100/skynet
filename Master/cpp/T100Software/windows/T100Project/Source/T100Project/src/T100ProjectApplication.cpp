@@ -65,7 +65,7 @@ T100VOID T100ProjectApplication::Create()
 {
     T100Win32Application::Create();
 
-    //m_frame->Maximize();
+    m_frame->Maximize();
     m_skeletal.GetView()->SetFrame(m_frame);
 
     T100ProjectInvoking::Create(this);

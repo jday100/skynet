@@ -11,6 +11,8 @@ class T100TestDialog : public T100Dialog
         T100TestDialog();
         virtual ~T100TestDialog();
 
+        virtual T100VOID            Create(T100Window*);
+
     protected:
 
     private:

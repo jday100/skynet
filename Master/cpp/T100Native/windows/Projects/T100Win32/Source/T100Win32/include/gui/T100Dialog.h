@@ -3,6 +3,10 @@
 
 #include "gui/window/T100SelfLoopWindow.h"
 
+#ifdef CreateDialog
+#undef CreateDialog
+#endif // CreateDialog
+
 namespace T100WINDOWS{
 
 BOOL CALLBACK DefaultDialogProcedure (HWND, UINT, WPARAM, LPARAM);
@@ -18,6 +22,7 @@ class T100Dialog : public T100SelfLoopWindow
         virtual T100VOID            Destroy();
 
     protected:
+        T100VOID                    CreateDialog(HINSTANCE, HWND);
 
     private:
         T100VOID                    init(T100Window*);

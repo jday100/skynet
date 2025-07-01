@@ -81,9 +81,74 @@ T100VOID T100ProjectSkeletal::Launch()
     m_view->Default();
 }
 
+T100VOID T100ProjectSkeletal::New()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::Open()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::Close()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::Save()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::SaveAs()
+{
+
+}
+
 T100VOID T100ProjectSkeletal::Quit()
 {
     PostQuitMessage(0);
+}
+
+T100VOID T100ProjectSkeletal::Undo()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::Redo()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::Cut()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::Copy()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::Paste()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::Find()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::Replace()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::About()
+{
+
 }
 
 T100PluginServer& T100ProjectSkeletal::GetPluginServer()

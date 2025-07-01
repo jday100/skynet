@@ -18,6 +18,7 @@
 					<Add option="-g" />
 					<Add option="-DBUILD_DLL" />
 					<Add directory="include" />
+					<Add directory="include/view/dialog" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../../../build/libT100Project.a" />
@@ -41,6 +42,7 @@
 					<Add option="-DBUILD_DLL" />
 					<Add option="-O2" />
 					<Add directory="include" />
+					<Add directory="include/view/dialog" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -57,10 +59,12 @@
 		</Compiler>
 		<Unit filename="include/T100ProjectMainMenu.h" />
 		<Unit filename="include/T100ProjectMainMenuActuator.h" />
+		<Unit filename="include/view/dialog/T100ProjectNewDialog.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="main.h" />
 		<Unit filename="src/T100ProjectMainMenu.cpp" />
 		<Unit filename="src/T100ProjectMainMenuActuator.cpp" />
+		<Unit filename="src/view/dialog/T100ProjectNewDialog.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

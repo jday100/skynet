@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100CVM" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="../../build/T100CVM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/skeletal" />
+					<Add directory="include/view" />
+					<Add directory="include/store" />
+					<Add directory="include/serve" />
+					<Add directory="include" />
+					<Add directory="include/core" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../build/libT100Windows.a" />
+					<Add library="../../../../../build/libT100Plugin.a" />
+					<Add library="../../../../../build/libT100DynamicLibrary.a" />
+					<Add library="../../../../../build/libT100Library.a" />
+					<Add library="../../../../../../../../../../zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libgdi32.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100CVM" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/skeletal" />
+					<Add directory="include/view" />
+					<Add directory="include/store" />
+					<Add directory="include/serve" />
+					<Add directory="include" />
+					<Add directory="include/core" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../../../../build/T100CVM" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/skeletal" />
+					<Add directory="include/view" />
+					<Add directory="include/store" />
+					<Add directory="include/serve" />
+					<Add directory="include" />
+					<Add directory="include/core" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../build/libT100Windows.a" />
+					<Add library="../../../../../build/libT100Library.a" />
+					<Add library="../../../../../../../../../../zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libgdi32.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../../../../../T100Library/Source/T100Library/include" />
+			<Add directory="../../../../../T100Native/windows/Source/T100Windows/include" />
+			<Add directory="../../../../../T100Native/windows/Projects/T100DynamicLibrary/include" />
+			<Add directory="../../../../../T100Universal/Projects/T100Plugin/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="include/T100CVMApp.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/core/T100VMBase.h" />
+		<Unit filename="include/serve/T100CVMServe.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/skeletal/T100CVMSkeletal.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/store/T100CVMStore.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/view/T100CVMView.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="include/view/T100CVMViewMainMenu.h">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/T100CVMApp.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/core/T100VMBase.cpp" />
+		<Unit filename="src/serve/T100CVMServe.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/skeletal/T100CVMSkeletal.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/store/T100CVMStore.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/view/T100CVMView.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/view/T100CVMViewMainMenu.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
