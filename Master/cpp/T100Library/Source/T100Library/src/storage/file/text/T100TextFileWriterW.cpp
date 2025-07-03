@@ -25,11 +25,16 @@ T100VOID T100TextFileWriterW::init()
 
     filename    = T100Unicode::ToString8(m_textFile.GetEntryName());
 
-    m_wofstream = T100NEW std::wofstream(filename, std::ios::out);
+    m_wofstream = T100NEW std::wofstream(filename.c_str(), std::ios::out);
 
-    if(!m_wofstream->is_open()){
-        m_wofstream->close();
-        T100SAFE_DELETE(m_wofstream);
+    if(m_wofstream){
+        if(m_wofstream->is_open()){
+
+        }else{
+            T100SAFE_DELETE(m_wofstream);
+        }
+    }else{
+
     }
 }
 
@@ -38,8 +43,8 @@ T100VOID T100TextFileWriterW::uninit()
     if(m_wofstream)
     {
         m_wofstream->close();
+        T100SAFE_DELETE(m_wofstream);
     }
-    T100SAFE_DELETE(m_wofstream);
 }
 
 T100VOID T100TextFileWriterW::Seek(T100UINT value)

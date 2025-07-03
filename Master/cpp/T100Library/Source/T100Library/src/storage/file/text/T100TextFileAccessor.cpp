@@ -25,15 +25,25 @@ T100VOID T100TextFileAccessor::init()
 
     filename    = T100Unicode::ToString8(m_textFile.GetEntryName());
 
-    m_fstream   = T100NEW std::fstream(filename, std::ios::in | std::ios::out);
+    m_fstream   = T100NEW std::fstream(filename.c_str(), std::ios::in | std::ios::out);
+
+    if(m_fstream){
+        if(m_fstream->is_open()){
+
+        }else{
+            T100SAFE_DELETE(m_fstream);
+        }
+    }else{
+
+    }
 }
 
 T100VOID T100TextFileAccessor::uninit()
 {
     if(m_fstream){
         m_fstream->close();
+        T100SAFE_DELETE(m_fstream);
     }
-    T100SAFE_DELETE(m_fstream);
 }
 
 T100VOID T100TextFileAccessor::SeekRead(T100UINT value)

@@ -11,9 +11,17 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="build/T100Load.exe" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/windows/file" />
+					<Add directory="include/windows/common" />
+					<Add directory="include/windows/loader" />
+					<Add directory="include/base" />
 				</Compiler>
+				<Linker>
+					<Add library="../../../../build/libT100Library.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100Loader" prefix_auto="1" extension_auto="1" />
@@ -22,6 +30,10 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/windows/file" />
+					<Add directory="include/windows/common" />
+					<Add directory="include/windows/loader" />
+					<Add directory="include/base" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -30,6 +42,8 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="../../../../T100Library/Source/T100Library/include" />
+			<Add directory="include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
@@ -37,7 +51,22 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="include/base/T100Decoder.h" />
+		<Unit filename="include/base/T100Encoder.h" />
+		<Unit filename="include/windows/common/T100FileCommon.h" />
+		<Unit filename="include/windows/file/T100WindowsFile.h" />
+		<Unit filename="include/windows/loader/T100Loader.h" />
+		<Unit filename="include/windows/loader/T100WindowsFileDecoder.h" />
+		<Unit filename="include/windows/loader/T100WindowsFileEncoder.h" />
+		<Unit filename="include/windows/loader/T100WindowsFileInfo.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/base/T100Decoder.cpp" />
+		<Unit filename="src/base/T100Encoder.cpp" />
+		<Unit filename="src/windows/file/T100WindowsFile.cpp" />
+		<Unit filename="src/windows/loader/T100Loader.cpp" />
+		<Unit filename="src/windows/loader/T100WindowsFileDecoder.cpp" />
+		<Unit filename="src/windows/loader/T100WindowsFileEncoder.cpp" />
+		<Unit filename="src/windows/loader/T100WindowsFileInfo.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

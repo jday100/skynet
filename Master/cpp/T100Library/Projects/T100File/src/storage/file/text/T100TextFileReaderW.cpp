@@ -25,11 +25,16 @@ T100VOID T100TextFileReaderW::init()
 
     filename    = T100Unicode::ToString8(m_textFile.GetEntryName());
 
-    m_wifstream = T100NEW std::wifstream(filename, std::ios::in);
+    m_wifstream = T100NEW std::wifstream(filename.c_str(), std::ios::in);
 
-    if(!m_wifstream->is_open()){
-        m_wifstream->close();
-        T100SAFE_DELETE(m_wifstream);
+    if(m_wifstream){
+        if(m_wifstream->is_open()){
+
+        }else{
+            T100SAFE_DELETE(m_wifstream);
+        }
+    }else{
+
     }
 }
 
@@ -37,8 +42,8 @@ T100VOID T100TextFileReaderW::uninit()
 {
     if(m_wifstream){
         m_wifstream->close();
+        T100SAFE_DELETE(m_wifstream);
     }
-    T100SAFE_DELETE(m_wifstream);
 }
 
 T100VOID T100TextFileReaderW::Seek(T100UINT value)

@@ -11,6 +11,10 @@ class T100Folder : public T100FileSystemEntry
         T100Folder(const T100WSTRING&);
         virtual ~T100Folder();
 
+        T100BOOL            FindFirst(T100WSTRING&, const T100WSTRING&, T100INT);
+        T100BOOL            FindNext(T100WSTRING&);
+        T100BOOL            FindFinished();
+
     protected:
 
     private:

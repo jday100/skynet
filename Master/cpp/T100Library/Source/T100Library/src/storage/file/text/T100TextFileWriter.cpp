@@ -25,15 +25,25 @@ T100VOID T100TextFileWriter::init()
 
     filename    = T100Unicode::ToString8(m_textFile.GetEntryName());
 
-    m_ofstream  = T100NEW std::ofstream(filename, std::ios::out | std::ios::binary);
+    m_ofstream  = T100NEW std::ofstream(filename.c_str(), std::ios::out | std::ios::binary);
+
+    if(m_ofstream){
+        if(m_ofstream->is_open()){
+
+        }else{
+            T100SAFE_DELETE(m_ofstream);
+        }
+    }else{
+
+    }
 }
 
 T100VOID T100TextFileWriter::uninit()
 {
     if(m_ofstream){
         m_ofstream->close();
+        T100SAFE_DELETE(m_ofstream);
     }
-    T100SAFE_DELETE(m_ofstream);
 }
 
 T100VOID T100TextFileWriter::Seek(T100UINT value)

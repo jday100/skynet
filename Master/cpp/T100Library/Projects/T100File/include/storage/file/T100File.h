@@ -11,6 +11,8 @@ class T100File : public T100FileSystemEntry
         T100File(const T100WSTRING&);
         virtual ~T100File();
 
+        virtual T100UINT64          GetLength();
+
     protected:
 
     private:

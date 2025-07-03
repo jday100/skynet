@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="T100CPPTest" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/T100CPPTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/test/cx" />
+					<Add directory="include/test/cx/scanner" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../../../build/libT100CPP.a" />
+					<Add library="../../../../../build/libT100Compiler.a" />
+					<Add library="../../../../../build/libT100Library.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/T100CPPTest" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include/test/cx" />
+					<Add directory="include/test/cx/scanner" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+			<Add directory="../../../../../T100Library/Source/T100Library/include" />
+			<Add directory="../../../../../T100Library/Projects/T100Compiler/include" />
+			<Add directory="../../Source/T100CPP/include" />
+			<Add directory="include" />
+		</Compiler>
+		<Unit filename="include/test/cx/T100CPPScannerTest.h" />
+		<Unit filename="include/test/cx/T100CPPTest.h" />
+		<Unit filename="include/test/cx/scanner/T100CPPBufferScannerTest.h" />
+		<Unit filename="include/test/cx/scanner/T100CPPByteScannerTest.h" />
+		<Unit filename="include/test/cx/scanner/T100CPPCharScannerTest.h" />
+		<Unit filename="include/test/cx/scanner/T100CPPFileScannerTest.h" />
+		<Unit filename="include/test/cx/scanner/T100CPPFunctionScannerTest.h" />
+		<Unit filename="include/test/cx/scanner/T100CPPKeywordScannerTest.h" />
+		<Unit filename="include/test/cx/scanner/T100CPPSegmentScannerTest.h" />
+		<Unit filename="include/test/cx/scanner/T100CPPSentenceScannerTest.h" />
+		<Unit filename="include/test/cx/scanner/T100CPPSourceScannerTest.h" />
+		<Unit filename="include/test/cx/scanner/T100CPPStringScannerTest.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/test/cx/T100CPPScannerTest.cpp" />
+		<Unit filename="src/test/cx/T100CPPTest.cpp" />
+		<Unit filename="src/test/cx/scanner/T100CPPBufferScannerTest.cpp" />
+		<Unit filename="src/test/cx/scanner/T100CPPByteScannerTest.cpp" />
+		<Unit filename="src/test/cx/scanner/T100CPPCharScannerTest.cpp" />
+		<Unit filename="src/test/cx/scanner/T100CPPFileScannerTest.cpp" />
+		<Unit filename="src/test/cx/scanner/T100CPPFunctionScannerTest.cpp" />
+		<Unit filename="src/test/cx/scanner/T100CPPKeywordScannerTest.cpp" />
+		<Unit filename="src/test/cx/scanner/T100CPPSegmentScannerTest.cpp" />
+		<Unit filename="src/test/cx/scanner/T100CPPSentenceScannerTest.cpp" />
+		<Unit filename="src/test/cx/scanner/T100CPPSourceScannerTest.cpp" />
+		<Unit filename="src/test/cx/scanner/T100CPPStringScannerTest.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

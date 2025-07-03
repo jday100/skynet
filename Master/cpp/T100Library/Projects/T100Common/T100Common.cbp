@@ -56,8 +56,12 @@
 		<Unit filename="include/base/T100Class.h" />
 		<Unit filename="include/base/T100Object.h" />
 		<Unit filename="include/base/T100Point.h" />
+		<Unit filename="include/base/T100Scanner.h" />
 		<Unit filename="include/base/T100Size.h" />
+		<Unit filename="include/base/T100State.h" />
 		<Unit filename="include/base/T100Task.h" />
+		<Unit filename="include/base/T100Token.h" />
+		<Unit filename="include/common/T100BitCommon.h" />
 		<Unit filename="include/common/T100Constants.h" />
 		<Unit filename="include/common/T100DataTypes.h" />
 		<Unit filename="include/common/T100StringTypes.h" />
@@ -68,8 +72,11 @@
 		<Unit filename="src/base/T100Class.cpp" />
 		<Unit filename="src/base/T100Object.cpp" />
 		<Unit filename="src/base/T100Point.cpp" />
+		<Unit filename="src/base/T100Scanner.cpp" />
 		<Unit filename="src/base/T100Size.cpp" />
+		<Unit filename="src/base/T100State.cpp" />
 		<Unit filename="src/base/T100Task.cpp" />
+		<Unit filename="src/base/T100Token.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

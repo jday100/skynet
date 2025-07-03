@@ -7,6 +7,12 @@
 
 namespace T100LIBRARY{
 
+typedef enum {
+    T100SUCCESS         = 1,
+    T100FAILURE         = -1,
+    T100EXCEPTION       = 0
+}T100RESULT;
+
 #define     T100WSTRING_VECTOR              std::vector<T100WSTRING>
 
 #ifdef __LEAK__

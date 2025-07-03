@@ -19,6 +19,7 @@
 					<Add directory="include/storage/filesystem" />
 					<Add directory="include/storage" />
 					<Add directory="include/storage/file/text" />
+					<Add directory="include/storage/file/binary" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../build/libT100String.a" />
@@ -38,6 +39,7 @@
 					<Add directory="include/storage/filesystem" />
 					<Add directory="include/storage" />
 					<Add directory="include/storage/file/text" />
+					<Add directory="include/storage/file/binary" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -57,6 +59,7 @@
 					<Add directory="include/storage/filesystem" />
 					<Add directory="include/storage" />
 					<Add directory="include/storage/file/text" />
+					<Add directory="include/storage/file/binary" />
 				</Compiler>
 				<Linker>
 					<Add library="../../../build/libT100Common.a" />
@@ -78,6 +81,10 @@
 		<Unit filename="include/storage/file/T100FileAccessor.h" />
 		<Unit filename="include/storage/file/T100FileReader.h" />
 		<Unit filename="include/storage/file/T100FileWriter.h" />
+		<Unit filename="include/storage/file/binary/T100BinaryFile.h" />
+		<Unit filename="include/storage/file/binary/T100BinaryFileAccessor.h" />
+		<Unit filename="include/storage/file/binary/T100BinaryFileReader.h" />
+		<Unit filename="include/storage/file/binary/T100BinaryFileWriter.h" />
 		<Unit filename="include/storage/file/text/T100TextFile.h" />
 		<Unit filename="include/storage/file/text/T100TextFileAccessor.h" />
 		<Unit filename="include/storage/file/text/T100TextFileReader.h" />
@@ -99,6 +106,10 @@
 		<Unit filename="src/storage/file/T100FileAccessor.cpp" />
 		<Unit filename="src/storage/file/T100FileReader.cpp" />
 		<Unit filename="src/storage/file/T100FileWriter.cpp" />
+		<Unit filename="src/storage/file/binary/T100BinaryFile.cpp" />
+		<Unit filename="src/storage/file/binary/T100BinaryFileAccessor.cpp" />
+		<Unit filename="src/storage/file/binary/T100BinaryFileReader.cpp" />
+		<Unit filename="src/storage/file/binary/T100BinaryFileWriter.cpp" />
 		<Unit filename="src/storage/file/text/T100TextFile.cpp" />
 		<Unit filename="src/storage/file/text/T100TextFileAccessor.cpp" />
 		<Unit filename="src/storage/file/text/T100TextFileReader.cpp" />

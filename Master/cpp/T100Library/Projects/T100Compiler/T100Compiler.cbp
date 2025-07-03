@@ -13,7 +13,16 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/compiler/base" />
+					<Add directory="include/compiler/data" />
+					<Add directory="include/compiler/scanner" />
+					<Add directory="include/compiler/common" />
+					<Add directory="include/compiler/classifier" />
 				</Compiler>
+				<Linker>
+					<Add library="../../../build/libT100File.a" />
+					<Add library="../../../build/libT100Common.a" />
+				</Linker>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/T100Compiler" prefix_auto="1" extension_auto="1" />
@@ -22,17 +31,148 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/compiler/base" />
+					<Add directory="include/compiler/data" />
+					<Add directory="include/compiler/scanner" />
+					<Add directory="include/compiler/common" />
+					<Add directory="include/compiler/classifier" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+				</Linker>
+			</Target>
+			<Target title="Library">
+				<Option output="../../../build/T100Compiler" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/compiler/base" />
+					<Add directory="include/compiler/data" />
+					<Add directory="include/compiler/scanner" />
+					<Add directory="include/compiler/common" />
+					<Add directory="include/compiler/classifier" />
+				</Compiler>
+				<Linker>
+					<Add library="../../../build/libT100Common.a" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
+			<Add directory="../T100Common/include" />
+			<Add directory="../T100Vessel/include" />
+			<Add directory="../T100File/include" />
+			<Add directory="include" />
 		</Compiler>
-		<Unit filename="main.cpp" />
+		<Unit filename="include/compiler/base/T100BackEnd.h" />
+		<Unit filename="include/compiler/base/T100Builder.h" />
+		<Unit filename="include/compiler/base/T100Classifier.h" />
+		<Unit filename="include/compiler/base/T100Compiler.h" />
+		<Unit filename="include/compiler/base/T100Drawer.h" />
+		<Unit filename="include/compiler/base/T100FSM.h" />
+		<Unit filename="include/compiler/base/T100FrontEnd.h" />
+		<Unit filename="include/compiler/base/T100KeywordTable.h" />
+		<Unit filename="include/compiler/base/T100LeafScanner.h" />
+		<Unit filename="include/compiler/base/T100LeafState.h" />
+		<Unit filename="include/compiler/base/T100LeafToken.h" />
+		<Unit filename="include/compiler/base/T100Merger.h" />
+		<Unit filename="include/compiler/base/T100MiddleEnd.h" />
+		<Unit filename="include/compiler/base/T100OperatorTable.h" />
+		<Unit filename="include/compiler/base/T100Parser.h" />
+		<Unit filename="include/compiler/base/T100Sentence.h" />
+		<Unit filename="include/compiler/base/T100Transfer.h" />
+		<Unit filename="include/compiler/classifier/T100ByteClassifier.h" />
+		<Unit filename="include/compiler/classifier/T100CharClassifier.h" />
+		<Unit filename="include/compiler/classifier/T100FunctionClassifier.h" />
+		<Unit filename="include/compiler/classifier/T100KeywordClassifier.h" />
+		<Unit filename="include/compiler/classifier/T100SegmentClassifier.h" />
+		<Unit filename="include/compiler/classifier/T100SentenceClassifier.h" />
+		<Unit filename="include/compiler/classifier/T100SourceClassifier.h" />
+		<Unit filename="include/compiler/classifier/T100StringClassifier.h" />
+		<Unit filename="include/compiler/common/T100TokenCommon.h" />
+		<Unit filename="include/compiler/data/T100BackInfo.h" />
+		<Unit filename="include/compiler/data/T100FrontInfo.h" />
+		<Unit filename="include/compiler/data/T100MiddleInfo.h" />
+		<Unit filename="include/compiler/data/T100SourceInfo.h" />
+		<Unit filename="include/compiler/scanner/T100BufferScanner.h" />
+		<Unit filename="include/compiler/scanner/T100BufferToken.h" />
+		<Unit filename="include/compiler/scanner/T100ByteScanner.h" />
+		<Unit filename="include/compiler/scanner/T100ByteToken.h" />
+		<Unit filename="include/compiler/scanner/T100CharScanner.h" />
+		<Unit filename="include/compiler/scanner/T100CharToken.h" />
+		<Unit filename="include/compiler/scanner/T100FileScanner.h" />
+		<Unit filename="include/compiler/scanner/T100FileToken.h" />
+		<Unit filename="include/compiler/scanner/T100FunctionScanner.h" />
+		<Unit filename="include/compiler/scanner/T100FunctionToken.h" />
+		<Unit filename="include/compiler/scanner/T100KeywordScanner.h" />
+		<Unit filename="include/compiler/scanner/T100KeywordToken.h" />
+		<Unit filename="include/compiler/scanner/T100ScannerTools.h" />
+		<Unit filename="include/compiler/scanner/T100SegmentScanner.h" />
+		<Unit filename="include/compiler/scanner/T100SegmentToken.h" />
+		<Unit filename="include/compiler/scanner/T100SentenceScanner.h" />
+		<Unit filename="include/compiler/scanner/T100SentenceToken.h" />
+		<Unit filename="include/compiler/scanner/T100SourceScanner.h" />
+		<Unit filename="include/compiler/scanner/T100SourceToken.h" />
+		<Unit filename="include/compiler/scanner/T100StringScanner.h" />
+		<Unit filename="include/compiler/scanner/T100StringToken.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/compiler/base/T100BackEnd.cpp" />
+		<Unit filename="src/compiler/base/T100Builder.cpp" />
+		<Unit filename="src/compiler/base/T100Classifier.cpp" />
+		<Unit filename="src/compiler/base/T100Compiler.cpp" />
+		<Unit filename="src/compiler/base/T100Drawer.cpp" />
+		<Unit filename="src/compiler/base/T100FSM.cpp" />
+		<Unit filename="src/compiler/base/T100FrontEnd.cpp" />
+		<Unit filename="src/compiler/base/T100KeywordTable.cpp" />
+		<Unit filename="src/compiler/base/T100LeafScanner.cpp" />
+		<Unit filename="src/compiler/base/T100LeafState.cpp" />
+		<Unit filename="src/compiler/base/T100LeafToken.cpp" />
+		<Unit filename="src/compiler/base/T100Merger.cpp" />
+		<Unit filename="src/compiler/base/T100MiddleEnd.cpp" />
+		<Unit filename="src/compiler/base/T100OperatorTable.cpp" />
+		<Unit filename="src/compiler/base/T100Parser.cpp" />
+		<Unit filename="src/compiler/base/T100Sentence.cpp" />
+		<Unit filename="src/compiler/base/T100Transfer.cpp" />
+		<Unit filename="src/compiler/classifier/T100ByteClassifier.cpp" />
+		<Unit filename="src/compiler/classifier/T100CharClassifier.cpp" />
+		<Unit filename="src/compiler/classifier/T100FunctionClassifier.cpp" />
+		<Unit filename="src/compiler/classifier/T100KeywordClassifier.cpp" />
+		<Unit filename="src/compiler/classifier/T100SegmentClassifier.cpp" />
+		<Unit filename="src/compiler/classifier/T100SentenceClassifier.cpp" />
+		<Unit filename="src/compiler/classifier/T100SourceClassifier.cpp" />
+		<Unit filename="src/compiler/classifier/T100StringClassifier.cpp" />
+		<Unit filename="src/compiler/data/T100BackInfo.cpp" />
+		<Unit filename="src/compiler/data/T100FrontInfo.cpp" />
+		<Unit filename="src/compiler/data/T100MiddleInfo.cpp" />
+		<Unit filename="src/compiler/data/T100SourceInfo.cpp" />
+		<Unit filename="src/compiler/scanner/T100BufferScanner.cpp" />
+		<Unit filename="src/compiler/scanner/T100BufferToken.cpp" />
+		<Unit filename="src/compiler/scanner/T100ByteScanner.cpp" />
+		<Unit filename="src/compiler/scanner/T100ByteToken.cpp" />
+		<Unit filename="src/compiler/scanner/T100CharScanner.cpp" />
+		<Unit filename="src/compiler/scanner/T100CharToken.cpp" />
+		<Unit filename="src/compiler/scanner/T100FileScanner.cpp" />
+		<Unit filename="src/compiler/scanner/T100FileToken.cpp" />
+		<Unit filename="src/compiler/scanner/T100FunctionScanner.cpp" />
+		<Unit filename="src/compiler/scanner/T100FunctionToken.cpp" />
+		<Unit filename="src/compiler/scanner/T100KeywordScanner.cpp" />
+		<Unit filename="src/compiler/scanner/T100KeywordToken.cpp" />
+		<Unit filename="src/compiler/scanner/T100ScannerTools.cpp" />
+		<Unit filename="src/compiler/scanner/T100SegmentScanner.cpp" />
+		<Unit filename="src/compiler/scanner/T100SegmentToken.cpp" />
+		<Unit filename="src/compiler/scanner/T100SentenceScanner.cpp" />
+		<Unit filename="src/compiler/scanner/T100SentenceToken.cpp" />
+		<Unit filename="src/compiler/scanner/T100SourceScanner.cpp" />
+		<Unit filename="src/compiler/scanner/T100SourceToken.cpp" />
+		<Unit filename="src/compiler/scanner/T100StringScanner.cpp" />
+		<Unit filename="src/compiler/scanner/T100StringToken.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
