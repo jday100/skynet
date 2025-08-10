@@ -51,5 +51,22 @@ T100VOID T100Folder::GetAllSubFolders(T100WSTRING_VECTOR& folders)
 
 T100VOID T100Folder::GetAllFiles(T100WSTRING_VECTOR& files)
 {
+    long        handle      = 0;
 
+    struct _wfinddata64_t       info;
+
+    T100WSTRING     path    = m_entryName + L"/*.*";
+
+    handle  = _wfindfirst64(path.c_str(), &info);
+
+    if(-1 == handle){
+        return;
+    }else{
+        do{
+            if(info.attrib & _A_NORMAL){
+                files.push_back(info.name);
+            }
+        }while(-1 != _wfindnext64(handle, &info));
+        _findclose(handle);
+    }
 }

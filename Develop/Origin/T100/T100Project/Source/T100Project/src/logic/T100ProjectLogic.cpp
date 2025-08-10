@@ -103,7 +103,7 @@ T100BOOL T100ProjectLogic::New(const T100WxFolderInfo& info)
     return T100TRUE;
 }
 
-T100BOOL T100ProjectLogic::Open(const T100WSTRING&)
+T100BOOL T100ProjectLogic::Open(const T100WSTRING& value)
 {
 
 }
