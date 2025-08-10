@@ -22,22 +22,22 @@ def make():
             -c \
             -nostdlib \
             -fno-builtin \
-            -I ../include/ "
+            -I ./include/ "
 
     result = subprocess.call(cmd +
-                            "T100CRT.c \
-                            -o T100CRT.o")
+                            "src/T100CRT.c \
+                            -o src/T100CRT.o")
 
     result = subprocess.call(
                             "ar \
                             rcs \
                             T100CRT.a \
-                            T100CRT.o")
+                            src/T100CRT.o")
 
 def clean():
     print("Cleaning ... ")
     result = subprocess.call("rm *.a")
-    result = subprocess.call("rm *.o")
+    result = subprocess.call("rm src/*.o")
 
 def rebuild():
     clean()
