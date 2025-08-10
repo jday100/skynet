@@ -22,28 +22,17 @@ def make():
             -c \
             -nostdlib \
             -fno-builtin \
-            -D_CRTBLD \
             -I ../include/ "
 
     result = subprocess.call(cmd +
-                            "crtbegin.c \
-                            -o crtbegin.o")
-
-    result = subprocess.call(cmd +
-                            "crtend.c \
-                            -o crtend.o")
-
-    result = subprocess.call(cmd +
-                            "crtexe.c \
-                            -o crtexe.o")
+                            "T100CRT.c \
+                            -o T100CRT.o")
 
     result = subprocess.call(
                             "ar \
                             rcs \
-                            crt.a \
-                            crtbegin.o \
-                            crtend.o \
-                            crtexe.o")
+                            T100CRT.a \
+                            T100CRT.o")
 
 def clean():
     print("Cleaning ... ")
