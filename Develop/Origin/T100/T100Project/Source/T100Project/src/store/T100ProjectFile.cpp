@@ -30,7 +30,17 @@ T100BOOL T100ProjectFile::IsExists()
 
 T100BOOL T100ProjectFile::Check(const T100WSTRING& filename)
 {
+    wxXmlDocument       document;
 
+    if(!document.Load(m_filename)){
+        return T100FALSE;
+    }
+
+    if(document.GetDocumentNode() != L"Project"){
+        return T100FALSE;
+    }
+
+    return T100TRUE;
 }
 
 T100BOOL T100ProjectFile::Create()

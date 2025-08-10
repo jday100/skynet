@@ -47,6 +47,7 @@ class T100WorkSpaceServe
 
     protected:
         T100WSTRING                             GetFileName(const T100WxFolderInfo&);
+        T100BOOL                                Open(const T100WSTRING_VECTOR&, T100PROJECT_INFO_VECTOR&);
 
     protected:
         std::atomic_bool                        m_opened;

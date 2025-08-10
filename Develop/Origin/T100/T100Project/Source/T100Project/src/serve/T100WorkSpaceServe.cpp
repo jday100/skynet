@@ -103,7 +103,7 @@ T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
     m_info->SetPath(info.GetPath());
     m_info->SetFileName(filename);
 
-    if(!m_projectServe.Open(folders, m_info->GetProjects())){
+    if(!Open(folders, m_info->GetProjects())){
         return T100FALSE;
     }
 
@@ -167,4 +167,25 @@ T100WSTRING T100WorkSpaceServe::GetFileName(const T100WxFolderInfo& info)
     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
 
     return filename;
+}
+
+T100BOOL T100WorkSpaceServe::Open(const T100WSTRING_VECTOR& folders, T100PROJECT_INFO_VECTOR& projects)
+{
+    for(const T100WSTRING& item : folders){
+        T100WxFolderInfo    folder;
+        T100ProjectInfo*    info    = T100NEW T100ProjectInfo();
+
+        folder.SetLabel(item);
+
+        info->SetLabel(item);
+        info->SetFileName(GetFileName(folder));
+        if(m_projectServe.Check(info)){
+            projects.push_back(info);
+        }else{
+            T100SAFE_DELETE(info);
+            return T100FALSE;
+        }
+    }
+
+    return T100TRUE;
 }
