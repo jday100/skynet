@@ -20,7 +20,8 @@ def make():
     print("Making ... ")
     cmd =   "gcc \
             -c \
-            -I ../../Source/T100CRT/include/ "
+            -I ../../Source/T100CRT/include/ \
+            -I ../../mingw/include/ "
 
     result = subprocess.call(cmd +
                             "main.c \
@@ -28,6 +29,13 @@ def make():
 
     result = subprocess.call(
                             "C:/zoo/bin/CodeBlocks/MinGW/libexec/gcc/x86_64-w64-mingw32/8.1.0/collect2 \
+                            -lkernel32 \
+                            -luser32 \
+                            -lshell32 \
+                            -lmsvcrt \
+                            C:/zmsys2/msys2/mingw64/lib/libkernel32.a \
+                            C:/zmsys2/msys2/mingw64/lib/libc++.a \
+                            C:/zmsys2/msys2/mingw64/lib/libstdc++.a \
                             main.o \
                             ../../Source/T100CRT/T100CRT.a \
                             -o main.exe")
