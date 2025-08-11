@@ -1,5 +1,7 @@
 #include "T100ProjectTree.h"
 
+#include "T100FileData.h"
+#include "T100FolderData.h"
 #include "T100ProjectData.h"
 #include "T100WorkSpaceData.h"
 #include "T100ProjectCommon.h"
@@ -1204,6 +1206,20 @@ wxTreeItemId T100ProjectTree::AppendRoot()
 T100VOID T100ProjectTree::AppendProject(wxTreeItemId parent, T100ProjectInfo* info)
 {
     T100ProjectData*    data    = T100NEW T100ProjectData(info);
+    wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), -1, -1, data);
+
+    SetItemHasChildren(item, T100TRUE);
+}
+
+T100VOID T100ProjectTree::AppendFile(wxTreeItemId parent, T100FileInfo* info)
+{
+    T100FileData*       data    = T100NEW T100FileData(info);
+    wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), -1, -1, data);
+}
+
+T100VOID T100ProjectTree::AppendFolder(wxTreeItemId parent, T100FolderInfo* info)
+{
+    T100FolderData*     data    = T100NEW T100FolderData(info);
     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), -1, -1, data);
 
     SetItemHasChildren(item, T100TRUE);

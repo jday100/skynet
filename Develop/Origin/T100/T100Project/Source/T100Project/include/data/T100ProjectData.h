@@ -1,8 +1,8 @@
 #ifndef T100PROJECTDATA_H
 #define T100PROJECTDATA_H
 
-#include "T100TreeItemData.h"
 #include "T100ProjectInfo.h"
+#include "T100TreeItemData.h"
 
 class T100ProjectData : public T100TreeItemData
 {
