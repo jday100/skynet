@@ -16,6 +16,8 @@ def args():
                     clean()
                 case 'rebuild':
                     rebuild()
+                case 'run':
+                    run()
 
 def make():
     print("Making ... ")
@@ -42,6 +44,9 @@ def clean():
 def rebuild():
     clean()
     make()
+
+def run():
+    result = subprocess.call("Sample/main/main.exe");
 
 if __name__ == "__main__":
     root = os.getcwd()
