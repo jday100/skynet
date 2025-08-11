@@ -27,7 +27,7 @@ def make():
                             -o main.o")
 
     result = subprocess.call(
-                            "ld \
+                            "C:/zoo/bin/CodeBlocks/MinGW/libexec/gcc/x86_64-w64-mingw32/8.1.0/collect2 \
                             main.o \
                             ../../Source/T100CRT/T100CRT.a \
                             -o main.exe")
