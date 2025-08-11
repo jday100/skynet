@@ -233,8 +233,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$8, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp95, D.99092
-	movq	%rax, %rcx	 # D.99092,
+	movq	%rsi, %rax	 # tmp95, D.101350
+	movq	%rax, %rcx	 # D.101350,
 .LEHB4:
 	call	_Unwind_Resume	 #
 .L7:
@@ -244,8 +244,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$8, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp96, D.99093
-	movq	%rax, %rcx	 # D.99093,
+	movq	%rsi, %rax	 # tmp96, D.101351
+	movq	%rax, %rcx	 # D.101351,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE4:
@@ -653,8 +653,8 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	leaq	-48(%rbp), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp117, D.99094
-	movq	%rax, %rcx	 # D.99094,
+	movq	%rbx, %rax	 # tmp117, D.101352
+	movq	%rax, %rcx	 # D.101352,
 .LEHB8:
 	call	_Unwind_Resume	 #
 .LEHE8:
@@ -863,7 +863,7 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	movq	$0, 168(%rbp)	 #, project
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:98:     project     = T100NEW T100ProjectInfo();
 	.loc 1 98 43
-	movl	$104, %ecx	 #,
+	movl	$152, %ecx	 #,
 	call	_Znwy	 #
 .LEHE11:
 	movq	%rax, %rbx	 # tmp117, _44
@@ -953,7 +953,7 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	movq	%rax, %rsi	 #, tmp137
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:98:     project     = T100NEW T100ProjectInfo();
 	.loc 1 98 43
-	movl	$104, %edx	 #,
+	movl	$152, %edx	 #,
 	movq	%rbx, %rcx	 # _44,
 	call	_ZdlPvy	 #
 	movq	%rsi, %rbx	 # tmp137, tmp136
@@ -1006,8 +1006,8 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	leaq	32(%rbp), %rax	 #, tmp155
 	movq	%rax, %rcx	 # tmp155,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp153, D.99096
-	movq	%rax, %rcx	 # D.99096,
+	movq	%rbx, %rax	 # tmp153, D.101354
+	movq	%rax, %rcx	 # D.101354,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .LEHE16:
@@ -1169,8 +1169,8 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp95, D.99100
-	movq	%rax, %rcx	 # D.99100,
+	movq	%rbx, %rax	 # tmp95, D.101358
+	movq	%rax, %rcx	 # D.101358,
 .LEHB19:
 	call	_Unwind_Resume	 #
 .LEHE19:
@@ -1310,8 +1310,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.99109
-	movq	%rax, %rcx	 # D.99109,
+	movq	%rbx, %rax	 # tmp90, D.101367
+	movq	%rax, %rcx	 # D.101367,
 .LEHB22:
 	call	_Unwind_Resume	 #
 .LEHE22:

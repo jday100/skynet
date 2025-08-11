@@ -1148,8 +1148,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.145633
-	movq	%rax, %rcx	 # D.145633,
+	movq	%rsi, %rax	 # tmp98, D.147929
+	movq	%rax, %rcx	 # D.147929,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -1273,8 +1273,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.145634
-	movq	%rax, %rcx	 # D.145634,
+	movq	%rbx, %rax	 # tmp106, D.147930
+	movq	%rax, %rcx	 # D.147930,
 .LEHB6:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1469,8 +1469,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.145636
-	movq	%rax, %rcx	 # D.145636,
+	movq	%rbx, %rax	 # tmp98, D.147932
+	movq	%rax, %rcx	 # D.147932,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1604,7 +1604,7 @@ _ZN15T100ProjectDataC2Ev:
 	call	_ZN16T100TreeItemDataC2Ev	 #
 	leaq	16+_ZTV15T100ProjectData(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	%rdx, (%rax)	 # _2, this_7(D)->D.139350.D.139264.D.131597._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _2, this_7(D)->D.141646.D.139264.D.131597._vptr.wxClientData
 	movq	16(%rbp), %rax	 # this, tmp93
 	addq	$16, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -1659,7 +1659,7 @@ _ZN15T100ProjectDataC2EP15T100ProjectInfo:
 .LEHE11:
 	leaq	16+_ZTV15T100ProjectData(%rip), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp95
-	movq	%rdx, (%rax)	 # _2, this_10(D)->D.139350.D.139264.D.131597._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _2, this_10(D)->D.141646.D.139264.D.131597._vptr.wxClientData
 	movq	-64(%rbp), %rax	 # this, tmp96
 	addq	$16, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -1692,8 +1692,8 @@ _ZN15T100ProjectDataC2EP15T100ProjectInfo:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN16T100TreeItemDataD2Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.145638
-	movq	%rax, %rcx	 # D.145638,
+	movq	%rbx, %rax	 # tmp100, D.147934
+	movq	%rax, %rcx	 # D.147934,
 .LEHB13:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1761,7 +1761,7 @@ _ZN15T100ProjectDataD2Ev:
 	.loc 9 16 35
 	leaq	16+_ZTV15T100ProjectData(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _1, this_5(D)->D.139350.D.139264.D.131597._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _1, this_5(D)->D.141646.D.139264.D.131597._vptr.wxClientData
 	movq	16(%rbp), %rax	 # this, tmp91
 	addq	$16, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -1938,8 +1938,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.145639
-	movq	%rax, %rcx	 # D.145639,
+	movq	%rsi, %rax	 # tmp93, D.147935
+	movq	%rax, %rcx	 # D.147935,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .LEHE16:

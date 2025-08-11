@@ -27,6 +27,8 @@ class T100WorkSpaceInfo
         T100WSTRING                     m_filename;
 
         T100PROJECT_INFO_VECTOR         m_projects;
+        T100FILE_INFO_VECTOR            m_files;
+        T100FOLDER_INFO_VECTOR          m_folders;
 
     private:
 };

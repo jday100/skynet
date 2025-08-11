@@ -1,7 +1,10 @@
 #ifndef T100FILEINFO_H
 #define T100FILEINFO_H
 
+#include <vector>
 #include "T100Common.h"
+
+#define     T100FILE_INFO_VECTOR                    std::vector<T100FileInfo*>
 
 class T100FileInfo
 {

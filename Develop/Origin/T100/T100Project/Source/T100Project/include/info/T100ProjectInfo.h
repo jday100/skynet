@@ -1,8 +1,8 @@
 #ifndef T100PROJECTINFO_H
 #define T100PROJECTINFO_H
 
-#include <vector>
-#include "T100Common.h"
+#include "T100FileInfo.h"
+#include "T100FolderInfo.h"
 
 #define     T100PROJECT_INFO_VECTOR                 std::vector<T100ProjectInfo*>
 
@@ -25,6 +25,9 @@ class T100ProjectInfo
         T100WSTRING                 m_label;
         T100WSTRING                 m_path;
         T100WSTRING                 m_filename;
+
+        T100FILE_INFO_VECTOR        m_files;
+        T100FOLDER_INFO_VECTOR      m_folders;
 
     private:
 };
