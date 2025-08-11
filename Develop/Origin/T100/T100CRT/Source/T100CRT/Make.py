@@ -28,10 +28,15 @@ def make():
                             "src/T100CRT.c \
                             -o src/T100CRT.o")
 
+    result = subprocess.call(cmd +
+                            "src/stdio.c \
+                            -o src/stdio.o")
+
     result = subprocess.call(
                             "ar \
                             rcs \
                             T100CRT.a \
+                            src/stdio.o \
                             src/T100CRT.o")
 
 def clean():
