@@ -70,3 +70,29 @@ T100VOID T100Folder::GetAllFiles(T100WSTRING_VECTOR& files)
         _findclose(handle);
     }
 }
+
+T100VOID T100Folder::List(T100WSTRING_VECTOR& folders, T100WSTRING_VECTOR& files)
+{
+    long        handle      = 0;
+
+    struct _wfinddata64_t       info;
+
+    T100WSTRING     path    = m_entryName + L"/*.*";
+
+    handle  = _wfindfirst64(path.c_str(), &info);
+
+    if(-1 == handle){
+        return;
+    }else{
+        do{
+            if(info.attrib == _A_NORMAL){
+                files.push_back(info.name);
+            }else if(info.attrib & _A_SUBDIR){
+                if(wcscmp(info.name, L".") != 0 && wcscmp(info.name, L"..") != 0){
+                    folders.push_back(info.name);
+                }
+            }
+        }while(-1 != _wfindnext64(handle, &info));
+        _findclose(handle);
+    }
+}

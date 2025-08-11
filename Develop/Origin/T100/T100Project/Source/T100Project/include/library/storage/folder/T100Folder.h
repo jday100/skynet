@@ -11,6 +11,8 @@ class T100Folder : public T100FSEntry
 
         T100BOOL            Create();
 
+        T100VOID            List(T100WSTRING_VECTOR&, T100WSTRING_VECTOR&);
+
         T100VOID            GetAllSubFolders(T100WSTRING_VECTOR&);
         T100VOID            GetAllFiles(T100WSTRING_VECTOR&);
 
