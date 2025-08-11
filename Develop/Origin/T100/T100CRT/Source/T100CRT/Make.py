@@ -29,6 +29,10 @@ def make():
                             -o src/T100CRT.o")
 
     result = subprocess.call(cmd +
+                            "src/string.c \
+                            -o src/string.o")
+
+    result = subprocess.call(cmd +
                             "src/stdio.c \
                             -o src/stdio.o")
 
@@ -36,6 +40,7 @@ def make():
                             "ar \
                             rcs \
                             T100CRT.a \
+                            src/string.o \
                             src/stdio.o \
                             src/T100CRT.o")
 

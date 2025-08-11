@@ -2,18 +2,6 @@
 
 #include <windows.h>
 
-int strlen(const char* value)
-{
-    int result  = 0;
-
-    do{
-        if(value[result++] == '\0'){
-            break;
-        }
-    }while(true);
-    return result;
-}
-
 int printf(const char* value, ...)
 {
     HANDLE          handle;

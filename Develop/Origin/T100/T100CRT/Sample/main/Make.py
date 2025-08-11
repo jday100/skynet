@@ -28,6 +28,16 @@ def make():
                             -o main.o")
 
     result = subprocess.call(
+                            "C:/zmsys2/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/collect2 \
+                            -nostdlib \
+                            -L /mingw64/lib/ \
+                            C:/zmsys2/msys2/mingw64/lib/libkernel32.a \
+                            main.o \
+                            ../../Source/T100CRT/T100CRT.a \
+                            -o main.exe")
+
+    """
+    result = subprocess.call(
                             "C:/zoo/bin/CodeBlocks/MinGW/libexec/gcc/x86_64-w64-mingw32/8.1.0/collect2 \
                             -lkernel32 \
                             -luser32 \
@@ -39,6 +49,7 @@ def make():
                             main.o \
                             ../../Source/T100CRT/T100CRT.a \
                             -o main.exe")
+    """
 
 def clean():
     print("Cleaning ... ")
