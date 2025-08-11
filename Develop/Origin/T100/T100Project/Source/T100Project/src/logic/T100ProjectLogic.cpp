@@ -38,7 +38,7 @@ T100ProjectInfo* T100ProjectLogic::GetProjectInfo()
     return m_project;
 }
 
-T100BOOL T100ProjectLogic::Check(T100ProjectInfo* info)
+T100BOOL T100ProjectLogic::Check(T100WxFolderInfo* info)
 {
     if(!info){
         return T100FALSE;
@@ -49,6 +49,9 @@ T100BOOL T100ProjectLogic::Check(T100ProjectInfo* info)
     }
 
     T100WSTRING             filename;
+
+    filename    = GetFileName(*info);
+
     T100ProjectFile         projectFile(filename);
 
     if(!m_file->IsExists(filename)){

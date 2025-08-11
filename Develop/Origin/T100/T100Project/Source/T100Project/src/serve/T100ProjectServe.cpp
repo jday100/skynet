@@ -27,7 +27,7 @@ T100ProjectInfo* T100ProjectServe::GetProjectInfo()
     return m_logic.GetProjectInfo();
 }
 
-T100BOOL T100ProjectServe::Check(T100ProjectInfo* info)
+T100BOOL T100ProjectServe::Check(T100WxFolderInfo* info)
 {
     return m_logic.Check(info);
 }

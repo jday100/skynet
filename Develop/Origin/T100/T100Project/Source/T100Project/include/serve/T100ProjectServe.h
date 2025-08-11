@@ -15,7 +15,7 @@ class T100ProjectServe
 
         T100ProjectInfo*                        GetProjectInfo();
 
-        T100BOOL                                Check(T100ProjectInfo*);
+        T100BOOL                                Check(T100WxFolderInfo*);
 
         T100BOOL                                New(const T100WxFolderInfo&);
         T100BOOL                                Open(const T100WSTRING&);

@@ -172,17 +172,17 @@ T100WSTRING T100WorkSpaceServe::GetFileName(const T100WxFolderInfo& info)
 T100BOOL T100WorkSpaceServe::Open(const T100WSTRING_VECTOR& folders, T100PROJECT_INFO_VECTOR& projects)
 {
     for(const T100WSTRING& item : folders){
-        T100WxFolderInfo    folder;
-        T100ProjectInfo*    info    = T100NEW T100ProjectInfo();
+        T100WxFolderInfo        folder;
 
         folder.SetLabel(item);
+        T100WSTRING     path    = m_info->GetPath() + L"/" + item;
+        folder.SetPath(path);
 
-        info->SetLabel(item);
-        info->SetFileName(GetFileName(folder));
-        if(m_projectServe.Check(info)){
+        if(m_projectServe.Check(&folder)){
+            T100ProjectInfo*    info    = T100NEW T100ProjectInfo();
+
             projects.push_back(info);
         }else{
-            T100SAFE_DELETE(info);
             return T100FALSE;
         }
     }

@@ -233,8 +233,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$8, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp95, D.99091
-	movq	%rax, %rcx	 # D.99091,
+	movq	%rsi, %rax	 # tmp95, D.99092
+	movq	%rax, %rcx	 # D.99092,
 .LEHB4:
 	call	_Unwind_Resume	 #
 .L7:
@@ -244,8 +244,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$8, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp96, D.99092
-	movq	%rax, %rcx	 # D.99092,
+	movq	%rsi, %rax	 # tmp96, D.99093
+	movq	%rax, %rcx	 # D.99093,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE4:
@@ -488,10 +488,10 @@ _ZN16T100ProjectLogic14GetProjectInfoEv:
 .LFE5448:
 	.seh_endproc
 	.align 2
-	.globl	_ZN16T100ProjectLogic5CheckEP15T100ProjectInfo
-	.def	_ZN16T100ProjectLogic5CheckEP15T100ProjectInfo;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN16T100ProjectLogic5CheckEP15T100ProjectInfo
-_ZN16T100ProjectLogic5CheckEP15T100ProjectInfo:
+	.globl	_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo
+	.def	_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo
+_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 .LFB5449:
 	.loc 1 42 1
 	.cfi_startproc
@@ -503,18 +503,18 @@ _ZN16T100ProjectLogic5CheckEP15T100ProjectInfo:
 	.seh_pushreg	%rbx
 	.cfi_def_cfa_offset 24
 	.cfi_offset 3, -24
-	subq	$120, %rsp	 #,
-	.seh_stackalloc	120
-	.cfi_def_cfa_offset 144
+	subq	$152, %rsp	 #,
+	.seh_stackalloc	152
+	.cfi_def_cfa_offset 176
 	leaq	128(%rsp), %rbp	 #,
 	.seh_setframe	%rbp, 128
-	.cfi_def_cfa 6, 16
+	.cfi_def_cfa 6, 48
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # info, info
+	movq	%rcx, 48(%rbp)	 # this, this
+	movq	%rdx, 56(%rbp)	 # info, info
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:43:     if(!info){
 	.loc 1 43 5
-	cmpq	$0, 24(%rbp)	 #, info
+	cmpq	$0, 56(%rbp)	 #, info
 	jne	.L20	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:44:         return T100FALSE;
 	.loc 1 44 16
@@ -523,14 +523,14 @@ _ZN16T100ProjectLogic5CheckEP15T100ProjectInfo:
 .L20:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:47:     if(!m_folder->IsExists(info->GetPath())){
 	.loc 1 47 9
-	movq	16(%rbp), %rax	 # this, tmp99
+	movq	48(%rbp), %rax	 # this, tmp99
 	movq	16(%rax), %rbx	 # this_17(D)->m_folder, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:47:     if(!m_folder->IsExists(info->GetPath())){
 	.loc 1 47 27
-	movq	24(%rbp), %rax	 # info, tmp100
+	movq	56(%rbp), %rax	 # info, tmp100
 	movq	%rax, %rcx	 # tmp100,
 .LEHB5:
-	call	_ZN15T100ProjectInfo7GetPathB5cxx11Ev	 #
+	call	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 # _2,
 	movq	%rbx, %rcx	 # _1,
 	call	_ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
@@ -552,102 +552,121 @@ _ZN16T100ProjectLogic5CheckEP15T100ProjectInfo:
 	leaq	-48(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:52:     T100ProjectFile         projectFile(filename);
-	.loc 1 52 49
-	leaq	-48(%rbp), %rdx	 #, tmp102
-	leaq	-96(%rbp), %rax	 #, tmp103
-	movq	%rax, %rcx	 # tmp103,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:53:     filename    = GetFileName(*info);
+	.loc 1 53 30
+	leaq	-16(%rbp), %rax	 #, tmp102
+	movq	56(%rbp), %rdx	 # info, tmp103
+	movq	%rdx, %r8	 # tmp103,
+	movq	48(%rbp), %rdx	 # this,
+	movq	%rax, %rcx	 # tmp102,
 .LEHB6:
+	call	_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:53:     filename    = GetFileName(*info);
+	.loc 1 53 36 discriminator 1
+	leaq	-16(%rbp), %rdx	 #, tmp104
+	leaq	-48(%rbp), %rax	 #, tmp105
+	movq	%rax, %rcx	 # tmp105,
+	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:53:     filename    = GetFileName(*info);
+	.loc 1 53 30 discriminator 1
+	leaq	-16(%rbp), %rax	 #, tmp106
+	movq	%rax, %rcx	 # tmp106,
+	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:55:     T100ProjectFile         projectFile(filename);
+	.loc 1 55 49 discriminator 1
+	leaq	-48(%rbp), %rdx	 #, tmp107
+	leaq	-96(%rbp), %rax	 #, tmp108
+	movq	%rax, %rcx	 # tmp108,
 	call	_ZN15T100ProjectFileC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE6:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:54:     if(!m_file->IsExists(filename)){
-	.loc 1 54 9
-	movq	16(%rbp), %rax	 # this, tmp104
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:57:     if(!m_file->IsExists(filename)){
+	.loc 1 57 9
+	movq	48(%rbp), %rax	 # this, tmp109
 	movq	8(%rax), %rcx	 # this_17(D)->m_file, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:54:     if(!m_file->IsExists(filename)){
-	.loc 1 54 25
-	leaq	-48(%rbp), %rax	 #, tmp105
-	movq	%rax, %rdx	 # tmp105,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:57:     if(!m_file->IsExists(filename)){
+	.loc 1 57 25
+	leaq	-48(%rbp), %rax	 #, tmp110
+	movq	%rax, %rdx	 # tmp110,
 .LEHB7:
 	call	_ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:54:     if(!m_file->IsExists(filename)){
-	.loc 1 54 8
-	xorl	$1, %eax	 #, retval.1_28
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:54:     if(!m_file->IsExists(filename)){
-	.loc 1 54 5
-	testb	%al, %al	 # retval.1_28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:57:     if(!m_file->IsExists(filename)){
+	.loc 1 57 8
+	xorl	$1, %eax	 #, retval.1_32
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:57:     if(!m_file->IsExists(filename)){
+	.loc 1 57 5
+	testb	%al, %al	 # retval.1_32
 	je	.L23	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:55:         return T100FALSE;
-	.loc 1 55 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:58:         return T100FALSE;
+	.loc 1 58 16
 	movl	$0, %ebx	 #, _7
 	jmp	.L24	 #
 .L23:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:58:     if(!projectFile.Check(filename)){
-	.loc 1 58 26
-	leaq	-48(%rbp), %rdx	 #, tmp106
-	leaq	-96(%rbp), %rax	 #, tmp107
-	movq	%rax, %rcx	 # tmp107,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:61:     if(!projectFile.Check(filename)){
+	.loc 1 61 26
+	leaq	-48(%rbp), %rdx	 #, tmp111
+	leaq	-96(%rbp), %rax	 #, tmp112
+	movq	%rax, %rcx	 # tmp112,
 	call	_ZN15T100ProjectFile5CheckERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE7:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:58:     if(!projectFile.Check(filename)){
-	.loc 1 58 8
-	xorl	$1, %eax	 #, retval.2_32
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:58:     if(!projectFile.Check(filename)){
-	.loc 1 58 5
-	testb	%al, %al	 # retval.2_32
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:61:     if(!projectFile.Check(filename)){
+	.loc 1 61 8
+	xorl	$1, %eax	 #, retval.2_36
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:61:     if(!projectFile.Check(filename)){
+	.loc 1 61 5
+	testb	%al, %al	 # retval.2_36
 	je	.L25	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:59:         return T100FALSE;
-	.loc 1 59 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:62:         return T100FALSE;
+	.loc 1 62 16
 	movl	$0, %ebx	 #, _7
 	jmp	.L24	 #
 .L25:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:61:     return T100TRUE;
-	.loc 1 61 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:64:     return T100TRUE;
+	.loc 1 64 12
 	movl	$1, %ebx	 #, _7
 .L24:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:52:     T100ProjectFile         projectFile(filename);
-	.loc 1 52 49
-	leaq	-96(%rbp), %rax	 #, tmp108
-	movq	%rax, %rcx	 # tmp108,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:55:     T100ProjectFile         projectFile(filename);
+	.loc 1 55 49
+	leaq	-96(%rbp), %rax	 #, tmp113
+	movq	%rax, %rcx	 # tmp113,
 	call	_ZN15T100ProjectFileD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:51:     T100WSTRING             filename;
 	.loc 1 51 29
-	leaq	-48(%rbp), %rax	 #, tmp109
-	movq	%rax, %rcx	 # tmp109,
+	leaq	-48(%rbp), %rax	 #, tmp114
+	movq	%rax, %rcx	 # tmp114,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 .L26:
 	movl	%ebx, %eax	 # _7, <retval>
 	jmp	.L31	 #
 .L30:
-	movq	%rax, %rbx	 #, tmp113
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:52:     T100ProjectFile         projectFile(filename);
-	.loc 1 52 49
-	leaq	-96(%rbp), %rax	 #, tmp111
-	movq	%rax, %rcx	 # tmp111,
+	movq	%rax, %rbx	 #, tmp118
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:55:     T100ProjectFile         projectFile(filename);
+	.loc 1 55 49
+	leaq	-96(%rbp), %rax	 #, tmp116
+	movq	%rax, %rcx	 # tmp116,
 	call	_ZN15T100ProjectFileD1Ev	 #
 	jmp	.L28	 #
 .L29:
-	movq	%rax, %rbx	 #, tmp112
+	movq	%rax, %rbx	 #, tmp117
 .L28:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:51:     T100WSTRING             filename;
 	.loc 1 51 29
-	leaq	-48(%rbp), %rax	 #, tmp116
-	movq	%rax, %rcx	 # tmp116,
+	leaq	-48(%rbp), %rax	 #, tmp121
+	movq	%rax, %rcx	 # tmp121,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp112, D.99093
-	movq	%rax, %rcx	 # D.99093,
+	movq	%rbx, %rax	 # tmp117, D.99094
+	movq	%rax, %rcx	 # D.99094,
 .LEHB8:
 	call	_Unwind_Resume	 #
 .LEHE8:
 .L31:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:62: }
-	.loc 1 62 1
-	addq	$120, %rsp	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:65: }
+	.loc 1 65 1
+	addq	$152, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
 	popq	%rbp	 #
 	.cfi_restore 6
-	.cfi_def_cfa 7, -104
+	.cfi_def_cfa 7, -136
 	ret	
 	.cfi_endproc
 .LFE5449:
@@ -688,8 +707,8 @@ _ZN16T100ProjectLogic5CheckEP15T100ProjectInfo:
 	.def	_ZN16T100ProjectLogic3NewERK16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN16T100ProjectLogic3NewERK16T100WxFolderInfo
 _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
-.LFB5450:
-	.loc 1 65 1
+.LFB5453:
+	.loc 1 68 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -712,18 +731,18 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	.seh_endprologue
 	movq	%rcx, 208(%rbp)	 # this, this
 	movq	%rdx, 216(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:66:     T100WSTRING         name;
-	.loc 1 66 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:69:     T100WSTRING         name;
+	.loc 1 69 25
 	leaq	32(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:67:     T100WSTRING         filename;
-	.loc 1 67 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:70:     T100WSTRING         filename;
+	.loc 1 70 25
 	movq	%rbp, %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:69:     name    = GetFolderName(info);
-	.loc 1 69 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:72:     name    = GetFolderName(info);
+	.loc 1 72 28
 	leaq	64(%rbp), %rax	 #, tmp99
 	movq	216(%rbp), %rdx	 # info, tmp100
 	movq	%rdx, %r8	 # tmp100,
@@ -731,119 +750,119 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	movq	%rax, %rcx	 # tmp99,
 .LEHB9:
 	call	_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:69:     name    = GetFolderName(info);
-	.loc 1 69 33 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:72:     name    = GetFolderName(info);
+	.loc 1 72 33 discriminator 1
 	leaq	64(%rbp), %rdx	 #, tmp101
 	leaq	32(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:69:     name    = GetFolderName(info);
-	.loc 1 69 28 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:72:     name    = GetFolderName(info);
+	.loc 1 72 28 discriminator 1
 	leaq	64(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:71:     T100Folder          folder(name);
-	.loc 1 71 36 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:74:     T100Folder          folder(name);
+	.loc 1 74 36 discriminator 1
 	leaq	32(%rbp), %rdx	 #, tmp104
 	leaq	-48(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN10T100FolderC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE9:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:73:     if(folder.IsExists()){
-	.loc 1 73 23
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:76:     if(folder.IsExists()){
+	.loc 1 76 23
 	leaq	-48(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 .LEHB10:
 	call	_ZN11T100FSEntry8IsExistsEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:73:     if(folder.IsExists()){
-	.loc 1 73 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:76:     if(folder.IsExists()){
+	.loc 1 76 5
 	testb	%al, %al	 # _22
 	je	.L33	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:74:         return T100FALSE;
-	.loc 1 74 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:77:         return T100FALSE;
+	.loc 1 77 16
 	movl	$0, %ebx	 #, _3
 	jmp	.L34	 #
 .L33:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:77:     if(!folder.Create()){
-	.loc 1 77 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:80:     if(!folder.Create()){
+	.loc 1 80 22
 	leaq	-48(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN10T100Folder6CreateEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:77:     if(!folder.Create()){
-	.loc 1 77 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:80:     if(!folder.Create()){
+	.loc 1 80 8
 	xorl	$1, %eax	 #, retval.4_27
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:77:     if(!folder.Create()){
-	.loc 1 77 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:80:     if(!folder.Create()){
+	.loc 1 80 5
 	testb	%al, %al	 # retval.4_27
 	je	.L35	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:78:         return T100FALSE;
-	.loc 1 78 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:81:         return T100FALSE;
+	.loc 1 81 16
 	movl	$0, %ebx	 #, _3
 	jmp	.L34	 #
 .L35:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:81:     filename    = GetFileName(info);
-	.loc 1 81 30
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:84:     filename    = GetFileName(info);
+	.loc 1 84 30
 	leaq	96(%rbp), %rax	 #, tmp108
 	movq	216(%rbp), %rdx	 # info, tmp109
 	movq	%rdx, %r8	 # tmp109,
 	movq	208(%rbp), %rdx	 # this,
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:81:     filename    = GetFileName(info);
-	.loc 1 81 35 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:84:     filename    = GetFileName(info);
+	.loc 1 84 35 discriminator 1
 	leaq	96(%rbp), %rdx	 #, tmp110
 	movq	%rbp, %rax	 #, tmp111
 	movq	%rax, %rcx	 # tmp111,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:81:     filename    = GetFileName(info);
-	.loc 1 81 30 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:84:     filename    = GetFileName(info);
+	.loc 1 84 30 discriminator 1
 	leaq	96(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:83:     T100ProjectFile     file(filename);
-	.loc 1 83 38 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:86:     T100ProjectFile     file(filename);
+	.loc 1 86 38 discriminator 1
 	movq	%rbp, %rdx	 #, tmp113
 	leaq	-96(%rbp), %rax	 #, tmp114
 	movq	%rax, %rcx	 # tmp114,
 	call	_ZN15T100ProjectFileC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE10:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:85:     if(file.IsExists()){
-	.loc 1 85 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:88:     if(file.IsExists()){
+	.loc 1 88 21
 	leaq	-96(%rbp), %rax	 #, tmp115
 	movq	%rax, %rcx	 # tmp115,
 .LEHB11:
 	call	_ZN15T100ProjectFile8IsExistsEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:85:     if(file.IsExists()){
-	.loc 1 85 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:88:     if(file.IsExists()){
+	.loc 1 88 5
 	testb	%al, %al	 # _35
 	je	.L36	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:86:         return T100FALSE;
-	.loc 1 86 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:89:         return T100FALSE;
+	.loc 1 89 16
 	movl	$0, %ebx	 #, _3
 	jmp	.L37	 #
 .L36:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:89:     if(!file.Create()){
-	.loc 1 89 20
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:92:     if(!file.Create()){
+	.loc 1 92 20
 	leaq	-96(%rbp), %rax	 #, tmp116
 	movq	%rax, %rcx	 # tmp116,
 	call	_ZN15T100ProjectFile6CreateEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:89:     if(!file.Create()){
-	.loc 1 89 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:92:     if(!file.Create()){
+	.loc 1 92 8
 	xorl	$1, %eax	 #, retval.6_40
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:89:     if(!file.Create()){
-	.loc 1 89 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:92:     if(!file.Create()){
+	.loc 1 92 5
 	testb	%al, %al	 # retval.6_40
 	je	.L38	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:90:         return T100FALSE;
-	.loc 1 90 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:93:         return T100FALSE;
+	.loc 1 93 16
 	movl	$0, %ebx	 #, _3
 	jmp	.L37	 #
 .L38:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:93:     T100ProjectInfo*    project     = T100NULL;
-	.loc 1 93 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:96:     T100ProjectInfo*    project     = T100NULL;
+	.loc 1 96 25
 	movq	$0, 168(%rbp)	 #, project
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:95:     project     = T100NEW T100ProjectInfo();
-	.loc 1 95 43
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:98:     project     = T100NEW T100ProjectInfo();
+	.loc 1 98 43
 	movl	$104, %ecx	 #,
 	call	_Znwy	 #
 .LEHE11:
@@ -852,11 +871,11 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 .LEHB12:
 	call	_ZN15T100ProjectInfoC1Ev	 #
 .LEHE12:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:95:     project     = T100NEW T100ProjectInfo();
-	.loc 1 95 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:98:     project     = T100NEW T100ProjectInfo();
+	.loc 1 98 17
 	movq	%rbx, 168(%rbp)	 # _44, project
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:97:     project->SetLabel(L"project");
-	.loc 1 97 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:100:     project->SetLabel(L"project");
+	.loc 1 100 22
 	leaq	167(%rbp), %rax	 #, tmp118
 	movq	%rax, %rcx	 # tmp118,
 	call	_ZNSaIwEC1Ev	 #
@@ -868,63 +887,63 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 .LEHB13:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1EPKwRKS3_	 #
 .LEHE13:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:97:     project->SetLabel(L"project");
-	.loc 1 97 22 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:100:     project->SetLabel(L"project");
+	.loc 1 100 22 is_stmt 0 discriminator 2
 	leaq	128(%rbp), %rax	 #, tmp121
 	movq	168(%rbp), %rcx	 # project, tmp122
 	movq	%rax, %rdx	 # tmp121,
 .LEHB14:
 	call	_ZN15T100ProjectInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE14:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:97:     project->SetLabel(L"project");
-	.loc 1 97 22 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:100:     project->SetLabel(L"project");
+	.loc 1 100 22 discriminator 4
 	leaq	128(%rbp), %rax	 #, tmp123
 	movq	%rax, %rcx	 # tmp123,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	leaq	167(%rbp), %rax	 #, tmp124
 	movq	%rax, %rcx	 # tmp124,
 	call	_ZNSaIwED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:98:     project->SetPath(name);
-	.loc 1 98 21 is_stmt 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:101:     project->SetPath(name);
+	.loc 1 101 21 is_stmt 1 discriminator 4
 	leaq	32(%rbp), %rax	 #, tmp125
 	movq	168(%rbp), %rcx	 # project, tmp126
 	movq	%rax, %rdx	 # tmp125,
 .LEHB15:
 	call	_ZN15T100ProjectInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:99:     project->SetFileName(filename);
-	.loc 1 99 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:102:     project->SetFileName(filename);
+	.loc 1 102 25
 	movq	%rbp, %rax	 #, tmp127
 	movq	168(%rbp), %rcx	 # project, tmp128
 	movq	%rax, %rdx	 # tmp127,
 	call	_ZN15T100ProjectInfo11SetFileNameERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE15:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:101:     m_project   = project;
-	.loc 1 101 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:104:     m_project   = project;
+	.loc 1 104 17
 	movq	208(%rbp), %rax	 # this, tmp129
 	movq	168(%rbp), %rdx	 # project, tmp130
 	movq	%rdx, 24(%rax)	 # tmp130, this_14(D)->m_project
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:103:     return T100TRUE;
-	.loc 1 103 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:106:     return T100TRUE;
+	.loc 1 106 12
 	movl	$1, %ebx	 #, _3
 .L37:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:83:     T100ProjectFile     file(filename);
-	.loc 1 83 38
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:86:     T100ProjectFile     file(filename);
+	.loc 1 86 38
 	leaq	-96(%rbp), %rax	 #, tmp131
 	movq	%rax, %rcx	 # tmp131,
 	call	_ZN15T100ProjectFileD1Ev	 #
 .L34:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:71:     T100Folder          folder(name);
-	.loc 1 71 36
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:74:     T100Folder          folder(name);
+	.loc 1 74 36
 	leaq	-48(%rbp), %rax	 #, tmp132
 	movq	%rax, %rcx	 # tmp132,
 	call	_ZN10T100FolderD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:67:     T100WSTRING         filename;
-	.loc 1 67 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:70:     T100WSTRING         filename;
+	.loc 1 70 25
 	movq	%rbp, %rax	 #, tmp133
 	movq	%rax, %rcx	 # tmp133,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:66:     T100WSTRING         name;
-	.loc 1 66 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:69:     T100WSTRING         name;
+	.loc 1 69 25
 	leaq	32(%rbp), %rax	 #, tmp134
 	movq	%rax, %rcx	 # tmp134,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -932,8 +951,8 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	jmp	.L52	 #
 .L49:
 	movq	%rax, %rsi	 #, tmp137
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:95:     project     = T100NEW T100ProjectInfo();
-	.loc 1 95 43
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:98:     project     = T100NEW T100ProjectInfo();
+	.loc 1 98 43
 	movl	$104, %edx	 #,
 	movq	%rbx, %rcx	 # _44,
 	call	_ZdlPvy	 #
@@ -941,8 +960,8 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	jmp	.L41	 #
 .L51:
 	movq	%rax, %rbx	 #, tmp142
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:97:     project->SetLabel(L"project");
-	.loc 1 97 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:100:     project->SetLabel(L"project");
+	.loc 1 100 22
 	leaq	128(%rbp), %rax	 #, tmp140
 	movq	%rax, %rcx	 # tmp140,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -950,8 +969,8 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 .L50:
 	movq	%rax, %rbx	 #, tmp141
 .L43:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:97:     project->SetLabel(L"project");
-	.loc 1 97 22 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:100:     project->SetLabel(L"project");
+	.loc 1 100 22 is_stmt 0 discriminator 1
 	leaq	167(%rbp), %rax	 #, tmp145
 	movq	%rax, %rcx	 # tmp145,
 	call	_ZNSaIwED1Ev	 #
@@ -959,8 +978,8 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 .L48:
 	movq	%rax, %rbx	 #, tmp136
 .L41:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:83:     T100ProjectFile     file(filename);
-	.loc 1 83 38 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:86:     T100ProjectFile     file(filename);
+	.loc 1 86 38 is_stmt 1
 	leaq	-96(%rbp), %rax	 #, tmp146
 	movq	%rax, %rcx	 # tmp146,
 	call	_ZN15T100ProjectFileD1Ev	 #
@@ -968,8 +987,8 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 .L47:
 	movq	%rax, %rbx	 #, tmp147
 .L44:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:71:     T100Folder          folder(name);
-	.loc 1 71 36
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:74:     T100Folder          folder(name);
+	.loc 1 74 36
 	leaq	-48(%rbp), %rax	 #, tmp149
 	movq	%rax, %rcx	 # tmp149,
 	call	_ZN10T100FolderD1Ev	 #
@@ -977,24 +996,24 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 .L46:
 	movq	%rax, %rbx	 #, tmp150
 .L45:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:67:     T100WSTRING         filename;
-	.loc 1 67 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:70:     T100WSTRING         filename;
+	.loc 1 70 25
 	movq	%rbp, %rax	 #, tmp152
 	movq	%rax, %rcx	 # tmp152,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:66:     T100WSTRING         name;
-	.loc 1 66 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:69:     T100WSTRING         name;
+	.loc 1 69 25
 	leaq	32(%rbp), %rax	 #, tmp155
 	movq	%rax, %rcx	 # tmp155,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp153, D.99094
-	movq	%rax, %rcx	 # D.99094,
+	movq	%rbx, %rax	 # tmp153, D.99096
+	movq	%rax, %rcx	 # D.99096,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .LEHE16:
 .L52:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:104: }
-	.loc 1 104 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:107: }
+	.loc 1 107 1
 	addq	$304, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -1005,48 +1024,48 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	.cfi_def_cfa 7, -280
 	ret	
 	.cfi_endproc
-.LFE5450:
+.LFE5453:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA5450:
+.LLSDA5453:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE5450-.LLSDACSB5450
-.LLSDACSB5450:
-	.uleb128 .LEHB9-.LFB5450
+	.uleb128 .LLSDACSE5453-.LLSDACSB5453
+.LLSDACSB5453:
+	.uleb128 .LEHB9-.LFB5453
 	.uleb128 .LEHE9-.LEHB9
-	.uleb128 .L46-.LFB5450
+	.uleb128 .L46-.LFB5453
 	.uleb128 0
-	.uleb128 .LEHB10-.LFB5450
+	.uleb128 .LEHB10-.LFB5453
 	.uleb128 .LEHE10-.LEHB10
-	.uleb128 .L47-.LFB5450
+	.uleb128 .L47-.LFB5453
 	.uleb128 0
-	.uleb128 .LEHB11-.LFB5450
+	.uleb128 .LEHB11-.LFB5453
 	.uleb128 .LEHE11-.LEHB11
-	.uleb128 .L48-.LFB5450
+	.uleb128 .L48-.LFB5453
 	.uleb128 0
-	.uleb128 .LEHB12-.LFB5450
+	.uleb128 .LEHB12-.LFB5453
 	.uleb128 .LEHE12-.LEHB12
-	.uleb128 .L49-.LFB5450
+	.uleb128 .L49-.LFB5453
 	.uleb128 0
-	.uleb128 .LEHB13-.LFB5450
+	.uleb128 .LEHB13-.LFB5453
 	.uleb128 .LEHE13-.LEHB13
-	.uleb128 .L50-.LFB5450
+	.uleb128 .L50-.LFB5453
 	.uleb128 0
-	.uleb128 .LEHB14-.LFB5450
+	.uleb128 .LEHB14-.LFB5453
 	.uleb128 .LEHE14-.LEHB14
-	.uleb128 .L51-.LFB5450
+	.uleb128 .L51-.LFB5453
 	.uleb128 0
-	.uleb128 .LEHB15-.LFB5450
+	.uleb128 .LEHB15-.LFB5453
 	.uleb128 .LEHE15-.LEHB15
-	.uleb128 .L48-.LFB5450
+	.uleb128 .L48-.LFB5453
 	.uleb128 0
-	.uleb128 .LEHB16-.LFB5450
+	.uleb128 .LEHB16-.LFB5453
 	.uleb128 .LEHE16-.LEHB16
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE5450:
+.LLSDACSE5453:
 	.text
 	.seh_endproc
 	.align 2
@@ -1055,7 +1074,7 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	.seh_proc	_ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LFB5454:
-	.loc 1 107 1
+	.loc 1 110 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1067,8 +1086,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # value, value
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:109: }
-	.loc 1 109 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:112: }
+	.loc 1 112 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1091,7 +1110,7 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.seh_proc	_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo
 _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 .LFB5455:
-	.loc 1 112 1
+	.loc 1 115 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1111,22 +1130,22 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	movq	%rcx, -32(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, -24(%rbp)	 # this, this
 	movq	%r8, -16(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:113:     return info.GetPath() + L"/project/" + L"project.pjt";
-	.loc 1 113 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     return info.GetPath() + L"/project/" + L"project.pjt";
+	.loc 1 116 25
 	movq	-16(%rbp), %rax	 # info, tmp89
 	movq	%rax, %rcx	 # tmp89,
 .LEHB17:
 	call	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:113:     return info.GetPath() + L"/project/" + L"project.pjt";
-	.loc 1 113 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     return info.GetPath() + L"/project/" + L"project.pjt";
+	.loc 1 116 27
 	leaq	-96(%rbp), %rax	 #, tmp90
 	leaq	.LC1(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE17:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:113:     return info.GetPath() + L"/project/" + L"project.pjt";
-	.loc 1 113 44
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     return info.GetPath() + L"/project/" + L"project.pjt";
+	.loc 1 116 44
 	movq	-32(%rbp), %rcx	 # <retval>, tmp91
 	leaq	-96(%rbp), %rax	 #, tmp92
 	leaq	.LC2(%rip), %r8	 #,
@@ -1135,29 +1154,29 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
 .LEHE18:
 	nop	
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:113:     return info.GetPath() + L"/project/" + L"project.pjt";
-	.loc 1 113 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     return info.GetPath() + L"/project/" + L"project.pjt";
+	.loc 1 116 27
 	leaq	-96(%rbp), %rax	 #, tmp93
 	movq	%rax, %rcx	 # tmp93,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:113:     return info.GetPath() + L"/project/" + L"project.pjt";
-	.loc 1 113 44
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     return info.GetPath() + L"/project/" + L"project.pjt";
+	.loc 1 116 44
 	jmp	.L58	 #
 .L57:
 	movq	%rax, %rbx	 #, tmp95
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:113:     return info.GetPath() + L"/project/" + L"project.pjt";
-	.loc 1 113 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     return info.GetPath() + L"/project/" + L"project.pjt";
+	.loc 1 116 27
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp95, D.99098
-	movq	%rax, %rcx	 # D.99098,
+	movq	%rbx, %rax	 # tmp95, D.99100
+	movq	%rax, %rcx	 # D.99100,
 .LEHB19:
 	call	_Unwind_Resume	 #
 .LEHE19:
 .L58:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:114: }
-	.loc 1 114 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:117: }
+	.loc 1 117 1
 	movq	-32(%rbp), %rax	 # <retval>,
 	addq	$72, %rsp	 #,
 	popq	%rbx	 #
@@ -1202,7 +1221,7 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	.seh_proc	_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo
 _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 .LFB5456:
-	.loc 1 117 1
+	.loc 1 120 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1217,20 +1236,20 @@ _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 	movq	%rcx, 16(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, 24(%rbp)	 # this, this
 	movq	%r8, 32(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:118:     return info.GetPath() + L"/project";
-	.loc 1 118 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:121:     return info.GetPath() + L"/project";
+	.loc 1 121 25
 	movq	32(%rbp), %rax	 # info, tmp88
 	movq	%rax, %rcx	 # tmp88,
 	call	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:118:     return info.GetPath() + L"/project";
-	.loc 1 118 29
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:121:     return info.GetPath() + L"/project";
+	.loc 1 121 29
 	movq	16(%rbp), %rax	 # <retval>, tmp89
 	leaq	.LC3(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp89,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:119: }
-	.loc 1 119 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:122: }
+	.loc 1 122 1
 	movq	16(%rbp), %rax	 # <retval>,
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -1291,8 +1310,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.99107
-	movq	%rax, %rcx	 # D.99107,
+	movq	%rbx, %rax	 # tmp90, D.99109
+	movq	%rax, %rcx	 # D.99109,
 .LEHB22:
 	call	_Unwind_Resume	 #
 .LEHE22:
@@ -1493,7 +1512,7 @@ _ZTS16T100ProjectLogic:
 	.file 57 "<built-in>"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x21a32
+	.long	0x21a3a
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -9969,7 +9988,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x63
 	.byte	0x5
 	.ascii "_ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_\0"
-	.long	0x20eeb
+	.long	0x20ef2
 	.long	0xbc2f
 	.uleb128 0x17
 	.ascii "_Tp\0"
@@ -9983,7 +10002,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x63
 	.byte	0x5
 	.ascii "_ZSt4moveIRSaIwEEONSt16remove_referenceIT_E4typeEOS3_\0"
-	.long	0x211d8
+	.long	0x211df
 	.long	0xbc9f
 	.uleb128 0x17
 	.ascii "_Tp\0"
@@ -30222,7 +30241,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0xb
 	.byte	0x7
 	.long	0x20562
-	.long	0x20960
+	.long	0x20961
 	.uleb128 0xa6
 	.secrel32	.LASF201
 	.ascii "_ZN16T100ProjectLogicC4ERKS_\0"
@@ -30230,13 +30249,13 @@ _ZTS16T100ProjectLogic:
 	.long	0x205a0
 	.long	0x205ab
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.uleb128 0x1
-	.long	0x20970
+	.long	0x20971
 	.byte	0
 	.uleb128 0xa7
 	.ascii "_vptr.T100ProjectLogic\0"
-	.long	0x20981
+	.long	0x20982
 	.byte	0
 	.byte	0x1
 	.uleb128 0xe
@@ -30249,7 +30268,7 @@ _ZTS16T100ProjectLogic:
 	.long	0x205f5
 	.long	0x205fb
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF201
@@ -30261,9 +30280,9 @@ _ZTS16T100ProjectLogic:
 	.long	0x20637
 	.long	0x20642
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.uleb128 0x1
-	.long	0x2099d
+	.long	0x2099e
 	.byte	0
 	.uleb128 0xa8
 	.ascii "~T100ProjectLogic\0"
@@ -30277,7 +30296,7 @@ _ZTS16T100ProjectLogic:
 	.long	0x20681
 	.long	0x2068c
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.uleb128 0x2
 	.long	0xebd7
 	.byte	0
@@ -30287,94 +30306,94 @@ _ZTS16T100ProjectLogic:
 	.byte	0x24
 	.byte	0x12
 	.ascii "_ZN16T100ProjectLogic14GetProjectInfoEv\0"
-	.long	0x2099d
+	.long	0x2099e
 	.byte	0x1
 	.long	0x206d4
 	.long	0x206da
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.byte	0
 	.uleb128 0x1d
 	.ascii "Check\0"
 	.byte	0x1
 	.byte	0x29
 	.byte	0xa
-	.ascii "_ZN16T100ProjectLogic5CheckEP15T100ProjectInfo\0"
+	.ascii "_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo\0"
 	.long	0xec27
 	.byte	0x1
-	.long	0x20720
-	.long	0x2072b
+	.long	0x20721
+	.long	0x2072c
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.uleb128 0x1
-	.long	0x2099d
+	.long	0x209b5
 	.byte	0
 	.uleb128 0x1d
 	.ascii "New\0"
 	.byte	0x1
-	.byte	0x40
+	.byte	0x43
 	.byte	0xa
 	.ascii "_ZN16T100ProjectLogic3NewERK16T100WxFolderInfo\0"
 	.long	0xec27
 	.byte	0x1
-	.long	0x2076f
-	.long	0x2077a
+	.long	0x20770
+	.long	0x2077b
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.uleb128 0x1
-	.long	0x209b4
+	.long	0x209d2
 	.byte	0
 	.uleb128 0x1d
 	.ascii "Open\0"
 	.byte	0x1
-	.byte	0x6a
+	.byte	0x6d
 	.byte	0xa
 	.ascii "_ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
 	.long	0xec27
 	.byte	0x1
-	.long	0x207e2
-	.long	0x207ed
+	.long	0x207e3
+	.long	0x207ee
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.uleb128 0x1
 	.long	0x10e4e
 	.byte	0
 	.uleb128 0x1d
 	.ascii "GetFileName\0"
 	.byte	0x1
-	.byte	0x6f
+	.byte	0x72
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo\0"
 	.long	0x91cf
 	.byte	0x2
-	.long	0x20849
-	.long	0x20854
+	.long	0x2084a
+	.long	0x20855
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.uleb128 0x1
-	.long	0x209b4
+	.long	0x209d2
 	.byte	0
 	.uleb128 0x1d
 	.ascii "GetFolderName\0"
 	.byte	0x1
-	.byte	0x74
+	.byte	0x77
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo\0"
 	.long	0x91cf
 	.byte	0x2
-	.long	0x208b4
-	.long	0x208bf
+	.long	0x208b5
+	.long	0x208c0
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.uleb128 0x1
-	.long	0x209b4
+	.long	0x209d2
 	.byte	0
 	.uleb128 0x4c
 	.ascii "m_file\0"
 	.byte	0x38
 	.byte	0x1f
 	.byte	0x37
-	.long	0x209e0
+	.long	0x209e7
 	.byte	0x8
 	.byte	0x2
 	.uleb128 0x4c
@@ -30382,7 +30401,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x38
 	.byte	0x20
 	.byte	0x37
-	.long	0x209f7
+	.long	0x209fe
 	.byte	0x10
 	.byte	0x2
 	.uleb128 0x4c
@@ -30390,7 +30409,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x38
 	.byte	0x21
 	.byte	0x37
-	.long	0x2099d
+	.long	0x2099e
 	.byte	0x18
 	.byte	0x2
 	.uleb128 0x3b
@@ -30399,10 +30418,10 @@ _ZTS16T100ProjectLogic:
 	.byte	0x13
 	.byte	0xa
 	.ascii "_ZN16T100ProjectLogic4initEv\0"
-	.long	0x20925
-	.long	0x2092b
+	.long	0x20926
+	.long	0x2092c
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.byte	0
 	.uleb128 0x62
 	.ascii "uninit\0"
@@ -30410,9 +30429,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0x19
 	.byte	0xa
 	.ascii "_ZN16T100ProjectLogic6uninitEv\0"
-	.long	0x20959
+	.long	0x2095a
 	.uleb128 0x2
-	.long	0x20965
+	.long	0x20966
 	.byte	0
 	.byte	0
 	.uleb128 0xa
@@ -30421,44 +30440,47 @@ _ZTS16T100ProjectLogic:
 	.byte	0x8
 	.long	0x20562
 	.uleb128 0xa
-	.long	0x20965
+	.long	0x20966
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x20960
+	.long	0x20961
 	.uleb128 0x74
 	.long	0xebd7
-	.long	0x20981
+	.long	0x20982
 	.uleb128 0x24
 	.byte	0
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x20987
+	.long	0x20988
 	.uleb128 0x6f
 	.byte	0x8
 	.ascii "__vtbl_ptr_type\0"
-	.long	0x20976
+	.long	0x20977
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x209a3
+	.long	0x209a4
 	.uleb128 0x23
 	.ascii "T100ProjectInfo\0"
-	.uleb128 0xb
+	.uleb128 0x6
 	.byte	0x8
-	.long	0x209cc
+	.long	0x209bb
 	.uleb128 0x23
 	.ascii "T100WxFolderInfo\0"
 	.uleb128 0xa
-	.long	0x209ba
+	.long	0x209bb
+	.uleb128 0xb
+	.byte	0x8
+	.long	0x209cd
 	.uleb128 0x23
 	.ascii "T100FileLogic\0"
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x209d1
+	.long	0x209d8
 	.uleb128 0x23
 	.ascii "T100FolderLogic\0"
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x209e6
+	.long	0x209ed
 	.uleb128 0x4d
 	.ascii "_ZNSt17integral_constantIbLb0EE5valueE\0"
 	.long	0x9228
@@ -30501,7 +30523,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x8
 	.uleb128 0x32
 	.long	0xb83b
-	.long	0x20c6b
+	.long	0x20c72
 	.uleb128 0xc
 	.secrel32	.LASF106
 	.long	0xf03e
@@ -30522,7 +30544,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x32
 	.long	0xb8d8
-	.long	0x20c9b
+	.long	0x20ca2
 	.uleb128 0xc
 	.secrel32	.LASF106
 	.long	0xf3e6
@@ -30543,7 +30565,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x32
 	.long	0xb97c
-	.long	0x20cc6
+	.long	0x20ccd
 	.uleb128 0xc
 	.secrel32	.LASF107
 	.long	0xf03e
@@ -30562,7 +30584,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x32
 	.long	0xb9f1
-	.long	0x20cde
+	.long	0x20ce5
 	.uleb128 0xc
 	.secrel32	.LASF108
 	.long	0xf03e
@@ -30571,7 +30593,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x32
 	.long	0xea83
-	.long	0x20cff
+	.long	0x20d06
 	.uleb128 0xc
 	.secrel32	.LASF137
 	.long	0xf049
@@ -30584,7 +30606,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x32
 	.long	0xba79
-	.long	0x20d2a
+	.long	0x20d31
 	.uleb128 0xc
 	.secrel32	.LASF107
 	.long	0xf3e6
@@ -30603,7 +30625,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x32
 	.long	0xbaf5
-	.long	0x20d42
+	.long	0x20d49
 	.uleb128 0xc
 	.secrel32	.LASF108
 	.long	0xf3e6
@@ -30612,7 +30634,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x32
 	.long	0xeae2
-	.long	0x20d63
+	.long	0x20d6a
 	.uleb128 0xc
 	.secrel32	.LASF137
 	.long	0xf054
@@ -30625,8 +30647,8 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x47
 	.long	0x8e27
-	.long	0x20d79
-	.long	0x20daf
+	.long	0x20d80
+	.long	0x20db6
 	.uleb128 0xc
 	.secrel32	.LASF78
 	.long	0xf03e
@@ -30656,8 +30678,8 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x47
 	.long	0x8ebc
-	.long	0x20dc5
-	.long	0x20dfb
+	.long	0x20dcc
+	.long	0x20e02
 	.uleb128 0xc
 	.secrel32	.LASF78
 	.long	0xf3e6
@@ -30687,9 +30709,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x26
 	.long	0xc0f7
-	.long	0x20e09
+	.long	0x20e10
 	.byte	0x2
-	.long	0x20e18
+	.long	0x20e1f
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0xf3cf
@@ -30697,19 +30719,19 @@ _ZTS16T100ProjectLogic:
 	.long	0xf3d4
 	.byte	0
 	.uleb128 0x2d
-	.long	0x20dfb
+	.long	0x20e02
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2ERKS1_\0"
-	.long	0x20e4d
-	.long	0x20e58
+	.long	0x20e54
+	.long	0x20e5f
 	.uleb128 0x1b
-	.long	0x20e09
+	.long	0x20e10
 	.uleb128 0x1b
-	.long	0x20e12
+	.long	0x20e19
 	.byte	0
 	.uleb128 0x47
 	.long	0x8f52
-	.long	0x20e6e
-	.long	0x20e95
+	.long	0x20e75
+	.long	0x20e9c
 	.uleb128 0xc
 	.secrel32	.LASF80
 	.long	0xf03e
@@ -30733,7 +30755,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x32
 	.long	0xb098
-	.long	0x20eae
+	.long	0x20eb5
 	.uleb128 0x3a
 	.ascii "__rhs\0"
 	.byte	0x15
@@ -30743,8 +30765,8 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x47
 	.long	0x8ffa
-	.long	0x20ec4
-	.long	0x20eeb
+	.long	0x20ecb
+	.long	0x20ef2
 	.uleb128 0xc
 	.secrel32	.LASF80
 	.long	0xf3e6
@@ -30775,7 +30797,7 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE6193-.LFB6193
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x20f26
+	.long	0x20f2d
 	.uleb128 0x17
 	.ascii "_Tp\0"
 	.long	0x10e36
@@ -30791,9 +30813,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x26
 	.long	0x9ce0
-	.long	0x20f34
+	.long	0x20f3b
 	.byte	0x2
-	.long	0x20f4a
+	.long	0x20f51
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0xf3fd
@@ -30805,19 +30827,19 @@ _ZTS16T100ProjectLogic:
 	.long	0xf402
 	.byte	0
 	.uleb128 0x2d
-	.long	0x20f26
+	.long	0x20f2d
 	.ascii "_ZNSaIwEC2ERKS_\0"
-	.long	0x20f67
-	.long	0x20f72
+	.long	0x20f6e
+	.long	0x20f79
 	.uleb128 0x1b
-	.long	0x20f34
+	.long	0x20f3b
 	.uleb128 0x1b
-	.long	0x20f3d
+	.long	0x20f44
 	.byte	0
 	.uleb128 0x47
 	.long	0x90a9
-	.long	0x20f88
-	.long	0x20faa
+	.long	0x20f8f
+	.long	0x20fb1
 	.uleb128 0xc
 	.secrel32	.LASF80
 	.long	0xf03e
@@ -30839,7 +30861,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x32
 	.long	0xd891
-	.long	0x20fc0
+	.long	0x20fc7
 	.uleb128 0x34
 	.ascii "__a\0"
 	.byte	0x1e
@@ -30849,8 +30871,8 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x47
 	.long	0x9121
-	.long	0x20fd6
-	.long	0x20ff8
+	.long	0x20fdd
+	.long	0x20fff
 	.uleb128 0xc
 	.secrel32	.LASF80
 	.long	0xf3e6
@@ -30872,9 +30894,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x26
 	.long	0x47e4
-	.long	0x21006
+	.long	0x2100d
 	.byte	0x2
-	.long	0x2102a
+	.long	0x21031
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0x10dec
@@ -30892,22 +30914,22 @@ _ZTS16T100ProjectLogic:
 	.long	0xf402
 	.byte	0
 	.uleb128 0x2d
-	.long	0x20ff8
+	.long	0x20fff
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwRKS3_\0"
-	.long	0x21085
-	.long	0x21095
+	.long	0x2108c
+	.long	0x2109c
 	.uleb128 0x1b
-	.long	0x21006
+	.long	0x2100d
 	.uleb128 0x1b
-	.long	0x2100f
+	.long	0x21016
 	.uleb128 0x1b
-	.long	0x2101d
+	.long	0x21024
 	.byte	0
 	.uleb128 0x26
 	.long	0xc13b
-	.long	0x210a3
+	.long	0x210aa
 	.byte	0x2
-	.long	0x210b6
+	.long	0x210bd
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0xf3cf
@@ -30916,35 +30938,35 @@ _ZTS16T100ProjectLogic:
 	.long	0xebde
 	.byte	0
 	.uleb128 0x2d
-	.long	0x21095
+	.long	0x2109c
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwED2Ev\0"
-	.long	0x210e7
-	.long	0x210ed
+	.long	0x210ee
+	.long	0x210f4
 	.uleb128 0x1b
-	.long	0x210a3
+	.long	0x210aa
 	.byte	0
 	.uleb128 0x26
 	.long	0xc0bc
-	.long	0x210fb
+	.long	0x21102
 	.byte	0x2
-	.long	0x21105
+	.long	0x2110c
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0xf3cf
 	.byte	0
 	.uleb128 0x2d
-	.long	0x210ed
+	.long	0x210f4
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2Ev\0"
-	.long	0x21136
-	.long	0x2113c
+	.long	0x2113d
+	.long	0x21143
 	.uleb128 0x1b
-	.long	0x210fb
+	.long	0x21102
 	.byte	0
 	.uleb128 0x26
 	.long	0x4852
-	.long	0x2114a
+	.long	0x21151
 	.byte	0x2
-	.long	0x2116e
+	.long	0x21175
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0x10dec
@@ -30962,23 +30984,23 @@ _ZTS16T100ProjectLogic:
 	.long	0x10df1
 	.byte	0
 	.uleb128 0x2d
-	.long	0x2113c
+	.long	0x21143
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwOS3_\0"
-	.long	0x211c8
-	.long	0x211d8
+	.long	0x211cf
+	.long	0x211df
 	.uleb128 0x1b
-	.long	0x2114a
+	.long	0x21151
 	.uleb128 0x1b
-	.long	0x21153
+	.long	0x2115a
 	.uleb128 0x1b
-	.long	0x21161
+	.long	0x21168
 	.byte	0
 	.uleb128 0x40
 	.byte	0x8
 	.long	0xb741
 	.uleb128 0x32
 	.long	0xbc2f
-	.long	0x211fd
+	.long	0x21204
 	.uleb128 0x17
 	.ascii "_Tp\0"
 	.long	0x10dd4
@@ -30995,7 +31017,7 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE5993-.LFB5993
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21259
+	.long	0x21260
 	.uleb128 0xc
 	.secrel32	.LASF77
 	.long	0xf049
@@ -31030,7 +31052,7 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE5992-.LFB5992
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x212c9
+	.long	0x212d0
 	.uleb128 0xc
 	.secrel32	.LASF77
 	.long	0xf049
@@ -31071,9 +31093,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x26
 	.long	0x58ec
-	.long	0x212d7
+	.long	0x212de
 	.byte	0x2
-	.long	0x212fb
+	.long	0x21302
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0x10e0d
@@ -31091,22 +31113,22 @@ _ZTS16T100ProjectLogic:
 	.long	0xf402
 	.byte	0
 	.uleb128 0x2d
-	.long	0x212c9
+	.long	0x212d0
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2EPKwRKS3_\0"
-	.long	0x21349
-	.long	0x21359
+	.long	0x21350
+	.long	0x21360
 	.uleb128 0x1b
-	.long	0x212d7
+	.long	0x212de
 	.uleb128 0x1b
-	.long	0x212e0
+	.long	0x212e7
 	.uleb128 0x1b
-	.long	0x212ed
+	.long	0x212f4
 	.byte	0
 	.uleb128 0x26
 	.long	0x56e5
-	.long	0x21367
+	.long	0x2136e
 	.byte	0x2
-	.long	0x21380
+	.long	0x21387
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0x10e0d
@@ -31118,37 +31140,37 @@ _ZTS16T100ProjectLogic:
 	.long	0x10e2a
 	.byte	0
 	.uleb128 0x2d
-	.long	0x21359
+	.long	0x21360
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2ERKS4_\0"
-	.long	0x213cb
-	.long	0x213d6
+	.long	0x213d2
+	.long	0x213dd
 	.uleb128 0x1b
-	.long	0x21367
+	.long	0x2136e
 	.uleb128 0x1b
-	.long	0x21370
+	.long	0x21377
 	.byte	0
 	.uleb128 0x26
 	.long	0x5638
-	.long	0x213e4
+	.long	0x213eb
 	.byte	0x2
-	.long	0x213ee
+	.long	0x213f5
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0x10e0d
 	.byte	0
 	.uleb128 0x2d
-	.long	0x213d6
+	.long	0x213dd
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2Ev\0"
-	.long	0x21435
-	.long	0x2143b
+	.long	0x2143c
+	.long	0x21442
 	.uleb128 0x1b
-	.long	0x213e4
+	.long	0x213eb
 	.byte	0
 	.uleb128 0x26
 	.long	0x9d0c
-	.long	0x21449
+	.long	0x21450
 	.byte	0x2
-	.long	0x2145c
+	.long	0x21463
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0xf3fd
@@ -31157,35 +31179,35 @@ _ZTS16T100ProjectLogic:
 	.long	0xebde
 	.byte	0
 	.uleb128 0x2d
-	.long	0x2143b
+	.long	0x21442
 	.ascii "_ZNSaIwED2Ev\0"
-	.long	0x21476
-	.long	0x2147c
+	.long	0x2147d
+	.long	0x21483
 	.uleb128 0x1b
-	.long	0x21449
+	.long	0x21450
 	.byte	0
 	.uleb128 0x26
 	.long	0x9cbc
-	.long	0x2148a
+	.long	0x21491
 	.byte	0x2
-	.long	0x21494
+	.long	0x2149b
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0xf3fd
 	.byte	0
 	.uleb128 0x2d
-	.long	0x2147c
+	.long	0x21483
 	.ascii "_ZNSaIwEC2Ev\0"
-	.long	0x214ae
-	.long	0x214b4
+	.long	0x214b5
+	.long	0x214bb
 	.uleb128 0x1b
-	.long	0x2148a
+	.long	0x21491
 	.byte	0
 	.uleb128 0x26
 	.long	0x59b6
-	.long	0x214c2
+	.long	0x214c9
 	.byte	0x2
-	.long	0x214db
+	.long	0x214e2
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0x10e0d
@@ -31197,20 +31219,20 @@ _ZTS16T100ProjectLogic:
 	.long	0x10e30
 	.byte	0
 	.uleb128 0x2d
-	.long	0x214b4
+	.long	0x214bb
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2EOS4_\0"
-	.long	0x21525
-	.long	0x21530
+	.long	0x2152c
+	.long	0x21537
 	.uleb128 0x1b
-	.long	0x214c2
+	.long	0x214c9
 	.uleb128 0x1b
-	.long	0x214cb
+	.long	0x214d2
 	.byte	0
 	.uleb128 0x26
 	.long	0x5b50
-	.long	0x2153e
+	.long	0x21545
 	.byte	0x2
-	.long	0x21551
+	.long	0x21558
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0x10e0d
@@ -31219,21 +31241,21 @@ _ZTS16T100ProjectLogic:
 	.long	0xebde
 	.byte	0
 	.uleb128 0x2d
-	.long	0x21530
+	.long	0x21537
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED2Ev\0"
-	.long	0x21598
-	.long	0x2159e
+	.long	0x2159f
+	.long	0x215a5
 	.uleb128 0x1b
-	.long	0x2153e
+	.long	0x21545
 	.byte	0
 	.uleb128 0xae
 	.long	0x48cd
 	.byte	0x2
 	.byte	0x8b
 	.byte	0xe
-	.long	0x215b0
+	.long	0x215b7
 	.byte	0x2
-	.long	0x215c3
+	.long	0x215ca
 	.uleb128 0x15
 	.secrel32	.LASF206
 	.long	0x10dec
@@ -31242,79 +31264,79 @@ _ZTS16T100ProjectLogic:
 	.long	0xebde
 	.byte	0
 	.uleb128 0x2d
-	.long	0x2159e
+	.long	0x215a5
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderD1Ev\0"
-	.long	0x21618
-	.long	0x2161e
+	.long	0x2161f
+	.long	0x21625
 	.uleb128 0x1b
-	.long	0x215b0
+	.long	0x215b7
 	.byte	0
 	.uleb128 0x48
-	.long	0x20854
-	.long	0x2163d
+	.long	0x20855
+	.long	0x21644
 	.quad	.LFB5456
 	.quad	.LFE5456-.LFB5456
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2165a
+	.long	0x21661
 	.uleb128 0x3d
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x4e
 	.ascii "info\0"
 	.byte	0x1
-	.byte	0x74
+	.byte	0x77
 	.byte	0x45
-	.long	0x209b4
+	.long	0x209d2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x48
-	.long	0x207ed
-	.long	0x21679
+	.long	0x207ee
+	.long	0x21680
 	.quad	.LFB5455
 	.quad	.LFE5455-.LFB5455
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21696
+	.long	0x2169d
 	.uleb128 0x3d
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x4e
 	.ascii "info\0"
 	.byte	0x1
-	.byte	0x6f
+	.byte	0x72
 	.byte	0x43
-	.long	0x209b4
+	.long	0x209d2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x81
-	.long	0x2077a
-	.long	0x216b6
+	.long	0x2077b
+	.long	0x216bd
 	.quad	.LFB5454
 	.quad	.LFE5454-.LFB5454
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x216d3
+	.long	0x216da
 	.uleb128 0x3d
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0xaf
 	.secrel32	.LASF81
 	.byte	0x1
-	.byte	0x6a
+	.byte	0x6d
 	.byte	0x34
 	.long	0x10e4e
 	.uleb128 0x2
@@ -31322,32 +31344,32 @@ _ZTS16T100ProjectLogic:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x48
-	.long	0x2072b
-	.long	0x216f2
-	.quad	.LFB5450
-	.quad	.LFE5450-.LFB5450
+	.long	0x2072c
+	.long	0x216f9
+	.quad	.LFB5453
+	.quad	.LFE5453-.LFB5453
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21768
+	.long	0x2176f
 	.uleb128 0x3d
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x4e
 	.ascii "info\0"
 	.byte	0x1
-	.byte	0x40
+	.byte	0x43
 	.byte	0x38
-	.long	0x209b4
+	.long	0x209d2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x4f
 	.ascii "name\0"
 	.byte	0x1
-	.byte	0x42
+	.byte	0x45
 	.byte	0x19
 	.long	0x91cf
 	.uleb128 0x3
@@ -31356,7 +31378,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x82
 	.secrel32	.LASF208
 	.byte	0x1
-	.byte	0x43
+	.byte	0x46
 	.byte	0x19
 	.long	0x91cf
 	.uleb128 0x3
@@ -31365,27 +31387,27 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x4f
 	.ascii "folder\0"
 	.byte	0x1
-	.byte	0x47
+	.byte	0x4a
 	.byte	0x19
-	.long	0x21768
+	.long	0x2176f
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -256
 	.uleb128 0x4f
 	.ascii "file\0"
 	.byte	0x1
-	.byte	0x53
+	.byte	0x56
 	.byte	0x19
-	.long	0x21774
+	.long	0x2177b
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -304
 	.uleb128 0x4f
 	.ascii "project\0"
 	.byte	0x1
-	.byte	0x5d
+	.byte	0x60
 	.byte	0x19
-	.long	0x2099d
+	.long	0x2099e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
@@ -31396,15 +31418,15 @@ _ZTS16T100ProjectLogic:
 	.ascii "T100ProjectFile\0"
 	.uleb128 0x48
 	.long	0x206da
-	.long	0x217a4
+	.long	0x217ab
 	.quad	.LFB5449
 	.quad	.LFE5449-.LFB5449
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x217e9
+	.long	0x217f1
 	.uleb128 0x3d
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -31412,8 +31434,8 @@ _ZTS16T100ProjectLogic:
 	.ascii "info\0"
 	.byte	0x1
 	.byte	0x29
-	.byte	0x33
-	.long	0x2099d
+	.byte	0x34
+	.long	0x209b5
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -31423,168 +31445,168 @@ _ZTS16T100ProjectLogic:
 	.byte	0x33
 	.byte	0x1d
 	.long	0x91cf
-	.uleb128 0x2
+	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -64
+	.sleb128 -96
 	.uleb128 0x4f
 	.ascii "projectFile\0"
 	.byte	0x1
-	.byte	0x34
+	.byte	0x37
 	.byte	0x1d
-	.long	0x21774
+	.long	0x2177b
 	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -112
+	.sleb128 -144
 	.byte	0
 	.uleb128 0x81
 	.long	0x2068c
-	.long	0x21809
+	.long	0x21811
 	.quad	.LFB5448
 	.quad	.LFE5448-.LFB5448
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21816
+	.long	0x2181e
 	.uleb128 0x3d
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x26
 	.long	0x20642
-	.long	0x21824
+	.long	0x2182c
 	.byte	0
-	.long	0x21837
+	.long	0x2183f
 	.uleb128 0x15
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.uleb128 0x15
 	.secrel32	.LASF207
 	.long	0xebde
 	.byte	0
 	.uleb128 0x64
-	.long	0x21816
+	.long	0x2181e
 	.ascii "_ZN16T100ProjectLogicD0Ev\0"
-	.long	0x21870
+	.long	0x21878
 	.quad	.LFB5447
 	.quad	.LFE5447-.LFB5447
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21879
+	.long	0x21881
 	.uleb128 0x50
-	.long	0x21824
+	.long	0x2182c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0xb0
-	.long	0x21816
+	.long	0x2181e
 	.ascii "_ZN16T100ProjectLogicD2Ev\0"
-	.long	0x218b3
+	.long	0x218bb
 	.quad	.LFB5445
 	.quad	.LFE5445-.LFB5445
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x218bc
+	.long	0x218c4
 	.uleb128 0x50
-	.long	0x21824
+	.long	0x2182c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x48
-	.long	0x2092b
-	.long	0x218db
+	.long	0x2092c
+	.long	0x218e3
 	.quad	.LFB5443
 	.quad	.LFE5443-.LFB5443
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x218e8
+	.long	0x218f0
 	.uleb128 0x3d
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x48
-	.long	0x208f7
-	.long	0x21907
+	.long	0x208f8
+	.long	0x2190f
 	.quad	.LFB5442
 	.quad	.LFE5442-.LFB5442
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21914
+	.long	0x2191c
 	.uleb128 0x3d
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x26
 	.long	0x205fb
-	.long	0x21922
+	.long	0x2192a
 	.byte	0
-	.long	0x21939
+	.long	0x21941
 	.uleb128 0x15
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.uleb128 0x34
 	.ascii "info\0"
 	.byte	0x1
 	.byte	0xc
 	.byte	0x35
-	.long	0x2099d
+	.long	0x2099e
 	.byte	0
 	.uleb128 0x64
-	.long	0x21914
+	.long	0x2191c
 	.ascii "_ZN16T100ProjectLogicC2EP15T100ProjectInfo\0"
-	.long	0x21983
+	.long	0x2198b
 	.quad	.LFB5440
 	.quad	.LFE5440-.LFB5440
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21994
+	.long	0x2199c
 	.uleb128 0x50
-	.long	0x21922
+	.long	0x2192a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x50
-	.long	0x2192b
+	.long	0x21933
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x26
 	.long	0x205ca
-	.long	0x219a2
+	.long	0x219aa
 	.byte	0
-	.long	0x219ac
+	.long	0x219b4
 	.uleb128 0x15
 	.secrel32	.LASF206
-	.long	0x2096b
+	.long	0x2096c
 	.byte	0
 	.uleb128 0x64
-	.long	0x21994
+	.long	0x2199c
 	.ascii "_ZN16T100ProjectLogicC2Ev\0"
-	.long	0x219e5
+	.long	0x219ed
 	.quad	.LFB5437
 	.quad	.LFE5437-.LFB5437
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x219ee
+	.long	0x219f6
 	.uleb128 0x50
-	.long	0x219a2
+	.long	0x219aa
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x32
 	.long	0xa50e
-	.long	0x21a21
+	.long	0x21a29
 	.uleb128 0x3a
 	.ascii "__s1\0"
 	.byte	0x10
@@ -35087,15 +35109,15 @@ _ZTS16T100ProjectLogic:
 	.def	_ZN15T100FolderLogicC1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZdlPvy;	.scl	2;	.type	32;	.endef
 	.def	_Unwind_Resume;	.scl	2;	.type	32;	.endef
-	.def	_ZN15T100ProjectInfo7GetPathB5cxx11Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_;	.scl	2;	.type	32;	.endef
+	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100ProjectFileC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100ProjectFile5CheckERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100ProjectFileD1Ev;	.scl	2;	.type	32;	.endef
-	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev;	.scl	2;	.type	32;	.endef
-	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_;	.scl	2;	.type	32;	.endef
 	.def	_ZN10T100FolderC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN11T100FSEntry8IsExistsEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN10T100Folder6CreateEv;	.scl	2;	.type	32;	.endef
@@ -35109,7 +35131,6 @@ _ZTS16T100ProjectLogic:
 	.def	_ZN15T100ProjectInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100ProjectInfo11SetFileNameERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN10T100FolderD1Ev;	.scl	2;	.type	32;	.endef
-	.def	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_;	.scl	2;	.type	32;	.endef
 	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6appendEPKw;	.scl	2;	.type	32;	.endef
 	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1EOS4_;	.scl	2;	.type	32;	.endef
