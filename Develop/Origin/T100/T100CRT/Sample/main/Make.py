@@ -20,6 +20,7 @@ def make():
     print("Making ... ")
     cmd =   "gcc \
             -c \
+            -fno-builtin \
             -I ../../Source/T100CRT/include/ \
             -I ../../mingw/include/ "
 
@@ -28,17 +29,24 @@ def make():
                             -o main.o")
 
     result = subprocess.call(
-                            "C:/zmsys2/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/collect2 \
+                            "gcc \
                             -nostdlib \
+                            -fno-builtin \
                             -L /mingw64/lib/ \
-                            C:/zmsys2/msys2/mingw64/lib/libkernel32.a \
+                            -luser32 \
+                            -lkernel32 \
+                            -lshell32 \
+                            -lmsvcrt \
                             main.o \
                             ../../Source/T100CRT/T100CRT.a \
+                            C:/zmsys2/msys2/mingw64/lib/libkernel32.a \
+                            C:/zmsys2/msys2/mingw64/lib/libc++.a \
+                            C:/zmsys2/msys2/mingw64/lib/libstdc++.a \
                             -o main.exe")
 
     """
     result = subprocess.call(
-                            "C:/zoo/bin/CodeBlocks/MinGW/libexec/gcc/x86_64-w64-mingw32/8.1.0/collect2 \
+                            "C:/zmsys2/msys2/mingw64/lib/gcc/x86_64-w64-mingw32/15.1.0/collect2 \
                             -lkernel32 \
                             -luser32 \
                             -lshell32 \
