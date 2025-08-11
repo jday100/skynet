@@ -39,7 +39,7 @@ def clean():
     os.chdir("Sample/main")
     result = os.system("python3 ./Make.py clean")
 
-def rebuild:
+def rebuild():
     clean()
     make()
 

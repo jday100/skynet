@@ -20,7 +20,7 @@ def make():
     print("Making ... ")
     cmd =   "gcc \
             -c \
-            -I ./include/ "
+            -I ../../Source/T100CRT/include/ "
 
     result = subprocess.call(cmd +
                             "main.c \
@@ -29,6 +29,7 @@ def make():
     result = subprocess.call(
                             "ld \
                             main.o \
+                            ../../Source/T100CRT/T100CRT.a \
                             -o main.exe")
 
 def clean():
