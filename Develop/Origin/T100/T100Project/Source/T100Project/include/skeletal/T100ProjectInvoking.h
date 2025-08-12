@@ -43,6 +43,8 @@ class T100ProjectInvoking
         static T100VOID             OnResize();
         static T100VOID             OnQuit();
 
+        static T100VOID             OnFolderOpen();
+
         static T100VOID             OnItemExpanding();
         static T100VOID             OnModified();
 

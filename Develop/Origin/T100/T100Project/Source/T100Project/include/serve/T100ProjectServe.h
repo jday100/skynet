@@ -2,6 +2,8 @@
 #define T100PROJECTSERVE_H
 
 #include "T100ProjectInfo.h"
+#include "T100FileLogic.h"
+#include "T100FolderLogic.h"
 #include "T100ProjectLogic.h"
 
 class T100ProjectServe
@@ -22,8 +24,14 @@ class T100ProjectServe
 
         T100BOOL                                Open(const T100WSTRING_VECTOR&, T100PROJECT_INFO_VECTOR&);
 
+        T100FileLogic&                          GetFileLogic();
+        T100FolderLogic&                        GetFolderLogic();
+        T100ProjectLogic&                       GetProjectLogic();
+
     protected:
-        T100ProjectLogic                        m_logic;
+        T100FileLogic                           m_fileLogic;
+        T100FolderLogic                         m_folderLogic;
+        T100ProjectLogic                        m_projectLogic;
         T100PROJECT_INFO_VECTOR*                m_projects      = T100NULL;
 
     private:

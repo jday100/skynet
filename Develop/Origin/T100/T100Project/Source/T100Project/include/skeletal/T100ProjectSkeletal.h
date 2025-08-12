@@ -45,6 +45,8 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnResize();
         T100VOID                    OnQuit();
 
+        T100VOID                    OnFolderOpen();
+
         T100VOID                    OnItemExpanding();
         T100VOID                    OnModified();
 

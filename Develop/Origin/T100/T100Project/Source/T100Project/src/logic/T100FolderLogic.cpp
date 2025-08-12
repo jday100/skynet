@@ -26,3 +26,8 @@ T100BOOL T100FolderLogic::IsExists(const T100WSTRING& path)
 
     return T100FALSE;
 }
+
+T100BOOL T100FolderLogic::Open(const T100WSTRING& path)
+{
+    return T100TRUE;
+}

@@ -1155,7 +1155,7 @@ T100VOID T100ProjectTree::uninit()
 
 }
 
-T100VOID T100ProjectTree::Open(T100WorkSpaceInfo* info)
+T100VOID T100ProjectTree::WorkSpaceOpen(T100WorkSpaceInfo* info)
 {
     DeleteAllItems();
 
@@ -1176,12 +1176,17 @@ T100VOID T100ProjectTree::Open(T100WorkSpaceInfo* info)
     Expand(root);
 }
 
-T100VOID T100ProjectTree::Open(T100ProjectInfo* info)
+T100VOID T100ProjectTree::ProjectOpen(T100ProjectInfo* info)
 {
     wxTreeItemId        root        = GetRootItem();
     AppendProject(root, info);
 
     Expand(root);
+}
+
+T100VOID T100ProjectTree::FolderOpen()
+{
+
 }
 
 T100VOID T100ProjectTree::Clear()

@@ -166,6 +166,11 @@ T100VOID T100ProjectInvoking::OnQuit()
 
 }
 
+T100VOID T100ProjectInvoking::OnFolderOpen()
+{
+    m_skeletal->OnFolderOpen();
+}
+
 T100VOID T100ProjectInvoking::OnItemExpanding()
 {
     m_skeletal->OnItemExpanding();

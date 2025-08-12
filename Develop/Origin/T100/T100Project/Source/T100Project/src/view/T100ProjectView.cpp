@@ -39,7 +39,7 @@ T100VOID T100ProjectView::Destroy()
 
 T100VOID T100ProjectView::WorkSpaceOpen(T100WorkSpaceInfo* info)
 {
-    m_projectTree->Open(info);
+    m_projectTree->WorkSpaceOpen(info);
 }
 
 T100BOOL T100ProjectView::WorkSpaceClose()
@@ -49,7 +49,12 @@ T100BOOL T100ProjectView::WorkSpaceClose()
 
 T100VOID T100ProjectView::ProjectOpen(T100ProjectInfo* info)
 {
-    m_projectTree->Open(info);
+    m_projectTree->ProjectOpen(info);
+}
+
+T100VOID T100ProjectView::FolderOpen()
+{
+    m_projectTree->FolderOpen();
 }
 
 T100VOID T100ProjectView::ShowSetupEditorDialog()

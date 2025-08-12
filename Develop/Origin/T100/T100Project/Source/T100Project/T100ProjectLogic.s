@@ -233,8 +233,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$8, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp95, D.101354
-	movq	%rax, %rcx	 # D.101354,
+	movq	%rsi, %rax	 # tmp95, D.101357
+	movq	%rax, %rcx	 # D.101357,
 .LEHB4:
 	call	_Unwind_Resume	 #
 .L7:
@@ -244,8 +244,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$8, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp96, D.101355
-	movq	%rax, %rcx	 # D.101355,
+	movq	%rsi, %rax	 # tmp96, D.101358
+	movq	%rax, %rcx	 # D.101358,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE4:
@@ -653,8 +653,8 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	leaq	-48(%rbp), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp117, D.101356
-	movq	%rax, %rcx	 # D.101356,
+	movq	%rbx, %rax	 # tmp117, D.101359
+	movq	%rax, %rcx	 # D.101359,
 .LEHB8:
 	call	_Unwind_Resume	 #
 .LEHE8:
@@ -1006,8 +1006,8 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	leaq	32(%rbp), %rax	 #, tmp155
 	movq	%rax, %rcx	 # tmp155,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp153, D.101358
-	movq	%rax, %rcx	 # D.101358,
+	movq	%rbx, %rax	 # tmp153, D.101361
+	movq	%rax, %rcx	 # D.101361,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .LEHE16:
@@ -1169,8 +1169,8 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp95, D.101362
-	movq	%rax, %rcx	 # D.101362,
+	movq	%rbx, %rax	 # tmp95, D.101365
+	movq	%rax, %rcx	 # D.101365,
 .LEHB19:
 	call	_Unwind_Resume	 #
 .LEHE19:
@@ -1310,8 +1310,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.101371
-	movq	%rax, %rcx	 # D.101371,
+	movq	%rbx, %rax	 # tmp90, D.101374
+	movq	%rax, %rcx	 # D.101374,
 .LEHB22:
 	call	_Unwind_Resume	 #
 .LEHE22:

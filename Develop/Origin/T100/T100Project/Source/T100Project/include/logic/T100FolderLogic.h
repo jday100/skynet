@@ -11,6 +11,8 @@ class T100FolderLogic
 
         T100BOOL            IsExists(const T100WSTRING&);
 
+        T100BOOL            Open(const T100WSTRING&);
+
     protected:
 
     private:

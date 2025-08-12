@@ -234,6 +234,21 @@ T100VOID T100ProjectSkeletal::OnQuit()
 
 }
 
+T100VOID T100ProjectSkeletal::OnFolderOpen()
+{
+    T100FolderLogic&    logic       = m_serve->GetProjectServe()->GetFolderLogic();
+
+    if(!logic.IsExists(L"")){
+        return T100FALSE;
+    }
+
+    if(!logic.Open(L"")){
+        return T100FALSE;
+    }
+
+    m_view->FolderOpen();
+}
+
 T100VOID T100ProjectSkeletal::OnItemExpanding()
 {
     T100WSTRING         label;
