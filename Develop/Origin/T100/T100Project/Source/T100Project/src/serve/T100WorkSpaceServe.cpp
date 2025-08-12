@@ -181,12 +181,16 @@ T100BOOL T100WorkSpaceServe::OpenWorkSpace(T100WorkSpaceInfo* info)
         }else{
             T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
 
+            thisInfo->SetLabel(item);
+
             folders.push_back(thisInfo);
         }
     }
 
     for(const T100WSTRING& item : fileNames){
         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+
+        thisFile->SetFileName(item);
 
         files.push_back(thisFile);
     }
