@@ -33,3 +33,8 @@ wxMenu* T100ProjectData::ShowMenu()
     wxMenu*     menu    = T100NEW wxMenu();
     return menu;
 }
+
+T100VOID T100ProjectData::OnItemExpanding()
+{
+
+}

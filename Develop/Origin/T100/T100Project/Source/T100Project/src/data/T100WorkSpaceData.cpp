@@ -23,3 +23,8 @@ wxMenu* T100WorkSpaceData::ShowMenu()
 
     return menu;
 }
+
+T100VOID T100WorkSpaceData::OnItemExpanding()
+{
+
+}

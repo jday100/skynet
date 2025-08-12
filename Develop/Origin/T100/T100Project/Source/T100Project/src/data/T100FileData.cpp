@@ -33,3 +33,8 @@ wxMenu* T100FileData::ShowMenu()
 
     return menu;
 }
+
+T100VOID T100FileData::OnItemExpanding()
+{
+
+}

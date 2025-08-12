@@ -11,6 +11,8 @@ class T100WorkSpaceData : public T100TreeItemData
 
         virtual wxMenu*         ShowMenu();
 
+        virtual T100VOID        OnItemExpanding();
+
     protected:
 
     private:

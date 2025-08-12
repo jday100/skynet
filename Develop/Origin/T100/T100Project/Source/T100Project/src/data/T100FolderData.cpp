@@ -33,3 +33,8 @@ wxMenu* T100FolderData::ShowMenu()
 
     return menu;
 }
+
+T100VOID T100FolderData::OnItemExpanding()
+{
+
+}

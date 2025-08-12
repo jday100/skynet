@@ -16,6 +16,8 @@ class T100ProjectData : public T100TreeItemData
 
         virtual wxMenu*         ShowMenu();
 
+        virtual T100VOID        OnItemExpanding();
+
     protected:
         T100WSTRING             m_label;
 
