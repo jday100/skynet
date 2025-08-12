@@ -250,7 +250,7 @@ T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
         return T100FALSE;
     }
 
-    m_view->FolderOpen(info);
+    m_view->FolderOpen(data->GetId(), info);
 }
 
 T100VOID T100ProjectSkeletal::OnItemExpanding()

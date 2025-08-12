@@ -1184,22 +1184,20 @@ T100VOID T100ProjectTree::ProjectOpen(T100ProjectInfo* info)
     Expand(root);
 }
 
-T100VOID T100ProjectTree::FolderOpen(T100FolderInfo* info)
+T100VOID T100ProjectTree::FolderOpen(wxTreeItemId id, T100FolderInfo* info)
 {
-    wxTreeItemId        item;
-
     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
     T100FILE_INFO_VECTOR&       files       = info->GetFiles();
 
     for(T100FolderInfo* folder : folders){
-        AppendFolder(item, folder);
+        AppendFolder(id, folder);
     }
 
     for(T100FileInfo* file : files){
-        AppendFile(item, file);
+        AppendFile(id, file);
     }
 
-    Expand(item);
+    Expand(id);
 }
 
 T100VOID T100ProjectTree::Clear()
@@ -1254,6 +1252,8 @@ T100VOID T100ProjectTree::AppendFolder(wxTreeItemId parent, T100FolderInfo* info
     data->SetPath(info->GetPath());
 
     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
+
+    data->SetId(item);
 
     SetItemHasChildren(item, T100TRUE);
 }
