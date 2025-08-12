@@ -182,6 +182,7 @@ T100BOOL T100WorkSpaceServe::OpenWorkSpace(T100WorkSpaceInfo* info)
             T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
 
             thisInfo->SetLabel(item);
+            thisInfo->SetPath(path);
 
             folders.push_back(thisInfo);
         }

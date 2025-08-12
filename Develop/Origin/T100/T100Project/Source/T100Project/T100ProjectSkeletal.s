@@ -357,8 +357,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.273124
-	movq	%rax, %rcx	 # D.273124,
+	movq	%rbx, %rax	 # tmp96, D.273119
+	movq	%rax, %rcx	 # D.273119,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -584,8 +584,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.273128
-	movq	%rax, %rcx	 # D.273128,
+	movq	%rbx, %rax	 # tmp103, D.273123
+	movq	%rax, %rcx	 # D.273123,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -692,8 +692,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.273130
-	movq	%rax, %rcx	 # D.273130,
+	movq	%rbx, %rax	 # tmp99, D.273125
+	movq	%rax, %rcx	 # D.273125,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1886,8 +1886,8 @@ _ZN19T100ProjectSkeletal6CreateEP16T100ProjectFrame:
 	movl	$56, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp105, D.273135
-	movq	%rax, %rcx	 # D.273135,
+	movq	%rsi, %rax	 # tmp105, D.273130
+	movq	%rax, %rcx	 # D.273130,
 	call	_Unwind_Resume	 #
 .L75:
 	movq	%rax, %rsi	 #, tmp106
@@ -1896,8 +1896,8 @@ _ZN19T100ProjectSkeletal6CreateEP16T100ProjectFrame:
 	movl	$88, %edx	 #,
 	movq	%rbx, %rcx	 # _15,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp106, D.273136
-	movq	%rax, %rcx	 # D.273136,
+	movq	%rsi, %rax	 # tmp106, D.273131
+	movq	%rax, %rcx	 # D.273131,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE12:
@@ -2256,8 +2256,8 @@ _ZN19T100ProjectSkeletal14OnWorkSpaceNewEv:
 	leaq	48(%rbp), %rax	 #, tmp134
 	movq	%rax, %rcx	 # tmp134,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp132, D.273137
-	movq	%rax, %rcx	 # D.273137,
+	movq	%rbx, %rax	 # tmp132, D.273132
+	movq	%rax, %rcx	 # D.273132,
 .LEHB17:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2476,8 +2476,8 @@ _ZN19T100ProjectSkeletal15OnWorkSpaceOpenEv:
 	leaq	48(%rbp), %rax	 #, tmp127
 	movq	%rax, %rcx	 # tmp127,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp125, D.273138
-	movq	%rax, %rcx	 # D.273138,
+	movq	%rbx, %rax	 # tmp125, D.273133
+	movq	%rax, %rcx	 # D.273133,
 .LEHB22:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2869,8 +2869,8 @@ _ZN19T100ProjectSkeletal9OnFileNewEv:
 	movl	$72, %edx	 #,
 	movq	%rbx, %rcx	 # _5,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp101, D.273139
-	movq	%rax, %rcx	 # D.273139,
+	movq	%rsi, %rax	 # tmp101, D.273134
+	movq	%rax, %rcx	 # D.273134,
 	call	_Unwind_Resume	 #
 .L130:
 	movq	%rax, %rbx	 #, tmp104
@@ -2888,8 +2888,8 @@ _ZN19T100ProjectSkeletal9OnFileNewEv:
 	leaq	-9(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.273140
-	movq	%rax, %rcx	 # D.273140,
+	movq	%rbx, %rax	 # tmp103, D.273135
+	movq	%rax, %rcx	 # D.273135,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE27:
@@ -3186,8 +3186,8 @@ _ZN19T100ProjectSkeletal10OnFileOpenEv:
 	leaq	1104(%rbp), %rax	 #, tmp151
 	movq	%rax, %rcx	 # tmp151,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp149, D.273142
-	movq	%rax, %rcx	 # D.273142,
+	movq	%rbx, %rax	 # tmp149, D.273137
+	movq	%rax, %rcx	 # D.273137,
 .LEHB41:
 	call	_Unwind_Resume	 #
 .L152:
@@ -3223,8 +3223,8 @@ _ZN19T100ProjectSkeletal10OnFileOpenEv:
 	leaq	-48(%rbp), %rax	 #, tmp162
 	movq	%rax, %rcx	 # tmp162,
 	call	_ZN12wxFileDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp152, D.273143
-	movq	%rax, %rcx	 # D.273143,
+	movq	%rbx, %rax	 # tmp152, D.273138
+	movq	%rax, %rcx	 # D.273138,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE41:
@@ -3838,8 +3838,8 @@ _ZN19T100ProjectSkeletal12OnFolderOpenEP14T100FolderData:
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
-	subq	$96, %rsp	 #,
-	.seh_stackalloc	96
+	subq	$48, %rsp	 #,
+	.seh_stackalloc	48
 	.seh_endprologue
 	movq	%rcx, 32(%rbp)	 # this, this
 	movq	%rdx, 40(%rbp)	 # data, data
@@ -3854,130 +3854,88 @@ _ZN19T100ProjectSkeletal12OnFolderOpenEP14T100FolderData:
 	call	_ZN18T100WorkSpaceServe15GetProjectServeEv	 #
 	movq	%rax, %rcx	 # _2,
 	call	_ZN16T100ProjectServe14GetFolderLogicEv	 #
-.LEHE42:
 	movq	%rax, -8(%rbp)	 # _14, logic
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:243:     if(!logic.IsExists(L"")){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:243:     if(!logic.IsExists(data->GetPath())){
 	.loc 9 243 23
-	leaq	-17(%rbp), %rax	 #, tmp100
+	movq	40(%rbp), %rax	 # data, tmp100
 	movq	%rax, %rcx	 # tmp100,
-	call	_ZNSaIwEC1Ev	 #
-	leaq	-17(%rbp), %rdx	 #, tmp101
-	leaq	-64(%rbp), %rax	 #, tmp102
-	movq	%rdx, %r8	 # tmp101,
-	leaq	.LC0(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp102,
-.LEHB43:
-	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1EPKwRKS3_	 #
-.LEHE43:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:243:     if(!logic.IsExists(L"")){
-	.loc 9 243 23 is_stmt 0 discriminator 2
-	leaq	-64(%rbp), %rax	 #, tmp103
-	movq	-8(%rbp), %rcx	 # logic, tmp104
-	movq	%rax, %rdx	 # tmp103,
-.LEHB44:
+	call	_ZN14T100FolderData7GetPathB5cxx11Ev	 #
+	movq	%rax, %rdx	 #, _3
+	movq	-8(%rbp), %rax	 # logic, tmp101
+	movq	%rax, %rcx	 # tmp101,
 	call	_ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
-.LEHE44:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:243:     if(!logic.IsExists(L"")){
-	.loc 9 243 8 is_stmt 1 discriminator 2
-	xorl	$1, %eax	 #, _3
-	movl	%eax, %ebx	 # _3, retval.33_20
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:243:     if(!logic.IsExists(L"")){
-	.loc 9 243 23 discriminator 2
-	leaq	-64(%rbp), %rax	 #, tmp105
-	movq	%rax, %rcx	 # tmp105,
-	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	leaq	-17(%rbp), %rax	 #, tmp106
-	movq	%rax, %rcx	 # tmp106,
-	call	_ZNSaIwED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:243:     if(!logic.IsExists(L"")){
-	.loc 9 243 5 discriminator 2
-	testb	%bl, %bl	 # retval.33_20
-	jne	.L182	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:243:     if(!logic.IsExists(data->GetPath())){
+	.loc 9 243 8
+	xorl	$1, %eax	 #, retval.33_21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:243:     if(!logic.IsExists(data->GetPath())){
+	.loc 9 243 5
+	testb	%al, %al	 # retval.33_21
+	jne	.L178	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:247:     T100FolderInfo*     info        = T100NEW T100FolderInfo();
 	.loc 9 247 62
 	movl	$120, %ecx	 #,
-.LEHB45:
 	call	_Znwy	 #
-.LEHE45:
-	movq	%rax, %rbx	 # tmp107, _26
-	movq	%rbx, %rcx	 # _26,
-.LEHB46:
+.LEHE42:
+	movq	%rax, %rbx	 # tmp102, _23
+	movq	%rbx, %rcx	 # _23,
+.LEHB43:
 	call	_ZN14T100FolderInfoC1Ev	 #
-.LEHE46:
-	movq	%rbx, -16(%rbp)	 # _26, info
+.LEHE43:
+	movq	%rbx, -16(%rbp)	 # _23, info
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:249:     if(!logic.Open(data->GetPath(), info)){
 	.loc 9 249 19
-	movq	40(%rbp), %rax	 # data, tmp108
-	movq	%rax, %rcx	 # tmp108,
-.LEHB47:
+	movq	40(%rbp), %rax	 # data, tmp103
+	movq	%rax, %rcx	 # tmp103,
+.LEHB44:
 	call	_ZN14T100FolderData7GetPathB5cxx11Ev	 #
-	movq	%rax, %rcx	 #, _4
-	movq	-16(%rbp), %rdx	 # info, tmp109
-	movq	-8(%rbp), %rax	 # logic, tmp110
-	movq	%rdx, %r8	 # tmp109,
-	movq	%rcx, %rdx	 # _4,
-	movq	%rax, %rcx	 # tmp110,
+	movq	%rax, %rcx	 #, _5
+	movq	-16(%rbp), %rdx	 # info, tmp104
+	movq	-8(%rbp), %rax	 # logic, tmp105
+	movq	%rdx, %r8	 # tmp104,
+	movq	%rcx, %rdx	 # _5,
+	movq	%rax, %rcx	 # tmp105,
 	call	_ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP14T100FolderInfo	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:249:     if(!logic.Open(data->GetPath(), info)){
 	.loc 9 249 8
-	xorl	$1, %eax	 #, retval.34_35
+	xorl	$1, %eax	 #, retval.34_31
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:249:     if(!logic.Open(data->GetPath(), info)){
 	.loc 9 249 5
-	testb	%al, %al	 # retval.34_35
-	jne	.L183	 #,
+	testb	%al, %al	 # retval.34_31
+	jne	.L179	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:253:     m_view->FolderOpen(info);
 	.loc 9 253 5
-	movq	32(%rbp), %rax	 # this, tmp111
-	movq	8(%rax), %rax	 # this_10(D)->D.181637.m_view, _6
+	movq	32(%rbp), %rax	 # this, tmp106
+	movq	8(%rax), %rax	 # this_10(D)->D.181637.m_view, _7
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:253:     m_view->FolderOpen(info);
 	.loc 9 253 23
-	movq	-16(%rbp), %rdx	 # info, tmp112
-	movq	%rax, %rcx	 # _6,
+	movq	-16(%rbp), %rdx	 # info, tmp107
+	movq	%rax, %rcx	 # _7,
 	call	_ZN15T100ProjectView10FolderOpenEP14T100FolderInfo	 #
 	jmp	.L172	 #
-.L180:
-	movq	%rax, %rbx	 #, tmp115
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:243:     if(!logic.IsExists(L"")){
-	.loc 9 243 23
-	leaq	-64(%rbp), %rax	 #, tmp113
-	movq	%rax, %rcx	 # tmp113,
-	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	jmp	.L177	 #
-.L179:
-	movq	%rax, %rbx	 #, tmp114
 .L177:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:243:     if(!logic.IsExists(L"")){
-	.loc 9 243 23 is_stmt 0 discriminator 1
-	leaq	-17(%rbp), %rax	 #, tmp118
-	movq	%rax, %rcx	 # tmp118,
-	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp114, D.273152
-	movq	%rax, %rcx	 # D.273152,
-	call	_Unwind_Resume	 #
-.L181:
-	movq	%rax, %rsi	 #, tmp119
+	movq	%rax, %rsi	 #, tmp108
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:247:     T100FolderInfo*     info        = T100NEW T100FolderInfo();
-	.loc 9 247 62 is_stmt 1
+	.loc 9 247 62
 	movl	$120, %edx	 #,
-	movq	%rbx, %rcx	 # _26,
+	movq	%rbx, %rcx	 # _23,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp119, D.273153
-	movq	%rax, %rcx	 # D.273153,
+	movq	%rsi, %rax	 # tmp108, D.273147
+	movq	%rax, %rcx	 # D.273147,
 	call	_Unwind_Resume	 #
-.LEHE47:
-.L182:
+.LEHE44:
+.L178:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:244:         return T100FALSE;
 	.loc 9 244 16
 	nop	
 	jmp	.L172	 #
-.L183:
+.L179:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:250:         return T100FALSE;
 	.loc 9 250 16
 	nop	
 .L172:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:254: }
 	.loc 9 254 1
-	addq	$96, %rsp	 #,
+	addq	$48, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
 	popq	%rsi	 #
@@ -4002,22 +3960,10 @@ _ZN19T100ProjectSkeletal12OnFolderOpenEP14T100FolderData:
 	.uleb128 0
 	.uleb128 .LEHB43-.LFB19581
 	.uleb128 .LEHE43-.LEHB43
-	.uleb128 .L179-.LFB19581
+	.uleb128 .L177-.LFB19581
 	.uleb128 0
 	.uleb128 .LEHB44-.LFB19581
 	.uleb128 .LEHE44-.LEHB44
-	.uleb128 .L180-.LFB19581
-	.uleb128 0
-	.uleb128 .LEHB45-.LFB19581
-	.uleb128 .LEHE45-.LEHB45
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB46-.LFB19581
-	.uleb128 .LEHE46-.LEHB46
-	.uleb128 .L181-.LFB19581
-	.uleb128 0
-	.uleb128 .LEHB47-.LFB19581
-	.uleb128 .LEHE47-.LEHB47
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE19581:
@@ -4059,18 +4005,18 @@ _ZN19T100ProjectSkeletal15OnItemExpandingEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:259:     T100ProjectServe*   serve   = m_serve->GetProjectServe();
 	.loc 9 259 59
 	movq	%rax, %rcx	 # _1,
-.LEHB48:
+.LEHB45:
 	call	_ZN18T100WorkSpaceServe15GetProjectServeEv	 #
 	movq	%rax, -56(%rbp)	 # _11, serve
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:261:     if(!serve){
 	.loc 9 261 5
 	cmpq	$0, -56(%rbp)	 #, serve
-	jne	.L185	 #,
+	jne	.L181	 #,
 	movl	$0, %ebx	 #, finally_tmp.35_3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:262:         return;
 	.loc 9 262 9
-	jmp	.L186	 #
-.L185:
+	jmp	.L182	 #
+.L181:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:265:     serve->Open(label);
 	.loc 9 265 16
 	leaq	-96(%rbp), %rax	 #, tmp94
@@ -4085,28 +4031,28 @@ _ZN19T100ProjectSkeletal15OnItemExpandingEv:
 	.loc 9 267 16
 	movq	%rax, %rcx	 # _2,
 	call	_ZN15T100ProjectView3NewEv	 #
-.LEHE48:
+.LEHE45:
 	movl	$1, %ebx	 #, finally_tmp.35_3
-.L186:
+.L182:
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	cmpl	$1, %ebx	 #, finally_tmp.35_3
-	jmp	.L191	 #
-.L190:
+	jmp	.L187	 #
+.L186:
 	movq	%rax, %rbx	 #, tmp99
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:258:     T100WSTRING         label;
 	.loc 9 258 25
 	leaq	-96(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.273154
-	movq	%rax, %rcx	 # D.273154,
-.LEHB49:
+	movq	%rbx, %rax	 # tmp99, D.273148
+	movq	%rax, %rcx	 # D.273148,
+.LEHB46:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE49:
-.L191:
+.LEHE46:
+.L187:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:269: }
 	.loc 9 269 1
 	addq	$88, %rsp	 #,
@@ -4126,12 +4072,12 @@ _ZN19T100ProjectSkeletal15OnItemExpandingEv:
 	.byte	0x1
 	.uleb128 .LLSDACSE19582-.LLSDACSB19582
 .LLSDACSB19582:
-	.uleb128 .LEHB48-.LFB19582
-	.uleb128 .LEHE48-.LEHB48
-	.uleb128 .L190-.LFB19582
+	.uleb128 .LEHB45-.LFB19582
+	.uleb128 .LEHE45-.LEHB45
+	.uleb128 .L186-.LFB19582
 	.uleb128 0
-	.uleb128 .LEHB49-.LFB19582
-	.uleb128 .LEHE49-.LEHB49
+	.uleb128 .LEHB46-.LFB19582
+	.uleb128 .LEHE46-.LEHB46
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE19582:
@@ -4216,9 +4162,9 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEv:
 	.loc 9 279 29
 	leaq	-96(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
-.LEHB50:
+.LEHB47:
 	call	_ZN16T100WxFolderInfoC1Ev	 #
-.LEHE50:
+.LEHE47:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:281:     m_serve->GetFolderInfo(info);
 	.loc 9 281 5
 	movq	16(%rbp), %rax	 # this, tmp99
@@ -4227,7 +4173,7 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEv:
 	.loc 9 281 27
 	leaq	-96(%rbp), %rax	 #, tmp100
 	movq	%rax, %rdx	 # tmp100,
-.LEHB51:
+.LEHB48:
 	call	_ZN18T100WorkSpaceServe13GetFolderInfoER16T100WxFolderInfo	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:283:     T100ProjectInfo*        project     = T100NULL;
 	.loc 9 283 29
@@ -4250,12 +4196,12 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:285:     if(!m_serve->GetProjectServe()->New(info)){
 	.loc 9 285 5 discriminator 1
 	testb	%al, %al	 # retval.36_22
-	je	.L194	 #,
+	je	.L190	 #,
 	movl	$0, %ebx	 #, finally_tmp.37_8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:286:         return;
 	.loc 9 286 9
-	jmp	.L195	 #
-.L194:
+	jmp	.L191	 #
+.L190:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:289:     project = m_serve->GetProjectServe()->GetProjectInfo();
 	.loc 9 289 15
 	movq	16(%rbp), %rax	 # this, tmp103
@@ -4272,12 +4218,12 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:290:     if(!project){
 	.loc 9 290 5 is_stmt 1 discriminator 1
 	cmpq	$0, -24(%rbp)	 #, project
-	jne	.L196	 #,
+	jne	.L192	 #,
 	movl	$0, %ebx	 #, finally_tmp.37_8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:291:         return;
 	.loc 9 291 9
-	jmp	.L195	 #
-.L196:
+	jmp	.L191	 #
+.L192:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:294:     m_view->ProjectOpen(project);
 	.loc 9 294 5
 	movq	16(%rbp), %rax	 # this, tmp104
@@ -4287,28 +4233,28 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEv:
 	movq	-24(%rbp), %rdx	 # project, tmp105
 	movq	%rax, %rcx	 # _7,
 	call	_ZN15T100ProjectView11ProjectOpenEP15T100ProjectInfo	 #
-.LEHE51:
+.LEHE48:
 	movl	$1, %ebx	 #, finally_tmp.37_8
-.L195:
+.L191:
 	leaq	-96(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
 	cmpl	$1, %ebx	 #, finally_tmp.37_8
-	jmp	.L201	 #
-.L200:
+	jmp	.L197	 #
+.L196:
 	movq	%rax, %rbx	 #, tmp108
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:279:     T100WxFolderInfo        info;
 	.loc 9 279 29
 	leaq	-96(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp108, D.273155
-	movq	%rax, %rcx	 # D.273155,
-.LEHB52:
+	movq	%rbx, %rax	 # tmp108, D.273149
+	movq	%rax, %rcx	 # D.273149,
+.LEHB49:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE52:
-.L201:
+.LEHE49:
+.L197:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:295: }
 	.loc 9 295 1
 	addq	$120, %rsp	 #,
@@ -4328,16 +4274,16 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEv:
 	.byte	0x1
 	.uleb128 .LLSDACSE19584-.LLSDACSB19584
 .LLSDACSB19584:
-	.uleb128 .LEHB50-.LFB19584
-	.uleb128 .LEHE50-.LEHB50
+	.uleb128 .LEHB47-.LFB19584
+	.uleb128 .LEHE47-.LEHB47
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB51-.LFB19584
-	.uleb128 .LEHE51-.LEHB51
-	.uleb128 .L200-.LFB19584
+	.uleb128 .LEHB48-.LFB19584
+	.uleb128 .LEHE48-.LEHB48
+	.uleb128 .L196-.LFB19584
 	.uleb128 0
-	.uleb128 .LEHB52-.LFB19584
-	.uleb128 .LEHE52-.LEHB52
+	.uleb128 .LEHB49-.LFB19584
+	.uleb128 .LEHE49-.LEHB49
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE19584:
@@ -4667,21 +4613,21 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:194:         if ( m_data == GetNullData() ) // exception, not ref-counted
 	.loc 2 194 9
 	testb	%al, %al	 # retval.25_14
-	jne	.L215	 #,
+	jne	.L211	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 2 196 16
 	movq	-64(%rbp), %rax	 # this, tmp98
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 2 196 24
-	movzwl	16(%rax), %edx	 # _3->D.267389.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.267387.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 2 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.267389.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.267387.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 2 196 24
-	movzwl	16(%rax), %eax	 # _3->D.267389.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.267387.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 2 196 30
 	testw	%ax, %ax	 # _6
@@ -4689,7 +4635,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 2 196 9
 	testb	%al, %al	 # retval.26_16
-	je	.L214	 #,
+	je	.L210	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 2 197 20
 	movq	-64(%rbp), %rax	 # this, tmp99
@@ -4697,7 +4643,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 2 197 13
 	testq	%rbx, %rbx	 # _17
-	je	.L214	 #,
+	je	.L210	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 2 197 13 is_stmt 0 discriminator 1
 	movq	%rbx, %rcx	 # _17,
@@ -4705,7 +4651,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movl	$24, %edx	 #,
 	movq	%rbx, %rcx	 # _17,
 	call	_ZdlPvy	 #
-.L214:
+.L210:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:198:         m_data = GetNullData();
 	.loc 2 198 29 is_stmt 1
 	call	_ZN22wxScopedCharTypeBufferIwE11GetNullDataEv	 #
@@ -4714,12 +4660,12 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	.loc 2 198 9
 	movq	-64(%rbp), %rax	 # this, tmp100
 	movq	%rdx, (%rax)	 # _7, this_11(D)->m_data
-	jmp	.L211	 #
-.L215:
+	jmp	.L207	 #
+.L211:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:195:             return;
 	.loc 2 195 13
 	nop	
-.L211:
+.L207:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:199:     }
 	.loc 2 199 5
 	addq	$40, %rsp	 #,
@@ -4804,24 +4750,24 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:187:         if ( m_data == GetNullData() ) // exception, not ref-counted
 	.loc 2 187 9
 	testb	%al, %al	 # retval.24_12
-	jne	.L221	 #,
+	jne	.L217	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 2 189 9
 	movq	-64(%rbp), %rax	 # this, tmp94
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 2 189 17
-	movzwl	16(%rax), %edx	 # _3->D.267389.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.267387.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 2 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.267389.m_ref
-	jmp	.L218	 #
-.L221:
+	movw	%dx, 16(%rax)	 # _6, _3->D.267387.m_ref
+	jmp	.L214	 #
+.L217:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
 	.loc 2 188 13
 	nop	
-.L218:
+.L214:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:190:     }
 	.loc 2 190 5
 	addq	$40, %rsp	 #,
@@ -4856,7 +4802,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 2 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.267389.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.267387.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 2 171 72
 	popq	%rbp	 #
@@ -5212,18 +5158,18 @@ _Z41__static_initialization_and_destruction_0ii:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:295: }
 	.loc 9 295 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
-	jne	.L231	 #,
+	jne	.L227	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:295: }
 	.loc 9 295 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
-	jne	.L231	 #,
+	jne	.L227	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 10 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
 	call	_ZNSt8ios_base4InitC1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
-.L231:
+.L227:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:295: }
 	.loc 9 295 1
 	nop	
@@ -78574,9 +78520,9 @@ _GLOBAL__sub_I__ZN19T100ProjectSkeletalC2Ev:
 	.def	_ZN15T100ProjectView8OnResizeEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100WorkSpaceServe15GetProjectServeEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN16T100ProjectServe14GetFolderLogicEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN14T100FolderData7GetPathB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN14T100FolderInfoC1Ev;	.scl	2;	.type	32;	.endef
-	.def	_ZN14T100FolderData7GetPathB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP14T100FolderInfo;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100ProjectView10FolderOpenEP14T100FolderInfo;	.scl	2;	.type	32;	.endef
 	.def	_ZN16T100ProjectServe4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef

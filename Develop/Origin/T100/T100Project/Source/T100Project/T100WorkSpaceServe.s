@@ -1396,124 +1396,124 @@ _ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo:
 	jne	.L62	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:152:         return T100FALSE;
 	.loc 5 152 16
-	movl	$0, %ebx	 #, _8
+	movl	$0, %ebx	 #, _9
 	jmp	.L72	 #
 .L62:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:155:     T100FILE_INFO_VECTOR&       files       = info->GetFiles();
 	.loc 5 155 62
-	movq	312(%rbp), %rax	 # info, tmp107
-	movq	%rax, %rcx	 # tmp107,
-.LEHB11:
-	call	_ZN17T100WorkSpaceInfo8GetFilesEv	 #
-	movq	%rax, 264(%rbp)	 # _28, files
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:156:     T100FOLDER_INFO_VECTOR&     folders     = info->GetFolders();
-	.loc 5 156 64
 	movq	312(%rbp), %rax	 # info, tmp108
 	movq	%rax, %rcx	 # tmp108,
-	call	_ZN17T100WorkSpaceInfo10GetFoldersEv	 #
-	movq	%rax, 256(%rbp)	 # _31, folders
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:157:     T100PROJECT_INFO_VECTOR&    projects    = info->GetProjects();
-	.loc 5 157 65
+.LEHB11:
+	call	_ZN17T100WorkSpaceInfo8GetFilesEv	 #
+	movq	%rax, 264(%rbp)	 # _29, files
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:156:     T100FOLDER_INFO_VECTOR&     folders     = info->GetFolders();
+	.loc 5 156 64
 	movq	312(%rbp), %rax	 # info, tmp109
 	movq	%rax, %rcx	 # tmp109,
+	call	_ZN17T100WorkSpaceInfo10GetFoldersEv	 #
+	movq	%rax, 256(%rbp)	 # _32, folders
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:157:     T100PROJECT_INFO_VECTOR&    projects    = info->GetProjects();
+	.loc 5 157 65
+	movq	312(%rbp), %rax	 # info, tmp110
+	movq	%rax, %rcx	 # tmp110,
 	call	_ZN17T100WorkSpaceInfo11GetProjectsEv	 #
 .LEHE11:
-	movq	%rax, 248(%rbp)	 # _34, projects
+	movq	%rax, 248(%rbp)	 # _35, projects
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:159:     T100WSTRING_VECTOR          fileNames;
 	.loc 5 159 33
-	leaq	144(%rbp), %rax	 #, tmp110
-	movq	%rax, %rcx	 # tmp110,
+	leaq	144(%rbp), %rax	 #, tmp111
+	movq	%rax, %rcx	 # tmp111,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:160:     T100WSTRING_VECTOR          folderNames;
 	.loc 5 160 33
-	leaq	112(%rbp), %rax	 #, tmp111
-	movq	%rax, %rcx	 # tmp111,
+	leaq	112(%rbp), %rax	 #, tmp112
+	movq	%rax, %rcx	 # tmp112,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:162:     T100Folder          folder(info->GetPath());
 	.loc 5 162 47
-	movq	312(%rbp), %rax	 # info, tmp112
-	movq	%rax, %rcx	 # tmp112,
+	movq	312(%rbp), %rax	 # info, tmp113
+	movq	%rax, %rcx	 # tmp113,
 .LEHB12:
 	call	_ZN17T100WorkSpaceInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _1
-	leaq	64(%rbp), %rax	 #, tmp113
-	movq	%rax, %rcx	 # tmp113,
+	leaq	64(%rbp), %rax	 #, tmp114
+	movq	%rax, %rcx	 # tmp114,
 	call	_ZN10T100FolderC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE12:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:164:     if(!folder.IsExists()){
 	.loc 5 164 24
-	leaq	64(%rbp), %rax	 #, tmp114
-	movq	%rax, %rcx	 # tmp114,
+	leaq	64(%rbp), %rax	 #, tmp115
+	movq	%rax, %rcx	 # tmp115,
 .LEHB13:
 	call	_ZN11T100FSEntry8IsExistsEv	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:164:     if(!folder.IsExists()){
 	.loc 5 164 8
-	xorl	$1, %eax	 #, retval.9_43
+	xorl	$1, %eax	 #, retval.9_44
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:164:     if(!folder.IsExists()){
 	.loc 5 164 5
-	testb	%al, %al	 # retval.9_43
+	testb	%al, %al	 # retval.9_44
 	je	.L64	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:165:         return T100FALSE;
 	.loc 5 165 16
-	movl	$0, %ebx	 #, _8
+	movl	$0, %ebx	 #, _9
 	jmp	.L65	 #
 .L64:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:168:     folder.List(folderNames, fileNames);
 	.loc 5 168 16
-	leaq	144(%rbp), %rcx	 #, tmp115
-	leaq	112(%rbp), %rdx	 #, tmp116
-	leaq	64(%rbp), %rax	 #, tmp117
-	movq	%rcx, %r8	 # tmp115,
-	movq	%rax, %rcx	 # tmp117,
+	leaq	144(%rbp), %rcx	 #, tmp116
+	leaq	112(%rbp), %rdx	 #, tmp117
+	leaq	64(%rbp), %rax	 #, tmp118
+	movq	%rcx, %r8	 # tmp116,
+	movq	%rax, %rcx	 # tmp118,
 	call	_ZN10T100Folder4ListERSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS6_EES9_	 #
 .LEHE13:
 .LBB8:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:170:     for(const T100WSTRING& item : folderNames){
 	.loc 5 170 35
-	leaq	112(%rbp), %rax	 #, tmp118
-	movq	%rax, 240(%rbp)	 # tmp118, __for_range
-	movq	240(%rbp), %rax	 # __for_range, tmp119
-	movq	%rax, %rcx	 # tmp119,
+	leaq	112(%rbp), %rax	 #, tmp119
+	movq	%rax, 240(%rbp)	 # tmp119, __for_range
+	movq	240(%rbp), %rax	 # __for_range, tmp120
+	movq	%rax, %rcx	 # tmp120,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginEv	 #
-	movq	%rax, 56(%rbp)	 # tmp121, __for_begin
-	movq	240(%rbp), %rax	 # __for_range, tmp122
-	movq	%rax, %rcx	 # tmp122,
+	movq	%rax, 56(%rbp)	 # tmp122, __for_begin
+	movq	240(%rbp), %rax	 # __for_range, tmp123
+	movq	%rax, %rcx	 # tmp123,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv	 #
-	movq	%rax, 48(%rbp)	 # tmp124, __for_end
+	movq	%rax, 48(%rbp)	 # tmp125, __for_end
 .L69:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:170:     for(const T100WSTRING& item : folderNames){
 	.loc 5 170 35 is_stmt 0 discriminator 1
-	leaq	48(%rbp), %rdx	 #, tmp125
-	leaq	56(%rbp), %rax	 #, tmp126
-	movq	%rax, %rcx	 # tmp126,
+	leaq	48(%rbp), %rdx	 #, tmp126
+	leaq	56(%rbp), %rax	 #, tmp127
+	movq	%rax, %rcx	 # tmp127,
 	call	_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_	 #
-	testb	%al, %al	 # retval.10_50
+	testb	%al, %al	 # retval.10_51
 	je	.L66	 #,
 .LBB9:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:170:     for(const T100WSTRING& item : folderNames){
 	.loc 5 170 35 discriminator 2
-	leaq	56(%rbp), %rax	 #, tmp127
-	movq	%rax, %rcx	 # tmp127,
+	leaq	56(%rbp), %rax	 #, tmp128
+	movq	%rax, %rcx	 # tmp128,
 	call	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv	 #
-	movq	%rax, 232(%rbp)	 # tmp128, item
+	movq	%rax, 232(%rbp)	 # tmp129, item
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:171:         T100WxFolderInfo        thisFolder;
 	.loc 5 171 33 is_stmt 1 discriminator 2
-	leaq	-64(%rbp), %rax	 #, tmp129
-	movq	%rax, %rcx	 # tmp129,
+	leaq	-64(%rbp), %rax	 #, tmp130
+	movq	%rax, %rcx	 # tmp130,
 .LEHB14:
 	call	_ZN16T100WxFolderInfoC1Ev	 #
 .LEHE14:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:173:         thisFolder.SetLabel(item);
 	.loc 5 173 28
-	movq	232(%rbp), %rdx	 # item, tmp130
-	leaq	-64(%rbp), %rax	 #, tmp131
-	movq	%rax, %rcx	 # tmp131,
+	movq	232(%rbp), %rdx	 # item, tmp131
+	leaq	-64(%rbp), %rax	 #, tmp132
+	movq	%rax, %rcx	 # tmp132,
 .LEHB15:
 	call	_ZN16T100WxFolderInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:174:         T100WSTRING     path    = m_info->GetPath() + L"/" + item;
 	.loc 5 174 35
-	movq	304(%rbp), %rax	 # this, tmp132
-	movq	16(%rax), %rax	 # this_55(D)->m_info, _3
+	movq	304(%rbp), %rax	 # this, tmp133
+	movq	16(%rax), %rax	 # this_56(D)->m_info, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:174:         T100WSTRING     path    = m_info->GetPath() + L"/" + item;
 	.loc 5 174 51
 	movq	%rax, %rcx	 # _3,
@@ -1521,42 +1521,42 @@ _ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo:
 	movq	%rax, %rdx	 #, _4
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:174:         T100WSTRING     path    = m_info->GetPath() + L"/" + item;
 	.loc 5 174 53
-	leaq	176(%rbp), %rax	 #, tmp133
+	leaq	176(%rbp), %rax	 #, tmp134
 	leaq	.LC0(%rip), %r8	 #,
-	movq	%rax, %rcx	 # tmp133,
+	movq	%rax, %rcx	 # tmp134,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE15:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:174:         T100WSTRING     path    = m_info->GetPath() + L"/" + item;
 	.loc 5 174 62 discriminator 2
-	leaq	-96(%rbp), %rax	 #, tmp134
-	movq	232(%rbp), %rcx	 # item, tmp135
-	leaq	176(%rbp), %rdx	 #, tmp136
-	movq	%rcx, %r8	 # tmp135,
-	movq	%rax, %rcx	 # tmp134,
+	leaq	-96(%rbp), %rax	 #, tmp135
+	movq	232(%rbp), %rcx	 # item, tmp136
+	leaq	176(%rbp), %rdx	 #, tmp137
+	movq	%rcx, %r8	 # tmp136,
+	movq	%rax, %rcx	 # tmp135,
 .LEHB16:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_	 #
 .LEHE16:
-	leaq	176(%rbp), %rax	 #, tmp137
-	movq	%rax, %rcx	 # tmp137,
+	leaq	176(%rbp), %rax	 #, tmp138
+	movq	%rax, %rcx	 # tmp138,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:175:         thisFolder.SetPath(path);
 	.loc 5 175 27
-	leaq	-96(%rbp), %rdx	 #, tmp138
-	leaq	-64(%rbp), %rax	 #, tmp139
-	movq	%rax, %rcx	 # tmp139,
+	leaq	-96(%rbp), %rdx	 #, tmp139
+	leaq	-64(%rbp), %rax	 #, tmp140
+	movq	%rax, %rcx	 # tmp140,
 .LEHB17:
 	call	_ZN16T100WxFolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LBB10:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:177:         if(m_projectServe.Check(&thisFolder)){
 	.loc 5 177 32
-	movq	304(%rbp), %rax	 # this, tmp140
+	movq	304(%rbp), %rax	 # this, tmp141
 	leaq	24(%rax), %rcx	 #, _5
-	leaq	-64(%rbp), %rax	 #, tmp141
-	movq	%rax, %rdx	 # tmp141,
+	leaq	-64(%rbp), %rax	 #, tmp142
+	movq	%rax, %rdx	 # tmp142,
 	call	_ZN16T100ProjectServe5CheckEP16T100WxFolderInfo	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:177:         if(m_projectServe.Check(&thisFolder)){
 	.loc 5 177 9
-	testb	%al, %al	 # _64
+	testb	%al, %al	 # _65
 	je	.L67	 #,
 .LBB11:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:178:             T100ProjectInfo*    thisProject     = T100NEW T100ProjectInfo();
@@ -1564,17 +1564,17 @@ _ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo:
 	movl	$152, %ecx	 #,
 	call	_Znwy	 #
 .LEHE17:
-	movq	%rax, %rbx	 # tmp142, _67
-	movq	%rbx, %rcx	 # _67,
+	movq	%rax, %rbx	 # tmp143, _68
+	movq	%rbx, %rcx	 # _68,
 .LEHB18:
 	call	_ZN15T100ProjectInfoC1Ev	 #
 .LEHE18:
-	movq	%rbx, 40(%rbp)	 # _67, thisProject
+	movq	%rbx, 40(%rbp)	 # _68, thisProject
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:180:             projects.push_back(thisProject);
 	.loc 5 180 31
-	leaq	40(%rbp), %rax	 #, tmp143
-	movq	248(%rbp), %rcx	 # projects, tmp144
-	movq	%rax, %rdx	 # tmp143,
+	leaq	40(%rbp), %rax	 #, tmp144
+	movq	248(%rbp), %rcx	 # projects, tmp145
+	movq	%rax, %rdx	 # tmp144,
 .LEHB19:
 	call	_ZNSt6vectorIP15T100ProjectInfoSaIS1_EE9push_backERKS1_	 #
 	jmp	.L68	 #
@@ -1586,24 +1586,30 @@ _ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo:
 	movl	$120, %ecx	 #,
 	call	_Znwy	 #
 .LEHE19:
-	movq	%rax, %rbx	 # tmp145, _76
-	movq	%rbx, %rcx	 # _76,
+	movq	%rax, %rbx	 # tmp146, _77
+	movq	%rbx, %rcx	 # _77,
 .LEHB20:
 	call	_ZN14T100FolderInfoC1Ev	 #
 .LEHE20:
-	movq	%rbx, 32(%rbp)	 # _76, thisInfo
+	movq	%rbx, 32(%rbp)	 # _77, thisInfo
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:184:             thisInfo->SetLabel(item);
 	.loc 5 184 31
 	movq	32(%rbp), %rax	 # thisInfo, thisInfo.12_6
-	movq	232(%rbp), %rdx	 # item, tmp146
+	movq	232(%rbp), %rdx	 # item, tmp147
 	movq	%rax, %rcx	 # thisInfo.12_6,
 .LEHB21:
 	call	_ZN14T100FolderInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:186:             folders.push_back(thisInfo);
-	.loc 5 186 30
-	leaq	32(%rbp), %rax	 #, tmp147
-	movq	256(%rbp), %rcx	 # folders, tmp148
-	movq	%rax, %rdx	 # tmp147,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:185:             thisInfo->SetPath(path);
+	.loc 5 185 30
+	movq	32(%rbp), %rcx	 # thisInfo, thisInfo.13_7
+	leaq	-96(%rbp), %rax	 #, tmp148
+	movq	%rax, %rdx	 # tmp148,
+	call	_ZN14T100FolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:187:             folders.push_back(thisInfo);
+	.loc 5 187 30
+	leaq	32(%rbp), %rax	 #, tmp149
+	movq	256(%rbp), %rcx	 # folders, tmp150
+	movq	%rax, %rdx	 # tmp149,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_	 #
 .LEHE21:
 .L68:
@@ -1611,19 +1617,19 @@ _ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo:
 .LBE10:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:174:         T100WSTRING     path    = m_info->GetPath() + L"/" + item;
 	.loc 5 174 62 discriminator 3
-	leaq	-96(%rbp), %rax	 #, tmp149
-	movq	%rax, %rcx	 # tmp149,
+	leaq	-96(%rbp), %rax	 #, tmp151
+	movq	%rax, %rcx	 # tmp151,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:171:         T100WxFolderInfo        thisFolder;
 	.loc 5 171 33 discriminator 3
-	leaq	-64(%rbp), %rax	 #, tmp150
-	movq	%rax, %rcx	 # tmp150,
+	leaq	-64(%rbp), %rax	 #, tmp152
+	movq	%rax, %rcx	 # tmp152,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
 .LBE9:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:170:     for(const T100WSTRING& item : folderNames){
 	.loc 5 170 35 discriminator 3
-	leaq	56(%rbp), %rax	 #, tmp151
-	movq	%rax, %rcx	 # tmp151,
+	leaq	56(%rbp), %rax	 #, tmp153
+	movq	%rax, %rcx	 # tmp153,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:170:     for(const T100WSTRING& item : folderNames){
 	.loc 5 170 5 discriminator 3
@@ -1631,199 +1637,199 @@ _ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo:
 .L66:
 .LBE8:
 .LBB17:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:190:     for(const T100WSTRING& item : fileNames){
-	.loc 5 190 35
-	leaq	144(%rbp), %rax	 #, tmp152
-	movq	%rax, 224(%rbp)	 # tmp152, __for_range
-	movq	224(%rbp), %rax	 # __for_range, tmp153
-	movq	%rax, %rcx	 # tmp153,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:191:     for(const T100WSTRING& item : fileNames){
+	.loc 5 191 35
+	leaq	144(%rbp), %rax	 #, tmp154
+	movq	%rax, 224(%rbp)	 # tmp154, __for_range
+	movq	224(%rbp), %rax	 # __for_range, tmp155
+	movq	%rax, %rcx	 # tmp155,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginEv	 #
-	movq	%rax, 24(%rbp)	 # tmp155, __for_begin
-	movq	224(%rbp), %rax	 # __for_range, tmp156
-	movq	%rax, %rcx	 # tmp156,
+	movq	%rax, 24(%rbp)	 # tmp157, __for_begin
+	movq	224(%rbp), %rax	 # __for_range, tmp158
+	movq	%rax, %rcx	 # tmp158,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv	 #
-	movq	%rax, 16(%rbp)	 # tmp158, __for_end
+	movq	%rax, 16(%rbp)	 # tmp160, __for_end
 .L71:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:190:     for(const T100WSTRING& item : fileNames){
-	.loc 5 190 35 is_stmt 0 discriminator 1
-	leaq	16(%rbp), %rdx	 #, tmp159
-	leaq	24(%rbp), %rax	 #, tmp160
-	movq	%rax, %rcx	 # tmp160,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:191:     for(const T100WSTRING& item : fileNames){
+	.loc 5 191 35 is_stmt 0 discriminator 1
+	leaq	16(%rbp), %rdx	 #, tmp161
+	leaq	24(%rbp), %rax	 #, tmp162
+	movq	%rax, %rcx	 # tmp162,
 	call	_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_	 #
-	testb	%al, %al	 # retval.13_104
+	testb	%al, %al	 # retval.14_106
 	je	.L70	 #,
 .LBB18:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:190:     for(const T100WSTRING& item : fileNames){
-	.loc 5 190 35 discriminator 2
-	leaq	24(%rbp), %rax	 #, tmp161
-	movq	%rax, %rcx	 # tmp161,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:191:     for(const T100WSTRING& item : fileNames){
+	.loc 5 191 35 discriminator 2
+	leaq	24(%rbp), %rax	 #, tmp163
+	movq	%rax, %rcx	 # tmp163,
 	call	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv	 #
-	movq	%rax, 216(%rbp)	 # tmp162, item
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:191:         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
-	.loc 5 191 68 is_stmt 1 discriminator 2
+	movq	%rax, 216(%rbp)	 # tmp164, item
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:192:         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+	.loc 5 192 68 is_stmt 1 discriminator 2
 	movl	$72, %ecx	 #,
 .LEHB22:
 	call	_Znwy	 #
 .LEHE22:
-	movq	%rax, %rbx	 # tmp163, _108
-	movq	%rbx, %rcx	 # _108,
+	movq	%rax, %rbx	 # tmp165, _110
+	movq	%rbx, %rcx	 # _110,
 .LEHB23:
 	call	_ZN12T100FileInfoC1Ev	 #
 .LEHE23:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:191:         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
-	.loc 5 191 68 is_stmt 0
-	movq	%rbx, 8(%rbp)	 # _108, thisFile
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:193:         thisFile->SetFileName(item);
-	.loc 5 193 30 is_stmt 1
-	movq	8(%rbp), %rax	 # thisFile, thisFile.14_7
-	movq	216(%rbp), %rdx	 # item, tmp164
-	movq	%rax, %rcx	 # thisFile.14_7,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:192:         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+	.loc 5 192 68 is_stmt 0
+	movq	%rbx, 8(%rbp)	 # _110, thisFile
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:194:         thisFile->SetFileName(item);
+	.loc 5 194 30 is_stmt 1
+	movq	8(%rbp), %rax	 # thisFile, thisFile.15_8
+	movq	216(%rbp), %rdx	 # item, tmp166
+	movq	%rax, %rcx	 # thisFile.15_8,
 .LEHB24:
 	call	_ZN12T100FileInfo11SetFileNameERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:195:         files.push_back(thisFile);
-	.loc 5 195 24
-	leaq	8(%rbp), %rax	 #, tmp165
-	movq	264(%rbp), %rcx	 # files, tmp166
-	movq	%rax, %rdx	 # tmp165,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:196:         files.push_back(thisFile);
+	.loc 5 196 24
+	leaq	8(%rbp), %rax	 #, tmp167
+	movq	264(%rbp), %rcx	 # files, tmp168
+	movq	%rax, %rdx	 # tmp167,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_	 #
 .LEHE24:
 .LBE18:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:190:     for(const T100WSTRING& item : fileNames){
-	.loc 5 190 35 discriminator 3
-	leaq	24(%rbp), %rax	 #, tmp167
-	movq	%rax, %rcx	 # tmp167,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:191:     for(const T100WSTRING& item : fileNames){
+	.loc 5 191 35 discriminator 3
+	leaq	24(%rbp), %rax	 #, tmp169
+	movq	%rax, %rcx	 # tmp169,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:190:     for(const T100WSTRING& item : fileNames){
-	.loc 5 190 5 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:191:     for(const T100WSTRING& item : fileNames){
+	.loc 5 191 5 discriminator 3
 	jmp	.L71	 #
 .L70:
 .LBE17:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:198:     return T100TRUE;
-	.loc 5 198 12
-	movl	$1, %ebx	 #, _8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:199:     return T100TRUE;
+	.loc 5 199 12
+	movl	$1, %ebx	 #, _9
 .L65:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:162:     T100Folder          folder(info->GetPath());
 	.loc 5 162 47
-	leaq	64(%rbp), %rax	 #, tmp168
-	movq	%rax, %rcx	 # tmp168,
+	leaq	64(%rbp), %rax	 #, tmp170
+	movq	%rax, %rcx	 # tmp170,
 	call	_ZN10T100FolderD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:160:     T100WSTRING_VECTOR          folderNames;
 	.loc 5 160 33
-	leaq	112(%rbp), %rax	 #, tmp169
-	movq	%rax, %rcx	 # tmp169,
+	leaq	112(%rbp), %rax	 #, tmp171
+	movq	%rax, %rcx	 # tmp171,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:159:     T100WSTRING_VECTOR          fileNames;
 	.loc 5 159 33
-	leaq	144(%rbp), %rax	 #, tmp170
-	movq	%rax, %rcx	 # tmp170,
+	leaq	144(%rbp), %rax	 #, tmp172
+	movq	%rax, %rcx	 # tmp172,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
 .L72:
-	movl	%ebx, %eax	 # _8, <retval>
+	movl	%ebx, %eax	 # _9, <retval>
 	jmp	.L93	 #
 .L87:
-	movq	%rax, %rbx	 #, tmp174
+	movq	%rax, %rbx	 #, tmp176
 .LBB20:
 .LBB16:
-	leaq	176(%rbp), %rax	 #, tmp172
-	movq	%rax, %rcx	 # tmp172,
+	leaq	176(%rbp), %rax	 #, tmp174
+	movq	%rax, %rcx	 # tmp174,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	jmp	.L74	 #
 .L89:
-	movq	%rax, %rsi	 #, tmp178
+	movq	%rax, %rsi	 #, tmp180
 .LBB15:
 .LBB13:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:178:             T100ProjectInfo*    thisProject     = T100NEW T100ProjectInfo();
 	.loc 5 178 75
 	movl	$152, %edx	 #,
-	movq	%rbx, %rcx	 # _67,
+	movq	%rbx, %rcx	 # _68,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rbx	 # tmp178, tmp177
+	movq	%rsi, %rbx	 # tmp180, tmp179
 	jmp	.L76	 #
 .L90:
-	movq	%rax, %rsi	 #, tmp181
+	movq	%rax, %rsi	 #, tmp183
 .LBE13:
 .LBB14:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:182:             T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
 	.loc 5 182 74
 	movl	$120, %edx	 #,
-	movq	%rbx, %rcx	 # _76,
+	movq	%rbx, %rcx	 # _77,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rbx	 # tmp181, tmp177
+	movq	%rsi, %rbx	 # tmp183, tmp179
 	jmp	.L76	 #
 .L88:
-	movq	%rax, %rbx	 #, tmp177
+	movq	%rax, %rbx	 #, tmp179
 .L76:
 .LBE14:
 .LBE15:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:174:         T100WSTRING     path    = m_info->GetPath() + L"/" + item;
 	.loc 5 174 62
-	leaq	-96(%rbp), %rax	 #, tmp183
-	movq	%rax, %rcx	 # tmp183,
+	leaq	-96(%rbp), %rax	 #, tmp185
+	movq	%rax, %rcx	 # tmp185,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	jmp	.L74	 #
 .L86:
-	movq	%rax, %rbx	 #, tmp173
+	movq	%rax, %rbx	 #, tmp175
 .L74:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:171:         T100WxFolderInfo        thisFolder;
 	.loc 5 171 33
-	leaq	-64(%rbp), %rax	 #, tmp184
-	movq	%rax, %rcx	 # tmp184,
+	leaq	-64(%rbp), %rax	 #, tmp186
+	movq	%rax, %rcx	 # tmp186,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp173, tmp185
+	movq	%rbx, %rax	 # tmp175, tmp187
 	jmp	.L78	 #
 .L85:
 .L78:
-	movq	%rax, %rbx	 # tmp185, tmp187
+	movq	%rax, %rbx	 # tmp187, tmp189
 	jmp	.L79	 #
 .L92:
-	movq	%rax, %rsi	 #, tmp190
+	movq	%rax, %rsi	 #, tmp192
 .LBE16:
 .LBE20:
 .LBB21:
 .LBB19:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:191:         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
-	.loc 5 191 68
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:192:         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+	.loc 5 192 68
 	movl	$72, %edx	 #,
-	movq	%rbx, %rcx	 # _108,
+	movq	%rbx, %rcx	 # _110,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp190, tmp189
+	movq	%rsi, %rax	 # tmp192, tmp191
 	jmp	.L81	 #
 .L91:
 .L81:
-	movq	%rax, %rbx	 # tmp189, tmp187
+	movq	%rax, %rbx	 # tmp191, tmp189
 	jmp	.L79	 #
 .L84:
-	movq	%rax, %rbx	 #, tmp187
+	movq	%rax, %rbx	 #, tmp189
 .L79:
 .LBE19:
 .LBE21:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:162:     T100Folder          folder(info->GetPath());
 	.loc 5 162 47
-	leaq	64(%rbp), %rax	 #, tmp193
-	movq	%rax, %rcx	 # tmp193,
+	leaq	64(%rbp), %rax	 #, tmp195
+	movq	%rax, %rcx	 # tmp195,
 	call	_ZN10T100FolderD1Ev	 #
 	jmp	.L82	 #
 .L83:
-	movq	%rax, %rbx	 #, tmp194
+	movq	%rax, %rbx	 #, tmp196
 .L82:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:160:     T100WSTRING_VECTOR          folderNames;
 	.loc 5 160 33
-	leaq	112(%rbp), %rax	 #, tmp196
-	movq	%rax, %rcx	 # tmp196,
+	leaq	112(%rbp), %rax	 #, tmp198
+	movq	%rax, %rcx	 # tmp198,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:159:     T100WSTRING_VECTOR          fileNames;
 	.loc 5 159 33
-	leaq	144(%rbp), %rax	 #, tmp199
-	movq	%rax, %rcx	 # tmp199,
+	leaq	144(%rbp), %rax	 #, tmp201
+	movq	%rax, %rcx	 # tmp201,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
-	movq	%rbx, %rax	 # tmp197, D.112804
+	movq	%rbx, %rax	 # tmp199, D.112804
 	movq	%rax, %rcx	 # D.112804,
 .LEHB25:
 	call	_Unwind_Resume	 #
 .LEHE25:
 .L93:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:199: }
-	.loc 5 199 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:200: }
+	.loc 5 200 1
 	addq	$400, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -1912,7 +1918,7 @@ _ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo:
 	.seh_proc	_ZN18T100WorkSpaceServe5BuildEv
 _ZN18T100WorkSpaceServe5BuildEv:
 .LFB5747:
-	.loc 5 202 1
+	.loc 5 203 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1923,8 +1929,8 @@ _ZN18T100WorkSpaceServe5BuildEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:204: }
-	.loc 5 204 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:205: }
+	.loc 5 205 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1944,7 +1950,7 @@ _ZN18T100WorkSpaceServe5BuildEv:
 	.seh_proc	_ZN18T100WorkSpaceServe11GetFileNameB5cxx11ERK16T100WxFolderInfo
 _ZN18T100WorkSpaceServe11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 .LFB5748:
-	.loc 5 207 1
+	.loc 5 208 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1964,34 +1970,34 @@ _ZN18T100WorkSpaceServe11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	movq	%rcx, 32(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, 40(%rbp)	 # this, this
 	movq	%r8, 48(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:208:     T100WSTRING         filename;
-	.loc 5 208 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:209:     T100WSTRING         filename;
+	.loc 5 209 25
 	movq	32(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 57
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 57
 	movq	48(%rbp), %rax	 # info, tmp90
 	movq	%rax, %rcx	 # tmp90,
 .LEHB26:
 	call	_ZN16T100WxFolderInfo8GetLabelB5cxx11Ev	 #
 	movq	%rax, %rbx	 #, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 32
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 32
 	movq	48(%rbp), %rax	 # info, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 32 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 32 is_stmt 0 discriminator 1
 	movq	%rax, %rdx	 #, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 34 is_stmt 1 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 34 is_stmt 1 discriminator 1
 	leaq	-32(%rbp), %rax	 #, tmp92
 	leaq	.LC0(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp92,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE26:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 41 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 41 discriminator 3
 	leaq	-64(%rbp), %rax	 #, tmp93
 	leaq	-32(%rbp), %rdx	 #, tmp94
 	movq	%rbx, %r8	 # _1,
@@ -1999,8 +2005,8 @@ _ZN18T100WorkSpaceServe11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 .LEHB27:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_	 #
 .LEHE27:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 59 discriminator 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 59 discriminator 5
 	leaq	-96(%rbp), %rax	 #, tmp95
 	leaq	-64(%rbp), %rdx	 #, tmp96
 	leaq	.LC1(%rip), %r8	 #,
@@ -2008,34 +2014,34 @@ _ZN18T100WorkSpaceServe11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 .LEHB28:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
 .LEHE28:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 61 discriminator 7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 61 discriminator 7
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rdx	 # tmp97,
 	movq	32(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 59 discriminator 7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 59 discriminator 7
 	leaq	-96(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 41 discriminator 7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 41 discriminator 7
 	leaq	-64(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 34 discriminator 7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 34 discriminator 7
 	leaq	-32(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:212:     return filename;
-	.loc 5 212 12 discriminator 7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:213:     return filename;
+	.loc 5 213 12 discriminator 7
 	jmp	.L103	 #
 .L102:
 	movq	%rax, %rbx	 #, tmp103
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 41
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 41
 	leaq	-64(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -2043,8 +2049,8 @@ _ZN18T100WorkSpaceServe11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 .L101:
 	movq	%rax, %rbx	 #, tmp102
 .L98:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:210:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
-	.loc 5 210 34 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:211:     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+	.loc 5 211 34 discriminator 4
 	leaq	-32(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -2060,8 +2066,8 @@ _ZN18T100WorkSpaceServe11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	call	_Unwind_Resume	 #
 .LEHE29:
 .L103:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:213: }
-	.loc 5 213 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\serve\T100WorkSpaceServe.cpp:214: }
+	.loc 5 214 1
 	movq	32(%rbp), %rax	 # <retval>,
 	addq	$136, %rsp	 #,
 	popq	%rbx	 #
@@ -4751,17 +4757,17 @@ _ZNKSt6vectorIP15T100ProjectInfoSaIS1_EE12_M_check_lenEyPKc:
 	movq	%rbx, %rdx	 # _1, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1637: 	if (max_size() - size() < __n)
 	.loc 6 1637 26
-	movq	-40(%rbp), %rax	 # __n, __n.23_4
-	cmpq	%rax, %rdx	 # __n.23_4, _3
-	setb	%al	 #, retval.22_19
+	movq	-40(%rbp), %rax	 # __n, __n.24_4
+	cmpq	%rax, %rdx	 # __n.24_4, _3
+	setb	%al	 #, retval.23_19
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1637: 	if (max_size() - size() < __n)
 	.loc 6 1637 2
-	testb	%al, %al	 # retval.22_19
+	testb	%al, %al	 # retval.23_19
 	je	.L196	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1638: 	  __throw_length_error(__N(__s));
 	.loc 6 1638 24
-	movq	-32(%rbp), %rax	 # __s, __s.24_5
-	movq	%rax, %rcx	 # __s.24_5,
+	movq	-32(%rbp), %rax	 # __s, __s.25_5
+	movq	%rax, %rcx	 # __s.25_5,
 	call	_ZSt20__throw_length_errorPKc	 #
 .L196:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1640: 	const size_type __len = size() + std::max(size(), __n);
@@ -4810,7 +4816,7 @@ _ZNKSt6vectorIP15T100ProjectInfoSaIS1_EE12_M_check_lenEyPKc:
 .L198:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 48 is_stmt 0 discriminator 4
-	movq	-88(%rbp), %rax	 # __len, iftmp.25_12
+	movq	-88(%rbp), %rax	 # __len, iftmp.26_12
 .L199:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1642:       }
 	.loc 6 1642 7 is_stmt 1 discriminator 6
@@ -5343,17 +5349,17 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
 	movq	%rbx, %rdx	 # _1, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1637: 	if (max_size() - size() < __n)
 	.loc 6 1637 26
-	movq	-40(%rbp), %rax	 # __n, __n.31_4
-	cmpq	%rax, %rdx	 # __n.31_4, _3
-	setb	%al	 #, retval.30_19
+	movq	-40(%rbp), %rax	 # __n, __n.32_4
+	cmpq	%rax, %rdx	 # __n.32_4, _3
+	setb	%al	 #, retval.31_19
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1637: 	if (max_size() - size() < __n)
 	.loc 6 1637 2
-	testb	%al, %al	 # retval.30_19
+	testb	%al, %al	 # retval.31_19
 	je	.L223	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1638: 	  __throw_length_error(__N(__s));
 	.loc 6 1638 24
-	movq	-32(%rbp), %rax	 # __s, __s.32_5
-	movq	%rax, %rcx	 # __s.32_5,
+	movq	-32(%rbp), %rax	 # __s, __s.33_5
+	movq	%rax, %rcx	 # __s.33_5,
 	call	_ZSt20__throw_length_errorPKc	 #
 .L223:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1640: 	const size_type __len = size() + std::max(size(), __n);
@@ -5402,7 +5408,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
 .L225:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 48 is_stmt 0 discriminator 4
-	movq	-88(%rbp), %rax	 # __len, iftmp.33_12
+	movq	-88(%rbp), %rax	 # __len, iftmp.34_12
 .L226:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1642:       }
 	.loc 6 1642 7 is_stmt 1 discriminator 6
@@ -5934,17 +5940,17 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
 	movq	%rbx, %rdx	 # _1, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1637: 	if (max_size() - size() < __n)
 	.loc 6 1637 26
-	movq	-40(%rbp), %rax	 # __n, __n.39_4
-	cmpq	%rax, %rdx	 # __n.39_4, _3
-	setb	%al	 #, retval.38_19
+	movq	-40(%rbp), %rax	 # __n, __n.40_4
+	cmpq	%rax, %rdx	 # __n.40_4, _3
+	setb	%al	 #, retval.39_19
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1637: 	if (max_size() - size() < __n)
 	.loc 6 1637 2
-	testb	%al, %al	 # retval.38_19
+	testb	%al, %al	 # retval.39_19
 	je	.L250	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1638: 	  __throw_length_error(__N(__s));
 	.loc 6 1638 24
-	movq	-32(%rbp), %rax	 # __s, __s.40_5
-	movq	%rax, %rcx	 # __s.40_5,
+	movq	-32(%rbp), %rax	 # __s, __s.41_5
+	movq	%rax, %rcx	 # __s.41_5,
 	call	_ZSt20__throw_length_errorPKc	 #
 .L250:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1640: 	const size_type __len = size() + std::max(size(), __n);
@@ -5993,7 +5999,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
 .L252:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 48 is_stmt 0 discriminator 4
-	movq	-88(%rbp), %rax	 # __len, iftmp.41_12
+	movq	-88(%rbp), %rax	 # __len, iftmp.42_12
 .L253:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1642:       }
 	.loc 6 1642 7 is_stmt 1 discriminator 6
@@ -7695,10 +7701,10 @@ _ZN9__gnu_cxx13new_allocatorIP15T100ProjectInfoE8allocateEyPKv:
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNK9__gnu_cxx13new_allocatorIP15T100ProjectInfoE8max_sizeEv	 #
 	cmpq	%rax, 24(%rbp)	 # _1, __n
-	seta	%al	 #, retval.27_7
+	seta	%al	 #, retval.28_7
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 14 101 2
-	testb	%al, %al	 # retval.27_7
+	testb	%al, %al	 # retval.28_7
 	je	.L330	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:102: 	  std::__throw_bad_alloc();
 	.loc 14 102 26
@@ -7961,10 +7967,10 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv:
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv	 #
 	cmpq	%rax, 24(%rbp)	 # _1, __n
-	seta	%al	 #, retval.35_7
+	seta	%al	 #, retval.36_7
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 14 101 2
-	testb	%al, %al	 # retval.35_7
+	testb	%al, %al	 # retval.36_7
 	je	.L342	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:102: 	  std::__throw_bad_alloc();
 	.loc 14 102 26
@@ -8227,10 +8233,10 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv:
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv	 #
 	cmpq	%rax, 24(%rbp)	 # _1, __n
-	seta	%al	 #, retval.43_7
+	seta	%al	 #, retval.44_7
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 14 101 2
-	testb	%al, %al	 # retval.43_7
+	testb	%al, %al	 # retval.44_7
 	je	.L354	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:102: 	  std::__throw_bad_alloc();
 	.loc 14 102 26
@@ -9499,7 +9505,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP15T100Proje
 	je	.L416	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:368: 	    __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
 	.loc 4 368 23
-	movq	-8(%rbp), %rax	 # _Num, _Num.28_2
+	movq	-8(%rbp), %rax	 # _Num, _Num.29_2
 	leaq	0(,%rax,8), %rdx	 #, _3
 	movq	32(%rbp), %rax	 # __result, tmp96
 	movq	%rdx, %r8	 # _3,
@@ -9509,7 +9515,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP15T100Proje
 .L416:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
 	.loc 4 369 20
-	movq	-8(%rbp), %rax	 # _Num, _Num.29_4
+	movq	-8(%rbp), %rax	 # _Num, _Num.30_4
 	leaq	0(,%rax,8), %rdx	 #, _5
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
 	.loc 4 369 22
@@ -9561,7 +9567,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100Folde
 	je	.L419	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:368: 	    __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
 	.loc 4 368 23
-	movq	-8(%rbp), %rax	 # _Num, _Num.36_2
+	movq	-8(%rbp), %rax	 # _Num, _Num.37_2
 	leaq	0(,%rax,8), %rdx	 #, _3
 	movq	32(%rbp), %rax	 # __result, tmp96
 	movq	%rdx, %r8	 # _3,
@@ -9571,7 +9577,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100Folde
 .L419:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
 	.loc 4 369 20
-	movq	-8(%rbp), %rax	 # _Num, _Num.37_4
+	movq	-8(%rbp), %rax	 # _Num, _Num.38_4
 	leaq	0(,%rax,8), %rdx	 #, _5
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
 	.loc 4 369 22
@@ -9623,7 +9629,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileI
 	je	.L422	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:368: 	    __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
 	.loc 4 368 23
-	movq	-8(%rbp), %rax	 # _Num, _Num.44_2
+	movq	-8(%rbp), %rax	 # _Num, _Num.45_2
 	leaq	0(,%rax,8), %rdx	 #, _3
 	movq	32(%rbp), %rax	 # __result, tmp96
 	movq	%rdx, %r8	 # _3,
@@ -9633,7 +9639,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileI
 .L422:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
 	.loc 4 369 20
-	movq	-8(%rbp), %rax	 # _Num, _Num.45_4
+	movq	-8(%rbp), %rax	 # _Num, _Num.46_4
 	leaq	0(,%rax,8), %rdx	 #, _5
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
 	.loc 4 369 22
@@ -51736,7 +51742,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x5b
 	.ascii "Build\0"
 	.byte	0x5
-	.byte	0xc9
+	.byte	0xca
 	.byte	0xa
 	.ascii "_ZN18T100WorkSpaceServe5BuildEv\0"
 	.byte	0x1
@@ -51770,7 +51776,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x37
 	.ascii "GetFileName\0"
 	.byte	0x5
-	.byte	0xce
+	.byte	0xcf
 	.byte	0xd
 	.ascii "_ZN18T100WorkSpaceServe11GetFileNameB5cxx11ERK16T100WxFolderInfo\0"
 	.long	0x8ff2
@@ -57184,7 +57190,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x1f
 	.secrel32	.LASF288
 	.byte	0x5
-	.byte	0xce
+	.byte	0xcf
 	.byte	0x45
 	.long	0x34f63
 	.uleb128 0x2
@@ -57193,7 +57199,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x51
 	.secrel32	.LASF289
 	.byte	0x5
-	.byte	0xd0
+	.byte	0xd1
 	.byte	0x19
 	.long	0x8ff2
 	.uleb128 0x3
@@ -57375,7 +57381,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x45
 	.ascii "item\0"
 	.byte	0x5
-	.byte	0xbe
+	.byte	0xbf
 	.byte	0x1c
 	.long	0x24ba5
 	.uleb128 0x3
@@ -57404,7 +57410,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x45
 	.ascii "thisFile\0"
 	.byte	0x5
-	.byte	0xbf
+	.byte	0xc0
 	.byte	0x1d
 	.long	0x24bc7
 	.uleb128 0x3
@@ -62936,6 +62942,7 @@ _ZTS18T100WorkSpaceServe:
 	.def	_ZN15T100ProjectInfoC1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN14T100FolderInfoC1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN14T100FolderInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
+	.def	_ZN14T100FolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN16T100WxFolderInfoD1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN12T100FileInfoC1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN12T100FileInfo11SetFileNameERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef

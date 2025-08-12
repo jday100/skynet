@@ -1240,12 +1240,19 @@ T100VOID T100ProjectTree::AppendProject(wxTreeItemId parent, T100ProjectInfo* in
 T100VOID T100ProjectTree::AppendFile(wxTreeItemId parent, T100FileInfo* info)
 {
     T100FileData*       data    = T100NEW T100FileData(info);
+
+    data->SetLabel(info->GetFileName());
+
     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), -1, -1, data);
 }
 
 T100VOID T100ProjectTree::AppendFolder(wxTreeItemId parent, T100FolderInfo* info)
 {
     T100FolderData*     data    = T100NEW T100FolderData(info);
+
+    data->SetLabel(info->GetLabel());
+    data->SetPath(info->GetPath());
+
     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
 
     SetItemHasChildren(item, T100TRUE);

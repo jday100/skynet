@@ -240,7 +240,7 @@ T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
 {
     T100FolderLogic&    logic       = m_serve->GetProjectServe()->GetFolderLogic();
 
-    if(!logic.IsExists(L"")){
+    if(!logic.IsExists(data->GetPath())){
         return T100FALSE;
     }
 
