@@ -1271,8 +1271,6 @@ T100VOID T100ProjectTree::OnItemExpanding(wxTreeEvent& event)
     }
 
     data->OnItemExpanding();
-
-    //T100ProjectInvoking::OnItemExpanding();
 }
 
 T100VOID T100ProjectTree::OnProjectCreate(wxCommandEvent& event)

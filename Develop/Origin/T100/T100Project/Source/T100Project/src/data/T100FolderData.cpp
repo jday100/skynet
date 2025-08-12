@@ -1,5 +1,7 @@
 #include "T100FolderData.h"
 
+#include "T100ProjectInvoking.h"
+
 T100FolderData::T100FolderData() :
     T100TreeItemData()
 {
@@ -27,6 +29,16 @@ const T100WSTRING& T100FolderData::GetLabel()
     return m_label;
 }
 
+T100VOID T100FolderData::SetPath(const T100WSTRING& path)
+{
+    m_path      = path;
+}
+
+const T100WSTRING& T100FolderData::GetPath()
+{
+    return m_path;
+}
+
 wxMenu* T100FolderData::ShowMenu()
 {
     wxMenu*     menu    = T100NEW wxMenu();
@@ -36,5 +48,5 @@ wxMenu* T100FolderData::ShowMenu()
 
 T100VOID T100FolderData::OnItemExpanding()
 {
-
+    T100ProjectInvoking::OnFolderOpen(this);
 }

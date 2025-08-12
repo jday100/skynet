@@ -1,7 +1,7 @@
 #ifndef T100FOLDERLOGIC_H
 #define T100FOLDERLOGIC_H
 
-#include "T100Common.h"
+#include "T100FolderInfo.h"
 
 class T100FolderLogic
 {
@@ -11,7 +11,7 @@ class T100FolderLogic
 
         T100BOOL            IsExists(const T100WSTRING&);
 
-        T100BOOL            Open(const T100WSTRING&);
+        T100BOOL            Open(const T100WSTRING&, T100FolderInfo*);
 
     protected:
 

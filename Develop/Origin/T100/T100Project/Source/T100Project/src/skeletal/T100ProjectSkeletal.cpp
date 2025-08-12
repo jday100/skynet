@@ -6,6 +6,8 @@
 #include "T100ProjectMain.h"
 #include "T100WxFolderInfo.h"
 
+#include "T100FolderData.h"
+
 T100ProjectSkeletal::T100ProjectSkeletal() :
     T100ProjectSkeletalBase()
 {
@@ -234,7 +236,7 @@ T100VOID T100ProjectSkeletal::OnQuit()
 
 }
 
-T100VOID T100ProjectSkeletal::OnFolderOpen()
+T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
 {
     T100FolderLogic&    logic       = m_serve->GetProjectServe()->GetFolderLogic();
 
@@ -244,7 +246,7 @@ T100VOID T100ProjectSkeletal::OnFolderOpen()
 
     T100FolderInfo*     info        = T100NEW T100FolderInfo();
 
-    if(!logic.Open(L"")){
+    if(!logic.Open(data->GetPath(), info)){
         return T100FALSE;
     }
 
