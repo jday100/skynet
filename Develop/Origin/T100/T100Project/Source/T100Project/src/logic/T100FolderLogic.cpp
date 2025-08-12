@@ -53,6 +53,14 @@ T100BOOL T100FolderLogic::Open(const T100WSTRING& path, T100FolderInfo* info)
         T100WSTRING     thisPath    = path + L"/" + item;
         thisFolder.SetPath(thisPath);
 
+        T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
+
+        thisInfo->SetLabel(item);
+        thisInfo->SetPath(thisPath);
+
+        folders.push_back(thisInfo);
+
+
         /*
         if(m_projectServe.Check(&thisFolder)){
             T100ProjectInfo*    thisProject     = T100NEW T100ProjectInfo();
