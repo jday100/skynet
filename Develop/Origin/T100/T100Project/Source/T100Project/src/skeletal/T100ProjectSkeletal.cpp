@@ -6,6 +6,7 @@
 #include "T100ProjectMain.h"
 #include "T100WxFolderInfo.h"
 
+#include "T100FileData.h"
 #include "T100FolderData.h"
 
 T100ProjectSkeletal::T100ProjectSkeletal() :
@@ -234,6 +235,25 @@ T100VOID T100ProjectSkeletal::OnResize()
 T100VOID T100ProjectSkeletal::OnQuit()
 {
 
+}
+
+T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
+{
+    T100FileLogic&      logic       = m_serve->GetProjectServe()->GetFileLogic();
+
+    if(!logic.IsExists(data->GetPath())){
+        return T100FALSE;
+    }
+
+    T100FileInfo*       info        = T100NEW T100FileInfo();
+
+    if(!logic.Open(data->GetPath(), info)){
+        return T100FALSE;
+    }
+
+    info->SetFileName(data->GetLabel());
+
+    m_view->FileOpen(data->GetId(), info);
 }
 
 T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)

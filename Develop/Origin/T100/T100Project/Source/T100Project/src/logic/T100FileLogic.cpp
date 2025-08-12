@@ -1,6 +1,7 @@
 #include "T100FileLogic.h"
 
 #include <io.h>
+#include "T100File.h"
 
 T100FileLogic::T100FileLogic()
 {
@@ -27,11 +28,6 @@ T100BOOL T100FileLogic::IsExists(const T100WSTRING& filename)
     return T100FALSE;
 }
 
-
-
-
-
-
 T100VOID T100FileLogic::Create(T100FileInfo*)
 {
 
@@ -47,9 +43,17 @@ T100VOID T100FileLogic::Rename(T100FileInfo*)
 
 }
 
-T100VOID T100FileLogic::Open(T100FileInfo*)
+T100BOOL T100FileLogic::Open(const T100WSTRING& path, T100FileInfo* info)
 {
+    T100File        file(path);
 
+    if(!file.IsExists()){
+        return T100FALSE;
+    }
+
+    info->SetPath(path);
+
+    return T100TRUE;
 }
 
 T100VOID T100FileLogic::Close(T100FileInfo*)

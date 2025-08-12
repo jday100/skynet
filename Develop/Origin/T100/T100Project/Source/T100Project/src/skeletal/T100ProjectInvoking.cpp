@@ -166,6 +166,11 @@ T100VOID T100ProjectInvoking::OnQuit()
 
 }
 
+T100VOID T100ProjectInvoking::OnFileOpen(T100FileData* data)
+{
+    m_skeletal->OnFileOpen(data);
+}
+
 T100VOID T100ProjectInvoking::OnFolderOpen(T100FolderData* data)
 {
     m_skeletal->OnFolderOpen(data);

@@ -34,6 +34,11 @@ wxMenu* T100ProjectData::ShowMenu()
     return menu;
 }
 
+T100VOID T100ProjectData::OnItemActivated()
+{
+
+}
+
 T100VOID T100ProjectData::OnItemExpanding()
 {
 

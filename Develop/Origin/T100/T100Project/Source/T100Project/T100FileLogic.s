@@ -66,7 +66,7 @@ _ZStL19piecewise_construct:
 _ZN13T100FileLogicC2Ev:
 .LFB1449:
 	.file 1 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/logic/T100FileLogic.cpp"
-	.loc 1 5 1
+	.loc 1 6 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -78,14 +78,14 @@ _ZN13T100FileLogicC2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB2:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:5: T100FileLogic::T100FileLogic()
-	.loc 1 5 30
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:6: T100FileLogic::T100FileLogic()
+	.loc 1 6 30
 	leaq	16+_ZTV13T100FileLogic(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp88
 	movq	%rdx, (%rax)	 # _1, this_3(D)->_vptr.T100FileLogic
 .LBE2:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:8: }
-	.loc 1 8 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:9: }
+	.loc 1 9 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -103,7 +103,7 @@ _ZN13T100FileLogicC2Ev:
 	.seh_proc	_ZN13T100FileLogicD2Ev
 _ZN13T100FileLogicD2Ev:
 .LFB1452:
-	.loc 1 10 1
+	.loc 1 11 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -115,14 +115,14 @@ _ZN13T100FileLogicD2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB3:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:10: T100FileLogic::~T100FileLogic()
-	.loc 1 10 31
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:11: T100FileLogic::~T100FileLogic()
+	.loc 1 11 31
 	leaq	16+_ZTV13T100FileLogic(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp88
 	movq	%rdx, (%rax)	 # _1, this_3(D)->_vptr.T100FileLogic
 .LBE3:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:13: }
-	.loc 1 13 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:14: }
+	.loc 1 14 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -140,7 +140,7 @@ _ZN13T100FileLogicD2Ev:
 	.seh_proc	_ZN13T100FileLogicD0Ev
 _ZN13T100FileLogicD0Ev:
 .LFB1454:
-	.loc 1 10 1
+	.loc 1 11 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -153,8 +153,8 @@ _ZN13T100FileLogicD0Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:13: }
-	.loc 1 13 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:14: }
+	.loc 1 14 1
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN13T100FileLogicD1Ev	 #
 	movl	$8, %edx	 #,
@@ -175,7 +175,7 @@ _ZN13T100FileLogicD0Ev:
 	.seh_proc	_ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 _ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LFB1455:
-	.loc 1 16 1
+	.loc 1 17 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -189,8 +189,8 @@ _ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwE
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # filename, filename
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:19:     result = ::_waccess(filename.c_str(), F_OK);
-	.loc 1 19 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:20:     result = ::_waccess(filename.c_str(), F_OK);
+	.loc 1 20 24
 	movq	24(%rbp), %rax	 # filename, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5c_strEv	 #
@@ -200,21 +200,21 @@ _ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwE
 	call	*%rax	 # tmp92
 .LVL0:
 	movl	%eax, -4(%rbp)	 # _7, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:21:     if(-1 == result){
-	.loc 1 21 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:22:     if(-1 == result){
+	.loc 1 22 5
 	cmpl	$-1, -4(%rbp)	 #, result
 	je	.L5	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:24:         return T100TRUE;
-	.loc 1 24 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:25:         return T100TRUE;
+	.loc 1 25 16
 	movl	$1, %eax	 #, _2
 	jmp	.L6	 #
 .L5:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:27:     return T100FALSE;
-	.loc 1 27 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:28:     return T100FALSE;
+	.loc 1 28 12
 	movl	$0, %eax	 #, _2
 .L6:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:28: }
-	.loc 1 28 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:29: }
+	.loc 1 29 1
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -229,7 +229,7 @@ _ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwE
 	.seh_proc	_ZN13T100FileLogic6CreateEP12T100FileInfo
 _ZN13T100FileLogic6CreateEP12T100FileInfo:
 .LFB1456:
-	.loc 1 36 1
+	.loc 1 32 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -240,9 +240,9 @@ _ZN13T100FileLogic6CreateEP12T100FileInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.30320, D.30320
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:38: }
-	.loc 1 38 1
+	movq	%rdx, 24(%rbp)	 # D.30350, D.30350
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:34: }
+	.loc 1 34 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -257,7 +257,7 @@ _ZN13T100FileLogic6CreateEP12T100FileInfo:
 	.seh_proc	_ZN13T100FileLogic6RemoveEP12T100FileInfo
 _ZN13T100FileLogic6RemoveEP12T100FileInfo:
 .LFB1457:
-	.loc 1 41 1
+	.loc 1 37 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -268,9 +268,9 @@ _ZN13T100FileLogic6RemoveEP12T100FileInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.30324, D.30324
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:43: }
-	.loc 1 43 1
+	movq	%rdx, 24(%rbp)	 # D.30354, D.30354
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:39: }
+	.loc 1 39 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -285,7 +285,7 @@ _ZN13T100FileLogic6RemoveEP12T100FileInfo:
 	.seh_proc	_ZN13T100FileLogic6RenameEP12T100FileInfo
 _ZN13T100FileLogic6RenameEP12T100FileInfo:
 .LFB1458:
-	.loc 1 46 1
+	.loc 1 42 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -296,9 +296,9 @@ _ZN13T100FileLogic6RenameEP12T100FileInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.30328, D.30328
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:48: }
-	.loc 1 48 1
+	movq	%rdx, 24(%rbp)	 # D.30358, D.30358
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:44: }
+	.loc 1 44 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -308,32 +308,120 @@ _ZN13T100FileLogic6RenameEP12T100FileInfo:
 .LFE1458:
 	.seh_endproc
 	.align 2
-	.globl	_ZN13T100FileLogic4OpenEP12T100FileInfo
-	.def	_ZN13T100FileLogic4OpenEP12T100FileInfo;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN13T100FileLogic4OpenEP12T100FileInfo
-_ZN13T100FileLogic4OpenEP12T100FileInfo:
+	.globl	_ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfo
+	.def	_ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfo;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfo
+_ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfo:
 .LFB1459:
-	.loc 1 51 1
+	.loc 1 47 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
-	movq	%rsp, %rbp	 #,
-	.seh_setframe	%rbp, 0
-	.cfi_def_cfa_register 6
+	pushq	%rbx	 #
+	.seh_pushreg	%rbx
+	.cfi_def_cfa_offset 24
+	.cfi_offset 3, -24
+	subq	$56, %rsp	 #,
+	.seh_stackalloc	56
+	.cfi_def_cfa_offset 80
+	leaq	128(%rsp), %rbp	 #,
+	.seh_setframe	%rbp, 128
+	.cfi_def_cfa 6, -48
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.30332, D.30332
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:53: }
-	.loc 1 53 1
-	nop	
+	movq	%rcx, -48(%rbp)	 # this, this
+	movq	%rdx, -40(%rbp)	 # path, path
+	movq	%r8, -32(%rbp)	 # info, info
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:48:     T100File        file(path);
+	.loc 1 48 30
+	movq	-40(%rbp), %rdx	 # path, tmp92
+	leaq	-88(%rbp), %rax	 #, tmp93
+	movq	%rax, %rcx	 # tmp93,
+.LEHB0:
+	call	_ZN8T100FileC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+.LEHE0:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:50:     if(!file.IsExists()){
+	.loc 1 50 22
+	leaq	-88(%rbp), %rax	 #, tmp94
+	movq	%rax, %rcx	 # tmp94,
+.LEHB1:
+	call	_ZN8T100File8IsExistsEv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:50:     if(!file.IsExists()){
+	.loc 1 50 8
+	xorl	$1, %eax	 #, retval.0_11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:50:     if(!file.IsExists()){
+	.loc 1 50 5
+	testb	%al, %al	 # retval.0_11
+	je	.L11	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:51:         return T100FALSE;
+	.loc 1 51 16
+	movl	$0, %ebx	 #, _2
+	jmp	.L12	 #
+.L11:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:54:     info->SetPath(path);
+	.loc 1 54 18
+	movq	-40(%rbp), %rdx	 # path, tmp95
+	movq	-32(%rbp), %rax	 # info, tmp96
+	movq	%rax, %rcx	 # tmp96,
+	call	_ZN12T100FileInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+.LEHE1:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:56:     return T100TRUE;
+	.loc 1 56 12
+	movl	$1, %ebx	 #, _2
+.L12:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:48:     T100File        file(path);
+	.loc 1 48 30
+	leaq	-88(%rbp), %rax	 #, tmp97
+	movq	%rax, %rcx	 # tmp97,
+	call	_ZN8T100FileD1Ev	 #
+	movl	%ebx, %eax	 # _2, <retval>
+	jmp	.L16	 #
+.L15:
+	movq	%rax, %rbx	 #, tmp100
+	leaq	-88(%rbp), %rax	 #, tmp99
+	movq	%rax, %rcx	 # tmp99,
+	call	_ZN8T100FileD1Ev	 #
+	movq	%rbx, %rax	 # tmp100, D.34081
+	movq	%rax, %rcx	 # D.34081,
+.LEHB2:
+	call	_Unwind_Resume	 #
+.LEHE2:
+.L16:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:57: }
+	.loc 1 57 1
+	addq	$56, %rsp	 #,
+	popq	%rbx	 #
+	.cfi_restore 3
 	popq	%rbp	 #
 	.cfi_restore 6
-	.cfi_def_cfa 7, 8
+	.cfi_def_cfa 7, -40
 	ret	
 	.cfi_endproc
 .LFE1459:
+	.def	__gxx_personality_seh0;	.scl	2;	.type	32;	.endef
+	.seh_handler	__gxx_personality_seh0, @unwind, @except
+	.seh_handlerdata
+.LLSDA1459:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE1459-.LLSDACSB1459
+.LLSDACSB1459:
+	.uleb128 .LEHB0-.LFB1459
+	.uleb128 .LEHE0-.LEHB0
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB1-.LFB1459
+	.uleb128 .LEHE1-.LEHB1
+	.uleb128 .L15-.LFB1459
+	.uleb128 0
+	.uleb128 .LEHB2-.LFB1459
+	.uleb128 .LEHE2-.LEHB2
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE1459:
+	.text
 	.seh_endproc
 	.align 2
 	.globl	_ZN13T100FileLogic5CloseEP12T100FileInfo
@@ -341,7 +429,7 @@ _ZN13T100FileLogic4OpenEP12T100FileInfo:
 	.seh_proc	_ZN13T100FileLogic5CloseEP12T100FileInfo
 _ZN13T100FileLogic5CloseEP12T100FileInfo:
 .LFB1460:
-	.loc 1 56 1
+	.loc 1 60 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -352,9 +440,9 @@ _ZN13T100FileLogic5CloseEP12T100FileInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.30336, D.30336
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:58: }
-	.loc 1 58 1
+	movq	%rdx, 24(%rbp)	 # D.30377, D.30377
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:62: }
+	.loc 1 62 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -430,11 +518,11 @@ _ZTS13T100FileLogic:
 	.file 39 "include/logic/T100FileLogic.h"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0xa37e
+	.long	0xa3ef
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
-	.uleb128 0x59
+	.uleb128 0x5c
 	.ascii "GNU C++14 8.1.0 -mthreads -mtune=core2 -march=nocona -g -fpermissive -fexec-charset=UTF-8 -finput-charset=UTF-8\0"
 	.byte	0x4
 	.ascii "C:\\zgit\\skynet\\Develop\\Origin\\T100\\T100Project\\Source\\T100Project\\src\\logic\\T100FileLogic.cpp\0"
@@ -442,18 +530,18 @@ _ZTS13T100FileLogic:
 	.quad	.Ltext0
 	.quad	.Letext0-.Ltext0
 	.secrel32	.Ldebug_line0
-	.uleb128 0x5a
+	.uleb128 0x5d
 	.ascii "std\0"
 	.byte	0x26
 	.byte	0
 	.long	0x6183
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.ascii "__cxx11\0"
 	.byte	0x8
 	.word	0x104
 	.byte	0x41
 	.long	0x490c
-	.uleb128 0x30
+	.uleb128 0x2f
 	.ascii "basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >\0"
 	.byte	0x20
 	.byte	0x2
@@ -467,7 +555,7 @@ _ZTS13T100FileLogic:
 	.byte	0x8b
 	.byte	0xe
 	.long	0x29e
-	.uleb128 0x3f
+	.uleb128 0x40
 	.long	0x5166
 	.byte	0
 	.uleb128 0x38
@@ -515,19 +603,19 @@ _ZTS13T100FileLogic:
 	.byte	0x30
 	.long	0x6a38
 	.byte	0x1
-	.uleb128 0x5b
+	.uleb128 0x5e
 	.byte	0x10
 	.byte	0x2
 	.byte	0xa1
 	.byte	0x7
 	.long	0x2e8
-	.uleb128 0x40
+	.uleb128 0x41
 	.ascii "_M_local_buf\0"
 	.byte	0x2
 	.byte	0xa2
 	.byte	0x35
 	.long	0x9baf
-	.uleb128 0x40
+	.uleb128 0x41
 	.ascii "_M_allocated_capacity\0"
 	.byte	0x2
 	.byte	0xa3
@@ -543,7 +631,7 @@ _ZTS13T100FileLogic:
 	.byte	0x1
 	.uleb128 0xa
 	.long	0x2e8
-	.uleb128 0x5c
+	.uleb128 0x5f
 	.ascii "npos\0"
 	.byte	0x2
 	.byte	0x65
@@ -564,7 +652,7 @@ _ZTS13T100FileLogic:
 	.byte	0x12
 	.long	0x2e8
 	.byte	0x8
-	.uleb128 0x5d
+	.uleb128 0x60
 	.long	0x2ab
 	.byte	0x10
 	.uleb128 0x1c
@@ -605,7 +693,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x9bc5
 	.byte	0
-	.uleb128 0x31
+	.uleb128 0x30
 	.secrel32	.LASF3
 	.byte	0x2
 	.byte	0xb3
@@ -624,7 +712,7 @@ _ZTS13T100FileLogic:
 	.byte	0x35
 	.long	0x6a44
 	.byte	0x1
-	.uleb128 0x31
+	.uleb128 0x30
 	.secrel32	.LASF3
 	.byte	0x2
 	.byte	0xbd
@@ -759,7 +847,7 @@ _ZTS13T100FileLogic:
 	.byte	0x50
 	.byte	0x18
 	.long	0x6a8d
-	.uleb128 0x41
+	.uleb128 0x42
 	.secrel32	.LASF6
 	.byte	0x2
 	.word	0x113
@@ -771,7 +859,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x9bbf
 	.byte	0
-	.uleb128 0x41
+	.uleb128 0x42
 	.secrel32	.LASF6
 	.byte	0x2
 	.word	0x117
@@ -1369,7 +1457,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x9bc5
 	.byte	0
-	.uleb128 0x42
+	.uleb128 0x43
 	.ascii "reverse_iterator\0"
 	.byte	0x2
 	.byte	0x62
@@ -1389,7 +1477,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x9bbf
 	.byte	0
-	.uleb128 0x42
+	.uleb128 0x43
 	.ascii "const_reverse_iterator\0"
 	.byte	0x2
 	.byte	0x61
@@ -3209,10 +3297,10 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1e
 	.ascii "_CharT\0"
 	.long	0x7eb8
-	.uleb128 0x5e
+	.uleb128 0x61
 	.ascii "_Traits\0"
 	.long	0x5445
-	.uleb128 0x5f
+	.uleb128 0x62
 	.secrel32	.LASF27
 	.long	0x5166
 	.byte	0
@@ -3227,7 +3315,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xa
 	.long	0x48f6
 	.byte	0
-	.uleb128 0x32
+	.uleb128 0x31
 	.byte	0x8
 	.word	0x104
 	.byte	0x41
@@ -3239,7 +3327,7 @@ _ZTS13T100FileLogic:
 	.byte	0x45
 	.byte	0xc
 	.long	0x4a1f
-	.uleb128 0x43
+	.uleb128 0x44
 	.ascii "value\0"
 	.byte	0x4
 	.byte	0x47
@@ -3263,7 +3351,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x7ae9
 	.byte	0
-	.uleb128 0x31
+	.uleb128 0x30
 	.secrel32	.LASF29
 	.byte	0x4
 	.byte	0x4f
@@ -3278,7 +3366,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1e
 	.ascii "_Tp\0"
 	.long	0x7adc
-	.uleb128 0x44
+	.uleb128 0x45
 	.ascii "__v\0"
 	.long	0x7adc
 	.byte	0
@@ -3292,7 +3380,7 @@ _ZTS13T100FileLogic:
 	.byte	0x45
 	.byte	0xc
 	.long	0x4b2c
-	.uleb128 0x43
+	.uleb128 0x44
 	.ascii "value\0"
 	.byte	0x4
 	.byte	0x47
@@ -3316,7 +3404,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x7aef
 	.byte	0
-	.uleb128 0x31
+	.uleb128 0x30
 	.secrel32	.LASF29
 	.byte	0x4
 	.byte	0x4f
@@ -3331,19 +3419,19 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1e
 	.ascii "_Tp\0"
 	.long	0x7adc
-	.uleb128 0x44
+	.uleb128 0x45
 	.ascii "__v\0"
 	.long	0x7adc
 	.byte	0x1
 	.byte	0
 	.uleb128 0xa
 	.long	0x4a24
-	.uleb128 0x45
+	.uleb128 0x46
 	.ascii "__swappable_details\0"
 	.byte	0x4
 	.word	0x975
 	.byte	0xd
-	.uleb128 0x45
+	.uleb128 0x46
 	.ascii "__swappable_with_details\0"
 	.byte	0x4
 	.word	0x9c3
@@ -3355,7 +3443,7 @@ _ZTS13T100FileLogic:
 	.byte	0x4c
 	.byte	0xa
 	.long	0x4baa
-	.uleb128 0x46
+	.uleb128 0x47
 	.secrel32	.LASF30
 	.byte	0x5
 	.byte	0x4c
@@ -3369,7 +3457,7 @@ _ZTS13T100FileLogic:
 	.byte	0
 	.uleb128 0xa
 	.long	0x4b68
-	.uleb128 0x60
+	.uleb128 0x63
 	.ascii "piecewise_construct\0"
 	.byte	0x5
 	.byte	0x4f
@@ -3377,18 +3465,18 @@ _ZTS13T100FileLogic:
 	.long	0x4baa
 	.byte	0x1
 	.byte	0
-	.uleb128 0x47
+	.uleb128 0x48
 	.ascii "__debug\0"
 	.byte	0x6
 	.byte	0x32
 	.byte	0xd
-	.uleb128 0x48
+	.uleb128 0x49
 	.ascii "__exception_ptr\0"
 	.byte	0x7
 	.byte	0x34
 	.byte	0xd
 	.long	0x5068
-	.uleb128 0x61
+	.uleb128 0x64
 	.secrel32	.LASF31
 	.byte	0x8
 	.byte	0x7
@@ -3402,7 +3490,7 @@ _ZTS13T100FileLogic:
 	.byte	0xd
 	.long	0x81ba
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x65
 	.secrel32	.LASF31
 	.byte	0x7
 	.byte	0x53
@@ -3503,7 +3591,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x81e1
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x32
 	.secrel32	.LASF11
 	.byte	0x7
 	.byte	0x76
@@ -3518,7 +3606,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x81c8
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x32
 	.secrel32	.LASF11
 	.byte	0x7
 	.byte	0x7a
@@ -3533,7 +3621,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x81e1
 	.byte	0
-	.uleb128 0x1f
+	.uleb128 0x24
 	.ascii "~exception_ptr\0"
 	.byte	0x7
 	.byte	0x81
@@ -3547,7 +3635,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x7a8c
 	.byte	0
-	.uleb128 0x1f
+	.uleb128 0x24
 	.ascii "swap\0"
 	.byte	0x7
 	.byte	0x84
@@ -3561,7 +3649,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x81e7
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x66
 	.ascii "operator bool\0"
 	.byte	0x7
 	.byte	0x90
@@ -3574,7 +3662,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x81c2
 	.byte	0
-	.uleb128 0x64
+	.uleb128 0x67
 	.ascii "__cxa_exception_type\0"
 	.byte	0x7
 	.byte	0x99
@@ -3600,7 +3688,7 @@ _ZTS13T100FileLogic:
 	.byte	0x39
 	.byte	0x1a
 	.long	0x4bf1
-	.uleb128 0x65
+	.uleb128 0x68
 	.ascii "rethrow_exception\0"
 	.byte	0x7
 	.byte	0x45
@@ -3616,7 +3704,7 @@ _ZTS13T100FileLogic:
 	.byte	0xf2
 	.byte	0x1d
 	.long	0x81ce
-	.uleb128 0x34
+	.uleb128 0x2a
 	.ascii "type_info\0"
 	.uleb128 0xa
 	.long	0x50de
@@ -3627,7 +3715,7 @@ _ZTS13T100FileLogic:
 	.byte	0x56
 	.byte	0xa
 	.long	0x5123
-	.uleb128 0x46
+	.uleb128 0x47
 	.secrel32	.LASF32
 	.byte	0x9
 	.byte	0x59
@@ -3641,7 +3729,7 @@ _ZTS13T100FileLogic:
 	.byte	0
 	.uleb128 0xa
 	.long	0x50ee
-	.uleb128 0x66
+	.uleb128 0x69
 	.ascii "nothrow\0"
 	.byte	0x9
 	.byte	0x5d
@@ -3660,14 +3748,14 @@ _ZTS13T100FileLogic:
 	.byte	0xef
 	.byte	0x1c
 	.long	0x7aa4
-	.uleb128 0x30
+	.uleb128 0x2f
 	.ascii "allocator<wchar_t>\0"
 	.byte	0x1
 	.byte	0xa
 	.byte	0x6c
 	.byte	0xb
 	.long	0x5206
-	.uleb128 0x67
+	.uleb128 0x6a
 	.long	0x61c6
 	.byte	0
 	.byte	0x1
@@ -3697,7 +3785,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x8235
 	.byte	0
-	.uleb128 0x49
+	.uleb128 0x4a
 	.ascii "~allocator\0"
 	.byte	0xa
 	.byte	0x8b
@@ -4063,7 +4151,7 @@ _ZTS13T100FileLogic:
 	.word	0x127
 	.byte	0xe
 	.long	0x8e37
-	.uleb128 0x2a
+	.uleb128 0x2b
 	.ascii "char_traits<wchar_t>\0"
 	.byte	0x1
 	.byte	0xc
@@ -4116,7 +4204,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x8e63
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.secrel32	.LASF26
 	.byte	0xc
 	.word	0x199
@@ -4187,7 +4275,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x5145
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.secrel32	.LASF18
 	.byte	0xc
 	.word	0x1d2
@@ -4245,7 +4333,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x8e75
 	.byte	0
-	.uleb128 0x68
+	.uleb128 0x6b
 	.ascii "eof\0"
 	.byte	0xc
 	.word	0x1e6
@@ -4777,20 +4865,20 @@ _ZTS13T100FileLogic:
 	.byte	0xbd
 	.byte	0x16
 	.long	0x9b4d
-	.uleb128 0x2a
+	.uleb128 0x2b
 	.ascii "allocator_traits<std::allocator<wchar_t> >\0"
 	.byte	0x1
 	.byte	0x11
 	.word	0x180
 	.byte	0xc
 	.long	0x5dc3
-	.uleb128 0x2c
+	.uleb128 0x2d
 	.secrel32	.LASF1
 	.byte	0x11
 	.word	0x188
 	.byte	0x1b
 	.long	0x7ead
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.secrel32	.LASF34
 	.byte	0x11
 	.word	0x1b3
@@ -4803,7 +4891,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x5bf4
 	.byte	0
-	.uleb128 0x2c
+	.uleb128 0x2d
 	.secrel32	.LASF5
 	.byte	0x11
 	.word	0x183
@@ -4811,13 +4899,13 @@ _ZTS13T100FileLogic:
 	.long	0x5166
 	.uleb128 0xa
 	.long	0x5be2
-	.uleb128 0x2c
+	.uleb128 0x2d
 	.secrel32	.LASF2
 	.byte	0x11
 	.word	0x197
 	.byte	0x24
 	.long	0x5145
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.secrel32	.LASF34
 	.byte	0x11
 	.word	0x1c1
@@ -4852,7 +4940,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x5bf4
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.secrel32	.LASF12
 	.byte	0x11
 	.word	0x1ef
@@ -4874,13 +4962,13 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x9b8b
 	.byte	0
-	.uleb128 0x2c
+	.uleb128 0x2d
 	.secrel32	.LASF28
 	.byte	0x11
 	.word	0x185
 	.byte	0x1d
 	.long	0x7eb8
-	.uleb128 0x2c
+	.uleb128 0x2d
 	.secrel32	.LASF4
 	.byte	0x11
 	.word	0x18b
@@ -4896,7 +4984,7 @@ _ZTS13T100FileLogic:
 	.secrel32	.LASF27
 	.long	0x5166
 	.byte	0
-	.uleb128 0x30
+	.uleb128 0x2f
 	.ascii "initializer_list<wchar_t>\0"
 	.byte	0x10
 	.byte	0x12
@@ -4965,7 +5053,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x9bef
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x1f
 	.ascii "size\0"
 	.byte	0x12
 	.byte	0x47
@@ -4978,7 +5066,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x9bf5
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x1f
 	.ascii "begin\0"
 	.byte	0x12
 	.byte	0x4b
@@ -4991,7 +5079,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x2
 	.long	0x9bf5
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x1f
 	.ascii "end\0"
 	.byte	0x12
 	.byte	0x4f
@@ -5010,28 +5098,28 @@ _ZTS13T100FileLogic:
 	.byte	0
 	.uleb128 0xa
 	.long	0x5dc3
-	.uleb128 0x34
+	.uleb128 0x2a
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
-	.uleb128 0x34
+	.uleb128 0x2a
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<wchar_t const*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.ascii "literals\0"
 	.byte	0x2
 	.word	0x1a08
 	.byte	0x14
 	.long	0x60d5
-	.uleb128 0x4a
+	.uleb128 0x4b
 	.ascii "string_literals\0"
 	.byte	0x2
 	.word	0x1a0a
 	.byte	0x14
-	.uleb128 0x32
+	.uleb128 0x31
 	.byte	0x2
 	.word	0x1a0a
 	.byte	0x14
 	.long	0x60b6
 	.byte	0
-	.uleb128 0x32
+	.uleb128 0x31
 	.byte	0x2
 	.word	0x1a08
 	.byte	0x14
@@ -5065,7 +5153,7 @@ _ZTS13T100FileLogic:
 	.secrel32	.LASF38
 	.long	0x7ead
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6c
 	.ascii "iterator_traits<wchar_t const*>\0"
 	.byte	0x1
 	.byte	0x13
@@ -5094,23 +5182,23 @@ _ZTS13T100FileLogic:
 	.long	0x821e
 	.byte	0
 	.byte	0
-	.uleb128 0x6a
+	.uleb128 0x6d
 	.ascii "__gnu_cxx\0"
 	.byte	0x8
 	.word	0x106
 	.byte	0xb
 	.long	0x7a00
-	.uleb128 0x4a
+	.uleb128 0x4b
 	.ascii "__cxx11\0"
 	.byte	0x8
 	.word	0x108
 	.byte	0x41
-	.uleb128 0x32
+	.uleb128 0x31
 	.byte	0x8
 	.word	0x108
 	.byte	0x41
 	.long	0x6196
-	.uleb128 0x47
+	.uleb128 0x48
 	.ascii "__ops\0"
 	.byte	0x14
 	.byte	0x23
@@ -5125,7 +5213,7 @@ _ZTS13T100FileLogic:
 	.byte	0x2d
 	.byte	0xe
 	.long	0x5154
-	.uleb128 0x30
+	.uleb128 0x2f
 	.ascii "new_allocator<wchar_t>\0"
 	.byte	0x1
 	.byte	0x15
@@ -5158,7 +5246,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x820c
 	.byte	0
-	.uleb128 0x1f
+	.uleb128 0x24
 	.ascii "~new_allocator\0"
 	.byte	0x15
 	.byte	0x56
@@ -5179,7 +5267,7 @@ _ZTS13T100FileLogic:
 	.byte	0x1a
 	.long	0x7ead
 	.byte	0x1
-	.uleb128 0x24
+	.uleb128 0x1f
 	.ascii "address\0"
 	.byte	0x15
 	.byte	0x59
@@ -5208,7 +5296,7 @@ _ZTS13T100FileLogic:
 	.byte	0x1a
 	.long	0x821e
 	.byte	0x1
-	.uleb128 0x24
+	.uleb128 0x1f
 	.ascii "address\0"
 	.byte	0x15
 	.byte	0x5d
@@ -5230,7 +5318,7 @@ _ZTS13T100FileLogic:
 	.byte	0x1a
 	.long	0x8229
 	.byte	0x1
-	.uleb128 0x33
+	.uleb128 0x32
 	.secrel32	.LASF34
 	.byte	0x15
 	.byte	0x63
@@ -5270,7 +5358,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x63d8
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x32
 	.secrel32	.LASF12
 	.byte	0x15
 	.byte	0x81
@@ -5296,13 +5384,13 @@ _ZTS13T100FileLogic:
 	.byte	0x37
 	.byte	0xc
 	.long	0x64fb
-	.uleb128 0x35
+	.uleb128 0x33
 	.ascii "__min\0"
 	.byte	0x16
 	.byte	0x3a
 	.byte	0x1b
 	.long	0x7ab5
-	.uleb128 0x35
+	.uleb128 0x33
 	.ascii "__max\0"
 	.byte	0x16
 	.byte	0x3b
@@ -5346,13 +5434,13 @@ _ZTS13T100FileLogic:
 	.byte	0x37
 	.byte	0xc
 	.long	0x657a
-	.uleb128 0x35
+	.uleb128 0x33
 	.ascii "__min\0"
 	.byte	0x16
 	.byte	0x3a
 	.byte	0x1b
 	.long	0x7a93
-	.uleb128 0x35
+	.uleb128 0x33
 	.ascii "__max\0"
 	.byte	0x16
 	.byte	0x3b
@@ -5409,7 +5497,7 @@ _ZTS13T100FileLogic:
 	.byte	0xe8
 	.byte	0xb
 	.long	0x95b4
-	.uleb128 0x4b
+	.uleb128 0x4c
 	.ascii "div\0"
 	.byte	0xf
 	.byte	0xd5
@@ -5579,10 +5667,10 @@ _ZTS13T100FileLogic:
 	.byte	0x32
 	.byte	0xa
 	.long	0x5cbf
-	.uleb128 0x3f
+	.uleb128 0x40
 	.long	0x5b56
 	.byte	0
-	.uleb128 0x4b
+	.uleb128 0x4c
 	.ascii "_S_select_on_copy\0"
 	.byte	0x17
 	.byte	0x5e
@@ -5593,7 +5681,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x8235
 	.byte	0
-	.uleb128 0x6b
+	.uleb128 0x6e
 	.ascii "_S_on_swap\0"
 	.byte	0x17
 	.byte	0x61
@@ -5605,35 +5693,35 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x9b91
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "_S_propagate_on_copy_assign\0"
 	.byte	0x17
 	.byte	0x64
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE27_S_propagate_on_copy_assignEv\0"
 	.long	0x7adc
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "_S_propagate_on_move_assign\0"
 	.byte	0x17
 	.byte	0x67
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE27_S_propagate_on_move_assignEv\0"
 	.long	0x7adc
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "_S_propagate_on_swap\0"
 	.byte	0x17
 	.byte	0x6a
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE20_S_propagate_on_swapEv\0"
 	.long	0x7adc
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "_S_always_equal\0"
 	.byte	0x17
 	.byte	0x6d
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE15_S_always_equalEv\0"
 	.long	0x7adc
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "_S_nothrow_move\0"
 	.byte	0x17
 	.byte	0x70
@@ -5699,14 +5787,14 @@ _ZTS13T100FileLogic:
 	.secrel32	.LASF27
 	.long	0x5166
 	.byte	0
-	.uleb128 0x4c
+	.uleb128 0x4d
 	.ascii "__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
 	.byte	0x8
 	.byte	0x18
 	.word	0x2f9
 	.byte	0xb
 	.long	0x7248
-	.uleb128 0x4d
+	.uleb128 0x4e
 	.secrel32	.LASF46
 	.byte	0x18
 	.word	0x2fc
@@ -5940,14 +6028,14 @@ _ZTS13T100FileLogic:
 	.byte	0
 	.uleb128 0xa
 	.long	0x6aaf
-	.uleb128 0x4c
+	.uleb128 0x4d
 	.ascii "__normal_iterator<wchar_t const*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
 	.byte	0x8
 	.byte	0x18
 	.word	0x2f9
 	.byte	0xb
 	.long	0x79fa
-	.uleb128 0x4d
+	.uleb128 0x4e
 	.secrel32	.LASF46
 	.byte	0x18
 	.word	0x2fc
@@ -6265,21 +6353,21 @@ _ZTS13T100FileLogic:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x4b68
-	.uleb128 0x6c
+	.uleb128 0x6f
 	.long	0x4baf
-	.uleb128 0x48
+	.uleb128 0x49
 	.ascii "__gnu_debug\0"
 	.byte	0x6
 	.byte	0x38
 	.byte	0xb
 	.long	0x7b3e
-	.uleb128 0x6d
+	.uleb128 0x70
 	.byte	0x6
 	.byte	0x3a
 	.byte	0x18
 	.long	0x4bcd
 	.byte	0
-	.uleb128 0x4e
+	.uleb128 0x4f
 	.byte	0x8
 	.ascii "__builtin_va_list\0"
 	.long	0x7b56
@@ -6322,14 +6410,14 @@ _ZTS13T100FileLogic:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x7bc2
-	.uleb128 0x6e
+	.uleb128 0x71
 	.ascii "threadlocaleinfostruct\0"
 	.word	0x160
 	.byte	0x19
 	.word	0x1c4
 	.byte	0x10
 	.long	0x7dbc
-	.uleb128 0x6f
+	.uleb128 0x72
 	.byte	0x20
 	.byte	0x19
 	.word	0x1cf
@@ -6349,7 +6437,7 @@ _ZTS13T100FileLogic:
 	.byte	0xe
 	.long	0x7ead
 	.byte	0x8
-	.uleb128 0x4f
+	.uleb128 0x50
 	.secrel32	.LASF56
 	.byte	0x19
 	.word	0x1d2
@@ -6364,7 +6452,7 @@ _ZTS13T100FileLogic:
 	.long	0x7ec8
 	.byte	0x18
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x50
 	.secrel32	.LASF56
 	.byte	0x19
 	.word	0x1ca
@@ -6500,9 +6588,9 @@ _ZTS13T100FileLogic:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x7dda
-	.uleb128 0x50
+	.uleb128 0x51
 	.ascii "threadmbcinfostruct\0"
-	.uleb128 0x2a
+	.uleb128 0x2b
 	.ascii "localeinfo_struct\0"
 	.byte	0x10
 	.byte	0x19
@@ -6530,7 +6618,7 @@ _ZTS13T100FileLogic:
 	.word	0x1b7
 	.byte	0x3
 	.long	0x7def
-	.uleb128 0x2a
+	.uleb128 0x2b
 	.ascii "tagLC_ID\0"
 	.byte	0x6
 	.byte	0x19
@@ -6805,12 +6893,12 @@ _ZTS13T100FileLogic:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x7a21
-	.uleb128 0x50
+	.uleb128 0x51
 	.ascii "__lc_time_data\0"
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x81a4
-	.uleb128 0x70
+	.uleb128 0x73
 	.byte	0x8
 	.uleb128 0x6
 	.byte	0x8
@@ -6821,7 +6909,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xc
 	.byte	0x8
 	.long	0x505a
-	.uleb128 0x71
+	.uleb128 0x74
 	.ascii "decltype(nullptr)\0"
 	.uleb128 0x3b
 	.byte	0x8
@@ -6838,7 +6926,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x81ff
-	.uleb128 0x72
+	.uleb128 0x75
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x7b5e
@@ -7135,7 +7223,7 @@ _ZTS13T100FileLogic:
 	.byte	0xd9
 	.byte	0x1c
 	.long	0x8529
-	.uleb128 0x2a
+	.uleb128 0x2b
 	.ascii "tm\0"
 	.byte	0x24
 	.byte	0x1d
@@ -7325,7 +7413,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x865a
 	.byte	0
-	.uleb128 0x36
+	.uleb128 0x34
 	.ascii "getwchar\0"
 	.byte	0x1d
 	.word	0x302
@@ -7418,7 +7506,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x7eb8
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.secrel32	.LASF57
 	.byte	0x1e
 	.byte	0x31
@@ -7432,7 +7520,7 @@ _ZTS13T100FileLogic:
 	.long	0x821e
 	.uleb128 0x14
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.secrel32	.LASF57
 	.byte	0x1e
 	.byte	0x15
@@ -7500,7 +7588,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x7b3e
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.secrel32	.LASF58
 	.byte	0x1e
 	.byte	0x26
@@ -7515,7 +7603,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x7b3e
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.secrel32	.LASF58
 	.byte	0x1e
 	.byte	0xe
@@ -8039,7 +8127,7 @@ _ZTS13T100FileLogic:
 	.long	0x7aa4
 	.uleb128 0xa
 	.long	0x8e7b
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "setlocale\0"
 	.byte	0x1a
 	.byte	0x5a
@@ -8051,7 +8139,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x8200
 	.byte	0
-	.uleb128 0x73
+	.uleb128 0x76
 	.ascii "localeconv\0"
 	.byte	0x1a
 	.byte	0x5b
@@ -8060,7 +8148,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x20
 	.long	0x7a21
 	.long	0x8ece
-	.uleb128 0x74
+	.uleb128 0x77
 	.byte	0
 	.uleb128 0xf
 	.ascii "__newclmap\0"
@@ -8119,11 +8207,11 @@ _ZTS13T100FileLogic:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x8fae
-	.uleb128 0x75
+	.uleb128 0x78
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x8fb5
-	.uleb128 0x76
+	.uleb128 0x79
 	.long	0x8fc0
 	.uleb128 0x1
 	.long	0x81ba
@@ -8345,7 +8433,7 @@ _ZTS13T100FileLogic:
 	.word	0x150
 	.byte	0x19
 	.long	0x91e7
-	.uleb128 0x77
+	.uleb128 0x7a
 	.byte	0x10
 	.byte	0x23
 	.word	0x2bb
@@ -8440,7 +8528,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x9337
-	.uleb128 0x54
+	.uleb128 0x55
 	.long	0x7a8c
 	.long	0x934b
 	.uleb128 0x1
@@ -8537,7 +8625,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x9331
 	.byte	0
-	.uleb128 0x36
+	.uleb128 0x34
 	.ascii "rand\0"
 	.byte	0x23
 	.word	0x1b4
@@ -8592,7 +8680,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x7a8c
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "system\0"
 	.byte	0x25
 	.byte	0x5f
@@ -8909,7 +8997,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x1
 	.long	0x865a
 	.byte	0
-	.uleb128 0x36
+	.uleb128 0x34
 	.ascii "getchar\0"
 	.byte	0x1f
 	.word	0x2bc
@@ -9034,7 +9122,7 @@ _ZTS13T100FileLogic:
 	.long	0x8200
 	.uleb128 0x14
 	.byte	0
-	.uleb128 0x36
+	.uleb128 0x34
 	.ascii "tmpfile\0"
 	.byte	0x1f
 	.word	0x2f1
@@ -9266,46 +9354,46 @@ _ZTS13T100FileLogic:
 	.uleb128 0xc
 	.byte	0x8
 	.long	0x6aaf
-	.uleb128 0x78
+	.uleb128 0x7b
 	.secrel32	.LASF59
 	.byte	0x8
 	.byte	0x27
 	.byte	0x6
 	.byte	0x7
 	.long	0x9c31
-	.long	0x9edd
-	.uleb128 0x79
+	.long	0x9f1c
+	.uleb128 0x7c
 	.secrel32	.LASF59
 	.ascii "_ZN13T100FileLogicC4ERKS_\0"
 	.byte	0x1
 	.long	0x9c6a
 	.long	0x9c75
 	.uleb128 0x2
-	.long	0x9ee2
+	.long	0x9f21
 	.uleb128 0x1
-	.long	0x9eed
+	.long	0x9f2c
 	.byte	0
-	.uleb128 0x7a
+	.uleb128 0x7d
 	.ascii "_vptr.T100FileLogic\0"
-	.long	0x9efe
+	.long	0x9f3d
 	.byte	0
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF59
 	.byte	0x1
-	.byte	0x5
+	.byte	0x6
 	.byte	0x1
 	.ascii "_ZN13T100FileLogicC4Ev\0"
 	.byte	0x1
 	.long	0x9cb8
 	.long	0x9cbe
 	.uleb128 0x2
-	.long	0x9ee2
+	.long	0x9f21
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7e
 	.ascii "~T100FileLogic\0"
 	.byte	0x1
-	.byte	0xa
+	.byte	0xb
 	.byte	0x1
 	.ascii "_ZN13T100FileLogicD4Ev\0"
 	.byte	0x1
@@ -9314,14 +9402,14 @@ _ZTS13T100FileLogic:
 	.long	0x9cf6
 	.long	0x9d01
 	.uleb128 0x2
-	.long	0x9ee2
+	.long	0x9f21
 	.uleb128 0x2
 	.long	0x7a8c
 	.byte	0
-	.uleb128 0x24
+	.uleb128 0x1f
 	.ascii "IsExists\0"
 	.byte	0x1
-	.byte	0xf
+	.byte	0x10
 	.byte	0xa
 	.ascii "_ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
 	.long	0x7adc
@@ -9329,78 +9417,81 @@ _ZTS13T100FileLogic:
 	.long	0x9d6e
 	.long	0x9d79
 	.uleb128 0x2
-	.long	0x9ee2
+	.long	0x9f21
 	.uleb128 0x1
 	.long	0x9bfb
 	.byte	0
-	.uleb128 0x1f
+	.uleb128 0x24
 	.ascii "Create\0"
 	.byte	0x1
-	.byte	0x23
+	.byte	0x1f
 	.byte	0xa
 	.ascii "_ZN13T100FileLogic6CreateEP12T100FileInfo\0"
 	.byte	0x1
 	.long	0x9db7
 	.long	0x9dc2
 	.uleb128 0x2
-	.long	0x9ee2
+	.long	0x9f21
 	.uleb128 0x1
-	.long	0x9f1a
+	.long	0x9f59
 	.byte	0
-	.uleb128 0x1f
+	.uleb128 0x24
 	.ascii "Remove\0"
 	.byte	0x1
-	.byte	0x28
+	.byte	0x24
 	.byte	0xa
 	.ascii "_ZN13T100FileLogic6RemoveEP12T100FileInfo\0"
 	.byte	0x1
 	.long	0x9e00
 	.long	0x9e0b
 	.uleb128 0x2
-	.long	0x9ee2
+	.long	0x9f21
 	.uleb128 0x1
-	.long	0x9f1a
+	.long	0x9f59
 	.byte	0
-	.uleb128 0x1f
+	.uleb128 0x24
 	.ascii "Rename\0"
 	.byte	0x1
-	.byte	0x2d
+	.byte	0x29
 	.byte	0xa
 	.ascii "_ZN13T100FileLogic6RenameEP12T100FileInfo\0"
 	.byte	0x1
 	.long	0x9e49
 	.long	0x9e54
 	.uleb128 0x2
-	.long	0x9ee2
+	.long	0x9f21
 	.uleb128 0x1
-	.long	0x9f1a
+	.long	0x9f59
 	.byte	0
 	.uleb128 0x1f
 	.ascii "Open\0"
 	.byte	0x1
-	.byte	0x32
+	.byte	0x2e
 	.byte	0xa
-	.ascii "_ZN13T100FileLogic4OpenEP12T100FileInfo\0"
+	.ascii "_ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfo\0"
+	.long	0x7adc
 	.byte	0x1
-	.long	0x9e8e
-	.long	0x9e99
+	.long	0x9ec8
+	.long	0x9ed8
 	.uleb128 0x2
-	.long	0x9ee2
+	.long	0x9f21
 	.uleb128 0x1
-	.long	0x9f1a
+	.long	0x9bfb
+	.uleb128 0x1
+	.long	0x9f59
 	.byte	0
-	.uleb128 0x49
+	.uleb128 0x4a
 	.ascii "Close\0"
 	.byte	0x1
-	.byte	0x37
+	.byte	0x3b
 	.byte	0xa
 	.ascii "_ZN13T100FileLogic5CloseEP12T100FileInfo\0"
 	.byte	0x1
-	.long	0x9ed1
+	.long	0x9f10
 	.uleb128 0x2
-	.long	0x9ee2
+	.long	0x9f21
 	.uleb128 0x1
-	.long	0x9f1a
+	.long	0x9f59
 	.byte	0
 	.byte	0
 	.uleb128 0xa
@@ -9409,26 +9500,26 @@ _ZTS13T100FileLogic:
 	.byte	0x8
 	.long	0x9c31
 	.uleb128 0xa
-	.long	0x9ee2
+	.long	0x9f21
 	.uleb128 0xc
 	.byte	0x8
-	.long	0x9edd
-	.uleb128 0x54
+	.long	0x9f1c
+	.uleb128 0x55
 	.long	0x7a8c
-	.long	0x9efe
+	.long	0x9f3d
 	.uleb128 0x14
 	.byte	0
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x9f04
-	.uleb128 0x4e
+	.long	0x9f43
+	.uleb128 0x4f
 	.byte	0x8
 	.ascii "__vtbl_ptr_type\0"
-	.long	0x9ef3
+	.long	0x9f32
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x9f20
-	.uleb128 0x34
+	.long	0x9f5f
+	.uleb128 0x2a
 	.ascii "T100FileInfo\0"
 	.uleb128 0x3c
 	.ascii "_ZNSt17integral_constantIbLb0EE5valueE\0"
@@ -9438,15 +9529,15 @@ _ZTS13T100FileLogic:
 	.ascii "_ZNSt17integral_constantIbLb1EE5valueE\0"
 	.long	0x4a4b
 	.byte	0x1
-	.uleb128 0x7c
+	.uleb128 0x7f
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIxE5__maxE\0"
 	.long	0x64cb
 	.quad	0x7fffffffffffffff
-	.uleb128 0x7d
+	.uleb128 0x80
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIiE5__minE\0"
 	.long	0x653c
 	.sleb128 -2147483648
-	.uleb128 0x7e
+	.uleb128 0x81
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIiE5__maxE\0"
 	.long	0x654a
 	.long	0x7fffffff
@@ -9454,141 +9545,165 @@ _ZTS13T100FileLogic:
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIfE16__max_exponent10E\0"
 	.long	0x6658
 	.byte	0x26
-	.uleb128 0x55
+	.uleb128 0x56
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIdE16__max_exponent10E\0"
 	.long	0x66bd
 	.word	0x134
-	.uleb128 0x55
+	.uleb128 0x56
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIeE16__max_exponent10E\0"
 	.long	0x6727
 	.word	0x1344
-	.uleb128 0x2e
-	.long	0x9e99
-	.long	0xa12e
+	.uleb128 0x35
+	.long	0x9ed8
+	.long	0xa16f
 	.quad	.LFB1460
 	.quad	.LFE1460-.LFB1460
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa143
+	.long	0xa184
 	.uleb128 0x28
 	.secrel32	.LASF60
-	.long	0x9ee8
+	.long	0x9f27
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x2f
-	.long	0x9f1a
+	.uleb128 0x36
+	.long	0x9f59
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x57
 	.long	0x9e54
-	.long	0xa162
+	.long	0xa1a3
 	.quad	.LFB1459
 	.quad	.LFE1459-.LFB1459
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa177
+	.long	0xa1e0
 	.uleb128 0x28
 	.secrel32	.LASF60
-	.long	0x9ee8
+	.long	0x9f27
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x2f
-	.long	0x9f1a
+	.uleb128 0x3d
+	.ascii "path\0"
+	.byte	0x1
+	.byte	0x2e
+	.byte	0x31
+	.long	0x9bfb
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
+	.uleb128 0x3d
+	.ascii "info\0"
+	.byte	0x1
+	.byte	0x2e
+	.byte	0x45
+	.long	0x9f59
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 16
+	.uleb128 0x58
+	.ascii "file\0"
+	.byte	0x1
+	.byte	0x30
+	.byte	0x15
+	.long	0xa1e0
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -40
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2a
+	.ascii "T100File\0"
+	.uleb128 0x35
 	.long	0x9e0b
-	.long	0xa196
+	.long	0xa209
 	.quad	.LFB1458
 	.quad	.LFE1458-.LFB1458
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa1ab
+	.long	0xa21e
 	.uleb128 0x28
 	.secrel32	.LASF60
-	.long	0x9ee8
+	.long	0x9f27
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x2f
-	.long	0x9f1a
+	.uleb128 0x36
+	.long	0x9f59
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x35
 	.long	0x9dc2
-	.long	0xa1ca
+	.long	0xa23d
 	.quad	.LFB1457
 	.quad	.LFE1457-.LFB1457
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa1df
+	.long	0xa252
 	.uleb128 0x28
 	.secrel32	.LASF60
-	.long	0x9ee8
+	.long	0x9f27
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x2f
-	.long	0x9f1a
+	.uleb128 0x36
+	.long	0x9f59
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x35
 	.long	0x9d79
-	.long	0xa1fe
+	.long	0xa271
 	.quad	.LFB1456
 	.quad	.LFE1456-.LFB1456
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa213
+	.long	0xa286
 	.uleb128 0x28
 	.secrel32	.LASF60
-	.long	0x9ee8
+	.long	0x9f27
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x2f
-	.long	0x9f1a
+	.uleb128 0x36
+	.long	0x9f59
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x7f
+	.uleb128 0x57
 	.long	0x9d01
-	.long	0xa232
+	.long	0xa2a5
 	.quad	.LFB1455
 	.quad	.LFE1455-.LFB1455
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa275
+	.long	0xa2e6
 	.uleb128 0x28
 	.secrel32	.LASF60
-	.long	0x9ee8
+	.long	0x9f27
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x80
+	.uleb128 0x3d
 	.ascii "filename\0"
 	.byte	0x1
-	.byte	0xf
+	.byte	0x10
 	.byte	0x35
 	.long	0x9bfb
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x81
+	.uleb128 0x58
 	.ascii "result\0"
 	.byte	0x1
-	.byte	0x11
+	.byte	0x12
 	.byte	0x11
 	.long	0x8466
 	.uleb128 0x2
@@ -9596,70 +9711,70 @@ _ZTS13T100FileLogic:
 	.sleb128 -20
 	.uleb128 0x82
 	.quad	.LVL0
-	.long	0xa373
+	.long	0xa3e4
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x59
 	.long	0x9cbe
-	.long	0xa283
+	.long	0xa2f4
 	.byte	0
-	.long	0xa29d
-	.uleb128 0x57
+	.long	0xa30e
+	.uleb128 0x5a
 	.secrel32	.LASF60
-	.long	0x9ee8
+	.long	0x9f27
 	.uleb128 0x83
 	.ascii "__in_chrg\0"
 	.long	0x7a93
 	.byte	0
 	.uleb128 0x84
-	.long	0xa275
+	.long	0xa2e6
 	.ascii "_ZN13T100FileLogicD0Ev\0"
-	.long	0xa2d4
+	.long	0xa345
 	.quad	.LFB1454
 	.quad	.LFE1454-.LFB1454
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa2dd
-	.uleb128 0x3d
-	.long	0xa283
+	.long	0xa34e
+	.uleb128 0x3e
+	.long	0xa2f4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x58
-	.long	0xa275
+	.uleb128 0x5b
+	.long	0xa2e6
 	.ascii "_ZN13T100FileLogicD2Ev\0"
-	.long	0xa313
+	.long	0xa384
 	.quad	.LFB1452
 	.quad	.LFE1452-.LFB1452
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa31c
-	.uleb128 0x3d
-	.long	0xa283
+	.long	0xa38d
+	.uleb128 0x3e
+	.long	0xa2f4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x59
 	.long	0x9c90
-	.long	0xa32a
+	.long	0xa39b
 	.byte	0
-	.long	0xa334
-	.uleb128 0x57
+	.long	0xa3a5
+	.uleb128 0x5a
 	.secrel32	.LASF60
-	.long	0x9ee8
+	.long	0x9f27
 	.byte	0
-	.uleb128 0x58
-	.long	0xa31c
+	.uleb128 0x5b
+	.long	0xa38d
 	.ascii "_ZN13T100FileLogicC2Ev\0"
-	.long	0xa36a
+	.long	0xa3db
 	.quad	.LFB1449
 	.quad	.LFE1449-.LFB1449
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa373
-	.uleb128 0x3d
-	.long	0xa32a
+	.long	0xa3e4
+	.uleb128 0x3e
+	.long	0xa39b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -10172,6 +10287,8 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.uleb128 0x6e
 	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
 	.uleb128 0x32
 	.uleb128 0xb
 	.uleb128 0x3c
@@ -10277,8 +10394,6 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.uleb128 0x6e
 	.uleb128 0x8
-	.uleb128 0x49
-	.uleb128 0x13
 	.uleb128 0x32
 	.uleb128 0xb
 	.uleb128 0x3c
@@ -10371,6 +10486,15 @@ _ZTS13T100FileLogic:
 	.byte	0
 	.byte	0
 	.uleb128 0x2a
+	.uleb128 0x2
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3c
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x2b
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -10387,7 +10511,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -10410,7 +10534,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2c
+	.uleb128 0x2d
 	.uleb128 0x16
 	.byte	0
 	.uleb128 0x3
@@ -10425,7 +10549,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -10446,35 +10570,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x2e
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
 	.uleb128 0x2f
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x30
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -10487,36 +10583,36 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.uleb128 0x39
 	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x30
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x64
+	.uleb128 0x13
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x31
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x32
 	.uleb128 0x3a
 	.byte	0
 	.uleb128 0x3a
@@ -10529,7 +10625,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x32
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -10556,16 +10652,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x34
-	.uleb128 0x2
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3c
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -10584,7 +10671,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x36
+	.uleb128 0x34
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -10601,6 +10688,34 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.uleb128 0x3c
 	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x35
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x47
+	.uleb128 0x13
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x36
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x37
@@ -10714,13 +10829,30 @@ _ZTS13T100FileLogic:
 	.uleb128 0x3d
 	.uleb128 0x5
 	.byte	0
-	.uleb128 0x31
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x2
 	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x3e
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x3f
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -10737,7 +10869,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x40
 	.uleb128 0x1c
 	.byte	0
 	.uleb128 0x49
@@ -10746,7 +10878,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x41
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -10761,7 +10893,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x41
+	.uleb128 0x42
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -10786,7 +10918,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x42
+	.uleb128 0x43
 	.uleb128 0x16
 	.byte	0
 	.uleb128 0x3
@@ -10803,7 +10935,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x44
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -10824,7 +10956,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x45
 	.uleb128 0x30
 	.byte	0
 	.uleb128 0x3
@@ -10835,7 +10967,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x46
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -10848,7 +10980,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x47
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -10873,7 +11005,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x47
+	.uleb128 0x48
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -10886,7 +11018,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x49
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -10901,7 +11033,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x49
+	.uleb128 0x4a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -10924,7 +11056,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x4a
+	.uleb128 0x4b
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -10939,7 +11071,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x4b
+	.uleb128 0x4c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -10962,7 +11094,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x4c
+	.uleb128 0x4d
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -10979,7 +11111,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x4d
+	.uleb128 0x4e
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -10998,7 +11130,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x4e
+	.uleb128 0x4f
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
@@ -11009,7 +11141,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x50
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -11026,36 +11158,13 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x50
-	.uleb128 0x13
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3c
-	.uleb128 0x19
-	.byte	0
-	.byte	0
 	.uleb128 0x51
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x49
 	.uleb128 0x13
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
 	.uleb128 0x3c
 	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x52
@@ -11071,6 +11180,8 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.uleb128 0x39
 	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x3c
@@ -11080,6 +11191,27 @@ _ZTS13T100FileLogic:
 	.byte	0
 	.byte	0
 	.uleb128 0x53
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x54
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -11100,7 +11232,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x49
@@ -11109,7 +11241,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -11120,7 +11252,43 @@ _ZTS13T100FileLogic:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x47
+	.uleb128 0x13
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2116
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x58
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x59
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -11133,7 +11301,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x5a
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -11144,7 +11312,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x58
+	.uleb128 0x5b
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -11165,7 +11333,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x59
+	.uleb128 0x5c
 	.uleb128 0x11
 	.byte	0x1
 	.uleb128 0x25
@@ -11184,7 +11352,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x5a
+	.uleb128 0x5d
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -11197,7 +11365,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5b
+	.uleb128 0x5e
 	.uleb128 0x17
 	.byte	0x1
 	.uleb128 0xb
@@ -11212,7 +11380,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5f
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -11233,7 +11401,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x5d
+	.uleb128 0x60
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x49
@@ -11242,7 +11410,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x5e
+	.uleb128 0x61
 	.uleb128 0x2f
 	.byte	0
 	.uleb128 0x3
@@ -11253,7 +11421,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x62
 	.uleb128 0x2f
 	.byte	0
 	.uleb128 0x3
@@ -11264,7 +11432,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x60
+	.uleb128 0x63
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -11285,7 +11453,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x61
+	.uleb128 0x64
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -11302,7 +11470,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x65
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -11327,7 +11495,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x66
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -11356,7 +11524,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x64
+	.uleb128 0x67
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -11381,7 +11549,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x68
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -11404,7 +11572,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x66
+	.uleb128 0x69
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -11425,7 +11593,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x67
+	.uleb128 0x6a
 	.uleb128 0x1c
 	.byte	0
 	.uleb128 0x49
@@ -11436,7 +11604,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x68
+	.uleb128 0x6b
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -11457,7 +11625,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6c
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -11472,7 +11640,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x6a
+	.uleb128 0x6d
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -11487,7 +11655,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6b
+	.uleb128 0x6e
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -11508,14 +11676,14 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6c
+	.uleb128 0x6f
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x47
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6d
+	.uleb128 0x70
 	.uleb128 0x3a
 	.byte	0
 	.uleb128 0x3a
@@ -11528,7 +11696,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6e
+	.uleb128 0x71
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -11545,7 +11713,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6f
+	.uleb128 0x72
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -11560,26 +11728,26 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x70
+	.uleb128 0x73
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x71
+	.uleb128 0x74
 	.uleb128 0x3b
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.byte	0
 	.byte	0
-	.uleb128 0x72
+	.uleb128 0x75
 	.uleb128 0x26
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x73
+	.uleb128 0x76
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -11598,24 +11766,24 @@ _ZTS13T100FileLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x74
+	.uleb128 0x77
 	.uleb128 0x21
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x75
+	.uleb128 0x78
 	.uleb128 0x15
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x76
+	.uleb128 0x79
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x77
+	.uleb128 0x7a
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -11632,7 +11800,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x78
+	.uleb128 0x7b
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -11651,7 +11819,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x79
+	.uleb128 0x7c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -11672,7 +11840,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7a
+	.uleb128 0x7d
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -11687,7 +11855,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7e
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -11716,7 +11884,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7c
+	.uleb128 0x7f
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -11727,7 +11895,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0x7
 	.byte	0
 	.byte	0
-	.uleb128 0x7d
+	.uleb128 0x80
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -11738,7 +11906,7 @@ _ZTS13T100FileLogic:
 	.uleb128 0xd
 	.byte	0
 	.byte	0
-	.uleb128 0x7e
+	.uleb128 0x81
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -11747,59 +11915,6 @@ _ZTS13T100FileLogic:
 	.uleb128 0x13
 	.uleb128 0x1c
 	.uleb128 0x6
-	.byte	0
-	.byte	0
-	.uleb128 0x7f
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2116
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x80
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x81
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x82
@@ -12005,3 +12120,8 @@ _ZTS13T100FileLogic:
 	.ident	"GCC: (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0"
 	.def	_ZdlPvy;	.scl	2;	.type	32;	.endef
 	.def	_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5c_strEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN8T100FileC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
+	.def	_ZN8T100File8IsExistsEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN12T100FileInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
+	.def	_ZN8T100FileD1Ev;	.scl	2;	.type	32;	.endef
+	.def	_Unwind_Resume;	.scl	2;	.type	32;	.endef

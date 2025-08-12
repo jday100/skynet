@@ -6,6 +6,7 @@
 
 #include "T100ProjectSkeletalBase.h"
 
+class T100FileData;
 class T100FolderData;
 
 class T100ProjectSkeletal : public T100ProjectSkeletalBase
@@ -47,6 +48,7 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnResize();
         T100VOID                    OnQuit();
 
+        T100VOID                    OnFileOpen(T100FileData*);
         T100VOID                    OnFolderOpen(T100FolderData*);
 
         T100VOID                    OnItemExpanding();

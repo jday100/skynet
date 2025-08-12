@@ -10,6 +10,7 @@
 BEGIN_EVENT_TABLE(T100ProjectTree, wxTreeCtrl)
     EVT_TREE_ITEM_MENU(wxID_ANY, OnItemMenu)
     EVT_TREE_ITEM_EXPANDING(wxID_ANY, OnItemExpanding)
+    EVT_TREE_ITEM_ACTIVATED(wxID_ANY, OnItemActivated)
     EVT_MENU(T100PROJECT_TREE_MENU_PROJECT_NEW, OnProjectCreate)
 END_EVENT_TABLE()
 
@@ -1184,6 +1185,11 @@ T100VOID T100ProjectTree::ProjectOpen(T100ProjectInfo* info)
     //Expand(root);
 }
 
+T100VOID T100ProjectTree::FileOpen(wxTreeItemId id, T100FileInfo* info)
+{
+
+}
+
 T100VOID T100ProjectTree::FolderOpen(wxTreeItemId id, T100FolderInfo* info)
 {
     T100FolderData*         data    = dynamic_cast<T100FolderData*>(GetItemData(id));
@@ -1248,6 +1254,7 @@ T100VOID T100ProjectTree::AppendFile(wxTreeItemId parent, T100FileInfo* info)
     T100FileData*       data    = T100NEW T100FileData(info);
 
     data->SetLabel(info->GetFileName());
+    data->SetPath(info->GetPath());
 
     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
 }
@@ -1275,6 +1282,17 @@ T100VOID T100ProjectTree::OnItemMenu(wxTreeEvent& event)
     }
 
     PopupMenu(data->ShowMenu());
+}
+
+T100VOID T100ProjectTree::OnItemActivated(wxTreeEvent& event)
+{
+    T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+
+    if(!data){
+        return;
+    }
+
+    data->OnItemActivated();
 }
 
 T100VOID T100ProjectTree::OnItemExpanding(wxTreeEvent& event)

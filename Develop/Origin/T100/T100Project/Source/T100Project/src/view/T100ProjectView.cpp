@@ -52,6 +52,26 @@ T100VOID T100ProjectView::ProjectOpen(T100ProjectInfo* info)
     m_projectTree->ProjectOpen(info);
 }
 
+T100VOID T100ProjectView::FileOpen(wxTreeItemId id, T100FileInfo* info)
+{
+    if(m_mainPanel){
+
+    }else{
+        m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+        m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+    }
+
+    T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
+
+    editor->LoadFile(info->GetPath());
+
+    m_mainPanel->AddPage(editor, info->GetFileName());
+
+    m_projectTree->FileOpen(id, info);
+
+    m_manager->Update();
+}
+
 T100VOID T100ProjectView::FolderOpen(wxTreeItemId id, T100FolderInfo* info)
 {
     m_projectTree->FolderOpen(id, info);

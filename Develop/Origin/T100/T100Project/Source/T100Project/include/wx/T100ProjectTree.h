@@ -20,6 +20,8 @@ class T100ProjectTree : public wxTreeCtrl
 
         virtual T100VOID            ProjectOpen(T100ProjectInfo*);
 
+        virtual T100VOID            FileOpen(wxTreeItemId, T100FileInfo*);
+
         virtual T100VOID            FolderOpen(wxTreeItemId, T100FolderInfo*);
 
         virtual T100VOID            Clear();
@@ -29,6 +31,7 @@ class T100ProjectTree : public wxTreeCtrl
     protected:
         T100VOID                    OnItemMenu(wxTreeEvent&);
         T100VOID                    OnItemExpanding(wxTreeEvent&);
+        T100VOID                    OnItemActivated(wxTreeEvent&);
         T100VOID                    OnProjectCreate(wxCommandEvent&);
 
     private:

@@ -64,6 +64,11 @@ wxMenu* T100FolderData::ShowMenu()
     return menu;
 }
 
+T100VOID T100FolderData::OnItemActivated()
+{
+
+}
+
 T100VOID T100FolderData::OnItemExpanding()
 {
     if(m_opened){
