@@ -48,3 +48,13 @@ T100PROJECT_INFO_VECTOR& T100WorkSpaceInfo::GetProjects()
 {
     return m_projects;
 }
+
+T100FILE_INFO_VECTOR& T100WorkSpaceInfo::GetFiles()
+{
+    return m_files;
+}
+
+T100FOLDER_INFO_VECTOR& T100WorkSpaceInfo::GetFolders()
+{
+    return m_folders;
+}

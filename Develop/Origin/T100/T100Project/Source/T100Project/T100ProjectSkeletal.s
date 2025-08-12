@@ -1163,7 +1163,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 7 251 35
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_21(D)->D.122568._vptr.wxEventFunctor, _1
+	movq	(%rax), %rax	 # this_21(D)->D.122572._vptr.wxEventFunctor, _1
 	subq	$8, %rax	 #, _2
 	movq	(%rax), %rax	 # *_2, _3
 	movq	%rax, %rcx	 # _3,
@@ -1558,7 +1558,7 @@ _ZN16wxFileDialogBaseD2Ev:
 	movq	.refptr._ZTV16wxFileDialogBase(%rip), %rax	 #, tmp95
 	leaq	16(%rax), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp96
-	movq	%rdx, (%rax)	 # _1, this_10(D)->D.261161.D.260697.D.260376.D.260202.D.147741.D.147652.D.147373.D.146447.D.146390.D.135536.D.134245.D.128202._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_10(D)->D.261161.D.260697.D.260376.D.260202.D.147745.D.147656.D.147377.D.146451.D.146394.D.135540.D.134249.D.128206._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp97
 	addq	$1040, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -1867,7 +1867,7 @@ _ZN19T100ProjectSkeletal6CreateEP16T100ProjectFrame:
 	movq	8(%rax), %rax	 # this_12(D)->D.181605.m_view, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:25:     m_view->Create(frame);
 	.loc 9 25 25
-	movq	(%rax), %rax	 # _3->D.164481._vptr.T100ProjectViewBase, _4
+	movq	(%rax), %rax	 # _3->D.164485._vptr.T100ProjectViewBase, _4
 	addq	$40, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:25:     m_view->Create(frame);
@@ -1973,7 +1973,7 @@ _ZN19T100ProjectSkeletal7DestroyEv:
 	movq	8(%rax), %rax	 # this_28(D)->D.181605.m_view, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:30:     m_view->Destroy();
 	.loc 9 30 21
-	movq	(%rax), %rax	 # _3->D.164481._vptr.T100ProjectViewBase, _4
+	movq	(%rax), %rax	 # _3->D.164485._vptr.T100ProjectViewBase, _4
 	addq	$48, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:30:     m_view->Destroy();
@@ -2029,7 +2029,7 @@ _ZN19T100ProjectSkeletal7DestroyEv:
 	movq	8(%rax), %rdx	 # this_28(D)->D.181605.m_view, _17
 	movq	16(%rbp), %rax	 # this, tmp122
 	movq	8(%rax), %rax	 # this_28(D)->D.181605.m_view, _19
-	movq	(%rax), %rax	 # _19->D.164481._vptr.T100ProjectViewBase, _20
+	movq	(%rax), %rax	 # _19->D.164485._vptr.T100ProjectViewBase, _20
 	addq	$8, %rax	 #, _21
 	movq	(%rax), %rax	 # *_21, _22
 	movq	%rdx, %rcx	 # _17,
@@ -3961,7 +3961,7 @@ _ZN19T100ProjectSkeletal10OnModifiedEv:
 	movq	8(%rax), %rax	 # this_10(D)->D.181605.m_view, _5
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:254:     m_view->SetDirty();
 	.loc 9 254 22
-	movq	(%rax), %rax	 # _5->D.164481._vptr.T100ProjectViewBase, _6
+	movq	(%rax), %rax	 # _5->D.164485._vptr.T100ProjectViewBase, _6
 	addq	$16, %rax	 #, _7
 	movq	(%rax), %rax	 # *_7, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:254:     m_view->SetDirty();
@@ -4708,7 +4708,7 @@ _ZN20wxObjectEventFunctorD1Ev:
 	.loc 7 240 24
 	leaq	16+_ZTV20wxObjectEventFunctor(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.122568._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.122572._vptr.wxEventFunctor
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
@@ -4799,7 +4799,7 @@ _ZN20wxThreadHelperThreadD1Ev:
 	.loc 5 663 24
 	leaq	16+_ZTV20wxThreadHelperThread(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.114191._vptr.wxThread
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.114195._vptr.wxThread
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN8wxThreadD2Ev	 #
@@ -5055,7 +5055,7 @@ _ZN12wxFileDialogD1Ev:
 	movq	.refptr._ZTV12wxFileDialog(%rip), %rax	 #, tmp90
 	leaq	16(%rax), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_5(D)->D.261365.D.261161.D.260697.D.260376.D.260202.D.147741.D.147652.D.147373.D.146447.D.146390.D.135536.D.134245.D.128202._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_5(D)->D.261365.D.261161.D.260697.D.260376.D.260202.D.147745.D.147656.D.147377.D.146451.D.146394.D.135540.D.134249.D.128206._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$1104, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,

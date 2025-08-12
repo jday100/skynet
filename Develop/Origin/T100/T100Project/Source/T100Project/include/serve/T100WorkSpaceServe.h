@@ -47,7 +47,6 @@ class T100WorkSpaceServe
 
     protected:
         T100WSTRING                             GetFileName(const T100WxFolderInfo&);
-        T100BOOL                                Open(const T100WSTRING_VECTOR&, T100PROJECT_INFO_VECTOR&);
 
     protected:
         std::atomic_bool                        m_opened;
@@ -58,7 +57,7 @@ class T100WorkSpaceServe
         T100VOID                                init();
         T100VOID                                uninit();
 
-        T100VOID                                OpenWorkSpace(T100WorkSpaceInfo*);
+        T100BOOL                                OpenWorkSpace(T100WorkSpaceInfo*);
 };
 
 #endif // T100WORKSPACESERVE_H

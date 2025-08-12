@@ -19,15 +19,17 @@ T100FolderData::~T100FolderData()
 
 T100VOID T100FolderData::SetLabel(const T100WSTRING& label)
 {
-
+    m_label     = label;
 }
 
 const T100WSTRING& T100FolderData::GetLabel()
 {
-
+    return m_label;
 }
 
 wxMenu* T100FolderData::ShowMenu()
 {
+    wxMenu*     menu    = T100NEW wxMenu();
 
+    return menu;
 }

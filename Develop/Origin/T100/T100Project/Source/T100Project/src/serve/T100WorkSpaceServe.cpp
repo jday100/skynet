@@ -93,17 +93,13 @@ T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
         return T100FALSE;
     }
 
-    T100WSTRING_VECTOR      folders;
-
-    folder.GetAllSubFolders(folders);
-
     m_info      = T100NEW T100WorkSpaceInfo();
 
     m_info->SetLabel(info.GetLabel());
     m_info->SetPath(info.GetPath());
     m_info->SetFileName(filename);
 
-    if(!Open(folders, m_info->GetProjects())){
+    if(!OpenWorkSpace(m_info)){
         return T100FALSE;
     }
 
@@ -150,9 +146,52 @@ T100VOID T100WorkSpaceServe::SaveAs(T100WorkSpaceInfo*)
 
 }
 
-T100VOID T100WorkSpaceServe::OpenWorkSpace(T100WorkSpaceInfo* info)
+T100BOOL T100WorkSpaceServe::OpenWorkSpace(T100WorkSpaceInfo* info)
 {
+    if(!info){
+        return T100FALSE;
+    }
 
+    T100FILE_INFO_VECTOR&       files       = info->GetFiles();
+    T100FOLDER_INFO_VECTOR&     folders     = info->GetFolders();
+    T100PROJECT_INFO_VECTOR&    projects    = info->GetProjects();
+
+    T100WSTRING_VECTOR          fileNames;
+    T100WSTRING_VECTOR          folderNames;
+
+    T100Folder          folder(info->GetPath());
+
+    if(!folder.IsExists()){
+        return T100FALSE;
+    }
+
+    folder.List(folderNames, fileNames);
+
+    for(const T100WSTRING& item : folderNames){
+        T100WxFolderInfo        thisFolder;
+
+        thisFolder.SetLabel(item);
+        T100WSTRING     path    = m_info->GetPath() + L"/" + item;
+        thisFolder.SetPath(path);
+
+        if(m_projectServe.Check(&thisFolder)){
+            T100ProjectInfo*    thisProject     = T100NEW T100ProjectInfo();
+
+            projects.push_back(thisProject);
+        }else{
+            T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
+
+            folders.push_back(thisInfo);
+        }
+    }
+
+    for(const T100WSTRING& item : fileNames){
+        T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+
+        files.push_back(thisFile);
+    }
+
+    return T100TRUE;
 }
 
 T100VOID T100WorkSpaceServe::Build()
@@ -167,25 +206,4 @@ T100WSTRING T100WorkSpaceServe::GetFileName(const T100WxFolderInfo& info)
     filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
 
     return filename;
-}
-
-T100BOOL T100WorkSpaceServe::Open(const T100WSTRING_VECTOR& folders, T100PROJECT_INFO_VECTOR& projects)
-{
-    for(const T100WSTRING& item : folders){
-        T100WxFolderInfo        folder;
-
-        folder.SetLabel(item);
-        T100WSTRING     path    = m_info->GetPath() + L"/" + item;
-        folder.SetPath(path);
-
-        if(m_projectServe.Check(&folder)){
-            T100ProjectInfo*    info    = T100NEW T100ProjectInfo();
-
-            projects.push_back(info);
-        }else{
-            return T100FALSE;
-        }
-    }
-
-    return T100TRUE;
 }

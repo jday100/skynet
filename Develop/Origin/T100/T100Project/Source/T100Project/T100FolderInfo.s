@@ -206,12 +206,22 @@ _ZN14T100FolderInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIw
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
+	subq	$32, %rsp	 #,
+	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # label, label
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\info\T100FolderInfo.cpp:15:     m_label     = label;
+	.loc 1 15 19
+	movq	16(%rbp), %rax	 # this, tmp88
+	addq	$8, %rax	 #, _1
+	movq	24(%rbp), %rdx	 # label, tmp89
+	movq	%rax, %rcx	 # _1,
+	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\info\T100FolderInfo.cpp:16: }
 	.loc 1 16 1
 	nop	
+	addq	$32, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -236,9 +246,12 @@ _ZN14T100FolderInfo8GetLabelB5cxx11Ev:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\info\T100FolderInfo.cpp:20:     return m_label;
+	.loc 1 20 12
+	movq	16(%rbp), %rax	 # this, tmp89
+	addq	$8, %rax	 #, _2
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\info\T100FolderInfo.cpp:21: }
 	.loc 1 21 1
-	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -261,12 +274,22 @@ _ZN14T100FolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwE
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
+	subq	$32, %rsp	 #,
+	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # path, path
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\info\T100FolderInfo.cpp:25:     m_path      = path;
+	.loc 1 25 19
+	movq	16(%rbp), %rax	 # this, tmp88
+	addq	$40, %rax	 #, _1
+	movq	24(%rbp), %rdx	 # path, tmp89
+	movq	%rax, %rcx	 # _1,
+	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\info\T100FolderInfo.cpp:26: }
 	.loc 1 26 1
 	nop	
+	addq	$32, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -291,9 +314,12 @@ _ZN14T100FolderInfo7GetPathB5cxx11Ev:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\info\T100FolderInfo.cpp:30:     return m_path;
+	.loc 1 30 12
+	movq	16(%rbp), %rax	 # this, tmp89
+	addq	$40, %rax	 #, _2
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\info\T100FolderInfo.cpp:31: }
 	.loc 1 31 1
-	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -368,11 +394,11 @@ _ZTS14T100FolderInfo:
 	.file 39 "<built-in>"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x10e27
+	.long	0x10e28
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
-	.uleb128 0x63
+	.uleb128 0x64
 	.ascii "GNU C++14 8.1.0 -mthreads -mtune=core2 -march=nocona -g -fpermissive -fexec-charset=UTF-8 -finput-charset=UTF-8\0"
 	.byte	0x4
 	.ascii "C:\\zgit\\skynet\\Develop\\Origin\\T100\\T100Project\\Source\\T100Project\\src\\info\\T100FolderInfo.cpp\0"
@@ -380,12 +406,12 @@ _ZTS14T100FolderInfo:
 	.quad	.Ltext0
 	.quad	.Letext0-.Ltext0
 	.secrel32	.Ldebug_line0
-	.uleb128 0x64
+	.uleb128 0x65
 	.ascii "std\0"
 	.byte	0x27
 	.byte	0
 	.long	0xb3db
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "__cxx11\0"
 	.byte	0x8
 	.word	0x104
@@ -445,7 +471,7 @@ _ZTS14T100FolderInfo:
 	.byte	0xa
 	.long	0x304
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "~_Alloc_hider\0"
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderD4Ev\0"
 	.long	0x2f8
@@ -462,7 +488,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x30
 	.long	0xbc0f
 	.byte	0x1
-	.uleb128 0x48
+	.uleb128 0x47
 	.byte	0x10
 	.byte	0x2
 	.byte	0xa1
@@ -490,7 +516,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x1
 	.uleb128 0x7
 	.long	0x333
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "npos\0"
 	.byte	0x2
 	.byte	0x65
@@ -511,7 +537,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x12
 	.long	0x333
 	.byte	0x8
-	.uleb128 0x4a
+	.uleb128 0x49
 	.long	0x311
 	.byte	0x10
 	.uleb128 0x13
@@ -3156,10 +3182,10 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xf
 	.secrel32	.LASF71
 	.long	0xe62b
-	.uleb128 0x4b
+	.uleb128 0x4a
 	.ascii "_Traits\0"
 	.long	0x9c0a
-	.uleb128 0x4c
+	.uleb128 0x4b
 	.secrel32	.LASF70
 	.long	0x9932
 	.byte	0
@@ -3235,7 +3261,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x30
 	.long	0xd132
 	.byte	0x1
-	.uleb128 0x66
+	.uleb128 0x67
 	.byte	0x7
 	.byte	0x4
 	.long	0xe173
@@ -3243,11 +3269,11 @@ _ZTS14T100FolderInfo:
 	.byte	0x9e
 	.byte	0xc
 	.long	0x4999
-	.uleb128 0x67
+	.uleb128 0x68
 	.ascii "_S_local_capacity\0"
 	.byte	0x3
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x47
 	.byte	0x10
 	.byte	0x2
 	.byte	0xa1
@@ -3275,7 +3301,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x1
 	.uleb128 0x7
 	.long	0x49bb
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "npos\0"
 	.byte	0x2
 	.byte	0x65
@@ -3296,7 +3322,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x12
 	.long	0x49bb
 	.byte	0x8
-	.uleb128 0x4a
+	.uleb128 0x49
 	.long	0x4999
 	.byte	0x10
 	.uleb128 0x13
@@ -5941,10 +5967,10 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xf
 	.secrel32	.LASF71
 	.long	0xe9c4
-	.uleb128 0x4b
+	.uleb128 0x4a
 	.ascii "_Traits\0"
 	.long	0xa0a0
-	.uleb128 0x4c
+	.uleb128 0x4b
 	.secrel32	.LASF70
 	.long	0xabd0
 	.byte	0
@@ -5963,7 +5989,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x45
 	.byte	0xc
 	.long	0x91d3
-	.uleb128 0x4d
+	.uleb128 0x4c
 	.ascii "value\0"
 	.byte	0x3
 	.byte	0x47
@@ -5975,7 +6001,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x48
 	.byte	0x2d
 	.long	0xe24f
-	.uleb128 0x43
+	.uleb128 0x42
 	.ascii "operator std::integral_constant<bool, false>::value_type\0"
 	.byte	0x3
 	.byte	0x4a
@@ -6002,7 +6028,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x24
 	.ascii "_Tp\0"
 	.long	0xe24f
-	.uleb128 0x4e
+	.uleb128 0x4d
 	.ascii "__v\0"
 	.long	0xe24f
 	.byte	0
@@ -6016,7 +6042,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x45
 	.byte	0xc
 	.long	0x92e0
-	.uleb128 0x4d
+	.uleb128 0x4c
 	.ascii "value\0"
 	.byte	0x3
 	.byte	0x47
@@ -6028,7 +6054,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x48
 	.byte	0x2d
 	.long	0xe24f
-	.uleb128 0x43
+	.uleb128 0x42
 	.ascii "operator std::integral_constant<bool, true>::value_type\0"
 	.byte	0x3
 	.byte	0x4a
@@ -6055,19 +6081,19 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x24
 	.ascii "_Tp\0"
 	.long	0xe24f
-	.uleb128 0x4e
+	.uleb128 0x4d
 	.ascii "__v\0"
 	.long	0xe24f
 	.byte	0x1
 	.byte	0
 	.uleb128 0x7
 	.long	0x91d8
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.ascii "__swappable_details\0"
 	.byte	0x3
 	.word	0x975
 	.byte	0xd
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.ascii "__swappable_with_details\0"
 	.byte	0x3
 	.word	0x9c3
@@ -6079,7 +6105,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x4c
 	.byte	0xa
 	.long	0x935e
-	.uleb128 0x50
+	.uleb128 0x4f
 	.secrel32	.LASF74
 	.byte	0x4
 	.byte	0x4c
@@ -6093,7 +6119,7 @@ _ZTS14T100FolderInfo:
 	.byte	0
 	.uleb128 0x7
 	.long	0x931c
-	.uleb128 0x68
+	.uleb128 0x69
 	.ascii "piecewise_construct\0"
 	.byte	0x4
 	.byte	0x4f
@@ -6101,24 +6127,24 @@ _ZTS14T100FolderInfo:
 	.long	0x935e
 	.byte	0x1
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.ascii "input_iterator_tag\0"
 	.byte	0x1
 	.byte	0x13
 	.byte	0x59
 	.byte	0xa
-	.uleb128 0x51
+	.uleb128 0x50
 	.ascii "__debug\0"
 	.byte	0x5
 	.byte	0x32
 	.byte	0xd
-	.uleb128 0x52
+	.uleb128 0x51
 	.ascii "__exception_ptr\0"
 	.byte	0x6
 	.byte	0x34
 	.byte	0xd
 	.long	0x9834
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.secrel32	.LASF75
 	.byte	0x8
 	.byte	0x6
@@ -6132,7 +6158,7 @@ _ZTS14T100FolderInfo:
 	.byte	0xd
 	.long	0xe92d
 	.byte	0
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.secrel32	.LASF75
 	.byte	0x6
 	.byte	0x53
@@ -6145,7 +6171,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0xe92d
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x52
 	.ascii "_M_addref\0"
 	.byte	0x6
 	.byte	0x55
@@ -6156,7 +6182,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x2
 	.long	0xe92f
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x52
 	.ascii "_M_release\0"
 	.byte	0x6
 	.byte	0x56
@@ -6167,7 +6193,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x2
 	.long	0xe92f
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x42
 	.ascii "_M_get\0"
 	.byte	0x6
 	.byte	0x58
@@ -6291,7 +6317,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0xe95a
 	.byte	0
-	.uleb128 0x6c
+	.uleb128 0x6d
 	.ascii "operator bool\0"
 	.byte	0x6
 	.byte	0x90
@@ -6304,7 +6330,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x2
 	.long	0xe935
 	.byte	0
-	.uleb128 0x6d
+	.uleb128 0x6e
 	.ascii "__cxa_exception_type\0"
 	.byte	0x6
 	.byte	0x99
@@ -6330,7 +6356,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x39
 	.byte	0x1a
 	.long	0x93bd
-	.uleb128 0x6e
+	.uleb128 0x6f
 	.ascii "rethrow_exception\0"
 	.byte	0x6
 	.byte	0x45
@@ -6357,7 +6383,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x56
 	.byte	0xa
 	.long	0x98ef
-	.uleb128 0x50
+	.uleb128 0x4f
 	.secrel32	.LASF76
 	.byte	0x9
 	.byte	0x59
@@ -6371,7 +6397,7 @@ _ZTS14T100FolderInfo:
 	.byte	0
 	.uleb128 0x7
 	.long	0x98ba
-	.uleb128 0x6f
+	.uleb128 0x70
 	.ascii "nothrow\0"
 	.byte	0x9
 	.byte	0x5d
@@ -6397,7 +6423,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x6c
 	.byte	0xb
 	.long	0x99cb
-	.uleb128 0x54
+	.uleb128 0x53
 	.long	0xb41e
 	.byte	0
 	.byte	0x1
@@ -6427,7 +6453,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0xe9b2
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x54
 	.secrel32	.LASF78
 	.byte	0xa
 	.byte	0x8b
@@ -6975,7 +7001,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0xf5d5
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x55
 	.ascii "eof\0"
 	.byte	0xc
 	.word	0x1e6
@@ -7319,7 +7345,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0xf5f3
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x55
 	.ascii "eof\0"
 	.byte	0xc
 	.word	0x2b5
@@ -7955,7 +7981,7 @@ _ZTS14T100FolderInfo:
 	.byte	0x6c
 	.byte	0xb
 	.long	0xac6d
-	.uleb128 0x54
+	.uleb128 0x53
 	.long	0xcbd6
 	.byte	0
 	.byte	0x1
@@ -7985,7 +8011,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0x103c3
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x54
 	.secrel32	.LASF78
 	.byte	0xa
 	.byte	0x8b
@@ -8238,13 +8264,13 @@ _ZTS14T100FolderInfo:
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<char32_t*, std::__cxx11::basic_string<char32_t, std::char_traits<char32_t>, std::allocator<char32_t> > > >\0"
 	.uleb128 0x35
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<char32_t const*, std::__cxx11::basic_string<char32_t, std::char_traits<char32_t>, std::allocator<char32_t> > > >\0"
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "literals\0"
 	.byte	0x2
 	.word	0x1a08
 	.byte	0x14
 	.long	0xb1c6
-	.uleb128 0x57
+	.uleb128 0x56
 	.ascii "string_literals\0"
 	.byte	0x2
 	.word	0x1a0a
@@ -8393,13 +8419,13 @@ _ZTS14T100FolderInfo:
 	.secrel32	.LASF92
 	.long	0x10395
 	.byte	0
-	.uleb128 0x70
+	.uleb128 0x71
 	.ascii "move<std::allocator<wchar_t>&>\0"
 	.byte	0x14
 	.byte	0x63
 	.byte	0x5
 	.ascii "_ZSt4moveIRSaIwEEONSt16remove_referenceIT_E4typeEOS3_\0"
-	.long	0x10a71
+	.long	0x10a72
 	.uleb128 0x24
 	.ascii "_Tp\0"
 	.long	0x1030f
@@ -8407,13 +8433,13 @@ _ZTS14T100FolderInfo:
 	.long	0x1030f
 	.byte	0
 	.byte	0
-	.uleb128 0x71
+	.uleb128 0x72
 	.ascii "__gnu_cxx\0"
 	.byte	0x8
 	.word	0x106
 	.byte	0xb
 	.long	0xe173
-	.uleb128 0x57
+	.uleb128 0x56
 	.ascii "__cxx11\0"
 	.byte	0x8
 	.word	0x108
@@ -8423,7 +8449,7 @@ _ZTS14T100FolderInfo:
 	.word	0x108
 	.byte	0x41
 	.long	0xb3ee
-	.uleb128 0x51
+	.uleb128 0x50
 	.ascii "__ops\0"
 	.byte	0x15
 	.byte	0x23
@@ -8722,7 +8748,7 @@ _ZTS14T100FolderInfo:
 	.byte	0xe8
 	.byte	0xb
 	.long	0xfd32
-	.uleb128 0x72
+	.uleb128 0x73
 	.ascii "div\0"
 	.byte	0xf
 	.byte	0xd5
@@ -8906,7 +8932,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0xe9b2
 	.byte	0
-	.uleb128 0x58
+	.uleb128 0x57
 	.secrel32	.LASF103
 	.byte	0x18
 	.byte	0x61
@@ -9699,7 +9725,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0x103c3
 	.byte	0
-	.uleb128 0x58
+	.uleb128 0x57
 	.secrel32	.LASF103
 	.byte	0x18
 	.byte	0x61
@@ -10371,21 +10397,21 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x931c
-	.uleb128 0x73
+	.uleb128 0x74
 	.long	0x9363
-	.uleb128 0x52
+	.uleb128 0x51
 	.ascii "__gnu_debug\0"
 	.byte	0x5
 	.byte	0x38
 	.byte	0xb
 	.long	0xe2b1
-	.uleb128 0x74
+	.uleb128 0x75
 	.byte	0x5
 	.byte	0x3a
 	.byte	0x18
 	.long	0x9399
 	.byte	0
-	.uleb128 0x59
+	.uleb128 0x58
 	.byte	0x8
 	.ascii "__builtin_va_list\0"
 	.long	0xe2c9
@@ -10428,14 +10454,14 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xe335
-	.uleb128 0x75
+	.uleb128 0x76
 	.ascii "threadlocaleinfostruct\0"
 	.word	0x160
 	.byte	0x1a
 	.word	0x1c4
 	.byte	0x10
 	.long	0xe52f
-	.uleb128 0x76
+	.uleb128 0x77
 	.byte	0x20
 	.byte	0x1a
 	.word	0x1cf
@@ -10455,7 +10481,7 @@ _ZTS14T100FolderInfo:
 	.byte	0xe
 	.long	0xe620
 	.byte	0x8
-	.uleb128 0x5a
+	.uleb128 0x59
 	.secrel32	.LASF119
 	.byte	0x1a
 	.word	0x1d2
@@ -10470,7 +10496,7 @@ _ZTS14T100FolderInfo:
 	.long	0xe63b
 	.byte	0x18
 	.byte	0
-	.uleb128 0x5a
+	.uleb128 0x59
 	.secrel32	.LASF119
 	.byte	0x1a
 	.word	0x1ca
@@ -10606,7 +10632,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xe54d
-	.uleb128 0x5b
+	.uleb128 0x5a
 	.ascii "threadmbcinfostruct\0"
 	.uleb128 0x2a
 	.ascii "localeinfo_struct\0"
@@ -10911,12 +10937,12 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xe194
-	.uleb128 0x5b
+	.uleb128 0x5a
 	.ascii "__lc_time_data\0"
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xe917
-	.uleb128 0x77
+	.uleb128 0x78
 	.byte	0x8
 	.uleb128 0x6
 	.byte	0x8
@@ -10927,7 +10953,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x8
 	.byte	0x8
 	.long	0x9826
-	.uleb128 0x78
+	.uleb128 0x79
 	.ascii "decltype(nullptr)\0"
 	.uleb128 0x33
 	.byte	0x8
@@ -10944,7 +10970,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xe972
-	.uleb128 0x79
+	.uleb128 0x7a
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xe2d1
@@ -11532,7 +11558,7 @@ _ZTS14T100FolderInfo:
 	.long	0xe996
 	.uleb128 0x1c
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5b
 	.secrel32	.LASF120
 	.byte	0x1e
 	.byte	0x15
@@ -11615,7 +11641,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0xe2b1
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5b
 	.secrel32	.LASF121
 	.byte	0x1e
 	.byte	0xe
@@ -12154,7 +12180,7 @@ _ZTS14T100FolderInfo:
 	.long	0xe217
 	.uleb128 0x7
 	.long	0xf5f9
-	.uleb128 0x5d
+	.uleb128 0x5c
 	.ascii "setlocale\0"
 	.byte	0x1b
 	.byte	0x5a
@@ -12166,7 +12192,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0xe973
 	.byte	0
-	.uleb128 0x7a
+	.uleb128 0x7b
 	.ascii "localeconv\0"
 	.byte	0x1b
 	.byte	0x5b
@@ -12175,7 +12201,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x2b
 	.long	0xe194
 	.long	0xf64c
-	.uleb128 0x7b
+	.uleb128 0x7c
 	.byte	0
 	.uleb128 0x17
 	.ascii "__newclmap\0"
@@ -12234,11 +12260,11 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xf72c
-	.uleb128 0x7c
+	.uleb128 0x7d
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xf733
-	.uleb128 0x7d
+	.uleb128 0x7e
 	.long	0xf73e
 	.uleb128 0x1
 	.long	0xe92d
@@ -12460,7 +12486,7 @@ _ZTS14T100FolderInfo:
 	.word	0x150
 	.byte	0x19
 	.long	0xf965
-	.uleb128 0x7e
+	.uleb128 0x7f
 	.byte	0x10
 	.byte	0x23
 	.word	0x2bb
@@ -12555,7 +12581,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xfab5
-	.uleb128 0x5e
+	.uleb128 0x5d
 	.long	0xe1ff
 	.long	0xfac9
 	.uleb128 0x1
@@ -12707,7 +12733,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x1
 	.long	0xe1ff
 	.byte	0
-	.uleb128 0x5d
+	.uleb128 0x5c
 	.ascii "system\0"
 	.byte	0x25
 	.byte	0x5f
@@ -13498,28 +13524,28 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x8
 	.byte	0x8
 	.long	0xd1aa
-	.uleb128 0x7f
+	.uleb128 0x80
 	.secrel32	.LASF122
 	.byte	0x48
 	.byte	0x26
 	.byte	0x9
 	.byte	0x7
 	.long	0x1049f
-	.long	0x1070d
-	.uleb128 0x80
+	.long	0x1070e
+	.uleb128 0x81
 	.secrel32	.LASF122
 	.ascii "_ZN14T100FolderInfoC4ERKS_\0"
 	.byte	0x1
-	.long	0x104da
-	.long	0x104e5
+	.long	0x104db
+	.long	0x104e6
 	.uleb128 0x2
-	.long	0x10712
+	.long	0x10713
 	.uleb128 0x1
-	.long	0x1071d
+	.long	0x1071e
 	.byte	0
-	.uleb128 0x81
+	.uleb128 0x82
 	.ascii "_vptr.T100FolderInfo\0"
-	.long	0x1072e
+	.long	0x1072f
 	.byte	0
 	.byte	0x1
 	.uleb128 0x16
@@ -13529,12 +13555,12 @@ _ZTS14T100FolderInfo:
 	.byte	0x1
 	.ascii "_ZN14T100FolderInfoC4Ev\0"
 	.byte	0x1
-	.long	0x1052b
-	.long	0x10531
+	.long	0x1052c
+	.long	0x10532
 	.uleb128 0x2
-	.long	0x10712
+	.long	0x10713
 	.byte	0
-	.uleb128 0x82
+	.uleb128 0x83
 	.ascii "~T100FolderInfo\0"
 	.byte	0x1
 	.byte	0x8
@@ -13543,10 +13569,10 @@ _ZTS14T100FolderInfo:
 	.byte	0x1
 	.long	0x1049f
 	.byte	0x1
-	.long	0x1056c
-	.long	0x10577
+	.long	0x1056d
+	.long	0x10578
 	.uleb128 0x2
-	.long	0x10712
+	.long	0x10713
 	.uleb128 0x2
 	.long	0xe1ff
 	.byte	0
@@ -13557,10 +13583,10 @@ _ZTS14T100FolderInfo:
 	.byte	0xa
 	.ascii "_ZN14T100FolderInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
 	.byte	0x1
-	.long	0x105e1
-	.long	0x105ec
+	.long	0x105e2
+	.long	0x105ed
 	.uleb128 0x2
-	.long	0x10712
+	.long	0x10713
 	.uleb128 0x1
 	.long	0x10383
 	.byte	0
@@ -13572,10 +13598,10 @@ _ZTS14T100FolderInfo:
 	.ascii "_ZN14T100FolderInfo8GetLabelB5cxx11Ev\0"
 	.long	0x10383
 	.byte	0x1
-	.long	0x1062c
-	.long	0x10632
+	.long	0x1062d
+	.long	0x10633
 	.uleb128 0x2
-	.long	0x10712
+	.long	0x10713
 	.byte	0
 	.uleb128 0x3b
 	.ascii "SetPath\0"
@@ -13584,10 +13610,10 @@ _ZTS14T100FolderInfo:
 	.byte	0xa
 	.ascii "_ZN14T100FolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
 	.byte	0x1
-	.long	0x1069a
-	.long	0x106a5
+	.long	0x1069b
+	.long	0x106a6
 	.uleb128 0x2
-	.long	0x10712
+	.long	0x10713
 	.uleb128 0x1
 	.long	0x10383
 	.byte	0
@@ -13599,12 +13625,12 @@ _ZTS14T100FolderInfo:
 	.ascii "_ZN14T100FolderInfo7GetPathB5cxx11Ev\0"
 	.long	0x10383
 	.byte	0x1
-	.long	0x106e3
-	.long	0x106e9
+	.long	0x106e4
+	.long	0x106ea
 	.uleb128 0x2
-	.long	0x10712
+	.long	0x10713
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x5e
 	.ascii "m_label\0"
 	.byte	0x26
 	.byte	0x16
@@ -13612,7 +13638,7 @@ _ZTS14T100FolderInfo:
 	.long	0x47f8
 	.byte	0x8
 	.byte	0x2
-	.uleb128 0x5f
+	.uleb128 0x5e
 	.ascii "m_path\0"
 	.byte	0x26
 	.byte	0x17
@@ -13627,59 +13653,59 @@ _ZTS14T100FolderInfo:
 	.byte	0x8
 	.long	0x1049f
 	.uleb128 0x7
-	.long	0x10712
+	.long	0x10713
 	.uleb128 0x8
 	.byte	0x8
-	.long	0x1070d
-	.uleb128 0x5e
+	.long	0x1070e
+	.uleb128 0x5d
 	.long	0xe1ff
-	.long	0x1072e
+	.long	0x1072f
 	.uleb128 0x1c
 	.byte	0
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x10734
-	.uleb128 0x59
+	.long	0x10735
+	.uleb128 0x58
 	.byte	0x8
 	.ascii "__vtbl_ptr_type\0"
-	.long	0x10723
-	.uleb128 0x44
+	.long	0x10724
+	.uleb128 0x43
 	.ascii "_ZNSt17integral_constantIbLb0EE5valueE\0"
 	.long	0x90f1
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "_ZNSt17integral_constantIbLb1EE5valueE\0"
 	.long	0x91ff
 	.byte	0x1
-	.uleb128 0x83
+	.uleb128 0x84
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIxE5__maxE\0"
 	.long	0xb710
 	.quad	0x7fffffffffffffff
-	.uleb128 0x84
+	.uleb128 0x85
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIiE5__minE\0"
 	.long	0xb781
 	.sleb128 -2147483648
-	.uleb128 0x85
+	.uleb128 0x86
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIiE5__maxE\0"
 	.long	0xb78f
 	.long	0x7fffffff
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIfE16__max_exponent10E\0"
 	.long	0xb89d
 	.byte	0x26
-	.uleb128 0x60
+	.uleb128 0x5f
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIdE16__max_exponent10E\0"
 	.long	0xb902
 	.word	0x134
-	.uleb128 0x60
+	.uleb128 0x5f
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIeE16__max_exponent10E\0"
 	.long	0xb96c
 	.word	0x1344
 	.uleb128 0x28
 	.long	0xb4bd
-	.long	0x1093c
+	.long	0x1093d
 	.byte	0x2
-	.long	0x1094f
+	.long	0x10950
 	.uleb128 0x1d
 	.secrel32	.LASF123
 	.long	0xe97f
@@ -13688,45 +13714,45 @@ _ZTS14T100FolderInfo:
 	.long	0xe206
 	.byte	0
 	.uleb128 0x2c
-	.long	0x1092e
+	.long	0x1092f
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwED2Ev\0"
-	.long	0x10980
-	.long	0x10986
+	.long	0x10981
+	.long	0x10987
 	.uleb128 0x27
-	.long	0x1093c
+	.long	0x1093d
 	.byte	0
 	.uleb128 0x28
 	.long	0xb43e
-	.long	0x10994
+	.long	0x10995
 	.byte	0x2
-	.long	0x1099e
+	.long	0x1099f
 	.uleb128 0x1d
 	.secrel32	.LASF123
 	.long	0xe97f
 	.byte	0
 	.uleb128 0x2c
-	.long	0x10986
+	.long	0x10987
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2Ev\0"
-	.long	0x109cf
-	.long	0x109d5
+	.long	0x109d0
+	.long	0x109d6
 	.uleb128 0x27
-	.long	0x10994
+	.long	0x10995
 	.byte	0
 	.uleb128 0x28
 	.long	0x222
-	.long	0x109e3
+	.long	0x109e4
 	.byte	0x2
-	.long	0x10a07
+	.long	0x10a08
 	.uleb128 0x1d
 	.secrel32	.LASF123
 	.long	0x10327
-	.uleb128 0x45
+	.uleb128 0x44
 	.ascii "__dat\0"
 	.byte	0x2
 	.byte	0x94
 	.byte	0x17
 	.long	0x304
-	.uleb128 0x45
+	.uleb128 0x44
 	.ascii "__a\0"
 	.byte	0x2
 	.byte	0x94
@@ -13734,27 +13760,27 @@ _ZTS14T100FolderInfo:
 	.long	0x1032c
 	.byte	0
 	.uleb128 0x2c
-	.long	0x109d5
+	.long	0x109d6
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwOS3_\0"
-	.long	0x10a61
-	.long	0x10a71
+	.long	0x10a62
+	.long	0x10a72
 	.uleb128 0x27
-	.long	0x109e3
+	.long	0x109e4
 	.uleb128 0x27
-	.long	0x109ec
+	.long	0x109ed
 	.uleb128 0x27
-	.long	0x109fa
+	.long	0x109fb
 	.byte	0
 	.uleb128 0x33
 	.byte	0x8
 	.long	0xb255
-	.uleb128 0x86
+	.uleb128 0x87
 	.long	0xb36e
-	.long	0x10a97
+	.long	0x10a98
 	.uleb128 0x24
 	.ascii "_Tp\0"
 	.long	0x1030f
-	.uleb128 0x45
+	.uleb128 0x44
 	.ascii "__t\0"
 	.byte	0x14
 	.byte	0x63
@@ -13763,26 +13789,26 @@ _ZTS14T100FolderInfo:
 	.byte	0
 	.uleb128 0x28
 	.long	0xfda
-	.long	0x10aa5
+	.long	0x10aa6
 	.byte	0x2
-	.long	0x10aaf
+	.long	0x10ab0
 	.uleb128 0x1d
 	.secrel32	.LASF123
 	.long	0x10348
 	.byte	0
 	.uleb128 0x2c
-	.long	0x10a97
+	.long	0x10a98
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2Ev\0"
-	.long	0x10af6
-	.long	0x10afc
+	.long	0x10af7
+	.long	0x10afd
 	.uleb128 0x27
-	.long	0x10aa5
+	.long	0x10aa6
 	.byte	0
 	.uleb128 0x28
 	.long	0x99a5
-	.long	0x10b0a
+	.long	0x10b0b
 	.byte	0x2
-	.long	0x10b1d
+	.long	0x10b1e
 	.uleb128 0x1d
 	.secrel32	.LASF123
 	.long	0xe9ad
@@ -13791,35 +13817,35 @@ _ZTS14T100FolderInfo:
 	.long	0xe206
 	.byte	0
 	.uleb128 0x2c
-	.long	0x10afc
+	.long	0x10afd
 	.ascii "_ZNSaIwED2Ev\0"
-	.long	0x10b37
-	.long	0x10b3d
+	.long	0x10b38
+	.long	0x10b3e
 	.uleb128 0x27
-	.long	0x10b0a
+	.long	0x10b0b
 	.byte	0
 	.uleb128 0x28
 	.long	0x9955
-	.long	0x10b4b
+	.long	0x10b4c
 	.byte	0x2
-	.long	0x10b55
+	.long	0x10b56
 	.uleb128 0x1d
 	.secrel32	.LASF123
 	.long	0xe9ad
 	.byte	0
 	.uleb128 0x2c
-	.long	0x10b3d
+	.long	0x10b3e
 	.ascii "_ZNSaIwEC2Ev\0"
-	.long	0x10b6f
-	.long	0x10b75
+	.long	0x10b70
+	.long	0x10b76
 	.uleb128 0x27
-	.long	0x10b4b
+	.long	0x10b4c
 	.byte	0
 	.uleb128 0x28
 	.long	0x14f2
-	.long	0x10b83
+	.long	0x10b84
 	.byte	0x2
-	.long	0x10b96
+	.long	0x10b97
 	.uleb128 0x1d
 	.secrel32	.LASF123
 	.long	0x10348
@@ -13828,21 +13854,21 @@ _ZTS14T100FolderInfo:
 	.long	0xe206
 	.byte	0
 	.uleb128 0x2c
-	.long	0x10b75
+	.long	0x10b76
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED2Ev\0"
-	.long	0x10bdd
-	.long	0x10be3
+	.long	0x10bde
+	.long	0x10be4
 	.uleb128 0x27
-	.long	0x10b83
+	.long	0x10b84
 	.byte	0
-	.uleb128 0x87
+	.uleb128 0x88
 	.long	0x29d
 	.byte	0x2
 	.byte	0x8b
 	.byte	0xe
-	.long	0x10bf5
+	.long	0x10bf6
 	.byte	0x2
-	.long	0x10c08
+	.long	0x10c09
 	.uleb128 0x1d
 	.secrel32	.LASF123
 	.long	0x10327
@@ -13851,43 +13877,43 @@ _ZTS14T100FolderInfo:
 	.long	0xe206
 	.byte	0
 	.uleb128 0x2c
-	.long	0x10be3
+	.long	0x10be4
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderD1Ev\0"
-	.long	0x10c5d
-	.long	0x10c63
+	.long	0x10c5e
+	.long	0x10c64
 	.uleb128 0x27
-	.long	0x10bf5
+	.long	0x10bf6
 	.byte	0
-	.uleb128 0x41
-	.long	0x106a5
-	.long	0x10c82
+	.uleb128 0x60
+	.long	0x106a6
+	.long	0x10c83
 	.quad	.LFB1443
 	.quad	.LFE1443-.LFB1443
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x10c8f
-	.uleb128 0x42
+	.long	0x10c90
+	.uleb128 0x41
 	.secrel32	.LASF123
-	.long	0x10718
+	.long	0x10719
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x41
-	.long	0x10632
-	.long	0x10cae
+	.uleb128 0x61
+	.long	0x10633
+	.long	0x10caf
 	.quad	.LFB1442
 	.quad	.LFE1442-.LFB1442
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x10ccb
-	.uleb128 0x42
+	.long	0x10ccc
+	.uleb128 0x41
 	.secrel32	.LASF123
-	.long	0x10718
+	.long	0x10719
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x61
+	.uleb128 0x62
 	.ascii "path\0"
 	.byte	0x1
 	.byte	0x17
@@ -13897,36 +13923,36 @@ _ZTS14T100FolderInfo:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x41
-	.long	0x105ec
-	.long	0x10cea
+	.uleb128 0x60
+	.long	0x105ed
+	.long	0x10ceb
 	.quad	.LFB1441
 	.quad	.LFE1441-.LFB1441
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x10cf7
-	.uleb128 0x42
+	.long	0x10cf8
+	.uleb128 0x41
 	.secrel32	.LASF123
-	.long	0x10718
+	.long	0x10719
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x41
-	.long	0x10577
-	.long	0x10d16
+	.uleb128 0x61
+	.long	0x10578
+	.long	0x10d17
 	.quad	.LFB1440
 	.quad	.LFE1440-.LFB1440
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x10d34
-	.uleb128 0x42
+	.long	0x10d35
+	.uleb128 0x41
 	.secrel32	.LASF123
-	.long	0x10718
+	.long	0x10719
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x61
+	.uleb128 0x62
 	.ascii "label\0"
 	.byte	0x1
 	.byte	0xd
@@ -13937,66 +13963,66 @@ _ZTS14T100FolderInfo:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x28
-	.long	0x10531
-	.long	0x10d42
+	.long	0x10532
+	.long	0x10d43
 	.byte	0
-	.long	0x10d55
+	.long	0x10d56
 	.uleb128 0x1d
 	.secrel32	.LASF123
-	.long	0x10718
+	.long	0x10719
 	.uleb128 0x1d
 	.secrel32	.LASF124
 	.long	0xe206
 	.byte	0
-	.uleb128 0x62
-	.long	0x10d34
+	.uleb128 0x63
+	.long	0x10d35
 	.ascii "_ZN14T100FolderInfoD0Ev\0"
-	.long	0x10d8c
+	.long	0x10d8d
 	.quad	.LFB1439
 	.quad	.LFE1439-.LFB1439
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x10d95
-	.uleb128 0x46
-	.long	0x10d42
+	.long	0x10d96
+	.uleb128 0x45
+	.long	0x10d43
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x62
-	.long	0x10d34
+	.uleb128 0x63
+	.long	0x10d35
 	.ascii "_ZN14T100FolderInfoD2Ev\0"
-	.long	0x10dcc
+	.long	0x10dcd
 	.quad	.LFB1437
 	.quad	.LFE1437-.LFB1437
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x10dd5
-	.uleb128 0x46
-	.long	0x10d42
+	.long	0x10dd6
+	.uleb128 0x45
+	.long	0x10d43
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x28
-	.long	0x10502
-	.long	0x10de3
+	.long	0x10503
+	.long	0x10de4
 	.byte	0
-	.long	0x10ded
+	.long	0x10dee
 	.uleb128 0x1d
 	.secrel32	.LASF123
-	.long	0x10718
+	.long	0x10719
 	.byte	0
-	.uleb128 0x88
-	.long	0x10dd5
+	.uleb128 0x89
+	.long	0x10dd6
 	.ascii "_ZN14T100FolderInfoC2Ev\0"
-	.long	0x10e21
+	.long	0x10e22
 	.quad	.LFB1434
 	.quad	.LFE1434-.LFB1434
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x46
-	.long	0x10de3
+	.uleb128 0x45
+	.long	0x10de4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -15087,25 +15113,6 @@ _ZTS14T100FolderInfo:
 	.byte	0
 	.byte	0
 	.uleb128 0x41
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x42
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -15118,7 +15125,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x42
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15143,7 +15150,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x43
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -15154,7 +15161,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -15169,7 +15176,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -15178,7 +15185,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x47
+	.uleb128 0x46
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -15195,7 +15202,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x47
 	.uleb128 0x17
 	.byte	0x1
 	.uleb128 0xb
@@ -15210,7 +15217,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x49
+	.uleb128 0x48
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -15231,7 +15238,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x4a
+	.uleb128 0x49
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x49
@@ -15240,7 +15247,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x4b
+	.uleb128 0x4a
 	.uleb128 0x2f
 	.byte	0
 	.uleb128 0x3
@@ -15251,7 +15258,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x4c
+	.uleb128 0x4b
 	.uleb128 0x2f
 	.byte	0
 	.uleb128 0x3
@@ -15262,7 +15269,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x4d
+	.uleb128 0x4c
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -15283,7 +15290,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x4e
+	.uleb128 0x4d
 	.uleb128 0x30
 	.byte	0
 	.uleb128 0x3
@@ -15294,7 +15301,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x4e
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -15307,7 +15314,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x4f
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15332,7 +15339,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x50
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -15345,7 +15352,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x51
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -15360,7 +15367,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x52
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15383,7 +15390,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x53
 	.uleb128 0x1c
 	.byte	0
 	.uleb128 0x49
@@ -15394,7 +15401,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x54
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15417,7 +15424,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x55
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -15438,7 +15445,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x56
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -15453,7 +15460,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x58
+	.uleb128 0x57
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15474,7 +15481,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x59
+	.uleb128 0x58
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
@@ -15485,7 +15492,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5a
+	.uleb128 0x59
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -15502,7 +15509,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x5b
+	.uleb128 0x5a
 	.uleb128 0x13
 	.byte	0
 	.uleb128 0x3
@@ -15511,13 +15518,34 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5b
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
 	.uleb128 0x19
 	.uleb128 0x3
 	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x5c
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -15533,27 +15561,6 @@ _ZTS14T100FolderInfo:
 	.byte	0
 	.byte	0
 	.uleb128 0x5d
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x5e
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x49
@@ -15562,7 +15569,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x5e
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -15581,7 +15588,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x60
+	.uleb128 0x5f
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -15592,7 +15599,45 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
+	.uleb128 0x60
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x47
+	.uleb128 0x13
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
 	.uleb128 0x61
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x47
+	.uleb128 0x13
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2116
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x62
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -15609,7 +15654,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x63
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -15630,7 +15675,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x64
 	.uleb128 0x11
 	.byte	0x1
 	.uleb128 0x25
@@ -15649,7 +15694,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x64
+	.uleb128 0x65
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -15662,7 +15707,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15679,7 +15724,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x66
+	.uleb128 0x67
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0x3e
@@ -15698,7 +15743,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x67
+	.uleb128 0x68
 	.uleb128 0x28
 	.byte	0
 	.uleb128 0x3
@@ -15707,7 +15752,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x68
+	.uleb128 0x69
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -15728,7 +15773,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.uleb128 0x13
 	.byte	0
 	.uleb128 0x3
@@ -15743,7 +15788,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -15760,7 +15805,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15775,35 +15820,6 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.uleb128 0x6e
 	.uleb128 0x8
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x63
-	.uleb128 0x19
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x6c
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x32
-	.uleb128 0xb
 	.uleb128 0x3c
 	.uleb128 0x19
 	.uleb128 0x63
@@ -15835,11 +15851,40 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.uleb128 0x3c
 	.uleb128 0x19
+	.uleb128 0x63
+	.uleb128 0x19
 	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x6e
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x32
+	.uleb128 0xb
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x64
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x6f
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15862,7 +15907,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6f
+	.uleb128 0x70
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -15883,7 +15928,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x70
+	.uleb128 0x71
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15904,7 +15949,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x71
+	.uleb128 0x72
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -15919,7 +15964,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x72
+	.uleb128 0x73
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -15942,14 +15987,14 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x73
+	.uleb128 0x74
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x47
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x74
+	.uleb128 0x75
 	.uleb128 0x3a
 	.byte	0
 	.uleb128 0x3a
@@ -15962,28 +16007,13 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x75
+	.uleb128 0x76
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0xb
 	.uleb128 0x5
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x76
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -15995,25 +16025,40 @@ _ZTS14T100FolderInfo:
 	.byte	0
 	.byte	0
 	.uleb128 0x77
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x78
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x78
+	.uleb128 0x79
 	.uleb128 0x3b
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.byte	0
 	.byte	0
-	.uleb128 0x79
+	.uleb128 0x7a
 	.uleb128 0x26
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x7a
+	.uleb128 0x7b
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -16032,24 +16077,24 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7c
 	.uleb128 0x21
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x7c
+	.uleb128 0x7d
 	.uleb128 0x15
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x7d
+	.uleb128 0x7e
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7e
+	.uleb128 0x7f
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -16066,7 +16111,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7f
+	.uleb128 0x80
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -16085,7 +16130,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x80
+	.uleb128 0x81
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -16106,7 +16151,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x81
+	.uleb128 0x82
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -16121,7 +16166,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x82
+	.uleb128 0x83
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -16150,7 +16195,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x83
+	.uleb128 0x84
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -16161,7 +16206,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x7
 	.byte	0
 	.byte	0
-	.uleb128 0x84
+	.uleb128 0x85
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -16172,7 +16217,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0xd
 	.byte	0
 	.byte	0
-	.uleb128 0x85
+	.uleb128 0x86
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -16183,7 +16228,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0x86
+	.uleb128 0x87
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -16192,7 +16237,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x87
+	.uleb128 0x88
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -16211,7 +16256,7 @@ _ZTS14T100FolderInfo:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x88
+	.uleb128 0x89
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -16500,3 +16545,4 @@ _ZTS14T100FolderInfo:
 	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZdlPvy;	.scl	2;	.type	32;	.endef
+	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_;	.scl	2;	.type	32;	.endef

@@ -20,6 +20,8 @@ class T100WorkSpaceInfo
         const T100WSTRING&              GetFileName();
 
         T100PROJECT_INFO_VECTOR&        GetProjects();
+        T100FILE_INFO_VECTOR&           GetFiles();
+        T100FOLDER_INFO_VECTOR&         GetFolders();
 
     protected:
         T100WSTRING                     m_label;
