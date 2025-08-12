@@ -52,9 +52,9 @@ T100VOID T100ProjectView::ProjectOpen(T100ProjectInfo* info)
     m_projectTree->ProjectOpen(info);
 }
 
-T100VOID T100ProjectView::FolderOpen()
+T100VOID T100ProjectView::FolderOpen(T100FolderInfo* info)
 {
-    m_projectTree->FolderOpen();
+    m_projectTree->FolderOpen(info);
 }
 
 T100VOID T100ProjectView::ShowSetupEditorDialog()

@@ -242,11 +242,13 @@ T100VOID T100ProjectSkeletal::OnFolderOpen()
         return T100FALSE;
     }
 
+    T100FolderInfo*     info        = T100NEW T100FolderInfo();
+
     if(!logic.Open(L"")){
         return T100FALSE;
     }
 
-    m_view->FolderOpen();
+    m_view->FolderOpen(info);
 }
 
 T100VOID T100ProjectSkeletal::OnItemExpanding()

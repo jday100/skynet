@@ -649,7 +649,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 6 251 35
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_21(D)->D.115669._vptr.wxEventFunctor, _1
+	movq	(%rax), %rax	 # this_21(D)->D.115677._vptr.wxEventFunctor, _1
 	subq	$8, %rax	 #, _2
 	movq	(%rax), %rax	 # *_2, _3
 	movq	%rax, %rcx	 # _3,
@@ -995,7 +995,7 @@ _ZN20wxwxMenuItemListNodeC1EP10wxListBasePS_S2_P10wxMenuItemRK9wxListKey:
 	movq	.refptr._ZTV20wxwxMenuItemListNode(%rip), %rax	 #, tmp95
 	leaq	16(%rax), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp96
-	movq	%rdx, (%rax)	 # _2, this_5(D)->D.134482._vptr.wxNodeBase
+	movq	%rdx, (%rax)	 # _2, this_5(D)->D.134490._vptr.wxNodeBase
 .LBE10:
 	nop	
 	addq	$48, %rsp	 #,
@@ -1037,7 +1037,7 @@ _ZN14wxMenuItemListC1E9wxKeyType:
 	call	_ZN10wxListBaseC2E9wxKeyType	 #
 	leaq	16+_ZTV14wxMenuItemList(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _2, this_5(D)->D.134971._vptr.wxListBase
+	movq	%rdx, (%rax)	 # _2, this_5(D)->D.134979._vptr.wxListBase
 .LBE11:
 	nop	
 	addq	$32, %rsp	 #,
@@ -1148,8 +1148,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.147938
-	movq	%rax, %rcx	 # D.147938,
+	movq	%rsi, %rax	 # tmp98, D.147946
+	movq	%rax, %rcx	 # D.147946,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -1227,7 +1227,7 @@ _ZN10wxMenuBaseC2El:
 	movq	.refptr._ZTV10wxMenuBase(%rip), %rax	 #, tmp95
 	leaq	16(%rax), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp96
-	movq	%rdx, (%rax)	 # _2, this_11(D)->D.135616.D.121303._vptr.wxObject
+	movq	%rdx, (%rax)	 # _2, this_11(D)->D.135624.D.121311._vptr.wxObject
 	movq	-64(%rbp), %rax	 # this, tmp97
 	addq	$136, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -1273,8 +1273,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.147939
-	movq	%rax, %rcx	 # D.147939,
+	movq	%rbx, %rax	 # tmp106, D.147947
+	movq	%rax, %rcx	 # D.147947,
 .LEHB6:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1434,7 +1434,7 @@ _ZN6wxMenuC1El:
 	movq	.refptr._ZTV6wxMenu(%rip), %rax	 #, tmp94
 	leaq	16(%rax), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp95
-	movq	%rdx, (%rax)	 # _2, this_8(D)->D.136443.D.135616.D.121303._vptr.wxObject
+	movq	%rdx, (%rax)	 # _2, this_8(D)->D.136451.D.135624.D.121311._vptr.wxObject
 	movq	-64(%rbp), %rax	 # this, tmp96
 	addq	$280, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -1469,8 +1469,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.147941
-	movq	%rax, %rcx	 # D.147941,
+	movq	%rbx, %rax	 # tmp98, D.147949
+	movq	%rax, %rcx	 # D.147949,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1604,7 +1604,7 @@ _ZN15T100ProjectDataC2Ev:
 	call	_ZN16T100TreeItemDataC2Ev	 #
 	leaq	16+_ZTV15T100ProjectData(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	%rdx, (%rax)	 # _2, this_7(D)->D.141651.D.141608.D.137133._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _2, this_7(D)->D.141659.D.141616.D.137141._vptr.wxClientData
 	movq	16(%rbp), %rax	 # this, tmp93
 	addq	$16, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -1659,7 +1659,7 @@ _ZN15T100ProjectDataC2EP15T100ProjectInfo:
 .LEHE11:
 	leaq	16+_ZTV15T100ProjectData(%rip), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp95
-	movq	%rdx, (%rax)	 # _2, this_10(D)->D.141651.D.141608.D.137133._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _2, this_10(D)->D.141659.D.141616.D.137141._vptr.wxClientData
 	movq	-64(%rbp), %rax	 # this, tmp96
 	addq	$16, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -1692,8 +1692,8 @@ _ZN15T100ProjectDataC2EP15T100ProjectInfo:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN16T100TreeItemDataD2Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.147943
-	movq	%rax, %rcx	 # D.147943,
+	movq	%rbx, %rax	 # tmp100, D.147951
+	movq	%rax, %rcx	 # D.147951,
 .LEHB13:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1761,7 +1761,7 @@ _ZN15T100ProjectDataD2Ev:
 	.loc 9 16 35
 	leaq	16+_ZTV15T100ProjectData(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _1, this_5(D)->D.141651.D.141608.D.137133._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _1, this_5(D)->D.141659.D.141616.D.137141._vptr.wxClientData
 	movq	16(%rbp), %rax	 # this, tmp91
 	addq	$16, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -1938,8 +1938,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.147944
-	movq	%rax, %rcx	 # D.147944,
+	movq	%rsi, %rax	 # tmp93, D.147952
+	movq	%rax, %rcx	 # D.147952,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .LEHE16:
@@ -2132,7 +2132,7 @@ _ZN14wxMenuItemListD1Ev:
 	.loc 7 37 1
 	leaq	16+_ZTV14wxMenuItemList(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.134971._vptr.wxListBase
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.134979._vptr.wxListBase
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN10wxListBaseD2Ev	 #
@@ -2222,7 +2222,7 @@ _ZN20wxObjectEventFunctorD1Ev:
 	.loc 6 240 24
 	leaq	16+_ZTV20wxObjectEventFunctor(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.115669._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.115677._vptr.wxEventFunctor
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
@@ -2313,7 +2313,7 @@ _ZN20wxThreadHelperThreadD1Ev:
 	.loc 4 663 24
 	leaq	16+_ZTV20wxThreadHelperThread(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.107292._vptr.wxThread
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.107300._vptr.wxThread
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN8wxThreadD2Ev	 #

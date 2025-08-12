@@ -20,7 +20,7 @@ class T100ProjectView : public T100ProjectViewBase
         T100VOID                    ProjectOpen(T100ProjectInfo*);
 
 
-        T100VOID                    FolderOpen();
+        T100VOID                    FolderOpen(T100FolderInfo*);
 
 
 
