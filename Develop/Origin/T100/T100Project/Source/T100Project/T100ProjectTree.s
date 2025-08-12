@@ -12600,16 +12600,16 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 	movq	-8(%rbp), %rax	 # data, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN12T100FileData8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1252:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), -1, -1, data);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1252:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
 	.loc 26 1252 87 discriminator 3
 	movq	32(%rbp), %rbx	 # this, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1252:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), -1, -1, data);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1252:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
 	.loc 26 1252 72 discriminator 3
 	movq	48(%rbp), %rax	 # info, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN12T100FileInfo11GetFileNameB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1252:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), -1, -1, data);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1252:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
 	.loc 26 1252 87 discriminator 3
 	leaq	-64(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
@@ -12620,7 +12620,7 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 	movq	-8(%rbp), %rcx	 # data, tmp101
 	movq	%rcx, 40(%rsp)	 # tmp101,
 	movl	$-1, 32(%rsp)	 #,
-	movl	$-1, %r9d	 #,
+	movl	$10, %r9d	 #,
 	movq	%rdx, %r8	 # tmp99,
 	movq	%rax, %rdx	 # tmp100,
 	movq	%rbx, %rcx	 # _2,
@@ -12647,7 +12647,7 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 	call	_Unwind_Resume	 #
 .L430:
 	movq	%rax, %rbx	 #, tmp107
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1252:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), -1, -1, data);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1252:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
 	.loc 26 1252 87
 	leaq	-64(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,

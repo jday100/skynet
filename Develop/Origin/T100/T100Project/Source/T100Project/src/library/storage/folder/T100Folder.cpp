@@ -85,7 +85,8 @@ T100VOID T100Folder::List(T100WSTRING_VECTOR& folders, T100WSTRING_VECTOR& files
         return;
     }else{
         do{
-            if(info.attrib == _A_NORMAL){
+            if(info.attrib == _A_NORMAL ||
+               info.attrib == _A_ARCH){
                 files.push_back(info.name);
             }else if(info.attrib & _A_SUBDIR){
                 if(wcscmp(info.name, L".") != 0 && wcscmp(info.name, L"..") != 0){
