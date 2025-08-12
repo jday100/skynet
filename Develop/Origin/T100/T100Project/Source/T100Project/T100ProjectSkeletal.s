@@ -357,8 +357,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.273125
-	movq	%rax, %rcx	 # D.273125,
+	movq	%rbx, %rax	 # tmp96, D.273134
+	movq	%rax, %rcx	 # D.273134,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -584,8 +584,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.273129
-	movq	%rax, %rcx	 # D.273129,
+	movq	%rbx, %rax	 # tmp103, D.273138
+	movq	%rax, %rcx	 # D.273138,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -692,8 +692,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.273131
-	movq	%rax, %rcx	 # D.273131,
+	movq	%rbx, %rax	 # tmp99, D.273140
+	movq	%rax, %rcx	 # D.273140,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1920,8 +1920,8 @@ _ZN19T100ProjectSkeletal6CreateEP16T100ProjectFrame:
 	movl	$56, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp105, D.273136
-	movq	%rax, %rcx	 # D.273136,
+	movq	%rsi, %rax	 # tmp105, D.273145
+	movq	%rax, %rcx	 # D.273145,
 	call	_Unwind_Resume	 #
 .L77:
 	movq	%rax, %rsi	 #, tmp106
@@ -1930,8 +1930,8 @@ _ZN19T100ProjectSkeletal6CreateEP16T100ProjectFrame:
 	movl	$88, %edx	 #,
 	movq	%rbx, %rcx	 # _15,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp106, D.273137
-	movq	%rax, %rcx	 # D.273137,
+	movq	%rsi, %rax	 # tmp106, D.273146
+	movq	%rax, %rcx	 # D.273146,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE12:
@@ -2290,8 +2290,8 @@ _ZN19T100ProjectSkeletal14OnWorkSpaceNewEv:
 	leaq	48(%rbp), %rax	 #, tmp134
 	movq	%rax, %rcx	 # tmp134,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp132, D.273138
-	movq	%rax, %rcx	 # D.273138,
+	movq	%rbx, %rax	 # tmp132, D.273147
+	movq	%rax, %rcx	 # D.273147,
 .LEHB17:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2510,8 +2510,8 @@ _ZN19T100ProjectSkeletal15OnWorkSpaceOpenEv:
 	leaq	48(%rbp), %rax	 #, tmp127
 	movq	%rax, %rcx	 # tmp127,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp125, D.273139
-	movq	%rax, %rcx	 # D.273139,
+	movq	%rbx, %rax	 # tmp125, D.273148
+	movq	%rax, %rcx	 # D.273148,
 .LEHB22:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2903,8 +2903,8 @@ _ZN19T100ProjectSkeletal9OnFileNewEv:
 	movl	$72, %edx	 #,
 	movq	%rbx, %rcx	 # _5,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp101, D.273140
-	movq	%rax, %rcx	 # D.273140,
+	movq	%rsi, %rax	 # tmp101, D.273149
+	movq	%rax, %rcx	 # D.273149,
 	call	_Unwind_Resume	 #
 .L132:
 	movq	%rax, %rbx	 #, tmp104
@@ -2922,8 +2922,8 @@ _ZN19T100ProjectSkeletal9OnFileNewEv:
 	leaq	-9(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.273141
-	movq	%rax, %rcx	 # D.273141,
+	movq	%rbx, %rax	 # tmp103, D.273150
+	movq	%rax, %rcx	 # D.273150,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE27:
@@ -3220,8 +3220,8 @@ _ZN19T100ProjectSkeletal10OnFileOpenEv:
 	leaq	1104(%rbp), %rax	 #, tmp151
 	movq	%rax, %rcx	 # tmp151,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp149, D.273143
-	movq	%rax, %rcx	 # D.273143,
+	movq	%rbx, %rax	 # tmp149, D.273152
+	movq	%rax, %rcx	 # D.273152,
 .LEHB41:
 	call	_Unwind_Resume	 #
 .L154:
@@ -3257,8 +3257,8 @@ _ZN19T100ProjectSkeletal10OnFileOpenEv:
 	leaq	-48(%rbp), %rax	 #, tmp162
 	movq	%rax, %rcx	 # tmp162,
 	call	_ZN12wxFileDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp152, D.273144
-	movq	%rax, %rcx	 # D.273144,
+	movq	%rbx, %rax	 # tmp152, D.273153
+	movq	%rax, %rcx	 # D.273153,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE41:
@@ -3961,8 +3961,8 @@ _ZN19T100ProjectSkeletal12OnFolderOpenEP14T100FolderData:
 	movl	$120, %edx	 #,
 	movq	%rbx, %rcx	 # _25,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp110, D.273153
-	movq	%rax, %rcx	 # D.273153,
+	movq	%rsi, %rax	 # tmp110, D.273162
+	movq	%rax, %rcx	 # D.273162,
 	call	_Unwind_Resume	 #
 .LEHE44:
 .L180:
@@ -4088,8 +4088,8 @@ _ZN19T100ProjectSkeletal15OnItemExpandingEv:
 	leaq	-96(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.273154
-	movq	%rax, %rcx	 # D.273154,
+	movq	%rbx, %rax	 # tmp99, D.273163
+	movq	%rax, %rcx	 # D.273163,
 .LEHB46:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4290,8 +4290,8 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEv:
 	leaq	-96(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp108, D.273155
-	movq	%rax, %rcx	 # D.273155,
+	movq	%rbx, %rax	 # tmp108, D.273164
+	movq	%rax, %rcx	 # D.273164,
 .LEHB49:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4662,14 +4662,14 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 2 196 24
-	movzwl	16(%rax), %edx	 # _3->D.267390.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.267399.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 2 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.267390.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.267399.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 2 196 24
-	movzwl	16(%rax), %eax	 # _3->D.267390.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.267399.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 2 196 30
 	testw	%ax, %ax	 # _6
@@ -4799,11 +4799,11 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 2 189 17
-	movzwl	16(%rax), %edx	 # _3->D.267390.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.267399.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 2 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.267390.m_ref
+	movw	%dx, 16(%rax)	 # _6, _3->D.267399.m_ref
 	jmp	.L216	 #
 .L219:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
@@ -4844,7 +4844,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 2 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.267390.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.267399.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 2 171 72
 	popq	%rbp	 #

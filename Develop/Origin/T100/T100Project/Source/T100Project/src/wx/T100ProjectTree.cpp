@@ -1181,11 +1181,17 @@ T100VOID T100ProjectTree::ProjectOpen(T100ProjectInfo* info)
     wxTreeItemId        root        = GetRootItem();
     AppendProject(root, info);
 
-    Expand(root);
+    //Expand(root);
 }
 
 T100VOID T100ProjectTree::FolderOpen(wxTreeItemId id, T100FolderInfo* info)
 {
+    T100FolderData*         data    = dynamic_cast<T100FolderData*>(GetItemData(id));
+
+    if(!data){
+        return;
+    }
+
     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
     T100FILE_INFO_VECTOR&       files       = info->GetFiles();
 
@@ -1196,6 +1202,8 @@ T100VOID T100ProjectTree::FolderOpen(wxTreeItemId id, T100FolderInfo* info)
     for(T100FileInfo* file : files){
         AppendFile(id, file);
     }
+
+    data->SetOpened(T100TRUE);
 
     Expand(id);
 }
