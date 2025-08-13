@@ -177,7 +177,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 1 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.255543
+	setne	%al	 #, D.255597
 .LBE7:
 .LBE6:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -495,8 +495,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.255552
-	movq	%rax, %rcx	 # D.255552,
+	movq	%rbx, %rax	 # tmp96, D.255606
+	movq	%rax, %rcx	 # D.255606,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -722,8 +722,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.255556
-	movq	%rax, %rcx	 # D.255556,
+	movq	%rbx, %rax	 # tmp103, D.255610
+	movq	%rax, %rcx	 # D.255610,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -830,8 +830,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.255558
-	movq	%rax, %rcx	 # D.255558,
+	movq	%rbx, %rax	 # tmp99, D.255612
+	movq	%rax, %rcx	 # D.255612,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2021,7 +2021,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 12 337 27
-	movq	-8(%rbp), %rax	 # D.127637, D.255254
+	movq	-8(%rbp), %rax	 # D.127637, D.255308
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 12 338 5
 	addq	$48, %rsp	 #,
@@ -2252,7 +2252,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 78
-	movq	-8(%rbp), %rax	 # D.127671, D.255276
+	movq	-8(%rbp), %rax	 # D.127671, D.255330
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 81
 	addq	$48, %rsp	 #,
@@ -2300,7 +2300,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 78
-	movq	-8(%rbp), %rax	 # D.127673, D.255273
+	movq	-8(%rbp), %rax	 # D.127673, D.255327
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 81
 	addq	$48, %rsp	 #,
@@ -2487,7 +2487,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 12 532 77
-	movq	-72(%rbp), %rax	 # D.127715, D.255249
+	movq	-72(%rbp), %rax	 # D.127715, D.255303
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 12 533 5
 	addq	$72, %rsp	 #,
@@ -3429,7 +3429,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.255142
+	movq	(%rax), %rax	 # wxDefaultSize, D.255196
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 72
 	popq	%rbp	 #
@@ -4782,7 +4782,7 @@ _ZL18wxInvalidTextCoord:
 	.def	_ZNK12wxDialogBase16GetContentWindowEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK12wxDialogBase16GetContentWindowEv
 _ZNK12wxDialogBase16GetContentWindowEv:
-.LFB18249:
+.LFB18755:
 	.file 19 "C:/zoo/lib/wxWidgets-3.0.5/include/wx/dialog.h"
 	.loc 19 165 23
 	.cfi_startproc
@@ -4805,7 +4805,7 @@ _ZNK12wxDialogBase16GetContentWindowEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE18249:
+.LFE18755:
 	.seh_endproc
 	.section	.text$_ZNK8wxDialog7IsModalEv,"x"
 	.linkonce discard
@@ -4814,7 +4814,7 @@ _ZNK12wxDialogBase16GetContentWindowEv:
 	.def	_ZNK8wxDialog7IsModalEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK8wxDialog7IsModalEv
 _ZNK8wxDialog7IsModalEv:
-.LFB18278:
+.LFB18784:
 	.file 20 "C:/zoo/lib/wxWidgets-3.0.5/include/wx/msw/dialog.h"
 	.loc 20 63 18
 	.cfi_startproc
@@ -4842,7 +4842,7 @@ _ZNK8wxDialog7IsModalEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE18278:
+.LFE18784:
 	.seh_endproc
 	.section	.text$_ZN15wxDirDialogBaseD2Ev,"x"
 	.linkonce discard
@@ -4851,7 +4851,7 @@ _ZNK8wxDialog7IsModalEv:
 	.def	_ZN15wxDirDialogBaseD2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15wxDirDialogBaseD2Ev
 _ZN15wxDirDialogBaseD2Ev:
-.LFB18298:
+.LFB18804:
 	.file 21 "C:/zoo/lib/wxWidgets-3.0.5/include/wx/dirdlg.h"
 	.loc 21 59 13
 	.cfi_startproc
@@ -4871,7 +4871,7 @@ _ZN15wxDirDialogBaseD2Ev:
 	.loc 21 59 32
 	leaq	16+_ZTV15wxDirDialogBase(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_6(D)->D.243717.D.243535.D.243214.D.243040.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_6(D)->D.247450.D.247268.D.246947.D.246773.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$840, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -4893,7 +4893,7 @@ _ZN15wxDirDialogBaseD2Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE18298:
+.LFE18804:
 	.seh_endproc
 	.section	.text$_ZN15wxDirDialogBaseD1Ev,"x"
 	.linkonce discard
@@ -4902,7 +4902,7 @@ _ZN15wxDirDialogBaseD2Ev:
 	.def	_ZN15wxDirDialogBaseD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15wxDirDialogBaseD1Ev
 _ZN15wxDirDialogBaseD1Ev:
-.LFB18299:
+.LFB18805:
 	.loc 21 59 13
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4921,7 +4921,7 @@ _ZN15wxDirDialogBaseD1Ev:
 	.loc 21 59 32
 	leaq	16+_ZTV15wxDirDialogBase(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_6(D)->D.243717.D.243535.D.243214.D.243040.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_6(D)->D.247450.D.247268.D.246947.D.246773.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$840, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -4943,7 +4943,7 @@ _ZN15wxDirDialogBaseD1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE18299:
+.LFE18805:
 	.seh_endproc
 	.section	.text$_ZN15wxDirDialogBaseD0Ev,"x"
 	.linkonce discard
@@ -4952,7 +4952,7 @@ _ZN15wxDirDialogBaseD1Ev:
 	.def	_ZN15wxDirDialogBaseD0Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15wxDirDialogBaseD0Ev
 _ZN15wxDirDialogBaseD0Ev:
-.LFB18300:
+.LFB18806:
 	.loc 21 59 13
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4980,7 +4980,7 @@ _ZN15wxDirDialogBaseD0Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE18300:
+.LFE18806:
 	.seh_endproc
 	.section	.text$_ZN15wxDirDialogBase10SetMessageERK8wxString,"x"
 	.linkonce discard
@@ -4989,7 +4989,7 @@ _ZN15wxDirDialogBaseD0Ev:
 	.def	_ZN15wxDirDialogBase10SetMessageERK8wxString;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15wxDirDialogBase10SetMessageERK8wxString
 _ZN15wxDirDialogBase10SetMessageERK8wxString:
-.LFB18302:
+.LFB18808:
 	.loc 21 84 18
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5020,7 +5020,7 @@ _ZN15wxDirDialogBase10SetMessageERK8wxString:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE18302:
+.LFE18808:
 	.seh_endproc
 	.section	.text$_ZN15wxDirDialogBase7SetPathERK8wxString,"x"
 	.linkonce discard
@@ -5029,7 +5029,7 @@ _ZN15wxDirDialogBase10SetMessageERK8wxString:
 	.def	_ZN15wxDirDialogBase7SetPathERK8wxString;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15wxDirDialogBase7SetPathERK8wxString
 _ZN15wxDirDialogBase7SetPathERK8wxString:
-.LFB18303:
+.LFB18809:
 	.loc 21 85 18
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5060,7 +5060,7 @@ _ZN15wxDirDialogBase7SetPathERK8wxString:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE18303:
+.LFE18809:
 	.seh_endproc
 	.section	.text$_ZNK15wxDirDialogBase10GetMessageEv,"x"
 	.linkonce discard
@@ -5069,7 +5069,7 @@ _ZN15wxDirDialogBase7SetPathERK8wxString:
 	.def	_ZNK15wxDirDialogBase10GetMessageEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK15wxDirDialogBase10GetMessageEv
 _ZNK15wxDirDialogBase10GetMessageEv:
-.LFB18304:
+.LFB18810:
 	.loc 21 87 22
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5100,7 +5100,7 @@ _ZNK15wxDirDialogBase10GetMessageEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE18304:
+.LFE18810:
 	.seh_endproc
 	.section	.text$_ZNK15wxDirDialogBase7GetPathEv,"x"
 	.linkonce discard
@@ -5109,7 +5109,7 @@ _ZNK15wxDirDialogBase10GetMessageEv:
 	.def	_ZNK15wxDirDialogBase7GetPathEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK15wxDirDialogBase7GetPathEv
 _ZNK15wxDirDialogBase7GetPathEv:
-.LFB18305:
+.LFB18811:
 	.loc 21 88 22
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5140,7 +5140,7 @@ _ZNK15wxDirDialogBase7GetPathEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE18305:
+.LFE18811:
 	.seh_endproc
 	.text
 	.align 2
@@ -5744,8 +5744,8 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	leaq	832(%rbp), %rax	 #, tmp125
 	movq	%rax, %rcx	 # tmp125,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp123, D.255567
-	movq	%rax, %rcx	 # D.255567,
+	movq	%rbx, %rax	 # tmp123, D.255621
+	movq	%rax, %rcx	 # D.255621,
 .LEHB14:
 	call	_Unwind_Resume	 #
 .L260:
@@ -5764,8 +5764,8 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	leaq	-64(%rbp), %rax	 #, tmp131
 	movq	%rax, %rcx	 # tmp131,
 	call	_ZN11wxDirDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.255568
-	movq	%rax, %rcx	 # D.255568,
+	movq	%rbx, %rax	 # tmp127, D.255622
+	movq	%rax, %rcx	 # D.255622,
 	call	_Unwind_Resume	 #
 .LEHE14:
 .L261:
@@ -5904,8 +5904,8 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	leaq	864(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp105, D.255573
-	movq	%rax, %rcx	 # D.255573,
+	movq	%rbx, %rax	 # tmp105, D.255627
+	movq	%rax, %rcx	 # D.255627,
 .LEHB18:
 	call	_Unwind_Resume	 #
 .L266:
@@ -5915,8 +5915,8 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	leaq	-64(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN23T100ProjectCreateWizardD1Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.255574
-	movq	%rax, %rcx	 # D.255574,
+	movq	%rbx, %rax	 # tmp107, D.255628
+	movq	%rax, %rcx	 # D.255628,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE18:
@@ -6057,8 +6057,8 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	leaq	736(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.255576
-	movq	%rax, %rcx	 # D.255576,
+	movq	%rbx, %rax	 # tmp103, D.255630
+	movq	%rax, %rcx	 # D.255630,
 .LEHB23:
 	call	_Unwind_Resume	 #
 .L274:
@@ -6068,8 +6068,8 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	leaq	-64(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.255577
-	movq	%rax, %rcx	 # D.255577,
+	movq	%rbx, %rax	 # tmp109, D.255631
+	movq	%rax, %rcx	 # D.255631,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE23:
@@ -6557,14 +6557,14 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 24
-	movzwl	16(%rax), %edx	 # _3->D.248649.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.248703.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.248649.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.248703.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 24
-	movzwl	16(%rax), %eax	 # _3->D.248649.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.248703.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 30
 	testw	%ax, %ax	 # _6
@@ -6694,11 +6694,11 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 3 189 17
-	movzwl	16(%rax), %edx	 # _3->D.248649.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.248703.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 3 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.248649.m_ref
+	movw	%dx, 16(%rax)	 # _6, _3->D.248703.m_ref
 	jmp	.L298	 #
 .L301:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
@@ -6739,7 +6739,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 3 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.248649.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.248703.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 3 171 72
 	popq	%rbp	 #
@@ -7635,7 +7635,7 @@ _ZN11wxDirDialogD1Ev:
 	movq	.refptr._ZTV11wxDirDialog(%rip), %rax	 #, tmp89
 	leaq	16(%rax), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.243823.D.243717.D.243535.D.243214.D.243040.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.247556.D.247450.D.247268.D.246947.D.246773.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN15wxDirDialogBaseD2Ev	 #
@@ -42070,7 +42070,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x54
 	.word	0x4ab
 	.byte	0x1
-	.long	0x47043
+	.long	0x47c97
 	.long	0x281ac
 	.uleb128 0x48
 	.secrel32	.LASF27
@@ -42865,7 +42865,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x9
 	.long	0x26d7b
 	.uleb128 0x2c
-	.long	0x47043
+	.long	0x47c97
 	.byte	0
 	.byte	0x1
 	.uleb128 0xa
@@ -43173,7 +43173,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.long	0x48b73
 	.uleb128 0x1
-	.long	0x4704f
+	.long	0x47ca3
 	.byte	0
 	.uleb128 0x8
 	.ascii "Member\0"
@@ -43239,7 +43239,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey\0"
-	.long	0x47061
+	.long	0x47cb5
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -43251,13 +43251,13 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.long	0x48b55
 	.uleb128 0x1
-	.long	0x47061
+	.long	0x47cb5
 	.uleb128 0x1
-	.long	0x47061
+	.long	0x47cb5
 	.uleb128 0x1
 	.long	0x1be1e
 	.uleb128 0x1
-	.long	0x4704f
+	.long	0x47ca3
 	.byte	0
 	.uleb128 0x66
 	.secrel32	.LASF255
@@ -46353,7 +46353,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x54
 	.word	0x4ae
 	.byte	0x18
-	.long	0x47043
+	.long	0x47c97
 	.long	0x2aa73
 	.uleb128 0x2c
 	.long	0x2643a
@@ -50616,7 +50616,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xc
 	.byte	0x97
 	.byte	0x1
-	.long	0x47043
+	.long	0x47c97
 	.long	0x31369
 	.uleb128 0x6a
 	.secrel32	.LASF27
@@ -51411,7 +51411,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x9
 	.long	0x2ff63
 	.uleb128 0x2c
-	.long	0x47043
+	.long	0x47c97
 	.byte	0
 	.byte	0x1
 	.uleb128 0xd
@@ -51699,7 +51699,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.long	0x4801c
 	.uleb128 0x1
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x59
 	.secrel32	.LASF192
@@ -51719,7 +51719,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.long	0x4801c
 	.uleb128 0x1
-	.long	0x4704f
+	.long	0x47ca3
 	.byte	0
 	.uleb128 0x15
 	.ascii "Member\0"
@@ -51734,7 +51734,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.long	0x4801c
 	.uleb128 0x1
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x15
 	.ascii "IndexOf\0"
@@ -51785,7 +51785,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey\0"
-	.long	0x47061
+	.long	0x47cb5
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -51797,13 +51797,13 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3136e
 	.uleb128 0x1
-	.long	0x47061
+	.long	0x47cb5
 	.uleb128 0x1
-	.long	0x47061
+	.long	0x47cb5
 	.uleb128 0x1
 	.long	0x1be1e
 	.uleb128 0x1
-	.long	0x4704f
+	.long	0x47ca3
 	.byte	0
 	.uleb128 0xea
 	.secrel32	.LASF314
@@ -56658,56 +56658,56 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5e
 	.byte	0x32
 	.byte	0xa
-	.long	0x42369
+	.long	0x42399
 	.byte	0
 	.uleb128 0x14
 	.ascii "wMonth\0"
 	.byte	0x5e
 	.byte	0x33
 	.byte	0xa
-	.long	0x42369
+	.long	0x42399
 	.byte	0x2
 	.uleb128 0x14
 	.ascii "wDayOfWeek\0"
 	.byte	0x5e
 	.byte	0x34
 	.byte	0xa
-	.long	0x42369
+	.long	0x42399
 	.byte	0x4
 	.uleb128 0x14
 	.ascii "wDay\0"
 	.byte	0x5e
 	.byte	0x35
 	.byte	0xa
-	.long	0x42369
+	.long	0x42399
 	.byte	0x6
 	.uleb128 0x14
 	.ascii "wHour\0"
 	.byte	0x5e
 	.byte	0x36
 	.byte	0xa
-	.long	0x42369
+	.long	0x42399
 	.byte	0x8
 	.uleb128 0x14
 	.ascii "wMinute\0"
 	.byte	0x5e
 	.byte	0x37
 	.byte	0xa
-	.long	0x42369
+	.long	0x42399
 	.byte	0xa
 	.uleb128 0x14
 	.ascii "wSecond\0"
 	.byte	0x5e
 	.byte	0x38
 	.byte	0xa
-	.long	0x42369
+	.long	0x42399
 	.byte	0xc
 	.uleb128 0x14
 	.ascii "wMilliseconds\0"
 	.byte	0x5e
 	.byte	0x39
 	.byte	0xa
-	.long	0x42369
+	.long	0x42399
 	.byte	0xe
 	.byte	0
 	.uleb128 0x9
@@ -58058,7 +58058,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.long	0x4860e
 	.uleb128 0x1
-	.long	0x41374
+	.long	0x413a4
 	.byte	0
 	.uleb128 0x31
 	.ascii "Write\0"
@@ -61848,7 +61848,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3b533
 	.long	0x3b53e
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.uleb128 0x1
 	.long	0x29541
 	.byte	0
@@ -61863,7 +61863,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3b576
 	.long	0x3b586
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.uleb128 0x1
 	.long	0x1b028
 	.uleb128 0x1
@@ -61904,7 +61904,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3b646
 	.long	0x3b651
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.uleb128 0x1
 	.long	0x10686
 	.byte	0
@@ -61924,7 +61924,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3b6ae
 	.long	0x3b6b9
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.uleb128 0x1
 	.long	0x10686
 	.byte	0
@@ -61944,7 +61944,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3b712
 	.long	0x3b718
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "GetMainWindowOfCompositeControl\0"
@@ -61980,7 +61980,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3b7ed
 	.long	0x3b7f3
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "ShouldInheritColours\0"
@@ -61998,7 +61998,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3b84e
 	.long	0x3b854
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "GetDropTarget\0"
@@ -62016,7 +62016,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3b8a0
 	.long	0x3b8a6
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x8
 	.ascii "GetToolTip\0"
@@ -62029,7 +62029,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3b8e4
 	.long	0x3b8ea
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "IsScrollbarAlwaysShown\0"
@@ -62047,7 +62047,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3b948
 	.long	0x3b953
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.uleb128 0x1
 	.long	0x10686
 	.byte	0
@@ -62088,7 +62088,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3ba0b
 	.long	0x3ba11
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "HasTransparentBackground\0"
@@ -62119,7 +62119,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3bad2
 	.long	0x3bad8
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "GetDefaultAttributes\0"
@@ -62137,7 +62137,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3bb32
 	.long	0x3bb38
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x3f
 	.ascii "PrepareDC\0"
@@ -62174,7 +62174,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3bbcc
 	.long	0x3bbd2
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x3f
 	.ascii "SetAcceleratorTable\0"
@@ -62229,7 +62229,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3bcf2
 	.long	0x3bcfd
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.uleb128 0x1
 	.long	0x3b3be
 	.byte	0
@@ -62268,7 +62268,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3bd95
 	.long	0x3bd9b
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "GetThemeEnabled\0"
@@ -62286,7 +62286,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3bdeb
 	.long	0x3bdf1
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x3f
 	.ascii "SetThemeEnabled\0"
@@ -62323,7 +62323,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3be8d
 	.long	0x3be93
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x8
 	.ascii "HasFlag\0"
@@ -62336,7 +62336,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3beca
 	.long	0x3bed5
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.uleb128 0x1
 	.long	0x10686
 	.byte	0
@@ -62356,7 +62356,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3bf2b
 	.long	0x3bf31
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "IsShown\0"
@@ -62374,7 +62374,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3bf70
 	.long	0x3bf76
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "GetContentScaleFactor\0"
@@ -62392,7 +62392,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3bfd2
 	.long	0x3bfd8
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "GetBestVirtualSize\0"
@@ -62410,7 +62410,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3c02e
 	.long	0x3c034
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "GetMaxClientSize\0"
@@ -62428,7 +62428,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3c086
 	.long	0x3c08c
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "GetMinClientSize\0"
@@ -62446,7 +62446,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3c0de
 	.long	0x3c0e4
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "GetMaxSize\0"
@@ -62464,7 +62464,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3c12a
 	.long	0x3c130
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x24
 	.ascii "GetMinSize\0"
@@ -62482,7 +62482,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3c176
 	.long	0x3c17c
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x3f
 	.ascii "SetMaxClientSize\0"
@@ -62562,7 +62562,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3c2ee
 	.long	0x3c2f4
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x15
 	.ascii "GetWindowVariant\0"
@@ -62575,7 +62575,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3c33d
 	.long	0x3c343
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0x31
 	.ascii "GetName\0"
@@ -62593,7 +62593,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x3c381
 	.long	0x3c387
 	.uleb128 0x2
-	.long	0x41e89
+	.long	0x41eb9
 	.byte	0
 	.uleb128 0xf4
 	.ascii "SetName\0"
@@ -66499,6 +66499,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x11
 	.byte	0x21
 	.long	0x40b6a
+	.uleb128 0x11
+	.ascii "wxMenu\0"
+	.uleb128 0x11
+	.ascii "wxwxMenuListNode\0"
+	.uleb128 0x11
+	.ascii "wxwxMenuItemListNode\0"
 	.uleb128 0x32
 	.ascii "wxTREE_ITEMSTATE_NONE\0"
 	.byte	0x72
@@ -66661,136 +66667,136 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x11
 	.ascii "wxEventTypeTag<wxTreeEvent>\0"
 	.uleb128 0x9
-	.long	0x40e83
+	.long	0x40eb3
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_BEGIN_DRAG\0"
 	.byte	0x72
 	.word	0x137
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_BEGIN_RDRAG\0"
 	.byte	0x72
 	.word	0x138
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_BEGIN_LABEL_EDIT\0"
 	.byte	0x72
 	.word	0x139
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_END_LABEL_EDIT\0"
 	.byte	0x72
 	.word	0x13a
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_DELETE_ITEM\0"
 	.byte	0x72
 	.word	0x13b
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_GET_INFO\0"
 	.byte	0x72
 	.word	0x13c
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_SET_INFO\0"
 	.byte	0x72
 	.word	0x13d
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_ITEM_EXPANDED\0"
 	.byte	0x72
 	.word	0x13e
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_ITEM_EXPANDING\0"
 	.byte	0x72
 	.word	0x13f
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_ITEM_COLLAPSED\0"
 	.byte	0x72
 	.word	0x140
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_ITEM_COLLAPSING\0"
 	.byte	0x72
 	.word	0x141
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_SEL_CHANGED\0"
 	.byte	0x72
 	.word	0x142
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_SEL_CHANGING\0"
 	.byte	0x72
 	.word	0x143
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_KEY_DOWN\0"
 	.byte	0x72
 	.word	0x144
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_ITEM_ACTIVATED\0"
 	.byte	0x72
 	.word	0x145
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_ITEM_RIGHT_CLICK\0"
 	.byte	0x72
 	.word	0x146
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_ITEM_MIDDLE_CLICK\0"
 	.byte	0x72
 	.word	0x147
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_END_DRAG\0"
 	.byte	0x72
 	.word	0x148
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_STATE_IMAGE_CLICK\0"
 	.byte	0x72
 	.word	0x149
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_ITEM_GETTOOLTIP\0"
 	.byte	0x72
 	.word	0x14a
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x4
 	.ascii "wxEVT_TREE_ITEM_MENU\0"
 	.byte	0x72
 	.word	0x14b
 	.byte	0x1
-	.long	0x40ea0
+	.long	0x40ed0
 	.uleb128 0x39
 	.ascii "wxTextEntry\0"
-	.long	0x411a4
+	.long	0x411d4
 	.uleb128 0xf5
 	.byte	0x7
 	.byte	0x4
@@ -66819,7 +66825,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xe
 	.long	0x10692
 	.uleb128 0x9
-	.long	0x411b4
+	.long	0x411e4
 	.uleb128 0xe
 	.ascii "wxTextCtrlNameStr\0"
 	.byte	0x74
@@ -66831,7 +66837,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x74
 	.byte	0x3a
 	.byte	0x13
-	.long	0x411c8
+	.long	0x411f8
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxOutOfRangeTextCoord
@@ -66840,7 +66846,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x74
 	.byte	0x3b
 	.byte	0x13
-	.long	0x411c8
+	.long	0x411f8
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL18wxInvalidTextCoord
@@ -66859,7 +66865,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xb
 	.byte	0xb3
 	.byte	0x7
-	.long	0x41320
+	.long	0x41350
 	.uleb128 0xd
 	.secrel32	.LASF345
 	.byte	0xb
@@ -66867,10 +66873,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN14wxEventTypeTagI14wxTextUrlEventEC4Ei\0"
 	.byte	0x1
-	.long	0x412b7
-	.long	0x412c2
+	.long	0x412e7
+	.long	0x412f2
 	.uleb128 0x2
-	.long	0x41358
+	.long	0x41388
 	.uleb128 0x1
 	.long	0x37ea2
 	.byte	0
@@ -66882,10 +66888,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.ascii "_ZNK14wxEventTypeTagI14wxTextUrlEventEcvRKiEv\0"
 	.long	0x3a7ee
 	.byte	0x1
-	.long	0x41305
-	.long	0x4130b
+	.long	0x41335
+	.long	0x4133b
 	.uleb128 0x2
-	.long	0x4135e
+	.long	0x4138e
 	.byte	0
 	.uleb128 0x21
 	.secrel32	.LASF302
@@ -66896,16 +66902,16 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0
 	.uleb128 0x19
 	.ascii "T\0"
-	.long	0x41364
+	.long	0x41394
 	.byte	0
 	.uleb128 0x9
-	.long	0x41254
+	.long	0x41284
 	.uleb128 0x4
 	.ascii "wxEVT_TEXT_URL\0"
 	.byte	0x74
 	.word	0x326
 	.byte	0x1
-	.long	0x41320
+	.long	0x41350
 	.uleb128 0x4
 	.ascii "wxEVT_TEXT_MAXLEN\0"
 	.byte	0x74
@@ -66914,10 +66920,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x382d6
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x41254
+	.long	0x41284
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x41320
+	.long	0x41350
 	.uleb128 0x11
 	.ascii "wxTextUrlEvent\0"
 	.uleb128 0xb
@@ -66929,7 +66935,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x75
 	.byte	0x12
 	.byte	0x18
-	.long	0x417f8
+	.long	0x41828
 	.uleb128 0xd
 	.secrel32	.LASF363
 	.byte	0x75
@@ -66937,12 +66943,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN12wxDataFormatC4Et\0"
 	.byte	0x1
-	.long	0x413ae
-	.long	0x413b9
+	.long	0x413de
+	.long	0x413e9
 	.uleb128 0x2
-	.long	0x417fd
+	.long	0x4182d
 	.uleb128 0x1
-	.long	0x413b9
+	.long	0x413e9
 	.byte	0
 	.uleb128 0x6e
 	.ascii "NativeFormat\0"
@@ -66958,10 +66964,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN12wxDataFormatC4ERK8wxString\0"
 	.byte	0x1
-	.long	0x41400
-	.long	0x4140b
+	.long	0x41430
+	.long	0x4143b
 	.uleb128 0x2
-	.long	0x417fd
+	.long	0x4182d
 	.uleb128 0x1
 	.long	0x1157b
 	.byte	0
@@ -66972,10 +66978,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN12wxDataFormatC4EPKc\0"
 	.byte	0x1
-	.long	0x41434
-	.long	0x4143f
+	.long	0x41464
+	.long	0x4146f
 	.uleb128 0x2
-	.long	0x417fd
+	.long	0x4182d
 	.uleb128 0x1
 	.long	0x1fd8a
 	.byte	0
@@ -66986,10 +66992,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN12wxDataFormatC4EPKw\0"
 	.byte	0x1
-	.long	0x41468
-	.long	0x41473
+	.long	0x41498
+	.long	0x414a3
 	.uleb128 0x2
-	.long	0x417fd
+	.long	0x4182d
 	.uleb128 0x1
 	.long	0x110bb
 	.byte	0
@@ -67000,10 +67006,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN12wxDataFormatC4ERK10wxCStrData\0"
 	.byte	0x1
-	.long	0x414a7
-	.long	0x414b2
+	.long	0x414d7
+	.long	0x414e2
 	.uleb128 0x2
-	.long	0x417fd
+	.long	0x4182d
 	.uleb128 0x1
 	.long	0x1f1b7
 	.byte	0
@@ -67013,14 +67019,14 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x22
 	.byte	0x13
 	.ascii "_ZN12wxDataFormataSEt\0"
-	.long	0x41803
+	.long	0x41833
 	.byte	0x1
-	.long	0x414dd
-	.long	0x414e8
+	.long	0x4150d
+	.long	0x41518
 	.uleb128 0x2
-	.long	0x417fd
+	.long	0x4182d
 	.uleb128 0x1
-	.long	0x413b9
+	.long	0x413e9
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF35
@@ -67028,14 +67034,14 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x24
 	.byte	0x13
 	.ascii "_ZN12wxDataFormataSERKS_\0"
-	.long	0x41803
+	.long	0x41833
 	.byte	0x1
-	.long	0x41516
-	.long	0x41521
+	.long	0x41546
+	.long	0x41551
 	.uleb128 0x2
-	.long	0x417fd
+	.long	0x4182d
 	.uleb128 0x1
-	.long	0x41809
+	.long	0x41839
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF166
@@ -67045,10 +67051,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.ascii "_ZNK12wxDataFormateqE14wxDataFormatId\0"
 	.long	0x10f46
 	.byte	0x1
-	.long	0x4155c
-	.long	0x41567
+	.long	0x4158c
+	.long	0x41597
 	.uleb128 0x2
-	.long	0x4180f
+	.long	0x4183f
 	.uleb128 0x1
 	.long	0x1bca8
 	.byte	0
@@ -67060,10 +67066,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.ascii "_ZNK12wxDataFormatneE14wxDataFormatId\0"
 	.long	0x10f46
 	.byte	0x1
-	.long	0x415a2
-	.long	0x415ad
+	.long	0x415d2
+	.long	0x415dd
 	.uleb128 0x2
-	.long	0x4180f
+	.long	0x4183f
 	.uleb128 0x1
 	.long	0x1bca8
 	.byte	0
@@ -67075,12 +67081,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.ascii "_ZNK12wxDataFormateqERKS_\0"
 	.long	0x10f46
 	.byte	0x1
-	.long	0x415dc
-	.long	0x415e7
+	.long	0x4160c
+	.long	0x41617
 	.uleb128 0x2
-	.long	0x4180f
+	.long	0x4183f
 	.uleb128 0x1
-	.long	0x41809
+	.long	0x41839
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF167
@@ -67090,12 +67096,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.ascii "_ZNK12wxDataFormatneERKS_\0"
 	.long	0x10f46
 	.byte	0x1
-	.long	0x41616
-	.long	0x41621
+	.long	0x41646
+	.long	0x41651
 	.uleb128 0x2
-	.long	0x4180f
+	.long	0x4183f
 	.uleb128 0x1
-	.long	0x41809
+	.long	0x41839
 	.byte	0
 	.uleb128 0x15
 	.ascii "GetFormatId\0"
@@ -67103,12 +67109,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x32
 	.byte	0x12
 	.ascii "_ZNK12wxDataFormat11GetFormatIdEv\0"
-	.long	0x413b9
+	.long	0x413e9
 	.byte	0x1
-	.long	0x41660
-	.long	0x41666
+	.long	0x41690
+	.long	0x41696
 	.uleb128 0x2
-	.long	0x4180f
+	.long	0x4183f
 	.byte	0
 	.uleb128 0x15
 	.ascii "operator wxDataFormat::NativeFormat\0"
@@ -67116,12 +67122,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x33
 	.byte	0x5
 	.ascii "_ZNK12wxDataFormatcvtEv\0"
-	.long	0x413b9
+	.long	0x413e9
 	.byte	0x1
-	.long	0x416b3
-	.long	0x416b9
+	.long	0x416e3
+	.long	0x416e9
 	.uleb128 0x2
-	.long	0x4180f
+	.long	0x4183f
 	.byte	0
 	.uleb128 0x26
 	.ascii "SetType\0"
@@ -67130,12 +67136,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN12wxDataFormat7SetTypeEt\0"
 	.byte	0x1
-	.long	0x416ea
-	.long	0x416f5
+	.long	0x4171a
+	.long	0x41725
 	.uleb128 0x2
-	.long	0x417fd
+	.long	0x4182d
 	.uleb128 0x1
-	.long	0x413b9
+	.long	0x413e9
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF300
@@ -67143,12 +67149,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x37
 	.byte	0x12
 	.ascii "_ZNK12wxDataFormat7GetTypeEv\0"
-	.long	0x413b9
+	.long	0x413e9
 	.byte	0x1
-	.long	0x41727
-	.long	0x4172d
+	.long	0x41757
+	.long	0x4175d
 	.uleb128 0x2
-	.long	0x4180f
+	.long	0x4183f
 	.byte	0
 	.uleb128 0x15
 	.ascii "GetId\0"
@@ -67158,10 +67164,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.ascii "_ZNK12wxDataFormat5GetIdEv\0"
 	.long	0x11581
 	.byte	0x1
-	.long	0x4175f
-	.long	0x41765
+	.long	0x4178f
+	.long	0x41795
 	.uleb128 0x2
-	.long	0x4180f
+	.long	0x4183f
 	.byte	0
 	.uleb128 0x26
 	.ascii "SetId\0"
@@ -67170,10 +67176,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN12wxDataFormat5SetIdERK8wxString\0"
 	.byte	0x1
-	.long	0x4179c
-	.long	0x417a7
+	.long	0x417cc
+	.long	0x417d7
 	.uleb128 0x2
-	.long	0x417fd
+	.long	0x4182d
 	.uleb128 0x1
 	.long	0x1157b
 	.byte	0
@@ -67185,42 +67191,42 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.ascii "_ZNK12wxDataFormat10IsStandardEv\0"
 	.long	0x10f46
 	.byte	0x1
-	.long	0x417e4
-	.long	0x417ea
+	.long	0x41814
+	.long	0x4181a
 	.uleb128 0x2
-	.long	0x4180f
+	.long	0x4183f
 	.byte	0
 	.uleb128 0x21
 	.secrel32	.LASF364
 	.byte	0x75
 	.byte	0x42
 	.byte	0x12
-	.long	0x413b9
+	.long	0x413e9
 	.byte	0
 	.byte	0
 	.uleb128 0x9
-	.long	0x4137a
+	.long	0x413aa
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x4137a
+	.long	0x413aa
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x4137a
+	.long	0x413aa
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x417f8
+	.long	0x41828
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x417f8
+	.long	0x41828
 	.uleb128 0xe
 	.ascii "wxFormatInvalid\0"
 	.byte	0x76
 	.byte	0x5e
 	.byte	0x2d
-	.long	0x41809
+	.long	0x41839
 	.uleb128 0x39
 	.ascii "wxDataObjectBase\0"
-	.long	0x41868
+	.long	0x41898
 	.uleb128 0xf7
 	.secrel32	.LASF356
 	.byte	0x7
@@ -67247,10 +67253,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x76
 	.byte	0xc4
 	.byte	0x18
-	.long	0x4182d
-	.long	0x41dd7
+	.long	0x4185d
+	.long	0x41e07
 	.uleb128 0x2c
-	.long	0x47cad
+	.long	0x47c89
 	.byte	0
 	.byte	0x1
 	.uleb128 0xd
@@ -67260,12 +67266,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN18wxDataObjectSimpleC4ERK12wxDataFormat\0"
 	.byte	0x1
-	.long	0x418bc
-	.long	0x418c7
+	.long	0x418ec
+	.long	0x418f7
 	.uleb128 0x2
-	.long	0x41e00
+	.long	0x41e30
 	.uleb128 0x1
-	.long	0x41809
+	.long	0x41839
 	.byte	0
 	.uleb128 0x15
 	.ascii "GetFormat\0"
@@ -67273,12 +67279,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xcf
 	.byte	0x19
 	.ascii "_ZNK18wxDataObjectSimple9GetFormatEv\0"
-	.long	0x41809
+	.long	0x41839
 	.byte	0x1
-	.long	0x41907
-	.long	0x4190d
+	.long	0x41937
+	.long	0x4193d
 	.uleb128 0x2
-	.long	0x41ddc
+	.long	0x41e0c
 	.byte	0
 	.uleb128 0x26
 	.ascii "SetFormat\0"
@@ -67287,12 +67293,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN18wxDataObjectSimple9SetFormatERK12wxDataFormat\0"
 	.byte	0x1
-	.long	0x41957
-	.long	0x41962
+	.long	0x41987
+	.long	0x41992
 	.uleb128 0x2
-	.long	0x41e00
+	.long	0x41e30
 	.uleb128 0x1
-	.long	0x41809
+	.long	0x41839
 	.byte	0
 	.uleb128 0x59
 	.secrel32	.LASF366
@@ -67305,12 +67311,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0xc
-	.long	0x41868
+	.long	0x41898
 	.byte	0x1
-	.long	0x419a7
-	.long	0x419ad
+	.long	0x419d7
+	.long	0x419dd
 	.uleb128 0x2
-	.long	0x41ddc
+	.long	0x41e0c
 	.byte	0
 	.uleb128 0x59
 	.secrel32	.LASF367
@@ -67323,12 +67329,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0xd
-	.long	0x41868
+	.long	0x41898
 	.byte	0x1
-	.long	0x419f3
-	.long	0x419fe
+	.long	0x41a23
+	.long	0x41a2e
 	.uleb128 0x2
-	.long	0x41ddc
+	.long	0x41e0c
 	.uleb128 0x1
 	.long	0x1be1e
 	.byte	0
@@ -67343,12 +67349,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0xe
-	.long	0x41868
+	.long	0x41898
 	.byte	0x1
-	.long	0x41a44
-	.long	0x41a54
+	.long	0x41a74
+	.long	0x41a84
 	.uleb128 0x2
-	.long	0x41e00
+	.long	0x41e30
 	.uleb128 0x1
 	.long	0x105d8
 	.uleb128 0x1
@@ -67360,19 +67366,19 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xe4
 	.byte	0x1a
 	.ascii "_ZNK18wxDataObjectSimple18GetPreferredFormatEN16wxDataObjectBase9DirectionE\0"
-	.long	0x4137a
+	.long	0x413aa
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x2
-	.long	0x41868
+	.long	0x41898
 	.byte	0x1
-	.long	0x41acc
-	.long	0x41ad7
+	.long	0x41afc
+	.long	0x41b07
 	.uleb128 0x2
-	.long	0x41ddc
+	.long	0x41e0c
 	.uleb128 0x1
-	.long	0x41843
+	.long	0x41873
 	.byte	0
 	.uleb128 0x31
 	.ascii "GetFormatCount\0"
@@ -67385,14 +67391,14 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x3
-	.long	0x41868
+	.long	0x41898
 	.byte	0x1
-	.long	0x41b47
-	.long	0x41b52
+	.long	0x41b77
+	.long	0x41b82
 	.uleb128 0x2
-	.long	0x41ddc
+	.long	0x41e0c
 	.uleb128 0x1
-	.long	0x41843
+	.long	0x41873
 	.byte	0
 	.uleb128 0x52
 	.ascii "GetAllFormats\0"
@@ -67404,16 +67410,16 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x4
-	.long	0x41868
+	.long	0x41898
 	.byte	0x1
-	.long	0x41bcb
-	.long	0x41bdb
+	.long	0x41bfb
+	.long	0x41c0b
 	.uleb128 0x2
-	.long	0x41ddc
+	.long	0x41e0c
 	.uleb128 0x1
-	.long	0x417fd
+	.long	0x4182d
 	.uleb128 0x1
-	.long	0x41843
+	.long	0x41873
 	.byte	0
 	.uleb128 0x59
 	.secrel32	.LASF366
@@ -67426,14 +67432,14 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x5
-	.long	0x41868
+	.long	0x41898
 	.byte	0x1
-	.long	0x41c2f
-	.long	0x41c3a
+	.long	0x41c5f
+	.long	0x41c6a
 	.uleb128 0x2
-	.long	0x41ddc
+	.long	0x41e0c
 	.uleb128 0x1
-	.long	0x41809
+	.long	0x41839
 	.byte	0
 	.uleb128 0x59
 	.secrel32	.LASF367
@@ -67446,14 +67452,14 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x6
-	.long	0x41868
+	.long	0x41898
 	.byte	0x1
-	.long	0x41c90
-	.long	0x41ca0
+	.long	0x41cc0
+	.long	0x41cd0
 	.uleb128 0x2
-	.long	0x41ddc
+	.long	0x41e0c
 	.uleb128 0x1
-	.long	0x41809
+	.long	0x41839
 	.uleb128 0x1
 	.long	0x1be1e
 	.byte	0
@@ -67468,14 +67474,14 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x7
-	.long	0x41868
+	.long	0x41898
 	.byte	0x1
-	.long	0x41cf6
-	.long	0x41d0b
+	.long	0x41d26
+	.long	0x41d3b
 	.uleb128 0x2
-	.long	0x41e00
+	.long	0x41e30
 	.uleb128 0x1
-	.long	0x41809
+	.long	0x41839
 	.uleb128 0x1
 	.long	0x105d8
 	.uleb128 0x1
@@ -67486,7 +67492,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x76
 	.byte	0xf6
 	.byte	0x12
-	.long	0x4137a
+	.long	0x413aa
 	.byte	0x10
 	.uleb128 0x29
 	.secrel32	.LASF365
@@ -67494,10 +67500,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xf8
 	.byte	0x5
 	.ascii "_ZN18wxDataObjectSimpleC4ERKS_\0"
-	.long	0x41d47
-	.long	0x41d52
+	.long	0x41d77
+	.long	0x41d82
 	.uleb128 0x2
-	.long	0x41e00
+	.long	0x41e30
 	.uleb128 0x1
 	.long	0x47cbb
 	.byte	0
@@ -67508,10 +67514,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN18wxDataObjectSimpleaSERKS_\0"
 	.long	0x47cc1
-	.long	0x41d85
-	.long	0x41d90
+	.long	0x41db5
+	.long	0x41dc0
 	.uleb128 0x2
-	.long	0x41e00
+	.long	0x41e30
 	.uleb128 0x1
 	.long	0x47cbb
 	.byte	0
@@ -67519,25 +67525,25 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.ascii "~wxDataObjectSimple\0"
 	.ascii "_ZN18wxDataObjectSimpleD4Ev\0"
 	.byte	0x1
-	.long	0x41868
+	.long	0x41898
 	.byte	0x1
-	.long	0x41dcb
+	.long	0x41dfb
 	.uleb128 0x2
-	.long	0x41e00
+	.long	0x41e30
 	.uleb128 0x2
 	.long	0x10686
 	.byte	0
 	.byte	0
 	.uleb128 0x9
-	.long	0x41868
+	.long	0x41898
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x41dd7
+	.long	0x41e07
 	.uleb128 0x11
 	.ascii "wxwxSimpleDataObjectListNode\0"
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x41868
+	.long	0x41898
 	.uleb128 0x3e
 	.ascii "wxDragResult\0"
 	.byte	0x7
@@ -67546,7 +67552,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x77
 	.byte	0x25
 	.byte	0x6
-	.long	0x41e73
+	.long	0x41ea3
 	.uleb128 0x6
 	.ascii "wxDragError\0"
 	.byte	0
@@ -67576,197 +67582,197 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x8
 	.long	0x3c3d3
 	.uleb128 0x9
-	.long	0x41e89
+	.long	0x41eb9
 	.uleb128 0x11
 	.ascii "wxEventTypeTag<wxStyledTextEvent>\0"
 	.uleb128 0x9
-	.long	0x41e94
+	.long	0x41ec4
 	.uleb128 0x4
 	.ascii "wxEVT_STC_CHANGE\0"
 	.byte	0x78
 	.word	0x1326
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_STYLENEEDED\0"
 	.byte	0x78
 	.word	0x1327
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_CHARADDED\0"
 	.byte	0x78
 	.word	0x1328
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_SAVEPOINTREACHED\0"
 	.byte	0x78
 	.word	0x1329
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_SAVEPOINTLEFT\0"
 	.byte	0x78
 	.word	0x132a
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_ROMODIFYATTEMPT\0"
 	.byte	0x78
 	.word	0x132b
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_KEY\0"
 	.byte	0x78
 	.word	0x132c
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_DOUBLECLICK\0"
 	.byte	0x78
 	.word	0x132d
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_UPDATEUI\0"
 	.byte	0x78
 	.word	0x132e
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_MODIFIED\0"
 	.byte	0x78
 	.word	0x132f
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_MACRORECORD\0"
 	.byte	0x78
 	.word	0x1330
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_MARGINCLICK\0"
 	.byte	0x78
 	.word	0x1331
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_NEEDSHOWN\0"
 	.byte	0x78
 	.word	0x1332
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_PAINTED\0"
 	.byte	0x78
 	.word	0x1333
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_USERLISTSELECTION\0"
 	.byte	0x78
 	.word	0x1334
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_URIDROPPED\0"
 	.byte	0x78
 	.word	0x1335
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_DWELLSTART\0"
 	.byte	0x78
 	.word	0x1336
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_DWELLEND\0"
 	.byte	0x78
 	.word	0x1337
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_START_DRAG\0"
 	.byte	0x78
 	.word	0x1338
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_DRAG_OVER\0"
 	.byte	0x78
 	.word	0x1339
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_DO_DROP\0"
 	.byte	0x78
 	.word	0x133a
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_ZOOM\0"
 	.byte	0x78
 	.word	0x133b
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_HOTSPOT_CLICK\0"
 	.byte	0x78
 	.word	0x133c
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_HOTSPOT_DCLICK\0"
 	.byte	0x78
 	.word	0x133d
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_CALLTIP_CLICK\0"
 	.byte	0x78
 	.word	0x133e
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_AUTOCOMP_SELECTION\0"
 	.byte	0x78
 	.word	0x133f
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_INDICATOR_CLICK\0"
 	.byte	0x78
 	.word	0x1340
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_INDICATOR_RELEASE\0"
 	.byte	0x78
 	.word	0x1341
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_AUTOCOMP_CANCELLED\0"
 	.byte	0x78
 	.word	0x1342
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_AUTOCOMP_CHAR_DELETED\0"
 	.byte	0x78
 	.word	0x1343
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x4
 	.ascii "wxEVT_STC_HOTSPOT_RELEASE_CLICK\0"
 	.byte	0x78
 	.word	0x1344
 	.byte	0x1
-	.long	0x41eb7
+	.long	0x41ee7
 	.uleb128 0x13
 	.ascii "_PHNDLR\0"
 	.byte	0x79
@@ -67779,7 +67785,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x79
 	.byte	0x44
 	.byte	0xa
-	.long	0x422ef
+	.long	0x4231f
 	.uleb128 0x14
 	.ascii "XcptNum\0"
 	.byte	0x79
@@ -67799,12 +67805,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x79
 	.byte	0x47
 	.byte	0xd
-	.long	0x42293
+	.long	0x422c3
 	.byte	0x8
 	.byte	0
 	.uleb128 0x47
-	.long	0x422a3
-	.long	0x422fb
+	.long	0x422d3
+	.long	0x4232b
 	.uleb128 0x92
 	.byte	0
 	.uleb128 0xe
@@ -67812,7 +67818,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x79
 	.byte	0x4a
 	.byte	0x1e
-	.long	0x422ef
+	.long	0x4231f
 	.uleb128 0xe
 	.ascii "_XcptActTabCount\0"
 	.byte	0x79
@@ -67855,7 +67861,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x7b
 	.byte	0x13
 	.byte	0x10
-	.long	0x423d0
+	.long	0x42400
 	.uleb128 0x14
 	.ascii "Data1\0"
 	.byte	0x7b
@@ -67882,12 +67888,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x7b
 	.byte	0x17
 	.byte	0x18
-	.long	0x423d0
+	.long	0x42400
 	.byte	0x8
 	.byte	0
 	.uleb128 0x47
 	.long	0x10cf7
-	.long	0x423e0
+	.long	0x42410
 	.uleb128 0x55
 	.long	0x105ec
 	.byte	0x7
@@ -67897,837 +67903,837 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x7b
 	.byte	0x18
 	.byte	0x3
-	.long	0x42384
+	.long	0x423b4
 	.uleb128 0x9
-	.long	0x423e0
+	.long	0x42410
 	.uleb128 0x13
 	.ascii "IID\0"
 	.byte	0x7b
 	.byte	0x58
 	.byte	0xe
-	.long	0x423e0
+	.long	0x42410
 	.uleb128 0x9
-	.long	0x423f2
+	.long	0x42422
 	.uleb128 0x13
 	.ascii "CLSID\0"
 	.byte	0x7b
 	.byte	0x60
 	.byte	0xe
-	.long	0x423e0
+	.long	0x42410
 	.uleb128 0x9
-	.long	0x42403
+	.long	0x42433
 	.uleb128 0x13
 	.ascii "FMTID\0"
 	.byte	0x7b
 	.byte	0x67
 	.byte	0xe
-	.long	0x423e0
+	.long	0x42410
 	.uleb128 0x9
-	.long	0x42416
+	.long	0x42446
 	.uleb128 0x4
 	.ascii "GUID_MAX_POWER_SAVINGS\0"
 	.byte	0x7c
 	.word	0x18a4
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_MIN_POWER_SAVINGS\0"
 	.byte	0x7c
 	.word	0x18a5
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_TYPICAL_POWER_SAVINGS\0"
 	.byte	0x7c
 	.word	0x18a6
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "NO_SUBGROUP_GUID\0"
 	.byte	0x7c
 	.word	0x18a7
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "ALL_POWERSCHEMES_GUID\0"
 	.byte	0x7c
 	.word	0x18a8
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_POWERSCHEME_PERSONALITY\0"
 	.byte	0x7c
 	.word	0x18a9
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_ACTIVE_POWERSCHEME\0"
 	.byte	0x7c
 	.word	0x18aa
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_IDLE_RESILIENCY_SUBGROUP\0"
 	.byte	0x7c
 	.word	0x18ab
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_IDLE_RESILIENCY_PERIOD\0"
 	.byte	0x7c
 	.word	0x18ac
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_DISK_COALESCING_POWERDOWN_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18ad
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_EXECUTION_REQUIRED_REQUEST_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18ae
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_VIDEO_SUBGROUP\0"
 	.byte	0x7c
 	.word	0x18af
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_VIDEO_POWERDOWN_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18b0
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_VIDEO_ANNOYANCE_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18b1
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_VIDEO_ADAPTIVE_PERCENT_INCREASE\0"
 	.byte	0x7c
 	.word	0x18b2
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_VIDEO_DIM_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18b3
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_VIDEO_ADAPTIVE_POWERDOWN\0"
 	.byte	0x7c
 	.word	0x18b4
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_MONITOR_POWER_ON\0"
 	.byte	0x7c
 	.word	0x18b5
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_DEVICE_POWER_POLICY_VIDEO_BRIGHTNESS\0"
 	.byte	0x7c
 	.word	0x18b6
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_DEVICE_POWER_POLICY_VIDEO_DIM_BRIGHTNESS\0"
 	.byte	0x7c
 	.word	0x18b7
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_VIDEO_CURRENT_MONITOR_BRIGHTNESS\0"
 	.byte	0x7c
 	.word	0x18b8
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_VIDEO_ADAPTIVE_DISPLAY_BRIGHTNESS\0"
 	.byte	0x7c
 	.word	0x18b9
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_CONSOLE_DISPLAY_STATE\0"
 	.byte	0x7c
 	.word	0x18ba
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_ALLOW_DISPLAY_REQUIRED\0"
 	.byte	0x7c
 	.word	0x18bb
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_VIDEO_CONSOLE_LOCK_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18bc
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_ADAPTIVE_POWER_BEHAVIOR_SUBGROUP\0"
 	.byte	0x7c
 	.word	0x18bd
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_NON_ADAPTIVE_INPUT_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18be
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_DISK_SUBGROUP\0"
 	.byte	0x7c
 	.word	0x18bf
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_DISK_POWERDOWN_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18c0
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_DISK_IDLE_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18c1
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_DISK_BURST_IGNORE_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x18c2
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_DISK_ADAPTIVE_POWERDOWN\0"
 	.byte	0x7c
 	.word	0x18c3
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_SLEEP_SUBGROUP\0"
 	.byte	0x7c
 	.word	0x18c4
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_SLEEP_IDLE_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x18c5
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_STANDBY_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18c6
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_UNATTEND_SLEEP_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18c7
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_HIBERNATE_TIMEOUT\0"
 	.byte	0x7c
 	.word	0x18c8
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_HIBERNATE_FASTS4_POLICY\0"
 	.byte	0x7c
 	.word	0x18c9
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_CRITICAL_POWER_TRANSITION\0"
 	.byte	0x7c
 	.word	0x18ca
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_SYSTEM_AWAYMODE\0"
 	.byte	0x7c
 	.word	0x18cb
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_ALLOW_AWAYMODE\0"
 	.byte	0x7c
 	.word	0x18cc
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_ALLOW_STANDBY_STATES\0"
 	.byte	0x7c
 	.word	0x18cd
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_ALLOW_RTC_WAKE\0"
 	.byte	0x7c
 	.word	0x18ce
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_ALLOW_SYSTEM_REQUIRED\0"
 	.byte	0x7c
 	.word	0x18cf
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_SYSTEM_BUTTON_SUBGROUP\0"
 	.byte	0x7c
 	.word	0x18d0
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_POWERBUTTON_ACTION\0"
 	.byte	0x7c
 	.word	0x18d1
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_SLEEPBUTTON_ACTION\0"
 	.byte	0x7c
 	.word	0x18d2
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_USERINTERFACEBUTTON_ACTION\0"
 	.byte	0x7c
 	.word	0x18d3
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_LIDCLOSE_ACTION\0"
 	.byte	0x7c
 	.word	0x18d4
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_LIDOPEN_POWERSTATE\0"
 	.byte	0x7c
 	.word	0x18d5
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_SUBGROUP\0"
 	.byte	0x7c
 	.word	0x18d6
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_ACTION_0\0"
 	.byte	0x7c
 	.word	0x18d7
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_LEVEL_0\0"
 	.byte	0x7c
 	.word	0x18d8
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_FLAGS_0\0"
 	.byte	0x7c
 	.word	0x18d9
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_ACTION_1\0"
 	.byte	0x7c
 	.word	0x18da
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_LEVEL_1\0"
 	.byte	0x7c
 	.word	0x18db
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_FLAGS_1\0"
 	.byte	0x7c
 	.word	0x18dc
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_ACTION_2\0"
 	.byte	0x7c
 	.word	0x18dd
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_LEVEL_2\0"
 	.byte	0x7c
 	.word	0x18de
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_FLAGS_2\0"
 	.byte	0x7c
 	.word	0x18df
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_ACTION_3\0"
 	.byte	0x7c
 	.word	0x18e0
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_LEVEL_3\0"
 	.byte	0x7c
 	.word	0x18e1
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_DISCHARGE_FLAGS_3\0"
 	.byte	0x7c
 	.word	0x18e2
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_SETTINGS_SUBGROUP\0"
 	.byte	0x7c
 	.word	0x18e3
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_THROTTLE_POLICY\0"
 	.byte	0x7c
 	.word	0x18e4
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_THROTTLE_MAXIMUM\0"
 	.byte	0x7c
 	.word	0x18e5
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_THROTTLE_MINIMUM\0"
 	.byte	0x7c
 	.word	0x18e6
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_ALLOW_THROTTLING\0"
 	.byte	0x7c
 	.word	0x18e7
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_IDLESTATE_POLICY\0"
 	.byte	0x7c
 	.word	0x18e8
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERFSTATE_POLICY\0"
 	.byte	0x7c
 	.word	0x18e9
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_INCREASE_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x18ea
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_DECREASE_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x18eb
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_INCREASE_POLICY\0"
 	.byte	0x7c
 	.word	0x18ec
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_DECREASE_POLICY\0"
 	.byte	0x7c
 	.word	0x18ed
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_INCREASE_TIME\0"
 	.byte	0x7c
 	.word	0x18ee
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_DECREASE_TIME\0"
 	.byte	0x7c
 	.word	0x18ef
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_TIME_CHECK\0"
 	.byte	0x7c
 	.word	0x18f0
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_BOOST_POLICY\0"
 	.byte	0x7c
 	.word	0x18f1
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_BOOST_MODE\0"
 	.byte	0x7c
 	.word	0x18f2
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_IDLE_ALLOW_SCALING\0"
 	.byte	0x7c
 	.word	0x18f3
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_IDLE_DISABLE\0"
 	.byte	0x7c
 	.word	0x18f4
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_IDLE_STATE_MAXIMUM\0"
 	.byte	0x7c
 	.word	0x18f5
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_IDLE_TIME_CHECK\0"
 	.byte	0x7c
 	.word	0x18f6
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_IDLE_DEMOTE_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x18f7
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_IDLE_PROMOTE_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x18f8
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_INCREASE_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x18f9
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_DECREASE_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x18fa
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_INCREASE_POLICY\0"
 	.byte	0x7c
 	.word	0x18fb
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_DECREASE_POLICY\0"
 	.byte	0x7c
 	.word	0x18fc
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_MAX_CORES\0"
 	.byte	0x7c
 	.word	0x18fd
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_MIN_CORES\0"
 	.byte	0x7c
 	.word	0x18fe
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_INCREASE_TIME\0"
 	.byte	0x7c
 	.word	0x18ff
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_DECREASE_TIME\0"
 	.byte	0x7c
 	.word	0x1900
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_AFFINITY_HISTORY_DECREASE_FACTOR\0"
 	.byte	0x7c
 	.word	0x1901
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_AFFINITY_HISTORY_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x1902
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_AFFINITY_WEIGHTING\0"
 	.byte	0x7c
 	.word	0x1903
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_HISTORY_DECREASE_FACTOR\0"
 	.byte	0x7c
 	.word	0x1904
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_HISTORY_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x1905
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_WEIGHTING\0"
 	.byte	0x7c
 	.word	0x1906
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_CORE_PARKING_OVER_UTILIZATION_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x1907
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PARKING_CORE_OVERRIDE\0"
 	.byte	0x7c
 	.word	0x1908
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PARKING_PERF_STATE\0"
 	.byte	0x7c
 	.word	0x1909
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PARKING_CONCURRENCY_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x190a
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PARKING_HEADROOM_THRESHOLD\0"
 	.byte	0x7c
 	.word	0x190b
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_HISTORY\0"
 	.byte	0x7c
 	.word	0x190c
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_PERF_LATENCY_HINT\0"
 	.byte	0x7c
 	.word	0x190d
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PROCESSOR_DISTRIBUTE_UTILITY\0"
 	.byte	0x7c
 	.word	0x190e
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_SYSTEM_COOLING_POLICY\0"
 	.byte	0x7c
 	.word	0x190f
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_LOCK_CONSOLE_ON_WAKE\0"
 	.byte	0x7c
 	.word	0x1910
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_DEVICE_IDLE_POLICY\0"
 	.byte	0x7c
 	.word	0x1911
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_ACDC_POWER_SOURCE\0"
 	.byte	0x7c
 	.word	0x1912
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_LIDSWITCH_STATE_CHANGE\0"
 	.byte	0x7c
 	.word	0x1913
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BATTERY_PERCENTAGE_REMAINING\0"
 	.byte	0x7c
 	.word	0x1914
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_GLOBAL_USER_PRESENCE\0"
 	.byte	0x7c
 	.word	0x1915
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_SESSION_DISPLAY_STATUS\0"
 	.byte	0x7c
 	.word	0x1916
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_SESSION_USER_PRESENCE\0"
 	.byte	0x7c
 	.word	0x1917
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_IDLE_BACKGROUND_TASK\0"
 	.byte	0x7c
 	.word	0x1918
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_BACKGROUND_TASK_NOTIFICATION\0"
 	.byte	0x7c
 	.word	0x1919
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_APPLAUNCH_BUTTON\0"
 	.byte	0x7c
 	.word	0x191a
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PCIEXPRESS_SETTINGS_SUBGROUP\0"
 	.byte	0x7c
 	.word	0x191b
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_PCIEXPRESS_ASPM_POLICY\0"
 	.byte	0x7c
 	.word	0x191c
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_ENABLE_SWITCH_FORCED_SHUTDOWN\0"
 	.byte	0x7c
 	.word	0x191d
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "PPM_PERFSTATE_CHANGE_GUID\0"
 	.byte	0x7c
 	.word	0x1b1b
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "PPM_PERFSTATE_DOMAIN_CHANGE_GUID\0"
 	.byte	0x7c
 	.word	0x1b1c
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "PPM_IDLESTATE_CHANGE_GUID\0"
 	.byte	0x7c
 	.word	0x1b1d
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "PPM_PERFSTATES_DATA_GUID\0"
 	.byte	0x7c
 	.word	0x1b1e
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "PPM_IDLESTATES_DATA_GUID\0"
 	.byte	0x7c
 	.word	0x1b1f
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "PPM_IDLE_ACCOUNTING_GUID\0"
 	.byte	0x7c
 	.word	0x1b20
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "PPM_IDLE_ACCOUNTING_EX_GUID\0"
 	.byte	0x7c
 	.word	0x1b21
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "PPM_THERMALCONSTRAINT_GUID\0"
 	.byte	0x7c
 	.word	0x1b22
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "PPM_PERFMON_PERFSTATE_GUID\0"
 	.byte	0x7c
 	.word	0x1b23
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "PPM_THERMAL_POLICY_CHANGE_GUID\0"
 	.byte	0x7c
 	.word	0x1b24
 	.byte	0x5
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "VIRTUAL_STORAGE_TYPE_VENDOR_UNKNOWN\0"
 	.byte	0x7d
 	.word	0x215
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "VIRTUAL_STORAGE_TYPE_VENDOR_MICROSOFT\0"
 	.byte	0x7d
 	.word	0x216
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x13
 	.ascii "RPC_IF_HANDLE\0"
 	.byte	0x7e
@@ -68739,2313 +68745,2313 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x7f
 	.byte	0x32
 	.byte	0x16
-	.long	0x439a8
+	.long	0x439d8
 	.uleb128 0xe
 	.ascii "IWinTypesBase_v0_1_s_ifspec\0"
 	.byte	0x7f
 	.byte	0x33
 	.byte	0x16
-	.long	0x439a8
+	.long	0x439d8
 	.uleb128 0xe
 	.ascii "IID_IUnknown\0"
 	.byte	0x80
 	.byte	0x4f
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_AsyncIUnknown\0"
 	.byte	0x80
 	.byte	0xbb
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IClassFactory\0"
 	.byte	0x80
 	.word	0x140
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IMarshal\0"
 	.byte	0x81
 	.word	0x220
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_INoMarshal\0"
 	.byte	0x81
 	.word	0x2c7
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IAgileObject\0"
 	.byte	0x81
 	.word	0x307
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IAgileReference\0"
 	.byte	0x81
 	.word	0x346
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IMarshal2\0"
 	.byte	0x81
 	.word	0x399
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IMalloc\0"
 	.byte	0x81
 	.word	0x41f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IStdMarshalInfo\0"
 	.byte	0x81
 	.word	0x4a7
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IExternalConnection\0"
 	.byte	0x81
 	.word	0x501
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IMultiQI\0"
 	.byte	0x81
 	.word	0x56a
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_AsyncIMultiQI\0"
 	.byte	0x81
 	.word	0x5b9
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternalUnknown\0"
 	.byte	0x81
 	.word	0x616
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEnumUnknown\0"
 	.byte	0x81
 	.word	0x66a
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEnumString\0"
 	.byte	0x81
 	.word	0x6f2
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ISequentialStream\0"
 	.byte	0x81
 	.word	0x778
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IStream\0"
 	.byte	0x81
 	.word	0x824
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRpcChannelBuffer\0"
 	.byte	0x81
 	.word	0x92d
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRpcChannelBuffer2\0"
 	.byte	0x81
 	.word	0x9ae
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IAsyncRpcChannelBuffer\0"
 	.byte	0x81
 	.word	0xa29
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRpcChannelBuffer3\0"
 	.byte	0x81
 	.word	0xacf
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRpcSyntaxNegotiate\0"
 	.byte	0x81
 	.word	0xba9
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRpcProxyBuffer\0"
 	.byte	0x81
 	.word	0xbf7
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRpcStubBuffer\0"
 	.byte	0x81
 	.word	0xc51
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPSFactoryBuffer\0"
 	.byte	0x81
 	.word	0xce1
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IChannelHook\0"
 	.byte	0x81
 	.word	0xd50
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IClientSecurity\0"
 	.byte	0x81
 	.word	0xe30
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IServerSecurity\0"
 	.byte	0x81
 	.word	0xeb4
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRpcOptions\0"
 	.byte	0x81
 	.word	0xf38
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IGlobalOptions\0"
 	.byte	0x81
 	.word	0xfc0
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ISurrogate\0"
 	.byte	0x81
 	.word	0x1022
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IGlobalInterfaceTable\0"
 	.byte	0x81
 	.word	0x107c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ISynchronize\0"
 	.byte	0x81
 	.word	0x10ea
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ISynchronizeHandle\0"
 	.byte	0x81
 	.word	0x114e
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ISynchronizeEvent\0"
 	.byte	0x81
 	.word	0x119c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ISynchronizeContainer\0"
 	.byte	0x81
 	.word	0x11f5
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ISynchronizeMutex\0"
 	.byte	0x81
 	.word	0x1252
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ICancelMethodCalls\0"
 	.byte	0x81
 	.word	0x12bb
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IAsyncManager\0"
 	.byte	0x81
 	.word	0x1319
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ICallFactory\0"
 	.byte	0x81
 	.word	0x137f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRpcHelper\0"
 	.byte	0x81
 	.word	0x13d3
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IReleaseMarshalBuffers\0"
 	.byte	0x81
 	.word	0x142e
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IWaitMultiple\0"
 	.byte	0x81
 	.word	0x1480
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IAddrTrackingControl\0"
 	.byte	0x81
 	.word	0x14dc
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IAddrExclusionControl\0"
 	.byte	0x81
 	.word	0x1534
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPipeByte\0"
 	.byte	0x81
 	.word	0x158f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPipeLong\0"
 	.byte	0x81
 	.word	0x15ee
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPipeDouble\0"
 	.byte	0x81
 	.word	0x164d
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IComThreadingInfo\0"
 	.byte	0x81
 	.word	0x17ca
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IProcessInitControl\0"
 	.byte	0x81
 	.word	0x1839
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IFastRundown\0"
 	.byte	0x81
 	.word	0x1887
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IMarshalingStream\0"
 	.byte	0x81
 	.word	0x18cb
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ICallbackWithNoReentrancyToApplicationSTA\0"
 	.byte	0x81
 	.word	0x1982
 	.byte	0x16
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_NULL\0"
 	.byte	0x82
 	.byte	0xd
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "CATID_MARSHALER\0"
 	.byte	0x82
 	.byte	0xe
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IRpcChannel\0"
 	.byte	0x82
 	.byte	0xf
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IRpcStub\0"
 	.byte	0x82
 	.byte	0x10
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IStubManager\0"
 	.byte	0x82
 	.byte	0x11
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IRpcProxy\0"
 	.byte	0x82
 	.byte	0x12
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IProxyManager\0"
 	.byte	0x82
 	.byte	0x13
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IPSFactory\0"
 	.byte	0x82
 	.byte	0x14
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IInternalMoniker\0"
 	.byte	0x82
 	.byte	0x15
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IDfReserved1\0"
 	.byte	0x82
 	.byte	0x16
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IDfReserved2\0"
 	.byte	0x82
 	.byte	0x17
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IDfReserved3\0"
 	.byte	0x82
 	.byte	0x18
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "CLSID_StdMarshal\0"
 	.byte	0x82
 	.byte	0x19
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_AggStdMarshal\0"
 	.byte	0x82
 	.byte	0x1a
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_StdAsyncActManager\0"
 	.byte	0x82
 	.byte	0x1b
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "IID_IStub\0"
 	.byte	0x82
 	.byte	0x1c
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IProxy\0"
 	.byte	0x82
 	.byte	0x1d
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IEnumGeneric\0"
 	.byte	0x82
 	.byte	0x1e
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IEnumHolder\0"
 	.byte	0x82
 	.byte	0x1f
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IEnumCallback\0"
 	.byte	0x82
 	.byte	0x20
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IOleManager\0"
 	.byte	0x82
 	.byte	0x21
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IOlePresObj\0"
 	.byte	0x82
 	.byte	0x22
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IDebug\0"
 	.byte	0x82
 	.byte	0x23
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "IID_IDebugStream\0"
 	.byte	0x82
 	.byte	0x24
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "CLSID_PSGenObject\0"
 	.byte	0x82
 	.byte	0x25
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_PSClientSite\0"
 	.byte	0x82
 	.byte	0x26
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_PSClassObject\0"
 	.byte	0x82
 	.byte	0x27
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_PSInPlaceActive\0"
 	.byte	0x82
 	.byte	0x28
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_PSInPlaceFrame\0"
 	.byte	0x82
 	.byte	0x29
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_PSDragDrop\0"
 	.byte	0x82
 	.byte	0x2a
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_PSBindCtx\0"
 	.byte	0x82
 	.byte	0x2b
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_PSEnumerators\0"
 	.byte	0x82
 	.byte	0x2c
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_StaticMetafile\0"
 	.byte	0x82
 	.byte	0x2d
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_StaticDib\0"
 	.byte	0x82
 	.byte	0x2e
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CID_CDfsVolume\0"
 	.byte	0x82
 	.byte	0x2f
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_DCOMAccessControl\0"
 	.byte	0x82
 	.byte	0x30
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_GlobalOptions\0"
 	.byte	0x82
 	.byte	0x31
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_StdGlobalInterfaceTable\0"
 	.byte	0x82
 	.byte	0x32
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_ComBinding\0"
 	.byte	0x82
 	.byte	0x33
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_StdEvent\0"
 	.byte	0x82
 	.byte	0x34
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_ManualResetEvent\0"
 	.byte	0x82
 	.byte	0x35
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_SynchronizeContainer\0"
 	.byte	0x82
 	.byte	0x36
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_AddrControl\0"
 	.byte	0x82
 	.byte	0x37
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDFormKrnl\0"
 	.byte	0x82
 	.byte	0x38
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDPropertyPage\0"
 	.byte	0x82
 	.byte	0x39
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDFormDialog\0"
 	.byte	0x82
 	.byte	0x3a
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDCommandButton\0"
 	.byte	0x82
 	.byte	0x3b
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDComboBox\0"
 	.byte	0x82
 	.byte	0x3c
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDTextBox\0"
 	.byte	0x82
 	.byte	0x3d
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDCheckBox\0"
 	.byte	0x82
 	.byte	0x3e
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDLabel\0"
 	.byte	0x82
 	.byte	0x3f
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDOptionButton\0"
 	.byte	0x82
 	.byte	0x40
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDListBox\0"
 	.byte	0x82
 	.byte	0x41
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDScrollBar\0"
 	.byte	0x82
 	.byte	0x42
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDGroupBox\0"
 	.byte	0x82
 	.byte	0x43
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDGeneralPropertyPage\0"
 	.byte	0x82
 	.byte	0x44
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDGenericPropertyPage\0"
 	.byte	0x82
 	.byte	0x45
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDFontPropertyPage\0"
 	.byte	0x82
 	.byte	0x46
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDColorPropertyPage\0"
 	.byte	0x82
 	.byte	0x47
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDLabelPropertyPage\0"
 	.byte	0x82
 	.byte	0x48
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDCheckBoxPropertyPage\0"
 	.byte	0x82
 	.byte	0x49
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDTextBoxPropertyPage\0"
 	.byte	0x82
 	.byte	0x4a
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDOptionButtonPropertyPage\0"
 	.byte	0x82
 	.byte	0x4b
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDListBoxPropertyPage\0"
 	.byte	0x82
 	.byte	0x4c
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDCommandButtonPropertyPage\0"
 	.byte	0x82
 	.byte	0x4d
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDComboBoxPropertyPage\0"
 	.byte	0x82
 	.byte	0x4e
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDScrollBarPropertyPage\0"
 	.byte	0x82
 	.byte	0x4f
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDGroupBoxPropertyPage\0"
 	.byte	0x82
 	.byte	0x50
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CCDXObjectPropertyPage\0"
 	.byte	0x82
 	.byte	0x51
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CStdPropertyFrame\0"
 	.byte	0x82
 	.byte	0x52
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CFormPropertyPage\0"
 	.byte	0x82
 	.byte	0x53
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CGridPropertyPage\0"
 	.byte	0x82
 	.byte	0x54
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CWSJArticlePage\0"
 	.byte	0x82
 	.byte	0x55
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_CSystemPage\0"
 	.byte	0x82
 	.byte	0x56
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_IdentityUnmarshal\0"
 	.byte	0x82
 	.byte	0x57
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_InProcFreeMarshaler\0"
 	.byte	0x82
 	.byte	0x58
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_Picture_Metafile\0"
 	.byte	0x82
 	.byte	0x59
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_Picture_EnhMetafile\0"
 	.byte	0x82
 	.byte	0x5a
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "CLSID_Picture_Dib\0"
 	.byte	0x82
 	.byte	0x5b
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "GUID_TRISTATE\0"
 	.byte	0x82
 	.byte	0x5c
 	.byte	0x15
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "CLSID_ContextSwitcher\0"
 	.byte	0x82
 	.byte	0x5e
 	.byte	0x16
-	.long	0x42411
+	.long	0x42441
 	.uleb128 0xe
 	.ascii "IWinTypes_v0_1_c_ifspec\0"
 	.byte	0x83
 	.byte	0x31
 	.byte	0x16
-	.long	0x439a8
+	.long	0x439d8
 	.uleb128 0xe
 	.ascii "IWinTypes_v0_1_s_ifspec\0"
 	.byte	0x83
 	.byte	0x32
 	.byte	0x16
-	.long	0x439a8
+	.long	0x439d8
 	.uleb128 0x4
 	.ascii "IID_IMallocSpy\0"
 	.byte	0x84
 	.word	0x1b1d
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IBindCtx\0"
 	.byte	0x84
 	.word	0x1c33
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEnumMoniker\0"
 	.byte	0x84
 	.word	0x1d03
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRunnableObject\0"
 	.byte	0x84
 	.word	0x1d8b
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRunningObjectTable\0"
 	.byte	0x84
 	.word	0x1e11
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPersist\0"
 	.byte	0x84
 	.word	0x1eaf
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPersistStream\0"
 	.byte	0x84
 	.word	0x1efd
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IMoniker\0"
 	.byte	0x84
 	.word	0x1f8a
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IROTData\0"
 	.byte	0x84
 	.word	0x20ff
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEnumSTATSTG\0"
 	.byte	0x84
 	.word	0x2153
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IStorage\0"
 	.byte	0x84
 	.word	0x21e0
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPersistFile\0"
 	.byte	0x84
 	.word	0x2355
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPersistStorage\0"
 	.byte	0x84
 	.word	0x23dd
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ILockBytes\0"
 	.byte	0x84
 	.word	0x246f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEnumFORMATETC\0"
 	.byte	0x84
 	.word	0x2553
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEnumSTATDATA\0"
 	.byte	0x84
 	.word	0x25e9
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRootStorage\0"
 	.byte	0x84
 	.word	0x266f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IAdviseSink\0"
 	.byte	0x84
 	.word	0x2713
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_AsyncIAdviseSink\0"
 	.byte	0x84
 	.word	0x27d4
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IAdviseSink2\0"
 	.byte	0x84
 	.word	0x2884
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_AsyncIAdviseSink2\0"
 	.byte	0x84
 	.word	0x290a
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IDataObject\0"
 	.byte	0x84
 	.word	0x29b6
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IDataAdviseHolder\0"
 	.byte	0x84
 	.word	0x2aa6
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IMessageFilter\0"
 	.byte	0x84
 	.word	0x2b3c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "FMTID_SummaryInformation\0"
 	.byte	0x84
 	.word	0x2ba8
 	.byte	0x14
-	.long	0x42424
+	.long	0x42454
 	.uleb128 0x4
 	.ascii "FMTID_DocSummaryInformation\0"
 	.byte	0x84
 	.word	0x2baa
 	.byte	0x14
-	.long	0x42424
+	.long	0x42454
 	.uleb128 0x4
 	.ascii "FMTID_UserDefinedProperties\0"
 	.byte	0x84
 	.word	0x2bac
 	.byte	0x14
-	.long	0x42424
+	.long	0x42454
 	.uleb128 0x4
 	.ascii "FMTID_DiscardableInformation\0"
 	.byte	0x84
 	.word	0x2bae
 	.byte	0x14
-	.long	0x42424
+	.long	0x42454
 	.uleb128 0x4
 	.ascii "FMTID_ImageSummaryInformation\0"
 	.byte	0x84
 	.word	0x2bb0
 	.byte	0x14
-	.long	0x42424
+	.long	0x42454
 	.uleb128 0x4
 	.ascii "FMTID_AudioSummaryInformation\0"
 	.byte	0x84
 	.word	0x2bb2
 	.byte	0x14
-	.long	0x42424
+	.long	0x42454
 	.uleb128 0x4
 	.ascii "FMTID_VideoSummaryInformation\0"
 	.byte	0x84
 	.word	0x2bb4
 	.byte	0x14
-	.long	0x42424
+	.long	0x42454
 	.uleb128 0x4
 	.ascii "FMTID_MediaFileSummaryInformation\0"
 	.byte	0x84
 	.word	0x2bb6
 	.byte	0x14
-	.long	0x42424
+	.long	0x42454
 	.uleb128 0x4
 	.ascii "IID_IClassActivator\0"
 	.byte	0x84
 	.word	0x2bbe
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IFillLockBytes\0"
 	.byte	0x84
 	.word	0x2c15
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IProgressNotify\0"
 	.byte	0x84
 	.word	0x2cba
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ILayoutStorage\0"
 	.byte	0x84
 	.word	0x2d15
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IBlockingLock\0"
 	.byte	0x84
 	.word	0x2d92
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ITimeAndNoticeControl\0"
 	.byte	0x84
 	.word	0x2de9
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOplockStorage\0"
 	.byte	0x84
 	.word	0x2e38
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IDirectWriterLock\0"
 	.byte	0x84
 	.word	0x2ea6
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IUrlMon\0"
 	.byte	0x84
 	.word	0x2f09
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IForegroundTransfer\0"
 	.byte	0x84
 	.word	0x2f68
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IThumbnailExtractor\0"
 	.byte	0x84
 	.word	0x2fb5
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IDummyHICONIncluder\0"
 	.byte	0x84
 	.word	0x3017
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IProcessLock\0"
 	.byte	0x84
 	.word	0x306e
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ISurrogateService\0"
 	.byte	0x84
 	.word	0x30c4
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInitializeSpy\0"
 	.byte	0x84
 	.word	0x3144
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IApartmentShutdown\0"
 	.byte	0x84
 	.word	0x31ba
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "IID_IOleAdviseHolder\0"
 	.byte	0x85
 	.byte	0xff
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleCache\0"
 	.byte	0x85
 	.word	0x188
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleCache2\0"
 	.byte	0x85
 	.word	0x224
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleCacheControl\0"
 	.byte	0x85
 	.word	0x2c8
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IParseDisplayName\0"
 	.byte	0x85
 	.word	0x322
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleContainer\0"
 	.byte	0x85
 	.word	0x378
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleClientSite\0"
 	.byte	0x85
 	.word	0x3e3
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleObject\0"
 	.byte	0x85
 	.word	0x49c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IOLETypes_v0_0_c_ifspec\0"
 	.byte	0x85
 	.word	0x5e6
 	.byte	0x16
-	.long	0x439a8
+	.long	0x439d8
 	.uleb128 0x4
 	.ascii "IOLETypes_v0_0_s_ifspec\0"
 	.byte	0x85
 	.word	0x5e7
 	.byte	0x16
-	.long	0x439a8
+	.long	0x439d8
 	.uleb128 0x4
 	.ascii "IID_IOleWindow\0"
 	.byte	0x85
 	.word	0x60c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleLink\0"
 	.byte	0x85
 	.word	0x673
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleItemContainer\0"
 	.byte	0x85
 	.word	0x741
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleInPlaceUIWindow\0"
 	.byte	0x85
 	.word	0x7da
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleInPlaceActiveObject\0"
 	.byte	0x85
 	.word	0x860
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleInPlaceFrame\0"
 	.byte	0x85
 	.word	0x925
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleInPlaceObject\0"
 	.byte	0x85
 	.word	0x9eb
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IOleInPlaceSite\0"
 	.byte	0x85
 	.word	0xa6e
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IContinue\0"
 	.byte	0x85
 	.word	0xb34
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IViewObject\0"
 	.byte	0x85
 	.word	0xb83
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IViewObject2\0"
 	.byte	0x85
 	.word	0xca3
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IDropSource\0"
 	.byte	0x85
 	.word	0xd41
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IDropTarget\0"
 	.byte	0x85
 	.word	0xdba
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IDropSourceNotify\0"
 	.byte	0x85
 	.word	0xe38
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEnumOLEVERB\0"
 	.byte	0x85
 	.word	0xea1
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "IID_IServiceProvider\0"
 	.byte	0x86
 	.byte	0x48
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "IOleAutomationTypes_v1_0_c_ifspec\0"
 	.byte	0x87
 	.word	0x16c
 	.byte	0x16
-	.long	0x439a8
+	.long	0x439d8
 	.uleb128 0x4
 	.ascii "IOleAutomationTypes_v1_0_s_ifspec\0"
 	.byte	0x87
 	.word	0x16d
 	.byte	0x16
-	.long	0x439a8
+	.long	0x439d8
 	.uleb128 0x4
 	.ascii "IID_ICreateTypeInfo\0"
 	.byte	0x87
 	.word	0x3b3
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ICreateTypeInfo2\0"
 	.byte	0x87
 	.word	0x514
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ICreateTypeLib\0"
 	.byte	0x87
 	.word	0x6e1
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ICreateTypeLib2\0"
 	.byte	0x87
 	.word	0x798
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IDispatch\0"
 	.byte	0x87
 	.word	0x874
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEnumVARIANT\0"
 	.byte	0x87
 	.word	0x928
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ITypeComp\0"
 	.byte	0x87
 	.word	0x9c0
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ITypeInfo\0"
 	.byte	0x87
 	.word	0xa65
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ITypeInfo2\0"
 	.byte	0x87
 	.word	0xcb1
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ITypeLib\0"
 	.byte	0x87
 	.word	0xeb6
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ITypeLib2\0"
 	.byte	0x87
 	.word	0xffb
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ITypeChangeEvents\0"
 	.byte	0x87
 	.word	0x110f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IErrorInfo\0"
 	.byte	0x87
 	.word	0x1174
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ICreateErrorInfo\0"
 	.byte	0x87
 	.word	0x11f0
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ISupportErrorInfo\0"
 	.byte	0x87
 	.word	0x126c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ITypeFactory\0"
 	.byte	0x87
 	.word	0x12ba
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ITypeMarshal\0"
 	.byte	0x87
 	.word	0x130c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IRecordInfo\0"
 	.byte	0x87
 	.word	0x1395
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IErrorLog\0"
 	.byte	0x87
 	.word	0x14a5
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPropertyBag\0"
 	.byte	0x87
 	.word	0x14f7
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "LIBID_MSXML\0"
 	.byte	0x88
 	.word	0x140
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMNode\0"
 	.byte	0x88
 	.word	0x1ea
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMDocument\0"
 	.byte	0x88
 	.word	0x3fe
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMNodeList\0"
 	.byte	0x88
 	.word	0x726
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMNamedNodeMap\0"
 	.byte	0x88
 	.word	0x7d0
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMDocumentFragment\0"
 	.byte	0x88
 	.word	0x8bf
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMCharacterData\0"
 	.byte	0x88
 	.word	0xa5c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMAttribute\0"
 	.byte	0x88
 	.word	0xc60
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMElement\0"
 	.byte	0x88
 	.word	0xe21
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMText\0"
 	.byte	0x88
 	.word	0x102f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMComment\0"
 	.byte	0x88
 	.word	0x1225
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMProcessingInstruction\0"
 	.byte	0x88
 	.word	0x140b
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMCDATASection\0"
 	.byte	0x88
 	.word	0x15cc
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMDocumentType\0"
 	.byte	0x88
 	.word	0x17be
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMNotation\0"
 	.byte	0x88
 	.word	0x197f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMEntity\0"
 	.byte	0x88
 	.word	0x1b35
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMEntityReference\0"
 	.byte	0x88
 	.word	0x1cf6
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMImplementation\0"
 	.byte	0x88
 	.word	0x1e93
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDOMParseError\0"
 	.byte	0x88
 	.word	0x1f14
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "DIID_XMLDOMDocumentEvents\0"
 	.byte	0x88
 	.word	0x1fd3
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "CLSID_DOMDocument\0"
 	.byte	0x88
 	.word	0x203f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "CLSID_DOMFreeThreadedDocument\0"
 	.byte	0x88
 	.word	0x204c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLHttpRequest\0"
 	.byte	0x88
 	.word	0x205b
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "CLSID_XMLHTTPRequest\0"
 	.byte	0x88
 	.word	0x2170
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDSOControl\0"
 	.byte	0x88
 	.word	0x2187
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "CLSID_XMLDSOControl\0"
 	.byte	0x88
 	.word	0x222e
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLElementCollection\0"
 	.byte	0x88
 	.word	0x223d
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLElement\0"
 	.byte	0x88
 	.word	0x22df
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDocument\0"
 	.byte	0x88
 	.word	0x23dd
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLElement2\0"
 	.byte	0x88
 	.word	0x24ed
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLDocument2\0"
 	.byte	0x88
 	.word	0x25f6
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLAttribute\0"
 	.byte	0x88
 	.word	0x272f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLError\0"
 	.byte	0x88
 	.word	0x27b7
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IXMLElementNotificationSink\0"
 	.byte	0x88
 	.word	0x2804
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "CLSID_XMLDocument\0"
 	.byte	0x88
 	.word	0x287f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "CLSID_SBS_StdURLMoniker\0"
 	.byte	0x89
 	.word	0x253
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_HttpProtocol\0"
 	.byte	0x89
 	.word	0x254
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_FtpProtocol\0"
 	.byte	0x89
 	.word	0x255
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_GopherProtocol\0"
 	.byte	0x89
 	.word	0x256
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_HttpSProtocol\0"
 	.byte	0x89
 	.word	0x257
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_FileProtocol\0"
 	.byte	0x89
 	.word	0x258
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_MkProtocol\0"
 	.byte	0x89
 	.word	0x259
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_UrlMkBindCtx\0"
 	.byte	0x89
 	.word	0x25a
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_SoftDistExt\0"
 	.byte	0x89
 	.word	0x25b
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_CdlProtocol\0"
 	.byte	0x89
 	.word	0x25c
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_ClassInstallFilter\0"
 	.byte	0x89
 	.word	0x25d
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_InternetSecurityManager\0"
 	.byte	0x89
 	.word	0x25e
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_SBS_InternetZoneManager\0"
 	.byte	0x89
 	.word	0x25f
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "IID_IAsyncMoniker\0"
 	.byte	0x89
 	.word	0x268
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_StdURLMoniker\0"
 	.byte	0x89
 	.word	0x269
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_HttpProtocol\0"
 	.byte	0x89
 	.word	0x26a
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_FtpProtocol\0"
 	.byte	0x89
 	.word	0x26b
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_GopherProtocol\0"
 	.byte	0x89
 	.word	0x26c
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_HttpSProtocol\0"
 	.byte	0x89
 	.word	0x26d
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_FileProtocol\0"
 	.byte	0x89
 	.word	0x26e
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_MkProtocol\0"
 	.byte	0x89
 	.word	0x26f
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_StdURLProtocol\0"
 	.byte	0x89
 	.word	0x270
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_UrlMkBindCtx\0"
 	.byte	0x89
 	.word	0x271
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_CdlProtocol\0"
 	.byte	0x89
 	.word	0x272
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_ClassInstallFilter\0"
 	.byte	0x89
 	.word	0x273
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "IID_IAsyncBindCtx\0"
 	.byte	0x89
 	.word	0x274
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "IID_IPersistMoniker\0"
 	.byte	0x89
 	.word	0x325
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IMonikerProp\0"
 	.byte	0x89
 	.word	0x3c2
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IBindProtocol\0"
 	.byte	0x89
 	.word	0x418
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IBinding\0"
 	.byte	0x89
 	.word	0x470
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IBindStatusCallback\0"
 	.byte	0x89
 	.word	0x5e1
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IBindStatusCallbackEx\0"
 	.byte	0x89
 	.word	0x6dc
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IAuthenticate\0"
 	.byte	0x89
 	.word	0x79c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IAuthenticateEx\0"
 	.byte	0x89
 	.word	0x7ff
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IHttpNegotiate\0"
 	.byte	0x89
 	.word	0x866
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IHttpNegotiate2\0"
 	.byte	0x89
 	.word	0x8d1
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IHttpNegotiate3\0"
 	.byte	0x89
 	.word	0x942
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IWinInetFileStream\0"
 	.byte	0x89
 	.word	0x9be
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IWindowForBindingUI\0"
 	.byte	0x89
 	.word	0xa1f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ICodeInstall\0"
 	.byte	0x89
 	.word	0xa82
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IUri\0"
 	.byte	0x89
 	.word	0xb0a
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IUriContainer\0"
 	.byte	0x89
 	.word	0xcb4
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IUriBuilder\0"
 	.byte	0x89
 	.word	0xd02
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IUriBuilderFactory\0"
 	.byte	0x89
 	.word	0xe66
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IWinInetInfo\0"
 	.byte	0x89
 	.word	0xed0
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IHttpSecurity\0"
 	.byte	0x89
 	.word	0xf3e
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IWinInetHttpInfo\0"
 	.byte	0x89
 	.word	0xf9e
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IWinInetHttpTimeouts\0"
 	.byte	0x89
 	.word	0x101e
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IWinInetCacheHints\0"
 	.byte	0x89
 	.word	0x1077
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IWinInetCacheHints2\0"
 	.byte	0x89
 	.word	0x10d5
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "SID_BindHost\0"
 	.byte	0x89
 	.word	0x113c
 	.byte	0x15
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IBindHost\0"
 	.byte	0x89
 	.word	0x1146
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternet\0"
 	.byte	0x89
 	.word	0x1268
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetBindInfo\0"
 	.byte	0x89
 	.word	0x12c8
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetBindInfoEx\0"
 	.byte	0x89
 	.word	0x132f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetProtocolRoot\0"
 	.byte	0x89
 	.word	0x13be
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetProtocol\0"
 	.byte	0x89
 	.word	0x1451
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetProtocolEx\0"
 	.byte	0x89
 	.word	0x1502
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetProtocolSink\0"
 	.byte	0x89
 	.word	0x15ba
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetProtocolSinkStackable\0"
 	.byte	0x89
 	.word	0x1639
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetSession\0"
 	.byte	0x89
 	.word	0x16a6
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetThreadSwitch\0"
 	.byte	0x89
 	.word	0x1764
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetPriority\0"
 	.byte	0x89
 	.word	0x17c1
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetProtocolInfo\0"
 	.byte	0x89
 	.word	0x184e
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "CLSID_InternetSecurityManager\0"
 	.byte	0x89
 	.word	0x197f
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_InternetZoneManager\0"
 	.byte	0x89
 	.word	0x1980
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "CLSID_PersistentZoneIdentifier\0"
 	.byte	0x89
 	.word	0x1983
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "IID_IInternetSecurityMgrSite\0"
 	.byte	0x89
 	.word	0x1998
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetSecurityManager\0"
 	.byte	0x89
 	.word	0x1a27
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetSecurityManagerEx\0"
 	.byte	0x89
 	.word	0x1af3
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetSecurityManagerEx2\0"
 	.byte	0x89
 	.word	0x1bb0
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IZoneIdentifier\0"
 	.byte	0x89
 	.word	0x1cb8
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetHostSecurityManager\0"
 	.byte	0x89
 	.word	0x1d1f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_CUSTOM_LOCALMACHINEZONEUNLOCKED\0"
 	.byte	0x89
 	.word	0x1e60
 	.byte	0x15
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetZoneManager\0"
 	.byte	0x89
 	.word	0x1eaf
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetZoneManagerEx\0"
 	.byte	0x89
 	.word	0x1fb9
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IInternetZoneManagerEx2\0"
 	.byte	0x89
 	.word	0x20b1
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "CLSID_SoftDistExt\0"
 	.byte	0x89
 	.word	0x21ca
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0x4
 	.ascii "IID_ISoftDistExt\0"
 	.byte	0x89
 	.word	0x21fa
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_ICatalogFileInfo\0"
 	.byte	0x89
 	.word	0x2280
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IDataFilter\0"
 	.byte	0x89
 	.word	0x22df
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEncodingFilterFactory\0"
 	.byte	0x89
 	.word	0x2378
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "GUID_CUSTOM_CONFIRMOBJECTSAFETY\0"
 	.byte	0x89
 	.word	0x23f0
 	.byte	0x15
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IWrappedProtocol\0"
 	.byte	0x89
 	.word	0x23fe
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IGetBindHandle\0"
 	.byte	0x89
 	.word	0x245a
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IBindCallbackRedirect\0"
 	.byte	0x89
 	.word	0x24ba
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPropertyStorage\0"
 	.byte	0x8a
 	.word	0x1d3
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IPropertySetStorage\0"
 	.byte	0x8a
 	.word	0x2b5
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEnumSTATPROPSTG\0"
 	.byte	0x8a
 	.word	0x332
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x4
 	.ascii "IID_IEnumSTATPROPSETSTG\0"
 	.byte	0x8a
 	.word	0x3ba
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "IID_StdOle\0"
 	.byte	0x8b
 	.byte	0x15
 	.byte	0x14
-	.long	0x423fe
+	.long	0x4242e
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_DISK\0"
 	.byte	0x8c
 	.byte	0xc
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_CDROM\0"
 	.byte	0x8c
 	.byte	0xd
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_PARTITION\0"
 	.byte	0x8c
 	.byte	0xe
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_TAPE\0"
 	.byte	0x8c
 	.byte	0xf
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_WRITEONCEDISK\0"
 	.byte	0x8c
 	.byte	0x10
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_VOLUME\0"
 	.byte	0x8c
 	.byte	0x11
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_MEDIUMCHANGER\0"
 	.byte	0x8c
 	.byte	0x12
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_FLOPPY\0"
 	.byte	0x8c
 	.byte	0x13
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_CDCHANGER\0"
 	.byte	0x8c
 	.byte	0x14
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_STORAGEPORT\0"
 	.byte	0x8c
 	.byte	0x15
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_VMLUN\0"
 	.byte	0x8c
 	.byte	0x16
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_SES\0"
 	.byte	0x8c
 	.byte	0x17
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_ZNSDISK\0"
 	.byte	0x8c
 	.byte	0x18
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_SERVICE_VOLUME\0"
 	.byte	0x8c
 	.byte	0x1b
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_HIDDEN_VOLUME\0"
 	.byte	0x8c
 	.byte	0x1c
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_UNIFIED_ACCESS_RPMB\0"
 	.byte	0x8c
 	.byte	0x1d
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_SCM_PHYSICAL_DEVICE\0"
 	.byte	0x8c
 	.byte	0x1e
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_SCM_PD_HEALTH_NOTIFICATION\0"
 	.byte	0x8c
 	.byte	0x1f
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_SCM_PD_PASSTHROUGH_INVDIMM\0"
 	.byte	0x8c
 	.byte	0x20
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_COMPORT\0"
 	.byte	0x8c
 	.byte	0x21
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "GUID_DEVINTERFACE_SERENUM_BUS_ENUMERATOR\0"
 	.byte	0x8c
 	.byte	0x22
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0x25
 	.ascii "_SCARD_IO_REQUEST\0"
 	.byte	0x8
 	.byte	0x8d
 	.byte	0xa1
 	.byte	0x12
-	.long	0x466c0
+	.long	0x466f0
 	.uleb128 0x14
 	.ascii "dwProtocol\0"
 	.byte	0x8d
 	.byte	0xa2
 	.byte	0xb
-	.long	0x42376
+	.long	0x423a6
 	.byte	0
 	.uleb128 0x14
 	.ascii "cbPciLength\0"
 	.byte	0x8d
 	.byte	0xa3
 	.byte	0xb
-	.long	0x42376
+	.long	0x423a6
 	.byte	0x4
 	.byte	0
 	.uleb128 0x13
@@ -71053,39 +71059,39 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x8d
 	.byte	0xa4
 	.byte	0x5
-	.long	0x4667b
+	.long	0x466ab
 	.uleb128 0x9
-	.long	0x466c0
+	.long	0x466f0
 	.uleb128 0xe
 	.ascii "g_rgSCardT0Pci\0"
 	.byte	0x8e
 	.byte	0x27
 	.byte	0x2e
-	.long	0x466d9
+	.long	0x46709
 	.uleb128 0xe
 	.ascii "g_rgSCardT1Pci\0"
 	.byte	0x8e
 	.byte	0x27
 	.byte	0x3d
-	.long	0x466d9
+	.long	0x46709
 	.uleb128 0xe
 	.ascii "g_rgSCardRawPci\0"
 	.byte	0x8e
 	.byte	0x27
 	.byte	0x4c
-	.long	0x466d9
+	.long	0x46709
 	.uleb128 0xe
 	.ascii "IID_IPrintDialogCallback\0"
 	.byte	0x8f
 	.byte	0xe
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "IID_IPrintDialogServices\0"
 	.byte	0x8f
 	.byte	0xf
 	.byte	0x1
-	.long	0x423ed
+	.long	0x4241d
 	.uleb128 0xe
 	.ascii "wxDialogNameStr\0"
 	.byte	0x13
@@ -71095,13 +71101,13 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x11
 	.ascii "wxEventTypeTag<wxWindowModalDialogEvent>\0"
 	.uleb128 0x9
-	.long	0x4677e
+	.long	0x467ae
 	.uleb128 0x4
 	.ascii "wxEVT_WINDOW_MODAL_DIALOG_CLOSED\0"
 	.byte	0x13
 	.word	0x186
 	.byte	0x1
-	.long	0x467a8
+	.long	0x467d8
 	.uleb128 0xe
 	.ascii "wxDirDialogNameStr\0"
 	.byte	0x15
@@ -71120,12 +71126,6 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x1a
 	.byte	0x2a
 	.long	0x2cb33
-	.uleb128 0x11
-	.ascii "wxMenu\0"
-	.uleb128 0x11
-	.ascii "wxwxMenuListNode\0"
-	.uleb128 0x11
-	.ascii "wxwxMenuItemListNode\0"
 	.uleb128 0x11
 	.ascii "wxEventTypeTag<wxWizardEvent>\0"
 	.uleb128 0x9
@@ -71573,16 +71573,6 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0
 	.uleb128 0x9
 	.long	0x46ff3
-	.uleb128 0x11
-	.ascii "wxListBase\0"
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x263c5
-	.uleb128 0x11
-	.ascii "wxNodeBase\0"
-	.uleb128 0x7
-	.byte	0x8
-	.long	0x47055
 	.uleb128 0xfa
 	.secrel32	.LASF369
 	.word	0x378
@@ -71590,7 +71580,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x2c
 	.byte	0x18
 	.long	0x25640
-	.long	0x473a9
+	.long	0x47385
 	.uleb128 0x2c
 	.long	0x46ff3
 	.byte	0
@@ -71598,14 +71588,14 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x97
 	.secrel32	.LASF35
 	.ascii "_ZN15wxDirDialogBaseaSERKS_\0"
-	.long	0x473ae
+	.long	0x4738a
 	.byte	0x1
-	.long	0x470b0
-	.long	0x470bb
+	.long	0x4708c
+	.long	0x47097
 	.uleb128 0x2
-	.long	0x473b4
+	.long	0x47390
 	.uleb128 0x1
-	.long	0x473bf
+	.long	0x4739b
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF369
@@ -71614,10 +71604,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN15wxDirDialogBaseC4Ev\0"
 	.byte	0x1
-	.long	0x470e5
-	.long	0x470eb
+	.long	0x470c1
+	.long	0x470c7
 	.uleb128 0x2
-	.long	0x473b4
+	.long	0x47390
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF369
@@ -71626,10 +71616,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN15wxDirDialogBaseC4EP8wxWindowRK8wxStringS4_lRK7wxPointRK6wxSizeS4_\0"
 	.byte	0x1
-	.long	0x47143
-	.long	0x4716c
+	.long	0x4711f
+	.long	0x47148
 	.uleb128 0x2
-	.long	0x473b4
+	.long	0x47390
 	.uleb128 0x1
 	.long	0x2f15c
 	.uleb128 0x1
@@ -71652,12 +71642,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xd
 	.ascii "_ZN15wxDirDialogBaseD4Ev\0"
 	.byte	0x1
-	.long	0x47067
+	.long	0x47043
 	.byte	0x1
-	.long	0x471a8
-	.long	0x471b3
+	.long	0x47184
+	.long	0x4718f
 	.uleb128 0x2
-	.long	0x473b4
+	.long	0x47390
 	.uleb128 0x2
 	.long	0x10686
 	.byte	0
@@ -71669,10 +71659,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.ascii "_ZN15wxDirDialogBase6CreateEP8wxWindowRK8wxStringS4_lRK7wxPointRK6wxSizeS4_\0"
 	.long	0x10f46
 	.byte	0x1
-	.long	0x47214
-	.long	0x4723d
+	.long	0x471f0
+	.long	0x47219
 	.uleb128 0x2
-	.long	0x473b4
+	.long	0x47390
 	.uleb128 0x1
 	.long	0x2f15c
 	.uleb128 0x1
@@ -71698,12 +71688,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xfc
-	.long	0x47067
+	.long	0x47043
 	.byte	0x1
-	.long	0x4728b
-	.long	0x47296
+	.long	0x47267
+	.long	0x47272
 	.uleb128 0x2
-	.long	0x473b4
+	.long	0x47390
 	.uleb128 0x1
 	.long	0x1157b
 	.byte	0
@@ -71717,12 +71707,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xfd
-	.long	0x47067
+	.long	0x47043
 	.byte	0x1
-	.long	0x472dd
-	.long	0x472e8
+	.long	0x472b9
+	.long	0x472c4
 	.uleb128 0x2
-	.long	0x473b4
+	.long	0x47390
 	.uleb128 0x1
 	.long	0x1157b
 	.byte	0
@@ -71737,12 +71727,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xfe
-	.long	0x47067
+	.long	0x47043
 	.byte	0x1
-	.long	0x47331
-	.long	0x47337
+	.long	0x4730d
+	.long	0x47313
 	.uleb128 0x2
-	.long	0x473c5
+	.long	0x473a1
 	.byte	0
 	.uleb128 0x31
 	.ascii "GetPath\0"
@@ -71755,12 +71745,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xff
-	.long	0x47067
+	.long	0x47043
 	.byte	0x1
-	.long	0x47379
-	.long	0x4737f
+	.long	0x47355
+	.long	0x4735b
 	.uleb128 0x2
-	.long	0x473c5
+	.long	0x473a1
 	.byte	0
 	.uleb128 0xbe
 	.ascii "m_message\0"
@@ -71780,23 +71770,23 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x2
 	.byte	0
 	.uleb128 0x9
-	.long	0x47067
+	.long	0x47043
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x47067
+	.long	0x47043
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x47067
+	.long	0x47043
 	.uleb128 0x9
-	.long	0x473b4
+	.long	0x47390
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x473a9
+	.long	0x47385
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x473a9
+	.long	0x47385
 	.uleb128 0x9
-	.long	0x473c5
+	.long	0x473a1
 	.uleb128 0xbf
 	.ascii "wxNavigationEnabled<wxTopLevelWindow>\0"
 	.word	0x2d8
@@ -71804,9 +71794,9 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xb6
 	.byte	0x7
 	.long	0x25640
-	.long	0x479d0
+	.long	0x479ac
 	.uleb128 0x2c
-	.long	0x479d5
+	.long	0x479b1
 	.byte	0
 	.byte	0x1
 	.uleb128 0xd
@@ -71816,10 +71806,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN19wxNavigationEnabledI16wxTopLevelWindowEC4Ev\0"
 	.byte	0x1
-	.long	0x4744e
-	.long	0x47454
+	.long	0x4742a
+	.long	0x47430
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.byte	0
 	.uleb128 0x31
 	.ascii "AcceptsFocus\0"
@@ -71832,12 +71822,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x48
-	.long	0x473d0
+	.long	0x473ac
 	.byte	0x1
-	.long	0x474b8
-	.long	0x474be
+	.long	0x47494
+	.long	0x4749a
 	.uleb128 0x2
-	.long	0x479f2
+	.long	0x479ce
 	.byte	0
 	.uleb128 0x59
 	.secrel32	.LASF371
@@ -71850,12 +71840,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x49
-	.long	0x473d0
+	.long	0x473ac
 	.byte	0x1
-	.long	0x47524
-	.long	0x4752a
+	.long	0x47500
+	.long	0x47506
 	.uleb128 0x2
-	.long	0x479f2
+	.long	0x479ce
 	.byte	0
 	.uleb128 0x59
 	.secrel32	.LASF372
@@ -71868,12 +71858,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x4a
-	.long	0x473d0
+	.long	0x473ac
 	.byte	0x1
-	.long	0x47591
-	.long	0x47597
+	.long	0x4756d
+	.long	0x47573
 	.uleb128 0x2
-	.long	0x479f2
+	.long	0x479ce
 	.byte	0
 	.uleb128 0x52
 	.ascii "AddChild\0"
@@ -71885,12 +71875,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x4f
-	.long	0x473d0
+	.long	0x473ac
 	.byte	0x1
-	.long	0x475fb
-	.long	0x47606
+	.long	0x475d7
+	.long	0x475e2
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.uleb128 0x1
 	.long	0x3c3d8
 	.byte	0
@@ -71904,12 +71894,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x50
-	.long	0x473d0
+	.long	0x473ac
 	.byte	0x1
-	.long	0x47671
-	.long	0x4767c
+	.long	0x4764d
+	.long	0x47658
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.uleb128 0x1
 	.long	0x3c3d8
 	.byte	0
@@ -71923,12 +71913,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x45
-	.long	0x473d0
+	.long	0x473ac
 	.byte	0x1
-	.long	0x476d2
-	.long	0x476d8
+	.long	0x476ae
+	.long	0x476b4
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.byte	0
 	.uleb128 0x26
 	.ascii "SetFocusIgnoringChildren\0"
@@ -71937,10 +71927,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN19wxNavigationEnabledI16wxTopLevelWindowE24SetFocusIgnoringChildrenEv\0"
 	.byte	0x1
-	.long	0x47747
-	.long	0x4774d
+	.long	0x47723
+	.long	0x47729
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.byte	0
 	.uleb128 0x1e
 	.ascii "OnNavigationKey\0"
@@ -71949,10 +71939,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN19wxNavigationEnabledI16wxTopLevelWindowE15OnNavigationKeyER20wxNavigationKeyEvent\0"
 	.byte	0x2
-	.long	0x477c1
-	.long	0x477cc
+	.long	0x4779d
+	.long	0x477a8
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.uleb128 0x1
 	.long	0x3ad0d
 	.byte	0
@@ -71963,10 +71953,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN19wxNavigationEnabledI16wxTopLevelWindowE7OnFocusER12wxFocusEvent\0"
 	.byte	0x2
-	.long	0x47827
-	.long	0x47832
+	.long	0x47803
+	.long	0x4780e
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.uleb128 0x1
 	.long	0x3ac5d
 	.byte	0
@@ -71977,10 +71967,10 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN19wxNavigationEnabledI16wxTopLevelWindowE12OnChildFocusER17wxChildFocusEvent\0"
 	.byte	0x2
-	.long	0x4789d
-	.long	0x478a8
+	.long	0x47879
+	.long	0x47884
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.uleb128 0x1
 	.long	0x3acb1
 	.byte	0
@@ -71989,7 +71979,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x12
 	.word	0x112
 	.byte	0x18
-	.long	0x479fd
+	.long	0x479d9
 	.word	0x2b8
 	.byte	0x2
 	.uleb128 0x34
@@ -71998,12 +71988,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.word	0x115
 	.byte	0x5
 	.ascii "_ZN19wxNavigationEnabledI16wxTopLevelWindowEC4ERKS1_\0"
-	.long	0x47907
-	.long	0x47912
+	.long	0x478e3
+	.long	0x478ee
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.uleb128 0x1
-	.long	0x47ca1
+	.long	0x47c7d
 	.byte	0
 	.uleb128 0x17
 	.secrel32	.LASF35
@@ -72011,45 +72001,45 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.word	0x115
 	.byte	0x5
 	.ascii "_ZN19wxNavigationEnabledI16wxTopLevelWindowEaSERKS1_\0"
-	.long	0x47ca7
-	.long	0x4795c
-	.long	0x47967
+	.long	0x47c83
+	.long	0x47938
+	.long	0x47943
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.uleb128 0x1
-	.long	0x47ca1
+	.long	0x47c7d
 	.byte	0
 	.uleb128 0xfc
 	.ascii "~wxNavigationEnabled\0"
 	.ascii "_ZN19wxNavigationEnabledI16wxTopLevelWindowED4Ev\0"
 	.byte	0x1
-	.long	0x473d0
+	.long	0x473ac
 	.byte	0x1
-	.long	0x479bd
-	.long	0x479c8
+	.long	0x47999
+	.long	0x479a4
 	.uleb128 0x2
-	.long	0x479e7
+	.long	0x479c3
 	.uleb128 0x2
 	.long	0x10686
 	.byte	0
 	.uleb128 0x19
 	.ascii "W\0"
-	.long	0x479d5
+	.long	0x479b1
 	.byte	0
 	.uleb128 0x9
-	.long	0x473d0
+	.long	0x473ac
 	.uleb128 0x11
 	.ascii "wxTopLevelWindow\0"
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x473d0
+	.long	0x473ac
 	.uleb128 0x9
-	.long	0x479e7
+	.long	0x479c3
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x479d0
+	.long	0x479ac
 	.uleb128 0x9
-	.long	0x479f2
+	.long	0x479ce
 	.uleb128 0x65
 	.secrel32	.LASF373
 	.byte	0x20
@@ -72057,7 +72047,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x95
 	.byte	0x18
 	.long	0x48eb3
-	.long	0x47c9c
+	.long	0x47c78
 	.uleb128 0x2c
 	.long	0x48eb3
 	.byte	0
@@ -72069,8 +72059,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN18wxControlContainerC4Ev\0"
 	.byte	0x1
-	.long	0x47a42
-	.long	0x47a48
+	.long	0x47a1e
+	.long	0x47a24
 	.uleb128 0x2
 	.long	0x48f78
 	.byte	0
@@ -72081,8 +72071,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN18wxControlContainer21HandleOnNavigationKeyER20wxNavigationKeyEvent\0"
 	.byte	0x1
-	.long	0x47ab2
-	.long	0x47abd
+	.long	0x47a8e
+	.long	0x47a99
 	.uleb128 0x2
 	.long	0x48f78
 	.uleb128 0x1
@@ -72095,8 +72085,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN18wxControlContainer13HandleOnFocusER12wxFocusEvent\0"
 	.byte	0x1
-	.long	0x47b0f
-	.long	0x47b1a
+	.long	0x47aeb
+	.long	0x47af6
 	.uleb128 0x2
 	.long	0x48f78
 	.uleb128 0x1
@@ -72109,8 +72099,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN18wxControlContainer21HandleOnWindowDestroyEP12wxWindowBase\0"
 	.byte	0x1
-	.long	0x47b7c
-	.long	0x47b87
+	.long	0x47b58
+	.long	0x47b63
 	.uleb128 0x2
 	.long	0x48f78
 	.uleb128 0x1
@@ -72123,8 +72113,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN18wxControlContainer12SetLastFocusEP8wxWindow\0"
 	.byte	0x1
-	.long	0x47bd2
-	.long	0x47bdd
+	.long	0x47bae
+	.long	0x47bb9
 	.uleb128 0x2
 	.long	0x48f78
 	.uleb128 0x1
@@ -72136,8 +72126,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0xa6
 	.byte	0x5
 	.ascii "_ZN18wxControlContainerC4ERKS_\0"
-	.long	0x47c0c
-	.long	0x47c17
+	.long	0x47be8
+	.long	0x47bf3
 	.uleb128 0x2
 	.long	0x48f78
 	.uleb128 0x1
@@ -72150,8 +72140,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x5
 	.ascii "_ZN18wxControlContaineraSERKS_\0"
 	.long	0x48f84
-	.long	0x47c4a
-	.long	0x47c55
+	.long	0x47c26
+	.long	0x47c31
 	.uleb128 0x2
 	.long	0x48f78
 	.uleb128 0x1
@@ -72161,9 +72151,9 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.ascii "~wxControlContainer\0"
 	.ascii "_ZN18wxControlContainerD4Ev\0"
 	.byte	0x1
-	.long	0x479fd
+	.long	0x479d9
 	.byte	0x1
-	.long	0x47c90
+	.long	0x47c6c
 	.uleb128 0x2
 	.long	0x48f78
 	.uleb128 0x2
@@ -72171,21 +72161,31 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0
 	.byte	0
 	.uleb128 0x9
-	.long	0x479fd
+	.long	0x479d9
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x479d0
+	.long	0x479ac
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x473d0
+	.long	0x473ac
 	.uleb128 0x11
 	.ascii "wxDataObject\0"
+	.uleb128 0x11
+	.ascii "wxListBase\0"
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x41dd7
+	.long	0x263c5
+	.uleb128 0x11
+	.ascii "wxNodeBase\0"
+	.uleb128 0x7
+	.byte	0x8
+	.long	0x47ca9
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x41868
+	.long	0x41e07
+	.uleb128 0xb
+	.byte	0x8
+	.long	0x41898
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x47ccd
@@ -72259,9 +72259,9 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x2
 	.long	0x47ff9
 	.uleb128 0x1
-	.long	0x41234
+	.long	0x41264
 	.uleb128 0x1
-	.long	0x41234
+	.long	0x41264
 	.uleb128 0x1
 	.long	0x10686
 	.byte	0
@@ -73219,13 +73219,13 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x48eb3
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x479fd
+	.long	0x479d9
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x47c9c
+	.long	0x47c78
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x479fd
+	.long	0x479d9
 	.uleb128 0xc1
 	.ascii "_GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev\0"
 	.quad	.LFB20204
@@ -73233,7 +73233,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x1d
-	.long	0x47606
+	.long	0x475e2
 	.long	0x48fe9
 	.quad	.LFB20136
 	.quad	.LFE20136-.LFB20136
@@ -73242,7 +73242,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x49007
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x479ed
+	.long	0x479c9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -73257,7 +73257,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1d
-	.long	0x47597
+	.long	0x47573
 	.long	0x49026
 	.quad	.LFB20135
 	.quad	.LFE20135-.LFB20135
@@ -73266,7 +73266,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x49044
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x479ed
+	.long	0x479c9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -73281,7 +73281,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1d
-	.long	0x4752a
+	.long	0x47506
 	.long	0x49063
 	.quad	.LFB20134
 	.quad	.LFE20134-.LFB20134
@@ -73290,13 +73290,13 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x49070
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x479f8
+	.long	0x479d4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x474be
+	.long	0x4749a
 	.long	0x4908f
 	.quad	.LFB20133
 	.quad	.LFE20133-.LFB20133
@@ -73305,13 +73305,13 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4909c
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x479f8
+	.long	0x479d4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x47454
+	.long	0x47430
 	.long	0x490bb
 	.quad	.LFB20132
 	.quad	.LFE20132-.LFB20132
@@ -73320,13 +73320,13 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x490c8
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x479f8
+	.long	0x479d4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x4767c
+	.long	0x47658
 	.long	0x490e7
 	.quad	.LFB20131
 	.quad	.LFE20131-.LFB20131
@@ -73335,7 +73335,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x490f4
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x479ed
+	.long	0x479c9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -74808,46 +74808,46 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x47337
+	.long	0x47313
 	.long	0x4a480
-	.quad	.LFB18305
-	.quad	.LFE18305-.LFB18305
+	.quad	.LFB18811
+	.quad	.LFE18811-.LFB18811
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4a48d
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x473cb
+	.long	0x473a7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1d
-	.long	0x472e8
+	.long	0x472c4
 	.long	0x4a4ac
-	.quad	.LFB18304
-	.quad	.LFE18304-.LFB18304
+	.quad	.LFB18810
+	.quad	.LFE18810-.LFB18810
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4a4b9
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x473cb
+	.long	0x473a7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1d
-	.long	0x47296
+	.long	0x47272
 	.long	0x4a4d8
-	.quad	.LFB18303
-	.quad	.LFE18303-.LFB18303
+	.quad	.LFB18809
+	.quad	.LFE18809-.LFB18809
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4a4f5
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x473ba
+	.long	0x47396
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -74862,16 +74862,16 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1d
-	.long	0x4723d
+	.long	0x47219
 	.long	0x4a514
-	.quad	.LFB18302
-	.quad	.LFE18302-.LFB18302
+	.quad	.LFB18808
+	.quad	.LFE18808-.LFB18808
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4a534
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x473ba
+	.long	0x47396
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -74886,13 +74886,13 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x33
-	.long	0x4716c
+	.long	0x47148
 	.long	0x4a542
 	.byte	0x2
 	.long	0x4a555
 	.uleb128 0x1f
 	.secrel32	.LASF378
-	.long	0x473ba
+	.long	0x47396
 	.uleb128 0x1f
 	.secrel32	.LASF379
 	.long	0x1068d
@@ -74901,8 +74901,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4a534
 	.ascii "_ZN15wxDirDialogBaseD0Ev\0"
 	.long	0x4a58d
-	.quad	.LFB18300
-	.quad	.LFE18300-.LFB18300
+	.quad	.LFB18806
+	.quad	.LFE18806-.LFB18806
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4a596
@@ -74916,8 +74916,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4a534
 	.ascii "_ZN15wxDirDialogBaseD1Ev\0"
 	.long	0x4a5ce
-	.quad	.LFB18299
-	.quad	.LFE18299-.LFB18299
+	.quad	.LFB18805
+	.quad	.LFE18805-.LFB18805
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4a5d7
@@ -74931,8 +74931,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4a534
 	.ascii "_ZN15wxDirDialogBaseD2Ev\0"
 	.long	0x4a60f
-	.quad	.LFB18298
-	.quad	.LFE18298-.LFB18298
+	.quad	.LFB18804
+	.quad	.LFE18804-.LFB18804
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4a618
@@ -74950,8 +74950,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x1a
 	.long	0x47001
 	.long	0x4a642
-	.quad	.LFB18278
-	.quad	.LFE18278-.LFB18278
+	.quad	.LFB18784
+	.quad	.LFE18784-.LFB18784
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4a64f
@@ -74993,8 +74993,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x1a
 	.long	0x4a661
 	.long	0x4a6e5
-	.quad	.LFB18249
-	.quad	.LFE18249-.LFB18249
+	.quad	.LFB18755
+	.quad	.LFE18755-.LFB18755
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4a6f2
@@ -75619,12 +75619,12 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x36
-	.long	0x41234
+	.long	0x41264
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x36
-	.long	0x41234
+	.long	0x41264
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -75954,7 +75954,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b388
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -75974,7 +75974,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b3bc
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -75994,7 +75994,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b3e8
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76024,7 +76024,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b440
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76039,7 +76039,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b46c
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76059,7 +76059,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b4ac
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76074,7 +76074,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b4d8
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76089,7 +76089,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b50c
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76134,7 +76134,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b574
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76164,7 +76164,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b5cc
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76179,7 +76179,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b5f8
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -76214,7 +76214,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b658
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76305,7 +76305,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b74b
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76345,7 +76345,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b7ab
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76360,7 +76360,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b7d7
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76399,7 +76399,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b847
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76414,7 +76414,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b884
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76438,7 +76438,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b8b0
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76453,7 +76453,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b8dc
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76468,7 +76468,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b908
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76483,7 +76483,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b958
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76516,7 +76516,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b984
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76531,7 +76531,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b9b0
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76546,7 +76546,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4b9dc
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76561,7 +76561,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4ba08
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76693,7 +76693,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4bb5a
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76726,7 +76726,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4bb86
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -76741,7 +76741,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4bbb2
 	.uleb128 0x10
 	.secrel32	.LASF378
-	.long	0x41e8f
+	.long	0x41ebf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -82781,24 +82781,24 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.quad	.LFE12084-.LFB12084
 	.quad	.LFB12085
 	.quad	.LFE12085-.LFB12085
-	.quad	.LFB18249
-	.quad	.LFE18249-.LFB18249
-	.quad	.LFB18278
-	.quad	.LFE18278-.LFB18278
-	.quad	.LFB18298
-	.quad	.LFE18298-.LFB18298
-	.quad	.LFB18299
-	.quad	.LFE18299-.LFB18299
-	.quad	.LFB18300
-	.quad	.LFE18300-.LFB18300
-	.quad	.LFB18302
-	.quad	.LFE18302-.LFB18302
-	.quad	.LFB18303
-	.quad	.LFE18303-.LFB18303
-	.quad	.LFB18304
-	.quad	.LFE18304-.LFB18304
-	.quad	.LFB18305
-	.quad	.LFE18305-.LFB18305
+	.quad	.LFB18755
+	.quad	.LFE18755-.LFB18755
+	.quad	.LFB18784
+	.quad	.LFE18784-.LFB18784
+	.quad	.LFB18804
+	.quad	.LFE18804-.LFB18804
+	.quad	.LFB18805
+	.quad	.LFE18805-.LFB18805
+	.quad	.LFB18806
+	.quad	.LFE18806-.LFB18806
+	.quad	.LFB18808
+	.quad	.LFE18808-.LFB18808
+	.quad	.LFB18809
+	.quad	.LFE18809-.LFB18809
+	.quad	.LFB18810
+	.quad	.LFE18810-.LFB18810
+	.quad	.LFB18811
+	.quad	.LFE18811-.LFB18811
 	.quad	.LFB18893
 	.quad	.LFE18893-.LFB18893
 	.quad	.LFB18981
@@ -83065,24 +83065,24 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.quad	.LFE12084
 	.quad	.LFB12085
 	.quad	.LFE12085
-	.quad	.LFB18249
-	.quad	.LFE18249
-	.quad	.LFB18278
-	.quad	.LFE18278
-	.quad	.LFB18298
-	.quad	.LFE18298
-	.quad	.LFB18299
-	.quad	.LFE18299
-	.quad	.LFB18300
-	.quad	.LFE18300
-	.quad	.LFB18302
-	.quad	.LFE18302
-	.quad	.LFB18303
-	.quad	.LFE18303
-	.quad	.LFB18304
-	.quad	.LFE18304
-	.quad	.LFB18305
-	.quad	.LFE18305
+	.quad	.LFB18755
+	.quad	.LFE18755
+	.quad	.LFB18784
+	.quad	.LFE18784
+	.quad	.LFB18804
+	.quad	.LFE18804
+	.quad	.LFB18805
+	.quad	.LFE18805
+	.quad	.LFB18806
+	.quad	.LFE18806
+	.quad	.LFB18808
+	.quad	.LFE18808
+	.quad	.LFB18809
+	.quad	.LFE18809
+	.quad	.LFB18810
+	.quad	.LFE18810
+	.quad	.LFB18811
+	.quad	.LFE18811
 	.quad	.LFB18893
 	.quad	.LFE18893
 	.quad	.LFB18981
