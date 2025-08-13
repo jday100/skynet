@@ -29,59 +29,92 @@ T100VOID T100ProjectViewMainMenu::Create(T100ProjectFrame* frame)
     wxMenu*         setupMenu       = T100NEW wxMenu();
     wxMenu*         helpMenu        = T100NEW wxMenu();
 
-    workMenu->Append(T100PROJECT_MENU_WORKSPACE_NEW, L"New");
-    workMenu->Append(T100PROJECT_MENU_WORKSPACE_OPEN, L"Open");
-    workMenu->Append(T100PROJECT_MENU_WORKSPACE_CLOSE, L"Close");
+    m_workNew       = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_NEW, L"New");
+    m_workOpen      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_OPEN, L"Open");
+    m_workClose     = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_CLOSE, L"Close");
+    m_workSave      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_SAVE, L"Save");
+    m_workSaveAs    = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_SAVE_AS, L"Save as ...");
+    m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit");
+
+    workMenu->Append(m_workNew);
+    workMenu->Append(m_workOpen);
+    workMenu->Append(m_workClose);
     workMenu->AppendSeparator();
-    workMenu->Append(T100PROJECT_MENU_WORKSPACE_SAVE, L"Save");
-    workMenu->Append(T100PROJECT_MENU_WORKSPACE_SAVE_AS, L"Save as");
+    workMenu->Append(m_workSave);
+    workMenu->Append(m_workSaveAs);
     workMenu->AppendSeparator();
-    workMenu->Append(T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit");
+    workMenu->Append(m_workQuit);
 
     menuBar->Append(workMenu, L"WorkSpace");
 
-    projectMenu->Append(T100PROJECT_MENU_PROJECT_NEW, L"New");
-    projectMenu->Append(T100PROJECT_MENU_PROJECT_OPEN, L"Open");
-    projectMenu->Append(T100PROJECT_MENU_PROJECT_CLOSE, L"Close");
+    m_projectNew    = T100NEW wxMenuItem(projectMenu, T100PROJECT_MENU_PROJECT_NEW, L"New");
+    m_projectOpen   = T100NEW wxMenuItem(projectMenu, T100PROJECT_MENU_PROJECT_OPEN, L"Open");
+    m_projectClose  = T100NEW wxMenuItem(projectMenu, T100PROJECT_MENU_PROJECT_CLOSE, L"Close");
+    m_projectSave   = T100NEW wxMenuItem(projectMenu, T100PROJECT_MENU_PROJECT_SAVE, L"Save");
+    m_projectSaveAs = T100NEW wxMenuItem(projectMenu, T100PROJECT_MENU_PROJECT_SAVE_AS, L"Save as ...");
+
+    projectMenu->Append(m_projectNew);
+    projectMenu->Append(m_projectOpen);
+    projectMenu->Append(m_projectClose);
     projectMenu->AppendSeparator();
-    projectMenu->Append(T100PROJECT_MENU_PROJECT_SAVE, L"Save");
-    projectMenu->Append(T100PROJECT_MENU_PROJECT_SAVE_AS, L"Save as");
+    projectMenu->Append(m_projectSave);
+    projectMenu->Append(m_projectSaveAs);
 
     menuBar->Append(projectMenu, L"Project");
 
-    fileMenu->Append(T100PROJECT_MENU_FILE_NEW, L"New");
-    fileMenu->Append(T100PROJECT_MENU_FILE_OPEN, L"Open");
-    fileMenu->Append(T100PROJECT_MENU_FILE_CLOSE, L"Close");
+    m_fileNew       = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_NEW, L"New");
+    m_fileOpen      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_OPEN, L"Open");
+    m_fileClose     = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_CLOSE, L"Close");
+    m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save");
+    m_fileSaveAs    = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE_AS, L"Save as ...");
+
+    fileMenu->Append(m_fileNew);
+    fileMenu->Append(m_fileOpen);
+    fileMenu->Append(m_fileClose);
     fileMenu->AppendSeparator();
-    fileMenu->Append(T100PROJECT_MENU_FILE_SAVE, L"Save");
-    fileMenu->Append(T100PROJECT_MENU_FILE_SAVE_AS, L"Save as");
+    fileMenu->Append(m_fileSave);
+    fileMenu->Append(m_fileSaveAs);
 
     menuBar->Append(fileMenu, L"File");
 
-    editMenu->Append(T100PROJECT_MENU_EDIT_UNDO, L"Undo");
-    editMenu->Append(T100PROJECT_MENU_EDIT_REDO, L"Redo");
+    m_undo      = T100NEW wxMenuItem(editMenu, T100PROJECT_MENU_EDIT_UNDO, L"Undo");
+    m_redo      = T100NEW wxMenuItem(editMenu, T100PROJECT_MENU_EDIT_REDO, L"Redo");
+    m_cut       = T100NEW wxMenuItem(editMenu, T100PROJECT_MENU_EDIT_CUT, L"Cut");
+    m_copy      = T100NEW wxMenuItem(editMenu, T100PROJECT_MENU_EDIT_COPY, L"Copy");
+    m_paste     = T100NEW wxMenuItem(editMenu, T100PROJECT_MENU_EDIT_PASTE, L"Paste");
+
+    editMenu->Append(m_undo);
+    editMenu->Append(m_redo);
     editMenu->AppendSeparator();
-    editMenu->Append(T100PROJECT_MENU_EDIT_CUT, L"Cut");
-    editMenu->Append(T100PROJECT_MENU_EDIT_COPY, L"Copy");
-    editMenu->Append(T100PROJECT_MENU_EDIT_PASTE, L"Paste");
+    editMenu->Append(m_cut);
+    editMenu->Append(m_copy);
+    editMenu->Append(m_paste);
 
     menuBar->Append(editMenu, L"Edit");
 
     menuBar->Append(viewMenu, L"View");
 
-    searchMenu->Append(T100PROJECT_MENU_SEARCH_FIND, L"Find");
-    searchMenu->Append(T100PROJECT_MENU_SEARCH_REPLACE, L"Replace");
+    m_find      = T100NEW wxMenuItem(searchMenu, T100PROJECT_MENU_SEARCH_FIND, L"Find ...");
+    m_replace   = T100NEW wxMenuItem(searchMenu, T100PROJECT_MENU_SEARCH_REPLACE, L"Replace ...");
+
+    searchMenu->Append(m_find);
+    searchMenu->Append(m_replace);
 
     menuBar->Append(searchMenu, L"Search");
 
     helpMenu->Append(T100PROJECT_MENU_HELP_ABOUT, L"About");
 
-    compileMenu->Append(T100PROJECT_MENU_COMPILE_BUILD, L"Build");
+    m_build     = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_BUILD, L"Build");
+
+    compileMenu->Append(m_build);
 
     menuBar->Append(compileMenu, L"Compile");
 
-    setupMenu->Append(T100PROJECT_MENU_SETUP_EDITOR, L"Editor");
-    setupMenu->Append(T100PROJECT_MENU_SETUP_COMPILER, L"Compiler");
+    m_editor    = T100NEW wxMenuItem(setupMenu, T100PROJECT_MENU_SETUP_EDITOR, L"Editor ...");
+    m_compiler  = T100NEW wxMenuItem(setupMenu, T100PROJECT_MENU_SETUP_COMPILER, L"Compiler ...");
+
+    setupMenu->Append(m_editor);
+    setupMenu->Append(m_compiler);
 
     menuBar->Append(setupMenu, L"Setup");
 
