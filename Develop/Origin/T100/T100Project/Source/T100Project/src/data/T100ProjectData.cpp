@@ -1,5 +1,7 @@
 #include "T100ProjectData.h"
 
+#include "T100ProjectCommon.h"
+
 T100ProjectData::T100ProjectData() :
     T100TreeItemData()
 {
@@ -31,6 +33,15 @@ const T100WSTRING& T100ProjectData::GetLabel()
 wxMenu* T100ProjectData::ShowMenu()
 {
     wxMenu*     menu    = T100NEW wxMenu();
+    wxMenu*     file    = T100NEW wxMenu();
+    wxMenu*     clazz   = T100NEW wxMenu();
+
+    menu->AppendSubMenu(file, L"File");
+    menu->AppendSubMenu(clazz, L"Class");
+
+    file->Append(T100PROJECT_TREE_MENU_FILE_NEW, L"New");
+    clazz->Append(T100PROJECT_TREE_MENU_CLASS_NEW, L"New");
+
     return menu;
 }
 

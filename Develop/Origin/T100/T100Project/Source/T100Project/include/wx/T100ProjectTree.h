@@ -33,6 +33,8 @@ class T100ProjectTree : public wxTreeCtrl
         T100VOID                    OnItemExpanding(wxTreeEvent&);
         T100VOID                    OnItemActivated(wxTreeEvent&);
         T100VOID                    OnProjectCreate(wxCommandEvent&);
+        T100VOID                    OnFileCreate(wxCommandEvent&);
+        T100VOID                    OnFolderCreate(wxCommandEvent&);
 
     private:
         wxImageList*                m_imageList;

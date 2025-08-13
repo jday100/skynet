@@ -12,6 +12,8 @@ BEGIN_EVENT_TABLE(T100ProjectTree, wxTreeCtrl)
     EVT_TREE_ITEM_EXPANDING(wxID_ANY, OnItemExpanding)
     EVT_TREE_ITEM_ACTIVATED(wxID_ANY, OnItemActivated)
     EVT_MENU(T100PROJECT_TREE_MENU_PROJECT_NEW, OnProjectCreate)
+    EVT_MENU(T100PROJECT_TREE_MENU_FILE_NEW, OnFileCreate)
+    EVT_MENU(T100PROJECT_TREE_MENU_FOLDER_NEW, OnFolderCreate)
 END_EVENT_TABLE()
 
 T100ProjectTree::T100ProjectTree(wxWindow *parent,
@@ -1309,4 +1311,14 @@ T100VOID T100ProjectTree::OnItemExpanding(wxTreeEvent& event)
 T100VOID T100ProjectTree::OnProjectCreate(wxCommandEvent& event)
 {
     T100ProjectInvoking::OnProjectNew();
+}
+
+T100VOID T100ProjectTree::OnFileCreate(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnFileNew();
+}
+
+T100VOID T100ProjectTree::OnFolderCreate(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnFolderNew();
 }

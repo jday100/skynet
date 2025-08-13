@@ -48,6 +48,8 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnResize();
         T100VOID                    OnQuit();
 
+        T100VOID                    OnFolderNew();
+
         T100VOID                    OnFileOpen(T100FileData*);
         T100VOID                    OnFolderOpen(T100FolderData*);
 

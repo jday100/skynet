@@ -237,6 +237,11 @@ T100VOID T100ProjectSkeletal::OnQuit()
 
 }
 
+T100VOID T100ProjectSkeletal::OnFolderNew()
+{
+
+}
+
 T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
 {
     T100FileLogic&      logic       = m_serve->GetProjectServe()->GetFileLogic();

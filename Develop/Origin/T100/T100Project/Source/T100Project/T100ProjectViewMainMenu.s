@@ -359,8 +359,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.259692
-	movq	%rax, %rcx	 # D.259692,
+	movq	%rbx, %rax	 # tmp99, D.259695
+	movq	%rax, %rcx	 # D.259695,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1706,7 +1706,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 9 337 27
-	movq	-8(%rbp), %rax	 # D.121899, D.259326
+	movq	-8(%rbp), %rax	 # D.121899, D.259329
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 9 338 5
 	addq	$48, %rsp	 #,
@@ -1937,7 +1937,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 9 481 78
-	movq	-8(%rbp), %rax	 # D.121933, D.259348
+	movq	-8(%rbp), %rax	 # D.121933, D.259351
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 9 481 81
 	addq	$48, %rsp	 #,
@@ -1985,7 +1985,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 9 482 78
-	movq	-8(%rbp), %rax	 # D.121935, D.259345
+	movq	-8(%rbp), %rax	 # D.121935, D.259348
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 9 482 81
 	addq	$48, %rsp	 #,
@@ -2172,7 +2172,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 9 532 77
-	movq	-72(%rbp), %rax	 # D.121977, D.259321
+	movq	-72(%rbp), %rax	 # D.121977, D.259324
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 9 533 5
 	addq	$72, %rsp	 #,
@@ -3427,7 +3427,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 9 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.259236
+	movq	(%rax), %rax	 # wxDefaultSize, D.259239
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 9 1746 72
 	popq	%rbp	 #
@@ -3605,8 +3605,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.259699
-	movq	%rax, %rcx	 # D.259699,
+	movq	%rbx, %rax	 # tmp97, D.259702
+	movq	%rax, %rcx	 # D.259702,
 .LEHB4:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4343,8 +4343,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.259703
-	movq	%rax, %rcx	 # D.259703,
+	movq	%rsi, %rax	 # tmp98, D.259706
+	movq	%rax, %rcx	 # D.259706,
 .LEHB7:
 	call	_Unwind_Resume	 #
 .LEHE7:
@@ -4468,8 +4468,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.259704
-	movq	%rax, %rcx	 # D.259704,
+	movq	%rbx, %rax	 # tmp106, D.259707
+	movq	%rax, %rcx	 # D.259707,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4665,8 +4665,8 @@ _ZN10wxMenuBase15AppendSeparatorEv:
 	leaq	-80(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp102, D.259706
-	movq	%rax, %rcx	 # D.259706,
+	movq	%rbx, %rax	 # tmp102, D.259709
+	movq	%rax, %rcx	 # D.259709,
 .LEHB15:
 	call	_Unwind_Resume	 #
 .LEHE15:
@@ -4903,8 +4903,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.259708
-	movq	%rax, %rcx	 # D.259708,
+	movq	%rbx, %rax	 # tmp98, D.259711
+	movq	%rax, %rcx	 # D.259711,
 .LEHB19:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6122,8 +6122,8 @@ _ZN20wxMDIParentFrameBase14OnCreateClientEv:
 	movl	$584, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.259711
-	movq	%rax, %rcx	 # D.259711,
+	movq	%rsi, %rax	 # tmp93, D.259714
+	movq	%rax, %rcx	 # D.259714,
 .LEHB22:
 	call	_Unwind_Resume	 #
 .LEHE22:
@@ -8502,8 +8502,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	movl	$640, %edx	 #,
 	movq	%rbx, %rcx	 # _176,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp647, D.259714
-	movq	%rax, %rcx	 # D.259714,
+	movq	%rsi, %rax	 # tmp647, D.259717
+	movq	%rax, %rcx	 # D.259717,
 	call	_Unwind_Resume	 #
 .L392:
 	movq	%rax, %rsi	 #, tmp648
@@ -8512,8 +8512,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _181,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp648, D.259715
-	movq	%rax, %rcx	 # D.259715,
+	movq	%rsi, %rax	 # tmp648, D.259718
+	movq	%rax, %rcx	 # D.259718,
 	call	_Unwind_Resume	 #
 .L393:
 	movq	%rax, %rsi	 #, tmp649
@@ -8522,8 +8522,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _186,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp649, D.259716
-	movq	%rax, %rcx	 # D.259716,
+	movq	%rsi, %rax	 # tmp649, D.259719
+	movq	%rax, %rcx	 # D.259719,
 	call	_Unwind_Resume	 #
 .L394:
 	movq	%rax, %rsi	 #, tmp650
@@ -8532,8 +8532,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _191,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp650, D.259717
-	movq	%rax, %rcx	 # D.259717,
+	movq	%rsi, %rax	 # tmp650, D.259720
+	movq	%rax, %rcx	 # D.259720,
 	call	_Unwind_Resume	 #
 .L395:
 	movq	%rax, %rsi	 #, tmp651
@@ -8542,8 +8542,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _196,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp651, D.259718
-	movq	%rax, %rcx	 # D.259718,
+	movq	%rsi, %rax	 # tmp651, D.259721
+	movq	%rax, %rcx	 # D.259721,
 	call	_Unwind_Resume	 #
 .L396:
 	movq	%rax, %rsi	 #, tmp652
@@ -8552,8 +8552,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _201,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp652, D.259719
-	movq	%rax, %rcx	 # D.259719,
+	movq	%rsi, %rax	 # tmp652, D.259722
+	movq	%rax, %rcx	 # D.259722,
 	call	_Unwind_Resume	 #
 .L397:
 	movq	%rax, %rsi	 #, tmp653
@@ -8562,8 +8562,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _206,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp653, D.259720
-	movq	%rax, %rcx	 # D.259720,
+	movq	%rsi, %rax	 # tmp653, D.259723
+	movq	%rax, %rcx	 # D.259723,
 	call	_Unwind_Resume	 #
 .L398:
 	movq	%rax, %rsi	 #, tmp654
@@ -8572,8 +8572,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _211,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp654, D.259721
-	movq	%rax, %rcx	 # D.259721,
+	movq	%rsi, %rax	 # tmp654, D.259724
+	movq	%rax, %rcx	 # D.259724,
 	call	_Unwind_Resume	 #
 .L399:
 	movq	%rax, %rsi	 #, tmp655
@@ -8582,8 +8582,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _216,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp655, D.259722
-	movq	%rax, %rcx	 # D.259722,
+	movq	%rsi, %rax	 # tmp655, D.259725
+	movq	%rax, %rcx	 # D.259725,
 	call	_Unwind_Resume	 #
 .L400:
 	movq	%rax, %rsi	 #, tmp656
@@ -8592,8 +8592,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _221,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp656, D.259723
-	movq	%rax, %rcx	 # D.259723,
+	movq	%rsi, %rax	 # tmp656, D.259726
+	movq	%rax, %rcx	 # D.259726,
 	call	_Unwind_Resume	 #
 .L403:
 	movq	%rax, %rsi	 #, tmp658
@@ -8621,8 +8621,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	-64(%rbp), %rax	 #, tmp664
 	movq	%rax, %rcx	 # tmp664,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp662, D.259724
-	movq	%rax, %rcx	 # D.259724,
+	movq	%rbx, %rax	 # tmp662, D.259727
+	movq	%rax, %rcx	 # D.259727,
 	call	_Unwind_Resume	 #
 .L406:
 	movq	%rax, %rsi	 #, tmp666
@@ -8650,8 +8650,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	32(%rbp), %rax	 #, tmp672
 	movq	%rax, %rcx	 # tmp672,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp670, D.259725
-	movq	%rax, %rcx	 # D.259725,
+	movq	%rbx, %rax	 # tmp670, D.259728
+	movq	%rax, %rcx	 # D.259728,
 	call	_Unwind_Resume	 #
 .L409:
 	movq	%rax, %rsi	 #, tmp674
@@ -8679,8 +8679,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	128(%rbp), %rax	 #, tmp680
 	movq	%rax, %rcx	 # tmp680,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp678, D.259726
-	movq	%rax, %rcx	 # D.259726,
+	movq	%rbx, %rax	 # tmp678, D.259729
+	movq	%rax, %rcx	 # D.259729,
 	call	_Unwind_Resume	 #
 .L412:
 	movq	%rax, %rsi	 #, tmp682
@@ -8708,8 +8708,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	224(%rbp), %rax	 #, tmp688
 	movq	%rax, %rcx	 # tmp688,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp686, D.259727
-	movq	%rax, %rcx	 # D.259727,
+	movq	%rbx, %rax	 # tmp686, D.259730
+	movq	%rax, %rcx	 # D.259730,
 	call	_Unwind_Resume	 #
 .L415:
 	movq	%rax, %rsi	 #, tmp690
@@ -8737,8 +8737,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	320(%rbp), %rax	 #, tmp696
 	movq	%rax, %rcx	 # tmp696,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp694, D.259728
-	movq	%rax, %rcx	 # D.259728,
+	movq	%rbx, %rax	 # tmp694, D.259731
+	movq	%rax, %rcx	 # D.259731,
 	call	_Unwind_Resume	 #
 .L418:
 	movq	%rax, %rsi	 #, tmp698
@@ -8766,8 +8766,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	416(%rbp), %rax	 #, tmp704
 	movq	%rax, %rcx	 # tmp704,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp702, D.259729
-	movq	%rax, %rcx	 # D.259729,
+	movq	%rbx, %rax	 # tmp702, D.259732
+	movq	%rax, %rcx	 # D.259732,
 	call	_Unwind_Resume	 #
 .L419:
 	movq	%rax, %rbx	 #, tmp706
@@ -8776,8 +8776,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	512(%rbp), %rax	 #, tmp705
 	movq	%rax, %rcx	 # tmp705,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp706, D.259730
-	movq	%rax, %rcx	 # D.259730,
+	movq	%rbx, %rax	 # tmp706, D.259733
+	movq	%rax, %rcx	 # D.259733,
 	call	_Unwind_Resume	 #
 .L422:
 	movq	%rax, %rsi	 #, tmp708
@@ -8805,8 +8805,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	560(%rbp), %rax	 #, tmp714
 	movq	%rax, %rcx	 # tmp714,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp712, D.259731
-	movq	%rax, %rcx	 # D.259731,
+	movq	%rbx, %rax	 # tmp712, D.259734
+	movq	%rax, %rcx	 # D.259734,
 	call	_Unwind_Resume	 #
 .L425:
 	movq	%rax, %rsi	 #, tmp716
@@ -8834,8 +8834,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	656(%rbp), %rax	 #, tmp722
 	movq	%rax, %rcx	 # tmp722,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp720, D.259732
-	movq	%rax, %rcx	 # D.259732,
+	movq	%rbx, %rax	 # tmp720, D.259735
+	movq	%rax, %rcx	 # D.259735,
 	call	_Unwind_Resume	 #
 .L428:
 	movq	%rax, %rsi	 #, tmp724
@@ -8863,8 +8863,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	752(%rbp), %rax	 #, tmp730
 	movq	%rax, %rcx	 # tmp730,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp728, D.259733
-	movq	%rax, %rcx	 # D.259733,
+	movq	%rbx, %rax	 # tmp728, D.259736
+	movq	%rax, %rcx	 # D.259736,
 	call	_Unwind_Resume	 #
 .L431:
 	movq	%rax, %rsi	 #, tmp732
@@ -8892,8 +8892,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	848(%rbp), %rax	 #, tmp738
 	movq	%rax, %rcx	 # tmp738,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp736, D.259734
-	movq	%rax, %rcx	 # D.259734,
+	movq	%rbx, %rax	 # tmp736, D.259737
+	movq	%rax, %rcx	 # D.259737,
 	call	_Unwind_Resume	 #
 .L434:
 	movq	%rax, %rsi	 #, tmp740
@@ -8921,8 +8921,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	944(%rbp), %rax	 #, tmp746
 	movq	%rax, %rcx	 # tmp746,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp744, D.259735
-	movq	%rax, %rcx	 # D.259735,
+	movq	%rbx, %rax	 # tmp744, D.259738
+	movq	%rax, %rcx	 # D.259738,
 	call	_Unwind_Resume	 #
 .L435:
 	movq	%rax, %rbx	 #, tmp748
@@ -8931,8 +8931,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1040(%rbp), %rax	 #, tmp747
 	movq	%rax, %rcx	 # tmp747,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp748, D.259736
-	movq	%rax, %rcx	 # D.259736,
+	movq	%rbx, %rax	 # tmp748, D.259739
+	movq	%rax, %rcx	 # D.259739,
 	call	_Unwind_Resume	 #
 .L438:
 	movq	%rax, %rsi	 #, tmp750
@@ -8960,8 +8960,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1088(%rbp), %rax	 #, tmp756
 	movq	%rax, %rcx	 # tmp756,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp754, D.259737
-	movq	%rax, %rcx	 # D.259737,
+	movq	%rbx, %rax	 # tmp754, D.259740
+	movq	%rax, %rcx	 # D.259740,
 	call	_Unwind_Resume	 #
 .L441:
 	movq	%rax, %rsi	 #, tmp758
@@ -8989,8 +8989,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1184(%rbp), %rax	 #, tmp764
 	movq	%rax, %rcx	 # tmp764,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp762, D.259738
-	movq	%rax, %rcx	 # D.259738,
+	movq	%rbx, %rax	 # tmp762, D.259741
+	movq	%rax, %rcx	 # D.259741,
 	call	_Unwind_Resume	 #
 .L444:
 	movq	%rax, %rsi	 #, tmp766
@@ -9018,8 +9018,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1280(%rbp), %rax	 #, tmp772
 	movq	%rax, %rcx	 # tmp772,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp770, D.259739
-	movq	%rax, %rcx	 # D.259739,
+	movq	%rbx, %rax	 # tmp770, D.259742
+	movq	%rax, %rcx	 # D.259742,
 	call	_Unwind_Resume	 #
 .L447:
 	movq	%rax, %rsi	 #, tmp774
@@ -9047,8 +9047,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1376(%rbp), %rax	 #, tmp780
 	movq	%rax, %rcx	 # tmp780,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp778, D.259740
-	movq	%rax, %rcx	 # D.259740,
+	movq	%rbx, %rax	 # tmp778, D.259743
+	movq	%rax, %rcx	 # D.259743,
 	call	_Unwind_Resume	 #
 .L450:
 	movq	%rax, %rsi	 #, tmp782
@@ -9076,8 +9076,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1472(%rbp), %rax	 #, tmp788
 	movq	%rax, %rcx	 # tmp788,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp786, D.259741
-	movq	%rax, %rcx	 # D.259741,
+	movq	%rbx, %rax	 # tmp786, D.259744
+	movq	%rax, %rcx	 # D.259744,
 	call	_Unwind_Resume	 #
 .L451:
 	movq	%rax, %rbx	 #, tmp790
@@ -9086,8 +9086,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1568(%rbp), %rax	 #, tmp789
 	movq	%rax, %rcx	 # tmp789,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp790, D.259742
-	movq	%rax, %rcx	 # D.259742,
+	movq	%rbx, %rax	 # tmp790, D.259745
+	movq	%rax, %rcx	 # D.259745,
 	call	_Unwind_Resume	 #
 .L454:
 	movq	%rax, %rsi	 #, tmp792
@@ -9115,8 +9115,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1616(%rbp), %rax	 #, tmp798
 	movq	%rax, %rcx	 # tmp798,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp796, D.259743
-	movq	%rax, %rcx	 # D.259743,
+	movq	%rbx, %rax	 # tmp796, D.259746
+	movq	%rax, %rcx	 # D.259746,
 	call	_Unwind_Resume	 #
 .L457:
 	movq	%rax, %rsi	 #, tmp800
@@ -9144,8 +9144,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1712(%rbp), %rax	 #, tmp806
 	movq	%rax, %rcx	 # tmp806,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp804, D.259744
-	movq	%rax, %rcx	 # D.259744,
+	movq	%rbx, %rax	 # tmp804, D.259747
+	movq	%rax, %rcx	 # D.259747,
 	call	_Unwind_Resume	 #
 .L460:
 	movq	%rax, %rsi	 #, tmp808
@@ -9173,8 +9173,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1808(%rbp), %rax	 #, tmp814
 	movq	%rax, %rcx	 # tmp814,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp812, D.259745
-	movq	%rax, %rcx	 # D.259745,
+	movq	%rbx, %rax	 # tmp812, D.259748
+	movq	%rax, %rcx	 # D.259748,
 	call	_Unwind_Resume	 #
 .L463:
 	movq	%rax, %rsi	 #, tmp816
@@ -9202,8 +9202,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1904(%rbp), %rax	 #, tmp822
 	movq	%rax, %rcx	 # tmp822,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp820, D.259746
-	movq	%rax, %rcx	 # D.259746,
+	movq	%rbx, %rax	 # tmp820, D.259749
+	movq	%rax, %rcx	 # D.259749,
 	call	_Unwind_Resume	 #
 .L466:
 	movq	%rax, %rsi	 #, tmp824
@@ -9231,8 +9231,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2000(%rbp), %rax	 #, tmp830
 	movq	%rax, %rcx	 # tmp830,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp828, D.259747
-	movq	%rax, %rcx	 # D.259747,
+	movq	%rbx, %rax	 # tmp828, D.259750
+	movq	%rax, %rcx	 # D.259750,
 	call	_Unwind_Resume	 #
 .L467:
 	movq	%rax, %rbx	 #, tmp832
@@ -9241,8 +9241,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2096(%rbp), %rax	 #, tmp831
 	movq	%rax, %rcx	 # tmp831,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp832, D.259748
-	movq	%rax, %rcx	 # D.259748,
+	movq	%rbx, %rax	 # tmp832, D.259751
+	movq	%rax, %rcx	 # D.259751,
 	call	_Unwind_Resume	 #
 .L468:
 	movq	%rax, %rbx	 #, tmp834
@@ -9251,8 +9251,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2144(%rbp), %rax	 #, tmp833
 	movq	%rax, %rcx	 # tmp833,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp834, D.259749
-	movq	%rax, %rcx	 # D.259749,
+	movq	%rbx, %rax	 # tmp834, D.259752
+	movq	%rax, %rcx	 # D.259752,
 	call	_Unwind_Resume	 #
 .L471:
 	movq	%rax, %rsi	 #, tmp836
@@ -9280,8 +9280,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2192(%rbp), %rax	 #, tmp842
 	movq	%rax, %rcx	 # tmp842,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp840, D.259750
-	movq	%rax, %rcx	 # D.259750,
+	movq	%rbx, %rax	 # tmp840, D.259753
+	movq	%rax, %rcx	 # D.259753,
 	call	_Unwind_Resume	 #
 .L474:
 	movq	%rax, %rsi	 #, tmp844
@@ -9309,8 +9309,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2288(%rbp), %rax	 #, tmp850
 	movq	%rax, %rcx	 # tmp850,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp848, D.259751
-	movq	%rax, %rcx	 # D.259751,
+	movq	%rbx, %rax	 # tmp848, D.259754
+	movq	%rax, %rcx	 # D.259754,
 	call	_Unwind_Resume	 #
 .L475:
 	movq	%rax, %rbx	 #, tmp852
@@ -9319,8 +9319,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2384(%rbp), %rax	 #, tmp851
 	movq	%rax, %rcx	 # tmp851,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp852, D.259752
-	movq	%rax, %rcx	 # D.259752,
+	movq	%rbx, %rax	 # tmp852, D.259755
+	movq	%rax, %rcx	 # D.259755,
 	call	_Unwind_Resume	 #
 .L477:
 	movq	%rax, %rbx	 #, tmp855
@@ -9338,8 +9338,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2432(%rbp), %rax	 #, tmp858
 	movq	%rax, %rcx	 # tmp858,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp854, D.259753
-	movq	%rax, %rcx	 # D.259753,
+	movq	%rbx, %rax	 # tmp854, D.259756
+	movq	%rax, %rcx	 # D.259756,
 	call	_Unwind_Resume	 #
 .L480:
 	movq	%rax, %rsi	 #, tmp860
@@ -9367,8 +9367,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2528(%rbp), %rax	 #, tmp866
 	movq	%rax, %rcx	 # tmp866,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp864, D.259754
-	movq	%rax, %rcx	 # D.259754,
+	movq	%rbx, %rax	 # tmp864, D.259757
+	movq	%rax, %rcx	 # D.259757,
 	call	_Unwind_Resume	 #
 .L481:
 	movq	%rax, %rbx	 #, tmp868
@@ -9377,8 +9377,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2624(%rbp), %rax	 #, tmp867
 	movq	%rax, %rcx	 # tmp867,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp868, D.259755
-	movq	%rax, %rcx	 # D.259755,
+	movq	%rbx, %rax	 # tmp868, D.259758
+	movq	%rax, %rcx	 # D.259758,
 	call	_Unwind_Resume	 #
 .L484:
 	movq	%rax, %rsi	 #, tmp870
@@ -9406,8 +9406,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2672(%rbp), %rax	 #, tmp876
 	movq	%rax, %rcx	 # tmp876,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp874, D.259756
-	movq	%rax, %rcx	 # D.259756,
+	movq	%rbx, %rax	 # tmp874, D.259759
+	movq	%rax, %rcx	 # D.259759,
 	call	_Unwind_Resume	 #
 .L487:
 	movq	%rax, %rsi	 #, tmp878
@@ -9435,8 +9435,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2768(%rbp), %rax	 #, tmp884
 	movq	%rax, %rcx	 # tmp884,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp882, D.259757
-	movq	%rax, %rcx	 # D.259757,
+	movq	%rbx, %rax	 # tmp882, D.259760
+	movq	%rax, %rcx	 # D.259760,
 	call	_Unwind_Resume	 #
 .L488:
 	movq	%rax, %rbx	 #, tmp886
@@ -9445,8 +9445,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2864(%rbp), %rax	 #, tmp885
 	movq	%rax, %rcx	 # tmp885,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp886, D.259758
-	movq	%rax, %rcx	 # D.259758,
+	movq	%rbx, %rax	 # tmp886, D.259761
+	movq	%rax, %rcx	 # D.259761,
 	call	_Unwind_Resume	 #
 .L489:
 	movq	%rax, %rbx	 #, tmp888
@@ -9455,8 +9455,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	2912(%rbp), %rax	 #, tmp887
 	movq	%rax, %rcx	 # tmp887,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp888, D.259759
-	movq	%rax, %rcx	 # D.259759,
+	movq	%rbx, %rax	 # tmp888, D.259762
+	movq	%rax, %rcx	 # D.259762,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE168:

@@ -1,5 +1,6 @@
 #include "T100FolderData.h"
 
+#include "T100ProjectCommon.h"
 #include "T100ProjectInvoking.h"
 
 T100FolderData::T100FolderData() :
@@ -60,6 +61,14 @@ T100VOID T100FolderData::SetOpened(T100BOOL value)
 wxMenu* T100FolderData::ShowMenu()
 {
     wxMenu*     menu    = T100NEW wxMenu();
+    wxMenu*     file    = T100NEW wxMenu();
+    wxMenu*     folder  = T100NEW wxMenu();
+
+    menu->AppendSubMenu(file, L"File");
+    menu->AppendSubMenu(folder, L"Folder");
+
+    file->Append(T100PROJECT_TREE_MENU_FILE_NEW, L"New");
+    folder->Append(T100PROJECT_TREE_MENU_FOLDER_NEW, L"New");
 
     return menu;
 }
