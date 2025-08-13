@@ -1,6 +1,7 @@
 #include "T100ProjectData.h"
 
 #include "T100ProjectCommon.h"
+#include "T100ProjectInvoking.h"
 
 T100ProjectData::T100ProjectData() :
     T100TreeItemData()
@@ -43,6 +44,11 @@ wxMenu* T100ProjectData::ShowMenu()
     clazz->Append(T100PROJECT_TREE_MENU_CLASS_NEW, L"New");
 
     return menu;
+}
+
+T100VOID T100ProjectData::OnItemChanged()
+{
+    T100ProjectInvoking::OnProjectSelected();
 }
 
 T100VOID T100ProjectData::OnItemActivated()

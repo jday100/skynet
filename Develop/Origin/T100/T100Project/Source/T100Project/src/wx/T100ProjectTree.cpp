@@ -9,6 +9,7 @@
 
 BEGIN_EVENT_TABLE(T100ProjectTree, wxTreeCtrl)
     EVT_TREE_ITEM_MENU(wxID_ANY, OnItemMenu)
+    EVT_TREE_SEL_CHANGED(wxID_ANY, OnItemChanged)
     EVT_TREE_ITEM_EXPANDING(wxID_ANY, OnItemExpanding)
     EVT_TREE_ITEM_ACTIVATED(wxID_ANY, OnItemActivated)
     EVT_MENU(T100PROJECT_TREE_MENU_PROJECT_NEW, OnProjectCreate)
@@ -1284,6 +1285,17 @@ T100VOID T100ProjectTree::OnItemMenu(wxTreeEvent& event)
     }
 
     PopupMenu(data->ShowMenu());
+}
+
+T100VOID T100ProjectTree::OnItemChanged(wxTreeEvent& event)
+{
+    T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+
+    if(!data){
+        return;
+    }
+
+    data->OnItemChanged();
 }
 
 T100VOID T100ProjectTree::OnItemActivated(wxTreeEvent& event)

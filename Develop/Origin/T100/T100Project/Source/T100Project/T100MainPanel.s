@@ -8305,60 +8305,65 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	leaq	64(%rbp), %rax	 #, tmp116
 	movq	%rax, %rcx	 # tmp116,
 	call	_ZN8wxStringD1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:36:     m_current   = editor;
+	.loc 24 36 17 is_stmt 1 discriminator 4
+	movq	160(%rbp), %rax	 # this, tmp117
+	movq	120(%rbp), %rdx	 # editor, tmp118
+	movq	%rdx, 1464(%rax)	 # tmp118, this_18(D)->m_current
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:28:     T100WSTRING     path        = info->GetPath();
-	.loc 24 28 49 is_stmt 1 discriminator 4
-	leaq	-64(%rbp), %rax	 #, tmp117
-	movq	%rax, %rcx	 # tmp117,
+	.loc 24 28 49 discriminator 4
+	leaq	-64(%rbp), %rax	 #, tmp119
+	movq	%rax, %rcx	 # tmp119,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:37: }
 	.loc 24 37 1 discriminator 4
 	jmp	.L360	 #
 .L356:
-	movq	%rax, %rsi	 #, tmp119
+	movq	%rax, %rsi	 #, tmp121
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:26:     T100Editor*     editor      = T100NEW T100Editor(this);
 	.loc 24 26 58
 	movl	$1344, %edx	 #,
 	movq	%rbx, %rcx	 # _16,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rbx	 # tmp119, tmp118
+	movq	%rsi, %rbx	 # tmp121, tmp120
 	jmp	.L351	 #
 .L355:
-	movq	%rax, %rbx	 #, tmp118
+	movq	%rax, %rbx	 #, tmp120
 .L351:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:26:     T100Editor*     editor      = T100NEW T100Editor(this);
 	.loc 24 26 58 is_stmt 0 discriminator 2
-	leaq	-32(%rbp), %rax	 #, tmp122
-	movq	%rax, %rcx	 # tmp122,
+	leaq	-32(%rbp), %rax	 #, tmp124
+	movq	%rax, %rcx	 # tmp124,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp118, D.155024
+	movq	%rbx, %rax	 # tmp120, D.155024
 	movq	%rax, %rcx	 # D.155024,
 .LEHB37:
 	call	_Unwind_Resume	 #
 .L358:
-	movq	%rax, %rbx	 #, tmp125
+	movq	%rax, %rbx	 #, tmp127
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:31:         editor->LoadFile(info->GetPath());
 	.loc 24 31 25 is_stmt 1
-	leaq	16(%rbp), %rax	 #, tmp123
-	movq	%rax, %rcx	 # tmp123,
+	leaq	16(%rbp), %rax	 #, tmp125
+	movq	%rax, %rcx	 # tmp125,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L353	 #
 .L359:
-	movq	%rax, %rbx	 #, tmp129
+	movq	%rax, %rbx	 #, tmp131
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:34:     AddPage(editor, info->GetFileName());
 	.loc 24 34 12
-	leaq	64(%rbp), %rax	 #, tmp128
-	movq	%rax, %rcx	 # tmp128,
+	leaq	64(%rbp), %rax	 #, tmp130
+	movq	%rax, %rcx	 # tmp130,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L353	 #
 .L357:
-	movq	%rax, %rbx	 #, tmp124
+	movq	%rax, %rbx	 #, tmp126
 .L353:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:28:     T100WSTRING     path        = info->GetPath();
 	.loc 24 28 49
-	leaq	-64(%rbp), %rax	 #, tmp131
-	movq	%rax, %rcx	 # tmp131,
+	leaq	-64(%rbp), %rax	 #, tmp133
+	movq	%rax, %rcx	 # tmp133,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp124, D.155025
+	movq	%rbx, %rax	 # tmp126, D.155025
 	movq	%rax, %rcx	 # D.155025,
 	call	_Unwind_Resume	 #
 	nop	

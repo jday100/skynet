@@ -1259,7 +1259,7 @@ _ZN16T100TreeItemDataC2Ev:
 	call	_ZN14wxTreeItemDataC2Ev	 #
 	leaq	16+_ZTV16T100TreeItemData(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _2, this_5(D)->D.139268.D.131597._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _2, this_5(D)->D.139270.D.131597._vptr.wxClientData
 .LBE14:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100TreeItemData.cpp:7: }
 	.loc 7 7 1
@@ -1299,7 +1299,7 @@ _ZN16T100TreeItemDataD2Ev:
 	.loc 7 9 37
 	leaq	16+_ZTV16T100TreeItemData(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.139268.D.131597._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.139270.D.131597._vptr.wxClientData
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxTreeItemDataD2Ev	 #
@@ -1400,6 +1400,7 @@ _ZTV16T100TreeItemData:
 	.quad	_ZTI16T100TreeItemData
 	.quad	0
 	.quad	0
+	.quad	__cxa_pure_virtual
 	.quad	__cxa_pure_virtual
 	.quad	__cxa_pure_virtual
 	.quad	__cxa_pure_virtual
@@ -1913,7 +1914,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.file 88 "C:/zoo/lib/wxWidgets-3.0.5/include/wx/msw/textentry.h"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x3765f
+	.long	0x376af
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -2218,7 +2219,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x4b4
-	.uleb128 0x74
+	.uleb128 0x75
 	.ascii "threadmbcinfostruct\0"
 	.uleb128 0x40
 	.ascii "localeinfo_struct\0"
@@ -2541,7 +2542,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.ascii "unsigned char\0"
 	.uleb128 0x8
 	.long	0x8ad
-	.uleb128 0x74
+	.uleb128 0x75
 	.ascii "__lc_time_data\0"
 	.uleb128 0x5
 	.byte	0x8
@@ -3019,7 +3020,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0xe34
-	.uleb128 0x75
+	.uleb128 0x76
 	.long	0xe53
 	.uleb128 0x1
 	.long	0xe53
@@ -12536,7 +12537,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x11b
 	.byte	0x18
 	.long	0xb3b4
-	.uleb128 0x76
+	.uleb128 0x77
 	.ascii "wxPrivate\0"
 	.byte	0x18
 	.byte	0x1b
@@ -12883,7 +12884,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0
 	.uleb128 0x8
 	.long	0xb904
-	.uleb128 0x77
+	.uleb128 0x78
 	.secrel32	.LASF86
 	.byte	0x18
 	.byte	0xb4
@@ -13213,7 +13214,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0
 	.uleb128 0x8
 	.long	0xbf68
-	.uleb128 0x77
+	.uleb128 0x78
 	.secrel32	.LASF86
 	.byte	0x18
 	.byte	0xb4
@@ -14829,7 +14830,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x12
 	.long	0xdfef
 	.byte	0x8
-	.uleb128 0x78
+	.uleb128 0x79
 	.long	0xdfcc
 	.byte	0x10
 	.uleb128 0x24
@@ -17595,7 +17596,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x12
 	.long	0x12621
 	.byte	0x8
-	.uleb128 0x78
+	.uleb128 0x79
 	.long	0x125fe
 	.byte	0x10
 	.uleb128 0x24
@@ -21323,7 +21324,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x52
 	.byte	0xb
 	.long	0x1e4
-	.uleb128 0x76
+	.uleb128 0x77
 	.ascii "__exception_ptr\0"
 	.byte	0x25
 	.byte	0x34
@@ -21646,7 +21647,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x1c9f0
 	.byte	0
-	.uleb128 0x79
+	.uleb128 0x7a
 	.secrel32	.LASF149
 	.byte	0x27
 	.byte	0x8b
@@ -21699,7 +21700,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x1ca1a
 	.byte	0
-	.uleb128 0x79
+	.uleb128 0x7a
 	.secrel32	.LASF149
 	.byte	0x27
 	.byte	0x8b
@@ -24951,7 +24952,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x16d61
 	.uleb128 0xbf
 	.long	0x16da9
-	.uleb128 0x76
+	.uleb128 0x77
 	.ascii "__gnu_debug\0"
 	.byte	0x20
 	.byte	0x38
@@ -26042,7 +26043,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x1ca5b
-	.uleb128 0x75
+	.uleb128 0x76
 	.long	0x1ca66
 	.uleb128 0x1
 	.long	0xb340
@@ -30820,7 +30821,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x1e
 	.long	0x20c49
 	.byte	0x20
-	.uleb128 0x7a
+	.uleb128 0x7b
 	.secrel32	.LASF23
 	.byte	0x3e
 	.byte	0xf2
@@ -31318,7 +31319,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x21630
 	.byte	0
-	.uleb128 0x77
+	.uleb128 0x78
 	.secrel32	.LASF206
 	.byte	0x3f
 	.byte	0x4f
@@ -31473,7 +31474,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x2164e
 	.byte	0
-	.uleb128 0x7a
+	.uleb128 0x7b
 	.secrel32	.LASF23
 	.byte	0x3f
 	.byte	0x77
@@ -31533,7 +31534,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x21819
 	.uleb128 0x70
 	.ascii "_vptr.wxRefCounter\0"
-	.long	0x36026
+	.long	0x36076
 	.byte	0
 	.byte	0x1
 	.uleb128 0xe
@@ -31546,7 +31547,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x216ac
 	.long	0x216b2
 	.uleb128 0x2
-	.long	0x36910
+	.long	0x36960
 	.byte	0
 	.uleb128 0x17
 	.ascii "GetRefCount\0"
@@ -31559,7 +31560,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x216f1
 	.long	0x216f7
 	.uleb128 0x2
-	.long	0x36916
+	.long	0x36966
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF83
@@ -31571,7 +31572,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x21723
 	.long	0x21729
 	.uleb128 0x2
-	.long	0x36910
+	.long	0x36960
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF84
@@ -31583,9 +31584,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x21755
 	.long	0x2175b
 	.uleb128 0x2
-	.long	0x36910
+	.long	0x36960
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7c
 	.ascii "~wxRefCounter\0"
 	.byte	0x40
 	.byte	0xfe
@@ -31597,7 +31598,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x21791
 	.long	0x2179c
 	.uleb128 0x2
-	.long	0x36910
+	.long	0x36960
 	.uleb128 0x2
 	.long	0x23d
 	.byte	0
@@ -31617,9 +31618,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x217d8
 	.long	0x217e3
 	.uleb128 0x2
-	.long	0x36910
+	.long	0x36960
 	.uleb128 0x1
-	.long	0x3691c
+	.long	0x3696c
 	.byte	0
 	.uleb128 0x62
 	.secrel32	.LASF23
@@ -31627,12 +31628,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x108
 	.byte	0x5
 	.ascii "_ZN12wxRefCounteraSERKS_\0"
-	.long	0x36922
+	.long	0x36972
 	.long	0x2180d
 	.uleb128 0x2
-	.long	0x36910
+	.long	0x36960
 	.uleb128 0x1
-	.long	0x3691c
+	.long	0x3696c
 	.byte	0
 	.byte	0
 	.uleb128 0x8
@@ -31860,7 +31861,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x41
 	.word	0x4ab
 	.byte	0x1
-	.long	0x35fc1
+	.long	0x36011
 	.long	0x238b0
 	.uleb128 0x3e
 	.secrel32	.LASF18
@@ -32655,7 +32656,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x8
 	.long	0x2247c
 	.uleb128 0x27
-	.long	0x35fc1
+	.long	0x36011
 	.byte	0
 	.byte	0x1
 	.uleb128 0x9
@@ -32668,7 +32669,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22865
 	.long	0x22870
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0xa8f5
 	.byte	0
@@ -32682,9 +32683,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2289b
 	.long	0x228a6
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
-	.long	0x368e0
+	.long	0x36930
 	.byte	0
 	.uleb128 0x9
 	.secrel32	.LASF210
@@ -32696,11 +32697,11 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x228d9
 	.long	0x228e9
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x18f
 	.uleb128 0x1
-	.long	0x368e6
+	.long	0x36936
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF23
@@ -32708,14 +32709,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectListaSERKS_\0"
-	.long	0x368ec
+	.long	0x3693c
 	.byte	0x1
 	.long	0x22918
 	.long	0x22923
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
-	.long	0x368e0
+	.long	0x36930
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF206
@@ -32723,12 +32724,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZNK12wxObjectList8GetFirstEv\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x22957
 	.long	0x2295d
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x7
 	.ascii "GetLast\0"
@@ -32736,12 +32737,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZNK12wxObjectList7GetLastEv\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x22994
 	.long	0x2299a
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x7
 	.ascii "Item\0"
@@ -32749,12 +32750,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZNK12wxObjectList4ItemEy\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x229cb
 	.long	0x229d6
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.uleb128 0x1
 	.long	0x18f
 	.byte	0
@@ -32769,7 +32770,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22a03
 	.long	0x22a0e
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.uleb128 0x1
 	.long	0x18f
 	.byte	0
@@ -32779,12 +32780,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6AppendEP8wxObject\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x22a48
 	.long	0x22a53
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x20d95
 	.byte	0
@@ -32794,12 +32795,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6InsertEP8wxObject\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x22a8d
 	.long	0x22a98
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x20d95
 	.byte	0
@@ -32809,12 +32810,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6InsertEyP8wxObject\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x22ad3
 	.long	0x22ae3
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x18f
 	.uleb128 0x1
@@ -32826,14 +32827,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6InsertEP16wxObjectListNodeP8wxObject\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x22b30
 	.long	0x22b40
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
-	.long	0x368f2
+	.long	0x36942
 	.uleb128 0x1
 	.long	0x20d95
 	.byte	0
@@ -32843,12 +32844,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6AppendElPv\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x22b73
 	.long	0x22b83
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x249
 	.uleb128 0x1
@@ -32860,12 +32861,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6AppendEPKwPv\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x22bb8
 	.long	0x22bc8
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0xde53
 	.uleb128 0x1
@@ -32877,14 +32878,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList10DetachNodeEP16wxObjectListNode\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x22c10
 	.long	0x22c1b
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
-	.long	0x368f2
+	.long	0x36942
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF215
@@ -32897,9 +32898,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22c63
 	.long	0x22c6e
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
-	.long	0x368f2
+	.long	0x36942
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF216
@@ -32912,7 +32913,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22caf
 	.long	0x22cba
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x20d95
 	.byte	0
@@ -32926,9 +32927,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22cfa
 	.long	0x22d05
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
-	.long	0x368f2
+	.long	0x36942
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF57
@@ -32936,12 +32937,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZNK12wxObjectList4FindEPK8wxObject\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.long	0x22d3f
 	.long	0x22d4a
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.uleb128 0x1
 	.long	0x21b35
 	.byte	0
@@ -32951,7 +32952,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZNK12wxObjectList4FindERK9wxListKey\0"
-	.long	0x368f2
+	.long	0x36942
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -32961,9 +32962,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22d8e
 	.long	0x22d99
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.uleb128 0x1
-	.long	0x35fcd
+	.long	0x3601d
 	.byte	0
 	.uleb128 0x7
 	.ascii "Member\0"
@@ -32976,7 +32977,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22dd8
 	.long	0x22de3
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.uleb128 0x1
 	.long	0x21b35
 	.byte	0
@@ -32991,7 +32992,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22e23
 	.long	0x22e2e
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.uleb128 0x1
 	.long	0x20d95
 	.byte	0
@@ -33005,7 +33006,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22e63
 	.long	0x22e6e
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0xb2ff
 	.byte	0
@@ -33019,7 +33020,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22eac
 	.long	0x22eb7
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x21af1
 	.byte	0
@@ -33029,7 +33030,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey\0"
-	.long	0x35fdf
+	.long	0x3602f
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -33039,15 +33040,15 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22f13
 	.long	0x22f2d
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
-	.long	0x35fdf
+	.long	0x3602f
 	.uleb128 0x1
-	.long	0x35fdf
+	.long	0x3602f
 	.uleb128 0x1
 	.long	0xb340
 	.uleb128 0x1
-	.long	0x35fcd
+	.long	0x3601d
 	.byte	0
 	.uleb128 0x4f
 	.secrel32	.LASF210
@@ -33059,7 +33060,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22f61
 	.long	0x22f71
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x22f71
 	.uleb128 0x1
@@ -33077,7 +33078,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x41
 	.word	0x4ab
 	.byte	0x1
-	.long	0x368fe
+	.long	0x3694e
 	.byte	0x1
 	.uleb128 0x13
 	.secrel32	.LASF139
@@ -33098,11 +33099,11 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x22fe0
 	.long	0x22ff0
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
-	.long	0x36904
+	.long	0x36954
 	.uleb128 0x1
-	.long	0x36904
+	.long	0x36954
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -33115,7 +33116,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23020
 	.long	0x23026
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -33128,7 +33129,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23057
 	.long	0x2305d
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x7
 	.ascii "end\0"
@@ -33141,7 +33142,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2308b
 	.long	0x23091
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.byte	0
 	.uleb128 0x7
 	.ascii "end\0"
@@ -33154,7 +33155,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x230c0
 	.long	0x230c6
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF34
@@ -33167,7 +33168,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x230f7
 	.long	0x230fd
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF34
@@ -33180,7 +33181,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2312f
 	.long	0x23135
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -33193,7 +33194,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23164
 	.long	0x2316a
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -33206,7 +33207,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2319a
 	.long	0x231a0
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x9
 	.secrel32	.LASF44
@@ -33218,7 +33219,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x231d7
 	.long	0x231e7
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x22f71
 	.uleb128 0x1
@@ -33235,7 +33236,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23217
 	.long	0x2321d
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -33248,7 +33249,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23251
 	.long	0x23257
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF41
@@ -33261,14 +33262,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23288
 	.long	0x2328e
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x13
 	.secrel32	.LASF7
 	.byte	0x41
 	.word	0x4ab
 	.byte	0x1
-	.long	0x3690a
+	.long	0x3695a
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF127
@@ -33281,7 +33282,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x232cc
 	.long	0x232d2
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF127
@@ -33294,7 +33295,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23303
 	.long	0x23309
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF128
@@ -33307,7 +33308,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23338
 	.long	0x2333e
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF128
@@ -33320,7 +33321,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2336e
 	.long	0x23374
 	.uleb128 0x2
-	.long	0x368f8
+	.long	0x36948
 	.byte	0
 	.uleb128 0x9
 	.secrel32	.LASF218
@@ -33332,7 +33333,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x233b1
 	.long	0x233bc
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x22f7f
 	.byte	0
@@ -33346,7 +33347,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x233ec
 	.long	0x233f2
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.byte	0
 	.uleb128 0x9
 	.secrel32	.LASF129
@@ -33358,7 +33359,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2342d
 	.long	0x23438
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x22f7f
 	.byte	0
@@ -33372,7 +33373,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23467
 	.long	0x2346d
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.byte	0
 	.uleb128 0x9
 	.secrel32	.LASF63
@@ -33384,11 +33385,11 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x234b2
 	.long	0x234c2
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x21e10
 	.uleb128 0x1
-	.long	0x36904
+	.long	0x36954
 	.byte	0
 	.uleb128 0x9
 	.secrel32	.LASF63
@@ -33400,7 +33401,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x234fb
 	.long	0x2350b
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x22f71
 	.uleb128 0x1
@@ -33417,7 +33418,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23556
 	.long	0x23566
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x238e5
 	.uleb128 0x1
@@ -33433,7 +33434,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x235ae
 	.long	0x235c3
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x238e5
 	.uleb128 0x1
@@ -33451,13 +33452,13 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23617
 	.long	0x2362c
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x238e5
 	.uleb128 0x1
 	.long	0x21e10
 	.uleb128 0x1
-	.long	0x36904
+	.long	0x36954
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF66
@@ -33470,7 +33471,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2366a
 	.long	0x23675
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x238e5
 	.byte	0
@@ -33485,7 +33486,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x236b6
 	.long	0x236c6
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x238e5
 	.uleb128 0x1
@@ -33501,7 +33502,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x236f2
 	.long	0x236f8
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.byte	0
 	.uleb128 0x9
 	.secrel32	.LASF220
@@ -33513,11 +33514,11 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2373c
 	.long	0x23756
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x238e5
 	.uleb128 0x1
-	.long	0x368ec
+	.long	0x3693c
 	.uleb128 0x1
 	.long	0x238e5
 	.uleb128 0x1
@@ -33533,11 +33534,11 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23794
 	.long	0x237a4
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x238e5
 	.uleb128 0x1
-	.long	0x368ec
+	.long	0x3693c
 	.byte	0
 	.uleb128 0x9
 	.secrel32	.LASF220
@@ -33549,11 +33550,11 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x237e5
 	.long	0x237fa
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x238e5
 	.uleb128 0x1
-	.long	0x368ec
+	.long	0x3693c
 	.uleb128 0x1
 	.long	0x238e5
 	.byte	0
@@ -33567,7 +33568,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x23832
 	.long	0x2383d
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x1
 	.long	0x22f7f
 	.byte	0
@@ -33581,7 +33582,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2386f
 	.long	0x23875
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.byte	0
 	.uleb128 0x55
 	.ascii "~wxObjectList\0"
@@ -33591,7 +33592,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x1
 	.long	0x238a4
 	.uleb128 0x2
-	.long	0x368da
+	.long	0x3692a
 	.uleb128 0x2
 	.long	0x23d
 	.byte	0
@@ -33857,7 +33858,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x23d12
-	.uleb128 0x75
+	.uleb128 0x76
 	.long	0x23d1d
 	.uleb128 0x1
 	.long	0x239b6
@@ -34143,11 +34144,11 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x241e8
 	.uleb128 0x1
-	.long	0x368c2
+	.long	0x36912
 	.byte	0
 	.uleb128 0x70
 	.ascii "_vptr.wxClientData\0"
-	.long	0x36026
+	.long	0x36076
 	.byte	0
 	.byte	0x1
 	.uleb128 0xe
@@ -35228,7 +35229,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x41
 	.word	0x4ae
 	.byte	0x18
-	.long	0x35fc1
+	.long	0x36011
 	.long	0x252ee
 	.uleb128 0x27
 	.long	0x21b3b
@@ -35241,9 +35242,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x25217
 	.long	0x25222
 	.uleb128 0x2
-	.long	0x368c8
+	.long	0x36918
 	.uleb128 0x1
-	.long	0x368ce
+	.long	0x3691e
 	.byte	0
 	.uleb128 0x9
 	.secrel32	.LASF236
@@ -35255,7 +35256,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x25243
 	.long	0x2524e
 	.uleb128 0x2
-	.long	0x368c8
+	.long	0x36918
 	.uleb128 0x1
 	.long	0x23d
 	.byte	0
@@ -35271,7 +35272,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x25279
 	.long	0x25284
 	.uleb128 0x2
-	.long	0x368c8
+	.long	0x36918
 	.uleb128 0x2
 	.long	0x23d
 	.byte	0
@@ -35281,14 +35282,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x4bc
 	.byte	0xd
 	.ascii "_ZN6wxListaSERKS_\0"
-	.long	0x368d4
+	.long	0x36924
 	.byte	0x1
 	.long	0x252ac
 	.long	0x252b7
 	.uleb128 0x2
-	.long	0x368c8
+	.long	0x36918
 	.uleb128 0x1
-	.long	0x368ce
+	.long	0x3691e
 	.byte	0
 	.uleb128 0xa1
 	.ascii "Sort\0"
@@ -35299,7 +35300,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x1
 	.long	0x252e2
 	.uleb128 0x2
-	.long	0x368c8
+	.long	0x36918
 	.uleb128 0x1
 	.long	0xb2ff
 	.byte	0
@@ -36904,7 +36905,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x278eb
 	.uleb128 0x1
-	.long	0x36899
+	.long	0x368e9
 	.byte	0
 	.uleb128 0x47
 	.secrel32	.LASF248
@@ -36915,7 +36916,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x278eb
 	.uleb128 0x1
-	.long	0x3689f
+	.long	0x368ef
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF248
@@ -37046,7 +37047,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x278eb
 	.uleb128 0x1
-	.long	0x368a5
+	.long	0x368f5
 	.uleb128 0x1
 	.long	0xb338
 	.uleb128 0x1
@@ -37076,7 +37077,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x278eb
 	.uleb128 0x1
-	.long	0x368a5
+	.long	0x368f5
 	.uleb128 0x1
 	.long	0xe53
 	.uleb128 0x1
@@ -37104,7 +37105,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x278c8
 	.uleb128 0x1
-	.long	0x368bc
+	.long	0x3690c
 	.uleb128 0x1
 	.long	0xe53
 	.uleb128 0x1
@@ -39217,7 +39218,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x48
 	.byte	0x97
 	.byte	0x1
-	.long	0x35fc1
+	.long	0x36011
 	.long	0x2b6fc
 	.uleb128 0x60
 	.secrel32	.LASF18
@@ -40012,7 +40013,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x8
 	.long	0x2a2f3
 	.uleb128 0x27
-	.long	0x35fc1
+	.long	0x36011
 	.byte	0
 	.byte	0x1
 	.uleb128 0xe
@@ -40041,7 +40042,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x2b701
 	.uleb128 0x1
-	.long	0x35fe5
+	.long	0x36035
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF266
@@ -40057,7 +40058,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x18f
 	.uleb128 0x1
-	.long	0x35feb
+	.long	0x3603b
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF23
@@ -40065,14 +40066,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowListaSERKS_\0"
-	.long	0x35ff1
+	.long	0x36041
 	.byte	0x1
 	.long	0x2a779
 	.long	0x2a784
 	.uleb128 0x2
 	.long	0x2b701
 	.uleb128 0x1
-	.long	0x35fe5
+	.long	0x36035
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF206
@@ -40080,12 +40081,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZNK12wxWindowList8GetFirstEv\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2a7b7
 	.long	0x2a7bd
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0x17
 	.ascii "GetLast\0"
@@ -40093,12 +40094,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZNK12wxWindowList7GetLastEv\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2a7f3
 	.long	0x2a7f9
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0x17
 	.ascii "Item\0"
@@ -40106,12 +40107,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZNK12wxWindowList4ItemEy\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2a829
 	.long	0x2a834
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.uleb128 0x1
 	.long	0x18f
 	.byte	0
@@ -40126,7 +40127,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2a860
 	.long	0x2a86b
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.uleb128 0x1
 	.long	0x18f
 	.byte	0
@@ -40136,7 +40137,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6AppendEP12wxWindowBase\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2a8a9
 	.long	0x2a8b4
@@ -40151,7 +40152,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6InsertEP12wxWindowBase\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2a8f2
 	.long	0x2a8fd
@@ -40166,7 +40167,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6InsertEyP12wxWindowBase\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2a93c
 	.long	0x2a94c
@@ -40183,14 +40184,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6InsertEP16wxWindowListNodeP12wxWindowBase\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2a99d
 	.long	0x2a9ad
 	.uleb128 0x2
 	.long	0x2b701
 	.uleb128 0x1
-	.long	0x35ff7
+	.long	0x36047
 	.uleb128 0x1
 	.long	0x34f7b
 	.byte	0
@@ -40200,7 +40201,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6AppendElPv\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2a9df
 	.long	0x2a9ef
@@ -40217,7 +40218,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6AppendEPKwPv\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2aa23
 	.long	0x2aa33
@@ -40234,14 +40235,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList10DetachNodeEP16wxWindowListNode\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2aa7a
 	.long	0x2aa85
 	.uleb128 0x2
 	.long	0x2b701
 	.uleb128 0x1
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF215
@@ -40256,7 +40257,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x2b701
 	.uleb128 0x1
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF216
@@ -40285,7 +40286,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x2b701
 	.uleb128 0x1
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF57
@@ -40293,22 +40294,22 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZNK12wxWindowList4FindEPK12wxWindowBase\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.long	0x2abaf
 	.long	0x2abba
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.uleb128 0x1
-	.long	0x36003
+	.long	0x36053
 	.byte	0
-	.uleb128 0x7c
+	.uleb128 0x7d
 	.secrel32	.LASF57
 	.byte	0x48
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZNK12wxWindowList4FindERK9wxListKey\0"
-	.long	0x35ff7
+	.long	0x36047
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -40318,9 +40319,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2abfc
 	.long	0x2ac07
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.uleb128 0x1
-	.long	0x35fcd
+	.long	0x3601d
 	.byte	0
 	.uleb128 0x17
 	.ascii "Member\0"
@@ -40333,9 +40334,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2ac4a
 	.long	0x2ac55
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.uleb128 0x1
-	.long	0x36003
+	.long	0x36053
 	.byte	0
 	.uleb128 0x17
 	.ascii "IndexOf\0"
@@ -40348,7 +40349,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2ac99
 	.long	0x2aca4
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.uleb128 0x1
 	.long	0x34f7b
 	.byte	0
@@ -40380,13 +40381,13 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x34e02
 	.byte	0
-	.uleb128 0x7c
+	.uleb128 0x7d
 	.secrel32	.LASF217
 	.byte	0x48
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey\0"
-	.long	0x35fdf
+	.long	0x3602f
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -40398,13 +40399,13 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x2b701
 	.uleb128 0x1
-	.long	0x35fdf
+	.long	0x3602f
 	.uleb128 0x1
-	.long	0x35fdf
+	.long	0x3602f
 	.uleb128 0x1
 	.long	0xb340
 	.uleb128 0x1
-	.long	0x35fcd
+	.long	0x3601d
 	.byte	0
 	.uleb128 0xc8
 	.secrel32	.LASF266
@@ -40434,7 +40435,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x48
 	.byte	0x97
 	.byte	0x1
-	.long	0x36009
+	.long	0x36059
 	.byte	0x1
 	.uleb128 0x11
 	.secrel32	.LASF139
@@ -40457,9 +40458,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x2b701
 	.uleb128 0x1
-	.long	0x3600f
+	.long	0x3605f
 	.uleb128 0x1
-	.long	0x3600f
+	.long	0x3605f
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF29
@@ -40485,7 +40486,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2aec3
 	.long	0x2aec9
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0x17
 	.ascii "end\0"
@@ -40511,7 +40512,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2af2a
 	.long	0x2af30
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF34
@@ -40537,7 +40538,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2af97
 	.long	0x2af9d
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF36
@@ -40563,7 +40564,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2b000
 	.long	0x2b006
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF44
@@ -40592,7 +40593,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2b07b
 	.long	0x2b081
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF40
@@ -40605,7 +40606,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2b0b4
 	.long	0x2b0ba
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF41
@@ -40618,14 +40619,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2b0ea
 	.long	0x2b0f0
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0x11
 	.secrel32	.LASF7
 	.byte	0x48
 	.byte	0x97
 	.byte	0x1
-	.long	0x36015
+	.long	0x36065
 	.byte	0x1
 	.uleb128 0x4
 	.secrel32	.LASF127
@@ -40651,7 +40652,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2b162
 	.long	0x2b168
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF128
@@ -40677,7 +40678,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2b1cb
 	.long	0x2b1d1
 	.uleb128 0x2
-	.long	0x35ffd
+	.long	0x3604d
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF218
@@ -40745,7 +40746,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x29caa
 	.uleb128 0x1
-	.long	0x3600f
+	.long	0x3605f
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF63
@@ -40814,7 +40815,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x29caa
 	.uleb128 0x1
-	.long	0x3600f
+	.long	0x3605f
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF66
@@ -40874,7 +40875,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x34e8d
 	.uleb128 0x1
-	.long	0x35ff1
+	.long	0x36041
 	.uleb128 0x1
 	.long	0x34e8d
 	.uleb128 0x1
@@ -40894,7 +40895,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x34e8d
 	.uleb128 0x1
-	.long	0x35ff1
+	.long	0x36041
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF220
@@ -40910,7 +40911,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x34e8d
 	.uleb128 0x1
-	.long	0x35ff1
+	.long	0x36041
 	.uleb128 0x1
 	.long	0x34e8d
 	.byte	0
@@ -41146,7 +41147,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x2baed
 	.byte	0
-	.uleb128 0x78
+	.uleb128 0x79
 	.long	0x2b8c0
 	.byte	0
 	.uleb128 0x26
@@ -41444,11 +41445,11 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x2be24
 	.uleb128 0x1
-	.long	0x36390
+	.long	0x363e0
 	.byte	0
 	.uleb128 0x70
 	.ascii "_vptr.wxAnyValueType\0"
-	.long	0x36026
+	.long	0x36076
 	.byte	0
 	.byte	0x1
 	.uleb128 0xe
@@ -41463,7 +41464,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x2be24
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7c
 	.ascii "~wxAnyValueType\0"
 	.byte	0x4a
 	.byte	0x41
@@ -41499,7 +41500,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x31dee
 	.byte	0
-	.uleb128 0x7d
+	.uleb128 0x73
 	.ascii "DeleteValue\0"
 	.byte	0x4a
 	.byte	0x4e
@@ -41518,7 +41519,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x35c44
 	.byte	0
-	.uleb128 0x7d
+	.uleb128 0x73
 	.ascii "CopyBuffer\0"
 	.byte	0x4a
 	.byte	0x5a
@@ -41666,7 +41667,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x24
 	.long	0x1d64
 	.byte	0x8
-	.uleb128 0x7a
+	.uleb128 0x7b
 	.secrel32	.LASF23
 	.byte	0x4b
 	.byte	0x87
@@ -45009,7 +45010,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x2fed7
-	.uleb128 0x74
+	.uleb128 0x75
 	.ascii "_SYSTEMTIME\0"
 	.uleb128 0x8
 	.long	0x2feca
@@ -46337,9 +46338,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x31406
 	.long	0x31411
 	.uleb128 0x2
-	.long	0x36396
+	.long	0x363e6
 	.uleb128 0x1
-	.long	0x3639c
+	.long	0x363ec
 	.byte	0
 	.uleb128 0x36
 	.ascii "Write\0"
@@ -46357,7 +46358,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x3144e
 	.long	0x31459
 	.uleb128 0x2
-	.long	0x36396
+	.long	0x363e6
 	.uleb128 0x1
 	.long	0x35c02
 	.byte	0
@@ -46377,7 +46378,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x3149d
 	.long	0x314a8
 	.uleb128 0x2
-	.long	0x36396
+	.long	0x363e6
 	.uleb128 0x1
 	.long	0x20cc6
 	.byte	0
@@ -46399,7 +46400,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x316ac
 	.uleb128 0x1
-	.long	0x363a2
+	.long	0x363f2
 	.byte	0
 	.uleb128 0x36
 	.ascii "Read\0"
@@ -46421,7 +46422,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.long	0x20cc6
 	.byte	0
-	.uleb128 0x7c
+	.uleb128 0x7d
 	.secrel32	.LASF249
 	.byte	0x4d
 	.byte	0x4a
@@ -46437,7 +46438,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x31574
 	.long	0x3157a
 	.uleb128 0x2
-	.long	0x36396
+	.long	0x363e6
 	.byte	0
 	.uleb128 0x36
 	.ascii "GetValueClassInfo\0"
@@ -46473,7 +46474,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x3160e
 	.long	0x31614
 	.uleb128 0x2
-	.long	0x36396
+	.long	0x363e6
 	.byte	0
 	.uleb128 0x36
 	.ascii "GetAsAny\0"
@@ -46491,7 +46492,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x3165b
 	.long	0x31666
 	.uleb128 0x2
-	.long	0x36396
+	.long	0x363e6
 	.uleb128 0x1
 	.long	0x31de2
 	.byte	0
@@ -49246,7 +49247,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x345e8
 	.long	0x345f3
 	.uleb128 0x2
-	.long	0x36384
+	.long	0x363d4
 	.uleb128 0x1
 	.long	0x20d95
 	.byte	0
@@ -49260,9 +49261,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x34628
 	.long	0x34633
 	.uleb128 0x2
-	.long	0x36384
+	.long	0x363d4
 	.uleb128 0x1
-	.long	0x3638a
+	.long	0x363da
 	.byte	0
 	.uleb128 0x7e
 	.ascii "Execute\0"
@@ -49279,7 +49280,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x34677
 	.long	0x3467d
 	.uleb128 0x2
-	.long	0x36384
+	.long	0x363d4
 	.byte	0
 	.uleb128 0x55
 	.ascii "~wxAsyncMethodCallEvent\0"
@@ -49289,7 +49290,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x1
 	.long	0x346c0
 	.uleb128 0x2
-	.long	0x36384
+	.long	0x363d4
 	.uleb128 0x2
 	.long	0x23d
 	.byte	0
@@ -50094,7 +50095,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.long	0x3536e
 	.byte	0
-	.uleb128 0x79
+	.uleb128 0x7a
 	.secrel32	.LASF296
 	.byte	0x6
 	.byte	0x33
@@ -50607,9 +50608,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x8
 	.byte	0x7
 	.long	0x2411a
-	.long	0x35e07
+	.long	0x35e57
 	.uleb128 0x27
-	.long	0x35e0c
+	.long	0x35e5c
 	.byte	0
 	.byte	0x1
 	.uleb128 0x47
@@ -50619,9 +50620,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x35c93
 	.long	0x35c9e
 	.uleb128 0x2
-	.long	0x35f93
+	.long	0x35fe3
 	.uleb128 0x1
-	.long	0x35f9e
+	.long	0x35fee
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF297
@@ -50633,9 +50634,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x35cc9
 	.long	0x35ccf
 	.uleb128 0x2
-	.long	0x35f93
+	.long	0x35fe3
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7c
 	.ascii "~T100TreeItemData\0"
 	.byte	0x7
 	.byte	0x9
@@ -50647,7 +50648,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x35d0d
 	.long	0x35d18
 	.uleb128 0x2
-	.long	0x35f93
+	.long	0x35fe3
 	.uleb128 0x2
 	.long	0x23d
 	.byte	0
@@ -50667,40 +50668,57 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x35d5b
 	.long	0x35d61
 	.uleb128 0x2
-	.long	0x35f93
+	.long	0x35fe3
 	.byte	0
-	.uleb128 0x7d
-	.ascii "OnItemActivated\0"
+	.uleb128 0x73
+	.ascii "OnItemChanged\0"
 	.byte	0x56
 	.byte	0x10
 	.byte	0x21
-	.ascii "_ZN16T100TreeItemData15OnItemActivatedEv\0"
+	.ascii "_ZN16T100TreeItemData13OnItemChangedEv\0"
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x3
 	.long	0x35c50
 	.byte	0x1
-	.long	0x35daf
-	.long	0x35db5
+	.long	0x35dab
+	.long	0x35db1
 	.uleb128 0x2
-	.long	0x35f93
+	.long	0x35fe3
 	.byte	0
-	.uleb128 0xd0
-	.ascii "OnItemExpanding\0"
+	.uleb128 0x73
+	.ascii "OnItemActivated\0"
 	.byte	0x56
 	.byte	0x12
 	.byte	0x21
-	.ascii "_ZN16T100TreeItemData15OnItemExpandingEv\0"
+	.ascii "_ZN16T100TreeItemData15OnItemActivatedEv\0"
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x4
 	.long	0x35c50
 	.byte	0x1
-	.long	0x35e00
+	.long	0x35dff
+	.long	0x35e05
 	.uleb128 0x2
-	.long	0x35f93
+	.long	0x35fe3
+	.byte	0
+	.uleb128 0xd0
+	.ascii "OnItemExpanding\0"
+	.byte	0x56
+	.byte	0x14
+	.byte	0x21
+	.ascii "_ZN16T100TreeItemData15OnItemExpandingEv\0"
+	.byte	0x1
+	.uleb128 0x2
+	.byte	0x10
+	.uleb128 0x5
+	.long	0x35c50
+	.byte	0x1
+	.long	0x35e50
+	.uleb128 0x2
+	.long	0x35fe3
 	.byte	0
 	.byte	0
 	.uleb128 0x8
@@ -50712,7 +50730,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x44
 	.byte	0x18
 	.long	0x2411a
-	.long	0x35f8e
+	.long	0x35fde
 	.uleb128 0x27
 	.long	0x2411a
 	.byte	0
@@ -50721,23 +50739,23 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.secrel32	.LASF298
 	.ascii "_ZN14wxTreeItemDataC4EOS_\0"
 	.byte	0x1
-	.long	0x35e4c
-	.long	0x35e57
+	.long	0x35e9c
+	.long	0x35ea7
 	.uleb128 0x2
-	.long	0x35fa4
+	.long	0x35ff4
 	.uleb128 0x1
-	.long	0x35faf
+	.long	0x35fff
 	.byte	0
 	.uleb128 0x47
 	.secrel32	.LASF298
 	.ascii "_ZN14wxTreeItemDataC4ERKS_\0"
 	.byte	0x1
-	.long	0x35e80
-	.long	0x35e8b
+	.long	0x35ed0
+	.long	0x35edb
 	.uleb128 0x2
-	.long	0x35fa4
+	.long	0x35ff4
 	.uleb128 0x1
-	.long	0x35fb5
+	.long	0x36005
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF298
@@ -50746,10 +50764,10 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x5
 	.ascii "_ZN14wxTreeItemDataC4Ev\0"
 	.byte	0x1
-	.long	0x35eb4
-	.long	0x35eba
+	.long	0x35f04
+	.long	0x35f0a
 	.uleb128 0x2
-	.long	0x35fa4
+	.long	0x35ff4
 	.byte	0
 	.uleb128 0x17
 	.ascii "GetId\0"
@@ -50759,10 +50777,10 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.ascii "_ZNK14wxTreeItemData5GetIdEv\0"
 	.long	0x35379
 	.byte	0x1
-	.long	0x35eee
-	.long	0x35ef4
+	.long	0x35f3e
+	.long	0x35f44
 	.uleb128 0x2
-	.long	0x35fbb
+	.long	0x3600b
 	.byte	0
 	.uleb128 0x2b
 	.ascii "SetId\0"
@@ -50771,10 +50789,10 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0xa
 	.ascii "_ZN14wxTreeItemData5SetIdERK12wxTreeItemId\0"
 	.byte	0x1
-	.long	0x35f32
-	.long	0x35f3d
+	.long	0x35f82
+	.long	0x35f8d
 	.uleb128 0x2
-	.long	0x35fa4
+	.long	0x35ff4
 	.uleb128 0x1
 	.long	0x35379
 	.byte	0
@@ -50790,39 +50808,39 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.ascii "~wxTreeItemData\0"
 	.ascii "_ZN14wxTreeItemDataD4Ev\0"
 	.byte	0x1
-	.long	0x35e0c
+	.long	0x35e5c
 	.byte	0x1
-	.long	0x35f82
+	.long	0x35fd2
 	.uleb128 0x2
-	.long	0x35fa4
+	.long	0x35ff4
 	.uleb128 0x2
 	.long	0x23d
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.long	0x35e0c
+	.long	0x35e5c
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x35c50
 	.uleb128 0x8
-	.long	0x35f93
+	.long	0x35fe3
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x35e07
+	.long	0x35e57
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x35e0c
+	.long	0x35e5c
 	.uleb128 0x8
-	.long	0x35fa4
+	.long	0x35ff4
 	.uleb128 0x51
 	.byte	0x8
-	.long	0x35e0c
+	.long	0x35e5c
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x35f8e
+	.long	0x35fde
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x35f8e
+	.long	0x35fde
 	.uleb128 0x10
 	.ascii "wxListBase\0"
 	.uleb128 0xa
@@ -50832,7 +50850,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.ascii "wxNodeBase\0"
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x35fd3
+	.long	0x36023
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x2b6fc
@@ -50862,16 +50880,16 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2adfd
 	.uleb128 0x58
 	.long	0x23d
-	.long	0x36026
+	.long	0x36076
 	.uleb128 0x2f
 	.byte	0
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3602c
+	.long	0x3607c
 	.uleb128 0x82
 	.byte	0x8
 	.ascii "__vtbl_ptr_type\0"
-	.long	0x3601b
+	.long	0x3606b
 	.uleb128 0x10
 	.ascii "wxRegion\0"
 	.uleb128 0x4d
@@ -50881,7 +50899,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0xf0
 	.byte	0x18
 	.long	0x3497c
-	.long	0x36357
+	.long	0x363a7
 	.uleb128 0x27
 	.long	0x3497c
 	.byte	0
@@ -50890,23 +50908,23 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.secrel32	.LASF299
 	.ascii "_ZN20wxObjectEventFunctorC4EOS_\0"
 	.byte	0x1
-	.long	0x36093
-	.long	0x3609e
+	.long	0x360e3
+	.long	0x360ee
 	.uleb128 0x2
-	.long	0x3635c
+	.long	0x363ac
 	.uleb128 0x1
-	.long	0x36367
+	.long	0x363b7
 	.byte	0
 	.uleb128 0x47
 	.secrel32	.LASF299
 	.ascii "_ZN20wxObjectEventFunctorC4ERKS_\0"
 	.byte	0x1
-	.long	0x360cd
-	.long	0x360d8
+	.long	0x3611d
+	.long	0x36128
 	.uleb128 0x2
-	.long	0x3635c
+	.long	0x363ac
 	.uleb128 0x1
-	.long	0x3636d
+	.long	0x363bd
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF299
@@ -50915,10 +50933,10 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x5
 	.ascii "_ZN20wxObjectEventFunctorC4EM12wxEvtHandlerFvR7wxEventEPS0_\0"
 	.byte	0x1
-	.long	0x36125
-	.long	0x36135
+	.long	0x36175
+	.long	0x36185
 	.uleb128 0x2
-	.long	0x3635c
+	.long	0x363ac
 	.uleb128 0x1
 	.long	0x32115
 	.uleb128 0x1
@@ -50934,12 +50952,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x2
-	.long	0x3604d
+	.long	0x3609d
 	.byte	0x1
-	.long	0x36185
-	.long	0x36195
+	.long	0x361d5
+	.long	0x361e5
 	.uleb128 0x2
-	.long	0x3635c
+	.long	0x363ac
 	.uleb128 0x1
 	.long	0x320ec
 	.uleb128 0x1
@@ -50956,14 +50974,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x3
-	.long	0x3604d
+	.long	0x3609d
 	.byte	0x1
-	.long	0x361f3
-	.long	0x361fe
+	.long	0x36243
+	.long	0x3624e
 	.uleb128 0x2
-	.long	0x36373
+	.long	0x363c3
 	.uleb128 0x1
-	.long	0x3637e
+	.long	0x363ce
 	.byte	0
 	.uleb128 0x65
 	.ascii "GetEvtHandler\0"
@@ -50976,12 +50994,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x4
-	.long	0x3604d
+	.long	0x3609d
 	.byte	0x1
-	.long	0x36252
-	.long	0x36258
+	.long	0x362a2
+	.long	0x362a8
 	.uleb128 0x2
-	.long	0x36373
+	.long	0x363c3
 	.byte	0
 	.uleb128 0x65
 	.ascii "GetEvtMethod\0"
@@ -50994,12 +51012,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x5
-	.long	0x3604d
+	.long	0x3609d
 	.byte	0x1
-	.long	0x362aa
-	.long	0x362b0
+	.long	0x362fa
+	.long	0x36300
 	.uleb128 0x2
-	.long	0x36373
+	.long	0x363c3
 	.byte	0
 	.uleb128 0x15
 	.ascii "m_handler\0"
@@ -51021,42 +51039,42 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x118
 	.byte	0x5
 	.ascii "_ZN20wxObjectEventFunctorC4Ev\0"
-	.long	0x36306
-	.long	0x3630c
-	.uleb128 0x2
+	.long	0x36356
 	.long	0x3635c
+	.uleb128 0x2
+	.long	0x363ac
 	.byte	0
 	.uleb128 0x55
 	.ascii "~wxObjectEventFunctor\0"
 	.ascii "_ZN20wxObjectEventFunctorD4Ev\0"
 	.byte	0x1
-	.long	0x3604d
+	.long	0x3609d
 	.byte	0x1
-	.long	0x3634b
+	.long	0x3639b
 	.uleb128 0x2
-	.long	0x3635c
+	.long	0x363ac
 	.uleb128 0x2
 	.long	0x23d
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.long	0x3604d
+	.long	0x3609d
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3604d
+	.long	0x3609d
 	.uleb128 0x8
-	.long	0x3635c
+	.long	0x363ac
 	.uleb128 0x51
 	.byte	0x8
-	.long	0x3604d
+	.long	0x3609d
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x36357
+	.long	0x363a7
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x36357
+	.long	0x363a7
 	.uleb128 0x8
-	.long	0x36373
+	.long	0x363c3
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x3498c
@@ -51084,10 +51102,10 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x3
 	.word	0x297
 	.byte	0x18
-	.long	0x36547
-	.long	0x36542
+	.long	0x36597
+	.long	0x36592
 	.uleb128 0x27
-	.long	0x36547
+	.long	0x36597
 	.byte	0
 	.byte	0x1
 	.uleb128 0x9
@@ -51097,12 +51115,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x5
 	.ascii "_ZN20wxThreadHelperThreadC4ER14wxThreadHelper12wxThreadKind\0"
 	.byte	0x1
-	.long	0x3640f
-	.long	0x3641f
+	.long	0x3645f
+	.long	0x3646f
 	.uleb128 0x2
-	.long	0x36602
+	.long	0x36652
 	.uleb128 0x1
-	.long	0x3660d
+	.long	0x3665d
 	.uleb128 0x1
 	.long	0x2b7bc
 	.byte	0
@@ -51117,19 +51135,19 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x3
-	.long	0x363a8
+	.long	0x363f8
 	.byte	0x2
-	.long	0x36461
-	.long	0x36467
+	.long	0x364b1
+	.long	0x364b7
 	.uleb128 0x2
-	.long	0x36602
+	.long	0x36652
 	.byte	0
 	.uleb128 0x15
 	.ascii "m_owner\0"
 	.byte	0x3
 	.word	0x2a6
 	.byte	0x15
-	.long	0x3660d
+	.long	0x3665d
 	.byte	0x40
 	.uleb128 0x26
 	.secrel32	.LASF300
@@ -51137,12 +51155,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x2a9
 	.byte	0x5
 	.ascii "_ZN20wxThreadHelperThreadC4ERKS_\0"
-	.long	0x364ab
-	.long	0x364b6
+	.long	0x364fb
+	.long	0x36506
 	.uleb128 0x2
-	.long	0x36602
+	.long	0x36652
 	.uleb128 0x1
-	.long	0x36876
+	.long	0x368c6
 	.byte	0
 	.uleb128 0x22
 	.secrel32	.LASF23
@@ -51150,32 +51168,32 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x2aa
 	.byte	0x1b
 	.ascii "_ZN20wxThreadHelperThreadaSERKS_\0"
-	.long	0x3687c
-	.long	0x364ec
-	.long	0x364f7
+	.long	0x368cc
+	.long	0x3653c
+	.long	0x36547
 	.uleb128 0x2
-	.long	0x36602
+	.long	0x36652
 	.uleb128 0x1
-	.long	0x36876
+	.long	0x368c6
 	.byte	0
 	.uleb128 0x55
 	.ascii "~wxThreadHelperThread\0"
 	.ascii "_ZN20wxThreadHelperThreadD4Ev\0"
 	.byte	0x1
-	.long	0x363a8
+	.long	0x363f8
 	.byte	0x1
-	.long	0x36536
+	.long	0x36586
 	.uleb128 0x2
-	.long	0x36602
+	.long	0x36652
 	.uleb128 0x2
 	.long	0x23d
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.long	0x363a8
+	.long	0x363f8
 	.uleb128 0x44
 	.ascii "wxThread\0"
-	.long	0x36602
+	.long	0x36652
 	.uleb128 0xd2
 	.ascii "OnExit\0"
 	.byte	0x3
@@ -51186,11 +51204,11 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x6
-	.long	0x36547
-	.long	0x36588
-	.long	0x3658e
+	.long	0x36597
+	.long	0x365d8
+	.long	0x365de
 	.uleb128 0x2
-	.long	0x36888
+	.long	0x368d8
 	.byte	0
 	.uleb128 0x7e
 	.ascii "OnKill\0"
@@ -51202,12 +51220,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x5
-	.long	0x36547
+	.long	0x36597
 	.byte	0x2
-	.long	0x365c1
-	.long	0x365c7
+	.long	0x36611
+	.long	0x36617
 	.uleb128 0x2
-	.long	0x36888
+	.long	0x368d8
 	.byte	0
 	.uleb128 0xa6
 	.ascii "OnDelete\0"
@@ -51219,32 +51237,32 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x4
-	.long	0x36547
+	.long	0x36597
 	.byte	0x2
-	.long	0x365fb
+	.long	0x3664b
 	.uleb128 0x2
-	.long	0x36888
+	.long	0x368d8
 	.byte	0
 	.byte	0
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x363a8
+	.long	0x363f8
 	.uleb128 0x8
-	.long	0x36602
+	.long	0x36652
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x36613
+	.long	0x36663
 	.uleb128 0x63
 	.secrel32	.LASF301
 	.byte	0x40
 	.byte	0x3
 	.word	0x2b3
 	.byte	0x18
-	.long	0x36613
-	.long	0x36871
+	.long	0x36663
+	.long	0x368c1
 	.uleb128 0x70
 	.ascii "_vptr.wxThreadHelper\0"
-	.long	0x36026
+	.long	0x36076
 	.byte	0
 	.byte	0x1
 	.uleb128 0x43
@@ -51253,10 +51271,10 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x2b6
 	.byte	0xa
 	.ascii "_ZN14wxThreadHelper10KillThreadEv\0"
-	.long	0x3667b
-	.long	0x36681
+	.long	0x366cb
+	.long	0x366d1
 	.uleb128 0x2
-	.long	0x36882
+	.long	0x368d2
 	.byte	0
 	.uleb128 0x9
 	.secrel32	.LASF301
@@ -51265,10 +51283,10 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x5
 	.ascii "_ZN14wxThreadHelperC4E12wxThreadKind\0"
 	.byte	0x1
-	.long	0x366b8
-	.long	0x366c3
+	.long	0x36708
+	.long	0x36713
 	.uleb128 0x2
-	.long	0x36882
+	.long	0x368d2
 	.uleb128 0x1
 	.long	0x2b7bc
 	.byte	0
@@ -51279,12 +51297,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0xd
 	.ascii "_ZN14wxThreadHelperD4Ev\0"
 	.byte	0x1
-	.long	0x36613
+	.long	0x36663
 	.byte	0x1
-	.long	0x366ff
-	.long	0x3670a
+	.long	0x3674f
+	.long	0x3675a
 	.uleb128 0x2
-	.long	0x36882
+	.long	0x368d2
 	.uleb128 0x2
 	.long	0x23d
 	.byte	0
@@ -51296,10 +51314,10 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.ascii "_ZN14wxThreadHelper6CreateEj\0"
 	.long	0x2b722
 	.byte	0x1
-	.long	0x36740
-	.long	0x3674b
+	.long	0x36790
+	.long	0x3679b
 	.uleb128 0x2
-	.long	0x36882
+	.long	0x368d2
 	.uleb128 0x1
 	.long	0x5ad
 	.byte	0
@@ -51311,10 +51329,10 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.ascii "_ZN14wxThreadHelper12CreateThreadE12wxThreadKindj\0"
 	.long	0x2b722
 	.byte	0x1
-	.long	0x3679c
-	.long	0x367ac
+	.long	0x367ec
+	.long	0x367fc
 	.uleb128 0x2
-	.long	0x36882
+	.long	0x368d2
 	.uleb128 0x1
 	.long	0x2b7bc
 	.uleb128 0x1
@@ -51331,12 +51349,12 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x2
-	.long	0x36613
+	.long	0x36663
 	.byte	0x1
-	.long	0x367e8
-	.long	0x367ee
+	.long	0x36838
+	.long	0x3683e
 	.uleb128 0x2
-	.long	0x36882
+	.long	0x368d2
 	.byte	0
 	.uleb128 0x7
 	.ascii "GetThread\0"
@@ -51344,19 +51362,19 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.word	0x2e7
 	.byte	0xf
 	.ascii "_ZNK14wxThreadHelper9GetThreadEv\0"
-	.long	0x36888
+	.long	0x368d8
 	.byte	0x1
-	.long	0x3682b
-	.long	0x36831
+	.long	0x3687b
+	.long	0x36881
 	.uleb128 0x2
-	.long	0x36893
+	.long	0x368e3
 	.byte	0
 	.uleb128 0x2c
 	.ascii "m_thread\0"
 	.byte	0x3
 	.word	0x2f1
 	.byte	0xf
-	.long	0x36888
+	.long	0x368d8
 	.byte	0x8
 	.byte	0x2
 	.uleb128 0x2c
@@ -51377,24 +51395,24 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x2
 	.byte	0
 	.uleb128 0x8
-	.long	0x36613
+	.long	0x36663
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x36542
+	.long	0x36592
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x363a8
+	.long	0x363f8
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x36613
+	.long	0x36663
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x36547
+	.long	0x36597
 	.uleb128 0x8
-	.long	0x36888
+	.long	0x368d8
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x36871
+	.long	0x368c1
 	.uleb128 0x51
 	.byte	0x8
 	.long	0x273ff
@@ -51403,14 +51421,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x278c3
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x368ab
+	.long	0x368fb
 	.uleb128 0x10
 	.ascii "wxGDIImage\0"
 	.uleb128 0x8
-	.long	0x368ab
+	.long	0x368fb
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x368b7
+	.long	0x36907
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x241e3
@@ -51526,7 +51544,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.quad	.LFE12951-.LFB12951
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x36ce7
+	.long	0x36d37
 	.uleb128 0x81
 	.ascii "__initialize_p\0"
 	.byte	0x7
@@ -51553,100 +51571,100 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0xd6
-	.long	0x364f7
+	.long	0x36547
 	.byte	0x3
 	.word	0x297
 	.byte	0x18
-	.long	0x36d16
+	.long	0x36d66
 	.byte	0x2
-	.long	0x36d29
+	.long	0x36d79
 	.uleb128 0x2e
 	.secrel32	.LASF302
-	.long	0x36608
+	.long	0x36658
 	.uleb128 0x2e
 	.secrel32	.LASF303
 	.long	0x244
 	.byte	0
 	.uleb128 0x32
-	.long	0x36d03
+	.long	0x36d53
 	.ascii "_ZN20wxThreadHelperThreadD0Ev\0"
-	.long	0x36d66
+	.long	0x36db6
 	.quad	.LFB12934
 	.quad	.LFE12934-.LFB12934
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x36d6f
+	.long	0x36dbf
 	.uleb128 0x28
-	.long	0x36d16
+	.long	0x36d66
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x32
-	.long	0x36d03
+	.long	0x36d53
 	.ascii "_ZN20wxThreadHelperThreadD1Ev\0"
-	.long	0x36dac
+	.long	0x36dfc
 	.quad	.LFB12933
 	.quad	.LFE12933-.LFB12933
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x36db5
+	.long	0x36e05
 	.uleb128 0x28
-	.long	0x36d16
+	.long	0x36d66
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0xa8
-	.long	0x3630c
+	.long	0x3635c
 	.byte	0x5
 	.byte	0xf0
 	.byte	0x18
-	.long	0x36dc7
+	.long	0x36e17
 	.byte	0x2
-	.long	0x36dda
+	.long	0x36e2a
 	.uleb128 0x2e
 	.secrel32	.LASF302
-	.long	0x36362
+	.long	0x363b2
 	.uleb128 0x2e
 	.secrel32	.LASF303
 	.long	0x244
 	.byte	0
 	.uleb128 0x32
-	.long	0x36db5
+	.long	0x36e05
 	.ascii "_ZN20wxObjectEventFunctorD0Ev\0"
-	.long	0x36e17
+	.long	0x36e67
 	.quad	.LFB12922
 	.quad	.LFE12922-.LFB12922
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x36e20
+	.long	0x36e70
 	.uleb128 0x28
-	.long	0x36dc7
+	.long	0x36e17
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x32
-	.long	0x36db5
+	.long	0x36e05
 	.ascii "_ZN20wxObjectEventFunctorD1Ev\0"
-	.long	0x36e5d
+	.long	0x36ead
 	.quad	.LFB12921
 	.quad	.LFE12921-.LFB12921
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x36e66
+	.long	0x36eb6
 	.uleb128 0x28
-	.long	0x36dc7
+	.long	0x36e17
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x48
 	.long	0x35169
-	.long	0x36e74
+	.long	0x36ec4
 	.byte	0x2
-	.long	0x36e8c
+	.long	0x36edc
 	.uleb128 0x2e
 	.secrel32	.LASF302
 	.long	0x352ed
@@ -51658,210 +51676,210 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x351a1
 	.byte	0
 	.uleb128 0x67
-	.long	0x36e66
+	.long	0x36eb6
 	.ascii "_ZN8wxItemIdIPvEC2ES0_\0"
-	.long	0x36ec2
+	.long	0x36f12
 	.quad	.LFB12508
 	.quad	.LFE12508-.LFB12508
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x36ed3
+	.long	0x36f23
 	.uleb128 0x28
-	.long	0x36e74
+	.long	0x36ec4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x28
-	.long	0x36e7d
+	.long	0x36ecd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x48
 	.long	0x35ccf
-	.long	0x36ee1
+	.long	0x36f31
 	.byte	0
-	.long	0x36ef4
+	.long	0x36f44
 	.uleb128 0x2e
 	.secrel32	.LASF302
-	.long	0x35f99
+	.long	0x35fe9
 	.uleb128 0x2e
 	.secrel32	.LASF303
 	.long	0x244
 	.byte	0
 	.uleb128 0x32
-	.long	0x36ed3
+	.long	0x36f23
 	.ascii "_ZN16T100TreeItemDataD0Ev\0"
-	.long	0x36f2d
+	.long	0x36f7d
 	.quad	.LFB11867
 	.quad	.LFE11867-.LFB11867
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x36f36
+	.long	0x36f86
 	.uleb128 0x28
-	.long	0x36ee1
+	.long	0x36f31
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x32
-	.long	0x36ed3
+	.long	0x36f23
 	.ascii "_ZN16T100TreeItemDataD2Ev\0"
-	.long	0x36f6f
+	.long	0x36fbf
 	.quad	.LFB11865
 	.quad	.LFE11865-.LFB11865
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x36f78
+	.long	0x36fc8
 	.uleb128 0x28
-	.long	0x36ee1
+	.long	0x36f31
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x48
 	.long	0x35c9e
-	.long	0x36f86
+	.long	0x36fd6
 	.byte	0
-	.long	0x36f90
+	.long	0x36fe0
 	.uleb128 0x2e
 	.secrel32	.LASF302
-	.long	0x35f99
+	.long	0x35fe9
 	.byte	0
 	.uleb128 0x32
-	.long	0x36f78
+	.long	0x36fc8
 	.ascii "_ZN16T100TreeItemDataC2Ev\0"
-	.long	0x36fc9
+	.long	0x37019
 	.quad	.LFB11862
 	.quad	.LFE11862-.LFB11862
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x36fd2
+	.long	0x37022
 	.uleb128 0x28
-	.long	0x36f86
+	.long	0x36fd6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0xa8
-	.long	0x35f4f
+	.long	0x35f9f
 	.byte	0x6
 	.byte	0x44
 	.byte	0x18
-	.long	0x36fe4
+	.long	0x37034
 	.byte	0x2
-	.long	0x36ff7
+	.long	0x37047
 	.uleb128 0x2e
 	.secrel32	.LASF302
-	.long	0x35faa
+	.long	0x35ffa
 	.uleb128 0x2e
 	.secrel32	.LASF303
 	.long	0x244
 	.byte	0
 	.uleb128 0x32
-	.long	0x36fd2
+	.long	0x37022
 	.ascii "_ZN14wxTreeItemDataD0Ev\0"
-	.long	0x3702e
+	.long	0x3707e
 	.quad	.LFB11861
 	.quad	.LFE11861-.LFB11861
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x37037
+	.long	0x37087
 	.uleb128 0x28
-	.long	0x36fe4
+	.long	0x37034
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x32
-	.long	0x36fd2
+	.long	0x37022
 	.ascii "_ZN14wxTreeItemDataD1Ev\0"
-	.long	0x3706e
+	.long	0x370be
 	.quad	.LFB11860
 	.quad	.LFE11860-.LFB11860
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x37077
+	.long	0x370c7
 	.uleb128 0x28
-	.long	0x36fe4
+	.long	0x37034
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x32
-	.long	0x36fd2
+	.long	0x37022
 	.ascii "_ZN14wxTreeItemDataD2Ev\0"
-	.long	0x370ae
+	.long	0x370fe
 	.quad	.LFB11859
 	.quad	.LFE11859-.LFB11859
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x370b7
+	.long	0x37107
 	.uleb128 0x28
-	.long	0x36fe4
+	.long	0x37034
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x48
-	.long	0x35e8b
-	.long	0x370c5
+	.long	0x35edb
+	.long	0x37115
 	.byte	0x2
-	.long	0x370cf
+	.long	0x3711f
 	.uleb128 0x2e
 	.secrel32	.LASF302
-	.long	0x35faa
+	.long	0x35ffa
 	.byte	0
 	.uleb128 0x32
-	.long	0x370b7
+	.long	0x37107
 	.ascii "_ZN14wxTreeItemDataC2Ev\0"
-	.long	0x37106
+	.long	0x37156
 	.quad	.LFB11033
 	.quad	.LFE11033-.LFB11033
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3710f
+	.long	0x3715f
 	.uleb128 0x28
-	.long	0x370c5
+	.long	0x37115
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x48
 	.long	0x3530c
-	.long	0x3711d
+	.long	0x3716d
 	.byte	0x2
-	.long	0x37127
+	.long	0x37177
 	.uleb128 0x2e
 	.secrel32	.LASF302
 	.long	0x35374
 	.byte	0
 	.uleb128 0x32
-	.long	0x3710f
+	.long	0x3715f
 	.ascii "_ZN12wxTreeItemIdC1Ev\0"
-	.long	0x3715c
+	.long	0x371ac
 	.quad	.LFB11028
 	.quad	.LFE11028-.LFB11028
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x37165
+	.long	0x371b5
 	.uleb128 0x28
-	.long	0x3711d
+	.long	0x3716d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x73
-	.long	0x36135
-	.long	0x37184
+	.uleb128 0x74
+	.long	0x36185
+	.long	0x371d4
 	.quad	.LFB9455
 	.quad	.LFE9455-.LFB9455
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x371d1
+	.long	0x37221
 	.uleb128 0x49
 	.secrel32	.LASF302
-	.long	0x36362
+	.long	0x363b2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -51894,46 +51912,46 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.sleb128 -24
 	.byte	0
 	.uleb128 0x68
-	.long	0x36258
-	.long	0x371f0
+	.long	0x362a8
+	.long	0x37240
 	.quad	.LFB8657
 	.quad	.LFE8657-.LFB8657
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x371fd
+	.long	0x3724d
 	.uleb128 0x49
 	.secrel32	.LASF302
-	.long	0x36379
+	.long	0x363c9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x68
-	.long	0x361fe
-	.long	0x3721c
+	.long	0x3624e
+	.long	0x3726c
 	.quad	.LFB8656
 	.quad	.LFE8656-.LFB8656
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x37229
+	.long	0x37279
 	.uleb128 0x49
 	.secrel32	.LASF302
-	.long	0x36379
+	.long	0x363c9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x73
-	.long	0x36195
-	.long	0x37248
+	.uleb128 0x74
+	.long	0x361e5
+	.long	0x37298
 	.quad	.LFB8655
 	.quad	.LFE8655-.LFB8655
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3728c
+	.long	0x372dc
 	.uleb128 0x49
 	.secrel32	.LASF302
-	.long	0x36379
+	.long	0x363c9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -51942,7 +51960,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x5
 	.byte	0xf9
 	.byte	0x33
-	.long	0x3637e
+	.long	0x363ce
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -51954,20 +51972,20 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0x5
 	.byte	0xfd
 	.byte	0x29
-	.long	0x3636d
+	.long	0x363bd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
 	.byte	0
 	.byte	0
-	.uleb128 0x73
+	.uleb128 0x74
 	.long	0x2bca8
-	.long	0x372ab
+	.long	0x372fb
 	.quad	.LFB7624
 	.quad	.LFE7624-.LFB7624
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x372c8
+	.long	0x37318
 	.uleb128 0x49
 	.secrel32	.LASF302
 	.long	0x2bd3b
@@ -51986,9 +52004,9 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0
 	.uleb128 0x48
 	.long	0x2bc70
-	.long	0x372d6
+	.long	0x37326
 	.byte	0x2
-	.long	0x372f3
+	.long	0x37343
 	.uleb128 0x2e
 	.secrel32	.LASF302
 	.long	0x2bd3b
@@ -52000,36 +52018,36 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0xd272
 	.byte	0
 	.uleb128 0x67
-	.long	0x372c8
+	.long	0x37318
 	.ascii "_ZN16wxTypeIdentifierC1EPKc\0"
-	.long	0x3732e
+	.long	0x3737e
 	.quad	.LFB7623
 	.quad	.LFE7623-.LFB7623
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3733f
+	.long	0x3738f
 	.uleb128 0x28
-	.long	0x372d6
+	.long	0x37326
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x28
-	.long	0x372df
+	.long	0x3732f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x73
-	.long	0x3641f
-	.long	0x3735e
+	.uleb128 0x74
+	.long	0x3646f
+	.long	0x373ae
 	.quad	.LFB7592
 	.quad	.LFE7592-.LFB7592
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x37391
+	.long	0x373e1
 	.uleb128 0x49
 	.secrel32	.LASF302
-	.long	0x36608
+	.long	0x36658
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -52053,55 +52071,55 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.sleb128 -48
 	.byte	0
 	.uleb128 0x68
-	.long	0x36555
-	.long	0x373b0
+	.long	0x365a5
+	.long	0x37400
 	.quad	.LFB7577
 	.quad	.LFE7577-.LFB7577
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x373bd
+	.long	0x3740d
 	.uleb128 0x49
 	.secrel32	.LASF302
-	.long	0x3688e
+	.long	0x368de
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x68
-	.long	0x3658e
-	.long	0x373dc
+	.long	0x365de
+	.long	0x3742c
 	.quad	.LFB7576
 	.quad	.LFE7576-.LFB7576
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x373e9
+	.long	0x37439
 	.uleb128 0x49
 	.secrel32	.LASF302
-	.long	0x3688e
+	.long	0x368de
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x68
-	.long	0x365c7
-	.long	0x37408
+	.long	0x36617
+	.long	0x37458
 	.quad	.LFB7575
 	.quad	.LFE7575-.LFB7575
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x37415
+	.long	0x37465
 	.uleb128 0x49
 	.secrel32	.LASF302
-	.long	0x3688e
+	.long	0x368de
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x48
 	.long	0x2bb5e
-	.long	0x37423
+	.long	0x37473
 	.byte	0x2
-	.long	0x37436
+	.long	0x37486
 	.uleb128 0x2e
 	.secrel32	.LASF302
 	.long	0x2bc52
@@ -52110,25 +52128,25 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x244
 	.byte	0
 	.uleb128 0x32
-	.long	0x37415
+	.long	0x37465
 	.ascii "_ZN23wxCriticalSectionLockerD1Ev\0"
-	.long	0x37476
+	.long	0x374c6
 	.quad	.LFB7569
 	.quad	.LFE7569-.LFB7569
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3747f
+	.long	0x374cf
 	.uleb128 0x28
-	.long	0x37423
+	.long	0x37473
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x48
 	.long	0x2bb0d
-	.long	0x3748d
+	.long	0x374dd
 	.byte	0x2
-	.long	0x374a4
+	.long	0x374f4
 	.uleb128 0x2e
 	.secrel32	.LASF302
 	.long	0x2bc52
@@ -52140,30 +52158,30 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x2baf9
 	.byte	0
 	.uleb128 0x32
-	.long	0x3747f
+	.long	0x374cf
 	.ascii "_ZN23wxCriticalSectionLockerC1ER17wxCriticalSection\0"
-	.long	0x374f7
+	.long	0x37547
 	.quad	.LFB7566
 	.quad	.LFE7566-.LFB7566
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x37508
+	.long	0x37558
 	.uleb128 0x28
-	.long	0x3748d
+	.long	0x374dd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x28
-	.long	0x37496
+	.long	0x374e6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x48
 	.long	0x241a4
-	.long	0x37516
+	.long	0x37566
 	.byte	0x2
-	.long	0x37529
+	.long	0x37579
 	.uleb128 0x2e
 	.secrel32	.LASF302
 	.long	0x241ee
@@ -52172,77 +52190,77 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.long	0x244
 	.byte	0
 	.uleb128 0x32
-	.long	0x37508
+	.long	0x37558
 	.ascii "_ZN12wxClientDataD0Ev\0"
-	.long	0x3755e
+	.long	0x375ae
 	.quad	.LFB4893
 	.quad	.LFE4893-.LFB4893
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x37567
+	.long	0x375b7
 	.uleb128 0x28
-	.long	0x37516
+	.long	0x37566
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x67
-	.long	0x37508
+	.long	0x37558
 	.ascii "_ZN12wxClientDataD1Ev\0"
-	.long	0x3759c
+	.long	0x375ec
 	.quad	.LFB4892
 	.quad	.LFE4892-.LFB4892
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x375a5
+	.long	0x375f5
 	.uleb128 0x28
-	.long	0x37516
+	.long	0x37566
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x67
-	.long	0x37508
+	.long	0x37558
 	.ascii "_ZN12wxClientDataD2Ev\0"
-	.long	0x375da
+	.long	0x3762a
 	.quad	.LFB4891
 	.quad	.LFE4891-.LFB4891
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x375e3
+	.long	0x37633
 	.uleb128 0x28
-	.long	0x37516
+	.long	0x37566
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x48
 	.long	0x24177
-	.long	0x375f1
+	.long	0x37641
 	.byte	0x2
-	.long	0x375fb
+	.long	0x3764b
 	.uleb128 0x2e
 	.secrel32	.LASF302
 	.long	0x241ee
 	.byte	0
 	.uleb128 0x67
-	.long	0x375e3
+	.long	0x37633
 	.ascii "_ZN12wxClientDataC2Ev\0"
-	.long	0x37630
+	.long	0x37680
 	.quad	.LFB4888
 	.quad	.LFE4888-.LFB4888
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x37639
+	.long	0x37689
 	.uleb128 0x28
-	.long	0x375f1
+	.long	0x37641
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0xdb
 	.long	0x17d77
-	.long	0x37655
+	.long	0x376a5
 	.quad	.LFB752
 	.quad	.LFE752-.LFB752
 	.uleb128 0x1
@@ -54316,6 +54334,37 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x73
 	.uleb128 0x2e
 	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
+	.uleb128 0x4c
+	.uleb128 0xb
+	.uleb128 0x4d
+	.uleb128 0x18
+	.uleb128 0x1d
+	.uleb128 0x13
+	.uleb128 0x32
+	.uleb128 0xb
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x74
+	.uleb128 0x2e
+	.byte	0x1
 	.uleb128 0x47
 	.uleb128 0x13
 	.uleb128 0x64
@@ -54332,7 +54381,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x74
+	.uleb128 0x75
 	.uleb128 0x13
 	.byte	0
 	.uleb128 0x3
@@ -54341,14 +54390,14 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x75
+	.uleb128 0x76
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x76
+	.uleb128 0x77
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -54363,7 +54412,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x77
+	.uleb128 0x78
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -54386,36 +54435,13 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x78
+	.uleb128 0x79
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x38
 	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x79
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x32
-	.uleb128 0xb
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x64
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x7a
@@ -54433,8 +54459,8 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0xb
 	.uleb128 0x6e
 	.uleb128 0x8
-	.uleb128 0x49
-	.uleb128 0x13
+	.uleb128 0x32
+	.uleb128 0xb
 	.uleb128 0x3c
 	.uleb128 0x19
 	.uleb128 0x64
@@ -54442,35 +54468,6 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.byte	0
 	.byte	0
 	.uleb128 0x7b
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x4c
-	.uleb128 0xb
-	.uleb128 0x1d
-	.uleb128 0x13
-	.uleb128 0x32
-	.uleb128 0xb
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x7c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -54487,10 +54484,29 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x8
 	.uleb128 0x49
 	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x64
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x7c
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
 	.uleb128 0x4c
 	.uleb128 0xb
-	.uleb128 0x4d
-	.uleb128 0x18
 	.uleb128 0x1d
 	.uleb128 0x13
 	.uleb128 0x32
@@ -54509,7 +54525,7 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0x3f
 	.uleb128 0x19
 	.uleb128 0x3
-	.uleb128 0x8
+	.uleb128 0xe
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -54518,6 +54534,8 @@ _GLOBAL__sub_I__ZN16T100TreeItemDataC2Ev:
 	.uleb128 0xb
 	.uleb128 0x6e
 	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
 	.uleb128 0x4c
 	.uleb128 0xb
 	.uleb128 0x4d

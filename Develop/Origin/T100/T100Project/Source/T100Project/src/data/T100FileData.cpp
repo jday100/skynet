@@ -64,6 +64,11 @@ wxMenu* T100FileData::ShowMenu()
     return menu;
 }
 
+T100VOID T100FileData::OnItemChanged()
+{
+
+}
+
 T100VOID T100FileData::OnItemActivated()
 {
     if(m_opened){

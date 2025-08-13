@@ -171,3 +171,24 @@ T100VOID T100ProjectViewMainMenu::uninit()
 {
 
 }
+
+T100VOID T100ProjectViewMainMenu::ProjectSelected()
+{
+    m_fileNew->Enable(T100TRUE);
+}
+
+T100VOID T100ProjectViewMainMenu::FileOpen()
+{
+    m_fileClose->Enable(T100TRUE);
+    m_fileSaveAs->Enable(T100TRUE);
+}
+
+T100VOID T100ProjectViewMainMenu::FileModified()
+{
+    m_fileSave->Enable(T100TRUE);
+}
+
+T100VOID T100ProjectViewMainMenu::FolderSelected()
+{
+    m_fileNew->Enable(T100TRUE);
+}

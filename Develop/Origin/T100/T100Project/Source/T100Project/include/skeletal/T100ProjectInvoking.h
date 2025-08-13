@@ -46,9 +46,12 @@ class T100ProjectInvoking
         static T100VOID                     OnQuit();
 
         static T100VOID                     OnFolderNew();
+        static T100VOID                     OnFolderSelected();
 
         static T100VOID                     OnFileOpen(T100FileData*);
         static T100VOID                     OnFolderOpen(T100FolderData*);
+
+        static T100VOID                     OnProjectSelected();
 
         static T100VOID                     OnItemExpanding();
         static T100VOID                     OnModified();

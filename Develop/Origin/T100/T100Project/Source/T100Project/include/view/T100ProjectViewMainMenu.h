@@ -15,6 +15,13 @@ class T100ProjectViewMainMenu
         virtual T100VOID            Create(T100ProjectFrame*);
         virtual T100VOID            Destroy();
 
+        T100VOID                    ProjectSelected();
+
+        T100VOID                    FileOpen();
+        T100VOID                    FileModified();
+
+        T100VOID                    FolderSelected();
+
     protected:
         T100ProjectFrame*           m_frame     = T100NULL;
 

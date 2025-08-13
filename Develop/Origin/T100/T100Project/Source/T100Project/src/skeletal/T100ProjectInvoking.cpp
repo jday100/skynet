@@ -171,6 +171,11 @@ T100VOID T100ProjectInvoking::OnFolderNew()
     m_skeletal->OnFolderNew();
 }
 
+T100VOID T100ProjectInvoking::OnFolderSelected()
+{
+    m_skeletal->OnFolderSelected();
+}
+
 T100VOID T100ProjectInvoking::OnFileOpen(T100FileData* data)
 {
     m_skeletal->OnFileOpen(data);
@@ -179,6 +184,11 @@ T100VOID T100ProjectInvoking::OnFileOpen(T100FileData* data)
 T100VOID T100ProjectInvoking::OnFolderOpen(T100FolderData* data)
 {
     m_skeletal->OnFolderOpen(data);
+}
+
+T100VOID T100ProjectInvoking::OnProjectSelected()
+{
+    m_skeletal->OnProjectSelected();
 }
 
 T100VOID T100ProjectInvoking::OnItemExpanding()

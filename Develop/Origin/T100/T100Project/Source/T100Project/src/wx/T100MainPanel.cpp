@@ -33,7 +33,7 @@ T100VOID T100MainPanel::Create(T100FileInfo* info)
 
     AddPage(editor, info->GetFileName());
 
-    //m_current   = editor;
+    m_current   = editor;
 }
 
 T100VOID T100MainPanel::Clear()

@@ -47,9 +47,24 @@ T100BOOL T100ProjectView::WorkSpaceClose()
 
 }
 
+T100VOID T100ProjectView::WorkSpaceSave()
+{
+
+}
+
 T100VOID T100ProjectView::ProjectOpen(T100ProjectInfo* info)
 {
     m_projectTree->ProjectOpen(info);
+}
+
+T100VOID T100ProjectView::ProjectSelected()
+{
+    m_mainMenu->ProjectSelected();
+}
+
+T100VOID T100ProjectView::FileModified()
+{
+    m_mainMenu->FileModified();
 }
 
 T100VOID T100ProjectView::FileOpen(wxTreeItemId id, T100FileInfo* info)
@@ -61,20 +76,24 @@ T100VOID T100ProjectView::FileOpen(wxTreeItemId id, T100FileInfo* info)
         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
     }
 
-    T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
-
-    editor->LoadFile(info->GetPath());
-
-    m_mainPanel->AddPage(editor, info->GetFileName());
+    m_mainPanel->Create(info);
 
     m_projectTree->FileOpen(id, info);
 
+    m_mainMenu->FileOpen();
+
     m_manager->Update();
+
 }
 
 T100VOID T100ProjectView::FolderOpen(wxTreeItemId id, T100FolderInfo* info)
 {
     m_projectTree->FolderOpen(id, info);
+}
+
+T100VOID T100ProjectView::FolderSelected()
+{
+    m_mainMenu->FolderSelected();
 }
 
 T100VOID T100ProjectView::ShowSetupEditorDialog()
@@ -147,7 +166,7 @@ T100VOID T100ProjectView::Open(T100FileInfo* info)
     m_mainPanel->Create(info);
 }
 
-T100VOID T100ProjectView::Save()
+T100VOID T100ProjectView::FileSave()
 {
     if(m_mainPanel){
         m_mainPanel->Save();

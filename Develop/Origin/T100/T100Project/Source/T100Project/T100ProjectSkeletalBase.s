@@ -1211,14 +1211,14 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv:
 	.loc 5 46 5
 	testb	%al, %al	 # retval.2_9
 	jne	.L51	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:50:     m_view->Save();
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:50:     m_view->WorkSpaceSave();
 	.loc 5 50 5
 	movq	16(%rbp), %rax	 # this, tmp92
 	movq	8(%rax), %rax	 # this_6(D)->m_view, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:50:     m_view->Save();
-	.loc 5 50 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:50:     m_view->WorkSpaceSave();
+	.loc 5 50 26
 	movq	%rax, %rcx	 # _3,
-	call	_ZN15T100ProjectView4SaveEv	 #
+	call	_ZN15T100ProjectView13WorkSpaceSaveEv	 #
 	jmp	.L48	 #
 .L51:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:47:         return;
@@ -65931,7 +65931,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.def	_ZN15T100ProjectView14WorkSpaceCloseEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100WorkSpaceServe5CloseEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100WorkSpaceServe4SaveEv;	.scl	2;	.type	32;	.endef
-	.def	_ZN15T100ProjectView4SaveEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN15T100ProjectView13WorkSpaceSaveEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN19T100ProjectViewBase23ShowProjectCreateWizardEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN19T100ProjectViewBase15ShowAboutDialogEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN14wxEventFunctorD2Ev;	.scl	2;	.type	32;	.endef

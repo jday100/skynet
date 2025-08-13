@@ -13,6 +13,8 @@ class T100TreeItemData : public wxTreeItemData
 
         virtual wxMenu*         ShowMenu() = 0;
 
+        virtual T100VOID        OnItemChanged() = 0;
+
         virtual T100VOID        OnItemActivated() = 0;
 
         virtual T100VOID        OnItemExpanding() = 0;

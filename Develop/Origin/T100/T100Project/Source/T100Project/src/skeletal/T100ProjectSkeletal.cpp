@@ -164,7 +164,7 @@ T100VOID T100ProjectSkeletal::OnFileClose()
 
 T100VOID T100ProjectSkeletal::OnFileSave()
 {
-    m_view->Save();
+    m_view->FileSave();
 }
 
 T100VOID T100ProjectSkeletal::OnFileSaveAs()
@@ -242,6 +242,11 @@ T100VOID T100ProjectSkeletal::OnFolderNew()
 
 }
 
+T100VOID T100ProjectSkeletal::OnFolderSelected()
+{
+    m_view->FolderSelected();
+}
+
 T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
 {
     T100FileLogic&      logic       = m_serve->GetProjectServe()->GetFileLogic();
@@ -278,6 +283,11 @@ T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
     m_view->FolderOpen(data->GetId(), info);
 }
 
+T100VOID T100ProjectSkeletal::OnProjectSelected()
+{
+    m_view->ProjectSelected();
+}
+
 T100VOID T100ProjectSkeletal::OnItemExpanding()
 {
     T100WSTRING         label;
@@ -296,6 +306,8 @@ T100VOID T100ProjectSkeletal::OnItemExpanding()
 T100VOID T100ProjectSkeletal::OnModified()
 {
     m_view->SetDirty();
+
+    m_view->FileModified();
 
 }
 

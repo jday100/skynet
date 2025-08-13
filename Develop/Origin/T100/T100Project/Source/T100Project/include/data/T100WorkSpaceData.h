@@ -11,6 +11,8 @@ class T100WorkSpaceData : public T100TreeItemData
 
         virtual wxMenu*         ShowMenu();
 
+        virtual T100VOID        OnItemChanged();
+
         virtual T100VOID        OnItemActivated();
 
         virtual T100VOID        OnItemExpanding();

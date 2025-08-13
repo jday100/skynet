@@ -47,7 +47,7 @@ T100VOID T100ProjectSkeletalBase::WorkSpaceSave()
         return;
     }
 
-    m_view->Save();
+    m_view->WorkSpaceSave();
 }
 
 T100VOID T100ProjectSkeletalBase::WorkSpaceSaveAs()

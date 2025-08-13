@@ -30,6 +30,7 @@ class T100ProjectTree : public wxTreeCtrl
 
     protected:
         T100VOID                    OnItemMenu(wxTreeEvent&);
+        T100VOID                    OnItemChanged(wxTreeEvent&);
         T100VOID                    OnItemExpanding(wxTreeEvent&);
         T100VOID                    OnItemActivated(wxTreeEvent&);
         T100VOID                    OnProjectCreate(wxCommandEvent&);

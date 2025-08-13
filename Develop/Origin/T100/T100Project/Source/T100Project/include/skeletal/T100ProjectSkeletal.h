@@ -49,9 +49,12 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnQuit();
 
         T100VOID                    OnFolderNew();
+        T100VOID                    OnFolderSelected();
 
         T100VOID                    OnFileOpen(T100FileData*);
         T100VOID                    OnFolderOpen(T100FolderData*);
+
+        T100VOID                    OnProjectSelected();
 
         T100VOID                    OnItemExpanding();
         T100VOID                    OnModified();

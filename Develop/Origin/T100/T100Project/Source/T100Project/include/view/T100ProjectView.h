@@ -16,11 +16,17 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    WorkSpaceOpen(T100WorkSpaceInfo*);
         T100BOOL                    WorkSpaceClose();
+        T100VOID                    WorkSpaceSave();
 
         T100VOID                    ProjectOpen(T100ProjectInfo*);
+        T100VOID                    ProjectSelected();
+
+        T100VOID                    FileModified();
 
         T100VOID                    FileOpen(wxTreeItemId, T100FileInfo*);
         T100VOID                    FolderOpen(wxTreeItemId, T100FolderInfo*);
+
+        T100VOID                    FolderSelected();
 
         T100VOID                    ShowSetupEditorDialog();
         T100VOID                    ShowSetupCompilerDialog();
@@ -38,7 +44,9 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    New(T100FileInfo*);
         T100VOID                    Open(T100FileInfo*);
-        T100VOID                    Save();
+
+
+        T100VOID                    FileSave();
 
     protected:
 
