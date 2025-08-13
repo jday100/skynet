@@ -120,10 +120,54 @@ T100VOID T100ProjectViewMainMenu::Create(T100ProjectFrame* frame)
 
     menuBar->Append(helpMenu, L"Help");
 
+    init();
+
     frame->SetMenuBar(menuBar);
 }
 
 T100VOID T100ProjectViewMainMenu::Destroy()
+{
+    uninit();
+}
+
+T100VOID T100ProjectViewMainMenu::init()
+{
+    m_workNew->Enable(T100TRUE);
+    m_workOpen->Enable(T100TRUE);
+    m_workClose->Enable(T100FALSE);
+    m_workSave->Enable(T100FALSE);
+    m_workSaveAs->Enable(T100FALSE);
+    m_workQuit->Enable(T100TRUE);
+
+    m_projectNew->Enable(T100FALSE);
+    m_projectOpen->Enable(T100FALSE);
+    m_projectClose->Enable(T100FALSE);
+    m_projectSave->Enable(T100FALSE);
+    m_projectSaveAs->Enable(T100FALSE);
+
+    m_fileNew->Enable(T100FALSE);
+    m_fileOpen->Enable(T100FALSE);
+    m_fileClose->Enable(T100FALSE);
+    m_fileSave->Enable(T100FALSE);
+    m_fileSaveAs->Enable(T100FALSE);
+
+    m_undo->Enable(T100FALSE);
+    m_redo->Enable(T100FALSE);
+    m_cut->Enable(T100FALSE);
+    m_copy->Enable(T100FALSE);
+    m_paste->Enable(T100FALSE);
+
+    m_find->Enable(T100FALSE);
+    m_replace->Enable(T100FALSE);
+
+    m_build->Enable(T100FALSE);
+
+    m_editor->Enable(T100TRUE);
+    m_compiler->Enable(T100TRUE);
+
+}
+
+T100VOID T100ProjectViewMainMenu::uninit()
 {
 
 }

@@ -54,6 +54,8 @@ class T100ProjectViewMainMenu
         wxMenuItem*                 m_about         = T100NULL;
 
     private:
+        T100VOID                    init();
+        T100VOID                    uninit();
 };
 
 #endif // T100PROJECTVIEWMAINMENU_H
