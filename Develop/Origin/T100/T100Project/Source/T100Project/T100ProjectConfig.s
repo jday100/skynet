@@ -1,4 +1,4 @@
-	.file	"T100Class.cpp"
+	.file	"T100ProjectConfig.cpp"
  # GNU C++14 (x86_64-posix-seh-rev0, Built by MinGW-W64 project) version 8.1.0 (x86_64-w64-mingw32)
  #	compiled by GNU C version 8.1.0, GMP version 6.1.2, MPFR version 4.0.1, MPC version 1.1.0, isl version isl-0.18-GMP
 
@@ -19,7 +19,7 @@
  # -iprefix C:/zoo/bin/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/
  # -D_MT -D_REENTRANT -D __GNUWIN32__ -D __WXMSW__ -D WXUSINGDLL
  # -D wxUSE_UNICODE -D __WXDEBUG__
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\base\T100Class.cpp
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp
  # -mthreads -mtune=core2 -march=nocona -g -Wall -fpermissive
  # -fexec-charset=UTF-8 -finput-charset=UTF-8 -fverbose-asm
  # options enabled:  -faggressive-loop-optimizations
@@ -60,12 +60,12 @@ _ZStL19piecewise_construct:
 	.space 1
 	.text
 	.align 2
-	.globl	_ZN9T100ClassC2Ev
-	.def	_ZN9T100ClassC2Ev;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN9T100ClassC2Ev
-_ZN9T100ClassC2Ev:
+	.globl	_ZN17T100ProjectConfigC2Ev
+	.def	_ZN17T100ProjectConfigC2Ev;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN17T100ProjectConfigC2Ev
+_ZN17T100ProjectConfigC2Ev:
 .LFB1434:
-	.file 1 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/library/base/T100Class.cpp"
+	.file 1 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/base/T100ProjectConfig.cpp"
 	.loc 1 3 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -78,13 +78,13 @@ _ZN9T100ClassC2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB2:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\base\T100Class.cpp:3: T100Class::T100Class()
-	.loc 1 3 22
-	leaq	16+_ZTV9T100Class(%rip), %rdx	 #, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:3: T100ProjectConfig::T100ProjectConfig()
+	.loc 1 3 38
+	leaq	16+_ZTV17T100ProjectConfig(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	%rdx, (%rax)	 # _1, this_3(D)->_vptr.T100Class
+	movq	%rdx, (%rax)	 # _1, this_3(D)->_vptr.T100ProjectConfig
 .LBE2:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\base\T100Class.cpp:6: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:6: }
 	.loc 1 6 1
 	nop	
 	popq	%rbp	 #
@@ -94,14 +94,14 @@ _ZN9T100ClassC2Ev:
 	.cfi_endproc
 .LFE1434:
 	.seh_endproc
-	.globl	_ZN9T100ClassC1Ev
-	.def	_ZN9T100ClassC1Ev;	.scl	2;	.type	32;	.endef
-	.set	_ZN9T100ClassC1Ev,_ZN9T100ClassC2Ev
+	.globl	_ZN17T100ProjectConfigC1Ev
+	.def	_ZN17T100ProjectConfigC1Ev;	.scl	2;	.type	32;	.endef
+	.set	_ZN17T100ProjectConfigC1Ev,_ZN17T100ProjectConfigC2Ev
 	.align 2
-	.globl	_ZN9T100ClassD2Ev
-	.def	_ZN9T100ClassD2Ev;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN9T100ClassD2Ev
-_ZN9T100ClassD2Ev:
+	.globl	_ZN17T100ProjectConfigD2Ev
+	.def	_ZN17T100ProjectConfigD2Ev;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN17T100ProjectConfigD2Ev
+_ZN17T100ProjectConfigD2Ev:
 .LFB1437:
 	.loc 1 8 1
 	.cfi_startproc
@@ -115,13 +115,13 @@ _ZN9T100ClassD2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB3:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\base\T100Class.cpp:8: T100Class::~T100Class()
-	.loc 1 8 23
-	leaq	16+_ZTV9T100Class(%rip), %rdx	 #, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:8: T100ProjectConfig::~T100ProjectConfig()
+	.loc 1 8 39
+	leaq	16+_ZTV17T100ProjectConfig(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	%rdx, (%rax)	 # _1, this_3(D)->_vptr.T100Class
+	movq	%rdx, (%rax)	 # _1, this_3(D)->_vptr.T100ProjectConfig
 .LBE3:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\base\T100Class.cpp:11: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:11: }
 	.loc 1 11 1
 	nop	
 	popq	%rbp	 #
@@ -131,14 +131,14 @@ _ZN9T100ClassD2Ev:
 	.cfi_endproc
 .LFE1437:
 	.seh_endproc
-	.globl	_ZN9T100ClassD1Ev
-	.def	_ZN9T100ClassD1Ev;	.scl	2;	.type	32;	.endef
-	.set	_ZN9T100ClassD1Ev,_ZN9T100ClassD2Ev
+	.globl	_ZN17T100ProjectConfigD1Ev
+	.def	_ZN17T100ProjectConfigD1Ev;	.scl	2;	.type	32;	.endef
+	.set	_ZN17T100ProjectConfigD1Ev,_ZN17T100ProjectConfigD2Ev
 	.align 2
-	.globl	_ZN9T100ClassD0Ev
-	.def	_ZN9T100ClassD0Ev;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN9T100ClassD0Ev
-_ZN9T100ClassD0Ev:
+	.globl	_ZN17T100ProjectConfigD0Ev
+	.def	_ZN17T100ProjectConfigD0Ev;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN17T100ProjectConfigD0Ev
+_ZN17T100ProjectConfigD0Ev:
 .LFB1439:
 	.loc 1 8 1
 	.cfi_startproc
@@ -153,10 +153,10 @@ _ZN9T100ClassD0Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\base\T100Class.cpp:11: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:11: }
 	.loc 1 11 1
 	movq	16(%rbp), %rcx	 # this,
-	call	_ZN9T100ClassD1Ev	 #
+	call	_ZN17T100ProjectConfigD1Ev	 #
 	movl	$8, %edx	 #,
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZdlPvy	 #
@@ -169,31 +169,31 @@ _ZN9T100ClassD0Ev:
 	.cfi_endproc
 .LFE1439:
 	.seh_endproc
-	.globl	_ZTV9T100Class
-	.section	.rdata$_ZTV9T100Class,"dr"
+	.globl	_ZTV17T100ProjectConfig
+	.section	.rdata$_ZTV17T100ProjectConfig,"dr"
 	.linkonce same_size
 	.align 8
-_ZTV9T100Class:
+_ZTV17T100ProjectConfig:
 	.quad	0
-	.quad	_ZTI9T100Class
-	.quad	_ZN9T100ClassD1Ev
-	.quad	_ZN9T100ClassD0Ev
-	.globl	_ZTI9T100Class
-	.section	.rdata$_ZTI9T100Class,"dr"
+	.quad	_ZTI17T100ProjectConfig
+	.quad	_ZN17T100ProjectConfigD1Ev
+	.quad	_ZN17T100ProjectConfigD0Ev
+	.globl	_ZTI17T100ProjectConfig
+	.section	.rdata$_ZTI17T100ProjectConfig,"dr"
 	.linkonce same_size
 	.align 8
-_ZTI9T100Class:
+_ZTI17T100ProjectConfig:
  # <anonymous>:
  # <anonymous>:
 	.quad	_ZTVN10__cxxabiv117__class_type_infoE+16
  # <anonymous>:
-	.quad	_ZTS9T100Class
-	.globl	_ZTS9T100Class
-	.section	.rdata$_ZTS9T100Class,"dr"
+	.quad	_ZTS17T100ProjectConfig
+	.globl	_ZTS17T100ProjectConfig
+	.section	.rdata$_ZTS17T100ProjectConfig,"dr"
 	.linkonce same_size
-	.align 8
-_ZTS9T100Class:
-	.ascii "9T100Class\0"
+	.align 16
+_ZTS17T100ProjectConfig:
+	.ascii "17T100ProjectConfig\0"
 	.text
 .Letext0:
 	.file 2 "C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/include/corecrt.h"
@@ -231,17 +231,17 @@ _ZTS9T100Class:
 	.file 34 "C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/include/malloc.h"
 	.file 35 "C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/include/process.h"
 	.file 36 "<built-in>"
-	.file 37 "include/library/base/T100Class.h"
+	.file 37 "include/base/T100ProjectConfig.h"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0xa2ff
+	.long	0xa345
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
 	.uleb128 0x54
 	.ascii "GNU C++14 8.1.0 -mthreads -mtune=core2 -march=nocona -g -fpermissive -fexec-charset=UTF-8 -finput-charset=UTF-8\0"
 	.byte	0x4
-	.ascii "C:\\zgit\\skynet\\Develop\\Origin\\T100\\T100Project\\Source\\T100Project\\src\\library\\base\\T100Class.cpp\0"
+	.ascii "C:\\zgit\\skynet\\Develop\\Origin\\T100\\T100Project\\Source\\T100Project\\src\\base\\T100ProjectConfig.cpp\0"
 	.ascii "C:\\zgit\\skynet\\Develop\\Origin\\T100\\T100Project\\Source\\T100Project\0"
 	.quad	.Ltext0
 	.quad	.Letext0-.Ltext0
@@ -9074,21 +9074,21 @@ _ZTS9T100Class:
 	.byte	0x6
 	.byte	0x7
 	.long	0x9f43
-	.long	0x9ff9
+	.long	0xa024
 	.uleb128 0x77
 	.secrel32	.LASF59
-	.ascii "_ZN9T100ClassC4ERKS_\0"
+	.ascii "_ZN17T100ProjectConfigC4ERKS_\0"
 	.byte	0x1
-	.long	0x9f77
-	.long	0x9f82
+	.long	0x9f80
+	.long	0x9f8b
 	.uleb128 0x2
-	.long	0x9ffe
+	.long	0xa029
 	.uleb128 0x1
-	.long	0xa009
+	.long	0xa034
 	.byte	0
 	.uleb128 0x78
-	.ascii "_vptr.T100Class\0"
-	.long	0xa01a
+	.ascii "_vptr.T100ProjectConfig\0"
+	.long	0xa045
 	.byte	0
 	.byte	0x1
 	.uleb128 0x1a
@@ -9096,25 +9096,25 @@ _ZTS9T100Class:
 	.byte	0x1
 	.byte	0x3
 	.byte	0x1
-	.ascii "_ZN9T100ClassC4Ev\0"
+	.ascii "_ZN17T100ProjectConfigC4Ev\0"
 	.byte	0x1
-	.long	0x9fbc
-	.long	0x9fc2
+	.long	0x9fd6
+	.long	0x9fdc
 	.uleb128 0x2
-	.long	0x9ffe
+	.long	0xa029
 	.byte	0
 	.uleb128 0x79
-	.ascii "~T100Class\0"
+	.ascii "~T100ProjectConfig\0"
 	.byte	0x1
 	.byte	0x8
 	.byte	0x1
-	.ascii "_ZN9T100ClassD4Ev\0"
+	.ascii "_ZN17T100ProjectConfigD4Ev\0"
 	.byte	0x1
 	.long	0x9f43
 	.byte	0x1
-	.long	0x9fed
+	.long	0xa018
 	.uleb128 0x2
-	.long	0x9ffe
+	.long	0xa029
 	.uleb128 0x2
 	.long	0x1e5
 	.byte	0
@@ -9125,22 +9125,22 @@ _ZTS9T100Class:
 	.byte	0x8
 	.long	0x9f43
 	.uleb128 0xa
-	.long	0x9ffe
+	.long	0xa029
 	.uleb128 0xd
 	.byte	0x8
-	.long	0x9ff9
+	.long	0xa024
 	.uleb128 0x51
 	.long	0x1e5
-	.long	0xa01a
+	.long	0xa045
 	.uleb128 0x14
 	.byte	0
 	.uleb128 0x6
 	.byte	0x8
-	.long	0xa020
+	.long	0xa04b
 	.uleb128 0x3c
 	.byte	0x8
 	.ascii "__vtbl_ptr_type\0"
-	.long	0xa00f
+	.long	0xa03a
 	.uleb128 0x39
 	.ascii "_ZNSt17integral_constantIbLb0EE5valueE\0"
 	.long	0x54ca
@@ -9174,66 +9174,66 @@ _ZTS9T100Class:
 	.long	0x7027
 	.word	0x1344
 	.uleb128 0x53
-	.long	0x9fc2
-	.long	0xa225
+	.long	0x9fdc
+	.long	0xa250
 	.byte	0
-	.long	0xa23f
+	.long	0xa26a
 	.uleb128 0x3a
 	.ascii "this\0"
-	.long	0xa004
+	.long	0xa02f
 	.uleb128 0x3a
 	.ascii "__in_chrg\0"
 	.long	0x1ec
 	.byte	0
 	.uleb128 0x7d
-	.long	0xa217
-	.ascii "_ZN9T100ClassD0Ev\0"
-	.long	0xa270
+	.long	0xa242
+	.ascii "_ZN17T100ProjectConfigD0Ev\0"
+	.long	0xa2a4
 	.quad	.LFB1439
 	.quad	.LFE1439-.LFB1439
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa279
+	.long	0xa2ad
 	.uleb128 0x3b
-	.long	0xa225
+	.long	0xa250
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x7e
-	.long	0xa217
-	.ascii "_ZN9T100ClassD2Ev\0"
-	.long	0xa2aa
+	.long	0xa242
+	.ascii "_ZN17T100ProjectConfigD2Ev\0"
+	.long	0xa2e7
 	.quad	.LFB1437
 	.quad	.LFE1437-.LFB1437
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0xa2b3
+	.long	0xa2f0
 	.uleb128 0x3b
-	.long	0xa225
+	.long	0xa250
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x53
-	.long	0x9f99
-	.long	0xa2c1
+	.long	0x9faa
+	.long	0xa2fe
 	.byte	0
-	.long	0xa2cc
+	.long	0xa309
 	.uleb128 0x3a
 	.ascii "this\0"
-	.long	0xa004
+	.long	0xa02f
 	.byte	0
 	.uleb128 0x7f
-	.long	0xa2b3
-	.ascii "_ZN9T100ClassC2Ev\0"
-	.long	0xa2f9
+	.long	0xa2f0
+	.ascii "_ZN17T100ProjectConfigC2Ev\0"
+	.long	0xa33f
 	.quad	.LFB1434
 	.quad	.LFE1434-.LFB1434
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x3b
-	.long	0xa2c1
+	.long	0xa2fe
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -11386,8 +11386,8 @@ _ZTS9T100Class:
 	.ascii "nothrow_t\0"
 .LASF50:
 	.ascii "operator->\0"
-.LASF59:
-	.ascii "T100Class\0"
+.LASF11:
+	.ascii "basic_string\0"
 .LASF18:
 	.ascii "append\0"
 .LASF31:
@@ -11430,10 +11430,10 @@ _ZTS9T100Class:
 	.ascii "operator[]\0"
 .LASF14:
 	.ascii "const_reference\0"
-.LASF11:
-	.ascii "basic_string\0"
 .LASF20:
 	.ascii "insert\0"
+.LASF16:
+	.ascii "reference\0"
 .LASF29:
 	.ascii "value_type\0"
 .LASF19:
@@ -11448,8 +11448,8 @@ _ZTS9T100Class:
 	.ascii "_Alloc_hider\0"
 .LASF56:
 	.ascii "_Container\0"
-.LASF16:
-	.ascii "reference\0"
+.LASF59:
+	.ascii "T100ProjectConfig\0"
 .LASF44:
 	.ascii "__digits10\0"
 .LASF9:

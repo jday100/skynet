@@ -29,6 +29,7 @@
 					<Add directory="include/store" />
 					<Add directory="include/view/dialog" />
 					<Add directory="include/library/storage/file/text" />
+					<Add directory="include/base" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -60,6 +61,7 @@
 					<Add directory="include/store" />
 					<Add directory="include/view/dialog" />
 					<Add directory="include/library/storage/file/text" />
+					<Add directory="include/base" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -106,6 +108,7 @@
 		<Unit filename="T100ProjectMain.cpp" />
 		<Unit filename="T100ProjectMain.h" />
 		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/base/T100ProjectConfig.h" />
 		<Unit filename="include/common/T100ProjectCommon.h" />
 		<Unit filename="include/data/T100FileData.h" />
 		<Unit filename="include/data/T100FolderData.h" />
@@ -156,6 +159,7 @@
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/base/T100ProjectConfig.cpp" />
 		<Unit filename="src/data/T100FileData.cpp" />
 		<Unit filename="src/data/T100FolderData.cpp" />
 		<Unit filename="src/data/T100ProjectData.cpp" />
