@@ -26,6 +26,8 @@ T100VOID T100ProjectView::Create(T100ProjectFrame* frame)
 
     m_manager->AddPane(m_projectTree, wxAuiPaneInfo().MinSize(100, -1).BestSize(300, -1).Left());
 
+    SetTitle();
+
     m_frame->Maximize();
     m_manager->Update();
 }
@@ -185,4 +187,9 @@ T100VOID T100ProjectView::FileSave()
         ClearDirty();
         SetTitle();
     }
+}
+
+T100VOID T100ProjectView::PageClose()
+{
+    SetTitle();
 }

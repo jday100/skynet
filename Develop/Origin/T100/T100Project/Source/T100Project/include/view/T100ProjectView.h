@@ -51,6 +51,8 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    FileSave();
 
+        T100VOID                    PageClose();
+
     protected:
 
     private:

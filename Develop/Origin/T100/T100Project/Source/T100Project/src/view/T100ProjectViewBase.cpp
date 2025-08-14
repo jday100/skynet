@@ -71,11 +71,22 @@ T100MainPanel* T100ProjectViewBase::GetMainPanel()
 T100VOID T100ProjectViewBase::SetTitle()
 {
     T100WSTRING         title;
+    T100Editor*         current     = T100NULL;
 
-    if(m_dirty){
-        title   = m_projectName + L" - " + m_mainPanel->GetCurrent()->GetPath() + L"*";
+    if(m_mainPanel){
+        current     = m_mainPanel->GetCurrent();
+
+        if(current){
+            if(m_dirty){
+                title   = m_projectName + L" - " + current->GetPath() + L"*";
+            }else{
+                title   = m_projectName + L" - " + current->GetPath();
+            }
+        }else{
+            title   = m_projectName;
+        }
     }else{
-        title   = m_projectName + L" - " + m_mainPanel->GetCurrent()->GetPath();
+        title   = m_projectName;
     }
 
     m_frame->SetLabel(title);

@@ -311,6 +311,7 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceSelected()
 T100VOID T100ProjectSkeletal::OnPageClosed()
 {
     m_serve->GetProjectServe()->GetFileLogic().Close(T100NULL);
+    m_view->PageClose();
 }
 
 T100VOID T100ProjectSkeletal::OnItemExpanding()
