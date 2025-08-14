@@ -13,8 +13,12 @@ class T100Editor : public wxStyledTextCtrl
                      const wxString& name = wxSTCNameStr);
         virtual ~T100Editor();
 
+        T100VOID                SetPath(const T100WSTRING&);
+        const T100WSTRING&      GetPath();
+
     protected:
-        T100VOID            OnModified(wxStyledTextEvent&);
+        T100VOID                OnModified(wxStyledTextEvent&);\
+        T100WSTRING             m_path;
 
     private:
 

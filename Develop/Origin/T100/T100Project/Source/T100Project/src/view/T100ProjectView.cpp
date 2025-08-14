@@ -87,6 +87,8 @@ T100VOID T100ProjectView::FileOpen(wxTreeItemId id, T100FileInfo* info)
 
     m_mainMenu->FileOpen();
 
+    SetTitle();
+
     m_manager->Update();
 
 }

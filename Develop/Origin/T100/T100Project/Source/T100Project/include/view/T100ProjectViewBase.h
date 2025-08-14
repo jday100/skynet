@@ -26,6 +26,8 @@ class T100ProjectViewBase
         T100ProjectTree*                GetProjectTree();
         T100MainPanel*                  GetMainPanel();
 
+        T100VOID                        SetTitle();
+
         T100INT                         ShowDirDialog(T100WSTRING&);
 
         T100VOID                        ShowProjectCreateWizard();
@@ -40,6 +42,7 @@ class T100ProjectViewBase
 
         T100ProjectTree*                m_projectTree   = T100NULL;
         T100MainPanel*                  m_mainPanel     = T100NULL;
+        T100WSTRING                     m_projectName   = L"T100Project";
 
     private:
         T100VOID                        init();

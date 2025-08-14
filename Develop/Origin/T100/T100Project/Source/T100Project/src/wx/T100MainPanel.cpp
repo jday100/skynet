@@ -23,6 +23,11 @@ T100MainPanel::~T100MainPanel()
     //dtor
 }
 
+T100Editor* T100MainPanel::GetCurrent()
+{
+    return m_current;
+}
+
 T100VOID T100MainPanel::Create(T100FileInfo* info)
 {
     T100Editor*     editor      = T100NEW T100Editor(this);
@@ -30,7 +35,8 @@ T100VOID T100MainPanel::Create(T100FileInfo* info)
     T100WSTRING     path        = info->GetPath();
 
     if(!path.empty()){
-        editor->LoadFile(info->GetPath());
+        editor->LoadFile(path);
+        editor->SetPath(path);
     }
 
     AddPage(editor, info->GetFileName());

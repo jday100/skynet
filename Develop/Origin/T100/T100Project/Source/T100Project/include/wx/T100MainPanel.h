@@ -21,6 +21,8 @@ class T100MainPanel : public wxAuiNotebook
 
         T100VOID                    Save();
 
+        T100Editor*                 GetCurrent();
+
     protected:
         T100Editor*                 m_current       = T100NULL;
 

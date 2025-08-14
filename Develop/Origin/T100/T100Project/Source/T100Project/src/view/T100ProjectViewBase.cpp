@@ -68,6 +68,19 @@ T100MainPanel* T100ProjectViewBase::GetMainPanel()
     return m_mainPanel;
 }
 
+T100VOID T100ProjectViewBase::SetTitle()
+{
+    T100WSTRING         title;
+
+    if(m_dirty){
+        title   = m_projectName + L" - " + m_mainPanel->GetCurrent()->GetPath() + L"*";
+    }else{
+        title   = m_projectName + L" - " + m_mainPanel->GetCurrent()->GetPath();
+    }
+
+    m_frame->SetLabel(title);
+}
+
 T100INT T100ProjectViewBase::ShowDirDialog(T100WSTRING& path)
 {
     T100INT             result;

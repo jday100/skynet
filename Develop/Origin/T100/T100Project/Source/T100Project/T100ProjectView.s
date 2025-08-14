@@ -395,8 +395,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.254817
-	movq	%rax, %rcx	 # D.254817,
+	movq	%rbx, %rax	 # tmp96, D.254832
+	movq	%rax, %rcx	 # D.254832,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -616,8 +616,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.254821
-	movq	%rax, %rcx	 # D.254821,
+	movq	%rbx, %rax	 # tmp103, D.254836
+	movq	%rax, %rcx	 # D.254836,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -724,8 +724,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.254823
-	movq	%rax, %rcx	 # D.254823,
+	movq	%rbx, %rax	 # tmp99, D.254838
+	movq	%rax, %rcx	 # D.254838,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2172,8 +2172,8 @@ _ZN13wxAuiPaneInfoC1Ev:
 	movq	-64(%rbp), %rax	 # this, _14
 	movq	%rax, %rcx	 # _14,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp143, D.254829
-	movq	%rax, %rcx	 # D.254829,
+	movq	%rbx, %rax	 # tmp143, D.254844
+	movq	%rax, %rcx	 # D.254844,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2540,8 +2540,8 @@ _ZN13wxAuiPaneInfoC1ERKS_:
 	movq	-64(%rbp), %rax	 # this, _30
 	movq	%rax, %rcx	 # _30,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp176, D.254832
-	movq	%rax, %rcx	 # D.254832,
+	movq	%rbx, %rax	 # tmp176, D.254847
+	movq	%rax, %rcx	 # D.254847,
 .LEHB13:
 	call	_Unwind_Resume	 #
 	nop	
@@ -3106,8 +3106,8 @@ _ZN13wxAuiPaneInfo11DefaultPaneEv:
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.254833
-	movq	%rax, %rcx	 # D.254833,
+	movq	%rbx, %rax	 # tmp106, D.254848
+	movq	%rax, %rcx	 # D.254848,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .LEHE16:
@@ -3284,8 +3284,8 @@ _ZN13wxAuiPaneInfo7SetFlagEib:
 	leaq	-80(%rbp), %rax	 #, tmp113
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp114, D.254839
-	movq	%rax, %rcx	 # D.254839,
+	movq	%rbx, %rax	 # tmp114, D.254854
+	movq	%rax, %rcx	 # D.254854,
 .LEHB19:
 	call	_Unwind_Resume	 #
 .LEHE19:
@@ -3413,7 +3413,7 @@ _ZN15T100ProjectViewC2Ev:
 	call	_ZN19T100ProjectViewBaseC2Ev	 #
 	leaq	16+_ZTV15T100ProjectView(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _2, this_5(D)->D.168294._vptr.T100ProjectViewBase
+	movq	%rdx, (%rax)	 # _2, this_5(D)->D.168309._vptr.T100ProjectViewBase
 .LBE29:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:10: }
 	.loc 15 10 1
@@ -3453,7 +3453,7 @@ _ZN15T100ProjectViewD2Ev:
 	.loc 15 12 35
 	leaq	16+_ZTV15T100ProjectView(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.168294._vptr.T100ProjectViewBase
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.168309._vptr.T100ProjectViewBase
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN19T100ProjectViewBaseD2Ev	 #
@@ -3495,7 +3495,7 @@ _ZN15T100ProjectViewD0Ev:
 	.loc 15 15 1
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN15T100ProjectViewD1Ev	 #
-	movl	$56, %edx	 #,
+	movl	$88, %edx	 #,
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZdlPvy	 #
 	nop	
@@ -3540,7 +3540,7 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
 	.loc 15 19 17
 	movq	256(%rbp), %rax	 # this, tmp117
 	movq	264(%rbp), %rdx	 # frame, tmp118
-	movq	%rdx, 24(%rax)	 # tmp118, this_25(D)->D.168294.m_frame
+	movq	%rdx, 24(%rax)	 # tmp118, this_25(D)->D.168309.m_frame
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:20:     m_manager   = T100NEW wxAuiManager(m_frame);
 	.loc 15 20 47
 	movl	$496, %ecx	 #,
@@ -3551,7 +3551,7 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:20:     m_manager   = T100NEW wxAuiManager(m_frame);
 	.loc 15 20 40
 	movq	256(%rbp), %rax	 # this, tmp120
-	movq	24(%rax), %rax	 # this_25(D)->D.168294.m_frame, _1
+	movq	24(%rax), %rax	 # this_25(D)->D.168309.m_frame, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:20:     m_manager   = T100NEW wxAuiManager(m_frame);
 	.loc 15 20 47
 	movl	$201, %r8d	 #,
@@ -3563,7 +3563,7 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:20:     m_manager   = T100NEW wxAuiManager(m_frame);
 	.loc 15 20 17 discriminator 2
 	movq	256(%rbp), %rax	 # this, tmp121
-	movq	%rbx, 16(%rax)	 # _29, this_25(D)->D.168294.m_manager
+	movq	%rbx, 16(%rax)	 # _29, this_25(D)->D.168309.m_manager
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:21:     m_mainMenu  = T100NEW T100ProjectViewMainMenu();
 	.loc 15 21 51 discriminator 2
 	movl	$232, %ecx	 #,
@@ -3578,13 +3578,13 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:21:     m_mainMenu  = T100NEW T100ProjectViewMainMenu();
 	.loc 15 21 17
 	movq	256(%rbp), %rax	 # this, tmp123
-	movq	%rbx, 32(%rax)	 # _34, this_25(D)->D.168294.m_mainMenu
+	movq	%rbx, 32(%rax)	 # _34, this_25(D)->D.168309.m_mainMenu
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:23:     m_mainMenu->Create(frame);
 	.loc 15 23 5
 	movq	256(%rbp), %rax	 # this, tmp124
-	movq	32(%rax), %rcx	 # this_25(D)->D.168294.m_mainMenu, _2
+	movq	32(%rax), %rcx	 # this_25(D)->D.168309.m_mainMenu, _2
 	movq	256(%rbp), %rax	 # this, tmp126
-	movq	32(%rax), %rax	 # this_25(D)->D.168294.m_mainMenu, _4
+	movq	32(%rax), %rax	 # this_25(D)->D.168309.m_mainMenu, _4
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:23:     m_mainMenu->Create(frame);
 	.loc 15 23 29
 	movq	(%rax), %rax	 # _4->_vptr.T100ProjectViewMainMenu, _5
@@ -3614,7 +3614,7 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:25:     m_projectTree   = T100NEW T100ProjectTree(m_frame);
 	.loc 15 25 47
 	movq	256(%rbp), %rax	 # this, tmp130
-	movq	24(%rax), %rax	 # this_25(D)->D.168294.m_frame, _8
+	movq	24(%rax), %rax	 # this_25(D)->D.168309.m_frame, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:25:     m_projectTree   = T100NEW T100ProjectTree(m_frame);
 	.loc 15 25 54
 	movq	%rsi, 56(%rsp)	 # _40,
@@ -3633,14 +3633,14 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:25:     m_projectTree   = T100NEW T100ProjectTree(m_frame);
 	.loc 15 25 21 discriminator 4
 	movq	256(%rbp), %rax	 # this, tmp133
-	movq	%rbx, 40(%rax)	 # _42, this_25(D)->D.168294.m_projectTree
+	movq	%rbx, 40(%rax)	 # _42, this_25(D)->D.168309.m_projectTree
 	leaq	-64(%rbp), %rax	 #, tmp134
 	movq	%rax, %rcx	 # tmp134,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:27:     m_manager->AddPane(m_projectTree, wxAuiPaneInfo().MinSize(100, -1).BestSize(300, -1).Left());
 	.loc 15 27 5 discriminator 4
 	movq	256(%rbp), %rax	 # this, tmp135
-	movq	16(%rax), %rbx	 # this_25(D)->D.168294.m_manager, _9
+	movq	16(%rax), %rbx	 # this_25(D)->D.168309.m_manager, _9
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:27:     m_manager->AddPane(m_projectTree, wxAuiPaneInfo().MinSize(100, -1).BestSize(300, -1).Left());
 	.loc 15 27 39 discriminator 4
 	leaq	-16(%rbp), %rax	 #, tmp136
@@ -3669,7 +3669,7 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:27:     m_manager->AddPane(m_projectTree, wxAuiPaneInfo().MinSize(100, -1).BestSize(300, -1).Left());
 	.loc 15 27 24 discriminator 4
 	movq	256(%rbp), %rax	 # this, tmp138
-	movq	40(%rax), %rax	 # this_25(D)->D.168294.m_projectTree, _13
+	movq	40(%rax), %rax	 # this_25(D)->D.168309.m_projectTree, _13
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:27:     m_manager->AddPane(m_projectTree, wxAuiPaneInfo().MinSize(100, -1).BestSize(300, -1).Left());
 	.loc 15 27 23 discriminator 4
 	movq	%rdx, %r8	 # _12,
@@ -3686,17 +3686,17 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:29:     m_frame->Maximize();
 	.loc 15 29 5 discriminator 2
 	movq	256(%rbp), %rax	 # this, tmp140
-	movq	24(%rax), %rax	 # this_25(D)->D.168294.m_frame, _14
+	movq	24(%rax), %rax	 # this_25(D)->D.168309.m_frame, _14
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:29:     m_frame->Maximize();
 	.loc 15 29 22 discriminator 2
 	movq	%rax, %rcx	 # _14, _15
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:29:     m_frame->Maximize();
 	.loc 15 29 5 discriminator 2
 	movq	256(%rbp), %rax	 # this, tmp142
-	movq	24(%rax), %rax	 # this_25(D)->D.168294.m_frame, _18
+	movq	24(%rax), %rax	 # this_25(D)->D.168309.m_frame, _18
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:29:     m_frame->Maximize();
 	.loc 15 29 23 discriminator 2
-	movq	(%rax), %rax	 # _18->D.168424.D.149262.D.149074.D.147757.D.147668.D.147389.D.146463.D.146406.D.135552.D.134261.D.128218._vptr.wxObject, _19
+	movq	(%rax), %rax	 # _18->D.168439.D.149262.D.149074.D.147757.D.147668.D.147389.D.146463.D.146406.D.135552.D.134261.D.128218._vptr.wxObject, _19
 	addq	$1744, %rax	 #, _20
 	movq	(%rax), %rax	 # *_20, _21
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:29:     m_frame->Maximize();
@@ -3708,7 +3708,7 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:30:     m_manager->Update();
 	.loc 15 30 5 discriminator 2
 	movq	256(%rbp), %rax	 # this, tmp143
-	movq	16(%rax), %rax	 # this_25(D)->D.168294.m_manager, _22
+	movq	16(%rax), %rax	 # this_25(D)->D.168309.m_manager, _22
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:30:     m_manager->Update();
 	.loc 15 30 22 discriminator 2
 	movq	%rax, %rcx	 # _22,
@@ -3723,8 +3723,8 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
 	movl	$496, %edx	 #,
 	movq	%rbx, %rcx	 # _29,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp144, D.254840
-	movq	%rax, %rcx	 # D.254840,
+	movq	%rsi, %rax	 # tmp144, D.254855
+	movq	%rax, %rcx	 # D.254855,
 	call	_Unwind_Resume	 #
 .L142:
 	movq	%rax, %rsi	 #, tmp145
@@ -3733,8 +3733,8 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
 	movl	$232, %edx	 #,
 	movq	%rbx, %rcx	 # _34,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp145, D.254841
-	movq	%rax, %rcx	 # D.254841,
+	movq	%rsi, %rax	 # tmp145, D.254856
+	movq	%rax, %rcx	 # D.254856,
 	call	_Unwind_Resume	 #
 .L144:
 	movq	%rax, %rsi	 #, tmp147
@@ -3753,8 +3753,8 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
 	leaq	-64(%rbp), %rax	 #, tmp150
 	movq	%rax, %rcx	 # tmp150,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp146, D.254842
-	movq	%rax, %rcx	 # D.254842,
+	movq	%rbx, %rax	 # tmp146, D.254857
+	movq	%rax, %rcx	 # D.254857,
 	call	_Unwind_Resume	 #
 .L145:
 	movq	%rax, %rbx	 #, tmp152
@@ -3763,8 +3763,8 @@ _ZN15T100ProjectView6CreateEP16T100ProjectFrame:
 	leaq	-16(%rbp), %rax	 #, tmp151
 	movq	%rax, %rcx	 # tmp151,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp152, D.254843
-	movq	%rax, %rcx	 # D.254843,
+	movq	%rbx, %rax	 # tmp152, D.254858
+	movq	%rax, %rcx	 # D.254858,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE29:
@@ -3855,7 +3855,7 @@ _ZN15T100ProjectView7DestroyEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:35:     m_manager->UnInit();
 	.loc 15 35 5
 	movq	16(%rbp), %rax	 # this, tmp102
-	movq	16(%rax), %rax	 # this_19(D)->D.168294.m_manager, _1
+	movq	16(%rax), %rax	 # this_19(D)->D.168309.m_manager, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:35:     m_manager->UnInit();
 	.loc 15 35 22
 	movq	%rax, %rcx	 # _1,
@@ -3863,9 +3863,9 @@ _ZN15T100ProjectView7DestroyEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:36:     m_mainMenu->Destroy();
 	.loc 15 36 5
 	movq	16(%rbp), %rax	 # this, tmp103
-	movq	32(%rax), %rdx	 # this_19(D)->D.168294.m_mainMenu, _2
+	movq	32(%rax), %rdx	 # this_19(D)->D.168309.m_mainMenu, _2
 	movq	16(%rbp), %rax	 # this, tmp105
-	movq	32(%rax), %rax	 # this_19(D)->D.168294.m_mainMenu, _4
+	movq	32(%rax), %rax	 # this_19(D)->D.168309.m_mainMenu, _4
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:36:     m_mainMenu->Destroy();
 	.loc 15 36 25
 	movq	(%rax), %rax	 # _4->_vptr.T100ProjectViewMainMenu, _5
@@ -3879,21 +3879,21 @@ _ZN15T100ProjectView7DestroyEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:37:     T100SAFE_DELETE(m_mainMenu);
 	.loc 15 37 5
 	movq	16(%rbp), %rax	 # this, tmp106
-	movq	32(%rax), %rax	 # this_19(D)->D.168294.m_mainMenu, _8
+	movq	32(%rax), %rax	 # this_19(D)->D.168309.m_mainMenu, _8
 	testq	%rax, %rax	 # _8
 	je	.L150	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:37:     T100SAFE_DELETE(m_mainMenu);
 	.loc 15 37 5 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	32(%rax), %rax	 # this_19(D)->D.168294.m_mainMenu, _9
+	movq	32(%rax), %rax	 # this_19(D)->D.168309.m_mainMenu, _9
 	testq	%rax, %rax	 # _9
 	je	.L149	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:37:     T100SAFE_DELETE(m_mainMenu);
 	.loc 15 37 5 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp108
-	movq	32(%rax), %rdx	 # this_19(D)->D.168294.m_mainMenu, _10
+	movq	32(%rax), %rdx	 # this_19(D)->D.168309.m_mainMenu, _10
 	movq	16(%rbp), %rax	 # this, tmp110
-	movq	32(%rax), %rax	 # this_19(D)->D.168294.m_mainMenu, _12
+	movq	32(%rax), %rax	 # this_19(D)->D.168309.m_mainMenu, _12
 	movq	(%rax), %rax	 # _12->_vptr.T100ProjectViewMainMenu, _13
 	addq	$8, %rax	 #, _14
 	movq	(%rax), %rax	 # *_14, _15
@@ -3904,7 +3904,7 @@ _ZN15T100ProjectView7DestroyEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:37:     T100SAFE_DELETE(m_mainMenu);
 	.loc 15 37 5 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp111
-	movq	$0, 32(%rax)	 #, this_19(D)->D.168294.m_mainMenu
+	movq	$0, 32(%rax)	 #, this_19(D)->D.168309.m_mainMenu
 .L150:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:38: }
 	.loc 15 38 1 is_stmt 1
@@ -3940,9 +3940,9 @@ _ZN15T100ProjectView13WorkSpaceOpenEP17T100WorkSpaceInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:42:     m_projectTree->WorkSpaceOpen(info);
 	.loc 15 42 5
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	40(%rax), %rcx	 # this_8(D)->D.168294.m_projectTree, _1
+	movq	40(%rax), %rcx	 # this_8(D)->D.168309.m_projectTree, _1
 	movq	16(%rbp), %rax	 # this, tmp95
-	movq	40(%rax), %rax	 # this_8(D)->D.168294.m_projectTree, _3
+	movq	40(%rax), %rax	 # this_8(D)->D.168309.m_projectTree, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:42:     m_projectTree->WorkSpaceOpen(info);
 	.loc 15 42 38
 	movq	(%rax), %rax	 # _3->D.163078.D.162897.D.161711.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _4
@@ -4040,7 +4040,7 @@ _ZN15T100ProjectView17WorkSpaceSelectedEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:57:     m_mainMenu->WorkSpaceSelected();
 	.loc 15 57 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	32(%rax), %rax	 # this_3(D)->D.168294.m_mainMenu, _1
+	movq	32(%rax), %rax	 # this_3(D)->D.168309.m_mainMenu, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:57:     m_mainMenu->WorkSpaceSelected();
 	.loc 15 57 34
 	movq	%rax, %rcx	 # _1,
@@ -4079,9 +4079,9 @@ _ZN15T100ProjectView11ProjectOpenEP15T100ProjectInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:62:     m_projectTree->ProjectOpen(info);
 	.loc 15 62 5
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	40(%rax), %rcx	 # this_8(D)->D.168294.m_projectTree, _1
+	movq	40(%rax), %rcx	 # this_8(D)->D.168309.m_projectTree, _1
 	movq	16(%rbp), %rax	 # this, tmp95
-	movq	40(%rax), %rax	 # this_8(D)->D.168294.m_projectTree, _3
+	movq	40(%rax), %rax	 # this_8(D)->D.168309.m_projectTree, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:62:     m_projectTree->ProjectOpen(info);
 	.loc 15 62 36
 	movq	(%rax), %rax	 # _3->D.163078.D.162897.D.161711.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _4
@@ -4125,7 +4125,7 @@ _ZN15T100ProjectView15ProjectSelectedEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:67:     m_mainMenu->ProjectSelected();
 	.loc 15 67 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	32(%rax), %rax	 # this_3(D)->D.168294.m_mainMenu, _1
+	movq	32(%rax), %rax	 # this_3(D)->D.168309.m_mainMenu, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:67:     m_mainMenu->ProjectSelected();
 	.loc 15 67 32
 	movq	%rax, %rcx	 # _1,
@@ -4163,7 +4163,7 @@ _ZN15T100ProjectView12FileModifiedEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:72:     m_mainMenu->FileModified();
 	.loc 15 72 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	32(%rax), %rax	 # this_3(D)->D.168294.m_mainMenu, _1
+	movq	32(%rax), %rax	 # this_3(D)->D.168309.m_mainMenu, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:72:     m_mainMenu->FileModified();
 	.loc 15 72 29
 	movq	%rax, %rcx	 # _1,
@@ -4211,8 +4211,8 @@ _ZN15T100ProjectView8FileOpenE12wxTreeItemIdP12T100FileInfo:
 	movq	%r8, 208(%rbp)	 # info, info
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:77:     if(m_mainPanel){
 	.loc 15 77 8
-	movq	192(%rbp), %rax	 # this, tmp111
-	movq	48(%rax), %rax	 # this_25(D)->D.168294.m_mainPanel, _1
+	movq	192(%rbp), %rax	 # this, tmp112
+	movq	48(%rax), %rax	 # this_26(D)->D.168309.m_mainPanel, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:77:     if(m_mainPanel){
 	.loc 15 77 5
 	testq	%rax, %rax	 # _1
@@ -4223,42 +4223,42 @@ _ZN15T100ProjectView8FileOpenE12wxTreeItemIdP12T100FileInfo:
 .LEHB30:
 	call	_Znwy	 #
 .LEHE30:
-	movq	%rax, %rbx	 # tmp112, _27
+	movq	%rax, %rbx	 # tmp113, _28
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:80:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
 	.loc 15 80 49
-	movq	192(%rbp), %rax	 # this, tmp113
-	movq	24(%rax), %rax	 # this_25(D)->D.168294.m_frame, _2
+	movq	192(%rbp), %rax	 # this, tmp114
+	movq	24(%rax), %rax	 # this_26(D)->D.168309.m_frame, _2
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:80:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
 	.loc 15 80 111
 	movl	$2048, 40(%rsp)	 #,
-	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp114
-	movq	%rdx, 32(%rsp)	 # tmp114,
+	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp115
+	movq	%rdx, 32(%rsp)	 # tmp115,
 	movq	.refptr.wxDefaultPosition(%rip), %r9	 #,
 	movl	$-1, %r8d	 #,
 	movq	%rax, %rdx	 # _2,
-	movq	%rbx, %rcx	 # _27,
+	movq	%rbx, %rcx	 # _28,
 .LEHB31:
 	call	_ZN13T100MainPanelC1EP8wxWindowiRK7wxPointRK6wxSizel	 #
 .LEHE31:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:80:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
 	.loc 15 80 25 discriminator 2
-	movq	192(%rbp), %rax	 # this, tmp115
-	movq	%rbx, 48(%rax)	 # _27, this_25(D)->D.168294.m_mainPanel
+	movq	192(%rbp), %rax	 # this, tmp116
+	movq	%rbx, 48(%rax)	 # _28, this_26(D)->D.168309.m_mainPanel
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:81:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
 	.loc 15 81 9 discriminator 2
-	movq	192(%rbp), %rax	 # this, tmp116
-	movq	16(%rax), %rbx	 # this_25(D)->D.168294.m_manager, _3
+	movq	192(%rbp), %rax	 # this, tmp117
+	movq	16(%rax), %rbx	 # this_26(D)->D.168309.m_manager, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:81:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
 	.loc 15 81 41 discriminator 2
-	leaq	-80(%rbp), %rax	 #, tmp117
-	movq	%rax, %rcx	 # tmp117,
+	leaq	-80(%rbp), %rax	 #, tmp118
+	movq	%rax, %rcx	 # tmp118,
 .LEHB32:
 	call	_ZN13wxAuiPaneInfoC1Ev	 #
 .LEHE32:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:81:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
 	.loc 15 81 64 discriminator 2
-	leaq	-80(%rbp), %rax	 #, tmp118
-	movq	%rax, %rcx	 # tmp118,
+	leaq	-80(%rbp), %rax	 #, tmp119
+	movq	%rax, %rcx	 # tmp119,
 	call	_ZN13wxAuiPaneInfo6CenterEv	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:81:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
 	.loc 15 81 87 discriminator 2
@@ -4274,8 +4274,8 @@ _ZN15T100ProjectView8FileOpenE12wxTreeItemIdP12T100FileInfo:
 	movq	%rax, %rdx	 #, _6
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:81:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
 	.loc 15 81 28 discriminator 2
-	movq	192(%rbp), %rax	 # this, tmp119
-	movq	48(%rax), %rax	 # this_25(D)->D.168294.m_mainPanel, _7
+	movq	192(%rbp), %rax	 # this, tmp120
+	movq	48(%rax), %rax	 # this_26(D)->D.168309.m_mainPanel, _7
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:81:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
 	.loc 15 81 27 discriminator 2
 	movq	%rdx, %r8	 # _6,
@@ -4285,33 +4285,33 @@ _ZN15T100ProjectView8FileOpenE12wxTreeItemIdP12T100FileInfo:
 .LEHE33:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:81:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
 	.loc 15 81 41 discriminator 6
-	leaq	-80(%rbp), %rax	 #, tmp120
-	movq	%rax, %rcx	 # tmp120,
+	leaq	-80(%rbp), %rax	 #, tmp121
+	movq	%rax, %rcx	 # tmp121,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
 .L159:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:84:     m_mainPanel->Create(info);
 	.loc 15 84 5
-	movq	192(%rbp), %rax	 # this, tmp121
-	movq	48(%rax), %rcx	 # this_25(D)->D.168294.m_mainPanel, _8
-	movq	192(%rbp), %rax	 # this, tmp123
-	movq	48(%rax), %rax	 # this_25(D)->D.168294.m_mainPanel, _10
+	movq	192(%rbp), %rax	 # this, tmp122
+	movq	48(%rax), %rcx	 # this_26(D)->D.168309.m_mainPanel, _8
+	movq	192(%rbp), %rax	 # this, tmp124
+	movq	48(%rax), %rax	 # this_26(D)->D.168309.m_mainPanel, _10
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:84:     m_mainPanel->Create(info);
 	.loc 15 84 29
-	movq	(%rax), %rax	 # _10->D.168144.D.153811.D.153517.D.152132.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _11
+	movq	(%rax), %rax	 # _10->D.168153.D.153811.D.153517.D.152132.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _11
 	addq	$2072, %rax	 #, _12
 	movq	(%rax), %rax	 # *_12, _13
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:84:     m_mainPanel->Create(info);
 	.loc 15 84 24
-	movq	208(%rbp), %rdx	 # info, tmp124
+	movq	208(%rbp), %rdx	 # info, tmp125
 .LEHB34:
 	call	*%rax	 # _13
 .LVL8:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:86:     m_projectTree->FileOpen(id, info);
 	.loc 15 86 5
-	movq	192(%rbp), %rax	 # this, tmp125
-	movq	40(%rax), %rcx	 # this_25(D)->D.168294.m_projectTree, _14
-	movq	192(%rbp), %rax	 # this, tmp127
-	movq	40(%rax), %rax	 # this_25(D)->D.168294.m_projectTree, _16
+	movq	192(%rbp), %rax	 # this, tmp126
+	movq	40(%rax), %rcx	 # this_26(D)->D.168309.m_projectTree, _14
+	movq	192(%rbp), %rax	 # this, tmp128
+	movq	40(%rax), %rax	 # this_26(D)->D.168309.m_projectTree, _16
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:86:     m_projectTree->FileOpen(id, info);
 	.loc 15 86 37
 	movq	(%rax), %rax	 # _16->D.163078.D.162897.D.161711.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _17
@@ -4319,54 +4319,59 @@ _ZN15T100ProjectView8FileOpenE12wxTreeItemIdP12T100FileInfo:
 	movq	(%rax), %rax	 # *_18, _19
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:86:     m_projectTree->FileOpen(id, info);
 	.loc 15 86 28
-	movq	208(%rbp), %r8	 # info, tmp128
-	movq	200(%rbp), %rdx	 # id, tmp129
+	movq	208(%rbp), %r8	 # info, tmp129
+	movq	200(%rbp), %rdx	 # id, tmp130
 	call	*%rax	 # _19
 .LVL9:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:88:     m_mainMenu->FileOpen();
 	.loc 15 88 5
-	movq	192(%rbp), %rax	 # this, tmp130
-	movq	32(%rax), %rax	 # this_25(D)->D.168294.m_mainMenu, _20
+	movq	192(%rbp), %rax	 # this, tmp131
+	movq	32(%rax), %rax	 # this_26(D)->D.168309.m_mainMenu, _20
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:88:     m_mainMenu->FileOpen();
 	.loc 15 88 25
 	movq	%rax, %rcx	 # _20,
 	call	_ZN23T100ProjectViewMainMenu8FileOpenEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:90:     m_manager->Update();
-	.loc 15 90 5
-	movq	192(%rbp), %rax	 # this, tmp131
-	movq	16(%rax), %rax	 # this_25(D)->D.168294.m_manager, _21
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:90:     m_manager->Update();
-	.loc 15 90 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:90:     SetTitle();
+	.loc 15 90 13
+	movq	192(%rbp), %rax	 # this, _21
 	movq	%rax, %rcx	 # _21,
+	call	_ZN19T100ProjectViewBase8SetTitleEv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:92:     m_manager->Update();
+	.loc 15 92 5
+	movq	192(%rbp), %rax	 # this, tmp132
+	movq	16(%rax), %rax	 # this_26(D)->D.168309.m_manager, _22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:92:     m_manager->Update();
+	.loc 15 92 22
+	movq	%rax, %rcx	 # _22,
 	call	_ZN12wxAuiManager6UpdateEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:92: }
-	.loc 15 92 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:94: }
+	.loc 15 94 1
 	jmp	.L164	 #
 .L162:
-	movq	%rax, %rsi	 #, tmp132
+	movq	%rax, %rsi	 #, tmp133
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:80:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
 	.loc 15 80 111
 	movl	$1472, %edx	 #,
-	movq	%rbx, %rcx	 # _27,
+	movq	%rbx, %rcx	 # _28,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp132, D.254846
-	movq	%rax, %rcx	 # D.254846,
+	movq	%rsi, %rax	 # tmp133, D.254861
+	movq	%rax, %rcx	 # D.254861,
 	call	_Unwind_Resume	 #
 .L163:
-	movq	%rax, %rbx	 #, tmp134
+	movq	%rax, %rbx	 #, tmp135
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:81:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
 	.loc 15 81 41
-	leaq	-80(%rbp), %rax	 #, tmp133
-	movq	%rax, %rcx	 # tmp133,
+	leaq	-80(%rbp), %rax	 #, tmp134
+	movq	%rax, %rcx	 # tmp134,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp134, D.254847
-	movq	%rax, %rcx	 # D.254847,
+	movq	%rbx, %rax	 # tmp135, D.254862
+	movq	%rax, %rcx	 # D.254862,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE34:
 .L164:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:92: }
-	.loc 15 92 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:94: }
+	.loc 15 94 1
 	addq	$288, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -4415,7 +4420,7 @@ _ZN15T100ProjectView8FileOpenE12wxTreeItemIdP12T100FileInfo:
 	.seh_proc	_ZN15T100ProjectView10FolderOpenE12wxTreeItemIdP14T100FolderInfo
 _ZN15T100ProjectView10FolderOpenE12wxTreeItemIdP14T100FolderInfo:
 .LFB18814:
-	.loc 15 95 1
+	.loc 15 97 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -4430,25 +4435,25 @@ _ZN15T100ProjectView10FolderOpenE12wxTreeItemIdP14T100FolderInfo:
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # id, id
 	movq	%r8, 32(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:96:     m_projectTree->FolderOpen(id, info);
-	.loc 15 96 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:98:     m_projectTree->FolderOpen(id, info);
+	.loc 15 98 5
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	40(%rax), %rcx	 # this_8(D)->D.168294.m_projectTree, _1
+	movq	40(%rax), %rcx	 # this_8(D)->D.168309.m_projectTree, _1
 	movq	16(%rbp), %rax	 # this, tmp95
-	movq	40(%rax), %rax	 # this_8(D)->D.168294.m_projectTree, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:96:     m_projectTree->FolderOpen(id, info);
-	.loc 15 96 39
+	movq	40(%rax), %rax	 # this_8(D)->D.168309.m_projectTree, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:98:     m_projectTree->FolderOpen(id, info);
+	.loc 15 98 39
 	movq	(%rax), %rax	 # _3->D.163078.D.162897.D.161711.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _4
 	addq	$2368, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:96:     m_projectTree->FolderOpen(id, info);
-	.loc 15 96 30
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:98:     m_projectTree->FolderOpen(id, info);
+	.loc 15 98 30
 	movq	32(%rbp), %r8	 # info, tmp96
 	movq	24(%rbp), %rdx	 # id, tmp97
 	call	*%rax	 # _6
 .LVL10:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:97: }
-	.loc 15 97 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:99: }
+	.loc 15 99 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -4464,7 +4469,7 @@ _ZN15T100ProjectView10FolderOpenE12wxTreeItemIdP14T100FolderInfo:
 	.seh_proc	_ZN15T100ProjectView14FolderSelectedEv
 _ZN15T100ProjectView14FolderSelectedEv:
 .LFB18815:
-	.loc 15 100 1
+	.loc 15 102 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -4477,16 +4482,16 @@ _ZN15T100ProjectView14FolderSelectedEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:101:     m_mainMenu->FolderSelected();
-	.loc 15 101 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:103:     m_mainMenu->FolderSelected();
+	.loc 15 103 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	32(%rax), %rax	 # this_3(D)->D.168294.m_mainMenu, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:101:     m_mainMenu->FolderSelected();
-	.loc 15 101 31
+	movq	32(%rax), %rax	 # this_3(D)->D.168309.m_mainMenu, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:103:     m_mainMenu->FolderSelected();
+	.loc 15 103 31
 	movq	%rax, %rcx	 # _1,
 	call	_ZN23T100ProjectViewMainMenu14FolderSelectedEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:102: }
-	.loc 15 102 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:104: }
+	.loc 15 104 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -4502,7 +4507,7 @@ _ZN15T100ProjectView14FolderSelectedEv:
 	.seh_proc	_ZN15T100ProjectView11ProjectOpenE12wxTreeItemIdP15T100ProjectInfo
 _ZN15T100ProjectView11ProjectOpenE12wxTreeItemIdP15T100ProjectInfo:
 .LFB18816:
-	.loc 15 105 1
+	.loc 15 107 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -4517,25 +4522,25 @@ _ZN15T100ProjectView11ProjectOpenE12wxTreeItemIdP15T100ProjectInfo:
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # id, id
 	movq	%r8, 32(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:106:     m_projectTree->ProjectOpen(id, info);
-	.loc 15 106 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:108:     m_projectTree->ProjectOpen(id, info);
+	.loc 15 108 5
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	40(%rax), %rcx	 # this_8(D)->D.168294.m_projectTree, _1
+	movq	40(%rax), %rcx	 # this_8(D)->D.168309.m_projectTree, _1
 	movq	16(%rbp), %rax	 # this, tmp95
-	movq	40(%rax), %rax	 # this_8(D)->D.168294.m_projectTree, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:106:     m_projectTree->ProjectOpen(id, info);
-	.loc 15 106 40
+	movq	40(%rax), %rax	 # this_8(D)->D.168309.m_projectTree, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:108:     m_projectTree->ProjectOpen(id, info);
+	.loc 15 108 40
 	movq	(%rax), %rax	 # _3->D.163078.D.162897.D.161711.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _4
 	addq	$2376, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:106:     m_projectTree->ProjectOpen(id, info);
-	.loc 15 106 31
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:108:     m_projectTree->ProjectOpen(id, info);
+	.loc 15 108 31
 	movq	32(%rbp), %r8	 # info, tmp96
 	movq	24(%rbp), %rdx	 # id, tmp97
 	call	*%rax	 # _6
 .LVL11:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:107: }
-	.loc 15 107 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:109: }
+	.loc 15 109 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -4551,7 +4556,7 @@ _ZN15T100ProjectView11ProjectOpenE12wxTreeItemIdP15T100ProjectInfo:
 	.seh_proc	_ZN15T100ProjectView21ShowSetupEditorDialogEv
 _ZN15T100ProjectView21ShowSetupEditorDialogEv:
 .LFB18817:
-	.loc 15 110 1
+	.loc 15 112 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -4562,8 +4567,8 @@ _ZN15T100ProjectView21ShowSetupEditorDialogEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:112: }
-	.loc 15 112 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:114: }
+	.loc 15 114 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -4578,7 +4583,7 @@ _ZN15T100ProjectView21ShowSetupEditorDialogEv:
 	.seh_proc	_ZN15T100ProjectView23ShowSetupCompilerDialogEv
 _ZN15T100ProjectView23ShowSetupCompilerDialogEv:
 .LFB18818:
-	.loc 15 115 1
+	.loc 15 117 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -4589,8 +4594,8 @@ _ZN15T100ProjectView23ShowSetupCompilerDialogEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:117: }
-	.loc 15 117 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:119: }
+	.loc 15 119 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -4605,7 +4610,7 @@ _ZN15T100ProjectView23ShowSetupCompilerDialogEv:
 	.seh_proc	_ZN15T100ProjectView4LoadERKSt6vectorIP15T100ProjectInfoSaIS2_EE
 _ZN15T100ProjectView4LoadERKSt6vectorIP15T100ProjectInfoSaIS2_EE:
 .LFB18819:
-	.loc 15 120 1
+	.loc 15 122 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -4619,24 +4624,24 @@ _ZN15T100ProjectView4LoadERKSt6vectorIP15T100ProjectInfoSaIS2_EE:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # projects, projects
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:121:     m_projectTree->Load(projects);
-	.loc 15 121 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:123:     m_projectTree->Load(projects);
+	.loc 15 123 5
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	40(%rax), %rcx	 # this_8(D)->D.168294.m_projectTree, _1
+	movq	40(%rax), %rcx	 # this_8(D)->D.168309.m_projectTree, _1
 	movq	16(%rbp), %rax	 # this, tmp95
-	movq	40(%rax), %rax	 # this_8(D)->D.168294.m_projectTree, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:121:     m_projectTree->Load(projects);
-	.loc 15 121 33
+	movq	40(%rax), %rax	 # this_8(D)->D.168309.m_projectTree, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:123:     m_projectTree->Load(projects);
+	.loc 15 123 33
 	movq	(%rax), %rax	 # _3->D.163078.D.162897.D.161711.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _4
 	addq	$2392, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:121:     m_projectTree->Load(projects);
-	.loc 15 121 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:123:     m_projectTree->Load(projects);
+	.loc 15 123 24
 	movq	24(%rbp), %rdx	 # projects, tmp96
 	call	*%rax	 # _6
 .LVL12:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:122: }
-	.loc 15 122 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:124: }
+	.loc 15 124 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -4657,7 +4662,7 @@ _ZN15T100ProjectView4LoadERKSt6vectorIP15T100ProjectInfoSaIS2_EE:
 	.seh_proc	_ZN15T100ProjectView3NewEv
 _ZN15T100ProjectView3NewEv:
 .LFB18820:
-	.loc 15 125 1
+	.loc 15 127 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -4679,19 +4684,19 @@ _ZN15T100ProjectView3NewEv:
 	.cfi_def_cfa 6, 320
 	.seh_endprologue
 	movq	%rcx, 320(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:126:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 126 107
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:128:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 128 107
 	movl	$1472, %ecx	 #,
 .LEHB35:
 	call	_Znwy	 #
 .LEHE35:
 	movq	%rax, %rbx	 # tmp104, _15
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:126:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 126 45
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:128:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 128 45
 	movq	320(%rbp), %rax	 # this, tmp105
-	movq	24(%rax), %rax	 # this_17(D)->D.168294.m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:126:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 126 107
+	movq	24(%rax), %rax	 # this_17(D)->D.168309.m_frame, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:128:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 128 107
 	movl	$2048, 40(%rsp)	 #,
 	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp106
 	movq	%rdx, 32(%rsp)	 # tmp106,
@@ -4702,56 +4707,56 @@ _ZN15T100ProjectView3NewEv:
 .LEHB36:
 	call	_ZN13T100MainPanelC1EP8wxWindowiRK7wxPointRK6wxSizel	 #
 .LEHE36:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:126:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 126 21 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:128:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 128 21 discriminator 2
 	movq	320(%rbp), %rax	 # this, tmp107
-	movq	%rbx, 48(%rax)	 # _15, this_17(D)->D.168294.m_mainPanel
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:127:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 127 5 discriminator 2
+	movq	%rbx, 48(%rax)	 # _15, this_17(D)->D.168309.m_mainPanel
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 129 5 discriminator 2
 	movq	320(%rbp), %rax	 # this, tmp108
-	movq	16(%rax), %rbx	 # this_17(D)->D.168294.m_manager, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:127:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 127 37 discriminator 2
+	movq	16(%rax), %rbx	 # this_17(D)->D.168309.m_manager, _2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 129 37 discriminator 2
 	leaq	-64(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 .LEHB37:
 	call	_ZN13wxAuiPaneInfoC1Ev	 #
 .LEHE37:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:127:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 127 60 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 129 60 discriminator 2
 	leaq	-64(%rbp), %rax	 #, tmp110
 	movq	%rax, %rcx	 # tmp110,
 	call	_ZN13wxAuiPaneInfo6CenterEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:127:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 127 83 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 129 83 discriminator 2
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _3,
 .LEHB38:
 	call	_ZN13wxAuiPaneInfo11CloseButtonEb	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:127:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 127 109 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 129 109 discriminator 2
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _4,
 	call	_ZN13wxAuiPaneInfo14CaptionVisibleEb	 #
 	movq	%rax, %rdx	 #, _5
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:127:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 127 24 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 129 24 discriminator 2
 	movq	320(%rbp), %rax	 # this, tmp111
-	movq	48(%rax), %rax	 # this_17(D)->D.168294.m_mainPanel, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:127:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 127 23 discriminator 2
+	movq	48(%rax), %rax	 # this_17(D)->D.168309.m_mainPanel, _6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 129 23 discriminator 2
 	movq	%rdx, %r8	 # _5,
 	movq	%rax, %rdx	 # _6,
 	movq	%rbx, %rcx	 # _2,
 	call	_ZN12wxAuiManager7AddPaneEP8wxWindowRK13wxAuiPaneInfo	 #
 .LEHE38:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:127:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 127 37 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 129 37 discriminator 6
 	leaq	-64(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
-	.loc 15 129 65 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:131:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
+	.loc 15 131 65 discriminator 6
 	leaq	176(%rbp), %rax	 #, tmp113
 	movq	.refptr.wxSTCNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp113,
@@ -4759,17 +4764,17 @@ _ZN15T100ProjectView3NewEv:
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE39:
 	leaq	176(%rbp), %rsi	 #, _30
-	movl	$1344, %ecx	 #,
+	movl	$1376, %ecx	 #,
 .LEHB40:
 	call	_Znwy	 #
 .LEHE40:
 	movq	%rax, %rbx	 # tmp114, _32
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
-	.loc 15 129 54 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:131:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
+	.loc 15 131 54 discriminator 6
 	movq	320(%rbp), %rax	 # this, tmp115
-	movq	48(%rax), %rax	 # this_17(D)->D.168294.m_mainPanel, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
-	.loc 15 129 65 discriminator 6
+	movq	48(%rax), %rax	 # this_17(D)->D.168309.m_mainPanel, _7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:131:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
+	.loc 15 131 65 discriminator 6
 	movq	%rsi, 48(%rsp)	 # _30,
 	movl	$0, 40(%rsp)	 #,
 	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp116
@@ -4781,18 +4786,18 @@ _ZN15T100ProjectView3NewEv:
 .LEHB41:
 	call	_ZN10T100EditorC1EP8wxWindowiRK7wxPointRK6wxSizelRK8wxString	 #
 .LEHE41:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
-	.loc 15 129 65 is_stmt 0 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:131:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
+	.loc 15 131 65 is_stmt 0 discriminator 4
 	movq	%rbx, 280(%rbp)	 # _32, editor
 	leaq	176(%rbp), %rax	 #, tmp117
 	movq	%rax, %rcx	 # tmp117,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:131:     m_mainPanel->AddPage(editor, L"Editor");
-	.loc 15 131 5 is_stmt 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:133:     m_mainPanel->AddPage(editor, L"Editor");
+	.loc 15 133 5 is_stmt 1 discriminator 4
 	movq	320(%rbp), %rax	 # this, tmp118
-	movq	48(%rax), %rax	 # this_17(D)->D.168294.m_mainPanel, _8
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:131:     m_mainPanel->AddPage(editor, L"Editor");
-	.loc 15 131 25 discriminator 4
+	movq	48(%rax), %rax	 # this_17(D)->D.168309.m_mainPanel, _8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:133:     m_mainPanel->AddPage(editor, L"Editor");
+	.loc 15 133 25 discriminator 4
 	movq	%rax, %rbx	 # _8, _9
 	leaq	224(%rbp), %rax	 #, tmp119
 	leaq	.LC4(%rip), %rdx	 #,
@@ -4811,48 +4816,48 @@ _ZN15T100ProjectView3NewEv:
 .LEHB43:
 	call	_ZN13wxAuiNotebook7AddPageEP8wxWindowRK8wxStringbRK8wxBitmap	 #
 .LEHE43:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:131:     m_mainPanel->AddPage(editor, L"Editor");
-	.loc 15 131 25 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:133:     m_mainPanel->AddPage(editor, L"Editor");
+	.loc 15 133 25 is_stmt 0 discriminator 2
 	leaq	224(%rbp), %rax	 #, tmp123
 	movq	%rax, %rcx	 # tmp123,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:134:     m_manager->Update();
-	.loc 15 134 5 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:136:     m_manager->Update();
+	.loc 15 136 5 is_stmt 1 discriminator 2
 	movq	320(%rbp), %rax	 # this, tmp124
-	movq	16(%rax), %rax	 # this_17(D)->D.168294.m_manager, _10
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:134:     m_manager->Update();
-	.loc 15 134 22 discriminator 2
+	movq	16(%rax), %rax	 # this_17(D)->D.168309.m_manager, _10
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:136:     m_manager->Update();
+	.loc 15 136 22 discriminator 2
 	movq	%rax, %rcx	 # _10,
 .LEHB44:
 	call	_ZN12wxAuiManager6UpdateEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:135: }
-	.loc 15 135 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:137: }
+	.loc 15 137 1 discriminator 2
 	jmp	.L182	 #
 .L177:
 	movq	%rax, %rsi	 #, tmp125
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:126:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 126 107
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:128:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 128 107
 	movl	$1472, %edx	 #,
 	movq	%rbx, %rcx	 # _15,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp125, D.254848
-	movq	%rax, %rcx	 # D.254848,
+	movq	%rsi, %rax	 # tmp125, D.254863
+	movq	%rax, %rcx	 # D.254863,
 	call	_Unwind_Resume	 #
 .L178:
 	movq	%rax, %rbx	 #, tmp127
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:127:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 127 37
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 129 37
 	leaq	-64(%rbp), %rax	 #, tmp126
 	movq	%rax, %rcx	 # tmp126,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.254849
-	movq	%rax, %rcx	 # D.254849,
+	movq	%rbx, %rax	 # tmp127, D.254864
+	movq	%rax, %rcx	 # D.254864,
 	call	_Unwind_Resume	 #
 .L180:
 	movq	%rax, %rsi	 #, tmp129
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
-	.loc 15 129 65
-	movl	$1344, %edx	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:131:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
+	.loc 15 131 65
+	movl	$1376, %edx	 #,
 	movq	%rbx, %rcx	 # _32,
 	call	_ZdlPvy	 #
 	movq	%rsi, %rbx	 # tmp129, tmp128
@@ -4860,29 +4865,29 @@ _ZN15T100ProjectView3NewEv:
 .L179:
 	movq	%rax, %rbx	 #, tmp128
 .L175:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:129:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
-	.loc 15 129 65 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:131:     T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
+	.loc 15 131 65 is_stmt 0 discriminator 1
 	leaq	176(%rbp), %rax	 #, tmp132
 	movq	%rax, %rcx	 # tmp132,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp128, D.254850
-	movq	%rax, %rcx	 # D.254850,
+	movq	%rbx, %rax	 # tmp128, D.254865
+	movq	%rax, %rcx	 # D.254865,
 	call	_Unwind_Resume	 #
 .L181:
 	movq	%rax, %rbx	 #, tmp134
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:131:     m_mainPanel->AddPage(editor, L"Editor");
-	.loc 15 131 25 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:133:     m_mainPanel->AddPage(editor, L"Editor");
+	.loc 15 133 25 is_stmt 1
 	leaq	224(%rbp), %rax	 #, tmp133
 	movq	%rax, %rcx	 # tmp133,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp134, D.254851
-	movq	%rax, %rcx	 # D.254851,
+	movq	%rbx, %rax	 # tmp134, D.254866
+	movq	%rax, %rcx	 # D.254866,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE44:
 .L182:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:135: }
-	.loc 15 135 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:137: }
+	.loc 15 137 1
 	addq	$416, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -4951,7 +4956,7 @@ _ZN15T100ProjectView3NewEv:
 	.seh_proc	_ZN15T100ProjectView5ClearEv
 _ZN15T100ProjectView5ClearEv:
 .LFB18821:
-	.loc 15 138 1
+	.loc 15 140 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -4964,40 +4969,40 @@ _ZN15T100ProjectView5ClearEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:139:     m_projectTree->Clear();
-	.loc 15 139 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:141:     m_projectTree->Clear();
+	.loc 15 141 5
 	movq	16(%rbp), %rax	 # this, tmp99
-	movq	40(%rax), %rdx	 # this_14(D)->D.168294.m_projectTree, _1
+	movq	40(%rax), %rdx	 # this_14(D)->D.168309.m_projectTree, _1
 	movq	16(%rbp), %rax	 # this, tmp101
-	movq	40(%rax), %rax	 # this_14(D)->D.168294.m_projectTree, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:139:     m_projectTree->Clear();
-	.loc 15 139 26
+	movq	40(%rax), %rax	 # this_14(D)->D.168309.m_projectTree, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:141:     m_projectTree->Clear();
+	.loc 15 141 26
 	movq	(%rax), %rax	 # _3->D.163078.D.162897.D.161711.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _4
 	addq	$2384, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:139:     m_projectTree->Clear();
-	.loc 15 139 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:141:     m_projectTree->Clear();
+	.loc 15 141 25
 	movq	%rdx, %rcx	 # _1,
 	call	*%rax	 # _6
 .LVL13:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:140:     m_mainPanel->Clear();
-	.loc 15 140 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:142:     m_mainPanel->Clear();
+	.loc 15 142 5
 	movq	16(%rbp), %rax	 # this, tmp102
-	movq	48(%rax), %rdx	 # this_14(D)->D.168294.m_mainPanel, _7
+	movq	48(%rax), %rdx	 # this_14(D)->D.168309.m_mainPanel, _7
 	movq	16(%rbp), %rax	 # this, tmp104
-	movq	48(%rax), %rax	 # this_14(D)->D.168294.m_mainPanel, _9
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:140:     m_mainPanel->Clear();
-	.loc 15 140 24
-	movq	(%rax), %rax	 # _9->D.168144.D.153811.D.153517.D.152132.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _10
+	movq	48(%rax), %rax	 # this_14(D)->D.168309.m_mainPanel, _9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:142:     m_mainPanel->Clear();
+	.loc 15 142 24
+	movq	(%rax), %rax	 # _9->D.168153.D.153811.D.153517.D.152132.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _10
 	addq	$2080, %rax	 #, _11
 	movq	(%rax), %rax	 # *_11, _12
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:140:     m_mainPanel->Clear();
-	.loc 15 140 23
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:142:     m_mainPanel->Clear();
+	.loc 15 142 23
 	movq	%rdx, %rcx	 # _7,
 	call	*%rax	 # _12
 .LVL14:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:141: }
-	.loc 15 141 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:143: }
+	.loc 15 143 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -5018,7 +5023,7 @@ _ZN15T100ProjectView5ClearEv:
 	.seh_proc	_ZN15T100ProjectView5AboutEv
 _ZN15T100ProjectView5AboutEv:
 .LFB18822:
-	.loc 15 144 1
+	.loc 15 146 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -5036,8 +5041,8 @@ _ZN15T100ProjectView5AboutEv:
 	.cfi_def_cfa 6, 864
 	.seh_endprologue
 	movq	%rcx, 864(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:145:     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");
-	.loc 15 145 78
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:147:     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");
+	.loc 15 147 78
 	leaq	736(%rbp), %rax	 #, tmp90
 	movq	.refptr.wxDialogNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp90,
@@ -5050,12 +5055,12 @@ _ZN15T100ProjectView5AboutEv:
 .LEHB46:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE46:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:145:     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");
-	.loc 15 145 48 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:147:     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");
+	.loc 15 147 48 discriminator 2
 	movq	864(%rbp), %rax	 # this, tmp92
-	movq	24(%rax), %rcx	 # this_7(D)->D.168294.m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:145:     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");
-	.loc 15 145 78 discriminator 2
+	movq	24(%rax), %rcx	 # this_7(D)->D.168309.m_frame, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:147:     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");
+	.loc 15 147 78 discriminator 2
 	leaq	784(%rbp), %r8	 #, tmp93
 	leaq	-64(%rbp), %rax	 #, tmp94
 	leaq	736(%rbp), %rdx	 #, tmp95
@@ -5078,20 +5083,20 @@ _ZN15T100ProjectView5AboutEv:
 	leaq	736(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:147:     dialog.ShowModal();
-	.loc 15 147 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:149:     dialog.ShowModal();
+	.loc 15 149 21
 	leaq	-64(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 .LEHB48:
 	call	_ZN8wxDialog9ShowModalEv	 #
 .LEHE48:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:145:     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");
-	.loc 15 145 78
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:147:     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");
+	.loc 15 147 78
 	leaq	-64(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:148: }
-	.loc 15 148 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:150: }
+	.loc 15 150 1
 	jmp	.L191	 #
 .L189:
 	movq	%rax, %rbx	 #, tmp104
@@ -5105,25 +5110,25 @@ _ZN15T100ProjectView5AboutEv:
 	leaq	736(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.254855
-	movq	%rax, %rcx	 # D.254855,
+	movq	%rbx, %rax	 # tmp103, D.254870
+	movq	%rax, %rcx	 # D.254870,
 .LEHB49:
 	call	_Unwind_Resume	 #
 .L190:
 	movq	%rax, %rbx	 #, tmp109
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:145:     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");
-	.loc 15 145 78
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:147:     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");
+	.loc 15 147 78
 	leaq	-64(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.254856
-	movq	%rax, %rcx	 # D.254856,
+	movq	%rbx, %rax	 # tmp109, D.254871
+	movq	%rax, %rcx	 # D.254871,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE49:
 .L191:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:148: }
-	.loc 15 148 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:150: }
+	.loc 15 150 1
 	addq	$968, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -5170,7 +5175,7 @@ _ZN15T100ProjectView5AboutEv:
 	.seh_proc	_ZN15T100ProjectView8OnResizeEv
 _ZN15T100ProjectView8OnResizeEv:
 .LFB18823:
-	.loc 15 151 1
+	.loc 15 153 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -5183,16 +5188,16 @@ _ZN15T100ProjectView8OnResizeEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:152:     m_manager->Update();
-	.loc 15 152 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:154:     m_manager->Update();
+	.loc 15 154 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	16(%rax), %rax	 # this_3(D)->D.168294.m_manager, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:152:     m_manager->Update();
-	.loc 15 152 22
+	movq	16(%rax), %rax	 # this_3(D)->D.168309.m_manager, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:154:     m_manager->Update();
+	.loc 15 154 22
 	movq	%rax, %rcx	 # _1,
 	call	_ZN12wxAuiManager6UpdateEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:153: }
-	.loc 15 153 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:155: }
+	.loc 15 155 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -5208,7 +5213,7 @@ _ZN15T100ProjectView8OnResizeEv:
 	.seh_proc	_ZN15T100ProjectView3NewEP12T100FileInfo
 _ZN15T100ProjectView3NewEP12T100FileInfo:
 .LFB18824:
-	.loc 15 156 1
+	.loc 15 158 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -5231,27 +5236,27 @@ _ZN15T100ProjectView3NewEP12T100FileInfo:
 	.seh_endprologue
 	movq	%rcx, 192(%rbp)	 # this, this
 	movq	%rdx, 200(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:157:     if(!m_mainPanel){
-	.loc 15 157 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:     if(!m_mainPanel){
+	.loc 15 159 9
 	movq	192(%rbp), %rax	 # this, tmp104
-	movq	48(%rax), %rax	 # this_18(D)->D.168294.m_mainPanel, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:157:     if(!m_mainPanel){
-	.loc 15 157 5
+	movq	48(%rax), %rax	 # this_18(D)->D.168309.m_mainPanel, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:     if(!m_mainPanel){
+	.loc 15 159 5
 	testq	%rax, %rax	 # _1
 	jne	.L194	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:158:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 158 111
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:160:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 160 111
 	movl	$1472, %ecx	 #,
 .LEHB50:
 	call	_Znwy	 #
 .LEHE50:
 	movq	%rax, %rbx	 # tmp105, _20
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:158:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 158 49
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:160:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 160 49
 	movq	192(%rbp), %rax	 # this, tmp106
-	movq	24(%rax), %rax	 # this_18(D)->D.168294.m_frame, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:158:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 158 111
+	movq	24(%rax), %rax	 # this_18(D)->D.168309.m_frame, _2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:160:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 160 111
 	movl	$2048, 40(%rsp)	 #,
 	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp107
 	movq	%rdx, 32(%rsp)	 # tmp107,
@@ -5262,108 +5267,108 @@ _ZN15T100ProjectView3NewEP12T100FileInfo:
 .LEHB51:
 	call	_ZN13T100MainPanelC1EP8wxWindowiRK7wxPointRK6wxSizel	 #
 .LEHE51:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:158:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 158 25 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:160:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 160 25 discriminator 2
 	movq	192(%rbp), %rax	 # this, tmp108
-	movq	%rbx, 48(%rax)	 # _20, this_18(D)->D.168294.m_mainPanel
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 159 9 discriminator 2
+	movq	%rbx, 48(%rax)	 # _20, this_18(D)->D.168309.m_mainPanel
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 161 9 discriminator 2
 	movq	192(%rbp), %rax	 # this, tmp109
-	movq	16(%rax), %rbx	 # this_18(D)->D.168294.m_manager, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 159 41 discriminator 2
+	movq	16(%rax), %rbx	 # this_18(D)->D.168309.m_manager, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 161 41 discriminator 2
 	leaq	-80(%rbp), %rax	 #, tmp110
 	movq	%rax, %rcx	 # tmp110,
 .LEHB52:
 	call	_ZN13wxAuiPaneInfoC1Ev	 #
 .LEHE52:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 159 64 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 161 64 discriminator 2
 	leaq	-80(%rbp), %rax	 #, tmp111
 	movq	%rax, %rcx	 # tmp111,
 	call	_ZN13wxAuiPaneInfo6CenterEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 159 87 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 161 87 discriminator 2
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _4,
 .LEHB53:
 	call	_ZN13wxAuiPaneInfo11CloseButtonEb	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 159 113 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 161 113 discriminator 2
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxAuiPaneInfo14CaptionVisibleEb	 #
 	movq	%rax, %rdx	 #, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 159 28 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 161 28 discriminator 2
 	movq	192(%rbp), %rax	 # this, tmp112
-	movq	48(%rax), %rax	 # this_18(D)->D.168294.m_mainPanel, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 159 27 discriminator 2
+	movq	48(%rax), %rax	 # this_18(D)->D.168309.m_mainPanel, _7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 161 27 discriminator 2
 	movq	%rdx, %r8	 # _6,
 	movq	%rax, %rdx	 # _7,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZN12wxAuiManager7AddPaneEP8wxWindowRK13wxAuiPaneInfo	 #
 .LEHE53:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 159 41 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 161 41 discriminator 6
 	leaq	-80(%rbp), %rax	 #, tmp113
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->Update();
-	.loc 15 161 9 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:163:         m_manager->Update();
+	.loc 15 163 9 discriminator 6
 	movq	192(%rbp), %rax	 # this, tmp114
-	movq	16(%rax), %rax	 # this_18(D)->D.168294.m_manager, _8
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->Update();
-	.loc 15 161 26 discriminator 6
+	movq	16(%rax), %rax	 # this_18(D)->D.168309.m_manager, _8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:163:         m_manager->Update();
+	.loc 15 163 26 discriminator 6
 	movq	%rax, %rcx	 # _8,
 .LEHB54:
 	call	_ZN12wxAuiManager6UpdateEv	 #
 .L194:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:164:     m_mainPanel->Create(info);
-	.loc 15 164 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:166:     m_mainPanel->Create(info);
+	.loc 15 166 5
 	movq	192(%rbp), %rax	 # this, tmp115
-	movq	48(%rax), %rcx	 # this_18(D)->D.168294.m_mainPanel, _9
+	movq	48(%rax), %rcx	 # this_18(D)->D.168309.m_mainPanel, _9
 	movq	192(%rbp), %rax	 # this, tmp117
-	movq	48(%rax), %rax	 # this_18(D)->D.168294.m_mainPanel, _11
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:164:     m_mainPanel->Create(info);
-	.loc 15 164 29
-	movq	(%rax), %rax	 # _11->D.168144.D.153811.D.153517.D.152132.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _12
+	movq	48(%rax), %rax	 # this_18(D)->D.168309.m_mainPanel, _11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:166:     m_mainPanel->Create(info);
+	.loc 15 166 29
+	movq	(%rax), %rax	 # _11->D.168153.D.153811.D.153517.D.152132.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _12
 	addq	$2072, %rax	 #, _13
 	movq	(%rax), %rax	 # *_13, _14
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:164:     m_mainPanel->Create(info);
-	.loc 15 164 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:166:     m_mainPanel->Create(info);
+	.loc 15 166 24
 	movq	200(%rbp), %rdx	 # info, tmp118
 	call	*%rax	 # _14
 .LVL15:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:165: }
-	.loc 15 165 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:167: }
+	.loc 15 167 1
 	jmp	.L199	 #
 .L197:
 	movq	%rax, %rsi	 #, tmp119
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:158:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 158 111
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:160:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 160 111
 	movl	$1472, %edx	 #,
 	movq	%rbx, %rcx	 # _20,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp119, D.254859
-	movq	%rax, %rcx	 # D.254859,
+	movq	%rsi, %rax	 # tmp119, D.254874
+	movq	%rax, %rcx	 # D.254874,
 	call	_Unwind_Resume	 #
 .L198:
 	movq	%rax, %rbx	 #, tmp121
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:159:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 159 41
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:161:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 161 41
 	leaq	-80(%rbp), %rax	 #, tmp120
 	movq	%rax, %rcx	 # tmp120,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp121, D.254860
-	movq	%rax, %rcx	 # D.254860,
+	movq	%rbx, %rax	 # tmp121, D.254875
+	movq	%rax, %rcx	 # D.254875,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE54:
 .L199:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:165: }
-	.loc 15 165 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:167: }
+	.loc 15 167 1
 	addq	$288, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -5412,7 +5417,7 @@ _ZN15T100ProjectView3NewEP12T100FileInfo:
 	.seh_proc	_ZN15T100ProjectView4OpenEP12T100FileInfo
 _ZN15T100ProjectView4OpenEP12T100FileInfo:
 .LFB18825:
-	.loc 15 168 1
+	.loc 15 170 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -5435,27 +5440,27 @@ _ZN15T100ProjectView4OpenEP12T100FileInfo:
 	.seh_endprologue
 	movq	%rcx, 192(%rbp)	 # this, this
 	movq	%rdx, 200(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:169:     if(!m_mainPanel){
-	.loc 15 169 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:     if(!m_mainPanel){
+	.loc 15 171 9
 	movq	192(%rbp), %rax	 # this, tmp104
-	movq	48(%rax), %rax	 # this_18(D)->D.168294.m_mainPanel, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:169:     if(!m_mainPanel){
-	.loc 15 169 5
+	movq	48(%rax), %rax	 # this_18(D)->D.168309.m_mainPanel, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:     if(!m_mainPanel){
+	.loc 15 171 5
 	testq	%rax, %rax	 # _1
 	jne	.L201	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:170:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 170 111
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:172:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 172 111
 	movl	$1472, %ecx	 #,
 .LEHB55:
 	call	_Znwy	 #
 .LEHE55:
 	movq	%rax, %rbx	 # tmp105, _20
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:170:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 170 49
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:172:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 172 49
 	movq	192(%rbp), %rax	 # this, tmp106
-	movq	24(%rax), %rax	 # this_18(D)->D.168294.m_frame, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:170:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 170 111
+	movq	24(%rax), %rax	 # this_18(D)->D.168309.m_frame, _2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:172:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 172 111
 	movl	$2048, 40(%rsp)	 #,
 	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp107
 	movq	%rdx, 32(%rsp)	 # tmp107,
@@ -5466,108 +5471,108 @@ _ZN15T100ProjectView4OpenEP12T100FileInfo:
 .LEHB56:
 	call	_ZN13T100MainPanelC1EP8wxWindowiRK7wxPointRK6wxSizel	 #
 .LEHE56:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:170:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 170 25 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:172:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 172 25 discriminator 2
 	movq	192(%rbp), %rax	 # this, tmp108
-	movq	%rbx, 48(%rax)	 # _20, this_18(D)->D.168294.m_mainPanel
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 171 9 discriminator 2
+	movq	%rbx, 48(%rax)	 # _20, this_18(D)->D.168309.m_mainPanel
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 173 9 discriminator 2
 	movq	192(%rbp), %rax	 # this, tmp109
-	movq	16(%rax), %rbx	 # this_18(D)->D.168294.m_manager, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 171 41 discriminator 2
+	movq	16(%rax), %rbx	 # this_18(D)->D.168309.m_manager, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 173 41 discriminator 2
 	leaq	-80(%rbp), %rax	 #, tmp110
 	movq	%rax, %rcx	 # tmp110,
 .LEHB57:
 	call	_ZN13wxAuiPaneInfoC1Ev	 #
 .LEHE57:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 171 64 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 173 64 discriminator 2
 	leaq	-80(%rbp), %rax	 #, tmp111
 	movq	%rax, %rcx	 # tmp111,
 	call	_ZN13wxAuiPaneInfo6CenterEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 171 87 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 173 87 discriminator 2
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _4,
 .LEHB58:
 	call	_ZN13wxAuiPaneInfo11CloseButtonEb	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 171 113 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 173 113 discriminator 2
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxAuiPaneInfo14CaptionVisibleEb	 #
 	movq	%rax, %rdx	 #, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 171 28 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 173 28 discriminator 2
 	movq	192(%rbp), %rax	 # this, tmp112
-	movq	48(%rax), %rax	 # this_18(D)->D.168294.m_mainPanel, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 171 27 discriminator 2
+	movq	48(%rax), %rax	 # this_18(D)->D.168309.m_mainPanel, _7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 173 27 discriminator 2
 	movq	%rdx, %r8	 # _6,
 	movq	%rax, %rdx	 # _7,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZN12wxAuiManager7AddPaneEP8wxWindowRK13wxAuiPaneInfo	 #
 .LEHE58:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 171 41 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 173 41 discriminator 6
 	leaq	-80(%rbp), %rax	 #, tmp113
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->Update();
-	.loc 15 173 9 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:175:         m_manager->Update();
+	.loc 15 175 9 discriminator 6
 	movq	192(%rbp), %rax	 # this, tmp114
-	movq	16(%rax), %rax	 # this_18(D)->D.168294.m_manager, _8
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->Update();
-	.loc 15 173 26 discriminator 6
+	movq	16(%rax), %rax	 # this_18(D)->D.168309.m_manager, _8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:175:         m_manager->Update();
+	.loc 15 175 26 discriminator 6
 	movq	%rax, %rcx	 # _8,
 .LEHB59:
 	call	_ZN12wxAuiManager6UpdateEv	 #
 .L201:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:176:     m_mainPanel->Create(info);
-	.loc 15 176 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:178:     m_mainPanel->Create(info);
+	.loc 15 178 5
 	movq	192(%rbp), %rax	 # this, tmp115
-	movq	48(%rax), %rcx	 # this_18(D)->D.168294.m_mainPanel, _9
+	movq	48(%rax), %rcx	 # this_18(D)->D.168309.m_mainPanel, _9
 	movq	192(%rbp), %rax	 # this, tmp117
-	movq	48(%rax), %rax	 # this_18(D)->D.168294.m_mainPanel, _11
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:176:     m_mainPanel->Create(info);
-	.loc 15 176 29
-	movq	(%rax), %rax	 # _11->D.168144.D.153811.D.153517.D.152132.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _12
+	movq	48(%rax), %rax	 # this_18(D)->D.168309.m_mainPanel, _11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:178:     m_mainPanel->Create(info);
+	.loc 15 178 29
+	movq	(%rax), %rax	 # _11->D.168153.D.153811.D.153517.D.152132.D.148060.D.147900.D.135552.D.134261.D.128218._vptr.wxObject, _12
 	addq	$2072, %rax	 #, _13
 	movq	(%rax), %rax	 # *_13, _14
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:176:     m_mainPanel->Create(info);
-	.loc 15 176 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:178:     m_mainPanel->Create(info);
+	.loc 15 178 24
 	movq	200(%rbp), %rdx	 # info, tmp118
 	call	*%rax	 # _14
 .LVL16:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:177: }
-	.loc 15 177 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:179: }
+	.loc 15 179 1
 	jmp	.L206	 #
 .L204:
 	movq	%rax, %rsi	 #, tmp119
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:170:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 15 170 111
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:172:         m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 15 172 111
 	movl	$1472, %edx	 #,
 	movq	%rbx, %rcx	 # _20,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp119, D.254861
-	movq	%rax, %rcx	 # D.254861,
+	movq	%rsi, %rax	 # tmp119, D.254876
+	movq	%rax, %rcx	 # D.254876,
 	call	_Unwind_Resume	 #
 .L205:
 	movq	%rax, %rbx	 #, tmp121
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:171:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-	.loc 15 171 41
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:173:         m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+	.loc 15 173 41
 	leaq	-80(%rbp), %rax	 #, tmp120
 	movq	%rax, %rcx	 # tmp120,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp121, D.254862
-	movq	%rax, %rcx	 # D.254862,
+	movq	%rbx, %rax	 # tmp121, D.254877
+	movq	%rax, %rcx	 # D.254877,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE59:
 .L206:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:177: }
-	.loc 15 177 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:179: }
+	.loc 15 179 1
 	addq	$288, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -5616,7 +5621,7 @@ _ZN15T100ProjectView4OpenEP12T100FileInfo:
 	.seh_proc	_ZN15T100ProjectView8FileSaveEv
 _ZN15T100ProjectView8FileSaveEv:
 .LFB18826:
-	.loc 15 180 1
+	.loc 15 182 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -5629,25 +5634,25 @@ _ZN15T100ProjectView8FileSaveEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:181:     if(m_mainPanel){
-	.loc 15 181 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:183:     if(m_mainPanel){
+	.loc 15 183 8
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	48(%rax), %rax	 # this_5(D)->D.168294.m_mainPanel, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:181:     if(m_mainPanel){
-	.loc 15 181 5
+	movq	48(%rax), %rax	 # this_5(D)->D.168309.m_mainPanel, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:183:     if(m_mainPanel){
+	.loc 15 183 5
 	testq	%rax, %rax	 # _1
 	je	.L209	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:182:         m_mainPanel->Save();
-	.loc 15 182 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:184:         m_mainPanel->Save();
+	.loc 15 184 9
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	48(%rax), %rax	 # this_5(D)->D.168294.m_mainPanel, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:182:         m_mainPanel->Save();
-	.loc 15 182 26
+	movq	48(%rax), %rax	 # this_5(D)->D.168309.m_mainPanel, _2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:184:         m_mainPanel->Save();
+	.loc 15 184 26
 	movq	%rax, %rcx	 # _2,
 	call	_ZN13T100MainPanel4SaveEv	 #
 .L209:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:184: }
-	.loc 15 184 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186: }
+	.loc 15 186 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -5988,14 +5993,14 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 24
-	movzwl	16(%rax), %edx	 # _3->D.249703.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.249718.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.249703.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.249718.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 24
-	movzwl	16(%rax), %eax	 # _3->D.249703.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.249718.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 30
 	testw	%ax, %ax	 # _6
@@ -6125,11 +6130,11 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 3 189 17
-	movzwl	16(%rax), %edx	 # _3->D.249703.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.249718.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 3 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.249703.m_ref
+	movw	%dx, 16(%rax)	 # _6, _3->D.249718.m_ref
 	jmp	.L226	 #
 .L229:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
@@ -6170,7 +6175,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 3 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.249703.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.249718.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 3 171 72
 	popq	%rbp	 #
@@ -6512,7 +6517,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB20035:
-	.loc 15 184 1
+	.loc 15 186 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6526,12 +6531,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:184: }
-	.loc 15 184 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186: }
+	.loc 15 186 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
 	jne	.L239	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:184: }
-	.loc 15 184 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186: }
+	.loc 15 186 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
 	jne	.L239	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
@@ -6541,8 +6546,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
 .L239:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:184: }
-	.loc 15 184 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186: }
+	.loc 15 186 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -6556,7 +6561,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_proc	_GLOBAL__sub_I__ZN15T100ProjectViewC2Ev
 _GLOBAL__sub_I__ZN15T100ProjectViewC2Ev:
 .LFB20134:
-	.loc 15 184 1
+	.loc 15 186 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6568,8 +6573,8 @@ _GLOBAL__sub_I__ZN15T100ProjectViewC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:184: }
-	.loc 15 184 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186: }
+	.loc 15 186 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -69545,7 +69550,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x3993e
 	.uleb128 0xe6
 	.secrel32	.LASF360
-	.byte	0x38
+	.byte	0x58
 	.byte	0x8
 	.byte	0x8a
 	.byte	0x7
@@ -69739,7 +69744,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1d
 	.ascii "FolderOpen\0"
 	.byte	0xf
-	.byte	0x5e
+	.byte	0x60
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView10FolderOpenE12wxTreeItemIdP14T100FolderInfo\0"
 	.byte	0x1
@@ -69755,7 +69760,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1d
 	.ascii "FolderSelected\0"
 	.byte	0xf
-	.byte	0x63
+	.byte	0x65
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView14FolderSelectedEv\0"
 	.byte	0x1
@@ -69767,7 +69772,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0xd
 	.secrel32	.LASF361
 	.byte	0xf
-	.byte	0x68
+	.byte	0x6a
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView11ProjectOpenE12wxTreeItemIdP15T100ProjectInfo\0"
 	.byte	0x1
@@ -69783,7 +69788,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1d
 	.ascii "ShowSetupEditorDialog\0"
 	.byte	0xf
-	.byte	0x6d
+	.byte	0x6f
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView21ShowSetupEditorDialogEv\0"
 	.byte	0x1
@@ -69795,7 +69800,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1d
 	.ascii "ShowSetupCompilerDialog\0"
 	.byte	0xf
-	.byte	0x72
+	.byte	0x74
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView23ShowSetupCompilerDialogEv\0"
 	.byte	0x1
@@ -69807,7 +69812,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1d
 	.ascii "Load\0"
 	.byte	0xf
-	.byte	0x77
+	.byte	0x79
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView4LoadERKSt6vectorIP15T100ProjectInfoSaIS2_EE\0"
 	.byte	0x1
@@ -69821,7 +69826,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1d
 	.ascii "New\0"
 	.byte	0xf
-	.byte	0x7c
+	.byte	0x7e
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView3NewEv\0"
 	.byte	0x1
@@ -69833,7 +69838,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0xd
 	.secrel32	.LASF167
 	.byte	0xf
-	.byte	0x89
+	.byte	0x8b
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView5ClearEv\0"
 	.byte	0x1
@@ -69845,7 +69850,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1d
 	.ascii "About\0"
 	.byte	0xf
-	.byte	0x8f
+	.byte	0x91
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView5AboutEv\0"
 	.byte	0x1
@@ -69857,7 +69862,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1d
 	.ascii "OnResize\0"
 	.byte	0xf
-	.byte	0x96
+	.byte	0x98
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView8OnResizeEv\0"
 	.byte	0x1
@@ -69869,7 +69874,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1d
 	.ascii "New\0"
 	.byte	0xf
-	.byte	0x9b
+	.byte	0x9d
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView3NewEP12T100FileInfo\0"
 	.byte	0x1
@@ -69883,7 +69888,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1d
 	.ascii "Open\0"
 	.byte	0xf
-	.byte	0xa7
+	.byte	0xa9
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView4OpenEP12T100FileInfo\0"
 	.byte	0x1
@@ -69897,7 +69902,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0xe8
 	.ascii "FileSave\0"
 	.byte	0xf
-	.byte	0xb3
+	.byte	0xb5
 	.byte	0xa
 	.ascii "_ZN15T100ProjectView8FileSaveEv\0"
 	.byte	0x1
@@ -71145,7 +71150,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x63
 	.ascii "__initialize_p\0"
 	.byte	0xf
-	.byte	0xb8
+	.byte	0xba
 	.byte	0x1
 	.long	0x22a
 	.uleb128 0x2
@@ -71154,7 +71159,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x63
 	.ascii "__priority\0"
 	.byte	0xf
-	.byte	0xb8
+	.byte	0xba
 	.byte	0x1
 	.long	0x22a
 	.uleb128 0x2
@@ -71903,7 +71908,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x65
 	.secrel32	.LASF371
 	.byte	0xf
-	.byte	0xa7
+	.byte	0xa9
 	.byte	0x2e
 	.long	0x13977
 	.uleb128 0x2
@@ -71927,7 +71932,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x65
 	.secrel32	.LASF371
 	.byte	0xf
-	.byte	0x9b
+	.byte	0x9d
 	.byte	0x2d
 	.long	0x13977
 	.uleb128 0x2
@@ -71966,7 +71971,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x30
 	.ascii "dialog\0"
 	.byte	0xf
-	.byte	0x91
+	.byte	0x93
 	.byte	0x29
 	.long	0x49437
 	.uleb128 0x3
@@ -72007,7 +72012,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x30
 	.ascii "editor\0"
 	.byte	0xf
-	.byte	0x81
+	.byte	0x83
 	.byte	0x15
 	.long	0x494c9
 	.uleb128 0x2
@@ -72036,7 +72041,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x63
 	.ascii "projects\0"
 	.byte	0xf
-	.byte	0x77
+	.byte	0x79
 	.byte	0x3f
 	.long	0x13a59
 	.uleb128 0x2
@@ -72090,7 +72095,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x63
 	.ascii "id\0"
 	.byte	0xf
-	.byte	0x68
+	.byte	0x6a
 	.byte	0x34
 	.long	0x40e78
 	.uleb128 0x2
@@ -72099,7 +72104,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x65
 	.secrel32	.LASF371
 	.byte	0xf
-	.byte	0x68
+	.byte	0x6a
 	.byte	0x49
 	.long	0x139b3
 	.uleb128 0x2
@@ -72138,7 +72143,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x63
 	.ascii "id\0"
 	.byte	0xf
-	.byte	0x5e
+	.byte	0x60
 	.byte	0x33
 	.long	0x40e78
 	.uleb128 0x2
@@ -72147,7 +72152,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x65
 	.secrel32	.LASF371
 	.byte	0xf
-	.byte	0x5e
+	.byte	0x60
 	.byte	0x47
 	.long	0x1398b
 	.uleb128 0x2
@@ -79464,6 +79469,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.def	_ZN23T100ProjectViewMainMenu12FileModifiedEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN13T100MainPanelC1EP8wxWindowiRK7wxPointRK6wxSizel;	.scl	2;	.type	32;	.endef
 	.def	_ZN23T100ProjectViewMainMenu8FileOpenEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN19T100ProjectViewBase8SetTitleEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN23T100ProjectViewMainMenu14FolderSelectedEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN10T100EditorC1EP8wxWindowiRK7wxPointRK6wxSizelRK8wxString;	.scl	2;	.type	32;	.endef
 	.def	_ZN13wxAuiNotebook7AddPageEP8wxWindowRK8wxStringbRK8wxBitmap;	.scl	2;	.type	32;	.endef

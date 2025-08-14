@@ -22,6 +22,16 @@ T100Editor::~T100Editor()
     //dtor
 }
 
+T100VOID T100Editor::SetPath(const T100WSTRING& path)
+{
+    m_path      = path;
+}
+
+const T100WSTRING& T100Editor::GetPath()
+{
+    return m_path;
+}
+
 T100VOID T100Editor::OnModified(wxStyledTextEvent& event)
 {
     T100ProjectInvoking::OnModified();
