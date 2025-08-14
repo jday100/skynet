@@ -182,5 +182,7 @@ T100VOID T100ProjectView::FileSave()
 {
     if(m_mainPanel){
         m_mainPanel->Save();
+        ClearDirty();
+        SetTitle();
     }
 }

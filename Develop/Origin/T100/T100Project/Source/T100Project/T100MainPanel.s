@@ -190,7 +190,7 @@ _ZNKSt9type_info4nameEv:
 	movq	8(%rax), %rax	 # this_6(D)->__name, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 31 discriminator 1
-	addq	$1, %rax	 #, iftmp.53_4
+	addq	$1, %rax	 #, iftmp.51_4
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 46 discriminator 1
 	jmp	.L10	 #
@@ -198,7 +198,7 @@ _ZNKSt9type_info4nameEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 31 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	8(%rax), %rax	 # this_6(D)->__name, iftmp.53_4
+	movq	8(%rax), %rax	 # this_6(D)->__name, iftmp.51_4
 .L10:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 54 discriminator 5
@@ -209,53 +209,6 @@ _ZNKSt9type_info4nameEv:
 	.cfi_endproc
 .LFE752:
 	.seh_endproc
-	.section .rdata,"dr"
-	.align 2
-.LC0:
-	.ascii "\0\0"
-	.section	.text$_ZN8wxString7ImplStrEPKw,"x"
-	.linkonce discard
-	.globl	_ZN8wxString7ImplStrEPKw
-	.def	_ZN8wxString7ImplStrEPKw;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN8wxString7ImplStrEPKw
-_ZN8wxString7ImplStrEPKw:
-.LFB1808:
-	.file 4 "C:/zoo/lib/wxWidgets-3.0.5/include/wx/string.h"
-	.loc 4 471 25
-	.cfi_startproc
-	pushq	%rbp	 #
-	.seh_pushreg	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp	 #,
-	.seh_setframe	%rbp, 0
-	.cfi_def_cfa_register 6
-	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # str, str
- # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:472:     { return str ? str : wxT(""); }
-	.loc 4 472 18
-	cmpq	$0, 16(%rbp)	 #, str
-	je	.L12	 #,
- # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:472:     { return str ? str : wxT(""); }
-	.loc 4 472 18 is_stmt 0 discriminator 1
-	movq	16(%rbp), %rax	 # str, iftmp.49_1
- # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:472:     { return str ? str : wxT(""); }
-	.loc 4 472 26 is_stmt 1 discriminator 1
-	jmp	.L14	 #
-.L12:
- # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:472:     { return str ? str : wxT(""); }
-	.loc 4 472 18 discriminator 2
-	leaq	.LC0(%rip), %rax	 #, iftmp.49_1
-.L14:
- # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:472:     { return str ? str : wxT(""); }
-	.loc 4 472 35 discriminator 5
-	popq	%rbp	 #
-	.cfi_restore 6
-	.cfi_def_cfa 7, 8
-	ret	
-	.cfi_endproc
-.LFE1808:
-	.seh_endproc
 	.section	.text$_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev,"x"
 	.linkonce discard
 	.align 2
@@ -264,6 +217,7 @@ _ZN8wxString7ImplStrEPKw:
 	.seh_proc	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev
 _ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev:
 .LFB1813:
+	.file 4 "C:/zoo/lib/wxWidgets-3.0.5/include/wx/string.h"
 	.loc 4 425 10
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -349,20 +303,20 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:477:     { return ConvertStr(str, npos, conv).data; }
 	.loc 4 477 42
-	jmp	.L20	 #
-.L19:
+	jmp	.L16	 #
+.L15:
 	movq	%rax, %rbx	 #, tmp96
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:477:     { return ConvertStr(str, npos, conv).data; }
 	.loc 4 477 24
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.155072
-	movq	%rax, %rcx	 # D.155072,
+	movq	%rbx, %rax	 # tmp96, D.155064
+	movq	%rax, %rcx	 # D.155064,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
-.L20:
+.L16:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:477:     { return ConvertStr(str, npos, conv).data; }
 	.loc 4 477 48
 	movq	-48(%rbp), %rax	 # <retval>,
@@ -390,7 +344,7 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	.uleb128 0
 	.uleb128 .LEHB1-.LFB1810
 	.uleb128 .LEHE1-.LEHB1
-	.uleb128 .L19-.LFB1810
+	.uleb128 .L15-.LFB1810
 	.uleb128 0
 	.uleb128 .LEHB2-.LFB1810
 	.uleb128 .LEHE2-.LEHB2
@@ -609,8 +563,8 @@ _ZN8wxStringC1EPKc:
 .LBE7:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1242:     : m_impl(ImplStr(psz)) {}
 	.loc 4 1242 29 discriminator 8
-	jmp	.L29	 #
-.L28:
+	jmp	.L25	 #
+.L24:
 	movq	%rax, %rbx	 #, tmp104
 .LBB8:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1242:     : m_impl(ImplStr(psz)) {}
@@ -618,22 +572,22 @@ _ZN8wxStringC1EPKc:
 	leaq	-88(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZN22wxScopedCharTypeBufferIwED1Ev	 #
-	jmp	.L26	 #
-.L27:
+	jmp	.L22	 #
+.L23:
 	movq	%rax, %rbx	 #, tmp103
-.L26:
+.L22:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1242:     : m_impl(ImplStr(psz)) {}
 	.loc 4 1242 26 discriminator 3
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.155076
-	movq	%rax, %rcx	 # D.155076,
+	movq	%rbx, %rax	 # tmp103, D.155068
+	movq	%rax, %rcx	 # D.155068,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE5:
-.L29:
+.L25:
 .LBE8:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1242:     : m_impl(ImplStr(psz)) {}
 	.loc 4 1242 29
@@ -656,11 +610,11 @@ _ZN8wxStringC1EPKc:
 .LLSDACSB1946:
 	.uleb128 .LEHB3-.LFB1946
 	.uleb128 .LEHE3-.LEHB3
-	.uleb128 .L27-.LFB1946
+	.uleb128 .L23-.LFB1946
 	.uleb128 0
 	.uleb128 .LEHB4-.LFB1946
 	.uleb128 .LEHE4-.LEHB4
-	.uleb128 .L28-.LFB1946
+	.uleb128 .L24-.LFB1946
 	.uleb128 0
 	.uleb128 .LEHB5-.LFB1946
 	.uleb128 .LEHE5-.LEHB5
@@ -668,110 +622,6 @@ _ZN8wxStringC1EPKc:
 	.uleb128 0
 .LLSDACSE1946:
 	.section	.text$_ZN8wxStringC1EPKc,"x"
-	.linkonce discard
-	.seh_endproc
-	.section	.text$_ZN8wxStringC1EPKw,"x"
-	.linkonce discard
-	.align 2
-	.globl	_ZN8wxStringC1EPKw
-	.def	_ZN8wxStringC1EPKw;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN8wxStringC1EPKw
-_ZN8wxStringC1EPKw:
-.LFB1970:
-	.loc 4 1267 3
-	.cfi_startproc
-	pushq	%rbp	 #
-	.seh_pushreg	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	pushq	%rbx	 #
-	.seh_pushreg	%rbx
-	.cfi_def_cfa_offset 24
-	.cfi_offset 3, -24
-	subq	$56, %rsp	 #,
-	.seh_stackalloc	56
-	.cfi_def_cfa_offset 80
-	leaq	128(%rsp), %rbp	 #,
-	.seh_setframe	%rbp, 128
-	.cfi_def_cfa 6, -48
-	.seh_endprologue
-	movq	%rcx, -48(%rbp)	 # this, this
-	movq	%rdx, -40(%rbp)	 # pwz, pwz
-.LBB9:
- # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1268:     : m_impl(ImplStr(pwz)) {}
-	.loc 4 1268 26
-	movq	-48(%rbp), %rbx	 # this, _1
-	leaq	-81(%rbp), %rax	 #, tmp93
-	movq	%rax, %rcx	 # tmp93,
-	call	_ZNSaIwEC1Ev	 #
-	movq	-40(%rbp), %rax	 # pwz, tmp94
-	movq	%rax, %rcx	 # tmp94,
-	call	_ZN8wxString7ImplStrEPKw	 #
-	movq	%rax, %rdx	 #, _2
-	leaq	-81(%rbp), %rax	 #, tmp95
-	movq	%rax, %r8	 # tmp95,
-	movq	%rbx, %rcx	 # _1,
-.LEHB6:
-	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1EPKwRKS3_	 #
-.LEHE6:
- # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1268:     : m_impl(ImplStr(pwz)) {}
-	.loc 4 1268 26 is_stmt 0 discriminator 2
-	leaq	-81(%rbp), %rax	 #, tmp96
-	movq	%rax, %rcx	 # tmp96,
-	call	_ZNSaIwED1Ev	 #
-	movq	-48(%rbp), %rax	 # this, tmp97
-	addq	$32, %rax	 #, _3
-	movq	%rax, %rcx	 # _3,
-	call	_ZN8wxString15ConvertedBufferIcEC1Ev	 #
-.LBE9:
- # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1268:     : m_impl(ImplStr(pwz)) {}
-	.loc 4 1268 29 is_stmt 1 discriminator 2
-	jmp	.L33	 #
-.L32:
-	movq	%rax, %rbx	 #, tmp99
-.LBB10:
- # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1268:     : m_impl(ImplStr(pwz)) {}
-	.loc 4 1268 26
-	leaq	-81(%rbp), %rax	 #, tmp98
-	movq	%rax, %rcx	 # tmp98,
-	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.155078
-	movq	%rax, %rcx	 # D.155078,
-.LEHB7:
-	call	_Unwind_Resume	 #
-	nop	
-.LEHE7:
-.L33:
-.LBE10:
- # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1268:     : m_impl(ImplStr(pwz)) {}
-	.loc 4 1268 29
-	addq	$56, %rsp	 #,
-	popq	%rbx	 #
-	.cfi_restore 3
-	popq	%rbp	 #
-	.cfi_restore 6
-	.cfi_def_cfa 7, -40
-	ret	
-	.cfi_endproc
-.LFE1970:
-	.seh_handler	__gxx_personality_seh0, @unwind, @except
-	.seh_handlerdata
-.LLSDA1970:
-	.byte	0xff
-	.byte	0xff
-	.byte	0x1
-	.uleb128 .LLSDACSE1970-.LLSDACSB1970
-.LLSDACSB1970:
-	.uleb128 .LEHB6-.LFB1970
-	.uleb128 .LEHE6-.LEHB6
-	.uleb128 .L32-.LFB1970
-	.uleb128 0
-	.uleb128 .LEHB7-.LFB1970
-	.uleb128 .LEHE7-.LEHB7
-	.uleb128 0
-	.uleb128 0
-.LLSDACSE1970:
-	.section	.text$_ZN8wxStringC1EPKw,"x"
 	.linkonce discard
 	.seh_endproc
 	.section	.text$_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE,"x"
@@ -796,7 +646,7 @@ _ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # str, str
-.LBB11:
+.LBB9:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1317:     wxString(const wxStdWideString& str) : m_impl(str) {}
 	.loc 4 1317 54
 	movq	16(%rbp), %rax	 # this, _1
@@ -807,7 +657,7 @@ _ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	addq	$32, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN8wxString15ConvertedBufferIcEC1Ev	 #
-.LBE11:
+.LBE9:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1317:     wxString(const wxStdWideString& str) : m_impl(str) {}
 	.loc 4 1317 57
 	nop	
@@ -845,14 +695,14 @@ _ZN8wxStringaSERKS_:
 	.loc 4 1879 5
 	movq	16(%rbp), %rax	 # this, tmp91
 	cmpq	24(%rbp), %rax	 # stringSrc, tmp91
-	je	.L36	 #,
+	je	.L28	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1883:         m_impl = stringSrc.m_impl;
 	.loc 4 1883 28
 	movq	24(%rbp), %rdx	 # stringSrc, _1
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_	 #
-.L36:
+.L28:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1886:     return *this;
 	.loc 4 1886 13
 	movq	16(%rbp), %rax	 # this, _8
@@ -886,7 +736,7 @@ _ZN8wxObjectC2Ev:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB12:
+.LBB10:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/object.h:360:     wxObject() { m_refData = NULL; }
 	.loc 5 360 16
 	movq	.refptr._ZTV8wxObject(%rip), %rax	 #, tmp88
@@ -897,7 +747,7 @@ _ZN8wxObjectC2Ev:
 	.loc 5 360 28
 	movq	16(%rbp), %rax	 # this, tmp90
 	movq	$0, 8(%rax)	 #, this_3(D)->m_refData
-.LBE12:
+.LBE10:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/object.h:360:     wxObject() { m_refData = NULL; }
 	.loc 5 360 36
 	nop	
@@ -934,14 +784,14 @@ _ZN8wxObjectaSERKS_:
 	.loc 5 372 9
 	movq	16(%rbp), %rax	 # this, tmp89
 	cmpq	24(%rbp), %rax	 # other, tmp89
-	je	.L40	 #,
+	je	.L32	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/object.h:374:             Ref(other);
 	.loc 5 374 16
 	movq	24(%rbp), %rax	 # other, tmp90
 	movq	%rax, %rdx	 # tmp90,
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN8wxObject3RefERKS_	 #
-.L40:
+.L32:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/object.h:376:         return *this;
 	.loc 5 376 17
 	movq	16(%rbp), %rax	 # this, _6
@@ -992,10 +842,10 @@ _ZNK18wxBaseArrayPtrVoid8GetCountEv:
 .LFE5334:
 	.seh_endproc
 	.section .rdata,"dr"
-.LC1:
+.LC0:
 	.ascii "uiIndex < m_nCount\0"
 	.align 8
-.LC2:
+.LC1:
 	.ascii "C:\\zoo\\lib\\wxWidgets-3.0.5\\include/wx/dynarray.h\0"
 	.section	.text$_ZNK18wxBaseArrayPtrVoid4ItemEy,"x"
 	.linkonce discard
@@ -1024,44 +874,44 @@ _ZNK18wxBaseArrayPtrVoid4ItemEy:
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp95
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.14_1
 	testq	%rax, %rax	 # wxTheAssertHandler.14_1
-	je	.L45	 #,
+	je	.L37	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/dynarray.h:837: WX_DECLARE_USER_EXPORTED_BASEARRAY(const void *, wxBaseArrayPtrVoid,
 	.loc 6 837 1 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp96
 	movq	8(%rax), %rax	 # this_11(D)->m_nCount, _2
 	cmpq	%rax, 24(%rbp)	 # _2, uiIndex
-	jb	.L45	 #,
+	jb	.L37	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/dynarray.h:837: WX_DECLARE_USER_EXPORTED_BASEARRAY(const void *, wxBaseArrayPtrVoid,
 	.loc 6 837 1 discriminator 3
 	movq	$0, 32(%rsp)	 #,
-	leaq	.LC1(%rip), %r9	 #,
+	leaq	.LC0(%rip), %r9	 #,
 	leaq	_ZZNK18wxBaseArrayPtrVoid4ItemEyE12__FUNCTION__(%rip), %r8	 #,
 	movl	$838, %edx	 #,
-	leaq	.LC2(%rip), %rcx	 #,
+	leaq	.LC1(%rip), %rcx	 #,
 	call	_Z10wxOnAssertPKciS0_S0_S0_	 #
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp97
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.15_3
 	testb	%al, %al	 # wxTrapInAssert.15_3
-	je	.L45	 #,
+	je	.L37	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/dynarray.h:837: WX_DECLARE_USER_EXPORTED_BASEARRAY(const void *, wxBaseArrayPtrVoid,
 	.loc 6 837 1 discriminator 5
 	movl	$1, %eax	 #, iftmp.13_6
-	jmp	.L46	 #
-.L45:
+	jmp	.L38	 #
+.L37:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/dynarray.h:837: WX_DECLARE_USER_EXPORTED_BASEARRAY(const void *, wxBaseArrayPtrVoid,
 	.loc 6 837 1 discriminator 6
 	movl	$0, %eax	 #, iftmp.13_6
-.L46:
+.L38:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/dynarray.h:837: WX_DECLARE_USER_EXPORTED_BASEARRAY(const void *, wxBaseArrayPtrVoid,
 	.loc 6 837 1 discriminator 8
 	testb	%al, %al	 # iftmp.13_6
-	je	.L47	 #,
+	je	.L39	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/dynarray.h:837: WX_DECLARE_USER_EXPORTED_BASEARRAY(const void *, wxBaseArrayPtrVoid,
 	.loc 6 837 1 discriminator 9
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp98
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-.L47:
+.L39:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/dynarray.h:837: WX_DECLARE_USER_EXPORTED_BASEARRAY(const void *, wxBaseArrayPtrVoid,
 	.loc 6 837 1 discriminator 12
 	movq	16(%rbp), %rax	 # this, tmp99
@@ -1201,13 +1051,13 @@ _ZN11wxArrayLongC1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB13:
+.LBB11:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/dynarray.h:1024: WX_DEFINE_USER_EXPORTED_ARRAY_LONG(long, wxArrayLong, class WXDLLIMPEXP_BASE);
 	.loc 6 1024 1
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZN15wxBaseArrayLongC2Ev	 #
-.LBE13:
+.LBE11:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -1238,13 +1088,13 @@ _ZN11wxArrayLongD1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB14:
+.LBB12:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/dynarray.h:1024: WX_DEFINE_USER_EXPORTED_ARRAY_LONG(long, wxArrayLong, class WXDLLIMPEXP_BASE);
 	.loc 6 1024 1
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZN15wxBaseArrayLongD2Ev	 #
-.LBE14:
+.LBE12:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -1275,13 +1125,13 @@ _ZN16wxTypeIdentifierC1EPKc:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # className, className
-.LBB15:
+.LBB13:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/typeinfo.h:68:         m_className = className;
 	.loc 7 68 21
 	movq	16(%rbp), %rax	 # this, tmp87
 	movq	24(%rbp), %rdx	 # className, tmp88
 	movq	%rdx, (%rax)	 # tmp88, this_2(D)->m_className
-.LBE15:
+.LBE13:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/typeinfo.h:69:     }
 	.loc 7 69 5
 	nop	
@@ -1404,14 +1254,14 @@ _ZN6wxSizeC1Ev:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB16:
+.LBB14:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/gdicmn.h:257:     wxSize() : x(0), y(0) { }
 	.loc 8 257 25
 	movq	16(%rbp), %rax	 # this, tmp87
 	movl	$0, (%rax)	 #, this_2(D)->x
 	movq	16(%rbp), %rax	 # this, tmp88
 	movl	$0, 4(%rax)	 #, this_2(D)->y
-.LBE16:
+.LBE14:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/gdicmn.h:257:     wxSize() : x(0), y(0) { }
 	.loc 8 257 29
 	nop	
@@ -1443,7 +1293,7 @@ _ZN6wxSizeC1Eii:
 	movq	%rcx, 16(%rbp)	 # this, this
 	movl	%edx, 24(%rbp)	 # xx, xx
 	movl	%r8d, 32(%rbp)	 # yy, yy
-.LBB17:
+.LBB15:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/gdicmn.h:258:     wxSize(int xx, int yy) : x(xx), y(yy) { }
 	.loc 8 258 41
 	movq	16(%rbp), %rax	 # this, tmp87
@@ -1452,7 +1302,7 @@ _ZN6wxSizeC1Eii:
 	movq	16(%rbp), %rax	 # this, tmp89
 	movl	32(%rbp), %edx	 # yy, tmp90
 	movl	%edx, 4(%rax)	 # tmp90, this_2(D)->y
-.LBE17:
+.LBE15:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/gdicmn.h:258:     wxSize(int xx, int yy) : x(xx), y(yy) { }
 	.loc 8 258 45
 	nop	
@@ -1482,14 +1332,14 @@ _ZN7wxPointC1Ev:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB18:
+.LBB16:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/gdicmn.h:545:     wxPoint() : x(0), y(0) { }
 	.loc 8 545 26
 	movq	16(%rbp), %rax	 # this, tmp87
 	movl	$0, (%rax)	 #, this_2(D)->x
 	movq	16(%rbp), %rax	 # this, tmp88
 	movl	$0, 4(%rax)	 #, this_2(D)->y
-.LBE18:
+.LBE16:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/gdicmn.h:545:     wxPoint() : x(0), y(0) { }
 	.loc 8 545 30
 	nop	
@@ -1522,7 +1372,7 @@ _ZN11wxGDIObjectC2Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB19:
+.LBB17:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/gdiobj.h:41: class WXDLLIMPEXP_CORE wxGDIObject : public wxObject
 	.loc 9 41 24
 	movq	16(%rbp), %rax	 # this, _1
@@ -1532,7 +1382,7 @@ _ZN11wxGDIObjectC2Ev:
 	leaq	16(%rax), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp91
 	movq	%rdx, (%rax)	 # _2, this_4(D)->D.68230._vptr.wxObject
-.LBE19:
+.LBE17:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -1564,7 +1414,7 @@ _ZN10wxFontBaseC2Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB20:
+.LBB18:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/font.h:258: class WXDLLIMPEXP_CORE wxFontBase : public wxGDIObject
 	.loc 10 258 24
 	movq	16(%rbp), %rax	 # this, _1
@@ -1574,7 +1424,7 @@ _ZN10wxFontBaseC2Ev:
 	leaq	16(%rax), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp91
 	movq	%rdx, (%rax)	 # _2, this_4(D)->D.105229.D.68230._vptr.wxObject
-.LBE20:
+.LBE18:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -1606,7 +1456,7 @@ _ZN6wxFontC1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB21:
+.LBB19:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/font.h:24:     wxFont() { }
 	.loc 11 24 14
 	movq	16(%rbp), %rax	 # this, _1
@@ -1616,7 +1466,7 @@ _ZN6wxFontC1Ev:
 	leaq	16(%rax), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp91
 	movq	%rdx, (%rax)	 # _2, this_5(D)->D.105572.D.105229.D.68230._vptr.wxObject
-.LBE21:
+.LBE19:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/font.h:24:     wxFont() { }
 	.loc 11 24 16
 	nop	
@@ -1664,7 +1514,7 @@ _ZN23wxCriticalSectionLockerC1ER17wxCriticalSection:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # cs, cs
-.LBB22:
+.LBB20:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:305:         : m_critsect(cs)
 	.loc 12 305 24
 	movq	16(%rbp), %rax	 # this, tmp88
@@ -1678,7 +1528,7 @@ _ZN23wxCriticalSectionLockerC1ER17wxCriticalSection:
 	.loc 12 307 25
 	movq	%rax, %rcx	 # _1,
 	call	_ZN17wxCriticalSection5EnterEv	 #
-.LBE22:
+.LBE20:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:308:     }
 	.loc 12 308 5
 	nop	
@@ -1711,7 +1561,7 @@ _ZN23wxCriticalSectionLockerD1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB23:
+.LBB21:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:312:         m_critsect.Leave();
 	.loc 12 312 9
 	movq	16(%rbp), %rax	 # this, tmp88
@@ -1720,7 +1570,7 @@ _ZN23wxCriticalSectionLockerD1Ev:
 	.loc 12 312 25
 	movq	%rax, %rcx	 # _1,
 	call	_ZN17wxCriticalSection5LeaveEv	 #
-.LBE23:
+.LBE21:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:313:     }
 	.loc 12 313 5
 	nop	
@@ -1895,7 +1745,7 @@ _ZN20wxThreadHelperThread5EntryEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:776:     if ( m_owner.m_kind == wxTHREAD_DETACHED )
 	.loc 12 776 5
 	testl	%eax, %eax	 # _10
-	jne	.L73	 #,
+	jne	.L65	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:777:         m_owner.m_thread = NULL;
 	.loc 12 777 9
 	movq	-48(%rbp), %rax	 # this, tmp107
@@ -1903,7 +1753,7 @@ _ZN20wxThreadHelperThread5EntryEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:777:         m_owner.m_thread = NULL;
 	.loc 12 777 26
 	movq	$0, 8(%rax)	 #, _11->m_thread
-.L73:
+.L65:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:779:     return result;
 	.loc 12 779 12
 	movq	-88(%rbp), %rbx	 # result, _21
@@ -1947,14 +1797,14 @@ _ZN14wxEventFunctorC2Ev:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB24:
+.LBB22:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:211: class WXDLLIMPEXP_BASE wxEventFunctor
 	.loc 13 211 24
 	movq	.refptr._ZTV14wxEventFunctor(%rip), %rax	 #, tmp88
 	leaq	16(%rax), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	%rdx, (%rax)	 # _1, this_3(D)->_vptr.wxEventFunctor
-.LBE24:
+.LBE22:
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1995,7 +1845,7 @@ _ZN20wxObjectEventFunctorC1EM12wxEvtHandlerFvR7wxEventEPS0_:
 	movq	%rax, -96(%rbp)	 # tmp91, method
 	movq	%rdx, -88(%rbp)	 #, method
 	movq	%r8, -32(%rbp)	 # handler, handler
-.LBB25:
+.LBB23:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:244:         : m_handler( handler ), m_method( method )
 	.loc 13 244 50
 	movq	-48(%rbp), %rax	 # this, _1
@@ -2012,7 +1862,7 @@ _ZN20wxObjectEventFunctorC1EM12wxEvtHandlerFvR7wxEventEPS0_:
 	movq	-88(%rbp), %rdx	 # method,
 	movq	%rax, 16(%rcx)	 # tmp96, this_5(D)->m_method
 	movq	%rdx, 24(%rcx)	 #, this_5(D)->m_method
-.LBE25:
+.LBE23:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:245:         { }
 	.loc 13 245 11
 	nop	
@@ -2048,7 +1898,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # functor, functor
-.LBB26:
+.LBB24:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 13 251 35
 	movq	16(%rbp), %rax	 # this, tmp107
@@ -2081,9 +1931,9 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 	call	_ZN16wxTypeIdentifiereqERKS_	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 13 251 9
-	testb	%al, %al	 # retval.51_28
-	je	.L78	 #,
-.LBB27:
+	testb	%al, %al	 # retval.49_28
+	je	.L70	 #,
+.LBB25:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:253:             const wxObjectEventFunctor &other =
 	.loc 13 253 41
 	movq	24(%rbp), %rax	 # functor, tmp113
@@ -2097,7 +1947,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 13 262 74
 	cmpq	%rax, %rdx	 # _10, _9
-	jne	.L79	 #,
+	jne	.L71	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 13 262 40 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp116
@@ -2107,7 +1957,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 13 262 31 discriminator 1
 	cmpq	%rax, %rdx	 # _12, _11
-	je	.L80	 #,
+	je	.L72	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 13 262 40 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp118
@@ -2115,8 +1965,8 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 13 262 31 discriminator 4
 	testq	%rax, %rax	 # _13
-	je	.L80	 #,
-.L79:
+	je	.L72	 #,
+.L71:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 13 262 70 discriminator 6
 	movq	-8(%rbp), %rax	 # other, tmp119
@@ -2124,8 +1974,8 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 13 262 49 discriminator 6
 	testq	%rax, %rax	 # _14
-	jne	.L81	 #,
-.L80:
+	jne	.L73	 #,
+.L72:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 13 263 22 discriminator 7
 	movq	16(%rbp), %rax	 # this, tmp120
@@ -2137,7 +1987,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 13 262 74 discriminator 7
 	cmpq	%rax, %rdx	 # _16, _15
-	je	.L82	 #,
+	je	.L74	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 13 263 60
 	movq	-8(%rbp), %rax	 # other, tmp122
@@ -2145,28 +1995,28 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 13 263 51
 	testq	%rax, %rax	 # _17
-	jne	.L81	 #,
-.L82:
+	jne	.L73	 #,
+.L74:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 13 262 74 discriminator 9
-	movl	$1, %eax	 #, iftmp.52_19
+	movl	$1, %eax	 #, iftmp.50_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 13 263 78 discriminator 9
-	jmp	.L84	 #
-.L81:
+	jmp	.L76	 #
+.L73:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 13 262 74 discriminator 8
-	movl	$0, %eax	 #, iftmp.52_19
+	movl	$0, %eax	 #, iftmp.50_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 13 263 78 discriminator 8
-	jmp	.L84	 #
-.L78:
-.LBE27:
+	jmp	.L76	 #
+.L70:
+.LBE25:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:266:             return false;
 	.loc 13 266 20
-	movl	$0, %eax	 #, iftmp.52_19
-.L84:
-.LBE26:
+	movl	$0, %eax	 #, iftmp.50_19
+.L76:
+.LBE24:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:267:     }
 	.loc 13 267 5
 	addq	$64, %rsp	 #,
@@ -2412,13 +2262,13 @@ _ZNK17wxChildFocusEvent9GetWindowEv:
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 8
-.LC3:
+.LC2:
 	.ascii "idLast == wxID_ANY || winid <= idLast\0"
 	.align 8
-.LC4:
+.LC3:
 	.ascii "C:\\zoo\\lib\\wxWidgets-3.0.5\\include/wx/event.h\0"
 	.align 8
-.LC5:
+.LC4:
 	.ascii "invalid IDs range: lower bound > upper bound\0"
 	.section	.text$_ZN21wxEventTableEntryBaseC2EiiP14wxEventFunctorP8wxObject,"x"
 	.linkonce discard
@@ -2444,7 +2294,7 @@ _ZN21wxEventTableEntryBaseC2EiiP14wxEventFunctorP8wxObject:
 	movl	%edx, 24(%rbp)	 # winid, winid
 	movl	%r8d, 32(%rbp)	 # idLast, idLast
 	movq	%r9, 40(%rbp)	 # fn, fn
-.LBB28:
+.LBB26:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3175:           m_callbackUserData(data)
 	.loc 13 3175 34
 	movq	16(%rbp), %rax	 # this, tmp90
@@ -2462,51 +2312,51 @@ _ZN21wxEventTableEntryBaseC2EiiP14wxEventFunctorP8wxObject:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 13 3177 9
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp98
-	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.70_1
-	testq	%rax, %rax	 # wxTheAssertHandler.70_1
-	je	.L97	 #,
+	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.68_1
+	testq	%rax, %rax	 # wxTheAssertHandler.68_1
+	je	.L89	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 13 3177 9 is_stmt 0 discriminator 1
 	cmpl	$-1, 32(%rbp)	 #, idLast
-	je	.L97	 #,
+	je	.L89	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 13 3177 9 discriminator 3
 	movl	24(%rbp), %eax	 # winid, tmp99
 	cmpl	32(%rbp), %eax	 # idLast, tmp99
-	jle	.L97	 #,
+	jle	.L89	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 13 3177 9 discriminator 5
-	leaq	.LC5(%rip), %rax	 #, tmp100
+	leaq	.LC4(%rip), %rax	 #, tmp100
 	movq	%rax, 32(%rsp)	 # tmp100,
-	leaq	.LC3(%rip), %r9	 #,
+	leaq	.LC2(%rip), %r9	 #,
 	leaq	_ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__(%rip), %r8	 #,
 	movl	$3178, %edx	 #,
-	leaq	.LC4(%rip), %rcx	 #,
+	leaq	.LC3(%rip), %rcx	 #,
 	call	_Z10wxOnAssertPKciS0_S0_S0_	 #
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp101
-	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.71_2
-	testb	%al, %al	 # wxTrapInAssert.71_2
-	je	.L97	 #,
+	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.69_2
+	testb	%al, %al	 # wxTrapInAssert.69_2
+	je	.L89	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 13 3177 9 discriminator 7
-	movl	$1, %eax	 #, iftmp.69_3
-	jmp	.L98	 #
-.L97:
+	movl	$1, %eax	 #, iftmp.67_3
+	jmp	.L90	 #
+.L89:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 13 3177 9 discriminator 8
-	movl	$0, %eax	 #, iftmp.69_3
-.L98:
+	movl	$0, %eax	 #, iftmp.67_3
+.L90:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 13 3177 9 discriminator 10
-	testb	%al, %al	 # iftmp.69_3
-	je	.L100	 #,
+	testb	%al, %al	 # iftmp.67_3
+	je	.L92	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 13 3177 9 discriminator 11
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp102
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-.L100:
-.LBE28:
+.L92:
+.LBE26:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3179:     }
 	.loc 13 3179 5 is_stmt 1
 	nop	
@@ -2539,7 +2389,7 @@ _ZN21wxEventTableEntryBaseD2Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB29:
+.LBB27:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3198:         delete m_fn;
 	.loc 13 3198 16
 	movq	16(%rbp), %rax	 # this, tmp94
@@ -2547,7 +2397,7 @@ _ZN21wxEventTableEntryBaseD2Ev:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3198:         delete m_fn;
 	.loc 13 3198 20
 	testq	%rax, %rax	 # _1
-	je	.L103	 #,
+	je	.L95	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3198:         delete m_fn;
 	.loc 13 3198 16 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp95
@@ -2560,8 +2410,8 @@ _ZN21wxEventTableEntryBaseD2Ev:
 	movq	%rdx, %rcx	 # _2,
 	call	*%rax	 # _7
 .LVL1:
-.L103:
-.LBE29:
+.L95:
+.LBE27:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3199:     }
 	.loc 13 3199 5
 	nop	
@@ -2597,7 +2447,7 @@ _ZN17wxEventTableEntryC1ERKiiiP14wxEventFunctorP8wxObject:
 	movq	%rdx, 24(%rbp)	 # evType, evType
 	movl	%r8d, 32(%rbp)	 # winid, winid
 	movl	%r9d, 40(%rbp)	 # idLast, idLast
-.LBB30:
+.LBB28:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3222:         m_eventType(evType)
 	.loc 13 3222 27
 	movq	16(%rbp), %rax	 # this, _1
@@ -2611,7 +2461,7 @@ _ZN17wxEventTableEntryC1ERKiiiP14wxEventFunctorP8wxObject:
 	movq	16(%rbp), %rax	 # this, tmp93
 	movq	24(%rbp), %rdx	 # evType, tmp94
 	movq	%rdx, 24(%rax)	 # tmp94, this_4(D)->m_eventType
-.LBE30:
+.LBE28:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3223:     { }
 	.loc 13 3223 7
 	nop	
@@ -2918,20 +2768,20 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 13 3776 50
 	testq	%rax, %rax	 # _1
-	je	.L113	 #,
+	je	.L105	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 13 3776 50 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp106
-	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.54_17
-	jmp	.L114	 #
-.L113:
+	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.52_17
+	jmp	.L106	 #
+.L105:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 13 3776 50 discriminator 2
-	movq	24(%rbp), %rax	 # handler, iftmp.54_17
-.L114:
+	movq	24(%rbp), %rax	 # handler, iftmp.52_17
+.L106:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 13 3776 26 is_stmt 1 discriminator 4
-	movq	%rax, -8(%rbp)	 # iftmp.54_17, realHandler
+	movq	%rax, -8(%rbp)	 # iftmp.52_17, realHandler
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 13 3778 35 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp107
@@ -2947,7 +2797,7 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
 	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, _5
 	andl	$1, %eax	 #, _7
 	testq	%rax, %rax	 # _7
-	je	.L115	 #,
+	je	.L107	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 13 3778 35 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp110
@@ -2960,18 +2810,18 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
 	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, _12
 	subq	$1, %rax	 #, _14
 	addq	%rdx, %rax	 # _11, _16
-	movq	(%rax), %rax	 # *_16, iftmp.55_18
-	jmp	.L116	 #
-.L115:
+	movq	(%rax), %rax	 # *_16, iftmp.53_18
+	jmp	.L108	 #
+.L107:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 13 3778 35 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp113
-	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.55_18
-.L116:
+	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.53_18
+.L108:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 13 3778 29 is_stmt 1 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp114
-	call	*%rax	 # iftmp.55_18
+	call	*%rax	 # iftmp.53_18
 .LVL4:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3779: }
 	.loc 13 3779 1 discriminator 4
@@ -3143,7 +2993,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 14 337 27
-	movq	-8(%rbp), %rax	 # D.127070, D.154347
+	movq	-8(%rbp), %rax	 # D.127070, D.154348
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 14 338 5
 	addq	$48, %rsp	 #,
@@ -3374,7 +3224,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 14 481 78
-	movq	-8(%rbp), %rax	 # D.127104, D.154369
+	movq	-8(%rbp), %rax	 # D.127104, D.154370
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 14 481 81
 	addq	$48, %rsp	 #,
@@ -3422,7 +3272,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 14 482 78
-	movq	-8(%rbp), %rax	 # D.127106, D.154366
+	movq	-8(%rbp), %rax	 # D.127106, D.154367
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 14 482 81
 	addq	$48, %rsp	 #,
@@ -3609,7 +3459,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 14 532 77
-	movq	-72(%rbp), %rax	 # D.127148, D.154342
+	movq	-72(%rbp), %rax	 # D.127148, D.154343
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 14 533 5
 	addq	$72, %rsp	 #,
@@ -3643,7 +3493,7 @@ _ZNK12wxWindowBase21GetContentScaleFactorEv:
 	movq	%rcx, 16(%rbp)	 # this, this
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:538:     { return 1.0; }
 	.loc 14 538 14
-	movsd	.LC6(%rip), %xmm0	 #, _1
+	movsd	.LC5(%rip), %xmm0	 #, _1
 	movq	%xmm0, %rax	 # _1, <retval>
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:538:     { return 1.0; }
 	.loc 14 538 19
@@ -3900,7 +3750,7 @@ _ZNK12wxWindowBase12CanBeFocusedEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 58
 	testb	%al, %al	 # _4
-	je	.L151	 #,
+	je	.L143	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 70 discriminator 1
 	movq	16(%rbp), %rcx	 # this,
@@ -3908,16 +3758,16 @@ _ZNK12wxWindowBase12CanBeFocusedEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 58 discriminator 1
 	testb	%al, %al	 # _5
-	je	.L151	 #,
+	je	.L143	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 58 is_stmt 0 discriminator 3
 	movl	$1, %eax	 #, iftmp.18_6
-	jmp	.L152	 #
-.L151:
+	jmp	.L144	 #
+.L143:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 58 discriminator 4
 	movl	$0, %eax	 #, iftmp.18_6
-.L152:
+.L144:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 74 is_stmt 1 discriminator 6
 	addq	$32, %rsp	 #,
@@ -4542,7 +4392,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 14 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.154231
+	movq	(%rax), %rax	 # wxDefaultSize, D.154232
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 14 1746 72
 	popq	%rbp	 #
@@ -4682,14 +4532,14 @@ _ZN8wxWindowC2Ev:
 	.cfi_def_cfa 6, -64
 	.seh_endprologue
 	movq	%rcx, -64(%rbp)	 # this, this
-.LBB31:
+.LBB29:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:40:     wxWindowMSW() { Init(); }
 	.loc 16 40 19
 	movq	-64(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
-.LEHB8:
+.LEHB6:
 	call	_ZN12wxWindowBaseC2Ev	 #
-.LEHE8:
+.LEHE6:
 	movq	.refptr._ZTV8wxWindow(%rip), %rax	 #, tmp93
 	leaq	16(%rax), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp94
@@ -4705,29 +4555,29 @@ _ZN8wxWindowC2Ev:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:40:     wxWindowMSW() { Init(); }
 	.loc 16 40 25
 	movq	-64(%rbp), %rcx	 # this,
-.LEHB9:
+.LEHB7:
 	call	_ZN8wxWindow4InitEv	 #
-.LEHE9:
-.LBE31:
+.LEHE7:
+.LBE29:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:40:     wxWindowMSW() { Init(); }
 	.loc 16 40 29
-	jmp	.L196	 #
-.L195:
+	jmp	.L188	 #
+.L187:
 	movq	%rax, %rbx	 #, tmp97
-.LBB32:
+.LBB30:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:40:     wxWindowMSW() { Init(); }
 	.loc 16 40 19
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.155097
-	movq	%rax, %rcx	 # D.155097,
-.LEHB10:
+	movq	%rbx, %rax	 # tmp97, D.155088
+	movq	%rax, %rcx	 # D.155088,
+.LEHB8:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE10:
-.L196:
-.LBE32:
+.LEHE8:
+.L188:
+.LBE30:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:40:     wxWindowMSW() { Init(); }
 	.loc 16 40 29
 	addq	$40, %rsp	 #,
@@ -4747,16 +4597,16 @@ _ZN8wxWindowC2Ev:
 	.byte	0x1
 	.uleb128 .LLSDACSE10499-.LLSDACSB10499
 .LLSDACSB10499:
+	.uleb128 .LEHB6-.LFB10499
+	.uleb128 .LEHE6-.LEHB6
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB7-.LFB10499
+	.uleb128 .LEHE7-.LEHB7
+	.uleb128 .L187-.LFB10499
+	.uleb128 0
 	.uleb128 .LEHB8-.LFB10499
 	.uleb128 .LEHE8-.LEHB8
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB9-.LFB10499
-	.uleb128 .LEHE9-.LEHB9
-	.uleb128 .L195-.LFB10499
-	.uleb128 0
-	.uleb128 .LEHB10-.LFB10499
-	.uleb128 .LEHE10-.LEHB10
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE10499:
@@ -5243,7 +5093,7 @@ _ZN13wxControlBaseC2Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB33:
+.LBB31:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:58:     wxControlBase() { }
 	.loc 17 58 21
 	movq	16(%rbp), %rax	 # this, _1
@@ -5257,7 +5107,7 @@ _ZN13wxControlBaseC2Ev:
 	addq	$576, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN8wxStringC1Ev	 #
-.LBE33:
+.LBE31:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:58:     wxControlBase() { }
 	.loc 17 58 23
 	nop	
@@ -5398,18 +5248,18 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	leaq	-96(%rbp), %rax	 #, tmp92
 	movq	-8(%rbp), %rdx	 # text, tmp93
 	movq	%rax, %rcx	 # tmp92,
-.LEHB11:
+.LEHB9:
 	call	_ZN13wxControlBase15EscapeMnemonicsERK8wxString	 #
-.LEHE11:
+.LEHE9:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:90:         SetLabel(EscapeMnemonics(text));
 	.loc 17 90 17
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rdx	 # tmp94,
 	movq	-16(%rbp), %rcx	 # this,
-.LEHB12:
+.LEHB10:
 	call	*%rbx	 # _3
 .LVL16:
-.LEHE12:
+.LEHE10:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:90:         SetLabel(EscapeMnemonics(text));
 	.loc 17 90 33 discriminator 2
 	leaq	-96(%rbp), %rax	 #, tmp95
@@ -5417,21 +5267,21 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	call	_ZN8wxStringD1Ev	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:91:     }
 	.loc 17 91 5 discriminator 2
-	jmp	.L228	 #
-.L227:
+	jmp	.L220	 #
+.L219:
 	movq	%rax, %rbx	 #, tmp97
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:90:         SetLabel(EscapeMnemonics(text));
 	.loc 17 90 33
 	leaq	-96(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.155102
-	movq	%rax, %rcx	 # D.155102,
-.LEHB13:
+	movq	%rbx, %rax	 # tmp97, D.155093
+	movq	%rax, %rcx	 # D.155093,
+.LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE13:
-.L228:
+.LEHE11:
+.L220:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:91:     }
 	.loc 17 91 5
 	addq	$88, %rsp	 #,
@@ -5451,16 +5301,16 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	.byte	0x1
 	.uleb128 .LLSDACSE11264-.LLSDACSB11264
 .LLSDACSB11264:
+	.uleb128 .LEHB9-.LFB11264
+	.uleb128 .LEHE9-.LEHB9
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB10-.LFB11264
+	.uleb128 .LEHE10-.LEHB10
+	.uleb128 .L219-.LFB11264
+	.uleb128 0
 	.uleb128 .LEHB11-.LFB11264
 	.uleb128 .LEHE11-.LEHB11
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB12-.LFB11264
-	.uleb128 .LEHE12-.LEHB12
-	.uleb128 .L227-.LFB11264
-	.uleb128 0
-	.uleb128 .LEHB13-.LFB11264
-	.uleb128 .LEHE13-.LEHB13
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE11264:
@@ -5505,18 +5355,18 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	leaq	-96(%rbp), %rax	 #, tmp92
 	movq	-8(%rbp), %rdx	 # this, tmp93
 	movq	%rax, %rcx	 # tmp92,
-.LEHB14:
+.LEHB12:
 	call	*%r8	 # _3
 .LVL17:
-.LEHE14:
+.LEHE12:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:94:     virtual wxString GetLabelText() const { return GetLabelText(GetLabel()); }
 	.loc 17 94 75
 	movq	-16(%rbp), %rcx	 # <retval>, tmp94
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rdx	 # tmp95,
-.LEHB15:
+.LEHB13:
 	call	_ZN13wxControlBase12GetLabelTextERK8wxString	 #
-.LEHE15:
+.LEHE13:
 	nop	
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:94:     virtual wxString GetLabelText() const { return GetLabelText(GetLabel()); }
 	.loc 17 94 73
@@ -5525,20 +5375,20 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	call	_ZN8wxStringD1Ev	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:94:     virtual wxString GetLabelText() const { return GetLabelText(GetLabel()); }
 	.loc 17 94 75
-	jmp	.L233	 #
-.L232:
+	jmp	.L225	 #
+.L224:
 	movq	%rax, %rbx	 #, tmp98
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:94:     virtual wxString GetLabelText() const { return GetLabelText(GetLabel()); }
 	.loc 17 94 73
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.155104
-	movq	%rax, %rcx	 # D.155104,
-.LEHB16:
+	movq	%rbx, %rax	 # tmp98, D.155095
+	movq	%rax, %rcx	 # D.155095,
+.LEHB14:
 	call	_Unwind_Resume	 #
-.LEHE16:
-.L233:
+.LEHE14:
+.L225:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:94:     virtual wxString GetLabelText() const { return GetLabelText(GetLabel()); }
 	.loc 17 94 78
 	movq	-16(%rbp), %rax	 # <retval>,
@@ -5559,16 +5409,16 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	.byte	0x1
 	.uleb128 .LLSDACSE11265-.LLSDACSB11265
 .LLSDACSB11265:
+	.uleb128 .LEHB12-.LFB11265
+	.uleb128 .LEHE12-.LEHB12
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB13-.LFB11265
+	.uleb128 .LEHE13-.LEHB13
+	.uleb128 .L224-.LFB11265
+	.uleb128 0
 	.uleb128 .LEHB14-.LFB11265
 	.uleb128 .LEHE14-.LEHB14
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB15-.LFB11265
-	.uleb128 .LEHE15-.LEHB15
-	.uleb128 .L232-.LFB11265
-	.uleb128 0
-	.uleb128 .LEHB16-.LFB11265
-	.uleb128 .LEHE16-.LEHB16
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE11265:
@@ -5633,14 +5483,14 @@ _ZN9wxControlC2Ev:
 	.cfi_def_cfa 6, -64
 	.seh_endprologue
 	movq	%rcx, -64(%rbp)	 # this, this
-.LBB34:
+.LBB32:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/control.h:20:     wxControl() { }
 	.loc 18 20 17
 	movq	-64(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
-.LEHB17:
+.LEHB15:
 	call	_ZN13wxControlBaseC2Ev	 #
-.LEHE17:
+.LEHE15:
 	movq	.refptr._ZTV9wxControl(%rip), %rax	 #, tmp93
 	leaq	16(%rax), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp94
@@ -5648,29 +5498,29 @@ _ZN9wxControlC2Ev:
 	movq	-64(%rbp), %rax	 # this, tmp95
 	addq	$624, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
-.LEHB18:
+.LEHB16:
 	call	_ZN11wxArrayLongC1Ev	 #
-.LEHE18:
-.LBE34:
+.LEHE16:
+.LBE32:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/control.h:20:     wxControl() { }
 	.loc 18 20 19
-	jmp	.L239	 #
-.L238:
+	jmp	.L231	 #
+.L230:
 	movq	%rax, %rbx	 #, tmp96
-.LBB35:
+.LBB33:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/control.h:20:     wxControl() { }
 	.loc 18 20 17
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxControlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.155108
-	movq	%rax, %rcx	 # D.155108,
-.LEHB19:
+	movq	%rbx, %rax	 # tmp96, D.155099
+	movq	%rax, %rcx	 # D.155099,
+.LEHB17:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE19:
-.L239:
-.LBE35:
+.LEHE17:
+.L231:
+.LBE33:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/control.h:20:     wxControl() { }
 	.loc 18 20 19
 	addq	$40, %rsp	 #,
@@ -5690,16 +5540,16 @@ _ZN9wxControlC2Ev:
 	.byte	0x1
 	.uleb128 .LLSDACSE11271-.LLSDACSB11271
 .LLSDACSB11271:
+	.uleb128 .LEHB15-.LFB11271
+	.uleb128 .LEHE15-.LEHB15
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB16-.LFB11271
+	.uleb128 .LEHE16-.LEHB16
+	.uleb128 .L230-.LFB11271
+	.uleb128 0
 	.uleb128 .LEHB17-.LFB11271
 	.uleb128 .LEHE17-.LEHB17
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB18-.LFB11271
-	.uleb128 .LEHE18-.LEHB18
-	.uleb128 .L238-.LFB11271
-	.uleb128 0
-	.uleb128 .LEHB19-.LFB11271
-	.uleb128 .LEHE19-.LEHB19
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE11271:
@@ -5871,7 +5721,7 @@ _ZN12wxWithImagesC2Ev:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB36:
+.LBB34:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:30:     {
 	.loc 19 30 5
 	leaq	16+_ZTV12wxWithImages(%rip), %rdx	 #, _1
@@ -5885,7 +5735,7 @@ _ZN12wxWithImagesC2Ev:
 	.loc 19 32 25
 	movq	16(%rbp), %rax	 # this, tmp90
 	movb	$0, 16(%rax)	 #, this_3(D)->m_ownsImageList
-.LBE36:
+.LBE34:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:33:     }
 	.loc 19 33 5
 	nop	
@@ -5917,7 +5767,7 @@ _ZN12wxWithImagesD2Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB37:
+.LBB35:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:36:     {
 	.loc 19 36 5
 	leaq	16+_ZTV12wxWithImages(%rip), %rdx	 #, _1
@@ -5927,7 +5777,7 @@ _ZN12wxWithImagesD2Ev:
 	.loc 19 37 21
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN12wxWithImages12FreeIfNeededEv	 #
-.LBE37:
+.LBE35:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:38:     }
 	.loc 19 38 5
 	nop	
@@ -5960,7 +5810,7 @@ _ZN12wxWithImagesD1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB38:
+.LBB36:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:36:     {
 	.loc 19 36 5
 	leaq	16+_ZTV12wxWithImages(%rip), %rdx	 #, _1
@@ -5970,7 +5820,7 @@ _ZN12wxWithImagesD1Ev:
 	.loc 19 37 21
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN12wxWithImages12FreeIfNeededEv	 #
-.LBE38:
+.LBE36:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:38:     }
 	.loc 19 38 5
 	nop	
@@ -6089,7 +5939,7 @@ _ZN12wxWithImages12FreeIfNeededEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:76:         if ( m_ownsImageList )
 	.loc 19 76 9
 	testb	%al, %al	 # _1
-	je	.L255	 #,
+	je	.L247	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:78:             delete m_imageList;
 	.loc 19 78 20
 	movq	16(%rbp), %rax	 # this, tmp96
@@ -6097,7 +5947,7 @@ _ZN12wxWithImages12FreeIfNeededEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:78:             delete m_imageList;
 	.loc 19 78 31
 	testq	%rax, %rax	 # _2
-	je	.L254	 #,
+	je	.L246	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:78:             delete m_imageList;
 	.loc 19 78 20 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp97
@@ -6110,7 +5960,7 @@ _ZN12wxWithImages12FreeIfNeededEv:
 	movq	%rdx, %rcx	 # _3,
 	call	*%rax	 # _8
 .LVL18:
-.L254:
+.L246:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:79:             m_imageList = NULL;
 	.loc 19 79 25
 	movq	16(%rbp), %rax	 # this, tmp100
@@ -6119,7 +5969,7 @@ _ZN12wxWithImages12FreeIfNeededEv:
 	.loc 19 82 29
 	movq	16(%rbp), %rax	 # this, tmp101
 	movb	$0, 16(%rax)	 #, this_12(D)->m_ownsImageList
-.L255:
+.L247:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/withimages.h:84:     }
 	.loc 19 84 5
 	nop	
@@ -6153,13 +6003,13 @@ _ZN12wxArrayPagesC1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB39:
+.LBB37:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:26: WX_DEFINE_EXPORTED_ARRAY_PTR(wxWindow *, wxArrayPages);
 	.loc 20 26 1
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZN18wxBaseArrayPtrVoidC2Ev	 #
-.LBE39:
+.LBE37:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -6190,13 +6040,13 @@ _ZN12wxArrayPagesD1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB40:
+.LBB38:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:26: WX_DEFINE_EXPORTED_ARRAY_PTR(wxWindow *, wxArrayPages);
 	.loc 20 26 1
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZN18wxBaseArrayPtrVoidD2Ev	 #
-.LBE40:
+.LBE38:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -6263,7 +6113,7 @@ _ZN9wxControlD2Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB41:
+.LBB39:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/control.h:17: class WXDLLIMPEXP_CORE wxControl : public wxControlBase
 	.loc 18 17 24
 	movq	.refptr._ZTV9wxControl(%rip), %rax	 #, tmp90
@@ -6277,7 +6127,7 @@ _ZN9wxControlD2Ev:
 	movq	16(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN13wxControlBaseD2Ev	 #
-.LBE41:
+.LBE39:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -6313,14 +6163,14 @@ _ZN14wxBookCtrlBaseC2Ev:
 	.cfi_def_cfa 6, -64
 	.seh_endprologue
 	movq	%rcx, -64(%rbp)	 # this, this
-.LBB42:
+.LBB40:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:65:     {
 	.loc 20 65 5
 	movq	-64(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
-.LEHB20:
+.LEHB18:
 	call	_ZN9wxControlC2Ev	 #
-.LEHE20:
+.LEHE18:
 	movq	-64(%rbp), %rax	 # this, tmp96
 	addq	$648, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -6336,32 +6186,32 @@ _ZN14wxBookCtrlBaseC2Ev:
 	movq	-64(%rbp), %rax	 # this, tmp101
 	addq	$672, %rax	 #, _5
 	movq	%rax, %rcx	 # _5,
-.LEHB21:
+.LEHB19:
 	call	_ZN12wxArrayPagesC1Ev	 #
-.LEHE21:
+.LEHE19:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:66:         Init();
 	.loc 20 66 13
 	movq	-64(%rbp), %rcx	 # this,
-.LEHB22:
+.LEHB20:
 	call	_ZN14wxBookCtrlBase4InitEv	 #
-.LEHE22:
-.LBE42:
+.LEHE20:
+.LBE40:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:67:     }
 	.loc 20 67 5
-	jmp	.L266	 #
-.L265:
+	jmp	.L258	 #
+.L257:
 	movq	%rax, %rbx	 #, tmp104
-.LBB43:
+.LBB41:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:65:     {
 	.loc 20 65 5
 	movq	-64(%rbp), %rax	 # this, tmp102
 	addq	$672, %rax	 #, _6
 	movq	%rax, %rcx	 # _6,
 	call	_ZN12wxArrayPagesD1Ev	 #
-	jmp	.L263	 #
-.L264:
+	jmp	.L255	 #
+.L256:
 	movq	%rax, %rbx	 #, tmp103
-.L263:
+.L255:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:65:     {
 	.loc 20 65 5 is_stmt 0 discriminator 1
 	movq	-64(%rbp), %rax	 # this, tmp107
@@ -6371,14 +6221,14 @@ _ZN14wxBookCtrlBaseC2Ev:
 	movq	-64(%rbp), %rax	 # this, _8
 	movq	%rax, %rcx	 # _8,
 	call	_ZN9wxControlD2Ev	 #
-	movq	%rbx, %rax	 # tmp108, D.155112
-	movq	%rax, %rcx	 # D.155112,
-.LEHB23:
+	movq	%rbx, %rax	 # tmp108, D.155103
+	movq	%rax, %rcx	 # D.155103,
+.LEHB21:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE23:
-.L266:
-.LBE43:
+.LEHE21:
+.L258:
+.LBE41:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:67:     }
 	.loc 20 67 5 is_stmt 1
 	addq	$40, %rsp	 #,
@@ -6398,20 +6248,20 @@ _ZN14wxBookCtrlBaseC2Ev:
 	.byte	0x1
 	.uleb128 .LLSDACSE11431-.LLSDACSB11431
 .LLSDACSB11431:
+	.uleb128 .LEHB18-.LFB11431
+	.uleb128 .LEHE18-.LEHB18
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB19-.LFB11431
+	.uleb128 .LEHE19-.LEHB19
+	.uleb128 .L256-.LFB11431
+	.uleb128 0
 	.uleb128 .LEHB20-.LFB11431
 	.uleb128 .LEHE20-.LEHB20
-	.uleb128 0
+	.uleb128 .L257-.LFB11431
 	.uleb128 0
 	.uleb128 .LEHB21-.LFB11431
 	.uleb128 .LEHE21-.LEHB21
-	.uleb128 .L264-.LFB11431
-	.uleb128 0
-	.uleb128 .LEHB22-.LFB11431
-	.uleb128 .LEHE22-.LEHB22
-	.uleb128 .L265-.LFB11431
-	.uleb128 0
-	.uleb128 .LEHB23-.LFB11431
-	.uleb128 .LEHE23-.LEHB23
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE11431:
@@ -6608,7 +6458,7 @@ _ZN14wxBookCtrlBase14DeleteAllPagesEv:
 	.loc 20 174 29
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN14wxBookCtrlBase20DoInvalidateBestSizeEv	 #
-.LBB44:
+.LBB42:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:175:         WX_CLEAR_ARRAY(m_pages);
 	.loc 20 175 9
 	movq	16(%rbp), %rax	 # this, tmp98
@@ -6616,14 +6466,14 @@ _ZN14wxBookCtrlBase14DeleteAllPagesEv:
 	movq	%rax, %rcx	 # _1,
 	call	_ZNK18wxBaseArrayPtrVoid4sizeEv	 #
 	movq	%rax, -16(%rbp)	 # tmp99, wxAAcnt
-.LBB45:
+.LBB43:
 	movq	$0, -8(%rbp)	 #, wxAAn
-.L278:
+.L270:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:175:         WX_CLEAR_ARRAY(m_pages);
 	.loc 20 175 9 is_stmt 0 discriminator 7
 	movq	-8(%rbp), %rax	 # wxAAn, tmp100
 	cmpq	-16(%rbp), %rax	 # wxAAcnt, tmp100
-	jnb	.L276	 #,
+	jnb	.L268	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:175:         WX_CLEAR_ARRAY(m_pages);
 	.loc 20 175 9 discriminator 3
 	movq	16(%rbp), %rax	 # this, tmp101
@@ -6633,7 +6483,7 @@ _ZN14wxBookCtrlBase14DeleteAllPagesEv:
 	call	_ZNK12wxArrayPagesixEy	 #
 	movq	(%rax), %rax	 # *_3, _20
 	testq	%rax, %rax	 # _20
-	je	.L277	 #,
+	je	.L269	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:175:         WX_CLEAR_ARRAY(m_pages);
 	.loc 20 175 9 discriminator 4
 	movq	(%rax), %rdx	 # _20->D.128254.D.126981.D.122214._vptr.wxObject, _4
@@ -6642,20 +6492,20 @@ _ZN14wxBookCtrlBase14DeleteAllPagesEv:
 	movq	%rax, %rcx	 # _20,
 	call	*%rdx	 # _6
 .LVL20:
-.L277:
+.L269:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:175:         WX_CLEAR_ARRAY(m_pages);
 	.loc 20 175 9 discriminator 6
 	addq	$1, -8(%rbp)	 #, wxAAn
-	jmp	.L278	 #
-.L276:
-.LBE45:
+	jmp	.L270	 #
+.L268:
+.LBE43:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:175:         WX_CLEAR_ARRAY(m_pages);
 	.loc 20 175 9 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp103
 	addq	$672, %rax	 #, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN18wxBaseArrayPtrVoid5clearEv	 #
-.LBE44:
+.LBE42:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:176:         return true;
 	.loc 20 176 16 is_stmt 1 discriminator 2
 	movl	$1, %eax	 #, _24
@@ -6879,13 +6729,13 @@ _ZNK14wxBookCtrlBase16GetDefaultBorderEv:
 .LFE11456:
 	.seh_endproc
 	.section .rdata,"dr"
-.LC7:
+.LC6:
 	.ascii "Assert failure\0"
 	.align 8
-.LC8:
+.LC7:
 	.ascii "C:\\zoo\\lib\\wxWidgets-3.0.5\\include/wx/bookctrl.h\0"
 	.align 8
-.LC9:
+.LC8:
 	.ascii "O\0v\0e\0r\0r\0i\0d\0e\0 \0t\0h\0i\0s\0 \0f\0u\0n\0c\0t\0i\0o\0n\0!\0\0\0"
 	.section	.text$_ZN14wxBookCtrlBase18UpdateSelectedPageEy,"x"
 	.linkonce discard
@@ -6914,39 +6764,39 @@ _ZN14wxBookCtrlBase18UpdateSelectedPageEy:
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp90
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.10_1
 	testq	%rax, %rax	 # wxTheAssertHandler.10_1
-	je	.L291	 #,
+	je	.L283	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:274:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 274 11 is_stmt 0 discriminator 1
-	leaq	.LC9(%rip), %rax	 #, tmp91
+	leaq	.LC8(%rip), %rax	 #, tmp91
 	movq	%rax, 32(%rsp)	 # tmp91,
-	leaq	.LC7(%rip), %r9	 #,
+	leaq	.LC6(%rip), %r9	 #,
 	leaq	_ZZN14wxBookCtrlBase18UpdateSelectedPageEyE12__FUNCTION__(%rip), %r8	 #,
 	movl	$274, %edx	 #,
-	leaq	.LC8(%rip), %rcx	 #,
+	leaq	.LC7(%rip), %rcx	 #,
 	call	_Z10wxOnAssertPKciS0_S0_PKw	 #
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp92
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.11_2
 	testb	%al, %al	 # wxTrapInAssert.11_2
-	je	.L291	 #,
+	je	.L283	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:274:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 274 11 discriminator 3
 	movl	$1, %eax	 #, iftmp.9_3
-	jmp	.L292	 #
-.L291:
+	jmp	.L284	 #
+.L283:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:274:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 274 11 discriminator 4
 	movl	$0, %eax	 #, iftmp.9_3
-.L292:
+.L284:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:274:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 274 11 discriminator 6
 	testb	%al, %al	 # iftmp.9_3
-	je	.L294	 #,
+	je	.L286	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:274:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 274 11 discriminator 7
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp93
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-.L294:
+.L286:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:274:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 274 55 is_stmt 1
 	nop	
@@ -6984,39 +6834,39 @@ _ZNK14wxBookCtrlBase23CreatePageChangingEventEv:
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp92
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.6_1
 	testq	%rax, %rax	 # wxTheAssertHandler.6_1
-	je	.L296	 #,
+	je	.L288	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:278:         { wxFAIL_MSG(wxT("Override this function!")); return NULL; }
 	.loc 20 278 11 is_stmt 0 discriminator 1
-	leaq	.LC9(%rip), %rax	 #, tmp93
+	leaq	.LC8(%rip), %rax	 #, tmp93
 	movq	%rax, 32(%rsp)	 # tmp93,
-	leaq	.LC7(%rip), %r9	 #,
+	leaq	.LC6(%rip), %r9	 #,
 	leaq	_ZZNK14wxBookCtrlBase23CreatePageChangingEventEvE12__FUNCTION__(%rip), %r8	 #,
 	movl	$278, %edx	 #,
-	leaq	.LC8(%rip), %rcx	 #,
+	leaq	.LC7(%rip), %rcx	 #,
 	call	_Z10wxOnAssertPKciS0_S0_PKw	 #
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp94
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.7_2
 	testb	%al, %al	 # wxTrapInAssert.7_2
-	je	.L296	 #,
+	je	.L288	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:278:         { wxFAIL_MSG(wxT("Override this function!")); return NULL; }
 	.loc 20 278 11 discriminator 3
 	movl	$1, %eax	 #, iftmp.5_3
-	jmp	.L297	 #
-.L296:
+	jmp	.L289	 #
+.L288:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:278:         { wxFAIL_MSG(wxT("Override this function!")); return NULL; }
 	.loc 20 278 11 discriminator 4
 	movl	$0, %eax	 #, iftmp.5_3
-.L297:
+.L289:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:278:         { wxFAIL_MSG(wxT("Override this function!")); return NULL; }
 	.loc 20 278 11 discriminator 6
 	testb	%al, %al	 # iftmp.5_3
-	je	.L298	 #,
+	je	.L290	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:278:         { wxFAIL_MSG(wxT("Override this function!")); return NULL; }
 	.loc 20 278 11 discriminator 7
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp95
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-.L298:
+.L290:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:278:         { wxFAIL_MSG(wxT("Override this function!")); return NULL; }
 	.loc 20 278 62 is_stmt 1 discriminator 10
 	movl	$0, %eax	 #, _14
@@ -7057,39 +6907,39 @@ _ZN14wxBookCtrlBase16MakeChangedEventER15wxBookCtrlEvent:
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp90
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.2_1
 	testq	%rax, %rax	 # wxTheAssertHandler.2_1
-	je	.L301	 #,
+	je	.L293	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:283:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 283 11 is_stmt 0 discriminator 1
-	leaq	.LC9(%rip), %rax	 #, tmp91
+	leaq	.LC8(%rip), %rax	 #, tmp91
 	movq	%rax, 32(%rsp)	 # tmp91,
-	leaq	.LC7(%rip), %r9	 #,
+	leaq	.LC6(%rip), %r9	 #,
 	leaq	_ZZN14wxBookCtrlBase16MakeChangedEventER15wxBookCtrlEventE12__FUNCTION__(%rip), %r8	 #,
 	movl	$283, %edx	 #,
-	leaq	.LC8(%rip), %rcx	 #,
+	leaq	.LC7(%rip), %rcx	 #,
 	call	_Z10wxOnAssertPKciS0_S0_PKw	 #
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp92
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.3_2
 	testb	%al, %al	 # wxTrapInAssert.3_2
-	je	.L301	 #,
+	je	.L293	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:283:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 283 11 discriminator 3
 	movl	$1, %eax	 #, iftmp.1_3
-	jmp	.L302	 #
-.L301:
+	jmp	.L294	 #
+.L293:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:283:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 283 11 discriminator 4
 	movl	$0, %eax	 #, iftmp.1_3
-.L302:
+.L294:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:283:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 283 11 discriminator 6
 	testb	%al, %al	 # iftmp.1_3
-	je	.L304	 #,
+	je	.L296	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:283:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 283 11 discriminator 7
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp93
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-.L304:
+.L296:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:283:         { wxFAIL_MSG(wxT("Override this function!")); }
 	.loc 20 283 55 is_stmt 1
 	nop	
@@ -7233,7 +7083,7 @@ _ZN14wxBookCtrlBaseD2Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB46:
+.LBB44:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/bookctrl.h:57: class WXDLLIMPEXP_CORE wxBookCtrlBase : public wxControl,
 	.loc 20 57 24
 	movq	.refptr._ZTV14wxBookCtrlBase(%rip), %rax	 #, tmp92
@@ -7255,7 +7105,7 @@ _ZN14wxBookCtrlBaseD2Ev:
 	movq	16(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN9wxControlD2Ev	 #
-.LBE46:
+.LBE44:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -7285,14 +7135,14 @@ _ZN22wxControlContainerBaseD2Ev:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB47:
+.LBB45:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:53:     virtual ~wxControlContainerBase() {}
 	.loc 21 53 39
 	movq	.refptr._ZTV22wxControlContainerBase(%rip), %rax	 #, tmp88
 	leaq	16(%rax), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	%rdx, (%rax)	 # _1, this_3(D)->_vptr.wxControlContainerBase
-.LBE47:
+.LBE45:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:53:     virtual ~wxControlContainerBase() {}
 	.loc 21 53 40
 	nop	
@@ -7304,13 +7154,13 @@ _ZN22wxControlContainerBaseD2Ev:
 .LFE11497:
 	.seh_endproc
 	.section .rdata,"dr"
-.LC10:
+.LC9:
 	.ascii "!m_winParent\0"
 	.align 8
-.LC11:
+.LC10:
 	.ascii "C:\\zoo\\lib\\wxWidgets-3.0.5\\include/wx/containr.h\0"
 	.align 8
-.LC12:
+.LC11:
 	.ascii "s\0h\0o\0u\0l\0d\0n\0'\0t\0 \0b\0e\0 \0c\0a\0l\0l\0e\0d\0 \0t\0w\0i\0c\0e\0\0\0"
 	.section	.text$_ZN22wxControlContainerBase18SetContainerWindowEP8wxWindow,"x"
 	.linkonce discard
@@ -7339,45 +7189,45 @@ _ZN22wxControlContainerBase18SetContainerWindowEP8wxWindow:
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp91
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.32_1
 	testq	%rax, %rax	 # wxTheAssertHandler.32_1
-	je	.L313	 #,
+	je	.L305	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:57:         wxASSERT_MSG( !m_winParent, wxT("shouldn't be called twice") );
 	.loc 21 57 9 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp92
 	movq	8(%rax), %rax	 # this_9(D)->m_winParent, _2
 	testq	%rax, %rax	 # _2
-	je	.L313	 #,
+	je	.L305	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:57:         wxASSERT_MSG( !m_winParent, wxT("shouldn't be called twice") );
 	.loc 21 57 9 discriminator 3
-	leaq	.LC12(%rip), %rax	 #, tmp93
+	leaq	.LC11(%rip), %rax	 #, tmp93
 	movq	%rax, 32(%rsp)	 # tmp93,
-	leaq	.LC10(%rip), %r9	 #,
+	leaq	.LC9(%rip), %r9	 #,
 	leaq	_ZZN22wxControlContainerBase18SetContainerWindowEP8wxWindowE12__FUNCTION__(%rip), %r8	 #,
 	movl	$57, %edx	 #,
-	leaq	.LC11(%rip), %rcx	 #,
+	leaq	.LC10(%rip), %rcx	 #,
 	call	_Z10wxOnAssertPKciS0_S0_PKw	 #
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp94
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.33_3
 	testb	%al, %al	 # wxTrapInAssert.33_3
-	je	.L313	 #,
+	je	.L305	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:57:         wxASSERT_MSG( !m_winParent, wxT("shouldn't be called twice") );
 	.loc 21 57 9 discriminator 5
 	movl	$1, %eax	 #, iftmp.31_4
-	jmp	.L314	 #
-.L313:
+	jmp	.L306	 #
+.L305:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:57:         wxASSERT_MSG( !m_winParent, wxT("shouldn't be called twice") );
 	.loc 21 57 9 discriminator 6
 	movl	$0, %eax	 #, iftmp.31_4
-.L314:
+.L306:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:57:         wxASSERT_MSG( !m_winParent, wxT("shouldn't be called twice") );
 	.loc 21 57 9 discriminator 8
 	testb	%al, %al	 # iftmp.31_4
-	je	.L315	 #,
+	je	.L307	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:57:         wxASSERT_MSG( !m_winParent, wxT("shouldn't be called twice") );
 	.loc 21 57 9 discriminator 9
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp95
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-.L315:
+.L307:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:59:         m_winParent = winParent;
 	.loc 21 59 21 is_stmt 1
 	movq	16(%rbp), %rax	 # this, tmp96
@@ -7422,7 +7272,7 @@ _ZNK22wxControlContainerBase23AcceptsFocusRecursivelyEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:82:         { return AcceptsFocus() ||
 	.loc 21 82 33
 	testb	%al, %al	 # _1
-	jne	.L317	 #,
+	jne	.L309	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:83:             (m_acceptsFocusChildren && HasAnyChildrenAcceptingFocus()); }
 	.loc 21 83 14 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp92
@@ -7430,7 +7280,7 @@ _ZNK22wxControlContainerBase23AcceptsFocusRecursivelyEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:82:         { return AcceptsFocus() ||
 	.loc 21 82 33 discriminator 2
 	testb	%al, %al	 # _2
-	je	.L318	 #,
+	je	.L310	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:83:             (m_acceptsFocusChildren && HasAnyChildrenAcceptingFocus()); }
 	.loc 21 83 68
 	movq	16(%rbp), %rcx	 # this,
@@ -7438,17 +7288,17 @@ _ZNK22wxControlContainerBase23AcceptsFocusRecursivelyEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:83:             (m_acceptsFocusChildren && HasAnyChildrenAcceptingFocus()); }
 	.loc 21 83 37
 	testb	%al, %al	 # _3
-	je	.L318	 #,
-.L317:
+	je	.L310	 #,
+.L309:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:82:         { return AcceptsFocus() ||
 	.loc 21 82 33 discriminator 1
 	movl	$1, %eax	 #, iftmp.19_4
-	jmp	.L319	 #
-.L318:
+	jmp	.L311	 #
+.L310:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:82:         { return AcceptsFocus() ||
 	.loc 21 82 33 is_stmt 0 discriminator 3
 	movl	$0, %eax	 #, iftmp.19_4
-.L319:
+.L311:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:83:             (m_acceptsFocusChildren && HasAnyChildrenAcceptingFocus()); }
 	.loc 21 83 73 is_stmt 1
 	addq	$32, %rsp	 #,
@@ -7515,7 +7365,7 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseED2Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB48:
+.LBB46:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:182: class wxNavigationEnabled : public W
 	.loc 21 182 7
 	leaq	16+_ZTV19wxNavigationEnabledI14wxBookCtrlBaseE(%rip), %rdx	 #, _1
@@ -7531,7 +7381,7 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseED2Ev:
 	movq	16(%rbp), %rax	 # this, _4
 	movq	%rax, %rcx	 # _4,
 	call	_ZN14wxBookCtrlBaseD2Ev	 #
-.LBE48:
+.LBE46:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -7571,14 +7421,14 @@ _ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	movq	%rdx, -40(%rbp)	 # parent, parent
 	movl	%r8d, -32(%rbp)	 # id, id
 	movq	%r9, -24(%rbp)	 # pos, pos
-.LBB49:
+.LBB47:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/aui/auibook.h:258:     {
 	.loc 22 258 5
 	movq	-48(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
-.LEHB24:
+.LEHB22:
 	call	_ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev	 #
-.LEHE24:
+.LEHE22:
 	movq	.refptr._ZTV13wxAuiNotebook(%rip), %rax	 #, tmp101
 	leaq	16(%rax), %rdx	 #, _2
 	movq	-48(%rbp), %rax	 # this, tmp102
@@ -7592,17 +7442,17 @@ _ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	movl	$201, %r8d	 #,
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _4,
-.LEHB25:
+.LEHB23:
 	call	_ZN12wxAuiManagerC1EP8wxWindowj	 #
-.LEHE25:
+.LEHE23:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/aui/auibook.h:258:     {
 	.loc 22 258 5 is_stmt 0 discriminator 2
 	movq	-48(%rbp), %rax	 # this, tmp106
 	addq	$1264, %rax	 #, _5
 	movq	%rax, %rcx	 # _5,
-.LEHB26:
+.LEHB24:
 	call	_ZN17wxAuiTabContainerC1Ev	 #
-.LEHE26:
+.LEHE24:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/aui/auibook.h:258:     {
 	.loc 22 258 5 discriminator 4
 	movq	-48(%rbp), %rax	 # this, tmp107
@@ -7620,7 +7470,7 @@ _ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/aui/auibook.h:259:         Init();
 	.loc 22 259 13 is_stmt 1 discriminator 4
 	movq	-48(%rbp), %rcx	 # this,
-.LEHB27:
+.LEHB25:
 	call	_ZN13wxAuiNotebook4InitEv	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/aui/auibook.h:260:         Create(parent, id, pos, size, style);
 	.loc 22 260 15
@@ -7636,14 +7486,14 @@ _ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	movq	%rax, %rdx	 # tmp112,
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZN13wxAuiNotebook6CreateEP8wxWindowiRK7wxPointRK6wxSizel	 #
-.LEHE27:
-.LBE49:
+.LEHE25:
+.LBE47:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/aui/auibook.h:261:     }
 	.loc 22 261 5
-	jmp	.L331	 #
-.L330:
+	jmp	.L323	 #
+.L322:
 	movq	%rax, %rbx	 #, tmp117
-.LBB50:
+.LBB48:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/aui/auibook.h:258:     {
 	.loc 22 258 5
 	movq	-48(%rbp), %rax	 # this, tmp115
@@ -7658,33 +7508,33 @@ _ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	addq	$1264, %rax	 #, _11
 	movq	%rax, %rcx	 # _11,
 	call	_ZN17wxAuiTabContainerD1Ev	 #
-	jmp	.L326	 #
-.L329:
+	jmp	.L318	 #
+.L321:
 	movq	%rax, %rbx	 #, tmp124
-.L326:
+.L318:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/aui/auibook.h:258:     {
 	.loc 22 258 5 is_stmt 0 discriminator 3
 	movq	-48(%rbp), %rax	 # this, tmp126
 	addq	$768, %rax	 #, _12
 	movq	%rax, %rcx	 # _12,
 	call	_ZN12wxAuiManagerD1Ev	 #
-	jmp	.L327	 #
-.L328:
+	jmp	.L319	 #
+.L320:
 	movq	%rax, %rbx	 #, tmp127
-.L327:
+.L319:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/aui/auibook.h:258:     {
 	.loc 22 258 5 discriminator 1
 	movq	-48(%rbp), %rax	 # this, _13
 	movq	%rax, %rcx	 # _13,
 	call	_ZN19wxNavigationEnabledI14wxBookCtrlBaseED2Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.155121
-	movq	%rax, %rcx	 # D.155121,
-.LEHB28:
+	movq	%rbx, %rax	 # tmp127, D.155112
+	movq	%rax, %rcx	 # D.155112,
+.LEHB26:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE28:
-.L331:
-.LBE50:
+.LEHE26:
+.L323:
+.LBE48:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/aui/auibook.h:261:     }
 	.loc 22 261 5 is_stmt 1
 	addq	$56, %rsp	 #,
@@ -7704,24 +7554,24 @@ _ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	.byte	0x1
 	.uleb128 .LLSDACSE11583-.LLSDACSB11583
 .LLSDACSB11583:
+	.uleb128 .LEHB22-.LFB11583
+	.uleb128 .LEHE22-.LEHB22
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB23-.LFB11583
+	.uleb128 .LEHE23-.LEHB23
+	.uleb128 .L320-.LFB11583
+	.uleb128 0
 	.uleb128 .LEHB24-.LFB11583
 	.uleb128 .LEHE24-.LEHB24
-	.uleb128 0
+	.uleb128 .L321-.LFB11583
 	.uleb128 0
 	.uleb128 .LEHB25-.LFB11583
 	.uleb128 .LEHE25-.LEHB25
-	.uleb128 .L328-.LFB11583
+	.uleb128 .L322-.LFB11583
 	.uleb128 0
 	.uleb128 .LEHB26-.LFB11583
 	.uleb128 .LEHE26-.LEHB26
-	.uleb128 .L329-.LFB11583
-	.uleb128 0
-	.uleb128 .LEHB27-.LFB11583
-	.uleb128 .LEHE27-.LEHB27
-	.uleb128 .L330-.LFB11583
-	.uleb128 0
-	.uleb128 .LEHB28-.LFB11583
-	.uleb128 .LEHE28-.LEHB28
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE11583:
@@ -7969,13 +7819,13 @@ _ZN17wxEventTableEntryD1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB51:
+.LBB49:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3217: struct WXDLLIMPEXP_BASE wxEventTableEntry : public wxEventTableEntryBase
 	.loc 13 3217 25
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZN21wxEventTableEntryBaseD2Ev	 #
-.LBE51:
+.LBE49:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -8013,7 +7863,7 @@ _ZN13T100MainPanelC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	movq	%rdx, 24(%rbp)	 # parent, parent
 	movl	%r8d, 32(%rbp)	 # id, id
 	movq	%r9, 40(%rbp)	 # pos, pos
-.LBB52:
+.LBB50:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:16:     wxAuiNotebook(parent, id, pos, size, style)
 	.loc 24 16 47
 	movq	16(%rbp), %rax	 # this, _1
@@ -8034,7 +7884,7 @@ _ZN13T100MainPanelC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	movq	%rdx, 648(%rax)	 # _3, this_6(D)->D.147467.D.137027.D.136733.D.135329._vptr.wxWithImages
 	movq	16(%rbp), %rax	 # this, tmp98
 	movq	$0, 1464(%rax)	 #, this_6(D)->m_current
-.LBE52:
+.LBE50:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:19: }
 	.loc 24 19 1
 	nop	
@@ -8068,7 +7918,7 @@ _ZN13T100MainPanelD2Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB53:
+.LBB51:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:21: T100MainPanel::~T100MainPanel()
 	.loc 24 21 31
 	leaq	16+_ZTV13T100MainPanel(%rip), %rdx	 #, _1
@@ -8080,7 +7930,7 @@ _ZN13T100MainPanelD2Ev:
 	movq	16(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN13wxAuiNotebookD2Ev	 #
-.LBE53:
+.LBE51:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:24: }
 	.loc 24 24 1
 	nop	
@@ -8219,14 +8069,14 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	leaq	-32(%rbp), %rax	 #, tmp98
 	movq	.refptr.wxSTCNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp98,
-.LEHB29:
+.LEHB27:
 	call	_ZN8wxStringC1EPKc	 #
-.LEHE29:
+.LEHE27:
 	leaq	-32(%rbp), %rsi	 #, _13
 	movl	$1376, %ecx	 #,
-.LEHB30:
+.LEHB28:
 	call	_Znwy	 #
-.LEHE30:
+.LEHE28:
 	movq	%rax, %rbx	 # tmp99, _15
 	movq	160(%rbp), %rax	 # this, _1
 	movq	%rsi, 48(%rsp)	 # _13,
@@ -8237,9 +8087,9 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	movl	$-1, %r8d	 #,
 	movq	%rax, %rdx	 # _1,
 	movq	%rbx, %rcx	 # _15,
-.LEHB31:
+.LEHB29:
 	call	_ZN10T100EditorC1EP8wxWindowiRK7wxPointRK6wxSizelRK8wxString	 #
-.LEHE31:
+.LEHE29:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:33:     T100Editor*     editor      = T100NEW T100Editor(this);
 	.loc 24 33 58 is_stmt 0 discriminator 5
 	movq	%rbx, 120(%rbp)	 # _15, editor
@@ -8250,13 +8100,13 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	.loc 24 35 49 is_stmt 1 discriminator 5
 	movq	168(%rbp), %rax	 # info, tmp102
 	movq	%rax, %rcx	 # tmp102,
-.LEHB32:
+.LEHB30:
 	call	_ZN12T100FileInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _2
 	leaq	-64(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_	 #
-.LEHE32:
+.LEHE30:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:37:     if(!path.empty()){
 	.loc 24 37 19 discriminator 5
 	leaq	-64(%rbp), %rax	 #, tmp104
@@ -8268,7 +8118,7 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:37:     if(!path.empty()){
 	.loc 24 37 5 discriminator 5
 	testb	%al, %al	 # retval.35_27
-	je	.L351	 #,
+	je	.L343	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:38:         editor->LoadFile(path);
 	.loc 24 38 25
 	movq	120(%rbp), %rax	 # editor, tmp105
@@ -8276,18 +8126,18 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	leaq	-64(%rbp), %rdx	 #, tmp106
 	leaq	16(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
-.LEHB33:
+.LEHB31:
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
-.LEHE33:
+.LEHE31:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:38:         editor->LoadFile(path);
 	.loc 24 38 25 is_stmt 0 discriminator 1
 	leaq	16(%rbp), %rax	 #, tmp108
 	movl	$0, %r8d	 #,
 	movq	%rax, %rdx	 # tmp108,
 	movq	%rbx, %rcx	 # _4,
-.LEHB34:
+.LEHB32:
 	call	_ZN14wxTextAreaBase8LoadFileERK8wxStringi	 #
-.LEHE34:
+.LEHE32:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:38:         editor->LoadFile(path);
 	.loc 24 38 25 discriminator 3
 	leaq	16(%rbp), %rax	 #, tmp109
@@ -8298,9 +8148,9 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	leaq	-64(%rbp), %rax	 #, tmp110
 	movq	120(%rbp), %rcx	 # editor, tmp111
 	movq	%rax, %rdx	 # tmp110,
-.LEHB35:
+.LEHB33:
 	call	_ZN10T100Editor7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
-.L351:
+.L343:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:42:     AddPage(editor, info->GetFileName());
 	.loc 24 42 12
 	movq	160(%rbp), %rbx	 # this, _5
@@ -8315,7 +8165,7 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	leaq	64(%rbp), %rax	 #, tmp113
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
-.LEHE35:
+.LEHE33:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:42:     AddPage(editor, info->GetFileName());
 	.loc 24 42 12 is_stmt 0 discriminator 2
 	leaq	64(%rbp), %rdx	 #, tmp114
@@ -8326,9 +8176,9 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	movq	%rdx, %r8	 # tmp114,
 	movq	%rax, %rdx	 # tmp115,
 	movq	%rbx, %rcx	 # _5,
-.LEHB36:
+.LEHB34:
 	call	_ZN13wxAuiNotebook7AddPageEP8wxWindowRK8wxStringbRK8wxBitmap	 #
-.LEHE36:
+.LEHE34:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:42:     AddPage(editor, info->GetFileName());
 	.loc 24 42 12 discriminator 4
 	leaq	64(%rbp), %rax	 #, tmp117
@@ -8346,8 +8196,8 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:45: }
 	.loc 24 45 1 discriminator 4
-	jmp	.L362	 #
-.L358:
+	jmp	.L354	 #
+.L350:
 	movq	%rax, %rsi	 #, tmp122
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:33:     T100Editor*     editor      = T100NEW T100Editor(this);
 	.loc 24 33 58
@@ -8355,49 +8205,49 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	movq	%rbx, %rcx	 # _15,
 	call	_ZdlPvy	 #
 	movq	%rsi, %rbx	 # tmp122, tmp121
-	jmp	.L353	 #
-.L357:
+	jmp	.L345	 #
+.L349:
 	movq	%rax, %rbx	 #, tmp121
-.L353:
+.L345:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:33:     T100Editor*     editor      = T100NEW T100Editor(this);
 	.loc 24 33 58 is_stmt 0 discriminator 2
 	leaq	-32(%rbp), %rax	 #, tmp125
 	movq	%rax, %rcx	 # tmp125,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp121, D.155125
-	movq	%rax, %rcx	 # D.155125,
-.LEHB37:
+	movq	%rbx, %rax	 # tmp121, D.155116
+	movq	%rax, %rcx	 # D.155116,
+.LEHB35:
 	call	_Unwind_Resume	 #
-.L360:
+.L352:
 	movq	%rax, %rbx	 #, tmp128
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:38:         editor->LoadFile(path);
 	.loc 24 38 25 is_stmt 1
 	leaq	16(%rbp), %rax	 #, tmp126
 	movq	%rax, %rcx	 # tmp126,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L355	 #
-.L361:
+	jmp	.L347	 #
+.L353:
 	movq	%rax, %rbx	 #, tmp132
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:42:     AddPage(editor, info->GetFileName());
 	.loc 24 42 12
 	leaq	64(%rbp), %rax	 #, tmp131
 	movq	%rax, %rcx	 # tmp131,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L355	 #
-.L359:
+	jmp	.L347	 #
+.L351:
 	movq	%rax, %rbx	 #, tmp127
-.L355:
+.L347:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:35:     T100WSTRING     path        = info->GetPath();
 	.loc 24 35 49
 	leaq	-64(%rbp), %rax	 #, tmp134
 	movq	%rax, %rcx	 # tmp134,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.155126
-	movq	%rax, %rcx	 # D.155126,
+	movq	%rbx, %rax	 # tmp127, D.155117
+	movq	%rax, %rcx	 # D.155117,
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE37:
-.L362:
+.LEHE35:
+.L354:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:45: }
 	.loc 24 45 1
 	addq	$256, %rsp	 #,
@@ -8419,40 +8269,40 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	.byte	0x1
 	.uleb128 .LLSDACSE12531-.LLSDACSB12531
 .LLSDACSB12531:
+	.uleb128 .LEHB27-.LFB12531
+	.uleb128 .LEHE27-.LEHB27
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB28-.LFB12531
+	.uleb128 .LEHE28-.LEHB28
+	.uleb128 .L349-.LFB12531
+	.uleb128 0
 	.uleb128 .LEHB29-.LFB12531
 	.uleb128 .LEHE29-.LEHB29
-	.uleb128 0
+	.uleb128 .L350-.LFB12531
 	.uleb128 0
 	.uleb128 .LEHB30-.LFB12531
 	.uleb128 .LEHE30-.LEHB30
-	.uleb128 .L357-.LFB12531
+	.uleb128 0
 	.uleb128 0
 	.uleb128 .LEHB31-.LFB12531
 	.uleb128 .LEHE31-.LEHB31
-	.uleb128 .L358-.LFB12531
+	.uleb128 .L351-.LFB12531
 	.uleb128 0
 	.uleb128 .LEHB32-.LFB12531
 	.uleb128 .LEHE32-.LEHB32
-	.uleb128 0
+	.uleb128 .L352-.LFB12531
 	.uleb128 0
 	.uleb128 .LEHB33-.LFB12531
 	.uleb128 .LEHE33-.LEHB33
-	.uleb128 .L359-.LFB12531
+	.uleb128 .L351-.LFB12531
 	.uleb128 0
 	.uleb128 .LEHB34-.LFB12531
 	.uleb128 .LEHE34-.LEHB34
-	.uleb128 .L360-.LFB12531
+	.uleb128 .L353-.LFB12531
 	.uleb128 0
 	.uleb128 .LEHB35-.LFB12531
 	.uleb128 .LEHE35-.LEHB35
-	.uleb128 .L359-.LFB12531
-	.uleb128 0
-	.uleb128 .LEHB36-.LFB12531
-	.uleb128 .LEHE36-.LEHB36
-	.uleb128 .L361-.LFB12531
-	.uleb128 0
-	.uleb128 .LEHB37-.LFB12531
-	.uleb128 .LEHE37-.LEHB37
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE12531:
@@ -8509,73 +8359,84 @@ _ZN13T100MainPanel4SaveEv:
 	.seh_pushreg	%rbx
 	.cfi_def_cfa_offset 24
 	.cfi_offset 3, -24
-	subq	$88, %rsp	 #,
-	.seh_stackalloc	88
-	.cfi_def_cfa_offset 112
+	subq	$104, %rsp	 #,
+	.seh_stackalloc	104
+	.cfi_def_cfa_offset 128
 	leaq	128(%rsp), %rbp	 #,
 	.seh_setframe	%rbp, 128
-	.cfi_def_cfa 6, -16
+	.cfi_def_cfa 6, 0
 	.seh_endprologue
-	movq	%rcx, -16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:54:     if(m_current){
-	.loc 24 54 8
-	movq	-16(%rbp), %rax	 # this, tmp92
-	movq	1464(%rax), %rax	 # this_7(D)->m_current, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:54:     if(m_current){
-	.loc 24 54 5
+	movq	%rcx, 0(%rbp)	 # this, this
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:54:     T100BOOL        result      = T100FALSE;
+	.loc 24 54 21
+	movb	$0, -33(%rbp)	 #, result
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:56:     if(m_current){
+	.loc 24 56 8
+	movq	0(%rbp), %rax	 # this, tmp94
+	movq	1464(%rax), %rax	 # this_9(D)->m_current, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:56:     if(m_current){
+	.loc 24 56 5
 	testq	%rax, %rax	 # _1
-	je	.L368	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:55:         m_current->SaveFile();
-	.loc 24 55 9
-	movq	-16(%rbp), %rax	 # this, tmp93
-	movq	1464(%rax), %rax	 # this_7(D)->m_current, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:55:         m_current->SaveFile();
-	.loc 24 55 28
+	je	.L360	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:57:         result  = m_current->SaveFile(m_current->GetPath());
+	.loc 24 57 19
+	movq	0(%rbp), %rax	 # this, tmp95
+	movq	1464(%rax), %rax	 # this_9(D)->m_current, _2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:57:         result  = m_current->SaveFile(m_current->GetPath());
+	.loc 24 57 38
 	leaq	648(%rax), %rbx	 #, _3
-	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp94
-	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.48_4
-	leaq	-96(%rbp), %rax	 #, tmp95
-	movq	%rax, %rcx	 # tmp95,
-.LEHB38:
-	call	_ZN8wxStringC1EPKw	 #
-.LEHE38:
-	leaq	-96(%rbp), %rax	 #, tmp96
-	movl	$0, %r8d	 #,
-	movq	%rax, %rdx	 # tmp96,
-	movq	%rbx, %rcx	 # _3,
-.LEHB39:
-	call	_ZN14wxTextAreaBase8SaveFileERK8wxStringi	 #
-.LEHE39:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:55:         m_current->SaveFile();
-	.loc 24 55 28 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:57:         result  = m_current->SaveFile(m_current->GetPath());
+	.loc 24 57 39
+	movq	0(%rbp), %rax	 # this, tmp96
+	movq	1464(%rax), %rax	 # this_9(D)->m_current, _4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:57:         result  = m_current->SaveFile(m_current->GetPath());
+	.loc 24 57 58
+	movq	%rax, %rcx	 # _4,
+.LEHB36:
+	call	_ZN10T100Editor7GetPathB5cxx11Ev	 #
+	movq	%rax, %rdx	 #, _5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:57:         result  = m_current->SaveFile(m_current->GetPath());
+	.loc 24 57 38
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
-	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:57: }
-	.loc 24 57 1 is_stmt 1 discriminator 2
-	jmp	.L368	 #
-.L367:
-	movq	%rax, %rbx	 #, tmp99
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:55:         m_current->SaveFile();
-	.loc 24 55 28
+	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+.LEHE36:
 	leaq	-96(%rbp), %rax	 #, tmp98
-	movq	%rax, %rcx	 # tmp98,
+	movl	$0, %r8d	 #,
+	movq	%rax, %rdx	 # tmp98,
+	movq	%rbx, %rcx	 # _3,
+.LEHB37:
+	call	_ZN14wxTextAreaBase8SaveFileERK8wxStringi	 #
+.LEHE37:
+	movb	%al, -33(%rbp)	 # _14, result
+	leaq	-96(%rbp), %rax	 #, tmp99
+	movq	%rax, %rcx	 # tmp99,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.155129
-	movq	%rax, %rcx	 # D.155129,
-.LEHB40:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:59: }
+	.loc 24 59 1
+	jmp	.L360	 #
+.L359:
+	movq	%rax, %rbx	 #, tmp101
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:57:         result  = m_current->SaveFile(m_current->GetPath());
+	.loc 24 57 38
+	leaq	-96(%rbp), %rax	 #, tmp100
+	movq	%rax, %rcx	 # tmp100,
+	call	_ZN8wxStringD1Ev	 #
+	movq	%rbx, %rax	 # tmp101, D.155120
+	movq	%rax, %rcx	 # D.155120,
+.LEHB38:
 	call	_Unwind_Resume	 #
-.LEHE40:
-.L368:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:57: }
-	.loc 24 57 1
+.LEHE38:
+.L360:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:59: }
+	.loc 24 59 1
 	nop	
-	addq	$88, %rsp	 #,
+	addq	$104, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
 	popq	%rbp	 #
 	.cfi_restore 6
-	.cfi_def_cfa 7, -72
+	.cfi_def_cfa 7, -88
 	ret	
 	.cfi_endproc
 .LFE12533:
@@ -8587,16 +8448,16 @@ _ZN13T100MainPanel4SaveEv:
 	.byte	0x1
 	.uleb128 .LLSDACSE12533-.LLSDACSB12533
 .LLSDACSB12533:
+	.uleb128 .LEHB36-.LFB12533
+	.uleb128 .LEHE36-.LEHB36
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB37-.LFB12533
+	.uleb128 .LEHE37-.LEHB37
+	.uleb128 .L359-.LFB12533
+	.uleb128 0
 	.uleb128 .LEHB38-.LFB12533
 	.uleb128 .LEHE38-.LEHB38
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB39-.LFB12533
-	.uleb128 .LEHE39-.LEHB39
-	.uleb128 .L367-.LFB12533
-	.uleb128 0
-	.uleb128 .LEHB40-.LFB12533
-	.uleb128 .LEHE40-.LEHB40
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE12533:
@@ -8608,7 +8469,7 @@ _ZN13T100MainPanel4SaveEv:
 	.seh_proc	_ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent
 _ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent:
 .LFB12534:
-	.loc 24 60 1
+	.loc 24 62 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8622,57 +8483,57 @@ _ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:63:     index   = event.GetSelection();
-	.loc 24 63 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:65:     index   = event.GetSelection();
+	.loc 24 65 33
 	movq	24(%rbp), %rax	 # event, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNK15wxBookCtrlEvent12GetSelectionEv	 #
 	movl	%eax, -4(%rbp)	 # tmp96, index
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:65:     if(wxNOT_FOUND == index){
-	.loc 24 65 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:67:     if(wxNOT_FOUND == index){
+	.loc 24 67 5
 	cmpl	$-1, -4(%rbp)	 #, index
-	je	.L373	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
-	.loc 24 68 56
+	je	.L365	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:70:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
+	.loc 24 70 56
 	movq	16(%rbp), %rcx	 # this, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
-	.loc 24 68 62
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:70:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
+	.loc 24 70 62
 	movq	16(%rbp), %rax	 # this, tmp97
 	movq	(%rax), %rax	 # this_14(D)->D.147467.D.137027.D.136733.D.135328.D.134108.D.133948.D.128254.D.126981.D.122214._vptr.wxObject, _4
 	addq	$1816, %rax	 #, _5
 	movq	(%rax), %r8	 # *_5, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
-	.loc 24 68 56
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:70:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
+	.loc 24 70 56
 	movl	-4(%rbp), %eax	 # index, tmp98
 	cltq
 	movq	%rax, %rdx	 # _7,
 	call	*%r8	 # _6
 .LVL25:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
-	.loc 24 68 23
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:70:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
+	.loc 24 70 23
 	testq	%rax, %rax	 # _16
-	je	.L371	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
-	.loc 24 68 63 discriminator 1
+	je	.L363	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:70:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
+	.loc 24 70 63 discriminator 1
 	movl	$0, %r9d	 #,
 	leaq	_ZTI10T100Editor(%rip), %r8	 #,
 	leaq	_ZTI8wxWindow(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # _16,
 	call	__dynamic_cast	 #
-	movq	%rax, %rdx	 #, iftmp.50_8
-	jmp	.L372	 #
-.L371:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
-	.loc 24 68 23 discriminator 2
-	movl	$0, %edx	 #, iftmp.50_8
-.L372:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
-	.loc 24 68 21 discriminator 4
+	movq	%rax, %rdx	 #, iftmp.48_8
+	jmp	.L364	 #
+.L363:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:70:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
+	.loc 24 70 23 discriminator 2
+	movl	$0, %edx	 #, iftmp.48_8
+.L364:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:70:         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
+	.loc 24 70 21 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp99
-	movq	%rdx, 1464(%rax)	 # iftmp.50_8, this_14(D)->m_current
-.L373:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:70: }
-	.loc 24 70 1
+	movq	%rdx, 1464(%rax)	 # iftmp.48_8, this_14(D)->m_current
+.L365:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:72: }
+	.loc 24 72 1
 	nop	
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
@@ -8688,7 +8549,7 @@ _ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent:
 	.seh_proc	_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent
 _ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent:
 .LFB12535:
-	.loc 24 73 1
+	.loc 24 75 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8702,11 +8563,11 @@ _ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:74:     T100ProjectInvoking::OnPageClosed();
-	.loc 24 74 38
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:76:     T100ProjectInvoking::OnPageClosed();
+	.loc 24 76 38
 	call	_ZN19T100ProjectInvoking12OnPageClosedEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:75: }
-	.loc 24 75 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:77: }
+	.loc 24 77 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -8737,12 +8598,12 @@ _ZN22wxScopedCharTypeBufferIwED1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB54:
+.LBB52:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:127:         DecRef();
 	.loc 1 127 9
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN22wxScopedCharTypeBufferIwE6DecRefEv	 #
-.LBE54:
+.LBE52:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:128:     }
 	.loc 1 128 5
 	nop	
@@ -8787,7 +8648,7 @@ _ZN22wxScopedCharTypeBufferIwEC1ERKS0_:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # src, src
-.LBB55:
+.LBB53:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:109:         m_data = src.m_data;
 	.loc 1 109 22
 	movq	24(%rbp), %rax	 # src, tmp88
@@ -8800,7 +8661,7 @@ _ZN22wxScopedCharTypeBufferIwEC1ERKS0_:
 	.loc 1 110 9
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN22wxScopedCharTypeBufferIwE6IncRefEv	 #
-.LBE55:
+.LBE53:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:111:     }
 	.loc 1 111 5
 	nop	
@@ -8833,7 +8694,7 @@ _ZN8wxString15ConvertedBufferIcED1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB56:
+.LBB54:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:3490:           { free(m_str); }
 	.loc 4 3490 18
 	movq	16(%rbp), %rax	 # this, tmp88
@@ -8842,7 +8703,7 @@ _ZN8wxString15ConvertedBufferIcED1Ev:
 	.loc 4 3490 17
 	movq	%rax, %rcx	 # _1,
 	call	free	 #
-.LBE56:
+.LBE54:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:3490:           { free(m_str); }
 	.loc 4 3490 26
 	nop	
@@ -8873,12 +8734,12 @@ _ZN8wxString15ConvertedBufferIcEC1Ev:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB57:
+.LBB55:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:3488:       ConvertedBuffer() : m_str(NULL) {}
 	.loc 4 3488 37
 	movq	16(%rbp), %rax	 # this, tmp87
 	movq	$0, (%rax)	 #, this_2(D)->m_str
-.LBE57:
+.LBE55:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:3488:       ConvertedBuffer() : m_str(NULL) {}
 	.loc 4 3488 40
 	nop	
@@ -9018,18 +8879,18 @@ _Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_:
 	.loc 26 71 68
 	movl	16(%rbp), %eax	 # a, tmp89
 	cmpl	24(%rbp), %eax	 # b, tmp89
-	jle	.L386	 #,
+	jle	.L378	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 26 71 68 is_stmt 0 discriminator 1
 	movl	16(%rbp), %eax	 # a, iftmp.23_1
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 26 71 74 is_stmt 1 discriminator 1
-	jmp	.L388	 #
-.L386:
+	jmp	.L380	 #
+.L378:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 26 71 68 discriminator 2
 	movl	24(%rbp), %eax	 # b, iftmp.23_1
-.L388:
+.L380:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:72: }
 	.loc 26 72 1 discriminator 5
 	popq	%rbp	 #
@@ -9089,14 +8950,14 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.cfi_def_cfa 6, 64
 	.seh_endprologue
 	movq	%rcx, 64(%rbp)	 # this, this
-.LBB58:
+.LBB56:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:188:     {
 	.loc 21 188 5
 	movq	64(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
-.LEHB41:
+.LEHB39:
 	call	_ZN14wxBookCtrlBaseC2Ev	 #
-.LEHE41:
+.LEHE39:
 	leaq	16+_ZTV19wxNavigationEnabledI14wxBookCtrlBaseE(%rip), %rdx	 #, _2
 	movq	64(%rbp), %rax	 # this, tmp108
 	movq	%rdx, (%rax)	 # _2, this_21(D)->D.136733.D.135328.D.134108.D.133948.D.128254.D.126981.D.122214._vptr.wxObject
@@ -9106,34 +8967,34 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	movq	64(%rbp), %rax	 # this, tmp110
 	addq	$736, %rax	 #, _4
 	movq	%rax, %rcx	 # _4,
-.LEHB42:
+.LEHB40:
 	call	_ZN18wxControlContainerC1Ev	 #
-.LEHE42:
+.LEHE40:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:189:         m_container.SetContainerWindow(this);
 	.loc 21 189 9
 	movq	64(%rbp), %rax	 # this, tmp111
 	addq	$736, %rax	 #, _5
 	movq	64(%rbp), %rdx	 # this, _6
 	movq	%rax, %rcx	 # _5,
-.LEHB43:
+.LEHB41:
 	call	_ZN22wxControlContainerBase18SetContainerWindowEP8wxWindow	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:192:         BaseWindowClass::Connect(wxEVT_NAVIGATION_KEY,
 	.loc 21 192 33
 	movq	64(%rbp), %rdi	 # this, _7
 	leaq	_ZN19wxNavigationEnabledI14wxBookCtrlBaseE15OnNavigationKeyER20wxNavigationKeyEvent(%rip), %rax	 #, tmp112
-	movq	%rax, %r14	 # tmp112, D.154093
-	movl	$0, %r15d	 #, D.154093
+	movq	%rax, %r14	 # tmp112, D.154094
+	movl	$0, %r15d	 #, D.154094
 	leaq	-64(%rbp), %rax	 #, tmp113
-	movq	%r14, -80(%rbp)	 # D.154093,
-	movq	%r15, -72(%rbp)	 # D.154093,
+	movq	%r14, -80(%rbp)	 # D.154094,
+	movq	%r15, -72(%rbp)	 # D.154094,
 	leaq	-80(%rbp), %rdx	 #, tmp114
 	movq	%rax, %rcx	 # tmp113,
 	call	_Z19wxEventFunctionCastI20wxNavigationKeyEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_NAVIGATION_KEY(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI20wxNavigationKeyEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_8, _9
-	movq	-64(%rbp), %rax	 # D.154094, tmp115
-	movq	-56(%rbp), %rdx	 # D.154094,
+	movq	-64(%rbp), %rax	 # D.154095, tmp115
+	movq	-56(%rbp), %rdx	 # D.154095,
 	movq	%rax, -80(%rbp)	 # tmp115,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp116
@@ -9147,19 +9008,19 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.loc 21 195 33
 	movq	64(%rbp), %rdi	 # this, _10
 	leaq	_ZN19wxNavigationEnabledI14wxBookCtrlBaseE7OnFocusER12wxFocusEvent(%rip), %rax	 #, tmp117
-	movq	%rax, %r12	 # tmp117, D.154095
-	movl	$0, %r13d	 #, D.154095
+	movq	%rax, %r12	 # tmp117, D.154096
+	movl	$0, %r13d	 #, D.154096
 	leaq	-48(%rbp), %rax	 #, tmp118
-	movq	%r12, -80(%rbp)	 # D.154095,
-	movq	%r13, -72(%rbp)	 # D.154095,
+	movq	%r12, -80(%rbp)	 # D.154096,
+	movq	%r13, -72(%rbp)	 # D.154096,
 	leaq	-80(%rbp), %rdx	 #, tmp119
 	movq	%rax, %rcx	 # tmp118,
 	call	_Z19wxEventFunctionCastI12wxFocusEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_SET_FOCUS(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI12wxFocusEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_11, _12
-	movq	-48(%rbp), %rax	 # D.154096, tmp120
-	movq	-40(%rbp), %rdx	 # D.154096,
+	movq	-48(%rbp), %rax	 # D.154097, tmp120
+	movq	-40(%rbp), %rdx	 # D.154097,
 	movq	%rax, -80(%rbp)	 # tmp120,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp121
@@ -9173,19 +9034,19 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.loc 21 198 33
 	movq	64(%rbp), %rdi	 # this, _13
 	leaq	_ZN19wxNavigationEnabledI14wxBookCtrlBaseE12OnChildFocusER17wxChildFocusEvent(%rip), %rax	 #, tmp122
-	movq	%rax, %rbx	 # tmp122, D.154097
-	movl	$0, %esi	 #, D.154097
+	movq	%rax, %rbx	 # tmp122, D.154098
+	movl	$0, %esi	 #, D.154098
 	leaq	-32(%rbp), %rax	 #, tmp123
-	movq	%rbx, -80(%rbp)	 # D.154097,
-	movq	%rsi, -72(%rbp)	 # D.154097,
+	movq	%rbx, -80(%rbp)	 # D.154098,
+	movq	%rsi, -72(%rbp)	 # D.154098,
 	leaq	-80(%rbp), %rdx	 #, tmp124
 	movq	%rax, %rcx	 # tmp123,
 	call	_Z19wxEventFunctionCastI17wxChildFocusEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_CHILD_FOCUS(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI17wxChildFocusEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_14, _15
-	movq	-32(%rbp), %rax	 # D.154098, tmp125
-	movq	-24(%rbp), %rdx	 # D.154098,
+	movq	-32(%rbp), %rax	 # D.154099, tmp125
+	movq	-24(%rbp), %rdx	 # D.154099,
 	movq	%rax, -80(%rbp)	 # tmp125,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp126
@@ -9195,37 +9056,37 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	movl	%ecx, %edx	 # _15,
 	movq	%rdi, %rcx	 # _13,
 	call	_ZN12wxEvtHandler7ConnectEiMS_FvR7wxEventEP8wxObjectPS_	 #
-.LEHE43:
-.LBE58:
+.LEHE41:
+.LBE56:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:201:     }
 	.loc 21 201 5
-	jmp	.L394	 #
-.L393:
+	jmp	.L386	 #
+.L385:
 	movq	%rax, %rbx	 #, tmp129
-.LBB59:
+.LBB57:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:188:     {
 	.loc 21 188 5
 	movq	64(%rbp), %rax	 # this, tmp127
 	addq	$736, %rax	 #, _16
 	movq	%rax, %rcx	 # _16,
 	call	_ZN18wxControlContainerD1Ev	 #
-	jmp	.L391	 #
-.L392:
+	jmp	.L383	 #
+.L384:
 	movq	%rax, %rbx	 #, tmp128
-.L391:
+.L383:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:188:     {
 	.loc 21 188 5 is_stmt 0 discriminator 1
 	movq	64(%rbp), %rax	 # this, _17
 	movq	%rax, %rcx	 # _17,
 	call	_ZN14wxBookCtrlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp128, D.155131
-	movq	%rax, %rcx	 # D.155131,
-.LEHB44:
+	movq	%rbx, %rax	 # tmp128, D.155121
+	movq	%rax, %rcx	 # D.155121,
+.LEHB42:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE44:
-.L394:
-.LBE59:
+.LEHE42:
+.L386:
+.LBE57:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:201:     }
 	.loc 21 201 5 is_stmt 1
 	addq	$120, %rsp	 #,
@@ -9257,20 +9118,20 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.byte	0x1
 	.uleb128 .LLSDACSE13177-.LLSDACSB13177
 .LLSDACSB13177:
+	.uleb128 .LEHB39-.LFB13177
+	.uleb128 .LEHE39-.LEHB39
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB40-.LFB13177
+	.uleb128 .LEHE40-.LEHB40
+	.uleb128 .L384-.LFB13177
+	.uleb128 0
 	.uleb128 .LEHB41-.LFB13177
 	.uleb128 .LEHE41-.LEHB41
-	.uleb128 0
+	.uleb128 .L385-.LFB13177
 	.uleb128 0
 	.uleb128 .LEHB42-.LFB13177
 	.uleb128 .LEHE42-.LEHB42
-	.uleb128 .L392-.LFB13177
-	.uleb128 0
-	.uleb128 .LEHB43-.LFB13177
-	.uleb128 .LEHE43-.LEHB43
-	.uleb128 .L393-.LFB13177
-	.uleb128 0
-	.uleb128 .LEHB44-.LFB13177
-	.uleb128 .LEHE44-.LEHB44
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE13177:
@@ -9363,9 +9224,9 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:635:     return new wxEventFunctorMethod<EventTag, Class, EventArg, Class>(
 	.loc 13 635 12
 	movl	$32, %ecx	 #,
-.LEHB45:
+.LEHB43:
 	call	_Znwy	 #
-.LEHE45:
+.LEHE43:
 	movq	%rax, %rbx	 # tmp93, _3
 	movq	-16(%rbp), %rax	 # method, tmp94
 	movq	-8(%rbp), %rdx	 # method,
@@ -9375,26 +9236,26 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 	movl	$0, %r8d	 #,
 	movq	%rax, %rdx	 # tmp95,
 	movq	%rbx, %rcx	 # _3,
-.LEHB46:
+.LEHB44:
 	call	_ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_EC1EMS3_FvRS4_EPS3_	 #
-.LEHE46:
+.LEHE44:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:636:                     method, NULL);
 	.loc 13 636 33
 	movq	%rbx, %rax	 # _3, _6
-	jmp	.L401	 #
-.L400:
+	jmp	.L393	 #
+.L392:
 	movq	%rax, %rsi	 #, tmp97
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:635:     return new wxEventFunctorMethod<EventTag, Class, EventArg, Class>(
 	.loc 13 635 12
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.155145
-	movq	%rax, %rcx	 # D.155145,
-.LEHB47:
+	movq	%rsi, %rax	 # tmp97, D.155135
+	movq	%rax, %rcx	 # D.155135,
+.LEHB45:
 	call	_Unwind_Resume	 #
-.LEHE47:
-.L401:
+.LEHE45:
+.L393:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:637: }
 	.loc 13 637 1
 	addq	$64, %rsp	 #,
@@ -9416,16 +9277,16 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 	.byte	0x1
 	.uleb128 .LLSDACSE13189-.LLSDACSB13189
 .LLSDACSB13189:
+	.uleb128 .LEHB43-.LFB13189
+	.uleb128 .LEHE43-.LEHB43
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB44-.LFB13189
+	.uleb128 .LEHE44-.LEHB44
+	.uleb128 .L392-.LFB13189
+	.uleb128 0
 	.uleb128 .LEHB45-.LFB13189
 	.uleb128 .LEHE45-.LEHB45
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB46-.LFB13189
-	.uleb128 .LEHE46-.LEHB46
-	.uleb128 .L400-.LFB13189
-	.uleb128 0
-	.uleb128 .LEHB47-.LFB13189
-	.uleb128 .LEHE47-.LEHB47
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE13189:
@@ -9484,13 +9345,13 @@ _ZN22wxScopedCharTypeBufferIwE4DataD1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB60:
+.LBB58:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:164:     struct Data : public wxPrivate::UntypedBufferData
 	.loc 1 164 12
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZN9wxPrivate17UntypedBufferDataD2Ev	 #
-.LBE60:
+.LBE58:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -9540,21 +9401,21 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:194:         if ( m_data == GetNullData() ) // exception, not ref-counted
 	.loc 1 194 9
 	testb	%al, %al	 # retval.46_14
-	jne	.L409	 #,
+	jne	.L401	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 16
 	movq	-64(%rbp), %rax	 # this, tmp98
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 24
-	movzwl	16(%rax), %edx	 # _3->D.147956.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.147957.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.147956.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.147957.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 24
-	movzwl	16(%rax), %eax	 # _3->D.147956.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.147957.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 30
 	testw	%ax, %ax	 # _6
@@ -9562,7 +9423,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 9
 	testb	%al, %al	 # retval.47_16
-	je	.L408	 #,
+	je	.L400	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 1 197 20
 	movq	-64(%rbp), %rax	 # this, tmp99
@@ -9570,7 +9431,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 1 197 13
 	testq	%rbx, %rbx	 # _17
-	je	.L408	 #,
+	je	.L400	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 1 197 13 is_stmt 0 discriminator 1
 	movq	%rbx, %rcx	 # _17,
@@ -9578,7 +9439,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movl	$24, %edx	 #,
 	movq	%rbx, %rcx	 # _17,
 	call	_ZdlPvy	 #
-.L408:
+.L400:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:198:         m_data = GetNullData();
 	.loc 1 198 29 is_stmt 1
 	call	_ZN22wxScopedCharTypeBufferIwE11GetNullDataEv	 #
@@ -9587,12 +9448,12 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	.loc 1 198 9
 	movq	-64(%rbp), %rax	 # this, tmp100
 	movq	%rdx, (%rax)	 # _7, this_11(D)->m_data
-	jmp	.L405	 #
-.L409:
+	jmp	.L397	 #
+.L401:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:195:             return;
 	.loc 1 195 13
 	nop	
-.L405:
+.L397:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:199:     }
 	.loc 1 199 5
 	addq	$40, %rsp	 #,
@@ -9677,24 +9538,24 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:187:         if ( m_data == GetNullData() ) // exception, not ref-counted
 	.loc 1 187 9
 	testb	%al, %al	 # retval.38_12
-	jne	.L415	 #,
+	jne	.L407	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 9
 	movq	-64(%rbp), %rax	 # this, tmp94
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 17
-	movzwl	16(%rax), %edx	 # _3->D.147956.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.147957.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.147956.m_ref
-	jmp	.L412	 #
-.L415:
+	movw	%dx, 16(%rax)	 # _6, _3->D.147957.m_ref
+	jmp	.L404	 #
+.L407:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
 	.loc 1 188 13
 	nop	
-.L412:
+.L404:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:190:     }
 	.loc 1 190 5
 	addq	$40, %rsp	 #,
@@ -9729,7 +9590,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 1 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.147956.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.147957.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 1 171 72
 	popq	%rbp	 #
@@ -10089,10 +9950,10 @@ _ZNK14wxEventTypeTagI17wxChildFocusEventEcvRKiEv:
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 8
-.LC13:
+.LC12:
 	.ascii "handler || this->IsEvtHandler()\0"
 	.align 8
-.LC14:
+.LC13:
 	.ascii "handlers defined in non-wxEvtHandler-derived classes must be connected with a valid sink object\0"
 	.section	.text$_ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_EC1EMS3_FvRS4_EPS3_,"x"
 	.linkonce discard
@@ -10126,7 +9987,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	%rax, -80(%rbp)	 # tmp97, method
 	movq	%rdx, -72(%rbp)	 #, method
 	movq	%r8, -16(%rbp)	 # handler, handler
-.LBB61:
+.LBB59:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:400:         : m_handler( handler ), m_method( method )
 	.loc 13 400 50
 	movq	-32(%rbp), %rax	 # this, _1
@@ -10146,79 +10007,79 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 13 402 9
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp103
-	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.59_3
-	testq	%rax, %rax	 # wxTheAssertHandler.59_3
-	je	.L432	 #,
+	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.57_3
+	testq	%rax, %rax	 # wxTheAssertHandler.57_3
+	je	.L424	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 13 402 9 is_stmt 0 discriminator 1
 	cmpq	$0, -16(%rbp)	 #, handler
-	jne	.L432	 #,
+	jne	.L424	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 13 402 9 discriminator 3
 	call	_ZN9wxPrivate11HandlerImplI12wxEvtHandler7wxEventLb1EE12IsEvtHandlerEv	 #
 	xorl	$1, %eax	 #, _5
 	testb	%al, %al	 # _5
-	je	.L432	 #,
+	je	.L424	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 13 402 9 discriminator 5
-	leaq	.LC14(%rip), %rax	 #, tmp104
+	leaq	.LC13(%rip), %rax	 #, tmp104
 	movq	%rax, 32(%rsp)	 # tmp104,
-	leaq	.LC13(%rip), %r9	 #,
+	leaq	.LC12(%rip), %r9	 #,
 	leaq	_ZZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_EC4EMS3_FvRS4_EPS3_E12__FUNCTION__(%rip), %r8	 #,
 	movl	$404, %edx	 #,
-	leaq	.LC4(%rip), %rcx	 #,
-.LEHB48:
+	leaq	.LC3(%rip), %rcx	 #,
+.LEHB46:
 	call	_Z10wxOnAssertPKciS0_S0_S0_	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 13 402 9 discriminator 7
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp105
-	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.60_6
-	testb	%al, %al	 # wxTrapInAssert.60_6
-	je	.L432	 #,
+	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.58_6
+	testb	%al, %al	 # wxTrapInAssert.58_6
+	je	.L424	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 13 402 9 discriminator 8
-	movl	$1, %eax	 #, iftmp.58_8
-	jmp	.L433	 #
-.L432:
+	movl	$1, %eax	 #, iftmp.56_8
+	jmp	.L425	 #
+.L424:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 13 402 9 discriminator 9
-	movl	$0, %eax	 #, iftmp.58_8
-.L433:
+	movl	$0, %eax	 #, iftmp.56_8
+.L425:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 13 402 9 discriminator 11
-	testb	%al, %al	 # iftmp.58_8
-	je	.L434	 #,
+	testb	%al, %al	 # iftmp.56_8
+	je	.L426	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 13 402 9 discriminator 12
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp106
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-.LEHE48:
-.L434:
+.LEHE46:
+.L426:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:409:         CheckHandlerArgument(static_cast<EventClass *>(NULL));
 	.loc 13 409 29 is_stmt 1
 	movl	$0, %ecx	 #,
 	call	_ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_E20CheckHandlerArgumentEPS4_	 #
-.LBE61:
+.LBE59:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:410:     }
 	.loc 13 410 5
-	jmp	.L437	 #
-.L436:
+	jmp	.L429	 #
+.L428:
 	movq	%rax, %rbx	 #, tmp107
-.LBB62:
+.LBB60:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:400:         : m_handler( handler ), m_method( method )
 	.loc 13 400 50
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.155150
-	movq	%rax, %rcx	 # D.155150,
-.LEHB49:
+	movq	%rbx, %rax	 # tmp107, D.155140
+	movq	%rax, %rcx	 # D.155140,
+.LEHB47:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE49:
-.L437:
-.LBE62:
+.LEHE47:
+.L429:
+.LBE60:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:410:     }
 	.loc 13 410 5
 	addq	$72, %rsp	 #,
@@ -10238,12 +10099,12 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	.byte	0x1
 	.uleb128 .LLSDACSE13416-.LLSDACSB13416
 .LLSDACSB13416:
-	.uleb128 .LEHB48-.LFB13416
-	.uleb128 .LEHE48-.LEHB48
-	.uleb128 .L436-.LFB13416
+	.uleb128 .LEHB46-.LFB13416
+	.uleb128 .LEHE46-.LEHB46
+	.uleb128 .L428-.LFB13416
 	.uleb128 0
-	.uleb128 .LEHB49-.LFB13416
-	.uleb128 .LEHE49-.LEHB49
+	.uleb128 .LEHB47-.LFB13416
+	.uleb128 .LEHE47-.LEHB47
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE13416:
@@ -10604,7 +10465,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB63:
+.LBB61:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:382: class wxEventFunctorMethod
 	.loc 13 382 7
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _1
@@ -10613,7 +10474,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
-.LBE63:
+.LBE61:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -10978,7 +10839,7 @@ _ZN20wxObjectEventFunctorD1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB64:
+.LBB62:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:240: class WXDLLIMPEXP_BASE wxObjectEventFunctor : public wxEventFunctor
 	.loc 13 240 24
 	leaq	16+_ZTV20wxObjectEventFunctor(%rip), %rdx	 #, _1
@@ -10987,7 +10848,7 @@ _ZN20wxObjectEventFunctorD1Ev:
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
-.LBE64:
+.LBE62:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -11069,7 +10930,7 @@ _ZN20wxThreadHelperThreadD1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB65:
+.LBB63:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:663: class WXDLLIMPEXP_BASE wxThreadHelperThread : public wxThread
 	.loc 12 663 24
 	leaq	16+_ZTV20wxThreadHelperThread(%rip), %rdx	 #, _1
@@ -11078,7 +10939,7 @@ _ZN20wxThreadHelperThreadD1Ev:
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN8wxThreadD2Ev	 #
-.LBE65:
+.LBE63:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -11652,19 +11513,19 @@ __tcf_2:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:6: BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
 	.loc 24 6 1
 	leaq	96+_ZN13T100MainPanel20sm_eventTableEntriesE(%rip), %rbx	 #, _1
-.L451:
+.L443:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:6: BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
 	.loc 24 6 1 is_stmt 0 discriminator 4
 	leaq	_ZN13T100MainPanel20sm_eventTableEntriesE(%rip), %rax	 #, tmp88
 	cmpq	%rax, %rbx	 # tmp88, _1
-	je	.L449	 #,
+	je	.L441	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:6: BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
 	.loc 24 6 1 discriminator 3
 	subq	$32, %rbx	 #, _1
 	movq	%rbx, %rcx	 # _1,
 	call	_ZN17wxEventTableEntryD1Ev	 #
-	jmp	.L451	 #
-.L449:
+	jmp	.L443	 #
+.L441:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:6: BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
 	.loc 24 6 1
 	addq	$40, %rsp	 #,
@@ -11681,7 +11542,7 @@ __tcf_2:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB13640:
-	.loc 24 75 1 is_stmt 1
+	.loc 24 77 1 is_stmt 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -11724,18 +11585,18 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 48(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 56(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:75: }
-	.loc 24 75 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:77: }
+	.loc 24 77 1
 	cmpl	$1, 48(%rbp)	 #, __initialize_p
-	jne	.L452	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:75: }
-	.loc 24 75 1 is_stmt 0 discriminator 1
+	jne	.L444	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:77: }
+	.loc 24 77 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 56(%rbp)	 #, __priority
-	jne	.L452	 #,
+	jne	.L444	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 27 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
-.LEHB50:
+.LEHB48:
 	call	_ZNSt8ios_base4InitC1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
@@ -11744,7 +11605,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	_ZN13T100MainPanel13sm_eventTableE(%rip), %rdx	 #,
 	leaq	_ZN13T100MainPanel17sm_eventHashTableE(%rip), %rcx	 #,
 	call	_ZN16wxEventHashTableC1ERK12wxEventTable	 #
-.LEHE50:
+.LEHE48:
 	leaq	__tcf_1(%rip), %rcx	 #,
 	call	atexit	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:9: END_EVENT_TABLE()
@@ -11753,22 +11614,22 @@ _Z41__static_initialization_and_destruction_0ii:
 	movl	$2, %esi	 #, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:7:     EVT_AUINOTEBOOK_PAGE_CHANGED(wxID_ANY, OnPageChanged)
 	.loc 24 7 5
-	leaq	_ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent(%rip), %r14	 #, D.154658
-	movl	$0, %r15d	 #, D.154658
+	leaq	_ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent(%rip), %r14	 #, D.154653
+	movl	$0, %r15d	 #, D.154653
 	leaq	-64(%rbp), %rax	 #, tmp104
-	movq	%r14, -80(%rbp)	 # D.154658,
-	movq	%r15, -72(%rbp)	 # D.154658,
+	movq	%r14, -80(%rbp)	 # D.154653,
+	movq	%r15, -72(%rbp)	 # D.154653,
 	leaq	-80(%rbp), %rdx	 #, tmp105
 	movq	%rax, %rcx	 # tmp104,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-64(%rbp), %rax	 # D.154659, tmp106
-	movq	-56(%rbp), %rdx	 # D.154659,
+	movq	-64(%rbp), %rax	 # D.154654, tmp106
+	movq	-56(%rbp), %rdx	 # D.154654,
 	movq	%rax, -80(%rbp)	 # tmp106,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp107
 	movq	%rax, %rdx	 # tmp107,
 	movq	.refptr.wxEVT_AUINOTEBOOK_PAGE_CHANGED(%rip), %rcx	 #,
-.LEHB51:
+.LEHB49:
 	call	_Z22wxNewEventTableFunctorI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventEP20wxEventFunctorMethodIT_T0_T1_S7_ERKS6_MS7_FvRS8_E	 #
 	movq	%rax, %rdi	 #, _1
 	movq	.refptr.wxEVT_AUINOTEBOOK_PAGE_CHANGED(%rip), %rcx	 #,
@@ -11788,16 +11649,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rsi	 #, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:8:     EVT_AUINOTEBOOK_PAGE_CLOSED(wxID_ANY, OnPageClosed)
 	.loc 24 8 5 is_stmt 1 discriminator 1
-	leaq	_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent(%rip), %r12	 #, D.154660
-	movl	$0, %r13d	 #, D.154660
+	leaq	_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent(%rip), %r12	 #, D.154655
+	movl	$0, %r13d	 #, D.154655
 	leaq	-48(%rbp), %rax	 #, tmp108
-	movq	%r12, -80(%rbp)	 # D.154660,
-	movq	%r13, -72(%rbp)	 # D.154660,
+	movq	%r12, -80(%rbp)	 # D.154655,
+	movq	%r13, -72(%rbp)	 # D.154655,
 	leaq	-80(%rbp), %rdx	 #, tmp109
 	movq	%rax, %rcx	 # tmp108,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-48(%rbp), %rax	 # D.154661, tmp110
-	movq	-40(%rbp), %rdx	 # D.154661,
+	movq	-48(%rbp), %rax	 # D.154656, tmp110
+	movq	-40(%rbp), %rdx	 # D.154656,
 	movq	%rax, -80(%rbp)	 # tmp110,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp111
@@ -11827,43 +11688,43 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	.refptr.wxEVT_NULL(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # _39,
 	call	_ZN17wxEventTableEntryC1ERKiiiP14wxEventFunctorP8wxObject	 #
-.LEHE51:
+.LEHE49:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:6: BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
 	.loc 24 6 1 is_stmt 1 discriminator 3
 	leaq	__tcf_2(%rip), %rcx	 #,
 	call	atexit	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:75: }
-	.loc 24 75 1 discriminator 3
-	jmp	.L452	 #
-.L457:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:77: }
+	.loc 24 77 1 discriminator 3
+	jmp	.L444	 #
+.L449:
 	movq	%rax, %rdi	 #, tmp113
 	testq	%rbx, %rbx	 # _20
-	je	.L455	 #,
+	je	.L447	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:9: END_EVENT_TABLE()
 	.loc 24 9 1 discriminator 1
 	movl	$2, %eax	 #, tmp112
 	subq	%rsi, %rax	 # _8, _5
 	salq	$5, %rax	 #, _7
 	leaq	(%rbx,%rax), %rsi	 #, _9
-.L456:
+.L448:
 	cmpq	%rbx, %rsi	 # _20, _9
-	je	.L455	 #,
+	je	.L447	 #,
 	subq	$32, %rsi	 #, _9
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:9: END_EVENT_TABLE()
 	.loc 24 9 1 is_stmt 0 discriminator 5
 	movq	%rsi, %rcx	 # _9,
 	call	_ZN17wxEventTableEntryD1Ev	 #
-	jmp	.L456	 #
-.L455:
-	movq	%rdi, %rax	 # tmp113, D.155153
-	movq	%rax, %rcx	 # D.155153,
-.LEHB52:
+	jmp	.L448	 #
+.L447:
+	movq	%rdi, %rax	 # tmp113, D.155143
+	movq	%rax, %rcx	 # D.155143,
+.LEHB50:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE52:
-.L452:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:75: }
-	.loc 24 75 1 is_stmt 1
+.LEHE50:
+.L444:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:77: }
+	.loc 24 77 1 is_stmt 1
 	addq	$104, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -11893,16 +11754,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	.byte	0x1
 	.uleb128 .LLSDACSE13640-.LLSDACSB13640
 .LLSDACSB13640:
+	.uleb128 .LEHB48-.LFB13640
+	.uleb128 .LEHE48-.LEHB48
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB49-.LFB13640
+	.uleb128 .LEHE49-.LEHB49
+	.uleb128 .L449-.LFB13640
+	.uleb128 0
 	.uleb128 .LEHB50-.LFB13640
 	.uleb128 .LEHE50-.LEHB50
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB51-.LFB13640
-	.uleb128 .LEHE51-.LEHB51
-	.uleb128 .L457-.LFB13640
-	.uleb128 0
-	.uleb128 .LEHB52-.LFB13640
-	.uleb128 .LEHE52-.LEHB52
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE13640:
@@ -11929,7 +11790,7 @@ _ZN18wxControlContainerD1Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-.LBB66:
+.LBB64:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:149: class WXDLLIMPEXP_CORE wxControlContainer : public wxControlContainerBase
 	.loc 21 149 24
 	leaq	16+_ZTV18wxControlContainer(%rip), %rdx	 #, _1
@@ -11938,7 +11799,7 @@ _ZN18wxControlContainerD1Ev:
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN22wxControlContainerBaseD2Ev	 #
-.LBE66:
+.LBE64:
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -12018,13 +11879,13 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseE8SetFocusEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:246:         if ( !m_container.DoSetFocus() )
 	.loc 21 246 9
 	testb	%al, %al	 # retval.20_9
-	je	.L462	 #,
+	je	.L454	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:247:             BaseWindowClass::SetFocus();
 	.loc 21 247 38
 	movq	16(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN8wxWindow8SetFocusEv	 #
-.L462:
+.L454:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:248:     }
 	.loc 21 248 5
 	nop	
@@ -12184,7 +12045,7 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseE8AddChildEP12wxWindowBase:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:222:         if ( m_container.UpdateCanFocusChildren() )
 	.loc 21 222 9
 	testb	%al, %al	 # _12
-	je	.L471	 #,
+	je	.L463	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:226:             if ( !BaseWindowClass::HasFlag(wxTAB_TRAVERSAL) )
 	.loc 21 226 43
 	movq	16(%rbp), %rax	 # this, _3
@@ -12197,14 +12058,14 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseE8AddChildEP12wxWindowBase:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:226:             if ( !BaseWindowClass::HasFlag(wxTAB_TRAVERSAL) )
 	.loc 21 226 13
 	testb	%al, %al	 # retval.17_15
-	je	.L471	 #,
+	je	.L463	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:227:                 BaseWindowClass::ToggleWindowStyle(wxTAB_TRAVERSAL);
 	.loc 21 227 51
 	movq	16(%rbp), %rax	 # this, _5
 	movl	$524288, %edx	 #,
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBase17ToggleWindowStyleEi	 #
-.L471:
+.L463:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:229:     }
 	.loc 21 229 5
 	nop	
@@ -12269,9 +12130,9 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseE11RemoveChildEP12wxWindowBase:
 .LFE13673:
 	.seh_endproc
 	.section .rdata,"dr"
-.LC15:
+.LC14:
 	.ascii "realHandler\0"
-.LC16:
+.LC15:
 	.ascii "invalid event handler\0"
 	.section	.text$_ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_EclEPS3_RS4_,"x"
 	.linkonce discard
@@ -12301,12 +12162,12 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	16(%rbp), %rax	 # this, tmp106
 	movq	8(%rax), %rax	 # this_27(D)->m_handler, tmp107
 	movq	%rax, -8(%rbp)	 # tmp107, realHandler
-.LBB67:
+.LBB65:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:415:         if ( !realHandler )
 	.loc 13 415 9
 	cmpq	$0, -8(%rbp)	 #, realHandler
-	jne	.L474	 #,
-.LBB68:
+	jne	.L466	 #,
+.LBB66:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:417:             realHandler = this->ConvertFromEvtHandler(handler);
 	.loc 13 417 25
 	movq	24(%rbp), %rax	 # handler, tmp108
@@ -12316,48 +12177,48 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 13 420 13
 	cmpq	$0, -8(%rbp)	 #, realHandler
-	jne	.L474	 #,
+	jne	.L466	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 13 420 13 is_stmt 0 discriminator 1
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp110
-	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.65_1
-	testq	%rax, %rax	 # wxTheAssertHandler.65_1
-	je	.L476	 #,
+	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.63_1
+	testq	%rax, %rax	 # wxTheAssertHandler.63_1
+	je	.L468	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 13 420 13 discriminator 2
-	leaq	.LC16(%rip), %rax	 #, tmp111
+	leaq	.LC15(%rip), %rax	 #, tmp111
 	movq	%rax, 32(%rsp)	 # tmp111,
-	leaq	.LC15(%rip), %r9	 #,
+	leaq	.LC14(%rip), %r9	 #,
 	leaq	_ZZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_EclEPS3_RS4_E12__FUNCTION__(%rip), %r8	 #,
 	movl	$420, %edx	 #,
-	leaq	.LC4(%rip), %rcx	 #,
+	leaq	.LC3(%rip), %rcx	 #,
 	call	_Z10wxOnAssertPKciS0_S0_S0_	 #
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp112
-	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.66_2
-	testb	%al, %al	 # wxTrapInAssert.66_2
-	je	.L476	 #,
+	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.64_2
+	testb	%al, %al	 # wxTrapInAssert.64_2
+	je	.L468	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 13 420 13 discriminator 4
-	movl	$1, %eax	 #, iftmp.64_19
-	jmp	.L477	 #
-.L476:
+	movl	$1, %eax	 #, iftmp.62_19
+	jmp	.L469	 #
+.L468:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 13 420 13 discriminator 5
-	movl	$0, %eax	 #, iftmp.64_19
-.L477:
+	movl	$0, %eax	 #, iftmp.62_19
+.L469:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 13 420 13 discriminator 7
-	testb	%al, %al	 # iftmp.64_19
-	je	.L482	 #,
+	testb	%al, %al	 # iftmp.62_19
+	je	.L474	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 13 420 13 discriminator 8
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp113
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-	jmp	.L482	 #
-.L474:
-.LBE68:
-.LBE67:
+	jmp	.L474	 #
+.L466:
+.LBE66:
+.LBE65:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 13 426 33 is_stmt 1
 	movq	16(%rbp), %rax	 # this, tmp114
@@ -12369,7 +12230,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	16(%rax), %rax	 # this_27(D)->m_method.__pfn, _6
 	andl	$1, %eax	 #, _8
 	testq	%rax, %rax	 # _8
-	je	.L480	 #,
+	je	.L472	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 13 426 33 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp117
@@ -12382,29 +12243,29 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	16(%rax), %rax	 # this_27(D)->m_method.__pfn, _13
 	subq	$1, %rax	 #, _15
 	addq	%rdx, %rax	 # _12, _17
-	movq	(%rax), %rax	 # *_17, iftmp.67_20
-	jmp	.L481	 #
-.L480:
+	movq	(%rax), %rax	 # *_17, iftmp.65_20
+	jmp	.L473	 #
+.L472:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 13 426 33 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp120
-	movq	16(%rax), %rax	 # this_27(D)->m_method.__pfn, iftmp.67_20
-.L481:
+	movq	16(%rax), %rax	 # this_27(D)->m_method.__pfn, iftmp.65_20
+.L473:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 13 426 33 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp121
-	call	*%rax	 # iftmp.67_20
+	call	*%rax	 # iftmp.65_20
 .LVL26:
-	jmp	.L473	 #
-.L482:
-.LBB70:
-.LBB69:
+	jmp	.L465	 #
+.L474:
+.LBB68:
+.LBB67:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 13 420 13 is_stmt 1
 	nop	
-.L473:
-.LBE69:
-.LBE70:
+.L465:
+.LBE67:
+.LBE68:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:427:     }
 	.loc 13 427 5
 	addq	$64, %rsp	 #,
@@ -12471,13 +12332,13 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 	call	_ZN16wxTypeIdentifierneERKS_	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 13 431 9
-	testb	%al, %al	 # retval.61_28
-	je	.L484	 #,
+	testb	%al, %al	 # retval.59_28
+	je	.L476	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:432:             return false;
 	.loc 13 432 20
-	movl	$0, %eax	 #, iftmp.62_19
-	jmp	.L485	 #
-.L484:
+	movl	$0, %eax	 #, iftmp.60_19
+	jmp	.L477	 #
+.L476:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:438:         const ThisFunctor& other = static_cast<const ThisFunctor &>(functor);
 	.loc 13 438 28
 	movq	24(%rbp), %rax	 # functor, tmp113
@@ -12491,7 +12352,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 13 440 71
 	cmpq	%rax, %rdx	 # _10, _9
-	jne	.L486	 #,
+	jne	.L478	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 13 440 26 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp116
@@ -12499,14 +12360,14 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 	movq	-8(%rbp), %rax	 # other, tmp117
 	movq	24(%rax), %rax	 # other_32->m_method.__delta, _12
 	cmpq	%rax, %rdx	 # _12, _11
-	je	.L487	 #,
+	je	.L479	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 13 440 26 is_stmt 0 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp118
 	movq	16(%rax), %rax	 # this_21(D)->m_method.__pfn, _13
 	testq	%rax, %rax	 # _13
-	je	.L487	 #,
-.L486:
+	je	.L479	 #,
+.L478:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 13 440 62 is_stmt 1 discriminator 6
 	movq	-8(%rbp), %rax	 # other, tmp119
@@ -12514,8 +12375,8 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 13 440 44 discriminator 6
 	testq	%rax, %rax	 # _14
-	jne	.L488	 #,
-.L487:
+	jne	.L480	 #,
+.L479:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 13 441 17 discriminator 7
 	movq	16(%rbp), %rax	 # this, tmp120
@@ -12527,7 +12388,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 13 440 71 discriminator 7
 	cmpq	%rax, %rdx	 # _16, _15
-	je	.L489	 #,
+	je	.L481	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 13 441 55
 	movq	-8(%rbp), %rax	 # other, tmp122
@@ -12535,23 +12396,23 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 13 441 46
 	testq	%rax, %rax	 # _17
-	jne	.L488	 #,
-.L489:
+	jne	.L480	 #,
+.L481:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 13 440 71 discriminator 9
-	movl	$1, %eax	 #, iftmp.62_19
+	movl	$1, %eax	 #, iftmp.60_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 13 441 72 discriminator 9
-	jmp	.L491	 #
-.L488:
+	jmp	.L483	 #
+.L480:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 13 440 71 discriminator 8
-	movl	$0, %eax	 #, iftmp.62_19
-.L491:
+	movl	$0, %eax	 #, iftmp.60_19
+.L483:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 13 441 72
 	nop	
-.L485:
+.L477:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:442:     }
 	.loc 13 442 5
 	addq	$64, %rsp	 #,
@@ -12860,7 +12721,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN13T100MainPanel13sm_eventTableE
 _GLOBAL__sub_I__ZN13T100MainPanel13sm_eventTableE:
 .LFB13736:
-	.loc 24 75 1
+	.loc 24 77 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -12872,8 +12733,8 @@ _GLOBAL__sub_I__ZN13T100MainPanel13sm_eventTableE:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:75: }
-	.loc 24 75 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:77: }
+	.loc 24 77 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -12914,7 +12775,7 @@ _ZZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "wxEventTableEntryBase\0"
 	.align 8
-.LC6:
+.LC5:
 	.long	0
 	.long	1072693248
 	.text
@@ -13007,7 +12868,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.file 113 "<built-in>"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x4d710
+	.long	0x4d68d
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -13125,7 +12986,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8a
 	.byte	0x14
 	.long	0x255
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "pthreadlocinfo\0"
 	.byte	0x1d
 	.word	0x1b0
@@ -13303,7 +13164,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x8ce
 	.word	0x158
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "pthreadmbcinfo\0"
 	.byte	0x1d
 	.word	0x1b1
@@ -13314,7 +13175,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x4af
 	.uleb128 0x76
 	.ascii "threadmbcinfostruct\0"
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "localeinfo_struct\0"
 	.byte	0x10
 	.byte	0x1d
@@ -13336,13 +13197,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x491
 	.byte	0x8
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "_locale_tstruct\0"
 	.byte	0x1d
 	.word	0x1b7
 	.byte	0x3
 	.long	0x4c4
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "tagLC_ID\0"
 	.byte	0x6
 	.byte	0x1d
@@ -13371,7 +13232,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x20c
 	.byte	0x4
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "LC_ID\0"
 	.byte	0x1d
 	.word	0x1bf
@@ -13403,7 +13264,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x5c8
 	.long	0x5c8
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x5
 	.byte	0
@@ -13416,14 +13277,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x56d
 	.long	0x5f2
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x5
 	.byte	0
 	.uleb128 0x3f
 	.long	0x2b8
 	.long	0x602
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x5
 	.byte	0
@@ -13726,7 +13587,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x57c
 	.long	0x9aa
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0
 	.byte	0
@@ -13851,7 +13712,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x1b8
 	.byte	0x8
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "lldiv_t\0"
 	.byte	0x1f
 	.word	0x2d9
@@ -13954,7 +13815,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xd9
 	.byte	0x1c
 	.long	0xc14
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "tm\0"
 	.byte	0x24
 	.byte	0x21
@@ -14027,7 +13888,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x7
 	.long	0xc47
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "mbstate_t\0"
 	.byte	0x21
 	.word	0x58c
@@ -14113,7 +13974,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x4
 	.byte	0x8
 	.long	0xe2f
-	.uleb128 0x9a
+	.uleb128 0x99
 	.long	0xe4f
 	.uleb128 0x1
 	.long	0xe4f
@@ -14144,7 +14005,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1a
 	.byte	0x1
 	.long	0x165d
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x4
 	.word	0x404
@@ -14252,7 +14113,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1f1
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF8
 	.byte	0x4
 	.word	0x404
@@ -14586,7 +14447,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1a
 	.byte	0x1
 	.long	0x1d60
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x4
 	.word	0x427
@@ -14694,7 +14555,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1f1
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF8
 	.byte	0x4
 	.word	0x427
@@ -14981,14 +14842,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "both\0"
 	.byte	0x3
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "ConvertedBuffer<char>\0"
 	.byte	0x10
 	.byte	0x4
 	.word	0xd9c
 	.byte	0xa
 	.long	0x1f51
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "ConvertedBuffer\0"
 	.byte	0x4
 	.word	0xda0
@@ -14999,7 +14860,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x21e38
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "~ConvertedBuffer\0"
 	.byte	0x4
 	.word	0xda1
@@ -15092,13 +14953,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x238
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "SubstrBufFromMB\0"
 	.byte	0x4
 	.word	0x1bb
 	.byte	0x34
 	.long	0x1fdd
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "SubstrBufFromType<wxScopedCharTypeBuffer<wchar_t> >\0"
 	.byte	0x10
 	.byte	0x4
@@ -15174,7 +15035,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x98f
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "SubstrBufFromWC\0"
 	.byte	0x4
 	.word	0x1ba
@@ -15182,7 +15043,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x21ae
 	.uleb128 0x7
 	.long	0x2190
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "SubstrBufFromType<wchar_t const*>\0"
 	.byte	0x10
 	.byte	0x4
@@ -15918,7 +15779,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x21e1b
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF30
 	.byte	0x4
 	.word	0x49e
@@ -15959,7 +15820,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x2f29
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF32
 	.byte	0x4
 	.word	0x463
@@ -15993,7 +15854,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x21e9c
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x4
 	.word	0x468
@@ -16275,7 +16136,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x21db1
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF35
 	.byte	0x4
 	.word	0x49d
@@ -16316,7 +16177,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x37a0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF32
 	.byte	0x4
 	.word	0x463
@@ -16350,7 +16211,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x21eb4
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x4
 	.word	0x468
@@ -16671,7 +16532,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x21db1
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF38
 	.byte	0x4
 	.word	0x334
@@ -23067,7 +22928,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x1e3
 	.byte	0x2a
 	.long	0xa8ed
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxCoord\0"
 	.byte	0x25
 	.word	0x3aa
@@ -23089,31 +22950,31 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.byte	0x6
 	.ascii "signed char\0"
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxUint8\0"
 	.byte	0x25
 	.word	0x3bb
 	.byte	0x17
 	.long	0x8a8
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxByte\0"
 	.byte	0x25
 	.word	0x3bc
 	.byte	0x11
 	.long	0xa945
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxInt32\0"
 	.byte	0x25
 	.word	0x3e6
 	.byte	0x15
 	.long	0x238
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxUint32\0"
 	.byte	0x25
 	.word	0x3e7
 	.byte	0x1e
 	.long	0x5a8
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxInt64\0"
 	.byte	0x25
 	.word	0x4bf
@@ -23745,7 +23606,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "wxDF_MAX\0"
 	.byte	0x1f
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxSortCompareFunction\0"
 	.byte	0x25
 	.word	0xba0
@@ -23770,13 +23631,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.uleb128 0x7
 	.long	0xb797
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "WXHANDLE\0"
 	.byte	0x25
 	.word	0xcb8
 	.byte	0xf
 	.long	0xb797
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "WXHWND\0"
 	.byte	0x25
 	.word	0xcb9
@@ -23787,7 +23648,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xb7c7
 	.uleb128 0x76
 	.ascii "HWND__\0"
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "WXHBRUSH\0"
 	.byte	0x25
 	.word	0xcbe
@@ -23798,7 +23659,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xb7e7
 	.uleb128 0x76
 	.ascii "HBRUSH__\0"
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "WXHDC\0"
 	.byte	0x25
 	.word	0xcc8
@@ -23809,19 +23670,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xb806
 	.uleb128 0x76
 	.ascii "HDC__\0"
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "WXDRAWITEMSTRUCT\0"
 	.byte	0x25
 	.word	0xcd8
 	.byte	0x19
 	.long	0xb797
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "WXMEASUREITEMSTRUCT\0"
 	.byte	0x25
 	.word	0xcd9
 	.byte	0x19
 	.long	0xb797
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "WXWidget\0"
 	.byte	0x25
 	.word	0xcdd
@@ -23862,7 +23723,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x57c
 	.long	0xb8c1
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x1
 	.byte	0
@@ -23890,7 +23751,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x11b
 	.byte	0x18
 	.long	0xb8b1
-	.uleb128 0x9b
+	.uleb128 0x9a
 	.ascii "wxPrivate\0"
 	.byte	0x1
 	.byte	0x1b
@@ -24016,7 +23877,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xd
 	.word	0x156
 	.byte	0x8
-	.uleb128 0x9c
+	.uleb128 0x9b
 	.ascii "IsEvtHandler\0"
 	.byte	0xd
 	.word	0x158
@@ -24325,7 +24186,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x7
 	.long	0xc07e
-	.uleb128 0x9d
+	.uleb128 0x9c
 	.secrel32	.LASF97
 	.byte	0x1
 	.byte	0xb4
@@ -24653,7 +24514,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x18a
 	.byte	0
-	.uleb128 0x9e
+	.uleb128 0x9d
 	.ascii "~Data\0"
 	.ascii "_ZN22wxScopedCharTypeBufferIwE4DataD4Ev\0"
 	.long	0xc834
@@ -24665,7 +24526,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x7
 	.long	0xc6e5
-	.uleb128 0x9d
+	.uleb128 0x9c
 	.secrel32	.LASF97
 	.byte	0x1
 	.byte	0xb4
@@ -25620,7 +25481,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0xd46b
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxWritableCharBuffer\0"
 	.byte	0x1
 	.word	0x1a0
@@ -25665,7 +25526,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x21ec6
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF90
 	.byte	0x1
 	.word	0x192
@@ -25691,7 +25552,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "T\0"
 	.long	0x15b
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxWritableWCharBuffer\0"
 	.byte	0x1
 	.word	0x1a1
@@ -25736,7 +25597,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x21ed8
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF90
 	.byte	0x1
 	.word	0x192
@@ -26287,7 +26148,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x12
 	.long	0xe7bd
 	.byte	0x8
-	.uleb128 0x9f
+	.uleb128 0x9e
 	.long	0xe79a
 	.byte	0x10
 	.uleb128 0x2d
@@ -28995,7 +28856,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xa
 	.long	0x12e26
 	.byte	0
-	.uleb128 0x9e
+	.uleb128 0x9d
 	.ascii "~_Alloc_hider\0"
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderD4Ev\0"
 	.long	0x12e1a
@@ -29074,7 +28935,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x12
 	.long	0x12e7a
 	.byte	0x8
-	.uleb128 0x9f
+	.uleb128 0x9e
 	.long	0x12e57
 	.byte	0x10
 	.uleb128 0x2d
@@ -32409,7 +32270,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x127
 	.byte	0xe
 	.long	0x1d86c
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "char_traits<char>\0"
 	.byte	0x1
 	.byte	0x36
@@ -32591,7 +32452,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1d8aa
 	.byte	0
-	.uleb128 0x9c
+	.uleb128 0x9b
 	.ascii "eof\0"
 	.byte	0x36
 	.word	0x178
@@ -32619,7 +32480,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xee
 	.byte	0x1a
 	.long	0x19e
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "char_traits<wchar_t>\0"
 	.byte	0x1
 	.byte	0x36
@@ -32801,7 +32662,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1d8c8
 	.byte	0
-	.uleb128 0x9c
+	.uleb128 0x9b
 	.ascii "eof\0"
 	.byte	0x36
 	.word	0x1e6
@@ -32963,7 +32824,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x52
 	.byte	0xb
 	.long	0x1df
-	.uleb128 0x9b
+	.uleb128 0x9a
 	.ascii "__exception_ptr\0"
 	.byte	0x39
 	.byte	0x34
@@ -33197,7 +33058,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xf2
 	.byte	0x1d
 	.long	0x1daf9
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "type_info\0"
 	.long	0x18a19
 	.uleb128 0xb4
@@ -33725,7 +33586,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xbd
 	.byte	0x16
 	.long	0x1e49b
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "allocator_traits<std::allocator<char> >\0"
 	.byte	0x1
 	.byte	0x3f
@@ -33962,7 +33823,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >\0"
 	.uleb128 0x14
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >\0"
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "allocator_traits<std::allocator<wchar_t> >\0"
 	.byte	0x1
 	.byte	0x3f
@@ -34320,7 +34181,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x47
 	.byte	0x14
 	.long	0x19948
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "ios_base\0"
 	.long	0x19a14
 	.uleb128 0xde
@@ -34405,7 +34266,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x69
 	.byte	0xb
 	.long	0x22aff
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "basic_ostream<char, std::char_traits<char> >\0"
 	.long	0x19a91
 	.uleb128 0x1b
@@ -34415,7 +34276,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF148
 	.long	0x17c7f
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "basic_ostream<wchar_t, std::char_traits<wchar_t> >\0"
 	.long	0x19adc
 	.uleb128 0x1b
@@ -34425,7 +34286,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF148
 	.long	0x18042
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "basic_istream<char, std::char_traits<char> >\0"
 	.long	0x19b21
 	.uleb128 0x1b
@@ -34435,7 +34296,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF148
 	.long	0x17c7f
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "basic_istream<wchar_t, std::char_traits<wchar_t> >\0"
 	.long	0x19b6c
 	.uleb128 0x1b
@@ -34570,14 +34431,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF173
 	.long	0x57c
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "remove_reference<std::allocator<wchar_t>&>\0"
 	.byte	0x1
 	.byte	0x30
 	.word	0x5bc
 	.byte	0xc
 	.long	0x19d29
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "type\0"
 	.byte	0x30
 	.word	0x5bd
@@ -34616,7 +34477,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF173
 	.long	0xda40
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "__distance<wchar_t*>\0"
 	.byte	0x46
 	.byte	0x62
@@ -34634,7 +34495,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x17a0d
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "__distance<wchar_t const*>\0"
 	.byte	0x46
 	.byte	0x62
@@ -34652,7 +34513,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x17a0d
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "distance<wchar_t*>\0"
 	.byte	0x46
 	.byte	0x8a
@@ -34668,7 +34529,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x587
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "__iterator_category<wchar_t*>\0"
 	.byte	0x33
 	.byte	0xcd
@@ -34682,7 +34543,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x21907
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "distance<wchar_t const*>\0"
 	.byte	0x46
 	.byte	0x8a
@@ -34698,7 +34559,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x98f
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "__iterator_category<wchar_t const*>\0"
 	.byte	0x33
 	.byte	0xcd
@@ -35170,7 +35031,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xe8
 	.byte	0xb
 	.long	0x1df02
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "div\0"
 	.byte	0x3d
 	.byte	0xd5
@@ -35396,7 +35257,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x461b1
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x4c
 	.word	0x305
@@ -35416,7 +35277,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x461b7
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF104
 	.byte	0x4c
 	.word	0x306
@@ -35507,7 +35368,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1afd8
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF8
 	.byte	0x4c
 	.word	0x304
@@ -35637,7 +35498,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x46199
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x4c
 	.word	0x305
@@ -35657,7 +35518,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x4619f
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF104
 	.byte	0x4c
 	.word	0x306
@@ -35748,7 +35609,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1b778
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF8
 	.byte	0x4c
 	.word	0x304
@@ -36130,7 +35991,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x21907
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x4c
 	.word	0x305
@@ -36150,7 +36011,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x2190d
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF104
 	.byte	0x4c
 	.word	0x306
@@ -36241,7 +36102,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1c351
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF8
 	.byte	0x4c
 	.word	0x304
@@ -36371,7 +36232,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x21de5
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x4c
 	.word	0x305
@@ -36391,7 +36252,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x21deb
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF104
 	.byte	0x4c
 	.word	0x306
@@ -36482,7 +36343,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1cafd
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF8
 	.byte	0x4c
 	.word	0x304
@@ -36711,7 +36572,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF184
 	.long	0x1b8
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "__is_null_pointer<wchar_t>\0"
 	.byte	0x4d
 	.byte	0x98
@@ -36758,7 +36619,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x1793d
 	.uleb128 0xe1
 	.long	0x17985
-	.uleb128 0x9b
+	.uleb128 0x9a
 	.ascii "__gnu_debug\0"
 	.byte	0x34
 	.byte	0x38
@@ -37853,7 +37714,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x4
 	.byte	0x8
 	.long	0x1dbc4
-	.uleb128 0x9a
+	.uleb128 0x99
 	.long	0x1dbd0
 	.uleb128 0x1
 	.long	0xb797
@@ -38688,7 +38549,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x15b
 	.long	0x1e50d
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0xf
 	.byte	0
@@ -38748,7 +38609,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x592
 	.long	0x1e588
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x7
 	.byte	0
@@ -40563,7 +40424,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x592
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "From8bit\0"
 	.byte	0x52
 	.byte	0x90
@@ -40574,7 +40435,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x15b
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "To8bit\0"
 	.byte	0x52
 	.byte	0x9c
@@ -40585,7 +40446,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1e887
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "FromHi8bit\0"
 	.byte	0x52
 	.byte	0xa9
@@ -40596,7 +40457,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x15b
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "ToHi8bit\0"
 	.byte	0x52
 	.byte	0xaa
@@ -40607,7 +40468,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1e887
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "GetAsHi8bit\0"
 	.byte	0x52
 	.byte	0xab
@@ -42832,16 +42693,16 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x172
 	.byte	0xf
 	.ascii "_ZN8wxObjectaSERKS_\0"
-	.long	0x4d15f
+	.long	0x4d171
 	.byte	0x1
 	.long	0x21f3b
 	.long	0x21f46
 	.uleb128 0x2
 	.long	0x21fb1
 	.uleb128 0x1
-	.long	0x4d165
+	.long	0x4d177
 	.byte	0
-	.uleb128 0xa0
+	.uleb128 0x9f
 	.ascii "~wxObject\0"
 	.byte	0x5
 	.word	0x169
@@ -43185,7 +43046,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x22846
 	.byte	0
-	.uleb128 0x9d
+	.uleb128 0x9c
 	.secrel32	.LASF228
 	.byte	0x54
 	.byte	0x4f
@@ -43390,7 +43251,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x21fbc
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxObjectRefData\0"
 	.byte	0x5
 	.word	0x10f
@@ -43512,7 +43373,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x7
 	.long	0x2288e
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "wxALPHA_TRANSPARENT\0"
 	.byte	0x55
 	.byte	0x2b
@@ -43521,7 +43382,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL19wxALPHA_TRANSPARENT
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "wxALPHA_OPAQUE\0"
 	.byte	0x55
 	.byte	0x2c
@@ -43771,7 +43632,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x19f
 	.byte	0x29
 	.long	0x22b69
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxSortFuncFor_wxObjectList\0"
 	.byte	0x56
 	.word	0x4ab
@@ -43810,7 +43671,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.byte	0x1
 	.long	0x23109
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF224
 	.byte	0x56
 	.word	0x4ab
@@ -43861,21 +43722,21 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x24bb4
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF236
 	.byte	0x56
 	.word	0x4ab
 	.byte	0x1
 	.long	0x22f21
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x56
 	.word	0x4ab
 	.byte	0x1
 	.long	0x24bba
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0x56
 	.word	0x4ab
@@ -43895,7 +43756,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x24bc0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF227
 	.byte	0x56
 	.word	0x4ab
@@ -43975,7 +43836,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x24bcc
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF10
 	.byte	0x56
 	.word	0x4ab
@@ -44000,7 +43861,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.byte	0x1
 	.long	0x23461
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF224
 	.byte	0x56
 	.word	0x4ab
@@ -44065,21 +43926,21 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x24bde
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF236
 	.byte	0x56
 	.word	0x4ab
 	.byte	0x1
 	.long	0x23243
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF137
 	.byte	0x56
 	.word	0x4ab
 	.byte	0x1
 	.long	0x24be4
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0x56
 	.word	0x4ab
@@ -44101,7 +43962,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x24bea
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF227
 	.byte	0x56
 	.word	0x4ab
@@ -44181,7 +44042,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x24bf6
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF10
 	.byte	0x56
 	.word	0x4ab
@@ -44206,7 +44067,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.byte	0x1
 	.long	0x23775
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF224
 	.byte	0x56
 	.word	0x4ab
@@ -44257,21 +44118,21 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x24c02
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF236
 	.byte	0x56
 	.word	0x4ab
 	.byte	0x1
 	.long	0x2354e
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x56
 	.word	0x4ab
 	.byte	0x1
 	.long	0x24c08
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0x56
 	.word	0x4ab
@@ -44291,7 +44152,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x24c0e
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF227
 	.byte	0x56
 	.word	0x4ab
@@ -44371,7 +44232,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x24c1a
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF10
 	.byte	0x56
 	.word	0x4ab
@@ -44396,7 +44257,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.byte	0x1
 	.long	0x23b26
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF224
 	.byte	0x56
 	.word	0x4ab
@@ -44461,21 +44322,21 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x24c2c
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF236
 	.byte	0x56
 	.word	0x4ab
 	.byte	0x1
 	.long	0x238d0
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF137
 	.byte	0x56
 	.word	0x4ab
 	.byte	0x1
 	.long	0x24c32
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0x56
 	.word	0x4ab
@@ -44497,7 +44358,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x24c38
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF227
 	.byte	0x56
 	.word	0x4ab
@@ -44577,7 +44438,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x24c44
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF10
 	.byte	0x56
 	.word	0x4ab
@@ -45005,21 +44866,21 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x24278
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF38
 	.byte	0x56
 	.word	0x4ab
 	.byte	0x1
 	.long	0x18a
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF137
 	.byte	0x56
 	.word	0x4ab
 	.byte	0x1
 	.long	0x47ff9
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0x56
 	.word	0x4ab
@@ -45203,7 +45064,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x47ff3
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x56
 	.word	0x4ab
@@ -47674,7 +47535,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x46
 	.byte	0x1e
 	.long	0xb775
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "_wxArraywxBaseArrayPtrVoid\0"
 	.byte	0x6
 	.word	0x345
@@ -48039,14 +47900,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x27382
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF21
 	.byte	0x6
 	.word	0x345
 	.byte	0x1
 	.long	0x279d8
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0x6
 	.word	0x345
@@ -48071,14 +47932,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x273f9
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF38
 	.byte	0x6
 	.word	0x345
 	.byte	0x1
 	.long	0x18a
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF137
 	.byte	0x6
 	.word	0x345
@@ -48098,7 +47959,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x279c7
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF18
 	.byte	0x6
 	.word	0x345
@@ -48363,7 +48224,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x279c7
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "Grow\0"
 	.byte	0x6
 	.word	0x345
@@ -48445,7 +48306,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x4
 	.byte	0x8
 	.long	0x26cfe
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "_wxArraywxBaseArrayLong\0"
 	.byte	0x6
 	.word	0x34a
@@ -48810,14 +48671,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x28014
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF21
 	.byte	0x6
 	.word	0x34a
 	.byte	0x1
 	.long	0x28608
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0x6
 	.word	0x34a
@@ -48842,14 +48703,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x28086
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF38
 	.byte	0x6
 	.word	0x34a
 	.byte	0x1
 	.long	0x18a
 	.byte	0x2
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF137
 	.byte	0x6
 	.word	0x34a
@@ -48869,7 +48730,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x285fc
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF18
 	.byte	0x6
 	.word	0x34a
@@ -49134,7 +48995,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x285fc
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "Grow\0"
 	.byte	0x6
 	.word	0x34a
@@ -49212,13 +49073,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x4
 	.byte	0x8
 	.long	0x279f0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "_wxArraywxArrayLong\0"
 	.byte	0x6
 	.word	0x400
 	.byte	0x1
 	.long	0x244
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "CMPFUNC_wxArraywxArrayLong\0"
 	.byte	0x6
 	.word	0x400
@@ -49411,7 +49272,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x2969a
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF11
 	.byte	0x6
 	.word	0x400
@@ -49610,7 +49471,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x296be
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF11
 	.byte	0x6
 	.word	0x400
@@ -49809,7 +49670,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x2901c
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF38
 	.byte	0x6
 	.word	0x400
@@ -49832,14 +49693,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x29064
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF137
 	.byte	0x6
 	.word	0x400
 	.byte	0x1
 	.long	0x296f3
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0x6
 	.word	0x400
@@ -49864,7 +49725,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x290c1
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF21
 	.byte	0x6
 	.word	0x400
@@ -49903,7 +49764,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x29064
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x6
 	.word	0x400
@@ -49936,7 +49797,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x296ed
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF18
 	.byte	0x6
 	.word	0x400
@@ -50308,13 +50169,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x28681
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "_wxArraywxArrayPtrVoid\0"
 	.byte	0x6
 	.word	0x401
 	.byte	0x1
 	.long	0xb797
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "CMPFUNC_wxArraywxArrayPtrVoid\0"
 	.byte	0x6
 	.word	0x401
@@ -50507,7 +50368,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x2a860
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF11
 	.byte	0x6
 	.word	0x401
@@ -50706,7 +50567,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x2a884
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF11
 	.byte	0x6
 	.word	0x401
@@ -50905,7 +50766,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x2a180
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF38
 	.byte	0x6
 	.word	0x401
@@ -50928,14 +50789,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x2a1cc
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF137
 	.byte	0x6
 	.word	0x401
 	.byte	0x1
 	.long	0x2a8b4
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0x6
 	.word	0x401
@@ -50960,7 +50821,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x2a22d
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF21
 	.byte	0x6
 	.word	0x401
@@ -50999,7 +50860,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x2a1cc
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x6
 	.word	0x401
@@ -51032,7 +50893,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x2a8ae
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF18
 	.byte	0x6
 	.word	0x401
@@ -51917,7 +51778,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xd
 	.long	0x238
 	.byte	0x10
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "Tm\0"
 	.byte	0x59
 	.word	0x14c
@@ -51928,7 +51789,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x2e516
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "Tm\0"
 	.byte	0x59
 	.word	0x14f
@@ -51967,7 +51828,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x2e516
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "AddMonths\0"
 	.byte	0x59
 	.word	0x15e
@@ -51980,7 +51841,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x238
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "AddDays\0"
 	.byte	0x59
 	.word	0x161
@@ -52005,7 +51866,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x2e516
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_tz\0"
 	.byte	0x59
 	.word	0x168
@@ -52013,7 +51874,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x2acdb
 	.byte	0x14
 	.byte	0x3
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "wday\0"
 	.byte	0x59
 	.word	0x16d
@@ -56157,7 +56018,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0xa956
 	.long	0x2fbc7
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0xf
 	.byte	0
@@ -56276,7 +56137,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x461c3
 	.byte	0
-	.uleb128 0xa1
+	.uleb128 0xa0
 	.ascii "ConvertValue\0"
 	.byte	0x5a
 	.byte	0x61
@@ -56780,7 +56641,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x2f9ff
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "AssignAny\0"
 	.byte	0x5a
 	.word	0x413
@@ -56793,7 +56654,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3055b
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "AssignVariant\0"
 	.byte	0x5a
 	.word	0x421
@@ -57247,7 +57108,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x4
 	.byte	0x8
 	.long	0x30c79
-	.uleb128 0x9a
+	.uleb128 0x99
 	.long	0x30c85
 	.uleb128 0x1
 	.long	0x3091a
@@ -57255,7 +57116,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x5dd
 	.long	0x30c95
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x1e
 	.byte	0
@@ -57519,13 +57380,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x96
 	.byte	0x13
 	.long	0x21e79
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "float_t\0"
 	.byte	0x5d
 	.word	0x16f
 	.byte	0xf
 	.long	0x963
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "double_t\0"
 	.byte	0x5d
 	.word	0x170
@@ -58210,7 +58071,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x21c
 	.byte	0x18
 	.long	0x31dbf
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "x\0"
 	.byte	0x8
 	.word	0x21f
@@ -58218,7 +58079,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x238
 	.byte	0
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "y\0"
 	.byte	0x8
 	.word	0x21f
@@ -58367,7 +58228,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x1a6
 	.byte	0x18
 	.long	0x31f7d
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "x\0"
 	.byte	0x8
 	.word	0x1a9
@@ -58375,7 +58236,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x959
 	.byte	0
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "y\0"
 	.byte	0x8
 	.word	0x1aa
@@ -58470,7 +58331,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x31ba6
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF6
 	.byte	0x8
 	.word	0x1b7
@@ -59437,7 +59298,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x238
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "x\0"
 	.byte	0x8
 	.word	0x34a
@@ -59445,7 +59306,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x238
 	.byte	0
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "y\0"
 	.byte	0x8
 	.word	0x34a
@@ -59453,7 +59314,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x238
 	.byte	0x4
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "width\0"
 	.byte	0x8
 	.word	0x34a
@@ -59461,7 +59322,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x238
 	.byte	0x8
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "height\0"
 	.byte	0x8
 	.word	0x34a
@@ -59517,7 +59378,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x238
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "list\0"
 	.byte	0x8
 	.word	0x37b
@@ -59566,7 +59427,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x238
 	.byte	0
-	.uleb128 0xa0
+	.uleb128 0x9f
 	.ascii "~wxList\0"
 	.byte	0x56
 	.word	0x4b9
@@ -59636,14 +59497,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x331d0
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF323
 	.byte	0x8
 	.word	0x37e
 	.byte	0x1
 	.long	0xa8ad
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF324
 	.byte	0x8
 	.word	0x37e
@@ -59659,7 +59520,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0xe55
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "first\0"
 	.byte	0x8
 	.word	0x37e
@@ -59674,7 +59535,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x331eb
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "second\0"
 	.byte	0x8
 	.word	0x37e
@@ -59721,7 +59582,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x333c2
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "const_key_reference\0"
 	.byte	0x8
 	.word	0x37e
@@ -59756,19 +59617,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x33315
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "const_pair_reference\0"
 	.byte	0x8
 	.word	0x37e
 	.byte	0x1
 	.long	0x333d4
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "const_pair_type\0"
 	.byte	0x8
 	.word	0x37e
 	.byte	0x1
 	.long	0x3335f
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "pair_type\0"
 	.byte	0x8
 	.word	0x37e
@@ -59776,7 +59637,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x330e7
 	.uleb128 0x7
 	.long	0x3334c
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF23
 	.byte	0x8
 	.word	0x37e
@@ -59862,7 +59723,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x3350a
 	.byte	0x8
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0x8
 	.word	0x37e
@@ -59887,7 +59748,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x349b2
 	.byte	0
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_ht\0"
 	.byte	0x8
 	.word	0x37e
@@ -60070,7 +59931,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x349ee
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF195
 	.byte	0x8
 	.word	0x37e
@@ -60085,14 +59946,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x7
 	.long	0x337e6
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x8
 	.word	0x37e
 	.byte	0x1
 	.long	0x349e8
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF104
 	.byte	0x8
 	.word	0x37e
@@ -60194,7 +60055,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x34a06
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF195
 	.byte	0x8
 	.word	0x37e
@@ -60209,14 +60070,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x7
 	.long	0x33a75
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF137
 	.byte	0x8
 	.word	0x37e
 	.byte	0x1
 	.long	0x349b8
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF112
 	.byte	0x8
 	.word	0x37e
@@ -60235,7 +60096,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x30c6d
 	.byte	0
 	.byte	0x2
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_tableBuckets\0"
 	.byte	0x8
 	.word	0x37e
@@ -60243,7 +60104,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x18a
 	.byte	0x8
 	.byte	0x2
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_items\0"
 	.byte	0x8
 	.word	0x37e
@@ -60260,7 +60121,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.uleb128 0x7
 	.long	0x33de7
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_hasher\0"
 	.byte	0x8
 	.word	0x37e
@@ -60277,7 +60138,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.uleb128 0x7
 	.long	0x33e11
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_equals\0"
 	.byte	0x8
 	.word	0x37e
@@ -60294,7 +60155,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.uleb128 0x7
 	.long	0x33e3e
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_getKey\0"
 	.byte	0x8
 	.word	0x37e
@@ -60333,7 +60194,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x34a24
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF38
 	.byte	0x8
 	.word	0x37e
@@ -60527,7 +60388,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x34a36
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF326
 	.byte	0x8
 	.word	0x37e
@@ -60666,7 +60527,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x34a2a
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF327
 	.byte	0x8
 	.word	0x37e
@@ -60778,14 +60639,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x34e5f
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF323
 	.byte	0x8
 	.word	0x37e
 	.byte	0x1
 	.long	0x33a54
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF324
 	.byte	0x8
 	.word	0x37e
@@ -60799,7 +60660,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x337e6
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "first\0"
 	.byte	0x8
 	.word	0x37e
@@ -60814,7 +60675,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0xa8e5
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "second\0"
 	.byte	0x8
 	.word	0x37e
@@ -61061,7 +60922,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x35066
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "Initialize\0"
 	.byte	0x8
 	.word	0x39c
@@ -61141,7 +61002,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x42d
 	.byte	0x2c
 	.long	0x35105
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxFont\0"
 	.long	0x3515a
 	.uleb128 0xec
@@ -61319,7 +61180,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0xda59
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF333
 	.byte	0xa
 	.word	0x226
@@ -61676,7 +61537,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL15wxInvalidOffset
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "wxEOF\0"
 	.byte	0x61
 	.byte	0x2c
@@ -61713,7 +61574,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "wxIMAGE_QUALITY_HIGH\0"
 	.byte	0x4
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "wxIMAGE_ALPHA_TRANSPARENT\0"
 	.byte	0x62
 	.byte	0x4f
@@ -61722,7 +61583,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL25wxIMAGE_ALPHA_TRANSPARENT
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "wxIMAGE_ALPHA_THRESHOLD\0"
 	.byte	0x62
 	.byte	0x50
@@ -61731,7 +61592,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL23wxIMAGE_ALPHA_THRESHOLD
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "wxIMAGE_ALPHA_OPAQUE\0"
 	.byte	0x62
 	.byte	0x51
@@ -62030,7 +61891,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x69
 	.secrel32	.LASF338
 	.long	0x36777
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "MSWEndDeferWindowPos\0"
 	.byte	0x10
 	.word	0x2b7
@@ -62143,7 +62004,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x362ba
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "MSWAdjustBrushOrg\0"
 	.byte	0x10
 	.word	0x1a5
@@ -64155,7 +64016,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1a
 	.long	0x38692
 	.byte	0
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxCritSectBuffer\0"
 	.byte	0xc
 	.word	0x10d
@@ -64226,7 +64087,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x38882
 	.byte	0
-	.uleb128 0x9f
+	.uleb128 0x9e
 	.long	0x38652
 	.byte	0
 	.uleb128 0x33
@@ -64261,7 +64122,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x15b
 	.long	0x38882
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x27
 	.byte	0
@@ -64370,7 +64231,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x92
 	.byte	0x37
 	.long	0x38ef7
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxEvtHandler\0"
 	.long	0x38e4b
 	.uleb128 0x29
@@ -64450,7 +64311,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x38e5f
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "AddPendingEvent\0"
 	.byte	0xd
 	.word	0xd50
@@ -64469,7 +64330,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3ec94
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "QueueEvent\0"
 	.byte	0xd
 	.word	0xd4c
@@ -64588,7 +64449,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x38e70
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxEvent\0"
 	.long	0x38ef2
 	.uleb128 0x1a
@@ -64615,7 +64476,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x38eeb
 	.uleb128 0x2
-	.long	0x4c72c
+	.long	0x4c73e
 	.byte	0
 	.byte	0
 	.uleb128 0x7
@@ -66755,7 +66616,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x47950
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "Execute\0"
 	.byte	0xd
 	.word	0x551
@@ -67010,7 +66871,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3baa9
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "~wxEventTableEntryBase\0"
 	.byte	0xd
 	.word	0xc7c
@@ -67051,7 +66912,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xf
 	.long	0x21fb1
 	.byte	0x10
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF23
 	.byte	0xd
 	.word	0xc8d
@@ -67151,7 +67012,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3bbe5
 	.byte	0
-	.uleb128 0x9e
+	.uleb128 0x9d
 	.ascii "~wxEventTableEntry\0"
 	.ascii "_ZN17wxEventTableEntryD4Ev\0"
 	.long	0x3bbbd
@@ -67177,7 +67038,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x3bbc9
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "wxEventTable\0"
 	.byte	0x10
 	.byte	0xd
@@ -67207,13 +67068,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x4
 	.byte	0x8
 	.long	0x3bbc9
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "_wxArraywxEventTableEntryPointerArray\0"
 	.byte	0xd
 	.word	0xcc5
 	.byte	0x1
 	.long	0x3bc34
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "CMPFUNC_wxArraywxEventTableEntryPointerArray\0"
 	.byte	0xd
 	.word	0xcc5
@@ -67406,7 +67267,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3d290
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF11
 	.byte	0xd
 	.word	0xcc5
@@ -67605,7 +67466,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3d2b4
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF11
 	.byte	0xd
 	.word	0xcc5
@@ -67804,7 +67665,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3c94a
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF38
 	.byte	0xd
 	.word	0xcc5
@@ -67827,14 +67688,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3c9b8
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF137
 	.byte	0xd
 	.word	0xcc5
 	.byte	0x1
 	.long	0x3d2e4
 	.byte	0x1
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF154
 	.byte	0xd
 	.word	0xcc5
@@ -67859,7 +67720,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3ca3b
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF21
 	.byte	0xd
 	.word	0xcc5
@@ -67898,7 +67759,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3c9b8
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0xd
 	.word	0xcc5
@@ -67931,7 +67792,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x3d2de
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x12
 	.secrel32	.LASF18
 	.byte	0xd
 	.word	0xcc5
@@ -68308,7 +68169,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0xcc7
 	.byte	0x18
 	.long	0x3d6e6
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "EventTypeTable\0"
 	.byte	0x20
 	.byte	0xd
@@ -68447,7 +68308,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x3d6f1
 	.byte	0
 	.byte	0x2
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_rebuildHash\0"
 	.byte	0xd
 	.word	0xcf5
@@ -68455,7 +68316,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xa8e5
 	.byte	0x8
 	.byte	0x2
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_size\0"
 	.byte	0xd
 	.word	0xcf7
@@ -68463,13 +68324,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x18a
 	.byte	0x10
 	.byte	0x2
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "EventTypeTablePointer\0"
 	.byte	0xd
 	.word	0xcd0
 	.byte	0x1d
 	.long	0x3d6f7
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_eventTypeTable\0"
 	.byte	0xd
 	.word	0xcf8
@@ -68484,7 +68345,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1e
 	.long	0x3d6eb
 	.byte	0x2
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_previous\0"
 	.byte	0xd
 	.word	0xcfb
@@ -68552,7 +68413,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x3d715
 	.uleb128 0x14
 	.ascii "wxCommandEvent\0"
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxFocusEventFunction\0"
 	.byte	0xd
 	.word	0xf3a
@@ -68574,7 +68435,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x7f
 	.long	0x38a29
 	.long	0x3d743
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxChildFocusEventFunction\0"
 	.byte	0xd
 	.word	0xf3b
@@ -68591,7 +68452,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x3d7b1
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxChildFocusEvent\0"
 	.long	0x3d80c
 	.uleb128 0x87
@@ -68604,7 +68465,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x3d805
 	.uleb128 0x2
-	.long	0x4c6b8
+	.long	0x4c6ca
 	.byte	0
 	.byte	0
 	.uleb128 0x7
@@ -68612,7 +68473,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x7f
 	.long	0x38a29
 	.long	0x3d797
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxNavigationKeyEventFunction\0"
 	.byte	0xd
 	.word	0xf48
@@ -68642,19 +68503,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x61
 	.byte	0x31
 	.long	0x3d870
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxAcceleratorTable\0"
 	.long	0x3d8e2
 	.uleb128 0xf1
 	.secrel32	.LASF23
 	.ascii "_ZN18wxAcceleratorTableaSERKS_\0"
-	.long	0x4bcb8
+	.long	0x4bcca
 	.byte	0x1
 	.long	0x3d8d6
 	.uleb128 0x2
-	.long	0x4bcbe
+	.long	0x4bcd0
 	.uleb128 0x1
-	.long	0x4bc74
+	.long	0x4bc86
 	.byte	0
 	.byte	0
 	.uleb128 0x7
@@ -68882,7 +68743,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xa0
 	.byte	0x26
 	.long	0x32fd3
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxWindowBase\0"
 	.long	0x3ec84
 	.uleb128 0xd
@@ -68952,7 +68813,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0xa903
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "SetInitialBestSize\0"
 	.byte	0xe
 	.word	0x750
@@ -69127,7 +68988,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x547
 	.byte	0x1b
 	.ascii "_ZNK12wxWindowBase13GetDropTargetEv\0"
-	.long	0x4badd
+	.long	0x4baef
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -69145,7 +69006,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x52f
 	.byte	0x10
 	.ascii "_ZNK12wxWindowBase10GetToolTipEv\0"
-	.long	0x4bb1a
+	.long	0x4bb2c
 	.byte	0x1
 	.long	0x3e161
 	.long	0x3e167
@@ -69172,7 +69033,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x238
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "AlwaysShowScrollbars\0"
 	.byte	0xe
 	.word	0x4f6
@@ -69224,7 +69085,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x45891
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "PrepareDC\0"
 	.byte	0xe
 	.word	0x404
@@ -69261,7 +69122,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x45891
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "SetAcceleratorTable\0"
 	.byte	0xe
 	.word	0x3af
@@ -69278,7 +69139,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x3ec89
 	.uleb128 0x1
-	.long	0x4bc74
+	.long	0x4bc86
 	.byte	0
 	.uleb128 0x29
 	.ascii "GetValidator\0"
@@ -69286,7 +69147,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x39c
 	.byte	0x1a
 	.ascii "_ZN12wxWindowBase12GetValidatorEv\0"
-	.long	0x4bd01
+	.long	0x4bd13
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -69318,7 +69179,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3db8e
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "SetCanFocus\0"
 	.byte	0xe
 	.word	0x2fa
@@ -69427,7 +69288,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x45891
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "SetThemeEnabled\0"
 	.byte	0xe
 	.word	0x2b6
@@ -69623,7 +69484,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x45891
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "SetMaxClientSize\0"
 	.byte	0xe
 	.word	0x1db
@@ -69642,7 +69503,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x31ba6
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "SetMinClientSize\0"
 	.byte	0xe
 	.word	0x1d9
@@ -69661,7 +69522,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x31ba6
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "SetSizeHints\0"
 	.byte	0xe
 	.word	0x1be
@@ -69964,7 +69825,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x4260f
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "panes\0"
 	.byte	0x68
 	.word	0x313
@@ -69972,7 +69833,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x411f0
 	.byte	0
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "rect\0"
 	.byte	0x68
 	.word	0x314
@@ -70020,7 +69881,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x238
 	.byte	0x38
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "resizable\0"
 	.byte	0x68
 	.word	0x31a
@@ -70028,7 +69889,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xa8e5
 	.byte	0x3c
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "toolbar\0"
 	.byte	0x68
 	.word	0x31b
@@ -70036,7 +69897,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xa8e5
 	.byte	0x3d
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "fixed\0"
 	.byte	0x68
 	.word	0x31c
@@ -70044,7 +69905,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xa8e5
 	.byte	0x3e
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "reserved1\0"
 	.byte	0x68
 	.word	0x31e
@@ -70070,7 +69931,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x33d
 	.byte	0x17
 	.long	0x3f0ec
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "button_id\0"
 	.byte	0x68
 	.word	0x340
@@ -71734,7 +71595,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x238
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "name\0"
 	.byte	0x68
 	.word	0x1a5
@@ -71742,7 +71603,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xe55
 	.byte	0
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "caption\0"
 	.byte	0x68
 	.word	0x1a6
@@ -71750,7 +71611,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xe55
 	.byte	0x30
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "icon\0"
 	.byte	0x68
 	.word	0x1a7
@@ -71758,7 +71619,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x3506c
 	.byte	0x60
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "window\0"
 	.byte	0x68
 	.word	0x1a9
@@ -71766,7 +71627,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x362ba
 	.byte	0x70
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "frame\0"
 	.byte	0x68
 	.word	0x1aa
@@ -71774,7 +71635,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x425fd
 	.byte	0x78
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "state\0"
 	.byte	0x68
 	.word	0x1ab
@@ -71806,7 +71667,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x238
 	.byte	0x8c
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "dock_pos\0"
 	.byte	0x68
 	.word	0x1b0
@@ -71814,7 +71675,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x238
 	.byte	0x90
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "best_size\0"
 	.byte	0x68
 	.word	0x1b2
@@ -71838,7 +71699,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x31460
 	.byte	0xa4
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "floating_pos\0"
 	.byte	0x68
 	.word	0x1b6
@@ -71846,7 +71707,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x31bb2
 	.byte	0xac
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "floating_size\0"
 	.byte	0x68
 	.word	0x1b7
@@ -71854,7 +71715,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x31460
 	.byte	0xb4
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "dock_proportion\0"
 	.byte	0x68
 	.word	0x1b8
@@ -71862,7 +71723,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x238
 	.byte	0xbc
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "buttons\0"
 	.byte	0x68
 	.word	0x1ba
@@ -71870,7 +71731,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x3f141
 	.byte	0xc0
 	.byte	0x1
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "rect\0"
 	.byte	0x68
 	.word	0x1bd
@@ -71878,7 +71739,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x31fbe
 	.byte	0xd8
 	.byte	0x1
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF278
 	.byte	0x68
 	.word	0x1bf
@@ -74397,7 +74258,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x43cb4
 	.long	0x43cbf
 	.uleb128 0x2
-	.long	0x4a7ac
+	.long	0x4a7be
 	.uleb128 0x2
 	.long	0x238
 	.byte	0
@@ -74417,9 +74278,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x43d0e
 	.long	0x43d14
 	.uleb128 0x2
-	.long	0x4a852
+	.long	0x4a864
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "DoShowPage\0"
 	.byte	0x14
 	.word	0x120
@@ -74434,13 +74295,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x43d62
 	.long	0x43d72
 	.uleb128 0x2
-	.long	0x4a7ac
+	.long	0x4a7be
 	.uleb128 0x1
 	.long	0x362ba
 	.uleb128 0x1
 	.long	0xa8e5
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "MakeChangedEvent\0"
 	.byte	0x14
 	.word	0x11a
@@ -74455,7 +74316,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x43dd3
 	.long	0x43dde
 	.uleb128 0x2
-	.long	0x4a7ac
+	.long	0x4a7be
 	.uleb128 0x1
 	.long	0x44226
 	.byte	0
@@ -74465,7 +74326,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x115
 	.byte	0x1e
 	.ascii "_ZNK14wxBookCtrlBase23CreatePageChangingEventEv\0"
-	.long	0x4a933
+	.long	0x4a945
 	.byte	0x1
 	.uleb128 0x3
 	.byte	0x10
@@ -74475,9 +74336,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x43e41
 	.long	0x43e47
 	.uleb128 0x2
-	.long	0x4a852
+	.long	0x4a864
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "UpdateSelectedPage\0"
 	.byte	0x14
 	.word	0x111
@@ -74492,7 +74353,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x43e9b
 	.long	0x43ea6
 	.uleb128 0x2
-	.long	0x4a7ac
+	.long	0x4a7be
 	.uleb128 0x1
 	.long	0x18a
 	.byte	0
@@ -74512,7 +74373,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x43eed
 	.long	0x43ef3
 	.uleb128 0x2
-	.long	0x4a852
+	.long	0x4a864
 	.byte	0
 	.uleb128 0x27
 	.ascii "CanApplyThemeBorder\0"
@@ -74530,7 +74391,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x43f4d
 	.long	0x43f53
 	.uleb128 0x2
-	.long	0x4a852
+	.long	0x4a864
 	.byte	0
 	.uleb128 0x4b
 	.secrel32	.LASF371
@@ -74548,7 +74409,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x43f99
 	.long	0x43f9f
 	.uleb128 0x2
-	.long	0x4a852
+	.long	0x4a864
 	.byte	0
 	.uleb128 0x4b
 	.secrel32	.LASF351
@@ -74566,7 +74427,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x43fe7
 	.long	0x43ff7
 	.uleb128 0x2
-	.long	0x4a852
+	.long	0x4a864
 	.uleb128 0x1
 	.long	0x31bac
 	.uleb128 0x1
@@ -74588,7 +74449,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x4404d
 	.long	0x44067
 	.uleb128 0x2
-	.long	0x4a7ac
+	.long	0x4a7be
 	.uleb128 0x1
 	.long	0x362ba
 	.uleb128 0x1
@@ -74614,7 +74475,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x440b6
 	.long	0x440bc
 	.uleb128 0x2
-	.long	0x4a7ac
+	.long	0x4a7be
 	.byte	0
 	.uleb128 0x27
 	.ascii "RemovePage\0"
@@ -74632,7 +74493,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x44103
 	.long	0x4410e
 	.uleb128 0x2
-	.long	0x4a7ac
+	.long	0x4a7be
 	.uleb128 0x1
 	.long	0x18a
 	.byte	0
@@ -74652,7 +74513,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x44151
 	.long	0x44157
 	.uleb128 0x2
-	.long	0x4a852
+	.long	0x4a864
 	.byte	0
 	.uleb128 0x27
 	.ascii "GetPage\0"
@@ -74670,7 +74531,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x44198
 	.long	0x441a3
 	.uleb128 0x2
-	.long	0x4a852
+	.long	0x4a864
 	.uleb128 0x1
 	.long	0x18a
 	.byte	0
@@ -74690,7 +74551,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x441ef
 	.long	0x441f5
 	.uleb128 0x2
-	.long	0x4a852
+	.long	0x4a864
 	.byte	0
 	.uleb128 0x67
 	.secrel32	.LASF369
@@ -74701,7 +74562,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x4421a
 	.uleb128 0x2
-	.long	0x4a7ac
+	.long	0x4a7be
 	.byte	0
 	.byte	0
 	.uleb128 0x7
@@ -74709,10 +74570,10 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x4422c
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxBookCtrlEvent\0"
 	.long	0x44280
-	.uleb128 0x45
+	.uleb128 0x44
 	.secrel32	.LASF372
 	.byte	0x14
 	.word	0x187
@@ -74722,7 +74583,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x44279
 	.uleb128 0x2
-	.long	0x4a81b
+	.long	0x4a82d
 	.byte	0
 	.byte	0
 	.uleb128 0x7
@@ -74886,7 +74747,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x1cd
 	.byte	0x1
 	.long	0x443e6
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "wxAuiNotebookEventFunction\0"
 	.byte	0x16
 	.word	0x1cf
@@ -75215,7 +75076,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x5e
 	.byte	0x2d
 	.long	0x44b3e
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxDataObjectBase\0"
 	.long	0x44b9d
 	.uleb128 0xf4
@@ -75563,7 +75424,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "wxDragCancel\0"
 	.byte	0x5
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxTextEntry\0"
 	.long	0x451e9
 	.uleb128 0xf5
@@ -75601,7 +75462,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x36
 	.byte	0x2a
 	.long	0x2a8d2
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "wxOutOfRangeTextCoord\0"
 	.byte	0x17
 	.byte	0x3a
@@ -75610,7 +75471,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxOutOfRangeTextCoord
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "wxInvalidTextCoord\0"
 	.byte	0x17
 	.byte	0x3b
@@ -76172,7 +76033,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x59
 	.ascii "OnPageChanged\0"
 	.byte	0x18
-	.byte	0x3b
+	.byte	0x3d
 	.byte	0xa
 	.ascii "_ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent\0"
 	.long	0x45efb
@@ -76185,7 +76046,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x59
 	.ascii "OnPageClosed\0"
 	.byte	0x18
-	.byte	0x48
+	.byte	0x4a
 	.byte	0xa
 	.ascii "_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent\0"
 	.long	0x45f56
@@ -76233,7 +76094,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x3d302
 	.byte	0x2
-	.uleb128 0xa1
+	.uleb128 0xa0
 	.ascii "GetEventHashTable\0"
 	.byte	0x18
 	.byte	0x6
@@ -76302,7 +76163,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x3bbc9
 	.long	0x46148
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x2
 	.byte	0
@@ -76385,7 +76246,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x46245
 	.long	0x46250
 	.uleb128 0x2
-	.long	0x4a409
+	.long	0x4a41b
 	.uleb128 0x1
 	.long	0x18a
 	.byte	0
@@ -76405,7 +76266,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x46297
 	.long	0x4629d
 	.uleb128 0x2
-	.long	0x4a448
+	.long	0x4a45a
 	.byte	0
 	.uleb128 0x5b
 	.secrel32	.LASF371
@@ -76423,7 +76284,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x462e3
 	.long	0x462e9
 	.uleb128 0x2
-	.long	0x4a448
+	.long	0x4a45a
 	.byte	0
 	.uleb128 0x67
 	.secrel32	.LASF379
@@ -76434,7 +76295,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x4632b
 	.uleb128 0x2
-	.long	0x4a409
+	.long	0x4a41b
 	.uleb128 0x1
 	.long	0x362ba
 	.uleb128 0x1
@@ -76684,7 +76545,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x3baa4
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxTextAreaBase\0"
 	.long	0x46a68
 	.uleb128 0x87
@@ -76697,7 +76558,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x46a57
 	.uleb128 0x2
-	.long	0x4a3ac
+	.long	0x4a3be
 	.uleb128 0x1
 	.long	0xe4f
 	.uleb128 0x1
@@ -77166,7 +77027,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x473fe
 	.long	0x47404
 	.uleb128 0x2
-	.long	0x4cc59
+	.long	0x4cc6b
 	.byte	0
 	.uleb128 0x27
 	.ascii "CloneRefData\0"
@@ -77174,7 +77035,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x51
 	.byte	0x1e
 	.ascii "_ZNK11wxGDIObject12CloneRefDataEPK12wxRefCounter\0"
-	.long	0x4d096
+	.long	0x4d0a8
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -77184,9 +77045,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x4745b
 	.long	0x47466
 	.uleb128 0x2
-	.long	0x4d09c
+	.long	0x4d0ae
 	.uleb128 0x1
-	.long	0x4d0a7
+	.long	0x4d0b9
 	.byte	0
 	.uleb128 0x27
 	.ascii "CreateRefData\0"
@@ -77194,7 +77055,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x4c
 	.byte	0x1e
 	.ascii "_ZNK11wxGDIObject13CreateRefDataEv\0"
-	.long	0x4d096
+	.long	0x4d0a8
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -77204,7 +77065,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x474b0
 	.long	0x474b6
 	.uleb128 0x2
-	.long	0x4d09c
+	.long	0x4d0ae
 	.byte	0
 	.uleb128 0x27
 	.ascii "GetResourceHandle\0"
@@ -77222,7 +77083,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x47508
 	.long	0x4750e
 	.uleb128 0x2
-	.long	0x4d09c
+	.long	0x4d0ae
 	.byte	0
 	.uleb128 0x27
 	.ascii "IsFree\0"
@@ -77240,7 +77101,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x47549
 	.long	0x4754f
 	.uleb128 0x2
-	.long	0x4d09c
+	.long	0x4d0ae
 	.byte	0
 	.uleb128 0x27
 	.ascii "FreeResource\0"
@@ -77258,7 +77119,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x47596
 	.long	0x475a1
 	.uleb128 0x2
-	.long	0x4cc59
+	.long	0x4cc6b
 	.uleb128 0x1
 	.long	0xa8e5
 	.byte	0
@@ -77278,9 +77139,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x475ee
 	.long	0x475f4
 	.uleb128 0x2
-	.long	0x4cc59
+	.long	0x4cc6b
 	.byte	0
-	.uleb128 0xa1
+	.uleb128 0xa0
 	.ascii "IsOk\0"
 	.byte	0x9
 	.byte	0x2d
@@ -77295,7 +77156,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x47628
 	.uleb128 0x2
-	.long	0x4d09c
+	.long	0x4d0ae
 	.byte	0
 	.byte	0
 	.uleb128 0x7
@@ -77586,7 +77447,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x7
 	.long	0x47956
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxThread\0"
 	.long	0x47bb1
 	.uleb128 0xff
@@ -77605,7 +77466,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x47e36
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "OnKill\0"
 	.byte	0xc
 	.word	0x277
@@ -77660,7 +77521,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x46a73
 	.byte	0
 	.byte	0x1
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "KillThread\0"
 	.byte	0xc
 	.word	0x2b6
@@ -77685,7 +77546,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x3854e
 	.byte	0
-	.uleb128 0xa0
+	.uleb128 0x9f
 	.ascii "~wxThreadHelper\0"
 	.byte	0xc
 	.word	0x2cf
@@ -77764,7 +77625,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x47e41
 	.byte	0
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_thread\0"
 	.byte	0xc
 	.word	0x2f1
@@ -77772,7 +77633,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x47e36
 	.byte	0x8
 	.byte	0x2
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_kind\0"
 	.byte	0xc
 	.word	0x2f2
@@ -77780,7 +77641,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x3854e
 	.byte	0x10
 	.byte	0x2
-	.uleb128 0x23
+	.uleb128 0x22
 	.ascii "m_critSection\0"
 	.byte	0xc
 	.word	0x2f3
@@ -77993,7 +77854,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "_ZNSt17integral_constantIbLb1EE5valueE\0"
 	.long	0x1781e
 	.byte	0x1
-	.uleb128 0xa2
+	.uleb128 0xa1
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIiE5__minE\0"
 	.long	0x1a71f
 	.sleb128 -2147483648
@@ -78005,11 +77866,11 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIfE16__max_exponent10E\0"
 	.long	0x1ba68
 	.byte	0x26
-	.uleb128 0xa3
+	.uleb128 0xa2
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIdE16__max_exponent10E\0"
 	.long	0x1bacd
 	.word	0x134
-	.uleb128 0xa3
+	.uleb128 0xa2
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIeE16__max_exponent10E\0"
 	.long	0x1bb37
 	.word	0x1344
@@ -78021,15 +77882,15 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIcE5__maxE\0"
 	.long	0x1ce42
 	.byte	0x7f
-	.uleb128 0xa2
+	.uleb128 0xa1
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIsE5__minE\0"
 	.long	0x1ce9d
 	.sleb128 -32768
-	.uleb128 0xa3
+	.uleb128 0xa2
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIsE5__maxE\0"
 	.long	0x1cea9
 	.word	0x7fff
-	.uleb128 0xa2
+	.uleb128 0xa1
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIxE5__minE\0"
 	.long	0x1cf08
 	.sleb128 -9223372036854775808
@@ -78037,7 +77898,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIxE5__maxE\0"
 	.long	0x1cf14
 	.quad	0x7fffffffffffffff
-	.uleb128 0x44
+	.uleb128 0x43
 	.ascii "wxControlContainerBase\0"
 	.long	0x484cc
 	.uleb128 0x5
@@ -78051,7 +77912,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x483ba
 	.long	0x483c0
 	.uleb128 0x2
-	.long	0x4a606
+	.long	0x4a618
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF353
@@ -78064,7 +77925,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x4840d
 	.long	0x48413
 	.uleb128 0x2
-	.long	0x4a606
+	.long	0x4a618
 	.byte	0
 	.uleb128 0x2b
 	.ascii "SetContainerWindow\0"
@@ -78076,7 +77937,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x4846e
 	.long	0x48479
 	.uleb128 0x2
-	.long	0x4a669
+	.long	0x4a67b
 	.uleb128 0x1
 	.long	0x362ba
 	.byte	0
@@ -78091,7 +77952,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.long	0x484c0
 	.uleb128 0x2
-	.long	0x4a669
+	.long	0x4a67b
 	.uleb128 0x2
 	.long	0x238
 	.byte	0
@@ -78147,7 +78008,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x485ee
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "f\0"
 	.byte	0xd
 	.word	0x15e
@@ -78157,14 +78018,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x91
 	.sleb128 -48
 	.byte	0
-	.uleb128 0x99
+	.uleb128 0xa3
 	.long	0xbb9f
 	.quad	.LFB13697
 	.quad	.LFE13697-.LFB13697
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48619
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "p\0"
 	.byte	0xd
 	.word	0x15c
@@ -78174,14 +78035,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x99
+	.uleb128 0xa3
 	.long	0xbb23
 	.quad	.LFB13696
 	.quad	.LFE13696-.LFB13696
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48644
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "p\0"
 	.byte	0xd
 	.word	0x15a
@@ -78235,7 +78096,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "functor\0"
 	.byte	0xd
 	.word	0x1ad
@@ -78244,7 +78105,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x22
+	.uleb128 0x21
 	.ascii "ThisFunctor\0"
 	.byte	0xd
 	.word	0x1b3
@@ -78318,7 +78179,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x163
 	.long	0x48793
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0xa
 	.byte	0
@@ -78338,7 +78199,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "child\0"
 	.byte	0x15
 	.byte	0xe7
@@ -78362,7 +78223,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "child\0"
 	.byte	0x15
 	.byte	0xda
@@ -78447,7 +78308,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x488c2
 	.ascii "_ZN18wxControlContainerD0Ev\0"
 	.long	0x48921
@@ -78456,13 +78317,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4892a
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x488d3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x488c2
 	.ascii "_ZN18wxControlContainerD1Ev\0"
 	.long	0x48965
@@ -78471,7 +78332,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4896e
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x488d3
 	.uleb128 0x2
 	.byte	0x91
@@ -78484,19 +78345,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x489e1
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "__initialize_p\0"
 	.byte	0x18
-	.byte	0x4b
+	.byte	0x4d
 	.byte	0x1
 	.long	0x238
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "__priority\0"
 	.byte	0x18
-	.byte	0x4b
+	.byte	0x4d
 	.byte	0x1
 	.long	0x238
 	.uleb128 0x2
@@ -78536,7 +78397,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x48a35
 	.ascii "_ZN20wxThreadHelperThreadD0Ev\0"
 	.long	0x48a98
@@ -78545,13 +78406,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48aa1
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x48a48
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x48a35
 	.ascii "_ZN20wxThreadHelperThreadD1Ev\0"
 	.long	0x48ade
@@ -78560,7 +78421,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48ae7
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x48a48
 	.uleb128 0x2
 	.byte	0x91
@@ -78581,7 +78442,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x48ae7
 	.ascii "_ZN20wxObjectEventFunctorD0Ev\0"
 	.long	0x48b48
@@ -78590,13 +78451,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48b51
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x48af8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x48ae7
 	.ascii "_ZN20wxObjectEventFunctorD1Ev\0"
 	.long	0x48b8e
@@ -78605,7 +78466,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48b97
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x48af8
 	.uleb128 0x2
 	.byte	0x91
@@ -78626,7 +78487,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x48b97
 	.ascii "_ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_ED0Ev\0"
 	.long	0x48c3b
@@ -78635,13 +78496,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48c44
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x48baa
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x48b97
 	.ascii "_ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_ED1Ev\0"
 	.long	0x48cc2
@@ -78650,7 +78511,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48ccb
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x48baa
 	.uleb128 0x2
 	.byte	0x91
@@ -78732,7 +78593,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1b
 	.secrel32	.LASF200
 	.long	0x592
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "__ptr\0"
 	.byte	0x4d
 	.byte	0x98
@@ -78773,7 +78634,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1b
 	.secrel32	.LASF200
 	.long	0x59d
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "__ptr\0"
 	.byte	0x4d
 	.byte	0x98
@@ -78842,7 +78703,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xc
 	.long	0x12e7a
 	.byte	0
-	.uleb128 0x99
+	.uleb128 0xa3
 	.long	0x46503
 	.quad	.LFB13482
 	.quad	.LFE13482-.LFB13482
@@ -78910,7 +78771,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x5c
 	.long	0x19498
 	.long	0x48f7d
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "__rhs\0"
 	.byte	0x3f
 	.word	0x1f8
@@ -78972,13 +78833,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3f
 	.long	0x163
 	.long	0x49011
-	.uleb128 0x43
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x14
 	.byte	0
 	.uleb128 0x7
 	.long	0x49001
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x48fba
 	.ascii "_ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_EC1EMS3_FvRS4_EPS3_\0"
 	.long	0x490a2
@@ -78987,17 +78848,17 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x490c3
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x48fc8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x48fd1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x48fdf
 	.uleb128 0x2
 	.byte	0x91
@@ -79191,7 +79052,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x1db7d
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "__a\0"
 	.byte	0x3b
 	.byte	0x85
@@ -79249,7 +79110,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x5c
 	.long	0x1bbad
 	.long	0x4949e
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "__a\0"
 	.byte	0x4b
 	.byte	0x5e
@@ -79302,13 +79163,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x1e56d
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "__dat\0"
 	.byte	0x2d
 	.byte	0x91
 	.byte	0x17
 	.long	0x12e26
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "__a\0"
 	.byte	0x2d
 	.byte	0x91
@@ -79372,13 +79233,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x1e56d
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "__dat\0"
 	.byte	0x2d
 	.byte	0x94
 	.byte	0x17
 	.long	0x12e26
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "__a\0"
 	.byte	0x2d
 	.byte	0x94
@@ -79406,7 +79267,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x19
 	.ascii "_Tp\0"
 	.long	0x1e555
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "__t\0"
 	.byte	0x47
 	.byte	0x63
@@ -79449,7 +79310,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x4974b
 	.ascii "_ZN22wxScopedCharTypeBufferIwE4DataD1Ev\0"
 	.long	0x497b6
@@ -79458,7 +79319,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x497bf
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x4975c
 	.uleb128 0x2
 	.byte	0x91
@@ -79552,7 +79413,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF396
 	.long	0x470b2
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x499d7
 	.ascii "_ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev\0"
 	.long	0x49a3d
@@ -79561,7 +79422,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x49a46
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x499e5
 	.uleb128 0x2
 	.byte	0x91
@@ -79585,7 +79446,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x19
 	.ascii "T2\0"
 	.long	0x238
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "a\0"
 	.byte	0x1a
 	.byte	0x41
@@ -79594,7 +79455,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "b\0"
 	.byte	0x1a
 	.byte	0x41
@@ -79648,13 +79509,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x1e58e
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "__s\0"
 	.byte	0x2d
 	.word	0x1fd
 	.byte	0x22
 	.long	0x98f
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "__a\0"
 	.byte	0x2d
 	.word	0x1fd
@@ -79696,7 +79557,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x1e58e
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "__str\0"
 	.byte	0x2d
 	.word	0x1b5
@@ -79731,7 +79592,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x49ce5
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x49c8e
 	.uleb128 0x2
 	.byte	0x91
@@ -79766,7 +79627,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x49d4a
 	.ascii "_ZN8wxString15ConvertedBufferIcED1Ev\0"
 	.long	0x49daf
@@ -79775,7 +79636,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x49db8
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x49d58
 	.uleb128 0x2
 	.byte	0x91
@@ -79789,14 +79650,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0xd438
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "src\0"
 	.byte	0x1
 	.byte	0x6b
 	.byte	0x3a
 	.long	0xd449
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x49db8
 	.ascii "_ZN22wxScopedCharTypeBufferIwEC1ERKS0_\0"
 	.long	0x49e22
@@ -79805,12 +79666,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x49e33
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x49dc6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x49dcf
 	.uleb128 0x2
 	.byte	0x91
@@ -79908,7 +79769,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x23
 	.long	0x49f99
 	.ascii "_ZN22wxScopedCharTypeBufferIwED1Ev\0"
 	.long	0x49ffc
@@ -79917,7 +79778,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4a005
-	.uleb128 0x12
+	.uleb128 0x13
 	.long	0x49fa7
 	.uleb128 0x2
 	.byte	0x91
@@ -79940,7 +79801,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x60
 	.secrel32	.LASF398
 	.byte	0x18
-	.byte	0x48
+	.byte	0x4a
 	.byte	0x3a
 	.long	0x44669
 	.uleb128 0x2
@@ -79964,16 +79825,16 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x60
 	.secrel32	.LASF398
 	.byte	0x18
-	.byte	0x3b
+	.byte	0x3d
 	.byte	0x3b
 	.long	0x44669
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "index\0"
 	.byte	0x18
-	.byte	0x3d
+	.byte	0x3f
 	.byte	0x11
 	.long	0x4469e
 	.uleb128 0x2
@@ -79987,22 +79848,31 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE12533-.LFB12533
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a0b8
+	.long	0x4a0ca
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x46356
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
+	.uleb128 0x52
+	.ascii "result\0"
+	.byte	0x18
+	.byte	0x36
+	.byte	0x15
+	.long	0xa8e5
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -33
 	.byte	0
 	.uleb128 0x15
 	.long	0x45de2
-	.long	0x4a0d7
+	.long	0x4a0e9
 	.quad	.LFB12532
 	.quad	.LFE12532-.LFB12532
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a0e4
+	.long	0x4a0f6
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x46356
@@ -80012,19 +79882,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x45d92
-	.long	0x4a103
+	.long	0x4a115
 	.quad	.LFB12531
 	.quad	.LFE12531-.LFB12531
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a143
+	.long	0x4a155
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x46356
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "info\0"
 	.byte	0x18
 	.byte	0x1f
@@ -80033,7 +79903,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "editor\0"
 	.byte	0x18
 	.byte	0x21
@@ -80042,7 +79912,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
-	.uleb128 0x55
+	.uleb128 0x52
 	.ascii "path\0"
 	.byte	0x18
 	.byte	0x23
@@ -80054,12 +79924,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x45e50
-	.long	0x4a162
+	.long	0x4a174
 	.quad	.LFB12530
 	.quad	.LFE12530-.LFB12530
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a16f
+	.long	0x4a181
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x46356
@@ -80069,9 +79939,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x20
 	.long	0x45d4e
-	.long	0x4a17d
+	.long	0x4a18f
 	.byte	0
-	.long	0x4a190
+	.long	0x4a1a2
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x46356
@@ -80079,57 +79949,57 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4a16f
+	.uleb128 0x23
+	.long	0x4a181
 	.ascii "_ZN13T100MainPanelD0Ev\0"
-	.long	0x4a1c6
+	.long	0x4a1d8
 	.quad	.LFB12529
 	.quad	.LFE12529-.LFB12529
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a1cf
-	.uleb128 0x12
-	.long	0x4a17d
+	.long	0x4a1e1
+	.uleb128 0x13
+	.long	0x4a18f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
-	.long	0x4a16f
+	.uleb128 0x23
+	.long	0x4a181
 	.ascii "_ZN13T100MainPanelD2Ev\0"
-	.long	0x4a205
+	.long	0x4a217
 	.quad	.LFB12527
 	.quad	.LFE12527-.LFB12527
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a20e
-	.uleb128 0x12
-	.long	0x4a17d
+	.long	0x4a220
+	.uleb128 0x13
+	.long	0x4a18f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
 	.long	0x45ce9
-	.long	0x4a21c
+	.long	0x4a22e
 	.byte	0
-	.long	0x4a266
+	.long	0x4a278
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x46356
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "parent\0"
 	.byte	0x18
 	.byte	0xb
 	.byte	0x28
 	.long	0x362ba
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "id\0"
 	.byte	0x18
 	.byte	0xc
 	.byte	0x1e
 	.long	0xb474
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "pos\0"
 	.byte	0x18
 	.byte	0xd
@@ -80141,49 +80011,49 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xe
 	.byte	0x21
 	.long	0x31ba6
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "style\0"
 	.byte	0x18
 	.byte	0xf
 	.byte	0x18
 	.long	0x244
 	.byte	0
-	.uleb128 0x21
-	.long	0x4a20e
+	.uleb128 0x23
+	.long	0x4a220
 	.ascii "_ZN13T100MainPanelC2EP8wxWindowiRK7wxPointRK6wxSizel\0"
-	.long	0x4a2ba
+	.long	0x4a2cc
 	.quad	.LFB12524
 	.quad	.LFE12524-.LFB12524
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a2eb
-	.uleb128 0x12
-	.long	0x4a21c
+	.long	0x4a2fd
+	.uleb128 0x13
+	.long	0x4a22e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4a225
+	.uleb128 0x13
+	.long	0x4a237
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x12
-	.long	0x4a234
+	.uleb128 0x13
+	.long	0x4a246
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x12
-	.long	0x4a23f
+	.uleb128 0x13
+	.long	0x4a251
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
-	.uleb128 0x12
-	.long	0x4a24b
+	.uleb128 0x13
+	.long	0x4a25d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 32
-	.uleb128 0x12
-	.long	0x4a257
+	.uleb128 0x13
+	.long	0x4a269
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 40
@@ -80193,9 +80063,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xd
 	.word	0xc91
 	.byte	0x19
-	.long	0x4a2fe
+	.long	0x4a310
 	.byte	0x2
-	.long	0x4a311
+	.long	0x4a323
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x3bbd4
@@ -80203,29 +80073,29 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4a2eb
+	.uleb128 0x23
+	.long	0x4a2fd
 	.ascii "_ZN17wxEventTableEntryD1Ev\0"
-	.long	0x4a34b
+	.long	0x4a35d
 	.quad	.LFB12519
 	.quad	.LFE12519-.LFB12519
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a354
-	.uleb128 0x12
-	.long	0x4a2fe
+	.long	0x4a366
+	.uleb128 0x13
+	.long	0x4a310
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
 	.long	0x46005
-	.long	0x4a373
+	.long	0x4a385
 	.quad	.LFB12516
 	.quad	.LFE12516-.LFB12516
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a380
+	.long	0x4a392
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x4638d
@@ -80235,12 +80105,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x45f97
-	.long	0x4a39f
+	.long	0x4a3b1
 	.quad	.LFB12515
 	.quad	.LFE12515-.LFB12515
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a3ac
+	.long	0x4a3be
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x4638d
@@ -80252,22 +80122,22 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x46a01
 	.uleb128 0x7
-	.long	0x4a3ac
+	.long	0x4a3be
 	.uleb128 0x15
 	.long	0x46a15
-	.long	0x4a3d6
+	.long	0x4a3e8
 	.quad	.LFB12359
 	.quad	.LFE12359-.LFB12359
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a409
+	.long	0x4a41b
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a3b2
+	.long	0x4a3c4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "file\0"
 	.byte	0x17
 	.word	0x227
@@ -80276,7 +80146,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "fileType\0"
 	.byte	0x17
 	.word	0x227
@@ -80290,18 +80160,18 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x461f1
 	.uleb128 0x7
-	.long	0x4a409
+	.long	0x4a41b
 	.uleb128 0x1c
 	.long	0x461fa
-	.long	0x4a433
+	.long	0x4a445
 	.quad	.LFB11588
 	.quad	.LFE11588-.LFB11588
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a448
+	.long	0x4a45a
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a40f
+	.long	0x4a421
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80315,58 +80185,58 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x4634b
 	.uleb128 0x7
-	.long	0x4a448
+	.long	0x4a45a
 	.uleb128 0x1c
 	.long	0x46250
-	.long	0x4a472
+	.long	0x4a484
 	.quad	.LFB11587
 	.quad	.LFE11587-.LFB11587
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a47f
+	.long	0x4a491
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a44e
+	.long	0x4a460
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
 	.long	0x4629d
-	.long	0x4a49e
+	.long	0x4a4b0
 	.quad	.LFB11586
 	.quad	.LFE11586-.LFB11586
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a4ab
+	.long	0x4a4bd
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a44e
+	.long	0x4a460
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
 	.long	0x462e9
-	.long	0x4a4b9
+	.long	0x4a4cb
 	.byte	0x2
-	.long	0x4a506
+	.long	0x4a518
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4a40f
-	.uleb128 0x47
+	.long	0x4a421
+	.uleb128 0x46
 	.ascii "parent\0"
 	.byte	0x16
 	.byte	0xfd
 	.byte	0x1d
 	.long	0x362ba
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "id\0"
 	.byte	0x16
 	.byte	0xfe
 	.byte	0x1e
 	.long	0xb474
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "pos\0"
 	.byte	0x16
 	.byte	0xff
@@ -80378,49 +80248,49 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x100
 	.byte	0x21
 	.long	0x31ba6
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "style\0"
 	.byte	0x16
 	.word	0x101
 	.byte	0x18
 	.long	0x244
 	.byte	0
-	.uleb128 0x21
-	.long	0x4a4ab
+	.uleb128 0x23
+	.long	0x4a4bd
 	.ascii "_ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel\0"
-	.long	0x4a55a
+	.long	0x4a56c
 	.quad	.LFB11583
 	.quad	.LFE11583-.LFB11583
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a58b
-	.uleb128 0x12
-	.long	0x4a4b9
+	.long	0x4a59d
+	.uleb128 0x13
+	.long	0x4a4cb
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4a4c2
+	.uleb128 0x13
+	.long	0x4a4d4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x12
-	.long	0x4a4d1
+	.uleb128 0x13
+	.long	0x4a4e3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x12
-	.long	0x4a4dc
+	.uleb128 0x13
+	.long	0x4a4ee
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
-	.uleb128 0x12
-	.long	0x4a4e8
+	.uleb128 0x13
+	.long	0x4a4fa
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 32
-	.uleb128 0x12
-	.long	0x4a4f6
+	.uleb128 0x13
+	.long	0x4a508
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 40
@@ -80430,9 +80300,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x15
 	.byte	0xb6
 	.byte	0x7
-	.long	0x4a59c
+	.long	0x4a5ae
 	.byte	0x2
-	.long	0x4a5af
+	.long	0x4a5c1
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x470b2
@@ -80440,17 +80310,17 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4a58b
+	.uleb128 0x23
+	.long	0x4a59d
 	.ascii "_ZN19wxNavigationEnabledI14wxBookCtrlBaseED2Ev\0"
-	.long	0x4a5fd
+	.long	0x4a60f
 	.quad	.LFB11577
 	.quad	.LFE11577-.LFB11577
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a606
-	.uleb128 0x12
-	.long	0x4a59c
+	.long	0x4a618
+	.uleb128 0x13
+	.long	0x4a5ae
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80459,33 +80329,33 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x484cc
 	.uleb128 0x7
-	.long	0x4a606
+	.long	0x4a618
 	.uleb128 0x15
 	.long	0x4836c
-	.long	0x4a630
+	.long	0x4a642
 	.quad	.LFB11504
 	.quad	.LFE11504-.LFB11504
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a63d
+	.long	0x4a64f
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a60c
+	.long	0x4a61e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
 	.long	0x483c0
-	.long	0x4a65c
+	.long	0x4a66e
 	.quad	.LFB11503
 	.quad	.LFE11503-.LFB11503
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a669
+	.long	0x4a67b
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a60c
+	.long	0x4a61e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80494,22 +80364,22 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x48350
 	.uleb128 0x7
-	.long	0x4a669
+	.long	0x4a67b
 	.uleb128 0x15
 	.long	0x48413
-	.long	0x4a693
+	.long	0x4a6a5
 	.quad	.LFB11500
 	.quad	.LFE11500-.LFB11500
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a6c8
+	.long	0x4a6da
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a66f
+	.long	0x4a681
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "winParent\0"
 	.byte	0x15
 	.byte	0x37
@@ -80520,59 +80390,59 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.sleb128 8
 	.uleb128 0x72
 	.secrel32	.LASF406
-	.long	0x4a6d8
+	.long	0x4a6ea
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZZN22wxControlContainerBase18SetContainerWindowEP8wxWindowE12__FUNCTION__
 	.byte	0
 	.uleb128 0x3f
 	.long	0x163
-	.long	0x4a6d8
-	.uleb128 0x43
+	.long	0x4a6ea
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x12
 	.byte	0
 	.uleb128 0x7
-	.long	0x4a6c8
+	.long	0x4a6da
 	.uleb128 0x20
 	.long	0x48479
-	.long	0x4a6eb
+	.long	0x4a6fd
 	.byte	0x2
-	.long	0x4a6fe
+	.long	0x4a710
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4a66f
+	.long	0x4a681
 	.uleb128 0x10
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
 	.uleb128 0x41
-	.long	0x4a6dd
+	.long	0x4a6ef
 	.ascii "_ZN22wxControlContainerBaseD0Ev\0"
-	.long	0x4a72b
-	.long	0x4a731
+	.long	0x4a73d
+	.long	0x4a743
 	.uleb128 0x35
-	.long	0x4a6eb
+	.long	0x4a6fd
 	.byte	0
 	.uleb128 0x41
-	.long	0x4a6dd
+	.long	0x4a6ef
 	.ascii "_ZN22wxControlContainerBaseD1Ev\0"
-	.long	0x4a75e
-	.long	0x4a764
+	.long	0x4a770
+	.long	0x4a776
 	.uleb128 0x35
-	.long	0x4a6eb
+	.long	0x4a6fd
 	.byte	0
 	.uleb128 0x6e
-	.long	0x4a6dd
+	.long	0x4a6ef
 	.ascii "_ZN22wxControlContainerBaseD2Ev\0"
-	.long	0x4a7a3
+	.long	0x4a7b5
 	.quad	.LFB11497
 	.quad	.LFE11497-.LFB11497
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a7ac
-	.uleb128 0x12
-	.long	0x4a6eb
+	.long	0x4a7be
+	.uleb128 0x13
+	.long	0x4a6fd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80581,33 +80451,33 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x43c73
 	.uleb128 0x7
-	.long	0x4a7ac
+	.long	0x4a7be
 	.uleb128 0x6d
 	.long	0x43c7c
 	.byte	0x14
 	.byte	0x39
 	.byte	0x18
-	.long	0x4a7c8
+	.long	0x4a7da
 	.byte	0x2
-	.long	0x4a7db
+	.long	0x4a7ed
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4a7b2
+	.long	0x4a7c4
 	.uleb128 0x10
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4a7b7
+	.uleb128 0x23
+	.long	0x4a7c9
 	.ascii "_ZN14wxBookCtrlBaseD2Ev\0"
-	.long	0x4a812
+	.long	0x4a824
 	.quad	.LFB11479
 	.quad	.LFE11479-.LFB11479
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a81b
-	.uleb128 0x12
-	.long	0x4a7c8
+	.long	0x4a82d
+	.uleb128 0x13
+	.long	0x4a7da
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80616,18 +80486,18 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x44280
 	.uleb128 0x7
-	.long	0x4a81b
+	.long	0x4a82d
 	.uleb128 0x1c
 	.long	0x44241
-	.long	0x4a845
+	.long	0x4a857
 	.quad	.LFB11473
 	.quad	.LFE11473-.LFB11473
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a852
+	.long	0x4a864
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a821
+	.long	0x4a833
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80636,37 +80506,37 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x44221
 	.uleb128 0x7
-	.long	0x4a852
+	.long	0x4a864
 	.uleb128 0x1c
 	.long	0x43cbf
-	.long	0x4a87c
+	.long	0x4a88e
 	.quad	.LFB11461
 	.quad	.LFE11461-.LFB11461
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a889
+	.long	0x4a89b
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a858
+	.long	0x4a86a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
 	.long	0x43d14
-	.long	0x4a8a8
+	.long	0x4a8ba
 	.quad	.LFB11460
 	.quad	.LFE11460-.LFB11460
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a8d7
+	.long	0x4a8e9
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a7b2
+	.long	0x4a7c4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "page\0"
 	.byte	0x14
 	.word	0x120
@@ -80675,7 +80545,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "show\0"
 	.byte	0x14
 	.word	0x120
@@ -80687,15 +80557,15 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x43d72
-	.long	0x4a8f6
+	.long	0x4a908
 	.quad	.LFB11459
 	.quad	.LFE11459-.LFB11459
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a91e
+	.long	0x4a930
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a7b2
+	.long	0x4a7c4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80706,64 +80576,64 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.sleb128 8
 	.uleb128 0x72
 	.secrel32	.LASF406
-	.long	0x4a92e
+	.long	0x4a940
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZZN14wxBookCtrlBase16MakeChangedEventER15wxBookCtrlEventE12__FUNCTION__
 	.byte	0
 	.uleb128 0x3f
 	.long	0x163
-	.long	0x4a92e
-	.uleb128 0x43
+	.long	0x4a940
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x10
 	.byte	0
 	.uleb128 0x7
-	.long	0x4a91e
+	.long	0x4a930
 	.uleb128 0x4
 	.byte	0x8
 	.long	0x4422c
 	.uleb128 0x15
 	.long	0x43dde
-	.long	0x4a958
+	.long	0x4a96a
 	.quad	.LFB11458
 	.quad	.LFE11458-.LFB11458
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a978
+	.long	0x4a98a
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a858
+	.long	0x4a86a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x72
 	.secrel32	.LASF406
-	.long	0x4a988
+	.long	0x4a99a
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZZNK14wxBookCtrlBase23CreatePageChangingEventEvE12__FUNCTION__
 	.byte	0
 	.uleb128 0x3f
 	.long	0x163
-	.long	0x4a988
-	.uleb128 0x43
+	.long	0x4a99a
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x17
 	.byte	0
 	.uleb128 0x7
-	.long	0x4a978
+	.long	0x4a98a
 	.uleb128 0x15
 	.long	0x43e47
-	.long	0x4a9ac
+	.long	0x4a9be
 	.quad	.LFB11457
 	.quad	.LFE11457-.LFB11457
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4a9d4
+	.long	0x4a9e6
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a7b2
+	.long	0x4a7c4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80774,67 +80644,67 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.sleb128 8
 	.uleb128 0x72
 	.secrel32	.LASF406
-	.long	0x4a6d8
+	.long	0x4a6ea
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZZN14wxBookCtrlBase18UpdateSelectedPageEyE12__FUNCTION__
 	.byte	0
 	.uleb128 0x1c
 	.long	0x43ea6
-	.long	0x4a9f3
+	.long	0x4aa05
 	.quad	.LFB11456
 	.quad	.LFE11456-.LFB11456
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4aa00
+	.long	0x4aa12
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a858
+	.long	0x4a86a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
 	.long	0x43ef3
-	.long	0x4aa1f
+	.long	0x4aa31
 	.quad	.LFB11455
 	.quad	.LFE11455-.LFB11455
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4aa2c
+	.long	0x4aa3e
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a858
+	.long	0x4a86a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
 	.long	0x43f53
-	.long	0x4aa4b
+	.long	0x4aa5d
 	.quad	.LFB11453
 	.quad	.LFE11453-.LFB11453
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4aa58
+	.long	0x4aa6a
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a858
+	.long	0x4a86a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
 	.long	0x43f9f
-	.long	0x4aa77
+	.long	0x4aa89
 	.quad	.LFB11452
 	.quad	.LFE11452-.LFB11452
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4aa94
+	.long	0x4aaa6
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a858
+	.long	0x4a86a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80851,19 +80721,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x43ff7
-	.long	0x4aab3
+	.long	0x4aac5
 	.quad	.LFB11450
 	.quad	.LFE11450-.LFB11450
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ab06
+	.long	0x4ab18
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a7b2
+	.long	0x4a7c4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "page\0"
 	.byte	0x14
 	.byte	0xb4
@@ -80872,7 +80742,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "text\0"
 	.byte	0x14
 	.byte	0xb5
@@ -80881,7 +80751,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "bSelect\0"
 	.byte	0x14
 	.byte	0xb6
@@ -80890,7 +80760,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "imageId\0"
 	.byte	0x14
 	.byte	0xb7
@@ -80902,22 +80772,22 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x44067
-	.long	0x4ab25
+	.long	0x4ab37
 	.quad	.LFB11449
 	.quad	.LFE11449-.LFB11449
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ab7c
+	.long	0x4ab8e
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a7b2
+	.long	0x4a7c4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0xa5
-	.quad	.LBB44
-	.quad	.LBE44-.LBB44
-	.uleb128 0x55
+	.quad	.LBB42
+	.quad	.LBE42-.LBB42
+	.uleb128 0x52
 	.ascii "wxAAcnt\0"
 	.byte	0x14
 	.byte	0xaf
@@ -80927,9 +80797,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x91
 	.sleb128 -32
 	.uleb128 0xa5
-	.quad	.LBB45
-	.quad	.LBE45-.LBB45
-	.uleb128 0x55
+	.quad	.LBB43
+	.quad	.LBE43-.LBB43
+	.uleb128 0x52
 	.ascii "wxAAn\0"
 	.byte	0x14
 	.byte	0xaf
@@ -80943,19 +80813,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x440bc
-	.long	0x4ab9b
+	.long	0x4abad
 	.quad	.LFB11448
 	.quad	.LFE11448-.LFB11448
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4abb5
+	.long	0x4abc7
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a7b2
+	.long	0x4a7c4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "n\0"
 	.byte	0x14
 	.byte	0xa4
@@ -80967,34 +80837,34 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x4410e
-	.long	0x4abd4
+	.long	0x4abe6
 	.quad	.LFB11439
 	.quad	.LFE11439-.LFB11439
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4abe1
+	.long	0x4abf3
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a858
+	.long	0x4a86a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
 	.long	0x44157
-	.long	0x4ac00
+	.long	0x4ac12
 	.quad	.LFB11437
 	.quad	.LFE11437-.LFB11437
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ac1a
+	.long	0x4ac2c
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a858
+	.long	0x4a86a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "n\0"
 	.byte	0x14
 	.byte	0x61
@@ -81006,56 +80876,56 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x441a3
-	.long	0x4ac39
+	.long	0x4ac4b
 	.quad	.LFB11436
 	.quad	.LFE11436-.LFB11436
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ac46
+	.long	0x4ac58
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4a858
+	.long	0x4a86a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
 	.long	0x441f5
-	.long	0x4ac54
+	.long	0x4ac66
 	.byte	0x2
-	.long	0x4ac5e
+	.long	0x4ac70
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4a7b2
+	.long	0x4a7c4
 	.byte	0
-	.uleb128 0x21
-	.long	0x4ac46
+	.uleb128 0x23
+	.long	0x4ac58
 	.ascii "_ZN14wxBookCtrlBaseC2Ev\0"
-	.long	0x4ac95
+	.long	0x4aca7
 	.quad	.LFB11431
 	.quad	.LFE11431-.LFB11431
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ac9e
-	.uleb128 0x12
-	.long	0x4ac54
+	.long	0x4acb0
+	.uleb128 0x13
+	.long	0x4ac66
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x69
 	.secrel32	.LASF407
-	.long	0x4ae4e
+	.long	0x4ae60
 	.uleb128 0x97
 	.ascii "~wxControl\0"
 	.ascii "_ZN9wxControlD4Ev\0"
 	.byte	0x1
-	.long	0x4ac9e
+	.long	0x4acb0
 	.byte	0x1
-	.long	0x4acd4
-	.long	0x4acdf
+	.long	0x4ace6
+	.long	0x4acf1
 	.uleb128 0x2
-	.long	0x4ae53
+	.long	0x4ae65
 	.uleb128 0x2
 	.long	0x238
 	.byte	0
@@ -81070,14 +80940,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xde
-	.long	0x4ac9e
+	.long	0x4acb0
 	.byte	0x1
-	.long	0x4ad26
-	.long	0x4ad31
+	.long	0x4ad38
+	.long	0x4ad43
 	.uleb128 0x2
-	.long	0x4ae53
+	.long	0x4ae65
 	.uleb128 0x1
-	.long	0x4b194
+	.long	0x4b1a6
 	.byte	0
 	.uleb128 0x27
 	.ascii "MSWOnDraw\0"
@@ -81090,14 +80960,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xdd
-	.long	0x4ac9e
+	.long	0x4acb0
 	.byte	0x1
-	.long	0x4ad71
-	.long	0x4ad7c
+	.long	0x4ad83
+	.long	0x4ad8e
 	.uleb128 0x2
-	.long	0x4ae53
+	.long	0x4ae65
 	.uleb128 0x1
-	.long	0x4b1ce
+	.long	0x4b1e0
 	.byte	0
 	.uleb128 0x27
 	.ascii "GetDefaultAttributes\0"
@@ -81110,12 +80980,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x64
-	.long	0x4ac9e
+	.long	0x4acb0
 	.byte	0x1
-	.long	0x4add1
-	.long	0x4add7
+	.long	0x4ade3
+	.long	0x4ade9
 	.uleb128 0x2
-	.long	0x4b208
+	.long	0x4b21a
 	.byte	0
 	.uleb128 0x64
 	.ascii "Command\0"
@@ -81127,12 +80997,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xda
-	.long	0x4ac9e
+	.long	0x4acb0
 	.byte	0x1
-	.long	0x4ae1d
-	.long	0x4ae28
+	.long	0x4ae2f
+	.long	0x4ae3a
 	.uleb128 0x2
-	.long	0x4ae53
+	.long	0x4ae65
 	.uleb128 0x1
 	.long	0x3d70f
 	.byte	0
@@ -81143,72 +81013,72 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x5
 	.ascii "_ZN9wxControlC4Ev\0"
 	.byte	0x1
-	.long	0x4ae47
+	.long	0x4ae59
 	.uleb128 0x2
-	.long	0x4ae53
+	.long	0x4ae65
 	.byte	0
 	.byte	0
 	.uleb128 0x7
-	.long	0x4ac9e
+	.long	0x4acb0
 	.uleb128 0x4
 	.byte	0x8
-	.long	0x4ac9e
+	.long	0x4acb0
 	.uleb128 0x7
-	.long	0x4ae53
+	.long	0x4ae65
 	.uleb128 0x6d
-	.long	0x4aca7
+	.long	0x4acb9
 	.byte	0x12
 	.byte	0x11
 	.byte	0x18
-	.long	0x4ae6f
+	.long	0x4ae81
 	.byte	0x2
-	.long	0x4ae82
+	.long	0x4ae94
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4ae59
+	.long	0x4ae6b
 	.uleb128 0x10
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
 	.uleb128 0x41
-	.long	0x4ae5e
+	.long	0x4ae70
 	.ascii "_ZN9wxControlD0Ev\0"
-	.long	0x4aea1
-	.long	0x4aea7
+	.long	0x4aeb3
+	.long	0x4aeb9
 	.uleb128 0x35
-	.long	0x4ae6f
+	.long	0x4ae81
 	.byte	0
 	.uleb128 0x41
-	.long	0x4ae5e
+	.long	0x4ae70
 	.ascii "_ZN9wxControlD1Ev\0"
-	.long	0x4aec6
-	.long	0x4aecc
+	.long	0x4aed8
+	.long	0x4aede
 	.uleb128 0x35
-	.long	0x4ae6f
+	.long	0x4ae81
 	.byte	0
-	.uleb128 0x21
-	.long	0x4ae5e
+	.uleb128 0x23
+	.long	0x4ae70
 	.ascii "_ZN9wxControlD2Ev\0"
-	.long	0x4aefd
+	.long	0x4af0f
 	.quad	.LFB11428
 	.quad	.LFE11428-.LFB11428
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4af06
-	.uleb128 0x12
-	.long	0x4ae6f
+	.long	0x4af18
+	.uleb128 0x13
+	.long	0x4ae81
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
 	.long	0x432a0
-	.long	0x4af25
+	.long	0x4af37
 	.quad	.LFB11342
 	.quad	.LFE11342-.LFB11342
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4af41
+	.long	0x4af53
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x43c50
@@ -81227,9 +81097,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x20
 	.long	0x43264
-	.long	0x4af4f
+	.long	0x4af61
 	.byte	0x2
-	.long	0x4af62
+	.long	0x4af74
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x43c3f
@@ -81237,53 +81107,53 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4af41
+	.uleb128 0x23
+	.long	0x4af53
 	.ascii "_ZN12wxArrayPagesD1Ev\0"
-	.long	0x4af97
+	.long	0x4afa9
 	.quad	.LFB11341
 	.quad	.LFE11341-.LFB11341
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4afa0
-	.uleb128 0x12
-	.long	0x4af4f
+	.long	0x4afb2
+	.uleb128 0x13
+	.long	0x4af61
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
 	.long	0x43237
-	.long	0x4afae
+	.long	0x4afc0
 	.byte	0x2
-	.long	0x4afb8
+	.long	0x4afca
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x43c3f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4afa0
+	.uleb128 0x23
+	.long	0x4afb2
 	.ascii "_ZN12wxArrayPagesC1Ev\0"
-	.long	0x4afed
+	.long	0x4afff
 	.quad	.LFB11338
 	.quad	.LFE11338-.LFB11338
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4aff6
-	.uleb128 0x12
-	.long	0x4afae
+	.long	0x4b008
+	.uleb128 0x13
+	.long	0x4afc0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
 	.long	0x42a09
-	.long	0x4b015
+	.long	0x4b027
 	.quad	.LFB11335
 	.quad	.LFE11335-.LFB11335
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b022
+	.long	0x4b034
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x47378
@@ -81293,19 +81163,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x42882
-	.long	0x4b041
+	.long	0x4b053
 	.quad	.LFB11327
 	.quad	.LFE11327-.LFB11327
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b063
+	.long	0x4b075
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x47378
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "imageList\0"
 	.byte	0x13
 	.byte	0x29
@@ -81317,9 +81187,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x20
 	.long	0x42840
-	.long	0x4b071
+	.long	0x4b083
 	.byte	0x2
-	.long	0x4b084
+	.long	0x4b096
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x47378
@@ -81327,71 +81197,71 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4b063
+	.uleb128 0x23
+	.long	0x4b075
 	.ascii "_ZN12wxWithImagesD0Ev\0"
-	.long	0x4b0b9
+	.long	0x4b0cb
 	.quad	.LFB11326
 	.quad	.LFE11326-.LFB11326
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b0c2
-	.uleb128 0x12
-	.long	0x4b071
+	.long	0x4b0d4
+	.uleb128 0x13
+	.long	0x4b083
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
-	.long	0x4b063
+	.uleb128 0x23
+	.long	0x4b075
 	.ascii "_ZN12wxWithImagesD1Ev\0"
-	.long	0x4b0f7
+	.long	0x4b109
 	.quad	.LFB11325
 	.quad	.LFE11325-.LFB11325
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b100
-	.uleb128 0x12
-	.long	0x4b071
+	.long	0x4b112
+	.uleb128 0x13
+	.long	0x4b083
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
-	.long	0x4b063
+	.uleb128 0x23
+	.long	0x4b075
 	.ascii "_ZN12wxWithImagesD2Ev\0"
-	.long	0x4b135
+	.long	0x4b147
 	.quad	.LFB11324
 	.quad	.LFE11324-.LFB11324
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b13e
-	.uleb128 0x12
-	.long	0x4b071
+	.long	0x4b150
+	.uleb128 0x13
+	.long	0x4b083
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
 	.long	0x42813
-	.long	0x4b14c
+	.long	0x4b15e
 	.byte	0x2
-	.long	0x4b156
+	.long	0x4b168
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x47378
 	.byte	0
 	.uleb128 0x6e
-	.long	0x4b13e
+	.long	0x4b150
 	.ascii "_ZN12wxWithImagesC2Ev\0"
-	.long	0x4b18b
+	.long	0x4b19d
 	.quad	.LFB11321
 	.quad	.LFE11321-.LFB11321
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b194
-	.uleb128 0x12
-	.long	0x4b14c
+	.long	0x4b1a6
+	.uleb128 0x13
+	.long	0x4b15e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -81400,21 +81270,21 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0xb827
 	.uleb128 0x1c
-	.long	0x4acdf
-	.long	0x4b1b9
+	.long	0x4acf1
+	.long	0x4b1cb
 	.quad	.LFB11279
 	.quad	.LFE11279-.LFB11279
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b1ce
+	.long	0x4b1e0
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4ae59
+	.long	0x4ae6b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x38
-	.long	0x4b194
+	.long	0x4b1a6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -81423,56 +81293,56 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0xb80d
 	.uleb128 0x1c
-	.long	0x4ad31
-	.long	0x4b1f3
+	.long	0x4ad43
+	.long	0x4b205
 	.quad	.LFB11278
 	.quad	.LFE11278-.LFB11278
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b208
+	.long	0x4b21a
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4ae59
+	.long	0x4ae6b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x38
-	.long	0x4b1ce
+	.long	0x4b1e0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x4
 	.byte	0x8
-	.long	0x4ae4e
+	.long	0x4ae60
 	.uleb128 0x7
-	.long	0x4b208
+	.long	0x4b21a
 	.uleb128 0x15
-	.long	0x4ad7c
-	.long	0x4b232
+	.long	0x4ad8e
+	.long	0x4b244
 	.quad	.LFB11277
 	.quad	.LFE11277-.LFB11277
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b23f
+	.long	0x4b251
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4b20e
+	.long	0x4b220
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x15
-	.long	0x4add7
-	.long	0x4b25e
+	.long	0x4ade9
+	.long	0x4b270
 	.quad	.LFB11276
 	.quad	.LFE11276-.LFB11276
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b27a
+	.long	0x4b28c
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4ae59
+	.long	0x4ae6b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -81487,32 +81357,32 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x20
-	.long	0x4ae28
-	.long	0x4b288
+	.long	0x4ae3a
+	.long	0x4b29a
 	.byte	0x2
-	.long	0x4b292
+	.long	0x4b2a4
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4ae59
+	.long	0x4ae6b
 	.byte	0
-	.uleb128 0x21
-	.long	0x4b27a
+	.uleb128 0x23
+	.long	0x4b28c
 	.ascii "_ZN9wxControlC2Ev\0"
-	.long	0x4b2c3
+	.long	0x4b2d5
 	.quad	.LFB11271
 	.quad	.LFE11271-.LFB11271
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b2cc
-	.uleb128 0x12
-	.long	0x4b288
+	.long	0x4b2de
+	.uleb128 0x13
+	.long	0x4b29a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x69
 	.secrel32	.LASF409
-	.long	0x4b4a5
+	.long	0x4b4b7
 	.uleb128 0x27
 	.ascii "ShouldInheritColours\0"
 	.byte	0x11
@@ -81524,12 +81394,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0x92
-	.long	0x4b2cc
+	.long	0x4b2de
 	.byte	0x1
-	.long	0x4b330
-	.long	0x4b336
+	.long	0x4b342
+	.long	0x4b348
 	.uleb128 0x2
-	.long	0x4b4aa
+	.long	0x4b4bc
 	.byte	0
 	.uleb128 0x27
 	.ascii "GetLabelText\0"
@@ -81542,12 +81412,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xd9
-	.long	0x4b2cc
+	.long	0x4b2de
 	.byte	0x1
-	.long	0x4b381
-	.long	0x4b387
+	.long	0x4b393
+	.long	0x4b399
 	.uleb128 0x2
-	.long	0x4b4aa
+	.long	0x4b4bc
 	.byte	0
 	.uleb128 0x64
 	.ascii "SetLabelText\0"
@@ -81559,12 +81429,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xd8
-	.long	0x4b2cc
+	.long	0x4b2de
 	.byte	0x1
-	.long	0x4b3d7
-	.long	0x4b3e2
+	.long	0x4b3e9
+	.long	0x4b3f4
 	.uleb128 0x2
-	.long	0x4b50d
+	.long	0x4b51f
 	.uleb128 0x1
 	.long	0xe4f
 	.byte	0
@@ -81579,12 +81449,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x17
-	.long	0x4b2cc
+	.long	0x4b2de
 	.byte	0x1
-	.long	0x4b423
-	.long	0x4b429
+	.long	0x4b435
+	.long	0x4b43b
 	.uleb128 0x2
-	.long	0x4b4aa
+	.long	0x4b4bc
 	.byte	0
 	.uleb128 0x64
 	.ascii "SetLabel\0"
@@ -81596,12 +81466,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x16
-	.long	0x4b2cc
+	.long	0x4b2de
 	.byte	0x1
-	.long	0x4b46f
-	.long	0x4b47a
+	.long	0x4b481
+	.long	0x4b48c
 	.uleb128 0x2
-	.long	0x4b50d
+	.long	0x4b51f
 	.uleb128 0x1
 	.long	0xe4f
 	.byte	0
@@ -81612,68 +81482,68 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x5
 	.ascii "_ZN13wxControlBaseC4Ev\0"
 	.byte	0x1
-	.long	0x4b49e
+	.long	0x4b4b0
 	.uleb128 0x2
-	.long	0x4b50d
+	.long	0x4b51f
 	.byte	0
 	.byte	0
 	.uleb128 0x7
-	.long	0x4b2cc
+	.long	0x4b2de
 	.uleb128 0x4
 	.byte	0x8
-	.long	0x4b4a5
+	.long	0x4b4b7
 	.uleb128 0x7
-	.long	0x4b4aa
+	.long	0x4b4bc
 	.uleb128 0x1c
-	.long	0x4b2d5
-	.long	0x4b4d4
+	.long	0x4b2e7
+	.long	0x4b4e6
 	.quad	.LFB11267
 	.quad	.LFE11267-.LFB11267
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b4e1
+	.long	0x4b4f3
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4b4b0
+	.long	0x4b4c2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
-	.long	0x4b336
-	.long	0x4b500
+	.long	0x4b348
+	.long	0x4b512
 	.quad	.LFB11265
 	.quad	.LFE11265-.LFB11265
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b50d
+	.long	0x4b51f
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4b4b0
+	.long	0x4b4c2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x4
 	.byte	0x8
-	.long	0x4b2cc
+	.long	0x4b2de
 	.uleb128 0x7
-	.long	0x4b50d
+	.long	0x4b51f
 	.uleb128 0x15
-	.long	0x4b387
-	.long	0x4b537
+	.long	0x4b399
+	.long	0x4b549
 	.quad	.LFB11264
 	.quad	.LFE11264-.LFB11264
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b554
+	.long	0x4b566
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4b513
+	.long	0x4b525
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "text\0"
 	.byte	0x11
 	.byte	0x58
@@ -81684,35 +81554,35 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x15
-	.long	0x4b3e2
-	.long	0x4b573
+	.long	0x4b3f4
+	.long	0x4b585
 	.quad	.LFB11263
 	.quad	.LFE11263-.LFB11263
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b580
+	.long	0x4b592
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4b4b0
+	.long	0x4b4c2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x15
-	.long	0x4b429
-	.long	0x4b59f
+	.long	0x4b43b
+	.long	0x4b5b1
 	.quad	.LFB11262
 	.quad	.LFE11262-.LFB11262
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b5bd
+	.long	0x4b5cf
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4b513
+	.long	0x4b525
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "label\0"
 	.byte	0x11
 	.byte	0x4a
@@ -81723,37 +81593,37 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x20
-	.long	0x4b47a
-	.long	0x4b5cb
+	.long	0x4b48c
+	.long	0x4b5dd
 	.byte	0x2
-	.long	0x4b5d5
+	.long	0x4b5e7
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4b513
+	.long	0x4b525
 	.byte	0
-	.uleb128 0x21
-	.long	0x4b5bd
+	.uleb128 0x23
+	.long	0x4b5cf
 	.ascii "_ZN13wxControlBaseC2Ev\0"
-	.long	0x4b60b
+	.long	0x4b61d
 	.quad	.LFB11259
 	.quad	.LFE11259-.LFB11259
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b614
-	.uleb128 0x12
-	.long	0x4b5cb
+	.long	0x4b626
+	.uleb128 0x13
+	.long	0x4b5dd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
 	.long	0x362ce
-	.long	0x4b633
+	.long	0x4b645
 	.quad	.LFB10522
 	.quad	.LFE10522-.LFB10522
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b640
+	.long	0x4b652
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x362c0
@@ -81763,12 +81633,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x36325
-	.long	0x4b65f
+	.long	0x4b671
 	.quad	.LFB10520
 	.quad	.LFE10520-.LFB10520
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b674
+	.long	0x4b686
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x362c0
@@ -81783,12 +81653,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3637f
-	.long	0x4b693
+	.long	0x4b6a5
 	.quad	.LFB10519
 	.quad	.LFE10519-.LFB10519
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b6a0
+	.long	0x4b6b2
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3db94
@@ -81798,12 +81668,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x363e9
-	.long	0x4b6bf
+	.long	0x4b6d1
 	.quad	.LFB10518
 	.quad	.LFE10518-.LFB10518
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b6cc
+	.long	0x4b6de
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x362c0
@@ -81813,12 +81683,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x36454
-	.long	0x4b6eb
+	.long	0x4b6fd
 	.quad	.LFB10517
 	.quad	.LFE10517-.LFB10517
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b708
+	.long	0x4b71a
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x362c0
@@ -81838,12 +81708,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x364b4
-	.long	0x4b727
+	.long	0x4b739
 	.quad	.LFB10516
 	.quad	.LFE10516-.LFB10516
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b734
+	.long	0x4b746
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x362c0
@@ -81853,12 +81723,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3650d
-	.long	0x4b753
+	.long	0x4b765
 	.quad	.LFB10515
 	.quad	.LFE10515-.LFB10515
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b770
+	.long	0x4b782
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3db94
@@ -81878,12 +81748,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3656d
-	.long	0x4b78f
+	.long	0x4b7a1
 	.quad	.LFB10513
 	.quad	.LFE10513-.LFB10513
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b79c
+	.long	0x4b7ae
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3db94
@@ -81893,12 +81763,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x365b6
-	.long	0x4b7bb
+	.long	0x4b7cd
 	.quad	.LFB10512
 	.quad	.LFE10512-.LFB10512
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b7d0
+	.long	0x4b7e2
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3db94
@@ -81913,12 +81783,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3660d
-	.long	0x4b7ef
+	.long	0x4b801
 	.quad	.LFB10508
 	.quad	.LFE10508-.LFB10508
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b7fc
+	.long	0x4b80e
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3db94
@@ -81928,12 +81798,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x36651
-	.long	0x4b81b
+	.long	0x4b82d
 	.quad	.LFB10506
 	.quad	.LFE10506-.LFB10506
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b828
+	.long	0x4b83a
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3db94
@@ -81943,19 +81813,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x36688
-	.long	0x4b847
+	.long	0x4b859
 	.quad	.LFB10505
 	.quad	.LFE10505-.LFB10505
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b879
+	.long	0x4b88b
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x362c0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "effect\0"
 	.byte	0x10
 	.byte	0x4e
@@ -81964,7 +81834,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "timeout\0"
 	.byte	0x10
 	.byte	0x4f
@@ -81976,19 +81846,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x366ed
-	.long	0x4b898
+	.long	0x4b8aa
 	.quad	.LFB10504
 	.quad	.LFE10504-.LFB10504
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b8ca
+	.long	0x4b8dc
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x362c0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "effect\0"
 	.byte	0x10
 	.byte	0x49
@@ -81997,7 +81867,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "timeout\0"
 	.byte	0x10
 	.byte	0x4a
@@ -82009,36 +81879,36 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x20
 	.long	0x36752
-	.long	0x4b8d8
+	.long	0x4b8ea
 	.byte	0x2
-	.long	0x4b8e2
+	.long	0x4b8f4
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x362c0
 	.byte	0
-	.uleb128 0x21
-	.long	0x4b8ca
+	.uleb128 0x23
+	.long	0x4b8dc
 	.ascii "_ZN8wxWindowC2Ev\0"
-	.long	0x4b912
+	.long	0x4b924
 	.quad	.LFB10499
 	.quad	.LFE10499-.LFB10499
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b91b
-	.uleb128 0x12
-	.long	0x4b8d8
+	.long	0x4b92d
+	.uleb128 0x13
+	.long	0x4b8ea
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
 	.long	0x3dd4e
-	.long	0x4b93a
+	.long	0x4b94c
 	.quad	.LFB10497
 	.quad	.LFE10497-.LFB10497
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b957
+	.long	0x4b969
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82057,12 +81927,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3ddb3
-	.long	0x4b976
+	.long	0x4b988
 	.quad	.LFB10491
 	.quad	.LFE10491-.LFB10491
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b98b
+	.long	0x4b99d
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82077,12 +81947,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3de19
-	.long	0x4b9aa
+	.long	0x4b9bc
 	.quad	.LFB10490
 	.quad	.LFE10490-.LFB10490
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b9bf
+	.long	0x4b9d1
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82097,12 +81967,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3de81
-	.long	0x4b9de
+	.long	0x4b9f0
 	.quad	.LFB10489
 	.quad	.LFE10489-.LFB10489
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4b9eb
+	.long	0x4b9fd
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82112,12 +81982,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3dee0
-	.long	0x4ba0a
+	.long	0x4ba1c
 	.quad	.LFB10484
 	.quad	.LFE10484-.LFB10484
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ba17
+	.long	0x4ba29
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82127,12 +81997,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3df43
-	.long	0x4ba36
+	.long	0x4ba48
 	.quad	.LFB10483
 	.quad	.LFE10483-.LFB10483
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ba43
+	.long	0x4ba55
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82142,12 +82012,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3dfb9
-	.long	0x4ba62
+	.long	0x4ba74
 	.quad	.LFB10481
 	.quad	.LFE10481-.LFB10481
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ba6f
+	.long	0x4ba81
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82157,12 +82027,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e01e
-	.long	0x4ba8e
+	.long	0x4baa0
 	.quad	.LFB10469
 	.quad	.LFE10469-.LFB10469
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ba9b
+	.long	0x4baad
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82172,12 +82042,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e078
-	.long	0x4baba
+	.long	0x4bacc
 	.quad	.LFB10468
 	.quad	.LFE10468-.LFB10468
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bacf
+	.long	0x4bae1
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82194,15 +82064,15 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "wxDropTarget\0"
 	.uleb128 0x4
 	.byte	0x8
-	.long	0x4bacf
+	.long	0x4bae1
 	.uleb128 0x1c
 	.long	0x3e0d1
-	.long	0x4bb02
+	.long	0x4bb14
 	.quad	.LFB10461
 	.quad	.LFE10461-.LFB10461
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bb0f
+	.long	0x4bb21
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82214,15 +82084,15 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.ascii "wxToolTip\0"
 	.uleb128 0x4
 	.byte	0x8
-	.long	0x4bb0f
+	.long	0x4bb21
 	.uleb128 0x1c
 	.long	0x3e123
-	.long	0x4bb3f
+	.long	0x4bb51
 	.quad	.LFB10460
 	.quad	.LFE10460-.LFB10460
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bb4c
+	.long	0x4bb5e
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82232,12 +82102,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e167
-	.long	0x4bb6b
+	.long	0x4bb7d
 	.quad	.LFB10456
 	.quad	.LFE10456-.LFB10456
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bb80
+	.long	0x4bb92
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82252,12 +82122,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e1d0
-	.long	0x4bb9f
+	.long	0x4bbb1
 	.quad	.LFB10455
 	.quad	.LFE10455-.LFB10455
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bbbc
+	.long	0x4bbce
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82277,12 +82147,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e236
-	.long	0x4bbdb
+	.long	0x4bbed
 	.quad	.LFB10432
 	.quad	.LFE10432-.LFB10432
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bbe8
+	.long	0x4bbfa
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82292,12 +82162,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e29d
-	.long	0x4bc07
+	.long	0x4bc19
 	.quad	.LFB10428
 	.quad	.LFE10428-.LFB10428
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bc14
+	.long	0x4bc26
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82307,12 +82177,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e2fd
-	.long	0x4bc33
+	.long	0x4bc45
 	.quad	.LFB10406
 	.quad	.LFE10406-.LFB10406
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bc48
+	.long	0x4bc5a
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82327,12 +82197,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3e34b
-	.long	0x4bc67
+	.long	0x4bc79
 	.quad	.LFB10402
 	.quad	.LFE10402-.LFB10402
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bc74
+	.long	0x4bc86
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82345,24 +82215,24 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x3d8e2
 	.uleb128 0x15
 	.long	0x3e397
-	.long	0x4bc99
+	.long	0x4bcab
 	.quad	.LFB10397
 	.quad	.LFE10397-.LFB10397
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bcb8
+	.long	0x4bcca
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "accel\0"
 	.byte	0xe
 	.word	0x3af
 	.byte	0x41
-	.long	0x4bc74
+	.long	0x4bc86
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -82374,26 +82244,26 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x3d890
 	.uleb128 0x7
-	.long	0x4bcbe
+	.long	0x4bcd0
 	.uleb128 0x106
 	.long	0x3d8a8
 	.byte	0xf
 	.byte	0x14
 	.byte	0x18
-	.long	0x4bcec
+	.long	0x4bcfe
 	.quad	.LFB10398
 	.quad	.LFE10398-.LFB10398
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bd01
+	.long	0x4bd13
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4bcc4
+	.long	0x4bcd6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x38
-	.long	0x4bc74
+	.long	0x4bc86
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -82403,12 +82273,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x3d863
 	.uleb128 0x1c
 	.long	0x3e40a
-	.long	0x4bd26
+	.long	0x4bd38
 	.quad	.LFB10396
 	.quad	.LFE10396-.LFB10396
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bd33
+	.long	0x4bd45
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82418,12 +82288,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e459
-	.long	0x4bd52
+	.long	0x4bd64
 	.quad	.LFB10392
 	.quad	.LFE10392-.LFB10392
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bd67
+	.long	0x4bd79
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82438,12 +82308,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e4c2
-	.long	0x4bd86
+	.long	0x4bd98
 	.quad	.LFB10381
 	.quad	.LFE10381-.LFB10381
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bd9b
+	.long	0x4bdad
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82458,12 +82328,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3e510
-	.long	0x4bdba
+	.long	0x4bdcc
 	.quad	.LFB10377
 	.quad	.LFE10377-.LFB10377
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bdc7
+	.long	0x4bdd9
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82473,36 +82343,36 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x4c
 	.long	0x3e560
-	.long	0x4bdd4
-	.long	0x4bdde
+	.long	0x4bde6
+	.long	0x4bdf0
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x45897
 	.byte	0
 	.uleb128 0x4c
 	.long	0x3e5b3
-	.long	0x4bdeb
-	.long	0x4bdf5
+	.long	0x4bdfd
+	.long	0x4be07
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x45897
 	.byte	0
 	.uleb128 0x4c
 	.long	0x3e605
-	.long	0x4be02
-	.long	0x4be0c
+	.long	0x4be14
+	.long	0x4be1e
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x45897
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e64c
-	.long	0x4be2b
+	.long	0x4be3d
 	.quad	.LFB10372
 	.quad	.LFE10372-.LFB10372
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4be38
+	.long	0x4be4a
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82512,19 +82382,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e6a2
-	.long	0x4be57
+	.long	0x4be69
 	.quad	.LFB10371
 	.quad	.LFE10371-.LFB10371
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4be7c
+	.long	0x4be8e
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "enableTheme\0"
 	.byte	0xe
 	.word	0x2b6
@@ -82536,12 +82406,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3e6f8
-	.long	0x4be9b
+	.long	0x4bead
 	.quad	.LFB10367
 	.quad	.LFE10367-.LFB10367
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bea8
+	.long	0x4beba
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82551,19 +82421,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e744
-	.long	0x4bec7
+	.long	0x4bed9
 	.quad	.LFB10366
 	.quad	.LFE10366-.LFB10366
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bee5
+	.long	0x4bef7
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "flag\0"
 	.byte	0xe
 	.word	0x2a0
@@ -82575,12 +82445,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e786
-	.long	0x4bf04
+	.long	0x4bf16
 	.quad	.LFB10363
 	.quad	.LFE10363-.LFB10363
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bf11
+	.long	0x4bf23
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82590,12 +82460,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e7e2
-	.long	0x4bf30
+	.long	0x4bf42
 	.quad	.LFB10360
 	.quad	.LFE10360-.LFB10360
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bf3d
+	.long	0x4bf4f
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82605,12 +82475,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3e827
-	.long	0x4bf5c
+	.long	0x4bf6e
 	.quad	.LFB10345
 	.quad	.LFE10345-.LFB10345
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bf69
+	.long	0x4bf7b
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82620,12 +82490,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3e889
-	.long	0x4bf88
+	.long	0x4bf9a
 	.quad	.LFB10344
 	.quad	.LFE10344-.LFB10344
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bfb9
+	.long	0x4bfcb
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82653,12 +82523,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3e8e5
-	.long	0x4bfd8
+	.long	0x4bfea
 	.quad	.LFB10335
 	.quad	.LFE10335-.LFB10335
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bfe5
+	.long	0x4bff7
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82668,12 +82538,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3e93d
-	.long	0x4c004
+	.long	0x4c016
 	.quad	.LFB10334
 	.quad	.LFE10334-.LFB10334
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c011
+	.long	0x4c023
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82683,12 +82553,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3e995
-	.long	0x4c030
+	.long	0x4c042
 	.quad	.LFB10333
 	.quad	.LFE10333-.LFB10333
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c03d
+	.long	0x4c04f
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82698,12 +82568,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3e9e1
-	.long	0x4c05c
+	.long	0x4c06e
 	.quad	.LFB10332
 	.quad	.LFE10332-.LFB10332
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c069
+	.long	0x4c07b
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82713,12 +82583,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3ea2d
-	.long	0x4c088
+	.long	0x4c09a
 	.quad	.LFB10331
 	.quad	.LFE10331-.LFB10331
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c0a5
+	.long	0x4c0b7
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82737,12 +82607,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3ea8d
-	.long	0x4c0c4
+	.long	0x4c0d6
 	.quad	.LFB10330
 	.quad	.LFE10330-.LFB10330
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c0e1
+	.long	0x4c0f3
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
@@ -82761,19 +82631,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3eaed
-	.long	0x4c100
+	.long	0x4c112
 	.quad	.LFB10328
 	.quad	.LFE10328-.LFB10328
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c173
+	.long	0x4c185
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "minW\0"
 	.byte	0xe
 	.word	0x1be
@@ -82782,7 +82652,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "minH\0"
 	.byte	0xe
 	.word	0x1be
@@ -82791,7 +82661,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "maxW\0"
 	.byte	0xe
 	.word	0x1bf
@@ -82800,7 +82670,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "maxH\0"
 	.byte	0xe
 	.word	0x1bf
@@ -82809,7 +82679,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 32
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "incW\0"
 	.byte	0xe
 	.word	0x1c0
@@ -82818,7 +82688,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 40
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "incH\0"
 	.byte	0xe
 	.word	0x1c0
@@ -82830,12 +82700,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3eb5b
-	.long	0x4c192
+	.long	0x4c1a4
 	.quad	.LFB10316
 	.quad	.LFE10316-.LFB10316
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c1bb
+	.long	0x4c1cd
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82863,12 +82733,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x3eba5
-	.long	0x4c1da
+	.long	0x4c1ec
 	.quad	.LFB10292
 	.quad	.LFE10292-.LFB10292
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c1e7
+	.long	0x4c1f9
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82878,12 +82748,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3ebf4
-	.long	0x4c206
+	.long	0x4c218
 	.quad	.LFB10291
 	.quad	.LFE10291-.LFB10291
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c213
+	.long	0x4c225
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x45897
@@ -82893,19 +82763,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x3ec38
-	.long	0x4c232
+	.long	0x4c244
 	.quad	.LFB10290
 	.quad	.LFE10290-.LFB10290
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c24f
+	.long	0x4c261
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3ec8f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "name\0"
 	.byte	0xe
 	.byte	0xd7
@@ -82917,12 +82787,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x47726
-	.long	0x4c26e
+	.long	0x4c280
 	.quad	.LFB9991
 	.quad	.LFE9991-.LFB9991
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c2ac
+	.long	0x4c2be
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x4792e
@@ -82959,12 +82829,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x38cc0
-	.long	0x4c2cb
+	.long	0x4c2dd
 	.quad	.LFB9900
 	.quad	.LFE9900-.LFB9900
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c2e8
+	.long	0x4c2fa
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x38e65
@@ -82983,12 +82853,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x38d15
-	.long	0x4c307
+	.long	0x4c319
 	.quad	.LFB9899
 	.quad	.LFE9899-.LFB9899
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c31c
+	.long	0x4c32e
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x38e65
@@ -83003,12 +82873,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x38d71
-	.long	0x4c33b
+	.long	0x4c34d
 	.quad	.LFB9882
 	.quad	.LFE9882-.LFB9882
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c388
+	.long	0x4c39a
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x38e65
@@ -83054,19 +82924,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x38dd9
-	.long	0x4c3a7
+	.long	0x4c3b9
 	.quad	.LFB9880
 	.quad	.LFE9880-.LFB9880
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c419
+	.long	0x4c42b
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x38e65
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "winid\0"
 	.byte	0xd
 	.word	0xda2
@@ -83075,7 +82945,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "lastId\0"
 	.byte	0xd
 	.word	0xda3
@@ -83123,12 +82993,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x38c0d
-	.long	0x4c438
+	.long	0x4c44a
 	.quad	.LFB9875
 	.quad	.LFE9875-.LFB9875
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c455
+	.long	0x4c467
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x38e65
@@ -83147,31 +83017,31 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x20
 	.long	0x3baca
-	.long	0x4c463
+	.long	0x4c475
 	.byte	0x2
-	.long	0x4c4b6
+	.long	0x4c4c8
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x3bbd4
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "evType\0"
 	.byte	0xd
 	.word	0xc93
 	.byte	0x22
 	.long	0x3bbd9
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "winid\0"
 	.byte	0xd
 	.word	0xc93
 	.byte	0x2e
 	.long	0x238
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "idLast\0"
 	.byte	0xd
 	.word	0xc93
 	.byte	0x39
 	.long	0x238
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "fn\0"
 	.byte	0xd
 	.word	0xc94
@@ -83184,51 +83054,51 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x35
 	.long	0x21fb1
 	.byte	0
-	.uleb128 0x21
-	.long	0x4c455
+	.uleb128 0x23
+	.long	0x4c467
 	.ascii "_ZN17wxEventTableEntryC1ERKiiiP14wxEventFunctorP8wxObject\0"
-	.long	0x4c50f
+	.long	0x4c521
 	.quad	.LFB9775
 	.quad	.LFE9775-.LFB9775
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c540
-	.uleb128 0x12
-	.long	0x4c463
+	.long	0x4c552
+	.uleb128 0x13
+	.long	0x4c475
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4c46c
+	.uleb128 0x13
+	.long	0x4c47e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x12
-	.long	0x4c47c
+	.uleb128 0x13
+	.long	0x4c48e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x12
-	.long	0x4c48b
+	.uleb128 0x13
+	.long	0x4c49d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
-	.uleb128 0x12
-	.long	0x4c49b
+	.uleb128 0x13
+	.long	0x4c4ad
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 32
-	.uleb128 0x12
-	.long	0x4c4a7
+	.uleb128 0x13
+	.long	0x4c4b9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 40
 	.byte	0
 	.uleb128 0x20
 	.long	0x3b97a
-	.long	0x4c54e
+	.long	0x4c560
 	.byte	0x2
-	.long	0x4c561
+	.long	0x4c573
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x3ba61
@@ -83236,42 +83106,42 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4c540
+	.uleb128 0x23
+	.long	0x4c552
 	.ascii "_ZN21wxEventTableEntryBaseD2Ev\0"
-	.long	0x4c59f
+	.long	0x4c5b1
 	.quad	.LFB9771
 	.quad	.LFE9771-.LFB9771
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c5a8
-	.uleb128 0x12
-	.long	0x4c54e
+	.long	0x4c5ba
+	.uleb128 0x13
+	.long	0x4c560
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
 	.long	0x3b8d6
-	.long	0x4c5b6
+	.long	0x4c5c8
 	.byte	0x2
-	.long	0x4c60c
+	.long	0x4c61e
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x3ba61
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "winid\0"
 	.byte	0xd
 	.word	0xc62
 	.byte	0x1f
 	.long	0x238
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "idLast\0"
 	.byte	0xd
 	.word	0xc62
 	.byte	0x2a
 	.long	0x238
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "fn\0"
 	.byte	0xd
 	.word	0xc63
@@ -83285,94 +83155,94 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x21fb1
 	.uleb128 0x72
 	.secrel32	.LASF406
-	.long	0x4c61c
+	.long	0x4c62e
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__
 	.byte	0
 	.uleb128 0x3f
 	.long	0x163
-	.long	0x4c61c
-	.uleb128 0x43
+	.long	0x4c62e
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x15
 	.byte	0
 	.uleb128 0x7
-	.long	0x4c60c
-	.uleb128 0x21
-	.long	0x4c5a8
+	.long	0x4c61e
+	.uleb128 0x23
+	.long	0x4c5ba
 	.ascii "_ZN21wxEventTableEntryBaseC2EiiP14wxEventFunctorP8wxObject\0"
-	.long	0x4c67b
+	.long	0x4c68d
 	.quad	.LFB9765
 	.quad	.LFE9765-.LFB9765
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c6b8
-	.uleb128 0x12
-	.long	0x4c5b6
+	.long	0x4c6ca
+	.uleb128 0x13
+	.long	0x4c5c8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4c5bf
+	.uleb128 0x13
+	.long	0x4c5d1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x12
-	.long	0x4c5ce
+	.uleb128 0x13
+	.long	0x4c5e0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x12
-	.long	0x4c5de
+	.uleb128 0x13
+	.long	0x4c5f0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
-	.uleb128 0x12
-	.long	0x4c5ea
+	.uleb128 0x13
+	.long	0x4c5fc
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 32
 	.uleb128 0xc8
 	.uleb128 0x107
-	.quad	.LBB28
-	.quad	.LBE28-.LBB28
+	.quad	.LBB26
+	.quad	.LBE26-.LBB26
 	.byte	0
 	.uleb128 0x4
 	.byte	0x8
 	.long	0x3d80c
 	.uleb128 0x7
-	.long	0x4c6b8
+	.long	0x4c6ca
 	.uleb128 0x15
 	.long	0x3d7c8
-	.long	0x4c6e2
+	.long	0x4c6f4
 	.quad	.LFB9530
 	.quad	.LFE9530-.LFB9530
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c6ef
+	.long	0x4c701
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4c6be
+	.long	0x4c6d0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
 	.long	0x38e7d
-	.long	0x4c70e
+	.long	0x4c720
 	.quad	.LFB9252
 	.quad	.LFE9252-.LFB9252
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c72c
+	.long	0x4c73e
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x3eca0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "skip\0"
 	.byte	0xd
 	.word	0x3cb
@@ -83386,18 +83256,18 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x38ef2
 	.uleb128 0x7
-	.long	0x4c72c
+	.long	0x4c73e
 	.uleb128 0x1c
 	.long	0x38eae
-	.long	0x4c756
+	.long	0x4c768
 	.quad	.LFB9245
 	.quad	.LFE9245-.LFB9245
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c763
+	.long	0x4c775
 	.uleb128 0xf
 	.secrel32	.LASF396
-	.long	0x4c732
+	.long	0x4c744
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -83413,7 +83283,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE9203-.LFB9203
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c7f6
+	.long	0x4c808
 	.uleb128 0x38
 	.long	0x3b499
 	.uleb128 0x2
@@ -83440,12 +83310,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x47838
-	.long	0x4c815
+	.long	0x4c827
 	.quad	.LFB9199
 	.quad	.LFE9199-.LFB9199
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c822
+	.long	0x4c834
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x47945
@@ -83455,12 +83325,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x477e8
-	.long	0x4c841
+	.long	0x4c853
 	.quad	.LFB9198
 	.quad	.LFE9198-.LFB9198
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c84e
+	.long	0x4c860
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x47945
@@ -83470,19 +83340,19 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x47786
-	.long	0x4c86d
+	.long	0x4c87f
 	.quad	.LFB9197
 	.quad	.LFE9197-.LFB9197
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c8b0
+	.long	0x4c8c2
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x47945
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x3c
+	.uleb128 0x3b
 	.ascii "functor\0"
 	.byte	0xd
 	.byte	0xf9
@@ -83492,8 +83362,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0xa5
-	.quad	.LBB27
-	.quad	.LBE27-.LBB27
+	.quad	.LBB25
+	.quad	.LBE25-.LBB25
 	.uleb128 0x108
 	.secrel32	.LASF192
 	.byte	0xd
@@ -83507,9 +83377,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x20
 	.long	0x476c9
-	.long	0x4c8be
+	.long	0x4c8d0
 	.byte	0x2
-	.long	0x4c8e0
+	.long	0x4c8f2
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x4792e
@@ -83526,27 +83396,27 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x46
 	.long	0x38e5f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4c8b0
+	.uleb128 0x23
+	.long	0x4c8c2
 	.ascii "_ZN20wxObjectEventFunctorC1EM12wxEvtHandlerFvR7wxEventEPS0_\0"
-	.long	0x4c93b
+	.long	0x4c94d
 	.quad	.LFB9196
 	.quad	.LFE9196-.LFB9196
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c954
-	.uleb128 0x12
-	.long	0x4c8be
+	.long	0x4c966
+	.uleb128 0x13
+	.long	0x4c8d0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4c8c7
+	.uleb128 0x13
+	.long	0x4c8d9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
-	.uleb128 0x12
-	.long	0x4c8d3
+	.uleb128 0x13
+	.long	0x4c8e5
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -83556,36 +83426,36 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0xd
 	.byte	0xd3
 	.byte	0x18
-	.long	0x4c965
+	.long	0x4c977
 	.byte	0x2
-	.long	0x4c96f
+	.long	0x4c981
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x3ba6c
 	.byte	0
 	.uleb128 0x6e
-	.long	0x4c954
+	.long	0x4c966
 	.ascii "_ZN14wxEventFunctorC2Ev\0"
-	.long	0x4c9a6
+	.long	0x4c9b8
 	.quad	.LFB9193
 	.quad	.LFE9193-.LFB9193
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c9af
-	.uleb128 0x12
-	.long	0x4c965
+	.long	0x4c9c1
+	.uleb128 0x13
+	.long	0x4c977
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
 	.long	0x479ce
-	.long	0x4c9ce
+	.long	0x4c9e0
 	.quad	.LFB9157
 	.quad	.LFE9157-.LFB9157
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ca01
+	.long	0x4ca13
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x47bb7
@@ -83613,12 +83483,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x47b04
-	.long	0x4ca20
+	.long	0x4ca32
 	.quad	.LFB9142
 	.quad	.LFE9142-.LFB9142
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ca2d
+	.long	0x4ca3f
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x47e3c
@@ -83628,12 +83498,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x47b3d
-	.long	0x4ca4c
+	.long	0x4ca5e
 	.quad	.LFB9141
 	.quad	.LFE9141-.LFB9141
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ca59
+	.long	0x4ca6b
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x47e3c
@@ -83643,12 +83513,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1c
 	.long	0x47b76
-	.long	0x4ca78
+	.long	0x4ca8a
 	.quad	.LFB9140
 	.quad	.LFE9140-.LFB9140
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ca85
+	.long	0x4ca97
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x47e3c
@@ -83658,9 +83528,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x20
 	.long	0x388f3
-	.long	0x4ca93
+	.long	0x4caa5
 	.byte	0x2
-	.long	0x4caa6
+	.long	0x4cab8
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x389e7
@@ -83668,120 +83538,120 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4ca85
+	.uleb128 0x23
+	.long	0x4ca97
 	.ascii "_ZN23wxCriticalSectionLockerD1Ev\0"
-	.long	0x4cae6
+	.long	0x4caf8
 	.quad	.LFB9134
 	.quad	.LFE9134-.LFB9134
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4caef
-	.uleb128 0x12
-	.long	0x4ca93
+	.long	0x4cb01
+	.uleb128 0x13
+	.long	0x4caa5
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
 	.long	0x388a2
-	.long	0x4cafd
+	.long	0x4cb0f
 	.byte	0x2
-	.long	0x4cb13
+	.long	0x4cb25
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x389e7
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "cs\0"
 	.byte	0xc
 	.word	0x130
 	.byte	0x30
 	.long	0x3888e
 	.byte	0
-	.uleb128 0x21
-	.long	0x4caef
+	.uleb128 0x23
+	.long	0x4cb01
 	.ascii "_ZN23wxCriticalSectionLockerC1ER17wxCriticalSection\0"
-	.long	0x4cb66
+	.long	0x4cb78
 	.quad	.LFB9131
 	.quad	.LFE9131-.LFB9131
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cb77
-	.uleb128 0x12
-	.long	0x4cafd
+	.long	0x4cb89
+	.uleb128 0x13
+	.long	0x4cb0f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4cb06
+	.uleb128 0x13
+	.long	0x4cb18
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x20
 	.long	0x35133
-	.long	0x4cb85
+	.long	0x4cb97
 	.byte	0x2
-	.long	0x4cb8f
+	.long	0x4cba1
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x3551a
 	.byte	0
-	.uleb128 0x21
-	.long	0x4cb77
+	.uleb128 0x23
+	.long	0x4cb89
 	.ascii "_ZN6wxFontC1Ev\0"
-	.long	0x4cbbd
+	.long	0x4cbcf
 	.quad	.LFB8077
 	.quad	.LFE8077-.LFB8077
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cbc6
-	.uleb128 0x12
-	.long	0x4cb85
+	.long	0x4cbd8
+	.uleb128 0x13
+	.long	0x4cb97
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x69
 	.secrel32	.LASF412
-	.long	0x4cbf5
+	.long	0x4cc07
 	.uleb128 0xc1
 	.secrel32	.LASF412
 	.ascii "_ZN10wxFontBaseC4Ev\0"
 	.byte	0x1
-	.long	0x4cbee
+	.long	0x4cc00
 	.uleb128 0x2
-	.long	0x4cbf5
+	.long	0x4cc07
 	.byte	0
 	.byte	0
 	.uleb128 0x4
 	.byte	0x8
-	.long	0x4cbc6
+	.long	0x4cbd8
 	.uleb128 0x7
-	.long	0x4cbf5
+	.long	0x4cc07
 	.uleb128 0x81
-	.long	0x4cbcf
+	.long	0x4cbe1
 	.byte	0xa
 	.word	0x102
 	.byte	0x18
-	.long	0x4cc13
+	.long	0x4cc25
 	.byte	0x2
-	.long	0x4cc1d
+	.long	0x4cc2f
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4cbfb
+	.long	0x4cc0d
 	.byte	0
-	.uleb128 0x21
-	.long	0x4cc00
+	.uleb128 0x23
+	.long	0x4cc12
 	.ascii "_ZN10wxFontBaseC2Ev\0"
-	.long	0x4cc50
+	.long	0x4cc62
 	.quad	.LFB8074
 	.quad	.LFE8074-.LFB8074
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cc59
-	.uleb128 0x12
-	.long	0x4cc13
+	.long	0x4cc6b
+	.uleb128 0x13
+	.long	0x4cc25
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -83790,73 +83660,73 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x473d2
 	.uleb128 0x7
-	.long	0x4cc59
+	.long	0x4cc6b
 	.uleb128 0x6d
 	.long	0x473db
 	.byte	0x9
 	.byte	0x29
 	.byte	0x18
-	.long	0x4cc75
+	.long	0x4cc87
 	.byte	0x2
-	.long	0x4cc7f
+	.long	0x4cc91
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4cc5f
+	.long	0x4cc71
 	.byte	0
-	.uleb128 0x21
-	.long	0x4cc64
+	.uleb128 0x23
+	.long	0x4cc76
 	.ascii "_ZN11wxGDIObjectC2Ev\0"
-	.long	0x4ccb3
+	.long	0x4ccc5
 	.quad	.LFB8068
 	.quad	.LFE8068-.LFB8068
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ccbc
-	.uleb128 0x12
-	.long	0x4cc75
+	.long	0x4ccce
+	.uleb128 0x13
+	.long	0x4cc87
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
 	.long	0x31bda
-	.long	0x4ccca
+	.long	0x4ccdc
 	.byte	0x2
-	.long	0x4ccd4
+	.long	0x4cce6
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x31f9a
 	.byte	0
 	.uleb128 0x6e
-	.long	0x4ccbc
+	.long	0x4ccce
 	.ascii "_ZN7wxPointC1Ev\0"
-	.long	0x4cd03
+	.long	0x4cd15
 	.quad	.LFB7666
 	.quad	.LFE7666-.LFB7666
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cd0c
-	.uleb128 0x12
-	.long	0x4ccca
+	.long	0x4cd1e
+	.uleb128 0x13
+	.long	0x4ccdc
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
 	.long	0x314ac
-	.long	0x4cd1a
+	.long	0x4cd2c
 	.byte	0x2
-	.long	0x4cd3c
+	.long	0x4cd4e
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x31b9b
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "xx\0"
 	.byte	0x8
 	.word	0x102
 	.byte	0x10
 	.long	0x238
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "yy\0"
 	.byte	0x8
 	.word	0x102
@@ -83864,62 +83734,62 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x238
 	.byte	0
 	.uleb128 0x6e
-	.long	0x4cd0c
+	.long	0x4cd1e
 	.ascii "_ZN6wxSizeC1Eii\0"
-	.long	0x4cd6b
+	.long	0x4cd7d
 	.quad	.LFB7586
 	.quad	.LFE7586-.LFB7586
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cd84
-	.uleb128 0x12
-	.long	0x4cd1a
+	.long	0x4cd96
+	.uleb128 0x13
+	.long	0x4cd2c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4cd23
+	.uleb128 0x13
+	.long	0x4cd35
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x12
-	.long	0x4cd2f
+	.uleb128 0x13
+	.long	0x4cd41
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x20
 	.long	0x31485
-	.long	0x4cd92
+	.long	0x4cda4
 	.byte	0x2
-	.long	0x4cd9c
+	.long	0x4cdae
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x31b9b
 	.byte	0
 	.uleb128 0x6e
-	.long	0x4cd84
+	.long	0x4cd96
 	.ascii "_ZN6wxSizeC1Ev\0"
-	.long	0x4cdca
+	.long	0x4cddc
 	.quad	.LFB7583
 	.quad	.LFE7583-.LFB7583
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cdd3
-	.uleb128 0x12
-	.long	0x4cd92
+	.long	0x4cde5
+	.uleb128 0x13
+	.long	0x4cda4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
 	.long	0x2fa87
-	.long	0x4cdf2
+	.long	0x4ce04
 	.quad	.LFB6493
 	.quad	.LFE6493-.LFB6493
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ce0e
+	.long	0x4ce20
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x2fadd
@@ -83938,12 +83808,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x2fa4a
-	.long	0x4ce2d
+	.long	0x4ce3f
 	.quad	.LFB6492
 	.quad	.LFE6492-.LFB6492
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ce49
+	.long	0x4ce5b
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x2fadd
@@ -83962,13 +83832,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x20
 	.long	0x2fa12
-	.long	0x4ce57
+	.long	0x4ce69
 	.byte	0x2
-	.long	0x4ce73
+	.long	0x4ce85
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x2fadd
-	.uleb128 0x47
+	.uleb128 0x46
 	.ascii "className\0"
 	.byte	0x7
 	.byte	0x42
@@ -83976,30 +83846,30 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xda40
 	.byte	0
 	.uleb128 0x6e
-	.long	0x4ce49
+	.long	0x4ce5b
 	.ascii "_ZN16wxTypeIdentifierC1EPKc\0"
-	.long	0x4ceae
+	.long	0x4cec0
 	.quad	.LFB6491
 	.quad	.LFE6491-.LFB6491
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cebf
-	.uleb128 0x12
-	.long	0x4ce57
+	.long	0x4ced1
+	.uleb128 0x13
+	.long	0x4ce69
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4ce60
+	.uleb128 0x13
+	.long	0x4ce72
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x20
 	.long	0x28d98
-	.long	0x4cecd
+	.long	0x4cedf
 	.byte	0x2
-	.long	0x4cee0
+	.long	0x4cef2
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x296e2
@@ -84007,53 +83877,53 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4cebf
+	.uleb128 0x23
+	.long	0x4ced1
 	.ascii "_ZN11wxArrayLongD1Ev\0"
-	.long	0x4cf14
+	.long	0x4cf26
 	.quad	.LFB5782
 	.quad	.LFE5782-.LFB5782
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cf1d
-	.uleb128 0x12
-	.long	0x4cecd
+	.long	0x4cf2f
+	.uleb128 0x13
+	.long	0x4cedf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x20
 	.long	0x28d6b
-	.long	0x4cf2b
+	.long	0x4cf3d
 	.byte	0x2
-	.long	0x4cf35
+	.long	0x4cf47
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x296e2
 	.byte	0
-	.uleb128 0x21
-	.long	0x4cf1d
+	.uleb128 0x23
+	.long	0x4cf2f
 	.ascii "_ZN11wxArrayLongC1Ev\0"
-	.long	0x4cf69
+	.long	0x4cf7b
 	.quad	.LFB5779
 	.quad	.LFE5779-.LFB5779
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cf72
-	.uleb128 0x12
-	.long	0x4cf2b
+	.long	0x4cf84
+	.uleb128 0x13
+	.long	0x4cf3d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
 	.long	0x278be
-	.long	0x4cf91
+	.long	0x4cfa3
 	.quad	.LFB5356
 	.quad	.LFE5356-.LFB5356
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cf9e
+	.long	0x4cfb0
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x279cd
@@ -84063,12 +83933,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x27809
-	.long	0x4cfbd
+	.long	0x4cfcf
 	.quad	.LFB5353
 	.quad	.LFE5353-.LFB5353
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cfca
+	.long	0x4cfdc
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x279b6
@@ -84078,12 +83948,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x27056
-	.long	0x4cfe9
+	.long	0x4cffb
 	.quad	.LFB5338
 	.quad	.LFE5338-.LFB5338
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d006
+	.long	0x4d018
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x279cd
@@ -84102,12 +83972,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x15
 	.long	0x27015
-	.long	0x4d025
+	.long	0x4d037
 	.quad	.LFB5337
 	.quad	.LFE5337-.LFB5337
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d055
+	.long	0x4d067
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x279cd
@@ -84125,28 +83995,28 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.sleb128 8
 	.uleb128 0x72
 	.secrel32	.LASF406
-	.long	0x4d065
+	.long	0x4d077
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZZNK18wxBaseArrayPtrVoid4ItemEyE12__FUNCTION__
 	.byte	0
 	.uleb128 0x3f
 	.long	0x163
-	.long	0x4d065
-	.uleb128 0x43
+	.long	0x4d077
+	.uleb128 0x42
 	.long	0x19e
 	.byte	0x4
 	.byte	0
 	.uleb128 0x7
-	.long	0x4d055
+	.long	0x4d067
 	.uleb128 0x1c
 	.long	0x26f0f
-	.long	0x4d089
+	.long	0x4d09b
 	.quad	.LFB5334
 	.quad	.LFE5334-.LFB5334
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d096
+	.long	0x4d0a8
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x279cd
@@ -84161,73 +84031,73 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x8
 	.long	0x4762f
 	.uleb128 0x7
-	.long	0x4d09c
+	.long	0x4d0ae
 	.uleb128 0x4
 	.byte	0x8
 	.long	0x22889
 	.uleb128 0x4c
 	.long	0x47404
-	.long	0x4d0ba
-	.long	0x4d0d0
+	.long	0x4d0cc
+	.long	0x4d0e2
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4d0a2
+	.long	0x4d0b4
 	.uleb128 0x3a
 	.secrel32	.LASF25
 	.byte	0x9
 	.byte	0x51
 	.byte	0x42
-	.long	0x4d0a7
+	.long	0x4d0b9
 	.byte	0
 	.uleb128 0x4c
 	.long	0x47466
-	.long	0x4d0dd
-	.long	0x4d0e7
+	.long	0x4d0ef
+	.long	0x4d0f9
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4d0a2
+	.long	0x4d0b4
 	.byte	0
 	.uleb128 0x4c
 	.long	0x474b6
-	.long	0x4d0f4
-	.long	0x4d0fe
+	.long	0x4d106
+	.long	0x4d110
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4d0a2
+	.long	0x4d0b4
 	.byte	0
 	.uleb128 0x4c
 	.long	0x4750e
-	.long	0x4d10b
-	.long	0x4d115
+	.long	0x4d11d
+	.long	0x4d127
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4d0a2
+	.long	0x4d0b4
 	.byte	0
 	.uleb128 0x4c
 	.long	0x4754f
-	.long	0x4d122
-	.long	0x4d131
+	.long	0x4d134
+	.long	0x4d143
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4cc5f
+	.long	0x4cc71
 	.uleb128 0x1
 	.long	0xa8e5
 	.byte	0
 	.uleb128 0x4c
 	.long	0x475a1
-	.long	0x4d13e
-	.long	0x4d148
+	.long	0x4d150
+	.long	0x4d15a
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4cc5f
+	.long	0x4cc71
 	.byte	0
 	.uleb128 0x4c
 	.long	0x475f4
-	.long	0x4d155
-	.long	0x4d15f
+	.long	0x4d167
+	.long	0x4d171
 	.uleb128 0x10
 	.secrel32	.LASF396
-	.long	0x4d0a2
+	.long	0x4d0b4
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
@@ -84237,12 +84107,12 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x21fa6
 	.uleb128 0x15
 	.long	0x21f11
-	.long	0x4d18a
+	.long	0x4d19c
 	.quad	.LFB3813
 	.quad	.LFE3813-.LFB3813
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d1a7
+	.long	0x4d1b9
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x21fb7
@@ -84254,16 +84124,16 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x5
 	.word	0x172
 	.byte	0x29
-	.long	0x4d165
+	.long	0x4d177
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x20
 	.long	0x21f46
-	.long	0x4d1b5
+	.long	0x4d1c7
 	.byte	0x2
-	.long	0x4d1c8
+	.long	0x4d1da
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x21fb7
@@ -84272,53 +84142,53 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x23f
 	.byte	0
 	.uleb128 0x41
-	.long	0x4d1a7
+	.long	0x4d1b9
 	.ascii "_ZN8wxObjectD0Ev\0"
-	.long	0x4d1e6
-	.long	0x4d1ec
+	.long	0x4d1f8
+	.long	0x4d1fe
 	.uleb128 0x35
-	.long	0x4d1b5
+	.long	0x4d1c7
 	.byte	0
 	.uleb128 0x41
-	.long	0x4d1a7
+	.long	0x4d1b9
 	.ascii "_ZN8wxObjectD1Ev\0"
-	.long	0x4d20a
-	.long	0x4d210
+	.long	0x4d21c
+	.long	0x4d222
 	.uleb128 0x35
-	.long	0x4d1b5
+	.long	0x4d1c7
 	.byte	0
 	.uleb128 0x20
 	.long	0x21f80
-	.long	0x4d21e
+	.long	0x4d230
 	.byte	0x2
-	.long	0x4d228
+	.long	0x4d23a
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x21fb7
 	.byte	0
 	.uleb128 0x6e
-	.long	0x4d210
+	.long	0x4d222
 	.ascii "_ZN8wxObjectC2Ev\0"
-	.long	0x4d258
+	.long	0x4d26a
 	.quad	.LFB3804
 	.quad	.LFE3804-.LFB3804
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d261
-	.uleb128 0x12
-	.long	0x4d21e
+	.long	0x4d273
+	.uleb128 0x13
+	.long	0x4d230
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x15
 	.long	0x4c4c
-	.long	0x4d280
+	.long	0x4d292
 	.quad	.LFB2081
 	.quad	.LFE2081-.LFB2081
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d29d
+	.long	0x4d2af
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x21e21
@@ -84337,114 +84207,79 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x20
 	.long	0x2bde
-	.long	0x4d2ab
+	.long	0x4d2bd
 	.byte	0x2
-	.long	0x4d2c2
+	.long	0x4d2d4
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x21e21
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "str\0"
 	.byte	0x4
 	.word	0x525
 	.byte	0x25
 	.long	0x21dd9
 	.byte	0
-	.uleb128 0x21
-	.long	0x4d29d
+	.uleb128 0x23
+	.long	0x4d2af
 	.ascii "_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
-	.long	0x4d327
+	.long	0x4d339
 	.quad	.LFB1997
 	.quad	.LFE1997-.LFB1997
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d338
-	.uleb128 0x12
-	.long	0x4d2ab
+	.long	0x4d34a
+	.uleb128 0x13
+	.long	0x4d2bd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4d2b4
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 8
-	.byte	0
-	.uleb128 0x20
-	.long	0x29ab
-	.long	0x4d346
-	.byte	0x2
-	.long	0x4d35d
-	.uleb128 0x10
-	.secrel32	.LASF396
-	.long	0x21e21
-	.uleb128 0x42
-	.ascii "pwz\0"
-	.byte	0x4
-	.word	0x4f3
-	.byte	0x1b
-	.long	0x98f
-	.byte	0
-	.uleb128 0x21
-	.long	0x4d338
-	.ascii "_ZN8wxStringC1EPKw\0"
-	.long	0x4d38f
-	.quad	.LFB1970
-	.quad	.LFE1970-.LFB1970
-	.uleb128 0x1
-	.byte	0x9c
-	.long	0x4d3a0
-	.uleb128 0x12
-	.long	0x4d346
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 0
-	.uleb128 0x12
-	.long	0x4d34f
+	.uleb128 0x13
+	.long	0x4d2c6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x20
 	.long	0x27d3
-	.long	0x4d3ae
+	.long	0x4d358
 	.byte	0x2
-	.long	0x4d3c5
+	.long	0x4d36f
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x21e21
-	.uleb128 0x42
+	.uleb128 0x47
 	.ascii "psz\0"
 	.byte	0x4
 	.word	0x4d9
 	.byte	0x18
 	.long	0xda40
 	.byte	0
-	.uleb128 0x21
-	.long	0x4d3a0
+	.uleb128 0x23
+	.long	0x4d34a
 	.ascii "_ZN8wxStringC1EPKc\0"
-	.long	0x4d3f7
+	.long	0x4d3a1
 	.quad	.LFB1946
 	.quad	.LFE1946-.LFB1946
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d408
-	.uleb128 0x12
-	.long	0x4d3ae
+	.long	0x4d3b2
+	.uleb128 0x13
+	.long	0x4d358
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4d3b7
+	.uleb128 0x13
+	.long	0x4d361
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x20
 	.long	0x25d6
-	.long	0x4d416
+	.long	0x4d3c0
 	.byte	0x2
-	.long	0x4d42e
+	.long	0x4d3d8
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x21e21
@@ -84455,46 +84290,46 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1c
 	.long	0xe4f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4d408
+	.uleb128 0x23
+	.long	0x4d3b2
 	.ascii "_ZN8wxStringC1ERKS_\0"
-	.long	0x4d461
+	.long	0x4d40b
 	.quad	.LFB1919
 	.quad	.LFE1919-.LFB1919
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d472
-	.uleb128 0x12
-	.long	0x4d416
+	.long	0x4d41c
+	.uleb128 0x13
+	.long	0x4d3c0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x12
-	.long	0x4d41f
+	.uleb128 0x13
+	.long	0x4d3c9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x20
 	.long	0x25ad
-	.long	0x4d480
+	.long	0x4d42a
 	.byte	0x2
-	.long	0x4d48a
+	.long	0x4d434
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x21e21
 	.byte	0
-	.uleb128 0x21
-	.long	0x4d472
+	.uleb128 0x23
+	.long	0x4d41c
 	.ascii "_ZN8wxStringC1Ev\0"
-	.long	0x4d4ba
+	.long	0x4d464
 	.quad	.LFB1916
 	.quad	.LFE1916-.LFB1916
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d4c3
-	.uleb128 0x12
-	.long	0x4d480
+	.long	0x4d46d
+	.uleb128 0x13
+	.long	0x4d42a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -84504,9 +84339,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x4
 	.word	0x189
 	.byte	0x18
-	.long	0x4d4d6
+	.long	0x4d480
 	.byte	0x2
-	.long	0x4d4e9
+	.long	0x4d493
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x21e21
@@ -84514,17 +84349,17 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4d4c3
+	.uleb128 0x23
+	.long	0x4d46d
 	.ascii "_ZN8wxStringD1Ev\0"
-	.long	0x4d519
+	.long	0x4d4c3
 	.quad	.LFB1890
 	.quad	.LFE1890-.LFB1890
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d522
-	.uleb128 0x12
-	.long	0x4d4d6
+	.long	0x4d4cc
+	.uleb128 0x13
+	.long	0x4d480
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -84535,8 +84370,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE1810-.LFB1810
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d560
-	.uleb128 0x3b
+	.long	0x4d50a
+	.uleb128 0x3c
 	.ascii "str\0"
 	.byte	0x4
 	.word	0x1db
@@ -84545,7 +84380,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x3b
+	.uleb128 0x3c
 	.ascii "conv\0"
 	.byte	0x4
 	.word	0x1dc
@@ -84560,9 +84395,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x4
 	.word	0x1a9
 	.byte	0xa
-	.long	0x4d573
+	.long	0x4d51d
 	.byte	0x2
-	.long	0x4d586
+	.long	0x4d530
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0x21e8b
@@ -84570,46 +84405,29 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.secrel32	.LASF400
 	.long	0x23f
 	.byte	0
-	.uleb128 0x21
-	.long	0x4d560
+	.uleb128 0x23
+	.long	0x4d50a
 	.ascii "_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev\0"
-	.long	0x4d5e6
+	.long	0x4d590
 	.quad	.LFB1813
 	.quad	.LFE1813-.LFB1813
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d5ef
-	.uleb128 0x12
-	.long	0x4d573
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 0
-	.byte	0
-	.uleb128 0x99
-	.long	0x2160
-	.quad	.LFB1808
-	.quad	.LFE1808-.LFB1808
-	.uleb128 0x1
-	.byte	0x9c
-	.long	0x4d61c
-	.uleb128 0x3b
-	.ascii "str\0"
-	.byte	0x4
-	.word	0x1d7
-	.byte	0x30
-	.long	0x98f
+	.long	0x4d599
+	.uleb128 0x13
+	.long	0x4d51d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1c
 	.long	0x189e7
-	.long	0x4d63b
+	.long	0x4d5b8
 	.quad	.LFB752
 	.quad	.LFE752-.LFB752
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d648
+	.long	0x4d5c5
 	.uleb128 0xf
 	.secrel32	.LASF396
 	.long	0x1db1f
@@ -84619,8 +84437,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x5c
 	.long	0x1816b
-	.long	0x4d65f
-	.uleb128 0x42
+	.long	0x4d5dc
+	.uleb128 0x47
 	.ascii "__s\0"
 	.byte	0x36
 	.word	0x1a8
@@ -84633,7 +84451,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x240
 	.byte	0x1
 	.ascii "_Z16wxGet_wxConvLibcv\0"
-	.long	0x4d6a2
+	.long	0x4d61f
 	.quad	.LFB344
 	.quad	.LFE344-.LFB344
 	.uleb128 0x1
@@ -84643,9 +84461,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xe50c
 	.uleb128 0x20
 	.long	0xb9a2
-	.long	0x4d6b6
+	.long	0x4d633
 	.byte	0x2
-	.long	0x4d6c9
+	.long	0x4d646
 	.uleb128 0x10
 	.secrel32	.LASF396
 	.long	0xbcaa
@@ -84654,15 +84472,15 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x23f
 	.byte	0
 	.uleb128 0x10a
-	.long	0x4d6a8
+	.long	0x4d625
 	.ascii "_ZN9wxPrivate17UntypedBufferDataD2Ev\0"
-	.long	0x4d70a
+	.long	0x4d687
 	.quad	.LFB156
 	.quad	.LFE156-.LFB156
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x12
-	.long	0x4d6b6
+	.uleb128 0x13
+	.long	0x4d633
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -84938,15 +84756,6 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.byte	0
 	.uleb128 0x12
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x13
 	.uleb128 0x16
 	.byte	0
 	.uleb128 0x3
@@ -84961,6 +84770,15 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.uleb128 0x32
 	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x13
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x14
@@ -85175,6 +84993,40 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.byte	0
 	.uleb128 0x21
+	.uleb128 0x16
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x22
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x38
+	.uleb128 0xb
+	.uleb128 0x32
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x23
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -85193,40 +85045,6 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x22
-	.uleb128 0x16
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x23
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x38
-	.uleb128 0xb
-	.uleb128 0x32
-	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x24
@@ -85678,7 +85496,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
@@ -85695,7 +85513,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
+	.uleb128 0x5
 	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
@@ -85776,21 +85594,6 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.byte	0
 	.uleb128 0x42
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x43
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
@@ -85799,7 +85602,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x43
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -85810,7 +85613,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x44
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -85835,7 +85638,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -85866,7 +85669,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x47
+	.uleb128 0x46
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -85875,6 +85678,21 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xb
 	.uleb128 0x3b
 	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x47
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
 	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
@@ -86068,6 +85886,23 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.byte	0
 	.uleb128 0x52
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x53
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -86084,7 +85919,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -86107,7 +85942,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -86128,23 +85963,6 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x55
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x56
@@ -87413,30 +87231,13 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.byte	0
 	.uleb128 0x99
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x9a
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9b
+	.uleb128 0x9a
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -87451,7 +87252,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9c
+	.uleb128 0x9b
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -87472,7 +87273,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x9d
+	.uleb128 0x9c
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -87495,7 +87296,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x9e
+	.uleb128 0x9d
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -87512,7 +87313,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9f
+	.uleb128 0x9e
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x49
@@ -87521,7 +87322,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0xa0
+	.uleb128 0x9f
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -87550,7 +87351,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa1
+	.uleb128 0xa0
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -87581,7 +87382,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa2
+	.uleb128 0xa1
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -87592,7 +87393,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xd
 	.byte	0
 	.byte	0
-	.uleb128 0xa3
+	.uleb128 0xa2
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -87601,6 +87402,23 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x13
 	.uleb128 0x1c
 	.uleb128 0x5
+	.byte	0
+	.byte	0
+	.uleb128 0xa3
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x47
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0xa4
@@ -89462,7 +89280,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.byte	0
 	.section	.debug_aranges,"dr"
-	.long	0xd5c
+	.long	0xd3c
 	.word	0x2
 	.secrel32	.Ldebug_info0
 	.byte	0x8
@@ -89477,8 +89295,6 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE344-.LFB344
 	.quad	.LFB752
 	.quad	.LFE752-.LFB752
-	.quad	.LFB1808
-	.quad	.LFE1808-.LFB1808
 	.quad	.LFB1813
 	.quad	.LFE1813-.LFB1813
 	.quad	.LFB1810
@@ -89491,8 +89307,6 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE1919-.LFB1919
 	.quad	.LFB1946
 	.quad	.LFE1946-.LFB1946
-	.quad	.LFB1970
-	.quad	.LFE1970-.LFB1970
 	.quad	.LFB1997
 	.quad	.LFE1997-.LFB1997
 	.quad	.LFB2081
@@ -89897,16 +89711,16 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	0
 	.section	.debug_ranges,"dr"
 .Ldebug_ranges0:
-	.quad	.LBB61
-	.quad	.LBE61
-	.quad	.LBB62
-	.quad	.LBE62
+	.quad	.LBB59
+	.quad	.LBE59
+	.quad	.LBB60
+	.quad	.LBE60
 	.quad	0
 	.quad	0
-	.quad	.LBB68
-	.quad	.LBE68
-	.quad	.LBB69
-	.quad	.LBE69
+	.quad	.LBB66
+	.quad	.LBE66
+	.quad	.LBB67
+	.quad	.LBE67
 	.quad	0
 	.quad	0
 	.quad	.Ltext0
@@ -89917,8 +89731,6 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE344
 	.quad	.LFB752
 	.quad	.LFE752
-	.quad	.LFB1808
-	.quad	.LFE1808
 	.quad	.LFB1813
 	.quad	.LFE1813
 	.quad	.LFB1810
@@ -89931,8 +89743,6 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE1919
 	.quad	.LFB1946
 	.quad	.LFE1946
-	.quad	.LFB1970
-	.quad	.LFE1970
 	.quad	.LFB1997
 	.quad	.LFE1997
 	.quad	.LFB2081
@@ -91228,6 +91038,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.def	_ZN12T100FileInfo11GetFileNameB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN13wxAuiNotebook7AddPageEP8wxWindowRK8wxStringbRK8wxBitmap;	.scl	2;	.type	32;	.endef
 	.def	_ZN13wxAuiNotebook14DeleteAllPagesEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN10T100Editor7GetPathB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN14wxTextAreaBase8SaveFileERK8wxStringi;	.scl	2;	.type	32;	.endef
 	.def	__dynamic_cast;	.scl	2;	.type	32;	.endef
 	.def	_ZN19T100ProjectInvoking12OnPageClosedEv;	.scl	2;	.type	32;	.endef
@@ -91470,11 +91281,6 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.linkonce	discard
 .refptr.wxEVT_NAVIGATION_KEY:
 	.quad	wxEVT_NAVIGATION_KEY
-	.section	.rdata$.refptr.wxEmptyString, "dr"
-	.globl	.refptr.wxEmptyString
-	.linkonce	discard
-.refptr.wxEmptyString:
-	.quad	wxEmptyString
 	.section	.rdata$.refptr.wxNullBitmap, "dr"
 	.globl	.refptr.wxNullBitmap
 	.linkonce	discard

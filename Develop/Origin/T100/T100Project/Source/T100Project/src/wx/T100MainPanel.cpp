@@ -51,8 +51,10 @@ T100VOID T100MainPanel::Clear()
 
 T100VOID T100MainPanel::Save()
 {
+    T100BOOL        result      = T100FALSE;
+
     if(m_current){
-        m_current->SaveFile();
+        result  = m_current->SaveFile(m_current->GetPath());
     }
 }
 

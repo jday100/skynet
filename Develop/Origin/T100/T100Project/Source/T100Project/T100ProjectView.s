@@ -5636,23 +5636,42 @@ _ZN15T100ProjectView8FileSaveEv:
 	movq	%rcx, 16(%rbp)	 # this, this
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:183:     if(m_mainPanel){
 	.loc 15 183 8
-	movq	16(%rbp), %rax	 # this, tmp89
-	movq	48(%rax), %rax	 # this_5(D)->D.168309.m_mainPanel, _1
+	movq	16(%rbp), %rax	 # this, tmp95
+	movq	48(%rax), %rax	 # this_11(D)->D.168309.m_mainPanel, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:183:     if(m_mainPanel){
 	.loc 15 183 5
 	testq	%rax, %rax	 # _1
 	je	.L209	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:184:         m_mainPanel->Save();
 	.loc 15 184 9
-	movq	16(%rbp), %rax	 # this, tmp90
-	movq	48(%rax), %rax	 # this_5(D)->D.168309.m_mainPanel, _2
+	movq	16(%rbp), %rax	 # this, tmp96
+	movq	48(%rax), %rax	 # this_11(D)->D.168309.m_mainPanel, _2
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:184:         m_mainPanel->Save();
 	.loc 15 184 26
 	movq	%rax, %rcx	 # _2,
 	call	_ZN13T100MainPanel4SaveEv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:185:         ClearDirty();
+	.loc 15 185 19
+	movq	16(%rbp), %rdx	 # this, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:185:         ClearDirty();
+	.loc 15 185 20
+	movq	16(%rbp), %rax	 # this, tmp97
+	movq	(%rax), %rax	 # this_11(D)->D.168309._vptr.T100ProjectViewBase, _5
+	addq	$24, %rax	 #, _6
+	movq	(%rax), %rax	 # *_6, _7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:185:         ClearDirty();
+	.loc 15 185 19
+	movq	%rdx, %rcx	 # _3,
+	call	*%rax	 # _7
+.LVL17:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186:         SetTitle();
+	.loc 15 186 17
+	movq	16(%rbp), %rax	 # this, _8
+	movq	%rax, %rcx	 # _8,
+	call	_ZN19T100ProjectViewBase8SetTitleEv	 #
 .L209:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186: }
-	.loc 15 186 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:188: }
+	.loc 15 188 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -6517,7 +6536,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB20035:
-	.loc 15 186 1
+	.loc 15 188 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6531,12 +6550,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186: }
-	.loc 15 186 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:188: }
+	.loc 15 188 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
 	jne	.L239	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186: }
-	.loc 15 186 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:188: }
+	.loc 15 188 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
 	jne	.L239	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
@@ -6546,8 +6565,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
 .L239:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186: }
-	.loc 15 186 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:188: }
+	.loc 15 188 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -6561,7 +6580,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_proc	_GLOBAL__sub_I__ZN15T100ProjectViewC2Ev
 _GLOBAL__sub_I__ZN15T100ProjectViewC2Ev:
 .LFB20134:
-	.loc 15 186 1
+	.loc 15 188 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6573,8 +6592,8 @@ _GLOBAL__sub_I__ZN15T100ProjectViewC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:186: }
-	.loc 15 186 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectView.cpp:188: }
+	.loc 15 188 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -71150,7 +71169,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x63
 	.ascii "__initialize_p\0"
 	.byte	0xf
-	.byte	0xba
+	.byte	0xbc
 	.byte	0x1
 	.long	0x22a
 	.uleb128 0x2
@@ -71159,7 +71178,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x63
 	.ascii "__priority\0"
 	.byte	0xf
-	.byte	0xba
+	.byte	0xbc
 	.byte	0x1
 	.long	0x22a
 	.uleb128 0x2
