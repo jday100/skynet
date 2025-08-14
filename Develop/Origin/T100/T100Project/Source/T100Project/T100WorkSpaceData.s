@@ -359,8 +359,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.267573
-	movq	%rax, %rcx	 # D.267573,
+	movq	%rbx, %rax	 # tmp99, D.267648
+	movq	%rax, %rcx	 # D.267648,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1706,7 +1706,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 9 337 27
-	movq	-8(%rbp), %rax	 # D.127637, D.267208
+	movq	-8(%rbp), %rax	 # D.127637, D.267283
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 9 338 5
 	addq	$48, %rsp	 #,
@@ -1937,7 +1937,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 9 481 78
-	movq	-8(%rbp), %rax	 # D.127671, D.267230
+	movq	-8(%rbp), %rax	 # D.127671, D.267305
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 9 481 81
 	addq	$48, %rsp	 #,
@@ -1985,7 +1985,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 9 482 78
-	movq	-8(%rbp), %rax	 # D.127673, D.267227
+	movq	-8(%rbp), %rax	 # D.127673, D.267302
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 9 482 81
 	addq	$48, %rsp	 #,
@@ -2172,7 +2172,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 9 532 77
-	movq	-72(%rbp), %rax	 # D.127715, D.267203
+	movq	-72(%rbp), %rax	 # D.127715, D.267278
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 9 533 5
 	addq	$72, %rsp	 #,
@@ -3427,7 +3427,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 9 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.267118
+	movq	(%rax), %rax	 # wxDefaultSize, D.267193
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 9 1746 72
 	popq	%rbp	 #
@@ -3605,8 +3605,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.267580
-	movq	%rax, %rcx	 # D.267580,
+	movq	%rbx, %rax	 # tmp97, D.267655
+	movq	%rax, %rcx	 # D.267655,
 .LEHB4:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4343,8 +4343,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.267584
-	movq	%rax, %rcx	 # D.267584,
+	movq	%rsi, %rax	 # tmp98, D.267659
+	movq	%rax, %rcx	 # D.267659,
 .LEHB7:
 	call	_Unwind_Resume	 #
 .LEHE7:
@@ -4468,8 +4468,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.267585
-	movq	%rax, %rcx	 # D.267585,
+	movq	%rbx, %rax	 # tmp106, D.267660
+	movq	%rax, %rcx	 # D.267660,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4791,8 +4791,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.267587
-	movq	%rax, %rcx	 # D.267587,
+	movq	%rbx, %rax	 # tmp98, D.267662
+	movq	%rax, %rcx	 # D.267662,
 .LEHB15:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6061,8 +6061,8 @@ _ZN20wxMDIParentFrameBase14OnCreateClientEv:
 	movl	$584, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.267590
-	movq	%rax, %rcx	 # D.267590,
+	movq	%rsi, %rax	 # tmp93, D.267665
+	movq	%rax, %rcx	 # D.267665,
 .LEHB18:
 	call	_Unwind_Resume	 #
 .LEHE18:
@@ -6285,7 +6285,7 @@ _ZN20wxMDIParentFrameBase9TryBeforeER7wxEvent:
 _ZN17T100WorkSpaceDataC2Ev:
 .LFB20260:
 	.file 21 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/data/T100WorkSpaceData.cpp"
-	.loc 21 5 1
+	.loc 21 6 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6299,8 +6299,8 @@ _ZN17T100WorkSpaceDataC2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB32:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:6:     T100TreeItemData()
-	.loc 21 6 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:7:     T100TreeItemData()
+	.loc 21 7 22
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZN16T100TreeItemDataC2Ev	 #
@@ -6308,8 +6308,8 @@ _ZN17T100WorkSpaceDataC2Ev:
 	movq	16(%rbp), %rax	 # this, tmp90
 	movq	%rdx, (%rax)	 # _2, this_5(D)->D.145049.D.145016.D.137335._vptr.wxClientData
 .LBE32:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:9: }
-	.loc 21 9 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:10: }
+	.loc 21 10 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -6328,7 +6328,7 @@ _ZN17T100WorkSpaceDataC2Ev:
 	.seh_proc	_ZN17T100WorkSpaceDataD2Ev
 _ZN17T100WorkSpaceDataD2Ev:
 .LFB20263:
-	.loc 21 11 1
+	.loc 21 12 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6342,8 +6342,8 @@ _ZN17T100WorkSpaceDataD2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB33:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:11: T100WorkSpaceData::~T100WorkSpaceData()
-	.loc 21 11 39
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:12: T100WorkSpaceData::~T100WorkSpaceData()
+	.loc 21 12 39
 	leaq	16+_ZTV17T100WorkSpaceData(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	%rdx, (%rax)	 # _1, this_4(D)->D.145049.D.145016.D.137335._vptr.wxClientData
@@ -6351,8 +6351,8 @@ _ZN17T100WorkSpaceDataD2Ev:
 	movq	%rax, %rcx	 # _2,
 	call	_ZN16T100TreeItemDataD2Ev	 #
 .LBE33:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:14: }
-	.loc 21 14 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:15: }
+	.loc 21 15 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -6371,7 +6371,7 @@ _ZN17T100WorkSpaceDataD2Ev:
 	.seh_proc	_ZN17T100WorkSpaceDataD0Ev
 _ZN17T100WorkSpaceDataD0Ev:
 .LFB20265:
-	.loc 21 11 1
+	.loc 21 12 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6384,8 +6384,8 @@ _ZN17T100WorkSpaceDataD0Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:14: }
-	.loc 21 14 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:15: }
+	.loc 21 15 1
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN17T100WorkSpaceDataD1Ev	 #
 	movl	$24, %edx	 #,
@@ -6414,7 +6414,7 @@ _ZN17T100WorkSpaceDataD0Ev:
 	.seh_proc	_ZN17T100WorkSpaceData8ShowMenuEv
 _ZN17T100WorkSpaceData8ShowMenuEv:
 .LFB20266:
-	.loc 21 17 1
+	.loc 21 18 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6436,8 +6436,8 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 	.cfi_def_cfa 6, 160
 	.seh_endprologue
 	movq	%rcx, 160(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:18:     wxMenu*     menu    = T100NEW wxMenu();
-	.loc 21 18 42
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:19:     wxMenu*     menu    = T100NEW wxMenu();
+	.loc 21 19 42
 	movl	$320, %ecx	 #,
 .LEHB19:
 	call	_Znwy	 #
@@ -6448,11 +6448,11 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 .LEHB20:
 	call	_ZN6wxMenuC1El	 #
 .LEHE20:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:18:     wxMenu*     menu    = T100NEW wxMenu();
-	.loc 21 18 42 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:19:     wxMenu*     menu    = T100NEW wxMenu();
+	.loc 21 19 42 is_stmt 0 discriminator 2
 	movq	%rbx, 120(%rbp)	 # _9, menu
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:19:     wxMenu*     project = T100NEW wxMenu();
-	.loc 21 19 42 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:20:     wxMenu*     project = T100NEW wxMenu();
+	.loc 21 20 42 is_stmt 1 discriminator 2
 	movl	$320, %ecx	 #,
 .LEHB21:
 	call	_Znwy	 #
@@ -6463,11 +6463,11 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 .LEHB22:
 	call	_ZN6wxMenuC1El	 #
 .LEHE22:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:19:     wxMenu*     project = T100NEW wxMenu();
-	.loc 21 19 42 is_stmt 0
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:20:     wxMenu*     project = T100NEW wxMenu();
+	.loc 21 20 42 is_stmt 0
 	movq	%rbx, 112(%rbp)	 # _14, project
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:21:     menu->AppendSubMenu(project, L"Project");
-	.loc 21 21 24 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:22:     menu->AppendSubMenu(project, L"Project");
+	.loc 21 22 24 is_stmt 1
 	movq	120(%rbp), %rbx	 # menu, _1
 	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp101
 	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.0_2
@@ -6482,8 +6482,8 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 .LEHB24:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE24:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:21:     menu->AppendSubMenu(project, L"Project");
-	.loc 21 21 24 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:22:     menu->AppendSubMenu(project, L"Project");
+	.loc 21 22 24 is_stmt 0 discriminator 2
 	leaq	-80(%rbp), %rcx	 #, tmp104
 	leaq	-32(%rbp), %rdx	 #, tmp105
 	movq	112(%rbp), %rax	 # project, tmp106
@@ -6494,16 +6494,16 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 .LEHB25:
 	call	_ZN10wxMenuBase13AppendSubMenuEP6wxMenuRK8wxStringS4_	 #
 .LEHE25:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:21:     menu->AppendSubMenu(project, L"Project");
-	.loc 21 21 24 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:22:     menu->AppendSubMenu(project, L"Project");
+	.loc 21 22 24 discriminator 4
 	leaq	-32(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN8wxStringD1Ev	 #
 	leaq	-80(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:22:     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
-	.loc 21 22 20 is_stmt 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:23:     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
+	.loc 21 23 20 is_stmt 1 discriminator 4
 	movq	112(%rbp), %rbx	 # project, _3
 	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp109
 	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.1_4
@@ -6518,8 +6518,8 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 .LEHB27:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE27:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:22:     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
-	.loc 21 22 20 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:23:     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
+	.loc 21 23 20 is_stmt 0 discriminator 2
 	leaq	16(%rbp), %rdx	 #, tmp112
 	leaq	64(%rbp), %rax	 #, tmp113
 	movl	$0, 32(%rsp)	 #,
@@ -6530,43 +6530,43 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 .LEHB28:
 	call	_ZN10wxMenuBase6AppendEiRK8wxStringS2_10wxItemKind	 #
 .LEHE28:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:22:     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
-	.loc 21 22 20 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:23:     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
+	.loc 21 23 20 discriminator 4
 	leaq	64(%rbp), %rax	 #, tmp114
 	movq	%rax, %rcx	 # tmp114,
 	call	_ZN8wxStringD1Ev	 #
 	leaq	16(%rbp), %rax	 #, tmp115
 	movq	%rax, %rcx	 # tmp115,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:24:     return menu;
-	.loc 21 24 12 is_stmt 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:25:     return menu;
+	.loc 21 25 12 is_stmt 1 discriminator 4
 	movq	120(%rbp), %rax	 # menu, _32
 	jmp	.L298	 #
 .L292:
 	movq	%rax, %rsi	 #, tmp117
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:18:     wxMenu*     menu    = T100NEW wxMenu();
-	.loc 21 18 42
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:19:     wxMenu*     menu    = T100NEW wxMenu();
+	.loc 21 19 42
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp117, D.267593
-	movq	%rax, %rcx	 # D.267593,
+	movq	%rsi, %rax	 # tmp117, D.267668
+	movq	%rax, %rcx	 # D.267668,
 .LEHB29:
 	call	_Unwind_Resume	 #
 .L293:
 	movq	%rax, %rsi	 #, tmp118
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:19:     wxMenu*     project = T100NEW wxMenu();
-	.loc 21 19 42
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:20:     wxMenu*     project = T100NEW wxMenu();
+	.loc 21 20 42
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _14,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp118, D.267594
-	movq	%rax, %rcx	 # D.267594,
+	movq	%rsi, %rax	 # tmp118, D.267669
+	movq	%rax, %rcx	 # D.267669,
 	call	_Unwind_Resume	 #
 .L295:
 	movq	%rax, %rbx	 #, tmp121
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:21:     menu->AppendSubMenu(project, L"Project");
-	.loc 21 21 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:22:     menu->AppendSubMenu(project, L"Project");
+	.loc 21 22 24
 	leaq	-32(%rbp), %rax	 #, tmp119
 	movq	%rax, %rcx	 # tmp119,
 	call	_ZN8wxStringD1Ev	 #
@@ -6574,18 +6574,18 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 .L294:
 	movq	%rax, %rbx	 #, tmp120
 .L289:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:21:     menu->AppendSubMenu(project, L"Project");
-	.loc 21 21 24 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:22:     menu->AppendSubMenu(project, L"Project");
+	.loc 21 22 24 is_stmt 0 discriminator 1
 	leaq	-80(%rbp), %rax	 #, tmp124
 	movq	%rax, %rcx	 # tmp124,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp120, D.267595
-	movq	%rax, %rcx	 # D.267595,
+	movq	%rbx, %rax	 # tmp120, D.267670
+	movq	%rax, %rcx	 # D.267670,
 	call	_Unwind_Resume	 #
 .L297:
 	movq	%rax, %rbx	 #, tmp127
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:22:     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
-	.loc 21 22 20 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:23:     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
+	.loc 21 23 20 is_stmt 1
 	leaq	64(%rbp), %rax	 #, tmp125
 	movq	%rax, %rcx	 # tmp125,
 	call	_ZN8wxStringD1Ev	 #
@@ -6593,18 +6593,18 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 .L296:
 	movq	%rax, %rbx	 #, tmp126
 .L291:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:22:     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
-	.loc 21 22 20 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:23:     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
+	.loc 21 23 20 is_stmt 0 discriminator 1
 	leaq	16(%rbp), %rax	 #, tmp130
 	movq	%rax, %rcx	 # tmp130,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp126, D.267596
-	movq	%rax, %rcx	 # D.267596,
+	movq	%rbx, %rax	 # tmp126, D.267671
+	movq	%rax, %rcx	 # D.267671,
 	call	_Unwind_Resume	 #
 .LEHE29:
 .L298:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:25: }
-	.loc 21 25 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:26: }
+	.loc 21 26 1 is_stmt 1
 	addq	$256, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -6677,7 +6677,7 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 	.seh_proc	_ZN17T100WorkSpaceData13OnItemChangedEv
 _ZN17T100WorkSpaceData13OnItemChangedEv:
 .LFB20267:
-	.loc 21 28 1
+	.loc 21 29 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6686,11 +6686,17 @@ _ZN17T100WorkSpaceData13OnItemChangedEv:
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
+	subq	$32, %rsp	 #,
+	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:30: }
-	.loc 21 30 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:30:     T100ProjectInvoking::OnWorkSpaceSelected();
+	.loc 21 30 45
+	call	_ZN19T100ProjectInvoking19OnWorkSpaceSelectedEv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:31: }
+	.loc 21 31 1
 	nop	
+	addq	$32, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -6704,7 +6710,7 @@ _ZN17T100WorkSpaceData13OnItemChangedEv:
 	.seh_proc	_ZN17T100WorkSpaceData15OnItemActivatedEv
 _ZN17T100WorkSpaceData15OnItemActivatedEv:
 .LFB20268:
-	.loc 21 33 1
+	.loc 21 34 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6715,8 +6721,8 @@ _ZN17T100WorkSpaceData15OnItemActivatedEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:35: }
-	.loc 21 35 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:36: }
+	.loc 21 36 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -6731,7 +6737,7 @@ _ZN17T100WorkSpaceData15OnItemActivatedEv:
 	.seh_proc	_ZN17T100WorkSpaceData15OnItemExpandingEv
 _ZN17T100WorkSpaceData15OnItemExpandingEv:
 .LFB20269:
-	.loc 21 38 1
+	.loc 21 39 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6742,8 +6748,8 @@ _ZN17T100WorkSpaceData15OnItemExpandingEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:40: }
-	.loc 21 40 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:41: }
+	.loc 21 41 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -8173,7 +8179,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB21498:
-	.loc 21 40 1
+	.loc 21 41 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8187,12 +8193,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:40: }
-	.loc 21 40 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:41: }
+	.loc 21 41 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
 	jne	.L321	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:40: }
-	.loc 21 40 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:41: }
+	.loc 21 41 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
 	jne	.L321	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
@@ -8202,8 +8208,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
 .L321:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:40: }
-	.loc 21 40 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:41: }
+	.loc 21 41 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -8234,7 +8240,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev
 _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 .LFB21609:
-	.loc 21 40 1
+	.loc 21 41 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8246,8 +8252,8 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:40: }
-	.loc 21 40 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:41: }
+	.loc 21 41 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -69136,7 +69142,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0xc
 	.secrel32	.LASF352
 	.byte	0x15
-	.byte	0x5
+	.byte	0x6
 	.byte	0x1
 	.ascii "_ZN17T100WorkSpaceDataC4Ev\0"
 	.byte	0x1
@@ -69148,7 +69154,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x77
 	.ascii "~T100WorkSpaceData\0"
 	.byte	0x15
-	.byte	0xb
+	.byte	0xc
 	.byte	0x1
 	.ascii "_ZN17T100WorkSpaceDataD4Ev\0"
 	.byte	0x1
@@ -69164,7 +69170,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x2e
 	.ascii "ShowMenu\0"
 	.byte	0x15
-	.byte	0x10
+	.byte	0x11
 	.byte	0x9
 	.ascii "_ZN17T100WorkSpaceData8ShowMenuEv\0"
 	.long	0x39772
@@ -69182,7 +69188,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x43
 	.ascii "OnItemChanged\0"
 	.byte	0x15
-	.byte	0x1b
+	.byte	0x1c
 	.byte	0xa
 	.ascii "_ZN17T100WorkSpaceData13OnItemChangedEv\0"
 	.byte	0x1
@@ -69199,7 +69205,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x43
 	.ascii "OnItemActivated\0"
 	.byte	0x15
-	.byte	0x20
+	.byte	0x21
 	.byte	0xa
 	.ascii "_ZN17T100WorkSpaceData15OnItemActivatedEv\0"
 	.byte	0x1
@@ -69216,7 +69222,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0xbe
 	.ascii "OnItemExpanding\0"
 	.byte	0x15
-	.byte	0x25
+	.byte	0x26
 	.byte	0xa
 	.ascii "_ZN17T100WorkSpaceData15OnItemExpandingEv\0"
 	.byte	0x1
@@ -70883,7 +70889,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x32
 	.ascii "__initialize_p\0"
 	.byte	0x15
-	.byte	0x28
+	.byte	0x29
 	.byte	0x1
 	.long	0xecc1
 	.uleb128 0x2
@@ -70892,7 +70898,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x32
 	.ascii "__priority\0"
 	.byte	0x15
-	.byte	0x28
+	.byte	0x29
 	.byte	0x1
 	.long	0xecc1
 	.uleb128 0x2
@@ -70929,7 +70935,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x45a96
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x45a3d
 	.uleb128 0x2
 	.byte	0x91
@@ -70944,7 +70950,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x45adc
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x45a3d
 	.uleb128 0x2
 	.byte	0x91
@@ -70974,7 +70980,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x45b47
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x45aee
 	.uleb128 0x2
 	.byte	0x91
@@ -70989,7 +70995,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x45b8d
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x45aee
 	.uleb128 0x2
 	.byte	0x91
@@ -71019,7 +71025,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x45bf2
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x45b9f
 	.uleb128 0x2
 	.byte	0x91
@@ -71034,7 +71040,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x45c32
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x45b9f
 	.uleb128 0x2
 	.byte	0x91
@@ -71656,7 +71662,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4642f
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x463d7
 	.uleb128 0x2
 	.byte	0x91
@@ -71700,7 +71706,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x46502
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x464a2
 	.uleb128 0x2
 	.byte	0x91
@@ -71816,7 +71822,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x16
+	.uleb128 0x20
 	.long	0x43bc3
 	.long	0x466e0
 	.quad	.LFB20267
@@ -71831,7 +71837,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x43b79
 	.long	0x4670c
 	.quad	.LFB20266
@@ -71848,7 +71854,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x30
 	.ascii "menu\0"
 	.byte	0x15
-	.byte	0x12
+	.byte	0x13
 	.byte	0x11
 	.long	0x39772
 	.uleb128 0x2
@@ -71857,7 +71863,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x30
 	.ascii "project\0"
 	.byte	0x15
-	.byte	0x13
+	.byte	0x14
 	.byte	0x11
 	.long	0x39772
 	.uleb128 0x2
@@ -71885,7 +71891,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x467a0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x4674a
 	.uleb128 0x2
 	.byte	0x91
@@ -71900,7 +71906,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x467e3
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x4674a
 	.uleb128 0x2
 	.byte	0x91
@@ -71924,13 +71930,13 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4683e
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x467f1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x441c8
 	.long	0x4685d
 	.quad	.LFB20258
@@ -71980,7 +71986,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x4416c
 	.long	0x468e2
 	.quad	.LFB20257
@@ -72028,7 +72034,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x46976
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x46929
 	.uleb128 0x2
 	.byte	0x91
@@ -72055,7 +72061,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x469da
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x46989
 	.uleb128 0x2
 	.byte	0x91
@@ -72111,7 +72117,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x43f6d
 	.long	0x46a85
 	.quad	.LFB20189
@@ -72217,7 +72223,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x1a511
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x4431f
 	.long	0x46b9e
 	.quad	.LFB17884
@@ -72362,7 +72368,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.long	0x46d57
 	.uleb128 0x8
 	.long	0x46d93
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x46c1b
 	.long	0x46dbd
 	.quad	.LFB17870
@@ -72697,7 +72703,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.long	0x4731f
 	.uleb128 0x8
 	.long	0x47324
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x46fcc
 	.long	0x4734e
 	.quad	.LFB17799
@@ -72794,7 +72800,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x4716c
 	.long	0x47442
 	.quad	.LFB17792
@@ -72854,7 +72860,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x472d3
 	.long	0x474f2
 	.quad	.LFB17782
@@ -72938,12 +72944,12 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x475d4
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x4757d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47586
 	.uleb128 0x2
 	.byte	0x91
@@ -72970,7 +72976,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x47639
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x475e2
 	.uleb128 0x2
 	.byte	0x91
@@ -72994,7 +73000,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x47695
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47647
 	.uleb128 0x2
 	.byte	0x91
@@ -73062,7 +73068,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.long	0x47695
 	.uleb128 0x8
 	.long	0x47798
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x4769f
 	.long	0x477c2
 	.quad	.LFB11121
@@ -73104,7 +73110,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 24
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x47709
 	.long	0x47821
 	.quad	.LFB11117
@@ -73179,18 +73185,18 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x478da
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x4787e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47887
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x3ab91
 	.long	0x478f9
 	.quad	.LFB11013
@@ -73241,7 +73247,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 32
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x3aa20
 	.long	0x47964
 	.quad	.LFB11008
@@ -73289,12 +73295,12 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x479f9
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x4798e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47997
 	.uleb128 0x2
 	.byte	0x91
@@ -73353,32 +73359,32 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x47af8
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47a12
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47a1b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47a28
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47a39
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47a46
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 32
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47a52
 	.uleb128 0x2
 	.byte	0x91
@@ -73444,7 +73450,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x2acc0
 	.long	0x47bb3
 	.quad	.LFB10417
@@ -73539,7 +73545,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 16
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x2aeae
 	.long	0x47caf
 	.quad	.LFB10411
@@ -73574,7 +73580,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x2af4e
 	.long	0x47d0f
 	.quad	.LFB10406
@@ -73604,7 +73610,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x2afc9
 	.long	0x47d67
 	.quad	.LFB10403
@@ -73637,7 +73643,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 16
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x2b02e
 	.long	0x47db8
 	.quad	.LFB10402
@@ -73688,13 +73694,13 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x47e3b
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x47df8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x38394
 	.long	0x47e5a
 	.quad	.LFB10395
@@ -74008,7 +74014,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x38a39
 	.long	0x481c6
 	.quad	.LFB10312
@@ -74043,7 +74049,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x38ae7
 	.long	0x48226
 	.quad	.LFB10300
@@ -74061,7 +74067,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x9
 	.byte	0x8
 	.long	0x37fb3
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x38b33
 	.long	0x48258
 	.quad	.LFB10295
@@ -74134,7 +74140,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x38bf5
 	.long	0x48311
 	.quad	.LFB10293
@@ -74213,7 +74219,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x38d5a
 	.long	0x483e1
 	.quad	.LFB10275
@@ -74228,7 +74234,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x38daa
 	.long	0x4840d
 	.quad	.LFB10274
@@ -74243,7 +74249,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x38e12
 	.long	0x48439
 	.quad	.LFB10273
@@ -74312,7 +74318,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x38f74
 	.long	0x48501
 	.quad	.LFB10265
@@ -74396,7 +74402,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x39105
 	.long	0x485ee
 	.quad	.LFB10242
@@ -74429,7 +74435,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 -56
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x39161
 	.long	0x4863e
 	.quad	.LFB10233
@@ -74444,7 +74450,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x391b9
 	.long	0x4866a
 	.quad	.LFB10232
@@ -74459,7 +74465,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x39211
 	.long	0x48696
 	.quad	.LFB10231
@@ -74474,7 +74480,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x3925d
 	.long	0x486c2
 	.quad	.LFB10230
@@ -74489,7 +74495,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x392a9
 	.long	0x486ee
 	.quad	.LFB10229
@@ -74513,7 +74519,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x39309
 	.long	0x4872a
 	.quad	.LFB10228
@@ -74537,7 +74543,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x39369
 	.long	0x48766
 	.quad	.LFB10226
@@ -74606,7 +74612,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 48
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x393d7
 	.long	0x487f8
 	.quad	.LFB10214
@@ -74654,7 +74660,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x39470
 	.long	0x4886c
 	.quad	.LFB10189
@@ -74669,7 +74675,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x394b4
 	.long	0x48898
 	.quad	.LFB10188
@@ -74693,7 +74699,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x44e4c
 	.long	0x488d4
 	.quad	.LFB9738
@@ -74735,7 +74741,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 -24
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x348ef
 	.long	0x4893c
 	.quad	.LFB9647
@@ -74779,7 +74785,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x3483c
 	.long	0x489ac
 	.quad	.LFB9622
@@ -74868,7 +74874,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x44eac
 	.long	0x48aa3
 	.quad	.LFB8938
@@ -74905,7 +74911,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.sleb128 -24
 	.byte	0
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x2e426
 	.long	0x48b05
 	.quad	.LFB7907
@@ -74953,18 +74959,18 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48b99
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48b30
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48b39
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x45142
 	.long	0x48bb8
 	.quad	.LFB7875
@@ -75063,7 +75069,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48cd9
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48c7d
 	.uleb128 0x2
 	.byte	0x91
@@ -75093,12 +75099,12 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48d61
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48ce7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48cf0
 	.uleb128 0x2
 	.byte	0x91
@@ -75122,7 +75128,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48db2
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48d6f
 	.uleb128 0x2
 	.byte	0x91
@@ -75158,17 +75164,17 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48e2b
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48dc0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48dc9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48dd5
 	.uleb128 0x2
 	.byte	0x91
@@ -75192,7 +75198,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48e7b
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48e39
 	.uleb128 0x2
 	.byte	0x91
@@ -75222,12 +75228,12 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48ef1
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48e89
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48e92
 	.uleb128 0x2
 	.byte	0x91
@@ -75239,7 +75245,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x9
 	.byte	0x8
 	.long	0x21e0f
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x21ddd
 	.long	0x48f1c
 	.quad	.LFB4096
@@ -75263,7 +75269,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x21
+	.uleb128 0x20
 	.long	0x138ee
 	.long	0x48f58
 	.quad	.LFB2364
@@ -75311,12 +75317,12 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x48fdd
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48f83
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48f8c
 	.uleb128 0x2
 	.byte	0x91
@@ -75346,12 +75352,12 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x49047
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48feb
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x48ff4
 	.uleb128 0x2
 	.byte	0x91
@@ -75375,7 +75381,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x49098
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x49055
 	.uleb128 0x2
 	.byte	0x91
@@ -75405,7 +75411,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x490f7
-	.uleb128 0x20
+	.uleb128 0x21
 	.long	0x490ab
 	.uleb128 0x2
 	.byte	0x91
@@ -75963,15 +75969,6 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0
 	.byte	0
 	.uleb128 0x20
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x31
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x21
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -75988,6 +75985,15 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x21
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x31
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x22
@@ -81459,6 +81465,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.def	_ZN12wxWindowBase9TryBeforeER7wxEvent;	.scl	2;	.type	32;	.endef
 	.def	_ZN16T100TreeItemDataC2Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN16T100TreeItemDataD2Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN19T100ProjectInvoking19OnWorkSpaceSelectedEv;	.scl	2;	.type	32;	.endef
 	.def	free;	.scl	2;	.type	32;	.endef
 	.def	_ZNK7wxFrame12GetClassInfoEv;	.scl	2;	.type	32;	.endef
 	.def	_ZNK8wxObject13CreateRefDataEv;	.scl	2;	.type	32;	.endef

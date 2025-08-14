@@ -54,6 +54,7 @@ class T100ProjectInvoking
         static T100VOID                     OnProjectOpen(T100ProjectData*);
 
         static T100VOID                     OnProjectSelected();
+        static T100VOID                     OnWorkSpaceSelected();
 
         static T100VOID                     OnPageClosed();
 

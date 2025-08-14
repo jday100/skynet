@@ -52,6 +52,11 @@ T100VOID T100ProjectView::WorkSpaceSave()
 
 }
 
+T100VOID T100ProjectView::WorkSpaceSelected()
+{
+    m_mainMenu->WorkSpaceSelected();
+}
+
 T100VOID T100ProjectView::ProjectOpen(T100ProjectInfo* info)
 {
     m_projectTree->ProjectOpen(info);

@@ -316,8 +316,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.273303
-	movq	%rax, %rcx	 # D.273303,
+	movq	%rbx, %rax	 # tmp99, D.273306
+	movq	%rax, %rcx	 # D.273306,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1087,8 +1087,8 @@ _ZN11wxImageListC1Eiibi:
 	movq	-48(%rbp), %rax	 # this, _4
 	movq	%rax, %rcx	 # _4,
 	call	_ZN8wxObjectD2Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.273305
-	movq	%rax, %rcx	 # D.273305,
+	movq	%rbx, %rax	 # tmp99, D.273308
+	movq	%rax, %rcx	 # D.273308,
 .LEHB3:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2361,7 +2361,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 11 337 27
-	movq	-8(%rbp), %rax	 # D.126296, D.272632
+	movq	-8(%rbp), %rax	 # D.126296, D.272635
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 11 338 5
 	addq	$48, %rsp	 #,
@@ -2592,7 +2592,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 11 481 78
-	movq	-8(%rbp), %rax	 # D.126330, D.272654
+	movq	-8(%rbp), %rax	 # D.126330, D.272657
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 11 481 81
 	addq	$48, %rsp	 #,
@@ -2640,7 +2640,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 11 482 78
-	movq	-8(%rbp), %rax	 # D.126332, D.272651
+	movq	-8(%rbp), %rax	 # D.126332, D.272654
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 11 482 81
 	addq	$48, %rsp	 #,
@@ -2827,7 +2827,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 11 532 77
-	movq	-72(%rbp), %rax	 # D.126374, D.272627
+	movq	-72(%rbp), %rax	 # D.126374, D.272630
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 11 533 5
 	addq	$72, %rsp	 #,
@@ -4131,7 +4131,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 11 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.272546
+	movq	(%rax), %rax	 # wxDefaultSize, D.272549
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 11 1746 72
 	popq	%rbp	 #
@@ -4309,8 +4309,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.273318
-	movq	%rax, %rcx	 # D.273318,
+	movq	%rbx, %rax	 # tmp97, D.273321
+	movq	%rax, %rcx	 # D.273321,
 .LEHB6:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5000,8 +5000,8 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	leaq	-96(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.273322
-	movq	%rax, %rcx	 # D.273322,
+	movq	%rbx, %rax	 # tmp97, D.273325
+	movq	%rax, %rcx	 # D.273325,
 .LEHB9:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5108,8 +5108,8 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.273324
-	movq	%rax, %rcx	 # D.273324,
+	movq	%rbx, %rax	 # tmp98, D.273327
+	movq	%rax, %rcx	 # D.273327,
 .LEHB12:
 	call	_Unwind_Resume	 #
 .LEHE12:
@@ -5579,8 +5579,8 @@ _ZN14wxTreeCtrlBase14OnCompareItemsERK12wxTreeItemIdS2_:
 	leaq	-96(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp108, D.273328
-	movq	%rax, %rcx	 # D.273328,
+	movq	%rbx, %rax	 # tmp108, D.273331
+	movq	%rax, %rcx	 # D.273331,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .LEHE16:
@@ -6019,8 +6019,8 @@ _ZN10wxTreeCtrlC2EP8wxWindowiRK7wxPointRK6wxSizelRK11wxValidatorRK8wxString:
 	leaq	-49(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN13wxPointerHashC1Ev	 #
-	movl	%edi, %r9d	 # D.272157,
-	movl	%esi, %r8d	 # D.272158,
+	movl	%edi, %r9d	 # D.272158,
+	movl	%esi, %r8d	 # D.272159,
 	movl	$100, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 .LEHB18:
@@ -6086,8 +6086,8 @@ _ZN10wxTreeCtrlC2EP8wxWindowiRK7wxPointRK6wxSizelRK11wxValidatorRK8wxString:
 	movq	0(%rbp), %rax	 # this, _10
 	movq	%rax, %rcx	 # _10,
 	call	_ZN14wxTreeCtrlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp118, D.273331
-	movq	%rax, %rcx	 # D.273331,
+	movq	%rbx, %rax	 # tmp118, D.273334
+	movq	%rax, %rcx	 # D.273334,
 .LEHB20:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7415,8 +7415,8 @@ _ZN20wxMDIParentFrameBase14OnCreateClientEv:
 	movl	$584, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.273336
-	movq	%rax, %rcx	 # D.273336,
+	movq	%rsi, %rax	 # tmp93, D.273339
+	movq	%rax, %rcx	 # D.273339,
 .LEHB23:
 	call	_Unwind_Resume	 #
 .LEHE23:
@@ -7811,8 +7811,8 @@ _ZN15T100ProjectTreeC2EP8wxWindowiRK7wxPointRK6wxSizelRK11wxValidatorRK8wxString
 	movq	-32(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN10wxTreeCtrlD2Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.273339
-	movq	%rax, %rcx	 # D.273339,
+	movq	%rbx, %rax	 # tmp99, D.273342
+	movq	%rax, %rcx	 # D.273342,
 .LEHB26:
 	call	_Unwind_Resume	 #
 	nop	
@@ -11147,8 +11147,8 @@ _ZN15T100ProjectTree4initEv:
 	movl	$24, %edx	 #,
 	movq	%rbx, %rcx	 # _31,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp231, D.274041
-	movq	%rax, %rcx	 # D.274041,
+	movq	%rsi, %rax	 # tmp231, D.274044
+	movq	%rax, %rcx	 # D.274044,
 	call	_Unwind_Resume	 #
 .L367:
 	movq	%rax, %rbx	 #, tmp233
@@ -11157,8 +11157,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	-80(%rbp), %rax	 #, tmp232
 	movq	%rax, %rcx	 # tmp232,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp233, D.274042
-	movq	%rax, %rcx	 # D.274042,
+	movq	%rbx, %rax	 # tmp233, D.274045
+	movq	%rax, %rcx	 # D.274045,
 	call	_Unwind_Resume	 #
 .L368:
 	movq	%rax, %rbx	 #, tmp235
@@ -11167,8 +11167,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	-64(%rbp), %rax	 #, tmp234
 	movq	%rax, %rcx	 # tmp234,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp235, D.274043
-	movq	%rax, %rcx	 # D.274043,
+	movq	%rbx, %rax	 # tmp235, D.274046
+	movq	%rax, %rcx	 # D.274046,
 	call	_Unwind_Resume	 #
 .L369:
 	movq	%rax, %rbx	 #, tmp237
@@ -11177,8 +11177,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	-48(%rbp), %rax	 #, tmp236
 	movq	%rax, %rcx	 # tmp236,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp237, D.274044
-	movq	%rax, %rcx	 # D.274044,
+	movq	%rbx, %rax	 # tmp237, D.274047
+	movq	%rax, %rcx	 # D.274047,
 	call	_Unwind_Resume	 #
 .L370:
 	movq	%rax, %rbx	 #, tmp239
@@ -11187,8 +11187,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	-32(%rbp), %rax	 #, tmp238
 	movq	%rax, %rcx	 # tmp238,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp239, D.274045
-	movq	%rax, %rcx	 # D.274045,
+	movq	%rbx, %rax	 # tmp239, D.274048
+	movq	%rax, %rcx	 # D.274048,
 	call	_Unwind_Resume	 #
 .L371:
 	movq	%rax, %rbx	 #, tmp241
@@ -11197,8 +11197,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	-16(%rbp), %rax	 #, tmp240
 	movq	%rax, %rcx	 # tmp240,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp241, D.274046
-	movq	%rax, %rcx	 # D.274046,
+	movq	%rbx, %rax	 # tmp241, D.274049
+	movq	%rax, %rcx	 # D.274049,
 	call	_Unwind_Resume	 #
 .L372:
 	movq	%rax, %rbx	 #, tmp243
@@ -11207,8 +11207,8 @@ _ZN15T100ProjectTree4initEv:
 	movq	%rbp, %rax	 #, tmp242
 	movq	%rax, %rcx	 # tmp242,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp243, D.274047
-	movq	%rax, %rcx	 # D.274047,
+	movq	%rbx, %rax	 # tmp243, D.274050
+	movq	%rax, %rcx	 # D.274050,
 	call	_Unwind_Resume	 #
 .L373:
 	movq	%rax, %rbx	 #, tmp245
@@ -11217,8 +11217,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	16(%rbp), %rax	 #, tmp244
 	movq	%rax, %rcx	 # tmp244,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp245, D.274048
-	movq	%rax, %rcx	 # D.274048,
+	movq	%rbx, %rax	 # tmp245, D.274051
+	movq	%rax, %rcx	 # D.274051,
 	call	_Unwind_Resume	 #
 .L374:
 	movq	%rax, %rbx	 #, tmp247
@@ -11227,8 +11227,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	32(%rbp), %rax	 #, tmp246
 	movq	%rax, %rcx	 # tmp246,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp247, D.274049
-	movq	%rax, %rcx	 # D.274049,
+	movq	%rbx, %rax	 # tmp247, D.274052
+	movq	%rax, %rcx	 # D.274052,
 	call	_Unwind_Resume	 #
 .L375:
 	movq	%rax, %rbx	 #, tmp249
@@ -11237,8 +11237,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	48(%rbp), %rax	 #, tmp248
 	movq	%rax, %rcx	 # tmp248,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp249, D.274050
-	movq	%rax, %rcx	 # D.274050,
+	movq	%rbx, %rax	 # tmp249, D.274053
+	movq	%rax, %rcx	 # D.274053,
 	call	_Unwind_Resume	 #
 .L376:
 	movq	%rax, %rbx	 #, tmp251
@@ -11247,8 +11247,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	64(%rbp), %rax	 #, tmp250
 	movq	%rax, %rcx	 # tmp250,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp251, D.274051
-	movq	%rax, %rcx	 # D.274051,
+	movq	%rbx, %rax	 # tmp251, D.274054
+	movq	%rax, %rcx	 # D.274054,
 	call	_Unwind_Resume	 #
 .L377:
 	movq	%rax, %rbx	 #, tmp253
@@ -11257,8 +11257,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	80(%rbp), %rax	 #, tmp252
 	movq	%rax, %rcx	 # tmp252,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp253, D.274052
-	movq	%rax, %rcx	 # D.274052,
+	movq	%rbx, %rax	 # tmp253, D.274055
+	movq	%rax, %rcx	 # D.274055,
 	call	_Unwind_Resume	 #
 .L378:
 	movq	%rax, %rbx	 #, tmp255
@@ -11267,8 +11267,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	96(%rbp), %rax	 #, tmp254
 	movq	%rax, %rcx	 # tmp254,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp255, D.274053
-	movq	%rax, %rcx	 # D.274053,
+	movq	%rbx, %rax	 # tmp255, D.274056
+	movq	%rax, %rcx	 # D.274056,
 	call	_Unwind_Resume	 #
 .L379:
 	movq	%rax, %rbx	 #, tmp257
@@ -11277,8 +11277,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	112(%rbp), %rax	 #, tmp256
 	movq	%rax, %rcx	 # tmp256,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp257, D.274054
-	movq	%rax, %rcx	 # D.274054,
+	movq	%rbx, %rax	 # tmp257, D.274057
+	movq	%rax, %rcx	 # D.274057,
 	call	_Unwind_Resume	 #
 .L380:
 	movq	%rax, %rbx	 #, tmp259
@@ -11287,8 +11287,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	128(%rbp), %rax	 #, tmp258
 	movq	%rax, %rcx	 # tmp258,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp259, D.274055
-	movq	%rax, %rcx	 # D.274055,
+	movq	%rbx, %rax	 # tmp259, D.274058
+	movq	%rax, %rcx	 # D.274058,
 	call	_Unwind_Resume	 #
 .L381:
 	movq	%rax, %rbx	 #, tmp261
@@ -11297,8 +11297,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	144(%rbp), %rax	 #, tmp260
 	movq	%rax, %rcx	 # tmp260,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp261, D.274056
-	movq	%rax, %rcx	 # D.274056,
+	movq	%rbx, %rax	 # tmp261, D.274059
+	movq	%rax, %rcx	 # D.274059,
 	call	_Unwind_Resume	 #
 .L382:
 	movq	%rax, %rbx	 #, tmp263
@@ -11307,8 +11307,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	160(%rbp), %rax	 #, tmp262
 	movq	%rax, %rcx	 # tmp262,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp263, D.274057
-	movq	%rax, %rcx	 # D.274057,
+	movq	%rbx, %rax	 # tmp263, D.274060
+	movq	%rax, %rcx	 # D.274060,
 	call	_Unwind_Resume	 #
 .L383:
 	movq	%rax, %rbx	 #, tmp265
@@ -11317,8 +11317,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	176(%rbp), %rax	 #, tmp264
 	movq	%rax, %rcx	 # tmp264,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp265, D.274058
-	movq	%rax, %rcx	 # D.274058,
+	movq	%rbx, %rax	 # tmp265, D.274061
+	movq	%rax, %rcx	 # D.274061,
 	call	_Unwind_Resume	 #
 .L384:
 	movq	%rax, %rbx	 #, tmp267
@@ -11327,8 +11327,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	192(%rbp), %rax	 #, tmp266
 	movq	%rax, %rcx	 # tmp266,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp267, D.274059
-	movq	%rax, %rcx	 # D.274059,
+	movq	%rbx, %rax	 # tmp267, D.274062
+	movq	%rax, %rcx	 # D.274062,
 	call	_Unwind_Resume	 #
 .L385:
 	movq	%rax, %rbx	 #, tmp269
@@ -11337,8 +11337,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	208(%rbp), %rax	 #, tmp268
 	movq	%rax, %rcx	 # tmp268,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp269, D.274060
-	movq	%rax, %rcx	 # D.274060,
+	movq	%rbx, %rax	 # tmp269, D.274063
+	movq	%rax, %rcx	 # D.274063,
 	call	_Unwind_Resume	 #
 .L386:
 	movq	%rax, %rbx	 #, tmp271
@@ -11347,8 +11347,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	224(%rbp), %rax	 #, tmp270
 	movq	%rax, %rcx	 # tmp270,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp271, D.274061
-	movq	%rax, %rcx	 # D.274061,
+	movq	%rbx, %rax	 # tmp271, D.274064
+	movq	%rax, %rcx	 # D.274064,
 	call	_Unwind_Resume	 #
 .L387:
 	movq	%rax, %rbx	 #, tmp273
@@ -11357,8 +11357,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	240(%rbp), %rax	 #, tmp272
 	movq	%rax, %rcx	 # tmp272,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp273, D.274062
-	movq	%rax, %rcx	 # D.274062,
+	movq	%rbx, %rax	 # tmp273, D.274065
+	movq	%rax, %rcx	 # D.274065,
 	call	_Unwind_Resume	 #
 .L388:
 	movq	%rax, %rbx	 #, tmp275
@@ -11367,8 +11367,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	256(%rbp), %rax	 #, tmp274
 	movq	%rax, %rcx	 # tmp274,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp275, D.274063
-	movq	%rax, %rcx	 # D.274063,
+	movq	%rbx, %rax	 # tmp275, D.274066
+	movq	%rax, %rcx	 # D.274066,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE73:
@@ -12544,7 +12544,7 @@ _ZN15T100ProjectTree10AppendRootEv:
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1268:     return result;
 	.loc 26 1268 12
-	movq	-72(%rbp), %rax	 # result, D.272332
+	movq	-72(%rbp), %rax	 # result, D.272333
 	jmp	.L430	 #
 .L428:
 	movq	%rax, %rsi	 #, tmp107
@@ -12553,8 +12553,8 @@ _ZN15T100ProjectTree10AppendRootEv:
 	movl	$24, %edx	 #,
 	movq	%rbx, %rcx	 # _10,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp107, D.274065
-	movq	%rax, %rcx	 # D.274065,
+	movq	%rsi, %rax	 # tmp107, D.274068
+	movq	%rax, %rcx	 # D.274068,
 .LEHB78:
 	call	_Unwind_Resume	 #
 .L429:
@@ -12564,8 +12564,8 @@ _ZN15T100ProjectTree10AppendRootEv:
 	leaq	-64(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.274066
-	movq	%rax, %rcx	 # D.274066,
+	movq	%rbx, %rax	 # tmp109, D.274069
+	movq	%rax, %rcx	 # D.274069,
 	call	_Unwind_Resume	 #
 .LEHE78:
 .L430:
@@ -12648,93 +12648,117 @@ _ZN15T100ProjectTree13AppendProjectE12wxTreeItemIdP15T100ProjectInfo:
 .LEHB79:
 	call	_Znwy	 #
 .LEHE79:
-	movq	%rax, %rbx	 # tmp97, _11
-	movq	48(%rbp), %rax	 # info, tmp98
-	movq	%rax, %rdx	 # tmp98,
-	movq	%rbx, %rcx	 # _11,
+	movq	%rax, %rbx	 # tmp100, _14
+	movq	48(%rbp), %rax	 # info, tmp101
+	movq	%rax, %rdx	 # tmp101,
+	movq	%rbx, %rcx	 # _14,
 .LEHB80:
 	call	_ZN15T100ProjectDataC1EP15T100ProjectInfo	 #
 .LEHE80:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1273:     T100ProjectData*    data    = T100NEW T100ProjectData(info);
 	.loc 26 1273 63 is_stmt 0 discriminator 3
-	movq	%rbx, -8(%rbp)	 # _11, data
+	movq	%rbx, -8(%rbp)	 # _14, data
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1274:     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
 	.loc 26 1274 83 is_stmt 1 discriminator 3
 	movq	32(%rbp), %rbx	 # this, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1274:     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
 	.loc 26 1274 69 discriminator 3
-	movq	48(%rbp), %rax	 # info, tmp99
-	movq	%rax, %rcx	 # tmp99,
+	movq	48(%rbp), %rax	 # info, tmp102
+	movq	%rax, %rcx	 # tmp102,
 .LEHB81:
 	call	_ZN15T100ProjectInfo8GetLabelB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _2
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1274:     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
 	.loc 26 1274 83 discriminator 3
-	leaq	-64(%rbp), %rax	 #, tmp100
-	movq	%rax, %rcx	 # tmp100,
+	leaq	-64(%rbp), %rax	 #, tmp103
+	movq	%rax, %rcx	 # tmp103,
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE81:
-	leaq	-64(%rbp), %rdx	 #, tmp101
-	leaq	40(%rbp), %rax	 #, tmp102
-	movq	-8(%rbp), %rcx	 # data, tmp103
-	movq	%rcx, 40(%rsp)	 # tmp103,
+	leaq	-64(%rbp), %rdx	 #, tmp104
+	leaq	40(%rbp), %rax	 #, tmp105
+	movq	-8(%rbp), %rcx	 # data, tmp106
+	movq	%rcx, 40(%rsp)	 # tmp106,
 	movl	$-1, 32(%rsp)	 #,
 	movl	$5, %r9d	 #,
-	movq	%rdx, %r8	 # tmp101,
-	movq	%rax, %rdx	 # tmp102,
+	movq	%rdx, %r8	 # tmp104,
+	movq	%rax, %rdx	 # tmp105,
 	movq	%rbx, %rcx	 # _1,
 .LEHB82:
 	call	_ZN14wxTreeCtrlBase10AppendItemERK12wxTreeItemIdRK8wxStringiiP14wxTreeItemData	 #
 .LEHE82:
-	movq	%rax, -72(%rbp)	 # tmp105, item
-	leaq	-64(%rbp), %rax	 #, tmp106
-	movq	%rax, %rcx	 # tmp106,
+	movq	%rax, -72(%rbp)	 # tmp108, item
+	leaq	-64(%rbp), %rax	 #, tmp109
+	movq	%rax, %rcx	 # tmp109,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1276:     SetItemHasChildren(item, T100TRUE);
-	.loc 26 1276 23 discriminator 3
-	movq	32(%rbp), %rcx	 # this, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1276:     SetItemHasChildren(item, T100TRUE);
-	.loc 26 1276 38 discriminator 3
-	movq	32(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_16(D)->D.139305.D.132412.D.131226.D.127843.D.127683.D.127480.D.126207.D.120606._vptr.wxObject, _5
-	addq	$1920, %rax	 #, _6
-	movq	(%rax), %r9	 # *_6, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1276:     SetItemHasChildren(item, T100TRUE);
-	.loc 26 1276 23 discriminator 3
-	leaq	-72(%rbp), %rax	 #, tmp108
-	movl	$1, %r8d	 #,
-	movq	%rax, %rdx	 # tmp108,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1276:     data->SetLabel(info->GetLabel());
+	.loc 26 1276 19 discriminator 3
+	movq	48(%rbp), %rax	 # info, tmp110
+	movq	%rax, %rcx	 # tmp110,
 .LEHB83:
-	call	*%r9	 # _7
+	call	_ZN15T100ProjectInfo8GetLabelB5cxx11Ev	 #
+	movq	%rax, %rdx	 #, _3
+	movq	-8(%rbp), %rax	 # data, tmp111
+	movq	%rax, %rcx	 # tmp111,
+	call	_ZN15T100ProjectData8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1277:     data->SetPath(info->GetPath());
+	.loc 26 1277 18 discriminator 3
+	movq	48(%rbp), %rax	 # info, tmp112
+	movq	%rax, %rcx	 # tmp112,
+	call	_ZN15T100ProjectInfo7GetPathB5cxx11Ev	 #
+	movq	%rax, %rdx	 #, _4
+	movq	-8(%rbp), %rax	 # data, tmp113
+	movq	%rax, %rcx	 # tmp113,
+	call	_ZN15T100ProjectData7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1278:     data->SetId(item);
+	.loc 26 1278 16 discriminator 3
+	movq	-8(%rbp), %rcx	 # data, _5
+	leaq	-72(%rbp), %rax	 #, tmp114
+	movq	%rax, %rdx	 # tmp114,
+	call	_ZN14wxTreeItemData5SetIdERK12wxTreeItemId	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1280:     SetItemHasChildren(item, T100TRUE);
+	.loc 26 1280 23 discriminator 3
+	movq	32(%rbp), %rcx	 # this, _6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1280:     SetItemHasChildren(item, T100TRUE);
+	.loc 26 1280 38 discriminator 3
+	movq	32(%rbp), %rax	 # this, tmp115
+	movq	(%rax), %rax	 # this_19(D)->D.139305.D.132412.D.131226.D.127843.D.127683.D.127480.D.126207.D.120606._vptr.wxObject, _8
+	addq	$1920, %rax	 #, _9
+	movq	(%rax), %r9	 # *_9, _10
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1280:     SetItemHasChildren(item, T100TRUE);
+	.loc 26 1280 23 discriminator 3
+	leaq	-72(%rbp), %rax	 #, tmp116
+	movl	$1, %r8d	 #,
+	movq	%rax, %rdx	 # tmp116,
+	call	*%r9	 # _10
 .LVL40:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1277: }
-	.loc 26 1277 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1281: }
+	.loc 26 1281 1 discriminator 3
 	jmp	.L436	 #
 .L434:
-	movq	%rax, %rsi	 #, tmp109
+	movq	%rax, %rsi	 #, tmp117
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1273:     T100ProjectData*    data    = T100NEW T100ProjectData(info);
 	.loc 26 1273 63
 	movl	$88, %edx	 #,
-	movq	%rbx, %rcx	 # _11,
+	movq	%rbx, %rcx	 # _14,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp109, D.274068
-	movq	%rax, %rcx	 # D.274068,
+	movq	%rsi, %rax	 # tmp117, D.274071
+	movq	%rax, %rcx	 # D.274071,
 	call	_Unwind_Resume	 #
 .L435:
-	movq	%rax, %rbx	 #, tmp111
+	movq	%rax, %rbx	 #, tmp119
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1274:     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
 	.loc 26 1274 83
-	leaq	-64(%rbp), %rax	 #, tmp110
-	movq	%rax, %rcx	 # tmp110,
+	leaq	-64(%rbp), %rax	 #, tmp118
+	movq	%rax, %rcx	 # tmp118,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp111, D.274069
-	movq	%rax, %rcx	 # D.274069,
+	movq	%rbx, %rax	 # tmp119, D.274072
+	movq	%rax, %rcx	 # D.274072,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE83:
 .L436:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1277: }
-	.loc 26 1277 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1281: }
+	.loc 26 1281 1
 	subq	$-128, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -12783,7 +12807,7 @@ _ZN15T100ProjectTree13AppendProjectE12wxTreeItemIdP15T100ProjectInfo:
 	.seh_proc	_ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo
 _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 .LFB20285:
-	.loc 26 1280 1
+	.loc 26 1284 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -12806,8 +12830,8 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 	movq	%rcx, 32(%rbp)	 # this, this
 	movq	%rdx, 40(%rbp)	 # parent, parent
 	movq	%r8, 48(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1281:     T100FileData*       data    = T100NEW T100FileData(info);
-	.loc 26 1281 60
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1285:     T100FileData*       data    = T100NEW T100FileData(info);
+	.loc 26 1285 60
 	movl	$88, %ecx	 #,
 .LEHB84:
 	call	_Znwy	 #
@@ -12819,11 +12843,11 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 .LEHB85:
 	call	_ZN12T100FileDataC1EP12T100FileInfo	 #
 .LEHE85:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1281:     T100FileData*       data    = T100NEW T100FileData(info);
-	.loc 26 1281 60 is_stmt 0 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1285:     T100FileData*       data    = T100NEW T100FileData(info);
+	.loc 26 1285 60 is_stmt 0 discriminator 3
 	movq	%rbx, -8(%rbp)	 # _8, data
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1283:     data->SetLabel(info->GetFileName());
-	.loc 26 1283 19 is_stmt 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1287:     data->SetLabel(info->GetFileName());
+	.loc 26 1287 19 is_stmt 1 discriminator 3
 	movq	48(%rbp), %rax	 # info, tmp96
 	movq	%rax, %rcx	 # tmp96,
 .LEHB86:
@@ -12832,8 +12856,8 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 	movq	-8(%rbp), %rax	 # data, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN12T100FileData8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1284:     data->SetPath(info->GetPath());
-	.loc 26 1284 18 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1288:     data->SetPath(info->GetPath());
+	.loc 26 1288 18 discriminator 3
 	movq	48(%rbp), %rax	 # info, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZN12T100FileInfo7GetPathB5cxx11Ev	 #
@@ -12841,17 +12865,17 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 	movq	-8(%rbp), %rax	 # data, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZN12T100FileData7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1286:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
-	.loc 26 1286 87 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1290:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
+	.loc 26 1290 87 discriminator 3
 	movq	32(%rbp), %rbx	 # this, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1286:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
-	.loc 26 1286 72 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1290:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
+	.loc 26 1290 72 discriminator 3
 	movq	48(%rbp), %rax	 # info, tmp100
 	movq	%rax, %rcx	 # tmp100,
 	call	_ZN12T100FileInfo11GetFileNameB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1286:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
-	.loc 26 1286 87 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1290:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
+	.loc 26 1290 87 discriminator 3
 	leaq	-64(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
@@ -12872,35 +12896,35 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 	leaq	-64(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1287: }
-	.loc 26 1287 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1291: }
+	.loc 26 1291 1 discriminator 3
 	jmp	.L442	 #
 .L440:
 	movq	%rax, %rsi	 #, tmp108
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1281:     T100FileData*       data    = T100NEW T100FileData(info);
-	.loc 26 1281 60
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1285:     T100FileData*       data    = T100NEW T100FileData(info);
+	.loc 26 1285 60
 	movl	$88, %edx	 #,
 	movq	%rbx, %rcx	 # _8,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp108, D.274070
-	movq	%rax, %rcx	 # D.274070,
+	movq	%rsi, %rax	 # tmp108, D.274073
+	movq	%rax, %rcx	 # D.274073,
 .LEHB88:
 	call	_Unwind_Resume	 #
 .L441:
 	movq	%rax, %rbx	 #, tmp110
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1286:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
-	.loc 26 1286 87
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1290:     wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
+	.loc 26 1290 87
 	leaq	-64(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.274071
-	movq	%rax, %rcx	 # D.274071,
+	movq	%rbx, %rax	 # tmp110, D.274074
+	movq	%rax, %rcx	 # D.274074,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE88:
 .L442:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1287: }
-	.loc 26 1287 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1291: }
+	.loc 26 1291 1
 	subq	$-128, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -12949,7 +12973,7 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 	.seh_proc	_ZN15T100ProjectTree12AppendFolderE12wxTreeItemIdP14T100FolderInfo
 _ZN15T100ProjectTree12AppendFolderE12wxTreeItemIdP14T100FolderInfo:
 .LFB20286:
-	.loc 26 1290 1
+	.loc 26 1294 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -12972,8 +12996,8 @@ _ZN15T100ProjectTree12AppendFolderE12wxTreeItemIdP14T100FolderInfo:
 	movq	%rcx, 32(%rbp)	 # this, this
 	movq	%rdx, 40(%rbp)	 # parent, parent
 	movq	%r8, 48(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1291:     T100FolderData*     data    = T100NEW T100FolderData(info);
-	.loc 26 1291 62
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1295:     T100FolderData*     data    = T100NEW T100FolderData(info);
+	.loc 26 1295 62
 	movl	$88, %ecx	 #,
 .LEHB89:
 	call	_Znwy	 #
@@ -12985,94 +13009,94 @@ _ZN15T100ProjectTree12AppendFolderE12wxTreeItemIdP14T100FolderInfo:
 .LEHB90:
 	call	_ZN14T100FolderDataC1EP14T100FolderInfo	 #
 .LEHE90:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1291:     T100FolderData*     data    = T100NEW T100FolderData(info);
-	.loc 26 1291 62 is_stmt 0 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1295:     T100FolderData*     data    = T100NEW T100FolderData(info);
+	.loc 26 1295 62 is_stmt 0 discriminator 3
 	movq	%rbx, -8(%rbp)	 # _14, data
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1293:     data->SetLabel(info->GetLabel());
-	.loc 26 1293 19 is_stmt 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1296:     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
+	.loc 26 1296 83 is_stmt 1 discriminator 3
+	movq	32(%rbp), %rbx	 # this, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1296:     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
+	.loc 26 1296 69 discriminator 3
 	movq	48(%rbp), %rax	 # info, tmp102
 	movq	%rax, %rcx	 # tmp102,
 .LEHB91:
 	call	_ZN14T100FolderInfo8GetLabelB5cxx11Ev	 #
-	movq	%rax, %rdx	 #, _1
-	movq	-8(%rbp), %rax	 # data, tmp103
-	movq	%rax, %rcx	 # tmp103,
-	call	_ZN14T100FolderData8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1294:     data->SetPath(info->GetPath());
-	.loc 26 1294 18 discriminator 3
-	movq	48(%rbp), %rax	 # info, tmp104
-	movq	%rax, %rcx	 # tmp104,
-	call	_ZN14T100FolderInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _2
-	movq	-8(%rbp), %rax	 # data, tmp105
-	movq	%rax, %rcx	 # tmp105,
-	call	_ZN14T100FolderData7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1296:     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
 	.loc 26 1296 83 discriminator 3
-	movq	32(%rbp), %rbx	 # this, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1296:     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
-	.loc 26 1296 69 discriminator 3
-	movq	48(%rbp), %rax	 # info, tmp106
-	movq	%rax, %rcx	 # tmp106,
-	call	_ZN14T100FolderInfo8GetLabelB5cxx11Ev	 #
-	movq	%rax, %rdx	 #, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1296:     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
-	.loc 26 1296 83 discriminator 3
-	leaq	-64(%rbp), %rax	 #, tmp107
-	movq	%rax, %rcx	 # tmp107,
+	leaq	-64(%rbp), %rax	 #, tmp103
+	movq	%rax, %rcx	 # tmp103,
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE91:
-	leaq	-64(%rbp), %rdx	 #, tmp108
-	leaq	40(%rbp), %rax	 #, tmp109
-	movq	-8(%rbp), %rcx	 # data, tmp110
-	movq	%rcx, 40(%rsp)	 # tmp110,
+	leaq	-64(%rbp), %rdx	 #, tmp104
+	leaq	40(%rbp), %rax	 #, tmp105
+	movq	-8(%rbp), %rcx	 # data, tmp106
+	movq	%rcx, 40(%rsp)	 # tmp106,
 	movl	$-1, 32(%rsp)	 #,
 	movl	$5, %r9d	 #,
-	movq	%rdx, %r8	 # tmp108,
-	movq	%rax, %rdx	 # tmp109,
-	movq	%rbx, %rcx	 # _3,
+	movq	%rdx, %r8	 # tmp104,
+	movq	%rax, %rdx	 # tmp105,
+	movq	%rbx, %rcx	 # _1,
 .LEHB92:
 	call	_ZN14wxTreeCtrlBase10AppendItemERK12wxTreeItemIdRK8wxStringiiP14wxTreeItemData	 #
 .LEHE92:
-	movq	%rax, -72(%rbp)	 # tmp112, item
-	leaq	-64(%rbp), %rax	 #, tmp113
-	movq	%rax, %rcx	 # tmp113,
+	movq	%rax, -72(%rbp)	 # tmp108, item
+	leaq	-64(%rbp), %rax	 #, tmp109
+	movq	%rax, %rcx	 # tmp109,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1298:     data->SetId(item);
-	.loc 26 1298 16 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1298:     data->SetLabel(info->GetLabel());
+	.loc 26 1298 19 discriminator 3
+	movq	48(%rbp), %rax	 # info, tmp110
+	movq	%rax, %rcx	 # tmp110,
+.LEHB93:
+	call	_ZN14T100FolderInfo8GetLabelB5cxx11Ev	 #
+	movq	%rax, %rdx	 #, _3
+	movq	-8(%rbp), %rax	 # data, tmp111
+	movq	%rax, %rcx	 # tmp111,
+	call	_ZN14T100FolderData8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1299:     data->SetPath(info->GetPath());
+	.loc 26 1299 18 discriminator 3
+	movq	48(%rbp), %rax	 # info, tmp112
+	movq	%rax, %rcx	 # tmp112,
+	call	_ZN14T100FolderInfo7GetPathB5cxx11Ev	 #
+	movq	%rax, %rdx	 #, _4
+	movq	-8(%rbp), %rax	 # data, tmp113
+	movq	%rax, %rcx	 # tmp113,
+	call	_ZN14T100FolderData7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1300:     data->SetId(item);
+	.loc 26 1300 16 discriminator 3
 	movq	-8(%rbp), %rcx	 # data, _5
 	leaq	-72(%rbp), %rax	 #, tmp114
 	movq	%rax, %rdx	 # tmp114,
 	call	_ZN14wxTreeItemData5SetIdERK12wxTreeItemId	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1300:     SetItemHasChildren(item, T100TRUE);
-	.loc 26 1300 23 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1302:     SetItemHasChildren(item, T100TRUE);
+	.loc 26 1302 23 discriminator 3
 	movq	32(%rbp), %rcx	 # this, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1300:     SetItemHasChildren(item, T100TRUE);
-	.loc 26 1300 38 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1302:     SetItemHasChildren(item, T100TRUE);
+	.loc 26 1302 38 discriminator 3
 	movq	32(%rbp), %rax	 # this, tmp115
-	movq	(%rax), %rax	 # this_25(D)->D.139305.D.132412.D.131226.D.127843.D.127683.D.127480.D.126207.D.120606._vptr.wxObject, _8
+	movq	(%rax), %rax	 # this_19(D)->D.139305.D.132412.D.131226.D.127843.D.127683.D.127480.D.126207.D.120606._vptr.wxObject, _8
 	addq	$1920, %rax	 #, _9
 	movq	(%rax), %r9	 # *_9, _10
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1300:     SetItemHasChildren(item, T100TRUE);
-	.loc 26 1300 23 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1302:     SetItemHasChildren(item, T100TRUE);
+	.loc 26 1302 23 discriminator 3
 	leaq	-72(%rbp), %rax	 #, tmp116
 	movl	$1, %r8d	 #,
 	movq	%rax, %rdx	 # tmp116,
-.LEHB93:
 	call	*%r9	 # _10
 .LVL41:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1301: }
-	.loc 26 1301 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1303: }
+	.loc 26 1303 1 discriminator 3
 	jmp	.L448	 #
 .L446:
 	movq	%rax, %rsi	 #, tmp117
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1291:     T100FolderData*     data    = T100NEW T100FolderData(info);
-	.loc 26 1291 62
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1295:     T100FolderData*     data    = T100NEW T100FolderData(info);
+	.loc 26 1295 62
 	movl	$88, %edx	 #,
 	movq	%rbx, %rcx	 # _14,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp117, D.274072
-	movq	%rax, %rcx	 # D.274072,
+	movq	%rsi, %rax	 # tmp117, D.274075
+	movq	%rax, %rcx	 # D.274075,
 	call	_Unwind_Resume	 #
 .L447:
 	movq	%rax, %rbx	 #, tmp119
@@ -13081,14 +13105,14 @@ _ZN15T100ProjectTree12AppendFolderE12wxTreeItemIdP14T100FolderInfo:
 	leaq	-64(%rbp), %rax	 #, tmp118
 	movq	%rax, %rcx	 # tmp118,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp119, D.274073
-	movq	%rax, %rcx	 # D.274073,
+	movq	%rbx, %rax	 # tmp119, D.274076
+	movq	%rax, %rcx	 # D.274076,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE93:
 .L448:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1301: }
-	.loc 26 1301 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1303: }
+	.loc 26 1303 1
 	subq	$-128, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -13137,7 +13161,7 @@ _ZN15T100ProjectTree12AppendFolderE12wxTreeItemIdP14T100FolderInfo:
 	.seh_proc	_ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent
 _ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent:
 .LFB20287:
-	.loc 26 1304 1
+	.loc 26 1306 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13156,17 +13180,17 @@ _ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent:
 	.seh_endprologue
 	movq	%rcx, -48(%rbp)	 # this, this
 	movq	%rdx, -40(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1305:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1305 96
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1307:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1307 96
 	movq	-40(%rbp), %rax	 # event, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNK14wxCommandEvent15GetClientObjectEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1305:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1305 43
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1307:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1307 43
 	testq	%rax, %rax	 # _12
 	je	.L450	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1305:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1305 98 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1307:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1307 98 discriminator 1
 	movl	$0, %r9d	 #,
 	leaq	_ZTI16T100TreeItemData(%rip), %r8	 #,
 	leaq	_ZTI12wxClientData(%rip), %rdx	 #,
@@ -13174,28 +13198,28 @@ _ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent:
 	call	__dynamic_cast	 #
 	jmp	.L451	 #
 .L450:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1305:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1305 43 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1307:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1307 43 discriminator 2
 	movl	$0, %eax	 #, iftmp.24_7
 .L451:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1305:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1305 98 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1307:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1307 98 discriminator 4
 	movq	%rax, -88(%rbp)	 # iftmp.24_7, data
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1307:     if(!data){
-	.loc 26 1307 5 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1309:     if(!data){
+	.loc 26 1309 5 discriminator 4
 	cmpq	$0, -88(%rbp)	 #, data
 	je	.L454	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1311:     PopupMenu(data->ShowMenu());
-	.loc 26 1311 14
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1313:     PopupMenu(data->ShowMenu());
+	.loc 26 1313 14
 	movq	-48(%rbp), %rbx	 # this, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1311:     PopupMenu(data->ShowMenu());
-	.loc 26 1311 30
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1313:     PopupMenu(data->ShowMenu());
+	.loc 26 1313 30
 	movq	-88(%rbp), %rax	 # data, tmp95
 	movq	(%rax), %rax	 # data_15->D.148774.D.128031._vptr.wxClientData, _3
 	addq	$16, %rax	 #, _4
 	movq	(%rax), %rax	 # *_4, _5
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1311:     PopupMenu(data->ShowMenu());
-	.loc 26 1311 14
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1313:     PopupMenu(data->ShowMenu());
+	.loc 26 1313 14
 	movq	-88(%rbp), %rdx	 # data, tmp96
 	movq	%rdx, %rcx	 # tmp96,
 	call	*%rax	 # _5
@@ -13206,12 +13230,12 @@ _ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent:
 	call	_ZN12wxWindowBase9PopupMenuEP6wxMenuRK7wxPoint	 #
 	jmp	.L449	 #
 .L454:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1308:         return;
-	.loc 26 1308 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1310:         return;
+	.loc 26 1310 9
 	nop	
 .L449:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1312: }
-	.loc 26 1312 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1314: }
+	.loc 26 1314 1
 	addq	$56, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -13228,7 +13252,7 @@ _ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent:
 	.seh_proc	_ZN15T100ProjectTree13OnItemChangedER11wxTreeEvent
 _ZN15T100ProjectTree13OnItemChangedER11wxTreeEvent:
 .LFB20288:
-	.loc 26 1315 1
+	.loc 26 1317 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13242,17 +13266,17 @@ _ZN15T100ProjectTree13OnItemChangedER11wxTreeEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1316:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1316 96
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1318:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1318 96
 	movq	24(%rbp), %rax	 # event, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNK14wxCommandEvent15GetClientObjectEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1316:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1316 43
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1318:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1318 43
 	testq	%rax, %rax	 # _10
 	je	.L456	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1316:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1316 98 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1318:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1318 98 discriminator 1
 	movl	$0, %r9d	 #,
 	leaq	_ZTI16T100TreeItemData(%rip), %r8	 #,
 	leaq	_ZTI12wxClientData(%rip), %rdx	 #,
@@ -13260,37 +13284,37 @@ _ZN15T100ProjectTree13OnItemChangedER11wxTreeEvent:
 	call	__dynamic_cast	 #
 	jmp	.L457	 #
 .L456:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1316:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1316 43 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1318:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1318 43 discriminator 2
 	movl	$0, %eax	 #, iftmp.25_5
 .L457:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1316:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1316 98 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1318:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1318 98 discriminator 4
 	movq	%rax, -8(%rbp)	 # iftmp.25_5, data
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1318:     if(!data){
-	.loc 26 1318 5 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1320:     if(!data){
+	.loc 26 1320 5 discriminator 4
 	cmpq	$0, -8(%rbp)	 #, data
 	je	.L460	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1322:     data->OnItemChanged();
-	.loc 26 1322 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1324:     data->OnItemChanged();
+	.loc 26 1324 25
 	movq	-8(%rbp), %rax	 # data, tmp93
 	movq	(%rax), %rax	 # data_13->D.148774.D.128031._vptr.wxClientData, _2
 	addq	$24, %rax	 #, _3
 	movq	(%rax), %rax	 # *_3, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1322:     data->OnItemChanged();
-	.loc 26 1322 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1324:     data->OnItemChanged();
+	.loc 26 1324 24
 	movq	-8(%rbp), %rdx	 # data, tmp94
 	movq	%rdx, %rcx	 # tmp94,
 	call	*%rax	 # _4
 .LVL43:
 	jmp	.L455	 #
 .L460:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1319:         return;
-	.loc 26 1319 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1321:         return;
+	.loc 26 1321 9
 	nop	
 .L455:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1323: }
-	.loc 26 1323 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1325: }
+	.loc 26 1325 1
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -13305,7 +13329,7 @@ _ZN15T100ProjectTree13OnItemChangedER11wxTreeEvent:
 	.seh_proc	_ZN15T100ProjectTree15OnItemActivatedER11wxTreeEvent
 _ZN15T100ProjectTree15OnItemActivatedER11wxTreeEvent:
 .LFB20289:
-	.loc 26 1326 1
+	.loc 26 1328 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13319,17 +13343,17 @@ _ZN15T100ProjectTree15OnItemActivatedER11wxTreeEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1327:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1327 96
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1329:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1329 96
 	movq	24(%rbp), %rax	 # event, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNK14wxCommandEvent15GetClientObjectEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1327:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1327 43
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1329:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1329 43
 	testq	%rax, %rax	 # _10
 	je	.L462	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1327:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1327 98 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1329:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1329 98 discriminator 1
 	movl	$0, %r9d	 #,
 	leaq	_ZTI16T100TreeItemData(%rip), %r8	 #,
 	leaq	_ZTI12wxClientData(%rip), %rdx	 #,
@@ -13337,37 +13361,37 @@ _ZN15T100ProjectTree15OnItemActivatedER11wxTreeEvent:
 	call	__dynamic_cast	 #
 	jmp	.L463	 #
 .L462:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1327:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1327 43 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1329:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1329 43 discriminator 2
 	movl	$0, %eax	 #, iftmp.26_5
 .L463:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1327:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1327 98 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1329:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1329 98 discriminator 4
 	movq	%rax, -8(%rbp)	 # iftmp.26_5, data
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1329:     if(!data){
-	.loc 26 1329 5 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1331:     if(!data){
+	.loc 26 1331 5 discriminator 4
 	cmpq	$0, -8(%rbp)	 #, data
 	je	.L466	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1333:     data->OnItemActivated();
-	.loc 26 1333 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1335:     data->OnItemActivated();
+	.loc 26 1335 27
 	movq	-8(%rbp), %rax	 # data, tmp93
 	movq	(%rax), %rax	 # data_13->D.148774.D.128031._vptr.wxClientData, _2
 	addq	$32, %rax	 #, _3
 	movq	(%rax), %rax	 # *_3, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1333:     data->OnItemActivated();
-	.loc 26 1333 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1335:     data->OnItemActivated();
+	.loc 26 1335 26
 	movq	-8(%rbp), %rdx	 # data, tmp94
 	movq	%rdx, %rcx	 # tmp94,
 	call	*%rax	 # _4
 .LVL44:
 	jmp	.L461	 #
 .L466:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1330:         return;
-	.loc 26 1330 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1332:         return;
+	.loc 26 1332 9
 	nop	
 .L461:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1334: }
-	.loc 26 1334 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1336: }
+	.loc 26 1336 1
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -13382,7 +13406,7 @@ _ZN15T100ProjectTree15OnItemActivatedER11wxTreeEvent:
 	.seh_proc	_ZN15T100ProjectTree15OnItemExpandingER11wxTreeEvent
 _ZN15T100ProjectTree15OnItemExpandingER11wxTreeEvent:
 .LFB20290:
-	.loc 26 1337 1
+	.loc 26 1339 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13396,17 +13420,17 @@ _ZN15T100ProjectTree15OnItemExpandingER11wxTreeEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1338:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1338 96
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1340:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1340 96
 	movq	24(%rbp), %rax	 # event, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNK14wxCommandEvent15GetClientObjectEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1338:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1338 43
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1340:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1340 43
 	testq	%rax, %rax	 # _10
 	je	.L468	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1338:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1338 98 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1340:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1340 98 discriminator 1
 	movl	$0, %r9d	 #,
 	leaq	_ZTI16T100TreeItemData(%rip), %r8	 #,
 	leaq	_ZTI12wxClientData(%rip), %rdx	 #,
@@ -13414,37 +13438,37 @@ _ZN15T100ProjectTree15OnItemExpandingER11wxTreeEvent:
 	call	__dynamic_cast	 #
 	jmp	.L469	 #
 .L468:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1338:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1338 43 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1340:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1340 43 discriminator 2
 	movl	$0, %eax	 #, iftmp.27_5
 .L469:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1338:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
-	.loc 26 1338 98 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1340:     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
+	.loc 26 1340 98 discriminator 4
 	movq	%rax, -8(%rbp)	 # iftmp.27_5, data
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1340:     if(!data){
-	.loc 26 1340 5 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1342:     if(!data){
+	.loc 26 1342 5 discriminator 4
 	cmpq	$0, -8(%rbp)	 #, data
 	je	.L472	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1344:     data->OnItemExpanding();
-	.loc 26 1344 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1346:     data->OnItemExpanding();
+	.loc 26 1346 27
 	movq	-8(%rbp), %rax	 # data, tmp93
 	movq	(%rax), %rax	 # data_13->D.148774.D.128031._vptr.wxClientData, _2
 	addq	$40, %rax	 #, _3
 	movq	(%rax), %rax	 # *_3, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1344:     data->OnItemExpanding();
-	.loc 26 1344 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1346:     data->OnItemExpanding();
+	.loc 26 1346 26
 	movq	-8(%rbp), %rdx	 # data, tmp94
 	movq	%rdx, %rcx	 # tmp94,
 	call	*%rax	 # _4
 .LVL45:
 	jmp	.L467	 #
 .L472:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1341:         return;
-	.loc 26 1341 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1343:         return;
+	.loc 26 1343 9
 	nop	
 .L467:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1345: }
-	.loc 26 1345 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1347: }
+	.loc 26 1347 1
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -13459,7 +13483,7 @@ _ZN15T100ProjectTree15OnItemExpandingER11wxTreeEvent:
 	.seh_proc	_ZN15T100ProjectTree15OnProjectCreateER14wxCommandEvent
 _ZN15T100ProjectTree15OnProjectCreateER14wxCommandEvent:
 .LFB20291:
-	.loc 26 1348 1
+	.loc 26 1350 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13473,11 +13497,11 @@ _ZN15T100ProjectTree15OnProjectCreateER14wxCommandEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1349:     T100ProjectInvoking::OnProjectNew();
-	.loc 26 1349 38
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1351:     T100ProjectInvoking::OnProjectNew();
+	.loc 26 1351 38
 	call	_ZN19T100ProjectInvoking12OnProjectNewEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1350: }
-	.loc 26 1350 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1352: }
+	.loc 26 1352 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -13493,7 +13517,7 @@ _ZN15T100ProjectTree15OnProjectCreateER14wxCommandEvent:
 	.seh_proc	_ZN15T100ProjectTree12OnFileCreateER14wxCommandEvent
 _ZN15T100ProjectTree12OnFileCreateER14wxCommandEvent:
 .LFB20292:
-	.loc 26 1353 1
+	.loc 26 1355 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13507,11 +13531,11 @@ _ZN15T100ProjectTree12OnFileCreateER14wxCommandEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1354:     T100ProjectInvoking::OnFileNew();
-	.loc 26 1354 35
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1356:     T100ProjectInvoking::OnFileNew();
+	.loc 26 1356 35
 	call	_ZN19T100ProjectInvoking9OnFileNewEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1355: }
-	.loc 26 1355 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1357: }
+	.loc 26 1357 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -13527,7 +13551,7 @@ _ZN15T100ProjectTree12OnFileCreateER14wxCommandEvent:
 	.seh_proc	_ZN15T100ProjectTree14OnFolderCreateER14wxCommandEvent
 _ZN15T100ProjectTree14OnFolderCreateER14wxCommandEvent:
 .LFB20293:
-	.loc 26 1358 1
+	.loc 26 1360 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13541,11 +13565,11 @@ _ZN15T100ProjectTree14OnFolderCreateER14wxCommandEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1359:     T100ProjectInvoking::OnFolderNew();
-	.loc 26 1359 37
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1361:     T100ProjectInvoking::OnFolderNew();
+	.loc 26 1361 37
 	call	_ZN19T100ProjectInvoking11OnFolderNewEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1360: }
-	.loc 26 1360 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1362: }
+	.loc 26 1362 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -13891,7 +13915,7 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEvent
 	subq	$64, %rsp	 #,
 	.seh_stackalloc	64
 	.seh_endprologue
-	movq	%rcx, 32(%rbp)	 # D.264273, D.264273
+	movq	%rcx, 32(%rbp)	 # D.264274, D.264274
 	movq	%rdx, %rbx	 #, tmp91
 	movq	(%rbx), %rax	 # method, tmp92
 	movq	8(%rbx), %rdx	 # method,
@@ -13926,8 +13950,8 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEvent
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.274075
-	movq	%rax, %rcx	 # D.274075,
+	movq	%rsi, %rax	 # tmp97, D.274078
+	movq	%rax, %rcx	 # D.274078,
 .LEHB96:
 	call	_Unwind_Resume	 #
 .LEHE96:
@@ -14077,7 +14101,7 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
 	subq	$64, %rsp	 #,
 	.seh_stackalloc	64
 	.seh_endprologue
-	movq	%rcx, 32(%rbp)	 # D.264400, D.264400
+	movq	%rcx, 32(%rbp)	 # D.264401, D.264401
 	movq	%rdx, %rbx	 #, tmp91
 	movq	(%rbx), %rax	 # method, tmp92
 	movq	8(%rbx), %rdx	 # method,
@@ -14112,8 +14136,8 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.274078
-	movq	%rax, %rcx	 # D.274078,
+	movq	%rsi, %rax	 # tmp97, D.274081
+	movq	%rax, %rcx	 # D.274081,
 .LEHB99:
 	call	_Unwind_Resume	 #
 .LEHE99:
@@ -14185,7 +14209,7 @@ _ZNSt6vectorIP15T100ProjectInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP15T100ProjectInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269383, D.272230
+	movq	-8(%rbp), %rax	 # D.269384, D.272231
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 29 699 50
 	addq	$48, %rsp	 #,
@@ -14226,7 +14250,7 @@ _ZNSt6vectorIP15T100ProjectInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP15T100ProjectInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269385, D.272233
+	movq	-8(%rbp), %rax	 # D.269386, D.272234
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 29 717 51
 	addq	$48, %rsp	 #,
@@ -14390,7 +14414,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269390, D.272244
+	movq	-8(%rbp), %rax	 # D.269391, D.272245
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 29 699 50
 	addq	$48, %rsp	 #,
@@ -14431,7 +14455,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269392, D.272247
+	movq	-8(%rbp), %rax	 # D.269393, D.272248
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 29 717 51
 	addq	$48, %rsp	 #,
@@ -14594,7 +14618,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269397, D.272258
+	movq	-8(%rbp), %rax	 # D.269398, D.272259
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 29 699 50
 	addq	$48, %rsp	 #,
@@ -14635,7 +14659,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269399, D.272261
+	movq	-8(%rbp), %rax	 # D.269400, D.272262
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 29 717 51
 	addq	$48, %rsp	 #,
@@ -14794,14 +14818,14 @@ _ZNKSt6vectorIP15T100ProjectInfoSaIS1_EE5beginEv:
 	.loc 29 708 45
 	movq	16(%rbp), %rax	 # this, tmp90
 	movq	(%rax), %rax	 # this_3(D)->D.139166._M_impl._M_start, _1
-	movq	%rax, -8(%rbp)	 # _1, D.269404
+	movq	%rax, -8(%rbp)	 # _1, D.269405
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:708:       { return const_iterator(this->_M_impl._M_start); }
 	.loc 29 708 53
 	leaq	-8(%rbp), %rdx	 #, tmp91
 	leaq	-16(%rbp), %rax	 #, tmp92
 	movq	%rax, %rcx	 # tmp92,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPKP15T100ProjectInfoSt6vectorIS2_SaIS2_EEEC1ERKS4_	 #
-	movq	-16(%rbp), %rax	 # D.269405, D.272316
+	movq	-16(%rbp), %rax	 # D.269406, D.272317
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:708:       { return const_iterator(this->_M_impl._M_start); }
 	.loc 29 708 56
 	addq	$48, %rsp	 #,
@@ -14837,14 +14861,14 @@ _ZNKSt6vectorIP15T100ProjectInfoSaIS1_EE3endEv:
 	.loc 29 726 45
 	movq	16(%rbp), %rax	 # this, tmp90
 	movq	8(%rax), %rax	 # this_3(D)->D.139166._M_impl._M_finish, _1
-	movq	%rax, -8(%rbp)	 # _1, D.269407
+	movq	%rax, -8(%rbp)	 # _1, D.269408
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:726:       { return const_iterator(this->_M_impl._M_finish); }
 	.loc 29 726 54
 	leaq	-8(%rbp), %rdx	 #, tmp91
 	leaq	-16(%rbp), %rax	 #, tmp92
 	movq	%rax, %rcx	 # tmp92,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPKP15T100ProjectInfoSt6vectorIS2_SaIS2_EEEC1ERKS4_	 #
-	movq	-16(%rbp), %rax	 # D.269408, D.272320
+	movq	-16(%rbp), %rax	 # D.269409, D.272321
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:726:       { return const_iterator(this->_M_impl._M_finish); }
 	.loc 29 726 57
 	addq	$48, %rsp	 #,
@@ -15025,7 +15049,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS
 	call	_ZN14wxEventFunctorC2Ev	 #
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _2
 	movq	-32(%rbp), %rax	 # this, tmp98
-	movq	%rdx, (%rax)	 # _2, this_14(D)->D.264366._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _2, this_14(D)->D.264367._vptr.wxEventFunctor
 	movq	-32(%rbp), %rax	 # this, tmp99
 	movq	-16(%rbp), %rdx	 # handler, tmp100
 	movq	%rdx, 8(%rax)	 # tmp100, this_14(D)->m_handler
@@ -15102,8 +15126,8 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.274080
-	movq	%rax, %rcx	 # D.274080,
+	movq	%rbx, %rax	 # tmp107, D.274083
+	movq	%rax, %rcx	 # D.274083,
 .LEHB101:
 	call	_Unwind_Resume	 #
 	nop	
@@ -15181,7 +15205,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	call	_ZN14wxEventFunctorC2Ev	 #
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _2
 	movq	-32(%rbp), %rax	 # this, tmp98
-	movq	%rdx, (%rax)	 # _2, this_14(D)->D.264454._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _2, this_14(D)->D.264455._vptr.wxEventFunctor
 	movq	-32(%rbp), %rax	 # this, tmp99
 	movq	-16(%rbp), %rdx	 # handler, tmp100
 	movq	%rdx, 8(%rax)	 # tmp100, this_14(D)->m_handler
@@ -15258,8 +15282,8 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.274083
-	movq	%rax, %rcx	 # D.274083,
+	movq	%rbx, %rax	 # tmp107, D.274086
+	movq	%rax, %rcx	 # D.274086,
 .LEHB103:
 	call	_Unwind_Resume	 #
 	nop	
@@ -15609,7 +15633,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.264307, D.264307
+	movq	%rcx, 16(%rbp)	 # D.264308, D.264308
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:392:     static void CheckHandlerArgument(EventArg *) { }
 	.loc 10 392 52
 	nop	
@@ -15637,7 +15661,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.264404, D.264404
+	movq	%rcx, 16(%rbp)	 # D.264405, D.264405
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:392:     static void CheckHandlerArgument(EventArg *) { }
 	.loc 10 392 52
 	nop	
@@ -15994,7 +16018,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	.loc 10 382 7
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.264454._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.264455._vptr.wxEventFunctor
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
@@ -16084,7 +16108,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS
 	.loc 10 382 7
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.264366._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.264367._vptr.wxEventFunctor
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
@@ -17481,7 +17505,7 @@ __tcf_2:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB21580:
-	.loc 26 1360 1 is_stmt 1
+	.loc 26 1362 1 is_stmt 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -17520,12 +17544,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 192(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 200(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1360: }
-	.loc 26 1360 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1362: }
+	.loc 26 1362 1
 	cmpl	$1, 192(%rbp)	 #, __initialize_p
 	jne	.L588	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1360: }
-	.loc 26 1360 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1362: }
+	.loc 26 1362 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 200(%rbp)	 #, __priority
 	jne	.L588	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
@@ -17549,16 +17573,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	movl	$7, %edi	 #, _18
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:11:     EVT_TREE_ITEM_MENU(wxID_ANY, OnItemMenu)
 	.loc 26 11 5
-	leaq	_ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent(%rip), %rbx	 #, D.272826
-	movl	$0, %esi	 #, D.272826
+	leaq	_ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent(%rip), %rbx	 #, D.272829
+	movl	$0, %esi	 #, D.272829
 	leaq	16(%rbp), %rcx	 #, tmp124
-	movq	%rbx, 0(%rbp)	 # D.272826,
-	movq	%rsi, 8(%rbp)	 # D.272826,
+	movq	%rbx, 0(%rbp)	 # D.272829,
+	movq	%rsi, 8(%rbp)	 # D.272829,
 	movq	%rbp, %rax	 #, tmp125
 	movq	%rax, %rdx	 # tmp125,
 	call	_Z19wxEventFunctionCastI11wxTreeEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	16(%rbp), %rax	 # D.272827, tmp126
-	movq	24(%rbp), %rdx	 # D.272827,
+	movq	16(%rbp), %rax	 # D.272830, tmp126
+	movq	24(%rbp), %rdx	 # D.272830,
 	movq	%rax, 0(%rbp)	 # tmp126,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp127
@@ -17584,16 +17608,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rdi	 #, _18
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:12:     EVT_TREE_SEL_CHANGED(wxID_ANY, OnItemChanged)
 	.loc 26 12 5 is_stmt 1 discriminator 1
-	leaq	_ZN15T100ProjectTree13OnItemChangedER11wxTreeEvent(%rip), %r13	 #, D.272828
-	movl	$0, %r14d	 #, D.272828
+	leaq	_ZN15T100ProjectTree13OnItemChangedER11wxTreeEvent(%rip), %r13	 #, D.272831
+	movl	$0, %r14d	 #, D.272831
 	leaq	32(%rbp), %rcx	 #, tmp128
-	movq	%r13, 0(%rbp)	 # D.272828,
-	movq	%r14, 8(%rbp)	 # D.272828,
+	movq	%r13, 0(%rbp)	 # D.272831,
+	movq	%r14, 8(%rbp)	 # D.272831,
 	movq	%rbp, %rax	 #, tmp129
 	movq	%rax, %rdx	 # tmp129,
 	call	_Z19wxEventFunctionCastI11wxTreeEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	32(%rbp), %rax	 # D.272829, tmp130
-	movq	40(%rbp), %rdx	 # D.272829,
+	movq	32(%rbp), %rax	 # D.272832, tmp130
+	movq	40(%rbp), %rdx	 # D.272832,
 	movq	%rax, 0(%rbp)	 # tmp130,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp131
@@ -17622,13 +17646,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -80(%rbp)	 # tmp154, %sfp
 	movq	$0, -72(%rbp)	 #, %sfp
 	leaq	48(%rbp), %rax	 #, tmp132
-	movdqa	-80(%rbp), %xmm0	 # %sfp, D.272830
-	movaps	%xmm0, 0(%rbp)	 # D.272830,
+	movdqa	-80(%rbp), %xmm0	 # %sfp, D.272833
+	movaps	%xmm0, 0(%rbp)	 # D.272833,
 	movq	%rbp, %rdx	 #, tmp133
 	movq	%rax, %rcx	 # tmp132,
 	call	_Z19wxEventFunctionCastI11wxTreeEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	48(%rbp), %rax	 # D.272831, tmp134
-	movq	56(%rbp), %rdx	 # D.272831,
+	movq	48(%rbp), %rax	 # D.272834, tmp134
+	movq	56(%rbp), %rdx	 # D.272834,
 	movq	%rax, 0(%rbp)	 # tmp134,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp135
@@ -17657,13 +17681,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -64(%rbp)	 # tmp156, %sfp
 	movq	$0, -56(%rbp)	 #, %sfp
 	leaq	64(%rbp), %rax	 #, tmp136
-	movdqa	-64(%rbp), %xmm1	 # %sfp, D.272832
-	movaps	%xmm1, 0(%rbp)	 # D.272832,
+	movdqa	-64(%rbp), %xmm1	 # %sfp, D.272835
+	movaps	%xmm1, 0(%rbp)	 # D.272835,
 	movq	%rbp, %rdx	 #, tmp137
 	movq	%rax, %rcx	 # tmp136,
 	call	_Z19wxEventFunctionCastI11wxTreeEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	64(%rbp), %rax	 # D.272833, tmp138
-	movq	72(%rbp), %rdx	 # D.272833,
+	movq	64(%rbp), %rax	 # D.272836, tmp138
+	movq	72(%rbp), %rdx	 # D.272836,
 	movq	%rax, 0(%rbp)	 # tmp138,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp139
@@ -17692,13 +17716,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -48(%rbp)	 # tmp158, %sfp
 	movq	$0, -40(%rbp)	 #, %sfp
 	leaq	80(%rbp), %rax	 #, tmp140
-	movdqa	-48(%rbp), %xmm2	 # %sfp, D.272834
-	movaps	%xmm2, 0(%rbp)	 # D.272834,
+	movdqa	-48(%rbp), %xmm2	 # %sfp, D.272837
+	movaps	%xmm2, 0(%rbp)	 # D.272837,
 	movq	%rbp, %rdx	 #, tmp141
 	movq	%rax, %rcx	 # tmp140,
 	call	_Z19wxEventFunctionCastI14wxCommandEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	80(%rbp), %rax	 # D.272835, tmp142
-	movq	88(%rbp), %rdx	 # D.272835,
+	movq	80(%rbp), %rax	 # D.272838, tmp142
+	movq	88(%rbp), %rdx	 # D.272838,
 	movq	%rax, 0(%rbp)	 # tmp142,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp143
@@ -17727,13 +17751,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -32(%rbp)	 # tmp160, %sfp
 	movq	$0, -24(%rbp)	 #, %sfp
 	leaq	96(%rbp), %rax	 #, tmp144
-	movdqa	-32(%rbp), %xmm3	 # %sfp, D.272836
-	movaps	%xmm3, 0(%rbp)	 # D.272836,
+	movdqa	-32(%rbp), %xmm3	 # %sfp, D.272839
+	movaps	%xmm3, 0(%rbp)	 # D.272839,
 	movq	%rbp, %rdx	 #, tmp145
 	movq	%rax, %rcx	 # tmp144,
 	call	_Z19wxEventFunctionCastI14wxCommandEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	96(%rbp), %rax	 # D.272837, tmp146
-	movq	104(%rbp), %rdx	 # D.272837,
+	movq	96(%rbp), %rax	 # D.272840, tmp146
+	movq	104(%rbp), %rdx	 # D.272840,
 	movq	%rax, 0(%rbp)	 # tmp146,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp147
@@ -17762,13 +17786,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -16(%rbp)	 # tmp162, %sfp
 	movq	$0, -8(%rbp)	 #, %sfp
 	leaq	112(%rbp), %rax	 #, tmp148
-	movdqa	-16(%rbp), %xmm4	 # %sfp, D.272838
-	movaps	%xmm4, 0(%rbp)	 # D.272838,
+	movdqa	-16(%rbp), %xmm4	 # %sfp, D.272841
+	movaps	%xmm4, 0(%rbp)	 # D.272841,
 	movq	%rbp, %rdx	 #, tmp149
 	movq	%rax, %rcx	 # tmp148,
 	call	_Z19wxEventFunctionCastI14wxCommandEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	112(%rbp), %rax	 # D.272839, tmp150
-	movq	120(%rbp), %rdx	 # D.272839,
+	movq	112(%rbp), %rax	 # D.272842, tmp150
+	movq	120(%rbp), %rdx	 # D.272842,
 	movq	%rax, 0(%rbp)	 # tmp150,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp151
@@ -17803,8 +17827,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	.loc 26 10 1 is_stmt 1 discriminator 8
 	leaq	__tcf_2(%rip), %rcx	 #,
 	call	atexit	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1360: }
-	.loc 26 1360 1 discriminator 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1362: }
+	.loc 26 1362 1 discriminator 8
 	jmp	.L588	 #
 .L593:
 	movq	%rax, %rsi	 #, tmp153
@@ -17826,15 +17850,15 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_ZN17wxEventTableEntryD1Ev	 #
 	jmp	.L592	 #
 .L591:
-	movq	%rsi, %rax	 # tmp153, D.274084
-	movq	%rax, %rcx	 # D.274084,
+	movq	%rsi, %rax	 # tmp153, D.274087
+	movq	%rax, %rcx	 # D.274087,
 .LEHB106:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE106:
 .L588:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1360: }
-	.loc 26 1360 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1362: }
+	.loc 26 1362 1 is_stmt 1
 	addq	$256, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -18049,7 +18073,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 10 431 35
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_21(D)->D.264454._vptr.wxEventFunctor, _1
+	movq	(%rax), %rax	 # this_21(D)->D.264455._vptr.wxEventFunctor, _1
 	subq	$8, %rax	 #, _2
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 10 431 32
@@ -18421,7 +18445,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEvent
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 10 431 35
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_21(D)->D.264366._vptr.wxEventFunctor, _1
+	movq	(%rax), %rax	 # this_21(D)->D.264367._vptr.wxEventFunctor, _1
 	subq	$8, %rax	 #, _2
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 10 431 32
@@ -18829,7 +18853,7 @@ _ZTSN9wxPrivate11HandlerImplI12wxEvtHandler7wxEventLb1EEE:
 	.seh_proc	_GLOBAL__sub_I__ZN15T100ProjectTree13sm_eventTableE
 _GLOBAL__sub_I__ZN15T100ProjectTree13sm_eventTableE:
 .LFB21705:
-	.loc 26 1360 1
+	.loc 26 1362 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -18841,8 +18865,8 @@ _GLOBAL__sub_I__ZN15T100ProjectTree13sm_eventTableE:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1360: }
-	.loc 26 1360 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1362: }
+	.loc 26 1362 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -88472,7 +88496,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x20
 	.ascii "OnItemMenu\0"
 	.byte	0x1a
-	.word	0x517
+	.word	0x519
 	.byte	0xa
 	.ascii "_ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent\0"
 	.byte	0x2
@@ -88486,7 +88510,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x20
 	.ascii "OnItemChanged\0"
 	.byte	0x1a
-	.word	0x522
+	.word	0x524
 	.byte	0xa
 	.ascii "_ZN15T100ProjectTree13OnItemChangedER11wxTreeEvent\0"
 	.byte	0x2
@@ -88500,7 +88524,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x20
 	.ascii "OnItemExpanding\0"
 	.byte	0x1a
-	.word	0x538
+	.word	0x53a
 	.byte	0xa
 	.ascii "_ZN15T100ProjectTree15OnItemExpandingER11wxTreeEvent\0"
 	.byte	0x2
@@ -88514,7 +88538,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x20
 	.ascii "OnItemActivated\0"
 	.byte	0x1a
-	.word	0x52d
+	.word	0x52f
 	.byte	0xa
 	.ascii "_ZN15T100ProjectTree15OnItemActivatedER11wxTreeEvent\0"
 	.byte	0x2
@@ -88528,7 +88552,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x20
 	.ascii "OnProjectCreate\0"
 	.byte	0x1a
-	.word	0x543
+	.word	0x545
 	.byte	0xa
 	.ascii "_ZN15T100ProjectTree15OnProjectCreateER14wxCommandEvent\0"
 	.byte	0x2
@@ -88542,7 +88566,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x20
 	.ascii "OnFileCreate\0"
 	.byte	0x1a
-	.word	0x548
+	.word	0x54a
 	.byte	0xa
 	.ascii "_ZN15T100ProjectTree12OnFileCreateER14wxCommandEvent\0"
 	.byte	0x2
@@ -88556,7 +88580,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x20
 	.ascii "OnFolderCreate\0"
 	.byte	0x1a
-	.word	0x54d
+	.word	0x54f
 	.byte	0xa
 	.ascii "_ZN15T100ProjectTree14OnFolderCreateER14wxCommandEvent\0"
 	.byte	0x2
@@ -88626,7 +88650,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x55
 	.ascii "AppendFile\0"
 	.byte	0x1a
-	.word	0x4ff
+	.word	0x503
 	.byte	0xa
 	.ascii "_ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo\0"
 	.long	0x503e3
@@ -88641,7 +88665,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x55
 	.ascii "AppendFolder\0"
 	.byte	0x1a
-	.word	0x509
+	.word	0x50d
 	.byte	0xa
 	.ascii "_ZN15T100ProjectTree12AppendFolderE12wxTreeItemIdP14T100FolderInfo\0"
 	.long	0x50450
@@ -91473,7 +91497,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x32
 	.ascii "__initialize_p\0"
 	.byte	0x1a
-	.word	0x550
+	.word	0x552
 	.byte	0x1
 	.long	0x23a
 	.uleb128 0x2
@@ -91482,7 +91506,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x32
 	.ascii "__priority\0"
 	.byte	0x1a
-	.word	0x550
+	.word	0x552
 	.byte	0x1
 	.long	0x23a
 	.uleb128 0x2
@@ -93376,7 +93400,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF452
 	.byte	0x1a
-	.word	0x54d
+	.word	0x54f
 	.byte	0x3a
 	.long	0x44ca2
 	.uleb128 0x2
@@ -93400,7 +93424,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF452
 	.byte	0x1a
-	.word	0x548
+	.word	0x54a
 	.byte	0x38
 	.long	0x44ca2
 	.uleb128 0x2
@@ -93424,7 +93448,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF452
 	.byte	0x1a
-	.word	0x543
+	.word	0x545
 	.byte	0x3b
 	.long	0x44ca2
 	.uleb128 0x2
@@ -93448,7 +93472,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF452
 	.byte	0x1a
-	.word	0x538
+	.word	0x53a
 	.byte	0x38
 	.long	0x47197
 	.uleb128 0x2
@@ -93457,7 +93481,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x48
 	.secrel32	.LASF25
 	.byte	0x1a
-	.word	0x53a
+	.word	0x53c
 	.byte	0x1d
 	.long	0x554bd
 	.uleb128 0x2
@@ -93486,7 +93510,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF452
 	.byte	0x1a
-	.word	0x52d
+	.word	0x52f
 	.byte	0x38
 	.long	0x47197
 	.uleb128 0x2
@@ -93495,7 +93519,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x48
 	.secrel32	.LASF25
 	.byte	0x1a
-	.word	0x52f
+	.word	0x531
 	.byte	0x1d
 	.long	0x554bd
 	.uleb128 0x2
@@ -93519,7 +93543,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF452
 	.byte	0x1a
-	.word	0x522
+	.word	0x524
 	.byte	0x36
 	.long	0x47197
 	.uleb128 0x2
@@ -93528,7 +93552,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x48
 	.secrel32	.LASF25
 	.byte	0x1a
-	.word	0x524
+	.word	0x526
 	.byte	0x1d
 	.long	0x554bd
 	.uleb128 0x2
@@ -93552,7 +93576,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF452
 	.byte	0x1a
-	.word	0x517
+	.word	0x519
 	.byte	0x33
 	.long	0x47197
 	.uleb128 0x2
@@ -93561,7 +93585,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x48
 	.secrel32	.LASF25
 	.byte	0x1a
-	.word	0x519
+	.word	0x51b
 	.byte	0x1d
 	.long	0x554bd
 	.uleb128 0x2
@@ -93585,7 +93609,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF464
 	.byte	0x1a
-	.word	0x509
+	.word	0x50d
 	.byte	0x35
 	.long	0x46a4e
 	.uleb128 0x2
@@ -93594,7 +93618,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF465
 	.byte	0x1a
-	.word	0x509
+	.word	0x50d
 	.byte	0x4d
 	.long	0x49218
 	.uleb128 0x2
@@ -93603,7 +93627,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x48
 	.secrel32	.LASF25
 	.byte	0x1a
-	.word	0x50b
+	.word	0x50f
 	.byte	0x19
 	.long	0x55624
 	.uleb128 0x2
@@ -93641,7 +93665,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF464
 	.byte	0x1a
-	.word	0x4ff
+	.word	0x503
 	.byte	0x33
 	.long	0x46a4e
 	.uleb128 0x2
@@ -93650,7 +93674,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x27
 	.secrel32	.LASF465
 	.byte	0x1a
-	.word	0x4ff
+	.word	0x503
 	.byte	0x49
 	.long	0x4913b
 	.uleb128 0x2
@@ -93659,7 +93683,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x48
 	.secrel32	.LASF25
 	.byte	0x1a
-	.word	0x501
+	.word	0x505
 	.byte	0x19
 	.long	0x556a5
 	.uleb128 0x2
@@ -93668,7 +93692,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x48
 	.secrel32	.LASF463
 	.byte	0x1a
-	.word	0x506
+	.word	0x50a
 	.byte	0x19
 	.long	0x46a4e
 	.uleb128 0x3
@@ -106162,6 +106186,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.def	_ZN17T100WorkSpaceDataC1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100ProjectDataC1EP15T100ProjectInfo;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100ProjectInfo8GetLabelB5cxx11Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN15T100ProjectData8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
+	.def	_ZN15T100ProjectInfo7GetPathB5cxx11Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN15T100ProjectData7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN12T100FileDataC1EP12T100FileInfo;	.scl	2;	.type	32;	.endef
 	.def	_ZN12T100FileInfo11GetFileNameB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN12T100FileData8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef

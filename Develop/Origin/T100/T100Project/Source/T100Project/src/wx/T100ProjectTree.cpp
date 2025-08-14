@@ -1273,6 +1273,10 @@ T100VOID T100ProjectTree::AppendProject(wxTreeItemId parent, T100ProjectInfo* in
     T100ProjectData*    data    = T100NEW T100ProjectData(info);
     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
 
+    data->SetLabel(info->GetLabel());
+    data->SetPath(info->GetPath());
+    data->SetId(item);
+
     SetItemHasChildren(item, T100TRUE);
 }
 
@@ -1289,12 +1293,10 @@ T100VOID T100ProjectTree::AppendFile(wxTreeItemId parent, T100FileInfo* info)
 T100VOID T100ProjectTree::AppendFolder(wxTreeItemId parent, T100FolderInfo* info)
 {
     T100FolderData*     data    = T100NEW T100FolderData(info);
+    wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
 
     data->SetLabel(info->GetLabel());
     data->SetPath(info->GetPath());
-
-    wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
-
     data->SetId(item);
 
     SetItemHasChildren(item, T100TRUE);

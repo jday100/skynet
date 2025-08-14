@@ -303,6 +303,11 @@ T100VOID T100ProjectSkeletal::OnProjectSelected()
     m_view->ProjectSelected();
 }
 
+T100VOID T100ProjectSkeletal::OnWorkSpaceSelected()
+{
+    m_view->WorkSpaceSelected();
+}
+
 T100VOID T100ProjectSkeletal::OnPageClosed()
 {
     m_serve->GetProjectServe()->GetFileLogic().Close(T100NULL);

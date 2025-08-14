@@ -172,8 +172,18 @@ T100VOID T100ProjectViewMainMenu::uninit()
 
 }
 
+T100VOID T100ProjectViewMainMenu::WorkSpaceSelected()
+{
+    m_workClose->Enable(T100TRUE);
+
+    m_projectNew->Enable(T100TRUE);
+}
+
 T100VOID T100ProjectViewMainMenu::ProjectSelected()
 {
+    m_projectClose->Enable(T100TRUE);
+    m_projectSaveAs->Enable(T100TRUE);
+
     m_fileNew->Enable(T100TRUE);
 }
 

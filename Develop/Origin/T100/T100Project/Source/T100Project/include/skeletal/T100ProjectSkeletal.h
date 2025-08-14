@@ -58,6 +58,8 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnProjectOpen(T100ProjectData*);
         T100VOID                    OnProjectSelected();
 
+        T100VOID                    OnWorkSpaceSelected();
+
         T100VOID                    OnPageClosed();
 
         T100VOID                    OnItemExpanding();

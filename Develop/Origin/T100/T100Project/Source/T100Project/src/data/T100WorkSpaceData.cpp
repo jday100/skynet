@@ -1,6 +1,7 @@
 #include "T100WorkSpaceData.h"
 
 #include "T100ProjectCommon.h"
+#include "T100ProjectInvoking.h"
 
 T100WorkSpaceData::T100WorkSpaceData() :
     T100TreeItemData()
@@ -26,7 +27,7 @@ wxMenu* T100WorkSpaceData::ShowMenu()
 
 T100VOID T100WorkSpaceData::OnItemChanged()
 {
-
+    T100ProjectInvoking::OnWorkSpaceSelected();
 }
 
 T100VOID T100WorkSpaceData::OnItemActivated()
