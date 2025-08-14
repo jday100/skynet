@@ -26,6 +26,7 @@ class T100MainPanel : public wxAuiNotebook
 
     private:
         T100VOID                    OnPageChanged(wxAuiNotebookEvent&);
+        T100VOID                    OnPageClosed(wxAuiNotebookEvent&);
 
         DECLARE_EVENT_TABLE()
 };

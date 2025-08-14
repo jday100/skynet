@@ -53,10 +53,24 @@ T100BOOL T100FileLogic::Open(const T100WSTRING& path, T100FileInfo* info)
 
     info->SetPath(path);
 
+    T100FileInfo*   value   = T100NULL;
+
+    value = m_openedFiles[path];
+
+    if(value){
+        return T100FALSE;
+    }
+
+    m_openedFiles[path] = info;
+
     return T100TRUE;
 }
 
-T100VOID T100FileLogic::Close(T100FileInfo*)
+T100VOID T100FileLogic::Close(T100FileInfo* info)
 {
+    if(info){
 
+    }else{
+        m_openedFiles.clear();
+    }
 }

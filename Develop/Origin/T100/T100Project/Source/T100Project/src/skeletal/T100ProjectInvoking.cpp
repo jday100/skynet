@@ -191,6 +191,11 @@ T100VOID T100ProjectInvoking::OnProjectSelected()
     m_skeletal->OnProjectSelected();
 }
 
+T100VOID T100ProjectInvoking::OnPageClosed()
+{
+    m_skeletal->OnPageClosed();
+}
+
 T100VOID T100ProjectInvoking::OnItemExpanding()
 {
     m_skeletal->OnItemExpanding();

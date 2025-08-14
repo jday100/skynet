@@ -1,9 +1,11 @@
 #include "T100MainPanel.h"
 
 #include "T100Editor.h"
+#include "T100ProjectInvoking.h"
 
 BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
     EVT_AUINOTEBOOK_PAGE_CHANGED(wxID_ANY, OnPageChanged)
+    EVT_AUINOTEBOOK_PAGE_CLOSED(wxID_ANY, OnPageClosed)
 END_EVENT_TABLE()
 
 T100MainPanel::T100MainPanel(wxWindow* parent,
@@ -59,4 +61,9 @@ T100VOID T100MainPanel::OnPageChanged(wxAuiNotebookEvent& event)
     }else{
         m_current   = dynamic_cast<T100Editor*>(GetPage(index));
     }
+}
+
+T100VOID T100MainPanel::OnPageClosed(wxAuiNotebookEvent& event)
+{
+    T100ProjectInvoking::OnPageClosed();
 }

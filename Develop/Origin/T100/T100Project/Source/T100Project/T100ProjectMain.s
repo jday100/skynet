@@ -357,8 +357,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.259987
-	movq	%rax, %rcx	 # D.259987,
+	movq	%rbx, %rax	 # tmp96, D.259988
+	movq	%rax, %rcx	 # D.259988,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -627,8 +627,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.259991
-	movq	%rax, %rcx	 # D.259991,
+	movq	%rbx, %rax	 # tmp103, D.259992
+	movq	%rax, %rcx	 # D.259992,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -735,8 +735,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.259993
-	movq	%rax, %rcx	 # D.259993,
+	movq	%rbx, %rax	 # tmp99, D.259994
+	movq	%rax, %rcx	 # D.259994,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2911,7 +2911,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 12 337 27
-	movq	-8(%rbp), %rax	 # D.121899, D.259476
+	movq	-8(%rbp), %rax	 # D.121899, D.259477
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 12 338 5
 	addq	$48, %rsp	 #,
@@ -3142,7 +3142,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 78
-	movq	-8(%rbp), %rax	 # D.121933, D.259498
+	movq	-8(%rbp), %rax	 # D.121933, D.259499
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 81
 	addq	$48, %rsp	 #,
@@ -3190,7 +3190,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 78
-	movq	-8(%rbp), %rax	 # D.121935, D.259495
+	movq	-8(%rbp), %rax	 # D.121935, D.259496
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 81
 	addq	$48, %rsp	 #,
@@ -3377,7 +3377,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 12 532 77
-	movq	-72(%rbp), %rax	 # D.121977, D.259471
+	movq	-72(%rbp), %rax	 # D.121977, D.259472
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 12 533 5
 	addq	$72, %rsp	 #,
@@ -4632,7 +4632,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.259384
+	movq	(%rax), %rax	 # wxDefaultSize, D.259385
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 72
 	popq	%rbp	 #
@@ -4810,8 +4810,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.260011
-	movq	%rax, %rcx	 # D.260011,
+	movq	%rbx, %rax	 # tmp97, D.260012
+	movq	%rax, %rcx	 # D.260012,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5885,8 +5885,8 @@ _ZN11wxStatusBarC1EP8wxWindowilRK8wxString:
 	movq	-48(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN15wxStatusBarBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp102, D.260014
-	movq	%rax, %rcx	 # D.260014,
+	movq	%rbx, %rax	 # tmp102, D.260015
+	movq	%rax, %rcx	 # D.260015,
 .LEHB13:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6181,8 +6181,8 @@ _ZN7wxFrameC2Ev:
 	movq	-64(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN11wxFrameBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp93, D.260016
-	movq	%rax, %rcx	 # D.260016,
+	movq	%rbx, %rax	 # tmp93, D.260017
+	movq	%rax, %rcx	 # D.260017,
 .LEHB16:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6402,8 +6402,8 @@ _ZN11wxImageListC1Eiibi:
 	movq	-48(%rbp), %rax	 # this, _4
 	movq	%rax, %rcx	 # _4,
 	call	_ZN8wxObjectD2Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.260018
-	movq	%rax, %rcx	 # D.260018,
+	movq	%rbx, %rax	 # tmp99, D.260019
+	movq	%rax, %rcx	 # D.260019,
 .LEHB18:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6635,8 +6635,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.260021
-	movq	%rax, %rcx	 # D.260021,
+	movq	%rsi, %rax	 # tmp98, D.260022
+	movq	%rax, %rcx	 # D.260022,
 .LEHB21:
 	call	_Unwind_Resume	 #
 .LEHE21:
@@ -6760,8 +6760,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.260022
-	movq	%rax, %rcx	 # D.260022,
+	movq	%rbx, %rax	 # tmp106, D.260023
+	movq	%rax, %rcx	 # D.260023,
 .LEHB25:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7000,8 +7000,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.260024
-	movq	%rax, %rcx	 # D.260024,
+	movq	%rbx, %rax	 # tmp98, D.260025
+	movq	%rax, %rcx	 # D.260025,
 .LEHB29:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7459,8 +7459,8 @@ _ZN20wxMDIParentFrameBase14OnCreateClientEv:
 	movl	$584, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.260027
-	movq	%rax, %rcx	 # D.260027,
+	movq	%rsi, %rax	 # tmp93, D.260028
+	movq	%rax, %rcx	 # D.260028,
 .LEHB32:
 	call	_Unwind_Resume	 #
 .LEHE32:
@@ -7744,8 +7744,8 @@ _Z11wxbuildinfo17wxbuildinfoformat:
 	movq	%rax, %rbx	 #, tmp88
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp88, D.260030
-	movq	%rax, %rcx	 # D.260030,
+	movq	%rbx, %rax	 # tmp88, D.260031
+	movq	%rax, %rcx	 # D.260031,
 .LEHB35:
 	call	_Unwind_Resume	 #
 .LEHE35:
@@ -11582,8 +11582,8 @@ _ZN16T100ProjectFrameC2EP8wxWindowi:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1196:     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100ProjectFrame::OnQuit);
 	.loc 26 1196 12 discriminator 3
 	movq	1184(%rbp), %rdi	 # this, _56
-	leaq	_ZN16T100ProjectFrame6OnQuitER14wxCommandEvent(%rip), %r14	 #, D.259108
-	movl	$0, %r15d	 #, D.259108
+	leaq	_ZN16T100ProjectFrame6OnQuitER14wxCommandEvent(%rip), %r14	 #, D.259109
+	movl	$0, %r15d	 #, D.259109
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1196:     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100ProjectFrame::OnQuit);
 	.loc 26 1196 100 discriminator 3
 	movq	.refptr.wxEVT_MENU(%rip), %rcx	 #,
@@ -11592,8 +11592,8 @@ _ZN16T100ProjectFrameC2EP8wxWindowi:
 	.loc 26 1196 12 discriminator 3
 	movl	(%rax), %ecx	 # *_57, _58
 	movl	_ZN16T100ProjectFrame10idMenuQuitE(%rip), %eax	 # idMenuQuit, idMenuQuit.12_59
-	movq	%r14, -48(%rbp)	 # D.259108,
-	movq	%r15, -40(%rbp)	 # D.259108,
+	movq	%r14, -48(%rbp)	 # D.259109,
+	movq	%r15, -40(%rbp)	 # D.259109,
 	leaq	-48(%rbp), %rdx	 #, tmp337
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -11606,8 +11606,8 @@ _ZN16T100ProjectFrameC2EP8wxWindowi:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1197:     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100ProjectFrame::OnAbout);
 	.loc 26 1197 12
 	movq	1184(%rbp), %rdi	 # this, _60
-	leaq	_ZN16T100ProjectFrame7OnAboutER14wxCommandEvent(%rip), %r12	 #, D.259109
-	movl	$0, %r13d	 #, D.259109
+	leaq	_ZN16T100ProjectFrame7OnAboutER14wxCommandEvent(%rip), %r12	 #, D.259110
+	movl	$0, %r13d	 #, D.259110
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1197:     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100ProjectFrame::OnAbout);
 	.loc 26 1197 102
 	movq	.refptr.wxEVT_MENU(%rip), %rcx	 #,
@@ -11616,8 +11616,8 @@ _ZN16T100ProjectFrameC2EP8wxWindowi:
 	.loc 26 1197 12
 	movl	(%rax), %ecx	 # *_61, _62
 	movl	_ZN16T100ProjectFrame11idMenuAboutE(%rip), %eax	 # idMenuAbout, idMenuAbout.13_63
-	movq	%r12, -48(%rbp)	 # D.259109,
-	movq	%r13, -40(%rbp)	 # D.259109,
+	movq	%r12, -48(%rbp)	 # D.259110,
+	movq	%r13, -40(%rbp)	 # D.259110,
 	leaq	-48(%rbp), %rdx	 #, tmp338
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -11629,8 +11629,8 @@ _ZN16T100ProjectFrameC2EP8wxWindowi:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1198:     Connect(wxEVT_SIZE,(wxObjectEventFunction)&T100ProjectFrame::OnResize);
 	.loc 26 1198 12
 	movq	1184(%rbp), %rdi	 # this, _64
-	leaq	_ZN16T100ProjectFrame8OnResizeER11wxSizeEvent(%rip), %rbx	 #, D.259110
-	movl	$0, %esi	 #, D.259110
+	leaq	_ZN16T100ProjectFrame8OnResizeER11wxSizeEvent(%rip), %rbx	 #, D.259111
+	movl	$0, %esi	 #, D.259111
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1198:     Connect(wxEVT_SIZE,(wxObjectEventFunction)&T100ProjectFrame::OnResize);
 	.loc 26 1198 74
 	movq	.refptr.wxEVT_SIZE(%rip), %rcx	 #,
@@ -11638,8 +11638,8 @@ _ZN16T100ProjectFrameC2EP8wxWindowi:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1198:     Connect(wxEVT_SIZE,(wxObjectEventFunction)&T100ProjectFrame::OnResize);
 	.loc 26 1198 12
 	movl	(%rax), %eax	 # *_65, _66
-	movq	%rbx, -48(%rbp)	 # D.259110,
-	movq	%rsi, -40(%rbp)	 # D.259110,
+	movq	%rbx, -48(%rbp)	 # D.259111,
+	movq	%rsi, -40(%rbp)	 # D.259111,
 	leaq	-48(%rbp), %rdx	 #, tmp339
 	movq	$0, 32(%rsp)	 #,
 	movl	$0, %r9d	 #,
@@ -12036,8 +12036,8 @@ _ZN16T100ProjectFrameC2EP8wxWindowi:
 	movq	1184(%rbp), %rax	 # this, _67
 	movq	%rax, %rcx	 # _67,
 	call	_ZN7wxFrameD2Ev	 #
-	movq	%rbx, %rax	 # tmp346, D.260736
-	movq	%rax, %rcx	 # D.260736,
+	movq	%rbx, %rax	 # tmp346, D.260737
+	movq	%rax, %rcx	 # D.260737,
 .LEHB112:
 	call	_Unwind_Resume	 #
 	nop	
@@ -12533,8 +12533,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1214:     Connect(T100PROJECT_MENU_WORKSPACE_NEW,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceNew);
 	.loc 26 1214 12
 	movq	400(%rbp), %rdi	 # this, _1
-	leaq	_ZN16T100ProjectFrame14OnWorkSpaceNewER14wxCommandEvent(%rip), %rbx	 #, D.259300
-	movl	$0, %esi	 #, D.259300
+	leaq	_ZN16T100ProjectFrame14OnWorkSpaceNewER14wxCommandEvent(%rip), %rbx	 #, D.259301
+	movl	$0, %esi	 #, D.259301
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1214:     Connect(T100PROJECT_MENU_WORKSPACE_NEW,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceNew);
 	.loc 26 1214 134
 	movq	.refptr.wxEVT_MENU(%rip), %rcx	 #,
@@ -12542,8 +12542,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1214:     Connect(T100PROJECT_MENU_WORKSPACE_NEW,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceNew);
 	.loc 26 1214 12
 	movl	(%rax), %edx	 # *_2, _3
-	movq	%rbx, 304(%rbp)	 # D.259300,
-	movq	%rsi, 312(%rbp)	 # D.259300,
+	movq	%rbx, 304(%rbp)	 # D.259301,
+	movq	%rsi, 312(%rbp)	 # D.259301,
 	leaq	304(%rbp), %rax	 #, tmp195
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12555,8 +12555,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1215:     Connect(T100PROJECT_MENU_WORKSPACE_OPEN,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceOpen);
 	.loc 26 1215 12
 	movq	400(%rbp), %rbx	 # this, _4
-	leaq	_ZN16T100ProjectFrame15OnWorkSpaceOpenER14wxCommandEvent(%rip), %r12	 #, D.259301
-	movl	$0, %r13d	 #, D.259301
+	leaq	_ZN16T100ProjectFrame15OnWorkSpaceOpenER14wxCommandEvent(%rip), %r12	 #, D.259302
+	movl	$0, %r13d	 #, D.259302
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1215:     Connect(T100PROJECT_MENU_WORKSPACE_OPEN,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceOpen);
 	.loc 26 1215 135
 	movq	.refptr.wxEVT_MENU(%rip), %rcx	 #,
@@ -12564,8 +12564,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1215:     Connect(T100PROJECT_MENU_WORKSPACE_OPEN,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceOpen);
 	.loc 26 1215 12
 	movl	(%rax), %edx	 # *_5, _6
-	movq	%r12, 304(%rbp)	 # D.259301,
-	movq	%r13, 312(%rbp)	 # D.259301,
+	movq	%r12, 304(%rbp)	 # D.259302,
+	movq	%r13, 312(%rbp)	 # D.259302,
 	leaq	304(%rbp), %rax	 #, tmp196
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12577,8 +12577,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1216:     Connect(T100PROJECT_MENU_WORKSPACE_CLOSE,   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceClose);
 	.loc 26 1216 12
 	movq	400(%rbp), %rbx	 # this, _7
-	leaq	_ZN16T100ProjectFrame16OnWorkSpaceCloseER14wxCommandEvent(%rip), %r14	 #, D.259302
-	movl	$0, %r15d	 #, D.259302
+	leaq	_ZN16T100ProjectFrame16OnWorkSpaceCloseER14wxCommandEvent(%rip), %r14	 #, D.259303
+	movl	$0, %r15d	 #, D.259303
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1216:     Connect(T100PROJECT_MENU_WORKSPACE_CLOSE,   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceClose);
 	.loc 26 1216 136
 	movq	.refptr.wxEVT_MENU(%rip), %rcx	 #,
@@ -12586,8 +12586,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1216:     Connect(T100PROJECT_MENU_WORKSPACE_CLOSE,   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceClose);
 	.loc 26 1216 12
 	movl	(%rax), %edx	 # *_8, _9
-	movq	%r14, 304(%rbp)	 # D.259302,
-	movq	%r15, 312(%rbp)	 # D.259302,
+	movq	%r14, 304(%rbp)	 # D.259303,
+	movq	%r15, 312(%rbp)	 # D.259303,
 	leaq	304(%rbp), %rax	 #, tmp197
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12609,8 +12609,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1217:     Connect(T100PROJECT_MENU_WORKSPACE_SAVE,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceSave);
 	.loc 26 1217 12
 	movl	(%rax), %edx	 # *_11, _12
-	movdqa	-80(%rbp), %xmm0	 # %sfp, D.259303
-	movaps	%xmm0, 304(%rbp)	 # D.259303,
+	movdqa	-80(%rbp), %xmm0	 # %sfp, D.259304
+	movaps	%xmm0, 304(%rbp)	 # D.259304,
 	leaq	304(%rbp), %rax	 #, tmp198
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12632,8 +12632,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1218:     Connect(T100PROJECT_MENU_WORKSPACE_SAVE_AS, wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceSaveAs);
 	.loc 26 1218 12
 	movl	(%rax), %edx	 # *_14, _15
-	movdqa	-64(%rbp), %xmm1	 # %sfp, D.259304
-	movaps	%xmm1, 304(%rbp)	 # D.259304,
+	movdqa	-64(%rbp), %xmm1	 # %sfp, D.259305
+	movaps	%xmm1, 304(%rbp)	 # D.259305,
 	leaq	304(%rbp), %rax	 #, tmp199
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12655,8 +12655,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1219:     Connect(T100PROJECT_MENU_WORKSPACE_QUIT,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnQuit);
 	.loc 26 1219 12
 	movl	(%rax), %edx	 # *_17, _18
-	movdqa	-48(%rbp), %xmm2	 # %sfp, D.259305
-	movaps	%xmm2, 304(%rbp)	 # D.259305,
+	movdqa	-48(%rbp), %xmm2	 # %sfp, D.259306
+	movaps	%xmm2, 304(%rbp)	 # D.259306,
 	leaq	304(%rbp), %rax	 #, tmp200
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12678,8 +12678,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1220:     Connect(T100PROJECT_MENU_PROJECT_NEW,       wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectNew);
 	.loc 26 1220 12
 	movl	(%rax), %edx	 # *_20, _21
-	movdqa	-32(%rbp), %xmm3	 # %sfp, D.259306
-	movaps	%xmm3, 304(%rbp)	 # D.259306,
+	movdqa	-32(%rbp), %xmm3	 # %sfp, D.259307
+	movaps	%xmm3, 304(%rbp)	 # D.259307,
 	leaq	304(%rbp), %rax	 #, tmp201
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12701,8 +12701,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1221:     Connect(T100PROJECT_MENU_PROJECT_OPEN,      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectOpen);
 	.loc 26 1221 12
 	movl	(%rax), %edx	 # *_23, _24
-	movdqa	-16(%rbp), %xmm4	 # %sfp, D.259307
-	movaps	%xmm4, 304(%rbp)	 # D.259307,
+	movdqa	-16(%rbp), %xmm4	 # %sfp, D.259308
+	movaps	%xmm4, 304(%rbp)	 # D.259308,
 	leaq	304(%rbp), %rax	 #, tmp202
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12724,8 +12724,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1222:     Connect(T100PROJECT_MENU_PROJECT_CLOSE,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectClose);
 	.loc 26 1222 12
 	movl	(%rax), %edx	 # *_26, _27
-	movdqa	0(%rbp), %xmm5	 # %sfp, D.259308
-	movaps	%xmm5, 304(%rbp)	 # D.259308,
+	movdqa	0(%rbp), %xmm5	 # %sfp, D.259309
+	movaps	%xmm5, 304(%rbp)	 # D.259309,
 	leaq	304(%rbp), %rax	 #, tmp203
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12747,8 +12747,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1223:     Connect(T100PROJECT_MENU_PROJECT_SAVE,      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectSave);
 	.loc 26 1223 12
 	movl	(%rax), %edx	 # *_29, _30
-	movdqa	16(%rbp), %xmm0	 # %sfp, D.259309
-	movaps	%xmm0, 304(%rbp)	 # D.259309,
+	movdqa	16(%rbp), %xmm0	 # %sfp, D.259310
+	movaps	%xmm0, 304(%rbp)	 # D.259310,
 	leaq	304(%rbp), %rax	 #, tmp204
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12770,8 +12770,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1224:     Connect(T100PROJECT_MENU_PROJECT_SAVE_AS,   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectSaveAs);
 	.loc 26 1224 12
 	movl	(%rax), %edx	 # *_32, _33
-	movdqa	32(%rbp), %xmm1	 # %sfp, D.259310
-	movaps	%xmm1, 304(%rbp)	 # D.259310,
+	movdqa	32(%rbp), %xmm1	 # %sfp, D.259311
+	movaps	%xmm1, 304(%rbp)	 # D.259311,
 	leaq	304(%rbp), %rax	 #, tmp205
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12793,8 +12793,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1225:     Connect(T100PROJECT_MENU_FILE_NEW,          wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileNew);
 	.loc 26 1225 12
 	movl	(%rax), %edx	 # *_35, _36
-	movdqa	48(%rbp), %xmm2	 # %sfp, D.259311
-	movaps	%xmm2, 304(%rbp)	 # D.259311,
+	movdqa	48(%rbp), %xmm2	 # %sfp, D.259312
+	movaps	%xmm2, 304(%rbp)	 # D.259312,
 	leaq	304(%rbp), %rax	 #, tmp206
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12816,8 +12816,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1226:     Connect(T100PROJECT_MENU_FILE_OPEN,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileOpen);
 	.loc 26 1226 12
 	movl	(%rax), %edx	 # *_38, _39
-	movdqa	64(%rbp), %xmm3	 # %sfp, D.259312
-	movaps	%xmm3, 304(%rbp)	 # D.259312,
+	movdqa	64(%rbp), %xmm3	 # %sfp, D.259313
+	movaps	%xmm3, 304(%rbp)	 # D.259313,
 	leaq	304(%rbp), %rax	 #, tmp207
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12839,8 +12839,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1227:     Connect(T100PROJECT_MENU_FILE_CLOSE,        wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileClose);
 	.loc 26 1227 12
 	movl	(%rax), %edx	 # *_41, _42
-	movdqa	80(%rbp), %xmm4	 # %sfp, D.259313
-	movaps	%xmm4, 304(%rbp)	 # D.259313,
+	movdqa	80(%rbp), %xmm4	 # %sfp, D.259314
+	movaps	%xmm4, 304(%rbp)	 # D.259314,
 	leaq	304(%rbp), %rax	 #, tmp208
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12862,8 +12862,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1228:     Connect(T100PROJECT_MENU_FILE_SAVE,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileSave);
 	.loc 26 1228 12
 	movl	(%rax), %edx	 # *_44, _45
-	movdqa	96(%rbp), %xmm5	 # %sfp, D.259314
-	movaps	%xmm5, 304(%rbp)	 # D.259314,
+	movdqa	96(%rbp), %xmm5	 # %sfp, D.259315
+	movaps	%xmm5, 304(%rbp)	 # D.259315,
 	leaq	304(%rbp), %rax	 #, tmp209
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12885,8 +12885,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1229:     Connect(T100PROJECT_MENU_FILE_SAVE_AS,      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileSaveAs);
 	.loc 26 1229 12
 	movl	(%rax), %edx	 # *_47, _48
-	movdqa	112(%rbp), %xmm0	 # %sfp, D.259315
-	movaps	%xmm0, 304(%rbp)	 # D.259315,
+	movdqa	112(%rbp), %xmm0	 # %sfp, D.259316
+	movaps	%xmm0, 304(%rbp)	 # D.259316,
 	leaq	304(%rbp), %rax	 #, tmp210
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12908,8 +12908,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1230:     Connect(T100PROJECT_MENU_EDIT_UNDO,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditUndo);
 	.loc 26 1230 12
 	movl	(%rax), %edx	 # *_50, _51
-	movdqa	128(%rbp), %xmm1	 # %sfp, D.259316
-	movaps	%xmm1, 304(%rbp)	 # D.259316,
+	movdqa	128(%rbp), %xmm1	 # %sfp, D.259317
+	movaps	%xmm1, 304(%rbp)	 # D.259317,
 	leaq	304(%rbp), %rax	 #, tmp211
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12931,8 +12931,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1231:     Connect(T100PROJECT_MENU_EDIT_REDO,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditRedo);
 	.loc 26 1231 12
 	movl	(%rax), %edx	 # *_53, _54
-	movdqa	144(%rbp), %xmm2	 # %sfp, D.259317
-	movaps	%xmm2, 304(%rbp)	 # D.259317,
+	movdqa	144(%rbp), %xmm2	 # %sfp, D.259318
+	movaps	%xmm2, 304(%rbp)	 # D.259318,
 	leaq	304(%rbp), %rax	 #, tmp212
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12954,8 +12954,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1232:     Connect(T100PROJECT_MENU_EDIT_CUT,          wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditCut);
 	.loc 26 1232 12
 	movl	(%rax), %edx	 # *_56, _57
-	movdqa	160(%rbp), %xmm3	 # %sfp, D.259318
-	movaps	%xmm3, 304(%rbp)	 # D.259318,
+	movdqa	160(%rbp), %xmm3	 # %sfp, D.259319
+	movaps	%xmm3, 304(%rbp)	 # D.259319,
 	leaq	304(%rbp), %rax	 #, tmp213
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -12977,8 +12977,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1233:     Connect(T100PROJECT_MENU_EDIT_COPY,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditCopy);
 	.loc 26 1233 12
 	movl	(%rax), %edx	 # *_59, _60
-	movdqa	176(%rbp), %xmm4	 # %sfp, D.259319
-	movaps	%xmm4, 304(%rbp)	 # D.259319,
+	movdqa	176(%rbp), %xmm4	 # %sfp, D.259320
+	movaps	%xmm4, 304(%rbp)	 # D.259320,
 	leaq	304(%rbp), %rax	 #, tmp214
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -13000,8 +13000,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1234:     Connect(T100PROJECT_MENU_EDIT_PASTE,        wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditPaste);
 	.loc 26 1234 12
 	movl	(%rax), %edx	 # *_62, _63
-	movdqa	192(%rbp), %xmm5	 # %sfp, D.259320
-	movaps	%xmm5, 304(%rbp)	 # D.259320,
+	movdqa	192(%rbp), %xmm5	 # %sfp, D.259321
+	movaps	%xmm5, 304(%rbp)	 # D.259321,
 	leaq	304(%rbp), %rax	 #, tmp215
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -13023,8 +13023,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1235:     Connect(T100PROJECT_MENU_SEARCH_FIND,       wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchFind);
 	.loc 26 1235 12
 	movl	(%rax), %edx	 # *_65, _66
-	movdqa	208(%rbp), %xmm0	 # %sfp, D.259321
-	movaps	%xmm0, 304(%rbp)	 # D.259321,
+	movdqa	208(%rbp), %xmm0	 # %sfp, D.259322
+	movaps	%xmm0, 304(%rbp)	 # D.259322,
 	leaq	304(%rbp), %rax	 #, tmp216
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -13046,8 +13046,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1236:     Connect(T100PROJECT_MENU_SEARCH_REPLACE,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchReplace);
 	.loc 26 1236 12
 	movl	(%rax), %edx	 # *_68, _69
-	movdqa	224(%rbp), %xmm1	 # %sfp, D.259322
-	movaps	%xmm1, 304(%rbp)	 # D.259322,
+	movdqa	224(%rbp), %xmm1	 # %sfp, D.259323
+	movaps	%xmm1, 304(%rbp)	 # D.259323,
 	leaq	304(%rbp), %rax	 #, tmp217
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -13069,8 +13069,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1237:     Connect(T100PROJECT_MENU_COMPILE_BUILD,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileBuild);
 	.loc 26 1237 12
 	movl	(%rax), %edx	 # *_71, _72
-	movdqa	240(%rbp), %xmm2	 # %sfp, D.259323
-	movaps	%xmm2, 304(%rbp)	 # D.259323,
+	movdqa	240(%rbp), %xmm2	 # %sfp, D.259324
+	movaps	%xmm2, 304(%rbp)	 # D.259324,
 	leaq	304(%rbp), %rax	 #, tmp218
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -13092,8 +13092,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1238:     Connect(T100PROJECT_MENU_SETUP_EDITOR,      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupEditor);
 	.loc 26 1238 12
 	movl	(%rax), %edx	 # *_74, _75
-	movdqa	256(%rbp), %xmm3	 # %sfp, D.259324
-	movaps	%xmm3, 304(%rbp)	 # D.259324,
+	movdqa	256(%rbp), %xmm3	 # %sfp, D.259325
+	movaps	%xmm3, 304(%rbp)	 # D.259325,
 	leaq	304(%rbp), %rax	 #, tmp219
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -13115,8 +13115,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1239:     Connect(T100PROJECT_MENU_SETUP_COMPILER,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupCompiler);
 	.loc 26 1239 12
 	movl	(%rax), %edx	 # *_77, _78
-	movdqa	272(%rbp), %xmm4	 # %sfp, D.259325
-	movaps	%xmm4, 304(%rbp)	 # D.259325,
+	movdqa	272(%rbp), %xmm4	 # %sfp, D.259326
+	movaps	%xmm4, 304(%rbp)	 # D.259326,
 	leaq	304(%rbp), %rax	 #, tmp220
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -13138,8 +13138,8 @@ _ZN16T100ProjectFrame4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectMain.cpp:1240:     Connect(T100PROJECT_MENU_HELP_ABOUT,        wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnHelpAbout);
 	.loc 26 1240 12
 	movl	(%rax), %edx	 # *_80, _81
-	movdqa	288(%rbp), %xmm5	 # %sfp, D.259326
-	movaps	%xmm5, 304(%rbp)	 # D.259326,
+	movdqa	288(%rbp), %xmm5	 # %sfp, D.259327
+	movaps	%xmm5, 304(%rbp)	 # D.259327,
 	leaq	304(%rbp), %rax	 #, tmp221
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -14198,8 +14198,8 @@ _ZN16T100ProjectFrame7OnAboutER14wxCommandEvent:
 	leaq	-80(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp104, D.260779
-	movq	%rax, %rcx	 # D.260779,
+	movq	%rbx, %rax	 # tmp104, D.260780
+	movq	%rax, %rcx	 # D.260780,
 .LEHB116:
 	call	_Unwind_Resume	 #
 	nop	
@@ -14835,14 +14835,14 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 24
-	movzwl	16(%rax), %edx	 # _3->D.252689.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.252690.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.252689.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.252690.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 24
-	movzwl	16(%rax), %eax	 # _3->D.252689.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.252690.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 30
 	testw	%ax, %ax	 # _6
@@ -14972,11 +14972,11 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 17
-	movzwl	16(%rax), %edx	 # _3->D.252689.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.252690.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.252689.m_ref
+	movw	%dx, 16(%rax)	 # _6, _3->D.252690.m_ref
 	jmp	.L504	 #
 .L507:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
@@ -15017,7 +15017,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 1 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.252689.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.252690.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 1 171 72
 	popq	%rbp	 #
@@ -16766,8 +16766,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_ZN17wxEventTableEntryD1Ev	 #
 	jmp	.L529	 #
 .L528:
-	movq	%rdi, %rax	 # tmp100, D.260782
-	movq	%rax, %rcx	 # D.260782,
+	movq	%rdi, %rax	 # tmp100, D.260783
+	movq	%rax, %rcx	 # D.260783,
 .LEHB119:
 	call	_Unwind_Resume	 #
 	nop	

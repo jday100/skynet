@@ -177,7 +177,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 1 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.151591
+	setne	%al	 #, D.151592
 .LBE7:
 .LBE6:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -1286,8 +1286,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.151601
-	movq	%rax, %rcx	 # D.151601,
+	movq	%rsi, %rax	 # tmp98, D.151602
+	movq	%rax, %rcx	 # D.151602,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -1411,8 +1411,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.151602
-	movq	%rax, %rcx	 # D.151602,
+	movq	%rbx, %rax	 # tmp106, D.151603
+	movq	%rax, %rcx	 # D.151603,
 .LEHB6:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1607,8 +1607,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.151604
-	movq	%rax, %rcx	 # D.151604,
+	movq	%rbx, %rax	 # tmp98, D.151605
+	movq	%rax, %rcx	 # D.151605,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2208,8 +2208,8 @@ _ZN12T100FileData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.151606
-	movq	%rax, %rcx	 # D.151606,
+	movq	%rsi, %rax	 # tmp93, D.151607
+	movq	%rax, %rcx	 # D.151607,
 .LEHB13:
 	call	_Unwind_Resume	 #
 .LEHE13:

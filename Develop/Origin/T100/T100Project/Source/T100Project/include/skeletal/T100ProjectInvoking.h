@@ -53,6 +53,8 @@ class T100ProjectInvoking
 
         static T100VOID                     OnProjectSelected();
 
+        static T100VOID                     OnPageClosed();
+
         static T100VOID                     OnItemExpanding();
         static T100VOID                     OnModified();
 
