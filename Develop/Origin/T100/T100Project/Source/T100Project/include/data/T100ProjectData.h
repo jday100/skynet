@@ -11,19 +11,23 @@ class T100ProjectData : public T100TreeItemData
         T100ProjectData(T100ProjectInfo*);
         virtual ~T100ProjectData();
 
-        T100VOID                SetLabel(const T100WSTRING&);
-        const T100WSTRING&      GetLabel();
+        T100VOID                    SetLabel(const T100WSTRING&);
+        const T100WSTRING&          GetLabel();
 
-        virtual wxMenu*         ShowMenu();
+        T100VOID                    SetPath(const T100WSTRING&);
+        const T100WSTRING&          GetPath();
 
-        virtual T100VOID        OnItemChanged();
+        virtual wxMenu*             ShowMenu();
 
-        virtual T100VOID        OnItemActivated();
+        virtual T100VOID            OnItemChanged();
 
-        virtual T100VOID        OnItemExpanding();
+        virtual T100VOID            OnItemActivated();
+
+        virtual T100VOID            OnItemExpanding();
 
     protected:
-        T100WSTRING             m_label;
+        T100WSTRING                 m_label;
+        T100WSTRING                 m_path;
 
     private:
 };

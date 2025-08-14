@@ -177,7 +177,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 1 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.151592
+	setne	%al	 #, D.151604
 .LBE7:
 .LBE6:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -1286,8 +1286,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.151602
-	movq	%rax, %rcx	 # D.151602,
+	movq	%rsi, %rax	 # tmp98, D.151614
+	movq	%rax, %rcx	 # D.151614,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -1411,8 +1411,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.151603
-	movq	%rax, %rcx	 # D.151603,
+	movq	%rbx, %rax	 # tmp106, D.151615
+	movq	%rax, %rcx	 # D.151615,
 .LEHB6:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1607,8 +1607,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.151605
-	movq	%rax, %rcx	 # D.151605,
+	movq	%rbx, %rax	 # tmp98, D.151617
+	movq	%rax, %rcx	 # D.151617,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1742,7 +1742,7 @@ _ZN12T100FileDataC2Ev:
 	call	_ZN16T100TreeItemDataC2Ev	 #
 	leaq	16+_ZTV12T100FileData(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	%rdx, (%rax)	 # _2, this_9(D)->D.145108.D.145047.D.140568._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _2, this_9(D)->D.145117.D.145055.D.140568._vptr.wxClientData
 	movq	16(%rbp), %rax	 # this, tmp95
 	addq	$24, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -1798,7 +1798,7 @@ _ZN12T100FileDataC2EP12T100FileInfo:
 	call	_ZN16T100TreeItemDataC2Ev	 #
 	leaq	16+_ZTV12T100FileData(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	%rdx, (%rax)	 # _2, this_9(D)->D.145108.D.145047.D.140568._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _2, this_9(D)->D.145117.D.145055.D.140568._vptr.wxClientData
 	movq	16(%rbp), %rax	 # this, tmp95
 	addq	$24, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -1850,7 +1850,7 @@ _ZN12T100FileDataD2Ev:
 	.loc 11 19 29
 	leaq	16+_ZTV12T100FileData(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_6(D)->D.145108.D.145047.D.140568._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _1, this_6(D)->D.145117.D.145055.D.140568._vptr.wxClientData
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:22:     uninit();
 	.loc 11 22 11
 	movq	16(%rbp), %rcx	 # this,
@@ -1940,7 +1940,7 @@ _ZN12T100FileData4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:27:     m_opened    = T100FALSE;
 	.loc 11 27 17
 	movq	16(%rbp), %rax	 # this, tmp88
-	addq	$16, %rax	 #, _1
+	addq	$17, %rax	 #, _1
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt6atomicIbEaSEb	 #
@@ -2143,7 +2143,7 @@ _ZN12T100FileData9SetOpenedEb:
 	.loc 11 57 17
 	movzbl	24(%rbp), %eax	 # value, _1
 	movq	16(%rbp), %rdx	 # this, tmp91
-	leaq	16(%rdx), %rcx	 #, _2
+	leaq	17(%rdx), %rcx	 #, _2
 	movl	%eax, %edx	 # _1,
 	call	_ZNSt6atomicIbEaSEb	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:58: }
@@ -2208,8 +2208,8 @@ _ZN12T100FileData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.151607
-	movq	%rax, %rcx	 # D.151607,
+	movq	%rsi, %rax	 # tmp93, D.151619
+	movq	%rax, %rcx	 # D.151619,
 .LEHB13:
 	call	_Unwind_Resume	 #
 .LEHE13:
@@ -2299,7 +2299,7 @@ _ZN12T100FileData15OnItemActivatedEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:74:     if(m_opened){
 	.loc 11 74 16
 	movq	16(%rbp), %rax	 # this, tmp89
-	addq	$16, %rax	 #, _1
+	addq	$17, %rax	 #, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNKSt6atomicIbEcvbEv	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:74:     if(m_opened){
@@ -2344,7 +2344,7 @@ _ZN12T100FileData15OnItemExpandingEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:83:     if(m_opened){
 	.loc 11 83 16
 	movq	16(%rbp), %rax	 # this, tmp89
-	addq	$16, %rax	 #, _1
+	addq	$17, %rax	 #, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNKSt6atomicIbEcvbEv	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:83:     if(m_opened){
@@ -57486,7 +57486,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x25
 	.long	0xce81
 	.byte	0x1
-	.byte	0x10
+	.byte	0x11
 	.byte	0x2
 	.uleb128 0x49
 	.ascii "m_label\0"

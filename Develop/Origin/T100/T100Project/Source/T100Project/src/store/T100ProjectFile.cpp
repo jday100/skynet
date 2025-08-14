@@ -37,7 +37,7 @@ T100BOOL T100ProjectFile::Check(const T100WSTRING& filename)
     }
 
     if(document.GetDocumentNode() != L"Project"){
-        return T100FALSE;
+        //return T100FALSE;
     }
 
     return T100TRUE;

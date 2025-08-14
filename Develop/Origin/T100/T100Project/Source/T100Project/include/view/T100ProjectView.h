@@ -28,6 +28,8 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    FolderSelected();
 
+        T100VOID                    ProjectOpen(wxTreeItemId, T100ProjectInfo*);
+
         T100VOID                    ShowSetupEditorDialog();
         T100VOID                    ShowSetupCompilerDialog();
 

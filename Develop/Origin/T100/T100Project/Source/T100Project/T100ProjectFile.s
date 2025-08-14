@@ -210,8 +210,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.81161
-	movq	%rax, %rcx	 # D.81161,
+	movq	%rbx, %rax	 # tmp99, D.81162
+	movq	%rax, %rcx	 # D.81162,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -772,16 +772,6 @@ _ZN15T100ProjectFile5CheckERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.loc 4 39 35
 	leaq	.LC2(%rip), %rax	 #, tmp105
 	cmpq	%rax, %rdx	 # tmp105, _3
-	setne	%al	 #, retval.1_23
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:39:     if(document.GetDocumentNode() != L"Project"){
-	.loc 4 39 5
-	testb	%al, %al	 # retval.1_23
-	je	.L25	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:40:         return T100FALSE;
-	.loc 4 40 16
-	movl	$0, %ebx	 #, _4
-	jmp	.L24	 #
-.L25:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:43:     return T100TRUE;
 	.loc 4 43 12
 	movl	$1, %ebx	 #, _4
@@ -792,38 +782,38 @@ _ZN15T100ProjectFile5CheckERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN13wxXmlDocumentD1Ev	 #
 	movl	%ebx, %eax	 # _4, <retval>
-	jmp	.L33	 #
-.L32:
+	jmp	.L32	 #
+.L31:
 	movq	%rax, %rbx	 #, tmp110
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:35:     if(!document.Load(m_filename)){
 	.loc 4 35 22
 	leaq	80(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L28	 #
-.L31:
+	jmp	.L27	 #
+.L30:
 	movq	%rax, %rbx	 #, tmp109
-.L28:
+.L27:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:35:     if(!document.Load(m_filename)){
 	.loc 4 35 22 is_stmt 0 discriminator 2
 	leaq	32(%rbp), %rax	 #, tmp113
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L29	 #
-.L30:
-	movq	%rax, %rbx	 #, tmp114
+	jmp	.L28	 #
 .L29:
+	movq	%rax, %rbx	 #, tmp114
+.L28:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:33:     wxXmlDocument       document;
 	.loc 4 33 25 is_stmt 1
 	leaq	-96(%rbp), %rax	 #, tmp116
 	movq	%rax, %rcx	 # tmp116,
 	call	_ZN13wxXmlDocumentD1Ev	 #
-	movq	%rbx, %rax	 # tmp114, D.81165
-	movq	%rax, %rcx	 # D.81165,
+	movq	%rbx, %rax	 # tmp114, D.81166
+	movq	%rax, %rcx	 # D.81166,
 .LEHB6:
 	call	_Unwind_Resume	 #
 .LEHE6:
-.L33:
+.L32:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:44: }
 	.loc 4 44 1
 	addq	$264, %rsp	 #,
@@ -849,15 +839,15 @@ _ZN15T100ProjectFile5CheckERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.uleb128 0
 	.uleb128 .LEHB3-.LFB4739
 	.uleb128 .LEHE3-.LEHB3
-	.uleb128 .L30-.LFB4739
+	.uleb128 .L29-.LFB4739
 	.uleb128 0
 	.uleb128 .LEHB4-.LFB4739
 	.uleb128 .LEHE4-.LEHB4
-	.uleb128 .L31-.LFB4739
+	.uleb128 .L30-.LFB4739
 	.uleb128 0
 	.uleb128 .LEHB5-.LFB4739
 	.uleb128 .LEHE5-.LEHB5
-	.uleb128 .L32-.LFB4739
+	.uleb128 .L31-.LFB4739
 	.uleb128 0
 	.uleb128 .LEHB6-.LFB4739
 	.uleb128 .LEHE6-.LEHB6
@@ -1039,8 +1029,8 @@ _ZN15T100ProjectFile6CreateEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:56:     return T100TRUE;
 	.loc 4 56 12 discriminator 3
 	movl	%ebx, %eax	 # _45, <retval>
-	jmp	.L52	 #
-.L47:
+	jmp	.L51	 #
+.L46:
 	movq	%rax, %rsi	 #, tmp124
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:49:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"Project");
 	.loc 4 49 89
@@ -1048,26 +1038,26 @@ _ZN15T100ProjectFile6CreateEv:
 	movq	%rbx, %rcx	 # _17,
 	call	_ZdlPvy	 #
 	movq	%rsi, %rbx	 # tmp124, tmp123
-	jmp	.L37	 #
-.L46:
+	jmp	.L36	 #
+.L45:
 	movq	%rax, %rbx	 #, tmp123
-.L37:
+.L36:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:49:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"Project");
 	.loc 4 49 89 is_stmt 0 discriminator 4
 	leaq	96(%rbp), %rax	 #, tmp127
 	movq	%rax, %rcx	 # tmp127,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L38	 #
-.L45:
+	jmp	.L37	 #
+.L44:
 	movq	%rax, %rbx	 #, tmp128
-.L38:
+.L37:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:49:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"Project");
 	.loc 4 49 89 discriminator 2
 	leaq	48(%rbp), %rax	 #, tmp130
 	movq	%rax, %rcx	 # tmp130,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L39	 #
-.L50:
+	jmp	.L38	 #
+.L49:
 	movq	%rax, %rsi	 #, tmp134
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:50:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"Project");
 	.loc 4 50 83 is_stmt 1
@@ -1075,47 +1065,47 @@ _ZN15T100ProjectFile6CreateEv:
 	movq	%rbx, %rcx	 # _30,
 	call	_ZdlPvy	 #
 	movq	%rsi, %rbx	 # tmp134, tmp133
-	jmp	.L41	 #
-.L49:
+	jmp	.L40	 #
+.L48:
 	movq	%rax, %rbx	 #, tmp133
-.L41:
+.L40:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:50:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"Project");
 	.loc 4 50 83 is_stmt 0 discriminator 4
 	leaq	192(%rbp), %rax	 #, tmp137
 	movq	%rax, %rcx	 # tmp137,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L42	 #
-.L48:
+	jmp	.L41	 #
+.L47:
 	movq	%rax, %rbx	 #, tmp138
-.L42:
+.L41:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:50:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"Project");
 	.loc 4 50 83 discriminator 2
 	leaq	144(%rbp), %rax	 #, tmp140
 	movq	%rax, %rcx	 # tmp140,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L39	 #
-.L51:
+	jmp	.L38	 #
+.L50:
 	movq	%rax, %rbx	 #, tmp142
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:54:     document.Save(m_filename);
 	.loc 4 54 18 is_stmt 1
 	leaq	240(%rbp), %rax	 #, tmp141
 	movq	%rax, %rcx	 # tmp141,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L39	 #
-.L44:
+	jmp	.L38	 #
+.L43:
 	movq	%rax, %rbx	 #, tmp131
-.L39:
+.L38:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:48:     wxXmlDocument       document;
 	.loc 4 48 25
 	leaq	-80(%rbp), %rax	 #, tmp144
 	movq	%rax, %rcx	 # tmp144,
 	call	_ZN13wxXmlDocumentD1Ev	 #
-	movq	%rbx, %rax	 # tmp131, D.81168
-	movq	%rax, %rcx	 # D.81168,
+	movq	%rbx, %rax	 # tmp131, D.81169
+	movq	%rax, %rcx	 # D.81169,
 .LEHB18:
 	call	_Unwind_Resume	 #
 .LEHE18:
-.L52:
+.L51:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100ProjectFile.cpp:57: }
 	.loc 4 57 1
 	addq	$440, %rsp	 #,
@@ -1145,43 +1135,43 @@ _ZN15T100ProjectFile6CreateEv:
 	.uleb128 0
 	.uleb128 .LEHB8-.LFB4740
 	.uleb128 .LEHE8-.LEHB8
-	.uleb128 .L44-.LFB4740
+	.uleb128 .L43-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB9-.LFB4740
 	.uleb128 .LEHE9-.LEHB9
-	.uleb128 .L45-.LFB4740
+	.uleb128 .L44-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB10-.LFB4740
 	.uleb128 .LEHE10-.LEHB10
-	.uleb128 .L46-.LFB4740
+	.uleb128 .L45-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB11-.LFB4740
 	.uleb128 .LEHE11-.LEHB11
-	.uleb128 .L47-.LFB4740
+	.uleb128 .L46-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB12-.LFB4740
 	.uleb128 .LEHE12-.LEHB12
-	.uleb128 .L44-.LFB4740
+	.uleb128 .L43-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB13-.LFB4740
 	.uleb128 .LEHE13-.LEHB13
-	.uleb128 .L48-.LFB4740
+	.uleb128 .L47-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB14-.LFB4740
 	.uleb128 .LEHE14-.LEHB14
-	.uleb128 .L49-.LFB4740
+	.uleb128 .L48-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB15-.LFB4740
 	.uleb128 .LEHE15-.LEHB15
-	.uleb128 .L50-.LFB4740
+	.uleb128 .L49-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB16-.LFB4740
 	.uleb128 .LEHE16-.LEHB16
-	.uleb128 .L44-.LFB4740
+	.uleb128 .L43-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB17-.LFB4740
 	.uleb128 .LEHE17-.LEHB17
-	.uleb128 .L51-.LFB4740
+	.uleb128 .L50-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB18-.LFB4740
 	.uleb128 .LEHE18-.LEHB18
@@ -1295,13 +1285,13 @@ _Z8wxDELETEI9wxXmlNodeEvRPT_:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/defs.h:753:         if ( ptr != NULL )
 	.loc 5 753 9
 	testq	%rax, %rax	 # _1
-	je	.L58	 #,
+	je	.L57	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/defs.h:755:             delete ptr;
 	.loc 5 755 13
 	movq	16(%rbp), %rax	 # ptr, tmp96
 	movq	(%rax), %rax	 # *ptr_12(D), _2
 	testq	%rax, %rax	 # _2
-	je	.L57	 #,
+	je	.L56	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/defs.h:755:             delete ptr;
 	.loc 5 755 13 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # ptr, tmp97
@@ -1314,12 +1304,12 @@ _Z8wxDELETEI9wxXmlNodeEvRPT_:
 	movq	%rdx, %rcx	 # _3,
 	call	*%rax	 # _8
 .LVL1:
-.L57:
+.L56:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/defs.h:756:             ptr = NULL;
 	.loc 5 756 13 is_stmt 1
 	movq	16(%rbp), %rax	 # ptr, tmp100
 	movq	$0, (%rax)	 #, *ptr_12(D)
-.L58:
+.L57:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/defs.h:758:     }
 	.loc 5 758 5
 	nop	

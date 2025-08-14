@@ -31,6 +31,16 @@ const T100WSTRING& T100ProjectData::GetLabel()
     return m_label;
 }
 
+T100VOID T100ProjectData::SetPath(const T100WSTRING& path)
+{
+    m_path      = path;
+}
+
+const T100WSTRING& T100ProjectData::GetPath()
+{
+    return m_path;
+}
+
 wxMenu* T100ProjectData::ShowMenu()
 {
     wxMenu*     menu    = T100NEW wxMenu();
@@ -58,5 +68,9 @@ T100VOID T100ProjectData::OnItemActivated()
 
 T100VOID T100ProjectData::OnItemExpanding()
 {
+    if(m_opened){
 
+    }else{
+        T100ProjectInvoking::OnProjectOpen(this);
+    }
 }

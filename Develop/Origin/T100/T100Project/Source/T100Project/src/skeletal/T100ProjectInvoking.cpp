@@ -186,6 +186,11 @@ T100VOID T100ProjectInvoking::OnFolderOpen(T100FolderData* data)
     m_skeletal->OnFolderOpen(data);
 }
 
+T100VOID T100ProjectInvoking::OnProjectOpen(T100ProjectData* data)
+{
+    m_skeletal->OnProjectOpen(data);
+}
+
 T100VOID T100ProjectInvoking::OnProjectSelected()
 {
     m_skeletal->OnProjectSelected();

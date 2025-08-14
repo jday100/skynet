@@ -177,6 +177,10 @@ T100BOOL T100WorkSpaceServe::OpenWorkSpace(T100WorkSpaceInfo* info)
         if(m_projectServe.Check(&thisFolder)){
             T100ProjectInfo*    thisProject     = T100NEW T100ProjectInfo();
 
+            thisProject->SetLabel(item);
+            thisProject->SetPath(path);
+            thisProject->SetFileName(m_projectServe.GetProjectLogic().GetFileName(thisFolder));
+
             projects.push_back(thisProject);
         }else{
             T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();

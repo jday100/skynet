@@ -8,6 +8,7 @@
 
 class T100FileData;
 class T100FolderData;
+class T100ProjectData;
 
 class T100ProjectSkeletal : public T100ProjectSkeletalBase
 {
@@ -54,6 +55,7 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnFileOpen(T100FileData*);
         T100VOID                    OnFolderOpen(T100FolderData*);
 
+        T100VOID                    OnProjectOpen(T100ProjectData*);
         T100VOID                    OnProjectSelected();
 
         T100VOID                    OnPageClosed();

@@ -111,12 +111,17 @@ T100BOOL T100ProjectLogic::Open(const T100WSTRING& value)
 
 }
 
+T100BOOL T100ProjectLogic::Open(const T100WSTRING& value, T100ProjectInfo* info)
+{
+
+}
+
 T100WSTRING T100ProjectLogic::GetFileName(const T100WxFolderInfo& info)
 {
-    return info.GetPath() + L"/project/" + L"project.pjt";
+    return info.GetPath() + L"/" + L"project.pjt";
 }
 
 T100WSTRING T100ProjectLogic::GetFolderName(const T100WxFolderInfo& info)
 {
-    return info.GetPath() + L"/project";
+    return info.GetPath();
 }

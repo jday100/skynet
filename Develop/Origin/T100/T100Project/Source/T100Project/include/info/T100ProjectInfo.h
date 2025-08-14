@@ -21,6 +21,9 @@ class T100ProjectInfo
         T100VOID                    SetFileName(const T100WSTRING& path);
         const T100WSTRING&          GetFileName();
 
+        T100FILE_INFO_VECTOR&       GetFiles();
+        T100FOLDER_INFO_VECTOR&     GetSubFolders();
+
     protected:
         T100WSTRING                 m_label;
         T100WSTRING                 m_path;

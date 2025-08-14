@@ -1217,6 +1217,30 @@ T100VOID T100ProjectTree::FolderOpen(wxTreeItemId id, T100FolderInfo* info)
     Expand(id);
 }
 
+T100VOID T100ProjectTree::ProjectOpen(wxTreeItemId id, T100ProjectInfo* info)
+{
+    T100ProjectData*        data    = dynamic_cast<T100ProjectData*>(GetItemData(id));
+
+    if(!data){
+        return;
+    }
+
+    T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
+    T100FILE_INFO_VECTOR&       files       = info->GetFiles();
+
+    for(T100FolderInfo* folder : folders){
+        AppendFolder(id, folder);
+    }
+
+    for(T100FileInfo* file : files){
+        AppendFile(id, file);
+    }
+
+    data->SetOpened(T100TRUE);
+
+    Expand(id);
+}
+
 T100VOID T100ProjectTree::Clear()
 {
     DeleteAllItems();

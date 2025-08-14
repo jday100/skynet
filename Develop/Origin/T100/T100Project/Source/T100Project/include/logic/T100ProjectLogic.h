@@ -23,8 +23,11 @@ class T100ProjectLogic
 
         T100BOOL                    Open(const T100WSTRING&);
 
-    protected:
         T100WSTRING                 GetFileName(const T100WxFolderInfo&);
+
+        T100BOOL                    Open(const T100WSTRING&, T100ProjectInfo*);
+
+    protected:
         T100WSTRING                 GetFolderName(const T100WxFolderInfo&);
 
     protected:

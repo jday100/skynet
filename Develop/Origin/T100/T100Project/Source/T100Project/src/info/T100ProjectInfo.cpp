@@ -39,3 +39,13 @@ const T100WSTRING& T100ProjectInfo::GetFileName()
 {
     return m_filename;
 }
+
+T100FILE_INFO_VECTOR& T100ProjectInfo::GetFiles()
+{
+    return m_files;
+}
+
+T100FOLDER_INFO_VECTOR& T100ProjectInfo::GetSubFolders()
+{
+    return m_folders;
+}

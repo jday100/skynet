@@ -4,6 +4,7 @@
 #include "T100Common.h"
 class T100FileData;
 class T100FolderData;
+class T100ProjectData;
 class T100ProjectFrame;
 class T100ProjectSkeletal;
 
@@ -50,6 +51,7 @@ class T100ProjectInvoking
 
         static T100VOID                     OnFileOpen(T100FileData*);
         static T100VOID                     OnFolderOpen(T100FolderData*);
+        static T100VOID                     OnProjectOpen(T100ProjectData*);
 
         static T100VOID                     OnProjectSelected();
 

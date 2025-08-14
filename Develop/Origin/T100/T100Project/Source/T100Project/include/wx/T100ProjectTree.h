@@ -24,6 +24,8 @@ class T100ProjectTree : public wxTreeCtrl
 
         virtual T100VOID            FolderOpen(wxTreeItemId, T100FolderInfo*);
 
+        virtual T100VOID            ProjectOpen(wxTreeItemId, T100ProjectInfo*);
+
         virtual T100VOID            Clear();
 
         virtual T100VOID            Load(const T100PROJECT_INFO_VECTOR&);

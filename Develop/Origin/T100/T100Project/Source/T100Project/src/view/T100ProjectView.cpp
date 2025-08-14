@@ -96,6 +96,11 @@ T100VOID T100ProjectView::FolderSelected()
     m_mainMenu->FolderSelected();
 }
 
+T100VOID T100ProjectView::ProjectOpen(wxTreeItemId id, T100ProjectInfo* info)
+{
+    m_projectTree->ProjectOpen(id, info);
+}
+
 T100VOID T100ProjectView::ShowSetupEditorDialog()
 {
 

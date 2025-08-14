@@ -8,6 +8,7 @@
 
 #include "T100FileData.h"
 #include "T100FolderData.h"
+#include "T100ProjectData.h"
 
 T100ProjectSkeletal::T100ProjectSkeletal() :
     T100ProjectSkeletalBase()
@@ -277,10 +278,24 @@ T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
     T100FolderInfo*     info        = T100NEW T100FolderInfo();
 
     if(!logic.Open(data->GetPath(), info)){
+        T100SAFE_DELETE(info);
         return T100FALSE;
     }
 
     m_view->FolderOpen(data->GetId(), info);
+}
+
+T100VOID T100ProjectSkeletal::OnProjectOpen(T100ProjectData* data)
+{
+    T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
+    T100ProjectInfo*        info        = T100NEW T100ProjectInfo();
+
+    if(!logic.Open(data->GetPath(), info)){
+        T100SAFE_DELETE(info);
+        return T100FALSE;
+    }
+
+    m_view->ProjectOpen(data->GetId(), info);
 }
 
 T100VOID T100ProjectSkeletal::OnProjectSelected()
