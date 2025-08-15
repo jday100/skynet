@@ -1188,6 +1188,19 @@ T100VOID T100ProjectTree::ProjectOpen(T100ProjectInfo* info)
     //Expand(root);
 }
 
+T100VOID T100ProjectTree::FileCreate(T100FileInfo* info)
+{
+    wxTreeItemId        item;
+
+    item    = GetSelection();
+
+    if(!item.IsOk()){
+        return;
+    }
+
+    AppendFile(item, info);
+}
+
 T100VOID T100ProjectTree::FileOpen(wxTreeItemId id, T100FileInfo* info)
 {
 

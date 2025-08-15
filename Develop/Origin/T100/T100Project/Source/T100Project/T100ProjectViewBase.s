@@ -177,7 +177,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 1 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.255770
+	setne	%al	 #, D.255773
 .LBE7:
 .LBE6:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -495,8 +495,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.255779
-	movq	%rax, %rcx	 # D.255779,
+	movq	%rbx, %rax	 # tmp96, D.255782
+	movq	%rax, %rcx	 # D.255782,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -722,8 +722,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.255783
-	movq	%rax, %rcx	 # D.255783,
+	movq	%rbx, %rax	 # tmp103, D.255786
+	movq	%rax, %rcx	 # D.255786,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -830,8 +830,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.255785
-	movq	%rax, %rcx	 # D.255785,
+	movq	%rbx, %rax	 # tmp99, D.255788
+	movq	%rax, %rcx	 # D.255788,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2066,7 +2066,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 12 337 27
-	movq	-8(%rbp), %rax	 # D.127637, D.255472
+	movq	-8(%rbp), %rax	 # D.127637, D.255475
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 12 338 5
 	addq	$48, %rsp	 #,
@@ -2297,7 +2297,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 78
-	movq	-8(%rbp), %rax	 # D.127671, D.255494
+	movq	-8(%rbp), %rax	 # D.127671, D.255497
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 81
 	addq	$48, %rsp	 #,
@@ -2345,7 +2345,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 78
-	movq	-8(%rbp), %rax	 # D.127673, D.255491
+	movq	-8(%rbp), %rax	 # D.127673, D.255494
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 81
 	addq	$48, %rsp	 #,
@@ -2532,7 +2532,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 12 532 77
-	movq	-72(%rbp), %rax	 # D.127715, D.255467
+	movq	-72(%rbp), %rax	 # D.127715, D.255470
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 12 533 5
 	addq	$72, %rsp	 #,
@@ -3474,7 +3474,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.255360
+	movq	(%rax), %rax	 # wxDefaultSize, D.255363
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 72
 	popq	%rbp	 #
@@ -4916,7 +4916,7 @@ _ZN15wxDirDialogBaseD2Ev:
 	.loc 21 59 32
 	leaq	16+_ZTV15wxDirDialogBase(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_6(D)->D.247499.D.247317.D.246996.D.246822.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_6(D)->D.247502.D.247320.D.246999.D.246825.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$840, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -4966,7 +4966,7 @@ _ZN15wxDirDialogBaseD1Ev:
 	.loc 21 59 32
 	leaq	16+_ZTV15wxDirDialogBase(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_6(D)->D.247499.D.247317.D.246996.D.246822.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_6(D)->D.247502.D.247320.D.246999.D.246825.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$840, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -5269,8 +5269,8 @@ _ZN19T100ProjectViewBaseC2Ev:
 	leaq	-81(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp102, D.255794
-	movq	%rax, %rcx	 # D.255794,
+	movq	%rbx, %rax	 # tmp102, D.255797
+	movq	%rax, %rcx	 # D.255797,
 .LEHB9:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5928,7 +5928,7 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 	movq	24(%rax), %rax	 # this_26(D)->m_frame, _14
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:92:     m_frame->SetLabel(title);
 	.loc 22 92 28
-	movq	(%rax), %rax	 # _14->D.247746.D.142549.D.142361.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject, _15
+	movq	(%rax), %rax	 # _14->D.247749.D.142549.D.142361.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject, _15
 	addq	$176, %rax	 #, _16
 	movq	(%rax), %rbx	 # *_16, _17
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:92:     m_frame->SetLabel(title);
@@ -6001,8 +6001,8 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 	leaq	-96(%rbp), %rax	 #, tmp158
 	movq	%rax, %rcx	 # tmp158,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp150, D.255796
-	movq	%rax, %rcx	 # D.255796,
+	movq	%rbx, %rax	 # tmp150, D.255799
+	movq	%rax, %rcx	 # D.255799,
 .LEHB17:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6208,8 +6208,8 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	leaq	832(%rbp), %rax	 #, tmp125
 	movq	%rax, %rcx	 # tmp125,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp123, D.255804
-	movq	%rax, %rcx	 # D.255804,
+	movq	%rbx, %rax	 # tmp123, D.255807
+	movq	%rax, %rcx	 # D.255807,
 .LEHB24:
 	call	_Unwind_Resume	 #
 .L282:
@@ -6228,8 +6228,8 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	leaq	-64(%rbp), %rax	 #, tmp131
 	movq	%rax, %rcx	 # tmp131,
 	call	_ZN11wxDirDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.255805
-	movq	%rax, %rcx	 # D.255805,
+	movq	%rbx, %rax	 # tmp127, D.255808
+	movq	%rax, %rcx	 # D.255808,
 	call	_Unwind_Resume	 #
 .LEHE24:
 .L283:
@@ -6368,8 +6368,8 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	leaq	864(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp105, D.255810
-	movq	%rax, %rcx	 # D.255810,
+	movq	%rbx, %rax	 # tmp105, D.255813
+	movq	%rax, %rcx	 # D.255813,
 .LEHB28:
 	call	_Unwind_Resume	 #
 .L288:
@@ -6379,8 +6379,8 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	leaq	-64(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN23T100ProjectCreateWizardD1Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.255811
-	movq	%rax, %rcx	 # D.255811,
+	movq	%rbx, %rax	 # tmp107, D.255814
+	movq	%rax, %rcx	 # D.255814,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE28:
@@ -6521,8 +6521,8 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	leaq	736(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.255813
-	movq	%rax, %rcx	 # D.255813,
+	movq	%rbx, %rax	 # tmp103, D.255816
+	movq	%rax, %rcx	 # D.255816,
 .LEHB33:
 	call	_Unwind_Resume	 #
 .L296:
@@ -6532,8 +6532,8 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	leaq	-64(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.255814
-	movq	%rax, %rcx	 # D.255814,
+	movq	%rbx, %rax	 # tmp109, D.255817
+	movq	%rax, %rcx	 # D.255817,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE33:
@@ -6988,8 +6988,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.255817
-	movq	%rax, %rcx	 # D.255817,
+	movq	%rbx, %rax	 # tmp90, D.255820
+	movq	%rax, %rcx	 # D.255820,
 .LEHB36:
 	call	_Unwind_Resume	 #
 .LEHE36:
@@ -7206,14 +7206,14 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 24
-	movzwl	16(%rax), %edx	 # _3->D.248782.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.248785.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.248782.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.248785.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 24
-	movzwl	16(%rax), %eax	 # _3->D.248782.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.248785.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 30
 	testw	%ax, %ax	 # _6
@@ -7343,11 +7343,11 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 3 189 17
-	movzwl	16(%rax), %edx	 # _3->D.248782.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.248785.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 3 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.248782.m_ref
+	movw	%dx, 16(%rax)	 # _6, _3->D.248785.m_ref
 	jmp	.L329	 #
 .L332:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
@@ -7388,7 +7388,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 3 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.248782.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.248785.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 3 171 72
 	popq	%rbp	 #
@@ -8315,7 +8315,7 @@ _ZN11wxDirDialogD1Ev:
 	movq	.refptr._ZTV11wxDirDialog(%rip), %rax	 #, tmp89
 	leaq	16(%rax), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.247605.D.247499.D.247317.D.246996.D.246822.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.247608.D.247502.D.247320.D.246999.D.246825.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN15wxDirDialogBaseD2Ev	 #

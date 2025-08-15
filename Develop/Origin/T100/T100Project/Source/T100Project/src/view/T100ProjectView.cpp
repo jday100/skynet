@@ -166,6 +166,7 @@ T100VOID T100ProjectView::New(T100FileInfo* info)
     }
 
     m_mainPanel->Create(info);
+    m_projectTree->FileCreate(info);
 }
 
 T100VOID T100ProjectView::Open(T100FileInfo* info)

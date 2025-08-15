@@ -20,6 +20,7 @@ class T100ProjectTree : public wxTreeCtrl
 
         virtual T100VOID            ProjectOpen(T100ProjectInfo*);
 
+        virtual T100VOID            FileCreate(T100FileInfo*);
         virtual T100VOID            FileOpen(wxTreeItemId, T100FileInfo*);
 
         virtual T100VOID            FolderOpen(wxTreeItemId, T100FolderInfo*);
