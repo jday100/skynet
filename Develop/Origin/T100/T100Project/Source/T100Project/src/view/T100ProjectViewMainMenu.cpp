@@ -185,6 +185,8 @@ T100VOID T100ProjectViewMainMenu::ProjectSelected()
     m_projectSaveAs->Enable(T100TRUE);
 
     m_fileNew->Enable(T100TRUE);
+
+    m_build->Enable(T100TRUE);
 }
 
 T100VOID T100ProjectViewMainMenu::FileOpen()

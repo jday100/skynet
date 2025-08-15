@@ -1,5 +1,6 @@
 #include "T100ProjectLogic.h"
 
+#include "T100Shell.h"
 #include "T100Folder.h"
 #include "T100ProjectFile.h"
 
@@ -152,7 +153,23 @@ T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
         files.push_back(thisFile);
     }
 
+    m_current   = info;
+
     return T100TRUE;
+}
+
+T100VOID T100ProjectLogic::Build()
+{
+    if(!m_current){
+        return;
+    }
+
+    T100Shell       shell;
+    T100WSTRING     command;
+
+    command     = L"python3 " + GetBuildName(m_current) + L";pause";
+
+    shell.Run(command);
 }
 
 T100WSTRING T100ProjectLogic::GetFileName(const T100WxFolderInfo& info)
@@ -163,4 +180,9 @@ T100WSTRING T100ProjectLogic::GetFileName(const T100WxFolderInfo& info)
 T100WSTRING T100ProjectLogic::GetFolderName(const T100WxFolderInfo& info)
 {
     return info.GetPath();
+}
+
+T100WSTRING T100ProjectLogic::GetBuildName(const T100ProjectInfo* info)
+{
+    return info->GetPath() + L"/" + L"Make.py";
 }
