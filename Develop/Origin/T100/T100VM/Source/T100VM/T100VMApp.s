@@ -4,7 +4,10 @@
 
  # GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
  # options passed:  -I C:\zoo\lib\wxWidgets-3.0.5\include
- # -I C:\zoo\lib\wxWidgets-3.0.5\lib\gcc_dll\mswud
+ # -I ..\..\..\T100Library\Source\T100Library\include
+ # -I ..\..\..\T100Host\Source\T100Host\include
+ # -I ..\..\..\T100Hypervisor\Source\T100Hypervisor\include
+ # -I C:\zoo\lib\wxWidgets-3.0.5\lib\gcc_dll\mswud -I include\skeletal
  # -I C:\zoo\bin\llvm-mingw-20240518-msvcrt-x86_64\include
  # -iprefix C:/zoo/bin/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/
  # -D_MT -D_REENTRANT -D __GNUWIN32__ -D __WXMSW__ -D WXUSINGDLL

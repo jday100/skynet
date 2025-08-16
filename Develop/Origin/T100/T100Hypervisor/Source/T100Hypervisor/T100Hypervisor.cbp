@@ -14,6 +14,9 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include/hyperv" />
+					<Add directory="include/base" />
+					<Add directory="include/device" />
+					<Add directory="include/skeletal" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -24,6 +27,9 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="include/hyperv" />
+					<Add directory="include/base" />
+					<Add directory="include/device" />
+					<Add directory="include/skeletal" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -38,6 +44,9 @@
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="include/hyperv" />
+					<Add directory="include/base" />
+					<Add directory="include/device" />
+					<Add directory="include/skeletal" />
 				</Compiler>
 			</Target>
 		</Build>
@@ -52,12 +61,37 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
+		<Unit filename="include/base/T100Device.h" />
+		<Unit filename="include/device/T100DVD.h" />
+		<Unit filename="include/device/T100Disk.h" />
+		<Unit filename="include/device/T100Display.h" />
+		<Unit filename="include/device/T100Keyboard.h" />
+		<Unit filename="include/device/T100Mouse.h" />
+		<Unit filename="include/device/T100Network.h" />
+		<Unit filename="include/device/T100Sound.h" />
 		<Unit filename="include/hyperv/T100HyperV.h" />
+		<Unit filename="include/hyperv/T100HyperVCommon.h" />
+		<Unit filename="include/hyperv/T100Memory.h" />
+		<Unit filename="include/hyperv/T100Port.h" />
+		<Unit filename="include/hyperv/T100Processor.h" />
+		<Unit filename="include/skeletal/T100HyperVInvoking.h" />
 		<Unit filename="main.cpp">
 			<Option target="Debug" />
 			<Option target="Release" />
 		</Unit>
+		<Unit filename="src/base/T100Device.cpp" />
+		<Unit filename="src/device/T100DVD.cpp" />
+		<Unit filename="src/device/T100Disk.cpp" />
+		<Unit filename="src/device/T100Display.cpp" />
+		<Unit filename="src/device/T100Keyboard.cpp" />
+		<Unit filename="src/device/T100Mouse.cpp" />
+		<Unit filename="src/device/T100Network.cpp" />
+		<Unit filename="src/device/T100Sound.cpp" />
 		<Unit filename="src/hyperv/T100HyperV.cpp" />
+		<Unit filename="src/hyperv/T100Memory.cpp" />
+		<Unit filename="src/hyperv/T100Port.cpp" />
+		<Unit filename="src/hyperv/T100Processor.cpp" />
+		<Unit filename="src/skeletal/T100HyperVInvoking.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
