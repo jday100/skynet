@@ -1,5 +1,6 @@
 #include "T100ProjectView.h"
 
+#include <wx/textdlg.h>
 #include "T100ProjectMain.h"
 #include "T100ProjectViewAboutDialog.h"
 
@@ -110,6 +111,15 @@ T100VOID T100ProjectView::ProjectOpen(wxTreeItemId id, T100ProjectInfo* info)
     m_projectTree->ProjectOpen(id, info);
 }
 
+T100VOID T100ProjectView::ShowFileName(T100WSTRING& filename)
+{
+    wxTextEntryDialog           dialog(m_frame, L"filename");
+
+    if(dialog.ShowModal() == wxID_OK){
+        filename    = dialog.GetValue().ToStdWstring();
+    }
+}
+
 T100VOID T100ProjectView::ShowSetupEditorDialog()
 {
 
@@ -183,11 +193,39 @@ T100VOID T100ProjectView::Open(T100FileInfo* info)
 
 T100VOID T100ProjectView::FileSave()
 {
-    if(m_mainPanel){
-        m_mainPanel->Save();
-        ClearDirty();
-        SetTitle();
+    if(!m_mainPanel){
+        return;
     }
+
+    T100Editor*     current     = T100NULL;
+
+    current     = m_mainPanel->GetCurrent();
+
+    if(!current){
+        return;
+    }
+
+    T100WSTRING         path;
+    T100WSTRING         filename;
+
+    path    = current->GetPath();
+
+    if(path.empty()){
+        ShowFileName(filename);
+    }
+
+    path    = filename;
+
+    if(path.empty()){
+        return;
+    }
+
+    current->SetPath(path);
+
+    m_mainPanel->Save();
+
+    ClearDirty();
+    SetTitle();
 }
 
 T100VOID T100ProjectView::PageClose()

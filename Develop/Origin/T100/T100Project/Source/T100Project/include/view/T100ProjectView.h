@@ -31,6 +31,7 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    ProjectOpen(wxTreeItemId, T100ProjectInfo*);
 
+        T100VOID                    ShowFileName(T100WSTRING&);
         T100VOID                    ShowSetupEditorDialog();
         T100VOID                    ShowSetupCompilerDialog();
 
