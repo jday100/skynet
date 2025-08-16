@@ -99,26 +99,15 @@ T100VOID T100HyperV::Install()
     m_device.Install(mouse);
     m_device.Install(keyboard);
 
-    /*
-    WHV_EMULATOR_CALLBACKS*         callback    = T100NEW WHV_EMULATOR_CALLBACKS;
-
-    callback->Size       = sizeof(WHV_EMULATOR_CALLBACKS);
-    callback->WHvEmulatorMemoryCallback      = T100VPCInvoking::OnMemoryCallback;
-    callback->WHvEmulatorIoPortCallback      = T100VPCInvoking::OnIoPortCallback;
-    callback->WHvEmulatorGetVirtualProcessorRegisters    = T100VPCInvoking::OnGetRegistersCallback;
-    callback->WHvEmulatorSetVirtualProcessorRegisters    = T100VPCInvoking::OnSetRegistersCallback;
-    callback->WHvEmulatorTranslateGvaPage    = T100VPCInvoking::OnTranslateGvaPageCallback;
-
-    HRESULT result = WHvEmulatorCreateEmulator(callback, &m_emulator);
-    */
     WHV_EMULATOR_CALLBACKS          callback;
 
     callback.Size       = sizeof(WHV_EMULATOR_CALLBACKS);
-    callback.WHvEmulatorMemoryCallback      = T100HyperVInvoking::OnMemoryCallback;
-    callback.WHvEmulatorIoPortCallback      = T100HyperVInvoking::OnIoPortCallback;
+
+    callback.WHvEmulatorMemoryCallback                  = T100HyperVInvoking::OnMemoryCallback;
+    callback.WHvEmulatorIoPortCallback                  = T100HyperVInvoking::OnIoPortCallback;
     callback.WHvEmulatorGetVirtualProcessorRegisters    = T100HyperVInvoking::OnGetRegistersCallback;
     callback.WHvEmulatorSetVirtualProcessorRegisters    = T100HyperVInvoking::OnSetRegistersCallback;
-    callback.WHvEmulatorTranslateGvaPage    = T100HyperVInvoking::OnTranslateGvaPageCallback;
+    callback.WHvEmulatorTranslateGvaPage                = T100HyperVInvoking::OnTranslateGvaPageCallback;
 
     HRESULT result = WHvEmulatorCreateEmulator(&callback, &m_emulator);
 

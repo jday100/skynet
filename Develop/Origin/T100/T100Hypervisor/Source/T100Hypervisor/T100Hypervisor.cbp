@@ -54,6 +54,7 @@
 			<Add option="-Wall" />
 			<Add directory="../../../T100Library/Source/T100Library/include" />
 			<Add directory="../../../T100Host/Source/T100Host/include" />
+			<Add directory="include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
