@@ -13,6 +13,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
+					<Add directory="include/hyperv" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -22,14 +23,28 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include/hyperv" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
 				</Linker>
 			</Target>
+			<Target title="Library">
+				<Option output="../../../build/T100Hypervisor" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/Debug/" />
+				<Option type="2" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include/hyperv" />
+				</Compiler>
+			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add directory="../../../T100Library/Source/T100Library/include" />
+			<Add directory="../../../T100Host/Source/T100Host/include" />
 		</Compiler>
 		<Linker>
 			<Add library="gdi32" />
@@ -37,7 +52,12 @@
 			<Add library="kernel32" />
 			<Add library="comctl32" />
 		</Linker>
-		<Unit filename="main.cpp" />
+		<Unit filename="include/hyperv/T100HyperV.h" />
+		<Unit filename="main.cpp">
+			<Option target="Debug" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="src/hyperv/T100HyperV.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

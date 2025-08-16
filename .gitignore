@@ -181,3 +181,6 @@
 /Develop/Origin/T100/build
 /Develop/Origin/T100/T100CRT/Sample/main/*.o
 /Develop/Origin/T100/T100CRT/Sample/main/main.exe
+/Develop/Origin/T100/T100Host/Source/T100Host/T100Host.depend
+/Develop/Origin/T100/T100Host/Source/T100Host/bin
+/Develop/Origin/T100/T100Host/Source/T100Host/obj

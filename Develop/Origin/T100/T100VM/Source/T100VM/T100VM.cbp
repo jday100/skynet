@@ -16,12 +16,16 @@
 					<Add option="-g" />
 					<Add option="-D__WXDEBUG__" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
+					<Add directory="include/skeletal" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
 				</ResourceCompiler>
 				<Linker>
 					<Add library="libwxmsw30ud.a" />
+					<Add library="../../../build/libT100Library.a" />
+					<Add library="../../../build/libT100Hypervisor.a" />
+					<Add library="../../../build/libT100Host.a" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>
@@ -34,6 +38,7 @@
 				<Compiler>
 					<Add option="-O2" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
+					<Add directory="include/skeletal" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -46,14 +51,17 @@
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-Wall" />
 			<Add option="-pipe" />
 			<Add option="-mthreads" />
 			<Add option="-D__GNUWIN32__" />
 			<Add option="-D__WXMSW__" />
 			<Add option="-DWXUSINGDLL" />
 			<Add option="-DwxUSE_UNICODE" />
-			<Add option="-Wall" />
 			<Add directory="$(#wx)/include" />
+			<Add directory="../../../T100Library/Source/T100Library/include" />
+			<Add directory="../../../T100Host/Source/T100Host/include" />
+			<Add directory="../../../T100Hypervisor/Source/T100Hypervisor/include" />
 		</Compiler>
 		<ResourceCompiler>
 			<Add directory="$(#wx)/include" />
@@ -65,9 +73,11 @@
 		<Unit filename="T100VMApp.h" />
 		<Unit filename="T100VMMain.cpp" />
 		<Unit filename="T100VMMain.h" />
+		<Unit filename="include/skeletal/T100VMInvoking.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/skeletal/T100VMInvoking.cpp" />
 		<Unit filename="wxsmith/T100VMframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

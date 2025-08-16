@@ -1485,7 +1485,7 @@ WinMain:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # hInstance, hInstance
 	movq	%rdx, 24(%rbp)	 # hPrevInstance, hPrevInstance
-	movq	%r8, 32(%rbp)	 # D.222363, D.222363
+	movq	%r8, 32(%rbp)	 # D.222375, D.222375
 	movl	%r9d, 40(%rbp)	 # nCmdShow, nCmdShow
  # C:\zgit\skynet\Develop\Origin\T100\T100VM\Source\T100VM\T100VMApp.cpp:17: IMPLEMENT_APP(T100VMApp);
 	.loc 7 17 1
@@ -1633,8 +1633,8 @@ _Z11wxCreateAppv:
 	movl	$568, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.228791
-	movq	%rax, %rcx	 # D.228791,
+	movq	%rsi, %rax	 # tmp93, D.228803
+	movq	%rax, %rcx	 # D.228803,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -1720,7 +1720,7 @@ _ZN9T100VMApp6OnInitEv:
 .LBB10:
  # C:\zgit\skynet\Develop\Origin\T100\T100VM\Source\T100VM\T100VMApp.cpp:26:     	T100VMFrame* Frame = new T100VMFrame(0);
 	.loc 7 26 44
-	movl	$856, %ecx	 #,
+	movl	$872, %ecx	 #,
 	call	_Znwy	 #
 .LEHE3:
 	movq	%rax, %rbx	 # tmp97, _12
@@ -1739,7 +1739,7 @@ _ZN9T100VMApp6OnInitEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100VM\Source\T100VM\T100VMApp.cpp:27:     	Frame->Show();
 	.loc 7 27 18 discriminator 2
 	movq	-16(%rbp), %rax	 # Frame, tmp98
-	movq	(%rax), %rax	 # Frame_15->D.222356.D.214347.D.214159.D.212842.D.212753.D.212474.D.211574.D.211517.D.211416.D.210125.D.115767._vptr.wxObject, _3
+	movq	(%rax), %rax	 # Frame_15->D.222366.D.214347.D.214159.D.212842.D.212753.D.212474.D.211574.D.211517.D.211416.D.210125.D.115767._vptr.wxObject, _3
 	addq	$448, %rax	 #, _4
 	movq	(%rax), %rax	 # *_4, _5
  # C:\zgit\skynet\Develop\Origin\T100\T100VM\Source\T100VM\T100VMApp.cpp:27:     	Frame->Show();
@@ -1767,11 +1767,11 @@ _ZN9T100VMApp6OnInitEv:
 .LBB11:
  # C:\zgit\skynet\Develop\Origin\T100\T100VM\Source\T100VM\T100VMApp.cpp:26:     	T100VMFrame* Frame = new T100VMFrame(0);
 	.loc 7 26 44
-	movl	$856, %edx	 #,
+	movl	$872, %edx	 #,
 	movq	%rbx, %rcx	 # _12,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp101, D.228794
-	movq	%rax, %rcx	 # D.228794,
+	movq	%rsi, %rax	 # tmp101, D.228806
+	movq	%rax, %rcx	 # D.228806,
 	call	_Unwind_Resume	 #
 .LEHE5:
 .L76:
