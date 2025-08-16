@@ -5,7 +5,7 @@
  # GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
  # options passed:  -I ..\..\..\T100Library\Source\T100Library\include
  # -I ..\..\..\T100Host\Source\T100Host\include -I include\hyperv
- # -I include\base -I include\device
+ # -I include\base -I include\device -I include\skeletal
  # -I C:\zoo\bin\llvm-mingw-20240518-msvcrt-x86_64\include
  # -iprefix C:/zoo/bin/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/
  # -D_REENTRANT

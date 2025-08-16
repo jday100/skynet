@@ -23,9 +23,11 @@
 				</ResourceCompiler>
 				<Linker>
 					<Add library="libwxmsw30ud.a" />
-					<Add library="../../../build/libT100Library.a" />
 					<Add library="../../../build/libT100Hypervisor.a" />
 					<Add library="../../../build/libT100Host.a" />
+					<Add library="../../../build/libT100Library.a" />
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libwinhvplatform.a" />
+					<Add library="C:/zoo/bin/llvm-mingw-20240518-msvcrt-x86_64/x86_64-w64-mingw32/lib/libwinhvemulation.a" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
 			</Target>

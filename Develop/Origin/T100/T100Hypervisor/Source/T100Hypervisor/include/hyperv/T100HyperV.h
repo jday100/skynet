@@ -5,7 +5,7 @@
 #include "T100HyperVCommon.h"
 #include "T100Port.h"
 #include "T100Memory.h"
-#include "T100Device.h"
+#include "base/T100Device.h"
 #include "T100Processor.h"
 
 #include <winhvemulation.h>

@@ -2,6 +2,7 @@
 
 #include "T100Mouse.h"
 #include "T100Keyboard.h"
+#include "T100HyperVInvoking.h"
 
 T100HyperV::T100HyperV() :
     T100HostBase()
@@ -115,9 +116,9 @@ T100VOID T100HyperV::Install()
     callback.Size       = sizeof(WHV_EMULATOR_CALLBACKS);
     callback.WHvEmulatorMemoryCallback      = T100HyperVInvoking::OnMemoryCallback;
     callback.WHvEmulatorIoPortCallback      = T100HyperVInvoking::OnIoPortCallback;
-    callback.WHvEmulatorGetVirtualProcessorRegisters    = T100VPCInvoking::OnGetRegistersCallback;
-    callback.WHvEmulatorSetVirtualProcessorRegisters    = T100VPCInvoking::OnSetRegistersCallback;
-    callback.WHvEmulatorTranslateGvaPage    = T100VPCInvoking::OnTranslateGvaPageCallback;
+    callback.WHvEmulatorGetVirtualProcessorRegisters    = T100HyperVInvoking::OnGetRegistersCallback;
+    callback.WHvEmulatorSetVirtualProcessorRegisters    = T100HyperVInvoking::OnSetRegistersCallback;
+    callback.WHvEmulatorTranslateGvaPage    = T100HyperVInvoking::OnTranslateGvaPageCallback;
 
     HRESULT result = WHvEmulatorCreateEmulator(&callback, &m_emulator);
 
