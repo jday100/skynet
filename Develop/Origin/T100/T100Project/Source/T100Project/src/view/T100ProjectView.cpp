@@ -228,6 +228,11 @@ T100VOID T100ProjectView::FileSave()
     SetTitle();
 }
 
+T100VOID T100ProjectView::PageChanged()
+{
+    SetTitle();
+}
+
 T100VOID T100ProjectView::PageClose()
 {
     SetTitle();

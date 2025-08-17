@@ -317,8 +317,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.273329
-	movq	%rax, %rcx	 # D.273329,
+	movq	%rbx, %rax	 # tmp99, D.273330
+	movq	%rax, %rcx	 # D.273330,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1088,8 +1088,8 @@ _ZN11wxImageListC1Eiibi:
 	movq	-48(%rbp), %rax	 # this, _4
 	movq	%rax, %rcx	 # _4,
 	call	_ZN8wxObjectD2Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.273331
-	movq	%rax, %rcx	 # D.273331,
+	movq	%rbx, %rax	 # tmp99, D.273332
+	movq	%rax, %rcx	 # D.273332,
 .LEHB3:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2398,7 +2398,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 11 337 27
-	movq	-8(%rbp), %rax	 # D.126296, D.272655
+	movq	-8(%rbp), %rax	 # D.126296, D.272656
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 11 338 5
 	addq	$48, %rsp	 #,
@@ -2629,7 +2629,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 11 481 78
-	movq	-8(%rbp), %rax	 # D.126330, D.272677
+	movq	-8(%rbp), %rax	 # D.126330, D.272678
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 11 481 81
 	addq	$48, %rsp	 #,
@@ -2677,7 +2677,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 11 482 78
-	movq	-8(%rbp), %rax	 # D.126332, D.272674
+	movq	-8(%rbp), %rax	 # D.126332, D.272675
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 11 482 81
 	addq	$48, %rsp	 #,
@@ -2864,7 +2864,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 11 532 77
-	movq	-72(%rbp), %rax	 # D.126374, D.272650
+	movq	-72(%rbp), %rax	 # D.126374, D.272651
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 11 533 5
 	addq	$72, %rsp	 #,
@@ -4168,7 +4168,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 11 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.272569
+	movq	(%rax), %rax	 # wxDefaultSize, D.272570
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 11 1746 72
 	popq	%rbp	 #
@@ -4346,8 +4346,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.273344
-	movq	%rax, %rcx	 # D.273344,
+	movq	%rbx, %rax	 # tmp97, D.273345
+	movq	%rax, %rcx	 # D.273345,
 .LEHB6:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5037,8 +5037,8 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	leaq	-96(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.273348
-	movq	%rax, %rcx	 # D.273348,
+	movq	%rbx, %rax	 # tmp97, D.273349
+	movq	%rax, %rcx	 # D.273349,
 .LEHB9:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5145,8 +5145,8 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.273350
-	movq	%rax, %rcx	 # D.273350,
+	movq	%rbx, %rax	 # tmp98, D.273351
+	movq	%rax, %rcx	 # D.273351,
 .LEHB12:
 	call	_Unwind_Resume	 #
 .LEHE12:
@@ -5616,8 +5616,8 @@ _ZN14wxTreeCtrlBase14OnCompareItemsERK12wxTreeItemIdS2_:
 	leaq	-96(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp108, D.273354
-	movq	%rax, %rcx	 # D.273354,
+	movq	%rbx, %rax	 # tmp108, D.273355
+	movq	%rax, %rcx	 # D.273355,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .LEHE16:
@@ -6056,8 +6056,8 @@ _ZN10wxTreeCtrlC2EP8wxWindowiRK7wxPointRK6wxSizelRK11wxValidatorRK8wxString:
 	leaq	-49(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN13wxPointerHashC1Ev	 #
-	movl	%edi, %r9d	 # D.272169,
-	movl	%esi, %r8d	 # D.272170,
+	movl	%edi, %r9d	 # D.272170,
+	movl	%esi, %r8d	 # D.272171,
 	movl	$100, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 .LEHB18:
@@ -6123,8 +6123,8 @@ _ZN10wxTreeCtrlC2EP8wxWindowiRK7wxPointRK6wxSizelRK11wxValidatorRK8wxString:
 	movq	0(%rbp), %rax	 # this, _10
 	movq	%rax, %rcx	 # _10,
 	call	_ZN14wxTreeCtrlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp118, D.273357
-	movq	%rax, %rcx	 # D.273357,
+	movq	%rbx, %rax	 # tmp118, D.273358
+	movq	%rax, %rcx	 # D.273358,
 .LEHB20:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7452,8 +7452,8 @@ _ZN20wxMDIParentFrameBase14OnCreateClientEv:
 	movl	$584, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.273362
-	movq	%rax, %rcx	 # D.273362,
+	movq	%rsi, %rax	 # tmp93, D.273363
+	movq	%rax, %rcx	 # D.273363,
 .LEHB23:
 	call	_Unwind_Resume	 #
 .LEHE23:
@@ -7848,8 +7848,8 @@ _ZN15T100ProjectTreeC2EP8wxWindowiRK7wxPointRK6wxSizelRK11wxValidatorRK8wxString
 	movq	-32(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN10wxTreeCtrlD2Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.273365
-	movq	%rax, %rcx	 # D.273365,
+	movq	%rbx, %rax	 # tmp99, D.273366
+	movq	%rax, %rcx	 # D.273366,
 .LEHB26:
 	call	_Unwind_Resume	 #
 	nop	
@@ -11184,8 +11184,8 @@ _ZN15T100ProjectTree4initEv:
 	movl	$24, %edx	 #,
 	movq	%rbx, %rcx	 # _31,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp231, D.274067
-	movq	%rax, %rcx	 # D.274067,
+	movq	%rsi, %rax	 # tmp231, D.274068
+	movq	%rax, %rcx	 # D.274068,
 	call	_Unwind_Resume	 #
 .L368:
 	movq	%rax, %rbx	 #, tmp233
@@ -11194,8 +11194,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	-80(%rbp), %rax	 #, tmp232
 	movq	%rax, %rcx	 # tmp232,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp233, D.274068
-	movq	%rax, %rcx	 # D.274068,
+	movq	%rbx, %rax	 # tmp233, D.274069
+	movq	%rax, %rcx	 # D.274069,
 	call	_Unwind_Resume	 #
 .L369:
 	movq	%rax, %rbx	 #, tmp235
@@ -11204,8 +11204,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	-64(%rbp), %rax	 #, tmp234
 	movq	%rax, %rcx	 # tmp234,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp235, D.274069
-	movq	%rax, %rcx	 # D.274069,
+	movq	%rbx, %rax	 # tmp235, D.274070
+	movq	%rax, %rcx	 # D.274070,
 	call	_Unwind_Resume	 #
 .L370:
 	movq	%rax, %rbx	 #, tmp237
@@ -11214,8 +11214,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	-48(%rbp), %rax	 #, tmp236
 	movq	%rax, %rcx	 # tmp236,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp237, D.274070
-	movq	%rax, %rcx	 # D.274070,
+	movq	%rbx, %rax	 # tmp237, D.274071
+	movq	%rax, %rcx	 # D.274071,
 	call	_Unwind_Resume	 #
 .L371:
 	movq	%rax, %rbx	 #, tmp239
@@ -11224,8 +11224,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	-32(%rbp), %rax	 #, tmp238
 	movq	%rax, %rcx	 # tmp238,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp239, D.274071
-	movq	%rax, %rcx	 # D.274071,
+	movq	%rbx, %rax	 # tmp239, D.274072
+	movq	%rax, %rcx	 # D.274072,
 	call	_Unwind_Resume	 #
 .L372:
 	movq	%rax, %rbx	 #, tmp241
@@ -11234,8 +11234,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	-16(%rbp), %rax	 #, tmp240
 	movq	%rax, %rcx	 # tmp240,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp241, D.274072
-	movq	%rax, %rcx	 # D.274072,
+	movq	%rbx, %rax	 # tmp241, D.274073
+	movq	%rax, %rcx	 # D.274073,
 	call	_Unwind_Resume	 #
 .L373:
 	movq	%rax, %rbx	 #, tmp243
@@ -11244,8 +11244,8 @@ _ZN15T100ProjectTree4initEv:
 	movq	%rbp, %rax	 #, tmp242
 	movq	%rax, %rcx	 # tmp242,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp243, D.274073
-	movq	%rax, %rcx	 # D.274073,
+	movq	%rbx, %rax	 # tmp243, D.274074
+	movq	%rax, %rcx	 # D.274074,
 	call	_Unwind_Resume	 #
 .L374:
 	movq	%rax, %rbx	 #, tmp245
@@ -11254,8 +11254,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	16(%rbp), %rax	 #, tmp244
 	movq	%rax, %rcx	 # tmp244,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp245, D.274074
-	movq	%rax, %rcx	 # D.274074,
+	movq	%rbx, %rax	 # tmp245, D.274075
+	movq	%rax, %rcx	 # D.274075,
 	call	_Unwind_Resume	 #
 .L375:
 	movq	%rax, %rbx	 #, tmp247
@@ -11264,8 +11264,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	32(%rbp), %rax	 #, tmp246
 	movq	%rax, %rcx	 # tmp246,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp247, D.274075
-	movq	%rax, %rcx	 # D.274075,
+	movq	%rbx, %rax	 # tmp247, D.274076
+	movq	%rax, %rcx	 # D.274076,
 	call	_Unwind_Resume	 #
 .L376:
 	movq	%rax, %rbx	 #, tmp249
@@ -11274,8 +11274,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	48(%rbp), %rax	 #, tmp248
 	movq	%rax, %rcx	 # tmp248,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp249, D.274076
-	movq	%rax, %rcx	 # D.274076,
+	movq	%rbx, %rax	 # tmp249, D.274077
+	movq	%rax, %rcx	 # D.274077,
 	call	_Unwind_Resume	 #
 .L377:
 	movq	%rax, %rbx	 #, tmp251
@@ -11284,8 +11284,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	64(%rbp), %rax	 #, tmp250
 	movq	%rax, %rcx	 # tmp250,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp251, D.274077
-	movq	%rax, %rcx	 # D.274077,
+	movq	%rbx, %rax	 # tmp251, D.274078
+	movq	%rax, %rcx	 # D.274078,
 	call	_Unwind_Resume	 #
 .L378:
 	movq	%rax, %rbx	 #, tmp253
@@ -11294,8 +11294,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	80(%rbp), %rax	 #, tmp252
 	movq	%rax, %rcx	 # tmp252,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp253, D.274078
-	movq	%rax, %rcx	 # D.274078,
+	movq	%rbx, %rax	 # tmp253, D.274079
+	movq	%rax, %rcx	 # D.274079,
 	call	_Unwind_Resume	 #
 .L379:
 	movq	%rax, %rbx	 #, tmp255
@@ -11304,8 +11304,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	96(%rbp), %rax	 #, tmp254
 	movq	%rax, %rcx	 # tmp254,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp255, D.274079
-	movq	%rax, %rcx	 # D.274079,
+	movq	%rbx, %rax	 # tmp255, D.274080
+	movq	%rax, %rcx	 # D.274080,
 	call	_Unwind_Resume	 #
 .L380:
 	movq	%rax, %rbx	 #, tmp257
@@ -11314,8 +11314,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	112(%rbp), %rax	 #, tmp256
 	movq	%rax, %rcx	 # tmp256,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp257, D.274080
-	movq	%rax, %rcx	 # D.274080,
+	movq	%rbx, %rax	 # tmp257, D.274081
+	movq	%rax, %rcx	 # D.274081,
 	call	_Unwind_Resume	 #
 .L381:
 	movq	%rax, %rbx	 #, tmp259
@@ -11324,8 +11324,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	128(%rbp), %rax	 #, tmp258
 	movq	%rax, %rcx	 # tmp258,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp259, D.274081
-	movq	%rax, %rcx	 # D.274081,
+	movq	%rbx, %rax	 # tmp259, D.274082
+	movq	%rax, %rcx	 # D.274082,
 	call	_Unwind_Resume	 #
 .L382:
 	movq	%rax, %rbx	 #, tmp261
@@ -11334,8 +11334,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	144(%rbp), %rax	 #, tmp260
 	movq	%rax, %rcx	 # tmp260,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp261, D.274082
-	movq	%rax, %rcx	 # D.274082,
+	movq	%rbx, %rax	 # tmp261, D.274083
+	movq	%rax, %rcx	 # D.274083,
 	call	_Unwind_Resume	 #
 .L383:
 	movq	%rax, %rbx	 #, tmp263
@@ -11344,8 +11344,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	160(%rbp), %rax	 #, tmp262
 	movq	%rax, %rcx	 # tmp262,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp263, D.274083
-	movq	%rax, %rcx	 # D.274083,
+	movq	%rbx, %rax	 # tmp263, D.274084
+	movq	%rax, %rcx	 # D.274084,
 	call	_Unwind_Resume	 #
 .L384:
 	movq	%rax, %rbx	 #, tmp265
@@ -11354,8 +11354,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	176(%rbp), %rax	 #, tmp264
 	movq	%rax, %rcx	 # tmp264,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp265, D.274084
-	movq	%rax, %rcx	 # D.274084,
+	movq	%rbx, %rax	 # tmp265, D.274085
+	movq	%rax, %rcx	 # D.274085,
 	call	_Unwind_Resume	 #
 .L385:
 	movq	%rax, %rbx	 #, tmp267
@@ -11364,8 +11364,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	192(%rbp), %rax	 #, tmp266
 	movq	%rax, %rcx	 # tmp266,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp267, D.274085
-	movq	%rax, %rcx	 # D.274085,
+	movq	%rbx, %rax	 # tmp267, D.274086
+	movq	%rax, %rcx	 # D.274086,
 	call	_Unwind_Resume	 #
 .L386:
 	movq	%rax, %rbx	 #, tmp269
@@ -11374,8 +11374,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	208(%rbp), %rax	 #, tmp268
 	movq	%rax, %rcx	 # tmp268,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp269, D.274086
-	movq	%rax, %rcx	 # D.274086,
+	movq	%rbx, %rax	 # tmp269, D.274087
+	movq	%rax, %rcx	 # D.274087,
 	call	_Unwind_Resume	 #
 .L387:
 	movq	%rax, %rbx	 #, tmp271
@@ -11384,8 +11384,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	224(%rbp), %rax	 #, tmp270
 	movq	%rax, %rcx	 # tmp270,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp271, D.274087
-	movq	%rax, %rcx	 # D.274087,
+	movq	%rbx, %rax	 # tmp271, D.274088
+	movq	%rax, %rcx	 # D.274088,
 	call	_Unwind_Resume	 #
 .L388:
 	movq	%rax, %rbx	 #, tmp273
@@ -11394,8 +11394,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	240(%rbp), %rax	 #, tmp272
 	movq	%rax, %rcx	 # tmp272,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp273, D.274088
-	movq	%rax, %rcx	 # D.274088,
+	movq	%rbx, %rax	 # tmp273, D.274089
+	movq	%rax, %rcx	 # D.274089,
 	call	_Unwind_Resume	 #
 .L389:
 	movq	%rax, %rbx	 #, tmp275
@@ -11404,8 +11404,8 @@ _ZN15T100ProjectTree4initEv:
 	leaq	256(%rbp), %rax	 #, tmp274
 	movq	%rax, %rcx	 # tmp274,
 	call	_ZN8wxBitmapD1Ev	 #
-	movq	%rbx, %rax	 # tmp275, D.274089
-	movq	%rax, %rcx	 # D.274089,
+	movq	%rbx, %rax	 # tmp275, D.274090
+	movq	%rax, %rcx	 # D.274090,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE73:
@@ -12653,7 +12653,7 @@ _ZN15T100ProjectTree10AppendRootEv:
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:1281:     return result;
 	.loc 26 1281 12
-	movq	-72(%rbp), %rax	 # result, D.272353
+	movq	-72(%rbp), %rax	 # result, D.272354
 	jmp	.L435	 #
 .L433:
 	movq	%rax, %rsi	 #, tmp107
@@ -12662,8 +12662,8 @@ _ZN15T100ProjectTree10AppendRootEv:
 	movl	$24, %edx	 #,
 	movq	%rbx, %rcx	 # _10,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp107, D.274091
-	movq	%rax, %rcx	 # D.274091,
+	movq	%rsi, %rax	 # tmp107, D.274092
+	movq	%rax, %rcx	 # D.274092,
 .LEHB78:
 	call	_Unwind_Resume	 #
 .L434:
@@ -12673,8 +12673,8 @@ _ZN15T100ProjectTree10AppendRootEv:
 	leaq	-64(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.274092
-	movq	%rax, %rcx	 # D.274092,
+	movq	%rbx, %rax	 # tmp109, D.274093
+	movq	%rax, %rcx	 # D.274093,
 	call	_Unwind_Resume	 #
 .LEHE78:
 .L435:
@@ -12850,8 +12850,8 @@ _ZN15T100ProjectTree13AppendProjectE12wxTreeItemIdP15T100ProjectInfo:
 	movl	$88, %edx	 #,
 	movq	%rbx, %rcx	 # _14,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp117, D.274094
-	movq	%rax, %rcx	 # D.274094,
+	movq	%rsi, %rax	 # tmp117, D.274095
+	movq	%rax, %rcx	 # D.274095,
 	call	_Unwind_Resume	 #
 .L440:
 	movq	%rax, %rbx	 #, tmp119
@@ -12860,8 +12860,8 @@ _ZN15T100ProjectTree13AppendProjectE12wxTreeItemIdP15T100ProjectInfo:
 	leaq	-64(%rbp), %rax	 #, tmp118
 	movq	%rax, %rcx	 # tmp118,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp119, D.274095
-	movq	%rax, %rcx	 # D.274095,
+	movq	%rbx, %rax	 # tmp119, D.274096
+	movq	%rax, %rcx	 # D.274096,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE83:
@@ -13015,8 +13015,8 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 	movl	$88, %edx	 #,
 	movq	%rbx, %rcx	 # _8,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp108, D.274096
-	movq	%rax, %rcx	 # D.274096,
+	movq	%rsi, %rax	 # tmp108, D.274097
+	movq	%rax, %rcx	 # D.274097,
 .LEHB88:
 	call	_Unwind_Resume	 #
 .L446:
@@ -13026,8 +13026,8 @@ _ZN15T100ProjectTree10AppendFileE12wxTreeItemIdP12T100FileInfo:
 	leaq	-64(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.274097
-	movq	%rax, %rcx	 # D.274097,
+	movq	%rbx, %rax	 # tmp110, D.274098
+	movq	%rax, %rcx	 # D.274098,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE88:
@@ -13204,8 +13204,8 @@ _ZN15T100ProjectTree12AppendFolderE12wxTreeItemIdP14T100FolderInfo:
 	movl	$88, %edx	 #,
 	movq	%rbx, %rcx	 # _14,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp117, D.274098
-	movq	%rax, %rcx	 # D.274098,
+	movq	%rsi, %rax	 # tmp117, D.274099
+	movq	%rax, %rcx	 # D.274099,
 	call	_Unwind_Resume	 #
 .L452:
 	movq	%rax, %rbx	 #, tmp119
@@ -13214,8 +13214,8 @@ _ZN15T100ProjectTree12AppendFolderE12wxTreeItemIdP14T100FolderInfo:
 	leaq	-64(%rbp), %rax	 #, tmp118
 	movq	%rax, %rcx	 # tmp118,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp119, D.274099
-	movq	%rax, %rcx	 # D.274099,
+	movq	%rbx, %rax	 # tmp119, D.274100
+	movq	%rax, %rcx	 # D.274100,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE93:
@@ -14030,7 +14030,7 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEvent
 	subq	$64, %rsp	 #,
 	.seh_stackalloc	64
 	.seh_endprologue
-	movq	%rcx, 32(%rbp)	 # D.264277, D.264277
+	movq	%rcx, 32(%rbp)	 # D.264278, D.264278
 	movq	%rdx, %rbx	 #, tmp91
 	movq	(%rbx), %rax	 # method, tmp92
 	movq	8(%rbx), %rdx	 # method,
@@ -14065,8 +14065,8 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEvent
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.274101
-	movq	%rax, %rcx	 # D.274101,
+	movq	%rsi, %rax	 # tmp97, D.274102
+	movq	%rax, %rcx	 # D.274102,
 .LEHB96:
 	call	_Unwind_Resume	 #
 .LEHE96:
@@ -14216,7 +14216,7 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
 	subq	$64, %rsp	 #,
 	.seh_stackalloc	64
 	.seh_endprologue
-	movq	%rcx, 32(%rbp)	 # D.264404, D.264404
+	movq	%rcx, 32(%rbp)	 # D.264405, D.264405
 	movq	%rdx, %rbx	 #, tmp91
 	movq	(%rbx), %rax	 # method, tmp92
 	movq	8(%rbx), %rdx	 # method,
@@ -14251,8 +14251,8 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.274104
-	movq	%rax, %rcx	 # D.274104,
+	movq	%rsi, %rax	 # tmp97, D.274105
+	movq	%rax, %rcx	 # D.274105,
 .LEHB99:
 	call	_Unwind_Resume	 #
 .LEHE99:
@@ -14324,7 +14324,7 @@ _ZNSt6vectorIP15T100ProjectInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP15T100ProjectInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269394, D.272242
+	movq	-8(%rbp), %rax	 # D.269395, D.272243
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 29 699 50
 	addq	$48, %rsp	 #,
@@ -14365,7 +14365,7 @@ _ZNSt6vectorIP15T100ProjectInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP15T100ProjectInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269396, D.272245
+	movq	-8(%rbp), %rax	 # D.269397, D.272246
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 29 717 51
 	addq	$48, %rsp	 #,
@@ -14529,7 +14529,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269401, D.272256
+	movq	-8(%rbp), %rax	 # D.269402, D.272257
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 29 699 50
 	addq	$48, %rsp	 #,
@@ -14570,7 +14570,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269403, D.272259
+	movq	-8(%rbp), %rax	 # D.269404, D.272260
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 29 717 51
 	addq	$48, %rsp	 #,
@@ -14733,7 +14733,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269408, D.272270
+	movq	-8(%rbp), %rax	 # D.269409, D.272271
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 29 699 50
 	addq	$48, %rsp	 #,
@@ -14774,7 +14774,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.269410, D.272273
+	movq	-8(%rbp), %rax	 # D.269411, D.272274
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 29 717 51
 	addq	$48, %rsp	 #,
@@ -14969,14 +14969,14 @@ _ZNKSt6vectorIP15T100ProjectInfoSaIS1_EE5beginEv:
 	.loc 29 708 45
 	movq	16(%rbp), %rax	 # this, tmp90
 	movq	(%rax), %rax	 # this_3(D)->D.139166._M_impl._M_start, _1
-	movq	%rax, -8(%rbp)	 # _1, D.269416
+	movq	%rax, -8(%rbp)	 # _1, D.269417
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:708:       { return const_iterator(this->_M_impl._M_start); }
 	.loc 29 708 53
 	leaq	-8(%rbp), %rdx	 #, tmp91
 	leaq	-16(%rbp), %rax	 #, tmp92
 	movq	%rax, %rcx	 # tmp92,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPKP15T100ProjectInfoSt6vectorIS2_SaIS2_EEEC1ERKS4_	 #
-	movq	-16(%rbp), %rax	 # D.269417, D.272337
+	movq	-16(%rbp), %rax	 # D.269418, D.272338
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:708:       { return const_iterator(this->_M_impl._M_start); }
 	.loc 29 708 56
 	addq	$48, %rsp	 #,
@@ -15012,14 +15012,14 @@ _ZNKSt6vectorIP15T100ProjectInfoSaIS1_EE3endEv:
 	.loc 29 726 45
 	movq	16(%rbp), %rax	 # this, tmp90
 	movq	8(%rax), %rax	 # this_3(D)->D.139166._M_impl._M_finish, _1
-	movq	%rax, -8(%rbp)	 # _1, D.269419
+	movq	%rax, -8(%rbp)	 # _1, D.269420
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:726:       { return const_iterator(this->_M_impl._M_finish); }
 	.loc 29 726 54
 	leaq	-8(%rbp), %rdx	 #, tmp91
 	leaq	-16(%rbp), %rax	 #, tmp92
 	movq	%rax, %rcx	 # tmp92,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPKP15T100ProjectInfoSt6vectorIS2_SaIS2_EEEC1ERKS4_	 #
-	movq	-16(%rbp), %rax	 # D.269420, D.272341
+	movq	-16(%rbp), %rax	 # D.269421, D.272342
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:726:       { return const_iterator(this->_M_impl._M_finish); }
 	.loc 29 726 57
 	addq	$48, %rsp	 #,
@@ -15200,7 +15200,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS
 	call	_ZN14wxEventFunctorC2Ev	 #
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _2
 	movq	-32(%rbp), %rax	 # this, tmp98
-	movq	%rdx, (%rax)	 # _2, this_14(D)->D.264370._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _2, this_14(D)->D.264371._vptr.wxEventFunctor
 	movq	-32(%rbp), %rax	 # this, tmp99
 	movq	-16(%rbp), %rdx	 # handler, tmp100
 	movq	%rdx, 8(%rax)	 # tmp100, this_14(D)->m_handler
@@ -15277,8 +15277,8 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.274106
-	movq	%rax, %rcx	 # D.274106,
+	movq	%rbx, %rax	 # tmp107, D.274107
+	movq	%rax, %rcx	 # D.274107,
 .LEHB101:
 	call	_Unwind_Resume	 #
 	nop	
@@ -15356,7 +15356,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	call	_ZN14wxEventFunctorC2Ev	 #
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _2
 	movq	-32(%rbp), %rax	 # this, tmp98
-	movq	%rdx, (%rax)	 # _2, this_14(D)->D.264458._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _2, this_14(D)->D.264459._vptr.wxEventFunctor
 	movq	-32(%rbp), %rax	 # this, tmp99
 	movq	-16(%rbp), %rdx	 # handler, tmp100
 	movq	%rdx, 8(%rax)	 # tmp100, this_14(D)->m_handler
@@ -15433,8 +15433,8 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.274109
-	movq	%rax, %rcx	 # D.274109,
+	movq	%rbx, %rax	 # tmp107, D.274110
+	movq	%rax, %rcx	 # D.274110,
 .LEHB103:
 	call	_Unwind_Resume	 #
 	nop	
@@ -15784,7 +15784,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.264311, D.264311
+	movq	%rcx, 16(%rbp)	 # D.264312, D.264312
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:392:     static void CheckHandlerArgument(EventArg *) { }
 	.loc 10 392 52
 	nop	
@@ -15812,7 +15812,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.264408, D.264408
+	movq	%rcx, 16(%rbp)	 # D.264409, D.264409
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:392:     static void CheckHandlerArgument(EventArg *) { }
 	.loc 10 392 52
 	nop	
@@ -16170,7 +16170,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	.loc 10 382 7
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.264458._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.264459._vptr.wxEventFunctor
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
@@ -16260,7 +16260,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS
 	.loc 10 382 7
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.264370._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.264371._vptr.wxEventFunctor
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
@@ -17725,16 +17725,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	movl	$7, %edi	 #, _18
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:11:     EVT_TREE_ITEM_MENU(wxID_ANY, OnItemMenu)
 	.loc 26 11 5
-	leaq	_ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent(%rip), %rbx	 #, D.272849
-	movl	$0, %esi	 #, D.272849
+	leaq	_ZN15T100ProjectTree10OnItemMenuER11wxTreeEvent(%rip), %rbx	 #, D.272850
+	movl	$0, %esi	 #, D.272850
 	leaq	16(%rbp), %rcx	 #, tmp124
-	movq	%rbx, 0(%rbp)	 # D.272849,
-	movq	%rsi, 8(%rbp)	 # D.272849,
+	movq	%rbx, 0(%rbp)	 # D.272850,
+	movq	%rsi, 8(%rbp)	 # D.272850,
 	movq	%rbp, %rax	 #, tmp125
 	movq	%rax, %rdx	 # tmp125,
 	call	_Z19wxEventFunctionCastI11wxTreeEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	16(%rbp), %rax	 # D.272850, tmp126
-	movq	24(%rbp), %rdx	 # D.272850,
+	movq	16(%rbp), %rax	 # D.272851, tmp126
+	movq	24(%rbp), %rdx	 # D.272851,
 	movq	%rax, 0(%rbp)	 # tmp126,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp127
@@ -17760,16 +17760,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rdi	 #, _18
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ProjectTree.cpp:12:     EVT_TREE_SEL_CHANGED(wxID_ANY, OnItemChanged)
 	.loc 26 12 5 is_stmt 1 discriminator 1
-	leaq	_ZN15T100ProjectTree13OnItemChangedER11wxTreeEvent(%rip), %r13	 #, D.272851
-	movl	$0, %r14d	 #, D.272851
+	leaq	_ZN15T100ProjectTree13OnItemChangedER11wxTreeEvent(%rip), %r13	 #, D.272852
+	movl	$0, %r14d	 #, D.272852
 	leaq	32(%rbp), %rcx	 #, tmp128
-	movq	%r13, 0(%rbp)	 # D.272851,
-	movq	%r14, 8(%rbp)	 # D.272851,
+	movq	%r13, 0(%rbp)	 # D.272852,
+	movq	%r14, 8(%rbp)	 # D.272852,
 	movq	%rbp, %rax	 #, tmp129
 	movq	%rax, %rdx	 # tmp129,
 	call	_Z19wxEventFunctionCastI11wxTreeEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	32(%rbp), %rax	 # D.272852, tmp130
-	movq	40(%rbp), %rdx	 # D.272852,
+	movq	32(%rbp), %rax	 # D.272853, tmp130
+	movq	40(%rbp), %rdx	 # D.272853,
 	movq	%rax, 0(%rbp)	 # tmp130,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp131
@@ -17798,13 +17798,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -80(%rbp)	 # tmp154, %sfp
 	movq	$0, -72(%rbp)	 #, %sfp
 	leaq	48(%rbp), %rax	 #, tmp132
-	movdqa	-80(%rbp), %xmm0	 # %sfp, D.272853
-	movaps	%xmm0, 0(%rbp)	 # D.272853,
+	movdqa	-80(%rbp), %xmm0	 # %sfp, D.272854
+	movaps	%xmm0, 0(%rbp)	 # D.272854,
 	movq	%rbp, %rdx	 #, tmp133
 	movq	%rax, %rcx	 # tmp132,
 	call	_Z19wxEventFunctionCastI11wxTreeEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	48(%rbp), %rax	 # D.272854, tmp134
-	movq	56(%rbp), %rdx	 # D.272854,
+	movq	48(%rbp), %rax	 # D.272855, tmp134
+	movq	56(%rbp), %rdx	 # D.272855,
 	movq	%rax, 0(%rbp)	 # tmp134,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp135
@@ -17833,13 +17833,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -64(%rbp)	 # tmp156, %sfp
 	movq	$0, -56(%rbp)	 #, %sfp
 	leaq	64(%rbp), %rax	 #, tmp136
-	movdqa	-64(%rbp), %xmm1	 # %sfp, D.272855
-	movaps	%xmm1, 0(%rbp)	 # D.272855,
+	movdqa	-64(%rbp), %xmm1	 # %sfp, D.272856
+	movaps	%xmm1, 0(%rbp)	 # D.272856,
 	movq	%rbp, %rdx	 #, tmp137
 	movq	%rax, %rcx	 # tmp136,
 	call	_Z19wxEventFunctionCastI11wxTreeEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	64(%rbp), %rax	 # D.272856, tmp138
-	movq	72(%rbp), %rdx	 # D.272856,
+	movq	64(%rbp), %rax	 # D.272857, tmp138
+	movq	72(%rbp), %rdx	 # D.272857,
 	movq	%rax, 0(%rbp)	 # tmp138,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp139
@@ -17868,13 +17868,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -48(%rbp)	 # tmp158, %sfp
 	movq	$0, -40(%rbp)	 #, %sfp
 	leaq	80(%rbp), %rax	 #, tmp140
-	movdqa	-48(%rbp), %xmm2	 # %sfp, D.272857
-	movaps	%xmm2, 0(%rbp)	 # D.272857,
+	movdqa	-48(%rbp), %xmm2	 # %sfp, D.272858
+	movaps	%xmm2, 0(%rbp)	 # D.272858,
 	movq	%rbp, %rdx	 #, tmp141
 	movq	%rax, %rcx	 # tmp140,
 	call	_Z19wxEventFunctionCastI14wxCommandEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	80(%rbp), %rax	 # D.272858, tmp142
-	movq	88(%rbp), %rdx	 # D.272858,
+	movq	80(%rbp), %rax	 # D.272859, tmp142
+	movq	88(%rbp), %rdx	 # D.272859,
 	movq	%rax, 0(%rbp)	 # tmp142,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp143
@@ -17903,13 +17903,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -32(%rbp)	 # tmp160, %sfp
 	movq	$0, -24(%rbp)	 #, %sfp
 	leaq	96(%rbp), %rax	 #, tmp144
-	movdqa	-32(%rbp), %xmm3	 # %sfp, D.272859
-	movaps	%xmm3, 0(%rbp)	 # D.272859,
+	movdqa	-32(%rbp), %xmm3	 # %sfp, D.272860
+	movaps	%xmm3, 0(%rbp)	 # D.272860,
 	movq	%rbp, %rdx	 #, tmp145
 	movq	%rax, %rcx	 # tmp144,
 	call	_Z19wxEventFunctionCastI14wxCommandEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	96(%rbp), %rax	 # D.272860, tmp146
-	movq	104(%rbp), %rdx	 # D.272860,
+	movq	96(%rbp), %rax	 # D.272861, tmp146
+	movq	104(%rbp), %rdx	 # D.272861,
 	movq	%rax, 0(%rbp)	 # tmp146,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp147
@@ -17938,13 +17938,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -16(%rbp)	 # tmp162, %sfp
 	movq	$0, -8(%rbp)	 #, %sfp
 	leaq	112(%rbp), %rax	 #, tmp148
-	movdqa	-16(%rbp), %xmm4	 # %sfp, D.272861
-	movaps	%xmm4, 0(%rbp)	 # D.272861,
+	movdqa	-16(%rbp), %xmm4	 # %sfp, D.272862
+	movaps	%xmm4, 0(%rbp)	 # D.272862,
 	movq	%rbp, %rdx	 #, tmp149
 	movq	%rax, %rcx	 # tmp148,
 	call	_Z19wxEventFunctionCastI14wxCommandEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	112(%rbp), %rax	 # D.272862, tmp150
-	movq	120(%rbp), %rdx	 # D.272862,
+	movq	112(%rbp), %rax	 # D.272863, tmp150
+	movq	120(%rbp), %rdx	 # D.272863,
 	movq	%rax, 0(%rbp)	 # tmp150,
 	movq	%rdx, 8(%rbp)	 #,
 	movq	%rbp, %rax	 #, tmp151
@@ -18002,8 +18002,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_ZN17wxEventTableEntryD1Ev	 #
 	jmp	.L599	 #
 .L598:
-	movq	%rsi, %rax	 # tmp153, D.274110
-	movq	%rax, %rcx	 # D.274110,
+	movq	%rsi, %rax	 # tmp153, D.274111
+	movq	%rax, %rcx	 # D.274111,
 .LEHB106:
 	call	_Unwind_Resume	 #
 	nop	
@@ -18225,7 +18225,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 10 431 35
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_21(D)->D.264458._vptr.wxEventFunctor, _1
+	movq	(%rax), %rax	 # this_21(D)->D.264459._vptr.wxEventFunctor, _1
 	subq	$8, %rax	 #, _2
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 10 431 32
@@ -18597,7 +18597,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI11wxTreeEventE12wxEvtHandler7wxEvent
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 10 431 35
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_21(D)->D.264370._vptr.wxEventFunctor, _1
+	movq	(%rax), %rax	 # this_21(D)->D.264371._vptr.wxEventFunctor, _1
 	subq	$8, %rax	 #, _2
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 10 431 32

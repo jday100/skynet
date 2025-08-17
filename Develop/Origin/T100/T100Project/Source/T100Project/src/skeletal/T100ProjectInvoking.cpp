@@ -201,6 +201,11 @@ T100VOID T100ProjectInvoking::OnWorkSpaceSelected()
     m_skeletal->OnWorkSpaceSelected();
 }
 
+T100VOID T100ProjectInvoking::OnPageChanged()
+{
+    m_skeletal->OnPageChanged();
+}
+
 T100VOID T100ProjectInvoking::OnPageClosed()
 {
     m_skeletal->OnPageClosed();

@@ -60,21 +60,13 @@ T100VOID T100MainPanel::Save()
 
 T100VOID T100MainPanel::OnPageChanged(wxAuiNotebookEvent& event)
 {
-    T100INT     index;
-
     T100Editor*     editor      = T100NULL;
 
     editor  = dynamic_cast<T100Editor*>(GetCurrentPage());
 
+    m_current   = editor;
 
-
-    index   = event.GetSelection();
-
-    if(wxNOT_FOUND == index){
-
-    }else{
-        m_current   = dynamic_cast<T100Editor*>(GetPage(index));
-    }
+    T100ProjectInvoking::OnPageChanged();
 }
 
 T100VOID T100MainPanel::OnPageClosed(wxAuiNotebookEvent& event)
