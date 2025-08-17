@@ -62,6 +62,12 @@ T100VOID T100MainPanel::OnPageChanged(wxAuiNotebookEvent& event)
 {
     T100INT     index;
 
+    T100Editor*     editor      = T100NULL;
+
+    editor  = dynamic_cast<T100Editor*>(GetCurrentPage());
+
+
+
     index   = event.GetSelection();
 
     if(wxNOT_FOUND == index){
