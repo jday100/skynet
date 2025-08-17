@@ -1346,6 +1346,8 @@ T100VOID T100ProjectTree::OnItemActivated(wxTreeEvent& event)
     }
 
     data->OnItemActivated();
+
+    event.Skip();
 }
 
 T100VOID T100ProjectTree::OnItemExpanding(wxTreeEvent& event)
