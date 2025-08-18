@@ -32,6 +32,7 @@ class T100ProjectTree : public wxTreeCtrl
         virtual T100VOID            Load(const T100PROJECT_INFO_VECTOR&);
 
     protected:
+        T100VOID                    OnMouseRightDown(wxMouseEvent&);
         T100VOID                    OnItemMenu(wxTreeEvent&);
         T100VOID                    OnItemChanged(wxTreeEvent&);
         T100VOID                    OnItemExpanding(wxTreeEvent&);
@@ -51,6 +52,8 @@ class T100ProjectTree : public wxTreeCtrl
 
         T100VOID                    AppendFile(wxTreeItemId, T100FileInfo*);
         T100VOID                    AppendFolder(wxTreeItemId, T100FolderInfo*);
+
+        wxMenu*                     GetWorkSpaceMenu();
 
         DECLARE_EVENT_TABLE()
 };

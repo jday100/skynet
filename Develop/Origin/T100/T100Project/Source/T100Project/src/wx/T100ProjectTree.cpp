@@ -8,6 +8,7 @@
 #include "T100ProjectInvoking.h"
 
 BEGIN_EVENT_TABLE(T100ProjectTree, wxTreeCtrl)
+    EVT_RIGHT_DOWN(OnMouseRightDown)
     EVT_TREE_ITEM_MENU(wxID_ANY, OnItemMenu)
     EVT_TREE_SEL_CHANGED(wxID_ANY, OnItemChanged)
     EVT_TREE_ITEM_EXPANDING(wxID_ANY, OnItemExpanding)
@@ -1315,6 +1316,23 @@ T100VOID T100ProjectTree::AppendFolder(wxTreeItemId parent, T100FolderInfo* info
     SetItemHasChildren(item, T100TRUE);
 }
 
+T100VOID T100ProjectTree::OnMouseRightDown(wxMouseEvent& event)
+{
+    wxTreeItemId    item    = GetSelection();
+
+    if(item.IsOk()){
+        T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(GetItemData(item));
+
+        if(data){
+            PopupMenu(data->ShowMenu());
+        }else{
+            PopupMenu(GetWorkSpaceMenu());
+        }
+    }else{
+        PopupMenu(GetWorkSpaceMenu());
+    }
+}
+
 T100VOID T100ProjectTree::OnItemMenu(wxTreeEvent& event)
 {
     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
@@ -1324,6 +1342,7 @@ T100VOID T100ProjectTree::OnItemMenu(wxTreeEvent& event)
     }
 
     PopupMenu(data->ShowMenu());
+
 }
 
 T100VOID T100ProjectTree::OnItemChanged(wxTreeEvent& event)
@@ -1374,4 +1393,14 @@ T100VOID T100ProjectTree::OnFileCreate(wxCommandEvent& event)
 T100VOID T100ProjectTree::OnFolderCreate(wxCommandEvent& event)
 {
     T100ProjectInvoking::OnFolderNew();
+}
+
+wxMenu* T100ProjectTree::GetWorkSpaceMenu()
+{
+    wxMenu*     menu    = T100NEW wxMenu();
+
+    menu->Append(T100PROJECT_MENU_WORKSPACE_NEW, L"New");
+    menu->Append(T100PROJECT_MENU_WORKSPACE_OPEN, L"Open");
+
+    return menu;
 }
