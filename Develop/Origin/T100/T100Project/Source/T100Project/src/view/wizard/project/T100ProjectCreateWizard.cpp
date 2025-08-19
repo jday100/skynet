@@ -2,6 +2,7 @@
 
 #include "T100ProjectInvoking.h"
 #include "T100CreateWizardFirstPage.h"
+#include "T100CreateWizardSecondPage.h"
 #include "T100WxProjectInfo.h"
 
 
@@ -31,6 +32,10 @@ T100ProjectCreateWizard::~T100ProjectCreateWizard()
 T100VOID T100ProjectCreateWizard::init()
 {
     m_page      = T100NEW T100CreateWizardFirstPage(this);
+
+    T100CreateWizardSecondPage*     page    = T100NEW T100CreateWizardSecondPage(this, m_page);
+
+    m_page->SetNext(page);
 
 }
 

@@ -157,6 +157,7 @@
 		<Unit filename="include/view/dialog/T100ProjectViewSetupCompilerDialog.h" />
 		<Unit filename="include/view/dialog/T100ProjectViewSetupEditorDialog.h" />
 		<Unit filename="include/view/wizard/project/T100CreateWizardFirstPage.h" />
+		<Unit filename="include/view/wizard/project/T100CreateWizardSecondPage.h" />
 		<Unit filename="include/view/wizard/project/T100ProjectCreateWizard.h" />
 		<Unit filename="include/wx/T100Editor.h" />
 		<Unit filename="include/wx/T100MainPanel.h" />
@@ -206,6 +207,7 @@
 		<Unit filename="src/view/dialog/T100ProjectViewSetupCompilerDialog.cpp" />
 		<Unit filename="src/view/dialog/T100ProjectViewSetupEditorDialog.cpp" />
 		<Unit filename="src/view/wizard/project/T100CreateWizardFirstPage.cpp" />
+		<Unit filename="src/view/wizard/project/T100CreateWizardSecondPage.cpp" />
 		<Unit filename="src/view/wizard/project/T100ProjectCreateWizard.cpp" />
 		<Unit filename="src/wx/T100Editor.cpp" />
 		<Unit filename="src/wx/T100MainPanel.cpp" />
