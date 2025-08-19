@@ -15,6 +15,8 @@ class T100ProjectViewMainMenu
         virtual T100VOID            Create(T100ProjectFrame*);
         virtual T100VOID            Destroy();
 
+        T100VOID                    Clear();
+
         T100VOID                    WorkSpaceSelected();
 
         T100VOID                    ProjectSelected();

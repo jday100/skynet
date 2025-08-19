@@ -99,16 +99,16 @@ T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
     m_info->SetPath(info.GetPath());
     m_info->SetFileName(filename);
 
-    if(!OpenWorkSpace(m_info)){
+    if(!WorkSpaceOpen(m_info)){
         return T100FALSE;
     }
 
     return T100TRUE;
 }
 
-T100VOID T100WorkSpaceServe::Close()
+T100BOOL T100WorkSpaceServe::Close()
 {
-
+    return T100FALSE;
 }
 
 T100BOOL T100WorkSpaceServe::Save()
@@ -128,10 +128,10 @@ T100VOID T100WorkSpaceServe::Create(T100WorkSpaceInfo*)
 
 T100VOID T100WorkSpaceServe::Open(T100WorkSpaceInfo* info)
 {
-    OpenWorkSpace(info);
+    WorkSpaceOpen(info);
 }
 
-T100VOID T100WorkSpaceServe::Close(T100WorkSpaceInfo*)
+T100BOOL T100WorkSpaceServe::Close(T100WorkSpaceInfo*)
 {
 
 }
@@ -146,7 +146,7 @@ T100VOID T100WorkSpaceServe::SaveAs(T100WorkSpaceInfo*)
 
 }
 
-T100BOOL T100WorkSpaceServe::OpenWorkSpace(T100WorkSpaceInfo* info)
+T100BOOL T100WorkSpaceServe::WorkSpaceOpen(T100WorkSpaceInfo* info)
 {
     if(!info){
         return T100FALSE;
@@ -201,6 +201,11 @@ T100BOOL T100WorkSpaceServe::OpenWorkSpace(T100WorkSpaceInfo* info)
     }
 
     return T100TRUE;
+}
+
+T100BOOL T100WorkSpaceServe::WorkSpaceClose()
+{
+    return T100FALSE;
 }
 
 T100VOID T100WorkSpaceServe::Build()

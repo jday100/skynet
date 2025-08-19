@@ -13,7 +13,7 @@ class T100ProjectSkeletalBase
 
         T100BOOL                    WorkSpaceNew(const T100WxFolderInfo&);
         T100VOID                    WorkSpaceOpen(const T100WxFolderInfo&);
-        T100VOID                    WorkSpaceClose();
+        T100BOOL                    WorkSpaceClose();
         T100VOID                    WorkSpaceSave();
         T100VOID                    WorkSpaceSaveAs();
         T100VOID                    ProjectNew();

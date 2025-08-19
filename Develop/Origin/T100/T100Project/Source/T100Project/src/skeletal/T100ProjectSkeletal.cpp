@@ -38,8 +38,14 @@ T100VOID T100ProjectSkeletal::Destroy()
 
 T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
 {
+    T100BOOL        result;
+
     if(m_serve->IsOpened()){
-        WorkSpaceClose();
+        result = WorkSpaceClose();
+    }
+
+    if(!result){
+        return;
     }
 
     T100WSTRING     path;

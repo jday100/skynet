@@ -32,13 +32,17 @@ T100VOID T100ProjectSkeletalBase::WorkSpaceOpen(const T100WxFolderInfo& folder)
     m_view->WorkSpaceOpen(info);
 }
 
-T100VOID T100ProjectSkeletalBase::WorkSpaceClose()
+T100BOOL T100ProjectSkeletalBase::WorkSpaceClose()
 {
+    T100BOOL        result;
+
     if(!m_view->WorkSpaceClose()){
-        return;
+        return T100FALSE;
     }
 
-    m_serve->Close();
+    result = m_serve->Close();
+
+    return result;
 }
 
 T100VOID T100ProjectSkeletalBase::WorkSpaceSave()

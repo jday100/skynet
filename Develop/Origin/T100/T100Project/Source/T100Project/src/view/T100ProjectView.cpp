@@ -152,7 +152,11 @@ T100VOID T100ProjectView::New()
 T100VOID T100ProjectView::Clear()
 {
     m_projectTree->Clear();
-    m_mainPanel->Clear();
+    if(m_mainPanel){
+        m_mainPanel->Clear();
+    }
+
+    m_mainMenu->Clear();
 }
 
 T100VOID T100ProjectView::About()
