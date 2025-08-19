@@ -7,6 +7,7 @@ class T100FolderData;
 class T100ProjectData;
 class T100ProjectFrame;
 class T100ProjectSkeletal;
+class T100WxProjectInfo;
 
 class T100ProjectInvoking
 {
@@ -62,7 +63,7 @@ class T100ProjectInvoking
         static T100VOID                     OnItemExpanding();
         static T100VOID                     OnModified();
 
-        static T100VOID                     OnProjectCreateWizardFinished();
+        static T100VOID                     OnProjectCreateWizardFinished(T100WxProjectInfo*);
 
     protected:
 

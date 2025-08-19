@@ -2,6 +2,7 @@
 
 #include "T100ProjectInvoking.h"
 #include "T100CreateWizardFirstPage.h"
+#include "T100WxProjectInfo.h"
 
 
 BEGIN_EVENT_TABLE(T100ProjectCreateWizard, wxWizard)
@@ -50,5 +51,9 @@ T100VOID T100ProjectCreateWizard::OnWizardCancel(wxWizardEvent& event)
 
 T100VOID T100ProjectCreateWizard::OnWizardFinished(wxWizardEvent& event)
 {
-    T100ProjectInvoking::OnProjectCreateWizardFinished();
+    T100WxProjectInfo       info;
+
+    info.SetLabel(L"Project");
+
+    T100ProjectInvoking::OnProjectCreateWizardFinished(&info);
 }

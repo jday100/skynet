@@ -122,6 +122,7 @@
 		<Unit filename="include/info/T100ProjectInfo.h" />
 		<Unit filename="include/info/T100WorkSpaceInfo.h" />
 		<Unit filename="include/info/T100WxFolderInfo.h" />
+		<Unit filename="include/info/T100WxProjectInfo.h" />
 		<Unit filename="include/library/algorithm/tree/T100Tree.h" />
 		<Unit filename="include/library/base/T100Class.h" />
 		<Unit filename="include/library/base/T100Object.h" />
@@ -174,6 +175,7 @@
 		<Unit filename="src/info/T100ProjectInfo.cpp" />
 		<Unit filename="src/info/T100WorkSpaceInfo.cpp" />
 		<Unit filename="src/info/T100WxFolderInfo.cpp" />
+		<Unit filename="src/info/T100WxProjectInfo.cpp" />
 		<Unit filename="src/library/algorithm/tree/T100Tree.cpp" />
 		<Unit filename="src/library/base/T100Class.cpp" />
 		<Unit filename="src/library/base/T100Object.cpp" />

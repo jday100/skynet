@@ -221,7 +221,7 @@ T100VOID T100ProjectInvoking::OnModified()
     m_skeletal->OnModified();
 }
 
-T100VOID T100ProjectInvoking::OnProjectCreateWizardFinished()
+T100VOID T100ProjectInvoking::OnProjectCreateWizardFinished(T100WxProjectInfo* info)
 {
-    m_skeletal->OnProjectCreateWizardFinished();
+    m_skeletal->OnProjectCreateWizardFinished(info);
 }

@@ -9,6 +9,7 @@
 class T100FileData;
 class T100FolderData;
 class T100ProjectData;
+class T100WxProjectInfo;
 
 class T100ProjectSkeletal : public T100ProjectSkeletalBase
 {
@@ -66,7 +67,7 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnItemExpanding();
         T100VOID                    OnModified();
 
-        T100VOID                    OnProjectCreateWizardFinished();
+        T100VOID                    OnProjectCreateWizardFinished(T100WxProjectInfo*);
 
     protected:
 

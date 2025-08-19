@@ -9,6 +9,7 @@
 #include "T100FileData.h"
 #include "T100FolderData.h"
 #include "T100ProjectData.h"
+#include "T100WxProjectInfo.h"
 
 T100ProjectSkeletal::T100ProjectSkeletal() :
     T100ProjectSkeletalBase()
@@ -348,15 +349,20 @@ T100VOID T100ProjectSkeletal::OnModified()
 
 }
 
-T100VOID T100ProjectSkeletal::OnProjectCreateWizardFinished()
+T100VOID T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo* info)
 {
-    T100WxFolderInfo        info;
+    T100WxFolderInfo        folder;
 
-    m_serve->GetFolderInfo(info);
+    m_serve->GetFolderInfo(folder);
 
     T100ProjectInfo*        project     = T100NULL;
 
-    if(!m_serve->GetProjectServe()->New(info)){
+    T100WSTRING     path    = folder.GetPath() + L"/" + info->GetLabel();
+
+    folder.SetLabel(info->GetLabel());
+    folder.SetPath(path);
+
+    if(!m_serve->GetProjectServe()->New(folder)){
         return;
     }
 
