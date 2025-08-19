@@ -1,6 +1,8 @@
 #include "T100ProjectCreateWizard.h"
 
 #include "T100ProjectInvoking.h"
+#include "T100CreateWizardFirstPage.h"
+
 
 BEGIN_EVENT_TABLE(T100ProjectCreateWizard, wxWizard)
     EVT_WIZARD_CANCEL(wxID_ANY, T100ProjectCreateWizard::OnWizardCancel)
@@ -27,7 +29,7 @@ T100ProjectCreateWizard::~T100ProjectCreateWizard()
 
 T100VOID T100ProjectCreateWizard::init()
 {
-    m_page      = T100NEW wxWizardPageSimple(this);
+    m_page      = T100NEW T100CreateWizardFirstPage(this);
 
 }
 
