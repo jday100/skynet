@@ -1398,9 +1398,12 @@ T100VOID T100ProjectTree::OnFolderCreate(wxCommandEvent& event)
 wxMenu* T100ProjectTree::GetWorkSpaceMenu()
 {
     wxMenu*     menu    = T100NEW wxMenu();
+    wxMenu*     work    = T100NEW wxMenu();
 
-    menu->Append(T100PROJECT_MENU_WORKSPACE_NEW, L"New");
-    menu->Append(T100PROJECT_MENU_WORKSPACE_OPEN, L"Open");
+    work->Append(T100PROJECT_MENU_WORKSPACE_NEW, L"New");
+    work->Append(T100PROJECT_MENU_WORKSPACE_OPEN, L"Open");
+
+    menu->AppendSubMenu(work, L"WorkSpace");
 
     return menu;
 }
