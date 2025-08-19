@@ -30,9 +30,13 @@ T100VOID T100CreateWizardFirstPage::init()
 
     SetSizer(sizer);
 
-    wxListView*     listView    = T100NEW wxListView();
+    wxListView*     listView    = T100NEW wxListView(listBook);
 
-    listView->SetItem(1, 0, L"Traditional");
+    //listView->SetItem(1, 0, L"Traditional");
+    //listView->Append(L"Traditional");
+
+    listView->AppendColumn(L"");
+    listView->InsertItem(listView->GetItemCount(), L"Traditional");
 
     listBook->AddPage(listView, L"Traditional");
 }
