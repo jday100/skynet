@@ -43,6 +43,7 @@ T100VOID T100ProjectView::Destroy()
 T100VOID T100ProjectView::WorkSpaceOpen(T100WorkSpaceInfo* info)
 {
     m_projectTree->WorkSpaceOpen(info);
+    m_mainMenu->WorkSpaceSelected();
 }
 
 T100BOOL T100ProjectView::WorkSpaceClose()

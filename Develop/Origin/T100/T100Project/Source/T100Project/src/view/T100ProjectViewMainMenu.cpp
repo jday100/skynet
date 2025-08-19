@@ -175,6 +175,7 @@ T100VOID T100ProjectViewMainMenu::uninit()
 T100VOID T100ProjectViewMainMenu::WorkSpaceSelected()
 {
     m_workClose->Enable(T100TRUE);
+    m_workSaveAs->Enable(T100TRUE);
 
     m_projectNew->Enable(T100TRUE);
 }

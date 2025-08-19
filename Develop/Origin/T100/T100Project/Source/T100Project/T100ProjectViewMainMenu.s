@@ -10600,10 +10600,10 @@ _ZN23T100ProjectViewMainMenu17WorkSpaceSelectedEv:
 	movq	%rcx, 16(%rbp)	 # this, this
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:177:     m_workClose->Enable(T100TRUE);
 	.loc 21 177 5
-	movq	16(%rbp), %rax	 # this, tmp99
-	movq	32(%rax), %rcx	 # this_14(D)->m_workClose, _1
-	movq	16(%rbp), %rax	 # this, tmp101
-	movq	32(%rax), %rax	 # this_14(D)->m_workClose, _3
+	movq	16(%rbp), %rax	 # this, tmp105
+	movq	32(%rax), %rcx	 # this_20(D)->m_workClose, _1
+	movq	16(%rbp), %rax	 # this, tmp107
+	movq	32(%rax), %rax	 # this_20(D)->m_workClose, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:177:     m_workClose->Enable(T100TRUE);
 	.loc 21 177 33
 	movq	(%rax), %rax	 # _3->D.127962.D.123324._vptr.wxObject, _4
@@ -10614,24 +10614,40 @@ _ZN23T100ProjectViewMainMenu17WorkSpaceSelectedEv:
 	movl	$1, %edx	 #,
 	call	*%rax	 # _6
 .LVL60:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:179:     m_projectNew->Enable(T100TRUE);
-	.loc 21 179 5
-	movq	16(%rbp), %rax	 # this, tmp102
-	movq	64(%rax), %rcx	 # this_14(D)->m_projectNew, _7
-	movq	16(%rbp), %rax	 # this, tmp104
-	movq	64(%rax), %rax	 # this_14(D)->m_projectNew, _9
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:179:     m_projectNew->Enable(T100TRUE);
-	.loc 21 179 34
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:178:     m_workSaveAs->Enable(T100TRUE);
+	.loc 21 178 5
+	movq	16(%rbp), %rax	 # this, tmp108
+	movq	48(%rax), %rcx	 # this_20(D)->m_workSaveAs, _7
+	movq	16(%rbp), %rax	 # this, tmp110
+	movq	48(%rax), %rax	 # this_20(D)->m_workSaveAs, _9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:178:     m_workSaveAs->Enable(T100TRUE);
+	.loc 21 178 34
 	movq	(%rax), %rax	 # _9->D.127962.D.123324._vptr.wxObject, _10
 	addq	$72, %rax	 #, _11
 	movq	(%rax), %rax	 # *_11, _12
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:179:     m_projectNew->Enable(T100TRUE);
-	.loc 21 179 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:178:     m_workSaveAs->Enable(T100TRUE);
+	.loc 21 178 25
 	movl	$1, %edx	 #,
 	call	*%rax	 # _12
 .LVL61:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:180: }
-	.loc 21 180 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:180:     m_projectNew->Enable(T100TRUE);
+	.loc 21 180 5
+	movq	16(%rbp), %rax	 # this, tmp111
+	movq	64(%rax), %rcx	 # this_20(D)->m_projectNew, _13
+	movq	16(%rbp), %rax	 # this, tmp113
+	movq	64(%rax), %rax	 # this_20(D)->m_projectNew, _15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:180:     m_projectNew->Enable(T100TRUE);
+	.loc 21 180 34
+	movq	(%rax), %rax	 # _15->D.127962.D.123324._vptr.wxObject, _16
+	addq	$72, %rax	 #, _17
+	movq	(%rax), %rax	 # *_17, _18
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:180:     m_projectNew->Enable(T100TRUE);
+	.loc 21 180 25
+	movl	$1, %edx	 #,
+	call	*%rax	 # _18
+.LVL62:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:181: }
+	.loc 21 181 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -10647,7 +10663,7 @@ _ZN23T100ProjectViewMainMenu17WorkSpaceSelectedEv:
 	.seh_proc	_ZN23T100ProjectViewMainMenu15ProjectSelectedEv
 _ZN23T100ProjectViewMainMenu15ProjectSelectedEv:
 .LFB19718:
-	.loc 21 183 1
+	.loc 21 184 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -10660,72 +10676,72 @@ _ZN23T100ProjectViewMainMenu15ProjectSelectedEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:184:     m_projectClose->Enable(T100TRUE);
-	.loc 21 184 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:185:     m_projectClose->Enable(T100TRUE);
+	.loc 21 185 5
 	movq	16(%rbp), %rax	 # this, tmp111
 	movq	80(%rax), %rcx	 # this_26(D)->m_projectClose, _1
 	movq	16(%rbp), %rax	 # this, tmp113
 	movq	80(%rax), %rax	 # this_26(D)->m_projectClose, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:184:     m_projectClose->Enable(T100TRUE);
-	.loc 21 184 36
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:185:     m_projectClose->Enable(T100TRUE);
+	.loc 21 185 36
 	movq	(%rax), %rax	 # _3->D.127962.D.123324._vptr.wxObject, _4
 	addq	$72, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:184:     m_projectClose->Enable(T100TRUE);
-	.loc 21 184 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:185:     m_projectClose->Enable(T100TRUE);
+	.loc 21 185 27
 	movl	$1, %edx	 #,
 	call	*%rax	 # _6
-.LVL62:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:185:     m_projectSaveAs->Enable(T100TRUE);
-	.loc 21 185 5
+.LVL63:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:186:     m_projectSaveAs->Enable(T100TRUE);
+	.loc 21 186 5
 	movq	16(%rbp), %rax	 # this, tmp114
 	movq	96(%rax), %rcx	 # this_26(D)->m_projectSaveAs, _7
 	movq	16(%rbp), %rax	 # this, tmp116
 	movq	96(%rax), %rax	 # this_26(D)->m_projectSaveAs, _9
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:185:     m_projectSaveAs->Enable(T100TRUE);
-	.loc 21 185 37
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:186:     m_projectSaveAs->Enable(T100TRUE);
+	.loc 21 186 37
 	movq	(%rax), %rax	 # _9->D.127962.D.123324._vptr.wxObject, _10
 	addq	$72, %rax	 #, _11
 	movq	(%rax), %rax	 # *_11, _12
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:185:     m_projectSaveAs->Enable(T100TRUE);
-	.loc 21 185 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:186:     m_projectSaveAs->Enable(T100TRUE);
+	.loc 21 186 28
 	movl	$1, %edx	 #,
 	call	*%rax	 # _12
-.LVL63:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:187:     m_fileNew->Enable(T100TRUE);
-	.loc 21 187 5
+.LVL64:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:188:     m_fileNew->Enable(T100TRUE);
+	.loc 21 188 5
 	movq	16(%rbp), %rax	 # this, tmp117
 	movq	104(%rax), %rcx	 # this_26(D)->m_fileNew, _13
 	movq	16(%rbp), %rax	 # this, tmp119
 	movq	104(%rax), %rax	 # this_26(D)->m_fileNew, _15
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:187:     m_fileNew->Enable(T100TRUE);
-	.loc 21 187 31
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:188:     m_fileNew->Enable(T100TRUE);
+	.loc 21 188 31
 	movq	(%rax), %rax	 # _15->D.127962.D.123324._vptr.wxObject, _16
 	addq	$72, %rax	 #, _17
 	movq	(%rax), %rax	 # *_17, _18
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:187:     m_fileNew->Enable(T100TRUE);
-	.loc 21 187 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:188:     m_fileNew->Enable(T100TRUE);
+	.loc 21 188 22
 	movl	$1, %edx	 #,
 	call	*%rax	 # _18
-.LVL64:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:189:     m_build->Enable(T100TRUE);
-	.loc 21 189 5
+.LVL65:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:190:     m_build->Enable(T100TRUE);
+	.loc 21 190 5
 	movq	16(%rbp), %rax	 # this, tmp120
 	movq	200(%rax), %rcx	 # this_26(D)->m_build, _19
 	movq	16(%rbp), %rax	 # this, tmp122
 	movq	200(%rax), %rax	 # this_26(D)->m_build, _21
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:189:     m_build->Enable(T100TRUE);
-	.loc 21 189 29
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:190:     m_build->Enable(T100TRUE);
+	.loc 21 190 29
 	movq	(%rax), %rax	 # _21->D.127962.D.123324._vptr.wxObject, _22
 	addq	$72, %rax	 #, _23
 	movq	(%rax), %rax	 # *_23, _24
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:189:     m_build->Enable(T100TRUE);
-	.loc 21 189 20
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:190:     m_build->Enable(T100TRUE);
+	.loc 21 190 20
 	movl	$1, %edx	 #,
 	call	*%rax	 # _24
-.LVL65:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:190: }
-	.loc 21 190 1
+.LVL66:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:191: }
+	.loc 21 191 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -10741,7 +10757,7 @@ _ZN23T100ProjectViewMainMenu15ProjectSelectedEv:
 	.seh_proc	_ZN23T100ProjectViewMainMenu8FileOpenEv
 _ZN23T100ProjectViewMainMenu8FileOpenEv:
 .LFB19719:
-	.loc 21 193 1
+	.loc 21 194 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -10754,40 +10770,40 @@ _ZN23T100ProjectViewMainMenu8FileOpenEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:194:     m_fileClose->Enable(T100TRUE);
-	.loc 21 194 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:195:     m_fileClose->Enable(T100TRUE);
+	.loc 21 195 5
 	movq	16(%rbp), %rax	 # this, tmp99
 	movq	120(%rax), %rcx	 # this_14(D)->m_fileClose, _1
 	movq	16(%rbp), %rax	 # this, tmp101
 	movq	120(%rax), %rax	 # this_14(D)->m_fileClose, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:194:     m_fileClose->Enable(T100TRUE);
-	.loc 21 194 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:195:     m_fileClose->Enable(T100TRUE);
+	.loc 21 195 33
 	movq	(%rax), %rax	 # _3->D.127962.D.123324._vptr.wxObject, _4
 	addq	$72, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:194:     m_fileClose->Enable(T100TRUE);
-	.loc 21 194 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:195:     m_fileClose->Enable(T100TRUE);
+	.loc 21 195 24
 	movl	$1, %edx	 #,
 	call	*%rax	 # _6
-.LVL66:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:195:     m_fileSaveAs->Enable(T100TRUE);
-	.loc 21 195 5
+.LVL67:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:196:     m_fileSaveAs->Enable(T100TRUE);
+	.loc 21 196 5
 	movq	16(%rbp), %rax	 # this, tmp102
 	movq	136(%rax), %rcx	 # this_14(D)->m_fileSaveAs, _7
 	movq	16(%rbp), %rax	 # this, tmp104
 	movq	136(%rax), %rax	 # this_14(D)->m_fileSaveAs, _9
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:195:     m_fileSaveAs->Enable(T100TRUE);
-	.loc 21 195 34
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:196:     m_fileSaveAs->Enable(T100TRUE);
+	.loc 21 196 34
 	movq	(%rax), %rax	 # _9->D.127962.D.123324._vptr.wxObject, _10
 	addq	$72, %rax	 #, _11
 	movq	(%rax), %rax	 # *_11, _12
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:195:     m_fileSaveAs->Enable(T100TRUE);
-	.loc 21 195 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:196:     m_fileSaveAs->Enable(T100TRUE);
+	.loc 21 196 25
 	movl	$1, %edx	 #,
 	call	*%rax	 # _12
-.LVL67:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:196: }
-	.loc 21 196 1
+.LVL68:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:197: }
+	.loc 21 197 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -10803,7 +10819,7 @@ _ZN23T100ProjectViewMainMenu8FileOpenEv:
 	.seh_proc	_ZN23T100ProjectViewMainMenu12FileModifiedEv
 _ZN23T100ProjectViewMainMenu12FileModifiedEv:
 .LFB19720:
-	.loc 21 199 1
+	.loc 21 200 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -10816,24 +10832,24 @@ _ZN23T100ProjectViewMainMenu12FileModifiedEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:200:     m_fileSave->Enable(T100TRUE);
-	.loc 21 200 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:201:     m_fileSave->Enable(T100TRUE);
+	.loc 21 201 5
 	movq	16(%rbp), %rax	 # this, tmp93
 	movq	128(%rax), %rcx	 # this_8(D)->m_fileSave, _1
 	movq	16(%rbp), %rax	 # this, tmp95
 	movq	128(%rax), %rax	 # this_8(D)->m_fileSave, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:200:     m_fileSave->Enable(T100TRUE);
-	.loc 21 200 32
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:201:     m_fileSave->Enable(T100TRUE);
+	.loc 21 201 32
 	movq	(%rax), %rax	 # _3->D.127962.D.123324._vptr.wxObject, _4
 	addq	$72, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:200:     m_fileSave->Enable(T100TRUE);
-	.loc 21 200 23
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:201:     m_fileSave->Enable(T100TRUE);
+	.loc 21 201 23
 	movl	$1, %edx	 #,
 	call	*%rax	 # _6
-.LVL68:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:201: }
-	.loc 21 201 1
+.LVL69:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:202: }
+	.loc 21 202 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -10849,7 +10865,7 @@ _ZN23T100ProjectViewMainMenu12FileModifiedEv:
 	.seh_proc	_ZN23T100ProjectViewMainMenu14FolderSelectedEv
 _ZN23T100ProjectViewMainMenu14FolderSelectedEv:
 .LFB19721:
-	.loc 21 204 1
+	.loc 21 205 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -10862,24 +10878,24 @@ _ZN23T100ProjectViewMainMenu14FolderSelectedEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:205:     m_fileNew->Enable(T100TRUE);
-	.loc 21 205 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:206:     m_fileNew->Enable(T100TRUE);
+	.loc 21 206 5
 	movq	16(%rbp), %rax	 # this, tmp93
 	movq	104(%rax), %rcx	 # this_8(D)->m_fileNew, _1
 	movq	16(%rbp), %rax	 # this, tmp95
 	movq	104(%rax), %rax	 # this_8(D)->m_fileNew, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:205:     m_fileNew->Enable(T100TRUE);
-	.loc 21 205 31
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:206:     m_fileNew->Enable(T100TRUE);
+	.loc 21 206 31
 	movq	(%rax), %rax	 # _3->D.127962.D.123324._vptr.wxObject, _4
 	addq	$72, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:205:     m_fileNew->Enable(T100TRUE);
-	.loc 21 205 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:206:     m_fileNew->Enable(T100TRUE);
+	.loc 21 206 22
 	movl	$1, %edx	 #,
 	call	*%rax	 # _6
-.LVL69:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:206: }
-	.loc 21 206 1
+.LVL70:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:207: }
+	.loc 21 207 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -12254,7 +12270,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB20883:
-	.loc 21 206 1
+	.loc 21 207 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -12268,12 +12284,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:206: }
-	.loc 21 206 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:207: }
+	.loc 21 207 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
 	jne	.L518	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:206: }
-	.loc 21 206 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:207: }
+	.loc 21 207 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
 	jne	.L518	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
@@ -12283,8 +12299,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
 .L518:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:206: }
-	.loc 21 206 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:207: }
+	.loc 21 207 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -12315,7 +12331,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN23T100ProjectViewMainMenuC2Ev
 _GLOBAL__sub_I__ZN23T100ProjectViewMainMenuC2Ev:
 .LFB20994:
-	.loc 21 206 1
+	.loc 21 207 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -12327,8 +12343,8 @@ _GLOBAL__sub_I__ZN23T100ProjectViewMainMenuC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:206: }
-	.loc 21 206 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:207: }
+	.loc 21 207 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -73895,7 +73911,7 @@ _GLOBAL__sub_I__ZN23T100ProjectViewMainMenuC2Ev:
 	.uleb128 0x27
 	.ascii "ProjectSelected\0"
 	.byte	0x15
-	.byte	0xb6
+	.byte	0xb7
 	.byte	0xa
 	.ascii "_ZN23T100ProjectViewMainMenu15ProjectSelectedEv\0"
 	.byte	0x1
@@ -73907,7 +73923,7 @@ _GLOBAL__sub_I__ZN23T100ProjectViewMainMenuC2Ev:
 	.uleb128 0x27
 	.ascii "FileOpen\0"
 	.byte	0x15
-	.byte	0xc0
+	.byte	0xc1
 	.byte	0xa
 	.ascii "_ZN23T100ProjectViewMainMenu8FileOpenEv\0"
 	.byte	0x1
@@ -73919,7 +73935,7 @@ _GLOBAL__sub_I__ZN23T100ProjectViewMainMenuC2Ev:
 	.uleb128 0x27
 	.ascii "FileModified\0"
 	.byte	0x15
-	.byte	0xc6
+	.byte	0xc7
 	.byte	0xa
 	.ascii "_ZN23T100ProjectViewMainMenu12FileModifiedEv\0"
 	.byte	0x1
@@ -73931,7 +73947,7 @@ _GLOBAL__sub_I__ZN23T100ProjectViewMainMenuC2Ev:
 	.uleb128 0x27
 	.ascii "FolderSelected\0"
 	.byte	0x15
-	.byte	0xcb
+	.byte	0xcc
 	.byte	0xa
 	.ascii "_ZN23T100ProjectViewMainMenu14FolderSelectedEv\0"
 	.byte	0x1
@@ -75839,7 +75855,7 @@ _GLOBAL__sub_I__ZN23T100ProjectViewMainMenuC2Ev:
 	.uleb128 0x32
 	.ascii "__initialize_p\0"
 	.byte	0x15
-	.byte	0xce
+	.byte	0xcf
 	.byte	0x1
 	.long	0x244
 	.uleb128 0x2
@@ -75848,7 +75864,7 @@ _GLOBAL__sub_I__ZN23T100ProjectViewMainMenuC2Ev:
 	.uleb128 0x32
 	.ascii "__priority\0"
 	.byte	0x15
-	.byte	0xce
+	.byte	0xcf
 	.byte	0x1
 	.long	0x244
 	.uleb128 0x2
