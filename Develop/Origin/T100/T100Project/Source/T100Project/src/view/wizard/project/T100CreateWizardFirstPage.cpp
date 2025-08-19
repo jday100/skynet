@@ -26,19 +26,19 @@ T100VOID T100CreateWizardFirstPage::init()
 
     wxBoxSizer*     sizer       = T100NEW wxBoxSizer(wxVERTICAL);
 
-    sizer->Add(listBook, wxALL);
+    sizer->Add(listBook, 1, wxALL|wxEXPAND, 5);
 
     SetSizer(sizer);
 
     wxListView*     listView    = T100NEW wxListView(listBook);
 
-    //listView->SetItem(1, 0, L"Traditional");
-    //listView->Append(L"Traditional");
-
-    listView->AppendColumn(L"");
+    listView->AppendColumn(L"Project");
     listView->InsertItem(listView->GetItemCount(), L"Traditional");
 
     listBook->AddPage(listView, L"Traditional");
+
+    sizer->Fit(this);
+    sizer->SetSizeHints(this);
 }
 
 T100VOID T100CreateWizardFirstPage::uninit()
