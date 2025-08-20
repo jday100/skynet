@@ -98,7 +98,7 @@ T100BOOL T100ProjectLogic::New(const T100WxFolderInfo& info)
 
     project     = T100NEW T100ProjectInfo();
 
-    project->SetLabel(L"project");
+    project->SetLabel(info.GetLabel());
     project->SetPath(name);
     project->SetFileName(filename);
 
@@ -174,7 +174,7 @@ T100VOID T100ProjectLogic::Build()
 
 T100WSTRING T100ProjectLogic::GetFileName(const T100WxFolderInfo& info)
 {
-    return info.GetPath() + L"/" + L"project.pjt";
+    return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
 }
 
 T100WSTRING T100ProjectLogic::GetFolderName(const T100WxFolderInfo& info)
