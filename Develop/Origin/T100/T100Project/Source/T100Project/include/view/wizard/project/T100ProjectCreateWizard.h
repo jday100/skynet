@@ -2,7 +2,8 @@
 #define T100PROJECTCREATEWIZARD_H
 
 #include <wx/wizard.h>
-#include "T100Common.h"
+#include "T100CreateWizardFirstPage.h"
+#include "T100CreateWizardSecondPage.h"
 
 class T100ProjectCreateWizard : public wxWizard
 {
@@ -22,7 +23,8 @@ class T100ProjectCreateWizard : public wxWizard
         T100VOID                    OnWizardFinished(wxWizardEvent&);
 
     protected:
-        wxWizardPageSimple*         m_page      = T100NULL;
+        T100CreateWizardFirstPage*          m_first     = T100NULL;
+        T100CreateWizardSecondPage*         m_second    = T100NULL;
 
     private:
         T100VOID                    init();

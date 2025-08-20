@@ -1,8 +1,6 @@
 #include "T100ProjectCreateWizard.h"
 
 #include "T100ProjectInvoking.h"
-#include "T100CreateWizardFirstPage.h"
-#include "T100CreateWizardSecondPage.h"
 #include "T100WxProjectInfo.h"
 
 
@@ -31,22 +29,21 @@ T100ProjectCreateWizard::~T100ProjectCreateWizard()
 
 T100VOID T100ProjectCreateWizard::init()
 {
-    m_page      = T100NEW T100CreateWizardFirstPage(this);
+    m_first     = T100NEW T100CreateWizardFirstPage(this);
+    m_second    = T100NEW T100CreateWizardSecondPage(this, m_first);
 
-    T100CreateWizardSecondPage*     page    = T100NEW T100CreateWizardSecondPage(this, m_page);
-
-    m_page->SetNext(page);
-
+    m_first->SetNext(m_second);
 }
 
 T100VOID T100ProjectCreateWizard::uninit()
 {
-
+    T100SAFE_DELETE(m_first);
+    T100SAFE_DELETE(m_second);
 }
 
 wxWizardPage* T100ProjectCreateWizard::GetFirstPage()
 {
-    return m_page;
+    return m_first;
 }
 
 T100VOID T100ProjectCreateWizard::OnWizardCancel(wxWizardEvent& event)
@@ -58,7 +55,7 @@ T100VOID T100ProjectCreateWizard::OnWizardFinished(wxWizardEvent& event)
 {
     T100WxProjectInfo       info;
 
-    info.SetLabel(L"Project");
+    info.SetLabel(m_second->GetProjectName());
 
     T100ProjectInvoking::OnProjectCreateWizardFinished(&info);
 }
