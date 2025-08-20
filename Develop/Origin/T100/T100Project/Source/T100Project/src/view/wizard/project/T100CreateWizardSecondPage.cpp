@@ -48,7 +48,7 @@ T100VOID T100CreateWizardSecondPage::uninit()
 
 }
 
-const T100WSTRING& T100CreateWizardSecondPage::GetProjectName()
+const T100WSTRING T100CreateWizardSecondPage::GetProjectName()
 {
     return m_label->GetValue().ToStdWstring();
 }

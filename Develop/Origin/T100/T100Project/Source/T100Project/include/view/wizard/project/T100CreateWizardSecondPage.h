@@ -15,7 +15,7 @@ class T100CreateWizardSecondPage : public wxWizardPageSimple
                        const wxBitmap& bitmap = wxNullBitmap);
         virtual ~T100CreateWizardSecondPage();
 
-        const T100WSTRING&          GetProjectName();
+        const T100WSTRING           GetProjectName();
 
     protected:
         static const long ID_STATICBOX;
