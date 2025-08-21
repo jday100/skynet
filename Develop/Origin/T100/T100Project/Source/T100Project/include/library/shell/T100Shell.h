@@ -14,6 +14,7 @@ class T100Shell
         T100VOID            Execute(const T100WSTRING&);
 
     protected:
+        T100VOID            Test(const T100WSTRING&);
 
     private:
 };
