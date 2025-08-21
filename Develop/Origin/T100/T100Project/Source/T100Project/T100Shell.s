@@ -391,10 +391,10 @@ _ZN9T100Shell4TestERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:73:     start.cb            = sizeof(start);
 	.loc 1 73 25
 	movl	$104, 8192(%rbp)	 #, start.cb
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:74:     start.hStdOutput    = g_stdOutRead;
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:74:     start.hStdOutput    = g_stdOutWrite;
 	.loc 1 74 25
-	movq	_ZL12g_stdOutRead(%rip), %rax	 # g_stdOutRead, g_stdOutRead.4_4
-	movq	%rax, 8280(%rbp)	 # g_stdOutRead.4_4, start.hStdOutput
+	movq	_ZL13g_stdOutWrite(%rip), %rax	 # g_stdOutWrite, g_stdOutWrite.4_4
+	movq	%rax, 8280(%rbp)	 # g_stdOutWrite.4_4, start.hStdOutput
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:75:     start.dwFlags       |= STARTF_USESTDHANDLES;
 	.loc 1 75 25
 	movl	8252(%rbp), %eax	 # start.dwFlags, _5
@@ -440,9 +440,9 @@ _ZN9T100Shell4TestERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:95:     read    = 4096;
 	.loc 1 95 13
 	movl	$4096, 8332(%rbp)	 #, read
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:97:     ReadFile(g_stdOutRead, buffer, read, &write, NULL);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:97:     ReadFile(g_stdOutWrite, buffer, read, &write, NULL);
 	.loc 1 97 13
-	movq	_ZL12g_stdOutRead(%rip), %rcx	 # g_stdOutRead, g_stdOutRead.6_9
+	movq	_ZL13g_stdOutWrite(%rip), %rcx	 # g_stdOutWrite, g_stdOutWrite.6_9
 	leaq	8156(%rbp), %rdx	 #, tmp113
 	movl	8332(%rbp), %r8d	 # read, tmp114
 	leaq	-48(%rbp), %rax	 #, tmp115
