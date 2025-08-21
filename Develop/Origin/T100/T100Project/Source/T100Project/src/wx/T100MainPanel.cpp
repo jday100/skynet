@@ -39,9 +39,6 @@ T100Editor* T100MainPanel::GetCurrentEditor()
 T100VOID T100MainPanel::Create(T100FileInfo* info)
 {
     T100EditorPack*     pack    = T100NEW T100EditorPack(this);
-    T100Editor*         editor  = T100NEW T100Editor(pack);
-
-    pack->SetEditor(editor);
 
     T100WSTRING         path    = info->GetPath();
 
