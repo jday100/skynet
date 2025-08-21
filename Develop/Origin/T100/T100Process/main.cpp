@@ -7,6 +7,8 @@
 #include <tchar.h>
 #include <windows.h>
 
+#include "T100Shell.h"
+
 /*  Declare Windows procedure  */
 LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 
@@ -61,6 +63,10 @@ int WINAPI WinMain (HINSTANCE hThisInstance,
 
     /* Make the window visible on the screen */
     ShowWindow (hwnd, nCmdShow);
+
+    T100Shell       shell;
+
+    shell.Run("dir");
 
     /* Run the message loop. It will run until GetMessage() returns 0 */
     while (GetMessage (&messages, NULL, 0, 0))
