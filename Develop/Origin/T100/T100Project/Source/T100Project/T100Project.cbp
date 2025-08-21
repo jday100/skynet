@@ -31,6 +31,7 @@
 					<Add directory="include/library/storage/file/text" />
 					<Add directory="include/base" />
 					<Add directory="include/library/shell" />
+					<Add directory="include/view/pack" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -64,6 +65,7 @@
 					<Add directory="include/library/storage/file/text" />
 					<Add directory="include/base" />
 					<Add directory="include/library/shell" />
+					<Add directory="include/view/pack" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -110,6 +112,7 @@
 		<Unit filename="T100ProjectMain.cpp" />
 		<Unit filename="T100ProjectMain.h" />
 		<Unit filename="include/T100Common.h" />
+		<Unit filename="include/base/T100Pack.h" />
 		<Unit filename="include/base/T100ProjectConfig.h" />
 		<Unit filename="include/common/T100ProjectCommon.h" />
 		<Unit filename="include/data/T100FileData.h" />
@@ -156,6 +159,7 @@
 		<Unit filename="include/view/dialog/T100ProjectViewAboutDialog.h" />
 		<Unit filename="include/view/dialog/T100ProjectViewSetupCompilerDialog.h" />
 		<Unit filename="include/view/dialog/T100ProjectViewSetupEditorDialog.h" />
+		<Unit filename="include/view/pack/T100EditorPack.h" />
 		<Unit filename="include/view/wizard/project/T100CreateWizardFirstPage.h" />
 		<Unit filename="include/view/wizard/project/T100CreateWizardSecondPage.h" />
 		<Unit filename="include/view/wizard/project/T100ProjectCreateWizard.h" />
@@ -165,6 +169,7 @@
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="src/base/T100Pack.cpp" />
 		<Unit filename="src/base/T100ProjectConfig.cpp" />
 		<Unit filename="src/data/T100FileData.cpp" />
 		<Unit filename="src/data/T100FolderData.cpp" />
@@ -206,6 +211,7 @@
 		<Unit filename="src/view/dialog/T100ProjectViewAboutDialog.cpp" />
 		<Unit filename="src/view/dialog/T100ProjectViewSetupCompilerDialog.cpp" />
 		<Unit filename="src/view/dialog/T100ProjectViewSetupEditorDialog.cpp" />
+		<Unit filename="src/view/pack/T100EditorPack.cpp" />
 		<Unit filename="src/view/wizard/project/T100CreateWizardFirstPage.cpp" />
 		<Unit filename="src/view/wizard/project/T100CreateWizardSecondPage.cpp" />
 		<Unit filename="src/view/wizard/project/T100ProjectCreateWizard.cpp" />

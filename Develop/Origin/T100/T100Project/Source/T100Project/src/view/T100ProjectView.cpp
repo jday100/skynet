@@ -204,7 +204,7 @@ T100VOID T100ProjectView::FileSave()
 
     T100Editor*     current     = T100NULL;
 
-    current     = m_mainPanel->GetCurrent();
+    current     = m_mainPanel->GetCurrentEditor();
 
     if(!current){
         return;

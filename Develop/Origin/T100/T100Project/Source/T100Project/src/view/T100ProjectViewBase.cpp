@@ -74,7 +74,7 @@ T100VOID T100ProjectViewBase::SetTitle()
     T100Editor*         current     = T100NULL;
 
     if(m_mainPanel){
-        current     = m_mainPanel->GetCurrent();
+        current     = m_mainPanel->GetCurrentEditor();
 
         if(current){
             if(m_dirty){

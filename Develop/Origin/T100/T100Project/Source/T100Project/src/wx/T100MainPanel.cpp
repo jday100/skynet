@@ -1,6 +1,6 @@
 #include "T100MainPanel.h"
 
-#include "T100Editor.h"
+#include "T100EditorPack.h"
 #include "T100ProjectInvoking.h"
 
 BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
@@ -23,25 +23,36 @@ T100MainPanel::~T100MainPanel()
     //dtor
 }
 
-T100Editor* T100MainPanel::GetCurrent()
+T100Editor* T100MainPanel::GetCurrentEditor()
 {
-    return m_current;
+    T100EditorPack*     pack    = dynamic_cast<T100EditorPack*>(m_current);
+
+    T100Editor*         result  = T100NULL;
+
+    if(pack){
+        result  = pack->GetEditor();
+    }
+
+    return result;
 }
 
 T100VOID T100MainPanel::Create(T100FileInfo* info)
 {
-    T100Editor*     editor      = T100NEW T100Editor(this);
+    T100EditorPack*     pack    = T100NEW T100EditorPack(this);
+    T100Editor*         editor  = T100NEW T100Editor(pack);
 
-    T100WSTRING     path        = info->GetPath();
+    pack->SetEditor(editor);
+
+    T100WSTRING         path    = info->GetPath();
 
     if(!path.empty()){
-        editor->LoadFile(path);
-        editor->SetPath(path);
+        pack->GetEditor()->LoadFile(path);
+        pack->GetEditor()->SetPath(path);
     }
 
-    AddPage(editor, info->GetFileName());
+    AddPage(pack, info->GetFileName());
 
-    m_current   = editor;
+    m_current   = pack;
 }
 
 T100VOID T100MainPanel::Clear()
@@ -54,17 +65,17 @@ T100VOID T100MainPanel::Save()
     T100BOOL        result      = T100FALSE;
 
     if(m_current){
-        result  = m_current->SaveFile(m_current->GetPath());
+        result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
     }
 }
 
 T100VOID T100MainPanel::OnPageChanged(wxAuiNotebookEvent& event)
 {
-    T100Editor*     editor      = T100NULL;
+    T100EditorPack*     pack        = T100NULL;
 
-    editor  = dynamic_cast<T100Editor*>(GetCurrentPage());
+    pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
 
-    m_current   = editor;
+    m_current   = pack;
 
     T100ProjectInvoking::OnPageChanged();
 }

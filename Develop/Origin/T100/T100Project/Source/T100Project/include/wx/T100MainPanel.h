@@ -5,6 +5,7 @@
 #include "T100Common.h"
 #include "T100FileInfo.h"
 #include "T100Editor.h"
+#include "T100Pack.h"
 
 class T100MainPanel : public wxAuiNotebook
 {
@@ -21,10 +22,10 @@ class T100MainPanel : public wxAuiNotebook
 
         T100VOID                    Save();
 
-        T100Editor*                 GetCurrent();
+        T100Editor*                 GetCurrentEditor();
 
     protected:
-        T100Editor*                 m_current       = T100NULL;
+        T100Pack*                   m_current       = T100NULL;
 
     private:
         T100VOID                    OnPageChanged(wxAuiNotebookEvent&);
