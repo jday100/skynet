@@ -206,6 +206,11 @@ T100VOID T100ProjectInvoking::OnPageChanged()
     m_skeletal->OnPageChanged();
 }
 
+T100VOID T100ProjectInvoking::OnPageClosing(T100Pack* pack)
+{
+    m_skeletal->OnPageClosing(pack);
+}
+
 T100VOID T100ProjectInvoking::OnPageClosed()
 {
     m_skeletal->OnPageClosed();

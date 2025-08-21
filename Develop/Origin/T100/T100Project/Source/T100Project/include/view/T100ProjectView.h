@@ -1,6 +1,7 @@
 #ifndef T100PROJECTVIEW_H
 #define T100PROJECTVIEW_H
 
+#include "T100Pack.h"
 #include "T100WorkSpaceInfo.h"
 #include "T100ProjectViewBase.h"
 
@@ -49,7 +50,7 @@ class T100ProjectView : public T100ProjectViewBase
         T100VOID                    New(T100FileInfo*);
         T100VOID                    Open(T100FileInfo*);
 
-
+        T100VOID                    FileClose(T100Pack*);
         T100VOID                    FileSave();
 
         T100VOID                    PageChanged();

@@ -5,6 +5,7 @@
 
 BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
     EVT_AUINOTEBOOK_PAGE_CHANGED(wxID_ANY, OnPageChanged)
+    EVT_AUINOTEBOOK_PAGE_CLOSE(wxID_ANY, OnPageClosing)
     EVT_AUINOTEBOOK_PAGE_CLOSED(wxID_ANY, OnPageClosed)
 END_EVENT_TABLE()
 
@@ -75,6 +76,15 @@ T100VOID T100MainPanel::OnPageChanged(wxAuiNotebookEvent& event)
     m_current   = pack;
 
     T100ProjectInvoking::OnPageChanged();
+}
+
+T100VOID T100MainPanel::OnPageClosing(wxAuiNotebookEvent& event)
+{
+    T100Pack*       pack        = T100NULL;
+
+    pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+
+    T100ProjectInvoking::OnPageClosing(pack);
 }
 
 T100VOID T100MainPanel::OnPageClosed(wxAuiNotebookEvent& event)

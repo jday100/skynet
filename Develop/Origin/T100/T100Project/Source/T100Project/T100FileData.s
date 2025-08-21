@@ -15,7 +15,7 @@
  # -I include\serve -I include\common -I include\logic -I include\info
  # -I include\view\wizard\project -I include\store -I include\view\dialog
  # -I include\library\storage\file\text -I include\base
- # -I include\library\shell
+ # -I include\library\shell -I include\view\pack
  # -I C:\zoo\bin\llvm-mingw-20240518-msvcrt-x86_64\include
  # -iprefix C:/zoo/bin/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/
  # -D_MT -D_REENTRANT -D __GNUWIN32__ -D __WXMSW__ -D WXUSINGDLL
@@ -178,7 +178,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 1 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.151608
+	setne	%al	 #, D.151611
 .LBE7:
 .LBE6:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -1287,8 +1287,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.151618
-	movq	%rax, %rcx	 # D.151618,
+	movq	%rsi, %rax	 # tmp98, D.151621
+	movq	%rax, %rcx	 # D.151621,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -1412,8 +1412,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.151619
-	movq	%rax, %rcx	 # D.151619,
+	movq	%rbx, %rax	 # tmp106, D.151622
+	movq	%rax, %rcx	 # D.151622,
 .LEHB6:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1608,8 +1608,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.151621
-	movq	%rax, %rcx	 # D.151621,
+	movq	%rbx, %rax	 # tmp98, D.151624
+	movq	%rax, %rcx	 # D.151624,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2209,8 +2209,8 @@ _ZN12T100FileData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.151623
-	movq	%rax, %rcx	 # D.151623,
+	movq	%rsi, %rax	 # tmp93, D.151626
+	movq	%rax, %rcx	 # D.151626,
 .LEHB13:
 	call	_Unwind_Resume	 #
 .LEHE13:

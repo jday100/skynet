@@ -8,6 +8,7 @@ class T100ProjectData;
 class T100ProjectFrame;
 class T100ProjectSkeletal;
 class T100WxProjectInfo;
+class T100Pack;
 
 class T100ProjectInvoking
 {
@@ -58,6 +59,7 @@ class T100ProjectInvoking
         static T100VOID                     OnWorkSpaceSelected();
 
         static T100VOID                     OnPageChanged();
+        static T100VOID                     OnPageClosing(T100Pack*);
         static T100VOID                     OnPageClosed();
 
         static T100VOID                     OnItemExpanding();

@@ -320,6 +320,11 @@ T100VOID T100ProjectSkeletal::OnPageChanged()
     m_view->PageChanged();
 }
 
+T100VOID T100ProjectSkeletal::OnPageClosing(T100Pack* pack)
+{
+    m_view->FileClose(pack);
+}
+
 T100VOID T100ProjectSkeletal::OnPageClosed()
 {
     m_serve->GetProjectServe()->GetFileLogic().Close(T100NULL);

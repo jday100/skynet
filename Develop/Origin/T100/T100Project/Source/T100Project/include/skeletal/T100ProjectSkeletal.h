@@ -10,6 +10,7 @@ class T100FileData;
 class T100FolderData;
 class T100ProjectData;
 class T100WxProjectInfo;
+class T100Pack;
 
 class T100ProjectSkeletal : public T100ProjectSkeletalBase
 {
@@ -62,6 +63,7 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnWorkSpaceSelected();
 
         T100VOID                    OnPageChanged();
+        T100VOID                    OnPageClosing(T100Pack*);
         T100VOID                    OnPageClosed();
 
         T100VOID                    OnItemExpanding();
