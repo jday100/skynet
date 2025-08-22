@@ -164,6 +164,7 @@
 		<Unit filename="include/view/wizard/project/T100CreateWizardSecondPage.h" />
 		<Unit filename="include/view/wizard/project/T100ProjectCreateWizard.h" />
 		<Unit filename="include/wx/T100Editor.h" />
+		<Unit filename="include/wx/T100ExecuteProcess.h" />
 		<Unit filename="include/wx/T100MainPanel.h" />
 		<Unit filename="include/wx/T100ProjectTree.h" />
 		<Unit filename="resource.rc">
@@ -216,6 +217,7 @@
 		<Unit filename="src/view/wizard/project/T100CreateWizardSecondPage.cpp" />
 		<Unit filename="src/view/wizard/project/T100ProjectCreateWizard.cpp" />
 		<Unit filename="src/wx/T100Editor.cpp" />
+		<Unit filename="src/wx/T100ExecuteProcess.cpp" />
 		<Unit filename="src/wx/T100MainPanel.cpp" />
 		<Unit filename="src/wx/T100ProjectTree.cpp" />
 		<Unit filename="wxsmith/T100Projectframe.wxs" />
