@@ -167,7 +167,9 @@ T100VOID T100ProjectLogic::Build()
     T100Shell       shell;
     T100WSTRING     command;
 
-    command     = L"python3 " + GetBuildName(m_current) + L";pause";
+    //command     = L"python3 " + GetBuildName(m_current) + L";pause";
+
+    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
 
     shell.Run(command);
 }

@@ -319,8 +319,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$64, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp95, D.108528
-	movq	%rax, %rcx	 # D.108528,
+	movq	%rsi, %rax	 # tmp95, D.108525
+	movq	%rax, %rcx	 # D.108525,
 .LEHB4:
 	call	_Unwind_Resume	 #
 .L12:
@@ -330,8 +330,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$8, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp96, D.108529
-	movq	%rax, %rcx	 # D.108529,
+	movq	%rsi, %rax	 # tmp96, D.108526
+	movq	%rax, %rcx	 # D.108526,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE4:
@@ -739,8 +739,8 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	leaq	-48(%rbp), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp117, D.108530
-	movq	%rax, %rcx	 # D.108530,
+	movq	%rbx, %rax	 # tmp117, D.108527
+	movq	%rax, %rcx	 # D.108527,
 .LEHB8:
 	call	_Unwind_Resume	 #
 .LEHE8:
@@ -1050,8 +1050,8 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfo:
 	leaq	32(%rbp), %rax	 #, tmp145
 	movq	%rax, %rcx	 # tmp145,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp143, D.108532
-	movq	%rax, %rcx	 # D.108532,
+	movq	%rbx, %rax	 # tmp143, D.108529
+	movq	%rax, %rcx	 # D.108529,
 .LEHB14:
 	call	_Unwind_Resume	 #
 .LEHE14:
@@ -1574,8 +1574,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	leaq	128(%rbp), %rax	 #, tmp203
 	movq	%rax, %rcx	 # tmp203,
 	call	_ZN10T100FolderD1Ev	 #
-	movq	%rbx, %rax	 # tmp201, D.108535
-	movq	%rax, %rcx	 # D.108535,
+	movq	%rbx, %rax	 # tmp201, D.108532
+	movq	%rax, %rcx	 # D.108532,
 .LEHB29:
 	call	_Unwind_Resume	 #
 .LEHE29:
@@ -1665,13 +1665,14 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.text
 	.seh_endproc
 	.section .rdata,"dr"
-	.align 2
+	.align 8
 .LC1:
-	.ascii "p\0y\0t\0h\0o\0n\0"
+	.ascii "C\0:\0/\0z\0m\0s\0y\0s\0"
+	.ascii "2\0/\0m\0s\0y\0s\0"
+	.ascii "2\0/\0m\0i\0n\0g\0w\0"
+	.ascii "6\0"
+	.ascii "4\0/\0b\0i\0n\0/\0p\0y\0t\0h\0o\0n\0"
 	.ascii "3\0 \0\0\0"
-	.align 2
-.LC2:
-	.ascii ";\0p\0a\0u\0s\0e\0\0\0"
 	.text
 	.align 2
 	.globl	_ZN16T100ProjectLogic5BuildEv
@@ -1689,22 +1690,22 @@ _ZN16T100ProjectLogic5BuildEv:
 	.seh_pushreg	%rbx
 	.cfi_def_cfa_offset 24
 	.cfi_offset 3, -24
-	subq	$184, %rsp	 #,
-	.seh_stackalloc	184
-	.cfi_def_cfa_offset 208
+	subq	$152, %rsp	 #,
+	.seh_stackalloc	152
+	.cfi_def_cfa_offset 176
 	leaq	128(%rsp), %rbp	 #,
 	.seh_setframe	%rbp, 128
-	.cfi_def_cfa 6, 80
+	.cfi_def_cfa 6, 48
 	.seh_endprologue
-	movq	%rcx, 80(%rbp)	 # this, this
+	movq	%rcx, 48(%rbp)	 # this, this
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:163:     if(!m_current){
 	.loc 3 163 9
-	movq	80(%rbp), %rax	 # this, tmp90
-	movq	8(%rax), %rax	 # this_8(D)->m_current, _1
+	movq	48(%rbp), %rax	 # this, tmp90
+	movq	8(%rax), %rax	 # this_7(D)->m_current, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:163:     if(!m_current){
 	.loc 3 163 5
 	testq	%rax, %rax	 # _1
-	je	.L95	 #,
+	je	.L93	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:167:     T100Shell       shell;
 	.loc 3 167 21
 	leaq	-56(%rbp), %rax	 #, tmp91
@@ -1717,126 +1718,103 @@ _ZN16T100ProjectLogic5BuildEv:
 	leaq	-96(%rbp), %rax	 #, tmp92
 	movq	%rax, %rcx	 # tmp92,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     command     = L"python3 " + GetBuildName(m_current) + L";pause";
-	.loc 3 170 46
-	movq	80(%rbp), %rax	 # this, tmp93
-	movq	8(%rax), %rdx	 # this_8(D)->m_current, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     command     = L"python3 " + GetBuildName(m_current) + L";pause";
-	.loc 3 170 45
-	leaq	16(%rbp), %rax	 #, tmp94
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:172:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 3 172 74
+	movq	48(%rbp), %rax	 # this, tmp93
+	movq	8(%rax), %rdx	 # this_7(D)->m_current, _2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:172:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 3 172 73
+	leaq	-16(%rbp), %rax	 #, tmp94
 	movq	%rdx, %r8	 # _2,
-	movq	80(%rbp), %rdx	 # this,
+	movq	48(%rbp), %rdx	 # this,
 	movq	%rax, %rcx	 # tmp94,
 .LEHB31:
 	call	_ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo	 #
 .LEHE31:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     command     = L"python3 " + GetBuildName(m_current) + L";pause";
-	.loc 3 170 31 discriminator 1
-	leaq	-16(%rbp), %rax	 #, tmp95
-	leaq	16(%rbp), %rdx	 #, tmp96
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:172:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 3 172 59 discriminator 1
+	leaq	-48(%rbp), %rax	 #, tmp95
+	leaq	-16(%rbp), %rdx	 #, tmp96
 	movq	%rdx, %r8	 # tmp96,
 	leaq	.LC1(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp95,
 .LEHB32:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_	 #
 .LEHE32:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     command     = L"python3 " + GetBuildName(m_current) + L";pause";
-	.loc 3 170 57 discriminator 3
-	leaq	-48(%rbp), %rax	 #, tmp97
-	leaq	-16(%rbp), %rdx	 #, tmp98
-	leaq	.LC2(%rip), %r8	 #,
-	movq	%rax, %rcx	 # tmp97,
-.LEHB33:
-	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
-.LEHE33:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     command     = L"python3 " + GetBuildName(m_current) + L";pause";
-	.loc 3 170 59 discriminator 5
-	leaq	-48(%rbp), %rdx	 #, tmp99
-	leaq	-96(%rbp), %rax	 #, tmp100
-	movq	%rax, %rcx	 # tmp100,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:172:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 3 172 83 discriminator 3
+	leaq	-48(%rbp), %rdx	 #, tmp97
+	leaq	-96(%rbp), %rax	 #, tmp98
+	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     command     = L"python3 " + GetBuildName(m_current) + L";pause";
-	.loc 3 170 57 discriminator 5
-	leaq	-48(%rbp), %rax	 #, tmp101
-	movq	%rax, %rcx	 # tmp101,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:172:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 3 172 59 discriminator 3
+	leaq	-48(%rbp), %rax	 #, tmp99
+	movq	%rax, %rcx	 # tmp99,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     command     = L"python3 " + GetBuildName(m_current) + L";pause";
-	.loc 3 170 31 discriminator 5
-	leaq	-16(%rbp), %rax	 #, tmp102
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:172:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 3 172 73 discriminator 3
+	leaq	-16(%rbp), %rax	 #, tmp100
+	movq	%rax, %rcx	 # tmp100,
+	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:174:     shell.Run(command);
+	.loc 3 174 14 discriminator 3
+	leaq	-96(%rbp), %rdx	 #, tmp101
+	leaq	-56(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
-	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     command     = L"python3 " + GetBuildName(m_current) + L";pause";
-	.loc 3 170 45 discriminator 5
-	leaq	16(%rbp), %rax	 #, tmp103
+.LEHB33:
+	call	_ZN9T100Shell3RunERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+.LEHE33:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:168:     T100WSTRING     command;
+	.loc 3 168 21
+	leaq	-96(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:172:     shell.Run(command);
-	.loc 3 172 14 discriminator 5
-	leaq	-96(%rbp), %rdx	 #, tmp104
-	leaq	-56(%rbp), %rax	 #, tmp105
-	movq	%rax, %rcx	 # tmp105,
-.LEHB34:
-	call	_ZN9T100Shell3RunERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
-.LEHE34:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:168:     T100WSTRING     command;
-	.loc 3 168 21
-	leaq	-96(%rbp), %rax	 #, tmp106
-	movq	%rax, %rcx	 # tmp106,
-	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:167:     T100Shell       shell;
 	.loc 3 167 21
-	leaq	-56(%rbp), %rax	 #, tmp107
-	movq	%rax, %rcx	 # tmp107,
+	leaq	-56(%rbp), %rax	 #, tmp104
+	movq	%rax, %rcx	 # tmp104,
 	call	_ZN9T100ShellD1Ev	 #
 	jmp	.L86	 #
-.L94:
-	movq	%rax, %rbx	 #, tmp110
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     command     = L"python3 " + GetBuildName(m_current) + L";pause";
-	.loc 3 170 31
-	leaq	-16(%rbp), %rax	 #, tmp108
-	movq	%rax, %rcx	 # tmp108,
+.L92:
+	movq	%rax, %rbx	 #, tmp107
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:172:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 3 172 73
+	leaq	-16(%rbp), %rax	 #, tmp105
+	movq	%rax, %rcx	 # tmp105,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	jmp	.L90	 #
-.L93:
-	movq	%rax, %rbx	 #, tmp109
-.L90:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     command     = L"python3 " + GetBuildName(m_current) + L";pause";
-	.loc 3 170 45 discriminator 2
-	leaq	16(%rbp), %rax	 #, tmp113
-	movq	%rax, %rcx	 # tmp113,
-	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	jmp	.L91	 #
-.L92:
-	movq	%rax, %rbx	 #, tmp114
 .L91:
+	movq	%rax, %rbx	 #, tmp106
+.L90:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:168:     T100WSTRING     command;
 	.loc 3 168 21
-	leaq	-96(%rbp), %rax	 #, tmp116
-	movq	%rax, %rcx	 # tmp116,
+	leaq	-96(%rbp), %rax	 #, tmp110
+	movq	%rax, %rcx	 # tmp110,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:167:     T100Shell       shell;
 	.loc 3 167 21
-	leaq	-56(%rbp), %rax	 #, tmp119
-	movq	%rax, %rcx	 # tmp119,
+	leaq	-56(%rbp), %rax	 #, tmp113
+	movq	%rax, %rcx	 # tmp113,
 	call	_ZN9T100ShellD1Ev	 #
-	movq	%rbx, %rax	 # tmp117, D.108542
-	movq	%rax, %rcx	 # D.108542,
-.LEHB35:
+	movq	%rbx, %rax	 # tmp111, D.108539
+	movq	%rax, %rcx	 # D.108539,
+.LEHB34:
 	call	_Unwind_Resume	 #
-.LEHE35:
-.L95:
+.LEHE34:
+.L93:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:164:         return;
 	.loc 3 164 9
 	nop	
 .L86:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:173: }
-	.loc 3 173 1
-	addq	$184, %rsp	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:175: }
+	.loc 3 175 1
+	addq	$152, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
 	popq	%rbp	 #
 	.cfi_restore 6
-	.cfi_def_cfa 7, -168
+	.cfi_def_cfa 7, -136
 	ret	
 	.cfi_endproc
 .LFE5456:
@@ -1854,22 +1832,18 @@ _ZN16T100ProjectLogic5BuildEv:
 	.uleb128 0
 	.uleb128 .LEHB31-.LFB5456
 	.uleb128 .LEHE31-.LEHB31
-	.uleb128 .L92-.LFB5456
+	.uleb128 .L91-.LFB5456
 	.uleb128 0
 	.uleb128 .LEHB32-.LFB5456
 	.uleb128 .LEHE32-.LEHB32
-	.uleb128 .L93-.LFB5456
+	.uleb128 .L92-.LFB5456
 	.uleb128 0
 	.uleb128 .LEHB33-.LFB5456
 	.uleb128 .LEHE33-.LEHB33
-	.uleb128 .L94-.LFB5456
+	.uleb128 .L91-.LFB5456
 	.uleb128 0
 	.uleb128 .LEHB34-.LFB5456
 	.uleb128 .LEHE34-.LEHB34
-	.uleb128 .L92-.LFB5456
-	.uleb128 0
-	.uleb128 .LEHB35-.LFB5456
-	.uleb128 .LEHE35-.LEHB35
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE5456:
@@ -1877,7 +1851,7 @@ _ZN16T100ProjectLogic5BuildEv:
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 2
-.LC3:
+.LC2:
 	.ascii ".\0p\0j\0t\0\0\0"
 	.text
 	.align 2
@@ -1886,7 +1860,7 @@ _ZN16T100ProjectLogic5BuildEv:
 	.seh_proc	_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo
 _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 .LFB5457:
-	.loc 3 176 1
+	.loc 3 178 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1906,84 +1880,84 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	movq	%rcx, 0(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, 8(%rbp)	 # this, this
 	movq	%r8, 16(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 50
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 50
 	movq	16(%rbp), %rax	 # info, tmp90
 	movq	%rax, %rcx	 # tmp90,
-.LEHB36:
+.LEHB35:
 	call	_ZN16T100WxFolderInfo8GetLabelB5cxx11Ev	 #
 	movq	%rax, %rbx	 #, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 25
 	movq	16(%rbp), %rax	 # info, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 27
 	leaq	-64(%rbp), %rax	 #, tmp92
 	leaq	.LC0(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp92,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
-.LEHE36:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 34
+.LEHE35:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 34
 	leaq	-96(%rbp), %rax	 #, tmp93
 	leaq	-64(%rbp), %rdx	 #, tmp94
 	movq	%rbx, %r8	 # _1,
 	movq	%rax, %rcx	 # tmp93,
-.LEHB37:
+.LEHB36:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_	 #
-.LEHE37:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 54 discriminator 2
+.LEHE36:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 54 discriminator 2
 	movq	0(%rbp), %rcx	 # <retval>, tmp95
 	leaq	-96(%rbp), %rax	 #, tmp96
-	leaq	.LC3(%rip), %r8	 #,
+	leaq	.LC2(%rip), %r8	 #,
 	movq	%rax, %rdx	 # tmp96,
-.LEHB38:
+.LEHB37:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
-.LEHE38:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 54 is_stmt 0
+.LEHE37:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 54 is_stmt 0
 	nop	
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 34 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 34 is_stmt 1
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 27
 	leaq	-64(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 54
-	jmp	.L102	 #
-.L101:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 54
+	jmp	.L100	 #
+.L99:
 	movq	%rax, %rbx	 #, tmp101
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 34
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 34
 	leaq	-96(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	jmp	.L99	 #
-.L100:
+	jmp	.L97	 #
+.L98:
 	movq	%rax, %rbx	 #, tmp100
-.L99:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
-	.loc 3 177 27 discriminator 1
+.L97:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+	.loc 3 179 27 discriminator 1
 	leaq	-64(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.108548
-	movq	%rax, %rcx	 # D.108548,
-.LEHB39:
+	movq	%rbx, %rax	 # tmp100, D.108543
+	movq	%rax, %rcx	 # D.108543,
+.LEHB38:
 	call	_Unwind_Resume	 #
-.LEHE39:
-.L102:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:178: }
-	.loc 3 178 1
+.LEHE38:
+.L100:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:180: }
+	.loc 3 180 1
 	movq	0(%rbp), %rax	 # <retval>,
 	addq	$104, %rsp	 #,
 	popq	%rbx	 #
@@ -2002,20 +1976,20 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	.byte	0x1
 	.uleb128 .LLSDACSE5457-.LLSDACSB5457
 .LLSDACSB5457:
+	.uleb128 .LEHB35-.LFB5457
+	.uleb128 .LEHE35-.LEHB35
+	.uleb128 0
+	.uleb128 0
 	.uleb128 .LEHB36-.LFB5457
 	.uleb128 .LEHE36-.LEHB36
-	.uleb128 0
+	.uleb128 .L98-.LFB5457
 	.uleb128 0
 	.uleb128 .LEHB37-.LFB5457
 	.uleb128 .LEHE37-.LEHB37
-	.uleb128 .L100-.LFB5457
+	.uleb128 .L99-.LFB5457
 	.uleb128 0
 	.uleb128 .LEHB38-.LFB5457
 	.uleb128 .LEHE38-.LEHB38
-	.uleb128 .L101-.LFB5457
-	.uleb128 0
-	.uleb128 .LEHB39-.LFB5457
-	.uleb128 .LEHE39-.LEHB39
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE5457:
@@ -2027,7 +2001,7 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	.seh_proc	_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo
 _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 .LFB5458:
-	.loc 3 181 1
+	.loc 3 183 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2042,16 +2016,16 @@ _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 	movq	%rcx, 16(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, 24(%rbp)	 # this, this
 	movq	%r8, 32(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:182:     return info.GetPath();
-	.loc 3 182 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:184:     return info.GetPath();
+	.loc 3 184 25
 	movq	32(%rbp), %rax	 # info, tmp88
 	movq	%rax, %rcx	 # tmp88,
 	call	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 # _1,
 	movq	16(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:183: }
-	.loc 3 183 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185: }
+	.loc 3 185 1
 	movq	16(%rbp), %rax	 # <retval>,
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2063,7 +2037,7 @@ _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 2
-.LC4:
+.LC3:
 	.ascii "M\0a\0k\0e\0.\0p\0y\0\0\0"
 	.text
 	.align 2
@@ -2072,7 +2046,7 @@ _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 	.seh_proc	_ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo
 _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 .LFB5459:
-	.loc 3 186 1
+	.loc 3 188 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2092,53 +2066,53 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	movq	%rcx, -32(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, -24(%rbp)	 # this, this
 	movq	%r8, -16(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 3 187 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:189:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 3 189 26
 	movq	-16(%rbp), %rax	 # info, tmp89
 	movq	%rax, %rcx	 # tmp89,
-.LEHB40:
+.LEHB39:
 	call	_ZN15T100ProjectInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 3 187 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:189:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 3 189 28
 	leaq	-96(%rbp), %rax	 #, tmp90
 	leaq	.LC0(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
-.LEHE40:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 3 187 37
+.LEHE39:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:189:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 3 189 37
 	movq	-32(%rbp), %rcx	 # <retval>, tmp91
 	leaq	-96(%rbp), %rax	 #, tmp92
-	leaq	.LC4(%rip), %r8	 #,
+	leaq	.LC3(%rip), %r8	 #,
 	movq	%rax, %rdx	 # tmp92,
-.LEHB41:
+.LEHB40:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
-.LEHE41:
+.LEHE40:
 	nop	
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 3 187 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:189:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 3 189 28
 	leaq	-96(%rbp), %rax	 #, tmp93
 	movq	%rax, %rcx	 # tmp93,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 3 187 37
-	jmp	.L109	 #
-.L108:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:189:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 3 189 37
+	jmp	.L107	 #
+.L106:
 	movq	%rax, %rbx	 #, tmp95
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 3 187 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:189:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 3 189 28
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp95, D.108555
-	movq	%rax, %rcx	 # D.108555,
-.LEHB42:
+	movq	%rbx, %rax	 # tmp95, D.108550
+	movq	%rax, %rcx	 # D.108550,
+.LEHB41:
 	call	_Unwind_Resume	 #
-.LEHE42:
-.L109:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:188: }
-	.loc 3 188 1
+.LEHE41:
+.L107:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:190: }
+	.loc 3 190 1
 	movq	-32(%rbp), %rax	 # <retval>,
 	addq	$72, %rsp	 #,
 	popq	%rbx	 #
@@ -2157,16 +2131,16 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	.byte	0x1
 	.uleb128 .LLSDACSE5459-.LLSDACSB5459
 .LLSDACSB5459:
+	.uleb128 .LEHB39-.LFB5459
+	.uleb128 .LEHE39-.LEHB39
+	.uleb128 0
+	.uleb128 0
 	.uleb128 .LEHB40-.LFB5459
 	.uleb128 .LEHE40-.LEHB40
-	.uleb128 0
+	.uleb128 .L106-.LFB5459
 	.uleb128 0
 	.uleb128 .LEHB41-.LFB5459
 	.uleb128 .LEHE41-.LEHB41
-	.uleb128 .L108-.LFB5459
-	.uleb128 0
-	.uleb128 .LEHB42-.LFB5459
-	.uleb128 .LEHE42-.LEHB42
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE5459:
@@ -2315,7 +2289,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginE
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_	 #
-	movq	-8(%rbp), %rax	 # D.104147, D.108139
+	movq	-8(%rbp), %rax	 # D.104146, D.108138
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 4 699 50
 	addq	$48, %rsp	 #,
@@ -2356,7 +2330,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_	 #
-	movq	-8(%rbp), %rax	 # D.104149, D.108142
+	movq	-8(%rbp), %rax	 # D.104148, D.108141
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 4 717 51
 	addq	$48, %rsp	 #,
@@ -2524,30 +2498,30 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	-56(%rbp), %rax	 # __lhs, tmp88
 	movq	%rax, %rdx	 # tmp88,
 	movq	-64(%rbp), %rcx	 # <retval>,
-.LEHB43:
+.LEHB42:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_	 #
-.LEHE43:
+.LEHE42:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:5929:       __str.append(__rhs);
 	.loc 6 5929 7
 	movq	-48(%rbp), %rax	 # __rhs, tmp89
 	movq	%rax, %rdx	 # tmp89,
 	movq	-64(%rbp), %rcx	 # <retval>,
-.LEHB44:
+.LEHB43:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6appendEPKw	 #
-.LEHE44:
+.LEHE43:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:5930:       return __str;
 	.loc 6 5930 14
-	jmp	.L126	 #
-.L125:
+	jmp	.L124	 #
+.L123:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.108560
-	movq	%rax, %rcx	 # D.108560,
-.LEHB45:
+	movq	%rbx, %rax	 # tmp90, D.108555
+	movq	%rax, %rcx	 # D.108555,
+.LEHB44:
 	call	_Unwind_Resume	 #
-.LEHE45:
-.L126:
+.LEHE44:
+.L124:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:5931:     }
 	.loc 6 5931 5
 	movq	-64(%rbp), %rax	 # <retval>,
@@ -2568,16 +2542,16 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	.byte	0x1
 	.uleb128 .LLSDACSE6006-.LLSDACSB6006
 .LLSDACSB6006:
+	.uleb128 .LEHB42-.LFB6006
+	.uleb128 .LEHE42-.LEHB42
+	.uleb128 0
+	.uleb128 0
 	.uleb128 .LEHB43-.LFB6006
 	.uleb128 .LEHE43-.LEHB43
-	.uleb128 0
+	.uleb128 .L123-.LFB6006
 	.uleb128 0
 	.uleb128 .LEHB44-.LFB6006
 	.uleb128 .LEHE44-.LEHB44
-	.uleb128 .L125-.LFB6006
-	.uleb128 0
-	.uleb128 .LEHB45-.LFB6006
-	.uleb128 .LEHE45-.LEHB45
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE6006:
@@ -2663,7 +2637,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1076: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
 	.loc 4 1076 2
 	cmpq	%rax, %rdx	 # _2, _1
-	je	.L130	 #,
+	je	.L128	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1079: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
 	.loc 4 1079 30
 	movq	16(%rbp), %rax	 # this, tmp96
@@ -2688,18 +2662,18 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
 	movq	%rdx, 8(%rax)	 # _6, this_9(D)->D.48982._M_impl._M_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1086:       }
 	.loc 4 1086 7
-	jmp	.L132	 #
-.L130:
+	jmp	.L130	 #
+.L128:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1085: 	  _M_realloc_insert(end(), __x);
 	.loc 4 1085 4
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv	 #
-	movq	%rax, %rdx	 #, D.108029
+	movq	%rax, %rdx	 #, D.108028
 	movq	24(%rbp), %rax	 # __x, tmp100
 	movq	%rax, %r8	 # tmp100,
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_	 #
-.L132:
+.L130:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1086:       }
 	.loc 4 1086 7
 	nop	
@@ -2744,7 +2718,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1076: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
 	.loc 4 1076 2
 	cmpq	%rax, %rdx	 # _2, _1
-	je	.L134	 #,
+	je	.L132	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1079: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
 	.loc 4 1079 30
 	movq	16(%rbp), %rax	 # this, tmp96
@@ -2769,18 +2743,18 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
 	movq	%rdx, 8(%rax)	 # _6, this_9(D)->D.47875._M_impl._M_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1086:       }
 	.loc 4 1086 7
-	jmp	.L136	 #
-.L134:
+	jmp	.L134	 #
+.L132:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1085: 	  _M_realloc_insert(end(), __x);
 	.loc 4 1085 4
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv	 #
-	movq	%rax, %rdx	 #, D.108218
+	movq	%rax, %rdx	 #, D.108217
 	movq	24(%rbp), %rax	 # __x, tmp100
 	movq	%rax, %r8	 # tmp100,
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_	 #
-.L136:
+.L134:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1086:       }
 	.loc 4 1086 7
 	nop	
@@ -3084,7 +3058,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSa
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.104135, D.104135
+	movq	%r8, 32(%rbp)	 # D.104134, D.104134
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 7 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -3307,7 +3281,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.105155, D.108034
+	movq	-8(%rbp), %rax	 # D.105154, D.108033
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 4 717 51
 	addq	$48, %rsp	 #,
@@ -3319,7 +3293,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 .LFE6229:
 	.seh_endproc
 	.section .rdata,"dr"
-.LC5:
+.LC4:
 	.ascii "vector::_M_realloc_insert\0"
 	.section	.text$_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_,"x"
 	.linkonce discard
@@ -3352,10 +3326,10 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	%r8, 16(%rbp)	 # __args#0, __args#0
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:422:       const size_type __len =
 	.loc 10 422 23
-	leaq	.LC5(%rip), %r8	 #,
+	leaq	.LC4(%rip), %r8	 #,
 	movl	$1, %edx	 #,
 	movq	0(%rbp), %rcx	 # this,
-.LEHB46:
+.LEHB45:
 	call	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc	 #
 	movq	%rax, -48(%rbp)	 # _38, __len
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:424:       pointer __old_start = this->_M_impl._M_start;
@@ -3372,7 +3346,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	.loc 10 426 51
 	movq	0(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv	 #
-	movq	%rax, -88(%rbp)	 # tmp127, D.105161
+	movq	%rax, -88(%rbp)	 # tmp127, D.105160
 	leaq	-88(%rbp), %rdx	 #, tmp128
 	leaq	8(%rbp), %rax	 #, tmp129
 	movq	%rax, %rcx	 # tmp129,
@@ -3386,7 +3360,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	-48(%rbp), %rdx	 # __len, tmp130
 	movq	%rax, %rcx	 # _2,
 	call	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy	 #
-.LEHE46:
+.LEHE45:
 	movq	%rax, -80(%rbp)	 # _47, __new_start
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:428:       pointer __new_finish(__new_start);
 	.loc 10 428 15
@@ -3434,7 +3408,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	%rbx, %r9	 # _8,
 	movq	%rcx, %r8	 # tmp136,
 	movq	%rax, %rcx	 # tmp137,
-.LEHB47:
+.LEHB46:
 	call	_ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_	 #
 	movq	%rax, -40(%rbp)	 # _57, __new_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:450: 	  ++__new_finish;
@@ -3458,7 +3432,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	%rcx, %r8	 # tmp139,
 	movq	%rax, %rcx	 # _14,
 	call	_ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_	 #
-.LEHE47:
+.LEHE46:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:454: 	    (__position.base(), __old_finish,
 	.loc 10 454 6 is_stmt 0 discriminator 1
 	movq	%rax, -40(%rbp)	 # _63, __new_finish
@@ -3474,7 +3448,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	-56(%rbp), %rax	 # __old_start, tmp142
 	movq	%rcx, %r8	 # _23,
 	movq	%rax, %rcx	 # tmp142,
-.LEHB48:
+.LEHB47:
 	call	_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:469:       _M_deallocate(__old_start,
 	.loc 10 469 20 discriminator 1
@@ -3494,7 +3468,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	%rcx, %r8	 # _28,
 	movq	%rax, %rcx	 # _24,
 	call	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y	 #
-.LEHE48:
+.LEHE47:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:471:       this->_M_impl._M_start = __new_start;
 	.loc 10 471 7 discriminator 1
 	movq	0(%rbp), %rax	 # this, tmp146
@@ -3517,8 +3491,8 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	%rdx, 16(%rax)	 # _30, this_36(D)->D.48982._M_impl._M_end_of_storage
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:474:     }
 	.loc 10 474 5 discriminator 1
-	jmp	.L164	 #
-.L162:
+	jmp	.L162	 #
+.L160:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 10 457 7
 	movq	%rax, %rcx	 # _15,
@@ -3526,7 +3500,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:459: 	  if (!__new_finish)
 	.loc 10 459 4
 	cmpq	$0, -40(%rbp)	 #, __new_finish
-	jne	.L159	 #,
+	jne	.L157	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:461: 				   __new_start + __elems_before);
 	.loc 10 461 20
 	movq	-72(%rbp), %rax	 # __elems_before, tmp154
@@ -3541,10 +3515,10 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:460: 	    _Alloc_traits::destroy(this->_M_impl,
 	.loc 10 460 28
 	movq	%rax, %rcx	 # _18,
-.LEHB49:
+.LEHB48:
 	call	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_	 #
-	jmp	.L160	 #
-.L159:
+	jmp	.L158	 #
+.L157:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:463: 	    std::_Destroy(__new_start, __new_finish, _M_get_Tp_allocator());
 	.loc 10 463 66
 	movq	0(%rbp), %rax	 # this, _19
@@ -3558,7 +3532,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	%rcx, %r8	 # _20,
 	movq	%rax, %rcx	 # tmp157,
 	call	_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E	 #
-.L160:
+.L158:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:464: 	  _M_deallocate(__new_start, __len);
 	.loc 10 464 17
 	movq	0(%rbp), %rax	 # this, _21
@@ -3570,19 +3544,19 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:465: 	  __throw_exception_again;
 	.loc 10 465 4
 	call	__cxa_rethrow	 #
-.LEHE49:
-.L163:
+.LEHE48:
+.L161:
 	movq	%rax, %rbx	 #, tmp160
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 10 457 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp160, D.108565
-	movq	%rax, %rcx	 # D.108565,
-.LEHB50:
+	movq	%rbx, %rax	 # tmp160, D.108560
+	movq	%rax, %rcx	 # D.108560,
+.LEHB49:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE50:
-.L164:
+.LEHE49:
+.L162:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:474:     }
 	.loc 10 474 5
 	addq	$104, %rsp	 #,
@@ -3605,24 +3579,24 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	.byte	0x1
 	.uleb128 .LLSDACSE6230-.LLSDACSB6230
 .LLSDACSB6230:
+	.uleb128 .LEHB45-.LFB6230
+	.uleb128 .LEHE45-.LEHB45
+	.uleb128 0
+	.uleb128 0
 	.uleb128 .LEHB46-.LFB6230
 	.uleb128 .LEHE46-.LEHB46
-	.uleb128 0
-	.uleb128 0
+	.uleb128 .L160-.LFB6230
+	.uleb128 0x1
 	.uleb128 .LEHB47-.LFB6230
 	.uleb128 .LEHE47-.LEHB47
-	.uleb128 .L162-.LFB6230
-	.uleb128 0x1
+	.uleb128 0
+	.uleb128 0
 	.uleb128 .LEHB48-.LFB6230
 	.uleb128 .LEHE48-.LEHB48
-	.uleb128 0
+	.uleb128 .L161-.LFB6230
 	.uleb128 0
 	.uleb128 .LEHB49-.LFB6230
 	.uleb128 .LEHE49-.LEHB49
-	.uleb128 .L163-.LFB6230
-	.uleb128 0
-	.uleb128 .LEHB50-.LFB6230
-	.uleb128 .LEHE50-.LEHB50
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE6230:
@@ -3739,7 +3713,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.105204, D.108221
+	movq	-8(%rbp), %rax	 # D.105203, D.108220
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 4 717 51
 	addq	$48, %rsp	 #,
@@ -3780,10 +3754,10 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	%r8, 16(%rbp)	 # __args#0, __args#0
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:422:       const size_type __len =
 	.loc 10 422 23
-	leaq	.LC5(%rip), %r8	 #,
+	leaq	.LC4(%rip), %r8	 #,
 	movl	$1, %edx	 #,
 	movq	0(%rbp), %rcx	 # this,
-.LEHB51:
+.LEHB50:
 	call	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc	 #
 	movq	%rax, -48(%rbp)	 # _38, __len
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:424:       pointer __old_start = this->_M_impl._M_start;
@@ -3800,7 +3774,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	.loc 10 426 51
 	movq	0(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv	 #
-	movq	%rax, -88(%rbp)	 # tmp127, D.105210
+	movq	%rax, -88(%rbp)	 # tmp127, D.105209
 	leaq	-88(%rbp), %rdx	 #, tmp128
 	leaq	8(%rbp), %rax	 #, tmp129
 	movq	%rax, %rcx	 # tmp129,
@@ -3814,7 +3788,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	-48(%rbp), %rdx	 # __len, tmp130
 	movq	%rax, %rcx	 # _2,
 	call	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy	 #
-.LEHE51:
+.LEHE50:
 	movq	%rax, -80(%rbp)	 # _47, __new_start
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:428:       pointer __new_finish(__new_start);
 	.loc 10 428 15
@@ -3862,7 +3836,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	%rbx, %r9	 # _8,
 	movq	%rcx, %r8	 # tmp136,
 	movq	%rax, %rcx	 # tmp137,
-.LEHB52:
+.LEHB51:
 	call	_ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_	 #
 	movq	%rax, -40(%rbp)	 # _57, __new_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:450: 	  ++__new_finish;
@@ -3886,7 +3860,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	%rcx, %r8	 # tmp139,
 	movq	%rax, %rcx	 # _14,
 	call	_ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_	 #
-.LEHE52:
+.LEHE51:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:454: 	    (__position.base(), __old_finish,
 	.loc 10 454 6 is_stmt 0 discriminator 1
 	movq	%rax, -40(%rbp)	 # _63, __new_finish
@@ -3902,7 +3876,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	-56(%rbp), %rax	 # __old_start, tmp142
 	movq	%rcx, %r8	 # _23,
 	movq	%rax, %rcx	 # tmp142,
-.LEHB53:
+.LEHB52:
 	call	_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:469:       _M_deallocate(__old_start,
 	.loc 10 469 20 discriminator 1
@@ -3922,7 +3896,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	%rcx, %r8	 # _28,
 	movq	%rax, %rcx	 # _24,
 	call	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y	 #
-.LEHE53:
+.LEHE52:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:471:       this->_M_impl._M_start = __new_start;
 	.loc 10 471 7 discriminator 1
 	movq	0(%rbp), %rax	 # this, tmp146
@@ -3945,8 +3919,8 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	%rdx, 16(%rax)	 # _30, this_36(D)->D.47875._M_impl._M_end_of_storage
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:474:     }
 	.loc 10 474 5 discriminator 1
-	jmp	.L177	 #
-.L175:
+	jmp	.L175	 #
+.L173:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 10 457 7
 	movq	%rax, %rcx	 # _15,
@@ -3954,7 +3928,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:459: 	  if (!__new_finish)
 	.loc 10 459 4
 	cmpq	$0, -40(%rbp)	 #, __new_finish
-	jne	.L172	 #,
+	jne	.L170	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:461: 				   __new_start + __elems_before);
 	.loc 10 461 20
 	movq	-72(%rbp), %rax	 # __elems_before, tmp154
@@ -3969,10 +3943,10 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:460: 	    _Alloc_traits::destroy(this->_M_impl,
 	.loc 10 460 28
 	movq	%rax, %rcx	 # _18,
-.LEHB54:
+.LEHB53:
 	call	_ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_	 #
-	jmp	.L173	 #
-.L172:
+	jmp	.L171	 #
+.L170:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:463: 	    std::_Destroy(__new_start, __new_finish, _M_get_Tp_allocator());
 	.loc 10 463 66
 	movq	0(%rbp), %rax	 # this, _19
@@ -3986,7 +3960,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	%rcx, %r8	 # _20,
 	movq	%rax, %rcx	 # tmp157,
 	call	_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E	 #
-.L173:
+.L171:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:464: 	  _M_deallocate(__new_start, __len);
 	.loc 10 464 17
 	movq	0(%rbp), %rax	 # this, _21
@@ -3998,19 +3972,19 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:465: 	  __throw_exception_again;
 	.loc 10 465 4
 	call	__cxa_rethrow	 #
-.LEHE54:
-.L176:
+.LEHE53:
+.L174:
 	movq	%rax, %rbx	 #, tmp160
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 10 457 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp160, D.108567
-	movq	%rax, %rcx	 # D.108567,
-.LEHB55:
+	movq	%rbx, %rax	 # tmp160, D.108562
+	movq	%rax, %rcx	 # D.108562,
+.LEHB54:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE55:
-.L177:
+.LEHE54:
+.L175:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:474:     }
 	.loc 10 474 5
 	addq	$104, %rsp	 #,
@@ -4033,24 +4007,24 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	.byte	0x1
 	.uleb128 .LLSDACSE6234-.LLSDACSB6234
 .LLSDACSB6234:
+	.uleb128 .LEHB50-.LFB6234
+	.uleb128 .LEHE50-.LEHB50
+	.uleb128 0
+	.uleb128 0
 	.uleb128 .LEHB51-.LFB6234
 	.uleb128 .LEHE51-.LEHB51
-	.uleb128 0
-	.uleb128 0
+	.uleb128 .L173-.LFB6234
+	.uleb128 0x1
 	.uleb128 .LEHB52-.LFB6234
 	.uleb128 .LEHE52-.LEHB52
-	.uleb128 .L175-.LFB6234
-	.uleb128 0x1
+	.uleb128 0
+	.uleb128 0
 	.uleb128 .LEHB53-.LFB6234
 	.uleb128 .LEHE53-.LEHB53
-	.uleb128 0
+	.uleb128 .L174-.LFB6234
 	.uleb128 0
 	.uleb128 .LEHB54-.LFB6234
 	.uleb128 .LEHE54-.LEHB54
-	.uleb128 .L176-.LFB6234
-	.uleb128 0
-	.uleb128 .LEHB55-.LFB6234
-	.uleb128 .LEHE55-.LEHB55
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE6234:
@@ -4170,7 +4144,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:303: 	if (__p)
 	.loc 4 303 2
 	cmpq	$0, 24(%rbp)	 #, __p
-	je	.L182	 #,
+	je	.L180	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:304: 	  _Tr::deallocate(_M_impl, __p, __n);
 	.loc 4 304 20
 	movq	16(%rbp), %rax	 # this, _1
@@ -4181,7 +4155,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	movq	%rcx, %r8	 # tmp88,
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y	 #
-.L182:
+.L180:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:305:       }
 	.loc 4 305 7
 	nop	
@@ -4369,13 +4343,13 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1637: 	if (max_size() - size() < __n)
 	.loc 4 1637 2
 	testb	%al, %al	 # retval.14_19
-	je	.L187	 #,
+	je	.L185	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1638: 	  __throw_length_error(__N(__s));
 	.loc 4 1638 24
 	movq	-32(%rbp), %rax	 # __s, __s.16_5
 	movq	%rax, %rcx	 # __s.16_5,
 	call	_ZSt20__throw_length_errorPKc	 #
-.L187:
+.L185:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1640: 	const size_type __len = size() + std::max(size(), __n);
 	.loc 4 1640 33
 	movq	-48(%rbp), %rcx	 # this,
@@ -4385,7 +4359,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
 	.loc 4 1640 43
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv	 #
-	movq	%rax, -96(%rbp)	 # _7, D.105977
+	movq	%rax, -96(%rbp)	 # _7, D.105976
 	leaq	-40(%rbp), %rdx	 #, tmp101
 	leaq	-96(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
@@ -4404,7 +4378,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 4 1641 48
 	cmpq	%rax, -88(%rbp)	 # _10, __len
-	jb	.L188	 #,
+	jb	.L186	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 4 1641 34 discriminator 2
 	movq	-48(%rbp), %rcx	 # this,
@@ -4412,18 +4386,18 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 4 1641 25 discriminator 2
 	cmpq	%rax, -88(%rbp)	 # _11, __len
-	jbe	.L189	 #,
-.L188:
+	jbe	.L187	 #,
+.L186:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 4 1641 48 discriminator 3
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv	 #
-	jmp	.L190	 #
-.L189:
+	jmp	.L188	 #
+.L187:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 4 1641 48 is_stmt 0 discriminator 4
 	movq	-88(%rbp), %rax	 # __len, iftmp.17_12
-.L190:
+.L188:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1642:       }
 	.loc 4 1642 7 is_stmt 1 discriminator 6
 	addq	$56, %rsp	 #,
@@ -4465,7 +4439,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.105979, D.108071
+	movq	-8(%rbp), %rax	 # D.105978, D.108070
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 4 699 50
 	addq	$48, %rsp	 #,
@@ -4553,7 +4527,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 4 296 18
 	cmpq	$0, 24(%rbp)	 #, __n
-	je	.L197	 #,
+	je	.L195	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 4 296 34 discriminator 1
 	movq	16(%rbp), %rax	 # this, _1
@@ -4564,12 +4538,12 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy:
 	call	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 4 296 58 discriminator 1
-	jmp	.L199	 #
-.L197:
+	jmp	.L197	 #
+.L195:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 4 296 18 discriminator 2
 	movl	$0, %eax	 #, _8
-.L199:
+.L197:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:297:       }
 	.loc 4 297 7 discriminator 5
 	addq	$32, %rsp	 #,
@@ -4676,15 +4650,15 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4
 	movq	-56(%rbp), %rax	 # __last, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rbx	 #, D.108095
+	movq	%rax, %rbx	 #, D.108094
 	movq	-64(%rbp), %rcx	 # __first,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rcx	 #, D.108096
+	movq	%rax, %rcx	 #, D.108095
 	movq	-40(%rbp), %rdx	 # __alloc, tmp92
 	movq	-48(%rbp), %rax	 # __result, tmp93
 	movq	%rdx, %r9	 # tmp92,
 	movq	%rax, %r8	 # tmp93,
-	movq	%rbx, %rdx	 # D.108095,
+	movq	%rbx, %rdx	 # D.108094,
 	call	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:313:     }
 	.loc 13 313 5
@@ -4757,7 +4731,7 @@ _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.105185, D.105185
+	movq	%r8, 32(%rbp)	 # D.105184, D.105184
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 7 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -4801,7 +4775,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:303: 	if (__p)
 	.loc 4 303 2
 	cmpq	$0, 24(%rbp)	 #, __p
-	je	.L210	 #,
+	je	.L208	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:304: 	  _Tr::deallocate(_M_impl, __p, __n);
 	.loc 4 304 20
 	movq	16(%rbp), %rax	 # this, _1
@@ -4812,7 +4786,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y:
 	movq	%rcx, %r8	 # tmp88,
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y	 #
-.L210:
+.L208:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:305:       }
 	.loc 4 305 7
 	nop	
@@ -4961,13 +4935,13 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1637: 	if (max_size() - size() < __n)
 	.loc 4 1637 2
 	testb	%al, %al	 # retval.29_19
-	je	.L214	 #,
+	je	.L212	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1638: 	  __throw_length_error(__N(__s));
 	.loc 4 1638 24
 	movq	-32(%rbp), %rax	 # __s, __s.31_5
 	movq	%rax, %rcx	 # __s.31_5,
 	call	_ZSt20__throw_length_errorPKc	 #
-.L214:
+.L212:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1640: 	const size_type __len = size() + std::max(size(), __n);
 	.loc 4 1640 33
 	movq	-48(%rbp), %rcx	 # this,
@@ -4977,7 +4951,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
 	.loc 4 1640 43
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv	 #
-	movq	%rax, -96(%rbp)	 # _7, D.106239
+	movq	%rax, -96(%rbp)	 # _7, D.106238
 	leaq	-40(%rbp), %rdx	 #, tmp101
 	leaq	-96(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
@@ -4996,7 +4970,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 4 1641 48
 	cmpq	%rax, -88(%rbp)	 # _10, __len
-	jb	.L215	 #,
+	jb	.L213	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 4 1641 34 discriminator 2
 	movq	-48(%rbp), %rcx	 # this,
@@ -5004,18 +4978,18 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 4 1641 25 discriminator 2
 	cmpq	%rax, -88(%rbp)	 # _11, __len
-	jbe	.L216	 #,
-.L215:
+	jbe	.L214	 #,
+.L213:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 4 1641 48 discriminator 3
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv	 #
-	jmp	.L217	 #
-.L216:
+	jmp	.L215	 #
+.L214:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 4 1641 48 is_stmt 0 discriminator 4
 	movq	-88(%rbp), %rax	 # __len, iftmp.32_12
-.L217:
+.L215:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1642:       }
 	.loc 4 1642 7 is_stmt 1 discriminator 6
 	addq	$56, %rsp	 #,
@@ -5057,7 +5031,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.106241, D.108254
+	movq	-8(%rbp), %rax	 # D.106240, D.108253
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 4 699 50
 	addq	$48, %rsp	 #,
@@ -5145,7 +5119,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 4 296 18
 	cmpq	$0, 24(%rbp)	 #, __n
-	je	.L224	 #,
+	je	.L222	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 4 296 34 discriminator 1
 	movq	16(%rbp), %rax	 # this, _1
@@ -5156,12 +5130,12 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy:
 	call	_ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 4 296 58 discriminator 1
-	jmp	.L226	 #
-.L224:
+	jmp	.L224	 #
+.L222:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 4 296 18 discriminator 2
 	movl	$0, %eax	 #, _8
-.L226:
+.L224:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:297:       }
 	.loc 4 297 7 discriminator 5
 	addq	$32, %rsp	 #,
@@ -5267,15 +5241,15 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_R
 	movq	-56(%rbp), %rax	 # __last, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rbx	 #, D.108278
+	movq	%rax, %rbx	 #, D.108277
 	movq	-64(%rbp), %rcx	 # __first,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rcx	 #, D.108279
+	movq	%rax, %rcx	 #, D.108278
 	movq	-40(%rbp), %rdx	 # __alloc, tmp92
 	movq	-48(%rbp), %rax	 # __result, tmp93
 	movq	%rdx, %r9	 # tmp92,
 	movq	%rax, %r8	 # tmp93,
-	movq	%rbx, %rdx	 # D.108278,
+	movq	%rbx, %rdx	 # D.108277,
 	call	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:313:     }
 	.loc 13 313 5
@@ -5348,7 +5322,7 @@ _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.105232, D.105232
+	movq	%r8, 32(%rbp)	 # D.105231, D.105231
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 7 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -5392,7 +5366,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:303: 	if (__p)
 	.loc 4 303 2
 	cmpq	$0, 24(%rbp)	 #, __p
-	je	.L237	 #,
+	je	.L235	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:304: 	  _Tr::deallocate(_M_impl, __p, __n);
 	.loc 4 304 20
 	movq	16(%rbp), %rax	 # this, _1
@@ -5403,7 +5377,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y:
 	movq	%rcx, %r8	 # tmp88,
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y	 #
-.L237:
+.L235:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:305:       }
 	.loc 4 305 7
 	nop	
@@ -5574,12 +5548,12 @@ _ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsI
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-.L245:
+.L243:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:107: 	  for (; __first != __last; ++__first)
 	.loc 7 107 19 discriminator 2
 	movq	16(%rbp), %rax	 # __first, tmp88
 	cmpq	24(%rbp), %rax	 # __last, tmp88
-	je	.L246	 #,
+	je	.L244	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:108: 	    std::_Destroy(std::__addressof(*__first));
 	.loc 7 108 19 discriminator 1
 	movq	16(%rbp), %rcx	 # __first,
@@ -5589,8 +5563,8 @@ _ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsI
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:107: 	  for (; __first != __last; ++__first)
 	.loc 7 107 4 discriminator 1
 	addq	$32, 16(%rbp)	 #, __first
-	jmp	.L245	 #
-.L246:
+	jmp	.L243	 #
+.L244:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:109: 	}
 	.loc 7 109 2
 	nop	
@@ -5747,7 +5721,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EE
 	movq	16(%rbp), %rdx	 # __i,
 	movq	%rax, %rcx	 # tmp89,
 	call	_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_	 #
-	movq	-8(%rbp), %rax	 # D.107273, D.108099
+	movq	-8(%rbp), %rax	 # D.107272, D.108098
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:1216:     { return _ReturnType(__i); }
 	.loc 5 1216 32
 	addq	$48, %rsp	 #,
@@ -5780,7 +5754,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
 	movq	%r8, 32(%rbp)	 # __result, __result
-	movq	%r9, 40(%rbp)	 # D.106187, D.106187
+	movq	%r9, 40(%rbp)	 # D.106186, D.106186
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:289:     { return std::uninitialized_copy(__first, __last, __result); }
 	.loc 13 289 37
 	movq	32(%rbp), %rdx	 # __result, tmp89
@@ -6053,7 +6027,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0
 	movq	16(%rbp), %rdx	 # __i,
 	movq	%rax, %rcx	 # tmp89,
 	call	_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_	 #
-	movq	-8(%rbp), %rax	 # D.107371, D.108282
+	movq	-8(%rbp), %rax	 # D.107370, D.108281
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:1216:     { return _ReturnType(__i); }
 	.loc 5 1216 32
 	addq	$48, %rsp	 #,
@@ -6086,7 +6060,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
 	movq	%r8, 32(%rbp)	 # __result, __result
-	movq	%r9, 40(%rbp)	 # D.106449, D.106449
+	movq	%r9, 40(%rbp)	 # D.106448, D.106448
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:289:     { return std::uninitialized_copy(__first, __last, __result); }
 	.loc 13 289 37
 	movq	32(%rbp), %rdx	 # __result, tmp89
@@ -6414,11 +6388,11 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 12 101 2
 	testb	%al, %al	 # retval.19_7
-	je	.L281	 #,
+	je	.L279	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:102: 	  std::__throw_bad_alloc();
 	.loc 12 102 26
 	call	_ZSt17__throw_bad_allocv	 #
-.L281:
+.L279:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:111: 	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
 	.loc 12 111 41
 	movq	24(%rbp), %rax	 # __n, tmp92
@@ -6532,8 +6506,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.107364, D.107364
-	movq	%rdx, 24(%rbp)	 # D.107365, D.107365
+	movq	%rcx, 16(%rbp)	 # D.107363, D.107363
+	movq	%rdx, 24(%rbp)	 # D.107364, D.107364
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 7 117 57
 	nop	
@@ -6680,11 +6654,11 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 12 101 2
 	testb	%al, %al	 # retval.34_7
-	je	.L293	 #,
+	je	.L291	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:102: 	  std::__throw_bad_alloc();
 	.loc 12 102 26
 	call	_ZSt17__throw_bad_allocv	 #
-.L293:
+.L291:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:111: 	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
 	.loc 12 111 41
 	movq	24(%rbp), %rax	 # __n, tmp92
@@ -6798,8 +6772,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.107462, D.107462
-	movq	%rdx, 24(%rbp)	 # D.107463, D.107463
+	movq	%rcx, 16(%rbp)	 # D.107461, D.107461
+	movq	%rdx, 24(%rbp)	 # D.107462, D.107462
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 7 117 57
 	nop	
@@ -7591,7 +7565,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100Folde
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:367: 	  if (_Num)
 	.loc 2 367 4
 	cmpq	$0, -8(%rbp)	 #, _Num
-	je	.L337	 #,
+	je	.L335	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:368: 	    __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
 	.loc 2 368 23
 	movq	-8(%rbp), %rax	 # _Num, _Num.20_2
@@ -7601,7 +7575,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100Folde
 	movq	16(%rbp), %rdx	 # __first,
 	movq	%rax, %rcx	 # tmp96,
 	call	memmove	 #
-.L337:
+.L335:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
 	.loc 2 369 20
 	movq	-8(%rbp), %rax	 # _Num, _Num.21_4
@@ -7653,7 +7627,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileI
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:367: 	  if (_Num)
 	.loc 2 367 4
 	cmpq	$0, -8(%rbp)	 #, _Num
-	je	.L340	 #,
+	je	.L338	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:368: 	    __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
 	.loc 2 368 23
 	movq	-8(%rbp), %rax	 # _Num, _Num.35_2
@@ -7663,7 +7637,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileI
 	movq	16(%rbp), %rdx	 # __first,
 	movq	%rax, %rcx	 # tmp96,
 	call	memmove	 #
-.L340:
+.L338:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
 	.loc 2 369 20
 	movq	-8(%rbp), %rax	 # _Num, _Num.36_4
@@ -45122,7 +45096,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x2c
 	.ascii "GetFileName\0"
 	.byte	0x3
-	.byte	0xaf
+	.byte	0xb1
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo\0"
 	.long	0x8fee
@@ -45174,7 +45148,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x2c
 	.ascii "GetFolderName\0"
 	.byte	0x3
-	.byte	0xb4
+	.byte	0xb6
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo\0"
 	.long	0x8fee
@@ -45189,7 +45163,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x2c
 	.ascii "GetBuildName\0"
 	.byte	0x3
-	.byte	0xb9
+	.byte	0xbb
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo\0"
 	.long	0x8fee
@@ -49281,7 +49255,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1f
 	.secrel32	.LASF265
 	.byte	0x3
-	.byte	0xb9
+	.byte	0xbb
 	.byte	0x43
 	.long	0x2e99d
 	.uleb128 0x2
@@ -49305,7 +49279,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1f
 	.secrel32	.LASF265
 	.byte	0x3
-	.byte	0xb4
+	.byte	0xb6
 	.byte	0x45
 	.long	0x2e997
 	.uleb128 0x2
@@ -49329,7 +49303,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1f
 	.secrel32	.LASF265
 	.byte	0x3
-	.byte	0xaf
+	.byte	0xb1
 	.byte	0x43
 	.long	0x2e997
 	.uleb128 0x2
@@ -49358,7 +49332,7 @@ _ZTS16T100ProjectLogic:
 	.long	0x318fd
 	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -136
+	.sleb128 -104
 	.uleb128 0x39
 	.ascii "command\0"
 	.byte	0x3
@@ -49367,7 +49341,7 @@ _ZTS16T100ProjectLogic:
 	.long	0x8fee
 	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -176
+	.sleb128 -144
 	.byte	0
 	.uleb128 0x21
 	.ascii "T100Shell\0"
