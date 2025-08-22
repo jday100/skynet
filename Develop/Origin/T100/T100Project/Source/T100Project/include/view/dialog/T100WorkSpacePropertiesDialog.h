@@ -1,7 +1,11 @@
 #ifndef T100WORKSPACEPROPERTIESDIALOG_H
 #define T100WORKSPACEPROPERTIESDIALOG_H
 
+#include <wx/sizer.h>
+#include <wx/stattext.h>
+#include <wx/filepicker.h>
 #include <wx/dialog.h>
+#include "T100Common.h"
 
 class T100WorkSpacePropertiesDialog : public wxDialog
 {
@@ -15,8 +19,16 @@ class T100WorkSpacePropertiesDialog : public wxDialog
         virtual ~T100WorkSpacePropertiesDialog();
 
     protected:
+        static const long ID_STATIC_TEXT;
+        static const long ID_PYTHON_DIR;
+
+    protected:
+        wxStaticText*       m_title;
+        wxDirPickerCtrl*    m_dir;
 
     private:
+        T100VOID            init();
+        T100VOID            uninit();
 };
 
 #endif // T100WORKSPACEPROPERTIESDIALOG_H
