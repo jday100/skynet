@@ -8,7 +8,7 @@ T100ExecuteProcess::T100ExecuteProcess(wxArrayString* out, wxArrayString* err) :
     m_stdErr(err)
 {
     //ctor
-    m_running   = T100FALSE;
+    m_running   = T100TRUE;
 
     Redirect();
 }

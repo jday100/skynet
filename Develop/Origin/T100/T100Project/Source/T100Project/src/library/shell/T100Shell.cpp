@@ -1,5 +1,6 @@
 #include "T100Shell.h"
 
+#include <iostream>
 #include "T100ExecuteProcess.h"
 
 T100Shell::T100Shell()
@@ -29,7 +30,14 @@ T100VOID T100Shell::Execute(const T100WSTRING& value)
     }
 
     while(process.IsRunning()){
+        process.FlushPipe();
 
+        for(wxString item : output){
+            std::cout << item;
+        }
+        for(wxString item : error){
+            std::cout << item;
+        }
     }
 
     process.ExitCode();

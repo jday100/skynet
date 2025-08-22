@@ -1883,11 +1883,11 @@ _ZN18T100ExecuteProcessC2EP13wxArrayStringS1_:
 	movq	16(%rbp), %rax	 # this, tmp95
 	movq	32(%rbp), %rdx	 # err, tmp96
 	movq	%rdx, 184(%rax)	 # tmp96, this_7(D)->m_stdErr
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ExecuteProcess.cpp:11:     m_running   = T100FALSE;
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ExecuteProcess.cpp:11:     m_running   = T100TRUE;
 	.loc 11 11 17
 	movq	16(%rbp), %rax	 # this, tmp97
 	addq	$192, %rax	 #, _3
-	movl	$0, %edx	 #,
+	movl	$1, %edx	 #,
 	movq	%rax, %rcx	 # _3,
 	call	_ZNSt6atomicIbEaSEb	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100ExecuteProcess.cpp:13:     Redirect();
