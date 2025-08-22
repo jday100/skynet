@@ -13,6 +13,8 @@ BEGIN_EVENT_TABLE(T100ProjectTree, wxTreeCtrl)
     EVT_TREE_SEL_CHANGED(wxID_ANY, OnItemChanged)
     EVT_TREE_ITEM_EXPANDING(wxID_ANY, OnItemExpanding)
     EVT_TREE_ITEM_ACTIVATED(wxID_ANY, OnItemActivated)
+
+    EVT_MENU(T100PROJECT_TREE_MENU_WORKSPACE_PROPERTIES, OnWorkSpaceProperties)
     EVT_MENU(T100PROJECT_TREE_MENU_PROJECT_NEW, OnProjectCreate)
     EVT_MENU(T100PROJECT_TREE_MENU_FILE_NEW, OnFileCreate)
     EVT_MENU(T100PROJECT_TREE_MENU_FOLDER_NEW, OnFolderCreate)
@@ -1378,6 +1380,11 @@ T100VOID T100ProjectTree::OnItemExpanding(wxTreeEvent& event)
     }
 
     data->OnItemExpanding();
+}
+
+T100VOID T100ProjectTree::OnWorkSpaceProperties(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnWorkSpaceProperties();
 }
 
 T100VOID T100ProjectTree::OnProjectCreate(wxCommandEvent& event)

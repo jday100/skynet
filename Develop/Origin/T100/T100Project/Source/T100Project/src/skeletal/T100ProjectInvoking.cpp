@@ -166,6 +166,11 @@ T100VOID T100ProjectInvoking::OnQuit()
 
 }
 
+T100VOID T100ProjectInvoking::OnWorkSpaceProperties()
+{
+    m_skeletal->OnWorkSpaceProperties();
+}
+
 T100VOID T100ProjectInvoking::OnFolderNew()
 {
     m_skeletal->OnFolderNew();

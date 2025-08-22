@@ -7,6 +7,7 @@
 #include "T100ProjectViewMainMenu.h"
 #include "T100ProjectTree.h"
 #include "T100MainPanel.h"
+#include "T100BuildPanel.h"
 
 class T100ProjectFrame;
 
@@ -25,10 +26,13 @@ class T100ProjectViewBase
         T100ProjectViewMainMenu*        GetMainMenu();
         T100ProjectTree*                GetProjectTree();
         T100MainPanel*                  GetMainPanel();
+        T100BuildPanel*                 GetBuildPanel();
 
         T100VOID                        SetTitle();
 
         T100INT                         ShowDirDialog(T100WSTRING&);
+
+        T100VOID                        ShowWorkSpacePropertiesDialog();
 
         T100VOID                        ShowProjectCreateWizard();
 
@@ -42,6 +46,8 @@ class T100ProjectViewBase
 
         T100ProjectTree*                m_projectTree   = T100NULL;
         T100MainPanel*                  m_mainPanel     = T100NULL;
+        T100BuildPanel*                 m_buildPanel    = T100NULL;
+
         T100WSTRING                     m_projectName   = L"T100Project";
 
     private:

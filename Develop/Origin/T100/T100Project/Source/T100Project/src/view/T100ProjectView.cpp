@@ -25,8 +25,10 @@ T100VOID T100ProjectView::Create(T100ProjectFrame* frame)
     m_mainMenu->Create(frame);
 
     m_projectTree   = T100NEW T100ProjectTree(m_frame);
+    m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
 
     m_manager->AddPane(m_projectTree, wxAuiPaneInfo().MinSize(100, -1).BestSize(300, -1).Left());
+    m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().MinSize(-1, 100).BestSize(-1, 300).Bottom());
 
     SetTitle();
 

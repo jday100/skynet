@@ -159,14 +159,17 @@
 		<Unit filename="include/view/dialog/T100ProjectViewAboutDialog.h" />
 		<Unit filename="include/view/dialog/T100ProjectViewSetupCompilerDialog.h" />
 		<Unit filename="include/view/dialog/T100ProjectViewSetupEditorDialog.h" />
+		<Unit filename="include/view/dialog/T100WorkSpacePropertiesDialog.h" />
 		<Unit filename="include/view/pack/T100EditorPack.h" />
 		<Unit filename="include/view/wizard/project/T100CreateWizardFirstPage.h" />
 		<Unit filename="include/view/wizard/project/T100CreateWizardSecondPage.h" />
 		<Unit filename="include/view/wizard/project/T100ProjectCreateWizard.h" />
+		<Unit filename="include/wx/T100BuildPanel.h" />
 		<Unit filename="include/wx/T100Editor.h" />
 		<Unit filename="include/wx/T100ExecuteProcess.h" />
 		<Unit filename="include/wx/T100MainPanel.h" />
 		<Unit filename="include/wx/T100ProjectTree.h" />
+		<Unit filename="include/wx/T100SearchPanel.h" />
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
@@ -212,14 +215,17 @@
 		<Unit filename="src/view/dialog/T100ProjectViewAboutDialog.cpp" />
 		<Unit filename="src/view/dialog/T100ProjectViewSetupCompilerDialog.cpp" />
 		<Unit filename="src/view/dialog/T100ProjectViewSetupEditorDialog.cpp" />
+		<Unit filename="src/view/dialog/T100WorkSpacePropertiesDialog.cpp" />
 		<Unit filename="src/view/pack/T100EditorPack.cpp" />
 		<Unit filename="src/view/wizard/project/T100CreateWizardFirstPage.cpp" />
 		<Unit filename="src/view/wizard/project/T100CreateWizardSecondPage.cpp" />
 		<Unit filename="src/view/wizard/project/T100ProjectCreateWizard.cpp" />
+		<Unit filename="src/wx/T100BuildPanel.cpp" />
 		<Unit filename="src/wx/T100Editor.cpp" />
 		<Unit filename="src/wx/T100ExecuteProcess.cpp" />
 		<Unit filename="src/wx/T100MainPanel.cpp" />
 		<Unit filename="src/wx/T100ProjectTree.cpp" />
+		<Unit filename="src/wx/T100SearchPanel.cpp" />
 		<Unit filename="wxsmith/T100Projectframe.wxs" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -22,6 +22,8 @@ wxMenu* T100WorkSpaceData::ShowMenu()
     menu->AppendSubMenu(project, L"Project");
     project->Append(T100PROJECT_TREE_MENU_PROJECT_NEW, L"New");
 
+    menu->Append(T100PROJECT_TREE_MENU_WORKSPACE_PROPERTIES, L"Properties...");
+
     return menu;
 }
 

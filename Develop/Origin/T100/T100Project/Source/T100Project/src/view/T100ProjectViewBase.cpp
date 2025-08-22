@@ -4,6 +4,7 @@
 #include "T100ProjectMain.h"
 #include "T100ProjectCreateWizard.h"
 #include "T100ProjectViewAboutDialog.h"
+#include "T100WorkSpacePropertiesDialog.h"
 
 
 T100ProjectViewBase::T100ProjectViewBase()
@@ -68,6 +69,11 @@ T100MainPanel* T100ProjectViewBase::GetMainPanel()
     return m_mainPanel;
 }
 
+T100BuildPanel* T100ProjectViewBase::GetBuildPanel()
+{
+    return m_buildPanel;
+}
+
 T100VOID T100ProjectViewBase::SetTitle()
 {
     T100WSTRING         title;
@@ -104,6 +110,13 @@ T100INT T100ProjectViewBase::ShowDirDialog(T100WSTRING& path)
     }
 
     return result;
+}
+
+T100VOID T100ProjectViewBase::ShowWorkSpacePropertiesDialog()
+{
+    T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+
+    dialog.ShowModal();
 }
 
 T100VOID T100ProjectViewBase::ShowProjectCreateWizard()

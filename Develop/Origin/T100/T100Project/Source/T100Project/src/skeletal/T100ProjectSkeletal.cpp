@@ -245,6 +245,11 @@ T100VOID T100ProjectSkeletal::OnQuit()
 
 }
 
+T100VOID T100ProjectSkeletal::OnWorkSpaceProperties()
+{
+    m_view->ShowWorkSpacePropertiesDialog();
+}
+
 T100VOID T100ProjectSkeletal::OnFolderNew()
 {
 

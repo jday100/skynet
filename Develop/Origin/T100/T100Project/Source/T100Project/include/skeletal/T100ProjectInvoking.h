@@ -48,6 +48,8 @@ class T100ProjectInvoking
         static T100VOID                     OnResize();
         static T100VOID                     OnQuit();
 
+        static T100VOID                     OnWorkSpaceProperties();
+
         static T100VOID                     OnFolderNew();
         static T100VOID                     OnFolderSelected();
 
