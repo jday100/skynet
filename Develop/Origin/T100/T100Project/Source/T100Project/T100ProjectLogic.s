@@ -1439,7 +1439,16 @@ _ZN16T100ProjectLogic6NewNewERK16T100WxFolderInfo:
 	.ascii "2\0/\0m\0i\0n\0g\0w\0"
 	.ascii "6\0"
 	.ascii "4\0/\0b\0i\0n\0/\0p\0y\0t\0h\0o\0n\0"
-	.ascii "3\0 \0.\0/\0s\0c\0r\0i\0p\0t\0s\0/\0p\0r\0o\0j\0e\0c\0t\0/\0P\0r\0o\0j\0e\0c\0t\0.\0p\0y\0 \0C\0:\0/\0w\0o\0r\0k\0/\0t\0e\0m\0p\0\0\0"
+	.ascii "3\0 \0C\0:\0/\0z\0g\0i\0t\0/\0s\0k\0y\0n\0e\0t\0/\0D\0e\0v\0e\0l\0o\0p\0/\0O\0r\0i\0g\0i\0n\0/\0T\0"
+	.ascii "1\0"
+	.ascii "0\0"
+	.ascii "0\0/\0T\0"
+	.ascii "1\0"
+	.ascii "0\0"
+	.ascii "0\0P\0r\0o\0j\0e\0c\0t\0/\0S\0o\0u\0r\0c\0e\0/\0T\0"
+	.ascii "1\0"
+	.ascii "0\0"
+	.ascii "0\0P\0r\0o\0j\0e\0c\0t\0/\0s\0c\0r\0i\0p\0t\0s\0/\0p\0r\0o\0j\0e\0c\0t\0/\0P\0r\0o\0j\0e\0c\0t\0.\0p\0y\0 \0C\0:\0/\0w\0o\0r\0k\0/\0t\0e\0m\0p\0\0\0"
 	.text
 	.align 2
 	.globl	_ZN16T100ProjectLogic7ExecuteERK16T100WxFolderInfo
@@ -1507,7 +1516,7 @@ _ZN16T100ProjectLogic7ExecuteERK16T100WxFolderInfo:
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:164:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 ./scripts/project/Project.py C:/work/temp";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:164:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
 	.loc 3 164 19
 	leaq	-96(%rbp), %rax	 #, tmp98
 	leaq	.LC0(%rip), %rdx	 #,
