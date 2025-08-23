@@ -34,7 +34,7 @@ def create_project_file():
 
     try:
         with open("xml.xml", 'w', encoding='UTF-8') as xmlfile:
-        xml.writexml(xmlfile, indent='', addindent='\t', newl='\n', encoding='UTF-8')
+            xml.writexml(xmlfile, indent='', addindent='\t', newl='\n', encoding='UTF-8')
         print("OK")
     except Exception as err:
         print("Error:{err}".format(err=err))
