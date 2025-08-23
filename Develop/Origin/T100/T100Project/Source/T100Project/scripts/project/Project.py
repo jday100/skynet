@@ -1,6 +1,8 @@
 import os
 import sys
 
+from xml.dom import minidom
+
 def args():
     print("Args...")
     count = len(sys.argv)
@@ -27,6 +29,15 @@ def create_project(path):
 
 def create_project_file():
     print("Create project file...")
+    xml = minidom.Document()
+    root = xml.createElement("aaa")
+
+    try:
+        with open("xml.xml", 'w', encoding='UTF-8') as xmlfile:
+        xml.writexml(xmlfile, indent='', addindent='\t', newl='\n', encoding='UTF-8')
+        print("OK")
+    except Exception as err:
+        print("Error:{err}".format(err=err))
 
 def create_project_make():
     print("Create project make...")
