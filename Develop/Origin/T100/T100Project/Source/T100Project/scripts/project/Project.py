@@ -1,54 +1,37 @@
-
 import os
 import sys
-import subprocess
 
 def args():
-    print("Args ... ")
+    print("Args...")
     count = len(sys.argv)
 
     match count:
-        case 1:
-            make()
         case 2:
-            value = sys.argv[1];
-            match value:
-                case 'clean':
-                    clean()
-                case 'rebuild':
-                    rebuild()
-                case 'run':
-                    run()
+            value = sys.argv[1]
+            create_project(value)
 
-def make():
-    print("Making ... ")
 
-    os.chdir("Source/T100CRT")
-    result = os.system("python3 ./Make.py")
+def create_project(path):
+    print("CreateProject...")
 
-    os.chdir(root)
+    if os.path.exists(path):
+        print("Dir exists")
+    else:
+        print("Dir not exists")
+        os.mkdir(path)
+        os.mkdir(path + "/include")
+        os.mkdir(path + "/src")
 
-    os.chdir("Sample/main")
-    result = os.system("python3 ./Make.py")
+        create_project_file()
+        create_project_make()
 
-def clean():
-    print("Cleaning ... ")
+def create_project_file():
+    print("Create project file...")
 
-    os.chdir("Source/T100CRT")
-    result = os.system("python3 ./Make.py clean")
+def create_project_make():
+    print("Create project make...")
 
-    os.chdir(root)
-
-    os.chdir("Sample/main")
-    result = os.system("python3 ./Make.py clean")
-
-def rebuild():
-    clean()
-    make()
-
-def run():
-    result = subprocess.call("Sample/main/main.exe");
 
 if __name__ == "__main__":
-    root = os.getcwd()
+    print("Main...")
     args()
