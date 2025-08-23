@@ -41,7 +41,12 @@ def create_project_file():
 
 def create_project_make():
     print("Create project make...")
-
+    try:
+        with open("Make.py", 'w', encoding='UTF-8') as makefile:
+            makefile.write("")
+        print("OK")
+    except Exception as err:
+        print("Error:{err}".format(err=err))
 
 if __name__ == "__main__":
     print("Main...")
