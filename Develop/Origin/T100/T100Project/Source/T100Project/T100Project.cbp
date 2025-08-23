@@ -173,6 +173,7 @@
 		<Unit filename="resource.rc">
 			<Option compilerVar="WINDRES" />
 		</Unit>
+		<Unit filename="scripts/project/Project.py" />
 		<Unit filename="src/base/T100Pack.cpp" />
 		<Unit filename="src/base/T100ProjectConfig.cpp" />
 		<Unit filename="src/data/T100FileData.cpp" />
