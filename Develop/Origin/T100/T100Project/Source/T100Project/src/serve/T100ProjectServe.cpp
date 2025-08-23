@@ -51,7 +51,7 @@ T100BOOL T100ProjectServe::Check(T100WxFolderInfo* info)
 
 T100BOOL T100ProjectServe::New(const T100WxFolderInfo& info)
 {
-    return m_projectLogic.New(info);
+    return m_projectLogic.NewNew(info);
 }
 
 T100BOOL T100ProjectServe::Open(const T100WSTRING&)
