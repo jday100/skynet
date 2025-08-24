@@ -1307,7 +1307,7 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LEHB2:
 	call	_ZN18T100ExecuteProcessC1EP13wxArrayStringS1_	 #
 .LEHE2:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC, &process) == 0){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , &process) == 0){
 	.loc 7 28 17
 	movq	360(%rbp), %rdx	 # value, tmp99
 	leaq	224(%rbp), %rax	 #, tmp100
@@ -1315,27 +1315,27 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LEHB3:
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE3:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC, &process) == 0){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , &process) == 0){
 	.loc 7 28 17 is_stmt 0 discriminator 1
 	leaq	-48(%rbp), %rdx	 #, tmp101
 	leaq	224(%rbp), %rax	 #, tmp102
 	movl	$0, %r9d	 #,
 	movq	%rdx, %r8	 # tmp101,
-	movl	$0, %edx	 #,
+	movl	$2, %edx	 #,
 	movq	%rax, %rcx	 # tmp102,
 .LEHB4:
 	call	_Z9wxExecuteRK8wxStringiP9wxProcessPK12wxExecuteEnv	 #
 .LEHE4:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC, &process) == 0){
-	.loc 7 28 49 is_stmt 1 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , &process) == 0){
+	.loc 7 28 72 is_stmt 1 discriminator 1
 	testl	%eax, %eax	 # _1
 	sete	%bl	 #, retval.0_26
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC, &process) == 0){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , &process) == 0){
 	.loc 7 28 17 discriminator 1
 	leaq	224(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC, &process) == 0){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , &process) == 0){
 	.loc 7 28 5 discriminator 1
 	testb	%bl, %bl	 # retval.0_26
 	je	.L48	 #,
@@ -1486,7 +1486,7 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	jmp	.L73	 #
 .L70:
 	movq	%rax, %rbx	 #, tmp132
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC, &process) == 0){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , &process) == 0){
 	.loc 7 28 17
 	leaq	224(%rbp), %rax	 #, tmp130
 	movq	%rax, %rcx	 # tmp130,

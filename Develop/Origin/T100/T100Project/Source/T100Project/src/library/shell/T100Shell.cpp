@@ -25,7 +25,7 @@ T100VOID T100Shell::Execute(const T100WSTRING& value)
 
     T100ExecuteProcess      process(&output, &error);
 
-    if(wxExecute(value, wxEXEC_ASYNC, &process) == 0){
+    if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , &process) == 0){
         return;
     }
 
