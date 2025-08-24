@@ -39,7 +39,7 @@ T100VOID T100ProjectSkeletal::Destroy()
 
 T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
 {
-    T100BOOL        result;
+    T100BOOL        result      = T100TRUE;
 
     if(m_serve->IsOpened()){
         result = WorkSpaceClose();

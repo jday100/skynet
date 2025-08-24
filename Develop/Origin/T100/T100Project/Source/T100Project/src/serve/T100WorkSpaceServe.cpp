@@ -18,6 +18,7 @@ T100WorkSpaceServe::~T100WorkSpaceServe()
 
 T100VOID T100WorkSpaceServe::init()
 {
+    m_opened    = T100FALSE;
 }
 
 T100VOID T100WorkSpaceServe::uninit()

@@ -2111,10 +2111,13 @@ _ZN19T100ProjectSkeletal14OnWorkSpaceNewEv:
 	.cfi_def_cfa 6, 128
 	.seh_endprologue
 	movq	%rcx, 128(%rbp)	 # this, this
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:42:     T100BOOL        result      = T100TRUE;
+	.loc 10 42 21
+	movb	$1, 95(%rbp)	 #, result
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:44:     if(m_serve->IsOpened()){
 	.loc 10 44 8
 	movq	128(%rbp), %rax	 # this, tmp105
-	movq	16(%rax), %rax	 # this_25(D)->D.189263.m_serve, _1
+	movq	16(%rax), %rax	 # this_26(D)->D.189263.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:44:     if(m_serve->IsOpened()){
 	.loc 10 44 25
 	movq	%rax, %rcx	 # _1,
@@ -2122,7 +2125,7 @@ _ZN19T100ProjectSkeletal14OnWorkSpaceNewEv:
 	call	_ZN18T100WorkSpaceServe8IsOpenedEv	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:44:     if(m_serve->IsOpened()){
 	.loc 10 44 5
-	testb	%al, %al	 # _27
+	testb	%al, %al	 # _28
 	je	.L86	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:45:         result = WorkSpaceClose();
 	.loc 10 45 32
@@ -2148,7 +2151,7 @@ _ZN19T100ProjectSkeletal14OnWorkSpaceNewEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:54:     if(m_view->ShowDirDialog(path) == wxID_CANCEL){
 	.loc 10 54 8
 	movq	128(%rbp), %rax	 # this, tmp108
-	movq	8(%rax), %rax	 # this_25(D)->D.189263.m_view, _4
+	movq	8(%rax), %rax	 # this_26(D)->D.189263.m_view, _4
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:54:     if(m_view->ShowDirDialog(path) == wxID_CANCEL){
 	.loc 10 54 29
 	movq	%rax, %rcx	 # _4, _5
