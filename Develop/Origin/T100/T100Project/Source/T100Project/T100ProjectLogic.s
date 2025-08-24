@@ -1457,9 +1457,6 @@ _ZN16T100ProjectLogic6NewNewERK16T100WxFolderInfo:
 	.ascii "6\0"
 	.ascii "4\0/\0b\0i\0n\0/\0p\0y\0t\0h\0o\0n\0"
 	.ascii "3\0\0\0"
-	.align 8
-.LC2:
-	.ascii "C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp\0"
 	.text
 	.align 2
 	.globl	_ZN16T100ProjectLogic7ExecuteERK16T100WxFolderInfo
@@ -1488,122 +1485,121 @@ _ZN16T100ProjectLogic7ExecuteERK16T100WxFolderInfo:
 	movq	%rdx, 88(%rbp)	 # info, info
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:156:     T100WSTRING         name;
 	.loc 3 156 25
-	leaq	-16(%rbp), %rax	 #, tmp92
-	movq	%rax, %rcx	 # tmp92,
+	leaq	-16(%rbp), %rax	 #, tmp89
+	movq	%rax, %rcx	 # tmp89,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     T100WSTRING         filename;
 	.loc 3 157 25
-	leaq	-48(%rbp), %rax	 #, tmp93
-	movq	%rax, %rcx	 # tmp93,
+	leaq	-48(%rbp), %rax	 #, tmp90
+	movq	%rax, %rcx	 # tmp90,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     name    = GetFolderName(info);
 	.loc 3 159 28
-	leaq	16(%rbp), %rax	 #, tmp94
-	movq	88(%rbp), %rdx	 # info, tmp95
-	movq	%rdx, %r8	 # tmp95,
+	leaq	16(%rbp), %rax	 #, tmp91
+	movq	88(%rbp), %rdx	 # info, tmp92
+	movq	%rdx, %r8	 # tmp92,
 	movq	80(%rbp), %rdx	 # this,
-	movq	%rax, %rcx	 # tmp94,
+	movq	%rax, %rcx	 # tmp91,
 .LEHB21:
 	call	_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     name    = GetFolderName(info);
 	.loc 3 159 33 discriminator 1
-	leaq	16(%rbp), %rdx	 #, tmp96
-	leaq	-16(%rbp), %rax	 #, tmp97
-	movq	%rax, %rcx	 # tmp97,
+	leaq	16(%rbp), %rdx	 #, tmp93
+	leaq	-16(%rbp), %rax	 #, tmp94
+	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     name    = GetFolderName(info);
 	.loc 3 159 28 discriminator 1
-	leaq	16(%rbp), %rax	 #, tmp98
-	movq	%rax, %rcx	 # tmp98,
+	leaq	16(%rbp), %rax	 #, tmp95
+	movq	%rax, %rcx	 # tmp95,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     T100Shell       shell;
 	.loc 3 161 21 discriminator 1
-	leaq	-56(%rbp), %rax	 #, tmp99
-	movq	%rax, %rcx	 # tmp99,
+	leaq	-56(%rbp), %rax	 #, tmp96
+	movq	%rax, %rcx	 # tmp96,
 	call	_ZN9T100ShellC1Ev	 #
 .LEHE21:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:162:     T100WSTRING     command;
 	.loc 3 162 21
-	leaq	-96(%rbp), %rax	 #, tmp100
-	movq	%rax, %rcx	 # tmp100,
+	leaq	-96(%rbp), %rax	 #, tmp97
+	movq	%rax, %rcx	 # tmp97,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:164:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
 	.loc 3 164 19
-	leaq	-96(%rbp), %rax	 #, tmp101
+	leaq	-96(%rbp), %rax	 #, tmp98
 	leaq	.LC0(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp101,
+	movq	%rax, %rcx	 # tmp98,
 .LEHB22:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEPKw	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:166:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3";
 	.loc 3 166 19
-	leaq	-96(%rbp), %rax	 #, tmp102
+	leaq	-96(%rbp), %rax	 #, tmp99
 	leaq	.LC1(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp102,
+	movq	%rax, %rcx	 # tmp99,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEPKw	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:168:     command = "C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:168:     command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
 	.loc 3 168 15
-	leaq	.LC2(%rip), %rax	 #, _1
-	movzwl	%ax, %edx	 # _2, _3
-	leaq	-96(%rbp), %rax	 #, tmp103
-	movq	%rax, %rcx	 # tmp103,
-	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEw	 #
+	leaq	-96(%rbp), %rax	 #, tmp100
+	leaq	.LC0(%rip), %rdx	 #,
+	movq	%rax, %rcx	 # tmp100,
+	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEPKw	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:170:     shell.Run(command);
 	.loc 3 170 14
-	leaq	-96(%rbp), %rdx	 #, tmp104
-	leaq	-56(%rbp), %rax	 #, tmp105
-	movq	%rax, %rcx	 # tmp105,
+	leaq	-96(%rbp), %rdx	 #, tmp101
+	leaq	-56(%rbp), %rax	 #, tmp102
+	movq	%rax, %rcx	 # tmp102,
 	call	_ZN9T100Shell3RunERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE22:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:162:     T100WSTRING     command;
 	.loc 3 162 21
-	leaq	-96(%rbp), %rax	 #, tmp106
-	movq	%rax, %rcx	 # tmp106,
+	leaq	-96(%rbp), %rax	 #, tmp103
+	movq	%rax, %rcx	 # tmp103,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     T100Shell       shell;
 	.loc 3 161 21
-	leaq	-56(%rbp), %rax	 #, tmp107
-	movq	%rax, %rcx	 # tmp107,
+	leaq	-56(%rbp), %rax	 #, tmp104
+	movq	%rax, %rcx	 # tmp104,
 	call	_ZN9T100ShellD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     T100WSTRING         filename;
 	.loc 3 157 25
-	leaq	-48(%rbp), %rax	 #, tmp108
-	movq	%rax, %rcx	 # tmp108,
+	leaq	-48(%rbp), %rax	 #, tmp105
+	movq	%rax, %rcx	 # tmp105,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:156:     T100WSTRING         name;
 	.loc 3 156 25
-	leaq	-16(%rbp), %rax	 #, tmp109
-	movq	%rax, %rcx	 # tmp109,
+	leaq	-16(%rbp), %rax	 #, tmp106
+	movq	%rax, %rcx	 # tmp106,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:171: }
 	.loc 3 171 1
 	jmp	.L76	 #
 .L75:
-	movq	%rax, %rbx	 #, tmp112
+	movq	%rax, %rbx	 #, tmp109
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:162:     T100WSTRING     command;
 	.loc 3 162 21
-	leaq	-96(%rbp), %rax	 #, tmp110
-	movq	%rax, %rcx	 # tmp110,
+	leaq	-96(%rbp), %rax	 #, tmp107
+	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     T100Shell       shell;
 	.loc 3 161 21
-	leaq	-56(%rbp), %rax	 #, tmp115
-	movq	%rax, %rcx	 # tmp115,
+	leaq	-56(%rbp), %rax	 #, tmp112
+	movq	%rax, %rcx	 # tmp112,
 	call	_ZN9T100ShellD1Ev	 #
 	jmp	.L73	 #
 .L74:
-	movq	%rax, %rbx	 #, tmp116
+	movq	%rax, %rbx	 #, tmp113
 .L73:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     T100WSTRING         filename;
 	.loc 3 157 25
-	leaq	-48(%rbp), %rax	 #, tmp118
-	movq	%rax, %rcx	 # tmp118,
+	leaq	-48(%rbp), %rax	 #, tmp115
+	movq	%rax, %rcx	 # tmp115,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:156:     T100WSTRING         name;
 	.loc 3 156 25
-	leaq	-16(%rbp), %rax	 #, tmp121
-	movq	%rax, %rcx	 # tmp121,
+	leaq	-16(%rbp), %rax	 #, tmp118
+	movq	%rax, %rcx	 # tmp118,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp119, D.108601
+	movq	%rbx, %rax	 # tmp116, D.108601
 	movq	%rax, %rcx	 # D.108601,
 .LEHB23:
 	call	_Unwind_Resume	 #
@@ -1673,7 +1669,7 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 2
-.LC3:
+.LC2:
 	.ascii "/\0\0\0"
 	.text
 	.align 2
@@ -1814,7 +1810,7 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.loc 3 198 44
 	leaq	176(%rbp), %rax	 #, tmp126
 	movq	328(%rbp), %rdx	 # path, tmp127
-	leaq	.LC3(%rip), %r8	 #,
+	leaq	.LC2(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp126,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE28:
@@ -1923,7 +1919,7 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.loc 3 210 52 is_stmt 1 discriminator 2
 	leaq	208(%rbp), %rax	 #, tmp153
 	movq	328(%rbp), %rdx	 # path, tmp154
-	leaq	.LC3(%rip), %r8	 #,
+	leaq	.LC2(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp153,
 .LEHB33:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
@@ -2113,8 +2109,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	leaq	128(%rbp), %rax	 #, tmp203
 	movq	%rax, %rcx	 # tmp203,
 	call	_ZN10T100FolderD1Ev	 #
-	movq	%rbx, %rax	 # tmp201, D.108606
-	movq	%rax, %rcx	 # D.108606,
+	movq	%rbx, %rax	 # tmp201, D.108605
+	movq	%rax, %rcx	 # D.108605,
 .LEHB38:
 	call	_Unwind_Resume	 #
 .LEHE38:
@@ -2205,7 +2201,7 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 8
-.LC4:
+.LC3:
 	.ascii "C\0:\0/\0z\0m\0s\0y\0s\0"
 	.ascii "2\0/\0m\0s\0y\0s\0"
 	.ascii "2\0/\0m\0i\0n\0g\0w\0"
@@ -2275,7 +2271,7 @@ _ZN16T100ProjectLogic5BuildEv:
 	leaq	-48(%rbp), %rax	 #, tmp95
 	leaq	-16(%rbp), %rdx	 #, tmp96
 	movq	%rdx, %r8	 # tmp96,
-	leaq	.LC4(%rip), %rdx	 #,
+	leaq	.LC3(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp95,
 .LEHB41:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_	 #
@@ -2336,8 +2332,8 @@ _ZN16T100ProjectLogic5BuildEv:
 	leaq	-56(%rbp), %rax	 #, tmp113
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN9T100ShellD1Ev	 #
-	movq	%rbx, %rax	 # tmp111, D.108613
-	movq	%rax, %rcx	 # D.108613,
+	movq	%rbx, %rax	 # tmp111, D.108612
+	movq	%rax, %rcx	 # D.108612,
 .LEHB43:
 	call	_Unwind_Resume	 #
 .LEHE43:
@@ -2390,7 +2386,7 @@ _ZN16T100ProjectLogic5BuildEv:
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 2
-.LC5:
+.LC4:
 	.ascii ".\0p\0j\0t\0\0\0"
 	.text
 	.align 2
@@ -2435,7 +2431,7 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:242:     return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
 	.loc 3 242 27
 	leaq	-64(%rbp), %rax	 #, tmp92
-	leaq	.LC3(%rip), %r8	 #,
+	leaq	.LC2(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp92,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE44:
@@ -2452,7 +2448,7 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	.loc 3 242 54 discriminator 2
 	movq	0(%rbp), %rcx	 # <retval>, tmp95
 	leaq	-96(%rbp), %rax	 #, tmp96
-	leaq	.LC5(%rip), %r8	 #,
+	leaq	.LC4(%rip), %r8	 #,
 	movq	%rax, %rdx	 # tmp96,
 .LEHB46:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
@@ -2489,8 +2485,8 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	leaq	-64(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.108617
-	movq	%rax, %rcx	 # D.108617,
+	movq	%rbx, %rax	 # tmp100, D.108616
+	movq	%rax, %rcx	 # D.108616,
 .LEHB47:
 	call	_Unwind_Resume	 #
 .LEHE47:
@@ -2576,7 +2572,7 @@ _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 2
-.LC6:
+.LC5:
 	.ascii "M\0a\0k\0e\0.\0p\0y\0\0\0"
 	.text
 	.align 2
@@ -2615,7 +2611,7 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:252:     return info->GetPath() + L"/" + L"Make.py";
 	.loc 3 252 28
 	leaq	-96(%rbp), %rax	 #, tmp90
-	leaq	.LC3(%rip), %r8	 #,
+	leaq	.LC2(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE48:
@@ -2623,7 +2619,7 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	.loc 3 252 37
 	movq	-32(%rbp), %rcx	 # <retval>, tmp91
 	leaq	-96(%rbp), %rax	 #, tmp92
-	leaq	.LC6(%rip), %r8	 #,
+	leaq	.LC5(%rip), %r8	 #,
 	movq	%rax, %rdx	 # tmp92,
 .LEHB49:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
@@ -2644,8 +2640,8 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp95, D.108624
-	movq	%rax, %rcx	 # D.108624,
+	movq	%rbx, %rax	 # tmp95, D.108623
+	movq	%rax, %rcx	 # D.108623,
 .LEHB50:
 	call	_Unwind_Resume	 #
 .LEHE50:
@@ -3055,8 +3051,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.108629
-	movq	%rax, %rcx	 # D.108629,
+	movq	%rbx, %rax	 # tmp90, D.108628
+	movq	%rax, %rcx	 # D.108628,
 .LEHB53:
 	call	_Unwind_Resume	 #
 .LEHE53:
@@ -3832,7 +3828,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 .LFE6231:
 	.seh_endproc
 	.section .rdata,"dr"
-.LC7:
+.LC6:
 	.ascii "vector::_M_realloc_insert\0"
 	.section	.text$_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_,"x"
 	.linkonce discard
@@ -3865,7 +3861,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	%r8, 16(%rbp)	 # __args#0, __args#0
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:422:       const size_type __len =
 	.loc 10 422 23
-	leaq	.LC7(%rip), %r8	 #,
+	leaq	.LC6(%rip), %r8	 #,
 	movl	$1, %edx	 #,
 	movq	0(%rbp), %rcx	 # this,
 .LEHB54:
@@ -4089,8 +4085,8 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 10 457 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp160, D.108634
-	movq	%rax, %rcx	 # D.108634,
+	movq	%rbx, %rax	 # tmp160, D.108633
+	movq	%rax, %rcx	 # D.108633,
 .LEHB58:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4293,7 +4289,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	%r8, 16(%rbp)	 # __args#0, __args#0
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:422:       const size_type __len =
 	.loc 10 422 23
-	leaq	.LC7(%rip), %r8	 #,
+	leaq	.LC6(%rip), %r8	 #,
 	movl	$1, %edx	 #,
 	movq	0(%rbp), %rcx	 # this,
 .LEHB59:
@@ -4517,8 +4513,8 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 10 457 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp160, D.108636
-	movq	%rax, %rcx	 # D.108636,
+	movq	%rbx, %rax	 # tmp160, D.108635
+	movq	%rax, %rcx	 # D.108635,
 .LEHB63:
 	call	_Unwind_Resume	 #
 	nop	
@@ -54918,7 +54914,6 @@ _ZTS16T100ProjectLogic:
 	.def	_ZN10T100FolderD1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN9T100ShellC1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEPKw;	.scl	2;	.type	32;	.endef
-	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEw;	.scl	2;	.type	32;	.endef
 	.def	_ZN9T100Shell3RunERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN9T100ShellD1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100ProjectInfo8GetFilesEv;	.scl	2;	.type	32;	.endef

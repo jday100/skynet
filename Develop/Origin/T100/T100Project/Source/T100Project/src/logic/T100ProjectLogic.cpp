@@ -165,7 +165,7 @@ T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info)
 
     command     = L"C:/zmsys2/msys2/mingw64/bin/python3";
 
-    command = "C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
+    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
 
     shell.Run(command);
 }
