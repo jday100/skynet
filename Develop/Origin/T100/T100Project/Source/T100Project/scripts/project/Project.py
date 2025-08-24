@@ -33,7 +33,7 @@ def create_project_file():
     root = xml.createElement("aaa")
 
     try:
-        with open("xml.xml", 'w', encoding='UTF-8') as xmlfile:
+        with open(value + "/" + "xml.xml", 'w', encoding='UTF-8') as xmlfile:
             xml.writexml(xmlfile, indent='', addindent='\t', newl='\n', encoding='UTF-8')
         print("OK")
     except Exception as err:
@@ -42,7 +42,7 @@ def create_project_file():
 def create_project_make():
     print("Create project make...")
     try:
-        with open("Make.py", 'w', encoding='UTF-8') as makefile:
+        with open(value + "/" + "Make.py", 'w', encoding='UTF-8') as makefile:
             makefile.write("")
         print("OK")
     except Exception as err:
