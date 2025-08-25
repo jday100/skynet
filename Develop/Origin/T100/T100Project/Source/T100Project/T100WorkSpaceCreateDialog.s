@@ -358,8 +358,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.225578
-	movq	%rax, %rcx	 # D.225578,
+	movq	%rbx, %rax	 # tmp96, D.225579
+	movq	%rax, %rcx	 # D.225579,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -628,8 +628,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.225582
-	movq	%rax, %rcx	 # D.225582,
+	movq	%rbx, %rax	 # tmp103, D.225583
+	movq	%rax, %rcx	 # D.225583,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -736,8 +736,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.225584
-	movq	%rax, %rcx	 # D.225584,
+	movq	%rbx, %rax	 # tmp99, D.225585
+	movq	%rax, %rcx	 # D.225585,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4439,8 +4439,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.225596
-	movq	%rax, %rcx	 # D.225596,
+	movq	%rbx, %rax	 # tmp97, D.225597
+	movq	%rax, %rcx	 # D.225597,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5167,8 +5167,8 @@ _ZN15wxSizerItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.225600
-	movq	%rax, %rcx	 # D.225600,
+	movq	%rsi, %rax	 # tmp98, D.225601
+	movq	%rax, %rcx	 # D.225601,
 .LEHB13:
 	call	_Unwind_Resume	 #
 .LEHE13:
@@ -5301,8 +5301,8 @@ _ZN7wxSizerC2Ev:
 	movq	-64(%rbp), %rax	 # this, _11
 	movq	%rax, %rcx	 # _11,
 	call	_ZN8wxObjectD2Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.225601
-	movq	%rax, %rcx	 # D.225601,
+	movq	%rbx, %rax	 # tmp110, D.225602
+	movq	%rax, %rcx	 # D.225602,
 .LEHB16:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5475,8 +5475,8 @@ _ZN10wxBoxSizerC1Ei:
 	movq	-48(%rbp), %rax	 # this, _9
 	movq	%rax, %rcx	 # _9,
 	call	_ZN7wxSizerD2Ev	 #
-	movq	%rbx, %rax	 # tmp112, D.225603
-	movq	%rax, %rcx	 # D.225603,
+	movq	%rbx, %rax	 # tmp112, D.225604
+	movq	%rax, %rcx	 # D.225604,
 .LEHB19:
 	call	_Unwind_Resume	 #
 .LEHE19:
@@ -5644,8 +5644,8 @@ _ZN7wxSizer3AddEP8wxWindowiiiP8wxObject:
 	movl	$96, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.225610
-	movq	%rax, %rcx	 # D.225610,
+	movq	%rsi, %rax	 # tmp98, D.225611
+	movq	%rax, %rcx	 # D.225611,
 	call	_Unwind_Resume	 #
 .LEHE22:
 .L242:
@@ -5755,8 +5755,8 @@ _ZN7wxSizer3AddEPS_iiiP8wxObject:
 	movl	$96, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.225611
-	movq	%rax, %rcx	 # D.225611,
+	movq	%rsi, %rax	 # tmp98, D.225612
+	movq	%rax, %rcx	 # D.225612,
 	call	_Unwind_Resume	 #
 .LEHE25:
 .L247:
@@ -6001,8 +6001,8 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	leaq	-96(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.225614
-	movq	%rax, %rcx	 # D.225614,
+	movq	%rbx, %rax	 # tmp97, D.225615
+	movq	%rax, %rcx	 # D.225615,
 .LEHB28:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6109,8 +6109,8 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.225616
-	movq	%rax, %rcx	 # D.225616,
+	movq	%rbx, %rax	 # tmp98, D.225617
+	movq	%rax, %rcx	 # D.225617,
 .LEHB31:
 	call	_Unwind_Resume	 #
 .LEHE31:
@@ -6239,8 +6239,8 @@ _ZN9wxControlC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxControlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.225620
-	movq	%rax, %rcx	 # D.225620,
+	movq	%rbx, %rax	 # tmp96, D.225621
+	movq	%rax, %rcx	 # D.225621,
 .LEHB34:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6631,8 +6631,8 @@ _ZN12wxStaticTextC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	movq	-32(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN16wxStaticTextBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.225625
-	movq	%rax, %rcx	 # D.225625,
+	movq	%rbx, %rax	 # tmp100, D.225626
+	movq	%rax, %rcx	 # D.225626,
 .LEHB37:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7979,8 +7979,8 @@ _ZN8wxDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	movq	-32(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN12wxDialogBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.225634
-	movq	%rax, %rcx	 # D.225634,
+	movq	%rbx, %rax	 # tmp100, D.225635
+	movq	%rax, %rcx	 # D.225635,
 .LEHB40:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8220,8 +8220,8 @@ _ZN15wxDirPickerCtrlC1EP8wxWindowiRK8wxStringS4_RK7wxPointRK6wxSizelRK11wxValida
 	movq	-16(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN23wxFileDirPickerCtrlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp102, D.225637
-	movq	%rax, %rcx	 # D.225637,
+	movq	%rbx, %rax	 # tmp102, D.225638
+	movq	%rax, %rcx	 # D.225638,
 .LEHB43:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8341,8 +8341,8 @@ _ZN25T100WorkSpaceCreateDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	movq	-32(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN8wxDialogD2Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.225639
-	movq	%rax, %rcx	 # D.225639,
+	movq	%rbx, %rax	 # tmp99, D.225640
+	movq	%rax, %rcx	 # D.225640,
 .LEHB46:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8518,32 +8518,32 @@ _ZN25T100WorkSpaceCreateDialog4initEv:
 .LEHB47:
 	call	_Znwy	 #
 .LEHE47:
-	movq	%rax, %rbx	 # tmp118, _27
+	movq	%rax, %rbx	 # tmp121, _30
 	movl	$8, %edx	 #,
-	movq	%rbx, %rcx	 # _27,
+	movq	%rbx, %rcx	 # _30,
 .LEHB48:
 	call	_ZN10wxBoxSizerC1Ei	 #
 .LEHE48:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:27:     wxBoxSizer*     sizer       = T100NEW wxBoxSizer(wxVERTICAL);
 	.loc 29 27 64 is_stmt 0 discriminator 2
-	movq	%rbx, 344(%rbp)	 # _27, sizer
+	movq	%rbx, 344(%rbp)	 # _30, sizer
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:29:     wxStaticBoxSizer*       workspace  = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
 	.loc 29 29 87 is_stmt 1 discriminator 2
-	leaq	-48(%rbp), %rax	 #, tmp119
-	movq	%rax, %rcx	 # tmp119,
+	leaq	-48(%rbp), %rax	 #, tmp122
+	movq	%rax, %rcx	 # tmp122,
 	call	_ZN8wxStringC1Ev	 #
-	movq	%rbp, %rax	 #, tmp120
+	movq	%rbp, %rax	 #, tmp123
 	leaq	.LC8(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp120,
+	movq	%rax, %rcx	 # tmp123,
 .LEHB49:
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE49:
-	leaq	-48(%rbp), %rdx	 #, tmp121
-	movq	%rbp, %rax	 #, tmp122
-	movq	%rax, %rcx	 # tmp122,
+	leaq	-48(%rbp), %rdx	 #, tmp124
+	movq	%rbp, %rax	 #, tmp125
+	movq	%rax, %rcx	 # tmp125,
 .LEHB50:
 	call	_Z16wxGetTranslationRK8wxStringS1_	 #
-	movq	%rax, %rsi	 #, _34
+	movq	%rax, %rsi	 #, _37
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:29:     wxStaticBoxSizer*       workspace  = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
 	.loc 29 29 102 discriminator 2
 	movl	$144, %ecx	 #,
@@ -8551,165 +8551,165 @@ _ZN25T100WorkSpaceCreateDialog4initEv:
 .LEHE50:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:29:     wxStaticBoxSizer*       workspace  = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
 	.loc 29 29 102 is_stmt 0 discriminator 4
-	movq	%rax, %rbx	 # tmp123, _37
+	movq	%rax, %rbx	 # tmp126, _40
 	movq	400(%rbp), %rax	 # this, _1
-	movq	%rsi, %r9	 # _34,
+	movq	%rsi, %r9	 # _37,
 	movq	%rax, %r8	 # _1,
 	movl	$4, %edx	 #,
-	movq	%rbx, %rcx	 # _37,
+	movq	%rbx, %rcx	 # _40,
 .LEHB51:
 	call	_ZN16wxStaticBoxSizerC1EiP8wxWindowRK8wxString	 #
 .LEHE51:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:29:     wxStaticBoxSizer*       workspace  = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
 	.loc 29 29 102 discriminator 8
-	movq	%rbx, 336(%rbp)	 # _37, workspace
+	movq	%rbx, 336(%rbp)	 # _40, workspace
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:29:     wxStaticBoxSizer*       workspace  = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
 	.loc 29 29 87 is_stmt 1 discriminator 8
-	movq	%rbp, %rax	 #, tmp124
-	movq	%rax, %rcx	 # tmp124,
+	movq	%rbp, %rax	 #, tmp127
+	movq	%rax, %rcx	 # tmp127,
 	call	_ZN8wxStringD1Ev	 #
-	leaq	-48(%rbp), %rax	 #, tmp125
-	movq	%rax, %rcx	 # tmp125,
+	leaq	-48(%rbp), %rax	 #, tmp128
+	movq	%rax, %rcx	 # tmp128,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 62 discriminator 8
-	leaq	48(%rbp), %rax	 #, tmp126
-	movq	%rax, %rcx	 # tmp126,
+	leaq	48(%rbp), %rax	 #, tmp129
+	movq	%rax, %rcx	 # tmp129,
 	call	_ZN8wxStringC1Ev	 #
-	leaq	96(%rbp), %rax	 #, tmp127
+	leaq	96(%rbp), %rax	 #, tmp130
 	leaq	.LC9(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp127,
+	movq	%rax, %rcx	 # tmp130,
 .LEHB52:
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE52:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 62 is_stmt 0 discriminator 2
-	leaq	48(%rbp), %rdx	 #, tmp128
-	leaq	96(%rbp), %rax	 #, tmp129
-	movq	%rax, %rcx	 # tmp129,
+	leaq	48(%rbp), %rdx	 #, tmp131
+	leaq	96(%rbp), %rax	 #, tmp132
+	movq	%rax, %rcx	 # tmp132,
 .LEHB53:
 	call	_Z16wxGetTranslationRK8wxStringS1_	 #
-	movq	%rax, %rdi	 #, _49
+	movq	%rax, %rdi	 #, _52
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 17 is_stmt 1 discriminator 2
-	leaq	144(%rbp), %rax	 #, tmp130
+	leaq	144(%rbp), %rax	 #, tmp133
 	movq	.refptr.wxStaticTextNameStr(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp130,
+	movq	%rax, %rcx	 # tmp133,
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE53:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 17 is_stmt 0 discriminator 6
-	leaq	144(%rbp), %rsi	 #, _52
+	leaq	144(%rbp), %rsi	 #, _55
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 72 is_stmt 1 discriminator 6
 	movl	$648, %ecx	 #,
 .LEHB54:
 	call	_Znwy	 #
 .LEHE54:
-	movq	%rax, %rbx	 # tmp131, _54
+	movq	%rax, %rbx	 # tmp134, _57
 	movl	_ZN25T100WorkSpaceCreateDialog14ID_STATIC_TEXTE(%rip), %ecx	 # ID_STATIC_TEXT, ID_STATIC_TEXT.14_2
 	movq	400(%rbp), %rax	 # this, _3
-	movq	%rsi, 56(%rsp)	 # _52,
+	movq	%rsi, 56(%rsp)	 # _55,
 	movl	$0, 48(%rsp)	 #,
-	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp132
-	movq	%rdx, 40(%rsp)	 # tmp132,
-	movq	.refptr.wxDefaultPosition(%rip), %rdx	 #, tmp133
-	movq	%rdx, 32(%rsp)	 # tmp133,
-	movq	%rdi, %r9	 # _49,
+	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp135
+	movq	%rdx, 40(%rsp)	 # tmp135,
+	movq	.refptr.wxDefaultPosition(%rip), %rdx	 #, tmp136
+	movq	%rdx, 32(%rsp)	 # tmp136,
+	movq	%rdi, %r9	 # _52,
 	movl	%ecx, %r8d	 # ID_STATIC_TEXT.14_2,
 	movq	%rax, %rdx	 # _3,
-	movq	%rbx, %rcx	 # _54,
+	movq	%rbx, %rcx	 # _57,
 .LEHB55:
 	call	_ZN12wxStaticTextC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_	 #
 .LEHE55:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 17 discriminator 10
-	movq	400(%rbp), %rax	 # this, tmp134
-	movq	%rbx, 792(%rax)	 # _54, this_39(D)->m_title
-	leaq	144(%rbp), %rax	 #, tmp135
-	movq	%rax, %rcx	 # tmp135,
+	movq	400(%rbp), %rax	 # this, tmp137
+	movq	%rbx, 792(%rax)	 # _57, this_42(D)->m_title
+	leaq	144(%rbp), %rax	 #, tmp138
+	movq	%rax, %rcx	 # tmp138,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 62 discriminator 10
-	leaq	96(%rbp), %rax	 #, tmp136
-	movq	%rax, %rcx	 # tmp136,
+	leaq	96(%rbp), %rax	 #, tmp139
+	movq	%rax, %rcx	 # tmp139,
 	call	_ZN8wxStringD1Ev	 #
-	leaq	48(%rbp), %rax	 #, tmp137
-	movq	%rax, %rcx	 # tmp137,
+	leaq	48(%rbp), %rax	 #, tmp140
+	movq	%rax, %rcx	 # tmp140,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:32:     m_dir       = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_DIR);
 	.loc 29 32 17 discriminator 10
-	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp138
+	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp141
 	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.15_4
-	leaq	192(%rbp), %rax	 #, tmp139
-	movq	%rax, %rcx	 # tmp139,
+	leaq	192(%rbp), %rax	 #, tmp142
+	movq	%rax, %rcx	 # tmp142,
 .LEHB56:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE56:
-	leaq	192(%rbp), %r12	 #, _65
-	leaq	240(%rbp), %rax	 #, tmp140
+	leaq	192(%rbp), %r12	 #, _68
+	leaq	240(%rbp), %rax	 #, tmp143
 	movq	.refptr.wxDirSelectorPromptStr(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp140,
+	movq	%rax, %rcx	 # tmp143,
 .LEHB57:
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE57:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:32:     m_dir       = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_DIR);
 	.loc 29 32 17 is_stmt 0 discriminator 2
-	leaq	240(%rbp), %rsi	 #, _67
-	leaq	288(%rbp), %rax	 #, tmp141
+	leaq	240(%rbp), %rsi	 #, _70
+	leaq	288(%rbp), %rax	 #, tmp144
 	movq	.refptr.wxDirPickerCtrlNameStr(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp141,
+	movq	%rax, %rcx	 # tmp144,
 .LEHB58:
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE58:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:32:     m_dir       = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_DIR);
 	.loc 29 32 17 discriminator 4
-	leaq	288(%rbp), %rdi	 #, _69
+	leaq	288(%rbp), %rdi	 #, _72
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:32:     m_dir       = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_DIR);
 	.loc 29 32 65 is_stmt 1 discriminator 4
 	movl	$712, %ecx	 #,
 .LEHB59:
 	call	_Znwy	 #
 .LEHE59:
-	movq	%rax, %rbx	 # tmp142, _71
+	movq	%rax, %rbx	 # tmp145, _74
 	movl	_ZN25T100WorkSpaceCreateDialog16ID_WORKSPACE_DIRE(%rip), %ecx	 # ID_WORKSPACE_DIR, ID_WORKSPACE_DIR.16_5
 	movq	400(%rbp), %rax	 # this, _6
-	movq	%rdi, 72(%rsp)	 # _69,
-	movq	.refptr.wxDefaultValidator(%rip), %rdx	 #, tmp143
-	movq	%rdx, 64(%rsp)	 # tmp143,
+	movq	%rdi, 72(%rsp)	 # _72,
+	movq	.refptr.wxDefaultValidator(%rip), %rdx	 #, tmp146
+	movq	%rdx, 64(%rsp)	 # tmp146,
 	movl	$10, 56(%rsp)	 #,
-	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp144
-	movq	%rdx, 48(%rsp)	 # tmp144,
-	movq	.refptr.wxDefaultPosition(%rip), %rdx	 #, tmp145
-	movq	%rdx, 40(%rsp)	 # tmp145,
-	movq	%rsi, 32(%rsp)	 # _67,
-	movq	%r12, %r9	 # _65,
+	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp147
+	movq	%rdx, 48(%rsp)	 # tmp147,
+	movq	.refptr.wxDefaultPosition(%rip), %rdx	 #, tmp148
+	movq	%rdx, 40(%rsp)	 # tmp148,
+	movq	%rsi, 32(%rsp)	 # _70,
+	movq	%r12, %r9	 # _68,
 	movl	%ecx, %r8d	 # ID_WORKSPACE_DIR.16_5,
 	movq	%rax, %rdx	 # _6,
-	movq	%rbx, %rcx	 # _71,
+	movq	%rbx, %rcx	 # _74,
 .LEHB60:
 	call	_ZN15wxDirPickerCtrlC1EP8wxWindowiRK8wxStringS4_RK7wxPointRK6wxSizelRK11wxValidatorS4_	 #
 .LEHE60:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:32:     m_dir       = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_DIR);
 	.loc 29 32 17 discriminator 8
-	movq	400(%rbp), %rax	 # this, tmp146
-	movq	%rbx, 800(%rax)	 # _71, this_39(D)->m_dir
-	leaq	288(%rbp), %rax	 #, tmp147
-	movq	%rax, %rcx	 # tmp147,
+	movq	400(%rbp), %rax	 # this, tmp149
+	movq	%rbx, 800(%rax)	 # _74, this_42(D)->m_dir
+	leaq	288(%rbp), %rax	 #, tmp150
+	movq	%rax, %rcx	 # tmp150,
 	call	_ZN8wxStringD1Ev	 #
-	leaq	240(%rbp), %rax	 #, tmp148
-	movq	%rax, %rcx	 # tmp148,
+	leaq	240(%rbp), %rax	 #, tmp151
+	movq	%rax, %rcx	 # tmp151,
 	call	_ZN8wxStringD1Ev	 #
-	leaq	192(%rbp), %rax	 #, tmp149
-	movq	%rax, %rcx	 # tmp149,
+	leaq	192(%rbp), %rax	 #, tmp152
+	movq	%rax, %rcx	 # tmp152,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:34:     workspace->Add(m_title, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	.loc 29 34 19 discriminator 8
 	movq	336(%rbp), %rax	 # workspace, _7
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:34:     workspace->Add(m_title, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	.loc 29 34 20 discriminator 8
-	movq	400(%rbp), %rdx	 # this, tmp150
-	movq	792(%rdx), %rdx	 # this_39(D)->m_title, _8
+	movq	400(%rbp), %rdx	 # this, tmp153
+	movq	792(%rdx), %rdx	 # this_42(D)->m_title, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:34:     workspace->Add(m_title, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	.loc 29 34 19 discriminator 8
 	movq	$0, 40(%rsp)	 #,
@@ -8724,8 +8724,8 @@ _ZN25T100WorkSpaceCreateDialog4initEv:
 	movq	336(%rbp), %rax	 # workspace, _9
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:35:     workspace->Add(m_dir, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	.loc 29 35 20 discriminator 8
-	movq	400(%rbp), %rdx	 # this, tmp151
-	movq	800(%rdx), %rdx	 # this_39(D)->m_dir, _10
+	movq	400(%rbp), %rdx	 # this, tmp154
+	movq	800(%rdx), %rdx	 # this_42(D)->m_dir, _10
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:35:     workspace->Add(m_dir, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 	.loc 29 35 19 discriminator 8
 	movq	$0, 40(%rsp)	 #,
@@ -8737,155 +8737,173 @@ _ZN25T100WorkSpaceCreateDialog4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:37:     sizer->Add(workspace, 1, wxALL|wxEXPAND, 5);
 	.loc 29 37 15 discriminator 8
 	movq	344(%rbp), %rax	 # sizer, _11
-	movq	336(%rbp), %rdx	 # workspace, tmp152
+	movq	336(%rbp), %rdx	 # workspace, tmp155
 	movq	$0, 40(%rsp)	 #,
 	movl	$5, 32(%rsp)	 #,
 	movl	$8432, %r9d	 #,
 	movl	$1, %r8d	 #,
 	movq	%rax, %rcx	 # _11,
 	call	_ZN7wxSizer3AddEPS_iiiP8wxObject	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:39:     SetSizer(sizer);
-	.loc 29 39 13 discriminator 8
-	movq	400(%rbp), %rax	 # this, _12
-	movq	344(%rbp), %rdx	 # sizer, tmp153
-	movl	$1, %r8d	 #,
-	movq	%rax, %rcx	 # _12,
-	call	_ZN12wxWindowBase8SetSizerEP7wxSizerb	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:40:     sizer->Fit(this);
-	.loc 29 40 20 discriminator 8
-	movq	344(%rbp), %rax	 # sizer, _13
-	movq	400(%rbp), %rdx	 # this, _14
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:39:     sizer->Add(CreateStdDialogButtonSizer(wxOK));
+	.loc 29 39 15 discriminator 8
+	movq	344(%rbp), %rbx	 # sizer, _12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:39:     sizer->Add(CreateStdDialogButtonSizer(wxOK));
+	.loc 29 39 42 discriminator 8
+	movq	400(%rbp), %rax	 # this, _13
+	movl	$4, %edx	 #,
 	movq	%rax, %rcx	 # _13,
-	call	_ZN7wxSizer3FitEP8wxWindow	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:41:     sizer->SetSizeHints(this);
-	.loc 29 41 24 discriminator 8
-	movq	344(%rbp), %rax	 # sizer, _15
-	movq	400(%rbp), %rdx	 # this, _16
+	call	_ZN12wxDialogBase26CreateStdDialogButtonSizerEl	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:39:     sizer->Add(CreateStdDialogButtonSizer(wxOK));
+	.loc 29 39 15 discriminator 8
+	movq	$0, 40(%rsp)	 #,
+	movl	$0, 32(%rsp)	 #,
+	movl	$0, %r9d	 #,
+	movl	$0, %r8d	 #,
+	movq	%rax, %rdx	 # _14,
+	movq	%rbx, %rcx	 # _12,
+	call	_ZN7wxSizer3AddEPS_iiiP8wxObject	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:41:     SetSizer(sizer);
+	.loc 29 41 13 discriminator 8
+	movq	400(%rbp), %rax	 # this, _15
+	movq	344(%rbp), %rdx	 # sizer, tmp156
+	movl	$1, %r8d	 #,
 	movq	%rax, %rcx	 # _15,
+	call	_ZN12wxWindowBase8SetSizerEP7wxSizerb	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:42:     sizer->Fit(this);
+	.loc 29 42 20 discriminator 8
+	movq	344(%rbp), %rax	 # sizer, _16
+	movq	400(%rbp), %rdx	 # this, _17
+	movq	%rax, %rcx	 # _16,
+	call	_ZN7wxSizer3FitEP8wxWindow	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:43:     sizer->SetSizeHints(this);
+	.loc 29 43 24 discriminator 8
+	movq	344(%rbp), %rax	 # sizer, _18
+	movq	400(%rbp), %rdx	 # this, _19
+	movq	%rax, %rcx	 # _18,
 	call	_ZN7wxSizer12SetSizeHintsEP8wxWindow	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:43: }
-	.loc 29 43 1 discriminator 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:45: }
+	.loc 29 45 1 discriminator 8
 	jmp	.L372	 #
 .L360:
-	movq	%rax, %rsi	 #, tmp154
+	movq	%rax, %rsi	 #, tmp157
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:27:     wxBoxSizer*     sizer       = T100NEW wxBoxSizer(wxVERTICAL);
 	.loc 29 27 64
 	movl	$136, %edx	 #,
-	movq	%rbx, %rcx	 # _27,
+	movq	%rbx, %rcx	 # _30,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp154, D.225640
-	movq	%rax, %rcx	 # D.225640,
+	movq	%rsi, %rax	 # tmp157, D.225641
+	movq	%rax, %rcx	 # D.225641,
 	call	_Unwind_Resume	 #
 .L363:
-	movq	%rax, %rsi	 #, tmp156
+	movq	%rax, %rsi	 #, tmp159
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:29:     wxStaticBoxSizer*       workspace  = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
 	.loc 29 29 102
 	movl	$144, %edx	 #,
-	movq	%rbx, %rcx	 # _37,
+	movq	%rbx, %rcx	 # _40,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rbx	 # tmp156, tmp155
+	movq	%rsi, %rbx	 # tmp159, tmp158
 	jmp	.L350	 #
 .L362:
-	movq	%rax, %rbx	 #, tmp155
+	movq	%rax, %rbx	 #, tmp158
 .L350:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:29:     wxStaticBoxSizer*       workspace  = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
 	.loc 29 29 87 discriminator 5
-	movq	%rbp, %rax	 #, tmp159
-	movq	%rax, %rcx	 # tmp159,
+	movq	%rbp, %rax	 #, tmp162
+	movq	%rax, %rcx	 # tmp162,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L351	 #
 .L361:
-	movq	%rax, %rbx	 #, tmp160
+	movq	%rax, %rbx	 #, tmp163
 .L351:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:29:     wxStaticBoxSizer*       workspace  = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
 	.loc 29 29 87 is_stmt 0 discriminator 1
-	leaq	-48(%rbp), %rax	 #, tmp162
-	movq	%rax, %rcx	 # tmp162,
+	leaq	-48(%rbp), %rax	 #, tmp165
+	movq	%rax, %rcx	 # tmp165,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp160, D.225641
-	movq	%rax, %rcx	 # D.225641,
+	movq	%rbx, %rax	 # tmp163, D.225642
+	movq	%rax, %rcx	 # D.225642,
 	call	_Unwind_Resume	 #
 .L367:
-	movq	%rax, %rsi	 #, tmp164
+	movq	%rax, %rsi	 #, tmp167
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 72 is_stmt 1
 	movl	$648, %edx	 #,
-	movq	%rbx, %rcx	 # _54,
+	movq	%rbx, %rcx	 # _57,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rbx	 # tmp164, tmp163
+	movq	%rsi, %rbx	 # tmp167, tmp166
 	jmp	.L353	 #
 .L366:
-	movq	%rax, %rbx	 #, tmp163
+	movq	%rax, %rbx	 #, tmp166
 .L353:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 17 discriminator 7
-	leaq	144(%rbp), %rax	 #, tmp167
-	movq	%rax, %rcx	 # tmp167,
+	leaq	144(%rbp), %rax	 #, tmp170
+	movq	%rax, %rcx	 # tmp170,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L354	 #
 .L365:
-	movq	%rax, %rbx	 #, tmp168
+	movq	%rax, %rbx	 #, tmp171
 .L354:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 62 discriminator 5
-	leaq	96(%rbp), %rax	 #, tmp170
-	movq	%rax, %rcx	 # tmp170,
+	leaq	96(%rbp), %rax	 #, tmp173
+	movq	%rax, %rcx	 # tmp173,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L355	 #
 .L364:
-	movq	%rax, %rbx	 #, tmp171
+	movq	%rax, %rbx	 #, tmp174
 .L355:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:31:     m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
 	.loc 29 31 62 is_stmt 0 discriminator 1
-	leaq	48(%rbp), %rax	 #, tmp173
-	movq	%rax, %rcx	 # tmp173,
+	leaq	48(%rbp), %rax	 #, tmp176
+	movq	%rax, %rcx	 # tmp176,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp171, D.225642
-	movq	%rax, %rcx	 # D.225642,
+	movq	%rbx, %rax	 # tmp174, D.225643
+	movq	%rax, %rcx	 # D.225643,
 	call	_Unwind_Resume	 #
 .L371:
-	movq	%rax, %rsi	 #, tmp175
+	movq	%rax, %rsi	 #, tmp178
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:32:     m_dir       = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_DIR);
 	.loc 29 32 65 is_stmt 1
 	movl	$712, %edx	 #,
-	movq	%rbx, %rcx	 # _71,
+	movq	%rbx, %rcx	 # _74,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rbx	 # tmp175, tmp174
+	movq	%rsi, %rbx	 # tmp178, tmp177
 	jmp	.L357	 #
 .L370:
-	movq	%rax, %rbx	 #, tmp174
+	movq	%rax, %rbx	 #, tmp177
 .L357:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:32:     m_dir       = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_DIR);
 	.loc 29 32 17 discriminator 5
-	leaq	288(%rbp), %rax	 #, tmp178
-	movq	%rax, %rcx	 # tmp178,
+	leaq	288(%rbp), %rax	 #, tmp181
+	movq	%rax, %rcx	 # tmp181,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L358	 #
 .L369:
-	movq	%rax, %rbx	 #, tmp179
+	movq	%rax, %rbx	 #, tmp182
 .L358:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:32:     m_dir       = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_DIR);
 	.loc 29 32 17 is_stmt 0 discriminator 3
-	leaq	240(%rbp), %rax	 #, tmp181
-	movq	%rax, %rcx	 # tmp181,
+	leaq	240(%rbp), %rax	 #, tmp184
+	movq	%rax, %rcx	 # tmp184,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L359	 #
 .L368:
-	movq	%rax, %rbx	 #, tmp182
+	movq	%rax, %rbx	 #, tmp185
 .L359:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:32:     m_dir       = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_DIR);
 	.loc 29 32 17 discriminator 1
-	leaq	192(%rbp), %rax	 #, tmp184
-	movq	%rax, %rcx	 # tmp184,
+	leaq	192(%rbp), %rax	 #, tmp187
+	movq	%rax, %rcx	 # tmp187,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp182, D.225643
-	movq	%rax, %rcx	 # D.225643,
+	movq	%rbx, %rax	 # tmp185, D.225644
+	movq	%rax, %rcx	 # D.225644,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE61:
 .L372:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:43: }
-	.loc 29 43 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:45: }
+	.loc 29 45 1 is_stmt 1
 	addq	$480, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -8978,7 +8996,7 @@ _ZN25T100WorkSpaceCreateDialog4initEv:
 	.seh_proc	_ZN25T100WorkSpaceCreateDialog6uninitEv
 _ZN25T100WorkSpaceCreateDialog6uninitEv:
 .LFB16600:
-	.loc 29 46 1
+	.loc 29 48 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8989,8 +9007,8 @@ _ZN25T100WorkSpaceCreateDialog6uninitEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:48: }
-	.loc 29 48 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:50: }
+	.loc 29 50 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -9401,19 +9419,19 @@ _ZN19wxNavigationEnabledI9wxControlEC2Ev:
 	.loc 21 192 33
 	movq	64(%rbp), %rdi	 # this, _6
 	leaq	_ZN19wxNavigationEnabledI9wxControlE15OnNavigationKeyER20wxNavigationKeyEvent(%rip), %rax	 #, tmp110
-	movq	%rax, %r14	 # tmp110, D.225139
-	movl	$0, %r15d	 #, D.225139
+	movq	%rax, %r14	 # tmp110, D.225140
+	movl	$0, %r15d	 #, D.225140
 	leaq	-64(%rbp), %rax	 #, tmp111
-	movq	%r14, -80(%rbp)	 # D.225139,
-	movq	%r15, -72(%rbp)	 # D.225139,
+	movq	%r14, -80(%rbp)	 # D.225140,
+	movq	%r15, -72(%rbp)	 # D.225140,
 	leaq	-80(%rbp), %rdx	 #, tmp112
 	movq	%rax, %rcx	 # tmp111,
 	call	_Z19wxEventFunctionCastI20wxNavigationKeyEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_NAVIGATION_KEY(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI20wxNavigationKeyEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_7, _8
-	movq	-64(%rbp), %rax	 # D.225140, tmp113
-	movq	-56(%rbp), %rdx	 # D.225140,
+	movq	-64(%rbp), %rax	 # D.225141, tmp113
+	movq	-56(%rbp), %rdx	 # D.225141,
 	movq	%rax, -80(%rbp)	 # tmp113,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp114
@@ -9427,19 +9445,19 @@ _ZN19wxNavigationEnabledI9wxControlEC2Ev:
 	.loc 21 195 33
 	movq	64(%rbp), %rdi	 # this, _9
 	leaq	_ZN19wxNavigationEnabledI9wxControlE7OnFocusER12wxFocusEvent(%rip), %rax	 #, tmp115
-	movq	%rax, %r12	 # tmp115, D.225141
-	movl	$0, %r13d	 #, D.225141
+	movq	%rax, %r12	 # tmp115, D.225142
+	movl	$0, %r13d	 #, D.225142
 	leaq	-48(%rbp), %rax	 #, tmp116
-	movq	%r12, -80(%rbp)	 # D.225141,
-	movq	%r13, -72(%rbp)	 # D.225141,
+	movq	%r12, -80(%rbp)	 # D.225142,
+	movq	%r13, -72(%rbp)	 # D.225142,
 	leaq	-80(%rbp), %rdx	 #, tmp117
 	movq	%rax, %rcx	 # tmp116,
 	call	_Z19wxEventFunctionCastI12wxFocusEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_SET_FOCUS(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI12wxFocusEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_10, _11
-	movq	-48(%rbp), %rax	 # D.225142, tmp118
-	movq	-40(%rbp), %rdx	 # D.225142,
+	movq	-48(%rbp), %rax	 # D.225143, tmp118
+	movq	-40(%rbp), %rdx	 # D.225143,
 	movq	%rax, -80(%rbp)	 # tmp118,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp119
@@ -9453,19 +9471,19 @@ _ZN19wxNavigationEnabledI9wxControlEC2Ev:
 	.loc 21 198 33
 	movq	64(%rbp), %rdi	 # this, _12
 	leaq	_ZN19wxNavigationEnabledI9wxControlE12OnChildFocusER17wxChildFocusEvent(%rip), %rax	 #, tmp120
-	movq	%rax, %rbx	 # tmp120, D.225143
-	movl	$0, %esi	 #, D.225143
+	movq	%rax, %rbx	 # tmp120, D.225144
+	movl	$0, %esi	 #, D.225144
 	leaq	-32(%rbp), %rax	 #, tmp121
-	movq	%rbx, -80(%rbp)	 # D.225143,
-	movq	%rsi, -72(%rbp)	 # D.225143,
+	movq	%rbx, -80(%rbp)	 # D.225144,
+	movq	%rsi, -72(%rbp)	 # D.225144,
 	leaq	-80(%rbp), %rdx	 #, tmp122
 	movq	%rax, %rcx	 # tmp121,
 	call	_Z19wxEventFunctionCastI17wxChildFocusEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_CHILD_FOCUS(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI17wxChildFocusEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_13, _14
-	movq	-32(%rbp), %rax	 # D.225144, tmp123
-	movq	-24(%rbp), %rdx	 # D.225144,
+	movq	-32(%rbp), %rax	 # D.225145, tmp123
+	movq	-24(%rbp), %rdx	 # D.225145,
 	movq	%rax, -80(%rbp)	 # tmp123,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp124
@@ -9498,8 +9516,8 @@ _ZN19wxNavigationEnabledI9wxControlEC2Ev:
 	movq	64(%rbp), %rax	 # this, _16
 	movq	%rax, %rcx	 # _16,
 	call	_ZN9wxControlD2Ev	 #
-	movq	%rbx, %rax	 # tmp126, D.225651
-	movq	%rax, %rcx	 # D.225651,
+	movq	%rbx, %rax	 # tmp126, D.225652
+	movq	%rax, %rcx	 # D.225652,
 .LEHB65:
 	call	_Unwind_Resume	 #
 	nop	
@@ -11627,7 +11645,7 @@ _ZTS8wxObject:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB17716:
-	.loc 29 48 1
+	.loc 29 50 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -11641,12 +11659,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:48: }
-	.loc 29 48 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:50: }
+	.loc 29 50 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
 	jne	.L429	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:48: }
-	.loc 29 48 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:50: }
+	.loc 29 50 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
 	jne	.L429	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:3: const long T100WorkSpaceCreateDialog::ID_STATIC_TEXT    = wxNewId();
@@ -11662,8 +11680,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	.loc 29 4 12
 	movl	%eax, _ZN25T100WorkSpaceCreateDialog16ID_WORKSPACE_DIRE(%rip)	 # _2, ID_WORKSPACE_DIR
 .L429:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:48: }
-	.loc 29 48 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:50: }
+	.loc 29 50 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -12349,7 +12367,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN25T100WorkSpaceCreateDialog14ID_STATIC_TEXTE
 _GLOBAL__sub_I__ZN25T100WorkSpaceCreateDialog14ID_STATIC_TEXTE:
 .LFB17810:
-	.loc 29 48 1
+	.loc 29 50 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -12361,8 +12379,8 @@ _GLOBAL__sub_I__ZN25T100WorkSpaceCreateDialog14ID_STATIC_TEXTE:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:48: }
-	.loc 29 48 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:50: }
+	.loc 29 50 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -76669,7 +76687,7 @@ _ZZN22wxControlContainerBase18SetContainerWindowEP8wxWindowE12__FUNCTION__:
 	.uleb128 0xa7
 	.ascii "uninit\0"
 	.byte	0x1d
-	.byte	0x2d
+	.byte	0x2f
 	.byte	0xa
 	.ascii "_ZN25T100WorkSpaceCreateDialog6uninitEv\0"
 	.long	0x47ec5
@@ -79108,7 +79126,7 @@ _ZZN22wxControlContainerBase18SetContainerWindowEP8wxWindowE12__FUNCTION__:
 	.uleb128 0x44
 	.ascii "__initialize_p\0"
 	.byte	0x1d
-	.byte	0x30
+	.byte	0x32
 	.byte	0x1
 	.long	0x24d
 	.uleb128 0x2
@@ -79117,7 +79135,7 @@ _ZZN22wxControlContainerBase18SetContainerWindowEP8wxWindowE12__FUNCTION__:
 	.uleb128 0x44
 	.ascii "__priority\0"
 	.byte	0x1d
-	.byte	0x30
+	.byte	0x32
 	.byte	0x1
 	.long	0x24d
 	.uleb128 0x2
@@ -92158,6 +92176,7 @@ _ZZN22wxControlContainerBase18SetContainerWindowEP8wxWindowE12__FUNCTION__:
 	.def	_ZN15wxDirPickerCtrl6CreateEP8wxWindowiRK8wxStringS4_RK7wxPointRK6wxSizelRK11wxValidatorS4_;	.scl	2;	.type	32;	.endef
 	.def	_ZN8wxDialogD2Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN16wxStaticBoxSizerC1EiP8wxWindowRK8wxString;	.scl	2;	.type	32;	.endef
+	.def	_ZN12wxDialogBase26CreateStdDialogButtonSizerEl;	.scl	2;	.type	32;	.endef
 	.def	_ZN12wxWindowBase8SetSizerEP7wxSizerb;	.scl	2;	.type	32;	.endef
 	.def	_ZN7wxSizer3FitEP8wxWindow;	.scl	2;	.type	32;	.endef
 	.def	_ZN7wxSizer12SetSizeHintsEP8wxWindow;	.scl	2;	.type	32;	.endef
