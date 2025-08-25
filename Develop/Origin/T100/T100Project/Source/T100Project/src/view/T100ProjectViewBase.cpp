@@ -4,6 +4,7 @@
 #include "T100ProjectMain.h"
 #include "T100ProjectCreateWizard.h"
 #include "T100ProjectViewAboutDialog.h"
+#include "T100WorkSpaceCreateDialog.h"
 #include "T100WorkSpacePropertiesDialog.h"
 
 
@@ -110,6 +111,16 @@ T100INT T100ProjectViewBase::ShowDirDialog(T100WSTRING& path)
     }
 
     return result;
+}
+
+T100BOOL T100ProjectViewBase::ShowWorkSpaceCreateDialog()
+{
+    T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
+
+    if(dialog.ShowModal() == wxID_OK){
+        return T100TRUE;
+    }
+    return T100FALSE;
 }
 
 T100VOID T100ProjectViewBase::ShowWorkSpacePropertiesDialog()

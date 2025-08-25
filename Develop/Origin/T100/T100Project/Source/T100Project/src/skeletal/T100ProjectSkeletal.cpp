@@ -51,7 +51,7 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
 
     T100WSTRING     path;
 
-    if(m_view->ShowDirDialog(path) == wxID_CANCEL){
+    if(!m_view->ShowWorkSpaceCreateDialog()){
         return;
     }
 
