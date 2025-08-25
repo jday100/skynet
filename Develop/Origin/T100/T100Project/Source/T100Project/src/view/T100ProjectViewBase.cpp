@@ -132,5 +132,6 @@ T100VOID T100ProjectViewBase::ShowAboutDialog()
 {
     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
 
+    dialog.CentreOnScreen();
     dialog.ShowModal();
 }

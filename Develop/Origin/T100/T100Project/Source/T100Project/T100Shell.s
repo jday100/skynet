@@ -1421,7 +1421,7 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.loc 7 38 29 is_stmt 0 discriminator 1
 	movq	304(%rbp), %rax	 # __for_begin, tmp121
 	cmpq	272(%rbp), %rax	 # __for_end, tmp121
-	je	.L48	 #,
+	je	.L74	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:         for(wxString item : error){
 	.loc 7 38 29 discriminator 2
 	movq	304(%rbp), %rdx	 # __for_begin, tmp122
@@ -1447,11 +1447,15 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.loc 7 38 9 discriminator 3
 	addq	$48, 304(%rbp)	 #, __for_begin
 	jmp	.L54	 #
-.L50:
+.L74:
 .LBE15:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:41:         break;
+	.loc 7 41 9
+	nop	
+.L50:
 .LBE13:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:43:     process.ExitCode();
-	.loc 7 43 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:44:     process.ExitCode();
+	.loc 7 44 21
 	leaq	-48(%rbp), %rax	 #, tmp126
 	movq	%rax, %rcx	 # tmp126,
 .LEHB9:
@@ -1547,8 +1551,8 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	nop	
 .LEHE10:
 .L73:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:44: }
-	.loc 7 44 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:45: }
+	.loc 7 45 1
 	addq	$456, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -1999,7 +2003,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB11313:
-	.loc 7 44 1
+	.loc 7 45 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2013,23 +2017,23 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:44: }
-	.loc 7 44 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:45: }
+	.loc 7 45 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
-	jne	.L83	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:44: }
-	.loc 7 44 1 is_stmt 0 discriminator 1
+	jne	.L84	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:45: }
+	.loc 7 45 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
-	jne	.L83	 #,
+	jne	.L84	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 8 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
 	call	_ZNSt8ios_base4InitC1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
-.L83:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:44: }
-	.loc 7 44 1
+.L84:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:45: }
+	.loc 7 45 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2043,7 +2047,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_proc	_GLOBAL__sub_I__ZN9T100ShellC2Ev
 _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 .LFB11373:
-	.loc 7 44 1
+	.loc 7 45 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2055,8 +2059,8 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:44: }
-	.loc 7 44 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:45: }
+	.loc 7 45 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -52331,7 +52335,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x85
 	.ascii "__initialize_p\0"
 	.byte	0x7
-	.byte	0x2c
+	.byte	0x2d
 	.byte	0x1
 	.long	0x22d
 	.uleb128 0x2
@@ -52340,7 +52344,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x85
 	.ascii "__priority\0"
 	.byte	0x7
-	.byte	0x2c
+	.byte	0x2d
 	.byte	0x1
 	.long	0x22d
 	.uleb128 0x2

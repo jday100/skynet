@@ -6659,7 +6659,7 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:133:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
 	.loc 22 133 44 discriminator 2
 	movq	864(%rbp), %rax	 # this, tmp92
-	movq	24(%rax), %rcx	 # this_7(D)->m_frame, _1
+	movq	24(%rax), %rcx	 # this_8(D)->m_frame, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:133:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
 	.loc 22 133 74 discriminator 2
 	leaq	784(%rbp), %r8	 #, tmp93
@@ -6684,52 +6684,58 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	leaq	736(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:135:     dialog.ShowModal();
-	.loc 22 135 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:135:     dialog.CentreOnScreen();
+	.loc 22 135 26
 	leaq	-64(%rbp), %rax	 #, tmp100
+	movl	$12, %edx	 #,
 	movq	%rax, %rcx	 # tmp100,
 .LEHB37:
+	call	_ZN20wxTopLevelWindowBase14CentreOnScreenEi	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136:     dialog.ShowModal();
+	.loc 22 136 21
+	leaq	-64(%rbp), %rax	 #, tmp101
+	movq	%rax, %rcx	 # tmp101,
 	call	_ZN8wxDialog9ShowModalEv	 #
 .LEHE37:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:133:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
 	.loc 22 133 74
-	leaq	-64(%rbp), %rax	 #, tmp101
-	movq	%rax, %rcx	 # tmp101,
+	leaq	-64(%rbp), %rax	 #, tmp102
+	movq	%rax, %rcx	 # tmp102,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136: }
-	.loc 22 136 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137: }
+	.loc 22 137 1
 	jmp	.L307	 #
 .L305:
-	movq	%rax, %rbx	 #, tmp104
-	leaq	784(%rbp), %rax	 #, tmp102
-	movq	%rax, %rcx	 # tmp102,
+	movq	%rax, %rbx	 #, tmp105
+	leaq	784(%rbp), %rax	 #, tmp103
+	movq	%rax, %rcx	 # tmp103,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L302	 #
 .L304:
-	movq	%rax, %rbx	 #, tmp103
+	movq	%rax, %rbx	 #, tmp104
 .L302:
-	leaq	736(%rbp), %rax	 #, tmp107
-	movq	%rax, %rcx	 # tmp107,
+	leaq	736(%rbp), %rax	 #, tmp108
+	movq	%rax, %rcx	 # tmp108,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.259334
+	movq	%rbx, %rax	 # tmp104, D.259334
 	movq	%rax, %rcx	 # D.259334,
 .LEHB38:
 	call	_Unwind_Resume	 #
 .L306:
-	movq	%rax, %rbx	 #, tmp109
+	movq	%rax, %rbx	 #, tmp110
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:133:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
 	.loc 22 133 74
-	leaq	-64(%rbp), %rax	 #, tmp108
-	movq	%rax, %rcx	 # tmp108,
+	leaq	-64(%rbp), %rax	 #, tmp109
+	movq	%rax, %rcx	 # tmp109,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.259335
+	movq	%rbx, %rax	 # tmp110, D.259335
 	movq	%rax, %rcx	 # D.259335,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE38:
 .L307:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136: }
-	.loc 22 136 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137: }
+	.loc 22 137 1
 	addq	$968, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -8437,7 +8443,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB20458:
-	.loc 22 136 1
+	.loc 22 137 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8451,12 +8457,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136: }
-	.loc 22 136 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137: }
+	.loc 22 137 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
 	jne	.L354	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136: }
-	.loc 22 136 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137: }
+	.loc 22 137 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
 	jne	.L354	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
@@ -8466,8 +8472,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
 .L354:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136: }
-	.loc 22 136 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137: }
+	.loc 22 137 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -8823,7 +8829,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev
 _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 .LFB20567:
-	.loc 22 136 1
+	.loc 22 137 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8835,8 +8841,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136: }
-	.loc 22 136 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137: }
+	.loc 22 137 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -74612,7 +74618,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x3d
 	.ascii "__initialize_p\0"
 	.byte	0x16
-	.byte	0x88
+	.byte	0x89
 	.byte	0x1
 	.long	0x10950
 	.uleb128 0x2
@@ -74621,7 +74627,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x3d
 	.ascii "__priority\0"
 	.byte	0x16
-	.byte	0x88
+	.byte	0x89
 	.byte	0x1
 	.long	0x10950
 	.uleb128 0x2
