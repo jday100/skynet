@@ -9,6 +9,12 @@ class T100ProjectConfig
         T100ProjectConfig();
         virtual ~T100ProjectConfig();
 
+        static const T100WSTRING        T100PROJECT_WORKSPACE_FILENAME;
+        static const T100WSTRING        T100PROJECT_PROJECT_FILENAME;
+
+        static const T100WSTRING        T100PROJECT_PROJECT_COMPILE_FILENAME;
+        static const T100WSTRING        T100PROJECT_PROJECT_CREATE_FILENAME;
+
     protected:
 
     private:
