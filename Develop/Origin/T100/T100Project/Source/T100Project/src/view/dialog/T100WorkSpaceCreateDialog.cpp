@@ -36,7 +36,7 @@ T100VOID T100WorkSpaceCreateDialog::init()
 
     sizer->Add(workspace, 1, wxALL|wxEXPAND, 5);
 
-    sizer->Add(CreateStdDialogButtonSizer(wxOK));
+    sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL));
 
     SetSizer(sizer);
     sizer->Fit(this);
