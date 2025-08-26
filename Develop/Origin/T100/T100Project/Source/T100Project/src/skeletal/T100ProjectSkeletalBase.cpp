@@ -10,6 +10,40 @@ T100ProjectSkeletalBase::~T100ProjectSkeletalBase()
     //dtor
 }
 
+T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(T100WorkSpaceInfo* info)
+{
+    T100BOOL        result      = T100TRUE;
+
+    result  = m_serve->Create(info);
+
+    if(!result){
+        return T100FALSE;
+    }
+
+    result  = m_serve->CreateWorkSpaceFile(info);
+
+    if(!result){
+        return T100FALSE;
+    }
+
+    return result;
+}
+
+T100BOOL T100ProjectSkeletalBase::WorkSpaceOpen(T100WorkSpaceInfo* info)
+{
+
+}
+
+
+
+
+
+
+
+
+
+
+
 T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(const T100WxFolderInfo& info)
 {
     return m_serve->New(info);

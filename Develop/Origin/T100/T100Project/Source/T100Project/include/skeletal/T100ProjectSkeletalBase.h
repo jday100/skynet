@@ -11,6 +11,12 @@ class T100ProjectSkeletalBase
         T100ProjectSkeletalBase();
         virtual ~T100ProjectSkeletalBase();
 
+        T100BOOL                    WorkSpaceNew(T100WorkSpaceInfo*);
+        T100BOOL                    WorkSpaceOpen(T100WorkSpaceInfo*);
+
+
+
+
         T100BOOL                    WorkSpaceNew(const T100WxFolderInfo&);
         T100VOID                    WorkSpaceOpen(const T100WxFolderInfo&);
         T100BOOL                    WorkSpaceClose();

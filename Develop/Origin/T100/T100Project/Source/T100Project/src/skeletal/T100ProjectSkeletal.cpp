@@ -42,6 +42,34 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
     T100BOOL        result      = T100TRUE;
 
     if(m_serve->IsOpened()){
+        result  = WorkSpaceClose();
+    }
+
+    if(!result){
+        return;
+    }
+
+    T100WorkSpaceInfo*      info        = T100NEW T100WorkSpaceInfo();
+
+    if(!m_view->ShowWorkSpaceCreateDialog()){
+        return;
+    }
+
+    if(!WorkSpaceNew(info)){
+        return;
+    }
+
+    if(!WorkSpaceOpen(info)){
+        return;
+    }
+}
+
+/*
+T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
+{
+    T100BOOL        result      = T100TRUE;
+
+    if(m_serve->IsOpened()){
         result = WorkSpaceClose();
     }
 
@@ -72,6 +100,15 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
 
     WorkSpaceOpen(info);
 }
+*/
+
+
+
+
+
+
+
+
 
 T100VOID T100ProjectSkeletal::OnWorkSpaceOpen()
 {

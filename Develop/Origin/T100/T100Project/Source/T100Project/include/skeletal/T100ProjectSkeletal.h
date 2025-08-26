@@ -22,6 +22,13 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         virtual T100VOID            Destroy();
 
         T100VOID                    OnWorkSpaceNew();
+
+
+
+
+
+
+
         T100VOID                    OnWorkSpaceOpen();
         T100VOID                    OnWorkSpaceClose();
         T100VOID                    OnWorkSpaceSave();
