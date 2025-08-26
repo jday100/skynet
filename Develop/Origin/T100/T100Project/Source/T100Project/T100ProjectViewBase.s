@@ -6387,18 +6387,18 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEv:
 	leaq	832(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:120:     if(dialog.ShowModal() == wxID_OK){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:120:     if(dialog.ShowModal() == wxID_APPLY){
 	.loc 22 120 24
 	leaq	-64(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
 .LEHB28:
 	call	_ZN8wxDialog9ShowModalEv	 #
 .LEHE28:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:120:     if(dialog.ShowModal() == wxID_OK){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:120:     if(dialog.ShowModal() == wxID_APPLY){
 	.loc 22 120 27
-	cmpl	$5100, %eax	 #, _2
+	cmpl	$5102, %eax	 #, _2
 	sete	%al	 #, retval.34_17
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:120:     if(dialog.ShowModal() == wxID_OK){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:120:     if(dialog.ShowModal() == wxID_APPLY){
 	.loc 22 120 5
 	testb	%al, %al	 # retval.34_17
 	je	.L287	 #,

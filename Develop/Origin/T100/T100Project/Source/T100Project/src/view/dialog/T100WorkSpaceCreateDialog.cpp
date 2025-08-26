@@ -99,5 +99,6 @@ const T100WSTRING& T100WorkSpaceCreateDialog::GetPythonFile()
 
 T100VOID T100WorkSpaceCreateDialog::OnApply(wxCommandEvent& event)
 {
-
+    Close();
+    SetReturnCode(wxID_APPLY);
 }

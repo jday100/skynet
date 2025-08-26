@@ -117,7 +117,7 @@ T100BOOL T100ProjectViewBase::ShowWorkSpaceCreateDialog()
 {
     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
 
-    if(dialog.ShowModal() == wxID_OK){
+    if(dialog.ShowModal() == wxID_APPLY){
         return T100TRUE;
     }
     return T100FALSE;
