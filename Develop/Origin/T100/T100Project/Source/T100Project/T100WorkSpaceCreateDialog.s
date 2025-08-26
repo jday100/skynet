@@ -8744,20 +8744,20 @@ _ZN25T100WorkSpaceCreateDialog4initEv:
 	movl	$1, %r8d	 #,
 	movq	%rax, %rcx	 # _11,
 	call	_ZN7wxSizer3AddEPS_iiiP8wxObject	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:39:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL));
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:39:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
 	.loc 29 39 15 discriminator 8
 	movq	344(%rbp), %rbx	 # sizer, _12
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:39:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL));
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:39:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
 	.loc 29 39 42 discriminator 8
 	movq	400(%rbp), %rax	 # this, _13
 	movl	$48, %edx	 #,
 	movq	%rax, %rcx	 # _13,
 	call	_ZN12wxDialogBase26CreateStdDialogButtonSizerEl	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:39:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL));
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100WorkSpaceCreateDialog.cpp:39:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
 	.loc 29 39 15 discriminator 8
 	movq	$0, 40(%rsp)	 #,
-	movl	$0, 32(%rsp)	 #,
-	movl	$0, %r9d	 #,
+	movl	$5, 32(%rsp)	 #,
+	movl	$752, %r9d	 #,
 	movl	$0, %r8d	 #,
 	movq	%rax, %rdx	 # _14,
 	movq	%rbx, %rcx	 # _12,
