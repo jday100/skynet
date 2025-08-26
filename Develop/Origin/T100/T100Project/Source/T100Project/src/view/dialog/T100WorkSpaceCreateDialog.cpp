@@ -42,6 +42,7 @@ T100VOID T100WorkSpaceCreateDialog::init()
     sizer->Fit(this);
     sizer->SetSizeHints(this);
 
+    Center();
 }
 
 T100VOID T100WorkSpaceCreateDialog::uninit()
