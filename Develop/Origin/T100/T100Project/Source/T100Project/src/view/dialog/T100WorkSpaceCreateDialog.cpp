@@ -60,7 +60,7 @@ T100VOID T100WorkSpaceCreateDialog::init()
     m_pythonFilePicker->SetSize(-1, 250);
     sizer->Add(python, 1, wxALL|wxEXPAND, 5);
 
-    sizer->Add(CreateStdDialogButtonSizer(wxOK | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
+    sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
 
     SetSizer(sizer);
     sizer->Fit(this);
@@ -68,6 +68,8 @@ T100VOID T100WorkSpaceCreateDialog::init()
 
     SetSize(600, -1);
     Center();
+
+    Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
 }
 
 T100VOID T100WorkSpaceCreateDialog::uninit()
@@ -93,4 +95,9 @@ T100VOID T100WorkSpaceCreateDialog::SetPythonFile(const T100WSTRING& file)
 const T100WSTRING& T100WorkSpaceCreateDialog::GetPythonFile()
 {
     return m_pythonFile;
+}
+
+T100VOID T100WorkSpaceCreateDialog::OnApply(wxCommandEvent& event)
+{
+
 }

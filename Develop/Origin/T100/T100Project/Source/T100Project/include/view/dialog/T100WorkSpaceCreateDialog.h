@@ -30,6 +30,8 @@ class T100WorkSpaceCreateDialog : public wxDialog
         static const long ID_PYTHON_STATIC_TEXT;
         static const long ID_PYTHON_FILE;
 
+        T100VOID                    OnApply(wxCommandEvent&);
+
     protected:
         T100WSTRING                 m_workspacePath;
         T100WSTRING                 m_pythonFile;
