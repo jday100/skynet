@@ -13,6 +13,17 @@ class T100WorkSpaceServe
         T100WorkSpaceServe();
         virtual ~T100WorkSpaceServe();
 
+        virtual T100BOOL                        Create(T100WorkSpaceInfo*);
+        virtual T100BOOL                        CreateWorkSpaceFile(T100WorkSpaceInfo*);
+
+
+
+
+
+
+
+
+
         T100ProjectServe*                       GetProjectServe();
 
         T100VOID                                GetProjects(T100PROJECT_INFO_VECTOR&);
@@ -34,7 +45,7 @@ class T100WorkSpaceServe
 
 
 
-        virtual T100VOID                        Create(T100WorkSpaceInfo*);
+
         virtual T100VOID                        Open(T100WorkSpaceInfo*);
         virtual T100BOOL                        Close(T100WorkSpaceInfo*);
 
@@ -46,6 +57,7 @@ class T100WorkSpaceServe
         virtual T100VOID                        Clear();
 
     protected:
+        T100WSTRING                             GetFileName(const T100WorkSpaceInfo*);
         T100WSTRING                             GetFileName(const T100WxFolderInfo&);
 
     protected:

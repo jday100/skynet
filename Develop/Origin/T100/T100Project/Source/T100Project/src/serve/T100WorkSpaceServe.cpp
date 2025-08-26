@@ -25,6 +25,48 @@ T100VOID T100WorkSpaceServe::uninit()
 {
 }
 
+T100BOOL T100WorkSpaceServe::Create(T100WorkSpaceInfo* info)
+{
+    if(!info){
+        return T100FALSE;
+    }
+
+    T100Folder          folder(info->GetPath());
+
+    if(!folder.IsExists()){
+        return T100FALSE;
+    }
+
+    return T100TRUE;
+}
+
+T100BOOL T100WorkSpaceServe::CreateWorkSpaceFile(T100WorkSpaceInfo* info)
+{
+    if(!info){
+        return T100FALSE;
+    }
+
+    T100WSTRING         filename;
+
+    filename    = GetFileName(info);
+
+    T100WorkSpaceFile       file(filename);
+
+    if(file.IsExists()){
+        return T100FALSE;
+    }
+
+    file.Save();
+
+    return T100TRUE;
+}
+
+
+
+
+
+
+
 T100ProjectServe* T100WorkSpaceServe::GetProjectServe()
 {
     return &m_projectServe;
@@ -122,11 +164,6 @@ T100VOID T100WorkSpaceServe::Clear()
 
 }
 
-T100VOID T100WorkSpaceServe::Create(T100WorkSpaceInfo*)
-{
-
-}
-
 T100VOID T100WorkSpaceServe::Open(T100WorkSpaceInfo* info)
 {
     WorkSpaceOpen(info);
@@ -212,6 +249,19 @@ T100BOOL T100WorkSpaceServe::WorkSpaceClose()
 T100VOID T100WorkSpaceServe::Build()
 {
     m_projectServe.GetProjectLogic().Build();
+}
+
+T100WSTRING T100WorkSpaceServe::GetFileName(const T100WorkSpaceInfo* info)
+{
+    T100WSTRING         filename;
+
+    if(!info){
+        return filename;
+    }
+
+    filename    = info->GetPath() + L"/" + info->GetLabel() + L".ws";
+
+    return filename;
 }
 
 T100WSTRING T100WorkSpaceServe::GetFileName(const T100WxFolderInfo& info)
