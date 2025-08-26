@@ -61,6 +61,19 @@ T100BOOL T100WorkSpaceServe::CreateWorkSpaceFile(T100WorkSpaceInfo* info)
     return T100TRUE;
 }
 
+T100BOOL T100WorkSpaceServe::CheckWorkSpaceFolder(T100WxFolderInfo& info)
+{
+
+}
+
+T100BOOL T100WorkSpaceServe::CheckWorkSpaceFile(T100WxFolderInfo& info)
+{
+
+}
+
+
+
+
 
 
 

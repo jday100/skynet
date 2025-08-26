@@ -1011,90 +1011,206 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewEP17T100WorkSpaceInfo:
 	.seh_pushreg	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
-	movq	%rsp, %rbp	 #,
-	.seh_setframe	%rbp, 0
-	.cfi_def_cfa_register 6
-	subq	$48, %rsp	 #,
-	.seh_stackalloc	48
+	pushq	%rbx	 #
+	.seh_pushreg	%rbx
+	.cfi_def_cfa_offset 24
+	.cfi_offset 3, -24
+	subq	$120, %rsp	 #,
+	.seh_stackalloc	120
+	.cfi_def_cfa_offset 144
+	leaq	128(%rsp), %rbp	 #,
+	.seh_setframe	%rbp, 128
+	.cfi_def_cfa 6, 16
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # info, info
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:15:     T100BOOL        result      = T100TRUE;
 	.loc 5 15 21
-	movb	$1, -1(%rbp)	 #, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:17:     result  = m_serve->Create(info);
-	.loc 5 17 15
-	movq	16(%rbp), %rax	 # this, tmp105
-	movq	16(%rax), %rcx	 # this_19(D)->m_serve, _1
-	movq	16(%rbp), %rax	 # this, tmp107
-	movq	16(%rax), %rax	 # this_19(D)->m_serve, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:17:     result  = m_serve->Create(info);
-	.loc 5 17 35
-	movq	(%rax), %rax	 # _3->_vptr.T100WorkSpaceServe, _4
-	addq	$16, %rax	 #, _5
-	movq	(%rax), %rax	 # *_5, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:17:     result  = m_serve->Create(info);
-	.loc 5 17 30
-	movq	24(%rbp), %rdx	 # info, tmp108
-	call	*%rax	 # _6
-.LVL2:
-	movb	%al, -1(%rbp)	 # _22, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:19:     if(!result){
-	.loc 5 19 8
-	movzbl	-1(%rbp), %eax	 # result, tmp109
-	xorl	$1, %eax	 #, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:19:     if(!result){
-	.loc 5 19 5
-	testb	%al, %al	 # _7
+	movb	$1, -17(%rbp)	 #, result
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:17:     T100WxFolderInfo        folder;
+	.loc 5 17 29
+	leaq	-96(%rbp), %rax	 #, tmp117
+	movq	%rax, %rcx	 # tmp117,
+.LEHB0:
+	call	_ZN16T100WxFolderInfoC1Ev	 #
+.LEHE0:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:19:     result  = m_serve->CheckWorkSpaceFolder(folder);
+	.loc 5 19 15
+	movq	16(%rbp), %rax	 # this, tmp118
+	movq	16(%rax), %rcx	 # this_31(D)->m_serve, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:19:     result  = m_serve->CheckWorkSpaceFolder(folder);
+	.loc 5 19 44
+	leaq	-96(%rbp), %rax	 #, tmp119
+	movq	%rax, %rdx	 # tmp119,
+.LEHB1:
+	call	_ZN18T100WorkSpaceServe20CheckWorkSpaceFolderER16T100WxFolderInfo	 #
+	movb	%al, -17(%rbp)	 # _33, result
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:21:     if(!result){
+	.loc 5 21 8
+	movzbl	-17(%rbp), %eax	 # result, tmp120
+	xorl	$1, %eax	 #, _2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:21:     if(!result){
+	.loc 5 21 5
+	testb	%al, %al	 # _2
 	je	.L37	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:20:         return T100FALSE;
-	.loc 5 20 16
-	movl	$0, %eax	 #, _15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:22:         result  = m_view->ShowWorkSpaceNotExistsDialog();
+	.loc 5 22 19
+	movq	16(%rbp), %rax	 # this, tmp121
+	movq	8(%rax), %rax	 # this_31(D)->m_view, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:22:         result  = m_view->ShowWorkSpaceNotExistsDialog();
+	.loc 5 22 55
+	movq	%rax, %rcx	 # _4,
+	call	_ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv	 #
+	movb	%al, -17(%rbp)	 # _36, result
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:23:         if(result){
+	.loc 5 23 9
+	cmpb	$0, -17(%rbp)	 #, result
+	jne	.L37	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:26:             return T100FALSE;
+	.loc 5 26 20
+	movl	$0, %ebx	 #, _22
 	jmp	.L38	 #
 .L37:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:23:     result  = m_serve->CreateWorkSpaceFile(info);
-	.loc 5 23 15
-	movq	16(%rbp), %rax	 # this, tmp110
-	movq	16(%rax), %rcx	 # this_19(D)->m_serve, _8
-	movq	16(%rbp), %rax	 # this, tmp112
-	movq	16(%rax), %rax	 # this_19(D)->m_serve, _10
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:23:     result  = m_serve->CreateWorkSpaceFile(info);
-	.loc 5 23 48
-	movq	(%rax), %rax	 # _10->_vptr.T100WorkSpaceServe, _11
-	addq	$24, %rax	 #, _12
-	movq	(%rax), %rax	 # *_12, _13
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:23:     result  = m_serve->CreateWorkSpaceFile(info);
-	.loc 5 23 43
-	movq	24(%rbp), %rdx	 # info, tmp113
-	call	*%rax	 # _13
-.LVL3:
-	movb	%al, -1(%rbp)	 # _26, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:25:     if(!result){
-	.loc 5 25 8
-	movzbl	-1(%rbp), %eax	 # result, tmp114
-	xorl	$1, %eax	 #, _14
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:25:     if(!result){
-	.loc 5 25 5
-	testb	%al, %al	 # _14
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:30:     result  = m_serve->Create(info);
+	.loc 5 30 15
+	movq	16(%rbp), %rax	 # this, tmp122
+	movq	16(%rax), %rcx	 # this_31(D)->m_serve, _5
+	movq	16(%rbp), %rax	 # this, tmp124
+	movq	16(%rax), %rax	 # this_31(D)->m_serve, _7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:30:     result  = m_serve->Create(info);
+	.loc 5 30 35
+	movq	(%rax), %rax	 # _7->_vptr.T100WorkSpaceServe, _8
+	addq	$16, %rax	 #, _9
+	movq	(%rax), %rax	 # *_9, _10
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:30:     result  = m_serve->Create(info);
+	.loc 5 30 30
+	movq	24(%rbp), %rdx	 # info, tmp125
+	call	*%rax	 # _10
+.LVL2:
+	movb	%al, -17(%rbp)	 # _41, result
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:32:     if(!result){
+	.loc 5 32 8
+	movzbl	-17(%rbp), %eax	 # result, tmp126
+	xorl	$1, %eax	 #, _11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:32:     if(!result){
+	.loc 5 32 5
+	testb	%al, %al	 # _11
 	je	.L39	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:26:         return T100FALSE;
-	.loc 5 26 16
-	movl	$0, %eax	 #, _15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:33:         return T100FALSE;
+	.loc 5 33 16
+	movl	$0, %ebx	 #, _22
 	jmp	.L38	 #
 .L39:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:29:     return result;
-	.loc 5 29 12
-	movzbl	-1(%rbp), %eax	 # result, _15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:36:     result  = m_serve->CheckWorkSpaceFile(folder);
+	.loc 5 36 15
+	movq	16(%rbp), %rax	 # this, tmp127
+	movq	16(%rax), %rcx	 # this_31(D)->m_serve, _12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:36:     result  = m_serve->CheckWorkSpaceFile(folder);
+	.loc 5 36 42
+	leaq	-96(%rbp), %rax	 #, tmp128
+	movq	%rax, %rdx	 # tmp128,
+	call	_ZN18T100WorkSpaceServe18CheckWorkSpaceFileER16T100WxFolderInfo	 #
+	movb	%al, -17(%rbp)	 # _45, result
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:38:     if(result){
+	.loc 5 38 5
+	cmpb	$0, -17(%rbp)	 #, result
+	je	.L40	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:39:         result  = m_view->ShowWorkSpaceFileExistsDialog();
+	.loc 5 39 19
+	movq	16(%rbp), %rax	 # this, tmp129
+	movq	8(%rax), %rax	 # this_31(D)->m_view, _13
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:39:         result  = m_view->ShowWorkSpaceFileExistsDialog();
+	.loc 5 39 56
+	movq	%rax, %rcx	 # _14,
+	call	_ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv	 #
+	movb	%al, -17(%rbp)	 # _48, result
+.L40:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:47:     result  = m_serve->CreateWorkSpaceFile(info);
+	.loc 5 47 15
+	movq	16(%rbp), %rax	 # this, tmp130
+	movq	16(%rax), %rcx	 # this_31(D)->m_serve, _15
+	movq	16(%rbp), %rax	 # this, tmp132
+	movq	16(%rax), %rax	 # this_31(D)->m_serve, _17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:47:     result  = m_serve->CreateWorkSpaceFile(info);
+	.loc 5 47 48
+	movq	(%rax), %rax	 # _17->_vptr.T100WorkSpaceServe, _18
+	addq	$24, %rax	 #, _19
+	movq	(%rax), %rax	 # *_19, _20
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:47:     result  = m_serve->CreateWorkSpaceFile(info);
+	.loc 5 47 43
+	movq	24(%rbp), %rdx	 # info, tmp133
+	call	*%rax	 # _20
+.LVL3:
+.LEHE1:
+	movb	%al, -17(%rbp)	 # _51, result
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:49:     if(!result){
+	.loc 5 49 8
+	movzbl	-17(%rbp), %eax	 # result, tmp134
+	xorl	$1, %eax	 #, _21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:49:     if(!result){
+	.loc 5 49 5
+	testb	%al, %al	 # _21
+	je	.L41	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:50:         return T100FALSE;
+	.loc 5 50 16
+	movl	$0, %ebx	 #, _22
+	jmp	.L38	 #
+.L41:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:53:     return result;
+	.loc 5 53 12
+	movzbl	-17(%rbp), %ebx	 # result, _22
 .L38:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:30: }
-	.loc 5 30 1
-	addq	$48, %rsp	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:17:     T100WxFolderInfo        folder;
+	.loc 5 17 29
+	leaq	-96(%rbp), %rax	 #, tmp135
+	movq	%rax, %rcx	 # tmp135,
+	call	_ZN16T100WxFolderInfoD1Ev	 #
+	movl	%ebx, %eax	 # _22, <retval>
+	jmp	.L45	 #
+.L44:
+	movq	%rax, %rbx	 #, tmp138
+	leaq	-96(%rbp), %rax	 #, tmp137
+	movq	%rax, %rcx	 # tmp137,
+	call	_ZN16T100WxFolderInfoD1Ev	 #
+	movq	%rbx, %rax	 # tmp138, D.196150
+	movq	%rax, %rcx	 # D.196150,
+.LEHB2:
+	call	_Unwind_Resume	 #
+.LEHE2:
+.L45:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:54: }
+	.loc 5 54 1
+	addq	$120, %rsp	 #,
+	popq	%rbx	 #
+	.cfi_restore 3
 	popq	%rbp	 #
 	.cfi_restore 6
-	.cfi_def_cfa 7, 8
+	.cfi_def_cfa 7, -104
 	ret	
 	.cfi_endproc
 .LFE14622:
+	.seh_handler	__gxx_personality_seh0, @unwind, @except
+	.seh_handlerdata
+.LLSDA14622:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE14622-.LLSDACSB14622
+.LLSDACSB14622:
+	.uleb128 .LEHB0-.LFB14622
+	.uleb128 .LEHE0-.LEHB0
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB1-.LFB14622
+	.uleb128 .LEHE1-.LEHB1
+	.uleb128 .L44-.LFB14622
+	.uleb128 0
+	.uleb128 .LEHB2-.LFB14622
+	.uleb128 .LEHE2-.LEHB2
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE14622:
+	.text
 	.seh_endproc
 	.align 2
 	.globl	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo
@@ -1102,7 +1218,7 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewEP17T100WorkSpaceInfo:
 	.seh_proc	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo
 _ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo:
 .LFB14623:
-	.loc 5 33 1
+	.loc 5 57 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1114,8 +1230,8 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:35: }
-	.loc 5 35 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:59: }
+	.loc 5 59 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1130,7 +1246,7 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo:
 	.seh_proc	_ZN23T100ProjectSkeletalBase12WorkSpaceNewERK16T100WxFolderInfo
 _ZN23T100ProjectSkeletalBase12WorkSpaceNewERK16T100WxFolderInfo:
 .LFB14624:
-	.loc 5 48 1
+	.loc 5 71 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1144,17 +1260,17 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewERK16T100WxFolderInfo:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:49:     return m_serve->New(info);
-	.loc 5 49 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:72:     return m_serve->New(info);
+	.loc 5 72 12
 	movq	16(%rbp), %rax	 # this, tmp90
 	movq	16(%rax), %rax	 # this_3(D)->m_serve, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:49:     return m_serve->New(info);
-	.loc 5 49 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:72:     return m_serve->New(info);
+	.loc 5 72 24
 	movq	24(%rbp), %rdx	 # info, tmp91
 	movq	%rax, %rcx	 # _1,
 	call	_ZN18T100WorkSpaceServe3NewERK16T100WxFolderInfo	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:50: }
-	.loc 5 50 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:73: }
+	.loc 5 73 1
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1169,7 +1285,7 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewERK16T100WxFolderInfo:
 	.seh_proc	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo
 _ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo:
 .LFB14625:
-	.loc 5 53 1
+	.loc 5 76 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1183,60 +1299,60 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # folder, folder
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:54:     if(!m_serve->Open(folder)){
-	.loc 5 54 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:77:     if(!m_serve->Open(folder)){
+	.loc 5 77 9
 	movq	16(%rbp), %rax	 # this, tmp93
 	movq	16(%rax), %rax	 # this_7(D)->m_serve, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:54:     if(!m_serve->Open(folder)){
-	.loc 5 54 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:77:     if(!m_serve->Open(folder)){
+	.loc 5 77 22
 	movq	24(%rbp), %rdx	 # folder, tmp94
 	movq	%rax, %rcx	 # _1,
 	call	_ZN18T100WorkSpaceServe4OpenERK16T100WxFolderInfo	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:54:     if(!m_serve->Open(folder)){
-	.loc 5 54 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:77:     if(!m_serve->Open(folder)){
+	.loc 5 77 8
 	xorl	$1, %eax	 #, retval.0_11
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:54:     if(!m_serve->Open(folder)){
-	.loc 5 54 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:77:     if(!m_serve->Open(folder)){
+	.loc 5 77 5
 	testb	%al, %al	 # retval.0_11
-	jne	.L47	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:58:     T100WorkSpaceInfo*      info        = T100NULL;
-	.loc 5 58 29
+	jne	.L53	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:81:     T100WorkSpaceInfo*      info        = T100NULL;
+	.loc 5 81 29
 	movq	$0, -8(%rbp)	 #, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:60:     info    = m_serve->GetWorkSpaceInfo();
-	.loc 5 60 15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:83:     info    = m_serve->GetWorkSpaceInfo();
+	.loc 5 83 15
 	movq	16(%rbp), %rax	 # this, tmp95
 	movq	16(%rax), %rax	 # this_7(D)->m_serve, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:60:     info    = m_serve->GetWorkSpaceInfo();
-	.loc 5 60 40
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:83:     info    = m_serve->GetWorkSpaceInfo();
+	.loc 5 83 40
 	movq	%rax, %rcx	 # _3,
 	call	_ZN18T100WorkSpaceServe16GetWorkSpaceInfoEv	 #
 	movq	%rax, -8(%rbp)	 # _14, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:62:     if(!info){
-	.loc 5 62 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:85:     if(!info){
+	.loc 5 85 5
 	cmpq	$0, -8(%rbp)	 #, info
-	je	.L48	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:66:     m_view->WorkSpaceOpen(info);
-	.loc 5 66 5
+	je	.L54	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:89:     m_view->WorkSpaceOpen(info);
+	.loc 5 89 5
 	movq	16(%rbp), %rax	 # this, tmp96
 	movq	8(%rax), %rax	 # this_7(D)->m_view, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:66:     m_view->WorkSpaceOpen(info);
-	.loc 5 66 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:89:     m_view->WorkSpaceOpen(info);
+	.loc 5 89 26
 	movq	-8(%rbp), %rdx	 # info, tmp97
 	movq	%rax, %rcx	 # _4,
 	call	_ZN15T100ProjectView13WorkSpaceOpenEP17T100WorkSpaceInfo	 #
-	jmp	.L43	 #
-.L47:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:55:         return;
-	.loc 5 55 9
+	jmp	.L49	 #
+.L53:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:78:         return;
+	.loc 5 78 9
 	nop	
-	jmp	.L43	 #
-.L48:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:63:         return;
-	.loc 5 63 9
+	jmp	.L49	 #
+.L54:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:86:         return;
+	.loc 5 86 9
 	nop	
-.L43:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:67: }
-	.loc 5 67 1
+.L49:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:90: }
+	.loc 5 90 1
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1251,7 +1367,7 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo:
 	.seh_proc	_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv
 _ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv:
 .LFB14626:
-	.loc 5 70 1
+	.loc 5 93 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1264,41 +1380,41 @@ _ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv:
 	.seh_stackalloc	48
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:73:     if(!m_view->WorkSpaceClose()){
-	.loc 5 73 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:96:     if(!m_view->WorkSpaceClose()){
+	.loc 5 96 9
 	movq	16(%rbp), %rax	 # this, tmp94
 	movq	8(%rax), %rax	 # this_7(D)->m_view, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:73:     if(!m_view->WorkSpaceClose()){
-	.loc 5 73 31
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:96:     if(!m_view->WorkSpaceClose()){
+	.loc 5 96 31
 	movq	%rax, %rcx	 # _1,
 	call	_ZN15T100ProjectView14WorkSpaceCloseEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:73:     if(!m_view->WorkSpaceClose()){
-	.loc 5 73 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:96:     if(!m_view->WorkSpaceClose()){
+	.loc 5 96 8
 	xorl	$1, %eax	 #, retval.1_10
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:73:     if(!m_view->WorkSpaceClose()){
-	.loc 5 73 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:96:     if(!m_view->WorkSpaceClose()){
+	.loc 5 96 5
 	testb	%al, %al	 # retval.1_10
-	je	.L50	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:74:         return T100FALSE;
-	.loc 5 74 16
+	je	.L56	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:97:         return T100FALSE;
+	.loc 5 97 16
 	movl	$0, %eax	 #, _4
-	jmp	.L51	 #
-.L50:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:77:     result = m_serve->Close();
-	.loc 5 77 14
+	jmp	.L57	 #
+.L56:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:100:     result = m_serve->Close();
+	.loc 5 100 14
 	movq	16(%rbp), %rax	 # this, tmp95
 	movq	16(%rax), %rax	 # this_7(D)->m_serve, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:77:     result = m_serve->Close();
-	.loc 5 77 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:100:     result = m_serve->Close();
+	.loc 5 100 28
 	movq	%rax, %rcx	 # _3,
 	call	_ZN18T100WorkSpaceServe5CloseEv	 #
 	movb	%al, -1(%rbp)	 # _13, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:79:     return result;
-	.loc 5 79 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:102:     return result;
+	.loc 5 102 12
 	movzbl	-1(%rbp), %eax	 # result, _4
-.L51:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:80: }
-	.loc 5 80 1
+.L57:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:103: }
+	.loc 5 103 1
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1313,7 +1429,7 @@ _ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv
 _ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv:
 .LFB14627:
-	.loc 5 83 1
+	.loc 5 106 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1326,37 +1442,37 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:84:     if(!m_serve->Save()){
-	.loc 5 84 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:107:     if(!m_serve->Save()){
+	.loc 5 107 9
 	movq	16(%rbp), %rax	 # this, tmp91
 	movq	16(%rax), %rax	 # this_6(D)->m_serve, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:84:     if(!m_serve->Save()){
-	.loc 5 84 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:107:     if(!m_serve->Save()){
+	.loc 5 107 22
 	movq	%rax, %rcx	 # _1,
 	call	_ZN18T100WorkSpaceServe4SaveEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:84:     if(!m_serve->Save()){
-	.loc 5 84 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:107:     if(!m_serve->Save()){
+	.loc 5 107 8
 	xorl	$1, %eax	 #, retval.2_9
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:84:     if(!m_serve->Save()){
-	.loc 5 84 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:107:     if(!m_serve->Save()){
+	.loc 5 107 5
 	testb	%al, %al	 # retval.2_9
-	jne	.L55	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:88:     m_view->WorkSpaceSave();
-	.loc 5 88 5
+	jne	.L61	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:111:     m_view->WorkSpaceSave();
+	.loc 5 111 5
 	movq	16(%rbp), %rax	 # this, tmp92
 	movq	8(%rax), %rax	 # this_6(D)->m_view, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:88:     m_view->WorkSpaceSave();
-	.loc 5 88 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:111:     m_view->WorkSpaceSave();
+	.loc 5 111 26
 	movq	%rax, %rcx	 # _3,
 	call	_ZN15T100ProjectView13WorkSpaceSaveEv	 #
-	jmp	.L52	 #
-.L55:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:85:         return;
-	.loc 5 85 9
+	jmp	.L58	 #
+.L61:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:108:         return;
+	.loc 5 108 9
 	nop	
-.L52:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:89: }
-	.loc 5 89 1
+.L58:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:112: }
+	.loc 5 112 1
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1371,7 +1487,7 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv
 _ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv:
 .LFB14628:
-	.loc 5 92 1
+	.loc 5 115 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1382,8 +1498,8 @@ _ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:94: }
-	.loc 5 94 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:117: }
+	.loc 5 117 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1398,7 +1514,7 @@ _ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase10ProjectNewEv
 _ZN23T100ProjectSkeletalBase10ProjectNewEv:
 .LFB14629:
-	.loc 5 97 1
+	.loc 5 120 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1411,16 +1527,16 @@ _ZN23T100ProjectSkeletalBase10ProjectNewEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:98:     m_view->ShowProjectCreateWizard();
-	.loc 5 98 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:121:     m_view->ShowProjectCreateWizard();
+	.loc 5 121 5
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	8(%rax), %rax	 # this_4(D)->m_view, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:98:     m_view->ShowProjectCreateWizard();
-	.loc 5 98 36
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:121:     m_view->ShowProjectCreateWizard();
+	.loc 5 121 36
 	movq	%rax, %rcx	 # _2,
 	call	_ZN19T100ProjectViewBase23ShowProjectCreateWizardEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:99: }
-	.loc 5 99 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:122: }
+	.loc 5 122 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -1436,7 +1552,7 @@ _ZN23T100ProjectSkeletalBase10ProjectNewEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase11ProjectOpenEv
 _ZN23T100ProjectSkeletalBase11ProjectOpenEv:
 .LFB14630:
-	.loc 5 102 1
+	.loc 5 125 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1447,8 +1563,8 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:104: }
-	.loc 5 104 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:127: }
+	.loc 5 127 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1463,7 +1579,7 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase12ProjectCloseEv
 _ZN23T100ProjectSkeletalBase12ProjectCloseEv:
 .LFB14631:
-	.loc 5 107 1
+	.loc 5 130 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1474,8 +1590,8 @@ _ZN23T100ProjectSkeletalBase12ProjectCloseEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:109: }
-	.loc 5 109 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:132: }
+	.loc 5 132 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1490,7 +1606,7 @@ _ZN23T100ProjectSkeletalBase12ProjectCloseEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase11ProjectSaveEv
 _ZN23T100ProjectSkeletalBase11ProjectSaveEv:
 .LFB14632:
-	.loc 5 112 1
+	.loc 5 135 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1501,8 +1617,8 @@ _ZN23T100ProjectSkeletalBase11ProjectSaveEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:114: }
-	.loc 5 114 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:137: }
+	.loc 5 137 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1517,7 +1633,7 @@ _ZN23T100ProjectSkeletalBase11ProjectSaveEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv
 _ZN23T100ProjectSkeletalBase13ProjectSaveAsEv:
 .LFB14633:
-	.loc 5 117 1
+	.loc 5 140 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1528,8 +1644,8 @@ _ZN23T100ProjectSkeletalBase13ProjectSaveAsEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:119: }
-	.loc 5 119 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:142: }
+	.loc 5 142 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1544,7 +1660,7 @@ _ZN23T100ProjectSkeletalBase13ProjectSaveAsEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase7FileNewEv
 _ZN23T100ProjectSkeletalBase7FileNewEv:
 .LFB14634:
-	.loc 5 122 1
+	.loc 5 145 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1555,8 +1671,8 @@ _ZN23T100ProjectSkeletalBase7FileNewEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:124: }
-	.loc 5 124 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:147: }
+	.loc 5 147 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1571,7 +1687,7 @@ _ZN23T100ProjectSkeletalBase7FileNewEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase8FileOpenEv
 _ZN23T100ProjectSkeletalBase8FileOpenEv:
 .LFB14635:
-	.loc 5 127 1
+	.loc 5 150 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1582,8 +1698,8 @@ _ZN23T100ProjectSkeletalBase8FileOpenEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:129: }
-	.loc 5 129 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:152: }
+	.loc 5 152 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1598,7 +1714,7 @@ _ZN23T100ProjectSkeletalBase8FileOpenEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase9FileCloseEv
 _ZN23T100ProjectSkeletalBase9FileCloseEv:
 .LFB14636:
-	.loc 5 132 1
+	.loc 5 155 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1609,8 +1725,8 @@ _ZN23T100ProjectSkeletalBase9FileCloseEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:134: }
-	.loc 5 134 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:157: }
+	.loc 5 157 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1625,7 +1741,7 @@ _ZN23T100ProjectSkeletalBase9FileCloseEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase8FileSaveEv
 _ZN23T100ProjectSkeletalBase8FileSaveEv:
 .LFB14637:
-	.loc 5 137 1
+	.loc 5 160 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1636,8 +1752,8 @@ _ZN23T100ProjectSkeletalBase8FileSaveEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:139: }
-	.loc 5 139 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:162: }
+	.loc 5 162 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1652,7 +1768,7 @@ _ZN23T100ProjectSkeletalBase8FileSaveEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase10FileSaveAsEv
 _ZN23T100ProjectSkeletalBase10FileSaveAsEv:
 .LFB14638:
-	.loc 5 142 1
+	.loc 5 165 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1663,8 +1779,8 @@ _ZN23T100ProjectSkeletalBase10FileSaveAsEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:144: }
-	.loc 5 144 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:167: }
+	.loc 5 167 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1679,7 +1795,7 @@ _ZN23T100ProjectSkeletalBase10FileSaveAsEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase8EditUndoEv
 _ZN23T100ProjectSkeletalBase8EditUndoEv:
 .LFB14639:
-	.loc 5 147 1
+	.loc 5 170 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1690,8 +1806,8 @@ _ZN23T100ProjectSkeletalBase8EditUndoEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:149: }
-	.loc 5 149 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:172: }
+	.loc 5 172 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1706,7 +1822,7 @@ _ZN23T100ProjectSkeletalBase8EditUndoEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase8EditRedoEv
 _ZN23T100ProjectSkeletalBase8EditRedoEv:
 .LFB14640:
-	.loc 5 152 1
+	.loc 5 175 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1717,8 +1833,8 @@ _ZN23T100ProjectSkeletalBase8EditRedoEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:154: }
-	.loc 5 154 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:177: }
+	.loc 5 177 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1733,7 +1849,7 @@ _ZN23T100ProjectSkeletalBase8EditRedoEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase7EditCutEv
 _ZN23T100ProjectSkeletalBase7EditCutEv:
 .LFB14641:
-	.loc 5 157 1
+	.loc 5 180 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1744,8 +1860,8 @@ _ZN23T100ProjectSkeletalBase7EditCutEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:159: }
-	.loc 5 159 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:182: }
+	.loc 5 182 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1760,7 +1876,7 @@ _ZN23T100ProjectSkeletalBase7EditCutEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase8EditCopyEv
 _ZN23T100ProjectSkeletalBase8EditCopyEv:
 .LFB14642:
-	.loc 5 162 1
+	.loc 5 185 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1771,8 +1887,8 @@ _ZN23T100ProjectSkeletalBase8EditCopyEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:164: }
-	.loc 5 164 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:187: }
+	.loc 5 187 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1787,7 +1903,7 @@ _ZN23T100ProjectSkeletalBase8EditCopyEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase9EditPasteEv
 _ZN23T100ProjectSkeletalBase9EditPasteEv:
 .LFB14643:
-	.loc 5 167 1
+	.loc 5 190 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1798,8 +1914,8 @@ _ZN23T100ProjectSkeletalBase9EditPasteEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:169: }
-	.loc 5 169 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:192: }
+	.loc 5 192 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1814,7 +1930,7 @@ _ZN23T100ProjectSkeletalBase9EditPasteEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase10SearchFindEv
 _ZN23T100ProjectSkeletalBase10SearchFindEv:
 .LFB14644:
-	.loc 5 172 1
+	.loc 5 195 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1825,8 +1941,8 @@ _ZN23T100ProjectSkeletalBase10SearchFindEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:174: }
-	.loc 5 174 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:197: }
+	.loc 5 197 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1841,7 +1957,7 @@ _ZN23T100ProjectSkeletalBase10SearchFindEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase13SearchReplaceEv
 _ZN23T100ProjectSkeletalBase13SearchReplaceEv:
 .LFB14645:
-	.loc 5 177 1
+	.loc 5 200 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1852,8 +1968,8 @@ _ZN23T100ProjectSkeletalBase13SearchReplaceEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:179: }
-	.loc 5 179 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:202: }
+	.loc 5 202 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1868,7 +1984,7 @@ _ZN23T100ProjectSkeletalBase13SearchReplaceEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase12CompileBuildEv
 _ZN23T100ProjectSkeletalBase12CompileBuildEv:
 .LFB14646:
-	.loc 5 182 1
+	.loc 5 205 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1879,8 +1995,8 @@ _ZN23T100ProjectSkeletalBase12CompileBuildEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:184: }
-	.loc 5 184 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:207: }
+	.loc 5 207 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1895,7 +2011,7 @@ _ZN23T100ProjectSkeletalBase12CompileBuildEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase11SetupEditorEv
 _ZN23T100ProjectSkeletalBase11SetupEditorEv:
 .LFB14647:
-	.loc 5 187 1
+	.loc 5 210 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1906,8 +2022,8 @@ _ZN23T100ProjectSkeletalBase11SetupEditorEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:189: }
-	.loc 5 189 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:212: }
+	.loc 5 212 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1922,7 +2038,7 @@ _ZN23T100ProjectSkeletalBase11SetupEditorEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase13SetupCompilerEv
 _ZN23T100ProjectSkeletalBase13SetupCompilerEv:
 .LFB14648:
-	.loc 5 192 1
+	.loc 5 215 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1933,8 +2049,8 @@ _ZN23T100ProjectSkeletalBase13SetupCompilerEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:194: }
-	.loc 5 194 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:217: }
+	.loc 5 217 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1949,7 +2065,7 @@ _ZN23T100ProjectSkeletalBase13SetupCompilerEv:
 	.seh_proc	_ZN23T100ProjectSkeletalBase9HelpAboutEv
 _ZN23T100ProjectSkeletalBase9HelpAboutEv:
 .LFB14649:
-	.loc 5 197 1
+	.loc 5 220 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1962,16 +2078,16 @@ _ZN23T100ProjectSkeletalBase9HelpAboutEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:198:     m_view->ShowAboutDialog();
-	.loc 5 198 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:221:     m_view->ShowAboutDialog();
+	.loc 5 221 5
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	8(%rax), %rax	 # this_4(D)->m_view, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:198:     m_view->ShowAboutDialog();
-	.loc 5 198 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:221:     m_view->ShowAboutDialog();
+	.loc 5 221 28
 	movq	%rax, %rcx	 # _2,
 	call	_ZN19T100ProjectViewBase15ShowAboutDialogEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:199: }
-	.loc 5 199 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:222: }
+	.loc 5 222 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2290,7 +2406,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB15870:
-	.loc 5 199 1
+	.loc 5 222 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2304,23 +2420,23 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:199: }
-	.loc 5 199 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:222: }
+	.loc 5 222 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
-	jne	.L85	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:199: }
-	.loc 5 199 1 is_stmt 0 discriminator 1
+	jne	.L91	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:222: }
+	.loc 5 222 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
-	jne	.L85	 #,
+	jne	.L91	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 6 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
 	call	_ZNSt8ios_base4InitC1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
-.L85:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:199: }
-	.loc 5 199 1
+.L91:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:222: }
+	.loc 5 222 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2334,7 +2450,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_proc	_GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev
 _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 .LFB15963:
-	.loc 5 199 1
+	.loc 5 222 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2346,8 +2462,8 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:199: }
-	.loc 5 199 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:222: }
+	.loc 5 222 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -2466,7 +2582,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.file 105 "C:/zoo/lib/wxWidgets-3.0.5/include/wx/msw/textentry.h"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x40b17
+	.long	0x40b2a
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -13247,7 +13363,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "NonOwned\0"
 	.byte	0x1
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF83
 	.byte	0x15
 	.byte	0x26
@@ -14281,7 +14397,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x99
 	.byte	0x7
 	.long	0xcf2c
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF96
 	.byte	0x10
 	.byte	0x9d
@@ -15418,7 +15534,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x58
 	.long	0x181f0
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF99
 	.byte	0x19
 	.byte	0x91
@@ -15433,7 +15549,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x1cf97
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF99
 	.byte	0x19
 	.byte	0x94
@@ -15515,7 +15631,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x80
 	.long	0xe28a
 	.byte	0x10
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF105
 	.byte	0x19
 	.byte	0xa7
@@ -15528,7 +15644,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xe27d
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF106
 	.byte	0x19
 	.byte	0xab
@@ -15584,7 +15700,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1d94d
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF109
 	.byte	0x19
 	.byte	0xc7
@@ -15597,7 +15713,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xe2ad
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF110
 	.byte	0x19
 	.byte	0xcb
@@ -15638,7 +15754,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xe2ad
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF113
 	.byte	0x19
 	.byte	0xda
@@ -15649,7 +15765,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1d947
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF114
 	.byte	0x19
 	.byte	0xe1
@@ -15662,7 +15778,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xe2ad
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF115
 	.byte	0x19
 	.byte	0xf7
@@ -18183,7 +18299,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x58
 	.long	0x1828c
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF99
 	.byte	0x19
 	.byte	0x91
@@ -18198,7 +18314,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x1cfc1
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF99
 	.byte	0x19
 	.byte	0x94
@@ -18281,7 +18397,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x80
 	.long	0x128bc
 	.byte	0x10
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF105
 	.byte	0x19
 	.byte	0xa7
@@ -18294,7 +18410,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x128af
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF106
 	.byte	0x19
 	.byte	0xab
@@ -18350,7 +18466,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1d9c3
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF109
 	.byte	0x19
 	.byte	0xc7
@@ -18363,7 +18479,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x128df
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF110
 	.byte	0x19
 	.byte	0xcb
@@ -18404,7 +18520,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x128df
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF113
 	.byte	0x19
 	.byte	0xda
@@ -18415,7 +18531,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1d9bd
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF114
 	.byte	0x19
 	.byte	0xe1
@@ -18428,7 +18544,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x128df
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF115
 	.byte	0x19
 	.byte	0xf7
@@ -22975,7 +23091,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x13
 	.long	0x187e5
 	.byte	0x8
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF164
 	.byte	0x29
 	.byte	0x3e
@@ -23212,7 +23328,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x13
 	.long	0x18cd9
 	.byte	0x8
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF164
 	.byte	0x29
 	.byte	0x3e
@@ -29670,7 +29786,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xb6
 	.byte	0x18
 	.long	0x20d1a
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF209
 	.byte	0x3d
 	.byte	0xbf
@@ -32302,7 +32418,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x21bf1
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF211
 	.byte	0x3f
 	.byte	0x77
@@ -32486,7 +32602,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x48
 	.byte	0x19
 	.long	0x21e1a
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF218
 	.byte	0x41
 	.byte	0x4a
@@ -53655,7 +53771,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x234
 	.byte	0x2e
 	.long	0x3857a
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxALPHA_TRANSPARENT\0"
 	.byte	0x51
 	.byte	0x2b
@@ -53664,7 +53780,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL19wxALPHA_TRANSPARENT
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxALPHA_OPAQUE\0"
 	.byte	0x51
 	.byte	0x2c
@@ -53954,7 +54070,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "wxSizerItem\0"
 	.uleb128 0x10
 	.ascii "wxwxSizerItemListNode\0"
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxEOF\0"
 	.byte	0x55
 	.byte	0x2c
@@ -53991,7 +54107,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "wxIMAGE_QUALITY_HIGH\0"
 	.byte	0x4
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxIMAGE_ALPHA_TRANSPARENT\0"
 	.byte	0x56
 	.byte	0x4f
@@ -54000,7 +54116,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL25wxIMAGE_ALPHA_TRANSPARENT
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxIMAGE_ALPHA_THRESHOLD\0"
 	.byte	0x56
 	.byte	0x50
@@ -54009,7 +54125,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL23wxIMAGE_ALPHA_THRESHOLD
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxIMAGE_ALPHA_OPAQUE\0"
 	.byte	0x56
 	.byte	0x51
@@ -57649,7 +57765,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "wxwxMenuListNode\0"
 	.uleb128 0x10
 	.ascii "wxwxMenuItemListNode\0"
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_ITEMSTATE_NONE\0"
 	.byte	0x61
 	.byte	0x7a
@@ -57658,7 +57774,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxTREE_ITEMSTATE_NONE
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_ITEMSTATE_NEXT\0"
 	.byte	0x61
 	.byte	0x7b
@@ -57667,7 +57783,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxTREE_ITEMSTATE_NEXT
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_ITEMSTATE_PREV\0"
 	.byte	0x61
 	.byte	0x7c
@@ -57676,7 +57792,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxTREE_ITEMSTATE_PREV
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_ABOVE\0"
 	.byte	0x61
 	.byte	0xac
@@ -57685,7 +57801,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL20wxTREE_HITTEST_ABOVE
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_BELOW\0"
 	.byte	0x61
 	.byte	0xad
@@ -57694,7 +57810,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL20wxTREE_HITTEST_BELOW
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_NOWHERE\0"
 	.byte	0x61
 	.byte	0xae
@@ -57703,7 +57819,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL22wxTREE_HITTEST_NOWHERE
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_ONITEMBUTTON\0"
 	.byte	0x61
 	.byte	0xb0
@@ -57712,7 +57828,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL27wxTREE_HITTEST_ONITEMBUTTON
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_ONITEMICON\0"
 	.byte	0x61
 	.byte	0xb2
@@ -57721,7 +57837,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL25wxTREE_HITTEST_ONITEMICON
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_ONITEMINDENT\0"
 	.byte	0x61
 	.byte	0xb4
@@ -57730,7 +57846,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL27wxTREE_HITTEST_ONITEMINDENT
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_ONITEMLABEL\0"
 	.byte	0x61
 	.byte	0xb6
@@ -57739,7 +57855,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL26wxTREE_HITTEST_ONITEMLABEL
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_ONITEMRIGHT\0"
 	.byte	0x61
 	.byte	0xb8
@@ -57748,7 +57864,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL26wxTREE_HITTEST_ONITEMRIGHT
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_ONITEMSTATEICON\0"
 	.byte	0x61
 	.byte	0xba
@@ -57757,7 +57873,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL30wxTREE_HITTEST_ONITEMSTATEICON
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_TOLEFT\0"
 	.byte	0x61
 	.byte	0xbc
@@ -57766,7 +57882,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxTREE_HITTEST_TOLEFT
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_TORIGHT\0"
 	.byte	0x61
 	.byte	0xbe
@@ -57775,7 +57891,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL22wxTREE_HITTEST_TORIGHT
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_ONITEMUPPERPART\0"
 	.byte	0x61
 	.byte	0xc0
@@ -57784,7 +57900,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL30wxTREE_HITTEST_ONITEMUPPERPART
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_ONITEMLOWERPART\0"
 	.byte	0x61
 	.byte	0xc2
@@ -57793,7 +57909,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL30wxTREE_HITTEST_ONITEMLOWERPART
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxTREE_HITTEST_ONITEM\0"
 	.byte	0x61
 	.byte	0xc5
@@ -57976,7 +58092,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x36
 	.byte	0x2a
 	.long	0x287db
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxOutOfRangeTextCoord\0"
 	.byte	0x62
 	.byte	0x3a
@@ -57985,7 +58101,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxOutOfRangeTextCoord
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "wxInvalidTextCoord\0"
 	.byte	0x62
 	.byte	0x3b
@@ -58635,7 +58751,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x12
 	.long	0x3d5b1
 	.byte	0x10
-	.uleb128 0x29
+	.uleb128 0x2a
 	.secrel32	.LASF340
 	.byte	0x64
 	.byte	0xf8
@@ -59040,7 +59156,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x4
 	.secrel32	.LASF345
 	.byte	0x5
-	.byte	0x20
+	.byte	0x38
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo\0"
 	.long	0xa869
@@ -59055,7 +59171,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x4
 	.secrel32	.LASF344
 	.byte	0x5
-	.byte	0x2f
+	.byte	0x46
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase12WorkSpaceNewERK16T100WxFolderInfo\0"
 	.long	0xa869
@@ -59070,7 +59186,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0xd
 	.secrel32	.LASF345
 	.byte	0x5
-	.byte	0x34
+	.byte	0x4b
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo\0"
 	.byte	0x1
@@ -59084,7 +59200,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x14
 	.ascii "WorkSpaceClose\0"
 	.byte	0x5
-	.byte	0x45
+	.byte	0x5c
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv\0"
 	.long	0xa869
@@ -59097,7 +59213,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "WorkSpaceSave\0"
 	.byte	0x5
-	.byte	0x52
+	.byte	0x69
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv\0"
 	.byte	0x1
@@ -59109,7 +59225,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "WorkSpaceSaveAs\0"
 	.byte	0x5
-	.byte	0x5b
+	.byte	0x72
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv\0"
 	.byte	0x1
@@ -59121,7 +59237,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "ProjectNew\0"
 	.byte	0x5
-	.byte	0x60
+	.byte	0x77
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase10ProjectNewEv\0"
 	.byte	0x1
@@ -59133,7 +59249,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "ProjectOpen\0"
 	.byte	0x5
-	.byte	0x65
+	.byte	0x7c
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase11ProjectOpenEv\0"
 	.byte	0x1
@@ -59145,7 +59261,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "ProjectClose\0"
 	.byte	0x5
-	.byte	0x6a
+	.byte	0x81
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase12ProjectCloseEv\0"
 	.byte	0x1
@@ -59157,7 +59273,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "ProjectSave\0"
 	.byte	0x5
-	.byte	0x6f
+	.byte	0x86
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase11ProjectSaveEv\0"
 	.byte	0x1
@@ -59169,7 +59285,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "ProjectSaveAs\0"
 	.byte	0x5
-	.byte	0x74
+	.byte	0x8b
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv\0"
 	.byte	0x1
@@ -59181,7 +59297,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "FileNew\0"
 	.byte	0x5
-	.byte	0x79
+	.byte	0x90
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase7FileNewEv\0"
 	.byte	0x1
@@ -59193,7 +59309,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "FileOpen\0"
 	.byte	0x5
-	.byte	0x7e
+	.byte	0x95
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase8FileOpenEv\0"
 	.byte	0x1
@@ -59205,7 +59321,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "FileClose\0"
 	.byte	0x5
-	.byte	0x83
+	.byte	0x9a
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase9FileCloseEv\0"
 	.byte	0x1
@@ -59217,7 +59333,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "FileSave\0"
 	.byte	0x5
-	.byte	0x88
+	.byte	0x9f
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase8FileSaveEv\0"
 	.byte	0x1
@@ -59229,7 +59345,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "FileSaveAs\0"
 	.byte	0x5
-	.byte	0x8d
+	.byte	0xa4
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase10FileSaveAsEv\0"
 	.byte	0x1
@@ -59241,7 +59357,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "EditUndo\0"
 	.byte	0x5
-	.byte	0x92
+	.byte	0xa9
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase8EditUndoEv\0"
 	.byte	0x1
@@ -59253,7 +59369,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "EditRedo\0"
 	.byte	0x5
-	.byte	0x97
+	.byte	0xae
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase8EditRedoEv\0"
 	.byte	0x1
@@ -59265,7 +59381,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "EditCut\0"
 	.byte	0x5
-	.byte	0x9c
+	.byte	0xb3
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase7EditCutEv\0"
 	.byte	0x1
@@ -59277,7 +59393,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "EditCopy\0"
 	.byte	0x5
-	.byte	0xa1
+	.byte	0xb8
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase8EditCopyEv\0"
 	.byte	0x1
@@ -59289,7 +59405,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "EditPaste\0"
 	.byte	0x5
-	.byte	0xa6
+	.byte	0xbd
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase9EditPasteEv\0"
 	.byte	0x1
@@ -59301,7 +59417,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "SearchFind\0"
 	.byte	0x5
-	.byte	0xab
+	.byte	0xc2
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase10SearchFindEv\0"
 	.byte	0x1
@@ -59313,7 +59429,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "SearchReplace\0"
 	.byte	0x5
-	.byte	0xb0
+	.byte	0xc7
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase13SearchReplaceEv\0"
 	.byte	0x1
@@ -59325,7 +59441,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "CompileBuild\0"
 	.byte	0x5
-	.byte	0xb5
+	.byte	0xcc
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase12CompileBuildEv\0"
 	.byte	0x1
@@ -59337,7 +59453,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "SetupEditor\0"
 	.byte	0x5
-	.byte	0xba
+	.byte	0xd1
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase11SetupEditorEv\0"
 	.byte	0x1
@@ -59349,7 +59465,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "SetupCompiler\0"
 	.byte	0x5
-	.byte	0xbf
+	.byte	0xd6
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase13SetupCompilerEv\0"
 	.byte	0x1
@@ -59361,7 +59477,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x18
 	.ascii "HelpAbout\0"
 	.byte	0x5
-	.byte	0xc4
+	.byte	0xdb
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase9HelpAboutEv\0"
 	.byte	0x1
@@ -60300,7 +60416,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5c
 	.ascii "__initialize_p\0"
 	.byte	0x5
-	.byte	0xc7
+	.byte	0xde
 	.byte	0x1
 	.long	0x24d
 	.uleb128 0x2
@@ -60309,7 +60425,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5c
 	.ascii "__priority\0"
 	.byte	0x5
-	.byte	0xc7
+	.byte	0xde
 	.byte	0x1
 	.long	0x24d
 	.uleb128 0x2
@@ -60774,7 +60890,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x8d
 	.secrel32	.LASF352
 	.byte	0x5
-	.byte	0x47
+	.byte	0x5e
 	.byte	0x15
 	.long	0xa869
 	.uleb128 0x2
@@ -60798,16 +60914,16 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5c
 	.ascii "folder\0"
 	.byte	0x5
-	.byte	0x34
+	.byte	0x4b
 	.byte	0x49
 	.long	0x3ef1d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x2a
+	.uleb128 0x29
 	.ascii "info\0"
 	.byte	0x5
-	.byte	0x3a
+	.byte	0x51
 	.byte	0x1d
 	.long	0x3ef04
 	.uleb128 0x2
@@ -60831,7 +60947,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5c
 	.ascii "info\0"
 	.byte	0x5
-	.byte	0x2f
+	.byte	0x46
 	.byte	0x48
 	.long	0x3ef1d
 	.uleb128 0x2
@@ -60855,7 +60971,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5c
 	.ascii "info\0"
 	.byte	0x5
-	.byte	0x20
+	.byte	0x38
 	.byte	0x44
 	.long	0x3ef04
 	.uleb128 0x2
@@ -60869,7 +60985,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.quad	.LFE14622-.LFB14622
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40638
+	.long	0x4064b
 	.uleb128 0x1f
 	.secrel32	.LASF350
 	.long	0x3eed1
@@ -60893,13 +61009,22 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0xa869
 	.uleb128 0x2
 	.byte	0x91
-	.sleb128 -17
+	.sleb128 -33
+	.uleb128 0x29
+	.ascii "folder\0"
+	.byte	0x5
+	.byte	0x11
+	.byte	0x1d
+	.long	0x3ef23
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -112
 	.byte	0
 	.uleb128 0x6d
 	.long	0x3e5e9
-	.long	0x40646
-	.byte	0
 	.long	0x40659
+	.byte	0
+	.long	0x4066c
 	.uleb128 0x44
 	.secrel32	.LASF350
 	.long	0x3eed1
@@ -60908,67 +61033,67 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x254
 	.byte	0
 	.uleb128 0x5d
-	.long	0x40638
+	.long	0x4064b
 	.ascii "_ZN23T100ProjectSkeletalBaseD0Ev\0"
-	.long	0x40699
+	.long	0x406ac
 	.quad	.LFB14621
 	.quad	.LFE14621-.LFB14621
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x406a2
+	.long	0x406b5
 	.uleb128 0x40
-	.long	0x40646
+	.long	0x40659
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x8e
-	.long	0x40638
+	.long	0x4064b
 	.ascii "_ZN23T100ProjectSkeletalBaseD2Ev\0"
-	.long	0x406e3
+	.long	0x406f6
 	.quad	.LFB14619
 	.quad	.LFE14619-.LFB14619
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x406ec
+	.long	0x406ff
 	.uleb128 0x40
-	.long	0x40646
+	.long	0x40659
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x6d
 	.long	0x3e5b1
-	.long	0x406fa
+	.long	0x4070d
 	.byte	0
-	.long	0x40704
+	.long	0x40717
 	.uleb128 0x44
 	.secrel32	.LASF350
 	.long	0x3eed1
 	.byte	0
 	.uleb128 0x8e
-	.long	0x406ec
+	.long	0x406ff
 	.ascii "_ZN23T100ProjectSkeletalBaseC2Ev\0"
-	.long	0x40745
+	.long	0x40758
 	.quad	.LFB14616
 	.quad	.LFE14616-.LFB14616
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4074e
+	.long	0x40761
 	.uleb128 0x40
-	.long	0x406fa
+	.long	0x4070d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x45
 	.long	0x3f35c
-	.long	0x4076d
+	.long	0x40780
 	.quad	.LFB9455
 	.quad	.LFE9455-.LFB9455
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x407bb
+	.long	0x407ce
 	.uleb128 0x1f
 	.secrel32	.LASF350
 	.long	0x3f589
@@ -61005,12 +61130,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x2b
 	.long	0x3f47f
-	.long	0x407da
+	.long	0x407ed
 	.quad	.LFB8657
 	.quad	.LFE8657-.LFB8657
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x407e7
+	.long	0x407fa
 	.uleb128 0x1f
 	.secrel32	.LASF350
 	.long	0x3f5a0
@@ -61020,12 +61145,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x2b
 	.long	0x3f425
-	.long	0x40806
+	.long	0x40819
 	.quad	.LFB8656
 	.quad	.LFE8656-.LFB8656
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40813
+	.long	0x40826
 	.uleb128 0x1f
 	.secrel32	.LASF350
 	.long	0x3f5a0
@@ -61035,12 +61160,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x45
 	.long	0x3f3bc
-	.long	0x40832
+	.long	0x40845
 	.quad	.LFB8655
 	.quad	.LFE8655-.LFB8655
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40875
+	.long	0x40888
 	.uleb128 0x1f
 	.secrel32	.LASF350
 	.long	0x3f5a0
@@ -61072,12 +61197,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x45
 	.long	0x2f348
-	.long	0x40894
+	.long	0x408a7
 	.quad	.LFB7624
 	.quad	.LFE7624-.LFB7624
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x408b1
+	.long	0x408c4
 	.uleb128 0x1f
 	.secrel32	.LASF350
 	.long	0x2f3db
@@ -61096,9 +61221,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x6d
 	.long	0x2f310
-	.long	0x408bf
+	.long	0x408d2
 	.byte	0x2
-	.long	0x408dc
+	.long	0x408ef
 	.uleb128 0x44
 	.secrel32	.LASF350
 	.long	0x2f3db
@@ -61110,33 +61235,33 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0xd530
 	.byte	0
 	.uleb128 0x8e
-	.long	0x408b1
+	.long	0x408c4
 	.ascii "_ZN16wxTypeIdentifierC1EPKc\0"
-	.long	0x40918
+	.long	0x4092b
 	.quad	.LFB7623
 	.quad	.LFE7623-.LFB7623
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40929
+	.long	0x4093c
 	.uleb128 0x40
-	.long	0x408bf
+	.long	0x408d2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x40
-	.long	0x408c8
+	.long	0x408db
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x45
 	.long	0x3f652
-	.long	0x40948
+	.long	0x4095b
 	.quad	.LFB7592
 	.quad	.LFE7592-.LFB7592
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4097a
+	.long	0x4098d
 	.uleb128 0x1f
 	.secrel32	.LASF350
 	.long	0x3f83c
@@ -61164,12 +61289,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x2b
 	.long	0x3f788
-	.long	0x40999
+	.long	0x409ac
 	.quad	.LFB7577
 	.quad	.LFE7577-.LFB7577
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x409a6
+	.long	0x409b9
 	.uleb128 0x1f
 	.secrel32	.LASF350
 	.long	0x3fac2
@@ -61179,12 +61304,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x2b
 	.long	0x3f7c1
-	.long	0x409c5
+	.long	0x409d8
 	.quad	.LFB7576
 	.quad	.LFE7576-.LFB7576
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x409d2
+	.long	0x409e5
 	.uleb128 0x1f
 	.secrel32	.LASF350
 	.long	0x3fac2
@@ -61194,12 +61319,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x2b
 	.long	0x3f7fb
-	.long	0x409f1
+	.long	0x40a04
 	.quad	.LFB7575
 	.quad	.LFE7575-.LFB7575
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x409fe
+	.long	0x40a11
 	.uleb128 0x1f
 	.secrel32	.LASF350
 	.long	0x3fac2
@@ -61209,9 +61334,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x6d
 	.long	0x2ee68
-	.long	0x40a0c
-	.byte	0x2
 	.long	0x40a1f
+	.byte	0x2
+	.long	0x40a32
 	.uleb128 0x44
 	.secrel32	.LASF350
 	.long	0x2ef5c
@@ -61220,25 +61345,25 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x254
 	.byte	0
 	.uleb128 0x5d
-	.long	0x409fe
+	.long	0x40a11
 	.ascii "_ZN23wxCriticalSectionLockerD1Ev\0"
-	.long	0x40a5f
+	.long	0x40a72
 	.quad	.LFB7569
 	.quad	.LFE7569-.LFB7569
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40a68
+	.long	0x40a7b
 	.uleb128 0x40
-	.long	0x40a0c
+	.long	0x40a1f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x6d
 	.long	0x2ee17
-	.long	0x40a76
+	.long	0x40a89
 	.byte	0x2
-	.long	0x40a8d
+	.long	0x40aa0
 	.uleb128 0x44
 	.secrel32	.LASF350
 	.long	0x2ef5c
@@ -61250,28 +61375,28 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2ee03
 	.byte	0
 	.uleb128 0x5d
-	.long	0x40a68
+	.long	0x40a7b
 	.ascii "_ZN23wxCriticalSectionLockerC1ER17wxCriticalSection\0"
-	.long	0x40ae0
+	.long	0x40af3
 	.quad	.LFB7566
 	.quad	.LFE7566-.LFB7566
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40af1
+	.long	0x40b04
 	.uleb128 0x40
-	.long	0x40a76
+	.long	0x40a89
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x40
-	.long	0x40a7f
+	.long	0x40a92
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0xe0
 	.long	0x18155
-	.long	0x40b0d
+	.long	0x40b20
 	.quad	.LFB752
 	.quad	.LFE752-.LFB752
 	.uleb128 0x1
@@ -61973,6 +62098,23 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.byte	0
 	.uleb128 0x29
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x2a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -61993,23 +62135,6 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.uleb128 0x1
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x2a
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x2b
@@ -66173,6 +66298,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.def	_ZN17wxCriticalSection5LeaveEv;	.scl	2;	.type	32;	.endef
 	.def	strcmp;	.scl	2;	.type	32;	.endef
 	.def	_ZdlPvy;	.scl	2;	.type	32;	.endef
+	.def	_ZN16T100WxFolderInfoC1Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN18T100WorkSpaceServe20CheckWorkSpaceFolderER16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
+	.def	_ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN18T100WorkSpaceServe18CheckWorkSpaceFileER16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
+	.def	_ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN16T100WxFolderInfoD1Ev;	.scl	2;	.type	32;	.endef
+	.def	_Unwind_Resume;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100WorkSpaceServe3NewERK16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100WorkSpaceServe4OpenERK16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100WorkSpaceServe16GetWorkSpaceInfoEv;	.scl	2;	.type	32;	.endef

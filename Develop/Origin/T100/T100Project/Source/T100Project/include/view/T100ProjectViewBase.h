@@ -33,7 +33,8 @@ class T100ProjectViewBase
         T100INT                         ShowDirDialog(T100WSTRING&);
 
         T100BOOL                        ShowWorkSpaceCreateDialog();
-
+        T100BOOL                        ShowWorkSpaceNotExistsDialog();
+        T100BOOL                        ShowWorkSpaceFileExistsDialog();
         T100VOID                        ShowWorkSpacePropertiesDialog();
 
         T100VOID                        ShowProjectCreateWizard();

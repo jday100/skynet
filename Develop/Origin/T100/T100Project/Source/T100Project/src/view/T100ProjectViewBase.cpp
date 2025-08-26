@@ -1,5 +1,6 @@
 #include "T100ProjectViewBase.h"
 
+#include <wx/msgdlg.h>
 #include <wx/dirdlg.h>
 #include "T100ProjectMain.h"
 #include "T100ProjectCreateWizard.h"
@@ -120,6 +121,36 @@ T100BOOL T100ProjectViewBase::ShowWorkSpaceCreateDialog()
     if(dialog.ShowModal() == wxID_APPLY){
         return T100TRUE;
     }
+    return T100FALSE;
+}
+
+T100BOOL T100ProjectViewBase::ShowWorkSpaceNotExistsDialog()
+{
+    T100INT     result;
+
+    result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+
+    if(result == wxYES){
+        return T100TRUE;
+    }else{
+
+    }
+
+    return T100FALSE;
+}
+
+T100BOOL T100ProjectViewBase::ShowWorkSpaceFileExistsDialog()
+{
+    T100INT     result;
+
+    result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+
+    if(result == wxYES){
+        return T100TRUE;
+    }else{
+
+    }
+
     return T100FALSE;
 }
 
