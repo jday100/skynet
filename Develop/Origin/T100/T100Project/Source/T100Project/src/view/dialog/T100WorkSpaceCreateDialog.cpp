@@ -5,6 +5,10 @@ const long T100WorkSpaceCreateDialog::ID_WORKSPACE_PATH     = wxNewId();
 const long T100WorkSpaceCreateDialog::ID_PYTHON_STATIC_TEXT     = wxNewId();
 const long T100WorkSpaceCreateDialog::ID_PYTHON_FILE    = wxNewId();
 
+BEGIN_EVENT_TABLE(T100WorkSpaceCreateDialog, wxDialog)
+
+END_EVENT_TABLE()
+
 T100WorkSpaceCreateDialog::T100WorkSpaceCreateDialog(wxWindow *parent,
              wxWindowID id,
              const wxString& title,
@@ -56,7 +60,7 @@ T100VOID T100WorkSpaceCreateDialog::init()
     m_pythonFilePicker->SetSize(-1, 250);
     sizer->Add(python, 1, wxALL|wxEXPAND, 5);
 
-    sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
+    sizer->Add(CreateStdDialogButtonSizer(wxOK | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
 
     SetSizer(sizer);
     sizer->Fit(this);

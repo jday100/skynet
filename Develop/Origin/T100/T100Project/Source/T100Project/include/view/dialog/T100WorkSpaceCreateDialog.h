@@ -43,6 +43,8 @@ class T100WorkSpaceCreateDialog : public wxDialog
     private:
         T100VOID                    init();
         T100VOID                    uninit();
+
+        DECLARE_EVENT_TABLE()
 };
 
 #endif // T100WORKSPACECREATEDIALOG_H
