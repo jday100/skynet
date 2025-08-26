@@ -1,5 +1,7 @@
 #include "T100WorkSpaceCreateDialog.h"
 
+#include "T100ProjectConfig.h"
+
 const long T100WorkSpaceCreateDialog::ID_WORKSPACE_STATIC_TEXT      = wxNewId();
 const long T100WorkSpaceCreateDialog::ID_WORKSPACE_PATH     = wxNewId();
 const long T100WorkSpaceCreateDialog::ID_PYTHON_STATIC_TEXT     = wxNewId();
@@ -99,6 +101,9 @@ const T100WSTRING& T100WorkSpaceCreateDialog::GetPythonFile()
 
 T100VOID T100WorkSpaceCreateDialog::OnApply(wxCommandEvent& event)
 {
+    m_workspacePath     = m_workspacePathPicker->GetPath().ToStdWstring();
+    m_pythonFile        = m_pythonFilePicker->GetPath().ToStdWstring();
+
     Close();
     SetReturnCode(wxID_APPLY);
 }
