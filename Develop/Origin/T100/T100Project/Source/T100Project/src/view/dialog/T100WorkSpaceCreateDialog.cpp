@@ -1,7 +1,9 @@
 #include "T100WorkSpaceCreateDialog.h"
 
-const long T100WorkSpaceCreateDialog::ID_STATIC_TEXT    = wxNewId();
-const long T100WorkSpaceCreateDialog::ID_WORKSPACE_DIR  = wxNewId();
+const long T100WorkSpaceCreateDialog::ID_WORKSPACE_STATIC_TEXT      = wxNewId();
+const long T100WorkSpaceCreateDialog::ID_WORKSPACE_PATH     = wxNewId();
+const long T100WorkSpaceCreateDialog::ID_PYTHON_STATIC_TEXT     = wxNewId();
+const long T100WorkSpaceCreateDialog::ID_PYTHON_FILE    = wxNewId();
 
 T100WorkSpaceCreateDialog::T100WorkSpaceCreateDialog(wxWindow *parent,
              wxWindowID id,
@@ -26,15 +28,33 @@ T100VOID T100WorkSpaceCreateDialog::init()
 {
     wxBoxSizer*     sizer       = T100NEW wxBoxSizer(wxVERTICAL);
 
-    wxStaticBoxSizer*       workspace  = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
+    wxStaticBoxSizer*       workspace   = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
 
-    m_title     = T100NEW wxStaticText(this, ID_STATIC_TEXT, _("Path:"));
-    m_dir       = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_DIR);
+    m_workspaceTitle        = T100NEW wxStaticText(this, ID_WORKSPACE_STATIC_TEXT, _("Path:"));
+    m_workspacePathPicker   = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_PATH);
 
-    workspace->Add(m_title, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    workspace->Add(m_dir, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    m_workspaceTitle->SetSize(-1, 50);
 
+    workspace->Add(m_workspaceTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    workspace->Add(m_workspacePathPicker, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+
+    m_workspaceTitle->SetSize(-1, 50);
+    m_workspacePathPicker->SetSize(-1, 250);
     sizer->Add(workspace, 1, wxALL|wxEXPAND, 5);
+
+    wxStaticBoxSizer*       python      = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Python:"));
+
+    m_pythonTitle           = T100NEW wxStaticText(this, ID_PYTHON_STATIC_TEXT, _("File:"));
+    m_pythonFilePicker      = T100NEW wxFilePickerCtrl(this, ID_PYTHON_FILE);
+
+    m_pythonTitle->SetSize(-1, 50);
+
+    python->Add(m_pythonTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    python->Add(m_pythonFilePicker, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+
+    m_pythonTitle->SetSize(-1, 50);
+    m_pythonFilePicker->SetSize(-1, 250);
+    sizer->Add(python, 1, wxALL|wxEXPAND, 5);
 
     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
 
@@ -42,10 +62,31 @@ T100VOID T100WorkSpaceCreateDialog::init()
     sizer->Fit(this);
     sizer->SetSizeHints(this);
 
+    SetSize(600, -1);
     Center();
 }
 
 T100VOID T100WorkSpaceCreateDialog::uninit()
 {
 
+}
+
+T100VOID T100WorkSpaceCreateDialog::SetWorkSpacePath(const T100WSTRING& path)
+{
+    m_workspacePath     = path;
+}
+
+const T100WSTRING& T100WorkSpaceCreateDialog::GetWorkSpacePath()
+{
+    return m_workspacePath;
+}
+
+T100VOID T100WorkSpaceCreateDialog::SetPythonFile(const T100WSTRING& file)
+{
+    m_pythonFile        = file;
+}
+
+const T100WSTRING& T100WorkSpaceCreateDialog::GetPythonFile()
+{
+    return m_pythonFile;
 }

@@ -18,17 +18,31 @@ class T100WorkSpaceCreateDialog : public wxDialog
              const wxString& name = wxDialogNameStr);
         virtual ~T100WorkSpaceCreateDialog();
 
-    protected:
-        static const long ID_STATIC_TEXT;
-        static const long ID_WORKSPACE_DIR;
+        T100VOID                    SetWorkSpacePath(const T100WSTRING&);
+        const T100WSTRING&          GetWorkSpacePath();
+
+        T100VOID                    SetPythonFile(const T100WSTRING&);
+        const T100WSTRING&          GetPythonFile();
 
     protected:
-        wxStaticText*       m_title;
-        wxDirPickerCtrl*    m_dir;
+        static const long ID_WORKSPACE_STATIC_TEXT;
+        static const long ID_WORKSPACE_PATH;
+        static const long ID_PYTHON_STATIC_TEXT;
+        static const long ID_PYTHON_FILE;
+
+    protected:
+        T100WSTRING                 m_workspacePath;
+        T100WSTRING                 m_pythonFile;
+
+        wxStaticText*               m_workspaceTitle;
+        wxDirPickerCtrl*            m_workspacePathPicker;
+
+        wxStaticText*               m_pythonTitle;
+        wxFilePickerCtrl*           m_pythonFilePicker;
 
     private:
-        T100VOID            init();
-        T100VOID            uninit();
+        T100VOID                    init();
+        T100VOID                    uninit();
 };
 
 #endif // T100WORKSPACECREATEDIALOG_H
