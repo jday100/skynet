@@ -10,6 +10,7 @@
 #include "T100BuildPanel.h"
 
 class T100ProjectFrame;
+class T100WorkSpaceInfo;
 
 class T100ProjectViewBase
 {
@@ -32,7 +33,7 @@ class T100ProjectViewBase
 
         T100INT                         ShowDirDialog(T100WSTRING&);
 
-        T100BOOL                        ShowWorkSpaceCreateDialog();
+        T100BOOL                        ShowWorkSpaceCreateDialog(T100WorkSpaceInfo*);
         T100BOOL                        ShowWorkSpaceNotExistsDialog();
         T100BOOL                        ShowWorkSpaceFileExistsDialog();
         T100VOID                        ShowWorkSpacePropertiesDialog();

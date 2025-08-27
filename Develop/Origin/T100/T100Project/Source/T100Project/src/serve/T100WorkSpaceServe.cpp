@@ -63,12 +63,26 @@ T100BOOL T100WorkSpaceServe::CreateWorkSpaceFile(T100WorkSpaceInfo* info)
 
 T100BOOL T100WorkSpaceServe::CheckWorkSpaceFolder(T100WxFolderInfo& info)
 {
+    T100Folder          folder(info.GetPath());
 
+    if(!folder.IsExists()){
+        return T100FALSE;
+    }
+    return T100TRUE;
 }
 
 T100BOOL T100WorkSpaceServe::CheckWorkSpaceFile(T100WxFolderInfo& info)
 {
+    T100WSTRING         filename;
 
+    filename    = GetFileName(info);
+
+    T100WorkSpaceFile   file(filename);
+
+    if(file.IsExists()){
+        return T100FALSE;
+    }
+    return T100TRUE;
 }
 
 

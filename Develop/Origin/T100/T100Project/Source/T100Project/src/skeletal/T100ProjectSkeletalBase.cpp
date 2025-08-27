@@ -53,7 +53,7 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(T100WorkSpaceInfo* info)
     return result;
 }
 
-T100BOOL T100ProjectSkeletalBase::WorkSpaceOpen(T100WorkSpaceInfo* info)
+T100BOOL T100ProjectSkeletalBase::WorkSpaceOpen(const T100WxFolderInfo& info)
 {
 
 }
@@ -72,6 +72,7 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(const T100WxFolderInfo& info)
     return m_serve->New(info);
 }
 
+/*
 T100VOID T100ProjectSkeletalBase::WorkSpaceOpen(const T100WxFolderInfo& folder)
 {
     if(!m_serve->Open(folder)){
@@ -88,6 +89,7 @@ T100VOID T100ProjectSkeletalBase::WorkSpaceOpen(const T100WxFolderInfo& folder)
 
     m_view->WorkSpaceOpen(info);
 }
+*/
 
 T100BOOL T100ProjectSkeletalBase::WorkSpaceClose()
 {

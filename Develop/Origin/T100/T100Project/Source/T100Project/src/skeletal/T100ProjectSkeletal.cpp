@@ -51,15 +51,19 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
 
     T100WorkSpaceInfo*      info        = T100NEW T100WorkSpaceInfo();
 
-    if(!m_view->ShowWorkSpaceCreateDialog()){
+    if(!m_view->ShowWorkSpaceCreateDialog(info)){
         return;
     }
 
     if(!WorkSpaceNew(info)){
+        T100SAFE_DELETE(info);
         return;
     }
+    T100SAFE_DELETE(info);
 
-    if(!WorkSpaceOpen(info)){
+    T100WxFolderInfo        folder;
+
+    if(!WorkSpaceOpen(folder)){
         return;
     }
 }

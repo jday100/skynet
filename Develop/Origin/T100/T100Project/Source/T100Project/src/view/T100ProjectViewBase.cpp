@@ -114,7 +114,7 @@ T100INT T100ProjectViewBase::ShowDirDialog(T100WSTRING& path)
     return result;
 }
 
-T100BOOL T100ProjectViewBase::ShowWorkSpaceCreateDialog()
+T100BOOL T100ProjectViewBase::ShowWorkSpaceCreateDialog(T100WorkSpaceInfo* info)
 {
     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
 

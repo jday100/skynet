@@ -96,7 +96,7 @@ _ZNKSt9type_info4nameEv:
 	movq	8(%rax), %rax	 # this_6(D)->__name, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 1 100 31 discriminator 1
-	addq	$1, %rax	 #, iftmp.5_4
+	addq	$1, %rax	 #, iftmp.4_4
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 1 100 46 discriminator 1
 	jmp	.L4	 #
@@ -104,7 +104,7 @@ _ZNKSt9type_info4nameEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 1 100 31 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	8(%rax), %rax	 # this_6(D)->__name, iftmp.5_4
+	movq	8(%rax), %rax	 # this_6(D)->__name, iftmp.4_4
 .L4:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 1 100 54 discriminator 5
@@ -546,7 +546,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 	call	_ZN16wxTypeIdentifiereqERKS_	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 4 251 9
-	testb	%al, %al	 # retval.3_28
+	testb	%al, %al	 # retval.2_28
 	je	.L17	 #,
 .LBB6:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:253:             const wxObjectEventFunctor &other =
@@ -614,14 +614,14 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 .L21:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 4 262 74 discriminator 9
-	movl	$1, %eax	 #, iftmp.4_19
+	movl	$1, %eax	 #, iftmp.3_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 4 263 78 discriminator 9
 	jmp	.L23	 #
 .L20:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 4 262 74 discriminator 8
-	movl	$0, %eax	 #, iftmp.4_19
+	movl	$0, %eax	 #, iftmp.3_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 4 263 78 discriminator 8
 	jmp	.L23	 #
@@ -629,7 +629,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 .LBE6:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:266:             return false;
 	.loc 4 266 20
-	movl	$0, %eax	 #, iftmp.4_19
+	movl	$0, %eax	 #, iftmp.3_19
 .L23:
 .LBE5:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:267:     }
@@ -746,16 +746,16 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 4 3776 50 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp106
-	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.6_17
+	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.5_17
 	jmp	.L30	 #
 .L29:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 4 3776 50 discriminator 2
-	movq	24(%rbp), %rax	 # handler, iftmp.6_17
+	movq	24(%rbp), %rax	 # handler, iftmp.5_17
 .L30:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 4 3776 26 is_stmt 1 discriminator 4
-	movq	%rax, -8(%rbp)	 # iftmp.6_17, realHandler
+	movq	%rax, -8(%rbp)	 # iftmp.5_17, realHandler
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 4 3778 35 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp107
@@ -784,18 +784,18 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
 	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, _12
 	subq	$1, %rax	 #, _14
 	addq	%rdx, %rax	 # _11, _16
-	movq	(%rax), %rax	 # *_16, iftmp.7_18
+	movq	(%rax), %rax	 # *_16, iftmp.6_18
 	jmp	.L32	 #
 .L31:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 4 3778 35 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp113
-	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.7_18
+	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.6_18
 .L32:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 4 3778 29 is_stmt 1 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp114
-	call	*%rax	 # iftmp.7_18
+	call	*%rax	 # iftmp.6_18
 .LVL1:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3779: }
 	.loc 4 3779 1 discriminator 4
@@ -1172,8 +1172,8 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewEP17T100WorkSpaceInfo:
 	leaq	-96(%rbp), %rax	 #, tmp137
 	movq	%rax, %rcx	 # tmp137,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp138, D.196150
-	movq	%rax, %rcx	 # D.196150,
+	movq	%rbx, %rax	 # tmp138, D.196134
+	movq	%rax, %rcx	 # D.196134,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -1213,10 +1213,10 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewEP17T100WorkSpaceInfo:
 	.text
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo
-	.def	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo
-_ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo:
+	.globl	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo
+	.def	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo
+_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo:
 .LFB14623:
 	.loc 5 57 1
 	.cfi_startproc
@@ -1280,12 +1280,12 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewERK16T100WxFolderInfo:
 .LFE14624:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo
-	.def	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo
-_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo:
+	.globl	_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv
+	.def	_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv
+_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv:
 .LFB14625:
-	.loc 5 76 1
+	.loc 5 95 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1298,61 +1298,41 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo:
 	.seh_stackalloc	48
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # folder, folder
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:77:     if(!m_serve->Open(folder)){
-	.loc 5 77 9
-	movq	16(%rbp), %rax	 # this, tmp93
-	movq	16(%rax), %rax	 # this_7(D)->m_serve, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:77:     if(!m_serve->Open(folder)){
-	.loc 5 77 22
-	movq	24(%rbp), %rdx	 # folder, tmp94
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:98:     if(!m_view->WorkSpaceClose()){
+	.loc 5 98 9
+	movq	16(%rbp), %rax	 # this, tmp94
+	movq	8(%rax), %rax	 # this_7(D)->m_view, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:98:     if(!m_view->WorkSpaceClose()){
+	.loc 5 98 31
 	movq	%rax, %rcx	 # _1,
-	call	_ZN18T100WorkSpaceServe4OpenERK16T100WxFolderInfo	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:77:     if(!m_serve->Open(folder)){
-	.loc 5 77 8
-	xorl	$1, %eax	 #, retval.0_11
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:77:     if(!m_serve->Open(folder)){
-	.loc 5 77 5
-	testb	%al, %al	 # retval.0_11
-	jne	.L53	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:81:     T100WorkSpaceInfo*      info        = T100NULL;
-	.loc 5 81 29
-	movq	$0, -8(%rbp)	 #, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:83:     info    = m_serve->GetWorkSpaceInfo();
-	.loc 5 83 15
+	call	_ZN15T100ProjectView14WorkSpaceCloseEv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:98:     if(!m_view->WorkSpaceClose()){
+	.loc 5 98 8
+	xorl	$1, %eax	 #, retval.0_10
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:98:     if(!m_view->WorkSpaceClose()){
+	.loc 5 98 5
+	testb	%al, %al	 # retval.0_10
+	je	.L50	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:99:         return T100FALSE;
+	.loc 5 99 16
+	movl	$0, %eax	 #, _4
+	jmp	.L51	 #
+.L50:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:102:     result = m_serve->Close();
+	.loc 5 102 14
 	movq	16(%rbp), %rax	 # this, tmp95
 	movq	16(%rax), %rax	 # this_7(D)->m_serve, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:83:     info    = m_serve->GetWorkSpaceInfo();
-	.loc 5 83 40
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:102:     result = m_serve->Close();
+	.loc 5 102 28
 	movq	%rax, %rcx	 # _3,
-	call	_ZN18T100WorkSpaceServe16GetWorkSpaceInfoEv	 #
-	movq	%rax, -8(%rbp)	 # _14, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:85:     if(!info){
-	.loc 5 85 5
-	cmpq	$0, -8(%rbp)	 #, info
-	je	.L54	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:89:     m_view->WorkSpaceOpen(info);
-	.loc 5 89 5
-	movq	16(%rbp), %rax	 # this, tmp96
-	movq	8(%rax), %rax	 # this_7(D)->m_view, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:89:     m_view->WorkSpaceOpen(info);
-	.loc 5 89 26
-	movq	-8(%rbp), %rdx	 # info, tmp97
-	movq	%rax, %rcx	 # _4,
-	call	_ZN15T100ProjectView13WorkSpaceOpenEP17T100WorkSpaceInfo	 #
-	jmp	.L49	 #
-.L53:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:78:         return;
-	.loc 5 78 9
-	nop	
-	jmp	.L49	 #
-.L54:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:86:         return;
-	.loc 5 86 9
-	nop	
-.L49:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:90: }
-	.loc 5 90 1
+	call	_ZN18T100WorkSpaceServe5CloseEv	 #
+	movb	%al, -1(%rbp)	 # _13, result
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:104:     return result;
+	.loc 5 104 12
+	movzbl	-1(%rbp), %eax	 # result, _4
+.L51:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:105: }
+	.loc 5 105 1
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1362,12 +1342,12 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo:
 .LFE14625:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv
-	.def	_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv
-_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv:
+	.globl	_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv
+	.def	_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv
+_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv:
 .LFB14626:
-	.loc 5 93 1
+	.loc 5 108 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1376,46 +1356,42 @@ _ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv:
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
-	subq	$48, %rsp	 #,
-	.seh_stackalloc	48
+	subq	$32, %rsp	 #,
+	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:96:     if(!m_view->WorkSpaceClose()){
-	.loc 5 96 9
-	movq	16(%rbp), %rax	 # this, tmp94
-	movq	8(%rax), %rax	 # this_7(D)->m_view, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:96:     if(!m_view->WorkSpaceClose()){
-	.loc 5 96 31
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:109:     if(!m_serve->Save()){
+	.loc 5 109 9
+	movq	16(%rbp), %rax	 # this, tmp91
+	movq	16(%rax), %rax	 # this_6(D)->m_serve, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:109:     if(!m_serve->Save()){
+	.loc 5 109 22
 	movq	%rax, %rcx	 # _1,
-	call	_ZN15T100ProjectView14WorkSpaceCloseEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:96:     if(!m_view->WorkSpaceClose()){
-	.loc 5 96 8
-	xorl	$1, %eax	 #, retval.1_10
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:96:     if(!m_view->WorkSpaceClose()){
-	.loc 5 96 5
-	testb	%al, %al	 # retval.1_10
-	je	.L56	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:97:         return T100FALSE;
-	.loc 5 97 16
-	movl	$0, %eax	 #, _4
-	jmp	.L57	 #
-.L56:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:100:     result = m_serve->Close();
-	.loc 5 100 14
-	movq	16(%rbp), %rax	 # this, tmp95
-	movq	16(%rax), %rax	 # this_7(D)->m_serve, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:100:     result = m_serve->Close();
-	.loc 5 100 28
+	call	_ZN18T100WorkSpaceServe4SaveEv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:109:     if(!m_serve->Save()){
+	.loc 5 109 8
+	xorl	$1, %eax	 #, retval.1_9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:109:     if(!m_serve->Save()){
+	.loc 5 109 5
+	testb	%al, %al	 # retval.1_9
+	jne	.L55	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:113:     m_view->WorkSpaceSave();
+	.loc 5 113 5
+	movq	16(%rbp), %rax	 # this, tmp92
+	movq	8(%rax), %rax	 # this_6(D)->m_view, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:113:     m_view->WorkSpaceSave();
+	.loc 5 113 26
 	movq	%rax, %rcx	 # _3,
-	call	_ZN18T100WorkSpaceServe5CloseEv	 #
-	movb	%al, -1(%rbp)	 # _13, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:102:     return result;
-	.loc 5 102 12
-	movzbl	-1(%rbp), %eax	 # result, _4
-.L57:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:103: }
-	.loc 5 103 1
-	addq	$48, %rsp	 #,
+	call	_ZN15T100ProjectView13WorkSpaceSaveEv	 #
+	jmp	.L52	 #
+.L55:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:110:         return;
+	.loc 5 110 9
+	nop	
+.L52:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:114: }
+	.loc 5 114 1
+	addq	$32, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -1424,12 +1400,12 @@ _ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv:
 .LFE14626:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv
-	.def	_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv
-_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv:
+	.globl	_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv
+	.def	_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv
+_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv:
 .LFB14627:
-	.loc 5 106 1
+	.loc 5 117 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1438,42 +1414,11 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv:
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
-	subq	$32, %rsp	 #,
-	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:107:     if(!m_serve->Save()){
-	.loc 5 107 9
-	movq	16(%rbp), %rax	 # this, tmp91
-	movq	16(%rax), %rax	 # this_6(D)->m_serve, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:107:     if(!m_serve->Save()){
-	.loc 5 107 22
-	movq	%rax, %rcx	 # _1,
-	call	_ZN18T100WorkSpaceServe4SaveEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:107:     if(!m_serve->Save()){
-	.loc 5 107 8
-	xorl	$1, %eax	 #, retval.2_9
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:107:     if(!m_serve->Save()){
-	.loc 5 107 5
-	testb	%al, %al	 # retval.2_9
-	jne	.L61	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:111:     m_view->WorkSpaceSave();
-	.loc 5 111 5
-	movq	16(%rbp), %rax	 # this, tmp92
-	movq	8(%rax), %rax	 # this_6(D)->m_view, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:111:     m_view->WorkSpaceSave();
-	.loc 5 111 26
-	movq	%rax, %rcx	 # _3,
-	call	_ZN15T100ProjectView13WorkSpaceSaveEv	 #
-	jmp	.L58	 #
-.L61:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:108:         return;
-	.loc 5 108 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:119: }
+	.loc 5 119 1
 	nop	
-.L58:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:112: }
-	.loc 5 112 1
-	addq	$32, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -1482,39 +1427,12 @@ _ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv:
 .LFE14627:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv
-	.def	_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv
-_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv:
-.LFB14628:
-	.loc 5 115 1
-	.cfi_startproc
-	pushq	%rbp	 #
-	.seh_pushreg	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp	 #,
-	.seh_setframe	%rbp, 0
-	.cfi_def_cfa_register 6
-	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:117: }
-	.loc 5 117 1
-	nop	
-	popq	%rbp	 #
-	.cfi_restore 6
-	.cfi_def_cfa 7, 8
-	ret	
-	.cfi_endproc
-.LFE14628:
-	.seh_endproc
-	.align 2
 	.globl	_ZN23T100ProjectSkeletalBase10ProjectNewEv
 	.def	_ZN23T100ProjectSkeletalBase10ProjectNewEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN23T100ProjectSkeletalBase10ProjectNewEv
 _ZN23T100ProjectSkeletalBase10ProjectNewEv:
-.LFB14629:
-	.loc 5 120 1
+.LFB14628:
+	.loc 5 122 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1527,16 +1445,16 @@ _ZN23T100ProjectSkeletalBase10ProjectNewEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:121:     m_view->ShowProjectCreateWizard();
-	.loc 5 121 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:123:     m_view->ShowProjectCreateWizard();
+	.loc 5 123 5
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	8(%rax), %rax	 # this_4(D)->m_view, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:121:     m_view->ShowProjectCreateWizard();
-	.loc 5 121 36
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:123:     m_view->ShowProjectCreateWizard();
+	.loc 5 123 36
 	movq	%rax, %rcx	 # _2,
 	call	_ZN19T100ProjectViewBase23ShowProjectCreateWizardEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:122: }
-	.loc 5 122 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:124: }
+	.loc 5 124 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -1544,15 +1462,15 @@ _ZN23T100ProjectSkeletalBase10ProjectNewEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE14629:
+.LFE14628:
 	.seh_endproc
 	.align 2
 	.globl	_ZN23T100ProjectSkeletalBase11ProjectOpenEv
 	.def	_ZN23T100ProjectSkeletalBase11ProjectOpenEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN23T100ProjectSkeletalBase11ProjectOpenEv
 _ZN23T100ProjectSkeletalBase11ProjectOpenEv:
-.LFB14630:
-	.loc 5 125 1
+.LFB14629:
+	.loc 5 127 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1563,8 +1481,35 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:127: }
-	.loc 5 127 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:129: }
+	.loc 5 129 1
+	nop	
+	popq	%rbp	 #
+	.cfi_restore 6
+	.cfi_def_cfa 7, 8
+	ret	
+	.cfi_endproc
+.LFE14629:
+	.seh_endproc
+	.align 2
+	.globl	_ZN23T100ProjectSkeletalBase12ProjectCloseEv
+	.def	_ZN23T100ProjectSkeletalBase12ProjectCloseEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase12ProjectCloseEv
+_ZN23T100ProjectSkeletalBase12ProjectCloseEv:
+.LFB14630:
+	.loc 5 132 1
+	.cfi_startproc
+	pushq	%rbp	 #
+	.seh_pushreg	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp	 #,
+	.seh_setframe	%rbp, 0
+	.cfi_def_cfa_register 6
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)	 # this, this
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:134: }
+	.loc 5 134 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1574,12 +1519,12 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEv:
 .LFE14630:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase12ProjectCloseEv
-	.def	_ZN23T100ProjectSkeletalBase12ProjectCloseEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase12ProjectCloseEv
-_ZN23T100ProjectSkeletalBase12ProjectCloseEv:
+	.globl	_ZN23T100ProjectSkeletalBase11ProjectSaveEv
+	.def	_ZN23T100ProjectSkeletalBase11ProjectSaveEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase11ProjectSaveEv
+_ZN23T100ProjectSkeletalBase11ProjectSaveEv:
 .LFB14631:
-	.loc 5 130 1
+	.loc 5 137 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1590,8 +1535,8 @@ _ZN23T100ProjectSkeletalBase12ProjectCloseEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:132: }
-	.loc 5 132 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:139: }
+	.loc 5 139 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1601,12 +1546,12 @@ _ZN23T100ProjectSkeletalBase12ProjectCloseEv:
 .LFE14631:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase11ProjectSaveEv
-	.def	_ZN23T100ProjectSkeletalBase11ProjectSaveEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase11ProjectSaveEv
-_ZN23T100ProjectSkeletalBase11ProjectSaveEv:
+	.globl	_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv
+	.def	_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv
+_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv:
 .LFB14632:
-	.loc 5 135 1
+	.loc 5 142 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1617,8 +1562,8 @@ _ZN23T100ProjectSkeletalBase11ProjectSaveEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:137: }
-	.loc 5 137 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:144: }
+	.loc 5 144 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1628,12 +1573,12 @@ _ZN23T100ProjectSkeletalBase11ProjectSaveEv:
 .LFE14632:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv
-	.def	_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv
-_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv:
+	.globl	_ZN23T100ProjectSkeletalBase7FileNewEv
+	.def	_ZN23T100ProjectSkeletalBase7FileNewEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase7FileNewEv
+_ZN23T100ProjectSkeletalBase7FileNewEv:
 .LFB14633:
-	.loc 5 140 1
+	.loc 5 147 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1644,8 +1589,8 @@ _ZN23T100ProjectSkeletalBase13ProjectSaveAsEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:142: }
-	.loc 5 142 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:149: }
+	.loc 5 149 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1655,12 +1600,12 @@ _ZN23T100ProjectSkeletalBase13ProjectSaveAsEv:
 .LFE14633:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase7FileNewEv
-	.def	_ZN23T100ProjectSkeletalBase7FileNewEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase7FileNewEv
-_ZN23T100ProjectSkeletalBase7FileNewEv:
+	.globl	_ZN23T100ProjectSkeletalBase8FileOpenEv
+	.def	_ZN23T100ProjectSkeletalBase8FileOpenEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase8FileOpenEv
+_ZN23T100ProjectSkeletalBase8FileOpenEv:
 .LFB14634:
-	.loc 5 145 1
+	.loc 5 152 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1671,8 +1616,8 @@ _ZN23T100ProjectSkeletalBase7FileNewEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:147: }
-	.loc 5 147 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:154: }
+	.loc 5 154 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1682,12 +1627,12 @@ _ZN23T100ProjectSkeletalBase7FileNewEv:
 .LFE14634:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase8FileOpenEv
-	.def	_ZN23T100ProjectSkeletalBase8FileOpenEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase8FileOpenEv
-_ZN23T100ProjectSkeletalBase8FileOpenEv:
+	.globl	_ZN23T100ProjectSkeletalBase9FileCloseEv
+	.def	_ZN23T100ProjectSkeletalBase9FileCloseEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase9FileCloseEv
+_ZN23T100ProjectSkeletalBase9FileCloseEv:
 .LFB14635:
-	.loc 5 150 1
+	.loc 5 157 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1698,8 +1643,8 @@ _ZN23T100ProjectSkeletalBase8FileOpenEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:152: }
-	.loc 5 152 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:159: }
+	.loc 5 159 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1709,12 +1654,12 @@ _ZN23T100ProjectSkeletalBase8FileOpenEv:
 .LFE14635:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase9FileCloseEv
-	.def	_ZN23T100ProjectSkeletalBase9FileCloseEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase9FileCloseEv
-_ZN23T100ProjectSkeletalBase9FileCloseEv:
+	.globl	_ZN23T100ProjectSkeletalBase8FileSaveEv
+	.def	_ZN23T100ProjectSkeletalBase8FileSaveEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase8FileSaveEv
+_ZN23T100ProjectSkeletalBase8FileSaveEv:
 .LFB14636:
-	.loc 5 155 1
+	.loc 5 162 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1725,8 +1670,8 @@ _ZN23T100ProjectSkeletalBase9FileCloseEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:157: }
-	.loc 5 157 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:164: }
+	.loc 5 164 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1736,12 +1681,12 @@ _ZN23T100ProjectSkeletalBase9FileCloseEv:
 .LFE14636:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase8FileSaveEv
-	.def	_ZN23T100ProjectSkeletalBase8FileSaveEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase8FileSaveEv
-_ZN23T100ProjectSkeletalBase8FileSaveEv:
+	.globl	_ZN23T100ProjectSkeletalBase10FileSaveAsEv
+	.def	_ZN23T100ProjectSkeletalBase10FileSaveAsEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase10FileSaveAsEv
+_ZN23T100ProjectSkeletalBase10FileSaveAsEv:
 .LFB14637:
-	.loc 5 160 1
+	.loc 5 167 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1752,8 +1697,8 @@ _ZN23T100ProjectSkeletalBase8FileSaveEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:162: }
-	.loc 5 162 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:169: }
+	.loc 5 169 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1763,12 +1708,12 @@ _ZN23T100ProjectSkeletalBase8FileSaveEv:
 .LFE14637:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase10FileSaveAsEv
-	.def	_ZN23T100ProjectSkeletalBase10FileSaveAsEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase10FileSaveAsEv
-_ZN23T100ProjectSkeletalBase10FileSaveAsEv:
+	.globl	_ZN23T100ProjectSkeletalBase8EditUndoEv
+	.def	_ZN23T100ProjectSkeletalBase8EditUndoEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase8EditUndoEv
+_ZN23T100ProjectSkeletalBase8EditUndoEv:
 .LFB14638:
-	.loc 5 165 1
+	.loc 5 172 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1779,8 +1724,8 @@ _ZN23T100ProjectSkeletalBase10FileSaveAsEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:167: }
-	.loc 5 167 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:174: }
+	.loc 5 174 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1790,12 +1735,12 @@ _ZN23T100ProjectSkeletalBase10FileSaveAsEv:
 .LFE14638:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase8EditUndoEv
-	.def	_ZN23T100ProjectSkeletalBase8EditUndoEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase8EditUndoEv
-_ZN23T100ProjectSkeletalBase8EditUndoEv:
+	.globl	_ZN23T100ProjectSkeletalBase8EditRedoEv
+	.def	_ZN23T100ProjectSkeletalBase8EditRedoEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase8EditRedoEv
+_ZN23T100ProjectSkeletalBase8EditRedoEv:
 .LFB14639:
-	.loc 5 170 1
+	.loc 5 177 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1806,8 +1751,8 @@ _ZN23T100ProjectSkeletalBase8EditUndoEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:172: }
-	.loc 5 172 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:179: }
+	.loc 5 179 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1817,12 +1762,12 @@ _ZN23T100ProjectSkeletalBase8EditUndoEv:
 .LFE14639:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase8EditRedoEv
-	.def	_ZN23T100ProjectSkeletalBase8EditRedoEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase8EditRedoEv
-_ZN23T100ProjectSkeletalBase8EditRedoEv:
+	.globl	_ZN23T100ProjectSkeletalBase7EditCutEv
+	.def	_ZN23T100ProjectSkeletalBase7EditCutEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase7EditCutEv
+_ZN23T100ProjectSkeletalBase7EditCutEv:
 .LFB14640:
-	.loc 5 175 1
+	.loc 5 182 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1833,8 +1778,8 @@ _ZN23T100ProjectSkeletalBase8EditRedoEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:177: }
-	.loc 5 177 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:184: }
+	.loc 5 184 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1844,12 +1789,12 @@ _ZN23T100ProjectSkeletalBase8EditRedoEv:
 .LFE14640:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase7EditCutEv
-	.def	_ZN23T100ProjectSkeletalBase7EditCutEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase7EditCutEv
-_ZN23T100ProjectSkeletalBase7EditCutEv:
+	.globl	_ZN23T100ProjectSkeletalBase8EditCopyEv
+	.def	_ZN23T100ProjectSkeletalBase8EditCopyEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase8EditCopyEv
+_ZN23T100ProjectSkeletalBase8EditCopyEv:
 .LFB14641:
-	.loc 5 180 1
+	.loc 5 187 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1860,8 +1805,8 @@ _ZN23T100ProjectSkeletalBase7EditCutEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:182: }
-	.loc 5 182 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:189: }
+	.loc 5 189 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1871,12 +1816,12 @@ _ZN23T100ProjectSkeletalBase7EditCutEv:
 .LFE14641:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase8EditCopyEv
-	.def	_ZN23T100ProjectSkeletalBase8EditCopyEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase8EditCopyEv
-_ZN23T100ProjectSkeletalBase8EditCopyEv:
+	.globl	_ZN23T100ProjectSkeletalBase9EditPasteEv
+	.def	_ZN23T100ProjectSkeletalBase9EditPasteEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase9EditPasteEv
+_ZN23T100ProjectSkeletalBase9EditPasteEv:
 .LFB14642:
-	.loc 5 185 1
+	.loc 5 192 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1887,8 +1832,8 @@ _ZN23T100ProjectSkeletalBase8EditCopyEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:187: }
-	.loc 5 187 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:194: }
+	.loc 5 194 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1898,12 +1843,12 @@ _ZN23T100ProjectSkeletalBase8EditCopyEv:
 .LFE14642:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase9EditPasteEv
-	.def	_ZN23T100ProjectSkeletalBase9EditPasteEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase9EditPasteEv
-_ZN23T100ProjectSkeletalBase9EditPasteEv:
+	.globl	_ZN23T100ProjectSkeletalBase10SearchFindEv
+	.def	_ZN23T100ProjectSkeletalBase10SearchFindEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase10SearchFindEv
+_ZN23T100ProjectSkeletalBase10SearchFindEv:
 .LFB14643:
-	.loc 5 190 1
+	.loc 5 197 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1914,8 +1859,8 @@ _ZN23T100ProjectSkeletalBase9EditPasteEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:192: }
-	.loc 5 192 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:199: }
+	.loc 5 199 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1925,12 +1870,12 @@ _ZN23T100ProjectSkeletalBase9EditPasteEv:
 .LFE14643:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase10SearchFindEv
-	.def	_ZN23T100ProjectSkeletalBase10SearchFindEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase10SearchFindEv
-_ZN23T100ProjectSkeletalBase10SearchFindEv:
+	.globl	_ZN23T100ProjectSkeletalBase13SearchReplaceEv
+	.def	_ZN23T100ProjectSkeletalBase13SearchReplaceEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase13SearchReplaceEv
+_ZN23T100ProjectSkeletalBase13SearchReplaceEv:
 .LFB14644:
-	.loc 5 195 1
+	.loc 5 202 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1941,8 +1886,8 @@ _ZN23T100ProjectSkeletalBase10SearchFindEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:197: }
-	.loc 5 197 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:204: }
+	.loc 5 204 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1952,12 +1897,12 @@ _ZN23T100ProjectSkeletalBase10SearchFindEv:
 .LFE14644:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase13SearchReplaceEv
-	.def	_ZN23T100ProjectSkeletalBase13SearchReplaceEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase13SearchReplaceEv
-_ZN23T100ProjectSkeletalBase13SearchReplaceEv:
+	.globl	_ZN23T100ProjectSkeletalBase12CompileBuildEv
+	.def	_ZN23T100ProjectSkeletalBase12CompileBuildEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase12CompileBuildEv
+_ZN23T100ProjectSkeletalBase12CompileBuildEv:
 .LFB14645:
-	.loc 5 200 1
+	.loc 5 207 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1968,8 +1913,8 @@ _ZN23T100ProjectSkeletalBase13SearchReplaceEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:202: }
-	.loc 5 202 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:209: }
+	.loc 5 209 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1979,12 +1924,12 @@ _ZN23T100ProjectSkeletalBase13SearchReplaceEv:
 .LFE14645:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase12CompileBuildEv
-	.def	_ZN23T100ProjectSkeletalBase12CompileBuildEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase12CompileBuildEv
-_ZN23T100ProjectSkeletalBase12CompileBuildEv:
+	.globl	_ZN23T100ProjectSkeletalBase11SetupEditorEv
+	.def	_ZN23T100ProjectSkeletalBase11SetupEditorEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase11SetupEditorEv
+_ZN23T100ProjectSkeletalBase11SetupEditorEv:
 .LFB14646:
-	.loc 5 205 1
+	.loc 5 212 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1995,8 +1940,8 @@ _ZN23T100ProjectSkeletalBase12CompileBuildEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:207: }
-	.loc 5 207 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:214: }
+	.loc 5 214 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -2006,12 +1951,12 @@ _ZN23T100ProjectSkeletalBase12CompileBuildEv:
 .LFE14646:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase11SetupEditorEv
-	.def	_ZN23T100ProjectSkeletalBase11SetupEditorEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase11SetupEditorEv
-_ZN23T100ProjectSkeletalBase11SetupEditorEv:
+	.globl	_ZN23T100ProjectSkeletalBase13SetupCompilerEv
+	.def	_ZN23T100ProjectSkeletalBase13SetupCompilerEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN23T100ProjectSkeletalBase13SetupCompilerEv
+_ZN23T100ProjectSkeletalBase13SetupCompilerEv:
 .LFB14647:
-	.loc 5 210 1
+	.loc 5 217 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2022,8 +1967,8 @@ _ZN23T100ProjectSkeletalBase11SetupEditorEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:212: }
-	.loc 5 212 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:219: }
+	.loc 5 219 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -2033,39 +1978,12 @@ _ZN23T100ProjectSkeletalBase11SetupEditorEv:
 .LFE14647:
 	.seh_endproc
 	.align 2
-	.globl	_ZN23T100ProjectSkeletalBase13SetupCompilerEv
-	.def	_ZN23T100ProjectSkeletalBase13SetupCompilerEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN23T100ProjectSkeletalBase13SetupCompilerEv
-_ZN23T100ProjectSkeletalBase13SetupCompilerEv:
-.LFB14648:
-	.loc 5 215 1
-	.cfi_startproc
-	pushq	%rbp	 #
-	.seh_pushreg	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp	 #,
-	.seh_setframe	%rbp, 0
-	.cfi_def_cfa_register 6
-	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:217: }
-	.loc 5 217 1
-	nop	
-	popq	%rbp	 #
-	.cfi_restore 6
-	.cfi_def_cfa 7, 8
-	ret	
-	.cfi_endproc
-.LFE14648:
-	.seh_endproc
-	.align 2
 	.globl	_ZN23T100ProjectSkeletalBase9HelpAboutEv
 	.def	_ZN23T100ProjectSkeletalBase9HelpAboutEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN23T100ProjectSkeletalBase9HelpAboutEv
 _ZN23T100ProjectSkeletalBase9HelpAboutEv:
-.LFB14649:
-	.loc 5 220 1
+.LFB14648:
+	.loc 5 222 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2078,16 +1996,16 @@ _ZN23T100ProjectSkeletalBase9HelpAboutEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:221:     m_view->ShowAboutDialog();
-	.loc 5 221 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:223:     m_view->ShowAboutDialog();
+	.loc 5 223 5
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	8(%rax), %rax	 # this_4(D)->m_view, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:221:     m_view->ShowAboutDialog();
-	.loc 5 221 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:223:     m_view->ShowAboutDialog();
+	.loc 5 223 28
 	movq	%rax, %rcx	 # _2,
 	call	_ZN19T100ProjectViewBase15ShowAboutDialogEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:222: }
-	.loc 5 222 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:224: }
+	.loc 5 224 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2095,7 +2013,7 @@ _ZN23T100ProjectSkeletalBase9HelpAboutEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE14649:
+.LFE14648:
 	.seh_endproc
 	.globl	_ZTV23T100ProjectSkeletalBase
 	.section	.rdata$_ZTV23T100ProjectSkeletalBase,"dr"
@@ -2126,7 +2044,7 @@ _ZTV20wxObjectEventFunctor:
 	.def	_ZN20wxObjectEventFunctorD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN20wxObjectEventFunctorD1Ev
 _ZN20wxObjectEventFunctorD1Ev:
-.LFB15840:
+.LFB15839:
 	.loc 4 240 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2157,7 +2075,7 @@ _ZN20wxObjectEventFunctorD1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE15840:
+.LFE15839:
 	.seh_endproc
 	.section	.text$_ZN20wxObjectEventFunctorD0Ev,"x"
 	.linkonce discard
@@ -2166,7 +2084,7 @@ _ZN20wxObjectEventFunctorD1Ev:
 	.def	_ZN20wxObjectEventFunctorD0Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN20wxObjectEventFunctorD0Ev
 _ZN20wxObjectEventFunctorD0Ev:
-.LFB15841:
+.LFB15840:
 	.loc 4 240 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2194,7 +2112,7 @@ _ZN20wxObjectEventFunctorD0Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE15841:
+.LFE15840:
 	.seh_endproc
 	.globl	_ZTV20wxThreadHelperThread
 	.section	.rdata$_ZTV20wxThreadHelperThread,"dr"
@@ -2217,7 +2135,7 @@ _ZTV20wxThreadHelperThread:
 	.def	_ZN20wxThreadHelperThreadD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN20wxThreadHelperThreadD1Ev
 _ZN20wxThreadHelperThreadD1Ev:
-.LFB15852:
+.LFB15851:
 	.loc 2 663 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2248,7 +2166,7 @@ _ZN20wxThreadHelperThreadD1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE15852:
+.LFE15851:
 	.seh_endproc
 	.section	.text$_ZN20wxThreadHelperThreadD0Ev,"x"
 	.linkonce discard
@@ -2257,7 +2175,7 @@ _ZN20wxThreadHelperThreadD1Ev:
 	.def	_ZN20wxThreadHelperThreadD0Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN20wxThreadHelperThreadD0Ev
 _ZN20wxThreadHelperThreadD0Ev:
-.LFB15853:
+.LFB15852:
 	.loc 2 663 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2285,7 +2203,7 @@ _ZN20wxThreadHelperThreadD0Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE15853:
+.LFE15852:
 	.seh_endproc
 	.globl	_ZTI23T100ProjectSkeletalBase
 	.section	.rdata$_ZTI23T100ProjectSkeletalBase,"dr"
@@ -2375,7 +2293,7 @@ _ZTS8wxThread:
 	.def	__tcf_0;	.scl	3;	.type	32;	.endef
 	.seh_proc	__tcf_0
 __tcf_0:
-.LFB15871:
+.LFB15870:
 	.file 6 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream"
 	.loc 6 74 25
 	.cfi_startproc
@@ -2400,13 +2318,13 @@ __tcf_0:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE15871:
+.LFE15870:
 	.seh_endproc
 	.def	_Z41__static_initialization_and_destruction_0ii;	.scl	3;	.type	32;	.endef
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
-.LFB15870:
-	.loc 5 222 1
+.LFB15869:
+	.loc 5 224 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2420,23 +2338,23 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:222: }
-	.loc 5 222 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:224: }
+	.loc 5 224 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
-	jne	.L91	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:222: }
-	.loc 5 222 1 is_stmt 0 discriminator 1
+	jne	.L85	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:224: }
+	.loc 5 224 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
-	jne	.L91	 #,
+	jne	.L85	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 6 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
 	call	_ZNSt8ios_base4InitC1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
-.L91:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:222: }
-	.loc 5 222 1
+.L85:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:224: }
+	.loc 5 224 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2444,13 +2362,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE15870:
+.LFE15869:
 	.seh_endproc
 	.def	_GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev;	.scl	3;	.type	32;	.endef
 	.seh_proc	_GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev
 _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
-.LFB15963:
-	.loc 5 222 1
+.LFB15962:
+	.loc 5 224 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2462,8 +2380,8 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:222: }
-	.loc 5 222 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:224: }
+	.loc 5 224 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -2474,7 +2392,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE15963:
+.LFE15962:
 	.seh_endproc
 	.section	.ctors,"w"
 	.align 8
@@ -2582,7 +2500,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.file 105 "C:/zoo/lib/wxWidgets-3.0.5/include/wx/msw/textentry.h"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x40b2a
+	.long	0x40a89
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -2594,7 +2512,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.secrel32	.Ldebug_ranges0+0
 	.quad	0
 	.secrel32	.Ldebug_line0
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "__gnuc_va_list\0"
 	.byte	0x7
 	.byte	0x18
@@ -2610,7 +2528,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "char\0"
 	.uleb128 0x9
 	.long	0x16b
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "va_list\0"
 	.byte	0x7
 	.byte	0x1f
@@ -2622,7 +2540,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "short int\0"
 	.uleb128 0x9
 	.long	0x188
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "size_t\0"
 	.byte	0x8
 	.byte	0x23
@@ -2642,13 +2560,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "long long int\0"
 	.uleb128 0x9
 	.long	0x1cd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "intptr_t\0"
 	.byte	0x8
 	.byte	0x3e
 	.byte	0x23
 	.long	0x1cd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uintptr_t\0"
 	.byte	0x8
 	.byte	0x4b
@@ -2660,7 +2578,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x58
 	.byte	0x23
 	.long	0x1cd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wint_t\0"
 	.byte	0x8
 	.byte	0x6a
@@ -2672,7 +2590,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "short unsigned int\0"
 	.uleb128 0x9
 	.long	0x221
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wctype_t\0"
 	.byte	0x8
 	.byte	0x6b
@@ -2690,13 +2608,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "long int\0"
 	.uleb128 0x9
 	.long	0x259
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "__time64_t\0"
 	.byte	0x8
 	.byte	0x7b
 	.byte	0x23
 	.long	0x1cd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "time_t\0"
 	.byte	0x8
 	.byte	0x8a
@@ -2891,7 +2809,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x4c4
 	.uleb128 0x7b
 	.ascii "threadmbcinfostruct\0"
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "localeinfo_struct\0"
 	.byte	0x10
 	.byte	0x8
@@ -2919,7 +2837,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x1b7
 	.byte	0x3
 	.long	0x4d9
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "tagLC_ID\0"
 	.byte	0x6
 	.byte	0x8
@@ -2980,7 +2898,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x3c
 	.long	0x5dd
 	.long	0x5dd
-	.uleb128 0x47
+	.uleb128 0x46
 	.long	0x1ae
 	.byte	0x5
 	.byte	0
@@ -2993,14 +2911,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x3c
 	.long	0x582
 	.long	0x607
-	.uleb128 0x47
+	.uleb128 0x46
 	.long	0x1ae
 	.byte	0x5
 	.byte	0
 	.uleb128 0x3c
 	.long	0x2cd
 	.long	0x617
-	.uleb128 0x47
+	.uleb128 0x46
 	.long	0x1ae
 	.byte	0x5
 	.byte	0
@@ -3243,7 +3161,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24d
 	.byte	0x4
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "div_t\0"
 	.byte	0xa
 	.byte	0x3f
@@ -3271,7 +3189,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x259
 	.byte	0x4
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "ldiv_t\0"
 	.byte	0xa
 	.byte	0x44
@@ -3303,7 +3221,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x3c
 	.long	0x591
 	.long	0x9bf
-	.uleb128 0x47
+	.uleb128 0x46
 	.long	0x1ae
 	.byte	0
 	.byte	0
@@ -3504,7 +3422,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x591
 	.byte	0x28
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "FILE\0"
 	.byte	0xc
 	.byte	0x34
@@ -3531,7 +3449,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xd9
 	.byte	0x1c
 	.long	0xc29
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "tm\0"
 	.byte	0x24
 	.byte	0xc
@@ -3665,7 +3583,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x57
 	.byte	0x1a
 	.long	0x51a
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxChar\0"
 	.byte	0xe
 	.byte	0x9c
@@ -3673,7 +3591,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x5a7
 	.uleb128 0x9
 	.long	0xdf2
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxStringCharType\0"
 	.byte	0xe
 	.byte	0xd0
@@ -3681,7 +3599,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x5a7
 	.uleb128 0x9
 	.long	0xe06
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxAssertHandler_t\0"
 	.byte	0xf
 	.byte	0x4e
@@ -3947,7 +3865,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x404
 	.byte	0x7
 	.long	0x13279
-	.uleb128 0x48
+	.uleb128 0x47
 	.ascii "impl\0"
 	.byte	0x10
 	.word	0x404
@@ -4389,7 +4307,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x427
 	.byte	0x7
 	.long	0x13315
-	.uleb128 0x48
+	.uleb128 0x47
 	.ascii "impl\0"
 	.byte	0x10
 	.word	0x427
@@ -4521,7 +4439,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x9
 	.long	0x1676
-	.uleb128 0x5e
+	.uleb128 0x5d
 	.ascii "caseCompare\0"
 	.byte	0x7
 	.byte	0x4
@@ -4538,7 +4456,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "ignoreCase\0"
 	.byte	0x1
 	.byte	0
-	.uleb128 0x5e
+	.uleb128 0x5d
 	.ascii "stripType\0"
 	.byte	0x7
 	.byte	0x4
@@ -4558,7 +4476,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "both\0"
 	.byte	0x3
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "ConvertedBuffer<char>\0"
 	.byte	0x10
 	.byte	0x10
@@ -4589,7 +4507,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x47
 	.ascii "Extend\0"
 	.byte	0x10
 	.word	0xda4
@@ -4603,7 +4521,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x19a
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x47
 	.ascii "AsScopedBuffer\0"
 	.byte	0x10
 	.word	0xdb1
@@ -4675,7 +4593,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x1bb
 	.byte	0x34
 	.long	0x1ff1
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "SubstrBufFromType<wxScopedCharTypeBuffer<wchar_t> >\0"
 	.byte	0x10
 	.byte	0x10
@@ -4749,7 +4667,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2159
 	.uleb128 0x9
 	.long	0x213b
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "SubstrBufFromType<wchar_t const*>\0"
 	.byte	0x10
 	.byte	0x10
@@ -12528,7 +12446,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x5a7
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x47
 	.ascii "DoPrintfWchar\0"
 	.byte	0x10
 	.word	0xd83
@@ -12562,7 +12480,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x10
 	.long	0x1da30
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x47
 	.ascii "AsChar\0"
 	.byte	0x10
 	.word	0xdc6
@@ -13272,7 +13190,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x8
 	.uleb128 0x9
 	.long	0xb612
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "fpos_t\0"
 	.byte	0x12
 	.byte	0x7b
@@ -13280,7 +13198,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x1cd
 	.uleb128 0x9
 	.long	0xb61a
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wctrans_t\0"
 	.byte	0x13
 	.byte	0xb0
@@ -13307,7 +13225,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x3c
 	.long	0x591
 	.long	0xb685
-	.uleb128 0x47
+	.uleb128 0x46
 	.long	0x1ae
 	.byte	0x1
 	.byte	0
@@ -13363,7 +13281,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "NonOwned\0"
 	.byte	0x1
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF83
 	.byte	0x15
 	.byte	0x26
@@ -13380,7 +13298,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xb6e5
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x5e
 	.ascii "~UntypedBufferData\0"
 	.byte	0x15
 	.byte	0x29
@@ -13426,7 +13344,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0xb6db
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxScopedCharBuffer\0"
 	.byte	0x15
 	.byte	0xf1
@@ -13533,7 +13451,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "release\0"
 	.byte	0x15
 	.byte	0x85
@@ -13636,7 +13554,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x58
 	.long	0xb6db
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x5e
 	.ascii "Data\0"
 	.byte	0x15
 	.byte	0xa6
@@ -13742,7 +13660,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x19a
 	.byte	0
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "m_data\0"
 	.byte	0x15
 	.byte	0xee
@@ -13756,7 +13674,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x9
 	.long	0xb818
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxScopedWCharBuffer\0"
 	.byte	0x15
 	.byte	0xf2
@@ -13863,7 +13781,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "release\0"
 	.byte	0x15
 	.byte	0x85
@@ -13966,7 +13884,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x58
 	.long	0xb6db
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x5e
 	.ascii "Data\0"
 	.byte	0x15
 	.byte	0xa6
@@ -14072,7 +13990,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x19a
 	.byte	0
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "m_data\0"
 	.byte	0x15
 	.byte	0xee
@@ -14397,7 +14315,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x99
 	.byte	0x7
 	.long	0xcf2c
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF96
 	.byte	0x10
 	.byte	0x9d
@@ -14470,7 +14388,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "AsWChar\0"
 	.byte	0x10
 	.byte	0xb2
@@ -14496,7 +14414,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x211eb
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "AsChar\0"
 	.byte	0x10
 	.byte	0xb5
@@ -14509,7 +14427,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x211eb
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "AsUnsignedChar\0"
 	.byte	0x10
 	.byte	0xb6
@@ -14535,7 +14453,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x211eb
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "operator unsigned char const*\0"
 	.byte	0x10
 	.byte	0xb9
@@ -14574,7 +14492,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x211eb
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "AsWCharBuf\0"
 	.byte	0x10
 	.byte	0xc3
@@ -14587,7 +14505,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x211eb
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "AsString\0"
 	.byte	0x10
 	.byte	0xc8
@@ -14600,7 +14518,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x211eb
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "AsInternal\0"
 	.byte	0x10
 	.byte	0xcc
@@ -15524,7 +15442,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x4d
 	.byte	0xb
 	.long	0x12759
-	.uleb128 0x60
+	.uleb128 0x5f
 	.secrel32	.LASF99
 	.byte	0x8
 	.byte	0x19
@@ -15534,7 +15452,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x58
 	.long	0x181f0
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF99
 	.byte	0x19
 	.byte	0x91
@@ -15549,7 +15467,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x1cf97
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF99
 	.byte	0x19
 	.byte	0x94
@@ -15585,13 +15503,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xa1
 	.byte	0x7
 	.long	0xe2ad
-	.uleb128 0x61
+	.uleb128 0x60
 	.secrel32	.LASF101
 	.byte	0x19
 	.byte	0xa2
 	.byte	0x35
 	.long	0x1d937
-	.uleb128 0x61
+	.uleb128 0x60
 	.secrel32	.LASF102
 	.byte	0x19
 	.byte	0xa3
@@ -15631,7 +15549,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x80
 	.long	0xe28a
 	.byte	0x10
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF105
 	.byte	0x19
 	.byte	0xa7
@@ -15644,7 +15562,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xe27d
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF106
 	.byte	0x19
 	.byte	0xab
@@ -15700,7 +15618,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1d94d
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF109
 	.byte	0x19
 	.byte	0xc7
@@ -15713,7 +15631,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xe2ad
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF110
 	.byte	0x19
 	.byte	0xcb
@@ -15754,7 +15672,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xe2ad
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF113
 	.byte	0x19
 	.byte	0xda
@@ -15765,7 +15683,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1d947
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF114
 	.byte	0x19
 	.byte	0xe1
@@ -15778,7 +15696,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xe2ad
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF115
 	.byte	0x19
 	.byte	0xf7
@@ -18289,7 +18207,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x4d
 	.byte	0xb
 	.long	0x16d93
-	.uleb128 0x60
+	.uleb128 0x5f
 	.secrel32	.LASF99
 	.byte	0x8
 	.byte	0x19
@@ -18299,7 +18217,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x58
 	.long	0x1828c
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF99
 	.byte	0x19
 	.byte	0x91
@@ -18314,7 +18232,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x1cfc1
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF99
 	.byte	0x19
 	.byte	0x94
@@ -18350,13 +18268,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xa1
 	.byte	0x7
 	.long	0x128df
-	.uleb128 0x61
+	.uleb128 0x60
 	.secrel32	.LASF101
 	.byte	0x19
 	.byte	0xa2
 	.byte	0x35
 	.long	0x1d9ad
-	.uleb128 0x61
+	.uleb128 0x60
 	.secrel32	.LASF102
 	.byte	0x19
 	.byte	0xa3
@@ -18397,7 +18315,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x80
 	.long	0x128bc
 	.byte	0x10
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF105
 	.byte	0x19
 	.byte	0xa7
@@ -18410,7 +18328,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x128af
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF106
 	.byte	0x19
 	.byte	0xab
@@ -18466,7 +18384,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1d9c3
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF109
 	.byte	0x19
 	.byte	0xc7
@@ -18479,7 +18397,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x128df
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF110
 	.byte	0x19
 	.byte	0xcb
@@ -18520,7 +18438,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x128df
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF113
 	.byte	0x19
 	.byte	0xda
@@ -18531,7 +18449,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1d9bd
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF114
 	.byte	0x19
 	.byte	0xe1
@@ -18544,7 +18462,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x128df
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF115
 	.byte	0x19
 	.byte	0xf7
@@ -21048,7 +20966,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x9
 	.long	0x1275e
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "string\0"
 	.byte	0x1a
 	.byte	0x4a
@@ -21056,7 +20974,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0xe135
 	.uleb128 0x9
 	.long	0x16d98
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wstring\0"
 	.byte	0x1a
 	.byte	0x4e
@@ -21237,7 +21155,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x1b
 	.word	0x9c3
 	.byte	0xd
-	.uleb128 0x60
+	.uleb128 0x5f
 	.secrel32	.LASF148
 	.byte	0x1
 	.byte	0x1c
@@ -21621,7 +21539,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x127
 	.byte	0xe
 	.long	0x1ccb5
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "char_traits<char>\0"
 	.byte	0x1
 	.byte	0x1f
@@ -21825,13 +21743,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.secrel32	.LASF143
 	.long	0x16b
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "size_t\0"
 	.byte	0x20
 	.byte	0xee
 	.byte	0x1a
 	.long	0x1ae
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "char_traits<wchar_t>\0"
 	.byte	0x1
 	.byte	0x1f
@@ -22208,7 +22126,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xb612
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x5e
 	.ascii "_M_addref\0"
 	.byte	0x22
 	.byte	0x55
@@ -22219,7 +22137,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1cf30
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x5e
 	.ascii "_M_release\0"
 	.byte	0x22
 	.byte	0x56
@@ -22403,7 +22321,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x17c60
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "nullptr_t\0"
 	.byte	0x20
 	.byte	0xf2
@@ -22427,7 +22345,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x9
 	.long	0x18146
-	.uleb128 0x60
+	.uleb128 0x5f
 	.secrel32	.LASF155
 	.byte	0x1
 	.byte	0x23
@@ -22937,7 +22855,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xbd
 	.byte	0x16
 	.long	0x1d8d5
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "allocator_traits<std::allocator<char> >\0"
 	.byte	0x1
 	.byte	0x28
@@ -23091,7 +23009,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x13
 	.long	0x187e5
 	.byte	0x8
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF164
 	.byte	0x29
 	.byte	0x3e
@@ -23151,7 +23069,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1d97d
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "end\0"
 	.byte	0x29
 	.byte	0x4f
@@ -23174,7 +23092,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >\0"
 	.uleb128 0x10
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >\0"
-	.uleb128 0x46
+	.uleb128 0x45
 	.ascii "allocator_traits<std::allocator<wchar_t> >\0"
 	.byte	0x1
 	.byte	0x28
@@ -23328,7 +23246,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x13
 	.long	0x18cd9
 	.byte	0x8
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF164
 	.byte	0x29
 	.byte	0x3e
@@ -23388,7 +23306,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x1d9f3
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "end\0"
 	.byte	0x29
 	.byte	0x4f
@@ -23655,7 +23573,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.secrel32	.LASF144
 	.long	0x177b1
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "istream\0"
 	.byte	0x30
 	.byte	0x8a
@@ -23668,7 +23586,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x12
 	.ascii "_ZSt3cin\0"
 	.long	0x192d2
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "ostream\0"
 	.byte	0x30
 	.byte	0x8d
@@ -23695,7 +23613,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x12
 	.ascii "_ZSt4clog\0"
 	.long	0x192f7
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wistream\0"
 	.byte	0x30
 	.byte	0xb2
@@ -23708,7 +23626,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x13
 	.ascii "_ZSt4wcin\0"
 	.long	0x1934c
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wostream\0"
 	.byte	0x30
 	.byte	0xb5
@@ -23741,7 +23659,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x4a
 	.byte	0x19
 	.long	0x190d0
-	.uleb128 0x60
+	.uleb128 0x5f
 	.secrel32	.LASF166
 	.byte	0x1
 	.byte	0x31
@@ -24346,7 +24264,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xe8
 	.byte	0xb
 	.long	0x1d33e
-	.uleb128 0x62
+	.uleb128 0x61
 	.ascii "div\0"
 	.byte	0x26
 	.byte	0xd5
@@ -24437,35 +24355,35 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x1d919
 	.byte	0
-	.uleb128 0x4a
+	.uleb128 0x49
 	.secrel32	.LASF177
 	.byte	0x37
 	.byte	0x64
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIcEcE27_S_propagate_on_copy_assignEv\0"
 	.long	0xa869
-	.uleb128 0x4a
+	.uleb128 0x49
 	.secrel32	.LASF178
 	.byte	0x37
 	.byte	0x67
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIcEcE27_S_propagate_on_move_assignEv\0"
 	.long	0xa869
-	.uleb128 0x4a
+	.uleb128 0x49
 	.secrel32	.LASF179
 	.byte	0x37
 	.byte	0x6a
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIcEcE20_S_propagate_on_swapEv\0"
 	.long	0xa869
-	.uleb128 0x4a
+	.uleb128 0x49
 	.secrel32	.LASF180
 	.byte	0x37
 	.byte	0x6d
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIcEcE15_S_always_equalEv\0"
 	.long	0xa869
-	.uleb128 0x4a
+	.uleb128 0x49
 	.secrel32	.LASF181
 	.byte	0x37
 	.byte	0x70
@@ -25171,35 +25089,35 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x1d98f
 	.byte	0
-	.uleb128 0x4a
+	.uleb128 0x49
 	.secrel32	.LASF177
 	.byte	0x37
 	.byte	0x64
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE27_S_propagate_on_copy_assignEv\0"
 	.long	0xa869
-	.uleb128 0x4a
+	.uleb128 0x49
 	.secrel32	.LASF178
 	.byte	0x37
 	.byte	0x67
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE27_S_propagate_on_move_assignEv\0"
 	.long	0xa869
-	.uleb128 0x4a
+	.uleb128 0x49
 	.secrel32	.LASF179
 	.byte	0x37
 	.byte	0x6a
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE20_S_propagate_on_swapEv\0"
 	.long	0xa869
-	.uleb128 0x4a
+	.uleb128 0x49
 	.secrel32	.LASF180
 	.byte	0x37
 	.byte	0x6d
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE15_S_always_equalEv\0"
 	.long	0xa869
-	.uleb128 0x4a
+	.uleb128 0x49
 	.secrel32	.LASF181
 	.byte	0x37
 	.byte	0x70
@@ -26748,157 +26666,157 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x17a6e
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int8_t\0"
 	.byte	0x3a
 	.byte	0x23
 	.byte	0x15
 	.long	0xa898
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint8_t\0"
 	.byte	0x3a
 	.byte	0x24
 	.byte	0x19
 	.long	0x8bd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int16_t\0"
 	.byte	0x3a
 	.byte	0x25
 	.byte	0x10
 	.long	0x188
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint16_t\0"
 	.byte	0x3a
 	.byte	0x26
 	.byte	0x19
 	.long	0x221
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int32_t\0"
 	.byte	0x3a
 	.byte	0x27
 	.byte	0xe
 	.long	0x24d
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint32_t\0"
 	.byte	0x3a
 	.byte	0x28
 	.byte	0x14
 	.long	0x5bd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int64_t\0"
 	.byte	0x3a
 	.byte	0x29
 	.byte	0x26
 	.long	0x1cd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint64_t\0"
 	.byte	0x3a
 	.byte	0x2a
 	.byte	0x30
 	.long	0x1ae
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int_least8_t\0"
 	.byte	0x3a
 	.byte	0x2d
 	.byte	0x15
 	.long	0xa898
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint_least8_t\0"
 	.byte	0x3a
 	.byte	0x2e
 	.byte	0x19
 	.long	0x8bd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int_least16_t\0"
 	.byte	0x3a
 	.byte	0x2f
 	.byte	0x10
 	.long	0x188
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint_least16_t\0"
 	.byte	0x3a
 	.byte	0x30
 	.byte	0x19
 	.long	0x221
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int_least32_t\0"
 	.byte	0x3a
 	.byte	0x31
 	.byte	0xe
 	.long	0x24d
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint_least32_t\0"
 	.byte	0x3a
 	.byte	0x32
 	.byte	0x14
 	.long	0x5bd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int_least64_t\0"
 	.byte	0x3a
 	.byte	0x33
 	.byte	0x26
 	.long	0x1cd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint_least64_t\0"
 	.byte	0x3a
 	.byte	0x34
 	.byte	0x30
 	.long	0x1ae
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int_fast8_t\0"
 	.byte	0x3a
 	.byte	0x3a
 	.byte	0x15
 	.long	0xa898
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint_fast8_t\0"
 	.byte	0x3a
 	.byte	0x3b
 	.byte	0x17
 	.long	0x8bd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int_fast16_t\0"
 	.byte	0x3a
 	.byte	0x3c
 	.byte	0x10
 	.long	0x188
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint_fast16_t\0"
 	.byte	0x3a
 	.byte	0x3d
 	.byte	0x19
 	.long	0x221
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int_fast32_t\0"
 	.byte	0x3a
 	.byte	0x3e
 	.byte	0xe
 	.long	0x24d
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint_fast32_t\0"
 	.byte	0x3a
 	.byte	0x3f
 	.byte	0x18
 	.long	0x5bd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "int_fast64_t\0"
 	.byte	0x3a
 	.byte	0x40
 	.byte	0x26
 	.long	0x1cd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uint_fast64_t\0"
 	.byte	0x3a
 	.byte	0x41
 	.byte	0x30
 	.long	0x1ae
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "intmax_t\0"
 	.byte	0x3a
 	.byte	0x44
 	.byte	0x26
 	.long	0x1cd
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "uintmax_t\0"
 	.byte	0x3a
 	.byte	0x45
@@ -27014,7 +26932,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x1cffc
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "_Atomic_word\0"
 	.byte	0x3c
 	.byte	0x20
@@ -27152,7 +27070,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x19a
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x62
 	.ascii "qsort\0"
 	.byte	0xa
 	.word	0x1b9
@@ -27173,7 +27091,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x1d6
 	.byte	0xf
 	.long	0x24d
-	.uleb128 0x63
+	.uleb128 0x62
 	.ascii "srand\0"
 	.byte	0xa
 	.word	0x1d8
@@ -27332,7 +27250,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xa18
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x62
 	.ascii "clearerr\0"
 	.byte	0x12
 	.word	0x271
@@ -27545,7 +27463,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x2bc
 	.byte	0xf
 	.long	0x24d
-	.uleb128 0x63
+	.uleb128 0x62
 	.ascii "perror\0"
 	.byte	0xa
 	.word	0x28b
@@ -27588,7 +27506,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xd530
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x62
 	.ascii "rewind\0"
 	.byte	0x12
 	.word	0x2da
@@ -27609,7 +27527,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0xd530
 	.uleb128 0x31
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x62
 	.ascii "setbuf\0"
 	.byte	0x12
 	.word	0x2dc
@@ -27835,7 +27753,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x3c
 	.long	0x16b
 	.long	0x1d947
-	.uleb128 0x47
+	.uleb128 0x46
 	.long	0x1ae
 	.byte	0xf
 	.byte	0
@@ -27893,7 +27811,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x3c
 	.long	0x5a7
 	.long	0x1d9bd
-	.uleb128 0x47
+	.uleb128 0x46
 	.long	0x1ae
 	.byte	0x7
 	.byte	0
@@ -27930,7 +27848,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x16da7
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxStdWideString\0"
 	.byte	0x18
 	.byte	0x46
@@ -27938,13 +27856,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x16dac
 	.uleb128 0x9
 	.long	0x1d9ff
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxStdString\0"
 	.byte	0x18
 	.byte	0x4c
 	.byte	0x1d
 	.long	0x1d9ff
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxStringImpl\0"
 	.byte	0x18
 	.byte	0x61
@@ -29706,7 +29624,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x5a7
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x61
 	.ascii "From8bit\0"
 	.byte	0x3d
 	.byte	0x90
@@ -29717,7 +29635,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x16b
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x61
 	.ascii "To8bit\0"
 	.byte	0x3d
 	.byte	0x9c
@@ -29728,7 +29646,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x1dcb7
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x61
 	.ascii "FromHi8bit\0"
 	.byte	0x3d
 	.byte	0xa9
@@ -29739,7 +29657,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x16b
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x61
 	.ascii "ToHi8bit\0"
 	.byte	0x3d
 	.byte	0xaa
@@ -29750,7 +29668,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x1dcb7
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x61
 	.ascii "GetAsHi8bit\0"
 	.byte	0x3d
 	.byte	0xab
@@ -29786,7 +29704,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xb6
 	.byte	0x18
 	.long	0x20d1a
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF209
 	.byte	0x3d
 	.byte	0xbf
@@ -31482,7 +31400,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x5a7
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x47
 	.ascii "UniChar\0"
 	.byte	0x3d
 	.word	0x10c
@@ -31678,7 +31596,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x211d4
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetArgumentType\0"
 	.byte	0x3e
 	.byte	0xcb
@@ -31693,7 +31611,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x5bd
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "InputAsString\0"
 	.byte	0x3e
 	.byte	0xcf
@@ -31951,7 +31869,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0xd4a0
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxObjectConstructorFn\0"
 	.byte	0x3f
 	.byte	0x27
@@ -31998,7 +31916,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x21bba
 	.byte	0
 	.byte	0x1
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "m_table\0"
 	.byte	0x3f
 	.byte	0x5e
@@ -32159,7 +32077,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "CreateObject\0"
 	.byte	0x3f
 	.byte	0x40
@@ -32172,7 +32090,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x21bd9
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsDynamic\0"
 	.byte	0x3f
 	.byte	0x42
@@ -32185,7 +32103,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x21bd9
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetClassName\0"
 	.byte	0x3f
 	.byte	0x44
@@ -32198,7 +32116,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x21bd9
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetBaseClassName1\0"
 	.byte	0x3f
 	.byte	0x45
@@ -32211,7 +32129,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x21bd9
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetBaseClassName2\0"
 	.byte	0x3f
 	.byte	0x47
@@ -32224,7 +32142,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x21bd9
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetBaseClass1\0"
 	.byte	0x3f
 	.byte	0x49
@@ -32237,7 +32155,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x21bd9
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetBaseClass2\0"
 	.byte	0x3f
 	.byte	0x4a
@@ -32250,7 +32168,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x21bd9
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetSize\0"
 	.byte	0x3f
 	.byte	0x4b
@@ -32263,7 +32181,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x21bd9
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetConstructor\0"
 	.byte	0x3f
 	.byte	0x4d
@@ -32284,7 +32202,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "_ZN11wxClassInfo8GetFirstEv\0"
 	.long	0x21bd9
 	.byte	0x1
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetNext\0"
 	.byte	0x3f
 	.byte	0x50
@@ -32309,7 +32227,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xe63
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsKindOf\0"
 	.byte	0x3f
 	.byte	0x56
@@ -32418,7 +32336,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x21bf1
 	.byte	0
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF211
 	.byte	0x3f
 	.byte	0x77
@@ -32491,7 +32409,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x21dc2
 	.uleb128 0x66
 	.ascii "_vptr.wxRefCounter\0"
-	.long	0x3eee7
+	.long	0x3ee94
 	.byte	0
 	.byte	0x1
 	.uleb128 0xd
@@ -32504,9 +32422,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x21c55
 	.long	0x21c5b
 	.uleb128 0x2
-	.long	0x3fb3e
+	.long	0x3faeb
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetRefCount\0"
 	.byte	0x40
 	.byte	0xf6
@@ -32517,7 +32435,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x21c9a
 	.long	0x21ca0
 	.uleb128 0x2
-	.long	0x3fb44
+	.long	0x3faf1
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF90
@@ -32529,7 +32447,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x21ccc
 	.long	0x21cd2
 	.uleb128 0x2
-	.long	0x3fb3e
+	.long	0x3faeb
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF91
@@ -32541,7 +32459,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x21cfe
 	.long	0x21d04
 	.uleb128 0x2
-	.long	0x3fb3e
+	.long	0x3faeb
 	.byte	0
 	.uleb128 0x79
 	.ascii "~wxRefCounter\0"
@@ -32555,7 +32473,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x21d3a
 	.long	0x21d45
 	.uleb128 0x2
-	.long	0x3fb3e
+	.long	0x3faeb
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
@@ -32575,9 +32493,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x21d81
 	.long	0x21d8c
 	.uleb128 0x2
-	.long	0x3fb3e
+	.long	0x3faeb
 	.uleb128 0x1
-	.long	0x3fb4a
+	.long	0x3faf7
 	.byte	0
 	.uleb128 0x67
 	.secrel32	.LASF23
@@ -32585,24 +32503,24 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x108
 	.byte	0x5
 	.ascii "_ZN12wxRefCounteraSERKS_\0"
-	.long	0x3fb50
+	.long	0x3fafd
 	.long	0x21db6
 	.uleb128 0x2
-	.long	0x3fb3e
+	.long	0x3faeb
 	.uleb128 0x1
-	.long	0x3fb4a
+	.long	0x3faf7
 	.byte	0
 	.byte	0
 	.uleb128 0x9
 	.long	0x21c03
-	.uleb128 0x60
+	.uleb128 0x5f
 	.secrel32	.LASF218
 	.byte	0x8
 	.byte	0x41
 	.byte	0x48
 	.byte	0x19
 	.long	0x21e1a
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF218
 	.byte	0x41
 	.byte	0x4a
@@ -32782,7 +32700,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x3c
 	.long	0x5f2
 	.long	0x22191
-	.uleb128 0x47
+	.uleb128 0x46
 	.long	0x1ae
 	.byte	0x1e
 	.byte	0
@@ -33260,13 +33178,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x21332
-	.uleb128 0x64
+	.uleb128 0x63
 	.secrel32	.LASF223
 	.byte	0x30
 	.byte	0x42
 	.word	0x4ab
 	.byte	0x1
-	.long	0x3ef79
+	.long	0x3ef26
 	.long	0x2460d
 	.uleb128 0x39
 	.secrel32	.LASF18
@@ -34061,7 +33979,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.long	0x231dc
 	.uleb128 0x28
-	.long	0x3ef79
+	.long	0x3ef26
 	.byte	0
 	.byte	0x1
 	.uleb128 0x8
@@ -34074,7 +33992,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x235c5
 	.long	0x235d0
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0xa8fc
 	.byte	0
@@ -34088,9 +34006,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x235fb
 	.long	0x23606
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
-	.long	0x3fb0e
+	.long	0x3fabb
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF223
@@ -34102,11 +34020,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23639
 	.long	0x23649
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x19a
 	.uleb128 0x1
-	.long	0x3fb14
+	.long	0x3fac1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF23
@@ -34114,14 +34032,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectListaSERKS_\0"
-	.long	0x3fb1a
+	.long	0x3fac7
 	.byte	0x1
 	.long	0x23678
 	.long	0x23683
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
-	.long	0x3fb0e
+	.long	0x3fabb
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF215
@@ -34129,12 +34047,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZNK12wxObjectList8GetFirstEv\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x236b7
 	.long	0x236bd
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x7
 	.ascii "GetLast\0"
@@ -34142,12 +34060,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZNK12wxObjectList7GetLastEv\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x236f4
 	.long	0x236fa
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF226
@@ -34155,12 +34073,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZNK12wxObjectList4ItemEy\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x2372a
 	.long	0x23735
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.uleb128 0x1
 	.long	0x19a
 	.byte	0
@@ -34175,7 +34093,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23762
 	.long	0x2376d
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.uleb128 0x1
 	.long	0x19a
 	.byte	0
@@ -34185,12 +34103,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6AppendEP8wxObject\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x237a7
 	.long	0x237b2
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x2133d
 	.byte	0
@@ -34200,12 +34118,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6InsertEP8wxObject\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x237ec
 	.long	0x237f7
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x2133d
 	.byte	0
@@ -34215,12 +34133,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6InsertEyP8wxObject\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x23832
 	.long	0x23842
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x19a
 	.uleb128 0x1
@@ -34232,14 +34150,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6InsertEP16wxObjectListNodeP8wxObject\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x2388f
 	.long	0x2389f
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
-	.long	0x3fb20
+	.long	0x3facd
 	.uleb128 0x1
 	.long	0x2133d
 	.byte	0
@@ -34249,12 +34167,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6AppendElPv\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x238d2
 	.long	0x238e2
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x259
 	.uleb128 0x1
@@ -34266,12 +34184,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList6AppendEPKwPv\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x23917
 	.long	0x23927
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0xe111
 	.uleb128 0x1
@@ -34283,14 +34201,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList10DetachNodeEP16wxObjectListNode\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x2396f
 	.long	0x2397a
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF229
@@ -34303,9 +34221,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x239c2
 	.long	0x239cd
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF230
@@ -34318,7 +34236,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23a0e
 	.long	0x23a19
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x2133d
 	.byte	0
@@ -34332,9 +34250,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23a59
 	.long	0x23a64
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF59
@@ -34342,12 +34260,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZNK12wxObjectList4FindEPK8wxObject\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.long	0x23a9e
 	.long	0x23aa9
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.uleb128 0x1
 	.long	0x22895
 	.byte	0
@@ -34357,7 +34275,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZNK12wxObjectList4FindERK9wxListKey\0"
-	.long	0x3fb20
+	.long	0x3facd
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -34367,9 +34285,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23aed
 	.long	0x23af8
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.uleb128 0x1
-	.long	0x3ef85
+	.long	0x3ef32
 	.byte	0
 	.uleb128 0x7
 	.ascii "Member\0"
@@ -34382,7 +34300,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23b37
 	.long	0x23b42
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.uleb128 0x1
 	.long	0x22895
 	.byte	0
@@ -34397,7 +34315,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23b82
 	.long	0x23b8d
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.uleb128 0x1
 	.long	0x2133d
 	.byte	0
@@ -34411,7 +34329,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23bc1
 	.long	0x23bcc
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0xb5d1
 	.byte	0
@@ -34425,7 +34343,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23c09
 	.long	0x23c14
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x22851
 	.byte	0
@@ -34435,7 +34353,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4ab
 	.byte	0x1
 	.ascii "_ZN12wxObjectList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey\0"
-	.long	0x3ef97
+	.long	0x3ef44
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -34445,15 +34363,15 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23c70
 	.long	0x23c8a
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
-	.long	0x3ef97
+	.long	0x3ef44
 	.uleb128 0x1
-	.long	0x3ef97
+	.long	0x3ef44
 	.uleb128 0x1
 	.long	0xb612
 	.uleb128 0x1
-	.long	0x3ef85
+	.long	0x3ef32
 	.byte	0
 	.uleb128 0x53
 	.secrel32	.LASF223
@@ -34465,7 +34383,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23cbe
 	.long	0x23cce
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x23cce
 	.uleb128 0x1
@@ -34483,7 +34401,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x42
 	.word	0x4ab
 	.byte	0x1
-	.long	0x3fb2c
+	.long	0x3fad9
 	.byte	0x1
 	.uleb128 0x12
 	.secrel32	.LASF147
@@ -34504,11 +34422,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23d3d
 	.long	0x23d4d
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
-	.long	0x3fb32
+	.long	0x3fadf
 	.uleb128 0x1
-	.long	0x3fb32
+	.long	0x3fadf
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -34521,7 +34439,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23d7d
 	.long	0x23d83
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -34534,7 +34452,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23db4
 	.long	0x23dba
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x7
 	.ascii "end\0"
@@ -34547,7 +34465,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23de8
 	.long	0x23dee
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.byte	0
 	.uleb128 0x7
 	.ascii "end\0"
@@ -34560,7 +34478,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23e1d
 	.long	0x23e23
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF34
@@ -34573,7 +34491,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23e54
 	.long	0x23e5a
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF34
@@ -34586,7 +34504,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23e8c
 	.long	0x23e92
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -34599,7 +34517,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23ec1
 	.long	0x23ec7
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -34612,7 +34530,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23ef7
 	.long	0x23efd
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF44
@@ -34624,7 +34542,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23f34
 	.long	0x23f44
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x23cce
 	.uleb128 0x1
@@ -34641,7 +34559,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23f74
 	.long	0x23f7a
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -34654,7 +34572,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23fae
 	.long	0x23fb4
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF41
@@ -34667,14 +34585,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x23fe5
 	.long	0x23feb
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x12
 	.secrel32	.LASF7
 	.byte	0x42
 	.word	0x4ab
 	.byte	0x1
-	.long	0x3fb38
+	.long	0x3fae5
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF134
@@ -34687,7 +34605,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24029
 	.long	0x2402f
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF134
@@ -34700,7 +34618,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24060
 	.long	0x24066
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF135
@@ -34713,7 +34631,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24095
 	.long	0x2409b
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF135
@@ -34726,7 +34644,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x240cb
 	.long	0x240d1
 	.uleb128 0x2
-	.long	0x3fb26
+	.long	0x3fad3
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF233
@@ -34738,7 +34656,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2410e
 	.long	0x24119
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x23cdc
 	.byte	0
@@ -34752,7 +34670,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24149
 	.long	0x2414f
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF136
@@ -34764,7 +34682,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2418a
 	.long	0x24195
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x23cdc
 	.byte	0
@@ -34778,7 +34696,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x241c4
 	.long	0x241ca
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF69
@@ -34790,11 +34708,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2420f
 	.long	0x2421f
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x22b70
 	.uleb128 0x1
-	.long	0x3fb32
+	.long	0x3fadf
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF69
@@ -34806,7 +34724,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24258
 	.long	0x24268
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x23cce
 	.uleb128 0x1
@@ -34823,7 +34741,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x242b3
 	.long	0x242c3
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x24642
 	.uleb128 0x1
@@ -34839,7 +34757,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2430b
 	.long	0x24320
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x24642
 	.uleb128 0x1
@@ -34857,13 +34775,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24374
 	.long	0x24389
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x24642
 	.uleb128 0x1
 	.long	0x22b70
 	.uleb128 0x1
-	.long	0x3fb32
+	.long	0x3fadf
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF72
@@ -34876,7 +34794,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x243c7
 	.long	0x243d2
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x24642
 	.byte	0
@@ -34891,7 +34809,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24413
 	.long	0x24423
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x24642
 	.uleb128 0x1
@@ -34907,7 +34825,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2444f
 	.long	0x24455
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF235
@@ -34919,11 +34837,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24499
 	.long	0x244b3
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x24642
 	.uleb128 0x1
-	.long	0x3fb1a
+	.long	0x3fac7
 	.uleb128 0x1
 	.long	0x24642
 	.uleb128 0x1
@@ -34939,11 +34857,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x244f1
 	.long	0x24501
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x24642
 	.uleb128 0x1
-	.long	0x3fb1a
+	.long	0x3fac7
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF235
@@ -34955,11 +34873,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24542
 	.long	0x24557
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x24642
 	.uleb128 0x1
-	.long	0x3fb1a
+	.long	0x3fac7
 	.uleb128 0x1
 	.long	0x24642
 	.byte	0
@@ -34973,7 +34891,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2458f
 	.long	0x2459a
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x1
 	.long	0x23cdc
 	.byte	0
@@ -34987,7 +34905,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x245cc
 	.long	0x245d2
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.byte	0
 	.uleb128 0x55
 	.ascii "~wxObjectList\0"
@@ -34997,7 +34915,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x1
 	.long	0x24601
 	.uleb128 0x2
-	.long	0x3fb08
+	.long	0x3fab5
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
@@ -35236,7 +35154,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xfa
 	.byte	0x18
 	.long	0x251d4
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "x\0"
 	.byte	0x44
 	.byte	0xfe
@@ -35244,7 +35162,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24d
 	.byte	0
 	.byte	0x1
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "y\0"
 	.byte	0x44
 	.byte	0xfe
@@ -37096,13 +37014,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x26571
-	.uleb128 0x64
+	.uleb128 0x63
 	.secrel32	.LASF254
 	.byte	0x30
 	.byte	0x42
 	.word	0x4ae
 	.byte	0x18
-	.long	0x3ef79
+	.long	0x3ef26
 	.long	0x2671b
 	.uleb128 0x28
 	.long	0x2289b
@@ -37115,9 +37033,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x26646
 	.long	0x26651
 	.uleb128 0x2
-	.long	0x3faf6
+	.long	0x3faa3
 	.uleb128 0x1
-	.long	0x3fafc
+	.long	0x3faa9
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF254
@@ -37129,7 +37047,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x26672
 	.long	0x2667d
 	.uleb128 0x2
-	.long	0x3faf6
+	.long	0x3faa3
 	.uleb128 0x1
 	.long	0x24d
 	.byte	0
@@ -37145,7 +37063,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x266a8
 	.long	0x266b3
 	.uleb128 0x2
-	.long	0x3faf6
+	.long	0x3faa3
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
@@ -37155,14 +37073,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x4bc
 	.byte	0xd
 	.ascii "_ZN6wxListaSERKS_\0"
-	.long	0x3fb02
+	.long	0x3faaf
 	.byte	0x1
 	.long	0x266db
 	.long	0x266e6
 	.uleb128 0x2
-	.long	0x3faf6
+	.long	0x3faa3
 	.uleb128 0x1
-	.long	0x3fafc
+	.long	0x3faa9
 	.byte	0
 	.uleb128 0x70
 	.secrel32	.LASF231
@@ -37173,7 +37091,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x1
 	.long	0x2670f
 	.uleb128 0x2
-	.long	0x3faf6
+	.long	0x3faa3
 	.uleb128 0x1
 	.long	0xb5d1
 	.byte	0
@@ -37409,7 +37327,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x27ff5
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x47
 	.ascii "next\0"
 	.byte	0x44
 	.word	0x37e
@@ -38780,7 +38698,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x28d1d
 	.uleb128 0x1
-	.long	0x3facd
+	.long	0x3fa7a
 	.byte	0
 	.uleb128 0x56
 	.secrel32	.LASF266
@@ -38791,7 +38709,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x28d1d
 	.uleb128 0x1
-	.long	0x3fad3
+	.long	0x3fa80
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF266
@@ -38865,7 +38783,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x24708
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetName\0"
 	.byte	0x45
 	.byte	0xae
@@ -38878,7 +38796,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x28cfa
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetExtension\0"
 	.byte	0x45
 	.byte	0xaf
@@ -38922,7 +38840,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x28d1d
 	.uleb128 0x1
-	.long	0x3fad9
+	.long	0x3fa86
 	.uleb128 0x1
 	.long	0xb60a
 	.uleb128 0x1
@@ -38952,7 +38870,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x28d1d
 	.uleb128 0x1
-	.long	0x3fad9
+	.long	0x3fa86
 	.uleb128 0x1
 	.long	0xe63
 	.uleb128 0x1
@@ -38980,13 +38898,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x28cfa
 	.uleb128 0x1
-	.long	0x3faf0
+	.long	0x3fa9d
 	.uleb128 0x1
 	.long	0xe63
 	.uleb128 0x1
 	.long	0x24708
 	.byte	0
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "m_name\0"
 	.byte	0x45
 	.byte	0xc0
@@ -38994,7 +38912,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0xe69
 	.byte	0x10
 	.byte	0x2
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "m_extension\0"
 	.byte	0x45
 	.byte	0xc1
@@ -39159,7 +39077,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL15wxInvalidOffset
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxLongLong\0"
 	.byte	0x47
 	.byte	0x5a
@@ -39321,7 +39239,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x5dd
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "Assign\0"
 	.byte	0x47
 	.byte	0x9b
@@ -39336,7 +39254,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x96e
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetHi\0"
 	.byte	0x47
 	.byte	0xa2
@@ -39349,7 +39267,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2ade7
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetLo\0"
 	.byte	0x47
 	.byte	0xa5
@@ -39362,7 +39280,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2ade7
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "Abs\0"
 	.byte	0x47
 	.byte	0xa9
@@ -39375,7 +39293,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2ade7
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "Abs\0"
 	.byte	0x47
 	.byte	0xaa
@@ -39401,7 +39319,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2ade7
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "ToLong\0"
 	.byte	0x47
 	.byte	0xb0
@@ -41093,7 +41011,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x48
 	.byte	0x97
 	.byte	0x1
-	.long	0x3ef79
+	.long	0x3ef26
 	.long	0x2cb2c
 	.uleb128 0x5a
 	.secrel32	.LASF18
@@ -41888,7 +41806,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.long	0x2b726
 	.uleb128 0x28
-	.long	0x3ef79
+	.long	0x3ef26
 	.byte	0
 	.byte	0x1
 	.uleb128 0xd
@@ -41917,7 +41835,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2cb31
 	.uleb128 0x1
-	.long	0x3efa9
+	.long	0x3ef56
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF284
@@ -41933,7 +41851,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x19a
 	.uleb128 0x1
-	.long	0x3efaf
+	.long	0x3ef5c
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF23
@@ -41941,14 +41859,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowListaSERKS_\0"
-	.long	0x3efb5
+	.long	0x3ef62
 	.byte	0x1
 	.long	0x2bbac
 	.long	0x2bbb7
 	.uleb128 0x2
 	.long	0x2cb31
 	.uleb128 0x1
-	.long	0x3efa9
+	.long	0x3ef56
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF215
@@ -41956,25 +41874,25 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZNK12wxWindowList8GetFirstEv\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2bbea
 	.long	0x2bbf0
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetLast\0"
 	.byte	0x48
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZNK12wxWindowList7GetLastEv\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2bc26
 	.long	0x2bc2c
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF226
@@ -41982,12 +41900,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZNK12wxWindowList4ItemEy\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2bc5b
 	.long	0x2bc66
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.uleb128 0x1
 	.long	0x19a
 	.byte	0
@@ -42002,7 +41920,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2bc92
 	.long	0x2bc9d
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.uleb128 0x1
 	.long	0x19a
 	.byte	0
@@ -42012,7 +41930,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6AppendEP12wxWindowBase\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2bcdb
 	.long	0x2bce6
@@ -42027,7 +41945,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6InsertEP12wxWindowBase\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2bd24
 	.long	0x2bd2f
@@ -42042,7 +41960,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6InsertEyP12wxWindowBase\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2bd6e
 	.long	0x2bd7e
@@ -42059,14 +41977,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6InsertEP16wxWindowListNodeP12wxWindowBase\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2bdcf
 	.long	0x2bddf
 	.uleb128 0x2
 	.long	0x2cb31
 	.uleb128 0x1
-	.long	0x3efbb
+	.long	0x3ef68
 	.uleb128 0x1
 	.long	0x38853
 	.byte	0
@@ -42076,7 +41994,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6AppendElPv\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2be11
 	.long	0x2be21
@@ -42093,7 +42011,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList6AppendEPKwPv\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2be55
 	.long	0x2be65
@@ -42110,14 +42028,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList10DetachNodeEP16wxWindowListNode\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2beac
 	.long	0x2beb7
 	.uleb128 0x2
 	.long	0x2cb31
 	.uleb128 0x1
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF229
@@ -42132,7 +42050,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2cb31
 	.uleb128 0x1
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF230
@@ -42161,7 +42079,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2cb31
 	.uleb128 0x1
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF59
@@ -42169,12 +42087,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZNK12wxWindowList4FindEPK12wxWindowBase\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.long	0x2bfe1
 	.long	0x2bfec
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.uleb128 0x1
 	.long	0x3e0c1
 	.byte	0
@@ -42184,7 +42102,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZNK12wxWindowList4FindERK9wxListKey\0"
-	.long	0x3efbb
+	.long	0x3ef68
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -42194,11 +42112,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c02e
 	.long	0x2c039
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.uleb128 0x1
-	.long	0x3ef85
+	.long	0x3ef32
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "Member\0"
 	.byte	0x48
 	.byte	0x97
@@ -42209,11 +42127,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c07c
 	.long	0x2c087
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.uleb128 0x1
 	.long	0x3e0c1
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IndexOf\0"
 	.byte	0x48
 	.byte	0x97
@@ -42224,7 +42142,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c0cb
 	.long	0x2c0d6
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.uleb128 0x1
 	.long	0x38853
 	.byte	0
@@ -42262,7 +42180,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x97
 	.byte	0x1
 	.ascii "_ZN12wxWindowList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey\0"
-	.long	0x3ef97
+	.long	0x3ef44
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -42274,13 +42192,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2cb31
 	.uleb128 0x1
-	.long	0x3ef97
+	.long	0x3ef44
 	.uleb128 0x1
-	.long	0x3ef97
+	.long	0x3ef44
 	.uleb128 0x1
 	.long	0xb612
 	.uleb128 0x1
-	.long	0x3ef85
+	.long	0x3ef32
 	.byte	0
 	.uleb128 0xc9
 	.secrel32	.LASF284
@@ -42310,7 +42228,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x48
 	.byte	0x97
 	.byte	0x1
-	.long	0x3efc7
+	.long	0x3ef74
 	.byte	0x1
 	.uleb128 0x11
 	.secrel32	.LASF147
@@ -42333,9 +42251,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2cb31
 	.uleb128 0x1
-	.long	0x3efcd
+	.long	0x3ef7a
 	.uleb128 0x1
-	.long	0x3efcd
+	.long	0x3ef7a
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF29
@@ -42361,9 +42279,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c2f3
 	.long	0x2c2f9
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "end\0"
 	.byte	0x48
 	.byte	0x97
@@ -42376,7 +42294,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2cb31
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "end\0"
 	.byte	0x48
 	.byte	0x97
@@ -42387,7 +42305,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c35a
 	.long	0x2c360
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF34
@@ -42413,7 +42331,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c3c7
 	.long	0x2c3cd
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF36
@@ -42439,7 +42357,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c430
 	.long	0x2c436
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF44
@@ -42468,7 +42386,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c4ab
 	.long	0x2c4b1
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF40
@@ -42481,7 +42399,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c4e4
 	.long	0x2c4ea
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF41
@@ -42494,14 +42412,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c51a
 	.long	0x2c520
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
 	.uleb128 0x11
 	.secrel32	.LASF7
 	.byte	0x48
 	.byte	0x97
 	.byte	0x1
-	.long	0x3efd3
+	.long	0x3ef80
 	.byte	0x1
 	.uleb128 0x4
 	.secrel32	.LASF134
@@ -42527,7 +42445,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c592
 	.long	0x2c598
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF135
@@ -42553,7 +42471,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c5fb
 	.long	0x2c601
 	.uleb128 0x2
-	.long	0x3efc1
+	.long	0x3ef6e
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF233
@@ -42621,7 +42539,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x2b0dd
 	.uleb128 0x1
-	.long	0x3efcd
+	.long	0x3ef7a
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF69
@@ -42690,7 +42608,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x2b0dd
 	.uleb128 0x1
-	.long	0x3efcd
+	.long	0x3ef7a
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF72
@@ -42750,7 +42668,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x386d5
 	.uleb128 0x1
-	.long	0x3efb5
+	.long	0x3ef62
 	.uleb128 0x1
 	.long	0x386d5
 	.uleb128 0x1
@@ -42770,7 +42688,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x386d5
 	.uleb128 0x1
-	.long	0x3efb5
+	.long	0x3ef62
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF235
@@ -42786,7 +42704,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x386d5
 	.uleb128 0x1
-	.long	0x3efb5
+	.long	0x3ef62
 	.uleb128 0x1
 	.long	0x386d5
 	.byte	0
@@ -42840,7 +42758,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x32b
 	.byte	0x31
 	.long	0xe111
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "CMPFUNC\0"
 	.byte	0x4a
 	.byte	0x46
@@ -43548,7 +43466,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x19a
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x47
 	.ascii "Realloc\0"
 	.byte	0x4a
 	.word	0x345
@@ -44864,7 +44782,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2edf7
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "TryEnter\0"
 	.byte	0x2
 	.byte	0xfc
@@ -44924,7 +44842,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x3c
 	.long	0x16b
 	.long	0x2edf7
-	.uleb128 0x47
+	.uleb128 0x46
 	.long	0x1ae
 	.byte	0x27
 	.byte	0
@@ -45122,7 +45040,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "m_first\0"
 	.byte	0x4b
 	.byte	0x57
@@ -45156,23 +45074,23 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2f13d
 	.uleb128 0x1
-	.long	0x3f5cf
+	.long	0x3f57c
 	.byte	0
 	.uleb128 0xcc
 	.secrel32	.LASF23
 	.ascii "_ZN13wxTrackerNodeaSERKS_\0"
-	.long	0x3f5d5
+	.long	0x3f582
 	.byte	0x1
 	.long	0x2f1b4
 	.long	0x2f1bf
 	.uleb128 0x2
 	.long	0x2f13d
 	.uleb128 0x1
-	.long	0x3f5cf
+	.long	0x3f57c
 	.byte	0
 	.uleb128 0x66
 	.ascii "_vptr.wxTrackerNode\0"
-	.long	0x3eee7
+	.long	0x3ee94
 	.byte	0
 	.byte	0x1
 	.uleb128 0xd
@@ -45226,7 +45144,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x1b
 	.byte	0x23
 	.ascii "_ZN13wxTrackerNode17ToEventConnectionEv\0"
-	.long	0x3f262
+	.long	0x3f20f
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -45371,13 +45289,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x28
 	.byte	0x7
 	.long	0x2f401
-	.uleb128 0x61
+	.uleb128 0x60
 	.secrel32	.LASF289
 	.byte	0x4c
 	.byte	0x2a
 	.byte	0xd
 	.long	0xb612
-	.uleb128 0x61
+	.uleb128 0x60
 	.secrel32	.LASF291
 	.byte	0x4c
 	.byte	0x2b
@@ -45401,7 +45319,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x3c
 	.long	0xa8b8
 	.long	0x2f4c0
-	.uleb128 0x47
+	.uleb128 0x46
 	.long	0x1ae
 	.byte	0xf
 	.byte	0
@@ -45425,11 +45343,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x2f4c0
 	.uleb128 0x1
-	.long	0x3f5b7
+	.long	0x3f564
 	.byte	0
 	.uleb128 0x66
 	.ascii "_vptr.wxAnyValueType\0"
-	.long	0x3eee7
+	.long	0x3ee94
 	.byte	0
 	.byte	0x1
 	.uleb128 0xd
@@ -45928,7 +45846,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "USA\0"
 	.byte	0x7
 	.byte	0
-	.uleb128 0x5e
+	.uleb128 0x5d
 	.ascii "Month\0"
 	.byte	0x7
 	.byte	0x4
@@ -45978,7 +45896,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "Inv_Month\0"
 	.byte	0xc
 	.byte	0
-	.uleb128 0x5e
+	.uleb128 0x5d
 	.ascii "WeekDay\0"
 	.byte	0x7
 	.byte	0x4
@@ -46013,7 +45931,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "Inv_WeekDay\0"
 	.byte	0x7
 	.byte	0
-	.uleb128 0x5e
+	.uleb128 0x5d
 	.ascii "NameFlags\0"
 	.byte	0x7
 	.byte	0x4
@@ -46030,7 +45948,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "Name_Abbr\0"
 	.byte	0x2
 	.byte	0
-	.uleb128 0x5e
+	.uleb128 0x5d
 	.ascii "WeekFlags\0"
 	.byte	0x7
 	.byte	0x4
@@ -48935,7 +48853,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x488
 	.byte	0x17
 	.long	0x265
-	.uleb128 0x48
+	.uleb128 0x47
 	.ascii "IsInStdRange\0"
 	.byte	0x4e
 	.word	0x48c
@@ -50318,9 +50236,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x34a9d
 	.long	0x34aa8
 	.uleb128 0x2
-	.long	0x3f5bd
+	.long	0x3f56a
 	.uleb128 0x1
-	.long	0x3f5c3
+	.long	0x3f570
 	.byte	0
 	.uleb128 0x33
 	.ascii "Write\0"
@@ -50338,7 +50256,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x34ae5
 	.long	0x34af0
 	.uleb128 0x2
-	.long	0x3f5bd
+	.long	0x3f56a
 	.uleb128 0x1
 	.long	0x3d5ab
 	.byte	0
@@ -50358,7 +50276,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x34b34
 	.long	0x34b3f
 	.uleb128 0x2
-	.long	0x3f5bd
+	.long	0x3f56a
 	.uleb128 0x1
 	.long	0x2126e
 	.byte	0
@@ -50380,7 +50298,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x34d43
 	.uleb128 0x1
-	.long	0x3f5c9
+	.long	0x3f576
 	.byte	0
 	.uleb128 0x33
 	.ascii "Read\0"
@@ -50418,7 +50336,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x34c0b
 	.long	0x34c11
 	.uleb128 0x2
-	.long	0x3f5bd
+	.long	0x3f56a
 	.byte	0
 	.uleb128 0x33
 	.ascii "GetValueClassInfo\0"
@@ -50454,7 +50372,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x34ca5
 	.long	0x34cab
 	.uleb128 0x2
-	.long	0x3f5bd
+	.long	0x3f56a
 	.byte	0
 	.uleb128 0x33
 	.ascii "GetAsAny\0"
@@ -50472,7 +50390,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x34cf2
 	.long	0x34cfd
 	.uleb128 0x2
-	.long	0x3f5bd
+	.long	0x3f56a
 	.uleb128 0x1
 	.long	0x35479
 	.byte	0
@@ -51044,7 +50962,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x34d4f
 	.uleb128 0x10
 	.ascii "wxwxAnyListNode\0"
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxEventType\0"
 	.byte	0x4
 	.byte	0x51
@@ -51052,7 +50970,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x24d
 	.uleb128 0x9
 	.long	0x354a8
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxEventFunction\0"
 	.byte	0x4
 	.byte	0x92
@@ -51199,7 +51117,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x6b
 	.long	0x354d9
 	.long	0x3576f
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxObjectEventFunction\0"
 	.byte	0x4
 	.byte	0xd0
@@ -53291,7 +53209,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x35bc6
-	.uleb128 0x64
+	.uleb128 0x63
 	.secrel32	.LASF322
 	.byte	0x50
 	.byte	0x4
@@ -53313,7 +53231,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x37dd8
 	.long	0x37de3
 	.uleb128 0x2
-	.long	0x3f5ab
+	.long	0x3f558
 	.uleb128 0x1
 	.long	0x2133d
 	.byte	0
@@ -53327,9 +53245,9 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x37e18
 	.long	0x37e23
 	.uleb128 0x2
-	.long	0x3f5ab
+	.long	0x3f558
 	.uleb128 0x1
-	.long	0x3f5b1
+	.long	0x3f55e
 	.byte	0
 	.uleb128 0x8a
 	.ascii "Execute\0"
@@ -53346,7 +53264,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x37e68
 	.long	0x37e6e
 	.uleb128 0x2
-	.long	0x3f5ab
+	.long	0x3f558
 	.byte	0
 	.uleb128 0x55
 	.ascii "~wxAsyncMethodCallEvent\0"
@@ -53356,7 +53274,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x1
 	.long	0x37eb1
 	.uleb128 0x2
-	.long	0x3f5ab
+	.long	0x3f558
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
@@ -53771,7 +53689,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x234
 	.byte	0x2e
 	.long	0x3857a
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxALPHA_TRANSPARENT\0"
 	.byte	0x51
 	.byte	0x2b
@@ -53780,7 +53698,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL19wxALPHA_TRANSPARENT
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxALPHA_OPAQUE\0"
 	.byte	0x51
 	.byte	0x2c
@@ -53809,7 +53727,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xad
 	.byte	0x32
 	.long	0x38617
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxSortFuncFor_wxWindowList\0"
 	.byte	0x48
 	.byte	0x97
@@ -54070,7 +53988,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "wxSizerItem\0"
 	.uleb128 0x10
 	.ascii "wxwxSizerItemListNode\0"
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxEOF\0"
 	.byte	0x55
 	.byte	0x2c
@@ -54107,7 +54025,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "wxIMAGE_QUALITY_HIGH\0"
 	.byte	0x4
 	.byte	0
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxIMAGE_ALPHA_TRANSPARENT\0"
 	.byte	0x56
 	.byte	0x4f
@@ -54116,7 +54034,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL25wxIMAGE_ALPHA_TRANSPARENT
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxIMAGE_ALPHA_THRESHOLD\0"
 	.byte	0x56
 	.byte	0x50
@@ -54125,7 +54043,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL23wxIMAGE_ALPHA_THRESHOLD
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxIMAGE_ALPHA_OPAQUE\0"
 	.byte	0x56
 	.byte	0x51
@@ -54320,7 +54238,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x9
 	.long	0x38af6
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "_wxObjArraywxAuiPaneButtonArray\0"
 	.byte	0x57
 	.byte	0x87
@@ -54344,7 +54262,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.byte	0x1
 	.byte	0
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "CMPFUNC_wxObjArraywxAuiPaneButtonArray\0"
 	.byte	0x57
 	.byte	0x87
@@ -54513,7 +54431,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x395ec
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "Count\0"
 	.byte	0x57
 	.byte	0x87
@@ -54714,7 +54632,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x395da
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "Detach\0"
 	.byte	0x57
 	.byte	0x87
@@ -54759,7 +54677,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x38d88
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x5e
 	.ascii "DoEmpty\0"
 	.byte	0x57
 	.byte	0x87
@@ -54882,7 +54800,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x39604
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsOk\0"
 	.byte	0x57
 	.byte	0xe8
@@ -54895,7 +54813,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsFixed\0"
 	.byte	0x57
 	.byte	0xe9
@@ -54908,7 +54826,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsResizable\0"
 	.byte	0x57
 	.byte	0xea
@@ -54921,7 +54839,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsShown\0"
 	.byte	0x57
 	.byte	0xeb
@@ -54934,7 +54852,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsFloating\0"
 	.byte	0x57
 	.byte	0xec
@@ -54947,7 +54865,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsDocked\0"
 	.byte	0x57
 	.byte	0xed
@@ -54960,7 +54878,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsToolbar\0"
 	.byte	0x57
 	.byte	0xee
@@ -54973,7 +54891,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsTopDockable\0"
 	.byte	0x57
 	.byte	0xef
@@ -54986,7 +54904,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsBottomDockable\0"
 	.byte	0x57
 	.byte	0xf0
@@ -54999,7 +54917,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsLeftDockable\0"
 	.byte	0x57
 	.byte	0xf1
@@ -55012,7 +54930,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsRightDockable\0"
 	.byte	0x57
 	.byte	0xf2
@@ -55025,7 +54943,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsDockable\0"
 	.byte	0x57
 	.byte	0xf3
@@ -55038,7 +54956,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsFloatable\0"
 	.byte	0x57
 	.byte	0xf8
@@ -55051,7 +54969,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsMovable\0"
 	.byte	0x57
 	.byte	0xf9
@@ -55064,7 +54982,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsDestroyOnClose\0"
 	.byte	0x57
 	.byte	0xfa
@@ -55077,7 +54995,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsMaximized\0"
 	.byte	0x57
 	.byte	0xfb
@@ -55090,7 +55008,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "HasCaption\0"
 	.byte	0x57
 	.byte	0xfc
@@ -55103,7 +55021,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "HasGripper\0"
 	.byte	0x57
 	.byte	0xfd
@@ -55116,7 +55034,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "HasBorder\0"
 	.byte	0x57
 	.byte	0xfe
@@ -55129,7 +55047,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c28a
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "HasCloseButton\0"
 	.byte	0x57
 	.byte	0xff
@@ -56158,7 +56076,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x9
 	.long	0x39604
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "_wxArraywxAuiPaneInfoPtrArray\0"
 	.byte	0x57
 	.byte	0x89
@@ -56167,7 +56085,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x39604
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "CMPFUNC_wxArraywxAuiPaneInfoPtrArray\0"
 	.byte	0x57
 	.byte	0x89
@@ -56931,7 +56849,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c220
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "end\0"
 	.byte	0x57
 	.byte	0x89
@@ -56944,7 +56862,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3c214
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "end\0"
 	.byte	0x57
 	.byte	0x89
@@ -57765,7 +57683,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "wxwxMenuListNode\0"
 	.uleb128 0x10
 	.ascii "wxwxMenuItemListNode\0"
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_ITEMSTATE_NONE\0"
 	.byte	0x61
 	.byte	0x7a
@@ -57774,7 +57692,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxTREE_ITEMSTATE_NONE
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_ITEMSTATE_NEXT\0"
 	.byte	0x61
 	.byte	0x7b
@@ -57783,7 +57701,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxTREE_ITEMSTATE_NEXT
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_ITEMSTATE_PREV\0"
 	.byte	0x61
 	.byte	0x7c
@@ -57792,7 +57710,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxTREE_ITEMSTATE_PREV
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_ABOVE\0"
 	.byte	0x61
 	.byte	0xac
@@ -57801,7 +57719,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL20wxTREE_HITTEST_ABOVE
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_BELOW\0"
 	.byte	0x61
 	.byte	0xad
@@ -57810,7 +57728,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL20wxTREE_HITTEST_BELOW
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_NOWHERE\0"
 	.byte	0x61
 	.byte	0xae
@@ -57819,7 +57737,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL22wxTREE_HITTEST_NOWHERE
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_ONITEMBUTTON\0"
 	.byte	0x61
 	.byte	0xb0
@@ -57828,7 +57746,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL27wxTREE_HITTEST_ONITEMBUTTON
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_ONITEMICON\0"
 	.byte	0x61
 	.byte	0xb2
@@ -57837,7 +57755,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL25wxTREE_HITTEST_ONITEMICON
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_ONITEMINDENT\0"
 	.byte	0x61
 	.byte	0xb4
@@ -57846,7 +57764,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL27wxTREE_HITTEST_ONITEMINDENT
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_ONITEMLABEL\0"
 	.byte	0x61
 	.byte	0xb6
@@ -57855,7 +57773,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL26wxTREE_HITTEST_ONITEMLABEL
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_ONITEMRIGHT\0"
 	.byte	0x61
 	.byte	0xb8
@@ -57864,7 +57782,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL26wxTREE_HITTEST_ONITEMRIGHT
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_ONITEMSTATEICON\0"
 	.byte	0x61
 	.byte	0xba
@@ -57873,7 +57791,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL30wxTREE_HITTEST_ONITEMSTATEICON
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_TOLEFT\0"
 	.byte	0x61
 	.byte	0xbc
@@ -57882,7 +57800,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxTREE_HITTEST_TOLEFT
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_TORIGHT\0"
 	.byte	0x61
 	.byte	0xbe
@@ -57891,7 +57809,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL22wxTREE_HITTEST_TORIGHT
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_ONITEMUPPERPART\0"
 	.byte	0x61
 	.byte	0xc0
@@ -57900,7 +57818,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL30wxTREE_HITTEST_ONITEMUPPERPART
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_ONITEMLOWERPART\0"
 	.byte	0x61
 	.byte	0xc2
@@ -57909,7 +57827,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL30wxTREE_HITTEST_ONITEMLOWERPART
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxTREE_HITTEST_ONITEM\0"
 	.byte	0x61
 	.byte	0xc5
@@ -58078,7 +57996,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZStL8__ioinit
-	.uleb128 0x13
+	.uleb128 0x14
 	.ascii "wxTextCoord\0"
 	.byte	0x62
 	.byte	0x30
@@ -58092,7 +58010,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x36
 	.byte	0x2a
 	.long	0x287db
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxOutOfRangeTextCoord\0"
 	.byte	0x62
 	.byte	0x3a
@@ -58101,7 +58019,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZL21wxOutOfRangeTextCoord
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "wxInvalidTextCoord\0"
 	.byte	0x62
 	.byte	0x3b
@@ -58360,7 +58278,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x3da40
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetFormatId\0"
 	.byte	0x63
 	.byte	0x32
@@ -58373,7 +58291,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3da46
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "operator wxDataFormat::NativeFormat\0"
 	.byte	0x63
 	.byte	0x33
@@ -58413,7 +58331,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3da46
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetId\0"
 	.byte	0x63
 	.byte	0x3b
@@ -58440,7 +58358,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0xe63
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "IsStandard\0"
 	.byte	0x63
 	.byte	0x3f
@@ -58513,7 +58431,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x3da64
 	.long	0x3e00f
 	.uleb128 0x28
-	.long	0x3ef6b
+	.long	0x3ef18
 	.byte	0
 	.byte	0x1
 	.uleb128 0xd
@@ -58530,7 +58448,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x1
 	.long	0x3da40
 	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "GetFormat\0"
 	.byte	0x64
 	.byte	0xcf
@@ -58751,7 +58669,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x12
 	.long	0x3d5b1
 	.byte	0x10
-	.uleb128 0x2a
+	.uleb128 0x29
 	.secrel32	.LASF340
 	.byte	0x64
 	.byte	0xf8
@@ -58762,7 +58680,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.long	0x3e038
 	.uleb128 0x1
-	.long	0x3ef9d
+	.long	0x3ef4a
 	.byte	0
 	.uleb128 0x35
 	.secrel32	.LASF23
@@ -58770,13 +58688,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xf8
 	.byte	0x5
 	.ascii "_ZN18wxDataObjectSimpleaSERKS_\0"
-	.long	0x3efa3
+	.long	0x3ef50
 	.long	0x3dfbd
 	.long	0x3dfc8
 	.uleb128 0x2
 	.long	0x3e038
 	.uleb128 0x1
-	.long	0x3ef9d
+	.long	0x3ef4a
 	.byte	0
 	.uleb128 0x55
 	.ascii "~wxDataObjectSimple\0"
@@ -59093,7 +59011,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x8
 	.byte	0x7
 	.long	0x3e53e
-	.long	0x3eec6
+	.long	0x3ee73
 	.uleb128 0x56
 	.secrel32	.LASF343
 	.ascii "_ZN23T100ProjectSkeletalBaseC4ERKS_\0"
@@ -59101,13 +59019,13 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x3e581
 	.long	0x3e58c
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.uleb128 0x1
-	.long	0x3eed6
+	.long	0x3ee83
 	.byte	0
 	.uleb128 0x66
 	.ascii "_vptr.T100ProjectSkeletalBase\0"
-	.long	0x3eee7
+	.long	0x3ee94
 	.byte	0
 	.byte	0x1
 	.uleb128 0xd
@@ -59120,7 +59038,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x3e5e3
 	.long	0x3e5e9
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x79
 	.ascii "~T100ProjectSkeletalBase\0"
@@ -59134,7 +59052,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x3e635
 	.long	0x3e640
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
@@ -59149,24 +59067,24 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x3e695
 	.long	0x3e6a0
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.uleb128 0x1
-	.long	0x3ef04
+	.long	0x3eeb1
 	.byte	0
-	.uleb128 0x4
-	.secrel32	.LASF345
+	.uleb128 0x13
+	.ascii "WorkSpaceOpen\0"
 	.byte	0x5
 	.byte	0x38
 	.byte	0xa
-	.ascii "_ZN23T100ProjectSkeletalBase13WorkSpaceOpenEP17T100WorkSpaceInfo\0"
+	.ascii "_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo\0"
 	.long	0xa869
 	.byte	0x1
-	.long	0x3e6f6
-	.long	0x3e701
+	.long	0x3e700
+	.long	0x3e70b
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.uleb128 0x1
-	.long	0x3ef04
+	.long	0x3eeca
 	.byte	0
 	.uleb128 0x4
 	.secrel32	.LASF344
@@ -59176,330 +59094,316 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "_ZN23T100ProjectSkeletalBase12WorkSpaceNewERK16T100WxFolderInfo\0"
 	.long	0xa869
 	.byte	0x1
-	.long	0x3e756
-	.long	0x3e761
+	.long	0x3e760
+	.long	0x3e76b
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.uleb128 0x1
-	.long	0x3ef1d
+	.long	0x3eeca
 	.byte	0
-	.uleb128 0xd
-	.secrel32	.LASF345
-	.byte	0x5
-	.byte	0x4b
-	.byte	0xa
-	.ascii "_ZN23T100ProjectSkeletalBase13WorkSpaceOpenERK16T100WxFolderInfo\0"
-	.byte	0x1
-	.long	0x3e7b3
-	.long	0x3e7be
-	.uleb128 0x2
-	.long	0x3eecb
-	.uleb128 0x1
-	.long	0x3ef1d
-	.byte	0
-	.uleb128 0x14
+	.uleb128 0x13
 	.ascii "WorkSpaceClose\0"
 	.byte	0x5
-	.byte	0x5c
+	.byte	0x5e
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase14WorkSpaceCloseEv\0"
 	.long	0xa869
 	.byte	0x1
-	.long	0x3e80d
-	.long	0x3e813
+	.long	0x3e7ba
+	.long	0x3e7c0
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "WorkSpaceSave\0"
 	.byte	0x5
-	.byte	0x69
+	.byte	0x6b
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase13WorkSpaceSaveEv\0"
 	.byte	0x1
-	.long	0x3e85c
-	.long	0x3e862
+	.long	0x3e809
+	.long	0x3e80f
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "WorkSpaceSaveAs\0"
 	.byte	0x5
-	.byte	0x72
+	.byte	0x74
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase15WorkSpaceSaveAsEv\0"
 	.byte	0x1
-	.long	0x3e8af
-	.long	0x3e8b5
+	.long	0x3e85c
+	.long	0x3e862
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "ProjectNew\0"
 	.byte	0x5
-	.byte	0x77
+	.byte	0x79
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase10ProjectNewEv\0"
 	.byte	0x1
-	.long	0x3e8f8
-	.long	0x3e8fe
+	.long	0x3e8a5
+	.long	0x3e8ab
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "ProjectOpen\0"
 	.byte	0x5
-	.byte	0x7c
+	.byte	0x7e
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase11ProjectOpenEv\0"
 	.byte	0x1
-	.long	0x3e943
-	.long	0x3e949
+	.long	0x3e8f0
+	.long	0x3e8f6
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "ProjectClose\0"
 	.byte	0x5
-	.byte	0x81
+	.byte	0x83
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase12ProjectCloseEv\0"
 	.byte	0x1
-	.long	0x3e990
-	.long	0x3e996
+	.long	0x3e93d
+	.long	0x3e943
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "ProjectSave\0"
 	.byte	0x5
-	.byte	0x86
+	.byte	0x88
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase11ProjectSaveEv\0"
 	.byte	0x1
-	.long	0x3e9db
-	.long	0x3e9e1
+	.long	0x3e988
+	.long	0x3e98e
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "ProjectSaveAs\0"
 	.byte	0x5
-	.byte	0x8b
+	.byte	0x8d
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase13ProjectSaveAsEv\0"
 	.byte	0x1
-	.long	0x3ea2a
-	.long	0x3ea30
+	.long	0x3e9d7
+	.long	0x3e9dd
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "FileNew\0"
 	.byte	0x5
-	.byte	0x90
+	.byte	0x92
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase7FileNewEv\0"
 	.byte	0x1
-	.long	0x3ea6c
-	.long	0x3ea72
+	.long	0x3ea19
+	.long	0x3ea1f
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "FileOpen\0"
 	.byte	0x5
-	.byte	0x95
+	.byte	0x97
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase8FileOpenEv\0"
 	.byte	0x1
-	.long	0x3eab0
-	.long	0x3eab6
+	.long	0x3ea5d
+	.long	0x3ea63
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "FileClose\0"
 	.byte	0x5
-	.byte	0x9a
+	.byte	0x9c
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase9FileCloseEv\0"
 	.byte	0x1
-	.long	0x3eaf6
-	.long	0x3eafc
+	.long	0x3eaa3
+	.long	0x3eaa9
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "FileSave\0"
 	.byte	0x5
-	.byte	0x9f
+	.byte	0xa1
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase8FileSaveEv\0"
 	.byte	0x1
-	.long	0x3eb3a
-	.long	0x3eb40
+	.long	0x3eae7
+	.long	0x3eaed
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "FileSaveAs\0"
 	.byte	0x5
-	.byte	0xa4
+	.byte	0xa6
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase10FileSaveAsEv\0"
 	.byte	0x1
-	.long	0x3eb83
-	.long	0x3eb89
+	.long	0x3eb30
+	.long	0x3eb36
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "EditUndo\0"
 	.byte	0x5
-	.byte	0xa9
+	.byte	0xab
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase8EditUndoEv\0"
 	.byte	0x1
-	.long	0x3ebc7
-	.long	0x3ebcd
+	.long	0x3eb74
+	.long	0x3eb7a
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "EditRedo\0"
 	.byte	0x5
-	.byte	0xae
+	.byte	0xb0
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase8EditRedoEv\0"
 	.byte	0x1
-	.long	0x3ec0b
-	.long	0x3ec11
+	.long	0x3ebb8
+	.long	0x3ebbe
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "EditCut\0"
 	.byte	0x5
-	.byte	0xb3
+	.byte	0xb5
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase7EditCutEv\0"
 	.byte	0x1
-	.long	0x3ec4d
-	.long	0x3ec53
+	.long	0x3ebfa
+	.long	0x3ec00
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "EditCopy\0"
 	.byte	0x5
-	.byte	0xb8
+	.byte	0xba
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase8EditCopyEv\0"
 	.byte	0x1
-	.long	0x3ec91
-	.long	0x3ec97
+	.long	0x3ec3e
+	.long	0x3ec44
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "EditPaste\0"
 	.byte	0x5
-	.byte	0xbd
+	.byte	0xbf
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase9EditPasteEv\0"
 	.byte	0x1
-	.long	0x3ecd7
-	.long	0x3ecdd
+	.long	0x3ec84
+	.long	0x3ec8a
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "SearchFind\0"
 	.byte	0x5
-	.byte	0xc2
+	.byte	0xc4
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase10SearchFindEv\0"
 	.byte	0x1
-	.long	0x3ed20
-	.long	0x3ed26
+	.long	0x3eccd
+	.long	0x3ecd3
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "SearchReplace\0"
 	.byte	0x5
-	.byte	0xc7
+	.byte	0xc9
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase13SearchReplaceEv\0"
 	.byte	0x1
-	.long	0x3ed6f
-	.long	0x3ed75
+	.long	0x3ed1c
+	.long	0x3ed22
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "CompileBuild\0"
 	.byte	0x5
-	.byte	0xcc
+	.byte	0xce
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase12CompileBuildEv\0"
 	.byte	0x1
-	.long	0x3edbc
-	.long	0x3edc2
+	.long	0x3ed69
+	.long	0x3ed6f
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "SetupEditor\0"
 	.byte	0x5
-	.byte	0xd1
+	.byte	0xd3
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase11SetupEditorEv\0"
 	.byte	0x1
-	.long	0x3ee07
-	.long	0x3ee0d
+	.long	0x3edb4
+	.long	0x3edba
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "SetupCompiler\0"
 	.byte	0x5
-	.byte	0xd6
+	.byte	0xd8
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase13SetupCompilerEv\0"
 	.byte	0x1
-	.long	0x3ee56
-	.long	0x3ee5c
+	.long	0x3ee03
+	.long	0x3ee09
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
 	.uleb128 0x18
 	.ascii "HelpAbout\0"
 	.byte	0x5
-	.byte	0xdb
+	.byte	0xdd
 	.byte	0xa
 	.ascii "_ZN23T100ProjectSkeletalBase9HelpAboutEv\0"
 	.byte	0x1
-	.long	0x3ee9c
-	.long	0x3eea2
+	.long	0x3ee49
+	.long	0x3ee4f
 	.uleb128 0x2
-	.long	0x3eecb
+	.long	0x3ee78
 	.byte	0
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "m_view\0"
 	.byte	0x67
 	.byte	0x30
 	.byte	0x33
-	.long	0x3ef4b
+	.long	0x3eef8
 	.byte	0x8
 	.byte	0x2
-	.uleb128 0x49
+	.uleb128 0x48
 	.ascii "m_serve\0"
 	.byte	0x67
 	.byte	0x31
 	.byte	0x33
-	.long	0x3ef65
+	.long	0x3ef12
 	.byte	0x10
 	.byte	0x2
 	.byte	0
@@ -59509,44 +59413,44 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x8
 	.long	0x3e53e
 	.uleb128 0x9
-	.long	0x3eecb
+	.long	0x3ee78
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x3eec6
+	.long	0x3ee73
 	.uleb128 0x4b
 	.long	0x24d
-	.long	0x3eee7
+	.long	0x3ee94
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3eeed
+	.long	0x3ee9a
 	.uleb128 0x8f
 	.byte	0x8
 	.ascii "__vtbl_ptr_type\0"
-	.long	0x3eedc
+	.long	0x3ee89
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3ef0a
+	.long	0x3eeb7
 	.uleb128 0x10
 	.ascii "T100WorkSpaceInfo\0"
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x3ef35
+	.long	0x3eee2
 	.uleb128 0x10
 	.ascii "T100WxFolderInfo\0"
 	.uleb128 0x9
-	.long	0x3ef23
+	.long	0x3eed0
 	.uleb128 0x10
 	.ascii "T100ProjectView\0"
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3ef3a
+	.long	0x3eee7
 	.uleb128 0x10
 	.ascii "T100WorkSpaceServe\0"
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3ef51
+	.long	0x3eefe
 	.uleb128 0x10
 	.ascii "wxDataObject\0"
 	.uleb128 0x10
@@ -59558,7 +59462,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "wxNodeBase\0"
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3ef8b
+	.long	0x3ef38
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x3e00f
@@ -59591,41 +59495,41 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x2c22d
 	.uleb128 0x10
 	.ascii "wxRegion\0"
-	.uleb128 0x64
-	.secrel32	.LASF346
+	.uleb128 0x63
+	.secrel32	.LASF345
 	.byte	0x28
 	.byte	0x4
 	.word	0xecc
 	.byte	0x7
 	.long	0x2f143
-	.long	0x3f25d
+	.long	0x3f20a
 	.uleb128 0x28
 	.long	0x2f143
 	.byte	0
 	.byte	0x1
 	.uleb128 0x8
-	.secrel32	.LASF346
+	.secrel32	.LASF345
 	.byte	0x4
 	.word	0xecf
 	.byte	0x5
 	.ascii "_ZN20wxEventConnectionRefC4Ev\0"
 	.byte	0x1
-	.long	0x3f02c
-	.long	0x3f032
+	.long	0x3efd9
+	.long	0x3efdf
 	.uleb128 0x2
-	.long	0x3f262
+	.long	0x3f20f
 	.byte	0
 	.uleb128 0x8
-	.secrel32	.LASF346
+	.secrel32	.LASF345
 	.byte	0x4
 	.word	0xed0
 	.byte	0x5
 	.ascii "_ZN20wxEventConnectionRefC4EP12wxEvtHandlerS1_\0"
 	.byte	0x1
-	.long	0x3f073
-	.long	0x3f083
+	.long	0x3f020
+	.long	0x3f030
 	.uleb128 0x2
-	.long	0x3f262
+	.long	0x3f20f
 	.uleb128 0x1
 	.long	0x35783
 	.uleb128 0x1
@@ -59641,12 +59545,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x2
-	.long	0x3efe3
+	.long	0x3ef90
 	.byte	0x1
-	.long	0x3f0cb
-	.long	0x3f0d1
+	.long	0x3f078
+	.long	0x3f07e
 	.uleb128 0x2
-	.long	0x3f262
+	.long	0x3f20f
 	.byte	0
 	.uleb128 0x86
 	.secrel32	.LASF295
@@ -59654,17 +59558,17 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0xede
 	.byte	0x23
 	.ascii "_ZN20wxEventConnectionRef17ToEventConnectionEv\0"
-	.long	0x3f262
+	.long	0x3f20f
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x3
-	.long	0x3efe3
+	.long	0x3ef90
 	.byte	0x1
-	.long	0x3f11f
-	.long	0x3f125
+	.long	0x3f0cc
+	.long	0x3f0d2
 	.uleb128 0x2
-	.long	0x3f262
+	.long	0x3f20f
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF90
@@ -59673,10 +59577,10 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN20wxEventConnectionRef6IncRefEv\0"
 	.byte	0x1
-	.long	0x3f15a
-	.long	0x3f160
+	.long	0x3f107
+	.long	0x3f10d
 	.uleb128 0x2
-	.long	0x3f262
+	.long	0x3f20f
 	.byte	0
 	.uleb128 0x8
 	.secrel32	.LASF91
@@ -59685,10 +59589,10 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xa
 	.ascii "_ZN20wxEventConnectionRef6DecRefEv\0"
 	.byte	0x1
-	.long	0x3f195
-	.long	0x3f19b
+	.long	0x3f142
+	.long	0x3f148
 	.uleb128 0x2
-	.long	0x3f262
+	.long	0x3f20f
 	.byte	0
 	.uleb128 0x15
 	.ascii "m_src\0"
@@ -59717,83 +59621,83 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0xef3
 	.byte	0x5
 	.ascii "_ZN20wxEventConnectionRefaSERKS_\0"
-	.long	0x3f268
-	.long	0x3f207
-	.long	0x3f212
+	.long	0x3f215
+	.long	0x3f1b4
+	.long	0x3f1bf
 	.uleb128 0x2
-	.long	0x3f262
+	.long	0x3f20f
 	.uleb128 0x1
-	.long	0x3f26e
+	.long	0x3f21b
 	.byte	0
 	.uleb128 0x55
 	.ascii "~wxEventConnectionRef\0"
 	.ascii "_ZN20wxEventConnectionRefD4Ev\0"
 	.byte	0x1
-	.long	0x3efe3
+	.long	0x3ef90
 	.byte	0x1
-	.long	0x3f251
+	.long	0x3f1fe
 	.uleb128 0x2
-	.long	0x3f262
+	.long	0x3f20f
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
 	.byte	0
 	.uleb128 0x9
-	.long	0x3efe3
+	.long	0x3ef90
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3efe3
+	.long	0x3ef90
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x3efe3
+	.long	0x3ef90
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x3f25d
+	.long	0x3f20a
 	.uleb128 0x50
-	.secrel32	.LASF347
+	.secrel32	.LASF346
 	.byte	0x20
 	.byte	0x4
 	.byte	0xf0
 	.byte	0x18
 	.long	0x3816d
-	.long	0x3f57e
+	.long	0x3f52b
 	.uleb128 0x28
 	.long	0x3816d
 	.byte	0
 	.byte	0x1
 	.uleb128 0x56
-	.secrel32	.LASF347
+	.secrel32	.LASF346
 	.ascii "_ZN20wxObjectEventFunctorC4EOS_\0"
 	.byte	0x1
-	.long	0x3f2ba
-	.long	0x3f2c5
+	.long	0x3f267
+	.long	0x3f272
 	.uleb128 0x2
-	.long	0x3f583
+	.long	0x3f530
 	.uleb128 0x1
-	.long	0x3f58e
+	.long	0x3f53b
 	.byte	0
 	.uleb128 0x56
-	.secrel32	.LASF347
+	.secrel32	.LASF346
 	.ascii "_ZN20wxObjectEventFunctorC4ERKS_\0"
 	.byte	0x1
-	.long	0x3f2f4
-	.long	0x3f2ff
+	.long	0x3f2a1
+	.long	0x3f2ac
 	.uleb128 0x2
-	.long	0x3f583
+	.long	0x3f530
 	.uleb128 0x1
-	.long	0x3f594
+	.long	0x3f541
 	.byte	0
 	.uleb128 0xd
-	.secrel32	.LASF347
+	.secrel32	.LASF346
 	.byte	0x4
 	.byte	0xf3
 	.byte	0x5
 	.ascii "_ZN20wxObjectEventFunctorC4EM12wxEvtHandlerFvR7wxEventEPS0_\0"
 	.byte	0x1
-	.long	0x3f34c
-	.long	0x3f35c
+	.long	0x3f2f9
+	.long	0x3f309
 	.uleb128 0x2
-	.long	0x3f583
+	.long	0x3f530
 	.uleb128 0x1
 	.long	0x357ab
 	.uleb128 0x1
@@ -59809,12 +59713,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x2
-	.long	0x3f274
+	.long	0x3f221
 	.byte	0x1
-	.long	0x3f3ac
-	.long	0x3f3bc
+	.long	0x3f359
+	.long	0x3f369
 	.uleb128 0x2
-	.long	0x3f583
+	.long	0x3f530
 	.uleb128 0x1
 	.long	0x35783
 	.uleb128 0x1
@@ -59831,14 +59735,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x3
-	.long	0x3f274
+	.long	0x3f221
 	.byte	0x1
-	.long	0x3f41a
-	.long	0x3f425
+	.long	0x3f3c7
+	.long	0x3f3d2
 	.uleb128 0x2
-	.long	0x3f59a
+	.long	0x3f547
 	.uleb128 0x1
-	.long	0x3f5a5
+	.long	0x3f552
 	.byte	0
 	.uleb128 0x6c
 	.ascii "GetEvtHandler\0"
@@ -59851,12 +59755,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x4
-	.long	0x3f274
+	.long	0x3f221
 	.byte	0x1
-	.long	0x3f479
-	.long	0x3f47f
+	.long	0x3f426
+	.long	0x3f42c
 	.uleb128 0x2
-	.long	0x3f59a
+	.long	0x3f547
 	.byte	0
 	.uleb128 0x6c
 	.ascii "GetEvtMethod\0"
@@ -59869,12 +59773,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x5
-	.long	0x3f274
+	.long	0x3f221
 	.byte	0x1
-	.long	0x3f4d1
-	.long	0x3f4d7
+	.long	0x3f47e
+	.long	0x3f484
 	.uleb128 0x2
-	.long	0x3f59a
+	.long	0x3f547
 	.byte	0
 	.uleb128 0x15
 	.ascii "m_handler\0"
@@ -59891,47 +59795,47 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x354c1
 	.byte	0x10
 	.uleb128 0x2e
-	.secrel32	.LASF347
+	.secrel32	.LASF346
 	.byte	0x4
 	.word	0x118
 	.byte	0x5
 	.ascii "_ZN20wxObjectEventFunctorC4Ev\0"
-	.long	0x3f52d
-	.long	0x3f533
+	.long	0x3f4da
+	.long	0x3f4e0
 	.uleb128 0x2
-	.long	0x3f583
+	.long	0x3f530
 	.byte	0
 	.uleb128 0x55
 	.ascii "~wxObjectEventFunctor\0"
 	.ascii "_ZN20wxObjectEventFunctorD4Ev\0"
 	.byte	0x1
-	.long	0x3f274
+	.long	0x3f221
 	.byte	0x1
-	.long	0x3f572
+	.long	0x3f51f
 	.uleb128 0x2
-	.long	0x3f583
+	.long	0x3f530
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
 	.byte	0
 	.uleb128 0x9
-	.long	0x3f274
+	.long	0x3f221
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3f274
+	.long	0x3f221
 	.uleb128 0x9
-	.long	0x3f583
+	.long	0x3f530
 	.uleb128 0x59
 	.byte	0x8
-	.long	0x3f274
+	.long	0x3f221
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x3f57e
+	.long	0x3f52b
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3f57e
+	.long	0x3f52b
 	.uleb128 0x9
-	.long	0x3f59a
+	.long	0x3f547
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x3817d
@@ -59959,31 +59863,31 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x2f143
-	.uleb128 0x64
-	.secrel32	.LASF348
+	.uleb128 0x63
+	.secrel32	.LASF347
 	.byte	0x48
 	.byte	0x2
 	.word	0x297
 	.byte	0x18
-	.long	0x3f77a
-	.long	0x3f775
+	.long	0x3f727
+	.long	0x3f722
 	.uleb128 0x28
-	.long	0x3f77a
+	.long	0x3f727
 	.byte	0
 	.byte	0x1
 	.uleb128 0x8
-	.secrel32	.LASF348
+	.secrel32	.LASF347
 	.byte	0x2
 	.word	0x29c
 	.byte	0x5
 	.ascii "_ZN20wxThreadHelperThreadC4ER14wxThreadHelper12wxThreadKind\0"
 	.byte	0x1
-	.long	0x3f642
-	.long	0x3f652
+	.long	0x3f5ef
+	.long	0x3f5ff
 	.uleb128 0x2
-	.long	0x3f836
+	.long	0x3f7e3
 	.uleb128 0x1
-	.long	0x3f841
+	.long	0x3f7ee
 	.uleb128 0x1
 	.long	0x2eac5
 	.byte	0
@@ -59998,32 +59902,32 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x3
-	.long	0x3f5db
+	.long	0x3f588
 	.byte	0x2
-	.long	0x3f694
-	.long	0x3f69a
+	.long	0x3f641
+	.long	0x3f647
 	.uleb128 0x2
-	.long	0x3f836
+	.long	0x3f7e3
 	.byte	0
 	.uleb128 0x15
 	.ascii "m_owner\0"
 	.byte	0x2
 	.word	0x2a6
 	.byte	0x15
-	.long	0x3f841
+	.long	0x3f7ee
 	.byte	0x40
 	.uleb128 0x2e
-	.secrel32	.LASF348
+	.secrel32	.LASF347
 	.byte	0x2
 	.word	0x2a9
 	.byte	0x5
 	.ascii "_ZN20wxThreadHelperThreadC4ERKS_\0"
-	.long	0x3f6de
-	.long	0x3f6e9
+	.long	0x3f68b
+	.long	0x3f696
 	.uleb128 0x2
-	.long	0x3f836
+	.long	0x3f7e3
 	.uleb128 0x1
-	.long	0x3faaa
+	.long	0x3fa57
 	.byte	0
 	.uleb128 0x27
 	.secrel32	.LASF23
@@ -60031,32 +59935,32 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x2aa
 	.byte	0x1b
 	.ascii "_ZN20wxThreadHelperThreadaSERKS_\0"
-	.long	0x3fab0
-	.long	0x3f71f
-	.long	0x3f72a
+	.long	0x3fa5d
+	.long	0x3f6cc
+	.long	0x3f6d7
 	.uleb128 0x2
-	.long	0x3f836
+	.long	0x3f7e3
 	.uleb128 0x1
-	.long	0x3faaa
+	.long	0x3fa57
 	.byte	0
 	.uleb128 0x55
 	.ascii "~wxThreadHelperThread\0"
 	.ascii "_ZN20wxThreadHelperThreadD4Ev\0"
 	.byte	0x1
-	.long	0x3f5db
+	.long	0x3f588
 	.byte	0x1
-	.long	0x3f769
+	.long	0x3f716
 	.uleb128 0x2
-	.long	0x3f836
+	.long	0x3f7e3
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
 	.byte	0
 	.uleb128 0x9
-	.long	0x3f5db
+	.long	0x3f588
 	.uleb128 0x43
 	.ascii "wxThread\0"
-	.long	0x3f836
+	.long	0x3f7e3
 	.uleb128 0xd5
 	.ascii "OnExit\0"
 	.byte	0x2
@@ -60067,11 +59971,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x6
-	.long	0x3f77a
-	.long	0x3f7bb
-	.long	0x3f7c1
+	.long	0x3f727
+	.long	0x3f768
+	.long	0x3f76e
 	.uleb128 0x2
-	.long	0x3fabc
+	.long	0x3fa69
 	.byte	0
 	.uleb128 0x8a
 	.ascii "OnKill\0"
@@ -60083,12 +59987,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x5
-	.long	0x3f77a
+	.long	0x3f727
 	.byte	0x2
-	.long	0x3f7f5
-	.long	0x3f7fb
+	.long	0x3f7a2
+	.long	0x3f7a8
 	.uleb128 0x2
-	.long	0x3fabc
+	.long	0x3fa69
 	.byte	0
 	.uleb128 0xa7
 	.ascii "OnDelete\0"
@@ -60100,32 +60004,32 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x4
-	.long	0x3f77a
+	.long	0x3f727
 	.byte	0x2
-	.long	0x3f82f
+	.long	0x3f7dc
 	.uleb128 0x2
-	.long	0x3fabc
+	.long	0x3fa69
 	.byte	0
 	.byte	0
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3f5db
+	.long	0x3f588
 	.uleb128 0x9
-	.long	0x3f836
+	.long	0x3f7e3
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x3f847
-	.uleb128 0x64
-	.secrel32	.LASF349
+	.long	0x3f7f4
+	.uleb128 0x63
+	.secrel32	.LASF348
 	.byte	0x40
 	.byte	0x2
 	.word	0x2b3
 	.byte	0x18
-	.long	0x3f847
-	.long	0x3faa5
+	.long	0x3f7f4
+	.long	0x3fa52
 	.uleb128 0x66
 	.ascii "_vptr.wxThreadHelper\0"
-	.long	0x3eee7
+	.long	0x3ee94
 	.byte	0
 	.byte	0x1
 	.uleb128 0x41
@@ -60134,22 +60038,22 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x2b6
 	.byte	0xa
 	.ascii "_ZN14wxThreadHelper10KillThreadEv\0"
-	.long	0x3f8af
-	.long	0x3f8b5
+	.long	0x3f85c
+	.long	0x3f862
 	.uleb128 0x2
-	.long	0x3fab6
+	.long	0x3fa63
 	.byte	0
 	.uleb128 0x8
-	.secrel32	.LASF349
+	.secrel32	.LASF348
 	.byte	0x2
 	.word	0x2cb
 	.byte	0x5
 	.ascii "_ZN14wxThreadHelperC4E12wxThreadKind\0"
 	.byte	0x1
-	.long	0x3f8ec
-	.long	0x3f8f7
+	.long	0x3f899
+	.long	0x3f8a4
 	.uleb128 0x2
-	.long	0x3fab6
+	.long	0x3fa63
 	.uleb128 0x1
 	.long	0x2eac5
 	.byte	0
@@ -60160,12 +60064,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0xd
 	.ascii "_ZN14wxThreadHelperD4Ev\0"
 	.byte	0x1
-	.long	0x3f847
+	.long	0x3f7f4
 	.byte	0x1
-	.long	0x3f933
-	.long	0x3f93e
+	.long	0x3f8e0
+	.long	0x3f8eb
 	.uleb128 0x2
-	.long	0x3fab6
+	.long	0x3fa63
 	.uleb128 0x2
 	.long	0x24d
 	.byte	0
@@ -60177,10 +60081,10 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "_ZN14wxThreadHelper6CreateEj\0"
 	.long	0x2ea2b
 	.byte	0x1
-	.long	0x3f974
-	.long	0x3f97f
+	.long	0x3f921
+	.long	0x3f92c
 	.uleb128 0x2
-	.long	0x3fab6
+	.long	0x3fa63
 	.uleb128 0x1
 	.long	0x5bd
 	.byte	0
@@ -60192,10 +60096,10 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "_ZN14wxThreadHelper12CreateThreadE12wxThreadKindj\0"
 	.long	0x2ea2b
 	.byte	0x1
-	.long	0x3f9d0
-	.long	0x3f9e0
+	.long	0x3f97d
+	.long	0x3f98d
 	.uleb128 0x2
-	.long	0x3fab6
+	.long	0x3fa63
 	.uleb128 0x1
 	.long	0x2eac5
 	.uleb128 0x1
@@ -60212,12 +60116,12 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x2
-	.long	0x3f847
+	.long	0x3f7f4
 	.byte	0x1
-	.long	0x3fa1c
-	.long	0x3fa22
+	.long	0x3f9c9
+	.long	0x3f9cf
 	.uleb128 0x2
-	.long	0x3fab6
+	.long	0x3fa63
 	.byte	0
 	.uleb128 0x7
 	.ascii "GetThread\0"
@@ -60225,19 +60129,19 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.word	0x2e7
 	.byte	0xf
 	.ascii "_ZNK14wxThreadHelper9GetThreadEv\0"
-	.long	0x3fabc
+	.long	0x3fa69
 	.byte	0x1
-	.long	0x3fa5f
-	.long	0x3fa65
+	.long	0x3fa0c
+	.long	0x3fa12
 	.uleb128 0x2
-	.long	0x3fac7
+	.long	0x3fa74
 	.byte	0
 	.uleb128 0x1c
 	.ascii "m_thread\0"
 	.byte	0x2
 	.word	0x2f1
 	.byte	0xf
-	.long	0x3fabc
+	.long	0x3fa69
 	.byte	0x8
 	.byte	0x2
 	.uleb128 0x1c
@@ -60258,24 +60162,24 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x2
 	.byte	0
 	.uleb128 0x9
-	.long	0x3f847
+	.long	0x3f7f4
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x3f775
+	.long	0x3f722
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x3f5db
+	.long	0x3f588
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3f847
+	.long	0x3f7f4
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3f77a
+	.long	0x3f727
 	.uleb128 0x9
-	.long	0x3fabc
+	.long	0x3fa69
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3faa5
+	.long	0x3fa52
 	.uleb128 0x59
 	.byte	0x8
 	.long	0x28831
@@ -60284,14 +60188,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0x28cf5
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3fadf
+	.long	0x3fa8c
 	.uleb128 0x10
 	.ascii "wxGDIImage\0"
 	.uleb128 0x9
-	.long	0x3fadf
+	.long	0x3fa8c
 	.uleb128 0x5
 	.byte	0x8
-	.long	0x3faeb
+	.long	0x3fa98
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x2660d
@@ -60402,30 +60306,30 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x8
 	.uleb128 0xa9
 	.ascii "_GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev\0"
-	.quad	.LFB15963
-	.quad	.LFE15963-.LFB15963
+	.quad	.LFB15962
+	.quad	.LFE15962-.LFB15962
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0xd8
 	.ascii "__static_initialization_and_destruction_0\0"
-	.quad	.LFB15870
-	.quad	.LFE15870-.LFB15870
+	.quad	.LFB15869
+	.quad	.LFE15869-.LFB15869
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3ff77
-	.uleb128 0x5c
+	.long	0x3ff24
+	.uleb128 0x64
 	.ascii "__initialize_p\0"
 	.byte	0x5
-	.byte	0xde
+	.byte	0xe0
 	.byte	0x1
 	.long	0x24d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x5c
+	.uleb128 0x64
 	.ascii "__priority\0"
 	.byte	0x5
-	.byte	0xde
+	.byte	0xe0
 	.byte	0x1
 	.long	0x24d
 	.uleb128 0x2
@@ -60434,575 +60338,542 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0xa9
 	.ascii "__tcf_0\0"
-	.quad	.LFB15871
-	.quad	.LFE15871-.LFB15871
+	.quad	.LFB15870
+	.quad	.LFE15870-.LFB15870
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0xd9
-	.long	0x3f72a
+	.long	0x3f6d7
 	.byte	0x2
 	.word	0x297
 	.byte	0x18
-	.long	0x3ffa6
+	.long	0x3ff53
 	.byte	0x2
-	.long	0x3ffb9
+	.long	0x3ff66
+	.uleb128 0x44
+	.secrel32	.LASF349
+	.long	0x3f7e9
 	.uleb128 0x44
 	.secrel32	.LASF350
-	.long	0x3f83c
-	.uleb128 0x44
-	.secrel32	.LASF351
 	.long	0x254
 	.byte	0
-	.uleb128 0x5d
-	.long	0x3ff93
+	.uleb128 0x5c
+	.long	0x3ff40
 	.ascii "_ZN20wxThreadHelperThreadD0Ev\0"
-	.long	0x3fff6
-	.quad	.LFB15853
-	.quad	.LFE15853-.LFB15853
-	.uleb128 0x1
-	.byte	0x9c
-	.long	0x3ffff
-	.uleb128 0x40
-	.long	0x3ffa6
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 0
-	.byte	0
-	.uleb128 0x5d
-	.long	0x3ff93
-	.ascii "_ZN20wxThreadHelperThreadD1Ev\0"
-	.long	0x4003c
+	.long	0x3ffa3
 	.quad	.LFB15852
 	.quad	.LFE15852-.LFB15852
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40045
+	.long	0x3ffac
 	.uleb128 0x40
-	.long	0x3ffa6
+	.long	0x3ff53
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.byte	0
+	.uleb128 0x5c
+	.long	0x3ff40
+	.ascii "_ZN20wxThreadHelperThreadD1Ev\0"
+	.long	0x3ffe9
+	.quad	.LFB15851
+	.quad	.LFE15851-.LFB15851
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x3fff2
+	.uleb128 0x40
+	.long	0x3ff53
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0xda
-	.long	0x3f533
+	.long	0x3f4e0
 	.byte	0x4
 	.byte	0xf0
 	.byte	0x18
-	.long	0x40057
+	.long	0x40004
 	.byte	0x2
-	.long	0x4006a
+	.long	0x40017
+	.uleb128 0x44
+	.secrel32	.LASF349
+	.long	0x3f536
 	.uleb128 0x44
 	.secrel32	.LASF350
-	.long	0x3f589
-	.uleb128 0x44
-	.secrel32	.LASF351
 	.long	0x254
 	.byte	0
-	.uleb128 0x5d
-	.long	0x40045
+	.uleb128 0x5c
+	.long	0x3fff2
 	.ascii "_ZN20wxObjectEventFunctorD0Ev\0"
-	.long	0x400a7
-	.quad	.LFB15841
-	.quad	.LFE15841-.LFB15841
-	.uleb128 0x1
-	.byte	0x9c
-	.long	0x400b0
-	.uleb128 0x40
-	.long	0x40057
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 0
-	.byte	0
-	.uleb128 0x5d
-	.long	0x40045
-	.ascii "_ZN20wxObjectEventFunctorD1Ev\0"
-	.long	0x400ed
+	.long	0x40054
 	.quad	.LFB15840
 	.quad	.LFE15840-.LFB15840
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x400f6
+	.long	0x4005d
 	.uleb128 0x40
-	.long	0x40057
+	.long	0x40004
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x45
-	.long	0x3ee5c
-	.long	0x40115
-	.quad	.LFB14649
-	.quad	.LFE14649-.LFB14649
+	.uleb128 0x5c
+	.long	0x3fff2
+	.ascii "_ZN20wxObjectEventFunctorD1Ev\0"
+	.long	0x4009a
+	.quad	.LFB15839
+	.quad	.LFE15839-.LFB15839
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40122
-	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.long	0x400a3
+	.uleb128 0x40
+	.long	0x40004
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x2b
-	.long	0x3ee0d
-	.long	0x40141
+	.uleb128 0x4a
+	.long	0x3ee09
+	.long	0x400c2
 	.quad	.LFB14648
 	.quad	.LFE14648-.LFB14648
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4014e
+	.long	0x400cf
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3edc2
-	.long	0x4016d
+	.long	0x3edba
+	.long	0x400ee
 	.quad	.LFB14647
 	.quad	.LFE14647-.LFB14647
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4017a
+	.long	0x400fb
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3ed75
-	.long	0x40199
+	.long	0x3ed6f
+	.long	0x4011a
 	.quad	.LFB14646
 	.quad	.LFE14646-.LFB14646
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x401a6
+	.long	0x40127
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3ed26
-	.long	0x401c5
+	.long	0x3ed22
+	.long	0x40146
 	.quad	.LFB14645
 	.quad	.LFE14645-.LFB14645
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x401d2
+	.long	0x40153
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3ecdd
-	.long	0x401f1
+	.long	0x3ecd3
+	.long	0x40172
 	.quad	.LFB14644
 	.quad	.LFE14644-.LFB14644
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x401fe
+	.long	0x4017f
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3ec97
-	.long	0x4021d
+	.long	0x3ec8a
+	.long	0x4019e
 	.quad	.LFB14643
 	.quad	.LFE14643-.LFB14643
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4022a
+	.long	0x401ab
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3ec53
-	.long	0x40249
+	.long	0x3ec44
+	.long	0x401ca
 	.quad	.LFB14642
 	.quad	.LFE14642-.LFB14642
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40256
+	.long	0x401d7
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3ec11
-	.long	0x40275
+	.long	0x3ec00
+	.long	0x401f6
 	.quad	.LFB14641
 	.quad	.LFE14641-.LFB14641
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40282
+	.long	0x40203
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3ebcd
-	.long	0x402a1
+	.long	0x3ebbe
+	.long	0x40222
 	.quad	.LFB14640
 	.quad	.LFE14640-.LFB14640
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x402ae
+	.long	0x4022f
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3eb89
-	.long	0x402cd
+	.long	0x3eb7a
+	.long	0x4024e
 	.quad	.LFB14639
 	.quad	.LFE14639-.LFB14639
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x402da
+	.long	0x4025b
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3eb40
-	.long	0x402f9
+	.long	0x3eb36
+	.long	0x4027a
 	.quad	.LFB14638
 	.quad	.LFE14638-.LFB14638
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40306
+	.long	0x40287
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3eafc
-	.long	0x40325
+	.long	0x3eaed
+	.long	0x402a6
 	.quad	.LFB14637
 	.quad	.LFE14637-.LFB14637
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40332
+	.long	0x402b3
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3eab6
-	.long	0x40351
+	.long	0x3eaa9
+	.long	0x402d2
 	.quad	.LFB14636
 	.quad	.LFE14636-.LFB14636
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4035e
+	.long	0x402df
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3ea72
-	.long	0x4037d
+	.long	0x3ea63
+	.long	0x402fe
 	.quad	.LFB14635
 	.quad	.LFE14635-.LFB14635
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4038a
+	.long	0x4030b
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3ea30
-	.long	0x403a9
+	.long	0x3ea1f
+	.long	0x4032a
 	.quad	.LFB14634
 	.quad	.LFE14634-.LFB14634
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x403b6
+	.long	0x40337
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3e9e1
-	.long	0x403d5
+	.long	0x3e9dd
+	.long	0x40356
 	.quad	.LFB14633
 	.quad	.LFE14633-.LFB14633
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x403e2
+	.long	0x40363
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3e996
-	.long	0x40401
+	.long	0x3e98e
+	.long	0x40382
 	.quad	.LFB14632
 	.quad	.LFE14632-.LFB14632
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4040e
+	.long	0x4038f
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3e949
-	.long	0x4042d
+	.long	0x3e943
+	.long	0x403ae
 	.quad	.LFB14631
 	.quad	.LFE14631-.LFB14631
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4043a
+	.long	0x403bb
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3e8fe
-	.long	0x40459
+	.long	0x3e8f6
+	.long	0x403da
 	.quad	.LFB14630
 	.quad	.LFE14630-.LFB14630
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40466
+	.long	0x403e7
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 0
-	.byte	0
-	.uleb128 0x45
-	.long	0x3e8b5
-	.long	0x40485
-	.quad	.LFB14629
-	.quad	.LFE14629-.LFB14629
-	.uleb128 0x1
-	.byte	0x9c
-	.long	0x40492
-	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
+	.long	0x3e8ab
+	.long	0x40406
+	.quad	.LFB14629
+	.quad	.LFE14629-.LFB14629
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x40413
+	.uleb128 0x1f
+	.secrel32	.LASF349
+	.long	0x3ee7e
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.byte	0
+	.uleb128 0x4a
 	.long	0x3e862
-	.long	0x404b1
+	.long	0x40432
 	.quad	.LFB14628
 	.quad	.LFE14628-.LFB14628
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x404be
+	.long	0x4043f
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x45
-	.long	0x3e813
-	.long	0x404dd
+	.uleb128 0x2b
+	.long	0x3e80f
+	.long	0x4045e
 	.quad	.LFB14627
 	.quad	.LFE14627-.LFB14627
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x404ea
+	.long	0x4046b
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x45
-	.long	0x3e7be
-	.long	0x40509
+	.uleb128 0x4a
+	.long	0x3e7c0
+	.long	0x4048a
 	.quad	.LFB14626
 	.quad	.LFE14626-.LFB14626
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40526
+	.long	0x40497
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.byte	0
+	.uleb128 0x4a
+	.long	0x3e76b
+	.long	0x404b6
+	.quad	.LFB14625
+	.quad	.LFE14625-.LFB14625
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x404d3
+	.uleb128 0x1f
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x8d
-	.secrel32	.LASF352
+	.secrel32	.LASF351
 	.byte	0x5
-	.byte	0x5e
+	.byte	0x60
 	.byte	0x15
 	.long	0xa869
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -17
 	.byte	0
-	.uleb128 0x45
-	.long	0x3e761
-	.long	0x40545
-	.quad	.LFB14625
-	.quad	.LFE14625-.LFB14625
-	.uleb128 0x1
-	.byte	0x9c
-	.long	0x40574
-	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 0
-	.uleb128 0x5c
-	.ascii "folder\0"
-	.byte	0x5
-	.byte	0x4b
-	.byte	0x49
-	.long	0x3ef1d
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 8
-	.uleb128 0x29
-	.ascii "info\0"
-	.byte	0x5
-	.byte	0x51
-	.byte	0x1d
-	.long	0x3ef04
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 -24
-	.byte	0
-	.uleb128 0x45
-	.long	0x3e701
-	.long	0x40593
+	.uleb128 0x4a
+	.long	0x3e70b
+	.long	0x404f2
 	.quad	.LFB14624
 	.quad	.LFE14624-.LFB14624
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x405b0
+	.long	0x4050f
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x5c
+	.uleb128 0x64
 	.ascii "info\0"
 	.byte	0x5
 	.byte	0x46
 	.byte	0x48
-	.long	0x3ef1d
+	.long	0x3eeca
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x2b
 	.long	0x3e6a0
-	.long	0x405cf
+	.long	0x4052e
 	.quad	.LFB14623
 	.quad	.LFE14623-.LFB14623
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x405ec
+	.long	0x4054b
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x5c
+	.uleb128 0x64
 	.ascii "info\0"
 	.byte	0x5
 	.byte	0x38
-	.byte	0x44
-	.long	0x3ef04
+	.byte	0x49
+	.long	0x3eeca
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x4a
 	.long	0x3e640
-	.long	0x4060b
+	.long	0x4056a
 	.quad	.LFB14622
 	.quad	.LFE14622-.LFB14622
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4064b
+	.long	0x405aa
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x5c
+	.uleb128 0x64
 	.ascii "info\0"
 	.byte	0x5
 	.byte	0xd
 	.byte	0x43
-	.long	0x3ef04
+	.long	0x3eeb1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x8d
-	.secrel32	.LASF352
+	.secrel32	.LASF351
 	.byte	0x5
 	.byte	0xf
 	.byte	0x15
@@ -61010,93 +60881,93 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -33
-	.uleb128 0x29
+	.uleb128 0x2a
 	.ascii "folder\0"
 	.byte	0x5
 	.byte	0x11
 	.byte	0x1d
-	.long	0x3ef23
+	.long	0x3eed0
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -112
 	.byte	0
 	.uleb128 0x6d
 	.long	0x3e5e9
-	.long	0x40659
+	.long	0x405b8
 	.byte	0
-	.long	0x4066c
+	.long	0x405cb
+	.uleb128 0x44
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.uleb128 0x44
 	.secrel32	.LASF350
-	.long	0x3eed1
-	.uleb128 0x44
-	.secrel32	.LASF351
 	.long	0x254
 	.byte	0
-	.uleb128 0x5d
-	.long	0x4064b
+	.uleb128 0x5c
+	.long	0x405aa
 	.ascii "_ZN23T100ProjectSkeletalBaseD0Ev\0"
-	.long	0x406ac
+	.long	0x4060b
 	.quad	.LFB14621
 	.quad	.LFE14621-.LFB14621
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x406b5
+	.long	0x40614
 	.uleb128 0x40
-	.long	0x40659
+	.long	0x405b8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x8e
-	.long	0x4064b
+	.long	0x405aa
 	.ascii "_ZN23T100ProjectSkeletalBaseD2Ev\0"
-	.long	0x406f6
+	.long	0x40655
 	.quad	.LFB14619
 	.quad	.LFE14619-.LFB14619
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x406ff
+	.long	0x4065e
 	.uleb128 0x40
-	.long	0x40659
+	.long	0x405b8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x6d
 	.long	0x3e5b1
-	.long	0x4070d
+	.long	0x4066c
 	.byte	0
-	.long	0x40717
+	.long	0x40676
 	.uleb128 0x44
-	.secrel32	.LASF350
-	.long	0x3eed1
+	.secrel32	.LASF349
+	.long	0x3ee7e
 	.byte	0
 	.uleb128 0x8e
-	.long	0x406ff
+	.long	0x4065e
 	.ascii "_ZN23T100ProjectSkeletalBaseC2Ev\0"
-	.long	0x40758
+	.long	0x406b7
 	.quad	.LFB14616
 	.quad	.LFE14616-.LFB14616
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40761
+	.long	0x406c0
 	.uleb128 0x40
-	.long	0x4070d
+	.long	0x4066c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x45
-	.long	0x3f35c
-	.long	0x40780
+	.uleb128 0x4a
+	.long	0x3f309
+	.long	0x406df
 	.quad	.LFB9455
 	.quad	.LFE9455-.LFB9455
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x407ce
+	.long	0x4072d
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3f589
+	.secrel32	.LASF349
+	.long	0x3f536
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -61129,55 +61000,55 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.sleb128 -24
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3f47f
-	.long	0x407ed
+	.long	0x3f42c
+	.long	0x4074c
 	.quad	.LFB8657
 	.quad	.LFE8657-.LFB8657
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x407fa
+	.long	0x40759
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3f5a0
+	.secrel32	.LASF349
+	.long	0x3f54d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3f425
-	.long	0x40819
+	.long	0x3f3d2
+	.long	0x40778
 	.quad	.LFB8656
 	.quad	.LFE8656-.LFB8656
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40826
+	.long	0x40785
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3f5a0
+	.secrel32	.LASF349
+	.long	0x3f54d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x45
-	.long	0x3f3bc
-	.long	0x40845
+	.uleb128 0x4a
+	.long	0x3f369
+	.long	0x407a4
 	.quad	.LFB8655
 	.quad	.LFE8655-.LFB8655
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40888
+	.long	0x407e7
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3f5a0
+	.secrel32	.LASF349
+	.long	0x3f54d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x5c
+	.uleb128 0x64
 	.ascii "functor\0"
 	.byte	0x4
 	.byte	0xf9
 	.byte	0x33
-	.long	0x3f5a5
+	.long	0x3f552
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -61189,22 +61060,22 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x4
 	.byte	0xfd
 	.byte	0x29
-	.long	0x3f594
+	.long	0x3f541
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
 	.byte	0
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x4a
 	.long	0x2f348
-	.long	0x408a7
+	.long	0x40806
 	.quad	.LFB7624
 	.quad	.LFE7624-.LFB7624
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x408c4
+	.long	0x40823
 	.uleb128 0x1f
-	.secrel32	.LASF350
+	.secrel32	.LASF349
 	.long	0x2f3db
 	.uleb128 0x2
 	.byte	0x91
@@ -61221,11 +61092,11 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.uleb128 0x6d
 	.long	0x2f310
-	.long	0x408d2
+	.long	0x40831
 	.byte	0x2
-	.long	0x408ef
+	.long	0x4084e
 	.uleb128 0x44
-	.secrel32	.LASF350
+	.secrel32	.LASF349
 	.long	0x2f3db
 	.uleb128 0xdd
 	.ascii "className\0"
@@ -61235,41 +61106,41 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.long	0xd530
 	.byte	0
 	.uleb128 0x8e
-	.long	0x408c4
+	.long	0x40823
 	.ascii "_ZN16wxTypeIdentifierC1EPKc\0"
-	.long	0x4092b
+	.long	0x4088a
 	.quad	.LFB7623
 	.quad	.LFE7623-.LFB7623
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4093c
+	.long	0x4089b
 	.uleb128 0x40
-	.long	0x408d2
+	.long	0x40831
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x40
-	.long	0x408db
+	.long	0x4083a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x45
-	.long	0x3f652
-	.long	0x4095b
+	.uleb128 0x4a
+	.long	0x3f5ff
+	.long	0x408ba
 	.quad	.LFB7592
 	.quad	.LFE7592-.LFB7592
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4098d
+	.long	0x408ec
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3f83c
+	.secrel32	.LASF349
+	.long	0x3f7e9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0xde
-	.secrel32	.LASF352
+	.secrel32	.LASF351
 	.byte	0x2
 	.word	0x300
 	.byte	0x12
@@ -61288,84 +61159,84 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.sleb128 -48
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3f788
-	.long	0x409ac
+	.long	0x3f735
+	.long	0x4090b
 	.quad	.LFB7577
 	.quad	.LFE7577-.LFB7577
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x409b9
+	.long	0x40918
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3fac2
+	.secrel32	.LASF349
+	.long	0x3fa6f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3f7c1
-	.long	0x409d8
+	.long	0x3f76e
+	.long	0x40937
 	.quad	.LFB7576
 	.quad	.LFE7576-.LFB7576
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x409e5
+	.long	0x40944
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3fac2
+	.secrel32	.LASF349
+	.long	0x3fa6f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x3f7fb
-	.long	0x40a04
+	.long	0x3f7a8
+	.long	0x40963
 	.quad	.LFB7575
 	.quad	.LFE7575-.LFB7575
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40a11
+	.long	0x40970
 	.uleb128 0x1f
-	.secrel32	.LASF350
-	.long	0x3fac2
+	.secrel32	.LASF349
+	.long	0x3fa6f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x6d
 	.long	0x2ee68
-	.long	0x40a1f
+	.long	0x4097e
 	.byte	0x2
-	.long	0x40a32
+	.long	0x40991
 	.uleb128 0x44
-	.secrel32	.LASF350
+	.secrel32	.LASF349
 	.long	0x2ef5c
 	.uleb128 0x44
-	.secrel32	.LASF351
+	.secrel32	.LASF350
 	.long	0x254
 	.byte	0
-	.uleb128 0x5d
-	.long	0x40a11
+	.uleb128 0x5c
+	.long	0x40970
 	.ascii "_ZN23wxCriticalSectionLockerD1Ev\0"
-	.long	0x40a72
+	.long	0x409d1
 	.quad	.LFB7569
 	.quad	.LFE7569-.LFB7569
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40a7b
+	.long	0x409da
 	.uleb128 0x40
-	.long	0x40a1f
+	.long	0x4097e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x6d
 	.long	0x2ee17
-	.long	0x40a89
+	.long	0x409e8
 	.byte	0x2
-	.long	0x40aa0
+	.long	0x409ff
 	.uleb128 0x44
-	.secrel32	.LASF350
+	.secrel32	.LASF349
 	.long	0x2ef5c
 	.uleb128 0xdf
 	.ascii "cs\0"
@@ -61374,35 +61245,35 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0x30
 	.long	0x2ee03
 	.byte	0
-	.uleb128 0x5d
-	.long	0x40a7b
+	.uleb128 0x5c
+	.long	0x409da
 	.ascii "_ZN23wxCriticalSectionLockerC1ER17wxCriticalSection\0"
-	.long	0x40af3
+	.long	0x40a52
 	.quad	.LFB7566
 	.quad	.LFE7566-.LFB7566
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x40b04
+	.long	0x40a63
 	.uleb128 0x40
-	.long	0x40a89
+	.long	0x409e8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x40
-	.long	0x40a92
+	.long	0x409f1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0xe0
 	.long	0x18155
-	.long	0x40b20
+	.long	0x40a7f
 	.quad	.LFB752
 	.quad	.LFE752-.LFB752
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x1f
-	.secrel32	.LASF350
+	.secrel32	.LASF349
 	.long	0x1cf68
 	.uleb128 0x2
 	.byte	0x91
@@ -61698,21 +61569,6 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.byte	0
 	.uleb128 0x13
-	.uleb128 0x16
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x14
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -61736,6 +61592,21 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x64
 	.uleb128 0x13
 	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x14
+	.uleb128 0x16
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
@@ -62098,23 +61969,6 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.byte	0
 	.uleb128 0x29
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x2a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -62135,6 +61989,23 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.uleb128 0x1
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x2a
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x2b
@@ -62604,25 +62475,6 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.byte	0
 	.uleb128 0x45
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2116
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x46
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -62639,7 +62491,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x47
+	.uleb128 0x46
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
@@ -62648,7 +62500,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x47
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -62673,7 +62525,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x49
+	.uleb128 0x48
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -62692,7 +62544,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x4a
+	.uleb128 0x49
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -62711,6 +62563,25 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.uleb128 0x3c
 	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x4a
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x47
+	.uleb128 0x13
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2116
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x4b
@@ -63027,23 +62898,6 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.byte	0
 	.byte	0
 	.uleb128 0x5c
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x5d
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -63064,7 +62918,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5e
+	.uleb128 0x5d
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0x3
@@ -63087,7 +62941,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x5e
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -63110,7 +62964,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x60
+	.uleb128 0x5f
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -63127,7 +62981,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x61
+	.uleb128 0x60
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -63142,7 +62996,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x61
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -63165,7 +63019,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x62
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -63184,7 +63038,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x64
+	.uleb128 0x63
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -63201,6 +63055,23 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.uleb128 0x13
 	.uleb128 0x1
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x64
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x65
@@ -65534,14 +65405,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.quad	.LFE8657-.LFB8657
 	.quad	.LFB9455
 	.quad	.LFE9455-.LFB9455
+	.quad	.LFB15839
+	.quad	.LFE15839-.LFB15839
 	.quad	.LFB15840
 	.quad	.LFE15840-.LFB15840
-	.quad	.LFB15841
-	.quad	.LFE15841-.LFB15841
+	.quad	.LFB15851
+	.quad	.LFE15851-.LFB15851
 	.quad	.LFB15852
 	.quad	.LFE15852-.LFB15852
-	.quad	.LFB15853
-	.quad	.LFE15853-.LFB15853
 	.quad	0
 	.quad	0
 	.section	.debug_ranges,"dr"
@@ -65574,14 +65445,14 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.quad	.LFE8657
 	.quad	.LFB9455
 	.quad	.LFE9455
+	.quad	.LFB15839
+	.quad	.LFE15839
 	.quad	.LFB15840
 	.quad	.LFE15840
-	.quad	.LFB15841
-	.quad	.LFE15841
+	.quad	.LFB15851
+	.quad	.LFE15851
 	.quad	.LFB15852
 	.quad	.LFE15852
-	.quad	.LFB15853
-	.quad	.LFE15853
 	.quad	0
 	.quad	0
 	.section	.debug_line,"dr"
@@ -65711,7 +65582,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "Sort\0"
 .LASF18:
 	.ascii "iterator\0"
-.LASF348:
+.LASF347:
 	.ascii "wxThreadHelperThread\0"
 .LASF58:
 	.ascii "operator()\0"
@@ -65747,7 +65618,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "allocator_type\0"
 .LASF211:
 	.ascii "wxClassInfo\0"
-.LASF352:
+.LASF351:
 	.ascii "result\0"
 .LASF62:
 	.ascii "Shrink\0"
@@ -65819,7 +65690,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "operator wchar_t const*\0"
 .LASF160:
 	.ascii "deallocate\0"
-.LASF347:
+.LASF346:
 	.ascii "wxObjectEventFunctor\0"
 .LASF322:
 	.ascii "wxAsyncMethodCallEvent\0"
@@ -65853,8 +65724,6 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "operator+=\0"
 .LASF84:
 	.ascii "wxScopedCharTypeBuffer\0"
-.LASF345:
-	.ascii "WorkSpaceOpen\0"
 .LASF44:
 	.ascii "resize\0"
 .LASF171:
@@ -65901,7 +65770,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "wxWindowList\0"
 .LASF282:
 	.ascii "ToString\0"
-.LASF346:
+.LASF345:
 	.ascii "wxEventConnectionRef\0"
 .LASF176:
 	.ascii "_S_on_swap\0"
@@ -66051,7 +65920,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "Remove\0"
 .LASF217:
 	.ascii "wxRefCounter\0"
-.LASF350:
+.LASF349:
 	.ascii "this\0"
 .LASF94:
 	.ascii "wxCharTypeBuffer\0"
@@ -66133,7 +66002,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "to_int_type\0"
 .LASF268:
 	.ascii "m_type\0"
-.LASF351:
+.LASF350:
 	.ascii "__in_chrg\0"
 .LASF207:
 	.ascii "operator bool\0"
@@ -66197,7 +66066,7 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.ascii "_M_create\0"
 .LASF243:
 	.ascii "GetWidth\0"
-.LASF349:
+.LASF348:
 	.ascii "wxThreadHelper\0"
 .LASF145:
 	.ascii "_Alloc\0"
@@ -66306,9 +66175,6 @@ _GLOBAL__sub_I__ZN23T100ProjectSkeletalBaseC2Ev:
 	.def	_ZN16T100WxFolderInfoD1Ev;	.scl	2;	.type	32;	.endef
 	.def	_Unwind_Resume;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100WorkSpaceServe3NewERK16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
-	.def	_ZN18T100WorkSpaceServe4OpenERK16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
-	.def	_ZN18T100WorkSpaceServe16GetWorkSpaceInfoEv;	.scl	2;	.type	32;	.endef
-	.def	_ZN15T100ProjectView13WorkSpaceOpenEP17T100WorkSpaceInfo;	.scl	2;	.type	32;	.endef
 	.def	_ZN15T100ProjectView14WorkSpaceCloseEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100WorkSpaceServe5CloseEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100WorkSpaceServe4SaveEv;	.scl	2;	.type	32;	.endef
