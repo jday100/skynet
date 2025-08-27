@@ -117,10 +117,11 @@ T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
     T100WorkSpaceInfo*      workspace   = T100NEW T100WorkSpaceInfo();
 
     if(!file.Load(workspace)){
+        T100SAFE_DELETE(workspace);
         return T100FALSE;
     }
 
-    m_info      = T100NEW T100WorkSpaceInfo();
+    m_info      = workspace;
 
     m_info->SetLabel(info.GetLabel());
     m_info->SetPath(info.GetPath());
