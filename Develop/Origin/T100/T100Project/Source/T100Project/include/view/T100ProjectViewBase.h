@@ -37,6 +37,7 @@ class T100ProjectViewBase
         T100BOOL                        ShowWorkSpaceNotExistsDialog();
         T100BOOL                        ShowWorkSpaceFileExistsDialog();
         T100VOID                        ShowWorkSpacePropertiesDialog();
+        T100VOID                        ShowWorkSpaceOpenFailureDialog();
 
         T100VOID                        ShowProjectCreateWizard();
 

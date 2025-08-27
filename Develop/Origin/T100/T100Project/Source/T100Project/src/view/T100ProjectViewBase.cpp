@@ -167,6 +167,11 @@ T100VOID T100ProjectViewBase::ShowWorkSpacePropertiesDialog()
     dialog.ShowModal();
 }
 
+T100VOID T100ProjectViewBase::ShowWorkSpaceOpenFailureDialog()
+{
+    wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+}
+
 T100VOID T100ProjectViewBase::ShowProjectCreateWizard()
 {
     T100ProjectCreateWizard     wizard(m_frame);

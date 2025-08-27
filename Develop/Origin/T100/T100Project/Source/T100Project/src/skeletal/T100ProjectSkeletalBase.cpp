@@ -61,7 +61,49 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(T100WorkSpaceInfo* info)
 
 T100BOOL T100ProjectSkeletalBase::WorkSpaceOpen(const T100WxFolderInfo& info)
 {
+    T100BOOL        result      = T100TRUE;
 
+    if(m_serve->CheckWorkSpaceFolder(info)){
+        if(m_view->ShowWorkSpaceNotExistsDialog()){
+
+        }else{
+            return T100FALSE;
+        }
+    }else{
+        return T100FALSE;
+    }
+
+    if(m_serve->CheckWorkSpaceFile(info)){
+        if(m_view->ShowWorkSpaceFileExistsDialog()){
+
+        }else{
+            return T100FALSE;
+        }
+    }else{
+        return T100FALSE;
+    }
+
+    if(m_serve->Open(info)){
+
+    }else{
+        return T100FALSE;
+    }
+
+    T100WorkSpaceInfo*      info        = T100NULL;
+
+    info    = m_serve->GetWorkSpaceInfo();
+
+    if(!info){
+        return T100FALSE;
+    }
+
+    if(m_view->WorkSpaceOpen(info)){
+
+    }else{
+        return T100FALSE;
+    }
+
+    return T100TRUE;
 }
 
 
@@ -77,25 +119,6 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(const T100WxFolderInfo& info)
 {
     return m_serve->New(info);
 }
-
-/*
-T100VOID T100ProjectSkeletalBase::WorkSpaceOpen(const T100WxFolderInfo& folder)
-{
-    if(!m_serve->Open(folder)){
-        return;
-    }
-
-    T100WorkSpaceInfo*      info        = T100NULL;
-
-    info    = m_serve->GetWorkSpaceInfo();
-
-    if(!info){
-        return;
-    }
-
-    m_view->WorkSpaceOpen(info);
-}
-*/
 
 T100BOOL T100ProjectSkeletalBase::WorkSpaceClose()
 {

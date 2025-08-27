@@ -70,43 +70,42 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
     }
 }
 
-/*
-T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
+T100VOID T100ProjectSkeletal::OnWorkSpaceOpen()
 {
     T100BOOL        result      = T100TRUE;
 
     if(m_serve->IsOpened()){
-        result = WorkSpaceClose();
+        result  = WorkSpaceClose();
     }
 
     if(!result){
         return;
     }
 
-    T100WSTRING     path;
+    T100WSTRING         path;
 
-    if(!m_view->ShowWorkSpaceCreateDialog()){
+    if(m_view->ShowDirDialog(path) == wxID_OK){
+
+    }else{
         return;
     }
 
-    T100WSTRING     dir;
-    T100WSTRING     name;
+    T100WSTRING         folder;
+    T100WSTRING         label;
 
+    T100PathTools::Split(path, folder, label);
 
-    T100PathTools::Split(path, dir, name);
+    T100WxFolderInfo    info;
 
-    T100WxFolderInfo        info;
-
-    info.SetLabel(name);
+    info.SetLabel(label);
     info.SetPath(path);
 
-    if(!WorkSpaceNew(info)){
+    if(WorkSpaceOpen(info)){
         return;
     }
 
-    WorkSpaceOpen(info);
+    m_view->ShowWorkSpaceOpenFailureDialog();
 }
-*/
 
 
 
@@ -116,6 +115,13 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
 
 
 
+
+
+
+
+
+
+/*
 T100VOID T100ProjectSkeletal::OnWorkSpaceOpen()
 {
     if(m_serve->IsOpened()){
@@ -141,6 +147,7 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceOpen()
 
     WorkSpaceOpen(info);
 }
+*/
 
 T100VOID T100ProjectSkeletal::OnWorkSpaceClose()
 {
