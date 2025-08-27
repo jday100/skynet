@@ -44,6 +44,16 @@ const T100WSTRING& T100WorkSpaceInfo::GetFileName()
     return m_filename;
 }
 
+T100VOID T100WorkSpaceInfo::SetPythonFile(const T100WSTRING& file)
+{
+    m_pythonFile    = file;
+}
+
+const T100WSTRING& T100WorkSpaceInfo::GetPythonFile()
+{
+    return m_pythonFile;
+}
+
 T100PROJECT_INFO_VECTOR& T100WorkSpaceInfo::GetProjects()
 {
     return m_projects;

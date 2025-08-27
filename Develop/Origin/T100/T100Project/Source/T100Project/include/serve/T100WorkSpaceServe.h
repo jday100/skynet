@@ -60,7 +60,6 @@ class T100WorkSpaceServe
         virtual T100VOID                        Clear();
 
     protected:
-        T100WSTRING                             GetFileName(const T100WorkSpaceInfo*);
         T100WSTRING                             GetFileName(const T100WxFolderInfo&);
 
     protected:

@@ -59,9 +59,11 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
         T100SAFE_DELETE(info);
         return;
     }
-    T100SAFE_DELETE(info);
 
     T100WxFolderInfo        folder;
+
+    folder.SetPath(info->GetPath());
+    T100SAFE_DELETE(info);
 
     if(!WorkSpaceOpen(folder)){
         return;

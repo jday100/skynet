@@ -116,9 +116,15 @@ T100INT T100ProjectViewBase::ShowDirDialog(T100WSTRING& path)
 
 T100BOOL T100ProjectViewBase::ShowWorkSpaceCreateDialog(T100WorkSpaceInfo* info)
 {
+    if(!info){
+        return T100FALSE;
+    }
+
     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
 
     if(dialog.ShowModal() == wxID_APPLY){
+        info->SetPath(dialog.GetWorkSpacePath());
+        info->SetPythonFile(dialog.GetPythonFile());
         return T100TRUE;
     }
     return T100FALSE;

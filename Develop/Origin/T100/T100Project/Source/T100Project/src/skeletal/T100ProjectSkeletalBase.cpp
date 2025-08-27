@@ -14,7 +14,13 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(T100WorkSpaceInfo* info)
 {
     T100BOOL        result      = T100TRUE;
 
+    if(!info){
+        return T100FALSE;
+    }
+
     T100WxFolderInfo        folder;
+
+    folder.SetPath(info->GetPath());
 
     result  = m_serve->CheckWorkSpaceFolder(folder);
 
@@ -35,7 +41,7 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(T100WorkSpaceInfo* info)
 
     result  = m_serve->CheckWorkSpaceFile(folder);
 
-    if(result){
+    if(!result){
         result  = m_view->ShowWorkSpaceFileExistsDialog();
         if(result){
 

@@ -2,6 +2,7 @@
 
 #include "T100Folder.h"
 #include "T100WorkSpaceFile.h"
+#include "T100ProjectConfig.h"
 
 T100WorkSpaceServe::T100WorkSpaceServe() :
     m_projectServe()
@@ -31,12 +32,6 @@ T100BOOL T100WorkSpaceServe::Create(T100WorkSpaceInfo* info)
         return T100FALSE;
     }
 
-    T100Folder          folder(info->GetPath());
-
-    if(!folder.IsExists()){
-        return T100FALSE;
-    }
-
     return T100TRUE;
 }
 
@@ -47,8 +42,11 @@ T100BOOL T100WorkSpaceServe::CreateWorkSpaceFile(T100WorkSpaceInfo* info)
     }
 
     T100WSTRING         filename;
+    T100WxFolderInfo    folder;
 
-    filename    = GetFileName(info);
+    folder.SetPath(info->GetPath());
+
+    filename    = GetFileName(folder);
 
     T100WorkSpaceFile       file(filename);
 
@@ -278,24 +276,11 @@ T100VOID T100WorkSpaceServe::Build()
     m_projectServe.GetProjectLogic().Build();
 }
 
-T100WSTRING T100WorkSpaceServe::GetFileName(const T100WorkSpaceInfo* info)
-{
-    T100WSTRING         filename;
-
-    if(!info){
-        return filename;
-    }
-
-    filename    = info->GetPath() + L"/" + info->GetLabel() + L".ws";
-
-    return filename;
-}
-
 T100WSTRING T100WorkSpaceServe::GetFileName(const T100WxFolderInfo& info)
 {
     T100WSTRING         filename;
 
-    filename    = info.GetPath() + L"/" + info.GetLabel() + L".ws";
+    filename    = info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_WORKSPACE_FILENAME;
 
     return filename;
 }
