@@ -149,7 +149,8 @@ T100BOOL T100ProjectViewBase::ShowWorkSpaceFileExistsDialog()
 {
     T100INT     result;
 
-    result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+    result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, \n \
+                          Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
 
     if(result == wxYES){
         return T100TRUE;

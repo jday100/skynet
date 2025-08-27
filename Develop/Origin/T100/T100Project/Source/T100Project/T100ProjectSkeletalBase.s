@@ -1033,39 +1033,39 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewEP17T100WorkSpaceInfo:
 	jne	.L37	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:18:         return T100FALSE;
 	.loc 5 18 16
-	movl	$0, %ebx	 #, _24
+	movl	$0, %ebx	 #, _23
 	jmp	.L44	 #
 .L37:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:21:     T100WxFolderInfo        folder;
 	.loc 5 21 29
-	leaq	-96(%rbp), %rax	 #, tmp119
-	movq	%rax, %rcx	 # tmp119,
+	leaq	-96(%rbp), %rax	 #, tmp118
+	movq	%rax, %rcx	 # tmp118,
 .LEHB0:
 	call	_ZN16T100WxFolderInfoC1Ev	 #
 .LEHE0:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:23:     folder.SetPath(info->GetPath());
 	.loc 5 23 19
-	movq	24(%rbp), %rax	 # info, tmp120
-	movq	%rax, %rcx	 # tmp120,
+	movq	24(%rbp), %rax	 # info, tmp119
+	movq	%rax, %rcx	 # tmp119,
 .LEHB1:
 	call	_ZN17T100WorkSpaceInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _1
-	leaq	-96(%rbp), %rax	 #, tmp121
-	movq	%rax, %rcx	 # tmp121,
+	leaq	-96(%rbp), %rax	 #, tmp120
+	movq	%rax, %rcx	 # tmp120,
 	call	_ZN16T100WxFolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:25:     result  = m_serve->CheckWorkSpaceFolder(folder);
 	.loc 5 25 15
-	movq	16(%rbp), %rax	 # this, tmp122
-	movq	16(%rax), %rcx	 # this_40(D)->m_serve, _2
+	movq	16(%rbp), %rax	 # this, tmp121
+	movq	16(%rax), %rcx	 # this_39(D)->m_serve, _2
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:25:     result  = m_serve->CheckWorkSpaceFolder(folder);
 	.loc 5 25 44
-	leaq	-96(%rbp), %rax	 #, tmp123
-	movq	%rax, %rdx	 # tmp123,
+	leaq	-96(%rbp), %rax	 #, tmp122
+	movq	%rax, %rdx	 # tmp122,
 	call	_ZN18T100WorkSpaceServe20CheckWorkSpaceFolderERK16T100WxFolderInfo	 #
-	movb	%al, -17(%rbp)	 # _42, result
+	movb	%al, -17(%rbp)	 # _41, result
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:27:     if(!result){
 	.loc 5 27 8
-	movzbl	-17(%rbp), %eax	 # result, tmp124
+	movzbl	-17(%rbp), %eax	 # result, tmp123
 	xorl	$1, %eax	 #, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:27:     if(!result){
 	.loc 5 27 5
@@ -1073,28 +1073,28 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewEP17T100WorkSpaceInfo:
 	je	.L39	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:28:         result  = m_view->ShowWorkSpaceNotExistsDialog();
 	.loc 5 28 19
-	movq	16(%rbp), %rax	 # this, tmp125
-	movq	8(%rax), %rax	 # this_40(D)->m_view, _4
+	movq	16(%rbp), %rax	 # this, tmp124
+	movq	8(%rax), %rax	 # this_39(D)->m_view, _4
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:28:         result  = m_view->ShowWorkSpaceNotExistsDialog();
 	.loc 5 28 55
 	movq	%rax, %rcx	 # _5,
 	call	_ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv	 #
-	movb	%al, -17(%rbp)	 # _45, result
+	movb	%al, -17(%rbp)	 # _44, result
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:29:         if(result){
 	.loc 5 29 9
 	cmpb	$0, -17(%rbp)	 #, result
 	jne	.L39	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:32:             return T100FALSE;
 	.loc 5 32 20
-	movl	$0, %ebx	 #, _24
+	movl	$0, %ebx	 #, _23
 	jmp	.L40	 #
 .L39:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:36:     result  = m_serve->CreateWorkSpace(info);
 	.loc 5 36 15
-	movq	16(%rbp), %rax	 # this, tmp126
-	movq	16(%rax), %rcx	 # this_40(D)->m_serve, _6
-	movq	16(%rbp), %rax	 # this, tmp128
-	movq	16(%rax), %rax	 # this_40(D)->m_serve, _8
+	movq	16(%rbp), %rax	 # this, tmp125
+	movq	16(%rax), %rcx	 # this_39(D)->m_serve, _6
+	movq	16(%rbp), %rax	 # this, tmp127
+	movq	16(%rax), %rax	 # this_39(D)->m_serve, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:36:     result  = m_serve->CreateWorkSpace(info);
 	.loc 5 36 44
 	movq	(%rax), %rax	 # _8->_vptr.T100WorkSpaceServe, _9
@@ -1102,13 +1102,13 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewEP17T100WorkSpaceInfo:
 	movq	(%rax), %rax	 # *_10, _11
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:36:     result  = m_serve->CreateWorkSpace(info);
 	.loc 5 36 39
-	movq	24(%rbp), %rdx	 # info, tmp129
+	movq	24(%rbp), %rdx	 # info, tmp128
 	call	*%rax	 # _11
 .LVL2:
-	movb	%al, -17(%rbp)	 # _49, result
+	movb	%al, -17(%rbp)	 # _48, result
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:38:     if(!result){
 	.loc 5 38 8
-	movzbl	-17(%rbp), %eax	 # result, tmp130
+	movzbl	-17(%rbp), %eax	 # result, tmp129
 	xorl	$1, %eax	 #, _12
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:38:     if(!result){
 	.loc 5 38 5
@@ -1116,86 +1116,82 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewEP17T100WorkSpaceInfo:
 	je	.L41	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:39:         return T100FALSE;
 	.loc 5 39 16
-	movl	$0, %ebx	 #, _24
+	movl	$0, %ebx	 #, _23
 	jmp	.L40	 #
 .L41:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:42:     result  = m_serve->CheckWorkSpaceFile(folder);
 	.loc 5 42 15
-	movq	16(%rbp), %rax	 # this, tmp131
-	movq	16(%rax), %rcx	 # this_40(D)->m_serve, _13
+	movq	16(%rbp), %rax	 # this, tmp130
+	movq	16(%rax), %rcx	 # this_39(D)->m_serve, _13
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:42:     result  = m_serve->CheckWorkSpaceFile(folder);
 	.loc 5 42 42
-	leaq	-96(%rbp), %rax	 #, tmp132
-	movq	%rax, %rdx	 # tmp132,
+	leaq	-96(%rbp), %rax	 #, tmp131
+	movq	%rax, %rdx	 # tmp131,
 	call	_ZN18T100WorkSpaceServe18CheckWorkSpaceFileERK16T100WxFolderInfo	 #
-	movb	%al, -17(%rbp)	 # _53, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:44:     if(!result){
-	.loc 5 44 8
-	movzbl	-17(%rbp), %eax	 # result, tmp133
-	xorl	$1, %eax	 #, _14
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:44:     if(!result){
+	movb	%al, -17(%rbp)	 # _52, result
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:44:     if(result){
 	.loc 5 44 5
-	testb	%al, %al	 # _14
+	cmpb	$0, -17(%rbp)	 #, result
 	je	.L42	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:45:         result  = m_view->ShowWorkSpaceFileExistsDialog();
 	.loc 5 45 19
-	movq	16(%rbp), %rax	 # this, tmp134
-	movq	8(%rax), %rax	 # this_40(D)->m_view, _15
+	movq	16(%rbp), %rax	 # this, tmp132
+	movq	8(%rax), %rax	 # this_39(D)->m_view, _14
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:45:         result  = m_view->ShowWorkSpaceFileExistsDialog();
 	.loc 5 45 56
-	movq	%rax, %rcx	 # _16,
+	movq	%rax, %rcx	 # _15,
 	call	_ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv	 #
-	movb	%al, -17(%rbp)	 # _56, result
+	movb	%al, -17(%rbp)	 # _55, result
 .L42:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:53:     result  = m_serve->CreateWorkSpaceFile(info);
 	.loc 5 53 15
+	movq	16(%rbp), %rax	 # this, tmp133
+	movq	16(%rax), %rcx	 # this_39(D)->m_serve, _16
 	movq	16(%rbp), %rax	 # this, tmp135
-	movq	16(%rax), %rcx	 # this_40(D)->m_serve, _17
-	movq	16(%rbp), %rax	 # this, tmp137
-	movq	16(%rax), %rax	 # this_40(D)->m_serve, _19
+	movq	16(%rax), %rax	 # this_39(D)->m_serve, _18
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:53:     result  = m_serve->CreateWorkSpaceFile(info);
 	.loc 5 53 48
-	movq	(%rax), %rax	 # _19->_vptr.T100WorkSpaceServe, _20
-	addq	$32, %rax	 #, _21
-	movq	(%rax), %rax	 # *_21, _22
+	movq	(%rax), %rax	 # _18->_vptr.T100WorkSpaceServe, _19
+	addq	$32, %rax	 #, _20
+	movq	(%rax), %rax	 # *_20, _21
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:53:     result  = m_serve->CreateWorkSpaceFile(info);
 	.loc 5 53 43
-	movq	24(%rbp), %rdx	 # info, tmp138
-	call	*%rax	 # _22
+	movq	24(%rbp), %rdx	 # info, tmp136
+	call	*%rax	 # _21
 .LVL3:
 .LEHE1:
-	movb	%al, -17(%rbp)	 # _59, result
+	movb	%al, -17(%rbp)	 # _58, result
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:55:     if(!result){
 	.loc 5 55 8
-	movzbl	-17(%rbp), %eax	 # result, tmp139
-	xorl	$1, %eax	 #, _23
+	movzbl	-17(%rbp), %eax	 # result, tmp137
+	xorl	$1, %eax	 #, _22
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:55:     if(!result){
 	.loc 5 55 5
-	testb	%al, %al	 # _23
+	testb	%al, %al	 # _22
 	je	.L43	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:56:         return T100FALSE;
 	.loc 5 56 16
-	movl	$0, %ebx	 #, _24
+	movl	$0, %ebx	 #, _23
 	jmp	.L40	 #
 .L43:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:59:     return result;
 	.loc 5 59 12
-	movzbl	-17(%rbp), %ebx	 # result, _24
+	movzbl	-17(%rbp), %ebx	 # result, _23
 .L40:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:21:     T100WxFolderInfo        folder;
 	.loc 5 21 29
+	leaq	-96(%rbp), %rax	 #, tmp138
+	movq	%rax, %rcx	 # tmp138,
+	call	_ZN16T100WxFolderInfoD1Ev	 #
+.L44:
+	movl	%ebx, %eax	 # _23, <retval>
+	jmp	.L47	 #
+.L46:
+	movq	%rax, %rbx	 #, tmp141
 	leaq	-96(%rbp), %rax	 #, tmp140
 	movq	%rax, %rcx	 # tmp140,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
-.L44:
-	movl	%ebx, %eax	 # _24, <retval>
-	jmp	.L47	 #
-.L46:
-	movq	%rax, %rbx	 #, tmp143
-	leaq	-96(%rbp), %rax	 #, tmp142
-	movq	%rax, %rcx	 # tmp142,
-	call	_ZN16T100WxFolderInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp143, D.196186
+	movq	%rbx, %rax	 # tmp141, D.196186
 	movq	%rax, %rcx	 # D.196186,
 .LEHB2:
 	call	_Unwind_Resume	 #

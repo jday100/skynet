@@ -41,7 +41,7 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(T100WorkSpaceInfo* info)
 
     result  = m_serve->CheckWorkSpaceFile(folder);
 
-    if(!result){
+    if(result){
         result  = m_view->ShowWorkSpaceFileExistsDialog();
         if(result){
 
