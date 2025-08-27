@@ -42,15 +42,17 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(T100WorkSpaceInfo* info)
     result  = m_serve->CheckWorkSpaceFile(folder);
 
     if(result){
-        result  = m_view->ShowWorkSpaceFileExistsDialog();
-        if(result){
+        T100UINT value  = m_view->ShowWorkSpaceFileExistsDialog();
+        if(value == wxYES){
+            result  = m_serve->CreateWorkSpaceFile(info);
+        }else if(value == wxNO){
 
-        }else{
-
+        }else if(value == wxCANCEL){
+            return T100FALSE;
         }
+    }else{
+        result  = m_serve->CreateWorkSpaceFile(info);
     }
-
-    result  = m_serve->CreateWorkSpaceFile(info);
 
     if(!result){
         return T100FALSE;
@@ -64,23 +66,23 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceOpen(const T100WxFolderInfo& info)
     T100BOOL        result      = T100TRUE;
 
     if(m_serve->CheckWorkSpaceFolder(info)){
+
+    }else{
         if(m_view->ShowWorkSpaceNotExistsDialog()){
 
         }else{
             return T100FALSE;
         }
-    }else{
-        return T100FALSE;
     }
 
     if(m_serve->CheckWorkSpaceFile(info)){
-        if(m_view->ShowWorkSpaceFileExistsDialog()){
+
+    }else{
+        if(m_view->ShowWorkSpaceFileNotExistsDialog()){
 
         }else{
             return T100FALSE;
         }
-    }else{
-        return T100FALSE;
     }
 
     if(m_serve->Open(info)){
