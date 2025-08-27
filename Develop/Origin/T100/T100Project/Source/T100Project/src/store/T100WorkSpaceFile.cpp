@@ -29,7 +29,7 @@ T100BOOL T100WorkSpaceFile::IsExists()
     return T100FALSE;
 }
 
-T100BOOL T100WorkSpaceFile::Load()
+T100BOOL T100WorkSpaceFile::Load(T100WorkSpaceInfo* info)
 {
     wxXmlDocument       document;
 
@@ -52,7 +52,7 @@ T100BOOL T100WorkSpaceFile::Load()
     return T100TRUE;
 }
 
-T100VOID T100WorkSpaceFile::Save()
+T100VOID T100WorkSpaceFile::Save(T100WorkSpaceInfo* info)
 {
     wxXmlDocument       document;
     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");

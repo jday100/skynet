@@ -211,8 +211,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.81162
-	movq	%rax, %rcx	 # D.81162,
+	movq	%rbx, %rax	 # tmp99, D.81167
+	movq	%rax, %rcx	 # D.81167,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -605,7 +605,7 @@ _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LEHE2:
 	leaq	16+_ZTV17T100WorkSpaceFile(%rip), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp94
-	movq	%rdx, (%rax)	 # _2, this_7(D)->D.75608._vptr.T100XML
+	movq	%rdx, (%rax)	 # _2, this_7(D)->D.75611._vptr.T100XML
 	movq	-64(%rbp), %rax	 # this, tmp95
 	addq	$40, %rax	 #, _3
 	movq	-56(%rbp), %rdx	 # filename, tmp96
@@ -625,8 +625,8 @@ _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN7T100XMLD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.81165
-	movq	%rax, %rcx	 # D.81165,
+	movq	%rbx, %rax	 # tmp97, D.81170
+	movq	%rax, %rcx	 # D.81170,
 .LEHB4:
 	call	_Unwind_Resume	 #
 	nop	
@@ -694,7 +694,7 @@ _ZN17T100WorkSpaceFileD2Ev:
 	.loc 4 12 39
 	leaq	16+_ZTV17T100WorkSpaceFile(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _1, this_5(D)->D.75608._vptr.T100XML
+	movq	%rdx, (%rax)	 # _1, this_5(D)->D.75611._vptr.T100XML
 	movq	16(%rbp), %rax	 # this, tmp91
 	addq	$40, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -816,10 +816,10 @@ _ZN17T100WorkSpaceFile8IsExistsEv:
 	.ascii "W\0o\0r\0k\0S\0p\0a\0c\0e\0\0\0"
 	.text
 	.align 2
-	.globl	_ZN17T100WorkSpaceFile4LoadEv
-	.def	_ZN17T100WorkSpaceFile4LoadEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN17T100WorkSpaceFile4LoadEv
-_ZN17T100WorkSpaceFile4LoadEv:
+	.globl	_ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo
+	.def	_ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo
+_ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 .LFB4739:
 	.loc 4 33 1
 	.cfi_startproc
@@ -839,6 +839,7 @@ _ZN17T100WorkSpaceFile4LoadEv:
 	.cfi_def_cfa 6, 176
 	.seh_endprologue
 	movq	%rcx, 176(%rbp)	 # this, this
+	movq	%rdx, 184(%rbp)	 # info, info
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:34:     wxXmlDocument       document;
 	.loc 4 34 25
 	leaq	-96(%rbp), %rax	 #, tmp96
@@ -967,8 +968,8 @@ _ZN17T100WorkSpaceFile4LoadEv:
 	leaq	-96(%rbp), %rax	 #, tmp117
 	movq	%rax, %rcx	 # tmp117,
 	call	_ZN13wxXmlDocumentD1Ev	 #
-	movq	%rbx, %rax	 # tmp115, D.81167
-	movq	%rax, %rcx	 # D.81167,
+	movq	%rbx, %rax	 # tmp115, D.81172
+	movq	%rax, %rcx	 # D.81172,
 .LEHB10:
 	call	_Unwind_Resume	 #
 .LEHE10:
@@ -1020,10 +1021,10 @@ _ZN17T100WorkSpaceFile4LoadEv:
 	.text
 	.seh_endproc
 	.align 2
-	.globl	_ZN17T100WorkSpaceFile4SaveEv
-	.def	_ZN17T100WorkSpaceFile4SaveEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN17T100WorkSpaceFile4SaveEv
-_ZN17T100WorkSpaceFile4SaveEv:
+	.globl	_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo
+	.def	_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo
+_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo:
 .LFB4740:
 	.loc 4 56 1
 	.cfi_startproc
@@ -1051,6 +1052,7 @@ _ZN17T100WorkSpaceFile4SaveEv:
 	.cfi_def_cfa 6, 352
 	.seh_endprologue
 	movq	%rcx, 352(%rbp)	 # this, this
+	movq	%rdx, 360(%rbp)	 # info, info
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:57:     wxXmlDocument       document;
 	.loc 4 57 25
 	leaq	-80(%rbp), %rax	 #, tmp97
@@ -1259,8 +1261,8 @@ _ZN17T100WorkSpaceFile4SaveEv:
 	leaq	-80(%rbp), %rax	 #, tmp141
 	movq	%rax, %rcx	 # tmp141,
 	call	_ZN13wxXmlDocumentD1Ev	 #
-	movq	%rbx, %rax	 # tmp128, D.81170
-	movq	%rax, %rcx	 # D.81170,
+	movq	%rbx, %rax	 # tmp128, D.81175
+	movq	%rax, %rcx	 # D.81175,
 .LEHB22:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1579,11 +1581,11 @@ _ZTS7T100XML:
 	.file 56 "<built-in>"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x216df
+	.long	0x2174a
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
-	.uleb128 0x81
+	.uleb128 0x82
 	.ascii "GNU C++14 8.1.0 -mthreads -mtune=core2 -march=nocona -g -fpermissive -fexec-charset=UTF-8 -finput-charset=UTF-8\0"
 	.byte	0x4
 	.ascii "C:\\zgit\\skynet\\Develop\\Origin\\T100\\T100Project\\Source\\T100Project\\src\\store\\T100WorkSpaceFile.cpp\0"
@@ -1597,7 +1599,7 @@ _ZTS7T100XML:
 	.byte	0x18
 	.byte	0x1d
 	.long	0x149
-	.uleb128 0x82
+	.uleb128 0x83
 	.byte	0x8
 	.ascii "__builtin_va_list\0"
 	.long	0x162
@@ -1684,14 +1686,14 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x25f
-	.uleb128 0x83
+	.uleb128 0x84
 	.ascii "threadlocaleinfostruct\0"
 	.word	0x160
 	.byte	0x7
 	.word	0x1c4
 	.byte	0x10
 	.long	0x45b
-	.uleb128 0x84
+	.uleb128 0x85
 	.byte	0x20
 	.byte	0x7
 	.word	0x1cf
@@ -1768,84 +1770,84 @@ _ZTS7T100XML:
 	.byte	0x12
 	.long	0x5b7
 	.byte	0x48
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "lc_clike\0"
 	.byte	0x7
 	.word	0x1d5
 	.byte	0x7
 	.long	0x229
 	.word	0x108
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "mb_cur_max\0"
 	.byte	0x7
 	.word	0x1d6
 	.byte	0x7
 	.long	0x229
 	.word	0x10c
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "lconv_intl_refcount\0"
 	.byte	0x7
 	.word	0x1d7
 	.byte	0x8
 	.long	0x56c
 	.word	0x110
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "lconv_num_refcount\0"
 	.byte	0x7
 	.word	0x1d8
 	.byte	0x8
 	.long	0x56c
 	.word	0x118
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "lconv_mon_refcount\0"
 	.byte	0x7
 	.word	0x1d9
 	.byte	0x8
 	.long	0x56c
 	.word	0x120
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "lconv\0"
 	.byte	0x7
 	.word	0x1da
 	.byte	0x11
 	.long	0x855
 	.word	0x128
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "ctype1_refcount\0"
 	.byte	0x7
 	.word	0x1db
 	.byte	0x8
 	.long	0x56c
 	.word	0x130
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "ctype1\0"
 	.byte	0x7
 	.word	0x1dc
 	.byte	0x13
 	.long	0x85b
 	.word	0x138
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "pctype\0"
 	.byte	0x7
 	.word	0x1dd
 	.byte	0x19
 	.long	0x861
 	.word	0x140
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "pclmap\0"
 	.byte	0x7
 	.word	0x1de
 	.byte	0x18
 	.long	0x867
 	.word	0x148
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "pcumap\0"
 	.byte	0x7
 	.word	0x1df
 	.byte	0x18
 	.long	0x867
 	.word	0x150
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.ascii "lc_time_curr\0"
 	.byte	0x7
 	.word	0x1e0
@@ -2265,7 +2267,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x952
-	.uleb128 0x85
+	.uleb128 0x86
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x567
@@ -2377,7 +2379,7 @@ _ZTS7T100XML:
 	.word	0x16c
 	.byte	0x19
 	.long	0xa6c
-	.uleb128 0x86
+	.uleb128 0x87
 	.byte	0x10
 	.byte	0x9
 	.word	0x2d9
@@ -2586,7 +2588,7 @@ _ZTS7T100XML:
 	.uleb128 0x3b
 	.long	0x87e
 	.long	0xce3
-	.uleb128 0x87
+	.uleb128 0x88
 	.byte	0
 	.uleb128 0x1d
 	.ascii "__newclmap\0"
@@ -3606,7 +3608,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x1d90
-	.uleb128 0x88
+	.uleb128 0x89
 	.ascii "npos\0"
 	.byte	0x1
 	.word	0x193
@@ -11568,7 +11570,7 @@ _ZTS7T100XML:
 	.byte	0x19
 	.long	0x1d90
 	.byte	0x20
-	.uleb128 0x89
+	.uleb128 0x8a
 	.ascii "~wxString\0"
 	.ascii "_ZN8wxStringD4Ev\0"
 	.byte	0x1
@@ -11615,7 +11617,7 @@ _ZTS7T100XML:
 	.word	0x3e7
 	.byte	0x1e
 	.long	0x572
-	.uleb128 0x8a
+	.uleb128 0x8b
 	.ascii "wxKeyType\0"
 	.byte	0x7
 	.byte	0x4
@@ -11643,7 +11645,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xa917
-	.uleb128 0x8b
+	.uleb128 0x8c
 	.long	0x229
 	.long	0xa92c
 	.uleb128 0x1
@@ -11654,8 +11656,8 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xa932
-	.uleb128 0x8c
 	.uleb128 0x8d
+	.uleb128 0x8e
 	.byte	0x8
 	.uleb128 0xe
 	.ascii "fpos_t\0"
@@ -11720,7 +11722,7 @@ _ZTS7T100XML:
 	.byte	0x1b
 	.byte	0xb
 	.long	0xaafd
-	.uleb128 0x8e
+	.uleb128 0x8f
 	.secrel32	.LASF70
 	.byte	0x18
 	.byte	0x11
@@ -11813,7 +11815,7 @@ _ZTS7T100XML:
 	.long	0xab23
 	.uleb128 0xa
 	.long	0xab03
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "wxScopedCharTypeBuffer<char>\0"
 	.byte	0x8
 	.byte	0x11
@@ -12143,7 +12145,7 @@ _ZTS7T100XML:
 	.long	0xb188
 	.uleb128 0xa
 	.long	0xb167
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "wxScopedCharTypeBuffer<wchar_t>\0"
 	.byte	0x8
 	.byte	0x11
@@ -12486,7 +12488,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xaed0
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "wxCharTypeBuffer<char>\0"
 	.byte	0x8
 	.byte	0x11
@@ -12741,7 +12743,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x18c
 	.byte	0
-	.uleb128 0x8f
+	.uleb128 0x90
 	.secrel32	.LASF80
 	.byte	0x11
 	.word	0x176
@@ -13170,7 +13172,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xb538
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "wxCharTypeBuffer<wchar_t>\0"
 	.byte	0x8
 	.byte	0x11
@@ -13487,9 +13489,9 @@ _ZTS7T100XML:
 	.long	0x16a
 	.uleb128 0xa
 	.long	0xc84b
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "wxMBConvUTF7\0"
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "wxMBConv\0"
 	.uleb128 0xa
 	.long	0xc864
@@ -13502,7 +13504,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xc864
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "wxCSConv\0"
 	.uleb128 0x17
 	.ascii "wxConvISO8859_1Ptr\0"
@@ -13513,7 +13515,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xc890
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "wxMBConvStrictUTF8\0"
 	.uleb128 0x17
 	.ascii "wxConvUTF8Ptr\0"
@@ -13566,7 +13568,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xdb1
-	.uleb128 0x90
+	.uleb128 0x91
 	.ascii "std\0"
 	.byte	0x38
 	.byte	0
@@ -13577,7 +13579,7 @@ _ZTS7T100XML:
 	.word	0x104
 	.byte	0x41
 	.long	0x15a3b
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "basic_string<char, std::char_traits<char>, std::allocator<char> >\0"
 	.byte	0x20
 	.byte	0x14
@@ -13667,7 +13669,7 @@ _ZTS7T100XML:
 	.byte	0x1
 	.uleb128 0xa
 	.long	0xcb13
-	.uleb128 0x91
+	.uleb128 0x92
 	.ascii "npos\0"
 	.byte	0x14
 	.byte	0x65
@@ -16342,7 +16344,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0xc99c
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >\0"
 	.byte	0x20
 	.byte	0x14
@@ -16396,7 +16398,7 @@ _ZTS7T100XML:
 	.byte	0xa
 	.long	0x11187
 	.byte	0
-	.uleb128 0x92
+	.uleb128 0x93
 	.ascii "~_Alloc_hider\0"
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderD4Ev\0"
 	.long	0x1117b
@@ -16413,7 +16415,7 @@ _ZTS7T100XML:
 	.byte	0x30
 	.long	0x19dc2
 	.byte	0x1
-	.uleb128 0x93
+	.uleb128 0x94
 	.byte	0x7
 	.byte	0x4
 	.long	0x572
@@ -16453,7 +16455,7 @@ _ZTS7T100XML:
 	.byte	0x1
 	.uleb128 0xa
 	.long	0x111da
-	.uleb128 0x94
+	.uleb128 0x95
 	.ascii "npos\0"
 	.byte	0x14
 	.byte	0x65
@@ -19410,7 +19412,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x15ca9
-	.uleb128 0x95
+	.uleb128 0x96
 	.ascii "piecewise_construct\0"
 	.byte	0x18
 	.byte	0x4f
@@ -20386,7 +20388,7 @@ _ZTS7T100XML:
 	.byte	0xd
 	.long	0xa934
 	.byte	0
-	.uleb128 0x96
+	.uleb128 0x97
 	.secrel32	.LASF139
 	.byte	0x20
 	.byte	0x53
@@ -20545,7 +20547,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1b9c0
 	.byte	0
-	.uleb128 0x97
+	.uleb128 0x98
 	.secrel32	.LASF192
 	.byte	0x20
 	.byte	0x90
@@ -20584,7 +20586,7 @@ _ZTS7T100XML:
 	.byte	0x39
 	.byte	0x1a
 	.long	0x16858
-	.uleb128 0x98
+	.uleb128 0x99
 	.ascii "rethrow_exception\0"
 	.byte	0x20
 	.byte	0x45
@@ -20600,7 +20602,7 @@ _ZTS7T100XML:
 	.byte	0xf2
 	.byte	0x1d
 	.long	0x1b9a6
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "type_info\0"
 	.uleb128 0xa
 	.long	0x16d3e
@@ -20625,7 +20627,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x16d4e
-	.uleb128 0x99
+	.uleb128 0x9a
 	.ascii "nothrow\0"
 	.byte	0x21
 	.byte	0x5d
@@ -20638,7 +20640,7 @@ _ZTS7T100XML:
 	.byte	0xef
 	.byte	0x1c
 	.long	0x1ba
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "allocator<char>\0"
 	.byte	0x1
 	.byte	0x22
@@ -20691,7 +20693,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x16db2
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "allocator<wchar_t>\0"
 	.byte	0x1
 	.byte	0x22
@@ -21233,7 +21235,7 @@ _ZTS7T100XML:
 	.secrel32	.LASF127
 	.long	0x16db2
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "initializer_list<char>\0"
 	.byte	0x10
 	.byte	0x27
@@ -21347,9 +21349,9 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x1736b
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >\0"
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >\0"
 	.uleb128 0x33
 	.ascii "allocator_traits<std::allocator<wchar_t> >\0"
@@ -21470,7 +21472,7 @@ _ZTS7T100XML:
 	.secrel32	.LASF127
 	.long	0x16e4d
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "initializer_list<wchar_t>\0"
 	.byte	0x10
 	.byte	0x27
@@ -21584,9 +21586,9 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x1785d
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<wchar_t const*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
 	.uleb128 0x6a
 	.ascii "literals\0"
@@ -21687,7 +21689,7 @@ _ZTS7T100XML:
 	.byte	0x5f
 	.byte	0xc
 	.long	0x17c76
-	.uleb128 0x9a
+	.uleb128 0x9b
 	.byte	0x7
 	.byte	0x4
 	.long	0x572
@@ -21774,7 +21776,7 @@ _ZTS7T100XML:
 	.secrel32	.LASF151
 	.long	0xc84b
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "__distance<wchar_t*>\0"
 	.byte	0x28
 	.byte	0x62
@@ -21792,7 +21794,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x15d77
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "__distance<wchar_t const*>\0"
 	.byte	0x28
 	.byte	0x62
@@ -21810,7 +21812,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x15d77
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "distance<wchar_t*>\0"
 	.byte	0x28
 	.byte	0x8a
@@ -21826,7 +21828,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x551
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "__iterator_category<wchar_t*>\0"
 	.byte	0x1a
 	.byte	0xcd
@@ -21840,7 +21842,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1f79e
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "distance<wchar_t const*>\0"
 	.byte	0x28
 	.byte	0x8a
@@ -21856,7 +21858,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x954
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "__iterator_category<wchar_t const*>\0"
 	.byte	0x1a
 	.byte	0xcd
@@ -21876,7 +21878,7 @@ _ZTS7T100XML:
 	.byte	0x63
 	.byte	0x5
 	.ascii "_ZSt4moveIRSaIwEEONSt16remove_referenceIT_E4typeEOS3_\0"
-	.long	0x20bd8
+	.long	0x20c21
 	.uleb128 0x1c
 	.ascii "_Tp\0"
 	.long	0x1c3e6
@@ -21884,7 +21886,7 @@ _ZTS7T100XML:
 	.long	0x1c3e6
 	.byte	0
 	.byte	0
-	.uleb128 0x9b
+	.uleb128 0x9c
 	.ascii "__gnu_cxx\0"
 	.byte	0x1e
 	.word	0x106
@@ -21930,7 +21932,7 @@ _ZTS7T100XML:
 	.byte	0x2d
 	.byte	0xe
 	.long	0x16da6
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "new_allocator<char>\0"
 	.byte	0x1
 	.byte	0x2b
@@ -22094,7 +22096,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x18179
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.ascii "new_allocator<wchar_t>\0"
 	.byte	0x1
 	.byte	0x2b
@@ -22328,7 +22330,7 @@ _ZTS7T100XML:
 	.byte	0xe8
 	.byte	0xb
 	.long	0x1bd93
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "div\0"
 	.byte	0x24
 	.byte	0xd5
@@ -23764,7 +23766,7 @@ _ZTS7T100XML:
 	.secrel32	.LASF160
 	.long	0x1ba
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "__is_null_pointer<wchar_t>\0"
 	.byte	0x2f
 	.byte	0x98
@@ -23809,7 +23811,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x15ca9
-	.uleb128 0x9c
+	.uleb128 0x9d
 	.long	0x15cf0
 	.uleb128 0x59
 	.ascii "__gnu_debug\0"
@@ -23817,7 +23819,7 @@ _ZTS7T100XML:
 	.byte	0x38
 	.byte	0xb
 	.long	0x1af0f
-	.uleb128 0x9d
+	.uleb128 0x9e
 	.byte	0x1b
 	.byte	0x3a
 	.byte	0x18
@@ -24823,7 +24825,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x16cb9
-	.uleb128 0x9e
+	.uleb128 0x9f
 	.ascii "decltype(nullptr)\0"
 	.uleb128 0x46
 	.byte	0x8
@@ -24883,7 +24885,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x16ee6
-	.uleb128 0x9f
+	.uleb128 0xa0
 	.ascii "setlocale\0"
 	.byte	0x8
 	.byte	0x5a
@@ -24895,7 +24897,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xc84b
 	.byte	0
-	.uleb128 0xa0
+	.uleb128 0xa1
 	.ascii "localeconv\0"
 	.byte	0x8
 	.byte	0x5b
@@ -27611,7 +27613,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x55c
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "From8bit\0"
 	.byte	0x33
 	.byte	0x90
@@ -27622,7 +27624,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x162
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "To8bit\0"
 	.byte	0x33
 	.byte	0x9c
@@ -27633,7 +27635,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1c71e
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "FromHi8bit\0"
 	.byte	0x33
 	.byte	0xa9
@@ -27644,7 +27646,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x162
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "ToHi8bit\0"
 	.byte	0x33
 	.byte	0xaa
@@ -27655,7 +27657,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1c71e
 	.byte	0
-	.uleb128 0x2b
+	.uleb128 0x2c
 	.ascii "GetAsHi8bit\0"
 	.byte	0x33
 	.byte	0xab
@@ -29446,7 +29448,7 @@ _ZTS7T100XML:
 	.byte	0x88
 	.byte	0x18
 	.long	0x1fc2b
-	.uleb128 0xa1
+	.uleb128 0xa2
 	.ascii "ArgumentType\0"
 	.byte	0x7
 	.byte	0x4
@@ -29683,7 +29685,7 @@ _ZTS7T100XML:
 	.byte	0x1e
 	.long	0x1fc59
 	.byte	0x20
-	.uleb128 0xa2
+	.uleb128 0xa3
 	.secrel32	.LASF23
 	.byte	0x34
 	.byte	0xf2
@@ -29884,9 +29886,9 @@ _ZTS7T100XML:
 	.long	0x1fd76
 	.uleb128 0xa
 	.long	0x1fdba
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "wxObjectListNode\0"
-	.uleb128 0xa3
+	.uleb128 0xa4
 	.ascii "wxListKeyValue\0"
 	.byte	0x8
 	.byte	0x35
@@ -30078,7 +30080,7 @@ _ZTS7T100XML:
 	.word	0x19f
 	.byte	0x29
 	.long	0x1fe13
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "wxStringListNode\0"
 	.uleb128 0x5a
 	.ascii "wxXmlNodeType\0"
@@ -30187,28 +30189,28 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x18acc
-	.uleb128 0xa4
+	.uleb128 0xa5
 	.secrel32	.LASF197
 	.byte	0x48
 	.byte	0x37
-	.byte	0x6
+	.byte	0x8
 	.byte	0x7
-	.long	0x20478
-	.long	0x20473
+	.long	0x204a8
+	.long	0x204a3
 	.uleb128 0x3c
-	.long	0x20478
+	.long	0x204a8
 	.byte	0
 	.byte	0x1
-	.uleb128 0xa5
+	.uleb128 0xa6
 	.secrel32	.LASF197
 	.ascii "_ZN17T100WorkSpaceFileC4ERKS_\0"
 	.byte	0x1
 	.long	0x202e8
 	.long	0x202f3
 	.uleb128 0x2
-	.long	0x20481
+	.long	0x204b1
 	.uleb128 0x1
-	.long	0x2048c
+	.long	0x204bc
 	.byte	0
 	.uleb128 0xf
 	.secrel32	.LASF197
@@ -30220,11 +30222,11 @@ _ZTS7T100XML:
 	.long	0x20354
 	.long	0x2035f
 	.uleb128 0x2
-	.long	0x20481
+	.long	0x204b1
 	.uleb128 0x1
 	.long	0x1c460
 	.byte	0
-	.uleb128 0xa6
+	.uleb128 0xa7
 	.ascii "~T100WorkSpaceFile\0"
 	.byte	0x4
 	.byte	0xc
@@ -30236,7 +30238,7 @@ _ZTS7T100XML:
 	.long	0x203a0
 	.long	0x203ab
 	.uleb128 0x2
-	.long	0x20481
+	.long	0x204b1
 	.uleb128 0x2
 	.long	0x229
 	.byte	0
@@ -30251,37 +30253,41 @@ _ZTS7T100XML:
 	.long	0x203e7
 	.long	0x203ed
 	.uleb128 0x2
-	.long	0x20481
+	.long	0x204b1
 	.byte	0
 	.uleb128 0x23
 	.ascii "Load\0"
 	.byte	0x4
 	.byte	0x20
 	.byte	0xa
-	.ascii "_ZN17T100WorkSpaceFile4LoadEv\0"
+	.ascii "_ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo\0"
 	.long	0xa86c
 	.byte	0x1
-	.long	0x20421
-	.long	0x20427
+	.long	0x20434
+	.long	0x2043f
 	.uleb128 0x2
-	.long	0x20481
+	.long	0x204b1
+	.uleb128 0x1
+	.long	0x204c2
 	.byte	0
 	.uleb128 0x34
 	.ascii "Save\0"
 	.byte	0x4
 	.byte	0x37
 	.byte	0xa
-	.ascii "_ZN17T100WorkSpaceFile4SaveEv\0"
+	.ascii "_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo\0"
 	.byte	0x1
-	.long	0x20457
-	.long	0x2045d
+	.long	0x20482
+	.long	0x2048d
 	.uleb128 0x2
-	.long	0x20481
+	.long	0x204b1
+	.uleb128 0x1
+	.long	0x204c2
 	.byte	0
 	.uleb128 0x5c
 	.ascii "m_filename\0"
 	.byte	0x37
-	.byte	0x12
+	.byte	0x14
 	.byte	0x21
 	.long	0x15a25
 	.byte	0x28
@@ -30289,16 +30295,21 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x202a2
-	.uleb128 0x2f
+	.uleb128 0x2b
 	.ascii "T100XML\0"
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x202a2
 	.uleb128 0xa
-	.long	0x20481
+	.long	0x204b1
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x20473
+	.long	0x204a3
+	.uleb128 0x6
+	.byte	0x8
+	.long	0x204c8
+	.uleb128 0x2b
+	.ascii "T100WorkSpaceInfo\0"
 	.uleb128 0x5e
 	.ascii "_ZNSt17integral_constantIbLb0EE5valueE\0"
 	.long	0x15a7e
@@ -30307,11 +30318,11 @@ _ZTS7T100XML:
 	.ascii "_ZNSt17integral_constantIbLb1EE5valueE\0"
 	.long	0x15b8c
 	.byte	0x1
-	.uleb128 0xa7
+	.uleb128 0xa8
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIiE5__minE\0"
 	.long	0x18703
 	.sleb128 -2147483648
-	.uleb128 0xa8
+	.uleb128 0xa9
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIiE5__maxE\0"
 	.long	0x18711
 	.long	0x7fffffff
@@ -30327,13 +30338,13 @@ _ZTS7T100XML:
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIeE16__max_exponent10E\0"
 	.long	0x19b1f
 	.word	0x1344
-	.uleb128 0xa9
+	.uleb128 0xaa
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIxE5__maxE\0"
 	.long	0x1adc6
 	.quad	0x7fffffffffffffff
 	.uleb128 0x32
 	.long	0x17d65
-	.long	0x206a6
+	.long	0x206ef
 	.uleb128 0xd
 	.secrel32	.LASF152
 	.long	0x551
@@ -30354,7 +30365,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x17e02
-	.long	0x206d6
+	.long	0x2071f
 	.uleb128 0xd
 	.secrel32	.LASF152
 	.long	0x954
@@ -30375,7 +30386,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x17ea6
-	.long	0x20701
+	.long	0x2074a
 	.uleb128 0xd
 	.secrel32	.LASF153
 	.long	0x551
@@ -30394,7 +30405,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x17f1b
-	.long	0x20719
+	.long	0x20762
 	.uleb128 0xd
 	.secrel32	.LASF154
 	.long	0x551
@@ -30403,7 +30414,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x1adf6
-	.long	0x2073a
+	.long	0x20783
 	.uleb128 0xd
 	.secrel32	.LASF175
 	.long	0x55c
@@ -30416,7 +30427,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x17fa3
-	.long	0x20765
+	.long	0x207ae
 	.uleb128 0xd
 	.secrel32	.LASF153
 	.long	0x954
@@ -30435,7 +30446,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x1801f
-	.long	0x2077d
+	.long	0x207c6
 	.uleb128 0xd
 	.secrel32	.LASF154
 	.long	0x954
@@ -30444,7 +30455,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x1ae55
-	.long	0x2079e
+	.long	0x207e7
 	.uleb128 0xd
 	.secrel32	.LASF175
 	.long	0x567
@@ -30457,8 +30468,8 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x48
 	.long	0x15679
-	.long	0x207b4
-	.long	0x207ea
+	.long	0x207fd
+	.long	0x20833
 	.uleb128 0xd
 	.secrel32	.LASF129
 	.long	0x551
@@ -30488,8 +30499,8 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x48
 	.long	0x1570e
-	.long	0x20800
-	.long	0x20836
+	.long	0x20849
+	.long	0x2087f
 	.uleb128 0xd
 	.secrel32	.LASF129
 	.long	0x954
@@ -30519,9 +30530,9 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x21
 	.long	0x18484
-	.long	0x20844
+	.long	0x2088d
 	.byte	0x2
-	.long	0x20853
+	.long	0x2089c
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba02
@@ -30529,19 +30540,19 @@ _ZTS7T100XML:
 	.long	0x1ba07
 	.byte	0
 	.uleb128 0x28
-	.long	0x20836
+	.long	0x2087f
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2ERKS1_\0"
-	.long	0x20888
-	.long	0x20893
+	.long	0x208d1
+	.long	0x208dc
 	.uleb128 0x1a
-	.long	0x20844
+	.long	0x2088d
 	.uleb128 0x1a
-	.long	0x2084d
+	.long	0x20896
 	.byte	0
 	.uleb128 0x48
 	.long	0x157a4
-	.long	0x208a9
-	.long	0x208d0
+	.long	0x208f2
+	.long	0x20919
 	.uleb128 0xd
 	.secrel32	.LASF131
 	.long	0x551
@@ -30565,7 +30576,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x177c9
-	.long	0x208e9
+	.long	0x20932
 	.uleb128 0x42
 	.ascii "__rhs\0"
 	.byte	0x26
@@ -30575,8 +30586,8 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x48
 	.long	0x1584c
-	.long	0x208ff
-	.long	0x20926
+	.long	0x20948
+	.long	0x2096f
 	.uleb128 0xd
 	.secrel32	.LASF131
 	.long	0x954
@@ -30600,9 +30611,9 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x21
 	.long	0x16e94
-	.long	0x20934
+	.long	0x2097d
 	.byte	0x2
-	.long	0x2094a
+	.long	0x20993
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba25
@@ -30614,19 +30625,19 @@ _ZTS7T100XML:
 	.long	0x1ba2a
 	.byte	0
 	.uleb128 0x28
-	.long	0x20926
+	.long	0x2096f
 	.ascii "_ZNSaIwEC2ERKS_\0"
-	.long	0x20967
-	.long	0x20972
+	.long	0x209b0
+	.long	0x209bb
 	.uleb128 0x1a
-	.long	0x20934
+	.long	0x2097d
 	.uleb128 0x1a
-	.long	0x2093d
+	.long	0x20986
 	.byte	0
 	.uleb128 0x48
 	.long	0x158fb
-	.long	0x20988
-	.long	0x209aa
+	.long	0x209d1
+	.long	0x209f3
 	.uleb128 0xd
 	.secrel32	.LASF131
 	.long	0x551
@@ -30648,7 +30659,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x19b95
-	.long	0x209c0
+	.long	0x20a09
 	.uleb128 0x36
 	.ascii "__a\0"
 	.byte	0x2d
@@ -30658,8 +30669,8 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x48
 	.long	0x15973
-	.long	0x209d6
-	.long	0x209f8
+	.long	0x20a1f
+	.long	0x20a41
 	.uleb128 0xd
 	.secrel32	.LASF131
 	.long	0x954
@@ -30681,9 +30692,9 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x21
 	.long	0x11036
-	.long	0x20a06
+	.long	0x20a4f
 	.byte	0x2
-	.long	0x20a2a
+	.long	0x20a73
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c3fe
@@ -30701,22 +30712,22 @@ _ZTS7T100XML:
 	.long	0x1ba2a
 	.byte	0
 	.uleb128 0x28
-	.long	0x209f8
+	.long	0x20a41
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwRKS3_\0"
-	.long	0x20a85
-	.long	0x20a95
+	.long	0x20ace
+	.long	0x20ade
 	.uleb128 0x1a
-	.long	0x20a06
+	.long	0x20a4f
 	.uleb128 0x1a
-	.long	0x20a0f
+	.long	0x20a58
 	.uleb128 0x1a
-	.long	0x20a1d
+	.long	0x20a66
 	.byte	0
 	.uleb128 0x21
 	.long	0x184c8
-	.long	0x20aa3
+	.long	0x20aec
 	.byte	0x2
-	.long	0x20ab6
+	.long	0x20aff
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba02
@@ -30725,35 +30736,35 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x20a95
+	.long	0x20ade
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwED2Ev\0"
-	.long	0x20ae7
-	.long	0x20aed
+	.long	0x20b30
+	.long	0x20b36
 	.uleb128 0x1a
-	.long	0x20aa3
+	.long	0x20aec
 	.byte	0
 	.uleb128 0x21
 	.long	0x18449
-	.long	0x20afb
+	.long	0x20b44
 	.byte	0x2
-	.long	0x20b05
+	.long	0x20b4e
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba02
 	.byte	0
 	.uleb128 0x28
-	.long	0x20aed
-	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2Ev\0"
 	.long	0x20b36
-	.long	0x20b3c
+	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2Ev\0"
+	.long	0x20b7f
+	.long	0x20b85
 	.uleb128 0x1a
-	.long	0x20afb
+	.long	0x20b44
 	.byte	0
 	.uleb128 0x21
 	.long	0x110a4
-	.long	0x20b4a
+	.long	0x20b93
 	.byte	0x2
-	.long	0x20b6e
+	.long	0x20bb7
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c3fe
@@ -30771,23 +30782,23 @@ _ZTS7T100XML:
 	.long	0x1c403
 	.byte	0
 	.uleb128 0x28
-	.long	0x20b3c
+	.long	0x20b85
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwOS3_\0"
-	.long	0x20bc8
-	.long	0x20bd8
+	.long	0x20c11
+	.long	0x20c21
 	.uleb128 0x1a
-	.long	0x20b4a
+	.long	0x20b93
 	.uleb128 0x1a
-	.long	0x20b53
+	.long	0x20b9c
 	.uleb128 0x1a
-	.long	0x20b61
+	.long	0x20baa
 	.byte	0
 	.uleb128 0x46
 	.byte	0x8
 	.long	0x17cf9
 	.uleb128 0x32
 	.long	0x180ae
-	.long	0x20bfd
+	.long	0x20c46
 	.uleb128 0x1c
 	.ascii "_Tp\0"
 	.long	0x1c3e6
@@ -30798,7 +30809,7 @@ _ZTS7T100XML:
 	.byte	0x10
 	.long	0x1c3e6
 	.byte	0
-	.uleb128 0xaa
+	.uleb128 0xab
 	.ascii "wxDELETE<wxXmlNode>\0"
 	.byte	0x5
 	.word	0x2ed
@@ -30808,23 +30819,23 @@ _ZTS7T100XML:
 	.quad	.LFE5262-.LFB5262
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x20c62
+	.long	0x20cab
 	.uleb128 0x1c
 	.ascii "T\0"
-	.long	0x20c62
+	.long	0x20cab
 	.uleb128 0x49
 	.ascii "ptr\0"
 	.byte	0x5
 	.word	0x2ed
 	.byte	0x1e
-	.long	0x20cab
+	.long	0x20cf4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x5d
 	.ascii "wxXmlNode\0"
-	.long	0x20ca6
+	.long	0x20cef
 	.uleb128 0x76
 	.ascii "GetName\0"
 	.byte	0x3
@@ -30833,24 +30844,24 @@ _ZTS7T100XML:
 	.ascii "_ZNK9wxXmlNode7GetNameEv\0"
 	.long	0xe13
 	.byte	0x1
-	.long	0x20c9f
+	.long	0x20ce8
 	.uleb128 0x2
-	.long	0x213c4
+	.long	0x2142f
 	.byte	0
 	.byte	0
 	.uleb128 0xa
-	.long	0x20c62
+	.long	0x20cab
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x20cb1
+	.long	0x20cfa
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x20c62
+	.long	0x20cab
 	.uleb128 0x21
 	.long	0x1213e
-	.long	0x20cc5
+	.long	0x20d0e
 	.byte	0x2
-	.long	0x20ce9
+	.long	0x20d32
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c41f
@@ -30868,22 +30879,22 @@ _ZTS7T100XML:
 	.long	0x1ba2a
 	.byte	0
 	.uleb128 0x28
-	.long	0x20cb7
+	.long	0x20d00
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2EPKwRKS3_\0"
-	.long	0x20d37
-	.long	0x20d47
+	.long	0x20d80
+	.long	0x20d90
 	.uleb128 0x1a
-	.long	0x20cc5
+	.long	0x20d0e
 	.uleb128 0x1a
-	.long	0x20cce
+	.long	0x20d17
 	.uleb128 0x1a
-	.long	0x20cdb
+	.long	0x20d24
 	.byte	0
 	.uleb128 0x21
 	.long	0x11f37
-	.long	0x20d55
+	.long	0x20d9e
 	.byte	0x2
-	.long	0x20d6e
+	.long	0x20db7
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c41f
@@ -30895,44 +30906,44 @@ _ZTS7T100XML:
 	.long	0x1c43c
 	.byte	0
 	.uleb128 0x28
-	.long	0x20d47
+	.long	0x20d90
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2ERKS4_\0"
-	.long	0x20db9
-	.long	0x20dc4
+	.long	0x20e02
+	.long	0x20e0d
 	.uleb128 0x1a
-	.long	0x20d55
+	.long	0x20d9e
 	.uleb128 0x1a
-	.long	0x20d5e
+	.long	0x20da7
 	.byte	0
 	.uleb128 0x21
 	.long	0x1db0
-	.long	0x20dd2
+	.long	0x20e1b
 	.byte	0x2
-	.long	0x20ddc
+	.long	0x20e25
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fcd5
 	.byte	0
-	.uleb128 0xab
-	.long	0x20dc4
+	.uleb128 0xac
+	.long	0x20e0d
 	.ascii "_ZN8wxString15ConvertedBufferIcEC1Ev\0"
-	.long	0x20e21
+	.long	0x20e6a
 	.quad	.LFB5090
 	.quad	.LFE5090-.LFB5090
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x20e2a
-	.uleb128 0x2c
-	.long	0x20dd2
+	.long	0x20e73
+	.uleb128 0x2d
+	.long	0x20e1b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x21
 	.long	0x1df8
-	.long	0x20e38
+	.long	0x20e81
 	.byte	0x2
-	.long	0x20e4b
+	.long	0x20e94
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fcd5
@@ -30941,25 +30952,25 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x3a
-	.long	0x20e2a
+	.long	0x20e73
 	.ascii "_ZN8wxString15ConvertedBufferIcED1Ev\0"
-	.long	0x20e8f
+	.long	0x20ed8
 	.quad	.LFB5084
 	.quad	.LFE5084-.LFB5084
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x20e98
-	.uleb128 0x2c
-	.long	0x20e38
+	.long	0x20ee1
+	.uleb128 0x2d
+	.long	0x20e81
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x21
 	.long	0x16ec0
-	.long	0x20ea6
+	.long	0x20eef
 	.byte	0x2
-	.long	0x20eb9
+	.long	0x20f02
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba25
@@ -30968,35 +30979,35 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x20e98
+	.long	0x20ee1
 	.ascii "_ZNSaIwED2Ev\0"
-	.long	0x20ed3
-	.long	0x20ed9
+	.long	0x20f1c
+	.long	0x20f22
 	.uleb128 0x1a
-	.long	0x20ea6
+	.long	0x20eef
 	.byte	0
 	.uleb128 0x21
 	.long	0x16e70
-	.long	0x20ee7
+	.long	0x20f30
 	.byte	0x2
-	.long	0x20ef1
+	.long	0x20f3a
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba25
 	.byte	0
 	.uleb128 0x28
-	.long	0x20ed9
+	.long	0x20f22
 	.ascii "_ZNSaIwEC2Ev\0"
-	.long	0x20f0b
-	.long	0x20f11
+	.long	0x20f54
+	.long	0x20f5a
 	.uleb128 0x1a
-	.long	0x20ee7
+	.long	0x20f30
 	.byte	0
 	.uleb128 0x21
 	.long	0x123a2
-	.long	0x20f1f
+	.long	0x20f68
 	.byte	0x2
-	.long	0x20f32
+	.long	0x20f7b
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c41f
@@ -31005,21 +31016,21 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x20f11
+	.long	0x20f5a
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED2Ev\0"
-	.long	0x20f79
-	.long	0x20f7f
+	.long	0x20fc2
+	.long	0x20fc8
 	.uleb128 0x1a
-	.long	0x20f1f
+	.long	0x20f68
 	.byte	0
-	.uleb128 0xac
+	.uleb128 0xad
 	.long	0x1111f
 	.byte	0x14
 	.byte	0x8b
 	.byte	0xe
-	.long	0x20f91
+	.long	0x20fda
 	.byte	0x2
-	.long	0x20fa4
+	.long	0x20fed
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c3fe
@@ -31028,33 +31039,42 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x20f7f
+	.long	0x20fc8
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderD1Ev\0"
-	.long	0x20ff9
-	.long	0x20fff
+	.long	0x21042
+	.long	0x21048
 	.uleb128 0x1a
-	.long	0x20f91
+	.long	0x20fda
 	.byte	0
 	.uleb128 0x4d
-	.long	0x20427
-	.long	0x2101e
+	.long	0x2043f
+	.long	0x21067
 	.quad	.LFB4740
 	.quad	.LFE4740-.LFB4740
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2105c
+	.long	0x210b6
 	.uleb128 0x4a
 	.secrel32	.LASF202
-	.long	0x20487
+	.long	0x204b7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x80
+	.ascii "info\0"
+	.byte	0x4
+	.byte	0x37
+	.byte	0x35
+	.long	0x204c2
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 8
+	.uleb128 0x81
 	.secrel32	.LASF204
 	.byte	0x4
 	.byte	0x39
 	.byte	0x19
-	.long	0x2105c
+	.long	0x210b6
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -432
@@ -31063,7 +31083,7 @@ _ZTS7T100XML:
 	.byte	0x4
 	.byte	0x3a
 	.byte	0x19
-	.long	0x20cb1
+	.long	0x20cfa
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -56
@@ -31072,14 +31092,14 @@ _ZTS7T100XML:
 	.byte	0x4
 	.byte	0x3b
 	.byte	0x19
-	.long	0x20cb1
+	.long	0x20cfa
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
 	.byte	0
 	.uleb128 0x5d
 	.ascii "wxXmlDocument\0"
-	.long	0x21109
+	.long	0x21163
 	.uleb128 0x27
 	.ascii "SetDocumentNode\0"
 	.byte	0x3
@@ -31087,12 +31107,12 @@ _ZTS7T100XML:
 	.byte	0xa
 	.ascii "_ZN13wxXmlDocument15SetDocumentNodeEP9wxXmlNode\0"
 	.byte	0x1
-	.long	0x210bd
-	.long	0x210c8
+	.long	0x21117
+	.long	0x21122
 	.uleb128 0x2
-	.long	0x212f2
+	.long	0x2135d
 	.uleb128 0x1
-	.long	0x20cb1
+	.long	0x20cfa
 	.byte	0
 	.uleb128 0x7c
 	.ascii "~wxXmlDocument\0"
@@ -31101,35 +31121,44 @@ _ZTS7T100XML:
 	.byte	0xd
 	.ascii "_ZN13wxXmlDocumentD4Ev\0"
 	.byte	0x1
-	.long	0x2105c
+	.long	0x210b6
 	.byte	0x1
-	.long	0x210fd
+	.long	0x21157
 	.uleb128 0x2
-	.long	0x212f2
+	.long	0x2135d
 	.uleb128 0x2
 	.long	0x229
 	.byte	0
 	.byte	0
 	.uleb128 0x4d
 	.long	0x203ed
-	.long	0x21128
+	.long	0x21182
 	.quad	.LFB4739
 	.quad	.LFE4739-.LFB4739
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21156
+	.long	0x211c1
 	.uleb128 0x4a
 	.secrel32	.LASF202
-	.long	0x20487
+	.long	0x204b7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x80
+	.ascii "info\0"
+	.byte	0x4
+	.byte	0x20
+	.byte	0x35
+	.long	0x204c2
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 8
+	.uleb128 0x81
 	.secrel32	.LASF204
 	.byte	0x4
 	.byte	0x22
 	.byte	0x19
-	.long	0x2105c
+	.long	0x210b6
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -272
@@ -31138,22 +31167,22 @@ _ZTS7T100XML:
 	.byte	0x4
 	.byte	0x28
 	.byte	0x15
-	.long	0x20cb1
+	.long	0x20cfa
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
 	.byte	0
 	.uleb128 0x4d
 	.long	0x203ab
-	.long	0x21175
+	.long	0x211e0
 	.quad	.LFB4738
 	.quad	.LFE4738-.LFB4738
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x211a2
+	.long	0x2120d
 	.uleb128 0x4a
 	.secrel32	.LASF202
-	.long	0x20487
+	.long	0x204b7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -31166,60 +31195,60 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
-	.uleb128 0xad
+	.uleb128 0xae
 	.quad	.LVL0
-	.long	0x216d4
+	.long	0x2173f
 	.byte	0
 	.uleb128 0x21
 	.long	0x2035f
-	.long	0x211b0
+	.long	0x2121b
 	.byte	0
-	.long	0x211c3
+	.long	0x2122e
 	.uleb128 0x12
 	.secrel32	.LASF202
-	.long	0x20487
+	.long	0x204b7
 	.uleb128 0x12
 	.secrel32	.LASF203
 	.long	0x230
 	.byte	0
 	.uleb128 0x3a
-	.long	0x211a2
+	.long	0x2120d
 	.ascii "_ZN17T100WorkSpaceFileD0Ev\0"
-	.long	0x211fd
+	.long	0x21268
 	.quad	.LFB4737
 	.quad	.LFE4737-.LFB4737
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21206
-	.uleb128 0x2c
-	.long	0x211b0
+	.long	0x21271
+	.uleb128 0x2d
+	.long	0x2121b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x3a
-	.long	0x211a2
+	.long	0x2120d
 	.ascii "_ZN17T100WorkSpaceFileD2Ev\0"
-	.long	0x21240
+	.long	0x212ab
 	.quad	.LFB4735
 	.quad	.LFE4735-.LFB4735
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21249
-	.uleb128 0x2c
-	.long	0x211b0
+	.long	0x212b4
+	.uleb128 0x2d
+	.long	0x2121b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x21
 	.long	0x202f3
-	.long	0x21257
+	.long	0x212c2
 	.byte	0
-	.long	0x21272
+	.long	0x212dd
 	.uleb128 0x12
 	.secrel32	.LASF202
-	.long	0x20487
+	.long	0x204b7
 	.uleb128 0x36
 	.ascii "filename\0"
 	.byte	0x4
@@ -31228,41 +31257,41 @@ _ZTS7T100XML:
 	.long	0x1c460
 	.byte	0
 	.uleb128 0x3a
-	.long	0x21249
+	.long	0x212b4
 	.ascii "_ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
-	.long	0x212e1
+	.long	0x2134c
 	.quad	.LFB4732
 	.quad	.LFE4732-.LFB4732
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x212f2
-	.uleb128 0x2c
-	.long	0x21257
+	.long	0x2135d
+	.uleb128 0x2d
+	.long	0x212c2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x2c
-	.long	0x21260
+	.uleb128 0x2d
+	.long	0x212cb
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x2105c
+	.long	0x210b6
 	.uleb128 0xa
-	.long	0x212f2
+	.long	0x2135d
 	.uleb128 0x4d
-	.long	0x2106f
-	.long	0x2131c
+	.long	0x210c9
+	.long	0x21387
 	.quad	.LFB4384
 	.quad	.LFE4384-.LFB4384
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2133a
+	.long	0x213a5
 	.uleb128 0x4a
 	.secrel32	.LASF202
-	.long	0x212f8
+	.long	0x21363
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -31271,71 +31300,71 @@ _ZTS7T100XML:
 	.byte	0x3
 	.word	0x125
 	.byte	0x25
-	.long	0x20cb1
+	.long	0x20cfa
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x21
-	.long	0x210c8
-	.long	0x21348
+	.long	0x21122
+	.long	0x213b3
 	.byte	0x2
-	.long	0x2135b
+	.long	0x213c6
 	.uleb128 0x12
 	.secrel32	.LASF202
-	.long	0x212f8
+	.long	0x21363
 	.uleb128 0x12
 	.secrel32	.LASF203
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x2133a
+	.long	0x213a5
 	.ascii "_ZN13wxXmlDocumentD0Ev\0"
-	.long	0x2137f
-	.long	0x21385
+	.long	0x213ea
+	.long	0x213f0
 	.uleb128 0x1a
-	.long	0x21348
+	.long	0x213b3
 	.byte	0
 	.uleb128 0x3a
-	.long	0x2133a
+	.long	0x213a5
 	.ascii "_ZN13wxXmlDocumentD1Ev\0"
-	.long	0x213bb
+	.long	0x21426
 	.quad	.LFB4377
 	.quad	.LFE4377-.LFB4377
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x213c4
-	.uleb128 0x2c
-	.long	0x21348
+	.long	0x2142f
+	.uleb128 0x2d
+	.long	0x213b3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x20ca6
+	.long	0x20cef
 	.uleb128 0xa
-	.long	0x213c4
-	.uleb128 0xae
-	.long	0x20c71
-	.long	0x213ef
+	.long	0x2142f
+	.uleb128 0xaf
+	.long	0x20cba
+	.long	0x2145a
 	.quad	.LFB4354
 	.quad	.LFE4354-.LFB4354
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x213fc
+	.long	0x21467
 	.uleb128 0x4a
 	.secrel32	.LASF202
-	.long	0x213ca
+	.long	0x21435
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x21
 	.long	0x1fd84
-	.long	0x2140a
+	.long	0x21475
 	.byte	0x2
-	.long	0x2141d
+	.long	0x21488
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fdc0
@@ -31344,37 +31373,37 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x213fc
+	.long	0x21467
 	.ascii "_ZN8wxObjectD0Ev\0"
-	.long	0x2143b
-	.long	0x21441
+	.long	0x214a6
+	.long	0x214ac
 	.uleb128 0x1a
-	.long	0x2140a
+	.long	0x21475
 	.byte	0
 	.uleb128 0x28
-	.long	0x213fc
+	.long	0x21467
 	.ascii "_ZN8wxObjectD1Ev\0"
-	.long	0x2145f
-	.long	0x21465
+	.long	0x214ca
+	.long	0x214d0
 	.uleb128 0x1a
-	.long	0x2140a
+	.long	0x21475
 	.byte	0
 	.uleb128 0x3a
-	.long	0x213fc
+	.long	0x21467
 	.ascii "_ZN8wxObjectD2Ev\0"
-	.long	0x21495
+	.long	0x21500
 	.quad	.LFB3807
 	.quad	.LFE3807-.LFB3807
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2149e
-	.uleb128 0x2c
-	.long	0x2140a
+	.long	0x21509
+	.uleb128 0x2d
+	.long	0x21475
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0xaf
+	.uleb128 0xb0
 	.secrel32	.LASF10
 	.byte	0x1
 	.word	0xf91
@@ -31385,7 +31414,7 @@ _ZTS7T100XML:
 	.quad	.LFE2534-.LFB2534
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x214f2
+	.long	0x2155d
 	.uleb128 0x49
 	.ascii "y\0"
 	.byte	0x1
@@ -31407,12 +31436,12 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x4d
 	.long	0x5751
-	.long	0x21511
+	.long	0x2157c
 	.quad	.LFB2133
 	.quad	.LFE2133-.LFB2133
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2152e
+	.long	0x21599
 	.uleb128 0x4a
 	.secrel32	.LASF202
 	.long	0x1fc4e
@@ -31431,9 +31460,9 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x21
 	.long	0x2b37
-	.long	0x2153c
+	.long	0x215a7
 	.byte	0x2
-	.long	0x21553
+	.long	0x215be
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fcb8
@@ -31445,30 +31474,30 @@ _ZTS7T100XML:
 	.long	0x1fc70
 	.byte	0
 	.uleb128 0x3a
-	.long	0x2152e
+	.long	0x21599
 	.ascii "_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
-	.long	0x215b8
+	.long	0x21623
 	.quad	.LFB1997
 	.quad	.LFE1997-.LFB1997
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x215c9
-	.uleb128 0x2c
-	.long	0x2153c
+	.long	0x21634
+	.uleb128 0x2d
+	.long	0x215a7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x2c
-	.long	0x21545
+	.uleb128 0x2d
+	.long	0x215b0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x21
 	.long	0x2904
-	.long	0x215d7
+	.long	0x21642
 	.byte	0x2
-	.long	0x215ee
+	.long	0x21659
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fcb8
@@ -31480,33 +31509,33 @@ _ZTS7T100XML:
 	.long	0x954
 	.byte	0
 	.uleb128 0x3a
-	.long	0x215c9
+	.long	0x21634
 	.ascii "_ZN8wxStringC1EPKw\0"
-	.long	0x21620
+	.long	0x2168b
 	.quad	.LFB1970
 	.quad	.LFE1970-.LFB1970
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21631
-	.uleb128 0x2c
-	.long	0x215d7
+	.long	0x2169c
+	.uleb128 0x2d
+	.long	0x21642
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x2c
-	.long	0x215e0
+	.uleb128 0x2d
+	.long	0x2164b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0xb0
+	.uleb128 0xb1
 	.long	0xa806
 	.byte	0x1
 	.word	0x189
 	.byte	0x18
-	.long	0x21644
+	.long	0x216af
 	.byte	0x2
-	.long	0x21657
+	.long	0x216c2
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fcb8
@@ -31515,27 +31544,27 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x3a
-	.long	0x21631
+	.long	0x2169c
 	.ascii "_ZN8wxStringD1Ev\0"
-	.long	0x21687
+	.long	0x216f2
 	.quad	.LFB1890
 	.quad	.LFE1890-.LFB1890
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21690
-	.uleb128 0x2c
-	.long	0x21644
+	.long	0x216fb
+	.uleb128 0x2d
+	.long	0x216af
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0xb1
+	.uleb128 0xb2
 	.long	0x20b9
 	.quad	.LFB1808
 	.quad	.LFE1808-.LFB1808
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x216bd
+	.long	0x21728
 	.uleb128 0x49
 	.ascii "str\0"
 	.byte	0x1
@@ -31548,7 +31577,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x164d3
-	.long	0x216d4
+	.long	0x2173f
 	.uleb128 0x42
 	.ascii "__s\0"
 	.byte	0x1d
@@ -31556,7 +31585,7 @@ _ZTS7T100XML:
 	.byte	0x1f
 	.long	0x1b769
 	.byte	0
-	.uleb128 0xb2
+	.uleb128 0xb3
 	.secrel32	.LASF205
 	.secrel32	.LASF205
 	.byte	0xb
@@ -32266,6 +32295,15 @@ _ZTS7T100XML:
 	.byte	0
 	.byte	0
 	.uleb128 0x2b
+	.uleb128 0x2
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3c
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x2c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -32288,7 +32326,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x2c
+	.uleb128 0x2d
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x31
@@ -32297,7 +32335,7 @@ _ZTS7T100XML:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x2d
+	.uleb128 0x2e
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -32314,7 +32352,7 @@ _ZTS7T100XML:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x2e
+	.uleb128 0x2f
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -32329,15 +32367,6 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.uleb128 0x1
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x2f
-	.uleb128 0x2
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3c
-	.uleb128 0x19
 	.byte	0
 	.byte	0
 	.uleb128 0x30
@@ -33739,6 +33768,23 @@ _ZTS7T100XML:
 	.byte	0
 	.byte	0
 	.uleb128 0x80
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x81
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -33755,7 +33801,7 @@ _ZTS7T100XML:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x81
+	.uleb128 0x82
 	.uleb128 0x11
 	.byte	0x1
 	.uleb128 0x25
@@ -33774,7 +33820,7 @@ _ZTS7T100XML:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x82
+	.uleb128 0x83
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
@@ -33785,28 +33831,13 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x83
+	.uleb128 0x84
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0xb
 	.uleb128 0x5
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0x5
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x84
-	.uleb128 0x13
-	.byte	0x1
-	.uleb128 0xb
-	.uleb128 0xb
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
@@ -33818,11 +33849,26 @@ _ZTS7T100XML:
 	.byte	0
 	.byte	0
 	.uleb128 0x85
+	.uleb128 0x13
+	.byte	0x1
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x86
 	.uleb128 0x15
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x86
+	.uleb128 0x87
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -33839,12 +33885,12 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x87
+	.uleb128 0x88
 	.uleb128 0x21
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x88
+	.uleb128 0x89
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -33865,7 +33911,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x89
+	.uleb128 0x8a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33884,7 +33930,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x8a
+	.uleb128 0x8b
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0x3
@@ -33905,7 +33951,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x8b
+	.uleb128 0x8c
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x49
@@ -33914,19 +33960,19 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x8c
+	.uleb128 0x8d
 	.uleb128 0x26
 	.byte	0
 	.byte	0
 	.byte	0
-	.uleb128 0x8d
+	.uleb128 0x8e
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x8e
+	.uleb128 0x8f
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -33941,7 +33987,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x8f
+	.uleb128 0x90
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33964,7 +34010,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x90
+	.uleb128 0x91
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -33977,7 +34023,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x91
+	.uleb128 0x92
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -33998,7 +34044,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x92
+	.uleb128 0x93
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -34015,7 +34061,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x93
+	.uleb128 0x94
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0x3e
@@ -34034,7 +34080,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x94
+	.uleb128 0x95
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -34057,7 +34103,7 @@ _ZTS7T100XML:
 	.uleb128 0x7
 	.byte	0
 	.byte	0
-	.uleb128 0x95
+	.uleb128 0x96
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -34078,7 +34124,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x96
+	.uleb128 0x97
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -34103,7 +34149,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x97
+	.uleb128 0x98
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -34132,7 +34178,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x98
+	.uleb128 0x99
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -34155,7 +34201,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x99
+	.uleb128 0x9a
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -34176,7 +34222,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x9a
+	.uleb128 0x9b
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0x3e
@@ -34193,7 +34239,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x9b
+	.uleb128 0x9c
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -34208,14 +34254,14 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9c
+	.uleb128 0x9d
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x47
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9d
+	.uleb128 0x9e
 	.uleb128 0x3a
 	.byte	0
 	.uleb128 0x3a
@@ -34228,14 +34274,14 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x9e
+	.uleb128 0x9f
 	.uleb128 0x3b
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.byte	0
 	.byte	0
-	.uleb128 0x9f
+	.uleb128 0xa0
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -34256,7 +34302,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa0
+	.uleb128 0xa1
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -34275,7 +34321,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0xa1
+	.uleb128 0xa2
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0x3
@@ -34298,7 +34344,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa2
+	.uleb128 0xa3
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -34321,7 +34367,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa3
+	.uleb128 0xa4
 	.uleb128 0x17
 	.byte	0x1
 	.uleb128 0x3
@@ -34338,7 +34384,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa4
+	.uleb128 0xa5
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -34357,7 +34403,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa5
+	.uleb128 0xa6
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -34378,7 +34424,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa6
+	.uleb128 0xa7
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -34407,7 +34453,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xa7
+	.uleb128 0xa8
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -34418,7 +34464,7 @@ _ZTS7T100XML:
 	.uleb128 0xd
 	.byte	0
 	.byte	0
-	.uleb128 0xa8
+	.uleb128 0xa9
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -34429,7 +34475,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0
 	.byte	0
-	.uleb128 0xa9
+	.uleb128 0xaa
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -34440,7 +34486,7 @@ _ZTS7T100XML:
 	.uleb128 0x7
 	.byte	0
 	.byte	0
-	.uleb128 0xaa
+	.uleb128 0xab
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -34467,7 +34513,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xab
+	.uleb128 0xac
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x31
@@ -34488,7 +34534,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xac
+	.uleb128 0xad
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -34507,7 +34553,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xad
+	.uleb128 0xae
 	.uleb128 0x4109
 	.byte	0
 	.uleb128 0x11
@@ -34516,7 +34562,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xae
+	.uleb128 0xaf
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -34535,7 +34581,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xaf
+	.uleb128 0xb0
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -34564,7 +34610,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xb0
+	.uleb128 0xb1
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -34583,7 +34629,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xb1
+	.uleb128 0xb2
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -34600,7 +34646,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0xb2
+	.uleb128 0xb3
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -34939,8 +34985,6 @@ _ZTS7T100XML:
 	.ascii "_M_replace_aux\0"
 .LASF59:
 	.ascii "compare\0"
-.LASF4:
-	.ascii "operator--\0"
 .LASF2:
 	.ascii "operator[]\0"
 .LASF14:
@@ -34977,6 +35021,8 @@ _ZTS7T100XML:
 	.ascii "wxCharTypeBuffer\0"
 .LASF61:
 	.ascii "erase\0"
+.LASF4:
+	.ascii "operator--\0"
 .LASF51:
 	.ascii "operator<<\0"
 .LASF15:

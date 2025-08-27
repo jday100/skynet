@@ -3,6 +3,8 @@
 
 #include "T100XML.h"
 
+class T100WorkSpaceInfo;
+
 class T100WorkSpaceFile : public T100XML
 {
     public:
@@ -11,8 +13,8 @@ class T100WorkSpaceFile : public T100XML
 
         T100BOOL                IsExists();
 
-        T100BOOL                Load();
-        T100VOID                Save();
+        T100BOOL                Load(T100WorkSpaceInfo*);
+        T100VOID                Save(T100WorkSpaceInfo*);
 
     protected:
         T100WSTRING             m_filename;

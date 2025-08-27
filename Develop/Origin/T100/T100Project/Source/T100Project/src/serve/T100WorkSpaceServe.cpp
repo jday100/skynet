@@ -63,7 +63,7 @@ T100BOOL T100WorkSpaceServe::CreateWorkSpaceFile(T100WorkSpaceInfo* info)
         return T100FALSE;
     }
 
-    file.Save();
+    file.Save(info);
 
     return T100TRUE;
 }
@@ -93,6 +93,63 @@ T100BOOL T100WorkSpaceServe::CheckWorkSpaceFile(const T100WxFolderInfo& info)
     T100WorkSpaceFile   file(filename);
 
     return file.IsExists();
+}
+
+T100BOOL T100WorkSpaceServe::New(const T100WxFolderInfo& info)
+{
+    T100WSTRING         filename;
+    T100Folder          folder(info.GetPath());
+
+    filename    = GetFileName(info);
+
+    T100WorkSpaceFile   file(filename);
+
+    if(!folder.IsExists()){
+        return T100FALSE;
+    }
+
+    if(file.IsExists()){
+        return T100FALSE;
+    }
+
+    file.Save();
+    return T100TRUE;
+}
+
+T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
+{
+
+    T100Folder          folder(info.GetPath());
+
+    if(!folder.IsExists()){
+        return T100FALSE;
+    }
+
+    T100WSTRING         filename;
+
+    filename    = GetFileName(info);
+
+    T100WorkSpaceFile       file(filename);
+
+    if(!file.IsExists()){
+        return T100FALSE;
+    }
+
+    if(!file.Load()){
+        return T100FALSE;
+    }
+
+    m_info      = T100NEW T100WorkSpaceInfo();
+
+    m_info->SetLabel(info.GetLabel());
+    m_info->SetPath(info.GetPath());
+    m_info->SetFileName(filename);
+
+    if(!WorkSpaceOpen(m_info)){
+        return T100FALSE;
+    }
+
+    return T100TRUE;
 }
 
 
@@ -128,62 +185,6 @@ T100VOID T100WorkSpaceServe::GetFolderInfo(T100WxFolderInfo& info)
 T100BOOL T100WorkSpaceServe::IsOpened()
 {
     return m_opened;
-}
-
-T100BOOL T100WorkSpaceServe::New(const T100WxFolderInfo& info)
-{
-    T100WSTRING         filename;
-    T100Folder          folder(info.GetPath());
-
-    filename    = GetFileName(info);
-
-    T100WorkSpaceFile   file(filename);
-
-    if(!folder.IsExists()){
-        return T100FALSE;
-    }
-
-    if(file.IsExists()){
-        return T100FALSE;
-    }
-
-    file.Save();
-    return T100TRUE;
-}
-
-T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
-{
-    T100Folder          folder(info.GetPath());
-
-    if(!folder.IsExists()){
-        return T100FALSE;
-    }
-
-    T100WSTRING         filename;
-
-    filename    = GetFileName(info);
-
-    T100WorkSpaceFile       file(filename);
-
-    if(!file.IsExists()){
-        return T100FALSE;
-    }
-
-    if(!file.Load()){
-        return T100FALSE;
-    }
-
-    m_info      = T100NEW T100WorkSpaceInfo();
-
-    m_info->SetLabel(info.GetLabel());
-    m_info->SetPath(info.GetPath());
-    m_info->SetFileName(filename);
-
-    if(!WorkSpaceOpen(m_info)){
-        return T100FALSE;
-    }
-
-    return T100TRUE;
 }
 
 T100BOOL T100WorkSpaceServe::Close()
