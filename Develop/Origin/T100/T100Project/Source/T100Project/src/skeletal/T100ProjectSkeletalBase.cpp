@@ -117,10 +117,7 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceOpen(const T100WxFolderInfo& info)
 
 
 
-T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(const T100WxFolderInfo& info)
-{
-    return m_serve->New(info);
-}
+
 
 T100BOOL T100ProjectSkeletalBase::WorkSpaceClose()
 {

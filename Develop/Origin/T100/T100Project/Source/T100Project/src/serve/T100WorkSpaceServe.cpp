@@ -95,27 +95,6 @@ T100BOOL T100WorkSpaceServe::CheckWorkSpaceFile(const T100WxFolderInfo& info)
     return file.IsExists();
 }
 
-T100BOOL T100WorkSpaceServe::New(const T100WxFolderInfo& info)
-{
-    T100WSTRING         filename;
-    T100Folder          folder(info.GetPath());
-
-    filename    = GetFileName(info);
-
-    T100WorkSpaceFile   file(filename);
-
-    if(!folder.IsExists()){
-        return T100FALSE;
-    }
-
-    if(file.IsExists()){
-        return T100FALSE;
-    }
-
-    file.Save();
-    return T100TRUE;
-}
-
 T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
 {
 
@@ -135,7 +114,9 @@ T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
         return T100FALSE;
     }
 
-    if(!file.Load()){
+    T100WorkSpaceInfo*      workspace   = T100NEW T100WorkSpaceInfo();
+
+    if(!file.Load(workspace)){
         return T100FALSE;
     }
 

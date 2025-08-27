@@ -21,7 +21,6 @@ class T100WorkSpaceServe
         T100BOOL                                CheckWorkSpaceFolder(const T100WxFolderInfo&);
         T100BOOL                                CheckWorkSpaceFile(const T100WxFolderInfo&);
 
-        T100BOOL                                New(const T100WxFolderInfo&);
         T100BOOL                                Open(const T100WxFolderInfo&);
 
 

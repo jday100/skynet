@@ -211,8 +211,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.81167
-	movq	%rax, %rcx	 # D.81167,
+	movq	%rbx, %rax	 # tmp99, D.84726
+	movq	%rax, %rcx	 # D.84726,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -295,6 +295,53 @@ _ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	ret	
 	.cfi_endproc
 .LFE1997:
+	.seh_endproc
+	.section	.text$_ZN8wxStringaSERKS_,"x"
+	.linkonce discard
+	.align 2
+	.globl	_ZN8wxStringaSERKS_
+	.def	_ZN8wxStringaSERKS_;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN8wxStringaSERKS_
+_ZN8wxStringaSERKS_:
+.LFB2081:
+	.loc 1 1877 13
+	.cfi_startproc
+	pushq	%rbp	 #
+	.seh_pushreg	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp	 #,
+	.seh_setframe	%rbp, 0
+	.cfi_def_cfa_register 6
+	subq	$32, %rsp	 #,
+	.seh_stackalloc	32
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)	 # this, this
+	movq	%rdx, 24(%rbp)	 # stringSrc, stringSrc
+ # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1879:     if ( this != &stringSrc )
+	.loc 1 1879 5
+	movq	16(%rbp), %rax	 # this, tmp91
+	cmpq	24(%rbp), %rax	 # stringSrc, tmp91
+	je	.L12	 #,
+ # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1883:         m_impl = stringSrc.m_impl;
+	.loc 1 1883 28
+	movq	24(%rbp), %rdx	 # stringSrc, _1
+	movq	16(%rbp), %rax	 # this, _2
+	movq	%rax, %rcx	 # _2,
+	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_	 #
+.L12:
+ # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1886:     return *this;
+	.loc 1 1886 13
+	movq	16(%rbp), %rax	 # this, _8
+ # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1887:   }
+	.loc 1 1887 3
+	addq	$32, %rsp	 #,
+	popq	%rbp	 #
+	.cfi_restore 6
+	.cfi_def_cfa 7, 8
+	ret	
+	.cfi_endproc
+.LFE2081:
 	.seh_endproc
 	.section	.text$_ZNK8wxString3CmpEPKw,"x"
 	.linkonce discard
@@ -460,6 +507,46 @@ _ZNK9wxXmlNode7GetNameEv:
 	.cfi_endproc
 .LFE4354:
 	.seh_endproc
+	.section	.text$_ZN9wxXmlNode10SetContentERK8wxString,"x"
+	.linkonce discard
+	.align 2
+	.globl	_ZN9wxXmlNode10SetContentERK8wxString
+	.def	_ZN9wxXmlNode10SetContentERK8wxString;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN9wxXmlNode10SetContentERK8wxString
+_ZN9wxXmlNode10SetContentERK8wxString:
+.LFB4363:
+	.loc 3 164 10
+	.cfi_startproc
+	pushq	%rbp	 #
+	.seh_pushreg	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp	 #,
+	.seh_setframe	%rbp, 0
+	.cfi_def_cfa_register 6
+	subq	$32, %rsp	 #,
+	.seh_stackalloc	32
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)	 # this, this
+	movq	%rdx, 24(%rbp)	 # con, con
+ # C:\zoo\lib\wxWidgets-3.0.5\include/wx/xml/xml.h:164:     void SetContent(const wxString& con) { m_content = con; }
+	.loc 3 164 56
+	movq	16(%rbp), %rax	 # this, tmp88
+	addq	$64, %rax	 #, _1
+	movq	24(%rbp), %rdx	 # con, tmp89
+	movq	%rax, %rcx	 # _1,
+	call	_ZN8wxStringaSERKS_	 #
+ # C:\zoo\lib\wxWidgets-3.0.5\include/wx/xml/xml.h:164:     void SetContent(const wxString& con) { m_content = con; }
+	.loc 3 164 61
+	nop	
+	addq	$32, %rsp	 #,
+	popq	%rbp	 #
+	.cfi_restore 6
+	.cfi_def_cfa 7, 8
+	ret	
+	.cfi_endproc
+.LFE4363:
+	.seh_endproc
 	.section	.text$_ZN13wxXmlDocumentD1Ev,"x"
 	.linkonce discard
 	.align 2
@@ -575,7 +662,7 @@ _ZN13wxXmlDocument15SetDocumentNodeEP9wxXmlNode:
 _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LFB4732:
 	.file 4 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/store/T100WorkSpaceFile.cpp"
-	.loc 4 5 1
+	.loc 4 6 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -595,8 +682,8 @@ _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	movq	%rcx, -64(%rbp)	 # this, this
 	movq	%rdx, -56(%rbp)	 # filename, filename
 .LBB8:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:7:     m_filename(filename)
-	.loc 4 7 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:8:     m_filename(filename)
+	.loc 4 8 24
 	movq	-64(%rbp), %rax	 # this, _1
 	movq	-56(%rbp), %rdx	 # filename, tmp93
 	movq	%rax, %rcx	 # _1,
@@ -614,27 +701,27 @@ _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_	 #
 .LEHE3:
 .LBE8:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:10: }
-	.loc 4 10 1
-	jmp	.L23	 #
-.L22:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:11: }
+	.loc 4 11 1
+	jmp	.L27	 #
+.L26:
 	movq	%rax, %rbx	 #, tmp97
 .LBB9:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:7:     m_filename(filename)
-	.loc 4 7 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:8:     m_filename(filename)
+	.loc 4 8 24
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN7T100XMLD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.81170
-	movq	%rax, %rcx	 # D.81170,
+	movq	%rbx, %rax	 # tmp97, D.84729
+	movq	%rax, %rcx	 # D.84729,
 .LEHB4:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE4:
-.L23:
+.L27:
 .LBE9:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:10: }
-	.loc 4 10 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:11: }
+	.loc 4 11 1
 	addq	$40, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -658,7 +745,7 @@ _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.uleb128 0
 	.uleb128 .LEHB3-.LFB4732
 	.uleb128 .LEHE3-.LEHB3
-	.uleb128 .L22-.LFB4732
+	.uleb128 .L26-.LFB4732
 	.uleb128 0
 	.uleb128 .LEHB4-.LFB4732
 	.uleb128 .LEHE4-.LEHB4
@@ -676,7 +763,7 @@ _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.seh_proc	_ZN17T100WorkSpaceFileD2Ev
 _ZN17T100WorkSpaceFileD2Ev:
 .LFB4735:
-	.loc 4 12 1
+	.loc 4 13 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -690,8 +777,8 @@ _ZN17T100WorkSpaceFileD2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB10:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:12: T100WorkSpaceFile::~T100WorkSpaceFile()
-	.loc 4 12 39
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:13: T100WorkSpaceFile::~T100WorkSpaceFile()
+	.loc 4 13 39
 	leaq	16+_ZTV17T100WorkSpaceFile(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp90
 	movq	%rdx, (%rax)	 # _1, this_5(D)->D.75611._vptr.T100XML
@@ -703,8 +790,8 @@ _ZN17T100WorkSpaceFileD2Ev:
 	movq	%rax, %rcx	 # _3,
 	call	_ZN7T100XMLD2Ev	 #
 .LBE10:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:15: }
-	.loc 4 15 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:16: }
+	.loc 4 16 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -723,7 +810,7 @@ _ZN17T100WorkSpaceFileD2Ev:
 	.seh_proc	_ZN17T100WorkSpaceFileD0Ev
 _ZN17T100WorkSpaceFileD0Ev:
 .LFB4737:
-	.loc 4 12 1
+	.loc 4 13 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -736,8 +823,8 @@ _ZN17T100WorkSpaceFileD0Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:15: }
-	.loc 4 15 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:16: }
+	.loc 4 16 1
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN17T100WorkSpaceFileD1Ev	 #
 	movl	$72, %edx	 #,
@@ -758,7 +845,7 @@ _ZN17T100WorkSpaceFileD0Ev:
 	.seh_proc	_ZN17T100WorkSpaceFile8IsExistsEv
 _ZN17T100WorkSpaceFile8IsExistsEv:
 .LFB4738:
-	.loc 4 18 1
+	.loc 4 19 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -771,8 +858,8 @@ _ZN17T100WorkSpaceFile8IsExistsEv:
 	.seh_stackalloc	48
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:21:     result = ::_waccess(m_filename.c_str(), F_OK);
-	.loc 4 21 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:22:     result = ::_waccess(m_filename.c_str(), F_OK);
+	.loc 4 22 24
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$40, %rax	 #, _1
 	movq	%rax, %rcx	 # _1,
@@ -783,21 +870,21 @@ _ZN17T100WorkSpaceFile8IsExistsEv:
 	call	*%rax	 # tmp93
 .LVL0:
 	movl	%eax, -4(%rbp)	 # _8, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:23:     if(-1 == result){
-	.loc 4 23 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:24:     if(-1 == result){
+	.loc 4 24 5
 	cmpl	$-1, -4(%rbp)	 #, result
-	je	.L27	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:26:         return T100TRUE;
-	.loc 4 26 16
+	je	.L31	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:27:         return T100TRUE;
+	.loc 4 27 16
 	movl	$1, %eax	 #, _3
-	jmp	.L28	 #
-.L27:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:29:     return T100FALSE;
-	.loc 4 29 12
+	jmp	.L32	 #
+.L31:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:30:     return T100FALSE;
+	.loc 4 30 12
 	movl	$0, %eax	 #, _3
-.L28:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:30: }
-	.loc 4 30 1
+.L32:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:31: }
+	.loc 4 31 1
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -821,7 +908,7 @@ _ZN17T100WorkSpaceFile8IsExistsEv:
 	.seh_proc	_ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo
 _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 .LFB4739:
-	.loc 4 33 1
+	.loc 4 34 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -840,34 +927,34 @@ _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 	.seh_endprologue
 	movq	%rcx, 176(%rbp)	 # this, this
 	movq	%rdx, 184(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:34:     wxXmlDocument       document;
-	.loc 4 34 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:35:     wxXmlDocument       document;
+	.loc 4 35 25
 	leaq	-96(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 .LEHB5:
 	call	_ZN13wxXmlDocumentC1Ev	 #
 .LEHE5:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:36:     if(!document.Load(m_filename)){
-	.loc 4 36 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:37:     if(!document.Load(m_filename)){
+	.loc 4 37 22
 	leaq	32(%rbp), %rax	 #, tmp97
 	leaq	.LC1(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp97,
 .LEHB6:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE6:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:36:     if(!document.Load(m_filename)){
-	.loc 4 36 23 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:37:     if(!document.Load(m_filename)){
+	.loc 4 37 23 discriminator 1
 	movq	176(%rbp), %rax	 # this, tmp98
 	leaq	40(%rax), %rdx	 #, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:36:     if(!document.Load(m_filename)){
-	.loc 4 36 22 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:37:     if(!document.Load(m_filename)){
+	.loc 4 37 22 discriminator 1
 	leaq	80(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 .LEHB7:
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE7:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:36:     if(!document.Load(m_filename)){
-	.loc 4 36 22 is_stmt 0 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:37:     if(!document.Load(m_filename)){
+	.loc 4 37 22 is_stmt 0 discriminator 3
 	leaq	32(%rbp), %rcx	 #, tmp100
 	leaq	80(%rbp), %rdx	 #, tmp101
 	leaq	-96(%rbp), %rax	 #, tmp102
@@ -877,45 +964,45 @@ _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 .LEHB8:
 	call	_ZN13wxXmlDocument4LoadERK8wxStringS2_i	 #
 .LEHE8:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:36:     if(!document.Load(m_filename)){
-	.loc 4 36 8 is_stmt 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:37:     if(!document.Load(m_filename)){
+	.loc 4 37 8 is_stmt 1 discriminator 3
 	xorl	$1, %eax	 #, _2
 	movl	%eax, %ebx	 # _2, retval.6_16
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:36:     if(!document.Load(m_filename)){
-	.loc 4 36 22 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:37:     if(!document.Load(m_filename)){
+	.loc 4 37 22 discriminator 3
 	leaq	80(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
 	call	_ZN8wxStringD1Ev	 #
 	leaq	32(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:36:     if(!document.Load(m_filename)){
-	.loc 4 36 5 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:37:     if(!document.Load(m_filename)){
+	.loc 4 37 5 discriminator 3
 	testb	%bl, %bl	 # retval.6_16
-	je	.L30	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:37:         return T100FALSE;
-	.loc 4 37 16
+	je	.L34	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:38:         return T100FALSE;
+	.loc 4 38 16
 	movl	$0, %ebx	 #, _4
-	jmp	.L31	 #
-.L30:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:40:     wxXmlNode*      root    = document.GetRoot();
-	.loc 4 40 47
+	jmp	.L35	 #
+.L34:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:41:     wxXmlNode*      root    = document.GetRoot();
+	.loc 4 41 47
 	leaq	-96(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 .LEHB9:
 	call	_ZNK13wxXmlDocument7GetRootEv	 #
 	movq	%rax, 136(%rbp)	 # _23, root
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:42:     if(!root){
-	.loc 4 42 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:43:     if(!root){
+	.loc 4 43 5
 	cmpq	$0, 136(%rbp)	 #, root
-	jne	.L32	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:43:         return T100FALSE;
-	.loc 4 43 16
+	jne	.L36	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:44:         return T100FALSE;
+	.loc 4 44 16
 	movl	$0, %ebx	 #, _4
-	jmp	.L31	 #
-.L32:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:46:     if(root->GetName() == L"WorkSpace"){
-	.loc 4 46 24
+	jmp	.L35	 #
+.L36:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:47:     if(root->GetName() == L"WorkSpace"){
+	.loc 4 47 24
 	movq	136(%rbp), %rax	 # root, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZNK9wxXmlNode7GetNameEv	 #
@@ -923,59 +1010,59 @@ _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 	movq	%rax, %rcx	 # _3,
 	call	_ZeqRK8wxStringPKw	 #
 .LEHE9:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:46:     if(root->GetName() == L"WorkSpace"){
-	.loc 4 46 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:47:     if(root->GetName() == L"WorkSpace"){
+	.loc 4 47 5
 	testb	%al, %al	 # _28
-	jne	.L33	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:49:         return T100FALSE;
-	.loc 4 49 16
+	jne	.L37	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:50:         return T100FALSE;
+	.loc 4 50 16
 	movl	$0, %ebx	 #, _4
-	jmp	.L31	 #
-.L33:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:52:     return T100TRUE;
-	.loc 4 52 12
+	jmp	.L35	 #
+.L37:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:53:     return T100TRUE;
+	.loc 4 53 12
 	movl	$1, %ebx	 #, _4
-.L31:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:34:     wxXmlDocument       document;
-	.loc 4 34 25
+.L35:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:35:     wxXmlDocument       document;
+	.loc 4 35 25
 	leaq	-96(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN13wxXmlDocumentD1Ev	 #
 	movl	%ebx, %eax	 # _4, <retval>
-	jmp	.L41	 #
-.L40:
+	jmp	.L45	 #
+.L44:
 	movq	%rax, %rbx	 #, tmp111
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:36:     if(!document.Load(m_filename)){
-	.loc 4 36 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:37:     if(!document.Load(m_filename)){
+	.loc 4 37 22
 	leaq	80(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L36	 #
-.L39:
+	jmp	.L40	 #
+.L43:
 	movq	%rax, %rbx	 #, tmp110
-.L36:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:36:     if(!document.Load(m_filename)){
-	.loc 4 36 22 is_stmt 0 discriminator 2
+.L40:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:37:     if(!document.Load(m_filename)){
+	.loc 4 37 22 is_stmt 0 discriminator 2
 	leaq	32(%rbp), %rax	 #, tmp114
 	movq	%rax, %rcx	 # tmp114,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L37	 #
-.L38:
+	jmp	.L41	 #
+.L42:
 	movq	%rax, %rbx	 #, tmp115
-.L37:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:34:     wxXmlDocument       document;
-	.loc 4 34 25 is_stmt 1
+.L41:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:35:     wxXmlDocument       document;
+	.loc 4 35 25 is_stmt 1
 	leaq	-96(%rbp), %rax	 #, tmp117
 	movq	%rax, %rcx	 # tmp117,
 	call	_ZN13wxXmlDocumentD1Ev	 #
-	movq	%rbx, %rax	 # tmp115, D.81172
-	movq	%rax, %rcx	 # D.81172,
+	movq	%rbx, %rax	 # tmp115, D.84731
+	movq	%rax, %rcx	 # D.84731,
 .LEHB10:
 	call	_Unwind_Resume	 #
 .LEHE10:
-.L41:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:53: }
-	.loc 4 53 1
+.L45:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:54: }
+	.loc 4 54 1
 	addq	$280, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -999,19 +1086,19 @@ _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 	.uleb128 0
 	.uleb128 .LEHB6-.LFB4739
 	.uleb128 .LEHE6-.LEHB6
-	.uleb128 .L38-.LFB4739
+	.uleb128 .L42-.LFB4739
 	.uleb128 0
 	.uleb128 .LEHB7-.LFB4739
 	.uleb128 .LEHE7-.LEHB7
-	.uleb128 .L39-.LFB4739
+	.uleb128 .L43-.LFB4739
 	.uleb128 0
 	.uleb128 .LEHB8-.LFB4739
 	.uleb128 .LEHE8-.LEHB8
-	.uleb128 .L40-.LFB4739
+	.uleb128 .L44-.LFB4739
 	.uleb128 0
 	.uleb128 .LEHB9-.LFB4739
 	.uleb128 .LEHE9-.LEHB9
-	.uleb128 .L38-.LFB4739
+	.uleb128 .L42-.LFB4739
 	.uleb128 0
 	.uleb128 .LEHB10-.LFB4739
 	.uleb128 .LEHE10-.LEHB10
@@ -1020,13 +1107,21 @@ _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 .LLSDACSE4739:
 	.text
 	.seh_endproc
+	.section .rdata,"dr"
+	.align 2
+.LC3:
+	.ascii "P\0y\0t\0h\0o\0n\0\0\0"
+	.align 2
+.LC4:
+	.ascii "P\0a\0t\0h\0\0\0"
+	.text
 	.align 2
 	.globl	_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo
 	.def	_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo
 _ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo:
 .LFB4740:
-	.loc 4 56 1
+	.loc 4 57 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1044,233 +1139,415 @@ _ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo:
 	.seh_pushreg	%rbx
 	.cfi_def_cfa_offset 40
 	.cfi_offset 3, -40
-	subq	$440, %rsp	 #,
-	.seh_stackalloc	440
-	.cfi_def_cfa_offset 480
+	subq	$712, %rsp	 #,
+	.seh_stackalloc	712
+	.cfi_def_cfa_offset 752
 	leaq	128(%rsp), %rbp	 #,
 	.seh_setframe	%rbp, 128
-	.cfi_def_cfa 6, 352
+	.cfi_def_cfa 6, 624
 	.seh_endprologue
-	movq	%rcx, 352(%rbp)	 # this, this
-	movq	%rdx, 360(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:57:     wxXmlDocument       document;
-	.loc 4 57 25
-	leaq	-80(%rbp), %rax	 #, tmp97
-	movq	%rax, %rcx	 # tmp97,
+	movq	%rcx, 624(%rbp)	 # this, this
+	movq	%rdx, 632(%rbp)	 # info, info
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:58:     wxXmlDocument       document;
+	.loc 4 58 25
+	leaq	-64(%rbp), %rax	 #, tmp106
+	movq	%rax, %rcx	 # tmp106,
 .LEHB11:
 	call	_ZN13wxXmlDocumentC1Ev	 #
 .LEHE11:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:58:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
-	.loc 4 58 91
-	leaq	48(%rbp), %rax	 #, tmp98
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
+	.loc 4 59 91
+	leaq	64(%rbp), %rax	 #, tmp107
 	leaq	.LC2(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp98,
+	movq	%rax, %rcx	 # tmp107,
 .LEHB12:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE12:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:58:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
-	.loc 4 58 91 is_stmt 0 discriminator 1
-	leaq	48(%rbp), %rsi	 #, _13
-	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp99
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
+	.loc 4 59 91 is_stmt 0 discriminator 1
+	leaq	64(%rbp), %rsi	 #, _20
+	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp108
 	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.16_1
-	leaq	96(%rbp), %rax	 #, tmp100
-	movq	%rax, %rcx	 # tmp100,
+	leaq	112(%rbp), %rax	 #, tmp109
+	movq	%rax, %rcx	 # tmp109,
 .LEHB13:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE13:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:58:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
-	.loc 4 58 91 discriminator 3
-	leaq	96(%rbp), %rdi	 #, _15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
+	.loc 4 59 91 discriminator 3
+	leaq	112(%rbp), %rdi	 #, _22
 	movl	$152, %ecx	 #,
 .LEHB14:
 	call	_Znwy	 #
 .LEHE14:
-	movq	%rax, %rbx	 # tmp101, _17
+	movq	%rax, %rbx	 # tmp110, _24
 	movl	$-1, 32(%rsp)	 #,
-	movq	%rdi, %r9	 # _15,
-	movq	%rsi, %r8	 # _13,
+	movq	%rdi, %r9	 # _22,
+	movq	%rsi, %r8	 # _20,
 	movl	$10, %edx	 #,
-	movq	%rbx, %rcx	 # _17,
+	movq	%rbx, %rcx	 # _24,
 .LEHB15:
 	call	_ZN9wxXmlNodeC1E13wxXmlNodeTypeRK8wxStringS3_i	 #
 .LEHE15:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:58:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
-	.loc 4 58 91 discriminator 7
-	movq	%rbx, 296(%rbp)	 # _17, type
-	leaq	96(%rbp), %rax	 #, tmp102
-	movq	%rax, %rcx	 # tmp102,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
+	.loc 4 59 91 discriminator 7
+	movq	%rbx, 568(%rbp)	 # _24, type
+	leaq	112(%rbp), %rax	 #, tmp111
+	movq	%rax, %rcx	 # tmp111,
 	call	_ZN8wxStringD1Ev	 #
-	leaq	48(%rbp), %rax	 #, tmp103
-	movq	%rax, %rcx	 # tmp103,
+	leaq	64(%rbp), %rax	 #, tmp112
+	movq	%rax, %rcx	 # tmp112,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
-	.loc 4 59 85 is_stmt 1 discriminator 7
-	leaq	144(%rbp), %rax	 #, tmp104
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:60:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
+	.loc 4 60 85 is_stmt 1 discriminator 7
+	leaq	160(%rbp), %rax	 #, tmp113
 	leaq	.LC2(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp104,
+	movq	%rax, %rcx	 # tmp113,
 .LEHB16:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE16:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
-	.loc 4 59 85 is_stmt 0 discriminator 1
-	leaq	144(%rbp), %rsi	 #, _26
-	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp105
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:60:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
+	.loc 4 60 85 is_stmt 0 discriminator 1
+	leaq	160(%rbp), %rsi	 #, _33
+	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp114
 	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.17_2
-	leaq	192(%rbp), %rax	 #, tmp106
-	movq	%rax, %rcx	 # tmp106,
+	leaq	208(%rbp), %rax	 #, tmp115
+	movq	%rax, %rcx	 # tmp115,
 .LEHB17:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE17:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
-	.loc 4 59 85 discriminator 3
-	leaq	192(%rbp), %rdi	 #, _28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:60:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
+	.loc 4 60 85 discriminator 3
+	leaq	208(%rbp), %rdi	 #, _35
 	movl	$152, %ecx	 #,
 .LEHB18:
 	call	_Znwy	 #
 .LEHE18:
-	movq	%rax, %rbx	 # tmp107, _30
+	movq	%rax, %rbx	 # tmp116, _37
 	movl	$-1, 32(%rsp)	 #,
-	movq	%rdi, %r9	 # _28,
-	movq	%rsi, %r8	 # _26,
+	movq	%rdi, %r9	 # _35,
+	movq	%rsi, %r8	 # _33,
 	movl	$1, %edx	 #,
-	movq	%rbx, %rcx	 # _30,
+	movq	%rbx, %rcx	 # _37,
 .LEHB19:
 	call	_ZN9wxXmlNodeC1E13wxXmlNodeTypeRK8wxStringS3_i	 #
 .LEHE19:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
-	.loc 4 59 85 discriminator 7
-	movq	%rbx, 288(%rbp)	 # _30, root
-	leaq	192(%rbp), %rax	 #, tmp108
-	movq	%rax, %rcx	 # tmp108,
-	call	_ZN8wxStringD1Ev	 #
-	leaq	144(%rbp), %rax	 #, tmp109
-	movq	%rax, %rcx	 # tmp109,
-	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:61:     document.SetDocumentNode(type);
-	.loc 4 61 29 is_stmt 1 discriminator 7
-	movq	296(%rbp), %rdx	 # type, tmp110
-	leaq	-80(%rbp), %rax	 #, tmp111
-	movq	%rax, %rcx	 # tmp111,
-	call	_ZN13wxXmlDocument15SetDocumentNodeEP9wxXmlNode	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:62:     document.SetRoot(root);
-	.loc 4 62 21 discriminator 7
-	movq	288(%rbp), %rdx	 # root, tmp112
-	leaq	-80(%rbp), %rax	 #, tmp113
-	movq	%rax, %rcx	 # tmp113,
-.LEHB20:
-	call	_ZN13wxXmlDocument7SetRootEP9wxXmlNode	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     document.Save(m_filename);
-	.loc 4 63 19
-	movq	352(%rbp), %rax	 # this, tmp114
-	leaq	40(%rax), %rdx	 #, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     document.Save(m_filename);
-	.loc 4 63 18
-	leaq	240(%rbp), %rax	 #, tmp115
-	movq	%rax, %rcx	 # tmp115,
-	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
-.LEHE20:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     document.Save(m_filename);
-	.loc 4 63 18 is_stmt 0 discriminator 1
-	leaq	240(%rbp), %rdx	 #, tmp116
-	leaq	-80(%rbp), %rax	 #, tmp117
-	movl	$2, %r8d	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:60:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
+	.loc 4 60 85 discriminator 7
+	movq	%rbx, 560(%rbp)	 # _37, root
+	leaq	208(%rbp), %rax	 #, tmp117
 	movq	%rax, %rcx	 # tmp117,
-.LEHB21:
-	call	_ZNK13wxXmlDocument4SaveERK8wxStringi	 #
-.LEHE21:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     document.Save(m_filename);
-	.loc 4 63 18 discriminator 3
-	leaq	240(%rbp), %rax	 #, tmp118
+	call	_ZN8wxStringD1Ev	 #
+	leaq	160(%rbp), %rax	 #, tmp118
 	movq	%rax, %rcx	 # tmp118,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:57:     wxXmlDocument       document;
-	.loc 4 57 25 is_stmt 1 discriminator 3
-	leaq	-80(%rbp), %rax	 #, tmp119
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     wxXmlNode*          python  = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Python");
+	.loc 4 63 88 is_stmt 1 discriminator 7
+	leaq	256(%rbp), %rax	 #, tmp119
+	leaq	.LC3(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp119,
-	call	_ZN13wxXmlDocumentD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:64: }
-	.loc 4 64 1 discriminator 3
-	jmp	.L59	 #
-.L54:
-	movq	%rax, %rsi	 #, tmp121
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:58:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
-	.loc 4 58 91
-	movl	$152, %edx	 #,
-	movq	%rbx, %rcx	 # _17,
-	call	_ZdlPvy	 #
-	movq	%rsi, %rbx	 # tmp121, tmp120
-	jmp	.L44	 #
-.L53:
-	movq	%rax, %rbx	 #, tmp120
-.L44:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:58:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
-	.loc 4 58 91 is_stmt 0 discriminator 4
-	leaq	96(%rbp), %rax	 #, tmp124
+.LEHB20:
+	call	_ZN8wxStringC1EPKw	 #
+.LEHE20:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     wxXmlNode*          python  = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Python");
+	.loc 4 63 88 is_stmt 0 discriminator 1
+	leaq	256(%rbp), %rdi	 #, _46
+	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp120
+	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.18_3
+	leaq	304(%rbp), %rax	 #, tmp121
+	movq	%rax, %rcx	 # tmp121,
+.LEHB21:
+	call	_ZN8wxStringC1EPKw	 #
+.LEHE21:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     wxXmlNode*          python  = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Python");
+	.loc 4 63 88 discriminator 3
+	leaq	304(%rbp), %rsi	 #, _48
+	movl	$152, %ecx	 #,
+.LEHB22:
+	call	_Znwy	 #
+.LEHE22:
+	movq	%rax, %rbx	 # tmp122, _50
+	movq	560(%rbp), %rax	 # root, tmp123
+	movl	$-1, 56(%rsp)	 #,
+	movq	$0, 48(%rsp)	 #,
+	movq	$0, 40(%rsp)	 #,
+	movq	%rsi, 32(%rsp)	 # _48,
+	movq	%rdi, %r9	 # _46,
+	movl	$1, %r8d	 #,
+	movq	%rax, %rdx	 # tmp123,
+	movq	%rbx, %rcx	 # _50,
+.LEHB23:
+	call	_ZN9wxXmlNodeC1EPS_13wxXmlNodeTypeRK8wxStringS4_P14wxXmlAttributeS0_i	 #
+.LEHE23:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     wxXmlNode*          python  = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Python");
+	.loc 4 63 88 discriminator 7
+	movq	%rbx, 552(%rbp)	 # _50, python
+	leaq	304(%rbp), %rax	 #, tmp124
 	movq	%rax, %rcx	 # tmp124,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L45	 #
-.L52:
-	movq	%rax, %rbx	 #, tmp125
-.L45:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:58:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
-	.loc 4 58 91 discriminator 2
-	leaq	48(%rbp), %rax	 #, tmp127
-	movq	%rax, %rcx	 # tmp127,
+	leaq	256(%rbp), %rax	 #, tmp125
+	movq	%rax, %rcx	 # tmp125,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L46	 #
-.L57:
-	movq	%rax, %rsi	 #, tmp131
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
-	.loc 4 59 85 is_stmt 1
-	movl	$152, %edx	 #,
-	movq	%rbx, %rcx	 # _30,
-	call	_ZdlPvy	 #
-	movq	%rsi, %rbx	 # tmp131, tmp130
-	jmp	.L48	 #
-.L56:
-	movq	%rax, %rbx	 #, tmp130
-.L48:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
-	.loc 4 59 85 is_stmt 0 discriminator 4
-	leaq	192(%rbp), %rax	 #, tmp134
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:64:     wxXmlNode*          path    = T100NEW wxXmlNode(python, wxXML_ELEMENT_NODE, L"Path");
+	.loc 4 64 88 is_stmt 1 discriminator 7
+	leaq	352(%rbp), %rax	 #, tmp126
+	leaq	.LC4(%rip), %rdx	 #,
+	movq	%rax, %rcx	 # tmp126,
+.LEHB24:
+	call	_ZN8wxStringC1EPKw	 #
+.LEHE24:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:64:     wxXmlNode*          path    = T100NEW wxXmlNode(python, wxXML_ELEMENT_NODE, L"Path");
+	.loc 4 64 88 is_stmt 0 discriminator 1
+	leaq	352(%rbp), %rdi	 #, _59
+	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp127
+	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.19_4
+	leaq	400(%rbp), %rax	 #, tmp128
+	movq	%rax, %rcx	 # tmp128,
+.LEHB25:
+	call	_ZN8wxStringC1EPKw	 #
+.LEHE25:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:64:     wxXmlNode*          path    = T100NEW wxXmlNode(python, wxXML_ELEMENT_NODE, L"Path");
+	.loc 4 64 88 discriminator 3
+	leaq	400(%rbp), %rsi	 #, _61
+	movl	$152, %ecx	 #,
+.LEHB26:
+	call	_Znwy	 #
+.LEHE26:
+	movq	%rax, %rbx	 # tmp129, _63
+	movq	552(%rbp), %rax	 # python, tmp130
+	movl	$-1, 56(%rsp)	 #,
+	movq	$0, 48(%rsp)	 #,
+	movq	$0, 40(%rsp)	 #,
+	movq	%rsi, 32(%rsp)	 # _61,
+	movq	%rdi, %r9	 # _59,
+	movl	$1, %r8d	 #,
+	movq	%rax, %rdx	 # tmp130,
+	movq	%rbx, %rcx	 # _63,
+.LEHB27:
+	call	_ZN9wxXmlNodeC1EPS_13wxXmlNodeTypeRK8wxStringS4_P14wxXmlAttributeS0_i	 #
+.LEHE27:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:64:     wxXmlNode*          path    = T100NEW wxXmlNode(python, wxXML_ELEMENT_NODE, L"Path");
+	.loc 4 64 88 discriminator 7
+	movq	%rbx, 544(%rbp)	 # _63, path
+	leaq	400(%rbp), %rax	 #, tmp131
+	movq	%rax, %rcx	 # tmp131,
+	call	_ZN8wxStringD1Ev	 #
+	leaq	352(%rbp), %rax	 #, tmp132
+	movq	%rax, %rcx	 # tmp132,
+	call	_ZN8wxStringD1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:66:     path->SetContent(info->GetPythonFile());
+	.loc 4 66 42 is_stmt 1 discriminator 7
+	movq	632(%rbp), %rax	 # info, tmp133
+	movq	%rax, %rcx	 # tmp133,
+.LEHB28:
+	call	_ZN17T100WorkSpaceInfo13GetPythonFileB5cxx11Ev	 #
+	movq	%rax, %rdx	 #, _5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:66:     path->SetContent(info->GetPythonFile());
+	.loc 4 66 21 discriminator 7
+	leaq	448(%rbp), %rax	 #, tmp134
 	movq	%rax, %rcx	 # tmp134,
-	call	_ZN8wxStringD1Ev	 #
-	jmp	.L49	 #
-.L55:
-	movq	%rax, %rbx	 #, tmp135
-.L49:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
-	.loc 4 59 85 discriminator 2
-	leaq	144(%rbp), %rax	 #, tmp137
+	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+.LEHE28:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:66:     path->SetContent(info->GetPythonFile());
+	.loc 4 66 21 is_stmt 0 discriminator 2
+	leaq	448(%rbp), %rax	 #, tmp135
+	movq	544(%rbp), %rcx	 # path, tmp136
+	movq	%rax, %rdx	 # tmp135,
+.LEHB29:
+	call	_ZN9wxXmlNode10SetContentERK8wxString	 #
+.LEHE29:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:66:     path->SetContent(info->GetPythonFile());
+	.loc 4 66 21 discriminator 4
+	leaq	448(%rbp), %rax	 #, tmp137
 	movq	%rax, %rcx	 # tmp137,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L46	 #
-.L58:
-	movq	%rax, %rbx	 #, tmp139
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     document.Save(m_filename);
-	.loc 4 63 18 is_stmt 1
-	leaq	240(%rbp), %rax	 #, tmp138
-	movq	%rax, %rcx	 # tmp138,
-	call	_ZN8wxStringD1Ev	 #
-	jmp	.L46	 #
-.L51:
-	movq	%rax, %rbx	 #, tmp128
-.L46:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:57:     wxXmlDocument       document;
-	.loc 4 57 25
-	leaq	-80(%rbp), %rax	 #, tmp141
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:68:     document.SetDocumentNode(type);
+	.loc 4 68 29 is_stmt 1 discriminator 4
+	movq	568(%rbp), %rdx	 # type, tmp138
+	leaq	-64(%rbp), %rax	 #, tmp139
+	movq	%rax, %rcx	 # tmp139,
+	call	_ZN13wxXmlDocument15SetDocumentNodeEP9wxXmlNode	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:69:     document.SetRoot(root);
+	.loc 4 69 21 discriminator 4
+	movq	560(%rbp), %rdx	 # root, tmp140
+	leaq	-64(%rbp), %rax	 #, tmp141
 	movq	%rax, %rcx	 # tmp141,
+.LEHB30:
+	call	_ZN13wxXmlDocument7SetRootEP9wxXmlNode	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:70:     document.Save(m_filename);
+	.loc 4 70 19
+	movq	624(%rbp), %rax	 # this, tmp142
+	leaq	40(%rax), %rdx	 #, _6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:70:     document.Save(m_filename);
+	.loc 4 70 18
+	leaq	496(%rbp), %rax	 #, tmp143
+	movq	%rax, %rcx	 # tmp143,
+	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+.LEHE30:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:70:     document.Save(m_filename);
+	.loc 4 70 18 is_stmt 0 discriminator 1
+	leaq	496(%rbp), %rdx	 #, tmp144
+	leaq	-64(%rbp), %rax	 #, tmp145
+	movl	$2, %r8d	 #,
+	movq	%rax, %rcx	 # tmp145,
+.LEHB31:
+	call	_ZNK13wxXmlDocument4SaveERK8wxStringi	 #
+.LEHE31:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:70:     document.Save(m_filename);
+	.loc 4 70 18 discriminator 3
+	leaq	496(%rbp), %rax	 #, tmp146
+	movq	%rax, %rcx	 # tmp146,
+	call	_ZN8wxStringD1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:58:     wxXmlDocument       document;
+	.loc 4 58 25 is_stmt 1 discriminator 3
+	leaq	-64(%rbp), %rax	 #, tmp147
+	movq	%rax, %rcx	 # tmp147,
 	call	_ZN13wxXmlDocumentD1Ev	 #
-	movq	%rbx, %rax	 # tmp128, D.81175
-	movq	%rax, %rcx	 # D.81175,
-.LEHB22:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:71: }
+	.loc 4 71 1 discriminator 3
+	jmp	.L77	 #
+.L65:
+	movq	%rax, %rsi	 #, tmp149
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
+	.loc 4 59 91
+	movl	$152, %edx	 #,
+	movq	%rbx, %rcx	 # _24,
+	call	_ZdlPvy	 #
+	movq	%rsi, %rbx	 # tmp149, tmp148
+	jmp	.L48	 #
+.L64:
+	movq	%rax, %rbx	 #, tmp148
+.L48:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
+	.loc 4 59 91 is_stmt 0 discriminator 4
+	leaq	112(%rbp), %rax	 #, tmp152
+	movq	%rax, %rcx	 # tmp152,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L49	 #
+.L63:
+	movq	%rax, %rbx	 #, tmp153
+.L49:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:59:     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
+	.loc 4 59 91 discriminator 2
+	leaq	64(%rbp), %rax	 #, tmp155
+	movq	%rax, %rcx	 # tmp155,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L50	 #
+.L68:
+	movq	%rax, %rsi	 #, tmp159
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:60:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
+	.loc 4 60 85 is_stmt 1
+	movl	$152, %edx	 #,
+	movq	%rbx, %rcx	 # _37,
+	call	_ZdlPvy	 #
+	movq	%rsi, %rbx	 # tmp159, tmp158
+	jmp	.L52	 #
+.L67:
+	movq	%rax, %rbx	 #, tmp158
+.L52:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:60:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
+	.loc 4 60 85 is_stmt 0 discriminator 4
+	leaq	208(%rbp), %rax	 #, tmp162
+	movq	%rax, %rcx	 # tmp162,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L53	 #
+.L66:
+	movq	%rax, %rbx	 #, tmp163
+.L53:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:60:     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
+	.loc 4 60 85 discriminator 2
+	leaq	160(%rbp), %rax	 #, tmp165
+	movq	%rax, %rcx	 # tmp165,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L50	 #
+.L71:
+	movq	%rax, %rsi	 #, tmp167
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     wxXmlNode*          python  = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Python");
+	.loc 4 63 88 is_stmt 1
+	movl	$152, %edx	 #,
+	movq	%rbx, %rcx	 # _50,
+	call	_ZdlPvy	 #
+	movq	%rsi, %rbx	 # tmp167, tmp166
+	jmp	.L55	 #
+.L70:
+	movq	%rax, %rbx	 #, tmp166
+.L55:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     wxXmlNode*          python  = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Python");
+	.loc 4 63 88 is_stmt 0 discriminator 4
+	leaq	304(%rbp), %rax	 #, tmp170
+	movq	%rax, %rcx	 # tmp170,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L56	 #
+.L69:
+	movq	%rax, %rbx	 #, tmp171
+.L56:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:63:     wxXmlNode*          python  = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Python");
+	.loc 4 63 88 discriminator 2
+	leaq	256(%rbp), %rax	 #, tmp173
+	movq	%rax, %rcx	 # tmp173,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L50	 #
+.L74:
+	movq	%rax, %rsi	 #, tmp175
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:64:     wxXmlNode*          path    = T100NEW wxXmlNode(python, wxXML_ELEMENT_NODE, L"Path");
+	.loc 4 64 88 is_stmt 1
+	movl	$152, %edx	 #,
+	movq	%rbx, %rcx	 # _63,
+	call	_ZdlPvy	 #
+	movq	%rsi, %rbx	 # tmp175, tmp174
+	jmp	.L58	 #
+.L73:
+	movq	%rax, %rbx	 #, tmp174
+.L58:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:64:     wxXmlNode*          path    = T100NEW wxXmlNode(python, wxXML_ELEMENT_NODE, L"Path");
+	.loc 4 64 88 is_stmt 0 discriminator 4
+	leaq	400(%rbp), %rax	 #, tmp178
+	movq	%rax, %rcx	 # tmp178,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L59	 #
+.L72:
+	movq	%rax, %rbx	 #, tmp179
+.L59:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:64:     wxXmlNode*          path    = T100NEW wxXmlNode(python, wxXML_ELEMENT_NODE, L"Path");
+	.loc 4 64 88 discriminator 2
+	leaq	352(%rbp), %rax	 #, tmp181
+	movq	%rax, %rcx	 # tmp181,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L50	 #
+.L75:
+	movq	%rax, %rbx	 #, tmp183
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:66:     path->SetContent(info->GetPythonFile());
+	.loc 4 66 21 is_stmt 1
+	leaq	448(%rbp), %rax	 #, tmp182
+	movq	%rax, %rcx	 # tmp182,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L50	 #
+.L76:
+	movq	%rax, %rbx	 #, tmp186
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:70:     document.Save(m_filename);
+	.loc 4 70 18
+	leaq	496(%rbp), %rax	 #, tmp185
+	movq	%rax, %rcx	 # tmp185,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L50	 #
+.L62:
+	movq	%rax, %rbx	 #, tmp156
+.L50:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:58:     wxXmlDocument       document;
+	.loc 4 58 25
+	leaq	-64(%rbp), %rax	 #, tmp188
+	movq	%rax, %rcx	 # tmp188,
+	call	_ZN13wxXmlDocumentD1Ev	 #
+	movq	%rbx, %rax	 # tmp156, D.84734
+	movq	%rax, %rcx	 # D.84734,
+.LEHB32:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE22:
-.L59:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:64: }
-	.loc 4 64 1
-	addq	$440, %rsp	 #,
+.LEHE32:
+.L77:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:71: }
+	.loc 4 71 1
+	addq	$712, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
 	popq	%rsi	 #
@@ -1279,7 +1556,7 @@ _ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo:
 	.cfi_restore 5
 	popq	%rbp	 #
 	.cfi_restore 6
-	.cfi_def_cfa 7, -408
+	.cfi_def_cfa 7, -680
 	ret	
 	.cfi_endproc
 .LFE4740:
@@ -1297,46 +1574,86 @@ _ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo:
 	.uleb128 0
 	.uleb128 .LEHB12-.LFB4740
 	.uleb128 .LEHE12-.LEHB12
-	.uleb128 .L51-.LFB4740
+	.uleb128 .L62-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB13-.LFB4740
 	.uleb128 .LEHE13-.LEHB13
-	.uleb128 .L52-.LFB4740
+	.uleb128 .L63-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB14-.LFB4740
 	.uleb128 .LEHE14-.LEHB14
-	.uleb128 .L53-.LFB4740
+	.uleb128 .L64-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB15-.LFB4740
 	.uleb128 .LEHE15-.LEHB15
-	.uleb128 .L54-.LFB4740
+	.uleb128 .L65-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB16-.LFB4740
 	.uleb128 .LEHE16-.LEHB16
-	.uleb128 .L51-.LFB4740
+	.uleb128 .L62-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB17-.LFB4740
 	.uleb128 .LEHE17-.LEHB17
-	.uleb128 .L55-.LFB4740
+	.uleb128 .L66-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB18-.LFB4740
 	.uleb128 .LEHE18-.LEHB18
-	.uleb128 .L56-.LFB4740
+	.uleb128 .L67-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB19-.LFB4740
 	.uleb128 .LEHE19-.LEHB19
-	.uleb128 .L57-.LFB4740
+	.uleb128 .L68-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB20-.LFB4740
 	.uleb128 .LEHE20-.LEHB20
-	.uleb128 .L51-.LFB4740
+	.uleb128 .L62-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB21-.LFB4740
 	.uleb128 .LEHE21-.LEHB21
-	.uleb128 .L58-.LFB4740
+	.uleb128 .L69-.LFB4740
 	.uleb128 0
 	.uleb128 .LEHB22-.LFB4740
 	.uleb128 .LEHE22-.LEHB22
+	.uleb128 .L70-.LFB4740
+	.uleb128 0
+	.uleb128 .LEHB23-.LFB4740
+	.uleb128 .LEHE23-.LEHB23
+	.uleb128 .L71-.LFB4740
+	.uleb128 0
+	.uleb128 .LEHB24-.LFB4740
+	.uleb128 .LEHE24-.LEHB24
+	.uleb128 .L62-.LFB4740
+	.uleb128 0
+	.uleb128 .LEHB25-.LFB4740
+	.uleb128 .LEHE25-.LEHB25
+	.uleb128 .L72-.LFB4740
+	.uleb128 0
+	.uleb128 .LEHB26-.LFB4740
+	.uleb128 .LEHE26-.LEHB26
+	.uleb128 .L73-.LFB4740
+	.uleb128 0
+	.uleb128 .LEHB27-.LFB4740
+	.uleb128 .LEHE27-.LEHB27
+	.uleb128 .L74-.LFB4740
+	.uleb128 0
+	.uleb128 .LEHB28-.LFB4740
+	.uleb128 .LEHE28-.LEHB28
+	.uleb128 .L62-.LFB4740
+	.uleb128 0
+	.uleb128 .LEHB29-.LFB4740
+	.uleb128 .LEHE29-.LEHB29
+	.uleb128 .L75-.LFB4740
+	.uleb128 0
+	.uleb128 .LEHB30-.LFB4740
+	.uleb128 .LEHE30-.LEHB30
+	.uleb128 .L62-.LFB4740
+	.uleb128 0
+	.uleb128 .LEHB31-.LFB4740
+	.uleb128 .LEHE31-.LEHB31
+	.uleb128 .L76-.LFB4740
+	.uleb128 0
+	.uleb128 .LEHB32-.LFB4740
+	.uleb128 .LEHE32-.LEHB32
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE4740:
@@ -1447,13 +1764,13 @@ _Z8wxDELETEI9wxXmlNodeEvRPT_:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/defs.h:753:         if ( ptr != NULL )
 	.loc 5 753 9
 	testq	%rax, %rax	 # _1
-	je	.L65	 #,
+	je	.L83	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/defs.h:755:             delete ptr;
 	.loc 5 755 13
 	movq	16(%rbp), %rax	 # ptr, tmp96
 	movq	(%rax), %rax	 # *ptr_12(D), _2
 	testq	%rax, %rax	 # _2
-	je	.L64	 #,
+	je	.L82	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/defs.h:755:             delete ptr;
 	.loc 5 755 13 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # ptr, tmp97
@@ -1466,12 +1783,12 @@ _Z8wxDELETEI9wxXmlNodeEvRPT_:
 	movq	%rdx, %rcx	 # _3,
 	call	*%rax	 # _8
 .LVL1:
-.L64:
+.L82:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/defs.h:756:             ptr = NULL;
 	.loc 5 756 13 is_stmt 1
 	movq	16(%rbp), %rax	 # ptr, tmp100
 	movq	$0, (%rax)	 #, *ptr_12(D)
-.L65:
+.L83:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/defs.h:758:     }
 	.loc 5 758 5
 	nop	
@@ -1581,7 +1898,7 @@ _ZTS7T100XML:
 	.file 56 "<built-in>"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x2174a
+	.long	0x21839
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -1864,7 +2181,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x479
-	.uleb128 0x5f
+	.uleb128 0x60
 	.ascii "threadmbcinfostruct\0"
 	.uleb128 0x33
 	.ascii "localeinfo_struct\0"
@@ -1955,7 +2272,7 @@ _ZTS7T100XML:
 	.uleb128 0x3b
 	.long	0x592
 	.long	0x592
-	.uleb128 0x3d
+	.uleb128 0x3e
 	.long	0x1a0
 	.byte	0x5
 	.byte	0
@@ -1966,14 +2283,14 @@ _ZTS7T100XML:
 	.uleb128 0x3b
 	.long	0x537
 	.long	0x5b7
-	.uleb128 0x3d
+	.uleb128 0x3e
 	.long	0x1a0
 	.byte	0x5
 	.byte	0
 	.uleb128 0x3b
 	.long	0x282
 	.long	0x5c7
-	.uleb128 0x3d
+	.uleb128 0x3e
 	.long	0x1a0
 	.byte	0x5
 	.byte	0
@@ -2185,7 +2502,7 @@ _ZTS7T100XML:
 	.ascii "unsigned char\0"
 	.uleb128 0xa
 	.long	0x86d
-	.uleb128 0x5f
+	.uleb128 0x60
 	.ascii "__lc_time_data\0"
 	.uleb128 0x6
 	.byte	0x8
@@ -2276,7 +2593,7 @@ _ZTS7T100XML:
 	.uleb128 0x3b
 	.long	0x546
 	.long	0x96f
-	.uleb128 0x3d
+	.uleb128 0x3e
 	.long	0x1a0
 	.byte	0
 	.byte	0
@@ -2663,7 +2980,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xdf4
-	.uleb128 0x60
+	.uleb128 0x61
 	.long	0xe13
 	.uleb128 0x1
 	.long	0xe13
@@ -2686,7 +3003,7 @@ _ZTS7T100XML:
 	.word	0x189
 	.byte	0x18
 	.long	0xa834
-	.uleb128 0x61
+	.uleb128 0x62
 	.secrel32	.LASF18
 	.byte	0x8
 	.byte	0x1
@@ -2920,7 +3237,7 @@ _ZTS7T100XML:
 	.word	0x404
 	.byte	0x7
 	.long	0x11b73
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.ascii "impl\0"
 	.byte	0x1
 	.word	0x404
@@ -3111,7 +3428,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x11a6
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x63
 	.secrel32	.LASF18
 	.byte	0x1
 	.word	0x41e
@@ -3128,7 +3445,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0xe27
-	.uleb128 0x61
+	.uleb128 0x62
 	.secrel32	.LASF21
 	.byte	0x8
 	.byte	0x1
@@ -3362,7 +3679,7 @@ _ZTS7T100XML:
 	.word	0x427
 	.byte	0x7
 	.long	0x11c0f
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.ascii "impl\0"
 	.byte	0x1
 	.word	0x427
@@ -3477,7 +3794,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1a06
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x63
 	.secrel32	.LASF21
 	.byte	0x1
 	.word	0x43e
@@ -3494,7 +3811,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x1625
-	.uleb128 0x63
+	.uleb128 0x64
 	.ascii "caseCompare\0"
 	.byte	0x7
 	.byte	0x4
@@ -3511,7 +3828,7 @@ _ZTS7T100XML:
 	.ascii "ignoreCase\0"
 	.byte	0x1
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x64
 	.ascii "stripType\0"
 	.byte	0x7
 	.byte	0x4
@@ -3538,7 +3855,7 @@ _ZTS7T100XML:
 	.word	0xd9c
 	.byte	0xa
 	.long	0x1f13
-	.uleb128 0x64
+	.uleb128 0x65
 	.ascii "ConvertedBuffer\0"
 	.byte	0x1
 	.word	0xda0
@@ -3549,7 +3866,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1fccf
 	.byte	0
-	.uleb128 0x64
+	.uleb128 0x65
 	.ascii "~ConvertedBuffer\0"
 	.byte	0x1
 	.word	0xda1
@@ -3562,7 +3879,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x229
 	.byte	0
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.ascii "Extend\0"
 	.byte	0x1
 	.word	0xda4
@@ -3576,7 +3893,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x18c
 	.byte	0
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.ascii "AsScopedBuffer\0"
 	.byte	0x1
 	.word	0xdb1
@@ -3814,7 +4131,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x18c
 	.byte	0
-	.uleb128 0x4b
+	.uleb128 0x4d
 	.ascii "PosLenToImpl\0"
 	.byte	0x1
 	.word	0x1f1
@@ -4465,7 +4782,7 @@ _ZTS7T100XML:
 	.byte	0x31
 	.long	0x2d93
 	.byte	0x1
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "reverse_iterator_impl<wxString::const_iterator>\0"
 	.byte	0x8
 	.byte	0x1
@@ -4822,7 +5139,7 @@ _ZTS7T100XML:
 	.byte	0x2b
 	.long	0x361d
 	.byte	0x1
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "reverse_iterator_impl<wxString::iterator>\0"
 	.byte	0x8
 	.byte	0x1
@@ -5788,7 +6105,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1fc48
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x40
 	.secrel32	.LASF49
 	.byte	0x1
 	.word	0x68d
@@ -5802,7 +6119,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x18c
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x40
 	.secrel32	.LASF49
 	.byte	0x1
 	.word	0x68e
@@ -5814,7 +6131,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xc84b
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x40
 	.secrel32	.LASF49
 	.byte	0x1
 	.word	0x68f
@@ -5839,7 +6156,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1fc48
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x40
 	.secrel32	.LASF49
 	.byte	0x1
 	.word	0x69b
@@ -5851,7 +6168,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x867
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x40
 	.secrel32	.LASF49
 	.byte	0x1
 	.word	0x69d
@@ -5865,7 +6182,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x18c
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x46
 	.ascii "FromUTF8\0"
 	.byte	0x1
 	.word	0x6ce
@@ -5879,7 +6196,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x18c
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x46
 	.ascii "FromUTF8Unchecked\0"
 	.byte	0x1
 	.word	0x6d0
@@ -5919,7 +6236,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1fc48
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x40
 	.secrel32	.LASF50
 	.byte	0x1
 	.word	0x6fa
@@ -5933,7 +6250,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x18c
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x40
 	.secrel32	.LASF50
 	.byte	0x1
 	.word	0x6fd
@@ -7734,7 +8051,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1fd10
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x46
 	.ascii "FromDouble\0"
 	.byte	0x1
 	.word	0x8f5
@@ -7748,7 +8065,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x229
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x46
 	.ascii "FromCDouble\0"
 	.byte	0x1
 	.word	0x8f7
@@ -7794,7 +8111,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x16f
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x46
 	.ascii "Format\0"
 	.byte	0x1
 	.word	0x912
@@ -7806,7 +8123,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1fc64
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x46
 	.ascii "FormatV\0"
 	.byte	0x1
 	.word	0x921
@@ -11501,7 +11818,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x55c
 	.byte	0
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.ascii "DoPrintfWchar\0"
 	.byte	0x1
 	.word	0xd83
@@ -11535,7 +11852,7 @@ _ZTS7T100XML:
 	.byte	0x10
 	.long	0x1c497
 	.byte	0
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.ascii "AsChar\0"
 	.byte	0x1
 	.word	0xdc6
@@ -11688,7 +12005,7 @@ _ZTS7T100XML:
 	.uleb128 0x3b
 	.long	0x546
 	.long	0xa990
-	.uleb128 0x3d
+	.uleb128 0x3e
 	.long	0x1a0
 	.byte	0x1
 	.byte	0
@@ -11761,7 +12078,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xa9f0
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x41
 	.ascii "~UntypedBufferData\0"
 	.byte	0x11
 	.byte	0x29
@@ -11834,7 +12151,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0xb7cf
 	.byte	0
-	.uleb128 0x4e
+	.uleb128 0x4f
 	.secrel32	.LASF72
 	.byte	0x11
 	.byte	0x50
@@ -11857,7 +12174,7 @@ _ZTS7T100XML:
 	.byte	0x1
 	.uleb128 0xa
 	.long	0xabd3
-	.uleb128 0x4e
+	.uleb128 0x4f
 	.secrel32	.LASF74
 	.byte	0x11
 	.byte	0x5f
@@ -12006,7 +12323,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0xb7ed
 	.byte	0
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "Data\0"
 	.byte	0x18
 	.byte	0x11
@@ -12017,7 +12334,7 @@ _ZTS7T100XML:
 	.uleb128 0x39
 	.long	0xa9e6
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x41
 	.ascii "Data\0"
 	.byte	0x11
 	.byte	0xa6
@@ -12034,7 +12351,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xa9f0
 	.byte	0
-	.uleb128 0x41
+	.uleb128 0x42
 	.ascii "Get\0"
 	.byte	0x11
 	.byte	0xab
@@ -12046,7 +12363,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x20266
 	.byte	0
-	.uleb128 0x67
+	.uleb128 0x68
 	.ascii "Set\0"
 	.byte	0x11
 	.byte	0xac
@@ -12063,7 +12380,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0xaed0
-	.uleb128 0x68
+	.uleb128 0x69
 	.secrel32	.LASF78
 	.byte	0x11
 	.byte	0xb4
@@ -12164,7 +12481,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0xc24c
 	.byte	0
-	.uleb128 0x4e
+	.uleb128 0x4f
 	.secrel32	.LASF72
 	.byte	0x11
 	.byte	0x50
@@ -12187,7 +12504,7 @@ _ZTS7T100XML:
 	.byte	0x1
 	.uleb128 0xa
 	.long	0xb23b
-	.uleb128 0x4e
+	.uleb128 0x4f
 	.secrel32	.LASF74
 	.byte	0x11
 	.byte	0x5f
@@ -12336,7 +12653,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0xc26a
 	.byte	0
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "Data\0"
 	.byte	0x18
 	.byte	0x11
@@ -12347,7 +12664,7 @@ _ZTS7T100XML:
 	.uleb128 0x39
 	.long	0xa9e6
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x41
 	.ascii "Data\0"
 	.byte	0x11
 	.byte	0xa6
@@ -12364,7 +12681,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xa9f0
 	.byte	0
-	.uleb128 0x41
+	.uleb128 0x42
 	.ascii "Get\0"
 	.byte	0x11
 	.byte	0xab
@@ -12376,7 +12693,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x2026c
 	.byte	0
-	.uleb128 0x67
+	.uleb128 0x68
 	.ascii "Set\0"
 	.byte	0x11
 	.byte	0xac
@@ -12393,7 +12710,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0xb538
-	.uleb128 0x68
+	.uleb128 0x69
 	.secrel32	.LASF78
 	.byte	0x11
 	.byte	0xb4
@@ -12683,7 +13000,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xbc76
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.ascii "wxCharTypeBufferBase\0"
 	.byte	0x11
 	.word	0x16b
@@ -12706,7 +13023,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xbc7c
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.ascii "wxScopedCharTypeBufferBase\0"
 	.byte	0x11
 	.word	0x16c
@@ -12771,7 +13088,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0xc247
-	.uleb128 0x4c
+	.uleb128 0x4e
 	.secrel32	.LASF81
 	.byte	0x18
 	.byte	0x1
@@ -13348,7 +13665,7 @@ _ZTS7T100XML:
 	.word	0x1a0
 	.byte	0x28
 	.long	0xc568
-	.uleb128 0x44
+	.uleb128 0x47
 	.ascii "wxWritableCharTypeBuffer<char>\0"
 	.byte	0x8
 	.byte	0x11
@@ -13419,7 +13736,7 @@ _ZTS7T100XML:
 	.word	0x1a1
 	.byte	0x2b
 	.long	0xc6e6
-	.uleb128 0x44
+	.uleb128 0x47
 	.ascii "wxWritableCharTypeBuffer<wchar_t>\0"
 	.byte	0x8
 	.byte	0x11
@@ -13573,7 +13890,7 @@ _ZTS7T100XML:
 	.byte	0x38
 	.byte	0
 	.long	0x1811b
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "__cxx11\0"
 	.byte	0x1e
 	.word	0x104
@@ -13586,7 +13903,7 @@ _ZTS7T100XML:
 	.byte	0x4d
 	.byte	0xb
 	.long	0x10fca
-	.uleb128 0x4f
+	.uleb128 0x50
 	.secrel32	.LASF83
 	.byte	0x8
 	.byte	0x14
@@ -13641,19 +13958,19 @@ _ZTS7T100XML:
 	.byte	0x30
 	.long	0x18a58
 	.byte	0x1
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.byte	0x10
 	.byte	0x14
 	.byte	0xa1
 	.byte	0x7
 	.long	0xcb13
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF85
 	.byte	0x14
 	.byte	0xa2
 	.byte	0x35
 	.long	0x1c38e
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF86
 	.byte	0x14
 	.byte	0xa3
@@ -13690,7 +14007,7 @@ _ZTS7T100XML:
 	.byte	0x12
 	.long	0xcb13
 	.byte	0x8
-	.uleb128 0x6c
+	.uleb128 0x6d
 	.long	0xcaf1
 	.byte	0x10
 	.uleb128 0x18
@@ -13972,7 +14289,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xc84b
 	.byte	0
-	.uleb128 0x4b
+	.uleb128 0x4d
 	.ascii "_S_copy\0"
 	.byte	0x14
 	.word	0x14f
@@ -13986,7 +14303,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xcb13
 	.byte	0
-	.uleb128 0x4b
+	.uleb128 0x4d
 	.ascii "_S_move\0"
 	.byte	0x14
 	.word	0x158
@@ -14156,7 +14473,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1c39e
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x48
 	.secrel32	.LASF114
 	.byte	0x14
 	.word	0x1ad
@@ -16335,10 +16652,10 @@ _ZTS7T100XML:
 	.uleb128 0xd
 	.secrel32	.LASF126
 	.long	0x162
-	.uleb128 0x6d
+	.uleb128 0x6e
 	.ascii "_Traits\0"
 	.long	0x15fe8
-	.uleb128 0x6e
+	.uleb128 0x6f
 	.secrel32	.LASF127
 	.long	0x16db2
 	.byte	0
@@ -16351,7 +16668,7 @@ _ZTS7T100XML:
 	.byte	0x4d
 	.byte	0xb
 	.long	0x15a0c
-	.uleb128 0x4f
+	.uleb128 0x50
 	.secrel32	.LASF83
 	.byte	0x8
 	.byte	0x14
@@ -16427,19 +16744,19 @@ _ZTS7T100XML:
 	.ascii "_S_local_capacity\0"
 	.byte	0x7
 	.byte	0
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.byte	0x10
 	.byte	0x14
 	.byte	0xa1
 	.byte	0x7
 	.long	0x111da
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF85
 	.byte	0x14
 	.byte	0xa2
 	.byte	0x35
 	.long	0x1c409
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF86
 	.byte	0x14
 	.byte	0xa3
@@ -16477,7 +16794,7 @@ _ZTS7T100XML:
 	.byte	0x12
 	.long	0x111da
 	.byte	0x8
-	.uleb128 0x6c
+	.uleb128 0x6d
 	.long	0x111b8
 	.byte	0x10
 	.uleb128 0x18
@@ -16759,7 +17076,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x954
 	.byte	0
-	.uleb128 0x4b
+	.uleb128 0x4d
 	.ascii "_S_copy\0"
 	.byte	0x14
 	.word	0x14f
@@ -16773,7 +17090,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x111da
 	.byte	0
-	.uleb128 0x4b
+	.uleb128 0x4d
 	.ascii "_S_move\0"
 	.byte	0x14
 	.word	0x158
@@ -16943,7 +17260,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1c419
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x48
 	.secrel32	.LASF114
 	.byte	0x14
 	.word	0x1ad
@@ -19159,7 +19476,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x15d27
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x41
 	.ascii "_M_construct_aux<wchar_t*>\0"
 	.byte	0x14
 	.byte	0xe8
@@ -19179,7 +19496,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x15a44
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x41
 	.ascii "_M_construct_aux<wchar_t const*>\0"
 	.byte	0x14
 	.byte	0xe8
@@ -19238,10 +19555,10 @@ _ZTS7T100XML:
 	.uleb128 0xd
 	.secrel32	.LASF126
 	.long	0x55c
-	.uleb128 0x6d
+	.uleb128 0x6e
 	.ascii "_Traits\0"
 	.long	0x163aa
-	.uleb128 0x6e
+	.uleb128 0x6f
 	.secrel32	.LASF127
 	.long	0x16e4d
 	.byte	0
@@ -19264,12 +19581,12 @@ _ZTS7T100XML:
 	.uleb128 0xa
 	.long	0x15a25
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.byte	0x1e
 	.word	0x104
 	.byte	0x41
 	.long	0xc98b
-	.uleb128 0x6f
+	.uleb128 0x70
 	.ascii "__false_type\0"
 	.byte	0x1
 	.byte	0x19
@@ -19282,7 +19599,7 @@ _ZTS7T100XML:
 	.byte	0x45
 	.byte	0xc
 	.long	0x15b60
-	.uleb128 0x70
+	.uleb128 0x71
 	.ascii "value\0"
 	.byte	0x17
 	.byte	0x47
@@ -19294,7 +19611,7 @@ _ZTS7T100XML:
 	.byte	0x48
 	.byte	0x2d
 	.long	0xa86c
-	.uleb128 0x41
+	.uleb128 0x42
 	.ascii "operator std::integral_constant<bool, false>::value_type\0"
 	.byte	0x17
 	.byte	0x4a
@@ -19321,7 +19638,7 @@ _ZTS7T100XML:
 	.uleb128 0x1c
 	.ascii "_Tp\0"
 	.long	0xa86c
-	.uleb128 0x71
+	.uleb128 0x72
 	.ascii "__v\0"
 	.long	0xa86c
 	.byte	0
@@ -19335,7 +19652,7 @@ _ZTS7T100XML:
 	.byte	0x45
 	.byte	0xc
 	.long	0x15c6d
-	.uleb128 0x70
+	.uleb128 0x71
 	.ascii "value\0"
 	.byte	0x17
 	.byte	0x47
@@ -19347,7 +19664,7 @@ _ZTS7T100XML:
 	.byte	0x48
 	.byte	0x2d
 	.long	0xa86c
-	.uleb128 0x41
+	.uleb128 0x42
 	.ascii "operator std::integral_constant<bool, true>::value_type\0"
 	.byte	0x17
 	.byte	0x4a
@@ -19374,31 +19691,31 @@ _ZTS7T100XML:
 	.uleb128 0x1c
 	.ascii "_Tp\0"
 	.long	0xa86c
-	.uleb128 0x71
+	.uleb128 0x72
 	.ascii "__v\0"
 	.long	0xa86c
 	.byte	0x1
 	.byte	0
 	.uleb128 0xa
 	.long	0x15b65
-	.uleb128 0x72
+	.uleb128 0x73
 	.ascii "__swappable_details\0"
 	.byte	0x17
 	.word	0x975
 	.byte	0xd
-	.uleb128 0x72
+	.uleb128 0x73
 	.ascii "__swappable_with_details\0"
 	.byte	0x17
 	.word	0x9c3
 	.byte	0xd
-	.uleb128 0x4f
+	.uleb128 0x50
 	.secrel32	.LASF133
 	.byte	0x1
 	.byte	0x18
 	.byte	0x4c
 	.byte	0xa
 	.long	0x15ceb
-	.uleb128 0x73
+	.uleb128 0x74
 	.secrel32	.LASF133
 	.byte	0x18
 	.byte	0x4c
@@ -19420,7 +19737,7 @@ _ZTS7T100XML:
 	.long	0x15ceb
 	.byte	0x1
 	.byte	0
-	.uleb128 0x6f
+	.uleb128 0x70
 	.ascii "input_iterator_tag\0"
 	.byte	0x1
 	.byte	0x1a
@@ -19459,7 +19776,7 @@ _ZTS7T100XML:
 	.long	0x15d4c
 	.byte	0
 	.byte	0
-	.uleb128 0x74
+	.uleb128 0x75
 	.ascii "__debug\0"
 	.byte	0x1b
 	.byte	0x32
@@ -19996,7 +20313,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1b757
 	.byte	0
-	.uleb128 0x75
+	.uleb128 0x76
 	.ascii "eof\0"
 	.byte	0x1d
 	.word	0x178
@@ -20206,7 +20523,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1b775
 	.byte	0
-	.uleb128 0x75
+	.uleb128 0x76
 	.ascii "eof\0"
 	.byte	0x1d
 	.word	0x1e6
@@ -20374,7 +20691,7 @@ _ZTS7T100XML:
 	.byte	0x34
 	.byte	0xd
 	.long	0x16cc7
-	.uleb128 0x4c
+	.uleb128 0x4e
 	.secrel32	.LASF139
 	.byte	0x8
 	.byte	0x20
@@ -20401,7 +20718,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xa934
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x41
 	.ascii "_M_addref\0"
 	.byte	0x20
 	.byte	0x55
@@ -20412,7 +20729,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1b994
 	.byte	0
-	.uleb128 0x40
+	.uleb128 0x41
 	.ascii "_M_release\0"
 	.byte	0x20
 	.byte	0x56
@@ -20423,7 +20740,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1b994
 	.byte	0
-	.uleb128 0x41
+	.uleb128 0x42
 	.ascii "_M_get\0"
 	.byte	0x20
 	.byte	0x58
@@ -20560,7 +20877,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1b99a
 	.byte	0
-	.uleb128 0x76
+	.uleb128 0x77
 	.ascii "__cxa_exception_type\0"
 	.byte	0x20
 	.byte	0x99
@@ -20606,14 +20923,14 @@ _ZTS7T100XML:
 	.ascii "type_info\0"
 	.uleb128 0xa
 	.long	0x16d3e
-	.uleb128 0x4f
+	.uleb128 0x50
 	.secrel32	.LASF140
 	.byte	0x1
 	.byte	0x21
 	.byte	0x56
 	.byte	0xa
 	.long	0x16d83
-	.uleb128 0x73
+	.uleb128 0x74
 	.secrel32	.LASF140
 	.byte	0x21
 	.byte	0x59
@@ -20677,7 +20994,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1b9f6
 	.byte	0
-	.uleb128 0x77
+	.uleb128 0x78
 	.secrel32	.LASF142
 	.byte	0x22
 	.byte	0x8b
@@ -20730,7 +21047,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1ba2a
 	.byte	0
-	.uleb128 0x77
+	.uleb128 0x78
 	.secrel32	.LASF142
 	.byte	0x22
 	.byte	0x8b
@@ -21590,24 +21907,24 @@ _ZTS7T100XML:
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
 	.uleb128 0x2b
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<wchar_t const*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "literals\0"
 	.byte	0x14
 	.word	0x1a08
 	.byte	0x14
 	.long	0x17b68
-	.uleb128 0x78
+	.uleb128 0x79
 	.ascii "string_literals\0"
 	.byte	0x14
 	.word	0x1a0a
 	.byte	0x14
-	.uleb128 0x51
+	.uleb128 0x52
 	.byte	0x14
 	.word	0x1a0a
 	.byte	0x14
 	.long	0x17b49
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.byte	0x14
 	.word	0x1a08
 	.byte	0x14
@@ -21872,13 +22189,13 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1fc7c
 	.byte	0
-	.uleb128 0x79
+	.uleb128 0x7a
 	.ascii "move<std::allocator<wchar_t>&>\0"
 	.byte	0x29
 	.byte	0x63
 	.byte	0x5
 	.ascii "_ZSt4moveIRSaIwEEONSt16remove_referenceIT_E4typeEOS3_\0"
-	.long	0x20c21
+	.long	0x20c23
 	.uleb128 0x1c
 	.ascii "_Tp\0"
 	.long	0x1c3e6
@@ -21892,17 +22209,17 @@ _ZTS7T100XML:
 	.word	0x106
 	.byte	0xb
 	.long	0x1aeb8
-	.uleb128 0x78
+	.uleb128 0x79
 	.ascii "__cxx11\0"
 	.byte	0x1e
 	.word	0x108
 	.byte	0x41
-	.uleb128 0x51
+	.uleb128 0x52
 	.byte	0x1e
 	.word	0x108
 	.byte	0x41
 	.long	0x1812f
-	.uleb128 0x74
+	.uleb128 0x75
 	.ascii "__ops\0"
 	.byte	0x2a
 	.byte	0x23
@@ -22267,13 +22584,13 @@ _ZTS7T100XML:
 	.byte	0x37
 	.byte	0xc
 	.long	0x18741
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "__min\0"
 	.byte	0x2c
 	.byte	0x3a
 	.byte	0x1b
 	.long	0x230
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "__max\0"
 	.byte	0x2c
 	.byte	0x3b
@@ -22398,7 +22715,7 @@ _ZTS7T100XML:
 	.uleb128 0x39
 	.long	0x1713b
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.secrel32	.LASF161
 	.byte	0x2d
 	.byte	0x5e
@@ -22409,7 +22726,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1b9f6
 	.byte	0
-	.uleb128 0x7a
+	.uleb128 0x7b
 	.secrel32	.LASF162
 	.byte	0x2d
 	.byte	0x61
@@ -22515,14 +22832,14 @@ _ZTS7T100XML:
 	.secrel32	.LASF127
 	.long	0x16db2
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x47
 	.ascii "__normal_iterator<char*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >\0"
 	.byte	0x8
 	.byte	0x2e
 	.word	0x2f9
 	.byte	0xb
 	.long	0x19258
-	.uleb128 0x54
+	.uleb128 0x55
 	.secrel32	.LASF168
 	.byte	0x2e
 	.word	0x2fc
@@ -22542,7 +22859,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x2028a
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x48
 	.secrel32	.LASF169
 	.byte	0x2e
 	.word	0x30c
@@ -22756,14 +23073,14 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x18acc
-	.uleb128 0x44
+	.uleb128 0x47
 	.ascii "__normal_iterator<char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >\0"
 	.byte	0x8
 	.byte	0x2e
 	.word	0x2f9
 	.byte	0xb
 	.long	0x199fd
-	.uleb128 0x54
+	.uleb128 0x55
 	.secrel32	.LASF168
 	.byte	0x2e
 	.word	0x2fc
@@ -22783,7 +23100,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x20272
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x48
 	.secrel32	.LASF169
 	.byte	0x2e
 	.word	0x30c
@@ -23132,7 +23449,7 @@ _ZTS7T100XML:
 	.uleb128 0x39
 	.long	0x1762a
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.secrel32	.LASF161
 	.byte	0x2d
 	.byte	0x5e
@@ -23143,7 +23460,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1ba2a
 	.byte	0
-	.uleb128 0x7a
+	.uleb128 0x7b
 	.secrel32	.LASF162
 	.byte	0x2d
 	.byte	0x61
@@ -23249,14 +23566,14 @@ _ZTS7T100XML:
 	.secrel32	.LASF127
 	.long	0x16e4d
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x47
 	.ascii "__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
 	.byte	0x8
 	.byte	0x2e
 	.word	0x2f9
 	.byte	0xb
 	.long	0x1a5d1
-	.uleb128 0x54
+	.uleb128 0x55
 	.secrel32	.LASF168
 	.byte	0x2e
 	.word	0x2fc
@@ -23276,7 +23593,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1f798
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x48
 	.secrel32	.LASF169
 	.byte	0x2e
 	.word	0x30c
@@ -23490,14 +23807,14 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0xa
 	.long	0x19e39
-	.uleb128 0x44
+	.uleb128 0x47
 	.ascii "__normal_iterator<wchar_t const*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
 	.byte	0x8
 	.byte	0x2e
 	.word	0x2f9
 	.byte	0xb
 	.long	0x1ad82
-	.uleb128 0x54
+	.uleb128 0x55
 	.secrel32	.LASF168
 	.byte	0x2e
 	.word	0x2fc
@@ -23517,7 +23834,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1fc76
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x48
 	.secrel32	.LASF169
 	.byte	0x2e
 	.word	0x30c
@@ -23738,13 +24055,13 @@ _ZTS7T100XML:
 	.byte	0x37
 	.byte	0xc
 	.long	0x1adf6
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "__min\0"
 	.byte	0x2c
 	.byte	0x3a
 	.byte	0x1b
 	.long	0x1cb
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "__max\0"
 	.byte	0x2c
 	.byte	0x3b
@@ -23780,7 +24097,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x551
 	.byte	0
-	.uleb128 0x79
+	.uleb128 0x7a
 	.ascii "__is_null_pointer<wchar_t const>\0"
 	.byte	0x2f
 	.byte	0x98
@@ -23934,7 +24251,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1af42
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.ascii "getwchar\0"
 	.byte	0xb
 	.word	0x302
@@ -24027,7 +24344,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x55c
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.secrel32	.LASF176
 	.byte	0x30
 	.byte	0x31
@@ -24041,7 +24358,7 @@ _ZTS7T100XML:
 	.long	0x954
 	.uleb128 0x24
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7c
 	.secrel32	.LASF176
 	.byte	0x30
 	.byte	0x15
@@ -24109,7 +24426,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x149
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.secrel32	.LASF177
 	.byte	0x30
 	.byte	0x26
@@ -24124,7 +24441,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x149
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7c
 	.secrel32	.LASF177
 	.byte	0x30
 	.byte	0xe
@@ -24827,7 +25144,7 @@ _ZTS7T100XML:
 	.long	0x16cb9
 	.uleb128 0x9f
 	.ascii "decltype(nullptr)\0"
-	.uleb128 0x46
+	.uleb128 0x49
 	.byte	0x8
 	.long	0x16858
 	.uleb128 0xb
@@ -24906,7 +25223,7 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x1ba6c
-	.uleb128 0x60
+	.uleb128 0x61
 	.long	0x1ba77
 	.uleb128 0x1
 	.long	0xa934
@@ -25052,7 +25369,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x18c
 	.byte	0
-	.uleb128 0x47
+	.uleb128 0x4a
 	.ascii "qsort\0"
 	.byte	0x9
 	.word	0x1b9
@@ -25067,13 +25384,13 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xa911
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.ascii "rand\0"
 	.byte	0x9
 	.word	0x1d6
 	.byte	0xf
 	.long	0x229
-	.uleb128 0x47
+	.uleb128 0x4a
 	.ascii "srand\0"
 	.byte	0x9
 	.word	0x1d8
@@ -25232,7 +25549,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x9c8
 	.byte	0
-	.uleb128 0x47
+	.uleb128 0x4a
 	.ascii "clearerr\0"
 	.byte	0xf
 	.word	0x271
@@ -25439,13 +25756,13 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x1af42
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.ascii "getchar\0"
 	.byte	0xf
 	.word	0x2bc
 	.byte	0xf
 	.long	0x229
-	.uleb128 0x47
+	.uleb128 0x4a
 	.ascii "perror\0"
 	.byte	0x9
 	.word	0x28b
@@ -25488,7 +25805,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0xc84b
 	.byte	0
-	.uleb128 0x47
+	.uleb128 0x4a
 	.ascii "rewind\0"
 	.byte	0xf
 	.word	0x2da
@@ -25509,7 +25826,7 @@ _ZTS7T100XML:
 	.long	0xc84b
 	.uleb128 0x24
 	.byte	0
-	.uleb128 0x47
+	.uleb128 0x4a
 	.ascii "setbuf\0"
 	.byte	0xf
 	.word	0x2dc
@@ -25564,7 +25881,7 @@ _ZTS7T100XML:
 	.long	0xc84b
 	.uleb128 0x24
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.ascii "tmpfile\0"
 	.byte	0xf
 	.word	0x2f1
@@ -25729,13 +26046,13 @@ _ZTS7T100XML:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0xc9e7
-	.uleb128 0x46
+	.uleb128 0x49
 	.byte	0x8
 	.long	0x16db2
 	.uleb128 0x3b
 	.long	0x162
 	.long	0x1c39e
-	.uleb128 0x3d
+	.uleb128 0x3e
 	.long	0x1a0
 	.byte	0xf
 	.byte	0
@@ -25757,7 +26074,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x10fca
-	.uleb128 0x46
+	.uleb128 0x49
 	.byte	0x8
 	.long	0xc99c
 	.uleb128 0xb
@@ -25789,13 +26106,13 @@ _ZTS7T100XML:
 	.long	0x11023
 	.uleb128 0xa
 	.long	0x1c3f8
-	.uleb128 0x46
+	.uleb128 0x49
 	.byte	0x8
 	.long	0x16e4d
 	.uleb128 0x3b
 	.long	0x55c
 	.long	0x1c419
-	.uleb128 0x3d
+	.uleb128 0x3e
 	.long	0x1a0
 	.byte	0x7
 	.byte	0
@@ -25819,7 +26136,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x15a0c
-	.uleb128 0x46
+	.uleb128 0x49
 	.byte	0x8
 	.long	0x10fcf
 	.uleb128 0xb
@@ -25859,7 +26176,7 @@ _ZTS7T100XML:
 	.long	0x1c483
 	.uleb128 0xa
 	.long	0x1c497
-	.uleb128 0x4c
+	.uleb128 0x4e
 	.secrel32	.LASF178
 	.byte	0x4
 	.byte	0x33
@@ -27686,7 +28003,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x1f781
-	.uleb128 0x4c
+	.uleb128 0x4e
 	.secrel32	.LASF194
 	.byte	0x8
 	.byte	0x33
@@ -29389,7 +29706,7 @@ _ZTS7T100XML:
 	.uleb128 0x1
 	.long	0x55c
 	.byte	0
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.ascii "UniChar\0"
 	.byte	0x33
 	.word	0x10c
@@ -29441,7 +29758,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0x8
 	.long	0x1dd70
-	.uleb128 0x4c
+	.uleb128 0x4e
 	.secrel32	.LASF195
 	.byte	0x28
 	.byte	0x34
@@ -29488,16 +29805,16 @@ _ZTS7T100XML:
 	.uleb128 0x11
 	.ascii "Arg_Size_t\0"
 	.byte	0x20
-	.uleb128 0x56
+	.uleb128 0x57
 	.ascii "Arg_IntPtr\0"
 	.word	0x200
-	.uleb128 0x56
+	.uleb128 0x57
 	.ascii "Arg_ShortIntPtr\0"
 	.word	0x400
-	.uleb128 0x56
+	.uleb128 0x57
 	.ascii "Arg_LongIntPtr\0"
 	.word	0x800
-	.uleb128 0x56
+	.uleb128 0x57
 	.ascii "Arg_Unknown\0"
 	.word	0x8000
 	.byte	0
@@ -29626,7 +29943,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1fc42
 	.byte	0
-	.uleb128 0x41
+	.uleb128 0x42
 	.ascii "InputAsWChar\0"
 	.byte	0x34
 	.byte	0xe3
@@ -29638,7 +29955,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.long	0x1fc30
 	.byte	0
-	.uleb128 0x41
+	.uleb128 0x42
 	.ascii "AsWChar\0"
 	.byte	0x34
 	.byte	0xe4
@@ -29865,7 +30182,7 @@ _ZTS7T100XML:
 	.uleb128 0x5d
 	.ascii "wxObject\0"
 	.long	0x1fdba
-	.uleb128 0x7c
+	.uleb128 0x7d
 	.ascii "~wxObject\0"
 	.byte	0x2
 	.word	0x169
@@ -29895,13 +30212,13 @@ _ZTS7T100XML:
 	.word	0x168
 	.byte	0x7
 	.long	0x1fe13
-	.uleb128 0x7d
+	.uleb128 0x7e
 	.ascii "integer\0"
 	.byte	0x35
 	.word	0x16a
 	.byte	0xa
 	.long	0x235
-	.uleb128 0x7d
+	.uleb128 0x7e
 	.ascii "string\0"
 	.byte	0x35
 	.word	0x16b
@@ -30215,7 +30532,7 @@ _ZTS7T100XML:
 	.uleb128 0xf
 	.secrel32	.LASF197
 	.byte	0x4
-	.byte	0x5
+	.byte	0x6
 	.byte	0x1
 	.ascii "_ZN17T100WorkSpaceFileC4ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
 	.byte	0x1
@@ -30229,7 +30546,7 @@ _ZTS7T100XML:
 	.uleb128 0xa7
 	.ascii "~T100WorkSpaceFile\0"
 	.byte	0x4
-	.byte	0xc
+	.byte	0xd
 	.byte	0x1
 	.ascii "_ZN17T100WorkSpaceFileD4Ev\0"
 	.byte	0x1
@@ -30245,7 +30562,7 @@ _ZTS7T100XML:
 	.uleb128 0x23
 	.ascii "IsExists\0"
 	.byte	0x4
-	.byte	0x11
+	.byte	0x12
 	.byte	0xa
 	.ascii "_ZN17T100WorkSpaceFile8IsExistsEv\0"
 	.long	0xa86c
@@ -30258,7 +30575,7 @@ _ZTS7T100XML:
 	.uleb128 0x23
 	.ascii "Load\0"
 	.byte	0x4
-	.byte	0x20
+	.byte	0x21
 	.byte	0xa
 	.ascii "_ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo\0"
 	.long	0xa86c
@@ -30273,7 +30590,7 @@ _ZTS7T100XML:
 	.uleb128 0x34
 	.ascii "Save\0"
 	.byte	0x4
-	.byte	0x37
+	.byte	0x38
 	.byte	0xa
 	.ascii "_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo\0"
 	.byte	0x1
@@ -30330,11 +30647,11 @@ _ZTS7T100XML:
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIfE16__max_exponent10E\0"
 	.long	0x19a50
 	.byte	0x26
-	.uleb128 0x7e
+	.uleb128 0x7f
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIdE16__max_exponent10E\0"
 	.long	0x19ab5
 	.word	0x134
-	.uleb128 0x7e
+	.uleb128 0x7f
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIeE16__max_exponent10E\0"
 	.long	0x19b1f
 	.word	0x1344
@@ -30466,10 +30783,10 @@ _ZTS7T100XML:
 	.byte	0x1e
 	.long	0x954
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x4b
 	.long	0x15679
 	.long	0x207fd
-	.long	0x20833
+	.long	0x20834
 	.uleb128 0xd
 	.secrel32	.LASF129
 	.long	0x551
@@ -30490,17 +30807,17 @@ _ZTS7T100XML:
 	.long	0x551
 	.uleb128 0x1
 	.long	0x15d27
-	.uleb128 0x7f
+	.uleb128 0x80
 	.ascii "__dnew\0"
 	.byte	0x15
 	.byte	0xd7
 	.byte	0xc
 	.long	0x111da
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x4b
 	.long	0x1570e
-	.long	0x20849
-	.long	0x2087f
+	.long	0x2084a
+	.long	0x20881
 	.uleb128 0xd
 	.secrel32	.LASF129
 	.long	0x954
@@ -30521,7 +30838,7 @@ _ZTS7T100XML:
 	.long	0x954
 	.uleb128 0x1
 	.long	0x15d27
-	.uleb128 0x7f
+	.uleb128 0x80
 	.ascii "__dnew\0"
 	.byte	0x15
 	.byte	0xd7
@@ -30530,9 +30847,9 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x21
 	.long	0x18484
-	.long	0x2088d
+	.long	0x2088f
 	.byte	0x2
-	.long	0x2089c
+	.long	0x2089e
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba02
@@ -30540,19 +30857,19 @@ _ZTS7T100XML:
 	.long	0x1ba07
 	.byte	0
 	.uleb128 0x28
-	.long	0x2087f
+	.long	0x20881
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2ERKS1_\0"
-	.long	0x208d1
-	.long	0x208dc
+	.long	0x208d3
+	.long	0x208de
 	.uleb128 0x1a
-	.long	0x2088d
+	.long	0x2088f
 	.uleb128 0x1a
-	.long	0x20896
+	.long	0x20898
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x4b
 	.long	0x157a4
-	.long	0x208f2
-	.long	0x20919
+	.long	0x208f4
+	.long	0x2091b
 	.uleb128 0xd
 	.secrel32	.LASF131
 	.long	0x551
@@ -30576,18 +30893,18 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x177c9
-	.long	0x20932
-	.uleb128 0x42
+	.long	0x20934
+	.uleb128 0x43
 	.ascii "__rhs\0"
 	.byte	0x26
 	.word	0x1f8
 	.byte	0x43
 	.long	0x1c3e0
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x4b
 	.long	0x1584c
-	.long	0x20948
-	.long	0x2096f
+	.long	0x2094a
+	.long	0x20971
 	.uleb128 0xd
 	.secrel32	.LASF131
 	.long	0x954
@@ -30611,9 +30928,9 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x21
 	.long	0x16e94
-	.long	0x2097d
+	.long	0x2097f
 	.byte	0x2
-	.long	0x20993
+	.long	0x20995
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba25
@@ -30625,19 +30942,19 @@ _ZTS7T100XML:
 	.long	0x1ba2a
 	.byte	0
 	.uleb128 0x28
-	.long	0x2096f
+	.long	0x20971
 	.ascii "_ZNSaIwEC2ERKS_\0"
-	.long	0x209b0
-	.long	0x209bb
+	.long	0x209b2
+	.long	0x209bd
 	.uleb128 0x1a
-	.long	0x2097d
+	.long	0x2097f
 	.uleb128 0x1a
-	.long	0x20986
+	.long	0x20988
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x4b
 	.long	0x158fb
-	.long	0x209d1
-	.long	0x209f3
+	.long	0x209d3
+	.long	0x209f5
 	.uleb128 0xd
 	.secrel32	.LASF131
 	.long	0x551
@@ -30659,7 +30976,7 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x19b95
-	.long	0x20a09
+	.long	0x20a0b
 	.uleb128 0x36
 	.ascii "__a\0"
 	.byte	0x2d
@@ -30667,10 +30984,10 @@ _ZTS7T100XML:
 	.byte	0x33
 	.long	0x1ba2a
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x4b
 	.long	0x15973
-	.long	0x20a1f
-	.long	0x20a41
+	.long	0x20a21
+	.long	0x20a43
 	.uleb128 0xd
 	.secrel32	.LASF131
 	.long	0x954
@@ -30692,9 +31009,9 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x21
 	.long	0x11036
-	.long	0x20a4f
+	.long	0x20a51
 	.byte	0x2
-	.long	0x20a73
+	.long	0x20a75
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c3fe
@@ -30712,22 +31029,22 @@ _ZTS7T100XML:
 	.long	0x1ba2a
 	.byte	0
 	.uleb128 0x28
-	.long	0x20a41
+	.long	0x20a43
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwRKS3_\0"
-	.long	0x20ace
-	.long	0x20ade
+	.long	0x20ad0
+	.long	0x20ae0
 	.uleb128 0x1a
-	.long	0x20a4f
+	.long	0x20a51
 	.uleb128 0x1a
-	.long	0x20a58
+	.long	0x20a5a
 	.uleb128 0x1a
-	.long	0x20a66
+	.long	0x20a68
 	.byte	0
 	.uleb128 0x21
 	.long	0x184c8
-	.long	0x20aec
+	.long	0x20aee
 	.byte	0x2
-	.long	0x20aff
+	.long	0x20b01
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba02
@@ -30736,35 +31053,35 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x20ade
+	.long	0x20ae0
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwED2Ev\0"
-	.long	0x20b30
-	.long	0x20b36
+	.long	0x20b32
+	.long	0x20b38
 	.uleb128 0x1a
-	.long	0x20aec
+	.long	0x20aee
 	.byte	0
 	.uleb128 0x21
 	.long	0x18449
-	.long	0x20b44
+	.long	0x20b46
 	.byte	0x2
-	.long	0x20b4e
+	.long	0x20b50
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba02
 	.byte	0
 	.uleb128 0x28
-	.long	0x20b36
+	.long	0x20b38
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2Ev\0"
-	.long	0x20b7f
-	.long	0x20b85
+	.long	0x20b81
+	.long	0x20b87
 	.uleb128 0x1a
-	.long	0x20b44
+	.long	0x20b46
 	.byte	0
 	.uleb128 0x21
 	.long	0x110a4
-	.long	0x20b93
+	.long	0x20b95
 	.byte	0x2
-	.long	0x20bb7
+	.long	0x20bb9
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c3fe
@@ -30782,23 +31099,23 @@ _ZTS7T100XML:
 	.long	0x1c403
 	.byte	0
 	.uleb128 0x28
-	.long	0x20b85
+	.long	0x20b87
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwOS3_\0"
-	.long	0x20c11
-	.long	0x20c21
+	.long	0x20c13
+	.long	0x20c23
 	.uleb128 0x1a
-	.long	0x20b93
+	.long	0x20b95
 	.uleb128 0x1a
-	.long	0x20b9c
+	.long	0x20b9e
 	.uleb128 0x1a
-	.long	0x20baa
+	.long	0x20bac
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x49
 	.byte	0x8
 	.long	0x17cf9
 	.uleb128 0x32
 	.long	0x180ae
-	.long	0x20c46
+	.long	0x20c48
 	.uleb128 0x1c
 	.ascii "_Tp\0"
 	.long	0x1c3e6
@@ -30819,24 +31136,38 @@ _ZTS7T100XML:
 	.quad	.LFE5262-.LFB5262
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x20cab
+	.long	0x20cad
 	.uleb128 0x1c
 	.ascii "T\0"
-	.long	0x20cab
-	.uleb128 0x49
+	.long	0x20cad
+	.uleb128 0x44
 	.ascii "ptr\0"
 	.byte	0x5
 	.word	0x2ed
 	.byte	0x1e
-	.long	0x20cf4
+	.long	0x20d3f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x5d
 	.ascii "wxXmlNode\0"
-	.long	0x20cef
-	.uleb128 0x76
+	.long	0x20d3a
+	.uleb128 0x34
+	.ascii "SetContent\0"
+	.byte	0x3
+	.byte	0xa4
+	.byte	0xa
+	.ascii "_ZN9wxXmlNode10SetContentERK8wxString\0"
+	.byte	0x1
+	.long	0x20cfa
+	.long	0x20d05
+	.uleb128 0x2
+	.long	0x20d45
+	.uleb128 0x1
+	.long	0xe13
+	.byte	0
+	.uleb128 0x77
 	.ascii "GetName\0"
 	.byte	0x3
 	.byte	0x89
@@ -30844,34 +31175,36 @@ _ZTS7T100XML:
 	.ascii "_ZNK9wxXmlNode7GetNameEv\0"
 	.long	0xe13
 	.byte	0x1
-	.long	0x20ce8
+	.long	0x20d33
 	.uleb128 0x2
-	.long	0x2142f
+	.long	0x214dc
 	.byte	0
 	.byte	0
 	.uleb128 0xa
-	.long	0x20cab
+	.long	0x20cad
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x20cfa
+	.long	0x20d45
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x20cab
+	.long	0x20cad
+	.uleb128 0xa
+	.long	0x20d45
 	.uleb128 0x21
 	.long	0x1213e
-	.long	0x20d0e
+	.long	0x20d5e
 	.byte	0x2
-	.long	0x20d32
+	.long	0x20d82
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c41f
-	.uleb128 0x42
+	.uleb128 0x43
 	.ascii "__s\0"
 	.byte	0x14
 	.word	0x1fd
 	.byte	0x22
 	.long	0x954
-	.uleb128 0x42
+	.uleb128 0x43
 	.ascii "__a\0"
 	.byte	0x14
 	.word	0x1fd
@@ -30879,26 +31212,26 @@ _ZTS7T100XML:
 	.long	0x1ba2a
 	.byte	0
 	.uleb128 0x28
-	.long	0x20d00
+	.long	0x20d50
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2EPKwRKS3_\0"
-	.long	0x20d80
-	.long	0x20d90
+	.long	0x20dd0
+	.long	0x20de0
 	.uleb128 0x1a
-	.long	0x20d0e
+	.long	0x20d5e
 	.uleb128 0x1a
-	.long	0x20d17
+	.long	0x20d67
 	.uleb128 0x1a
-	.long	0x20d24
+	.long	0x20d74
 	.byte	0
 	.uleb128 0x21
 	.long	0x11f37
-	.long	0x20d9e
+	.long	0x20dee
 	.byte	0x2
-	.long	0x20db7
+	.long	0x20e07
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c41f
-	.uleb128 0x42
+	.uleb128 0x43
 	.ascii "__str\0"
 	.byte	0x14
 	.word	0x1b5
@@ -30906,44 +31239,44 @@ _ZTS7T100XML:
 	.long	0x1c43c
 	.byte	0
 	.uleb128 0x28
-	.long	0x20d90
+	.long	0x20de0
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2ERKS4_\0"
-	.long	0x20e02
-	.long	0x20e0d
+	.long	0x20e52
+	.long	0x20e5d
 	.uleb128 0x1a
-	.long	0x20d9e
+	.long	0x20dee
 	.uleb128 0x1a
-	.long	0x20da7
+	.long	0x20df7
 	.byte	0
 	.uleb128 0x21
 	.long	0x1db0
-	.long	0x20e1b
+	.long	0x20e6b
 	.byte	0x2
-	.long	0x20e25
+	.long	0x20e75
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fcd5
 	.byte	0
 	.uleb128 0xac
-	.long	0x20e0d
+	.long	0x20e5d
 	.ascii "_ZN8wxString15ConvertedBufferIcEC1Ev\0"
-	.long	0x20e6a
+	.long	0x20eba
 	.quad	.LFB5090
 	.quad	.LFE5090-.LFB5090
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x20e73
+	.long	0x20ec3
 	.uleb128 0x2d
-	.long	0x20e1b
+	.long	0x20e6b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x21
 	.long	0x1df8
-	.long	0x20e81
+	.long	0x20ed1
 	.byte	0x2
-	.long	0x20e94
+	.long	0x20ee4
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fcd5
@@ -30952,25 +31285,25 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x3a
-	.long	0x20e73
+	.long	0x20ec3
 	.ascii "_ZN8wxString15ConvertedBufferIcED1Ev\0"
-	.long	0x20ed8
+	.long	0x20f28
 	.quad	.LFB5084
 	.quad	.LFE5084-.LFB5084
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x20ee1
+	.long	0x20f31
 	.uleb128 0x2d
-	.long	0x20e81
+	.long	0x20ed1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x21
 	.long	0x16ec0
-	.long	0x20eef
+	.long	0x20f3f
 	.byte	0x2
-	.long	0x20f02
+	.long	0x20f52
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba25
@@ -30979,35 +31312,35 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x20ee1
+	.long	0x20f31
 	.ascii "_ZNSaIwED2Ev\0"
-	.long	0x20f1c
-	.long	0x20f22
+	.long	0x20f6c
+	.long	0x20f72
 	.uleb128 0x1a
-	.long	0x20eef
+	.long	0x20f3f
 	.byte	0
 	.uleb128 0x21
 	.long	0x16e70
-	.long	0x20f30
+	.long	0x20f80
 	.byte	0x2
-	.long	0x20f3a
+	.long	0x20f8a
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1ba25
 	.byte	0
 	.uleb128 0x28
-	.long	0x20f22
+	.long	0x20f72
 	.ascii "_ZNSaIwEC2Ev\0"
-	.long	0x20f54
-	.long	0x20f5a
+	.long	0x20fa4
+	.long	0x20faa
 	.uleb128 0x1a
-	.long	0x20f30
+	.long	0x20f80
 	.byte	0
 	.uleb128 0x21
 	.long	0x123a2
-	.long	0x20f68
+	.long	0x20fb8
 	.byte	0x2
-	.long	0x20f7b
+	.long	0x20fcb
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c41f
@@ -31016,21 +31349,21 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x20f5a
+	.long	0x20faa
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED2Ev\0"
-	.long	0x20fc2
-	.long	0x20fc8
+	.long	0x21012
+	.long	0x21018
 	.uleb128 0x1a
-	.long	0x20f68
+	.long	0x20fb8
 	.byte	0
 	.uleb128 0xad
 	.long	0x1111f
 	.byte	0x14
 	.byte	0x8b
 	.byte	0xe
-	.long	0x20fda
+	.long	0x2102a
 	.byte	0x2
-	.long	0x20fed
+	.long	0x2103d
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1c3fe
@@ -31039,31 +31372,31 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x20fc8
+	.long	0x21018
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderD1Ev\0"
-	.long	0x21042
-	.long	0x21048
+	.long	0x21092
+	.long	0x21098
 	.uleb128 0x1a
-	.long	0x20fda
+	.long	0x2102a
 	.byte	0
-	.uleb128 0x4d
+	.uleb128 0x45
 	.long	0x2043f
-	.long	0x21067
+	.long	0x210b7
 	.quad	.LFB4740
 	.quad	.LFE4740-.LFB4740
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x210b6
-	.uleb128 0x4a
+	.long	0x21129
+	.uleb128 0x3d
 	.secrel32	.LASF202
 	.long	0x204b7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x80
+	.uleb128 0x5f
 	.ascii "info\0"
 	.byte	0x4
-	.byte	0x37
+	.byte	0x38
 	.byte	0x35
 	.long	0x204c2
 	.uleb128 0x2
@@ -31072,34 +31405,52 @@ _ZTS7T100XML:
 	.uleb128 0x81
 	.secrel32	.LASF204
 	.byte	0x4
-	.byte	0x39
-	.byte	0x19
-	.long	0x210b6
-	.uleb128 0x3
-	.byte	0x91
-	.sleb128 -432
-	.uleb128 0x57
-	.ascii "type\0"
-	.byte	0x4
 	.byte	0x3a
 	.byte	0x19
-	.long	0x20cfa
-	.uleb128 0x2
+	.long	0x21129
+	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -56
-	.uleb128 0x57
-	.ascii "root\0"
+	.sleb128 -688
+	.uleb128 0x4c
+	.ascii "type\0"
 	.byte	0x4
 	.byte	0x3b
 	.byte	0x19
-	.long	0x20cfa
+	.long	0x20d45
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -56
+	.uleb128 0x4c
+	.ascii "root\0"
+	.byte	0x4
+	.byte	0x3c
+	.byte	0x19
+	.long	0x20d45
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
+	.uleb128 0x4c
+	.ascii "python\0"
+	.byte	0x4
+	.byte	0x3f
+	.byte	0x19
+	.long	0x20d45
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -72
+	.uleb128 0x4c
+	.ascii "path\0"
+	.byte	0x4
+	.byte	0x40
+	.byte	0x19
+	.long	0x20d45
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -80
 	.byte	0
 	.uleb128 0x5d
 	.ascii "wxXmlDocument\0"
-	.long	0x21163
+	.long	0x211d6
 	.uleb128 0x27
 	.ascii "SetDocumentNode\0"
 	.byte	0x3
@@ -31107,47 +31458,47 @@ _ZTS7T100XML:
 	.byte	0xa
 	.ascii "_ZN13wxXmlDocument15SetDocumentNodeEP9wxXmlNode\0"
 	.byte	0x1
-	.long	0x21117
-	.long	0x21122
+	.long	0x2118a
+	.long	0x21195
 	.uleb128 0x2
-	.long	0x2135d
+	.long	0x213cf
 	.uleb128 0x1
-	.long	0x20cfa
+	.long	0x20d45
 	.byte	0
-	.uleb128 0x7c
+	.uleb128 0x7d
 	.ascii "~wxXmlDocument\0"
 	.byte	0x3
 	.word	0x104
 	.byte	0xd
 	.ascii "_ZN13wxXmlDocumentD4Ev\0"
 	.byte	0x1
-	.long	0x210b6
+	.long	0x21129
 	.byte	0x1
-	.long	0x21157
+	.long	0x211ca
 	.uleb128 0x2
-	.long	0x2135d
+	.long	0x213cf
 	.uleb128 0x2
 	.long	0x229
 	.byte	0
 	.byte	0
-	.uleb128 0x4d
+	.uleb128 0x45
 	.long	0x203ed
-	.long	0x21182
+	.long	0x211f5
 	.quad	.LFB4739
 	.quad	.LFE4739-.LFB4739
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x211c1
-	.uleb128 0x4a
+	.long	0x21233
+	.uleb128 0x3d
 	.secrel32	.LASF202
 	.long	0x204b7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x80
+	.uleb128 0x5f
 	.ascii "info\0"
 	.byte	0x4
-	.byte	0x20
+	.byte	0x21
 	.byte	0x35
 	.long	0x204c2
 	.uleb128 0x2
@@ -31156,40 +31507,40 @@ _ZTS7T100XML:
 	.uleb128 0x81
 	.secrel32	.LASF204
 	.byte	0x4
-	.byte	0x22
+	.byte	0x23
 	.byte	0x19
-	.long	0x210b6
+	.long	0x21129
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -272
-	.uleb128 0x57
+	.uleb128 0x4c
 	.ascii "root\0"
 	.byte	0x4
-	.byte	0x28
+	.byte	0x29
 	.byte	0x15
-	.long	0x20cfa
+	.long	0x20d45
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
 	.byte	0
-	.uleb128 0x4d
+	.uleb128 0x45
 	.long	0x203ab
-	.long	0x211e0
+	.long	0x21252
 	.quad	.LFB4738
 	.quad	.LFE4738-.LFB4738
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2120d
-	.uleb128 0x4a
+	.long	0x2127f
+	.uleb128 0x3d
 	.secrel32	.LASF202
 	.long	0x204b7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x57
+	.uleb128 0x4c
 	.ascii "result\0"
 	.byte	0x4
-	.byte	0x13
+	.byte	0x14
 	.byte	0x11
 	.long	0x20256
 	.uleb128 0x2
@@ -31197,13 +31548,13 @@ _ZTS7T100XML:
 	.sleb128 -20
 	.uleb128 0xae
 	.quad	.LVL0
-	.long	0x2173f
+	.long	0x2182e
 	.byte	0
 	.uleb128 0x21
 	.long	0x2035f
-	.long	0x2121b
+	.long	0x2128d
 	.byte	0
-	.long	0x2122e
+	.long	0x212a0
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x204b7
@@ -31212,159 +31563,183 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x3a
-	.long	0x2120d
+	.long	0x2127f
 	.ascii "_ZN17T100WorkSpaceFileD0Ev\0"
-	.long	0x21268
+	.long	0x212da
 	.quad	.LFB4737
 	.quad	.LFE4737-.LFB4737
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21271
+	.long	0x212e3
 	.uleb128 0x2d
-	.long	0x2121b
+	.long	0x2128d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x3a
-	.long	0x2120d
+	.long	0x2127f
 	.ascii "_ZN17T100WorkSpaceFileD2Ev\0"
-	.long	0x212ab
+	.long	0x2131d
 	.quad	.LFB4735
 	.quad	.LFE4735-.LFB4735
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x212b4
+	.long	0x21326
 	.uleb128 0x2d
-	.long	0x2121b
+	.long	0x2128d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x21
 	.long	0x202f3
-	.long	0x212c2
+	.long	0x21334
 	.byte	0
-	.long	0x212dd
+	.long	0x2134f
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x204b7
 	.uleb128 0x36
 	.ascii "filename\0"
 	.byte	0x4
-	.byte	0x5
+	.byte	0x6
 	.byte	0x39
 	.long	0x1c460
 	.byte	0
 	.uleb128 0x3a
-	.long	0x212b4
+	.long	0x21326
 	.ascii "_ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
-	.long	0x2134c
+	.long	0x213be
 	.quad	.LFB4732
 	.quad	.LFE4732-.LFB4732
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2135d
+	.long	0x213cf
 	.uleb128 0x2d
-	.long	0x212c2
+	.long	0x21334
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2d
-	.long	0x212cb
+	.long	0x2133d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x210b6
+	.long	0x21129
 	.uleb128 0xa
-	.long	0x2135d
-	.uleb128 0x4d
-	.long	0x210c9
-	.long	0x21387
+	.long	0x213cf
+	.uleb128 0x45
+	.long	0x2113c
+	.long	0x213f9
 	.quad	.LFB4384
 	.quad	.LFE4384-.LFB4384
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x213a5
-	.uleb128 0x4a
+	.long	0x21417
+	.uleb128 0x3d
 	.secrel32	.LASF202
-	.long	0x21363
+	.long	0x213d5
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x49
+	.uleb128 0x44
 	.ascii "node\0"
 	.byte	0x3
 	.word	0x125
 	.byte	0x25
-	.long	0x20cfa
+	.long	0x20d45
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x21
-	.long	0x21122
-	.long	0x213b3
+	.long	0x21195
+	.long	0x21425
 	.byte	0x2
-	.long	0x213c6
+	.long	0x21438
 	.uleb128 0x12
 	.secrel32	.LASF202
-	.long	0x21363
+	.long	0x213d5
 	.uleb128 0x12
 	.secrel32	.LASF203
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x213a5
+	.long	0x21417
 	.ascii "_ZN13wxXmlDocumentD0Ev\0"
-	.long	0x213ea
-	.long	0x213f0
+	.long	0x2145c
+	.long	0x21462
 	.uleb128 0x1a
-	.long	0x213b3
+	.long	0x21425
 	.byte	0
 	.uleb128 0x3a
-	.long	0x213a5
+	.long	0x21417
 	.ascii "_ZN13wxXmlDocumentD1Ev\0"
-	.long	0x21426
+	.long	0x21498
 	.quad	.LFB4377
 	.quad	.LFE4377-.LFB4377
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2142f
+	.long	0x214a1
 	.uleb128 0x2d
-	.long	0x213b3
+	.long	0x21425
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
+	.uleb128 0x45
+	.long	0x20cbc
+	.long	0x214c0
+	.quad	.LFB4363
+	.quad	.LFE4363-.LFB4363
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x214dc
+	.uleb128 0x3d
+	.secrel32	.LASF202
+	.long	0x20d4b
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.uleb128 0x5f
+	.ascii "con\0"
+	.byte	0x3
+	.byte	0xa4
+	.byte	0x25
+	.long	0xe13
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 8
+	.byte	0
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x20cef
+	.long	0x20d3a
 	.uleb128 0xa
-	.long	0x2142f
+	.long	0x214dc
 	.uleb128 0xaf
-	.long	0x20cba
-	.long	0x2145a
+	.long	0x20d05
+	.long	0x21507
 	.quad	.LFB4354
 	.quad	.LFE4354-.LFB4354
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21467
-	.uleb128 0x4a
+	.long	0x21514
+	.uleb128 0x3d
 	.secrel32	.LASF202
-	.long	0x21435
+	.long	0x214e2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x21
 	.long	0x1fd84
-	.long	0x21475
+	.long	0x21522
 	.byte	0x2
-	.long	0x21488
+	.long	0x21535
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fdc0
@@ -31373,32 +31748,32 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x28
-	.long	0x21467
+	.long	0x21514
 	.ascii "_ZN8wxObjectD0Ev\0"
-	.long	0x214a6
-	.long	0x214ac
+	.long	0x21553
+	.long	0x21559
 	.uleb128 0x1a
-	.long	0x21475
+	.long	0x21522
 	.byte	0
 	.uleb128 0x28
-	.long	0x21467
+	.long	0x21514
 	.ascii "_ZN8wxObjectD1Ev\0"
-	.long	0x214ca
-	.long	0x214d0
+	.long	0x21577
+	.long	0x2157d
 	.uleb128 0x1a
-	.long	0x21475
+	.long	0x21522
 	.byte	0
 	.uleb128 0x3a
-	.long	0x21467
+	.long	0x21514
 	.ascii "_ZN8wxObjectD2Ev\0"
-	.long	0x21500
+	.long	0x215ad
 	.quad	.LFB3807
 	.quad	.LFE3807-.LFB3807
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21509
+	.long	0x215b6
 	.uleb128 0x2d
-	.long	0x21475
+	.long	0x21522
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -31414,8 +31789,8 @@ _ZTS7T100XML:
 	.quad	.LFE2534-.LFB2534
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2155d
-	.uleb128 0x49
+	.long	0x2160a
+	.uleb128 0x44
 	.ascii "y\0"
 	.byte	0x1
 	.word	0xf91
@@ -31424,7 +31799,7 @@ _ZTS7T100XML:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x49
+	.uleb128 0x44
 	.ascii "x\0"
 	.byte	0x1
 	.word	0xf91
@@ -31434,21 +31809,21 @@ _ZTS7T100XML:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x4d
+	.uleb128 0x45
 	.long	0x5751
-	.long	0x2157c
+	.long	0x21629
 	.quad	.LFB2133
 	.quad	.LFE2133-.LFB2133
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21599
-	.uleb128 0x4a
+	.long	0x21646
+	.uleb128 0x3d
 	.secrel32	.LASF202
 	.long	0x1fc4e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x49
+	.uleb128 0x44
 	.ascii "pwz\0"
 	.byte	0x1
 	.word	0x83c
@@ -31458,15 +31833,39 @@ _ZTS7T100XML:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
+	.uleb128 0x45
+	.long	0x4bb0
+	.long	0x21665
+	.quad	.LFB2081
+	.quad	.LFE2081-.LFB2081
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x21688
+	.uleb128 0x3d
+	.secrel32	.LASF202
+	.long	0x1fcb8
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.uleb128 0x44
+	.ascii "stringSrc\0"
+	.byte	0x1
+	.word	0x755
+	.byte	0x27
+	.long	0xe13
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 8
+	.byte	0
 	.uleb128 0x21
 	.long	0x2b37
-	.long	0x215a7
+	.long	0x21696
 	.byte	0x2
-	.long	0x215be
+	.long	0x216ad
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fcb8
-	.uleb128 0x42
+	.uleb128 0x43
 	.ascii "str\0"
 	.byte	0x1
 	.word	0x525
@@ -31474,34 +31873,34 @@ _ZTS7T100XML:
 	.long	0x1fc70
 	.byte	0
 	.uleb128 0x3a
-	.long	0x21599
+	.long	0x21688
 	.ascii "_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
-	.long	0x21623
+	.long	0x21712
 	.quad	.LFB1997
 	.quad	.LFE1997-.LFB1997
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21634
+	.long	0x21723
 	.uleb128 0x2d
-	.long	0x215a7
+	.long	0x21696
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2d
-	.long	0x215b0
+	.long	0x2169f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x21
 	.long	0x2904
-	.long	0x21642
+	.long	0x21731
 	.byte	0x2
-	.long	0x21659
+	.long	0x21748
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fcb8
-	.uleb128 0x42
+	.uleb128 0x43
 	.ascii "pwz\0"
 	.byte	0x1
 	.word	0x4f3
@@ -31509,21 +31908,21 @@ _ZTS7T100XML:
 	.long	0x954
 	.byte	0
 	.uleb128 0x3a
-	.long	0x21634
+	.long	0x21723
 	.ascii "_ZN8wxStringC1EPKw\0"
-	.long	0x2168b
+	.long	0x2177a
 	.quad	.LFB1970
 	.quad	.LFE1970-.LFB1970
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x2169c
+	.long	0x2178b
 	.uleb128 0x2d
-	.long	0x21642
+	.long	0x21731
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2d
-	.long	0x2164b
+	.long	0x2173a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -31533,9 +31932,9 @@ _ZTS7T100XML:
 	.byte	0x1
 	.word	0x189
 	.byte	0x18
-	.long	0x216af
+	.long	0x2179e
 	.byte	0x2
-	.long	0x216c2
+	.long	0x217b1
 	.uleb128 0x12
 	.secrel32	.LASF202
 	.long	0x1fcb8
@@ -31544,16 +31943,16 @@ _ZTS7T100XML:
 	.long	0x230
 	.byte	0
 	.uleb128 0x3a
-	.long	0x2169c
+	.long	0x2178b
 	.ascii "_ZN8wxStringD1Ev\0"
-	.long	0x216f2
+	.long	0x217e1
 	.quad	.LFB1890
 	.quad	.LFE1890-.LFB1890
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x216fb
+	.long	0x217ea
 	.uleb128 0x2d
-	.long	0x216af
+	.long	0x2179e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -31564,8 +31963,8 @@ _ZTS7T100XML:
 	.quad	.LFE1808-.LFB1808
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x21728
-	.uleb128 0x49
+	.long	0x21817
+	.uleb128 0x44
 	.ascii "str\0"
 	.byte	0x1
 	.word	0x1d7
@@ -31577,8 +31976,8 @@ _ZTS7T100XML:
 	.byte	0
 	.uleb128 0x32
 	.long	0x164d3
-	.long	0x2173f
-	.uleb128 0x42
+	.long	0x2182e
+	.uleb128 0x43
 	.ascii "__s\0"
 	.byte	0x1d
 	.word	0x1a8
@@ -32579,6 +32978,19 @@ _ZTS7T100XML:
 	.byte	0
 	.byte	0
 	.uleb128 0x3d
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x34
+	.uleb128 0x19
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x3e
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
@@ -32587,7 +32999,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x3e
+	.uleb128 0x3f
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -32612,7 +33024,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x3f
+	.uleb128 0x40
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -32637,29 +33049,6 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x40
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
 	.uleb128 0x41
 	.uleb128 0x2e
 	.byte	0x1
@@ -32675,6 +33064,29 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.uleb128 0x6e
 	.uleb128 0x8
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x42
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x3c
@@ -32685,7 +33097,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x42
+	.uleb128 0x43
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -32700,7 +33112,43 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x43
+	.uleb128 0x44
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0x5
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x45
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x47
+	.uleb128 0x13
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2116
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x46
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -32725,7 +33173,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x44
+	.uleb128 0x47
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -32742,7 +33190,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x45
+	.uleb128 0x48
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -32769,7 +33217,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x46
+	.uleb128 0x49
 	.uleb128 0x42
 	.byte	0
 	.uleb128 0xb
@@ -32778,7 +33226,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x47
+	.uleb128 0x4a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -32797,7 +33245,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x48
+	.uleb128 0x4b
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -32808,15 +33256,15 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x49
-	.uleb128 0x5
+	.uleb128 0x4c
+	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0x5
+	.uleb128 0xb
 	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x49
@@ -32825,20 +33273,7 @@ _ZTS7T100XML:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x4a
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x34
-	.uleb128 0x19
-	.uleb128 0x2
-	.uleb128 0x18
-	.byte	0
-	.byte	0
-	.uleb128 0x4b
+	.uleb128 0x4d
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -32859,7 +33294,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x4c
+	.uleb128 0x4e
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -32876,26 +33311,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x4d
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2116
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x4e
+	.uleb128 0x4f
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -32920,7 +33336,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x4f
+	.uleb128 0x50
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -32937,7 +33353,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x51
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -32952,7 +33368,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.uleb128 0x3a
 	.byte	0
 	.uleb128 0x3a
@@ -32965,7 +33381,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -32984,7 +33400,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33007,7 +33423,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -33026,7 +33442,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -33045,30 +33461,13 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.uleb128 0x28
 	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x1c
 	.uleb128 0x5
-	.byte	0
-	.byte	0
-	.uleb128 0x57
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x58
@@ -33191,6 +33590,23 @@ _ZTS7T100XML:
 	.byte	0
 	.byte	0
 	.uleb128 0x5f
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x60
 	.uleb128 0x13
 	.byte	0
 	.uleb128 0x3
@@ -33199,14 +33615,14 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x60
+	.uleb128 0x61
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x61
+	.uleb128 0x62
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -33225,7 +33641,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x63
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33246,7 +33662,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x64
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0x3
@@ -33269,7 +33685,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x64
+	.uleb128 0x65
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33292,7 +33708,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -33311,7 +33727,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x66
+	.uleb128 0x67
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -33330,7 +33746,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x67
+	.uleb128 0x68
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33351,7 +33767,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x68
+	.uleb128 0x69
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -33374,7 +33790,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.uleb128 0x16
 	.byte	0
 	.uleb128 0x3
@@ -33391,7 +33807,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -33408,7 +33824,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.uleb128 0x17
 	.byte	0x1
 	.uleb128 0xb
@@ -33423,7 +33839,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6c
+	.uleb128 0x6d
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x49
@@ -33432,7 +33848,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x6d
+	.uleb128 0x6e
 	.uleb128 0x2f
 	.byte	0
 	.uleb128 0x3
@@ -33443,7 +33859,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x6e
+	.uleb128 0x6f
 	.uleb128 0x2f
 	.byte	0
 	.uleb128 0x3
@@ -33454,7 +33870,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x6f
+	.uleb128 0x70
 	.uleb128 0x13
 	.byte	0
 	.uleb128 0x3
@@ -33469,7 +33885,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x70
+	.uleb128 0x71
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -33490,7 +33906,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x71
+	.uleb128 0x72
 	.uleb128 0x30
 	.byte	0
 	.uleb128 0x3
@@ -33501,7 +33917,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x72
+	.uleb128 0x73
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -33514,7 +33930,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x73
+	.uleb128 0x74
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33539,7 +33955,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x74
+	.uleb128 0x75
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -33552,7 +33968,7 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x75
+	.uleb128 0x76
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -33573,7 +33989,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x76
+	.uleb128 0x77
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33598,7 +34014,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x77
+	.uleb128 0x78
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33621,7 +34037,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x78
+	.uleb128 0x79
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -33636,7 +34052,7 @@ _ZTS7T100XML:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x79
+	.uleb128 0x7a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33655,27 +34071,6 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.uleb128 0x3c
 	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x7a
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x7b
@@ -33691,6 +34086,27 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.uleb128 0x39
 	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x7c
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x3c
@@ -33699,7 +34115,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7c
+	.uleb128 0x7d
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -33726,7 +34142,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7d
+	.uleb128 0x7e
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -33741,7 +34157,7 @@ _ZTS7T100XML:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7e
+	.uleb128 0x7f
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -33752,7 +34168,7 @@ _ZTS7T100XML:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x7f
+	.uleb128 0x80
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -33765,23 +34181,6 @@ _ZTS7T100XML:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x80
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x2
-	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x81
@@ -34667,7 +35066,7 @@ _ZTS7T100XML:
 	.byte	0
 	.byte	0
 	.section	.debug_aranges,"dr"
-	.long	0xfc
+	.long	0x11c
 	.word	0x2
 	.secrel32	.Ldebug_info0
 	.byte	0x8
@@ -34684,6 +35083,8 @@ _ZTS7T100XML:
 	.quad	.LFE1970-.LFB1970
 	.quad	.LFB1997
 	.quad	.LFE1997-.LFB1997
+	.quad	.LFB2081
+	.quad	.LFE2081-.LFB2081
 	.quad	.LFB2133
 	.quad	.LFE2133-.LFB2133
 	.quad	.LFB2534
@@ -34692,6 +35093,8 @@ _ZTS7T100XML:
 	.quad	.LFE3807-.LFB3807
 	.quad	.LFB4354
 	.quad	.LFE4354-.LFB4354
+	.quad	.LFB4363
+	.quad	.LFE4363-.LFB4363
 	.quad	.LFB4377
 	.quad	.LFE4377-.LFB4377
 	.quad	.LFB4384
@@ -34716,6 +35119,8 @@ _ZTS7T100XML:
 	.quad	.LFE1970
 	.quad	.LFB1997
 	.quad	.LFE1997
+	.quad	.LFB2081
+	.quad	.LFE2081
 	.quad	.LFB2133
 	.quad	.LFE2133
 	.quad	.LFB2534
@@ -34724,6 +35129,8 @@ _ZTS7T100XML:
 	.quad	.LFE3807
 	.quad	.LFB4354
 	.quad	.LFE4354
+	.quad	.LFB4363
+	.quad	.LFE4363
 	.quad	.LFB4377
 	.quad	.LFE4377
 	.quad	.LFB4384
@@ -35158,6 +35565,7 @@ _ZTS7T100XML:
 	.def	_ZNSaIwED1Ev;	.scl	2;	.type	32;	.endef
 	.def	_Unwind_Resume;	.scl	2;	.type	32;	.endef
 	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_;	.scl	2;	.type	32;	.endef
+	.def	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_;	.scl	2;	.type	32;	.endef
 	.def	_ZNK8wxString7compareEPKw;	.scl	2;	.type	32;	.endef
 	.def	_ZN8wxObject5UnRefEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN7T100XMLC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
@@ -35169,6 +35577,8 @@ _ZTS7T100XML:
 	.def	_ZNK13wxXmlDocument7GetRootEv;	.scl	2;	.type	32;	.endef
 	.def	_Znwy;	.scl	2;	.type	32;	.endef
 	.def	_ZN9wxXmlNodeC1E13wxXmlNodeTypeRK8wxStringS3_i;	.scl	2;	.type	32;	.endef
+	.def	_ZN9wxXmlNodeC1EPS_13wxXmlNodeTypeRK8wxStringS4_P14wxXmlAttributeS0_i;	.scl	2;	.type	32;	.endef
+	.def	_ZN17T100WorkSpaceInfo13GetPythonFileB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN13wxXmlDocument7SetRootEP9wxXmlNode;	.scl	2;	.type	32;	.endef
 	.def	_ZNK13wxXmlDocument4SaveERK8wxStringi;	.scl	2;	.type	32;	.endef
 	.def	free;	.scl	2;	.type	32;	.endef

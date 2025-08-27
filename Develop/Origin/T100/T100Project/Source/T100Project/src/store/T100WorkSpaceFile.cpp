@@ -1,6 +1,7 @@
 #include "T100WorkSpaceFile.h"
 
 #include <io.h>
+#include "T100WorkSpaceInfo.h"
 
 T100WorkSpaceFile::T100WorkSpaceFile(const T100WSTRING& filename) :
     T100XML(filename),
@@ -57,6 +58,12 @@ T100VOID T100WorkSpaceFile::Save(T100WorkSpaceInfo* info)
     wxXmlDocument       document;
     wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
     wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
+
+
+    wxXmlNode*          python  = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Python");
+    wxXmlNode*          path    = T100NEW wxXmlNode(python, wxXML_ELEMENT_NODE, L"Path");
+
+    path->SetContent(info->GetPythonFile());
 
     document.SetDocumentNode(type);
     document.SetRoot(root);
