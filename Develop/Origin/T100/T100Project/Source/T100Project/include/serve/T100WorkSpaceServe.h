@@ -16,8 +16,8 @@ class T100WorkSpaceServe
         virtual T100BOOL                        Create(T100WorkSpaceInfo*);
         virtual T100BOOL                        CreateWorkSpaceFile(T100WorkSpaceInfo*);
 
-        T100BOOL                                CheckWorkSpaceFolder(T100WxFolderInfo&);
-        T100BOOL                                CheckWorkSpaceFile(T100WxFolderInfo&);
+        T100BOOL                                CheckWorkSpaceFolder(const T100WxFolderInfo&);
+        T100BOOL                                CheckWorkSpaceFile(const T100WxFolderInfo&);
 
 
 

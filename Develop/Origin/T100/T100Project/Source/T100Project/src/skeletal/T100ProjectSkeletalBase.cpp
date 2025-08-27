@@ -89,15 +89,15 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceOpen(const T100WxFolderInfo& info)
         return T100FALSE;
     }
 
-    T100WorkSpaceInfo*      info        = T100NULL;
+    T100WorkSpaceInfo*      workspace        = T100NULL;
 
-    info    = m_serve->GetWorkSpaceInfo();
+    workspace    = m_serve->GetWorkSpaceInfo();
 
-    if(!info){
+    if(!workspace){
         return T100FALSE;
     }
 
-    if(m_view->WorkSpaceOpen(info)){
+    if(m_view->WorkSpaceOpen(workspace)){
 
     }else{
         return T100FALSE;

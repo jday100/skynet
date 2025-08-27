@@ -43,11 +43,41 @@ T100VOID T100ProjectView::Destroy()
     T100SAFE_DELETE(m_mainMenu);
 }
 
-T100VOID T100ProjectView::WorkSpaceOpen(T100WorkSpaceInfo* info)
+T100BOOL T100ProjectView::WorkSpaceOpen(T100WorkSpaceInfo* info)
 {
-    m_projectTree->WorkSpaceOpen(info);
+    if(!info){
+        return T100FALSE;
+    }
+
+    if(m_projectTree->WorkSpaceOpen(info)){
+
+    }else{
+        return T100FALSE;
+    }
+
     m_mainMenu->WorkSpaceSelected();
+
+    return T100TRUE;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 T100BOOL T100ProjectView::WorkSpaceClose()
 {

@@ -16,7 +16,26 @@ class T100ProjectTree : public wxTreeCtrl
                const wxString& name = wxTreeCtrlNameStr);
         virtual ~T100ProjectTree();
 
-        virtual T100VOID            WorkSpaceOpen(T100WorkSpaceInfo*);
+        virtual T100BOOL            WorkSpaceOpen(T100WorkSpaceInfo*);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         virtual T100VOID            ProjectOpen(T100ProjectInfo*);
 

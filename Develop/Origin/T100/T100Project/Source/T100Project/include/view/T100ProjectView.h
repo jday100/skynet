@@ -14,8 +14,17 @@ class T100ProjectView : public T100ProjectViewBase
         virtual T100VOID            Create(T100ProjectFrame*);
         virtual T100VOID            Destroy();
 
+        T100BOOL                    WorkSpaceOpen(T100WorkSpaceInfo*);
 
-        T100VOID                    WorkSpaceOpen(T100WorkSpaceInfo*);
+
+
+
+
+
+
+
+
+        //T100VOID                    WorkSpaceOpen(T100WorkSpaceInfo*);
         T100BOOL                    WorkSpaceClose();
         T100VOID                    WorkSpaceSave();
         T100VOID                    WorkSpaceSelected();
