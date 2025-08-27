@@ -33,7 +33,7 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceNew(T100WorkSpaceInfo* info)
         }
     }
 
-    result  = m_serve->Create(info);
+    result  = m_serve->CreateWorkSpace(info);
 
     if(!result){
         return T100FALSE;

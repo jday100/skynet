@@ -26,7 +26,16 @@ T100VOID T100WorkSpaceServe::uninit()
 {
 }
 
-T100BOOL T100WorkSpaceServe::Create(T100WorkSpaceInfo* info)
+T100BOOL T100WorkSpaceServe::CreateWorkSpace(T100WorkSpaceInfo* info)
+{
+    if(!info){
+        return T100FALSE;
+    }
+
+    return T100TRUE;
+}
+
+T100BOOL T100WorkSpaceServe::OpenWorkSpace(T100WorkSpaceInfo* info)
 {
     if(!info){
         return T100FALSE;
@@ -55,6 +64,15 @@ T100BOOL T100WorkSpaceServe::CreateWorkSpaceFile(T100WorkSpaceInfo* info)
     }
 
     file.Save();
+
+    return T100TRUE;
+}
+
+T100BOOL T100WorkSpaceServe::OpenWorkSpaceFile(T100WorkSpaceInfo* info)
+{
+    if(!info){
+        return T100FALSE;
+    }
 
     return T100TRUE;
 }

@@ -13,8 +13,10 @@ class T100WorkSpaceServe
         T100WorkSpaceServe();
         virtual ~T100WorkSpaceServe();
 
-        virtual T100BOOL                        Create(T100WorkSpaceInfo*);
+        virtual T100BOOL                        CreateWorkSpace(T100WorkSpaceInfo*);
+        virtual T100BOOL                        OpenWorkSpace(T100WorkSpaceInfo*);
         virtual T100BOOL                        CreateWorkSpaceFile(T100WorkSpaceInfo*);
+        virtual T100BOOL                        OpenWorkSpaceFile(T100WorkSpaceInfo*);
 
         T100BOOL                                CheckWorkSpaceFolder(const T100WxFolderInfo&);
         T100BOOL                                CheckWorkSpaceFile(const T100WxFolderInfo&);
