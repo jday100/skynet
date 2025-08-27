@@ -10,6 +10,7 @@ T100ProjectViewAboutDialog::T100ProjectViewAboutDialog(wxWindow *parent,
     wxDialog(parent, id, title, pos, size, style, name)
 {
     //ctor
+    Center();
 }
 
 T100ProjectViewAboutDialog::~T100ProjectViewAboutDialog()
