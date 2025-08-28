@@ -40,6 +40,7 @@ T100VOID T100WorkSpacePropertiesDialog::init()
     sizer->Fit(this);
     sizer->SetSizeHints(this);
 
+    Center();
 }
 
 T100VOID T100WorkSpacePropertiesDialog::uninit()
