@@ -26,9 +26,13 @@ class T100ProjectViewSetupCompilerDialog : public wxDialog
         wxStaticText*           m_compilerPathStaticText;
         wxDirPickerCtrl*        m_compilerPathFolderPicker;
 
+        T100VOID                OnApply(wxCommandEvent&);
+
     private:
         T100VOID                init();
         T100VOID                uninit();
+
+        DECLARE_EVENT_TABLE()
 };
 
 #endif // T100PROJECTVIEWSETUPCOMPILERDIALOG_H

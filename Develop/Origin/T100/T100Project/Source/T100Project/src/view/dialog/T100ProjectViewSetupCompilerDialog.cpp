@@ -3,6 +3,10 @@
 const long T100ProjectViewSetupCompilerDialog::ID_COMPILER_PATH_STATIC_TEXT    = wxNewId();
 const long T100ProjectViewSetupCompilerDialog::ID_COMPILER_PATH_FOLDER_PICKER  = wxNewId();
 
+BEGIN_EVENT_TABLE(T100ProjectViewSetupCompilerDialog, wxDialog)
+
+END_EVENT_TABLE()
+
 T100ProjectViewSetupCompilerDialog::T100ProjectViewSetupCompilerDialog(wxWindow *parent,
              wxWindowID id,
              const wxString& title,
@@ -37,12 +41,22 @@ T100VOID T100ProjectViewSetupCompilerDialog::init()
 
     sizer->Add(gcc, 1, wxALL|wxEXPAND, 5);
 
+    sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
+
     SetSizer(sizer);
     sizer->Fit(this);
     sizer->SetSizeHints(this);
+
+    Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
 }
 
 T100VOID T100ProjectViewSetupCompilerDialog::uninit()
 {
 
+}
+
+T100VOID T100ProjectViewSetupCompilerDialog::OnApply(wxCommandEvent& event)
+{
+    Close();
+    SetReturnCode(wxID_APPLY);
 }
