@@ -4,6 +4,7 @@
 #include "T100EditorPack.h"
 #include "T100ProjectMain.h"
 #include "T100ProjectViewAboutDialog.h"
+#include "T100SetupCompilerDialog.h"
 
 T100ProjectView::T100ProjectView() :
     T100ProjectViewBase()
@@ -60,6 +61,12 @@ T100BOOL T100ProjectView::WorkSpaceOpen(T100WorkSpaceInfo* info)
     return T100TRUE;
 }
 
+T100VOID T100ProjectView::ShowSetupCompilerDialog()
+{
+    T100SetupCompilerDialog     dialog(m_frame, wxID_ANY, L"Setup Compiler...");
+
+    dialog.ShowModal();
+}
 
 
 
@@ -159,10 +166,7 @@ T100VOID T100ProjectView::ShowSetupEditorDialog()
 
 }
 
-T100VOID T100ProjectView::ShowSetupCompilerDialog()
-{
 
-}
 
 T100VOID T100ProjectView::Load(const T100PROJECT_INFO_VECTOR& projects)
 {

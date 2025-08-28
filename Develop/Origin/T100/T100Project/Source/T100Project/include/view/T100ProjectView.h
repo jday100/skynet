@@ -16,6 +16,8 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100BOOL                    WorkSpaceOpen(T100WorkSpaceInfo*);
 
+        T100VOID                    ShowSetupCompilerDialog();
+
 
 
 
@@ -43,7 +45,6 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    ShowFileName(T100WSTRING&);
         T100VOID                    ShowSetupEditorDialog();
-        T100VOID                    ShowSetupCompilerDialog();
 
         T100VOID                    Load(const T100PROJECT_INFO_VECTOR&);
 

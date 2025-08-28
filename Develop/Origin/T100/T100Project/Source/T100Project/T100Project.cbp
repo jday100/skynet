@@ -159,6 +159,7 @@
 		<Unit filename="include/view/dialog/T100ProjectViewAboutDialog.h" />
 		<Unit filename="include/view/dialog/T100ProjectViewSetupCompilerDialog.h" />
 		<Unit filename="include/view/dialog/T100ProjectViewSetupEditorDialog.h" />
+		<Unit filename="include/view/dialog/T100SetupCompilerDialog.h" />
 		<Unit filename="include/view/dialog/T100WorkSpaceCreateDialog.h" />
 		<Unit filename="include/view/dialog/T100WorkSpacePropertiesDialog.h" />
 		<Unit filename="include/view/pack/T100EditorPack.h" />
@@ -218,6 +219,7 @@
 		<Unit filename="src/view/dialog/T100ProjectViewAboutDialog.cpp" />
 		<Unit filename="src/view/dialog/T100ProjectViewSetupCompilerDialog.cpp" />
 		<Unit filename="src/view/dialog/T100ProjectViewSetupEditorDialog.cpp" />
+		<Unit filename="src/view/dialog/T100SetupCompilerDialog.cpp" />
 		<Unit filename="src/view/dialog/T100WorkSpaceCreateDialog.cpp" />
 		<Unit filename="src/view/dialog/T100WorkSpacePropertiesDialog.cpp" />
 		<Unit filename="src/view/pack/T100EditorPack.cpp" />
