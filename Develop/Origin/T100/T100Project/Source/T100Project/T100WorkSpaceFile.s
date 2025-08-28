@@ -1093,9 +1093,9 @@ _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 	leaq	176(%rbp), %rax	 #, tmp124
 	movq	%rax, %rcx	 # tmp124,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:53:             wxXmlNode*  compiler    = root->GetNext();
-	.loc 4 53 52 discriminator 7
-	movq	440(%rbp), %rax	 # root, tmp125
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\store\T100WorkSpaceFile.cpp:53:             wxXmlNode*  compiler    = python->GetNext();
+	.loc 4 53 54 discriminator 7
+	movq	432(%rbp), %rax	 # python, tmp125
 	movq	%rax, %rcx	 # tmp125,
 	call	_ZNK9wxXmlNode7GetNextEv	 #
 	movq	%rax, 424(%rbp)	 # tmp126, compiler

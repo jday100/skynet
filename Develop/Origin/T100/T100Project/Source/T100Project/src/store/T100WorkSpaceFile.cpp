@@ -50,7 +50,7 @@ T100BOOL T100WorkSpaceFile::Load(T100WorkSpaceInfo* info)
         if(python){
             info->SetPythonFile(python->GetAttribute(L"File").ToStdWstring());
 
-            wxXmlNode*  compiler    = root->GetNext();
+            wxXmlNode*  compiler    = python->GetNext();
             if(compiler){
                 info->SetCompilerPath(compiler->GetAttribute(L"Path").ToStdWstring());
             }
