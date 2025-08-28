@@ -13,6 +13,9 @@ class T100WorkSpaceServe
         T100WorkSpaceServe();
         virtual ~T100WorkSpaceServe();
 
+        virtual T100BOOL                        Create();
+        virtual T100BOOL                        Destroy();
+
         virtual T100BOOL                        CreateWorkSpace(T100WorkSpaceInfo*);
         virtual T100BOOL                        OpenWorkSpace(T100WorkSpaceInfo*);
         virtual T100BOOL                        CreateWorkSpaceFile(T100WorkSpaceInfo*);

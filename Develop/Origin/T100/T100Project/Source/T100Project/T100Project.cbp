@@ -123,6 +123,7 @@
 		<Unit filename="include/info/T100FileInfo.h" />
 		<Unit filename="include/info/T100FolderInfo.h" />
 		<Unit filename="include/info/T100ProjectInfo.h" />
+		<Unit filename="include/info/T100SetupCompilerInfo.h" />
 		<Unit filename="include/info/T100WorkSpaceInfo.h" />
 		<Unit filename="include/info/T100WxFolderInfo.h" />
 		<Unit filename="include/info/T100WxProjectInfo.h" />
@@ -151,6 +152,7 @@
 		<Unit filename="include/skeletal/T100ProjectSkeletal.h" />
 		<Unit filename="include/skeletal/T100ProjectSkeletalBase.h" />
 		<Unit filename="include/store/T100ProjectFile.h" />
+		<Unit filename="include/store/T100SetupCompilerFile.h" />
 		<Unit filename="include/store/T100WorkSpaceFile.h" />
 		<Unit filename="include/store/T100XML.h" />
 		<Unit filename="include/view/T100ProjectView.h" />
@@ -186,6 +188,7 @@
 		<Unit filename="src/info/T100FileInfo.cpp" />
 		<Unit filename="src/info/T100FolderInfo.cpp" />
 		<Unit filename="src/info/T100ProjectInfo.cpp" />
+		<Unit filename="src/info/T100SetupCompilerInfo.cpp" />
 		<Unit filename="src/info/T100WorkSpaceInfo.cpp" />
 		<Unit filename="src/info/T100WxFolderInfo.cpp" />
 		<Unit filename="src/info/T100WxProjectInfo.cpp" />
@@ -210,6 +213,7 @@
 		<Unit filename="src/skeletal/T100ProjectSkeletal.cpp" />
 		<Unit filename="src/skeletal/T100ProjectSkeletalBase.cpp" />
 		<Unit filename="src/store/T100ProjectFile.cpp" />
+		<Unit filename="src/store/T100SetupCompilerFile.cpp" />
 		<Unit filename="src/store/T100WorkSpaceFile.cpp" />
 		<Unit filename="src/store/T100XML.cpp" />
 		<Unit filename="src/view/T100ProjectView.cpp" />

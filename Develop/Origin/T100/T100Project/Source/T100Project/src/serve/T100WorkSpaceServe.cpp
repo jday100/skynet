@@ -26,6 +26,16 @@ T100VOID T100WorkSpaceServe::uninit()
 {
 }
 
+T100BOOL T100WorkSpaceServe::Create()
+{
+
+}
+
+T100BOOL T100WorkSpaceServe::Destroy()
+{
+
+}
+
 T100BOOL T100WorkSpaceServe::CreateWorkSpace(T100WorkSpaceInfo* info)
 {
     if(!info){
