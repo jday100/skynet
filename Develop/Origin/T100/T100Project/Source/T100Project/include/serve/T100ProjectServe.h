@@ -6,11 +6,26 @@
 #include "T100FolderLogic.h"
 #include "T100ProjectLogic.h"
 
+class T100WorkSpaceInfo;
+
 class T100ProjectServe
 {
     public:
         T100ProjectServe();
         virtual ~T100ProjectServe();
+
+        T100BOOL                                New(const T100WxFolderInfo&, T100WorkSpaceInfo*);
+
+
+
+
+
+
+
+
+
+
+
 
         T100VOID                                GetProjects(T100PROJECT_INFO_VECTOR&);
         const T100PROJECT_INFO_VECTOR&          GetProjects();
@@ -19,7 +34,7 @@ class T100ProjectServe
 
         T100BOOL                                Check(T100WxFolderInfo*);
 
-        T100BOOL                                New(const T100WxFolderInfo&);
+
         T100BOOL                                Open(const T100WSTRING&);
 
         T100BOOL                                Open(const T100WSTRING_VECTOR&, T100PROJECT_INFO_VECTOR&);

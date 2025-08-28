@@ -14,6 +14,24 @@ T100ProjectServe::~T100ProjectServe()
     //dtor
 }
 
+T100BOOL T100ProjectServe::New(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
+{
+    return m_projectLogic.NewNew(info, workspace);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 T100FileLogic& T100ProjectServe::GetFileLogic()
 {
     return m_fileLogic;
@@ -47,11 +65,6 @@ T100ProjectInfo* T100ProjectServe::GetProjectInfo()
 T100BOOL T100ProjectServe::Check(T100WxFolderInfo* info)
 {
     return m_projectLogic.Check(info);
-}
-
-T100BOOL T100ProjectServe::New(const T100WxFolderInfo& info)
-{
-    return m_projectLogic.NewNew(info);
 }
 
 T100BOOL T100ProjectServe::Open(const T100WSTRING&)

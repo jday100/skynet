@@ -422,7 +422,7 @@ T100VOID T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo* i
     folder.SetLabel(info->GetLabel());
     folder.SetPath(path);
 
-    if(!m_serve->GetProjectServe()->New(folder)){
+    if(!m_serve->GetProjectServe()->New(folder, m_serve->GetWorkSpaceInfo())){
         return;
     }
 

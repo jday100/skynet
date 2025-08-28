@@ -3,6 +3,7 @@
 #include "T100Shell.h"
 #include "T100Folder.h"
 #include "T100ProjectFile.h"
+#include "T100WorkSpaceInfo.h"
 
 T100ProjectLogic::T100ProjectLogic()
 {
@@ -17,6 +18,11 @@ T100ProjectLogic::T100ProjectLogic(T100ProjectInfo* info) :
     uninit();
 }
 
+T100ProjectLogic::~T100ProjectLogic()
+{
+    //dtor
+}
+
 T100VOID T100ProjectLogic::init()
 {
     m_file      = T100NEW T100FileLogic();
@@ -29,10 +35,88 @@ T100VOID T100ProjectLogic::uninit()
     T100SAFE_DELETE(m_folder);
 }
 
-T100ProjectLogic::~T100ProjectLogic()
+T100BOOL T100ProjectLogic::NewNew(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
 {
-    //dtor
+    T100WSTRING         name;
+    T100WSTRING         filename;
+
+    Execute(info, workspace);
+
+    return T100TRUE;
+
+    name    = GetFolderName(info);
+
+    T100Folder          folder(name);
+
+    if(folder.IsExists()){
+        return T100FALSE;
+    }
+
+    if(!folder.Create()){
+        return T100FALSE;
+    }
+
+    filename    = GetFileName(info);
+
+    T100ProjectFile     file(filename);
+
+    if(file.IsExists()){
+        return T100FALSE;
+    }
+
+    if(!file.Create()){
+        return T100FALSE;
+    }
+
+    T100ProjectInfo*    project     = T100NULL;
+
+    project     = T100NEW T100ProjectInfo();
+
+    project->SetLabel(info.GetLabel());
+    project->SetPath(name);
+    project->SetFileName(filename);
+
+    m_project   = project;
+
+    return T100TRUE;
 }
+
+T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
+{
+    T100WSTRING         name;
+    T100WSTRING         filename;
+
+    name    = GetFolderName(info);
+
+    T100Shell       shell;
+    T100WSTRING     command;
+
+    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
+
+    command     = L"C:/zmsys2/msys2/mingw64/bin/python3";
+
+    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
+
+    command = workspace->GetPythonFile() + L" " + L"C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py" + L" " + info.GetPath();
+
+    shell.Run(command);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 T100ProjectInfo* T100ProjectLogic::GetProjectInfo()
 {
@@ -105,71 +189,6 @@ T100BOOL T100ProjectLogic::New(const T100WxFolderInfo& info)
     m_project   = project;
 
     return T100TRUE;
-}
-
-T100BOOL T100ProjectLogic::NewNew(const T100WxFolderInfo& info)
-{
-    T100WSTRING         name;
-    T100WSTRING         filename;
-
-    Execute(info);
-
-    return T100TRUE;
-
-    name    = GetFolderName(info);
-
-    T100Folder          folder(name);
-
-    if(folder.IsExists()){
-        return T100FALSE;
-    }
-
-    if(!folder.Create()){
-        return T100FALSE;
-    }
-
-    filename    = GetFileName(info);
-
-    T100ProjectFile     file(filename);
-
-    if(file.IsExists()){
-        return T100FALSE;
-    }
-
-    if(!file.Create()){
-        return T100FALSE;
-    }
-
-    T100ProjectInfo*    project     = T100NULL;
-
-    project     = T100NEW T100ProjectInfo();
-
-    project->SetLabel(info.GetLabel());
-    project->SetPath(name);
-    project->SetFileName(filename);
-
-    m_project   = project;
-
-    return T100TRUE;
-}
-
-T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info)
-{
-    T100WSTRING         name;
-    T100WSTRING         filename;
-
-    name    = GetFolderName(info);
-
-    T100Shell       shell;
-    T100WSTRING     command;
-
-    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
-
-    command     = L"C:/zmsys2/msys2/mingw64/bin/python3";
-
-    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
-
-    shell.Run(command);
 }
 
 T100BOOL T100ProjectLogic::Open(const T100WSTRING& value)
