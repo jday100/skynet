@@ -114,6 +114,8 @@ T100BOOL T100ProjectLogic::NewNew(const T100WxFolderInfo& info)
 
     Execute(info);
 
+    return T100TRUE;
+
     name    = GetFolderName(info);
 
     T100Folder          folder(name);
