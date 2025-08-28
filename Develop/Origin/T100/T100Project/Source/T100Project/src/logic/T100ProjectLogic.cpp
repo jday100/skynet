@@ -99,6 +99,10 @@ T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info, T100WorkSpaceIn
 
     command = L"C:/zmsys2/msys2/mingw64/bin/python3" + workspace->GetPythonFile() + L" " + L"C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py" + L" " + info.GetPath();
 
+    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py " + info.GetPath();
+
+    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/vm/Hello";
+
     shell.Run(command);
 }
 
