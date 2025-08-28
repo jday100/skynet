@@ -54,6 +54,16 @@ const T100WSTRING& T100WorkSpaceInfo::GetPythonFile()
     return m_pythonFile;
 }
 
+T100VOID T100WorkSpaceInfo::SetCompilerPath(const T100WSTRING& path)
+{
+    m_compilerPath  = path;
+}
+
+const T100WSTRING& T100WorkSpaceInfo::GetCompilerPath()
+{
+    return m_compilerPath;
+}
+
 T100PROJECT_INFO_VECTOR& T100WorkSpaceInfo::GetProjects()
 {
     return m_projects;

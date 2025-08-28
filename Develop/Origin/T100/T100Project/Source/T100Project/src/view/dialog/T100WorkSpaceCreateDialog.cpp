@@ -6,6 +6,8 @@ const long T100WorkSpaceCreateDialog::ID_WORKSPACE_STATIC_TEXT      = wxNewId();
 const long T100WorkSpaceCreateDialog::ID_WORKSPACE_PATH     = wxNewId();
 const long T100WorkSpaceCreateDialog::ID_PYTHON_STATIC_TEXT     = wxNewId();
 const long T100WorkSpaceCreateDialog::ID_PYTHON_FILE    = wxNewId();
+const long T100WorkSpaceCreateDialog::ID_COMPILER_STATIC_TEXT   = wxNewId();
+const long T100WorkSpaceCreateDialog::ID_COMPILER_PATH  = wxNewId();
 
 BEGIN_EVENT_TABLE(T100WorkSpaceCreateDialog, wxDialog)
 
@@ -47,6 +49,20 @@ T100VOID T100WorkSpaceCreateDialog::init()
     m_workspaceTitle->SetSize(-1, 50);
     m_workspacePathPicker->SetSize(-1, 250);
     sizer->Add(workspace, 1, wxALL|wxEXPAND, 5);
+
+    wxStaticBoxSizer*       compiler    = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("GCC:"));
+
+    m_compilerTitle         = T100NEW wxStaticText(this, ID_COMPILER_STATIC_TEXT, _("Path:"));
+    m_compilerPathPicker    = T100NEW wxDirPickerCtrl(this, ID_COMPILER_PATH);
+
+    m_compilerTitle->SetSize(-1, 50);
+
+    compiler->Add(m_compilerTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    compiler->Add(m_compilerPathPicker, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+
+    m_compilerTitle->SetSize(-1, 50);
+    m_compilerPathPicker->SetSize(-1, 250);
+    sizer->Add(compiler, 1, wxALL|wxEXPAND, 5);
 
     wxStaticBoxSizer*       python      = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Python:"));
 
@@ -99,10 +115,21 @@ const T100WSTRING& T100WorkSpaceCreateDialog::GetPythonFile()
     return m_pythonFile;
 }
 
+T100VOID T100WorkSpaceCreateDialog::SetCompilerPath(const T100WSTRING& path)
+{
+    m_compilerPath      = path;
+}
+
+const T100WSTRING& T100WorkSpaceCreateDialog::GetCompilerPath()
+{
+    return m_compilerPath;
+}
+
 T100VOID T100WorkSpaceCreateDialog::OnApply(wxCommandEvent& event)
 {
     m_workspacePath     = m_workspacePathPicker->GetPath().ToStdWstring();
     m_pythonFile        = m_pythonFilePicker->GetPath().ToStdWstring();
+    m_compilerPath      = m_compilerPathPicker->GetPath().ToStdWstring();
 
     Close();
     SetReturnCode(wxID_APPLY);

@@ -24,23 +24,32 @@ class T100WorkSpaceCreateDialog : public wxDialog
         T100VOID                    SetPythonFile(const T100WSTRING&);
         const T100WSTRING&          GetPythonFile();
 
+        T100VOID                    SetCompilerPath(const T100WSTRING&);
+        const T100WSTRING&          GetCompilerPath();
+
     protected:
         static const long ID_WORKSPACE_STATIC_TEXT;
         static const long ID_WORKSPACE_PATH;
         static const long ID_PYTHON_STATIC_TEXT;
         static const long ID_PYTHON_FILE;
+        static const long ID_COMPILER_STATIC_TEXT;
+        static const long ID_COMPILER_PATH;
 
         T100VOID                    OnApply(wxCommandEvent&);
 
     protected:
         T100WSTRING                 m_workspacePath;
         T100WSTRING                 m_pythonFile;
+        T100WSTRING                 m_compilerPath;
 
         wxStaticText*               m_workspaceTitle;
         wxDirPickerCtrl*            m_workspacePathPicker;
 
         wxStaticText*               m_pythonTitle;
         wxFilePickerCtrl*           m_pythonFilePicker;
+
+        wxStaticText*               m_compilerTitle;
+        wxDirPickerCtrl*            m_compilerPathPicker;
 
     private:
         T100VOID                    init();

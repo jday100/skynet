@@ -125,6 +125,7 @@ T100BOOL T100ProjectViewBase::ShowWorkSpaceCreateDialog(T100WorkSpaceInfo* info)
     if(dialog.ShowModal() == wxID_APPLY){
         info->SetPath(dialog.GetWorkSpacePath());
         info->SetPythonFile(dialog.GetPythonFile());
+        info->SetCompilerPath(dialog.GetCompilerPath());
         return T100TRUE;
     }
     return T100FALSE;

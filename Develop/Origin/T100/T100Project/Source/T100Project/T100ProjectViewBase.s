@@ -178,7 +178,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 1 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.260018
+	setne	%al	 #, D.260039
 .LBE7:
 .LBE6:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -496,8 +496,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.260027
-	movq	%rax, %rcx	 # D.260027,
+	movq	%rbx, %rax	 # tmp96, D.260048
+	movq	%rax, %rcx	 # D.260048,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -723,8 +723,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.260031
-	movq	%rax, %rcx	 # D.260031,
+	movq	%rbx, %rax	 # tmp103, D.260052
+	movq	%rax, %rcx	 # D.260052,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -831,8 +831,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.260033
-	movq	%rax, %rcx	 # D.260033,
+	movq	%rbx, %rax	 # tmp99, D.260054
+	movq	%rax, %rcx	 # D.260054,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2067,7 +2067,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 12 337 27
-	movq	-8(%rbp), %rax	 # D.127637, D.259660
+	movq	-8(%rbp), %rax	 # D.127637, D.259680
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 12 338 5
 	addq	$48, %rsp	 #,
@@ -2298,7 +2298,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 78
-	movq	-8(%rbp), %rax	 # D.127671, D.259682
+	movq	-8(%rbp), %rax	 # D.127671, D.259702
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 81
 	addq	$48, %rsp	 #,
@@ -2346,7 +2346,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 78
-	movq	-8(%rbp), %rax	 # D.127673, D.259679
+	movq	-8(%rbp), %rax	 # D.127673, D.259699
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 81
 	addq	$48, %rsp	 #,
@@ -2533,7 +2533,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 12 532 77
-	movq	-72(%rbp), %rax	 # D.127715, D.259655
+	movq	-72(%rbp), %rax	 # D.127715, D.259675
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 12 533 5
 	addq	$72, %rsp	 #,
@@ -3475,7 +3475,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.259548
+	movq	(%rax), %rax	 # wxDefaultSize, D.259568
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 72
 	popq	%rbp	 #
@@ -4917,7 +4917,7 @@ _ZN15wxDirDialogBaseD2Ev:
 	.loc 21 59 32
 	leaq	16+_ZTV15wxDirDialogBase(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_6(D)->D.248173.D.247456.D.247135.D.246961.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_6(D)->D.248180.D.247463.D.247142.D.246968.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$840, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -4967,7 +4967,7 @@ _ZN15wxDirDialogBaseD1Ev:
 	.loc 21 59 32
 	leaq	16+_ZTV15wxDirDialogBase(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_6(D)->D.248173.D.247456.D.247135.D.246961.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_6(D)->D.248180.D.247463.D.247142.D.246968.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$840, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -5272,8 +5272,8 @@ _ZN19T100ProjectViewBaseC2Ev:
 	leaq	-81(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.260042
-	movq	%rax, %rcx	 # D.260042,
+	movq	%rbx, %rax	 # tmp103, D.260063
+	movq	%rax, %rcx	 # D.260063,
 .LEHB9:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5961,7 +5961,7 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 	movq	24(%rax), %rax	 # this_26(D)->m_frame, _14
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:100:     m_frame->SetLabel(title);
 	.loc 22 100 28
-	movq	(%rax), %rax	 # _14->D.248420.D.142549.D.142361.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject, _15
+	movq	(%rax), %rax	 # _14->D.248427.D.142549.D.142361.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject, _15
 	addq	$176, %rax	 #, _16
 	movq	(%rax), %rbx	 # *_16, _17
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:100:     m_frame->SetLabel(title);
@@ -6034,8 +6034,8 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 	leaq	-96(%rbp), %rax	 #, tmp158
 	movq	%rax, %rcx	 # tmp158,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp150, D.260044
-	movq	%rax, %rcx	 # D.260044,
+	movq	%rbx, %rax	 # tmp150, D.260065
+	movq	%rax, %rcx	 # D.260065,
 .LEHB17:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6241,8 +6241,8 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	leaq	832(%rbp), %rax	 #, tmp125
 	movq	%rax, %rcx	 # tmp125,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp123, D.260052
-	movq	%rax, %rcx	 # D.260052,
+	movq	%rbx, %rax	 # tmp123, D.260073
+	movq	%rax, %rcx	 # D.260073,
 .LEHB24:
 	call	_Unwind_Resume	 #
 .L284:
@@ -6261,8 +6261,8 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	leaq	-64(%rbp), %rax	 #, tmp131
 	movq	%rax, %rcx	 # tmp131,
 	call	_ZN11wxDirDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.260053
-	movq	%rax, %rcx	 # D.260053,
+	movq	%rbx, %rax	 # tmp127, D.260074
+	movq	%rax, %rcx	 # D.260074,
 	call	_Unwind_Resume	 #
 .LEHE24:
 .L285:
@@ -6337,150 +6337,159 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	.seh_pushreg	%rbx
 	.cfi_def_cfa_offset 24
 	.cfi_offset 3, -24
-	subq	$1064, %rsp	 #,
-	.seh_stackalloc	1064
-	.cfi_def_cfa_offset 1088
+	subq	$1112, %rsp	 #,
+	.seh_stackalloc	1112
+	.cfi_def_cfa_offset 1136
 	leaq	128(%rsp), %rbp	 #,
 	.seh_setframe	%rbp, 128
-	.cfi_def_cfa 6, 960
+	.cfi_def_cfa 6, 1008
 	.seh_endprologue
-	movq	%rcx, 960(%rbp)	 # this, this
-	movq	%rdx, 968(%rbp)	 # info, info
+	movq	%rcx, 1008(%rbp)	 # this, this
+	movq	%rdx, 1016(%rbp)	 # info, info
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:119:     if(!info){
 	.loc 22 119 5
-	cmpq	$0, 968(%rbp)	 #, info
+	cmpq	$0, 1016(%rbp)	 #, info
 	jne	.L287	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:120:         return T100FALSE;
 	.loc 22 120 16
-	movl	$0, %ebx	 #, _5
+	movl	$0, %ebx	 #, _6
 	jmp	.L291	 #
 .L287:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:123:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
 	.loc 22 123 85
-	leaq	832(%rbp), %rax	 #, tmp96
+	leaq	880(%rbp), %rax	 #, tmp97
 	movq	.refptr.wxDialogNameStr(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp96,
+	movq	%rax, %rcx	 # tmp97,
 .LEHB25:
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE25:
-	leaq	880(%rbp), %rax	 #, tmp97
+	leaq	928(%rbp), %rax	 #, tmp98
 	leaq	.LC5(%rip), %rdx	 #,
-	movq	%rax, %rcx	 # tmp97,
+	movq	%rax, %rcx	 # tmp98,
 .LEHB26:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE26:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:123:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
 	.loc 22 123 44 discriminator 2
-	movq	960(%rbp), %rax	 # this, tmp98
-	movq	24(%rax), %rcx	 # this_17(D)->m_frame, _1
+	movq	1008(%rbp), %rax	 # this, tmp99
+	movq	24(%rax), %rcx	 # this_18(D)->m_frame, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:123:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
 	.loc 22 123 85 discriminator 2
-	leaq	880(%rbp), %r8	 #, tmp99
-	leaq	-64(%rbp), %rax	 #, tmp100
-	leaq	832(%rbp), %rdx	 #, tmp101
-	movq	%rdx, 56(%rsp)	 # tmp101,
+	leaq	928(%rbp), %r8	 #, tmp100
+	leaq	-64(%rbp), %rax	 #, tmp101
+	leaq	880(%rbp), %rdx	 #, tmp102
+	movq	%rdx, 56(%rsp)	 # tmp102,
 	movl	$536877056, 48(%rsp)	 #,
-	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp102
-	movq	%rdx, 40(%rsp)	 # tmp102,
-	movq	.refptr.wxDefaultPosition(%rip), %rdx	 #, tmp103
-	movq	%rdx, 32(%rsp)	 # tmp103,
-	movq	%r8, %r9	 # tmp99,
+	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp103
+	movq	%rdx, 40(%rsp)	 # tmp103,
+	movq	.refptr.wxDefaultPosition(%rip), %rdx	 #, tmp104
+	movq	%rdx, 32(%rsp)	 # tmp104,
+	movq	%r8, %r9	 # tmp100,
 	movl	$-1, %r8d	 #,
 	movq	%rcx, %rdx	 # _1,
-	movq	%rax, %rcx	 # tmp100,
+	movq	%rax, %rcx	 # tmp101,
 .LEHB27:
 	call	_ZN25T100WorkSpaceCreateDialogC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_	 #
 .LEHE27:
-	leaq	880(%rbp), %rax	 #, tmp104
-	movq	%rax, %rcx	 # tmp104,
-	call	_ZN8wxStringD1Ev	 #
-	leaq	832(%rbp), %rax	 #, tmp105
+	leaq	928(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
+	call	_ZN8wxStringD1Ev	 #
+	leaq	880(%rbp), %rax	 #, tmp106
+	movq	%rax, %rcx	 # tmp106,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:125:     if(dialog.ShowModal() == wxID_APPLY){
 	.loc 22 125 24
-	leaq	-64(%rbp), %rax	 #, tmp106
-	movq	%rax, %rcx	 # tmp106,
+	leaq	-64(%rbp), %rax	 #, tmp107
+	movq	%rax, %rcx	 # tmp107,
 .LEHB28:
 	call	_ZN8wxDialog9ShowModalEv	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:125:     if(dialog.ShowModal() == wxID_APPLY){
 	.loc 22 125 27
 	cmpl	$5102, %eax	 #, _2
-	sete	%al	 #, retval.34_25
+	sete	%al	 #, retval.34_26
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:125:     if(dialog.ShowModal() == wxID_APPLY){
 	.loc 22 125 5
-	testb	%al, %al	 # retval.34_25
+	testb	%al, %al	 # retval.34_26
 	je	.L289	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:126:         info->SetPath(dialog.GetWorkSpacePath());
 	.loc 22 126 22
-	leaq	-64(%rbp), %rax	 #, tmp107
-	movq	%rax, %rcx	 # tmp107,
+	leaq	-64(%rbp), %rax	 #, tmp108
+	movq	%rax, %rcx	 # tmp108,
 	call	_ZN25T100WorkSpaceCreateDialog16GetWorkSpacePathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _3
-	movq	968(%rbp), %rax	 # info, tmp108
-	movq	%rax, %rcx	 # tmp108,
+	movq	1016(%rbp), %rax	 # info, tmp109
+	movq	%rax, %rcx	 # tmp109,
 	call	_ZN17T100WorkSpaceInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:127:         info->SetPythonFile(dialog.GetPythonFile());
 	.loc 22 127 28
-	leaq	-64(%rbp), %rax	 #, tmp109
-	movq	%rax, %rcx	 # tmp109,
+	leaq	-64(%rbp), %rax	 #, tmp110
+	movq	%rax, %rcx	 # tmp110,
 	call	_ZN25T100WorkSpaceCreateDialog13GetPythonFileB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _4
-	movq	968(%rbp), %rax	 # info, tmp110
-	movq	%rax, %rcx	 # tmp110,
+	movq	1016(%rbp), %rax	 # info, tmp111
+	movq	%rax, %rcx	 # tmp111,
 	call	_ZN17T100WorkSpaceInfo13SetPythonFileERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:128:         info->SetCompilerPath(dialog.GetCompilerPath());
+	.loc 22 128 30
+	leaq	-64(%rbp), %rax	 #, tmp112
+	movq	%rax, %rcx	 # tmp112,
+	call	_ZN25T100WorkSpaceCreateDialog15GetCompilerPathB5cxx11Ev	 #
+	movq	%rax, %rdx	 #, _5
+	movq	1016(%rbp), %rax	 # info, tmp113
+	movq	%rax, %rcx	 # tmp113,
+	call	_ZN17T100WorkSpaceInfo15SetCompilerPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE28:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:128:         return T100TRUE;
-	.loc 22 128 16
-	movl	$1, %ebx	 #, _5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:129:         return T100TRUE;
+	.loc 22 129 16
+	movl	$1, %ebx	 #, _6
 	jmp	.L290	 #
 .L289:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:130:     return T100FALSE;
-	.loc 22 130 12
-	movl	$0, %ebx	 #, _5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:131:     return T100FALSE;
+	.loc 22 131 12
+	movl	$0, %ebx	 #, _6
 .L290:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:123:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
 	.loc 22 123 85
-	leaq	-64(%rbp), %rax	 #, tmp111
-	movq	%rax, %rcx	 # tmp111,
+	leaq	-64(%rbp), %rax	 #, tmp114
+	movq	%rax, %rcx	 # tmp114,
 	call	_ZN25T100WorkSpaceCreateDialogD1Ev	 #
 .L291:
-	movl	%ebx, %eax	 # _5, <retval>
+	movl	%ebx, %eax	 # _6, <retval>
 	jmp	.L298	 #
 .L296:
-	movq	%rax, %rbx	 #, tmp115
-	leaq	880(%rbp), %rax	 #, tmp113
-	movq	%rax, %rcx	 # tmp113,
+	movq	%rax, %rbx	 #, tmp118
+	leaq	928(%rbp), %rax	 #, tmp116
+	movq	%rax, %rcx	 # tmp116,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L293	 #
 .L295:
-	movq	%rax, %rbx	 #, tmp114
+	movq	%rax, %rbx	 #, tmp117
 .L293:
-	leaq	832(%rbp), %rax	 #, tmp118
-	movq	%rax, %rcx	 # tmp118,
+	leaq	880(%rbp), %rax	 #, tmp121
+	movq	%rax, %rcx	 # tmp121,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp114, D.260058
-	movq	%rax, %rcx	 # D.260058,
+	movq	%rbx, %rax	 # tmp117, D.260079
+	movq	%rax, %rcx	 # D.260079,
 .LEHB29:
 	call	_Unwind_Resume	 #
 .L297:
-	movq	%rax, %rbx	 #, tmp120
-	leaq	-64(%rbp), %rax	 #, tmp119
-	movq	%rax, %rcx	 # tmp119,
+	movq	%rax, %rbx	 #, tmp123
+	leaq	-64(%rbp), %rax	 #, tmp122
+	movq	%rax, %rcx	 # tmp122,
 	call	_ZN25T100WorkSpaceCreateDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp120, D.260059
-	movq	%rax, %rcx	 # D.260059,
+	movq	%rbx, %rax	 # tmp123, D.260080
+	movq	%rax, %rcx	 # D.260080,
 	call	_Unwind_Resume	 #
 .LEHE29:
 .L298:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:131: }
-	.loc 22 131 1
-	addq	$1064, %rsp	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:132: }
+	.loc 22 132 1
+	addq	$1112, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
 	popq	%rbp	 #
 	.cfi_restore 6
-	.cfi_def_cfa 7, -1048
+	.cfi_def_cfa 7, -1096
 	ret	
 	.cfi_endproc
 .LFE19295:
@@ -6521,7 +6530,7 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	.seh_proc	_ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv
 _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 .LFB19296:
-	.loc 22 134 1
+	.loc 22 135 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6539,12 +6548,12 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 	.cfi_def_cfa 6, 64
 	.seh_endprologue
 	movq	%rcx, 64(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-	.loc 22 137 58
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:138:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+	.loc 22 138 58
 	movq	64(%rbp), %rax	 # this, tmp92
 	movq	24(%rax), %rbx	 # this_5(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-	.loc 22 137 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:138:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+	.loc 22 138 26
 	leaq	-80(%rbp), %rax	 #, tmp93
 	leaq	.LC0(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp93,
@@ -6557,8 +6566,8 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 .LEHB31:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE31:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-	.loc 22 137 26 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:138:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+	.loc 22 138 26 is_stmt 0 discriminator 2
 	leaq	-80(%rbp), %rdx	 #, tmp95
 	leaq	-32(%rbp), %rax	 #, tmp96
 	movl	$-1, 40(%rsp)	 #,
@@ -6576,23 +6585,23 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 	leaq	-80(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:139:     if(result == wxYES){
-	.loc 22 139 5 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:140:     if(result == wxYES){
+	.loc 22 140 5 is_stmt 1 discriminator 2
 	cmpl	$2, 28(%rbp)	 #, result
 	jne	.L300	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:140:         return T100TRUE;
-	.loc 22 140 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:141:         return T100TRUE;
+	.loc 22 141 16
 	movl	$1, %eax	 #, _2
 	jmp	.L306	 #
 .L300:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:145:     return T100FALSE;
-	.loc 22 145 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:146:     return T100FALSE;
+	.loc 22 146 12
 	movl	$0, %eax	 #, _2
 	jmp	.L306	 #
 .L305:
 	movq	%rax, %rbx	 #, tmp102
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-	.loc 22 137 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:138:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+	.loc 22 138 26
 	leaq	-32(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 	call	_ZN8wxStringD1Ev	 #
@@ -6600,19 +6609,19 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 .L304:
 	movq	%rax, %rbx	 #, tmp101
 .L303:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-	.loc 22 137 26 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:138:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+	.loc 22 138 26 is_stmt 0 discriminator 1
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp101, D.260062
-	movq	%rax, %rcx	 # D.260062,
+	movq	%rbx, %rax	 # tmp101, D.260083
+	movq	%rax, %rcx	 # D.260083,
 .LEHB33:
 	call	_Unwind_Resume	 #
 .LEHE33:
 .L306:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:146: }
-	.loc 22 146 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:147: }
+	.loc 22 147 1 is_stmt 1
 	addq	$168, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -6663,7 +6672,7 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv
 _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 .LFB19297:
-	.loc 22 149 1
+	.loc 22 150 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6681,12 +6690,12 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 	.cfi_def_cfa 6, 64
 	.seh_endprologue
 	movq	%rcx, 64(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:152:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
-	.loc 22 152 188
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:153:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
+	.loc 22 153 188
 	movq	64(%rbp), %rax	 # this, tmp92
 	movq	24(%rax), %rbx	 # this_4(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:152:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
-	.loc 22 152 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:153:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
+	.loc 22 153 26
 	leaq	-80(%rbp), %rax	 #, tmp93
 	leaq	.LC6(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp93,
@@ -6699,8 +6708,8 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 .LEHB35:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE35:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:152:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
-	.loc 22 152 26 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:153:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
+	.loc 22 153 26 is_stmt 0 discriminator 2
 	leaq	-80(%rbp), %rdx	 #, tmp95
 	leaq	-32(%rbp), %rax	 #, tmp96
 	movl	$-1, 40(%rsp)	 #,
@@ -6718,14 +6727,14 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 	leaq	-80(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:154:     return result;
-	.loc 22 154 12 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:155:     return result;
+	.loc 22 155 12 is_stmt 1 discriminator 2
 	movl	28(%rbp), %eax	 # result, _14
 	jmp	.L313	 #
 .L312:
 	movq	%rax, %rbx	 #, tmp102
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:152:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
-	.loc 22 152 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:153:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
+	.loc 22 153 26
 	leaq	-32(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 	call	_ZN8wxStringD1Ev	 #
@@ -6733,19 +6742,19 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 .L311:
 	movq	%rax, %rbx	 #, tmp101
 .L310:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:152:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
-	.loc 22 152 26 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:153:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
+	.loc 22 153 26 is_stmt 0 discriminator 1
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp101, D.260063
-	movq	%rax, %rcx	 # D.260063,
+	movq	%rbx, %rax	 # tmp101, D.260084
+	movq	%rax, %rcx	 # D.260084,
 .LEHB37:
 	call	_Unwind_Resume	 #
 .LEHE37:
 .L313:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:155: }
-	.loc 22 155 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:156: }
+	.loc 22 156 1 is_stmt 1
 	addq	$168, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -6793,7 +6802,7 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv
 _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 .LFB19298:
-	.loc 22 158 1
+	.loc 22 159 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6811,12 +6820,12 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 	.cfi_def_cfa 6, 64
 	.seh_endprologue
 	movq	%rcx, 64(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:161:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-	.loc 22 161 159
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:162:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
+	.loc 22 162 159
 	movq	64(%rbp), %rax	 # this, tmp92
 	movq	24(%rax), %rbx	 # this_5(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:161:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-	.loc 22 161 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:162:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
+	.loc 22 162 26
 	leaq	-80(%rbp), %rax	 #, tmp93
 	leaq	.LC6(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp93,
@@ -6829,8 +6838,8 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 .LEHB39:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE39:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:161:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-	.loc 22 161 26 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:162:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
+	.loc 22 162 26 is_stmt 0 discriminator 2
 	leaq	-80(%rbp), %rdx	 #, tmp95
 	leaq	-32(%rbp), %rax	 #, tmp96
 	movl	$-1, 40(%rsp)	 #,
@@ -6848,23 +6857,23 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 	leaq	-80(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:163:     if(result == wxYES){
-	.loc 22 163 5 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:164:     if(result == wxYES){
+	.loc 22 164 5 is_stmt 1 discriminator 2
 	cmpl	$2, 28(%rbp)	 #, result
 	jne	.L315	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:164:         return T100TRUE;
-	.loc 22 164 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:165:         return T100TRUE;
+	.loc 22 165 16
 	movl	$1, %eax	 #, _2
 	jmp	.L321	 #
 .L315:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:166:     return T100FALSE;
-	.loc 22 166 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:167:     return T100FALSE;
+	.loc 22 167 12
 	movl	$0, %eax	 #, _2
 	jmp	.L321	 #
 .L320:
 	movq	%rax, %rbx	 #, tmp102
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:161:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-	.loc 22 161 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:162:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
+	.loc 22 162 26
 	leaq	-32(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 	call	_ZN8wxStringD1Ev	 #
@@ -6872,19 +6881,19 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 .L319:
 	movq	%rax, %rbx	 #, tmp101
 .L318:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:161:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-	.loc 22 161 26 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:162:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
+	.loc 22 162 26 is_stmt 0 discriminator 1
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp101, D.260066
-	movq	%rax, %rcx	 # D.260066,
+	movq	%rbx, %rax	 # tmp101, D.260087
+	movq	%rax, %rcx	 # D.260087,
 .LEHB41:
 	call	_Unwind_Resume	 #
 .LEHE41:
 .L321:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:167: }
-	.loc 22 167 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:168: }
+	.loc 22 168 1 is_stmt 1
 	addq	$168, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -6932,7 +6941,7 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv
 _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 .LFB19299:
-	.loc 22 170 1
+	.loc 22 171 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6950,8 +6959,8 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 	.cfi_def_cfa 6, 880
 	.seh_endprologue
 	movq	%rcx, 880(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:171:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-	.loc 22 171 93
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:172:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+	.loc 22 172 93
 	leaq	752(%rbp), %rax	 #, tmp90
 	movq	.refptr.wxDialogNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp90,
@@ -6964,12 +6973,12 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 .LEHB43:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE43:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:171:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-	.loc 22 171 48 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:172:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+	.loc 22 172 48 discriminator 2
 	movq	880(%rbp), %rax	 # this, tmp92
 	movq	24(%rax), %rcx	 # this_7(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:171:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-	.loc 22 171 93 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:172:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+	.loc 22 172 93 discriminator 2
 	leaq	800(%rbp), %r8	 #, tmp93
 	leaq	-64(%rbp), %rax	 #, tmp94
 	leaq	752(%rbp), %rdx	 #, tmp95
@@ -6992,20 +7001,20 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 	leaq	752(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:173:     dialog.ShowModal();
-	.loc 22 173 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:174:     dialog.ShowModal();
+	.loc 22 174 21
 	leaq	-64(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 .LEHB45:
 	call	_ZN8wxDialog9ShowModalEv	 #
 .LEHE45:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:171:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-	.loc 22 171 93
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:172:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+	.loc 22 172 93
 	leaq	-64(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN29T100WorkSpacePropertiesDialogD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:174: }
-	.loc 22 174 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:175: }
+	.loc 22 175 1
 	jmp	.L329	 #
 .L327:
 	movq	%rax, %rbx	 #, tmp104
@@ -7019,25 +7028,25 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 	leaq	752(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.260068
-	movq	%rax, %rcx	 # D.260068,
+	movq	%rbx, %rax	 # tmp103, D.260089
+	movq	%rax, %rcx	 # D.260089,
 .LEHB46:
 	call	_Unwind_Resume	 #
 .L328:
 	movq	%rax, %rbx	 #, tmp109
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:171:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-	.loc 22 171 93
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:172:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+	.loc 22 172 93
 	leaq	-64(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN29T100WorkSpacePropertiesDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.260069
-	movq	%rax, %rcx	 # D.260069,
+	movq	%rbx, %rax	 # tmp109, D.260090
+	movq	%rax, %rcx	 # D.260090,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE46:
 .L329:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:174: }
-	.loc 22 174 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:175: }
+	.loc 22 175 1
 	addq	$984, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -7089,7 +7098,7 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv
 _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 .LFB19300:
-	.loc 22 177 1
+	.loc 22 178 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7107,12 +7116,12 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 	.cfi_def_cfa 6, 48
 	.seh_endprologue
 	movq	%rcx, 48(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 22 178 67
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:179:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 22 179 67
 	movq	48(%rbp), %rax	 # this, tmp89
 	movq	24(%rax), %rbx	 # this_4(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 22 178 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:179:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 22 179 17
 	leaq	-80(%rbp), %rax	 #, tmp90
 	leaq	.LC6(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp90,
@@ -7125,8 +7134,8 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 .LEHB48:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE48:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 22 178 17 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:179:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 22 179 17 is_stmt 0 discriminator 2
 	leaq	-80(%rbp), %rdx	 #, tmp92
 	leaq	-32(%rbp), %rax	 #, tmp93
 	movl	$-1, 40(%rsp)	 #,
@@ -7137,21 +7146,21 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 .LEHB49:
 	call	_Z12wxMessageBoxRK8wxStringS1_lP8wxWindowii	 #
 .LEHE49:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 22 178 17 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:179:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 22 179 17 discriminator 4
 	leaq	-32(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZN8wxStringD1Ev	 #
 	leaq	-80(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:179: }
-	.loc 22 179 1 is_stmt 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:180: }
+	.loc 22 180 1 is_stmt 1 discriminator 4
 	jmp	.L335	 #
 .L334:
 	movq	%rax, %rbx	 #, tmp98
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 22 178 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:179:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 22 179 17
 	leaq	-32(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
@@ -7159,20 +7168,20 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 .L333:
 	movq	%rax, %rbx	 #, tmp97
 .L332:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 22 178 17 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:179:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 22 179 17 is_stmt 0 discriminator 1
 	leaq	-80(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.260071
-	movq	%rax, %rcx	 # D.260071,
+	movq	%rbx, %rax	 # tmp97, D.260092
+	movq	%rax, %rcx	 # D.260092,
 .LEHB50:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE50:
 .L335:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:179: }
-	.loc 22 179 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:180: }
+	.loc 22 180 1 is_stmt 1
 	addq	$152, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -7215,7 +7224,7 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase23ShowProjectCreateWizardEv
 _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 .LFB19301:
-	.loc 22 182 1
+	.loc 22 183 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7233,8 +7242,8 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	.cfi_def_cfa 6, 960
 	.seh_endprologue
 	movq	%rcx, 960(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:183:     T100ProjectCreateWizard     wizard(m_frame);
-	.loc 22 183 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:184:     T100ProjectCreateWizard     wizard(m_frame);
+	.loc 22 184 47
 	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp92
 	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.35_1
 	leaq	880(%rbp), %rax	 #, tmp93
@@ -7242,12 +7251,12 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 .LEHB51:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE51:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:183:     T100ProjectCreateWizard     wizard(m_frame);
-	.loc 22 183 40
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:184:     T100ProjectCreateWizard     wizard(m_frame);
+	.loc 22 184 40
 	movq	960(%rbp), %rax	 # this, tmp94
 	movq	24(%rax), %rdx	 # this_8(D)->m_frame, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:183:     T100ProjectCreateWizard     wizard(m_frame);
-	.loc 22 183 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:184:     T100ProjectCreateWizard     wizard(m_frame);
+	.loc 22 184 47
 	leaq	880(%rbp), %rcx	 #, tmp95
 	leaq	-64(%rbp), %rax	 #, tmp96
 	movl	$536877056, 48(%rsp)	 #,
@@ -7264,15 +7273,15 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	leaq	880(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:185:     wizard.CentreOnScreen();
-	.loc 22 185 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:186:     wizard.CentreOnScreen();
+	.loc 22 186 26
 	leaq	-64(%rbp), %rax	 #, tmp100
 	movl	$12, %edx	 #,
 	movq	%rax, %rcx	 # tmp100,
 .LEHB53:
 	call	_ZN20wxTopLevelWindowBase14CentreOnScreenEi	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:187:     wizard.RunWizard(wizard.GetFirstPage());
-	.loc 22 187 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:188:     wizard.RunWizard(wizard.GetFirstPage());
+	.loc 22 188 21
 	leaq	-64(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN23T100ProjectCreateWizard12GetFirstPageEv	 #
@@ -7281,38 +7290,38 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZN8wxWizard9RunWizardEP12wxWizardPage	 #
 .LEHE53:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:183:     T100ProjectCreateWizard     wizard(m_frame);
-	.loc 22 183 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:184:     T100ProjectCreateWizard     wizard(m_frame);
+	.loc 22 184 47
 	leaq	-64(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
 	call	_ZN23T100ProjectCreateWizardD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:188: }
-	.loc 22 188 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:189: }
+	.loc 22 189 1
 	jmp	.L341	 #
 .L339:
 	movq	%rax, %rbx	 #, tmp105
 	leaq	880(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp105, D.260073
-	movq	%rax, %rcx	 # D.260073,
+	movq	%rbx, %rax	 # tmp105, D.260094
+	movq	%rax, %rcx	 # D.260094,
 .LEHB54:
 	call	_Unwind_Resume	 #
 .L340:
 	movq	%rax, %rbx	 #, tmp107
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:183:     T100ProjectCreateWizard     wizard(m_frame);
-	.loc 22 183 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:184:     T100ProjectCreateWizard     wizard(m_frame);
+	.loc 22 184 47
 	leaq	-64(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN23T100ProjectCreateWizardD1Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.260074
-	movq	%rax, %rcx	 # D.260074,
+	movq	%rbx, %rax	 # tmp107, D.260095
+	movq	%rax, %rcx	 # D.260095,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE54:
 .L341:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:188: }
-	.loc 22 188 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:189: }
+	.loc 22 189 1
 	addq	$1064, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -7360,7 +7369,7 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	.seh_proc	_ZN19T100ProjectViewBase15ShowAboutDialogEv
 _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 .LFB19302:
-	.loc 22 191 1
+	.loc 22 192 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7378,8 +7387,8 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	.cfi_def_cfa 6, 864
 	.seh_endprologue
 	movq	%rcx, 864(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:192:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-	.loc 22 192 74
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:193:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
+	.loc 22 193 74
 	leaq	736(%rbp), %rax	 #, tmp90
 	movq	.refptr.wxDialogNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp90,
@@ -7392,12 +7401,12 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 .LEHB56:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE56:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:192:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-	.loc 22 192 44 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:193:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
+	.loc 22 193 44 discriminator 2
 	movq	864(%rbp), %rax	 # this, tmp92
 	movq	24(%rax), %rcx	 # this_8(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:192:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-	.loc 22 192 74 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:193:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
+	.loc 22 193 74 discriminator 2
 	leaq	784(%rbp), %r8	 #, tmp93
 	leaq	-64(%rbp), %rax	 #, tmp94
 	leaq	736(%rbp), %rdx	 #, tmp95
@@ -7420,26 +7429,26 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	leaq	736(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:194:     dialog.CentreOnScreen();
-	.loc 22 194 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:195:     dialog.CentreOnScreen();
+	.loc 22 195 26
 	leaq	-64(%rbp), %rax	 #, tmp100
 	movl	$12, %edx	 #,
 	movq	%rax, %rcx	 # tmp100,
 .LEHB58:
 	call	_ZN20wxTopLevelWindowBase14CentreOnScreenEi	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:195:     dialog.ShowModal();
-	.loc 22 195 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:196:     dialog.ShowModal();
+	.loc 22 196 21
 	leaq	-64(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN8wxDialog9ShowModalEv	 #
 .LEHE58:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:192:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-	.loc 22 192 74
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:193:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
+	.loc 22 193 74
 	leaq	-64(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:196: }
-	.loc 22 196 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197: }
+	.loc 22 197 1
 	jmp	.L349	 #
 .L347:
 	movq	%rax, %rbx	 #, tmp105
@@ -7453,25 +7462,25 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	leaq	736(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp104, D.260076
-	movq	%rax, %rcx	 # D.260076,
+	movq	%rbx, %rax	 # tmp104, D.260097
+	movq	%rax, %rcx	 # D.260097,
 .LEHB59:
 	call	_Unwind_Resume	 #
 .L348:
 	movq	%rax, %rbx	 #, tmp110
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:192:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-	.loc 22 192 74
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:193:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
+	.loc 22 193 74
 	leaq	-64(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.260077
-	movq	%rax, %rcx	 # D.260077,
+	movq	%rbx, %rax	 # tmp110, D.260098
+	movq	%rax, %rcx	 # D.260098,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE59:
 .L349:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:196: }
-	.loc 22 196 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197: }
+	.loc 22 197 1
 	addq	$968, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -7920,8 +7929,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.260079
-	movq	%rax, %rcx	 # D.260079,
+	movq	%rbx, %rax	 # tmp90, D.260100
+	movq	%rax, %rcx	 # D.260100,
 .LEHB62:
 	call	_Unwind_Resume	 #
 .LEHE62:
@@ -8138,14 +8147,14 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 24
-	movzwl	16(%rax), %edx	 # _3->D.252957.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.252977.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.252957.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.252977.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 24
-	movzwl	16(%rax), %eax	 # _3->D.252957.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.252977.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 3 196 30
 	testw	%ax, %ax	 # _6
@@ -8275,11 +8284,11 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 3 189 17
-	movzwl	16(%rax), %edx	 # _3->D.252957.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.252977.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 3 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.252957.m_ref
+	movw	%dx, 16(%rax)	 # _6, _3->D.252977.m_ref
 	jmp	.L381	 #
 .L384:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
@@ -8320,7 +8329,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 3 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.252957.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.252977.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 3 171 72
 	popq	%rbp	 #
@@ -9179,7 +9188,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB20528:
-	.loc 22 196 1
+	.loc 22 197 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9193,12 +9202,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:196: }
-	.loc 22 196 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197: }
+	.loc 22 197 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
 	jne	.L396	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:196: }
-	.loc 22 196 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197: }
+	.loc 22 197 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
 	jne	.L396	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
@@ -9208,8 +9217,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
 .L396:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:196: }
-	.loc 22 196 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197: }
+	.loc 22 197 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -9247,7 +9256,7 @@ _ZN11wxDirDialogD1Ev:
 	movq	.refptr._ZTV11wxDirDialog(%rip), %rax	 #, tmp89
 	leaq	16(%rax), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.248279.D.248173.D.247456.D.247135.D.246961.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.248286.D.248180.D.247463.D.247142.D.246968.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN15wxDirDialogBaseD2Ev	 #
@@ -9565,7 +9574,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev
 _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 .LFB20637:
-	.loc 22 196 1
+	.loc 22 197 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9577,8 +9586,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:196: }
-	.loc 22 196 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197: }
+	.loc 22 197 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -73360,7 +73369,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x14
 	.ascii "ShowWorkSpaceNotExistsDialog\0"
 	.byte	0x16
-	.byte	0x85
+	.byte	0x86
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv\0"
 	.long	0x11214
@@ -73373,7 +73382,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x14
 	.ascii "ShowWorkSpaceFileExistsDialog\0"
 	.byte	0x16
-	.byte	0x94
+	.byte	0x95
 	.byte	0x9
 	.ascii "_ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv\0"
 	.long	0x40e6d
@@ -73386,7 +73395,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x14
 	.ascii "ShowWorkSpaceFileNotExistsDialog\0"
 	.byte	0x16
-	.byte	0x9d
+	.byte	0x9e
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv\0"
 	.long	0x11214
@@ -73399,7 +73408,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x24
 	.ascii "ShowWorkSpacePropertiesDialog\0"
 	.byte	0x16
-	.byte	0xa9
+	.byte	0xaa
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv\0"
 	.byte	0x1
@@ -73411,7 +73420,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x24
 	.ascii "ShowWorkSpaceOpenFailureDialog\0"
 	.byte	0x16
-	.byte	0xb0
+	.byte	0xb1
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv\0"
 	.byte	0x1
@@ -73423,7 +73432,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x24
 	.ascii "ShowProjectCreateWizard\0"
 	.byte	0x16
-	.byte	0xb5
+	.byte	0xb6
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase23ShowProjectCreateWizardEv\0"
 	.byte	0x1
@@ -73435,7 +73444,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x24
 	.ascii "ShowAboutDialog\0"
 	.byte	0x16
-	.byte	0xbe
+	.byte	0xbf
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase15ShowAboutDialogEv\0"
 	.byte	0x1
@@ -75448,7 +75457,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x3a
 	.ascii "__initialize_p\0"
 	.byte	0x16
-	.byte	0xc4
+	.byte	0xc5
 	.byte	0x1
 	.long	0x10954
 	.uleb128 0x2
@@ -75457,7 +75466,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x3a
 	.ascii "__priority\0"
 	.byte	0x16
-	.byte	0xc4
+	.byte	0xc5
 	.byte	0x1
 	.long	0x10954
 	.uleb128 0x2
@@ -76733,7 +76742,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x67
 	.secrel32	.LASF386
 	.byte	0x16
-	.byte	0xc0
+	.byte	0xc1
 	.byte	0x25
 	.long	0x4ac60
 	.uleb128 0x3
@@ -76759,7 +76768,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x33
 	.ascii "wizard\0"
 	.byte	0x16
-	.byte	0xb7
+	.byte	0xb8
 	.byte	0x21
 	.long	0x4acbb
 	.uleb128 0x3
@@ -76800,7 +76809,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x67
 	.secrel32	.LASF386
 	.byte	0x16
-	.byte	0xab
+	.byte	0xac
 	.byte	0x29
 	.long	0x4ad3c
 	.uleb128 0x3
@@ -76826,7 +76835,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x67
 	.secrel32	.LASF387
 	.byte	0x16
-	.byte	0x9f
+	.byte	0xa0
 	.byte	0x11
 	.long	0x40e6d
 	.uleb128 0x2
@@ -76850,7 +76859,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x67
 	.secrel32	.LASF387
 	.byte	0x16
-	.byte	0x96
+	.byte	0x97
 	.byte	0x11
 	.long	0x40e6d
 	.uleb128 0x2
@@ -76874,7 +76883,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.uleb128 0x67
 	.secrel32	.LASF387
 	.byte	0x16
-	.byte	0x87
+	.byte	0x88
 	.byte	0x11
 	.long	0x40e6d
 	.uleb128 0x2
@@ -76912,7 +76921,7 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.long	0x4ae58
 	.uleb128 0x3
 	.byte	0x91
-	.sleb128 -1024
+	.sleb128 -1072
 	.byte	0
 	.uleb128 0x11
 	.ascii "T100WorkSpaceCreateDialog\0"
@@ -86468,6 +86477,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	.def	_ZN17T100WorkSpaceInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN25T100WorkSpaceCreateDialog13GetPythonFileB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN17T100WorkSpaceInfo13SetPythonFileERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
+	.def	_ZN25T100WorkSpaceCreateDialog15GetCompilerPathB5cxx11Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN17T100WorkSpaceInfo15SetCompilerPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN25T100WorkSpaceCreateDialogD1Ev;	.scl	2;	.type	32;	.endef
 	.def	_Z12wxMessageBoxRK8wxStringS1_lP8wxWindowii;	.scl	2;	.type	32;	.endef
 	.def	_ZN29T100WorkSpacePropertiesDialogC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_;	.scl	2;	.type	32;	.endef

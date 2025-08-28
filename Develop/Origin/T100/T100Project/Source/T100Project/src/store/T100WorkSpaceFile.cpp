@@ -48,7 +48,12 @@ T100BOOL T100WorkSpaceFile::Load(T100WorkSpaceInfo* info)
         wxXmlNode*  python  = root->GetChildren();
 
         if(python){
-            info->SetPythonFile(python->GetAttribute(L"Path").ToStdWstring());
+            info->SetPythonFile(python->GetAttribute(L"File").ToStdWstring());
+
+            wxXmlNode*  compiler    = root->GetNext();
+            if(compiler){
+                info->SetCompilerPath(compiler->GetAttribute(L"Path").ToStdWstring());
+            }
         }
     }else{
         return T100FALSE;
@@ -65,7 +70,11 @@ T100VOID T100WorkSpaceFile::Save(T100WorkSpaceInfo* info)
 
     wxXmlNode*          python  = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Python");
 
-    python->AddAttribute(L"Path", info->GetPythonFile());
+    python->AddAttribute(L"File", info->GetPythonFile());
+
+    wxXmlNode*          compiler    = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Compiler");
+
+    compiler->AddAttribute(L"Path", info->GetCompilerPath());
 
     document.SetDocumentNode(type);
     document.SetRoot(root);
