@@ -3,6 +3,7 @@
 #include "T100Shell.h"
 #include "T100Folder.h"
 #include "T100ProjectFile.h"
+#include "T100ProjectConfig.h"
 #include "T100WorkSpaceInfo.h"
 
 T100ProjectLogic::T100ProjectLogic()
@@ -90,16 +91,6 @@ T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info, T100WorkSpaceIn
 
     T100Shell       shell;
     T100WSTRING     command;
-
-    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
-
-    command     = L"C:/zmsys2/msys2/mingw64/bin/python3";
-
-    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/work/temp";
-
-    command = L"C:/zmsys2/msys2/mingw64/bin/python3" + workspace->GetPythonFile() + L" " + L"C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py" + L" " + info.GetPath();
-
-    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py " + info.GetPath();
 
     command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/vm/Hello";
 
@@ -264,7 +255,7 @@ T100VOID T100ProjectLogic::Build()
 
 T100WSTRING T100ProjectLogic::GetFileName(const T100WxFolderInfo& info)
 {
-    return info.GetPath() + L"/" + info.GetLabel() + L".pjt";
+    return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
 }
 
 T100WSTRING T100ProjectLogic::GetFolderName(const T100WxFolderInfo& info)

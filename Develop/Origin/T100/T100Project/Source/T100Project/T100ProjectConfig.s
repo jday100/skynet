@@ -258,7 +258,7 @@ __tcf_1:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:4: const T100WSTRING        T100ProjectConfig::T100PROJECT_PROJECT_FILENAME                        = L"project.pjt";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:4: const T100WSTRING        T100ProjectConfig::T100PROJECT_PROJECT_FILENAME                        = L"project.xml";
 	.loc 1 4 26
 	leaq	_ZN17T100ProjectConfig28T100PROJECT_PROJECT_FILENAMEB5cxx11E(%rip), %rcx	 #,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -335,7 +335,7 @@ __tcf_3:
 	.ascii "w\0o\0r\0k\0s\0p\0a\0c\0e\0.\0w\0s\0\0\0"
 	.align 2
 .LC1:
-	.ascii "p\0r\0o\0j\0e\0c\0t\0.\0p\0j\0t\0\0\0"
+	.ascii "p\0r\0o\0j\0e\0c\0t\0.\0x\0m\0l\0\0\0"
 	.align 2
 .LC2:
 	.ascii "M\0a\0k\0e\0.\0p\0y\0\0\0"
@@ -393,7 +393,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_ZNSaIwED1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:4: const T100WSTRING        T100ProjectConfig::T100PROJECT_PROJECT_FILENAME                        = L"project.pjt";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:4: const T100WSTRING        T100ProjectConfig::T100PROJECT_PROJECT_FILENAME                        = L"project.xml";
 	.loc 1 4 26 is_stmt 1 discriminator 2
 	leaq	-83(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
@@ -460,7 +460,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_Unwind_Resume	 #
 .L15:
 	movq	%rax, %rbx	 #, tmp106
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:4: const T100WSTRING        T100ProjectConfig::T100PROJECT_PROJECT_FILENAME                        = L"project.pjt";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:4: const T100WSTRING        T100ProjectConfig::T100PROJECT_PROJECT_FILENAME                        = L"project.xml";
 	.loc 1 4 26
 	leaq	-83(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,

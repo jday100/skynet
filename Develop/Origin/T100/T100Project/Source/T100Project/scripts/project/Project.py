@@ -36,12 +36,12 @@ def create_project(path):
 def create_project_file():
     print("Create project file...")
     xml = minidom.Document()
-    root = xml.createElement("aaa")
+    root = xml.createElement("project")
 
     global g_project_path
 
     try:
-        with open(g_project_path + "/" + "xml.xml", 'w', encoding='UTF-8') as xmlfile:
+        with open(g_project_path + "/" + "project.xml", 'w', encoding='UTF-8') as xmlfile:
             xml.writexml(xmlfile, indent='', addindent='\t', newl='\n', encoding='UTF-8')
         print("OK")
     except Exception as err:
