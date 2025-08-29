@@ -194,11 +194,6 @@ T100VOID T100WorkSpaceServe::Clear()
 
 }
 
-T100VOID T100WorkSpaceServe::Open(T100WorkSpaceInfo* info)
-{
-    WorkSpaceOpen(info);
-}
-
 T100BOOL T100WorkSpaceServe::Close(T100WorkSpaceInfo*)
 {
 
@@ -239,7 +234,7 @@ T100BOOL T100WorkSpaceServe::WorkSpaceOpen(T100WorkSpaceInfo* info)
         T100WxFolderInfo        thisFolder;
 
         thisFolder.SetLabel(item);
-        T100WSTRING     path    = m_info->GetPath() + L"/" + item;
+        T100WSTRING     path    = m_info->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
         thisFolder.SetPath(path);
 
         if(m_projectServe.Check(&thisFolder)){
@@ -261,11 +256,15 @@ T100BOOL T100WorkSpaceServe::WorkSpaceOpen(T100WorkSpaceInfo* info)
     }
 
     for(const T100WSTRING& item : fileNames){
-        T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+        if(item == T100ProjectConfig::T100PROJECT_WORKSPACE_FILENAME){
 
-        thisFile->SetFileName(item);
+        }else{
+            T100FileInfo*       thisFile        = T100NEW T100FileInfo();
 
-        files.push_back(thisFile);
+            thisFile->SetFileName(item);
+
+            files.push_back(thisFile);
+        }
     }
 
     return T100TRUE;

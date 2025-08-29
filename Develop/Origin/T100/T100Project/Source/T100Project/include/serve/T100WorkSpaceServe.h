@@ -49,7 +49,6 @@ class T100WorkSpaceServe
         T100BOOL                                Close();
         T100BOOL                                Save();
 
-        virtual T100VOID                        Open(T100WorkSpaceInfo*);
         virtual T100BOOL                        Close(T100WorkSpaceInfo*);
 
         virtual T100VOID                        Save(T100WorkSpaceInfo*);
