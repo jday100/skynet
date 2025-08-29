@@ -36,7 +36,9 @@ def create_project(path):
 def create_project_file():
     print("Create project file...")
     xml = minidom.Document()
-    root = xml.createElement("project")
+    root = xml.documentElement
+    project = xml.createElement("project")
+    xml.appendChild(project)
 
     global g_project_path
 
