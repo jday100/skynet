@@ -97,6 +97,23 @@ T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info, T100WorkSpaceIn
     shell.Run(command);
 }
 
+T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo* workspace)
+{
+    if(!m_current){
+        return;
+    }
+
+    T100Shell       shell;
+    T100WSTRING     command;
+
+    //command     = L"python3 " + GetBuildName(m_current) + L";pause";
+
+    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+
+    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/vm/Hello/Make.py build";
+
+    shell.Run(command);
+}
 
 
 
@@ -237,21 +254,6 @@ T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
     return T100TRUE;
 }
 
-T100VOID T100ProjectLogic::Build()
-{
-    if(!m_current){
-        return;
-    }
-
-    T100Shell       shell;
-    T100WSTRING     command;
-
-    //command     = L"python3 " + GetBuildName(m_current) + L";pause";
-
-    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
-
-    shell.Run(command);
-}
 
 T100WSTRING T100ProjectLogic::GetFileName(const T100WxFolderInfo& info)
 {

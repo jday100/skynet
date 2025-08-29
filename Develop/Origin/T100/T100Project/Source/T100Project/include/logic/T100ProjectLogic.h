@@ -18,7 +18,7 @@ class T100ProjectLogic
         virtual ~T100ProjectLogic();
 
         T100BOOL                    NewNew(const T100WxFolderInfo&, T100WorkSpaceInfo*);
-
+        T100BOOL                    Build(T100WorkSpaceInfo*);
 
 
 
@@ -43,7 +43,7 @@ class T100ProjectLogic
 
         T100BOOL                    Open(const T100WSTRING&, T100ProjectInfo*);
 
-        T100VOID                    Build();
+
 
     protected:
         T100ProjectInfo*            m_current       = T100NULL;
