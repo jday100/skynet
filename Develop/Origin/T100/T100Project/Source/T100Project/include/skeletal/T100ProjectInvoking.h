@@ -34,6 +34,7 @@ class T100ProjectInvoking
         static T100VOID                     OnProjectSelect();
 
         static T100VOID                     OnFileNew();
+        static T100VOID                     OnFileNew(T100VOID*);
         static T100VOID                     OnFileOpen();
         static T100VOID                     OnFileClose();
         static T100VOID                     OnFileSave();
