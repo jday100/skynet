@@ -54,7 +54,41 @@ def create_project_make():
 
     try:
         with open(g_project_path + "/" + "Make.py", 'w', encoding='UTF-8') as makefile:
-            makefile.write("")
+            makefile.write("""
+import os
+import sys
+
+def args():
+	print("Args...")
+	count = len(sys.argv)
+
+	match count:
+		case 2:
+			value = sys.argv[1]
+			match value:
+				case 'build':
+					build()
+				case 'clean':
+					clean()
+				case 'rebuild':
+					rebuild()
+
+def build():
+	print("Build...")
+
+def clean():
+	print("Clean...")
+
+def rebuild():
+	print("Rebuild...")
+	clean()
+	build()
+
+if __name__ == "__main__":
+    print("Main...")
+    args()
+
+            """)
         print("OK")
     except Exception as err:
         print("Error:{err}".format(err=err))

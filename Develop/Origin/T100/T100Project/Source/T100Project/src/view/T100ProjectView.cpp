@@ -281,12 +281,10 @@ T100VOID T100ProjectView::FileSave()
 
     if(path.empty()){
         ShowFileName(filename);
-    }
-
-    path    = filename;
-
-    if(path.empty()){
-        return;
+        path    = filename;
+        if(path.empty()){
+            return;
+        }
     }
 
     current->SetPath(path);
