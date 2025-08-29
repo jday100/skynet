@@ -753,9 +753,9 @@ _ZNSt6vectorIP15T100ProjectInfoSaIS1_EED1Ev:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:567: 	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
 	.loc 2 567 15
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	8(%rax), %rdx	 # this_6(D)->D.33066._M_impl._M_finish, _3
+	movq	8(%rax), %rdx	 # this_6(D)->D.33087._M_impl._M_finish, _3
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	(%rax), %rax	 # this_6(D)->D.33066._M_impl._M_start, _4
+	movq	(%rax), %rax	 # this_6(D)->D.33087._M_impl._M_start, _4
 	movq	%rcx, %r8	 # _2,
 	movq	%rax, %rcx	 # _4,
 	call	_ZSt8_DestroyIPP15T100ProjectInfoS1_EvT_S3_RSaIT0_E	 #
@@ -866,9 +866,9 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EED1Ev:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:567: 	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
 	.loc 2 567 15
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	8(%rax), %rdx	 # this_6(D)->D.30733._M_impl._M_finish, _3
+	movq	8(%rax), %rdx	 # this_6(D)->D.30754._M_impl._M_finish, _3
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	(%rax), %rax	 # this_6(D)->D.30733._M_impl._M_start, _4
+	movq	(%rax), %rax	 # this_6(D)->D.30754._M_impl._M_start, _4
 	movq	%rcx, %r8	 # _2,
 	movq	%rax, %rcx	 # _4,
 	call	_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E	 #
@@ -979,9 +979,9 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EED1Ev:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:567: 	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
 	.loc 2 567 15
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	8(%rax), %rdx	 # this_6(D)->D.31840._M_impl._M_finish, _3
+	movq	8(%rax), %rdx	 # this_6(D)->D.31861._M_impl._M_finish, _3
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	(%rax), %rax	 # this_6(D)->D.31840._M_impl._M_start, _4
+	movq	(%rax), %rax	 # this_6(D)->D.31861._M_impl._M_start, _4
 	movq	%rcx, %r8	 # _2,
 	movq	%rax, %rcx	 # _4,
 	call	_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E	 #
@@ -1209,7 +1209,7 @@ _ZSt8_DestroyIPP15T100ProjectInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.35182, D.35182
+	movq	%r8, 32(%rbp)	 # D.35203, D.35203
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 3 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -1424,7 +1424,7 @@ _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.35246, D.35246
+	movq	%r8, 32(%rbp)	 # D.35267, D.35267
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 3 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -1639,7 +1639,7 @@ _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.35310, D.35310
+	movq	%r8, 32(%rbp)	 # D.35331, D.35331
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 3 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -2286,8 +2286,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP15T100ProjectInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.36364, D.36364
-	movq	%rdx, 24(%rbp)	 # D.36365, D.36365
+	movq	%rcx, 16(%rbp)	 # D.36385, D.36385
+	movq	%rdx, 24(%rbp)	 # D.36386, D.36386
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 3 117 57
 	nop	
@@ -2423,8 +2423,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.36487, D.36487
-	movq	%rdx, 24(%rbp)	 # D.36488, D.36488
+	movq	%rcx, 16(%rbp)	 # D.36508, D.36508
+	movq	%rdx, 24(%rbp)	 # D.36509, D.36509
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 3 117 57
 	nop	
@@ -2560,8 +2560,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.36610, D.36610
-	movq	%rdx, 24(%rbp)	 # D.36611, D.36611
+	movq	%rcx, 16(%rbp)	 # D.36631, D.36631
+	movq	%rdx, 24(%rbp)	 # D.36632, D.36632
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 3 117 57
 	nop	
@@ -2623,7 +2623,7 @@ _ZN9__gnu_cxx13new_allocatorIP15T100ProjectInfoE10deallocateEPS2_y:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __p, __p
-	movq	%r8, 32(%rbp)	 # D.32019, D.32019
+	movq	%r8, 32(%rbp)	 # D.32040, D.32040
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	.loc 5 125 19
 	movq	24(%rbp), %rax	 # __p, tmp87
@@ -2691,7 +2691,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __p, __p
-	movq	%r8, 32(%rbp)	 # D.29686, D.29686
+	movq	%r8, 32(%rbp)	 # D.29707, D.29707
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	.loc 5 125 19
 	movq	24(%rbp), %rax	 # __p, tmp87
@@ -2759,7 +2759,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __p, __p
-	movq	%r8, 32(%rbp)	 # D.30793, D.30793
+	movq	%r8, 32(%rbp)	 # D.30814, D.30814
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	.loc 5 125 19
 	movq	24(%rbp), %rax	 # __p, tmp87

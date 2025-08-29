@@ -198,7 +198,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 2 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.270098
+	setne	%al	 #, D.270119
 .LBE5:
 .LBE4:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -459,8 +459,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.270102
-	movq	%rax, %rcx	 # D.270102,
+	movq	%rbx, %rax	 # tmp99, D.270123
+	movq	%rax, %rcx	 # D.270123,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1159,7 +1159,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 10 251 35
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_21(D)->D.121419._vptr.wxEventFunctor, _1
+	movq	(%rax), %rax	 # this_21(D)->D.121440._vptr.wxEventFunctor, _1
 	subq	$8, %rax	 #, _2
 	movq	(%rax), %rax	 # *_2, _3
 	movq	%rax, %rcx	 # _3,
@@ -1448,13 +1448,13 @@ _ZN12wxEvtHandler15AddPendingEventERK7wxEvent:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3416:         QueueEvent(event.Clone());
 	.loc 10 3416 33
 	movq	-64(%rbp), %rax	 # this, tmp94
-	movq	(%rax), %rax	 # this_9(D)->D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_9(D)->D.127074._vptr.wxObject, _1
 	addq	$64, %rax	 #, _2
 	movq	(%rax), %rbx	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3416:         QueueEvent(event.Clone());
 	.loc 10 3416 32
 	movq	-56(%rbp), %rax	 # event, tmp95
-	movq	(%rax), %rax	 # event_10(D)->D.122121._vptr.wxObject, _4
+	movq	(%rax), %rax	 # event_10(D)->D.122142._vptr.wxObject, _4
 	addq	$40, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3416:         QueueEvent(event.Clone());
@@ -1499,7 +1499,7 @@ _ZN12wxEvtHandler12TryValidatorER7wxEvent:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.126980, D.126980
+	movq	%rdx, 24(%rbp)	 # D.127001, D.127001
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3703:     wxDEPRECATED_BUT_USED_INTERNALLY_INLINE(
 	.loc 10 3703 5
 	movl	$0, %eax	 #, _1
@@ -1784,7 +1784,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:335:         DoGetClientSize(&w, &h);
 	.loc 11 335 31
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	(%rax), %rax	 # this_7(D)->D.133096.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_7(D)->D.133117.D.127074._vptr.wxObject, _1
 	addq	$1328, %rax	 #, _2
 	movq	(%rax), %r9	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:335:         DoGetClientSize(&w, &h);
@@ -1806,7 +1806,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 11 337 27
-	movq	-8(%rbp), %rax	 # D.133185, D.269723
+	movq	-8(%rbp), %rax	 # D.133206, D.269744
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 11 338 5
 	addq	$48, %rsp	 #,
@@ -1844,7 +1844,7 @@ _ZN12wxWindowBase12SetSizeHintsEiiiiii:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:449:     { DoSetSizeHints(minW, minH, maxW, maxH, incW, incH); }
 	.loc 11 449 56
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	(%rax), %rax	 # this_5(D)->D.133096.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_5(D)->D.133117.D.127074._vptr.wxObject, _1
 	addq	$1384, %rax	 #, _2
 	movq	(%rax), %rax	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:449:     { DoSetSizeHints(minW, minH, maxW, maxH, incW, incH); }
@@ -1902,20 +1902,20 @@ _ZN12wxWindowBase16SetMinClientSizeERK6wxSize:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:474:         { SetMinSize(ClientToWindowSize(size)); }
 	.loc 11 474 46
 	movq	-48(%rbp), %rax	 # this, tmp93
-	movq	(%rax), %rax	 # this_8(D)->D.133096.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_8(D)->D.133117.D.127074._vptr.wxObject, _1
 	addq	$312, %rax	 #, _2
 	movq	(%rax), %rbx	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:474:         { SetMinSize(ClientToWindowSize(size)); }
 	.loc 11 474 45
 	movq	-48(%rbp), %rax	 # this, tmp94
-	movq	(%rax), %rax	 # this_8(D)->D.133096.D.127053._vptr.wxObject, _4
+	movq	(%rax), %rax	 # this_8(D)->D.133117.D.127074._vptr.wxObject, _4
 	addq	$256, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
 	movq	-40(%rbp), %rdx	 # size, tmp95
 	movq	-48(%rbp), %rcx	 # this,
 	call	*%rax	 # _6
 .LVL6:
-	movq	%rax, -88(%rbp)	 # tmp97, D.133215
+	movq	%rax, -88(%rbp)	 # tmp97, D.133236
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:474:         { SetMinSize(ClientToWindowSize(size)); }
 	.loc 11 474 21
 	leaq	-88(%rbp), %rax	 #, tmp98
@@ -1966,20 +1966,20 @@ _ZN12wxWindowBase16SetMaxClientSizeERK6wxSize:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:476:         { SetMaxSize(ClientToWindowSize(size)); }
 	.loc 11 476 46
 	movq	-48(%rbp), %rax	 # this, tmp93
-	movq	(%rax), %rax	 # this_8(D)->D.133096.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_8(D)->D.133117.D.127074._vptr.wxObject, _1
 	addq	$320, %rax	 #, _2
 	movq	(%rax), %rbx	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:476:         { SetMaxSize(ClientToWindowSize(size)); }
 	.loc 11 476 45
 	movq	-48(%rbp), %rax	 # this, tmp94
-	movq	(%rax), %rax	 # this_8(D)->D.133096.D.127053._vptr.wxObject, _4
+	movq	(%rax), %rax	 # this_8(D)->D.133117.D.127074._vptr.wxObject, _4
 	addq	$256, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
 	movq	-40(%rbp), %rdx	 # size, tmp95
 	movq	-48(%rbp), %rcx	 # this,
 	call	*%rax	 # _6
 .LVL8:
-	movq	%rax, -88(%rbp)	 # tmp97, D.133217
+	movq	%rax, -88(%rbp)	 # tmp97, D.133238
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:476:         { SetMaxSize(ClientToWindowSize(size)); }
 	.loc 11 476 21
 	leaq	-88(%rbp), %rax	 #, tmp98
@@ -2037,7 +2037,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 11 481 78
-	movq	-8(%rbp), %rax	 # D.133219, D.269745
+	movq	-8(%rbp), %rax	 # D.133240, D.269766
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 11 481 81
 	addq	$48, %rsp	 #,
@@ -2085,7 +2085,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 11 482 78
-	movq	-8(%rbp), %rax	 # D.133221, D.269742
+	movq	-8(%rbp), %rax	 # D.133242, D.269763
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 11 482 81
 	addq	$48, %rsp	 #,
@@ -2125,19 +2125,19 @@ _ZNK12wxWindowBase16GetMinClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:486:         { return WindowToClientSize(GetMinSize()); }
 	.loc 11 486 49
 	movq	-48(%rbp), %rax	 # this, tmp95
-	movq	(%rax), %rax	 # this_8(D)->D.133096.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_8(D)->D.133117.D.127074._vptr.wxObject, _1
 	addq	$264, %rax	 #, _2
 	movq	(%rax), %rbx	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:486:         { return WindowToClientSize(GetMinSize()); }
 	.loc 11 486 48
 	movq	-48(%rbp), %rax	 # this, tmp96
-	movq	(%rax), %rax	 # this_8(D)->D.133096.D.127053._vptr.wxObject, _4
+	movq	(%rax), %rax	 # this_8(D)->D.133117.D.127074._vptr.wxObject, _4
 	addq	$344, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
 	movq	-48(%rbp), %rcx	 # this,
 	call	*%rax	 # _6
 .LVL10:
-	movq	%rax, -88(%rbp)	 # tmp98, D.133223
+	movq	%rax, -88(%rbp)	 # tmp98, D.133244
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:486:         { return WindowToClientSize(GetMinSize()); }
 	.loc 11 486 49
 	leaq	-88(%rbp), %rax	 #, tmp99
@@ -2186,19 +2186,19 @@ _ZNK12wxWindowBase16GetMaxClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:488:         { return WindowToClientSize(GetMaxSize()); }
 	.loc 11 488 49
 	movq	-48(%rbp), %rax	 # this, tmp95
-	movq	(%rax), %rax	 # this_8(D)->D.133096.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_8(D)->D.133117.D.127074._vptr.wxObject, _1
 	addq	$264, %rax	 #, _2
 	movq	(%rax), %rbx	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:488:         { return WindowToClientSize(GetMaxSize()); }
 	.loc 11 488 48
 	movq	-48(%rbp), %rax	 # this, tmp96
-	movq	(%rax), %rax	 # this_8(D)->D.133096.D.127053._vptr.wxObject, _4
+	movq	(%rax), %rax	 # this_8(D)->D.133117.D.127074._vptr.wxObject, _4
 	addq	$352, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
 	movq	-48(%rbp), %rcx	 # this,
 	call	*%rax	 # _6
 .LVL12:
-	movq	%rax, -88(%rbp)	 # tmp98, D.133226
+	movq	%rax, -88(%rbp)	 # tmp98, D.133247
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:488:         { return WindowToClientSize(GetMaxSize()); }
 	.loc 11 488 49
 	leaq	-88(%rbp), %rax	 #, tmp99
@@ -2272,7 +2272,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 11 532 77
-	movq	-72(%rbp), %rax	 # D.133263, D.269718
+	movq	-72(%rbp), %rax	 # D.133284, D.269739
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 11 533 5
 	addq	$72, %rsp	 #,
@@ -2583,7 +2583,7 @@ _ZNK12wxWindowBase23AcceptsFocusRecursivelyEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:730:     virtual bool AcceptsFocusRecursively() const { return AcceptsFocus(); }
 	.loc 11 730 72
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	(%rax), %rax	 # this_5(D)->D.133096.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_5(D)->D.133117.D.127074._vptr.wxObject, _1
 	addq	$576, %rax	 #, _2
 	movq	(%rax), %rax	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:730:     virtual bool AcceptsFocusRecursively() const { return AcceptsFocus(); }
@@ -2625,7 +2625,7 @@ _ZNK12wxWindowBase24AcceptsFocusFromKeyboardEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:735:     virtual bool AcceptsFocusFromKeyboard() const { return AcceptsFocus(); }
 	.loc 11 735 73
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	(%rax), %rax	 # this_5(D)->D.133096.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_5(D)->D.133117.D.127074._vptr.wxObject, _1
 	addq	$576, %rax	 #, _2
 	movq	(%rax), %rax	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:735:     virtual bool AcceptsFocusFromKeyboard() const { return AcceptsFocus(); }
@@ -2667,7 +2667,7 @@ _ZNK12wxWindowBase12CanBeFocusedEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 11 744 56
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	(%rax), %rax	 # this_10(D)->D.133096.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_10(D)->D.133117.D.127074._vptr.wxObject, _1
 	addq	$480, %rax	 #, _2
 	movq	(%rax), %rax	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
@@ -2725,8 +2725,8 @@ _ZN12wxWindowBase11SetCanFocusEb:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movl	%edx, %eax	 # D.132300, tmp87
-	movb	%al, 24(%rbp)	 # tmp88, D.132300
+	movl	%edx, %eax	 # D.132321, tmp87
+	movb	%al, 24(%rbp)	 # tmp88, D.132321
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:762:     virtual void SetCanFocus(bool WXUNUSED(canFocus)) { }
 	.loc 11 762 57
 	nop	
@@ -2756,7 +2756,7 @@ _ZNK12wxWindowBase17IsClientAreaChildEPK8wxWindow:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.132349, D.132349
+	movq	%rdx, 24(%rbp)	 # D.132370, D.132370
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:825:         { return true; }
 	.loc 11 825 18
 	movl	$1, %eax	 #, _1
@@ -2895,11 +2895,11 @@ _ZN18wxAcceleratorTableaSERKS_:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.133323, D.133323
+	movq	%rdx, 24(%rbp)	 # D.133344, D.133344
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/accel.h:20: class WXDLLIMPEXP_CORE wxAcceleratorTable : public wxObject
 	.loc 12 20 24
 	movq	16(%rbp), %rax	 # this, _1
-	movq	24(%rbp), %rdx	 # D.133323, _2
+	movq	24(%rbp), %rdx	 # D.133344, _2
 	movq	%rax, %rcx	 # _1,
 	call	_ZN8wxObjectaSERKS_	 #
 	movq	16(%rbp), %rax	 # this, _7
@@ -3008,7 +3008,7 @@ _ZN12wxWindowBase9PrepareDCER4wxDC:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.132470, D.132470
+	movq	%rdx, 24(%rbp)	 # D.132491, D.132491
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1028:     virtual void PrepareDC( wxDC & WXUNUSED(dc) ) { }
 	.loc 11 1028 53
 	nop	
@@ -3175,11 +3175,11 @@ _ZN12wxWindowBase20AlwaysShowScrollbarsEbb:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movl	%edx, %eax	 # D.132672, tmp87
-	movl	%r8d, %edx	 # D.132673, tmp89
-	movb	%al, 24(%rbp)	 # tmp88, D.132672
+	movl	%edx, %eax	 # D.132693, tmp87
+	movl	%r8d, %edx	 # D.132694, tmp89
+	movb	%al, 24(%rbp)	 # tmp88, D.132693
 	movl	%edx, %eax	 # tmp89, tmp90
-	movb	%al, 32(%rbp)	 # tmp90, D.132673
+	movb	%al, 32(%rbp)	 # tmp90, D.132694
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1273:     }
 	.loc 11 1273 5
 	nop	
@@ -3209,7 +3209,7 @@ _ZNK12wxWindowBase22IsScrollbarAlwaysShownEi:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movl	%edx, 24(%rbp)	 # D.132676, D.132676
+	movl	%edx, 24(%rbp)	 # D.132697, D.132697
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1279:         return false;
 	.loc 11 1279 16
 	movl	$0, %eax	 #, _1
@@ -3305,8 +3305,8 @@ _ZN12wxWindowBase14SetTransparentEh:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movl	%edx, %eax	 # D.132790, tmp89
-	movb	%al, 24(%rbp)	 # tmp90, D.132790
+	movl	%edx, %eax	 # D.132811, tmp89
+	movb	%al, 24(%rbp)	 # tmp90, D.132811
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1432:     virtual bool SetTransparent(wxByte WXUNUSED(alpha)) { return false; }
 	.loc 11 1432 66
 	movl	$0, %eax	 #, _1
@@ -3527,7 +3527,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 11 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.269633
+	movq	(%rax), %rax	 # wxDefaultSize, D.269654
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 11 1746 72
 	popq	%rbp	 #
@@ -3556,7 +3556,7 @@ _ZNK12wxWindowBase21DoGetBestClientHeightEi:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movl	%edx, 24(%rbp)	 # D.132984, D.132984
+	movl	%edx, 24(%rbp)	 # D.133005, D.133005
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1752:         { return wxDefaultCoord; }
 	.loc 11 1752 18
 	movl	$-1, %eax	 #, _1
@@ -3588,7 +3588,7 @@ _ZNK12wxWindowBase20DoGetBestClientWidthEi:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movl	%edx, 24(%rbp)	 # D.132987, D.132987
+	movl	%edx, 24(%rbp)	 # D.133008, D.133008
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1754:         { return wxDefaultCoord; }
 	.loc 11 1754 18
 	movl	$-1, %eax	 #, _1
@@ -3678,7 +3678,7 @@ _ZN8wxWindowC2Ev:
 	movq	.refptr._ZTV8wxWindow(%rip), %rax	 #, tmp93
 	leaq	16(%rax), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp94
-	movq	%rdx, (%rax)	 # _2, this_7(D)->D.134387.D.133096.D.127053._vptr.wxObject
+	movq	%rdx, (%rax)	 # _2, this_7(D)->D.134408.D.133117.D.127074._vptr.wxObject
 	movq	-64(%rbp), %rax	 # this, tmp95
 	addq	$560, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -3705,8 +3705,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.270109
-	movq	%rax, %rcx	 # D.270109,
+	movq	%rbx, %rax	 # tmp97, D.270130
+	movq	%rax, %rcx	 # D.270130,
 .LEHB4:
 	call	_Unwind_Resume	 #
 	nop	
@@ -3918,7 +3918,7 @@ _ZNK8wxWindow12ContainsHWNDEP6HWND__:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.133854, D.133854
+	movq	%rdx, 24(%rbp)	 # D.133875, D.133875
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:213:     virtual bool ContainsHWND(WXHWND WXUNUSED(hWnd)) const { return false; }
 	.loc 13 213 69
 	movl	$0, %eax	 #, _1
@@ -3990,8 +3990,8 @@ _ZNK8wxWindow17MSWAdjustBrushOrgEPiS0_:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.134113, D.134113
-	movq	%r8, 32(%rbp)	 # D.134114, D.134114
+	movq	%rdx, 24(%rbp)	 # D.134134, D.134134
+	movq	%r8, 32(%rbp)	 # D.134135, D.134135
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:424:     }
 	.loc 13 424 5
 	nop	
@@ -4052,8 +4052,8 @@ _ZN8wxWindow13MSWPrintChildEP5HDC__PS_:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.134137, D.134137
-	movq	%r8, 32(%rbp)	 # D.134138, D.134138
+	movq	%rdx, 24(%rbp)	 # D.134158, D.134158
+	movq	%r8, 32(%rbp)	 # D.134159, D.134159
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:470:         return false;
 	.loc 13 470 16
 	movl	$0, %eax	 #, _1
@@ -4152,7 +4152,7 @@ _ZN8wxWindow14MSWEraseBgHookEP5HDC__:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.134150, D.134150
+	movq	%rdx, 24(%rbp)	 # D.134171, D.134171
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:510:     virtual bool MSWEraseBgHook(WXHDC WXUNUSED(hDC)) { return false; }
 	.loc 13 510 63
 	movl	$0, %eax	 #, _1
@@ -4184,8 +4184,8 @@ _ZNK8wxWindow11MSWFindItemElP6HWND__:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movl	%edx, 24(%rbp)	 # D.134303, D.134303
-	movq	%r8, 32(%rbp)	 # D.134304, D.134304
+	movl	%edx, 24(%rbp)	 # D.134324, D.134324
+	movq	%r8, 32(%rbp)	 # D.134325, D.134325
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:672:         return NULL;
 	.loc 13 672 16
 	movl	$0, %eax	 #, _1
@@ -4290,7 +4290,7 @@ _ZN20wxwxMenuItemListNodeC1EP10wxListBasePS_S2_P10wxMenuItemRK9wxListKey:
 	movq	.refptr._ZTV20wxwxMenuItemListNode(%rip), %rax	 #, tmp95
 	leaq	16(%rax), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp96
-	movq	%rdx, (%rax)	 # _2, this_5(D)->D.140232._vptr.wxNodeBase
+	movq	%rdx, (%rax)	 # _2, this_5(D)->D.140253._vptr.wxNodeBase
 .LBE22:
 	nop	
 	addq	$48, %rsp	 #,
@@ -4332,7 +4332,7 @@ _ZN14wxMenuItemListC1E9wxKeyType:
 	call	_ZN10wxListBaseC2E9wxKeyType	 #
 	leaq	16+_ZTV14wxMenuItemList(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _2, this_5(D)->D.140721._vptr.wxListBase
+	movq	%rdx, (%rax)	 # _2, this_5(D)->D.140742._vptr.wxListBase
 .LBE23:
 	nop	
 	addq	$32, %rsp	 #,
@@ -4443,8 +4443,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.270113
-	movq	%rax, %rcx	 # D.270113,
+	movq	%rsi, %rax	 # tmp98, D.270134
+	movq	%rax, %rcx	 # D.270134,
 .LEHB7:
 	call	_Unwind_Resume	 #
 .LEHE7:
@@ -4522,7 +4522,7 @@ _ZN10wxMenuBaseC2El:
 	movq	.refptr._ZTV10wxMenuBase(%rip), %rax	 #, tmp95
 	leaq	16(%rax), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp96
-	movq	%rdx, (%rax)	 # _2, this_11(D)->D.141366.D.127053._vptr.wxObject
+	movq	%rdx, (%rax)	 # _2, this_11(D)->D.141387.D.127074._vptr.wxObject
 	movq	-64(%rbp), %rax	 # this, tmp97
 	addq	$136, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -4568,8 +4568,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.270114
-	movq	%rax, %rcx	 # D.270114,
+	movq	%rbx, %rax	 # tmp106, D.270135
+	movq	%rax, %rcx	 # D.270135,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4647,7 +4647,7 @@ _ZN10wxMenuBase6AppendEiRK8wxStringS2_10wxItemKind:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/menu.h:67:         return DoAppend(wxMenuItem::New((wxMenu *)this, itemid, text, help, kind));
 	.loc 14 67 82
 	movq	-48(%rbp), %rax	 # this, tmp93
-	movq	(%rax), %rax	 # this_6(D)->D.141366.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_6(D)->D.141387.D.127074._vptr.wxObject, _1
 	addq	$224, %rax	 #, _2
 	movq	(%rax), %rbx	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/menu.h:67:         return DoAppend(wxMenuItem::New((wxMenu *)this, itemid, text, help, kind));
@@ -4711,7 +4711,7 @@ _ZN10wxMenuBase13AppendSubMenuEP6wxMenuRK8wxStringS4_:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/menu.h:95:                                         wxITEM_NORMAL, submenu));
 	.loc 14 95 64
 	movq	-48(%rbp), %rax	 # this, tmp93
-	movq	(%rax), %rax	 # this_6(D)->D.141366.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_6(D)->D.141387.D.127074._vptr.wxObject, _1
 	addq	$224, %rax	 #, _2
 	movq	(%rax), %rbx	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/menu.h:94:         return DoAppend(wxMenuItem::New((wxMenu *)this, wxID_ANY, text, help,
@@ -4856,7 +4856,7 @@ _ZN6wxMenuC1El:
 	movq	.refptr._ZTV6wxMenu(%rip), %rax	 #, tmp94
 	leaq	16(%rax), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp95
-	movq	%rdx, (%rax)	 # _2, this_8(D)->D.142193.D.141366.D.127053._vptr.wxObject
+	movq	%rdx, (%rax)	 # _2, this_8(D)->D.142214.D.141387.D.127074._vptr.wxObject
 	movq	-64(%rbp), %rax	 # this, tmp96
 	addq	$280, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -4891,8 +4891,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.270116
-	movq	%rax, %rcx	 # D.270116,
+	movq	%rbx, %rax	 # tmp98, D.270137
+	movq	%rax, %rcx	 # D.270137,
 .LEHB15:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5017,9 +5017,9 @@ _ZNK20wxNonOwnedWindowBase27AdjustForParentClientOriginERiS0_i:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.238348, D.238348
-	movq	%r8, 32(%rbp)	 # D.238349, D.238349
-	movl	%r9d, 40(%rbp)	 # D.238350, D.238350
+	movq	%rdx, 24(%rbp)	 # D.238369, D.238369
+	movq	%r8, 32(%rbp)	 # D.238370, D.238370
+	movl	%r9d, 40(%rbp)	 # D.238371, D.238371
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/nonownedwnd.h:69:     }
 	.loc 16 69 5
 	nop	
@@ -5229,7 +5229,7 @@ _ZNK20wxTopLevelWindowBase9IsVisibleEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/toplevel.h:279:     virtual bool IsVisible() const { return IsShown(); }
 	.loc 17 279 53
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	(%rax), %rax	 # this_6(D)->D.239328.D.238429.D.238372.D.134387.D.133096.D.127053._vptr.wxObject, _3
+	movq	(%rax), %rax	 # this_6(D)->D.239349.D.238450.D.238393.D.134408.D.133117.D.127074._vptr.wxObject, _3
 	addq	$480, %rax	 #, _4
 	movq	(%rax), %rax	 # *_4, _5
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/toplevel.h:279:     virtual bool IsVisible() const { return IsShown(); }
@@ -5334,7 +5334,7 @@ _ZN20wxTopLevelWindowBase22SetRepresentedFilenameERK8wxString:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.239096, D.239096
+	movq	%rdx, 24(%rbp)	 # D.239117, D.239117
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/toplevel.h:302:     virtual void SetRepresentedFilename(const wxString& WXUNUSED(filename)) { }
 	.loc 17 302 79
 	nop	
@@ -5374,7 +5374,7 @@ _ZNK20wxTopLevelWindowBase19DoGetScreenPositionEPiS0_:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/toplevel.h:324:         DoGetPosition(x, y);
 	.loc 17 324 27
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	(%rax), %rax	 # this_6(D)->D.239328.D.238429.D.238372.D.134387.D.133096.D.127053._vptr.wxObject, _3
+	movq	(%rax), %rax	 # this_6(D)->D.239349.D.238450.D.238393.D.134408.D.133117.D.127074._vptr.wxObject, _3
 	addq	$1304, %rax	 #, _4
 	movq	(%rax), %rax	 # *_4, _5
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/toplevel.h:324:         DoGetPosition(x, y);
@@ -5580,7 +5580,7 @@ _ZNK11wxFrameBase17IsClientAreaChildEPK8wxWindow:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/frame.h:181:         return !IsOneOfBars(child) && wxTopLevelWindow::IsClientAreaChild(child);
 	.loc 19 181 34
 	movq	16(%rbp), %rax	 # this, tmp96
-	movq	(%rax), %rax	 # this_12(D)->D.240691.D.239696.D.239607.D.239328.D.238429.D.238372.D.134387.D.133096.D.127053._vptr.wxObject, _1
+	movq	(%rax), %rax	 # this_12(D)->D.240712.D.239717.D.239628.D.239349.D.238450.D.238393.D.134408.D.133117.D.127074._vptr.wxObject, _1
 	addq	$1920, %rax	 #, _2
 	movq	(%rax), %rax	 # *_2, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/frame.h:181:         return !IsOneOfBars(child) && wxTopLevelWindow::IsClientAreaChild(child);
@@ -5869,7 +5869,7 @@ _ZN20wxMDIParentFrameBase13SetWindowMenuEP6wxMenu:
 	movq	864(%rax), %rdx	 # this_12(D)->m_windowMenu, _3
 	movq	16(%rbp), %rax	 # this, tmp99
 	movq	864(%rax), %rax	 # this_12(D)->m_windowMenu, _5
-	movq	(%rax), %rax	 # _5->D.142193.D.141366.D.127053._vptr.wxObject, _6
+	movq	(%rax), %rax	 # _5->D.142214.D.141387.D.127074._vptr.wxObject, _6
 	addq	$16, %rax	 #, _7
 	movq	(%rax), %rax	 # *_7, _8
 	movq	%rdx, %rcx	 # _3,
@@ -5941,7 +5941,7 @@ _ZN20wxMDIParentFrameBase4TileE13wxOrientation:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movl	%edx, 24(%rbp)	 # D.261882, D.261882
+	movl	%edx, 24(%rbp)	 # D.261903, D.261903
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:103:     virtual void Tile(wxOrientation WXUNUSED(orient) = wxHORIZONTAL) { }
 	.loc 21 103 72
 	nop	
@@ -6010,7 +6010,7 @@ _ZN21wxMDIClientWindowBaseC2Ev:
 	call	_ZN8wxWindowC2Ev	 #
 	leaq	16+_ZTV21wxMDIClientWindowBase(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _2, this_4(D)->D.262152.D.134387.D.133096.D.127053._vptr.wxObject
+	movq	%rdx, (%rax)	 # _2, this_4(D)->D.262173.D.134408.D.133117.D.127074._vptr.wxObject
 .LBE30:
 	nop	
 	addq	$32, %rsp	 #,
@@ -6052,7 +6052,7 @@ _ZN17wxMDIClientWindowC1Ev:
 	movq	.refptr._ZTV17wxMDIClientWindow(%rip), %rax	 #, tmp90
 	leaq	16(%rax), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _2, this_5(D)->D.262608.D.262152.D.134387.D.133096.D.127053._vptr.wxObject
+	movq	%rdx, (%rax)	 # _2, this_5(D)->D.262629.D.262173.D.134408.D.133117.D.127074._vptr.wxObject
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/mdi.h:242:     wxMDIClientWindow() { Init(); }
 	.loc 22 242 31
 	movq	16(%rbp), %rcx	 # this,
@@ -6161,8 +6161,8 @@ _ZN20wxMDIParentFrameBase14OnCreateClientEv:
 	movl	$584, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.270119
-	movq	%rax, %rcx	 # D.270119,
+	movq	%rsi, %rax	 # tmp93, D.270140
+	movq	%rax, %rcx	 # D.270140,
 .LEHB18:
 	call	_Unwind_Resume	 #
 .LEHE18:
@@ -6284,7 +6284,7 @@ _ZN20wxMDIParentFrameBase9TryBeforeER7wxEvent:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:387:         wxMDIChildFrame * const child = GetActiveChild();
 	.loc 21 387 56
 	movq	-48(%rbp), %rax	 # this, tmp109
-	movq	(%rax), %rax	 # this_35(D)->D.261912.D.240879.D.240691.D.239696.D.239607.D.239328.D.238429.D.238372.D.134387.D.133096.D.127053._vptr.wxObject, _7
+	movq	(%rax), %rax	 # this_35(D)->D.261933.D.240900.D.240712.D.239717.D.239628.D.239349.D.238450.D.238393.D.134408.D.133117.D.127074._vptr.wxObject, _7
 	addq	$2120, %rax	 #, _8
 	movq	(%rax), %rax	 # *_8, _9
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:387:         wxMDIChildFrame * const child = GetActiveChild();
@@ -6406,7 +6406,7 @@ _ZN15T100ProjectDataC2Ev:
 	call	_ZN16T100TreeItemDataC2Ev	 #
 	leaq	16+_ZTV15T100ProjectData(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	%rdx, (%rax)	 # _2, this_9(D)->D.147424.D.147370.D.142883._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _2, this_9(D)->D.147445.D.147391.D.142904._vptr.wxClientData
 	movq	16(%rbp), %rax	 # this, tmp95
 	addq	$24, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -6465,7 +6465,7 @@ _ZN15T100ProjectDataC2EP15T100ProjectInfo:
 .LEHE19:
 	leaq	16+_ZTV15T100ProjectData(%rip), %rdx	 #, _2
 	movq	-64(%rbp), %rax	 # this, tmp97
-	movq	%rdx, (%rax)	 # _2, this_12(D)->D.147424.D.147370.D.142883._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _2, this_12(D)->D.147445.D.147391.D.142904._vptr.wxClientData
 	movq	-64(%rbp), %rax	 # this, tmp98
 	addq	$24, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
@@ -6506,8 +6506,8 @@ _ZN15T100ProjectDataC2EP15T100ProjectInfo:
 	movq	-64(%rbp), %rax	 # this, _9
 	movq	%rax, %rcx	 # _9,
 	call	_ZN16T100TreeItemDataD2Ev	 #
-	movq	%rbx, %rax	 # tmp108, D.270122
-	movq	%rax, %rcx	 # D.270122,
+	movq	%rbx, %rax	 # tmp108, D.270143
+	movq	%rax, %rcx	 # D.270143,
 .LEHB21:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6575,7 +6575,7 @@ _ZN15T100ProjectDataD2Ev:
 	.loc 23 19 35
 	leaq	16+_ZTV15T100ProjectData(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_6(D)->D.147424.D.147370.D.142883._vptr.wxClientData
+	movq	%rdx, (%rax)	 # _1, this_6(D)->D.147445.D.147391.D.142904._vptr.wxClientData
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$56, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -7012,8 +7012,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _15,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp141, D.270123
-	movq	%rax, %rcx	 # D.270123,
+	movq	%rsi, %rax	 # tmp141, D.270144
+	movq	%rax, %rcx	 # D.270144,
 .LEHB40:
 	call	_Unwind_Resume	 #
 .L313:
@@ -7023,8 +7023,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _20,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp142, D.270124
-	movq	%rax, %rcx	 # D.270124,
+	movq	%rsi, %rax	 # tmp142, D.270145
+	movq	%rax, %rcx	 # D.270145,
 	call	_Unwind_Resume	 #
 .L314:
 	movq	%rax, %rsi	 #, tmp143
@@ -7033,8 +7033,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _25,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp143, D.270125
-	movq	%rax, %rcx	 # D.270125,
+	movq	%rsi, %rax	 # tmp143, D.270146
+	movq	%rax, %rcx	 # D.270146,
 	call	_Unwind_Resume	 #
 .L316:
 	movq	%rax, %rbx	 #, tmp146
@@ -7052,8 +7052,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	-80(%rbp), %rax	 #, tmp149
 	movq	%rax, %rcx	 # tmp149,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp145, D.270126
-	movq	%rax, %rcx	 # D.270126,
+	movq	%rbx, %rax	 # tmp145, D.270147
+	movq	%rax, %rcx	 # D.270147,
 	call	_Unwind_Resume	 #
 .L318:
 	movq	%rax, %rbx	 #, tmp152
@@ -7071,8 +7071,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	16(%rbp), %rax	 #, tmp155
 	movq	%rax, %rcx	 # tmp155,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp151, D.270127
-	movq	%rax, %rcx	 # D.270127,
+	movq	%rbx, %rax	 # tmp151, D.270148
+	movq	%rax, %rcx	 # D.270148,
 	call	_Unwind_Resume	 #
 .L320:
 	movq	%rax, %rbx	 #, tmp158
@@ -7090,8 +7090,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	112(%rbp), %rax	 #, tmp161
 	movq	%rax, %rcx	 # tmp161,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp157, D.270128
-	movq	%rax, %rcx	 # D.270128,
+	movq	%rbx, %rax	 # tmp157, D.270149
+	movq	%rax, %rcx	 # D.270149,
 	call	_Unwind_Resume	 #
 .L322:
 	movq	%rax, %rbx	 #, tmp164
@@ -7109,8 +7109,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	208(%rbp), %rax	 #, tmp167
 	movq	%rax, %rcx	 # tmp167,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp163, D.270129
-	movq	%rax, %rcx	 # D.270129,
+	movq	%rbx, %rax	 # tmp163, D.270150
+	movq	%rax, %rcx	 # D.270150,
 	call	_Unwind_Resume	 #
 .LEHE40:
 .L323:
@@ -8058,7 +8058,7 @@ _ZN14wxMenuItemListD1Ev:
 	.loc 14 37 1
 	leaq	16+_ZTV14wxMenuItemList(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.140721._vptr.wxListBase
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.140742._vptr.wxListBase
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN10wxListBaseD2Ev	 #
@@ -8148,7 +8148,7 @@ _ZN20wxObjectEventFunctorD1Ev:
 	.loc 10 240 24
 	leaq	16+_ZTV20wxObjectEventFunctor(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.121419._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.121440._vptr.wxEventFunctor
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
@@ -8239,7 +8239,7 @@ _ZN20wxThreadHelperThreadD1Ev:
 	.loc 8 663 24
 	leaq	16+_ZTV20wxThreadHelperThread(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.113042._vptr.wxThread
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.113063._vptr.wxThread
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN8wxThreadD2Ev	 #

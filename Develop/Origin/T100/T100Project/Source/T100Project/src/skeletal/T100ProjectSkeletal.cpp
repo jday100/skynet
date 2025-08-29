@@ -194,7 +194,7 @@ T100VOID T100ProjectSkeletal::OnFileNew()
 {
     T100FileInfo*       info        = T100NEW T100FileInfo();
 
-    info->SetFileName(L"unnamed");
+    info->SetLabel(L"unnamed");
 
     m_view->New(info);
 }

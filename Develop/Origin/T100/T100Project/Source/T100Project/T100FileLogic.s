@@ -975,7 +975,7 @@ _ZN13T100FileLogic6CreateEP12T100FileInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.46224, D.46224
+	movq	%rdx, 24(%rbp)	 # D.46245, D.46245
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:34: }
 	.loc 8 34 1
 	nop	
@@ -1003,7 +1003,7 @@ _ZN13T100FileLogic6RemoveEP12T100FileInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.46228, D.46228
+	movq	%rdx, 24(%rbp)	 # D.46249, D.46249
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:39: }
 	.loc 8 39 1
 	nop	
@@ -1031,7 +1031,7 @@ _ZN13T100FileLogic6RenameEP12T100FileInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.46232, D.46232
+	movq	%rdx, 24(%rbp)	 # D.46253, D.46253
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:44: }
 	.loc 8 44 1
 	nop	
@@ -1152,8 +1152,8 @@ _ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP1
 	leaq	-96(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 	call	_ZN8T100FileD1Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.54049
-	movq	%rax, %rcx	 # D.54049,
+	movq	%rbx, %rax	 # tmp110, D.54070
+	movq	%rax, %rcx	 # D.54070,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -1820,7 +1820,7 @@ _ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4
 	movq	%rcx, %r8	 # tmp112,
 	movq	%rax, %rcx	 # tmp114,
 	call	_ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS5_P12T100FileInfoESaISA_ENSt8__detail10_Select1stESt8equal_toIS5_ESt4hashIS5_ENSC_18_Mod_range_hashingENSC_20_Default_ranged_hashENSC_20_Prime_rehash_policyENSC_17_Hashtable_traitsILb1ELb0ELb1EEEE21_M_insert_unique_nodeEyyPNSC_10_Hash_nodeISA_Lb1EEEy	 #
-	movq	%rax, -40(%rbp)	 # tmp116, D.50918
+	movq	%rax, -40(%rbp)	 # tmp116, D.50939
 	leaq	-40(%rbp), %rax	 #, tmp117
 	movq	%rax, %rcx	 # tmp117,
 	call	_ZNKSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfoELb0ELb1EEptEv	 #
@@ -2454,8 +2454,8 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2087: 	__catch(...)
 	.loc 5 2087 2
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp110, D.54052
-	movq	%rax, %rcx	 # D.54052,
+	movq	%rbx, %rax	 # tmp110, D.54073
+	movq	%rax, %rcx	 # D.54073,
 .LEHB6:
 	call	_Unwind_Resume	 #
 .LEHE6:
@@ -2579,7 +2579,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	addq	$32, %rax	 #, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNKSt8__detail20_Prime_rehash_policy8_M_stateEv	 #
-	movq	%rax, -56(%rbp)	 # _22, D.53826
+	movq	%rax, -56(%rbp)	 # _22, D.53847
 	leaq	-56(%rbp), %rax	 #, tmp106
 	movq	%rax, -40(%rbp)	 # tmp106, __saved_state
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1724:       std::pair<bool, std::size_t> __do_rehash
@@ -2667,7 +2667,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	leaq	-48(%rbp), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZNSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfoELb0ELb1EEC1EPNS_10_Hash_nodeISB_Lb1EEE	 #
-	movq	-48(%rbp), %rax	 # D.51644, D.53830
+	movq	-48(%rbp), %rax	 # D.51665, D.53851
 	jmp	.L105	 #
 .L103:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1743:       __catch(...)
@@ -2690,8 +2690,8 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1743:       __catch(...)
 	.loc 6 1743 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp125, D.54053
-	movq	%rax, %rcx	 # D.54053,
+	movq	%rbx, %rax	 # tmp125, D.54074
+	movq	%rax, %rcx	 # D.54074,
 .LEHB10:
 	call	_Unwind_Resume	 #
 .LEHE10:
@@ -2768,7 +2768,7 @@ _ZNKSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIwSt11char_tra
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:350:       { return this->_M_cur->_M_valptr(); }
 	.loc 5 350 22
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	(%rax), %rax	 # this_4(D)->D.50916._M_cur, _1
+	movq	(%rax), %rax	 # this_4(D)->D.50937._M_cur, _1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:350:       { return this->_M_cur->_M_valptr(); }
 	.loc 5 350 40
 	movq	%rax, %rcx	 # _2,
@@ -2840,7 +2840,7 @@ _ZNKSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIwSt11char_traitsI
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:271:       { return static_cast<_Hash_node*>(this->_M_nxt); }
 	.loc 5 271 53
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.43133.D.43126._M_nxt, _3
+	movq	(%rax), %rax	 # this_2(D)->D.43154.D.43147._M_nxt, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:271:       { return static_cast<_Hash_node*>(this->_M_nxt); }
 	.loc 5 271 56
 	popq	%rbp	 #
@@ -3029,8 +3029,8 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
 	leaq	-89(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZNSaIPNSt8__detail15_Hash_node_baseEED1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.54055
-	movq	%rax, %rcx	 # D.54055,
+	movq	%rbx, %rax	 # tmp97, D.54076
+	movq	%rax, %rcx	 # D.54076,
 .LEHB13:
 	call	_Unwind_Resume	 #
 	nop	
@@ -3127,7 +3127,7 @@ _ZNKSt8__detail15_Hash_code_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESa
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.41161, D.41161
+	movq	%rdx, 24(%rbp)	 # D.41182, D.41182
 	movq	%r8, 32(%rbp)	 # __c, __c
 	movq	%r9, 40(%rbp)	 # __n, __n
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:1392:       { return _M_h2()(__c, __n); }
@@ -3223,7 +3223,7 @@ _ZNKSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIK
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1567: 	  if (!__p->_M_nxt || _M_bucket_index(__p->_M_next()) != __n)
 	.loc 6 1567 14
 	movq	-16(%rbp), %rax	 # __p, tmp105
-	movq	(%rax), %rax	 # __p_8->D.43133.D.43126._M_nxt, _4
+	movq	(%rax), %rax	 # __p_8->D.43154.D.43147._M_nxt, _4
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1567: 	  if (!__p->_M_nxt || _M_bucket_index(__p->_M_next()) != __n)
 	.loc 6 1567 21
 	testq	%rax, %rax	 # _4
@@ -3536,7 +3536,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2086: 	  _M_rehash_aux(__n, __unique_keys());
 	.loc 6 2086 4
 	movq	-40(%rbp), %rax	 # __n, tmp92
-	movl	%r9d, %r8d	 # D.53842,
+	movl	%r9d, %r8d	 # D.53863,
 	movq	%rax, %rdx	 # tmp92,
 	movq	-48(%rbp), %rcx	 # this,
 .LEHB14:
@@ -3568,8 +3568,8 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2088:       __catch(...)
 	.loc 6 2088 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp96, D.54056
-	movq	%rax, %rcx	 # D.54056,
+	movq	%rbx, %rax	 # tmp96, D.54077
+	movq	%rax, %rcx	 # D.54077,
 .LEHB16:
 	call	_Unwind_Resume	 #
 	nop	
@@ -3787,7 +3787,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1587: 	  __node->_M_nxt = _M_buckets[__bkt]->_M_nxt;
 	.loc 6 1587 4
 	movq	-48(%rbp), %rax	 # __node, tmp115
-	movq	%rdx, (%rax)	 # _9, __node_30(D)->D.43133.D.43126._M_nxt
+	movq	%rdx, (%rax)	 # _9, __node_30(D)->D.43154.D.43147._M_nxt
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1588: 	  _M_buckets[__bkt]->_M_nxt = __node;
 	.loc 6 1588 4
 	movq	-64(%rbp), %rax	 # this, tmp116
@@ -3813,7 +3813,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1595: 	  __node->_M_nxt = _M_before_begin._M_nxt;
 	.loc 6 1595 4
 	movq	-48(%rbp), %rax	 # __node, tmp120
-	movq	%rdx, (%rax)	 # _14, __node_30(D)->D.43133.D.43126._M_nxt
+	movq	%rdx, (%rax)	 # _14, __node_30(D)->D.43154.D.43147._M_nxt
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1596: 	  _M_before_begin._M_nxt = __node;
 	.loc 6 1596 4
 	movq	-64(%rbp), %rax	 # this, tmp121
@@ -3822,7 +3822,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1597: 	  if (__node->_M_nxt)
 	.loc 6 1597 16
 	movq	-48(%rbp), %rax	 # __node, tmp123
-	movq	(%rax), %rax	 # __node_30(D)->D.43133.D.43126._M_nxt, _15
+	movq	(%rax), %rax	 # __node_30(D)->D.43154.D.43147._M_nxt, _15
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1597: 	  if (__node->_M_nxt)
 	.loc 6 1597 4
 	testq	%rax, %rax	 # _15
@@ -4044,7 +4044,7 @@ _ZNSaIPNSt8__detail15_Hash_node_baseEEC1INS_10_Hash_nodeISt4pairIKNSt7__cxx1112b
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.52891, D.52891
+	movq	%rdx, 24(%rbp)	 # D.52912, D.52912
 .LBB25:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocator.h:137: 	allocator(const allocator<_Tp1>&) throw() { }
 	.loc 9 137 44
@@ -4357,7 +4357,7 @@ _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basi
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __n, __n
-	movq	%r8, 32(%rbp)	 # D.41803, D.41803
+	movq	%r8, 32(%rbp)	 # D.41824, D.41824
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 10 101 10
 	movq	16(%rbp), %rcx	 # this,
@@ -4445,12 +4445,12 @@ _ZNSt5tupleIJRKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEC1EOS8_:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.50583, D.50583
+	movq	%rdx, 24(%rbp)	 # D.50604, D.50604
 .LBB27:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tuple:662:       constexpr tuple(tuple&&) = default;
 	.loc 11 662 17
 	movq	16(%rbp), %rax	 # this, _1
-	movq	24(%rbp), %rdx	 # D.50583, _2
+	movq	24(%rbp), %rdx	 # D.50604, _2
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt11_Tuple_implILy0EJRKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEC2EOS8_	 #
 .LBE27:
@@ -4527,8 +4527,8 @@ _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basi
 	movl	$40, %ecx	 #,
 	call	_ZnwyPv	 #
 	movq	%rax, %rdi	 #, _16
-	movzbl	-65(%rbp), %edx	 # D.53263, tmp100
-	movzbl	-81(%rbp), %eax	 # D.53261, tmp101
+	movzbl	-65(%rbp), %edx	 # D.53284, tmp100
+	movzbl	-81(%rbp), %eax	 # D.53282, tmp101
 	movl	%edx, %r9d	 # tmp100,
 	movq	%rsi, %r8	 # _10,
 	movl	%eax, %edx	 # tmp101,
@@ -4546,8 +4546,8 @@ _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basi
 	movq	%rbx, %rdx	 # _14,
 	movq	%rdi, %rcx	 # _16,
 	call	_ZdlPvS_	 #
-	movq	%rsi, %rax	 # tmp102, D.54057
-	movq	%rax, %rcx	 # D.54057,
+	movq	%rsi, %rax	 # tmp102, D.54078
+	movq	%rax, %rcx	 # D.54078,
 .LEHB18:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4610,7 +4610,7 @@ _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basi
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __p, __p
-	movq	%r8, 32(%rbp)	 # D.41807, D.41807
+	movq	%r8, 32(%rbp)	 # D.41828, D.41828
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	.loc 10 125 19
 	movq	24(%rbp), %rax	 # __p, tmp87
@@ -4649,7 +4649,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __n, __n
-	movb	%r8b, 32(%rbp)	 # D.44460, D.44460
+	movb	%r8b, 32(%rbp)	 # D.44481, D.44481
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2107:       __bucket_type* __new_buckets = _M_allocate_buckets(__n);
 	.loc 6 2107 22
 	movq	24(%rbp), %rax	 # __n, tmp105
@@ -4708,7 +4708,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2117: 	      __p->_M_nxt = _M_before_begin._M_nxt;
 	.loc 6 2117 8
 	movq	-8(%rbp), %rax	 # __p, tmp116
-	movq	%rdx, (%rax)	 # _4, __p_18->D.43133.D.43126._M_nxt
+	movq	%rdx, (%rax)	 # _4, __p_18->D.43154.D.43147._M_nxt
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2118: 	      _M_before_begin._M_nxt = __p;
 	.loc 6 2118 8
 	movq	16(%rbp), %rax	 # this, tmp117
@@ -4730,7 +4730,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2120: 	      if (__p->_M_nxt)
 	.loc 6 2120 17
 	movq	-8(%rbp), %rax	 # __p, tmp122
-	movq	(%rax), %rax	 # __p_18->D.43133.D.43126._M_nxt, _8
+	movq	(%rax), %rax	 # __p_18->D.43154.D.43147._M_nxt, _8
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2120: 	      if (__p->_M_nxt)
 	.loc 6 2120 8
 	testq	%rax, %rax	 # _8
@@ -4765,7 +4765,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2126: 	      __p->_M_nxt = __new_buckets[__bkt]->_M_nxt;
 	.loc 6 2126 8
 	movq	-8(%rbp), %rax	 # __p, tmp129
-	movq	%rdx, (%rax)	 # _14, __p_18->D.43133.D.43126._M_nxt
+	movq	%rdx, (%rax)	 # _14, __p_18->D.43154.D.43147._M_nxt
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2127: 	      __new_buckets[__bkt]->_M_nxt = __p;
 	.loc 6 2127 21
 	movq	-40(%rbp), %rax	 # __bkt, tmp130
@@ -5138,7 +5138,7 @@ _ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE10deallocateEPS3_y:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __p, __p
-	movq	%r8, 32(%rbp)	 # D.52770, D.52770
+	movq	%r8, 32(%rbp)	 # D.52791, D.52791
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	.loc 10 125 19
 	movq	24(%rbp), %rax	 # __p, tmp87
@@ -5610,7 +5610,7 @@ _ZNSt4pairIKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfoE
 	.seh_stackalloc	48
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movb	%dl, 24(%rbp)	 # D.53089, D.53089
+	movb	%dl, 24(%rbp)	 # D.53110, D.53110
 	movq	%r8, 24(%rbp)	 # __first, __first
 	movb	%r9b, 32(%rbp)	 # __second, __second
 .LBB32:
@@ -5618,7 +5618,7 @@ _ZNSt4pairIKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfoE
 	.loc 11 1657 63
 	leaq	32(%rbp), %rdx	 #, tmp89
 	movq	24(%rbp), %rax	 # __first, tmp90
-	movl	%r10d, %r9d	 # D.53774,
+	movl	%r10d, %r9d	 # D.53795,
 	movq	%rdx, %r8	 # tmp89,
 	movq	%rax, %rdx	 # tmp90,
 	movq	16(%rbp), %rcx	 # this,
@@ -5985,7 +5985,7 @@ _ZNSt4pairIKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfoE
 	movq	%rcx, -64(%rbp)	 # this, this
 	movq	%rdx, -56(%rbp)	 # __tuple1, __tuple1
 	movq	%r8, -48(%rbp)	 # __tuple2, __tuple2
-	movb	%r9b, -40(%rbp)	 # D.53473, D.53473
+	movb	%r9b, -40(%rbp)	 # D.53494, D.53494
 .LBB33:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/tuple:1668:         second(std::forward<_Args2>(std::get<_Indexes2>(__tuple2))...)
 	.loc 11 1668 70
@@ -6126,8 +6126,8 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
 	leaq	-81(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZNSaIPNSt8__detail15_Hash_node_baseEED1Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.54058
-	movq	%rax, %rcx	 # D.54058,
+	movq	%rbx, %rax	 # tmp107, D.54079
+	movq	%rax, %rcx	 # D.54079,
 .LEHB20:
 	call	_Unwind_Resume	 #
 .LEHE20:
@@ -6306,7 +6306,7 @@ _ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8allocateEyPKv:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __n, __n
-	movq	%r8, 32(%rbp)	 # D.52766, D.52766
+	movq	%r8, 32(%rbp)	 # D.52787, D.52787
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 10 101 10
 	movq	16(%rbp), %rcx	 # this,

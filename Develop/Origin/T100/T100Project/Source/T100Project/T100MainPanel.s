@@ -2619,7 +2619,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 12 337 27
-	movq	-8(%rbp), %rax	 # D.127070, D.154716
+	movq	-8(%rbp), %rax	 # D.127070, D.154737
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 12 338 5
 	addq	$48, %rsp	 #,
@@ -2850,7 +2850,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 78
-	movq	-8(%rbp), %rax	 # D.127104, D.154738
+	movq	-8(%rbp), %rax	 # D.127104, D.154759
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 81
 	addq	$48, %rsp	 #,
@@ -2898,7 +2898,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 78
-	movq	-8(%rbp), %rax	 # D.127106, D.154735
+	movq	-8(%rbp), %rax	 # D.127106, D.154756
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 81
 	addq	$48, %rsp	 #,
@@ -3085,7 +3085,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 12 532 77
-	movq	-72(%rbp), %rax	 # D.127148, D.154711
+	movq	-72(%rbp), %rax	 # D.127148, D.154732
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 12 533 5
 	addq	$72, %rsp	 #,
@@ -4018,7 +4018,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.154600
+	movq	(%rax), %rax	 # wxDefaultSize, D.154621
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 72
 	popq	%rbp	 #
@@ -4196,8 +4196,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.155383
-	movq	%rax, %rcx	 # D.155383,
+	movq	%rbx, %rax	 # tmp97, D.155404
+	movq	%rax, %rcx	 # D.155404,
 .LEHB2:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4901,8 +4901,8 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	leaq	-96(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.155388
-	movq	%rax, %rcx	 # D.155388,
+	movq	%rbx, %rax	 # tmp97, D.155409
+	movq	%rax, %rcx	 # D.155409,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5009,8 +5009,8 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.155390
-	movq	%rax, %rcx	 # D.155390,
+	movq	%rbx, %rax	 # tmp98, D.155411
+	movq	%rax, %rcx	 # D.155411,
 .LEHB8:
 	call	_Unwind_Resume	 #
 .LEHE8:
@@ -5139,8 +5139,8 @@ _ZN9wxControlC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxControlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.155394
-	movq	%rax, %rcx	 # D.155394,
+	movq	%rbx, %rax	 # tmp96, D.155415
+	movq	%rax, %rcx	 # D.155415,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5847,8 +5847,8 @@ _ZN14wxBookCtrlBaseC2Ev:
 	movq	-64(%rbp), %rax	 # this, _8
 	movq	%rax, %rcx	 # _8,
 	call	_ZN9wxControlD2Ev	 #
-	movq	%rbx, %rax	 # tmp108, D.155398
-	movq	%rax, %rcx	 # D.155398,
+	movq	%rbx, %rax	 # tmp108, D.155419
+	movq	%rax, %rcx	 # D.155419,
 .LEHB15:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7190,8 +7190,8 @@ _ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	movq	-48(%rbp), %rax	 # this, _13
 	movq	%rax, %rcx	 # _13,
 	call	_ZN19wxNavigationEnabledI14wxBookCtrlBaseED2Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.155407
-	movq	%rax, %rcx	 # D.155407,
+	movq	%rbx, %rax	 # tmp127, D.155428
+	movq	%rax, %rcx	 # D.155428,
 .LEHB20:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7541,10 +7541,10 @@ _ZN13T100MainPanelC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	call	_ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel	 #
 	leaq	16+_ZTV13T100MainPanel(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp96
-	movq	%rdx, (%rax)	 # _2, this_6(D)->D.147758.D.137027.D.136733.D.135328.D.134108.D.133948.D.128254.D.126981.D.122214._vptr.wxObject
+	movq	%rdx, (%rax)	 # _2, this_6(D)->D.147779.D.137027.D.136733.D.135328.D.134108.D.133948.D.128254.D.126981.D.122214._vptr.wxObject
 	leaq	2120+_ZTV13T100MainPanel(%rip), %rdx	 #, _3
 	movq	16(%rbp), %rax	 # this, tmp97
-	movq	%rdx, 648(%rax)	 # _3, this_6(D)->D.147758.D.137027.D.136733.D.135329._vptr.wxWithImages
+	movq	%rdx, 648(%rax)	 # _3, this_6(D)->D.147779.D.137027.D.136733.D.135329._vptr.wxWithImages
 	movq	16(%rbp), %rax	 # this, tmp98
 	movq	$0, 1464(%rax)	 #, this_6(D)->m_current
 .LBE46:
@@ -7586,10 +7586,10 @@ _ZN13T100MainPanelD2Ev:
 	.loc 22 22 31
 	leaq	16+_ZTV13T100MainPanel(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _1, this_5(D)->D.147758.D.137027.D.136733.D.135328.D.134108.D.133948.D.128254.D.126981.D.122214._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_5(D)->D.147779.D.137027.D.136733.D.135328.D.134108.D.133948.D.128254.D.126981.D.122214._vptr.wxObject
 	leaq	2120+_ZTV13T100MainPanel(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, 648(%rax)	 # _2, this_5(D)->D.147758.D.137027.D.136733.D.135329._vptr.wxWithImages
+	movq	%rdx, 648(%rax)	 # _2, this_5(D)->D.147779.D.137027.D.136733.D.135329._vptr.wxWithImages
 	movq	16(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN13wxAuiNotebookD2Ev	 #
@@ -7772,167 +7772,164 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 .LEHB21:
 	call	_Znwy	 #
 .LEHE21:
-	movq	%rax, %rbx	 # tmp99, _14
+	movq	%rax, %rbx	 # tmp98, _13
 	movq	32(%rbp), %rax	 # this, _1
 	movq	%rax, %rdx	 # _1,
-	movq	%rbx, %rcx	 # _14,
+	movq	%rbx, %rcx	 # _13,
 .LEHB22:
 	call	_ZN14T100EditorPackC1EP8wxWindow	 #
 .LEHE22:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:42:     T100EditorPack*     pack    = T100NEW T100EditorPack(this);
 	.loc 22 42 62 is_stmt 0 discriminator 3
-	movq	%rbx, -8(%rbp)	 # _14, pack
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:44:     T100WSTRING         path    = info->GetPath();
+	movq	%rbx, -8(%rbp)	 # _13, pack
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:44:     T100WSTRING         file    = info->GetFile();
 	.loc 22 44 49 is_stmt 1 discriminator 3
-	movq	40(%rbp), %rax	 # info, tmp100
-	movq	%rax, %rcx	 # tmp100,
+	movq	40(%rbp), %rax	 # info, tmp99
+	movq	%rax, %rcx	 # tmp99,
 .LEHB23:
-	call	_ZN12T100FileInfo7GetPathB5cxx11Ev	 #
+	call	_ZN12T100FileInfo7GetFileB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _2
-	leaq	-144(%rbp), %rax	 #, tmp101
-	movq	%rax, %rcx	 # tmp101,
+	leaq	-144(%rbp), %rax	 #, tmp100
+	movq	%rax, %rcx	 # tmp100,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_	 #
 .LEHE23:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:46:     if(!path.empty()){
-	.loc 22 46 19 discriminator 3
-	leaq	-144(%rbp), %rax	 #, tmp102
-	movq	%rax, %rcx	 # tmp102,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:46:     if(file.empty()){
+	.loc 22 46 18 discriminator 3
+	leaq	-144(%rbp), %rax	 #, tmp101
+	movq	%rax, %rcx	 # tmp101,
 	call	_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5emptyEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:46:     if(!path.empty()){
-	.loc 22 46 8 discriminator 3
-	xorl	$1, %eax	 #, retval.36_24
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:46:     if(!path.empty()){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:46:     if(file.empty()){
 	.loc 22 46 5 discriminator 3
-	testb	%al, %al	 # retval.36_24
-	je	.L330	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:47:         pack->GetEditor()->LoadFile(path);
-	.loc 22 47 24
-	movq	-8(%rbp), %rax	 # pack, tmp103
-	movq	%rax, %rcx	 # tmp103,
+	testb	%al, %al	 # retval.36_23
+	jne	.L330	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:49:         pack->GetEditor()->LoadFile(file);
+	.loc 22 49 24
+	movq	-8(%rbp), %rax	 # pack, tmp102
+	movq	%rax, %rcx	 # tmp102,
 .LEHB24:
 	call	_ZN14T100EditorPack9GetEditorEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:47:         pack->GetEditor()->LoadFile(path);
-	.loc 22 47 36
-	leaq	648(%rax), %rbx	 #, _5
-	leaq	-144(%rbp), %rdx	 #, tmp104
-	leaq	-112(%rbp), %rax	 #, tmp105
-	movq	%rax, %rcx	 # tmp105,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:49:         pack->GetEditor()->LoadFile(file);
+	.loc 22 49 36
+	leaq	648(%rax), %rbx	 #, _4
+	leaq	-144(%rbp), %rdx	 #, tmp103
+	leaq	-112(%rbp), %rax	 #, tmp104
+	movq	%rax, %rcx	 # tmp104,
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE24:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:47:         pack->GetEditor()->LoadFile(path);
-	.loc 22 47 36 is_stmt 0 discriminator 2
-	leaq	-112(%rbp), %rax	 #, tmp106
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:49:         pack->GetEditor()->LoadFile(file);
+	.loc 22 49 36 is_stmt 0 discriminator 2
+	leaq	-112(%rbp), %rax	 #, tmp105
 	movl	$0, %r8d	 #,
-	movq	%rax, %rdx	 # tmp106,
-	movq	%rbx, %rcx	 # _5,
+	movq	%rax, %rdx	 # tmp105,
+	movq	%rbx, %rcx	 # _4,
 .LEHB25:
 	call	_ZN14wxTextAreaBase8LoadFileERK8wxStringi	 #
 .LEHE25:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:47:         pack->GetEditor()->LoadFile(path);
-	.loc 22 47 36 discriminator 4
-	leaq	-112(%rbp), %rax	 #, tmp107
-	movq	%rax, %rcx	 # tmp107,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:49:         pack->GetEditor()->LoadFile(file);
+	.loc 22 49 36 discriminator 4
+	leaq	-112(%rbp), %rax	 #, tmp106
+	movq	%rax, %rcx	 # tmp106,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:48:         pack->GetEditor()->SetPath(path);
-	.loc 22 48 35 is_stmt 1 discriminator 4
-	movq	-8(%rbp), %rax	 # pack, tmp108
-	movq	%rax, %rcx	 # tmp108,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:50:         pack->GetEditor()->SetPath(file);
+	.loc 22 50 35 is_stmt 1 discriminator 4
+	movq	-8(%rbp), %rax	 # pack, tmp107
+	movq	%rax, %rcx	 # tmp107,
 .LEHB26:
 	call	_ZN14T100EditorPack9GetEditorEv	 #
-	movq	%rax, %rcx	 #, _6
-	leaq	-144(%rbp), %rax	 #, tmp109
-	movq	%rax, %rdx	 # tmp109,
+	movq	%rax, %rcx	 #, _5
+	leaq	-144(%rbp), %rax	 #, tmp108
+	movq	%rax, %rdx	 # tmp108,
 	call	_ZN10T100Editor7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .L330:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:51:     AddPage(pack, info->GetFileName());
-	.loc 22 51 12
-	movq	32(%rbp), %rbx	 # this, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:51:     AddPage(pack, info->GetFileName());
-	.loc 22 51 37
-	movq	40(%rbp), %rax	 # info, tmp110
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:53:     AddPage(pack, info->GetLabel());
+	.loc 22 53 12
+	movq	32(%rbp), %rbx	 # this, _6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:53:     AddPage(pack, info->GetLabel());
+	.loc 22 53 34
+	movq	40(%rbp), %rax	 # info, tmp109
+	movq	%rax, %rcx	 # tmp109,
+	call	_ZN12T100FileInfo8GetLabelB5cxx11Ev	 #
+	movq	%rax, %rdx	 #, _7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:53:     AddPage(pack, info->GetLabel());
+	.loc 22 53 12
+	leaq	-64(%rbp), %rax	 #, tmp110
 	movq	%rax, %rcx	 # tmp110,
-	call	_ZN12T100FileInfo11GetFileNameB5cxx11Ev	 #
-	movq	%rax, %rdx	 #, _8
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:51:     AddPage(pack, info->GetFileName());
-	.loc 22 51 12
-	leaq	-64(%rbp), %rax	 #, tmp111
-	movq	%rax, %rcx	 # tmp111,
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE26:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:51:     AddPage(pack, info->GetFileName());
-	.loc 22 51 12 is_stmt 0 discriminator 2
-	leaq	-64(%rbp), %rdx	 #, tmp112
-	movq	-8(%rbp), %rax	 # pack, tmp113
-	movq	.refptr.wxNullBitmap(%rip), %rcx	 #, tmp114
-	movq	%rcx, 32(%rsp)	 # tmp114,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:53:     AddPage(pack, info->GetLabel());
+	.loc 22 53 12 is_stmt 0 discriminator 2
+	leaq	-64(%rbp), %rdx	 #, tmp111
+	movq	-8(%rbp), %rax	 # pack, tmp112
+	movq	.refptr.wxNullBitmap(%rip), %rcx	 #, tmp113
+	movq	%rcx, 32(%rsp)	 # tmp113,
 	movl	$0, %r9d	 #,
-	movq	%rdx, %r8	 # tmp112,
-	movq	%rax, %rdx	 # tmp113,
-	movq	%rbx, %rcx	 # _7,
+	movq	%rdx, %r8	 # tmp111,
+	movq	%rax, %rdx	 # tmp112,
+	movq	%rbx, %rcx	 # _6,
 .LEHB27:
 	call	_ZN13wxAuiNotebook7AddPageEP8wxWindowRK8wxStringbRK8wxBitmap	 #
 .LEHE27:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:51:     AddPage(pack, info->GetFileName());
-	.loc 22 51 12 discriminator 4
-	leaq	-64(%rbp), %rax	 #, tmp115
-	movq	%rax, %rcx	 # tmp115,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:53:     AddPage(pack, info->GetLabel());
+	.loc 22 53 12 discriminator 4
+	leaq	-64(%rbp), %rax	 #, tmp114
+	movq	%rax, %rcx	 # tmp114,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:53:     m_current   = pack;
-	.loc 22 53 17 is_stmt 1 discriminator 4
-	movq	32(%rbp), %rax	 # this, tmp116
-	movq	-8(%rbp), %rdx	 # pack, tmp117
-	movq	%rdx, 1464(%rax)	 # tmp117, this_16(D)->m_current
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:44:     T100WSTRING         path    = info->GetPath();
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:55:     m_current   = pack;
+	.loc 22 55 17 is_stmt 1 discriminator 4
+	movq	32(%rbp), %rax	 # this, tmp115
+	movq	-8(%rbp), %rdx	 # pack, tmp116
+	movq	%rdx, 1464(%rax)	 # tmp116, this_15(D)->m_current
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:44:     T100WSTRING         file    = info->GetFile();
 	.loc 22 44 49 discriminator 4
-	leaq	-144(%rbp), %rax	 #, tmp118
-	movq	%rax, %rcx	 # tmp118,
+	leaq	-144(%rbp), %rax	 #, tmp117
+	movq	%rax, %rcx	 # tmp117,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:54: }
-	.loc 22 54 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:56: }
+	.loc 22 56 1 discriminator 4
 	jmp	.L339	 #
 .L335:
-	movq	%rax, %rsi	 #, tmp119
+	movq	%rax, %rsi	 #, tmp118
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:42:     T100EditorPack*     pack    = T100NEW T100EditorPack(this);
 	.loc 22 42 62
 	movl	$616, %edx	 #,
-	movq	%rbx, %rcx	 # _14,
+	movq	%rbx, %rcx	 # _13,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp119, D.155411
-	movq	%rax, %rcx	 # D.155411,
+	movq	%rsi, %rax	 # tmp118, D.155432
+	movq	%rax, %rcx	 # D.155432,
 .LEHB28:
 	call	_Unwind_Resume	 #
 .L337:
-	movq	%rax, %rbx	 #, tmp122
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:47:         pack->GetEditor()->LoadFile(path);
-	.loc 22 47 36
-	leaq	-112(%rbp), %rax	 #, tmp120
-	movq	%rax, %rcx	 # tmp120,
+	movq	%rax, %rbx	 #, tmp121
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:49:         pack->GetEditor()->LoadFile(file);
+	.loc 22 49 36
+	leaq	-112(%rbp), %rax	 #, tmp119
+	movq	%rax, %rcx	 # tmp119,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L333	 #
 .L338:
-	movq	%rax, %rbx	 #, tmp126
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:51:     AddPage(pack, info->GetFileName());
-	.loc 22 51 12
-	leaq	-64(%rbp), %rax	 #, tmp125
-	movq	%rax, %rcx	 # tmp125,
+	movq	%rax, %rbx	 #, tmp125
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:53:     AddPage(pack, info->GetLabel());
+	.loc 22 53 12
+	leaq	-64(%rbp), %rax	 #, tmp124
+	movq	%rax, %rcx	 # tmp124,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L333	 #
 .L336:
-	movq	%rax, %rbx	 #, tmp121
+	movq	%rax, %rbx	 #, tmp120
 .L333:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:44:     T100WSTRING         path    = info->GetPath();
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:44:     T100WSTRING         file    = info->GetFile();
 	.loc 22 44 49
-	leaq	-144(%rbp), %rax	 #, tmp128
-	movq	%rax, %rcx	 # tmp128,
+	leaq	-144(%rbp), %rax	 #, tmp127
+	movq	%rax, %rcx	 # tmp127,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp121, D.155412
-	movq	%rax, %rcx	 # D.155412,
+	movq	%rbx, %rax	 # tmp120, D.155433
+	movq	%rax, %rcx	 # D.155433,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE28:
 .L339:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:54: }
-	.loc 22 54 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:56: }
+	.loc 22 56 1
 	addq	$192, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -7993,7 +7990,7 @@ _ZN13T100MainPanel6CreateEP12T100FileInfo:
 	.seh_proc	_ZN13T100MainPanel5ClearEv
 _ZN13T100MainPanel5ClearEv:
 .LFB12552:
-	.loc 22 57 1
+	.loc 22 59 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8006,13 +8003,13 @@ _ZN13T100MainPanel5ClearEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:58:     wxAuiNotebook::DeleteAllPages();
-	.loc 22 58 34
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:60:     wxAuiNotebook::DeleteAllPages();
+	.loc 22 60 34
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZN13wxAuiNotebook14DeleteAllPagesEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:59: }
-	.loc 22 59 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:61: }
+	.loc 22 61 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -8028,7 +8025,7 @@ _ZN13T100MainPanel5ClearEv:
 	.seh_proc	_ZN13T100MainPanel4SaveEv
 _ZN13T100MainPanel4SaveEv:
 .LFB12553:
-	.loc 22 62 1
+	.loc 22 64 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8046,34 +8043,34 @@ _ZN13T100MainPanel4SaveEv:
 	.cfi_def_cfa 6, 0
 	.seh_endprologue
 	movq	%rcx, 0(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:63:     T100BOOL        result      = T100FALSE;
-	.loc 22 63 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:65:     T100BOOL        result      = T100FALSE;
+	.loc 22 65 21
 	movb	$0, -33(%rbp)	 #, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:65:     if(m_current){
-	.loc 22 65 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:67:     if(m_current){
+	.loc 22 67 8
 	movq	0(%rbp), %rax	 # this, tmp94
 	movq	1464(%rax), %rax	 # this_9(D)->m_current, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:65:     if(m_current){
-	.loc 22 65 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:67:     if(m_current){
+	.loc 22 67 5
 	testq	%rax, %rax	 # _1
 	je	.L345	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:66:         result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
-	.loc 22 66 35
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
+	.loc 22 68 35
 	movq	0(%rbp), %rcx	 # this,
 .LEHB29:
 	call	_ZN13T100MainPanel16GetCurrentEditorEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:66:         result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
-	.loc 22 66 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
+	.loc 22 68 47
 	leaq	648(%rax), %rbx	 #, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:66:         result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
-	.loc 22 66 76
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
+	.loc 22 68 76
 	movq	0(%rbp), %rcx	 # this,
 	call	_ZN13T100MainPanel16GetCurrentEditorEv	 #
 	movq	%rax, %rcx	 # _4,
 	call	_ZN10T100Editor7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _5
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:66:         result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
-	.loc 22 66 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
+	.loc 22 68 47
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
@@ -8089,24 +8086,24 @@ _ZN13T100MainPanel4SaveEv:
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68: }
-	.loc 22 68 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:70: }
+	.loc 22 70 1
 	jmp	.L345	 #
 .L344:
 	movq	%rax, %rbx	 #, tmp99
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:66:         result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
-	.loc 22 66 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68:         result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
+	.loc 22 68 47
 	leaq	-96(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.155414
-	movq	%rax, %rcx	 # D.155414,
+	movq	%rbx, %rax	 # tmp99, D.155435
+	movq	%rax, %rcx	 # D.155435,
 .LEHB31:
 	call	_Unwind_Resume	 #
 .LEHE31:
 .L345:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:68: }
-	.loc 22 68 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:70: }
+	.loc 22 70 1
 	nop	
 	addq	$104, %rsp	 #,
 	popq	%rbx	 #
@@ -8146,7 +8143,7 @@ _ZN13T100MainPanel4SaveEv:
 	.seh_proc	_ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent
 _ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent:
 .LFB12554:
-	.loc 22 71 1
+	.loc 22 73 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8160,20 +8157,20 @@ _ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:72:     T100EditorPack*     pack        = T100NULL;
-	.loc 22 72 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:74:     T100EditorPack*     pack        = T100NULL;
+	.loc 22 74 25
 	movq	$0, -8(%rbp)	 #, pack
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:74:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 74 53
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:76:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 76 53
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNK14wxBookCtrlBase14GetCurrentPageEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:74:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 74 15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:76:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 76 15
 	testq	%rax, %rax	 # _7
 	je	.L347	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:74:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 74 55 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:76:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 76 55 discriminator 1
 	movl	$0, %r9d	 #,
 	leaq	_ZTI8T100Pack(%rip), %r8	 #,
 	leaq	_ZTI8wxWindow(%rip), %rdx	 #,
@@ -8181,23 +8178,23 @@ _ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent:
 	call	__dynamic_cast	 #
 	jmp	.L348	 #
 .L347:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:74:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 74 15 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:76:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 76 15 discriminator 2
 	movl	$0, %eax	 #, iftmp.37_2
 .L348:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:74:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 74 13 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:76:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 76 13 discriminator 4
 	movq	%rax, -8(%rbp)	 # iftmp.37_2, pack
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:76:     m_current   = pack;
-	.loc 22 76 17 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:78:     m_current   = pack;
+	.loc 22 78 17 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp90
 	movq	-8(%rbp), %rdx	 # pack, tmp91
 	movq	%rdx, 1464(%rax)	 # tmp91, this_4(D)->m_current
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:78:     T100ProjectInvoking::OnPageChanged();
-	.loc 22 78 39 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:80:     T100ProjectInvoking::OnPageChanged();
+	.loc 22 80 39 discriminator 4
 	call	_ZN19T100ProjectInvoking13OnPageChangedEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:79: }
-	.loc 22 79 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:81: }
+	.loc 22 81 1 discriminator 4
 	nop	
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
@@ -8213,7 +8210,7 @@ _ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent:
 	.seh_proc	_ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent
 _ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent:
 .LFB12555:
-	.loc 22 82 1
+	.loc 22 84 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8227,20 +8224,20 @@ _ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:83:     T100Pack*       pack        = T100NULL;
-	.loc 22 83 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:85:     T100Pack*       pack        = T100NULL;
+	.loc 22 85 21
 	movq	$0, -8(%rbp)	 #, pack
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:85:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 85 53
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:87:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 87 53
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNK14wxBookCtrlBase14GetCurrentPageEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:85:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 85 15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:87:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 87 15
 	testq	%rax, %rax	 # _7
 	je	.L350	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:85:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 85 55 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:87:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 87 55 discriminator 1
 	movl	$0, %r9d	 #,
 	leaq	_ZTI8T100Pack(%rip), %r8	 #,
 	leaq	_ZTI8wxWindow(%rip), %rdx	 #,
@@ -8248,20 +8245,20 @@ _ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent:
 	call	__dynamic_cast	 #
 	jmp	.L351	 #
 .L350:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:85:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 85 15 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:87:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 87 15 discriminator 2
 	movl	$0, %eax	 #, iftmp.39_2
 .L351:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:85:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 85 13 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:87:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 87 13 discriminator 4
 	movq	%rax, -8(%rbp)	 # iftmp.39_2, pack
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:87:     T100ProjectInvoking::OnPageClosing(pack);
-	.loc 22 87 39 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:89:     T100ProjectInvoking::OnPageClosing(pack);
+	.loc 22 89 39 discriminator 4
 	movq	-8(%rbp), %rax	 # pack, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN19T100ProjectInvoking13OnPageClosingEP8T100Pack	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:88: }
-	.loc 22 88 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:90: }
+	.loc 22 90 1 discriminator 4
 	nop	
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
@@ -8277,7 +8274,7 @@ _ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent:
 	.seh_proc	_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent
 _ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent:
 .LFB12556:
-	.loc 22 91 1
+	.loc 22 93 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8291,20 +8288,20 @@ _ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:92:     T100Pack*       pack        = T100NULL;
-	.loc 22 92 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:94:     T100Pack*       pack        = T100NULL;
+	.loc 22 94 21
 	movq	$0, -8(%rbp)	 #, pack
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:94:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 94 53
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:96:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 96 53
 	movq	16(%rbp), %rax	 # this, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNK14wxBookCtrlBase14GetCurrentPageEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:94:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 94 15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:96:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 96 15
 	testq	%rax, %rax	 # _8
 	je	.L353	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:94:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 94 55 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:96:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 96 55 discriminator 1
 	movl	$0, %r9d	 #,
 	leaq	_ZTI8T100Pack(%rip), %r8	 #,
 	leaq	_ZTI8wxWindow(%rip), %rdx	 #,
@@ -8312,29 +8309,29 @@ _ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent:
 	call	__dynamic_cast	 #
 	jmp	.L354	 #
 .L353:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:94:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 94 15 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:96:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 96 15 discriminator 2
 	movl	$0, %eax	 #, iftmp.40_2
 .L354:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:94:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
-	.loc 22 94 13 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:96:     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+	.loc 22 96 13 discriminator 4
 	movq	%rax, -8(%rbp)	 # iftmp.40_2, pack
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:96:     if(pack){
-	.loc 22 96 5 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:98:     if(pack){
+	.loc 22 98 5 discriminator 4
 	cmpq	$0, -8(%rbp)	 #, pack
 	jne	.L355	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:99:         m_current   = T100NULL;
-	.loc 22 99 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:101:         m_current   = T100NULL;
+	.loc 22 101 21
 	movq	16(%rbp), %rax	 # this, tmp90
 	movq	$0, 1464(%rax)	 #, this_5(D)->m_current
 .L355:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:102:     T100ProjectInvoking::OnPageClosed(pack);
-	.loc 22 102 38
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:104:     T100ProjectInvoking::OnPageClosed(pack);
+	.loc 22 104 38
 	movq	-8(%rbp), %rax	 # pack, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN19T100ProjectInvoking12OnPageClosedEP8T100Pack	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:103: }
-	.loc 22 103 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:105: }
+	.loc 22 105 1
 	nop	
 	addq	$48, %rsp	 #,
 	popq	%rbp	 #
@@ -8579,19 +8576,19 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.loc 19 192 33
 	movq	64(%rbp), %rdi	 # this, _7
 	leaq	_ZN19wxNavigationEnabledI14wxBookCtrlBaseE15OnNavigationKeyER20wxNavigationKeyEvent(%rip), %rax	 #, tmp112
-	movq	%rax, %r14	 # tmp112, D.154462
-	movl	$0, %r15d	 #, D.154462
+	movq	%rax, %r14	 # tmp112, D.154483
+	movl	$0, %r15d	 #, D.154483
 	leaq	-64(%rbp), %rax	 #, tmp113
-	movq	%r14, -80(%rbp)	 # D.154462,
-	movq	%r15, -72(%rbp)	 # D.154462,
+	movq	%r14, -80(%rbp)	 # D.154483,
+	movq	%r15, -72(%rbp)	 # D.154483,
 	leaq	-80(%rbp), %rdx	 #, tmp114
 	movq	%rax, %rcx	 # tmp113,
 	call	_Z19wxEventFunctionCastI20wxNavigationKeyEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_NAVIGATION_KEY(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI20wxNavigationKeyEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_8, _9
-	movq	-64(%rbp), %rax	 # D.154463, tmp115
-	movq	-56(%rbp), %rdx	 # D.154463,
+	movq	-64(%rbp), %rax	 # D.154484, tmp115
+	movq	-56(%rbp), %rdx	 # D.154484,
 	movq	%rax, -80(%rbp)	 # tmp115,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp116
@@ -8605,19 +8602,19 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.loc 19 195 33
 	movq	64(%rbp), %rdi	 # this, _10
 	leaq	_ZN19wxNavigationEnabledI14wxBookCtrlBaseE7OnFocusER12wxFocusEvent(%rip), %rax	 #, tmp117
-	movq	%rax, %r12	 # tmp117, D.154464
-	movl	$0, %r13d	 #, D.154464
+	movq	%rax, %r12	 # tmp117, D.154485
+	movl	$0, %r13d	 #, D.154485
 	leaq	-48(%rbp), %rax	 #, tmp118
-	movq	%r12, -80(%rbp)	 # D.154464,
-	movq	%r13, -72(%rbp)	 # D.154464,
+	movq	%r12, -80(%rbp)	 # D.154485,
+	movq	%r13, -72(%rbp)	 # D.154485,
 	leaq	-80(%rbp), %rdx	 #, tmp119
 	movq	%rax, %rcx	 # tmp118,
 	call	_Z19wxEventFunctionCastI12wxFocusEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_SET_FOCUS(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI12wxFocusEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_11, _12
-	movq	-48(%rbp), %rax	 # D.154465, tmp120
-	movq	-40(%rbp), %rdx	 # D.154465,
+	movq	-48(%rbp), %rax	 # D.154486, tmp120
+	movq	-40(%rbp), %rdx	 # D.154486,
 	movq	%rax, -80(%rbp)	 # tmp120,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp121
@@ -8631,19 +8628,19 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.loc 19 198 33
 	movq	64(%rbp), %rdi	 # this, _13
 	leaq	_ZN19wxNavigationEnabledI14wxBookCtrlBaseE12OnChildFocusER17wxChildFocusEvent(%rip), %rax	 #, tmp122
-	movq	%rax, %rbx	 # tmp122, D.154466
-	movl	$0, %esi	 #, D.154466
+	movq	%rax, %rbx	 # tmp122, D.154487
+	movl	$0, %esi	 #, D.154487
 	leaq	-32(%rbp), %rax	 #, tmp123
-	movq	%rbx, -80(%rbp)	 # D.154466,
-	movq	%rsi, -72(%rbp)	 # D.154466,
+	movq	%rbx, -80(%rbp)	 # D.154487,
+	movq	%rsi, -72(%rbp)	 # D.154487,
 	leaq	-80(%rbp), %rdx	 #, tmp124
 	movq	%rax, %rcx	 # tmp123,
 	call	_Z19wxEventFunctionCastI17wxChildFocusEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_CHILD_FOCUS(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI17wxChildFocusEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_14, _15
-	movq	-32(%rbp), %rax	 # D.154467, tmp125
-	movq	-24(%rbp), %rdx	 # D.154467,
+	movq	-32(%rbp), %rax	 # D.154488, tmp125
+	movq	-24(%rbp), %rdx	 # D.154488,
 	movq	%rax, -80(%rbp)	 # tmp125,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp126
@@ -8676,8 +8673,8 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	movq	64(%rbp), %rax	 # this, _17
 	movq	%rax, %rcx	 # _17,
 	call	_ZN14wxBookCtrlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp128, D.155415
-	movq	%rax, %rcx	 # D.155415,
+	movq	%rbx, %rax	 # tmp128, D.155436
+	movq	%rax, %rcx	 # D.155436,
 .LEHB35:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8812,7 +8809,7 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 	subq	$64, %rsp	 #,
 	.seh_stackalloc	64
 	.seh_endprologue
-	movq	%rcx, 32(%rbp)	 # D.147951, D.147951
+	movq	%rcx, 32(%rbp)	 # D.147972, D.147972
 	movq	%rdx, %rbx	 #, tmp91
 	movq	(%rbx), %rax	 # method, tmp92
 	movq	8(%rbx), %rdx	 # method,
@@ -8847,8 +8844,8 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.155429
-	movq	%rax, %rcx	 # D.155429,
+	movq	%rsi, %rax	 # tmp97, D.155450
+	movq	%rax, %rcx	 # D.155450,
 .LEHB38:
 	call	_Unwind_Resume	 #
 .LEHE38:
@@ -9316,7 +9313,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	call	_ZN14wxEventFunctorC2Ev	 #
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _2
 	movq	-32(%rbp), %rax	 # this, tmp98
-	movq	%rdx, (%rax)	 # _2, this_14(D)->D.148044._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _2, this_14(D)->D.148065._vptr.wxEventFunctor
 	movq	-32(%rbp), %rax	 # this, tmp99
 	movq	-16(%rbp), %rdx	 # handler, tmp100
 	movq	%rdx, 8(%rax)	 # tmp100, this_14(D)->m_handler
@@ -9393,8 +9390,8 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.155434
-	movq	%rax, %rcx	 # D.155434,
+	movq	%rbx, %rax	 # tmp107, D.155455
+	movq	%rax, %rcx	 # D.155455,
 .LEHB40:
 	call	_Unwind_Resume	 #
 	nop	
@@ -9468,7 +9465,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.147985, D.147985
+	movq	%rcx, 16(%rbp)	 # D.148006, D.148006
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:392:     static void CheckHandlerArgument(EventArg *) { }
 	.loc 11 392 52
 	nop	
@@ -9791,7 +9788,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	.loc 11 382 7
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.148044._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.148065._vptr.wxEventFunctor
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
@@ -10845,7 +10842,7 @@ __tcf_2:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB13667:
-	.loc 22 103 1 is_stmt 1
+	.loc 22 105 1 is_stmt 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -10888,12 +10885,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 80(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 88(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:103: }
-	.loc 22 103 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:105: }
+	.loc 22 105 1
 	cmpl	$1, 80(%rbp)	 #, __initialize_p
 	jne	.L413	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:103: }
-	.loc 22 103 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:105: }
+	.loc 22 105 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 88(%rbp)	 #, __priority
 	jne	.L413	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
@@ -10921,13 +10918,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -80(%rbp)	 # tmp122, %sfp
 	movq	$0, -72(%rbp)	 #, %sfp
 	leaq	-48(%rbp), %rax	 #, tmp108
-	movdqa	-80(%rbp), %xmm0	 # %sfp, D.154960
-	movaps	%xmm0, -64(%rbp)	 # D.154960,
+	movdqa	-80(%rbp), %xmm0	 # %sfp, D.154981
+	movaps	%xmm0, -64(%rbp)	 # D.154981,
 	leaq	-64(%rbp), %rdx	 #, tmp109
 	movq	%rax, %rcx	 # tmp108,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-48(%rbp), %rax	 # D.154961, tmp110
-	movq	-40(%rbp), %rdx	 # D.154961,
+	movq	-48(%rbp), %rax	 # D.154982, tmp110
+	movq	-40(%rbp), %rdx	 # D.154982,
 	movq	%rax, -64(%rbp)	 # tmp110,
 	movq	%rdx, -56(%rbp)	 #,
 	leaq	-64(%rbp), %rax	 #, tmp111
@@ -10953,16 +10950,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rbx	 #, _10
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:8:     EVT_AUINOTEBOOK_PAGE_CLOSE(wxID_ANY, OnPageClosing)
 	.loc 22 8 5 is_stmt 1 discriminator 1
-	leaq	_ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent(%rip), %r14	 #, D.154962
-	movl	$0, %r15d	 #, D.154962
+	leaq	_ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent(%rip), %r14	 #, D.154983
+	movl	$0, %r15d	 #, D.154983
 	leaq	-32(%rbp), %rax	 #, tmp112
-	movq	%r14, -64(%rbp)	 # D.154962,
-	movq	%r15, -56(%rbp)	 # D.154962,
+	movq	%r14, -64(%rbp)	 # D.154983,
+	movq	%r15, -56(%rbp)	 # D.154983,
 	leaq	-64(%rbp), %rdx	 #, tmp113
 	movq	%rax, %rcx	 # tmp112,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-32(%rbp), %rax	 # D.154963, tmp114
-	movq	-24(%rbp), %rdx	 # D.154963,
+	movq	-32(%rbp), %rax	 # D.154984, tmp114
+	movq	-24(%rbp), %rdx	 # D.154984,
 	movq	%rax, -64(%rbp)	 # tmp114,
 	movq	%rdx, -56(%rbp)	 #,
 	leaq	-64(%rbp), %rax	 #, tmp115
@@ -10987,16 +10984,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rbx	 #, _10
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:9:     EVT_AUINOTEBOOK_PAGE_CLOSED(wxID_ANY, OnPageClosed)
 	.loc 22 9 5 is_stmt 1 discriminator 2
-	leaq	_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent(%rip), %r12	 #, D.154964
-	movl	$0, %r13d	 #, D.154964
+	leaq	_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent(%rip), %r12	 #, D.154985
+	movl	$0, %r13d	 #, D.154985
 	leaq	-16(%rbp), %rax	 #, tmp116
-	movq	%r12, -64(%rbp)	 # D.154964,
-	movq	%r13, -56(%rbp)	 # D.154964,
+	movq	%r12, -64(%rbp)	 # D.154985,
+	movq	%r13, -56(%rbp)	 # D.154985,
 	leaq	-64(%rbp), %rdx	 #, tmp117
 	movq	%rax, %rcx	 # tmp116,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-16(%rbp), %rax	 # D.154965, tmp118
-	movq	-8(%rbp), %rdx	 # D.154965,
+	movq	-16(%rbp), %rax	 # D.154986, tmp118
+	movq	-8(%rbp), %rdx	 # D.154986,
 	movq	%rax, -64(%rbp)	 # tmp118,
 	movq	%rdx, -56(%rbp)	 #,
 	leaq	-64(%rbp), %rax	 #, tmp119
@@ -11031,8 +11028,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	.loc 22 6 1 is_stmt 1 discriminator 4
 	leaq	__tcf_2(%rip), %rcx	 #,
 	call	atexit	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:103: }
-	.loc 22 103 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:105: }
+	.loc 22 105 1 discriminator 4
 	jmp	.L413	 #
 .L418:
 	movq	%rax, %rdi	 #, tmp121
@@ -11054,15 +11051,15 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_ZN17wxEventTableEntryD1Ev	 #
 	jmp	.L417	 #
 .L416:
-	movq	%rdi, %rax	 # tmp121, D.155437
-	movq	%rax, %rcx	 # D.155437,
+	movq	%rdi, %rax	 # tmp121, D.155458
+	movq	%rax, %rcx	 # D.155458,
 .LEHB43:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE43:
 .L413:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:103: }
-	.loc 22 103 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:105: }
+	.loc 22 105 1 is_stmt 1
 	addq	$136, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -11639,7 +11636,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 11 431 35
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_21(D)->D.148044._vptr.wxEventFunctor, _1
+	movq	(%rax), %rax	 # this_21(D)->D.148065._vptr.wxEventFunctor, _1
 	subq	$8, %rax	 #, _2
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 11 431 32
@@ -12059,7 +12056,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN13T100MainPanel13sm_eventTableE
 _GLOBAL__sub_I__ZN13T100MainPanel13sm_eventTableE:
 .LFB13769:
-	.loc 22 103 1
+	.loc 22 105 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -12071,8 +12068,8 @@ _GLOBAL__sub_I__ZN13T100MainPanel13sm_eventTableE:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:103: }
-	.loc 22 103 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:105: }
+	.loc 22 105 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -75157,7 +75154,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xc3
 	.secrel32	.LASF49
 	.byte	0x16
-	.byte	0x38
+	.byte	0x3a
 	.byte	0xa
 	.ascii "_ZN13T100MainPanel5ClearEv\0"
 	.byte	0x1
@@ -75174,7 +75171,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2b
 	.ascii "Save\0"
 	.byte	0x16
-	.byte	0x3d
+	.byte	0x3f
 	.byte	0xa
 	.ascii "_ZN13T100MainPanel4SaveEv\0"
 	.byte	0x1
@@ -75207,7 +75204,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x5a
 	.ascii "OnPageChanged\0"
 	.byte	0x16
-	.byte	0x46
+	.byte	0x48
 	.byte	0xa
 	.ascii "_ZN13T100MainPanel13OnPageChangedER18wxAuiNotebookEvent\0"
 	.long	0x458b4
@@ -75220,7 +75217,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x5a
 	.ascii "OnPageClosing\0"
 	.byte	0x16
-	.byte	0x51
+	.byte	0x53
 	.byte	0xa
 	.ascii "_ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent\0"
 	.long	0x45911
@@ -75233,7 +75230,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x5a
 	.ascii "OnPageClosed\0"
 	.byte	0x16
-	.byte	0x5a
+	.byte	0x5c
 	.byte	0xa
 	.ascii "_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent\0"
 	.long	0x4596c
@@ -77538,7 +77535,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x39
 	.ascii "__initialize_p\0"
 	.byte	0x16
-	.byte	0x67
+	.byte	0x69
 	.byte	0x1
 	.long	0x238
 	.uleb128 0x2
@@ -77547,7 +77544,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x39
 	.ascii "__priority\0"
 	.byte	0x16
-	.byte	0x67
+	.byte	0x69
 	.byte	0x1
 	.long	0x238
 	.uleb128 0x2
@@ -78611,7 +78608,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x58
 	.secrel32	.LASF396
 	.byte	0x16
-	.byte	0x5a
+	.byte	0x5c
 	.byte	0x3a
 	.long	0x444fa
 	.uleb128 0x2
@@ -78620,7 +78617,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x48
 	.ascii "pack\0"
 	.byte	0x16
-	.byte	0x5c
+	.byte	0x5e
 	.byte	0x15
 	.long	0x45da2
 	.uleb128 0x2
@@ -78644,7 +78641,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x58
 	.secrel32	.LASF396
 	.byte	0x16
-	.byte	0x51
+	.byte	0x53
 	.byte	0x3b
 	.long	0x444fa
 	.uleb128 0x2
@@ -78653,7 +78650,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x48
 	.ascii "pack\0"
 	.byte	0x16
-	.byte	0x53
+	.byte	0x55
 	.byte	0x15
 	.long	0x45da2
 	.uleb128 0x2
@@ -78677,7 +78674,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x58
 	.secrel32	.LASF396
 	.byte	0x16
-	.byte	0x46
+	.byte	0x48
 	.byte	0x3b
 	.long	0x444fa
 	.uleb128 0x2
@@ -78686,7 +78683,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x48
 	.ascii "pack\0"
 	.byte	0x16
-	.byte	0x48
+	.byte	0x4a
 	.byte	0x19
 	.long	0x4965d
 	.uleb128 0x2
@@ -78715,7 +78712,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xa5
 	.secrel32	.LASF401
 	.byte	0x16
-	.byte	0x3f
+	.byte	0x41
 	.byte	0x15
 	.long	0xa87c
 	.uleb128 0x2
@@ -78770,7 +78767,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x91
 	.sleb128 -40
 	.uleb128 0x48
-	.ascii "path\0"
+	.ascii "file\0"
 	.byte	0x16
 	.byte	0x2c
 	.byte	0x19
@@ -89680,10 +89677,10 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.def	__dynamic_cast;	.scl	2;	.type	32;	.endef
 	.def	_ZN14T100EditorPack9GetEditorEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN14T100EditorPackC1EP8wxWindow;	.scl	2;	.type	32;	.endef
-	.def	_ZN12T100FileInfo7GetPathB5cxx11Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN12T100FileInfo7GetFileB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5emptyEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN10T100Editor7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
-	.def	_ZN12T100FileInfo11GetFileNameB5cxx11Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN12T100FileInfo8GetLabelB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN13wxAuiNotebook7AddPageEP8wxWindowRK8wxStringbRK8wxBitmap;	.scl	2;	.type	32;	.endef
 	.def	_ZN13wxAuiNotebook14DeleteAllPagesEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN10T100Editor7GetPathB5cxx11Ev;	.scl	2;	.type	32;	.endef

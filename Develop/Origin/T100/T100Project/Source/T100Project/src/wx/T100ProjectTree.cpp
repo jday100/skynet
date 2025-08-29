@@ -1312,7 +1312,7 @@ T100VOID T100ProjectTree::AppendFile(wxTreeItemId parent, T100FileInfo* info)
     data->SetLabel(info->GetFileName());
     data->SetPath(info->GetPath());
 
-    wxTreeItemId        item    = AppendItem(parent, info->GetFileName(), 10, -1, data);
+    wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 10, -1, data);
 }
 
 T100VOID T100ProjectTree::AppendFolder(wxTreeItemId parent, T100FolderInfo* info)

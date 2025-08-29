@@ -12,15 +12,27 @@ class T100FileInfo
         T100FileInfo();
         virtual ~T100FileInfo();
 
+        T100VOID                SetLabel(const T100WSTRING&);
+        const T100WSTRING&      GetLabel();
+
         T100VOID                SetFileName(const T100WSTRING&);
         const T100WSTRING&      GetFileName();
+
+        T100VOID                SetExtName(const T100WSTRING&);
+        const T100WSTRING&      GetExtName();
 
         T100VOID                SetPath(const T100WSTRING&);
         const T100WSTRING&      GetPath();
 
+        T100VOID                SetFile(const T100WSTRING&);
+        const T100WSTRING&      GetFile();
+
     protected:
+        T100WSTRING             m_label;
         T100WSTRING             m_filename;
         T100WSTRING             m_path;
+        T100WSTRING             m_file;
+        T100WSTRING             m_extname;
 
     private:
 };

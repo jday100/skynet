@@ -41,14 +41,16 @@ T100VOID T100MainPanel::Create(T100FileInfo* info)
 {
     T100EditorPack*     pack    = T100NEW T100EditorPack(this);
 
-    T100WSTRING         path    = info->GetPath();
+    T100WSTRING         file    = info->GetFile();
 
-    if(!path.empty()){
-        pack->GetEditor()->LoadFile(path);
-        pack->GetEditor()->SetPath(path);
+    if(file.empty()){
+
+    }else{
+        pack->GetEditor()->LoadFile(file);
+        pack->GetEditor()->SetPath(file);
     }
 
-    AddPage(pack, info->GetFileName());
+    AddPage(pack, info->GetLabel());
 
     m_current   = pack;
 }
