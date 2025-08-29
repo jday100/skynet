@@ -161,11 +161,6 @@ T100BOOL T100ProjectLogic::Check(T100WxFolderInfo* info)
     return T100TRUE;
 }
 
-T100BOOL T100ProjectLogic::Open(const T100WSTRING& value)
-{
-
-}
-
 T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
 {
     T100Folder      folder(path);
@@ -186,7 +181,7 @@ T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
         T100WxFolderInfo        thisFolder;
 
         thisFolder.SetLabel(item);
-        T100WSTRING     thisPath    = path + L"/" + item;
+        T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
         thisFolder.SetPath(thisPath);
 
         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
@@ -198,13 +193,18 @@ T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
     }
 
     for(const T100WSTRING& item : fileNames){
-        T100WSTRING         thisPath        = path + L"/" + item;
-        T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+        if(item == T100ProjectConfig::T100PROJECT_PROJECT_FILENAME){
 
-        thisFile->SetFileName(item);
-        thisFile->SetPath(thisPath);
+        }else{
+            T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+            T100FileInfo*       thisFile        = T100NEW T100FileInfo();
 
-        files.push_back(thisFile);
+            thisFile->SetLabel(item);
+            thisFile->SetFileName(item);
+            thisFile->SetPath(thisPath);
+
+            files.push_back(thisFile);
+        }
     }
 
     m_current   = info;

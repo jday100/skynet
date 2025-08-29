@@ -67,23 +67,6 @@ T100BOOL T100ProjectServe::Check(T100WxFolderInfo* info)
     return m_projectLogic.Check(info);
 }
 
-T100BOOL T100ProjectServe::Open(const T100WSTRING&)
-{
 
-}
-
-T100BOOL T100ProjectServe::Open(const T100WSTRING_VECTOR& folders, T100PROJECT_INFO_VECTOR& projects)
-{
-    for(const T100WSTRING& item : folders){
-        if(m_projectLogic.Open(item)){
-
-        }else{
-            return T100FALSE;
-        }
-    }
-
-    m_projects  = &projects;
-    return T100TRUE;
-}
 
 

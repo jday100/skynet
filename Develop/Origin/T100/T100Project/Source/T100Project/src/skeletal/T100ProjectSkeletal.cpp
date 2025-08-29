@@ -363,6 +363,7 @@ T100VOID T100ProjectSkeletal::OnPageClosed(T100Pack* pack)
 
 T100VOID T100ProjectSkeletal::OnItemExpanding()
 {
+    /*
     T100WSTRING         label;
     T100ProjectServe*   serve   = m_serve->GetProjectServe();
 
@@ -373,7 +374,7 @@ T100VOID T100ProjectSkeletal::OnItemExpanding()
     serve->Open(label);
 
     m_view->New();
-
+    */
 }
 
 T100VOID T100ProjectSkeletal::OnModified()

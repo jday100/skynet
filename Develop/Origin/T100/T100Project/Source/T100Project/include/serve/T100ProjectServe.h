@@ -34,11 +34,6 @@ class T100ProjectServe
 
         T100BOOL                                Check(T100WxFolderInfo*);
 
-
-        T100BOOL                                Open(const T100WSTRING&);
-
-        T100BOOL                                Open(const T100WSTRING_VECTOR&, T100PROJECT_INFO_VECTOR&);
-
         T100FileLogic&                          GetFileLogic();
         T100FolderLogic&                        GetFolderLogic();
         T100ProjectLogic&                       GetProjectLogic();

@@ -34,8 +34,6 @@ class T100ProjectLogic
 
         T100BOOL                    Check(T100WxFolderInfo*);
 
-        T100BOOL                    Open(const T100WSTRING&);
-
         T100WSTRING                 GetFileName(const T100WxFolderInfo&);
 
         T100BOOL                    Open(const T100WSTRING&, T100ProjectInfo*);
