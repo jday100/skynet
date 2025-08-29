@@ -24,11 +24,15 @@ class T100ProjectInvoking
         static T100VOID                     OnWorkSpaceClose();
         static T100VOID                     OnWorkSpaceSave();
         static T100VOID                     OnWorkSpaceSaveAs();
+        static T100VOID                     OnWorkSpaceSelect();
+
         static T100VOID                     OnProjectNew();
         static T100VOID                     OnProjectOpen();
         static T100VOID                     OnProjectClose();
         static T100VOID                     OnProjectSave();
         static T100VOID                     OnProjectSaveAs();
+        static T100VOID                     OnProjectSelect();
+
         static T100VOID                     OnFileNew();
         static T100VOID                     OnFileOpen();
         static T100VOID                     OnFileClose();
@@ -56,9 +60,6 @@ class T100ProjectInvoking
         static T100VOID                     OnFileOpen(T100FileData*);
         static T100VOID                     OnFolderOpen(T100FolderData*);
         static T100VOID                     OnProjectOpen(T100ProjectData*);
-
-        static T100VOID                     OnProjectSelected();
-        static T100VOID                     OnWorkSpaceSelected();
 
         static T100VOID                     OnPageChanged();
         static T100VOID                     OnPageClosing(T100Pack*);

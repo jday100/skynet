@@ -7072,9 +7072,9 @@ _ZN15T100ProjectData13OnItemChangedEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:51:     T100ProjectInvoking::OnProjectSelected();
-	.loc 23 51 43
-	call	_ZN19T100ProjectInvoking17OnProjectSelectedEv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:51:     T100ProjectInvoking::OnProjectSelect();
+	.loc 23 51 41
+	call	_ZN19T100ProjectInvoking15OnProjectSelectEv	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:52: }
 	.loc 23 52 1
 	nop	
@@ -83778,7 +83778,7 @@ _GLOBAL__sub_I__ZN15T100ProjectDataC2Ev:
 	.def	_ZN12wxWindowBase9TryBeforeER7wxEvent;	.scl	2;	.type	32;	.endef
 	.def	_ZN16T100TreeItemDataC2Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN16T100TreeItemDataD2Ev;	.scl	2;	.type	32;	.endef
-	.def	_ZN19T100ProjectInvoking17OnProjectSelectedEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN19T100ProjectInvoking15OnProjectSelectEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN19T100ProjectInvoking13OnProjectOpenEP15T100ProjectData;	.scl	2;	.type	32;	.endef
 	.def	free;	.scl	2;	.type	32;	.endef
 	.def	_ZNK7wxFrame12GetClassInfoEv;	.scl	2;	.type	32;	.endef

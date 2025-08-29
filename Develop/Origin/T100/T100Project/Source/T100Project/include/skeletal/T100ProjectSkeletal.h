@@ -23,19 +23,17 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
 
         T100VOID                    OnWorkSpaceNew();
         T100VOID                    OnWorkSpaceOpen();
-
-
-
-
-
         T100VOID                    OnWorkSpaceClose();
         T100VOID                    OnWorkSpaceSave();
         T100VOID                    OnWorkSpaceSaveAs();
+        T100VOID                    OnWorkSpaceSelect();
+
         T100VOID                    OnProjectNew();
         T100VOID                    OnProjectOpen();
         T100VOID                    OnProjectClose();
         T100VOID                    OnProjectSave();
         T100VOID                    OnProjectSaveAs();
+        T100VOID                    OnProjectSelect();
         T100VOID                    OnFileNew();
         T100VOID                    OnFileOpen();
         T100VOID                    OnFileClose();
@@ -65,9 +63,9 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnFolderOpen(T100FolderData*);
 
         T100VOID                    OnProjectOpen(T100ProjectData*);
-        T100VOID                    OnProjectSelected();
 
-        T100VOID                    OnWorkSpaceSelected();
+
+
 
         T100VOID                    OnPageChanged();
         T100VOID                    OnPageClosing(T100Pack*);

@@ -107,62 +107,37 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceOpen()
     m_view->ShowWorkSpaceOpenFailureDialog();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-T100VOID T100ProjectSkeletal::OnWorkSpaceOpen()
+T100VOID T100ProjectSkeletal::OnWorkSpaceClose()
 {
     if(m_serve->IsOpened()){
-        WorkSpaceClose();
-    }
 
-    T100WSTRING         path;
-
-    if(m_view->ShowDirDialog(path) == wxID_CANCEL){
+    }else{
         return;
     }
 
-    T100WSTRING     dir;
-    T100WSTRING     name;
-
-
-    T100PathTools::Split(path, dir, name);
-
-    T100WxFolderInfo        info;
-
-    info.SetLabel(name);
-    info.SetPath(path);
-
-    WorkSpaceOpen(info);
-}
-*/
-
-T100VOID T100ProjectSkeletal::OnWorkSpaceClose()
-{
-    m_serve->Clear();
-    m_view->Clear();
+    WorkSpaceClose();
 }
 
 T100VOID T100ProjectSkeletal::OnWorkSpaceSave()
 {
+    if(m_serve->IsOpened()){
 
+    }else{
+        return;
+    }
+
+    WorkSpaceSave();
 }
 
 T100VOID T100ProjectSkeletal::OnWorkSpaceSaveAs()
 {
+    if(m_serve->IsOpened()){
 
+    }else{
+        return;
+    }
+
+    WorkSpaceSaveAs();
 }
 
 T100VOID T100ProjectSkeletal::OnProjectNew()
@@ -360,14 +335,14 @@ T100VOID T100ProjectSkeletal::OnProjectOpen(T100ProjectData* data)
     m_view->ProjectOpen(data->GetId(), info);
 }
 
-T100VOID T100ProjectSkeletal::OnProjectSelected()
+T100VOID T100ProjectSkeletal::OnProjectSelect()
 {
-    m_view->ProjectSelected();
+    m_view->ProjectSelect();
 }
 
-T100VOID T100ProjectSkeletal::OnWorkSpaceSelected()
+T100VOID T100ProjectSkeletal::OnWorkSpaceSelect()
 {
-    m_view->WorkSpaceSelected();
+    m_view->WorkSpaceSelect();
 }
 
 T100VOID T100ProjectSkeletal::OnPageChanged()

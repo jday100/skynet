@@ -8,6 +8,8 @@ const T100WSTRING       T100ProjectConfig::T100PROJECT_PROJECT_CREATE_FILENAME  
 
 const T100WSTRING       T100ProjectConfig::T100PROJECT_EDITOR_FONT                              = L"";
 
+const T100WSTRING       T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR                        = L"\\";
+
 T100ProjectConfig::T100ProjectConfig()
 {
     //ctor

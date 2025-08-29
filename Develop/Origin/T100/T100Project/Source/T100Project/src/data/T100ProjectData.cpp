@@ -48,7 +48,7 @@ wxMenu* T100ProjectData::ShowMenu()
 
 T100VOID T100ProjectData::OnItemChanged()
 {
-    T100ProjectInvoking::OnProjectSelected();
+    T100ProjectInvoking::OnProjectSelect();
 }
 
 T100VOID T100ProjectData::OnItemActivated()

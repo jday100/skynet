@@ -6873,9 +6873,9 @@ _ZN17T100WorkSpaceData13OnItemChangedEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:49:     T100ProjectInvoking::OnWorkSpaceSelected();
-	.loc 21 49 45
-	call	_ZN19T100ProjectInvoking19OnWorkSpaceSelectedEv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:49:     T100ProjectInvoking::OnWorkSpaceSelect();
+	.loc 21 49 43
+	call	_ZN19T100ProjectInvoking17OnWorkSpaceSelectEv	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100WorkSpaceData.cpp:50: }
 	.loc 21 50 1
 	nop	
@@ -81780,7 +81780,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.def	_ZN12wxWindowBase9TryBeforeER7wxEvent;	.scl	2;	.type	32;	.endef
 	.def	_ZN16T100TreeItemDataC2Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN16T100TreeItemDataD2Ev;	.scl	2;	.type	32;	.endef
-	.def	_ZN19T100ProjectInvoking19OnWorkSpaceSelectedEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN19T100ProjectInvoking17OnWorkSpaceSelectEv;	.scl	2;	.type	32;	.endef
 	.def	free;	.scl	2;	.type	32;	.endef
 	.def	_ZNK7wxFrame12GetClassInfoEv;	.scl	2;	.type	32;	.endef
 	.def	_ZNK8wxObject13CreateRefDataEv;	.scl	2;	.type	32;	.endef

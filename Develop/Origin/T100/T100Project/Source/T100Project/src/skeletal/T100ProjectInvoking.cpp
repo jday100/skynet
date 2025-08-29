@@ -196,14 +196,14 @@ T100VOID T100ProjectInvoking::OnProjectOpen(T100ProjectData* data)
     m_skeletal->OnProjectOpen(data);
 }
 
-T100VOID T100ProjectInvoking::OnProjectSelected()
+T100VOID T100ProjectInvoking::OnProjectSelect()
 {
-    m_skeletal->OnProjectSelected();
+    m_skeletal->OnProjectSelect();
 }
 
-T100VOID T100ProjectInvoking::OnWorkSpaceSelected()
+T100VOID T100ProjectInvoking::OnWorkSpaceSelect()
 {
-    m_skeletal->OnWorkSpaceSelected();
+    m_skeletal->OnWorkSpaceSelect();
 }
 
 T100VOID T100ProjectInvoking::OnPageChanged()

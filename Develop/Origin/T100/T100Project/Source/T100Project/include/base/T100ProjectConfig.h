@@ -17,6 +17,8 @@ class T100ProjectConfig
 
         static const T100WSTRING        T100PROJECT_EDITOR_FONT;
 
+        static const T100WSTRING        T100PROJECT_STORAGE_SEPARATOR;
+
     protected:
 
     private:

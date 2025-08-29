@@ -17,9 +17,9 @@ class T100ProjectViewMainMenu
 
         T100VOID                    Clear();
 
-        T100VOID                    WorkSpaceSelected();
+        T100VOID                    WorkSpaceSelect();
 
-        T100VOID                    ProjectSelected();
+        T100VOID                    ProjectSelect();
 
         T100VOID                    FileOpen();
         T100VOID                    FileModified();

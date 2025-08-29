@@ -108,17 +108,6 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceOpen(const T100WxFolderInfo& info)
     return T100TRUE;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 T100BOOL T100ProjectSkeletalBase::WorkSpaceClose()
 {
     T100BOOL        result;
@@ -132,16 +121,19 @@ T100BOOL T100ProjectSkeletalBase::WorkSpaceClose()
     return result;
 }
 
-T100VOID T100ProjectSkeletalBase::WorkSpaceSave()
+T100BOOL T100ProjectSkeletalBase::WorkSpaceSave()
 {
     if(!m_serve->Save()){
-        return;
+        return T100FALSE;
     }
 
-    m_view->WorkSpaceSave();
+    if(!m_view->WorkSpaceSave()){
+        return T100FALSE;
+    }
+    return T100TRUE;
 }
 
-T100VOID T100ProjectSkeletalBase::WorkSpaceSaveAs()
+T100BOOL T100ProjectSkeletalBase::WorkSpaceSaveAs()
 {
 
 }

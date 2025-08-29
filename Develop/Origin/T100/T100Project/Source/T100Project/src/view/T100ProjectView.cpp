@@ -56,8 +56,24 @@ T100BOOL T100ProjectView::WorkSpaceOpen(T100WorkSpaceInfo* info)
         return T100FALSE;
     }
 
-    m_mainMenu->WorkSpaceSelected();
+    m_mainMenu->WorkSpaceSelect();
 
+    return T100TRUE;
+}
+
+T100BOOL T100ProjectView::WorkSpaceClose()
+{
+
+}
+
+T100BOOL T100ProjectView::WorkSpaceSave()
+{
+
+}
+
+T100BOOL T100ProjectView::WorkSpaceSelect()
+{
+    m_mainMenu->WorkSpaceSelect();
     return T100TRUE;
 }
 
@@ -97,44 +113,15 @@ T100VOID T100ProjectView::PageClose(T100Pack* pack)
     SetTitle();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-T100BOOL T100ProjectView::WorkSpaceClose()
-{
-
-}
-
-T100VOID T100ProjectView::WorkSpaceSave()
-{
-
-}
-
-T100VOID T100ProjectView::WorkSpaceSelected()
-{
-    m_mainMenu->WorkSpaceSelected();
-}
-
 T100VOID T100ProjectView::ProjectOpen(T100ProjectInfo* info)
 {
     m_projectTree->ProjectOpen(info);
 }
 
-T100VOID T100ProjectView::ProjectSelected()
+T100BOOL T100ProjectView::ProjectSelect()
 {
-    m_mainMenu->ProjectSelected();
+    m_mainMenu->ProjectSelect();
+    return T100TRUE;
 }
 
 T100VOID T100ProjectView::FileModified()

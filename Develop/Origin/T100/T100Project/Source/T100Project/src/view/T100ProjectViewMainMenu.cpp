@@ -177,7 +177,7 @@ T100VOID T100ProjectViewMainMenu::Clear()
     init();
 }
 
-T100VOID T100ProjectViewMainMenu::WorkSpaceSelected()
+T100VOID T100ProjectViewMainMenu::WorkSpaceSelect()
 {
     m_workClose->Enable(T100TRUE);
     m_workSaveAs->Enable(T100TRUE);
@@ -185,7 +185,7 @@ T100VOID T100ProjectViewMainMenu::WorkSpaceSelected()
     m_projectNew->Enable(T100TRUE);
 }
 
-T100VOID T100ProjectViewMainMenu::ProjectSelected()
+T100VOID T100ProjectViewMainMenu::ProjectSelect()
 {
     m_projectClose->Enable(T100TRUE);
     m_projectSaveAs->Enable(T100TRUE);

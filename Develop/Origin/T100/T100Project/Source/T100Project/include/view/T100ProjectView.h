@@ -15,26 +15,17 @@ class T100ProjectView : public T100ProjectViewBase
         virtual T100VOID            Destroy();
 
         T100BOOL                    WorkSpaceOpen(T100WorkSpaceInfo*);
+        T100BOOL                    WorkSpaceClose();
+        T100BOOL                    WorkSpaceSave();
+        T100BOOL                    WorkSpaceSelect();
 
         T100VOID                    ShowSetupCompilerDialog();
 
         T100VOID                    FileClose(T100Pack*);
         T100VOID                    PageClose(T100Pack*);
 
-
-
-
-
-
-
-
-        //T100VOID                    WorkSpaceOpen(T100WorkSpaceInfo*);
-        T100BOOL                    WorkSpaceClose();
-        T100VOID                    WorkSpaceSave();
-        T100VOID                    WorkSpaceSelected();
-
         T100VOID                    ProjectOpen(T100ProjectInfo*);
-        T100VOID                    ProjectSelected();
+        T100BOOL                    ProjectSelect();
 
         T100VOID                    FileModified();
 
