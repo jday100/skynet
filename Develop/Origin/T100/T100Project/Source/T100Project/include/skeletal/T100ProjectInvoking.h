@@ -62,7 +62,7 @@ class T100ProjectInvoking
 
         static T100VOID                     OnPageChanged();
         static T100VOID                     OnPageClosing(T100Pack*);
-        static T100VOID                     OnPageClosed();
+        static T100VOID                     OnPageClosed(T100Pack*);
 
         static T100VOID                     OnItemExpanding();
         static T100VOID                     OnModified();

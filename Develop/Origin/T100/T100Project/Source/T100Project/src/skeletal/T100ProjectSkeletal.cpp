@@ -380,10 +380,10 @@ T100VOID T100ProjectSkeletal::OnPageClosing(T100Pack* pack)
     m_view->FileClose(pack);
 }
 
-T100VOID T100ProjectSkeletal::OnPageClosed()
+T100VOID T100ProjectSkeletal::OnPageClosed(T100Pack* pack)
 {
     m_serve->GetProjectServe()->GetFileLogic().Close(T100NULL);
-    m_view->PageClose();
+    m_view->PageClose(pack);
 }
 
 T100VOID T100ProjectSkeletal::OnItemExpanding()

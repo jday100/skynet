@@ -71,7 +71,7 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
 
         T100VOID                    OnPageChanged();
         T100VOID                    OnPageClosing(T100Pack*);
-        T100VOID                    OnPageClosed();
+        T100VOID                    OnPageClosed(T100Pack*);
 
         T100VOID                    OnItemExpanding();
         T100VOID                    OnModified();

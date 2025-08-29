@@ -68,8 +68,34 @@ T100VOID T100ProjectView::ShowSetupCompilerDialog()
     dialog.ShowModal();
 }
 
+T100VOID T100ProjectView::FileClose(T100Pack* pack)
+{
+    T100WSTRING         filename;
+    T100EditorPack*     editor      = T100NULL;
 
+    editor  = dynamic_cast<T100EditorPack*>(pack);
 
+    if(editor){
+        if(editor->GetEditor()){
+            if(editor->GetEditor()->GetPath().empty()){
+                ShowFileName(filename);
+                if(filename.empty()){
+                    return;
+                }
+            }else{
+
+            }
+
+            editor->GetEditor()->SetPath(filename);
+            editor->GetEditor()->SaveFile(filename);
+        }
+    }
+}
+
+T100VOID T100ProjectView::PageClose(T100Pack* pack)
+{
+    SetTitle();
+}
 
 
 
@@ -233,29 +259,6 @@ T100VOID T100ProjectView::Open(T100FileInfo* info)
     m_mainPanel->Create(info);
 }
 
-T100VOID T100ProjectView::FileClose(T100Pack* pack)
-{
-    T100WSTRING         filename;
-    T100EditorPack*     editor      = T100NULL;
-
-    editor  = dynamic_cast<T100EditorPack*>(pack);
-
-    if(editor){
-        if(editor->GetEditor()){
-            if(editor->GetEditor()->GetPath().empty()){
-                ShowFileName(filename);
-                if(filename.empty()){
-                    return;
-                }
-            }else{
-
-            }
-
-            editor->GetEditor()->SetPath(filename);
-            editor->GetEditor()->SaveFile(filename);
-        }
-    }
-}
 
 T100VOID T100ProjectView::FileSave()
 {
@@ -299,7 +302,4 @@ T100VOID T100ProjectView::PageChanged()
     SetTitle();
 }
 
-T100VOID T100ProjectView::PageClose()
-{
-    SetTitle();
-}
+

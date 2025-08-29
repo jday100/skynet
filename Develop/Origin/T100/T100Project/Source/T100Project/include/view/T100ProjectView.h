@@ -18,6 +18,8 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    ShowSetupCompilerDialog();
 
+        T100VOID                    FileClose(T100Pack*);
+        T100VOID                    PageClose(T100Pack*);
 
 
 
@@ -60,11 +62,11 @@ class T100ProjectView : public T100ProjectViewBase
         T100VOID                    New(T100FileInfo*);
         T100VOID                    Open(T100FileInfo*);
 
-        T100VOID                    FileClose(T100Pack*);
+
         T100VOID                    FileSave();
 
         T100VOID                    PageChanged();
-        T100VOID                    PageClose();
+
 
     protected:
 

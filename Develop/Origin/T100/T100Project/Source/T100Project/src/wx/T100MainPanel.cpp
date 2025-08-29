@@ -89,5 +89,15 @@ T100VOID T100MainPanel::OnPageClosing(wxAuiNotebookEvent& event)
 
 T100VOID T100MainPanel::OnPageClosed(wxAuiNotebookEvent& event)
 {
-    T100ProjectInvoking::OnPageClosed();
+    T100Pack*       pack        = T100NULL;
+
+    pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
+
+    if(pack){
+
+    }else{
+        m_current   = T100NULL;
+    }
+
+    T100ProjectInvoking::OnPageClosed(pack);
 }
