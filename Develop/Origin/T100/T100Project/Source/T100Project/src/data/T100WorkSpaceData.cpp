@@ -9,9 +9,26 @@ T100WorkSpaceData::T100WorkSpaceData() :
     //ctor
 }
 
+T100WorkSpaceData::T100WorkSpaceData(T100WorkSpaceInfo* info) :
+    T100TreeItemData(),
+    m_info(info)
+{
+    //ctor
+}
+
 T100WorkSpaceData::~T100WorkSpaceData()
 {
     //dtor
+}
+
+T100VOID T100WorkSpaceData::SetWorkSpaceInfo(T100WorkSpaceInfo* info)
+{
+    m_info      = info;
+}
+
+T100WorkSpaceInfo* T100WorkSpaceData::GetWorkSpaceInfo()
+{
+    return m_info;
 }
 
 wxMenu* T100WorkSpaceData::ShowMenu()

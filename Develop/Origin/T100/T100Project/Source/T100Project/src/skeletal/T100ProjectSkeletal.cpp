@@ -352,7 +352,7 @@ T100VOID T100ProjectSkeletal::OnProjectOpen(T100ProjectData* data)
     T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
     T100ProjectInfo*        info        = T100NEW T100ProjectInfo();
 
-    if(!logic.Open(data->GetPath(), info)){
+    if(!logic.Open(data->GetProjectInfo()->GetPath(), info)){
         T100SAFE_DELETE(info);
         return T100FALSE;
     }

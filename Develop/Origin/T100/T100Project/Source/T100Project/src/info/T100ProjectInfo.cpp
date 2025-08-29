@@ -3,11 +3,33 @@
 T100ProjectInfo::T100ProjectInfo()
 {
     //ctor
+    init();
 }
 
 T100ProjectInfo::~T100ProjectInfo()
 {
     //dtor
+    uninit();
+}
+
+T100VOID T100ProjectInfo::init()
+{
+    m_opened    = T100FALSE;
+}
+
+T100VOID T100ProjectInfo::uninit()
+{
+
+}
+
+T100VOID T100ProjectInfo::SetOpened(T100BOOL value)
+{
+    m_opened        = value;
+}
+
+T100BOOL T100ProjectInfo::IsOpened()
+{
+    return m_opened;
 }
 
 T100VOID T100ProjectInfo::SetLabel(const T100WSTRING& label)

@@ -10,10 +10,10 @@ T100ProjectData::T100ProjectData() :
 }
 
 T100ProjectData::T100ProjectData(T100ProjectInfo* info) :
-    T100TreeItemData()
+    T100TreeItemData(),
+    m_info(info)
 {
     //ctor
-    m_label     = info->GetLabel();
 }
 
 T100ProjectData::~T100ProjectData()
@@ -21,24 +21,14 @@ T100ProjectData::~T100ProjectData()
     //dtor
 }
 
-T100VOID T100ProjectData::SetLabel(const T100WSTRING& label)
+T100VOID T100ProjectData::SetProjectInfo(T100ProjectInfo* info)
 {
-    m_label     = label;
+    m_info      = info;
 }
 
-const T100WSTRING& T100ProjectData::GetLabel()
+T100ProjectInfo* T100ProjectData::GetProjectInfo()
 {
-    return m_label;
-}
-
-T100VOID T100ProjectData::SetPath(const T100WSTRING& path)
-{
-    m_path      = path;
-}
-
-const T100WSTRING& T100ProjectData::GetPath()
-{
-    return m_path;
+    return m_info;
 }
 
 wxMenu* T100ProjectData::ShowMenu()

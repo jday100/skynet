@@ -1298,8 +1298,6 @@ T100VOID T100ProjectTree::AppendProject(wxTreeItemId parent, T100ProjectInfo* in
     T100ProjectData*    data    = T100NEW T100ProjectData(info);
     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
 
-    data->SetLabel(info->GetLabel());
-    data->SetPath(info->GetPath());
     data->SetId(item);
 
     SetItemHasChildren(item, T100TRUE);
