@@ -17,7 +17,7 @@ class T100ProjectLogic
         T100ProjectLogic(T100ProjectInfo*);
         virtual ~T100ProjectLogic();
 
-        T100BOOL                    NewNew(const T100WxFolderInfo&, T100WorkSpaceInfo*);
+        T100BOOL                    New(const T100WxFolderInfo&, T100WorkSpaceInfo*);
         T100BOOL                    Build(T100WorkSpaceInfo*);
 
 
@@ -33,9 +33,6 @@ class T100ProjectLogic
         T100ProjectInfo*            GetProjectInfo();
 
         T100BOOL                    Check(T100WxFolderInfo*);
-
-        T100BOOL                    New(const T100WxFolderInfo&);
-
 
         T100BOOL                    Open(const T100WSTRING&);
 

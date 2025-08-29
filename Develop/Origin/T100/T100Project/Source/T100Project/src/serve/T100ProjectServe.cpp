@@ -16,7 +16,7 @@ T100ProjectServe::~T100ProjectServe()
 
 T100BOOL T100ProjectServe::New(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
 {
-    return m_projectLogic.NewNew(info, workspace);
+    return m_projectLogic.New(info, workspace);
 }
 
 

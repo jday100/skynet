@@ -36,7 +36,7 @@ T100VOID T100ProjectLogic::uninit()
     T100SAFE_DELETE(m_folder);
 }
 
-T100BOOL T100ProjectLogic::NewNew(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
+T100BOOL T100ProjectLogic::New(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
 {
     T100WSTRING         name;
     T100WSTRING         filename;
@@ -158,48 +158,6 @@ T100BOOL T100ProjectLogic::Check(T100WxFolderInfo* info)
     if(!projectFile.Check(filename)){
         return T100FALSE;
     }
-    return T100TRUE;
-}
-
-T100BOOL T100ProjectLogic::New(const T100WxFolderInfo& info)
-{
-    T100WSTRING         name;
-    T100WSTRING         filename;
-
-    name    = GetFolderName(info);
-
-    T100Folder          folder(name);
-
-    if(folder.IsExists()){
-        return T100FALSE;
-    }
-
-    if(!folder.Create()){
-        return T100FALSE;
-    }
-
-    filename    = GetFileName(info);
-
-    T100ProjectFile     file(filename);
-
-    if(file.IsExists()){
-        return T100FALSE;
-    }
-
-    if(!file.Create()){
-        return T100FALSE;
-    }
-
-    T100ProjectInfo*    project     = T100NULL;
-
-    project     = T100NEW T100ProjectInfo();
-
-    project->SetLabel(info.GetLabel());
-    project->SetPath(name);
-    project->SetFileName(filename);
-
-    m_project   = project;
-
     return T100TRUE;
 }
 
