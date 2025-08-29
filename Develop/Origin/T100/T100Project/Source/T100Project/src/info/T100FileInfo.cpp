@@ -3,11 +3,33 @@
 T100FileInfo::T100FileInfo()
 {
     //ctor
+    init();
 }
 
 T100FileInfo::~T100FileInfo()
 {
     //dtor
+    uninit();
+}
+
+T100VOID T100FileInfo::init()
+{
+    m_opened    = T100FALSE;
+}
+
+T100VOID T100FileInfo::uninit()
+{
+
+}
+
+T100VOID T100FileInfo::SetOpened(T100BOOL value)
+{
+    m_opened    = value;
+}
+
+T100BOOL T100FileInfo::IsOpened()
+{
+    return m_opened;
 }
 
 T100VOID T100FileInfo::SetLabel(const T100WSTRING& label)
@@ -50,12 +72,12 @@ const T100WSTRING& T100FileInfo::GetPath()
     return m_path;
 }
 
-T100VOID T100FileInfo::SetFile(const T100WSTRING& file)
+T100VOID T100FileInfo::SetFolder(const T100WSTRING& folder)
 {
-    m_file      = file;
+    m_folder    = folder;
 }
 
-const T100WSTRING& T100FileInfo::GetFile()
+const T100WSTRING& T100FileInfo::GetFolder()
 {
-    return m_file;
+    return m_folder;
 }

@@ -6,55 +6,28 @@ T100FileData::T100FileData() :
     T100TreeItemData()
 {
     //ctor
-    init();
 }
 
 T100FileData::T100FileData(T100FileInfo* info) :
-    T100TreeItemData()
+    T100TreeItemData(),
+    m_info(info)
 {
     //ctor
-    init();
 }
 
 T100FileData::~T100FileData()
 {
     //dtor
-    uninit();
 }
 
-T100VOID T100FileData::init()
+T100VOID T100FileData::SetFileInfo(T100FileInfo* info)
 {
-    m_opened    = T100FALSE;
+    m_info      = info;
 }
 
-T100VOID T100FileData::uninit()
+T100FileInfo* T100FileData::GetFileInfo()
 {
-
-}
-
-T100VOID T100FileData::SetLabel(const T100WSTRING& label)
-{
-    m_label     = label;
-}
-
-const T100WSTRING& T100FileData::GetLabel()
-{
-    return m_label;
-}
-
-T100VOID T100FileData::SetPath(const T100WSTRING& path)
-{
-    m_path      = path;
-}
-
-const T100WSTRING& T100FileData::GetPath()
-{
-    return m_path;
-}
-
-T100VOID T100FileData::SetOpened(T100BOOL value)
-{
-    m_opened    = value;
+    return m_info;
 }
 
 wxMenu* T100FileData::ShowMenu()

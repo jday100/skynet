@@ -65,7 +65,7 @@ _ZStL19piecewise_construct:
 	.def	_ZnwyPv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZnwyPv
 _ZnwyPv:
-.LFB360:
+.LFB643:
 	.file 1 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/new"
 	.loc 1 169 1
 	.cfi_startproc
@@ -77,7 +77,7 @@ _ZnwyPv:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.9797, D.9797
+	movq	%rcx, 16(%rbp)	 # D.15561, D.15561
 	movq	%rdx, 24(%rbp)	 # __p, __p
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/new:169: { return __p; }
 	.loc 1 169 10
@@ -89,7 +89,7 @@ _ZnwyPv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE360:
+.LFE643:
 	.seh_endproc
 	.text
 	.align 2
@@ -97,7 +97,7 @@ _ZnwyPv:
 	.def	_ZN15T100FolderLogicC2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15T100FolderLogicC2Ev
 _ZN15T100FolderLogicC2Ev:
-.LFB1449:
+.LFB1732:
 	.file 2 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/logic/T100FolderLogic.cpp"
 	.loc 2 7 1
 	.cfi_startproc
@@ -125,7 +125,7 @@ _ZN15T100FolderLogicC2Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1449:
+.LFE1732:
 	.seh_endproc
 	.globl	_ZN15T100FolderLogicC1Ev
 	.def	_ZN15T100FolderLogicC1Ev;	.scl	2;	.type	32;	.endef
@@ -135,7 +135,7 @@ _ZN15T100FolderLogicC2Ev:
 	.def	_ZN15T100FolderLogicD2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15T100FolderLogicD2Ev
 _ZN15T100FolderLogicD2Ev:
-.LFB1452:
+.LFB1735:
 	.loc 2 12 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -162,7 +162,7 @@ _ZN15T100FolderLogicD2Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1452:
+.LFE1735:
 	.seh_endproc
 	.globl	_ZN15T100FolderLogicD1Ev
 	.def	_ZN15T100FolderLogicD1Ev;	.scl	2;	.type	32;	.endef
@@ -172,7 +172,7 @@ _ZN15T100FolderLogicD2Ev:
 	.def	_ZN15T100FolderLogicD0Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15T100FolderLogicD0Ev
 _ZN15T100FolderLogicD0Ev:
-.LFB1454:
+.LFB1737:
 	.loc 2 12 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -200,14 +200,14 @@ _ZN15T100FolderLogicD0Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1454:
+.LFE1737:
 	.seh_endproc
 	.align 2
 	.globl	_ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 	.def	_ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 _ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
-.LFB1455:
+.LFB1738:
 	.loc 2 18 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -254,7 +254,7 @@ _ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaI
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1455:
+.LFE1738:
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 2
@@ -266,7 +266,7 @@ _ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaI
 	.def	_ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP14T100FolderInfo;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP14T100FolderInfo
 _ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP14T100FolderInfo:
-.LFB1456:
+.LFB1739:
 	.loc 2 33 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -425,7 +425,7 @@ _ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 	call	_ZN16T100WxFolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FolderLogic.cpp:56:         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
 	.loc 2 56 70
-	movl	$120, %ecx	 #,
+	movl	$160, %ecx	 #,
 	call	_Znwy	 #
 .LEHE6:
 	movq	%rax, %rbx	 # tmp134, _50
@@ -528,7 +528,7 @@ _ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FolderLogic.cpp:81:         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
 	.loc 2 81 68
-	movl	$168, %ecx	 #,
+	movl	$176, %ecx	 #,
 .LEHB11:
 	call	_Znwy	 #
 .LEHE11:
@@ -607,7 +607,7 @@ _ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 	movq	%rax, %rsi	 #, tmp176
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FolderLogic.cpp:56:         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
 	.loc 2 56 70
-	movl	$120, %edx	 #,
+	movl	$160, %edx	 #,
 	movq	%rbx, %rcx	 # _50,
 	call	_ZdlPvy	 #
 	movq	%rsi, %rbx	 # tmp176, tmp175
@@ -650,7 +650,7 @@ _ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 	movq	%rax, %rsi	 #, tmp191
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FolderLogic.cpp:81:         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
 	.loc 2 81 68
-	movl	$168, %edx	 #,
+	movl	$176, %edx	 #,
 	movq	%rbx, %rcx	 # _87,
 	call	_ZdlPvy	 #
 	movq	%rsi, %rbx	 # tmp191, tmp190
@@ -693,8 +693,8 @@ _ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 	leaq	128(%rbp), %rax	 #, tmp201
 	movq	%rax, %rcx	 # tmp201,
 	call	_ZN10T100FolderD1Ev	 #
-	movq	%rbx, %rax	 # tmp199, D.40001
-	movq	%rax, %rcx	 # D.40001,
+	movq	%rbx, %rax	 # tmp199, D.45840
+	movq	%rax, %rcx	 # D.45840,
 .LEHB14:
 	call	_Unwind_Resume	 #
 .LEHE14:
@@ -711,77 +711,77 @@ _ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 	.cfi_def_cfa 7, -392
 	ret	
 	.cfi_endproc
-.LFE1456:
+.LFE1739:
 	.def	__gxx_personality_seh0;	.scl	2;	.type	32;	.endef
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA1456:
+.LLSDA1739:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE1456-.LLSDACSB1456
-.LLSDACSB1456:
-	.uleb128 .LEHB0-.LFB1456
+	.uleb128 .LLSDACSE1739-.LLSDACSB1739
+.LLSDACSB1739:
+	.uleb128 .LEHB0-.LFB1739
 	.uleb128 .LEHE0-.LEHB0
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB1-.LFB1456
+	.uleb128 .LEHB1-.LFB1739
 	.uleb128 .LEHE1-.LEHB1
-	.uleb128 .L28-.LFB1456
+	.uleb128 .L28-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB2-.LFB1456
+	.uleb128 .LEHB2-.LFB1739
 	.uleb128 .LEHE2-.LEHB2
-	.uleb128 .L29-.LFB1456
+	.uleb128 .L29-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB3-.LFB1456
+	.uleb128 .LEHB3-.LFB1739
 	.uleb128 .LEHE3-.LEHB3
-	.uleb128 .L30-.LFB1456
+	.uleb128 .L30-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB4-.LFB1456
+	.uleb128 .LEHB4-.LFB1739
 	.uleb128 .LEHE4-.LEHB4
-	.uleb128 .L31-.LFB1456
+	.uleb128 .L31-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB5-.LFB1456
+	.uleb128 .LEHB5-.LFB1739
 	.uleb128 .LEHE5-.LEHB5
-	.uleb128 .L32-.LFB1456
+	.uleb128 .L32-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB6-.LFB1456
+	.uleb128 .LEHB6-.LFB1739
 	.uleb128 .LEHE6-.LEHB6
-	.uleb128 .L33-.LFB1456
+	.uleb128 .L33-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB7-.LFB1456
+	.uleb128 .LEHB7-.LFB1739
 	.uleb128 .LEHE7-.LEHB7
-	.uleb128 .L34-.LFB1456
+	.uleb128 .L34-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB8-.LFB1456
+	.uleb128 .LEHB8-.LFB1739
 	.uleb128 .LEHE8-.LEHB8
-	.uleb128 .L33-.LFB1456
+	.uleb128 .L33-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB9-.LFB1456
+	.uleb128 .LEHB9-.LFB1739
 	.uleb128 .LEHE9-.LEHB9
-	.uleb128 .L35-.LFB1456
+	.uleb128 .L35-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB10-.LFB1456
+	.uleb128 .LEHB10-.LFB1739
 	.uleb128 .LEHE10-.LEHB10
-	.uleb128 .L36-.LFB1456
+	.uleb128 .L36-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB11-.LFB1456
+	.uleb128 .LEHB11-.LFB1739
 	.uleb128 .LEHE11-.LEHB11
-	.uleb128 .L37-.LFB1456
+	.uleb128 .L37-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB12-.LFB1456
+	.uleb128 .LEHB12-.LFB1739
 	.uleb128 .LEHE12-.LEHB12
-	.uleb128 .L38-.LFB1456
+	.uleb128 .L38-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB13-.LFB1456
+	.uleb128 .LEHB13-.LFB1739
 	.uleb128 .LEHE13-.LEHB13
-	.uleb128 .L37-.LFB1456
+	.uleb128 .L37-.LFB1739
 	.uleb128 0
-	.uleb128 .LEHB14-.LFB1456
+	.uleb128 .LEHB14-.LFB1739
 	.uleb128 .LEHE14-.LEHB14
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE1456:
+.LLSDACSE1739:
 	.text
 	.seh_endproc
 	.section	.text$_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev,"x"
@@ -791,7 +791,7 @@ _ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 	.def	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev
 _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev:
-.LFB1689:
+.LFB2032:
 	.file 3 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h"
 	.loc 3 391 7
 	.cfi_startproc
@@ -822,16 +822,16 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1689:
+.LFE2032:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA1689:
+.LLSDA2032:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE1689-.LLSDACSB1689
-.LLSDACSB1689:
-.LLSDACSE1689:
+	.uleb128 .LLSDACSE2032-.LLSDACSB2032
+.LLSDACSB2032:
+.LLSDACSE2032:
 	.section	.text$_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev,"x"
 	.linkonce discard
 	.seh_endproc
@@ -842,7 +842,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev:
 	.def	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev
 _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev:
-.LFB1692:
+.LFB2035:
 	.loc 3 565 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -866,9 +866,9 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:567: 	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
 	.loc 3 567 15
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	8(%rax), %rdx	 # this_6(D)->D.33838._M_impl._M_finish, _3
+	movq	8(%rax), %rdx	 # this_6(D)->D.39605._M_impl._M_finish, _3
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	(%rax), %rax	 # this_6(D)->D.33838._M_impl._M_start, _4
+	movq	(%rax), %rax	 # this_6(D)->D.39605._M_impl._M_start, _4
 	movq	%rcx, %r8	 # _2,
 	movq	%rax, %rcx	 # _4,
 	call	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E	 #
@@ -885,16 +885,16 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1692:
+.LFE2035:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA1692:
+.LLSDA2035:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE1692-.LLSDACSB1692
-.LLSDACSB1692:
-.LLSDACSE1692:
+	.uleb128 .LLSDACSE2035-.LLSDACSB2035
+.LLSDACSB2035:
+.LLSDACSE2035:
 	.section	.text$_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev,"x"
 	.linkonce discard
 	.seh_endproc
@@ -905,7 +905,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev:
 	.def	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginEv
 _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginEv:
-.LFB1693:
+.LFB2036:
 	.loc 3 698 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -927,7 +927,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginE
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_	 #
-	movq	-8(%rbp), %rax	 # D.35911, D.39664
+	movq	-8(%rbp), %rax	 # D.41750, D.45503
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 3 699 50
 	addq	$48, %rsp	 #,
@@ -936,7 +936,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1693:
+.LFE2036:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv,"x"
 	.linkonce discard
@@ -945,7 +945,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginE
 	.def	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv
 _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv:
-.LFB1694:
+.LFB2037:
 	.loc 3 716 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -968,7 +968,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_	 #
-	movq	-8(%rbp), %rax	 # D.35913, D.39667
+	movq	-8(%rbp), %rax	 # D.41752, D.45506
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 3 717 51
 	addq	$48, %rsp	 #,
@@ -977,7 +977,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1694:
+.LFE2037:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_,"x"
 	.linkonce discard
@@ -985,7 +985,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv:
 	.def	_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_
 _ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_:
-.LFB1695:
+.LFB2038:
 	.file 4 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h"
 	.loc 4 881 5
 	.cfi_startproc
@@ -1029,7 +1029,7 @@ _ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE1695:
+.LFE2038:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv,"x"
 	.linkonce discard
@@ -1038,7 +1038,7 @@ _ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS
 	.def	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv
 _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv:
-.LFB1696:
+.LFB2039:
 	.loc 4 801 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1069,7 +1069,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwES
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1696:
+.LFE2039:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv,"x"
 	.linkonce discard
@@ -1078,7 +1078,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwES
 	.def	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv
 _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv:
-.LFB1697:
+.LFB2040:
 	.loc 4 793 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1101,7 +1101,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1697:
+.LFE2040:
 	.seh_endproc
 	.section	.text$_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_,"x"
 	.linkonce discard
@@ -1109,7 +1109,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	.def	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_
 _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
-.LFB1698:
+.LFB2041:
 	.file 5 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h"
 	.loc 5 5925 5
 	.cfi_startproc
@@ -1154,8 +1154,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.40008
-	movq	%rax, %rcx	 # D.40008,
+	movq	%rbx, %rax	 # tmp90, D.45847
+	movq	%rax, %rcx	 # D.45847,
 .LEHB17:
 	call	_Unwind_Resume	 #
 .LEHE17:
@@ -1171,28 +1171,28 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE1698:
+.LFE2041:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA1698:
+.LLSDA2041:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE1698-.LLSDACSB1698
-.LLSDACSB1698:
-	.uleb128 .LEHB15-.LFB1698
+	.uleb128 .LLSDACSE2041-.LLSDACSB2041
+.LLSDACSB2041:
+	.uleb128 .LEHB15-.LFB2041
 	.uleb128 .LEHE15-.LEHB15
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB16-.LFB1698
+	.uleb128 .LEHB16-.LFB2041
 	.uleb128 .LEHE16-.LEHB16
-	.uleb128 .L55-.LFB1698
+	.uleb128 .L55-.LFB2041
 	.uleb128 0
-	.uleb128 .LEHB17-.LFB1698
+	.uleb128 .LEHB17-.LFB2041
 	.uleb128 .LEHE17-.LEHB17
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE1698:
+.LLSDACSE2041:
 	.section	.text$_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_,"x"
 	.linkonce discard
 	.seh_endproc
@@ -1202,7 +1202,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	.def	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_
 _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_:
-.LFB1699:
+.LFB2042:
 	.loc 5 5953 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1240,7 +1240,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1699:
+.LFE2042:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_,"x"
 	.linkonce discard
@@ -1249,7 +1249,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_:
 	.def	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_
 _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
-.LFB1700:
+.LFB2043:
 	.loc 3 1074 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1267,11 +1267,11 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1076: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
 	.loc 3 1076 20
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	8(%rax), %rdx	 # this_9(D)->D.31861._M_impl._M_finish, _1
+	movq	8(%rax), %rdx	 # this_9(D)->D.37622._M_impl._M_finish, _1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1076: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
 	.loc 3 1076 47
 	movq	16(%rbp), %rax	 # this, tmp95
-	movq	16(%rax), %rax	 # this_9(D)->D.31861._M_impl._M_end_of_storage, _2
+	movq	16(%rax), %rax	 # this_9(D)->D.37622._M_impl._M_end_of_storage, _2
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1076: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
 	.loc 3 1076 2
 	cmpq	%rax, %rdx	 # _2, _1
@@ -1279,7 +1279,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1079: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
 	.loc 3 1079 30
 	movq	16(%rbp), %rax	 # this, tmp96
-	movq	8(%rax), %rdx	 # this_9(D)->D.31861._M_impl._M_finish, _3
+	movq	8(%rax), %rdx	 # this_9(D)->D.37622._M_impl._M_finish, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1079: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
 	.loc 3 1079 37
 	movq	16(%rbp), %rax	 # this, _4
@@ -1292,12 +1292,12 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1081: 	    ++this->_M_impl._M_finish;
 	.loc 3 1081 22
 	movq	16(%rbp), %rax	 # this, tmp98
-	movq	8(%rax), %rax	 # this_9(D)->D.31861._M_impl._M_finish, _5
+	movq	8(%rax), %rax	 # this_9(D)->D.37622._M_impl._M_finish, _5
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1081: 	    ++this->_M_impl._M_finish;
 	.loc 3 1081 6
 	leaq	8(%rax), %rdx	 #, _6
 	movq	16(%rbp), %rax	 # this, tmp99
-	movq	%rdx, 8(%rax)	 # _6, this_9(D)->D.31861._M_impl._M_finish
+	movq	%rdx, 8(%rax)	 # _6, this_9(D)->D.37622._M_impl._M_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1086:       }
 	.loc 3 1086 7
 	jmp	.L62	 #
@@ -1306,7 +1306,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
 	.loc 3 1085 4
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv	 #
-	movq	%rax, %rdx	 #, D.39554
+	movq	%rax, %rdx	 #, D.45393
 	movq	24(%rbp), %rax	 # __x, tmp100
 	movq	%rax, %r8	 # tmp100,
 	movq	16(%rbp), %rcx	 # this,
@@ -1321,7 +1321,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1700:
+.LFE2043:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_,"x"
 	.linkonce discard
@@ -1330,7 +1330,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
 	.def	_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_
 _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
-.LFB1701:
+.LFB2044:
 	.loc 3 1074 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1348,11 +1348,11 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1076: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
 	.loc 3 1076 20
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	8(%rax), %rdx	 # this_9(D)->D.30754._M_impl._M_finish, _1
+	movq	8(%rax), %rdx	 # this_9(D)->D.36515._M_impl._M_finish, _1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1076: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
 	.loc 3 1076 47
 	movq	16(%rbp), %rax	 # this, tmp95
-	movq	16(%rax), %rax	 # this_9(D)->D.30754._M_impl._M_end_of_storage, _2
+	movq	16(%rax), %rax	 # this_9(D)->D.36515._M_impl._M_end_of_storage, _2
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1076: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
 	.loc 3 1076 2
 	cmpq	%rax, %rdx	 # _2, _1
@@ -1360,7 +1360,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1079: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
 	.loc 3 1079 30
 	movq	16(%rbp), %rax	 # this, tmp96
-	movq	8(%rax), %rdx	 # this_9(D)->D.30754._M_impl._M_finish, _3
+	movq	8(%rax), %rdx	 # this_9(D)->D.36515._M_impl._M_finish, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1079: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
 	.loc 3 1079 37
 	movq	16(%rbp), %rax	 # this, _4
@@ -1373,12 +1373,12 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1081: 	    ++this->_M_impl._M_finish;
 	.loc 3 1081 22
 	movq	16(%rbp), %rax	 # this, tmp98
-	movq	8(%rax), %rax	 # this_9(D)->D.30754._M_impl._M_finish, _5
+	movq	8(%rax), %rax	 # this_9(D)->D.36515._M_impl._M_finish, _5
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1081: 	    ++this->_M_impl._M_finish;
 	.loc 3 1081 6
 	leaq	8(%rax), %rdx	 #, _6
 	movq	16(%rbp), %rax	 # this, tmp99
-	movq	%rdx, 8(%rax)	 # _6, this_9(D)->D.30754._M_impl._M_finish
+	movq	%rdx, 8(%rax)	 # _6, this_9(D)->D.36515._M_impl._M_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1086:       }
 	.loc 3 1086 7
 	jmp	.L66	 #
@@ -1387,7 +1387,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
 	.loc 3 1085 4
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv	 #
-	movq	%rax, %rdx	 #, D.39745
+	movq	%rax, %rdx	 #, D.45584
 	movq	24(%rbp), %rax	 # __x, tmp100
 	movq	%rax, %r8	 # tmp100,
 	movq	16(%rbp), %rcx	 # this,
@@ -1402,7 +1402,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1701:
+.LFE2044:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD1Ev,"x"
 	.linkonce discard
@@ -1411,7 +1411,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD1Ev
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD1Ev:
-.LFB1803:
+.LFB2146:
 	.loc 3 88 14
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1438,7 +1438,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1803:
+.LFE2146:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC2Ev,"x"
 	.linkonce discard
@@ -1447,7 +1447,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC2Ev
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC2Ev:
-.LFB1804:
+.LFB2147:
 	.loc 3 248 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1477,7 +1477,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1804:
+.LFE2147:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev,"x"
 	.linkonce discard
@@ -1486,7 +1486,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev:
-.LFB1807:
+.LFB2150:
 	.loc 3 283 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1536,16 +1536,16 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1807:
+.LFE2150:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA1807:
+.LLSDA2150:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE1807-.LLSDACSB1807
-.LLSDACSB1807:
-.LLSDACSE1807:
+	.uleb128 .LLSDACSE2150-.LLSDACSB2150
+.LLSDACSB2150:
+.LLSDACSE2150:
 	.section	.text$_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev,"x"
 	.linkonce discard
 	.seh_endproc
@@ -1556,7 +1556,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE19_M_get_Tp_allocatorEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE19_M_get_Tp_allocatorEv
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE19_M_get_Tp_allocatorEv:
-.LFB1809:
+.LFB2152:
 	.loc 3 237 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1578,7 +1578,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1809:
+.LFE2152:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E,"x"
 	.linkonce discard
@@ -1586,7 +1586,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E
 _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E:
-.LFB1810:
+.LFB2153:
 	.file 6 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h"
 	.loc 6 203 5
 	.cfi_startproc
@@ -1602,7 +1602,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSa
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.35899, D.35899
+	movq	%r8, 32(%rbp)	 # D.41738, D.41738
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 6 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -1618,7 +1618,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSa
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1810:
+.LFE2153:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_,"x"
 	.linkonce discard
@@ -1627,7 +1627,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSa
 	.def	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_
 _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_:
-.LFB1813:
+.LFB2156:
 	.loc 4 780 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1656,7 +1656,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwES
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1813:
+.LFE2156:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEE4baseEv,"x"
 	.linkonce discard
@@ -1665,7 +1665,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwES
 	.def	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEE4baseEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEE4baseEv
 _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEE4baseEv:
-.LFB1814:
+.LFB2157:
 	.loc 4 845 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1687,7 +1687,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1814:
+.LFE2157:
 	.seh_endproc
 	.section	.text$_ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_,"x"
 	.linkonce discard
@@ -1695,7 +1695,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	.def	_ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_
 _ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_:
-.LFB1820:
+.LFB2163:
 	.file 7 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/move.h"
 	.loc 7 99 5
 	.cfi_startproc
@@ -1718,7 +1718,7 @@ _ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_ref
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1820:
+.LFE2163:
 	.seh_endproc
 	.section	.text$_ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE,"x"
 	.linkonce discard
@@ -1726,7 +1726,7 @@ _ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_ref
 	.def	_ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE
 _ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE:
-.LFB1822:
+.LFB2165:
 	.loc 7 74 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1748,7 +1748,7 @@ _ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1822:
+.LFE2165:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_,"x"
 	.linkonce discard
@@ -1756,7 +1756,7 @@ _ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE:
 	.def	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_
 _ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_:
-.LFB1821:
+.LFB2164:
 	.file 8 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/alloc_traits.h"
 	.loc 8 474 2
 	.cfi_startproc
@@ -1793,7 +1793,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpO
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1821:
+.LFE2164:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv,"x"
 	.linkonce discard
@@ -1802,7 +1802,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpO
 	.def	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv
 _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
-.LFB1823:
+.LFB2166:
 	.loc 3 716 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1825,7 +1825,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.36714, D.39559
+	movq	-8(%rbp), %rax	 # D.42553, D.45398
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 3 717 51
 	addq	$48, %rsp	 #,
@@ -1834,7 +1834,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1823:
+.LFE2166:
 	.seh_endproc
 	.section .rdata,"dr"
 .LC1:
@@ -1846,7 +1846,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 	.def	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_
 _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_:
-.LFB1824:
+.LFB2167:
 	.file 9 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc"
 	.loc 9 413 7
 	.cfi_startproc
@@ -1879,18 +1879,18 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:424:       pointer __old_start = this->_M_impl._M_start;
 	.loc 9 424 15
 	movq	0(%rbp), %rax	 # this, tmp122
-	movq	(%rax), %rax	 # this_36(D)->D.31861._M_impl._M_start, tmp123
+	movq	(%rax), %rax	 # this_36(D)->D.37622._M_impl._M_start, tmp123
 	movq	%rax, -56(%rbp)	 # tmp123, __old_start
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:425:       pointer __old_finish = this->_M_impl._M_finish;
 	.loc 9 425 15
 	movq	0(%rbp), %rax	 # this, tmp124
-	movq	8(%rax), %rax	 # this_36(D)->D.31861._M_impl._M_finish, tmp125
+	movq	8(%rax), %rax	 # this_36(D)->D.37622._M_impl._M_finish, tmp125
 	movq	%rax, -64(%rbp)	 # tmp125, __old_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:426:       const size_type __elems_before = __position - begin();
 	.loc 9 426 51
 	movq	0(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv	 #
-	movq	%rax, -88(%rbp)	 # tmp127, D.36720
+	movq	%rax, -88(%rbp)	 # tmp127, D.42559
 	leaq	-88(%rbp), %rdx	 #, tmp128
 	leaq	8(%rbp), %rax	 #, tmp129
 	movq	%rax, %rcx	 # tmp129,
@@ -2000,7 +2000,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:470: 		    this->_M_impl._M_end_of_storage - __old_start);
 	.loc 9 470 21 discriminator 1
 	movq	0(%rbp), %rdx	 # this, tmp143
-	movq	16(%rdx), %rdx	 # this_36(D)->D.31861._M_impl._M_end_of_storage, _25
+	movq	16(%rdx), %rdx	 # this_36(D)->D.37622._M_impl._M_end_of_storage, _25
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:470: 		    this->_M_impl._M_end_of_storage - __old_start);
 	.loc 9 470 39 discriminator 1
 	subq	-56(%rbp), %rdx	 # __old_start, _26
@@ -2017,12 +2017,12 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	.loc 9 471 7 discriminator 1
 	movq	0(%rbp), %rax	 # this, tmp146
 	movq	-80(%rbp), %rdx	 # __new_start, tmp147
-	movq	%rdx, (%rax)	 # tmp147, this_36(D)->D.31861._M_impl._M_start
+	movq	%rdx, (%rax)	 # tmp147, this_36(D)->D.37622._M_impl._M_start
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:472:       this->_M_impl._M_finish = __new_finish;
 	.loc 9 472 7 discriminator 1
 	movq	0(%rbp), %rax	 # this, tmp148
 	movq	-40(%rbp), %rdx	 # __new_finish, tmp149
-	movq	%rdx, 8(%rax)	 # tmp149, this_36(D)->D.31861._M_impl._M_finish
+	movq	%rdx, 8(%rax)	 # tmp149, this_36(D)->D.37622._M_impl._M_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:473:       this->_M_impl._M_end_of_storage = __new_start + __len;
 	.loc 9 473 53 discriminator 1
 	movq	-48(%rbp), %rax	 # __len, tmp150
@@ -2032,7 +2032,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:473:       this->_M_impl._M_end_of_storage = __new_start + __len;
 	.loc 9 473 7 discriminator 1
 	movq	0(%rbp), %rax	 # this, tmp152
-	movq	%rdx, 16(%rax)	 # _30, this_36(D)->D.31861._M_impl._M_end_of_storage
+	movq	%rdx, 16(%rax)	 # _30, this_36(D)->D.37622._M_impl._M_end_of_storage
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:474:     }
 	.loc 9 474 5 discriminator 1
 	jmp	.L90	 #
@@ -2094,8 +2094,8 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 9 457 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp160, D.40011
-	movq	%rax, %rcx	 # D.40011,
+	movq	%rbx, %rax	 # tmp160, D.45850
+	movq	%rax, %rcx	 # D.45850,
 .LEHB22:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2111,45 +2111,45 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	.cfi_def_cfa 7, -88
 	ret	
 	.cfi_endproc
-.LFE1824:
+.LFE2167:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
 	.align 4
-.LLSDA1824:
+.LLSDA2167:
 	.byte	0xff
 	.byte	0x9b
-	.uleb128 .LLSDATT1824-.LLSDATTD1824
-.LLSDATTD1824:
+	.uleb128 .LLSDATT2167-.LLSDATTD2167
+.LLSDATTD2167:
 	.byte	0x1
-	.uleb128 .LLSDACSE1824-.LLSDACSB1824
-.LLSDACSB1824:
-	.uleb128 .LEHB18-.LFB1824
+	.uleb128 .LLSDACSE2167-.LLSDACSB2167
+.LLSDACSB2167:
+	.uleb128 .LEHB18-.LFB2167
 	.uleb128 .LEHE18-.LEHB18
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB19-.LFB1824
+	.uleb128 .LEHB19-.LFB2167
 	.uleb128 .LEHE19-.LEHB19
-	.uleb128 .L88-.LFB1824
+	.uleb128 .L88-.LFB2167
 	.uleb128 0x1
-	.uleb128 .LEHB20-.LFB1824
+	.uleb128 .LEHB20-.LFB2167
 	.uleb128 .LEHE20-.LEHB20
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB21-.LFB1824
+	.uleb128 .LEHB21-.LFB2167
 	.uleb128 .LEHE21-.LEHB21
-	.uleb128 .L89-.LFB1824
+	.uleb128 .L89-.LFB2167
 	.uleb128 0
-	.uleb128 .LEHB22-.LFB1824
+	.uleb128 .LEHB22-.LFB2167
 	.uleb128 .LEHE22-.LEHB22
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE1824:
+.LLSDACSE2167:
 	.byte	0x1
 	.byte	0
 	.align 4
 	.long	0
 
-.LLSDATT1824:
+.LLSDATT2167:
 	.section	.text$_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_,"x"
 	.linkonce discard
 	.seh_endproc
@@ -2159,7 +2159,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	.def	_ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE
 _ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE:
-.LFB1826:
+.LFB2169:
 	.loc 7 74 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2181,7 +2181,7 @@ _ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1826:
+.LFE2169:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_,"x"
 	.linkonce discard
@@ -2189,7 +2189,7 @@ _ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE:
 	.def	_ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_
 _ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_:
-.LFB1825:
+.LFB2168:
 	.loc 8 474 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2225,7 +2225,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1825:
+.LFE2168:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv,"x"
 	.linkonce discard
@@ -2234,7 +2234,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0
 	.def	_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv
 _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
-.LFB1827:
+.LFB2170:
 	.loc 3 716 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2257,7 +2257,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.36763, D.39748
+	movq	-8(%rbp), %rax	 # D.42602, D.45587
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 3 717 51
 	addq	$48, %rsp	 #,
@@ -2266,7 +2266,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1827:
+.LFE2170:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_,"x"
 	.linkonce discard
@@ -2275,7 +2275,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
 	.def	_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_
 _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_:
-.LFB1828:
+.LFB2171:
 	.loc 9 413 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2307,18 +2307,18 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:424:       pointer __old_start = this->_M_impl._M_start;
 	.loc 9 424 15
 	movq	0(%rbp), %rax	 # this, tmp122
-	movq	(%rax), %rax	 # this_36(D)->D.30754._M_impl._M_start, tmp123
+	movq	(%rax), %rax	 # this_36(D)->D.36515._M_impl._M_start, tmp123
 	movq	%rax, -56(%rbp)	 # tmp123, __old_start
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:425:       pointer __old_finish = this->_M_impl._M_finish;
 	.loc 9 425 15
 	movq	0(%rbp), %rax	 # this, tmp124
-	movq	8(%rax), %rax	 # this_36(D)->D.30754._M_impl._M_finish, tmp125
+	movq	8(%rax), %rax	 # this_36(D)->D.36515._M_impl._M_finish, tmp125
 	movq	%rax, -64(%rbp)	 # tmp125, __old_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:426:       const size_type __elems_before = __position - begin();
 	.loc 9 426 51
 	movq	0(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv	 #
-	movq	%rax, -88(%rbp)	 # tmp127, D.36769
+	movq	%rax, -88(%rbp)	 # tmp127, D.42608
 	leaq	-88(%rbp), %rdx	 #, tmp128
 	leaq	8(%rbp), %rax	 #, tmp129
 	movq	%rax, %rcx	 # tmp129,
@@ -2428,7 +2428,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:470: 		    this->_M_impl._M_end_of_storage - __old_start);
 	.loc 9 470 21 discriminator 1
 	movq	0(%rbp), %rdx	 # this, tmp143
-	movq	16(%rdx), %rdx	 # this_36(D)->D.30754._M_impl._M_end_of_storage, _25
+	movq	16(%rdx), %rdx	 # this_36(D)->D.36515._M_impl._M_end_of_storage, _25
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:470: 		    this->_M_impl._M_end_of_storage - __old_start);
 	.loc 9 470 39 discriminator 1
 	subq	-56(%rbp), %rdx	 # __old_start, _26
@@ -2445,12 +2445,12 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	.loc 9 471 7 discriminator 1
 	movq	0(%rbp), %rax	 # this, tmp146
 	movq	-80(%rbp), %rdx	 # __new_start, tmp147
-	movq	%rdx, (%rax)	 # tmp147, this_36(D)->D.30754._M_impl._M_start
+	movq	%rdx, (%rax)	 # tmp147, this_36(D)->D.36515._M_impl._M_start
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:472:       this->_M_impl._M_finish = __new_finish;
 	.loc 9 472 7 discriminator 1
 	movq	0(%rbp), %rax	 # this, tmp148
 	movq	-40(%rbp), %rdx	 # __new_finish, tmp149
-	movq	%rdx, 8(%rax)	 # tmp149, this_36(D)->D.30754._M_impl._M_finish
+	movq	%rdx, 8(%rax)	 # tmp149, this_36(D)->D.36515._M_impl._M_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:473:       this->_M_impl._M_end_of_storage = __new_start + __len;
 	.loc 9 473 53 discriminator 1
 	movq	-48(%rbp), %rax	 # __len, tmp150
@@ -2460,7 +2460,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:473:       this->_M_impl._M_end_of_storage = __new_start + __len;
 	.loc 9 473 7 discriminator 1
 	movq	0(%rbp), %rax	 # this, tmp152
-	movq	%rdx, 16(%rax)	 # _30, this_36(D)->D.30754._M_impl._M_end_of_storage
+	movq	%rdx, 16(%rax)	 # _30, this_36(D)->D.36515._M_impl._M_end_of_storage
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:474:     }
 	.loc 9 474 5 discriminator 1
 	jmp	.L103	 #
@@ -2522,8 +2522,8 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 9 457 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp160, D.40013
-	movq	%rax, %rcx	 # D.40013,
+	movq	%rbx, %rax	 # tmp160, D.45852
+	movq	%rax, %rcx	 # D.45852,
 .LEHB27:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2539,45 +2539,45 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	.cfi_def_cfa 7, -88
 	ret	
 	.cfi_endproc
-.LFE1828:
+.LFE2171:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
 	.align 4
-.LLSDA1828:
+.LLSDA2171:
 	.byte	0xff
 	.byte	0x9b
-	.uleb128 .LLSDATT1828-.LLSDATTD1828
-.LLSDATTD1828:
+	.uleb128 .LLSDATT2171-.LLSDATTD2171
+.LLSDATTD2171:
 	.byte	0x1
-	.uleb128 .LLSDACSE1828-.LLSDACSB1828
-.LLSDACSB1828:
-	.uleb128 .LEHB23-.LFB1828
+	.uleb128 .LLSDACSE2171-.LLSDACSB2171
+.LLSDACSB2171:
+	.uleb128 .LEHB23-.LFB2171
 	.uleb128 .LEHE23-.LEHB23
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB24-.LFB1828
+	.uleb128 .LEHB24-.LFB2171
 	.uleb128 .LEHE24-.LEHB24
-	.uleb128 .L101-.LFB1828
+	.uleb128 .L101-.LFB2171
 	.uleb128 0x1
-	.uleb128 .LEHB25-.LFB1828
+	.uleb128 .LEHB25-.LFB2171
 	.uleb128 .LEHE25-.LEHB25
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB26-.LFB1828
+	.uleb128 .LEHB26-.LFB2171
 	.uleb128 .LEHE26-.LEHB26
-	.uleb128 .L102-.LFB1828
+	.uleb128 .L102-.LFB2171
 	.uleb128 0
-	.uleb128 .LEHB27-.LFB1828
+	.uleb128 .LEHB27-.LFB2171
 	.uleb128 .LEHE27-.LEHB27
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE1828:
+.LLSDACSE2171:
 	.byte	0x1
 	.byte	0
 	.align 4
 	.long	0
 
-.LLSDATT1828:
+.LLSDATT2171:
 	.section	.text$_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_,"x"
 	.linkonce discard
 	.seh_endproc
@@ -2588,7 +2588,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC1Ev
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC1Ev:
-.LFB1861:
+.LFB2204:
 	.loc 3 95 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2623,7 +2623,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1861:
+.LFE2204:
 	.seh_endproc
 	.section	.text$_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev,"x"
 	.linkonce discard
@@ -2632,7 +2632,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev
 _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev:
-.LFB1863:
+.LFB2206:
 	.file 10 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocator.h"
 	.loc 10 139 7
 	.cfi_startproc
@@ -2660,7 +2660,7 @@ _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1863:
+.LFE2206:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13_M_deallocateEPS5_y,"x"
 	.linkonce discard
@@ -2669,7 +2669,7 @@ _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev:
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13_M_deallocateEPS5_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13_M_deallocateEPS5_y
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13_M_deallocateEPS5_y:
-.LFB1865:
+.LFB2208:
 	.loc 3 300 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2709,7 +2709,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1865:
+.LFE2208:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_,"x"
 	.linkonce discard
@@ -2717,7 +2717,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_
 _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_:
-.LFB1866:
+.LFB2209:
 	.loc 6 127 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2747,7 +2747,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1866:
+.LFE2209:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_,"x"
 	.linkonce discard
@@ -2756,7 +2756,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_:
 	.def	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_
 _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_:
-.LFB1871:
+.LFB2214:
 	.file 11 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h"
 	.loc 11 135 2
 	.cfi_startproc
@@ -2802,7 +2802,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE1871:
+.LFE2214:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_,"x"
 	.linkonce discard
@@ -2811,7 +2811,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_
 	.def	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_
 _ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_:
-.LFB1874:
+.LFB2217:
 	.loc 4 780 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2840,7 +2840,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1874:
+.LFE2217:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc,"x"
 	.linkonce discard
@@ -2849,7 +2849,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3
 	.def	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc
 _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
-.LFB1875:
+.LFB2218:
 	.loc 3 1635 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2903,7 +2903,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
 	.loc 3 1640 43
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv	 #
-	movq	%rax, -96(%rbp)	 # _7, D.37413
+	movq	%rax, -96(%rbp)	 # _7, D.43252
 	leaq	-40(%rbp), %rdx	 #, tmp101
 	leaq	-96(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
@@ -2952,7 +2952,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
 	.cfi_def_cfa 7, -40
 	ret	
 	.cfi_endproc
-.LFE1875:
+.LFE2218:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv,"x"
 	.linkonce discard
@@ -2961,7 +2961,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
 	.def	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv
 _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
-.LFB1876:
+.LFB2219:
 	.loc 3 698 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2983,7 +2983,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.37415, D.39596
+	movq	-8(%rbp), %rax	 # D.43254, D.45435
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 3 699 50
 	addq	$48, %rsp	 #,
@@ -2992,7 +2992,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1876:
+.LFE2219:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_,"x"
 	.linkonce discard
@@ -3000,7 +3000,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
 	.def	_ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_
 _ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_:
-.LFB1877:
+.LFB2220:
 	.loc 4 963 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3044,7 +3044,7 @@ _ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorI
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE1877:
+.LFE2220:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy,"x"
 	.linkonce discard
@@ -3053,7 +3053,7 @@ _ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorI
 	.def	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy
 _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy:
-.LFB1878:
+.LFB2221:
 	.loc 3 293 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3096,7 +3096,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1878:
+.LFE2221:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseEv,"x"
 	.linkonce discard
@@ -3105,7 +3105,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy:
 	.def	_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseEv
 _ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseEv:
-.LFB1879:
+.LFB2222:
 	.loc 4 845 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3127,7 +3127,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1879:
+.LFE2222:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv,"x"
 	.linkonce discard
@@ -3136,7 +3136,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseE
 	.def	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv
 _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
-.LFB1880:
+.LFB2223:
 	.loc 3 237 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3158,7 +3158,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1880:
+.LFE2223:
 	.seh_endproc
 	.section	.text$_ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_,"x"
 	.linkonce discard
@@ -3166,7 +3166,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.def	_ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_
 _ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_:
-.LFB1881:
+.LFB2224:
 	.file 12 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h"
 	.loc 12 305 5
 	.cfi_startproc
@@ -3194,15 +3194,15 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4
 	movq	-56(%rbp), %rax	 # __last, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rbx	 #, D.39620
+	movq	%rax, %rbx	 #, D.45459
 	movq	-64(%rbp), %rcx	 # __first,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rcx	 #, D.39621
+	movq	%rax, %rcx	 #, D.45460
 	movq	-40(%rbp), %rdx	 # __alloc, tmp92
 	movq	-48(%rbp), %rax	 # __result, tmp93
 	movq	%rdx, %r9	 # tmp92,
 	movq	%rax, %r8	 # tmp93,
-	movq	%rbx, %rdx	 # D.39620,
+	movq	%rbx, %rdx	 # D.45459,
 	call	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:313:     }
 	.loc 12 313 5
@@ -3214,7 +3214,7 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE1881:
+.LFE2224:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_,"x"
 	.linkonce discard
@@ -3222,7 +3222,7 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4
 	.def	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_
 _ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_:
-.LFB1882:
+.LFB2225:
 	.loc 8 486 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3252,7 +3252,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1882:
+.LFE2225:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E,"x"
 	.linkonce discard
@@ -3260,7 +3260,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_:
 	.def	_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E
 _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
-.LFB1883:
+.LFB2226:
 	.loc 6 203 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3275,7 +3275,7 @@ _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.36744, D.36744
+	movq	%r8, 32(%rbp)	 # D.42583, D.42583
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 6 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -3291,7 +3291,7 @@ _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1883:
+.LFE2226:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y,"x"
 	.linkonce discard
@@ -3300,7 +3300,7 @@ _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
 	.def	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y
 _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y:
-.LFB1884:
+.LFB2227:
 	.loc 3 300 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3340,7 +3340,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1884:
+.LFE2227:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_,"x"
 	.linkonce discard
@@ -3349,7 +3349,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y:
 	.def	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_
 _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_:
-.LFB1885:
+.LFB2228:
 	.loc 11 135 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3394,7 +3394,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE1885:
+.LFE2228:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_,"x"
 	.linkonce discard
@@ -3403,7 +3403,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_:
 	.def	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_
 _ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_:
-.LFB1888:
+.LFB2231:
 	.loc 4 780 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3432,7 +3432,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1888:
+.LFE2231:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc,"x"
 	.linkonce discard
@@ -3441,7 +3441,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_:
 	.def	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc
 _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
-.LFB1889:
+.LFB2232:
 	.loc 3 1635 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3495,7 +3495,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
 	.loc 3 1640 43
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv	 #
-	movq	%rax, -96(%rbp)	 # _7, D.37675
+	movq	%rax, -96(%rbp)	 # _7, D.43514
 	leaq	-40(%rbp), %rdx	 #, tmp101
 	leaq	-96(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
@@ -3544,7 +3544,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
 	.cfi_def_cfa 7, -40
 	ret	
 	.cfi_endproc
-.LFE1889:
+.LFE2232:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv,"x"
 	.linkonce discard
@@ -3553,7 +3553,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
 	.def	_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv
 _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
-.LFB1890:
+.LFB2233:
 	.loc 3 698 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3575,7 +3575,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.37677, D.39781
+	movq	-8(%rbp), %rax	 # D.43516, D.45620
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 3 699 50
 	addq	$48, %rsp	 #,
@@ -3584,7 +3584,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1890:
+.LFE2233:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_,"x"
 	.linkonce discard
@@ -3592,7 +3592,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
 	.def	_ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_
 _ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_:
-.LFB1891:
+.LFB2234:
 	.loc 4 963 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3636,7 +3636,7 @@ _ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE1891:
+.LFE2234:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy,"x"
 	.linkonce discard
@@ -3645,7 +3645,7 @@ _ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_
 	.def	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy
 _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy:
-.LFB1892:
+.LFB2235:
 	.loc 3 293 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3688,7 +3688,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1892:
+.LFE2235:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv,"x"
 	.linkonce discard
@@ -3697,7 +3697,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy:
 	.def	_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv
 _ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv:
-.LFB1893:
+.LFB2236:
 	.loc 4 845 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3719,7 +3719,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1893:
+.LFE2236:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv,"x"
 	.linkonce discard
@@ -3728,7 +3728,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv:
 	.def	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv
 _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
-.LFB1894:
+.LFB2237:
 	.loc 3 237 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3750,7 +3750,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1894:
+.LFE2237:
 	.seh_endproc
 	.section	.text$_ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_,"x"
 	.linkonce discard
@@ -3758,7 +3758,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.def	_ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_
 _ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_:
-.LFB1895:
+.LFB2238:
 	.loc 12 305 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3785,15 +3785,15 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_R
 	movq	-56(%rbp), %rax	 # __last, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rbx	 #, D.39805
+	movq	%rax, %rbx	 #, D.45644
 	movq	-64(%rbp), %rcx	 # __first,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rcx	 #, D.39806
+	movq	%rax, %rcx	 #, D.45645
 	movq	-40(%rbp), %rdx	 # __alloc, tmp92
 	movq	-48(%rbp), %rax	 # __result, tmp93
 	movq	%rdx, %r9	 # tmp92,
 	movq	%rax, %r8	 # tmp93,
-	movq	%rbx, %rdx	 # D.39805,
+	movq	%rbx, %rdx	 # D.45644,
 	call	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:313:     }
 	.loc 12 313 5
@@ -3805,7 +3805,7 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_R
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE1895:
+.LFE2238:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_,"x"
 	.linkonce discard
@@ -3813,7 +3813,7 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_R
 	.def	_ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_
 _ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_:
-.LFB1896:
+.LFB2239:
 	.loc 8 486 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3843,7 +3843,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1896:
+.LFE2239:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E,"x"
 	.linkonce discard
@@ -3851,7 +3851,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_:
 	.def	_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E
 _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
-.LFB1897:
+.LFB2240:
 	.loc 6 203 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3866,7 +3866,7 @@ _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.36791, D.36791
+	movq	%r8, 32(%rbp)	 # D.42630, D.42630
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 6 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -3882,7 +3882,7 @@ _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1897:
+.LFE2240:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y,"x"
 	.linkonce discard
@@ -3891,7 +3891,7 @@ _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
 	.def	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y
 _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y:
-.LFB1898:
+.LFB2241:
 	.loc 3 300 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3931,7 +3931,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1898:
+.LFE2241:
 	.seh_endproc
 	.section	.text$_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev,"x"
 	.linkonce discard
@@ -3940,7 +3940,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y:
 	.def	_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev
 _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev:
-.LFB1930:
+.LFB2273:
 	.loc 10 131 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3969,7 +3969,7 @@ _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1930:
+.LFE2273:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev,"x"
 	.linkonce discard
@@ -3978,7 +3978,7 @@ _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev:
 	.def	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev
 _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev:
-.LFB1933:
+.LFB2276:
 	.loc 11 86 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3998,7 +3998,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1933:
+.LFE2276:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y,"x"
 	.linkonce discard
@@ -4006,7 +4006,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.def	_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y
 _ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y:
-.LFB1935:
+.LFB2278:
 	.loc 8 461 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4039,7 +4039,7 @@ _ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1935:
+.LFE2278:
 	.seh_endproc
 	.section	.text$_ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_,"x"
 	.linkonce discard
@@ -4047,7 +4047,7 @@ _ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE
 	.def	_ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_
 _ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_:
-.LFB1937:
+.LFB2280:
 	.loc 7 47 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4069,7 +4069,7 @@ _ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1937:
+.LFE2280:
 	.seh_endproc
 	.section	.text$_ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEvT_S9_,"x"
 	.linkonce discard
@@ -4077,7 +4077,7 @@ _ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_:
 	.def	_ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEvT_S9_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEvT_S9_
 _ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEvT_S9_:
-.LFB1936:
+.LFB2279:
 	.loc 6 105 9
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4118,7 +4118,7 @@ _ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsI
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1936:
+.LFE2279:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv,"x"
 	.linkonce discard
@@ -4127,7 +4127,7 @@ _ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsI
 	.def	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv
 _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv:
-.LFB1940:
+.LFB2283:
 	.loc 3 810 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4158,7 +4158,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1940:
+.LFE2283:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv,"x"
 	.linkonce discard
@@ -4167,7 +4167,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv:
 	.def	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv
 _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv:
-.LFB1941:
+.LFB2284:
 	.loc 3 805 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4182,11 +4182,11 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:806:       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
 	.loc 3 806 40
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	8(%rax), %rdx	 # this_6(D)->D.31861._M_impl._M_finish, _1
+	movq	8(%rax), %rdx	 # this_6(D)->D.37622._M_impl._M_finish, _1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:806:       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
 	.loc 3 806 66
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	(%rax), %rax	 # this_6(D)->D.31861._M_impl._M_start, _2
+	movq	(%rax), %rax	 # this_6(D)->D.37622._M_impl._M_start, _2
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:806:       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
 	.loc 3 806 50
 	subq	%rax, %rdx	 # _2, _1
@@ -4199,7 +4199,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1941:
+.LFE2284:
 	.seh_endproc
 	.section	.text$_ZSt3maxIyERKT_S2_S2_,"x"
 	.linkonce discard
@@ -4207,7 +4207,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv:
 	.def	_ZSt3maxIyERKT_S2_S2_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt3maxIyERKT_S2_S2_
 _ZSt3maxIyERKT_S2_S2_:
-.LFB1942:
+.LFB2285:
 	.file 13 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h"
 	.loc 13 219 5
 	.cfi_startproc
@@ -4247,7 +4247,7 @@ _ZSt3maxIyERKT_S2_S2_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1942:
+.LFE2285:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y,"x"
 	.linkonce discard
@@ -4255,7 +4255,7 @@ _ZSt3maxIyERKT_S2_S2_:
 	.def	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y
 _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y:
-.LFB1943:
+.LFB2286:
 	.loc 8 435 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4285,7 +4285,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1943:
+.LFE2286:
 	.seh_endproc
 	.section	.text$_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_,"x"
 	.linkonce discard
@@ -4293,7 +4293,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y:
 	.def	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_
 _ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_:
-.LFB1944:
+.LFB2287:
 	.loc 4 1215 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4313,7 +4313,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EE
 	movq	16(%rbp), %rdx	 # __i,
 	movq	%rax, %rcx	 # tmp89,
 	call	_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_	 #
-	movq	-8(%rbp), %rax	 # D.38902, D.39624
+	movq	-8(%rbp), %rax	 # D.44741, D.45463
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:1216:     { return _ReturnType(__i); }
 	.loc 4 1216 32
 	addq	$48, %rsp	 #,
@@ -4322,7 +4322,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1944:
+.LFE2287:
 	.seh_endproc
 	.section	.text$_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E,"x"
 	.linkonce discard
@@ -4330,7 +4330,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EE
 	.def	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E
 _ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E:
-.LFB1945:
+.LFB2288:
 	.loc 12 287 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4346,7 +4346,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
 	movq	%r8, 32(%rbp)	 # __result, __result
-	movq	%r9, 40(%rbp)	 # D.37623, D.37623
+	movq	%r9, 40(%rbp)	 # D.43462, D.43462
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:289:     { return std::uninitialized_copy(__first, __last, __result); }
 	.loc 12 289 37
 	movq	32(%rbp), %rdx	 # __result, tmp89
@@ -4363,7 +4363,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1945:
+.LFE2288:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_,"x"
 	.linkonce discard
@@ -4372,7 +4372,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6
 	.def	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_
 _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_:
-.LFB1946:
+.LFB2289:
 	.loc 11 140 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4393,7 +4393,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1946:
+.LFE2289:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPP14T100FolderInfoEvT_S3_,"x"
 	.linkonce discard
@@ -4401,7 +4401,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_:
 	.def	_ZSt8_DestroyIPP14T100FolderInfoEvT_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPP14T100FolderInfoEvT_S3_
 _ZSt8_DestroyIPP14T100FolderInfoEvT_S3_:
-.LFB1947:
+.LFB2290:
 	.loc 6 127 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4431,7 +4431,7 @@ _ZSt8_DestroyIPP14T100FolderInfoEvT_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1947:
+.LFE2290:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y,"x"
 	.linkonce discard
@@ -4439,7 +4439,7 @@ _ZSt8_DestroyIPP14T100FolderInfoEvT_S3_:
 	.def	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y
 _ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y:
-.LFB1948:
+.LFB2291:
 	.loc 8 461 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4472,7 +4472,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1948:
+.LFE2291:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv,"x"
 	.linkonce discard
@@ -4481,7 +4481,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y:
 	.def	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv
 _ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv:
-.LFB1949:
+.LFB2292:
 	.loc 3 810 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4512,7 +4512,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1949:
+.LFE2292:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv,"x"
 	.linkonce discard
@@ -4521,7 +4521,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv:
 	.def	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv
 _ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv:
-.LFB1950:
+.LFB2293:
 	.loc 3 805 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4536,11 +4536,11 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:806:       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
 	.loc 3 806 40
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	8(%rax), %rdx	 # this_6(D)->D.30754._M_impl._M_finish, _1
+	movq	8(%rax), %rdx	 # this_6(D)->D.36515._M_impl._M_finish, _1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:806:       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
 	.loc 3 806 66
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	(%rax), %rax	 # this_6(D)->D.30754._M_impl._M_start, _2
+	movq	(%rax), %rax	 # this_6(D)->D.36515._M_impl._M_start, _2
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:806:       { return size_type(this->_M_impl._M_finish - this->_M_impl._M_start); }
 	.loc 3 806 50
 	subq	%rax, %rdx	 # _2, _1
@@ -4553,7 +4553,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1950:
+.LFE2293:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y,"x"
 	.linkonce discard
@@ -4561,7 +4561,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv:
 	.def	_ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y
 _ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y:
-.LFB1951:
+.LFB2294:
 	.loc 8 435 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4591,7 +4591,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1951:
+.LFE2294:
 	.seh_endproc
 	.section	.text$_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_,"x"
 	.linkonce discard
@@ -4599,7 +4599,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y:
 	.def	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_
 _ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_:
-.LFB1952:
+.LFB2295:
 	.loc 4 1215 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4619,7 +4619,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0
 	movq	16(%rbp), %rdx	 # __i,
 	movq	%rax, %rcx	 # tmp89,
 	call	_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_	 #
-	movq	-8(%rbp), %rax	 # D.39000, D.39809
+	movq	-8(%rbp), %rax	 # D.44839, D.45648
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:1216:     { return _ReturnType(__i); }
 	.loc 4 1216 32
 	addq	$48, %rsp	 #,
@@ -4628,7 +4628,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1952:
+.LFE2295:
 	.seh_endproc
 	.section	.text$_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E,"x"
 	.linkonce discard
@@ -4636,7 +4636,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0
 	.def	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E
 _ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E:
-.LFB1953:
+.LFB2296:
 	.loc 12 287 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4652,7 +4652,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
 	movq	%r8, 32(%rbp)	 # __result, __result
-	movq	%r9, 40(%rbp)	 # D.37885, D.37885
+	movq	%r9, 40(%rbp)	 # D.43724, D.43724
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:289:     { return std::uninitialized_copy(__first, __last, __result); }
 	.loc 12 289 37
 	movq	32(%rbp), %rdx	 # __result, tmp89
@@ -4669,7 +4669,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1953:
+.LFE2296:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_,"x"
 	.linkonce discard
@@ -4678,7 +4678,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S
 	.def	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_
 _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_:
-.LFB1954:
+.LFB2297:
 	.loc 11 140 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4699,7 +4699,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1954:
+.LFE2297:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPP12T100FileInfoEvT_S3_,"x"
 	.linkonce discard
@@ -4707,7 +4707,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_:
 	.def	_ZSt8_DestroyIPP12T100FileInfoEvT_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPP12T100FileInfoEvT_S3_
 _ZSt8_DestroyIPP12T100FileInfoEvT_S3_:
-.LFB1955:
+.LFB2298:
 	.loc 6 127 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4737,7 +4737,7 @@ _ZSt8_DestroyIPP12T100FileInfoEvT_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1955:
+.LFE2298:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y,"x"
 	.linkonce discard
@@ -4745,7 +4745,7 @@ _ZSt8_DestroyIPP12T100FileInfoEvT_S3_:
 	.def	_ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y
 _ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y:
-.LFB1956:
+.LFB2299:
 	.loc 8 461 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4778,7 +4778,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1956:
+.LFE2299:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev,"x"
 	.linkonce discard
@@ -4787,7 +4787,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y:
 	.def	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev
 _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev:
-.LFB1990:
+.LFB2333:
 	.loc 11 79 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4807,7 +4807,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1990:
+.LFE2333:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE10deallocateEPS6_y,"x"
 	.linkonce discard
@@ -4816,7 +4816,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.def	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE10deallocateEPS6_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE10deallocateEPS6_y
 _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE10deallocateEPS6_y:
-.LFB1992:
+.LFB2335:
 	.loc 11 116 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4831,7 +4831,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __p, __p
-	movq	%r8, 32(%rbp)	 # D.32791, D.32791
+	movq	%r8, 32(%rbp)	 # D.38558, D.38558
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	.loc 11 125 19
 	movq	24(%rbp), %rax	 # __p, tmp87
@@ -4846,7 +4846,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1992:
+.LFE2335:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_,"x"
 	.linkonce discard
@@ -4854,7 +4854,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.def	_ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_
 _ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_:
-.LFB1993:
+.LFB2336:
 	.loc 6 97 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4881,7 +4881,7 @@ _ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1993:
+.LFE2336:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_,"x"
 	.linkonce discard
@@ -4889,7 +4889,7 @@ _ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_:
 	.def	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_
 _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_:
-.LFB1995:
+.LFB2338:
 	.loc 8 495 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4915,7 +4915,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1995:
+.LFE2338:
 	.seh_endproc
 	.section	.text$_ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv,"x"
 	.linkonce discard
@@ -4924,7 +4924,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_:
 	.def	_ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv
 _ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
-.LFB1996:
+.LFB2339:
 	.loc 3 241 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4946,7 +4946,7 @@ _ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1996:
+.LFE2339:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv,"x"
 	.linkonce discard
@@ -4955,7 +4955,7 @@ _ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.def	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv
 _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv:
-.LFB1997:
+.LFB2340:
 	.loc 11 99 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4970,7 +4970,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __n, __n
-	movq	%r8, 32(%rbp)	 # D.30810, D.30810
+	movq	%r8, 32(%rbp)	 # D.36571, D.36571
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 11 101 10
 	movq	16(%rbp), %rcx	 # this,
@@ -4999,7 +4999,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE1997:
+.LFE2340:
 	.seh_endproc
 	.section	.text$_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_,"x"
 	.linkonce discard
@@ -5008,7 +5008,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv:
 	.def	_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_
 _ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_:
-.LFB2000:
+.LFB2343:
 	.loc 4 1030 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5036,7 +5036,7 @@ _ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2000:
+.LFE2343:
 	.seh_endproc
 	.section	.text$_ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_,"x"
 	.linkonce discard
@@ -5044,7 +5044,7 @@ _ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_:
 	.def	_ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_
 _ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
-.LFB2001:
+.LFB2344:
 	.loc 12 115 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5079,7 +5079,7 @@ _ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2001:
+.LFE2344:
 	.seh_endproc
 	.section	.text$_ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_,"x"
 	.linkonce discard
@@ -5087,7 +5087,7 @@ _ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
 	.def	_ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_
 _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
-.LFB2002:
+.LFB2345:
 	.loc 6 117 9
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5098,8 +5098,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.38993, D.38993
-	movq	%rdx, 24(%rbp)	 # D.38994, D.38994
+	movq	%rcx, 16(%rbp)	 # D.44832, D.44832
+	movq	%rdx, 24(%rbp)	 # D.44833, D.44833
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 6 117 57
 	nop	
@@ -5108,7 +5108,7 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2002:
+.LFE2345:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y,"x"
 	.linkonce discard
@@ -5117,7 +5117,7 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
 	.def	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y
 _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y:
-.LFB2003:
+.LFB2346:
 	.loc 11 116 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5132,7 +5132,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __p, __p
-	movq	%r8, 32(%rbp)	 # D.30814, D.30814
+	movq	%r8, 32(%rbp)	 # D.36575, D.36575
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	.loc 11 125 19
 	movq	24(%rbp), %rax	 # __p, tmp87
@@ -5147,7 +5147,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2003:
+.LFE2346:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_,"x"
 	.linkonce discard
@@ -5155,7 +5155,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y:
 	.def	_ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_
 _ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_:
-.LFB2004:
+.LFB2347:
 	.loc 8 495 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5181,7 +5181,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2004:
+.LFE2347:
 	.seh_endproc
 	.section	.text$_ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv,"x"
 	.linkonce discard
@@ -5190,7 +5190,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_:
 	.def	_ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv
 _ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
-.LFB2005:
+.LFB2348:
 	.loc 3 241 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5212,7 +5212,7 @@ _ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2005:
+.LFE2348:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv,"x"
 	.linkonce discard
@@ -5221,7 +5221,7 @@ _ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.def	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv
 _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv:
-.LFB2006:
+.LFB2349:
 	.loc 11 99 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5236,7 +5236,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __n, __n
-	movq	%r8, 32(%rbp)	 # D.29703, D.29703
+	movq	%r8, 32(%rbp)	 # D.35464, D.35464
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 11 101 10
 	movq	16(%rbp), %rcx	 # this,
@@ -5265,7 +5265,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2006:
+.LFE2349:
 	.seh_endproc
 	.section	.text$_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_,"x"
 	.linkonce discard
@@ -5274,7 +5274,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv:
 	.def	_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_
 _ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_:
-.LFB2009:
+.LFB2352:
 	.loc 4 1030 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5302,7 +5302,7 @@ _ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2009:
+.LFE2352:
 	.seh_endproc
 	.section	.text$_ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_,"x"
 	.linkonce discard
@@ -5310,7 +5310,7 @@ _ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_:
 	.def	_ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_
 _ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
-.LFB2010:
+.LFB2353:
 	.loc 12 115 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5345,7 +5345,7 @@ _ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2010:
+.LFE2353:
 	.seh_endproc
 	.section	.text$_ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_,"x"
 	.linkonce discard
@@ -5353,7 +5353,7 @@ _ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
 	.def	_ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_
 _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
-.LFB2011:
+.LFB2354:
 	.loc 6 117 9
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5364,8 +5364,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.39091, D.39091
-	movq	%rdx, 24(%rbp)	 # D.39092, D.39092
+	movq	%rcx, 16(%rbp)	 # D.44930, D.44930
+	movq	%rdx, 24(%rbp)	 # D.44931, D.44931
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 6 117 57
 	nop	
@@ -5374,7 +5374,7 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2011:
+.LFE2354:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y,"x"
 	.linkonce discard
@@ -5383,7 +5383,7 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
 	.def	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y
 _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y:
-.LFB2012:
+.LFB2355:
 	.loc 11 116 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5398,7 +5398,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __p, __p
-	movq	%r8, 32(%rbp)	 # D.29707, D.29707
+	movq	%r8, 32(%rbp)	 # D.35468, D.35468
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	.loc 11 125 19
 	movq	24(%rbp), %rax	 # __p, tmp87
@@ -5413,7 +5413,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2012:
+.LFE2355:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv,"x"
 	.linkonce discard
@@ -5422,7 +5422,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y:
 	.def	_ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv
 _ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv:
-.LFB2038:
+.LFB2381:
 	.loc 11 129 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5444,7 +5444,7 @@ _ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2038:
+.LFE2381:
 	.seh_endproc
 	.section	.text$_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100FolderInfoES5_EET0_T_S8_S7_,"x"
 	.linkonce discard
@@ -5452,7 +5452,7 @@ _ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv:
 	.def	_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100FolderInfoES5_EET0_T_S8_S7_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100FolderInfoES5_EET0_T_S8_S7_
 _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100FolderInfoES5_EET0_T_S8_S7_:
-.LFB2039:
+.LFB2382:
 	.loc 12 99 9
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5484,7 +5484,7 @@ _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100Folde
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2039:
+.LFE2382:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv,"x"
 	.linkonce discard
@@ -5493,7 +5493,7 @@ _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100Folde
 	.def	_ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv
 _ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv:
-.LFB2040:
+.LFB2383:
 	.loc 11 129 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5515,7 +5515,7 @@ _ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2040:
+.LFE2383:
 	.seh_endproc
 	.section	.text$_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileInfoES5_EET0_T_S8_S7_,"x"
 	.linkonce discard
@@ -5523,7 +5523,7 @@ _ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv:
 	.def	_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileInfoES5_EET0_T_S8_S7_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileInfoES5_EET0_T_S8_S7_
 _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileInfoES5_EET0_T_S8_S7_:
-.LFB2041:
+.LFB2384:
 	.loc 12 99 9
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5555,7 +5555,7 @@ _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileI
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2041:
+.LFE2384:
 	.seh_endproc
 	.section	.text$_ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_,"x"
 	.linkonce discard
@@ -5563,7 +5563,7 @@ _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileI
 	.def	_ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_
 _ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
-.LFB2050:
+.LFB2393:
 	.loc 13 446 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5607,7 +5607,7 @@ _ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE2050:
+.LFE2393:
 	.seh_endproc
 	.section	.text$_ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_,"x"
 	.linkonce discard
@@ -5615,7 +5615,7 @@ _ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
 	.def	_ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_
 _ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
-.LFB2051:
+.LFB2394:
 	.loc 13 446 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5659,7 +5659,7 @@ _ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE2051:
+.LFE2394:
 	.seh_endproc
 	.section	.text$_ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E,"x"
 	.linkonce discard
@@ -5667,7 +5667,7 @@ _ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
 	.def	_ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E
 _ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E:
-.LFB2054:
+.LFB2397:
 	.loc 4 1235 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5695,7 +5695,7 @@ _ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2054:
+.LFE2397:
 	.seh_endproc
 	.section	.text$_ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_,"x"
 	.linkonce discard
@@ -5703,7 +5703,7 @@ _ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_
 	.def	_ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_
 _ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
-.LFB2055:
+.LFB2398:
 	.loc 13 420 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5755,7 +5755,7 @@ _ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
 	.cfi_def_cfa 7, 24
 	ret	
 	.cfi_endproc
-.LFE2055:
+.LFE2398:
 	.seh_endproc
 	.section	.text$_ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E,"x"
 	.linkonce discard
@@ -5763,7 +5763,7 @@ _ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
 	.def	_ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E
 _ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E:
-.LFB2056:
+.LFB2399:
 	.loc 4 1235 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5791,7 +5791,7 @@ _ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_it
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2056:
+.LFE2399:
 	.seh_endproc
 	.section	.text$_ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_,"x"
 	.linkonce discard
@@ -5799,7 +5799,7 @@ _ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_it
 	.def	_ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_
 _ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
-.LFB2057:
+.LFB2400:
 	.loc 13 420 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5851,7 +5851,7 @@ _ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
 	.cfi_def_cfa 7, 24
 	ret	
 	.cfi_endproc
-.LFE2057:
+.LFE2400:
 	.seh_endproc
 	.section	.text$_ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv,"x"
 	.linkonce discard
@@ -5860,7 +5860,7 @@ _ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
 	.def	_ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv
 _ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv:
-.LFB2058:
+.LFB2401:
 	.loc 4 1039 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5883,7 +5883,7 @@ _ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2058:
+.LFE2401:
 	.seh_endproc
 	.section	.text$_ZSt12__miter_baseIPP14T100FolderInfoET_S3_,"x"
 	.linkonce discard
@@ -5891,7 +5891,7 @@ _ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv:
 	.def	_ZSt12__miter_baseIPP14T100FolderInfoET_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__miter_baseIPP14T100FolderInfoET_S3_
 _ZSt12__miter_baseIPP14T100FolderInfoET_S3_:
-.LFB2059:
+.LFB2402:
 	.file 14 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h"
 	.loc 14 408 5
 	.cfi_startproc
@@ -5914,7 +5914,7 @@ _ZSt12__miter_baseIPP14T100FolderInfoET_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2059:
+.LFE2402:
 	.seh_endproc
 	.section	.text$_ZSt12__niter_baseIPP14T100FolderInfoET_S3_,"x"
 	.linkonce discard
@@ -5922,7 +5922,7 @@ _ZSt12__miter_baseIPP14T100FolderInfoET_S3_:
 	.def	_ZSt12__niter_baseIPP14T100FolderInfoET_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__niter_baseIPP14T100FolderInfoET_S3_
 _ZSt12__niter_baseIPP14T100FolderInfoET_S3_:
-.LFB2060:
+.LFB2403:
 	.loc 13 277 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5944,7 +5944,7 @@ _ZSt12__niter_baseIPP14T100FolderInfoET_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2060:
+.LFE2403:
 	.seh_endproc
 	.section	.text$_ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_,"x"
 	.linkonce discard
@@ -5952,7 +5952,7 @@ _ZSt12__niter_baseIPP14T100FolderInfoET_S3_:
 	.def	_ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_
 _ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
-.LFB2061:
+.LFB2404:
 	.loc 13 375 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5987,7 +5987,7 @@ _ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2061:
+.LFE2404:
 	.seh_endproc
 	.section	.text$_ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv,"x"
 	.linkonce discard
@@ -5996,7 +5996,7 @@ _ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
 	.def	_ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv
 _ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv:
-.LFB2062:
+.LFB2405:
 	.loc 4 1039 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6019,7 +6019,7 @@ _ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2062:
+.LFE2405:
 	.seh_endproc
 	.section	.text$_ZSt12__miter_baseIPP12T100FileInfoET_S3_,"x"
 	.linkonce discard
@@ -6027,7 +6027,7 @@ _ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv:
 	.def	_ZSt12__miter_baseIPP12T100FileInfoET_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__miter_baseIPP12T100FileInfoET_S3_
 _ZSt12__miter_baseIPP12T100FileInfoET_S3_:
-.LFB2063:
+.LFB2406:
 	.loc 14 408 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6049,7 +6049,7 @@ _ZSt12__miter_baseIPP12T100FileInfoET_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2063:
+.LFE2406:
 	.seh_endproc
 	.section	.text$_ZSt12__niter_baseIPP12T100FileInfoET_S3_,"x"
 	.linkonce discard
@@ -6057,7 +6057,7 @@ _ZSt12__miter_baseIPP12T100FileInfoET_S3_:
 	.def	_ZSt12__niter_baseIPP12T100FileInfoET_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__niter_baseIPP12T100FileInfoET_S3_
 _ZSt12__niter_baseIPP12T100FileInfoET_S3_:
-.LFB2064:
+.LFB2407:
 	.loc 13 277 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6079,7 +6079,7 @@ _ZSt12__niter_baseIPP12T100FileInfoET_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2064:
+.LFE2407:
 	.seh_endproc
 	.section	.text$_ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_,"x"
 	.linkonce discard
@@ -6087,7 +6087,7 @@ _ZSt12__niter_baseIPP12T100FileInfoET_S3_:
 	.def	_ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_
 _ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
-.LFB2065:
+.LFB2408:
 	.loc 13 375 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6122,7 +6122,7 @@ _ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2065:
+.LFE2408:
 	.seh_endproc
 	.section	.text$_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100FolderInfoEEPT_PKS5_S8_S6_,"x"
 	.linkonce discard
@@ -6130,7 +6130,7 @@ _ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
 	.def	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100FolderInfoEEPT_PKS5_S8_S6_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100FolderInfoEEPT_PKS5_S8_S6_
 _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100FolderInfoEEPT_PKS5_S8_S6_:
-.LFB2066:
+.LFB2409:
 	.loc 13 357 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6184,7 +6184,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100Folde
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2066:
+.LFE2409:
 	.seh_endproc
 	.section	.text$_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_,"x"
 	.linkonce discard
@@ -6192,7 +6192,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100Folde
 	.def	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_
 _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_:
-.LFB2067:
+.LFB2410:
 	.loc 13 357 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6246,7 +6246,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileI
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE2067:
+.LFE2410:
 	.seh_endproc
 	.globl	_ZTV15T100FolderLogic
 	.section	.rdata$_ZTV15T100FolderLogic,"dr"
@@ -6312,11 +6312,11 @@ _ZTS15T100FolderLogic:
 	.file 49 "include/logic/T100FolderLogic.h"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x1b800
+	.long	0x1b8bc
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
-	.uleb128 0x81
+	.uleb128 0x82
 	.ascii "GNU C++14 8.1.0 -mthreads -mtune=core2 -march=nocona -g -fpermissive -fexec-charset=UTF-8 -finput-charset=UTF-8\0"
 	.byte	0x4
 	.ascii "C:\\zgit\\skynet\\Develop\\Origin\\T100\\T100Project\\Source\\T100Project\\src\\logic\\T100FolderLogic.cpp\0"
@@ -6324,24 +6324,24 @@ _ZTS15T100FolderLogic:
 	.secrel32	.Ldebug_ranges0+0xc0
 	.quad	0
 	.secrel32	.Ldebug_line0
-	.uleb128 0x82
+	.uleb128 0x83
 	.ascii "std\0"
 	.byte	0x30
 	.byte	0
-	.long	0x112ff
-	.uleb128 0x6a
+	.long	0x113b9
+	.uleb128 0x6b
 	.ascii "__cxx11\0"
 	.byte	0x16
 	.word	0x104
 	.byte	0x41
-	.long	0x4acf
+	.long	0x4ace
 	.uleb128 0x3e
 	.ascii "basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >\0"
 	.byte	0x20
 	.byte	0x5
 	.byte	0x4d
 	.byte	0xb
-	.long	0x4ab4
+	.long	0x4ab3
 	.uleb128 0x4f
 	.secrel32	.LASF0
 	.byte	0x8
@@ -6350,7 +6350,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xe
 	.long	0x304
 	.uleb128 0x3b
-	.long	0x53fe
+	.long	0x54b8
 	.byte	0
 	.uleb128 0x20
 	.secrel32	.LASF0
@@ -6361,11 +6361,11 @@ _ZTS15T100FolderLogic:
 	.long	0x212
 	.long	0x222
 	.uleb128 0x2
-	.long	0x181e2
+	.long	0x1829c
 	.uleb128 0x1
 	.long	0x304
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
 	.uleb128 0x20
 	.secrel32	.LASF0
@@ -6376,11 +6376,11 @@ _ZTS15T100FolderLogic:
 	.long	0x27f
 	.long	0x28f
 	.uleb128 0x2
-	.long	0x181e2
+	.long	0x1829c
 	.uleb128 0x1
 	.long	0x304
 	.uleb128 0x1
-	.long	0x181ed
+	.long	0x182a7
 	.byte	0
 	.uleb128 0x11
 	.ascii "_M_p\0"
@@ -6389,14 +6389,14 @@ _ZTS15T100FolderLogic:
 	.byte	0xa
 	.long	0x304
 	.byte	0
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.ascii "~_Alloc_hider\0"
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderD4Ev\0"
 	.long	0x2f8
 	.uleb128 0x2
-	.long	0x181e2
+	.long	0x1829c
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.byte	0
 	.uleb128 0x18
@@ -6404,16 +6404,16 @@ _ZTS15T100FolderLogic:
 	.byte	0x5
 	.byte	0x5c
 	.byte	0x30
-	.long	0x11b34
+	.long	0x11bee
 	.byte	0x1
-	.uleb128 0x83
+	.uleb128 0x59
 	.byte	0x7
 	.byte	0x4
-	.long	0x16024
+	.long	0x164d8
 	.byte	0x5
 	.byte	0x9e
 	.byte	0xc
-	.long	0x336
+	.long	0x335
 	.uleb128 0x84
 	.ascii "_S_local_capacity\0"
 	.byte	0x7
@@ -6423,35 +6423,35 @@ _ZTS15T100FolderLogic:
 	.byte	0x5
 	.byte	0xa1
 	.byte	0x7
-	.long	0x374
-	.uleb128 0x6c
+	.long	0x373
+	.uleb128 0x6d
 	.ascii "_M_local_buf\0"
 	.byte	0x5
 	.byte	0xa2
 	.byte	0x35
-	.long	0x181f3
-	.uleb128 0x6c
+	.long	0x182ad
+	.uleb128 0x6d
 	.ascii "_M_allocated_capacity\0"
 	.byte	0x5
 	.byte	0xa3
 	.byte	0x13
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF2
 	.byte	0x5
 	.byte	0x58
 	.byte	0x32
-	.long	0x11b4c
+	.long	0x11c06
 	.byte	0x1
 	.uleb128 0x6
-	.long	0x374
+	.long	0x373
 	.uleb128 0x86
 	.ascii "npos\0"
 	.byte	0x5
 	.byte	0x65
 	.byte	0x1e
-	.long	0x381
+	.long	0x380
 	.byte	0x1
 	.uleb128 0x11
 	.ascii "_M_dataplus\0"
@@ -6465,10 +6465,10 @@ _ZTS15T100FolderLogic:
 	.byte	0x5
 	.byte	0x9c
 	.byte	0x12
-	.long	0x374
+	.long	0x373
 	.byte	0x8
 	.uleb128 0x87
-	.long	0x336
+	.long	0x335
 	.byte	0x10
 	.uleb128 0x3f
 	.ascii "_M_data\0"
@@ -6476,10 +6476,10 @@ _ZTS15T100FolderLogic:
 	.byte	0xa7
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7_M_dataEPw\0"
-	.long	0x420
-	.long	0x42b
+	.long	0x41f
+	.long	0x42a
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
 	.long	0x304
 	.byte	0
@@ -6489,12 +6489,12 @@ _ZTS15T100FolderLogic:
 	.byte	0xab
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE9_M_lengthEy\0"
-	.long	0x483
-	.long	0x48e
+	.long	0x482
+	.long	0x48d
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x50
 	.ascii "_M_data\0"
@@ -6503,10 +6503,10 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7_M_dataEv\0"
 	.long	0x304
-	.long	0x4e7
-	.long	0x4ed
+	.long	0x4e6
+	.long	0x4ec
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x35
 	.secrel32	.LASF3
@@ -6515,17 +6515,17 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13_M_local_dataEv\0"
 	.long	0x304
-	.long	0x548
-	.long	0x54e
+	.long	0x547
+	.long	0x54d
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF4
 	.byte	0x5
 	.byte	0x5d
 	.byte	0x35
-	.long	0x11b40
+	.long	0x11bfa
 	.byte	0x1
 	.uleb128 0x35
 	.secrel32	.LASF3
@@ -6533,11 +6533,11 @@ _ZTS15T100FolderLogic:
 	.byte	0xbd
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13_M_local_dataEv\0"
-	.long	0x54e
-	.long	0x5b7
-	.long	0x5bd
+	.long	0x54d
+	.long	0x5b6
+	.long	0x5bc
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x3f
 	.ascii "_M_capacity\0"
@@ -6545,12 +6545,12 @@ _ZTS15T100FolderLogic:
 	.byte	0xc7
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE11_M_capacityEy\0"
-	.long	0x61a
-	.long	0x625
+	.long	0x619
+	.long	0x624
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3f
 	.ascii "_M_set_length\0"
@@ -6558,12 +6558,12 @@ _ZTS15T100FolderLogic:
 	.byte	0xcb
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13_M_set_lengthEy\0"
-	.long	0x686
-	.long	0x691
+	.long	0x685
+	.long	0x690
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x50
 	.ascii "_M_is_local\0"
@@ -6571,11 +6571,11 @@ _ZTS15T100FolderLogic:
 	.byte	0xd2
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE11_M_is_localEv\0"
-	.long	0x16105
-	.long	0x6f3
-	.long	0x6f9
+	.long	0x16a1c
+	.long	0x6f2
+	.long	0x6f8
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x50
 	.ascii "_M_create\0"
@@ -6584,14 +6584,14 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE9_M_createERyy\0"
 	.long	0x304
-	.long	0x757
-	.long	0x767
+	.long	0x756
+	.long	0x766
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18214
+	.long	0x182ce
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3f
 	.ascii "_M_dispose\0"
@@ -6599,10 +6599,10 @@ _ZTS15T100FolderLogic:
 	.byte	0xda
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE10_M_disposeEv\0"
-	.long	0x7c2
-	.long	0x7c8
+	.long	0x7c1
+	.long	0x7c7
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x3f
 	.ascii "_M_destroy\0"
@@ -6610,12 +6610,12 @@ _ZTS15T100FolderLogic:
 	.byte	0xe1
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE10_M_destroyEy\0"
-	.long	0x823
-	.long	0x82e
+	.long	0x822
+	.long	0x82d
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3f
 	.ascii "_M_construct_aux_2\0"
@@ -6623,68 +6623,68 @@ _ZTS15T100FolderLogic:
 	.byte	0xf7
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE18_M_construct_aux_2Eyw\0"
-	.long	0x89a
-	.long	0x8aa
+	.long	0x899
+	.long	0x8a9
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
-	.uleb128 0x58
+	.uleb128 0x5a
 	.ascii "_M_construct\0"
 	.byte	0x5
 	.word	0x110
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_M_constructEyw\0"
-	.long	0x90b
-	.long	0x91b
+	.long	0x90a
+	.long	0x91a
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF5
 	.byte	0x5
 	.byte	0x57
 	.byte	0x23
-	.long	0x92d
+	.long	0x92c
 	.byte	0x1
 	.uleb128 0x6
-	.long	0x91b
+	.long	0x91a
 	.uleb128 0x10
 	.ascii "_Char_alloc_type\0"
 	.byte	0x5
 	.byte	0x50
 	.byte	0x18
-	.long	0x11b89
-	.uleb128 0x56
+	.long	0x11c43
+	.uleb128 0x57
 	.secrel32	.LASF6
 	.byte	0x5
 	.word	0x113
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE16_M_get_allocatorEv\0"
-	.long	0x1821a
-	.long	0x9a5
-	.long	0x9ab
+	.long	0x182d4
+	.long	0x9a4
+	.long	0x9aa
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.secrel32	.LASF6
 	.byte	0x5
 	.word	0x117
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE16_M_get_allocatorEv\0"
-	.long	0x18220
-	.long	0xa0b
-	.long	0xa11
+	.long	0x182da
+	.long	0xa0a
+	.long	0xa10
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x51
 	.ascii "_M_check\0"
@@ -6692,32 +6692,32 @@ _ZTS15T100FolderLogic:
 	.word	0x12b
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE8_M_checkEyPKc\0"
-	.long	0x374
-	.long	0xa70
-	.long	0xa80
+	.long	0x373
+	.long	0xa6f
+	.long	0xa7f
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
-	.uleb128 0x58
+	.uleb128 0x5a
 	.ascii "_M_check_length\0"
 	.byte	0x5
 	.word	0x135
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE15_M_check_lengthEyyPKc\0"
-	.long	0xaeb
-	.long	0xb00
+	.long	0xaea
+	.long	0xaff
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x51
 	.ascii "_M_limit\0"
@@ -6725,15 +6725,15 @@ _ZTS15T100FolderLogic:
 	.word	0x13e
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE8_M_limitEyy\0"
-	.long	0x374
-	.long	0xb5d
-	.long	0xb6d
+	.long	0x373
+	.long	0xb5c
+	.long	0xb6c
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x51
 	.ascii "_M_disjunct\0"
@@ -6741,55 +6741,55 @@ _ZTS15T100FolderLogic:
 	.word	0x146
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE11_M_disjunctEPKw\0"
-	.long	0x16105
-	.long	0xbd2
-	.long	0xbdd
+	.long	0x16a1c
+	.long	0xbd1
+	.long	0xbdc
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
-	.uleb128 0x61
+	.uleb128 0x63
 	.ascii "_S_copy\0"
 	.byte	0x5
 	.word	0x14f
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7_S_copyEPwPKwy\0"
-	.long	0xc43
+	.long	0xc42
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
-	.uleb128 0x61
+	.uleb128 0x63
 	.ascii "_S_move\0"
 	.byte	0x5
 	.word	0x158
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7_S_moveEPwPKwy\0"
-	.long	0xca9
+	.long	0xca8
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
-	.uleb128 0x61
+	.uleb128 0x63
 	.ascii "_S_assign\0"
 	.byte	0x5
 	.word	0x161
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE9_S_assignEPwyw\0"
-	.long	0xd11
+	.long	0xd10
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x36
 	.secrel32	.LASF7
@@ -6797,20 +6797,20 @@ _ZTS15T100FolderLogic:
 	.word	0x174
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13_S_copy_charsEPwN9__gnu_cxx17__normal_iteratorIS5_S4_EES8_\0"
-	.long	0xda0
+	.long	0xd9f
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0xda0
+	.long	0xd9f
 	.uleb128 0x1
-	.long	0xda0
+	.long	0xd9f
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF8
 	.byte	0x5
 	.byte	0x5e
 	.byte	0x44
-	.long	0x11ba9
+	.long	0x11c63
 	.byte	0x1
 	.uleb128 0x36
 	.secrel32	.LASF7
@@ -6818,20 +6818,20 @@ _ZTS15T100FolderLogic:
 	.word	0x178
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13_S_copy_charsEPwN9__gnu_cxx17__normal_iteratorIPKwS4_EESA_\0"
-	.long	0xe3c
+	.long	0xe3b
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0xe3c
+	.long	0xe3b
 	.uleb128 0x1
-	.long	0xe3c
+	.long	0xe3b
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF9
 	.byte	0x5
 	.byte	0x60
 	.byte	0x8
-	.long	0x12346
+	.long	0x12400
 	.byte	0x1
 	.uleb128 0x36
 	.secrel32	.LASF7
@@ -6839,13 +6839,13 @@ _ZTS15T100FolderLogic:
 	.word	0x17d
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13_S_copy_charsEPwS5_S5_\0"
-	.long	0xeb4
+	.long	0xeb3
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.byte	0
 	.uleb128 0x36
 	.secrel32	.LASF7
@@ -6853,13 +6853,13 @@ _ZTS15T100FolderLogic:
 	.word	0x181
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13_S_copy_charsEPwPKwS7_\0"
-	.long	0xf1f
+	.long	0xf1e
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x13
 	.ascii "_S_compare\0"
@@ -6867,44 +6867,44 @@ _ZTS15T100FolderLogic:
 	.word	0x186
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE10_S_compareEyy\0"
-	.long	0x160b5
-	.long	0xf87
+	.long	0x16194
+	.long	0xf86
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
-	.uleb128 0x58
+	.uleb128 0x5a
 	.ascii "_M_assign\0"
 	.byte	0x5
 	.word	0x193
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE9_M_assignERKS4_\0"
-	.long	0xfe4
-	.long	0xfef
+	.long	0xfe3
+	.long	0xfee
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
-	.uleb128 0x58
+	.uleb128 0x5a
 	.ascii "_M_mutate\0"
 	.byte	0x5
 	.word	0x196
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE9_M_mutateEyyPKwy\0"
-	.long	0x104d
-	.long	0x1067
+	.long	0x104c
+	.long	0x1066
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x1f
 	.secrel32	.LASF10
@@ -6912,26 +6912,26 @@ _ZTS15T100FolderLogic:
 	.word	0x19a
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE8_M_eraseEyy\0"
-	.long	0x10ba
-	.long	0x10ca
+	.long	0x10b9
+	.long	0x10c9
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x1a4
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4Ev\0"
 	.byte	0x1
-	.long	0x1116
-	.long	0x111c
+	.long	0x1115
+	.long	0x111b
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x34
 	.secrel32	.LASF11
@@ -6940,196 +6940,196 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4ERKS3_\0"
 	.byte	0x1
-	.long	0x116c
-	.long	0x1177
+	.long	0x116b
+	.long	0x1176
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x1b5
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4ERKS4_\0"
 	.byte	0x1
-	.long	0x11c7
-	.long	0x11d2
+	.long	0x11c6
+	.long	0x11d1
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x1c2
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4ERKS4_yRKS3_\0"
 	.byte	0x1
-	.long	0x1228
-	.long	0x123d
+	.long	0x1227
+	.long	0x123c
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x1d1
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4ERKS4_yy\0"
 	.byte	0x1
-	.long	0x128f
-	.long	0x12a4
+	.long	0x128e
+	.long	0x12a3
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x1e1
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4ERKS4_yyRKS3_\0"
 	.byte	0x1
-	.long	0x12fb
-	.long	0x1315
+	.long	0x12fa
+	.long	0x1314
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x1f3
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4EPKwyRKS3_\0"
 	.byte	0x1
-	.long	0x1369
-	.long	0x137e
+	.long	0x1368
+	.long	0x137d
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x1fd
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4EPKwRKS3_\0"
 	.byte	0x1
-	.long	0x13d1
-	.long	0x13e1
+	.long	0x13d0
+	.long	0x13e0
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x207
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4EywRKS3_\0"
 	.byte	0x1
-	.long	0x1433
-	.long	0x1448
+	.long	0x1432
+	.long	0x1447
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x213
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4EOS4_\0"
 	.byte	0x1
-	.long	0x1497
-	.long	0x14a2
+	.long	0x1496
+	.long	0x14a1
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x1822c
+	.long	0x182e6
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x22e
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4ESt16initializer_listIwERKS3_\0"
 	.byte	0x1
-	.long	0x1509
-	.long	0x1519
+	.long	0x1508
+	.long	0x1518
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x6309
+	.long	0x63c3
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x232
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4ERKS4_RKS3_\0"
 	.byte	0x1
-	.long	0x156e
-	.long	0x157e
+	.long	0x156d
+	.long	0x157d
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF11
 	.byte	0x5
 	.word	0x236
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC4EOS4_RKS3_\0"
 	.byte	0x1
-	.long	0x15d2
-	.long	0x15e2
+	.long	0x15d1
+	.long	0x15e1
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x1822c
+	.long	0x182e6
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
 	.uleb128 0x4b
 	.ascii "~basic_string\0"
@@ -7138,12 +7138,12 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED4Ev\0"
 	.byte	0x1
-	.long	0x1638
-	.long	0x1643
+	.long	0x1637
+	.long	0x1642
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -7151,14 +7151,14 @@ _ZTS15T100FolderLogic:
 	.word	0x28e
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x1697
-	.long	0x16a2
+	.long	0x1696
+	.long	0x16a1
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -7166,14 +7166,14 @@ _ZTS15T100FolderLogic:
 	.word	0x2b5
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEPKw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x16f4
-	.long	0x16ff
+	.long	0x16f3
+	.long	0x16fe
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -7181,14 +7181,14 @@ _ZTS15T100FolderLogic:
 	.word	0x2c0
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x174f
-	.long	0x175a
+	.long	0x174e
+	.long	0x1759
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -7196,14 +7196,14 @@ _ZTS15T100FolderLogic:
 	.word	0x2d2
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x17ad
-	.long	0x17b8
+	.long	0x17ac
+	.long	0x17b7
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x1822c
+	.long	0x182e6
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -7211,14 +7211,14 @@ _ZTS15T100FolderLogic:
 	.word	0x308
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSESt16initializer_listIwE\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x181e
-	.long	0x1829
+	.long	0x181d
+	.long	0x1828
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x6309
+	.long	0x63c3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF13
@@ -7226,12 +7226,12 @@ _ZTS15T100FolderLogic:
 	.word	0x327
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5beginEv\0"
-	.long	0xda0
+	.long	0xd9f
 	.byte	0x1
-	.long	0x187d
-	.long	0x1883
+	.long	0x187c
+	.long	0x1882
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF13
@@ -7239,12 +7239,12 @@ _ZTS15T100FolderLogic:
 	.word	0x32f
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5beginEv\0"
-	.long	0xe3c
+	.long	0xe3b
 	.byte	0x1
-	.long	0x18d8
-	.long	0x18de
+	.long	0x18d7
+	.long	0x18dd
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x19
 	.ascii "end\0"
@@ -7252,12 +7252,12 @@ _ZTS15T100FolderLogic:
 	.word	0x337
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE3endEv\0"
-	.long	0xda0
+	.long	0xd9f
 	.byte	0x1
-	.long	0x1930
-	.long	0x1936
+	.long	0x192f
+	.long	0x1935
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x19
 	.ascii "end\0"
@@ -7265,19 +7265,19 @@ _ZTS15T100FolderLogic:
 	.word	0x33f
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE3endEv\0"
-	.long	0xe3c
+	.long	0xe3b
 	.byte	0x1
-	.long	0x1989
-	.long	0x198f
+	.long	0x1988
+	.long	0x198e
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF14
 	.byte	0x5
 	.byte	0x62
 	.byte	0x30
-	.long	0x64b6
+	.long	0x6570
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF15
@@ -7285,19 +7285,19 @@ _ZTS15T100FolderLogic:
 	.word	0x348
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6rbeginEv\0"
-	.long	0x198f
+	.long	0x198e
 	.byte	0x1
-	.long	0x19f1
-	.long	0x19f7
+	.long	0x19f0
+	.long	0x19f6
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF16
 	.byte	0x5
 	.byte	0x61
 	.byte	0x35
-	.long	0x654c
+	.long	0x6606
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF15
@@ -7305,12 +7305,12 @@ _ZTS15T100FolderLogic:
 	.word	0x351
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6rbeginEv\0"
-	.long	0x19f7
+	.long	0x19f6
 	.byte	0x1
-	.long	0x1a5a
-	.long	0x1a60
+	.long	0x1a59
+	.long	0x1a5f
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF17
@@ -7318,12 +7318,12 @@ _ZTS15T100FolderLogic:
 	.word	0x35a
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4rendEv\0"
-	.long	0x198f
+	.long	0x198e
 	.byte	0x1
-	.long	0x1ab3
-	.long	0x1ab9
+	.long	0x1ab2
+	.long	0x1ab8
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF17
@@ -7331,12 +7331,12 @@ _ZTS15T100FolderLogic:
 	.word	0x363
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4rendEv\0"
-	.long	0x19f7
+	.long	0x19f6
 	.byte	0x1
-	.long	0x1b0d
-	.long	0x1b13
+	.long	0x1b0c
+	.long	0x1b12
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF18
@@ -7344,12 +7344,12 @@ _ZTS15T100FolderLogic:
 	.word	0x36c
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6cbeginEv\0"
-	.long	0xe3c
+	.long	0xe3b
 	.byte	0x1
-	.long	0x1b69
-	.long	0x1b6f
+	.long	0x1b68
+	.long	0x1b6e
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x19
 	.ascii "cend\0"
@@ -7357,12 +7357,12 @@ _ZTS15T100FolderLogic:
 	.word	0x374
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4cendEv\0"
-	.long	0xe3c
+	.long	0xe3b
 	.byte	0x1
-	.long	0x1bc4
-	.long	0x1bca
+	.long	0x1bc3
+	.long	0x1bc9
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF19
@@ -7370,12 +7370,12 @@ _ZTS15T100FolderLogic:
 	.word	0x37d
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7crbeginEv\0"
-	.long	0x19f7
+	.long	0x19f6
 	.byte	0x1
-	.long	0x1c21
-	.long	0x1c27
+	.long	0x1c20
+	.long	0x1c26
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF20
@@ -7383,12 +7383,12 @@ _ZTS15T100FolderLogic:
 	.word	0x386
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5crendEv\0"
-	.long	0x19f7
+	.long	0x19f6
 	.byte	0x1
-	.long	0x1c7c
-	.long	0x1c82
+	.long	0x1c7b
+	.long	0x1c81
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x19
 	.ascii "size\0"
@@ -7396,12 +7396,12 @@ _ZTS15T100FolderLogic:
 	.word	0x38f
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4sizeEv\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x1cd7
-	.long	0x1cdd
+	.long	0x1cd6
+	.long	0x1cdc
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x19
 	.ascii "length\0"
@@ -7409,12 +7409,12 @@ _ZTS15T100FolderLogic:
 	.word	0x395
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6lengthEv\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x1d36
-	.long	0x1d3c
+	.long	0x1d35
+	.long	0x1d3b
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF21
@@ -7422,54 +7422,54 @@ _ZTS15T100FolderLogic:
 	.word	0x39a
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE8max_sizeEv\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x1d94
-	.long	0x1d9a
+	.long	0x1d93
+	.long	0x1d99
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF22
 	.byte	0x5
 	.word	0x3a8
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6resizeEyw\0"
 	.byte	0x1
-	.long	0x1dec
-	.long	0x1dfc
+	.long	0x1deb
+	.long	0x1dfb
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF22
 	.byte	0x5
 	.word	0x3b5
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6resizeEy\0"
 	.byte	0x1
-	.long	0x1e4d
-	.long	0x1e58
+	.long	0x1e4c
+	.long	0x1e57
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF23
 	.byte	0x5
 	.word	0x3bb
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13shrink_to_fitEv\0"
 	.byte	0x1
-	.long	0x1eb1
-	.long	0x1eb7
+	.long	0x1eb0
+	.long	0x1eb6
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF24
@@ -7477,38 +7477,38 @@ _ZTS15T100FolderLogic:
 	.word	0x3ce
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE8capacityEv\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x1f0f
-	.long	0x1f15
+	.long	0x1f0e
+	.long	0x1f14
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF25
 	.byte	0x5
 	.word	0x3e6
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7reserveEy\0"
 	.byte	0x1
-	.long	0x1f67
-	.long	0x1f72
+	.long	0x1f66
+	.long	0x1f71
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF26
 	.byte	0x5
 	.word	0x3ec
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5clearEv\0"
 	.byte	0x1
-	.long	0x1fc2
-	.long	0x1fc8
+	.long	0x1fc1
+	.long	0x1fc7
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF27
@@ -7516,19 +7516,19 @@ _ZTS15T100FolderLogic:
 	.word	0x3f4
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5emptyEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.long	0x201d
-	.long	0x2023
+	.long	0x201c
+	.long	0x2022
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF28
 	.byte	0x5
 	.byte	0x5b
 	.byte	0x37
-	.long	0x11b64
+	.long	0x11c1e
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -7536,21 +7536,21 @@ _ZTS15T100FolderLogic:
 	.word	0x403
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEixEy\0"
-	.long	0x2023
+	.long	0x2022
 	.byte	0x1
-	.long	0x2081
-	.long	0x208c
+	.long	0x2080
+	.long	0x208b
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF30
 	.byte	0x5
 	.byte	0x5a
 	.byte	0x32
-	.long	0x11b58
+	.long	0x11c12
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -7558,14 +7558,14 @@ _ZTS15T100FolderLogic:
 	.word	0x414
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEixEy\0"
-	.long	0x208c
+	.long	0x208b
 	.byte	0x1
-	.long	0x20e9
-	.long	0x20f4
+	.long	0x20e8
+	.long	0x20f3
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x19
 	.ascii "at\0"
@@ -7573,14 +7573,14 @@ _ZTS15T100FolderLogic:
 	.word	0x429
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE2atEy\0"
-	.long	0x2023
+	.long	0x2022
 	.byte	0x1
-	.long	0x2145
-	.long	0x2150
+	.long	0x2144
+	.long	0x214f
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x19
 	.ascii "at\0"
@@ -7588,14 +7588,14 @@ _ZTS15T100FolderLogic:
 	.word	0x43e
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE2atEy\0"
-	.long	0x208c
+	.long	0x208b
 	.byte	0x1
-	.long	0x21a0
-	.long	0x21ab
+	.long	0x219f
+	.long	0x21aa
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF31
@@ -7603,12 +7603,12 @@ _ZTS15T100FolderLogic:
 	.word	0x44e
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5frontEv\0"
-	.long	0x208c
+	.long	0x208b
 	.byte	0x1
-	.long	0x21ff
-	.long	0x2205
+	.long	0x21fe
+	.long	0x2204
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF31
@@ -7616,12 +7616,12 @@ _ZTS15T100FolderLogic:
 	.word	0x459
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5frontEv\0"
-	.long	0x2023
+	.long	0x2022
 	.byte	0x1
-	.long	0x225a
-	.long	0x2260
+	.long	0x2259
+	.long	0x225f
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF32
@@ -7629,12 +7629,12 @@ _ZTS15T100FolderLogic:
 	.word	0x464
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4backEv\0"
-	.long	0x208c
+	.long	0x208b
 	.byte	0x1
-	.long	0x22b3
-	.long	0x22b9
+	.long	0x22b2
+	.long	0x22b8
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF32
@@ -7642,12 +7642,12 @@ _ZTS15T100FolderLogic:
 	.word	0x46f
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4backEv\0"
-	.long	0x2023
+	.long	0x2022
 	.byte	0x1
-	.long	0x230d
-	.long	0x2313
+	.long	0x230c
+	.long	0x2312
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -7655,14 +7655,14 @@ _ZTS15T100FolderLogic:
 	.word	0x47d
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEpLERKS4_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2367
-	.long	0x2372
+	.long	0x2366
+	.long	0x2371
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -7670,14 +7670,14 @@ _ZTS15T100FolderLogic:
 	.word	0x486
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEpLEPKw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x23c4
-	.long	0x23cf
+	.long	0x23c3
+	.long	0x23ce
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -7685,14 +7685,14 @@ _ZTS15T100FolderLogic:
 	.word	0x48f
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEpLEw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x241f
-	.long	0x242a
+	.long	0x241e
+	.long	0x2429
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -7700,14 +7700,14 @@ _ZTS15T100FolderLogic:
 	.word	0x49c
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEpLESt16initializer_listIwE\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2490
-	.long	0x249b
+	.long	0x248f
+	.long	0x249a
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x6309
+	.long	0x63c3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF34
@@ -7715,14 +7715,14 @@ _ZTS15T100FolderLogic:
 	.word	0x4b2
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6appendERKS4_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x24f4
-	.long	0x24ff
+	.long	0x24f3
+	.long	0x24fe
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF34
@@ -7730,18 +7730,18 @@ _ZTS15T100FolderLogic:
 	.word	0x4c3
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6appendERKS4_yy\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x255a
-	.long	0x256f
+	.long	0x2559
+	.long	0x256e
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF34
@@ -7749,16 +7749,16 @@ _ZTS15T100FolderLogic:
 	.word	0x4cf
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6appendEPKwy\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x25c7
-	.long	0x25d7
+	.long	0x25c6
+	.long	0x25d6
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF34
@@ -7766,14 +7766,14 @@ _ZTS15T100FolderLogic:
 	.word	0x4dc
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6appendEPKw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x262e
-	.long	0x2639
+	.long	0x262d
+	.long	0x2638
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF34
@@ -7781,16 +7781,16 @@ _ZTS15T100FolderLogic:
 	.word	0x4ed
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6appendEyw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x268f
-	.long	0x269f
+	.long	0x268e
+	.long	0x269e
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF34
@@ -7798,28 +7798,28 @@ _ZTS15T100FolderLogic:
 	.word	0x4f7
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6appendESt16initializer_listIwE\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x270a
-	.long	0x2715
+	.long	0x2709
+	.long	0x2714
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x6309
+	.long	0x63c3
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF35
 	.byte	0x5
 	.word	0x532
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE9push_backEw\0"
 	.byte	0x1
-	.long	0x2769
-	.long	0x2774
+	.long	0x2768
+	.long	0x2773
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -7827,14 +7827,14 @@ _ZTS15T100FolderLogic:
 	.word	0x541
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6assignERKS4_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x27cd
-	.long	0x27d8
+	.long	0x27cc
+	.long	0x27d7
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -7842,14 +7842,14 @@ _ZTS15T100FolderLogic:
 	.word	0x551
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6assignEOS4_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2830
-	.long	0x283b
+	.long	0x282f
+	.long	0x283a
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x1822c
+	.long	0x182e6
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -7857,18 +7857,18 @@ _ZTS15T100FolderLogic:
 	.word	0x568
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6assignERKS4_yy\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2896
-	.long	0x28ab
+	.long	0x2895
+	.long	0x28aa
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -7876,16 +7876,16 @@ _ZTS15T100FolderLogic:
 	.word	0x578
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6assignEPKwy\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2903
-	.long	0x2913
+	.long	0x2902
+	.long	0x2912
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -7893,14 +7893,14 @@ _ZTS15T100FolderLogic:
 	.word	0x588
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6assignEPKw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x296a
-	.long	0x2975
+	.long	0x2969
+	.long	0x2974
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -7908,16 +7908,16 @@ _ZTS15T100FolderLogic:
 	.word	0x599
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6assignEyw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x29cb
-	.long	0x29db
+	.long	0x29ca
+	.long	0x29da
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF36
@@ -7925,14 +7925,14 @@ _ZTS15T100FolderLogic:
 	.word	0x5b5
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6assignESt16initializer_listIwE\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2a46
-	.long	0x2a51
+	.long	0x2a45
+	.long	0x2a50
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x6309
+	.long	0x63c3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -7940,34 +7940,34 @@ _ZTS15T100FolderLogic:
 	.word	0x5ea
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6insertEN9__gnu_cxx17__normal_iteratorIPKwS4_EEyw\0"
-	.long	0xda0
+	.long	0xd9f
 	.byte	0x1
-	.long	0x2ace
-	.long	0x2ae3
+	.long	0x2acd
+	.long	0x2ae2
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0xe3c
+	.long	0xe3b
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF37
 	.byte	0x5
 	.word	0x638
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6insertEN9__gnu_cxx17__normal_iteratorIPwS4_EESt16initializer_listIwE\0"
 	.byte	0x1
-	.long	0x2b70
-	.long	0x2b80
+	.long	0x2b6f
+	.long	0x2b7f
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0xda0
+	.long	0xd9f
 	.uleb128 0x1
-	.long	0x6309
+	.long	0x63c3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -7975,16 +7975,16 @@ _ZTS15T100FolderLogic:
 	.word	0x64c
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6insertEyRKS4_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2bda
-	.long	0x2bea
+	.long	0x2bd9
+	.long	0x2be9
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -7992,20 +7992,20 @@ _ZTS15T100FolderLogic:
 	.word	0x663
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6insertEyRKS4_yy\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2c46
-	.long	0x2c60
+	.long	0x2c45
+	.long	0x2c5f
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -8013,18 +8013,18 @@ _ZTS15T100FolderLogic:
 	.word	0x67a
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6insertEyPKwy\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2cb9
-	.long	0x2cce
+	.long	0x2cb8
+	.long	0x2ccd
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -8032,16 +8032,16 @@ _ZTS15T100FolderLogic:
 	.word	0x68d
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6insertEyPKw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2d26
-	.long	0x2d36
+	.long	0x2d25
+	.long	0x2d35
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -8049,18 +8049,18 @@ _ZTS15T100FolderLogic:
 	.word	0x6a5
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6insertEyyw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2d8d
-	.long	0x2da2
+	.long	0x2d8c
+	.long	0x2da1
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -8068,39 +8068,39 @@ _ZTS15T100FolderLogic:
 	.word	0x6b7
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6insertEN9__gnu_cxx17__normal_iteratorIPKwS4_EEw\0"
-	.long	0xda0
+	.long	0xd9f
 	.byte	0x1
-	.long	0x2e1e
-	.long	0x2e2e
+	.long	0x2e1d
+	.long	0x2e2d
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x10
 	.ascii "__const_iterator\0"
 	.byte	0x5
 	.byte	0x6c
 	.byte	0x1e
-	.long	0xe3c
+	.long	0xe3b
 	.uleb128 0x3
 	.secrel32	.LASF38
 	.byte	0x5
 	.word	0x6f3
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5eraseEyy\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x2e9c
-	.long	0x2eac
+	.long	0x2e9b
+	.long	0x2eab
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF38
@@ -8108,14 +8108,14 @@ _ZTS15T100FolderLogic:
 	.word	0x706
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5eraseEN9__gnu_cxx17__normal_iteratorIPKwS4_EE\0"
-	.long	0xda0
+	.long	0xd9f
 	.byte	0x1
-	.long	0x2f26
-	.long	0x2f31
+	.long	0x2f25
+	.long	0x2f30
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF38
@@ -8123,28 +8123,28 @@ _ZTS15T100FolderLogic:
 	.word	0x719
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5eraseEN9__gnu_cxx17__normal_iteratorIPKwS4_EES9_\0"
-	.long	0xda0
+	.long	0xd9f
 	.byte	0x1
-	.long	0x2fae
-	.long	0x2fbe
+	.long	0x2fad
+	.long	0x2fbd
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF39
 	.byte	0x5
 	.word	0x72c
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE8pop_backEv\0"
 	.byte	0x1
-	.long	0x3011
-	.long	0x3017
+	.long	0x3010
+	.long	0x3016
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8152,18 +8152,18 @@ _ZTS15T100FolderLogic:
 	.word	0x745
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEyyRKS4_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x3073
-	.long	0x3088
+	.long	0x3072
+	.long	0x3087
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8171,22 +8171,22 @@ _ZTS15T100FolderLogic:
 	.word	0x75b
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEyyRKS4_yy\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x30e6
-	.long	0x3105
+	.long	0x30e5
+	.long	0x3104
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8194,20 +8194,20 @@ _ZTS15T100FolderLogic:
 	.word	0x774
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEyyPKwy\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x3160
-	.long	0x317a
+	.long	0x315f
+	.long	0x3179
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8215,18 +8215,18 @@ _ZTS15T100FolderLogic:
 	.word	0x78d
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEyyPKw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x31d4
-	.long	0x31e9
+	.long	0x31d3
+	.long	0x31e8
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8234,20 +8234,20 @@ _ZTS15T100FolderLogic:
 	.word	0x7a5
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEyyyw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x3242
-	.long	0x325c
+	.long	0x3241
+	.long	0x325b
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8255,18 +8255,18 @@ _ZTS15T100FolderLogic:
 	.word	0x7b7
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPKwS4_EES9_RKS4_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x32e0
-	.long	0x32f5
+	.long	0x32df
+	.long	0x32f4
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8274,20 +8274,20 @@ _ZTS15T100FolderLogic:
 	.word	0x7cb
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPKwS4_EES9_S8_y\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x3378
-	.long	0x3392
+	.long	0x3377
+	.long	0x3391
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8295,18 +8295,18 @@ _ZTS15T100FolderLogic:
 	.word	0x7e1
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPKwS4_EES9_S8_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x3414
-	.long	0x3429
+	.long	0x3413
+	.long	0x3428
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8314,20 +8314,20 @@ _ZTS15T100FolderLogic:
 	.word	0x7f6
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPKwS4_EES9_yw\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x34aa
-	.long	0x34c4
+	.long	0x34a9
+	.long	0x34c3
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8335,20 +8335,20 @@ _ZTS15T100FolderLogic:
 	.word	0x82f
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPKwS4_EES9_PwSA_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x3548
-	.long	0x3562
+	.long	0x3547
+	.long	0x3561
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8356,20 +8356,20 @@ _ZTS15T100FolderLogic:
 	.word	0x83a
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPKwS4_EES9_S8_S8_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x35e7
-	.long	0x3601
+	.long	0x35e6
+	.long	0x3600
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8377,20 +8377,20 @@ _ZTS15T100FolderLogic:
 	.word	0x845
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPKwS4_EES9_NS6_IPwS4_EESB_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x368f
-	.long	0x36a9
+	.long	0x368e
+	.long	0x36a8
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0xda0
+	.long	0xd9f
 	.uleb128 0x1
-	.long	0xda0
+	.long	0xd9f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8398,20 +8398,20 @@ _ZTS15T100FolderLogic:
 	.word	0x850
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPKwS4_EES9_S9_S9_\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x372e
-	.long	0x3748
+	.long	0x372d
+	.long	0x3747
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0x2e2e
+	.long	0x2e2d
 	.uleb128 0x1
-	.long	0xe3c
+	.long	0xe3b
 	.uleb128 0x1
-	.long	0xe3c
+	.long	0xe3b
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF40
@@ -8419,18 +8419,18 @@ _ZTS15T100FolderLogic:
 	.word	0x869
 	.byte	0x15
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7replaceEN9__gnu_cxx17__normal_iteratorIPKwS4_EES9_St16initializer_listIwE\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
-	.long	0x37de
-	.long	0x37f3
+	.long	0x37dd
+	.long	0x37f2
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0xe3c
+	.long	0xe3b
 	.uleb128 0x1
-	.long	0xe3c
+	.long	0xe3b
 	.uleb128 0x1
-	.long	0x6309
+	.long	0x63c3
 	.byte	0
 	.uleb128 0x51
 	.ascii "_M_replace_aux\0"
@@ -8438,19 +8438,19 @@ _ZTS15T100FolderLogic:
 	.word	0x8b2
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE14_M_replace_auxEyyyw\0"
-	.long	0x18232
-	.long	0x385e
-	.long	0x3878
+	.long	0x182ec
+	.long	0x385d
+	.long	0x3877
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x51
 	.ascii "_M_replace\0"
@@ -8458,19 +8458,19 @@ _ZTS15T100FolderLogic:
 	.word	0x8b6
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE10_M_replaceEyyPKwy\0"
-	.long	0x18232
-	.long	0x38dd
-	.long	0x38f7
+	.long	0x182ec
+	.long	0x38dc
+	.long	0x38f6
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x51
 	.ascii "_M_append\0"
@@ -8478,15 +8478,15 @@ _ZTS15T100FolderLogic:
 	.word	0x8ba
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE9_M_appendEPKwy\0"
-	.long	0x18232
-	.long	0x3957
-	.long	0x3967
+	.long	0x182ec
+	.long	0x3956
+	.long	0x3966
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x19
 	.ascii "copy\0"
@@ -8494,18 +8494,18 @@ _ZTS15T100FolderLogic:
 	.word	0x8cb
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4copyEPwyy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x39bf
-	.long	0x39d4
+	.long	0x39be
+	.long	0x39d3
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x4b
 	.ascii "swap\0"
@@ -8514,12 +8514,12 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4swapERS4_\0"
 	.byte	0x1
-	.long	0x3a27
-	.long	0x3a32
+	.long	0x3a26
+	.long	0x3a31
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18232
+	.long	0x182ec
 	.byte	0
 	.uleb128 0x19
 	.ascii "c_str\0"
@@ -8527,12 +8527,12 @@ _ZTS15T100FolderLogic:
 	.word	0x8df
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5c_strEv\0"
-	.long	0x16853
+	.long	0x16b26
 	.byte	0x1
-	.long	0x3a89
-	.long	0x3a8f
+	.long	0x3a88
+	.long	0x3a8e
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF41
@@ -8540,12 +8540,12 @@ _ZTS15T100FolderLogic:
 	.word	0x8eb
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4dataEv\0"
-	.long	0x16853
+	.long	0x16b26
 	.byte	0x1
-	.long	0x3ae3
-	.long	0x3ae9
+	.long	0x3ae2
+	.long	0x3ae8
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF42
@@ -8553,12 +8553,12 @@ _ZTS15T100FolderLogic:
 	.word	0x8fe
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13get_allocatorEv\0"
-	.long	0x91b
+	.long	0x91a
 	.byte	0x1
-	.long	0x3b47
-	.long	0x3b4d
+	.long	0x3b46
+	.long	0x3b4c
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0
 	.uleb128 0x19
 	.ascii "find\0"
@@ -8566,18 +8566,18 @@ _ZTS15T100FolderLogic:
 	.word	0x90e
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4findEPKwyy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3ba6
-	.long	0x3bbb
+	.long	0x3ba5
+	.long	0x3bba
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x19
 	.ascii "find\0"
@@ -8585,16 +8585,16 @@ _ZTS15T100FolderLogic:
 	.word	0x91c
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4findERKS4_y\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3c15
-	.long	0x3c25
+	.long	0x3c14
+	.long	0x3c24
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x19
 	.ascii "find\0"
@@ -8602,16 +8602,16 @@ _ZTS15T100FolderLogic:
 	.word	0x93c
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4findEPKwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3c7d
-	.long	0x3c8d
+	.long	0x3c7c
+	.long	0x3c8c
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x19
 	.ascii "find\0"
@@ -8619,16 +8619,16 @@ _ZTS15T100FolderLogic:
 	.word	0x94d
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE4findEwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3ce3
-	.long	0x3cf3
+	.long	0x3ce2
+	.long	0x3cf2
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF43
@@ -8636,16 +8636,16 @@ _ZTS15T100FolderLogic:
 	.word	0x95a
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5rfindERKS4_y\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3d4d
-	.long	0x3d5d
+	.long	0x3d4c
+	.long	0x3d5c
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF43
@@ -8653,18 +8653,18 @@ _ZTS15T100FolderLogic:
 	.word	0x97c
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5rfindEPKwyy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3db6
-	.long	0x3dcb
+	.long	0x3db5
+	.long	0x3dca
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF43
@@ -8672,16 +8672,16 @@ _ZTS15T100FolderLogic:
 	.word	0x98a
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5rfindEPKwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3e23
-	.long	0x3e33
+	.long	0x3e22
+	.long	0x3e32
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF43
@@ -8689,16 +8689,16 @@ _ZTS15T100FolderLogic:
 	.word	0x99b
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5rfindEwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3e89
-	.long	0x3e99
+	.long	0x3e88
+	.long	0x3e98
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF44
@@ -8706,16 +8706,16 @@ _ZTS15T100FolderLogic:
 	.word	0x9a9
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13find_first_ofERKS4_y\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3efc
-	.long	0x3f0c
+	.long	0x3efb
+	.long	0x3f0b
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF44
@@ -8723,18 +8723,18 @@ _ZTS15T100FolderLogic:
 	.word	0x9cc
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13find_first_ofEPKwyy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3f6e
-	.long	0x3f83
+	.long	0x3f6d
+	.long	0x3f82
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF44
@@ -8742,16 +8742,16 @@ _ZTS15T100FolderLogic:
 	.word	0x9da
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13find_first_ofEPKwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x3fe4
-	.long	0x3ff4
+	.long	0x3fe3
+	.long	0x3ff3
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF44
@@ -8759,16 +8759,16 @@ _ZTS15T100FolderLogic:
 	.word	0x9ee
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE13find_first_ofEwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x4053
-	.long	0x4063
+	.long	0x4052
+	.long	0x4062
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF45
@@ -8776,16 +8776,16 @@ _ZTS15T100FolderLogic:
 	.word	0x9fd
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12find_last_ofERKS4_y\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x40c5
-	.long	0x40d5
+	.long	0x40c4
+	.long	0x40d4
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF45
@@ -8793,18 +8793,18 @@ _ZTS15T100FolderLogic:
 	.word	0xa20
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12find_last_ofEPKwyy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x4136
-	.long	0x414b
+	.long	0x4135
+	.long	0x414a
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF45
@@ -8812,16 +8812,16 @@ _ZTS15T100FolderLogic:
 	.word	0xa2e
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12find_last_ofEPKwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x41ab
-	.long	0x41bb
+	.long	0x41aa
+	.long	0x41ba
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF45
@@ -8829,16 +8829,16 @@ _ZTS15T100FolderLogic:
 	.word	0xa42
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12find_last_ofEwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x4219
-	.long	0x4229
+	.long	0x4218
+	.long	0x4228
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF46
@@ -8846,16 +8846,16 @@ _ZTS15T100FolderLogic:
 	.word	0xa50
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE17find_first_not_ofERKS4_y\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x4290
-	.long	0x42a0
+	.long	0x428f
+	.long	0x429f
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF46
@@ -8863,18 +8863,18 @@ _ZTS15T100FolderLogic:
 	.word	0xa73
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE17find_first_not_ofEPKwyy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x4306
-	.long	0x431b
+	.long	0x4305
+	.long	0x431a
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF46
@@ -8882,16 +8882,16 @@ _ZTS15T100FolderLogic:
 	.word	0xa81
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE17find_first_not_ofEPKwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x4380
-	.long	0x4390
+	.long	0x437f
+	.long	0x438f
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF46
@@ -8899,16 +8899,16 @@ _ZTS15T100FolderLogic:
 	.word	0xa93
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE17find_first_not_ofEwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x43f3
-	.long	0x4403
+	.long	0x43f2
+	.long	0x4402
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF47
@@ -8916,16 +8916,16 @@ _ZTS15T100FolderLogic:
 	.word	0xaa2
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE16find_last_not_ofERKS4_y\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x4469
-	.long	0x4479
+	.long	0x4468
+	.long	0x4478
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF47
@@ -8933,18 +8933,18 @@ _ZTS15T100FolderLogic:
 	.word	0xac5
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE16find_last_not_ofEPKwyy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x44de
-	.long	0x44f3
+	.long	0x44dd
+	.long	0x44f2
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF47
@@ -8952,16 +8952,16 @@ _ZTS15T100FolderLogic:
 	.word	0xad3
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE16find_last_not_ofEPKwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x4557
-	.long	0x4567
+	.long	0x4556
+	.long	0x4566
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF47
@@ -8969,16 +8969,16 @@ _ZTS15T100FolderLogic:
 	.word	0xae5
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE16find_last_not_ofEwy\0"
-	.long	0x374
+	.long	0x373
 	.byte	0x1
-	.long	0x45c9
-	.long	0x45d9
+	.long	0x45c8
+	.long	0x45d8
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x19
 	.ascii "substr\0"
@@ -8988,14 +8988,14 @@ _ZTS15T100FolderLogic:
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6substrEyy\0"
 	.long	0x14d
 	.byte	0x1
-	.long	0x4633
-	.long	0x4643
+	.long	0x4632
+	.long	0x4642
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF48
@@ -9003,14 +9003,14 @@ _ZTS15T100FolderLogic:
 	.word	0xb08
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7compareERKS4_\0"
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x1
-	.long	0x469e
-	.long	0x46a9
+	.long	0x469d
+	.long	0x46a8
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF48
@@ -9018,18 +9018,18 @@ _ZTS15T100FolderLogic:
 	.word	0xb65
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7compareEyyRKS4_\0"
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x1
-	.long	0x4706
-	.long	0x471b
+	.long	0x4705
+	.long	0x471a
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF48
@@ -9037,22 +9037,22 @@ _ZTS15T100FolderLogic:
 	.word	0xb7f
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7compareEyyRKS4_yy\0"
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x1
-	.long	0x477a
-	.long	0x4799
+	.long	0x4779
+	.long	0x4798
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF48
@@ -9060,14 +9060,14 @@ _ZTS15T100FolderLogic:
 	.word	0xb91
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7compareEPKw\0"
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x1
-	.long	0x47f2
-	.long	0x47fd
+	.long	0x47f1
+	.long	0x47fc
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF48
@@ -9075,18 +9075,18 @@ _ZTS15T100FolderLogic:
 	.word	0xba9
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7compareEyyPKw\0"
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x1
-	.long	0x4858
-	.long	0x486d
+	.long	0x4857
+	.long	0x486c
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF48
@@ -9094,20 +9094,20 @@ _ZTS15T100FolderLogic:
 	.word	0xbc4
 	.byte	0x7
 	.ascii "_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE7compareEyyPKwy\0"
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x1
-	.long	0x48c9
-	.long	0x48e3
+	.long	0x48c8
+	.long	0x48e2
 	.uleb128 0x2
-	.long	0x1820e
+	.long	0x182c8
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x20
 	.secrel32	.LASF49
@@ -9115,19 +9115,19 @@ _ZTS15T100FolderLogic:
 	.byte	0xce
 	.byte	0x7
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_M_constructIPwEEvT_S7_St20forward_iterator_tag\0"
-	.long	0x4963
-	.long	0x4978
+	.long	0x4962
+	.long	0x4977
 	.uleb128 0x5
 	.secrel32	.LASF50
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x4dce
+	.long	0x4e88
 	.byte	0
 	.uleb128 0x3f
 	.ascii "_M_construct_aux<wchar_t*>\0"
@@ -9135,19 +9135,19 @@ _ZTS15T100FolderLogic:
 	.byte	0xe8
 	.byte	0x9
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE16_M_construct_auxIPwEEvT_S7_St12__false_type\0"
-	.long	0x4a0b
-	.long	0x4a20
+	.long	0x4a0a
+	.long	0x4a1f
 	.uleb128 0x5
 	.secrel32	.LASF51
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x4ad8
+	.long	0x4d3d
 	.byte	0
 	.uleb128 0x20
 	.secrel32	.LASF49
@@ -9155,27 +9155,27 @@ _ZTS15T100FolderLogic:
 	.byte	0xfc
 	.byte	0x9
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_M_constructIPwEEvT_S7_\0"
-	.long	0x4a88
-	.long	0x4a98
+	.long	0x4a87
+	.long	0x4a97
 	.uleb128 0x5
 	.secrel32	.LASF51
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x2
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF52
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x42
 	.secrel32	.LASF53
-	.long	0x59c7
+	.long	0x5a81
 	.uleb128 0x42
 	.secrel32	.LASF54
-	.long	0x53fe
+	.long	0x54b8
 	.byte	0
 	.uleb128 0x6
 	.long	0x14d
@@ -9186,49 +9186,43 @@ _ZTS15T100FolderLogic:
 	.byte	0x21
 	.long	0x14d
 	.uleb128 0x6
-	.long	0x4ab9
+	.long	0x4ab8
 	.byte	0
-	.uleb128 0x59
+	.uleb128 0x5b
 	.byte	0x16
 	.word	0x104
 	.byte	0x41
 	.long	0x13c
-	.uleb128 0x6d
-	.ascii "__false_type\0"
-	.byte	0x1
-	.byte	0xe
-	.byte	0x4a
-	.byte	0xa
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "integral_constant<bool, false>\0"
 	.byte	0x1
 	.byte	0x11
 	.byte	0x45
 	.byte	0xc
-	.long	0x4bf4
+	.long	0x4be1
 	.uleb128 0x6e
 	.ascii "value\0"
 	.byte	0x11
 	.byte	0x47
 	.byte	0x2d
-	.long	0x1610d
+	.long	0x16a24
 	.uleb128 0xe
 	.secrel32	.LASF55
 	.byte	0x11
 	.byte	0x48
 	.byte	0x2d
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x50
 	.ascii "operator std::integral_constant<bool, false>::value_type\0"
 	.byte	0x11
 	.byte	0x4a
 	.byte	0x11
 	.ascii "_ZNKSt17integral_constantIbLb0EEcvbEv\0"
-	.long	0x4b20
-	.long	0x4b9b
-	.long	0x4ba1
+	.long	0x4b0d
+	.long	0x4b88
+	.long	0x4b8e
 	.uleb128 0x2
-	.long	0x16112
+	.long	0x16a29
 	.byte	0
 	.uleb128 0x35
 	.secrel32	.LASF56
@@ -9236,52 +9230,52 @@ _ZTS15T100FolderLogic:
 	.byte	0x4f
 	.byte	0x1c
 	.ascii "_ZNKSt17integral_constantIbLb0EEclEv\0"
-	.long	0x4b20
-	.long	0x4bda
-	.long	0x4be0
+	.long	0x4b0d
+	.long	0x4bc7
+	.long	0x4bcd
 	.uleb128 0x2
-	.long	0x16112
+	.long	0x16a29
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x16105
-	.uleb128 0x62
+	.long	0x16a1c
+	.uleb128 0x64
 	.ascii "__v\0"
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.long	0x4aea
-	.uleb128 0x17
+	.long	0x4ad7
+	.uleb128 0x16
 	.ascii "integral_constant<bool, true>\0"
 	.byte	0x1
 	.byte	0x11
 	.byte	0x45
 	.byte	0xc
-	.long	0x4d01
+	.long	0x4cee
 	.uleb128 0x6e
 	.ascii "value\0"
 	.byte	0x11
 	.byte	0x47
 	.byte	0x2d
-	.long	0x1610d
+	.long	0x16a24
 	.uleb128 0xe
 	.secrel32	.LASF55
 	.byte	0x11
 	.byte	0x48
 	.byte	0x2d
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x50
 	.ascii "operator std::integral_constant<bool, true>::value_type\0"
 	.byte	0x11
 	.byte	0x4a
 	.byte	0x11
 	.ascii "_ZNKSt17integral_constantIbLb1EEcvbEv\0"
-	.long	0x4c2e
-	.long	0x4ca8
-	.long	0x4cae
+	.long	0x4c1b
+	.long	0x4c95
+	.long	0x4c9b
 	.uleb128 0x2
-	.long	0x16118
+	.long	0x16a2f
 	.byte	0
 	.uleb128 0x35
 	.secrel32	.LASF56
@@ -9289,28 +9283,28 @@ _ZTS15T100FolderLogic:
 	.byte	0x4f
 	.byte	0x1c
 	.ascii "_ZNKSt17integral_constantIbLb1EEclEv\0"
-	.long	0x4c2e
-	.long	0x4ce7
-	.long	0x4ced
+	.long	0x4c1b
+	.long	0x4cd4
+	.long	0x4cda
 	.uleb128 0x2
-	.long	0x16118
+	.long	0x16a2f
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x16105
-	.uleb128 0x62
+	.long	0x16a1c
+	.uleb128 0x64
 	.ascii "__v\0"
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
 	.byte	0
 	.uleb128 0x6
-	.long	0x4bf9
+	.long	0x4be6
 	.uleb128 0x10
 	.ascii "false_type\0"
 	.byte	0x11
 	.byte	0x5a
 	.byte	0x2d
-	.long	0x4aea
+	.long	0x4ad7
 	.uleb128 0x6f
 	.ascii "__swappable_details\0"
 	.byte	0x11
@@ -9321,111 +9315,186 @@ _ZTS15T100FolderLogic:
 	.byte	0x11
 	.word	0x9c3
 	.byte	0xd
-	.uleb128 0x4f
+	.uleb128 0x70
+	.ascii "__false_type\0"
+	.byte	0x1
+	.byte	0xe
+	.byte	0x4a
+	.byte	0xa
+	.uleb128 0x16
+	.ascii "__is_integer<long double>\0"
+	.byte	0x1
+	.byte	0xe
+	.byte	0x7f
+	.byte	0xc
+	.long	0x4d91
+	.uleb128 0x59
+	.byte	0x7
+	.byte	0x4
+	.long	0x164d8
+	.byte	0xe
+	.byte	0x81
+	.byte	0xc
+	.long	0x4d87
+	.uleb128 0x52
 	.secrel32	.LASF57
+	.byte	0
+	.byte	0
+	.uleb128 0x7
+	.ascii "_Tp\0"
+	.long	0x16a6e
+	.byte	0
+	.uleb128 0x16
+	.ascii "__is_integer<double>\0"
+	.byte	0x1
+	.byte	0xe
+	.byte	0x7f
+	.byte	0xc
+	.long	0x4dce
+	.uleb128 0x59
+	.byte	0x7
+	.byte	0x4
+	.long	0x164d8
+	.byte	0xe
+	.byte	0x81
+	.byte	0xc
+	.long	0x4dc4
+	.uleb128 0x52
+	.secrel32	.LASF57
+	.byte	0
+	.byte	0
+	.uleb128 0x7
+	.ascii "_Tp\0"
+	.long	0x16a7d
+	.byte	0
+	.uleb128 0x16
+	.ascii "__is_integer<float>\0"
+	.byte	0x1
+	.byte	0xe
+	.byte	0x7f
+	.byte	0xc
+	.long	0x4e0a
+	.uleb128 0x59
+	.byte	0x7
+	.byte	0x4
+	.long	0x164d8
+	.byte	0xe
+	.byte	0x81
+	.byte	0xc
+	.long	0x4e00
+	.uleb128 0x52
+	.secrel32	.LASF57
+	.byte	0
+	.byte	0
+	.uleb128 0x7
+	.ascii "_Tp\0"
+	.long	0x16a87
+	.byte	0
+	.uleb128 0x4f
+	.secrel32	.LASF58
 	.byte	0x1
 	.byte	0x12
 	.byte	0x4c
 	.byte	0xa
-	.long	0x4d92
-	.uleb128 0x70
-	.secrel32	.LASF57
+	.long	0x4e4c
+	.uleb128 0x71
+	.secrel32	.LASF58
 	.byte	0x12
 	.byte	0x4c
 	.byte	0x2b
 	.ascii "_ZNSt21piecewise_construct_tC4Ev\0"
 	.byte	0x1
-	.long	0x4d8b
+	.long	0x4e45
 	.uleb128 0x2
-	.long	0x1613f
+	.long	0x16a90
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.long	0x4d50
+	.long	0x4e0a
 	.uleb128 0x88
 	.ascii "piecewise_construct\0"
 	.byte	0x12
 	.byte	0x4f
 	.byte	0x35
-	.long	0x4d92
+	.long	0x4e4c
 	.byte	0x1
 	.byte	0
-	.uleb128 0x6d
+	.uleb128 0x70
 	.ascii "input_iterator_tag\0"
 	.byte	0x1
 	.byte	0x13
 	.byte	0x59
 	.byte	0xa
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "forward_iterator_tag\0"
 	.byte	0x1
 	.byte	0x13
 	.byte	0x5f
 	.byte	0xa
-	.long	0x4df3
+	.long	0x4ead
 	.uleb128 0x3b
-	.long	0x4db6
+	.long	0x4e70
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "bidirectional_iterator_tag\0"
 	.byte	0x1
 	.byte	0x13
 	.byte	0x63
 	.byte	0xa
-	.long	0x4e1e
+	.long	0x4ed8
 	.uleb128 0x3b
-	.long	0x4dce
+	.long	0x4e88
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "random_access_iterator_tag\0"
 	.byte	0x1
 	.byte	0x13
 	.byte	0x67
 	.byte	0xa
-	.long	0x4e49
+	.long	0x4f03
 	.uleb128 0x3b
-	.long	0x4df3
+	.long	0x4ead
 	.byte	0
 	.byte	0
-	.uleb128 0x71
+	.uleb128 0x72
 	.ascii "__debug\0"
 	.byte	0x14
 	.byte	0x32
 	.byte	0xd
-	.uleb128 0x72
+	.uleb128 0x73
 	.ascii "__exception_ptr\0"
 	.byte	0x15
 	.byte	0x34
 	.byte	0xd
-	.long	0x52e7
+	.long	0x53a1
 	.uleb128 0x89
-	.secrel32	.LASF58
+	.secrel32	.LASF59
 	.byte	0x8
 	.byte	0x15
 	.byte	0x4f
 	.byte	0xb
-	.long	0x52d9
+	.long	0x5393
 	.uleb128 0x11
 	.ascii "_M_exception_object\0"
 	.byte	0x15
 	.byte	0x51
 	.byte	0xd
-	.long	0x167e7
+	.long	0x16aba
 	.byte	0
 	.uleb128 0x8a
-	.secrel32	.LASF58
+	.secrel32	.LASF59
 	.byte	0x15
 	.byte	0x53
 	.byte	0x10
 	.ascii "_ZNSt15__exception_ptr13exception_ptrC4EPv\0"
-	.long	0x4ed4
-	.long	0x4edf
+	.long	0x4f8e
+	.long	0x4f99
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.uleb128 0x1
-	.long	0x167e7
+	.long	0x16aba
 	.byte	0
 	.uleb128 0x3f
 	.ascii "_M_addref\0"
@@ -9433,10 +9502,10 @@ _ZTS15T100FolderLogic:
 	.byte	0x55
 	.byte	0xc
 	.ascii "_ZNSt15__exception_ptr13exception_ptr9_M_addrefEv\0"
-	.long	0x4f27
-	.long	0x4f2d
+	.long	0x4fe1
+	.long	0x4fe7
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.byte	0
 	.uleb128 0x3f
 	.ascii "_M_release\0"
@@ -9444,10 +9513,10 @@ _ZTS15T100FolderLogic:
 	.byte	0x56
 	.byte	0xc
 	.ascii "_ZNSt15__exception_ptr13exception_ptr10_M_releaseEv\0"
-	.long	0x4f78
-	.long	0x4f7e
+	.long	0x5032
+	.long	0x5038
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.byte	0
 	.uleb128 0x50
 	.ascii "_M_get\0"
@@ -9455,65 +9524,65 @@ _ZTS15T100FolderLogic:
 	.byte	0x58
 	.byte	0xd
 	.ascii "_ZNKSt15__exception_ptr13exception_ptr6_M_getEv\0"
-	.long	0x167e7
-	.long	0x4fc5
-	.long	0x4fcb
+	.long	0x16aba
+	.long	0x507f
+	.long	0x5085
 	.uleb128 0x2
-	.long	0x167f0
+	.long	0x16ac3
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF58
+	.secrel32	.LASF59
 	.byte	0x15
 	.byte	0x60
 	.byte	0x7
 	.ascii "_ZNSt15__exception_ptr13exception_ptrC4Ev\0"
 	.byte	0x1
-	.long	0x5006
-	.long	0x500c
+	.long	0x50c0
+	.long	0x50c6
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF58
+	.secrel32	.LASF59
 	.byte	0x15
 	.byte	0x62
 	.byte	0x7
 	.ascii "_ZNSt15__exception_ptr13exception_ptrC4ERKS0_\0"
 	.byte	0x1
-	.long	0x504b
-	.long	0x5056
+	.long	0x5105
+	.long	0x5110
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.uleb128 0x1
-	.long	0x167f6
+	.long	0x16ac9
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF58
+	.secrel32	.LASF59
 	.byte	0x15
 	.byte	0x65
 	.byte	0x7
 	.ascii "_ZNSt15__exception_ptr13exception_ptrC4EDn\0"
 	.byte	0x1
-	.long	0x5092
-	.long	0x509d
+	.long	0x514c
+	.long	0x5157
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.uleb128 0x1
-	.long	0x534c
+	.long	0x5406
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF58
+	.secrel32	.LASF59
 	.byte	0x15
 	.byte	0x69
 	.byte	0x7
 	.ascii "_ZNSt15__exception_ptr13exception_ptrC4EOS0_\0"
 	.byte	0x1
-	.long	0x50db
-	.long	0x50e6
+	.long	0x5195
+	.long	0x51a0
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.uleb128 0x1
-	.long	0x16810
+	.long	0x16ae3
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF12
@@ -9521,14 +9590,14 @@ _ZTS15T100FolderLogic:
 	.byte	0x76
 	.byte	0x7
 	.ascii "_ZNSt15__exception_ptr13exception_ptraSERKS0_\0"
-	.long	0x16816
+	.long	0x16ae9
 	.byte	0x1
-	.long	0x5129
-	.long	0x5134
+	.long	0x51e3
+	.long	0x51ee
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.uleb128 0x1
-	.long	0x167f6
+	.long	0x16ac9
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF12
@@ -9536,42 +9605,42 @@ _ZTS15T100FolderLogic:
 	.byte	0x7a
 	.byte	0x7
 	.ascii "_ZNSt15__exception_ptr13exception_ptraSEOS0_\0"
-	.long	0x16816
+	.long	0x16ae9
 	.byte	0x1
-	.long	0x5176
-	.long	0x5181
+	.long	0x5230
+	.long	0x523b
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.uleb128 0x1
-	.long	0x16810
+	.long	0x16ae3
 	.byte	0
-	.uleb128 0x73
+	.uleb128 0x74
 	.ascii "~exception_ptr\0"
 	.byte	0x15
 	.byte	0x81
 	.byte	0x7
 	.ascii "_ZNSt15__exception_ptr13exception_ptrD4Ev\0"
 	.byte	0x1
-	.long	0x51c7
-	.long	0x51d2
+	.long	0x5281
+	.long	0x528c
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
-	.uleb128 0x73
+	.uleb128 0x74
 	.ascii "swap\0"
 	.byte	0x15
 	.byte	0x84
 	.byte	0x7
 	.ascii "_ZNSt15__exception_ptr13exception_ptr4swapERS0_\0"
 	.byte	0x1
-	.long	0x5214
-	.long	0x521f
+	.long	0x52ce
+	.long	0x52d9
 	.uleb128 0x2
-	.long	0x167ea
+	.long	0x16abd
 	.uleb128 0x1
-	.long	0x16816
+	.long	0x16ae9
 	.byte	0
 	.uleb128 0x8b
 	.ascii "operator bool\0"
@@ -9579,224 +9648,224 @@ _ZTS15T100FolderLogic:
 	.byte	0x90
 	.byte	0x10
 	.ascii "_ZNKSt15__exception_ptr13exception_ptrcvbEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.long	0x526b
-	.long	0x5271
+	.long	0x5325
+	.long	0x532b
 	.uleb128 0x2
-	.long	0x167f0
+	.long	0x16ac3
 	.byte	0
-	.uleb128 0x74
+	.uleb128 0x75
 	.ascii "__cxa_exception_type\0"
 	.byte	0x15
 	.byte	0x99
 	.byte	0x7
 	.ascii "_ZNKSt15__exception_ptr13exception_ptr20__cxa_exception_typeEv\0"
-	.long	0x1681c
+	.long	0x16aef
 	.byte	0x1
-	.long	0x52d2
+	.long	0x538c
 	.uleb128 0x2
-	.long	0x167f0
+	.long	0x16ac3
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.long	0x4e6d
+	.long	0x4f27
 	.uleb128 0x4
 	.byte	0x15
 	.byte	0x49
 	.byte	0x10
-	.long	0x52ef
+	.long	0x53a9
 	.byte	0
 	.uleb128 0x4
 	.byte	0x15
 	.byte	0x39
 	.byte	0x1a
-	.long	0x4e6d
+	.long	0x4f27
 	.uleb128 0x8c
 	.ascii "rethrow_exception\0"
 	.byte	0x15
 	.byte	0x45
 	.byte	0x8
 	.ascii "_ZSt17rethrow_exceptionNSt15__exception_ptr13exception_ptrE\0"
-	.long	0x534c
+	.long	0x5406
 	.uleb128 0x1
-	.long	0x4e6d
+	.long	0x4f27
 	.byte	0
 	.uleb128 0x10
 	.ascii "nullptr_t\0"
 	.byte	0x16
 	.byte	0xf2
 	.byte	0x1d
-	.long	0x167fc
+	.long	0x16acf
 	.uleb128 0x28
 	.ascii "type_info\0"
 	.uleb128 0x6
-	.long	0x535e
+	.long	0x5418
 	.uleb128 0x4f
-	.secrel32	.LASF59
+	.secrel32	.LASF60
 	.byte	0x1
 	.byte	0x1
 	.byte	0x56
 	.byte	0xa
-	.long	0x53a3
-	.uleb128 0x70
-	.secrel32	.LASF59
+	.long	0x545d
+	.uleb128 0x71
+	.secrel32	.LASF60
 	.byte	0x1
 	.byte	0x59
 	.byte	0xe
 	.ascii "_ZNSt9nothrow_tC4Ev\0"
 	.byte	0x1
-	.long	0x539c
+	.long	0x5456
 	.uleb128 0x2
-	.long	0x16822
+	.long	0x16af5
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.long	0x536e
+	.long	0x5428
 	.uleb128 0x8d
 	.ascii "nothrow\0"
 	.byte	0x1
 	.byte	0x5d
 	.byte	0x1a
 	.ascii "_ZSt7nothrow\0"
-	.long	0x53a3
+	.long	0x545d
 	.uleb128 0x10
 	.ascii "size_t\0"
 	.byte	0x16
 	.byte	0xee
 	.byte	0x1a
-	.long	0x1607a
+	.long	0x16112
 	.uleb128 0x10
 	.ascii "ptrdiff_t\0"
 	.byte	0x16
 	.byte	0xef
 	.byte	0x1c
-	.long	0x160cd
+	.long	0x16131
 	.uleb128 0x6
-	.long	0x53d5
+	.long	0x548f
 	.uleb128 0x10
 	.ascii "true_type\0"
 	.byte	0x11
 	.byte	0x57
 	.byte	0x2d
-	.long	0x4bf9
+	.long	0x4be6
 	.uleb128 0x3e
 	.ascii "allocator<wchar_t>\0"
 	.byte	0x1
 	.byte	0xa
 	.byte	0x6c
 	.byte	0xb
-	.long	0x5497
+	.long	0x5551
 	.uleb128 0x4c
-	.long	0x11343
+	.long	0x113fd
 	.byte	0
 	.byte	0x1
 	.uleb128 0x15
-	.secrel32	.LASF60
+	.secrel32	.LASF61
 	.byte	0xa
 	.byte	0x83
 	.byte	0x7
 	.ascii "_ZNSaIwEC4Ev\0"
 	.byte	0x1
-	.long	0x543f
-	.long	0x5445
+	.long	0x54f9
+	.long	0x54ff
 	.uleb128 0x2
-	.long	0x16864
+	.long	0x16b37
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF60
+	.secrel32	.LASF61
 	.byte	0xa
 	.byte	0x85
 	.byte	0x7
 	.ascii "_ZNSaIwEC4ERKS_\0"
 	.byte	0x1
-	.long	0x5466
-	.long	0x5471
+	.long	0x5520
+	.long	0x552b
 	.uleb128 0x2
-	.long	0x16864
+	.long	0x16b37
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
-	.uleb128 0x5a
-	.secrel32	.LASF61
+	.uleb128 0x5c
+	.secrel32	.LASF62
 	.byte	0xa
 	.byte	0x8b
 	.byte	0x7
 	.ascii "_ZNSaIwED4Ev\0"
 	.byte	0x1
-	.long	0x548b
+	.long	0x5545
 	.uleb128 0x2
-	.long	0x16864
+	.long	0x16b37
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.long	0x53fe
-	.uleb128 0x17
+	.long	0x54b8
+	.uleb128 0x16
 	.ascii "_Destroy_aux<true>\0"
 	.byte	0x1
 	.byte	0x6
 	.byte	0x71
 	.byte	0xc
-	.long	0x559f
+	.long	0x5659
 	.uleb128 0x47
 	.ascii "__destroy<T100FileInfo**>\0"
 	.byte	0x6
 	.byte	0x75
 	.byte	0x9
 	.ascii "_ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_\0"
-	.long	0x552b
+	.long	0x55e5
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
+	.secrel32	.LASF63
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
-	.uleb128 0x75
+	.uleb128 0x76
 	.ascii "__destroy<T100FolderInfo**>\0"
 	.byte	0x6
 	.byte	0x75
 	.byte	0x9
 	.ascii "_ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_\0"
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
+	.secrel32	.LASF63
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "__uninitialized_copy<true>\0"
 	.byte	0x1
 	.byte	0xc
 	.byte	0x5f
 	.byte	0xc
-	.long	0x578d
+	.long	0x5847
 	.uleb128 0x2f
 	.ascii "__uninit_copy<std::move_iterator<T100FileInfo**>, T100FileInfo**>\0"
 	.byte	0xc
 	.byte	0x63
 	.byte	0x9
 	.ascii "_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileInfoES5_EET0_T_S8_S7_\0"
-	.long	0x1825b
-	.long	0x5698
+	.long	0x18315
+	.long	0x5752
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf6e4
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf62a
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x1
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x2f
 	.ascii "__uninit_copy<std::move_iterator<T100FolderInfo**>, T100FolderInfo**>\0"
@@ -9804,415 +9873,415 @@ _ZTS15T100FolderLogic:
 	.byte	0x63
 	.byte	0x9
 	.ascii "_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100FolderInfoES5_EET0_T_S8_S7_\0"
-	.long	0x18351
-	.long	0x5773
+	.long	0x1840b
+	.long	0x582d
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf1ec
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf132
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x1
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x64
 	.ascii "_TrivialValueTypes\0"
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
 	.byte	0
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x40
 	.byte	0xb
-	.long	0x16c49
+	.long	0x16d03
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x8b
 	.byte	0xb
-	.long	0x161c0
+	.long	0x1616a
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x8d
 	.byte	0xb
-	.long	0x16c61
+	.long	0x16d1b
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x8e
 	.byte	0xb
-	.long	0x16c7a
+	.long	0x16d34
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x8f
 	.byte	0xb
-	.long	0x16c9a
+	.long	0x16d54
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x90
 	.byte	0xb
-	.long	0x16cbe
+	.long	0x16d78
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x91
 	.byte	0xb
-	.long	0x16cdd
+	.long	0x16d97
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x92
 	.byte	0xb
-	.long	0x16cfc
+	.long	0x16db6
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x93
 	.byte	0xb
-	.long	0x16d1a
+	.long	0x16dd4
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x94
 	.byte	0xb
-	.long	0x16d3c
+	.long	0x16df6
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x95
 	.byte	0xb
-	.long	0x16d5d
+	.long	0x16e17
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x96
 	.byte	0xb
-	.long	0x16d76
+	.long	0x16e30
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x97
 	.byte	0xb
-	.long	0x16d88
+	.long	0x16e42
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x98
 	.byte	0xb
-	.long	0x16db2
+	.long	0x16e6c
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x99
 	.byte	0xb
-	.long	0x16ddc
+	.long	0x16e96
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x9a
 	.byte	0xb
-	.long	0x16dfd
+	.long	0x16eb7
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x9b
 	.byte	0xb
-	.long	0x16e2f
+	.long	0x16ee9
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x9c
 	.byte	0xb
-	.long	0x16e4d
+	.long	0x16f07
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x9e
 	.byte	0xb
-	.long	0x16e69
+	.long	0x16f23
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0x9e
 	.byte	0xb
-	.long	0x16e97
+	.long	0x16f51
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xa0
 	.byte	0xb
-	.long	0x16eb8
+	.long	0x16f72
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xa1
 	.byte	0xb
-	.long	0x16ed9
+	.long	0x16f93
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xa2
 	.byte	0xb
-	.long	0x16ef9
+	.long	0x16fb3
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xa4
 	.byte	0xb
-	.long	0x16f20
+	.long	0x16fda
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xa7
 	.byte	0xb
-	.long	0x16f46
+	.long	0x17000
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xa7
 	.byte	0xb
-	.long	0x16f7a
+	.long	0x17034
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xaa
 	.byte	0xb
-	.long	0x16f9f
+	.long	0x17059
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xac
 	.byte	0xb
-	.long	0x16fc5
+	.long	0x1707f
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xae
 	.byte	0xb
-	.long	0x16fe6
+	.long	0x170a0
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xb0
 	.byte	0xb
-	.long	0x17006
+	.long	0x170c0
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xb1
 	.byte	0xb
-	.long	0x1702b
+	.long	0x170e5
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xb2
 	.byte	0xb
-	.long	0x1704a
+	.long	0x17104
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xb3
 	.byte	0xb
-	.long	0x17069
+	.long	0x17123
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xb4
 	.byte	0xb
-	.long	0x17089
+	.long	0x17143
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xb5
 	.byte	0xb
-	.long	0x170a8
+	.long	0x17162
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xb6
 	.byte	0xb
-	.long	0x170c8
+	.long	0x17182
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xb7
 	.byte	0xb
-	.long	0x170f9
+	.long	0x171b3
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xb8
 	.byte	0xb
-	.long	0x17113
+	.long	0x171cd
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xb9
 	.byte	0xb
-	.long	0x17138
+	.long	0x171f2
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xba
 	.byte	0xb
-	.long	0x1715d
+	.long	0x17217
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xbb
 	.byte	0xb
-	.long	0x17182
+	.long	0x1723c
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xbc
 	.byte	0xb
-	.long	0x171b4
+	.long	0x1726e
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xbd
 	.byte	0xb
-	.long	0x171d3
+	.long	0x1728d
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xbf
 	.byte	0xb
-	.long	0x171f8
+	.long	0x172b2
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xc1
 	.byte	0xb
-	.long	0x17217
+	.long	0x172d1
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xc2
 	.byte	0xb
-	.long	0x17236
+	.long	0x172f0
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xc3
 	.byte	0xb
-	.long	0x1725a
+	.long	0x17314
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xc4
 	.byte	0xb
-	.long	0x1727f
+	.long	0x17339
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xc5
 	.byte	0xb
-	.long	0x172a4
+	.long	0x1735e
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xc6
 	.byte	0xb
-	.long	0x172bd
+	.long	0x17377
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xc7
 	.byte	0xb
-	.long	0x172e2
+	.long	0x1739c
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xc8
 	.byte	0xb
-	.long	0x17307
+	.long	0x173c1
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xc9
 	.byte	0xb
-	.long	0x1732d
+	.long	0x173e7
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xca
 	.byte	0xb
-	.long	0x17352
+	.long	0x1740c
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xcb
 	.byte	0xb
-	.long	0x1736e
+	.long	0x17428
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xcc
 	.byte	0xb
-	.long	0x17389
+	.long	0x17443
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xcd
 	.byte	0xb
-	.long	0x173a8
+	.long	0x17462
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xce
 	.byte	0xb
-	.long	0x173c8
+	.long	0x17482
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xcf
 	.byte	0xb
-	.long	0x173e8
+	.long	0x174a2
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xd0
 	.byte	0xb
-	.long	0x17407
+	.long	0x174c1
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x108
 	.byte	0x16
-	.long	0x1742c
+	.long	0x174e6
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x109
 	.byte	0x16
-	.long	0x1744c
+	.long	0x17506
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x10a
 	.byte	0x16
-	.long	0x17471
+	.long	0x1752b
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x118
 	.byte	0xe
-	.long	0x171f8
+	.long	0x172b2
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x11b
 	.byte	0xe
-	.long	0x16f20
+	.long	0x16fda
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x11e
 	.byte	0xe
-	.long	0x16f9f
+	.long	0x17059
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x121
 	.byte	0xe
-	.long	0x16fe6
+	.long	0x170a0
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x125
 	.byte	0xe
-	.long	0x1742c
+	.long	0x174e6
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x126
 	.byte	0xe
-	.long	0x1744c
+	.long	0x17506
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x127
 	.byte	0xe
-	.long	0x17471
+	.long	0x1752b
 	.uleb128 0x30
 	.ascii "char_traits<wchar_t>\0"
 	.byte	0x1
 	.byte	0x18
 	.word	0x184
 	.byte	0xc
-	.long	0x5da6
+	.long	0x5e60
 	.uleb128 0x36
 	.secrel32	.LASF36
 	.byte	0x18
 	.word	0x18d
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE6assignERwRKw\0"
-	.long	0x5a21
+	.long	0x5adb
 	.uleb128 0x1
-	.long	0x17497
+	.long	0x17551
 	.uleb128 0x1
-	.long	0x1749d
+	.long	0x17557
 	.byte	0
 	.uleb128 0x48
 	.ascii "char_type\0"
 	.byte	0x18
 	.word	0x186
 	.byte	0x21
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x6
-	.long	0x5a21
+	.long	0x5adb
 	.uleb128 0x13
 	.ascii "eq\0"
 	.byte	0x18
 	.word	0x191
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE2eqERKwS2_\0"
-	.long	0x16105
-	.long	0x5a74
+	.long	0x16a1c
+	.long	0x5b2e
 	.uleb128 0x1
-	.long	0x1749d
+	.long	0x17557
 	.uleb128 0x1
-	.long	0x1749d
+	.long	0x17557
 	.byte	0
 	.uleb128 0x13
 	.ascii "lt\0"
@@ -10220,12 +10289,12 @@ _ZTS15T100FolderLogic:
 	.word	0x195
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE2ltERKwS2_\0"
-	.long	0x16105
-	.long	0x5aaf
+	.long	0x16a1c
+	.long	0x5b69
 	.uleb128 0x1
-	.long	0x1749d
+	.long	0x17557
 	.uleb128 0x1
-	.long	0x1749d
+	.long	0x17557
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF48
@@ -10233,14 +10302,14 @@ _ZTS15T100FolderLogic:
 	.word	0x199
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE7compareEPKwS2_y\0"
-	.long	0x160b5
-	.long	0x5af6
+	.long	0x16194
+	.long	0x5bb0
 	.uleb128 0x1
-	.long	0x174a3
+	.long	0x1755d
 	.uleb128 0x1
-	.long	0x174a3
+	.long	0x1755d
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
 	.uleb128 0x13
 	.ascii "length\0"
@@ -10248,10 +10317,10 @@ _ZTS15T100FolderLogic:
 	.word	0x1a8
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE6lengthEPKw\0"
-	.long	0x53c6
-	.long	0x5b31
+	.long	0x5480
+	.long	0x5beb
 	.uleb128 0x1
-	.long	0x174a3
+	.long	0x1755d
 	.byte	0
 	.uleb128 0x13
 	.ascii "find\0"
@@ -10259,14 +10328,14 @@ _ZTS15T100FolderLogic:
 	.word	0x1b3
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE4findEPKwyRS1_\0"
-	.long	0x174a3
-	.long	0x5b77
+	.long	0x1755d
+	.long	0x5c31
 	.uleb128 0x1
-	.long	0x174a3
+	.long	0x1755d
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x1
-	.long	0x1749d
+	.long	0x17557
 	.byte	0
 	.uleb128 0x13
 	.ascii "move\0"
@@ -10274,14 +10343,14 @@ _ZTS15T100FolderLogic:
 	.word	0x1c2
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE4moveEPwPKwy\0"
-	.long	0x174a9
-	.long	0x5bbb
+	.long	0x17563
+	.long	0x5c75
 	.uleb128 0x1
-	.long	0x174a9
+	.long	0x17563
 	.uleb128 0x1
-	.long	0x174a3
+	.long	0x1755d
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
 	.uleb128 0x13
 	.ascii "copy\0"
@@ -10289,14 +10358,14 @@ _ZTS15T100FolderLogic:
 	.word	0x1ca
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE4copyEPwPKwy\0"
-	.long	0x174a9
-	.long	0x5bff
+	.long	0x17563
+	.long	0x5cb9
 	.uleb128 0x1
-	.long	0x174a9
+	.long	0x17563
 	.uleb128 0x1
-	.long	0x174a3
+	.long	0x1755d
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF36
@@ -10304,14 +10373,14 @@ _ZTS15T100FolderLogic:
 	.word	0x1d2
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE6assignEPwyw\0"
-	.long	0x174a9
-	.long	0x5c42
+	.long	0x17563
+	.long	0x5cfc
 	.uleb128 0x1
-	.long	0x174a9
+	.long	0x17563
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x1
-	.long	0x5a21
+	.long	0x5adb
 	.byte	0
 	.uleb128 0x13
 	.ascii "to_char_type\0"
@@ -10319,29 +10388,29 @@ _ZTS15T100FolderLogic:
 	.word	0x1da
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE12to_char_typeERKt\0"
-	.long	0x5a21
-	.long	0x5c8a
+	.long	0x5adb
+	.long	0x5d44
 	.uleb128 0x1
-	.long	0x174af
+	.long	0x17569
 	.byte	0
 	.uleb128 0x48
 	.ascii "int_type\0"
 	.byte	0x18
 	.word	0x187
 	.byte	0x21
-	.long	0x161c0
+	.long	0x1616a
 	.uleb128 0x6
-	.long	0x5c8a
+	.long	0x5d44
 	.uleb128 0x13
 	.ascii "to_int_type\0"
 	.byte	0x18
 	.word	0x1de
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE11to_int_typeERKw\0"
-	.long	0x5c8a
-	.long	0x5ce7
+	.long	0x5d44
+	.long	0x5da1
 	.uleb128 0x1
-	.long	0x1749d
+	.long	0x17557
 	.byte	0
 	.uleb128 0x13
 	.ascii "eq_int_type\0"
@@ -10349,12 +10418,12 @@ _ZTS15T100FolderLogic:
 	.word	0x1e2
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE11eq_int_typeERKtS2_\0"
-	.long	0x16105
-	.long	0x5d35
+	.long	0x16a1c
+	.long	0x5def
 	.uleb128 0x1
-	.long	0x174af
+	.long	0x17569
 	.uleb128 0x1
-	.long	0x174af
+	.long	0x17569
 	.byte	0
 	.uleb128 0x8e
 	.ascii "eof\0"
@@ -10362,606 +10431,606 @@ _ZTS15T100FolderLogic:
 	.word	0x1e6
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE3eofEv\0"
-	.long	0x5c8a
+	.long	0x5d44
 	.uleb128 0x13
 	.ascii "not_eof\0"
 	.byte	0x18
 	.word	0x1ea
 	.byte	0x7
 	.ascii "_ZNSt11char_traitsIwE7not_eofERKt\0"
-	.long	0x5c8a
-	.long	0x5d9c
+	.long	0x5d44
+	.long	0x5e56
 	.uleb128 0x1
-	.long	0x174af
+	.long	0x17569
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF52
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x30
 	.byte	0xb
-	.long	0x1688d
+	.long	0x167ff
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x31
 	.byte	0xb
-	.long	0x168ac
+	.long	0x1682d
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x32
 	.byte	0xb
-	.long	0x168cd
+	.long	0x1685b
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x33
 	.byte	0xb
-	.long	0x168ee
+	.long	0x1687c
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x35
 	.byte	0xb
-	.long	0x169c1
+	.long	0x1694f
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x36
 	.byte	0xb
-	.long	0x169ea
+	.long	0x16978
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x37
 	.byte	0xb
-	.long	0x16a15
+	.long	0x169a3
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x38
 	.byte	0xb
-	.long	0x16a40
+	.long	0x169ce
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x3a
 	.byte	0xb
-	.long	0x1690f
+	.long	0x1689d
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x3b
 	.byte	0xb
-	.long	0x1693a
+	.long	0x168c8
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x3c
 	.byte	0xb
-	.long	0x16967
+	.long	0x168f5
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x3d
 	.byte	0xb
-	.long	0x16994
+	.long	0x16922
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x3f
 	.byte	0xb
-	.long	0x16a6b
+	.long	0x169f9
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x40
 	.byte	0xb
-	.long	0x1619d
+	.long	0x16147
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x42
 	.byte	0xb
-	.long	0x1689c
+	.long	0x1681d
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x43
 	.byte	0xb
-	.long	0x168bc
+	.long	0x1684a
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x44
 	.byte	0xb
-	.long	0x168dd
+	.long	0x1686b
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x45
 	.byte	0xb
-	.long	0x168fe
+	.long	0x1688c
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x47
 	.byte	0xb
-	.long	0x169d5
+	.long	0x16963
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x48
 	.byte	0xb
-	.long	0x169ff
+	.long	0x1698d
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x49
 	.byte	0xb
-	.long	0x16a2a
+	.long	0x169b8
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x4a
 	.byte	0xb
-	.long	0x16a55
+	.long	0x169e3
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x4c
 	.byte	0xb
-	.long	0x16924
+	.long	0x168b2
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x4d
 	.byte	0xb
-	.long	0x16950
+	.long	0x168de
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x4e
 	.byte	0xb
-	.long	0x1697d
+	.long	0x1690b
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x4f
 	.byte	0xb
-	.long	0x169aa
+	.long	0x16938
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x51
 	.byte	0xb
-	.long	0x16a7c
+	.long	0x16a0a
 	.uleb128 0x4
 	.byte	0x19
 	.byte	0x52
 	.byte	0xb
-	.long	0x161ae
+	.long	0x16158
 	.uleb128 0x4
 	.byte	0x1a
 	.byte	0x35
 	.byte	0xb
-	.long	0x1652b
+	.long	0x1652d
 	.uleb128 0x4
 	.byte	0x1a
 	.byte	0x36
 	.byte	0xb
-	.long	0x174c9
+	.long	0x17583
 	.uleb128 0x4
 	.byte	0x1a
 	.byte	0x37
 	.byte	0xb
-	.long	0x174ea
+	.long	0x175a4
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0x7f
 	.byte	0xb
-	.long	0x176d4
+	.long	0x1778e
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0x80
 	.byte	0xb
-	.long	0x1770f
+	.long	0x177c9
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0x86
 	.byte	0xb
-	.long	0x178df
+	.long	0x17999
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0x8c
 	.byte	0xb
-	.long	0x178f9
+	.long	0x179b3
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0x8d
 	.byte	0xb
-	.long	0x17911
+	.long	0x179cb
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0x8e
 	.byte	0xb
-	.long	0x17929
+	.long	0x179e3
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0x8f
-	.byte	0xb
-	.long	0x17941
-	.uleb128 0x4
-	.byte	0x1b
-	.byte	0x91
-	.byte	0xb
-	.long	0x1798a
-	.uleb128 0x4
-	.byte	0x1b
-	.byte	0x94
-	.byte	0xb
-	.long	0x179a6
-	.uleb128 0x4
-	.byte	0x1b
-	.byte	0x96
-	.byte	0xb
-	.long	0x179c0
-	.uleb128 0x4
-	.byte	0x1b
-	.byte	0x99
-	.byte	0xb
-	.long	0x179dd
-	.uleb128 0x4
-	.byte	0x1b
-	.byte	0x9a
 	.byte	0xb
 	.long	0x179fb
 	.uleb128 0x4
 	.byte	0x1b
+	.byte	0x91
+	.byte	0xb
+	.long	0x17a44
+	.uleb128 0x4
+	.byte	0x1b
+	.byte	0x94
+	.byte	0xb
+	.long	0x17a60
+	.uleb128 0x4
+	.byte	0x1b
+	.byte	0x96
+	.byte	0xb
+	.long	0x17a7a
+	.uleb128 0x4
+	.byte	0x1b
+	.byte	0x99
+	.byte	0xb
+	.long	0x17a97
+	.uleb128 0x4
+	.byte	0x1b
+	.byte	0x9a
+	.byte	0xb
+	.long	0x17ab5
+	.uleb128 0x4
+	.byte	0x1b
 	.byte	0x9b
 	.byte	0xb
-	.long	0x17a21
+	.long	0x17adb
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0x9d
 	.byte	0xb
-	.long	0x17a45
+	.long	0x17aff
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xa3
 	.byte	0xb
-	.long	0x17a69
+	.long	0x17b23
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xa5
 	.byte	0xb
-	.long	0x17a77
+	.long	0x17b31
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xa6
 	.byte	0xb
-	.long	0x17a8c
+	.long	0x17b46
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xa7
 	.byte	0xb
-	.long	0x17aab
+	.long	0x17b65
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xa8
 	.byte	0xb
-	.long	0x17acf
+	.long	0x17b89
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xa9
 	.byte	0xb
-	.long	0x17af4
+	.long	0x17bae
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xab
 	.byte	0xb
-	.long	0x17b0d
+	.long	0x17bc7
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xac
 	.byte	0xb
-	.long	0x17b33
+	.long	0x17bed
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xf0
 	.byte	0x16
-	.long	0x178bc
+	.long	0x17976
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xf5
 	.byte	0x16
-	.long	0x1171c
+	.long	0x117d6
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xf6
 	.byte	0x16
-	.long	0x17b52
+	.long	0x17c0c
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xf8
 	.byte	0x16
-	.long	0x17b70
+	.long	0x17c2a
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xf9
 	.byte	0x16
-	.long	0x17bd4
+	.long	0x17c8e
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xfa
 	.byte	0x16
-	.long	0x17b89
+	.long	0x17c43
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xfb
 	.byte	0x16
-	.long	0x17bae
+	.long	0x17c68
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xfc
 	.byte	0x16
-	.long	0x17bf3
+	.long	0x17cad
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x62
 	.byte	0xb
-	.long	0x16b40
+	.long	0x16bfa
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x63
 	.byte	0xb
-	.long	0x174b5
+	.long	0x1756f
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x65
 	.byte	0xb
-	.long	0x17c13
+	.long	0x17ccd
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x66
 	.byte	0xb
-	.long	0x17c2b
+	.long	0x17ce5
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x67
 	.byte	0xb
-	.long	0x17c45
+	.long	0x17cff
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x68
 	.byte	0xb
-	.long	0x17c5d
+	.long	0x17d17
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x69
 	.byte	0xb
-	.long	0x17c77
+	.long	0x17d31
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x6a
 	.byte	0xb
-	.long	0x17c91
+	.long	0x17d4b
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x6b
 	.byte	0xb
-	.long	0x17caa
+	.long	0x17d64
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x6c
 	.byte	0xb
-	.long	0x17cd0
+	.long	0x17d8a
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x6d
 	.byte	0xb
-	.long	0x17cf3
+	.long	0x17dad
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x6e
 	.byte	0xb
-	.long	0x17d11
+	.long	0x17dcb
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x71
 	.byte	0xb
-	.long	0x17d49
+	.long	0x17e03
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x72
 	.byte	0xb
-	.long	0x17d71
+	.long	0x17e2b
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x73
 	.byte	0xb
-	.long	0x17d96
+	.long	0x17e50
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x74
 	.byte	0xb
-	.long	0x17dcc
+	.long	0x17e86
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x75
 	.byte	0xb
-	.long	0x17def
+	.long	0x17ea9
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x76
 	.byte	0xb
-	.long	0x17e15
+	.long	0x17ecf
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x78
 	.byte	0xb
-	.long	0x17e2e
+	.long	0x17ee8
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x79
 	.byte	0xb
-	.long	0x17e46
+	.long	0x17f00
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x7e
 	.byte	0xb
-	.long	0x17e57
+	.long	0x17f11
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x7f
 	.byte	0xb
-	.long	0x17e6d
+	.long	0x17f27
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x83
 	.byte	0xb
-	.long	0x17e96
+	.long	0x17f50
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x84
 	.byte	0xb
-	.long	0x17eb0
+	.long	0x17f6a
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x85
 	.byte	0xb
-	.long	0x17ecf
+	.long	0x17f89
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x86
 	.byte	0xb
-	.long	0x17ee5
+	.long	0x17f9f
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x87
 	.byte	0xb
-	.long	0x17f0c
+	.long	0x17fc6
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x88
 	.byte	0xb
-	.long	0x17f27
+	.long	0x17fe1
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x89
 	.byte	0xb
-	.long	0x17f51
+	.long	0x1800b
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x8a
 	.byte	0xb
-	.long	0x17f83
+	.long	0x1803d
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x8b
 	.byte	0xb
-	.long	0x17fb4
+	.long	0x1806e
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x8d
 	.byte	0xb
-	.long	0x17fc5
+	.long	0x1807f
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x8f
 	.byte	0xb
-	.long	0x17fdf
+	.long	0x18099
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x90
 	.byte	0xb
-	.long	0x17ffe
+	.long	0x180b8
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x91
 	.byte	0xb
-	.long	0x1803d
+	.long	0x180f7
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0x92
 	.byte	0xb
-	.long	0x1806d
+	.long	0x18127
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0xb9
 	.byte	0x16
-	.long	0x180a6
+	.long	0x18160
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0xba
 	.byte	0x16
-	.long	0x180e0
+	.long	0x1819a
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0xbb
 	.byte	0x16
-	.long	0x1811d
+	.long	0x181d7
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0xbc
 	.byte	0x16
-	.long	0x1814b
+	.long	0x18205
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0xbd
 	.byte	0x16
-	.long	0x1818c
+	.long	0x18246
 	.uleb128 0x30
 	.ascii "allocator_traits<std::allocator<wchar_t> >\0"
 	.byte	0x1
 	.byte	0x8
 	.word	0x180
 	.byte	0xc
-	.long	0x6309
+	.long	0x63c3
 	.uleb128 0x1b
 	.secrel32	.LASF1
 	.byte	0x8
 	.word	0x188
 	.byte	0x1b
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x23
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0x8
 	.word	0x1b3
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIwEE8allocateERS0_y\0"
-	.long	0x610b
-	.long	0x6162
+	.long	0x61c5
+	.long	0x621c
 	.uleb128 0x1
-	.long	0x181c4
+	.long	0x1827e
 	.uleb128 0x1
-	.long	0x6174
+	.long	0x622e
 	.byte	0
 	.uleb128 0x1b
 	.secrel32	.LASF5
 	.byte	0x8
 	.word	0x183
 	.byte	0x2c
-	.long	0x53fe
+	.long	0x54b8
 	.uleb128 0x6
-	.long	0x6162
+	.long	0x621c
 	.uleb128 0x1b
 	.secrel32	.LASF2
 	.byte	0x8
 	.word	0x197
 	.byte	0x24
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x23
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0x8
 	.word	0x1c1
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIwEE8allocateERS0_yPKv\0"
-	.long	0x610b
-	.long	0x61d3
+	.long	0x61c5
+	.long	0x628d
 	.uleb128 0x1
-	.long	0x181c4
+	.long	0x1827e
 	.uleb128 0x1
-	.long	0x6174
+	.long	0x622e
 	.uleb128 0x1
-	.long	0x61d3
+	.long	0x628d
 	.byte	0
 	.uleb128 0x1b
-	.secrel32	.LASF65
+	.secrel32	.LASF66
 	.byte	0x8
 	.word	0x191
 	.byte	0x2d
-	.long	0x16828
+	.long	0x16afb
 	.uleb128 0x36
-	.secrel32	.LASF66
+	.secrel32	.LASF67
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIwEE10deallocateERS0_Pwy\0"
-	.long	0x6230
+	.long	0x62ea
 	.uleb128 0x1
-	.long	0x181c4
+	.long	0x1827e
 	.uleb128 0x1
-	.long	0x610b
+	.long	0x61c5
 	.uleb128 0x1
-	.long	0x6174
+	.long	0x622e
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF21
@@ -10969,43 +11038,43 @@ _ZTS15T100FolderLogic:
 	.word	0x1ef
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIwEE8max_sizeERKS0_\0"
-	.long	0x6174
-	.long	0x6275
+	.long	0x622e
+	.long	0x632f
 	.uleb128 0x1
-	.long	0x181ca
+	.long	0x18284
 	.byte	0
 	.uleb128 0x23
-	.secrel32	.LASF67
+	.secrel32	.LASF68
 	.byte	0x8
 	.word	0x1f8
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIwEE37select_on_container_copy_constructionERKS0_\0"
-	.long	0x6162
-	.long	0x62d8
+	.long	0x621c
+	.long	0x6392
 	.uleb128 0x1
-	.long	0x181ca
+	.long	0x18284
 	.byte	0
 	.uleb128 0x1b
 	.secrel32	.LASF55
 	.byte	0x8
 	.word	0x185
 	.byte	0x1d
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1b
 	.secrel32	.LASF4
 	.byte	0x8
 	.word	0x18b
 	.byte	0x27
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1b
-	.secrel32	.LASF68
+	.secrel32	.LASF69
 	.byte	0x8
 	.word	0x1a6
 	.byte	0x25
-	.long	0x53fe
+	.long	0x54b8
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x53fe
+	.long	0x54b8
 	.byte	0
 	.uleb128 0x3e
 	.ascii "initializer_list<wchar_t>\0"
@@ -11013,81 +11082,81 @@ _ZTS15T100FolderLogic:
 	.byte	0x1d
 	.byte	0x2f
 	.byte	0xb
-	.long	0x64b1
+	.long	0x656b
 	.uleb128 0x18
 	.secrel32	.LASF8
 	.byte	0x1d
 	.byte	0x36
 	.byte	0x1a
-	.long	0x16853
+	.long	0x16b26
 	.byte	0x1
 	.uleb128 0x11
 	.ascii "_M_array\0"
 	.byte	0x1d
 	.byte	0x3a
 	.byte	0x12
-	.long	0x632c
+	.long	0x63e6
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF2
 	.byte	0x1d
 	.byte	0x35
 	.byte	0x18
-	.long	0x53c6
+	.long	0x5480
 	.byte	0x1
 	.uleb128 0x11
 	.ascii "_M_len\0"
 	.byte	0x1d
 	.byte	0x3b
 	.byte	0x13
-	.long	0x634b
+	.long	0x6405
 	.byte	0x8
 	.uleb128 0x20
-	.secrel32	.LASF69
+	.secrel32	.LASF70
 	.byte	0x1d
 	.byte	0x3e
 	.byte	0x11
 	.ascii "_ZNSt16initializer_listIwEC4EPKwy\0"
-	.long	0x639a
-	.long	0x63aa
+	.long	0x6454
+	.long	0x6464
 	.uleb128 0x2
-	.long	0x18238
+	.long	0x182f2
 	.uleb128 0x1
-	.long	0x63aa
+	.long	0x6464
 	.uleb128 0x1
-	.long	0x634b
+	.long	0x6405
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF9
 	.byte	0x1d
 	.byte	0x37
 	.byte	0x1a
-	.long	0x16853
+	.long	0x16b26
 	.byte	0x1
 	.uleb128 0x15
-	.secrel32	.LASF69
+	.secrel32	.LASF70
 	.byte	0x1d
 	.byte	0x42
 	.byte	0x11
 	.ascii "_ZNSt16initializer_listIwEC4Ev\0"
 	.byte	0x1
-	.long	0x63e7
-	.long	0x63ed
+	.long	0x64a1
+	.long	0x64a7
 	.uleb128 0x2
-	.long	0x18238
+	.long	0x182f2
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x65
 	.ascii "size\0"
 	.byte	0x1d
 	.byte	0x47
 	.byte	0x7
 	.ascii "_ZNKSt16initializer_listIwE4sizeEv\0"
-	.long	0x634b
+	.long	0x6405
 	.byte	0x1
-	.long	0x6426
-	.long	0x642c
+	.long	0x64e0
+	.long	0x64e6
 	.uleb128 0x2
-	.long	0x1823e
+	.long	0x182f8
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF13
@@ -11095,185 +11164,185 @@ _ZTS15T100FolderLogic:
 	.byte	0x4b
 	.byte	0x7
 	.ascii "_ZNKSt16initializer_listIwE5beginEv\0"
-	.long	0x63aa
+	.long	0x6464
 	.byte	0x1
-	.long	0x6465
-	.long	0x646b
+	.long	0x651f
+	.long	0x6525
 	.uleb128 0x2
-	.long	0x1823e
+	.long	0x182f8
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x65
 	.ascii "end\0"
 	.byte	0x1d
 	.byte	0x4f
 	.byte	0x7
 	.ascii "_ZNKSt16initializer_listIwE3endEv\0"
-	.long	0x63aa
+	.long	0x6464
 	.byte	0x1
-	.long	0x64a2
-	.long	0x64a8
+	.long	0x655c
+	.long	0x6562
 	.uleb128 0x2
-	.long	0x1823e
+	.long	0x182f8
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_E\0"
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x6
-	.long	0x6309
+	.long	0x63c3
 	.uleb128 0x28
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
 	.uleb128 0x28
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<wchar_t const*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "literals\0"
 	.byte	0x5
 	.word	0x1a08
 	.byte	0x14
-	.long	0x6619
-	.uleb128 0x76
+	.long	0x66d3
+	.uleb128 0x77
 	.ascii "string_literals\0"
 	.byte	0x5
 	.word	0x1a0a
 	.byte	0x14
-	.uleb128 0x59
+	.uleb128 0x5b
 	.byte	0x5
 	.word	0x1a0a
 	.byte	0x14
-	.long	0x65fa
+	.long	0x66b4
 	.byte	0
-	.uleb128 0x59
+	.uleb128 0x5b
 	.byte	0x5
 	.word	0x1a08
 	.byte	0x14
-	.long	0x65e8
+	.long	0x66a2
 	.uleb128 0x3e
 	.ascii "allocator<T100FileInfo*>\0"
 	.byte	0x1
 	.byte	0xa
 	.byte	0x6c
 	.byte	0xb
-	.long	0x66ec
+	.long	0x67a6
 	.uleb128 0x4c
-	.long	0x12af7
+	.long	0x12bb1
 	.byte	0
 	.byte	0x1
 	.uleb128 0x15
-	.secrel32	.LASF60
+	.secrel32	.LASF61
 	.byte	0xa
 	.byte	0x83
 	.byte	0x7
 	.ascii "_ZNSaIP12T100FileInfoEC4Ev\0"
 	.byte	0x1
-	.long	0x6677
-	.long	0x667d
+	.long	0x6731
+	.long	0x6737
 	.uleb128 0x2
-	.long	0x1829c
+	.long	0x18356
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF60
+	.secrel32	.LASF61
 	.byte	0xa
 	.byte	0x85
 	.byte	0x7
 	.ascii "_ZNSaIP12T100FileInfoEC4ERKS1_\0"
 	.byte	0x1
-	.long	0x66ad
-	.long	0x66b8
+	.long	0x6767
+	.long	0x6772
 	.uleb128 0x2
-	.long	0x1829c
+	.long	0x18356
 	.uleb128 0x1
-	.long	0x182a2
+	.long	0x1835c
 	.byte	0
-	.uleb128 0x5a
-	.secrel32	.LASF61
+	.uleb128 0x5c
+	.secrel32	.LASF62
 	.byte	0xa
 	.byte	0x8b
 	.byte	0x7
 	.ascii "_ZNSaIP12T100FileInfoED4Ev\0"
 	.byte	0x1
-	.long	0x66e0
+	.long	0x679a
 	.uleb128 0x2
-	.long	0x1829c
+	.long	0x18356
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.long	0x6622
+	.long	0x66dc
 	.uleb128 0x30
 	.ascii "allocator_traits<std::allocator<T100FileInfo*> >\0"
 	.byte	0x1
 	.byte	0x8
 	.word	0x180
 	.byte	0xc
-	.long	0x6a50
+	.long	0x6b0a
 	.uleb128 0x1b
 	.secrel32	.LASF1
 	.byte	0x8
 	.word	0x188
 	.byte	0x1b
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x23
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0x8
 	.word	0x1b3
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y\0"
-	.long	0x672c
-	.long	0x6791
+	.long	0x67e6
+	.long	0x684b
 	.uleb128 0x1
-	.long	0x182a8
+	.long	0x18362
 	.uleb128 0x1
-	.long	0x67a3
+	.long	0x685d
 	.byte	0
 	.uleb128 0x1b
 	.secrel32	.LASF5
 	.byte	0x8
 	.word	0x183
 	.byte	0x2c
-	.long	0x6622
+	.long	0x66dc
 	.uleb128 0x6
-	.long	0x6791
+	.long	0x684b
 	.uleb128 0x1b
 	.secrel32	.LASF2
 	.byte	0x8
 	.word	0x197
 	.byte	0x24
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x23
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0x8
 	.word	0x1c1
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_yPKv\0"
-	.long	0x672c
-	.long	0x6810
+	.long	0x67e6
+	.long	0x68ca
 	.uleb128 0x1
-	.long	0x182a8
+	.long	0x18362
 	.uleb128 0x1
-	.long	0x67a3
+	.long	0x685d
 	.uleb128 0x1
-	.long	0x6810
+	.long	0x68ca
 	.byte	0
 	.uleb128 0x1b
-	.secrel32	.LASF65
+	.secrel32	.LASF66
 	.byte	0x8
 	.word	0x191
 	.byte	0x2d
-	.long	0x16828
+	.long	0x16afb
 	.uleb128 0x36
-	.secrel32	.LASF66
+	.secrel32	.LASF67
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y\0"
-	.long	0x687d
+	.long	0x6937
 	.uleb128 0x1
-	.long	0x182a8
+	.long	0x18362
 	.uleb128 0x1
-	.long	0x672c
+	.long	0x67e6
 	.uleb128 0x1
-	.long	0x67a3
+	.long	0x685d
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF21
@@ -11281,162 +11350,162 @@ _ZTS15T100FolderLogic:
 	.word	0x1ef
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_\0"
-	.long	0x67a3
-	.long	0x68d0
+	.long	0x685d
+	.long	0x698a
 	.uleb128 0x1
-	.long	0x182ae
+	.long	0x18368
 	.byte	0
 	.uleb128 0x23
-	.secrel32	.LASF67
+	.secrel32	.LASF68
 	.byte	0x8
 	.word	0x1f8
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIP12T100FileInfoEE37select_on_container_copy_constructionERKS2_\0"
-	.long	0x6791
-	.long	0x6941
+	.long	0x684b
+	.long	0x69fb
 	.uleb128 0x1
-	.long	0x182ae
+	.long	0x18368
 	.byte	0
 	.uleb128 0x1b
 	.secrel32	.LASF55
 	.byte	0x8
 	.word	0x185
 	.byte	0x1d
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x1b
-	.secrel32	.LASF68
+	.secrel32	.LASF69
 	.byte	0x8
 	.word	0x1a6
 	.byte	0x25
-	.long	0x6622
+	.long	0x66dc
 	.uleb128 0x36
-	.secrel32	.LASF70
+	.secrel32	.LASF71
 	.byte	0x8
 	.word	0x1e6
 	.byte	0x2
 	.ascii "_ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_\0"
-	.long	0x69bf
-	.uleb128 0x8
+	.long	0x6a79
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x1
-	.long	0x182a8
+	.long	0x18362
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x36
-	.secrel32	.LASF71
+	.secrel32	.LASF72
 	.byte	0x8
 	.word	0x1da
 	.byte	0x2
 	.ascii "_ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_\0"
-	.long	0x6a46
-	.uleb128 0x8
+	.long	0x6b00
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x6a36
+	.secrel32	.LASF100
+	.long	0x6af0
 	.uleb128 0x38
-	.long	0x18296
+	.long	0x18350
 	.byte	0
 	.uleb128 0x1
-	.long	0x182a8
+	.long	0x18362
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x18296
+	.long	0x18350
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x6622
+	.long	0x66dc
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "_Vector_base<T100FileInfo*, std::allocator<T100FileInfo*> >\0"
 	.byte	0x18
 	.byte	0x3
 	.byte	0x51
 	.byte	0xc
-	.long	0x7137
+	.long	0x71f1
 	.uleb128 0x4f
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x18
 	.byte	0x3
 	.byte	0x58
 	.byte	0xe
-	.long	0x6c41
+	.long	0x6cfb
 	.uleb128 0x3b
-	.long	0x6622
-	.byte	0
-	.uleb128 0x43
-	.secrel32	.LASF73
-	.byte	0x3
-	.byte	0x5b
-	.byte	0xa
-	.long	0x6c41
+	.long	0x66dc
 	.byte	0
 	.uleb128 0x43
 	.secrel32	.LASF74
 	.byte	0x3
-	.byte	0x5c
+	.byte	0x5b
 	.byte	0xa
-	.long	0x6c41
-	.byte	0x8
+	.long	0x6cfb
+	.byte	0
 	.uleb128 0x43
 	.secrel32	.LASF75
 	.byte	0x3
+	.byte	0x5c
+	.byte	0xa
+	.long	0x6cfb
+	.byte	0x8
+	.uleb128 0x43
+	.secrel32	.LASF76
+	.byte	0x3
 	.byte	0x5d
 	.byte	0xa
-	.long	0x6c41
+	.long	0x6cfb
 	.byte	0x10
 	.uleb128 0x20
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x3
 	.byte	0x5f
 	.byte	0x2
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE12_Vector_implC4Ev\0"
-	.long	0x6b1d
-	.long	0x6b23
+	.long	0x6bd7
+	.long	0x6bdd
 	.uleb128 0x2
-	.long	0x182c6
+	.long	0x18380
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x3
 	.byte	0x63
 	.byte	0x2
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE12_Vector_implC4ERKS2_\0"
-	.long	0x6b75
-	.long	0x6b80
+	.long	0x6c2f
+	.long	0x6c3a
 	.uleb128 0x2
-	.long	0x182c6
+	.long	0x18380
 	.uleb128 0x1
-	.long	0x182cc
+	.long	0x18386
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x3
 	.byte	0x68
 	.byte	0x2
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE12_Vector_implC4EOS2_\0"
-	.long	0x6bd1
-	.long	0x6bdc
+	.long	0x6c8b
+	.long	0x6c96
 	.uleb128 0x2
-	.long	0x182c6
+	.long	0x18380
 	.uleb128 0x1
-	.long	0x182d2
+	.long	0x1838c
 	.byte	0
-	.uleb128 0x77
-	.secrel32	.LASF76
+	.uleb128 0x78
+	.secrel32	.LASF77
 	.byte	0x3
 	.byte	0x6e
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE12_Vector_impl12_M_swap_dataERS4_\0"
-	.long	0x6c35
+	.long	0x6cef
 	.uleb128 0x2
-	.long	0x182c6
+	.long	0x18380
 	.uleb128 0x1
-	.long	0x182d8
+	.long	0x18392
 	.byte	0
 	.byte	0
 	.uleb128 0xe
@@ -11444,441 +11513,441 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.byte	0x56
 	.byte	0x9
-	.long	0x1321c
+	.long	0x132d6
 	.uleb128 0xe
-	.secrel32	.LASF77
+	.secrel32	.LASF78
 	.byte	0x3
 	.byte	0x54
 	.byte	0x15
-	.long	0x1325f
+	.long	0x13319
 	.uleb128 0x6
-	.long	0x6c4d
+	.long	0x6d07
 	.uleb128 0x35
-	.secrel32	.LASF78
+	.secrel32	.LASF79
 	.byte	0x3
 	.byte	0xed
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv\0"
-	.long	0x182de
-	.long	0x6cb5
-	.long	0x6cbb
+	.long	0x18398
+	.long	0x6d6f
+	.long	0x6d75
 	.uleb128 0x2
-	.long	0x182e4
+	.long	0x1839e
 	.byte	0
 	.uleb128 0x35
-	.secrel32	.LASF78
+	.secrel32	.LASF79
 	.byte	0x3
 	.byte	0xf1
 	.byte	0x7
 	.ascii "_ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv\0"
-	.long	0x182cc
-	.long	0x6d13
-	.long	0x6d19
+	.long	0x18386
+	.long	0x6dcd
+	.long	0x6dd3
 	.uleb128 0x2
-	.long	0x182ef
+	.long	0x183a9
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF5
 	.byte	0x3
 	.byte	0xea
 	.byte	0x16
-	.long	0x6622
+	.long	0x66dc
 	.uleb128 0x6
-	.long	0x6d19
+	.long	0x6dd3
 	.uleb128 0x35
 	.secrel32	.LASF42
 	.byte	0x3
 	.byte	0xf5
 	.byte	0x7
 	.ascii "_ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE13get_allocatorEv\0"
-	.long	0x6d19
-	.long	0x6d7c
-	.long	0x6d82
+	.long	0x6dd3
+	.long	0x6e36
+	.long	0x6e3c
 	.uleb128 0x2
-	.long	0x182ef
+	.long	0x183a9
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF79
+	.secrel32	.LASF80
 	.byte	0x3
 	.byte	0xf8
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4Ev\0"
-	.long	0x6dc2
-	.long	0x6dc8
+	.long	0x6e7c
+	.long	0x6e82
 	.uleb128 0x2
-	.long	0x182e4
+	.long	0x1839e
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF79
+	.secrel32	.LASF80
 	.byte	0x3
 	.byte	0xfb
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4ERKS2_\0"
-	.long	0x6e0c
-	.long	0x6e17
+	.long	0x6ec6
+	.long	0x6ed1
 	.uleb128 0x2
-	.long	0x182e4
+	.long	0x1839e
 	.uleb128 0x1
-	.long	0x182fa
+	.long	0x183b4
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF79
+	.secrel32	.LASF80
 	.byte	0x3
 	.byte	0xfe
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4Ey\0"
-	.long	0x6e57
-	.long	0x6e62
+	.long	0x6f11
+	.long	0x6f1c
 	.uleb128 0x2
-	.long	0x182e4
+	.long	0x1839e
 	.uleb128 0x1
-	.long	0x53c6
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x102
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4EyRKS2_\0"
-	.long	0x6ea8
-	.long	0x6eb8
-	.uleb128 0x2
-	.long	0x182e4
-	.uleb128 0x1
-	.long	0x53c6
-	.uleb128 0x1
-	.long	0x182fa
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x107
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4EOS2_\0"
-	.long	0x6efc
-	.long	0x6f07
-	.uleb128 0x2
-	.long	0x182e4
-	.uleb128 0x1
-	.long	0x182d2
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x10a
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4EOS3_\0"
-	.long	0x6f4b
-	.long	0x6f56
-	.uleb128 0x2
-	.long	0x182e4
-	.uleb128 0x1
-	.long	0x18300
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x10e
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4EOS3_RKS2_\0"
-	.long	0x6f9f
-	.long	0x6faf
-	.uleb128 0x2
-	.long	0x182e4
-	.uleb128 0x1
-	.long	0x18300
-	.uleb128 0x1
-	.long	0x182fa
+	.long	0x5480
 	.byte	0
 	.uleb128 0x1f
 	.secrel32	.LASF80
 	.byte	0x3
+	.word	0x102
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4EyRKS2_\0"
+	.long	0x6f62
+	.long	0x6f72
+	.uleb128 0x2
+	.long	0x1839e
+	.uleb128 0x1
+	.long	0x5480
+	.uleb128 0x1
+	.long	0x183b4
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF80
+	.byte	0x3
+	.word	0x107
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4EOS2_\0"
+	.long	0x6fb6
+	.long	0x6fc1
+	.uleb128 0x2
+	.long	0x1839e
+	.uleb128 0x1
+	.long	0x1838c
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF80
+	.byte	0x3
+	.word	0x10a
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4EOS3_\0"
+	.long	0x7005
+	.long	0x7010
+	.uleb128 0x2
+	.long	0x1839e
+	.uleb128 0x1
+	.long	0x183ba
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF80
+	.byte	0x3
+	.word	0x10e
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EEC4EOS3_RKS2_\0"
+	.long	0x7059
+	.long	0x7069
+	.uleb128 0x2
+	.long	0x1839e
+	.uleb128 0x1
+	.long	0x183ba
+	.uleb128 0x1
+	.long	0x183b4
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF81
+	.byte	0x3
 	.word	0x11b
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EED4Ev\0"
-	.long	0x6ff0
-	.long	0x6ffb
+	.long	0x70aa
+	.long	0x70b5
 	.uleb128 0x2
-	.long	0x182e4
+	.long	0x1839e
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
-	.uleb128 0x57
-	.secrel32	.LASF81
+	.uleb128 0x58
+	.secrel32	.LASF82
 	.byte	0x3
 	.word	0x122
 	.byte	0x14
-	.long	0x6a95
+	.long	0x6b4f
 	.byte	0
-	.uleb128 0x56
-	.secrel32	.LASF82
+	.uleb128 0x57
+	.secrel32	.LASF83
 	.byte	0x3
 	.word	0x125
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy\0"
-	.long	0x6c41
-	.long	0x7059
-	.long	0x7064
+	.long	0x6cfb
+	.long	0x7113
+	.long	0x711e
 	.uleb128 0x2
-	.long	0x182e4
+	.long	0x1839e
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
 	.uleb128 0x1f
-	.secrel32	.LASF83
+	.secrel32	.LASF84
 	.byte	0x3
 	.word	0x12c
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y\0"
-	.long	0x70b6
-	.long	0x70c6
+	.long	0x7170
+	.long	0x7180
 	.uleb128 0x2
-	.long	0x182e4
+	.long	0x1839e
 	.uleb128 0x1
-	.long	0x6c41
+	.long	0x6cfb
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF84
+	.uleb128 0x8
+	.secrel32	.LASF85
 	.byte	0x3
 	.word	0x135
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE17_M_create_storageEy\0"
 	.byte	0x3
-	.long	0x7119
-	.long	0x7124
+	.long	0x71d3
+	.long	0x71de
 	.uleb128 0x2
-	.long	0x182e4
+	.long	0x1839e
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x6622
+	.long	0x66dc
 	.byte	0
 	.uleb128 0x6
-	.long	0x6a50
+	.long	0x6b0a
 	.uleb128 0x40
 	.ascii "vector<T100FileInfo*, std::allocator<T100FileInfo*> >\0"
 	.byte	0x18
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x8b94
+	.long	0x8c4e
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x7009
+	.long	0x70c3
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x7064
+	.long	0x711e
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x6ffb
+	.long	0x70b5
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x6cbb
+	.long	0x6d75
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x6c5e
+	.long	0x6d18
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x6d2a
+	.long	0x6de4
 	.uleb128 0x4c
-	.long	0x6a50
+	.long	0x6b0a
 	.byte	0
 	.byte	0x2
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x187
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEC4Ev\0"
 	.byte	0x1
-	.long	0x71f4
-	.long	0x71fa
+	.long	0x72ae
+	.long	0x72b4
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
 	.uleb128 0x34
-	.secrel32	.LASF85
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x192
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEC4ERKS2_\0"
 	.byte	0x1
-	.long	0x7239
-	.long	0x7244
+	.long	0x72f3
+	.long	0x72fe
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x18311
+	.long	0x183cb
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF5
 	.byte	0x3
 	.word	0x178
 	.byte	0x1a
-	.long	0x6622
+	.long	0x66dc
 	.byte	0x1
 	.uleb128 0x6
-	.long	0x7244
+	.long	0x72fe
 	.uleb128 0x34
-	.secrel32	.LASF85
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x19f
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEC4EyRKS2_\0"
 	.byte	0x1
-	.long	0x7297
-	.long	0x72a7
+	.long	0x7351
+	.long	0x7361
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.uleb128 0x1
-	.long	0x18311
+	.long	0x183cb
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF2
 	.byte	0x3
 	.word	0x176
 	.byte	0x1a
-	.long	0x53c6
+	.long	0x5480
 	.byte	0x1
 	.uleb128 0x6
-	.long	0x72a7
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.long	0x7361
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1ab
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEC4EyRKS1_RKS2_\0"
 	.byte	0x1
-	.long	0x72ff
-	.long	0x7314
+	.long	0x73b9
+	.long	0x73ce
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.uleb128 0x1
-	.long	0x18317
+	.long	0x183d1
 	.uleb128 0x1
-	.long	0x18311
+	.long	0x183cb
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF55
 	.byte	0x3
 	.word	0x16c
 	.byte	0x17
-	.long	0x18266
+	.long	0x18320
 	.byte	0x1
 	.uleb128 0x6
-	.long	0x7314
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.long	0x73ce
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1ca
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEC4ERKS3_\0"
 	.byte	0x1
-	.long	0x7366
-	.long	0x7371
+	.long	0x7420
+	.long	0x742b
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x1831d
+	.long	0x183d7
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1dc
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEC4EOS3_\0"
 	.byte	0x1
-	.long	0x73af
-	.long	0x73ba
+	.long	0x7469
+	.long	0x7474
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x18323
+	.long	0x183dd
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1e0
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEC4ERKS3_RKS2_\0"
 	.byte	0x1
-	.long	0x73fe
-	.long	0x740e
+	.long	0x74b8
+	.long	0x74c8
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x1831d
+	.long	0x183d7
 	.uleb128 0x1
-	.long	0x18311
+	.long	0x183cb
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1ea
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEC4EOS3_RKS2_\0"
 	.byte	0x1
-	.long	0x7451
-	.long	0x7461
+	.long	0x750b
+	.long	0x751b
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x18323
+	.long	0x183dd
 	.uleb128 0x1
-	.long	0x18311
+	.long	0x183cb
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x203
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEC4ESt16initializer_listIS1_ERKS2_\0"
 	.byte	0x1
-	.long	0x74b9
-	.long	0x74c9
+	.long	0x7573
+	.long	0x7583
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x8b99
+	.long	0x8c53
 	.uleb128 0x1
-	.long	0x18311
+	.long	0x183cb
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF86
+	.uleb128 0x8
+	.secrel32	.LASF87
 	.byte	0x3
 	.word	0x235
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EED4Ev\0"
 	.byte	0x1
-	.long	0x7504
-	.long	0x750f
+	.long	0x75be
+	.long	0x75c9
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF12
@@ -11886,14 +11955,14 @@ _ZTS15T100FolderLogic:
 	.byte	0xba
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEaSERKS3_\0"
-	.long	0x18329
+	.long	0x183e3
 	.byte	0x1
-	.long	0x7551
-	.long	0x755c
+	.long	0x760b
+	.long	0x7616
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x1831d
+	.long	0x183d7
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -11901,14 +11970,14 @@ _ZTS15T100FolderLogic:
 	.word	0x254
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEaSEOS3_\0"
-	.long	0x18329
+	.long	0x183e3
 	.byte	0x1
-	.long	0x759e
-	.long	0x75a9
+	.long	0x7658
+	.long	0x7663
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x18323
+	.long	0x183dd
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -11916,51 +11985,51 @@ _ZTS15T100FolderLogic:
 	.word	0x269
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEaSESt16initializer_listIS1_E\0"
-	.long	0x18329
+	.long	0x183e3
 	.byte	0x1
-	.long	0x7600
-	.long	0x760b
+	.long	0x76ba
+	.long	0x76c5
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x8b99
+	.long	0x8c53
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF36
 	.byte	0x3
 	.word	0x27c
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE6assignEyRKS1_\0"
 	.byte	0x1
-	.long	0x7650
-	.long	0x7660
+	.long	0x770a
+	.long	0x771a
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.uleb128 0x1
-	.long	0x18317
+	.long	0x183d1
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF36
 	.byte	0x3
 	.word	0x2a9
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE6assignESt16initializer_listIS1_E\0"
 	.byte	0x1
-	.long	0x76b8
-	.long	0x76c3
+	.long	0x7772
+	.long	0x777d
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x8b99
+	.long	0x8c53
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF8
 	.byte	0x3
 	.word	0x171
 	.byte	0x3d
-	.long	0x1327f
+	.long	0x13339
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF13
@@ -11968,19 +12037,19 @@ _ZTS15T100FolderLogic:
 	.word	0x2ba
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv\0"
-	.long	0x76c3
+	.long	0x777d
 	.byte	0x1
-	.long	0x7714
-	.long	0x771a
+	.long	0x77ce
+	.long	0x77d4
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF9
 	.byte	0x3
 	.word	0x173
 	.byte	0x7
-	.long	0x13916
+	.long	0x139d0
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF13
@@ -11988,12 +12057,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2c3
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE5beginEv\0"
-	.long	0x771a
+	.long	0x77d4
 	.byte	0x1
-	.long	0x776c
-	.long	0x7772
+	.long	0x7826
+	.long	0x782c
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x19
 	.ascii "end\0"
@@ -12001,12 +12070,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2cc
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv\0"
-	.long	0x76c3
+	.long	0x777d
 	.byte	0x1
-	.long	0x77b3
-	.long	0x77b9
+	.long	0x786d
+	.long	0x7873
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
 	.uleb128 0x19
 	.ascii "end\0"
@@ -12014,19 +12083,19 @@ _ZTS15T100FolderLogic:
 	.word	0x2d5
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE3endEv\0"
-	.long	0x771a
+	.long	0x77d4
 	.byte	0x1
-	.long	0x77fb
-	.long	0x7801
+	.long	0x78b5
+	.long	0x78bb
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF14
 	.byte	0x3
 	.word	0x175
 	.byte	0x30
-	.long	0x8bba
+	.long	0x8c74
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF15
@@ -12034,19 +12103,19 @@ _ZTS15T100FolderLogic:
 	.word	0x2de
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE6rbeginEv\0"
-	.long	0x7801
+	.long	0x78bb
 	.byte	0x1
-	.long	0x7853
-	.long	0x7859
+	.long	0x790d
+	.long	0x7913
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF16
 	.byte	0x3
 	.word	0x174
 	.byte	0x35
-	.long	0x8c38
+	.long	0x8cf2
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF15
@@ -12054,12 +12123,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2e7
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE6rbeginEv\0"
-	.long	0x7859
+	.long	0x7913
 	.byte	0x1
-	.long	0x78ac
-	.long	0x78b2
+	.long	0x7966
+	.long	0x796c
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF17
@@ -12067,12 +12136,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2f0
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE4rendEv\0"
-	.long	0x7801
+	.long	0x78bb
 	.byte	0x1
-	.long	0x78f4
-	.long	0x78fa
+	.long	0x79ae
+	.long	0x79b4
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF17
@@ -12080,12 +12149,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2f9
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4rendEv\0"
-	.long	0x7859
+	.long	0x7913
 	.byte	0x1
-	.long	0x793d
-	.long	0x7943
+	.long	0x79f7
+	.long	0x79fd
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF18
@@ -12093,12 +12162,12 @@ _ZTS15T100FolderLogic:
 	.word	0x303
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE6cbeginEv\0"
-	.long	0x771a
+	.long	0x77d4
 	.byte	0x1
-	.long	0x7988
-	.long	0x798e
+	.long	0x7a42
+	.long	0x7a48
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x19
 	.ascii "cend\0"
@@ -12106,12 +12175,12 @@ _ZTS15T100FolderLogic:
 	.word	0x30c
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4cendEv\0"
-	.long	0x771a
+	.long	0x77d4
 	.byte	0x1
-	.long	0x79d2
-	.long	0x79d8
+	.long	0x7a8c
+	.long	0x7a92
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF19
@@ -12119,12 +12188,12 @@ _ZTS15T100FolderLogic:
 	.word	0x315
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE7crbeginEv\0"
-	.long	0x7859
+	.long	0x7913
 	.byte	0x1
-	.long	0x7a1e
-	.long	0x7a24
+	.long	0x7ad8
+	.long	0x7ade
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF20
@@ -12132,12 +12201,12 @@ _ZTS15T100FolderLogic:
 	.word	0x31e
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE5crendEv\0"
-	.long	0x7859
+	.long	0x7913
 	.byte	0x1
-	.long	0x7a68
-	.long	0x7a6e
+	.long	0x7b22
+	.long	0x7b28
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x19
 	.ascii "size\0"
@@ -12145,12 +12214,12 @@ _ZTS15T100FolderLogic:
 	.word	0x325
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv\0"
-	.long	0x72a7
+	.long	0x7361
 	.byte	0x1
-	.long	0x7ab2
-	.long	0x7ab8
+	.long	0x7b6c
+	.long	0x7b72
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF21
@@ -12158,54 +12227,54 @@ _ZTS15T100FolderLogic:
 	.word	0x32a
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv\0"
-	.long	0x72a7
+	.long	0x7361
 	.byte	0x1
-	.long	0x7aff
-	.long	0x7b05
+	.long	0x7bb9
+	.long	0x7bbf
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF22
 	.byte	0x3
 	.word	0x338
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE6resizeEy\0"
 	.byte	0x1
-	.long	0x7b45
-	.long	0x7b50
+	.long	0x7bff
+	.long	0x7c0a
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF22
 	.byte	0x3
 	.word	0x34c
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE6resizeEyRKS1_\0"
 	.byte	0x1
-	.long	0x7b95
-	.long	0x7ba5
+	.long	0x7c4f
+	.long	0x7c5f
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.uleb128 0x1
-	.long	0x18317
+	.long	0x183d1
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF23
 	.byte	0x3
 	.word	0x36c
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE13shrink_to_fitEv\0"
 	.byte	0x1
-	.long	0x7bed
-	.long	0x7bf3
+	.long	0x7ca7
+	.long	0x7cad
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF24
@@ -12213,12 +12282,12 @@ _ZTS15T100FolderLogic:
 	.word	0x375
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE8capacityEv\0"
-	.long	0x72a7
+	.long	0x7361
 	.byte	0x1
-	.long	0x7c3a
-	.long	0x7c40
+	.long	0x7cf4
+	.long	0x7cfa
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF27
@@ -12226,12 +12295,12 @@ _ZTS15T100FolderLogic:
 	.word	0x37e
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE5emptyEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.long	0x7c84
-	.long	0x7c8a
+	.long	0x7d3e
+	.long	0x7d44
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF25
@@ -12240,19 +12309,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE7reserveEy\0"
 	.byte	0x1
-	.long	0x7cca
-	.long	0x7cd5
+	.long	0x7d84
+	.long	0x7d8f
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF30
 	.byte	0x3
 	.word	0x16f
 	.byte	0x32
-	.long	0x13228
+	.long	0x132e2
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -12260,21 +12329,21 @@ _ZTS15T100FolderLogic:
 	.word	0x3a2
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EEixEy\0"
-	.long	0x7cd5
+	.long	0x7d8f
 	.byte	0x1
-	.long	0x7d22
-	.long	0x7d2d
+	.long	0x7ddc
+	.long	0x7de7
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF28
 	.byte	0x3
 	.word	0x170
 	.byte	0x37
-	.long	0x13234
+	.long	0x132ee
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -12282,28 +12351,28 @@ _ZTS15T100FolderLogic:
 	.word	0x3b4
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EEixEy\0"
-	.long	0x7d2d
+	.long	0x7de7
 	.byte	0x1
-	.long	0x7d7b
-	.long	0x7d86
+	.long	0x7e35
+	.long	0x7e40
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF87
+	.uleb128 0x8
+	.secrel32	.LASF88
 	.byte	0x3
 	.word	0x3bd
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE14_M_range_checkEy\0"
 	.byte	0x2
-	.long	0x7dd0
-	.long	0x7ddb
+	.long	0x7e8a
+	.long	0x7e95
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.byte	0
 	.uleb128 0x19
 	.ascii "at\0"
@@ -12311,14 +12380,14 @@ _ZTS15T100FolderLogic:
 	.word	0x3d3
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE2atEy\0"
-	.long	0x7cd5
+	.long	0x7d8f
 	.byte	0x1
-	.long	0x7e1a
-	.long	0x7e25
+	.long	0x7ed4
+	.long	0x7edf
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.byte	0
 	.uleb128 0x19
 	.ascii "at\0"
@@ -12326,14 +12395,14 @@ _ZTS15T100FolderLogic:
 	.word	0x3e5
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE2atEy\0"
-	.long	0x7d2d
+	.long	0x7de7
 	.byte	0x1
-	.long	0x7e65
-	.long	0x7e70
+	.long	0x7f1f
+	.long	0x7f2a
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF31
@@ -12341,12 +12410,12 @@ _ZTS15T100FolderLogic:
 	.word	0x3f0
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE5frontEv\0"
-	.long	0x7cd5
+	.long	0x7d8f
 	.byte	0x1
-	.long	0x7eb3
-	.long	0x7eb9
+	.long	0x7f6d
+	.long	0x7f73
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF31
@@ -12354,12 +12423,12 @@ _ZTS15T100FolderLogic:
 	.word	0x3fb
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE5frontEv\0"
-	.long	0x7d2d
+	.long	0x7de7
 	.byte	0x1
-	.long	0x7efd
-	.long	0x7f03
+	.long	0x7fb7
+	.long	0x7fbd
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF32
@@ -12367,12 +12436,12 @@ _ZTS15T100FolderLogic:
 	.word	0x406
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE4backEv\0"
-	.long	0x7cd5
+	.long	0x7d8f
 	.byte	0x1
-	.long	0x7f45
-	.long	0x7f4b
+	.long	0x7fff
+	.long	0x8005
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF32
@@ -12380,12 +12449,12 @@ _ZTS15T100FolderLogic:
 	.word	0x411
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4backEv\0"
-	.long	0x7d2d
+	.long	0x7de7
 	.byte	0x1
-	.long	0x7f8e
-	.long	0x7f94
+	.long	0x8048
+	.long	0x804e
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF41
@@ -12393,12 +12462,12 @@ _ZTS15T100FolderLogic:
 	.word	0x41f
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE4dataEv\0"
-	.long	0x1825b
+	.long	0x18315
 	.byte	0x1
-	.long	0x7fd6
-	.long	0x7fdc
+	.long	0x8090
+	.long	0x8096
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF41
@@ -12406,52 +12475,52 @@ _ZTS15T100FolderLogic:
 	.word	0x423
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4dataEv\0"
-	.long	0x18290
+	.long	0x1834a
 	.byte	0x1
-	.long	0x801f
-	.long	0x8025
+	.long	0x80d9
+	.long	0x80df
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF35
 	.byte	0x3
 	.word	0x432
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_\0"
 	.byte	0x1
-	.long	0x806c
-	.long	0x8077
+	.long	0x8126
+	.long	0x8131
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x18317
+	.long	0x183d1
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF35
 	.byte	0x3
 	.word	0x442
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backEOS1_\0"
 	.byte	0x1
-	.long	0x80bd
-	.long	0x80c8
+	.long	0x8177
+	.long	0x8182
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x1833a
+	.long	0x183f4
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF39
 	.byte	0x3
 	.word	0x458
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE8pop_backEv\0"
 	.byte	0x1
-	.long	0x810a
-	.long	0x8110
+	.long	0x81c4
+	.long	0x81ca
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF37
@@ -12459,16 +12528,16 @@ _ZTS15T100FolderLogic:
 	.byte	0x76
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EERS6_\0"
-	.long	0x76c3
+	.long	0x777d
 	.byte	0x1
-	.long	0x817f
-	.long	0x818f
+	.long	0x8239
+	.long	0x8249
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x771a
+	.long	0x77d4
 	.uleb128 0x1
-	.long	0x18317
+	.long	0x183d1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -12476,16 +12545,16 @@ _ZTS15T100FolderLogic:
 	.word	0x49c
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEOS1_\0"
-	.long	0x76c3
+	.long	0x777d
 	.byte	0x1
-	.long	0x81ff
-	.long	0x820f
+	.long	0x82b9
+	.long	0x82c9
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x771a
+	.long	0x77d4
 	.uleb128 0x1
-	.long	0x1833a
+	.long	0x183f4
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -12493,16 +12562,16 @@ _ZTS15T100FolderLogic:
 	.word	0x4ad
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EESt16initializer_listIS1_E\0"
-	.long	0x76c3
+	.long	0x777d
 	.byte	0x1
-	.long	0x8294
-	.long	0x82a4
+	.long	0x834e
+	.long	0x835e
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x771a
+	.long	0x77d4
 	.uleb128 0x1
-	.long	0x8b99
+	.long	0x8c53
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -12510,18 +12579,18 @@ _ZTS15T100FolderLogic:
 	.word	0x4c6
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEyRS6_\0"
-	.long	0x76c3
+	.long	0x777d
 	.byte	0x1
-	.long	0x8315
-	.long	0x832a
+	.long	0x83cf
+	.long	0x83e4
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x771a
+	.long	0x77d4
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.uleb128 0x1
-	.long	0x18317
+	.long	0x183d1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF38
@@ -12529,14 +12598,14 @@ _ZTS15T100FolderLogic:
 	.word	0x525
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE5eraseEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EE\0"
-	.long	0x76c3
+	.long	0x777d
 	.byte	0x1
-	.long	0x8395
-	.long	0x83a0
+	.long	0x844f
+	.long	0x845a
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x771a
+	.long	0x77d4
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF38
@@ -12544,16 +12613,16 @@ _ZTS15T100FolderLogic:
 	.word	0x540
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE5eraseEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EES8_\0"
-	.long	0x76c3
+	.long	0x777d
 	.byte	0x1
-	.long	0x840e
-	.long	0x841e
+	.long	0x84c8
+	.long	0x84d8
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x771a
+	.long	0x77d4
 	.uleb128 0x1
-	.long	0x771a
+	.long	0x77d4
 	.byte	0
 	.uleb128 0x4b
 	.ascii "swap\0"
@@ -12562,187 +12631,187 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE4swapERS3_\0"
 	.byte	0x1
-	.long	0x8460
-	.long	0x846b
+	.long	0x851a
+	.long	0x8525
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x18329
+	.long	0x183e3
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF26
 	.byte	0x3
 	.word	0x569
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE5clearEv\0"
 	.byte	0x1
-	.long	0x84aa
-	.long	0x84b0
+	.long	0x8564
+	.long	0x856a
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF88
+	.uleb128 0x8
+	.secrel32	.LASF89
 	.byte	0x3
 	.word	0x5c0
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE18_M_fill_initializeEyRKS1_\0"
 	.byte	0x2
-	.long	0x8502
-	.long	0x8512
+	.long	0x85bc
+	.long	0x85cc
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.uleb128 0x1
-	.long	0x18317
+	.long	0x183d1
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF89
+	.uleb128 0x8
+	.secrel32	.LASF90
 	.byte	0x3
 	.word	0x5ca
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE21_M_default_initializeEy\0"
 	.byte	0x2
-	.long	0x8562
-	.long	0x856d
+	.long	0x861c
+	.long	0x8627
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF90
+	.secrel32	.LASF91
 	.byte	0x9
 	.byte	0xf5
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE14_M_fill_assignEyRKS1_\0"
 	.byte	0x2
-	.long	0x85ba
-	.long	0x85ca
+	.long	0x8674
+	.long	0x8684
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x1
-	.long	0x18317
+	.long	0x183d1
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF91
+	.uleb128 0x8
+	.secrel32	.LASF92
 	.byte	0x9
 	.word	0x1de
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE14_M_fill_insertEN9__gnu_cxx17__normal_iteratorIPS1_S3_EEyRKS1_\0"
 	.byte	0x2
-	.long	0x8640
-	.long	0x8655
+	.long	0x86fa
+	.long	0x870f
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x76c3
+	.long	0x777d
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.uleb128 0x1
-	.long	0x18317
+	.long	0x183d1
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF92
+	.uleb128 0x8
+	.secrel32	.LASF93
 	.byte	0x9
 	.word	0x244
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_default_appendEy\0"
 	.byte	0x2
-	.long	0x86a1
-	.long	0x86ac
+	.long	0x875b
+	.long	0x8766
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x72a7
-	.byte	0
-	.uleb128 0x3
-	.secrel32	.LASF93
-	.byte	0x9
-	.word	0x27f
-	.byte	0x5
-	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE16_M_shrink_to_fitEv\0"
-	.long	0x16105
-	.byte	0x2
-	.long	0x86fb
-	.long	0x8701
-	.uleb128 0x2
-	.long	0x18306
+	.long	0x7361
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF94
 	.byte	0x9
-	.word	0x147
+	.word	0x27f
 	.byte	0x5
-	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE14_M_insert_rvalEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEOS1_\0"
-	.long	0x76c3
+	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE16_M_shrink_to_fitEv\0"
+	.long	0x16a1c
 	.byte	0x2
-	.long	0x877a
-	.long	0x878a
+	.long	0x87b5
+	.long	0x87bb
 	.uleb128 0x2
-	.long	0x18306
-	.uleb128 0x1
-	.long	0x771a
-	.uleb128 0x1
-	.long	0x1833a
+	.long	0x183c0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF95
-	.byte	0x3
-	.word	0x65d
-	.byte	0x7
-	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE14_M_emplace_auxEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEOS1_\0"
-	.long	0x76c3
+	.byte	0x9
+	.word	0x147
+	.byte	0x5
+	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE14_M_insert_rvalEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEOS1_\0"
+	.long	0x777d
 	.byte	0x2
-	.long	0x8803
-	.long	0x8813
+	.long	0x8834
+	.long	0x8844
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x771a
+	.long	0x77d4
 	.uleb128 0x1
-	.long	0x1833a
+	.long	0x183f4
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF96
 	.byte	0x3
+	.word	0x65d
+	.byte	0x7
+	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE14_M_emplace_auxEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEOS1_\0"
+	.long	0x777d
+	.byte	0x2
+	.long	0x88bd
+	.long	0x88cd
+	.uleb128 0x2
+	.long	0x183c0
+	.uleb128 0x1
+	.long	0x77d4
+	.uleb128 0x1
+	.long	0x183f4
+	.byte	0
+	.uleb128 0x3
+	.secrel32	.LASF97
+	.byte	0x3
 	.word	0x663
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc\0"
-	.long	0x72a7
+	.long	0x7361
 	.byte	0x2
-	.long	0x8862
-	.long	0x8872
+	.long	0x891c
+	.long	0x892c
 	.uleb128 0x2
-	.long	0x1832f
+	.long	0x183e9
 	.uleb128 0x1
-	.long	0x72a7
+	.long	0x7361
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF97
+	.uleb128 0x8
+	.secrel32	.LASF98
 	.byte	0x3
 	.word	0x671
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE15_M_erase_at_endEPS1_\0"
 	.byte	0x2
-	.long	0x88bf
-	.long	0x88ca
+	.long	0x8979
+	.long	0x8984
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x88ca
+	.long	0x8984
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF1
 	.byte	0x3
 	.word	0x16d
 	.byte	0x29
-	.long	0x6c41
+	.long	0x6cfb
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF10
@@ -12750,14 +12819,14 @@ _ZTS15T100FolderLogic:
 	.byte	0x9f
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE8_M_eraseEN9__gnu_cxx17__normal_iteratorIPS1_S3_EE\0"
-	.long	0x76c3
+	.long	0x777d
 	.byte	0x2
-	.long	0x8944
-	.long	0x894f
+	.long	0x89fe
+	.long	0x8a09
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x76c3
+	.long	0x777d
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF10
@@ -12765,46 +12834,46 @@ _ZTS15T100FolderLogic:
 	.byte	0xac
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE8_M_eraseEN9__gnu_cxx17__normal_iteratorIPS1_S3_EES7_\0"
-	.long	0x76c3
+	.long	0x777d
 	.byte	0x2
-	.long	0x89be
-	.long	0x89ce
+	.long	0x8a78
+	.long	0x8a88
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x76c3
+	.long	0x777d
 	.uleb128 0x1
-	.long	0x76c3
+	.long	0x777d
 	.byte	0
 	.uleb128 0x1f
-	.secrel32	.LASF98
+	.secrel32	.LASF99
 	.byte	0x3
 	.word	0x688
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE14_M_move_assignEOS3_St17integral_constantIbLb1EE\0"
-	.long	0x8a35
-	.long	0x8a45
+	.long	0x8aef
+	.long	0x8aff
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x18323
+	.long	0x183dd
 	.uleb128 0x1
-	.long	0x53ec
+	.long	0x54a6
 	.byte	0
 	.uleb128 0x1f
-	.secrel32	.LASF98
+	.secrel32	.LASF99
 	.byte	0x3
 	.word	0x693
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE14_M_move_assignEOS3_St17integral_constantIbLb0EE\0"
-	.long	0x8aac
-	.long	0x8abc
+	.long	0x8b66
+	.long	0x8b76
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x18323
+	.long	0x183dd
 	.uleb128 0x1
-	.long	0x4d06
+	.long	0x4cf3
 	.byte	0
 	.uleb128 0x4b
 	.ascii "_M_realloc_insert<T100FileInfo* const&>\0"
@@ -12813,30 +12882,30 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_\0"
 	.byte	0x2
-	.long	0x8b71
-	.long	0x8b81
+	.long	0x8c2b
+	.long	0x8c3b
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x8b71
+	.secrel32	.LASF100
+	.long	0x8c2b
 	.uleb128 0x38
-	.long	0x18296
+	.long	0x18350
 	.byte	0
 	.uleb128 0x2
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0x1
-	.long	0x76c3
+	.long	0x777d
 	.uleb128 0x1
-	.long	0x18296
+	.long	0x18350
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x42
 	.secrel32	.LASF54
-	.long	0x6622
+	.long	0x66dc
 	.byte	0
 	.uleb128 0x6
-	.long	0x713c
+	.long	0x71f6
 	.uleb128 0x28
 	.ascii "initializer_list<T100FileInfo*>\0"
 	.uleb128 0x28
@@ -12849,127 +12918,127 @@ _ZTS15T100FolderLogic:
 	.byte	0xa
 	.byte	0x6c
 	.byte	0xb
-	.long	0x8d8e
+	.long	0x8e48
 	.uleb128 0x4c
-	.long	0x1397c
+	.long	0x13a36
 	.byte	0
 	.byte	0x1
 	.uleb128 0x15
-	.secrel32	.LASF60
+	.secrel32	.LASF61
 	.byte	0xa
 	.byte	0x83
 	.byte	0x7
 	.ascii "_ZNSaIP14T100FolderInfoEC4Ev\0"
 	.byte	0x1
-	.long	0x8d15
-	.long	0x8d1b
+	.long	0x8dcf
+	.long	0x8dd5
 	.uleb128 0x2
-	.long	0x18394
+	.long	0x1844e
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF60
+	.secrel32	.LASF61
 	.byte	0xa
 	.byte	0x85
 	.byte	0x7
 	.ascii "_ZNSaIP14T100FolderInfoEC4ERKS1_\0"
 	.byte	0x1
-	.long	0x8d4d
-	.long	0x8d58
+	.long	0x8e07
+	.long	0x8e12
 	.uleb128 0x2
-	.long	0x18394
+	.long	0x1844e
 	.uleb128 0x1
-	.long	0x1839a
+	.long	0x18454
 	.byte	0
-	.uleb128 0x5a
-	.secrel32	.LASF61
+	.uleb128 0x5c
+	.secrel32	.LASF62
 	.byte	0xa
 	.byte	0x8b
 	.byte	0x7
 	.ascii "_ZNSaIP14T100FolderInfoED4Ev\0"
 	.byte	0x1
-	.long	0x8d82
+	.long	0x8e3c
 	.uleb128 0x2
-	.long	0x18394
+	.long	0x1844e
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.long	0x8cbc
+	.long	0x8d76
 	.uleb128 0x30
 	.ascii "allocator_traits<std::allocator<T100FolderInfo*> >\0"
 	.byte	0x1
 	.byte	0x8
 	.word	0x180
 	.byte	0xc
-	.long	0x9102
+	.long	0x91bc
 	.uleb128 0x1b
 	.secrel32	.LASF1
 	.byte	0x8
 	.word	0x188
 	.byte	0x1b
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x23
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0x8
 	.word	0x1b3
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y\0"
-	.long	0x8dd0
-	.long	0x8e37
+	.long	0x8e8a
+	.long	0x8ef1
 	.uleb128 0x1
-	.long	0x183a0
+	.long	0x1845a
 	.uleb128 0x1
-	.long	0x8e49
+	.long	0x8f03
 	.byte	0
 	.uleb128 0x1b
 	.secrel32	.LASF5
 	.byte	0x8
 	.word	0x183
 	.byte	0x2c
-	.long	0x8cbc
+	.long	0x8d76
 	.uleb128 0x6
-	.long	0x8e37
+	.long	0x8ef1
 	.uleb128 0x1b
 	.secrel32	.LASF2
 	.byte	0x8
 	.word	0x197
 	.byte	0x24
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x23
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0x8
 	.word	0x1c1
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_yPKv\0"
-	.long	0x8dd0
-	.long	0x8eb8
+	.long	0x8e8a
+	.long	0x8f72
 	.uleb128 0x1
-	.long	0x183a0
+	.long	0x1845a
 	.uleb128 0x1
-	.long	0x8e49
+	.long	0x8f03
 	.uleb128 0x1
-	.long	0x8eb8
+	.long	0x8f72
 	.byte	0
 	.uleb128 0x1b
-	.secrel32	.LASF65
+	.secrel32	.LASF66
 	.byte	0x8
 	.word	0x191
 	.byte	0x2d
-	.long	0x16828
+	.long	0x16afb
 	.uleb128 0x36
-	.secrel32	.LASF66
+	.secrel32	.LASF67
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y\0"
-	.long	0x8f27
+	.long	0x8fe1
 	.uleb128 0x1
-	.long	0x183a0
+	.long	0x1845a
 	.uleb128 0x1
-	.long	0x8dd0
+	.long	0x8e8a
 	.uleb128 0x1
-	.long	0x8e49
+	.long	0x8f03
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF21
@@ -12977,162 +13046,162 @@ _ZTS15T100FolderLogic:
 	.word	0x1ef
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_\0"
-	.long	0x8e49
-	.long	0x8f7c
+	.long	0x8f03
+	.long	0x9036
 	.uleb128 0x1
-	.long	0x183a6
+	.long	0x18460
 	.byte	0
 	.uleb128 0x23
-	.secrel32	.LASF67
+	.secrel32	.LASF68
 	.byte	0x8
 	.word	0x1f8
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaIP14T100FolderInfoEE37select_on_container_copy_constructionERKS2_\0"
-	.long	0x8e37
-	.long	0x8fef
+	.long	0x8ef1
+	.long	0x90a9
 	.uleb128 0x1
-	.long	0x183a6
+	.long	0x18460
 	.byte	0
 	.uleb128 0x1b
 	.secrel32	.LASF55
 	.byte	0x8
 	.word	0x185
 	.byte	0x1d
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x1b
-	.secrel32	.LASF68
+	.secrel32	.LASF69
 	.byte	0x8
 	.word	0x1a6
 	.byte	0x25
-	.long	0x8cbc
+	.long	0x8d76
 	.uleb128 0x36
-	.secrel32	.LASF100
+	.secrel32	.LASF101
 	.byte	0x8
 	.word	0x1e6
 	.byte	0x2
 	.ascii "_ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_\0"
-	.long	0x906f
-	.uleb128 0x8
+	.long	0x9129
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x1
-	.long	0x183a0
+	.long	0x1845a
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x36
-	.secrel32	.LASF101
+	.secrel32	.LASF102
 	.byte	0x8
 	.word	0x1da
 	.byte	0x2
 	.ascii "_ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_\0"
-	.long	0x90f8
-	.uleb128 0x8
+	.long	0x91b2
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x90e8
+	.secrel32	.LASF100
+	.long	0x91a2
 	.uleb128 0x38
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0x1
-	.long	0x183a0
+	.long	0x1845a
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x8cbc
+	.long	0x8d76
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "_Vector_base<T100FolderInfo*, std::allocator<T100FolderInfo*> >\0"
 	.byte	0x18
 	.byte	0x3
 	.byte	0x51
 	.byte	0xc
-	.long	0x9811
+	.long	0x98cb
 	.uleb128 0x4f
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x18
 	.byte	0x3
 	.byte	0x58
 	.byte	0xe
-	.long	0x92ff
+	.long	0x93b9
 	.uleb128 0x3b
-	.long	0x8cbc
-	.byte	0
-	.uleb128 0x43
-	.secrel32	.LASF73
-	.byte	0x3
-	.byte	0x5b
-	.byte	0xa
-	.long	0x92ff
+	.long	0x8d76
 	.byte	0
 	.uleb128 0x43
 	.secrel32	.LASF74
 	.byte	0x3
-	.byte	0x5c
+	.byte	0x5b
 	.byte	0xa
-	.long	0x92ff
-	.byte	0x8
+	.long	0x93b9
+	.byte	0
 	.uleb128 0x43
 	.secrel32	.LASF75
 	.byte	0x3
+	.byte	0x5c
+	.byte	0xa
+	.long	0x93b9
+	.byte	0x8
+	.uleb128 0x43
+	.secrel32	.LASF76
+	.byte	0x3
 	.byte	0x5d
 	.byte	0xa
-	.long	0x92ff
+	.long	0x93b9
 	.byte	0x10
 	.uleb128 0x20
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x3
 	.byte	0x5f
 	.byte	0x2
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE12_Vector_implC4Ev\0"
-	.long	0x91d5
-	.long	0x91db
+	.long	0x928f
+	.long	0x9295
 	.uleb128 0x2
-	.long	0x183be
+	.long	0x18478
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x3
 	.byte	0x63
 	.byte	0x2
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE12_Vector_implC4ERKS2_\0"
-	.long	0x922f
-	.long	0x923a
+	.long	0x92e9
+	.long	0x92f4
 	.uleb128 0x2
-	.long	0x183be
+	.long	0x18478
 	.uleb128 0x1
-	.long	0x183c4
+	.long	0x1847e
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x3
 	.byte	0x68
 	.byte	0x2
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE12_Vector_implC4EOS2_\0"
-	.long	0x928d
-	.long	0x9298
+	.long	0x9347
+	.long	0x9352
 	.uleb128 0x2
-	.long	0x183be
+	.long	0x18478
 	.uleb128 0x1
-	.long	0x183ca
+	.long	0x18484
 	.byte	0
-	.uleb128 0x77
-	.secrel32	.LASF76
+	.uleb128 0x78
+	.secrel32	.LASF77
 	.byte	0x3
 	.byte	0x6e
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE12_Vector_impl12_M_swap_dataERS4_\0"
-	.long	0x92f3
+	.long	0x93ad
 	.uleb128 0x2
-	.long	0x183be
+	.long	0x18478
 	.uleb128 0x1
-	.long	0x183d0
+	.long	0x1848a
 	.byte	0
 	.byte	0
 	.uleb128 0xe
@@ -13140,441 +13209,441 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.byte	0x56
 	.byte	0x9
-	.long	0x140c9
+	.long	0x14183
 	.uleb128 0xe
-	.secrel32	.LASF77
+	.secrel32	.LASF78
 	.byte	0x3
 	.byte	0x54
 	.byte	0x15
-	.long	0x1410e
+	.long	0x141c8
 	.uleb128 0x6
-	.long	0x930b
+	.long	0x93c5
 	.uleb128 0x35
-	.secrel32	.LASF78
+	.secrel32	.LASF79
 	.byte	0x3
 	.byte	0xed
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv\0"
-	.long	0x183d6
-	.long	0x9375
-	.long	0x937b
+	.long	0x18490
+	.long	0x942f
+	.long	0x9435
 	.uleb128 0x2
-	.long	0x183dc
+	.long	0x18496
 	.byte	0
 	.uleb128 0x35
-	.secrel32	.LASF78
+	.secrel32	.LASF79
 	.byte	0x3
 	.byte	0xf1
 	.byte	0x7
 	.ascii "_ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv\0"
-	.long	0x183c4
-	.long	0x93d5
-	.long	0x93db
+	.long	0x1847e
+	.long	0x948f
+	.long	0x9495
 	.uleb128 0x2
-	.long	0x183e7
+	.long	0x184a1
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF5
 	.byte	0x3
 	.byte	0xea
 	.byte	0x16
-	.long	0x8cbc
+	.long	0x8d76
 	.uleb128 0x6
-	.long	0x93db
+	.long	0x9495
 	.uleb128 0x35
 	.secrel32	.LASF42
 	.byte	0x3
 	.byte	0xf5
 	.byte	0x7
 	.ascii "_ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13get_allocatorEv\0"
-	.long	0x93db
-	.long	0x9440
-	.long	0x9446
+	.long	0x9495
+	.long	0x94fa
+	.long	0x9500
 	.uleb128 0x2
-	.long	0x183e7
+	.long	0x184a1
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF79
+	.secrel32	.LASF80
 	.byte	0x3
 	.byte	0xf8
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4Ev\0"
-	.long	0x9488
-	.long	0x948e
+	.long	0x9542
+	.long	0x9548
 	.uleb128 0x2
-	.long	0x183dc
+	.long	0x18496
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF79
+	.secrel32	.LASF80
 	.byte	0x3
 	.byte	0xfb
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4ERKS2_\0"
-	.long	0x94d4
-	.long	0x94df
+	.long	0x958e
+	.long	0x9599
 	.uleb128 0x2
-	.long	0x183dc
+	.long	0x18496
 	.uleb128 0x1
-	.long	0x183f2
+	.long	0x184ac
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF79
+	.secrel32	.LASF80
 	.byte	0x3
 	.byte	0xfe
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4Ey\0"
-	.long	0x9521
-	.long	0x952c
+	.long	0x95db
+	.long	0x95e6
 	.uleb128 0x2
-	.long	0x183dc
+	.long	0x18496
 	.uleb128 0x1
-	.long	0x53c6
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x102
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4EyRKS2_\0"
-	.long	0x9574
-	.long	0x9584
-	.uleb128 0x2
-	.long	0x183dc
-	.uleb128 0x1
-	.long	0x53c6
-	.uleb128 0x1
-	.long	0x183f2
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x107
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4EOS2_\0"
-	.long	0x95ca
-	.long	0x95d5
-	.uleb128 0x2
-	.long	0x183dc
-	.uleb128 0x1
-	.long	0x183ca
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x10a
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4EOS3_\0"
-	.long	0x961b
-	.long	0x9626
-	.uleb128 0x2
-	.long	0x183dc
-	.uleb128 0x1
-	.long	0x183f8
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x10e
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4EOS3_RKS2_\0"
-	.long	0x9671
-	.long	0x9681
-	.uleb128 0x2
-	.long	0x183dc
-	.uleb128 0x1
-	.long	0x183f8
-	.uleb128 0x1
-	.long	0x183f2
+	.long	0x5480
 	.byte	0
 	.uleb128 0x1f
 	.secrel32	.LASF80
 	.byte	0x3
+	.word	0x102
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4EyRKS2_\0"
+	.long	0x962e
+	.long	0x963e
+	.uleb128 0x2
+	.long	0x18496
+	.uleb128 0x1
+	.long	0x5480
+	.uleb128 0x1
+	.long	0x184ac
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF80
+	.byte	0x3
+	.word	0x107
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4EOS2_\0"
+	.long	0x9684
+	.long	0x968f
+	.uleb128 0x2
+	.long	0x18496
+	.uleb128 0x1
+	.long	0x18484
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF80
+	.byte	0x3
+	.word	0x10a
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4EOS3_\0"
+	.long	0x96d5
+	.long	0x96e0
+	.uleb128 0x2
+	.long	0x18496
+	.uleb128 0x1
+	.long	0x184b2
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF80
+	.byte	0x3
+	.word	0x10e
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EEC4EOS3_RKS2_\0"
+	.long	0x972b
+	.long	0x973b
+	.uleb128 0x2
+	.long	0x18496
+	.uleb128 0x1
+	.long	0x184b2
+	.uleb128 0x1
+	.long	0x184ac
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF81
+	.byte	0x3
 	.word	0x11b
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EED4Ev\0"
-	.long	0x96c4
-	.long	0x96cf
+	.long	0x977e
+	.long	0x9789
 	.uleb128 0x2
-	.long	0x183dc
+	.long	0x18496
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
-	.uleb128 0x57
-	.secrel32	.LASF81
+	.uleb128 0x58
+	.secrel32	.LASF82
 	.byte	0x3
 	.word	0x122
 	.byte	0x14
-	.long	0x914b
+	.long	0x9205
 	.byte	0
-	.uleb128 0x56
-	.secrel32	.LASF82
+	.uleb128 0x57
+	.secrel32	.LASF83
 	.byte	0x3
 	.word	0x125
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy\0"
-	.long	0x92ff
-	.long	0x972f
-	.long	0x973a
+	.long	0x93b9
+	.long	0x97e9
+	.long	0x97f4
 	.uleb128 0x2
-	.long	0x183dc
+	.long	0x18496
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
 	.uleb128 0x1f
-	.secrel32	.LASF83
+	.secrel32	.LASF84
 	.byte	0x3
 	.word	0x12c
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y\0"
-	.long	0x978e
-	.long	0x979e
+	.long	0x9848
+	.long	0x9858
 	.uleb128 0x2
-	.long	0x183dc
+	.long	0x18496
 	.uleb128 0x1
-	.long	0x92ff
+	.long	0x93b9
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF84
+	.uleb128 0x8
+	.secrel32	.LASF85
 	.byte	0x3
 	.word	0x135
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE17_M_create_storageEy\0"
 	.byte	0x3
-	.long	0x97f3
-	.long	0x97fe
+	.long	0x98ad
+	.long	0x98b8
 	.uleb128 0x2
-	.long	0x183dc
+	.long	0x18496
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x8cbc
+	.long	0x8d76
 	.byte	0
 	.uleb128 0x6
-	.long	0x9102
+	.long	0x91bc
 	.uleb128 0x40
 	.ascii "vector<T100FolderInfo*, std::allocator<T100FolderInfo*> >\0"
 	.byte	0x18
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0xb304
+	.long	0xb3be
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x96dd
+	.long	0x9797
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x973a
+	.long	0x97f4
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x96cf
+	.long	0x9789
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x937b
+	.long	0x9435
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x931c
+	.long	0x93d6
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0x93ec
+	.long	0x94a6
 	.uleb128 0x4c
-	.long	0x9102
+	.long	0x91bc
 	.byte	0
 	.byte	0x2
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x187
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEC4Ev\0"
 	.byte	0x1
-	.long	0x98d4
-	.long	0x98da
+	.long	0x998e
+	.long	0x9994
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
 	.uleb128 0x34
-	.secrel32	.LASF85
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x192
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEC4ERKS2_\0"
 	.byte	0x1
-	.long	0x991b
-	.long	0x9926
+	.long	0x99d5
+	.long	0x99e0
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x18409
+	.long	0x184c3
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF5
 	.byte	0x3
 	.word	0x178
 	.byte	0x1a
-	.long	0x8cbc
+	.long	0x8d76
 	.byte	0x1
 	.uleb128 0x6
-	.long	0x9926
+	.long	0x99e0
 	.uleb128 0x34
-	.secrel32	.LASF85
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x19f
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEC4EyRKS2_\0"
 	.byte	0x1
-	.long	0x997b
-	.long	0x998b
+	.long	0x9a35
+	.long	0x9a45
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.uleb128 0x1
-	.long	0x18409
+	.long	0x184c3
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF2
 	.byte	0x3
 	.word	0x176
 	.byte	0x1a
-	.long	0x53c6
+	.long	0x5480
 	.byte	0x1
 	.uleb128 0x6
-	.long	0x998b
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.long	0x9a45
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1ab
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEC4EyRKS1_RKS2_\0"
 	.byte	0x1
-	.long	0x99e5
-	.long	0x99fa
+	.long	0x9a9f
+	.long	0x9ab4
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.uleb128 0x1
-	.long	0x1840f
+	.long	0x184c9
 	.uleb128 0x1
-	.long	0x18409
+	.long	0x184c3
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF55
 	.byte	0x3
 	.word	0x16c
 	.byte	0x17
-	.long	0x1835c
+	.long	0x18416
 	.byte	0x1
 	.uleb128 0x6
-	.long	0x99fa
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.long	0x9ab4
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1ca
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEC4ERKS3_\0"
 	.byte	0x1
-	.long	0x9a4e
-	.long	0x9a59
+	.long	0x9b08
+	.long	0x9b13
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x18415
+	.long	0x184cf
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1dc
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEC4EOS3_\0"
 	.byte	0x1
-	.long	0x9a99
-	.long	0x9aa4
+	.long	0x9b53
+	.long	0x9b5e
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x1841b
+	.long	0x184d5
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1e0
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEC4ERKS3_RKS2_\0"
 	.byte	0x1
-	.long	0x9aea
-	.long	0x9afa
+	.long	0x9ba4
+	.long	0x9bb4
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x18415
+	.long	0x184cf
 	.uleb128 0x1
-	.long	0x18409
+	.long	0x184c3
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1ea
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEC4EOS3_RKS2_\0"
 	.byte	0x1
-	.long	0x9b3f
-	.long	0x9b4f
+	.long	0x9bf9
+	.long	0x9c09
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x1841b
+	.long	0x184d5
 	.uleb128 0x1
-	.long	0x18409
+	.long	0x184c3
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x203
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEC4ESt16initializer_listIS1_ERKS2_\0"
 	.byte	0x1
-	.long	0x9ba9
-	.long	0x9bb9
+	.long	0x9c63
+	.long	0x9c73
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0xb309
+	.long	0xb3c3
 	.uleb128 0x1
-	.long	0x18409
+	.long	0x184c3
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF86
+	.uleb128 0x8
+	.secrel32	.LASF87
 	.byte	0x3
 	.word	0x235
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EED4Ev\0"
 	.byte	0x1
-	.long	0x9bf6
-	.long	0x9c01
+	.long	0x9cb0
+	.long	0x9cbb
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF12
@@ -13582,14 +13651,14 @@ _ZTS15T100FolderLogic:
 	.byte	0xba
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEaSERKS3_\0"
-	.long	0x18421
+	.long	0x184db
 	.byte	0x1
-	.long	0x9c45
-	.long	0x9c50
+	.long	0x9cff
+	.long	0x9d0a
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x18415
+	.long	0x184cf
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -13597,14 +13666,14 @@ _ZTS15T100FolderLogic:
 	.word	0x254
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEaSEOS3_\0"
-	.long	0x18421
+	.long	0x184db
 	.byte	0x1
-	.long	0x9c94
-	.long	0x9c9f
+	.long	0x9d4e
+	.long	0x9d59
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x1841b
+	.long	0x184d5
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -13612,51 +13681,51 @@ _ZTS15T100FolderLogic:
 	.word	0x269
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEaSESt16initializer_listIS1_E\0"
-	.long	0x18421
+	.long	0x184db
 	.byte	0x1
-	.long	0x9cf8
-	.long	0x9d03
+	.long	0x9db2
+	.long	0x9dbd
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0xb309
+	.long	0xb3c3
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF36
 	.byte	0x3
 	.word	0x27c
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE6assignEyRKS1_\0"
 	.byte	0x1
-	.long	0x9d4a
-	.long	0x9d5a
+	.long	0x9e04
+	.long	0x9e14
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.uleb128 0x1
-	.long	0x1840f
+	.long	0x184c9
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF36
 	.byte	0x3
 	.word	0x2a9
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE6assignESt16initializer_listIS1_E\0"
 	.byte	0x1
-	.long	0x9db4
-	.long	0x9dbf
+	.long	0x9e6e
+	.long	0x9e79
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0xb309
+	.long	0xb3c3
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF8
 	.byte	0x3
 	.word	0x171
 	.byte	0x3d
-	.long	0x1412e
+	.long	0x141e8
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF13
@@ -13664,19 +13733,19 @@ _ZTS15T100FolderLogic:
 	.word	0x2ba
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv\0"
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0x1
-	.long	0x9e12
-	.long	0x9e18
+	.long	0x9ecc
+	.long	0x9ed2
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF9
 	.byte	0x3
 	.word	0x173
 	.byte	0x7
-	.long	0x147e7
+	.long	0x148a1
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF13
@@ -13684,12 +13753,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2c3
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv\0"
-	.long	0x9e18
+	.long	0x9ed2
 	.byte	0x1
-	.long	0x9e6c
-	.long	0x9e72
+	.long	0x9f26
+	.long	0x9f2c
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x19
 	.ascii "end\0"
@@ -13697,12 +13766,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2cc
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv\0"
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0x1
-	.long	0x9eb5
-	.long	0x9ebb
+	.long	0x9f6f
+	.long	0x9f75
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
 	.uleb128 0x19
 	.ascii "end\0"
@@ -13710,19 +13779,19 @@ _ZTS15T100FolderLogic:
 	.word	0x2d5
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE3endEv\0"
-	.long	0x9e18
+	.long	0x9ed2
 	.byte	0x1
-	.long	0x9eff
-	.long	0x9f05
+	.long	0x9fb9
+	.long	0x9fbf
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF14
 	.byte	0x3
 	.word	0x175
 	.byte	0x30
-	.long	0xb32c
+	.long	0xb3e6
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF15
@@ -13730,19 +13799,19 @@ _ZTS15T100FolderLogic:
 	.word	0x2de
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE6rbeginEv\0"
-	.long	0x9f05
+	.long	0x9fbf
 	.byte	0x1
-	.long	0x9f59
-	.long	0x9f5f
+	.long	0xa013
+	.long	0xa019
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF16
 	.byte	0x3
 	.word	0x174
 	.byte	0x35
-	.long	0xb3b0
+	.long	0xb46a
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF15
@@ -13750,12 +13819,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2e7
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE6rbeginEv\0"
-	.long	0x9f5f
+	.long	0xa019
 	.byte	0x1
-	.long	0x9fb4
-	.long	0x9fba
+	.long	0xa06e
+	.long	0xa074
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF17
@@ -13763,12 +13832,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2f0
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE4rendEv\0"
-	.long	0x9f05
+	.long	0x9fbf
 	.byte	0x1
-	.long	0x9ffe
-	.long	0xa004
+	.long	0xa0b8
+	.long	0xa0be
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF17
@@ -13776,12 +13845,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2f9
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4rendEv\0"
-	.long	0x9f5f
+	.long	0xa019
 	.byte	0x1
-	.long	0xa049
-	.long	0xa04f
+	.long	0xa103
+	.long	0xa109
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF18
@@ -13789,12 +13858,12 @@ _ZTS15T100FolderLogic:
 	.word	0x303
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE6cbeginEv\0"
-	.long	0x9e18
+	.long	0x9ed2
 	.byte	0x1
-	.long	0xa096
-	.long	0xa09c
+	.long	0xa150
+	.long	0xa156
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x19
 	.ascii "cend\0"
@@ -13802,12 +13871,12 @@ _ZTS15T100FolderLogic:
 	.word	0x30c
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4cendEv\0"
-	.long	0x9e18
+	.long	0x9ed2
 	.byte	0x1
-	.long	0xa0e2
-	.long	0xa0e8
+	.long	0xa19c
+	.long	0xa1a2
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF19
@@ -13815,12 +13884,12 @@ _ZTS15T100FolderLogic:
 	.word	0x315
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE7crbeginEv\0"
-	.long	0x9f5f
+	.long	0xa019
 	.byte	0x1
-	.long	0xa130
-	.long	0xa136
+	.long	0xa1ea
+	.long	0xa1f0
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF20
@@ -13828,12 +13897,12 @@ _ZTS15T100FolderLogic:
 	.word	0x31e
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE5crendEv\0"
-	.long	0x9f5f
+	.long	0xa019
 	.byte	0x1
-	.long	0xa17c
-	.long	0xa182
+	.long	0xa236
+	.long	0xa23c
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x19
 	.ascii "size\0"
@@ -13841,12 +13910,12 @@ _ZTS15T100FolderLogic:
 	.word	0x325
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv\0"
-	.long	0x998b
+	.long	0x9a45
 	.byte	0x1
-	.long	0xa1c8
-	.long	0xa1ce
+	.long	0xa282
+	.long	0xa288
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF21
@@ -13854,54 +13923,54 @@ _ZTS15T100FolderLogic:
 	.word	0x32a
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv\0"
-	.long	0x998b
+	.long	0x9a45
 	.byte	0x1
-	.long	0xa217
-	.long	0xa21d
+	.long	0xa2d1
+	.long	0xa2d7
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF22
 	.byte	0x3
 	.word	0x338
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE6resizeEy\0"
 	.byte	0x1
-	.long	0xa25f
-	.long	0xa26a
+	.long	0xa319
+	.long	0xa324
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF22
 	.byte	0x3
 	.word	0x34c
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE6resizeEyRKS1_\0"
 	.byte	0x1
-	.long	0xa2b1
-	.long	0xa2c1
+	.long	0xa36b
+	.long	0xa37b
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.uleb128 0x1
-	.long	0x1840f
+	.long	0x184c9
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF23
 	.byte	0x3
 	.word	0x36c
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE13shrink_to_fitEv\0"
 	.byte	0x1
-	.long	0xa30b
-	.long	0xa311
+	.long	0xa3c5
+	.long	0xa3cb
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF24
@@ -13909,12 +13978,12 @@ _ZTS15T100FolderLogic:
 	.word	0x375
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8capacityEv\0"
-	.long	0x998b
+	.long	0x9a45
 	.byte	0x1
-	.long	0xa35a
-	.long	0xa360
+	.long	0xa414
+	.long	0xa41a
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF27
@@ -13922,12 +13991,12 @@ _ZTS15T100FolderLogic:
 	.word	0x37e
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE5emptyEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.long	0xa3a6
-	.long	0xa3ac
+	.long	0xa460
+	.long	0xa466
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF25
@@ -13936,19 +14005,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE7reserveEy\0"
 	.byte	0x1
-	.long	0xa3ee
-	.long	0xa3f9
+	.long	0xa4a8
+	.long	0xa4b3
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF30
 	.byte	0x3
 	.word	0x16f
 	.byte	0x32
-	.long	0x140d5
+	.long	0x1418f
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -13956,21 +14025,21 @@ _ZTS15T100FolderLogic:
 	.word	0x3a2
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EEixEy\0"
-	.long	0xa3f9
+	.long	0xa4b3
 	.byte	0x1
-	.long	0xa448
-	.long	0xa453
+	.long	0xa502
+	.long	0xa50d
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF28
 	.byte	0x3
 	.word	0x170
 	.byte	0x37
-	.long	0x140e1
+	.long	0x1419b
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -13978,28 +14047,28 @@ _ZTS15T100FolderLogic:
 	.word	0x3b4
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EEixEy\0"
-	.long	0xa453
+	.long	0xa50d
 	.byte	0x1
-	.long	0xa4a3
-	.long	0xa4ae
+	.long	0xa55d
+	.long	0xa568
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF87
+	.uleb128 0x8
+	.secrel32	.LASF88
 	.byte	0x3
 	.word	0x3bd
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE14_M_range_checkEy\0"
 	.byte	0x2
-	.long	0xa4fa
-	.long	0xa505
+	.long	0xa5b4
+	.long	0xa5bf
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.byte	0
 	.uleb128 0x19
 	.ascii "at\0"
@@ -14007,14 +14076,14 @@ _ZTS15T100FolderLogic:
 	.word	0x3d3
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE2atEy\0"
-	.long	0xa3f9
+	.long	0xa4b3
 	.byte	0x1
-	.long	0xa546
-	.long	0xa551
+	.long	0xa600
+	.long	0xa60b
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.byte	0
 	.uleb128 0x19
 	.ascii "at\0"
@@ -14022,14 +14091,14 @@ _ZTS15T100FolderLogic:
 	.word	0x3e5
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE2atEy\0"
-	.long	0xa453
+	.long	0xa50d
 	.byte	0x1
-	.long	0xa593
-	.long	0xa59e
+	.long	0xa64d
+	.long	0xa658
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF31
@@ -14037,12 +14106,12 @@ _ZTS15T100FolderLogic:
 	.word	0x3f0
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5frontEv\0"
-	.long	0xa3f9
+	.long	0xa4b3
 	.byte	0x1
-	.long	0xa5e3
-	.long	0xa5e9
+	.long	0xa69d
+	.long	0xa6a3
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF31
@@ -14050,12 +14119,12 @@ _ZTS15T100FolderLogic:
 	.word	0x3fb
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE5frontEv\0"
-	.long	0xa453
+	.long	0xa50d
 	.byte	0x1
-	.long	0xa62f
-	.long	0xa635
+	.long	0xa6e9
+	.long	0xa6ef
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF32
@@ -14063,12 +14132,12 @@ _ZTS15T100FolderLogic:
 	.word	0x406
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE4backEv\0"
-	.long	0xa3f9
+	.long	0xa4b3
 	.byte	0x1
-	.long	0xa679
-	.long	0xa67f
+	.long	0xa733
+	.long	0xa739
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF32
@@ -14076,12 +14145,12 @@ _ZTS15T100FolderLogic:
 	.word	0x411
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4backEv\0"
-	.long	0xa453
+	.long	0xa50d
 	.byte	0x1
-	.long	0xa6c4
-	.long	0xa6ca
+	.long	0xa77e
+	.long	0xa784
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF41
@@ -14089,12 +14158,12 @@ _ZTS15T100FolderLogic:
 	.word	0x41f
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE4dataEv\0"
-	.long	0x18351
+	.long	0x1840b
 	.byte	0x1
-	.long	0xa70e
-	.long	0xa714
+	.long	0xa7c8
+	.long	0xa7ce
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF41
@@ -14102,52 +14171,52 @@ _ZTS15T100FolderLogic:
 	.word	0x423
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4dataEv\0"
-	.long	0x18388
+	.long	0x18442
 	.byte	0x1
-	.long	0xa759
-	.long	0xa75f
+	.long	0xa813
+	.long	0xa819
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF35
 	.byte	0x3
 	.word	0x432
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_\0"
 	.byte	0x1
-	.long	0xa7a8
-	.long	0xa7b3
+	.long	0xa862
+	.long	0xa86d
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x1840f
+	.long	0x184c9
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF35
 	.byte	0x3
 	.word	0x442
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backEOS1_\0"
 	.byte	0x1
-	.long	0xa7fb
-	.long	0xa806
+	.long	0xa8b5
+	.long	0xa8c0
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x18432
+	.long	0x184ec
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF39
 	.byte	0x3
 	.word	0x458
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE8pop_backEv\0"
 	.byte	0x1
-	.long	0xa84a
-	.long	0xa850
+	.long	0xa904
+	.long	0xa90a
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF37
@@ -14155,16 +14224,16 @@ _ZTS15T100FolderLogic:
 	.byte	0x76
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EERS6_\0"
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0x1
-	.long	0xa8c1
-	.long	0xa8d1
+	.long	0xa97b
+	.long	0xa98b
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9e18
+	.long	0x9ed2
 	.uleb128 0x1
-	.long	0x1840f
+	.long	0x184c9
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -14172,16 +14241,16 @@ _ZTS15T100FolderLogic:
 	.word	0x49c
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEOS1_\0"
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0x1
-	.long	0xa943
-	.long	0xa953
+	.long	0xa9fd
+	.long	0xaa0d
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9e18
+	.long	0x9ed2
 	.uleb128 0x1
-	.long	0x18432
+	.long	0x184ec
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -14189,16 +14258,16 @@ _ZTS15T100FolderLogic:
 	.word	0x4ad
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EESt16initializer_listIS1_E\0"
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0x1
-	.long	0xa9da
-	.long	0xa9ea
+	.long	0xaa94
+	.long	0xaaa4
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9e18
+	.long	0x9ed2
 	.uleb128 0x1
-	.long	0xb309
+	.long	0xb3c3
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -14206,18 +14275,18 @@ _ZTS15T100FolderLogic:
 	.word	0x4c6
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEyRS6_\0"
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0x1
-	.long	0xaa5d
-	.long	0xaa72
+	.long	0xab17
+	.long	0xab2c
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9e18
+	.long	0x9ed2
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.uleb128 0x1
-	.long	0x1840f
+	.long	0x184c9
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF38
@@ -14225,14 +14294,14 @@ _ZTS15T100FolderLogic:
 	.word	0x525
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5eraseEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EE\0"
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0x1
-	.long	0xaadf
-	.long	0xaaea
+	.long	0xab99
+	.long	0xaba4
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9e18
+	.long	0x9ed2
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF38
@@ -14240,16 +14309,16 @@ _ZTS15T100FolderLogic:
 	.word	0x540
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5eraseEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EES8_\0"
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0x1
-	.long	0xab5a
-	.long	0xab6a
+	.long	0xac14
+	.long	0xac24
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9e18
+	.long	0x9ed2
 	.uleb128 0x1
-	.long	0x9e18
+	.long	0x9ed2
 	.byte	0
 	.uleb128 0x4b
 	.ascii "swap\0"
@@ -14258,187 +14327,187 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE4swapERS3_\0"
 	.byte	0x1
-	.long	0xabae
-	.long	0xabb9
+	.long	0xac68
+	.long	0xac73
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x18421
+	.long	0x184db
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF26
 	.byte	0x3
 	.word	0x569
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5clearEv\0"
 	.byte	0x1
-	.long	0xabfa
-	.long	0xac00
+	.long	0xacb4
+	.long	0xacba
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF88
+	.uleb128 0x8
+	.secrel32	.LASF89
 	.byte	0x3
 	.word	0x5c0
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE18_M_fill_initializeEyRKS1_\0"
 	.byte	0x2
-	.long	0xac54
-	.long	0xac64
+	.long	0xad0e
+	.long	0xad1e
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.uleb128 0x1
-	.long	0x1840f
+	.long	0x184c9
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF89
+	.uleb128 0x8
+	.secrel32	.LASF90
 	.byte	0x3
 	.word	0x5ca
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE21_M_default_initializeEy\0"
 	.byte	0x2
-	.long	0xacb6
-	.long	0xacc1
+	.long	0xad70
+	.long	0xad7b
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF90
+	.secrel32	.LASF91
 	.byte	0x9
 	.byte	0xf5
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE14_M_fill_assignEyRKS1_\0"
 	.byte	0x2
-	.long	0xad10
-	.long	0xad20
+	.long	0xadca
+	.long	0xadda
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x1
-	.long	0x1840f
+	.long	0x184c9
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF91
+	.uleb128 0x8
+	.secrel32	.LASF92
 	.byte	0x9
 	.word	0x1de
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE14_M_fill_insertEN9__gnu_cxx17__normal_iteratorIPS1_S3_EEyRKS1_\0"
 	.byte	0x2
-	.long	0xad98
-	.long	0xadad
+	.long	0xae52
+	.long	0xae67
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9dbf
+	.long	0x9e79
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.uleb128 0x1
-	.long	0x1840f
+	.long	0x184c9
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF92
+	.uleb128 0x8
+	.secrel32	.LASF93
 	.byte	0x9
 	.word	0x244
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_default_appendEy\0"
 	.byte	0x2
-	.long	0xadfb
-	.long	0xae06
+	.long	0xaeb5
+	.long	0xaec0
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x998b
-	.byte	0
-	.uleb128 0x3
-	.secrel32	.LASF93
-	.byte	0x9
-	.word	0x27f
-	.byte	0x5
-	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE16_M_shrink_to_fitEv\0"
-	.long	0x16105
-	.byte	0x2
-	.long	0xae57
-	.long	0xae5d
-	.uleb128 0x2
-	.long	0x183fe
+	.long	0x9a45
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF94
 	.byte	0x9
-	.word	0x147
+	.word	0x27f
 	.byte	0x5
-	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE14_M_insert_rvalEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEOS1_\0"
-	.long	0x9dbf
+	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE16_M_shrink_to_fitEv\0"
+	.long	0x16a1c
 	.byte	0x2
-	.long	0xaed8
-	.long	0xaee8
+	.long	0xaf11
+	.long	0xaf17
 	.uleb128 0x2
-	.long	0x183fe
-	.uleb128 0x1
-	.long	0x9e18
-	.uleb128 0x1
-	.long	0x18432
+	.long	0x184b8
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF95
-	.byte	0x3
-	.word	0x65d
-	.byte	0x7
-	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE14_M_emplace_auxEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEOS1_\0"
-	.long	0x9dbf
+	.byte	0x9
+	.word	0x147
+	.byte	0x5
+	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE14_M_insert_rvalEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEOS1_\0"
+	.long	0x9e79
 	.byte	0x2
-	.long	0xaf63
-	.long	0xaf73
+	.long	0xaf92
+	.long	0xafa2
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9e18
+	.long	0x9ed2
 	.uleb128 0x1
-	.long	0x18432
+	.long	0x184ec
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF96
 	.byte	0x3
+	.word	0x65d
+	.byte	0x7
+	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE14_M_emplace_auxEN9__gnu_cxx17__normal_iteratorIPKS1_S3_EEOS1_\0"
+	.long	0x9e79
+	.byte	0x2
+	.long	0xb01d
+	.long	0xb02d
+	.uleb128 0x2
+	.long	0x184b8
+	.uleb128 0x1
+	.long	0x9ed2
+	.uleb128 0x1
+	.long	0x184ec
+	.byte	0
+	.uleb128 0x3
+	.secrel32	.LASF97
+	.byte	0x3
 	.word	0x663
 	.byte	0x7
 	.ascii "_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc\0"
-	.long	0x998b
+	.long	0x9a45
 	.byte	0x2
-	.long	0xafc4
-	.long	0xafd4
+	.long	0xb07e
+	.long	0xb08e
 	.uleb128 0x2
-	.long	0x18427
+	.long	0x184e1
 	.uleb128 0x1
-	.long	0x998b
+	.long	0x9a45
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF97
+	.uleb128 0x8
+	.secrel32	.LASF98
 	.byte	0x3
 	.word	0x671
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE15_M_erase_at_endEPS1_\0"
 	.byte	0x2
-	.long	0xb023
-	.long	0xb02e
+	.long	0xb0dd
+	.long	0xb0e8
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0xb02e
+	.long	0xb0e8
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF1
 	.byte	0x3
 	.word	0x16d
 	.byte	0x29
-	.long	0x92ff
+	.long	0x93b9
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF10
@@ -14446,14 +14515,14 @@ _ZTS15T100FolderLogic:
 	.byte	0x9f
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE8_M_eraseEN9__gnu_cxx17__normal_iteratorIPS1_S3_EE\0"
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0x2
-	.long	0xb0aa
-	.long	0xb0b5
+	.long	0xb164
+	.long	0xb16f
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF10
@@ -14461,46 +14530,46 @@ _ZTS15T100FolderLogic:
 	.byte	0xac
 	.byte	0x5
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE8_M_eraseEN9__gnu_cxx17__normal_iteratorIPS1_S3_EES7_\0"
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0x2
-	.long	0xb126
-	.long	0xb136
+	.long	0xb1e0
+	.long	0xb1f0
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9dbf
+	.long	0x9e79
 	.uleb128 0x1
-	.long	0x9dbf
+	.long	0x9e79
 	.byte	0
 	.uleb128 0x1f
-	.secrel32	.LASF98
+	.secrel32	.LASF99
 	.byte	0x3
 	.word	0x688
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE14_M_move_assignEOS3_St17integral_constantIbLb1EE\0"
-	.long	0xb19f
-	.long	0xb1af
+	.long	0xb259
+	.long	0xb269
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x1841b
+	.long	0x184d5
 	.uleb128 0x1
-	.long	0x53ec
+	.long	0x54a6
 	.byte	0
 	.uleb128 0x1f
-	.secrel32	.LASF98
+	.secrel32	.LASF99
 	.byte	0x3
 	.word	0x693
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE14_M_move_assignEOS3_St17integral_constantIbLb0EE\0"
-	.long	0xb218
-	.long	0xb228
+	.long	0xb2d2
+	.long	0xb2e2
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x1841b
+	.long	0x184d5
 	.uleb128 0x1
-	.long	0x4d06
+	.long	0x4cf3
 	.byte	0
 	.uleb128 0x4b
 	.ascii "_M_realloc_insert<T100FolderInfo* const&>\0"
@@ -14509,30 +14578,30 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_\0"
 	.byte	0x2
-	.long	0xb2e1
-	.long	0xb2f1
+	.long	0xb39b
+	.long	0xb3ab
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0xb2e1
+	.secrel32	.LASF100
+	.long	0xb39b
 	.uleb128 0x38
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0x2
-	.long	0x183fe
+	.long	0x184b8
 	.uleb128 0x1
-	.long	0x9dbf
+	.long	0x9e79
 	.uleb128 0x1
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x42
 	.secrel32	.LASF54
-	.long	0x8cbc
+	.long	0x8d76
 	.byte	0
 	.uleb128 0x6
-	.long	0x9816
+	.long	0x98d0
 	.uleb128 0x28
 	.ascii "initializer_list<T100FolderInfo*>\0"
 	.uleb128 0x28
@@ -14545,127 +14614,127 @@ _ZTS15T100FolderLogic:
 	.byte	0xa
 	.byte	0x6c
 	.byte	0xb
-	.long	0xb5bf
+	.long	0xb679
 	.uleb128 0x4c
-	.long	0x14853
+	.long	0x1490d
 	.byte	0
 	.byte	0x1
 	.uleb128 0x15
-	.secrel32	.LASF60
+	.secrel32	.LASF61
 	.byte	0xa
 	.byte	0x83
 	.byte	0x7
 	.ascii "_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC4Ev\0"
 	.byte	0x1
-	.long	0xb500
-	.long	0xb506
+	.long	0xb5ba
+	.long	0xb5c0
 	.uleb128 0x2
-	.long	0x1844f
+	.long	0x18509
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF60
+	.secrel32	.LASF61
 	.byte	0xa
 	.byte	0x85
 	.byte	0x7
 	.ascii "_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC4ERKS5_\0"
 	.byte	0x1
-	.long	0xb55b
-	.long	0xb566
+	.long	0xb615
+	.long	0xb620
 	.uleb128 0x2
-	.long	0x1844f
+	.long	0x18509
 	.uleb128 0x1
-	.long	0x1845a
+	.long	0x18514
 	.byte	0
-	.uleb128 0x5a
-	.secrel32	.LASF61
+	.uleb128 0x5c
+	.secrel32	.LASF62
 	.byte	0xa
 	.byte	0x8b
 	.byte	0x7
 	.ascii "_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED4Ev\0"
 	.byte	0x1
-	.long	0xb5b3
+	.long	0xb66d
 	.uleb128 0x2
-	.long	0x1844f
+	.long	0x18509
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.long	0xb43a
+	.long	0xb4f4
 	.uleb128 0x30
 	.ascii "allocator_traits<std::allocator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
 	.byte	0x1
 	.byte	0x8
 	.word	0x180
 	.byte	0xc
-	.long	0xb93d
+	.long	0xb9f7
 	.uleb128 0x1b
 	.secrel32	.LASF1
 	.byte	0x8
 	.word	0x188
 	.byte	0x1b
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x23
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0x8
 	.word	0x1b3
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE8allocateERS6_y\0"
-	.long	0xb64b
-	.long	0xb6d5
+	.long	0xb705
+	.long	0xb78f
 	.uleb128 0x1
-	.long	0x18460
+	.long	0x1851a
 	.uleb128 0x1
-	.long	0xb6e7
+	.long	0xb7a1
 	.byte	0
 	.uleb128 0x1b
 	.secrel32	.LASF5
 	.byte	0x8
 	.word	0x183
 	.byte	0x2c
-	.long	0xb43a
+	.long	0xb4f4
 	.uleb128 0x6
-	.long	0xb6d5
+	.long	0xb78f
 	.uleb128 0x1b
 	.secrel32	.LASF2
 	.byte	0x8
 	.word	0x197
 	.byte	0x24
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x23
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0x8
 	.word	0x1c1
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE8allocateERS6_yPKv\0"
-	.long	0xb64b
-	.long	0xb779
+	.long	0xb705
+	.long	0xb833
 	.uleb128 0x1
-	.long	0x18460
+	.long	0x1851a
 	.uleb128 0x1
-	.long	0xb6e7
+	.long	0xb7a1
 	.uleb128 0x1
-	.long	0xb779
+	.long	0xb833
 	.byte	0
 	.uleb128 0x1b
-	.secrel32	.LASF65
+	.secrel32	.LASF66
 	.byte	0x8
 	.word	0x191
 	.byte	0x2d
-	.long	0x16828
+	.long	0x16afb
 	.uleb128 0x36
-	.secrel32	.LASF66
+	.secrel32	.LASF67
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y\0"
-	.long	0xb80b
+	.long	0xb8c5
 	.uleb128 0x1
-	.long	0x18460
+	.long	0x1851a
 	.uleb128 0x1
-	.long	0xb64b
+	.long	0xb705
 	.uleb128 0x1
-	.long	0xb6e7
+	.long	0xb7a1
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF21
@@ -14673,21 +14742,21 @@ _ZTS15T100FolderLogic:
 	.word	0x1ef
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE8max_sizeERKS6_\0"
-	.long	0xb6e7
-	.long	0xb883
+	.long	0xb7a1
+	.long	0xb93d
 	.uleb128 0x1
-	.long	0x18466
+	.long	0x18520
 	.byte	0
 	.uleb128 0x23
-	.secrel32	.LASF67
+	.secrel32	.LASF68
 	.byte	0x8
 	.word	0x1f8
 	.byte	0x7
 	.ascii "_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE37select_on_container_copy_constructionERKS6_\0"
-	.long	0xb6d5
-	.long	0xb919
+	.long	0xb78f
+	.long	0xb9d3
 	.uleb128 0x1
-	.long	0x18466
+	.long	0x18520
 	.byte	0
 	.uleb128 0x1b
 	.secrel32	.LASF55
@@ -14696,111 +14765,111 @@ _ZTS15T100FolderLogic:
 	.byte	0x1d
 	.long	0x14d
 	.uleb128 0x1b
-	.secrel32	.LASF68
+	.secrel32	.LASF69
 	.byte	0x8
 	.word	0x1a6
 	.byte	0x25
-	.long	0xb43a
+	.long	0xb4f4
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0xb43a
+	.long	0xb4f4
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "_Vector_base<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >, std::allocator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
 	.byte	0x18
 	.byte	0x3
 	.byte	0x51
 	.byte	0xc
-	.long	0xc3da
+	.long	0xc494
 	.uleb128 0x4f
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x18
 	.byte	0x3
 	.byte	0x58
 	.byte	0xe
-	.long	0xbcde
+	.long	0xbd98
 	.uleb128 0x3b
-	.long	0xb43a
-	.byte	0
-	.uleb128 0x43
-	.secrel32	.LASF73
-	.byte	0x3
-	.byte	0x5b
-	.byte	0xa
-	.long	0xbcde
+	.long	0xb4f4
 	.byte	0
 	.uleb128 0x43
 	.secrel32	.LASF74
 	.byte	0x3
-	.byte	0x5c
+	.byte	0x5b
 	.byte	0xa
-	.long	0xbcde
-	.byte	0x8
+	.long	0xbd98
+	.byte	0
 	.uleb128 0x43
 	.secrel32	.LASF75
 	.byte	0x3
+	.byte	0x5c
+	.byte	0xa
+	.long	0xbd98
+	.byte	0x8
+	.uleb128 0x43
+	.secrel32	.LASF76
+	.byte	0x3
 	.byte	0x5d
 	.byte	0xa
-	.long	0xbcde
+	.long	0xbd98
 	.byte	0x10
 	.uleb128 0x20
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x3
 	.byte	0x5f
 	.byte	0x2
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC4Ev\0"
-	.long	0xbac6
-	.long	0xbacc
+	.long	0xbb80
+	.long	0xbb86
 	.uleb128 0x2
-	.long	0x1847e
+	.long	0x18538
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x3
 	.byte	0x63
 	.byte	0x2
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC4ERKS6_\0"
-	.long	0xbb43
-	.long	0xbb4e
+	.long	0xbbfd
+	.long	0xbc08
 	.uleb128 0x2
-	.long	0x1847e
+	.long	0x18538
 	.uleb128 0x1
-	.long	0x18489
+	.long	0x18543
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF72
+	.secrel32	.LASF73
 	.byte	0x3
 	.byte	0x68
 	.byte	0x2
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC4EOS6_\0"
-	.long	0xbbc4
-	.long	0xbbcf
+	.long	0xbc7e
+	.long	0xbc89
 	.uleb128 0x2
-	.long	0x1847e
+	.long	0x18538
 	.uleb128 0x1
-	.long	0x1848f
+	.long	0x18549
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF76
+	.secrel32	.LASF77
 	.byte	0x3
 	.byte	0x6e
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_impl12_M_swap_dataERS8_\0"
-	.long	0xbc51
-	.long	0xbc5c
+	.long	0xbd0b
+	.long	0xbd16
 	.uleb128 0x2
-	.long	0x1847e
+	.long	0x18538
 	.uleb128 0x1
-	.long	0x18495
+	.long	0x1854f
 	.byte	0
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.ascii "~_Vector_impl\0"
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD4Ev\0"
-	.long	0xbcd2
+	.long	0xbd8c
 	.uleb128 0x2
-	.long	0x1847e
+	.long	0x18538
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.byte	0
 	.uleb128 0xe
@@ -14808,340 +14877,340 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.byte	0x56
 	.byte	0x9
-	.long	0x1519a
+	.long	0x15254
 	.uleb128 0xe
-	.secrel32	.LASF77
+	.secrel32	.LASF78
 	.byte	0x3
 	.byte	0x54
 	.byte	0x15
-	.long	0x15229
+	.long	0x152e3
 	.uleb128 0x6
-	.long	0xbcea
+	.long	0xbda4
 	.uleb128 0x35
-	.secrel32	.LASF78
+	.secrel32	.LASF79
 	.byte	0x3
 	.byte	0xed
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE19_M_get_Tp_allocatorEv\0"
-	.long	0x1849b
-	.long	0xbd77
-	.long	0xbd7d
+	.long	0x18555
+	.long	0xbe31
+	.long	0xbe37
 	.uleb128 0x2
-	.long	0x184a1
+	.long	0x1855b
 	.byte	0
 	.uleb128 0x35
-	.secrel32	.LASF78
+	.secrel32	.LASF79
 	.byte	0x3
 	.byte	0xf1
 	.byte	0x7
 	.ascii "_ZNKSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE19_M_get_Tp_allocatorEv\0"
-	.long	0x18489
-	.long	0xbdfa
-	.long	0xbe00
+	.long	0x18543
+	.long	0xbeb4
+	.long	0xbeba
 	.uleb128 0x2
-	.long	0x184ac
+	.long	0x18566
 	.byte	0
 	.uleb128 0xe
 	.secrel32	.LASF5
 	.byte	0x3
 	.byte	0xea
 	.byte	0x16
-	.long	0xb43a
+	.long	0xb4f4
 	.uleb128 0x6
-	.long	0xbe00
+	.long	0xbeba
 	.uleb128 0x35
 	.secrel32	.LASF42
 	.byte	0x3
 	.byte	0xf5
 	.byte	0x7
 	.ascii "_ZNKSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13get_allocatorEv\0"
-	.long	0xbe00
-	.long	0xbe88
-	.long	0xbe8e
+	.long	0xbeba
+	.long	0xbf42
+	.long	0xbf48
 	.uleb128 0x2
-	.long	0x184ac
+	.long	0x18566
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF79
+	.secrel32	.LASF80
 	.byte	0x3
 	.byte	0xf8
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4Ev\0"
-	.long	0xbef3
-	.long	0xbef9
+	.long	0xbfad
+	.long	0xbfb3
 	.uleb128 0x2
-	.long	0x184a1
+	.long	0x1855b
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF79
+	.secrel32	.LASF80
 	.byte	0x3
 	.byte	0xfb
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4ERKS6_\0"
-	.long	0xbf62
-	.long	0xbf6d
+	.long	0xc01c
+	.long	0xc027
 	.uleb128 0x2
-	.long	0x184a1
+	.long	0x1855b
 	.uleb128 0x1
-	.long	0x184b2
+	.long	0x1856c
 	.byte	0
 	.uleb128 0x20
-	.secrel32	.LASF79
+	.secrel32	.LASF80
 	.byte	0x3
 	.byte	0xfe
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4Ey\0"
-	.long	0xbfd2
-	.long	0xbfdd
+	.long	0xc08c
+	.long	0xc097
 	.uleb128 0x2
-	.long	0x184a1
+	.long	0x1855b
 	.uleb128 0x1
-	.long	0x53c6
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x102
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EyRKS6_\0"
-	.long	0xc048
-	.long	0xc058
-	.uleb128 0x2
-	.long	0x184a1
-	.uleb128 0x1
-	.long	0x53c6
-	.uleb128 0x1
-	.long	0x184b2
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x107
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EOS6_\0"
-	.long	0xc0c1
-	.long	0xc0cc
-	.uleb128 0x2
-	.long	0x184a1
-	.uleb128 0x1
-	.long	0x1848f
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x10a
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EOS7_\0"
-	.long	0xc135
-	.long	0xc140
-	.uleb128 0x2
-	.long	0x184a1
-	.uleb128 0x1
-	.long	0x184b8
-	.byte	0
-	.uleb128 0x1f
-	.secrel32	.LASF79
-	.byte	0x3
-	.word	0x10e
-	.byte	0x7
-	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EOS7_RKS6_\0"
-	.long	0xc1ae
-	.long	0xc1be
-	.uleb128 0x2
-	.long	0x184a1
-	.uleb128 0x1
-	.long	0x184b8
-	.uleb128 0x1
-	.long	0x184b2
+	.long	0x5480
 	.byte	0
 	.uleb128 0x1f
 	.secrel32	.LASF80
 	.byte	0x3
+	.word	0x102
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EyRKS6_\0"
+	.long	0xc102
+	.long	0xc112
+	.uleb128 0x2
+	.long	0x1855b
+	.uleb128 0x1
+	.long	0x5480
+	.uleb128 0x1
+	.long	0x1856c
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF80
+	.byte	0x3
+	.word	0x107
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EOS6_\0"
+	.long	0xc17b
+	.long	0xc186
+	.uleb128 0x2
+	.long	0x1855b
+	.uleb128 0x1
+	.long	0x18549
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF80
+	.byte	0x3
+	.word	0x10a
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EOS7_\0"
+	.long	0xc1ef
+	.long	0xc1fa
+	.uleb128 0x2
+	.long	0x1855b
+	.uleb128 0x1
+	.long	0x18572
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF80
+	.byte	0x3
+	.word	0x10e
+	.byte	0x7
+	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EOS7_RKS6_\0"
+	.long	0xc268
+	.long	0xc278
+	.uleb128 0x2
+	.long	0x1855b
+	.uleb128 0x1
+	.long	0x18572
+	.uleb128 0x1
+	.long	0x1856c
+	.byte	0
+	.uleb128 0x1f
+	.secrel32	.LASF81
+	.byte	0x3
 	.word	0x11b
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED4Ev\0"
-	.long	0xc224
-	.long	0xc22f
+	.long	0xc2de
+	.long	0xc2e9
 	.uleb128 0x2
-	.long	0x184a1
+	.long	0x1855b
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
-	.uleb128 0x57
-	.secrel32	.LASF81
+	.uleb128 0x58
+	.secrel32	.LASF82
 	.byte	0x3
 	.word	0x122
 	.byte	0x14
-	.long	0xba19
+	.long	0xbad3
 	.byte	0
-	.uleb128 0x56
-	.secrel32	.LASF82
+	.uleb128 0x57
+	.secrel32	.LASF83
 	.byte	0x3
 	.word	0x125
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE11_M_allocateEy\0"
-	.long	0xbcde
-	.long	0xc2b2
-	.long	0xc2bd
+	.long	0xbd98
+	.long	0xc36c
+	.long	0xc377
 	.uleb128 0x2
-	.long	0x184a1
+	.long	0x1855b
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
 	.uleb128 0x1f
-	.secrel32	.LASF83
+	.secrel32	.LASF84
 	.byte	0x3
 	.word	0x12c
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13_M_deallocateEPS5_y\0"
-	.long	0xc334
-	.long	0xc344
+	.long	0xc3ee
+	.long	0xc3fe
 	.uleb128 0x2
-	.long	0x184a1
+	.long	0x1855b
 	.uleb128 0x1
-	.long	0xbcde
+	.long	0xbd98
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF84
+	.uleb128 0x8
+	.secrel32	.LASF85
 	.byte	0x3
 	.word	0x135
 	.byte	0x7
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE17_M_create_storageEy\0"
 	.byte	0x3
-	.long	0xc3bc
-	.long	0xc3c7
+	.long	0xc476
+	.long	0xc481
 	.uleb128 0x2
-	.long	0x184a1
+	.long	0x1855b
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
 	.long	0x14d
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0xb43a
+	.long	0xb4f4
 	.byte	0
 	.uleb128 0x6
-	.long	0xb93d
+	.long	0xb9f7
 	.uleb128 0x40
 	.ascii "vector<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >, std::allocator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > >\0"
 	.byte	0x18
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0xe847
+	.long	0xe901
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0xc23d
+	.long	0xc2f7
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0xc2bd
+	.long	0xc377
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0xc22f
+	.long	0xc2e9
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0xbd7d
+	.long	0xbe37
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0xbcfb
+	.long	0xbdb5
 	.uleb128 0x1c
 	.byte	0x3
 	.word	0x153
 	.byte	0xb
-	.long	0xbe11
+	.long	0xbecb
 	.uleb128 0x4c
-	.long	0xb93d
+	.long	0xb9f7
 	.byte	0
 	.byte	0x2
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x187
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4Ev\0"
 	.byte	0x1
-	.long	0xc553
-	.long	0xc559
+	.long	0xc60d
+	.long	0xc613
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
 	.uleb128 0x34
-	.secrel32	.LASF85
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x192
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4ERKS6_\0"
 	.byte	0x1
-	.long	0xc5bd
-	.long	0xc5c8
+	.long	0xc677
+	.long	0xc682
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184c9
+	.long	0x18583
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF5
 	.byte	0x3
 	.word	0x178
 	.byte	0x1a
-	.long	0xb43a
+	.long	0xb4f4
 	.byte	0x1
 	.uleb128 0x6
-	.long	0xc5c8
+	.long	0xc682
 	.uleb128 0x34
-	.secrel32	.LASF85
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x19f
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EyRKS6_\0"
 	.byte	0x1
-	.long	0xc640
-	.long	0xc650
+	.long	0xc6fa
+	.long	0xc70a
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.uleb128 0x1
-	.long	0x184c9
+	.long	0x18583
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF2
 	.byte	0x3
 	.word	0x176
 	.byte	0x1a
-	.long	0x53c6
+	.long	0x5480
 	.byte	0x1
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1ab
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EyRKS5_RKS6_\0"
 	.byte	0x1
-	.long	0xc6c8
-	.long	0xc6dd
+	.long	0xc782
+	.long	0xc797
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.uleb128 0x1
-	.long	0x184cf
+	.long	0x18589
 	.uleb128 0x1
-	.long	0x184c9
+	.long	0x18583
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF55
@@ -15151,96 +15220,96 @@ _ZTS15T100FolderLogic:
 	.long	0x14d
 	.byte	0x1
 	.uleb128 0x6
-	.long	0xc6dd
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.long	0xc797
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1ca
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4ERKS7_\0"
 	.byte	0x1
-	.long	0xc754
-	.long	0xc75f
+	.long	0xc80e
+	.long	0xc819
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184d5
+	.long	0x1858f
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1dc
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EOS7_\0"
 	.byte	0x1
-	.long	0xc7c2
-	.long	0xc7cd
+	.long	0xc87c
+	.long	0xc887
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184db
+	.long	0x18595
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1e0
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4ERKS7_RKS6_\0"
 	.byte	0x1
-	.long	0xc836
-	.long	0xc846
+	.long	0xc8f0
+	.long	0xc900
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184d5
+	.long	0x1858f
 	.uleb128 0x1
-	.long	0x184c9
+	.long	0x18583
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x1ea
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4EOS7_RKS6_\0"
 	.byte	0x1
-	.long	0xc8ae
-	.long	0xc8be
+	.long	0xc968
+	.long	0xc978
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184db
+	.long	0x18595
 	.uleb128 0x1
-	.long	0x184c9
+	.long	0x18583
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF85
+	.uleb128 0x8
+	.secrel32	.LASF86
 	.byte	0x3
 	.word	0x203
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC4ESt16initializer_listIS5_ERKS6_\0"
 	.byte	0x1
-	.long	0xc93b
-	.long	0xc94b
+	.long	0xc9f5
+	.long	0xca05
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xe84c
+	.long	0xe906
 	.uleb128 0x1
-	.long	0x184c9
+	.long	0x18583
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF86
+	.uleb128 0x8
+	.secrel32	.LASF87
 	.byte	0x3
 	.word	0x235
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED4Ev\0"
 	.byte	0x1
-	.long	0xc9ab
-	.long	0xc9b6
+	.long	0xca65
+	.long	0xca70
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF12
@@ -15248,14 +15317,14 @@ _ZTS15T100FolderLogic:
 	.byte	0xba
 	.byte	0x5
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEaSERKS7_\0"
-	.long	0x184e1
+	.long	0x1859b
 	.byte	0x1
-	.long	0xca1d
-	.long	0xca28
+	.long	0xcad7
+	.long	0xcae2
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184d5
+	.long	0x1858f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -15263,14 +15332,14 @@ _ZTS15T100FolderLogic:
 	.word	0x254
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEaSEOS7_\0"
-	.long	0x184e1
+	.long	0x1859b
 	.byte	0x1
-	.long	0xca8f
-	.long	0xca9a
+	.long	0xcb49
+	.long	0xcb54
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184db
+	.long	0x18595
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF12
@@ -15278,51 +15347,51 @@ _ZTS15T100FolderLogic:
 	.word	0x269
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEaSESt16initializer_listIS5_E\0"
-	.long	0x184e1
+	.long	0x1859b
 	.byte	0x1
-	.long	0xcb16
-	.long	0xcb21
+	.long	0xcbd0
+	.long	0xcbdb
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xe84c
+	.long	0xe906
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF36
 	.byte	0x3
 	.word	0x27c
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6assignEyRKS5_\0"
 	.byte	0x1
-	.long	0xcb8b
-	.long	0xcb9b
+	.long	0xcc45
+	.long	0xcc55
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.uleb128 0x1
-	.long	0x184cf
+	.long	0x18589
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF36
 	.byte	0x3
 	.word	0x2a9
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6assignESt16initializer_listIS5_E\0"
 	.byte	0x1
-	.long	0xcc18
-	.long	0xcc23
+	.long	0xccd2
+	.long	0xccdd
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xe84c
+	.long	0xe906
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF8
 	.byte	0x3
 	.word	0x171
 	.byte	0x3d
-	.long	0x15249
+	.long	0x15303
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF13
@@ -15330,19 +15399,19 @@ _ZTS15T100FolderLogic:
 	.word	0x2ba
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginEv\0"
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0x1
-	.long	0xcc99
-	.long	0xcc9f
+	.long	0xcd53
+	.long	0xcd59
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF9
 	.byte	0x3
 	.word	0x173
 	.byte	0x7
-	.long	0x15bc8
+	.long	0x15c82
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF13
@@ -15350,12 +15419,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2c3
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginEv\0"
-	.long	0xcc9f
+	.long	0xcd59
 	.byte	0x1
-	.long	0xcd16
-	.long	0xcd1c
+	.long	0xcdd0
+	.long	0xcdd6
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x19
 	.ascii "end\0"
@@ -15363,12 +15432,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2cc
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv\0"
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0x1
-	.long	0xcd82
-	.long	0xcd88
+	.long	0xce3c
+	.long	0xce42
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
 	.uleb128 0x19
 	.ascii "end\0"
@@ -15376,19 +15445,19 @@ _ZTS15T100FolderLogic:
 	.word	0x2d5
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv\0"
-	.long	0xcc9f
+	.long	0xcd59
 	.byte	0x1
-	.long	0xcdef
-	.long	0xcdf5
+	.long	0xcea9
+	.long	0xceaf
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF14
 	.byte	0x3
 	.word	0x175
 	.byte	0x30
-	.long	0xe8b9
+	.long	0xe973
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF15
@@ -15396,19 +15465,19 @@ _ZTS15T100FolderLogic:
 	.word	0x2de
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6rbeginEv\0"
-	.long	0xcdf5
+	.long	0xceaf
 	.byte	0x1
-	.long	0xce6c
-	.long	0xce72
+	.long	0xcf26
+	.long	0xcf2c
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF16
 	.byte	0x3
 	.word	0x174
 	.byte	0x35
-	.long	0xea19
+	.long	0xead3
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF15
@@ -15416,12 +15485,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2e7
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6rbeginEv\0"
-	.long	0xce72
+	.long	0xcf2c
 	.byte	0x1
-	.long	0xceea
-	.long	0xcef0
+	.long	0xcfa4
+	.long	0xcfaa
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF17
@@ -15429,12 +15498,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2f0
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE4rendEv\0"
-	.long	0xcdf5
+	.long	0xceaf
 	.byte	0x1
-	.long	0xcf57
-	.long	0xcf5d
+	.long	0xd011
+	.long	0xd017
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF17
@@ -15442,12 +15511,12 @@ _ZTS15T100FolderLogic:
 	.word	0x2f9
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE4rendEv\0"
-	.long	0xce72
+	.long	0xcf2c
 	.byte	0x1
-	.long	0xcfc5
-	.long	0xcfcb
+	.long	0xd07f
+	.long	0xd085
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF18
@@ -15455,12 +15524,12 @@ _ZTS15T100FolderLogic:
 	.word	0x303
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6cbeginEv\0"
-	.long	0xcc9f
+	.long	0xcd59
 	.byte	0x1
-	.long	0xd035
-	.long	0xd03b
+	.long	0xd0ef
+	.long	0xd0f5
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x19
 	.ascii "cend\0"
@@ -15468,12 +15537,12 @@ _ZTS15T100FolderLogic:
 	.word	0x30c
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE4cendEv\0"
-	.long	0xcc9f
+	.long	0xcd59
 	.byte	0x1
-	.long	0xd0a4
-	.long	0xd0aa
+	.long	0xd15e
+	.long	0xd164
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF19
@@ -15481,12 +15550,12 @@ _ZTS15T100FolderLogic:
 	.word	0x315
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE7crbeginEv\0"
-	.long	0xce72
+	.long	0xcf2c
 	.byte	0x1
-	.long	0xd115
-	.long	0xd11b
+	.long	0xd1cf
+	.long	0xd1d5
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF20
@@ -15494,12 +15563,12 @@ _ZTS15T100FolderLogic:
 	.word	0x31e
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5crendEv\0"
-	.long	0xce72
+	.long	0xcf2c
 	.byte	0x1
-	.long	0xd184
-	.long	0xd18a
+	.long	0xd23e
+	.long	0xd244
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x19
 	.ascii "size\0"
@@ -15507,12 +15576,12 @@ _ZTS15T100FolderLogic:
 	.word	0x325
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE4sizeEv\0"
-	.long	0xc650
+	.long	0xc70a
 	.byte	0x1
-	.long	0xd1f3
-	.long	0xd1f9
+	.long	0xd2ad
+	.long	0xd2b3
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF21
@@ -15520,54 +15589,54 @@ _ZTS15T100FolderLogic:
 	.word	0x32a
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE8max_sizeEv\0"
-	.long	0xc650
+	.long	0xc70a
 	.byte	0x1
-	.long	0xd265
-	.long	0xd26b
+	.long	0xd31f
+	.long	0xd325
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF22
 	.byte	0x3
 	.word	0x338
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6resizeEy\0"
 	.byte	0x1
-	.long	0xd2d0
-	.long	0xd2db
+	.long	0xd38a
+	.long	0xd395
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF22
 	.byte	0x3
 	.word	0x34c
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6resizeEyRKS5_\0"
 	.byte	0x1
-	.long	0xd345
-	.long	0xd355
+	.long	0xd3ff
+	.long	0xd40f
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.uleb128 0x1
-	.long	0x184cf
+	.long	0x18589
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF23
 	.byte	0x3
 	.word	0x36c
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13shrink_to_fitEv\0"
 	.byte	0x1
-	.long	0xd3c2
-	.long	0xd3c8
+	.long	0xd47c
+	.long	0xd482
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF24
@@ -15575,12 +15644,12 @@ _ZTS15T100FolderLogic:
 	.word	0x375
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE8capacityEv\0"
-	.long	0xc650
+	.long	0xc70a
 	.byte	0x1
-	.long	0xd434
-	.long	0xd43a
+	.long	0xd4ee
+	.long	0xd4f4
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF27
@@ -15588,12 +15657,12 @@ _ZTS15T100FolderLogic:
 	.word	0x37e
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5emptyEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.long	0xd4a3
-	.long	0xd4a9
+	.long	0xd55d
+	.long	0xd563
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF25
@@ -15602,19 +15671,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x5
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE7reserveEy\0"
 	.byte	0x1
-	.long	0xd50e
-	.long	0xd519
+	.long	0xd5c8
+	.long	0xd5d3
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF30
 	.byte	0x3
 	.word	0x16f
 	.byte	0x32
-	.long	0x151a6
+	.long	0x15260
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -15622,21 +15691,21 @@ _ZTS15T100FolderLogic:
 	.word	0x3a2
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEixEy\0"
-	.long	0xd519
+	.long	0xd5d3
 	.byte	0x1
-	.long	0xd58b
-	.long	0xd596
+	.long	0xd645
+	.long	0xd650
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF28
 	.byte	0x3
 	.word	0x170
 	.byte	0x37
-	.long	0x151b2
+	.long	0x1526c
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -15644,28 +15713,28 @@ _ZTS15T100FolderLogic:
 	.word	0x3b4
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEixEy\0"
-	.long	0xd596
+	.long	0xd650
 	.byte	0x1
-	.long	0xd609
-	.long	0xd614
+	.long	0xd6c3
+	.long	0xd6ce
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF87
+	.uleb128 0x8
+	.secrel32	.LASF88
 	.byte	0x3
 	.word	0x3bd
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE14_M_range_checkEy\0"
 	.byte	0x2
-	.long	0xd683
-	.long	0xd68e
+	.long	0xd73d
+	.long	0xd748
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.byte	0
 	.uleb128 0x19
 	.ascii "at\0"
@@ -15673,14 +15742,14 @@ _ZTS15T100FolderLogic:
 	.word	0x3d3
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE2atEy\0"
-	.long	0xd519
+	.long	0xd5d3
 	.byte	0x1
-	.long	0xd6f2
-	.long	0xd6fd
+	.long	0xd7ac
+	.long	0xd7b7
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.byte	0
 	.uleb128 0x19
 	.ascii "at\0"
@@ -15688,14 +15757,14 @@ _ZTS15T100FolderLogic:
 	.word	0x3e5
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE2atEy\0"
-	.long	0xd596
+	.long	0xd650
 	.byte	0x1
-	.long	0xd762
-	.long	0xd76d
+	.long	0xd81c
+	.long	0xd827
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF31
@@ -15703,12 +15772,12 @@ _ZTS15T100FolderLogic:
 	.word	0x3f0
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5frontEv\0"
-	.long	0xd519
+	.long	0xd5d3
 	.byte	0x1
-	.long	0xd7d5
-	.long	0xd7db
+	.long	0xd88f
+	.long	0xd895
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF31
@@ -15716,12 +15785,12 @@ _ZTS15T100FolderLogic:
 	.word	0x3fb
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5frontEv\0"
-	.long	0xd596
+	.long	0xd650
 	.byte	0x1
-	.long	0xd844
-	.long	0xd84a
+	.long	0xd8fe
+	.long	0xd904
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF32
@@ -15729,12 +15798,12 @@ _ZTS15T100FolderLogic:
 	.word	0x406
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE4backEv\0"
-	.long	0xd519
+	.long	0xd5d3
 	.byte	0x1
-	.long	0xd8b1
-	.long	0xd8b7
+	.long	0xd96b
+	.long	0xd971
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF32
@@ -15742,12 +15811,12 @@ _ZTS15T100FolderLogic:
 	.word	0x411
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE4backEv\0"
-	.long	0xd596
+	.long	0xd650
 	.byte	0x1
-	.long	0xd91f
-	.long	0xd925
+	.long	0xd9d9
+	.long	0xd9df
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF41
@@ -15755,12 +15824,12 @@ _ZTS15T100FolderLogic:
 	.word	0x41f
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE4dataEv\0"
-	.long	0x18203
+	.long	0x182bd
 	.byte	0x1
-	.long	0xd98c
-	.long	0xd992
+	.long	0xda46
+	.long	0xda4c
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF41
@@ -15768,52 +15837,52 @@ _ZTS15T100FolderLogic:
 	.word	0x423
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE4dataEv\0"
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0x1
-	.long	0xd9fa
-	.long	0xda00
+	.long	0xdab4
+	.long	0xdaba
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF35
 	.byte	0x3
 	.word	0x432
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE9push_backERKS5_\0"
 	.byte	0x1
-	.long	0xda6c
-	.long	0xda77
+	.long	0xdb26
+	.long	0xdb31
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184cf
+	.long	0x18589
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF35
 	.byte	0x3
 	.word	0x442
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE9push_backEOS5_\0"
 	.byte	0x1
-	.long	0xdae2
-	.long	0xdaed
+	.long	0xdb9c
+	.long	0xdba7
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184ed
+	.long	0x185a7
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF39
 	.byte	0x3
 	.word	0x458
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE8pop_backEv\0"
 	.byte	0x1
-	.long	0xdb54
-	.long	0xdb5a
+	.long	0xdc0e
+	.long	0xdc14
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF37
@@ -15821,16 +15890,16 @@ _ZTS15T100FolderLogic:
 	.byte	0x76
 	.byte	0x5
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS5_S7_EERSA_\0"
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0x1
-	.long	0xdbee
-	.long	0xdbfe
+	.long	0xdca8
+	.long	0xdcb8
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xcc9f
+	.long	0xcd59
 	.uleb128 0x1
-	.long	0x184cf
+	.long	0x18589
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -15838,16 +15907,16 @@ _ZTS15T100FolderLogic:
 	.word	0x49c
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS5_S7_EEOS5_\0"
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0x1
-	.long	0xdc93
-	.long	0xdca3
+	.long	0xdd4d
+	.long	0xdd5d
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xcc9f
+	.long	0xcd59
 	.uleb128 0x1
-	.long	0x184ed
+	.long	0x185a7
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -15855,16 +15924,16 @@ _ZTS15T100FolderLogic:
 	.word	0x4ad
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS5_S7_EESt16initializer_listIS5_E\0"
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0x1
-	.long	0xdd4d
-	.long	0xdd5d
+	.long	0xde07
+	.long	0xde17
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xcc9f
+	.long	0xcd59
 	.uleb128 0x1
-	.long	0xe84c
+	.long	0xe906
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF37
@@ -15872,18 +15941,18 @@ _ZTS15T100FolderLogic:
 	.word	0x4c6
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE6insertEN9__gnu_cxx17__normal_iteratorIPKS5_S7_EEyRSA_\0"
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0x1
-	.long	0xddf3
-	.long	0xde08
+	.long	0xdead
+	.long	0xdec2
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xcc9f
+	.long	0xcd59
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.uleb128 0x1
-	.long	0x184cf
+	.long	0x18589
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF38
@@ -15891,14 +15960,14 @@ _ZTS15T100FolderLogic:
 	.word	0x525
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5eraseEN9__gnu_cxx17__normal_iteratorIPKS5_S7_EE\0"
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0x1
-	.long	0xde98
-	.long	0xdea3
+	.long	0xdf52
+	.long	0xdf5d
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xcc9f
+	.long	0xcd59
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF38
@@ -15906,16 +15975,16 @@ _ZTS15T100FolderLogic:
 	.word	0x540
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5eraseEN9__gnu_cxx17__normal_iteratorIPKS5_S7_EESC_\0"
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0x1
-	.long	0xdf36
-	.long	0xdf46
+	.long	0xdff0
+	.long	0xe000
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xcc9f
+	.long	0xcd59
 	.uleb128 0x1
-	.long	0xcc9f
+	.long	0xcd59
 	.byte	0
 	.uleb128 0x4b
 	.ascii "swap\0"
@@ -15924,187 +15993,187 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE4swapERS7_\0"
 	.byte	0x1
-	.long	0xdfad
-	.long	0xdfb8
+	.long	0xe067
+	.long	0xe072
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184e1
+	.long	0x1859b
 	.byte	0
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF26
 	.byte	0x3
 	.word	0x569
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5clearEv\0"
 	.byte	0x1
-	.long	0xe01c
-	.long	0xe022
+	.long	0xe0d6
+	.long	0xe0dc
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF88
+	.uleb128 0x8
+	.secrel32	.LASF89
 	.byte	0x3
 	.word	0x5c0
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE18_M_fill_initializeEyRKS5_\0"
 	.byte	0x2
-	.long	0xe099
-	.long	0xe0a9
+	.long	0xe153
+	.long	0xe163
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.uleb128 0x1
-	.long	0x184cf
+	.long	0x18589
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF89
+	.uleb128 0x8
+	.secrel32	.LASF90
 	.byte	0x3
 	.word	0x5ca
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE21_M_default_initializeEy\0"
 	.byte	0x2
-	.long	0xe11e
-	.long	0xe129
+	.long	0xe1d8
+	.long	0xe1e3
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF90
+	.secrel32	.LASF91
 	.byte	0x9
 	.byte	0xf5
 	.byte	0x5
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE14_M_fill_assignEyRKS5_\0"
 	.byte	0x2
-	.long	0xe19b
-	.long	0xe1ab
+	.long	0xe255
+	.long	0xe265
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x1
-	.long	0x184cf
+	.long	0x18589
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF91
+	.uleb128 0x8
+	.secrel32	.LASF92
 	.byte	0x9
 	.word	0x1de
 	.byte	0x5
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE14_M_fill_insertEN9__gnu_cxx17__normal_iteratorIPS5_S7_EEyRKS5_\0"
 	.byte	0x2
-	.long	0xe246
-	.long	0xe25b
+	.long	0xe300
+	.long	0xe315
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xcc23
+	.long	0xccdd
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.uleb128 0x1
-	.long	0x184cf
+	.long	0x18589
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF92
+	.uleb128 0x8
+	.secrel32	.LASF93
 	.byte	0x9
 	.word	0x244
 	.byte	0x5
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE17_M_default_appendEy\0"
 	.byte	0x2
-	.long	0xe2cc
-	.long	0xe2d7
+	.long	0xe386
+	.long	0xe391
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xc650
-	.byte	0
-	.uleb128 0x3
-	.secrel32	.LASF93
-	.byte	0x9
-	.word	0x27f
-	.byte	0x5
-	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE16_M_shrink_to_fitEv\0"
-	.long	0x16105
-	.byte	0x2
-	.long	0xe34b
-	.long	0xe351
-	.uleb128 0x2
-	.long	0x184be
+	.long	0xc70a
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF94
 	.byte	0x9
-	.word	0x147
+	.word	0x27f
 	.byte	0x5
-	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE14_M_insert_rvalEN9__gnu_cxx17__normal_iteratorIPKS5_S7_EEOS5_\0"
-	.long	0xcc23
+	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE16_M_shrink_to_fitEv\0"
+	.long	0x16a1c
 	.byte	0x2
-	.long	0xe3ef
-	.long	0xe3ff
+	.long	0xe405
+	.long	0xe40b
 	.uleb128 0x2
-	.long	0x184be
-	.uleb128 0x1
-	.long	0xcc9f
-	.uleb128 0x1
-	.long	0x184ed
+	.long	0x18578
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF95
-	.byte	0x3
-	.word	0x65d
-	.byte	0x7
-	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE14_M_emplace_auxEN9__gnu_cxx17__normal_iteratorIPKS5_S7_EEOS5_\0"
-	.long	0xcc23
+	.byte	0x9
+	.word	0x147
+	.byte	0x5
+	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE14_M_insert_rvalEN9__gnu_cxx17__normal_iteratorIPKS5_S7_EEOS5_\0"
+	.long	0xccdd
 	.byte	0x2
-	.long	0xe49d
-	.long	0xe4ad
+	.long	0xe4a9
+	.long	0xe4b9
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xcc9f
+	.long	0xcd59
 	.uleb128 0x1
-	.long	0x184ed
+	.long	0x185a7
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF96
 	.byte	0x3
+	.word	0x65d
+	.byte	0x7
+	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE14_M_emplace_auxEN9__gnu_cxx17__normal_iteratorIPKS5_S7_EEOS5_\0"
+	.long	0xccdd
+	.byte	0x2
+	.long	0xe557
+	.long	0xe567
+	.uleb128 0x2
+	.long	0x18578
+	.uleb128 0x1
+	.long	0xcd59
+	.uleb128 0x1
+	.long	0x185a7
+	.byte	0
+	.uleb128 0x3
+	.secrel32	.LASF97
+	.byte	0x3
 	.word	0x663
 	.byte	0x7
 	.ascii "_ZNKSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_M_check_lenEyPKc\0"
-	.long	0xc650
+	.long	0xc70a
 	.byte	0x2
-	.long	0xe521
-	.long	0xe531
+	.long	0xe5db
+	.long	0xe5eb
 	.uleb128 0x2
-	.long	0x184e7
+	.long	0x185a1
 	.uleb128 0x1
-	.long	0xc650
+	.long	0xc70a
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
-	.uleb128 0x7
-	.secrel32	.LASF97
+	.uleb128 0x8
+	.secrel32	.LASF98
 	.byte	0x3
 	.word	0x671
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE15_M_erase_at_endEPS5_\0"
 	.byte	0x2
-	.long	0xe5a3
-	.long	0xe5ae
+	.long	0xe65d
+	.long	0xe668
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xe5ae
+	.long	0xe668
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF1
 	.byte	0x3
 	.word	0x16d
 	.byte	0x29
-	.long	0xbcde
+	.long	0xbd98
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF10
@@ -16112,14 +16181,14 @@ _ZTS15T100FolderLogic:
 	.byte	0x9f
 	.byte	0x5
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE8_M_eraseEN9__gnu_cxx17__normal_iteratorIPS5_S7_EE\0"
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0x2
-	.long	0xe64d
-	.long	0xe658
+	.long	0xe707
+	.long	0xe712
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF10
@@ -16127,144 +16196,144 @@ _ZTS15T100FolderLogic:
 	.byte	0xac
 	.byte	0x5
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE8_M_eraseEN9__gnu_cxx17__normal_iteratorIPS5_S7_EESB_\0"
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0x2
-	.long	0xe6ec
-	.long	0xe6fc
+	.long	0xe7a6
+	.long	0xe7b6
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0xcc23
+	.long	0xccdd
 	.uleb128 0x1
-	.long	0xcc23
+	.long	0xccdd
 	.byte	0
 	.uleb128 0x1f
-	.secrel32	.LASF98
+	.secrel32	.LASF99
 	.byte	0x3
 	.word	0x688
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE14_M_move_assignEOS7_St17integral_constantIbLb1EE\0"
-	.long	0xe788
-	.long	0xe798
+	.long	0xe842
+	.long	0xe852
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184db
+	.long	0x18595
 	.uleb128 0x1
-	.long	0x53ec
+	.long	0x54a6
 	.byte	0
 	.uleb128 0x1f
-	.secrel32	.LASF98
+	.secrel32	.LASF99
 	.byte	0x3
 	.word	0x693
 	.byte	0x7
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE14_M_move_assignEOS7_St17integral_constantIbLb0EE\0"
-	.long	0xe824
-	.long	0xe834
+	.long	0xe8de
+	.long	0xe8ee
 	.uleb128 0x2
-	.long	0x184be
+	.long	0x18578
 	.uleb128 0x1
-	.long	0x184db
+	.long	0x18595
 	.uleb128 0x1
-	.long	0x4d06
+	.long	0x4cf3
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
 	.long	0x14d
 	.uleb128 0x42
 	.secrel32	.LASF54
-	.long	0xb43a
+	.long	0xb4f4
 	.byte	0
 	.uleb128 0x6
-	.long	0xc3df
+	.long	0xc499
 	.uleb128 0x28
 	.ascii "initializer_list<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
 	.uleb128 0x28
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >*, std::vector<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >, std::allocator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > > > >\0"
 	.uleb128 0x28
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<const std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >*, std::vector<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >, std::allocator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > > > >\0"
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "iterator_traits<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >*>\0"
 	.byte	0x1
 	.byte	0x13
 	.byte	0xb2
 	.byte	0xc
-	.long	0xec21
+	.long	0xecdb
 	.uleb128 0xe
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x13
 	.byte	0xb6
 	.byte	0x2b
-	.long	0x53d5
+	.long	0x548f
 	.uleb128 0xe
 	.secrel32	.LASF1
 	.byte	0x13
 	.byte	0xb7
 	.byte	0x2b
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0xe
 	.secrel32	.LASF30
 	.byte	0x13
 	.byte	0xb8
 	.byte	0x2b
-	.long	0x18232
+	.long	0x182ec
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18203
+	.secrel32	.LASF104
+	.long	0x182bd
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "__are_same<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >*>\0"
 	.byte	0x1
 	.byte	0xe
 	.byte	0x66
 	.byte	0xc
-	.long	0xecfd
-	.uleb128 0x64
+	.long	0xedb7
+	.uleb128 0x66
 	.byte	0x7
 	.byte	0x4
-	.long	0x16024
+	.long	0x164d8
 	.byte	0xe
 	.byte	0x68
 	.byte	0xc
-	.uleb128 0x65
-	.secrel32	.LASF104
+	.uleb128 0x52
+	.secrel32	.LASF57
 	.byte	0x1
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "iterator_traits<wchar_t*>\0"
 	.byte	0x1
 	.byte	0x13
 	.byte	0xb2
 	.byte	0xc
-	.long	0xed68
+	.long	0xee22
 	.uleb128 0x10
 	.ascii "iterator_category\0"
 	.byte	0x13
 	.byte	0xb4
 	.byte	0x2a
-	.long	0x4e1e
+	.long	0x4ed8
 	.uleb128 0xe
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x13
 	.byte	0xb6
 	.byte	0x2b
-	.long	0x53d5
+	.long	0x548f
 	.uleb128 0xe
 	.secrel32	.LASF1
 	.byte	0x13
 	.byte	0xb7
 	.byte	0x2b
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0xe
 	.secrel32	.LASF30
 	.byte	0x13
 	.byte	0xb8
 	.byte	0x2b
-	.long	0x1684d
+	.long	0x16b20
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x164da
+	.secrel32	.LASF104
+	.long	0x164b7
 	.byte	0
 	.uleb128 0x30
 	.ascii "remove_reference<std::allocator<wchar_t>&>\0"
@@ -16272,16 +16341,16 @@ _ZTS15T100FolderLogic:
 	.byte	0x11
 	.word	0x5bc
 	.byte	0xc
-	.long	0xedb4
+	.long	0xee6e
 	.uleb128 0x1b
 	.secrel32	.LASF105
 	.byte	0x11
 	.word	0x5bd
 	.byte	0x15
-	.long	0x53fe
-	.uleb128 0x8
+	.long	0x54b8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x181d0
+	.long	0x1828a
 	.byte	0
 	.uleb128 0x30
 	.ascii "remove_reference<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >&>\0"
@@ -16289,110 +16358,110 @@ _ZTS15T100FolderLogic:
 	.byte	0x11
 	.word	0x5bc
 	.byte	0xc
-	.long	0xee41
+	.long	0xeefb
 	.uleb128 0x1b
 	.secrel32	.LASF105
 	.byte	0x11
 	.word	0x5bd
 	.byte	0x15
 	.long	0x14d
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18232
+	.long	0x182ec
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "iterator_traits<T100FolderInfo**>\0"
 	.byte	0x1
 	.byte	0x13
 	.byte	0xb2
 	.byte	0xc
-	.long	0xee9a
+	.long	0xef54
 	.uleb128 0xe
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x13
 	.byte	0xb6
 	.byte	0x2b
-	.long	0x53d5
+	.long	0x548f
 	.uleb128 0xe
 	.secrel32	.LASF1
 	.byte	0x13
 	.byte	0xb7
 	.byte	0x2b
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0xe
 	.secrel32	.LASF30
 	.byte	0x13
 	.byte	0xb8
 	.byte	0x2b
-	.long	0x18382
+	.long	0x1843c
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "__are_same<T100FolderInfo**, T100FolderInfo**>\0"
 	.byte	0x1
 	.byte	0xe
 	.byte	0x66
 	.byte	0xc
-	.long	0xeee4
-	.uleb128 0x64
+	.long	0xef9e
+	.uleb128 0x66
 	.byte	0x7
 	.byte	0x4
-	.long	0x16024
+	.long	0x164d8
 	.byte	0xe
 	.byte	0x68
 	.byte	0xc
-	.uleb128 0x65
-	.secrel32	.LASF104
+	.uleb128 0x52
+	.secrel32	.LASF57
 	.byte	0x1
 	.byte	0
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "iterator_traits<T100FileInfo**>\0"
 	.byte	0x1
 	.byte	0x13
 	.byte	0xb2
 	.byte	0xc
-	.long	0xef3b
+	.long	0xeff5
 	.uleb128 0xe
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x13
 	.byte	0xb6
 	.byte	0x2b
-	.long	0x53d5
+	.long	0x548f
 	.uleb128 0xe
 	.secrel32	.LASF1
 	.byte	0x13
 	.byte	0xb7
 	.byte	0x2b
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0xe
 	.secrel32	.LASF30
 	.byte	0x13
 	.byte	0xb8
 	.byte	0x2b
-	.long	0x1828a
+	.long	0x18344
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "__are_same<T100FileInfo**, T100FileInfo**>\0"
 	.byte	0x1
 	.byte	0xe
 	.byte	0x66
 	.byte	0xc
-	.long	0xef81
-	.uleb128 0x64
+	.long	0xf03b
+	.uleb128 0x66
 	.byte	0x7
 	.byte	0x4
-	.long	0x16024
+	.long	0x164d8
 	.byte	0xe
 	.byte	0x68
 	.byte	0xc
-	.uleb128 0x65
-	.secrel32	.LASF104
+	.uleb128 0x52
+	.secrel32	.LASF57
 	.byte	0x1
 	.byte	0
 	.byte	0
@@ -16402,16 +16471,16 @@ _ZTS15T100FolderLogic:
 	.byte	0x11
 	.word	0x5bc
 	.byte	0xc
-	.long	0xefcb
+	.long	0xf085
 	.uleb128 0x1b
 	.secrel32	.LASF105
 	.byte	0x11
 	.word	0x5bd
 	.byte	0x15
-	.long	0x18362
-	.uleb128 0x8
+	.long	0x1841c
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0x30
 	.ascii "remove_reference<T100FileInfo* const&>\0"
@@ -16419,66 +16488,66 @@ _ZTS15T100FolderLogic:
 	.byte	0x11
 	.word	0x5bc
 	.byte	0xc
-	.long	0xf013
+	.long	0xf0cd
 	.uleb128 0x1b
 	.secrel32	.LASF105
 	.byte	0x11
 	.word	0x5bd
 	.byte	0x15
-	.long	0x1826c
-	.uleb128 0x8
+	.long	0x18326
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18296
+	.long	0x18350
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "iterator_traits<wchar_t const*>\0"
 	.byte	0x1
 	.byte	0x13
 	.byte	0xbd
 	.byte	0xc
-	.long	0xf06a
+	.long	0xf124
 	.uleb128 0xe
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x13
 	.byte	0xc1
 	.byte	0x2b
-	.long	0x53d5
+	.long	0x548f
 	.uleb128 0xe
 	.secrel32	.LASF1
 	.byte	0x13
 	.byte	0xc2
 	.byte	0x2b
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0xe
 	.secrel32	.LASF30
 	.byte	0x13
 	.byte	0xc3
 	.byte	0x2b
-	.long	0x1685e
+	.long	0x16b31
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x16853
+	.secrel32	.LASF104
+	.long	0x16b26
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "_Destroy_aux<false>\0"
 	.byte	0x1
 	.byte	0x6
 	.byte	0x65
 	.byte	0xc
-	.long	0xf132
-	.uleb128 0x75
+	.long	0xf1ec
+	.uleb128 0x76
 	.ascii "__destroy<std::__cxx11::basic_string<wchar_t>*>\0"
 	.byte	0x6
 	.byte	0x69
 	.byte	0x9
 	.ascii "_ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEvT_S9_\0"
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18203
+	.secrel32	.LASF63
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.byte	0
 	.uleb128 0x40
@@ -16487,26 +16556,26 @@ _ZTS15T100FolderLogic:
 	.byte	0x4
 	.word	0x3ec
 	.byte	0xb
-	.long	0xf5d6
+	.long	0xf690
 	.uleb128 0x4d
 	.secrel32	.LASF116
 	.byte	0x4
 	.word	0x3ef
 	.byte	0x11
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF106
 	.byte	0x4
 	.word	0x402
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP14T100FolderInfoEC4Ev\0"
 	.byte	0x1
-	.long	0xf1aa
-	.long	0xf1b0
+	.long	0xf264
+	.long	0xf26a
 	.uleb128 0x2
-	.long	0x1855f
+	.long	0x18619
 	.byte	0
 	.uleb128 0x34
 	.secrel32	.LASF106
@@ -16515,19 +16584,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP14T100FolderInfoEC4ES2_\0"
 	.byte	0x1
-	.long	0xf1f1
-	.long	0xf1fc
+	.long	0xf2ab
+	.long	0xf2b6
 	.uleb128 0x2
-	.long	0x1855f
+	.long	0x18619
 	.uleb128 0x1
-	.long	0xf1fc
+	.long	0xf2b6
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF107
 	.byte	0x4
 	.word	0x3f5
 	.byte	0x1d
-	.long	0x18351
+	.long	0x1840b
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF108
@@ -16535,19 +16604,19 @@ _ZTS15T100FolderLogic:
 	.word	0x40f
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv\0"
-	.long	0xf1fc
+	.long	0xf2b6
 	.byte	0x1
-	.long	0xf251
-	.long	0xf257
+	.long	0xf30b
+	.long	0xf311
 	.uleb128 0x2
-	.long	0x1856a
+	.long	0x18624
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF30
 	.byte	0x4
 	.word	0x3ff
 	.byte	0x18
-	.long	0xf61c
+	.long	0xf6d6
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF109
@@ -16555,19 +16624,19 @@ _ZTS15T100FolderLogic:
 	.word	0x413
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP14T100FolderInfoEdeEv\0"
-	.long	0xf257
+	.long	0xf311
 	.byte	0x1
-	.long	0xf2a9
-	.long	0xf2af
+	.long	0xf363
+	.long	0xf369
 	.uleb128 0x2
-	.long	0x1856a
+	.long	0x18624
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF1
 	.byte	0x4
 	.word	0x3fa
 	.byte	0x1d
-	.long	0x18351
+	.long	0x1840b
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF110
@@ -16575,12 +16644,12 @@ _ZTS15T100FolderLogic:
 	.word	0x417
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP14T100FolderInfoEptEv\0"
-	.long	0xf2af
+	.long	0xf369
 	.byte	0x1
-	.long	0xf301
-	.long	0xf307
+	.long	0xf3bb
+	.long	0xf3c1
 	.uleb128 0x2
-	.long	0x1856a
+	.long	0x18624
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -16588,12 +16657,12 @@ _ZTS15T100FolderLogic:
 	.word	0x41b
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP14T100FolderInfoEppEv\0"
-	.long	0x18575
+	.long	0x1862f
 	.byte	0x1
-	.long	0xf34a
-	.long	0xf350
+	.long	0xf404
+	.long	0xf40a
 	.uleb128 0x2
-	.long	0x1855f
+	.long	0x18619
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -16601,14 +16670,14 @@ _ZTS15T100FolderLogic:
 	.word	0x422
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP14T100FolderInfoEppEi\0"
-	.long	0xf132
+	.long	0xf1ec
 	.byte	0x1
-	.long	0xf393
-	.long	0xf39e
+	.long	0xf44d
+	.long	0xf458
 	.uleb128 0x2
-	.long	0x1855f
+	.long	0x18619
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -16616,12 +16685,12 @@ _ZTS15T100FolderLogic:
 	.word	0x42a
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP14T100FolderInfoEmmEv\0"
-	.long	0x18575
+	.long	0x1862f
 	.byte	0x1
-	.long	0xf3e1
-	.long	0xf3e7
+	.long	0xf49b
+	.long	0xf4a1
 	.uleb128 0x2
-	.long	0x1855f
+	.long	0x18619
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -16629,14 +16698,14 @@ _ZTS15T100FolderLogic:
 	.word	0x431
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP14T100FolderInfoEmmEi\0"
-	.long	0xf132
+	.long	0xf1ec
 	.byte	0x1
-	.long	0xf42a
-	.long	0xf435
+	.long	0xf4e4
+	.long	0xf4ef
 	.uleb128 0x2
-	.long	0x1855f
+	.long	0x18619
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF113
@@ -16644,21 +16713,21 @@ _ZTS15T100FolderLogic:
 	.word	0x439
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP14T100FolderInfoEplEx\0"
-	.long	0xf132
+	.long	0xf1ec
 	.byte	0x1
-	.long	0xf479
-	.long	0xf484
+	.long	0xf533
+	.long	0xf53e
 	.uleb128 0x2
-	.long	0x1856a
+	.long	0x18624
 	.uleb128 0x1
-	.long	0xf484
+	.long	0xf53e
 	.byte	0
 	.uleb128 0xd
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x4
 	.word	0x3f8
 	.byte	0x37
-	.long	0xee6c
+	.long	0xef26
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -16666,14 +16735,14 @@ _ZTS15T100FolderLogic:
 	.word	0x43d
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP14T100FolderInfoEpLEx\0"
-	.long	0x18575
+	.long	0x1862f
 	.byte	0x1
-	.long	0xf4d5
-	.long	0xf4e0
+	.long	0xf58f
+	.long	0xf59a
 	.uleb128 0x2
-	.long	0x1855f
+	.long	0x18619
 	.uleb128 0x1
-	.long	0xf484
+	.long	0xf53e
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF114
@@ -16681,14 +16750,14 @@ _ZTS15T100FolderLogic:
 	.word	0x444
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP14T100FolderInfoEmiEx\0"
-	.long	0xf132
+	.long	0xf1ec
 	.byte	0x1
-	.long	0xf524
-	.long	0xf52f
+	.long	0xf5de
+	.long	0xf5e9
 	.uleb128 0x2
-	.long	0x1856a
+	.long	0x18624
 	.uleb128 0x1
-	.long	0xf484
+	.long	0xf53e
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF115
@@ -16696,14 +16765,14 @@ _ZTS15T100FolderLogic:
 	.word	0x448
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP14T100FolderInfoEmIEx\0"
-	.long	0x18575
+	.long	0x1862f
 	.byte	0x1
-	.long	0xf572
-	.long	0xf57d
+	.long	0xf62c
+	.long	0xf637
 	.uleb128 0x2
-	.long	0x1855f
+	.long	0x18619
 	.uleb128 0x1
-	.long	0xf484
+	.long	0xf53e
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -16711,34 +16780,34 @@ _ZTS15T100FolderLogic:
 	.word	0x44f
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP14T100FolderInfoEixEx\0"
-	.long	0xf257
+	.long	0xf311
 	.byte	0x1
-	.long	0xf5c1
-	.long	0xf5cc
+	.long	0xf67b
+	.long	0xf686
 	.uleb128 0x2
-	.long	0x1856a
+	.long	0x18624
 	.uleb128 0x1
-	.long	0xf484
+	.long	0xf53e
 	.byte	0
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x6
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x30
 	.ascii "conditional<true, T100FolderInfo*&&, T100FolderInfo*&>\0"
 	.byte	0x1
 	.byte	0x11
 	.word	0x7d1
 	.byte	0xc
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x1b
 	.secrel32	.LASF105
 	.byte	0x11
 	.word	0x7d2
 	.byte	0x17
-	.long	0x18559
+	.long	0x18613
 	.byte	0
 	.uleb128 0x40
 	.ascii "move_iterator<T100FileInfo**>\0"
@@ -16746,26 +16815,26 @@ _ZTS15T100FolderLogic:
 	.byte	0x4
 	.word	0x3ec
 	.byte	0xb
-	.long	0xfab0
+	.long	0xfb6a
 	.uleb128 0x4d
 	.secrel32	.LASF116
 	.byte	0x4
 	.word	0x3ef
 	.byte	0x11
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF106
 	.byte	0x4
 	.word	0x402
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP12T100FileInfoEC4Ev\0"
 	.byte	0x1
-	.long	0xf69e
-	.long	0xf6a4
+	.long	0xf758
+	.long	0xf75e
 	.uleb128 0x2
-	.long	0x18581
+	.long	0x1863b
 	.byte	0
 	.uleb128 0x34
 	.secrel32	.LASF106
@@ -16774,19 +16843,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP12T100FileInfoEC4ES2_\0"
 	.byte	0x1
-	.long	0xf6e3
-	.long	0xf6ee
+	.long	0xf79d
+	.long	0xf7a8
 	.uleb128 0x2
-	.long	0x18581
+	.long	0x1863b
 	.uleb128 0x1
-	.long	0xf6ee
+	.long	0xf7a8
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF107
 	.byte	0x4
 	.word	0x3f5
 	.byte	0x1d
-	.long	0x1825b
+	.long	0x18315
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF108
@@ -16794,19 +16863,19 @@ _ZTS15T100FolderLogic:
 	.word	0x40f
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv\0"
-	.long	0xf6ee
+	.long	0xf7a8
 	.byte	0x1
-	.long	0xf741
-	.long	0xf747
+	.long	0xf7fb
+	.long	0xf801
 	.uleb128 0x2
-	.long	0x1858c
+	.long	0x18646
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF30
 	.byte	0x4
 	.word	0x3ff
 	.byte	0x18
-	.long	0xfaf2
+	.long	0xfbac
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF109
@@ -16814,19 +16883,19 @@ _ZTS15T100FolderLogic:
 	.word	0x413
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP12T100FileInfoEdeEv\0"
-	.long	0xf747
+	.long	0xf801
 	.byte	0x1
-	.long	0xf797
-	.long	0xf79d
+	.long	0xf851
+	.long	0xf857
 	.uleb128 0x2
-	.long	0x1858c
+	.long	0x18646
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF1
 	.byte	0x4
 	.word	0x3fa
 	.byte	0x1d
-	.long	0x1825b
+	.long	0x18315
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF110
@@ -16834,12 +16903,12 @@ _ZTS15T100FolderLogic:
 	.word	0x417
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP12T100FileInfoEptEv\0"
-	.long	0xf79d
+	.long	0xf857
 	.byte	0x1
-	.long	0xf7ed
-	.long	0xf7f3
+	.long	0xf8a7
+	.long	0xf8ad
 	.uleb128 0x2
-	.long	0x1858c
+	.long	0x18646
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -16847,12 +16916,12 @@ _ZTS15T100FolderLogic:
 	.word	0x41b
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP12T100FileInfoEppEv\0"
-	.long	0x18597
+	.long	0x18651
 	.byte	0x1
-	.long	0xf834
-	.long	0xf83a
+	.long	0xf8ee
+	.long	0xf8f4
 	.uleb128 0x2
-	.long	0x18581
+	.long	0x1863b
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -16860,14 +16929,14 @@ _ZTS15T100FolderLogic:
 	.word	0x422
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP12T100FileInfoEppEi\0"
-	.long	0xf62a
+	.long	0xf6e4
 	.byte	0x1
-	.long	0xf87b
-	.long	0xf886
+	.long	0xf935
+	.long	0xf940
 	.uleb128 0x2
-	.long	0x18581
+	.long	0x1863b
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -16875,12 +16944,12 @@ _ZTS15T100FolderLogic:
 	.word	0x42a
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP12T100FileInfoEmmEv\0"
-	.long	0x18597
+	.long	0x18651
 	.byte	0x1
-	.long	0xf8c7
-	.long	0xf8cd
+	.long	0xf981
+	.long	0xf987
 	.uleb128 0x2
-	.long	0x18581
+	.long	0x1863b
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -16888,14 +16957,14 @@ _ZTS15T100FolderLogic:
 	.word	0x431
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP12T100FileInfoEmmEi\0"
-	.long	0xf62a
+	.long	0xf6e4
 	.byte	0x1
-	.long	0xf90e
-	.long	0xf919
+	.long	0xf9c8
+	.long	0xf9d3
 	.uleb128 0x2
-	.long	0x18581
+	.long	0x1863b
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF113
@@ -16903,21 +16972,21 @@ _ZTS15T100FolderLogic:
 	.word	0x439
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP12T100FileInfoEplEx\0"
-	.long	0xf62a
+	.long	0xf6e4
 	.byte	0x1
-	.long	0xf95b
-	.long	0xf966
+	.long	0xfa15
+	.long	0xfa20
 	.uleb128 0x2
-	.long	0x1858c
+	.long	0x18646
 	.uleb128 0x1
-	.long	0xf966
+	.long	0xfa20
 	.byte	0
 	.uleb128 0xd
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x4
 	.word	0x3f8
 	.byte	0x37
-	.long	0xef0d
+	.long	0xefc7
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -16925,14 +16994,14 @@ _ZTS15T100FolderLogic:
 	.word	0x43d
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP12T100FileInfoEpLEx\0"
-	.long	0x18597
+	.long	0x18651
 	.byte	0x1
-	.long	0xf9b5
-	.long	0xf9c0
+	.long	0xfa6f
+	.long	0xfa7a
 	.uleb128 0x2
-	.long	0x18581
+	.long	0x1863b
 	.uleb128 0x1
-	.long	0xf966
+	.long	0xfa20
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF114
@@ -16940,14 +17009,14 @@ _ZTS15T100FolderLogic:
 	.word	0x444
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP12T100FileInfoEmiEx\0"
-	.long	0xf62a
+	.long	0xf6e4
 	.byte	0x1
-	.long	0xfa02
-	.long	0xfa0d
+	.long	0xfabc
+	.long	0xfac7
 	.uleb128 0x2
-	.long	0x1858c
+	.long	0x18646
 	.uleb128 0x1
-	.long	0xf966
+	.long	0xfa20
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF115
@@ -16955,14 +17024,14 @@ _ZTS15T100FolderLogic:
 	.word	0x448
 	.byte	0x7
 	.ascii "_ZNSt13move_iteratorIPP12T100FileInfoEmIEx\0"
-	.long	0x18597
+	.long	0x18651
 	.byte	0x1
-	.long	0xfa4e
-	.long	0xfa59
+	.long	0xfb08
+	.long	0xfb13
 	.uleb128 0x2
-	.long	0x18581
+	.long	0x1863b
 	.uleb128 0x1
-	.long	0xf966
+	.long	0xfa20
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -16970,34 +17039,34 @@ _ZTS15T100FolderLogic:
 	.word	0x44f
 	.byte	0x7
 	.ascii "_ZNKSt13move_iteratorIPP12T100FileInfoEixEx\0"
-	.long	0xf747
+	.long	0xf801
 	.byte	0x1
-	.long	0xfa9b
-	.long	0xfaa6
+	.long	0xfb55
+	.long	0xfb60
 	.uleb128 0x2
-	.long	0x1858c
+	.long	0x18646
 	.uleb128 0x1
-	.long	0xf966
+	.long	0xfa20
 	.byte	0
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.byte	0
 	.uleb128 0x6
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x30
 	.ascii "conditional<true, T100FileInfo*&&, T100FileInfo*&>\0"
 	.byte	0x1
 	.byte	0x11
 	.word	0x7d1
 	.byte	0xc
-	.long	0xfb00
+	.long	0xfbba
 	.uleb128 0x1b
 	.secrel32	.LASF105
 	.byte	0x11
 	.word	0x7d2
 	.byte	0x17
-	.long	0x1857b
+	.long	0x18635
 	.byte	0
 	.uleb128 0x30
 	.ascii "__copy_move<true, true, std::random_access_iterator_tag>\0"
@@ -17005,41 +17074,41 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x161
 	.byte	0xc
-	.long	0xfc88
+	.long	0xfd42
 	.uleb128 0x13
 	.ascii "__copy_m<T100FileInfo*>\0"
 	.byte	0xd
 	.word	0x165
 	.byte	0x2
 	.ascii "_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_\0"
-	.long	0x1825b
-	.long	0xfbe5
-	.uleb128 0x8
+	.long	0x18315
+	.long	0xfc9f
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x1
-	.long	0x18290
+	.long	0x1834a
 	.uleb128 0x1
-	.long	0x18290
+	.long	0x1834a
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
-	.uleb128 0x78
+	.uleb128 0x79
 	.ascii "__copy_m<T100FolderInfo*>\0"
 	.byte	0xd
 	.word	0x165
 	.byte	0x2
 	.ascii "_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100FolderInfoEEPT_PKS5_S8_S6_\0"
-	.long	0x18351
-	.uleb128 0x8
+	.long	0x1840b
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x1
-	.long	0x18388
+	.long	0x18442
 	.uleb128 0x1
-	.long	0x18388
+	.long	0x18442
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.byte	0
 	.uleb128 0x13
@@ -17048,24 +17117,24 @@ _ZTS15T100FolderLogic:
 	.word	0x177
 	.byte	0x5
 	.ascii "_ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_\0"
-	.long	0x1825b
-	.long	0xfd2e
+	.long	0x18315
+	.long	0xfde8
 	.uleb128 0x49
 	.secrel32	.LASF117
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0x1825b
-	.uleb128 0x8
+	.long	0x18315
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x13
 	.ascii "__niter_base<T100FileInfo**>\0"
@@ -17073,13 +17142,13 @@ _ZTS15T100FolderLogic:
 	.word	0x115
 	.byte	0x5
 	.ascii "_ZSt12__niter_baseIPP12T100FileInfoET_S3_\0"
-	.long	0x1825b
-	.long	0xfd91
+	.long	0x18315
+	.long	0xfe4b
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF118
@@ -17087,13 +17156,13 @@ _ZTS15T100FolderLogic:
 	.word	0x198
 	.byte	0x5
 	.ascii "_ZSt12__miter_baseIPP12T100FileInfoET_S3_\0"
-	.long	0x1825b
-	.long	0xfddb
+	.long	0x18315
+	.long	0xfe95
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x13
 	.ascii "__copy_move_a<true, T100FolderInfo**, T100FolderInfo**>\0"
@@ -17101,24 +17170,24 @@ _ZTS15T100FolderLogic:
 	.word	0x177
 	.byte	0x5
 	.ascii "_ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_\0"
-	.long	0x18351
-	.long	0xfe87
+	.long	0x1840b
+	.long	0xff41
 	.uleb128 0x49
 	.secrel32	.LASF117
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0x18351
-	.uleb128 0x8
+	.long	0x1840b
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x13
 	.ascii "__niter_base<T100FolderInfo**>\0"
@@ -17126,13 +17195,13 @@ _ZTS15T100FolderLogic:
 	.word	0x115
 	.byte	0x5
 	.ascii "_ZSt12__niter_baseIPP14T100FolderInfoET_S3_\0"
-	.long	0x18351
-	.long	0xfeee
+	.long	0x1840b
+	.long	0xffa8
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF119
@@ -17140,13 +17209,13 @@ _ZTS15T100FolderLogic:
 	.word	0x198
 	.byte	0x5
 	.ascii "_ZSt12__miter_baseIPP14T100FolderInfoET_S3_\0"
-	.long	0x18351
-	.long	0xff3a
+	.long	0x1840b
+	.long	0xfff4
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x13
 	.ascii "__copy_move_a2<true, T100FileInfo**, T100FileInfo**>\0"
@@ -17154,24 +17223,24 @@ _ZTS15T100FolderLogic:
 	.word	0x1a4
 	.byte	0x5
 	.ascii "_ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_\0"
-	.long	0x1825b
-	.long	0xffe2
+	.long	0x18315
+	.long	0x1009c
 	.uleb128 0x49
 	.secrel32	.LASF117
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0x1825b
-	.uleb128 0x8
+	.long	0x18315
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF118
@@ -17179,13 +17248,13 @@ _ZTS15T100FolderLogic:
 	.word	0x4d3
 	.byte	0x5
 	.ascii "_ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E\0"
-	.long	0x1825b
-	.long	0x1005d
+	.long	0x18315
+	.long	0x10117
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.uleb128 0x1
-	.long	0xf62a
+	.long	0xf6e4
 	.byte	0
 	.uleb128 0x13
 	.ascii "__copy_move_a2<true, T100FolderInfo**, T100FolderInfo**>\0"
@@ -17193,24 +17262,24 @@ _ZTS15T100FolderLogic:
 	.word	0x1a4
 	.byte	0x5
 	.ascii "_ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_\0"
-	.long	0x18351
-	.long	0x1010b
+	.long	0x1840b
+	.long	0x101c5
 	.uleb128 0x49
 	.secrel32	.LASF117
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0x18351
-	.uleb128 0x8
+	.long	0x1840b
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF119
@@ -17218,13 +17287,13 @@ _ZTS15T100FolderLogic:
 	.word	0x4d3
 	.byte	0x5
 	.ascii "_ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E\0"
-	.long	0x18351
-	.long	0x10188
+	.long	0x1840b
+	.long	0x10242
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0xf132
+	.long	0xf1ec
 	.byte	0
 	.uleb128 0x13
 	.ascii "copy<std::move_iterator<T100FileInfo**>, T100FileInfo**>\0"
@@ -17232,20 +17301,20 @@ _ZTS15T100FolderLogic:
 	.word	0x1be
 	.byte	0x5
 	.ascii "_ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_\0"
-	.long	0x1825b
-	.long	0x1022d
-	.uleb128 0x8
+	.long	0x18315
+	.long	0x102e7
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0xf62a
-	.uleb128 0x8
+	.long	0xf6e4
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x1
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x13
 	.ascii "copy<std::move_iterator<T100FolderInfo**>, T100FolderInfo**>\0"
@@ -17253,20 +17322,20 @@ _ZTS15T100FolderLogic:
 	.word	0x1be
 	.byte	0x5
 	.ascii "_ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_\0"
-	.long	0x18351
-	.long	0x102d8
-	.uleb128 0x8
+	.long	0x1840b
+	.long	0x10392
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0xf132
-	.uleb128 0x8
+	.long	0xf1ec
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x1
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x2f
 	.ascii "__distance<wchar_t*>\0"
@@ -17274,17 +17343,17 @@ _ZTS15T100FolderLogic:
 	.byte	0x62
 	.byte	0x5
 	.ascii "_ZSt10__distanceIPwENSt15iterator_traitsIT_E15difference_typeES2_S2_St26random_access_iterator_tag\0"
-	.long	0xed3a
-	.long	0x10375
+	.long	0xedf4
+	.long	0x1042f
 	.uleb128 0x5
 	.secrel32	.LASF120
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x4e1e
+	.long	0x4ed8
 	.byte	0
 	.uleb128 0x2f
 	.ascii "distance<wchar_t*>\0"
@@ -17292,15 +17361,15 @@ _ZTS15T100FolderLogic:
 	.byte	0x8a
 	.byte	0x5
 	.ascii "_ZSt8distanceIPwENSt15iterator_traitsIT_E15difference_typeES2_S2_\0"
-	.long	0xed3a
-	.long	0x103ea
+	.long	0xedf4
+	.long	0x104a4
 	.uleb128 0x5
-	.secrel32	.LASF63
-	.long	0x164da
+	.secrel32	.LASF64
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.byte	0
 	.uleb128 0x2f
 	.ascii "__iterator_category<wchar_t*>\0"
@@ -17308,13 +17377,13 @@ _ZTS15T100FolderLogic:
 	.byte	0xcd
 	.byte	0x5
 	.ascii "_ZSt19__iterator_categoryIPwENSt15iterator_traitsIT_E17iterator_categoryERKS2_\0"
-	.long	0xed20
-	.long	0x10474
-	.uleb128 0x8
+	.long	0xedda
+	.long	0x1052e
+	.uleb128 0x7
 	.ascii "_Iter\0"
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x185bb
+	.long	0x18675
 	.byte	0
 	.uleb128 0x2f
 	.ascii "uninitialized_copy<std::move_iterator<T100FileInfo**>, T100FileInfo**>\0"
@@ -17322,20 +17391,20 @@ _ZTS15T100FolderLogic:
 	.byte	0x73
 	.byte	0x5
 	.ascii "_ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_\0"
-	.long	0x1825b
-	.long	0x10535
+	.long	0x18315
+	.long	0x105ef
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf6e4
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf62a
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x1
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x2f
 	.ascii "uninitialized_copy<std::move_iterator<T100FolderInfo**>, T100FolderInfo**>\0"
@@ -17343,20 +17412,20 @@ _ZTS15T100FolderLogic:
 	.byte	0x73
 	.byte	0x5
 	.ascii "_ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_\0"
-	.long	0x18351
-	.long	0x105fc
+	.long	0x1840b
+	.long	0x106b6
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf1ec
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf132
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x1
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x47
 	.ascii "_Destroy<std::__cxx11::basic_string<wchar_t> >\0"
@@ -17364,12 +17433,12 @@ _ZTS15T100FolderLogic:
 	.byte	0x61
 	.byte	0x5
 	.ascii "_ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_\0"
-	.long	0x1068a
-	.uleb128 0x8
+	.long	0x10744
+	.uleb128 0x7
 	.ascii "_Tp\0"
 	.long	0x14d
 	.uleb128 0x1
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x47
 	.ascii "_Destroy<T100FileInfo**>\0"
@@ -17377,14 +17446,14 @@ _ZTS15T100FolderLogic:
 	.byte	0x7f
 	.byte	0x5
 	.ascii "_ZSt8_DestroyIPP12T100FileInfoEvT_S3_\0"
-	.long	0x106e5
+	.long	0x1079f
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
+	.secrel32	.LASF63
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x13
 	.ascii "__uninitialized_copy_a<std::move_iterator<T100FileInfo**>, T100FileInfo**, T100FileInfo*>\0"
@@ -17392,25 +17461,25 @@ _ZTS15T100FolderLogic:
 	.word	0x11f
 	.byte	0x5
 	.ascii "_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E\0"
-	.long	0x1825b
-	.long	0x107d7
+	.long	0x18315
+	.long	0x10891
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf6e4
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf62a
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
-	.uleb128 0x8
+	.long	0x18315
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x1
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x1
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x182b4
+	.long	0x1836e
 	.byte	0
 	.uleb128 0x13
 	.ascii "__make_move_if_noexcept_iterator<T100FileInfo*>\0"
@@ -17418,16 +17487,16 @@ _ZTS15T100FolderLogic:
 	.word	0x4bf
 	.byte	0x5
 	.ascii "_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_\0"
-	.long	0xf62a
-	.long	0x10881
-	.uleb128 0x8
+	.long	0xf6e4
+	.long	0x1093b
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x42
 	.secrel32	.LASF121
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x47
 	.ascii "_Destroy<T100FolderInfo**>\0"
@@ -17435,14 +17504,14 @@ _ZTS15T100FolderLogic:
 	.byte	0x7f
 	.byte	0x5
 	.ascii "_ZSt8_DestroyIPP14T100FolderInfoEvT_S3_\0"
-	.long	0x108e0
+	.long	0x1099a
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
+	.secrel32	.LASF63
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x13
 	.ascii "__uninitialized_copy_a<std::move_iterator<T100FolderInfo**>, T100FolderInfo**, T100FolderInfo*>\0"
@@ -17450,25 +17519,25 @@ _ZTS15T100FolderLogic:
 	.word	0x11f
 	.byte	0x5
 	.ascii "_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E\0"
-	.long	0x18351
-	.long	0x109da
+	.long	0x1840b
+	.long	0x10a94
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf1ec
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf132
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
-	.uleb128 0x8
+	.long	0x1840b
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x1
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x1
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x183ac
+	.long	0x18466
 	.byte	0
 	.uleb128 0x13
 	.ascii "__make_move_if_noexcept_iterator<T100FolderInfo*>\0"
@@ -17476,16 +17545,16 @@ _ZTS15T100FolderLogic:
 	.word	0x4bf
 	.byte	0x5
 	.ascii "_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_\0"
-	.long	0xf132
-	.long	0x10a88
-	.uleb128 0x8
+	.long	0xf1ec
+	.long	0x10b42
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x42
 	.secrel32	.LASF121
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x2f
 	.ascii "max<long long unsigned int>\0"
@@ -17493,15 +17562,15 @@ _ZTS15T100FolderLogic:
 	.byte	0xdb
 	.byte	0x5
 	.ascii "_ZSt3maxIyERKT_S2_S2_\0"
-	.long	0x19984
-	.long	0x10ada
-	.uleb128 0x8
+	.long	0x19a3e
+	.long	0x10b94
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1607a
+	.long	0x16112
 	.uleb128 0x1
-	.long	0x19984
+	.long	0x19a3e
 	.uleb128 0x1
-	.long	0x19984
+	.long	0x19a3e
 	.byte	0
 	.uleb128 0x2f
 	.ascii "__addressof<std::__cxx11::basic_string<wchar_t> >\0"
@@ -17509,13 +17578,13 @@ _ZTS15T100FolderLogic:
 	.byte	0x2f
 	.byte	0x5
 	.ascii "_ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_\0"
-	.long	0x18203
-	.long	0x10b76
-	.uleb128 0x8
+	.long	0x182bd
+	.long	0x10c30
+	.uleb128 0x7
 	.ascii "_Tp\0"
 	.long	0x14d
 	.uleb128 0x1
-	.long	0x18232
+	.long	0x182ec
 	.byte	0
 	.uleb128 0x47
 	.ascii "_Destroy<T100FileInfo**, T100FileInfo*>\0"
@@ -17523,19 +17592,19 @@ _ZTS15T100FolderLogic:
 	.byte	0xcb
 	.byte	0x5
 	.ascii "_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E\0"
-	.long	0x10bf9
+	.long	0x10cb3
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
-	.uleb128 0x8
+	.secrel32	.LASF63
+	.long	0x18315
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x182b4
+	.long	0x1836e
 	.byte	0
 	.uleb128 0x13
 	.ascii "__uninitialized_move_if_noexcept_a<T100FileInfo**, T100FileInfo**, std::allocator<T100FileInfo*> >\0"
@@ -17543,25 +17612,25 @@ _ZTS15T100FolderLogic:
 	.word	0x131
 	.byte	0x5
 	.ascii "_ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_\0"
-	.long	0x1825b
-	.long	0x10ced
+	.long	0x18315
+	.long	0x10da7
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0x18315
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0x1825b
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x5
 	.secrel32	.LASF122
-	.long	0x6622
+	.long	0x66dc
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x182b4
+	.long	0x1836e
 	.byte	0
 	.uleb128 0x47
 	.ascii "_Destroy<T100FolderInfo**, T100FolderInfo*>\0"
@@ -17569,19 +17638,19 @@ _ZTS15T100FolderLogic:
 	.byte	0xcb
 	.byte	0x5
 	.ascii "_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E\0"
-	.long	0x10d76
+	.long	0x10e30
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
-	.uleb128 0x8
+	.secrel32	.LASF63
+	.long	0x1840b
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x183ac
+	.long	0x18466
 	.byte	0
 	.uleb128 0x13
 	.ascii "__uninitialized_move_if_noexcept_a<T100FolderInfo**, T100FolderInfo**, std::allocator<T100FolderInfo*> >\0"
@@ -17589,25 +17658,25 @@ _ZTS15T100FolderLogic:
 	.word	0x131
 	.byte	0x5
 	.ascii "_ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_\0"
-	.long	0x18351
-	.long	0x10e72
+	.long	0x1840b
+	.long	0x10f2c
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0x1840b
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0x18351
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x5
 	.secrel32	.LASF122
-	.long	0x8cbc
+	.long	0x8d76
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x183ac
+	.long	0x18466
 	.byte	0
 	.uleb128 0x47
 	.ascii "_Destroy<std::__cxx11::basic_string<wchar_t>*>\0"
@@ -17615,14 +17684,14 @@ _ZTS15T100FolderLogic:
 	.byte	0x7f
 	.byte	0x5
 	.ascii "_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_\0"
-	.long	0x10f08
+	.long	0x10fc2
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18203
+	.secrel32	.LASF63
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.uleb128 0x2f
 	.ascii "forward<T100FileInfo* const&>\0"
@@ -17630,13 +17699,13 @@ _ZTS15T100FolderLogic:
 	.byte	0x4a
 	.byte	0x5
 	.ascii "_ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE\0"
-	.long	0x18296
-	.long	0x10f85
-	.uleb128 0x8
+	.long	0x18350
+	.long	0x1103f
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18296
+	.long	0x18350
 	.uleb128 0x1
-	.long	0x1a84e
+	.long	0x1a90a
 	.byte	0
 	.uleb128 0x2f
 	.ascii "forward<T100FolderInfo* const&>\0"
@@ -17644,13 +17713,13 @@ _ZTS15T100FolderLogic:
 	.byte	0x4a
 	.byte	0x5
 	.ascii "_ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE\0"
-	.long	0x1838e
-	.long	0x11006
-	.uleb128 0x8
+	.long	0x18448
+	.long	0x110c0
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1838e
+	.long	0x18448
 	.uleb128 0x1
-	.long	0x1a9f3
+	.long	0x1aaaf
 	.byte	0
 	.uleb128 0x2f
 	.ascii "move<std::__cxx11::basic_string<wchar_t>&>\0"
@@ -17658,13 +17727,13 @@ _ZTS15T100FolderLogic:
 	.byte	0x63
 	.byte	0x5
 	.ascii "_ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_\0"
-	.long	0x1aa2d
-	.long	0x110b1
-	.uleb128 0x8
+	.long	0x1aae9
+	.long	0x1116b
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18232
+	.long	0x182ec
 	.uleb128 0x1
-	.long	0x18232
+	.long	0x182ec
 	.byte	0
 	.uleb128 0x47
 	.ascii "_Destroy<std::__cxx11::basic_string<wchar_t>*, std::__cxx11::basic_string<wchar_t> >\0"
@@ -17672,19 +17741,19 @@ _ZTS15T100FolderLogic:
 	.byte	0xcb
 	.byte	0x5
 	.ascii "_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E\0"
-	.long	0x11186
+	.long	0x11240
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18203
-	.uleb128 0x8
+	.secrel32	.LASF63
+	.long	0x182bd
+	.uleb128 0x7
 	.ascii "_Tp\0"
 	.long	0x14d
 	.uleb128 0x1
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x1
-	.long	0x1846c
+	.long	0x18526
 	.byte	0
 	.uleb128 0x2f
 	.ascii "move<std::allocator<wchar_t>&>\0"
@@ -17692,13 +17761,13 @@ _ZTS15T100FolderLogic:
 	.byte	0x63
 	.byte	0x5
 	.ascii "_ZSt4moveIRSaIwEEONSt16remove_referenceIT_E4typeEOS3_\0"
-	.long	0x1af31
-	.long	0x111f6
-	.uleb128 0x8
+	.long	0x1afed
+	.long	0x112b0
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x181d0
+	.long	0x1828a
 	.uleb128 0x1
-	.long	0x181d0
+	.long	0x1828a
 	.byte	0
 	.uleb128 0x23
 	.secrel32	.LASF123
@@ -17707,20 +17776,20 @@ _ZTS15T100FolderLogic:
 	.byte	0x5
 	.ascii "_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_\0"
 	.long	0x14d
-	.long	0x1127b
+	.long	0x11335
 	.uleb128 0x5
 	.secrel32	.LASF52
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x5
 	.secrel32	.LASF53
-	.long	0x59c7
+	.long	0x5a81
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x53fe
+	.long	0x54b8
 	.uleb128 0x1
-	.long	0x1822c
+	.long	0x182e6
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x8f
 	.secrel32	.LASF123
@@ -17731,17 +17800,17 @@ _ZTS15T100FolderLogic:
 	.long	0x14d
 	.uleb128 0x5
 	.secrel32	.LASF52
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x5
 	.secrel32	.LASF53
-	.long	0x59c7
+	.long	0x5a81
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x53fe
+	.long	0x54b8
 	.uleb128 0x1
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.byte	0
 	.uleb128 0x90
@@ -17749,18 +17818,18 @@ _ZTS15T100FolderLogic:
 	.byte	0x16
 	.word	0x106
 	.byte	0xb
-	.long	0x16024
-	.uleb128 0x76
+	.long	0x160de
+	.uleb128 0x77
 	.ascii "__cxx11\0"
 	.byte	0x16
 	.word	0x108
 	.byte	0x41
-	.uleb128 0x59
+	.uleb128 0x5b
 	.byte	0x16
 	.word	0x108
 	.byte	0x41
-	.long	0x11313
-	.uleb128 0x71
+	.long	0x113cd
+	.uleb128 0x72
 	.ascii "__ops\0"
 	.byte	0x1f
 	.byte	0x23
@@ -17769,19 +17838,19 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x2c
 	.byte	0xe
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x4
 	.byte	0xb
 	.byte	0x2d
 	.byte	0xe
-	.long	0x53d5
+	.long	0x548f
 	.uleb128 0x3e
 	.ascii "new_allocator<wchar_t>\0"
 	.byte	0x1
 	.byte	0xb
 	.byte	0x3a
 	.byte	0xb
-	.long	0x115f1
+	.long	0x116ab
 	.uleb128 0x15
 	.secrel32	.LASF124
 	.byte	0xb
@@ -17789,10 +17858,10 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC4Ev\0"
 	.byte	0x1
-	.long	0x11398
-	.long	0x1139e
+	.long	0x11452
+	.long	0x11458
 	.uleb128 0x2
-	.long	0x16836
+	.long	0x16b09
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF124
@@ -17801,12 +17870,12 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC4ERKS1_\0"
 	.byte	0x1
-	.long	0x113d7
-	.long	0x113e2
+	.long	0x11491
+	.long	0x1149c
 	.uleb128 0x2
-	.long	0x16836
+	.long	0x16b09
 	.uleb128 0x1
-	.long	0x16841
+	.long	0x16b14
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF125
@@ -17815,19 +17884,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwED4Ev\0"
 	.byte	0x1
-	.long	0x11417
-	.long	0x11422
+	.long	0x114d1
+	.long	0x114dc
 	.uleb128 0x2
-	.long	0x16836
+	.long	0x16b09
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF1
 	.byte	0xb
 	.byte	0x3f
 	.byte	0x1a
-	.long	0x164da
+	.long	0x164b7
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF126
@@ -17835,28 +17904,28 @@ _ZTS15T100FolderLogic:
 	.byte	0x59
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorIwE7addressERw\0"
-	.long	0x11422
+	.long	0x114dc
 	.byte	0x1
-	.long	0x11470
-	.long	0x1147b
+	.long	0x1152a
+	.long	0x11535
 	.uleb128 0x2
-	.long	0x16847
+	.long	0x16b1a
 	.uleb128 0x1
-	.long	0x1147b
+	.long	0x11535
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF30
 	.byte	0xb
 	.byte	0x41
 	.byte	0x1a
-	.long	0x1684d
+	.long	0x16b20
 	.byte	0x1
 	.uleb128 0x18
 	.secrel32	.LASF4
 	.byte	0xb
 	.byte	0x40
 	.byte	0x1a
-	.long	0x16853
+	.long	0x16b26
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF126
@@ -17864,61 +17933,61 @@ _ZTS15T100FolderLogic:
 	.byte	0x5d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorIwE7addressERKw\0"
-	.long	0x11488
+	.long	0x11542
 	.byte	0x1
-	.long	0x114d7
-	.long	0x114e2
+	.long	0x11591
+	.long	0x1159c
 	.uleb128 0x2
-	.long	0x16847
+	.long	0x16b1a
 	.uleb128 0x1
-	.long	0x114e2
+	.long	0x1159c
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF28
 	.byte	0xb
 	.byte	0x42
 	.byte	0x1a
-	.long	0x1685e
+	.long	0x16b31
 	.byte	0x1
 	.uleb128 0x1a
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0xb
 	.byte	0x63
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwE8allocateEyPKv\0"
-	.long	0x11422
+	.long	0x114dc
 	.byte	0x1
-	.long	0x11532
-	.long	0x11542
+	.long	0x115ec
+	.long	0x115fc
 	.uleb128 0x2
-	.long	0x16836
+	.long	0x16b09
 	.uleb128 0x1
-	.long	0x11542
+	.long	0x115fc
 	.uleb128 0x1
-	.long	0x16828
+	.long	0x16afb
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF2
 	.byte	0xb
 	.byte	0x3d
 	.byte	0x1a
-	.long	0x53c6
+	.long	0x5480
 	.byte	0x1
 	.uleb128 0x15
-	.secrel32	.LASF66
+	.secrel32	.LASF67
 	.byte	0xb
 	.byte	0x74
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwE10deallocateEPwy\0"
 	.byte	0x1
-	.long	0x11590
-	.long	0x115a0
+	.long	0x1164a
+	.long	0x1165a
 	.uleb128 0x2
-	.long	0x16836
+	.long	0x16b09
 	.uleb128 0x1
-	.long	0x11422
+	.long	0x114dc
 	.uleb128 0x1
-	.long	0x11542
+	.long	0x115fc
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF21
@@ -17926,334 +17995,334 @@ _ZTS15T100FolderLogic:
 	.byte	0x81
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorIwE8max_sizeEv\0"
-	.long	0x11542
+	.long	0x115fc
 	.byte	0x1
-	.long	0x115e1
-	.long	0x115e7
+	.long	0x1169b
+	.long	0x116a1
 	.uleb128 0x2
-	.long	0x16847
+	.long	0x16b1a
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x6
-	.long	0x11343
-	.uleb128 0x17
+	.long	0x113fd
+	.uleb128 0x16
 	.ascii "__numeric_traits_integer<long long int>\0"
 	.byte	0x1
 	.byte	0x20
 	.byte	0x37
 	.byte	0xc
-	.long	0x11665
-	.uleb128 0x5b
+	.long	0x1171f
+	.uleb128 0x5d
 	.ascii "__min\0"
 	.byte	0x20
 	.byte	0x3a
 	.byte	0x1b
-	.long	0x160de
-	.uleb128 0x5b
+	.long	0x16142
+	.uleb128 0x5d
 	.ascii "__max\0"
 	.byte	0x20
 	.byte	0x3b
 	.byte	0x1b
-	.long	0x160de
+	.long	0x16142
 	.uleb128 0x2c
 	.secrel32	.LASF127
 	.byte	0x20
 	.byte	0x3f
 	.byte	0x19
-	.long	0x1610d
+	.long	0x16a24
 	.uleb128 0x2c
 	.secrel32	.LASF128
 	.byte	0x20
 	.byte	0x40
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x5
 	.secrel32	.LASF129
-	.long	0x160cd
+	.long	0x16131
 	.byte	0
 	.uleb128 0x4
 	.byte	0x17
 	.byte	0xf8
 	.byte	0xb
-	.long	0x1742c
+	.long	0x174e6
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x101
 	.byte	0xb
-	.long	0x1744c
+	.long	0x17506
 	.uleb128 0x1c
 	.byte	0x17
 	.word	0x102
 	.byte	0xb
-	.long	0x17471
-	.uleb128 0x17
+	.long	0x1752b
+	.uleb128 0x16
 	.ascii "__numeric_traits_integer<int>\0"
 	.byte	0x1
 	.byte	0x20
 	.byte	0x37
 	.byte	0xc
-	.long	0x116e4
-	.uleb128 0x5b
+	.long	0x1179e
+	.uleb128 0x5d
 	.ascii "__min\0"
 	.byte	0x20
 	.byte	0x3a
 	.byte	0x1b
-	.long	0x160bc
-	.uleb128 0x5b
+	.long	0x1619b
+	.uleb128 0x5d
 	.ascii "__max\0"
 	.byte	0x20
 	.byte	0x3b
 	.byte	0x1b
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x2c
 	.secrel32	.LASF127
 	.byte	0x20
 	.byte	0x3f
 	.byte	0x19
-	.long	0x1610d
+	.long	0x16a24
 	.uleb128 0x2c
 	.secrel32	.LASF128
 	.byte	0x20
 	.byte	0x40
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x5
 	.secrel32	.LASF129
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xc8
 	.byte	0xb
-	.long	0x178bc
+	.long	0x17976
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xd8
 	.byte	0xb
-	.long	0x17b52
+	.long	0x17c0c
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xe3
 	.byte	0xb
-	.long	0x17b70
+	.long	0x17c2a
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xe4
 	.byte	0xb
-	.long	0x17b89
+	.long	0x17c43
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xe5
 	.byte	0xb
-	.long	0x17bae
+	.long	0x17c68
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xe7
 	.byte	0xb
-	.long	0x17bd4
+	.long	0x17c8e
 	.uleb128 0x4
 	.byte	0x1b
 	.byte	0xe8
 	.byte	0xb
-	.long	0x17bf3
+	.long	0x17cad
 	.uleb128 0x2f
 	.ascii "div\0"
 	.byte	0x1b
 	.byte	0xd5
 	.byte	0x3
 	.ascii "_ZN9__gnu_cxx3divExx\0"
-	.long	0x178bc
-	.long	0x1174c
+	.long	0x17976
+	.long	0x11806
 	.uleb128 0x1
-	.long	0x160cd
+	.long	0x16131
 	.uleb128 0x1
-	.long	0x160cd
+	.long	0x16131
 	.byte	0
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0xaf
 	.byte	0xb
-	.long	0x180a6
+	.long	0x18160
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0xb0
 	.byte	0xb
-	.long	0x180e0
+	.long	0x1819a
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0xb1
 	.byte	0xb
-	.long	0x1811d
+	.long	0x181d7
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0xb2
 	.byte	0xb
-	.long	0x1814b
+	.long	0x18205
 	.uleb128 0x4
 	.byte	0x1c
 	.byte	0xb3
 	.byte	0xb
-	.long	0x1818c
-	.uleb128 0x17
+	.long	0x18246
+	.uleb128 0x16
 	.ascii "__numeric_traits_floating<float>\0"
 	.byte	0x1
 	.byte	0x20
 	.byte	0x64
 	.byte	0xc
-	.long	0x117d8
+	.long	0x11892
 	.uleb128 0x2c
 	.secrel32	.LASF130
 	.byte	0x20
 	.byte	0x67
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x2c
 	.secrel32	.LASF127
 	.byte	0x20
 	.byte	0x6a
 	.byte	0x19
-	.long	0x1610d
+	.long	0x16a24
 	.uleb128 0x2c
 	.secrel32	.LASF131
 	.byte	0x20
 	.byte	0x6b
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x2c
 	.secrel32	.LASF132
 	.byte	0x20
 	.byte	0x6c
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x5
 	.secrel32	.LASF129
-	.long	0x160fc
+	.long	0x16a87
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "__numeric_traits_floating<double>\0"
 	.byte	0x1
 	.byte	0x20
 	.byte	0x64
 	.byte	0xc
-	.long	0x1183d
+	.long	0x118f7
 	.uleb128 0x2c
 	.secrel32	.LASF130
 	.byte	0x20
 	.byte	0x67
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x2c
 	.secrel32	.LASF127
 	.byte	0x20
 	.byte	0x6a
 	.byte	0x19
-	.long	0x1610d
+	.long	0x16a24
 	.uleb128 0x2c
 	.secrel32	.LASF131
 	.byte	0x20
 	.byte	0x6b
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x2c
 	.secrel32	.LASF132
 	.byte	0x20
 	.byte	0x6c
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x5
 	.secrel32	.LASF129
-	.long	0x160f2
+	.long	0x16a7d
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "__numeric_traits_floating<long double>\0"
 	.byte	0x1
 	.byte	0x20
 	.byte	0x64
 	.byte	0xc
-	.long	0x118a7
+	.long	0x11961
 	.uleb128 0x2c
 	.secrel32	.LASF130
 	.byte	0x20
 	.byte	0x67
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x2c
 	.secrel32	.LASF127
 	.byte	0x20
 	.byte	0x6a
 	.byte	0x19
-	.long	0x1610d
+	.long	0x16a24
 	.uleb128 0x2c
 	.secrel32	.LASF131
 	.byte	0x20
 	.byte	0x6b
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x2c
 	.secrel32	.LASF132
 	.byte	0x20
 	.byte	0x6c
 	.byte	0x18
-	.long	0x160bc
+	.long	0x1619b
 	.uleb128 0x5
 	.secrel32	.LASF129
-	.long	0x160e3
+	.long	0x16a6e
 	.byte	0
-	.uleb128 0x17
+	.uleb128 0x16
 	.ascii "__alloc_traits<std::allocator<wchar_t>, wchar_t>\0"
 	.byte	0x1
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x11ba9
+	.long	0x11c63
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x6181
+	.long	0x623b
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x6118
+	.long	0x61d2
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x61e0
+	.long	0x629a
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x6230
+	.long	0x62ea
 	.uleb128 0x3b
-	.long	0x60d6
+	.long	0x6190
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.secrel32	.LASF133
 	.byte	0x21
 	.byte	0x5e
 	.byte	0x13
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE17_S_select_on_copyERKS1_\0"
-	.long	0x53fe
-	.long	0x1195c
+	.long	0x54b8
+	.long	0x11a16
 	.uleb128 0x1
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5e
 	.secrel32	.LASF134
 	.byte	0x21
 	.byte	0x61
 	.byte	0x11
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE10_S_on_swapERS1_S3_\0"
-	.long	0x119ad
+	.long	0x11a67
 	.uleb128 0x1
-	.long	0x181d0
+	.long	0x1828a
 	.uleb128 0x1
-	.long	0x181d0
+	.long	0x1828a
 	.byte	0
 	.uleb128 0x25
 	.secrel32	.LASF135
@@ -18261,93 +18330,93 @@ _ZTS15T100FolderLogic:
 	.byte	0x64
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE27_S_propagate_on_copy_assignEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF136
 	.byte	0x21
 	.byte	0x67
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE27_S_propagate_on_move_assignEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF137
 	.byte	0x21
 	.byte	0x6a
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE20_S_propagate_on_swapEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF138
 	.byte	0x21
 	.byte	0x6d
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE15_S_always_equalEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF139
 	.byte	0x21
 	.byte	0x70
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE15_S_nothrow_moveEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0xe
 	.secrel32	.LASF55
 	.byte	0x21
 	.byte	0x3a
 	.byte	0x35
-	.long	0x62d8
+	.long	0x6392
 	.uleb128 0x6
-	.long	0x11b23
+	.long	0x11bdd
 	.uleb128 0xe
 	.secrel32	.LASF1
 	.byte	0x21
 	.byte	0x3b
 	.byte	0x35
-	.long	0x610b
+	.long	0x61c5
 	.uleb128 0xe
 	.secrel32	.LASF4
 	.byte	0x21
 	.byte	0x3c
 	.byte	0x35
-	.long	0x62e5
+	.long	0x639f
 	.uleb128 0xe
 	.secrel32	.LASF2
 	.byte	0x21
 	.byte	0x3d
 	.byte	0x35
-	.long	0x6174
+	.long	0x622e
 	.uleb128 0xe
 	.secrel32	.LASF30
 	.byte	0x21
 	.byte	0x40
 	.byte	0x35
-	.long	0x181d6
+	.long	0x18290
 	.uleb128 0xe
 	.secrel32	.LASF28
 	.byte	0x21
 	.byte	0x41
 	.byte	0x35
-	.long	0x181dc
-	.uleb128 0x17
+	.long	0x18296
+	.uleb128 0x16
 	.ascii "rebind<wchar_t>\0"
 	.byte	0x1
 	.byte	0x21
 	.byte	0x74
 	.byte	0xe
-	.long	0x11b9f
+	.long	0x11c59
 	.uleb128 0xe
 	.secrel32	.LASF140
 	.byte	0x21
 	.byte	0x75
 	.byte	0x41
-	.long	0x62f2
-	.uleb128 0x8
+	.long	0x63ac
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x53fe
+	.long	0x54b8
 	.byte	0
 	.uleb128 0x40
 	.ascii "__normal_iterator<wchar_t*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
@@ -18355,26 +18424,26 @@ _ZTS15T100FolderLogic:
 	.byte	0x4
 	.word	0x2f9
 	.byte	0xb
-	.long	0x12341
+	.long	0x123fb
 	.uleb128 0x4d
 	.secrel32	.LASF116
 	.byte	0x4
 	.word	0x2fc
 	.byte	0x11
-	.long	0x164da
+	.long	0x164b7
 	.byte	0
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF141
 	.byte	0x4
 	.word	0x308
 	.byte	0x1a
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC4Ev\0"
 	.byte	0x1
-	.long	0x11ca8
-	.long	0x11cae
+	.long	0x11d62
+	.long	0x11d68
 	.uleb128 0x2
-	.long	0x185b5
+	.long	0x1866f
 	.byte	0
 	.uleb128 0x34
 	.secrel32	.LASF141
@@ -18383,19 +18452,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC4ERKS1_\0"
 	.byte	0x1
-	.long	0x11d21
-	.long	0x11d2c
+	.long	0x11ddb
+	.long	0x11de6
 	.uleb128 0x2
-	.long	0x185b5
+	.long	0x1866f
 	.uleb128 0x1
-	.long	0x185bb
+	.long	0x18675
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF30
 	.byte	0x4
 	.word	0x305
 	.byte	0x32
-	.long	0xed52
+	.long	0xee0c
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF109
@@ -18403,19 +18472,19 @@ _ZTS15T100FolderLogic:
 	.word	0x319
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEdeEv\0"
-	.long	0x11d2c
+	.long	0x11de6
 	.byte	0x1
-	.long	0x11dae
-	.long	0x11db4
+	.long	0x11e68
+	.long	0x11e6e
 	.uleb128 0x2
-	.long	0x185c1
+	.long	0x1867b
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF1
 	.byte	0x4
 	.word	0x306
 	.byte	0x32
-	.long	0xed46
+	.long	0xee00
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF110
@@ -18423,12 +18492,12 @@ _ZTS15T100FolderLogic:
 	.word	0x31d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEptEv\0"
-	.long	0x11db4
+	.long	0x11e6e
 	.byte	0x1
-	.long	0x11e36
-	.long	0x11e3c
+	.long	0x11ef0
+	.long	0x11ef6
 	.uleb128 0x2
-	.long	0x185c1
+	.long	0x1867b
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -18436,12 +18505,12 @@ _ZTS15T100FolderLogic:
 	.word	0x321
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEppEv\0"
-	.long	0x185c7
+	.long	0x18681
 	.byte	0x1
-	.long	0x11eaf
-	.long	0x11eb5
+	.long	0x11f69
+	.long	0x11f6f
 	.uleb128 0x2
-	.long	0x185b5
+	.long	0x1866f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -18449,14 +18518,14 @@ _ZTS15T100FolderLogic:
 	.word	0x328
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEppEi\0"
-	.long	0x11ba9
+	.long	0x11c63
 	.byte	0x1
-	.long	0x11f28
-	.long	0x11f33
+	.long	0x11fe2
+	.long	0x11fed
 	.uleb128 0x2
-	.long	0x185b5
+	.long	0x1866f
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -18464,12 +18533,12 @@ _ZTS15T100FolderLogic:
 	.word	0x32d
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEmmEv\0"
-	.long	0x185c7
+	.long	0x18681
 	.byte	0x1
-	.long	0x11fa6
-	.long	0x11fac
+	.long	0x12060
+	.long	0x12066
 	.uleb128 0x2
-	.long	0x185b5
+	.long	0x1866f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -18477,14 +18546,14 @@ _ZTS15T100FolderLogic:
 	.word	0x334
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEmmEi\0"
-	.long	0x11ba9
+	.long	0x11c63
 	.byte	0x1
-	.long	0x1201f
-	.long	0x1202a
+	.long	0x120d9
+	.long	0x120e4
 	.uleb128 0x2
-	.long	0x185b5
+	.long	0x1866f
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -18492,21 +18561,21 @@ _ZTS15T100FolderLogic:
 	.word	0x339
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEixEx\0"
-	.long	0x11d2c
+	.long	0x11de6
 	.byte	0x1
-	.long	0x1209e
-	.long	0x120a9
+	.long	0x12158
+	.long	0x12163
 	.uleb128 0x2
-	.long	0x185c1
+	.long	0x1867b
 	.uleb128 0x1
-	.long	0x120a9
+	.long	0x12163
 	.byte	0
 	.uleb128 0xd
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x4
 	.word	0x304
 	.byte	0x38
-	.long	0xed3a
+	.long	0xedf4
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -18514,14 +18583,14 @@ _ZTS15T100FolderLogic:
 	.word	0x33d
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEpLEx\0"
-	.long	0x185c7
+	.long	0x18681
 	.byte	0x1
-	.long	0x1212a
-	.long	0x12135
+	.long	0x121e4
+	.long	0x121ef
 	.uleb128 0x2
-	.long	0x185b5
+	.long	0x1866f
 	.uleb128 0x1
-	.long	0x120a9
+	.long	0x12163
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF113
@@ -18529,14 +18598,14 @@ _ZTS15T100FolderLogic:
 	.word	0x341
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEplEx\0"
-	.long	0x11ba9
+	.long	0x11c63
 	.byte	0x1
-	.long	0x121a9
-	.long	0x121b4
+	.long	0x12263
+	.long	0x1226e
 	.uleb128 0x2
-	.long	0x185c1
+	.long	0x1867b
 	.uleb128 0x1
-	.long	0x120a9
+	.long	0x12163
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF115
@@ -18544,14 +18613,14 @@ _ZTS15T100FolderLogic:
 	.word	0x345
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEmIEx\0"
-	.long	0x185c7
+	.long	0x18681
 	.byte	0x1
-	.long	0x12227
-	.long	0x12232
+	.long	0x122e1
+	.long	0x122ec
 	.uleb128 0x2
-	.long	0x185b5
+	.long	0x1866f
 	.uleb128 0x1
-	.long	0x120a9
+	.long	0x12163
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF114
@@ -18559,14 +18628,14 @@ _ZTS15T100FolderLogic:
 	.word	0x349
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEmiEx\0"
-	.long	0x11ba9
+	.long	0x11c63
 	.byte	0x1
-	.long	0x122a6
-	.long	0x122b1
+	.long	0x12360
+	.long	0x1236b
 	.uleb128 0x2
-	.long	0x185c1
+	.long	0x1867b
 	.uleb128 0x1
-	.long	0x120a9
+	.long	0x12163
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF108
@@ -18574,48 +18643,48 @@ _ZTS15T100FolderLogic:
 	.word	0x34d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE4baseEv\0"
-	.long	0x185bb
+	.long	0x18675
 	.byte	0x1
-	.long	0x12328
-	.long	0x1232e
+	.long	0x123e2
+	.long	0x123e8
 	.uleb128 0x2
-	.long	0x185c1
+	.long	0x1867b
 	.byte	0
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x164da
+	.secrel32	.LASF104
+	.long	0x164b7
 	.uleb128 0x5
 	.secrel32	.LASF142
 	.long	0x14d
 	.byte	0
 	.uleb128 0x6
-	.long	0x11ba9
+	.long	0x11c63
 	.uleb128 0x40
 	.ascii "__normal_iterator<wchar_t const*, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
 	.byte	0x8
 	.byte	0x4
 	.word	0x2f9
 	.byte	0xb
-	.long	0x12af2
+	.long	0x12bac
 	.uleb128 0x4d
 	.secrel32	.LASF116
 	.byte	0x4
 	.word	0x2fc
 	.byte	0x11
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF141
 	.byte	0x4
 	.word	0x308
 	.byte	0x1a
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC4Ev\0"
 	.byte	0x1
-	.long	0x1244c
-	.long	0x12452
+	.long	0x12506
+	.long	0x1250c
 	.uleb128 0x2
-	.long	0x1859d
+	.long	0x18657
 	.byte	0
 	.uleb128 0x34
 	.secrel32	.LASF141
@@ -18624,19 +18693,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC4ERKS2_\0"
 	.byte	0x1
-	.long	0x124c6
-	.long	0x124d1
+	.long	0x12580
+	.long	0x1258b
 	.uleb128 0x2
-	.long	0x1859d
+	.long	0x18657
 	.uleb128 0x1
-	.long	0x185a3
+	.long	0x1865d
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF30
 	.byte	0x4
 	.word	0x305
 	.byte	0x32
-	.long	0xf054
+	.long	0xf10e
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF109
@@ -18644,19 +18713,19 @@ _ZTS15T100FolderLogic:
 	.word	0x319
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEdeEv\0"
-	.long	0x124d1
+	.long	0x1258b
 	.byte	0x1
-	.long	0x12554
-	.long	0x1255a
+	.long	0x1260e
+	.long	0x12614
 	.uleb128 0x2
-	.long	0x185a9
+	.long	0x18663
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF1
 	.byte	0x4
 	.word	0x306
 	.byte	0x32
-	.long	0xf048
+	.long	0xf102
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF110
@@ -18664,12 +18733,12 @@ _ZTS15T100FolderLogic:
 	.word	0x31d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEptEv\0"
-	.long	0x1255a
+	.long	0x12614
 	.byte	0x1
-	.long	0x125dd
-	.long	0x125e3
+	.long	0x12697
+	.long	0x1269d
 	.uleb128 0x2
-	.long	0x185a9
+	.long	0x18663
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -18677,12 +18746,12 @@ _ZTS15T100FolderLogic:
 	.word	0x321
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEppEv\0"
-	.long	0x185af
+	.long	0x18669
 	.byte	0x1
-	.long	0x12657
-	.long	0x1265d
+	.long	0x12711
+	.long	0x12717
 	.uleb128 0x2
-	.long	0x1859d
+	.long	0x18657
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -18690,14 +18759,14 @@ _ZTS15T100FolderLogic:
 	.word	0x328
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEppEi\0"
-	.long	0x12346
+	.long	0x12400
 	.byte	0x1
-	.long	0x126d1
-	.long	0x126dc
+	.long	0x1278b
+	.long	0x12796
 	.uleb128 0x2
-	.long	0x1859d
+	.long	0x18657
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -18705,12 +18774,12 @@ _ZTS15T100FolderLogic:
 	.word	0x32d
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEmmEv\0"
-	.long	0x185af
+	.long	0x18669
 	.byte	0x1
-	.long	0x12750
-	.long	0x12756
+	.long	0x1280a
+	.long	0x12810
 	.uleb128 0x2
-	.long	0x1859d
+	.long	0x18657
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -18718,14 +18787,14 @@ _ZTS15T100FolderLogic:
 	.word	0x334
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEmmEi\0"
-	.long	0x12346
+	.long	0x12400
 	.byte	0x1
-	.long	0x127ca
-	.long	0x127d5
+	.long	0x12884
+	.long	0x1288f
 	.uleb128 0x2
-	.long	0x1859d
+	.long	0x18657
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -18733,21 +18802,21 @@ _ZTS15T100FolderLogic:
 	.word	0x339
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEixEx\0"
-	.long	0x124d1
+	.long	0x1258b
 	.byte	0x1
-	.long	0x1284a
-	.long	0x12855
+	.long	0x12904
+	.long	0x1290f
 	.uleb128 0x2
-	.long	0x185a9
+	.long	0x18663
 	.uleb128 0x1
-	.long	0x12855
+	.long	0x1290f
 	.byte	0
 	.uleb128 0xd
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x4
 	.word	0x304
 	.byte	0x38
-	.long	0xf03c
+	.long	0xf0f6
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -18755,14 +18824,14 @@ _ZTS15T100FolderLogic:
 	.word	0x33d
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEpLEx\0"
-	.long	0x185af
+	.long	0x18669
 	.byte	0x1
-	.long	0x128d7
-	.long	0x128e2
+	.long	0x12991
+	.long	0x1299c
 	.uleb128 0x2
-	.long	0x1859d
+	.long	0x18657
 	.uleb128 0x1
-	.long	0x12855
+	.long	0x1290f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF113
@@ -18770,14 +18839,14 @@ _ZTS15T100FolderLogic:
 	.word	0x341
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEplEx\0"
-	.long	0x12346
+	.long	0x12400
 	.byte	0x1
-	.long	0x12957
-	.long	0x12962
+	.long	0x12a11
+	.long	0x12a1c
 	.uleb128 0x2
-	.long	0x185a9
+	.long	0x18663
 	.uleb128 0x1
-	.long	0x12855
+	.long	0x1290f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF115
@@ -18785,14 +18854,14 @@ _ZTS15T100FolderLogic:
 	.word	0x345
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEmIEx\0"
-	.long	0x185af
+	.long	0x18669
 	.byte	0x1
-	.long	0x129d6
-	.long	0x129e1
+	.long	0x12a90
+	.long	0x12a9b
 	.uleb128 0x2
-	.long	0x1859d
+	.long	0x18657
 	.uleb128 0x1
-	.long	0x12855
+	.long	0x1290f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF114
@@ -18800,14 +18869,14 @@ _ZTS15T100FolderLogic:
 	.word	0x349
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEmiEx\0"
-	.long	0x12346
+	.long	0x12400
 	.byte	0x1
-	.long	0x12a56
-	.long	0x12a61
+	.long	0x12b10
+	.long	0x12b1b
 	.uleb128 0x2
-	.long	0x185a9
+	.long	0x18663
 	.uleb128 0x1
-	.long	0x12855
+	.long	0x1290f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF108
@@ -18815,29 +18884,29 @@ _ZTS15T100FolderLogic:
 	.word	0x34d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPKwNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE4baseEv\0"
-	.long	0x185a3
+	.long	0x1865d
 	.byte	0x1
-	.long	0x12ad9
-	.long	0x12adf
+	.long	0x12b93
+	.long	0x12b99
 	.uleb128 0x2
-	.long	0x185a9
+	.long	0x18663
 	.byte	0
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x16853
+	.secrel32	.LASF104
+	.long	0x16b26
 	.uleb128 0x5
 	.secrel32	.LASF142
 	.long	0x14d
 	.byte	0
 	.uleb128 0x6
-	.long	0x12346
+	.long	0x12400
 	.uleb128 0x3e
 	.ascii "new_allocator<T100FileInfo*>\0"
 	.byte	0x1
 	.byte	0xb
 	.byte	0x3a
 	.byte	0xb
-	.long	0x12f0e
+	.long	0x12fc8
 	.uleb128 0x15
 	.secrel32	.LASF124
 	.byte	0xb
@@ -18845,10 +18914,10 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoEC4Ev\0"
 	.byte	0x1
-	.long	0x12b60
-	.long	0x12b66
+	.long	0x12c1a
+	.long	0x12c20
 	.uleb128 0x2
-	.long	0x1824a
+	.long	0x18304
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF124
@@ -18857,12 +18926,12 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoEC4ERKS3_\0"
 	.byte	0x1
-	.long	0x12bad
-	.long	0x12bb8
+	.long	0x12c67
+	.long	0x12c72
 	.uleb128 0x2
-	.long	0x1824a
+	.long	0x18304
 	.uleb128 0x1
-	.long	0x18255
+	.long	0x1830f
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF125
@@ -18871,19 +18940,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoED4Ev\0"
 	.byte	0x1
-	.long	0x12bfb
-	.long	0x12c06
+	.long	0x12cb5
+	.long	0x12cc0
 	.uleb128 0x2
-	.long	0x1824a
+	.long	0x18304
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF1
 	.byte	0xb
 	.byte	0x3f
 	.byte	0x1a
-	.long	0x1825b
+	.long	0x18315
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF126
@@ -18891,28 +18960,28 @@ _ZTS15T100FolderLogic:
 	.byte	0x59
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE7addressERS2_\0"
-	.long	0x12c06
+	.long	0x12cc0
 	.byte	0x1
-	.long	0x12c64
-	.long	0x12c6f
+	.long	0x12d1e
+	.long	0x12d29
 	.uleb128 0x2
-	.long	0x1827f
+	.long	0x18339
 	.uleb128 0x1
-	.long	0x12c6f
+	.long	0x12d29
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF30
 	.byte	0xb
 	.byte	0x41
 	.byte	0x1a
-	.long	0x1828a
+	.long	0x18344
 	.byte	0x1
 	.uleb128 0x18
 	.secrel32	.LASF4
 	.byte	0xb
 	.byte	0x40
 	.byte	0x1a
-	.long	0x18290
+	.long	0x1834a
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF126
@@ -18920,61 +18989,61 @@ _ZTS15T100FolderLogic:
 	.byte	0x5d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE7addressERKS2_\0"
-	.long	0x12c7c
+	.long	0x12d36
 	.byte	0x1
-	.long	0x12cdb
-	.long	0x12ce6
+	.long	0x12d95
+	.long	0x12da0
 	.uleb128 0x2
-	.long	0x1827f
+	.long	0x18339
 	.uleb128 0x1
-	.long	0x12ce6
+	.long	0x12da0
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF28
 	.byte	0xb
 	.byte	0x42
 	.byte	0x1a
-	.long	0x18296
+	.long	0x18350
 	.byte	0x1
 	.uleb128 0x1a
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0xb
 	.byte	0x63
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv\0"
-	.long	0x12c06
+	.long	0x12cc0
 	.byte	0x1
-	.long	0x12d44
-	.long	0x12d54
+	.long	0x12dfe
+	.long	0x12e0e
 	.uleb128 0x2
-	.long	0x1824a
+	.long	0x18304
 	.uleb128 0x1
-	.long	0x12d54
+	.long	0x12e0e
 	.uleb128 0x1
-	.long	0x16828
+	.long	0x16afb
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF2
 	.byte	0xb
 	.byte	0x3d
 	.byte	0x1a
-	.long	0x53c6
+	.long	0x5480
 	.byte	0x1
 	.uleb128 0x15
-	.secrel32	.LASF66
+	.secrel32	.LASF67
 	.byte	0xb
 	.byte	0x74
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y\0"
 	.byte	0x1
-	.long	0x12db2
-	.long	0x12dc2
+	.long	0x12e6c
+	.long	0x12e7c
 	.uleb128 0x2
-	.long	0x1824a
+	.long	0x18304
 	.uleb128 0x1
-	.long	0x12c06
+	.long	0x12cc0
 	.uleb128 0x1
-	.long	0x12d54
+	.long	0x12e0e
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF21
@@ -18982,113 +19051,113 @@ _ZTS15T100FolderLogic:
 	.byte	0x81
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv\0"
-	.long	0x12d54
+	.long	0x12e0e
 	.byte	0x1
-	.long	0x12e11
-	.long	0x12e17
+	.long	0x12ecb
+	.long	0x12ed1
 	.uleb128 0x2
-	.long	0x1827f
+	.long	0x18339
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF70
+	.secrel32	.LASF71
 	.byte	0xb
 	.byte	0x8c
 	.byte	0x2
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_\0"
 	.byte	0x1
-	.long	0x12e71
-	.long	0x12e7c
-	.uleb128 0x8
+	.long	0x12f2b
+	.long	0x12f36
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x2
-	.long	0x1824a
+	.long	0x18304
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF71
+	.secrel32	.LASF72
 	.byte	0xb
 	.byte	0x87
 	.byte	0x2
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_\0"
 	.byte	0x1
-	.long	0x12ef4
-	.long	0x12f04
-	.uleb128 0x8
+	.long	0x12fae
+	.long	0x12fbe
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x12ef4
+	.secrel32	.LASF100
+	.long	0x12fae
 	.uleb128 0x38
-	.long	0x18296
+	.long	0x18350
 	.byte	0
 	.uleb128 0x2
-	.long	0x1824a
+	.long	0x18304
 	.uleb128 0x1
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1
-	.long	0x18296
+	.long	0x18350
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.byte	0
 	.uleb128 0x6
-	.long	0x12af7
-	.uleb128 0x17
+	.long	0x12bb1
+	.uleb128 0x16
 	.ascii "__alloc_traits<std::allocator<T100FileInfo*>, T100FileInfo*>\0"
 	.byte	0x1
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x1327f
+	.long	0x13339
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x67b0
+	.long	0x686a
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x6739
+	.long	0x67f3
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x681d
+	.long	0x68d7
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x687d
+	.long	0x6937
 	.uleb128 0x3b
-	.long	0x66f1
+	.long	0x67ab
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.secrel32	.LASF133
 	.byte	0x21
 	.byte	0x5e
 	.byte	0x13
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP12T100FileInfoES2_E17_S_select_on_copyERKS3_\0"
-	.long	0x6622
-	.long	0x12fe4
+	.long	0x66dc
+	.long	0x1309e
 	.uleb128 0x1
-	.long	0x182a2
+	.long	0x1835c
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5e
 	.secrel32	.LASF134
 	.byte	0x21
 	.byte	0x61
 	.byte	0x11
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP12T100FileInfoES2_E10_S_on_swapERS3_S5_\0"
-	.long	0x13045
+	.long	0x130ff
 	.uleb128 0x1
-	.long	0x182b4
+	.long	0x1836e
 	.uleb128 0x1
-	.long	0x182b4
+	.long	0x1836e
 	.byte	0
 	.uleb128 0x25
 	.secrel32	.LASF135
@@ -19096,81 +19165,81 @@ _ZTS15T100FolderLogic:
 	.byte	0x64
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP12T100FileInfoES2_E27_S_propagate_on_copy_assignEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF136
 	.byte	0x21
 	.byte	0x67
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP12T100FileInfoES2_E27_S_propagate_on_move_assignEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF137
 	.byte	0x21
 	.byte	0x6a
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP12T100FileInfoES2_E20_S_propagate_on_swapEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF138
 	.byte	0x21
 	.byte	0x6d
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP12T100FileInfoES2_E15_S_always_equalEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF139
 	.byte	0x21
 	.byte	0x70
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP12T100FileInfoES2_E15_S_nothrow_moveEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0xe
 	.secrel32	.LASF55
 	.byte	0x21
 	.byte	0x3a
 	.byte	0x35
-	.long	0x6941
+	.long	0x69fb
 	.uleb128 0x6
-	.long	0x1320b
+	.long	0x132c5
 	.uleb128 0xe
 	.secrel32	.LASF1
 	.byte	0x21
 	.byte	0x3b
 	.byte	0x35
-	.long	0x672c
+	.long	0x67e6
 	.uleb128 0xe
 	.secrel32	.LASF30
 	.byte	0x21
 	.byte	0x40
 	.byte	0x35
-	.long	0x182ba
+	.long	0x18374
 	.uleb128 0xe
 	.secrel32	.LASF28
 	.byte	0x21
 	.byte	0x41
 	.byte	0x35
-	.long	0x182c0
-	.uleb128 0x17
+	.long	0x1837a
+	.uleb128 0x16
 	.ascii "rebind<T100FileInfo*>\0"
 	.byte	0x1
 	.byte	0x21
 	.byte	0x74
 	.byte	0xe
-	.long	0x13275
+	.long	0x1332f
 	.uleb128 0xe
 	.secrel32	.LASF140
 	.byte	0x21
 	.byte	0x75
 	.byte	0x41
-	.long	0x694e
-	.uleb128 0x8
+	.long	0x6a08
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x6622
+	.long	0x66dc
 	.byte	0
 	.uleb128 0x40
 	.ascii "__normal_iterator<T100FileInfo**, std::vector<T100FileInfo*, std::allocator<T100FileInfo*> > >\0"
@@ -19178,26 +19247,26 @@ _ZTS15T100FolderLogic:
 	.byte	0x4
 	.word	0x2f9
 	.byte	0xb
-	.long	0x13911
+	.long	0x139cb
 	.uleb128 0x4d
 	.secrel32	.LASF116
 	.byte	0x4
 	.word	0x2fc
 	.byte	0x11
-	.long	0x1825b
+	.long	0x18315
 	.byte	0
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF141
 	.byte	0x4
 	.word	0x308
 	.byte	0x1a
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC4Ev\0"
 	.byte	0x1
-	.long	0x13355
-	.long	0x1335b
+	.long	0x1340f
+	.long	0x13415
 	.uleb128 0x2
-	.long	0x18537
+	.long	0x185f1
 	.byte	0
 	.uleb128 0x34
 	.secrel32	.LASF141
@@ -19206,19 +19275,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC4ERKS3_\0"
 	.byte	0x1
-	.long	0x133bd
-	.long	0x133c8
+	.long	0x13477
+	.long	0x13482
 	.uleb128 0x2
-	.long	0x18537
+	.long	0x185f1
 	.uleb128 0x1
-	.long	0x18542
+	.long	0x185fc
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF30
 	.byte	0x4
 	.word	0x305
 	.byte	0x32
-	.long	0xef25
+	.long	0xefdf
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF109
@@ -19226,19 +19295,19 @@ _ZTS15T100FolderLogic:
 	.word	0x319
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEdeEv\0"
-	.long	0x133c8
+	.long	0x13482
 	.byte	0x1
-	.long	0x13439
-	.long	0x1343f
+	.long	0x134f3
+	.long	0x134f9
 	.uleb128 0x2
-	.long	0x18548
+	.long	0x18602
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF1
 	.byte	0x4
 	.word	0x306
 	.byte	0x32
-	.long	0xef19
+	.long	0xefd3
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF110
@@ -19246,12 +19315,12 @@ _ZTS15T100FolderLogic:
 	.word	0x31d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEptEv\0"
-	.long	0x1343f
+	.long	0x134f9
 	.byte	0x1
-	.long	0x134b0
-	.long	0x134b6
+	.long	0x1356a
+	.long	0x13570
 	.uleb128 0x2
-	.long	0x18548
+	.long	0x18602
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -19259,12 +19328,12 @@ _ZTS15T100FolderLogic:
 	.word	0x321
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEppEv\0"
-	.long	0x18553
+	.long	0x1860d
 	.byte	0x1
-	.long	0x13518
-	.long	0x1351e
+	.long	0x135d2
+	.long	0x135d8
 	.uleb128 0x2
-	.long	0x18537
+	.long	0x185f1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -19272,14 +19341,14 @@ _ZTS15T100FolderLogic:
 	.word	0x328
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEppEi\0"
-	.long	0x1327f
+	.long	0x13339
 	.byte	0x1
-	.long	0x13580
-	.long	0x1358b
+	.long	0x1363a
+	.long	0x13645
 	.uleb128 0x2
-	.long	0x18537
+	.long	0x185f1
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -19287,12 +19356,12 @@ _ZTS15T100FolderLogic:
 	.word	0x32d
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEmmEv\0"
-	.long	0x18553
+	.long	0x1860d
 	.byte	0x1
-	.long	0x135ed
-	.long	0x135f3
+	.long	0x136a7
+	.long	0x136ad
 	.uleb128 0x2
-	.long	0x18537
+	.long	0x185f1
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -19300,14 +19369,14 @@ _ZTS15T100FolderLogic:
 	.word	0x334
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEmmEi\0"
-	.long	0x1327f
+	.long	0x13339
 	.byte	0x1
-	.long	0x13655
-	.long	0x13660
+	.long	0x1370f
+	.long	0x1371a
 	.uleb128 0x2
-	.long	0x18537
+	.long	0x185f1
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -19315,21 +19384,21 @@ _ZTS15T100FolderLogic:
 	.word	0x339
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEixEx\0"
-	.long	0x133c8
+	.long	0x13482
 	.byte	0x1
-	.long	0x136c3
-	.long	0x136ce
+	.long	0x1377d
+	.long	0x13788
 	.uleb128 0x2
-	.long	0x18548
+	.long	0x18602
 	.uleb128 0x1
-	.long	0x136ce
+	.long	0x13788
 	.byte	0
 	.uleb128 0xd
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x4
 	.word	0x304
 	.byte	0x38
-	.long	0xef0d
+	.long	0xefc7
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -19337,14 +19406,14 @@ _ZTS15T100FolderLogic:
 	.word	0x33d
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEpLEx\0"
-	.long	0x18553
+	.long	0x1860d
 	.byte	0x1
-	.long	0x1373e
-	.long	0x13749
+	.long	0x137f8
+	.long	0x13803
 	.uleb128 0x2
-	.long	0x18537
+	.long	0x185f1
 	.uleb128 0x1
-	.long	0x136ce
+	.long	0x13788
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF113
@@ -19352,14 +19421,14 @@ _ZTS15T100FolderLogic:
 	.word	0x341
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEplEx\0"
-	.long	0x1327f
+	.long	0x13339
 	.byte	0x1
-	.long	0x137ac
-	.long	0x137b7
+	.long	0x13866
+	.long	0x13871
 	.uleb128 0x2
-	.long	0x18548
+	.long	0x18602
 	.uleb128 0x1
-	.long	0x136ce
+	.long	0x13788
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF115
@@ -19367,14 +19436,14 @@ _ZTS15T100FolderLogic:
 	.word	0x345
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEmIEx\0"
-	.long	0x18553
+	.long	0x1860d
 	.byte	0x1
-	.long	0x13819
-	.long	0x13824
+	.long	0x138d3
+	.long	0x138de
 	.uleb128 0x2
-	.long	0x18537
+	.long	0x185f1
 	.uleb128 0x1
-	.long	0x136ce
+	.long	0x13788
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF114
@@ -19382,14 +19451,14 @@ _ZTS15T100FolderLogic:
 	.word	0x349
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEmiEx\0"
-	.long	0x1327f
+	.long	0x13339
 	.byte	0x1
-	.long	0x13887
-	.long	0x13892
+	.long	0x13941
+	.long	0x1394c
 	.uleb128 0x2
-	.long	0x18548
+	.long	0x18602
 	.uleb128 0x1
-	.long	0x136ce
+	.long	0x13788
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF108
@@ -19397,22 +19466,22 @@ _ZTS15T100FolderLogic:
 	.word	0x34d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv\0"
-	.long	0x18542
+	.long	0x185fc
 	.byte	0x1
-	.long	0x138f8
-	.long	0x138fe
+	.long	0x139b2
+	.long	0x139b8
 	.uleb128 0x2
-	.long	0x18548
+	.long	0x18602
 	.byte	0
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.uleb128 0x5
 	.secrel32	.LASF142
-	.long	0x713c
+	.long	0x71f6
 	.byte	0
 	.uleb128 0x6
-	.long	0x1327f
+	.long	0x13339
 	.uleb128 0x28
 	.ascii "__normal_iterator<T100FileInfo* const*, std::vector<T100FileInfo*, std::allocator<T100FileInfo*> > >\0"
 	.uleb128 0x3e
@@ -19421,7 +19490,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x3a
 	.byte	0xb
-	.long	0x13da9
+	.long	0x13e63
 	.uleb128 0x15
 	.secrel32	.LASF124
 	.byte	0xb
@@ -19429,10 +19498,10 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoEC4Ev\0"
 	.byte	0x1
-	.long	0x139e9
-	.long	0x139ef
+	.long	0x13aa3
+	.long	0x13aa9
 	.uleb128 0x2
-	.long	0x18340
+	.long	0x183fa
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF124
@@ -19441,12 +19510,12 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoEC4ERKS3_\0"
 	.byte	0x1
-	.long	0x13a38
-	.long	0x13a43
+	.long	0x13af2
+	.long	0x13afd
 	.uleb128 0x2
-	.long	0x18340
+	.long	0x183fa
 	.uleb128 0x1
-	.long	0x1834b
+	.long	0x18405
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF125
@@ -19455,19 +19524,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoED4Ev\0"
 	.byte	0x1
-	.long	0x13a88
-	.long	0x13a93
+	.long	0x13b42
+	.long	0x13b4d
 	.uleb128 0x2
-	.long	0x18340
+	.long	0x183fa
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF1
 	.byte	0xb
 	.byte	0x3f
 	.byte	0x1a
-	.long	0x18351
+	.long	0x1840b
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF126
@@ -19475,28 +19544,28 @@ _ZTS15T100FolderLogic:
 	.byte	0x59
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE7addressERS2_\0"
-	.long	0x13a93
+	.long	0x13b4d
 	.byte	0x1
-	.long	0x13af3
-	.long	0x13afe
+	.long	0x13bad
+	.long	0x13bb8
 	.uleb128 0x2
-	.long	0x18377
+	.long	0x18431
 	.uleb128 0x1
-	.long	0x13afe
+	.long	0x13bb8
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF30
 	.byte	0xb
 	.byte	0x41
 	.byte	0x1a
-	.long	0x18382
+	.long	0x1843c
 	.byte	0x1
 	.uleb128 0x18
 	.secrel32	.LASF4
 	.byte	0xb
 	.byte	0x40
 	.byte	0x1a
-	.long	0x18388
+	.long	0x18442
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF126
@@ -19504,61 +19573,61 @@ _ZTS15T100FolderLogic:
 	.byte	0x5d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE7addressERKS2_\0"
-	.long	0x13b0b
+	.long	0x13bc5
 	.byte	0x1
-	.long	0x13b6c
-	.long	0x13b77
+	.long	0x13c26
+	.long	0x13c31
 	.uleb128 0x2
-	.long	0x18377
+	.long	0x18431
 	.uleb128 0x1
-	.long	0x13b77
+	.long	0x13c31
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF28
 	.byte	0xb
 	.byte	0x42
 	.byte	0x1a
-	.long	0x1838e
+	.long	0x18448
 	.byte	0x1
 	.uleb128 0x1a
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0xb
 	.byte	0x63
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv\0"
-	.long	0x13a93
+	.long	0x13b4d
 	.byte	0x1
-	.long	0x13bd7
-	.long	0x13be7
+	.long	0x13c91
+	.long	0x13ca1
 	.uleb128 0x2
-	.long	0x18340
+	.long	0x183fa
 	.uleb128 0x1
-	.long	0x13be7
+	.long	0x13ca1
 	.uleb128 0x1
-	.long	0x16828
+	.long	0x16afb
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF2
 	.byte	0xb
 	.byte	0x3d
 	.byte	0x1a
-	.long	0x53c6
+	.long	0x5480
 	.byte	0x1
 	.uleb128 0x15
-	.secrel32	.LASF66
+	.secrel32	.LASF67
 	.byte	0xb
 	.byte	0x74
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y\0"
 	.byte	0x1
-	.long	0x13c47
-	.long	0x13c57
+	.long	0x13d01
+	.long	0x13d11
 	.uleb128 0x2
-	.long	0x18340
+	.long	0x183fa
 	.uleb128 0x1
-	.long	0x13a93
+	.long	0x13b4d
 	.uleb128 0x1
-	.long	0x13be7
+	.long	0x13ca1
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF21
@@ -19566,113 +19635,113 @@ _ZTS15T100FolderLogic:
 	.byte	0x81
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv\0"
-	.long	0x13be7
+	.long	0x13ca1
 	.byte	0x1
-	.long	0x13ca8
-	.long	0x13cae
+	.long	0x13d62
+	.long	0x13d68
 	.uleb128 0x2
-	.long	0x18377
+	.long	0x18431
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF100
+	.secrel32	.LASF101
 	.byte	0xb
 	.byte	0x8c
 	.byte	0x2
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_\0"
 	.byte	0x1
-	.long	0x13d0a
-	.long	0x13d15
-	.uleb128 0x8
+	.long	0x13dc4
+	.long	0x13dcf
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x2
-	.long	0x18340
+	.long	0x183fa
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.uleb128 0x15
-	.secrel32	.LASF101
+	.secrel32	.LASF102
 	.byte	0xb
 	.byte	0x87
 	.byte	0x2
 	.ascii "_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_\0"
 	.byte	0x1
-	.long	0x13d8f
-	.long	0x13d9f
-	.uleb128 0x8
+	.long	0x13e49
+	.long	0x13e59
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x13d8f
+	.secrel32	.LASF100
+	.long	0x13e49
 	.uleb128 0x38
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0x2
-	.long	0x18340
+	.long	0x183fa
 	.uleb128 0x1
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.byte	0
 	.uleb128 0x6
-	.long	0x1397c
-	.uleb128 0x17
+	.long	0x13a36
+	.uleb128 0x16
 	.ascii "__alloc_traits<std::allocator<T100FolderInfo*>, T100FolderInfo*>\0"
 	.byte	0x1
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x1412e
+	.long	0x141e8
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x8e56
+	.long	0x8f10
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x8ddd
+	.long	0x8e97
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x8ec5
+	.long	0x8f7f
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x8f27
+	.long	0x8fe1
 	.uleb128 0x3b
-	.long	0x8d93
+	.long	0x8e4d
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.secrel32	.LASF133
 	.byte	0x21
 	.byte	0x5e
 	.byte	0x13
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP14T100FolderInfoES2_E17_S_select_on_copyERKS3_\0"
-	.long	0x8cbc
-	.long	0x13e85
+	.long	0x8d76
+	.long	0x13f3f
 	.uleb128 0x1
-	.long	0x1839a
+	.long	0x18454
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5e
 	.secrel32	.LASF134
 	.byte	0x21
 	.byte	0x61
 	.byte	0x11
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP14T100FolderInfoES2_E10_S_on_swapERS3_S5_\0"
-	.long	0x13ee8
+	.long	0x13fa2
 	.uleb128 0x1
-	.long	0x183ac
+	.long	0x18466
 	.uleb128 0x1
-	.long	0x183ac
+	.long	0x18466
 	.byte	0
 	.uleb128 0x25
 	.secrel32	.LASF135
@@ -19680,81 +19749,81 @@ _ZTS15T100FolderLogic:
 	.byte	0x64
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP14T100FolderInfoES2_E27_S_propagate_on_copy_assignEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF136
 	.byte	0x21
 	.byte	0x67
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP14T100FolderInfoES2_E27_S_propagate_on_move_assignEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF137
 	.byte	0x21
 	.byte	0x6a
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP14T100FolderInfoES2_E20_S_propagate_on_swapEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF138
 	.byte	0x21
 	.byte	0x6d
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP14T100FolderInfoES2_E15_S_always_equalEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF139
 	.byte	0x21
 	.byte	0x70
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIP14T100FolderInfoES2_E15_S_nothrow_moveEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0xe
 	.secrel32	.LASF55
 	.byte	0x21
 	.byte	0x3a
 	.byte	0x35
-	.long	0x8fef
+	.long	0x90a9
 	.uleb128 0x6
-	.long	0x140b8
+	.long	0x14172
 	.uleb128 0xe
 	.secrel32	.LASF1
 	.byte	0x21
 	.byte	0x3b
 	.byte	0x35
-	.long	0x8dd0
+	.long	0x8e8a
 	.uleb128 0xe
 	.secrel32	.LASF30
 	.byte	0x21
 	.byte	0x40
 	.byte	0x35
-	.long	0x183b2
+	.long	0x1846c
 	.uleb128 0xe
 	.secrel32	.LASF28
 	.byte	0x21
 	.byte	0x41
 	.byte	0x35
-	.long	0x183b8
-	.uleb128 0x17
+	.long	0x18472
+	.uleb128 0x16
 	.ascii "rebind<T100FolderInfo*>\0"
 	.byte	0x1
 	.byte	0x21
 	.byte	0x74
 	.byte	0xe
-	.long	0x14124
+	.long	0x141de
 	.uleb128 0xe
 	.secrel32	.LASF140
 	.byte	0x21
 	.byte	0x75
 	.byte	0x41
-	.long	0x8ffc
-	.uleb128 0x8
+	.long	0x90b6
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x8cbc
+	.long	0x8d76
 	.byte	0
 	.uleb128 0x40
 	.ascii "__normal_iterator<T100FolderInfo**, std::vector<T100FolderInfo*, std::allocator<T100FolderInfo*> > >\0"
@@ -19762,26 +19831,26 @@ _ZTS15T100FolderLogic:
 	.byte	0x4
 	.word	0x2f9
 	.byte	0xb
-	.long	0x147e2
+	.long	0x1489c
 	.uleb128 0x4d
 	.secrel32	.LASF116
 	.byte	0x4
 	.word	0x2fc
 	.byte	0x11
-	.long	0x18351
+	.long	0x1840b
 	.byte	0
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF141
 	.byte	0x4
 	.word	0x308
 	.byte	0x1a
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC4Ev\0"
 	.byte	0x1
-	.long	0x1420c
-	.long	0x14212
+	.long	0x142c6
+	.long	0x142cc
 	.uleb128 0x2
-	.long	0x18515
+	.long	0x185cf
 	.byte	0
 	.uleb128 0x34
 	.secrel32	.LASF141
@@ -19790,19 +19859,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC4ERKS3_\0"
 	.byte	0x1
-	.long	0x14276
-	.long	0x14281
+	.long	0x14330
+	.long	0x1433b
 	.uleb128 0x2
-	.long	0x18515
+	.long	0x185cf
 	.uleb128 0x1
-	.long	0x18520
+	.long	0x185da
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF30
 	.byte	0x4
 	.word	0x305
 	.byte	0x32
-	.long	0xee84
+	.long	0xef3e
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF109
@@ -19810,19 +19879,19 @@ _ZTS15T100FolderLogic:
 	.word	0x319
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEdeEv\0"
-	.long	0x14281
+	.long	0x1433b
 	.byte	0x1
-	.long	0x142f4
-	.long	0x142fa
+	.long	0x143ae
+	.long	0x143b4
 	.uleb128 0x2
-	.long	0x18526
+	.long	0x185e0
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF1
 	.byte	0x4
 	.word	0x306
 	.byte	0x32
-	.long	0xee78
+	.long	0xef32
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF110
@@ -19830,12 +19899,12 @@ _ZTS15T100FolderLogic:
 	.word	0x31d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEptEv\0"
-	.long	0x142fa
+	.long	0x143b4
 	.byte	0x1
-	.long	0x1436d
-	.long	0x14373
+	.long	0x14427
+	.long	0x1442d
 	.uleb128 0x2
-	.long	0x18526
+	.long	0x185e0
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -19843,12 +19912,12 @@ _ZTS15T100FolderLogic:
 	.word	0x321
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEppEv\0"
-	.long	0x18531
+	.long	0x185eb
 	.byte	0x1
-	.long	0x143d7
-	.long	0x143dd
+	.long	0x14491
+	.long	0x14497
 	.uleb128 0x2
-	.long	0x18515
+	.long	0x185cf
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -19856,14 +19925,14 @@ _ZTS15T100FolderLogic:
 	.word	0x328
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEppEi\0"
-	.long	0x1412e
+	.long	0x141e8
 	.byte	0x1
-	.long	0x14441
-	.long	0x1444c
+	.long	0x144fb
+	.long	0x14506
 	.uleb128 0x2
-	.long	0x18515
+	.long	0x185cf
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -19871,12 +19940,12 @@ _ZTS15T100FolderLogic:
 	.word	0x32d
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEmmEv\0"
-	.long	0x18531
+	.long	0x185eb
 	.byte	0x1
-	.long	0x144b0
-	.long	0x144b6
+	.long	0x1456a
+	.long	0x14570
 	.uleb128 0x2
-	.long	0x18515
+	.long	0x185cf
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -19884,14 +19953,14 @@ _ZTS15T100FolderLogic:
 	.word	0x334
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEmmEi\0"
-	.long	0x1412e
+	.long	0x141e8
 	.byte	0x1
-	.long	0x1451a
-	.long	0x14525
+	.long	0x145d4
+	.long	0x145df
 	.uleb128 0x2
-	.long	0x18515
+	.long	0x185cf
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -19899,21 +19968,21 @@ _ZTS15T100FolderLogic:
 	.word	0x339
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEixEx\0"
-	.long	0x14281
+	.long	0x1433b
 	.byte	0x1
-	.long	0x1458a
-	.long	0x14595
+	.long	0x14644
+	.long	0x1464f
 	.uleb128 0x2
-	.long	0x18526
+	.long	0x185e0
 	.uleb128 0x1
-	.long	0x14595
+	.long	0x1464f
 	.byte	0
 	.uleb128 0xd
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x4
 	.word	0x304
 	.byte	0x38
-	.long	0xee6c
+	.long	0xef26
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -19921,14 +19990,14 @@ _ZTS15T100FolderLogic:
 	.word	0x33d
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEpLEx\0"
-	.long	0x18531
+	.long	0x185eb
 	.byte	0x1
-	.long	0x14607
-	.long	0x14612
+	.long	0x146c1
+	.long	0x146cc
 	.uleb128 0x2
-	.long	0x18515
+	.long	0x185cf
 	.uleb128 0x1
-	.long	0x14595
+	.long	0x1464f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF113
@@ -19936,14 +20005,14 @@ _ZTS15T100FolderLogic:
 	.word	0x341
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEplEx\0"
-	.long	0x1412e
+	.long	0x141e8
 	.byte	0x1
-	.long	0x14677
-	.long	0x14682
+	.long	0x14731
+	.long	0x1473c
 	.uleb128 0x2
-	.long	0x18526
+	.long	0x185e0
 	.uleb128 0x1
-	.long	0x14595
+	.long	0x1464f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF115
@@ -19951,14 +20020,14 @@ _ZTS15T100FolderLogic:
 	.word	0x345
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEmIEx\0"
-	.long	0x18531
+	.long	0x185eb
 	.byte	0x1
-	.long	0x146e6
-	.long	0x146f1
+	.long	0x147a0
+	.long	0x147ab
 	.uleb128 0x2
-	.long	0x18515
+	.long	0x185cf
 	.uleb128 0x1
-	.long	0x14595
+	.long	0x1464f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF114
@@ -19966,14 +20035,14 @@ _ZTS15T100FolderLogic:
 	.word	0x349
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEmiEx\0"
-	.long	0x1412e
+	.long	0x141e8
 	.byte	0x1
-	.long	0x14756
-	.long	0x14761
+	.long	0x14810
+	.long	0x1481b
 	.uleb128 0x2
-	.long	0x18526
+	.long	0x185e0
 	.uleb128 0x1
-	.long	0x14595
+	.long	0x1464f
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF108
@@ -19981,22 +20050,22 @@ _ZTS15T100FolderLogic:
 	.word	0x34d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseEv\0"
-	.long	0x18520
+	.long	0x185da
 	.byte	0x1
-	.long	0x147c9
-	.long	0x147cf
+	.long	0x14883
+	.long	0x14889
 	.uleb128 0x2
-	.long	0x18526
+	.long	0x185e0
 	.byte	0
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.uleb128 0x5
 	.secrel32	.LASF142
-	.long	0x9816
+	.long	0x98d0
 	.byte	0
 	.uleb128 0x6
-	.long	0x1412e
+	.long	0x141e8
 	.uleb128 0x28
 	.ascii "__normal_iterator<T100FolderInfo* const*, std::vector<T100FolderInfo*, std::allocator<T100FolderInfo*> > >\0"
 	.uleb128 0x3e
@@ -20005,7 +20074,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x3a
 	.byte	0xb
-	.long	0x14cf1
+	.long	0x14dab
 	.uleb128 0x15
 	.secrel32	.LASF124
 	.byte	0xb
@@ -20013,10 +20082,10 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC4Ev\0"
 	.byte	0x1
-	.long	0x1492d
-	.long	0x14933
+	.long	0x149e7
+	.long	0x149ed
 	.uleb128 0x2
-	.long	0x18438
+	.long	0x184f2
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF124
@@ -20025,12 +20094,12 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC4ERKS7_\0"
 	.byte	0x1
-	.long	0x1499f
-	.long	0x149aa
+	.long	0x14a59
+	.long	0x14a64
 	.uleb128 0x2
-	.long	0x18438
+	.long	0x184f2
 	.uleb128 0x1
-	.long	0x18443
+	.long	0x184fd
 	.byte	0
 	.uleb128 0x15
 	.secrel32	.LASF125
@@ -20039,19 +20108,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED4Ev\0"
 	.byte	0x1
-	.long	0x14a12
-	.long	0x14a1d
+	.long	0x14acc
+	.long	0x14ad7
 	.uleb128 0x2
-	.long	0x18438
+	.long	0x184f2
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF1
 	.byte	0xb
 	.byte	0x3f
 	.byte	0x1a
-	.long	0x18203
+	.long	0x182bd
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF126
@@ -20059,28 +20128,28 @@ _ZTS15T100FolderLogic:
 	.byte	0x59
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE7addressERS6_\0"
-	.long	0x14a1d
+	.long	0x14ad7
 	.byte	0x1
-	.long	0x14aa0
-	.long	0x14aab
+	.long	0x14b5a
+	.long	0x14b65
 	.uleb128 0x2
-	.long	0x18449
+	.long	0x18503
 	.uleb128 0x1
-	.long	0x14aab
+	.long	0x14b65
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF30
 	.byte	0xb
 	.byte	0x41
 	.byte	0x1a
-	.long	0x18232
+	.long	0x182ec
 	.byte	0x1
 	.uleb128 0x18
 	.secrel32	.LASF4
 	.byte	0xb
 	.byte	0x40
 	.byte	0x1a
-	.long	0x1820e
+	.long	0x182c8
 	.byte	0x1
 	.uleb128 0x1a
 	.secrel32	.LASF126
@@ -20088,61 +20157,61 @@ _ZTS15T100FolderLogic:
 	.byte	0x5d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE7addressERKS6_\0"
-	.long	0x14ab8
+	.long	0x14b72
 	.byte	0x1
-	.long	0x14b3c
-	.long	0x14b47
+	.long	0x14bf6
+	.long	0x14c01
 	.uleb128 0x2
-	.long	0x18449
+	.long	0x18503
 	.uleb128 0x1
-	.long	0x14b47
+	.long	0x14c01
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF28
 	.byte	0xb
 	.byte	0x42
 	.byte	0x1a
-	.long	0x18226
+	.long	0x182e0
 	.byte	0x1
 	.uleb128 0x1a
-	.secrel32	.LASF64
+	.secrel32	.LASF65
 	.byte	0xb
 	.byte	0x63
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE8allocateEyPKv\0"
-	.long	0x14a1d
+	.long	0x14ad7
 	.byte	0x1
-	.long	0x14bca
-	.long	0x14bda
+	.long	0x14c84
+	.long	0x14c94
 	.uleb128 0x2
-	.long	0x18438
+	.long	0x184f2
 	.uleb128 0x1
-	.long	0x14bda
+	.long	0x14c94
 	.uleb128 0x1
-	.long	0x16828
+	.long	0x16afb
 	.byte	0
 	.uleb128 0x18
 	.secrel32	.LASF2
 	.byte	0xb
 	.byte	0x3d
 	.byte	0x1a
-	.long	0x53c6
+	.long	0x5480
 	.byte	0x1
 	.uleb128 0x15
-	.secrel32	.LASF66
+	.secrel32	.LASF67
 	.byte	0xb
 	.byte	0x74
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE10deallocateEPS6_y\0"
 	.byte	0x1
-	.long	0x14c5d
-	.long	0x14c6d
+	.long	0x14d17
+	.long	0x14d27
 	.uleb128 0x2
-	.long	0x18438
+	.long	0x184f2
 	.uleb128 0x1
-	.long	0x14a1d
+	.long	0x14ad7
 	.uleb128 0x1
-	.long	0x14bda
+	.long	0x14c94
 	.byte	0
 	.uleb128 0x1a
 	.secrel32	.LASF21
@@ -20150,71 +20219,71 @@ _ZTS15T100FolderLogic:
 	.byte	0x81
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE8max_sizeEv\0"
-	.long	0x14bda
+	.long	0x14c94
 	.byte	0x1
-	.long	0x14ce1
-	.long	0x14ce7
+	.long	0x14d9b
+	.long	0x14da1
 	.uleb128 0x2
-	.long	0x18449
+	.long	0x18503
 	.byte	0
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_Tp\0"
 	.long	0x14d
 	.byte	0
 	.uleb128 0x6
-	.long	0x14853
-	.uleb128 0x17
+	.long	0x1490d
+	.uleb128 0x16
 	.ascii "__alloc_traits<std::allocator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >, std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
 	.byte	0x1
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0x15249
+	.long	0x15303
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0xb6f4
+	.long	0xb7ae
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0xb658
+	.long	0xb712
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0xb786
+	.long	0xb840
 	.uleb128 0x4
 	.byte	0x21
 	.byte	0x32
 	.byte	0xa
-	.long	0xb80b
+	.long	0xb8c5
 	.uleb128 0x3b
-	.long	0xb5c4
+	.long	0xb67e
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.secrel32	.LASF133
 	.byte	0x21
 	.byte	0x5e
 	.byte	0x13
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEES6_E17_S_select_on_copyERKS7_\0"
-	.long	0xb43a
-	.long	0x14e84
+	.long	0xb4f4
+	.long	0x14f3e
 	.uleb128 0x1
-	.long	0x1845a
+	.long	0x18514
 	.byte	0
-	.uleb128 0x5c
+	.uleb128 0x5e
 	.secrel32	.LASF134
 	.byte	0x21
 	.byte	0x61
 	.byte	0x11
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEES6_E10_S_on_swapERS7_S9_\0"
-	.long	0x14f0a
+	.long	0x14fc4
 	.uleb128 0x1
-	.long	0x1846c
+	.long	0x18526
 	.uleb128 0x1
-	.long	0x1846c
+	.long	0x18526
 	.byte	0
 	.uleb128 0x25
 	.secrel32	.LASF135
@@ -20222,81 +20291,81 @@ _ZTS15T100FolderLogic:
 	.byte	0x64
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEES6_E27_S_propagate_on_copy_assignEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF136
 	.byte	0x21
 	.byte	0x67
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEES6_E27_S_propagate_on_move_assignEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF137
 	.byte	0x21
 	.byte	0x6a
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEES6_E20_S_propagate_on_swapEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF138
 	.byte	0x21
 	.byte	0x6d
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEES6_E15_S_always_equalEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x25
 	.secrel32	.LASF139
 	.byte	0x21
 	.byte	0x70
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEES6_E15_S_nothrow_moveEv\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0xe
 	.secrel32	.LASF55
 	.byte	0x21
 	.byte	0x3a
 	.byte	0x35
-	.long	0xb919
+	.long	0xb9d3
 	.uleb128 0x6
-	.long	0x15189
+	.long	0x15243
 	.uleb128 0xe
 	.secrel32	.LASF1
 	.byte	0x21
 	.byte	0x3b
 	.byte	0x35
-	.long	0xb64b
+	.long	0xb705
 	.uleb128 0xe
 	.secrel32	.LASF30
 	.byte	0x21
 	.byte	0x40
 	.byte	0x35
-	.long	0x18472
+	.long	0x1852c
 	.uleb128 0xe
 	.secrel32	.LASF28
 	.byte	0x21
 	.byte	0x41
 	.byte	0x35
-	.long	0x18478
-	.uleb128 0x17
+	.long	0x18532
+	.uleb128 0x16
 	.ascii "rebind<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
 	.byte	0x1
 	.byte	0x21
 	.byte	0x74
 	.byte	0xe
-	.long	0x1523f
+	.long	0x152f9
 	.uleb128 0xe
 	.secrel32	.LASF140
 	.byte	0x21
 	.byte	0x75
 	.byte	0x41
-	.long	0xb926
-	.uleb128 0x8
+	.long	0xb9e0
+	.uleb128 0x7
 	.ascii "_Tp\0"
 	.long	0x14d
 	.byte	0
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0xb43a
+	.long	0xb4f4
 	.byte	0
 	.uleb128 0x40
 	.ascii "__normal_iterator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >*, std::vector<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >, std::allocator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > > >\0"
@@ -20304,26 +20373,26 @@ _ZTS15T100FolderLogic:
 	.byte	0x4
 	.word	0x2f9
 	.byte	0xb
-	.long	0x15bc3
+	.long	0x15c7d
 	.uleb128 0x4d
 	.secrel32	.LASF116
 	.byte	0x4
 	.word	0x2fc
 	.byte	0x11
-	.long	0x18203
+	.long	0x182bd
 	.byte	0
 	.byte	0x2
-	.uleb128 0x7
+	.uleb128 0x8
 	.secrel32	.LASF141
 	.byte	0x4
 	.word	0x308
 	.byte	0x1a
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC4Ev\0"
 	.byte	0x1
-	.long	0x15426
-	.long	0x1542c
+	.long	0x154e0
+	.long	0x154e6
 	.uleb128 0x2
-	.long	0x184f3
+	.long	0x185ad
 	.byte	0
 	.uleb128 0x34
 	.secrel32	.LASF141
@@ -20332,19 +20401,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC4ERKS7_\0"
 	.byte	0x1
-	.long	0x154b3
-	.long	0x154be
+	.long	0x1556d
+	.long	0x15578
 	.uleb128 0x2
-	.long	0x184f3
+	.long	0x185ad
 	.uleb128 0x1
-	.long	0x184fe
+	.long	0x185b8
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF30
 	.byte	0x4
 	.word	0x305
 	.byte	0x32
-	.long	0xec0b
+	.long	0xecc5
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF109
@@ -20352,19 +20421,19 @@ _ZTS15T100FolderLogic:
 	.word	0x319
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv\0"
-	.long	0x154be
+	.long	0x15578
 	.byte	0x1
-	.long	0x15554
-	.long	0x1555a
+	.long	0x1560e
+	.long	0x15614
 	.uleb128 0x2
-	.long	0x18504
+	.long	0x185be
 	.byte	0
 	.uleb128 0xd
 	.secrel32	.LASF1
 	.byte	0x4
 	.word	0x306
 	.byte	0x32
-	.long	0xebff
+	.long	0xecb9
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF110
@@ -20372,12 +20441,12 @@ _ZTS15T100FolderLogic:
 	.word	0x31d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEptEv\0"
-	.long	0x1555a
+	.long	0x15614
 	.byte	0x1
-	.long	0x155f0
-	.long	0x155f6
+	.long	0x156aa
+	.long	0x156b0
 	.uleb128 0x2
-	.long	0x18504
+	.long	0x185be
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -20385,12 +20454,12 @@ _ZTS15T100FolderLogic:
 	.word	0x321
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv\0"
-	.long	0x1850f
+	.long	0x185c9
 	.byte	0x1
-	.long	0x1567d
-	.long	0x15683
+	.long	0x15737
+	.long	0x1573d
 	.uleb128 0x2
-	.long	0x184f3
+	.long	0x185ad
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF111
@@ -20398,14 +20467,14 @@ _ZTS15T100FolderLogic:
 	.word	0x328
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEi\0"
-	.long	0x15249
+	.long	0x15303
 	.byte	0x1
-	.long	0x1570a
-	.long	0x15715
+	.long	0x157c4
+	.long	0x157cf
 	.uleb128 0x2
-	.long	0x184f3
+	.long	0x185ad
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -20413,12 +20482,12 @@ _ZTS15T100FolderLogic:
 	.word	0x32d
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEmmEv\0"
-	.long	0x1850f
+	.long	0x185c9
 	.byte	0x1
-	.long	0x1579c
-	.long	0x157a2
+	.long	0x15856
+	.long	0x1585c
 	.uleb128 0x2
-	.long	0x184f3
+	.long	0x185ad
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF112
@@ -20426,14 +20495,14 @@ _ZTS15T100FolderLogic:
 	.word	0x334
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEmmEi\0"
-	.long	0x15249
+	.long	0x15303
 	.byte	0x1
-	.long	0x15829
-	.long	0x15834
+	.long	0x158e3
+	.long	0x158ee
 	.uleb128 0x2
-	.long	0x184f3
+	.long	0x185ad
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF29
@@ -20441,21 +20510,21 @@ _ZTS15T100FolderLogic:
 	.word	0x339
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEixEx\0"
-	.long	0x154be
+	.long	0x15578
 	.byte	0x1
-	.long	0x158bc
-	.long	0x158c7
+	.long	0x15976
+	.long	0x15981
 	.uleb128 0x2
-	.long	0x18504
+	.long	0x185be
 	.uleb128 0x1
-	.long	0x158c7
+	.long	0x15981
 	.byte	0
 	.uleb128 0xd
-	.secrel32	.LASF102
+	.secrel32	.LASF103
 	.byte	0x4
 	.word	0x304
 	.byte	0x38
-	.long	0xebf3
+	.long	0xecad
 	.byte	0x1
 	.uleb128 0x3
 	.secrel32	.LASF33
@@ -20463,14 +20532,14 @@ _ZTS15T100FolderLogic:
 	.word	0x33d
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEpLEx\0"
-	.long	0x1850f
+	.long	0x185c9
 	.byte	0x1
-	.long	0x1595c
-	.long	0x15967
+	.long	0x15a16
+	.long	0x15a21
 	.uleb128 0x2
-	.long	0x184f3
+	.long	0x185ad
 	.uleb128 0x1
-	.long	0x158c7
+	.long	0x15981
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF113
@@ -20478,14 +20547,14 @@ _ZTS15T100FolderLogic:
 	.word	0x341
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEplEx\0"
-	.long	0x15249
+	.long	0x15303
 	.byte	0x1
-	.long	0x159ef
-	.long	0x159fa
+	.long	0x15aa9
+	.long	0x15ab4
 	.uleb128 0x2
-	.long	0x18504
+	.long	0x185be
 	.uleb128 0x1
-	.long	0x158c7
+	.long	0x15981
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF115
@@ -20493,14 +20562,14 @@ _ZTS15T100FolderLogic:
 	.word	0x345
 	.byte	0x7
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEmIEx\0"
-	.long	0x1850f
+	.long	0x185c9
 	.byte	0x1
-	.long	0x15a81
-	.long	0x15a8c
+	.long	0x15b3b
+	.long	0x15b46
 	.uleb128 0x2
-	.long	0x184f3
+	.long	0x185ad
 	.uleb128 0x1
-	.long	0x158c7
+	.long	0x15981
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF114
@@ -20508,14 +20577,14 @@ _ZTS15T100FolderLogic:
 	.word	0x349
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEmiEx\0"
-	.long	0x15249
+	.long	0x15303
 	.byte	0x1
-	.long	0x15b14
-	.long	0x15b1f
+	.long	0x15bce
+	.long	0x15bd9
 	.uleb128 0x2
-	.long	0x18504
+	.long	0x185be
 	.uleb128 0x1
-	.long	0x158c7
+	.long	0x15981
 	.byte	0
 	.uleb128 0x3
 	.secrel32	.LASF108
@@ -20523,22 +20592,22 @@ _ZTS15T100FolderLogic:
 	.word	0x34d
 	.byte	0x7
 	.ascii "_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEE4baseEv\0"
-	.long	0x184fe
+	.long	0x185b8
 	.byte	0x1
-	.long	0x15baa
-	.long	0x15bb0
+	.long	0x15c64
+	.long	0x15c6a
 	.uleb128 0x2
-	.long	0x18504
+	.long	0x185be
 	.byte	0
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18203
+	.secrel32	.LASF104
+	.long	0x182bd
 	.uleb128 0x5
 	.secrel32	.LASF142
-	.long	0xc3df
+	.long	0xc499
 	.byte	0
 	.uleb128 0x6
-	.long	0x15249
+	.long	0x15303
 	.uleb128 0x28
 	.ascii "__normal_iterator<const std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >*, std::vector<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >, std::allocator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > > > >\0"
 	.uleb128 0x2f
@@ -20547,13 +20616,13 @@ _ZTS15T100FolderLogic:
 	.byte	0x98
 	.byte	0x5
 	.ascii "_ZN9__gnu_cxx17__is_null_pointerIwEEbPT_\0"
-	.long	0x16105
-	.long	0x15d71
-	.uleb128 0x8
+	.long	0x16a1c
+	.long	0x15e2b
+	.uleb128 0x7
 	.ascii "_Type\0"
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.byte	0
 	.uleb128 0x13
 	.ascii "operator-<T100FileInfo**, std::vector<T100FileInfo*> >\0"
@@ -20561,18 +20630,18 @@ _ZTS15T100FolderLogic:
 	.word	0x3c3
 	.byte	0x5
 	.ascii "_ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_\0"
-	.long	0x136ce
-	.long	0x15e41
+	.long	0x13788
+	.long	0x15efb
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.uleb128 0x5
 	.secrel32	.LASF142
-	.long	0x713c
+	.long	0x71f6
 	.uleb128 0x1
-	.long	0x19eb2
+	.long	0x19f6c
 	.uleb128 0x1
-	.long	0x19eb2
+	.long	0x19f6c
 	.byte	0
 	.uleb128 0x13
 	.ascii "operator-<T100FolderInfo**, std::vector<T100FolderInfo*> >\0"
@@ -20580,88 +20649,803 @@ _ZTS15T100FolderLogic:
 	.word	0x3c3
 	.byte	0x5
 	.ascii "_ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_\0"
-	.long	0x14595
-	.long	0x15f17
+	.long	0x1464f
+	.long	0x15fd1
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.uleb128 0x5
 	.secrel32	.LASF142
-	.long	0x9816
+	.long	0x98d0
 	.uleb128 0x1
-	.long	0x1a297
+	.long	0x1a352
 	.uleb128 0x1
-	.long	0x1a297
+	.long	0x1a352
 	.byte	0
-	.uleb128 0x78
+	.uleb128 0x79
 	.ascii "operator!=<std::__cxx11::basic_string<wchar_t>*, std::vector<std::__cxx11::basic_string<wchar_t> > >\0"
 	.byte	0x4
 	.word	0x371
 	.byte	0x5
 	.ascii "_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_\0"
-	.long	0x16105
+	.long	0x16a1c
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18203
+	.secrel32	.LASF104
+	.long	0x182bd
 	.uleb128 0x5
 	.secrel32	.LASF142
-	.long	0xc3df
+	.long	0xc499
 	.uleb128 0x1
-	.long	0x1b0e7
+	.long	0x1b1a3
 	.uleb128 0x1
-	.long	0x1b0e7
+	.long	0x1b1a3
 	.byte	0
 	.byte	0
-	.uleb128 0x26
-	.byte	0x4
-	.byte	0x7
-	.ascii "unsigned int\0"
+	.uleb128 0x7a
+	.byte	0x8
+	.ascii "__builtin_va_list\0"
+	.long	0x160f6
 	.uleb128 0x26
 	.byte	0x1
-	.byte	0x8
-	.ascii "unsigned char\0"
+	.byte	0x6
+	.ascii "char\0"
 	.uleb128 0x6
-	.long	0x16034
-	.uleb128 0x26
-	.byte	0x2
-	.byte	0x7
-	.ascii "short unsigned int\0"
-	.uleb128 0x6
-	.long	0x1604a
-	.uleb128 0x26
-	.byte	0x4
-	.byte	0x7
-	.ascii "long unsigned int\0"
+	.long	0x160f6
+	.uleb128 0x10
+	.ascii "size_t\0"
+	.byte	0x23
+	.byte	0x23
+	.byte	0x2c
+	.long	0x16112
 	.uleb128 0x26
 	.byte	0x8
 	.byte	0x7
 	.ascii "long long unsigned int\0"
 	.uleb128 0x6
-	.long	0x1607a
-	.uleb128 0x26
-	.byte	0x1
-	.byte	0x6
-	.ascii "signed char\0"
-	.uleb128 0x26
-	.byte	0x2
-	.byte	0x5
-	.ascii "short int\0"
-	.uleb128 0x26
-	.byte	0x4
-	.byte	0x5
-	.ascii "int\0"
-	.uleb128 0x6
-	.long	0x160b5
-	.uleb128 0x26
-	.byte	0x4
-	.byte	0x5
-	.ascii "long int\0"
+	.long	0x16112
 	.uleb128 0x26
 	.byte	0x8
 	.byte	0x5
 	.ascii "long long int\0"
 	.uleb128 0x6
-	.long	0x160cd
+	.long	0x16131
+	.uleb128 0x10
+	.ascii "intptr_t\0"
+	.byte	0x23
+	.byte	0x3e
+	.byte	0x23
+	.long	0x16131
+	.uleb128 0x10
+	.ascii "uintptr_t\0"
+	.byte	0x23
+	.byte	0x4b
+	.byte	0x2c
+	.long	0x16112
+	.uleb128 0x10
+	.ascii "wint_t\0"
+	.byte	0x23
+	.byte	0x6a
+	.byte	0x18
+	.long	0x16179
+	.uleb128 0x26
+	.byte	0x2
+	.byte	0x7
+	.ascii "short unsigned int\0"
+	.uleb128 0x6
+	.long	0x16179
+	.uleb128 0x26
+	.byte	0x4
+	.byte	0x5
+	.ascii "int\0"
+	.uleb128 0x6
+	.long	0x16194
+	.uleb128 0x26
+	.byte	0x4
+	.byte	0x5
+	.ascii "long int\0"
+	.uleb128 0x48
+	.ascii "pthreadlocinfo\0"
+	.byte	0x23
+	.word	0x1b0
+	.byte	0x28
+	.long	0x161c4
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x161ca
+	.uleb128 0x91
+	.ascii "threadlocaleinfostruct\0"
+	.word	0x160
+	.byte	0x23
+	.word	0x1c4
+	.byte	0x10
+	.long	0x163c6
+	.uleb128 0x92
+	.byte	0x20
+	.byte	0x23
+	.word	0x1cf
+	.byte	0xa
+	.long	0x1623e
+	.uleb128 0x21
+	.ascii "locale\0"
+	.byte	0x23
+	.word	0x1d0
+	.byte	0xb
+	.long	0x164b1
+	.byte	0
+	.uleb128 0x21
+	.ascii "wlocale\0"
+	.byte	0x23
+	.word	0x1d1
+	.byte	0xe
+	.long	0x164b7
+	.byte	0x8
+	.uleb128 0x58
+	.secrel32	.LASF143
+	.byte	0x23
+	.word	0x1d2
+	.byte	0xa
+	.long	0x164d2
+	.byte	0x10
+	.uleb128 0x21
+	.ascii "wrefcount\0"
+	.byte	0x23
+	.word	0x1d3
+	.byte	0xa
+	.long	0x164d2
+	.byte	0x18
+	.byte	0
+	.uleb128 0x58
+	.secrel32	.LASF143
+	.byte	0x23
+	.word	0x1ca
+	.byte	0x7
+	.long	0x16194
+	.byte	0
+	.uleb128 0x21
+	.ascii "lc_codepage\0"
+	.byte	0x23
+	.word	0x1cb
+	.byte	0x10
+	.long	0x164d8
+	.byte	0x4
+	.uleb128 0x21
+	.ascii "lc_collate_cp\0"
+	.byte	0x23
+	.word	0x1cc
+	.byte	0x10
+	.long	0x164d8
+	.byte	0x8
+	.uleb128 0x21
+	.ascii "lc_handle\0"
+	.byte	0x23
+	.word	0x1cd
+	.byte	0x1c
+	.long	0x164e8
+	.byte	0xc
+	.uleb128 0x21
+	.ascii "lc_id\0"
+	.byte	0x23
+	.word	0x1ce
+	.byte	0x10
+	.long	0x1650d
+	.byte	0x24
+	.uleb128 0x21
+	.ascii "lc_category\0"
+	.byte	0x23
+	.word	0x1d4
+	.byte	0x12
+	.long	0x1651d
+	.byte	0x48
+	.uleb128 0x39
+	.ascii "lc_clike\0"
+	.byte	0x23
+	.word	0x1d5
+	.byte	0x7
+	.long	0x16194
+	.word	0x108
+	.uleb128 0x39
+	.ascii "mb_cur_max\0"
+	.byte	0x23
+	.word	0x1d6
+	.byte	0x7
+	.long	0x16194
+	.word	0x10c
+	.uleb128 0x39
+	.ascii "lconv_intl_refcount\0"
+	.byte	0x23
+	.word	0x1d7
+	.byte	0x8
+	.long	0x164d2
+	.word	0x110
+	.uleb128 0x39
+	.ascii "lconv_num_refcount\0"
+	.byte	0x23
+	.word	0x1d8
+	.byte	0x8
+	.long	0x164d2
+	.word	0x118
+	.uleb128 0x39
+	.ascii "lconv_mon_refcount\0"
+	.byte	0x23
+	.word	0x1d9
+	.byte	0x8
+	.long	0x164d2
+	.word	0x120
+	.uleb128 0x39
+	.ascii "lconv\0"
+	.byte	0x23
+	.word	0x1da
+	.byte	0x11
+	.long	0x167bb
+	.word	0x128
+	.uleb128 0x39
+	.ascii "ctype1_refcount\0"
+	.byte	0x23
+	.word	0x1db
+	.byte	0x8
+	.long	0x164d2
+	.word	0x130
+	.uleb128 0x39
+	.ascii "ctype1\0"
+	.byte	0x23
+	.word	0x1dc
+	.byte	0x13
+	.long	0x167c1
+	.word	0x138
+	.uleb128 0x39
+	.ascii "pctype\0"
+	.byte	0x23
+	.word	0x1dd
+	.byte	0x19
+	.long	0x167c7
+	.word	0x140
+	.uleb128 0x39
+	.ascii "pclmap\0"
+	.byte	0x23
+	.word	0x1de
+	.byte	0x18
+	.long	0x167cd
+	.word	0x148
+	.uleb128 0x39
+	.ascii "pcumap\0"
+	.byte	0x23
+	.word	0x1df
+	.byte	0x18
+	.long	0x167cd
+	.word	0x150
+	.uleb128 0x39
+	.ascii "lc_time_curr\0"
+	.byte	0x23
+	.word	0x1e0
+	.byte	0x1a
+	.long	0x167f9
+	.word	0x158
+	.byte	0
+	.uleb128 0x48
+	.ascii "pthreadmbcinfo\0"
+	.byte	0x23
+	.word	0x1b1
+	.byte	0x25
+	.long	0x163de
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x163e4
+	.uleb128 0x7b
+	.ascii "threadmbcinfostruct\0"
+	.uleb128 0x30
+	.ascii "localeinfo_struct\0"
+	.byte	0x10
+	.byte	0x23
+	.word	0x1b4
+	.byte	0x10
+	.long	0x1643a
+	.uleb128 0x21
+	.ascii "locinfo\0"
+	.byte	0x23
+	.word	0x1b5
+	.byte	0x12
+	.long	0x161ac
+	.byte	0
+	.uleb128 0x21
+	.ascii "mbcinfo\0"
+	.byte	0x23
+	.word	0x1b6
+	.byte	0x12
+	.long	0x163c6
+	.byte	0x8
+	.byte	0
+	.uleb128 0x48
+	.ascii "_locale_tstruct\0"
+	.byte	0x23
+	.word	0x1b7
+	.byte	0x3
+	.long	0x163f9
+	.uleb128 0x30
+	.ascii "tagLC_ID\0"
+	.byte	0x6
+	.byte	0x23
+	.word	0x1bb
+	.byte	0x10
+	.long	0x164a2
+	.uleb128 0x21
+	.ascii "wLanguage\0"
+	.byte	0x23
+	.word	0x1bc
+	.byte	0x12
+	.long	0x16179
+	.byte	0
+	.uleb128 0x21
+	.ascii "wCountry\0"
+	.byte	0x23
+	.word	0x1bd
+	.byte	0x12
+	.long	0x16179
+	.byte	0x2
+	.uleb128 0x21
+	.ascii "wCodePage\0"
+	.byte	0x23
+	.word	0x1be
+	.byte	0x12
+	.long	0x16179
+	.byte	0x4
+	.byte	0
+	.uleb128 0x48
+	.ascii "LC_ID\0"
+	.byte	0x23
+	.word	0x1bf
+	.byte	0x3
+	.long	0x16453
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x160f6
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x164c2
+	.uleb128 0x6
+	.long	0x164b7
+	.uleb128 0x26
+	.byte	0x2
+	.byte	0x7
+	.ascii "wchar_t\0"
+	.uleb128 0x6
+	.long	0x164c2
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x16194
+	.uleb128 0x26
+	.byte	0x4
+	.byte	0x7
+	.ascii "unsigned int\0"
+	.uleb128 0x4e
+	.long	0x164f8
+	.long	0x164f8
+	.uleb128 0x54
+	.long	0x16112
+	.byte	0x5
+	.byte	0
+	.uleb128 0x26
+	.byte	0x4
+	.byte	0x7
+	.ascii "long unsigned int\0"
+	.uleb128 0x4e
+	.long	0x164a2
+	.long	0x1651d
+	.uleb128 0x54
+	.long	0x16112
+	.byte	0x5
+	.byte	0
+	.uleb128 0x4e
+	.long	0x161ed
+	.long	0x1652d
+	.uleb128 0x54
+	.long	0x16112
+	.byte	0x5
+	.byte	0
+	.uleb128 0x16
+	.ascii "lconv\0"
+	.byte	0x98
+	.byte	0x24
+	.byte	0x2d
+	.byte	0xa
+	.long	0x167bb
+	.uleb128 0x11
+	.ascii "decimal_point\0"
+	.byte	0x24
+	.byte	0x2e
+	.byte	0xb
+	.long	0x164b1
+	.byte	0
+	.uleb128 0x11
+	.ascii "thousands_sep\0"
+	.byte	0x24
+	.byte	0x2f
+	.byte	0xb
+	.long	0x164b1
+	.byte	0x8
+	.uleb128 0x11
+	.ascii "grouping\0"
+	.byte	0x24
+	.byte	0x30
+	.byte	0xb
+	.long	0x164b1
+	.byte	0x10
+	.uleb128 0x11
+	.ascii "int_curr_symbol\0"
+	.byte	0x24
+	.byte	0x31
+	.byte	0xb
+	.long	0x164b1
+	.byte	0x18
+	.uleb128 0x11
+	.ascii "currency_symbol\0"
+	.byte	0x24
+	.byte	0x32
+	.byte	0xb
+	.long	0x164b1
+	.byte	0x20
+	.uleb128 0x11
+	.ascii "mon_decimal_point\0"
+	.byte	0x24
+	.byte	0x33
+	.byte	0xb
+	.long	0x164b1
+	.byte	0x28
+	.uleb128 0x11
+	.ascii "mon_thousands_sep\0"
+	.byte	0x24
+	.byte	0x34
+	.byte	0xb
+	.long	0x164b1
+	.byte	0x30
+	.uleb128 0x11
+	.ascii "mon_grouping\0"
+	.byte	0x24
+	.byte	0x35
+	.byte	0xb
+	.long	0x164b1
+	.byte	0x38
+	.uleb128 0x11
+	.ascii "positive_sign\0"
+	.byte	0x24
+	.byte	0x36
+	.byte	0xb
+	.long	0x164b1
+	.byte	0x40
+	.uleb128 0x11
+	.ascii "negative_sign\0"
+	.byte	0x24
+	.byte	0x37
+	.byte	0xb
+	.long	0x164b1
+	.byte	0x48
+	.uleb128 0x11
+	.ascii "int_frac_digits\0"
+	.byte	0x24
+	.byte	0x38
+	.byte	0xa
+	.long	0x160f6
+	.byte	0x50
+	.uleb128 0x11
+	.ascii "frac_digits\0"
+	.byte	0x24
+	.byte	0x39
+	.byte	0xa
+	.long	0x160f6
+	.byte	0x51
+	.uleb128 0x11
+	.ascii "p_cs_precedes\0"
+	.byte	0x24
+	.byte	0x3a
+	.byte	0xa
+	.long	0x160f6
+	.byte	0x52
+	.uleb128 0x11
+	.ascii "p_sep_by_space\0"
+	.byte	0x24
+	.byte	0x3b
+	.byte	0xa
+	.long	0x160f6
+	.byte	0x53
+	.uleb128 0x11
+	.ascii "n_cs_precedes\0"
+	.byte	0x24
+	.byte	0x3c
+	.byte	0xa
+	.long	0x160f6
+	.byte	0x54
+	.uleb128 0x11
+	.ascii "n_sep_by_space\0"
+	.byte	0x24
+	.byte	0x3d
+	.byte	0xa
+	.long	0x160f6
+	.byte	0x55
+	.uleb128 0x11
+	.ascii "p_sign_posn\0"
+	.byte	0x24
+	.byte	0x3e
+	.byte	0xa
+	.long	0x160f6
+	.byte	0x56
+	.uleb128 0x11
+	.ascii "n_sign_posn\0"
+	.byte	0x24
+	.byte	0x3f
+	.byte	0xa
+	.long	0x160f6
+	.byte	0x57
+	.uleb128 0x11
+	.ascii "_W_decimal_point\0"
+	.byte	0x24
+	.byte	0x41
+	.byte	0xe
+	.long	0x164b7
+	.byte	0x58
+	.uleb128 0x11
+	.ascii "_W_thousands_sep\0"
+	.byte	0x24
+	.byte	0x42
+	.byte	0xe
+	.long	0x164b7
+	.byte	0x60
+	.uleb128 0x11
+	.ascii "_W_int_curr_symbol\0"
+	.byte	0x24
+	.byte	0x43
+	.byte	0xe
+	.long	0x164b7
+	.byte	0x68
+	.uleb128 0x11
+	.ascii "_W_currency_symbol\0"
+	.byte	0x24
+	.byte	0x44
+	.byte	0xe
+	.long	0x164b7
+	.byte	0x70
+	.uleb128 0x11
+	.ascii "_W_mon_decimal_point\0"
+	.byte	0x24
+	.byte	0x45
+	.byte	0xe
+	.long	0x164b7
+	.byte	0x78
+	.uleb128 0x11
+	.ascii "_W_mon_thousands_sep\0"
+	.byte	0x24
+	.byte	0x46
+	.byte	0xe
+	.long	0x164b7
+	.byte	0x80
+	.uleb128 0x11
+	.ascii "_W_positive_sign\0"
+	.byte	0x24
+	.byte	0x47
+	.byte	0xe
+	.long	0x164b7
+	.byte	0x88
+	.uleb128 0x11
+	.ascii "_W_negative_sign\0"
+	.byte	0x24
+	.byte	0x48
+	.byte	0xe
+	.long	0x164b7
+	.byte	0x90
+	.byte	0
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x1652d
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x16179
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x1618f
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x167e4
+	.uleb128 0x26
+	.byte	0x1
+	.byte	0x8
+	.ascii "unsigned char\0"
+	.uleb128 0x6
+	.long	0x167d3
+	.uleb128 0x7b
+	.ascii "__lc_time_data\0"
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x167e9
+	.uleb128 0x10
+	.ascii "int8_t\0"
+	.byte	0x25
+	.byte	0x23
+	.byte	0x15
+	.long	0x1680e
+	.uleb128 0x26
+	.byte	0x1
+	.byte	0x6
+	.ascii "signed char\0"
+	.uleb128 0x10
+	.ascii "uint8_t\0"
+	.byte	0x25
+	.byte	0x24
+	.byte	0x19
+	.long	0x167d3
+	.uleb128 0x10
+	.ascii "int16_t\0"
+	.byte	0x25
+	.byte	0x25
+	.byte	0x10
+	.long	0x1683d
+	.uleb128 0x26
+	.byte	0x2
+	.byte	0x5
+	.ascii "short int\0"
+	.uleb128 0x10
+	.ascii "uint16_t\0"
+	.byte	0x25
+	.byte	0x26
+	.byte	0x19
+	.long	0x16179
+	.uleb128 0x10
+	.ascii "int32_t\0"
+	.byte	0x25
+	.byte	0x27
+	.byte	0xe
+	.long	0x16194
+	.uleb128 0x10
+	.ascii "uint32_t\0"
+	.byte	0x25
+	.byte	0x28
+	.byte	0x14
+	.long	0x164d8
+	.uleb128 0x10
+	.ascii "int64_t\0"
+	.byte	0x25
+	.byte	0x29
+	.byte	0x26
+	.long	0x16131
+	.uleb128 0x10
+	.ascii "uint64_t\0"
+	.byte	0x25
+	.byte	0x2a
+	.byte	0x30
+	.long	0x16112
+	.uleb128 0x10
+	.ascii "int_least8_t\0"
+	.byte	0x25
+	.byte	0x2d
+	.byte	0x15
+	.long	0x1680e
+	.uleb128 0x10
+	.ascii "uint_least8_t\0"
+	.byte	0x25
+	.byte	0x2e
+	.byte	0x19
+	.long	0x167d3
+	.uleb128 0x10
+	.ascii "int_least16_t\0"
+	.byte	0x25
+	.byte	0x2f
+	.byte	0x10
+	.long	0x1683d
+	.uleb128 0x10
+	.ascii "uint_least16_t\0"
+	.byte	0x25
+	.byte	0x30
+	.byte	0x19
+	.long	0x16179
+	.uleb128 0x10
+	.ascii "int_least32_t\0"
+	.byte	0x25
+	.byte	0x31
+	.byte	0xe
+	.long	0x16194
+	.uleb128 0x10
+	.ascii "uint_least32_t\0"
+	.byte	0x25
+	.byte	0x32
+	.byte	0x14
+	.long	0x164d8
+	.uleb128 0x10
+	.ascii "int_least64_t\0"
+	.byte	0x25
+	.byte	0x33
+	.byte	0x26
+	.long	0x16131
+	.uleb128 0x10
+	.ascii "uint_least64_t\0"
+	.byte	0x25
+	.byte	0x34
+	.byte	0x30
+	.long	0x16112
+	.uleb128 0x10
+	.ascii "int_fast8_t\0"
+	.byte	0x25
+	.byte	0x3a
+	.byte	0x15
+	.long	0x1680e
+	.uleb128 0x10
+	.ascii "uint_fast8_t\0"
+	.byte	0x25
+	.byte	0x3b
+	.byte	0x17
+	.long	0x167d3
+	.uleb128 0x10
+	.ascii "int_fast16_t\0"
+	.byte	0x25
+	.byte	0x3c
+	.byte	0x10
+	.long	0x1683d
+	.uleb128 0x10
+	.ascii "uint_fast16_t\0"
+	.byte	0x25
+	.byte	0x3d
+	.byte	0x19
+	.long	0x16179
+	.uleb128 0x10
+	.ascii "int_fast32_t\0"
+	.byte	0x25
+	.byte	0x3e
+	.byte	0xe
+	.long	0x16194
+	.uleb128 0x10
+	.ascii "uint_fast32_t\0"
+	.byte	0x25
+	.byte	0x3f
+	.byte	0x18
+	.long	0x164d8
+	.uleb128 0x10
+	.ascii "int_fast64_t\0"
+	.byte	0x25
+	.byte	0x40
+	.byte	0x26
+	.long	0x16131
+	.uleb128 0x10
+	.ascii "uint_fast64_t\0"
+	.byte	0x25
+	.byte	0x41
+	.byte	0x30
+	.long	0x16112
+	.uleb128 0x10
+	.ascii "intmax_t\0"
+	.byte	0x25
+	.byte	0x44
+	.byte	0x26
+	.long	0x16131
+	.uleb128 0x10
+	.ascii "uintmax_t\0"
+	.byte	0x25
+	.byte	0x45
+	.byte	0x30
+	.long	0x16112
+	.uleb128 0x26
+	.byte	0x1
+	.byte	0x2
+	.ascii "bool\0"
+	.uleb128 0x6
+	.long	0x16a1c
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x4be1
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x4cee
+	.uleb128 0x26
+	.byte	0x10
+	.byte	0x7
+	.ascii "__int128 unsigned\0"
+	.uleb128 0x26
+	.byte	0x10
+	.byte	0x5
+	.ascii "__int128\0"
+	.uleb128 0x26
+	.byte	0x2
+	.byte	0x10
+	.ascii "char16_t\0"
+	.uleb128 0x26
+	.byte	0x4
+	.byte	0x10
+	.ascii "char32_t\0"
 	.uleb128 0x26
 	.byte	0x10
 	.byte	0x4
@@ -20674,874 +21458,159 @@ _ZTS15T100FolderLogic:
 	.byte	0x4
 	.byte	0x4
 	.ascii "float\0"
-	.uleb128 0x26
-	.byte	0x1
-	.byte	0x2
-	.ascii "bool\0"
-	.uleb128 0x6
-	.long	0x16105
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x4bf4
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x4d01
-	.uleb128 0x26
-	.byte	0x10
-	.byte	0x7
-	.ascii "__int128 unsigned\0"
-	.uleb128 0x26
-	.byte	0x10
-	.byte	0x5
-	.ascii "__int128\0"
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x4d50
-	.uleb128 0x91
-	.long	0x4d97
-	.uleb128 0x72
+	.long	0x4e0a
+	.uleb128 0x93
+	.long	0x4e51
+	.uleb128 0x73
 	.ascii "__gnu_debug\0"
 	.byte	0x14
 	.byte	0x38
 	.byte	0xb
-	.long	0x16169
-	.uleb128 0x92
+	.long	0x16aba
+	.uleb128 0x94
 	.byte	0x14
 	.byte	0x3a
 	.byte	0x18
-	.long	0x4e49
+	.long	0x4f03
 	.byte	0
-	.uleb128 0x79
-	.byte	0x8
-	.ascii "__builtin_va_list\0"
-	.long	0x16181
-	.uleb128 0x26
-	.byte	0x1
-	.byte	0x6
-	.ascii "char\0"
-	.uleb128 0x6
-	.long	0x16181
-	.uleb128 0x10
-	.ascii "size_t\0"
-	.byte	0x23
-	.byte	0x23
-	.byte	0x2c
-	.long	0x1607a
-	.uleb128 0x10
-	.ascii "intptr_t\0"
-	.byte	0x23
-	.byte	0x3e
-	.byte	0x23
-	.long	0x160cd
-	.uleb128 0x10
-	.ascii "uintptr_t\0"
-	.byte	0x23
-	.byte	0x4b
-	.byte	0x2c
-	.long	0x1607a
-	.uleb128 0x10
-	.ascii "wint_t\0"
-	.byte	0x23
-	.byte	0x6a
-	.byte	0x18
-	.long	0x1604a
-	.uleb128 0x48
-	.ascii "pthreadlocinfo\0"
-	.byte	0x23
-	.word	0x1b0
-	.byte	0x28
-	.long	0x161e7
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x161ed
-	.uleb128 0x93
-	.ascii "threadlocaleinfostruct\0"
-	.word	0x160
-	.byte	0x23
-	.word	0x1c4
-	.byte	0x10
-	.long	0x163e9
-	.uleb128 0x94
-	.byte	0x20
-	.byte	0x23
-	.word	0x1cf
-	.byte	0xa
-	.long	0x16261
-	.uleb128 0x21
-	.ascii "locale\0"
-	.byte	0x23
-	.word	0x1d0
-	.byte	0xb
-	.long	0x164d4
-	.byte	0
-	.uleb128 0x21
-	.ascii "wlocale\0"
-	.byte	0x23
-	.word	0x1d1
-	.byte	0xe
-	.long	0x164da
-	.byte	0x8
-	.uleb128 0x57
-	.secrel32	.LASF143
-	.byte	0x23
-	.word	0x1d2
-	.byte	0xa
-	.long	0x164f5
-	.byte	0x10
-	.uleb128 0x21
-	.ascii "wrefcount\0"
-	.byte	0x23
-	.word	0x1d3
-	.byte	0xa
-	.long	0x164f5
-	.byte	0x18
-	.byte	0
-	.uleb128 0x57
-	.secrel32	.LASF143
-	.byte	0x23
-	.word	0x1ca
-	.byte	0x7
-	.long	0x160b5
-	.byte	0
-	.uleb128 0x21
-	.ascii "lc_codepage\0"
-	.byte	0x23
-	.word	0x1cb
-	.byte	0x10
-	.long	0x16024
-	.byte	0x4
-	.uleb128 0x21
-	.ascii "lc_collate_cp\0"
-	.byte	0x23
-	.word	0x1cc
-	.byte	0x10
-	.long	0x16024
-	.byte	0x8
-	.uleb128 0x21
-	.ascii "lc_handle\0"
-	.byte	0x23
-	.word	0x1cd
-	.byte	0x1c
-	.long	0x164fb
-	.byte	0xc
-	.uleb128 0x21
-	.ascii "lc_id\0"
-	.byte	0x23
-	.word	0x1ce
-	.byte	0x10
-	.long	0x1650b
-	.byte	0x24
-	.uleb128 0x21
-	.ascii "lc_category\0"
-	.byte	0x23
-	.word	0x1d4
-	.byte	0x12
-	.long	0x1651b
-	.byte	0x48
-	.uleb128 0x39
-	.ascii "lc_clike\0"
-	.byte	0x23
-	.word	0x1d5
-	.byte	0x7
-	.long	0x160b5
-	.word	0x108
-	.uleb128 0x39
-	.ascii "mb_cur_max\0"
-	.byte	0x23
-	.word	0x1d6
-	.byte	0x7
-	.long	0x160b5
-	.word	0x10c
-	.uleb128 0x39
-	.ascii "lconv_intl_refcount\0"
-	.byte	0x23
-	.word	0x1d7
-	.byte	0x8
-	.long	0x164f5
-	.word	0x110
-	.uleb128 0x39
-	.ascii "lconv_num_refcount\0"
-	.byte	0x23
-	.word	0x1d8
-	.byte	0x8
-	.long	0x164f5
-	.word	0x118
-	.uleb128 0x39
-	.ascii "lconv_mon_refcount\0"
-	.byte	0x23
-	.word	0x1d9
-	.byte	0x8
-	.long	0x164f5
-	.word	0x120
-	.uleb128 0x39
-	.ascii "lconv\0"
-	.byte	0x23
-	.word	0x1da
-	.byte	0x11
-	.long	0x167b9
-	.word	0x128
-	.uleb128 0x39
-	.ascii "ctype1_refcount\0"
-	.byte	0x23
-	.word	0x1db
-	.byte	0x8
-	.long	0x164f5
-	.word	0x130
-	.uleb128 0x39
-	.ascii "ctype1\0"
-	.byte	0x23
-	.word	0x1dc
-	.byte	0x13
-	.long	0x167bf
-	.word	0x138
-	.uleb128 0x39
-	.ascii "pctype\0"
-	.byte	0x23
-	.word	0x1dd
-	.byte	0x19
-	.long	0x167c5
-	.word	0x140
-	.uleb128 0x39
-	.ascii "pclmap\0"
-	.byte	0x23
-	.word	0x1de
-	.byte	0x18
-	.long	0x167cb
-	.word	0x148
-	.uleb128 0x39
-	.ascii "pcumap\0"
-	.byte	0x23
-	.word	0x1df
-	.byte	0x18
-	.long	0x167cb
-	.word	0x150
-	.uleb128 0x39
-	.ascii "lc_time_curr\0"
-	.byte	0x23
-	.word	0x1e0
-	.byte	0x1a
-	.long	0x167e1
-	.word	0x158
-	.byte	0
-	.uleb128 0x48
-	.ascii "pthreadmbcinfo\0"
-	.byte	0x23
-	.word	0x1b1
-	.byte	0x25
-	.long	0x16401
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x16407
-	.uleb128 0x7a
-	.ascii "threadmbcinfostruct\0"
-	.uleb128 0x30
-	.ascii "localeinfo_struct\0"
-	.byte	0x10
-	.byte	0x23
-	.word	0x1b4
-	.byte	0x10
-	.long	0x1645d
-	.uleb128 0x21
-	.ascii "locinfo\0"
-	.byte	0x23
-	.word	0x1b5
-	.byte	0x12
-	.long	0x161cf
-	.byte	0
-	.uleb128 0x21
-	.ascii "mbcinfo\0"
-	.byte	0x23
-	.word	0x1b6
-	.byte	0x12
-	.long	0x163e9
-	.byte	0x8
-	.byte	0
-	.uleb128 0x48
-	.ascii "_locale_tstruct\0"
-	.byte	0x23
-	.word	0x1b7
-	.byte	0x3
-	.long	0x1641c
-	.uleb128 0x30
-	.ascii "tagLC_ID\0"
-	.byte	0x6
-	.byte	0x23
-	.word	0x1bb
-	.byte	0x10
-	.long	0x164c5
-	.uleb128 0x21
-	.ascii "wLanguage\0"
-	.byte	0x23
-	.word	0x1bc
-	.byte	0x12
-	.long	0x1604a
-	.byte	0
-	.uleb128 0x21
-	.ascii "wCountry\0"
-	.byte	0x23
-	.word	0x1bd
-	.byte	0x12
-	.long	0x1604a
-	.byte	0x2
-	.uleb128 0x21
-	.ascii "wCodePage\0"
-	.byte	0x23
-	.word	0x1be
-	.byte	0x12
-	.long	0x1604a
-	.byte	0x4
-	.byte	0
-	.uleb128 0x48
-	.ascii "LC_ID\0"
-	.byte	0x23
-	.word	0x1bf
-	.byte	0x3
-	.long	0x16476
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x16181
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x164e5
-	.uleb128 0x6
-	.long	0x164da
-	.uleb128 0x26
-	.byte	0x2
-	.byte	0x7
-	.ascii "wchar_t\0"
-	.uleb128 0x6
-	.long	0x164e5
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x160b5
-	.uleb128 0x4e
-	.long	0x16065
-	.long	0x1650b
-	.uleb128 0x53
-	.long	0x1607a
-	.byte	0x5
-	.byte	0
-	.uleb128 0x4e
-	.long	0x164c5
-	.long	0x1651b
-	.uleb128 0x53
-	.long	0x1607a
-	.byte	0x5
-	.byte	0
-	.uleb128 0x4e
-	.long	0x16210
-	.long	0x1652b
-	.uleb128 0x53
-	.long	0x1607a
-	.byte	0x5
-	.byte	0
-	.uleb128 0x17
-	.ascii "lconv\0"
-	.byte	0x98
-	.byte	0x24
-	.byte	0x2d
-	.byte	0xa
-	.long	0x167b9
-	.uleb128 0x11
-	.ascii "decimal_point\0"
-	.byte	0x24
-	.byte	0x2e
-	.byte	0xb
-	.long	0x164d4
-	.byte	0
-	.uleb128 0x11
-	.ascii "thousands_sep\0"
-	.byte	0x24
-	.byte	0x2f
-	.byte	0xb
-	.long	0x164d4
-	.byte	0x8
-	.uleb128 0x11
-	.ascii "grouping\0"
-	.byte	0x24
-	.byte	0x30
-	.byte	0xb
-	.long	0x164d4
-	.byte	0x10
-	.uleb128 0x11
-	.ascii "int_curr_symbol\0"
-	.byte	0x24
-	.byte	0x31
-	.byte	0xb
-	.long	0x164d4
-	.byte	0x18
-	.uleb128 0x11
-	.ascii "currency_symbol\0"
-	.byte	0x24
-	.byte	0x32
-	.byte	0xb
-	.long	0x164d4
-	.byte	0x20
-	.uleb128 0x11
-	.ascii "mon_decimal_point\0"
-	.byte	0x24
-	.byte	0x33
-	.byte	0xb
-	.long	0x164d4
-	.byte	0x28
-	.uleb128 0x11
-	.ascii "mon_thousands_sep\0"
-	.byte	0x24
-	.byte	0x34
-	.byte	0xb
-	.long	0x164d4
-	.byte	0x30
-	.uleb128 0x11
-	.ascii "mon_grouping\0"
-	.byte	0x24
-	.byte	0x35
-	.byte	0xb
-	.long	0x164d4
-	.byte	0x38
-	.uleb128 0x11
-	.ascii "positive_sign\0"
-	.byte	0x24
-	.byte	0x36
-	.byte	0xb
-	.long	0x164d4
-	.byte	0x40
-	.uleb128 0x11
-	.ascii "negative_sign\0"
-	.byte	0x24
-	.byte	0x37
-	.byte	0xb
-	.long	0x164d4
-	.byte	0x48
-	.uleb128 0x11
-	.ascii "int_frac_digits\0"
-	.byte	0x24
-	.byte	0x38
-	.byte	0xa
-	.long	0x16181
-	.byte	0x50
-	.uleb128 0x11
-	.ascii "frac_digits\0"
-	.byte	0x24
-	.byte	0x39
-	.byte	0xa
-	.long	0x16181
-	.byte	0x51
-	.uleb128 0x11
-	.ascii "p_cs_precedes\0"
-	.byte	0x24
-	.byte	0x3a
-	.byte	0xa
-	.long	0x16181
-	.byte	0x52
-	.uleb128 0x11
-	.ascii "p_sep_by_space\0"
-	.byte	0x24
-	.byte	0x3b
-	.byte	0xa
-	.long	0x16181
-	.byte	0x53
-	.uleb128 0x11
-	.ascii "n_cs_precedes\0"
-	.byte	0x24
-	.byte	0x3c
-	.byte	0xa
-	.long	0x16181
-	.byte	0x54
-	.uleb128 0x11
-	.ascii "n_sep_by_space\0"
-	.byte	0x24
-	.byte	0x3d
-	.byte	0xa
-	.long	0x16181
-	.byte	0x55
-	.uleb128 0x11
-	.ascii "p_sign_posn\0"
-	.byte	0x24
-	.byte	0x3e
-	.byte	0xa
-	.long	0x16181
-	.byte	0x56
-	.uleb128 0x11
-	.ascii "n_sign_posn\0"
-	.byte	0x24
-	.byte	0x3f
-	.byte	0xa
-	.long	0x16181
-	.byte	0x57
-	.uleb128 0x11
-	.ascii "_W_decimal_point\0"
-	.byte	0x24
-	.byte	0x41
-	.byte	0xe
-	.long	0x164da
-	.byte	0x58
-	.uleb128 0x11
-	.ascii "_W_thousands_sep\0"
-	.byte	0x24
-	.byte	0x42
-	.byte	0xe
-	.long	0x164da
-	.byte	0x60
-	.uleb128 0x11
-	.ascii "_W_int_curr_symbol\0"
-	.byte	0x24
-	.byte	0x43
-	.byte	0xe
-	.long	0x164da
-	.byte	0x68
-	.uleb128 0x11
-	.ascii "_W_currency_symbol\0"
-	.byte	0x24
-	.byte	0x44
-	.byte	0xe
-	.long	0x164da
-	.byte	0x70
-	.uleb128 0x11
-	.ascii "_W_mon_decimal_point\0"
-	.byte	0x24
-	.byte	0x45
-	.byte	0xe
-	.long	0x164da
-	.byte	0x78
-	.uleb128 0x11
-	.ascii "_W_mon_thousands_sep\0"
-	.byte	0x24
-	.byte	0x46
-	.byte	0xe
-	.long	0x164da
-	.byte	0x80
-	.uleb128 0x11
-	.ascii "_W_positive_sign\0"
-	.byte	0x24
-	.byte	0x47
-	.byte	0xe
-	.long	0x164da
-	.byte	0x88
-	.uleb128 0x11
-	.ascii "_W_negative_sign\0"
-	.byte	0x24
-	.byte	0x48
-	.byte	0xe
-	.long	0x164da
-	.byte	0x90
-	.byte	0
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x1652b
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x1604a
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x16060
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x16045
-	.uleb128 0x7a
-	.ascii "__lc_time_data\0"
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x167d1
 	.uleb128 0x95
 	.byte	0x8
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x4e6d
+	.long	0x4f27
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x52d9
+	.long	0x5393
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x52d9
+	.long	0x5393
 	.uleb128 0x96
 	.ascii "decltype(nullptr)\0"
 	.uleb128 0x29
 	.byte	0x8
-	.long	0x4e6d
+	.long	0x4f27
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x4e6d
+	.long	0x4f27
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x5369
+	.long	0x5423
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x536e
+	.long	0x5428
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x1682e
+	.long	0x16b01
 	.uleb128 0x97
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x16189
+	.long	0x160fe
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x11343
+	.long	0x113fd
 	.uleb128 0x6
-	.long	0x16836
+	.long	0x16b09
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x115f1
+	.long	0x116ab
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x115f1
+	.long	0x116ab
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x164f0
+	.long	0x164cd
 	.uleb128 0x6
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x164f0
+	.long	0x164cd
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x53fe
+	.long	0x54b8
 	.uleb128 0x6
-	.long	0x16864
+	.long	0x16b37
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x5497
-	.uleb128 0x26
-	.byte	0x2
-	.byte	0x10
-	.ascii "char16_t\0"
-	.uleb128 0x26
-	.byte	0x4
-	.byte	0x10
-	.ascii "char32_t\0"
-	.uleb128 0x10
-	.ascii "int8_t\0"
-	.byte	0x25
-	.byte	0x23
-	.byte	0x15
-	.long	0x16099
-	.uleb128 0x10
-	.ascii "uint8_t\0"
-	.byte	0x25
-	.byte	0x24
-	.byte	0x19
-	.long	0x16034
-	.uleb128 0x10
-	.ascii "int16_t\0"
-	.byte	0x25
-	.byte	0x25
-	.byte	0x10
-	.long	0x160a8
-	.uleb128 0x10
-	.ascii "uint16_t\0"
-	.byte	0x25
-	.byte	0x26
-	.byte	0x19
-	.long	0x1604a
-	.uleb128 0x10
-	.ascii "int32_t\0"
-	.byte	0x25
-	.byte	0x27
-	.byte	0xe
-	.long	0x160b5
-	.uleb128 0x10
-	.ascii "uint32_t\0"
-	.byte	0x25
-	.byte	0x28
-	.byte	0x14
-	.long	0x16024
-	.uleb128 0x10
-	.ascii "int64_t\0"
-	.byte	0x25
-	.byte	0x29
-	.byte	0x26
-	.long	0x160cd
-	.uleb128 0x10
-	.ascii "uint64_t\0"
-	.byte	0x25
-	.byte	0x2a
-	.byte	0x30
-	.long	0x1607a
-	.uleb128 0x10
-	.ascii "int_least8_t\0"
-	.byte	0x25
-	.byte	0x2d
-	.byte	0x15
-	.long	0x16099
-	.uleb128 0x10
-	.ascii "uint_least8_t\0"
-	.byte	0x25
-	.byte	0x2e
-	.byte	0x19
-	.long	0x16034
-	.uleb128 0x10
-	.ascii "int_least16_t\0"
-	.byte	0x25
-	.byte	0x2f
-	.byte	0x10
-	.long	0x160a8
-	.uleb128 0x10
-	.ascii "uint_least16_t\0"
-	.byte	0x25
-	.byte	0x30
-	.byte	0x19
-	.long	0x1604a
-	.uleb128 0x10
-	.ascii "int_least32_t\0"
-	.byte	0x25
-	.byte	0x31
-	.byte	0xe
-	.long	0x160b5
-	.uleb128 0x10
-	.ascii "uint_least32_t\0"
-	.byte	0x25
-	.byte	0x32
-	.byte	0x14
-	.long	0x16024
-	.uleb128 0x10
-	.ascii "int_least64_t\0"
-	.byte	0x25
-	.byte	0x33
-	.byte	0x26
-	.long	0x160cd
-	.uleb128 0x10
-	.ascii "uint_least64_t\0"
-	.byte	0x25
-	.byte	0x34
-	.byte	0x30
-	.long	0x1607a
-	.uleb128 0x10
-	.ascii "int_fast8_t\0"
-	.byte	0x25
-	.byte	0x3a
-	.byte	0x15
-	.long	0x16099
-	.uleb128 0x10
-	.ascii "uint_fast8_t\0"
-	.byte	0x25
-	.byte	0x3b
-	.byte	0x17
-	.long	0x16034
-	.uleb128 0x10
-	.ascii "int_fast16_t\0"
-	.byte	0x25
-	.byte	0x3c
-	.byte	0x10
-	.long	0x160a8
-	.uleb128 0x10
-	.ascii "uint_fast16_t\0"
-	.byte	0x25
-	.byte	0x3d
-	.byte	0x19
-	.long	0x1604a
-	.uleb128 0x10
-	.ascii "int_fast32_t\0"
-	.byte	0x25
-	.byte	0x3e
-	.byte	0xe
-	.long	0x160b5
-	.uleb128 0x10
-	.ascii "uint_fast32_t\0"
-	.byte	0x25
-	.byte	0x3f
-	.byte	0x18
-	.long	0x16024
-	.uleb128 0x10
-	.ascii "int_fast64_t\0"
-	.byte	0x25
-	.byte	0x40
-	.byte	0x26
-	.long	0x160cd
-	.uleb128 0x10
-	.ascii "uint_fast64_t\0"
-	.byte	0x25
-	.byte	0x41
-	.byte	0x30
-	.long	0x1607a
-	.uleb128 0x10
-	.ascii "intmax_t\0"
-	.byte	0x25
-	.byte	0x44
-	.byte	0x26
-	.long	0x160cd
-	.uleb128 0x10
-	.ascii "uintmax_t\0"
-	.byte	0x25
-	.byte	0x45
-	.byte	0x30
-	.long	0x1607a
+	.long	0x5551
 	.uleb128 0x10
 	.ascii "T100INT32\0"
 	.byte	0x26
 	.byte	0x8
 	.byte	0x21
-	.long	0x168cd
+	.long	0x1685b
 	.uleb128 0x10
 	.ascii "T100INT\0"
 	.byte	0x26
 	.byte	0x11
 	.byte	0x21
-	.long	0x16a8e
-	.uleb128 0x17
+	.long	0x16b48
+	.uleb128 0x16
 	.ascii "_iobuf\0"
 	.byte	0x30
 	.byte	0x27
 	.byte	0x2a
 	.byte	0xa
-	.long	0x16b40
+	.long	0x16bfa
 	.uleb128 0x11
 	.ascii "_ptr\0"
 	.byte	0x27
 	.byte	0x2b
 	.byte	0xb
-	.long	0x164d4
+	.long	0x164b1
 	.byte	0
 	.uleb128 0x11
 	.ascii "_cnt\0"
 	.byte	0x27
 	.byte	0x2c
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x8
 	.uleb128 0x11
 	.ascii "_base\0"
 	.byte	0x27
 	.byte	0x2d
 	.byte	0xb
-	.long	0x164d4
+	.long	0x164b1
 	.byte	0x10
 	.uleb128 0x11
 	.ascii "_flag\0"
 	.byte	0x27
 	.byte	0x2e
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x18
 	.uleb128 0x11
 	.ascii "_file\0"
 	.byte	0x27
 	.byte	0x2f
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x1c
 	.uleb128 0x11
 	.ascii "_charbuf\0"
 	.byte	0x27
 	.byte	0x30
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x20
 	.uleb128 0x11
 	.ascii "_bufsiz\0"
 	.byte	0x27
 	.byte	0x31
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x24
 	.uleb128 0x11
 	.ascii "_tmpfname\0"
 	.byte	0x27
 	.byte	0x32
 	.byte	0xb
-	.long	0x164d4
+	.long	0x164b1
 	.byte	0x28
 	.byte	0
 	.uleb128 0x10
@@ -21549,193 +21618,193 @@ _ZTS15T100FolderLogic:
 	.byte	0x27
 	.byte	0x34
 	.byte	0x19
-	.long	0x16ab0
+	.long	0x16b6a
 	.uleb128 0x2a
 	.ascii "__imp__pctype\0"
 	.byte	0x27
 	.byte	0xbb
 	.byte	0x1c
-	.long	0x16b63
+	.long	0x16c1d
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x167bf
+	.long	0x167c1
 	.uleb128 0x2a
 	.ascii "__imp__wctype\0"
 	.byte	0x27
 	.byte	0xca
 	.byte	0x1c
-	.long	0x16b63
+	.long	0x16c1d
 	.uleb128 0x2a
 	.ascii "__imp__pwctype\0"
 	.byte	0x27
 	.byte	0xd9
 	.byte	0x1c
-	.long	0x16b63
+	.long	0x16c1d
 	.uleb128 0x30
 	.ascii "tm\0"
 	.byte	0x24
 	.byte	0x27
 	.word	0x54e
 	.byte	0xa
-	.long	0x16c44
+	.long	0x16cfe
 	.uleb128 0x21
 	.ascii "tm_sec\0"
 	.byte	0x27
 	.word	0x54f
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x21
 	.ascii "tm_min\0"
 	.byte	0x27
 	.word	0x550
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x4
 	.uleb128 0x21
 	.ascii "tm_hour\0"
 	.byte	0x27
 	.word	0x551
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x8
 	.uleb128 0x21
 	.ascii "tm_mday\0"
 	.byte	0x27
 	.word	0x552
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0xc
 	.uleb128 0x21
 	.ascii "tm_mon\0"
 	.byte	0x27
 	.word	0x553
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x10
 	.uleb128 0x21
 	.ascii "tm_year\0"
 	.byte	0x27
 	.word	0x554
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x14
 	.uleb128 0x21
 	.ascii "tm_wday\0"
 	.byte	0x27
 	.word	0x555
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x18
 	.uleb128 0x21
 	.ascii "tm_yday\0"
 	.byte	0x27
 	.word	0x556
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x1c
 	.uleb128 0x21
 	.ascii "tm_isdst\0"
 	.byte	0x27
 	.word	0x557
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x20
 	.byte	0
 	.uleb128 0x6
-	.long	0x16b96
+	.long	0x16c50
 	.uleb128 0x48
 	.ascii "mbstate_t\0"
 	.byte	0x27
 	.word	0x58c
 	.byte	0xf
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x6
-	.long	0x16c49
+	.long	0x16d03
 	.uleb128 0x9
 	.ascii "btowc\0"
 	.byte	0x27
 	.word	0x590
 	.byte	0x12
-	.long	0x161c0
-	.long	0x16c7a
+	.long	0x1616a
+	.long	0x16d34
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x9
 	.ascii "fgetwc\0"
 	.byte	0x27
 	.word	0x2fd
 	.byte	0x12
-	.long	0x161c0
-	.long	0x16c94
+	.long	0x1616a
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x16b40
+	.long	0x16bfa
 	.uleb128 0x9
 	.ascii "fgetws\0"
 	.byte	0x27
 	.word	0x306
 	.byte	0x14
-	.long	0x164da
-	.long	0x16cbe
+	.long	0x164b7
+	.long	0x16d78
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "fputwc\0"
 	.byte	0x27
 	.word	0x2ff
 	.byte	0x12
-	.long	0x161c0
-	.long	0x16cdd
+	.long	0x1616a
+	.long	0x16d97
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "fputws\0"
 	.byte	0x27
 	.word	0x307
 	.byte	0xf
-	.long	0x160b5
-	.long	0x16cfc
+	.long	0x16194
+	.long	0x16db6
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "fwide\0"
 	.byte	0x27
 	.word	0x59f
 	.byte	0xf
-	.long	0x160b5
-	.long	0x16d1a
+	.long	0x16194
+	.long	0x16dd4
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x9
 	.ascii "fwprintf\0"
 	.byte	0x27
 	.word	0x24c
 	.byte	0x5
-	.long	0x160b5
-	.long	0x16d3c
+	.long	0x16194
+	.long	0x16df6
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x9
@@ -21743,12 +21812,12 @@ _ZTS15T100FolderLogic:
 	.byte	0x27
 	.word	0x228
 	.byte	0x5
-	.long	0x160b5
-	.long	0x16d5d
+	.long	0x16194
+	.long	0x16e17
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x9
@@ -21756,131 +21825,131 @@ _ZTS15T100FolderLogic:
 	.byte	0x27
 	.word	0x301
 	.byte	0x12
-	.long	0x161c0
-	.long	0x16d76
+	.long	0x1616a
+	.long	0x16e30
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
-	.uleb128 0x5d
+	.uleb128 0x5f
 	.ascii "getwchar\0"
 	.byte	0x27
 	.word	0x302
 	.byte	0x12
-	.long	0x161c0
+	.long	0x1616a
 	.uleb128 0x9
 	.ascii "mbrlen\0"
 	.byte	0x27
 	.word	0x591
 	.byte	0x12
-	.long	0x1618e
-	.long	0x16dac
+	.long	0x16103
+	.long	0x16e66
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x16dac
+	.long	0x16e66
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x16c49
+	.long	0x16d03
 	.uleb128 0x9
 	.ascii "mbrtowc\0"
 	.byte	0x27
 	.word	0x592
 	.byte	0x12
-	.long	0x1618e
-	.long	0x16ddc
+	.long	0x16103
+	.long	0x16e96
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x16dac
+	.long	0x16e66
 	.byte	0
 	.uleb128 0x9
 	.ascii "mbsinit\0"
 	.byte	0x27
 	.word	0x5a4
 	.byte	0xf
-	.long	0x160b5
-	.long	0x16df7
+	.long	0x16194
+	.long	0x16eb1
 	.uleb128 0x1
-	.long	0x16df7
+	.long	0x16eb1
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x16c5c
+	.long	0x16d16
 	.uleb128 0x9
 	.ascii "mbsrtowcs\0"
 	.byte	0x27
 	.word	0x593
 	.byte	0x12
-	.long	0x1618e
-	.long	0x16e29
+	.long	0x16103
+	.long	0x16ee3
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16e29
+	.long	0x16ee3
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x16dac
+	.long	0x16e66
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x9
 	.ascii "putwc\0"
 	.byte	0x27
 	.word	0x303
 	.byte	0x12
-	.long	0x161c0
-	.long	0x16e4d
+	.long	0x1616a
+	.long	0x16f07
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "putwchar\0"
 	.byte	0x27
 	.word	0x304
 	.byte	0x12
-	.long	0x161c0
-	.long	0x16e69
+	.long	0x1616a
+	.long	0x16f23
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.secrel32	.LASF144
 	.byte	0x28
 	.byte	0x31
 	.byte	0x5
 	.ascii "_Z8swprintfPwPKwz\0"
-	.long	0x160b5
-	.long	0x16e97
+	.long	0x16194
+	.long	0x16f51
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x31
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7c
 	.secrel32	.LASF144
 	.byte	0x28
 	.byte	0x15
 	.byte	0x5
-	.long	0x160b5
-	.long	0x16eb8
+	.long	0x16194
+	.long	0x16f72
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x9
@@ -21888,12 +21957,12 @@ _ZTS15T100FolderLogic:
 	.byte	0x27
 	.word	0x212
 	.byte	0x5
-	.long	0x160b5
-	.long	0x16ed9
+	.long	0x16194
+	.long	0x16f93
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x9
@@ -21901,442 +21970,442 @@ _ZTS15T100FolderLogic:
 	.byte	0x27
 	.word	0x305
 	.byte	0x12
-	.long	0x161c0
-	.long	0x16ef9
+	.long	0x1616a
+	.long	0x16fb3
 	.uleb128 0x1
-	.long	0x161c0
+	.long	0x1616a
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "vfwprintf\0"
 	.byte	0x27
 	.word	0x262
 	.byte	0x5
-	.long	0x160b5
-	.long	0x16f20
+	.long	0x16194
+	.long	0x16fda
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x9
 	.ascii "vfwscanf\0"
 	.byte	0x27
 	.word	0x242
 	.byte	0x5
-	.long	0x160b5
-	.long	0x16f46
+	.long	0x16194
+	.long	0x17000
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.secrel32	.LASF145
 	.byte	0x28
 	.byte	0x26
 	.byte	0x5
 	.ascii "_Z9vswprintfPwPKwPc\0"
-	.long	0x160b5
-	.long	0x16f7a
+	.long	0x16194
+	.long	0x17034
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7c
 	.secrel32	.LASF145
 	.byte	0x28
 	.byte	0xe
 	.byte	0x5
-	.long	0x160b5
-	.long	0x16f9f
+	.long	0x16194
+	.long	0x17059
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x9
 	.ascii "vswscanf\0"
 	.byte	0x27
 	.word	0x234
 	.byte	0x5
-	.long	0x160b5
-	.long	0x16fc5
+	.long	0x16194
+	.long	0x1707f
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x9
 	.ascii "vwprintf\0"
 	.byte	0x27
 	.word	0x269
 	.byte	0x5
-	.long	0x160b5
-	.long	0x16fe6
+	.long	0x16194
+	.long	0x170a0
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x9
 	.ascii "vwscanf\0"
 	.byte	0x27
 	.word	0x23b
 	.byte	0x5
-	.long	0x160b5
-	.long	0x17006
+	.long	0x16194
+	.long	0x170c0
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcrtomb\0"
 	.byte	0x27
 	.word	0x594
 	.byte	0x12
-	.long	0x1618e
-	.long	0x1702b
+	.long	0x16103
+	.long	0x170e5
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x16dac
+	.long	0x16e66
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcscat\0"
 	.byte	0x27
 	.word	0x512
 	.byte	0x14
-	.long	0x164da
-	.long	0x1704a
+	.long	0x164b7
+	.long	0x17104
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcscmp\0"
 	.byte	0x27
 	.word	0x514
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17069
+	.long	0x16194
+	.long	0x17123
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcscoll\0"
 	.byte	0x27
 	.word	0x535
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17089
+	.long	0x16194
+	.long	0x17143
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcscpy\0"
 	.byte	0x27
 	.word	0x515
 	.byte	0x14
-	.long	0x164da
-	.long	0x170a8
+	.long	0x164b7
+	.long	0x17162
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcscspn\0"
 	.byte	0x27
 	.word	0x516
 	.byte	0x12
-	.long	0x1618e
-	.long	0x170c8
+	.long	0x16103
+	.long	0x17182
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcsftime\0"
 	.byte	0x27
 	.word	0x562
 	.byte	0x12
-	.long	0x1618e
-	.long	0x170f3
+	.long	0x16103
+	.long	0x171ad
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x170f3
+	.long	0x171ad
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x16c44
+	.long	0x16cfe
 	.uleb128 0x9
 	.ascii "wcslen\0"
 	.byte	0x27
 	.word	0x517
 	.byte	0x12
-	.long	0x1618e
-	.long	0x17113
+	.long	0x16103
+	.long	0x171cd
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcsncat\0"
 	.byte	0x27
 	.word	0x519
 	.byte	0x14
-	.long	0x164da
-	.long	0x17138
+	.long	0x164b7
+	.long	0x171f2
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcsncmp\0"
 	.byte	0x27
 	.word	0x51a
 	.byte	0xf
-	.long	0x160b5
-	.long	0x1715d
+	.long	0x16194
+	.long	0x17217
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcsncpy\0"
 	.byte	0x27
 	.word	0x51b
 	.byte	0x14
-	.long	0x164da
-	.long	0x17182
+	.long	0x164b7
+	.long	0x1723c
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcsrtombs\0"
 	.byte	0x27
 	.word	0x595
 	.byte	0x12
-	.long	0x1618e
-	.long	0x171ae
+	.long	0x16103
+	.long	0x17268
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x1
-	.long	0x171ae
+	.long	0x17268
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x16dac
+	.long	0x16e66
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x9
 	.ascii "wcsspn\0"
 	.byte	0x27
 	.word	0x51f
 	.byte	0x12
-	.long	0x1618e
-	.long	0x171d3
+	.long	0x16103
+	.long	0x1728d
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcstod\0"
 	.byte	0x27
 	.word	0x4d7
 	.byte	0x12
-	.long	0x160f2
-	.long	0x171f2
+	.long	0x16a7d
+	.long	0x172ac
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x171f2
+	.long	0x172ac
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x9
 	.ascii "wcstof\0"
 	.byte	0x27
 	.word	0x4db
 	.byte	0x11
-	.long	0x160fc
-	.long	0x17217
+	.long	0x16a87
+	.long	0x172d1
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x171f2
+	.long	0x172ac
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcstok\0"
 	.byte	0x27
 	.word	0x524
 	.byte	0x14
-	.long	0x164da
-	.long	0x17236
+	.long	0x164b7
+	.long	0x172f0
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcstol\0"
 	.byte	0x27
 	.word	0x4e6
 	.byte	0x10
-	.long	0x160c1
-	.long	0x1725a
+	.long	0x161a0
+	.long	0x17314
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x171f2
+	.long	0x172ac
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcstoul\0"
 	.byte	0x27
 	.word	0x4e8
 	.byte	0x19
-	.long	0x16065
-	.long	0x1727f
+	.long	0x164f8
+	.long	0x17339
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x171f2
+	.long	0x172ac
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcsxfrm\0"
 	.byte	0x27
 	.word	0x533
 	.byte	0x12
-	.long	0x1618e
-	.long	0x172a4
+	.long	0x16103
+	.long	0x1735e
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "wctob\0"
 	.byte	0x27
 	.word	0x596
 	.byte	0xf
-	.long	0x160b5
-	.long	0x172bd
+	.long	0x16194
+	.long	0x17377
 	.uleb128 0x1
-	.long	0x161c0
+	.long	0x1616a
 	.byte	0
 	.uleb128 0x9
 	.ascii "wmemcmp\0"
 	.byte	0x27
 	.word	0x59b
 	.byte	0xf
-	.long	0x160b5
-	.long	0x172e2
+	.long	0x16194
+	.long	0x1739c
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "wmemcpy\0"
 	.byte	0x27
 	.word	0x59c
 	.byte	0x14
-	.long	0x164da
-	.long	0x17307
+	.long	0x164b7
+	.long	0x173c1
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "wmemmove\0"
 	.byte	0x27
 	.word	0x59e
 	.byte	0x14
-	.long	0x164da
-	.long	0x1732d
+	.long	0x164b7
+	.long	0x173e7
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "wmemset\0"
 	.byte	0x27
 	.word	0x599
 	.byte	0x14
-	.long	0x164da
-	.long	0x17352
+	.long	0x164b7
+	.long	0x1740c
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "wprintf\0"
 	.byte	0x27
 	.word	0x257
 	.byte	0x5
-	.long	0x160b5
-	.long	0x1736e
+	.long	0x16194
+	.long	0x17428
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x9
@@ -22344,10 +22413,10 @@ _ZTS15T100FolderLogic:
 	.byte	0x27
 	.word	0x21d
 	.byte	0x5
-	.long	0x160b5
-	.long	0x17389
+	.long	0x16194
+	.long	0x17443
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x9
@@ -22355,147 +22424,147 @@ _ZTS15T100FolderLogic:
 	.byte	0x27
 	.word	0x513
 	.byte	0x22
-	.long	0x164da
-	.long	0x173a8
+	.long	0x164b7
+	.long	0x17462
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcspbrk\0"
 	.byte	0x27
 	.word	0x51d
 	.byte	0x22
-	.long	0x164da
-	.long	0x173c8
+	.long	0x164b7
+	.long	0x17482
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcsrchr\0"
 	.byte	0x27
 	.word	0x51e
 	.byte	0x22
-	.long	0x164da
-	.long	0x173e8
+	.long	0x164b7
+	.long	0x174a2
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcsstr\0"
 	.byte	0x27
 	.word	0x520
 	.byte	0x22
-	.long	0x164da
-	.long	0x17407
+	.long	0x164b7
+	.long	0x174c1
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.byte	0
 	.uleb128 0x9
 	.ascii "wmemchr\0"
 	.byte	0x27
 	.word	0x59a
 	.byte	0x22
-	.long	0x164da
-	.long	0x1742c
+	.long	0x164b7
+	.long	0x174e6
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcstold\0"
 	.byte	0x27
 	.word	0x4e4
 	.byte	0x17
-	.long	0x160e3
-	.long	0x1744c
+	.long	0x16a6e
+	.long	0x17506
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x171f2
+	.long	0x172ac
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcstoll\0"
 	.byte	0x27
 	.word	0x5a6
 	.byte	0x27
-	.long	0x160cd
-	.long	0x17471
+	.long	0x16131
+	.long	0x1752b
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x171f2
+	.long	0x172ac
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcstoull\0"
 	.byte	0x27
 	.word	0x5a7
 	.byte	0x30
-	.long	0x1607a
-	.long	0x17497
+	.long	0x16112
+	.long	0x17551
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x171f2
+	.long	0x172ac
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x5a21
+	.long	0x5adb
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x5a34
+	.long	0x5aee
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x5a34
+	.long	0x5aee
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x5a21
+	.long	0x5adb
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x5c9c
+	.long	0x5d56
 	.uleb128 0x10
 	.ascii "fpos_t\0"
 	.byte	0x29
 	.byte	0x7b
 	.byte	0x25
-	.long	0x160cd
+	.long	0x16131
 	.uleb128 0x6
-	.long	0x174b5
-	.uleb128 0x7c
+	.long	0x1756f
+	.uleb128 0x7d
 	.ascii "setlocale\0"
 	.byte	0x24
 	.byte	0x5a
 	.byte	0x11
-	.long	0x164d4
-	.long	0x174ea
+	.long	0x164b1
+	.long	0x175a4
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x98
 	.ascii "localeconv\0"
 	.byte	0x24
 	.byte	0x5b
 	.byte	0x21
-	.long	0x167b9
+	.long	0x167bb
 	.uleb128 0x4e
-	.long	0x16045
-	.long	0x1750a
+	.long	0x167e4
+	.long	0x175c4
 	.uleb128 0x99
 	.byte	0
 	.uleb128 0x2a
@@ -22503,90 +22572,90 @@ _ZTS15T100FolderLogic:
 	.byte	0x2a
 	.byte	0x50
 	.byte	0x1e
-	.long	0x174fe
+	.long	0x175b8
 	.uleb128 0x2a
 	.ascii "__newcumap\0"
 	.byte	0x2a
 	.byte	0x51
 	.byte	0x1e
-	.long	0x174fe
+	.long	0x175b8
 	.uleb128 0x2a
 	.ascii "__ptlocinfo\0"
 	.byte	0x2a
 	.byte	0x52
 	.byte	0x19
-	.long	0x161cf
+	.long	0x161ac
 	.uleb128 0x2a
 	.ascii "__ptmbcinfo\0"
 	.byte	0x2a
 	.byte	0x53
 	.byte	0x19
-	.long	0x163e9
+	.long	0x163c6
 	.uleb128 0x2a
 	.ascii "__globallocalestatus\0"
 	.byte	0x2a
 	.byte	0x54
 	.byte	0xe
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x2a
 	.ascii "__locale_changed\0"
 	.byte	0x2a
 	.byte	0x55
 	.byte	0xe
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x2a
 	.ascii "__initiallocinfo\0"
 	.byte	0x2a
 	.byte	0x56
 	.byte	0x28
-	.long	0x161ed
+	.long	0x161ca
 	.uleb128 0x2a
 	.ascii "__initiallocalestructinfo\0"
 	.byte	0x2a
 	.byte	0x57
 	.byte	0x1a
-	.long	0x1645d
+	.long	0x1643a
 	.uleb128 0x2a
 	.ascii "__imp___mb_cur_max\0"
 	.byte	0x2a
 	.byte	0xd1
 	.byte	0x10
-	.long	0x164f5
+	.long	0x164d2
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x175ea
+	.long	0x176a4
 	.uleb128 0x9a
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x175f2
+	.long	0x176ac
 	.uleb128 0x9b
-	.long	0x175fe
+	.long	0x176b8
 	.uleb128 0x1
-	.long	0x167e7
+	.long	0x16aba
 	.byte	0
 	.uleb128 0x2a
 	.ascii "_daylight\0"
 	.byte	0x2b
 	.byte	0x81
 	.byte	0x16
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x2a
 	.ascii "_dstbias\0"
 	.byte	0x2b
 	.byte	0x82
 	.byte	0x17
-	.long	0x160c1
+	.long	0x161a0
 	.uleb128 0x2a
 	.ascii "_timezone\0"
 	.byte	0x2b
 	.byte	0x83
 	.byte	0x17
-	.long	0x160c1
+	.long	0x161a0
 	.uleb128 0x4e
-	.long	0x164d4
-	.long	0x17643
-	.uleb128 0x53
-	.long	0x1607a
+	.long	0x164b1
+	.long	0x176fd
+	.uleb128 0x54
+	.long	0x16112
 	.byte	0x1
 	.byte	0
 	.uleb128 0x2a
@@ -22594,54 +22663,54 @@ _ZTS15T100FolderLogic:
 	.byte	0x2b
 	.byte	0x84
 	.byte	0x19
-	.long	0x17633
+	.long	0x176ed
 	.uleb128 0x2d
 	.ascii "daylight\0"
 	.byte	0x2b
 	.word	0x119
 	.byte	0x16
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x2d
 	.ascii "timezone\0"
 	.byte	0x2b
 	.word	0x11a
 	.byte	0x17
-	.long	0x160c1
+	.long	0x161a0
 	.uleb128 0x2d
 	.ascii "tzname\0"
 	.byte	0x2b
 	.word	0x11b
 	.byte	0x18
-	.long	0x17633
+	.long	0x176ed
 	.uleb128 0x2d
 	.ascii "_pthread_key_dest\0"
 	.byte	0x2c
 	.word	0x129
 	.byte	0x1f
-	.long	0x176a2
+	.long	0x1775c
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x175ec
-	.uleb128 0x17
+	.long	0x176a6
+	.uleb128 0x16
 	.ascii "_div_t\0"
 	.byte	0x8
 	.byte	0x2d
 	.byte	0x3b
 	.byte	0x12
-	.long	0x176d4
+	.long	0x1778e
 	.uleb128 0x11
 	.ascii "quot\0"
 	.byte	0x2d
 	.byte	0x3c
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x11
 	.ascii "rem\0"
 	.byte	0x2d
 	.byte	0x3d
 	.byte	0x9
-	.long	0x160b5
+	.long	0x16194
 	.byte	0x4
 	.byte	0
 	.uleb128 0x10
@@ -22649,27 +22718,27 @@ _ZTS15T100FolderLogic:
 	.byte	0x2d
 	.byte	0x3e
 	.byte	0x5
-	.long	0x176a8
-	.uleb128 0x17
+	.long	0x17762
+	.uleb128 0x16
 	.ascii "_ldiv_t\0"
 	.byte	0x8
 	.byte	0x2d
 	.byte	0x40
 	.byte	0x12
-	.long	0x1770f
+	.long	0x177c9
 	.uleb128 0x11
 	.ascii "quot\0"
 	.byte	0x2d
 	.byte	0x41
 	.byte	0xa
-	.long	0x160c1
+	.long	0x161a0
 	.byte	0
 	.uleb128 0x11
 	.ascii "rem\0"
 	.byte	0x2d
 	.byte	0x42
 	.byte	0xa
-	.long	0x160c1
+	.long	0x161a0
 	.byte	0x4
 	.byte	0
 	.uleb128 0x10
@@ -22677,12 +22746,12 @@ _ZTS15T100FolderLogic:
 	.byte	0x2d
 	.byte	0x43
 	.byte	0x5
-	.long	0x176e2
+	.long	0x1779c
 	.uleb128 0x4e
-	.long	0x164d4
-	.long	0x1772e
-	.uleb128 0x53
-	.long	0x1607a
+	.long	0x164b1
+	.long	0x177e8
+	.uleb128 0x54
+	.long	0x16112
 	.byte	0
 	.byte	0
 	.uleb128 0x2a
@@ -22690,117 +22759,117 @@ _ZTS15T100FolderLogic:
 	.byte	0x2d
 	.byte	0xac
 	.byte	0x26
-	.long	0x1771e
+	.long	0x177d8
 	.uleb128 0x2a
 	.ascii "_sys_nerr\0"
 	.byte	0x2d
 	.byte	0xad
 	.byte	0x24
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x2d
 	.ascii "__imp___argc\0"
 	.byte	0x2d
 	.word	0x119
 	.byte	0x10
-	.long	0x164f5
+	.long	0x164d2
 	.uleb128 0x2d
 	.ascii "__imp___argv\0"
 	.byte	0x2d
 	.word	0x11d
 	.byte	0x13
-	.long	0x17781
+	.long	0x1783b
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x17787
+	.long	0x17841
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x2d
 	.ascii "__imp___wargv\0"
 	.byte	0x2d
 	.word	0x121
 	.byte	0x16
-	.long	0x177a4
+	.long	0x1785e
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x171f2
+	.long	0x172ac
 	.uleb128 0x2d
 	.ascii "__imp__environ\0"
 	.byte	0x2d
 	.word	0x127
 	.byte	0x13
-	.long	0x17781
+	.long	0x1783b
 	.uleb128 0x2d
 	.ascii "__imp__wenviron\0"
 	.byte	0x2d
 	.word	0x12c
 	.byte	0x16
-	.long	0x177a4
+	.long	0x1785e
 	.uleb128 0x2d
 	.ascii "__imp__pgmptr\0"
 	.byte	0x2d
 	.word	0x132
 	.byte	0x12
-	.long	0x17787
+	.long	0x17841
 	.uleb128 0x2d
 	.ascii "__imp__wpgmptr\0"
 	.byte	0x2d
 	.word	0x137
 	.byte	0x15
-	.long	0x171f2
+	.long	0x172ac
 	.uleb128 0x2d
 	.ascii "__imp__osplatform\0"
 	.byte	0x2d
 	.word	0x13c
 	.byte	0x19
-	.long	0x17825
+	.long	0x178df
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x16024
+	.long	0x164d8
 	.uleb128 0x2d
 	.ascii "__imp__osver\0"
 	.byte	0x2d
 	.word	0x141
 	.byte	0x19
-	.long	0x17825
+	.long	0x178df
 	.uleb128 0x2d
 	.ascii "__imp__winver\0"
 	.byte	0x2d
 	.word	0x146
 	.byte	0x19
-	.long	0x17825
+	.long	0x178df
 	.uleb128 0x2d
 	.ascii "__imp__winmajor\0"
 	.byte	0x2d
 	.word	0x14b
 	.byte	0x19
-	.long	0x17825
+	.long	0x178df
 	.uleb128 0x2d
 	.ascii "__imp__winminor\0"
 	.byte	0x2d
 	.word	0x150
 	.byte	0x19
-	.long	0x17825
+	.long	0x178df
 	.uleb128 0x9c
 	.byte	0x10
 	.byte	0x2d
 	.word	0x2bb
 	.byte	0x12
 	.ascii "7lldiv_t\0"
-	.long	0x178bc
+	.long	0x17976
 	.uleb128 0x21
 	.ascii "quot\0"
 	.byte	0x2d
 	.word	0x2bb
 	.byte	0x30
-	.long	0x160cd
+	.long	0x16131
 	.byte	0
 	.uleb128 0x21
 	.ascii "rem\0"
 	.byte	0x2d
 	.word	0x2bb
 	.byte	0x36
-	.long	0x160cd
+	.long	0x16131
 	.byte	0x8
 	.byte	0
 	.uleb128 0x48
@@ -22808,435 +22877,435 @@ _ZTS15T100FolderLogic:
 	.byte	0x2d
 	.word	0x2bb
 	.byte	0x3d
-	.long	0x1788a
+	.long	0x17944
 	.uleb128 0x2a
 	.ascii "_amblksiz\0"
 	.byte	0x2e
 	.byte	0x35
 	.byte	0x17
-	.long	0x16024
+	.long	0x164d8
 	.uleb128 0x9
 	.ascii "atexit\0"
 	.byte	0x2d
 	.word	0x18a
 	.byte	0xf
-	.long	0x160b5
-	.long	0x178f9
+	.long	0x16194
+	.long	0x179b3
 	.uleb128 0x1
-	.long	0x175e4
+	.long	0x1769e
 	.byte	0
 	.uleb128 0x9
 	.ascii "atof\0"
 	.byte	0x2d
 	.word	0x18d
 	.byte	0x12
-	.long	0x160f2
-	.long	0x17911
+	.long	0x16a7d
+	.long	0x179cb
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x9
 	.ascii "atoi\0"
 	.byte	0x2d
 	.word	0x190
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17929
+	.long	0x16194
+	.long	0x179e3
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x9
 	.ascii "atol\0"
 	.byte	0x2d
 	.word	0x192
 	.byte	0x10
-	.long	0x160c1
-	.long	0x17941
+	.long	0x161a0
+	.long	0x179fb
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x9
 	.ascii "bsearch\0"
 	.byte	0x2d
 	.word	0x196
 	.byte	0x11
-	.long	0x167e7
-	.long	0x17970
+	.long	0x16aba
+	.long	0x17a2a
 	.uleb128 0x1
-	.long	0x16828
+	.long	0x16afb
 	.uleb128 0x1
-	.long	0x16828
+	.long	0x16afb
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x17970
+	.long	0x17a2a
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x17976
-	.uleb128 0x7d
-	.long	0x160b5
-	.long	0x1798a
+	.long	0x17a30
+	.uleb128 0x7e
+	.long	0x16194
+	.long	0x17a44
 	.uleb128 0x1
-	.long	0x16828
+	.long	0x16afb
 	.uleb128 0x1
-	.long	0x16828
+	.long	0x16afb
 	.byte	0
 	.uleb128 0x9
 	.ascii "div\0"
 	.byte	0x2d
 	.word	0x19c
 	.byte	0x11
-	.long	0x176d4
-	.long	0x179a6
+	.long	0x1778e
+	.long	0x17a60
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x9
 	.ascii "getenv\0"
 	.byte	0x2d
 	.word	0x19d
 	.byte	0x11
-	.long	0x164d4
-	.long	0x179c0
+	.long	0x164b1
+	.long	0x17a7a
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x9
 	.ascii "ldiv\0"
 	.byte	0x2d
 	.word	0x1a7
 	.byte	0x12
-	.long	0x1770f
-	.long	0x179dd
+	.long	0x177c9
+	.long	0x17a97
 	.uleb128 0x1
-	.long	0x160c1
+	.long	0x161a0
 	.uleb128 0x1
-	.long	0x160c1
+	.long	0x161a0
 	.byte	0
 	.uleb128 0x9
 	.ascii "mblen\0"
 	.byte	0x2d
 	.word	0x1a9
 	.byte	0xf
-	.long	0x160b5
-	.long	0x179fb
+	.long	0x16194
+	.long	0x17ab5
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "mbstowcs\0"
 	.byte	0x2d
 	.word	0x1b1
 	.byte	0x12
-	.long	0x1618e
-	.long	0x17a21
+	.long	0x16103
+	.long	0x17adb
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "mbtowc\0"
 	.byte	0x2d
 	.word	0x1af
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17a45
+	.long	0x16194
+	.long	0x17aff
 	.uleb128 0x1
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "qsort\0"
 	.byte	0x2d
 	.word	0x197
 	.byte	0x10
-	.long	0x17a69
+	.long	0x17b23
 	.uleb128 0x1
-	.long	0x167e7
+	.long	0x16aba
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x17970
+	.long	0x17a2a
 	.byte	0
-	.uleb128 0x5d
+	.uleb128 0x5f
 	.ascii "rand\0"
 	.byte	0x2d
 	.word	0x1b4
 	.byte	0xf
-	.long	0x160b5
-	.uleb128 0x54
+	.long	0x16194
+	.uleb128 0x55
 	.ascii "srand\0"
 	.byte	0x2d
 	.word	0x1b6
 	.byte	0x10
-	.long	0x17a8c
+	.long	0x17b46
 	.uleb128 0x1
-	.long	0x16024
+	.long	0x164d8
 	.byte	0
 	.uleb128 0x9
 	.ascii "strtod\0"
 	.byte	0x2d
 	.word	0x1c2
 	.byte	0x20
-	.long	0x160f2
-	.long	0x17aab
+	.long	0x16a7d
+	.long	0x17b65
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x17787
+	.long	0x17841
 	.byte	0
 	.uleb128 0x9
 	.ascii "strtol\0"
 	.byte	0x2d
 	.word	0x1e5
 	.byte	0x10
-	.long	0x160c1
-	.long	0x17acf
+	.long	0x161a0
+	.long	0x17b89
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x17787
+	.long	0x17841
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x9
 	.ascii "strtoul\0"
 	.byte	0x2d
 	.word	0x1e7
 	.byte	0x19
-	.long	0x16065
-	.long	0x17af4
+	.long	0x164f8
+	.long	0x17bae
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x17787
+	.long	0x17841
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
-	.uleb128 0x7c
+	.uleb128 0x7d
 	.ascii "system\0"
 	.byte	0x2f
 	.byte	0x5f
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17b0d
+	.long	0x16194
+	.long	0x17bc7
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x9
 	.ascii "wcstombs\0"
 	.byte	0x2d
 	.word	0x1f0
 	.byte	0x12
-	.long	0x1618e
-	.long	0x17b33
+	.long	0x16103
+	.long	0x17bed
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x1
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x9
 	.ascii "wctomb\0"
 	.byte	0x2d
 	.word	0x1ee
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17b52
+	.long	0x16194
+	.long	0x17c0c
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x1
-	.long	0x164e5
+	.long	0x164c2
 	.byte	0
 	.uleb128 0x9
 	.ascii "lldiv\0"
 	.byte	0x2d
 	.word	0x2bd
 	.byte	0x25
-	.long	0x178bc
-	.long	0x17b70
+	.long	0x17976
+	.long	0x17c2a
 	.uleb128 0x1
-	.long	0x160cd
+	.long	0x16131
 	.uleb128 0x1
-	.long	0x160cd
+	.long	0x16131
 	.byte	0
 	.uleb128 0x9
 	.ascii "atoll\0"
 	.byte	0x2d
 	.word	0x2c8
 	.byte	0x28
-	.long	0x160cd
-	.long	0x17b89
+	.long	0x16131
+	.long	0x17c43
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x9
 	.ascii "strtoll\0"
 	.byte	0x2d
 	.word	0x2c4
 	.byte	0x28
-	.long	0x160cd
-	.long	0x17bae
+	.long	0x16131
+	.long	0x17c68
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x17787
+	.long	0x17841
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x9
 	.ascii "strtoull\0"
 	.byte	0x2d
 	.word	0x2c5
 	.byte	0x31
-	.long	0x1607a
-	.long	0x17bd4
+	.long	0x16112
+	.long	0x17c8e
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x17787
+	.long	0x17841
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x9
 	.ascii "strtof\0"
 	.byte	0x2d
 	.word	0x1c9
 	.byte	0x1f
-	.long	0x160fc
-	.long	0x17bf3
+	.long	0x16a87
+	.long	0x17cad
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x17787
+	.long	0x17841
 	.byte	0
 	.uleb128 0x9
 	.ascii "strtold\0"
 	.byte	0x2d
 	.word	0x1d4
 	.byte	0x27
-	.long	0x160e3
-	.long	0x17c13
+	.long	0x16a6e
+	.long	0x17ccd
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x17787
+	.long	0x17841
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "clearerr\0"
 	.byte	0x29
 	.word	0x271
 	.byte	0x10
-	.long	0x17c2b
+	.long	0x17ce5
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "fclose\0"
 	.byte	0x29
 	.word	0x272
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17c45
+	.long	0x16194
+	.long	0x17cff
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "feof\0"
 	.byte	0x29
 	.word	0x279
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17c5d
+	.long	0x16194
+	.long	0x17d17
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "ferror\0"
 	.byte	0x29
 	.word	0x27a
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17c77
+	.long	0x16194
+	.long	0x17d31
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "fflush\0"
 	.byte	0x29
 	.word	0x27b
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17c91
+	.long	0x16194
+	.long	0x17d4b
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "fgetc\0"
 	.byte	0x29
 	.word	0x27c
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17caa
+	.long	0x16194
+	.long	0x17d64
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "fgetpos\0"
 	.byte	0x29
 	.word	0x27e
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17cca
+	.long	0x16194
+	.long	0x17d84
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x17cca
+	.long	0x17d84
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x174b5
+	.long	0x1756f
 	.uleb128 0x9
 	.ascii "fgets\0"
 	.byte	0x29
 	.word	0x280
 	.byte	0x11
-	.long	0x164d4
-	.long	0x17cf3
+	.long	0x164b1
+	.long	0x17dad
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "fopen\0"
 	.byte	0x29
 	.word	0x287
 	.byte	0x11
-	.long	0x16c94
-	.long	0x17d11
+	.long	0x16d4e
+	.long	0x17dcb
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x13
 	.ascii "fprintf\0"
@@ -23244,12 +23313,12 @@ _ZTS15T100FolderLogic:
 	.word	0x170
 	.byte	0x5
 	.ascii "_Z7fprintfP6_iobufPKcz\0"
-	.long	0x160b5
-	.long	0x17d49
+	.long	0x16194
+	.long	0x17e03
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x9
@@ -23257,30 +23326,30 @@ _ZTS15T100FolderLogic:
 	.byte	0x29
 	.word	0x28c
 	.byte	0x12
-	.long	0x1618e
-	.long	0x17d71
+	.long	0x16103
+	.long	0x17e2b
 	.uleb128 0x1
-	.long	0x167e7
+	.long	0x16aba
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "freopen\0"
 	.byte	0x29
 	.word	0x28d
 	.byte	0x11
-	.long	0x16c94
-	.long	0x17d96
+	.long	0x16d4e
+	.long	0x17e50
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x13
 	.ascii "fscanf\0"
@@ -23288,12 +23357,12 @@ _ZTS15T100FolderLogic:
 	.word	0x143
 	.byte	0x5
 	.ascii "_Z6fscanfP6_iobufPKcz\0"
-	.long	0x160b5
-	.long	0x17dcc
+	.long	0x16194
+	.long	0x17e86
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x9
@@ -23301,64 +23370,64 @@ _ZTS15T100FolderLogic:
 	.byte	0x29
 	.word	0x290
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17def
+	.long	0x16194
+	.long	0x17ea9
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x160c1
+	.long	0x161a0
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
 	.uleb128 0x9
 	.ascii "fsetpos\0"
 	.byte	0x29
 	.word	0x28e
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17e0f
+	.long	0x16194
+	.long	0x17ec9
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x17e0f
+	.long	0x17ec9
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x174c4
+	.long	0x1757e
 	.uleb128 0x9
 	.ascii "ftell\0"
 	.byte	0x29
 	.word	0x291
 	.byte	0x10
-	.long	0x160c1
-	.long	0x17e2e
+	.long	0x161a0
+	.long	0x17ee8
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x9
 	.ascii "getc\0"
 	.byte	0x29
 	.word	0x2bb
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17e46
+	.long	0x16194
+	.long	0x17f00
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
-	.uleb128 0x5d
+	.uleb128 0x5f
 	.ascii "getchar\0"
 	.byte	0x29
 	.word	0x2bc
 	.byte	0xf
-	.long	0x160b5
-	.uleb128 0x54
+	.long	0x16194
+	.uleb128 0x55
 	.ascii "perror\0"
 	.byte	0x29
 	.word	0x2c3
 	.byte	0x10
-	.long	0x17e6d
+	.long	0x17f27
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x13
 	.ascii "printf\0"
@@ -23366,10 +23435,10 @@ _ZTS15T100FolderLogic:
 	.word	0x17b
 	.byte	0x5
 	.ascii "_Z6printfPKcz\0"
-	.long	0x160b5
-	.long	0x17e96
+	.long	0x16194
+	.long	0x17f50
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x9
@@ -23377,31 +23446,31 @@ _ZTS15T100FolderLogic:
 	.byte	0x29
 	.word	0x2d3
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17eb0
+	.long	0x16194
+	.long	0x17f6a
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
 	.uleb128 0x9
 	.ascii "rename\0"
 	.byte	0x29
 	.word	0x2d4
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17ecf
+	.long	0x16194
+	.long	0x17f89
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "rewind\0"
 	.byte	0x29
 	.word	0x2da
 	.byte	0x10
-	.long	0x17ee5
+	.long	0x17f9f
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x13
 	.ascii "scanf\0"
@@ -23409,38 +23478,38 @@ _ZTS15T100FolderLogic:
 	.word	0x138
 	.byte	0x5
 	.ascii "_Z5scanfPKcz\0"
-	.long	0x160b5
-	.long	0x17f0c
+	.long	0x16194
+	.long	0x17fc6
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x31
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "setbuf\0"
 	.byte	0x29
 	.word	0x2dc
 	.byte	0x10
-	.long	0x17f27
+	.long	0x17fe1
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.byte	0
 	.uleb128 0x9
 	.ascii "setvbuf\0"
 	.byte	0x29
 	.word	0x2e0
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17f51
+	.long	0x16194
+	.long	0x1800b
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.byte	0
 	.uleb128 0x13
 	.ascii "sprintf\0"
@@ -23448,12 +23517,12 @@ _ZTS15T100FolderLogic:
 	.word	0x199
 	.byte	0x5
 	.ascii "_Z7sprintfPcPKcz\0"
-	.long	0x160b5
-	.long	0x17f83
+	.long	0x16194
+	.long	0x1803d
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x13
@@ -23462,41 +23531,41 @@ _ZTS15T100FolderLogic:
 	.word	0x12d
 	.byte	0x5
 	.ascii "_Z6sscanfPKcS0_z\0"
-	.long	0x160b5
-	.long	0x17fb4
+	.long	0x16194
+	.long	0x1806e
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x31
 	.byte	0
-	.uleb128 0x5d
+	.uleb128 0x5f
 	.ascii "tmpfile\0"
 	.byte	0x29
 	.word	0x2f1
 	.byte	0x11
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x9
 	.ascii "tmpnam\0"
 	.byte	0x29
 	.word	0x2f2
 	.byte	0x11
-	.long	0x164d4
-	.long	0x17fdf
+	.long	0x164b1
+	.long	0x18099
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.byte	0
 	.uleb128 0x9
 	.ascii "ungetc\0"
 	.byte	0x29
 	.word	0x2f3
 	.byte	0xf
-	.long	0x160b5
-	.long	0x17ffe
+	.long	0x16194
+	.long	0x180b8
 	.uleb128 0x1
-	.long	0x160b5
+	.long	0x16194
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.byte	0
 	.uleb128 0x13
 	.ascii "vfprintf\0"
@@ -23504,14 +23573,14 @@ _ZTS15T100FolderLogic:
 	.word	0x1a6
 	.byte	0x5
 	.ascii "_Z8vfprintfP6_iobufPKcPc\0"
-	.long	0x160b5
-	.long	0x1803d
+	.long	0x16194
+	.long	0x180f7
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x13
 	.ascii "vprintf\0"
@@ -23519,12 +23588,12 @@ _ZTS15T100FolderLogic:
 	.word	0x1ad
 	.byte	0x5
 	.ascii "_Z7vprintfPKcPc\0"
-	.long	0x160b5
-	.long	0x1806d
+	.long	0x16194
+	.long	0x18127
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x13
 	.ascii "vsprintf\0"
@@ -23532,14 +23601,14 @@ _ZTS15T100FolderLogic:
 	.word	0x1b4
 	.byte	0x5
 	.ascii "_Z8vsprintfPcPKcS_\0"
-	.long	0x160b5
-	.long	0x180a6
+	.long	0x16194
+	.long	0x18160
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x13
 	.ascii "snprintf\0"
@@ -23547,14 +23616,14 @@ _ZTS15T100FolderLogic:
 	.word	0x1d2
 	.byte	0x5
 	.ascii "_Z8snprintfPcyPKcz\0"
-	.long	0x160b5
-	.long	0x180e0
+	.long	0x16194
+	.long	0x1819a
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0x13
@@ -23563,14 +23632,14 @@ _ZTS15T100FolderLogic:
 	.word	0x162
 	.byte	0x5
 	.ascii "_Z7vfscanfP6_iobufPKcPc\0"
-	.long	0x160b5
-	.long	0x1811d
+	.long	0x16194
+	.long	0x181d7
 	.uleb128 0x1
-	.long	0x16c94
+	.long	0x16d4e
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x13
 	.ascii "vscanf\0"
@@ -23578,12 +23647,12 @@ _ZTS15T100FolderLogic:
 	.word	0x15b
 	.byte	0x5
 	.ascii "_Z6vscanfPKcPc\0"
-	.long	0x160b5
-	.long	0x1814b
+	.long	0x16194
+	.long	0x18205
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x13
 	.ascii "vsnprintf\0"
@@ -23591,16 +23660,16 @@ _ZTS15T100FolderLogic:
 	.word	0x1df
 	.byte	0x5
 	.ascii "_Z9vsnprintfPcyPKcS_\0"
-	.long	0x160b5
-	.long	0x1818c
+	.long	0x16194
+	.long	0x18246
 	.uleb128 0x1
-	.long	0x164d4
+	.long	0x164b1
 	.uleb128 0x1
-	.long	0x1618e
+	.long	0x16103
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0x13
 	.ascii "vsscanf\0"
@@ -23608,65 +23677,65 @@ _ZTS15T100FolderLogic:
 	.word	0x154
 	.byte	0x5
 	.ascii "_Z7vsscanfPKcS0_Pc\0"
-	.long	0x160b5
-	.long	0x181c4
+	.long	0x16194
+	.long	0x1827e
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x1
-	.long	0x16169
+	.long	0x160de
 	.byte	0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x6162
+	.long	0x621c
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x616f
+	.long	0x6229
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x53fe
+	.long	0x54b8
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x11b23
+	.long	0x11bdd
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x11b2f
+	.long	0x11be9
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x1a1
 	.uleb128 0x6
-	.long	0x181e2
+	.long	0x1829c
 	.uleb128 0x29
 	.byte	0x8
-	.long	0x53fe
+	.long	0x54b8
 	.uleb128 0x4e
-	.long	0x164e5
-	.long	0x18203
-	.uleb128 0x53
-	.long	0x1607a
+	.long	0x164c2
+	.long	0x182bd
+	.uleb128 0x54
+	.long	0x16112
 	.byte	0x7
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x14d
 	.uleb128 0x6
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x4ab4
+	.long	0x4ab3
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x374
+	.long	0x373
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x91b
+	.long	0x91a
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x928
+	.long	0x927
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x4ab4
+	.long	0x4ab3
 	.uleb128 0x29
 	.byte	0x8
 	.long	0x14d
@@ -23675,458 +23744,458 @@ _ZTS15T100FolderLogic:
 	.long	0x14d
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x6309
+	.long	0x63c3
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x64b1
+	.long	0x656b
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x4ac9
+	.long	0x4ac8
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x12af7
+	.long	0x12bb1
 	.uleb128 0x6
-	.long	0x1824a
+	.long	0x18304
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x12f0e
+	.long	0x12fc8
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x6
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x18271
+	.long	0x1832b
 	.uleb128 0x6
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x28
 	.ascii "T100FileInfo\0"
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x12f0e
+	.long	0x12fc8
 	.uleb128 0x6
-	.long	0x1827f
+	.long	0x18339
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x1826c
+	.long	0x18326
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x1826c
+	.long	0x18326
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x6622
+	.long	0x66dc
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x66ec
+	.long	0x67a6
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x6791
+	.long	0x684b
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x679e
+	.long	0x6858
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x6622
+	.long	0x66dc
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x1320b
+	.long	0x132c5
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x13217
+	.long	0x132d1
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x6a95
+	.long	0x6b4f
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x6c59
+	.long	0x6d13
 	.uleb128 0x29
 	.byte	0x8
-	.long	0x6c4d
+	.long	0x6d07
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x6a95
+	.long	0x6b4f
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x6c4d
+	.long	0x6d07
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x6a50
+	.long	0x6b0a
 	.uleb128 0x6
-	.long	0x182e4
+	.long	0x1839e
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x7137
+	.long	0x71f1
 	.uleb128 0x6
-	.long	0x182ef
+	.long	0x183a9
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x6d25
+	.long	0x6ddf
 	.uleb128 0x29
 	.byte	0x8
-	.long	0x6a50
+	.long	0x6b0a
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x713c
+	.long	0x71f6
 	.uleb128 0x6
-	.long	0x18306
+	.long	0x183c0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x7252
+	.long	0x730c
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x7322
+	.long	0x73dc
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x8b94
+	.long	0x8c4e
 	.uleb128 0x29
 	.byte	0x8
-	.long	0x713c
+	.long	0x71f6
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x713c
+	.long	0x71f6
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x8b94
+	.long	0x8c4e
 	.uleb128 0x6
-	.long	0x1832f
+	.long	0x183e9
 	.uleb128 0x29
 	.byte	0x8
-	.long	0x7314
+	.long	0x73ce
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x1397c
+	.long	0x13a36
 	.uleb128 0x6
-	.long	0x18340
+	.long	0x183fa
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x13da9
+	.long	0x13e63
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x6
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x18367
+	.long	0x18421
 	.uleb128 0x6
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x28
 	.ascii "T100FolderInfo\0"
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x13da9
+	.long	0x13e63
 	.uleb128 0x6
-	.long	0x18377
+	.long	0x18431
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x18362
+	.long	0x1841c
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x18362
+	.long	0x1841c
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x8cbc
+	.long	0x8d76
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x8d8e
+	.long	0x8e48
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x8e37
+	.long	0x8ef1
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x8e44
+	.long	0x8efe
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x8cbc
+	.long	0x8d76
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x140b8
+	.long	0x14172
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x140c4
+	.long	0x1417e
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x914b
+	.long	0x9205
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x9317
+	.long	0x93d1
 	.uleb128 0x29
 	.byte	0x8
-	.long	0x930b
+	.long	0x93c5
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x914b
+	.long	0x9205
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x930b
+	.long	0x93c5
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x9102
+	.long	0x91bc
 	.uleb128 0x6
-	.long	0x183dc
+	.long	0x18496
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x9811
-	.uleb128 0x6
-	.long	0x183e7
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x93e7
-	.uleb128 0x29
-	.byte	0x8
-	.long	0x9102
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x9816
-	.uleb128 0x6
-	.long	0x183fe
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x9934
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x9a08
-	.uleb128 0xb
-	.byte	0x8
-	.long	0xb304
-	.uleb128 0x29
-	.byte	0x8
-	.long	0x9816
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x9816
-	.uleb128 0xa
-	.byte	0x8
-	.long	0xb304
-	.uleb128 0x6
-	.long	0x18427
-	.uleb128 0x29
-	.byte	0x8
-	.long	0x99fa
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x14853
-	.uleb128 0x6
-	.long	0x18438
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x14cf1
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x14cf1
-	.uleb128 0xa
-	.byte	0x8
-	.long	0xb43a
-	.uleb128 0x6
-	.long	0x1844f
-	.uleb128 0xb
-	.byte	0x8
-	.long	0xb5bf
-	.uleb128 0xb
-	.byte	0x8
-	.long	0xb6d5
-	.uleb128 0xb
-	.byte	0x8
-	.long	0xb6e2
-	.uleb128 0xb
-	.byte	0x8
-	.long	0xb43a
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x15189
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x15195
-	.uleb128 0xa
-	.byte	0x8
-	.long	0xba19
-	.uleb128 0x6
-	.long	0x1847e
-	.uleb128 0xb
-	.byte	0x8
-	.long	0xbcf6
-	.uleb128 0x29
-	.byte	0x8
-	.long	0xbcea
-	.uleb128 0xb
-	.byte	0x8
-	.long	0xba19
-	.uleb128 0xb
-	.byte	0x8
-	.long	0xbcea
-	.uleb128 0xa
-	.byte	0x8
-	.long	0xb93d
+	.long	0x98cb
 	.uleb128 0x6
 	.long	0x184a1
-	.uleb128 0xa
-	.byte	0x8
-	.long	0xc3da
 	.uleb128 0xb
 	.byte	0x8
-	.long	0xbe0c
+	.long	0x94a1
 	.uleb128 0x29
 	.byte	0x8
-	.long	0xb93d
+	.long	0x91bc
 	.uleb128 0xa
 	.byte	0x8
-	.long	0xc3df
+	.long	0x98d0
 	.uleb128 0x6
-	.long	0x184be
+	.long	0x184b8
 	.uleb128 0xb
 	.byte	0x8
-	.long	0xc5d6
+	.long	0x99ee
 	.uleb128 0xb
 	.byte	0x8
-	.long	0xc6eb
+	.long	0x9ac2
 	.uleb128 0xb
 	.byte	0x8
-	.long	0xe847
+	.long	0xb3be
 	.uleb128 0x29
 	.byte	0x8
-	.long	0xc3df
+	.long	0x98d0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0xc3df
+	.long	0x98d0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0xe847
+	.long	0xb3be
+	.uleb128 0x6
+	.long	0x184e1
 	.uleb128 0x29
 	.byte	0x8
-	.long	0xc6dd
+	.long	0x9ab4
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x15249
+	.long	0x1490d
 	.uleb128 0x6
-	.long	0x184f3
+	.long	0x184f2
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x18209
+	.long	0x14dab
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x15bc3
-	.uleb128 0x6
-	.long	0x18504
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x15249
+	.long	0x14dab
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x1412e
+	.long	0xb4f4
 	.uleb128 0x6
-	.long	0x18515
+	.long	0x18509
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x18357
+	.long	0xb679
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xb78f
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xb79c
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xb4f4
+	.uleb128 0xb
+	.byte	0x8
+	.long	0x15243
+	.uleb128 0xb
+	.byte	0x8
+	.long	0x1524f
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x147e2
+	.long	0xbad3
 	.uleb128 0x6
-	.long	0x18526
+	.long	0x18538
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x1412e
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x1327f
-	.uleb128 0x6
-	.long	0x18537
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x18261
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x13911
-	.uleb128 0x6
-	.long	0x18548
-	.uleb128 0xb
-	.byte	0x8
-	.long	0x1327f
+	.long	0xbdb0
 	.uleb128 0x29
 	.byte	0x8
-	.long	0x1835c
-	.uleb128 0xa
-	.byte	0x8
-	.long	0xf132
-	.uleb128 0x6
-	.long	0x1855f
-	.uleb128 0xa
-	.byte	0x8
-	.long	0xf5d6
-	.uleb128 0x6
-	.long	0x1856a
+	.long	0xbda4
 	.uleb128 0xb
 	.byte	0x8
-	.long	0xf132
+	.long	0xbad3
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xbda4
+	.uleb128 0xa
+	.byte	0x8
+	.long	0xb9f7
+	.uleb128 0x6
+	.long	0x1855b
+	.uleb128 0xa
+	.byte	0x8
+	.long	0xc494
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xbec6
 	.uleb128 0x29
 	.byte	0x8
-	.long	0x18266
+	.long	0xb9f7
 	.uleb128 0xa
 	.byte	0x8
-	.long	0xf62a
+	.long	0xc499
 	.uleb128 0x6
-	.long	0x18581
+	.long	0x18578
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xc690
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xc7a5
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xe901
+	.uleb128 0x29
+	.byte	0x8
+	.long	0xc499
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xc499
 	.uleb128 0xa
 	.byte	0x8
-	.long	0xfab0
+	.long	0xe901
+	.uleb128 0x29
+	.byte	0x8
+	.long	0xc797
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x15303
 	.uleb128 0x6
-	.long	0x1858c
+	.long	0x185ad
 	.uleb128 0xb
 	.byte	0x8
-	.long	0xf62a
+	.long	0x182c3
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x12346
+	.long	0x15c7d
+	.uleb128 0x6
+	.long	0x185be
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x16859
+	.long	0x15303
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x12af2
+	.long	0x141e8
+	.uleb128 0x6
+	.long	0x185cf
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x12346
+	.long	0x18411
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x11ba9
+	.long	0x1489c
+	.uleb128 0x6
+	.long	0x185e0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x164e0
+	.long	0x141e8
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x12341
+	.long	0x13339
+	.uleb128 0x6
+	.long	0x185f1
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x11ba9
+	.long	0x1831b
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x139cb
+	.uleb128 0x6
+	.long	0x18602
+	.uleb128 0xb
+	.byte	0x8
+	.long	0x13339
+	.uleb128 0x29
+	.byte	0x8
+	.long	0x18416
+	.uleb128 0xa
+	.byte	0x8
+	.long	0xf1ec
+	.uleb128 0x6
+	.long	0x18619
+	.uleb128 0xa
+	.byte	0x8
+	.long	0xf690
+	.uleb128 0x6
+	.long	0x18624
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xf1ec
+	.uleb128 0x29
+	.byte	0x8
+	.long	0x18320
+	.uleb128 0xa
+	.byte	0x8
+	.long	0xf6e4
+	.uleb128 0x6
+	.long	0x1863b
+	.uleb128 0xa
+	.byte	0x8
+	.long	0xfb6a
+	.uleb128 0x6
+	.long	0x18646
+	.uleb128 0xb
+	.byte	0x8
+	.long	0xf6e4
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x12400
+	.uleb128 0xb
+	.byte	0x8
+	.long	0x16b2c
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x12bac
+	.uleb128 0xb
+	.byte	0x8
+	.long	0x12400
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x11c63
+	.uleb128 0xb
+	.byte	0x8
+	.long	0x164bd
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x123fb
+	.uleb128 0xb
+	.byte	0x8
+	.long	0x11c63
 	.uleb128 0x9d
 	.secrel32	.LASF146
 	.byte	0x8
 	.byte	0x31
 	.byte	0x6
 	.byte	0x7
-	.long	0x185cd
-	.long	0x187aa
+	.long	0x18687
+	.long	0x18864
 	.uleb128 0x9e
 	.secrel32	.LASF146
 	.ascii "_ZN15T100FolderLogicC4ERKS_\0"
 	.byte	0x1
-	.long	0x1860a
-	.long	0x18615
+	.long	0x186c4
+	.long	0x186cf
 	.uleb128 0x2
-	.long	0x187af
+	.long	0x18869
 	.uleb128 0x1
-	.long	0x187ba
+	.long	0x18874
 	.byte	0
 	.uleb128 0x9f
 	.ascii "_vptr.T100FolderLogic\0"
-	.long	0x187cb
+	.long	0x18885
 	.byte	0
 	.byte	0x1
 	.uleb128 0x15
@@ -24136,10 +24205,10 @@ _ZTS15T100FolderLogic:
 	.byte	0x1
 	.ascii "_ZN15T100FolderLogicC4Ev\0"
 	.byte	0x1
-	.long	0x1865d
-	.long	0x18663
+	.long	0x18717
+	.long	0x1871d
 	.uleb128 0x2
-	.long	0x187af
+	.long	0x18869
 	.byte	0
 	.uleb128 0xa0
 	.ascii "~T100FolderLogic\0"
@@ -24148,117 +24217,117 @@ _ZTS15T100FolderLogic:
 	.byte	0x1
 	.ascii "_ZN15T100FolderLogicD4Ev\0"
 	.byte	0x1
-	.long	0x185cd
+	.long	0x18687
 	.byte	0x1
-	.long	0x186a0
-	.long	0x186ab
+	.long	0x1875a
+	.long	0x18765
 	.uleb128 0x2
-	.long	0x187af
+	.long	0x18869
 	.uleb128 0x2
-	.long	0x160b5
+	.long	0x16194
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x65
 	.ascii "IsExists\0"
 	.byte	0x2
 	.byte	0x11
 	.byte	0xa
 	.ascii "_ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.long	0x1871a
-	.long	0x18725
+	.long	0x187d4
+	.long	0x187df
 	.uleb128 0x2
-	.long	0x187af
+	.long	0x18869
 	.uleb128 0x1
-	.long	0x18244
+	.long	0x182fe
 	.byte	0
-	.uleb128 0x74
+	.uleb128 0x75
 	.ascii "Open\0"
 	.byte	0x2
 	.byte	0x20
 	.byte	0xa
 	.ascii "_ZN15T100FolderLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP14T100FolderInfo\0"
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.long	0x18799
+	.long	0x18853
 	.uleb128 0x2
-	.long	0x187af
+	.long	0x18869
 	.uleb128 0x1
-	.long	0x18244
+	.long	0x182fe
 	.uleb128 0x1
-	.long	0x1835c
+	.long	0x18416
 	.byte	0
 	.byte	0
 	.uleb128 0x6
-	.long	0x185cd
+	.long	0x18687
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x185cd
+	.long	0x18687
 	.uleb128 0x6
-	.long	0x187af
+	.long	0x18869
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x187aa
-	.uleb128 0x7d
-	.long	0x160b5
-	.long	0x187cb
+	.long	0x18864
+	.uleb128 0x7e
+	.long	0x16194
+	.long	0x18885
 	.uleb128 0x31
 	.byte	0
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x187d1
-	.uleb128 0x79
+	.long	0x1888b
+	.uleb128 0x7a
 	.byte	0x8
 	.ascii "__vtbl_ptr_type\0"
-	.long	0x187c0
-	.uleb128 0x66
+	.long	0x1887a
+	.uleb128 0x67
 	.ascii "_ZNSt17integral_constantIbLb0EE5valueE\0"
-	.long	0x4b12
+	.long	0x4aff
 	.byte	0
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "_ZNSt17integral_constantIbLb1EE5valueE\0"
-	.long	0x4c20
+	.long	0x4c0d
 	.byte	0x1
 	.uleb128 0xa1
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIxE5__maxE\0"
-	.long	0x11635
+	.long	0x116ef
 	.quad	0x7fffffffffffffff
 	.uleb128 0xa2
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIiE5__minE\0"
-	.long	0x116a6
+	.long	0x11760
 	.sleb128 -2147483648
 	.uleb128 0xa3
 	.ascii "_ZN9__gnu_cxx24__numeric_traits_integerIiE5__maxE\0"
-	.long	0x116b4
+	.long	0x1176e
 	.long	0x7fffffff
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIfE16__max_exponent10E\0"
-	.long	0x117c2
+	.long	0x1187c
 	.byte	0x26
-	.uleb128 0x7e
+	.uleb128 0x7f
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIdE16__max_exponent10E\0"
-	.long	0x11827
+	.long	0x118e1
 	.word	0x134
-	.uleb128 0x7e
+	.uleb128 0x7f
 	.ascii "_ZN9__gnu_cxx25__numeric_traits_floatingIeE16__max_exponent10E\0"
-	.long	0x11891
+	.long	0x1194b
 	.word	0x1344
 	.uleb128 0x12
-	.long	0xfb43
-	.quad	.LFB2067
-	.quad	.LFE2067-.LFB2067
+	.long	0xfbfd
+	.quad	.LFB2410
+	.quad	.LFE2410-.LFB2410
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18a31
-	.uleb128 0x8
+	.long	0x18aeb
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xd
 	.word	0x165
 	.byte	0x16
-	.long	0x18290
+	.long	0x1834a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -24267,7 +24336,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x165
 	.byte	0x2a
-	.long	0x18290
+	.long	0x1834a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -24276,36 +24345,36 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x165
 	.byte	0x37
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x67
+	.uleb128 0x68
 	.ascii "_Num\0"
 	.byte	0xd
 	.word	0x16e
 	.byte	0x14
-	.long	0x53e7
+	.long	0x54a1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
 	.byte	0
 	.uleb128 0x12
-	.long	0xfbe5
-	.quad	.LFB2066
-	.quad	.LFE2066-.LFB2066
+	.long	0xfc9f
+	.quad	.LFB2409
+	.quad	.LFE2409-.LFB2409
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18a97
-	.uleb128 0x8
+	.long	0x18b51
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xd
 	.word	0x165
 	.byte	0x16
-	.long	0x18388
+	.long	0x18442
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -24314,7 +24383,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x165
 	.byte	0x2a
-	.long	0x18388
+	.long	0x18442
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -24323,43 +24392,43 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x165
 	.byte	0x37
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x67
+	.uleb128 0x68
 	.ascii "_Num\0"
 	.byte	0xd
 	.word	0x16e
 	.byte	0x14
-	.long	0x53e7
+	.long	0x54a1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -24
 	.byte	0
 	.uleb128 0x12
-	.long	0xfc88
-	.quad	.LFB2065
-	.quad	.LFE2065-.LFB2065
+	.long	0xfd42
+	.quad	.LFB2408
+	.quad	.LFE2408-.LFB2408
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18b0f
+	.long	0x18bc9
 	.uleb128 0x49
 	.secrel32	.LASF117
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0x1825b
-	.uleb128 0x8
+	.long	0x18315
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xd
 	.word	0x177
 	.byte	0x17
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -24368,7 +24437,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x177
 	.byte	0x24
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -24377,7 +24446,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x177
 	.byte	0x30
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -24386,198 +24455,198 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x17c
 	.byte	0x12
-	.long	0x1610d
+	.long	0x16a24
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -17
 	.byte	0
 	.uleb128 0x3c
-	.long	0xfd2e
-	.quad	.LFB2064
-	.quad	.LFE2064-.LFB2064
+	.long	0xfde8
+	.quad	.LFB2407
+	.quad	.LFE2407-.LFB2407
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18b44
+	.long	0x18bfe
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.uleb128 0xc
 	.secrel32	.LASF151
 	.byte	0xd
 	.word	0x115
 	.byte	0x1c
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x3c
-	.long	0xfd91
-	.quad	.LFB2063
-	.quad	.LFE2063-.LFB2063
+	.long	0xfe4b
+	.quad	.LFB2406
+	.quad	.LFE2406-.LFB2406
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18b79
+	.long	0x18c33
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.uleb128 0xc
 	.secrel32	.LASF151
 	.byte	0xe
 	.word	0x198
 	.byte	0x1c
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0xf6fc
-	.long	0x18b98
-	.quad	.LFB2062
-	.quad	.LFE2062-.LFB2062
-	.uleb128 0x1
-	.byte	0x9c
-	.long	0x18ba5
-	.uleb128 0xf
-	.secrel32	.LASF152
-	.long	0x18592
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 0
-	.byte	0
-	.uleb128 0x12
-	.long	0xfddb
-	.quad	.LFB2061
-	.quad	.LFE2061-.LFB2061
-	.uleb128 0x1
-	.byte	0x9c
-	.long	0x18c1d
-	.uleb128 0x49
-	.secrel32	.LASF117
-	.long	0x16105
-	.byte	0x1
-	.uleb128 0x8
-	.ascii "_II\0"
-	.long	0x18351
-	.uleb128 0x8
-	.ascii "_OI\0"
-	.long	0x18351
-	.uleb128 0xc
-	.secrel32	.LASF147
-	.byte	0xd
-	.word	0x177
-	.byte	0x17
-	.long	0x18351
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 0
-	.uleb128 0xc
-	.secrel32	.LASF148
-	.byte	0xd
-	.word	0x177
-	.byte	0x24
-	.long	0x18351
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 8
-	.uleb128 0xc
-	.secrel32	.LASF149
-	.byte	0xd
-	.word	0x177
-	.byte	0x30
-	.long	0x18351
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 16
-	.uleb128 0x2e
-	.secrel32	.LASF150
-	.byte	0xd
-	.word	0x17c
-	.byte	0x12
-	.long	0x1610d
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 -17
-	.byte	0
-	.uleb128 0x3c
-	.long	0xfe87
-	.quad	.LFB2060
-	.quad	.LFE2060-.LFB2060
-	.uleb128 0x1
-	.byte	0x9c
+	.long	0xf7b6
 	.long	0x18c52
+	.quad	.LFB2405
+	.quad	.LFE2405-.LFB2405
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x18c5f
+	.uleb128 0xf
+	.secrel32	.LASF152
+	.long	0x1864c
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.byte	0
+	.uleb128 0x12
+	.long	0xfe95
+	.quad	.LFB2404
+	.quad	.LFE2404-.LFB2404
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x18cd7
+	.uleb128 0x49
+	.secrel32	.LASF117
+	.long	0x16a1c
+	.byte	0x1
+	.uleb128 0x7
+	.ascii "_II\0"
+	.long	0x1840b
+	.uleb128 0x7
+	.ascii "_OI\0"
+	.long	0x1840b
+	.uleb128 0xc
+	.secrel32	.LASF147
+	.byte	0xd
+	.word	0x177
+	.byte	0x17
+	.long	0x1840b
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.uleb128 0xc
+	.secrel32	.LASF148
+	.byte	0xd
+	.word	0x177
+	.byte	0x24
+	.long	0x1840b
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 8
+	.uleb128 0xc
+	.secrel32	.LASF149
+	.byte	0xd
+	.word	0x177
+	.byte	0x30
+	.long	0x1840b
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 16
+	.uleb128 0x2e
+	.secrel32	.LASF150
+	.byte	0xd
+	.word	0x17c
+	.byte	0x12
+	.long	0x16a24
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -17
+	.byte	0
+	.uleb128 0x3c
+	.long	0xff41
+	.quad	.LFB2403
+	.quad	.LFE2403-.LFB2403
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x18d0c
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.uleb128 0xc
 	.secrel32	.LASF151
 	.byte	0xd
 	.word	0x115
 	.byte	0x1c
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x3c
-	.long	0xfeee
-	.quad	.LFB2059
-	.quad	.LFE2059-.LFB2059
+	.long	0xffa8
+	.quad	.LFB2402
+	.quad	.LFE2402-.LFB2402
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18c87
+	.long	0x18d41
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.uleb128 0xc
 	.secrel32	.LASF151
 	.byte	0xe
 	.word	0x198
 	.byte	0x1c
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0xf20a
-	.long	0x18ca6
-	.quad	.LFB2058
-	.quad	.LFE2058-.LFB2058
+	.long	0xf2c4
+	.long	0x18d60
+	.quad	.LFB2401
+	.quad	.LFE2401-.LFB2401
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18cb3
+	.long	0x18d6d
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18570
+	.long	0x1862a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0xff3a
-	.quad	.LFB2057
-	.quad	.LFE2057-.LFB2057
+	.long	0xfff4
+	.quad	.LFB2400
+	.quad	.LFE2400-.LFB2400
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18d1b
+	.long	0x18dd5
 	.uleb128 0x49
 	.secrel32	.LASF117
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0x1825b
-	.uleb128 0x8
+	.long	0x18315
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xd
 	.word	0x1a4
 	.byte	0x18
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -24586,7 +24655,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x1a4
 	.byte	0x25
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -24595,54 +24664,54 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x1a4
 	.byte	0x31
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x12
-	.long	0xffe2
-	.quad	.LFB2056
-	.quad	.LFE2056-.LFB2056
+	.long	0x1009c
+	.quad	.LFB2399
+	.quad	.LFE2399-.LFB2399
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18d50
+	.long	0x18e0a
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.uleb128 0xc
 	.secrel32	.LASF151
 	.byte	0x4
 	.word	0x4d3
 	.byte	0x2b
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x1005d
-	.quad	.LFB2055
-	.quad	.LFE2055-.LFB2055
+	.long	0x10117
+	.quad	.LFB2398
+	.quad	.LFE2398-.LFB2398
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18db8
+	.long	0x18e72
 	.uleb128 0x49
 	.secrel32	.LASF117
-	.long	0x16105
+	.long	0x16a1c
 	.byte	0x1
-	.uleb128 0x8
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0x18351
-	.uleb128 0x8
+	.long	0x1840b
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xd
 	.word	0x1a4
 	.byte	0x18
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -24651,7 +24720,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x1a4
 	.byte	0x25
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -24660,50 +24729,50 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x1a4
 	.byte	0x31
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x12
-	.long	0x1010b
-	.quad	.LFB2054
-	.quad	.LFE2054-.LFB2054
+	.long	0x101c5
+	.quad	.LFB2397
+	.quad	.LFE2397-.LFB2397
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18ded
+	.long	0x18ea7
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.uleb128 0xc
 	.secrel32	.LASF151
 	.byte	0x4
 	.word	0x4d3
 	.byte	0x2b
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x10188
-	.quad	.LFB2051
-	.quad	.LFE2051-.LFB2051
+	.long	0x10242
+	.quad	.LFB2394
+	.quad	.LFE2394-.LFB2394
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18e4b
-	.uleb128 0x8
+	.long	0x18f05
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0xf62a
-	.uleb128 0x8
+	.long	0xf6e4
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xd
 	.word	0x1be
 	.byte	0xe
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -24712,7 +24781,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x1be
 	.byte	0x1b
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -24721,30 +24790,30 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x1be
 	.byte	0x27
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x12
-	.long	0x1022d
-	.quad	.LFB2050
-	.quad	.LFE2050-.LFB2050
+	.long	0x102e7
+	.quad	.LFB2393
+	.quad	.LFE2393-.LFB2393
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18ea9
-	.uleb128 0x8
+	.long	0x18f63
+	.uleb128 0x7
 	.ascii "_II\0"
-	.long	0xf132
-	.uleb128 0x8
+	.long	0xf1ec
+	.uleb128 0x7
 	.ascii "_OI\0"
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xd
 	.word	0x1be
 	.byte	0xe
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -24753,7 +24822,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x1be
 	.byte	0x1b
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -24762,51 +24831,51 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.word	0x1be
 	.byte	0x27
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x4a
-	.long	0x102d8
-	.long	0x18ed9
+	.long	0x10392
+	.long	0x18f93
 	.uleb128 0x5
 	.secrel32	.LASF120
-	.long	0x164da
-	.uleb128 0x5e
+	.long	0x164b7
+	.uleb128 0x60
 	.secrel32	.LASF147
 	.byte	0x1e
 	.byte	0x62
 	.byte	0x26
-	.long	0x164da
-	.uleb128 0x5e
+	.long	0x164b7
+	.uleb128 0x60
 	.secrel32	.LASF148
 	.byte	0x1e
 	.byte	0x62
 	.byte	0x45
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x4e1e
+	.long	0x4ed8
 	.byte	0
 	.uleb128 0x12
-	.long	0x55c3
-	.quad	.LFB2041
-	.quad	.LFE2041-.LFB2041
+	.long	0x567d
+	.quad	.LFB2384
+	.quad	.LFE2384-.LFB2384
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18f34
+	.long	0x18fee
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf6e4
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf62a
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1d
 	.secrel32	.LASF147
 	.byte	0xc
 	.byte	0x63
 	.byte	0x26
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -24815,7 +24884,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.byte	0x63
 	.byte	0x3e
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -24824,45 +24893,45 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.byte	0x64
 	.byte	0x1a
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x2b
-	.long	0x12dc2
-	.long	0x18f53
-	.quad	.LFB2040
-	.quad	.LFE2040-.LFB2040
+	.long	0x12e7c
+	.long	0x1900d
+	.quad	.LFB2383
+	.quad	.LFE2383-.LFB2383
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18f60
+	.long	0x1901a
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18285
+	.long	0x1833f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x5698
-	.quad	.LFB2039
-	.quad	.LFE2039-.LFB2039
+	.long	0x5752
+	.quad	.LFB2382
+	.quad	.LFE2382-.LFB2382
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18fbb
+	.long	0x19075
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf1ec
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf132
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1d
 	.secrel32	.LASF147
 	.byte	0xc
 	.byte	0x63
 	.byte	0x26
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -24871,7 +24940,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.byte	0x63
 	.byte	0x3e
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -24880,78 +24949,78 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.byte	0x64
 	.byte	0x1a
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x2b
-	.long	0x13c57
-	.long	0x18fda
-	.quad	.LFB2038
-	.quad	.LFE2038-.LFB2038
+	.long	0x13d11
+	.long	0x19094
+	.quad	.LFB2381
+	.quad	.LFE2381-.LFB2381
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x18fe7
+	.long	0x190a1
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1837d
+	.long	0x18437
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x4a
-	.long	0x10375
-	.long	0x19012
+	.long	0x1042f
+	.long	0x190cc
 	.uleb128 0x5
-	.secrel32	.LASF63
-	.long	0x164da
-	.uleb128 0x5e
+	.secrel32	.LASF64
+	.long	0x164b7
+	.uleb128 0x60
 	.secrel32	.LASF147
 	.byte	0x1e
 	.byte	0x8a
 	.byte	0x1d
-	.long	0x164da
-	.uleb128 0x5e
+	.long	0x164b7
+	.uleb128 0x60
 	.secrel32	.LASF148
 	.byte	0x1e
 	.byte	0x8a
 	.byte	0x35
-	.long	0x164da
+	.long	0x164b7
 	.byte	0
 	.uleb128 0x4a
-	.long	0x103ea
-	.long	0x1902c
-	.uleb128 0x8
+	.long	0x104a4
+	.long	0x190e6
+	.uleb128 0x7
 	.ascii "_Iter\0"
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x185bb
+	.long	0x18675
 	.byte	0
 	.uleb128 0x4a
-	.long	0x15d10
-	.long	0x1904f
-	.uleb128 0x8
+	.long	0x15dca
+	.long	0x19109
+	.uleb128 0x7
 	.ascii "_Type\0"
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x3a
 	.ascii "__ptr\0"
 	.byte	0x22
 	.byte	0x98
 	.byte	0x1e
-	.long	0x164da
+	.long	0x164b7
 	.byte	0
 	.uleb128 0x1e
-	.long	0x12d61
-	.long	0x1906e
-	.quad	.LFB2012
-	.quad	.LFE2012-.LFB2012
+	.long	0x12e1b
+	.long	0x19128
+	.quad	.LFB2355
+	.quad	.LFE2355-.LFB2355
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19092
+	.long	0x1914c
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18250
+	.long	0x1830a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -24960,56 +25029,56 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x74
 	.byte	0x1a
-	.long	0x12c06
+	.long	0x12cc0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x32
-	.long	0x12d54
+	.long	0x12e0e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x3c
-	.long	0x54b8
-	.quad	.LFB2011
-	.quad	.LFE2011-.LFB2011
+	.long	0x5572
+	.quad	.LFB2354
+	.quad	.LFE2354-.LFB2354
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x190c7
+	.long	0x19181
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
+	.secrel32	.LASF63
+	.long	0x18315
 	.uleb128 0x32
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x32
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x12
-	.long	0x10474
-	.quad	.LFB2010
-	.quad	.LFE2010-.LFB2010
+	.long	0x1052e
+	.quad	.LFB2353
+	.quad	.LFE2353-.LFB2353
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19131
+	.long	0x191eb
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf6e4
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf62a
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x1d
 	.secrel32	.LASF147
 	.byte	0xc
 	.byte	0x73
 	.byte	0x27
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25018,7 +25087,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.byte	0x73
 	.byte	0x3f
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -25027,66 +25096,66 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.byte	0x74
 	.byte	0x1b
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x5f
+	.uleb128 0x61
 	.secrel32	.LASF153
 	.byte	0xc
 	.byte	0x80
 	.byte	0x12
-	.long	0x1610d
+	.long	0x16a24
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -17
 	.byte	0
 	.uleb128 0x22
-	.long	0xf6a4
-	.long	0x1913f
+	.long	0xf75e
+	.long	0x191f9
 	.byte	0x2
-	.long	0x19156
-	.uleb128 0x16
+	.long	0x19210
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18587
+	.long	0x18641
 	.uleb128 0x41
 	.ascii "__i\0"
 	.byte	0x4
 	.word	0x406
 	.byte	0x23
-	.long	0xf6ee
+	.long	0xf7a8
 	.byte	0
 	.uleb128 0x44
-	.long	0x19131
+	.long	0x191eb
 	.ascii "_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_\0"
-	.long	0x191a2
-	.quad	.LFB2009
-	.quad	.LFE2009-.LFB2009
+	.long	0x1925c
+	.quad	.LFB2352
+	.quad	.LFE2352-.LFB2352
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x191b3
+	.long	0x1926d
 	.uleb128 0x24
-	.long	0x1913f
+	.long	0x191f9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x24
-	.long	0x19148
+	.long	0x19202
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1e
-	.long	0x12cf3
-	.long	0x191d2
-	.quad	.LFB2006
-	.quad	.LFE2006-.LFB2006
+	.long	0x12dad
+	.long	0x1928c
+	.quad	.LFB2349
+	.quad	.LFE2349-.LFB2349
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x191f6
+	.long	0x192b0
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18250
+	.long	0x1830a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25095,59 +25164,59 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x63
 	.byte	0x1a
-	.long	0x12d54
+	.long	0x12e0e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x32
-	.long	0x16828
+	.long	0x16afb
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x2b
-	.long	0x6cbb
-	.long	0x19215
-	.quad	.LFB2005
-	.quad	.LFE2005-.LFB2005
+	.long	0x6d75
+	.long	0x192cf
+	.quad	.LFB2348
+	.quad	.LFE2348-.LFB2348
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19222
+	.long	0x192dc
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x182f5
+	.long	0x183af
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x687d
-	.quad	.LFB2004
-	.quad	.LFE2004-.LFB2004
+	.long	0x6937
+	.quad	.LFB2347
+	.quad	.LFE2347-.LFB2347
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1924e
+	.long	0x19308
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1ef
 	.byte	0x26
-	.long	0x182ae
+	.long	0x18368
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.long	0x13bf4
-	.long	0x1926d
-	.quad	.LFB2003
-	.quad	.LFE2003-.LFB2003
+	.long	0x13cae
+	.long	0x19327
+	.quad	.LFB2346
+	.quad	.LFE2346-.LFB2346
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19291
+	.long	0x1934b
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18346
+	.long	0x18400
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25156,56 +25225,56 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x74
 	.byte	0x1a
-	.long	0x13a93
+	.long	0x13b4d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x32
-	.long	0x13be7
+	.long	0x13ca1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x3c
-	.long	0x552b
-	.quad	.LFB2002
-	.quad	.LFE2002-.LFB2002
+	.long	0x55e5
+	.quad	.LFB2345
+	.quad	.LFE2345-.LFB2345
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x192c6
+	.long	0x19380
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
+	.secrel32	.LASF63
+	.long	0x1840b
 	.uleb128 0x32
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x32
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x12
-	.long	0x10535
-	.quad	.LFB2001
-	.quad	.LFE2001-.LFB2001
+	.long	0x105ef
+	.quad	.LFB2344
+	.quad	.LFE2344-.LFB2344
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19330
+	.long	0x193ea
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf1ec
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf132
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x1d
 	.secrel32	.LASF147
 	.byte	0xc
 	.byte	0x73
 	.byte	0x27
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25214,7 +25283,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.byte	0x73
 	.byte	0x3f
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -25223,66 +25292,66 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.byte	0x74
 	.byte	0x1b
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x5f
+	.uleb128 0x61
 	.secrel32	.LASF153
 	.byte	0xc
 	.byte	0x80
 	.byte	0x12
-	.long	0x1610d
+	.long	0x16a24
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -17
 	.byte	0
 	.uleb128 0x22
-	.long	0xf1b0
-	.long	0x1933e
+	.long	0xf26a
+	.long	0x193f8
 	.byte	0x2
-	.long	0x19355
-	.uleb128 0x16
+	.long	0x1940f
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18565
+	.long	0x1861f
 	.uleb128 0x41
 	.ascii "__i\0"
 	.byte	0x4
 	.word	0x406
 	.byte	0x23
-	.long	0xf1fc
+	.long	0xf2b6
 	.byte	0
 	.uleb128 0x44
-	.long	0x19330
+	.long	0x193ea
 	.ascii "_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_\0"
-	.long	0x193a3
-	.quad	.LFB2000
-	.quad	.LFE2000-.LFB2000
+	.long	0x1945d
+	.quad	.LFB2343
+	.quad	.LFE2343-.LFB2343
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x193b4
+	.long	0x1946e
 	.uleb128 0x24
-	.long	0x1933e
+	.long	0x193f8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x24
-	.long	0x19347
+	.long	0x19401
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1e
-	.long	0x13b84
-	.long	0x193d3
-	.quad	.LFB1997
-	.quad	.LFE1997-.LFB1997
+	.long	0x13c3e
+	.long	0x1948d
+	.quad	.LFB2340
+	.quad	.LFE2340-.LFB2340
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x193f7
+	.long	0x194b1
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18346
+	.long	0x18400
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25291,56 +25360,56 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x63
 	.byte	0x1a
-	.long	0x13be7
+	.long	0x13ca1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x32
-	.long	0x16828
+	.long	0x16afb
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x2b
-	.long	0x937b
-	.long	0x19416
-	.quad	.LFB1996
-	.quad	.LFE1996-.LFB1996
+	.long	0x9435
+	.long	0x194d0
+	.quad	.LFB2339
+	.quad	.LFE2339-.LFB2339
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19423
+	.long	0x194dd
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x183ed
+	.long	0x184a7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x8f27
-	.quad	.LFB1995
-	.quad	.LFE1995-.LFB1995
+	.long	0x8fe1
+	.quad	.LFB2338
+	.quad	.LFE2338-.LFB2338
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1944f
+	.long	0x19509
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1ef
 	.byte	0x26
-	.long	0x183a6
+	.long	0x18460
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x105fc
-	.quad	.LFB1993
-	.quad	.LFE1993-.LFB1993
+	.long	0x106b6
+	.quad	.LFB2336
+	.quad	.LFE2336-.LFB2336
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19489
-	.uleb128 0x8
+	.long	0x19543
+	.uleb128 0x7
 	.ascii "_Tp\0"
 	.long	0x14d
 	.uleb128 0x27
@@ -25348,22 +25417,22 @@ _ZTS15T100FolderLogic:
 	.byte	0x6
 	.byte	0x61
 	.byte	0x13
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.long	0x14be7
-	.long	0x194a8
-	.quad	.LFB1992
-	.quad	.LFE1992-.LFB1992
+	.long	0x14ca1
+	.long	0x19562
+	.quad	.LFB2335
+	.quad	.LFE2335-.LFB2335
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x194cc
+	.long	0x19586
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1843e
+	.long	0x184f8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25372,84 +25441,84 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x74
 	.byte	0x1a
-	.long	0x14a1d
+	.long	0x14ad7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x32
-	.long	0x14bda
+	.long	0x14c94
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x22
-	.long	0x148c5
-	.long	0x194da
+	.long	0x1497f
+	.long	0x19594
 	.byte	0x2
-	.long	0x194e4
-	.uleb128 0x16
+	.long	0x1959e
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x1843e
+	.long	0x184f8
 	.byte	0
 	.uleb128 0x44
-	.long	0x194cc
+	.long	0x19586
 	.ascii "_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev\0"
-	.long	0x1955a
-	.quad	.LFB1990
-	.quad	.LFE1990-.LFB1990
+	.long	0x19614
+	.quad	.LFB2333
+	.quad	.LFE2333-.LFB2333
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19563
+	.long	0x1961d
 	.uleb128 0x24
-	.long	0x194da
+	.long	0x19594
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x68
-	.long	0x48e3
-	.long	0x19579
-	.long	0x195b4
+	.uleb128 0x69
+	.long	0x48e2
+	.long	0x19633
+	.long	0x1966e
 	.uleb128 0x5
 	.secrel32	.LASF50
-	.long	0x164da
-	.uleb128 0x16
+	.long	0x164b7
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18209
+	.long	0x182c3
 	.uleb128 0x3a
 	.ascii "__beg\0"
 	.byte	0xf
 	.byte	0xcf
 	.byte	0x20
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x3a
 	.ascii "__end\0"
 	.byte	0xf
 	.byte	0xcf
 	.byte	0x33
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x4dce
+	.long	0x4e88
 	.uleb128 0xa4
 	.ascii "__dnew\0"
 	.byte	0xf
 	.byte	0xd7
 	.byte	0xc
-	.long	0x374
+	.long	0x373
 	.byte	0
 	.uleb128 0x12
-	.long	0x681d
-	.quad	.LFB1956
-	.quad	.LFE1956-.LFB1956
+	.long	0x68d7
+	.quad	.LFB2299
+	.quad	.LFE2299-.LFB2299
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19600
+	.long	0x196ba
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x22
-	.long	0x182a8
+	.long	0x18362
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25458,7 +25527,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x2f
-	.long	0x672c
+	.long	0x67e6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -25467,27 +25536,27 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x3e
-	.long	0x67a3
+	.long	0x685d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x12
-	.long	0x1068a
-	.quad	.LFB1955
-	.quad	.LFE1955-.LFB1955
+	.long	0x10744
+	.quad	.LFB2298
+	.quad	.LFE2298-.LFB2298
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19643
+	.long	0x196fd
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
+	.secrel32	.LASF63
+	.long	0x18315
 	.uleb128 0x1d
 	.secrel32	.LASF147
 	.byte	0x6
 	.byte	0x7f
 	.byte	0x1f
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25496,25 +25565,25 @@ _ZTS15T100FolderLogic:
 	.byte	0x6
 	.byte	0x7f
 	.byte	0x39
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x2b
-	.long	0x12e17
-	.long	0x1966b
-	.quad	.LFB1954
-	.quad	.LFE1954-.LFB1954
+	.long	0x12ed1
+	.long	0x19725
+	.quad	.LFB2297
+	.quad	.LFE2297-.LFB2297
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19687
-	.uleb128 0x8
+	.long	0x19741
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18250
+	.long	0x1830a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25523,33 +25592,33 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x8c
 	.byte	0xf
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x12
-	.long	0x106e5
-	.quad	.LFB1953
-	.quad	.LFE1953-.LFB1953
+	.long	0x1079f
+	.quad	.LFB2296
+	.quad	.LFE2296-.LFB2296
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x196f6
+	.long	0x197b0
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf6e4
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf62a
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
-	.uleb128 0x8
+	.long	0x18315
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xc
 	.word	0x11f
 	.byte	0x2b
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25558,7 +25627,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.word	0x11f
 	.byte	0x43
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -25567,52 +25636,52 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.word	0x120
 	.byte	0x18
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.uleb128 0x32
-	.long	0x182b4
+	.long	0x1836e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
 	.byte	0
 	.uleb128 0x12
-	.long	0x107d7
-	.quad	.LFB1952
-	.quad	.LFE1952-.LFB1952
+	.long	0x10891
+	.quad	.LFB2295
+	.quad	.LFE2295-.LFB2295
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19734
-	.uleb128 0x8
+	.long	0x197ee
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x42
 	.secrel32	.LASF121
-	.long	0xf62a
+	.long	0xf6e4
 	.uleb128 0x14
 	.ascii "__i\0"
 	.byte	0x4
 	.word	0x4bf
 	.byte	0x2b
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x6739
-	.quad	.LFB1951
-	.quad	.LFE1951-.LFB1951
+	.long	0x67f3
+	.quad	.LFB2294
+	.quad	.LFE2294-.LFB2294
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19770
+	.long	0x1982a
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1b3
 	.byte	0x20
-	.long	0x182a8
+	.long	0x18362
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25621,54 +25690,54 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1b3
 	.byte	0x2f
-	.long	0x67a3
+	.long	0x685d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x2b
-	.long	0x7a6e
-	.long	0x1978f
-	.quad	.LFB1950
-	.quad	.LFE1950-.LFB1950
+	.long	0x7b28
+	.long	0x19849
+	.quad	.LFB2293
+	.quad	.LFE2293-.LFB2293
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1979c
+	.long	0x19856
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18335
+	.long	0x183ef
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.long	0x7ab8
-	.long	0x197bb
-	.quad	.LFB1949
-	.quad	.LFE1949-.LFB1949
+	.long	0x7b72
+	.long	0x19875
+	.quad	.LFB2292
+	.quad	.LFE2292-.LFB2292
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x197c8
+	.long	0x19882
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18335
+	.long	0x183ef
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x8ec5
-	.quad	.LFB1948
-	.quad	.LFE1948-.LFB1948
+	.long	0x8f7f
+	.quad	.LFB2291
+	.quad	.LFE2291-.LFB2291
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19814
+	.long	0x198ce
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x22
-	.long	0x183a0
+	.long	0x1845a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25677,7 +25746,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x2f
-	.long	0x8dd0
+	.long	0x8e8a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -25686,27 +25755,27 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x3e
-	.long	0x8e49
+	.long	0x8f03
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x12
-	.long	0x10881
-	.quad	.LFB1947
-	.quad	.LFE1947-.LFB1947
+	.long	0x1093b
+	.quad	.LFB2290
+	.quad	.LFE2290-.LFB2290
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19857
+	.long	0x19911
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
+	.secrel32	.LASF63
+	.long	0x1840b
 	.uleb128 0x1d
 	.secrel32	.LASF147
 	.byte	0x6
 	.byte	0x7f
 	.byte	0x1f
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25715,25 +25784,25 @@ _ZTS15T100FolderLogic:
 	.byte	0x6
 	.byte	0x7f
 	.byte	0x39
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x2b
-	.long	0x13cae
-	.long	0x1987f
-	.quad	.LFB1946
-	.quad	.LFE1946-.LFB1946
+	.long	0x13d68
+	.long	0x19939
+	.quad	.LFB2289
+	.quad	.LFE2289-.LFB2289
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1989b
-	.uleb128 0x8
+	.long	0x19955
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18346
+	.long	0x18400
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25742,33 +25811,33 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x8c
 	.byte	0xf
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x12
-	.long	0x108e0
-	.quad	.LFB1945
-	.quad	.LFE1945-.LFB1945
+	.long	0x1099a
+	.quad	.LFB2288
+	.quad	.LFE2288-.LFB2288
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1990a
+	.long	0x199c4
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0xf1ec
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0xf132
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
-	.uleb128 0x8
+	.long	0x1840b
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xc
 	.word	0x11f
 	.byte	0x2b
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25777,7 +25846,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.word	0x11f
 	.byte	0x43
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -25786,52 +25855,52 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.word	0x120
 	.byte	0x18
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.uleb128 0x32
-	.long	0x183ac
+	.long	0x18466
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
 	.byte	0
 	.uleb128 0x12
-	.long	0x109da
-	.quad	.LFB1944
-	.quad	.LFE1944-.LFB1944
+	.long	0x10a94
+	.quad	.LFB2287
+	.quad	.LFE2287-.LFB2287
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19948
-	.uleb128 0x8
+	.long	0x19a02
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x42
 	.secrel32	.LASF121
-	.long	0xf132
+	.long	0xf1ec
 	.uleb128 0x14
 	.ascii "__i\0"
 	.byte	0x4
 	.word	0x4bf
 	.byte	0x2b
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x8ddd
-	.quad	.LFB1943
-	.quad	.LFE1943-.LFB1943
+	.long	0x8e97
+	.quad	.LFB2286
+	.quad	.LFE2286-.LFB2286
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19984
+	.long	0x19a3e
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1b3
 	.byte	0x20
-	.long	0x183a0
+	.long	0x1845a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25840,30 +25909,30 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1b3
 	.byte	0x2f
-	.long	0x8e49
+	.long	0x8f03
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x16094
+	.long	0x1612c
 	.uleb128 0x3c
-	.long	0x10a88
-	.quad	.LFB1942
-	.quad	.LFE1942-.LFB1942
+	.long	0x10b42
+	.quad	.LFB2285
+	.quad	.LFE2285-.LFB2285
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x199cd
-	.uleb128 0x8
+	.long	0x19a87
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1607a
+	.long	0x16112
 	.uleb128 0x27
 	.ascii "__a\0"
 	.byte	0xd
 	.byte	0xdb
 	.byte	0x14
-	.long	0x19984
+	.long	0x19a3e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25872,67 +25941,67 @@ _ZTS15T100FolderLogic:
 	.byte	0xd
 	.byte	0xdb
 	.byte	0x24
-	.long	0x19984
+	.long	0x19a3e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x2b
-	.long	0xa182
-	.long	0x199ec
-	.quad	.LFB1941
-	.quad	.LFE1941-.LFB1941
+	.long	0xa23c
+	.long	0x19aa6
+	.quad	.LFB2284
+	.quad	.LFE2284-.LFB2284
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x199f9
+	.long	0x19ab3
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1842d
+	.long	0x184e7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.long	0xa1ce
-	.long	0x19a18
-	.quad	.LFB1940
-	.quad	.LFE1940-.LFB1940
+	.long	0xa288
+	.long	0x19ad2
+	.quad	.LFB2283
+	.quad	.LFE2283-.LFB2283
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19a25
+	.long	0x19adf
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1842d
+	.long	0x184e7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x4a
-	.long	0x6275
-	.long	0x19a3d
+	.long	0x632f
+	.long	0x19af7
 	.uleb128 0xa5
 	.secrel32	.LASF154
 	.byte	0x8
 	.word	0x1f8
 	.byte	0x43
-	.long	0x181ca
+	.long	0x18284
 	.byte	0
 	.uleb128 0x12
-	.long	0xf087
-	.quad	.LFB1936
-	.quad	.LFE1936-.LFB1936
+	.long	0xf141
+	.quad	.LFB2279
+	.quad	.LFE2279-.LFB2279
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19a80
+	.long	0x19b3a
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18203
+	.secrel32	.LASF63
+	.long	0x182bd
 	.uleb128 0x1d
 	.secrel32	.LASF147
 	.byte	0x6
 	.byte	0x69
 	.byte	0x24
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25941,19 +26010,19 @@ _ZTS15T100FolderLogic:
 	.byte	0x6
 	.byte	0x69
 	.byte	0x3e
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x3c
-	.long	0x10ada
-	.quad	.LFB1937
-	.quad	.LFE1937-.LFB1937
+	.long	0x10b94
+	.quad	.LFB2280
+	.quad	.LFE2280-.LFB2280
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19ab4
-	.uleb128 0x8
+	.long	0x19b6e
+	.uleb128 0x7
 	.ascii "_Tp\0"
 	.long	0x14d
 	.uleb128 0x27
@@ -25961,24 +26030,24 @@ _ZTS15T100FolderLogic:
 	.byte	0x7
 	.byte	0x2f
 	.byte	0x16
-	.long	0x18232
+	.long	0x182ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0xb786
-	.quad	.LFB1935
-	.quad	.LFE1935-.LFB1935
+	.long	0xb840
+	.quad	.LFB2278
+	.quad	.LFE2278-.LFB2278
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19b00
+	.long	0x19bba
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x22
-	.long	0x18460
+	.long	0x1851a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -25987,7 +26056,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x2f
-	.long	0xb64b
+	.long	0xb705
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -25996,119 +26065,119 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1cd
 	.byte	0x3e
-	.long	0xb6e7
+	.long	0xb7a1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x22
-	.long	0x149aa
-	.long	0x19b0e
+	.long	0x14a64
+	.long	0x19bc8
 	.byte	0x2
-	.long	0x19b21
-	.uleb128 0x16
+	.long	0x19bdb
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x1843e
-	.uleb128 0x16
+	.long	0x184f8
+	.uleb128 0x17
 	.secrel32	.LASF155
-	.long	0x160bc
+	.long	0x1619b
 	.byte	0
 	.uleb128 0x44
-	.long	0x19b00
+	.long	0x19bba
 	.ascii "_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev\0"
-	.long	0x19b97
-	.quad	.LFB1933
-	.quad	.LFE1933-.LFB1933
+	.long	0x19c51
+	.quad	.LFB2276
+	.quad	.LFE2276-.LFB2276
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19ba0
+	.long	0x19c5a
 	.uleb128 0x24
-	.long	0x19b0e
+	.long	0x19bc8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0xb4af
-	.long	0x19bae
+	.long	0xb569
+	.long	0x19c68
 	.byte	0x2
-	.long	0x19bb8
-	.uleb128 0x16
+	.long	0x19c72
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18455
+	.long	0x1850f
 	.byte	0
 	.uleb128 0x45
-	.long	0x19ba0
+	.long	0x19c5a
 	.ascii "_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev\0"
-	.long	0x19c17
-	.quad	.LFB1930
-	.quad	.LFE1930-.LFB1930
+	.long	0x19cd1
+	.quad	.LFB2273
+	.quad	.LFE2273-.LFB2273
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19c20
+	.long	0x19cda
 	.uleb128 0x24
-	.long	0x19bae
+	.long	0x19c68
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0x1139e
-	.long	0x19c2e
+	.long	0x11458
+	.long	0x19ce8
 	.byte	0x2
-	.long	0x19c3d
-	.uleb128 0x16
+	.long	0x19cf7
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x1683c
+	.long	0x16b0f
 	.uleb128 0x1
-	.long	0x16841
+	.long	0x16b14
 	.byte	0
 	.uleb128 0x46
-	.long	0x19c20
+	.long	0x19cda
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2ERKS1_\0"
-	.long	0x19c72
-	.long	0x19c7d
+	.long	0x19d2c
+	.long	0x19d37
 	.uleb128 0x33
-	.long	0x19c2e
+	.long	0x19ce8
 	.uleb128 0x33
-	.long	0x19c37
+	.long	0x19cf1
 	.byte	0
-	.uleb128 0x68
-	.long	0x4978
-	.long	0x19c93
-	.long	0x19cbe
+	.uleb128 0x69
+	.long	0x4977
+	.long	0x19d4d
+	.long	0x19d78
 	.uleb128 0x5
 	.secrel32	.LASF51
-	.long	0x164da
-	.uleb128 0x16
+	.long	0x164b7
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18209
+	.long	0x182c3
 	.uleb128 0x3a
 	.ascii "__beg\0"
 	.byte	0x5
 	.byte	0xe8
 	.byte	0x26
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x3a
 	.ascii "__end\0"
 	.byte	0x5
 	.byte	0xe8
 	.byte	0x39
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x1
-	.long	0x4ad8
+	.long	0x4d3d
 	.byte	0
 	.uleb128 0x1e
-	.long	0x7064
-	.long	0x19cdd
-	.quad	.LFB1898
-	.quad	.LFE1898-.LFB1898
+	.long	0x711e
+	.long	0x19d97
+	.quad	.LFB2241
+	.quad	.LFE2241-.LFB2241
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19d0a
+	.long	0x19dc4
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x182ea
+	.long	0x183a4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26117,7 +26186,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x12c
 	.byte	0x1d
-	.long	0x6c41
+	.long	0x6cfb
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -26126,30 +26195,30 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x12c
 	.byte	0x29
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x12
-	.long	0x10b76
-	.quad	.LFB1897
-	.quad	.LFE1897-.LFB1897
+	.long	0x10c30
+	.quad	.LFB2240
+	.quad	.LFE2240-.LFB2240
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19d5e
+	.long	0x19e18
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
-	.uleb128 0x8
+	.secrel32	.LASF63
+	.long	0x18315
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x1d
 	.secrel32	.LASF147
 	.byte	0x6
 	.byte	0xcb
 	.byte	0x1f
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26158,32 +26227,32 @@ _ZTS15T100FolderLogic:
 	.byte	0x6
 	.byte	0xcb
 	.byte	0x39
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x32
-	.long	0x182b4
+	.long	0x1836e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x12
-	.long	0x695b
-	.quad	.LFB1896
-	.quad	.LFE1896-.LFB1896
+	.long	0x6a15
+	.quad	.LFB2239
+	.quad	.LFE2239-.LFB2239
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19da3
-	.uleb128 0x8
+	.long	0x19e5d
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1e6
 	.byte	0x1a
-	.long	0x182a8
+	.long	0x18362
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26192,33 +26261,33 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1e6
 	.byte	0x24
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x12
-	.long	0x10bf9
-	.quad	.LFB1895
-	.quad	.LFE1895-.LFB1895
+	.long	0x10cb3
+	.quad	.LFB2238
+	.quad	.LFE2238-.LFB2238
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19e1e
+	.long	0x19ed8
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0x18315
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0x1825b
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x5
 	.secrel32	.LASF122
-	.long	0x6622
+	.long	0x66dc
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xc
 	.word	0x131
 	.byte	0x37
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26227,7 +26296,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.word	0x132
 	.byte	0x1b
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -26236,7 +26305,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.word	0x133
 	.byte	0x1d
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -26245,52 +26314,52 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.word	0x134
 	.byte	0x18
-	.long	0x182b4
+	.long	0x1836e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
 	.byte	0
 	.uleb128 0x2b
-	.long	0x6c5e
-	.long	0x19e3d
-	.quad	.LFB1894
-	.quad	.LFE1894-.LFB1894
+	.long	0x6d18
+	.long	0x19ef7
+	.quad	.LFB2237
+	.quad	.LFE2237-.LFB2237
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19e4a
+	.long	0x19f04
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x182ea
+	.long	0x183a4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x13892
-	.long	0x19e69
-	.quad	.LFB1893
-	.quad	.LFE1893-.LFB1893
+	.long	0x1394c
+	.long	0x19f23
+	.quad	.LFB2236
+	.quad	.LFE2236-.LFB2236
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19e76
+	.long	0x19f30
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1854e
+	.long	0x18608
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.long	0x7009
-	.long	0x19e95
-	.quad	.LFB1892
-	.quad	.LFE1892-.LFB1892
+	.long	0x70c3
+	.long	0x19f4f
+	.quad	.LFB2235
+	.quad	.LFE2235-.LFB2235
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19eb2
+	.long	0x19f6c
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x182ea
+	.long	0x183a4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26299,33 +26368,33 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x125
 	.byte	0x1a
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x13911
+	.long	0x139cb
 	.uleb128 0x12
-	.long	0x15d71
-	.quad	.LFB1891
-	.quad	.LFE1891-.LFB1891
+	.long	0x15e2b
+	.quad	.LFB2234
+	.quad	.LFE2234-.LFB2234
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19f06
+	.long	0x19fc0
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x1825b
+	.secrel32	.LASF104
+	.long	0x18315
 	.uleb128 0x5
 	.secrel32	.LASF142
-	.long	0x713c
+	.long	0x71f6
 	.uleb128 0xc
 	.secrel32	.LASF156
 	.byte	0x4
 	.word	0x3c3
 	.byte	0x3f
-	.long	0x19eb2
+	.long	0x19f6c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26334,37 +26403,37 @@ _ZTS15T100FolderLogic:
 	.byte	0x4
 	.word	0x3c4
 	.byte	0x38
-	.long	0x19eb2
+	.long	0x19f6c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1e
-	.long	0x76d1
-	.long	0x19f25
-	.quad	.LFB1890
-	.quad	.LFE1890-.LFB1890
+	.long	0x778b
+	.long	0x19fdf
+	.quad	.LFB2233
+	.quad	.LFE2233-.LFB2233
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19f32
+	.long	0x19fec
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1830c
+	.long	0x183c6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.long	0x8813
-	.long	0x19f51
-	.quad	.LFB1889
-	.quad	.LFE1889-.LFB1889
+	.long	0x88cd
+	.long	0x1a00b
+	.quad	.LFB2232
+	.quad	.LFE2232-.LFB2232
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x19f8e
+	.long	0x1a048
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18335
+	.long	0x183ef
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26373,7 +26442,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x663
 	.byte	0x1e
-	.long	0x72a7
+	.long	0x7361
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -26382,7 +26451,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x663
 	.byte	0x2f
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -26391,66 +26460,66 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x668
 	.byte	0x12
-	.long	0x72b5
+	.long	0x736f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
 	.byte	0
 	.uleb128 0x22
-	.long	0x1335b
-	.long	0x19f9c
+	.long	0x13415
+	.long	0x1a056
 	.byte	0x2
-	.long	0x19fb3
-	.uleb128 0x16
+	.long	0x1a06d
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x1853d
+	.long	0x185f7
 	.uleb128 0x41
 	.ascii "__i\0"
 	.byte	0x4
 	.word	0x30c
 	.byte	0x2a
-	.long	0x18542
+	.long	0x185fc
 	.byte	0
 	.uleb128 0x44
-	.long	0x19f8e
+	.long	0x1a048
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_\0"
-	.long	0x1a022
-	.quad	.LFB1888
-	.quad	.LFE1888-.LFB1888
+	.long	0x1a0dc
+	.quad	.LFB2231
+	.quad	.LFE2231-.LFB2231
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a033
+	.long	0x1a0ed
 	.uleb128 0x24
-	.long	0x19f9c
+	.long	0x1a056
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x24
-	.long	0x19fa5
+	.long	0x1a05f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1e
-	.long	0x12e7c
-	.long	0x1a06a
-	.quad	.LFB1885
-	.quad	.LFE1885-.LFB1885
+	.long	0x12f36
+	.long	0x1a124
+	.quad	.LFB2228
+	.quad	.LFE2228-.LFB2228
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a0a3
-	.uleb128 0x8
+	.long	0x1a15e
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x1a06a
+	.secrel32	.LASF100
+	.long	0x1a124
 	.uleb128 0x38
-	.long	0x18296
+	.long	0x18350
 	.byte	0
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18250
+	.long	0x1830a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26459,39 +26528,39 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x87
 	.byte	0x11
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x7f
+	.uleb128 0x80
 	.byte	0xb
 	.byte	0x87
 	.byte	0x1d
-	.long	0x1a093
+	.long	0x1a14e
 	.uleb128 0x1
-	.long	0x18296
+	.long	0x18350
 	.byte	0
 	.uleb128 0x1d
 	.secrel32	.LASF158
 	.byte	0xb
 	.byte	0x87
 	.byte	0x1d
-	.long	0x18296
+	.long	0x18350
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x1e
-	.long	0x973a
-	.long	0x1a0c2
-	.quad	.LFB1884
-	.quad	.LFE1884-.LFB1884
+	.long	0x97f4
+	.long	0x1a17d
+	.quad	.LFB2227
+	.quad	.LFE2227-.LFB2227
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a0ef
+	.long	0x1a1aa
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x183e2
+	.long	0x1849c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26500,7 +26569,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x12c
 	.byte	0x1d
-	.long	0x92ff
+	.long	0x93b9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -26509,30 +26578,30 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x12c
 	.byte	0x29
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x12
-	.long	0x10ced
-	.quad	.LFB1883
-	.quad	.LFE1883-.LFB1883
+	.long	0x10da7
+	.quad	.LFB2226
+	.quad	.LFE2226-.LFB2226
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a143
+	.long	0x1a1fe
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
-	.uleb128 0x8
+	.secrel32	.LASF63
+	.long	0x1840b
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x1d
 	.secrel32	.LASF147
 	.byte	0x6
 	.byte	0xcb
 	.byte	0x1f
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26541,32 +26610,32 @@ _ZTS15T100FolderLogic:
 	.byte	0x6
 	.byte	0xcb
 	.byte	0x39
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x32
-	.long	0x183ac
+	.long	0x18466
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x12
-	.long	0x9009
-	.quad	.LFB1882
-	.quad	.LFE1882-.LFB1882
+	.long	0x90c3
+	.quad	.LFB2225
+	.quad	.LFE2225-.LFB2225
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a188
-	.uleb128 0x8
+	.long	0x1a243
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1e6
 	.byte	0x1a
-	.long	0x183a0
+	.long	0x1845a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26575,33 +26644,33 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1e6
 	.byte	0x24
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x12
-	.long	0x10d76
-	.quad	.LFB1881
-	.quad	.LFE1881-.LFB1881
+	.long	0x10e30
+	.quad	.LFB2224
+	.quad	.LFE2224-.LFB2224
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a203
+	.long	0x1a2be
+	.uleb128 0x5
+	.secrel32	.LASF64
+	.long	0x1840b
 	.uleb128 0x5
 	.secrel32	.LASF63
-	.long	0x18351
-	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x5
 	.secrel32	.LASF122
-	.long	0x8cbc
+	.long	0x8d76
 	.uleb128 0xc
 	.secrel32	.LASF147
 	.byte	0xc
 	.word	0x131
 	.byte	0x37
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26610,7 +26679,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.word	0x132
 	.byte	0x1b
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -26619,7 +26688,7 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.word	0x133
 	.byte	0x1d
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -26628,52 +26697,52 @@ _ZTS15T100FolderLogic:
 	.byte	0xc
 	.word	0x134
 	.byte	0x18
-	.long	0x183ac
+	.long	0x18466
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 24
 	.byte	0
 	.uleb128 0x2b
-	.long	0x931c
-	.long	0x1a222
-	.quad	.LFB1880
-	.quad	.LFE1880-.LFB1880
+	.long	0x93d6
+	.long	0x1a2dd
+	.quad	.LFB2223
+	.quad	.LFE2223-.LFB2223
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a22f
+	.long	0x1a2ea
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x183e2
+	.long	0x1849c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x14761
-	.long	0x1a24e
-	.quad	.LFB1879
-	.quad	.LFE1879-.LFB1879
+	.long	0x1481b
+	.long	0x1a309
+	.quad	.LFB2222
+	.quad	.LFE2222-.LFB2222
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a25b
+	.long	0x1a316
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1852c
+	.long	0x185e6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.long	0x96dd
-	.long	0x1a27a
-	.quad	.LFB1878
-	.quad	.LFE1878-.LFB1878
+	.long	0x9797
+	.long	0x1a335
+	.quad	.LFB2221
+	.quad	.LFE2221-.LFB2221
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a297
+	.long	0x1a352
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x183e2
+	.long	0x1849c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26682,33 +26751,33 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x125
 	.byte	0x1a
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x147e2
+	.long	0x1489c
 	.uleb128 0x12
-	.long	0x15e41
-	.quad	.LFB1877
-	.quad	.LFE1877-.LFB1877
+	.long	0x15efb
+	.quad	.LFB2220
+	.quad	.LFE2220-.LFB2220
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a2eb
+	.long	0x1a3a6
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18351
+	.secrel32	.LASF104
+	.long	0x1840b
 	.uleb128 0x5
 	.secrel32	.LASF142
-	.long	0x9816
+	.long	0x98d0
 	.uleb128 0xc
 	.secrel32	.LASF156
 	.byte	0x4
 	.word	0x3c3
 	.byte	0x3f
-	.long	0x1a297
+	.long	0x1a352
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26717,37 +26786,37 @@ _ZTS15T100FolderLogic:
 	.byte	0x4
 	.word	0x3c4
 	.byte	0x38
-	.long	0x1a297
+	.long	0x1a352
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1e
-	.long	0x9dcd
-	.long	0x1a30a
-	.quad	.LFB1876
-	.quad	.LFE1876-.LFB1876
+	.long	0x9e87
+	.long	0x1a3c5
+	.quad	.LFB2219
+	.quad	.LFE2219-.LFB2219
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a317
+	.long	0x1a3d2
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18404
+	.long	0x184be
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.long	0xaf73
-	.long	0x1a336
-	.quad	.LFB1875
-	.quad	.LFE1875-.LFB1875
+	.long	0xb02d
+	.long	0x1a3f1
+	.quad	.LFB2218
+	.quad	.LFE2218-.LFB2218
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a373
+	.long	0x1a42e
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1842d
+	.long	0x184e7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26756,7 +26825,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x663
 	.byte	0x1e
-	.long	0x998b
+	.long	0x9a45
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -26765,7 +26834,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x663
 	.byte	0x2f
-	.long	0x16830
+	.long	0x16b03
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -26774,66 +26843,66 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x668
 	.byte	0x12
-	.long	0x9999
+	.long	0x9a53
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
 	.byte	0
 	.uleb128 0x22
-	.long	0x14212
-	.long	0x1a381
+	.long	0x142cc
+	.long	0x1a43c
 	.byte	0x2
-	.long	0x1a398
-	.uleb128 0x16
+	.long	0x1a453
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x1851b
+	.long	0x185d5
 	.uleb128 0x41
 	.ascii "__i\0"
 	.byte	0x4
 	.word	0x30c
 	.byte	0x2a
-	.long	0x18520
+	.long	0x185da
 	.byte	0
 	.uleb128 0x44
-	.long	0x1a373
+	.long	0x1a42e
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_\0"
-	.long	0x1a409
-	.quad	.LFB1874
-	.quad	.LFE1874-.LFB1874
+	.long	0x1a4c4
+	.quad	.LFB2217
+	.quad	.LFE2217-.LFB2217
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a41a
+	.long	0x1a4d5
 	.uleb128 0x24
-	.long	0x1a381
+	.long	0x1a43c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x24
-	.long	0x1a38a
+	.long	0x1a445
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1e
-	.long	0x13d15
-	.long	0x1a451
-	.quad	.LFB1871
-	.quad	.LFE1871-.LFB1871
+	.long	0x13dcf
+	.long	0x1a50c
+	.quad	.LFB2214
+	.quad	.LFE2214-.LFB2214
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a48a
-	.uleb128 0x8
+	.long	0x1a546
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x1a451
+	.secrel32	.LASF100
+	.long	0x1a50c
 	.uleb128 0x38
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18346
+	.long	0x18400
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26842,54 +26911,54 @@ _ZTS15T100FolderLogic:
 	.byte	0xb
 	.byte	0x87
 	.byte	0x11
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x7f
+	.uleb128 0x80
 	.byte	0xb
 	.byte	0x87
 	.byte	0x1d
-	.long	0x1a47a
+	.long	0x1a536
 	.uleb128 0x1
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0x1d
 	.secrel32	.LASF158
 	.byte	0xb
 	.byte	0x87
 	.byte	0x1d
-	.long	0x1838e
+	.long	0x18448
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x4a
-	.long	0x11907
-	.long	0x1a4a0
+	.long	0x119c1
+	.long	0x1a55c
 	.uleb128 0x3a
 	.ascii "__a\0"
 	.byte	0x21
 	.byte	0x5e
 	.byte	0x33
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
 	.uleb128 0x12
-	.long	0x10e72
-	.quad	.LFB1866
-	.quad	.LFE1866-.LFB1866
+	.long	0x10f2c
+	.quad	.LFB2209
+	.quad	.LFE2209-.LFB2209
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a4e3
+	.long	0x1a59f
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18203
+	.secrel32	.LASF63
+	.long	0x182bd
 	.uleb128 0x1d
 	.secrel32	.LASF147
 	.byte	0x6
 	.byte	0x7f
 	.byte	0x1f
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26898,22 +26967,22 @@ _ZTS15T100FolderLogic:
 	.byte	0x6
 	.byte	0x7f
 	.byte	0x39
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1e
-	.long	0xc2bd
-	.long	0x1a502
-	.quad	.LFB1865
-	.quad	.LFE1865-.LFB1865
+	.long	0xc377
+	.long	0x1a5be
+	.quad	.LFB2208
+	.quad	.LFE2208-.LFB2208
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a52f
+	.long	0x1a5eb
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x184a7
+	.long	0x18561
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -26922,7 +26991,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x12c
 	.byte	0x1d
-	.long	0xbcde
+	.long	0xbd98
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -26931,127 +27000,127 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x12c
 	.byte	0x29
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x22
-	.long	0xb566
-	.long	0x1a53d
+	.long	0xb620
+	.long	0x1a5f9
 	.byte	0x2
-	.long	0x1a550
-	.uleb128 0x16
+	.long	0x1a60c
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18455
-	.uleb128 0x16
+	.long	0x1850f
+	.uleb128 0x17
 	.secrel32	.LASF155
-	.long	0x160bc
+	.long	0x1619b
 	.byte	0
 	.uleb128 0x45
-	.long	0x1a52f
+	.long	0x1a5eb
 	.ascii "_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev\0"
-	.long	0x1a5af
-	.quad	.LFB1863
-	.quad	.LFE1863-.LFB1863
+	.long	0x1a66b
+	.quad	.LFB2206
+	.quad	.LFE2206-.LFB2206
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a5b8
+	.long	0x1a674
 	.uleb128 0x24
-	.long	0x1a53d
+	.long	0x1a5f9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0xba53
-	.long	0x1a5c6
+	.long	0xbb0d
+	.long	0x1a682
 	.byte	0x2
-	.long	0x1a5d0
-	.uleb128 0x16
+	.long	0x1a68c
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18484
+	.long	0x1853e
 	.byte	0
 	.uleb128 0x45
-	.long	0x1a5b8
+	.long	0x1a674
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC1Ev\0"
-	.long	0x1a652
-	.quad	.LFB1861
-	.quad	.LFE1861-.LFB1861
+	.long	0x1a70e
+	.quad	.LFB2204
+	.quad	.LFE2204-.LFB2204
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a65b
+	.long	0x1a717
 	.uleb128 0x24
-	.long	0x1a5c6
+	.long	0x1a682
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0x5445
-	.long	0x1a669
+	.long	0x54ff
+	.long	0x1a725
 	.byte	0x2
-	.long	0x1a67f
-	.uleb128 0x16
+	.long	0x1a73b
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x1686a
+	.long	0x16b3d
 	.uleb128 0x3a
 	.ascii "__a\0"
 	.byte	0xa
 	.byte	0x85
 	.byte	0x22
-	.long	0x1686f
+	.long	0x16b42
 	.byte	0
 	.uleb128 0x46
-	.long	0x1a65b
+	.long	0x1a717
 	.ascii "_ZNSaIwEC2ERKS_\0"
-	.long	0x1a69c
-	.long	0x1a6a7
+	.long	0x1a758
+	.long	0x1a763
 	.uleb128 0x33
-	.long	0x1a669
+	.long	0x1a725
 	.uleb128 0x33
-	.long	0x1a672
+	.long	0x1a72e
 	.byte	0
-	.uleb128 0x68
-	.long	0x4a20
-	.long	0x1a6bd
-	.long	0x1a6e3
+	.uleb128 0x69
+	.long	0x4a1f
+	.long	0x1a779
+	.long	0x1a79f
 	.uleb128 0x5
 	.secrel32	.LASF51
-	.long	0x164da
-	.uleb128 0x16
+	.long	0x164b7
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18209
+	.long	0x182c3
 	.uleb128 0x3a
 	.ascii "__beg\0"
 	.byte	0x5
 	.byte	0xfc
 	.byte	0x22
-	.long	0x164da
+	.long	0x164b7
 	.uleb128 0x3a
 	.ascii "__end\0"
 	.byte	0x5
 	.byte	0xfc
 	.byte	0x35
-	.long	0x164da
+	.long	0x164b7
 	.byte	0
 	.uleb128 0x1e
-	.long	0x8abc
-	.long	0x1a711
-	.quad	.LFB1828
-	.quad	.LFE1828-.LFB1828
+	.long	0x8b76
+	.long	0x1a7cd
+	.quad	.LFB2171
+	.quad	.LFE2171-.LFB2171
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a7af
+	.long	0x1a86b
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x1a711
+	.secrel32	.LASF100
+	.long	0x1a7cd
 	.uleb128 0x38
-	.long	0x18296
+	.long	0x18350
 	.byte	0
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1830c
+	.long	0x183c6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -27060,24 +27129,24 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x19e
 	.byte	0x22
-	.long	0x76c3
+	.long	0x777d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x60
+	.uleb128 0x62
 	.byte	0x9
 	.word	0x19e
 	.byte	0x35
-	.long	0x1a73c
+	.long	0x1a7f8
 	.uleb128 0x1
-	.long	0x18296
+	.long	0x18350
 	.byte	0
 	.uleb128 0x2e
 	.secrel32	.LASF157
 	.byte	0x9
 	.word	0x1a6
 	.byte	0x17
-	.long	0x72b5
+	.long	0x736f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
@@ -27086,7 +27155,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x1a8
 	.byte	0xf
-	.long	0x88ca
+	.long	0x8984
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -56
@@ -27095,7 +27164,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x1a9
 	.byte	0xf
-	.long	0x88ca
+	.long	0x8984
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
@@ -27104,7 +27173,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x1aa
 	.byte	0x17
-	.long	0x72b5
+	.long	0x736f
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -72
@@ -27113,7 +27182,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x1ab
 	.byte	0xf
-	.long	0x88ca
+	.long	0x8984
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -80
@@ -27122,7 +27191,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x1ac
 	.byte	0xf
-	.long	0x88ca
+	.long	0x8984
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
@@ -27131,48 +27200,48 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x19e
 	.byte	0x35
-	.long	0x18296
+	.long	0x18350
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x1e
-	.long	0x7772
-	.long	0x1a7ce
-	.quad	.LFB1827
-	.quad	.LFE1827-.LFB1827
+	.long	0x782c
+	.long	0x1a88a
+	.quad	.LFB2170
+	.quad	.LFE2170-.LFB2170
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a7db
+	.long	0x1a897
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1830c
+	.long	0x183c6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x69bf
-	.quad	.LFB1825
-	.quad	.LFE1825-.LFB1825
+	.long	0x6a79
+	.quad	.LFB2168
+	.quad	.LFE2168-.LFB2168
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a84e
-	.uleb128 0x8
+	.long	0x1a90a
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x1a80e
+	.secrel32	.LASF100
+	.long	0x1a8ca
 	.uleb128 0x38
-	.long	0x18296
+	.long	0x18350
 	.byte	0
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1da
 	.byte	0x1c
-	.long	0x182a8
+	.long	0x18362
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -27181,68 +27250,68 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1da
 	.byte	0x26
-	.long	0x1825b
+	.long	0x18315
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x60
+	.uleb128 0x62
 	.byte	0x8
 	.word	0x1da
 	.byte	0x32
-	.long	0x1a83d
+	.long	0x1a8f9
 	.uleb128 0x1
-	.long	0x18296
+	.long	0x18350
 	.byte	0
 	.uleb128 0xc
 	.secrel32	.LASF158
 	.byte	0x8
 	.word	0x1da
 	.byte	0x32
-	.long	0x18296
+	.long	0x18350
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0xeffc
+	.long	0xf0b6
 	.uleb128 0x3c
-	.long	0x10f08
-	.quad	.LFB1826
-	.quad	.LFE1826-.LFB1826
+	.long	0x10fc2
+	.quad	.LFB2169
+	.quad	.LFE2169-.LFB2169
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a888
-	.uleb128 0x8
+	.long	0x1a944
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18296
+	.long	0x18350
 	.uleb128 0x27
 	.ascii "__t\0"
 	.byte	0x7
 	.byte	0x4a
 	.byte	0x38
-	.long	0x1a84e
+	.long	0x1a90a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.long	0xb228
-	.long	0x1a8b6
-	.quad	.LFB1824
-	.quad	.LFE1824-.LFB1824
+	.long	0xb2e2
+	.long	0x1a972
+	.quad	.LFB2167
+	.quad	.LFE2167-.LFB2167
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a954
+	.long	0x1aa10
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x1a8b6
+	.secrel32	.LASF100
+	.long	0x1a972
 	.uleb128 0x38
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18404
+	.long	0x184be
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -27251,24 +27320,24 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x19e
 	.byte	0x22
-	.long	0x9dbf
+	.long	0x9e79
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x60
+	.uleb128 0x62
 	.byte	0x9
 	.word	0x19e
 	.byte	0x35
-	.long	0x1a8e1
+	.long	0x1a99d
 	.uleb128 0x1
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0x2e
 	.secrel32	.LASF157
 	.byte	0x9
 	.word	0x1a6
 	.byte	0x17
-	.long	0x9999
+	.long	0x9a53
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
@@ -27277,7 +27346,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x1a8
 	.byte	0xf
-	.long	0xb02e
+	.long	0xb0e8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -56
@@ -27286,7 +27355,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x1a9
 	.byte	0xf
-	.long	0xb02e
+	.long	0xb0e8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
@@ -27295,7 +27364,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x1aa
 	.byte	0x17
-	.long	0x9999
+	.long	0x9a53
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -72
@@ -27304,7 +27373,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x1ab
 	.byte	0xf
-	.long	0xb02e
+	.long	0xb0e8
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -80
@@ -27313,7 +27382,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x1ac
 	.byte	0xf
-	.long	0xb02e
+	.long	0xb0e8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
@@ -27322,48 +27391,48 @@ _ZTS15T100FolderLogic:
 	.byte	0x9
 	.word	0x19e
 	.byte	0x35
-	.long	0x1838e
+	.long	0x18448
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x1e
-	.long	0x9e72
-	.long	0x1a973
-	.quad	.LFB1823
-	.quad	.LFE1823-.LFB1823
+	.long	0x9f2c
+	.long	0x1aa2f
+	.quad	.LFB2166
+	.quad	.LFE2166-.LFB2166
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a980
+	.long	0x1aa3c
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18404
+	.long	0x184be
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x12
-	.long	0x906f
-	.quad	.LFB1821
-	.quad	.LFE1821-.LFB1821
+	.long	0x9129
+	.quad	.LFB2164
+	.quad	.LFE2164-.LFB2164
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1a9f3
-	.uleb128 0x8
+	.long	0x1aaaf
+	.uleb128 0x7
 	.ascii "_Up\0"
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x37
-	.secrel32	.LASF99
-	.long	0x1a9b3
+	.secrel32	.LASF100
+	.long	0x1aa6f
 	.uleb128 0x38
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0x14
 	.ascii "__a\0"
 	.byte	0x8
 	.word	0x1da
 	.byte	0x1c
-	.long	0x183a0
+	.long	0x1845a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -27372,160 +27441,160 @@ _ZTS15T100FolderLogic:
 	.byte	0x8
 	.word	0x1da
 	.byte	0x26
-	.long	0x18351
+	.long	0x1840b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x60
+	.uleb128 0x62
 	.byte	0x8
 	.word	0x1da
 	.byte	0x32
-	.long	0x1a9e2
+	.long	0x1aa9e
 	.uleb128 0x1
-	.long	0x1838e
+	.long	0x18448
 	.byte	0
 	.uleb128 0xc
 	.secrel32	.LASF158
 	.byte	0x8
 	.word	0x1da
 	.byte	0x32
-	.long	0x1838e
+	.long	0x18448
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0xefb4
+	.long	0xf06e
 	.uleb128 0x3c
-	.long	0x10f85
-	.quad	.LFB1822
-	.quad	.LFE1822-.LFB1822
+	.long	0x1103f
+	.quad	.LFB2165
+	.quad	.LFE2165-.LFB2165
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1aa2d
-	.uleb128 0x8
+	.long	0x1aae9
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x1838e
+	.long	0x18448
 	.uleb128 0x27
 	.ascii "__t\0"
 	.byte	0x7
 	.byte	0x4a
 	.byte	0x38
-	.long	0x1a9f3
+	.long	0x1aaaf
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x29
 	.byte	0x8
-	.long	0xee2a
+	.long	0xeee4
 	.uleb128 0x3c
-	.long	0x11006
-	.quad	.LFB1820
-	.quad	.LFE1820-.LFB1820
+	.long	0x110c0
+	.quad	.LFB2163
+	.quad	.LFE2163-.LFB2163
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1aa67
-	.uleb128 0x8
+	.long	0x1ab23
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x18232
+	.long	0x182ec
 	.uleb128 0x27
 	.ascii "__t\0"
 	.byte	0x7
 	.byte	0x63
 	.byte	0x10
-	.long	0x18232
+	.long	0x182ec
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0x1177
-	.long	0x1aa75
+	.long	0x1176
+	.long	0x1ab31
 	.byte	0x2
-	.long	0x1aa8e
-	.uleb128 0x16
+	.long	0x1ab4a
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18209
+	.long	0x182c3
 	.uleb128 0x41
 	.ascii "__str\0"
 	.byte	0x5
 	.word	0x1b5
 	.byte	0x28
-	.long	0x18226
+	.long	0x182e0
 	.byte	0
 	.uleb128 0x46
-	.long	0x1aa67
+	.long	0x1ab23
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2ERKS4_\0"
-	.long	0x1aad9
-	.long	0x1aae4
+	.long	0x1ab95
+	.long	0x1aba0
 	.uleb128 0x33
-	.long	0x1aa75
+	.long	0x1ab31
 	.uleb128 0x33
-	.long	0x1aa7e
+	.long	0x1ab3a
 	.byte	0
 	.uleb128 0x2b
-	.long	0x15b1f
-	.long	0x1ab03
-	.quad	.LFB1814
-	.quad	.LFE1814-.LFB1814
+	.long	0x15bd9
+	.long	0x1abbf
+	.quad	.LFB2157
+	.quad	.LFE2157-.LFB2157
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1ab10
+	.long	0x1abcc
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1850a
+	.long	0x185c4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0x1542c
-	.long	0x1ab1e
+	.long	0x154e6
+	.long	0x1abda
 	.byte	0x2
-	.long	0x1ab35
-	.uleb128 0x16
+	.long	0x1abf1
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x184f9
+	.long	0x185b3
 	.uleb128 0x41
 	.ascii "__i\0"
 	.byte	0x4
 	.word	0x30c
 	.byte	0x2a
-	.long	0x184fe
+	.long	0x185b8
 	.byte	0
 	.uleb128 0x44
-	.long	0x1ab10
+	.long	0x1abcc
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_\0"
-	.long	0x1abc9
-	.quad	.LFB1813
-	.quad	.LFE1813-.LFB1813
+	.long	0x1ac85
+	.quad	.LFB2156
+	.quad	.LFE2156-.LFB2156
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1abda
+	.long	0x1ac96
 	.uleb128 0x24
-	.long	0x1ab1e
+	.long	0x1abda
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x24
-	.long	0x1ab27
+	.long	0x1abe3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x12
-	.long	0x110b1
-	.quad	.LFB1810
-	.quad	.LFE1810-.LFB1810
+	.long	0x1116b
+	.quad	.LFB2153
+	.quad	.LFE2153-.LFB2153
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1ac2e
+	.long	0x1acea
 	.uleb128 0x5
-	.secrel32	.LASF62
-	.long	0x18203
-	.uleb128 0x8
+	.secrel32	.LASF63
+	.long	0x182bd
+	.uleb128 0x7
 	.ascii "_Tp\0"
 	.long	0x14d
 	.uleb128 0x1d
@@ -27533,7 +27602,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x6
 	.byte	0xcb
 	.byte	0x1f
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -27542,140 +27611,140 @@ _ZTS15T100FolderLogic:
 	.byte	0x6
 	.byte	0xcb
 	.byte	0x39
-	.long	0x18203
+	.long	0x182bd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x32
-	.long	0x1846c
+	.long	0x18526
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x2b
-	.long	0xbcfb
-	.long	0x1ac4d
-	.quad	.LFB1809
-	.quad	.LFE1809-.LFB1809
+	.long	0xbdb5
+	.long	0x1ad09
+	.quad	.LFB2152
+	.quad	.LFE2152-.LFB2152
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1ac5a
+	.long	0x1ad16
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x184a7
+	.long	0x18561
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0xc1be
-	.long	0x1ac68
+	.long	0xc278
+	.long	0x1ad24
 	.byte	0x2
-	.long	0x1ac7b
-	.uleb128 0x16
+	.long	0x1ad37
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x184a7
-	.uleb128 0x16
+	.long	0x18561
+	.uleb128 0x17
 	.secrel32	.LASF155
-	.long	0x160bc
+	.long	0x1619b
 	.byte	0
 	.uleb128 0x45
-	.long	0x1ac5a
+	.long	0x1ad16
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev\0"
-	.long	0x1acef
-	.quad	.LFB1807
-	.quad	.LFE1807-.LFB1807
+	.long	0x1adab
+	.quad	.LFB2150
+	.quad	.LFE2150-.LFB2150
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1acf8
+	.long	0x1adb4
 	.uleb128 0x24
-	.long	0x1ac68
+	.long	0x1ad24
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0xbe8e
-	.long	0x1ad06
+	.long	0xbf48
+	.long	0x1adc2
 	.byte	0x2
-	.long	0x1ad10
-	.uleb128 0x16
+	.long	0x1adcc
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x184a7
+	.long	0x18561
 	.byte	0
 	.uleb128 0x45
-	.long	0x1acf8
+	.long	0x1adb4
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC2Ev\0"
-	.long	0x1ad84
-	.quad	.LFB1804
-	.quad	.LFE1804-.LFB1804
+	.long	0x1ae40
+	.quad	.LFB2147
+	.quad	.LFE2147-.LFB2147
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1ad8d
+	.long	0x1ae49
 	.uleb128 0x24
-	.long	0x1ad06
+	.long	0x1adc2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x80
-	.long	0xbc5c
+	.uleb128 0x81
+	.long	0xbd16
 	.byte	0x3
 	.byte	0x58
 	.byte	0xe
-	.long	0x1ad9f
+	.long	0x1ae5b
 	.byte	0x2
-	.long	0x1adb2
-	.uleb128 0x16
+	.long	0x1ae6e
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18484
-	.uleb128 0x16
+	.long	0x1853e
+	.uleb128 0x17
 	.secrel32	.LASF155
-	.long	0x160bc
+	.long	0x1619b
 	.byte	0
 	.uleb128 0x45
-	.long	0x1ad8d
+	.long	0x1ae49
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD1Ev\0"
-	.long	0x1ae34
-	.quad	.LFB1803
-	.quad	.LFE1803-.LFB1803
+	.long	0x1aef0
+	.quad	.LFB2146
+	.quad	.LFE2146-.LFB2146
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1ae3d
+	.long	0x1aef9
 	.uleb128 0x24
-	.long	0x1ad9f
+	.long	0x1ae5b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0x113e2
-	.long	0x1ae4b
+	.long	0x1149c
+	.long	0x1af07
 	.byte	0x2
-	.long	0x1ae5e
-	.uleb128 0x16
+	.long	0x1af1a
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x1683c
-	.uleb128 0x16
+	.long	0x16b0f
+	.uleb128 0x17
 	.secrel32	.LASF155
-	.long	0x160bc
+	.long	0x1619b
 	.byte	0
 	.uleb128 0x46
-	.long	0x1ae3d
+	.long	0x1aef9
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwED2Ev\0"
-	.long	0x1ae8f
-	.long	0x1ae95
+	.long	0x1af4b
+	.long	0x1af51
 	.uleb128 0x33
-	.long	0x1ae4b
+	.long	0x1af07
 	.byte	0
 	.uleb128 0x22
 	.long	0x222
-	.long	0x1aea3
+	.long	0x1af5f
 	.byte	0x2
-	.long	0x1aec7
-	.uleb128 0x16
+	.long	0x1af83
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x181e8
+	.long	0x182a2
 	.uleb128 0x3a
 	.ascii "__dat\0"
 	.byte	0x5
@@ -27687,47 +27756,47 @@ _ZTS15T100FolderLogic:
 	.byte	0x5
 	.byte	0x94
 	.byte	0x27
-	.long	0x181ed
+	.long	0x182a7
 	.byte	0
 	.uleb128 0x46
-	.long	0x1ae95
+	.long	0x1af51
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwOS3_\0"
-	.long	0x1af21
-	.long	0x1af31
+	.long	0x1afdd
+	.long	0x1afed
 	.uleb128 0x33
-	.long	0x1aea3
+	.long	0x1af5f
 	.uleb128 0x33
-	.long	0x1aeac
+	.long	0x1af68
 	.uleb128 0x33
-	.long	0x1aeba
+	.long	0x1af76
 	.byte	0
 	.uleb128 0x29
 	.byte	0x8
-	.long	0xed9d
+	.long	0xee57
 	.uleb128 0x4a
-	.long	0x11186
-	.long	0x1af56
-	.uleb128 0x8
+	.long	0x11240
+	.long	0x1b012
+	.uleb128 0x7
 	.ascii "_Tp\0"
-	.long	0x181d0
+	.long	0x1828a
 	.uleb128 0x3a
 	.ascii "__t\0"
 	.byte	0x7
 	.byte	0x63
 	.byte	0x10
-	.long	0x181d0
+	.long	0x1828a
 	.byte	0
 	.uleb128 0x1e
-	.long	0x8025
-	.long	0x1af75
-	.quad	.LFB1701
-	.quad	.LFE1701-.LFB1701
+	.long	0x80df
+	.long	0x1b031
+	.quad	.LFB2044
+	.quad	.LFE2044-.LFB2044
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1af92
+	.long	0x1b04e
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1830c
+	.long	0x183c6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -27736,22 +27805,22 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x432
 	.byte	0x23
-	.long	0x18317
+	.long	0x183d1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1e
-	.long	0xa75f
-	.long	0x1afb1
-	.quad	.LFB1700
-	.quad	.LFE1700-.LFB1700
+	.long	0xa819
+	.long	0x1b06d
+	.quad	.LFB2043
+	.quad	.LFE2043-.LFB2043
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1afce
+	.long	0x1b08a
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x18404
+	.long	0x184be
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -27760,33 +27829,33 @@ _ZTS15T100FolderLogic:
 	.byte	0x3
 	.word	0x432
 	.byte	0x23
-	.long	0x1840f
+	.long	0x184c9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x12
-	.long	0x111f6
-	.quad	.LFB1699
-	.quad	.LFE1699-.LFB1699
+	.long	0x112b0
+	.quad	.LFB2042
+	.quad	.LFE2042-.LFB2042
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b025
+	.long	0x1b0e1
 	.uleb128 0x5
 	.secrel32	.LASF52
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x5
 	.secrel32	.LASF53
-	.long	0x59c7
+	.long	0x5a81
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x53fe
+	.long	0x54b8
 	.uleb128 0xc
 	.secrel32	.LASF156
 	.byte	0x5
 	.word	0x1741
 	.byte	0x37
-	.long	0x1822c
+	.long	0x182e6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -27795,33 +27864,33 @@ _ZTS15T100FolderLogic:
 	.byte	0x5
 	.word	0x1742
 	.byte	0x35
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x12
-	.long	0x1127b
-	.quad	.LFB1698
-	.quad	.LFE1698-.LFB1698
+	.long	0x11335
+	.quad	.LFB2041
+	.quad	.LFE2041-.LFB2041
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b08f
+	.long	0x1b14b
 	.uleb128 0x5
 	.secrel32	.LASF52
-	.long	0x164e5
+	.long	0x164c2
 	.uleb128 0x5
 	.secrel32	.LASF53
-	.long	0x59c7
+	.long	0x5a81
 	.uleb128 0x5
 	.secrel32	.LASF54
-	.long	0x53fe
+	.long	0x54b8
 	.uleb128 0xc
 	.secrel32	.LASF156
 	.byte	0x5
 	.word	0x1725
 	.byte	0x3c
-	.long	0x18226
+	.long	0x182e0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -27830,11 +27899,11 @@ _ZTS15T100FolderLogic:
 	.byte	0x5
 	.word	0x1726
 	.byte	0x16
-	.long	0x16853
+	.long	0x16b26
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
-	.uleb128 0x67
+	.uleb128 0x68
 	.ascii "__str\0"
 	.byte	0x5
 	.word	0x1728
@@ -27846,57 +27915,57 @@ _ZTS15T100FolderLogic:
 	.byte	0x6
 	.byte	0
 	.uleb128 0x2b
-	.long	0x154cc
-	.long	0x1b0ae
-	.quad	.LFB1697
-	.quad	.LFE1697-.LFB1697
+	.long	0x15586
+	.long	0x1b16a
+	.quad	.LFB2040
+	.quad	.LFE2040-.LFB2040
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b0bb
+	.long	0x1b177
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x1850a
+	.long	0x185c4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2b
-	.long	0x155f6
-	.long	0x1b0da
-	.quad	.LFB1696
-	.quad	.LFE1696-.LFB1696
+	.long	0x156b0
+	.long	0x1b196
+	.quad	.LFB2039
+	.quad	.LFE2039-.LFB2039
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b0e7
+	.long	0x1b1a3
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x184f9
+	.long	0x185b3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0xb
 	.byte	0x8
-	.long	0x15bc3
+	.long	0x15c7d
 	.uleb128 0x12
-	.long	0x15f17
-	.quad	.LFB1695
-	.quad	.LFE1695-.LFB1695
+	.long	0x15fd1
+	.quad	.LFB2038
+	.quad	.LFE2038-.LFB2038
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b13b
+	.long	0x1b1f7
 	.uleb128 0x5
-	.secrel32	.LASF103
-	.long	0x18203
+	.secrel32	.LASF104
+	.long	0x182bd
 	.uleb128 0x5
 	.secrel32	.LASF142
-	.long	0xc3df
+	.long	0xc499
 	.uleb128 0xc
 	.secrel32	.LASF156
 	.byte	0x4
 	.word	0x371
 	.byte	0x40
-	.long	0x1b0e7
+	.long	0x1b1a3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -27905,191 +27974,191 @@ _ZTS15T100FolderLogic:
 	.byte	0x4
 	.word	0x372
 	.byte	0x39
-	.long	0x1b0e7
+	.long	0x1b1a3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1e
-	.long	0xcd1c
-	.long	0x1b15a
-	.quad	.LFB1694
-	.quad	.LFE1694-.LFB1694
+	.long	0xcdd6
+	.long	0x1b216
+	.quad	.LFB2037
+	.quad	.LFE2037-.LFB2037
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b167
+	.long	0x1b223
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x184c4
+	.long	0x1857e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1e
-	.long	0xcc31
-	.long	0x1b186
-	.quad	.LFB1693
-	.quad	.LFE1693-.LFB1693
+	.long	0xcceb
+	.long	0x1b242
+	.quad	.LFB2036
+	.quad	.LFE2036-.LFB2036
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b193
+	.long	0x1b24f
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x184c4
+	.long	0x1857e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0xc94b
-	.long	0x1b1a1
+	.long	0xca05
+	.long	0x1b25d
 	.byte	0x2
-	.long	0x1b1b4
-	.uleb128 0x16
+	.long	0x1b270
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x184c4
-	.uleb128 0x16
+	.long	0x1857e
+	.uleb128 0x17
 	.secrel32	.LASF155
-	.long	0x160bc
+	.long	0x1619b
 	.byte	0
 	.uleb128 0x45
-	.long	0x1b193
+	.long	0x1b24f
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev\0"
-	.long	0x1b221
-	.quad	.LFB1692
-	.quad	.LFE1692-.LFB1692
+	.long	0x1b2dd
+	.quad	.LFB2035
+	.quad	.LFE2035-.LFB2035
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b22a
+	.long	0x1b2e6
 	.uleb128 0x24
-	.long	0x1b1a1
+	.long	0x1b25d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0xc4f3
-	.long	0x1b238
+	.long	0xc5ad
+	.long	0x1b2f4
 	.byte	0x2
-	.long	0x1b242
-	.uleb128 0x16
+	.long	0x1b2fe
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x184c4
+	.long	0x1857e
 	.byte	0
 	.uleb128 0x45
-	.long	0x1b22a
+	.long	0x1b2e6
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev\0"
-	.long	0x1b2af
-	.quad	.LFB1689
-	.quad	.LFE1689-.LFB1689
+	.long	0x1b36b
+	.quad	.LFB2032
+	.quad	.LFE2032-.LFB2032
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b2b8
+	.long	0x1b374
 	.uleb128 0x24
-	.long	0x1b238
+	.long	0x1b2f4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0x5471
-	.long	0x1b2c6
+	.long	0x552b
+	.long	0x1b382
 	.byte	0x2
-	.long	0x1b2d9
-	.uleb128 0x16
+	.long	0x1b395
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x1686a
-	.uleb128 0x16
+	.long	0x16b3d
+	.uleb128 0x17
 	.secrel32	.LASF155
-	.long	0x160bc
+	.long	0x1619b
 	.byte	0
 	.uleb128 0x46
-	.long	0x1b2b8
+	.long	0x1b374
 	.ascii "_ZNSaIwED2Ev\0"
-	.long	0x1b2f3
-	.long	0x1b2f9
+	.long	0x1b3af
+	.long	0x1b3b5
 	.uleb128 0x33
-	.long	0x1b2c6
+	.long	0x1b382
 	.byte	0
 	.uleb128 0x22
-	.long	0x1448
-	.long	0x1b307
+	.long	0x1447
+	.long	0x1b3c3
 	.byte	0x2
-	.long	0x1b320
-	.uleb128 0x16
+	.long	0x1b3dc
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18209
+	.long	0x182c3
 	.uleb128 0x41
 	.ascii "__str\0"
 	.byte	0x5
 	.word	0x213
 	.byte	0x23
-	.long	0x1822c
+	.long	0x182e6
 	.byte	0
 	.uleb128 0x46
-	.long	0x1b2f9
+	.long	0x1b3b5
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2EOS4_\0"
-	.long	0x1b36a
-	.long	0x1b375
+	.long	0x1b426
+	.long	0x1b431
 	.uleb128 0x33
-	.long	0x1b307
+	.long	0x1b3c3
 	.uleb128 0x33
-	.long	0x1b310
+	.long	0x1b3cc
 	.byte	0
 	.uleb128 0x22
-	.long	0x15e2
-	.long	0x1b383
+	.long	0x15e1
+	.long	0x1b43f
 	.byte	0x2
-	.long	0x1b396
-	.uleb128 0x16
+	.long	0x1b452
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x18209
-	.uleb128 0x16
+	.long	0x182c3
+	.uleb128 0x17
 	.secrel32	.LASF155
-	.long	0x160bc
+	.long	0x1619b
 	.byte	0
 	.uleb128 0x46
-	.long	0x1b375
+	.long	0x1b431
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED2Ev\0"
-	.long	0x1b3dd
-	.long	0x1b3e3
+	.long	0x1b499
+	.long	0x1b49f
 	.uleb128 0x33
-	.long	0x1b383
+	.long	0x1b43f
 	.byte	0
-	.uleb128 0x80
+	.uleb128 0x81
 	.long	0x29d
 	.byte	0x5
 	.byte	0x8b
 	.byte	0xe
-	.long	0x1b3f5
+	.long	0x1b4b1
 	.byte	0x2
-	.long	0x1b408
-	.uleb128 0x16
+	.long	0x1b4c4
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x181e8
-	.uleb128 0x16
+	.long	0x182a2
+	.uleb128 0x17
 	.secrel32	.LASF155
-	.long	0x160bc
+	.long	0x1619b
 	.byte	0
 	.uleb128 0x46
-	.long	0x1b3e3
+	.long	0x1b49f
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderD1Ev\0"
-	.long	0x1b45d
-	.long	0x1b463
+	.long	0x1b519
+	.long	0x1b51f
 	.uleb128 0x33
-	.long	0x1b3f5
+	.long	0x1b4b1
 	.byte	0
 	.uleb128 0x1e
-	.long	0x18725
-	.long	0x1b482
-	.quad	.LFB1456
-	.quad	.LFE1456-.LFB1456
+	.long	0x187df
+	.long	0x1b53e
+	.quad	.LFB1739
+	.quad	.LFE1739-.LFB1739
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b600
+	.long	0x1b6bc
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x187b5
+	.long	0x1886f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -28098,7 +28167,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x20
 	.byte	0x33
-	.long	0x18244
+	.long	0x182fe
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -28107,7 +28176,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x20
 	.byte	0x49
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -28116,7 +28185,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x22
 	.byte	0x15
-	.long	0x1b600
+	.long	0x1b6bc
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -192
@@ -28125,7 +28194,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x28
 	.byte	0x21
-	.long	0x18329
+	.long	0x183e3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
@@ -28134,7 +28203,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x29
 	.byte	0x21
-	.long	0x18421
+	.long	0x184db
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -48
@@ -28143,7 +28212,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x2c
 	.byte	0x21
-	.long	0xc3df
+	.long	0xc499
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -224
@@ -28152,57 +28221,57 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x2d
 	.byte	0x21
-	.long	0xc3df
+	.long	0xc499
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -256
 	.uleb128 0xa6
 	.secrel32	.Ldebug_ranges0+0
-	.long	0x1b596
+	.long	0x1b652
 	.uleb128 0x3d
 	.ascii "item\0"
 	.byte	0x2
 	.byte	0x31
 	.byte	0x1c
-	.long	0x18244
+	.long	0x182fe
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -64
-	.uleb128 0x55
+	.uleb128 0x56
 	.secrel32	.LASF165
-	.long	0x184e1
+	.long	0x1859b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -56
-	.uleb128 0x55
+	.uleb128 0x56
 	.secrel32	.LASF166
-	.long	0xcc23
+	.long	0xccdd
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -264
-	.uleb128 0x55
+	.uleb128 0x56
 	.secrel32	.LASF167
-	.long	0xcc23
+	.long	0xccdd
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -272
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.Ldebug_ranges0+0x30
 	.uleb128 0x3d
 	.ascii "thisFolder\0"
 	.byte	0x2
 	.byte	0x32
 	.byte	0x21
-	.long	0x1b60c
+	.long	0x1b6c8
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -384
-	.uleb128 0x5f
+	.uleb128 0x61
 	.secrel32	.LASF168
 	.byte	0x2
 	.byte	0x35
 	.byte	0x19
-	.long	0x4ab9
+	.long	0x4ab8
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -416
@@ -28211,49 +28280,49 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x38
 	.byte	0x1d
-	.long	0x1835c
+	.long	0x18416
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -280
 	.byte	0
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.Ldebug_ranges0+0x60
 	.uleb128 0x3d
 	.ascii "item\0"
 	.byte	0x2
 	.byte	0x4f
 	.byte	0x1c
-	.long	0x18244
+	.long	0x182fe
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -80
-	.uleb128 0x55
+	.uleb128 0x56
 	.secrel32	.LASF165
-	.long	0x184e1
+	.long	0x1859b
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -72
-	.uleb128 0x55
+	.uleb128 0x56
 	.secrel32	.LASF166
-	.long	0xcc23
+	.long	0xccdd
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -288
-	.uleb128 0x55
+	.uleb128 0x56
 	.secrel32	.LASF167
-	.long	0xcc23
+	.long	0xccdd
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -296
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.Ldebug_ranges0+0x90
-	.uleb128 0x5f
+	.uleb128 0x61
 	.secrel32	.LASF168
 	.byte	0x2
 	.byte	0x50
 	.byte	0x1d
-	.long	0x4ab9
+	.long	0x4ab8
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -384
@@ -28262,7 +28331,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x51
 	.byte	0x1d
-	.long	0x18266
+	.long	0x18320
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -304
@@ -28274,16 +28343,16 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x28
 	.ascii "T100WxFolderInfo\0"
 	.uleb128 0x1e
-	.long	0x186ab
-	.long	0x1b63d
-	.quad	.LFB1455
-	.quad	.LFE1455-.LFB1455
+	.long	0x18765
+	.long	0x1b6f9
+	.quad	.LFB1738
+	.quad	.LFE1738-.LFB1738
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b67a
+	.long	0x1b736
 	.uleb128 0xf
 	.secrel32	.LASF152
-	.long	0x187b5
+	.long	0x1886f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -28292,7 +28361,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x11
 	.byte	0x37
-	.long	0x18244
+	.long	0x182fe
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -28301,101 +28370,101 @@ _ZTS15T100FolderLogic:
 	.byte	0x2
 	.byte	0x13
 	.byte	0x11
-	.long	0x16aa0
+	.long	0x16b5a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -20
 	.uleb128 0xa7
 	.quad	.LVL0
-	.long	0x1b7f5
+	.long	0x1b8b1
 	.byte	0
 	.uleb128 0x22
-	.long	0x18663
-	.long	0x1b688
+	.long	0x1871d
+	.long	0x1b744
 	.byte	0
-	.long	0x1b69b
-	.uleb128 0x16
+	.long	0x1b757
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x187b5
-	.uleb128 0x16
+	.long	0x1886f
+	.uleb128 0x17
 	.secrel32	.LASF155
-	.long	0x160bc
+	.long	0x1619b
 	.byte	0
 	.uleb128 0x45
-	.long	0x1b67a
+	.long	0x1b736
 	.ascii "_ZN15T100FolderLogicD0Ev\0"
-	.long	0x1b6d3
-	.quad	.LFB1454
-	.quad	.LFE1454-.LFB1454
+	.long	0x1b78f
+	.quad	.LFB1737
+	.quad	.LFE1737-.LFB1737
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b6dc
+	.long	0x1b798
 	.uleb128 0x24
-	.long	0x1b688
+	.long	0x1b744
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x44
-	.long	0x1b67a
+	.long	0x1b736
 	.ascii "_ZN15T100FolderLogicD2Ev\0"
-	.long	0x1b714
-	.quad	.LFB1452
-	.quad	.LFE1452-.LFB1452
+	.long	0x1b7d0
+	.quad	.LFB1735
+	.quad	.LFE1735-.LFB1735
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b71d
+	.long	0x1b7d9
 	.uleb128 0x24
-	.long	0x1b688
+	.long	0x1b744
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x22
-	.long	0x18633
-	.long	0x1b72b
+	.long	0x186ed
+	.long	0x1b7e7
 	.byte	0
-	.long	0x1b735
-	.uleb128 0x16
+	.long	0x1b7f1
+	.uleb128 0x17
 	.secrel32	.LASF152
-	.long	0x187b5
+	.long	0x1886f
 	.byte	0
 	.uleb128 0x44
-	.long	0x1b71d
+	.long	0x1b7d9
 	.ascii "_ZN15T100FolderLogicC2Ev\0"
-	.long	0x1b76d
-	.quad	.LFB1449
-	.quad	.LFE1449-.LFB1449
+	.long	0x1b829
+	.quad	.LFB1732
+	.quad	.LFE1732-.LFB1732
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b776
+	.long	0x1b832
 	.uleb128 0x24
-	.long	0x1b72b
+	.long	0x1b7e7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x4a
-	.long	0x5bbb
-	.long	0x1b7a9
+	.long	0x5c75
+	.long	0x1b865
 	.uleb128 0x41
 	.ascii "__s1\0"
 	.byte	0x18
 	.word	0x1ca
 	.byte	0x17
-	.long	0x174a9
+	.long	0x17563
 	.uleb128 0x41
 	.ascii "__s2\0"
 	.byte	0x18
 	.word	0x1ca
 	.byte	0x2e
-	.long	0x174a3
+	.long	0x1755d
 	.uleb128 0x41
 	.ascii "__n\0"
 	.byte	0x18
 	.word	0x1ca
 	.byte	0x3b
-	.long	0x53c6
+	.long	0x5480
 	.byte	0
 	.uleb128 0xa8
 	.ascii "operator new\0"
@@ -28403,14 +28472,14 @@ _ZTS15T100FolderLogic:
 	.byte	0xa8
 	.byte	0xe
 	.ascii "_ZnwyPv\0"
-	.long	0x167e7
-	.quad	.LFB360
-	.quad	.LFE360-.LFB360
+	.long	0x16aba
+	.quad	.LFB643
+	.quad	.LFE643-.LFB643
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x1b7f5
+	.long	0x1b8b1
 	.uleb128 0x32
-	.long	0x53c6
+	.long	0x5480
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -28419,7 +28488,7 @@ _ZTS15T100FolderLogic:
 	.byte	0x1
 	.byte	0xa8
 	.byte	0x2e
-	.long	0x167e7
+	.long	0x16aba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -28506,6 +28575,15 @@ _ZTS15T100FolderLogic:
 	.byte	0
 	.byte	0
 	.uleb128 0x7
+	.uleb128 0x2f
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x8
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -28527,15 +28605,6 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x64
 	.uleb128 0x13
 	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x8
-	.uleb128 0x2f
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x49
 	.uleb128 0x13
 	.byte	0
 	.byte	0
@@ -28755,17 +28824,6 @@ _ZTS15T100FolderLogic:
 	.byte	0
 	.byte	0
 	.uleb128 0x16
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x34
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x17
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -28780,6 +28838,17 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.uleb128 0x1
 	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x17
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x34
+	.uleb128 0x19
 	.byte	0
 	.byte	0
 	.uleb128 0x18
@@ -29753,6 +29822,15 @@ _ZTS15T100FolderLogic:
 	.byte	0
 	.byte	0
 	.uleb128 0x52
+	.uleb128 0x28
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x1c
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x53
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -29775,7 +29853,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.uleb128 0x21
 	.byte	0
 	.uleb128 0x49
@@ -29784,7 +29862,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -29803,7 +29881,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -29816,7 +29894,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -29841,7 +29919,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x58
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -29858,7 +29936,26 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x58
+	.uleb128 0x59
+	.uleb128 0x4
+	.byte	0x1
+	.uleb128 0x3e
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x5a
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -29881,7 +29978,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x59
+	.uleb128 0x5b
 	.uleb128 0x3a
 	.byte	0
 	.uleb128 0x3a
@@ -29892,48 +29989,6 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.uleb128 0x18
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x5a
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x32
-	.uleb128 0xb
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x64
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x5b
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3c
-	.uleb128 0x19
 	.byte	0
 	.byte	0
 	.uleb128 0x5c
@@ -29951,13 +30006,55 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.uleb128 0x6e
 	.uleb128 0x8
+	.uleb128 0x32
+	.uleb128 0xb
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x64
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x5d
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3c
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x5e
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
 	.uleb128 0x3c
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5d
+	.uleb128 0x5f
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -29976,7 +30073,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x5e
+	.uleb128 0x60
 	.uleb128 0x5
 	.byte	0
 	.uleb128 0x3
@@ -29991,7 +30088,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x5f
+	.uleb128 0x61
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -30008,7 +30105,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x60
+	.uleb128 0x62
 	.uleb128 0x4108
 	.byte	0x1
 	.uleb128 0x3a
@@ -30021,7 +30118,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x61
+	.uleb128 0x63
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -30042,7 +30139,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x62
+	.uleb128 0x64
 	.uleb128 0x30
 	.byte	0
 	.uleb128 0x3
@@ -30053,7 +30150,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x63
+	.uleb128 0x65
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -30080,7 +30177,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x64
+	.uleb128 0x66
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0x3e
@@ -30097,16 +30194,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x65
-	.uleb128 0x28
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x1c
-	.uleb128 0xb
-	.byte	0
-	.byte	0
-	.uleb128 0x66
+	.uleb128 0x67
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -30117,7 +30205,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x67
+	.uleb128 0x68
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -30134,7 +30222,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x18
 	.byte	0
 	.byte	0
-	.uleb128 0x68
+	.uleb128 0x69
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -30145,14 +30233,14 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.uleb128 0xb
 	.byte	0x1
 	.uleb128 0x55
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -30169,7 +30257,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6b
+	.uleb128 0x6c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -30186,7 +30274,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x6c
+	.uleb128 0x6d
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -30199,21 +30287,6 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.uleb128 0x49
 	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x6d
-	.uleb128 0x13
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
 	.byte	0
 	.byte	0
 	.uleb128 0x6e
@@ -30251,6 +30324,21 @@ _ZTS15T100FolderLogic:
 	.byte	0
 	.byte	0
 	.uleb128 0x70
+	.uleb128 0x13
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0xb
+	.uleb128 0xb
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.byte	0
+	.byte	0
+	.uleb128 0x71
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -30275,22 +30363,9 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x71
-	.uleb128 0x39
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.byte	0
-	.byte	0
 	.uleb128 0x72
 	.uleb128 0x39
-	.byte	0x1
+	.byte	0
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
@@ -30299,15 +30374,11 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.uleb128 0x39
 	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x73
-	.uleb128 0x2e
+	.uleb128 0x39
 	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
 	.uleb128 0x3
 	.uleb128 0x8
 	.uleb128 0x3a
@@ -30316,14 +30387,6 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.uleb128 0x39
 	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x32
-	.uleb128 0xb
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x64
-	.uleb128 0x13
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
@@ -30343,13 +30406,13 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.uleb128 0x6e
 	.uleb128 0x8
-	.uleb128 0x49
-	.uleb128 0x13
 	.uleb128 0x32
 	.uleb128 0xb
 	.uleb128 0x3c
 	.uleb128 0x19
 	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
 	.byte	0
@@ -30368,11 +30431,36 @@ _ZTS15T100FolderLogic:
 	.uleb128 0xb
 	.uleb128 0x6e
 	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x32
+	.uleb128 0xb
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x64
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x76
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
 	.uleb128 0x3c
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x76
+	.uleb128 0x77
 	.uleb128 0x39
 	.byte	0
 	.uleb128 0x3
@@ -30387,7 +30475,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x77
+	.uleb128 0x78
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -30408,7 +30496,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x78
+	.uleb128 0x79
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -30429,7 +30517,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x79
+	.uleb128 0x7a
 	.uleb128 0xf
 	.byte	0
 	.uleb128 0xb
@@ -30440,7 +30528,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7a
+	.uleb128 0x7b
 	.uleb128 0x13
 	.byte	0
 	.uleb128 0x3
@@ -30449,7 +30537,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x7b
+	.uleb128 0x7c
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -30470,7 +30558,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7c
+	.uleb128 0x7d
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -30491,7 +30579,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7d
+	.uleb128 0x7e
 	.uleb128 0x15
 	.byte	0x1
 	.uleb128 0x49
@@ -30500,7 +30588,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x7e
+	.uleb128 0x7f
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x6e
@@ -30511,7 +30599,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x5
 	.byte	0
 	.byte	0
-	.uleb128 0x7f
+	.uleb128 0x80
 	.uleb128 0x4108
 	.byte	0x1
 	.uleb128 0x3a
@@ -30524,7 +30612,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x80
+	.uleb128 0x81
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
@@ -30543,7 +30631,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x81
+	.uleb128 0x82
 	.uleb128 0x11
 	.byte	0x1
 	.uleb128 0x25
@@ -30562,7 +30650,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x17
 	.byte	0
 	.byte	0
-	.uleb128 0x82
+	.uleb128 0x83
 	.uleb128 0x39
 	.byte	0x1
 	.uleb128 0x3
@@ -30570,25 +30658,6 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x3a
 	.uleb128 0xb
 	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x83
-	.uleb128 0x4
-	.byte	0x1
-	.uleb128 0x3e
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x1
 	.uleb128 0x13
@@ -30842,26 +30911,6 @@ _ZTS15T100FolderLogic:
 	.byte	0
 	.byte	0
 	.uleb128 0x91
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x47
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x92
-	.uleb128 0x3a
-	.byte	0
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x18
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x93
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0x3
@@ -30878,7 +30927,7 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x94
+	.uleb128 0x92
 	.uleb128 0x13
 	.byte	0x1
 	.uleb128 0xb
@@ -30890,6 +30939,26 @@ _ZTS15T100FolderLogic:
 	.uleb128 0x39
 	.uleb128 0xb
 	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x93
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x47
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x94
+	.uleb128 0x3a
+	.byte	0
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x18
 	.uleb128 0x13
 	.byte	0
 	.byte	0
@@ -31189,196 +31258,16 @@ _ZTS15T100FolderLogic:
 	.word	0
 	.quad	.Ltext0
 	.quad	.Letext0-.Ltext0
-	.quad	.LFB360
-	.quad	.LFE360-.LFB360
-	.quad	.LFB1689
-	.quad	.LFE1689-.LFB1689
-	.quad	.LFB1692
-	.quad	.LFE1692-.LFB1692
-	.quad	.LFB1693
-	.quad	.LFE1693-.LFB1693
-	.quad	.LFB1694
-	.quad	.LFE1694-.LFB1694
-	.quad	.LFB1695
-	.quad	.LFE1695-.LFB1695
-	.quad	.LFB1696
-	.quad	.LFE1696-.LFB1696
-	.quad	.LFB1697
-	.quad	.LFE1697-.LFB1697
-	.quad	.LFB1698
-	.quad	.LFE1698-.LFB1698
-	.quad	.LFB1699
-	.quad	.LFE1699-.LFB1699
-	.quad	.LFB1700
-	.quad	.LFE1700-.LFB1700
-	.quad	.LFB1701
-	.quad	.LFE1701-.LFB1701
-	.quad	.LFB1803
-	.quad	.LFE1803-.LFB1803
-	.quad	.LFB1804
-	.quad	.LFE1804-.LFB1804
-	.quad	.LFB1807
-	.quad	.LFE1807-.LFB1807
-	.quad	.LFB1809
-	.quad	.LFE1809-.LFB1809
-	.quad	.LFB1810
-	.quad	.LFE1810-.LFB1810
-	.quad	.LFB1813
-	.quad	.LFE1813-.LFB1813
-	.quad	.LFB1814
-	.quad	.LFE1814-.LFB1814
-	.quad	.LFB1820
-	.quad	.LFE1820-.LFB1820
-	.quad	.LFB1822
-	.quad	.LFE1822-.LFB1822
-	.quad	.LFB1821
-	.quad	.LFE1821-.LFB1821
-	.quad	.LFB1823
-	.quad	.LFE1823-.LFB1823
-	.quad	.LFB1824
-	.quad	.LFE1824-.LFB1824
-	.quad	.LFB1826
-	.quad	.LFE1826-.LFB1826
-	.quad	.LFB1825
-	.quad	.LFE1825-.LFB1825
-	.quad	.LFB1827
-	.quad	.LFE1827-.LFB1827
-	.quad	.LFB1828
-	.quad	.LFE1828-.LFB1828
-	.quad	.LFB1861
-	.quad	.LFE1861-.LFB1861
-	.quad	.LFB1863
-	.quad	.LFE1863-.LFB1863
-	.quad	.LFB1865
-	.quad	.LFE1865-.LFB1865
-	.quad	.LFB1866
-	.quad	.LFE1866-.LFB1866
-	.quad	.LFB1871
-	.quad	.LFE1871-.LFB1871
-	.quad	.LFB1874
-	.quad	.LFE1874-.LFB1874
-	.quad	.LFB1875
-	.quad	.LFE1875-.LFB1875
-	.quad	.LFB1876
-	.quad	.LFE1876-.LFB1876
-	.quad	.LFB1877
-	.quad	.LFE1877-.LFB1877
-	.quad	.LFB1878
-	.quad	.LFE1878-.LFB1878
-	.quad	.LFB1879
-	.quad	.LFE1879-.LFB1879
-	.quad	.LFB1880
-	.quad	.LFE1880-.LFB1880
-	.quad	.LFB1881
-	.quad	.LFE1881-.LFB1881
-	.quad	.LFB1882
-	.quad	.LFE1882-.LFB1882
-	.quad	.LFB1883
-	.quad	.LFE1883-.LFB1883
-	.quad	.LFB1884
-	.quad	.LFE1884-.LFB1884
-	.quad	.LFB1885
-	.quad	.LFE1885-.LFB1885
-	.quad	.LFB1888
-	.quad	.LFE1888-.LFB1888
-	.quad	.LFB1889
-	.quad	.LFE1889-.LFB1889
-	.quad	.LFB1890
-	.quad	.LFE1890-.LFB1890
-	.quad	.LFB1891
-	.quad	.LFE1891-.LFB1891
-	.quad	.LFB1892
-	.quad	.LFE1892-.LFB1892
-	.quad	.LFB1893
-	.quad	.LFE1893-.LFB1893
-	.quad	.LFB1894
-	.quad	.LFE1894-.LFB1894
-	.quad	.LFB1895
-	.quad	.LFE1895-.LFB1895
-	.quad	.LFB1896
-	.quad	.LFE1896-.LFB1896
-	.quad	.LFB1897
-	.quad	.LFE1897-.LFB1897
-	.quad	.LFB1898
-	.quad	.LFE1898-.LFB1898
-	.quad	.LFB1930
-	.quad	.LFE1930-.LFB1930
-	.quad	.LFB1933
-	.quad	.LFE1933-.LFB1933
-	.quad	.LFB1935
-	.quad	.LFE1935-.LFB1935
-	.quad	.LFB1937
-	.quad	.LFE1937-.LFB1937
-	.quad	.LFB1936
-	.quad	.LFE1936-.LFB1936
-	.quad	.LFB1940
-	.quad	.LFE1940-.LFB1940
-	.quad	.LFB1941
-	.quad	.LFE1941-.LFB1941
-	.quad	.LFB1942
-	.quad	.LFE1942-.LFB1942
-	.quad	.LFB1943
-	.quad	.LFE1943-.LFB1943
-	.quad	.LFB1944
-	.quad	.LFE1944-.LFB1944
-	.quad	.LFB1945
-	.quad	.LFE1945-.LFB1945
-	.quad	.LFB1946
-	.quad	.LFE1946-.LFB1946
-	.quad	.LFB1947
-	.quad	.LFE1947-.LFB1947
-	.quad	.LFB1948
-	.quad	.LFE1948-.LFB1948
-	.quad	.LFB1949
-	.quad	.LFE1949-.LFB1949
-	.quad	.LFB1950
-	.quad	.LFE1950-.LFB1950
-	.quad	.LFB1951
-	.quad	.LFE1951-.LFB1951
-	.quad	.LFB1952
-	.quad	.LFE1952-.LFB1952
-	.quad	.LFB1953
-	.quad	.LFE1953-.LFB1953
-	.quad	.LFB1954
-	.quad	.LFE1954-.LFB1954
-	.quad	.LFB1955
-	.quad	.LFE1955-.LFB1955
-	.quad	.LFB1956
-	.quad	.LFE1956-.LFB1956
-	.quad	.LFB1990
-	.quad	.LFE1990-.LFB1990
-	.quad	.LFB1992
-	.quad	.LFE1992-.LFB1992
-	.quad	.LFB1993
-	.quad	.LFE1993-.LFB1993
-	.quad	.LFB1995
-	.quad	.LFE1995-.LFB1995
-	.quad	.LFB1996
-	.quad	.LFE1996-.LFB1996
-	.quad	.LFB1997
-	.quad	.LFE1997-.LFB1997
-	.quad	.LFB2000
-	.quad	.LFE2000-.LFB2000
-	.quad	.LFB2001
-	.quad	.LFE2001-.LFB2001
-	.quad	.LFB2002
-	.quad	.LFE2002-.LFB2002
-	.quad	.LFB2003
-	.quad	.LFE2003-.LFB2003
-	.quad	.LFB2004
-	.quad	.LFE2004-.LFB2004
-	.quad	.LFB2005
-	.quad	.LFE2005-.LFB2005
-	.quad	.LFB2006
-	.quad	.LFE2006-.LFB2006
-	.quad	.LFB2009
-	.quad	.LFE2009-.LFB2009
-	.quad	.LFB2010
-	.quad	.LFE2010-.LFB2010
-	.quad	.LFB2011
-	.quad	.LFE2011-.LFB2011
-	.quad	.LFB2012
-	.quad	.LFE2012-.LFB2012
+	.quad	.LFB643
+	.quad	.LFE643-.LFB643
+	.quad	.LFB2032
+	.quad	.LFE2032-.LFB2032
+	.quad	.LFB2035
+	.quad	.LFE2035-.LFB2035
+	.quad	.LFB2036
+	.quad	.LFE2036-.LFB2036
+	.quad	.LFB2037
+	.quad	.LFE2037-.LFB2037
 	.quad	.LFB2038
 	.quad	.LFE2038-.LFB2038
 	.quad	.LFB2039
@@ -31387,38 +31276,218 @@ _ZTS15T100FolderLogic:
 	.quad	.LFE2040-.LFB2040
 	.quad	.LFB2041
 	.quad	.LFE2041-.LFB2041
-	.quad	.LFB2050
-	.quad	.LFE2050-.LFB2050
-	.quad	.LFB2051
-	.quad	.LFE2051-.LFB2051
-	.quad	.LFB2054
-	.quad	.LFE2054-.LFB2054
-	.quad	.LFB2055
-	.quad	.LFE2055-.LFB2055
-	.quad	.LFB2056
-	.quad	.LFE2056-.LFB2056
-	.quad	.LFB2057
-	.quad	.LFE2057-.LFB2057
-	.quad	.LFB2058
-	.quad	.LFE2058-.LFB2058
-	.quad	.LFB2059
-	.quad	.LFE2059-.LFB2059
-	.quad	.LFB2060
-	.quad	.LFE2060-.LFB2060
-	.quad	.LFB2061
-	.quad	.LFE2061-.LFB2061
-	.quad	.LFB2062
-	.quad	.LFE2062-.LFB2062
-	.quad	.LFB2063
-	.quad	.LFE2063-.LFB2063
-	.quad	.LFB2064
-	.quad	.LFE2064-.LFB2064
-	.quad	.LFB2065
-	.quad	.LFE2065-.LFB2065
-	.quad	.LFB2066
-	.quad	.LFE2066-.LFB2066
-	.quad	.LFB2067
-	.quad	.LFE2067-.LFB2067
+	.quad	.LFB2042
+	.quad	.LFE2042-.LFB2042
+	.quad	.LFB2043
+	.quad	.LFE2043-.LFB2043
+	.quad	.LFB2044
+	.quad	.LFE2044-.LFB2044
+	.quad	.LFB2146
+	.quad	.LFE2146-.LFB2146
+	.quad	.LFB2147
+	.quad	.LFE2147-.LFB2147
+	.quad	.LFB2150
+	.quad	.LFE2150-.LFB2150
+	.quad	.LFB2152
+	.quad	.LFE2152-.LFB2152
+	.quad	.LFB2153
+	.quad	.LFE2153-.LFB2153
+	.quad	.LFB2156
+	.quad	.LFE2156-.LFB2156
+	.quad	.LFB2157
+	.quad	.LFE2157-.LFB2157
+	.quad	.LFB2163
+	.quad	.LFE2163-.LFB2163
+	.quad	.LFB2165
+	.quad	.LFE2165-.LFB2165
+	.quad	.LFB2164
+	.quad	.LFE2164-.LFB2164
+	.quad	.LFB2166
+	.quad	.LFE2166-.LFB2166
+	.quad	.LFB2167
+	.quad	.LFE2167-.LFB2167
+	.quad	.LFB2169
+	.quad	.LFE2169-.LFB2169
+	.quad	.LFB2168
+	.quad	.LFE2168-.LFB2168
+	.quad	.LFB2170
+	.quad	.LFE2170-.LFB2170
+	.quad	.LFB2171
+	.quad	.LFE2171-.LFB2171
+	.quad	.LFB2204
+	.quad	.LFE2204-.LFB2204
+	.quad	.LFB2206
+	.quad	.LFE2206-.LFB2206
+	.quad	.LFB2208
+	.quad	.LFE2208-.LFB2208
+	.quad	.LFB2209
+	.quad	.LFE2209-.LFB2209
+	.quad	.LFB2214
+	.quad	.LFE2214-.LFB2214
+	.quad	.LFB2217
+	.quad	.LFE2217-.LFB2217
+	.quad	.LFB2218
+	.quad	.LFE2218-.LFB2218
+	.quad	.LFB2219
+	.quad	.LFE2219-.LFB2219
+	.quad	.LFB2220
+	.quad	.LFE2220-.LFB2220
+	.quad	.LFB2221
+	.quad	.LFE2221-.LFB2221
+	.quad	.LFB2222
+	.quad	.LFE2222-.LFB2222
+	.quad	.LFB2223
+	.quad	.LFE2223-.LFB2223
+	.quad	.LFB2224
+	.quad	.LFE2224-.LFB2224
+	.quad	.LFB2225
+	.quad	.LFE2225-.LFB2225
+	.quad	.LFB2226
+	.quad	.LFE2226-.LFB2226
+	.quad	.LFB2227
+	.quad	.LFE2227-.LFB2227
+	.quad	.LFB2228
+	.quad	.LFE2228-.LFB2228
+	.quad	.LFB2231
+	.quad	.LFE2231-.LFB2231
+	.quad	.LFB2232
+	.quad	.LFE2232-.LFB2232
+	.quad	.LFB2233
+	.quad	.LFE2233-.LFB2233
+	.quad	.LFB2234
+	.quad	.LFE2234-.LFB2234
+	.quad	.LFB2235
+	.quad	.LFE2235-.LFB2235
+	.quad	.LFB2236
+	.quad	.LFE2236-.LFB2236
+	.quad	.LFB2237
+	.quad	.LFE2237-.LFB2237
+	.quad	.LFB2238
+	.quad	.LFE2238-.LFB2238
+	.quad	.LFB2239
+	.quad	.LFE2239-.LFB2239
+	.quad	.LFB2240
+	.quad	.LFE2240-.LFB2240
+	.quad	.LFB2241
+	.quad	.LFE2241-.LFB2241
+	.quad	.LFB2273
+	.quad	.LFE2273-.LFB2273
+	.quad	.LFB2276
+	.quad	.LFE2276-.LFB2276
+	.quad	.LFB2278
+	.quad	.LFE2278-.LFB2278
+	.quad	.LFB2280
+	.quad	.LFE2280-.LFB2280
+	.quad	.LFB2279
+	.quad	.LFE2279-.LFB2279
+	.quad	.LFB2283
+	.quad	.LFE2283-.LFB2283
+	.quad	.LFB2284
+	.quad	.LFE2284-.LFB2284
+	.quad	.LFB2285
+	.quad	.LFE2285-.LFB2285
+	.quad	.LFB2286
+	.quad	.LFE2286-.LFB2286
+	.quad	.LFB2287
+	.quad	.LFE2287-.LFB2287
+	.quad	.LFB2288
+	.quad	.LFE2288-.LFB2288
+	.quad	.LFB2289
+	.quad	.LFE2289-.LFB2289
+	.quad	.LFB2290
+	.quad	.LFE2290-.LFB2290
+	.quad	.LFB2291
+	.quad	.LFE2291-.LFB2291
+	.quad	.LFB2292
+	.quad	.LFE2292-.LFB2292
+	.quad	.LFB2293
+	.quad	.LFE2293-.LFB2293
+	.quad	.LFB2294
+	.quad	.LFE2294-.LFB2294
+	.quad	.LFB2295
+	.quad	.LFE2295-.LFB2295
+	.quad	.LFB2296
+	.quad	.LFE2296-.LFB2296
+	.quad	.LFB2297
+	.quad	.LFE2297-.LFB2297
+	.quad	.LFB2298
+	.quad	.LFE2298-.LFB2298
+	.quad	.LFB2299
+	.quad	.LFE2299-.LFB2299
+	.quad	.LFB2333
+	.quad	.LFE2333-.LFB2333
+	.quad	.LFB2335
+	.quad	.LFE2335-.LFB2335
+	.quad	.LFB2336
+	.quad	.LFE2336-.LFB2336
+	.quad	.LFB2338
+	.quad	.LFE2338-.LFB2338
+	.quad	.LFB2339
+	.quad	.LFE2339-.LFB2339
+	.quad	.LFB2340
+	.quad	.LFE2340-.LFB2340
+	.quad	.LFB2343
+	.quad	.LFE2343-.LFB2343
+	.quad	.LFB2344
+	.quad	.LFE2344-.LFB2344
+	.quad	.LFB2345
+	.quad	.LFE2345-.LFB2345
+	.quad	.LFB2346
+	.quad	.LFE2346-.LFB2346
+	.quad	.LFB2347
+	.quad	.LFE2347-.LFB2347
+	.quad	.LFB2348
+	.quad	.LFE2348-.LFB2348
+	.quad	.LFB2349
+	.quad	.LFE2349-.LFB2349
+	.quad	.LFB2352
+	.quad	.LFE2352-.LFB2352
+	.quad	.LFB2353
+	.quad	.LFE2353-.LFB2353
+	.quad	.LFB2354
+	.quad	.LFE2354-.LFB2354
+	.quad	.LFB2355
+	.quad	.LFE2355-.LFB2355
+	.quad	.LFB2381
+	.quad	.LFE2381-.LFB2381
+	.quad	.LFB2382
+	.quad	.LFE2382-.LFB2382
+	.quad	.LFB2383
+	.quad	.LFE2383-.LFB2383
+	.quad	.LFB2384
+	.quad	.LFE2384-.LFB2384
+	.quad	.LFB2393
+	.quad	.LFE2393-.LFB2393
+	.quad	.LFB2394
+	.quad	.LFE2394-.LFB2394
+	.quad	.LFB2397
+	.quad	.LFE2397-.LFB2397
+	.quad	.LFB2398
+	.quad	.LFE2398-.LFB2398
+	.quad	.LFB2399
+	.quad	.LFE2399-.LFB2399
+	.quad	.LFB2400
+	.quad	.LFE2400-.LFB2400
+	.quad	.LFB2401
+	.quad	.LFE2401-.LFB2401
+	.quad	.LFB2402
+	.quad	.LFE2402-.LFB2402
+	.quad	.LFB2403
+	.quad	.LFE2403-.LFB2403
+	.quad	.LFB2404
+	.quad	.LFE2404-.LFB2404
+	.quad	.LFB2405
+	.quad	.LFE2405-.LFB2405
+	.quad	.LFB2406
+	.quad	.LFE2406-.LFB2406
+	.quad	.LFB2407
+	.quad	.LFE2407-.LFB2407
+	.quad	.LFB2408
+	.quad	.LFE2408-.LFB2408
+	.quad	.LFB2409
+	.quad	.LFE2409-.LFB2409
+	.quad	.LFB2410
+	.quad	.LFE2410-.LFB2410
 	.quad	0
 	.quad	0
 	.section	.debug_ranges,"dr"
@@ -31449,196 +31518,16 @@ _ZTS15T100FolderLogic:
 	.quad	0
 	.quad	.Ltext0
 	.quad	.Letext0
-	.quad	.LFB360
-	.quad	.LFE360
-	.quad	.LFB1689
-	.quad	.LFE1689
-	.quad	.LFB1692
-	.quad	.LFE1692
-	.quad	.LFB1693
-	.quad	.LFE1693
-	.quad	.LFB1694
-	.quad	.LFE1694
-	.quad	.LFB1695
-	.quad	.LFE1695
-	.quad	.LFB1696
-	.quad	.LFE1696
-	.quad	.LFB1697
-	.quad	.LFE1697
-	.quad	.LFB1698
-	.quad	.LFE1698
-	.quad	.LFB1699
-	.quad	.LFE1699
-	.quad	.LFB1700
-	.quad	.LFE1700
-	.quad	.LFB1701
-	.quad	.LFE1701
-	.quad	.LFB1803
-	.quad	.LFE1803
-	.quad	.LFB1804
-	.quad	.LFE1804
-	.quad	.LFB1807
-	.quad	.LFE1807
-	.quad	.LFB1809
-	.quad	.LFE1809
-	.quad	.LFB1810
-	.quad	.LFE1810
-	.quad	.LFB1813
-	.quad	.LFE1813
-	.quad	.LFB1814
-	.quad	.LFE1814
-	.quad	.LFB1820
-	.quad	.LFE1820
-	.quad	.LFB1822
-	.quad	.LFE1822
-	.quad	.LFB1821
-	.quad	.LFE1821
-	.quad	.LFB1823
-	.quad	.LFE1823
-	.quad	.LFB1824
-	.quad	.LFE1824
-	.quad	.LFB1826
-	.quad	.LFE1826
-	.quad	.LFB1825
-	.quad	.LFE1825
-	.quad	.LFB1827
-	.quad	.LFE1827
-	.quad	.LFB1828
-	.quad	.LFE1828
-	.quad	.LFB1861
-	.quad	.LFE1861
-	.quad	.LFB1863
-	.quad	.LFE1863
-	.quad	.LFB1865
-	.quad	.LFE1865
-	.quad	.LFB1866
-	.quad	.LFE1866
-	.quad	.LFB1871
-	.quad	.LFE1871
-	.quad	.LFB1874
-	.quad	.LFE1874
-	.quad	.LFB1875
-	.quad	.LFE1875
-	.quad	.LFB1876
-	.quad	.LFE1876
-	.quad	.LFB1877
-	.quad	.LFE1877
-	.quad	.LFB1878
-	.quad	.LFE1878
-	.quad	.LFB1879
-	.quad	.LFE1879
-	.quad	.LFB1880
-	.quad	.LFE1880
-	.quad	.LFB1881
-	.quad	.LFE1881
-	.quad	.LFB1882
-	.quad	.LFE1882
-	.quad	.LFB1883
-	.quad	.LFE1883
-	.quad	.LFB1884
-	.quad	.LFE1884
-	.quad	.LFB1885
-	.quad	.LFE1885
-	.quad	.LFB1888
-	.quad	.LFE1888
-	.quad	.LFB1889
-	.quad	.LFE1889
-	.quad	.LFB1890
-	.quad	.LFE1890
-	.quad	.LFB1891
-	.quad	.LFE1891
-	.quad	.LFB1892
-	.quad	.LFE1892
-	.quad	.LFB1893
-	.quad	.LFE1893
-	.quad	.LFB1894
-	.quad	.LFE1894
-	.quad	.LFB1895
-	.quad	.LFE1895
-	.quad	.LFB1896
-	.quad	.LFE1896
-	.quad	.LFB1897
-	.quad	.LFE1897
-	.quad	.LFB1898
-	.quad	.LFE1898
-	.quad	.LFB1930
-	.quad	.LFE1930
-	.quad	.LFB1933
-	.quad	.LFE1933
-	.quad	.LFB1935
-	.quad	.LFE1935
-	.quad	.LFB1937
-	.quad	.LFE1937
-	.quad	.LFB1936
-	.quad	.LFE1936
-	.quad	.LFB1940
-	.quad	.LFE1940
-	.quad	.LFB1941
-	.quad	.LFE1941
-	.quad	.LFB1942
-	.quad	.LFE1942
-	.quad	.LFB1943
-	.quad	.LFE1943
-	.quad	.LFB1944
-	.quad	.LFE1944
-	.quad	.LFB1945
-	.quad	.LFE1945
-	.quad	.LFB1946
-	.quad	.LFE1946
-	.quad	.LFB1947
-	.quad	.LFE1947
-	.quad	.LFB1948
-	.quad	.LFE1948
-	.quad	.LFB1949
-	.quad	.LFE1949
-	.quad	.LFB1950
-	.quad	.LFE1950
-	.quad	.LFB1951
-	.quad	.LFE1951
-	.quad	.LFB1952
-	.quad	.LFE1952
-	.quad	.LFB1953
-	.quad	.LFE1953
-	.quad	.LFB1954
-	.quad	.LFE1954
-	.quad	.LFB1955
-	.quad	.LFE1955
-	.quad	.LFB1956
-	.quad	.LFE1956
-	.quad	.LFB1990
-	.quad	.LFE1990
-	.quad	.LFB1992
-	.quad	.LFE1992
-	.quad	.LFB1993
-	.quad	.LFE1993
-	.quad	.LFB1995
-	.quad	.LFE1995
-	.quad	.LFB1996
-	.quad	.LFE1996
-	.quad	.LFB1997
-	.quad	.LFE1997
-	.quad	.LFB2000
-	.quad	.LFE2000
-	.quad	.LFB2001
-	.quad	.LFE2001
-	.quad	.LFB2002
-	.quad	.LFE2002
-	.quad	.LFB2003
-	.quad	.LFE2003
-	.quad	.LFB2004
-	.quad	.LFE2004
-	.quad	.LFB2005
-	.quad	.LFE2005
-	.quad	.LFB2006
-	.quad	.LFE2006
-	.quad	.LFB2009
-	.quad	.LFE2009
-	.quad	.LFB2010
-	.quad	.LFE2010
-	.quad	.LFB2011
-	.quad	.LFE2011
-	.quad	.LFB2012
-	.quad	.LFE2012
+	.quad	.LFB643
+	.quad	.LFE643
+	.quad	.LFB2032
+	.quad	.LFE2032
+	.quad	.LFB2035
+	.quad	.LFE2035
+	.quad	.LFB2036
+	.quad	.LFE2036
+	.quad	.LFB2037
+	.quad	.LFE2037
 	.quad	.LFB2038
 	.quad	.LFE2038
 	.quad	.LFB2039
@@ -31647,38 +31536,218 @@ _ZTS15T100FolderLogic:
 	.quad	.LFE2040
 	.quad	.LFB2041
 	.quad	.LFE2041
-	.quad	.LFB2050
-	.quad	.LFE2050
-	.quad	.LFB2051
-	.quad	.LFE2051
-	.quad	.LFB2054
-	.quad	.LFE2054
-	.quad	.LFB2055
-	.quad	.LFE2055
-	.quad	.LFB2056
-	.quad	.LFE2056
-	.quad	.LFB2057
-	.quad	.LFE2057
-	.quad	.LFB2058
-	.quad	.LFE2058
-	.quad	.LFB2059
-	.quad	.LFE2059
-	.quad	.LFB2060
-	.quad	.LFE2060
-	.quad	.LFB2061
-	.quad	.LFE2061
-	.quad	.LFB2062
-	.quad	.LFE2062
-	.quad	.LFB2063
-	.quad	.LFE2063
-	.quad	.LFB2064
-	.quad	.LFE2064
-	.quad	.LFB2065
-	.quad	.LFE2065
-	.quad	.LFB2066
-	.quad	.LFE2066
-	.quad	.LFB2067
-	.quad	.LFE2067
+	.quad	.LFB2042
+	.quad	.LFE2042
+	.quad	.LFB2043
+	.quad	.LFE2043
+	.quad	.LFB2044
+	.quad	.LFE2044
+	.quad	.LFB2146
+	.quad	.LFE2146
+	.quad	.LFB2147
+	.quad	.LFE2147
+	.quad	.LFB2150
+	.quad	.LFE2150
+	.quad	.LFB2152
+	.quad	.LFE2152
+	.quad	.LFB2153
+	.quad	.LFE2153
+	.quad	.LFB2156
+	.quad	.LFE2156
+	.quad	.LFB2157
+	.quad	.LFE2157
+	.quad	.LFB2163
+	.quad	.LFE2163
+	.quad	.LFB2165
+	.quad	.LFE2165
+	.quad	.LFB2164
+	.quad	.LFE2164
+	.quad	.LFB2166
+	.quad	.LFE2166
+	.quad	.LFB2167
+	.quad	.LFE2167
+	.quad	.LFB2169
+	.quad	.LFE2169
+	.quad	.LFB2168
+	.quad	.LFE2168
+	.quad	.LFB2170
+	.quad	.LFE2170
+	.quad	.LFB2171
+	.quad	.LFE2171
+	.quad	.LFB2204
+	.quad	.LFE2204
+	.quad	.LFB2206
+	.quad	.LFE2206
+	.quad	.LFB2208
+	.quad	.LFE2208
+	.quad	.LFB2209
+	.quad	.LFE2209
+	.quad	.LFB2214
+	.quad	.LFE2214
+	.quad	.LFB2217
+	.quad	.LFE2217
+	.quad	.LFB2218
+	.quad	.LFE2218
+	.quad	.LFB2219
+	.quad	.LFE2219
+	.quad	.LFB2220
+	.quad	.LFE2220
+	.quad	.LFB2221
+	.quad	.LFE2221
+	.quad	.LFB2222
+	.quad	.LFE2222
+	.quad	.LFB2223
+	.quad	.LFE2223
+	.quad	.LFB2224
+	.quad	.LFE2224
+	.quad	.LFB2225
+	.quad	.LFE2225
+	.quad	.LFB2226
+	.quad	.LFE2226
+	.quad	.LFB2227
+	.quad	.LFE2227
+	.quad	.LFB2228
+	.quad	.LFE2228
+	.quad	.LFB2231
+	.quad	.LFE2231
+	.quad	.LFB2232
+	.quad	.LFE2232
+	.quad	.LFB2233
+	.quad	.LFE2233
+	.quad	.LFB2234
+	.quad	.LFE2234
+	.quad	.LFB2235
+	.quad	.LFE2235
+	.quad	.LFB2236
+	.quad	.LFE2236
+	.quad	.LFB2237
+	.quad	.LFE2237
+	.quad	.LFB2238
+	.quad	.LFE2238
+	.quad	.LFB2239
+	.quad	.LFE2239
+	.quad	.LFB2240
+	.quad	.LFE2240
+	.quad	.LFB2241
+	.quad	.LFE2241
+	.quad	.LFB2273
+	.quad	.LFE2273
+	.quad	.LFB2276
+	.quad	.LFE2276
+	.quad	.LFB2278
+	.quad	.LFE2278
+	.quad	.LFB2280
+	.quad	.LFE2280
+	.quad	.LFB2279
+	.quad	.LFE2279
+	.quad	.LFB2283
+	.quad	.LFE2283
+	.quad	.LFB2284
+	.quad	.LFE2284
+	.quad	.LFB2285
+	.quad	.LFE2285
+	.quad	.LFB2286
+	.quad	.LFE2286
+	.quad	.LFB2287
+	.quad	.LFE2287
+	.quad	.LFB2288
+	.quad	.LFE2288
+	.quad	.LFB2289
+	.quad	.LFE2289
+	.quad	.LFB2290
+	.quad	.LFE2290
+	.quad	.LFB2291
+	.quad	.LFE2291
+	.quad	.LFB2292
+	.quad	.LFE2292
+	.quad	.LFB2293
+	.quad	.LFE2293
+	.quad	.LFB2294
+	.quad	.LFE2294
+	.quad	.LFB2295
+	.quad	.LFE2295
+	.quad	.LFB2296
+	.quad	.LFE2296
+	.quad	.LFB2297
+	.quad	.LFE2297
+	.quad	.LFB2298
+	.quad	.LFE2298
+	.quad	.LFB2299
+	.quad	.LFE2299
+	.quad	.LFB2333
+	.quad	.LFE2333
+	.quad	.LFB2335
+	.quad	.LFE2335
+	.quad	.LFB2336
+	.quad	.LFE2336
+	.quad	.LFB2338
+	.quad	.LFE2338
+	.quad	.LFB2339
+	.quad	.LFE2339
+	.quad	.LFB2340
+	.quad	.LFE2340
+	.quad	.LFB2343
+	.quad	.LFE2343
+	.quad	.LFB2344
+	.quad	.LFE2344
+	.quad	.LFB2345
+	.quad	.LFE2345
+	.quad	.LFB2346
+	.quad	.LFE2346
+	.quad	.LFB2347
+	.quad	.LFE2347
+	.quad	.LFB2348
+	.quad	.LFE2348
+	.quad	.LFB2349
+	.quad	.LFE2349
+	.quad	.LFB2352
+	.quad	.LFE2352
+	.quad	.LFB2353
+	.quad	.LFE2353
+	.quad	.LFB2354
+	.quad	.LFE2354
+	.quad	.LFB2355
+	.quad	.LFE2355
+	.quad	.LFB2381
+	.quad	.LFE2381
+	.quad	.LFB2382
+	.quad	.LFE2382
+	.quad	.LFB2383
+	.quad	.LFE2383
+	.quad	.LFB2384
+	.quad	.LFE2384
+	.quad	.LFB2393
+	.quad	.LFE2393
+	.quad	.LFB2394
+	.quad	.LFE2394
+	.quad	.LFB2397
+	.quad	.LFE2397
+	.quad	.LFB2398
+	.quad	.LFE2398
+	.quad	.LFB2399
+	.quad	.LFE2399
+	.quad	.LFB2400
+	.quad	.LFE2400
+	.quad	.LFB2401
+	.quad	.LFE2401
+	.quad	.LFB2402
+	.quad	.LFE2402
+	.quad	.LFB2403
+	.quad	.LFE2403
+	.quad	.LFB2404
+	.quad	.LFE2404
+	.quad	.LFB2405
+	.quad	.LFE2405
+	.quad	.LFB2406
+	.quad	.LFE2406
+	.quad	.LFB2407
+	.quad	.LFE2407
+	.quad	.LFB2408
+	.quad	.LFE2408
+	.quad	.LFB2409
+	.quad	.LFE2409
+	.quad	.LFB2410
+	.quad	.LFE2410
 	.quad	0
 	.quad	0
 	.section	.debug_line,"dr"
@@ -31696,17 +31765,17 @@ _ZTS15T100FolderLogic:
 	.ascii "__in_chrg\0"
 .LASF52:
 	.ascii "_CharT\0"
-.LASF77:
+.LASF78:
 	.ascii "_Tp_alloc_type\0"
-.LASF91:
+.LASF92:
 	.ascii "_M_fill_insert\0"
 .LASF3:
 	.ascii "_M_local_data\0"
-.LASF69:
+.LASF70:
 	.ascii "initializer_list\0"
 .LASF4:
 	.ascii "const_pointer\0"
-.LASF57:
+.LASF58:
 	.ascii "piecewise_construct_t\0"
 .LASF105:
 	.ascii "type\0"
@@ -31718,9 +31787,9 @@ _ZTS15T100FolderLogic:
 	.ascii "operator*\0"
 .LASF56:
 	.ascii "operator()\0"
-.LASF59:
+.LASF60:
 	.ascii "nothrow_t\0"
-.LASF85:
+.LASF86:
 	.ascii "vector\0"
 .LASF118:
 	.ascii "__miter_base<T100FileInfo**>\0"
@@ -31728,7 +31797,7 @@ _ZTS15T100FolderLogic:
 	.ascii "pointer\0"
 .LASF2:
 	.ascii "size_type\0"
-.LASF67:
+.LASF68:
 	.ascii "select_on_container_copy_construction\0"
 .LASF27:
 	.ascii "empty\0"
@@ -31740,7 +31809,7 @@ _ZTS15T100FolderLogic:
 	.ascii "other\0"
 .LASF134:
 	.ascii "_S_on_swap\0"
-.LASF99:
+.LASF100:
 	.ascii "_Args\0"
 .LASF38:
 	.ascii "erase\0"
@@ -31748,13 +31817,13 @@ _ZTS15T100FolderLogic:
 	.ascii "_Value\0"
 .LASF136:
 	.ascii "_S_propagate_on_move_assign\0"
-.LASF82:
+.LASF83:
 	.ascii "_M_allocate\0"
 .LASF6:
 	.ascii "_M_get_allocator\0"
-.LASF84:
+.LASF85:
 	.ascii "_M_create_storage\0"
-.LASF75:
+.LASF76:
 	.ascii "_M_end_of_storage\0"
 .LASF39:
 	.ascii "pop_back\0"
@@ -31762,7 +31831,7 @@ _ZTS15T100FolderLogic:
 	.ascii "crend\0"
 .LASF152:
 	.ascii "this\0"
-.LASF70:
+.LASF71:
 	.ascii "destroy<T100FileInfo*>\0"
 .LASF19:
 	.ascii "crbegin\0"
@@ -31772,7 +31841,7 @@ _ZTS15T100FolderLogic:
 	.ascii "const_iterator\0"
 .LASF50:
 	.ascii "_FwdIterator\0"
-.LASF83:
+.LASF84:
 	.ascii "_M_deallocate\0"
 .LASF139:
 	.ascii "_S_nothrow_move\0"
@@ -31782,23 +31851,23 @@ _ZTS15T100FolderLogic:
 	.ascii "_S_copy_chars\0"
 .LASF44:
 	.ascii "find_first_of\0"
-.LASF72:
+.LASF73:
 	.ascii "_Vector_impl\0"
-.LASF102:
+.LASF103:
 	.ascii "difference_type\0"
-.LASF94:
+.LASF95:
 	.ascii "_M_insert_rval\0"
 .LASF37:
 	.ascii "insert\0"
-.LASF71:
+.LASF72:
 	.ascii "construct<T100FileInfo*, T100FileInfo* const&>\0"
 .LASF154:
 	.ascii "__rhs\0"
 .LASF153:
 	.ascii "__assignable\0"
-.LASF92:
+.LASF93:
 	.ascii "_M_default_append\0"
-.LASF73:
+.LASF74:
 	.ascii "_M_start\0"
 .LASF162:
 	.ascii "__elems_before\0"
@@ -31806,21 +31875,21 @@ _ZTS15T100FolderLogic:
 	.ascii "__digits10\0"
 .LASF23:
 	.ascii "shrink_to_fit\0"
-.LASF80:
+.LASF81:
 	.ascii "~_Vector_base\0"
-.LASF78:
+.LASF79:
 	.ascii "_M_get_Tp_allocator\0"
 .LASF41:
 	.ascii "data\0"
 .LASF32:
 	.ascii "back\0"
-.LASF101:
+.LASF102:
 	.ascii "construct<T100FolderInfo*, T100FolderInfo* const&>\0"
 .LASF36:
 	.ascii "assign\0"
 .LASF130:
 	.ascii "__max_digits10\0"
-.LASF97:
+.LASF98:
 	.ascii "_M_erase_at_end\0"
 .LASF143:
 	.ascii "refcount\0"
@@ -31832,11 +31901,11 @@ _ZTS15T100FolderLogic:
 	.ascii "__simple\0"
 .LASF132:
 	.ascii "__max_exponent10\0"
-.LASF62:
+.LASF63:
 	.ascii "_ForwardIterator\0"
 .LASF14:
 	.ascii "reverse_iterator\0"
-.LASF66:
+.LASF67:
 	.ascii "deallocate\0"
 .LASF142:
 	.ascii "_Container\0"
@@ -31844,7 +31913,7 @@ _ZTS15T100FolderLogic:
 	.ascii "_S_propagate_on_copy_assign\0"
 .LASF30:
 	.ascii "reference\0"
-.LASF98:
+.LASF99:
 	.ascii "_M_move_assign\0"
 .LASF147:
 	.ascii "__first\0"
@@ -31852,11 +31921,11 @@ _ZTS15T100FolderLogic:
 	.ascii "base\0"
 .LASF158:
 	.ascii "__args#0\0"
-.LASF90:
+.LASF91:
 	.ascii "_M_fill_assign\0"
 .LASF111:
 	.ascii "operator++\0"
-.LASF58:
+.LASF59:
 	.ascii "exception_ptr\0"
 .LASF161:
 	.ascii "__old_finish\0"
@@ -31874,13 +31943,13 @@ _ZTS15T100FolderLogic:
 	.ascii "T100FolderLogic\0"
 .LASF48:
 	.ascii "compare\0"
-.LASF103:
+.LASF104:
 	.ascii "_Iterator\0"
-.LASF89:
+.LASF90:
 	.ascii "_M_default_initialize\0"
 .LASF28:
 	.ascii "const_reference\0"
-.LASF96:
+.LASF97:
 	.ascii "_M_check_len\0"
 .LASF42:
 	.ascii "get_allocator\0"
@@ -31892,9 +31961,9 @@ _ZTS15T100FolderLogic:
 	.ascii "begin\0"
 .LASF16:
 	.ascii "const_reverse_iterator\0"
-.LASF76:
+.LASF77:
 	.ascii "_M_swap_data\0"
-.LASF61:
+.LASF62:
 	.ascii "~allocator\0"
 .LASF133:
 	.ascii "_S_select_on_copy\0"
@@ -31902,7 +31971,7 @@ _ZTS15T100FolderLogic:
 	.ascii "operator+\0"
 .LASF114:
 	.ascii "operator-\0"
-.LASF79:
+.LASF80:
 	.ascii "_Vector_base\0"
 .LASF17:
 	.ascii "rend\0"
@@ -31914,7 +31983,7 @@ _ZTS15T100FolderLogic:
 	.ascii "operator=\0"
 .LASF34:
 	.ascii "append\0"
-.LASF100:
+.LASF101:
 	.ascii "destroy<T100FolderInfo*>\0"
 .LASF11:
 	.ascii "basic_string\0"
@@ -31930,7 +31999,7 @@ _ZTS15T100FolderLogic:
 	.ascii "__for_range\0"
 .LASF148:
 	.ascii "__last\0"
-.LASF104:
+.LASF57:
 	.ascii "__value\0"
 .LASF164:
 	.ascii "__new_finish\0"
@@ -31948,7 +32017,7 @@ _ZTS15T100FolderLogic:
 	.ascii "iterator_type\0"
 .LASF22:
 	.ascii "resize\0"
-.LASF81:
+.LASF82:
 	.ascii "_M_impl\0"
 .LASF40:
 	.ascii "replace\0"
@@ -31956,31 +32025,31 @@ _ZTS15T100FolderLogic:
 	.ascii "operator-=\0"
 .LASF110:
 	.ascii "operator->\0"
-.LASF63:
+.LASF64:
 	.ascii "_InputIterator\0"
 .LASF168:
 	.ascii "thisPath\0"
 .LASF123:
 	.ascii "operator+<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >\0"
-.LASF68:
+.LASF69:
 	.ascii "rebind_alloc\0"
 .LASF117:
 	.ascii "_IsMove\0"
 .LASF45:
 	.ascii "find_last_of\0"
-.LASF60:
+.LASF61:
 	.ascii "allocator\0"
 .LASF124:
 	.ascii "new_allocator\0"
 .LASF43:
 	.ascii "rfind\0"
-.LASF74:
+.LASF75:
 	.ascii "_M_finish\0"
 .LASF10:
 	.ascii "_M_erase\0"
 .LASF25:
 	.ascii "reserve\0"
-.LASF65:
+.LASF66:
 	.ascii "const_void_pointer\0"
 .LASF159:
 	.ascii "__position\0"
@@ -32004,25 +32073,25 @@ _ZTS15T100FolderLogic:
 	.ascii "_S_propagate_on_swap\0"
 .LASF122:
 	.ascii "_Allocator\0"
-.LASF87:
-	.ascii "_M_range_check\0"
-.LASF95:
-	.ascii "_M_emplace_aux\0"
 .LASF88:
+	.ascii "_M_range_check\0"
+.LASF96:
+	.ascii "_M_emplace_aux\0"
+.LASF89:
 	.ascii "_M_fill_initialize\0"
 .LASF125:
 	.ascii "~new_allocator\0"
 .LASF106:
 	.ascii "move_iterator\0"
-.LASF86:
+.LASF87:
 	.ascii "~vector\0"
 .LASF54:
 	.ascii "_Alloc\0"
 .LASF55:
 	.ascii "value_type\0"
-.LASF93:
+.LASF94:
 	.ascii "_M_shrink_to_fit\0"
-.LASF64:
+.LASF65:
 	.ascii "allocate\0"
 	.ident	"GCC: (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0"
 	.def	_ZdlPvy;	.scl	2;	.type	32;	.endef

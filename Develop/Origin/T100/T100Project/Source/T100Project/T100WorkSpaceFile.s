@@ -211,8 +211,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.84792
-	movq	%rax, %rcx	 # D.84792,
+	movq	%rbx, %rax	 # tmp99, D.90631
+	movq	%rax, %rcx	 # D.90631,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -668,7 +668,7 @@ _ZN13wxXmlDocument15SetDocumentNodeEP9wxXmlNode:
 	.def	_ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
-.LFB4732:
+.LFB5015:
 	.file 4 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/store/T100WorkSpaceFile.cpp"
 	.loc 4 6 1
 	.cfi_startproc
@@ -720,8 +720,8 @@ _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN7T100XMLD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.84795
-	movq	%rax, %rcx	 # D.84795,
+	movq	%rbx, %rax	 # tmp97, D.90634
+	movq	%rax, %rcx	 # D.90634,
 .LEHB4:
 	call	_Unwind_Resume	 #
 	nop	
@@ -738,28 +738,28 @@ _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE4732:
+.LFE5015:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA4732:
+.LLSDA5015:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4732-.LLSDACSB4732
-.LLSDACSB4732:
-	.uleb128 .LEHB2-.LFB4732
+	.uleb128 .LLSDACSE5015-.LLSDACSB5015
+.LLSDACSB5015:
+	.uleb128 .LEHB2-.LFB5015
 	.uleb128 .LEHE2-.LEHB2
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB3-.LFB4732
+	.uleb128 .LEHB3-.LFB5015
 	.uleb128 .LEHE3-.LEHB3
-	.uleb128 .L28-.LFB4732
+	.uleb128 .L28-.LFB5015
 	.uleb128 0
-	.uleb128 .LEHB4-.LFB4732
+	.uleb128 .LEHB4-.LFB5015
 	.uleb128 .LEHE4-.LEHB4
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE4732:
+.LLSDACSE5015:
 	.text
 	.seh_endproc
 	.globl	_ZN17T100WorkSpaceFileC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
@@ -770,7 +770,7 @@ _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.def	_ZN17T100WorkSpaceFileD2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN17T100WorkSpaceFileD2Ev
 _ZN17T100WorkSpaceFileD2Ev:
-.LFB4735:
+.LFB5018:
 	.loc 4 13 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -807,7 +807,7 @@ _ZN17T100WorkSpaceFileD2Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE4735:
+.LFE5018:
 	.seh_endproc
 	.globl	_ZN17T100WorkSpaceFileD1Ev
 	.def	_ZN17T100WorkSpaceFileD1Ev;	.scl	2;	.type	32;	.endef
@@ -817,7 +817,7 @@ _ZN17T100WorkSpaceFileD2Ev:
 	.def	_ZN17T100WorkSpaceFileD0Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN17T100WorkSpaceFileD0Ev
 _ZN17T100WorkSpaceFileD0Ev:
-.LFB4737:
+.LFB5020:
 	.loc 4 13 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -845,14 +845,14 @@ _ZN17T100WorkSpaceFileD0Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE4737:
+.LFE5020:
 	.seh_endproc
 	.align 2
 	.globl	_ZN17T100WorkSpaceFile8IsExistsEv
 	.def	_ZN17T100WorkSpaceFile8IsExistsEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN17T100WorkSpaceFile8IsExistsEv
 _ZN17T100WorkSpaceFile8IsExistsEv:
-.LFB4738:
+.LFB5021:
 	.loc 4 19 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -899,7 +899,7 @@ _ZN17T100WorkSpaceFile8IsExistsEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE4738:
+.LFE5021:
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 2
@@ -921,7 +921,7 @@ _ZN17T100WorkSpaceFile8IsExistsEv:
 	.def	_ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo
 _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
-.LFB4739:
+.LFB5022:
 	.loc 4 34 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1263,8 +1263,8 @@ _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 	leaq	-96(%rbp), %rax	 #, tmp167
 	movq	%rax, %rcx	 # tmp167,
 	call	_ZN13wxXmlDocumentD1Ev	 #
-	movq	%rbx, %rax	 # tmp147, D.84797
-	movq	%rax, %rcx	 # D.84797,
+	movq	%rbx, %rax	 # tmp147, D.90636
+	movq	%rax, %rcx	 # D.90636,
 .LEHB17:
 	call	_Unwind_Resume	 #
 .LEHE17:
@@ -1279,68 +1279,68 @@ _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 	.cfi_def_cfa 7, -568
 	ret	
 	.cfi_endproc
-.LFE4739:
+.LFE5022:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA4739:
+.LLSDA5022:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4739-.LLSDACSB4739
-.LLSDACSB4739:
-	.uleb128 .LEHB5-.LFB4739
+	.uleb128 .LLSDACSE5022-.LLSDACSB5022
+.LLSDACSB5022:
+	.uleb128 .LEHB5-.LFB5022
 	.uleb128 .LEHE5-.LEHB5
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB6-.LFB4739
+	.uleb128 .LEHB6-.LFB5022
 	.uleb128 .LEHE6-.LEHB6
-	.uleb128 .L53-.LFB4739
+	.uleb128 .L53-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB7-.LFB4739
+	.uleb128 .LEHB7-.LFB5022
 	.uleb128 .LEHE7-.LEHB7
-	.uleb128 .L54-.LFB4739
+	.uleb128 .L54-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB8-.LFB4739
+	.uleb128 .LEHB8-.LFB5022
 	.uleb128 .LEHE8-.LEHB8
-	.uleb128 .L55-.LFB4739
+	.uleb128 .L55-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB9-.LFB4739
+	.uleb128 .LEHB9-.LFB5022
 	.uleb128 .LEHE9-.LEHB9
-	.uleb128 .L53-.LFB4739
+	.uleb128 .L53-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB10-.LFB4739
+	.uleb128 .LEHB10-.LFB5022
 	.uleb128 .LEHE10-.LEHB10
-	.uleb128 .L56-.LFB4739
+	.uleb128 .L56-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB11-.LFB4739
+	.uleb128 .LEHB11-.LFB5022
 	.uleb128 .LEHE11-.LEHB11
-	.uleb128 .L57-.LFB4739
+	.uleb128 .L57-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB12-.LFB4739
+	.uleb128 .LEHB12-.LFB5022
 	.uleb128 .LEHE12-.LEHB12
-	.uleb128 .L58-.LFB4739
+	.uleb128 .L58-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB13-.LFB4739
+	.uleb128 .LEHB13-.LFB5022
 	.uleb128 .LEHE13-.LEHB13
-	.uleb128 .L53-.LFB4739
+	.uleb128 .L53-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB14-.LFB4739
+	.uleb128 .LEHB14-.LFB5022
 	.uleb128 .LEHE14-.LEHB14
-	.uleb128 .L59-.LFB4739
+	.uleb128 .L59-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB15-.LFB4739
+	.uleb128 .LEHB15-.LFB5022
 	.uleb128 .LEHE15-.LEHB15
-	.uleb128 .L60-.LFB4739
+	.uleb128 .L60-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB16-.LFB4739
+	.uleb128 .LEHB16-.LFB5022
 	.uleb128 .LEHE16-.LEHB16
-	.uleb128 .L61-.LFB4739
+	.uleb128 .L61-.LFB5022
 	.uleb128 0
-	.uleb128 .LEHB17-.LFB4739
+	.uleb128 .LEHB17-.LFB5022
 	.uleb128 .LEHE17-.LEHB17
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE4739:
+.LLSDACSE5022:
 	.text
 	.seh_endproc
 	.section .rdata,"dr"
@@ -1356,7 +1356,7 @@ _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 	.def	_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo
 _ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo:
-.LFB4740:
+.LFB5023:
 	.loc 4 66 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -1866,8 +1866,8 @@ _ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo:
 	leaq	-64(%rbp), %rax	 #, tmp217
 	movq	%rax, %rcx	 # tmp217,
 	call	_ZN13wxXmlDocumentD1Ev	 #
-	movq	%rbx, %rax	 # tmp176, D.84805
-	movq	%rax, %rcx	 # D.84805,
+	movq	%rbx, %rax	 # tmp176, D.90644
+	movq	%rax, %rcx	 # D.90644,
 .LEHB43:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1887,120 +1887,120 @@ _ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo:
 	.cfi_def_cfa 7, -824
 	ret	
 	.cfi_endproc
-.LFE4740:
+.LFE5023:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA4740:
+.LLSDA5023:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE4740-.LLSDACSB4740
-.LLSDACSB4740:
-	.uleb128 .LEHB18-.LFB4740
+	.uleb128 .LLSDACSE5023-.LLSDACSB5023
+.LLSDACSB5023:
+	.uleb128 .LEHB18-.LFB5023
 	.uleb128 .LEHE18-.LEHB18
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB19-.LFB4740
+	.uleb128 .LEHB19-.LFB5023
 	.uleb128 .LEHE19-.LEHB19
-	.uleb128 .L82-.LFB4740
+	.uleb128 .L82-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB20-.LFB4740
+	.uleb128 .LEHB20-.LFB5023
 	.uleb128 .LEHE20-.LEHB20
-	.uleb128 .L83-.LFB4740
+	.uleb128 .L83-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB21-.LFB4740
+	.uleb128 .LEHB21-.LFB5023
 	.uleb128 .LEHE21-.LEHB21
-	.uleb128 .L84-.LFB4740
+	.uleb128 .L84-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB22-.LFB4740
+	.uleb128 .LEHB22-.LFB5023
 	.uleb128 .LEHE22-.LEHB22
-	.uleb128 .L85-.LFB4740
+	.uleb128 .L85-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB23-.LFB4740
+	.uleb128 .LEHB23-.LFB5023
 	.uleb128 .LEHE23-.LEHB23
-	.uleb128 .L82-.LFB4740
+	.uleb128 .L82-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB24-.LFB4740
+	.uleb128 .LEHB24-.LFB5023
 	.uleb128 .LEHE24-.LEHB24
-	.uleb128 .L86-.LFB4740
+	.uleb128 .L86-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB25-.LFB4740
+	.uleb128 .LEHB25-.LFB5023
 	.uleb128 .LEHE25-.LEHB25
-	.uleb128 .L87-.LFB4740
+	.uleb128 .L87-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB26-.LFB4740
+	.uleb128 .LEHB26-.LFB5023
 	.uleb128 .LEHE26-.LEHB26
-	.uleb128 .L88-.LFB4740
+	.uleb128 .L88-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB27-.LFB4740
+	.uleb128 .LEHB27-.LFB5023
 	.uleb128 .LEHE27-.LEHB27
-	.uleb128 .L82-.LFB4740
+	.uleb128 .L82-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB28-.LFB4740
+	.uleb128 .LEHB28-.LFB5023
 	.uleb128 .LEHE28-.LEHB28
-	.uleb128 .L89-.LFB4740
+	.uleb128 .L89-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB29-.LFB4740
+	.uleb128 .LEHB29-.LFB5023
 	.uleb128 .LEHE29-.LEHB29
-	.uleb128 .L90-.LFB4740
+	.uleb128 .L90-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB30-.LFB4740
+	.uleb128 .LEHB30-.LFB5023
 	.uleb128 .LEHE30-.LEHB30
-	.uleb128 .L91-.LFB4740
+	.uleb128 .L91-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB31-.LFB4740
+	.uleb128 .LEHB31-.LFB5023
 	.uleb128 .LEHE31-.LEHB31
-	.uleb128 .L82-.LFB4740
+	.uleb128 .L82-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB32-.LFB4740
+	.uleb128 .LEHB32-.LFB5023
 	.uleb128 .LEHE32-.LEHB32
-	.uleb128 .L92-.LFB4740
+	.uleb128 .L92-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB33-.LFB4740
+	.uleb128 .LEHB33-.LFB5023
 	.uleb128 .LEHE33-.LEHB33
-	.uleb128 .L93-.LFB4740
+	.uleb128 .L93-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB34-.LFB4740
+	.uleb128 .LEHB34-.LFB5023
 	.uleb128 .LEHE34-.LEHB34
-	.uleb128 .L82-.LFB4740
+	.uleb128 .L82-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB35-.LFB4740
+	.uleb128 .LEHB35-.LFB5023
 	.uleb128 .LEHE35-.LEHB35
-	.uleb128 .L94-.LFB4740
+	.uleb128 .L94-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB36-.LFB4740
+	.uleb128 .LEHB36-.LFB5023
 	.uleb128 .LEHE36-.LEHB36
-	.uleb128 .L95-.LFB4740
+	.uleb128 .L95-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB37-.LFB4740
+	.uleb128 .LEHB37-.LFB5023
 	.uleb128 .LEHE37-.LEHB37
-	.uleb128 .L96-.LFB4740
+	.uleb128 .L96-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB38-.LFB4740
+	.uleb128 .LEHB38-.LFB5023
 	.uleb128 .LEHE38-.LEHB38
-	.uleb128 .L82-.LFB4740
+	.uleb128 .L82-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB39-.LFB4740
+	.uleb128 .LEHB39-.LFB5023
 	.uleb128 .LEHE39-.LEHB39
-	.uleb128 .L97-.LFB4740
+	.uleb128 .L97-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB40-.LFB4740
+	.uleb128 .LEHB40-.LFB5023
 	.uleb128 .LEHE40-.LEHB40
-	.uleb128 .L98-.LFB4740
+	.uleb128 .L98-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB41-.LFB4740
+	.uleb128 .LEHB41-.LFB5023
 	.uleb128 .LEHE41-.LEHB41
-	.uleb128 .L82-.LFB4740
+	.uleb128 .L82-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB42-.LFB4740
+	.uleb128 .LEHB42-.LFB5023
 	.uleb128 .LEHE42-.LEHB42
-	.uleb128 .L99-.LFB4740
+	.uleb128 .L99-.LFB5023
 	.uleb128 0
-	.uleb128 .LEHB43-.LFB4740
+	.uleb128 .LEHB43-.LFB5023
 	.uleb128 .LEHE43-.LEHB43
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE4740:
+.LLSDACSE5023:
 	.text
 	.seh_endproc
 	.section	.text$_ZN8wxString15ConvertedBufferIcED1Ev,"x"
@@ -2010,7 +2010,7 @@ _ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo:
 	.def	_ZN8wxString15ConvertedBufferIcED1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN8wxString15ConvertedBufferIcED1Ev
 _ZN8wxString15ConvertedBufferIcED1Ev:
-.LFB5084:
+.LFB5367:
 	.loc 1 3489 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2043,7 +2043,7 @@ _ZN8wxString15ConvertedBufferIcED1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE5084:
+.LFE5367:
 	.seh_endproc
 	.section	.text$_ZN8wxString15ConvertedBufferIcEC1Ev,"x"
 	.linkonce discard
@@ -2052,7 +2052,7 @@ _ZN8wxString15ConvertedBufferIcED1Ev:
 	.def	_ZN8wxString15ConvertedBufferIcEC1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN8wxString15ConvertedBufferIcEC1Ev
 _ZN8wxString15ConvertedBufferIcEC1Ev:
-.LFB5090:
+.LFB5373:
 	.loc 1 3488 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2078,7 +2078,7 @@ _ZN8wxString15ConvertedBufferIcEC1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE5090:
+.LFE5373:
 	.seh_endproc
 	.section	.text$_Z8wxDELETEI9wxXmlNodeEvRPT_,"x"
 	.linkonce discard
@@ -2086,7 +2086,7 @@ _ZN8wxString15ConvertedBufferIcEC1Ev:
 	.def	_Z8wxDELETEI9wxXmlNodeEvRPT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_Z8wxDELETEI9wxXmlNodeEvRPT_
 _Z8wxDELETEI9wxXmlNodeEvRPT_:
-.LFB5262:
+.LFB5545:
 	.file 5 "C:/zoo/lib/wxWidgets-3.0.5/include/wx/defs.h"
 	.loc 5 749 17
 	.cfi_startproc
@@ -2142,7 +2142,7 @@ _Z8wxDELETEI9wxXmlNodeEvRPT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE5262:
+.LFE5545:
 	.seh_endproc
 	.globl	_ZTV17T100WorkSpaceFile
 	.section	.rdata$_ZTV17T100WorkSpaceFile,"dr"
@@ -31476,8 +31476,8 @@ _ZTS7T100XML:
 	.word	0x2ed
 	.byte	0x11
 	.ascii "_Z8wxDELETEI9wxXmlNodeEvRPT_\0"
-	.quad	.LFB5262
-	.quad	.LFE5262-.LFB5262
+	.quad	.LFB5545
+	.quad	.LFE5545-.LFB5545
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x20caf
@@ -31615,8 +31615,8 @@ _ZTS7T100XML:
 	.long	0x20e8a
 	.ascii "_ZN8wxString15ConvertedBufferIcEC1Ev\0"
 	.long	0x20ee7
-	.quad	.LFB5090
-	.quad	.LFE5090-.LFB5090
+	.quad	.LFB5373
+	.quad	.LFE5373-.LFB5373
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x20ef0
@@ -31642,8 +31642,8 @@ _ZTS7T100XML:
 	.long	0x20ef0
 	.ascii "_ZN8wxString15ConvertedBufferIcED1Ev\0"
 	.long	0x20f55
-	.quad	.LFB5084
-	.quad	.LFE5084-.LFB5084
+	.quad	.LFB5367
+	.quad	.LFE5367-.LFB5367
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x20f5e
@@ -31736,8 +31736,8 @@ _ZTS7T100XML:
 	.uleb128 0x4e
 	.long	0x2043f
 	.long	0x210e4
-	.quad	.LFB4740
-	.quad	.LFE4740-.LFB4740
+	.quad	.LFB5023
+	.quad	.LFE5023-.LFB5023
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x21155
@@ -31838,8 +31838,8 @@ _ZTS7T100XML:
 	.uleb128 0x4e
 	.long	0x203ed
 	.long	0x21221
-	.quad	.LFB4739
-	.quad	.LFE4739-.LFB4739
+	.quad	.LFB5022
+	.quad	.LFE5022-.LFB5022
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x2128e
@@ -31904,8 +31904,8 @@ _ZTS7T100XML:
 	.uleb128 0x4e
 	.long	0x203ab
 	.long	0x212ad
-	.quad	.LFB4738
-	.quad	.LFE4738-.LFB4738
+	.quad	.LFB5021
+	.quad	.LFE5021-.LFB5021
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x212da
@@ -31944,8 +31944,8 @@ _ZTS7T100XML:
 	.long	0x212da
 	.ascii "_ZN17T100WorkSpaceFileD0Ev\0"
 	.long	0x21335
-	.quad	.LFB4737
-	.quad	.LFE4737-.LFB4737
+	.quad	.LFB5020
+	.quad	.LFE5020-.LFB5020
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x2133e
@@ -31959,8 +31959,8 @@ _ZTS7T100XML:
 	.long	0x212da
 	.ascii "_ZN17T100WorkSpaceFileD2Ev\0"
 	.long	0x21378
-	.quad	.LFB4735
-	.quad	.LFE4735-.LFB4735
+	.quad	.LFB5018
+	.quad	.LFE5018-.LFB5018
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x21381
@@ -31989,8 +31989,8 @@ _ZTS7T100XML:
 	.long	0x21381
 	.ascii "_ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
 	.long	0x21419
-	.quad	.LFB4732
-	.quad	.LFE4732-.LFB4732
+	.quad	.LFB5015
+	.quad	.LFE5015-.LFB5015
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x2142a
@@ -35483,12 +35483,12 @@ _ZTS7T100XML:
 	.quad	.LFE4377-.LFB4377
 	.quad	.LFB4384
 	.quad	.LFE4384-.LFB4384
-	.quad	.LFB5084
-	.quad	.LFE5084-.LFB5084
-	.quad	.LFB5090
-	.quad	.LFE5090-.LFB5090
-	.quad	.LFB5262
-	.quad	.LFE5262-.LFB5262
+	.quad	.LFB5367
+	.quad	.LFE5367-.LFB5367
+	.quad	.LFB5373
+	.quad	.LFE5373-.LFB5373
+	.quad	.LFB5545
+	.quad	.LFE5545-.LFB5545
 	.quad	0
 	.quad	0
 	.section	.debug_ranges,"dr"
@@ -35533,12 +35533,12 @@ _ZTS7T100XML:
 	.quad	.LFE4377
 	.quad	.LFB4384
 	.quad	.LFE4384
-	.quad	.LFB5084
-	.quad	.LFE5084
-	.quad	.LFB5090
-	.quad	.LFE5090
-	.quad	.LFB5262
-	.quad	.LFE5262
+	.quad	.LFB5367
+	.quad	.LFE5367
+	.quad	.LFB5373
+	.quad	.LFE5373
+	.quad	.LFB5545
+	.quad	.LFE5545
 	.quad	0
 	.quad	0
 	.section	.debug_line,"dr"
@@ -35546,8 +35546,6 @@ _ZTS7T100XML:
 	.section	.debug_str,"dr"
 .LASF116:
 	.ascii "shrink_to_fit\0"
-.LASF165:
-	.ascii "_S_propagate_on_swap\0"
 .LASF56:
 	.ascii "First\0"
 .LASF65:
@@ -35556,6 +35554,8 @@ _ZTS7T100XML:
 	.ascii "wxWritableCharTypeBuffer\0"
 .LASF87:
 	.ascii "_M_dataplus\0"
+.LASF26:
+	.ascii "SubstrBufFromType\0"
 .LASF201:
 	.ascii "__end\0"
 .LASF114:
@@ -35574,8 +35574,6 @@ _ZTS7T100XML:
 	.ascii "operator&&\0"
 .LASF28:
 	.ascii "GetIterForNthChar\0"
-.LASF136:
-	.ascii "int_type\0"
 .LASF27:
 	.ascii "ImplStr\0"
 .LASF89:
@@ -35596,6 +35594,8 @@ _ZTS7T100XML:
 	.ascii "_M_string_length\0"
 .LASF187:
 	.ascii "operator long int\0"
+.LASF198:
+	.ascii "__first\0"
 .LASF204:
 	.ascii "document\0"
 .LASF113:
@@ -35620,6 +35620,8 @@ _ZTS7T100XML:
 	.ascii "MakeOwnedCopyOf\0"
 .LASF31:
 	.ascii "reverse_iterator_impl\0"
+.LASF184:
+	.ascii "operator short unsigned int\0"
 .LASF68:
 	.ascii "find_last_not_of\0"
 .LASF110:
@@ -35638,38 +35640,34 @@ _ZTS7T100XML:
 	.ascii "allocator_type\0"
 .LASF86:
 	.ascii "_M_allocated_capacity\0"
+.LASF157:
+	.ascii "address\0"
 .LASF188:
 	.ascii "operator long unsigned int\0"
-.LASF60:
-	.ascii "insert\0"
 .LASF50:
 	.ascii "From8BitData\0"
 .LASF103:
 	.ascii "_M_get_allocator\0"
 .LASF200:
 	.ascii "__beg\0"
+.LASF61:
+	.ascii "erase\0"
 .LASF131:
 	.ascii "_InIterator\0"
 .LASF119:
 	.ascii "push_back\0"
-.LASF99:
-	.ascii "_M_construct_aux_2\0"
+.LASF71:
+	.ascii "wxScopedCharTypeBuffer\0"
 .LASF138:
 	.ascii "eq_int_type\0"
 .LASF152:
 	.ascii "_RandomAccessIterator\0"
-.LASF91:
-	.ascii "_M_local_data\0"
-.LASF52:
-	.ascii "Append\0"
-.LASF55:
-	.ascii "Find\0"
+.LASF137:
+	.ascii "to_int_type\0"
 .LASF129:
 	.ascii "_FwdIterator\0"
 .LASF151:
 	.ascii "_Iterator\0"
-.LASF17:
-	.ascii "m_cur\0"
 .LASF121:
 	.ascii "pop_back\0"
 .LASF199:
@@ -35678,6 +35676,8 @@ _ZTS7T100XML:
 	.ascii "_M_construct<wchar_t const*>\0"
 .LASF206:
 	.ascii "_waccess\0"
+.LASF85:
+	.ascii "_M_local_buf\0"
 .LASF140:
 	.ascii "nothrow_t\0"
 .LASF155:
@@ -35688,6 +35688,10 @@ _ZTS7T100XML:
 	.ascii "operator wchar_t const*\0"
 .LASF197:
 	.ascii "T100WorkSpaceFile\0"
+.LASF99:
+	.ascii "_M_construct_aux_2\0"
+.LASF49:
+	.ascii "FromAscii\0"
 .LASF179:
 	.ascii "GetValue\0"
 .LASF182:
@@ -35708,12 +35712,12 @@ _ZTS7T100XML:
 	.ascii "deallocate\0"
 .LASF5:
 	.ascii "operator+=\0"
+.LASF74:
+	.ascii "CreateOwned\0"
 .LASF41:
 	.ascii "reserve\0"
 .LASF0:
 	.ascii "ptrdiff_t\0"
-.LASF21:
-	.ascii "const_iterator\0"
 .LASF180:
 	.ascii "GetAsChar\0"
 .LASF25:
@@ -35730,18 +35734,22 @@ _ZTS7T100XML:
 	.ascii "rbegin\0"
 .LASF205:
 	.ascii "compiler\0"
+.LASF149:
+	.ascii "initializer_list\0"
 .LASF94:
 	.ascii "_M_set_length\0"
+.LASF167:
+	.ascii "_S_nothrow_move\0"
 .LASF162:
 	.ascii "_S_on_swap\0"
 .LASF195:
 	.ascii "wxFormatString\0"
 .LASF178:
 	.ascii "wxUniChar\0"
-.LASF92:
-	.ascii "const_pointer\0"
-.LASF203:
-	.ascii "__in_chrg\0"
+.LASF139:
+	.ascii "exception_ptr\0"
+.LASF125:
+	.ascii "get_allocator\0"
 .LASF8:
 	.ascii "difference_type\0"
 .LASF117:
@@ -35750,10 +35758,12 @@ _ZTS7T100XML:
 	.ascii "_Char_alloc_type\0"
 .LASF90:
 	.ascii "_M_length\0"
-.LASF62:
-	.ascii "replace\0"
-.LASF167:
-	.ascii "_S_nothrow_move\0"
+.LASF51:
+	.ascii "operator<<\0"
+.LASF4:
+	.ascii "operator--\0"
+.LASF194:
+	.ascii "wxUniCharRef\0"
 .LASF78:
 	.ascii "GetNullData\0"
 .LASF190:
@@ -35780,8 +35790,6 @@ _ZTS7T100XML:
 	.ascii "operator-\0"
 .LASF150:
 	.ascii "iterator_category\0"
-.LASF194:
-	.ascii "wxUniCharRef\0"
 .LASF12:
 	.ascii "operator<\0"
 .LASF23:
@@ -35792,12 +35800,12 @@ _ZTS7T100XML:
 	.ascii "_M_replace_aux\0"
 .LASF59:
 	.ascii "compare\0"
-.LASF2:
-	.ascii "operator[]\0"
+.LASF83:
+	.ascii "_Alloc_hider\0"
+.LASF10:
+	.ascii "operator==\0"
 .LASF14:
 	.ascii "operator<=\0"
-.LASF125:
-	.ascii "get_allocator\0"
 .LASF191:
 	.ascii "operator wchar_t\0"
 .LASF158:
@@ -35808,40 +35816,34 @@ _ZTS7T100XML:
 	.ascii "_S_copy_chars\0"
 .LASF160:
 	.ascii "_Value\0"
+.LASF165:
+	.ascii "_S_propagate_on_swap\0"
 .LASF36:
 	.ascii "rend\0"
 .LASF170:
 	.ascii "operator->\0"
 .LASF104:
 	.ascii "_M_check\0"
-.LASF83:
-	.ascii "_Alloc_hider\0"
 .LASF38:
 	.ascii "size_type\0"
 .LASF106:
 	.ascii "_M_limit\0"
-.LASF166:
-	.ascii "_S_always_equal\0"
 .LASF202:
 	.ascii "this\0"
 .LASF79:
 	.ascii "wxCharTypeBuffer\0"
-.LASF61:
-	.ascii "erase\0"
-.LASF4:
-	.ascii "operator--\0"
-.LASF51:
-	.ascii "operator<<\0"
+.LASF166:
+	.ascii "_S_always_equal\0"
+.LASF62:
+	.ascii "replace\0"
 .LASF15:
 	.ascii "operator>=\0"
 .LASF181:
 	.ascii "operator char\0"
+.LASF21:
+	.ascii "const_iterator\0"
 .LASF32:
 	.ascii "iterator_type\0"
-.LASF26:
-	.ascii "SubstrBufFromType\0"
-.LASF66:
-	.ascii "find_last_of\0"
 .LASF69:
 	.ascii "AsCharBuf\0"
 .LASF46:
@@ -35858,52 +35860,50 @@ _ZTS7T100XML:
 	.ascii "__max_exponent10\0"
 .LASF135:
 	.ascii "to_char_type\0"
-.LASF100:
-	.ascii "_M_construct\0"
+.LASF2:
+	.ascii "operator[]\0"
+.LASF60:
+	.ascii "insert\0"
 .LASF70:
 	.ascii "UntypedBufferData\0"
 .LASF84:
 	.ascii "pointer\0"
 .LASF73:
 	.ascii "CharType\0"
-.LASF184:
-	.ascii "operator short unsigned int\0"
 .LASF11:
 	.ascii "operator!=\0"
 .LASF111:
 	.ascii "_M_assign\0"
 .LASF175:
 	.ascii "_Type\0"
-.LASF137:
-	.ascii "to_int_type\0"
-.LASF139:
-	.ascii "exception_ptr\0"
+.LASF203:
+	.ascii "__in_chrg\0"
 .LASF192:
 	.ascii "operator bool\0"
 .LASF98:
 	.ascii "_M_destroy\0"
+.LASF91:
+	.ascii "_M_local_data\0"
 .LASF39:
 	.ascii "max_size\0"
-.LASF157:
-	.ascii "address\0"
-.LASF85:
-	.ascii "_M_local_buf\0"
 .LASF30:
 	.ascii "const_reverse_iterator\0"
+.LASF100:
+	.ascii "_M_construct\0"
 .LASF186:
 	.ascii "operator unsigned int\0"
 .LASF163:
 	.ascii "_S_propagate_on_copy_assign\0"
+.LASF17:
+	.ascii "m_cur\0"
 .LASF45:
 	.ascii "IsAscii\0"
 .LASF72:
 	.ascii "CreateNonOwned\0"
-.LASF198:
-	.ascii "__first\0"
-.LASF74:
-	.ascii "CreateOwned\0"
-.LASF71:
-	.ascii "wxScopedCharTypeBuffer\0"
+.LASF52:
+	.ascii "Append\0"
+.LASF136:
+	.ascii "int_type\0"
 .LASF142:
 	.ascii "~allocator\0"
 .LASF97:
@@ -35924,12 +35924,14 @@ _ZTS7T100XML:
 	.ascii "_S_assign\0"
 .LASF132:
 	.ascii "value_type\0"
+.LASF66:
+	.ascii "find_last_of\0"
 .LASF153:
 	.ascii "_InputIterator\0"
 .LASF53:
 	.ascii "IsSameAs\0"
-.LASF149:
-	.ascii "initializer_list\0"
+.LASF55:
+	.ascii "Find\0"
 .LASF29:
 	.ascii "begin\0"
 .LASF64:
@@ -35940,20 +35942,18 @@ _ZTS7T100XML:
 	.ascii "__normal_iterator\0"
 .LASF35:
 	.ascii "reverse_iterator\0"
-.LASF49:
-	.ascii "FromAscii\0"
 .LASF171:
 	.ascii "_Container\0"
 .LASF177:
 	.ascii "vswprintf\0"
 .LASF196:
 	.ascii "wxListKey\0"
-.LASF10:
-	.ascii "operator==\0"
 .LASF105:
 	.ascii "_M_check_length\0"
 .LASF147:
 	.ascii "rebind_alloc\0"
+.LASF92:
+	.ascii "const_pointer\0"
 .LASF67:
 	.ascii "find_first_not_of\0"
 .LASF76:

@@ -10,7 +10,8 @@ T100FolderData::T100FolderData() :
 }
 
 T100FolderData::T100FolderData(T100FolderInfo* info) :
-    T100TreeItemData()
+    T100TreeItemData(),
+    m_info(info)
 {
     //ctor
 }
@@ -20,24 +21,14 @@ T100FolderData::~T100FolderData()
     //dtor
 }
 
-T100VOID T100FolderData::SetLabel(const T100WSTRING& label)
+T100VOID T100FolderData::SetFolderInfo(T100FolderInfo* info)
 {
-    m_label     = label;
+    m_info      = info;
 }
 
-const T100WSTRING& T100FolderData::GetLabel()
+T100FolderInfo* T100FolderData::GetFolderInfo()
 {
-    return m_label;
-}
-
-T100VOID T100FolderData::SetPath(const T100WSTRING& path)
-{
-    m_path      = path;
-}
-
-const T100WSTRING& T100FolderData::GetPath()
-{
-    return m_path;
+    return m_info;
 }
 
 wxMenu* T100FolderData::ShowMenu()

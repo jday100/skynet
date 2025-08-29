@@ -11,11 +11,8 @@ class T100FolderData : public T100TreeItemData
         T100FolderData(T100FolderInfo*);
         virtual ~T100FolderData();
 
-        T100VOID                    SetLabel(const T100WSTRING&);
-        const T100WSTRING&          GetLabel();
-
-        T100VOID                    SetPath(const T100WSTRING&);
-        const T100WSTRING&          GetPath();
+        T100VOID                    SetFolderInfo(T100FolderInfo*);
+        T100FolderInfo*             GetFolderInfo();
 
         virtual wxMenu*             ShowMenu();
 
@@ -26,8 +23,7 @@ class T100FolderData : public T100TreeItemData
         virtual T100VOID            OnItemExpanding();
 
     protected:
-        T100WSTRING                 m_label;
-        T100WSTRING                 m_path;
+        T100FolderInfo*             m_info      = T100NULL;
 
     private:
 };

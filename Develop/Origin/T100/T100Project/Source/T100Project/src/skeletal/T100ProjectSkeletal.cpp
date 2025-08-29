@@ -314,17 +314,17 @@ T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
 {
     T100FileLogic&      logic       = m_serve->GetProjectServe()->GetFileLogic();
 
-    if(!logic.IsExists(data->GetPath())){
+    if(!logic.IsExists(data->GetFileInfo()->GetPath())){
         return T100FALSE;
     }
 
     T100FileInfo*       info        = T100NEW T100FileInfo();
 
-    if(!logic.Open(data->GetPath(), info)){
+    if(!logic.Open(data->GetFileInfo()->GetPath(), info)){
         return T100FALSE;
     }
 
-    info->SetFileName(data->GetLabel());
+    info->SetFileName(data->GetFileInfo()->GetLabel());
 
     m_view->FileOpen(data->GetId(), info);
 }
@@ -333,13 +333,13 @@ T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
 {
     T100FolderLogic&    logic       = m_serve->GetProjectServe()->GetFolderLogic();
 
-    if(!logic.IsExists(data->GetPath())){
+    if(!logic.IsExists(data->GetFolderInfo()->GetPath())){
         return T100FALSE;
     }
 
     T100FolderInfo*     info        = T100NEW T100FolderInfo();
 
-    if(!logic.Open(data->GetPath(), info)){
+    if(!logic.Open(data->GetFolderInfo()->GetPath(), info)){
         T100SAFE_DELETE(info);
         return T100FALSE;
     }
