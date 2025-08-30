@@ -1,6 +1,7 @@
 #include "T100ModuleCreateDialog.h"
 
-const long T100ModuleCreateDialog::ID_      = wxNewId();
+const long T100ModuleCreateDialog::ID_MODULE_NAME_STATIC_TEXT      = wxNewId();
+const long T100ModuleCreateDialog::ID_MODULE_NAME_TEXT_CTRL     = wxNewId();
 
 BEGIN_EVENT_TABLE(T100ModuleCreateDialog, wxDialog)
 
@@ -30,15 +31,15 @@ T100VOID T100ModuleCreateDialog::init()
 {
     wxBoxSizer*         sizer       = T100NEW wxBoxSizer(wxVERTICAL);
 
-    wxStaticBoxSizer*   gcc         = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("GCC:"));
+    wxStaticBoxSizer*   module      = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Module:"));
 
-    m_compilerPathStaticText        = T100NEW wxStaticText(this, ID_COMPILER_PATH_STATIC_TEXT, _("Compiler's directory:"));
-    m_compilerPathFolderPicker      = T100NEW wxDirPickerCtrl(this, ID_COMPILER_PATH_FOLDER_PICKER);
+    m_nameTitle     = T100NEW wxStaticText(this, ID_MODULE_NAME_STATIC_TEXT, _("Name:"));
+    m_nameValue     = T100NEW wxTextCtrl(this, ID_MODULE_NAME_TEXT_CTRL);
 
-    gcc->Add(m_compilerPathStaticText, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-    gcc->Add(m_compilerPathFolderPicker, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    module->Add(m_nameTitle, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+    module->Add(m_nameValue, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 
-    sizer->Add(gcc, 1, wxALL|wxEXPAND, 5);
+    sizer->Add(module, 1, wxALL|wxEXPAND, 5);
 
     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
 

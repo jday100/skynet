@@ -3,6 +3,7 @@
 
 #include <wx/sizer.h>
 #include <wx/stattext.h>
+#include <wx/textctrl.h>
 #include <wx/dialog.h>
 #include "T100Common.h"
 
@@ -18,9 +19,11 @@ class T100ModuleCreateDialog : public wxDialog
         virtual ~T100ModuleCreateDialog();
 
     protected:
-        static const long ID_;
+        static const long ID_MODULE_NAME_STATIC_TEXT;
+        static const long ID_MODULE_NAME_TEXT_CTRL;
 
-        wxStaticText*           m_;
+        wxStaticText*           m_nameTitle;
+        wxTextCtrl*             m_nameValue;
 
         T100VOID                OnApply(wxCommandEvent&);
 

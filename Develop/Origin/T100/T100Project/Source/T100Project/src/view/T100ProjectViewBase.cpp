@@ -6,6 +6,7 @@
 #include "T100ProjectCreateWizard.h"
 #include "T100ProjectViewAboutDialog.h"
 #include "T100WorkSpaceCreateDialog.h"
+#include "T100ModuleCreateDialog.h"
 #include "T100WorkSpacePropertiesDialog.h"
 
 
@@ -213,7 +214,11 @@ T100VOID T100ProjectViewBase::ShowProjectCreateWizard()
 
 T100VOID T100ProjectViewBase::ShowModuleCreateDialog()
 {
+    T100ModuleCreateDialog      dialog(m_frame, wxID_ANY, L"Module Create...");
 
+    if(dialog.ShowModal() == wxAPPLY){
+        T100ProjectInvoking::OnModuleNew(dialog.GetModuleInfo());
+    }
 }
 
 T100VOID T100ProjectViewBase::ShowBuildPanel()

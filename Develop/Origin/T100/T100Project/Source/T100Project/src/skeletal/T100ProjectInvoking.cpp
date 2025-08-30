@@ -186,6 +186,11 @@ T100VOID T100ProjectInvoking::OnModuleNew()
     m_skeletal->OnModuleNew();
 }
 
+T100VOID T100ProjectInvoking::OnModuleNew(T100ModuleInfo* info)
+{
+    m_skeletal->OnModuleNew(info);
+}
+
 T100VOID T100ProjectInvoking::OnFileOpen(T100FileData* data)
 {
     m_skeletal->OnFileOpen(data);

@@ -292,6 +292,21 @@ T100VOID T100ProjectSkeletal::OnModuleNew()
     m_view->ShowModuleCreateDialog();
 }
 
+T100VOID T100ProjectSkeletal::OnModuleNew(T100ModuleInfo* info)
+{
+    if(!info){
+        return;
+    }
+
+    T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
+
+    if(logic.CreateModule(info)){
+
+    }else{
+        return;
+    }
+}
+
 T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
 {
     if(!data){
