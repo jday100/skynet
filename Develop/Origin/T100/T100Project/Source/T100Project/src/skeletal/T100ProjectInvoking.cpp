@@ -176,9 +176,14 @@ T100VOID T100ProjectInvoking::OnFolderNew()
     m_skeletal->OnFolderNew();
 }
 
-T100VOID T100ProjectInvoking::OnFolderSelected()
+T100VOID T100ProjectInvoking::OnFolderSelect()
 {
-    m_skeletal->OnFolderSelected();
+    m_skeletal->OnFolderSelect();
+}
+
+T100VOID T100ProjectInvoking::OnModuleNew()
+{
+    m_skeletal->OnModuleNew();
 }
 
 T100VOID T100ProjectInvoking::OnFileOpen(T100FileData* data)

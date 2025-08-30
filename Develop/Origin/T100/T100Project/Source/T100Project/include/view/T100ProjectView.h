@@ -32,7 +32,7 @@ class T100ProjectView : public T100ProjectViewBase
         T100BOOL                    FileOpen(wxTreeItemId, T100FileInfo*);
         T100VOID                    FolderOpen(wxTreeItemId, T100FolderInfo*);
 
-        T100VOID                    FolderSelected();
+        T100VOID                    FolderSelect();
 
         T100VOID                    ProjectOpen(wxTreeItemId, T100ProjectInfo*);
 

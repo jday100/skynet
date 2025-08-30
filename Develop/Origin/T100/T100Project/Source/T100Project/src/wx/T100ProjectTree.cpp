@@ -18,6 +18,7 @@ BEGIN_EVENT_TABLE(T100ProjectTree, wxTreeCtrl)
     EVT_MENU(T100PROJECT_TREE_MENU_PROJECT_NEW, OnProjectCreate)
     EVT_MENU(T100PROJECT_TREE_MENU_FILE_NEW, OnFileCreate)
     EVT_MENU(T100PROJECT_TREE_MENU_FOLDER_NEW, OnFolderCreate)
+    EVT_MENU(T100PROJECT_TREE_MENU_MODULE_NEW, OnModuleCreate)
 END_EVENT_TABLE()
 
 T100ProjectTree::T100ProjectTree(wxWindow *parent,
@@ -1404,6 +1405,11 @@ T100VOID T100ProjectTree::OnFileCreate(wxCommandEvent& event)
 T100VOID T100ProjectTree::OnFolderCreate(wxCommandEvent& event)
 {
     T100ProjectInvoking::OnFolderNew();
+}
+
+T100VOID T100ProjectTree::OnModuleCreate(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnModuleNew();
 }
 
 wxMenu* T100ProjectTree::GetWorkSpaceMenu()

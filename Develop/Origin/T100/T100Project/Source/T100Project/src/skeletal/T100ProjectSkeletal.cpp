@@ -282,9 +282,14 @@ T100VOID T100ProjectSkeletal::OnFolderNew()
 
 }
 
-T100VOID T100ProjectSkeletal::OnFolderSelected()
+T100VOID T100ProjectSkeletal::OnFolderSelect()
 {
-    m_view->FolderSelected();
+    m_view->FolderSelect();
+}
+
+T100VOID T100ProjectSkeletal::OnModuleNew()
+{
+    m_view->ShowModuleCreateDialog();
 }
 
 T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)

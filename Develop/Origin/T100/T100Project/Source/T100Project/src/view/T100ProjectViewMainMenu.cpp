@@ -214,7 +214,7 @@ T100VOID T100ProjectViewMainMenu::FileModified()
     m_fileSave->Enable(T100TRUE);
 }
 
-T100VOID T100ProjectViewMainMenu::FolderSelected()
+T100VOID T100ProjectViewMainMenu::FolderSelect()
 {
     m_fileNew->Enable(T100TRUE);
 }

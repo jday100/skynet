@@ -18,25 +18,6 @@ class T100ProjectTree : public wxTreeCtrl
 
         virtual T100BOOL            WorkSpaceOpen(T100WorkSpaceInfo*);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         virtual T100VOID            ProjectOpen(T100ProjectInfo*);
 
         virtual T100VOID            FileCreate(T100FileInfo*);
@@ -61,6 +42,7 @@ class T100ProjectTree : public wxTreeCtrl
         T100VOID                    OnProjectCreate(wxCommandEvent&);
         T100VOID                    OnFileCreate(wxCommandEvent&);
         T100VOID                    OnFolderCreate(wxCommandEvent&);
+        T100VOID                    OnModuleCreate(wxCommandEvent&);
 
     private:
         wxImageList*                m_imageList;

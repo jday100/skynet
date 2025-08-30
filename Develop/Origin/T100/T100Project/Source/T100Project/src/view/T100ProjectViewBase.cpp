@@ -204,6 +204,11 @@ T100VOID T100ProjectViewBase::ShowProjectCreateWizard()
     wizard.RunWizard(wizard.GetFirstPage());
 }
 
+T100VOID T100ProjectViewBase::ShowModuleCreateDialog()
+{
+
+}
+
 T100VOID T100ProjectViewBase::ShowBuildPanel()
 {
     if(m_buildPanel){

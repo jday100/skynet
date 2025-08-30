@@ -167,9 +167,9 @@ T100VOID T100ProjectView::FolderOpen(wxTreeItemId id, T100FolderInfo* info)
     m_projectTree->FolderOpen(id, info);
 }
 
-T100VOID T100ProjectView::FolderSelected()
+T100VOID T100ProjectView::FolderSelect()
 {
-    m_mainMenu->FolderSelected();
+    m_mainMenu->FolderSelect();
 }
 
 T100VOID T100ProjectView::ProjectOpen(wxTreeItemId id, T100ProjectInfo* info)

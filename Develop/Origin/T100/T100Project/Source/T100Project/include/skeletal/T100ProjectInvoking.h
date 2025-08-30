@@ -57,7 +57,9 @@ class T100ProjectInvoking
         static T100VOID                     OnWorkSpaceProperties();
 
         static T100VOID                     OnFolderNew();
-        static T100VOID                     OnFolderSelected();
+        static T100VOID                     OnFolderSelect();
+
+        static T100VOID                     OnModuleNew();
 
 
         static T100VOID                     OnFolderOpen(T100FolderData*);

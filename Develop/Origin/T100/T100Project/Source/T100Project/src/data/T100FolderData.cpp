@@ -48,7 +48,7 @@ wxMenu* T100FolderData::ShowMenu()
 
 T100VOID T100FolderData::OnItemChanged()
 {
-    T100ProjectInvoking::OnFolderSelected();
+    T100ProjectInvoking::OnFolderSelect();
 }
 
 T100VOID T100FolderData::OnItemActivated()

@@ -24,7 +24,7 @@ class T100ProjectViewMainMenu
         T100VOID                    FileOpen();
         T100VOID                    FileModified();
 
-        T100VOID                    FolderSelected();
+        T100VOID                    FolderSelect();
 
     protected:
         T100ProjectFrame*           m_frame     = T100NULL;

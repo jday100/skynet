@@ -37,14 +37,17 @@ wxMenu* T100ProjectData::ShowMenu()
     wxMenu*     file    = T100NEW wxMenu();
     wxMenu*     folder  = T100NEW wxMenu();
     wxMenu*     clazz   = T100NEW wxMenu();
+    wxMenu*     module  = T100NEW wxMenu();
 
     menu->AppendSubMenu(file, L"File");
     menu->AppendSubMenu(folder, L"Folder");
     menu->AppendSubMenu(clazz, L"Class");
+    menu->AppendSubMenu(module, L"Module");
 
     file->Append(T100PROJECT_TREE_MENU_FILE_NEW, L"New");
     folder->Append(T100PROJECT_TREE_MENU_FOLDER_NEW, L"New");
     clazz->Append(T100PROJECT_TREE_MENU_CLASS_NEW, L"New");
+    module->Append(T100PROJECT_TREE_MENU_MODULE_NEW, L"New");
 
     return menu;
 }

@@ -57,7 +57,9 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnWorkSpaceProperties();
 
         T100VOID                    OnFolderNew();
-        T100VOID                    OnFolderSelected();
+        T100VOID                    OnFolderSelect();
+
+        T100VOID                    OnModuleNew();
 
         T100VOID                    OnFileOpen(T100FileData*);
         T100VOID                    OnFolderOpen(T100FolderData*);
