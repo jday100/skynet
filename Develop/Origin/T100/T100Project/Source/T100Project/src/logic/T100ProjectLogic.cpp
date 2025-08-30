@@ -108,6 +108,8 @@ T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo* workspace)
         return;
     }
 
+    wxBell();
+
     T100Shell       shell;
     T100WSTRING     command;
 

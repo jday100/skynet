@@ -953,24 +953,27 @@ _ZN16T100ProjectLogic5BuildEP17T100WorkSpaceInfo:
 	.loc 4 107 5
 	testq	%rax, %rax	 # _1
 	je	.L44	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:111:     T100Shell       shell;
-	.loc 4 111 21
+.LEHB10:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:111:     wxBell();
+	.loc 4 111 11
+	call	_Z6wxBellv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:113:     T100Shell       shell;
+	.loc 4 113 21
 	leaq	-56(%rbp), %rax	 #, tmp92
 	movq	%rax, %rcx	 # tmp92,
-.LEHB10:
 	call	_ZN9T100ShellC1Ev	 #
 .LEHE10:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:112:     T100WSTRING     command;
-	.loc 4 112 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:114:     T100WSTRING     command;
+	.loc 4 114 21
 	leaq	-96(%rbp), %rax	 #, tmp93
 	movq	%rax, %rcx	 # tmp93,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
-	.loc 4 116 74
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:118:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 4 118 74
 	movq	48(%rbp), %rax	 # this, tmp94
 	movq	8(%rax), %rdx	 # this_7(D)->m_current, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
-	.loc 4 116 73
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:118:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 4 118 73
 	leaq	-16(%rbp), %rax	 #, tmp95
 	movq	%rdx, %r8	 # _2,
 	movq	48(%rbp), %rdx	 # this,
@@ -978,8 +981,8 @@ _ZN16T100ProjectLogic5BuildEP17T100WorkSpaceInfo:
 .LEHB11:
 	call	_ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo	 #
 .LEHE11:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
-	.loc 4 116 59 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:118:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 4 118 59 discriminator 1
 	leaq	-48(%rbp), %rax	 #, tmp96
 	leaq	-16(%rbp), %rdx	 #, tmp97
 	movq	%rdx, %r8	 # tmp97,
@@ -988,43 +991,43 @@ _ZN16T100ProjectLogic5BuildEP17T100WorkSpaceInfo:
 .LEHB12:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_	 #
 .LEHE12:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
-	.loc 4 116 83 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:118:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 4 118 83 discriminator 3
 	leaq	-48(%rbp), %rdx	 #, tmp98
 	leaq	-96(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
-	.loc 4 116 59 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:118:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 4 118 59 discriminator 3
 	leaq	-48(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
-	.loc 4 116 73 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:118:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 4 118 73 discriminator 3
 	leaq	-16(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:118:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/vm/Hello/Make.py build";
-	.loc 4 118 19 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:120:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/vm/Hello/Make.py build";
+	.loc 4 120 19 discriminator 3
 	leaq	-96(%rbp), %rax	 #, tmp102
 	leaq	.LC2(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp102,
 .LEHB13:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEPKw	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:120:     shell.Run(command);
-	.loc 4 120 14
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:122:     shell.Run(command);
+	.loc 4 122 14
 	leaq	-96(%rbp), %rdx	 #, tmp103
 	leaq	-56(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
 	call	_ZN9T100Shell3RunERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE13:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:112:     T100WSTRING     command;
-	.loc 4 112 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:114:     T100WSTRING     command;
+	.loc 4 114 21
 	leaq	-96(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:111:     T100Shell       shell;
-	.loc 4 111 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:113:     T100Shell       shell;
+	.loc 4 113 21
 	leaq	-56(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN9T100ShellD1Ev	 #
@@ -1037,8 +1040,8 @@ _ZN16T100ProjectLogic5BuildEP17T100WorkSpaceInfo:
 	jmp	.L43	 #
 .L42:
 	movq	%rax, %rbx	 #, tmp109
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:116:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
-	.loc 4 116 73
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:118:     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+	.loc 4 118 73
 	leaq	-16(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -1046,13 +1049,13 @@ _ZN16T100ProjectLogic5BuildEP17T100WorkSpaceInfo:
 .L41:
 	movq	%rax, %rbx	 #, tmp108
 .L40:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:112:     T100WSTRING     command;
-	.loc 4 112 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:114:     T100WSTRING     command;
+	.loc 4 114 21
 	leaq	-96(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:111:     T100Shell       shell;
-	.loc 4 111 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:113:     T100Shell       shell;
+	.loc 4 113 21
 	leaq	-56(%rbp), %rax	 #, tmp115
 	movq	%rax, %rcx	 # tmp115,
 	call	_ZN9T100ShellD1Ev	 #
@@ -1062,8 +1065,8 @@ _ZN16T100ProjectLogic5BuildEP17T100WorkSpaceInfo:
 	call	_Unwind_Resume	 #
 .LEHE14:
 .L43:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:121: }
-	.loc 4 121 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:123: }
+	.loc 4 123 1
 	addq	$152, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -1110,7 +1113,7 @@ _ZN16T100ProjectLogic5BuildEP17T100WorkSpaceInfo:
 	.seh_proc	_ZN16T100ProjectLogic14GetProjectInfoEv
 _ZN16T100ProjectLogic14GetProjectInfoEv:
 .LFB7880:
-	.loc 4 139 1
+	.loc 4 141 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1121,12 +1124,12 @@ _ZN16T100ProjectLogic14GetProjectInfoEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:140:     return m_project;
-	.loc 4 140 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:142:     return m_project;
+	.loc 4 142 12
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	32(%rax), %rax	 # this_2(D)->m_project, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:141: }
-	.loc 4 141 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:143: }
+	.loc 4 143 1
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -1140,7 +1143,7 @@ _ZN16T100ProjectLogic14GetProjectInfoEv:
 	.seh_proc	_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo
 _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 .LFB7881:
-	.loc 4 144 1
+	.loc 4 146 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1159,21 +1162,21 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	.seh_endprologue
 	movq	%rcx, 48(%rbp)	 # this, this
 	movq	%rdx, 56(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:145:     if(!info){
-	.loc 4 145 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:147:     if(!info){
+	.loc 4 147 5
 	cmpq	$0, 56(%rbp)	 #, info
 	jne	.L48	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:146:         return T100FALSE;
-	.loc 4 146 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:148:         return T100FALSE;
+	.loc 4 148 16
 	movl	$0, %ebx	 #, _7
 	jmp	.L54	 #
 .L48:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:149:     if(!m_folder->IsExists(info->GetPath())){
-	.loc 4 149 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:151:     if(!m_folder->IsExists(info->GetPath())){
+	.loc 4 151 9
 	movq	48(%rbp), %rax	 # this, tmp99
 	movq	24(%rax), %rbx	 # this_17(D)->m_folder, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:149:     if(!m_folder->IsExists(info->GetPath())){
-	.loc 4 149 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:151:     if(!m_folder->IsExists(info->GetPath())){
+	.loc 4 151 27
 	movq	56(%rbp), %rax	 # info, tmp100
 	movq	%rax, %rcx	 # tmp100,
 .LEHB15:
@@ -1182,25 +1185,25 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	movq	%rbx, %rcx	 # _1,
 	call	_ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE15:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:149:     if(!m_folder->IsExists(info->GetPath())){
-	.loc 4 149 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:151:     if(!m_folder->IsExists(info->GetPath())){
+	.loc 4 151 8
 	xorl	$1, %eax	 #, retval.5_22
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:149:     if(!m_folder->IsExists(info->GetPath())){
-	.loc 4 149 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:151:     if(!m_folder->IsExists(info->GetPath())){
+	.loc 4 151 5
 	testb	%al, %al	 # retval.5_22
 	je	.L50	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:150:         return T100FALSE;
-	.loc 4 150 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:152:         return T100FALSE;
+	.loc 4 152 16
 	movl	$0, %ebx	 #, _7
 	jmp	.L54	 #
 .L50:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:153:     T100WSTRING             filename;
-	.loc 4 153 29
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:155:     T100WSTRING             filename;
+	.loc 4 155 29
 	leaq	-48(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:155:     filename    = GetFileName(*info);
-	.loc 4 155 30
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     filename    = GetFileName(*info);
+	.loc 4 157 30
 	leaq	-16(%rbp), %rax	 #, tmp102
 	movq	56(%rbp), %rdx	 # info, tmp103
 	movq	%rdx, %r8	 # tmp103,
@@ -1208,76 +1211,76 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	movq	%rax, %rcx	 # tmp102,
 .LEHB16:
 	call	_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:155:     filename    = GetFileName(*info);
-	.loc 4 155 36 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     filename    = GetFileName(*info);
+	.loc 4 157 36 discriminator 1
 	leaq	-16(%rbp), %rdx	 #, tmp104
 	leaq	-48(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:155:     filename    = GetFileName(*info);
-	.loc 4 155 30 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     filename    = GetFileName(*info);
+	.loc 4 157 30 discriminator 1
 	leaq	-16(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     T100ProjectFile         projectFile(filename);
-	.loc 4 157 49 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     T100ProjectFile         projectFile(filename);
+	.loc 4 159 49 discriminator 1
 	leaq	-48(%rbp), %rdx	 #, tmp107
 	leaq	-96(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN15T100ProjectFileC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE16:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     if(!m_file->IsExists(filename)){
-	.loc 4 159 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     if(!m_file->IsExists(filename)){
+	.loc 4 161 9
 	movq	48(%rbp), %rax	 # this, tmp109
 	movq	16(%rax), %rcx	 # this_17(D)->m_file, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     if(!m_file->IsExists(filename)){
-	.loc 4 159 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     if(!m_file->IsExists(filename)){
+	.loc 4 161 25
 	leaq	-48(%rbp), %rax	 #, tmp110
 	movq	%rax, %rdx	 # tmp110,
 .LEHB17:
 	call	_ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     if(!m_file->IsExists(filename)){
-	.loc 4 159 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     if(!m_file->IsExists(filename)){
+	.loc 4 161 8
 	xorl	$1, %eax	 #, retval.6_32
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     if(!m_file->IsExists(filename)){
-	.loc 4 159 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     if(!m_file->IsExists(filename)){
+	.loc 4 161 5
 	testb	%al, %al	 # retval.6_32
 	je	.L51	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:160:         return T100FALSE;
-	.loc 4 160 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:162:         return T100FALSE;
+	.loc 4 162 16
 	movl	$0, %ebx	 #, _7
 	jmp	.L52	 #
 .L51:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:163:     if(!projectFile.Check(filename)){
-	.loc 4 163 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:165:     if(!projectFile.Check(filename)){
+	.loc 4 165 26
 	leaq	-48(%rbp), %rdx	 #, tmp111
 	leaq	-96(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	_ZN15T100ProjectFile5CheckERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE17:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:163:     if(!projectFile.Check(filename)){
-	.loc 4 163 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:165:     if(!projectFile.Check(filename)){
+	.loc 4 165 8
 	xorl	$1, %eax	 #, retval.7_36
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:163:     if(!projectFile.Check(filename)){
-	.loc 4 163 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:165:     if(!projectFile.Check(filename)){
+	.loc 4 165 5
 	testb	%al, %al	 # retval.7_36
 	je	.L53	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:164:         return T100FALSE;
-	.loc 4 164 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:166:         return T100FALSE;
+	.loc 4 166 16
 	movl	$0, %ebx	 #, _7
 	jmp	.L52	 #
 .L53:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:166:     return T100TRUE;
-	.loc 4 166 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:168:     return T100TRUE;
+	.loc 4 168 12
 	movl	$1, %ebx	 #, _7
 .L52:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     T100ProjectFile         projectFile(filename);
-	.loc 4 157 49
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     T100ProjectFile         projectFile(filename);
+	.loc 4 159 49
 	leaq	-96(%rbp), %rax	 #, tmp113
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN15T100ProjectFileD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:153:     T100WSTRING             filename;
-	.loc 4 153 29
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:155:     T100WSTRING             filename;
+	.loc 4 155 29
 	leaq	-48(%rbp), %rax	 #, tmp114
 	movq	%rax, %rcx	 # tmp114,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -1286,8 +1289,8 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	jmp	.L59	 #
 .L58:
 	movq	%rax, %rbx	 #, tmp118
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     T100ProjectFile         projectFile(filename);
-	.loc 4 157 49
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     T100ProjectFile         projectFile(filename);
+	.loc 4 159 49
 	leaq	-96(%rbp), %rax	 #, tmp116
 	movq	%rax, %rcx	 # tmp116,
 	call	_ZN15T100ProjectFileD1Ev	 #
@@ -1295,8 +1298,8 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 .L57:
 	movq	%rax, %rbx	 #, tmp117
 .L56:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:153:     T100WSTRING             filename;
-	.loc 4 153 29
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:155:     T100WSTRING             filename;
+	.loc 4 155 29
 	leaq	-48(%rbp), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -1306,8 +1309,8 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	call	_Unwind_Resume	 #
 .LEHE18:
 .L59:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:167: }
-	.loc 4 167 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:169: }
+	.loc 4 169 1
 	addq	$152, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -1350,7 +1353,7 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	.seh_proc	_ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP15T100ProjectInfo
 _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP15T100ProjectInfo:
 .LFB7882:
-	.loc 4 170 1
+	.loc 4 172 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1374,59 +1377,59 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	movq	%rcx, 320(%rbp)	 # this, this
 	movq	%rdx, 328(%rbp)	 # path, path
 	movq	%r8, 336(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:171:     T100Folder      folder(path);
-	.loc 4 171 32
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:173:     T100Folder      folder(path);
+	.loc 4 173 32
 	movq	328(%rbp), %rdx	 # path, tmp104
 	leaq	128(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 .LEHB19:
 	call	_ZN10T100FolderC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE19:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:173:     if(!folder.IsExists()){
-	.loc 4 173 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:175:     if(!folder.IsExists()){
+	.loc 4 175 24
 	leaq	128(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 .LEHB20:
 	call	_ZN11T100FSEntry8IsExistsEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:173:     if(!folder.IsExists()){
-	.loc 4 173 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:175:     if(!folder.IsExists()){
+	.loc 4 175 8
 	xorl	$1, %eax	 #, retval.8_25
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:173:     if(!folder.IsExists()){
-	.loc 4 173 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:175:     if(!folder.IsExists()){
+	.loc 4 175 5
 	testb	%al, %al	 # retval.8_25
 	je	.L61	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:174:         return T100FALSE;
-	.loc 4 174 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:176:         return T100FALSE;
+	.loc 4 176 16
 	movl	$0, %ebx	 #, _7
 	jmp	.L62	 #
 .L61:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:177:     T100FILE_INFO_VECTOR&       files       = info->GetFiles();
-	.loc 4 177 62
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     T100FILE_INFO_VECTOR&       files       = info->GetFiles();
+	.loc 4 179 62
 	movq	336(%rbp), %rax	 # info, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN15T100ProjectInfo8GetFilesEv	 #
 	movq	%rax, 280(%rbp)	 # _29, files
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:178:     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
-	.loc 4 178 67
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:180:     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
+	.loc 4 180 67
 	movq	336(%rbp), %rax	 # info, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN15T100ProjectInfo13GetSubFoldersEv	 #
 .LEHE20:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:178:     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
-	.loc 4 178 67 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:180:     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
+	.loc 4 180 67 is_stmt 0 discriminator 1
 	movq	%rax, 272(%rbp)	 # _32, folders
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:180:     T100WSTRING_VECTOR          fileNames;
-	.loc 4 180 33 is_stmt 1 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:182:     T100WSTRING_VECTOR          fileNames;
+	.loc 4 182 33 is_stmt 1 discriminator 1
 	leaq	96(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     T100WSTRING_VECTOR          folderNames;
-	.loc 4 181 33 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:183:     T100WSTRING_VECTOR          folderNames;
+	.loc 4 183 33 discriminator 1
 	leaq	64(%rbp), %rax	 #, tmp110
 	movq	%rax, %rcx	 # tmp110,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:183:     folder.List(folderNames, fileNames);
-	.loc 4 183 16 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185:     folder.List(folderNames, fileNames);
+	.loc 4 185 16 discriminator 1
 	leaq	96(%rbp), %rcx	 #, tmp111
 	leaq	64(%rbp), %rdx	 #, tmp112
 	leaq	128(%rbp), %rax	 #, tmp113
@@ -1436,8 +1439,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	call	_ZN10T100Folder4ListERSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS6_EES9_	 #
 .LEHE21:
 .LBB5:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185:     for(const T100WSTRING& item : folderNames){
-	.loc 4 185 35
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     for(const T100WSTRING& item : folderNames){
+	.loc 4 187 35
 	leaq	64(%rbp), %rax	 #, tmp114
 	movq	%rax, 264(%rbp)	 # tmp114, __for_range
 	movq	264(%rbp), %rax	 # __for_range, tmp115
@@ -1449,8 +1452,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv	 #
 	movq	%rax, 48(%rbp)	 # tmp120, __for_end
 .L64:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185:     for(const T100WSTRING& item : folderNames){
-	.loc 4 185 35 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     for(const T100WSTRING& item : folderNames){
+	.loc 4 187 35 is_stmt 0 discriminator 1
 	leaq	48(%rbp), %rdx	 #, tmp121
 	leaq	56(%rbp), %rax	 #, tmp122
 	movq	%rax, %rcx	 # tmp122,
@@ -1458,36 +1461,36 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	testb	%al, %al	 # retval.9_41
 	je	.L63	 #,
 .LBB6:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185:     for(const T100WSTRING& item : folderNames){
-	.loc 4 185 35 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     for(const T100WSTRING& item : folderNames){
+	.loc 4 187 35 discriminator 2
 	leaq	56(%rbp), %rax	 #, tmp123
 	movq	%rax, %rcx	 # tmp123,
 	call	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv	 #
 	movq	%rax, 256(%rbp)	 # tmp124, item
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:186:         T100WxFolderInfo        thisFolder;
-	.loc 4 186 33 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:188:         T100WxFolderInfo        thisFolder;
+	.loc 4 188 33 is_stmt 1 discriminator 2
 	leaq	-64(%rbp), %rax	 #, tmp125
 	movq	%rax, %rcx	 # tmp125,
 .LEHB22:
 	call	_ZN16T100WxFolderInfoC1Ev	 #
 .LEHE22:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:188:         thisFolder.SetLabel(item);
-	.loc 4 188 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:190:         thisFolder.SetLabel(item);
+	.loc 4 190 28
 	movq	256(%rbp), %rdx	 # item, tmp126
 	leaq	-64(%rbp), %rax	 #, tmp127
 	movq	%rax, %rcx	 # tmp127,
 .LEHB23:
 	call	_ZN16T100WxFolderInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:189:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 189 44
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 191 44
 	leaq	176(%rbp), %rax	 #, tmp128
 	movq	328(%rbp), %rdx	 # path, tmp129
 	movq	.refptr._ZN17T100ProjectConfig29T100PROJECT_STORAGE_SEPARATORB5cxx11E(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp128,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_	 #
 .LEHE23:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:189:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 189 97 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 191 97 discriminator 1
 	leaq	-96(%rbp), %rax	 #, tmp130
 	movq	256(%rbp), %rcx	 # item, tmp131
 	leaq	176(%rbp), %rdx	 #, tmp132
@@ -1499,15 +1502,15 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	leaq	176(%rbp), %rax	 #, tmp133
 	movq	%rax, %rcx	 # tmp133,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:190:         thisFolder.SetPath(thisPath);
-	.loc 4 190 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:192:         thisFolder.SetPath(thisPath);
+	.loc 4 192 27
 	leaq	-96(%rbp), %rdx	 #, tmp134
 	leaq	-64(%rbp), %rax	 #, tmp135
 	movq	%rax, %rcx	 # tmp135,
 .LEHB25:
 	call	_ZN16T100WxFolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:192:         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
-	.loc 4 192 70
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:194:         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
+	.loc 4 194 70
 	movl	$160, %ecx	 #,
 	call	_Znwy	 #
 .LEHE25:
@@ -1517,50 +1520,50 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	call	_ZN14T100FolderInfoC1Ev	 #
 .LEHE26:
 	movq	%rbx, 40(%rbp)	 # _52, thisInfo
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:194:         thisInfo->SetLabel(item);
-	.loc 4 194 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:196:         thisInfo->SetLabel(item);
+	.loc 4 196 27
 	movq	40(%rbp), %rax	 # thisInfo, thisInfo.10_2
 	movq	256(%rbp), %rdx	 # item, tmp137
 	movq	%rax, %rcx	 # thisInfo.10_2,
 .LEHB27:
 	call	_ZN14T100FolderInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:195:         thisInfo->SetPath(thisPath);
-	.loc 4 195 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:197:         thisInfo->SetPath(thisPath);
+	.loc 4 197 26
 	movq	40(%rbp), %rcx	 # thisInfo, thisInfo.11_3
 	leaq	-96(%rbp), %rax	 #, tmp138
 	movq	%rax, %rdx	 # tmp138,
 	call	_ZN14T100FolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:197:         folders.push_back(thisInfo);
-	.loc 4 197 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:199:         folders.push_back(thisInfo);
+	.loc 4 199 26
 	leaq	40(%rbp), %rax	 #, tmp139
 	movq	272(%rbp), %rcx	 # folders, tmp140
 	movq	%rax, %rdx	 # tmp139,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_	 #
 .LEHE27:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:189:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 189 97 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 191 97 discriminator 3
 	leaq	-96(%rbp), %rax	 #, tmp141
 	movq	%rax, %rcx	 # tmp141,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:186:         T100WxFolderInfo        thisFolder;
-	.loc 4 186 33 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:188:         T100WxFolderInfo        thisFolder;
+	.loc 4 188 33 discriminator 3
 	leaq	-64(%rbp), %rax	 #, tmp142
 	movq	%rax, %rcx	 # tmp142,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
 .LBE6:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185:     for(const T100WSTRING& item : folderNames){
-	.loc 4 185 35 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     for(const T100WSTRING& item : folderNames){
+	.loc 4 187 35 discriminator 3
 	leaq	56(%rbp), %rax	 #, tmp143
 	movq	%rax, %rcx	 # tmp143,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185:     for(const T100WSTRING& item : folderNames){
-	.loc 4 185 5 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     for(const T100WSTRING& item : folderNames){
+	.loc 4 187 5 discriminator 3
 	jmp	.L64	 #
 .L63:
 .LBE5:
 .LBB8:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:200:     for(const T100WSTRING& item : fileNames){
-	.loc 4 200 35
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:     for(const T100WSTRING& item : fileNames){
+	.loc 4 202 35
 	leaq	96(%rbp), %rax	 #, tmp144
 	movq	%rax, 248(%rbp)	 # tmp144, __for_range
 	movq	248(%rbp), %rax	 # __for_range, tmp145
@@ -1572,8 +1575,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv	 #
 	movq	%rax, 24(%rbp)	 # tmp150, __for_end
 .L67:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:200:     for(const T100WSTRING& item : fileNames){
-	.loc 4 200 35 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:     for(const T100WSTRING& item : fileNames){
+	.loc 4 202 35 is_stmt 0 discriminator 1
 	leaq	24(%rbp), %rdx	 #, tmp151
 	leaq	32(%rbp), %rax	 #, tmp152
 	movq	%rax, %rcx	 # tmp152,
@@ -1581,26 +1584,26 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	testb	%al, %al	 # retval.12_81
 	je	.L65	 #,
 .LBB9:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:200:     for(const T100WSTRING& item : fileNames){
-	.loc 4 200 35 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:     for(const T100WSTRING& item : fileNames){
+	.loc 4 202 35 discriminator 2
 	leaq	32(%rbp), %rax	 #, tmp153
 	movq	%rax, %rcx	 # tmp153,
 	call	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv	 #
 	movq	%rax, 240(%rbp)	 # tmp154, item
 .LBB10:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:201:         if(item == T100ProjectConfig::T100PROJECT_PROJECT_FILENAME){
-	.loc 4 201 17 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:203:         if(item == T100ProjectConfig::T100PROJECT_PROJECT_FILENAME){
+	.loc 4 203 17 is_stmt 1 discriminator 2
 	movq	240(%rbp), %rax	 # item, tmp155
 	movq	.refptr._ZN17T100ProjectConfig28T100PROJECT_PROJECT_FILENAMEB5cxx11E(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp155,
 	call	_ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:201:         if(item == T100ProjectConfig::T100PROJECT_PROJECT_FILENAME){
-	.loc 4 201 9 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:203:         if(item == T100ProjectConfig::T100PROJECT_PROJECT_FILENAME){
+	.loc 4 203 9 discriminator 2
 	testb	%al, %al	 # retval.13_85
 	jne	.L66	 #,
 .LBB11:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:204:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 204 56
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:206:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 206 56
 	leaq	208(%rbp), %rax	 #, tmp156
 	movq	328(%rbp), %rdx	 # path, tmp157
 	movq	.refptr._ZN17T100ProjectConfig29T100PROJECT_STORAGE_SEPARATORB5cxx11E(%rip), %r8	 #,
@@ -1608,8 +1611,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 .LEHB28:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_	 #
 .LEHE28:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:204:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 204 109 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:206:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 206 109 discriminator 1
 	leaq	-64(%rbp), %rax	 #, tmp158
 	movq	240(%rbp), %rcx	 # item, tmp159
 	leaq	208(%rbp), %rdx	 #, tmp160
@@ -1621,8 +1624,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	leaq	208(%rbp), %rax	 #, tmp161
 	movq	%rax, %rcx	 # tmp161,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:205:             T100FileInfo*       thisFile        = T100NEW T100FileInfo();
-	.loc 4 205 72
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:207:             T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+	.loc 4 207 72
 	movl	$176, %ecx	 #,
 .LEHB30:
 	call	_Znwy	 #
@@ -1633,34 +1636,34 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	call	_ZN12T100FileInfoC1Ev	 #
 .LEHE31:
 	movq	%rbx, 16(%rbp)	 # _91, thisFile
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:207:             thisFile->SetLabel(item);
-	.loc 4 207 31
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:209:             thisFile->SetLabel(item);
+	.loc 4 209 31
 	movq	16(%rbp), %rax	 # thisFile, thisFile.14_4
 	movq	240(%rbp), %rdx	 # item, tmp163
 	movq	%rax, %rcx	 # thisFile.14_4,
 .LEHB32:
 	call	_ZN12T100FileInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:208:             thisFile->SetFileName(item);
-	.loc 4 208 34
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:210:             thisFile->SetFileName(item);
+	.loc 4 210 34
 	movq	16(%rbp), %rax	 # thisFile, thisFile.15_5
 	movq	240(%rbp), %rdx	 # item, tmp164
 	movq	%rax, %rcx	 # thisFile.15_5,
 	call	_ZN12T100FileInfo11SetFileNameERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:209:             thisFile->SetPath(thisPath);
-	.loc 4 209 30
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:211:             thisFile->SetPath(thisPath);
+	.loc 4 211 30
 	movq	16(%rbp), %rcx	 # thisFile, thisFile.16_6
 	leaq	-64(%rbp), %rax	 #, tmp165
 	movq	%rax, %rdx	 # tmp165,
 	call	_ZN12T100FileInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:211:             files.push_back(thisFile);
-	.loc 4 211 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:213:             files.push_back(thisFile);
+	.loc 4 213 28
 	leaq	16(%rbp), %rax	 #, tmp166
 	movq	280(%rbp), %rcx	 # files, tmp167
 	movq	%rax, %rdx	 # tmp166,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_	 #
 .LEHE32:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:204:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 204 109
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:206:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 206 109
 	leaq	-64(%rbp), %rax	 #, tmp168
 	movq	%rax, %rcx	 # tmp168,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -1668,37 +1671,37 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 .LBE11:
 .LBE10:
 .LBE9:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:200:     for(const T100WSTRING& item : fileNames){
-	.loc 4 200 35 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:     for(const T100WSTRING& item : fileNames){
+	.loc 4 202 35 discriminator 3
 	leaq	32(%rbp), %rax	 #, tmp169
 	movq	%rax, %rcx	 # tmp169,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:200:     for(const T100WSTRING& item : fileNames){
-	.loc 4 200 5 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:     for(const T100WSTRING& item : fileNames){
+	.loc 4 202 5 discriminator 3
 	jmp	.L67	 #
 .L65:
 .LBE8:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:215:     m_current   = info;
-	.loc 4 215 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:217:     m_current   = info;
+	.loc 4 217 17
 	movq	320(%rbp), %rax	 # this, tmp170
 	movq	336(%rbp), %rdx	 # info, tmp171
 	movq	%rdx, 8(%rax)	 # tmp171, this_113(D)->m_current
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:217:     return T100TRUE;
-	.loc 4 217 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:219:     return T100TRUE;
+	.loc 4 219 12
 	movl	$1, %ebx	 #, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     T100WSTRING_VECTOR          folderNames;
-	.loc 4 181 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:183:     T100WSTRING_VECTOR          folderNames;
+	.loc 4 183 33
 	leaq	64(%rbp), %rax	 #, tmp172
 	movq	%rax, %rcx	 # tmp172,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:180:     T100WSTRING_VECTOR          fileNames;
-	.loc 4 180 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:182:     T100WSTRING_VECTOR          fileNames;
+	.loc 4 182 33
 	leaq	96(%rbp), %rax	 #, tmp173
 	movq	%rax, %rcx	 # tmp173,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
 .L62:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:171:     T100Folder      folder(path);
-	.loc 4 171 32
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:173:     T100Folder      folder(path);
+	.loc 4 173 32
 	leaq	128(%rbp), %rax	 #, tmp174
 	movq	%rax, %rcx	 # tmp174,
 	call	_ZN10T100FolderD1Ev	 #
@@ -1714,8 +1717,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	jmp	.L70	 #
 .L86:
 	movq	%rax, %rsi	 #, tmp182
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:192:         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
-	.loc 4 192 70
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:194:         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
+	.loc 4 194 70
 	movl	$160, %edx	 #,
 	movq	%rbx, %rcx	 # _52,
 	call	_ZdlPvy	 #
@@ -1724,8 +1727,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 .L85:
 	movq	%rax, %rbx	 #, tmp181
 .L72:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:189:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 189 97
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 191 97
 	leaq	-96(%rbp), %rax	 #, tmp185
 	movq	%rax, %rcx	 # tmp185,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -1733,8 +1736,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 .L83:
 	movq	%rax, %rbx	 #, tmp177
 .L70:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:186:         T100WxFolderInfo        thisFolder;
-	.loc 4 186 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:188:         T100WxFolderInfo        thisFolder;
+	.loc 4 188 33
 	leaq	-64(%rbp), %rax	 #, tmp186
 	movq	%rax, %rcx	 # tmp186,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
@@ -1759,8 +1762,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	jmp	.L76	 #
 .L90:
 	movq	%rax, %rsi	 #, tmp197
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:205:             T100FileInfo*       thisFile        = T100NEW T100FileInfo();
-	.loc 4 205 72
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:207:             T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+	.loc 4 207 72
 	movl	$176, %edx	 #,
 	movq	%rbx, %rcx	 # _91,
 	call	_ZdlPvy	 #
@@ -1769,8 +1772,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 .L89:
 	movq	%rax, %rbx	 #, tmp196
 .L78:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:204:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 204 109
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:206:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 206 109
 	leaq	-64(%rbp), %rax	 #, tmp200
 	movq	%rax, %rcx	 # tmp200,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -1787,13 +1790,13 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 .LBE13:
 .LBE14:
 .LBE16:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     T100WSTRING_VECTOR          folderNames;
-	.loc 4 181 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:183:     T100WSTRING_VECTOR          folderNames;
+	.loc 4 183 33
 	leaq	64(%rbp), %rax	 #, tmp201
 	movq	%rax, %rcx	 # tmp201,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:180:     T100WSTRING_VECTOR          fileNames;
-	.loc 4 180 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:182:     T100WSTRING_VECTOR          fileNames;
+	.loc 4 182 33
 	leaq	96(%rbp), %rax	 #, tmp204
 	movq	%rax, %rcx	 # tmp204,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
@@ -1801,8 +1804,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 .L80:
 	movq	%rax, %rbx	 #, tmp205
 .L79:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:171:     T100Folder      folder(path);
-	.loc 4 171 32
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:173:     T100Folder      folder(path);
+	.loc 4 173 32
 	leaq	128(%rbp), %rax	 #, tmp207
 	movq	%rax, %rcx	 # tmp207,
 	call	_ZN10T100FolderD1Ev	 #
@@ -1812,8 +1815,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	call	_Unwind_Resume	 #
 .LEHE33:
 .L91:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:218: }
-	.loc 4 218 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:220: }
+	.loc 4 220 1
 	addq	$416, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -1907,7 +1910,7 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.seh_proc	_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo
 _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 .LFB7883:
-	.loc 4 222 1
+	.loc 4 224 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1927,22 +1930,22 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	movq	%rcx, -32(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, -24(%rbp)	 # this, this
 	movq	%r8, -16(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:223:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 223 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 225 25
 	movq	-16(%rbp), %rax	 # info, tmp89
 	movq	%rax, %rcx	 # tmp89,
 .LEHB34:
 	call	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:223:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 223 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 225 27
 	leaq	-96(%rbp), %rax	 #, tmp90
 	leaq	.LC3(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE34:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:223:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 223 55
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 225 55
 	movq	-32(%rbp), %rcx	 # <retval>, tmp91
 	leaq	-96(%rbp), %rax	 #, tmp92
 	movq	.refptr._ZN17T100ProjectConfig28T100PROJECT_PROJECT_FILENAMEB5cxx11E(%rip), %r8	 #,
@@ -1951,18 +1954,18 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_	 #
 .LEHE35:
 	nop	
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:223:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 223 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 225 27
 	leaq	-96(%rbp), %rax	 #, tmp93
 	movq	%rax, %rcx	 # tmp93,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:223:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 223 55
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 225 55
 	jmp	.L96	 #
 .L95:
 	movq	%rax, %rbx	 #, tmp95
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:223:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 223 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 225 27
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -1972,8 +1975,8 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	call	_Unwind_Resume	 #
 .LEHE36:
 .L96:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:224: }
-	.loc 4 224 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:226: }
+	.loc 4 226 1
 	movq	-32(%rbp), %rax	 # <retval>,
 	addq	$72, %rsp	 #,
 	popq	%rbx	 #
@@ -2013,7 +2016,7 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	.seh_proc	_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo
 _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 .LFB7884:
-	.loc 4 227 1
+	.loc 4 229 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2028,16 +2031,16 @@ _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 	movq	%rcx, 16(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, 24(%rbp)	 # this, this
 	movq	%r8, 32(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:228:     return info.GetPath();
-	.loc 4 228 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:230:     return info.GetPath();
+	.loc 4 230 25
 	movq	32(%rbp), %rax	 # info, tmp88
 	movq	%rax, %rcx	 # tmp88,
 	call	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 # _1,
 	movq	16(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:229: }
-	.loc 4 229 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:231: }
+	.loc 4 231 1
 	movq	16(%rbp), %rax	 # <retval>,
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2058,7 +2061,7 @@ _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 	.seh_proc	_ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo
 _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 .LFB7885:
-	.loc 4 232 1
+	.loc 4 234 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2078,22 +2081,22 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	movq	%rcx, -32(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, -24(%rbp)	 # this, this
 	movq	%r8, -16(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:233:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 233 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 235 26
 	movq	-16(%rbp), %rax	 # info, tmp89
 	movq	%rax, %rcx	 # tmp89,
 .LEHB37:
 	call	_ZN15T100ProjectInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:233:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 233 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 235 28
 	leaq	-96(%rbp), %rax	 #, tmp90
 	leaq	.LC3(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE37:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:233:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 233 37
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 235 37
 	movq	-32(%rbp), %rcx	 # <retval>, tmp91
 	leaq	-96(%rbp), %rax	 #, tmp92
 	leaq	.LC4(%rip), %r8	 #,
@@ -2102,18 +2105,18 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
 .LEHE38:
 	nop	
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:233:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 233 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 235 28
 	leaq	-96(%rbp), %rax	 #, tmp93
 	movq	%rax, %rcx	 # tmp93,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:233:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 233 37
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 235 37
 	jmp	.L103	 #
 .L102:
 	movq	%rax, %rbx	 #, tmp95
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:233:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 233 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 235 28
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -2123,8 +2126,8 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	call	_Unwind_Resume	 #
 .LEHE39:
 .L103:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:234: }
-	.loc 4 234 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:236: }
+	.loc 4 236 1
 	movq	-32(%rbp), %rax	 # <retval>,
 	addq	$72, %rsp	 #,
 	popq	%rbx	 #
@@ -48525,7 +48528,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x2c
 	.ascii "GetProjectInfo\0"
 	.byte	0x4
-	.byte	0x8a
+	.byte	0x8c
 	.byte	0x12
 	.ascii "_ZN16T100ProjectLogic14GetProjectInfoEv\0"
 	.long	0x31c1f
@@ -48538,7 +48541,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x2c
 	.ascii "Check\0"
 	.byte	0x4
-	.byte	0x8f
+	.byte	0x91
 	.byte	0xa
 	.ascii "_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo\0"
 	.long	0x1ca51
@@ -48553,7 +48556,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x2c
 	.ascii "GetFileName\0"
 	.byte	0x4
-	.byte	0xdd
+	.byte	0xdf
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo\0"
 	.long	0x8ff4
@@ -48568,7 +48571,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x2c
 	.ascii "Open\0"
 	.byte	0x4
-	.byte	0xa9
+	.byte	0xab
 	.byte	0xa
 	.ascii "_ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP15T100ProjectInfo\0"
 	.long	0x1ca51
@@ -48593,7 +48596,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x2c
 	.ascii "GetFolderName\0"
 	.byte	0x4
-	.byte	0xe2
+	.byte	0xe4
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo\0"
 	.long	0x8ff4
@@ -48608,7 +48611,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x2c
 	.ascii "GetBuildName\0"
 	.byte	0x4
-	.byte	0xe7
+	.byte	0xe9
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo\0"
 	.long	0x8ff4
@@ -52809,7 +52812,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x21
 	.secrel32	.LASF293
 	.byte	0x4
-	.byte	0xe7
+	.byte	0xe9
 	.byte	0x43
 	.long	0x323ca
 	.uleb128 0x2
@@ -52833,7 +52836,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x21
 	.secrel32	.LASF293
 	.byte	0x4
-	.byte	0xe2
+	.byte	0xe4
 	.byte	0x45
 	.long	0x3238e
 	.uleb128 0x2
@@ -52857,7 +52860,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x21
 	.secrel32	.LASF293
 	.byte	0x4
-	.byte	0xdd
+	.byte	0xdf
 	.byte	0x43
 	.long	0x3238e
 	.uleb128 0x2
@@ -52881,7 +52884,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x3b
 	.ascii "path\0"
 	.byte	0x4
-	.byte	0xa9
+	.byte	0xab
 	.byte	0x34
 	.long	0x1ec94
 	.uleb128 0x2
@@ -52890,7 +52893,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x21
 	.secrel32	.LASF293
 	.byte	0x4
-	.byte	0xa9
+	.byte	0xab
 	.byte	0x4b
 	.long	0x31c1f
 	.uleb128 0x2
@@ -52899,7 +52902,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "folder\0"
 	.byte	0x4
-	.byte	0xab
+	.byte	0xad
 	.byte	0x15
 	.long	0x35647
 	.uleb128 0x3
@@ -52908,7 +52911,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "files\0"
 	.byte	0x4
-	.byte	0xb1
+	.byte	0xb3
 	.byte	0x21
 	.long	0x1ed8f
 	.uleb128 0x2
@@ -52917,7 +52920,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "folders\0"
 	.byte	0x4
-	.byte	0xb2
+	.byte	0xb4
 	.byte	0x21
 	.long	0x1ee87
 	.uleb128 0x2
@@ -52926,7 +52929,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "fileNames\0"
 	.byte	0x4
-	.byte	0xb4
+	.byte	0xb6
 	.byte	0x21
 	.long	0x11620
 	.uleb128 0x3
@@ -52935,7 +52938,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "folderNames\0"
 	.byte	0x4
-	.byte	0xb5
+	.byte	0xb7
 	.byte	0x21
 	.long	0x11620
 	.uleb128 0x3
@@ -52947,7 +52950,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "item\0"
 	.byte	0x4
-	.byte	0xb9
+	.byte	0xbb
 	.byte	0x1c
 	.long	0x1ec94
 	.uleb128 0x2
@@ -52976,7 +52979,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "thisFolder\0"
 	.byte	0x4
-	.byte	0xba
+	.byte	0xbc
 	.byte	0x21
 	.long	0x32394
 	.uleb128 0x3
@@ -52985,7 +52988,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x62
 	.secrel32	.LASF297
 	.byte	0x4
-	.byte	0xbd
+	.byte	0xbf
 	.byte	0x19
 	.long	0x8ff4
 	.uleb128 0x3
@@ -52994,7 +52997,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "thisInfo\0"
 	.byte	0x4
-	.byte	0xc0
+	.byte	0xc2
 	.byte	0x1d
 	.long	0x1edc2
 	.uleb128 0x3
@@ -53007,7 +53010,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "item\0"
 	.byte	0x4
-	.byte	0xc8
+	.byte	0xca
 	.byte	0x1c
 	.long	0x1ec94
 	.uleb128 0x3
@@ -53036,7 +53039,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x62
 	.secrel32	.LASF297
 	.byte	0x4
-	.byte	0xcc
+	.byte	0xce
 	.byte	0x21
 	.long	0x8ff4
 	.uleb128 0x3
@@ -53045,7 +53048,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "thisFile\0"
 	.byte	0x4
-	.byte	0xcd
+	.byte	0xcf
 	.byte	0x21
 	.long	0x1eccc
 	.uleb128 0x3
@@ -53073,7 +53076,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x21
 	.secrel32	.LASF293
 	.byte	0x4
-	.byte	0x8f
+	.byte	0x91
 	.byte	0x34
 	.long	0x323c4
 	.uleb128 0x2
@@ -53082,7 +53085,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x62
 	.secrel32	.LASF298
 	.byte	0x4
-	.byte	0x99
+	.byte	0x9b
 	.byte	0x1d
 	.long	0x8ff4
 	.uleb128 0x3
@@ -53091,7 +53094,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "projectFile\0"
 	.byte	0x4
-	.byte	0x9d
+	.byte	0x9f
 	.byte	0x1d
 	.long	0x356b6
 	.uleb128 0x3
@@ -53141,7 +53144,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "shell\0"
 	.byte	0x4
-	.byte	0x6f
+	.byte	0x71
 	.byte	0x15
 	.long	0x35754
 	.uleb128 0x3
@@ -53150,7 +53153,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "command\0"
 	.byte	0x4
-	.byte	0x70
+	.byte	0x72
 	.byte	0x15
 	.long	0x8ff4
 	.uleb128 0x3

@@ -23,14 +23,14 @@ T100VOID T100Shell::Execute(const T100WSTRING& value)
     wxArrayString   output;
     wxArrayString   error;
 
-    T100ExecuteProcess      process(&output, &error);
+    T100ExecuteProcess*     process     = T100NEW T100ExecuteProcess(&output, &error);
 
-    if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , &process) == 0){
+    if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
         return;
     }
 
-    while(process.IsRunning()){
-        process.FlushPipe();
+    while(process->IsRunning()){
+        process->FlushPipe();
 
         for(wxString item : output){
             std::cout << item;
@@ -41,5 +41,5 @@ T100VOID T100Shell::Execute(const T100WSTRING& value)
         break;
     }
 
-    process.ExitCode();
+    process->ExitCode();
 }
