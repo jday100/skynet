@@ -63929,6 +63929,17 @@ _GLOBAL__sub_I__ZN19T100ProjectInvoking10m_skeletalE:
 	.byte	0xa
 	.ascii "_ZN19T100ProjectInvoking10OnFileOpenEv\0"
 	.byte	0x1
+	.uleb128 0x95
+	.secrel32	.LASF354
+	.byte	0x5
+	.byte	0xb8
+	.byte	0xa
+	.ascii "_ZN19T100ProjectInvoking10OnFileOpenEP12T100FileData\0"
+	.byte	0x1
+	.long	0x452f3
+	.uleb128 0x1
+	.long	0x45af3
+	.byte	0
 	.uleb128 0x24
 	.ascii "OnFileClose\0"
 	.byte	0x5
@@ -64062,17 +64073,6 @@ _GLOBAL__sub_I__ZN19T100ProjectInvoking10m_skeletalE:
 	.byte	0xa
 	.ascii "_ZN19T100ProjectInvoking16OnFolderSelectedEv\0"
 	.byte	0x1
-	.uleb128 0x95
-	.secrel32	.LASF354
-	.byte	0x5
-	.byte	0xb8
-	.byte	0xa
-	.ascii "_ZN19T100ProjectInvoking10OnFileOpenEP12T100FileData\0"
-	.byte	0x1
-	.long	0x4574b
-	.uleb128 0x1
-	.long	0x45af3
-	.byte	0
 	.uleb128 0x5d
 	.ascii "OnFolderOpen\0"
 	.byte	0x5
@@ -65386,7 +65386,7 @@ _GLOBAL__sub_I__ZN19T100ProjectInvoking10m_skeletalE:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x61
-	.long	0x45702
+	.long	0x452aa
 	.quad	.LFB14655
 	.quad	.LFE14655-.LFB14655
 	.uleb128 0x1
@@ -65403,115 +65403,115 @@ _GLOBAL__sub_I__ZN19T100ProjectInvoking10m_skeletalE:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.long	0x456bf
+	.long	0x45708
 	.quad	.LFB14654
 	.quad	.LFE14654-.LFB14654
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x45686
+	.long	0x456cf
 	.quad	.LFB14653
 	.quad	.LFE14653-.LFB14653
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x45639
+	.long	0x45682
 	.quad	.LFB14652
 	.quad	.LFE14652-.LFB14652
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0xe1
-	.long	0x4560b
+	.long	0x45654
 	.quad	.LFB14651
 	.quad	.LFE14651-.LFB14651
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x455d9
+	.long	0x45622
 	.quad	.LFB14650
 	.quad	.LFE14650-.LFB14650
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x455a0
+	.long	0x455e9
 	.quad	.LFB14649
 	.quad	.LFE14649-.LFB14649
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x4555f
+	.long	0x455a8
 	.quad	.LFB14648
 	.quad	.LFE14648-.LFB14648
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x45522
+	.long	0x4556b
 	.quad	.LFB14647
 	.quad	.LFE14647-.LFB14647
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x454e3
+	.long	0x4552c
 	.quad	.LFB14646
 	.quad	.LFE14646-.LFB14646
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x454a2
+	.long	0x454eb
 	.quad	.LFB14645
 	.quad	.LFE14645-.LFB14645
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x45467
+	.long	0x454b0
 	.quad	.LFB14644
 	.quad	.LFE14644-.LFB14644
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x4542e
+	.long	0x45477
 	.quad	.LFB14643
 	.quad	.LFE14643-.LFB14643
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x453f7
+	.long	0x45440
 	.quad	.LFB14642
 	.quad	.LFE14642-.LFB14642
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x453c3
+	.long	0x4540c
 	.quad	.LFB14641
 	.quad	.LFE14641-.LFB14641
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x4538c
+	.long	0x453d5
 	.quad	.LFB14640
 	.quad	.LFE14640-.LFB14640
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x45355
+	.long	0x4539e
 	.quad	.LFB14639
 	.quad	.LFE14639-.LFB14639
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x4531a
+	.long	0x45363
 	.quad	.LFB14638
 	.quad	.LFE14638-.LFB14638
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x452e3
+	.long	0x4532c
 	.quad	.LFB14637
 	.quad	.LFE14637-.LFB14637
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x23
-	.long	0x452aa
+	.long	0x452f3
 	.quad	.LFB14636
 	.quad	.LFE14636-.LFB14636
 	.uleb128 0x1

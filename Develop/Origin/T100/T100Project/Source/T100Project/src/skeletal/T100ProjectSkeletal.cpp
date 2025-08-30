@@ -11,6 +11,8 @@
 #include "T100ProjectData.h"
 #include "T100WxProjectInfo.h"
 
+#include "T100ProjectConfig.h"
+
 T100ProjectSkeletal::T100ProjectSkeletal() :
     T100ProjectSkeletalBase()
 {
@@ -287,19 +289,24 @@ T100VOID T100ProjectSkeletal::OnFolderSelected()
 
 T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
 {
+    if(!data){
+        return;
+    }
+
     T100FileLogic&      logic       = m_serve->GetProjectServe()->GetFileLogic();
+    T100FileInfo*       info        = data->GetFileInfo();
 
-    if(!logic.IsExists(data->GetFileInfo()->GetPath())){
-        return T100FALSE;
+    if(!info){
+        return;
     }
 
-    T100FileInfo*       info        = T100NEW T100FileInfo();
-
-    if(!logic.Open(data->GetFileInfo()->GetPath(), info)){
-        return T100FALSE;
+    if(!logic.IsExists(info->GetPath())){
+        return;
     }
 
-    info->SetFileName(data->GetFileInfo()->GetLabel());
+    if(!logic.Open(info->GetPath(), info)){
+        return;
+    }
 
     m_view->FileOpen(data->GetId(), info);
 }
@@ -393,7 +400,7 @@ T100VOID T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo* i
 
     T100ProjectInfo*        project     = T100NULL;
 
-    T100WSTRING     path    = folder.GetPath() + L"/" + info->GetLabel();
+    T100WSTRING     path    = folder.GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + info->GetLabel();
 
     folder.SetLabel(info->GetLabel());
     folder.SetPath(path);

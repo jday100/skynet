@@ -36,6 +36,7 @@ class T100ProjectInvoking
         static T100VOID                     OnFileNew();
         static T100VOID                     OnFileNew(T100VOID*);
         static T100VOID                     OnFileOpen();
+        static T100VOID                     OnFileOpen(T100FileData*);
         static T100VOID                     OnFileClose();
         static T100VOID                     OnFileSave();
         static T100VOID                     OnFileSaveAs();
@@ -58,7 +59,7 @@ class T100ProjectInvoking
         static T100VOID                     OnFolderNew();
         static T100VOID                     OnFolderSelected();
 
-        static T100VOID                     OnFileOpen(T100FileData*);
+
         static T100VOID                     OnFolderOpen(T100FolderData*);
         static T100VOID                     OnProjectOpen(T100ProjectData*);
 
