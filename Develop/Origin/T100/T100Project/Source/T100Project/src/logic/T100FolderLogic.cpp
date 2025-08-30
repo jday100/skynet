@@ -80,6 +80,7 @@ T100BOOL T100FolderLogic::Open(const T100WSTRING& path, T100FolderInfo* info)
         T100WSTRING         thisPath        = path + L"/" + item;
         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
 
+        thisFile->SetLabel(item);
         thisFile->SetFileName(item);
         thisFile->SetPath(thisPath);
 

@@ -61,7 +61,8 @@ import os
 import sys
 import subprocess
 
-g_gcc_path  = "C:\\zoo\\bin\\CodeBlocks\\MinGW\\bin"
+g_gcc_path  		= "C:\\zoo\\bin\\CodeBlocks\\MinGW\\bin"
+g_project_path 		= "C:\\vm\\Hello"
 
 def args():
 	print("Args...")
@@ -82,12 +83,13 @@ def build():
 	print("Build...")
 
 	global g_gcc_path
+	global g_project_path
 
-	cmd = "g++ "
+	cmd = "g++ -c " + "-I" + g_project_path + "\\include"
 
-	subprocess.call(cmd +
-                    "src/main.c \
-                    -o main.o"
+	subprocess.call(g_gcc_path + "\\" + cmd +
+				g_project_path + "\\src\\Hello.cpp \
+				-o main.o")
 
 def clean():
 	print("Clean...")
@@ -100,7 +102,6 @@ def rebuild():
 if __name__ == "__main__":
     print("Main...")
     args()
-
             """)
         print("OK")
     except Exception as err:

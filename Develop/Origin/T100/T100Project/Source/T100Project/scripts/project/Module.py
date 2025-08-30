@@ -32,6 +32,10 @@ def create_module_include():
     try:
         with open(g_project_path + "/include/" + g_module_label + ".h", 'w', encoding='UTF-8') as source:
             source.write("""
+#ifndef _H
+#define _H
+
+#endif // _H
             """)
         print("OK")
     except Exception as err:
@@ -46,6 +50,7 @@ def create_module_source():
     try:
         with open(g_project_path + "/src/" + g_module_label + ".cpp", 'w', encoding='UTF-8') as source:
             source.write("""
+#include ""
             """)
         print("OK")
     except Exception as err:
