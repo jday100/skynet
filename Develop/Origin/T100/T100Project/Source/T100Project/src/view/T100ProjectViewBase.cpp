@@ -116,6 +116,13 @@ T100BOOL T100ProjectViewBase::CheckMainPanel()
     return T100TRUE;
 }
 
+T100VOID T100ProjectViewBase::AppendBuildMessage(const T100WSTRING& value)
+{
+    if(m_buildPanel){
+        m_buildPanel->Append(value);
+    }
+}
+
 T100INT T100ProjectViewBase::ShowDirDialog(T100WSTRING& path)
 {
     T100INT             result;

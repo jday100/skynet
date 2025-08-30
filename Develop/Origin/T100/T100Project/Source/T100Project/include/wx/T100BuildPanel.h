@@ -16,7 +16,7 @@ class T100BuildPanel : public wxTextCtrl
                const wxString& name = wxTextCtrlNameStr);
         virtual ~T100BuildPanel();
 
-        virtual T100BOOL            Append(T100WSTRING&);
+        virtual T100BOOL            Append(const T100WSTRING&);
 
     protected:
 

@@ -252,6 +252,37 @@ _ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.cfi_endproc
 .LFE3135:
 	.seh_endproc
+	.section	.text$_ZNK8wxString12ToStdWstringB5cxx11Ev,"x"
+	.linkonce discard
+	.align 2
+	.globl	_ZNK8wxString12ToStdWstringB5cxx11Ev
+	.def	_ZNK8wxString12ToStdWstringB5cxx11Ev;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZNK8wxString12ToStdWstringB5cxx11Ev
+_ZNK8wxString12ToStdWstringB5cxx11Ev:
+.LFB3139:
+	.loc 2 1339 28
+	.cfi_startproc
+	pushq	%rbp	 #
+	.seh_pushreg	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp	 #,
+	.seh_setframe	%rbp, 0
+	.cfi_def_cfa_register 6
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)	 # this, this
+ # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1339:     const wxStdWideString& ToStdWstring() const { return m_impl; }
+	.loc 2 1339 58
+	movq	16(%rbp), %rax	 # this, _2
+ # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1339:     const wxStdWideString& ToStdWstring() const { return m_impl; }
+	.loc 2 1339 66
+	popq	%rbp	 #
+	.cfi_restore 6
+	.cfi_def_cfa 7, 8
+	ret	
+	.cfi_endproc
+.LFE3139:
+	.seh_endproc
 	.section	.text$_ZN13wxArrayStringC1Ev,"x"
 	.linkonce discard
 	.align 2
@@ -672,7 +703,7 @@ _ZN20wxThreadHelperThread5EntryEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:776:     if ( m_owner.m_kind == wxTHREAD_DETACHED )
 	.loc 4 776 5
 	testl	%eax, %eax	 # _10
-	jne	.L21	 #,
+	jne	.L23	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:777:         m_owner.m_thread = NULL;
 	.loc 4 777 9
 	movq	-48(%rbp), %rax	 # this, tmp107
@@ -680,7 +711,7 @@ _ZN20wxThreadHelperThread5EntryEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:777:         m_owner.m_thread = NULL;
 	.loc 4 777 26
 	movq	$0, 8(%rax)	 #, _11->m_thread
-.L21:
+.L23:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:779:     return result;
 	.loc 4 779 12
 	movq	-88(%rbp), %rbx	 # result, _21
@@ -845,7 +876,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 6 251 9
 	testb	%al, %al	 # retval.10_28
-	je	.L27	 #,
+	je	.L29	 #,
 .LBB10:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:253:             const wxObjectEventFunctor &other =
 	.loc 6 253 41
@@ -860,7 +891,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 6 262 74
 	cmpq	%rax, %rdx	 # _10, _9
-	jne	.L28	 #,
+	jne	.L30	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 6 262 40 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp116
@@ -870,7 +901,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 6 262 31 discriminator 1
 	cmpq	%rax, %rdx	 # _12, _11
-	je	.L29	 #,
+	je	.L31	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 6 262 40 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp118
@@ -878,8 +909,8 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 6 262 31 discriminator 4
 	testq	%rax, %rax	 # _13
-	je	.L29	 #,
-.L28:
+	je	.L31	 #,
+.L30:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 6 262 70 discriminator 6
 	movq	-8(%rbp), %rax	 # other, tmp119
@@ -887,8 +918,8 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 6 262 49 discriminator 6
 	testq	%rax, %rax	 # _14
-	jne	.L30	 #,
-.L29:
+	jne	.L32	 #,
+.L31:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 6 263 22 discriminator 7
 	movq	16(%rbp), %rax	 # this, tmp120
@@ -900,7 +931,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 6 262 74 discriminator 7
 	cmpq	%rax, %rdx	 # _16, _15
-	je	.L31	 #,
+	je	.L33	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 6 263 60
 	movq	-8(%rbp), %rax	 # other, tmp122
@@ -908,27 +939,27 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 6 263 51
 	testq	%rax, %rax	 # _17
-	jne	.L30	 #,
-.L31:
+	jne	.L32	 #,
+.L33:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 6 262 74 discriminator 9
 	movl	$1, %eax	 #, iftmp.11_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 6 263 78 discriminator 9
-	jmp	.L33	 #
-.L30:
+	jmp	.L35	 #
+.L32:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 6 262 74 discriminator 8
 	movl	$0, %eax	 #, iftmp.11_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 6 263 78 discriminator 8
-	jmp	.L33	 #
-.L27:
+	jmp	.L35	 #
+.L29:
 .LBE10:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:266:             return false;
 	.loc 6 266 20
 	movl	$0, %eax	 #, iftmp.11_19
-.L33:
+.L35:
 .LBE9:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:267:     }
 	.loc 6 267 5
@@ -1040,17 +1071,17 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 6 3776 50
 	testq	%rax, %rax	 # _1
-	je	.L39	 #,
+	je	.L41	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 6 3776 50 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp106
 	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.13_17
-	jmp	.L40	 #
-.L39:
+	jmp	.L42	 #
+.L41:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 6 3776 50 discriminator 2
 	movq	24(%rbp), %rax	 # handler, iftmp.13_17
-.L40:
+.L42:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 6 3776 26 is_stmt 1 discriminator 4
 	movq	%rax, -8(%rbp)	 # iftmp.13_17, realHandler
@@ -1069,7 +1100,7 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
 	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, _5
 	andl	$1, %eax	 #, _7
 	testq	%rax, %rax	 # _7
-	je	.L41	 #,
+	je	.L43	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 6 3778 35 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp110
@@ -1083,13 +1114,13 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
 	subq	$1, %rax	 #, _14
 	addq	%rdx, %rax	 # _11, _16
 	movq	(%rax), %rax	 # *_16, iftmp.14_18
-	jmp	.L42	 #
-.L41:
+	jmp	.L44	 #
+.L43:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 6 3778 35 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp113
 	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.14_18
-.L42:
+.L44:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 6 3778 29 is_stmt 1 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp114
@@ -1118,7 +1149,7 @@ _ZL5wxEOF:
 _ZN9T100ShellC2Ev:
 .LFB10187:
 	.file 7 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/library/shell/T100Shell.cpp"
-	.loc 7 6 1
+	.loc 7 7 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1130,14 +1161,14 @@ _ZN9T100ShellC2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB11:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:6: T100Shell::T100Shell()
-	.loc 7 6 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:7: T100Shell::T100Shell()
+	.loc 7 7 22
 	leaq	16+_ZTV9T100Shell(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp88
 	movq	%rdx, (%rax)	 # _1, this_3(D)->_vptr.T100Shell
 .LBE11:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:9: }
-	.loc 7 9 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:10: }
+	.loc 7 10 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1155,7 +1186,7 @@ _ZN9T100ShellC2Ev:
 	.seh_proc	_ZN9T100ShellD2Ev
 _ZN9T100ShellD2Ev:
 .LFB10190:
-	.loc 7 11 1
+	.loc 7 12 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1167,14 +1198,14 @@ _ZN9T100ShellD2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB12:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:11: T100Shell::~T100Shell()
-	.loc 7 11 23
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:12: T100Shell::~T100Shell()
+	.loc 7 12 23
 	leaq	16+_ZTV9T100Shell(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp88
 	movq	%rdx, (%rax)	 # _1, this_3(D)->_vptr.T100Shell
 .LBE12:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:14: }
-	.loc 7 14 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:15: }
+	.loc 7 15 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -1192,7 +1223,7 @@ _ZN9T100ShellD2Ev:
 	.seh_proc	_ZN9T100ShellD0Ev
 _ZN9T100ShellD0Ev:
 .LFB10192:
-	.loc 7 11 1
+	.loc 7 12 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1205,8 +1236,8 @@ _ZN9T100ShellD0Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:14: }
-	.loc 7 14 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:15: }
+	.loc 7 15 1
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN9T100ShellD1Ev	 #
 	movl	$8, %edx	 #,
@@ -1227,7 +1258,7 @@ _ZN9T100ShellD0Ev:
 	.seh_proc	_ZN9T100Shell3RunERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 _ZN9T100Shell3RunERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LFB10193:
-	.loc 7 17 1
+	.loc 7 18 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1241,14 +1272,14 @@ _ZN9T100Shell3RunERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # value, value
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:18:     Execute(value);
-	.loc 7 18 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:19:     Execute(value);
+	.loc 7 19 12
 	movq	24(%rbp), %rax	 # value, tmp87
 	movq	%rax, %rdx	 # tmp87,
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:19: }
-	.loc 7 19 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:20: }
+	.loc 7 20 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -1264,7 +1295,7 @@ _ZN9T100Shell3RunERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.seh_proc	_ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LFB10194:
-	.loc 7 22 1
+	.loc 7 23 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1287,274 +1318,283 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.seh_endprologue
 	movq	%rcx, 160(%rbp)	 # this, this
 	movq	%rdx, 168(%rbp)	 # value, value
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:23:     wxArrayString   output;
-	.loc 7 23 21
-	leaq	-16(%rbp), %rax	 #, tmp94
-	movq	%rax, %rcx	 # tmp94,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:24:     wxArrayString   output;
+	.loc 7 24 21
+	leaq	-16(%rbp), %rax	 #, tmp95
+	movq	%rax, %rcx	 # tmp95,
 .LEHB0:
 	call	_ZN13wxArrayStringC1Ev	 #
 .LEHE0:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:24:     wxArrayString   error;
-	.loc 7 24 21
-	leaq	-48(%rbp), %rax	 #, tmp95
-	movq	%rax, %rcx	 # tmp95,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:25:     wxArrayString   error;
+	.loc 7 25 21
+	leaq	-48(%rbp), %rax	 #, tmp96
+	movq	%rax, %rcx	 # tmp96,
 .LEHB1:
 	call	_ZN13wxArrayStringC1Ev	 #
 .LEHE1:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:26:     T100ExecuteProcess*     process     = T100NEW T100ExecuteProcess(&output, &error);
-	.loc 7 26 85
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:27:     T100ExecuteProcess*     process     = T100NEW T100ExecuteProcess(&output, &error);
+	.loc 7 27 85
 	movl	$200, %ecx	 #,
 .LEHB2:
 	call	_Znwy	 #
 .LEHE2:
-	movq	%rax, %rbx	 # tmp96, _20
-	leaq	-48(%rbp), %rdx	 #, tmp97
-	leaq	-16(%rbp), %rax	 #, tmp98
-	movq	%rdx, %r8	 # tmp97,
-	movq	%rax, %rdx	 # tmp98,
-	movq	%rbx, %rcx	 # _20,
+	movq	%rax, %rbx	 # tmp97, _22
+	leaq	-48(%rbp), %rdx	 #, tmp98
+	leaq	-16(%rbp), %rax	 #, tmp99
+	movq	%rdx, %r8	 # tmp98,
+	movq	%rax, %rdx	 # tmp99,
+	movq	%rbx, %rcx	 # _22,
 .LEHB3:
 	call	_ZN18T100ExecuteProcessC1EP13wxArrayStringS1_	 #
 .LEHE3:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:26:     T100ExecuteProcess*     process     = T100NEW T100ExecuteProcess(&output, &error);
-	.loc 7 26 85 is_stmt 0 discriminator 3
-	movq	%rbx, 104(%rbp)	 # _20, process
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
-	.loc 7 28 17 is_stmt 1 discriminator 3
-	movq	168(%rbp), %rdx	 # value, tmp99
-	leaq	16(%rbp), %rax	 #, tmp100
-	movq	%rax, %rcx	 # tmp100,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:27:     T100ExecuteProcess*     process     = T100NEW T100ExecuteProcess(&output, &error);
+	.loc 7 27 85 is_stmt 0 discriminator 3
+	movq	%rbx, 104(%rbp)	 # _22, process
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
+	.loc 7 29 17 is_stmt 1 discriminator 3
+	movq	168(%rbp), %rdx	 # value, tmp100
+	leaq	16(%rbp), %rax	 #, tmp101
+	movq	%rax, %rcx	 # tmp101,
 .LEHB4:
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE4:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
-	.loc 7 28 17 is_stmt 0 discriminator 1
-	movq	104(%rbp), %rdx	 # process, tmp101
-	leaq	16(%rbp), %rax	 #, tmp102
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
+	.loc 7 29 17 is_stmt 0 discriminator 1
+	movq	104(%rbp), %rdx	 # process, tmp102
+	leaq	16(%rbp), %rax	 #, tmp103
 	movl	$0, %r9d	 #,
-	movq	%rdx, %r8	 # tmp101,
+	movq	%rdx, %r8	 # tmp102,
 	movl	$2, %edx	 #,
-	movq	%rax, %rcx	 # tmp102,
+	movq	%rax, %rcx	 # tmp103,
 .LEHB5:
 	call	_Z9wxExecuteRK8wxStringiP9wxProcessPK12wxExecuteEnv	 #
 .LEHE5:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
-	.loc 7 28 71 is_stmt 1 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
+	.loc 7 29 71 is_stmt 1 discriminator 1
 	testl	%eax, %eax	 # _1
-	sete	%bl	 #, retval.0_28
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
-	.loc 7 28 17 discriminator 1
-	leaq	16(%rbp), %rax	 #, tmp103
-	movq	%rax, %rcx	 # tmp103,
-	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
-	.loc 7 28 5 discriminator 1
-	testb	%bl, %bl	 # retval.0_28
-	je	.L48	 #,
-	movl	$0, %ebx	 #, finally_tmp.2_4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:         return;
-	.loc 7 29 9
-	jmp	.L49	 #
-.L48:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:32:     while(process->IsRunning()){
-	.loc 7 32 29
-	movq	104(%rbp), %rax	 # process, tmp104
+	sete	%bl	 #, retval.0_30
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
+	.loc 7 29 17 discriminator 1
+	leaq	16(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
-.LEHB6:
-	call	_ZN18T100ExecuteProcess9IsRunningEv	 #
-	testb	%al, %al	 # _33
+	call	_ZN8wxStringD1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
+	.loc 7 29 5 discriminator 1
+	testb	%bl, %bl	 # retval.0_30
 	je	.L50	 #,
-.LBB13:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:33:         process->FlushPipe();
-	.loc 7 33 27
+	movl	$0, %ebx	 #, finally_tmp.2_5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:30:         return;
+	.loc 7 30 9
+	jmp	.L51	 #
+.L50:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:33:     while(process->IsRunning()){
+	.loc 7 33 29
 	movq	104(%rbp), %rax	 # process, tmp105
 	movq	%rax, %rcx	 # tmp105,
+.LEHB6:
+	call	_ZN18T100ExecuteProcess9IsRunningEv	 #
+	testb	%al, %al	 # _35
+	je	.L52	 #,
+.LBB13:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:34:         process->FlushPipe();
+	.loc 7 34 27
+	movq	104(%rbp), %rax	 # process, tmp106
+	movq	%rax, %rcx	 # tmp106,
 	call	_ZN18T100ExecuteProcess9FlushPipeEv	 #
 .LBB14:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:35:         for(wxString item : output){
-	.loc 7 35 29
-	leaq	-16(%rbp), %rax	 #, tmp106
-	movq	%rax, 96(%rbp)	 # tmp106, __for_range
-	movq	96(%rbp), %rax	 # __for_range, tmp107
-	movq	%rax, %rcx	 # tmp107,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
+	.loc 7 36 29
+	leaq	-16(%rbp), %rax	 #, tmp107
+	movq	%rax, 96(%rbp)	 # tmp107, __for_range
+	movq	96(%rbp), %rax	 # __for_range, tmp108
+	movq	%rax, %rcx	 # tmp108,
 	call	_ZN13wxArrayString5beginEv	 #
-	movq	%rax, 120(%rbp)	 # tmp108, __for_begin
-	movq	96(%rbp), %rax	 # __for_range, tmp109
-	movq	%rax, %rcx	 # tmp109,
+	movq	%rax, 120(%rbp)	 # tmp109, __for_begin
+	movq	96(%rbp), %rax	 # __for_range, tmp110
+	movq	%rax, %rcx	 # tmp110,
 	call	_ZN13wxArrayString3endEv	 #
-	movq	%rax, 88(%rbp)	 # tmp110, __for_end
-.L52:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:35:         for(wxString item : output){
-	.loc 7 35 29 is_stmt 0 discriminator 1
-	movq	120(%rbp), %rax	 # __for_begin, tmp111
-	cmpq	88(%rbp), %rax	 # __for_end, tmp111
-	je	.L51	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:35:         for(wxString item : output){
-	.loc 7 35 29 discriminator 2
-	movq	120(%rbp), %rdx	 # __for_begin, tmp112
-	leaq	-96(%rbp), %rax	 #, tmp113
-	movq	%rax, %rcx	 # tmp113,
+	movq	%rax, 88(%rbp)	 # tmp111, __for_end
+.L54:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
+	.loc 7 36 29 is_stmt 0 discriminator 1
+	movq	120(%rbp), %rax	 # __for_begin, tmp112
+	cmpq	88(%rbp), %rax	 # __for_end, tmp112
+	je	.L53	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
+	.loc 7 36 29 discriminator 2
+	movq	120(%rbp), %rdx	 # __for_begin, tmp113
+	leaq	-96(%rbp), %rax	 #, tmp114
+	movq	%rax, %rcx	 # tmp114,
 	call	_ZN8wxStringC1ERKS_	 #
 .LEHE6:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:             std::cout << item;
-	.loc 7 36 26 is_stmt 1
-	leaq	-96(%rbp), %rax	 #, tmp114
-	movq	%rax, %rdx	 # tmp114,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:37:             std::cout << item;
+	.loc 7 37 26 is_stmt 1
+	leaq	-96(%rbp), %rax	 #, tmp115
+	movq	%rax, %rdx	 # tmp115,
 	movq	.refptr._ZSt4cout(%rip), %rcx	 #,
 .LEHB7:
 	call	_ZlsRSoRK8wxString	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:             T100ProjectInvoking::OnBuildMessage(item.ToStdWstring());
+	.loc 7 38 67
+	leaq	-96(%rbp), %rax	 #, tmp116
+	movq	%rax, %rcx	 # tmp116,
+	call	_ZNK8wxString12ToStdWstringB5cxx11Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:             T100ProjectInvoking::OnBuildMessage(item.ToStdWstring());
+	.loc 7 38 48
+	movq	%rax, %rcx	 # _2,
+	call	_ZN19T100ProjectInvoking14OnBuildMessageERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE7:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:35:         for(wxString item : output){
-	.loc 7 35 29 discriminator 3
-	leaq	-96(%rbp), %rax	 #, tmp115
-	movq	%rax, %rcx	 # tmp115,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
+	.loc 7 36 29 discriminator 3
+	leaq	-96(%rbp), %rax	 #, tmp117
+	movq	%rax, %rcx	 # tmp117,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:35:         for(wxString item : output){
-	.loc 7 35 9 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
+	.loc 7 36 9 discriminator 3
 	addq	$48, 120(%rbp)	 #, __for_begin
-	jmp	.L52	 #
-.L51:
+	jmp	.L54	 #
+.L53:
 .LBE14:
 .LBB15:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:         for(wxString item : error){
-	.loc 7 38 29
-	leaq	-48(%rbp), %rax	 #, tmp116
-	movq	%rax, 80(%rbp)	 # tmp116, __for_range
-	movq	80(%rbp), %rax	 # __for_range, tmp117
-	movq	%rax, %rcx	 # tmp117,
-	call	_ZN13wxArrayString5beginEv	 #
-	movq	%rax, 112(%rbp)	 # tmp118, __for_begin
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
+	.loc 7 40 29
+	leaq	-48(%rbp), %rax	 #, tmp118
+	movq	%rax, 80(%rbp)	 # tmp118, __for_range
 	movq	80(%rbp), %rax	 # __for_range, tmp119
 	movq	%rax, %rcx	 # tmp119,
+	call	_ZN13wxArrayString5beginEv	 #
+	movq	%rax, 112(%rbp)	 # tmp120, __for_begin
+	movq	80(%rbp), %rax	 # __for_range, tmp121
+	movq	%rax, %rcx	 # tmp121,
 	call	_ZN13wxArrayString3endEv	 #
-	movq	%rax, 72(%rbp)	 # tmp120, __for_end
-.L54:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:         for(wxString item : error){
-	.loc 7 38 29 is_stmt 0 discriminator 1
-	movq	112(%rbp), %rax	 # __for_begin, tmp121
-	cmpq	72(%rbp), %rax	 # __for_end, tmp121
-	je	.L72	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:         for(wxString item : error){
-	.loc 7 38 29 discriminator 2
-	movq	112(%rbp), %rdx	 # __for_begin, tmp122
-	leaq	-96(%rbp), %rax	 #, tmp123
-	movq	%rax, %rcx	 # tmp123,
+	movq	%rax, 72(%rbp)	 # tmp122, __for_end
+.L56:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
+	.loc 7 40 29 is_stmt 0 discriminator 1
+	movq	112(%rbp), %rax	 # __for_begin, tmp123
+	cmpq	72(%rbp), %rax	 # __for_end, tmp123
+	je	.L74	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
+	.loc 7 40 29 discriminator 2
+	movq	112(%rbp), %rdx	 # __for_begin, tmp124
+	leaq	-96(%rbp), %rax	 #, tmp125
+	movq	%rax, %rcx	 # tmp125,
 .LEHB8:
 	call	_ZN8wxStringC1ERKS_	 #
 .LEHE8:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:39:             std::cout << item;
-	.loc 7 39 26 is_stmt 1
-	leaq	-96(%rbp), %rax	 #, tmp124
-	movq	%rax, %rdx	 # tmp124,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:41:             std::cout << item;
+	.loc 7 41 26 is_stmt 1
+	leaq	-96(%rbp), %rax	 #, tmp126
+	movq	%rax, %rdx	 # tmp126,
 	movq	.refptr._ZSt4cout(%rip), %rcx	 #,
 .LEHB9:
 	call	_ZlsRSoRK8wxString	 #
 .LEHE9:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:         for(wxString item : error){
-	.loc 7 38 29 discriminator 3
-	leaq	-96(%rbp), %rax	 #, tmp125
-	movq	%rax, %rcx	 # tmp125,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
+	.loc 7 40 29 discriminator 3
+	leaq	-96(%rbp), %rax	 #, tmp127
+	movq	%rax, %rcx	 # tmp127,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:         for(wxString item : error){
-	.loc 7 38 9 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
+	.loc 7 40 9 discriminator 3
 	addq	$48, 112(%rbp)	 #, __for_begin
-	jmp	.L54	 #
-.L72:
+	jmp	.L56	 #
+.L74:
 .LBE15:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:41:         break;
-	.loc 7 41 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:43:         break;
+	.loc 7 43 9
 	nop	
-.L50:
+.L52:
 .LBE13:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:44:     process->ExitCode();
-	.loc 7 44 22
-	movq	104(%rbp), %rax	 # process, tmp126
-	movq	%rax, %rcx	 # tmp126,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:46:     process->ExitCode();
+	.loc 7 46 22
+	movq	104(%rbp), %rax	 # process, tmp128
+	movq	%rax, %rcx	 # tmp128,
 .LEHB10:
 	call	_ZN18T100ExecuteProcess8ExitCodeEv	 #
 .LEHE10:
-	movl	$1, %ebx	 #, finally_tmp.2_4
-.L49:
-	leaq	-48(%rbp), %rax	 #, tmp127
-	movq	%rax, %rcx	 # tmp127,
+	movl	$1, %ebx	 #, finally_tmp.2_5
+.L51:
+	leaq	-48(%rbp), %rax	 #, tmp129
+	movq	%rax, %rcx	 # tmp129,
 	call	_ZN13wxArrayStringD1Ev	 #
-	cmpl	$1, %ebx	 #, finally_tmp.2_4
-	jne	.L55	 #,
-	movl	$1, %ebx	 #, finally_tmp.3_5
-	jmp	.L56	 #
-.L55:
-	movl	$0, %ebx	 #, finally_tmp.3_5
-.L56:
-	leaq	-16(%rbp), %rax	 #, tmp128
-	movq	%rax, %rcx	 # tmp128,
+	cmpl	$1, %ebx	 #, finally_tmp.2_5
+	jne	.L57	 #,
+	movl	$1, %ebx	 #, finally_tmp.3_6
+	jmp	.L58	 #
+.L57:
+	movl	$0, %ebx	 #, finally_tmp.3_6
+.L58:
+	leaq	-16(%rbp), %rax	 #, tmp130
+	movq	%rax, %rcx	 # tmp130,
 	call	_ZN13wxArrayStringD1Ev	 #
-	cmpl	$1, %ebx	 #, finally_tmp.3_5
-	jmp	.L71	 #
-.L67:
-	movq	%rax, %rsi	 #, tmp130
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:26:     T100ExecuteProcess*     process     = T100NEW T100ExecuteProcess(&output, &error);
-	.loc 7 26 85
-	movl	$200, %edx	 #,
-	movq	%rbx, %rcx	 # _20,
-	call	_ZdlPvy	 #
-	movq	%rsi, %rbx	 # tmp130, tmp129
-	jmp	.L60	 #
-.L68:
-	movq	%rax, %rbx	 #, tmp134
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:28:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
-	.loc 7 28 17
-	leaq	16(%rbp), %rax	 #, tmp133
-	movq	%rax, %rcx	 # tmp133,
-	call	_ZN8wxStringD1Ev	 #
-	jmp	.L60	 #
+	cmpl	$1, %ebx	 #, finally_tmp.3_6
+	jmp	.L73	 #
 .L69:
-	movq	%rax, %rbx	 #, tmp137
+	movq	%rax, %rsi	 #, tmp132
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:27:     T100ExecuteProcess*     process     = T100NEW T100ExecuteProcess(&output, &error);
+	.loc 7 27 85
+	movl	$200, %edx	 #,
+	movq	%rbx, %rcx	 # _22,
+	call	_ZdlPvy	 #
+	movq	%rsi, %rbx	 # tmp132, tmp131
+	jmp	.L62	 #
+.L70:
+	movq	%rax, %rbx	 #, tmp136
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
+	.loc 7 29 17
+	leaq	16(%rbp), %rax	 #, tmp135
+	movq	%rax, %rcx	 # tmp135,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L62	 #
+.L71:
+	movq	%rax, %rbx	 #, tmp139
 .LBB18:
 .LBB16:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:35:         for(wxString item : output){
-	.loc 7 35 29
-	leaq	-96(%rbp), %rax	 #, tmp136
-	movq	%rax, %rcx	 # tmp136,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
+	.loc 7 36 29
+	leaq	-96(%rbp), %rax	 #, tmp138
+	movq	%rax, %rcx	 # tmp138,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L60	 #
-.L70:
-	movq	%rax, %rbx	 #, tmp140
+	jmp	.L62	 #
+.L72:
+	movq	%rax, %rbx	 #, tmp142
 .LBE16:
 .LBB17:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:         for(wxString item : error){
-	.loc 7 38 29
-	leaq	-96(%rbp), %rax	 #, tmp139
-	movq	%rax, %rcx	 # tmp139,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
+	.loc 7 40 29
+	leaq	-96(%rbp), %rax	 #, tmp141
+	movq	%rax, %rcx	 # tmp141,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L60	 #
-.L66:
-	movq	%rax, %rbx	 #, tmp129
-.L60:
+	jmp	.L62	 #
+.L68:
+	movq	%rax, %rbx	 #, tmp131
+.L62:
 .LBE17:
 .LBE18:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:24:     wxArrayString   error;
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:25:     wxArrayString   error;
+	.loc 7 25 21
+	leaq	-48(%rbp), %rax	 #, tmp144
+	movq	%rax, %rcx	 # tmp144,
+	call	_ZN13wxArrayStringD1Ev	 #
+	jmp	.L66	 #
+.L67:
+	movq	%rax, %rbx	 #, tmp145
+.L66:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:24:     wxArrayString   output;
 	.loc 7 24 21
-	leaq	-48(%rbp), %rax	 #, tmp142
-	movq	%rax, %rcx	 # tmp142,
+	leaq	-16(%rbp), %rax	 #, tmp147
+	movq	%rax, %rcx	 # tmp147,
 	call	_ZN13wxArrayStringD1Ev	 #
-	jmp	.L64	 #
-.L65:
-	movq	%rax, %rbx	 #, tmp143
-.L64:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:23:     wxArrayString   output;
-	.loc 7 23 21
-	leaq	-16(%rbp), %rax	 #, tmp145
-	movq	%rax, %rcx	 # tmp145,
-	call	_ZN13wxArrayStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp143, D.133309
-	movq	%rax, %rcx	 # D.133309,
+	movq	%rbx, %rax	 # tmp145, D.133400
+	movq	%rax, %rcx	 # D.133400,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE11:
-.L71:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:45: }
-	.loc 7 45 1
+.L73:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47: }
+	.loc 7 47 1
 	addq	$256, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -1580,43 +1620,43 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	.uleb128 0
 	.uleb128 .LEHB1-.LFB10194
 	.uleb128 .LEHE1-.LEHB1
-	.uleb128 .L65-.LFB10194
+	.uleb128 .L67-.LFB10194
 	.uleb128 0
 	.uleb128 .LEHB2-.LFB10194
 	.uleb128 .LEHE2-.LEHB2
-	.uleb128 .L66-.LFB10194
+	.uleb128 .L68-.LFB10194
 	.uleb128 0
 	.uleb128 .LEHB3-.LFB10194
 	.uleb128 .LEHE3-.LEHB3
-	.uleb128 .L67-.LFB10194
+	.uleb128 .L69-.LFB10194
 	.uleb128 0
 	.uleb128 .LEHB4-.LFB10194
 	.uleb128 .LEHE4-.LEHB4
-	.uleb128 .L66-.LFB10194
+	.uleb128 .L68-.LFB10194
 	.uleb128 0
 	.uleb128 .LEHB5-.LFB10194
 	.uleb128 .LEHE5-.LEHB5
-	.uleb128 .L68-.LFB10194
+	.uleb128 .L70-.LFB10194
 	.uleb128 0
 	.uleb128 .LEHB6-.LFB10194
 	.uleb128 .LEHE6-.LEHB6
-	.uleb128 .L66-.LFB10194
+	.uleb128 .L68-.LFB10194
 	.uleb128 0
 	.uleb128 .LEHB7-.LFB10194
 	.uleb128 .LEHE7-.LEHB7
-	.uleb128 .L69-.LFB10194
+	.uleb128 .L71-.LFB10194
 	.uleb128 0
 	.uleb128 .LEHB8-.LFB10194
 	.uleb128 .LEHE8-.LEHB8
-	.uleb128 .L66-.LFB10194
+	.uleb128 .L68-.LFB10194
 	.uleb128 0
 	.uleb128 .LEHB9-.LFB10194
 	.uleb128 .LEHE9-.LEHB9
-	.uleb128 .L70-.LFB10194
+	.uleb128 .L72-.LFB10194
 	.uleb128 0
 	.uleb128 .LEHB10-.LFB10194
 	.uleb128 .LEHE10-.LEHB10
-	.uleb128 .L66-.LFB10194
+	.uleb128 .L68-.LFB10194
 	.uleb128 0
 	.uleb128 .LEHB11-.LFB10194
 	.uleb128 .LEHE11-.LEHB11
@@ -2011,7 +2051,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB11313:
-	.loc 7 45 1
+	.loc 7 47 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2025,23 +2065,23 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:45: }
-	.loc 7 45 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47: }
+	.loc 7 47 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
-	jne	.L82	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:45: }
-	.loc 7 45 1 is_stmt 0 discriminator 1
+	jne	.L84	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47: }
+	.loc 7 47 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
-	jne	.L82	 #,
+	jne	.L84	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 8 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
 	call	_ZNSt8ios_base4InitC1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
-.L82:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:45: }
-	.loc 7 45 1
+.L84:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47: }
+	.loc 7 47 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2055,7 +2095,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_proc	_GLOBAL__sub_I__ZN9T100ShellC2Ev
 _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 .LFB11373:
-	.loc 7 45 1
+	.loc 7 47 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2067,8 +2107,8 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:45: }
-	.loc 7 45 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47: }
+	.loc 7 47 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -2162,7 +2202,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.file 82 "<built-in>"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x3a543
+	.long	0x3a56f
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -3034,13 +3074,13 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0xa1
 	.byte	0x7
 	.long	0xc80
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF3
 	.byte	0xd
 	.byte	0xa2
 	.byte	0x35
 	.long	0x171b8
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF4
 	.byte	0xd
 	.byte	0xa3
@@ -5820,13 +5860,13 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0xa1
 	.byte	0x7
 	.long	0x531b
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF3
 	.byte	0xd
 	.byte	0xa2
 	.byte	0x35
 	.long	0x17233
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF4
 	.byte	0xd
 	.byte	0xa3
@@ -8672,13 +8712,13 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0xa1
 	.byte	0x7
 	.long	0x9b41
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF3
 	.byte	0xd
 	.byte	0xa2
 	.byte	0x35
 	.long	0x172fa
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF4
 	.byte	0xd
 	.byte	0xa3
@@ -11400,7 +11440,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x48
 	.byte	0x2d
 	.long	0x158da
-	.uleb128 0x51
+	.uleb128 0x52
 	.ascii "operator std::integral_constant<bool, false>::value_type\0"
 	.byte	0x10
 	.byte	0x4a
@@ -11453,7 +11493,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x48
 	.byte	0x2d
 	.long	0x158da
-	.uleb128 0x51
+	.uleb128 0x52
 	.ascii "operator std::integral_constant<bool, true>::value_type\0"
 	.byte	0x10
 	.byte	0x4a
@@ -11625,7 +11665,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x2
 	.long	0x15946
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.ascii "_M_get\0"
 	.byte	0x15
 	.byte	0x58
@@ -11804,7 +11844,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0xf2
 	.byte	0x1d
 	.long	0x15958
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "type_info\0"
 	.long	0xead6
 	.uleb128 0x92
@@ -14236,7 +14276,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x47
 	.byte	0x14
 	.long	0x10d0f
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "ios_base\0"
 	.long	0x10dd9
 	.uleb128 0xba
@@ -14321,7 +14361,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x69
 	.byte	0xb
 	.long	0x173ba
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "basic_ostream<char, std::char_traits<char> >\0"
 	.long	0x10e56
 	.uleb128 0x17
@@ -14331,7 +14371,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.secrel32	.LASF87
 	.long	0xeec1
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "basic_ostream<wchar_t, std::char_traits<wchar_t> >\0"
 	.long	0x10ea1
 	.uleb128 0x17
@@ -14341,7 +14381,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.secrel32	.LASF87
 	.long	0xf26f
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "basic_istream<char, std::char_traits<char> >\0"
 	.long	0x10ee6
 	.uleb128 0x17
@@ -14351,7 +14391,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.secrel32	.LASF87
 	.long	0xeec1
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "basic_istream<wchar_t, std::char_traits<wchar_t> >\0"
 	.long	0x10f31
 	.uleb128 0x17
@@ -15286,35 +15326,35 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x1719a
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF130
 	.byte	0x2a
 	.byte	0x64
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIcEcE27_S_propagate_on_copy_assignEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF131
 	.byte	0x2a
 	.byte	0x67
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIcEcE27_S_propagate_on_move_assignEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF132
 	.byte	0x2a
 	.byte	0x6a
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIcEcE20_S_propagate_on_swapEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF133
 	.byte	0x2a
 	.byte	0x6d
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIcEcE15_S_always_equalEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF134
 	.byte	0x2a
 	.byte	0x70
@@ -16020,35 +16060,35 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x17210
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF130
 	.byte	0x2a
 	.byte	0x64
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE27_S_propagate_on_copy_assignEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF131
 	.byte	0x2a
 	.byte	0x67
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE27_S_propagate_on_move_assignEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF132
 	.byte	0x2a
 	.byte	0x6a
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE20_S_propagate_on_swapEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF133
 	.byte	0x2a
 	.byte	0x6d
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIwEwE15_S_always_equalEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF134
 	.byte	0x2a
 	.byte	0x70
@@ -16813,35 +16853,35 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x172dc
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF130
 	.byte	0x2a
 	.byte	0x64
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIDiEDiE27_S_propagate_on_copy_assignEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF131
 	.byte	0x2a
 	.byte	0x67
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIDiEDiE27_S_propagate_on_move_assignEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF132
 	.byte	0x2a
 	.byte	0x6a
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIDiEDiE20_S_propagate_on_swapEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF133
 	.byte	0x2a
 	.byte	0x6d
 	.byte	0x1b
 	.ascii "_ZN9__gnu_cxx14__alloc_traitsISaIDiEDiE15_S_always_equalEv\0"
 	.long	0x158da
-	.uleb128 0x33
+	.uleb128 0x34
 	.secrel32	.LASF134
 	.byte	0x2a
 	.byte	0x70
@@ -20146,7 +20186,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x20e61
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF152
 	.byte	0x30
 	.byte	0x2
@@ -29571,7 +29611,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x3c
 	.byte	0x1e
 	.byte	0x8
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "Kind\0"
 	.byte	0x7
 	.byte	0x4
@@ -29877,7 +29917,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x21944
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.ascii "Get\0"
 	.byte	0x3c
 	.byte	0xab
@@ -30207,7 +30247,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x21944
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.ascii "Get\0"
 	.byte	0x3c
 	.byte	0xab
@@ -30501,7 +30541,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x22747
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF196
 	.byte	0x8
 	.byte	0x3c
@@ -35195,7 +35235,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x2
 	.long	0x27097
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.ascii "InputAsWChar\0"
 	.byte	0x40
 	.byte	0xe3
@@ -35207,7 +35247,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x2
 	.long	0x27085
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.ascii "AsWChar\0"
 	.byte	0x40
 	.byte	0xe4
@@ -35532,7 +35572,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x2
 	.long	0x27aaa
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "itor\0"
 	.byte	0x41
 	.byte	0x5e
@@ -36136,7 +36176,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x27dd9
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "NodeDtor\0"
 	.byte	0x43
 	.byte	0x57
@@ -36209,14 +36249,14 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x27fa2
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "BucketFromNode\0"
 	.byte	0x43
 	.byte	0x58
 	.byte	0x56
 	.long	0x28067
 	.byte	0x1
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "ProcessNode\0"
 	.byte	0x43
 	.byte	0x59
@@ -36540,7 +36580,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0xf
 	.long	0x27107
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF225
 	.byte	0x10
 	.byte	0x44
@@ -36738,7 +36778,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.word	0x392
 	.byte	0xe
 	.long	0x22d
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "wxBitmapType\0"
 	.byte	0x7
 	.byte	0x4
@@ -37402,7 +37442,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x2947d
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF233
 	.byte	0x8
 	.byte	0x46
@@ -37559,7 +37599,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x29252
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF234
 	.byte	0x10
 	.byte	0x46
@@ -37706,7 +37746,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.long	0x2947d
 	.uleb128 0x10
 	.ascii "wxwxPointListNode\0"
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF235
 	.byte	0x38
 	.byte	0x46
@@ -37795,7 +37835,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x2976c
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF238
 	.byte	0x1
 	.byte	0x46
@@ -37904,7 +37944,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x2994d
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF241
 	.byte	0x20
 	.byte	0x46
@@ -38840,7 +38880,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x2aaa2
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF244
 	.byte	0x20
 	.byte	0x46
@@ -39075,7 +39115,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x29fe9
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF246
 	.byte	0x8
 	.byte	0x46
@@ -40368,7 +40408,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x2ca9f
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "CompareFunction\0"
 	.byte	0x3
 	.byte	0x7d
@@ -40389,7 +40429,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x2caff
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "CompareFunction2\0"
 	.byte	0x3
 	.byte	0x81
@@ -41055,7 +41095,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x2cbe2
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "wxPosixPermissions\0"
 	.byte	0x7
 	.byte	0x4
@@ -42120,7 +42160,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0
 	.uleb128 0x8
 	.long	0x2d692
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF265
 	.byte	0x8
 	.byte	0x49
@@ -43097,7 +43137,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.word	0x32b
 	.byte	0x31
 	.long	0x238b7
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "wxThreadError\0"
 	.byte	0x7
 	.byte	0x4
@@ -43125,7 +43165,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.ascii "wxTHREAD_MISC_ERROR\0"
 	.byte	0x5
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "wxThreadKind\0"
 	.byte	0x7
 	.byte	0x4
@@ -43141,7 +43181,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.ascii "wxTHREAD_JOINABLE\0"
 	.byte	0x1
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "wxThreadWait\0"
 	.byte	0x7
 	.byte	0x4
@@ -43160,7 +43200,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.ascii "wxTHREAD_WAIT_DEFAULT\0"
 	.byte	0x1
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.ascii "wxCriticalSectionType\0"
 	.byte	0x7
 	.byte	0x4
@@ -43327,7 +43367,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x2f7a7
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF268
 	.byte	0x8
 	.byte	0x4
@@ -43529,7 +43569,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x2a
 	.byte	0xd
 	.long	0x1593e
-	.uleb128 0x50
+	.uleb128 0x51
 	.secrel32	.LASF267
 	.byte	0x4b
 	.byte	0x2b
@@ -44444,7 +44484,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0
 	.uleb128 0x8
 	.long	0x30675
-	.uleb128 0x54
+	.uleb128 0x55
 	.ascii "wxDateTime_t\0"
 	.byte	0x4d
 	.byte	0x8f
@@ -44462,7 +44502,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x30374
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "GetCountry\0"
 	.byte	0x4d
 	.word	0x176
@@ -44685,7 +44725,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x30374
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Now\0"
 	.byte	0x4d
 	.word	0x1be
@@ -44693,7 +44733,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.ascii "_ZN10wxDateTime3NowEv\0"
 	.long	0x3019d
 	.byte	0x1
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "UNow\0"
 	.byte	0x4d
 	.word	0x1c2
@@ -44701,7 +44741,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.ascii "_ZN10wxDateTime4UNowEv\0"
 	.long	0x3019d
 	.byte	0x1
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Today\0"
 	.byte	0x4d
 	.word	0x1c6
@@ -47047,7 +47087,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x2
 	.long	0x33dd9
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "GetTimeNow\0"
 	.byte	0x4d
 	.word	0x473
@@ -47161,7 +47201,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x349d4
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF285
 	.byte	0x8
 	.byte	0x4d
@@ -47180,7 +47220,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x2d67a
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Millisecond\0"
 	.byte	0x4d
 	.word	0x4a2
@@ -47200,7 +47240,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x2d67a
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Second\0"
 	.byte	0x4d
 	.word	0x4a6
@@ -47220,7 +47260,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x239
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Minute\0"
 	.byte	0x4d
 	.word	0x4aa
@@ -47240,7 +47280,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x239
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Hour\0"
 	.byte	0x4d
 	.word	0x4ae
@@ -47260,7 +47300,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x239
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Day\0"
 	.byte	0x4d
 	.word	0x4b2
@@ -47280,7 +47320,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x239
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Week\0"
 	.byte	0x4d
 	.word	0x4b6
@@ -47872,7 +47912,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x35220
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF288
 	.byte	0x10
 	.byte	0x4d
@@ -47911,7 +47951,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x22d
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Day\0"
 	.byte	0x4d
 	.word	0x58d
@@ -47931,7 +47971,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x22d
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Week\0"
 	.byte	0x4d
 	.word	0x591
@@ -47951,7 +47991,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x22d
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Month\0"
 	.byte	0x4d
 	.word	0x595
@@ -47971,7 +48011,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x22d
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.ascii "Year\0"
 	.byte	0x4d
 	.word	0x599
@@ -48652,7 +48692,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x35ca2
-	.uleb128 0x34
+	.uleb128 0x35
 	.secrel32	.LASF290
 	.byte	0x20
 	.byte	0x4b
@@ -51654,7 +51694,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xe
 	.secrel32	.LASF294
 	.byte	0x7
-	.byte	0x6
+	.byte	0x7
 	.byte	0x1
 	.ascii "_ZN9T100ShellC4Ev\0"
 	.byte	0x1
@@ -51666,7 +51706,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x80
 	.ascii "~T100Shell\0"
 	.byte	0x7
-	.byte	0xb
+	.byte	0xc
 	.byte	0x1
 	.ascii "_ZN9T100ShellD4Ev\0"
 	.byte	0x1
@@ -51682,7 +51722,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x2a
 	.ascii "Run\0"
 	.byte	0x7
-	.byte	0x10
+	.byte	0x11
 	.byte	0xa
 	.ascii "_ZN9T100Shell3RunERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
 	.byte	0x1
@@ -51696,7 +51736,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xd6
 	.ascii "Execute\0"
 	.byte	0x7
-	.byte	0x15
+	.byte	0x16
 	.byte	0xa
 	.ascii "_ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
 	.byte	0x1
@@ -52031,7 +52071,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0
 	.uleb128 0x8
 	.long	0x38cbf
-	.uleb128 0x52
+	.uleb128 0x53
 	.ascii "wxThread\0"
 	.long	0x38f1b
 	.uleb128 0xd8
@@ -52343,7 +52383,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x85
 	.ascii "__initialize_p\0"
 	.byte	0x7
-	.byte	0x2d
+	.byte	0x2f
 	.byte	0x1
 	.long	0x22d
 	.uleb128 0x2
@@ -52352,7 +52392,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x85
 	.ascii "__priority\0"
 	.byte	0x7
-	.byte	0x2d
+	.byte	0x2f
 	.byte	0x1
 	.long	0x22d
 	.uleb128 0x2
@@ -52455,7 +52495,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.long	0x112ae
 	.long	0x39758
 	.uleb128 0x17
@@ -52476,7 +52516,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0xe55f
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.long	0x1134b
 	.long	0x3978a
 	.uleb128 0x17
@@ -52495,7 +52535,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x35
 	.long	0x57c
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.long	0x113c0
 	.long	0x397a4
 	.uleb128 0x15
@@ -52504,7 +52544,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0x26bf5
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.long	0x15859
 	.long	0x397c7
 	.uleb128 0x15
@@ -52594,7 +52634,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.long	0xe227
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.long	0x103a8
 	.long	0x398d1
 	.uleb128 0x68
@@ -52652,7 +52692,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x35
 	.long	0x57c
 	.byte	0
-	.uleb128 0x55
+	.uleb128 0x56
 	.long	0x12f99
 	.long	0x39970
 	.uleb128 0x31
@@ -52718,7 +52758,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x4a
 	.byte	0x8
 	.long	0x11198
-	.uleb128 0x55
+	.uleb128 0x56
 	.long	0x1144a
 	.long	0x39a89
 	.uleb128 0x15
@@ -52870,7 +52910,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x3c
 	.long	0x39c9a
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.long	0x388b5
 	.long	0x39d27
 	.quad	.LFB10194
@@ -52878,7 +52918,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x39dfb
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x3892b
 	.uleb128 0x2
@@ -52887,7 +52927,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x87
 	.secrel32	.LASF94
 	.byte	0x7
-	.byte	0x15
+	.byte	0x16
 	.byte	0x30
 	.long	0x1728a
 	.uleb128 0x2
@@ -52896,7 +52936,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x61
 	.ascii "output\0"
 	.byte	0x7
-	.byte	0x17
+	.byte	0x18
 	.byte	0x15
 	.long	0x2bc15
 	.uleb128 0x3
@@ -52905,7 +52945,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x61
 	.ascii "error\0"
 	.byte	0x7
-	.byte	0x18
+	.byte	0x19
 	.byte	0x15
 	.long	0x2bc15
 	.uleb128 0x3
@@ -52914,7 +52954,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x61
 	.ascii "process\0"
 	.byte	0x7
-	.byte	0x1a
+	.byte	0x1b
 	.byte	0x1d
 	.long	0x39e0f
 	.uleb128 0x2
@@ -52926,7 +52966,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x61
 	.ascii "item\0"
 	.byte	0x7
-	.byte	0x23
+	.byte	0x24
 	.byte	0x16
 	.long	0x1745a
 	.uleb128 0x3
@@ -52956,7 +52996,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x61
 	.ascii "item\0"
 	.byte	0x7
-	.byte	0x26
+	.byte	0x28
 	.byte	0x16
 	.long	0x1745a
 	.uleb128 0x3
@@ -52987,7 +53027,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x5
 	.byte	0x8
 	.long	0x39dfb
-	.uleb128 0x56
+	.uleb128 0x57
 	.long	0x38850
 	.long	0x39e34
 	.quad	.LFB10193
@@ -52995,7 +53035,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x39e51
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x3892b
 	.uleb128 0x2
@@ -53004,7 +53044,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x87
 	.secrel32	.LASF94
 	.byte	0x7
-	.byte	0x10
+	.byte	0x11
 	.byte	0x2c
 	.long	0x1728a
 	.uleb128 0x2
@@ -53077,7 +53117,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.long	0x38a46
 	.long	0x39f57
 	.quad	.LFB10082
@@ -53085,7 +53125,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x39fa4
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x38c73
 	.uleb128 0x2
@@ -53119,7 +53159,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x91
 	.sleb128 -24
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x50
 	.long	0x38b69
 	.long	0x39fc3
 	.quad	.LFB9284
@@ -53127,14 +53167,14 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x39fd0
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x38c8a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x50
 	.long	0x38b0f
 	.long	0x39fef
 	.quad	.LFB9283
@@ -53142,14 +53182,14 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x39ffc
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x38c8a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.long	0x38aa6
 	.long	0x3a01b
 	.quad	.LFB9282
@@ -53157,7 +53197,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x3a05f
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x38c8a
 	.uleb128 0x2
@@ -53186,7 +53226,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.sleb128 -24
 	.byte	0
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.long	0x2fb9c
 	.long	0x3a07e
 	.quad	.LFB8251
@@ -53194,7 +53234,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x3a09b
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x2fc2f
 	.uleb128 0x2
@@ -53245,7 +53285,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.long	0x38d37
 	.long	0x3a130
 	.quad	.LFB8219
@@ -53253,7 +53293,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x3a163
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x38f21
 	.uleb128 0x2
@@ -53278,7 +53318,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x91
 	.sleb128 -48
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x50
 	.long	0x38e6d
 	.long	0x3a182
 	.quad	.LFB8204
@@ -53286,14 +53326,14 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x3a18f
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x391a8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x50
 	.long	0x38ea6
 	.long	0x3a1ae
 	.quad	.LFB8203
@@ -53301,14 +53341,14 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x3a1bb
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x391a8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x50
 	.long	0x38ee0
 	.long	0x3a1da
 	.quad	.LFB8202
@@ -53316,7 +53356,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x3a1e7
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x391a8
 	.uleb128 0x2
@@ -53385,7 +53425,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x56
+	.uleb128 0x57
 	.long	0x2ce37
 	.long	0x3a2f8
 	.quad	.LFB7000
@@ -53393,14 +53433,14 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x3a305
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x2d474
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x50
 	.long	0x2cd22
 	.long	0x3a324
 	.quad	.LFB6995
@@ -53408,14 +53448,14 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x3a331
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x2d474
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x57
+	.uleb128 0x50
 	.long	0x2c664
 	.long	0x3a350
 	.quad	.LFB6938
@@ -53423,7 +53463,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x3a35d
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x2d48b
 	.uleb128 0x2
@@ -53454,11 +53494,26 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
+	.uleb128 0x50
+	.long	0x19241
+	.long	0x3a3d3
+	.quad	.LFB3139
+	.quad	.LFE3139-.LFB3139
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x3a3e0
+	.uleb128 0x33
+	.secrel32	.LASF298
+	.long	0x270a3
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.byte	0
 	.uleb128 0x32
 	.long	0x1917b
-	.long	0x3a3c2
+	.long	0x3a3ee
 	.byte	0x2
-	.long	0x3a3d9
+	.long	0x3a405
 	.uleb128 0x20
 	.secrel32	.LASF298
 	.long	0x2710d
@@ -53470,30 +53525,30 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.long	0x270c5
 	.byte	0
 	.uleb128 0x41
-	.long	0x3a3b4
+	.long	0x3a3e0
 	.ascii "_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
-	.long	0x3a43e
+	.long	0x3a46a
 	.quad	.LFB3135
 	.quad	.LFE3135-.LFB3135
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3a44f
+	.long	0x3a47b
 	.uleb128 0x2d
-	.long	0x3a3c2
+	.long	0x3a3ee
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2d
-	.long	0x3a3cb
+	.long	0x3a3f7
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x32
 	.long	0x18b73
-	.long	0x3a45d
+	.long	0x3a489
 	.byte	0x2
-	.long	0x3a47a
+	.long	0x3a4a6
 	.uleb128 0x20
 	.secrel32	.LASF298
 	.long	0x2710d
@@ -53505,21 +53560,21 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.long	0x17454
 	.byte	0
 	.uleb128 0x41
-	.long	0x3a44f
+	.long	0x3a47b
 	.ascii "_ZN8wxStringC1ERKS_\0"
-	.long	0x3a4ad
+	.long	0x3a4d9
 	.quad	.LFB3057
 	.quad	.LFE3057-.LFB3057
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3a4be
+	.long	0x3a4ea
 	.uleb128 0x2d
-	.long	0x3a45d
+	.long	0x3a489
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2d
-	.long	0x3a466
+	.long	0x3a492
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -53529,9 +53584,9 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0x2
 	.word	0x189
 	.byte	0x18
-	.long	0x3a4d1
+	.long	0x3a4fd
 	.byte	0x2
-	.long	0x3a4e4
+	.long	0x3a510
 	.uleb128 0x20
 	.secrel32	.LASF298
 	.long	0x2710d
@@ -53540,28 +53595,28 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.long	0x234
 	.byte	0
 	.uleb128 0x41
-	.long	0x3a4be
+	.long	0x3a4ea
 	.ascii "_ZN8wxStringD1Ev\0"
-	.long	0x3a514
+	.long	0x3a540
 	.quad	.LFB3028
 	.quad	.LFE3028-.LFB3028
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3a51d
+	.long	0x3a549
 	.uleb128 0x2d
-	.long	0x3a4d1
+	.long	0x3a4fd
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0xe3
 	.long	0xeaa4
-	.long	0x3a539
+	.long	0x3a565
 	.quad	.LFB318
 	.quad	.LFE318-.LFB318
 	.uleb128 0x1
 	.byte	0x9c
-	.uleb128 0x36
+	.uleb128 0x33
 	.secrel32	.LASF298
 	.long	0x1597e
 	.uleb128 0x2
@@ -54418,6 +54473,19 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
+	.uleb128 0x5
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x34
+	.uleb128 0x19
+	.uleb128 0x2
+	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x34
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -54438,7 +54506,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x19
 	.byte	0
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -54455,7 +54523,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x36
 	.uleb128 0x2e
 	.byte	0
 	.uleb128 0x3f
@@ -54476,19 +54544,6 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xb
 	.uleb128 0x3c
 	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x36
-	.uleb128 0x5
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x34
-	.uleb128 0x19
-	.uleb128 0x2
-	.uleb128 0x18
 	.byte	0
 	.byte	0
 	.uleb128 0x37
@@ -54935,6 +54990,25 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0
 	.byte	0
 	.uleb128 0x50
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x47
+	.uleb128 0x13
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x51
 	.uleb128 0xd
 	.byte	0
 	.uleb128 0x3
@@ -54949,7 +55023,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x51
+	.uleb128 0x52
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -54974,7 +55048,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x52
+	.uleb128 0x53
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -54985,7 +55059,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x53
+	.uleb128 0x54
 	.uleb128 0x4
 	.byte	0x1
 	.uleb128 0x3
@@ -55006,7 +55080,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x55
 	.uleb128 0x16
 	.byte	0
 	.uleb128 0x3
@@ -55023,30 +55097,11 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0xb
 	.byte	0
 	.byte	0
-	.uleb128 0x55
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
 	.uleb128 0x56
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x47
 	.uleb128 0x13
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2116
-	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
 	.byte	0
@@ -55064,7 +55119,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x7
 	.uleb128 0x40
 	.uleb128 0x18
-	.uleb128 0x2117
+	.uleb128 0x2116
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
@@ -57610,7 +57665,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.byte	0
 	.byte	0
 	.section	.debug_aranges,"dr"
-	.long	0x1cc
+	.long	0x1dc
 	.word	0x2
 	.secrel32	.Ldebug_info0
 	.byte	0x8
@@ -57627,6 +57682,8 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.quad	.LFE3057-.LFB3057
 	.quad	.LFB3135
 	.quad	.LFE3135-.LFB3135
+	.quad	.LFB3139
+	.quad	.LFE3139-.LFB3139
 	.quad	.LFB6934
 	.quad	.LFE6934-.LFB6934
 	.quad	.LFB6938
@@ -57697,6 +57754,8 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.quad	.LFE3057
 	.quad	.LFB3135
 	.quad	.LFE3135
+	.quad	.LFB3139
+	.quad	.LFE3139
 	.quad	.LFB6934
 	.quad	.LFE6934
 	.quad	.LFB6938
@@ -58366,6 +58425,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.def	_ZN18T100ExecuteProcess9IsRunningEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100ExecuteProcess9FlushPipeEv;	.scl	2;	.type	32;	.endef
 	.def	_ZlsRSoRK8wxString;	.scl	2;	.type	32;	.endef
+	.def	_ZN19T100ProjectInvoking14OnBuildMessageERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN18T100ExecuteProcess8ExitCodeEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN13wxArrayStringD1Ev;	.scl	2;	.type	32;	.endef
 	.def	_Unwind_Resume;	.scl	2;	.type	32;	.endef

@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "T100ExecuteProcess.h"
+#include "T100ProjectInvoking.h"
 
 T100Shell::T100Shell()
 {
@@ -34,6 +35,7 @@ T100VOID T100Shell::Execute(const T100WSTRING& value)
 
         for(wxString item : output){
             std::cout << item;
+            T100ProjectInvoking::OnBuildMessage(item.ToStdWstring());
         }
         for(wxString item : error){
             std::cout << item;

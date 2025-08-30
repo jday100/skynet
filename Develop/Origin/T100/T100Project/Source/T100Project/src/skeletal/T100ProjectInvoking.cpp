@@ -240,3 +240,8 @@ T100VOID T100ProjectInvoking::OnProjectCreateWizardFinished(T100WxProjectInfo* i
 {
     m_skeletal->OnProjectCreateWizardFinished(info);
 }
+
+T100VOID T100ProjectInvoking::OnBuildMessage(const T100WSTRING& value)
+{
+    m_skeletal->OnBuildMessage(value);
+}

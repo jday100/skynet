@@ -421,3 +421,8 @@ T100VOID T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo* i
 
     m_view->ProjectOpen(project);
 }
+
+T100VOID T100ProjectSkeletal::OnBuildMessage(const T100WSTRING& value)
+{
+    m_view->AppendBuildMessage(value);
+}

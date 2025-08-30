@@ -22,6 +22,8 @@ class T100ProjectViewBase
         virtual T100VOID                ClearDirty();
         virtual T100BOOL                IsDirty();
 
+        virtual T100VOID                AppendBuildMessage(const T100WSTRING&);
+
         wxAuiManager*                   GetAuiManager();
         T100ProjectFrame*               GetFrame();
         T100ProjectViewMainMenu*        GetMainMenu();

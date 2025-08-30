@@ -78,6 +78,8 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
 
         T100VOID                    OnProjectCreateWizardFinished(T100WxProjectInfo*);
 
+        T100VOID                    OnBuildMessage(const T100WSTRING&);
+
     protected:
 
     private:

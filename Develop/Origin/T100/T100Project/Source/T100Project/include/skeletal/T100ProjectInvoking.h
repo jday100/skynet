@@ -74,6 +74,8 @@ class T100ProjectInvoking
 
         static T100VOID                     OnProjectCreateWizardFinished(T100WxProjectInfo*);
 
+        static T100VOID                     OnBuildMessage(const T100WSTRING&);
+
     protected:
 
     private:
