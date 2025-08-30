@@ -312,8 +312,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.219924
-	movq	%rax, %rcx	 # D.219924,
+	movq	%rbx, %rax	 # tmp96, D.219961
+	movq	%rax, %rcx	 # D.219961,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -582,8 +582,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.219928
-	movq	%rax, %rcx	 # D.219928,
+	movq	%rbx, %rax	 # tmp103, D.219965
+	movq	%rax, %rcx	 # D.219965,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -624,6 +624,37 @@ _ZN8wxStringC1EPKc:
 .LLSDACSE1946:
 	.section	.text$_ZN8wxStringC1EPKc,"x"
 	.linkonce discard
+	.seh_endproc
+	.section	.text$_ZNK8wxString12ToStdWstringB5cxx11Ev,"x"
+	.linkonce discard
+	.align 2
+	.globl	_ZNK8wxString12ToStdWstringB5cxx11Ev
+	.def	_ZNK8wxString12ToStdWstringB5cxx11Ev;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZNK8wxString12ToStdWstringB5cxx11Ev
+_ZNK8wxString12ToStdWstringB5cxx11Ev:
+.LFB2001:
+	.loc 4 1339 28
+	.cfi_startproc
+	pushq	%rbp	 #
+	.seh_pushreg	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp	 #,
+	.seh_setframe	%rbp, 0
+	.cfi_def_cfa_register 6
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)	 # this, this
+ # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1339:     const wxStdWideString& ToStdWstring() const { return m_impl; }
+	.loc 4 1339 58
+	movq	16(%rbp), %rax	 # this, _2
+ # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1339:     const wxStdWideString& ToStdWstring() const { return m_impl; }
+	.loc 4 1339 66
+	popq	%rbp	 #
+	.cfi_restore 6
+	.cfi_def_cfa 7, 8
+	ret	
+	.cfi_endproc
+.LFE2001:
 	.seh_endproc
 	.section	.text$_ZNK8wxString6lengthEv,"x"
 	.linkonce discard
@@ -687,14 +718,14 @@ _ZN8wxStringaSERKS_:
 	.loc 4 1879 5
 	movq	16(%rbp), %rax	 # this, tmp91
 	cmpq	24(%rbp), %rax	 # stringSrc, tmp91
-	je	.L29	 #,
+	je	.L31	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1883:         m_impl = stringSrc.m_impl;
 	.loc 4 1883 28
 	movq	24(%rbp), %rdx	 # stringSrc, _1
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_	 #
-.L29:
+.L31:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:1886:     return *this;
 	.loc 4 1886 13
 	movq	16(%rbp), %rax	 # this, _8
@@ -792,16 +823,16 @@ _ZNK8wxString8IsSameAsERKS_b:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:2127:       if ( length() != str.length() )
 	.loc 4 2127 7
 	testb	%al, %al	 # retval.34_14
-	je	.L34	 #,
+	je	.L36	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:2128:           return false;
 	.loc 4 2128 18
 	movl	$0, %eax	 #, iftmp.35_6
-	jmp	.L35	 #
-.L34:
+	jmp	.L37	 #
+.L36:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:2130:       return (compareWithCase ? Cmp(str) : CmpNoCase(str)) == 0;
 	.loc 4 2130 60
 	cmpb	$0, -48(%rbp)	 #, compareWithCase
-	je	.L36	 #,
+	je	.L38	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:2130:       return (compareWithCase ? Cmp(str) : CmpNoCase(str)) == 0;
 	.loc 4 2130 36 discriminator 1
 	movq	-56(%rbp), %rax	 # str, tmp97
@@ -814,8 +845,8 @@ _ZNK8wxString8IsSameAsERKS_b:
 	sete	%al	 #, iftmp.35_6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:2130:       return (compareWithCase ? Cmp(str) : CmpNoCase(str)) == 0;
 	.loc 4 2130 63 discriminator 1
-	jmp	.L38	 #
-.L36:
+	jmp	.L40	 #
+.L38:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:2130:       return (compareWithCase ? Cmp(str) : CmpNoCase(str)) == 0;
 	.loc 4 2130 53 discriminator 2
 	movq	-56(%rbp), %rax	 # str, tmp98
@@ -826,11 +857,11 @@ _ZNK8wxString8IsSameAsERKS_b:
 	.loc 4 2130 60 discriminator 2
 	testl	%eax, %eax	 # _4
 	sete	%al	 #, iftmp.35_6
-.L38:
+.L40:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:2130:       return (compareWithCase ? Cmp(str) : CmpNoCase(str)) == 0;
 	.loc 4 2130 63
 	nop	
-.L35:
+.L37:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/string.h:2131:   }
 	.loc 4 2131 3
 	addq	$40, %rsp	 #,
@@ -966,14 +997,14 @@ _ZN8wxObjectaSERKS_:
 	.loc 5 372 9
 	movq	16(%rbp), %rax	 # this, tmp89
 	cmpq	24(%rbp), %rax	 # other, tmp89
-	je	.L42	 #,
+	je	.L44	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/object.h:374:             Ref(other);
 	.loc 5 374 16
 	movq	24(%rbp), %rax	 # other, tmp90
 	movq	%rax, %rdx	 # tmp90,
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN8wxObject3RefERKS_	 #
-.L42:
+.L44:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/object.h:376:         return *this;
 	.loc 5 376 17
 	movq	16(%rbp), %rax	 # this, _6
@@ -1822,7 +1853,7 @@ _ZN20wxThreadHelperThread5EntryEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:776:     if ( m_owner.m_kind == wxTHREAD_DETACHED )
 	.loc 10 776 5
 	testl	%eax, %eax	 # _10
-	jne	.L70	 #,
+	jne	.L72	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:777:         m_owner.m_thread = NULL;
 	.loc 10 777 9
 	movq	-48(%rbp), %rax	 # this, tmp107
@@ -1830,7 +1861,7 @@ _ZN20wxThreadHelperThread5EntryEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:777:         m_owner.m_thread = NULL;
 	.loc 10 777 26
 	movq	$0, 8(%rax)	 #, _11->m_thread
-.L70:
+.L72:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/thread.h:779:     return result;
 	.loc 10 779 12
 	movq	-88(%rbp), %rbx	 # result, _21
@@ -2093,7 +2124,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 12 251 9
 	testb	%al, %al	 # retval.38_28
-	je	.L78	 #,
+	je	.L80	 #,
 .LBB27:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:253:             const wxObjectEventFunctor &other =
 	.loc 12 253 41
@@ -2108,7 +2139,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 12 262 74
 	cmpq	%rax, %rdx	 # _10, _9
-	jne	.L79	 #,
+	jne	.L81	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 12 262 40 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp116
@@ -2118,7 +2149,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 12 262 31 discriminator 1
 	cmpq	%rax, %rdx	 # _12, _11
-	je	.L80	 #,
+	je	.L82	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 12 262 40 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp118
@@ -2126,8 +2157,8 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 12 262 31 discriminator 4
 	testq	%rax, %rax	 # _13
-	je	.L80	 #,
-.L79:
+	je	.L82	 #,
+.L81:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 12 262 70 discriminator 6
 	movq	-8(%rbp), %rax	 # other, tmp119
@@ -2135,8 +2166,8 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 12 262 49 discriminator 6
 	testq	%rax, %rax	 # _14
-	jne	.L81	 #,
-.L80:
+	jne	.L83	 #,
+.L82:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 12 263 22 discriminator 7
 	movq	16(%rbp), %rax	 # this, tmp120
@@ -2148,7 +2179,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 12 262 74 discriminator 7
 	cmpq	%rax, %rdx	 # _16, _15
-	je	.L82	 #,
+	je	.L84	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 12 263 60
 	movq	-8(%rbp), %rax	 # other, tmp122
@@ -2156,27 +2187,27 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 12 263 51
 	testq	%rax, %rax	 # _17
-	jne	.L81	 #,
-.L82:
+	jne	.L83	 #,
+.L84:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 12 262 74 discriminator 9
 	movl	$1, %eax	 #, iftmp.39_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 12 263 78 discriminator 9
-	jmp	.L84	 #
-.L81:
+	jmp	.L86	 #
+.L83:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 12 262 74 discriminator 8
 	movl	$0, %eax	 #, iftmp.39_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 12 263 78 discriminator 8
-	jmp	.L84	 #
-.L78:
+	jmp	.L86	 #
+.L80:
 .LBE27:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:266:             return false;
 	.loc 12 266 20
 	movl	$0, %eax	 #, iftmp.39_19
-.L84:
+.L86:
 .LBE26:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:267:     }
 	.loc 12 267 5
@@ -2371,16 +2402,16 @@ _ZN21wxEventTableEntryBaseC2EiiP14wxEventFunctorP8wxObject:
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp98
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.46_1
 	testq	%rax, %rax	 # wxTheAssertHandler.46_1
-	je	.L92	 #,
+	je	.L94	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 12 3177 9 is_stmt 0 discriminator 1
 	cmpl	$-1, 32(%rbp)	 #, idLast
-	je	.L92	 #,
+	je	.L94	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 12 3177 9 discriminator 3
 	movl	24(%rbp), %eax	 # winid, tmp99
 	cmpl	32(%rbp), %eax	 # idLast, tmp99
-	jle	.L92	 #,
+	jle	.L94	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 12 3177 9 discriminator 5
 	leaq	.LC2(%rip), %rax	 #, tmp100
@@ -2393,26 +2424,26 @@ _ZN21wxEventTableEntryBaseC2EiiP14wxEventFunctorP8wxObject:
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp101
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.47_2
 	testb	%al, %al	 # wxTrapInAssert.47_2
-	je	.L92	 #,
+	je	.L94	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 12 3177 9 discriminator 7
 	movl	$1, %eax	 #, iftmp.45_3
-	jmp	.L93	 #
-.L92:
+	jmp	.L95	 #
+.L94:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 12 3177 9 discriminator 8
 	movl	$0, %eax	 #, iftmp.45_3
-.L93:
+.L95:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 12 3177 9 discriminator 10
 	testb	%al, %al	 # iftmp.45_3
-	je	.L95	 #,
+	je	.L97	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3177:         wxASSERT_MSG( idLast == wxID_ANY || winid <= idLast,
 	.loc 12 3177 9 discriminator 11
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp102
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-.L95:
+.L97:
 .LBE28:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3179:     }
 	.loc 12 3179 5 is_stmt 1
@@ -2454,7 +2485,7 @@ _ZN21wxEventTableEntryBaseD2Ev:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3198:         delete m_fn;
 	.loc 12 3198 20
 	testq	%rax, %rax	 # _1
-	je	.L98	 #,
+	je	.L100	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3198:         delete m_fn;
 	.loc 12 3198 16 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp95
@@ -2467,7 +2498,7 @@ _ZN21wxEventTableEntryBaseD2Ev:
 	movq	%rdx, %rcx	 # _2,
 	call	*%rax	 # _7
 .LVL1:
-.L98:
+.L100:
 .LBE29:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3199:     }
 	.loc 12 3199 5
@@ -2825,17 +2856,17 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 12 3776 50
 	testq	%rax, %rax	 # _1
-	je	.L108	 #,
+	je	.L110	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 12 3776 50 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp106
 	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.41_17
-	jmp	.L109	 #
-.L108:
+	jmp	.L111	 #
+.L110:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 12 3776 50 discriminator 2
 	movq	24(%rbp), %rax	 # handler, iftmp.41_17
-.L109:
+.L111:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 12 3776 26 is_stmt 1 discriminator 4
 	movq	%rax, -8(%rbp)	 # iftmp.41_17, realHandler
@@ -2854,7 +2885,7 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
 	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, _5
 	andl	$1, %eax	 #, _7
 	testq	%rax, %rax	 # _7
-	je	.L110	 #,
+	je	.L112	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 12 3778 35 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp110
@@ -2868,13 +2899,13 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
 	subq	$1, %rax	 #, _14
 	addq	%rdx, %rax	 # _11, _16
 	movq	(%rax), %rax	 # *_16, iftmp.42_18
-	jmp	.L111	 #
-.L110:
+	jmp	.L113	 #
+.L112:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 12 3778 35 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp113
 	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.42_18
-.L111:
+.L113:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 12 3778 29 is_stmt 1 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp114
@@ -2925,7 +2956,7 @@ _Z16wxGetTranslationRK8wxStringS1_:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/translation.h:247:     const wxString *transStr = trans ? trans->GetTranslatedString(str, domain)
 	.loc 13 247 38
 	cmpq	$0, -8(%rbp)	 #, trans
-	je	.L113	 #,
+	je	.L115	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/translation.h:247:     const wxString *transStr = trans ? trans->GetTranslatedString(str, domain)
 	.loc 13 247 66 discriminator 1
 	movq	24(%rbp), %rdx	 # domain, tmp91
@@ -2934,29 +2965,29 @@ _Z16wxGetTranslationRK8wxStringS1_:
 	movq	16(%rbp), %rdx	 # str,
 	movq	%rax, %rcx	 # tmp92,
 	call	_ZNK14wxTranslations19GetTranslatedStringERK8wxStringS2_	 #
-	jmp	.L114	 #
-.L113:
+	jmp	.L116	 #
+.L115:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/translation.h:247:     const wxString *transStr = trans ? trans->GetTranslatedString(str, domain)
 	.loc 13 247 38 discriminator 2
 	movl	$0, %eax	 #, _12
-.L114:
+.L116:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/translation.h:248:                                      : NULL;
 	.loc 13 248 40
 	movq	%rax, -16(%rbp)	 # _12, transStr
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/translation.h:249:     if ( transStr )
 	.loc 13 249 5
 	cmpq	$0, -16(%rbp)	 #, transStr
-	je	.L115	 #,
+	je	.L117	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/translation.h:250:         return *transStr;
 	.loc 13 250 17
 	movq	-16(%rbp), %rax	 # transStr, _2
-	jmp	.L116	 #
-.L115:
+	jmp	.L118	 #
+.L117:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/translation.h:254:         return wxTranslations::GetUntranslatedString(str);
 	.loc 13 254 57
 	movq	16(%rbp), %rcx	 # str,
 	call	_ZN14wxTranslations21GetUntranslatedStringERK8wxString	 #
-.L116:
+.L118:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/translation.h:255: }
 	.loc 13 255 1
 	addq	$48, %rsp	 #,
@@ -3126,7 +3157,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 14 337 27
-	movq	-8(%rbp), %rax	 # D.121899, D.219191
+	movq	-8(%rbp), %rax	 # D.121899, D.219222
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 14 338 5
 	addq	$48, %rsp	 #,
@@ -3402,7 +3433,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 14 481 78
-	movq	-8(%rbp), %rax	 # D.121933, D.219213
+	movq	-8(%rbp), %rax	 # D.121933, D.219244
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 14 481 81
 	addq	$48, %rsp	 #,
@@ -3450,7 +3481,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 14 482 78
-	movq	-8(%rbp), %rax	 # D.121935, D.219210
+	movq	-8(%rbp), %rax	 # D.121935, D.219241
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 14 482 81
 	addq	$48, %rsp	 #,
@@ -3637,7 +3668,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 14 532 77
-	movq	-72(%rbp), %rax	 # D.121977, D.219186
+	movq	-72(%rbp), %rax	 # D.121977, D.219217
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 14 533 5
 	addq	$72, %rsp	 #,
@@ -4043,7 +4074,7 @@ _ZNK12wxWindowBase12CanBeFocusedEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 58
 	testb	%al, %al	 # _4
-	je	.L158	 #,
+	je	.L160	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 70 discriminator 1
 	movq	16(%rbp), %rcx	 # this,
@@ -4051,16 +4082,16 @@ _ZNK12wxWindowBase12CanBeFocusedEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 58 discriminator 1
 	testb	%al, %al	 # _5
-	je	.L158	 #,
+	je	.L160	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 58 is_stmt 0 discriminator 3
 	movl	$1, %eax	 #, iftmp.2_6
-	jmp	.L159	 #
-.L158:
+	jmp	.L161	 #
+.L160:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 58 discriminator 4
 	movl	$0, %eax	 #, iftmp.2_6
-.L159:
+.L161:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 14 744 74 is_stmt 1 discriminator 6
 	addq	$32, %rsp	 #,
@@ -4820,7 +4851,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 14 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.219079
+	movq	(%rax), %rax	 # wxDefaultSize, D.219110
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 14 1746 72
 	popq	%rbp	 #
@@ -4989,8 +5020,8 @@ _ZN8wxWindowC2Ev:
 .LBE31:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:40:     wxWindowMSW() { Init(); }
 	.loc 16 40 29
-	jmp	.L211	 #
-.L210:
+	jmp	.L213	 #
+.L212:
 	movq	%rax, %rbx	 #, tmp97
 .LBB32:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:40:     wxWindowMSW() { Init(); }
@@ -4998,13 +5029,13 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.219946
-	movq	%rax, %rcx	 # D.219946,
+	movq	%rbx, %rax	 # tmp97, D.219983
+	movq	%rax, %rcx	 # D.219983,
 .LEHB8:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE8:
-.L211:
+.L213:
 .LBE32:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/window.h:40:     wxWindowMSW() { Init(); }
 	.loc 16 40 29
@@ -5031,7 +5062,7 @@ _ZN8wxWindowC2Ev:
 	.uleb128 0
 	.uleb128 .LEHB7-.LFB10114
 	.uleb128 .LEHE7-.LEHB7
-	.uleb128 .L210-.LFB10114
+	.uleb128 .L212-.LFB10114
 	.uleb128 0
 	.uleb128 .LEHB8-.LFB10114
 	.uleb128 .LEHE8-.LEHB8
@@ -5718,20 +5749,20 @@ _ZN15wxSizerItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:488: WX_DECLARE_EXPORTED_LIST( wxSizerItem, wxSizerItemList );
 	.loc 17 488 1 is_stmt 0 discriminator 2
 	movq	%rbx, %rax	 # _4, _12
-	jmp	.L246	 #
-.L245:
+	jmp	.L248	 #
+.L247:
 	movq	%rax, %rsi	 #, tmp98
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:488: WX_DECLARE_EXPORTED_LIST( wxSizerItem, wxSizerItemList );
 	.loc 17 488 1
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.219950
-	movq	%rax, %rcx	 # D.219950,
+	movq	%rsi, %rax	 # tmp98, D.219987
+	movq	%rax, %rcx	 # D.219987,
 .LEHB11:
 	call	_Unwind_Resume	 #
 .LEHE11:
-.L246:
+.L248:
 	addq	$48, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -5757,7 +5788,7 @@ _ZN15wxSizerItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	.uleb128 0
 	.uleb128 .LEHB10-.LFB10254
 	.uleb128 .LEHE10-.LEHB10
-	.uleb128 .L245-.LFB10254
+	.uleb128 .L247-.LFB10254
 	.uleb128 0
 	.uleb128 .LEHB11-.LFB10254
 	.uleb128 .LEHE11-.LEHB11
@@ -5841,8 +5872,8 @@ _ZN7wxSizerC2Ev:
 .LBE35:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:498:     wxSizer() { m_containingWindow = NULL; }
 	.loc 17 498 44 discriminator 4
-	jmp	.L252	 #
-.L251:
+	jmp	.L254	 #
+.L253:
 	movq	%rax, %rbx	 #, tmp111
 .LBB36:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:498:     wxSizer() { m_containingWindow = NULL; }
@@ -5851,22 +5882,22 @@ _ZN7wxSizerC2Ev:
 	addq	$16, %rax	 #, _10
 	movq	%rax, %rcx	 # _10,
 	call	_ZN21wxClientDataContainerD2Ev	 #
-	jmp	.L249	 #
-.L250:
+	jmp	.L251	 #
+.L252:
 	movq	%rax, %rbx	 #, tmp110
-.L249:
+.L251:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:498:     wxSizer() { m_containingWindow = NULL; }
 	.loc 17 498 15 is_stmt 0 discriminator 1
 	movq	-64(%rbp), %rax	 # this, _11
 	movq	%rax, %rcx	 # _11,
 	call	_ZN8wxObjectD2Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.219951
-	movq	%rax, %rcx	 # D.219951,
+	movq	%rbx, %rax	 # tmp110, D.219988
+	movq	%rax, %rcx	 # D.219988,
 .LEHB14:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE14:
-.L252:
+.L254:
 .LBE36:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:498:     wxSizer() { m_containingWindow = NULL; }
 	.loc 17 498 44 is_stmt 1
@@ -5889,11 +5920,11 @@ _ZN7wxSizerC2Ev:
 .LLSDACSB10353:
 	.uleb128 .LEHB12-.LFB10353
 	.uleb128 .LEHE12-.LEHB12
-	.uleb128 .L250-.LFB10353
+	.uleb128 .L252-.LFB10353
 	.uleb128 0
 	.uleb128 .LEHB13-.LFB10353
 	.uleb128 .LEHE13-.LEHB13
-	.uleb128 .L251-.LFB10353
+	.uleb128 .L253-.LFB10353
 	.uleb128 0
 	.uleb128 .LEHB14-.LFB10353
 	.uleb128 .LEHE14-.LEHB14
@@ -5974,19 +6005,19 @@ _ZN10wxBoxSizerC1Ei:
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp106
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.18_5
 	testq	%rax, %rax	 # wxTheAssertHandler.18_5
-	je	.L254	 #,
+	je	.L256	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:939:         wxASSERT_MSG( m_orient == wxHORIZONTAL || m_orient == wxVERTICAL,
 	.loc 17 939 9 is_stmt 0 discriminator 1
 	movq	-48(%rbp), %rax	 # this, tmp107
 	movl	120(%rax), %eax	 # this_16(D)->m_orient, _6
 	cmpl	$4, %eax	 #, _6
-	je	.L254	 #,
+	je	.L256	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:939:         wxASSERT_MSG( m_orient == wxHORIZONTAL || m_orient == wxVERTICAL,
 	.loc 17 939 9 discriminator 3
 	movq	-48(%rbp), %rax	 # this, tmp108
 	movl	120(%rax), %eax	 # this_16(D)->m_orient, _7
 	cmpl	$8, %eax	 #, _7
-	je	.L254	 #,
+	je	.L256	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:939:         wxASSERT_MSG( m_orient == wxHORIZONTAL || m_orient == wxVERTICAL,
 	.loc 17 939 9 discriminator 5
 	leaq	.LC6(%rip), %rax	 #, tmp109
@@ -6002,20 +6033,20 @@ _ZN10wxBoxSizerC1Ei:
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp110
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.19_8
 	testb	%al, %al	 # wxTrapInAssert.19_8
-	je	.L254	 #,
+	je	.L256	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:939:         wxASSERT_MSG( m_orient == wxHORIZONTAL || m_orient == wxVERTICAL,
 	.loc 17 939 9 discriminator 8
 	movl	$1, %eax	 #, iftmp.17_10
-	jmp	.L255	 #
-.L254:
+	jmp	.L257	 #
+.L256:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:939:         wxASSERT_MSG( m_orient == wxHORIZONTAL || m_orient == wxVERTICAL,
 	.loc 17 939 9 discriminator 9
 	movl	$0, %eax	 #, iftmp.17_10
-.L255:
+.L257:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:939:         wxASSERT_MSG( m_orient == wxHORIZONTAL || m_orient == wxVERTICAL,
 	.loc 17 939 9 discriminator 11
 	testb	%al, %al	 # iftmp.17_10
-	je	.L259	 #,
+	je	.L261	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:939:         wxASSERT_MSG( m_orient == wxHORIZONTAL || m_orient == wxVERTICAL,
 	.loc 17 939 9 discriminator 12
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp111
@@ -6025,8 +6056,8 @@ _ZN10wxBoxSizerC1Ei:
 .LBE37:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:941:     }
 	.loc 17 941 5 is_stmt 1
-	jmp	.L259	 #
-.L258:
+	jmp	.L261	 #
+.L260:
 	movq	%rax, %rbx	 #, tmp112
 .LBB38:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:935:     {
@@ -6034,12 +6065,12 @@ _ZN10wxBoxSizerC1Ei:
 	movq	-48(%rbp), %rax	 # this, _9
 	movq	%rax, %rcx	 # _9,
 	call	_ZN7wxSizerD2Ev	 #
-	movq	%rbx, %rax	 # tmp112, D.219953
-	movq	%rax, %rcx	 # D.219953,
+	movq	%rbx, %rax	 # tmp112, D.219990
+	movq	%rax, %rcx	 # D.219990,
 .LEHB17:
 	call	_Unwind_Resume	 #
 .LEHE17:
-.L259:
+.L261:
 .LBE38:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:941:     }
 	.loc 17 941 5
@@ -6067,7 +6098,7 @@ _ZN10wxBoxSizerC1Ei:
 	.uleb128 0
 	.uleb128 .LEHB16-.LFB10397
 	.uleb128 .LEHE16-.LEHB16
-	.uleb128 .L258-.LFB10397
+	.uleb128 .L260-.LFB10397
 	.uleb128 0
 	.uleb128 .LEHB17-.LFB10397
 	.uleb128 .LEHE17-.LEHB17
@@ -6195,19 +6226,19 @@ _ZN7wxSizer3AddEP8wxWindowiiiP8wxObject:
 	call	_ZN7wxSizer3AddEP11wxSizerItem	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:1152:     return Add( new wxSizerItem( window, proportion, flag, border, userData ) );
 	.loc 17 1152 79 discriminator 2
-	jmp	.L266	 #
-.L265:
+	jmp	.L268	 #
+.L267:
 	movq	%rax, %rsi	 #, tmp98
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:1152:     return Add( new wxSizerItem( window, proportion, flag, border, userData ) );
 	.loc 17 1152 77
 	movl	$96, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.219958
-	movq	%rax, %rcx	 # D.219958,
+	movq	%rsi, %rax	 # tmp98, D.219995
+	movq	%rax, %rcx	 # D.219995,
 	call	_Unwind_Resume	 #
 .LEHE20:
-.L266:
+.L268:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:1153: }
 	.loc 17 1153 1
 	addq	$48, %rsp	 #,
@@ -6235,7 +6266,7 @@ _ZN7wxSizer3AddEP8wxWindowiiiP8wxObject:
 	.uleb128 0
 	.uleb128 .LEHB19-.LFB10422
 	.uleb128 .LEHE19-.LEHB19
-	.uleb128 .L265-.LFB10422
+	.uleb128 .L267-.LFB10422
 	.uleb128 0
 	.uleb128 .LEHB20-.LFB10422
 	.uleb128 .LEHE20-.LEHB20
@@ -6306,19 +6337,19 @@ _ZN7wxSizer3AddEPS_iiiP8wxObject:
 	call	_ZN7wxSizer3AddEP11wxSizerItem	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:1158:     return Add( new wxSizerItem( sizer, proportion, flag, border, userData ) );
 	.loc 17 1158 78 discriminator 2
-	jmp	.L271	 #
-.L270:
+	jmp	.L273	 #
+.L272:
 	movq	%rax, %rsi	 #, tmp98
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:1158:     return Add( new wxSizerItem( sizer, proportion, flag, border, userData ) );
 	.loc 17 1158 76
 	movl	$96, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.219959
-	movq	%rax, %rcx	 # D.219959,
+	movq	%rsi, %rax	 # tmp98, D.219996
+	movq	%rax, %rcx	 # D.219996,
 	call	_Unwind_Resume	 #
 .LEHE23:
-.L271:
+.L273:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/sizer.h:1159: }
 	.loc 17 1159 1
 	addq	$48, %rsp	 #,
@@ -6346,7 +6377,7 @@ _ZN7wxSizer3AddEPS_iiiP8wxObject:
 	.uleb128 0
 	.uleb128 .LEHB22-.LFB10423
 	.uleb128 .LEHE22-.LEHB22
-	.uleb128 .L270-.LFB10423
+	.uleb128 .L272-.LFB10423
 	.uleb128 0
 	.uleb128 .LEHB23-.LFB10423
 	.uleb128 .LEHE23-.LEHB23
@@ -6552,21 +6583,21 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	call	_ZN8wxStringD1Ev	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:91:     }
 	.loc 18 91 5 discriminator 2
-	jmp	.L279	 #
-.L278:
+	jmp	.L281	 #
+.L280:
 	movq	%rax, %rbx	 #, tmp97
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:90:         SetLabel(EscapeMnemonics(text));
 	.loc 18 90 33
 	leaq	-96(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.219962
-	movq	%rax, %rcx	 # D.219962,
+	movq	%rbx, %rax	 # tmp97, D.219999
+	movq	%rax, %rcx	 # D.219999,
 .LEHB26:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE26:
-.L279:
+.L281:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:91:     }
 	.loc 18 91 5
 	addq	$88, %rsp	 #,
@@ -6592,7 +6623,7 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	.uleb128 0
 	.uleb128 .LEHB25-.LFB10453
 	.uleb128 .LEHE25-.LEHB25
-	.uleb128 .L278-.LFB10453
+	.uleb128 .L280-.LFB10453
 	.uleb128 0
 	.uleb128 .LEHB26-.LFB10453
 	.uleb128 .LEHE26-.LEHB26
@@ -6660,20 +6691,20 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	call	_ZN8wxStringD1Ev	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:94:     virtual wxString GetLabelText() const { return GetLabelText(GetLabel()); }
 	.loc 18 94 75
-	jmp	.L284	 #
-.L283:
+	jmp	.L286	 #
+.L285:
 	movq	%rax, %rbx	 #, tmp98
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:94:     virtual wxString GetLabelText() const { return GetLabelText(GetLabel()); }
 	.loc 18 94 73
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.219964
-	movq	%rax, %rcx	 # D.219964,
+	movq	%rbx, %rax	 # tmp98, D.220001
+	movq	%rax, %rcx	 # D.220001,
 .LEHB29:
 	call	_Unwind_Resume	 #
 .LEHE29:
-.L284:
+.L286:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/control.h:94:     virtual wxString GetLabelText() const { return GetLabelText(GetLabel()); }
 	.loc 18 94 78
 	movq	-16(%rbp), %rax	 # <retval>,
@@ -6700,7 +6731,7 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	.uleb128 0
 	.uleb128 .LEHB28-.LFB10454
 	.uleb128 .LEHE28-.LEHB28
-	.uleb128 .L283-.LFB10454
+	.uleb128 .L285-.LFB10454
 	.uleb128 0
 	.uleb128 .LEHB29-.LFB10454
 	.uleb128 .LEHE29-.LEHB29
@@ -6789,8 +6820,8 @@ _ZN9wxControlC2Ev:
 .LBE40:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/control.h:20:     wxControl() { }
 	.loc 19 20 19
-	jmp	.L290	 #
-.L289:
+	jmp	.L292	 #
+.L291:
 	movq	%rax, %rbx	 #, tmp96
 .LBB41:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/control.h:20:     wxControl() { }
@@ -6798,13 +6829,13 @@ _ZN9wxControlC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxControlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.219968
-	movq	%rax, %rcx	 # D.219968,
+	movq	%rbx, %rax	 # tmp96, D.220005
+	movq	%rax, %rcx	 # D.220005,
 .LEHB32:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE32:
-.L290:
+.L292:
 .LBE41:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/control.h:20:     wxControl() { }
 	.loc 19 20 19
@@ -6831,7 +6862,7 @@ _ZN9wxControlC2Ev:
 	.uleb128 0
 	.uleb128 .LEHB31-.LFB10460
 	.uleb128 .LEHE31-.LEHB31
-	.uleb128 .L289-.LFB10460
+	.uleb128 .L291-.LFB10460
 	.uleb128 0
 	.uleb128 .LEHB32-.LFB10460
 	.uleb128 .LEHE32-.LEHB32
@@ -7181,8 +7212,8 @@ _ZN12wxStaticTextC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 .LBE45:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/stattext.h:28:     }
 	.loc 21 28 5
-	jmp	.L304	 #
-.L303:
+	jmp	.L306	 #
+.L305:
 	movq	%rax, %rbx	 #, tmp100
 .LBB46:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/stattext.h:26:     {
@@ -7190,13 +7221,13 @@ _ZN12wxStaticTextC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	movq	-32(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN16wxStaticTextBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.219973
-	movq	%rax, %rcx	 # D.219973,
+	movq	%rbx, %rax	 # tmp100, D.220010
+	movq	%rax, %rcx	 # D.220010,
 .LEHB35:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE35:
-.L304:
+.L306:
 .LBE46:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/stattext.h:28:     }
 	.loc 21 28 5
@@ -7223,7 +7254,7 @@ _ZN12wxStaticTextC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	.uleb128 0
 	.uleb128 .LEHB34-.LFB10492
 	.uleb128 .LEHE34-.LEHB34
-	.uleb128 .L303-.LFB10492
+	.uleb128 .L305-.LFB10492
 	.uleb128 0
 	.uleb128 .LEHB35-.LFB10492
 	.uleb128 .LEHE35-.LEHB35
@@ -7317,12 +7348,12 @@ _ZNK24wxItemContainerImmutable10FindStringERK8wxStringb:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:55:         for ( unsigned int i = 0; i < count ; ++i )
 	.loc 22 55 28
 	movl	$0, -36(%rbp)	 #, i
-.L310:
+.L312:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:55:         for ( unsigned int i = 0; i < count ; ++i )
 	.loc 22 55 37 discriminator 1
 	movl	-36(%rbp), %eax	 # i, tmp102
 	cmpl	-40(%rbp), %eax	 # count, tmp102
-	jnb	.L307	 #,
+	jnb	.L309	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:57:             if (GetString(i).IsSameAs( s , bCase ))
 	.loc 22 57 28
 	movq	0(%rbp), %rax	 # this, tmp103
@@ -7358,23 +7389,23 @@ _ZNK24wxItemContainerImmutable10FindStringERK8wxStringb:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:57:             if (GetString(i).IsSameAs( s , bCase ))
 	.loc 22 57 13
 	testb	%bl, %bl	 # _22
-	je	.L308	 #,
+	je	.L310	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:58:                 return (int)i;
 	.loc 22 58 29
 	movl	-36(%rbp), %eax	 # i, _9
-	jmp	.L313	 #
-.L308:
+	jmp	.L315	 #
+.L310:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:55:         for ( unsigned int i = 0; i < count ; ++i )
 	.loc 22 55 9 discriminator 2
 	addl	$1, -36(%rbp)	 #, i
-	jmp	.L310	 #
-.L307:
+	jmp	.L312	 #
+.L309:
 .LBE48:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:61:         return wxNOT_FOUND;
 	.loc 22 61 16
 	movl	$-1, %eax	 #, _9
-	jmp	.L313	 #
-.L312:
+	jmp	.L315	 #
+.L314:
 	movq	%rax, %rbx	 #, tmp111
 .LBB49:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:57:             if (GetString(i).IsSameAs( s , bCase ))
@@ -7382,12 +7413,12 @@ _ZNK24wxItemContainerImmutable10FindStringERK8wxStringb:
 	leaq	-96(%rbp), %rax	 #, tmp110
 	movq	%rax, %rcx	 # tmp110,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp111, D.219976
-	movq	%rax, %rcx	 # D.219976,
+	movq	%rbx, %rax	 # tmp111, D.220013
+	movq	%rax, %rcx	 # D.220013,
 .LEHB38:
 	call	_Unwind_Resume	 #
 .LEHE38:
-.L313:
+.L315:
 .LBE49:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:62:     }
 	.loc 22 62 5
@@ -7414,7 +7445,7 @@ _ZNK24wxItemContainerImmutable10FindStringERK8wxStringb:
 	.uleb128 0
 	.uleb128 .LEHB37-.LFB10497
 	.uleb128 .LEHE37-.LEHB37
-	.uleb128 .L312-.LFB10497
+	.uleb128 .L314-.LFB10497
 	.uleb128 0
 	.uleb128 .LEHB38-.LFB10497
 	.uleb128 .LEHE38-.LEHB38
@@ -7456,12 +7487,12 @@ _ZN15wxItemContainer11AppendItemsERK21wxArrayStringsAdapterPPv16wxClientDataType
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:110:         if ( items.IsEmpty() )
 	.loc 22 110 9
 	testb	%al, %al	 # retval.36_9
-	je	.L315	 #,
+	je	.L317	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:111:             return wxNOT_FOUND;
 	.loc 22 111 20
 	movl	$-1, %eax	 #, _4
-	jmp	.L316	 #
-.L315:
+	jmp	.L318	 #
+.L317:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:113:         return DoAppendItems(items, clientData, type);
 	.loc 22 113 53
 	movq	16(%rbp), %rax	 # this, tmp94
@@ -7481,7 +7512,7 @@ _ZN15wxItemContainer11AppendItemsERK21wxArrayStringsAdapterPPv16wxClientDataType
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:113:         return DoAppendItems(items, clientData, type);
 	.loc 22 113 53
 	nop	
-.L316:
+.L318:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/ctrlsub.h:114:     }
 	.loc 22 114 5
 	addq	$32, %rsp	 #,
@@ -8133,8 +8164,8 @@ _ZN13wxListBoxBaseC2Ev:
 .LBE56:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/listbox.h:41:     wxListBoxBase() { }
 	.loc 24 41 23
-	jmp	.L340	 #
-.L339:
+	jmp	.L342	 #
+.L341:
 	movq	%rax, %rbx	 #, tmp99
 .LBB57:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/listbox.h:41:     wxListBoxBase() { }
@@ -8142,13 +8173,13 @@ _ZN13wxListBoxBaseC2Ev:
 	movq	-64(%rbp), %rax	 # this, _6
 	movq	%rax, %rcx	 # _6,
 	call	_ZN18wxControlWithItemsD2Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.219980
-	movq	%rax, %rcx	 # D.219980,
+	movq	%rbx, %rax	 # tmp99, D.220017
+	movq	%rax, %rcx	 # D.220017,
 .LEHB41:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE41:
-.L340:
+.L342:
 .LBE57:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/listbox.h:41:     wxListBoxBase() { }
 	.loc 24 41 23
@@ -8175,7 +8206,7 @@ _ZN13wxListBoxBaseC2Ev:
 	.uleb128 0
 	.uleb128 .LEHB40-.LFB10575
 	.uleb128 .LEHE40-.LEHB40
-	.uleb128 .L339-.LFB10575
+	.uleb128 .L341-.LFB10575
 	.uleb128 0
 	.uleb128 .LEHB41-.LFB10575
 	.uleb128 .LEHE41-.LEHB41
@@ -8342,8 +8373,8 @@ _ZN9wxListBoxC1EP8wxWindowiRK7wxPointRK6wxSizeiPK8wxStringlRK11wxValidatorRS9_:
 .LBE60:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/listbox.h:52:     }
 	.loc 25 52 5
-	jmp	.L348	 #
-.L347:
+	jmp	.L350	 #
+.L349:
 	movq	%rax, %rbx	 #, tmp110
 .LBB61:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/listbox.h:48:     {
@@ -8352,22 +8383,22 @@ _ZN9wxListBoxC1EP8wxWindowiRK7wxPointRK6wxSizeiPK8wxStringlRK11wxValidatorRS9_:
 	addq	$696, %rax	 #, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN19wxListBoxItemsArrayD1Ev	 #
-	jmp	.L345	 #
-.L346:
+	jmp	.L347	 #
+.L348:
 	movq	%rax, %rbx	 #, tmp109
-.L345:
+.L347:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/listbox.h:48:     {
 	.loc 25 48 5 is_stmt 0 discriminator 1
 	movq	-16(%rbp), %rax	 # this, _6
 	movq	%rax, %rcx	 # _6,
 	call	_ZN13wxListBoxBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.219982
-	movq	%rax, %rcx	 # D.219982,
+	movq	%rbx, %rax	 # tmp109, D.220019
+	movq	%rax, %rcx	 # D.220019,
 .LEHB45:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE45:
-.L348:
+.L350:
 .LBE61:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/listbox.h:52:     }
 	.loc 25 52 5 is_stmt 1
@@ -8394,11 +8425,11 @@ _ZN9wxListBoxC1EP8wxWindowiRK7wxPointRK6wxSizeiPK8wxStringlRK11wxValidatorRS9_:
 	.uleb128 0
 	.uleb128 .LEHB43-.LFB10683
 	.uleb128 .LEHE43-.LEHB43
-	.uleb128 .L346-.LFB10683
+	.uleb128 .L348-.LFB10683
 	.uleb128 0
 	.uleb128 .LEHB44-.LFB10683
 	.uleb128 .LEHE44-.LEHB44
-	.uleb128 .L347-.LFB10683
+	.uleb128 .L349-.LFB10683
 	.uleb128 0
 	.uleb128 .LEHB45-.LFB10683
 	.uleb128 .LEHE45-.LEHB45
@@ -8999,7 +9030,7 @@ _ZNK22wxControlContainerBase23AcceptsFocusRecursivelyEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:82:         { return AcceptsFocus() ||
 	.loc 29 82 33
 	testb	%al, %al	 # _1
-	jne	.L375	 #,
+	jne	.L377	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:83:             (m_acceptsFocusChildren && HasAnyChildrenAcceptingFocus()); }
 	.loc 29 83 14 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp92
@@ -9007,7 +9038,7 @@ _ZNK22wxControlContainerBase23AcceptsFocusRecursivelyEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:82:         { return AcceptsFocus() ||
 	.loc 29 82 33 discriminator 2
 	testb	%al, %al	 # _2
-	je	.L376	 #,
+	je	.L378	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:83:             (m_acceptsFocusChildren && HasAnyChildrenAcceptingFocus()); }
 	.loc 29 83 68
 	movq	16(%rbp), %rcx	 # this,
@@ -9015,17 +9046,17 @@ _ZNK22wxControlContainerBase23AcceptsFocusRecursivelyEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:83:             (m_acceptsFocusChildren && HasAnyChildrenAcceptingFocus()); }
 	.loc 29 83 37
 	testb	%al, %al	 # _3
-	je	.L376	 #,
-.L375:
+	je	.L378	 #,
+.L377:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:82:         { return AcceptsFocus() ||
 	.loc 29 82 33 discriminator 1
 	movl	$1, %eax	 #, iftmp.3_4
-	jmp	.L377	 #
-.L376:
+	jmp	.L379	 #
+.L378:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:82:         { return AcceptsFocus() ||
 	.loc 29 82 33 is_stmt 0 discriminator 3
 	movl	$0, %eax	 #, iftmp.3_4
-.L377:
+.L379:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:83:             (m_acceptsFocusChildren && HasAnyChildrenAcceptingFocus()); }
 	.loc 29 83 73 is_stmt 1
 	addq	$32, %rsp	 #,
@@ -9420,8 +9451,8 @@ _ZN8wxDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 .LBE67:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/dialog.h:51:     }
 	.loc 31 51 5
-	jmp	.L392	 #
-.L391:
+	jmp	.L394	 #
+.L393:
 	movq	%rax, %rbx	 #, tmp100
 .LBB68:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/dialog.h:47:     {
@@ -9429,13 +9460,13 @@ _ZN8wxDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	movq	-32(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN12wxDialogBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.219987
-	movq	%rax, %rcx	 # D.219987,
+	movq	%rbx, %rax	 # tmp100, D.220024
+	movq	%rax, %rcx	 # D.220024,
 .LEHB48:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE48:
-.L392:
+.L394:
 .LBE68:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/msw/dialog.h:51:     }
 	.loc 31 51 5
@@ -9462,7 +9493,7 @@ _ZN8wxDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	.uleb128 0
 	.uleb128 .LEHB47-.LFB15760
 	.uleb128 .LEHE47-.LEHB47
-	.uleb128 .L391-.LFB15760
+	.uleb128 .L393-.LFB15760
 	.uleb128 0
 	.uleb128 .LEHB48-.LFB15760
 	.uleb128 .LEHE48-.LEHB48
@@ -9608,7 +9639,7 @@ _ZN32T100ProjectViewSetupEditorDialog13sm_eventTableE:
 _ZNK32T100ProjectViewSetupEditorDialog13GetEventTableEv:
 .LFB16128:
 	.file 33 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/view/dialog/T100ProjectViewSetupEditorDialog.cpp"
-	.loc 33 8 1
+	.loc 33 9 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9619,8 +9650,8 @@ _ZNK32T100ProjectViewSetupEditorDialog13GetEventTableEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:8: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
-	.loc 33 8 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:9: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
+	.loc 33 9 1
 	leaq	_ZN32T100ProjectViewSetupEditorDialog13sm_eventTableE(%rip), %rax	 #, _1
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -9641,7 +9672,7 @@ _ZN32T100ProjectViewSetupEditorDialog17sm_eventHashTableE:
 	.seh_proc	_ZNK32T100ProjectViewSetupEditorDialog17GetEventHashTableEv
 _ZNK32T100ProjectViewSetupEditorDialog17GetEventHashTableEv:
 .LFB16129:
-	.loc 33 8 1
+	.loc 33 9 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9652,8 +9683,8 @@ _ZNK32T100ProjectViewSetupEditorDialog17GetEventHashTableEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:8: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
-	.loc 33 8 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:9: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
+	.loc 33 9 1
 	leaq	_ZN32T100ProjectViewSetupEditorDialog17sm_eventHashTableE(%rip), %rax	 #, _1
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -9711,7 +9742,7 @@ _ZN32T100ProjectViewSetupEditorDialog20sm_eventTableEntriesE:
 	.seh_proc	_ZN32T100ProjectViewSetupEditorDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_
 _ZN32T100ProjectViewSetupEditorDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 .LFB16137:
-	.loc 33 12 1
+	.loc 33 13 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9733,8 +9764,8 @@ _ZN32T100ProjectViewSetupEditorDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSiz
 	movl	%r8d, -16(%rbp)	 # id, id
 	movq	%r9, -8(%rbp)	 # title, title
 .LBB72:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:19:     wxDialog(parent, id, title, pos, size, style, name)
-	.loc 33 19 55
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:20:     wxDialog(parent, id, title, pos, size, style, name)
+	.loc 33 20 55
 	movq	-32(%rbp), %rax	 # this, _1
 	movq	-8(%rbp), %r9	 # title, tmp92
 	movl	-16(%rbp), %r8d	 # id, tmp93
@@ -9754,40 +9785,40 @@ _ZN32T100ProjectViewSetupEditorDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSiz
 	leaq	16+_ZTV32T100ProjectViewSetupEditorDialog(%rip), %rdx	 #, _2
 	movq	-32(%rbp), %rax	 # this, tmp99
 	movq	%rdx, (%rax)	 # _2, this_7(D)->D.212538.D.209174.D.208608.D.208434.D.129624.D.129535.D.129256.D.128063.D.128006.D.123101.D.121810.D.115767._vptr.wxObject
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:22:     Center();
-	.loc 33 22 11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:23:     Center();
+	.loc 33 23 11
 	movq	-32(%rbp), %rax	 # this, _3
 	movl	$12, %edx	 #,
 	movq	%rax, %rcx	 # _3,
 .LEHB50:
 	call	_ZN12wxWindowBase6CenterEi	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:23:     init();
-	.loc 33 23 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:24:     init();
+	.loc 33 24 9
 	movq	-32(%rbp), %rcx	 # this,
 	call	_ZN32T100ProjectViewSetupEditorDialog4initEv	 #
 .LEHE50:
 .LBE72:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:24: }
-	.loc 33 24 1
-	jmp	.L405	 #
-.L404:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:25: }
+	.loc 33 25 1
+	jmp	.L407	 #
+.L406:
 	movq	%rax, %rbx	 #, tmp100
 .LBB73:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:19:     wxDialog(parent, id, title, pos, size, style, name)
-	.loc 33 19 55
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:20:     wxDialog(parent, id, title, pos, size, style, name)
+	.loc 33 20 55
 	movq	-32(%rbp), %rax	 # this, _4
 	movq	%rax, %rcx	 # _4,
 	call	_ZN8wxDialogD2Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.219990
-	movq	%rax, %rcx	 # D.219990,
+	movq	%rbx, %rax	 # tmp100, D.220027
+	movq	%rax, %rcx	 # D.220027,
 .LEHB51:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE51:
-.L405:
+.L407:
 .LBE73:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:24: }
-	.loc 33 24 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:25: }
+	.loc 33 25 1
 	addq	$72, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -9811,7 +9842,7 @@ _ZN32T100ProjectViewSetupEditorDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSiz
 	.uleb128 0
 	.uleb128 .LEHB50-.LFB16137
 	.uleb128 .LEHE50-.LEHB50
-	.uleb128 .L404-.LFB16137
+	.uleb128 .L406-.LFB16137
 	.uleb128 0
 	.uleb128 .LEHB51-.LFB16137
 	.uleb128 .LEHE51-.LEHB51
@@ -9829,7 +9860,7 @@ _ZN32T100ProjectViewSetupEditorDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSiz
 	.seh_proc	_ZN32T100ProjectViewSetupEditorDialogD2Ev
 _ZN32T100ProjectViewSetupEditorDialogD2Ev:
 .LFB16140:
-	.loc 33 26 1
+	.loc 33 27 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9843,23 +9874,23 @@ _ZN32T100ProjectViewSetupEditorDialogD2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB74:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:26: T100ProjectViewSetupEditorDialog::~T100ProjectViewSetupEditorDialog()
-	.loc 33 26 69
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:27: T100ProjectViewSetupEditorDialog::~T100ProjectViewSetupEditorDialog()
+	.loc 33 27 69
 	leaq	16+_ZTV32T100ProjectViewSetupEditorDialog(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	%rdx, (%rax)	 # _1, this_4(D)->D.212538.D.209174.D.208608.D.208434.D.129624.D.129535.D.129256.D.128063.D.128006.D.123101.D.121810.D.115767._vptr.wxObject
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:29:     uninit();
-	.loc 33 29 11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:30:     uninit();
+	.loc 33 30 11
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN32T100ProjectViewSetupEditorDialog6uninitEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:26: T100ProjectViewSetupEditorDialog::~T100ProjectViewSetupEditorDialog()
-	.loc 33 26 69
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:27: T100ProjectViewSetupEditorDialog::~T100ProjectViewSetupEditorDialog()
+	.loc 33 27 69
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN8wxDialogD2Ev	 #
 .LBE74:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:30: }
-	.loc 33 30 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:31: }
+	.loc 33 31 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -9878,7 +9909,7 @@ _ZN32T100ProjectViewSetupEditorDialogD2Ev:
 	.seh_proc	_ZN32T100ProjectViewSetupEditorDialogD0Ev
 _ZN32T100ProjectViewSetupEditorDialogD0Ev:
 .LFB16142:
-	.loc 33 26 1
+	.loc 33 27 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9891,8 +9922,8 @@ _ZN32T100ProjectViewSetupEditorDialogD0Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:30: }
-	.loc 33 30 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:31: }
+	.loc 33 31 1
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN32T100ProjectViewSetupEditorDialogD1Ev	 #
 	movl	$808, %edx	 #,
@@ -9919,7 +9950,7 @@ _ZN32T100ProjectViewSetupEditorDialogD0Ev:
 	.seh_proc	_ZN32T100ProjectViewSetupEditorDialog4initEv
 _ZN32T100ProjectViewSetupEditorDialog4initEv:
 .LFB16143:
-	.loc 33 33 1
+	.loc 33 34 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9953,8 +9984,8 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 	.cfi_def_cfa 6, 432
 	.seh_endprologue
 	movq	%rcx, 432(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:34:     wxBoxSizer*             sizer       = T100NEW wxBoxSizer(wxVERTICAL);
-	.loc 33 34 72
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:35:     wxBoxSizer*             sizer       = T100NEW wxBoxSizer(wxVERTICAL);
+	.loc 33 35 72
 	movl	$136, %ecx	 #,
 .LEHB52:
 	call	_Znwy	 #
@@ -9965,11 +9996,11 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 .LEHB53:
 	call	_ZN10wxBoxSizerC1Ei	 #
 .LEHE53:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:34:     wxBoxSizer*             sizer       = T100NEW wxBoxSizer(wxVERTICAL);
-	.loc 33 34 72 is_stmt 0 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:35:     wxBoxSizer*             sizer       = T100NEW wxBoxSizer(wxVERTICAL);
+	.loc 33 35 72 is_stmt 0 discriminator 3
 	movq	%rdi, 360(%rbp)	 # _34, sizer
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:36:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
-	.loc 33 36 88 is_stmt 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:37:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
+	.loc 33 37 88 is_stmt 1 discriminator 3
 	leaq	16(%rbp), %rax	 #, tmp126
 	movq	%rax, %rcx	 # tmp126,
 	call	_ZN8wxStringC1Ev	 #
@@ -9985,13 +10016,13 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 .LEHB55:
 	call	_Z16wxGetTranslationRK8wxStringS1_	 #
 	movq	%rax, %r12	 #, _41
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:36:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
-	.loc 33 36 98 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:37:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
+	.loc 33 37 98 discriminator 3
 	movl	$144, %ecx	 #,
 	call	_Znwy	 #
 .LEHE55:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:36:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
-	.loc 33 36 98 is_stmt 0 discriminator 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:37:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
+	.loc 33 37 98 is_stmt 0 discriminator 5
 	movq	%rax, %rdi	 # tmp130, _44
 	movq	432(%rbp), %rax	 # this, _1
 	movq	%r12, %r9	 # _41,
@@ -10001,19 +10032,19 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 .LEHB56:
 	call	_ZN16wxStaticBoxSizerC1EiP8wxWindowRK8wxString	 #
 .LEHE56:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:36:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
-	.loc 33 36 98 discriminator 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:37:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
+	.loc 33 37 98 discriminator 9
 	movq	%rdi, 352(%rbp)	 # _44, font
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:36:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
-	.loc 33 36 88 is_stmt 1 discriminator 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:37:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
+	.loc 33 37 88 is_stmt 1 discriminator 9
 	leaq	64(%rbp), %rax	 #, tmp131
 	movq	%rax, %rcx	 # tmp131,
 	call	_ZN8wxStringD1Ev	 #
 	leaq	16(%rbp), %rax	 #, tmp132
 	movq	%rax, %rcx	 # tmp132,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 75 discriminator 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 75 discriminator 9
 	leaq	112(%rbp), %rax	 #, tmp133
 	movq	%rax, %rcx	 # tmp133,
 	call	_ZN8wxStringC1Ev	 #
@@ -10023,26 +10054,26 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 .LEHB57:
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE57:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 75 is_stmt 0 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 75 is_stmt 0 discriminator 3
 	leaq	112(%rbp), %rdx	 #, tmp135
 	leaq	160(%rbp), %rax	 #, tmp136
 	movq	%rax, %rcx	 # tmp136,
 .LEHB58:
 	call	_Z16wxGetTranslationRK8wxStringS1_	 #
 	movq	%rax, %r13	 #, _56
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 25 is_stmt 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 25 is_stmt 1 discriminator 3
 	leaq	208(%rbp), %rax	 #, tmp137
 	movq	.refptr.wxStaticTextNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp137,
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE58:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 25 is_stmt 0 discriminator 7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 25 is_stmt 0 discriminator 7
 	leaq	208(%rbp), %r12	 #, _59
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 94 is_stmt 1 discriminator 7
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 94 is_stmt 1 discriminator 7
 	movl	$648, %ecx	 #,
 .LEHB59:
 	call	_Znwy	 #
@@ -10063,23 +10094,23 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 .LEHB60:
 	call	_ZN12wxStaticTextC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_	 #
 .LEHE60:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 25 discriminator 11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 25 discriminator 11
 	movq	432(%rbp), %rax	 # this, tmp141
 	movq	%rdi, 792(%rax)	 # _61, this_46(D)->m_fontTitle
 	leaq	208(%rbp), %rax	 #, tmp142
 	movq	%rax, %rcx	 # tmp142,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 75 discriminator 11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 75 discriminator 11
 	leaq	160(%rbp), %rax	 #, tmp143
 	movq	%rax, %rcx	 # tmp143,
 	call	_ZN8wxStringD1Ev	 #
 	leaq	112(%rbp), %rax	 #, tmp144
 	movq	%rax, %rcx	 # tmp144,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
-	.loc 33 39 25 discriminator 11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:40:     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
+	.loc 33 40 25 discriminator 11
 	leaq	256(%rbp), %rax	 #, tmp145
 	movq	.refptr.wxListBoxNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp145,
@@ -10087,8 +10118,8 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE61:
 	leaq	256(%rbp), %r12	 #, _72
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
-	.loc 33 39 66 discriminator 11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:40:     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
+	.loc 33 40 66 discriminator 11
 	movl	$728, %ecx	 #,
 .LEHB62:
 	call	_Znwy	 #
@@ -10111,30 +10142,30 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 .LEHB63:
 	call	_ZN9wxListBoxC1EP8wxWindowiRK7wxPointRK6wxSizeiPK8wxStringlRK11wxValidatorRS9_	 #
 .LEHE63:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
-	.loc 33 39 25 discriminator 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:40:     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
+	.loc 33 40 25 discriminator 5
 	movq	432(%rbp), %rax	 # this, tmp149
 	movq	%rdi, 800(%rax)	 # _74, this_46(D)->m_font
 	leaq	256(%rbp), %rax	 #, tmp150
 	movq	%rax, %rcx	 # tmp150,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:41:     wxArrayString       fonts;
-	.loc 33 41 25 discriminator 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:42:     wxArrayString       fonts;
+	.loc 33 42 25 discriminator 5
 	leaq	-16(%rbp), %rax	 #, tmp151
 	movq	%rax, %rcx	 # tmp151,
 .LEHB64:
 	call	_ZN13wxArrayStringC1Ev	 #
 .LEHE64:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:42:     wxFontEnumerator    fontenum;
-	.loc 33 42 25 discriminator 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:43:     wxFontEnumerator    fontenum;
+	.loc 33 43 25 discriminator 5
 	leaq	-24(%rbp), %rax	 #, tmp152
 	movq	%rax, %rcx	 # tmp152,
 	call	_ZN16wxFontEnumeratorC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:43:     wxFontEncoding      encoding        = wxFONTENCODING_DEFAULT;
-	.loc 33 43 25 discriminator 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:44:     wxFontEncoding      encoding        = wxFONTENCODING_DEFAULT;
+	.loc 33 44 25 discriminator 5
 	movl	$0, 348(%rbp)	 #, encoding
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:45:     fonts = fontenum.GetFacenames(encoding);
-	.loc 33 45 34 discriminator 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:46:     fonts = fontenum.GetFacenames(encoding);
+	.loc 33 46 34 discriminator 5
 	leaq	304(%rbp), %rax	 #, tmp153
 	movl	348(%rbp), %edx	 # encoding, tmp154
 	movl	$0, %r8d	 #,
@@ -10142,81 +10173,87 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 .LEHB65:
 	call	_ZN16wxFontEnumerator12GetFacenamesE14wxFontEncodingb	 #
 .LEHE65:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:45:     fonts = fontenum.GetFacenames(encoding);
-	.loc 33 45 43 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:46:     fonts = fontenum.GetFacenames(encoding);
+	.loc 33 46 43 discriminator 1
 	leaq	304(%rbp), %rdx	 #, tmp155
 	leaq	-16(%rbp), %rax	 #, tmp156
 	movq	%rax, %rcx	 # tmp156,
 .LEHB66:
 	call	_ZN13wxArrayStringaSERKS_	 #
 .LEHE66:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:45:     fonts = fontenum.GetFacenames(encoding);
-	.loc 33 45 34 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:46:     fonts = fontenum.GetFacenames(encoding);
+	.loc 33 46 34 discriminator 3
 	leaq	304(%rbp), %rax	 #, tmp157
 	movq	%rax, %rcx	 # tmp157,
 	call	_ZN13wxArrayStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:47:     m_font->Append(fonts);
-	.loc 33 47 5 discriminator 3
-	movq	432(%rbp), %rax	 # this, tmp158
-	movq	800(%rax), %rax	 # this_46(D)->m_font, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:47:     m_font->Append(fonts);
-	.loc 33 47 19 discriminator 3
-	leaq	648(%rax), %rcx	 #, _7
-	leaq	-16(%rbp), %rax	 #, tmp159
-	movq	%rax, %rdx	 # tmp159,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:48:     fonts.Sort();
+	.loc 33 48 15 discriminator 3
+	leaq	-16(%rbp), %rax	 #, tmp158
+	movl	$0, %edx	 #,
+	movq	%rax, %rcx	 # tmp158,
 .LEHB67:
+	call	_ZN13wxArrayString4SortEb	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:50:     m_font->Append(fonts);
+	.loc 33 50 5
+	movq	432(%rbp), %rax	 # this, tmp159
+	movq	800(%rax), %rax	 # this_46(D)->m_font, _6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:50:     m_font->Append(fonts);
+	.loc 33 50 19
+	leaq	648(%rax), %rcx	 #, _7
+	leaq	-16(%rbp), %rax	 #, tmp160
+	movq	%rax, %rdx	 # tmp160,
 	call	_ZN15wxItemContainer6AppendERK13wxArrayString	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:49:     font->Add(m_fontTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_TOP, 5);
-	.loc 33 49 14
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:52:     font->Add(m_fontTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_TOP, 5);
+	.loc 33 52 14
 	movq	352(%rbp), %rax	 # font, _8
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:49:     font->Add(m_fontTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_TOP, 5);
-	.loc 33 49 15
-	movq	432(%rbp), %rdx	 # this, tmp160
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:52:     font->Add(m_fontTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_TOP, 5);
+	.loc 33 52 15
+	movq	432(%rbp), %rdx	 # this, tmp161
 	movq	792(%rdx), %rdx	 # this_46(D)->m_fontTitle, _9
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:49:     font->Add(m_fontTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_TOP, 5);
-	.loc 33 49 14
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:52:     font->Add(m_fontTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_TOP, 5);
+	.loc 33 52 14
 	movq	$0, 40(%rsp)	 #,
 	movl	$5, 32(%rsp)	 #,
 	movl	$496, %r9d	 #,
 	movl	$0, %r8d	 #,
 	movq	%rax, %rcx	 # _8,
 	call	_ZN7wxSizer3AddEP8wxWindowiiiP8wxObject	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:50:     font->Add(m_font, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	.loc 33 50 14
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:53:     font->Add(m_font, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	.loc 33 53 14
 	movq	352(%rbp), %rax	 # font, _10
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:50:     font->Add(m_font, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	.loc 33 50 15
-	movq	432(%rbp), %rdx	 # this, tmp161
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:53:     font->Add(m_font, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	.loc 33 53 15
+	movq	432(%rbp), %rdx	 # this, tmp162
 	movq	800(%rdx), %rdx	 # this_46(D)->m_font, _11
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:50:     font->Add(m_font, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
-	.loc 33 50 14
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:53:     font->Add(m_font, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
+	.loc 33 53 14
 	movq	$0, 40(%rsp)	 #,
 	movl	$5, 32(%rsp)	 #,
 	movl	$2544, %r9d	 #,
 	movl	$1, %r8d	 #,
 	movq	%rax, %rcx	 # _10,
 	call	_ZN7wxSizer3AddEP8wxWindowiiiP8wxObject	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:52:     sizer->Add(font, 1, wxALL|wxEXPAND, 5);
-	.loc 33 52 15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:55:     sizer->Add(font, 1, wxALL|wxEXPAND, 5);
+	.loc 33 55 15
 	movq	360(%rbp), %rax	 # sizer, _12
-	movq	352(%rbp), %rdx	 # font, tmp162
+	movq	352(%rbp), %rdx	 # font, tmp163
 	movq	$0, 40(%rsp)	 #,
 	movl	$5, 32(%rsp)	 #,
 	movl	$8432, %r9d	 #,
 	movl	$1, %r8d	 #,
 	movq	%rax, %rcx	 # _12,
 	call	_ZN7wxSizer3AddEPS_iiiP8wxObject	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:54:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
-	.loc 33 54 15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:57:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
+	.loc 33 57 15
 	movq	360(%rbp), %rdi	 # sizer, _13
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:54:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
-	.loc 33 54 42
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:57:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
+	.loc 33 57 42
 	movq	432(%rbp), %rax	 # this, _14
 	movl	$48, %edx	 #,
 	movq	%rax, %rcx	 # _14,
 	call	_ZN12wxDialogBase26CreateStdDialogButtonSizerEl	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:54:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
-	.loc 33 54 15
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:57:     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
+	.loc 33 57 15
 	movq	$0, 40(%rsp)	 #,
 	movl	$5, 32(%rsp)	 #,
 	movl	$752, %r9d	 #,
@@ -10224,185 +10261,185 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 	movq	%rax, %rdx	 # _15,
 	movq	%rdi, %rcx	 # _13,
 	call	_ZN7wxSizer3AddEPS_iiiP8wxObject	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:56:     SetSizer(sizer);
-	.loc 33 56 13
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:59:     SetSizer(sizer);
+	.loc 33 59 13
 	movq	432(%rbp), %rax	 # this, _16
-	movq	360(%rbp), %rdx	 # sizer, tmp163
+	movq	360(%rbp), %rdx	 # sizer, tmp164
 	movl	$1, %r8d	 #,
 	movq	%rax, %rcx	 # _16,
 	call	_ZN12wxWindowBase8SetSizerEP7wxSizerb	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:57:     sizer->Fit(this);
-	.loc 33 57 20
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:60:     sizer->Fit(this);
+	.loc 33 60 20
 	movq	360(%rbp), %rax	 # sizer, _17
 	movq	432(%rbp), %rdx	 # this, _18
 	movq	%rax, %rcx	 # _17,
 	call	_ZN7wxSizer3FitEP8wxWindow	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:58:     sizer->SetSizeHints(this);
-	.loc 33 58 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:61:     sizer->SetSizeHints(this);
+	.loc 33 61 24
 	movq	360(%rbp), %rax	 # sizer, _19
 	movq	432(%rbp), %rdx	 # this, _20
 	movq	%rax, %rcx	 # _19,
 	call	_ZN7wxSizer12SetSizeHintsEP8wxWindow	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:60:     Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
-	.loc 33 60 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:63:     Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
+	.loc 33 63 12
 	movq	432(%rbp), %rdi	 # this, _21
-	leaq	_ZN32T100ProjectViewSetupEditorDialog7OnApplyER14wxCommandEvent(%rip), %rbx	 #, D.219276
-	movl	$0, %esi	 #, D.219276
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:60:     Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
-	.loc 33 60 86
+	leaq	_ZN32T100ProjectViewSetupEditorDialog7OnApplyER14wxCommandEvent(%rip), %rbx	 #, D.219307
+	movl	$0, %esi	 #, D.219307
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:63:     Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
+	.loc 33 63 86
 	movq	.refptr.wxEVT_BUTTON(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI14wxCommandEventEcvRKiEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:60:     Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
-	.loc 33 60 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:63:     Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
+	.loc 33 63 12
 	movl	(%rax), %edx	 # *_22, _23
-	movq	%rbx, -48(%rbp)	 # D.219276,
-	movq	%rsi, -40(%rbp)	 # D.219276,
-	leaq	-48(%rbp), %rax	 #, tmp164
+	movq	%rbx, -48(%rbp)	 # D.219307,
+	movq	%rsi, -40(%rbp)	 # D.219307,
+	leaq	-48(%rbp), %rax	 #, tmp165
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
-	movq	%rax, %r9	 # tmp164,
+	movq	%rax, %r9	 # tmp165,
 	movl	%edx, %r8d	 # _23,
 	movl	$5102, %edx	 #,
 	movq	%rdi, %rcx	 # _21,
 	call	_ZN12wxEvtHandler7ConnectEiiMS_FvR7wxEventEP8wxObjectPS_	 #
 .LEHE67:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:42:     wxFontEnumerator    fontenum;
-	.loc 33 42 25
-	leaq	-24(%rbp), %rax	 #, tmp165
-	movq	%rax, %rcx	 # tmp165,
-	call	_ZN16wxFontEnumeratorD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:41:     wxArrayString       fonts;
-	.loc 33 41 25
-	leaq	-16(%rbp), %rax	 #, tmp166
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:43:     wxFontEnumerator    fontenum;
+	.loc 33 43 25
+	leaq	-24(%rbp), %rax	 #, tmp166
 	movq	%rax, %rcx	 # tmp166,
+	call	_ZN16wxFontEnumeratorD1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:42:     wxArrayString       fonts;
+	.loc 33 42 25
+	leaq	-16(%rbp), %rax	 #, tmp167
+	movq	%rax, %rcx	 # tmp167,
 	call	_ZN13wxArrayStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:61: }
-	.loc 33 61 1
-	jmp	.L433	 #
-.L421:
-	movq	%rax, %rbx	 #, tmp167
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:34:     wxBoxSizer*             sizer       = T100NEW wxBoxSizer(wxVERTICAL);
-	.loc 33 34 72
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:64: }
+	.loc 33 64 1
+	jmp	.L435	 #
+.L423:
+	movq	%rax, %rbx	 #, tmp168
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:35:     wxBoxSizer*             sizer       = T100NEW wxBoxSizer(wxVERTICAL);
+	.loc 33 35 72
 	movl	$136, %edx	 #,
 	movq	%rdi, %rcx	 # _34,
 	call	_ZdlPvy	 #
-	movq	%rbx, %rax	 # tmp167, D.219991
-	movq	%rax, %rcx	 # D.219991,
+	movq	%rbx, %rax	 # tmp168, D.220028
+	movq	%rax, %rcx	 # D.220028,
 .LEHB68:
 	call	_Unwind_Resume	 #
-.L424:
-	movq	%rax, %rbx	 #, tmp169
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:36:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
-	.loc 33 36 98
+.L426:
+	movq	%rax, %rbx	 #, tmp170
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:37:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
+	.loc 33 37 98
 	movl	$144, %edx	 #,
 	movq	%rdi, %rcx	 # _44,
 	call	_ZdlPvy	 #
-	jmp	.L411	 #
-.L423:
-	movq	%rax, %rbx	 #, tmp168
-.L411:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:36:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
-	.loc 33 36 88 discriminator 6
-	leaq	64(%rbp), %rax	 #, tmp172
-	movq	%rax, %rcx	 # tmp172,
+	jmp	.L413	 #
+.L425:
+	movq	%rax, %rbx	 #, tmp169
+.L413:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:37:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
+	.loc 33 37 88 discriminator 6
+	leaq	64(%rbp), %rax	 #, tmp173
+	movq	%rax, %rcx	 # tmp173,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L412	 #
-.L422:
-	movq	%rax, %rbx	 #, tmp173
-.L412:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:36:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
-	.loc 33 36 88 is_stmt 0 discriminator 2
-	leaq	16(%rbp), %rax	 #, tmp175
-	movq	%rax, %rcx	 # tmp175,
+	jmp	.L414	 #
+.L424:
+	movq	%rax, %rbx	 #, tmp174
+.L414:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:37:     wxStaticBoxSizer*       font        = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Font:"));
+	.loc 33 37 88 is_stmt 0 discriminator 2
+	leaq	16(%rbp), %rax	 #, tmp176
+	movq	%rax, %rcx	 # tmp176,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp173, D.219992
-	movq	%rax, %rcx	 # D.219992,
+	movq	%rbx, %rax	 # tmp174, D.220029
+	movq	%rax, %rcx	 # D.220029,
 	call	_Unwind_Resume	 #
-.L428:
-	movq	%rax, %rbx	 #, tmp177
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 94 is_stmt 1
+.L430:
+	movq	%rax, %rbx	 #, tmp178
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 94 is_stmt 1
 	movl	$648, %edx	 #,
 	movq	%rdi, %rcx	 # _61,
 	call	_ZdlPvy	 #
-	jmp	.L414	 #
-.L427:
-	movq	%rax, %rbx	 #, tmp176
-.L414:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 25 discriminator 8
-	leaq	208(%rbp), %rax	 #, tmp180
-	movq	%rax, %rcx	 # tmp180,
-	call	_ZN8wxStringD1Ev	 #
-	jmp	.L415	 #
-.L426:
-	movq	%rax, %rbx	 #, tmp181
-.L415:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 75 discriminator 6
-	leaq	160(%rbp), %rax	 #, tmp183
-	movq	%rax, %rcx	 # tmp183,
-	call	_ZN8wxStringD1Ev	 #
 	jmp	.L416	 #
-.L425:
-	movq	%rax, %rbx	 #, tmp184
+.L429:
+	movq	%rax, %rbx	 #, tmp177
 .L416:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:38:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
-	.loc 33 38 75 is_stmt 0 discriminator 2
-	leaq	112(%rbp), %rax	 #, tmp186
-	movq	%rax, %rcx	 # tmp186,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 25 discriminator 8
+	leaq	208(%rbp), %rax	 #, tmp181
+	movq	%rax, %rcx	 # tmp181,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp184, D.219993
-	movq	%rax, %rcx	 # D.219993,
+	jmp	.L417	 #
+.L428:
+	movq	%rax, %rbx	 #, tmp182
+.L417:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 75 discriminator 6
+	leaq	160(%rbp), %rax	 #, tmp184
+	movq	%rax, %rcx	 # tmp184,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L418	 #
+.L427:
+	movq	%rax, %rbx	 #, tmp185
+.L418:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
+	.loc 33 39 75 is_stmt 0 discriminator 2
+	leaq	112(%rbp), %rax	 #, tmp187
+	movq	%rax, %rcx	 # tmp187,
+	call	_ZN8wxStringD1Ev	 #
+	movq	%rbx, %rax	 # tmp185, D.220030
+	movq	%rax, %rcx	 # D.220030,
 	call	_Unwind_Resume	 #
-.L430:
-	movq	%rax, %rbx	 #, tmp188
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
-	.loc 33 39 66 is_stmt 1
+.L432:
+	movq	%rax, %rbx	 #, tmp189
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:40:     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
+	.loc 33 40 66 is_stmt 1
 	movl	$728, %edx	 #,
 	movq	%rdi, %rcx	 # _74,
 	call	_ZdlPvy	 #
-	jmp	.L418	 #
-.L429:
-	movq	%rax, %rbx	 #, tmp187
-.L418:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:39:     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
-	.loc 33 39 25 discriminator 2
-	leaq	256(%rbp), %rax	 #, tmp191
-	movq	%rax, %rcx	 # tmp191,
-	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp187, D.219994
-	movq	%rax, %rcx	 # D.219994,
-	call	_Unwind_Resume	 #
-.L432:
-	movq	%rax, %rbx	 #, tmp194
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:45:     fonts = fontenum.GetFacenames(encoding);
-	.loc 33 45 34
-	leaq	304(%rbp), %rax	 #, tmp192
-	movq	%rax, %rcx	 # tmp192,
-	call	_ZN13wxArrayStringD1Ev	 #
 	jmp	.L420	 #
 .L431:
-	movq	%rax, %rbx	 #, tmp193
+	movq	%rax, %rbx	 #, tmp188
 .L420:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:42:     wxFontEnumerator    fontenum;
-	.loc 33 42 25
-	leaq	-24(%rbp), %rax	 #, tmp197
-	movq	%rax, %rcx	 # tmp197,
-	call	_ZN16wxFontEnumeratorD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:41:     wxArrayString       fonts;
-	.loc 33 41 25
-	leaq	-16(%rbp), %rax	 #, tmp200
-	movq	%rax, %rcx	 # tmp200,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:40:     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
+	.loc 33 40 25 discriminator 2
+	leaq	256(%rbp), %rax	 #, tmp192
+	movq	%rax, %rcx	 # tmp192,
+	call	_ZN8wxStringD1Ev	 #
+	movq	%rbx, %rax	 # tmp188, D.220031
+	movq	%rax, %rcx	 # D.220031,
+	call	_Unwind_Resume	 #
+.L434:
+	movq	%rax, %rbx	 #, tmp195
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:46:     fonts = fontenum.GetFacenames(encoding);
+	.loc 33 46 34
+	leaq	304(%rbp), %rax	 #, tmp193
+	movq	%rax, %rcx	 # tmp193,
 	call	_ZN13wxArrayStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp198, D.219995
-	movq	%rax, %rcx	 # D.219995,
+	jmp	.L422	 #
+.L433:
+	movq	%rax, %rbx	 #, tmp194
+.L422:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:43:     wxFontEnumerator    fontenum;
+	.loc 33 43 25
+	leaq	-24(%rbp), %rax	 #, tmp198
+	movq	%rax, %rcx	 # tmp198,
+	call	_ZN16wxFontEnumeratorD1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:42:     wxArrayString       fonts;
+	.loc 33 42 25
+	leaq	-16(%rbp), %rax	 #, tmp201
+	movq	%rax, %rcx	 # tmp201,
+	call	_ZN13wxArrayStringD1Ev	 #
+	movq	%rbx, %rax	 # tmp199, D.220032
+	movq	%rax, %rcx	 # D.220032,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE68:
-.L433:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:61: }
-	.loc 33 61 1
+.L435:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:64: }
+	.loc 33 64 1
 	addq	$504, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -10434,35 +10471,35 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 	.uleb128 0
 	.uleb128 .LEHB53-.LFB16143
 	.uleb128 .LEHE53-.LEHB53
-	.uleb128 .L421-.LFB16143
+	.uleb128 .L423-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB54-.LFB16143
 	.uleb128 .LEHE54-.LEHB54
-	.uleb128 .L422-.LFB16143
+	.uleb128 .L424-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB55-.LFB16143
 	.uleb128 .LEHE55-.LEHB55
-	.uleb128 .L423-.LFB16143
+	.uleb128 .L425-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB56-.LFB16143
 	.uleb128 .LEHE56-.LEHB56
-	.uleb128 .L424-.LFB16143
+	.uleb128 .L426-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB57-.LFB16143
 	.uleb128 .LEHE57-.LEHB57
-	.uleb128 .L425-.LFB16143
+	.uleb128 .L427-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB58-.LFB16143
 	.uleb128 .LEHE58-.LEHB58
-	.uleb128 .L426-.LFB16143
+	.uleb128 .L428-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB59-.LFB16143
 	.uleb128 .LEHE59-.LEHB59
-	.uleb128 .L427-.LFB16143
+	.uleb128 .L429-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB60-.LFB16143
 	.uleb128 .LEHE60-.LEHB60
-	.uleb128 .L428-.LFB16143
+	.uleb128 .L430-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB61-.LFB16143
 	.uleb128 .LEHE61-.LEHB61
@@ -10470,11 +10507,11 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 	.uleb128 0
 	.uleb128 .LEHB62-.LFB16143
 	.uleb128 .LEHE62-.LEHB62
-	.uleb128 .L429-.LFB16143
+	.uleb128 .L431-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB63-.LFB16143
 	.uleb128 .LEHE63-.LEHB63
-	.uleb128 .L430-.LFB16143
+	.uleb128 .L432-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB64-.LFB16143
 	.uleb128 .LEHE64-.LEHB64
@@ -10482,15 +10519,15 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 	.uleb128 0
 	.uleb128 .LEHB65-.LFB16143
 	.uleb128 .LEHE65-.LEHB65
-	.uleb128 .L431-.LFB16143
+	.uleb128 .L433-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB66-.LFB16143
 	.uleb128 .LEHE66-.LEHB66
-	.uleb128 .L432-.LFB16143
+	.uleb128 .L434-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB67-.LFB16143
 	.uleb128 .LEHE67-.LEHB67
-	.uleb128 .L431-.LFB16143
+	.uleb128 .L433-.LFB16143
 	.uleb128 0
 	.uleb128 .LEHB68-.LFB16143
 	.uleb128 .LEHE68-.LEHB68
@@ -10505,7 +10542,7 @@ _ZN32T100ProjectViewSetupEditorDialog4initEv:
 	.seh_proc	_ZN32T100ProjectViewSetupEditorDialog6uninitEv
 _ZN32T100ProjectViewSetupEditorDialog6uninitEv:
 .LFB16144:
-	.loc 33 64 1
+	.loc 33 67 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -10516,8 +10553,8 @@ _ZN32T100ProjectViewSetupEditorDialog6uninitEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:66: }
-	.loc 33 66 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:69: }
+	.loc 33 69 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -10532,42 +10569,145 @@ _ZN32T100ProjectViewSetupEditorDialog6uninitEv:
 	.seh_proc	_ZN32T100ProjectViewSetupEditorDialog7OnApplyER14wxCommandEvent
 _ZN32T100ProjectViewSetupEditorDialog7OnApplyER14wxCommandEvent:
 .LFB16145:
-	.loc 33 69 1
+	.loc 33 72 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
+	pushq	%rsi	 #
+	.seh_pushreg	%rsi
+	.cfi_def_cfa_offset 24
+	.cfi_offset 4, -24
+	pushq	%rbx	 #
+	.seh_pushreg	%rbx
+	.cfi_def_cfa_offset 32
+	.cfi_offset 3, -32
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
-	subq	$32, %rsp	 #,
-	.seh_stackalloc	32
+	subq	$80, %rsp	 #,
+	.seh_stackalloc	80
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # event, event
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:70:     Close();
-	.loc 33 70 10
-	movq	16(%rbp), %rax	 # this, _1
+	movq	%rcx, 32(%rbp)	 # this, this
+	movq	%rdx, 40(%rbp)	 # event, event
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:73:     T100ProjectConfig::T100PROJECT_EDITOR_FONT      = m_font->GetString(m_font->GetSelection()).ToStdWstring();
+	.loc 33 73 55
+	movq	32(%rbp), %rax	 # this, tmp105
+	movq	800(%rax), %rsi	 # this_19(D)->m_font, _1
+	movq	32(%rbp), %rax	 # this, tmp107
+	movq	800(%rax), %rax	 # this_19(D)->m_font, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:73:     T100ProjectConfig::T100PROJECT_EDITOR_FONT      = m_font->GetString(m_font->GetSelection()).ToStdWstring();
+	.loc 33 73 95
+	movq	(%rax), %rax	 # _3->D.127923.D.127190.D.127051.D.126956.D.126896.D.126136.D.125976.D.123101.D.121810.D.115767._vptr.wxObject, _4
+	addq	$1904, %rax	 #, _5
+	movq	(%rax), %rbx	 # *_5, _6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:73:     T100ProjectConfig::T100PROJECT_EDITOR_FONT      = m_font->GetString(m_font->GetSelection()).ToStdWstring();
+	.loc 33 73 73
+	movq	32(%rbp), %rax	 # this, tmp108
+	movq	800(%rax), %rdx	 # this_19(D)->m_font, _7
+	movq	32(%rbp), %rax	 # this, tmp110
+	movq	800(%rax), %rax	 # this_19(D)->m_font, _9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:73:     T100ProjectConfig::T100PROJECT_EDITOR_FONT      = m_font->GetString(m_font->GetSelection()).ToStdWstring();
+	.loc 33 73 94
+	movq	(%rax), %rax	 # _9->D.127923.D.127190.D.127051.D.126956.D.126896.D.126136.D.125976.D.123101.D.121810.D.115767._vptr.wxObject, _10
+	addq	$1928, %rax	 #, _11
+	movq	(%rax), %rax	 # *_11, _12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:73:     T100ProjectConfig::T100PROJECT_EDITOR_FONT      = m_font->GetString(m_font->GetSelection()).ToStdWstring();
+	.loc 33 73 93
+	movq	%rdx, %rcx	 # _7,
+.LEHB69:
+	call	*%rax	 # _12
+.LVL29:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:73:     T100ProjectConfig::T100PROJECT_EDITOR_FONT      = m_font->GetString(m_font->GetSelection()).ToStdWstring();
+	.loc 33 73 72
+	movl	%eax, %edx	 # _13, _14
+	leaq	-48(%rbp), %rax	 #, tmp111
+	movl	%edx, %r8d	 # _14,
+	movq	%rsi, %rdx	 # _1,
+	movq	%rax, %rcx	 # tmp111,
+	call	*%rbx	 # _6
+.LVL30:
+.LEHE69:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:73:     T100ProjectConfig::T100PROJECT_EDITOR_FONT      = m_font->GetString(m_font->GetSelection()).ToStdWstring();
+	.loc 33 73 110
+	leaq	-48(%rbp), %rax	 #, tmp112
+	movq	%rax, %rcx	 # tmp112,
+	call	_ZNK8wxString12ToStdWstringB5cxx11Ev	 #
+	movq	%rax, %rdx	 # _15,
+	movq	.refptr._ZN17T100ProjectConfig23T100PROJECT_EDITOR_FONTB5cxx11E(%rip), %rcx	 #,
+.LEHB70:
+	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_	 #
+.LEHE70:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:73:     T100ProjectConfig::T100PROJECT_EDITOR_FONT      = m_font->GetString(m_font->GetSelection()).ToStdWstring();
+	.loc 33 73 72 discriminator 2
+	leaq	-48(%rbp), %rax	 #, tmp113
+	movq	%rax, %rcx	 # tmp113,
+	call	_ZN8wxStringD1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:75:     Close();
+	.loc 33 75 10 discriminator 2
+	movq	32(%rbp), %rax	 # this, _16
 	movl	$0, %edx	 #,
-	movq	%rax, %rcx	 # _1,
+	movq	%rax, %rcx	 # _16,
+.LEHB71:
 	call	_ZN12wxWindowBase5CloseEb	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:71:     SetReturnCode(wxID_APPLY);
-	.loc 33 71 18
-	movq	16(%rbp), %rax	 # this, _2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:76:     SetReturnCode(wxID_APPLY);
+	.loc 33 76 18 discriminator 2
+	movq	32(%rbp), %rax	 # this, _17
 	movl	$5102, %edx	 #,
-	movq	%rax, %rcx	 # _2,
+	movq	%rax, %rcx	 # _17,
 	call	_ZN12wxDialogBase13SetReturnCodeEi	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:72: }
-	.loc 33 72 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:77: }
+	.loc 33 77 1 discriminator 2
+	jmp	.L440	 #
+.L439:
+	movq	%rax, %rbx	 #, tmp115
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:73:     T100ProjectConfig::T100PROJECT_EDITOR_FONT      = m_font->GetString(m_font->GetSelection()).ToStdWstring();
+	.loc 33 73 72
+	leaq	-48(%rbp), %rax	 #, tmp114
+	movq	%rax, %rcx	 # tmp114,
+	call	_ZN8wxStringD1Ev	 #
+	movq	%rbx, %rax	 # tmp115, D.220041
+	movq	%rax, %rcx	 # D.220041,
+	call	_Unwind_Resume	 #
 	nop	
-	addq	$32, %rsp	 #,
+.LEHE71:
+.L440:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:77: }
+	.loc 33 77 1
+	addq	$80, %rsp	 #,
+	popq	%rbx	 #
+	.cfi_restore 3
+	popq	%rsi	 #
+	.cfi_restore 4
 	popq	%rbp	 #
 	.cfi_restore 6
-	.cfi_def_cfa 7, 8
+	.cfi_def_cfa 7, 24
 	ret	
 	.cfi_endproc
 .LFE16145:
+	.seh_handler	__gxx_personality_seh0, @unwind, @except
+	.seh_handlerdata
+.LLSDA16145:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE16145-.LLSDACSB16145
+.LLSDACSB16145:
+	.uleb128 .LEHB69-.LFB16145
+	.uleb128 .LEHE69-.LEHB69
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB70-.LFB16145
+	.uleb128 .LEHE70-.LEHB70
+	.uleb128 .L439-.LFB16145
+	.uleb128 0
+	.uleb128 .LEHB71-.LFB16145
+	.uleb128 .LEHE71-.LEHB71
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE16145:
+	.text
 	.seh_endproc
 	.section	.text$_ZN22wxScopedCharTypeBufferIwED1Ev,"x"
 	.linkonce discard
@@ -10840,18 +10980,18 @@ _Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_:
 	.loc 34 71 68
 	movl	16(%rbp), %eax	 # a, tmp89
 	cmpl	24(%rbp), %eax	 # b, tmp89
-	jle	.L445	 #,
+	jle	.L450	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 34 71 68 is_stmt 0 discriminator 1
 	movl	16(%rbp), %eax	 # a, iftmp.7_1
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 34 71 74 is_stmt 1 discriminator 1
-	jmp	.L447	 #
-.L445:
+	jmp	.L452	 #
+.L450:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 34 71 68 discriminator 2
 	movl	24(%rbp), %eax	 # b, iftmp.7_1
-.L447:
+.L452:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:72: }
 	.loc 34 72 1 discriminator 5
 	popq	%rbp	 #
@@ -11018,21 +11158,21 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:194:         if ( m_data == GetNullData() ) // exception, not ref-counted
 	.loc 1 194 9
 	testb	%al, %al	 # retval.31_14
-	jne	.L456	 #,
+	jne	.L461	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 16
 	movq	-64(%rbp), %rax	 # this, tmp98
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 24
-	movzwl	16(%rax), %edx	 # _3->D.212917.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.212948.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.212917.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.212948.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 24
-	movzwl	16(%rax), %eax	 # _3->D.212917.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.212948.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 30
 	testw	%ax, %ax	 # _6
@@ -11040,7 +11180,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 9
 	testb	%al, %al	 # retval.32_16
-	je	.L455	 #,
+	je	.L460	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 1 197 20
 	movq	-64(%rbp), %rax	 # this, tmp99
@@ -11048,7 +11188,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 1 197 13
 	testq	%rbx, %rbx	 # _17
-	je	.L455	 #,
+	je	.L460	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 1 197 13 is_stmt 0 discriminator 1
 	movq	%rbx, %rcx	 # _17,
@@ -11056,7 +11196,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movl	$24, %edx	 #,
 	movq	%rbx, %rcx	 # _17,
 	call	_ZdlPvy	 #
-.L455:
+.L460:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:198:         m_data = GetNullData();
 	.loc 1 198 29 is_stmt 1
 	call	_ZN22wxScopedCharTypeBufferIwE11GetNullDataEv	 #
@@ -11065,12 +11205,12 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	.loc 1 198 9
 	movq	-64(%rbp), %rax	 # this, tmp100
 	movq	%rdx, (%rax)	 # _7, this_11(D)->m_data
-	jmp	.L452	 #
-.L456:
+	jmp	.L457	 #
+.L461:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:195:             return;
 	.loc 1 195 13
 	nop	
-.L452:
+.L457:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:199:     }
 	.loc 1 199 5
 	addq	$40, %rsp	 #,
@@ -11155,24 +11295,24 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:187:         if ( m_data == GetNullData() ) // exception, not ref-counted
 	.loc 1 187 9
 	testb	%al, %al	 # retval.23_12
-	jne	.L462	 #,
+	jne	.L467	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 9
 	movq	-64(%rbp), %rax	 # this, tmp94
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 17
-	movzwl	16(%rax), %edx	 # _3->D.212917.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.212948.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.212917.m_ref
-	jmp	.L459	 #
-.L462:
+	movw	%dx, 16(%rax)	 # _6, _3->D.212948.m_ref
+	jmp	.L464	 #
+.L467:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
 	.loc 1 188 13
 	nop	
-.L459:
+.L464:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:190:     }
 	.loc 1 190 5
 	addq	$40, %rsp	 #,
@@ -11207,7 +11347,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 1 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.212917.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.212948.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 1 171 72
 	popq	%rbp	 #
@@ -13003,7 +13143,7 @@ _ZTS8wxObject:
 	.seh_proc	__tcf_0
 __tcf_0:
 .LFB17256:
-	.loc 33 8 1
+	.loc 33 9 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13015,8 +13155,8 @@ __tcf_0:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:8: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
-	.loc 33 8 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:9: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
+	.loc 33 9 1
 	leaq	_ZN32T100ProjectViewSetupEditorDialog17sm_eventHashTableE(%rip), %rcx	 #,
 	call	_ZN16wxEventHashTableD1Ev	 #
 	nop	
@@ -13032,7 +13172,7 @@ __tcf_0:
 	.seh_proc	__tcf_1
 __tcf_1:
 .LFB17257:
-	.loc 33 8 1
+	.loc 33 9 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13049,24 +13189,24 @@ __tcf_1:
 	.seh_setframe	%rbp, 128
 	.cfi_def_cfa 6, -64
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:8: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
-	.loc 33 8 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:9: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
+	.loc 33 9 1
 	leaq	32+_ZN32T100ProjectViewSetupEditorDialog20sm_eventTableEntriesE(%rip), %rbx	 #, _1
-.L474:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:8: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
-	.loc 33 8 1 is_stmt 0 discriminator 4
+.L479:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:9: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
+	.loc 33 9 1 is_stmt 0 discriminator 4
 	leaq	_ZN32T100ProjectViewSetupEditorDialog20sm_eventTableEntriesE(%rip), %rax	 #, tmp88
 	cmpq	%rax, %rbx	 # tmp88, _1
-	je	.L472	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:8: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
-	.loc 33 8 1 discriminator 3
+	je	.L477	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:9: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
+	.loc 33 9 1 discriminator 3
 	subq	$32, %rbx	 #, _1
 	movq	%rbx, %rcx	 # _1,
 	call	_ZN17wxEventTableEntryD1Ev	 #
-	jmp	.L474	 #
-.L472:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:8: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
-	.loc 33 8 1
+	jmp	.L479	 #
+.L477:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:9: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
+	.loc 33 9 1
 	addq	$40, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -13081,7 +13221,7 @@ __tcf_1:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB17255:
-	.loc 33 72 1 is_stmt 1
+	.loc 33 77 1 is_stmt 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13108,37 +13248,37 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, -32(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, -24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:72: }
-	.loc 33 72 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:77: }
+	.loc 33 77 1
 	cmpl	$1, -32(%rbp)	 #, __initialize_p
-	jne	.L475	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:72: }
-	.loc 33 72 1 is_stmt 0 discriminator 1
+	jne	.L480	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:77: }
+	.loc 33 77 1 is_stmt 0 discriminator 1
 	cmpl	$65535, -24(%rbp)	 #, __priority
-	jne	.L475	 #,
-.LEHB69:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:5: const long T100ProjectViewSetupEditorDialog::ID_FONT_STATIC_TEXT    = wxNewId();
-	.loc 33 5 78 is_stmt 1
+	jne	.L480	 #,
+.LEHB72:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:6: const long T100ProjectViewSetupEditorDialog::ID_FONT_STATIC_TEXT    = wxNewId();
+	.loc 33 6 78 is_stmt 1
 	call	_Z7wxNewIdv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:5: const long T100ProjectViewSetupEditorDialog::ID_FONT_STATIC_TEXT    = wxNewId();
-	.loc 33 5 12
-	movl	%eax, _ZN32T100ProjectViewSetupEditorDialog19ID_FONT_STATIC_TEXTE(%rip)	 # _1, ID_FONT_STATIC_TEXT
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:6: const long T100ProjectViewSetupEditorDialog::ID_FONT_LIST_BOX   = wxNewId();
-	.loc 33 6 74
-	call	_Z7wxNewIdv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:6: const long T100ProjectViewSetupEditorDialog::ID_FONT_LIST_BOX   = wxNewId();
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:6: const long T100ProjectViewSetupEditorDialog::ID_FONT_STATIC_TEXT    = wxNewId();
 	.loc 33 6 12
+	movl	%eax, _ZN32T100ProjectViewSetupEditorDialog19ID_FONT_STATIC_TEXTE(%rip)	 # _1, ID_FONT_STATIC_TEXT
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:7: const long T100ProjectViewSetupEditorDialog::ID_FONT_LIST_BOX   = wxNewId();
+	.loc 33 7 74
+	call	_Z7wxNewIdv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:7: const long T100ProjectViewSetupEditorDialog::ID_FONT_LIST_BOX   = wxNewId();
+	.loc 33 7 12
 	movl	%eax, _ZN32T100ProjectViewSetupEditorDialog16ID_FONT_LIST_BOXE(%rip)	 # _2, ID_FONT_LIST_BOX
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:8: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
-	.loc 33 8 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:9: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
+	.loc 33 9 1
 	leaq	_ZN32T100ProjectViewSetupEditorDialog13sm_eventTableE(%rip), %rdx	 #,
 	leaq	_ZN32T100ProjectViewSetupEditorDialog17sm_eventHashTableE(%rip), %rcx	 #,
 	call	_ZN16wxEventHashTableC1ERK12wxEventTable	 #
-.LEHE69:
+.LEHE72:
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:10: END_EVENT_TABLE()
-	.loc 33 10 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:11: END_EVENT_TABLE()
+	.loc 33 11 1
 	leaq	_ZN32T100ProjectViewSetupEditorDialog20sm_eventTableEntriesE(%rip), %rsi	 #, _19
 	movl	$0, %ebx	 #, _21
 	movq	$0, 40(%rsp)	 #,
@@ -13147,46 +13287,46 @@ _Z41__static_initialization_and_destruction_0ii:
 	movl	$0, %r8d	 #,
 	movq	.refptr.wxEVT_NULL(%rip), %rdx	 #,
 	movq	%rsi, %rcx	 # _19,
-.LEHB70:
+.LEHB73:
 	call	_ZN17wxEventTableEntryC1ERKiiiP14wxEventFunctorP8wxObject	 #
-.LEHE70:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:8: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
-	.loc 33 8 1 discriminator 1
+.LEHE73:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:9: BEGIN_EVENT_TABLE(T100ProjectViewSetupEditorDialog, wxDialog)
+	.loc 33 9 1 discriminator 1
 	leaq	__tcf_1(%rip), %rcx	 #,
 	call	atexit	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:72: }
-	.loc 33 72 1 discriminator 1
-	jmp	.L475	 #
-.L480:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:77: }
+	.loc 33 77 1 discriminator 1
+	jmp	.L480	 #
+.L485:
 	movq	%rax, %rdi	 #, tmp99
 	testq	%rsi, %rsi	 # _19
-	je	.L478	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:10: END_EVENT_TABLE()
-	.loc 33 10 1 discriminator 1
+	je	.L483	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:11: END_EVENT_TABLE()
+	.loc 33 11 1 discriminator 1
 	movq	%rbx, %rdx	 # _21, _3
 	movl	$0, %eax	 #, tmp97
 	subq	%rdx, %rax	 # _3, tmp97
 	salq	$5, %rax	 #, tmp98
 	leaq	(%rsi,%rax), %rbx	 #, _5
-.L479:
+.L484:
 	cmpq	%rsi, %rbx	 # _19, _5
-	je	.L478	 #,
+	je	.L483	 #,
 	subq	$32, %rbx	 #, _5
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:10: END_EVENT_TABLE()
-	.loc 33 10 1 is_stmt 0 discriminator 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:11: END_EVENT_TABLE()
+	.loc 33 11 1 is_stmt 0 discriminator 5
 	movq	%rbx, %rcx	 # _5,
 	call	_ZN17wxEventTableEntryD1Ev	 #
-	jmp	.L479	 #
-.L478:
-	movq	%rdi, %rax	 # tmp99, D.220004
-	movq	%rax, %rcx	 # D.220004,
-.LEHB71:
+	jmp	.L484	 #
+.L483:
+	movq	%rdi, %rax	 # tmp99, D.220044
+	movq	%rax, %rcx	 # D.220044,
+.LEHB74:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE71:
-.L475:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:72: }
-	.loc 33 72 1 is_stmt 1
+.LEHE74:
+.L480:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:77: }
+	.loc 33 77 1 is_stmt 1
 	addq	$56, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -13208,16 +13348,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	.byte	0x1
 	.uleb128 .LLSDACSE17255-.LLSDACSB17255
 .LLSDACSB17255:
-	.uleb128 .LEHB69-.LFB17255
-	.uleb128 .LEHE69-.LEHB69
+	.uleb128 .LEHB72-.LFB17255
+	.uleb128 .LEHE72-.LEHB72
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB70-.LFB17255
-	.uleb128 .LEHE70-.LEHB70
-	.uleb128 .L480-.LFB17255
+	.uleb128 .LEHB73-.LFB17255
+	.uleb128 .LEHE73-.LEHB73
+	.uleb128 .L485-.LFB17255
 	.uleb128 0
-	.uleb128 .LEHB71-.LFB17255
-	.uleb128 .LEHE71-.LEHB71
+	.uleb128 .LEHB74-.LFB17255
+	.uleb128 .LEHE74-.LEHB74
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE17255:
@@ -13333,13 +13473,13 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE8SetFocusEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:246:         if ( !m_container.DoSetFocus() )
 	.loc 29 246 9
 	testb	%al, %al	 # retval.4_9
-	je	.L485	 #,
+	je	.L490	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:247:             BaseWindowClass::SetFocus();
 	.loc 29 247 38
 	movq	16(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN8wxWindow8SetFocusEv	 #
-.L485:
+.L490:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:248:     }
 	.loc 29 248 5
 	nop	
@@ -13499,7 +13639,7 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE8AddChildEP12wxWindowBase:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:222:         if ( m_container.UpdateCanFocusChildren() )
 	.loc 29 222 9
 	testb	%al, %al	 # _12
-	je	.L494	 #,
+	je	.L499	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:226:             if ( !BaseWindowClass::HasFlag(wxTAB_TRAVERSAL) )
 	.loc 29 226 43
 	movq	16(%rbp), %rax	 # this, _3
@@ -13512,14 +13652,14 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE8AddChildEP12wxWindowBase:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:226:             if ( !BaseWindowClass::HasFlag(wxTAB_TRAVERSAL) )
 	.loc 29 226 13
 	testb	%al, %al	 # retval.1_15
-	je	.L494	 #,
+	je	.L499	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:227:                 BaseWindowClass::ToggleWindowStyle(wxTAB_TRAVERSAL);
 	.loc 29 227 51
 	movq	16(%rbp), %rax	 # this, _5
 	movl	$524288, %edx	 #,
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBase17ToggleWindowStyleEi	 #
-.L494:
+.L499:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:229:     }
 	.loc 29 229 5
 	nop	
@@ -13616,7 +13756,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN32T100ProjectViewSetupEditorDialog19ID_FONT_STATIC_TEXTE
 _GLOBAL__sub_I__ZN32T100ProjectViewSetupEditorDialog19ID_FONT_STATIC_TEXTE:
 .LFB17341:
-	.loc 33 72 1
+	.loc 33 77 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13628,8 +13768,8 @@ _GLOBAL__sub_I__ZN32T100ProjectViewSetupEditorDialog19ID_FONT_STATIC_TEXTE:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:72: }
-	.loc 33 72 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ProjectViewSetupEditorDialog.cpp:77: }
+	.loc 33 77 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -13759,7 +13899,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.file 133 "<built-in>"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x54ad0
+	.long	0x54afc
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -81273,7 +81413,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xd
 	.secrel32	.LASF405
 	.byte	0x21
-	.byte	0xc
+	.byte	0xd
 	.byte	0x1
 	.ascii "_ZN32T100ProjectViewSetupEditorDialogC4EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_\0"
 	.byte	0x1
@@ -81299,7 +81439,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x7c
 	.ascii "~T100ProjectViewSetupEditorDialog\0"
 	.byte	0x21
-	.byte	0x1a
+	.byte	0x1b
 	.byte	0x1
 	.ascii "_ZN32T100ProjectViewSetupEditorDialogD4Ev\0"
 	.byte	0x1
@@ -81315,14 +81455,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x78
 	.ascii "ID_FONT_STATIC_TEXT\0"
 	.byte	0x21
-	.byte	0x5
+	.byte	0x6
 	.byte	0xc
 	.long	0x26c
 	.byte	0x2
 	.uleb128 0x78
 	.ascii "ID_FONT_LIST_BOX\0"
 	.byte	0x21
-	.byte	0x6
+	.byte	0x7
 	.byte	0xc
 	.long	0x26c
 	.byte	0x2
@@ -81345,7 +81485,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x32
 	.ascii "OnApply\0"
 	.byte	0x21
-	.byte	0x44
+	.byte	0x47
 	.byte	0xa
 	.ascii "_ZN32T100ProjectViewSetupEditorDialog7OnApplyER14wxCommandEvent\0"
 	.byte	0x2
@@ -81359,7 +81499,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x63
 	.ascii "init\0"
 	.byte	0x21
-	.byte	0x20
+	.byte	0x21
 	.byte	0xa
 	.ascii "_ZN32T100ProjectViewSetupEditorDialog4initEv\0"
 	.long	0x4bc41
@@ -81370,7 +81510,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x63
 	.ascii "uninit\0"
 	.byte	0x21
-	.byte	0x3f
+	.byte	0x42
 	.byte	0xa
 	.ascii "_ZN32T100ProjectViewSetupEditorDialog6uninitEv\0"
 	.long	0x4bc89
@@ -81381,20 +81521,20 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0xb6
 	.ascii "sm_eventTableEntries\0"
 	.byte	0x21
-	.byte	0x8
+	.byte	0x9
 	.byte	0x1
 	.long	0x4bed9
 	.uleb128 0x78
 	.ascii "sm_eventTable\0"
 	.byte	0x21
-	.byte	0x8
+	.byte	0x9
 	.byte	0x1
 	.long	0x3e484
 	.byte	0x2
 	.uleb128 0x33
 	.ascii "GetEventTable\0"
 	.byte	0x21
-	.byte	0x8
+	.byte	0x9
 	.byte	0x1
 	.ascii "_ZNK32T100ProjectViewSetupEditorDialog13GetEventTableEv\0"
 	.long	0x3e489
@@ -81412,14 +81552,14 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x78
 	.ascii "sm_eventHashTable\0"
 	.byte	0x21
-	.byte	0x8
+	.byte	0x9
 	.byte	0x1
 	.long	0x3fb5d
 	.byte	0x2
 	.uleb128 0x94
 	.ascii "GetEventHashTable\0"
 	.byte	0x21
-	.byte	0x8
+	.byte	0x9
 	.byte	0x1
 	.ascii "_ZNK32T100ProjectViewSetupEditorDialog17GetEventHashTableEv\0"
 	.long	0x3ff64
@@ -84004,7 +84144,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x42
 	.ascii "__initialize_p\0"
 	.byte	0x21
-	.byte	0x48
+	.byte	0x4d
 	.byte	0x1
 	.long	0x254
 	.uleb128 0x2
@@ -84013,7 +84153,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x42
 	.ascii "__priority\0"
 	.byte	0x21
-	.byte	0x48
+	.byte	0x4d
 	.byte	0x1
 	.long	0x254
 	.uleb128 0x2
@@ -85112,7 +85252,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x70
 	.secrel32	.LASF432
 	.byte	0x21
-	.byte	0x44
+	.byte	0x47
 	.byte	0x44
 	.long	0x3ff6a
 	.uleb128 0x2
@@ -85151,7 +85291,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x61
 	.ascii "sizer\0"
 	.byte	0x21
-	.byte	0x22
+	.byte	0x23
 	.byte	0x1d
 	.long	0x4ff62
 	.uleb128 0x3
@@ -85160,7 +85300,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x61
 	.ascii "font\0"
 	.byte	0x21
-	.byte	0x24
+	.byte	0x25
 	.byte	0x1d
 	.long	0x4ff7f
 	.uleb128 0x3
@@ -85169,7 +85309,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x61
 	.ascii "fonts\0"
 	.byte	0x21
-	.byte	0x29
+	.byte	0x2a
 	.byte	0x19
 	.long	0x2a210
 	.uleb128 0x3
@@ -85178,7 +85318,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x61
 	.ascii "fontenum\0"
 	.byte	0x21
-	.byte	0x2a
+	.byte	0x2b
 	.byte	0x19
 	.long	0x4ff85
 	.uleb128 0x3
@@ -85187,7 +85327,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x61
 	.ascii "encoding\0"
 	.byte	0x21
-	.byte	0x2b
+	.byte	0x2c
 	.byte	0x19
 	.long	0xd75b
 	.uleb128 0x3
@@ -85305,43 +85445,43 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2a
 	.secrel32	.LASF435
 	.byte	0x21
-	.byte	0xc
+	.byte	0xd
 	.byte	0x4e
 	.long	0x2ede3
 	.uleb128 0x3b
 	.ascii "id\0"
 	.byte	0x21
-	.byte	0xd
+	.byte	0xe
 	.byte	0x19
 	.long	0xb634
 	.uleb128 0x3b
 	.ascii "title\0"
 	.byte	0x21
-	.byte	0xe
+	.byte	0xf
 	.byte	0x1e
 	.long	0xe6d
 	.uleb128 0x3b
 	.ascii "pos\0"
 	.byte	0x21
-	.byte	0xf
+	.byte	0x10
 	.byte	0x1d
 	.long	0x27702
 	.uleb128 0x2a
 	.secrel32	.LASF39
 	.byte	0x21
-	.byte	0x10
+	.byte	0x11
 	.byte	0x1c
 	.long	0x276fc
 	.uleb128 0x2a
 	.secrel32	.LASF436
 	.byte	0x21
-	.byte	0x11
+	.byte	0x12
 	.byte	0x13
 	.long	0x260
 	.uleb128 0x2a
 	.secrel32	.LASF164
 	.byte	0x21
-	.byte	0x12
+	.byte	0x13
 	.byte	0x1e
 	.long	0xe6d
 	.byte	0
@@ -91133,11 +91273,26 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
+	.uleb128 0x18
+	.long	0x2cc3
+	.long	0x547ae
+	.quad	.LFB2001
+	.quad	.LFE2001-.LFB2001
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x547bb
+	.uleb128 0x10
+	.secrel32	.LASF426
+	.long	0x21874
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.byte	0
 	.uleb128 0x1c
 	.long	0x27f2
-	.long	0x5479d
+	.long	0x547c9
 	.byte	0x2
-	.long	0x547b4
+	.long	0x547e0
 	.uleb128 0x13
 	.secrel32	.LASF426
 	.long	0x218de
@@ -91149,30 +91304,30 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xd742
 	.byte	0
 	.uleb128 0x1d
-	.long	0x5478f
+	.long	0x547bb
 	.ascii "_ZN8wxStringC1EPKc\0"
-	.long	0x547e6
+	.long	0x54812
 	.quad	.LFB1946
 	.quad	.LFE1946-.LFB1946
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x547f7
+	.long	0x54823
 	.uleb128 0x12
-	.long	0x5479d
+	.long	0x547c9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x12
-	.long	0x547a6
+	.long	0x547d2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1c
 	.long	0x25f5
-	.long	0x54805
+	.long	0x54831
 	.byte	0x2
-	.long	0x5481d
+	.long	0x54849
 	.uleb128 0x13
 	.secrel32	.LASF426
 	.long	0x218de
@@ -91184,45 +91339,45 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xe6d
 	.byte	0
 	.uleb128 0x1d
-	.long	0x547f7
+	.long	0x54823
 	.ascii "_ZN8wxStringC1ERKS_\0"
-	.long	0x54850
+	.long	0x5487c
 	.quad	.LFB1919
 	.quad	.LFE1919-.LFB1919
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x54861
+	.long	0x5488d
 	.uleb128 0x12
-	.long	0x54805
+	.long	0x54831
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x12
-	.long	0x5480e
+	.long	0x5483a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1c
 	.long	0x25cc
-	.long	0x5486f
+	.long	0x5489b
 	.byte	0x2
-	.long	0x54879
+	.long	0x548a5
 	.uleb128 0x13
 	.secrel32	.LASF426
 	.long	0x218de
 	.byte	0
 	.uleb128 0x1d
-	.long	0x54861
+	.long	0x5488d
 	.ascii "_ZN8wxStringC1Ev\0"
-	.long	0x548a9
+	.long	0x548d5
 	.quad	.LFB1916
 	.quad	.LFE1916-.LFB1916
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x548b2
+	.long	0x548de
 	.uleb128 0x12
-	.long	0x5486f
+	.long	0x5489b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -91232,9 +91387,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x4
 	.word	0x189
 	.byte	0x18
-	.long	0x548c4
+	.long	0x548f0
 	.byte	0x2
-	.long	0x548d7
+	.long	0x54903
 	.uleb128 0x13
 	.secrel32	.LASF426
 	.long	0x218de
@@ -91243,16 +91398,16 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x25b
 	.byte	0
 	.uleb128 0x1d
-	.long	0x548b2
+	.long	0x548de
 	.ascii "_ZN8wxStringD1Ev\0"
-	.long	0x54907
+	.long	0x54933
 	.quad	.LFB1890
 	.quad	.LFE1890-.LFB1890
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x54910
+	.long	0x5493c
 	.uleb128 0x12
-	.long	0x548c4
+	.long	0x548f0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -91263,7 +91418,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE1810-.LFB1810
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x5494e
+	.long	0x5497a
 	.uleb128 0x2c
 	.ascii "str\0"
 	.byte	0x4
@@ -91288,9 +91443,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x4
 	.word	0x1a9
 	.byte	0xa
-	.long	0x54960
+	.long	0x5498c
 	.byte	0x2
-	.long	0x54973
+	.long	0x5499f
 	.uleb128 0x13
 	.secrel32	.LASF426
 	.long	0x21948
@@ -91299,28 +91454,28 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x25b
 	.byte	0
 	.uleb128 0x1d
-	.long	0x5494e
+	.long	0x5497a
 	.ascii "_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev\0"
-	.long	0x549d3
+	.long	0x549ff
 	.quad	.LFB1813
 	.quad	.LFE1813-.LFB1813
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x549dc
+	.long	0x54a08
 	.uleb128 0x12
-	.long	0x54960
+	.long	0x5498c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x18
 	.long	0x186ec
-	.long	0x549fb
+	.long	0x54a27
 	.quad	.LFB752
 	.quad	.LFE752-.LFB752
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x54a08
+	.long	0x54a34
 	.uleb128 0x10
 	.secrel32	.LASF426
 	.long	0x1d5e3
@@ -91330,7 +91485,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x5f
 	.long	0x17e70
-	.long	0x54a1f
+	.long	0x54a4b
 	.uleb128 0x3f
 	.ascii "__s\0"
 	.byte	0x3e
@@ -91344,7 +91499,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.word	0x240
 	.byte	0x1
 	.ascii "_Z16wxGet_wxConvLibcv\0"
-	.long	0x54a62
+	.long	0x54a8e
 	.quad	.LFB344
 	.quad	.LFE344-.LFB344
 	.uleb128 0x1
@@ -91354,9 +91509,9 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0xe20e
 	.uleb128 0x1c
 	.long	0xb8c3
-	.long	0x54a76
+	.long	0x54aa2
 	.byte	0x2
-	.long	0x54a89
+	.long	0x54ab5
 	.uleb128 0x13
 	.secrel32	.LASF426
 	.long	0xb9ba
@@ -91365,15 +91520,15 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x25b
 	.byte	0
 	.uleb128 0x106
-	.long	0x54a68
+	.long	0x54a94
 	.ascii "_ZN9wxPrivate17UntypedBufferDataD2Ev\0"
-	.long	0x54aca
+	.long	0x54af6
 	.quad	.LFB156
 	.quad	.LFE156-.LFB156
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x12
-	.long	0x54a76
+	.long	0x54aa2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -96145,7 +96300,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.byte	0
 	.section	.debug_aranges,"dr"
-	.long	0xe1c
+	.long	0xe2c
 	.word	0x2
 	.secrel32	.Ldebug_info0
 	.byte	0x8
@@ -96172,6 +96327,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE1919-.LFB1919
 	.quad	.LFB1946
 	.quad	.LFE1946-.LFB1946
+	.quad	.LFB2001
+	.quad	.LFE2001-.LFB2001
 	.quad	.LFB2012
 	.quad	.LFE2012-.LFB2012
 	.quad	.LFB2081
@@ -96636,6 +96793,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE1919
 	.quad	.LFB1946
 	.quad	.LFE1946
+	.quad	.LFB2001
+	.quad	.LFE2001
 	.quad	.LFB2012
 	.quad	.LFE2012
 	.quad	.LFB2081
@@ -98050,6 +98209,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.def	_ZN16wxFontEnumerator12GetFacenamesE14wxFontEncodingb;	.scl	2;	.type	32;	.endef
 	.def	_ZN13wxArrayStringaSERKS_;	.scl	2;	.type	32;	.endef
 	.def	_ZN13wxArrayStringD1Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN13wxArrayString4SortEb;	.scl	2;	.type	32;	.endef
 	.def	_ZN12wxDialogBase26CreateStdDialogButtonSizerEl;	.scl	2;	.type	32;	.endef
 	.def	_ZN12wxWindowBase8SetSizerEP7wxSizerb;	.scl	2;	.type	32;	.endef
 	.def	_ZN7wxSizer3FitEP8wxWindow;	.scl	2;	.type	32;	.endef
@@ -98293,6 +98453,11 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.linkonce	discard
 .refptr.wxEVT_NULL:
 	.quad	wxEVT_NULL
+	.section	.rdata$.refptr._ZN17T100ProjectConfig23T100PROJECT_EDITOR_FONTB5cxx11E, "dr"
+	.globl	.refptr._ZN17T100ProjectConfig23T100PROJECT_EDITOR_FONTB5cxx11E
+	.linkonce	discard
+.refptr._ZN17T100ProjectConfig23T100PROJECT_EDITOR_FONTB5cxx11E:
+	.quad	_ZN17T100ProjectConfig23T100PROJECT_EDITOR_FONTB5cxx11E
 	.section	.rdata$.refptr.wxEVT_BUTTON, "dr"
 	.globl	.refptr.wxEVT_BUTTON
 	.linkonce	discard

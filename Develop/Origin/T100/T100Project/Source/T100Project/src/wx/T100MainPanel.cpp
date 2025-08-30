@@ -1,6 +1,7 @@
 #include "T100MainPanel.h"
 
 #include "T100EditorPack.h"
+#include "T100ProjectConfig.h"
 #include "T100ProjectInvoking.h"
 
 BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
@@ -44,6 +45,12 @@ T100BOOL T100MainPanel::Open(T100FileInfo* info)
 
     T100EditorPack*     pack    = T100NEW T100EditorPack(this);
     T100WSTRING         path    = info->GetPath();
+
+    if(pack){
+        pack->GetEditor()->SetFont(wxFont(T100ProjectConfig::T100PROJECT_EDITOR_FONT));
+    }else{
+        return T100FALSE;
+    }
 
     if(path.empty()){
 
