@@ -129,7 +129,18 @@ T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo* workspace)
 
 T100BOOL T100ProjectLogic::CreateModule(T100ModuleInfo* info)
 {
+    if(!info){
+        return T100FALSE;
+    }
 
+    wxBell();
+
+    T100Shell       shell;
+    T100WSTRING     command;
+
+    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Module.py C:/vm/Hello Hello";
+
+    shell.Run(command);
 }
 
 
