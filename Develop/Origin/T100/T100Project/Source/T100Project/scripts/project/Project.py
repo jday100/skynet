@@ -59,6 +59,9 @@ def create_project_make():
             makefile.write("""
 import os
 import sys
+import subprocess
+
+g_gcc_path  = "C:\\zoo\\bin\\CodeBlocks\\MinGW\\bin"
 
 def args():
 	print("Args...")
@@ -77,6 +80,14 @@ def args():
 
 def build():
 	print("Build...")
+
+	global g_gcc_path
+
+	cmd = "g++ "
+
+	subprocess.call(cmd +
+                    "src/main.c \
+                    -o main.o"
 
 def clean():
 	print("Clean...")
