@@ -449,8 +449,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$64, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp95, D.137806
-	movq	%rax, %rcx	 # D.137806,
+	movq	%rsi, %rax	 # tmp95, D.137815
+	movq	%rax, %rcx	 # D.137815,
 .LEHB4:
 	call	_Unwind_Resume	 #
 .L17:
@@ -460,8 +460,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$8, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp96, D.137807
-	movq	%rax, %rcx	 # D.137807,
+	movq	%rsi, %rax	 # tmp96, D.137816
+	movq	%rax, %rcx	 # D.137816,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE4:
@@ -677,8 +677,8 @@ _ZN16T100ProjectLogic3NewERK16T100WxFolderInfoP17T100WorkSpaceInfo:
 	leaq	32(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.137808
-	movq	%rax, %rcx	 # D.137808,
+	movq	%rbx, %rax	 # tmp98, D.137817
+	movq	%rax, %rcx	 # D.137817,
 .LEHB6:
 	call	_Unwind_Resume	 #
 .LEHE6:
@@ -862,8 +862,8 @@ _ZN16T100ProjectLogic7ExecuteERK16T100WxFolderInfoP17T100WorkSpaceInfo:
 	leaq	-16(%rbp), %rax	 #, tmp116
 	movq	%rax, %rcx	 # tmp116,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp114, D.137809
-	movq	%rax, %rcx	 # D.137809,
+	movq	%rbx, %rax	 # tmp114, D.137818
+	movq	%rax, %rcx	 # D.137818,
 .LEHB9:
 	call	_Unwind_Resume	 #
 .LEHE9:
@@ -1059,8 +1059,8 @@ _ZN16T100ProjectLogic5BuildEP17T100WorkSpaceInfo:
 	leaq	-56(%rbp), %rax	 #, tmp115
 	movq	%rax, %rcx	 # tmp115,
 	call	_ZN9T100ShellD1Ev	 #
-	movq	%rbx, %rax	 # tmp113, D.137812
-	movq	%rax, %rcx	 # D.137812,
+	movq	%rbx, %rax	 # tmp113, D.137821
+	movq	%rax, %rcx	 # D.137821,
 .LEHB14:
 	call	_Unwind_Resume	 #
 .LEHE14:
@@ -1108,12 +1108,12 @@ _ZN16T100ProjectLogic5BuildEP17T100WorkSpaceInfo:
 	.text
 	.seh_endproc
 	.align 2
-	.globl	_ZN16T100ProjectLogic14GetProjectInfoEv
-	.def	_ZN16T100ProjectLogic14GetProjectInfoEv;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZN16T100ProjectLogic14GetProjectInfoEv
-_ZN16T100ProjectLogic14GetProjectInfoEv:
+	.globl	_ZN16T100ProjectLogic12CreateModuleEP14T100ModuleInfo
+	.def	_ZN16T100ProjectLogic12CreateModuleEP14T100ModuleInfo;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN16T100ProjectLogic12CreateModuleEP14T100ModuleInfo
+_ZN16T100ProjectLogic12CreateModuleEP14T100ModuleInfo:
 .LFB7880:
-	.loc 4 141 1
+	.loc 4 131 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1124,12 +1124,10 @@ _ZN16T100ProjectLogic14GetProjectInfoEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:142:     return m_project;
-	.loc 4 142 12
-	movq	16(%rbp), %rax	 # this, tmp89
-	movq	32(%rax), %rax	 # this_2(D)->m_project, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:143: }
-	.loc 4 143 1
+	movq	%rdx, 24(%rbp)	 # info, info
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:133: }
+	.loc 4 133 1
+	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -1138,12 +1136,42 @@ _ZN16T100ProjectLogic14GetProjectInfoEv:
 .LFE7880:
 	.seh_endproc
 	.align 2
+	.globl	_ZN16T100ProjectLogic14GetProjectInfoEv
+	.def	_ZN16T100ProjectLogic14GetProjectInfoEv;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZN16T100ProjectLogic14GetProjectInfoEv
+_ZN16T100ProjectLogic14GetProjectInfoEv:
+.LFB7881:
+	.loc 4 144 1
+	.cfi_startproc
+	pushq	%rbp	 #
+	.seh_pushreg	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp	 #,
+	.seh_setframe	%rbp, 0
+	.cfi_def_cfa_register 6
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)	 # this, this
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:145:     return m_project;
+	.loc 4 145 12
+	movq	16(%rbp), %rax	 # this, tmp89
+	movq	32(%rax), %rax	 # this_2(D)->m_project, _3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:146: }
+	.loc 4 146 1
+	popq	%rbp	 #
+	.cfi_restore 6
+	.cfi_def_cfa 7, 8
+	ret	
+	.cfi_endproc
+.LFE7881:
+	.seh_endproc
+	.align 2
 	.globl	_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo
 	.def	_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo
 _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
-.LFB7881:
-	.loc 4 146 1
+.LFB7882:
+	.loc 4 149 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1162,21 +1190,21 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	.seh_endprologue
 	movq	%rcx, 48(%rbp)	 # this, this
 	movq	%rdx, 56(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:147:     if(!info){
-	.loc 4 147 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:150:     if(!info){
+	.loc 4 150 5
 	cmpq	$0, 56(%rbp)	 #, info
-	jne	.L48	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:148:         return T100FALSE;
-	.loc 4 148 16
+	jne	.L49	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:151:         return T100FALSE;
+	.loc 4 151 16
 	movl	$0, %ebx	 #, _7
-	jmp	.L54	 #
-.L48:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:151:     if(!m_folder->IsExists(info->GetPath())){
-	.loc 4 151 9
+	jmp	.L55	 #
+.L49:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:154:     if(!m_folder->IsExists(info->GetPath())){
+	.loc 4 154 9
 	movq	48(%rbp), %rax	 # this, tmp99
 	movq	24(%rax), %rbx	 # this_17(D)->m_folder, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:151:     if(!m_folder->IsExists(info->GetPath())){
-	.loc 4 151 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:154:     if(!m_folder->IsExists(info->GetPath())){
+	.loc 4 154 27
 	movq	56(%rbp), %rax	 # info, tmp100
 	movq	%rax, %rcx	 # tmp100,
 .LEHB15:
@@ -1185,25 +1213,25 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	movq	%rbx, %rcx	 # _1,
 	call	_ZN15T100FolderLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE15:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:151:     if(!m_folder->IsExists(info->GetPath())){
-	.loc 4 151 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:154:     if(!m_folder->IsExists(info->GetPath())){
+	.loc 4 154 8
 	xorl	$1, %eax	 #, retval.5_22
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:151:     if(!m_folder->IsExists(info->GetPath())){
-	.loc 4 151 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:154:     if(!m_folder->IsExists(info->GetPath())){
+	.loc 4 154 5
 	testb	%al, %al	 # retval.5_22
-	je	.L50	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:152:         return T100FALSE;
-	.loc 4 152 16
+	je	.L51	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:155:         return T100FALSE;
+	.loc 4 155 16
 	movl	$0, %ebx	 #, _7
-	jmp	.L54	 #
-.L50:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:155:     T100WSTRING             filename;
-	.loc 4 155 29
+	jmp	.L55	 #
+.L51:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:158:     T100WSTRING             filename;
+	.loc 4 158 29
 	leaq	-48(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     filename    = GetFileName(*info);
-	.loc 4 157 30
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:160:     filename    = GetFileName(*info);
+	.loc 4 160 30
 	leaq	-16(%rbp), %rax	 #, tmp102
 	movq	56(%rbp), %rdx	 # info, tmp103
 	movq	%rdx, %r8	 # tmp103,
@@ -1211,106 +1239,106 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	movq	%rax, %rcx	 # tmp102,
 .LEHB16:
 	call	_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     filename    = GetFileName(*info);
-	.loc 4 157 36 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:160:     filename    = GetFileName(*info);
+	.loc 4 160 36 discriminator 1
 	leaq	-16(%rbp), %rdx	 #, tmp104
 	leaq	-48(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:157:     filename    = GetFileName(*info);
-	.loc 4 157 30 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:160:     filename    = GetFileName(*info);
+	.loc 4 160 30 discriminator 1
 	leaq	-16(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     T100ProjectFile         projectFile(filename);
-	.loc 4 159 49 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:162:     T100ProjectFile         projectFile(filename);
+	.loc 4 162 49 discriminator 1
 	leaq	-48(%rbp), %rdx	 #, tmp107
 	leaq	-96(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN15T100ProjectFileC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE16:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     if(!m_file->IsExists(filename)){
-	.loc 4 161 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:164:     if(!m_file->IsExists(filename)){
+	.loc 4 164 9
 	movq	48(%rbp), %rax	 # this, tmp109
 	movq	16(%rax), %rcx	 # this_17(D)->m_file, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     if(!m_file->IsExists(filename)){
-	.loc 4 161 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:164:     if(!m_file->IsExists(filename)){
+	.loc 4 164 25
 	leaq	-48(%rbp), %rax	 #, tmp110
 	movq	%rax, %rdx	 # tmp110,
 .LEHB17:
 	call	_ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     if(!m_file->IsExists(filename)){
-	.loc 4 161 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:164:     if(!m_file->IsExists(filename)){
+	.loc 4 164 8
 	xorl	$1, %eax	 #, retval.6_32
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:161:     if(!m_file->IsExists(filename)){
-	.loc 4 161 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:164:     if(!m_file->IsExists(filename)){
+	.loc 4 164 5
 	testb	%al, %al	 # retval.6_32
-	je	.L51	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:162:         return T100FALSE;
-	.loc 4 162 16
+	je	.L52	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:165:         return T100FALSE;
+	.loc 4 165 16
 	movl	$0, %ebx	 #, _7
-	jmp	.L52	 #
-.L51:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:165:     if(!projectFile.Check(filename)){
-	.loc 4 165 26
+	jmp	.L53	 #
+.L52:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:168:     if(!projectFile.Check(filename)){
+	.loc 4 168 26
 	leaq	-48(%rbp), %rdx	 #, tmp111
 	leaq	-96(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	_ZN15T100ProjectFile5CheckERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE17:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:165:     if(!projectFile.Check(filename)){
-	.loc 4 165 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:168:     if(!projectFile.Check(filename)){
+	.loc 4 168 8
 	xorl	$1, %eax	 #, retval.7_36
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:165:     if(!projectFile.Check(filename)){
-	.loc 4 165 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:168:     if(!projectFile.Check(filename)){
+	.loc 4 168 5
 	testb	%al, %al	 # retval.7_36
-	je	.L53	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:166:         return T100FALSE;
-	.loc 4 166 16
+	je	.L54	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:169:         return T100FALSE;
+	.loc 4 169 16
 	movl	$0, %ebx	 #, _7
-	jmp	.L52	 #
-.L53:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:168:     return T100TRUE;
-	.loc 4 168 12
+	jmp	.L53	 #
+.L54:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:171:     return T100TRUE;
+	.loc 4 171 12
 	movl	$1, %ebx	 #, _7
-.L52:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     T100ProjectFile         projectFile(filename);
-	.loc 4 159 49
+.L53:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:162:     T100ProjectFile         projectFile(filename);
+	.loc 4 162 49
 	leaq	-96(%rbp), %rax	 #, tmp113
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN15T100ProjectFileD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:155:     T100WSTRING             filename;
-	.loc 4 155 29
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:158:     T100WSTRING             filename;
+	.loc 4 158 29
 	leaq	-48(%rbp), %rax	 #, tmp114
 	movq	%rax, %rcx	 # tmp114,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-.L54:
+.L55:
 	movl	%ebx, %eax	 # _7, <retval>
-	jmp	.L59	 #
-.L58:
+	jmp	.L60	 #
+.L59:
 	movq	%rax, %rbx	 #, tmp118
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:159:     T100ProjectFile         projectFile(filename);
-	.loc 4 159 49
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:162:     T100ProjectFile         projectFile(filename);
+	.loc 4 162 49
 	leaq	-96(%rbp), %rax	 #, tmp116
 	movq	%rax, %rcx	 # tmp116,
 	call	_ZN15T100ProjectFileD1Ev	 #
-	jmp	.L56	 #
-.L57:
+	jmp	.L57	 #
+.L58:
 	movq	%rax, %rbx	 #, tmp117
-.L56:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:155:     T100WSTRING             filename;
-	.loc 4 155 29
+.L57:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:158:     T100WSTRING             filename;
+	.loc 4 158 29
 	leaq	-48(%rbp), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp117, D.137817
-	movq	%rax, %rcx	 # D.137817,
+	movq	%rbx, %rax	 # tmp117, D.137826
+	movq	%rax, %rcx	 # D.137826,
 .LEHB18:
 	call	_Unwind_Resume	 #
 .LEHE18:
-.L59:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:169: }
-	.loc 4 169 1
+.L60:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:172: }
+	.loc 4 172 1
 	addq	$152, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -1319,32 +1347,32 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	.cfi_def_cfa 7, -136
 	ret	
 	.cfi_endproc
-.LFE7881:
+.LFE7882:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA7881:
+.LLSDA7882:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE7881-.LLSDACSB7881
-.LLSDACSB7881:
-	.uleb128 .LEHB15-.LFB7881
+	.uleb128 .LLSDACSE7882-.LLSDACSB7882
+.LLSDACSB7882:
+	.uleb128 .LEHB15-.LFB7882
 	.uleb128 .LEHE15-.LEHB15
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB16-.LFB7881
+	.uleb128 .LEHB16-.LFB7882
 	.uleb128 .LEHE16-.LEHB16
-	.uleb128 .L57-.LFB7881
+	.uleb128 .L58-.LFB7882
 	.uleb128 0
-	.uleb128 .LEHB17-.LFB7881
+	.uleb128 .LEHB17-.LFB7882
 	.uleb128 .LEHE17-.LEHB17
-	.uleb128 .L58-.LFB7881
+	.uleb128 .L59-.LFB7882
 	.uleb128 0
-	.uleb128 .LEHB18-.LFB7881
+	.uleb128 .LEHB18-.LFB7882
 	.uleb128 .LEHE18-.LEHB18
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE7881:
+.LLSDACSE7882:
 	.text
 	.seh_endproc
 	.align 2
@@ -1352,8 +1380,8 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	.def	_ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP15T100ProjectInfo;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP15T100ProjectInfo
 _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP15T100ProjectInfo:
-.LFB7882:
-	.loc 4 172 1
+.LFB7883:
+	.loc 4 175 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1377,59 +1405,59 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	movq	%rcx, 320(%rbp)	 # this, this
 	movq	%rdx, 328(%rbp)	 # path, path
 	movq	%r8, 336(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:173:     T100Folder      folder(path);
-	.loc 4 173 32
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:176:     T100Folder      folder(path);
+	.loc 4 176 32
 	movq	328(%rbp), %rdx	 # path, tmp104
 	leaq	128(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 .LEHB19:
 	call	_ZN10T100FolderC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE19:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:175:     if(!folder.IsExists()){
-	.loc 4 175 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:178:     if(!folder.IsExists()){
+	.loc 4 178 24
 	leaq	128(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 .LEHB20:
 	call	_ZN11T100FSEntry8IsExistsEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:175:     if(!folder.IsExists()){
-	.loc 4 175 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:178:     if(!folder.IsExists()){
+	.loc 4 178 8
 	xorl	$1, %eax	 #, retval.8_25
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:175:     if(!folder.IsExists()){
-	.loc 4 175 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:178:     if(!folder.IsExists()){
+	.loc 4 178 5
 	testb	%al, %al	 # retval.8_25
-	je	.L61	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:176:         return T100FALSE;
-	.loc 4 176 16
+	je	.L62	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:         return T100FALSE;
+	.loc 4 179 16
 	movl	$0, %ebx	 #, _7
-	jmp	.L62	 #
-.L61:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:179:     T100FILE_INFO_VECTOR&       files       = info->GetFiles();
-	.loc 4 179 62
+	jmp	.L63	 #
+.L62:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:182:     T100FILE_INFO_VECTOR&       files       = info->GetFiles();
+	.loc 4 182 62
 	movq	336(%rbp), %rax	 # info, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN15T100ProjectInfo8GetFilesEv	 #
 	movq	%rax, 280(%rbp)	 # _29, files
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:180:     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
-	.loc 4 180 67
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:183:     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
+	.loc 4 183 67
 	movq	336(%rbp), %rax	 # info, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN15T100ProjectInfo13GetSubFoldersEv	 #
 .LEHE20:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:180:     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
-	.loc 4 180 67 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:183:     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
+	.loc 4 183 67 is_stmt 0 discriminator 1
 	movq	%rax, 272(%rbp)	 # _32, folders
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:182:     T100WSTRING_VECTOR          fileNames;
-	.loc 4 182 33 is_stmt 1 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185:     T100WSTRING_VECTOR          fileNames;
+	.loc 4 185 33 is_stmt 1 discriminator 1
 	leaq	96(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:183:     T100WSTRING_VECTOR          folderNames;
-	.loc 4 183 33 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:186:     T100WSTRING_VECTOR          folderNames;
+	.loc 4 186 33 discriminator 1
 	leaq	64(%rbp), %rax	 #, tmp110
 	movq	%rax, %rcx	 # tmp110,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185:     folder.List(folderNames, fileNames);
-	.loc 4 185 16 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:188:     folder.List(folderNames, fileNames);
+	.loc 4 188 16 discriminator 1
 	leaq	96(%rbp), %rcx	 #, tmp111
 	leaq	64(%rbp), %rdx	 #, tmp112
 	leaq	128(%rbp), %rax	 #, tmp113
@@ -1439,8 +1467,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	call	_ZN10T100Folder4ListERSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS6_EES9_	 #
 .LEHE21:
 .LBB5:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     for(const T100WSTRING& item : folderNames){
-	.loc 4 187 35
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:190:     for(const T100WSTRING& item : folderNames){
+	.loc 4 190 35
 	leaq	64(%rbp), %rax	 #, tmp114
 	movq	%rax, 264(%rbp)	 # tmp114, __for_range
 	movq	264(%rbp), %rax	 # __for_range, tmp115
@@ -1451,46 +1479,46 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	movq	%rax, %rcx	 # tmp118,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv	 #
 	movq	%rax, 48(%rbp)	 # tmp120, __for_end
-.L64:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     for(const T100WSTRING& item : folderNames){
-	.loc 4 187 35 is_stmt 0 discriminator 1
+.L65:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:190:     for(const T100WSTRING& item : folderNames){
+	.loc 4 190 35 is_stmt 0 discriminator 1
 	leaq	48(%rbp), %rdx	 #, tmp121
 	leaq	56(%rbp), %rax	 #, tmp122
 	movq	%rax, %rcx	 # tmp122,
 	call	_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_	 #
 	testb	%al, %al	 # retval.9_41
-	je	.L63	 #,
+	je	.L64	 #,
 .LBB6:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     for(const T100WSTRING& item : folderNames){
-	.loc 4 187 35 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:190:     for(const T100WSTRING& item : folderNames){
+	.loc 4 190 35 discriminator 2
 	leaq	56(%rbp), %rax	 #, tmp123
 	movq	%rax, %rcx	 # tmp123,
 	call	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv	 #
 	movq	%rax, 256(%rbp)	 # tmp124, item
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:188:         T100WxFolderInfo        thisFolder;
-	.loc 4 188 33 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WxFolderInfo        thisFolder;
+	.loc 4 191 33 is_stmt 1 discriminator 2
 	leaq	-64(%rbp), %rax	 #, tmp125
 	movq	%rax, %rcx	 # tmp125,
 .LEHB22:
 	call	_ZN16T100WxFolderInfoC1Ev	 #
 .LEHE22:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:190:         thisFolder.SetLabel(item);
-	.loc 4 190 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:193:         thisFolder.SetLabel(item);
+	.loc 4 193 28
 	movq	256(%rbp), %rdx	 # item, tmp126
 	leaq	-64(%rbp), %rax	 #, tmp127
 	movq	%rax, %rcx	 # tmp127,
 .LEHB23:
 	call	_ZN16T100WxFolderInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 191 44
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:194:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 194 44
 	leaq	176(%rbp), %rax	 #, tmp128
 	movq	328(%rbp), %rdx	 # path, tmp129
 	movq	.refptr._ZN17T100ProjectConfig29T100PROJECT_STORAGE_SEPARATORB5cxx11E(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp128,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_	 #
 .LEHE23:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 191 97 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:194:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 194 97 discriminator 1
 	leaq	-96(%rbp), %rax	 #, tmp130
 	movq	256(%rbp), %rcx	 # item, tmp131
 	leaq	176(%rbp), %rdx	 #, tmp132
@@ -1502,15 +1530,15 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	leaq	176(%rbp), %rax	 #, tmp133
 	movq	%rax, %rcx	 # tmp133,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:192:         thisFolder.SetPath(thisPath);
-	.loc 4 192 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:195:         thisFolder.SetPath(thisPath);
+	.loc 4 195 27
 	leaq	-96(%rbp), %rdx	 #, tmp134
 	leaq	-64(%rbp), %rax	 #, tmp135
 	movq	%rax, %rcx	 # tmp135,
 .LEHB25:
 	call	_ZN16T100WxFolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:194:         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
-	.loc 4 194 70
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:197:         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
+	.loc 4 197 70
 	movl	$160, %ecx	 #,
 	call	_Znwy	 #
 .LEHE25:
@@ -1520,50 +1548,50 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	call	_ZN14T100FolderInfoC1Ev	 #
 .LEHE26:
 	movq	%rbx, 40(%rbp)	 # _52, thisInfo
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:196:         thisInfo->SetLabel(item);
-	.loc 4 196 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:199:         thisInfo->SetLabel(item);
+	.loc 4 199 27
 	movq	40(%rbp), %rax	 # thisInfo, thisInfo.10_2
 	movq	256(%rbp), %rdx	 # item, tmp137
 	movq	%rax, %rcx	 # thisInfo.10_2,
 .LEHB27:
 	call	_ZN14T100FolderInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:197:         thisInfo->SetPath(thisPath);
-	.loc 4 197 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:200:         thisInfo->SetPath(thisPath);
+	.loc 4 200 26
 	movq	40(%rbp), %rcx	 # thisInfo, thisInfo.11_3
 	leaq	-96(%rbp), %rax	 #, tmp138
 	movq	%rax, %rdx	 # tmp138,
 	call	_ZN14T100FolderInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:199:         folders.push_back(thisInfo);
-	.loc 4 199 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:         folders.push_back(thisInfo);
+	.loc 4 202 26
 	leaq	40(%rbp), %rax	 #, tmp139
 	movq	272(%rbp), %rcx	 # folders, tmp140
 	movq	%rax, %rdx	 # tmp139,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_	 #
 .LEHE27:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 191 97 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:194:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 194 97 discriminator 3
 	leaq	-96(%rbp), %rax	 #, tmp141
 	movq	%rax, %rcx	 # tmp141,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:188:         T100WxFolderInfo        thisFolder;
-	.loc 4 188 33 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WxFolderInfo        thisFolder;
+	.loc 4 191 33 discriminator 3
 	leaq	-64(%rbp), %rax	 #, tmp142
 	movq	%rax, %rcx	 # tmp142,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
 .LBE6:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     for(const T100WSTRING& item : folderNames){
-	.loc 4 187 35 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:190:     for(const T100WSTRING& item : folderNames){
+	.loc 4 190 35 discriminator 3
 	leaq	56(%rbp), %rax	 #, tmp143
 	movq	%rax, %rcx	 # tmp143,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:187:     for(const T100WSTRING& item : folderNames){
-	.loc 4 187 5 discriminator 3
-	jmp	.L64	 #
-.L63:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:190:     for(const T100WSTRING& item : folderNames){
+	.loc 4 190 5 discriminator 3
+	jmp	.L65	 #
+.L64:
 .LBE5:
 .LBB8:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:     for(const T100WSTRING& item : fileNames){
-	.loc 4 202 35
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:205:     for(const T100WSTRING& item : fileNames){
+	.loc 4 205 35
 	leaq	96(%rbp), %rax	 #, tmp144
 	movq	%rax, 248(%rbp)	 # tmp144, __for_range
 	movq	248(%rbp), %rax	 # __for_range, tmp145
@@ -1574,36 +1602,36 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	movq	%rax, %rcx	 # tmp148,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv	 #
 	movq	%rax, 24(%rbp)	 # tmp150, __for_end
-.L67:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:     for(const T100WSTRING& item : fileNames){
-	.loc 4 202 35 is_stmt 0 discriminator 1
+.L68:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:205:     for(const T100WSTRING& item : fileNames){
+	.loc 4 205 35 is_stmt 0 discriminator 1
 	leaq	24(%rbp), %rdx	 #, tmp151
 	leaq	32(%rbp), %rax	 #, tmp152
 	movq	%rax, %rcx	 # tmp152,
 	call	_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_	 #
 	testb	%al, %al	 # retval.12_81
-	je	.L65	 #,
+	je	.L66	 #,
 .LBB9:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:     for(const T100WSTRING& item : fileNames){
-	.loc 4 202 35 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:205:     for(const T100WSTRING& item : fileNames){
+	.loc 4 205 35 discriminator 2
 	leaq	32(%rbp), %rax	 #, tmp153
 	movq	%rax, %rcx	 # tmp153,
 	call	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv	 #
 	movq	%rax, 240(%rbp)	 # tmp154, item
 .LBB10:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:203:         if(item == T100ProjectConfig::T100PROJECT_PROJECT_FILENAME){
-	.loc 4 203 17 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:206:         if(item == T100ProjectConfig::T100PROJECT_PROJECT_FILENAME){
+	.loc 4 206 17 is_stmt 1 discriminator 2
 	movq	240(%rbp), %rax	 # item, tmp155
 	movq	.refptr._ZN17T100ProjectConfig28T100PROJECT_PROJECT_FILENAMEB5cxx11E(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp155,
 	call	_ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:203:         if(item == T100ProjectConfig::T100PROJECT_PROJECT_FILENAME){
-	.loc 4 203 9 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:206:         if(item == T100ProjectConfig::T100PROJECT_PROJECT_FILENAME){
+	.loc 4 206 9 discriminator 2
 	testb	%al, %al	 # retval.13_85
-	jne	.L66	 #,
+	jne	.L67	 #,
 .LBB11:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:206:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 206 56
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:209:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 209 56
 	leaq	208(%rbp), %rax	 #, tmp156
 	movq	328(%rbp), %rdx	 # path, tmp157
 	movq	.refptr._ZN17T100ProjectConfig29T100PROJECT_STORAGE_SEPARATORB5cxx11E(%rip), %r8	 #,
@@ -1611,8 +1639,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 .LEHB28:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_	 #
 .LEHE28:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:206:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 206 109 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:209:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 209 109 discriminator 1
 	leaq	-64(%rbp), %rax	 #, tmp158
 	movq	240(%rbp), %rcx	 # item, tmp159
 	leaq	208(%rbp), %rdx	 #, tmp160
@@ -1624,8 +1652,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	leaq	208(%rbp), %rax	 #, tmp161
 	movq	%rax, %rcx	 # tmp161,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:207:             T100FileInfo*       thisFile        = T100NEW T100FileInfo();
-	.loc 4 207 72
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:210:             T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+	.loc 4 210 72
 	movl	$176, %ecx	 #,
 .LEHB30:
 	call	_Znwy	 #
@@ -1636,118 +1664,118 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	call	_ZN12T100FileInfoC1Ev	 #
 .LEHE31:
 	movq	%rbx, 16(%rbp)	 # _91, thisFile
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:209:             thisFile->SetLabel(item);
-	.loc 4 209 31
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:212:             thisFile->SetLabel(item);
+	.loc 4 212 31
 	movq	16(%rbp), %rax	 # thisFile, thisFile.14_4
 	movq	240(%rbp), %rdx	 # item, tmp163
 	movq	%rax, %rcx	 # thisFile.14_4,
 .LEHB32:
 	call	_ZN12T100FileInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:210:             thisFile->SetFileName(item);
-	.loc 4 210 34
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:213:             thisFile->SetFileName(item);
+	.loc 4 213 34
 	movq	16(%rbp), %rax	 # thisFile, thisFile.15_5
 	movq	240(%rbp), %rdx	 # item, tmp164
 	movq	%rax, %rcx	 # thisFile.15_5,
 	call	_ZN12T100FileInfo11SetFileNameERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:211:             thisFile->SetPath(thisPath);
-	.loc 4 211 30
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:214:             thisFile->SetPath(thisPath);
+	.loc 4 214 30
 	movq	16(%rbp), %rcx	 # thisFile, thisFile.16_6
 	leaq	-64(%rbp), %rax	 #, tmp165
 	movq	%rax, %rdx	 # tmp165,
 	call	_ZN12T100FileInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:213:             files.push_back(thisFile);
-	.loc 4 213 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:216:             files.push_back(thisFile);
+	.loc 4 216 28
 	leaq	16(%rbp), %rax	 #, tmp166
 	movq	280(%rbp), %rcx	 # files, tmp167
 	movq	%rax, %rdx	 # tmp166,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_	 #
 .LEHE32:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:206:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 206 109
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:209:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 209 109
 	leaq	-64(%rbp), %rax	 #, tmp168
 	movq	%rax, %rcx	 # tmp168,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-.L66:
+.L67:
 .LBE11:
 .LBE10:
 .LBE9:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:     for(const T100WSTRING& item : fileNames){
-	.loc 4 202 35 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:205:     for(const T100WSTRING& item : fileNames){
+	.loc 4 205 35 discriminator 3
 	leaq	32(%rbp), %rax	 #, tmp169
 	movq	%rax, %rcx	 # tmp169,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:202:     for(const T100WSTRING& item : fileNames){
-	.loc 4 202 5 discriminator 3
-	jmp	.L67	 #
-.L65:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:205:     for(const T100WSTRING& item : fileNames){
+	.loc 4 205 5 discriminator 3
+	jmp	.L68	 #
+.L66:
 .LBE8:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:217:     m_current   = info;
-	.loc 4 217 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:220:     m_current   = info;
+	.loc 4 220 17
 	movq	320(%rbp), %rax	 # this, tmp170
 	movq	336(%rbp), %rdx	 # info, tmp171
 	movq	%rdx, 8(%rax)	 # tmp171, this_113(D)->m_current
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:219:     return T100TRUE;
-	.loc 4 219 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:222:     return T100TRUE;
+	.loc 4 222 12
 	movl	$1, %ebx	 #, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:183:     T100WSTRING_VECTOR          folderNames;
-	.loc 4 183 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:186:     T100WSTRING_VECTOR          folderNames;
+	.loc 4 186 33
 	leaq	64(%rbp), %rax	 #, tmp172
 	movq	%rax, %rcx	 # tmp172,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:182:     T100WSTRING_VECTOR          fileNames;
-	.loc 4 182 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185:     T100WSTRING_VECTOR          fileNames;
+	.loc 4 185 33
 	leaq	96(%rbp), %rax	 #, tmp173
 	movq	%rax, %rcx	 # tmp173,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
-.L62:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:173:     T100Folder      folder(path);
-	.loc 4 173 32
+.L63:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:176:     T100Folder      folder(path);
+	.loc 4 176 32
 	leaq	128(%rbp), %rax	 #, tmp174
 	movq	%rax, %rcx	 # tmp174,
 	call	_ZN10T100FolderD1Ev	 #
 	movl	%ebx, %eax	 # _7, <retval>
-	jmp	.L91	 #
-.L84:
+	jmp	.L92	 #
+.L85:
 	movq	%rax, %rbx	 #, tmp178
 .LBB15:
 .LBB7:
 	leaq	176(%rbp), %rax	 #, tmp176
 	movq	%rax, %rcx	 # tmp176,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	jmp	.L70	 #
-.L86:
+	jmp	.L71	 #
+.L87:
 	movq	%rax, %rsi	 #, tmp182
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:194:         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
-	.loc 4 194 70
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:197:         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
+	.loc 4 197 70
 	movl	$160, %edx	 #,
 	movq	%rbx, %rcx	 # _52,
 	call	_ZdlPvy	 #
 	movq	%rsi, %rbx	 # tmp182, tmp181
-	jmp	.L72	 #
-.L85:
+	jmp	.L73	 #
+.L86:
 	movq	%rax, %rbx	 #, tmp181
-.L72:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 191 97
+.L73:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:194:         T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 194 97
 	leaq	-96(%rbp), %rax	 #, tmp185
 	movq	%rax, %rcx	 # tmp185,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	jmp	.L70	 #
-.L83:
+	jmp	.L71	 #
+.L84:
 	movq	%rax, %rbx	 #, tmp177
-.L70:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:188:         T100WxFolderInfo        thisFolder;
-	.loc 4 188 33
+.L71:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:191:         T100WxFolderInfo        thisFolder;
+	.loc 4 191 33
 	leaq	-64(%rbp), %rax	 #, tmp186
 	movq	%rax, %rcx	 # tmp186,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
 	movq	%rbx, %rax	 # tmp177, tmp187
-	jmp	.L73	 #
-.L82:
-.L73:
-	movq	%rax, %rbx	 # tmp187, tmp189
 	jmp	.L74	 #
-.L88:
+.L83:
+.L74:
+	movq	%rax, %rbx	 # tmp187, tmp189
+	jmp	.L75	 #
+.L89:
 	movq	%rax, %rbx	 #, tmp193
 .LBE7:
 .LBE15:
@@ -1759,64 +1787,64 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	movq	%rax, %rcx	 # tmp191,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	movq	%rbx, %rax	 # tmp193, tmp192
-	jmp	.L76	 #
-.L90:
+	jmp	.L77	 #
+.L91:
 	movq	%rax, %rsi	 #, tmp197
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:207:             T100FileInfo*       thisFile        = T100NEW T100FileInfo();
-	.loc 4 207 72
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:210:             T100FileInfo*       thisFile        = T100NEW T100FileInfo();
+	.loc 4 210 72
 	movl	$176, %edx	 #,
 	movq	%rbx, %rcx	 # _91,
 	call	_ZdlPvy	 #
 	movq	%rsi, %rbx	 # tmp197, tmp196
-	jmp	.L78	 #
-.L89:
+	jmp	.L79	 #
+.L90:
 	movq	%rax, %rbx	 #, tmp196
-.L78:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:206:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
-	.loc 4 206 109
+.L79:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:209:             T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
+	.loc 4 209 109
 	leaq	-64(%rbp), %rax	 #, tmp200
 	movq	%rax, %rcx	 # tmp200,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	movq	%rbx, %rax	 # tmp196, tmp192
-	jmp	.L76	 #
-.L87:
-.L76:
+	jmp	.L77	 #
+.L88:
+.L77:
 	movq	%rax, %rbx	 # tmp192, tmp189
-	jmp	.L74	 #
-.L81:
+	jmp	.L75	 #
+.L82:
 	movq	%rax, %rbx	 #, tmp189
-.L74:
+.L75:
 .LBE12:
 .LBE13:
 .LBE14:
 .LBE16:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:183:     T100WSTRING_VECTOR          folderNames;
-	.loc 4 183 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:186:     T100WSTRING_VECTOR          folderNames;
+	.loc 4 186 33
 	leaq	64(%rbp), %rax	 #, tmp201
 	movq	%rax, %rcx	 # tmp201,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:182:     T100WSTRING_VECTOR          fileNames;
-	.loc 4 182 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185:     T100WSTRING_VECTOR          fileNames;
+	.loc 4 185 33
 	leaq	96(%rbp), %rax	 #, tmp204
 	movq	%rax, %rcx	 # tmp204,
 	call	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev	 #
-	jmp	.L79	 #
-.L80:
+	jmp	.L80	 #
+.L81:
 	movq	%rax, %rbx	 #, tmp205
-.L79:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:173:     T100Folder      folder(path);
-	.loc 4 173 32
+.L80:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:176:     T100Folder      folder(path);
+	.loc 4 176 32
 	leaq	128(%rbp), %rax	 #, tmp207
 	movq	%rax, %rcx	 # tmp207,
 	call	_ZN10T100FolderD1Ev	 #
-	movq	%rbx, %rax	 # tmp205, D.137819
-	movq	%rax, %rcx	 # D.137819,
+	movq	%rbx, %rax	 # tmp205, D.137828
+	movq	%rax, %rcx	 # D.137828,
 .LEHB33:
 	call	_Unwind_Resume	 #
 .LEHE33:
-.L91:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:220: }
-	.loc 4 220 1
+.L92:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:223: }
+	.loc 4 223 1
 	addq	$416, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -1827,76 +1855,76 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.cfi_def_cfa 7, -392
 	ret	
 	.cfi_endproc
-.LFE7882:
+.LFE7883:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA7882:
+.LLSDA7883:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE7882-.LLSDACSB7882
-.LLSDACSB7882:
-	.uleb128 .LEHB19-.LFB7882
+	.uleb128 .LLSDACSE7883-.LLSDACSB7883
+.LLSDACSB7883:
+	.uleb128 .LEHB19-.LFB7883
 	.uleb128 .LEHE19-.LEHB19
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB20-.LFB7882
+	.uleb128 .LEHB20-.LFB7883
 	.uleb128 .LEHE20-.LEHB20
-	.uleb128 .L80-.LFB7882
+	.uleb128 .L81-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB21-.LFB7882
+	.uleb128 .LEHB21-.LFB7883
 	.uleb128 .LEHE21-.LEHB21
-	.uleb128 .L81-.LFB7882
+	.uleb128 .L82-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB22-.LFB7882
+	.uleb128 .LEHB22-.LFB7883
 	.uleb128 .LEHE22-.LEHB22
-	.uleb128 .L82-.LFB7882
+	.uleb128 .L83-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB23-.LFB7882
+	.uleb128 .LEHB23-.LFB7883
 	.uleb128 .LEHE23-.LEHB23
-	.uleb128 .L83-.LFB7882
+	.uleb128 .L84-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB24-.LFB7882
+	.uleb128 .LEHB24-.LFB7883
 	.uleb128 .LEHE24-.LEHB24
-	.uleb128 .L84-.LFB7882
+	.uleb128 .L85-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB25-.LFB7882
+	.uleb128 .LEHB25-.LFB7883
 	.uleb128 .LEHE25-.LEHB25
-	.uleb128 .L85-.LFB7882
+	.uleb128 .L86-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB26-.LFB7882
+	.uleb128 .LEHB26-.LFB7883
 	.uleb128 .LEHE26-.LEHB26
-	.uleb128 .L86-.LFB7882
+	.uleb128 .L87-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB27-.LFB7882
+	.uleb128 .LEHB27-.LFB7883
 	.uleb128 .LEHE27-.LEHB27
-	.uleb128 .L85-.LFB7882
+	.uleb128 .L86-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB28-.LFB7882
+	.uleb128 .LEHB28-.LFB7883
 	.uleb128 .LEHE28-.LEHB28
-	.uleb128 .L87-.LFB7882
+	.uleb128 .L88-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB29-.LFB7882
+	.uleb128 .LEHB29-.LFB7883
 	.uleb128 .LEHE29-.LEHB29
-	.uleb128 .L88-.LFB7882
+	.uleb128 .L89-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB30-.LFB7882
+	.uleb128 .LEHB30-.LFB7883
 	.uleb128 .LEHE30-.LEHB30
-	.uleb128 .L89-.LFB7882
+	.uleb128 .L90-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB31-.LFB7882
+	.uleb128 .LEHB31-.LFB7883
 	.uleb128 .LEHE31-.LEHB31
-	.uleb128 .L90-.LFB7882
+	.uleb128 .L91-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB32-.LFB7882
+	.uleb128 .LEHB32-.LFB7883
 	.uleb128 .LEHE32-.LEHB32
-	.uleb128 .L89-.LFB7882
+	.uleb128 .L90-.LFB7883
 	.uleb128 0
-	.uleb128 .LEHB33-.LFB7882
+	.uleb128 .LEHB33-.LFB7883
 	.uleb128 .LEHE33-.LEHB33
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE7882:
+.LLSDACSE7883:
 	.text
 	.seh_endproc
 	.section .rdata,"dr"
@@ -1909,8 +1937,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.def	_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo
 _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
-.LFB7883:
-	.loc 4 224 1
+.LFB7884:
+	.loc 4 227 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -1930,22 +1958,22 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	movq	%rcx, -32(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, -24(%rbp)	 # this, this
 	movq	%r8, -16(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 225 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:228:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 228 25
 	movq	-16(%rbp), %rax	 # info, tmp89
 	movq	%rax, %rcx	 # tmp89,
 .LEHB34:
 	call	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 225 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:228:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 228 27
 	leaq	-96(%rbp), %rax	 #, tmp90
 	leaq	.LC3(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE34:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 225 55
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:228:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 228 55
 	movq	-32(%rbp), %rcx	 # <retval>, tmp91
 	leaq	-96(%rbp), %rax	 #, tmp92
 	movq	.refptr._ZN17T100ProjectConfig28T100PROJECT_PROJECT_FILENAMEB5cxx11E(%rip), %r8	 #,
@@ -1954,29 +1982,29 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_	 #
 .LEHE35:
 	nop	
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 225 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:228:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 228 27
 	leaq	-96(%rbp), %rax	 #, tmp93
 	movq	%rax, %rcx	 # tmp93,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 225 55
-	jmp	.L96	 #
-.L95:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:228:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 228 55
+	jmp	.L97	 #
+.L96:
 	movq	%rax, %rbx	 #, tmp95
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:225:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
-	.loc 4 225 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:228:     return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+	.loc 4 228 27
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp95, D.137827
-	movq	%rax, %rcx	 # D.137827,
+	movq	%rbx, %rax	 # tmp95, D.137836
+	movq	%rax, %rcx	 # D.137836,
 .LEHB36:
 	call	_Unwind_Resume	 #
 .LEHE36:
-.L96:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:226: }
-	.loc 4 226 1
+.L97:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:229: }
+	.loc 4 229 1
 	movq	-32(%rbp), %rax	 # <retval>,
 	addq	$72, %rsp	 #,
 	popq	%rbx	 #
@@ -1986,28 +2014,28 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	.cfi_def_cfa 7, -56
 	ret	
 	.cfi_endproc
-.LFE7883:
+.LFE7884:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA7883:
+.LLSDA7884:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE7883-.LLSDACSB7883
-.LLSDACSB7883:
-	.uleb128 .LEHB34-.LFB7883
+	.uleb128 .LLSDACSE7884-.LLSDACSB7884
+.LLSDACSB7884:
+	.uleb128 .LEHB34-.LFB7884
 	.uleb128 .LEHE34-.LEHB34
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB35-.LFB7883
+	.uleb128 .LEHB35-.LFB7884
 	.uleb128 .LEHE35-.LEHB35
-	.uleb128 .L95-.LFB7883
+	.uleb128 .L96-.LFB7884
 	.uleb128 0
-	.uleb128 .LEHB36-.LFB7883
+	.uleb128 .LEHB36-.LFB7884
 	.uleb128 .LEHE36-.LEHB36
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE7883:
+.LLSDACSE7884:
 	.text
 	.seh_endproc
 	.align 2
@@ -2015,8 +2043,8 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	.def	_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo
 _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
-.LFB7884:
-	.loc 4 229 1
+.LFB7885:
+	.loc 4 232 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2031,16 +2059,16 @@ _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 	movq	%rcx, 16(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, 24(%rbp)	 # this, this
 	movq	%r8, 32(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:230:     return info.GetPath();
-	.loc 4 230 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:233:     return info.GetPath();
+	.loc 4 233 25
 	movq	32(%rbp), %rax	 # info, tmp88
 	movq	%rax, %rcx	 # tmp88,
 	call	_ZN16T100WxFolderInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 # _1,
 	movq	16(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:231: }
-	.loc 4 231 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:234: }
+	.loc 4 234 1
 	movq	16(%rbp), %rax	 # <retval>,
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2048,7 +2076,7 @@ _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE7884:
+.LFE7885:
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 2
@@ -2060,8 +2088,8 @@ _ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo:
 	.def	_ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo
 _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
-.LFB7885:
-	.loc 4 234 1
+.LFB7886:
+	.loc 4 237 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2081,22 +2109,22 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	movq	%rcx, -32(%rbp)	 # .result_ptr, .result_ptr
 	movq	%rdx, -24(%rbp)	 # this, this
 	movq	%r8, -16(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 235 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:238:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 238 26
 	movq	-16(%rbp), %rax	 # info, tmp89
 	movq	%rax, %rcx	 # tmp89,
 .LEHB37:
 	call	_ZN15T100ProjectInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 235 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:238:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 238 28
 	leaq	-96(%rbp), %rax	 #, tmp90
 	leaq	.LC3(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE37:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 235 37
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:238:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 238 37
 	movq	-32(%rbp), %rcx	 # <retval>, tmp91
 	leaq	-96(%rbp), %rax	 #, tmp92
 	leaq	.LC4(%rip), %r8	 #,
@@ -2105,29 +2133,29 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
 .LEHE38:
 	nop	
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 235 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:238:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 238 28
 	leaq	-96(%rbp), %rax	 #, tmp93
 	movq	%rax, %rcx	 # tmp93,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 235 37
-	jmp	.L103	 #
-.L102:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:238:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 238 37
+	jmp	.L104	 #
+.L103:
 	movq	%rax, %rbx	 #, tmp95
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:235:     return info->GetPath() + L"/" + L"Make.py";
-	.loc 4 235 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:238:     return info->GetPath() + L"/" + L"Make.py";
+	.loc 4 238 28
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp95, D.137833
-	movq	%rax, %rcx	 # D.137833,
+	movq	%rbx, %rax	 # tmp95, D.137842
+	movq	%rax, %rcx	 # D.137842,
 .LEHB39:
 	call	_Unwind_Resume	 #
 .LEHE39:
-.L103:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:236: }
-	.loc 4 236 1
+.L104:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:239: }
+	.loc 4 239 1
 	movq	-32(%rbp), %rax	 # <retval>,
 	addq	$72, %rsp	 #,
 	popq	%rbx	 #
@@ -2137,28 +2165,28 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	.cfi_def_cfa 7, -56
 	ret	
 	.cfi_endproc
-.LFE7885:
+.LFE7886:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA7885:
+.LLSDA7886:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE7885-.LLSDACSB7885
-.LLSDACSB7885:
-	.uleb128 .LEHB37-.LFB7885
+	.uleb128 .LLSDACSE7886-.LLSDACSB7886
+.LLSDACSB7886:
+	.uleb128 .LEHB37-.LFB7886
 	.uleb128 .LEHE37-.LEHB37
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB38-.LFB7885
+	.uleb128 .LEHB38-.LFB7886
 	.uleb128 .LEHE38-.LEHB38
-	.uleb128 .L102-.LFB7885
+	.uleb128 .L103-.LFB7886
 	.uleb128 0
-	.uleb128 .LEHB39-.LFB7885
+	.uleb128 .LEHB39-.LFB7886
 	.uleb128 .LEHE39-.LEHB39
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE7885:
+.LLSDACSE7886:
 	.text
 	.seh_endproc
 	.section	.text$_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_,"x"
@@ -2167,7 +2195,7 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	.def	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_
 _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_:
-.LFB8492:
+.LFB8493:
 	.file 5 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h"
 	.loc 5 5977 5
 	.cfi_startproc
@@ -2208,7 +2236,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8492:
+.LFE8493:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev,"x"
 	.linkonce discard
@@ -2217,7 +2245,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_OS8_:
 	.def	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev
 _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev:
-.LFB8495:
+.LFB8496:
 	.file 6 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h"
 	.loc 6 391 7
 	.cfi_startproc
@@ -2248,16 +2276,16 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8495:
+.LFE8496:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA8495:
+.LLSDA8496:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8495-.LLSDACSB8495
-.LLSDACSB8495:
-.LLSDACSE8495:
+	.uleb128 .LLSDACSE8496-.LLSDACSB8496
+.LLSDACSB8496:
+.LLSDACSE8496:
 	.section	.text$_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev,"x"
 	.linkonce discard
 	.seh_endproc
@@ -2268,7 +2296,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev:
 	.def	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev
 _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev:
-.LFB8498:
+.LFB8499:
 	.loc 6 565 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2292,9 +2320,9 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:567: 	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
 	.loc 6 567 15
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	8(%rax), %rdx	 # this_6(D)->D.129399._M_impl._M_finish, _3
+	movq	8(%rax), %rdx	 # this_6(D)->D.129407._M_impl._M_finish, _3
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	(%rax), %rax	 # this_6(D)->D.129399._M_impl._M_start, _4
+	movq	(%rax), %rax	 # this_6(D)->D.129407._M_impl._M_start, _4
 	movq	%rcx, %r8	 # _2,
 	movq	%rax, %rcx	 # _4,
 	call	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E	 #
@@ -2311,16 +2339,16 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8498:
+.LFE8499:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA8498:
+.LLSDA8499:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8498-.LLSDACSB8498
-.LLSDACSB8498:
-.LLSDACSE8498:
+	.uleb128 .LLSDACSE8499-.LLSDACSB8499
+.LLSDACSB8499:
+.LLSDACSE8499:
 	.section	.text$_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev,"x"
 	.linkonce discard
 	.seh_endproc
@@ -2331,7 +2359,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev:
 	.def	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginEv
 _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginEv:
-.LFB8499:
+.LFB8500:
 	.loc 6 698 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2353,7 +2381,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginE
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_	 #
-	movq	-8(%rbp), %rax	 # D.133572, D.137435
+	movq	-8(%rbp), %rax	 # D.133580, D.137443
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 6 699 50
 	addq	$48, %rsp	 #,
@@ -2362,7 +2390,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8499:
+.LFE8500:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv,"x"
 	.linkonce discard
@@ -2371,7 +2399,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginE
 	.def	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv
 _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv:
-.LFB8500:
+.LFB8501:
 	.loc 6 716 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2394,7 +2422,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_	 #
-	movq	-8(%rbp), %rax	 # D.133574, D.137438
+	movq	-8(%rbp), %rax	 # D.133582, D.137446
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 6 717 51
 	addq	$48, %rsp	 #,
@@ -2403,7 +2431,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8500:
+.LFE8501:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_,"x"
 	.linkonce discard
@@ -2411,7 +2439,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv:
 	.def	_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_
 _ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEEbRKNS_17__normal_iteratorIT_T0_EESG_:
-.LFB8501:
+.LFB8502:
 	.file 7 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h"
 	.loc 7 881 5
 	.cfi_startproc
@@ -2455,7 +2483,7 @@ _ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE8501:
+.LFE8502:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv,"x"
 	.linkonce discard
@@ -2464,7 +2492,7 @@ _ZN9__gnu_cxxneIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS
 	.def	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv
 _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEppEv:
-.LFB8502:
+.LFB8503:
 	.loc 7 801 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2495,7 +2523,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwES
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8502:
+.LFE8503:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv,"x"
 	.linkonce discard
@@ -2504,7 +2532,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwES
 	.def	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv
 _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEdeEv:
-.LFB8503:
+.LFB8504:
 	.loc 7 793 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2527,7 +2555,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8503:
+.LFE8504:
 	.seh_endproc
 	.section	.text$_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_,"x"
 	.linkonce discard
@@ -2535,7 +2563,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	.def	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_
 _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_:
-.LFB8504:
+.LFB8505:
 	.loc 5 5888 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2574,17 +2602,17 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_:
 .LEHE41:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:5893:       return __str;
 	.loc 5 5893 14
-	jmp	.L122	 #
-.L121:
+	jmp	.L123	 #
+.L122:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.137839
-	movq	%rax, %rcx	 # D.137839,
+	movq	%rbx, %rax	 # tmp90, D.137848
+	movq	%rax, %rcx	 # D.137848,
 .LEHB42:
 	call	_Unwind_Resume	 #
 .LEHE42:
-.L122:
+.L123:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:5894:     }
 	.loc 5 5894 5
 	movq	-64(%rbp), %rax	 # <retval>,
@@ -2596,28 +2624,28 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE8504:
+.LFE8505:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA8504:
+.LLSDA8505:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8504-.LLSDACSB8504
-.LLSDACSB8504:
-	.uleb128 .LEHB40-.LFB8504
+	.uleb128 .LLSDACSE8505-.LLSDACSB8505
+.LLSDACSB8505:
+	.uleb128 .LEHB40-.LFB8505
 	.uleb128 .LEHE40-.LEHB40
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB41-.LFB8504
+	.uleb128 .LEHB41-.LFB8505
 	.uleb128 .LEHE41-.LEHB41
-	.uleb128 .L121-.LFB8504
+	.uleb128 .L122-.LFB8505
 	.uleb128 0
-	.uleb128 .LEHB42-.LFB8504
+	.uleb128 .LEHB42-.LFB8505
 	.uleb128 .LEHE42-.LEHB42
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8504:
+.LLSDACSE8505:
 	.section	.text$_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_,"x"
 	.linkonce discard
 	.seh_endproc
@@ -2627,7 +2655,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_:
 	.def	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_
 _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_:
-.LFB8505:
+.LFB8506:
 	.loc 5 5953 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2665,7 +2693,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8505:
+.LFE8506:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_,"x"
 	.linkonce discard
@@ -2674,7 +2702,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_:
 	.def	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_
 _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
-.LFB8506:
+.LFB8507:
 	.loc 6 1074 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2700,7 +2728,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1076: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
 	.loc 6 1076 2
 	cmpq	%rax, %rdx	 # _2, _1
-	je	.L126	 #,
+	je	.L127	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1079: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
 	.loc 6 1079 30
 	movq	16(%rbp), %rax	 # this, tmp96
@@ -2725,18 +2753,18 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
 	movq	%rdx, 8(%rax)	 # _6, this_9(D)->D.54764._M_impl._M_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1086:       }
 	.loc 6 1086 7
-	jmp	.L128	 #
-.L126:
+	jmp	.L129	 #
+.L127:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1085: 	  _M_realloc_insert(end(), __x);
 	.loc 6 1085 4
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv	 #
-	movq	%rax, %rdx	 #, D.137325
+	movq	%rax, %rdx	 #, D.137333
 	movq	24(%rbp), %rax	 # __x, tmp100
 	movq	%rax, %r8	 # tmp100,
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_	 #
-.L128:
+.L129:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1086:       }
 	.loc 6 1086 7
 	nop	
@@ -2746,7 +2774,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8506:
+.LFE8507:
 	.seh_endproc
 	.section	.text$_ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_,"x"
 	.linkonce discard
@@ -2754,7 +2782,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
 	.def	_ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_
 _ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__cxx1112basic_stringIS3_St11char_traitsIS3_ESaIS3_EEESE_:
-.LFB8507:
+.LFB8508:
 	.loc 5 6017 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2788,7 +2816,7 @@ _ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6020: 	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
 	.loc 5 6020 8
 	cmpq	%rax, %rbx	 # _2, _1
-	jne	.L130	 #,
+	jne	.L131	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6020: 	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
 	.loc 5 6020 45 discriminator 1
 	movq	32(%rbp), %rcx	 # __lhs,
@@ -2807,16 +2835,16 @@ _ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6020: 	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
 	.loc 5 6020 8 discriminator 1
 	testl	%eax, %eax	 # _6
-	jne	.L130	 #,
+	jne	.L131	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6020: 	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
 	.loc 5 6020 8 is_stmt 0 discriminator 3
 	movl	$1, %eax	 #, iftmp.25_7
-	jmp	.L131	 #
-.L130:
+	jmp	.L132	 #
+.L131:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6020: 	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
 	.loc 5 6020 8 discriminator 4
 	movl	$0, %eax	 #, iftmp.25_7
-.L131:
+.L132:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6021: 						    __lhs.size())); }
 	.loc 5 6021 27 is_stmt 1
 	addq	$32, %rsp	 #,
@@ -2829,7 +2857,7 @@ _ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__
 	.cfi_def_cfa 7, 24
 	ret	
 	.cfi_endproc
-.LFE8507:
+.LFE8508:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_,"x"
 	.linkonce discard
@@ -2838,7 +2866,7 @@ _ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__
 	.def	_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_
 _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
-.LFB8508:
+.LFB8509:
 	.loc 6 1074 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2864,7 +2892,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1076: 	if (this->_M_impl._M_finish != this->_M_impl._M_end_of_storage)
 	.loc 6 1076 2
 	cmpq	%rax, %rdx	 # _2, _1
-	je	.L134	 #,
+	je	.L135	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1079: 	    _Alloc_traits::construct(this->_M_impl, this->_M_impl._M_finish,
 	.loc 6 1079 30
 	movq	16(%rbp), %rax	 # this, tmp96
@@ -2889,18 +2917,18 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
 	movq	%rdx, 8(%rax)	 # _6, this_9(D)->D.53657._M_impl._M_finish
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1086:       }
 	.loc 6 1086 7
-	jmp	.L136	 #
-.L134:
+	jmp	.L137	 #
+.L135:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1085: 	  _M_realloc_insert(end(), __x);
 	.loc 6 1085 4
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv	 #
-	movq	%rax, %rdx	 #, D.137510
+	movq	%rax, %rdx	 #, D.137518
 	movq	24(%rbp), %rax	 # __x, tmp100
 	movq	%rax, %r8	 # tmp100,
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_	 #
-.L136:
+.L137:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1086:       }
 	.loc 6 1086 7
 	nop	
@@ -2910,7 +2938,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8508:
+.LFE8509:
 	.seh_endproc
 	.section	.text$_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_,"x"
 	.linkonce discard
@@ -2918,7 +2946,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
 	.def	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_
 _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
-.LFB8509:
+.LFB8510:
 	.loc 5 5925 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -2957,17 +2985,17 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 .LEHE44:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:5930:       return __str;
 	.loc 5 5930 14
-	jmp	.L141	 #
-.L140:
+	jmp	.L142	 #
+.L141:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.137842
-	movq	%rax, %rcx	 # D.137842,
+	movq	%rbx, %rax	 # tmp90, D.137851
+	movq	%rax, %rcx	 # D.137851,
 .LEHB45:
 	call	_Unwind_Resume	 #
 .LEHE45:
-.L141:
+.L142:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:5931:     }
 	.loc 5 5931 5
 	movq	-64(%rbp), %rax	 # <retval>,
@@ -2979,28 +3007,28 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE8509:
+.LFE8510:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA8509:
+.LLSDA8510:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8509-.LLSDACSB8509
-.LLSDACSB8509:
-	.uleb128 .LEHB43-.LFB8509
+	.uleb128 .LLSDACSE8510-.LLSDACSB8510
+.LLSDACSB8510:
+	.uleb128 .LEHB43-.LFB8510
 	.uleb128 .LEHE43-.LEHB43
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB44-.LFB8509
+	.uleb128 .LEHB44-.LFB8510
 	.uleb128 .LEHE44-.LEHB44
-	.uleb128 .L140-.LFB8509
+	.uleb128 .L141-.LFB8510
 	.uleb128 0
-	.uleb128 .LEHB45-.LFB8509
+	.uleb128 .LEHB45-.LFB8510
 	.uleb128 .LEHE45-.LEHB45
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8509:
+.LLSDACSE8510:
 	.section	.text$_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_,"x"
 	.linkonce discard
 	.seh_endproc
@@ -3010,7 +3038,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	.def	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_
 _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_:
-.LFB8510:
+.LFB8511:
 	.loc 5 5989 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3048,7 +3076,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8510:
+.LFE8511:
 	.seh_endproc
 	.section	.text$_ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_,"x"
 	.linkonce discard
@@ -3056,7 +3084,7 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_:
 	.def	_ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_
 _ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_:
-.LFB8722:
+.LFB8723:
 	.file 8 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/move.h"
 	.loc 8 99 5
 	.cfi_startproc
@@ -3079,7 +3107,7 @@ _ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_ref
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8722:
+.LFE8723:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD1Ev,"x"
 	.linkonce discard
@@ -3088,7 +3116,7 @@ _ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_ref
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD1Ev
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD1Ev:
-.LFB8726:
+.LFB8727:
 	.loc 6 88 14
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3115,7 +3143,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8726:
+.LFE8727:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC2Ev,"x"
 	.linkonce discard
@@ -3124,7 +3152,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC2Ev
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC2Ev:
-.LFB8727:
+.LFB8728:
 	.loc 6 248 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3154,7 +3182,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8727:
+.LFE8728:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev,"x"
 	.linkonce discard
@@ -3163,7 +3191,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev:
-.LFB8730:
+.LFB8731:
 	.loc 6 283 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3213,16 +3241,16 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8730:
+.LFE8731:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA8730:
+.LLSDA8731:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE8730-.LLSDACSB8730
-.LLSDACSB8730:
-.LLSDACSE8730:
+	.uleb128 .LLSDACSE8731-.LLSDACSB8731
+.LLSDACSB8731:
+.LLSDACSE8731:
 	.section	.text$_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev,"x"
 	.linkonce discard
 	.seh_endproc
@@ -3233,7 +3261,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE19_M_get_Tp_allocatorEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE19_M_get_Tp_allocatorEv
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE19_M_get_Tp_allocatorEv:
-.LFB8732:
+.LFB8733:
 	.loc 6 237 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3255,7 +3283,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8732:
+.LFE8733:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E,"x"
 	.linkonce discard
@@ -3263,7 +3291,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E
 _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E:
-.LFB8733:
+.LFB8734:
 	.file 9 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h"
 	.loc 9 203 5
 	.cfi_startproc
@@ -3279,7 +3307,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSa
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.133560, D.133560
+	movq	%r8, 32(%rbp)	 # D.133568, D.133568
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 9 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -3295,7 +3323,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSa
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8733:
+.LFE8734:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_,"x"
 	.linkonce discard
@@ -3304,7 +3332,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSa
 	.def	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_
 _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_:
-.LFB8736:
+.LFB8737:
 	.loc 7 780 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3333,7 +3361,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwES
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8736:
+.LFE8737:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEE4baseEv,"x"
 	.linkonce discard
@@ -3342,7 +3370,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwES
 	.def	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEE4baseEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEE4baseEv
 _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEE4baseEv:
-.LFB8737:
+.LFB8738:
 	.loc 7 845 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3364,7 +3392,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8737:
+.LFE8738:
 	.seh_endproc
 	.section	.text$_ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE,"x"
 	.linkonce discard
@@ -3372,7 +3400,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	.def	_ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE
 _ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE:
-.LFB8739:
+.LFB8740:
 	.loc 8 74 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3394,7 +3422,7 @@ _ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8739:
+.LFE8740:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_,"x"
 	.linkonce discard
@@ -3402,7 +3430,7 @@ _ZSt7forwardIRKP14T100FolderInfoEOT_RNSt16remove_referenceIS4_E4typeE:
 	.def	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_
 _ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_:
-.LFB8738:
+.LFB8739:
 	.file 10 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/alloc_traits.h"
 	.loc 10 474 2
 	.cfi_startproc
@@ -3439,7 +3467,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpO
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8738:
+.LFE8739:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv,"x"
 	.linkonce discard
@@ -3448,7 +3476,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpO
 	.def	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv
 _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
-.LFB8740:
+.LFB8741:
 	.loc 6 716 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3471,7 +3499,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.134700, D.137330
+	movq	-8(%rbp), %rax	 # D.134708, D.137338
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 6 717 51
 	addq	$48, %rsp	 #,
@@ -3480,7 +3508,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8740:
+.LFE8741:
 	.seh_endproc
 	.section .rdata,"dr"
 .LC5:
@@ -3492,7 +3520,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 	.def	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_
 _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_:
-.LFB8741:
+.LFB8742:
 	.file 11 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc"
 	.loc 11 413 7
 	.cfi_startproc
@@ -3536,7 +3564,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	.loc 11 426 51
 	movq	0(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv	 #
-	movq	%rax, -88(%rbp)	 # tmp127, D.134706
+	movq	%rax, -88(%rbp)	 # tmp127, D.134714
 	leaq	-88(%rbp), %rdx	 #, tmp128
 	leaq	8(%rbp), %rax	 #, tmp129
 	movq	%rax, %rcx	 # tmp129,
@@ -3681,8 +3709,8 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	%rdx, 16(%rax)	 # _30, this_36(D)->D.54764._M_impl._M_end_of_storage
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:474:     }
 	.loc 11 474 5 discriminator 1
-	jmp	.L167	 #
-.L165:
+	jmp	.L168	 #
+.L166:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 11 457 7
 	movq	%rax, %rcx	 # _15,
@@ -3690,7 +3718,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:459: 	  if (!__new_finish)
 	.loc 11 459 4
 	cmpq	$0, -40(%rbp)	 #, __new_finish
-	jne	.L162	 #,
+	jne	.L163	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:461: 				   __new_start + __elems_before);
 	.loc 11 461 20
 	movq	-72(%rbp), %rax	 # __elems_before, tmp154
@@ -3707,8 +3735,8 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	%rax, %rcx	 # _18,
 .LEHB49:
 	call	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_	 #
-	jmp	.L163	 #
-.L162:
+	jmp	.L164	 #
+.L163:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:463: 	    std::_Destroy(__new_start, __new_finish, _M_get_Tp_allocator());
 	.loc 11 463 66
 	movq	0(%rbp), %rax	 # this, _19
@@ -3722,7 +3750,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	movq	%rcx, %r8	 # _20,
 	movq	%rax, %rcx	 # tmp157,
 	call	_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E	 #
-.L163:
+.L164:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:464: 	  _M_deallocate(__new_start, __len);
 	.loc 11 464 17
 	movq	0(%rbp), %rax	 # this, _21
@@ -3735,18 +3763,18 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	.loc 11 465 4
 	call	__cxa_rethrow	 #
 .LEHE49:
-.L166:
+.L167:
 	movq	%rax, %rbx	 #, tmp160
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 11 457 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp160, D.137845
-	movq	%rax, %rcx	 # D.137845,
+	movq	%rbx, %rax	 # tmp160, D.137854
+	movq	%rax, %rcx	 # D.137854,
 .LEHB50:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE50:
-.L167:
+.L168:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:474:     }
 	.loc 11 474 5
 	addq	$104, %rsp	 #,
@@ -3757,45 +3785,45 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	.cfi_def_cfa 7, -88
 	ret	
 	.cfi_endproc
-.LFE8741:
+.LFE8742:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
 	.align 4
-.LLSDA8741:
+.LLSDA8742:
 	.byte	0xff
 	.byte	0x9b
-	.uleb128 .LLSDATT8741-.LLSDATTD8741
-.LLSDATTD8741:
+	.uleb128 .LLSDATT8742-.LLSDATTD8742
+.LLSDATTD8742:
 	.byte	0x1
-	.uleb128 .LLSDACSE8741-.LLSDACSB8741
-.LLSDACSB8741:
-	.uleb128 .LEHB46-.LFB8741
+	.uleb128 .LLSDACSE8742-.LLSDACSB8742
+.LLSDACSB8742:
+	.uleb128 .LEHB46-.LFB8742
 	.uleb128 .LEHE46-.LEHB46
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB47-.LFB8741
+	.uleb128 .LEHB47-.LFB8742
 	.uleb128 .LEHE47-.LEHB47
-	.uleb128 .L165-.LFB8741
+	.uleb128 .L166-.LFB8742
 	.uleb128 0x1
-	.uleb128 .LEHB48-.LFB8741
+	.uleb128 .LEHB48-.LFB8742
 	.uleb128 .LEHE48-.LEHB48
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB49-.LFB8741
+	.uleb128 .LEHB49-.LFB8742
 	.uleb128 .LEHE49-.LEHB49
-	.uleb128 .L166-.LFB8741
+	.uleb128 .L167-.LFB8742
 	.uleb128 0
-	.uleb128 .LEHB50-.LFB8741
+	.uleb128 .LEHB50-.LFB8742
 	.uleb128 .LEHE50-.LEHB50
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8741:
+.LLSDACSE8742:
 	.byte	0x1
 	.byte	0
 	.align 4
 	.long	0
 
-.LLSDATT8741:
+.LLSDATT8742:
 	.section	.text$_ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_,"x"
 	.linkonce discard
 	.seh_endproc
@@ -3805,7 +3833,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	.def	_ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE
 _ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE:
-.LFB8743:
+.LFB8744:
 	.loc 8 74 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3827,7 +3855,7 @@ _ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8743:
+.LFE8744:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_,"x"
 	.linkonce discard
@@ -3835,7 +3863,7 @@ _ZSt7forwardIRKP12T100FileInfoEOT_RNSt16remove_referenceIS4_E4typeE:
 	.def	_ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_
 _ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0_:
-.LFB8742:
+.LFB8743:
 	.loc 10 474 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3871,7 +3899,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8742:
+.LFE8743:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv,"x"
 	.linkonce discard
@@ -3880,7 +3908,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE9constructIS1_JRKS1_EEEvRS2_PT_DpOT0
 	.def	_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv
 _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
-.LFB8744:
+.LFB8745:
 	.loc 6 716 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3903,7 +3931,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.134747, D.137513
+	movq	-8(%rbp), %rax	 # D.134755, D.137521
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 6 717 51
 	addq	$48, %rsp	 #,
@@ -3912,7 +3940,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8744:
+.LFE8745:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_,"x"
 	.linkonce discard
@@ -3921,7 +3949,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
 	.def	_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_
 _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_:
-.LFB8745:
+.LFB8746:
 	.loc 11 413 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -3964,7 +3992,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	.loc 11 426 51
 	movq	0(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv	 #
-	movq	%rax, -88(%rbp)	 # tmp127, D.134753
+	movq	%rax, -88(%rbp)	 # tmp127, D.134761
 	leaq	-88(%rbp), %rdx	 #, tmp128
 	leaq	8(%rbp), %rax	 #, tmp129
 	movq	%rax, %rcx	 # tmp129,
@@ -4109,8 +4137,8 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	%rdx, 16(%rax)	 # _30, this_36(D)->D.53657._M_impl._M_end_of_storage
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:474:     }
 	.loc 11 474 5 discriminator 1
-	jmp	.L180	 #
-.L178:
+	jmp	.L181	 #
+.L179:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 11 457 7
 	movq	%rax, %rcx	 # _15,
@@ -4118,7 +4146,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:459: 	  if (!__new_finish)
 	.loc 11 459 4
 	cmpq	$0, -40(%rbp)	 #, __new_finish
-	jne	.L175	 #,
+	jne	.L176	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:461: 				   __new_start + __elems_before);
 	.loc 11 461 20
 	movq	-72(%rbp), %rax	 # __elems_before, tmp154
@@ -4135,8 +4163,8 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	%rax, %rcx	 # _18,
 .LEHB54:
 	call	_ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_	 #
-	jmp	.L176	 #
-.L175:
+	jmp	.L177	 #
+.L176:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:463: 	    std::_Destroy(__new_start, __new_finish, _M_get_Tp_allocator());
 	.loc 11 463 66
 	movq	0(%rbp), %rax	 # this, _19
@@ -4150,7 +4178,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	movq	%rcx, %r8	 # _20,
 	movq	%rax, %rcx	 # tmp157,
 	call	_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E	 #
-.L176:
+.L177:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:464: 	  _M_deallocate(__new_start, __len);
 	.loc 11 464 17
 	movq	0(%rbp), %rax	 # this, _21
@@ -4163,18 +4191,18 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	.loc 11 465 4
 	call	__cxa_rethrow	 #
 .LEHE54:
-.L179:
+.L180:
 	movq	%rax, %rbx	 #, tmp160
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 11 457 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp160, D.137847
-	movq	%rax, %rcx	 # D.137847,
+	movq	%rbx, %rax	 # tmp160, D.137856
+	movq	%rax, %rcx	 # D.137856,
 .LEHB55:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE55:
-.L180:
+.L181:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:474:     }
 	.loc 11 474 5
 	addq	$104, %rsp	 #,
@@ -4185,45 +4213,45 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	.cfi_def_cfa 7, -88
 	ret	
 	.cfi_endproc
-.LFE8745:
+.LFE8746:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
 	.align 4
-.LLSDA8745:
+.LLSDA8746:
 	.byte	0xff
 	.byte	0x9b
-	.uleb128 .LLSDATT8745-.LLSDATTD8745
-.LLSDATTD8745:
+	.uleb128 .LLSDATT8746-.LLSDATTD8746
+.LLSDATTD8746:
 	.byte	0x1
-	.uleb128 .LLSDACSE8745-.LLSDACSB8745
-.LLSDACSB8745:
-	.uleb128 .LEHB51-.LFB8745
+	.uleb128 .LLSDACSE8746-.LLSDACSB8746
+.LLSDACSB8746:
+	.uleb128 .LEHB51-.LFB8746
 	.uleb128 .LEHE51-.LEHB51
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB52-.LFB8745
+	.uleb128 .LEHB52-.LFB8746
 	.uleb128 .LEHE52-.LEHB52
-	.uleb128 .L178-.LFB8745
+	.uleb128 .L179-.LFB8746
 	.uleb128 0x1
-	.uleb128 .LEHB53-.LFB8745
+	.uleb128 .LEHB53-.LFB8746
 	.uleb128 .LEHE53-.LEHB53
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB54-.LFB8745
+	.uleb128 .LEHB54-.LFB8746
 	.uleb128 .LEHE54-.LEHB54
-	.uleb128 .L179-.LFB8745
+	.uleb128 .L180-.LFB8746
 	.uleb128 0
-	.uleb128 .LEHB55-.LFB8745
+	.uleb128 .LEHB55-.LFB8746
 	.uleb128 .LEHE55-.LEHB55
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE8745:
+.LLSDACSE8746:
 	.byte	0x1
 	.byte	0
 	.align 4
 	.long	0
 
-.LLSDATT8745:
+.LLSDATT8746:
 	.section	.text$_ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17__normal_iteratorIPS1_S3_EEDpOT_,"x"
 	.linkonce discard
 	.seh_endproc
@@ -4234,7 +4262,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC1Ev
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC1Ev:
-.LFB8813:
+.LFB8814:
 	.loc 6 95 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4269,7 +4297,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8813:
+.LFE8814:
 	.seh_endproc
 	.section	.text$_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev,"x"
 	.linkonce discard
@@ -4278,7 +4306,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev
 _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev:
-.LFB8815:
+.LFB8816:
 	.file 12 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/allocator.h"
 	.loc 12 139 7
 	.cfi_startproc
@@ -4306,7 +4334,7 @@ _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8815:
+.LFE8816:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13_M_deallocateEPS5_y,"x"
 	.linkonce discard
@@ -4315,7 +4343,7 @@ _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev:
 	.def	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13_M_deallocateEPS5_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13_M_deallocateEPS5_y
 _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE13_M_deallocateEPS5_y:
-.LFB8817:
+.LFB8818:
 	.loc 6 300 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4334,7 +4362,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:303: 	if (__p)
 	.loc 6 303 2
 	cmpq	$0, 24(%rbp)	 #, __p
-	je	.L185	 #,
+	je	.L186	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:304: 	  _Tr::deallocate(_M_impl, __p, __n);
 	.loc 6 304 20
 	movq	16(%rbp), %rax	 # this, _1
@@ -4345,7 +4373,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	movq	%rcx, %r8	 # tmp88,
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y	 #
-.L185:
+.L186:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:305:       }
 	.loc 6 305 7
 	nop	
@@ -4355,7 +4383,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8817:
+.LFE8818:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_,"x"
 	.linkonce discard
@@ -4363,7 +4391,7 @@ _ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE
 	.def	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_
 _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_:
-.LFB8818:
+.LFB8819:
 	.loc 9 127 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4393,7 +4421,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8818:
+.LFE8819:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_,"x"
 	.linkonce discard
@@ -4402,7 +4430,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvT_S7_:
 	.def	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_
 _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_:
-.LFB8819:
+.LFB8820:
 	.file 13 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h"
 	.loc 13 135 2
 	.cfi_startproc
@@ -4448,7 +4476,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE8819:
+.LFE8820:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_,"x"
 	.linkonce discard
@@ -4457,7 +4485,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_
 	.def	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_
 _ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_:
-.LFB8822:
+.LFB8823:
 	.loc 7 780 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4486,7 +4514,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8822:
+.LFE8823:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc,"x"
 	.linkonce discard
@@ -4495,7 +4523,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3
 	.def	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc
 _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
-.LFB8823:
+.LFB8824:
 	.loc 6 1635 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4533,13 +4561,13 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1637: 	if (max_size() - size() < __n)
 	.loc 6 1637 2
 	testb	%al, %al	 # retval.17_19
-	je	.L190	 #,
+	je	.L191	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1638: 	  __throw_length_error(__N(__s));
 	.loc 6 1638 24
 	movq	-32(%rbp), %rax	 # __s, __s.19_5
 	movq	%rax, %rcx	 # __s.19_5,
 	call	_ZSt20__throw_length_errorPKc	 #
-.L190:
+.L191:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1640: 	const size_type __len = size() + std::max(size(), __n);
 	.loc 6 1640 33
 	movq	-48(%rbp), %rcx	 # this,
@@ -4549,7 +4577,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
 	.loc 6 1640 43
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv	 #
-	movq	%rax, -96(%rbp)	 # _7, D.135419
+	movq	%rax, -96(%rbp)	 # _7, D.135427
 	leaq	-40(%rbp), %rdx	 #, tmp101
 	leaq	-96(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
@@ -4568,7 +4596,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 48
 	cmpq	%rax, -88(%rbp)	 # _10, __len
-	jb	.L191	 #,
+	jb	.L192	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 34 discriminator 2
 	movq	-48(%rbp), %rcx	 # this,
@@ -4576,18 +4604,18 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 25 discriminator 2
 	cmpq	%rax, -88(%rbp)	 # _11, __len
-	jbe	.L192	 #,
-.L191:
+	jbe	.L193	 #,
+.L192:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 48 discriminator 3
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv	 #
-	jmp	.L193	 #
-.L192:
+	jmp	.L194	 #
+.L193:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 48 is_stmt 0 discriminator 4
 	movq	-88(%rbp), %rax	 # __len, iftmp.20_12
-.L193:
+.L194:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1642:       }
 	.loc 6 1642 7 is_stmt 1 discriminator 6
 	addq	$56, %rsp	 #,
@@ -4598,7 +4626,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
 	.cfi_def_cfa 7, -40
 	ret	
 	.cfi_endproc
-.LFE8823:
+.LFE8824:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv,"x"
 	.linkonce discard
@@ -4607,7 +4635,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
 	.def	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv
 _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
-.LFB8824:
+.LFB8825:
 	.loc 6 698 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4629,7 +4657,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.135421, D.137367
+	movq	-8(%rbp), %rax	 # D.135429, D.137375
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 6 699 50
 	addq	$48, %rsp	 #,
@@ -4638,7 +4666,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8824:
+.LFE8825:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_,"x"
 	.linkonce discard
@@ -4646,7 +4674,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
 	.def	_ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_
 _ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_:
-.LFB8825:
+.LFB8826:
 	.loc 7 963 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4690,7 +4718,7 @@ _ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorI
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE8825:
+.LFE8826:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy,"x"
 	.linkonce discard
@@ -4699,7 +4727,7 @@ _ZN9__gnu_cxxmiIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorI
 	.def	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy
 _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy:
-.LFB8826:
+.LFB8827:
 	.loc 6 293 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4717,7 +4745,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 6 296 18
 	cmpq	$0, 24(%rbp)	 #, __n
-	je	.L200	 #,
+	je	.L201	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 6 296 34 discriminator 1
 	movq	16(%rbp), %rax	 # this, _1
@@ -4728,12 +4756,12 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy:
 	call	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 6 296 58 discriminator 1
-	jmp	.L202	 #
-.L200:
+	jmp	.L203	 #
+.L201:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 6 296 18 discriminator 2
 	movl	$0, %eax	 #, _8
-.L202:
+.L203:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:297:       }
 	.loc 6 297 7 discriminator 5
 	addq	$32, %rsp	 #,
@@ -4742,7 +4770,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8826:
+.LFE8827:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseEv,"x"
 	.linkonce discard
@@ -4751,7 +4779,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE11_M_allocateEy:
 	.def	_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseEv
 _ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseEv:
-.LFB8827:
+.LFB8828:
 	.loc 7 845 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4773,7 +4801,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8827:
+.LFE8828:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv,"x"
 	.linkonce discard
@@ -4782,7 +4810,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEE4baseE
 	.def	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv
 _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
-.LFB8828:
+.LFB8829:
 	.loc 6 237 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4804,7 +4832,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8828:
+.LFE8829:
 	.seh_endproc
 	.section	.text$_ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_,"x"
 	.linkonce discard
@@ -4812,7 +4840,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.def	_ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_
 _ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4_RT1_:
-.LFB8829:
+.LFB8830:
 	.file 14 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h"
 	.loc 14 305 5
 	.cfi_startproc
@@ -4840,15 +4868,15 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4
 	movq	-56(%rbp), %rax	 # __last, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rbx	 #, D.137391
+	movq	%rax, %rbx	 #, D.137399
 	movq	-64(%rbp), %rcx	 # __first,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rcx	 #, D.137392
+	movq	%rax, %rcx	 #, D.137400
 	movq	-40(%rbp), %rdx	 # __alloc, tmp92
 	movq	-48(%rbp), %rax	 # __result, tmp93
 	movq	%rdx, %r9	 # tmp92,
 	movq	%rax, %r8	 # tmp93,
-	movq	%rbx, %rdx	 # D.137391,
+	movq	%rbx, %rdx	 # D.137399,
 	call	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:313:     }
 	.loc 14 313 5
@@ -4860,7 +4888,7 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE8829:
+.LFE8830:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_,"x"
 	.linkonce discard
@@ -4868,7 +4896,7 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4
 	.def	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_
 _ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_:
-.LFB8830:
+.LFB8831:
 	.loc 10 486 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4898,7 +4926,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8830:
+.LFE8831:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E,"x"
 	.linkonce discard
@@ -4906,7 +4934,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE7destroyIS1_EEvRS2_PT_:
 	.def	_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E
 _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
-.LFB8831:
+.LFB8832:
 	.loc 9 203 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4921,7 +4949,7 @@ _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.134728, D.134728
+	movq	%r8, 32(%rbp)	 # D.134736, D.134736
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 9 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -4937,7 +4965,7 @@ _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8831:
+.LFE8832:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y,"x"
 	.linkonce discard
@@ -4946,7 +4974,7 @@ _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
 	.def	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y
 _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y:
-.LFB8832:
+.LFB8833:
 	.loc 6 300 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -4965,7 +4993,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:303: 	if (__p)
 	.loc 6 303 2
 	cmpq	$0, 24(%rbp)	 #, __p
-	je	.L213	 #,
+	je	.L214	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:304: 	  _Tr::deallocate(_M_impl, __p, __n);
 	.loc 6 304 20
 	movq	16(%rbp), %rax	 # this, _1
@@ -4976,7 +5004,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y:
 	movq	%rcx, %r8	 # tmp88,
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y	 #
-.L213:
+.L214:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:305:       }
 	.loc 6 305 7
 	nop	
@@ -4986,7 +5014,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8832:
+.LFE8833:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_,"x"
 	.linkonce discard
@@ -4995,7 +5023,7 @@ _ZNSt12_Vector_baseIP14T100FolderInfoSaIS1_EE13_M_deallocateEPS1_y:
 	.def	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_
 _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_:
-.LFB8833:
+.LFB8834:
 	.loc 13 135 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5040,7 +5068,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE8833:
+.LFE8834:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_,"x"
 	.linkonce discard
@@ -5049,7 +5077,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE9constructIS2_JRKS2_EEEvPT_DpOT0_:
 	.def	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_
 _ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_:
-.LFB8836:
+.LFB8837:
 	.loc 7 780 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5078,7 +5106,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8836:
+.LFE8837:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc,"x"
 	.linkonce discard
@@ -5087,7 +5115,7 @@ _ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_:
 	.def	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc
 _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
-.LFB8837:
+.LFB8838:
 	.loc 6 1635 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5125,13 +5153,13 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1637: 	if (max_size() - size() < __n)
 	.loc 6 1637 2
 	testb	%al, %al	 # retval.32_19
-	je	.L217	 #,
+	je	.L218	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1638: 	  __throw_length_error(__N(__s));
 	.loc 6 1638 24
 	movq	-32(%rbp), %rax	 # __s, __s.34_5
 	movq	%rax, %rcx	 # __s.34_5,
 	call	_ZSt20__throw_length_errorPKc	 #
-.L217:
+.L218:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1640: 	const size_type __len = size() + std::max(size(), __n);
 	.loc 6 1640 33
 	movq	-48(%rbp), %rcx	 # this,
@@ -5141,7 +5169,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
 	.loc 6 1640 43
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv	 #
-	movq	%rax, -96(%rbp)	 # _7, D.135681
+	movq	%rax, -96(%rbp)	 # _7, D.135689
 	leaq	-40(%rbp), %rdx	 #, tmp101
 	leaq	-96(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
@@ -5160,7 +5188,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 48
 	cmpq	%rax, -88(%rbp)	 # _10, __len
-	jb	.L218	 #,
+	jb	.L219	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 34 discriminator 2
 	movq	-48(%rbp), %rcx	 # this,
@@ -5168,18 +5196,18 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 25 discriminator 2
 	cmpq	%rax, -88(%rbp)	 # _11, __len
-	jbe	.L219	 #,
-.L218:
+	jbe	.L220	 #,
+.L219:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 48 discriminator 3
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv	 #
-	jmp	.L220	 #
-.L219:
+	jmp	.L221	 #
+.L220:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1641: 	return (__len < size() || __len > max_size()) ? max_size() : __len;
 	.loc 6 1641 48 is_stmt 0 discriminator 4
 	movq	-88(%rbp), %rax	 # __len, iftmp.35_12
-.L220:
+.L221:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:1642:       }
 	.loc 6 1642 7 is_stmt 1 discriminator 6
 	addq	$56, %rsp	 #,
@@ -5190,7 +5218,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
 	.cfi_def_cfa 7, -40
 	ret	
 	.cfi_endproc
-.LFE8837:
+.LFE8838:
 	.seh_endproc
 	.section	.text$_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv,"x"
 	.linkonce discard
@@ -5199,7 +5227,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
 	.def	_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv
 _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
-.LFB8838:
+.LFB8839:
 	.loc 6 698 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5221,7 +5249,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.135683, D.137546
+	movq	-8(%rbp), %rax	 # D.135691, D.137554
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 6 699 50
 	addq	$48, %rsp	 #,
@@ -5230,7 +5258,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8838:
+.LFE8839:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_,"x"
 	.linkonce discard
@@ -5238,7 +5266,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
 	.def	_ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_
 _ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_T0_E15difference_typeERKSA_SD_:
-.LFB8839:
+.LFB8840:
 	.loc 7 963 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5282,7 +5310,7 @@ _ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE8839:
+.LFE8840:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy,"x"
 	.linkonce discard
@@ -5291,7 +5319,7 @@ _ZN9__gnu_cxxmiIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEENS_17__normal_iteratorIT_
 	.def	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy
 _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy:
-.LFB8840:
+.LFB8841:
 	.loc 6 293 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5309,7 +5337,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 6 296 18
 	cmpq	$0, 24(%rbp)	 #, __n
-	je	.L227	 #,
+	je	.L228	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 6 296 34 discriminator 1
 	movq	16(%rbp), %rax	 # this, _1
@@ -5320,12 +5348,12 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy:
 	call	_ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 6 296 58 discriminator 1
-	jmp	.L229	 #
-.L227:
+	jmp	.L230	 #
+.L228:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:296: 	return __n != 0 ? _Tr::allocate(_M_impl, __n) : pointer();
 	.loc 6 296 18 discriminator 2
 	movl	$0, %eax	 #, _8
-.L229:
+.L230:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:297:       }
 	.loc 6 297 7 discriminator 5
 	addq	$32, %rsp	 #,
@@ -5334,7 +5362,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8840:
+.LFE8841:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv,"x"
 	.linkonce discard
@@ -5343,7 +5371,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE11_M_allocateEy:
 	.def	_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv
 _ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv:
-.LFB8841:
+.LFB8842:
 	.loc 7 845 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5365,7 +5393,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8841:
+.LFE8842:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv,"x"
 	.linkonce discard
@@ -5374,7 +5402,7 @@ _ZNK9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEE4baseEv:
 	.def	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv
 _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
-.LFB8842:
+.LFB8843:
 	.loc 6 237 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5396,7 +5424,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8842:
+.LFE8843:
 	.seh_endproc
 	.section	.text$_ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_,"x"
 	.linkonce discard
@@ -5404,7 +5432,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.def	_ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_
 _ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_RT1_:
-.LFB8843:
+.LFB8844:
 	.loc 14 305 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5431,15 +5459,15 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_R
 	movq	-56(%rbp), %rax	 # __last, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rbx	 #, D.137570
+	movq	%rax, %rbx	 #, D.137578
 	movq	-64(%rbp), %rcx	 # __first,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rcx	 #, D.137571
+	movq	%rax, %rcx	 #, D.137579
 	movq	-40(%rbp), %rdx	 # __alloc, tmp92
 	movq	-48(%rbp), %rax	 # __result, tmp93
 	movq	%rdx, %r9	 # tmp92,
 	movq	%rax, %r8	 # tmp93,
-	movq	%rbx, %rdx	 # D.137570,
+	movq	%rbx, %rdx	 # D.137578,
 	call	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:313:     }
 	.loc 14 313 5
@@ -5451,7 +5479,7 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_R
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE8843:
+.LFE8844:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_,"x"
 	.linkonce discard
@@ -5459,7 +5487,7 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_R
 	.def	_ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_
 _ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_:
-.LFB8844:
+.LFB8845:
 	.loc 10 486 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5489,7 +5517,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8844:
+.LFE8845:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E,"x"
 	.linkonce discard
@@ -5497,7 +5525,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE7destroyIS1_EEvRS2_PT_:
 	.def	_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E
 _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
-.LFB8845:
+.LFB8846:
 	.loc 9 203 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5512,7 +5540,7 @@ _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.134775, D.134775
+	movq	%r8, 32(%rbp)	 # D.134783, D.134783
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 9 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -5528,7 +5556,7 @@ _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8845:
+.LFE8846:
 	.seh_endproc
 	.section	.text$_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y,"x"
 	.linkonce discard
@@ -5537,7 +5565,7 @@ _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
 	.def	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y
 _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y:
-.LFB8846:
+.LFB8847:
 	.loc 6 300 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5556,7 +5584,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:303: 	if (__p)
 	.loc 6 303 2
 	cmpq	$0, 24(%rbp)	 #, __p
-	je	.L240	 #,
+	je	.L241	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:304: 	  _Tr::deallocate(_M_impl, __p, __n);
 	.loc 6 304 20
 	movq	16(%rbp), %rax	 # this, _1
@@ -5567,7 +5595,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y:
 	movq	%rcx, %r8	 # tmp88,
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y	 #
-.L240:
+.L241:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:305:       }
 	.loc 6 305 7
 	nop	
@@ -5577,7 +5605,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8846:
+.LFE8847:
 	.seh_endproc
 	.section	.text$_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev,"x"
 	.linkonce discard
@@ -5586,7 +5614,7 @@ _ZNSt12_Vector_baseIP12T100FileInfoSaIS1_EE13_M_deallocateEPS1_y:
 	.def	_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev
 _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev:
-.LFB8882:
+.LFB8883:
 	.loc 12 131 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5615,7 +5643,7 @@ _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8882:
+.LFE8883:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev,"x"
 	.linkonce discard
@@ -5624,7 +5652,7 @@ _ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev:
 	.def	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev
 _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev:
-.LFB8885:
+.LFB8886:
 	.loc 13 86 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5644,7 +5672,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8885:
+.LFE8886:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y,"x"
 	.linkonce discard
@@ -5652,7 +5680,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.def	_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y
 _ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEE10deallocateERS6_PS5_y:
-.LFB8887:
+.LFB8888:
 	.loc 10 461 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5685,7 +5713,7 @@ _ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8887:
+.LFE8888:
 	.seh_endproc
 	.section	.text$_ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_,"x"
 	.linkonce discard
@@ -5693,7 +5721,7 @@ _ZNSt16allocator_traitsISaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE
 	.def	_ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_
 _ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_:
-.LFB8889:
+.LFB8890:
 	.loc 8 47 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5715,7 +5743,7 @@ _ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8889:
+.LFE8890:
 	.seh_endproc
 	.section	.text$_ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEvT_S9_,"x"
 	.linkonce discard
@@ -5723,7 +5751,7 @@ _ZSt11__addressofINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEPT_RS6_:
 	.def	_ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEvT_S9_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEvT_S9_
 _ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEEvT_S9_:
-.LFB8888:
+.LFB8889:
 	.loc 9 105 9
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5738,12 +5766,12 @@ _ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsI
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-.L248:
+.L249:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:107: 	  for (; __first != __last; ++__first)
 	.loc 9 107 19 discriminator 2
 	movq	16(%rbp), %rax	 # __first, tmp88
 	cmpq	24(%rbp), %rax	 # __last, tmp88
-	je	.L249	 #,
+	je	.L250	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:108: 	    std::_Destroy(std::__addressof(*__first));
 	.loc 9 108 19 discriminator 1
 	movq	16(%rbp), %rcx	 # __first,
@@ -5753,8 +5781,8 @@ _ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsI
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:107: 	  for (; __first != __last; ++__first)
 	.loc 9 107 4 discriminator 1
 	addq	$32, 16(%rbp)	 #, __first
-	jmp	.L248	 #
-.L249:
+	jmp	.L249	 #
+.L250:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:109: 	}
 	.loc 9 109 2
 	nop	
@@ -5764,7 +5792,7 @@ _ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsI
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8888:
+.LFE8889:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv,"x"
 	.linkonce discard
@@ -5773,7 +5801,7 @@ _ZNSt12_Destroy_auxILb0EE9__destroyIPNSt7__cxx1112basic_stringIwSt11char_traitsI
 	.def	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv
 _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv:
-.LFB8890:
+.LFB8891:
 	.loc 6 810 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5804,7 +5832,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8890:
+.LFE8891:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv,"x"
 	.linkonce discard
@@ -5813,7 +5841,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE8max_sizeEv:
 	.def	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv
 _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv:
-.LFB8891:
+.LFB8892:
 	.loc 6 805 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5845,7 +5873,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8891:
+.LFE8892:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y,"x"
 	.linkonce discard
@@ -5853,7 +5881,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv:
 	.def	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y
 _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y:
-.LFB8892:
+.LFB8893:
 	.loc 10 435 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5883,7 +5911,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8892:
+.LFE8893:
 	.seh_endproc
 	.section	.text$_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_,"x"
 	.linkonce discard
@@ -5891,7 +5919,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8allocateERS2_y:
 	.def	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_
 _ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_:
-.LFB8893:
+.LFB8894:
 	.loc 7 1215 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5911,7 +5939,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EE
 	movq	16(%rbp), %rdx	 # __i,
 	movq	%rax, %rcx	 # tmp89,
 	call	_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_	 #
-	movq	-8(%rbp), %rax	 # D.136519, D.137395
+	movq	-8(%rbp), %rax	 # D.136527, D.137403
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:1216:     { return _ReturnType(__i); }
 	.loc 7 1216 32
 	addq	$48, %rsp	 #,
@@ -5920,7 +5948,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8893:
+.LFE8894:
 	.seh_endproc
 	.section	.text$_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E,"x"
 	.linkonce discard
@@ -5928,7 +5956,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EE
 	.def	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E
 _ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E:
-.LFB8894:
+.LFB8895:
 	.loc 14 287 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5944,7 +5972,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
 	movq	%r8, 32(%rbp)	 # __result, __result
-	movq	%r9, 40(%rbp)	 # D.135629, D.135629
+	movq	%r9, 40(%rbp)	 # D.135637, D.135637
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:289:     { return std::uninitialized_copy(__first, __last, __result); }
 	.loc 14 289 37
 	movq	32(%rbp), %rdx	 # __result, tmp89
@@ -5961,7 +5989,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8894:
+.LFE8895:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_,"x"
 	.linkonce discard
@@ -5970,7 +5998,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6
 	.def	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_
 _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_:
-.LFB8895:
+.LFB8896:
 	.loc 13 140 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -5991,7 +6019,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8895:
+.LFE8896:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPP14T100FolderInfoEvT_S3_,"x"
 	.linkonce discard
@@ -5999,7 +6027,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE7destroyIS2_EEvPT_:
 	.def	_ZSt8_DestroyIPP14T100FolderInfoEvT_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPP14T100FolderInfoEvT_S3_
 _ZSt8_DestroyIPP14T100FolderInfoEvT_S3_:
-.LFB8896:
+.LFB8897:
 	.loc 9 127 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6029,7 +6057,7 @@ _ZSt8_DestroyIPP14T100FolderInfoEvT_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8896:
+.LFE8897:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y,"x"
 	.linkonce discard
@@ -6037,7 +6065,7 @@ _ZSt8_DestroyIPP14T100FolderInfoEvT_S3_:
 	.def	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y
 _ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y:
-.LFB8897:
+.LFB8898:
 	.loc 10 461 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6070,7 +6098,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8897:
+.LFE8898:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv,"x"
 	.linkonce discard
@@ -6079,7 +6107,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE10deallocateERS2_PS1_y:
 	.def	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv
 _ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv:
-.LFB8898:
+.LFB8899:
 	.loc 6 810 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6110,7 +6138,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8898:
+.LFE8899:
 	.seh_endproc
 	.section	.text$_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv,"x"
 	.linkonce discard
@@ -6119,7 +6147,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE8max_sizeEv:
 	.def	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv
 _ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv:
-.LFB8899:
+.LFB8900:
 	.loc 6 805 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6151,7 +6179,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8899:
+.LFE8900:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y,"x"
 	.linkonce discard
@@ -6159,7 +6187,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv:
 	.def	_ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y
 _ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y:
-.LFB8900:
+.LFB8901:
 	.loc 10 435 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6189,7 +6217,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8900:
+.LFE8901:
 	.seh_endproc
 	.section	.text$_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_,"x"
 	.linkonce discard
@@ -6197,7 +6225,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE8allocateERS2_y:
 	.def	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_
 _ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_:
-.LFB8901:
+.LFB8902:
 	.loc 7 1215 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6217,7 +6245,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0
 	movq	16(%rbp), %rdx	 # __i,
 	movq	%rax, %rcx	 # tmp89,
 	call	_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_	 #
-	movq	-8(%rbp), %rax	 # D.136617, D.137574
+	movq	-8(%rbp), %rax	 # D.136625, D.137582
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:1216:     { return _ReturnType(__i); }
 	.loc 7 1216 32
 	addq	$48, %rsp	 #,
@@ -6226,7 +6254,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8901:
+.LFE8902:
 	.seh_endproc
 	.section	.text$_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E,"x"
 	.linkonce discard
@@ -6234,7 +6262,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0
 	.def	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E
 _ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E:
-.LFB8902:
+.LFB8903:
 	.loc 14 287 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6250,7 +6278,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
 	movq	%r8, 32(%rbp)	 # __result, __result
-	movq	%r9, 40(%rbp)	 # D.135891, D.135891
+	movq	%r9, 40(%rbp)	 # D.135899, D.135899
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:289:     { return std::uninitialized_copy(__first, __last, __result); }
 	.loc 14 289 37
 	movq	32(%rbp), %rdx	 # __result, tmp89
@@ -6267,7 +6295,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8902:
+.LFE8903:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_,"x"
 	.linkonce discard
@@ -6276,7 +6304,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S
 	.def	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_
 _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_:
-.LFB8903:
+.LFB8904:
 	.loc 13 140 2
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6297,7 +6325,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8903:
+.LFE8904:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyIPP12T100FileInfoEvT_S3_,"x"
 	.linkonce discard
@@ -6305,7 +6333,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE7destroyIS2_EEvPT_:
 	.def	_ZSt8_DestroyIPP12T100FileInfoEvT_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyIPP12T100FileInfoEvT_S3_
 _ZSt8_DestroyIPP12T100FileInfoEvT_S3_:
-.LFB8904:
+.LFB8905:
 	.loc 9 127 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6335,7 +6363,7 @@ _ZSt8_DestroyIPP12T100FileInfoEvT_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8904:
+.LFE8905:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y,"x"
 	.linkonce discard
@@ -6343,7 +6371,7 @@ _ZSt8_DestroyIPP12T100FileInfoEvT_S3_:
 	.def	_ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y
 _ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y:
-.LFB8905:
+.LFB8906:
 	.loc 10 461 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6376,7 +6404,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8905:
+.LFE8906:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev,"x"
 	.linkonce discard
@@ -6385,7 +6413,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE10deallocateERS2_PS1_y:
 	.def	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev
 _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev:
-.LFB8946:
+.LFB8947:
 	.loc 13 79 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6405,7 +6433,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8946:
+.LFE8947:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE10deallocateEPS6_y,"x"
 	.linkonce discard
@@ -6414,7 +6442,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.def	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE10deallocateEPS6_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE10deallocateEPS6_y
 _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEE10deallocateEPS6_y:
-.LFB8948:
+.LFB8949:
 	.loc 13 116 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6429,7 +6457,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __p, __p
-	movq	%r8, 32(%rbp)	 # D.128352, D.128352
+	movq	%r8, 32(%rbp)	 # D.128360, D.128360
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	.loc 13 125 19
 	movq	24(%rbp), %rax	 # __p, tmp87
@@ -6444,7 +6472,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8948:
+.LFE8949:
 	.seh_endproc
 	.section	.text$_ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_,"x"
 	.linkonce discard
@@ -6452,7 +6480,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.def	_ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_
 _ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_:
-.LFB8949:
+.LFB8950:
 	.loc 9 97 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6479,7 +6507,7 @@ _ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8949:
+.LFE8950:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_,"x"
 	.linkonce discard
@@ -6487,7 +6515,7 @@ _ZSt8_DestroyINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEvPT_:
 	.def	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_
 _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_:
-.LFB8950:
+.LFB8951:
 	.loc 10 495 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6513,7 +6541,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8950:
+.LFE8951:
 	.seh_endproc
 	.section	.text$_ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv,"x"
 	.linkonce discard
@@ -6522,7 +6550,7 @@ _ZNSt16allocator_traitsISaIP14T100FolderInfoEE8max_sizeERKS2_:
 	.def	_ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv
 _ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
-.LFB8951:
+.LFB8952:
 	.loc 6 241 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6544,7 +6572,7 @@ _ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8951:
+.LFE8952:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv,"x"
 	.linkonce discard
@@ -6553,7 +6581,7 @@ _ZNKSt12_Vector_baseIP14T100FolderInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.def	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv
 _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv:
-.LFB8952:
+.LFB8953:
 	.loc 13 99 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6578,11 +6606,11 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 13 101 2
 	testb	%al, %al	 # retval.22_7
-	je	.L284	 #,
+	je	.L285	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:102: 	  std::__throw_bad_alloc();
 	.loc 13 102 26
 	call	_ZSt17__throw_bad_allocv	 #
-.L284:
+.L285:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:111: 	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
 	.loc 13 111 41
 	movq	24(%rbp), %rax	 # __n, tmp92
@@ -6597,7 +6625,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8952:
+.LFE8953:
 	.seh_endproc
 	.section	.text$_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_,"x"
 	.linkonce discard
@@ -6606,7 +6634,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE8allocateEyPKv:
 	.def	_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_
 _ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_:
-.LFB8955:
+.LFB8956:
 	.loc 7 1030 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6634,7 +6662,7 @@ _ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8955:
+.LFE8956:
 	.seh_endproc
 	.section	.text$_ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_,"x"
 	.linkonce discard
@@ -6642,7 +6670,7 @@ _ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_:
 	.def	_ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_
 _ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
-.LFB8956:
+.LFB8957:
 	.loc 14 115 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6677,7 +6705,7 @@ _ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8956:
+.LFE8957:
 	.seh_endproc
 	.section	.text$_ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_,"x"
 	.linkonce discard
@@ -6685,7 +6713,7 @@ _ZSt18uninitialized_copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
 	.def	_ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_
 _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
-.LFB8957:
+.LFB8958:
 	.loc 9 117 9
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6696,8 +6724,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.136610, D.136610
-	movq	%rdx, 24(%rbp)	 # D.136611, D.136611
+	movq	%rcx, 16(%rbp)	 # D.136618, D.136618
+	movq	%rdx, 24(%rbp)	 # D.136619, D.136619
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 9 117 57
 	nop	
@@ -6706,7 +6734,7 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8957:
+.LFE8958:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y,"x"
 	.linkonce discard
@@ -6715,7 +6743,7 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
 	.def	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y
 _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y:
-.LFB8958:
+.LFB8959:
 	.loc 13 116 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6745,7 +6773,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8958:
+.LFE8959:
 	.seh_endproc
 	.section	.text$_ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_,"x"
 	.linkonce discard
@@ -6753,7 +6781,7 @@ _ZN9__gnu_cxx13new_allocatorIP14T100FolderInfoE10deallocateEPS2_y:
 	.def	_ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_
 _ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_:
-.LFB8959:
+.LFB8960:
 	.loc 10 495 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6779,7 +6807,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8959:
+.LFE8960:
 	.seh_endproc
 	.section	.text$_ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv,"x"
 	.linkonce discard
@@ -6788,7 +6816,7 @@ _ZNSt16allocator_traitsISaIP12T100FileInfoEE8max_sizeERKS2_:
 	.def	_ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv
 _ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
-.LFB8960:
+.LFB8961:
 	.loc 6 241 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6810,7 +6838,7 @@ _ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8960:
+.LFE8961:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv,"x"
 	.linkonce discard
@@ -6819,7 +6847,7 @@ _ZNKSt12_Vector_baseIP12T100FileInfoSaIS1_EE19_M_get_Tp_allocatorEv:
 	.def	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv
 _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv:
-.LFB8961:
+.LFB8962:
 	.loc 13 99 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6844,11 +6872,11 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 13 101 2
 	testb	%al, %al	 # retval.37_7
-	je	.L296	 #,
+	je	.L297	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:102: 	  std::__throw_bad_alloc();
 	.loc 13 102 26
 	call	_ZSt17__throw_bad_allocv	 #
-.L296:
+.L297:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:111: 	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
 	.loc 13 111 41
 	movq	24(%rbp), %rax	 # __n, tmp92
@@ -6863,7 +6891,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8961:
+.LFE8962:
 	.seh_endproc
 	.section	.text$_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_,"x"
 	.linkonce discard
@@ -6872,7 +6900,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE8allocateEyPKv:
 	.def	_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_
 _ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_:
-.LFB8964:
+.LFB8965:
 	.loc 7 1030 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6900,7 +6928,7 @@ _ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8964:
+.LFE8965:
 	.seh_endproc
 	.section	.text$_ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_,"x"
 	.linkonce discard
@@ -6908,7 +6936,7 @@ _ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_:
 	.def	_ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_
 _ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
-.LFB8965:
+.LFB8966:
 	.loc 14 115 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6943,7 +6971,7 @@ _ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8965:
+.LFE8966:
 	.seh_endproc
 	.section	.text$_ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_,"x"
 	.linkonce discard
@@ -6951,7 +6979,7 @@ _ZSt18uninitialized_copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
 	.def	_ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_
 _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
-.LFB8966:
+.LFB8967:
 	.loc 9 117 9
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -6962,8 +6990,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.136708, D.136708
-	movq	%rdx, 24(%rbp)	 # D.136709, D.136709
+	movq	%rcx, 16(%rbp)	 # D.136716, D.136716
+	movq	%rdx, 24(%rbp)	 # D.136717, D.136717
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 9 117 57
 	nop	
@@ -6972,7 +7000,7 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8966:
+.LFE8967:
 	.seh_endproc
 	.section	.text$_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y,"x"
 	.linkonce discard
@@ -6981,7 +7009,7 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
 	.def	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y
 _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y:
-.LFB8967:
+.LFB8968:
 	.loc 13 116 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7011,7 +7039,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8967:
+.LFE8968:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv,"x"
 	.linkonce discard
@@ -7020,7 +7048,7 @@ _ZN9__gnu_cxx13new_allocatorIP12T100FileInfoE10deallocateEPS2_y:
 	.def	_ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv
 _ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv:
-.LFB8991:
+.LFB8992:
 	.loc 13 129 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7042,7 +7070,7 @@ _ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8991:
+.LFE8992:
 	.seh_endproc
 	.section	.text$_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100FolderInfoES5_EET0_T_S8_S7_,"x"
 	.linkonce discard
@@ -7050,7 +7078,7 @@ _ZNK9__gnu_cxx13new_allocatorIP14T100FolderInfoE8max_sizeEv:
 	.def	_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100FolderInfoES5_EET0_T_S8_S7_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100FolderInfoES5_EET0_T_S8_S7_
 _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100FolderInfoES5_EET0_T_S8_S7_:
-.LFB8992:
+.LFB8993:
 	.loc 14 99 9
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7082,7 +7110,7 @@ _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100Folde
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8992:
+.LFE8993:
 	.seh_endproc
 	.section	.text$_ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv,"x"
 	.linkonce discard
@@ -7091,7 +7119,7 @@ _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP14T100Folde
 	.def	_ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv
 _ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv:
-.LFB8993:
+.LFB8994:
 	.loc 13 129 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7113,7 +7141,7 @@ _ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8993:
+.LFE8994:
 	.seh_endproc
 	.section	.text$_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileInfoES5_EET0_T_S8_S7_,"x"
 	.linkonce discard
@@ -7121,7 +7149,7 @@ _ZNK9__gnu_cxx13new_allocatorIP12T100FileInfoE8max_sizeEv:
 	.def	_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileInfoES5_EET0_T_S8_S7_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileInfoES5_EET0_T_S8_S7_
 _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileInfoES5_EET0_T_S8_S7_:
-.LFB8994:
+.LFB8995:
 	.loc 14 99 9
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7153,7 +7181,7 @@ _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileI
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE8994:
+.LFE8995:
 	.seh_endproc
 	.section	.text$_ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_,"x"
 	.linkonce discard
@@ -7161,7 +7189,7 @@ _ZNSt20__uninitialized_copyILb1EE13__uninit_copyISt13move_iteratorIPP12T100FileI
 	.def	_ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_
 _ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
-.LFB9002:
+.LFB9003:
 	.loc 3 446 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7205,7 +7233,7 @@ _ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE9002:
+.LFE9003:
 	.seh_endproc
 	.section	.text$_ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_,"x"
 	.linkonce discard
@@ -7213,7 +7241,7 @@ _ZSt4copyISt13move_iteratorIPP14T100FolderInfoES3_ET0_T_S6_S5_:
 	.def	_ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_
 _ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
-.LFB9003:
+.LFB9004:
 	.loc 3 446 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7257,7 +7285,7 @@ _ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE9003:
+.LFE9004:
 	.seh_endproc
 	.section	.text$_ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E,"x"
 	.linkonce discard
@@ -7265,7 +7293,7 @@ _ZSt4copyISt13move_iteratorIPP12T100FileInfoES3_ET0_T_S6_S5_:
 	.def	_ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E
 _ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E:
-.LFB9006:
+.LFB9007:
 	.loc 7 1235 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7293,7 +7321,7 @@ _ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9006:
+.LFE9007:
 	.seh_endproc
 	.section	.text$_ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_,"x"
 	.linkonce discard
@@ -7301,7 +7329,7 @@ _ZSt12__miter_baseIPP14T100FolderInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_
 	.def	_ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_
 _ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
-.LFB9007:
+.LFB9008:
 	.loc 3 420 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7353,7 +7381,7 @@ _ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
 	.cfi_def_cfa 7, 24
 	ret	
 	.cfi_endproc
-.LFE9007:
+.LFE9008:
 	.seh_endproc
 	.section	.text$_ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E,"x"
 	.linkonce discard
@@ -7361,7 +7389,7 @@ _ZSt14__copy_move_a2ILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
 	.def	_ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E
 _ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_iteratorIT_E:
-.LFB9008:
+.LFB9009:
 	.loc 7 1235 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7389,7 +7417,7 @@ _ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_it
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9008:
+.LFE9009:
 	.seh_endproc
 	.section	.text$_ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_,"x"
 	.linkonce discard
@@ -7397,7 +7425,7 @@ _ZSt12__miter_baseIPP12T100FileInfoEDTcl12__miter_basecldtfp_4baseEEESt13move_it
 	.def	_ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_
 _ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
-.LFB9009:
+.LFB9010:
 	.loc 3 420 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7449,7 +7477,7 @@ _ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
 	.cfi_def_cfa 7, 24
 	ret	
 	.cfi_endproc
-.LFE9009:
+.LFE9010:
 	.seh_endproc
 	.section	.text$_ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv,"x"
 	.linkonce discard
@@ -7458,7 +7486,7 @@ _ZSt14__copy_move_a2ILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
 	.def	_ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv
 _ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv:
-.LFB9010:
+.LFB9011:
 	.loc 7 1039 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7481,7 +7509,7 @@ _ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9010:
+.LFE9011:
 	.seh_endproc
 	.section	.text$_ZSt12__miter_baseIPP14T100FolderInfoET_S3_,"x"
 	.linkonce discard
@@ -7489,7 +7517,7 @@ _ZNKSt13move_iteratorIPP14T100FolderInfoE4baseEv:
 	.def	_ZSt12__miter_baseIPP14T100FolderInfoET_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__miter_baseIPP14T100FolderInfoET_S3_
 _ZSt12__miter_baseIPP14T100FolderInfoET_S3_:
-.LFB9011:
+.LFB9012:
 	.file 15 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/cpp_type_traits.h"
 	.loc 15 408 5
 	.cfi_startproc
@@ -7512,7 +7540,7 @@ _ZSt12__miter_baseIPP14T100FolderInfoET_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9011:
+.LFE9012:
 	.seh_endproc
 	.section	.text$_ZSt12__niter_baseIPP14T100FolderInfoET_S3_,"x"
 	.linkonce discard
@@ -7520,7 +7548,7 @@ _ZSt12__miter_baseIPP14T100FolderInfoET_S3_:
 	.def	_ZSt12__niter_baseIPP14T100FolderInfoET_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__niter_baseIPP14T100FolderInfoET_S3_
 _ZSt12__niter_baseIPP14T100FolderInfoET_S3_:
-.LFB9012:
+.LFB9013:
 	.loc 3 277 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7542,7 +7570,7 @@ _ZSt12__niter_baseIPP14T100FolderInfoET_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9012:
+.LFE9013:
 	.seh_endproc
 	.section	.text$_ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_,"x"
 	.linkonce discard
@@ -7550,7 +7578,7 @@ _ZSt12__niter_baseIPP14T100FolderInfoET_S3_:
 	.def	_ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_
 _ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
-.LFB9013:
+.LFB9014:
 	.loc 3 375 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7585,7 +7613,7 @@ _ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9013:
+.LFE9014:
 	.seh_endproc
 	.section	.text$_ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv,"x"
 	.linkonce discard
@@ -7594,7 +7622,7 @@ _ZSt13__copy_move_aILb1EPP14T100FolderInfoS2_ET1_T0_S4_S3_:
 	.def	_ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv
 _ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv:
-.LFB9014:
+.LFB9015:
 	.loc 7 1039 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7617,7 +7645,7 @@ _ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9014:
+.LFE9015:
 	.seh_endproc
 	.section	.text$_ZSt12__miter_baseIPP12T100FileInfoET_S3_,"x"
 	.linkonce discard
@@ -7625,7 +7653,7 @@ _ZNKSt13move_iteratorIPP12T100FileInfoE4baseEv:
 	.def	_ZSt12__miter_baseIPP12T100FileInfoET_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__miter_baseIPP12T100FileInfoET_S3_
 _ZSt12__miter_baseIPP12T100FileInfoET_S3_:
-.LFB9015:
+.LFB9016:
 	.loc 15 408 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7647,7 +7675,7 @@ _ZSt12__miter_baseIPP12T100FileInfoET_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9015:
+.LFE9016:
 	.seh_endproc
 	.section	.text$_ZSt12__niter_baseIPP12T100FileInfoET_S3_,"x"
 	.linkonce discard
@@ -7655,7 +7683,7 @@ _ZSt12__miter_baseIPP12T100FileInfoET_S3_:
 	.def	_ZSt12__niter_baseIPP12T100FileInfoET_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt12__niter_baseIPP12T100FileInfoET_S3_
 _ZSt12__niter_baseIPP12T100FileInfoET_S3_:
-.LFB9016:
+.LFB9017:
 	.loc 3 277 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7677,7 +7705,7 @@ _ZSt12__niter_baseIPP12T100FileInfoET_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9016:
+.LFE9017:
 	.seh_endproc
 	.section	.text$_ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_,"x"
 	.linkonce discard
@@ -7685,7 +7713,7 @@ _ZSt12__niter_baseIPP12T100FileInfoET_S3_:
 	.def	_ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_
 _ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
-.LFB9017:
+.LFB9018:
 	.loc 3 375 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -7720,7 +7748,7 @@ _ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9017:
+.LFE9018:
 	.seh_endproc
 	.section	.text$_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100FolderInfoEEPT_PKS5_S8_S6_,"x"
 	.linkonce discard
@@ -7728,68 +7756,6 @@ _ZSt13__copy_move_aILb1EPP12T100FileInfoS2_ET1_T0_S4_S3_:
 	.def	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100FolderInfoEEPT_PKS5_S8_S6_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100FolderInfoEEPT_PKS5_S8_S6_
 _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP14T100FolderInfoEEPT_PKS5_S8_S6_:
-.LFB9018:
-	.loc 3 357 2
-	.cfi_startproc
-	pushq	%rbp	 #
-	.seh_pushreg	%rbp
-	.cfi_def_cfa_offset 16
-	.cfi_offset 6, -16
-	movq	%rsp, %rbp	 #,
-	.seh_setframe	%rbp, 0
-	.cfi_def_cfa_register 6
-	subq	$48, %rsp	 #,
-	.seh_stackalloc	48
-	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # __first, __first
-	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # __result, __result
- # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:366: 	  const ptrdiff_t _Num = __last - __first;
-	.loc 3 366 34
-	movq	24(%rbp), %rax	 # __last, tmp94
-	subq	16(%rbp), %rax	 # __first, _1
- # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:366: 	  const ptrdiff_t _Num = __last - __first;
-	.loc 3 366 20
-	sarq	$3, %rax	 #, tmp95
-	movq	%rax, -8(%rbp)	 # tmp95, _Num
- # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:367: 	  if (_Num)
-	.loc 3 367 4
-	cmpq	$0, -8(%rbp)	 #, _Num
-	je	.L340	 #,
- # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:368: 	    __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
-	.loc 3 368 23
-	movq	-8(%rbp), %rax	 # _Num, _Num.23_2
-	leaq	0(,%rax,8), %rdx	 #, _3
-	movq	32(%rbp), %rax	 # __result, tmp96
-	movq	%rdx, %r8	 # _3,
-	movq	16(%rbp), %rdx	 # __first,
-	movq	%rax, %rcx	 # tmp96,
-	call	memmove	 #
-.L340:
- # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
-	.loc 3 369 20
-	movq	-8(%rbp), %rax	 # _Num, _Num.24_4
-	leaq	0(,%rax,8), %rdx	 #, _5
- # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
-	.loc 3 369 22
-	movq	32(%rbp), %rax	 # __result, tmp97
-	addq	%rdx, %rax	 # _5, _13
- # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:370: 	}
-	.loc 3 370 2
-	addq	$48, %rsp	 #,
-	popq	%rbp	 #
-	.cfi_restore 6
-	.cfi_def_cfa 7, 8
-	ret	
-	.cfi_endproc
-.LFE9018:
-	.seh_endproc
-	.section	.text$_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_,"x"
-	.linkonce discard
-	.globl	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_
-	.def	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_;	.scl	2;	.type	32;	.endef
-	.seh_proc	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_
-_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_:
 .LFB9019:
 	.loc 3 357 2
 	.cfi_startproc
@@ -7817,7 +7783,69 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileI
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:367: 	  if (_Num)
 	.loc 3 367 4
 	cmpq	$0, -8(%rbp)	 #, _Num
-	je	.L343	 #,
+	je	.L341	 #,
+ # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:368: 	    __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
+	.loc 3 368 23
+	movq	-8(%rbp), %rax	 # _Num, _Num.23_2
+	leaq	0(,%rax,8), %rdx	 #, _3
+	movq	32(%rbp), %rax	 # __result, tmp96
+	movq	%rdx, %r8	 # _3,
+	movq	16(%rbp), %rdx	 # __first,
+	movq	%rax, %rcx	 # tmp96,
+	call	memmove	 #
+.L341:
+ # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
+	.loc 3 369 20
+	movq	-8(%rbp), %rax	 # _Num, _Num.24_4
+	leaq	0(,%rax,8), %rdx	 #, _5
+ # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
+	.loc 3 369 22
+	movq	32(%rbp), %rax	 # __result, tmp97
+	addq	%rdx, %rax	 # _5, _13
+ # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:370: 	}
+	.loc 3 370 2
+	addq	$48, %rsp	 #,
+	popq	%rbp	 #
+	.cfi_restore 6
+	.cfi_def_cfa 7, 8
+	ret	
+	.cfi_endproc
+.LFE9019:
+	.seh_endproc
+	.section	.text$_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_,"x"
+	.linkonce discard
+	.globl	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_
+	.def	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_;	.scl	2;	.type	32;	.endef
+	.seh_proc	_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_
+_ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileInfoEEPT_PKS5_S8_S6_:
+.LFB9020:
+	.loc 3 357 2
+	.cfi_startproc
+	pushq	%rbp	 #
+	.seh_pushreg	%rbp
+	.cfi_def_cfa_offset 16
+	.cfi_offset 6, -16
+	movq	%rsp, %rbp	 #,
+	.seh_setframe	%rbp, 0
+	.cfi_def_cfa_register 6
+	subq	$48, %rsp	 #,
+	.seh_stackalloc	48
+	.seh_endprologue
+	movq	%rcx, 16(%rbp)	 # __first, __first
+	movq	%rdx, 24(%rbp)	 # __last, __last
+	movq	%r8, 32(%rbp)	 # __result, __result
+ # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:366: 	  const ptrdiff_t _Num = __last - __first;
+	.loc 3 366 34
+	movq	24(%rbp), %rax	 # __last, tmp94
+	subq	16(%rbp), %rax	 # __first, _1
+ # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:366: 	  const ptrdiff_t _Num = __last - __first;
+	.loc 3 366 20
+	sarq	$3, %rax	 #, tmp95
+	movq	%rax, -8(%rbp)	 # tmp95, _Num
+ # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:367: 	  if (_Num)
+	.loc 3 367 4
+	cmpq	$0, -8(%rbp)	 #, _Num
+	je	.L344	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:368: 	    __builtin_memmove(__result, __first, sizeof(_Tp) * _Num);
 	.loc 3 368 23
 	movq	-8(%rbp), %rax	 # _Num, _Num.38_2
@@ -7827,7 +7855,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileI
 	movq	16(%rbp), %rdx	 # __first,
 	movq	%rax, %rcx	 # tmp96,
 	call	memmove	 #
-.L343:
+.L344:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_algobase.h:369: 	  return __result + _Num;
 	.loc 3 369 20
 	movq	-8(%rbp), %rax	 # _Num, _Num.39_4
@@ -7844,7 +7872,7 @@ _ZNSt11__copy_moveILb1ELb1ESt26random_access_iterator_tagE8__copy_mIP12T100FileI
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE9019:
+.LFE9020:
 	.seh_endproc
 	.globl	_ZTV16T100ProjectLogic
 	.section	.rdata$_ZTV16T100ProjectLogic,"dr"
@@ -7931,7 +7959,7 @@ _ZTS16T100ProjectLogic:
 	.file 71 "<built-in>"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x35b6f
+	.long	0x35c1f
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -7954,7 +7982,7 @@ _ZTS16T100ProjectLogic:
 	.word	0x104
 	.byte	0x41
 	.long	0x900a
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "basic_string<char, std::char_traits<char>, std::allocator<char> >\0"
 	.byte	0x20
 	.byte	0x5
@@ -10719,7 +10747,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x8
 	.long	0x14f
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> >\0"
 	.byte	0x20
 	.byte	0x5
@@ -14126,7 +14154,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x57
 	.byte	0x2d
 	.long	0x9133
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "allocator<char>\0"
 	.byte	0x1
 	.byte	0xc
@@ -14179,7 +14207,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x8
 	.long	0x9a51
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "allocator<wchar_t>\0"
 	.byte	0x1
 	.byte	0xc
@@ -14276,7 +14304,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x5f
 	.byte	0xc
 	.long	0x9e7c
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "__uninit_copy<std::move_iterator<T100FileInfo**>, T100FileInfo**>\0"
 	.byte	0xe
 	.byte	0x63
@@ -14297,7 +14325,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1ecc1
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "__uninit_copy<std::move_iterator<T100FolderInfo**>, T100FolderInfo**>\0"
 	.byte	0xe
 	.byte	0x63
@@ -15710,7 +15738,7 @@ _ZTS16T100ProjectLogic:
 	.secrel32	.LASF83
 	.long	0x9a51
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "initializer_list<char>\0"
 	.byte	0x10
 	.byte	0x1d
@@ -15947,7 +15975,7 @@ _ZTS16T100ProjectLogic:
 	.secrel32	.LASF83
 	.long	0x9aec
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "initializer_list<wchar_t>\0"
 	.byte	0x10
 	.byte	0x1d
@@ -16190,7 +16218,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x8
 	.long	0xb61d
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "allocator<T100FileInfo*>\0"
 	.byte	0x1
 	.byte	0xc
@@ -17886,7 +17914,7 @@ _ZTS16T100ProjectLogic:
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<T100FileInfo**, std::vector<T100FileInfo*, std::allocator<T100FileInfo*> > > >\0"
 	.uleb128 0x1b
 	.ascii "reverse_iterator<__gnu_cxx::__normal_iterator<T100FileInfo* const*, std::vector<T100FileInfo*, std::allocator<T100FileInfo*> > > >\0"
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "allocator<T100FolderInfo*>\0"
 	.byte	0x1
 	.byte	0xc
@@ -19701,7 +19729,7 @@ _ZTS16T100ProjectLogic:
 	.word	0x42a
 	.byte	0xb
 	.long	0x2ef4d
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "allocator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
 	.byte	0x1
 	.byte	0xc
@@ -22367,7 +22395,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1edb7
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "__distance<wchar_t*>\0"
 	.byte	0x24
 	.byte	0x62
@@ -22385,7 +22413,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x9482
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "uninitialized_copy<std::move_iterator<T100FileInfo**>, T100FileInfo**>\0"
 	.byte	0xe
 	.byte	0x73
@@ -22406,7 +22434,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1ecc1
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "uninitialized_copy<std::move_iterator<T100FolderInfo**>, T100FolderInfo**>\0"
 	.byte	0xe
 	.byte	0x73
@@ -22440,7 +22468,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1ec4d
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "distance<wchar_t*>\0"
 	.byte	0x24
 	.byte	0x8a
@@ -22456,7 +22484,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1ce7b
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "__iterator_category<wchar_t*>\0"
 	.byte	0x14
 	.byte	0xcd
@@ -22586,7 +22614,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1edb7
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "__addressof<std::__cxx11::basic_string<wchar_t> >\0"
 	.byte	0x8
 	.byte	0x2f
@@ -22707,7 +22735,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1ec4d
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "forward<T100FileInfo* const&>\0"
 	.byte	0x8
 	.byte	0x4a
@@ -22719,9 +22747,9 @@ _ZTS16T100ProjectLogic:
 	.ascii "_Tp\0"
 	.long	0x1ecfc
 	.uleb128 0x1
-	.long	0x34500
+	.long	0x34575
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "forward<T100FolderInfo* const&>\0"
 	.byte	0x8
 	.byte	0x4a
@@ -22733,7 +22761,7 @@ _ZTS16T100ProjectLogic:
 	.ascii "_Tp\0"
 	.long	0x1edf4
 	.uleb128 0x1
-	.long	0x346a5
+	.long	0x3471a
 	.byte	0
 	.uleb128 0x53
 	.ascii "_Destroy<std::__cxx11::basic_string<wchar_t>*, std::__cxx11::basic_string<wchar_t> >\0"
@@ -22755,13 +22783,13 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x31c6f
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "move<std::__cxx11::basic_string<wchar_t>&>\0"
 	.byte	0x8
 	.byte	0x63
 	.byte	0x5
 	.ascii "_ZSt4moveIRNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEONSt16remove_referenceIT_E4typeEOS8_\0"
-	.long	0x34a38
+	.long	0x34aad
 	.long	0x161e9
 	.uleb128 0xc
 	.ascii "_Tp\0"
@@ -22769,13 +22797,13 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1ec7c
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "move<std::allocator<wchar_t>&>\0"
 	.byte	0x8
 	.byte	0x63
 	.byte	0x5
 	.ascii "_ZSt4moveIRSaIwEEONSt16remove_referenceIT_E4typeEOS3_\0"
-	.long	0x34c54
+	.long	0x34cc9
 	.long	0x16259
 	.uleb128 0xc
 	.ascii "_Tp\0"
@@ -22956,7 +22984,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x2d
 	.byte	0xe
 	.long	0x9a2e
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "new_allocator<char>\0"
 	.byte	0x1
 	.byte	0xd
@@ -23120,7 +23148,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x8
 	.long	0x16644
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "new_allocator<wchar_t>\0"
 	.byte	0x1
 	.byte	0xd
@@ -23404,7 +23432,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0xe8
 	.byte	0xb
 	.long	0x1e5c7
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "div\0"
 	.byte	0x1b
 	.byte	0xd5
@@ -24805,7 +24833,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x8
 	.long	0x18b1e
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "new_allocator<T100FileInfo*>\0"
 	.byte	0x1
 	.byte	0xd
@@ -25389,7 +25417,7 @@ _ZTS16T100ProjectLogic:
 	.long	0x19a57
 	.uleb128 0x1b
 	.ascii "__normal_iterator<T100FileInfo* const*, std::vector<T100FileInfo*, std::allocator<T100FileInfo*> > >\0"
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "new_allocator<T100FolderInfo*>\0"
 	.byte	0x1
 	.byte	0xd
@@ -26078,7 +26106,7 @@ _ZTS16T100ProjectLogic:
 	.secrel32	.LASF172
 	.long	0x1c9ef
 	.byte	0
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "new_allocator<std::__cxx11::basic_string<wchar_t, std::char_traits<wchar_t>, std::allocator<wchar_t> > >\0"
 	.byte	0x1
 	.byte	0xd
@@ -26634,7 +26662,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x13
 	.long	0x1ca51
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "__is_null_pointer<wchar_t>\0"
 	.byte	0x28
 	.byte	0x98
@@ -26663,9 +26691,9 @@ _ZTS16T100ProjectLogic:
 	.secrel32	.LASF182
 	.long	0xc261
 	.uleb128 0x1
-	.long	0x33b49
+	.long	0x33bbe
 	.uleb128 0x1
-	.long	0x33b49
+	.long	0x33bbe
 	.byte	0
 	.uleb128 0x17
 	.ascii "operator-<T100FolderInfo**, std::vector<T100FolderInfo*> >\0"
@@ -26682,9 +26710,9 @@ _ZTS16T100ProjectLogic:
 	.secrel32	.LASF182
 	.long	0xe93a
 	.uleb128 0x1
-	.long	0x33f2f
+	.long	0x33fa4
 	.uleb128 0x1
-	.long	0x33f2f
+	.long	0x33fa4
 	.byte	0
 	.uleb128 0x90
 	.ascii "operator!=<std::__cxx11::basic_string<wchar_t>*, std::vector<std::__cxx11::basic_string<wchar_t> > >\0"
@@ -26700,9 +26728,9 @@ _ZTS16T100ProjectLogic:
 	.secrel32	.LASF182
 	.long	0x11620
 	.uleb128 0x1
-	.long	0x34f0c
+	.long	0x34f81
 	.uleb128 0x1
-	.long	0x34f0c
+	.long	0x34f81
 	.byte	0
 	.byte	0
 	.uleb128 0x32
@@ -39227,7 +39255,7 @@ _ZTS16T100ProjectLogic:
 	.long	0x28b26
 	.uleb128 0x8
 	.long	0x28b06
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "wxScopedCharTypeBuffer<char>\0"
 	.byte	0x8
 	.byte	0x3b
@@ -39557,7 +39585,7 @@ _ZTS16T100ProjectLogic:
 	.long	0x2918d
 	.uleb128 0x8
 	.long	0x2916c
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "wxScopedCharTypeBuffer<wchar_t>\0"
 	.byte	0x8
 	.byte	0x3b
@@ -39900,7 +39928,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x28ed3
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "wxCharTypeBuffer<char>\0"
 	.byte	0x8
 	.byte	0x3b
@@ -40584,7 +40612,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x2953d
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "wxCharTypeBuffer<wchar_t>\0"
 	.byte	0x8
 	.byte	0x3b
@@ -42751,7 +42779,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1ce86
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "From8bit\0"
 	.byte	0x3e
 	.byte	0x90
@@ -42762,7 +42790,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1caea
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "To8bit\0"
 	.byte	0x3e
 	.byte	0x9c
@@ -42773,7 +42801,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x2ac33
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "FromHi8bit\0"
 	.byte	0x3e
 	.byte	0xa9
@@ -42784,7 +42812,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x1caea
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "ToHi8bit\0"
 	.byte	0x3e
 	.byte	0xaa
@@ -42795,7 +42823,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1
 	.long	0x2ac33
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.ascii "GetAsHi8bit\0"
 	.byte	0x3e
 	.byte	0xab
@@ -45346,7 +45374,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x2e786
-	.uleb128 0x33
+	.uleb128 0x34
 	.ascii "_wxHashTableBase2\0"
 	.byte	0x1
 	.byte	0x42
@@ -48431,10 +48459,10 @@ _ZTS16T100ProjectLogic:
 	.secrel32	.LASF273
 	.byte	0x28
 	.byte	0x46
-	.byte	0xd
+	.byte	0xe
 	.byte	0x7
 	.long	0x31de2
-	.long	0x32350
+	.long	0x323af
 	.uleb128 0xc5
 	.secrel32	.LASF273
 	.ascii "_ZN16T100ProjectLogicC4ERKS_\0"
@@ -48442,13 +48470,13 @@ _ZTS16T100ProjectLogic:
 	.long	0x31e20
 	.long	0x31e2b
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x1
-	.long	0x32360
+	.long	0x323bf
 	.byte	0
 	.uleb128 0xc6
 	.ascii "_vptr.T100ProjectLogic\0"
-	.long	0x32371
+	.long	0x323d0
 	.byte	0
 	.byte	0x1
 	.uleb128 0xf
@@ -48461,7 +48489,7 @@ _ZTS16T100ProjectLogic:
 	.long	0x31e75
 	.long	0x31e7b
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.byte	0
 	.uleb128 0xf
 	.secrel32	.LASF273
@@ -48473,7 +48501,7 @@ _ZTS16T100ProjectLogic:
 	.long	0x31eb7
 	.long	0x31ec2
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x1
 	.long	0x31c1f
 	.byte	0
@@ -48489,7 +48517,7 @@ _ZTS16T100ProjectLogic:
 	.long	0x31f01
 	.long	0x31f0c
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x2
 	.long	0x1ca01
 	.byte	0
@@ -48504,11 +48532,11 @@ _ZTS16T100ProjectLogic:
 	.long	0x31f64
 	.long	0x31f74
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x1
-	.long	0x3238e
+	.long	0x323ed
 	.uleb128 0x1
-	.long	0x323ab
+	.long	0x3240a
 	.byte	0
 	.uleb128 0x2c
 	.ascii "Build\0"
@@ -48521,65 +48549,80 @@ _ZTS16T100ProjectLogic:
 	.long	0x31fbc
 	.long	0x31fc7
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x1
-	.long	0x323ab
+	.long	0x3240a
+	.byte	0
+	.uleb128 0x2c
+	.ascii "CreateModule\0"
+	.byte	0x4
+	.byte	0x82
+	.byte	0xa
+	.ascii "_ZN16T100ProjectLogic12CreateModuleEP14T100ModuleInfo\0"
+	.long	0x1ca51
+	.byte	0x1
+	.long	0x3201b
+	.long	0x32026
+	.uleb128 0x2
+	.long	0x323b4
+	.uleb128 0x1
+	.long	0x32423
 	.byte	0
 	.uleb128 0x2c
 	.ascii "GetProjectInfo\0"
 	.byte	0x4
-	.byte	0x8c
+	.byte	0x8f
 	.byte	0x12
 	.ascii "_ZN16T100ProjectLogic14GetProjectInfoEv\0"
 	.long	0x31c1f
 	.byte	0x1
-	.long	0x3200f
-	.long	0x32015
+	.long	0x3206e
+	.long	0x32074
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.byte	0
 	.uleb128 0x2c
 	.ascii "Check\0"
 	.byte	0x4
-	.byte	0x91
+	.byte	0x94
 	.byte	0xa
 	.ascii "_ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo\0"
 	.long	0x1ca51
 	.byte	0x1
-	.long	0x3205c
-	.long	0x32067
+	.long	0x320bb
+	.long	0x320c6
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x1
-	.long	0x323c4
+	.long	0x32439
 	.byte	0
 	.uleb128 0x2c
 	.ascii "GetFileName\0"
 	.byte	0x4
-	.byte	0xdf
+	.byte	0xe2
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo\0"
 	.long	0x8ff4
 	.byte	0x1
-	.long	0x320c3
-	.long	0x320ce
+	.long	0x32122
+	.long	0x3212d
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x1
-	.long	0x3238e
+	.long	0x323ed
 	.byte	0
 	.uleb128 0x2c
 	.ascii "Open\0"
 	.byte	0x4
-	.byte	0xab
+	.byte	0xae
 	.byte	0xa
 	.ascii "_ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP15T100ProjectInfo\0"
 	.long	0x1ca51
 	.byte	0x1
-	.long	0x32148
-	.long	0x32158
+	.long	0x321a7
+	.long	0x321b7
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x1
 	.long	0x1ec94
 	.uleb128 0x1
@@ -48588,7 +48631,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x59
 	.ascii "m_current\0"
 	.byte	0x46
-	.byte	0x2c
+	.byte	0x2a
 	.byte	0x37
 	.long	0x31c1f
 	.byte	0x8
@@ -48596,32 +48639,32 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x2c
 	.ascii "GetFolderName\0"
 	.byte	0x4
-	.byte	0xe4
+	.byte	0xe7
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic13GetFolderNameB5cxx11ERK16T100WxFolderInfo\0"
 	.long	0x8ff4
 	.byte	0x2
-	.long	0x321cc
-	.long	0x321d7
+	.long	0x3222b
+	.long	0x32236
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x1
-	.long	0x3238e
+	.long	0x323ed
 	.byte	0
 	.uleb128 0x2c
 	.ascii "GetBuildName\0"
 	.byte	0x4
-	.byte	0xe9
+	.byte	0xec
 	.byte	0xd
 	.ascii "_ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo\0"
 	.long	0x8ff4
 	.byte	0x2
-	.long	0x32234
-	.long	0x3223f
+	.long	0x32293
+	.long	0x3229e
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x1
-	.long	0x323ca
+	.long	0x3243f
 	.byte	0
 	.uleb128 0x2c
 	.ascii "Execute\0"
@@ -48631,35 +48674,35 @@ _ZTS16T100ProjectLogic:
 	.ascii "_ZN16T100ProjectLogic7ExecuteERK16T100WxFolderInfoP17T100WorkSpaceInfo\0"
 	.long	0x1ca51
 	.byte	0x2
-	.long	0x3229f
-	.long	0x322af
+	.long	0x322fe
+	.long	0x3230e
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x1
-	.long	0x3238e
+	.long	0x323ed
 	.uleb128 0x1
-	.long	0x323ab
+	.long	0x3240a
 	.byte	0
 	.uleb128 0x59
 	.ascii "m_file\0"
 	.byte	0x46
-	.byte	0x34
+	.byte	0x32
 	.byte	0x37
-	.long	0x323df
+	.long	0x32454
 	.byte	0x10
 	.byte	0x2
 	.uleb128 0x59
 	.ascii "m_folder\0"
 	.byte	0x46
-	.byte	0x35
+	.byte	0x33
 	.byte	0x37
-	.long	0x323f6
+	.long	0x3246b
 	.byte	0x18
 	.byte	0x2
 	.uleb128 0x59
 	.ascii "m_project\0"
 	.byte	0x46
-	.byte	0x36
+	.byte	0x34
 	.byte	0x37
 	.long	0x31c1f
 	.byte	0x20
@@ -48670,10 +48713,10 @@ _ZTS16T100ProjectLogic:
 	.byte	0x1c
 	.byte	0xa
 	.ascii "_ZN16T100ProjectLogic4initEv\0"
-	.long	0x32315
-	.long	0x3231b
+	.long	0x32374
+	.long	0x3237a
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.byte	0
 	.uleb128 0x7b
 	.ascii "uninit\0"
@@ -48681,9 +48724,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0x22
 	.byte	0xa
 	.ascii "_ZN16T100ProjectLogic6uninitEv\0"
-	.long	0x32349
+	.long	0x323a8
 	.uleb128 0x2
-	.long	0x32355
+	.long	0x323b4
 	.byte	0
 	.byte	0
 	.uleb128 0x8
@@ -48692,37 +48735,42 @@ _ZTS16T100ProjectLogic:
 	.byte	0x8
 	.long	0x31de2
 	.uleb128 0x8
-	.long	0x32355
+	.long	0x323b4
 	.uleb128 0x9
 	.byte	0x8
-	.long	0x32350
+	.long	0x323af
 	.uleb128 0x71
 	.long	0x1ca01
-	.long	0x32371
+	.long	0x323d0
 	.uleb128 0x3e
 	.byte	0
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x32377
+	.long	0x323d6
 	.uleb128 0x91
 	.byte	0x8
 	.ascii "__vtbl_ptr_type\0"
-	.long	0x32366
+	.long	0x323c5
 	.uleb128 0x9
 	.byte	0x8
-	.long	0x323a6
+	.long	0x32405
 	.uleb128 0x1b
 	.ascii "T100WxFolderInfo\0"
 	.uleb128 0x8
-	.long	0x32394
+	.long	0x323f3
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x323b1
+	.long	0x32410
 	.uleb128 0x1b
 	.ascii "T100WorkSpaceInfo\0"
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x32394
+	.long	0x32429
+	.uleb128 0x1b
+	.ascii "T100ModuleInfo\0"
+	.uleb128 0x6
+	.byte	0x8
+	.long	0x323f3
 	.uleb128 0x6
 	.byte	0x8
 	.long	0x31c36
@@ -48730,12 +48778,12 @@ _ZTS16T100ProjectLogic:
 	.ascii "T100FileLogic\0"
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x323d0
+	.long	0x32445
 	.uleb128 0x1b
 	.ascii "T100FolderLogic\0"
 	.uleb128 0x6
 	.byte	0x8
-	.long	0x323e5
+	.long	0x3245a
 	.uleb128 0x61
 	.ascii "_ZNSt17integral_constantIbLb0EE5valueE\0"
 	.long	0x904e
@@ -48798,11 +48846,11 @@ _ZTS16T100ProjectLogic:
 	.word	0x7fff
 	.uleb128 0x18
 	.long	0x14bf7
-	.quad	.LFB9019
-	.quad	.LFE9019-.LFB9019
+	.quad	.LFB9020
+	.quad	.LFE9020-.LFB9020
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x327c6
+	.long	0x3283b
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x1eccc
@@ -48845,11 +48893,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x14c99
-	.quad	.LFB9018
-	.quad	.LFE9018-.LFB9018
+	.quad	.LFB9019
+	.quad	.LFE9019-.LFB9019
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3282c
+	.long	0x328a1
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x1edc2
@@ -48892,11 +48940,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x14d3d
-	.quad	.LFB9017
-	.quad	.LFE9017-.LFB9017
+	.quad	.LFB9018
+	.quad	.LFE9018-.LFB9018
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x328a4
+	.long	0x32919
 	.uleb128 0x54
 	.secrel32	.LASF158
 	.long	0x1ca51
@@ -48946,11 +48994,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x4b
 	.long	0x14de3
-	.quad	.LFB9016
-	.quad	.LFE9016-.LFB9016
+	.quad	.LFB9017
+	.quad	.LFE9017-.LFB9017
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x328d9
+	.long	0x3294e
 	.uleb128 0xa
 	.secrel32	.LASF145
 	.long	0x1ecc1
@@ -48966,11 +49014,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x4b
 	.long	0x14e46
-	.quad	.LFB9015
-	.quad	.LFE9015-.LFB9015
+	.quad	.LFB9016
+	.quad	.LFE9016-.LFB9016
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3290e
+	.long	0x32983
 	.uleb128 0xa
 	.secrel32	.LASF145
 	.long	0x1ecc1
@@ -48984,14 +49032,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x147b0
-	.long	0x3292d
-	.quad	.LFB9014
-	.quad	.LFE9014-.LFB9014
+	.long	0x329a2
+	.quad	.LFB9015
+	.quad	.LFE9015-.LFB9015
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3293a
+	.long	0x329af
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31dd7
@@ -49001,11 +49049,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x14e90
-	.quad	.LFB9013
-	.quad	.LFE9013-.LFB9013
+	.quad	.LFB9014
+	.quad	.LFE9014-.LFB9014
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x329b2
+	.long	0x32a27
 	.uleb128 0x54
 	.secrel32	.LASF158
 	.long	0x1ca51
@@ -49055,11 +49103,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x4b
 	.long	0x14f3c
-	.quad	.LFB9012
-	.quad	.LFE9012-.LFB9012
+	.quad	.LFB9013
+	.quad	.LFE9013-.LFB9013
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x329e7
+	.long	0x32a5c
 	.uleb128 0xa
 	.secrel32	.LASF145
 	.long	0x1edb7
@@ -49075,11 +49123,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x4b
 	.long	0x14fa3
-	.quad	.LFB9011
-	.quad	.LFE9011-.LFB9011
+	.quad	.LFB9012
+	.quad	.LFE9012-.LFB9012
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32a1c
+	.long	0x32a91
 	.uleb128 0xa
 	.secrel32	.LASF145
 	.long	0x1edb7
@@ -49093,14 +49141,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x142be
-	.long	0x32a3b
-	.quad	.LFB9010
-	.quad	.LFE9010-.LFB9010
+	.long	0x32ab0
+	.quad	.LFB9011
+	.quad	.LFE9011-.LFB9011
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32a48
+	.long	0x32abd
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31db5
@@ -49110,11 +49158,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x14fef
-	.quad	.LFB9009
-	.quad	.LFE9009-.LFB9009
+	.quad	.LFB9010
+	.quad	.LFE9010-.LFB9010
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32ab0
+	.long	0x32b25
 	.uleb128 0x54
 	.secrel32	.LASF158
 	.long	0x1ca51
@@ -49155,11 +49203,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x15097
-	.quad	.LFB9008
-	.quad	.LFE9008-.LFB9008
+	.quad	.LFB9009
+	.quad	.LFE9009-.LFB9009
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32ae5
+	.long	0x32b5a
 	.uleb128 0xa
 	.secrel32	.LASF145
 	.long	0x1ecc1
@@ -49175,11 +49223,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x15112
-	.quad	.LFB9007
-	.quad	.LFE9007-.LFB9007
+	.quad	.LFB9008
+	.quad	.LFE9008-.LFB9008
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32b4d
+	.long	0x32bc2
 	.uleb128 0x54
 	.secrel32	.LASF158
 	.long	0x1ca51
@@ -49220,11 +49268,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x151c0
-	.quad	.LFB9006
-	.quad	.LFE9006-.LFB9006
+	.quad	.LFB9007
+	.quad	.LFE9007-.LFB9007
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32b82
+	.long	0x32bf7
 	.uleb128 0xa
 	.secrel32	.LASF145
 	.long	0x1edb7
@@ -49240,11 +49288,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x1523d
-	.quad	.LFB9003
-	.quad	.LFE9003-.LFB9003
+	.quad	.LFB9004
+	.quad	.LFE9004-.LFB9004
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32be0
+	.long	0x32c55
 	.uleb128 0xc
 	.ascii "_II\0"
 	.long	0x146de
@@ -49281,11 +49329,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x152e2
-	.quad	.LFB9002
-	.quad	.LFE9002-.LFB9002
+	.quad	.LFB9003
+	.quad	.LFE9003-.LFB9003
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32c3e
+	.long	0x32cb3
 	.uleb128 0xc
 	.ascii "_II\0"
 	.long	0x141e6
@@ -49322,11 +49370,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x9cb2
-	.quad	.LFB8994
-	.quad	.LFE8994-.LFB8994
+	.quad	.LFB8995
+	.quad	.LFE8995-.LFB8995
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32c99
+	.long	0x32d0e
 	.uleb128 0xa
 	.secrel32	.LASF98
 	.long	0x146de
@@ -49361,14 +49409,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 16
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x1959a
-	.long	0x32cb8
-	.quad	.LFB8993
-	.quad	.LFE8993-.LFB8993
+	.long	0x32d2d
+	.quad	.LFB8994
+	.quad	.LFE8994-.LFB8994
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32cc5
+	.long	0x32d3a
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1eceb
@@ -49378,11 +49426,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x9d87
-	.quad	.LFB8992
-	.quad	.LFE8992-.LFB8992
+	.quad	.LFB8993
+	.quad	.LFE8993-.LFB8993
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32d20
+	.long	0x32d95
 	.uleb128 0xa
 	.secrel32	.LASF98
 	.long	0x141e6
@@ -49417,14 +49465,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 16
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x1a42f
-	.long	0x32d3f
-	.quad	.LFB8991
-	.quad	.LFE8991-.LFB8991
+	.long	0x32db4
+	.quad	.LFB8992
+	.quad	.LFE8992-.LFB8992
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32d4c
+	.long	0x32dc1
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ede3
@@ -49434,7 +49482,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x5b
 	.long	0x1538d
-	.long	0x32d7c
+	.long	0x32df1
 	.uleb128 0xa
 	.secrel32	.LASF161
 	.long	0x1ce7b
@@ -49455,12 +49503,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0x19539
-	.long	0x32d9b
-	.quad	.LFB8967
-	.quad	.LFE8967-.LFB8967
+	.long	0x32e10
+	.quad	.LFB8968
+	.quad	.LFE8968-.LFB8968
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32dbf
+	.long	0x32e34
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ecb6
@@ -49484,11 +49532,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x4b
 	.long	0x9ba6
-	.quad	.LFB8966
-	.quad	.LFE8966-.LFB8966
+	.quad	.LFB8967
+	.quad	.LFE8967-.LFB8967
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32df4
+	.long	0x32e69
 	.uleb128 0xa
 	.secrel32	.LASF97
 	.long	0x1ecc1
@@ -49505,11 +49553,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x1542a
-	.quad	.LFB8965
-	.quad	.LFE8965-.LFB8965
+	.quad	.LFB8966
+	.quad	.LFE8966-.LFB8966
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32e5e
+	.long	0x32ed3
 	.uleb128 0xa
 	.secrel32	.LASF98
 	.long	0x146de
@@ -49555,9 +49603,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x14758
-	.long	0x32e6c
+	.long	0x32ee1
 	.byte	0x2
-	.long	0x32e83
+	.long	0x32ef8
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31dcc
@@ -49569,33 +49617,33 @@ _ZTS16T100ProjectLogic:
 	.long	0x147a2
 	.byte	0
 	.uleb128 0x5d
-	.long	0x32e5e
+	.long	0x32ed3
 	.ascii "_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_\0"
-	.long	0x32ecf
-	.quad	.LFB8964
-	.quad	.LFE8964-.LFB8964
+	.long	0x32f44
+	.quad	.LFB8965
+	.quad	.LFE8965-.LFB8965
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32ee0
+	.long	0x32f55
 	.uleb128 0x2a
-	.long	0x32e6c
+	.long	0x32ee1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2a
-	.long	0x32e75
+	.long	0x32eea
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x23
 	.long	0x194cb
-	.long	0x32eff
-	.quad	.LFB8961
-	.quad	.LFE8961-.LFB8961
+	.long	0x32f74
+	.quad	.LFB8962
+	.quad	.LFE8962-.LFB8962
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32f23
+	.long	0x32f98
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ecb6
@@ -49617,14 +49665,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 16
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0xbde0
-	.long	0x32f42
-	.quad	.LFB8960
-	.quad	.LFE8960-.LFB8960
+	.long	0x32fb7
+	.quad	.LFB8961
+	.quad	.LFE8961-.LFB8961
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32f4f
+	.long	0x32fc4
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ed5b
@@ -49634,11 +49682,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0xb9a1
-	.quad	.LFB8959
-	.quad	.LFE8959-.LFB8959
+	.quad	.LFB8960
+	.quad	.LFE8960-.LFB8960
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32f7b
+	.long	0x32ff0
 	.uleb128 0x1c
 	.ascii "__a\0"
 	.byte	0xa
@@ -49651,12 +49699,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0x1a3cc
-	.long	0x32f9a
-	.quad	.LFB8958
-	.quad	.LFE8958-.LFB8958
+	.long	0x3300f
+	.quad	.LFB8959
+	.quad	.LFE8959-.LFB8959
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32fbe
+	.long	0x33033
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1edac
@@ -49680,11 +49728,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x4b
 	.long	0x9c19
-	.quad	.LFB8957
-	.quad	.LFE8957-.LFB8957
+	.quad	.LFB8958
+	.quad	.LFE8958-.LFB8958
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x32ff3
+	.long	0x33068
 	.uleb128 0xa
 	.secrel32	.LASF97
 	.long	0x1edb7
@@ -49701,11 +49749,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x154eb
-	.quad	.LFB8956
-	.quad	.LFE8956-.LFB8956
+	.quad	.LFB8957
+	.quad	.LFE8957-.LFB8957
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3305d
+	.long	0x330d2
 	.uleb128 0xa
 	.secrel32	.LASF98
 	.long	0x141e6
@@ -49751,9 +49799,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x14264
-	.long	0x3306b
+	.long	0x330e0
 	.byte	0x2
-	.long	0x33082
+	.long	0x330f7
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31daa
@@ -49765,33 +49813,33 @@ _ZTS16T100ProjectLogic:
 	.long	0x142b0
 	.byte	0
 	.uleb128 0x5d
-	.long	0x3305d
+	.long	0x330d2
 	.ascii "_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_\0"
-	.long	0x330d0
-	.quad	.LFB8955
-	.quad	.LFE8955-.LFB8955
+	.long	0x33145
+	.quad	.LFB8956
+	.quad	.LFE8956-.LFB8956
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x330e1
+	.long	0x33156
 	.uleb128 0x2a
-	.long	0x3306b
+	.long	0x330e0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2a
-	.long	0x33074
+	.long	0x330e9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x23
 	.long	0x1a35c
-	.long	0x33100
-	.quad	.LFB8952
-	.quad	.LFE8952-.LFB8952
+	.long	0x33175
+	.quad	.LFB8953
+	.quad	.LFE8953-.LFB8953
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33124
+	.long	0x33199
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1edac
@@ -49813,14 +49861,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 16
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0xe49f
-	.long	0x33143
-	.quad	.LFB8951
-	.quad	.LFE8951-.LFB8951
+	.long	0x331b8
+	.quad	.LFB8952
+	.quad	.LFE8952-.LFB8952
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33150
+	.long	0x331c5
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ee53
@@ -49830,11 +49878,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0xe04a
-	.quad	.LFB8950
-	.quad	.LFE8950-.LFB8950
+	.quad	.LFB8951
+	.quad	.LFE8951-.LFB8951
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3317c
+	.long	0x331f1
 	.uleb128 0x1c
 	.ascii "__a\0"
 	.byte	0xa
@@ -49847,11 +49895,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x155b2
-	.quad	.LFB8949
-	.quad	.LFE8949-.LFB8949
+	.quad	.LFB8950
+	.quad	.LFE8950-.LFB8950
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x331b6
+	.long	0x3322b
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x476f
@@ -49867,12 +49915,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0x1b4f7
-	.long	0x331d5
-	.quad	.LFB8948
-	.quad	.LFE8948-.LFB8948
+	.long	0x3324a
+	.quad	.LFB8949
+	.quad	.LFE8949-.LFB8949
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x331f9
+	.long	0x3326e
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31c41
@@ -49896,31 +49944,31 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x1b1d5
-	.long	0x33207
+	.long	0x3327c
 	.byte	0x2
-	.long	0x33211
+	.long	0x33286
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31c41
 	.byte	0
 	.uleb128 0x5d
-	.long	0x331f9
+	.long	0x3326e
 	.ascii "_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev\0"
-	.long	0x33287
-	.quad	.LFB8946
-	.quad	.LFE8946-.LFB8946
+	.long	0x332fc
+	.quad	.LFB8947
+	.quad	.LFE8947-.LFB8947
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33290
+	.long	0x33305
 	.uleb128 0x2a
-	.long	0x33207
+	.long	0x3327c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x5b
 	.long	0x15640
-	.long	0x332bb
+	.long	0x33330
 	.uleb128 0xa
 	.secrel32	.LASF98
 	.long	0x1ce7b
@@ -49939,7 +49987,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x5b
 	.long	0x156b5
-	.long	0x332d5
+	.long	0x3334a
 	.uleb128 0xc
 	.ascii "_Iter\0"
 	.long	0x1ce7b
@@ -49948,7 +49996,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x5b
 	.long	0x1c651
-	.long	0x332f8
+	.long	0x3336d
 	.uleb128 0xc
 	.ascii "_Type\0"
 	.long	0x1ce86
@@ -49961,11 +50009,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0xb941
-	.quad	.LFB8905
-	.quad	.LFE8905-.LFB8905
+	.quad	.LFB8906
+	.quad	.LFE8906-.LFB8906
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33344
+	.long	0x333b9
 	.uleb128 0x1c
 	.ascii "__a\0"
 	.byte	0xa
@@ -49996,11 +50044,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x1573f
-	.quad	.LFB8904
-	.quad	.LFE8904-.LFB8904
+	.quad	.LFB8905
+	.quad	.LFE8905-.LFB8905
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33387
+	.long	0x333fc
 	.uleb128 0xa
 	.secrel32	.LASF97
 	.long	0x1ecc1
@@ -50023,14 +50071,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x195ef
-	.long	0x333af
-	.quad	.LFB8903
-	.quad	.LFE8903-.LFB8903
+	.long	0x33424
+	.quad	.LFB8904
+	.quad	.LFE8904-.LFB8904
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x333cb
+	.long	0x33440
 	.uleb128 0xc
 	.ascii "_Up\0"
 	.long	0x1eccc
@@ -50052,11 +50100,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x1579a
-	.quad	.LFB8902
-	.quad	.LFE8902-.LFB8902
+	.quad	.LFB8903
+	.quad	.LFE8903-.LFB8903
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3343a
+	.long	0x334af
 	.uleb128 0xa
 	.secrel32	.LASF98
 	.long	0x146de
@@ -50101,11 +50149,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x1588c
-	.quad	.LFB8901
-	.quad	.LFE8901-.LFB8901
+	.quad	.LFB8902
+	.quad	.LFE8902-.LFB8902
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33478
+	.long	0x334ed
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x1eccc
@@ -50124,11 +50172,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0xb85d
-	.quad	.LFB8900
-	.quad	.LFE8900-.LFB8900
+	.quad	.LFB8901
+	.quad	.LFE8901-.LFB8901
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x334b4
+	.long	0x33529
 	.uleb128 0x1c
 	.ascii "__a\0"
 	.byte	0xa
@@ -50148,14 +50196,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0xcb93
-	.long	0x334d3
-	.quad	.LFB8899
-	.quad	.LFE8899-.LFB8899
+	.long	0x33548
+	.quad	.LFB8900
+	.quad	.LFE8900-.LFB8900
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x334e0
+	.long	0x33555
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ed9b
@@ -50165,12 +50213,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xcbdc
-	.long	0x334ff
-	.quad	.LFB8898
-	.quad	.LFE8898-.LFB8898
+	.long	0x33574
+	.quad	.LFB8899
+	.quad	.LFE8899-.LFB8899
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3350c
+	.long	0x33581
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ed9b
@@ -50180,11 +50228,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0xdfe8
-	.quad	.LFB8897
-	.quad	.LFE8897-.LFB8897
+	.quad	.LFB8898
+	.quad	.LFE8898-.LFB8898
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33558
+	.long	0x335cd
 	.uleb128 0x1c
 	.ascii "__a\0"
 	.byte	0xa
@@ -50215,11 +50263,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x15936
-	.quad	.LFB8896
-	.quad	.LFE8896-.LFB8896
+	.quad	.LFB8897
+	.quad	.LFE8897-.LFB8897
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3359b
+	.long	0x33610
 	.uleb128 0xa
 	.secrel32	.LASF97
 	.long	0x1edb7
@@ -50242,14 +50290,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x1a486
-	.long	0x335c3
-	.quad	.LFB8895
-	.quad	.LFE8895-.LFB8895
+	.long	0x33638
+	.quad	.LFB8896
+	.quad	.LFE8896-.LFB8896
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x335df
+	.long	0x33654
 	.uleb128 0xc
 	.ascii "_Up\0"
 	.long	0x1edc2
@@ -50271,11 +50319,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x15995
-	.quad	.LFB8894
-	.quad	.LFE8894-.LFB8894
+	.quad	.LFB8895
+	.quad	.LFE8895-.LFB8895
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3364e
+	.long	0x336c3
 	.uleb128 0xa
 	.secrel32	.LASF98
 	.long	0x141e6
@@ -50320,11 +50368,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x15a8f
-	.quad	.LFB8893
-	.quad	.LFE8893-.LFB8893
+	.quad	.LFB8894
+	.quad	.LFE8894-.LFB8894
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3368c
+	.long	0x33701
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x1edc2
@@ -50343,11 +50391,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0xdf00
-	.quad	.LFB8892
-	.quad	.LFE8892-.LFB8892
+	.quad	.LFB8893
+	.quad	.LFE8893-.LFB8893
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x336c8
+	.long	0x3373d
 	.uleb128 0x1c
 	.ascii "__a\0"
 	.byte	0xa
@@ -50367,14 +50415,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0xf2a6
-	.long	0x336e7
-	.quad	.LFB8891
-	.quad	.LFE8891-.LFB8891
+	.long	0x3375c
+	.quad	.LFB8892
+	.quad	.LFE8892-.LFB8892
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x336f4
+	.long	0x33769
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ee93
@@ -50384,12 +50432,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xf2f1
-	.long	0x33713
-	.quad	.LFB8890
-	.quad	.LFE8890-.LFB8890
+	.long	0x33788
+	.quad	.LFB8891
+	.quad	.LFE8891-.LFB8891
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33720
+	.long	0x33795
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ee93
@@ -50399,11 +50447,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x1413a
-	.quad	.LFB8888
-	.quad	.LFE8888-.LFB8888
+	.quad	.LFB8889
+	.quad	.LFE8889-.LFB8889
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33763
+	.long	0x337d8
 	.uleb128 0xa
 	.secrel32	.LASF97
 	.long	0x1ec4d
@@ -50428,11 +50476,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x4b
 	.long	0x15b3d
-	.quad	.LFB8889
-	.quad	.LFE8889-.LFB8889
+	.quad	.LFB8890
+	.quad	.LFE8890-.LFB8890
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33797
+	.long	0x3380c
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x476f
@@ -50448,11 +50496,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x109c6
-	.quad	.LFB8887
-	.quad	.LFE8887-.LFB8887
+	.quad	.LFB8888
+	.quad	.LFE8888-.LFB8888
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x337e3
+	.long	0x33858
 	.uleb128 0x1c
 	.ascii "__a\0"
 	.byte	0xa
@@ -50483,9 +50531,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x1b2ba
-	.long	0x337f1
+	.long	0x33866
 	.byte	0x2
-	.long	0x33804
+	.long	0x33879
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31c41
@@ -50494,48 +50542,48 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ca08
 	.byte	0
 	.uleb128 0x5d
-	.long	0x337e3
+	.long	0x33858
 	.ascii "_ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev\0"
-	.long	0x3387a
-	.quad	.LFB8885
-	.quad	.LFE8885-.LFB8885
+	.long	0x338ef
+	.quad	.LFB8886
+	.quad	.LFE8886-.LFB8886
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33883
+	.long	0x338f8
 	.uleb128 0x2a
-	.long	0x337f1
+	.long	0x33866
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x27
 	.long	0x106ef
-	.long	0x33891
+	.long	0x33906
 	.byte	0x2
-	.long	0x3389b
+	.long	0x33910
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31c58
 	.byte	0
 	.uleb128 0x4c
-	.long	0x33883
+	.long	0x338f8
 	.ascii "_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEEC2Ev\0"
-	.long	0x338fa
-	.quad	.LFB8882
-	.quad	.LFE8882-.LFB8882
+	.long	0x3396f
+	.quad	.LFB8883
+	.quad	.LFE8883-.LFB8883
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33903
+	.long	0x33978
 	.uleb128 0x2a
-	.long	0x33891
+	.long	0x33906
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x80
 	.long	0x8e0a
-	.long	0x3391a
-	.long	0x33955
+	.long	0x3398f
+	.long	0x339ca
 	.uleb128 0xa
 	.secrel32	.LASF86
 	.long	0x1ce7b
@@ -50565,12 +50613,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xc189
-	.long	0x33974
-	.quad	.LFB8846
-	.quad	.LFE8846-.LFB8846
+	.long	0x339e9
+	.quad	.LFB8847
+	.quad	.LFE8847-.LFB8847
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x339a1
+	.long	0x33a16
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ed50
@@ -50598,11 +50646,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x15bd9
-	.quad	.LFB8845
-	.quad	.LFE8845-.LFB8845
+	.quad	.LFB8846
+	.quad	.LFE8846-.LFB8846
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x339f5
+	.long	0x33a6a
 	.uleb128 0xa
 	.secrel32	.LASF97
 	.long	0x1ecc1
@@ -50635,11 +50683,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0xba7f
-	.quad	.LFB8844
-	.quad	.LFE8844-.LFB8844
+	.quad	.LFB8845
+	.quad	.LFE8845-.LFB8845
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33a3a
+	.long	0x33aaf
 	.uleb128 0xc
 	.ascii "_Up\0"
 	.long	0x1eccc
@@ -50664,11 +50712,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x15c5c
-	.quad	.LFB8843
-	.quad	.LFE8843-.LFB8843
+	.quad	.LFB8844
+	.quad	.LFE8844-.LFB8844
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33ab5
+	.long	0x33b2a
 	.uleb128 0xa
 	.secrel32	.LASF98
 	.long	0x1ecc1
@@ -50715,14 +50763,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 24
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0xbd83
-	.long	0x33ad4
-	.quad	.LFB8842
-	.quad	.LFE8842-.LFB8842
+	.long	0x33b49
+	.quad	.LFB8843
+	.quad	.LFE8843-.LFB8843
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33ae1
+	.long	0x33b56
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ed50
@@ -50730,14 +50778,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x1a06a
-	.long	0x33b00
-	.quad	.LFB8841
-	.quad	.LFE8841-.LFB8841
+	.long	0x33b75
+	.quad	.LFB8842
+	.quad	.LFE8842-.LFB8842
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33b0d
+	.long	0x33b82
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31d93
@@ -50747,12 +50795,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xc12e
-	.long	0x33b2c
-	.quad	.LFB8840
-	.quad	.LFE8840-.LFB8840
+	.long	0x33ba1
+	.quad	.LFB8841
+	.quad	.LFE8841-.LFB8841
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33b49
+	.long	0x33bbe
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ed50
@@ -50774,11 +50822,11 @@ _ZTS16T100ProjectLogic:
 	.long	0x1a0e9
 	.uleb128 0x18
 	.long	0x1c6b2
-	.quad	.LFB8839
-	.quad	.LFE8839-.LFB8839
+	.quad	.LFB8840
+	.quad	.LFE8840-.LFB8840
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33b9d
+	.long	0x33c12
 	.uleb128 0xa
 	.secrel32	.LASF145
 	.long	0x1ecc1
@@ -50790,7 +50838,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x7
 	.word	0x3c3
 	.byte	0x3f
-	.long	0x33b49
+	.long	0x33bbe
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -50799,19 +50847,19 @@ _ZTS16T100ProjectLogic:
 	.byte	0x7
 	.word	0x3c4
 	.byte	0x38
-	.long	0x33b49
+	.long	0x33bbe
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x23
 	.long	0xc7f6
-	.long	0x33bbc
-	.quad	.LFB8838
-	.quad	.LFE8838-.LFB8838
+	.long	0x33c31
+	.quad	.LFB8839
+	.quad	.LFE8839-.LFB8839
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33bc9
+	.long	0x33c3e
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ed72
@@ -50821,12 +50869,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xd936
-	.long	0x33be8
-	.quad	.LFB8837
-	.quad	.LFE8837-.LFB8837
+	.long	0x33c5d
+	.quad	.LFB8838
+	.quad	.LFE8838-.LFB8838
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33c25
+	.long	0x33c9a
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ed9b
@@ -50863,9 +50911,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x19b33
-	.long	0x33c33
+	.long	0x33ca8
 	.byte	0x2
-	.long	0x33c4a
+	.long	0x33cbf
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31d82
@@ -50877,39 +50925,39 @@ _ZTS16T100ProjectLogic:
 	.long	0x31d87
 	.byte	0
 	.uleb128 0x5d
-	.long	0x33c25
+	.long	0x33c9a
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_\0"
-	.long	0x33cb9
-	.quad	.LFB8836
-	.quad	.LFE8836-.LFB8836
+	.long	0x33d2e
+	.quad	.LFB8837
+	.quad	.LFE8837-.LFB8837
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33cca
+	.long	0x33d3f
 	.uleb128 0x2a
-	.long	0x33c33
+	.long	0x33ca8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2a
-	.long	0x33c3c
+	.long	0x33cb1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x23
 	.long	0x19654
-	.long	0x33d01
-	.quad	.LFB8833
-	.quad	.LFE8833-.LFB8833
+	.long	0x33d76
+	.quad	.LFB8834
+	.quad	.LFE8834-.LFB8834
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33d3b
+	.long	0x33db0
 	.uleb128 0xc
 	.ascii "_Up\0"
 	.long	0x1eccc
 	.uleb128 0x43
 	.secrel32	.LASF141
-	.long	0x33d01
+	.long	0x33d76
 	.uleb128 0x44
 	.long	0x1ecfc
 	.byte	0
@@ -50932,7 +50980,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0xd
 	.byte	0x87
 	.byte	0x1d
-	.long	0x33d2b
+	.long	0x33da0
 	.uleb128 0x1
 	.long	0x1ecfc
 	.byte	0
@@ -50948,12 +50996,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xe85e
-	.long	0x33d5a
-	.quad	.LFB8832
-	.quad	.LFE8832-.LFB8832
+	.long	0x33dcf
+	.quad	.LFB8833
+	.quad	.LFE8833-.LFB8833
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33d87
+	.long	0x33dfc
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ee48
@@ -50981,11 +51029,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x15d50
-	.quad	.LFB8831
-	.quad	.LFE8831-.LFB8831
+	.quad	.LFB8832
+	.quad	.LFE8832-.LFB8832
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33ddb
+	.long	0x33e50
 	.uleb128 0xa
 	.secrel32	.LASF97
 	.long	0x1edb7
@@ -51018,11 +51066,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0xe12c
-	.quad	.LFB8830
-	.quad	.LFE8830-.LFB8830
+	.quad	.LFB8831
+	.quad	.LFE8831-.LFB8831
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33e20
+	.long	0x33e95
 	.uleb128 0xc
 	.ascii "_Up\0"
 	.long	0x1edc2
@@ -51047,11 +51095,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x15dd9
-	.quad	.LFB8829
-	.quad	.LFE8829-.LFB8829
+	.quad	.LFB8830
+	.quad	.LFE8830-.LFB8830
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33e9b
+	.long	0x33f10
 	.uleb128 0xa
 	.secrel32	.LASF98
 	.long	0x1edb7
@@ -51098,14 +51146,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 24
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0xe440
-	.long	0x33eba
-	.quad	.LFB8828
-	.quad	.LFE8828-.LFB8828
+	.long	0x33f2f
+	.quad	.LFB8829
+	.quad	.LFE8829-.LFB8829
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33ec7
+	.long	0x33f3c
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ee48
@@ -51113,14 +51161,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x1af39
-	.long	0x33ee6
-	.quad	.LFB8827
-	.quad	.LFE8827-.LFB8827
+	.long	0x33f5b
+	.quad	.LFB8828
+	.quad	.LFE8828-.LFB8828
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33ef3
+	.long	0x33f68
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31d71
@@ -51130,12 +51178,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xe801
-	.long	0x33f12
-	.quad	.LFB8826
-	.quad	.LFE8826-.LFB8826
+	.long	0x33f87
+	.quad	.LFB8827
+	.quad	.LFE8827-.LFB8827
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33f2f
+	.long	0x33fa4
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ee48
@@ -51157,11 +51205,11 @@ _ZTS16T100ProjectLogic:
 	.long	0x1afba
 	.uleb128 0x18
 	.long	0x1c782
-	.quad	.LFB8825
-	.quad	.LFE8825-.LFB8825
+	.quad	.LFB8826
+	.quad	.LFE8826-.LFB8826
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33f83
+	.long	0x33ff8
 	.uleb128 0xa
 	.secrel32	.LASF145
 	.long	0x1edb7
@@ -51173,7 +51221,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x7
 	.word	0x3c3
 	.byte	0x3f
-	.long	0x33f2f
+	.long	0x33fa4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -51182,19 +51230,19 @@ _ZTS16T100ProjectLogic:
 	.byte	0x7
 	.word	0x3c4
 	.byte	0x38
-	.long	0x33f2f
+	.long	0x33fa4
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x23
 	.long	0xeef1
-	.long	0x33fa2
-	.quad	.LFB8824
-	.quad	.LFE8824-.LFB8824
+	.long	0x34017
+	.quad	.LFB8825
+	.quad	.LFE8825-.LFB8825
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x33faf
+	.long	0x34024
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ee6a
@@ -51204,12 +51252,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0x10095
-	.long	0x33fce
-	.quad	.LFB8823
-	.quad	.LFE8823-.LFB8823
+	.long	0x34043
+	.quad	.LFB8824
+	.quad	.LFE8824-.LFB8824
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3400b
+	.long	0x34080
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ee93
@@ -51246,9 +51294,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x1a9ea
-	.long	0x34019
+	.long	0x3408e
 	.byte	0x2
-	.long	0x34030
+	.long	0x340a5
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31d60
@@ -51260,39 +51308,39 @@ _ZTS16T100ProjectLogic:
 	.long	0x31d65
 	.byte	0
 	.uleb128 0x5d
-	.long	0x3400b
+	.long	0x34080
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_\0"
-	.long	0x340a1
-	.quad	.LFB8822
-	.quad	.LFE8822-.LFB8822
+	.long	0x34116
+	.quad	.LFB8823
+	.quad	.LFE8823-.LFB8823
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x340b2
+	.long	0x34127
 	.uleb128 0x2a
-	.long	0x34019
+	.long	0x3408e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2a
-	.long	0x34022
+	.long	0x34097
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x23
 	.long	0x1a4ed
-	.long	0x340e9
-	.quad	.LFB8819
-	.quad	.LFE8819-.LFB8819
+	.long	0x3415e
+	.quad	.LFB8820
+	.quad	.LFE8820-.LFB8820
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34123
+	.long	0x34198
 	.uleb128 0xc
 	.ascii "_Up\0"
 	.long	0x1edc2
 	.uleb128 0x43
 	.secrel32	.LASF141
-	.long	0x340e9
+	.long	0x3415e
 	.uleb128 0x44
 	.long	0x1edf4
 	.byte	0
@@ -51315,7 +51363,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0xd
 	.byte	0x87
 	.byte	0x1d
-	.long	0x34113
+	.long	0x34188
 	.uleb128 0x1
 	.long	0x1edf4
 	.byte	0
@@ -51331,11 +51379,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x15ed5
-	.quad	.LFB8818
-	.quad	.LFE8818-.LFB8818
+	.quad	.LFB8819
+	.quad	.LFE8819-.LFB8819
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34166
+	.long	0x341db
 	.uleb128 0xa
 	.secrel32	.LASF97
 	.long	0x1ec4d
@@ -51360,12 +51408,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0x114fe
-	.long	0x34185
-	.quad	.LFB8817
-	.quad	.LFE8817-.LFB8817
+	.long	0x341fa
+	.quad	.LFB8818
+	.quad	.LFE8818-.LFB8818
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x341b2
+	.long	0x34227
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31caa
@@ -51393,9 +51441,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x107a6
-	.long	0x341c0
+	.long	0x34235
 	.byte	0x2
-	.long	0x341d3
+	.long	0x34248
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31c58
@@ -51404,49 +51452,49 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ca08
 	.byte	0
 	.uleb128 0x4c
-	.long	0x341b2
+	.long	0x34227
 	.ascii "_ZNSaINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEED2Ev\0"
-	.long	0x34232
-	.quad	.LFB8815
-	.quad	.LFE8815-.LFB8815
+	.long	0x342a7
+	.quad	.LFB8816
+	.quad	.LFE8816-.LFB8816
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3423b
+	.long	0x342b0
 	.uleb128 0x2a
-	.long	0x341c0
+	.long	0x34235
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x27
 	.long	0x10c93
-	.long	0x34249
+	.long	0x342be
 	.byte	0x2
-	.long	0x34253
+	.long	0x342c8
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31c87
 	.byte	0
 	.uleb128 0x4c
-	.long	0x3423b
+	.long	0x342b0
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implC1Ev\0"
-	.long	0x342d5
-	.quad	.LFB8813
-	.quad	.LFE8813-.LFB8813
+	.long	0x3434a
+	.quad	.LFB8814
+	.quad	.LFE8814-.LFB8814
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x342de
+	.long	0x34353
 	.uleb128 0x2a
-	.long	0x34249
+	.long	0x342be
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x27
 	.long	0x1694f
-	.long	0x342ec
+	.long	0x34361
 	.byte	0x2
-	.long	0x342fb
+	.long	0x34370
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1d20d
@@ -51454,19 +51502,19 @@ _ZTS16T100ProjectLogic:
 	.long	0x1d212
 	.byte	0
 	.uleb128 0x48
-	.long	0x342de
+	.long	0x34353
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2ERKS1_\0"
-	.long	0x34330
-	.long	0x3433b
+	.long	0x343a5
+	.long	0x343b0
 	.uleb128 0x3c
-	.long	0x342ec
+	.long	0x34361
 	.uleb128 0x3c
-	.long	0x342f5
+	.long	0x3436a
 	.byte	0
 	.uleb128 0x80
 	.long	0x8e9f
-	.long	0x34352
-	.long	0x3437d
+	.long	0x343c7
+	.long	0x343f2
 	.uleb128 0xa
 	.secrel32	.LASF87
 	.long	0x1ce7b
@@ -51490,7 +51538,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x5b
 	.long	0xb1de
-	.long	0x34395
+	.long	0x3440a
 	.uleb128 0x81
 	.secrel32	.LASF283
 	.byte	0xa
@@ -51500,15 +51548,15 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xdbdf
-	.long	0x343c3
-	.quad	.LFB8745
-	.quad	.LFE8745-.LFB8745
+	.long	0x34438
+	.quad	.LFB8746
+	.quad	.LFE8746-.LFB8746
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34461
+	.long	0x344d6
 	.uleb128 0x43
 	.secrel32	.LASF141
-	.long	0x343c3
+	.long	0x34438
 	.uleb128 0x44
 	.long	0x1ecfc
 	.byte	0
@@ -51531,7 +51579,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0xb
 	.word	0x19e
 	.byte	0x35
-	.long	0x343ee
+	.long	0x34463
 	.uleb128 0x1
 	.long	0x1ecfc
 	.byte	0
@@ -51601,12 +51649,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xc897
-	.long	0x34480
-	.quad	.LFB8744
-	.quad	.LFE8744-.LFB8744
+	.long	0x344f5
+	.quad	.LFB8745
+	.quad	.LFE8745-.LFB8745
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3448d
+	.long	0x34502
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ed72
@@ -51616,17 +51664,17 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0xbae3
-	.quad	.LFB8742
-	.quad	.LFE8742-.LFB8742
+	.quad	.LFB8743
+	.quad	.LFE8743-.LFB8743
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34500
+	.long	0x34575
 	.uleb128 0xc
 	.ascii "_Up\0"
 	.long	0x1eccc
 	.uleb128 0x43
 	.secrel32	.LASF141
-	.long	0x344c0
+	.long	0x34535
 	.uleb128 0x44
 	.long	0x1ecfc
 	.byte	0
@@ -51652,7 +51700,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0xa
 	.word	0x1da
 	.byte	0x32
-	.long	0x344ef
+	.long	0x34564
 	.uleb128 0x1
 	.long	0x1ecfc
 	.byte	0
@@ -51671,11 +51719,11 @@ _ZTS16T100ProjectLogic:
 	.long	0x14106
 	.uleb128 0x4b
 	.long	0x15f6b
-	.quad	.LFB8743
-	.quad	.LFE8743-.LFB8743
+	.quad	.LFB8744
+	.quad	.LFE8744-.LFB8744
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3453a
+	.long	0x345af
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x1ecfc
@@ -51684,22 +51732,22 @@ _ZTS16T100ProjectLogic:
 	.byte	0x8
 	.byte	0x4a
 	.byte	0x38
-	.long	0x34500
+	.long	0x34575
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
 	.long	0x1034a
-	.long	0x34568
-	.quad	.LFB8741
-	.quad	.LFE8741-.LFB8741
+	.long	0x345dd
+	.quad	.LFB8742
+	.quad	.LFE8742-.LFB8742
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34606
+	.long	0x3467b
 	.uleb128 0x43
 	.secrel32	.LASF141
-	.long	0x34568
+	.long	0x345dd
 	.uleb128 0x44
 	.long	0x1edf4
 	.byte	0
@@ -51722,7 +51770,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0xb
 	.word	0x19e
 	.byte	0x35
-	.long	0x34593
+	.long	0x34608
 	.uleb128 0x1
 	.long	0x1edf4
 	.byte	0
@@ -51792,12 +51840,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xef96
-	.long	0x34625
-	.quad	.LFB8740
-	.quad	.LFE8740-.LFB8740
+	.long	0x3469a
+	.quad	.LFB8741
+	.quad	.LFE8741-.LFB8741
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34632
+	.long	0x346a7
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ee6a
@@ -51807,17 +51855,17 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0xe192
-	.quad	.LFB8738
-	.quad	.LFE8738-.LFB8738
+	.quad	.LFB8739
+	.quad	.LFE8739-.LFB8739
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x346a5
+	.long	0x3471a
 	.uleb128 0xc
 	.ascii "_Up\0"
 	.long	0x1edc2
 	.uleb128 0x43
 	.secrel32	.LASF141
-	.long	0x34665
+	.long	0x346da
 	.uleb128 0x44
 	.long	0x1edf4
 	.byte	0
@@ -51843,7 +51891,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0xa
 	.word	0x1da
 	.byte	0x32
-	.long	0x34694
+	.long	0x34709
 	.uleb128 0x1
 	.long	0x1edf4
 	.byte	0
@@ -51862,11 +51910,11 @@ _ZTS16T100ProjectLogic:
 	.long	0x140be
 	.uleb128 0x4b
 	.long	0x15fe8
-	.quad	.LFB8739
-	.quad	.LFE8739-.LFB8739
+	.quad	.LFB8740
+	.quad	.LFE8740-.LFB8740
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x346df
+	.long	0x34754
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x1edf4
@@ -51875,19 +51923,19 @@ _ZTS16T100ProjectLogic:
 	.byte	0x8
 	.byte	0x4a
 	.byte	0x38
-	.long	0x346a5
+	.long	0x3471a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x1c42f
-	.long	0x346fe
-	.quad	.LFB8737
-	.quad	.LFE8737-.LFB8737
+	.long	0x34773
+	.quad	.LFB8738
+	.quad	.LFE8738-.LFB8738
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3470b
+	.long	0x34780
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31d0d
@@ -51897,9 +51945,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x1bd3c
-	.long	0x34719
+	.long	0x3478e
 	.byte	0x2
-	.long	0x34730
+	.long	0x347a5
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31cfc
@@ -51911,32 +51959,32 @@ _ZTS16T100ProjectLogic:
 	.long	0x31d01
 	.byte	0
 	.uleb128 0x5d
-	.long	0x3470b
+	.long	0x34780
 	.ascii "_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_\0"
-	.long	0x347c4
-	.quad	.LFB8736
-	.quad	.LFE8736-.LFB8736
+	.long	0x34839
+	.quad	.LFB8737
+	.quad	.LFE8737-.LFB8737
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x347d5
+	.long	0x3484a
 	.uleb128 0x2a
-	.long	0x34719
+	.long	0x3478e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2a
-	.long	0x34722
+	.long	0x34797
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x18
 	.long	0x16069
-	.quad	.LFB8733
-	.quad	.LFE8733-.LFB8733
+	.quad	.LFB8734
+	.quad	.LFE8734-.LFB8734
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34829
+	.long	0x3489e
 	.uleb128 0xa
 	.secrel32	.LASF97
 	.long	0x1ec4d
@@ -51967,14 +52015,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 16
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x10f3c
-	.long	0x34848
-	.quad	.LFB8732
-	.quad	.LFE8732-.LFB8732
+	.long	0x348bd
+	.quad	.LFB8733
+	.quad	.LFE8733-.LFB8733
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34855
+	.long	0x348ca
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31caa
@@ -51984,9 +52032,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x113ff
-	.long	0x34863
+	.long	0x348d8
 	.byte	0x2
-	.long	0x34876
+	.long	0x348eb
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31caa
@@ -51995,40 +52043,40 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ca08
 	.byte	0
 	.uleb128 0x4c
-	.long	0x34855
+	.long	0x348ca
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED2Ev\0"
-	.long	0x348ea
-	.quad	.LFB8730
-	.quad	.LFE8730-.LFB8730
+	.long	0x3495f
+	.quad	.LFB8731
+	.quad	.LFE8731-.LFB8731
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x348f3
+	.long	0x34968
 	.uleb128 0x2a
-	.long	0x34863
+	.long	0x348d8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x27
 	.long	0x110cf
-	.long	0x34901
+	.long	0x34976
 	.byte	0x2
-	.long	0x3490b
+	.long	0x34980
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31caa
 	.byte	0
 	.uleb128 0x4c
-	.long	0x348f3
+	.long	0x34968
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC2Ev\0"
-	.long	0x3497f
-	.quad	.LFB8727
-	.quad	.LFE8727-.LFB8727
+	.long	0x349f4
+	.quad	.LFB8728
+	.quad	.LFE8728-.LFB8728
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34988
+	.long	0x349fd
 	.uleb128 0x2a
-	.long	0x34901
+	.long	0x34976
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -52038,9 +52086,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0x6
 	.byte	0x58
 	.byte	0xe
-	.long	0x3499a
+	.long	0x34a0f
 	.byte	0x2
-	.long	0x349ad
+	.long	0x34a22
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31c87
@@ -52049,16 +52097,16 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ca08
 	.byte	0
 	.uleb128 0x4c
-	.long	0x34988
+	.long	0x349fd
 	.ascii "_ZNSt12_Vector_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE12_Vector_implD1Ev\0"
-	.long	0x34a2f
-	.quad	.LFB8726
-	.quad	.LFE8726-.LFB8726
+	.long	0x34aa4
+	.quad	.LFB8727
+	.quad	.LFE8727-.LFB8727
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34a38
+	.long	0x34aad
 	.uleb128 0x2a
-	.long	0x3499a
+	.long	0x34a0f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -52068,11 +52116,11 @@ _ZTS16T100ProjectLogic:
 	.long	0x13fc4
 	.uleb128 0x4b
 	.long	0x1613e
-	.quad	.LFB8722
-	.quad	.LFE8722-.LFB8722
+	.quad	.LFB8723
+	.quad	.LFE8723-.LFB8723
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34a72
+	.long	0x34ae7
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x1ec7c
@@ -52088,9 +52136,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x9b33
-	.long	0x34a80
+	.long	0x34af5
 	.byte	0x2
-	.long	0x34a96
+	.long	0x34b0b
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1d23b
@@ -52102,19 +52150,19 @@ _ZTS16T100ProjectLogic:
 	.long	0x1d240
 	.byte	0
 	.uleb128 0x48
-	.long	0x34a72
+	.long	0x34ae7
 	.ascii "_ZNSaIwEC2ERKS_\0"
-	.long	0x34ab3
-	.long	0x34abe
+	.long	0x34b28
+	.long	0x34b33
 	.uleb128 0x3c
-	.long	0x34a80
+	.long	0x34af5
 	.uleb128 0x3c
-	.long	0x34a89
+	.long	0x34afe
 	.byte	0
 	.uleb128 0x80
 	.long	0x8f47
-	.long	0x34ad5
-	.long	0x34afb
+	.long	0x34b4a
+	.long	0x34b70
 	.uleb128 0xa
 	.secrel32	.LASF87
 	.long	0x1ce7b
@@ -52136,7 +52184,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x5b
 	.long	0x180df
-	.long	0x34b11
+	.long	0x34b86
 	.uleb128 0x47
 	.ascii "__a\0"
 	.byte	0x27
@@ -52146,9 +52194,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x16993
-	.long	0x34b1f
+	.long	0x34b94
 	.byte	0x2
-	.long	0x34b32
+	.long	0x34ba7
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1d20d
@@ -52157,35 +52205,35 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ca08
 	.byte	0
 	.uleb128 0x48
-	.long	0x34b11
+	.long	0x34b86
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwED2Ev\0"
-	.long	0x34b63
-	.long	0x34b69
+	.long	0x34bd8
+	.long	0x34bde
 	.uleb128 0x3c
-	.long	0x34b1f
+	.long	0x34b94
 	.byte	0
 	.uleb128 0x27
 	.long	0x16914
-	.long	0x34b77
+	.long	0x34bec
 	.byte	0x2
-	.long	0x34b81
+	.long	0x34bf6
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1d20d
 	.byte	0
 	.uleb128 0x48
-	.long	0x34b69
+	.long	0x34bde
 	.ascii "_ZN9__gnu_cxx13new_allocatorIwEC2Ev\0"
-	.long	0x34bb2
-	.long	0x34bb8
+	.long	0x34c27
+	.long	0x34c2d
 	.uleb128 0x3c
-	.long	0x34b77
+	.long	0x34bec
 	.byte	0
 	.uleb128 0x27
 	.long	0x4844
-	.long	0x34bc6
+	.long	0x34c3b
 	.byte	0x2
-	.long	0x34bea
+	.long	0x34c5f
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1ec32
@@ -52203,23 +52251,23 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ec37
 	.byte	0
 	.uleb128 0x48
-	.long	0x34bb8
+	.long	0x34c2d
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderC2EPwOS3_\0"
+	.long	0x34cb9
+	.long	0x34cc9
+	.uleb128 0x3c
+	.long	0x34c3b
+	.uleb128 0x3c
 	.long	0x34c44
-	.long	0x34c54
 	.uleb128 0x3c
-	.long	0x34bc6
-	.uleb128 0x3c
-	.long	0x34bcf
-	.uleb128 0x3c
-	.long	0x34bdd
+	.long	0x34c52
 	.byte	0
 	.uleb128 0x30
 	.byte	0x8
 	.long	0x13ee3
 	.uleb128 0x5b
 	.long	0x161e9
-	.long	0x34c79
+	.long	0x34cee
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x1ec1a
@@ -52232,11 +52280,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x16259
-	.quad	.LFB8510
-	.quad	.LFE8510-.LFB8510
+	.quad	.LFB8511
+	.quad	.LFE8511-.LFB8511
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34cd0
+	.long	0x34d45
 	.uleb128 0xa
 	.secrel32	.LASF85
 	.long	0x1ce86
@@ -52267,11 +52315,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x162de
-	.quad	.LFB8509
-	.quad	.LFE8509-.LFB8509
+	.quad	.LFB8510
+	.quad	.LFE8510-.LFB8510
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34d38
+	.long	0x34dad
 	.uleb128 0xa
 	.secrel32	.LASF85
 	.long	0x1ce86
@@ -52312,12 +52360,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xd149
-	.long	0x34d57
-	.quad	.LFB8508
-	.quad	.LFE8508-.LFB8508
+	.long	0x34dcc
+	.quad	.LFB8509
+	.quad	.LFE8509-.LFB8509
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34d74
+	.long	0x34de9
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ed72
@@ -52336,11 +52384,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x16364
-	.quad	.LFB8507
-	.quad	.LFE8507-.LFB8507
+	.quad	.LFB8508
+	.quad	.LFE8508-.LFB8508
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34db9
+	.long	0x34e2e
 	.uleb128 0xa
 	.secrel32	.LASF85
 	.long	0x1ce86
@@ -52365,12 +52413,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0xf882
-	.long	0x34dd8
-	.quad	.LFB8506
-	.quad	.LFE8506-.LFB8506
+	.long	0x34e4d
+	.quad	.LFB8507
+	.quad	.LFE8507-.LFB8507
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34df5
+	.long	0x34e6a
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x1ee6a
@@ -52389,11 +52437,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x16421
-	.quad	.LFB8505
-	.quad	.LFE8505-.LFB8505
+	.quad	.LFB8506
+	.quad	.LFE8506-.LFB8506
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34e4c
+	.long	0x34ec1
 	.uleb128 0xa
 	.secrel32	.LASF85
 	.long	0x1ce86
@@ -52424,11 +52472,11 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x18
 	.long	0x164a6
-	.quad	.LFB8504
-	.quad	.LFE8504-.LFB8504
+	.quad	.LFB8505
+	.quad	.LFE8505-.LFB8505
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34eb4
+	.long	0x34f29
 	.uleb128 0xa
 	.secrel32	.LASF85
 	.long	0x1ce86
@@ -52467,14 +52515,14 @@ _ZTS16T100ProjectLogic:
 	.sleb128 0
 	.byte	0x6
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x1bddc
-	.long	0x34ed3
-	.quad	.LFB8503
-	.quad	.LFE8503-.LFB8503
+	.long	0x34f48
+	.quad	.LFB8504
+	.quad	.LFE8504-.LFB8504
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34ee0
+	.long	0x34f55
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31d0d
@@ -52482,14 +52530,14 @@ _ZTS16T100ProjectLogic:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x35
+	.uleb128 0x33
 	.long	0x1bf06
-	.long	0x34eff
-	.quad	.LFB8502
-	.quad	.LFE8502-.LFB8502
+	.long	0x34f74
+	.quad	.LFB8503
+	.quad	.LFE8503-.LFB8503
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34f0c
+	.long	0x34f81
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31cfc
@@ -52502,11 +52550,11 @@ _ZTS16T100ProjectLogic:
 	.long	0x1c4d3
 	.uleb128 0x18
 	.long	0x1c858
-	.quad	.LFB8501
-	.quad	.LFE8501-.LFB8501
+	.quad	.LFB8502
+	.quad	.LFE8502-.LFB8502
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34f60
+	.long	0x34fd5
 	.uleb128 0xa
 	.secrel32	.LASF145
 	.long	0x1ec4d
@@ -52518,7 +52566,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x7
 	.word	0x371
 	.byte	0x40
-	.long	0x34f0c
+	.long	0x34f81
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -52527,19 +52575,19 @@ _ZTS16T100ProjectLogic:
 	.byte	0x7
 	.word	0x372
 	.byte	0x39
-	.long	0x34f0c
+	.long	0x34f81
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x23
 	.long	0x11f5d
-	.long	0x34f7f
-	.quad	.LFB8500
-	.quad	.LFE8500-.LFB8500
+	.long	0x34ff4
+	.quad	.LFB8501
+	.quad	.LFE8501-.LFB8501
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34f8c
+	.long	0x35001
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31cc7
@@ -52549,12 +52597,12 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0x11e72
-	.long	0x34fab
-	.quad	.LFB8499
-	.quad	.LFE8499-.LFB8499
+	.long	0x35020
+	.quad	.LFB8500
+	.quad	.LFE8500-.LFB8500
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x34fb8
+	.long	0x3502d
 	.uleb128 0x13
 	.secrel32	.LASF279
 	.long	0x31cc7
@@ -52564,9 +52612,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x11b8c
-	.long	0x34fc6
+	.long	0x3503b
 	.byte	0x2
-	.long	0x34fd9
+	.long	0x3504e
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31cc7
@@ -52575,51 +52623,51 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ca08
 	.byte	0
 	.uleb128 0x4c
-	.long	0x34fb8
+	.long	0x3502d
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev\0"
-	.long	0x35046
-	.quad	.LFB8498
-	.quad	.LFE8498-.LFB8498
+	.long	0x350bb
+	.quad	.LFB8499
+	.quad	.LFE8499-.LFB8499
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3504f
+	.long	0x350c4
 	.uleb128 0x2a
-	.long	0x34fc6
+	.long	0x3503b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x27
 	.long	0x11734
-	.long	0x3505d
+	.long	0x350d2
 	.byte	0x2
-	.long	0x35067
+	.long	0x350dc
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x31cc7
 	.byte	0
 	.uleb128 0x4c
-	.long	0x3504f
+	.long	0x350c4
 	.ascii "_ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EEC1Ev\0"
-	.long	0x350d4
-	.quad	.LFB8495
-	.quad	.LFE8495-.LFB8495
+	.long	0x35149
+	.quad	.LFB8496
+	.quad	.LFE8496-.LFB8496
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x350dd
+	.long	0x35152
 	.uleb128 0x2a
-	.long	0x3505d
+	.long	0x350d2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x18
 	.long	0x1652a
-	.quad	.LFB8492
-	.quad	.LFE8492-.LFB8492
+	.quad	.LFB8493
+	.quad	.LFE8493-.LFB8493
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x35134
+	.long	0x351a9
 	.uleb128 0xa
 	.secrel32	.LASF85
 	.long	0x1ce86
@@ -52650,9 +52698,9 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x27
 	.long	0x56d9
-	.long	0x35142
+	.long	0x351b7
 	.byte	0x2
-	.long	0x3515a
+	.long	0x351cf
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1ec53
@@ -52664,37 +52712,37 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ec70
 	.byte	0
 	.uleb128 0x48
-	.long	0x35134
+	.long	0x351a9
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2ERKS4_\0"
-	.long	0x351a5
-	.long	0x351b0
+	.long	0x3521a
+	.long	0x35225
 	.uleb128 0x3c
-	.long	0x35142
+	.long	0x351b7
 	.uleb128 0x3c
-	.long	0x3514b
+	.long	0x351c0
 	.byte	0
 	.uleb128 0x27
 	.long	0x562c
-	.long	0x351be
+	.long	0x35233
 	.byte	0x2
-	.long	0x351c8
+	.long	0x3523d
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1ec53
 	.byte	0
 	.uleb128 0x48
-	.long	0x351b0
+	.long	0x35225
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2Ev\0"
-	.long	0x3520f
-	.long	0x35215
+	.long	0x35284
+	.long	0x3528a
 	.uleb128 0x3c
-	.long	0x351be
+	.long	0x35233
 	.byte	0
 	.uleb128 0x27
 	.long	0x9b5f
-	.long	0x35223
+	.long	0x35298
 	.byte	0x2
-	.long	0x35236
+	.long	0x352ab
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1d23b
@@ -52703,35 +52751,35 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ca08
 	.byte	0
 	.uleb128 0x48
-	.long	0x35215
+	.long	0x3528a
 	.ascii "_ZNSaIwED2Ev\0"
-	.long	0x35250
-	.long	0x35256
+	.long	0x352c5
+	.long	0x352cb
 	.uleb128 0x3c
-	.long	0x35223
+	.long	0x35298
 	.byte	0
 	.uleb128 0x27
 	.long	0x9b0f
-	.long	0x35264
+	.long	0x352d9
 	.byte	0x2
-	.long	0x3526e
+	.long	0x352e3
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1d23b
 	.byte	0
 	.uleb128 0x48
-	.long	0x35256
+	.long	0x352cb
 	.ascii "_ZNSaIwEC2Ev\0"
-	.long	0x35288
-	.long	0x3528e
+	.long	0x352fd
+	.long	0x35303
 	.uleb128 0x3c
-	.long	0x35264
+	.long	0x352d9
 	.byte	0
 	.uleb128 0x27
 	.long	0x59aa
-	.long	0x3529c
+	.long	0x35311
 	.byte	0x2
-	.long	0x352b4
+	.long	0x35329
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1ec53
@@ -52743,20 +52791,20 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ec76
 	.byte	0
 	.uleb128 0x48
-	.long	0x3528e
+	.long	0x35303
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC2EOS4_\0"
-	.long	0x352fe
-	.long	0x35309
+	.long	0x35373
+	.long	0x3537e
 	.uleb128 0x3c
-	.long	0x3529c
+	.long	0x35311
 	.uleb128 0x3c
-	.long	0x352a5
+	.long	0x3531a
 	.byte	0
 	.uleb128 0x27
 	.long	0x5b44
-	.long	0x35317
+	.long	0x3538c
 	.byte	0x2
-	.long	0x3532a
+	.long	0x3539f
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1ec53
@@ -52765,21 +52813,21 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ca08
 	.byte	0
 	.uleb128 0x48
-	.long	0x35309
+	.long	0x3537e
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED2Ev\0"
-	.long	0x35371
-	.long	0x35377
+	.long	0x353e6
+	.long	0x353ec
 	.uleb128 0x3c
-	.long	0x35317
+	.long	0x3538c
 	.byte	0
 	.uleb128 0xa3
 	.long	0x48bf
 	.byte	0x5
 	.byte	0x8b
 	.byte	0xe
-	.long	0x35389
+	.long	0x353fe
 	.byte	0x2
-	.long	0x3539c
+	.long	0x35411
 	.uleb128 0x1e
 	.secrel32	.LASF279
 	.long	0x1ec32
@@ -52788,103 +52836,103 @@ _ZTS16T100ProjectLogic:
 	.long	0x1ca08
 	.byte	0
 	.uleb128 0x48
-	.long	0x35377
+	.long	0x353ec
 	.ascii "_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE12_Alloc_hiderD1Ev\0"
-	.long	0x353f1
-	.long	0x353f7
+	.long	0x35466
+	.long	0x3546c
 	.uleb128 0x3c
-	.long	0x35389
+	.long	0x353fe
 	.byte	0
 	.uleb128 0x23
-	.long	0x321d7
-	.long	0x35416
+	.long	0x32236
+	.long	0x3548b
+	.quad	.LFB7886
+	.quad	.LFE7886-.LFB7886
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x354a7
+	.uleb128 0x13
+	.secrel32	.LASF279
+	.long	0x323ba
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 8
+	.uleb128 0x21
+	.secrel32	.LASF293
+	.byte	0x4
+	.byte	0xec
+	.byte	0x43
+	.long	0x3243f
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 16
+	.byte	0
+	.uleb128 0x23
+	.long	0x321cb
+	.long	0x354c6
 	.quad	.LFB7885
 	.quad	.LFE7885-.LFB7885
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x35432
+	.long	0x354e2
 	.uleb128 0x13
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x21
 	.secrel32	.LASF293
 	.byte	0x4
-	.byte	0xe9
-	.byte	0x43
-	.long	0x323ca
+	.byte	0xe7
+	.byte	0x45
+	.long	0x323ed
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x23
-	.long	0x3216c
-	.long	0x35451
+	.long	0x320c6
+	.long	0x35501
 	.quad	.LFB7884
 	.quad	.LFE7884-.LFB7884
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3546d
+	.long	0x3551d
 	.uleb128 0x13
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x21
 	.secrel32	.LASF293
 	.byte	0x4
-	.byte	0xe4
-	.byte	0x45
-	.long	0x3238e
+	.byte	0xe2
+	.byte	0x43
+	.long	0x323ed
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x23
-	.long	0x32067
-	.long	0x3548c
+	.long	0x3212d
+	.long	0x3553c
 	.quad	.LFB7883
 	.quad	.LFE7883-.LFB7883
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x354a8
+	.long	0x356bc
 	.uleb128 0x13
 	.secrel32	.LASF279
-	.long	0x3235b
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 8
-	.uleb128 0x21
-	.secrel32	.LASF293
-	.byte	0x4
-	.byte	0xdf
-	.byte	0x43
-	.long	0x3238e
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 16
-	.byte	0
-	.uleb128 0x23
-	.long	0x320ce
-	.long	0x354c7
-	.quad	.LFB7882
-	.quad	.LFE7882-.LFB7882
-	.uleb128 0x1
-	.byte	0x9c
-	.long	0x35647
-	.uleb128 0x13
-	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x3b
 	.ascii "path\0"
 	.byte	0x4
-	.byte	0xab
+	.byte	0xae
 	.byte	0x34
 	.long	0x1ec94
 	.uleb128 0x2
@@ -52893,7 +52941,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x21
 	.secrel32	.LASF293
 	.byte	0x4
-	.byte	0xab
+	.byte	0xae
 	.byte	0x4b
 	.long	0x31c1f
 	.uleb128 0x2
@@ -52902,16 +52950,16 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "folder\0"
 	.byte	0x4
-	.byte	0xad
+	.byte	0xb0
 	.byte	0x15
-	.long	0x35647
+	.long	0x356bc
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -192
 	.uleb128 0x36
 	.ascii "files\0"
 	.byte	0x4
-	.byte	0xb3
+	.byte	0xb6
 	.byte	0x21
 	.long	0x1ed8f
 	.uleb128 0x2
@@ -52920,7 +52968,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "folders\0"
 	.byte	0x4
-	.byte	0xb4
+	.byte	0xb7
 	.byte	0x21
 	.long	0x1ee87
 	.uleb128 0x2
@@ -52929,7 +52977,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "fileNames\0"
 	.byte	0x4
-	.byte	0xb6
+	.byte	0xb9
 	.byte	0x21
 	.long	0x11620
 	.uleb128 0x3
@@ -52938,7 +52986,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "folderNames\0"
 	.byte	0x4
-	.byte	0xb7
+	.byte	0xba
 	.byte	0x21
 	.long	0x11620
 	.uleb128 0x3
@@ -52946,11 +52994,11 @@ _ZTS16T100ProjectLogic:
 	.sleb128 -256
 	.uleb128 0xca
 	.secrel32	.Ldebug_ranges0+0
-	.long	0x355db
+	.long	0x35650
 	.uleb128 0x36
 	.ascii "item\0"
 	.byte	0x4
-	.byte	0xbb
+	.byte	0xbe
 	.byte	0x1c
 	.long	0x1ec94
 	.uleb128 0x2
@@ -52979,16 +53027,16 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "thisFolder\0"
 	.byte	0x4
-	.byte	0xbc
+	.byte	0xbf
 	.byte	0x21
-	.long	0x32394
+	.long	0x323f3
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -384
 	.uleb128 0x62
 	.secrel32	.LASF297
 	.byte	0x4
-	.byte	0xbf
+	.byte	0xc2
 	.byte	0x19
 	.long	0x8ff4
 	.uleb128 0x3
@@ -52997,7 +53045,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "thisInfo\0"
 	.byte	0x4
-	.byte	0xc2
+	.byte	0xc5
 	.byte	0x1d
 	.long	0x1edc2
 	.uleb128 0x3
@@ -53010,7 +53058,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "item\0"
 	.byte	0x4
-	.byte	0xca
+	.byte	0xcd
 	.byte	0x1c
 	.long	0x1ec94
 	.uleb128 0x3
@@ -53039,7 +53087,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x62
 	.secrel32	.LASF297
 	.byte	0x4
-	.byte	0xce
+	.byte	0xd1
 	.byte	0x21
 	.long	0x8ff4
 	.uleb128 0x3
@@ -53048,7 +53096,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "thisFile\0"
 	.byte	0x4
-	.byte	0xcf
+	.byte	0xd2
 	.byte	0x21
 	.long	0x1eccc
 	.uleb128 0x3
@@ -53060,32 +53108,32 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1b
 	.ascii "T100Folder\0"
 	.uleb128 0x23
-	.long	0x32015
-	.long	0x35672
-	.quad	.LFB7881
-	.quad	.LFE7881-.LFB7881
+	.long	0x32074
+	.long	0x356e7
+	.quad	.LFB7882
+	.quad	.LFE7882-.LFB7882
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x356b6
+	.long	0x3572b
 	.uleb128 0x13
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x21
 	.secrel32	.LASF293
 	.byte	0x4
-	.byte	0x91
+	.byte	0x94
 	.byte	0x34
-	.long	0x323c4
+	.long	0x32439
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x62
 	.secrel32	.LASF298
 	.byte	0x4
-	.byte	0x9b
+	.byte	0x9e
 	.byte	0x1d
 	.long	0x8ff4
 	.uleb128 0x3
@@ -53094,41 +53142,65 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x36
 	.ascii "projectFile\0"
 	.byte	0x4
-	.byte	0x9f
+	.byte	0xa2
 	.byte	0x1d
-	.long	0x356b6
+	.long	0x3572b
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -144
 	.byte	0
 	.uleb128 0x1b
 	.ascii "T100ProjectFile\0"
-	.uleb128 0x35
-	.long	0x31fc7
-	.long	0x356e6
-	.quad	.LFB7880
-	.quad	.LFE7880-.LFB7880
+	.uleb128 0x33
+	.long	0x32026
+	.long	0x3575b
+	.quad	.LFB7881
+	.quad	.LFE7881-.LFB7881
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x356f3
+	.long	0x35768
 	.uleb128 0x13
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
+	.uleb128 0x33
+	.long	0x31fc7
+	.long	0x35787
+	.quad	.LFB7880
+	.quad	.LFE7880-.LFB7880
+	.uleb128 0x1
+	.byte	0x9c
+	.long	0x357a3
+	.uleb128 0x13
+	.secrel32	.LASF279
+	.long	0x323ba
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 0
+	.uleb128 0x21
+	.secrel32	.LASF293
+	.byte	0x4
+	.byte	0x82
+	.byte	0x39
+	.long	0x32423
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 8
+	.byte	0
 	.uleb128 0x23
 	.long	0x31f74
-	.long	0x35712
+	.long	0x357c2
 	.quad	.LFB7879
 	.quad	.LFE7879-.LFB7879
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x35754
+	.long	0x35804
 	.uleb128 0x13
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -53137,7 +53209,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x4
 	.byte	0x69
 	.byte	0x35
-	.long	0x323ab
+	.long	0x3240a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -53146,7 +53218,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x4
 	.byte	0x71
 	.byte	0x15
-	.long	0x35754
+	.long	0x35804
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -104
@@ -53163,16 +53235,16 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x1b
 	.ascii "T100Shell\0"
 	.uleb128 0x23
-	.long	0x3223f
-	.long	0x3577e
+	.long	0x3229e
+	.long	0x3582e
 	.quad	.LFB7878
 	.quad	.LFE7878-.LFB7878
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x357f0
+	.long	0x358a0
 	.uleb128 0x13
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -53181,7 +53253,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x4
 	.byte	0x5a
 	.byte	0x3c
-	.long	0x3238e
+	.long	0x323ed
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -53190,7 +53262,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x4
 	.byte	0x5a
 	.byte	0x55
-	.long	0x323ab
+	.long	0x3240a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -53217,7 +53289,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x4
 	.byte	0x61
 	.byte	0x15
-	.long	0x35754
+	.long	0x35804
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -136
@@ -53233,15 +53305,15 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x23
 	.long	0x31f0c
-	.long	0x3580f
+	.long	0x358bf
 	.quad	.LFB7874
 	.quad	.LFE7874-.LFB7874
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x35890
+	.long	0x35940
 	.uleb128 0x13
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -53250,7 +53322,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x4
 	.byte	0x28
 	.byte	0x38
-	.long	0x3238e
+	.long	0x323ed
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -53259,7 +53331,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x4
 	.byte	0x28
 	.byte	0x51
-	.long	0x323ab
+	.long	0x3240a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -53286,7 +53358,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x4
 	.byte	0x35
 	.byte	0x19
-	.long	0x35647
+	.long	0x356bc
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -208
@@ -53295,7 +53367,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0x4
 	.byte	0x41
 	.byte	0x19
-	.long	0x356b6
+	.long	0x3572b
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -256
@@ -53307,85 +53379,85 @@ _ZTS16T100ProjectLogic:
 	.long	0x31c1f
 	.byte	0
 	.uleb128 0x23
-	.long	0x3231b
-	.long	0x358af
+	.long	0x3237a
+	.long	0x3595f
 	.quad	.LFB7873
 	.quad	.LFE7873-.LFB7873
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x358bc
+	.long	0x3596c
 	.uleb128 0x13
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x23
-	.long	0x322e7
-	.long	0x358db
+	.long	0x32346
+	.long	0x3598b
 	.quad	.LFB7872
 	.quad	.LFE7872-.LFB7872
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x358e8
+	.long	0x35998
 	.uleb128 0x13
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x27
 	.long	0x31ec2
-	.long	0x358f6
+	.long	0x359a6
 	.byte	0
-	.long	0x35909
+	.long	0x359b9
 	.uleb128 0x1e
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x1e
 	.secrel32	.LASF281
 	.long	0x1ca08
 	.byte	0
 	.uleb128 0x4c
-	.long	0x358e8
+	.long	0x35998
 	.ascii "_ZN16T100ProjectLogicD0Ev\0"
-	.long	0x35942
+	.long	0x359f2
 	.quad	.LFB7871
 	.quad	.LFE7871-.LFB7871
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3594b
+	.long	0x359fb
 	.uleb128 0x2a
-	.long	0x358f6
+	.long	0x359a6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x5d
-	.long	0x358e8
+	.long	0x35998
 	.ascii "_ZN16T100ProjectLogicD2Ev\0"
-	.long	0x35984
+	.long	0x35a34
 	.quad	.LFB7869
 	.quad	.LFE7869-.LFB7869
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x3598d
+	.long	0x35a3d
 	.uleb128 0x2a
-	.long	0x358f6
+	.long	0x359a6
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x27
 	.long	0x31e7b
-	.long	0x3599b
+	.long	0x35a4b
 	.byte	0
-	.long	0x359b1
+	.long	0x35a61
 	.uleb128 0x1e
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.uleb128 0x6c
 	.secrel32	.LASF293
 	.byte	0x4
@@ -53394,45 +53466,45 @@ _ZTS16T100ProjectLogic:
 	.long	0x31c1f
 	.byte	0
 	.uleb128 0x4c
-	.long	0x3598d
+	.long	0x35a3d
 	.ascii "_ZN16T100ProjectLogicC2EP15T100ProjectInfo\0"
-	.long	0x359fb
+	.long	0x35aab
 	.quad	.LFB7866
 	.quad	.LFE7866-.LFB7866
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x35a0c
+	.long	0x35abc
 	.uleb128 0x2a
-	.long	0x3599b
+	.long	0x35a4b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x2a
-	.long	0x359a4
+	.long	0x35a54
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x27
 	.long	0x31e4a
-	.long	0x35a1a
+	.long	0x35aca
 	.byte	0
-	.long	0x35a24
+	.long	0x35ad4
 	.uleb128 0x1e
 	.secrel32	.LASF279
-	.long	0x3235b
+	.long	0x323ba
 	.byte	0
 	.uleb128 0x4c
-	.long	0x35a0c
+	.long	0x35abc
 	.ascii "_ZN16T100ProjectLogicC2Ev\0"
-	.long	0x35a5d
+	.long	0x35b0d
 	.quad	.LFB7863
 	.quad	.LFE7863-.LFB7863
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x35a66
+	.long	0x35b16
 	.uleb128 0x2a
-	.long	0x35a1a
+	.long	0x35aca
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -53443,7 +53515,7 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE1757-.LFB1757
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x35aa9
+	.long	0x35b59
 	.uleb128 0xc
 	.ascii "_Tp\0"
 	.long	0x1c9c1
@@ -53468,7 +53540,7 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.uleb128 0x5b
 	.long	0xa654
-	.long	0x35adc
+	.long	0x35b8c
 	.uleb128 0x5c
 	.ascii "__s1\0"
 	.byte	0x2
@@ -53494,7 +53566,7 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE934-.LFB934
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x35b2a
+	.long	0x35bda
 	.uleb128 0x1c
 	.ascii "__s1\0"
 	.byte	0x2
@@ -54401,6 +54473,25 @@ _ZTS16T100ProjectLogic:
 	.byte	0
 	.byte	0
 	.uleb128 0x33
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x47
+	.uleb128 0x13
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x11
+	.uleb128 0x1
+	.uleb128 0x12
+	.uleb128 0x7
+	.uleb128 0x40
+	.uleb128 0x18
+	.uleb128 0x2117
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x34
 	.uleb128 0x2
 	.byte	0x1
 	.uleb128 0x3
@@ -54417,7 +54508,7 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x13
 	.byte	0
 	.byte	0
-	.uleb128 0x34
+	.uleb128 0x35
 	.uleb128 0x2e
 	.byte	0x1
 	.uleb128 0x3f
@@ -54435,25 +54526,6 @@ _ZTS16T100ProjectLogic:
 	.uleb128 0x49
 	.uleb128 0x13
 	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x35
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x47
-	.uleb128 0x13
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x11
-	.uleb128 0x1
-	.uleb128 0x12
-	.uleb128 0x7
-	.uleb128 0x40
-	.uleb128 0x18
-	.uleb128 0x2117
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
@@ -57034,12 +57106,10 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE934-.LFB934
 	.quad	.LFB1757
 	.quad	.LFE1757-.LFB1757
-	.quad	.LFB8492
-	.quad	.LFE8492-.LFB8492
-	.quad	.LFB8495
-	.quad	.LFE8495-.LFB8495
-	.quad	.LFB8498
-	.quad	.LFE8498-.LFB8498
+	.quad	.LFB8493
+	.quad	.LFE8493-.LFB8493
+	.quad	.LFB8496
+	.quad	.LFE8496-.LFB8496
 	.quad	.LFB8499
 	.quad	.LFE8499-.LFB8499
 	.quad	.LFB8500
@@ -57064,50 +57134,50 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8509-.LFB8509
 	.quad	.LFB8510
 	.quad	.LFE8510-.LFB8510
-	.quad	.LFB8722
-	.quad	.LFE8722-.LFB8722
-	.quad	.LFB8726
-	.quad	.LFE8726-.LFB8726
+	.quad	.LFB8511
+	.quad	.LFE8511-.LFB8511
+	.quad	.LFB8723
+	.quad	.LFE8723-.LFB8723
 	.quad	.LFB8727
 	.quad	.LFE8727-.LFB8727
-	.quad	.LFB8730
-	.quad	.LFE8730-.LFB8730
-	.quad	.LFB8732
-	.quad	.LFE8732-.LFB8732
+	.quad	.LFB8728
+	.quad	.LFE8728-.LFB8728
+	.quad	.LFB8731
+	.quad	.LFE8731-.LFB8731
 	.quad	.LFB8733
 	.quad	.LFE8733-.LFB8733
-	.quad	.LFB8736
-	.quad	.LFE8736-.LFB8736
+	.quad	.LFB8734
+	.quad	.LFE8734-.LFB8734
 	.quad	.LFB8737
 	.quad	.LFE8737-.LFB8737
-	.quad	.LFB8739
-	.quad	.LFE8739-.LFB8739
 	.quad	.LFB8738
 	.quad	.LFE8738-.LFB8738
 	.quad	.LFB8740
 	.quad	.LFE8740-.LFB8740
+	.quad	.LFB8739
+	.quad	.LFE8739-.LFB8739
 	.quad	.LFB8741
 	.quad	.LFE8741-.LFB8741
-	.quad	.LFB8743
-	.quad	.LFE8743-.LFB8743
 	.quad	.LFB8742
 	.quad	.LFE8742-.LFB8742
 	.quad	.LFB8744
 	.quad	.LFE8744-.LFB8744
+	.quad	.LFB8743
+	.quad	.LFE8743-.LFB8743
 	.quad	.LFB8745
 	.quad	.LFE8745-.LFB8745
-	.quad	.LFB8813
-	.quad	.LFE8813-.LFB8813
-	.quad	.LFB8815
-	.quad	.LFE8815-.LFB8815
-	.quad	.LFB8817
-	.quad	.LFE8817-.LFB8817
+	.quad	.LFB8746
+	.quad	.LFE8746-.LFB8746
+	.quad	.LFB8814
+	.quad	.LFE8814-.LFB8814
+	.quad	.LFB8816
+	.quad	.LFE8816-.LFB8816
 	.quad	.LFB8818
 	.quad	.LFE8818-.LFB8818
 	.quad	.LFB8819
 	.quad	.LFE8819-.LFB8819
-	.quad	.LFB8822
-	.quad	.LFE8822-.LFB8822
+	.quad	.LFB8820
+	.quad	.LFE8820-.LFB8820
 	.quad	.LFB8823
 	.quad	.LFE8823-.LFB8823
 	.quad	.LFB8824
@@ -57130,8 +57200,8 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8832-.LFB8832
 	.quad	.LFB8833
 	.quad	.LFE8833-.LFB8833
-	.quad	.LFB8836
-	.quad	.LFE8836-.LFB8836
+	.quad	.LFB8834
+	.quad	.LFE8834-.LFB8834
 	.quad	.LFB8837
 	.quad	.LFE8837-.LFB8837
 	.quad	.LFB8838
@@ -57152,18 +57222,18 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8845-.LFB8845
 	.quad	.LFB8846
 	.quad	.LFE8846-.LFB8846
-	.quad	.LFB8882
-	.quad	.LFE8882-.LFB8882
-	.quad	.LFB8885
-	.quad	.LFE8885-.LFB8885
-	.quad	.LFB8887
-	.quad	.LFE8887-.LFB8887
-	.quad	.LFB8889
-	.quad	.LFE8889-.LFB8889
+	.quad	.LFB8847
+	.quad	.LFE8847-.LFB8847
+	.quad	.LFB8883
+	.quad	.LFE8883-.LFB8883
+	.quad	.LFB8886
+	.quad	.LFE8886-.LFB8886
 	.quad	.LFB8888
 	.quad	.LFE8888-.LFB8888
 	.quad	.LFB8890
 	.quad	.LFE8890-.LFB8890
+	.quad	.LFB8889
+	.quad	.LFE8889-.LFB8889
 	.quad	.LFB8891
 	.quad	.LFE8891-.LFB8891
 	.quad	.LFB8892
@@ -57194,10 +57264,10 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8904-.LFB8904
 	.quad	.LFB8905
 	.quad	.LFE8905-.LFB8905
-	.quad	.LFB8946
-	.quad	.LFE8946-.LFB8946
-	.quad	.LFB8948
-	.quad	.LFE8948-.LFB8948
+	.quad	.LFB8906
+	.quad	.LFE8906-.LFB8906
+	.quad	.LFB8947
+	.quad	.LFE8947-.LFB8947
 	.quad	.LFB8949
 	.quad	.LFE8949-.LFB8949
 	.quad	.LFB8950
@@ -57206,8 +57276,8 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8951-.LFB8951
 	.quad	.LFB8952
 	.quad	.LFE8952-.LFB8952
-	.quad	.LFB8955
-	.quad	.LFE8955-.LFB8955
+	.quad	.LFB8953
+	.quad	.LFE8953-.LFB8953
 	.quad	.LFB8956
 	.quad	.LFE8956-.LFB8956
 	.quad	.LFB8957
@@ -57220,28 +57290,28 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8960-.LFB8960
 	.quad	.LFB8961
 	.quad	.LFE8961-.LFB8961
-	.quad	.LFB8964
-	.quad	.LFE8964-.LFB8964
+	.quad	.LFB8962
+	.quad	.LFE8962-.LFB8962
 	.quad	.LFB8965
 	.quad	.LFE8965-.LFB8965
 	.quad	.LFB8966
 	.quad	.LFE8966-.LFB8966
 	.quad	.LFB8967
 	.quad	.LFE8967-.LFB8967
-	.quad	.LFB8991
-	.quad	.LFE8991-.LFB8991
+	.quad	.LFB8968
+	.quad	.LFE8968-.LFB8968
 	.quad	.LFB8992
 	.quad	.LFE8992-.LFB8992
 	.quad	.LFB8993
 	.quad	.LFE8993-.LFB8993
 	.quad	.LFB8994
 	.quad	.LFE8994-.LFB8994
-	.quad	.LFB9002
-	.quad	.LFE9002-.LFB9002
+	.quad	.LFB8995
+	.quad	.LFE8995-.LFB8995
 	.quad	.LFB9003
 	.quad	.LFE9003-.LFB9003
-	.quad	.LFB9006
-	.quad	.LFE9006-.LFB9006
+	.quad	.LFB9004
+	.quad	.LFE9004-.LFB9004
 	.quad	.LFB9007
 	.quad	.LFE9007-.LFB9007
 	.quad	.LFB9008
@@ -57268,6 +57338,8 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE9018-.LFB9018
 	.quad	.LFB9019
 	.quad	.LFE9019-.LFB9019
+	.quad	.LFB9020
+	.quad	.LFE9020-.LFB9020
 	.quad	0
 	.quad	0
 	.section	.debug_ranges,"dr"
@@ -57304,12 +57376,10 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE934
 	.quad	.LFB1757
 	.quad	.LFE1757
-	.quad	.LFB8492
-	.quad	.LFE8492
-	.quad	.LFB8495
-	.quad	.LFE8495
-	.quad	.LFB8498
-	.quad	.LFE8498
+	.quad	.LFB8493
+	.quad	.LFE8493
+	.quad	.LFB8496
+	.quad	.LFE8496
 	.quad	.LFB8499
 	.quad	.LFE8499
 	.quad	.LFB8500
@@ -57334,50 +57404,50 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8509
 	.quad	.LFB8510
 	.quad	.LFE8510
-	.quad	.LFB8722
-	.quad	.LFE8722
-	.quad	.LFB8726
-	.quad	.LFE8726
+	.quad	.LFB8511
+	.quad	.LFE8511
+	.quad	.LFB8723
+	.quad	.LFE8723
 	.quad	.LFB8727
 	.quad	.LFE8727
-	.quad	.LFB8730
-	.quad	.LFE8730
-	.quad	.LFB8732
-	.quad	.LFE8732
+	.quad	.LFB8728
+	.quad	.LFE8728
+	.quad	.LFB8731
+	.quad	.LFE8731
 	.quad	.LFB8733
 	.quad	.LFE8733
-	.quad	.LFB8736
-	.quad	.LFE8736
+	.quad	.LFB8734
+	.quad	.LFE8734
 	.quad	.LFB8737
 	.quad	.LFE8737
-	.quad	.LFB8739
-	.quad	.LFE8739
 	.quad	.LFB8738
 	.quad	.LFE8738
 	.quad	.LFB8740
 	.quad	.LFE8740
+	.quad	.LFB8739
+	.quad	.LFE8739
 	.quad	.LFB8741
 	.quad	.LFE8741
-	.quad	.LFB8743
-	.quad	.LFE8743
 	.quad	.LFB8742
 	.quad	.LFE8742
 	.quad	.LFB8744
 	.quad	.LFE8744
+	.quad	.LFB8743
+	.quad	.LFE8743
 	.quad	.LFB8745
 	.quad	.LFE8745
-	.quad	.LFB8813
-	.quad	.LFE8813
-	.quad	.LFB8815
-	.quad	.LFE8815
-	.quad	.LFB8817
-	.quad	.LFE8817
+	.quad	.LFB8746
+	.quad	.LFE8746
+	.quad	.LFB8814
+	.quad	.LFE8814
+	.quad	.LFB8816
+	.quad	.LFE8816
 	.quad	.LFB8818
 	.quad	.LFE8818
 	.quad	.LFB8819
 	.quad	.LFE8819
-	.quad	.LFB8822
-	.quad	.LFE8822
+	.quad	.LFB8820
+	.quad	.LFE8820
 	.quad	.LFB8823
 	.quad	.LFE8823
 	.quad	.LFB8824
@@ -57400,8 +57470,8 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8832
 	.quad	.LFB8833
 	.quad	.LFE8833
-	.quad	.LFB8836
-	.quad	.LFE8836
+	.quad	.LFB8834
+	.quad	.LFE8834
 	.quad	.LFB8837
 	.quad	.LFE8837
 	.quad	.LFB8838
@@ -57422,18 +57492,18 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8845
 	.quad	.LFB8846
 	.quad	.LFE8846
-	.quad	.LFB8882
-	.quad	.LFE8882
-	.quad	.LFB8885
-	.quad	.LFE8885
-	.quad	.LFB8887
-	.quad	.LFE8887
-	.quad	.LFB8889
-	.quad	.LFE8889
+	.quad	.LFB8847
+	.quad	.LFE8847
+	.quad	.LFB8883
+	.quad	.LFE8883
+	.quad	.LFB8886
+	.quad	.LFE8886
 	.quad	.LFB8888
 	.quad	.LFE8888
 	.quad	.LFB8890
 	.quad	.LFE8890
+	.quad	.LFB8889
+	.quad	.LFE8889
 	.quad	.LFB8891
 	.quad	.LFE8891
 	.quad	.LFB8892
@@ -57464,10 +57534,10 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8904
 	.quad	.LFB8905
 	.quad	.LFE8905
-	.quad	.LFB8946
-	.quad	.LFE8946
-	.quad	.LFB8948
-	.quad	.LFE8948
+	.quad	.LFB8906
+	.quad	.LFE8906
+	.quad	.LFB8947
+	.quad	.LFE8947
 	.quad	.LFB8949
 	.quad	.LFE8949
 	.quad	.LFB8950
@@ -57476,8 +57546,8 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8951
 	.quad	.LFB8952
 	.quad	.LFE8952
-	.quad	.LFB8955
-	.quad	.LFE8955
+	.quad	.LFB8953
+	.quad	.LFE8953
 	.quad	.LFB8956
 	.quad	.LFE8956
 	.quad	.LFB8957
@@ -57490,28 +57560,28 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE8960
 	.quad	.LFB8961
 	.quad	.LFE8961
-	.quad	.LFB8964
-	.quad	.LFE8964
+	.quad	.LFB8962
+	.quad	.LFE8962
 	.quad	.LFB8965
 	.quad	.LFE8965
 	.quad	.LFB8966
 	.quad	.LFE8966
 	.quad	.LFB8967
 	.quad	.LFE8967
-	.quad	.LFB8991
-	.quad	.LFE8991
+	.quad	.LFB8968
+	.quad	.LFE8968
 	.quad	.LFB8992
 	.quad	.LFE8992
 	.quad	.LFB8993
 	.quad	.LFE8993
 	.quad	.LFB8994
 	.quad	.LFE8994
-	.quad	.LFB9002
-	.quad	.LFE9002
+	.quad	.LFB8995
+	.quad	.LFE8995
 	.quad	.LFB9003
 	.quad	.LFE9003
-	.quad	.LFB9006
-	.quad	.LFE9006
+	.quad	.LFB9004
+	.quad	.LFE9004
 	.quad	.LFB9007
 	.quad	.LFE9007
 	.quad	.LFB9008
@@ -57538,6 +57608,8 @@ _ZTS16T100ProjectLogic:
 	.quad	.LFE9018
 	.quad	.LFB9019
 	.quad	.LFE9019
+	.quad	.LFB9020
+	.quad	.LFE9020
 	.quad	0
 	.quad	0
 	.section	.debug_line,"dr"

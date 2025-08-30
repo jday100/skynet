@@ -9,6 +9,7 @@ class T100ProjectFrame;
 class T100ProjectSkeletal;
 class T100WxProjectInfo;
 class T100Pack;
+class T100ModuleInfo;
 
 class T100ProjectInvoking
 {

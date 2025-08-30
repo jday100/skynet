@@ -6,6 +6,7 @@
 #include <wx/textctrl.h>
 #include <wx/dialog.h>
 #include "T100Common.h"
+#include "T100ModuleInfo.h"
 
 class T100ModuleCreateDialog : public wxDialog
 {
@@ -18,6 +19,8 @@ class T100ModuleCreateDialog : public wxDialog
              const wxString& name = wxDialogNameStr);
         virtual ~T100ModuleCreateDialog();
 
+        T100ModuleInfo*         GetModuleInfo();
+
     protected:
         static const long ID_MODULE_NAME_STATIC_TEXT;
         static const long ID_MODULE_NAME_TEXT_CTRL;
@@ -28,6 +31,8 @@ class T100ModuleCreateDialog : public wxDialog
         T100VOID                OnApply(wxCommandEvent&);
 
     private:
+        T100ModuleInfo*         m_info          = T100NULL;
+
         T100VOID                init();
         T100VOID                uninit();
 

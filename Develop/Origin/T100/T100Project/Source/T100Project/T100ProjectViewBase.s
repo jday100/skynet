@@ -178,7 +178,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 1 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.260393
+	setne	%al	 #, D.260607
 .LBE7:
 .LBE6:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -367,7 +367,7 @@ _ZNKSt9type_info4nameEv:
 	movq	8(%rax), %rax	 # this_6(D)->__name, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 6 100 31 discriminator 1
-	addq	$1, %rax	 #, iftmp.52_4
+	addq	$1, %rax	 #, iftmp.53_4
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 6 100 46 discriminator 1
 	jmp	.L18	 #
@@ -375,7 +375,7 @@ _ZNKSt9type_info4nameEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 6 100 31 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	8(%rax), %rax	 # this_6(D)->__name, iftmp.52_4
+	movq	8(%rax), %rax	 # this_6(D)->__name, iftmp.53_4
 .L18:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 6 100 54 discriminator 5
@@ -534,8 +534,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.260402
-	movq	%rax, %rcx	 # D.260402,
+	movq	%rbx, %rax	 # tmp96, D.260616
+	movq	%rax, %rcx	 # D.260616,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -804,8 +804,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.260406
-	movq	%rax, %rcx	 # D.260406,
+	movq	%rbx, %rax	 # tmp103, D.260620
+	movq	%rax, %rcx	 # D.260620,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -912,8 +912,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.260408
-	movq	%rax, %rcx	 # D.260408,
+	movq	%rbx, %rax	 # tmp99, D.260622
+	movq	%rax, %rcx	 # D.260622,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1834,7 +1834,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 	call	_ZN16wxTypeIdentifiereqERKS_	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 14 251 9
-	testb	%al, %al	 # retval.50_28
+	testb	%al, %al	 # retval.51_28
 	je	.L70	 #,
 .LBB30:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:253:             const wxObjectEventFunctor &other =
@@ -1902,14 +1902,14 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 .L74:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 14 262 74 discriminator 9
-	movl	$1, %eax	 #, iftmp.51_19
+	movl	$1, %eax	 #, iftmp.52_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 14 263 78 discriminator 9
 	jmp	.L76	 #
 .L73:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 14 262 74 discriminator 8
-	movl	$0, %eax	 #, iftmp.51_19
+	movl	$0, %eax	 #, iftmp.52_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 14 263 78 discriminator 8
 	jmp	.L76	 #
@@ -1917,7 +1917,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 .LBE30:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:266:             return false;
 	.loc 14 266 20
-	movl	$0, %eax	 #, iftmp.51_19
+	movl	$0, %eax	 #, iftmp.52_19
 .L76:
 .LBE29:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:267:     }
@@ -2236,16 +2236,16 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 14 3776 50 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp106
-	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.53_17
+	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.54_17
 	jmp	.L92	 #
 .L91:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 14 3776 50 discriminator 2
-	movq	24(%rbp), %rax	 # handler, iftmp.53_17
+	movq	24(%rbp), %rax	 # handler, iftmp.54_17
 .L92:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 14 3776 26 is_stmt 1 discriminator 4
-	movq	%rax, -8(%rbp)	 # iftmp.53_17, realHandler
+	movq	%rax, -8(%rbp)	 # iftmp.54_17, realHandler
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 14 3778 35 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp107
@@ -2274,18 +2274,18 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
 	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, _12
 	subq	$1, %rax	 #, _14
 	addq	%rdx, %rax	 # _11, _16
-	movq	(%rax), %rax	 # *_16, iftmp.54_18
+	movq	(%rax), %rax	 # *_16, iftmp.55_18
 	jmp	.L94	 #
 .L93:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 14 3778 35 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp113
-	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.54_18
+	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.55_18
 .L94:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 14 3778 29 is_stmt 1 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp114
-	call	*%rax	 # iftmp.54_18
+	call	*%rax	 # iftmp.55_18
 .LVL3:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3779: }
 	.loc 14 3779 1 discriminator 4
@@ -2462,7 +2462,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 15 337 27
-	movq	-8(%rbp), %rax	 # D.127637, D.259910
+	movq	-8(%rbp), %rax	 # D.127637, D.260112
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 15 338 5
 	addq	$48, %rsp	 #,
@@ -2693,7 +2693,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 15 481 78
-	movq	-8(%rbp), %rax	 # D.127671, D.259932
+	movq	-8(%rbp), %rax	 # D.127671, D.260134
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 15 481 81
 	addq	$48, %rsp	 #,
@@ -2741,7 +2741,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 15 482 78
-	movq	-8(%rbp), %rax	 # D.127673, D.259929
+	movq	-8(%rbp), %rax	 # D.127673, D.260131
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 15 482 81
 	addq	$48, %rsp	 #,
@@ -2928,7 +2928,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 15 532 77
-	movq	-72(%rbp), %rax	 # D.127715, D.259905
+	movq	-72(%rbp), %rax	 # D.127715, D.260107
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 15 533 5
 	addq	$72, %rsp	 #,
@@ -3870,7 +3870,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 15 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.259803
+	movq	(%rax), %rax	 # wxDefaultSize, D.260005
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 15 1746 72
 	popq	%rbp	 #
@@ -4737,8 +4737,8 @@ _ZN13wxAuiPaneInfoC1Ev:
 	movq	-64(%rbp), %rax	 # this, _14
 	movq	%rax, %rcx	 # _14,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp143, D.260419
-	movq	%rax, %rcx	 # D.260419,
+	movq	%rbx, %rax	 # tmp143, D.260633
+	movq	%rax, %rcx	 # D.260633,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5105,8 +5105,8 @@ _ZN13wxAuiPaneInfoC1ERKS_:
 	movq	-64(%rbp), %rax	 # this, _30
 	movq	%rax, %rcx	 # _30,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp176, D.260420
-	movq	%rax, %rcx	 # D.260420,
+	movq	%rbx, %rax	 # tmp176, D.260634
+	movq	%rax, %rcx	 # D.260634,
 .LEHB13:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5581,8 +5581,8 @@ _ZN13wxAuiPaneInfo11DefaultPaneEv:
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.260421
-	movq	%rax, %rcx	 # D.260421,
+	movq	%rbx, %rax	 # tmp106, D.260635
+	movq	%rax, %rcx	 # D.260635,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .LEHE16:
@@ -5759,8 +5759,8 @@ _ZN13wxAuiPaneInfo7SetFlagEib:
 	leaq	-80(%rbp), %rax	 #, tmp113
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp114, D.260427
-	movq	%rax, %rcx	 # D.260427,
+	movq	%rbx, %rax	 # tmp114, D.260641
+	movq	%rax, %rcx	 # D.260641,
 .LEHB19:
 	call	_Unwind_Resume	 #
 .LEHE19:
@@ -6913,7 +6913,7 @@ _ZNK15wxDirDialogBase7GetPathEv:
 _ZN19T100ProjectViewBaseC2Ev:
 .LFB19273:
 	.file 27 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/view/T100ProjectViewBase.cpp"
-	.loc 27 12 1
+	.loc 27 14 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -6932,8 +6932,8 @@ _ZN19T100ProjectViewBaseC2Ev:
 	.seh_endprologue
 	movq	%rcx, -48(%rbp)	 # this, this
 .LBB40:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:12: T100ProjectViewBase::T100ProjectViewBase()
-	.loc 27 12 42
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:14: T100ProjectViewBase::T100ProjectViewBase()
+	.loc 27 14 42
 	leaq	16+_ZTV19T100ProjectViewBase(%rip), %rdx	 #, _1
 	movq	-48(%rbp), %rax	 # this, tmp91
 	movq	%rdx, (%rax)	 # _1, this_5(D)->_vptr.T100ProjectViewBase
@@ -6961,37 +6961,37 @@ _ZN19T100ProjectViewBaseC2Ev:
 .LEHB20:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1EPKwRKS3_	 #
 .LEHE20:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:12: T100ProjectViewBase::T100ProjectViewBase()
-	.loc 27 12 42 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:14: T100ProjectViewBase::T100ProjectViewBase()
+	.loc 27 14 42 is_stmt 0 discriminator 2
 	leaq	-81(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZNSaIwED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:15:     init();
-	.loc 27 15 9 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:17:     init();
+	.loc 27 17 9 is_stmt 1 discriminator 2
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZN19T100ProjectViewBase4initEv	 #
 .LBE40:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:16: }
-	.loc 27 16 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:18: }
+	.loc 27 18 1 discriminator 2
 	jmp	.L294	 #
 .L293:
 	movq	%rax, %rbx	 #, tmp103
 .LBB41:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:12: T100ProjectViewBase::T100ProjectViewBase()
-	.loc 27 12 42
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:14: T100ProjectViewBase::T100ProjectViewBase()
+	.loc 27 14 42
 	leaq	-81(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.260430
-	movq	%rax, %rcx	 # D.260430,
+	movq	%rbx, %rax	 # tmp103, D.260644
+	movq	%rax, %rcx	 # D.260644,
 .LEHB21:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE21:
 .L294:
 .LBE41:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:16: }
-	.loc 27 16 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:18: }
+	.loc 27 18 1
 	addq	$56, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -7029,7 +7029,7 @@ _ZN19T100ProjectViewBaseC2Ev:
 	.seh_proc	_ZN19T100ProjectViewBaseD2Ev
 _ZN19T100ProjectViewBaseD2Ev:
 .LFB19276:
-	.loc 27 18 1
+	.loc 27 20 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7043,24 +7043,24 @@ _ZN19T100ProjectViewBaseD2Ev:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 .LBB42:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:18: T100ProjectViewBase::~T100ProjectViewBase()
-	.loc 27 18 43
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:20: T100ProjectViewBase::~T100ProjectViewBase()
+	.loc 27 20 43
 	leaq	16+_ZTV19T100ProjectViewBase(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	%rdx, (%rax)	 # _1, this_4(D)->_vptr.T100ProjectViewBase
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:21:     uninit();
-	.loc 27 21 11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:23:     uninit();
+	.loc 27 23 11
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN19T100ProjectViewBase6uninitEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:18: T100ProjectViewBase::~T100ProjectViewBase()
-	.loc 27 18 43
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:20: T100ProjectViewBase::~T100ProjectViewBase()
+	.loc 27 20 43
 	movq	16(%rbp), %rax	 # this, tmp90
 	addq	$64, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 .LBE42:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:22: }
-	.loc 27 22 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:24: }
+	.loc 27 24 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -7079,7 +7079,7 @@ _ZN19T100ProjectViewBaseD2Ev:
 	.seh_proc	_ZN19T100ProjectViewBaseD0Ev
 _ZN19T100ProjectViewBaseD0Ev:
 .LFB19278:
-	.loc 27 18 1
+	.loc 27 20 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7092,8 +7092,8 @@ _ZN19T100ProjectViewBaseD0Ev:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:22: }
-	.loc 27 22 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:24: }
+	.loc 27 24 1
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN19T100ProjectViewBaseD1Ev	 #
 	movl	$96, %edx	 #,
@@ -7114,7 +7114,7 @@ _ZN19T100ProjectViewBaseD0Ev:
 	.seh_proc	_ZN19T100ProjectViewBase4initEv
 _ZN19T100ProjectViewBase4initEv:
 .LFB19279:
-	.loc 27 25 1
+	.loc 27 27 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7127,15 +7127,15 @@ _ZN19T100ProjectViewBase4initEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:26:     m_dirty     = T100FALSE;
-	.loc 27 26 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:28:     m_dirty     = T100FALSE;
+	.loc 27 28 17
 	movq	16(%rbp), %rax	 # this, tmp88
 	addq	$8, %rax	 #, _1
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt6atomicIbEaSEb	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:27: }
-	.loc 27 27 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:29: }
+	.loc 27 29 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -7151,7 +7151,7 @@ _ZN19T100ProjectViewBase4initEv:
 	.seh_proc	_ZN19T100ProjectViewBase6uninitEv
 _ZN19T100ProjectViewBase6uninitEv:
 .LFB19280:
-	.loc 27 30 1
+	.loc 27 32 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7162,8 +7162,8 @@ _ZN19T100ProjectViewBase6uninitEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:32: }
-	.loc 27 32 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:34: }
+	.loc 27 34 1
 	nop	
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -7178,7 +7178,7 @@ _ZN19T100ProjectViewBase6uninitEv:
 	.seh_proc	_ZN19T100ProjectViewBase8SetDirtyEv
 _ZN19T100ProjectViewBase8SetDirtyEv:
 .LFB19281:
-	.loc 27 35 1
+	.loc 27 37 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7191,15 +7191,15 @@ _ZN19T100ProjectViewBase8SetDirtyEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:36:     m_dirty     = T100TRUE;
-	.loc 27 36 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:38:     m_dirty     = T100TRUE;
+	.loc 27 38 17
 	movq	16(%rbp), %rax	 # this, tmp88
 	addq	$8, %rax	 #, _1
 	movl	$1, %edx	 #,
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt6atomicIbEaSEb	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:37: }
-	.loc 27 37 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:39: }
+	.loc 27 39 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -7215,7 +7215,7 @@ _ZN19T100ProjectViewBase8SetDirtyEv:
 	.seh_proc	_ZN19T100ProjectViewBase10ClearDirtyEv
 _ZN19T100ProjectViewBase10ClearDirtyEv:
 .LFB19282:
-	.loc 27 40 1
+	.loc 27 42 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7228,15 +7228,15 @@ _ZN19T100ProjectViewBase10ClearDirtyEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:41:     m_dirty     = T100FALSE;
-	.loc 27 41 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:43:     m_dirty     = T100FALSE;
+	.loc 27 43 17
 	movq	16(%rbp), %rax	 # this, tmp88
 	addq	$8, %rax	 #, _1
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _1,
 	call	_ZNSt6atomicIbEaSEb	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:42: }
-	.loc 27 42 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:44: }
+	.loc 27 44 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -7252,7 +7252,7 @@ _ZN19T100ProjectViewBase10ClearDirtyEv:
 	.seh_proc	_ZN19T100ProjectViewBase7IsDirtyEv
 _ZN19T100ProjectViewBase7IsDirtyEv:
 .LFB19283:
-	.loc 27 45 1
+	.loc 27 47 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7265,14 +7265,14 @@ _ZN19T100ProjectViewBase7IsDirtyEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:46:     return m_dirty;
-	.loc 27 46 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:48:     return m_dirty;
+	.loc 27 48 12
 	movq	16(%rbp), %rax	 # this, tmp90
 	addq	$8, %rax	 #, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNKSt6atomicIbEcvbEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:47: }
-	.loc 27 47 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:49: }
+	.loc 27 49 1
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
@@ -7287,7 +7287,7 @@ _ZN19T100ProjectViewBase7IsDirtyEv:
 	.seh_proc	_ZN19T100ProjectViewBase13GetAuiManagerEv
 _ZN19T100ProjectViewBase13GetAuiManagerEv:
 .LFB19284:
-	.loc 27 50 1
+	.loc 27 52 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7298,12 +7298,12 @@ _ZN19T100ProjectViewBase13GetAuiManagerEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:51:     return m_manager;
-	.loc 27 51 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:53:     return m_manager;
+	.loc 27 53 12
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	16(%rax), %rax	 # this_2(D)->m_manager, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:52: }
-	.loc 27 52 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:54: }
+	.loc 27 54 1
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -7317,7 +7317,7 @@ _ZN19T100ProjectViewBase13GetAuiManagerEv:
 	.seh_proc	_ZN19T100ProjectViewBase8GetFrameEv
 _ZN19T100ProjectViewBase8GetFrameEv:
 .LFB19285:
-	.loc 27 55 1
+	.loc 27 57 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7328,12 +7328,12 @@ _ZN19T100ProjectViewBase8GetFrameEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:56:     return m_frame;
-	.loc 27 56 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:58:     return m_frame;
+	.loc 27 58 12
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	24(%rax), %rax	 # this_2(D)->m_frame, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:57: }
-	.loc 27 57 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:59: }
+	.loc 27 59 1
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -7347,7 +7347,7 @@ _ZN19T100ProjectViewBase8GetFrameEv:
 	.seh_proc	_ZN19T100ProjectViewBase11GetMainMenuEv
 _ZN19T100ProjectViewBase11GetMainMenuEv:
 .LFB19286:
-	.loc 27 60 1
+	.loc 27 62 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7358,12 +7358,12 @@ _ZN19T100ProjectViewBase11GetMainMenuEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:61:     return m_mainMenu;
-	.loc 27 61 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:63:     return m_mainMenu;
+	.loc 27 63 12
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	32(%rax), %rax	 # this_2(D)->m_mainMenu, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:62: }
-	.loc 27 62 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:64: }
+	.loc 27 64 1
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -7377,7 +7377,7 @@ _ZN19T100ProjectViewBase11GetMainMenuEv:
 	.seh_proc	_ZN19T100ProjectViewBase14GetProjectTreeEv
 _ZN19T100ProjectViewBase14GetProjectTreeEv:
 .LFB19287:
-	.loc 27 65 1
+	.loc 27 67 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7388,12 +7388,12 @@ _ZN19T100ProjectViewBase14GetProjectTreeEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:66:     return m_projectTree;
-	.loc 27 66 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:68:     return m_projectTree;
+	.loc 27 68 12
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	40(%rax), %rax	 # this_2(D)->m_projectTree, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:67: }
-	.loc 27 67 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:69: }
+	.loc 27 69 1
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -7407,7 +7407,7 @@ _ZN19T100ProjectViewBase14GetProjectTreeEv:
 	.seh_proc	_ZN19T100ProjectViewBase12GetMainPanelEv
 _ZN19T100ProjectViewBase12GetMainPanelEv:
 .LFB19288:
-	.loc 27 70 1
+	.loc 27 72 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7418,12 +7418,12 @@ _ZN19T100ProjectViewBase12GetMainPanelEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:71:     return m_mainPanel;
-	.loc 27 71 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:73:     return m_mainPanel;
+	.loc 27 73 12
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	48(%rax), %rax	 # this_2(D)->m_mainPanel, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:72: }
-	.loc 27 72 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:74: }
+	.loc 27 74 1
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -7437,7 +7437,7 @@ _ZN19T100ProjectViewBase12GetMainPanelEv:
 	.seh_proc	_ZN19T100ProjectViewBase13GetBuildPanelEv
 _ZN19T100ProjectViewBase13GetBuildPanelEv:
 .LFB19289:
-	.loc 27 75 1
+	.loc 27 77 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7448,12 +7448,12 @@ _ZN19T100ProjectViewBase13GetBuildPanelEv:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:76:     return m_buildPanel;
-	.loc 27 76 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:78:     return m_buildPanel;
+	.loc 27 78 12
 	movq	16(%rbp), %rax	 # this, tmp89
 	movq	56(%rax), %rax	 # this_2(D)->m_buildPanel, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:77: }
-	.loc 27 77 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:79: }
+	.loc 27 79 1
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -7475,7 +7475,7 @@ _ZN19T100ProjectViewBase13GetBuildPanelEv:
 	.seh_proc	_ZN19T100ProjectViewBase8SetTitleEv
 _ZN19T100ProjectViewBase8SetTitleEv:
 .LFB19290:
-	.loc 27 80 1
+	.loc 27 82 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7497,65 +7497,65 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 	.cfi_def_cfa 6, 192
 	.seh_endprologue
 	movq	%rcx, 192(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:81:     T100WSTRING         title;
-	.loc 27 81 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:83:     T100WSTRING         title;
+	.loc 27 83 25
 	leaq	-96(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:82:     T100Editor*         current     = T100NULL;
-	.loc 27 82 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:84:     T100Editor*         current     = T100NULL;
+	.loc 27 84 25
 	movq	$0, 152(%rbp)	 #, current
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:84:     if(m_mainPanel){
-	.loc 27 84 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:86:     if(m_mainPanel){
+	.loc 27 86 8
 	movq	192(%rbp), %rax	 # this, tmp108
 	movq	48(%rax), %rax	 # this_26(D)->m_mainPanel, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:84:     if(m_mainPanel){
-	.loc 27 84 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:86:     if(m_mainPanel){
+	.loc 27 86 5
 	testq	%rax, %rax	 # _1
 	je	.L316	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:85:         current     = m_mainPanel->GetCurrentEditor();
-	.loc 27 85 23
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:87:         current     = m_mainPanel->GetCurrentEditor();
+	.loc 27 87 23
 	movq	192(%rbp), %rax	 # this, tmp109
 	movq	48(%rax), %rax	 # this_26(D)->m_mainPanel, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:85:         current     = m_mainPanel->GetCurrentEditor();
-	.loc 27 85 52
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:87:         current     = m_mainPanel->GetCurrentEditor();
+	.loc 27 87 52
 	movq	%rax, %rcx	 # _2,
 .LEHB22:
 	call	_ZN13T100MainPanel16GetCurrentEditorEv	 #
 	movq	%rax, 152(%rbp)	 # _28, current
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:87:         if(current){
-	.loc 27 87 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:         if(current){
+	.loc 27 89 9
 	cmpq	$0, 152(%rbp)	 #, current
 	je	.L317	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:88:             if(m_dirty){
-	.loc 27 88 23
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:90:             if(m_dirty){
+	.loc 27 90 23
 	movq	192(%rbp), %rax	 # this, tmp110
 	addq	$8, %rax	 #, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZNKSt6atomicIbEcvbEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:88:             if(m_dirty){
-	.loc 27 88 13
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:90:             if(m_dirty){
+	.loc 27 90 13
 	testb	%al, %al	 # retval.11_31
 	je	.L318	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 69
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 69
 	movq	152(%rbp), %rax	 # current, tmp111
 	movq	%rax, %rcx	 # tmp111,
 	call	_ZN10T100Editor7GetPathB5cxx11Ev	 #
 	movq	%rax, %rbx	 #, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 27
 	movq	192(%rbp), %rax	 # this, tmp112
 	leaq	64(%rax), %rdx	 #, _5
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 41
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 41
 	movq	%rbp, %rax	 #, tmp113
 	leaq	.LC6(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE22:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 50 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 50 discriminator 2
 	leaq	-32(%rbp), %rax	 #, tmp114
 	movq	%rbp, %rdx	 #, tmp115
 	movq	%rbx, %r8	 # _4,
@@ -7563,8 +7563,8 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 .LEHB23:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_	 #
 .LEHE23:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 71 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 71 discriminator 4
 	leaq	-64(%rbp), %rax	 #, tmp116
 	leaq	-32(%rbp), %rdx	 #, tmp117
 	leaq	.LC7(%rip), %r8	 #,
@@ -7572,49 +7572,49 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 .LEHB24:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
 .LEHE24:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 73 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 73 discriminator 6
 	leaq	-64(%rbp), %rdx	 #, tmp118
 	leaq	-96(%rbp), %rax	 #, tmp119
 	movq	%rax, %rcx	 # tmp119,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 71 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 71 discriminator 6
 	leaq	-64(%rbp), %rax	 #, tmp120
 	movq	%rax, %rcx	 # tmp120,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 50 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 50 discriminator 6
 	leaq	-32(%rbp), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 41 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 41 discriminator 6
 	movq	%rbp, %rax	 #, tmp122
 	movq	%rax, %rcx	 # tmp122,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	jmp	.L321	 #
 .L318:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath();
-	.loc 27 91 69
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:93:                 title   = m_projectName + L" - " + current->GetPath();
+	.loc 27 93 69
 	movq	152(%rbp), %rax	 # current, tmp123
 	movq	%rax, %rcx	 # tmp123,
 .LEHB25:
 	call	_ZN10T100Editor7GetPathB5cxx11Ev	 #
 	movq	%rax, %rbx	 #, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath();
-	.loc 27 91 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:93:                 title   = m_projectName + L" - " + current->GetPath();
+	.loc 27 93 27
 	movq	192(%rbp), %rax	 # this, tmp124
 	leaq	64(%rax), %rdx	 #, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath();
-	.loc 27 91 41
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:93:                 title   = m_projectName + L" - " + current->GetPath();
+	.loc 27 93 41
 	leaq	64(%rbp), %rax	 #, tmp125
 	leaq	.LC6(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp125,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_	 #
 .LEHE25:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath();
-	.loc 27 91 50 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:93:                 title   = m_projectName + L" - " + current->GetPath();
+	.loc 27 93 50 discriminator 2
 	leaq	32(%rbp), %rax	 #, tmp126
 	leaq	64(%rbp), %rdx	 #, tmp127
 	movq	%rbx, %r8	 # _6,
@@ -7622,26 +7622,26 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 .LEHB26:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_RKS8_	 #
 .LEHE26:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath();
-	.loc 27 91 69 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:93:                 title   = m_projectName + L" - " + current->GetPath();
+	.loc 27 93 69 discriminator 4
 	leaq	32(%rbp), %rdx	 #, tmp128
 	leaq	-96(%rbp), %rax	 #, tmp129
 	movq	%rax, %rcx	 # tmp129,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath();
-	.loc 27 91 50 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:93:                 title   = m_projectName + L" - " + current->GetPath();
+	.loc 27 93 50 discriminator 4
 	leaq	32(%rbp), %rax	 #, tmp130
 	movq	%rax, %rcx	 # tmp130,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath();
-	.loc 27 91 41 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:93:                 title   = m_projectName + L" - " + current->GetPath();
+	.loc 27 93 41 discriminator 4
 	leaq	64(%rbp), %rax	 #, tmp131
 	movq	%rax, %rcx	 # tmp131,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	jmp	.L321	 #
 .L317:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:94:             title   = m_projectName;
-	.loc 27 94 23
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:96:             title   = m_projectName;
+	.loc 27 96 23
 	movq	192(%rbp), %rax	 # this, tmp132
 	leaq	64(%rax), %rdx	 #, _8
 	leaq	-96(%rbp), %rax	 #, tmp133
@@ -7650,39 +7650,39 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_	 #
 	jmp	.L321	 #
 .L316:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:97:         title   = m_projectName;
-	.loc 27 97 19
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:99:         title   = m_projectName;
+	.loc 27 99 19
 	movq	192(%rbp), %rax	 # this, tmp134
 	leaq	64(%rax), %rdx	 #, _9
 	leaq	-96(%rbp), %rax	 #, tmp135
 	movq	%rax, %rcx	 # tmp135,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_	 #
 .L321:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:100:     m_frame->SetLabel(title);
-	.loc 27 100 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:102:     m_frame->SetLabel(title);
+	.loc 27 102 5
 	movq	192(%rbp), %rax	 # this, tmp136
 	movq	24(%rax), %rax	 # this_26(D)->m_frame, _10
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:100:     m_frame->SetLabel(title);
-	.loc 27 100 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:102:     m_frame->SetLabel(title);
+	.loc 27 102 22
 	movq	%rax, %rsi	 # _10, _11
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:100:     m_frame->SetLabel(title);
-	.loc 27 100 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:102:     m_frame->SetLabel(title);
+	.loc 27 102 5
 	movq	192(%rbp), %rax	 # this, tmp138
 	movq	24(%rax), %rax	 # this_26(D)->m_frame, _14
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:100:     m_frame->SetLabel(title);
-	.loc 27 100 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:102:     m_frame->SetLabel(title);
+	.loc 27 102 28
 	movq	(%rax), %rax	 # _14->D.248514.D.142549.D.142361.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject, _15
 	addq	$176, %rax	 #, _16
 	movq	(%rax), %rbx	 # *_16, _17
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:100:     m_frame->SetLabel(title);
-	.loc 27 100 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:102:     m_frame->SetLabel(title);
+	.loc 27 102 22
 	leaq	-96(%rbp), %rdx	 #, tmp139
 	leaq	96(%rbp), %rax	 #, tmp140
 	movq	%rax, %rcx	 # tmp140,
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE27:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:100:     m_frame->SetLabel(title);
-	.loc 27 100 22 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:102:     m_frame->SetLabel(title);
+	.loc 27 102 22 is_stmt 0 discriminator 1
 	leaq	96(%rbp), %rax	 #, tmp141
 	movq	%rax, %rdx	 # tmp141,
 	movq	%rsi, %rcx	 # _11,
@@ -7690,23 +7690,23 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 	call	*%rbx	 # _17
 .LVL18:
 .LEHE28:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:100:     m_frame->SetLabel(title);
-	.loc 27 100 22 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:102:     m_frame->SetLabel(title);
+	.loc 27 102 22 discriminator 3
 	leaq	96(%rbp), %rax	 #, tmp142
 	movq	%rax, %rcx	 # tmp142,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:81:     T100WSTRING         title;
-	.loc 27 81 25 is_stmt 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:83:     T100WSTRING         title;
+	.loc 27 83 25 is_stmt 1 discriminator 3
 	leaq	-96(%rbp), %rax	 #, tmp143
 	movq	%rax, %rcx	 # tmp143,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:101: }
-	.loc 27 101 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:103: }
+	.loc 27 103 1 discriminator 3
 	jmp	.L332	 #
 .L329:
 	movq	%rax, %rbx	 #, tmp146
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 50
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 50
 	leaq	-32(%rbp), %rax	 #, tmp144
 	movq	%rax, %rcx	 # tmp144,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -7714,24 +7714,24 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 .L328:
 	movq	%rax, %rbx	 #, tmp145
 .L323:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:89:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
-	.loc 27 89 41 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath() + L"*";
+	.loc 27 91 41 discriminator 3
 	movq	%rbp, %rax	 #, tmp149
 	movq	%rax, %rcx	 # tmp149,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	jmp	.L324	 #
 .L330:
 	movq	%rax, %rbx	 #, tmp153
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:91:                 title   = m_projectName + L" - " + current->GetPath();
-	.loc 27 91 41
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:93:                 title   = m_projectName + L" - " + current->GetPath();
+	.loc 27 93 41
 	leaq	64(%rbp), %rax	 #, tmp152
 	movq	%rax, %rcx	 # tmp152,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
 	jmp	.L324	 #
 .L331:
 	movq	%rax, %rbx	 #, tmp156
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:100:     m_frame->SetLabel(title);
-	.loc 27 100 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:102:     m_frame->SetLabel(title);
+	.loc 27 102 22
 	leaq	96(%rbp), %rax	 #, tmp155
 	movq	%rax, %rcx	 # tmp155,
 	call	_ZN8wxStringD1Ev	 #
@@ -7739,20 +7739,20 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 .L327:
 	movq	%rax, %rbx	 #, tmp150
 .L324:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:81:     T100WSTRING         title;
-	.loc 27 81 25
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:83:     T100WSTRING         title;
+	.loc 27 83 25
 	leaq	-96(%rbp), %rax	 #, tmp158
 	movq	%rax, %rcx	 # tmp158,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp150, D.260432
-	movq	%rax, %rcx	 # D.260432,
+	movq	%rbx, %rax	 # tmp150, D.260646
+	movq	%rax, %rcx	 # D.260646,
 .LEHB29:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE29:
 .L332:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:101: }
-	.loc 27 101 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:103: }
+	.loc 27 103 1
 	addq	$288, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -7813,7 +7813,7 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 	.seh_proc	_ZN19T100ProjectViewBase14CheckMainPanelEv
 _ZN19T100ProjectViewBase14CheckMainPanelEv:
 .LFB19294:
-	.loc 27 104 1
+	.loc 27 106 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7835,32 +7835,32 @@ _ZN19T100ProjectViewBase14CheckMainPanelEv:
 	.cfi_def_cfa 6, 192
 	.seh_endprologue
 	movq	%rcx, 192(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:105:     if(m_mainPanel){
-	.loc 27 105 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:107:     if(m_mainPanel){
+	.loc 27 107 8
 	movq	192(%rbp), %rax	 # this, tmp108
 	movq	48(%rax), %rax	 # this_22(D)->m_mainPanel, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:105:     if(m_mainPanel){
-	.loc 27 105 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:107:     if(m_mainPanel){
+	.loc 27 107 5
 	testq	%rax, %rax	 # _1
 	je	.L334	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:106:         return T100TRUE;
-	.loc 27 106 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:108:         return T100TRUE;
+	.loc 27 108 16
 	movl	$1, %eax	 #, _16
 	jmp	.L343	 #
 .L334:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:109:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 27 109 107
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:111:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 27 111 107
 	movl	$1472, %ecx	 #,
 .LEHB30:
 	call	_Znwy	 #
 .LEHE30:
 	movq	%rax, %rbx	 # tmp109, _25
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:109:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 27 109 45
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:111:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 27 111 45
 	movq	192(%rbp), %rax	 # this, tmp110
 	movq	24(%rax), %rax	 # this_22(D)->m_frame, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:109:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 27 109 107
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:111:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 27 111 107
 	movl	$2048, 40(%rsp)	 #,
 	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp111
 	movq	%rdx, 32(%rsp)	 # tmp111,
@@ -7871,75 +7871,75 @@ _ZN19T100ProjectViewBase14CheckMainPanelEv:
 .LEHB31:
 	call	_ZN13T100MainPanelC1EP8wxWindowiRK7wxPointRK6wxSizel	 #
 .LEHE31:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:109:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 27 109 21 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:111:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 27 111 21 discriminator 2
 	movq	192(%rbp), %rax	 # this, tmp112
 	movq	%rbx, 48(%rax)	 # _25, this_22(D)->m_mainPanel
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 8 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 8 discriminator 2
 	movq	192(%rbp), %rax	 # this, tmp113
 	movq	16(%rax), %rbx	 # this_22(D)->m_manager, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 40 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 40 discriminator 2
 	leaq	-80(%rbp), %rax	 #, tmp114
 	movq	%rax, %rcx	 # tmp114,
 .LEHB32:
 	call	_ZN13wxAuiPaneInfoC1Ev	 #
 .LEHE32:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 63 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 63 discriminator 2
 	leaq	-80(%rbp), %rax	 #, tmp115
 	movq	%rax, %rcx	 # tmp115,
 	call	_ZN13wxAuiPaneInfo6CenterEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 86 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 86 discriminator 2
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _4,
 .LEHB33:
 	call	_ZN13wxAuiPaneInfo11CloseButtonEb	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 112 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 112 discriminator 2
 	movl	$0, %edx	 #,
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxAuiPaneInfo14CaptionVisibleEb	 #
 	movq	%rax, %rdx	 #, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 27 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 27 discriminator 2
 	movq	192(%rbp), %rax	 # this, tmp116
 	movq	48(%rax), %rax	 # this_22(D)->m_mainPanel, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 26 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 26 discriminator 2
 	movq	%rdx, %r8	 # _6,
 	movq	%rax, %rdx	 # _7,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZN12wxAuiManager7AddPaneEP8wxWindowRK13wxAuiPaneInfo	 #
 .LEHE33:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 26 is_stmt 0 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 26 is_stmt 0 discriminator 4
 	movl	%eax, %ebx	 #, _36
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 40 is_stmt 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 40 is_stmt 1 discriminator 4
 	leaq	-80(%rbp), %rax	 #, tmp117
 	movq	%rax, %rcx	 # tmp117,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 5 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 5 discriminator 4
 	testb	%bl, %bl	 # _36
 	jne	.L336	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:113:         T100SAFE_DELETE(m_mainPanel);
-	.loc 27 113 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:115:         T100SAFE_DELETE(m_mainPanel);
+	.loc 27 115 9
 	movq	192(%rbp), %rax	 # this, tmp118
 	movq	48(%rax), %rax	 # this_22(D)->m_mainPanel, _8
 	testq	%rax, %rax	 # _8
 	je	.L337	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:113:         T100SAFE_DELETE(m_mainPanel);
-	.loc 27 113 9 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:115:         T100SAFE_DELETE(m_mainPanel);
+	.loc 27 115 9 is_stmt 0 discriminator 1
 	movq	192(%rbp), %rax	 # this, tmp119
 	movq	48(%rax), %rax	 # this_22(D)->m_mainPanel, _9
 	testq	%rax, %rax	 # _9
 	je	.L338	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:113:         T100SAFE_DELETE(m_mainPanel);
-	.loc 27 113 9 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:115:         T100SAFE_DELETE(m_mainPanel);
+	.loc 27 115 9 discriminator 2
 	movq	192(%rbp), %rax	 # this, tmp120
 	movq	48(%rax), %rdx	 # this_22(D)->m_mainPanel, _10
 	movq	192(%rbp), %rax	 # this, tmp122
@@ -7951,45 +7951,45 @@ _ZN19T100ProjectViewBase14CheckMainPanelEv:
 	call	*%rax	 # _15
 .LVL19:
 .L338:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:113:         T100SAFE_DELETE(m_mainPanel);
-	.loc 27 113 9 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:115:         T100SAFE_DELETE(m_mainPanel);
+	.loc 27 115 9 discriminator 4
 	movq	192(%rbp), %rax	 # this, tmp123
 	movq	$0, 48(%rax)	 #, this_22(D)->m_mainPanel
 .L337:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:114:         return T100FALSE;
-	.loc 27 114 16 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:116:         return T100FALSE;
+	.loc 27 116 16 is_stmt 1
 	movl	$0, %eax	 #, _16
 	jmp	.L343	 #
 .L336:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:116:     return T100TRUE;
-	.loc 27 116 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:118:     return T100TRUE;
+	.loc 27 118 12
 	movl	$1, %eax	 #, _16
 	jmp	.L343	 #
 .L341:
 	movq	%rax, %rsi	 #, tmp125
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:109:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-	.loc 27 109 107
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:111:     m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+	.loc 27 111 107
 	movl	$1472, %edx	 #,
 	movq	%rbx, %rcx	 # _25,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp125, D.260440
-	movq	%rax, %rcx	 # D.260440,
+	movq	%rsi, %rax	 # tmp125, D.260654
+	movq	%rax, %rcx	 # D.260654,
 .LEHB34:
 	call	_Unwind_Resume	 #
 .L342:
 	movq	%rax, %rbx	 #, tmp127
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:110:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-	.loc 27 110 40
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:112:     if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+	.loc 27 112 40
 	leaq	-80(%rbp), %rax	 #, tmp126
 	movq	%rax, %rcx	 # tmp126,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.260441
-	movq	%rax, %rcx	 # D.260441,
+	movq	%rbx, %rax	 # tmp127, D.260655
+	movq	%rax, %rcx	 # D.260655,
 	call	_Unwind_Resume	 #
 .LEHE34:
 .L343:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:117: }
-	.loc 27 117 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:119: }
+	.loc 27 119 1
 	addq	$288, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -8038,7 +8038,7 @@ _ZN19T100ProjectViewBase14CheckMainPanelEv:
 	.seh_proc	_ZN19T100ProjectViewBase18AppendBuildMessageERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 _ZN19T100ProjectViewBase18AppendBuildMessageERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LFB19295:
-	.loc 27 120 1
+	.loc 27 122 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8052,33 +8052,33 @@ _ZN19T100ProjectViewBase18AppendBuildMessageERKNSt7__cxx1112basic_stringIwSt11ch
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # value, value
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:121:     if(m_buildPanel){
-	.loc 27 121 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:123:     if(m_buildPanel){
+	.loc 27 123 8
 	movq	16(%rbp), %rax	 # this, tmp94
 	movq	56(%rax), %rax	 # this_10(D)->m_buildPanel, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:121:     if(m_buildPanel){
-	.loc 27 121 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:123:     if(m_buildPanel){
+	.loc 27 123 5
 	testq	%rax, %rax	 # _1
 	je	.L346	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:122:         m_buildPanel->Append(value);
-	.loc 27 122 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:124:         m_buildPanel->Append(value);
+	.loc 27 124 9
 	movq	16(%rbp), %rax	 # this, tmp95
 	movq	56(%rax), %rcx	 # this_10(D)->m_buildPanel, _2
 	movq	16(%rbp), %rax	 # this, tmp97
 	movq	56(%rax), %rax	 # this_10(D)->m_buildPanel, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:122:         m_buildPanel->Append(value);
-	.loc 27 122 35
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:124:         m_buildPanel->Append(value);
+	.loc 27 124 35
 	movq	(%rax), %rax	 # _4->D.168355.D.157607.D.157107.D.141347.D.141187.D.128839.D.127548.D.121505._vptr.wxObject, _5
 	addq	$2120, %rax	 #, _6
 	movq	(%rax), %rax	 # *_6, _7
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:122:         m_buildPanel->Append(value);
-	.loc 27 122 29
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:124:         m_buildPanel->Append(value);
+	.loc 27 124 29
 	movq	24(%rbp), %rdx	 # value, tmp98
 	call	*%rax	 # _7
 .LVL20:
 .L346:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:124: }
-	.loc 27 124 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:126: }
+	.loc 27 126 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -8094,7 +8094,7 @@ _ZN19T100ProjectViewBase18AppendBuildMessageERKNSt7__cxx1112basic_stringIwSt11ch
 	.seh_proc	_ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LFB19296:
-	.loc 27 127 1
+	.loc 27 129 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8113,8 +8113,8 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	.seh_endprologue
 	movq	%rcx, 1072(%rbp)	 # this, this
 	movq	%rdx, 1080(%rbp)	 # path, path
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:129:     wxDirDialog         dialog(m_frame);
-	.loc 27 129 39
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:131:     wxDirDialog         dialog(m_frame);
+	.loc 27 131 39
 	leaq	832(%rbp), %rax	 #, tmp95
 	movq	.refptr.wxDirDialogNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp95,
@@ -8128,20 +8128,20 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 .LEHB36:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE36:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:129:     wxDirDialog         dialog(m_frame);
-	.loc 27 129 39 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:131:     wxDirDialog         dialog(m_frame);
+	.loc 27 131 39 is_stmt 0 discriminator 2
 	leaq	928(%rbp), %rax	 #, tmp98
 	movq	.refptr.wxDirSelectorPromptStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp98,
 .LEHB37:
 	call	_ZN8wxStringC1EPKc	 #
 .LEHE37:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:129:     wxDirDialog         dialog(m_frame);
-	.loc 27 129 32 is_stmt 1 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:131:     wxDirDialog         dialog(m_frame);
+	.loc 27 131 32 is_stmt 1 discriminator 3
 	movq	1072(%rbp), %rax	 # this, tmp99
 	movq	24(%rax), %rcx	 # this_13(D)->m_frame, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:129:     wxDirDialog         dialog(m_frame);
-	.loc 27 129 39 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:131:     wxDirDialog         dialog(m_frame);
+	.loc 27 131 39 discriminator 3
 	leaq	880(%rbp), %r9	 #, tmp100
 	leaq	928(%rbp), %r8	 #, tmp101
 	leaq	-64(%rbp), %rax	 #, tmp102
@@ -8166,26 +8166,26 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	leaq	832(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:131:     result  = dialog.ShowModal();
-	.loc 27 131 31
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:133:     result  = dialog.ShowModal();
+	.loc 27 133 31
 	leaq	-64(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 .LEHB39:
 	call	_ZN11wxDirDialog9ShowModalEv	 #
 	movl	%eax, 1036(%rbp)	 # _22, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:133:     if(result == wxID_OK){
-	.loc 27 133 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:135:     if(result == wxID_OK){
+	.loc 27 135 5
 	cmpl	$5100, 1036(%rbp)	 #, result
 	jne	.L348	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:134:         path    = dialog.GetPath().ToStdWstring();
-	.loc 27 134 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136:         path    = dialog.GetPath().ToStdWstring();
+	.loc 27 136 33
 	leaq	976(%rbp), %rax	 #, tmp110
 	leaq	-64(%rbp), %rdx	 #, tmp111
 	movq	%rax, %rcx	 # tmp110,
 	call	_ZNK15wxDirDialogBase7GetPathEv	 #
 .LEHE39:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:134:         path    = dialog.GetPath().ToStdWstring();
-	.loc 27 134 49 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136:         path    = dialog.GetPath().ToStdWstring();
+	.loc 27 136 49 discriminator 1
 	leaq	976(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	_ZNK8wxString12ToStdWstringB5cxx11Ev	 #
@@ -8195,22 +8195,22 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 .LEHB40:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSERKS4_	 #
 .LEHE40:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:134:         path    = dialog.GetPath().ToStdWstring();
-	.loc 27 134 33 discriminator 3
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136:         path    = dialog.GetPath().ToStdWstring();
+	.loc 27 136 33 discriminator 3
 	leaq	976(%rbp), %rax	 #, tmp114
 	movq	%rax, %rcx	 # tmp114,
 	call	_ZN8wxStringD1Ev	 #
 .L348:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137:     return result;
-	.loc 27 137 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:139:     return result;
+	.loc 27 139 12
 	movl	1036(%rbp), %ebx	 # result, _32
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:129:     wxDirDialog         dialog(m_frame);
-	.loc 27 129 39
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:131:     wxDirDialog         dialog(m_frame);
+	.loc 27 131 39
 	leaq	-64(%rbp), %rax	 #, tmp115
 	movq	%rax, %rcx	 # tmp115,
 	call	_ZN11wxDirDialogD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:137:     return result;
-	.loc 27 137 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:139:     return result;
+	.loc 27 139 12
 	movl	%ebx, %eax	 # _32, <retval>
 	jmp	.L360	 #
 .L357:
@@ -8232,14 +8232,14 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	leaq	832(%rbp), %rax	 #, tmp125
 	movq	%rax, %rcx	 # tmp125,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp123, D.260442
-	movq	%rax, %rcx	 # D.260442,
+	movq	%rbx, %rax	 # tmp123, D.260656
+	movq	%rax, %rcx	 # D.260656,
 .LEHB41:
 	call	_Unwind_Resume	 #
 .L359:
 	movq	%rax, %rbx	 #, tmp128
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:134:         path    = dialog.GetPath().ToStdWstring();
-	.loc 27 134 33
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:136:         path    = dialog.GetPath().ToStdWstring();
+	.loc 27 136 33
 	leaq	976(%rbp), %rax	 #, tmp126
 	movq	%rax, %rcx	 # tmp126,
 	call	_ZN8wxStringD1Ev	 #
@@ -8247,18 +8247,18 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 .L358:
 	movq	%rax, %rbx	 #, tmp127
 .L354:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:129:     wxDirDialog         dialog(m_frame);
-	.loc 27 129 39
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:131:     wxDirDialog         dialog(m_frame);
+	.loc 27 131 39
 	leaq	-64(%rbp), %rax	 #, tmp131
 	movq	%rax, %rcx	 # tmp131,
 	call	_ZN11wxDirDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.260443
-	movq	%rax, %rcx	 # D.260443,
+	movq	%rbx, %rax	 # tmp127, D.260657
+	movq	%rax, %rcx	 # D.260657,
 	call	_Unwind_Resume	 #
 .LEHE41:
 .L360:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:138: }
-	.loc 27 138 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:140: }
+	.loc 27 140 1
 	addq	$1176, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -8318,7 +8318,7 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	.seh_proc	_ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo
 _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 .LFB19297:
-	.loc 27 141 1
+	.loc 27 143 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8337,17 +8337,17 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	.seh_endprologue
 	movq	%rcx, 1008(%rbp)	 # this, this
 	movq	%rdx, 1016(%rbp)	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:142:     if(!info){
-	.loc 27 142 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:144:     if(!info){
+	.loc 27 144 5
 	cmpq	$0, 1016(%rbp)	 #, info
 	jne	.L362	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:143:         return T100FALSE;
-	.loc 27 143 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:145:         return T100FALSE;
+	.loc 27 145 16
 	movl	$0, %ebx	 #, _6
 	jmp	.L366	 #
 .L362:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:146:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
-	.loc 27 146 85
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:148:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
+	.loc 27 148 85
 	leaq	880(%rbp), %rax	 #, tmp97
 	movq	.refptr.wxDialogNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp97,
@@ -8360,12 +8360,12 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 .LEHB43:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE43:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:146:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
-	.loc 27 146 44 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:148:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
+	.loc 27 148 44 discriminator 2
 	movq	1008(%rbp), %rax	 # this, tmp99
 	movq	24(%rax), %rcx	 # this_18(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:146:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
-	.loc 27 146 85 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:148:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
+	.loc 27 148 85 discriminator 2
 	leaq	928(%rbp), %r8	 #, tmp100
 	leaq	-64(%rbp), %rax	 #, tmp101
 	leaq	880(%rbp), %rdx	 #, tmp102
@@ -8388,22 +8388,22 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	leaq	880(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:148:     if(dialog.ShowModal() == wxID_APPLY){
-	.loc 27 148 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:150:     if(dialog.ShowModal() == wxID_APPLY){
+	.loc 27 150 24
 	leaq	-64(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 .LEHB45:
 	call	_ZN8wxDialog9ShowModalEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:148:     if(dialog.ShowModal() == wxID_APPLY){
-	.loc 27 148 27
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:150:     if(dialog.ShowModal() == wxID_APPLY){
+	.loc 27 150 27
 	cmpl	$5102, %eax	 #, _2
 	sete	%al	 #, retval.46_26
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:148:     if(dialog.ShowModal() == wxID_APPLY){
-	.loc 27 148 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:150:     if(dialog.ShowModal() == wxID_APPLY){
+	.loc 27 150 5
 	testb	%al, %al	 # retval.46_26
 	je	.L364	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:149:         info->SetPath(dialog.GetWorkSpacePath());
-	.loc 27 149 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:151:         info->SetPath(dialog.GetWorkSpacePath());
+	.loc 27 151 22
 	leaq	-64(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN25T100WorkSpaceCreateDialog16GetWorkSpacePathB5cxx11Ev	 #
@@ -8411,8 +8411,8 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	movq	1016(%rbp), %rax	 # info, tmp109
 	movq	%rax, %rcx	 # tmp109,
 	call	_ZN17T100WorkSpaceInfo7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:150:         info->SetPythonFile(dialog.GetPythonFile());
-	.loc 27 150 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:152:         info->SetPythonFile(dialog.GetPythonFile());
+	.loc 27 152 28
 	leaq	-64(%rbp), %rax	 #, tmp110
 	movq	%rax, %rcx	 # tmp110,
 	call	_ZN25T100WorkSpaceCreateDialog13GetPythonFileB5cxx11Ev	 #
@@ -8420,8 +8420,8 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	movq	1016(%rbp), %rax	 # info, tmp111
 	movq	%rax, %rcx	 # tmp111,
 	call	_ZN17T100WorkSpaceInfo13SetPythonFileERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:151:         info->SetCompilerPath(dialog.GetCompilerPath());
-	.loc 27 151 30
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:153:         info->SetCompilerPath(dialog.GetCompilerPath());
+	.loc 27 153 30
 	leaq	-64(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	_ZN25T100WorkSpaceCreateDialog15GetCompilerPathB5cxx11Ev	 #
@@ -8430,17 +8430,17 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN17T100WorkSpaceInfo15SetCompilerPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE45:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:152:         return T100TRUE;
-	.loc 27 152 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:154:         return T100TRUE;
+	.loc 27 154 16
 	movl	$1, %ebx	 #, _6
 	jmp	.L365	 #
 .L364:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:154:     return T100FALSE;
-	.loc 27 154 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:156:     return T100FALSE;
+	.loc 27 156 12
 	movl	$0, %ebx	 #, _6
 .L365:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:146:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
-	.loc 27 146 85
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:148:     T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
+	.loc 27 148 85
 	leaq	-64(%rbp), %rax	 #, tmp114
 	movq	%rax, %rcx	 # tmp114,
 	call	_ZN25T100WorkSpaceCreateDialogD1Ev	 #
@@ -8459,8 +8459,8 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	leaq	880(%rbp), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp117, D.260448
-	movq	%rax, %rcx	 # D.260448,
+	movq	%rbx, %rax	 # tmp117, D.260662
+	movq	%rax, %rcx	 # D.260662,
 .LEHB46:
 	call	_Unwind_Resume	 #
 .L372:
@@ -8468,13 +8468,13 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	leaq	-64(%rbp), %rax	 #, tmp122
 	movq	%rax, %rcx	 # tmp122,
 	call	_ZN25T100WorkSpaceCreateDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp123, D.260449
-	movq	%rax, %rcx	 # D.260449,
+	movq	%rbx, %rax	 # tmp123, D.260663
+	movq	%rax, %rcx	 # D.260663,
 	call	_Unwind_Resume	 #
 .LEHE46:
 .L373:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:155: }
-	.loc 27 155 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:157: }
+	.loc 27 157 1
 	addq	$1112, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -8521,7 +8521,7 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	.seh_proc	_ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv
 _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 .LFB19298:
-	.loc 27 158 1
+	.loc 27 160 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8539,12 +8539,12 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 	.cfi_def_cfa 6, 64
 	.seh_endprologue
 	movq	%rcx, 64(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:161:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-	.loc 27 161 58
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:163:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+	.loc 27 163 58
 	movq	64(%rbp), %rax	 # this, tmp92
 	movq	24(%rax), %rbx	 # this_5(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:161:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-	.loc 27 161 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:163:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+	.loc 27 163 26
 	leaq	-80(%rbp), %rax	 #, tmp93
 	leaq	.LC0(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp93,
@@ -8557,8 +8557,8 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 .LEHB48:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE48:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:161:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-	.loc 27 161 26 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:163:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+	.loc 27 163 26 is_stmt 0 discriminator 2
 	leaq	-80(%rbp), %rdx	 #, tmp95
 	leaq	-32(%rbp), %rax	 #, tmp96
 	movl	$-1, 40(%rsp)	 #,
@@ -8576,23 +8576,23 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 	leaq	-80(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:163:     if(result == wxYES){
-	.loc 27 163 5 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:165:     if(result == wxYES){
+	.loc 27 165 5 is_stmt 1 discriminator 2
 	cmpl	$2, 28(%rbp)	 #, result
 	jne	.L375	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:164:         return T100TRUE;
-	.loc 27 164 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:166:         return T100TRUE;
+	.loc 27 166 16
 	movl	$1, %eax	 #, _2
 	jmp	.L381	 #
 .L375:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:169:     return T100FALSE;
-	.loc 27 169 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:171:     return T100FALSE;
+	.loc 27 171 12
 	movl	$0, %eax	 #, _2
 	jmp	.L381	 #
 .L380:
 	movq	%rax, %rbx	 #, tmp102
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:161:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-	.loc 27 161 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:163:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+	.loc 27 163 26
 	leaq	-32(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 	call	_ZN8wxStringD1Ev	 #
@@ -8600,19 +8600,19 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 .L379:
 	movq	%rax, %rbx	 #, tmp101
 .L378:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:161:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-	.loc 27 161 26 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:163:     result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
+	.loc 27 163 26 is_stmt 0 discriminator 1
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp101, D.260452
-	movq	%rax, %rcx	 # D.260452,
+	movq	%rbx, %rax	 # tmp101, D.260666
+	movq	%rax, %rcx	 # D.260666,
 .LEHB50:
 	call	_Unwind_Resume	 #
 .LEHE50:
 .L381:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:170: }
-	.loc 27 170 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:172: }
+	.loc 27 172 1 is_stmt 1
 	addq	$168, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -8663,7 +8663,7 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv
 _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 .LFB19299:
-	.loc 27 173 1
+	.loc 27 175 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8681,12 +8681,12 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 	.cfi_def_cfa 6, 64
 	.seh_endprologue
 	movq	%rcx, 64(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:176:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
-	.loc 27 176 188
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
+	.loc 27 178 188
 	movq	64(%rbp), %rax	 # this, tmp92
 	movq	24(%rax), %rbx	 # this_4(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:176:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
-	.loc 27 176 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
+	.loc 27 178 26
 	leaq	-80(%rbp), %rax	 #, tmp93
 	leaq	.LC9(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp93,
@@ -8699,8 +8699,8 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 .LEHB52:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE52:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:176:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
-	.loc 27 176 26 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
+	.loc 27 178 26 is_stmt 0 discriminator 2
 	leaq	-80(%rbp), %rdx	 #, tmp95
 	leaq	-32(%rbp), %rax	 #, tmp96
 	movl	$-1, 40(%rsp)	 #,
@@ -8718,14 +8718,14 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 	leaq	-80(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     return result;
-	.loc 27 178 12 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:180:     return result;
+	.loc 27 180 12 is_stmt 1 discriminator 2
 	movl	28(%rbp), %eax	 # result, _14
 	jmp	.L388	 #
 .L387:
 	movq	%rax, %rbx	 #, tmp102
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:176:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
-	.loc 27 176 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
+	.loc 27 178 26
 	leaq	-32(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 	call	_ZN8wxStringD1Ev	 #
@@ -8733,19 +8733,19 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 .L386:
 	movq	%rax, %rbx	 #, tmp101
 .L385:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:176:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
-	.loc 27 176 26 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:178:     result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
+	.loc 27 178 26 is_stmt 0 discriminator 1
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp101, D.260453
-	movq	%rax, %rcx	 # D.260453,
+	movq	%rbx, %rax	 # tmp101, D.260667
+	movq	%rax, %rcx	 # D.260667,
 .LEHB54:
 	call	_Unwind_Resume	 #
 .LEHE54:
 .L388:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:179: }
-	.loc 27 179 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:181: }
+	.loc 27 181 1 is_stmt 1
 	addq	$168, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -8793,7 +8793,7 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv
 _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 .LFB19300:
-	.loc 27 182 1
+	.loc 27 184 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8811,12 +8811,12 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 	.cfi_def_cfa 6, 64
 	.seh_endprologue
 	movq	%rcx, 64(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:185:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-	.loc 27 185 159
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:187:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
+	.loc 27 187 159
 	movq	64(%rbp), %rax	 # this, tmp92
 	movq	24(%rax), %rbx	 # this_5(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:185:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-	.loc 27 185 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:187:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
+	.loc 27 187 26
 	leaq	-80(%rbp), %rax	 #, tmp93
 	leaq	.LC9(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp93,
@@ -8829,8 +8829,8 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 .LEHB56:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE56:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:185:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-	.loc 27 185 26 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:187:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
+	.loc 27 187 26 is_stmt 0 discriminator 2
 	leaq	-80(%rbp), %rdx	 #, tmp95
 	leaq	-32(%rbp), %rax	 #, tmp96
 	movl	$-1, 40(%rsp)	 #,
@@ -8848,23 +8848,23 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 	leaq	-80(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:187:     if(result == wxYES){
-	.loc 27 187 5 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:189:     if(result == wxYES){
+	.loc 27 189 5 is_stmt 1 discriminator 2
 	cmpl	$2, 28(%rbp)	 #, result
 	jne	.L390	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:188:         return T100TRUE;
-	.loc 27 188 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:190:         return T100TRUE;
+	.loc 27 190 16
 	movl	$1, %eax	 #, _2
 	jmp	.L396	 #
 .L390:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:190:     return T100FALSE;
-	.loc 27 190 12
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:192:     return T100FALSE;
+	.loc 27 192 12
 	movl	$0, %eax	 #, _2
 	jmp	.L396	 #
 .L395:
 	movq	%rax, %rbx	 #, tmp102
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:185:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-	.loc 27 185 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:187:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
+	.loc 27 187 26
 	leaq	-32(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 	call	_ZN8wxStringD1Ev	 #
@@ -8872,19 +8872,19 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 .L394:
 	movq	%rax, %rbx	 #, tmp101
 .L393:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:185:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-	.loc 27 185 26 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:187:     result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
+	.loc 27 187 26 is_stmt 0 discriminator 1
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp101, D.260456
-	movq	%rax, %rcx	 # D.260456,
+	movq	%rbx, %rax	 # tmp101, D.260670
+	movq	%rax, %rcx	 # D.260670,
 .LEHB58:
 	call	_Unwind_Resume	 #
 .LEHE58:
 .L396:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:191: }
-	.loc 27 191 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:193: }
+	.loc 27 193 1 is_stmt 1
 	addq	$168, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -8932,7 +8932,7 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv
 _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 .LFB19301:
-	.loc 27 194 1
+	.loc 27 196 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8950,8 +8950,8 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 	.cfi_def_cfa 6, 880
 	.seh_endprologue
 	movq	%rcx, 880(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:195:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-	.loc 27 195 93
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+	.loc 27 197 93
 	leaq	752(%rbp), %rax	 #, tmp90
 	movq	.refptr.wxDialogNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp90,
@@ -8964,12 +8964,12 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 .LEHB60:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE60:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:195:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-	.loc 27 195 48 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+	.loc 27 197 48 discriminator 2
 	movq	880(%rbp), %rax	 # this, tmp92
 	movq	24(%rax), %rcx	 # this_7(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:195:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-	.loc 27 195 93 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+	.loc 27 197 93 discriminator 2
 	leaq	800(%rbp), %r8	 #, tmp93
 	leaq	-64(%rbp), %rax	 #, tmp94
 	leaq	752(%rbp), %rdx	 #, tmp95
@@ -8992,20 +8992,20 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 	leaq	752(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197:     dialog.ShowModal();
-	.loc 27 197 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:199:     dialog.ShowModal();
+	.loc 27 199 21
 	leaq	-64(%rbp), %rax	 #, tmp100
 	movq	%rax, %rcx	 # tmp100,
 .LEHB62:
 	call	_ZN8wxDialog9ShowModalEv	 #
 .LEHE62:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:195:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-	.loc 27 195 93
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+	.loc 27 197 93
 	leaq	-64(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN29T100WorkSpacePropertiesDialogD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:198: }
-	.loc 27 198 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:200: }
+	.loc 27 200 1
 	jmp	.L404	 #
 .L402:
 	movq	%rax, %rbx	 #, tmp104
@@ -9019,25 +9019,25 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 	leaq	752(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.260458
-	movq	%rax, %rcx	 # D.260458,
+	movq	%rbx, %rax	 # tmp103, D.260672
+	movq	%rax, %rcx	 # D.260672,
 .LEHB63:
 	call	_Unwind_Resume	 #
 .L403:
 	movq	%rax, %rbx	 #, tmp109
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:195:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-	.loc 27 195 93
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:197:     T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
+	.loc 27 197 93
 	leaq	-64(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN29T100WorkSpacePropertiesDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.260459
-	movq	%rax, %rcx	 # D.260459,
+	movq	%rbx, %rax	 # tmp109, D.260673
+	movq	%rax, %rcx	 # D.260673,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE63:
 .L404:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:198: }
-	.loc 27 198 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:200: }
+	.loc 27 200 1
 	addq	$984, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -9089,7 +9089,7 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv
 _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 .LFB19302:
-	.loc 27 201 1
+	.loc 27 203 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9107,12 +9107,12 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 	.cfi_def_cfa 6, 48
 	.seh_endprologue
 	movq	%rcx, 48(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:202:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 27 202 67
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:204:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 27 204 67
 	movq	48(%rbp), %rax	 # this, tmp89
 	movq	24(%rax), %rbx	 # this_4(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:202:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 27 202 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:204:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 27 204 17
 	leaq	-80(%rbp), %rax	 #, tmp90
 	leaq	.LC9(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp90,
@@ -9125,8 +9125,8 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 .LEHB65:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE65:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:202:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 27 202 17 is_stmt 0 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:204:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 27 204 17 is_stmt 0 discriminator 2
 	leaq	-80(%rbp), %rdx	 #, tmp92
 	leaq	-32(%rbp), %rax	 #, tmp93
 	movl	$-1, 40(%rsp)	 #,
@@ -9137,21 +9137,21 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 .LEHB66:
 	call	_Z12wxMessageBoxRK8wxStringS1_lP8wxWindowii	 #
 .LEHE66:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:202:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 27 202 17 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:204:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 27 204 17 discriminator 4
 	leaq	-32(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZN8wxStringD1Ev	 #
 	leaq	-80(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:203: }
-	.loc 27 203 1 is_stmt 1 discriminator 4
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:205: }
+	.loc 27 205 1 is_stmt 1 discriminator 4
 	jmp	.L410	 #
 .L409:
 	movq	%rax, %rbx	 #, tmp98
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:202:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 27 202 17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:204:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 27 204 17
 	leaq	-32(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
@@ -9159,20 +9159,20 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 .L408:
 	movq	%rax, %rbx	 #, tmp97
 .L407:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:202:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-	.loc 27 202 17 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:204:     wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
+	.loc 27 204 17 is_stmt 0 discriminator 1
 	leaq	-80(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.260461
-	movq	%rax, %rcx	 # D.260461,
+	movq	%rbx, %rax	 # tmp97, D.260675
+	movq	%rax, %rcx	 # D.260675,
 .LEHB67:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE67:
 .L410:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:203: }
-	.loc 27 203 1 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:205: }
+	.loc 27 205 1 is_stmt 1
 	addq	$152, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -9215,7 +9215,7 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase23ShowProjectCreateWizardEv
 _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 .LFB19303:
-	.loc 27 206 1
+	.loc 27 208 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9233,8 +9233,8 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	.cfi_def_cfa 6, 960
 	.seh_endprologue
 	movq	%rcx, 960(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:207:     T100ProjectCreateWizard     wizard(m_frame);
-	.loc 27 207 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:209:     T100ProjectCreateWizard     wizard(m_frame);
+	.loc 27 209 47
 	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp92
 	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.47_1
 	leaq	880(%rbp), %rax	 #, tmp93
@@ -9242,12 +9242,12 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 .LEHB68:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE68:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:207:     T100ProjectCreateWizard     wizard(m_frame);
-	.loc 27 207 40
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:209:     T100ProjectCreateWizard     wizard(m_frame);
+	.loc 27 209 40
 	movq	960(%rbp), %rax	 # this, tmp94
 	movq	24(%rax), %rdx	 # this_8(D)->m_frame, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:207:     T100ProjectCreateWizard     wizard(m_frame);
-	.loc 27 207 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:209:     T100ProjectCreateWizard     wizard(m_frame);
+	.loc 27 209 47
 	leaq	880(%rbp), %rcx	 #, tmp95
 	leaq	-64(%rbp), %rax	 #, tmp96
 	movl	$536877056, 48(%rsp)	 #,
@@ -9264,15 +9264,15 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	leaq	880(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:209:     wizard.CentreOnScreen();
-	.loc 27 209 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:211:     wizard.CentreOnScreen();
+	.loc 27 211 26
 	leaq	-64(%rbp), %rax	 #, tmp100
 	movl	$12, %edx	 #,
 	movq	%rax, %rcx	 # tmp100,
 .LEHB70:
 	call	_ZN20wxTopLevelWindowBase14CentreOnScreenEi	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:211:     wizard.RunWizard(wizard.GetFirstPage());
-	.loc 27 211 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:213:     wizard.RunWizard(wizard.GetFirstPage());
+	.loc 27 213 21
 	leaq	-64(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN23T100ProjectCreateWizard12GetFirstPageEv	 #
@@ -9281,38 +9281,38 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZN8wxWizard9RunWizardEP12wxWizardPage	 #
 .LEHE70:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:207:     T100ProjectCreateWizard     wizard(m_frame);
-	.loc 27 207 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:209:     T100ProjectCreateWizard     wizard(m_frame);
+	.loc 27 209 47
 	leaq	-64(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
 	call	_ZN23T100ProjectCreateWizardD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:212: }
-	.loc 27 212 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:214: }
+	.loc 27 214 1
 	jmp	.L416	 #
 .L414:
 	movq	%rax, %rbx	 #, tmp105
 	leaq	880(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp105, D.260463
-	movq	%rax, %rcx	 # D.260463,
+	movq	%rbx, %rax	 # tmp105, D.260677
+	movq	%rax, %rcx	 # D.260677,
 .LEHB71:
 	call	_Unwind_Resume	 #
 .L415:
 	movq	%rax, %rbx	 #, tmp107
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:207:     T100ProjectCreateWizard     wizard(m_frame);
-	.loc 27 207 47
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:209:     T100ProjectCreateWizard     wizard(m_frame);
+	.loc 27 209 47
 	leaq	-64(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN23T100ProjectCreateWizardD1Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.260464
-	movq	%rax, %rcx	 # D.260464,
+	movq	%rbx, %rax	 # tmp107, D.260678
+	movq	%rax, %rcx	 # D.260678,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE71:
 .L416:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:212: }
-	.loc 27 212 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:214: }
+	.loc 27 214 1
 	addq	$1064, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -9349,32 +9349,178 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 .LLSDACSE19303:
 	.text
 	.seh_endproc
+	.section .rdata,"dr"
+	.align 8
+.LC14:
+	.ascii "M\0o\0d\0u\0l\0e\0 \0C\0r\0e\0a\0t\0e\0.\0.\0.\0\0\0"
+	.text
 	.align 2
 	.globl	_ZN19T100ProjectViewBase22ShowModuleCreateDialogEv
 	.def	_ZN19T100ProjectViewBase22ShowModuleCreateDialogEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN19T100ProjectViewBase22ShowModuleCreateDialogEv
 _ZN19T100ProjectViewBase22ShowModuleCreateDialogEv:
 .LFB19304:
-	.loc 27 215 1
+	.loc 27 217 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
 	.cfi_def_cfa_offset 16
 	.cfi_offset 6, -16
-	movq	%rsp, %rbp	 #,
-	.seh_setframe	%rbp, 0
-	.cfi_def_cfa_register 6
+	pushq	%rbx	 #
+	.seh_pushreg	%rbx
+	.cfi_def_cfa_offset 24
+	.cfi_offset 3, -24
+	subq	$984, %rsp	 #,
+	.seh_stackalloc	984
+	.cfi_def_cfa_offset 1008
+	leaq	128(%rsp), %rbp	 #,
+	.seh_setframe	%rbp, 128
+	.cfi_def_cfa 6, 880
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:217: }
-	.loc 27 217 1
+	movq	%rcx, 880(%rbp)	 # this, this
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:218:     T100ModuleCreateDialog      dialog(m_frame, wxID_ANY, L"Module Create...");
+	.loc 27 218 78
+	leaq	752(%rbp), %rax	 #, tmp93
+	movq	.refptr.wxDialogNameStr(%rip), %rdx	 #,
+	movq	%rax, %rcx	 # tmp93,
+.LEHB72:
+	call	_ZN8wxStringC1EPKc	 #
+.LEHE72:
+	leaq	800(%rbp), %rax	 #, tmp94
+	leaq	.LC14(%rip), %rdx	 #,
+	movq	%rax, %rcx	 # tmp94,
+.LEHB73:
+	call	_ZN8wxStringC1EPKw	 #
+.LEHE73:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:218:     T100ModuleCreateDialog      dialog(m_frame, wxID_ANY, L"Module Create...");
+	.loc 27 218 40 discriminator 2
+	movq	880(%rbp), %rax	 # this, tmp95
+	movq	24(%rax), %rcx	 # this_11(D)->m_frame, _1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:218:     T100ModuleCreateDialog      dialog(m_frame, wxID_ANY, L"Module Create...");
+	.loc 27 218 78 discriminator 2
+	leaq	800(%rbp), %r8	 #, tmp96
+	leaq	-64(%rbp), %rax	 #, tmp97
+	leaq	752(%rbp), %rdx	 #, tmp98
+	movq	%rdx, 56(%rsp)	 # tmp98,
+	movl	$536877056, 48(%rsp)	 #,
+	movq	.refptr.wxDefaultSize(%rip), %rdx	 #, tmp99
+	movq	%rdx, 40(%rsp)	 # tmp99,
+	movq	.refptr.wxDefaultPosition(%rip), %rdx	 #, tmp100
+	movq	%rdx, 32(%rsp)	 # tmp100,
+	movq	%r8, %r9	 # tmp96,
+	movl	$-1, %r8d	 #,
+	movq	%rcx, %rdx	 # _1,
+	movq	%rax, %rcx	 # tmp97,
+.LEHB74:
+	call	_ZN22T100ModuleCreateDialogC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_	 #
+.LEHE74:
+	leaq	800(%rbp), %rax	 #, tmp101
+	movq	%rax, %rcx	 # tmp101,
+	call	_ZN8wxStringD1Ev	 #
+	leaq	752(%rbp), %rax	 #, tmp102
+	movq	%rax, %rcx	 # tmp102,
+	call	_ZN8wxStringD1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:220:     if(dialog.ShowModal() == wxAPPLY){
+	.loc 27 220 24
+	leaq	-64(%rbp), %rax	 #, tmp103
+	movq	%rax, %rcx	 # tmp103,
+.LEHB75:
+	call	_ZN8wxDialog9ShowModalEv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:220:     if(dialog.ShowModal() == wxAPPLY){
+	.loc 27 220 27
+	cmpl	$32, %eax	 #, _2
+	sete	%al	 #, retval.48_19
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:220:     if(dialog.ShowModal() == wxAPPLY){
+	.loc 27 220 5
+	testb	%al, %al	 # retval.48_19
+	je	.L418	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:221:         T100ProjectInvoking::OnModuleNew(dialog.GetModuleInfo());
+	.loc 27 221 41
+	leaq	-64(%rbp), %rax	 #, tmp104
+	movq	%rax, %rcx	 # tmp104,
+	call	_ZN22T100ModuleCreateDialog13GetModuleInfoEv	 #
+	movq	%rax, %rcx	 # _3,
+	call	_ZN19T100ProjectInvoking11OnModuleNewEP14T100ModuleInfo	 #
+.LEHE75:
+.L418:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:218:     T100ModuleCreateDialog      dialog(m_frame, wxID_ANY, L"Module Create...");
+	.loc 27 218 78
+	leaq	-64(%rbp), %rax	 #, tmp105
+	movq	%rax, %rcx	 # tmp105,
+	call	_ZN22T100ModuleCreateDialogD1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:223: }
+	.loc 27 223 1
+	jmp	.L425	 #
+.L423:
+	movq	%rax, %rbx	 #, tmp108
+	leaq	800(%rbp), %rax	 #, tmp106
+	movq	%rax, %rcx	 # tmp106,
+	call	_ZN8wxStringD1Ev	 #
+	jmp	.L420	 #
+.L422:
+	movq	%rax, %rbx	 #, tmp107
+.L420:
+	leaq	752(%rbp), %rax	 #, tmp111
+	movq	%rax, %rcx	 # tmp111,
+	call	_ZN8wxStringD1Ev	 #
+	movq	%rbx, %rax	 # tmp107, D.260680
+	movq	%rax, %rcx	 # D.260680,
+.LEHB76:
+	call	_Unwind_Resume	 #
+.L424:
+	movq	%rax, %rbx	 #, tmp113
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:218:     T100ModuleCreateDialog      dialog(m_frame, wxID_ANY, L"Module Create...");
+	.loc 27 218 78
+	leaq	-64(%rbp), %rax	 #, tmp112
+	movq	%rax, %rcx	 # tmp112,
+	call	_ZN22T100ModuleCreateDialogD1Ev	 #
+	movq	%rbx, %rax	 # tmp113, D.260681
+	movq	%rax, %rcx	 # D.260681,
+	call	_Unwind_Resume	 #
 	nop	
+.LEHE76:
+.L425:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:223: }
+	.loc 27 223 1
+	addq	$984, %rsp	 #,
+	popq	%rbx	 #
+	.cfi_restore 3
 	popq	%rbp	 #
 	.cfi_restore 6
-	.cfi_def_cfa 7, 8
+	.cfi_def_cfa 7, -968
 	ret	
 	.cfi_endproc
 .LFE19304:
+	.seh_handler	__gxx_personality_seh0, @unwind, @except
+	.seh_handlerdata
+.LLSDA19304:
+	.byte	0xff
+	.byte	0xff
+	.byte	0x1
+	.uleb128 .LLSDACSE19304-.LLSDACSB19304
+.LLSDACSB19304:
+	.uleb128 .LEHB72-.LFB19304
+	.uleb128 .LEHE72-.LEHB72
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB73-.LFB19304
+	.uleb128 .LEHE73-.LEHB73
+	.uleb128 .L422-.LFB19304
+	.uleb128 0
+	.uleb128 .LEHB74-.LFB19304
+	.uleb128 .LEHE74-.LEHB74
+	.uleb128 .L423-.LFB19304
+	.uleb128 0
+	.uleb128 .LEHB75-.LFB19304
+	.uleb128 .LEHE75-.LEHB75
+	.uleb128 .L424-.LFB19304
+	.uleb128 0
+	.uleb128 .LEHB76-.LFB19304
+	.uleb128 .LEHE76-.LEHB76
+	.uleb128 0
+	.uleb128 0
+.LLSDACSE19304:
+	.text
 	.seh_endproc
 	.align 2
 	.globl	_ZN19T100ProjectViewBase14ShowBuildPanelEv
@@ -9382,7 +9528,7 @@ _ZN19T100ProjectViewBase22ShowModuleCreateDialogEv:
 	.seh_proc	_ZN19T100ProjectViewBase14ShowBuildPanelEv
 _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 .LFB19305:
-	.loc 27 220 1
+	.loc 27 226 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9408,46 +9554,46 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	.cfi_def_cfa 6, 336
 	.seh_endprologue
 	movq	%rcx, 336(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:221:     if(m_buildPanel){
-	.loc 27 221 8
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:227:     if(m_buildPanel){
+	.loc 27 227 8
 	movq	336(%rbp), %rax	 # this, tmp116
 	movq	56(%rax), %rax	 # this_31(D)->m_buildPanel, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:221:     if(m_buildPanel){
-	.loc 27 221 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:227:     if(m_buildPanel){
+	.loc 27 227 5
 	testq	%rax, %rax	 # _1
-	jne	.L419	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:224:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
-	.loc 27 224 25
+	jne	.L427	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:230:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
+	.loc 27 230 25
 	movq	.refptr.wxEmptyString(%rip), %rax	 #, tmp117
-	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.48_2
+	movq	(%rax), %rdx	 # wxEmptyString, wxEmptyString.49_2
 	leaq	-48(%rbp), %rax	 #, tmp118
 	movq	%rax, %rcx	 # tmp118,
-.LEHB72:
+.LEHB77:
 	call	_ZN8wxStringC1EPKw	 #
-.LEHE72:
+.LEHE77:
 	leaq	-48(%rbp), %rdi	 #, _33
 	movq	%rbp, %rax	 #, tmp119
 	movq	.refptr.wxTextCtrlNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp119,
-.LEHB73:
+.LEHB78:
 	call	_ZN8wxStringC1EPKc	 #
-.LEHE73:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:224:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
-	.loc 27 224 25 is_stmt 0 discriminator 2
+.LEHE78:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:230:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
+	.loc 27 230 25 is_stmt 0 discriminator 2
 	movq	%rbp, %rsi	 #, _35
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:224:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
-	.loc 27 224 67 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:230:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
+	.loc 27 230 67 is_stmt 1 discriminator 2
 	movl	$1384, %ecx	 #,
-.LEHB74:
+.LEHB79:
 	call	_Znwy	 #
-.LEHE74:
+.LEHE79:
 	movq	%rax, %rbx	 # tmp120, _37
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:224:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
-	.loc 27 224 50 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:230:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
+	.loc 27 230 50 discriminator 2
 	movq	336(%rbp), %rax	 # this, tmp121
 	movq	24(%rax), %rax	 # this_31(D)->m_frame, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:224:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
-	.loc 27 224 67 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:230:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
+	.loc 27 230 67 discriminator 2
 	movq	%rsi, 64(%rsp)	 # _35,
 	movq	.refptr.wxDefaultValidator(%rip), %rdx	 #, tmp122
 	movq	%rdx, 56(%rsp)	 # tmp122,
@@ -9460,11 +9606,11 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	movl	$-1, %r8d	 #,
 	movq	%rax, %rdx	 # _3,
 	movq	%rbx, %rcx	 # _37,
-.LEHB75:
+.LEHB80:
 	call	_ZN14T100BuildPanelC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelRK11wxValidatorS4_	 #
-.LEHE75:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:224:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
-	.loc 27 224 25 discriminator 6
+.LEHE80:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:230:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
+	.loc 27 230 25 discriminator 6
 	movq	336(%rbp), %rax	 # this, tmp125
 	movq	%rbx, 56(%rax)	 # _37, this_31(D)->m_buildPanel
 	movq	%rbp, %rax	 #, tmp126
@@ -9473,59 +9619,59 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	leaq	-48(%rbp), %rax	 #, tmp127
 	movq	%rax, %rcx	 # tmp127,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:225:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
-	.loc 27 225 12 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:231:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
+	.loc 27 231 12 discriminator 6
 	movq	336(%rbp), %rax	 # this, tmp128
 	movq	16(%rax), %rbx	 # this_31(D)->m_manager, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:225:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
-	.loc 27 225 45 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:231:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
+	.loc 27 231 45 discriminator 6
 	leaq	48(%rbp), %rax	 #, tmp129
 	movq	%rax, %rcx	 # tmp129,
-.LEHB76:
+.LEHB81:
 	call	_ZN13wxAuiPaneInfoC1Ev	 #
-.LEHE76:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:225:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
-	.loc 27 225 68 discriminator 6
+.LEHE81:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:231:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
+	.loc 27 231 68 discriminator 6
 	leaq	48(%rbp), %rax	 #, tmp130
 	movq	%rax, %rcx	 # tmp130,
 	call	_ZN13wxAuiPaneInfo6BottomEv	 #
 	movq	%rax, %rdx	 #, _5
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:225:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
-	.loc 27 225 31 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:231:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
+	.loc 27 231 31 discriminator 6
 	movq	336(%rbp), %rax	 # this, tmp131
 	movq	56(%rax), %rax	 # this_31(D)->m_buildPanel, _6
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:225:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
-	.loc 27 225 30 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:231:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
+	.loc 27 231 30 discriminator 6
 	movq	%rdx, %r8	 # _5,
 	movq	%rax, %rdx	 # _6,
 	movq	%rbx, %rcx	 # _4,
-.LEHB77:
+.LEHB82:
 	call	_ZN12wxAuiManager7AddPaneEP8wxWindowRK13wxAuiPaneInfo	 #
-.LEHE77:
+.LEHE82:
 	movl	%eax, %ebx	 #, _48
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:225:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
-	.loc 27 225 45 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:231:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
+	.loc 27 231 45 discriminator 6
 	leaq	48(%rbp), %rax	 #, tmp132
 	movq	%rax, %rcx	 # tmp132,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:225:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
-	.loc 27 225 9 discriminator 6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:231:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
+	.loc 27 231 9 discriminator 6
 	testb	%bl, %bl	 # _48
-	jne	.L419	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:228:             T100SAFE_DELETE(m_buildPanel);
-	.loc 27 228 13
+	jne	.L427	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:234:             T100SAFE_DELETE(m_buildPanel);
+	.loc 27 234 13
 	movq	336(%rbp), %rax	 # this, tmp133
 	movq	56(%rax), %rax	 # this_31(D)->m_buildPanel, _7
 	testq	%rax, %rax	 # _7
-	je	.L431	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:228:             T100SAFE_DELETE(m_buildPanel);
-	.loc 27 228 13 is_stmt 0 discriminator 1
+	je	.L439	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:234:             T100SAFE_DELETE(m_buildPanel);
+	.loc 27 234 13 is_stmt 0 discriminator 1
 	movq	336(%rbp), %rax	 # this, tmp134
 	movq	56(%rax), %rax	 # this_31(D)->m_buildPanel, _8
 	testq	%rax, %rax	 # _8
-	je	.L421	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:228:             T100SAFE_DELETE(m_buildPanel);
-	.loc 27 228 13 discriminator 2
+	je	.L429	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:234:             T100SAFE_DELETE(m_buildPanel);
+	.loc 27 234 13 discriminator 2
 	movq	336(%rbp), %rax	 # this, tmp135
 	movq	56(%rax), %rdx	 # this_31(D)->m_buildPanel, _9
 	movq	336(%rbp), %rax	 # this, tmp137
@@ -9536,93 +9682,93 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	movq	%rdx, %rcx	 # _9,
 	call	*%rax	 # _14
 .LVL21:
-.L421:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:228:             T100SAFE_DELETE(m_buildPanel);
-	.loc 27 228 13 discriminator 4
+.L429:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:234:             T100SAFE_DELETE(m_buildPanel);
+	.loc 27 234 13 discriminator 4
 	movq	336(%rbp), %rax	 # this, tmp138
 	movq	$0, 56(%rax)	 #, this_31(D)->m_buildPanel
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:229:             return;
-	.loc 27 229 13 is_stmt 1 discriminator 4
-	jmp	.L431	 #
-.L419:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:233:     m_buildPanel->Show();
-	.loc 27 233 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:235:             return;
+	.loc 27 235 13 is_stmt 1 discriminator 4
+	jmp	.L439	 #
+.L427:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     m_buildPanel->Show();
+	.loc 27 239 5
 	movq	336(%rbp), %rax	 # this, tmp139
 	movq	56(%rax), %rax	 # this_31(D)->m_buildPanel, _15
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:233:     m_buildPanel->Show();
-	.loc 27 233 23
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     m_buildPanel->Show();
+	.loc 27 239 23
 	movq	%rax, %rcx	 # _15, _16
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:233:     m_buildPanel->Show();
-	.loc 27 233 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     m_buildPanel->Show();
+	.loc 27 239 5
 	movq	336(%rbp), %rax	 # this, tmp141
 	movq	56(%rax), %rax	 # this_31(D)->m_buildPanel, _19
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:233:     m_buildPanel->Show();
-	.loc 27 233 24
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     m_buildPanel->Show();
+	.loc 27 239 24
 	movq	(%rax), %rax	 # _19->D.168355.D.157607.D.157107.D.141347.D.141187.D.128839.D.127548.D.121505._vptr.wxObject, _20
 	addq	$448, %rax	 #, _21
 	movq	(%rax), %rax	 # *_21, _22
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:233:     m_buildPanel->Show();
-	.loc 27 233 23
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     m_buildPanel->Show();
+	.loc 27 239 23
 	movl	$1, %edx	 #,
-.LEHB78:
+.LEHB83:
 	call	*%rax	 # _22
 .LVL22:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:234:     m_manager->Update();
-	.loc 27 234 5
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:240:     m_manager->Update();
+	.loc 27 240 5
 	movq	336(%rbp), %rax	 # this, tmp142
 	movq	16(%rax), %rax	 # this_31(D)->m_manager, _23
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:234:     m_manager->Update();
-	.loc 27 234 22
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:240:     m_manager->Update();
+	.loc 27 240 22
 	movq	%rax, %rcx	 # _23,
 	call	_ZN12wxAuiManager6UpdateEv	 #
-	jmp	.L418	 #
-.L429:
+	jmp	.L426	 #
+.L437:
 	movq	%rax, %rsi	 #, tmp144
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:224:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
-	.loc 27 224 67
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:230:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
+	.loc 27 230 67
 	movl	$1384, %edx	 #,
 	movq	%rbx, %rcx	 # _37,
 	call	_ZdlPvy	 #
 	movq	%rsi, %rbx	 # tmp144, tmp143
-	jmp	.L424	 #
-.L428:
+	jmp	.L432	 #
+.L436:
 	movq	%rax, %rbx	 #, tmp143
-.L424:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:224:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
-	.loc 27 224 25 discriminator 3
+.L432:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:230:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
+	.loc 27 230 25 discriminator 3
 	movq	%rbp, %rax	 #, tmp147
 	movq	%rax, %rcx	 # tmp147,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L425	 #
-.L427:
+	jmp	.L433	 #
+.L435:
 	movq	%rax, %rbx	 #, tmp148
-.L425:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:224:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
-	.loc 27 224 25 is_stmt 0 discriminator 1
+.L433:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:230:         m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
+	.loc 27 230 25 is_stmt 0 discriminator 1
 	leaq	-48(%rbp), %rax	 #, tmp150
 	movq	%rax, %rcx	 # tmp150,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp148, D.260466
-	movq	%rax, %rcx	 # D.260466,
+	movq	%rbx, %rax	 # tmp148, D.260683
+	movq	%rax, %rcx	 # D.260683,
 	call	_Unwind_Resume	 #
-.L430:
+.L438:
 	movq	%rax, %rbx	 #, tmp152
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:225:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
-	.loc 27 225 45 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:231:         if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
+	.loc 27 231 45 is_stmt 1
 	leaq	48(%rbp), %rax	 #, tmp151
 	movq	%rax, %rcx	 # tmp151,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp152, D.260467
-	movq	%rax, %rcx	 # D.260467,
+	movq	%rbx, %rax	 # tmp152, D.260684
+	movq	%rax, %rcx	 # D.260684,
 	call	_Unwind_Resume	 #
-.LEHE78:
-.L431:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:229:             return;
-	.loc 27 229 13
+.LEHE83:
+.L439:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:235:             return;
+	.loc 27 235 13
 	nop	
-.L418:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:235: }
-	.loc 27 235 1
+.L426:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:241: }
+	.loc 27 241 1
 	addq	$424, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -9644,32 +9790,32 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	.byte	0x1
 	.uleb128 .LLSDACSE19305-.LLSDACSB19305
 .LLSDACSB19305:
-	.uleb128 .LEHB72-.LFB19305
-	.uleb128 .LEHE72-.LEHB72
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB73-.LFB19305
-	.uleb128 .LEHE73-.LEHB73
-	.uleb128 .L427-.LFB19305
-	.uleb128 0
-	.uleb128 .LEHB74-.LFB19305
-	.uleb128 .LEHE74-.LEHB74
-	.uleb128 .L428-.LFB19305
-	.uleb128 0
-	.uleb128 .LEHB75-.LFB19305
-	.uleb128 .LEHE75-.LEHB75
-	.uleb128 .L429-.LFB19305
-	.uleb128 0
-	.uleb128 .LEHB76-.LFB19305
-	.uleb128 .LEHE76-.LEHB76
-	.uleb128 0
-	.uleb128 0
 	.uleb128 .LEHB77-.LFB19305
 	.uleb128 .LEHE77-.LEHB77
-	.uleb128 .L430-.LFB19305
+	.uleb128 0
 	.uleb128 0
 	.uleb128 .LEHB78-.LFB19305
 	.uleb128 .LEHE78-.LEHB78
+	.uleb128 .L435-.LFB19305
+	.uleb128 0
+	.uleb128 .LEHB79-.LFB19305
+	.uleb128 .LEHE79-.LEHB79
+	.uleb128 .L436-.LFB19305
+	.uleb128 0
+	.uleb128 .LEHB80-.LFB19305
+	.uleb128 .LEHE80-.LEHB80
+	.uleb128 .L437-.LFB19305
+	.uleb128 0
+	.uleb128 .LEHB81-.LFB19305
+	.uleb128 .LEHE81-.LEHB81
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB82-.LFB19305
+	.uleb128 .LEHE82-.LEHB82
+	.uleb128 .L438-.LFB19305
+	.uleb128 0
+	.uleb128 .LEHB83-.LFB19305
+	.uleb128 .LEHE83-.LEHB83
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE19305:
@@ -9677,7 +9823,7 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 2
-.LC14:
+.LC15:
 	.ascii "A\0b\0o\0u\0t\0.\0.\0.\0\0\0"
 	.text
 	.align 2
@@ -9686,7 +9832,7 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	.seh_proc	_ZN19T100ProjectViewBase15ShowAboutDialogEv
 _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 .LFB19306:
-	.loc 27 238 1
+	.loc 27 244 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -9704,26 +9850,26 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	.cfi_def_cfa 6, 864
 	.seh_endprologue
 	movq	%rcx, 864(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-	.loc 27 239 74
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:245:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
+	.loc 27 245 74
 	leaq	736(%rbp), %rax	 #, tmp90
 	movq	.refptr.wxDialogNameStr(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp90,
-.LEHB79:
+.LEHB84:
 	call	_ZN8wxStringC1EPKc	 #
-.LEHE79:
+.LEHE84:
 	leaq	784(%rbp), %rax	 #, tmp91
-	leaq	.LC14(%rip), %rdx	 #,
+	leaq	.LC15(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp91,
-.LEHB80:
+.LEHB85:
 	call	_ZN8wxStringC1EPKw	 #
-.LEHE80:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-	.loc 27 239 44 discriminator 2
+.LEHE85:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:245:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
+	.loc 27 245 44 discriminator 2
 	movq	864(%rbp), %rax	 # this, tmp92
 	movq	24(%rax), %rcx	 # this_8(D)->m_frame, _1
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-	.loc 27 239 74 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:245:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
+	.loc 27 245 74 discriminator 2
 	leaq	784(%rbp), %r8	 #, tmp93
 	leaq	-64(%rbp), %rax	 #, tmp94
 	leaq	736(%rbp), %rdx	 #, tmp95
@@ -9737,67 +9883,67 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	movl	$-1, %r8d	 #,
 	movq	%rcx, %rdx	 # _1,
 	movq	%rax, %rcx	 # tmp94,
-.LEHB81:
+.LEHB86:
 	call	_ZN26T100ProjectViewAboutDialogC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_	 #
-.LEHE81:
+.LEHE86:
 	leaq	784(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZN8wxStringD1Ev	 #
 	leaq	736(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:241:     dialog.CentreOnScreen();
-	.loc 27 241 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:247:     dialog.CentreOnScreen();
+	.loc 27 247 26
 	leaq	-64(%rbp), %rax	 #, tmp100
 	movl	$12, %edx	 #,
 	movq	%rax, %rcx	 # tmp100,
-.LEHB82:
+.LEHB87:
 	call	_ZN20wxTopLevelWindowBase14CentreOnScreenEi	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:242:     dialog.ShowModal();
-	.loc 27 242 21
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:248:     dialog.ShowModal();
+	.loc 27 248 21
 	leaq	-64(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN8wxDialog9ShowModalEv	 #
-.LEHE82:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-	.loc 27 239 74
+.LEHE87:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:245:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
+	.loc 27 245 74
 	leaq	-64(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:243: }
-	.loc 27 243 1
-	jmp	.L439	 #
-.L437:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
+	.loc 27 249 1
+	jmp	.L447	 #
+.L445:
 	movq	%rax, %rbx	 #, tmp105
 	leaq	784(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L434	 #
-.L436:
+	jmp	.L442	 #
+.L444:
 	movq	%rax, %rbx	 #, tmp104
-.L434:
+.L442:
 	leaq	736(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp104, D.260470
-	movq	%rax, %rcx	 # D.260470,
-.LEHB83:
+	movq	%rbx, %rax	 # tmp104, D.260687
+	movq	%rax, %rcx	 # D.260687,
+.LEHB88:
 	call	_Unwind_Resume	 #
-.L438:
+.L446:
 	movq	%rax, %rbx	 #, tmp110
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-	.loc 27 239 74
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:245:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
+	.loc 27 245 74
 	leaq	-64(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.260471
-	movq	%rax, %rcx	 # D.260471,
+	movq	%rbx, %rax	 # tmp110, D.260688
+	movq	%rax, %rcx	 # D.260688,
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE83:
-.L439:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:243: }
-	.loc 27 243 1
+.LEHE88:
+.L447:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
+	.loc 27 249 1
 	addq	$968, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -9815,24 +9961,24 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	.byte	0x1
 	.uleb128 .LLSDACSE19306-.LLSDACSB19306
 .LLSDACSB19306:
-	.uleb128 .LEHB79-.LFB19306
-	.uleb128 .LEHE79-.LEHB79
+	.uleb128 .LEHB84-.LFB19306
+	.uleb128 .LEHE84-.LEHB84
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB80-.LFB19306
-	.uleb128 .LEHE80-.LEHB80
-	.uleb128 .L436-.LFB19306
+	.uleb128 .LEHB85-.LFB19306
+	.uleb128 .LEHE85-.LEHB85
+	.uleb128 .L444-.LFB19306
 	.uleb128 0
-	.uleb128 .LEHB81-.LFB19306
-	.uleb128 .LEHE81-.LEHB81
-	.uleb128 .L437-.LFB19306
+	.uleb128 .LEHB86-.LFB19306
+	.uleb128 .LEHE86-.LEHB86
+	.uleb128 .L445-.LFB19306
 	.uleb128 0
-	.uleb128 .LEHB82-.LFB19306
-	.uleb128 .LEHE82-.LEHB82
-	.uleb128 .L438-.LFB19306
+	.uleb128 .LEHB87-.LFB19306
+	.uleb128 .LEHE87-.LEHB87
+	.uleb128 .L446-.LFB19306
 	.uleb128 0
-	.uleb128 .LEHB83-.LFB19306
-	.uleb128 .LEHE83-.LEHB83
+	.uleb128 .LEHB88-.LFB19306
+	.uleb128 .LEHE88-.LEHB88
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE19306:
@@ -10174,18 +10320,18 @@ _Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_:
 	.loc 28 71 68
 	movl	16(%rbp), %eax	 # a, tmp89
 	cmpl	24(%rbp), %eax	 # b, tmp89
-	jle	.L451	 #,
+	jle	.L459	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 28 71 68 is_stmt 0 discriminator 1
 	movl	16(%rbp), %eax	 # a, iftmp.45_1
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 28 71 74 is_stmt 1 discriminator 1
-	jmp	.L453	 #
-.L451:
+	jmp	.L461	 #
+.L459:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 28 71 68 discriminator 2
 	movl	24(%rbp), %eax	 # b, iftmp.45_1
-.L453:
+.L461:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:72: }
 	.loc 28 72 1 discriminator 5
 	popq	%rbp	 #
@@ -10228,30 +10374,30 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	-56(%rbp), %rax	 # __lhs, tmp88
 	movq	%rax, %rdx	 # tmp88,
 	movq	-64(%rbp), %rcx	 # <retval>,
-.LEHB84:
+.LEHB89:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1ERKS4_	 #
-.LEHE84:
+.LEHE89:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:5929:       __str.append(__rhs);
 	.loc 29 5929 7
 	movq	-48(%rbp), %rax	 # __rhs, tmp89
 	movq	%rax, %rdx	 # tmp89,
 	movq	-64(%rbp), %rcx	 # <retval>,
-.LEHB85:
+.LEHB90:
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE6appendEPKw	 #
-.LEHE85:
+.LEHE90:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:5930:       return __str;
 	.loc 29 5930 14
-	jmp	.L458	 #
-.L457:
+	jmp	.L466	 #
+.L465:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.260473
-	movq	%rax, %rcx	 # D.260473,
-.LEHB86:
+	movq	%rbx, %rax	 # tmp90, D.260690
+	movq	%rax, %rcx	 # D.260690,
+.LEHB91:
 	call	_Unwind_Resume	 #
-.LEHE86:
-.L458:
+.LEHE91:
+.L466:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:5931:     }
 	.loc 29 5931 5
 	movq	-64(%rbp), %rax	 # <retval>,
@@ -10272,16 +10418,16 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	.byte	0x1
 	.uleb128 .LLSDACSE20058-.LLSDACSB20058
 .LLSDACSB20058:
-	.uleb128 .LEHB84-.LFB20058
-	.uleb128 .LEHE84-.LEHB84
+	.uleb128 .LEHB89-.LFB20058
+	.uleb128 .LEHE89-.LEHB89
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB85-.LFB20058
-	.uleb128 .LEHE85-.LEHB85
-	.uleb128 .L457-.LFB20058
+	.uleb128 .LEHB90-.LFB20058
+	.uleb128 .LEHE90-.LEHB90
+	.uleb128 .L465-.LFB20058
 	.uleb128 0
-	.uleb128 .LEHB86-.LFB20058
-	.uleb128 .LEHE86-.LEHB86
+	.uleb128 .LEHB91-.LFB20058
+	.uleb128 .LEHE91-.LEHB91
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE20058:
@@ -10457,21 +10603,21 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:194:         if ( m_data == GetNullData() ) // exception, not ref-counted
 	.loc 4 194 9
 	testb	%al, %al	 # retval.36_14
-	jne	.L468	 #,
+	jne	.L476	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 4 196 16
 	movq	-64(%rbp), %rax	 # this, tmp98
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 4 196 24
-	movzwl	16(%rax), %edx	 # _3->D.253112.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.253314.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 4 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.253112.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.253314.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 4 196 24
-	movzwl	16(%rax), %eax	 # _3->D.253112.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.253314.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 4 196 30
 	testw	%ax, %ax	 # _6
@@ -10479,7 +10625,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 4 196 9
 	testb	%al, %al	 # retval.37_16
-	je	.L467	 #,
+	je	.L475	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 4 197 20
 	movq	-64(%rbp), %rax	 # this, tmp99
@@ -10487,7 +10633,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 4 197 13
 	testq	%rbx, %rbx	 # _17
-	je	.L467	 #,
+	je	.L475	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:197:             delete m_data;
 	.loc 4 197 13 is_stmt 0 discriminator 1
 	movq	%rbx, %rcx	 # _17,
@@ -10495,7 +10641,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movl	$24, %edx	 #,
 	movq	%rbx, %rcx	 # _17,
 	call	_ZdlPvy	 #
-.L467:
+.L475:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:198:         m_data = GetNullData();
 	.loc 4 198 29 is_stmt 1
 	call	_ZN22wxScopedCharTypeBufferIwE11GetNullDataEv	 #
@@ -10504,12 +10650,12 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	.loc 4 198 9
 	movq	-64(%rbp), %rax	 # this, tmp100
 	movq	%rdx, (%rax)	 # _7, this_11(D)->m_data
-	jmp	.L464	 #
-.L468:
+	jmp	.L472	 #
+.L476:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:195:             return;
 	.loc 4 195 13
 	nop	
-.L464:
+.L472:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:199:     }
 	.loc 4 199 5
 	addq	$40, %rsp	 #,
@@ -10594,24 +10740,24 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:187:         if ( m_data == GetNullData() ) // exception, not ref-counted
 	.loc 4 187 9
 	testb	%al, %al	 # retval.35_12
-	jne	.L474	 #,
+	jne	.L482	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 4 189 9
 	movq	-64(%rbp), %rax	 # this, tmp94
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 4 189 17
-	movzwl	16(%rax), %edx	 # _3->D.253112.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.253314.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 4 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.253112.m_ref
-	jmp	.L471	 #
-.L474:
+	movw	%dx, 16(%rax)	 # _6, _3->D.253314.m_ref
+	jmp	.L479	 #
+.L482:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
 	.loc 4 188 13
 	nop	
-.L471:
+.L479:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:190:     }
 	.loc 4 190 5
 	addq	$40, %rsp	 #,
@@ -10646,7 +10792,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 4 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.253112.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.253314.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 4 171 72
 	popq	%rbp	 #
@@ -11506,7 +11652,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB20532:
-	.loc 27 243 1
+	.loc 27 249 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -11520,23 +11666,23 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:243: }
-	.loc 27 243 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
+	.loc 27 249 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
-	jne	.L486	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:243: }
-	.loc 27 243 1 is_stmt 0 discriminator 1
+	jne	.L494	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
+	.loc 27 249 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
-	jne	.L486	 #,
+	jne	.L494	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 31 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
 	call	_ZNSt8ios_base4InitC1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
-.L486:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:243: }
-	.loc 27 243 1
+.L494:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
+	.loc 27 249 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -11621,13 +11767,13 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE8SetFocusEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:246:         if ( !m_container.DoSetFocus() )
 	.loc 23 246 9
 	testb	%al, %al	 # retval.42_9
-	je	.L490	 #,
+	je	.L498	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:247:             BaseWindowClass::SetFocus();
 	.loc 23 247 38
 	movq	16(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN8wxWindow8SetFocusEv	 #
-.L490:
+.L498:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:248:     }
 	.loc 23 248 5
 	nop	
@@ -11787,7 +11933,7 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE8AddChildEP12wxWindowBase:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:222:         if ( m_container.UpdateCanFocusChildren() )
 	.loc 23 222 9
 	testb	%al, %al	 # _12
-	je	.L499	 #,
+	je	.L507	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:226:             if ( !BaseWindowClass::HasFlag(wxTAB_TRAVERSAL) )
 	.loc 23 226 43
 	movq	16(%rbp), %rax	 # this, _3
@@ -11800,14 +11946,14 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE8AddChildEP12wxWindowBase:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:226:             if ( !BaseWindowClass::HasFlag(wxTAB_TRAVERSAL) )
 	.loc 23 226 13
 	testb	%al, %al	 # retval.39_15
-	je	.L499	 #,
+	je	.L507	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:227:                 BaseWindowClass::ToggleWindowStyle(wxTAB_TRAVERSAL);
 	.loc 23 227 51
 	movq	16(%rbp), %rax	 # this, _5
 	movl	$524288, %edx	 #,
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBase17ToggleWindowStyleEi	 #
-.L499:
+.L507:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:229:     }
 	.loc 23 229 5
 	nop	
@@ -11892,7 +12038,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev
 _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 .LFB20641:
-	.loc 27 243 1
+	.loc 27 249 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -11904,8 +12050,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:243: }
-	.loc 27 243 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
+	.loc 27 249 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -12058,7 +12204,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.file 154 "<built-in>"
 	.section	.debug_info,"dr"
 .Ldebug_info0:
-	.long	0x4ed48
+	.long	0x4ed70
 	.word	0x4
 	.secrel32	.Ldebug_abbrev0
 	.byte	0x8
@@ -17846,7 +17992,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x48
 	.byte	0x2d
 	.long	0x11219
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "operator std::integral_constant<bool, false>::value_type\0"
 	.byte	0x23
 	.byte	0x4a
@@ -17899,7 +18045,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x48
 	.byte	0x2d
 	.long	0x11219
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "operator std::integral_constant<bool, true>::value_type\0"
 	.byte	0x23
 	.byte	0x4a
@@ -18990,7 +19136,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x9324
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "load\0"
 	.byte	0x2
 	.byte	0x6e
@@ -19004,7 +19150,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x9324
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "load\0"
 	.byte	0x2
 	.byte	0x72
@@ -20319,7 +20465,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x21723
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "_M_get\0"
 	.byte	0x2c
 	.byte	0x58
@@ -20537,7 +20683,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x8
 	.long	0xbf8d
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "nothrow\0"
 	.byte	0x2d
 	.byte	0x5d
@@ -21743,7 +21889,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x8a
 	.byte	0x21
 	.long	0xd01a
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "cin\0"
 	.byte	0x1f
 	.byte	0x3c
@@ -21756,21 +21902,21 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x8d
 	.byte	0x21
 	.long	0xcf8a
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "cout\0"
 	.byte	0x1f
 	.byte	0x3d
 	.byte	0x12
 	.ascii "_ZSt4cout\0"
 	.long	0xd0cf
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "cerr\0"
 	.byte	0x1f
 	.byte	0x3e
 	.byte	0x12
 	.ascii "_ZSt4cerr\0"
 	.long	0xd0cf
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "clog\0"
 	.byte	0x1f
 	.byte	0x3f
@@ -21783,7 +21929,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0xb2
 	.byte	0x23
 	.long	0xd05f
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "wcin\0"
 	.byte	0x1f
 	.byte	0x42
@@ -21796,21 +21942,21 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0xb5
 	.byte	0x23
 	.long	0xcfcf
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "wcout\0"
 	.byte	0x1f
 	.byte	0x43
 	.byte	0x13
 	.ascii "_ZSt5wcout\0"
 	.long	0xd14c
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "wcerr\0"
 	.byte	0x1f
 	.byte	0x44
 	.byte	0x13
 	.ascii "_ZSt5wcerr\0"
 	.long	0xd14c
-	.uleb128 0x66
+	.uleb128 0x67
 	.ascii "wclog\0"
 	.byte	0x1f
 	.byte	0x45
@@ -35179,7 +35325,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x1c26e
-	.uleb128 0x67
+	.uleb128 0x68
 	.long	0x10959
 	.long	0x1c282
 	.uleb128 0x1
@@ -36126,7 +36272,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x1d14e
-	.uleb128 0x67
+	.uleb128 0x68
 	.long	0x10959
 	.long	0x1d162
 	.uleb128 0x1
@@ -37622,7 +37768,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1e396
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "Get\0"
 	.byte	0x4
 	.byte	0xab
@@ -37697,7 +37843,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1f22d
 	.byte	0
-	.uleb128 0x68
+	.uleb128 0x69
 	.ascii "StrCopy\0"
 	.byte	0x4
 	.byte	0xe5
@@ -37952,7 +38098,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1e396
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "Get\0"
 	.byte	0x4
 	.byte	0xab
@@ -38037,7 +38183,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x1fca9
 	.byte	0
-	.uleb128 0x68
+	.uleb128 0x69
 	.ascii "StrCopy\0"
 	.byte	0x4
 	.byte	0xe5
@@ -43247,7 +43393,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0xb9
 	.byte	0x24
 	.long	0x5320
-	.uleb128 0x68
+	.uleb128 0x69
 	.ascii "CreateForString\0"
 	.byte	0x55
 	.byte	0xcc
@@ -45161,7 +45307,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x259ff
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "InputAsWChar\0"
 	.byte	0x56
 	.byte	0xe3
@@ -45173,7 +45319,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x259ed
 	.byte	0
-	.uleb128 0x65
+	.uleb128 0x66
 	.ascii "AsWChar\0"
 	.byte	0x56
 	.byte	0xe4
@@ -45417,14 +45563,14 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.word	0x172
 	.byte	0xf
 	.ascii "_ZN8wxObjectaSERKS_\0"
-	.long	0x4e5f7
+	.long	0x4e61f
 	.byte	0x1
 	.long	0x25b90
 	.long	0x25b9b
 	.uleb128 0x2
 	.long	0x25c06
 	.uleb128 0x1
-	.long	0x4e5fd
+	.long	0x4e625
 	.byte	0
 	.uleb128 0x9e
 	.ascii "~wxObject\0"
@@ -45791,7 +45937,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x264a8
 	.byte	0
-	.uleb128 0x68
+	.uleb128 0x69
 	.ascii "FindClass\0"
 	.byte	0x57
 	.byte	0x51
@@ -46300,7 +46446,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x269b3
-	.uleb128 0x67
+	.uleb128 0x68
 	.long	0x10959
 	.long	0x269c7
 	.uleb128 0x1
@@ -48174,7 +48320,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x54
 	.byte	0x18
 	.long	0x28b9b
-	.uleb128 0x68
+	.uleb128 0x69
 	.ascii "DummyProcessNode\0"
 	.byte	0x59
 	.byte	0x5b
@@ -48208,7 +48354,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x34
 	.long	0x28ba1
 	.byte	0x1
-	.uleb128 0x68
+	.uleb128 0x69
 	.ascii "GetFirstNode\0"
 	.byte	0x59
 	.byte	0x5e
@@ -48229,7 +48375,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x20
 	.long	0x28bc3
 	.byte	0x2
-	.uleb128 0x68
+	.uleb128 0x69
 	.ascii "GetNextPrime\0"
 	.byte	0x59
 	.byte	0x6c
@@ -48241,7 +48387,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x10cea
 	.byte	0
-	.uleb128 0x68
+	.uleb128 0x69
 	.ascii "GetPreviousPrime\0"
 	.byte	0x59
 	.byte	0x70
@@ -48288,7 +48434,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x49
 	.long	0x28be8
 	.byte	0x1
-	.uleb128 0x68
+	.uleb128 0x69
 	.ascii "AllocTable\0"
 	.byte	0x59
 	.byte	0x77
@@ -48337,7 +48483,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x28bd4
-	.uleb128 0x67
+	.uleb128 0x68
 	.long	0x10cea
 	.long	0x28be8
 	.uleb128 0x1
@@ -48348,7 +48494,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x28bee
-	.uleb128 0x67
+	.uleb128 0x68
 	.long	0x2884b
 	.long	0x28bfd
 	.uleb128 0x1
@@ -50615,7 +50761,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x269d3
 	.byte	0
 	.byte	0x1
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.LASF289
 	.ascii "_ZN6wxListC4ERKS_\0"
 	.byte	0x1
@@ -52171,7 +52317,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x91
 	.secrel32	.LASF35
 	.ascii "_ZN8wxBitmapaSERKS_\0"
-	.long	0x4cfc5
+	.long	0x4cfed
 	.byte	0x1
 	.long	0x2cfd8
 	.long	0x2cfe3
@@ -52196,7 +52342,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x2d02d
 	.long	0x2d033
 	.uleb128 0x2
-	.long	0x4d118
+	.long	0x4d140
 	.byte	0
 	.uleb128 0x2a
 	.ascii "GetScaledWidth\0"
@@ -52214,7 +52360,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x2d07b
 	.long	0x2d081
 	.uleb128 0x2
-	.long	0x4d118
+	.long	0x4d140
 	.byte	0
 	.uleb128 0x2a
 	.ascii "GetScaleFactor\0"
@@ -52232,7 +52378,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x2d0c9
 	.long	0x2d0cf
 	.uleb128 0x2
-	.long	0x4d118
+	.long	0x4d140
 	.byte	0
 	.uleb128 0x5a
 	.secrel32	.LASF302
@@ -52379,7 +52525,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x25b5c
 	.byte	0
 	.byte	0x1
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.LASF303
 	.ascii "_ZN17wxGDIImageHandlerC4EOS_\0"
 	.byte	0x1
@@ -52390,7 +52536,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x4a0ad
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.LASF303
 	.ascii "_ZN17wxGDIImageHandlerC4ERKS_\0"
 	.byte	0x1
@@ -52656,25 +52802,25 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x5
 	.byte	0x1
 	.long	0x2d810
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "m_handle\0"
 	.byte	0xb
 	.byte	0x47
 	.byte	0x13
 	.long	0x1c292
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "m_hBitmap\0"
 	.byte	0xb
 	.byte	0x48
 	.byte	0x13
 	.long	0x1c36b
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "m_hIcon\0"
 	.byte	0xb
 	.byte	0x49
 	.byte	0x13
 	.long	0x1c2d8
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "m_hCursor\0"
 	.byte	0xb
 	.byte	0x4a
@@ -57332,7 +57478,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x18
 	.long	0x3241e
 	.long	0x325c7
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.LASF323
 	.ascii "_ZN13wxTrackerNodeC4ERKS_\0"
 	.byte	0x1
@@ -57525,32 +57671,32 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x20
 	.byte	0xb
 	.long	0x3273b
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "m_int64\0"
 	.byte	0x5e
 	.byte	0x23
 	.byte	0x11
 	.long	0x1b372
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "m_longDouble\0"
 	.byte	0x5e
 	.byte	0x25
 	.byte	0x15
 	.long	0x112d3
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "m_funcPtr\0"
 	.byte	0x5e
 	.byte	0x26
 	.byte	0x21
 	.long	0x11386
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "m_mFuncPtr\0"
 	.byte	0x5e
 	.byte	0x27
 	.byte	0x34
 	.long	0x32783
 	.byte	0
-	.uleb128 0x6a
+	.uleb128 0x6b
 	.ascii "m_alignment\0"
 	.byte	0x5e
 	.byte	0x28
@@ -57601,7 +57747,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x18
 	.long	0x327a3
 	.long	0x32a10
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.LASF327
 	.ascii "_ZN14wxAnyValueTypeC4ERKS_\0"
 	.byte	0x1
@@ -66094,13 +66240,13 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0xfd
 	.secrel32	.LASF35
 	.ascii "_ZN18wxAcceleratorTableaSERKS_\0"
-	.long	0x4d85f
+	.long	0x4d887
 	.byte	0x1
 	.long	0x3ba85
 	.uleb128 0x2
-	.long	0x4d865
+	.long	0x4d88d
 	.uleb128 0x1
-	.long	0x4d81b
+	.long	0x4d843
 	.byte	0
 	.byte	0
 	.uleb128 0x8
@@ -66220,7 +66366,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x3bd23
-	.uleb128 0x67
+	.uleb128 0x68
 	.long	0x10959
 	.long	0x3bd37
 	.uleb128 0x1
@@ -66535,7 +66681,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.word	0x547
 	.byte	0x1b
 	.ascii "_ZNK12wxWindowBase13GetDropTargetEv\0"
-	.long	0x4d63d
+	.long	0x4d665
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -66722,7 +66868,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x2
 	.long	0x3cd57
 	.uleb128 0x1
-	.long	0x4d81b
+	.long	0x4d843
 	.byte	0
 	.uleb128 0x28
 	.ascii "GetValidator\0"
@@ -66730,7 +66876,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.word	0x39c
 	.byte	0x1a
 	.ascii "_ZN12wxWindowBase12GetValidatorEv\0"
-	.long	0x4d8a8
+	.long	0x4d8d0
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -67579,7 +67725,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x3d402
-	.uleb128 0x67
+	.uleb128 0x68
 	.long	0x10959
 	.long	0x3d416
 	.uleb128 0x1
@@ -69498,7 +69644,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x3f6e7
-	.uleb128 0x67
+	.uleb128 0x68
 	.long	0x10959
 	.long	0x3f6fb
 	.uleb128 0x1
@@ -75996,7 +76142,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0xd
 	.secrel32	.LASF372
 	.byte	0x1b
-	.byte	0xc
+	.byte	0xe
 	.byte	0x1
 	.ascii "_ZN19T100ProjectViewBaseC4Ev\0"
 	.byte	0x1
@@ -76008,7 +76154,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x7e
 	.ascii "~T100ProjectViewBase\0"
 	.byte	0x1b
-	.byte	0x12
+	.byte	0x14
 	.byte	0x1
 	.ascii "_ZN19T100ProjectViewBaseD4Ev\0"
 	.byte	0x1
@@ -76024,7 +76170,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x4d
 	.ascii "SetDirty\0"
 	.byte	0x1b
-	.byte	0x22
+	.byte	0x24
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase8SetDirtyEv\0"
 	.byte	0x1
@@ -76041,7 +76187,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x4d
 	.ascii "ClearDirty\0"
 	.byte	0x1b
-	.byte	0x27
+	.byte	0x29
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase10ClearDirtyEv\0"
 	.byte	0x1
@@ -76058,7 +76204,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x2a
 	.ascii "IsDirty\0"
 	.byte	0x1b
-	.byte	0x2c
+	.byte	0x2e
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase7IsDirtyEv\0"
 	.long	0x11219
@@ -76076,7 +76222,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x4d
 	.ascii "AppendBuildMessage\0"
 	.byte	0x1b
-	.byte	0x77
+	.byte	0x79
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase18AppendBuildMessageERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
 	.byte	0x1
@@ -76095,7 +76241,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "GetAuiManager\0"
 	.byte	0x1b
-	.byte	0x31
+	.byte	0x33
 	.byte	0xf
 	.ascii "_ZN19T100ProjectViewBase13GetAuiManagerEv\0"
 	.long	0x4820f
@@ -76108,7 +76254,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "GetFrame\0"
 	.byte	0x1b
-	.byte	0x36
+	.byte	0x38
 	.byte	0x13
 	.ascii "_ZN19T100ProjectViewBase8GetFrameEv\0"
 	.long	0x48227
@@ -76121,7 +76267,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "GetMainMenu\0"
 	.byte	0x1b
-	.byte	0x3b
+	.byte	0x3d
 	.byte	0x1a
 	.ascii "_ZN19T100ProjectViewBase11GetMainMenuEv\0"
 	.long	0x48246
@@ -76134,7 +76280,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "GetProjectTree\0"
 	.byte	0x1b
-	.byte	0x40
+	.byte	0x42
 	.byte	0x12
 	.ascii "_ZN19T100ProjectViewBase14GetProjectTreeEv\0"
 	.long	0x4825d
@@ -76147,7 +76293,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "GetMainPanel\0"
 	.byte	0x1b
-	.byte	0x45
+	.byte	0x47
 	.byte	0x10
 	.ascii "_ZN19T100ProjectViewBase12GetMainPanelEv\0"
 	.long	0x48272
@@ -76160,7 +76306,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "GetBuildPanel\0"
 	.byte	0x1b
-	.byte	0x4a
+	.byte	0x4c
 	.byte	0x11
 	.ascii "_ZN19T100ProjectViewBase13GetBuildPanelEv\0"
 	.long	0x48288
@@ -76173,7 +76319,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x24
 	.ascii "SetTitle\0"
 	.byte	0x1b
-	.byte	0x4f
+	.byte	0x51
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase8SetTitleEv\0"
 	.byte	0x1
@@ -76185,7 +76331,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "ShowDirDialog\0"
 	.byte	0x1b
-	.byte	0x7e
+	.byte	0x80
 	.byte	0x9
 	.ascii "_ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
 	.long	0x4163a
@@ -76200,7 +76346,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "ShowWorkSpaceCreateDialog\0"
 	.byte	0x1b
-	.byte	0x8c
+	.byte	0x8e
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo\0"
 	.long	0x11219
@@ -76215,7 +76361,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "ShowWorkSpaceNotExistsDialog\0"
 	.byte	0x1b
-	.byte	0x9d
+	.byte	0x9f
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv\0"
 	.long	0x11219
@@ -76228,7 +76374,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "ShowWorkSpaceFileExistsDialog\0"
 	.byte	0x1b
-	.byte	0xac
+	.byte	0xae
 	.byte	0x9
 	.ascii "_ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv\0"
 	.long	0x4163a
@@ -76241,7 +76387,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "ShowWorkSpaceFileNotExistsDialog\0"
 	.byte	0x1b
-	.byte	0xb5
+	.byte	0xb7
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv\0"
 	.long	0x11219
@@ -76254,7 +76400,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x24
 	.ascii "ShowWorkSpacePropertiesDialog\0"
 	.byte	0x1b
-	.byte	0xc1
+	.byte	0xc3
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv\0"
 	.byte	0x1
@@ -76266,7 +76412,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x24
 	.ascii "ShowWorkSpaceOpenFailureDialog\0"
 	.byte	0x1b
-	.byte	0xc8
+	.byte	0xca
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv\0"
 	.byte	0x1
@@ -76278,7 +76424,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x24
 	.ascii "ShowProjectCreateWizard\0"
 	.byte	0x1b
-	.byte	0xcd
+	.byte	0xcf
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase23ShowProjectCreateWizardEv\0"
 	.byte	0x1
@@ -76290,7 +76436,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x24
 	.ascii "ShowModuleCreateDialog\0"
 	.byte	0x1b
-	.byte	0xd6
+	.byte	0xd8
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase22ShowModuleCreateDialogEv\0"
 	.byte	0x1
@@ -76302,7 +76448,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x24
 	.ascii "ShowBuildPanel\0"
 	.byte	0x1b
-	.byte	0xdb
+	.byte	0xe1
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase14ShowBuildPanelEv\0"
 	.byte	0x1
@@ -76314,7 +76460,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x24
 	.ascii "ShowAboutDialog\0"
 	.byte	0x1b
-	.byte	0xed
+	.byte	0xf3
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase15ShowAboutDialogEv\0"
 	.byte	0x1
@@ -76391,7 +76537,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x14
 	.ascii "CheckMainPanel\0"
 	.byte	0x1b
-	.byte	0x67
+	.byte	0x69
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase14CheckMainPanelEv\0"
 	.long	0x11219
@@ -76404,7 +76550,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x5f
 	.ascii "init\0"
 	.byte	0x1b
-	.byte	0x18
+	.byte	0x1a
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase4initEv\0"
 	.long	0x48192
@@ -76415,7 +76561,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x9b
 	.ascii "uninit\0"
 	.byte	0x1b
-	.byte	0x1d
+	.byte	0x1f
 	.byte	0xa
 	.ascii "_ZN19T100ProjectViewBase6uninitEv\0"
 	.long	0x481ca
@@ -76433,7 +76579,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x481d1
-	.uleb128 0x67
+	.uleb128 0x68
 	.long	0x10959
 	.long	0x481f2
 	.uleb128 0x45
@@ -76499,7 +76645,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x1
 	.long	0x482f1
 	.uleb128 0x2
-	.long	0x4c342
+	.long	0x4c36a
 	.byte	0
 	.byte	0
 	.uleb128 0x8
@@ -77298,23 +77444,23 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x91
 	.secrel32	.LASF35
 	.ascii "_ZN11wxGDIObjectaSERKS_\0"
-	.long	0x4df0f
+	.long	0x4df37
 	.byte	0x1
 	.long	0x492f3
 	.long	0x492fe
 	.uleb128 0x2
-	.long	0x4df15
+	.long	0x4df3d
 	.uleb128 0x1
-	.long	0x4df20
+	.long	0x4df48
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.LASF378
 	.ascii "_ZN11wxGDIObjectC4Ev\0"
 	.byte	0x1
 	.long	0x49321
 	.long	0x49327
 	.uleb128 0x2
-	.long	0x4df15
+	.long	0x4df3d
 	.byte	0
 	.uleb128 0x2a
 	.ascii "CloneRefData\0"
@@ -77322,7 +77468,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x51
 	.byte	0x1e
 	.ascii "_ZNK11wxGDIObject12CloneRefDataEPK12wxRefCounter\0"
-	.long	0x4e383
+	.long	0x4e3ab
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -77332,9 +77478,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x4937e
 	.long	0x49389
 	.uleb128 0x2
-	.long	0x4e389
+	.long	0x4e3b1
 	.uleb128 0x1
-	.long	0x4e394
+	.long	0x4e3bc
 	.byte	0
 	.uleb128 0x2a
 	.ascii "CreateRefData\0"
@@ -77342,7 +77488,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x4c
 	.byte	0x1e
 	.ascii "_ZNK11wxGDIObject13CreateRefDataEv\0"
-	.long	0x4e383
+	.long	0x4e3ab
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
@@ -77352,7 +77498,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x493d3
 	.long	0x493d9
 	.uleb128 0x2
-	.long	0x4e389
+	.long	0x4e3b1
 	.byte	0
 	.uleb128 0x2a
 	.ascii "GetResourceHandle\0"
@@ -77370,7 +77516,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x4942b
 	.long	0x49431
 	.uleb128 0x2
-	.long	0x4e389
+	.long	0x4e3b1
 	.byte	0
 	.uleb128 0x2a
 	.ascii "IsFree\0"
@@ -77388,7 +77534,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x4946c
 	.long	0x49472
 	.uleb128 0x2
-	.long	0x4e389
+	.long	0x4e3b1
 	.byte	0
 	.uleb128 0x2a
 	.ascii "FreeResource\0"
@@ -77406,7 +77552,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x494b9
 	.long	0x494c4
 	.uleb128 0x2
-	.long	0x4df15
+	.long	0x4df3d
 	.uleb128 0x1
 	.long	0x11219
 	.byte	0
@@ -77426,7 +77572,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x49511
 	.long	0x49517
 	.uleb128 0x2
-	.long	0x4df15
+	.long	0x4df3d
 	.byte	0
 	.uleb128 0x6
 	.secrel32	.LASF201
@@ -77439,7 +77585,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x49547
 	.long	0x4954d
 	.uleb128 0x2
-	.long	0x4e389
+	.long	0x4e3b1
 	.byte	0
 	.uleb128 0x73
 	.ascii "IsOk\0"
@@ -77456,7 +77602,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x1
 	.long	0x49580
 	.uleb128 0x2
-	.long	0x4e389
+	.long	0x4e3b1
 	.byte	0
 	.byte	0
 	.uleb128 0x8
@@ -77660,7 +77806,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x3b58f
 	.byte	0
 	.byte	0x1
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.LASF380
 	.ascii "_ZN20wxObjectEventFunctorC4EOS_\0"
 	.byte	0x1
@@ -77671,7 +77817,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x1
 	.long	0x49b72
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.LASF380
 	.ascii "_ZN20wxObjectEventFunctorC4ERKS_\0"
 	.byte	0x1
@@ -78192,16 +78338,16 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x91
 	.secrel32	.LASF35
 	.ascii "_ZN10wxGDIImageaSERKS_\0"
-	.long	0x4decb
+	.long	0x4def3
 	.byte	0x1
 	.long	0x4a0f8
 	.long	0x4a103
 	.uleb128 0x2
 	.long	0x4a0b9
 	.uleb128 0x1
-	.long	0x4ded1
+	.long	0x4def9
 	.byte	0
-	.uleb128 0x69
+	.uleb128 0x6a
 	.secrel32	.LASF383
 	.ascii "_ZN10wxGDIImageC4Ev\0"
 	.byte	0x1
@@ -78475,7 +78621,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x4a72b
 	.long	0x4a731
 	.uleb128 0x2
-	.long	0x4c41c
+	.long	0x4c444
 	.byte	0
 	.uleb128 0x63
 	.secrel32	.LASF376
@@ -78487,7 +78633,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x1
 	.long	0x4a77a
 	.uleb128 0x2
-	.long	0x4c41c
+	.long	0x4c444
 	.byte	0
 	.byte	0
 	.uleb128 0x8
@@ -78684,7 +78830,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3b
 	.ascii "__initialize_p\0"
 	.byte	0x1b
-	.byte	0xf3
+	.byte	0xf9
 	.byte	0x1
 	.long	0x10959
 	.uleb128 0x2
@@ -78693,7 +78839,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3b
 	.ascii "__priority\0"
 	.byte	0x1b
-	.byte	0xf3
+	.byte	0xf9
 	.byte	0x1
 	.long	0x10959
 	.uleb128 0x2
@@ -79966,10 +80112,10 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x6b
+	.uleb128 0x65
 	.secrel32	.LASF392
 	.byte	0x1b
-	.byte	0xef
+	.byte	0xf5
 	.byte	0x25
 	.long	0x4bb0e
 	.uleb128 0x3
@@ -79993,29 +80139,40 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x1d
+	.uleb128 0x18
 	.long	0x47f6b
 	.long	0x4bb75
 	.quad	.LFB19304
 	.quad	.LFE19304-.LFB19304
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bb82
+	.long	0x4bb92
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
+	.uleb128 0x65
+	.secrel32	.LASF392
+	.byte	0x1b
+	.byte	0xda
+	.byte	0x21
+	.long	0x4bb92
+	.uleb128 0x3
+	.byte	0x91
+	.sleb128 -944
 	.byte	0
+	.uleb128 0x11
+	.ascii "T100ModuleCreateDialog\0"
 	.uleb128 0x18
 	.long	0x47f0c
-	.long	0x4bba1
+	.long	0x4bbc9
 	.quad	.LFB19303
 	.quad	.LFE19303-.LFB19303
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bbc1
+	.long	0x4bbe9
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80025,9 +80182,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x34
 	.ascii "wizard\0"
 	.byte	0x1b
-	.byte	0xcf
+	.byte	0xd1
 	.byte	0x21
-	.long	0x4bbc1
+	.long	0x4bbe9
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -1024
@@ -80036,12 +80193,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.ascii "T100ProjectCreateWizard\0"
 	.uleb128 0x18
 	.long	0x47e9f
-	.long	0x4bbf9
+	.long	0x4bc21
 	.quad	.LFB19302
 	.quad	.LFE19302-.LFB19302
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bc06
+	.long	0x4bc2e
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80051,24 +80208,24 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x47e34
-	.long	0x4bc25
+	.long	0x4bc4d
 	.quad	.LFB19301
 	.quad	.LFE19301-.LFB19301
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bc42
+	.long	0x4bc6a
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x6b
+	.uleb128 0x65
 	.secrel32	.LASF392
 	.byte	0x1b
-	.byte	0xc3
+	.byte	0xc5
 	.byte	0x29
-	.long	0x4bc42
+	.long	0x4bc6a
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -944
@@ -80077,22 +80234,22 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.ascii "T100WorkSpacePropertiesDialog\0"
 	.uleb128 0x18
 	.long	0x47dbf
-	.long	0x4bc80
+	.long	0x4bca8
 	.quad	.LFB19300
 	.quad	.LFE19300-.LFB19300
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bc9c
+	.long	0x4bcc4
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x6b
+	.uleb128 0x65
 	.secrel32	.LASF393
 	.byte	0x1b
-	.byte	0xb7
+	.byte	0xb9
 	.byte	0x11
 	.long	0x4163a
 	.uleb128 0x2
@@ -80101,22 +80258,22 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x47d50
-	.long	0x4bcbb
+	.long	0x4bce3
 	.quad	.LFB19299
 	.quad	.LFE19299-.LFB19299
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bcd7
+	.long	0x4bcff
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x6b
+	.uleb128 0x65
 	.secrel32	.LASF393
 	.byte	0x1b
-	.byte	0xae
+	.byte	0xb0
 	.byte	0x11
 	.long	0x4163a
 	.uleb128 0x2
@@ -80125,22 +80282,22 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x47ce3
-	.long	0x4bcf6
+	.long	0x4bd1e
 	.quad	.LFB19298
 	.quad	.LFE19298-.LFB19298
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bd12
+	.long	0x4bd3a
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
-	.uleb128 0x6b
+	.uleb128 0x65
 	.secrel32	.LASF393
 	.byte	0x1b
-	.byte	0x9f
+	.byte	0xa1
 	.byte	0x11
 	.long	0x4163a
 	.uleb128 0x2
@@ -80149,12 +80306,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x47c64
-	.long	0x4bd31
+	.long	0x4bd59
 	.quad	.LFB19297
 	.quad	.LFE19297-.LFB19297
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bd5e
+	.long	0x4bd86
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80164,18 +80321,18 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3b
 	.ascii "info\0"
 	.byte	0x1b
-	.byte	0x8c
+	.byte	0x8e
 	.byte	0x4c
 	.long	0x48294
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x6b
+	.uleb128 0x65
 	.secrel32	.LASF392
 	.byte	0x1b
-	.byte	0x92
+	.byte	0x94
 	.byte	0x25
-	.long	0x4bd5e
+	.long	0x4bd86
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -1072
@@ -80184,12 +80341,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.ascii "T100WorkSpaceCreateDialog\0"
 	.uleb128 0x18
 	.long	0x47bdc
-	.long	0x4bd98
+	.long	0x4bdc0
 	.quad	.LFB19296
 	.quad	.LFE19296-.LFB19296
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bdd4
+	.long	0x4bdfc
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80199,25 +80356,25 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3b
 	.ascii "path\0"
 	.byte	0x1b
-	.byte	0x7e
+	.byte	0x80
 	.byte	0x39
 	.long	0x4828e
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
-	.uleb128 0x6b
+	.uleb128 0x65
 	.secrel32	.LASF393
 	.byte	0x1b
-	.byte	0x80
+	.byte	0x82
 	.byte	0x19
 	.long	0x4163a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -36
-	.uleb128 0x6b
+	.uleb128 0x65
 	.secrel32	.LASF392
 	.byte	0x1b
-	.byte	0x81
+	.byte	0x83
 	.byte	0x19
 	.long	0x4a902
 	.uleb128 0x3
@@ -80226,12 +80383,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x4793a
-	.long	0x4bdf3
+	.long	0x4be1b
 	.quad	.LFB19295
 	.quad	.LFE19295-.LFB19295
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4be10
+	.long	0x4be38
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80241,7 +80398,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0xcc
 	.secrel32	.LASF87
 	.byte	0x1b
-	.byte	0x77
+	.byte	0x79
 	.byte	0x45
 	.long	0x2221d
 	.uleb128 0x2
@@ -80250,12 +80407,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x48110
-	.long	0x4be2f
+	.long	0x4be57
 	.quad	.LFB19294
 	.quad	.LFE19294-.LFB19294
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4be3c
+	.long	0x4be64
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80265,12 +80422,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x47b9c
-	.long	0x4be5b
+	.long	0x4be83
 	.quad	.LFB19290
 	.quad	.LFE19290-.LFB19290
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4be8d
+	.long	0x4beb5
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80280,7 +80437,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x34
 	.ascii "title\0"
 	.byte	0x1b
-	.byte	0x51
+	.byte	0x53
 	.byte	0x19
 	.long	0x91c6
 	.uleb128 0x3
@@ -80289,9 +80446,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x34
 	.ascii "current\0"
 	.byte	0x1b
-	.byte	0x52
+	.byte	0x54
 	.byte	0x19
-	.long	0x4be99
+	.long	0x4bec1
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 -40
@@ -80300,15 +80457,15 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.ascii "T100Editor\0"
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x4be8d
+	.long	0x4beb5
 	.uleb128 0x1d
 	.long	0x47b4d
-	.long	0x4bebe
+	.long	0x4bee6
 	.quad	.LFB19289
 	.quad	.LFE19289-.LFB19289
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4becb
+	.long	0x4bef3
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80318,12 +80475,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x47b00
-	.long	0x4beea
+	.long	0x4bf12
 	.quad	.LFB19288
 	.quad	.LFE19288-.LFB19288
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bef7
+	.long	0x4bf1f
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80333,12 +80490,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x47aaf
-	.long	0x4bf16
+	.long	0x4bf3e
 	.quad	.LFB19287
 	.quad	.LFE19287-.LFB19287
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bf23
+	.long	0x4bf4b
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80348,12 +80505,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x47a64
-	.long	0x4bf42
+	.long	0x4bf6a
 	.quad	.LFB19286
 	.quad	.LFE19286-.LFB19286
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bf4f
+	.long	0x4bf77
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80363,12 +80520,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x47a20
-	.long	0x4bf6e
+	.long	0x4bf96
 	.quad	.LFB19285
 	.quad	.LFE19285-.LFB19285
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bf7b
+	.long	0x4bfa3
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80378,12 +80535,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x479d1
-	.long	0x4bf9a
+	.long	0x4bfc2
 	.quad	.LFB19284
 	.quad	.LFE19284-.LFB19284
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bfa7
+	.long	0x4bfcf
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80393,12 +80550,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x478f0
-	.long	0x4bfc6
+	.long	0x4bfee
 	.quad	.LFB19283
 	.quad	.LFE19283-.LFB19283
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bfd3
+	.long	0x4bffb
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80408,12 +80565,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x478a3
-	.long	0x4bff2
+	.long	0x4c01a
 	.quad	.LFB19282
 	.quad	.LFE19282-.LFB19282
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4bfff
+	.long	0x4c027
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80423,12 +80580,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x4785b
-	.long	0x4c01e
+	.long	0x4c046
 	.quad	.LFB19281
 	.quad	.LFE19281-.LFB19281
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c02b
+	.long	0x4c053
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80438,12 +80595,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x48198
-	.long	0x4c04a
+	.long	0x4c072
 	.quad	.LFB19280
 	.quad	.LFE19280-.LFB19280
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c057
+	.long	0x4c07f
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80453,12 +80610,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x48161
-	.long	0x4c076
+	.long	0x4c09e
 	.quad	.LFB19279
 	.quad	.LFE19279-.LFB19279
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c083
+	.long	0x4c0ab
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80468,9 +80625,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x26
 	.long	0x4780c
-	.long	0x4c091
+	.long	0x4c0b9
 	.byte	0
-	.long	0x4c0a4
+	.long	0x4c0cc
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x481dc
@@ -80479,67 +80636,67 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x10960
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4c083
+	.long	0x4c0ab
 	.ascii "_ZN19T100ProjectViewBaseD0Ev\0"
-	.long	0x4c0e0
+	.long	0x4c108
 	.quad	.LFB19278
 	.quad	.LFE19278-.LFB19278
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c0e9
+	.long	0x4c111
 	.uleb128 0x20
-	.long	0x4c091
+	.long	0x4c0b9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4c083
+	.long	0x4c0ab
 	.ascii "_ZN19T100ProjectViewBaseD2Ev\0"
-	.long	0x4c125
+	.long	0x4c14d
 	.quad	.LFB19276
 	.quad	.LFE19276-.LFB19276
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c12e
+	.long	0x4c156
 	.uleb128 0x20
-	.long	0x4c091
+	.long	0x4c0b9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x26
 	.long	0x477d8
-	.long	0x4c13c
+	.long	0x4c164
 	.byte	0
-	.long	0x4c146
+	.long	0x4c16e
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x481dc
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4c12e
+	.long	0x4c156
 	.ascii "_ZN19T100ProjectViewBaseC2Ev\0"
-	.long	0x4c182
+	.long	0x4c1aa
 	.quad	.LFB19273
 	.quad	.LFE19273-.LFB19273
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c18b
+	.long	0x4c1b3
 	.uleb128 0x20
-	.long	0x4c13c
+	.long	0x4c164
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x18
 	.long	0x48871
-	.long	0x4c1aa
+	.long	0x4c1d2
 	.quad	.LFB18876
 	.quad	.LFE18876-.LFB18876
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c1b7
+	.long	0x4c1df
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x48905
@@ -80549,12 +80706,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x48822
-	.long	0x4c1d6
+	.long	0x4c1fe
 	.quad	.LFB18875
 	.quad	.LFE18875-.LFB18875
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c1e3
+	.long	0x4c20b
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x48905
@@ -80564,12 +80721,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x487d0
-	.long	0x4c202
+	.long	0x4c22a
 	.quad	.LFB18874
 	.quad	.LFE18874-.LFB18874
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c21f
+	.long	0x4c247
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x488f4
@@ -80588,12 +80745,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x48777
-	.long	0x4c23e
+	.long	0x4c266
 	.quad	.LFB18873
 	.quad	.LFE18873-.LFB18873
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c25e
+	.long	0x4c286
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x488f4
@@ -80612,9 +80769,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x26
 	.long	0x486a6
-	.long	0x4c26c
+	.long	0x4c294
 	.byte	0x2
-	.long	0x4c27f
+	.long	0x4c2a7
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x488f4
@@ -80623,46 +80780,46 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x10960
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4c25e
+	.long	0x4c286
 	.ascii "_ZN15wxDirDialogBaseD0Ev\0"
-	.long	0x4c2b7
+	.long	0x4c2df
 	.quad	.LFB18871
 	.quad	.LFE18871-.LFB18871
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c2c0
+	.long	0x4c2e8
 	.uleb128 0x20
-	.long	0x4c26c
+	.long	0x4c294
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4c25e
+	.long	0x4c286
 	.ascii "_ZN15wxDirDialogBaseD1Ev\0"
-	.long	0x4c2f8
+	.long	0x4c320
 	.quad	.LFB18870
 	.quad	.LFE18870-.LFB18870
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c301
+	.long	0x4c329
 	.uleb128 0x20
-	.long	0x4c26c
+	.long	0x4c294
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4c25e
+	.long	0x4c286
 	.ascii "_ZN15wxDirDialogBaseD2Ev\0"
-	.long	0x4c339
+	.long	0x4c361
 	.quad	.LFB18869
 	.quad	.LFE18869-.LFB18869
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c342
+	.long	0x4c36a
 	.uleb128 0x20
-	.long	0x4c26c
+	.long	0x4c294
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80671,25 +80828,25 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x8
 	.long	0x482f8
 	.uleb128 0x8
-	.long	0x4c342
+	.long	0x4c36a
 	.uleb128 0x1d
 	.long	0x482bb
-	.long	0x4c36c
+	.long	0x4c394
 	.quad	.LFB18784
 	.quad	.LFE18784-.LFB18784
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c379
+	.long	0x4c3a1
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4c348
+	.long	0x4c370
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x41
 	.ascii "wxDialogBase\0"
-	.long	0x4c3e0
+	.long	0x4c408
 	.uleb128 0x73
 	.ascii "GetContentWindow\0"
 	.byte	0x18
@@ -80701,31 +80858,31 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xf9
-	.long	0x4c379
+	.long	0x4c3a1
 	.byte	0x1
-	.long	0x4c3d9
+	.long	0x4c401
 	.uleb128 0x2
-	.long	0x4c3e5
+	.long	0x4c40d
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.long	0x4c379
+	.long	0x4c3a1
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x4c3e0
+	.long	0x4c408
 	.uleb128 0x8
-	.long	0x4c3e5
+	.long	0x4c40d
 	.uleb128 0x1d
-	.long	0x4c38b
-	.long	0x4c40f
+	.long	0x4c3b3
+	.long	0x4c437
 	.quad	.LFB18755
 	.quad	.LFE18755-.LFB18755
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c41c
+	.long	0x4c444
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4c3eb
+	.long	0x4c413
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -80734,40 +80891,40 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x8
 	.long	0x4a781
 	.uleb128 0x8
-	.long	0x4c41c
+	.long	0x4c444
 	.uleb128 0x18
 	.long	0x4a6dd
-	.long	0x4c446
+	.long	0x4c46e
 	.quad	.LFB12085
 	.quad	.LFE12085-.LFB12085
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c453
+	.long	0x4c47b
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4c422
+	.long	0x4c44a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x18
 	.long	0x4a731
-	.long	0x4c472
+	.long	0x4c49a
 	.quad	.LFB12084
 	.quad	.LFE12084-.LFB12084
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c47f
+	.long	0x4c4a7
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4c422
+	.long	0x4c44a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x41
 	.ascii "wxTopLevelWindowMSW\0"
-	.long	0x4c551
+	.long	0x4c579
 	.uleb128 0x2a
 	.ascii "CanApplyThemeBorder\0"
 	.byte	0x16
@@ -80779,12 +80936,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0x94
-	.long	0x4c47f
+	.long	0x4c4a7
 	.byte	0x1
-	.long	0x4c4f7
-	.long	0x4c4fd
+	.long	0x4c51f
+	.long	0x4c525
 	.uleb128 0x2
-	.long	0x4c556
+	.long	0x4c57e
 	.byte	0
 	.uleb128 0x73
 	.ascii "IsFullScreen\0"
@@ -80797,53 +80954,53 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xe3
-	.long	0x4c47f
+	.long	0x4c4a7
 	.byte	0x1
-	.long	0x4c54a
+	.long	0x4c572
 	.uleb128 0x2
-	.long	0x4c556
+	.long	0x4c57e
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.long	0x4c47f
+	.long	0x4c4a7
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x4c551
+	.long	0x4c579
 	.uleb128 0x8
-	.long	0x4c556
+	.long	0x4c57e
 	.uleb128 0x1d
-	.long	0x4c498
-	.long	0x4c580
+	.long	0x4c4c0
+	.long	0x4c5a8
 	.quad	.LFB11686
 	.quad	.LFE11686-.LFB11686
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c58d
+	.long	0x4c5b5
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4c55c
+	.long	0x4c584
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x4c4fd
-	.long	0x4c5ac
+	.long	0x4c525
+	.long	0x4c5d4
 	.quad	.LFB11683
 	.quad	.LFE11683-.LFB11683
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4c55c
+	.long	0x4c584
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x41
 	.ascii "wxTopLevelWindowBase\0"
-	.long	0x4ca55
+	.long	0x4ca7d
 	.uleb128 0x28
 	.ascii "IsOneOfBars\0"
 	.byte	0x15
@@ -80855,12 +81012,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xf0
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x2
-	.long	0x4c62e
-	.long	0x4c639
+	.long	0x4c656
+	.long	0x4c661
 	.uleb128 0x2
-	.long	0x4ca5a
+	.long	0x4ca82
 	.uleb128 0x1
 	.long	0x3bd3d
 	.byte	0
@@ -80874,12 +81031,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xa4
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x2
-	.long	0x4c69a
-	.long	0x4c6aa
+	.long	0x4c6c2
+	.long	0x4c6d2
 	.uleb128 0x2
-	.long	0x4ca5a
+	.long	0x4ca82
 	.uleb128 0x1
 	.long	0x10cc4
 	.uleb128 0x1
@@ -80895,12 +81052,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xef
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x1
-	.long	0x4c6ff
-	.long	0x4c70f
+	.long	0x4c727
+	.long	0x4c737
 	.uleb128 0x2
-	.long	0x4cae1
+	.long	0x4cb09
 	.uleb128 0x1
 	.long	0x1184e
 	.uleb128 0x1
@@ -80916,12 +81073,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xee
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x1
-	.long	0x4c77b
-	.long	0x4c786
+	.long	0x4c7a3
+	.long	0x4c7ae
 	.uleb128 0x2
-	.long	0x4cae1
+	.long	0x4cb09
 	.uleb128 0x1
 	.long	0x1184e
 	.byte	0
@@ -80936,12 +81093,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xed
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x1
-	.long	0x4c7db
-	.long	0x4c7e1
+	.long	0x4c803
+	.long	0x4c809
 	.uleb128 0x2
-	.long	0x4ca5a
+	.long	0x4ca82
 	.byte	0
 	.uleb128 0x42
 	.ascii "OSXSetModified\0"
@@ -80953,12 +81110,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xec
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x1
-	.long	0x4c833
-	.long	0x4c83e
+	.long	0x4c85b
+	.long	0x4c866
 	.uleb128 0x2
-	.long	0x4cae1
+	.long	0x4cb09
 	.uleb128 0x1
 	.long	0x11219
 	.byte	0
@@ -80973,12 +81130,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xea
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x1
-	.long	0x4c88a
-	.long	0x4c890
+	.long	0x4c8b2
+	.long	0x4c8b8
 	.uleb128 0x2
-	.long	0x4ca5a
+	.long	0x4ca82
 	.byte	0
 	.uleb128 0x28
 	.ascii "IsTopNavigationDomain\0"
@@ -80991,12 +81148,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0x96
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x1
-	.long	0x4c8f5
-	.long	0x4c8fb
+	.long	0x4c91d
+	.long	0x4c923
 	.uleb128 0x2
-	.long	0x4ca5a
+	.long	0x4ca82
 	.byte	0
 	.uleb128 0x28
 	.ascii "IsTopLevel\0"
@@ -81009,12 +81166,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x2
 	.byte	0x10
 	.uleb128 0x4d
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x1
-	.long	0x4c949
-	.long	0x4c94f
+	.long	0x4c971
+	.long	0x4c977
 	.uleb128 0x2
-	.long	0x4ca5a
+	.long	0x4ca82
 	.byte	0
 	.uleb128 0x24
 	.ascii "CentreOnScreen\0"
@@ -81023,10 +81180,10 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0xa
 	.ascii "_ZN20wxTopLevelWindowBase14CentreOnScreenEi\0"
 	.byte	0x1
-	.long	0x4c997
-	.long	0x4c9a2
+	.long	0x4c9bf
+	.long	0x4c9ca
 	.uleb128 0x2
-	.long	0x4cae1
+	.long	0x4cb09
 	.uleb128 0x1
 	.long	0x10959
 	.byte	0
@@ -81041,12 +81198,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xe9
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x1
-	.long	0x4ca04
-	.long	0x4ca0a
+	.long	0x4ca2c
+	.long	0x4ca32
 	.uleb128 0x2
-	.long	0x4ca5a
+	.long	0x4ca82
 	.byte	0
 	.uleb128 0x73
 	.ascii "IsActive\0"
@@ -81059,31 +81216,31 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3
 	.byte	0x10
 	.uleb128 0xe8
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.byte	0x1
-	.long	0x4ca4e
+	.long	0x4ca76
 	.uleb128 0x2
-	.long	0x4cae1
+	.long	0x4cb09
 	.byte	0
 	.byte	0
 	.uleb128 0x8
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x4ca55
+	.long	0x4ca7d
 	.uleb128 0x8
-	.long	0x4ca5a
+	.long	0x4ca82
 	.uleb128 0x1d
-	.long	0x4c5d3
-	.long	0x4ca84
+	.long	0x4c5fb
+	.long	0x4caac
 	.quad	.LFB11674
 	.quad	.LFE11674-.LFB11674
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ca99
+	.long	0x4cac1
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4ca60
+	.long	0x4ca88
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -81094,16 +81251,16 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x18
-	.long	0x4c639
-	.long	0x4cab8
+	.long	0x4c661
+	.long	0x4cae0
 	.quad	.LFB11673
 	.quad	.LFE11673-.LFB11673
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cae1
+	.long	0x4cb09
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4ca60
+	.long	0x4ca88
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -81128,20 +81285,20 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x4c5b9
+	.long	0x4c5e1
 	.uleb128 0x8
-	.long	0x4cae1
+	.long	0x4cb09
 	.uleb128 0x1d
-	.long	0x4c6aa
-	.long	0x4cb0b
+	.long	0x4c6d2
+	.long	0x4cb33
 	.quad	.LFB11672
 	.quad	.LFE11672-.LFB11672
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cb28
+	.long	0x4cb50
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4cae7
+	.long	0x4cb0f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -81157,16 +81314,16 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.sleb128 16
 	.byte	0
 	.uleb128 0x1d
-	.long	0x4c70f
-	.long	0x4cb47
+	.long	0x4c737
+	.long	0x4cb6f
 	.quad	.LFB11671
 	.quad	.LFE11671-.LFB11671
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cb5c
+	.long	0x4cb84
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4cae7
+	.long	0x4cb0f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -81177,31 +81334,31 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1d
-	.long	0x4c786
-	.long	0x4cb7b
+	.long	0x4c7ae
+	.long	0x4cba3
 	.quad	.LFB11670
 	.quad	.LFE11670-.LFB11670
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cb88
+	.long	0x4cbb0
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4ca60
+	.long	0x4ca88
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x4c7e1
-	.long	0x4cba7
+	.long	0x4c809
+	.long	0x4cbcf
 	.quad	.LFB11669
 	.quad	.LFE11669-.LFB11669
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cbc9
+	.long	0x4cbf1
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4cae7
+	.long	0x4cb0f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -81216,61 +81373,61 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x18
-	.long	0x4c83e
-	.long	0x4cbe8
+	.long	0x4c866
+	.long	0x4cc10
 	.quad	.LFB11666
 	.quad	.LFE11666-.LFB11666
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cbf5
+	.long	0x4cc1d
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4ca60
+	.long	0x4ca88
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x4c890
-	.long	0x4cc14
+	.long	0x4c8b8
+	.long	0x4cc3c
 	.quad	.LFB11665
 	.quad	.LFE11665-.LFB11665
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cc21
+	.long	0x4cc49
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4ca60
+	.long	0x4ca88
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x4c8fb
-	.long	0x4cc40
+	.long	0x4c923
+	.long	0x4cc68
 	.quad	.LFB11664
 	.quad	.LFE11664-.LFB11664
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cc4d
+	.long	0x4cc75
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4ca60
+	.long	0x4ca88
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x18
-	.long	0x4c94f
-	.long	0x4cc6c
+	.long	0x4c977
+	.long	0x4cc94
 	.quad	.LFB11658
 	.quad	.LFE11658-.LFB11658
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cc88
+	.long	0x4ccb0
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4cae7
+	.long	0x4cb0f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -81285,43 +81442,43 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1d
-	.long	0x4c9a2
-	.long	0x4cca7
+	.long	0x4c9ca
+	.long	0x4cccf
 	.quad	.LFB11657
 	.quad	.LFE11657-.LFB11657
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ccb4
+	.long	0x4ccdc
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4ca60
+	.long	0x4ca88
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x18
-	.long	0x4ca0a
-	.long	0x4ccd3
+	.long	0x4ca32
+	.long	0x4ccfb
 	.quad	.LFB11656
 	.quad	.LFE11656-.LFB11656
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cce0
+	.long	0x4cd08
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4cae7
+	.long	0x4cb0f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
 	.long	0x4910f
-	.long	0x4ccff
+	.long	0x4cd27
 	.quad	.LFB11581
 	.quad	.LFE11581-.LFB11581
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cd0c
+	.long	0x4cd34
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4928d
@@ -81331,12 +81488,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x49089
-	.long	0x4cd2b
+	.long	0x4cd53
 	.quad	.LFB11580
 	.quad	.LFE11580-.LFB11580
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cd50
+	.long	0x4cd78
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x492b9
@@ -81361,12 +81518,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3f472
-	.long	0x4cd6f
+	.long	0x4cd97
 	.quad	.LFB11469
 	.quad	.LFE11469-.LFB11469
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cdcc
+	.long	0x4cdf4
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3f6af
@@ -81402,28 +81559,28 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.sleb128 -272
 	.uleb128 0xcd
 	.secrel32	.LASF394
-	.long	0x4cddc
+	.long	0x4ce04
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__
 	.byte	0
 	.uleb128 0x48
 	.long	0x10896
-	.long	0x4cddc
+	.long	0x4ce04
 	.uleb128 0x4f
 	.long	0x108bf
 	.byte	0x7
 	.byte	0
 	.uleb128 0x8
-	.long	0x4cdcc
+	.long	0x4cdf4
 	.uleb128 0x18
 	.long	0x3f35e
-	.long	0x4ce00
+	.long	0x4ce28
 	.quad	.LFB11465
 	.quad	.LFE11465-.LFB11465
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ce33
+	.long	0x4ce5b
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3f6af
@@ -81441,28 +81598,28 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.sleb128 -272
 	.uleb128 0xcd
 	.secrel32	.LASF394
-	.long	0x4ce43
+	.long	0x4ce6b
 	.uleb128 0x9
 	.byte	0x3
 	.quad	_ZZN13wxAuiPaneInfo11DefaultPaneEvE12__FUNCTION__
 	.byte	0
 	.uleb128 0x48
 	.long	0x10896
-	.long	0x4ce43
+	.long	0x4ce6b
 	.uleb128 0x4f
 	.long	0x108bf
 	.byte	0xb
 	.byte	0
 	.uleb128 0x8
-	.long	0x4ce33
+	.long	0x4ce5b
 	.uleb128 0x18
 	.long	0x3ef90
-	.long	0x4ce67
+	.long	0x4ce8f
 	.quad	.LFB11452
 	.quad	.LFE11452-.LFB11452
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ce88
+	.long	0x4ceb0
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3f6af
@@ -81481,12 +81638,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3edef
-	.long	0x4cea7
+	.long	0x4cecf
 	.quad	.LFB11446
 	.quad	.LFE11446-.LFB11446
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cec8
+	.long	0x4cef0
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3f6af
@@ -81505,12 +81662,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3e836
-	.long	0x4cee7
+	.long	0x4cf0f
 	.quad	.LFB11424
 	.quad	.LFE11424-.LFB11424
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cef4
+	.long	0x4cf1c
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3f6af
@@ -81520,12 +81677,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3e7fb
-	.long	0x4cf13
+	.long	0x4cf3b
 	.quad	.LFB11423
 	.quad	.LFE11423-.LFB11423
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cf20
+	.long	0x4cf48
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3f6af
@@ -81535,12 +81692,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3df1e
-	.long	0x4cf3f
+	.long	0x4cf67
 	.quad	.LFB11390
 	.quad	.LFE11390-.LFB11390
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cf59
+	.long	0x4cf81
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3f6af
@@ -81559,9 +81716,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x26
 	.long	0x3dee8
-	.long	0x4cf67
+	.long	0x4cf8f
 	.byte	0x2
-	.long	0x4cf7b
+	.long	0x4cfa3
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x3f6af
@@ -81573,21 +81730,21 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x40aee
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4cf59
+	.long	0x4cf81
 	.ascii "_ZN13wxAuiPaneInfoC1ERKS_\0"
-	.long	0x4cfb4
+	.long	0x4cfdc
 	.quad	.LFB11389
 	.quad	.LFE11389-.LFB11389
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4cfc5
+	.long	0x4cfed
 	.uleb128 0x20
-	.long	0x4cf67
+	.long	0x4cf8f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x20
-	.long	0x4cf70
+	.long	0x4cf98
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -81600,12 +81757,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x12
 	.byte	0x2e
 	.byte	0x18
-	.long	0x4cfee
+	.long	0x4d016
 	.quad	.LFB11387
 	.quad	.LFE11387-.LFB11387
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d003
+	.long	0x4d02b
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x49592
@@ -81620,9 +81777,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x26
 	.long	0x3deaa
-	.long	0x4d011
+	.long	0x4d039
 	.byte	0x2
-	.long	0x4d024
+	.long	0x4d04c
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x3f6af
@@ -81631,64 +81788,64 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x10960
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4d003
+	.long	0x4d02b
 	.ascii "_ZN13wxAuiPaneInfoD1Ev\0"
-	.long	0x4d05a
+	.long	0x4d082
 	.quad	.LFB11385
 	.quad	.LFE11385-.LFB11385
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d063
+	.long	0x4d08b
 	.uleb128 0x20
-	.long	0x4d011
+	.long	0x4d039
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x26
 	.long	0x3de7c
-	.long	0x4d071
+	.long	0x4d099
 	.byte	0x2
-	.long	0x4d07b
+	.long	0x4d0a3
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x3f6af
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4d063
+	.long	0x4d08b
 	.ascii "_ZN13wxAuiPaneInfoC1Ev\0"
-	.long	0x4d0b1
+	.long	0x4d0d9
 	.quad	.LFB11382
 	.quad	.LFE11382-.LFB11382
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d0ba
+	.long	0x4d0e2
 	.uleb128 0x20
-	.long	0x4d071
+	.long	0x4d099
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x26
 	.long	0x3d436
-	.long	0x4d0c8
+	.long	0x4d0f0
 	.byte	0x2
-	.long	0x4d0d2
+	.long	0x4d0fa
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x3dc26
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4d0ba
+	.long	0x4d0e2
 	.ascii "_ZN20wxAuiPaneButtonArrayC1Ev\0"
-	.long	0x4d10f
+	.long	0x4d137
 	.quad	.LFB11158
 	.quad	.LFE11158-.LFB11158
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d118
+	.long	0x4d140
 	.uleb128 0x20
-	.long	0x4d0c8
+	.long	0x4d0f0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -81697,35 +81854,35 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x8
 	.long	0x2d141
 	.uleb128 0x8
-	.long	0x4d118
+	.long	0x4d140
 	.uleb128 0x3a
 	.long	0x2cfe3
-	.long	0x4d130
-	.long	0x4d13a
+	.long	0x4d158
+	.long	0x4d162
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4d11e
+	.long	0x4d146
 	.byte	0
 	.uleb128 0x3a
 	.long	0x2d033
-	.long	0x4d147
-	.long	0x4d151
+	.long	0x4d16f
+	.long	0x4d179
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4d11e
+	.long	0x4d146
 	.byte	0
 	.uleb128 0x3a
 	.long	0x2d081
-	.long	0x4d15e
-	.long	0x4d168
+	.long	0x4d186
+	.long	0x4d190
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4d11e
+	.long	0x4d146
 	.byte	0
 	.uleb128 0x3a
 	.long	0x2d0cf
-	.long	0x4d175
-	.long	0x4d198
+	.long	0x4d19d
+	.long	0x4d1c0
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x49592
@@ -81744,36 +81901,36 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x26
 	.long	0x2d11b
-	.long	0x4d1a6
+	.long	0x4d1ce
 	.byte	0x2
-	.long	0x4d1b0
+	.long	0x4d1d8
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x49592
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4d198
+	.long	0x4d1c0
 	.ascii "_ZN8wxBitmapC1Ev\0"
-	.long	0x4d1e0
+	.long	0x4d208
 	.quad	.LFB11066
 	.quad	.LFE11066-.LFB11066
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d1e9
+	.long	0x4d211
 	.uleb128 0x20
-	.long	0x4d1a6
+	.long	0x4d1ce
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
 	.long	0x2faea
-	.long	0x4d208
+	.long	0x4d230
 	.quad	.LFB10420
 	.quad	.LFE10420-.LFB10420
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d215
+	.long	0x4d23d
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x2fad7
@@ -81783,12 +81940,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x2fb41
-	.long	0x4d234
+	.long	0x4d25c
 	.quad	.LFB10419
 	.quad	.LFE10419-.LFB10419
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d251
+	.long	0x4d279
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3bd43
@@ -81808,12 +81965,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x2fb9d
-	.long	0x4d270
+	.long	0x4d298
 	.quad	.LFB10418
 	.quad	.LFE10418-.LFB10418
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d285
+	.long	0x4d2ad
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x2fad7
@@ -81828,12 +81985,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x2fbf7
-	.long	0x4d2a4
+	.long	0x4d2cc
 	.quad	.LFB10417
 	.quad	.LFE10417-.LFB10417
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d2b1
+	.long	0x4d2d9
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3bd43
@@ -81843,12 +82000,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x2fc61
-	.long	0x4d2d0
+	.long	0x4d2f8
 	.quad	.LFB10416
 	.quad	.LFE10416-.LFB10416
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d2dd
+	.long	0x4d305
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x2fad7
@@ -81858,12 +82015,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x2fccc
-	.long	0x4d2fc
+	.long	0x4d324
 	.quad	.LFB10415
 	.quad	.LFE10415-.LFB10415
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d319
+	.long	0x4d341
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x2fad7
@@ -81883,12 +82040,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x2fd2c
-	.long	0x4d338
+	.long	0x4d360
 	.quad	.LFB10414
 	.quad	.LFE10414-.LFB10414
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d345
+	.long	0x4d36d
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x2fad7
@@ -81898,12 +82055,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x2fd85
-	.long	0x4d364
+	.long	0x4d38c
 	.quad	.LFB10413
 	.quad	.LFE10413-.LFB10413
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d381
+	.long	0x4d3a9
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3bd43
@@ -81923,12 +82080,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x2fde5
-	.long	0x4d3a0
+	.long	0x4d3c8
 	.quad	.LFB10411
 	.quad	.LFE10411-.LFB10411
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d3ad
+	.long	0x4d3d5
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3bd43
@@ -81938,12 +82095,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x2fe2e
-	.long	0x4d3cc
+	.long	0x4d3f4
 	.quad	.LFB10410
 	.quad	.LFE10410-.LFB10410
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d3e1
+	.long	0x4d409
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3bd43
@@ -81958,12 +82115,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x2fe85
-	.long	0x4d400
+	.long	0x4d428
 	.quad	.LFB10406
 	.quad	.LFE10406-.LFB10406
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d40d
+	.long	0x4d435
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3bd43
@@ -81973,12 +82130,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x2fec9
-	.long	0x4d42c
+	.long	0x4d454
 	.quad	.LFB10404
 	.quad	.LFE10404-.LFB10404
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d439
+	.long	0x4d461
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3bd43
@@ -81988,12 +82145,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x2ff00
-	.long	0x4d458
+	.long	0x4d480
 	.quad	.LFB10403
 	.quad	.LFE10403-.LFB10403
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d48a
+	.long	0x4d4b2
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x2fad7
@@ -82021,12 +82178,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x2ff65
-	.long	0x4d4a9
+	.long	0x4d4d1
 	.quad	.LFB10402
 	.quad	.LFE10402-.LFB10402
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d4db
+	.long	0x4d503
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x2fad7
@@ -82054,12 +82211,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3bf05
-	.long	0x4d4fa
+	.long	0x4d522
 	.quad	.LFB10395
 	.quad	.LFE10395-.LFB10395
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d517
+	.long	0x4d53f
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82078,12 +82235,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3bf6a
-	.long	0x4d536
+	.long	0x4d55e
 	.quad	.LFB10389
 	.quad	.LFE10389-.LFB10389
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d54b
+	.long	0x4d573
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82098,12 +82255,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3bfd0
-	.long	0x4d56a
+	.long	0x4d592
 	.quad	.LFB10388
 	.quad	.LFE10388-.LFB10388
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d57f
+	.long	0x4d5a7
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82118,12 +82275,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c038
-	.long	0x4d59e
+	.long	0x4d5c6
 	.quad	.LFB10387
 	.quad	.LFE10387-.LFB10387
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d5ab
+	.long	0x4d5d3
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82133,12 +82290,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c097
-	.long	0x4d5ca
+	.long	0x4d5f2
 	.quad	.LFB10381
 	.quad	.LFE10381-.LFB10381
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d5d7
+	.long	0x4d5ff
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82148,12 +82305,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c10d
-	.long	0x4d5f6
+	.long	0x4d61e
 	.quad	.LFB10379
 	.quad	.LFE10379-.LFB10379
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d603
+	.long	0x4d62b
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82163,12 +82320,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c172
-	.long	0x4d622
+	.long	0x4d64a
 	.quad	.LFB10378
 	.quad	.LFE10378-.LFB10378
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d62f
+	.long	0x4d657
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82180,15 +82337,15 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.ascii "wxDropTarget\0"
 	.uleb128 0x7
 	.byte	0x8
-	.long	0x4d62f
+	.long	0x4d657
 	.uleb128 0x1d
 	.long	0x3c1d3
-	.long	0x4d662
+	.long	0x4d68a
 	.quad	.LFB10359
 	.quad	.LFE10359-.LFB10359
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d66f
+	.long	0x4d697
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82198,12 +82355,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c225
-	.long	0x4d68e
+	.long	0x4d6b6
 	.quad	.LFB10358
 	.quad	.LFE10358-.LFB10358
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d69b
+	.long	0x4d6c3
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82213,12 +82370,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c269
-	.long	0x4d6ba
+	.long	0x4d6e2
 	.quad	.LFB10354
 	.quad	.LFE10354-.LFB10354
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d6cf
+	.long	0x4d6f7
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82233,12 +82390,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c2d2
-	.long	0x4d6ee
+	.long	0x4d716
 	.quad	.LFB10353
 	.quad	.LFE10353-.LFB10353
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d70b
+	.long	0x4d733
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82258,12 +82415,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c338
-	.long	0x4d72a
+	.long	0x4d752
 	.quad	.LFB10346
 	.quad	.LFE10346-.LFB10346
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d737
+	.long	0x4d75f
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82273,12 +82430,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c390
-	.long	0x4d756
+	.long	0x4d77e
 	.quad	.LFB10330
 	.quad	.LFE10330-.LFB10330
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d763
+	.long	0x4d78b
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82288,12 +82445,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c3f7
-	.long	0x4d782
+	.long	0x4d7aa
 	.quad	.LFB10326
 	.quad	.LFE10326-.LFB10326
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d78f
+	.long	0x4d7b7
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82303,12 +82460,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3c457
-	.long	0x4d7ae
+	.long	0x4d7d6
 	.quad	.LFB10312
 	.quad	.LFE10312-.LFB10312
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d7bb
+	.long	0x4d7e3
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82318,12 +82475,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c4b7
-	.long	0x4d7da
+	.long	0x4d802
 	.quad	.LFB10304
 	.quad	.LFE10304-.LFB10304
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d7ef
+	.long	0x4d817
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82338,12 +82495,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3c505
-	.long	0x4d80e
+	.long	0x4d836
 	.quad	.LFB10300
 	.quad	.LFE10300-.LFB10300
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d81b
+	.long	0x4d843
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82356,12 +82513,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x3ba91
 	.uleb128 0x18
 	.long	0x3c551
-	.long	0x4d840
+	.long	0x4d868
 	.quad	.LFB10295
 	.quad	.LFE10295-.LFB10295
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d85f
+	.long	0x4d887
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82373,7 +82530,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0xf
 	.word	0x3af
 	.byte	0x41
-	.long	0x4d81b
+	.long	0x4d843
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -82385,26 +82542,26 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x8
 	.long	0x3ba3f
 	.uleb128 0x8
-	.long	0x4d865
+	.long	0x4d88d
 	.uleb128 0x93
 	.long	0x3ba57
 	.byte	0x10
 	.byte	0x14
 	.byte	0x18
-	.long	0x4d893
+	.long	0x4d8bb
 	.quad	.LFB10296
 	.quad	.LFE10296-.LFB10296
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d8a8
+	.long	0x4d8d0
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4d86b
+	.long	0x4d893
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x35
-	.long	0x4d81b
+	.long	0x4d843
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -82414,12 +82571,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x3ba06
 	.uleb128 0x1d
 	.long	0x3c5c4
-	.long	0x4d8cd
+	.long	0x4d8f5
 	.quad	.LFB10294
 	.quad	.LFE10294-.LFB10294
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d8da
+	.long	0x4d902
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82429,12 +82586,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c613
-	.long	0x4d8f9
+	.long	0x4d921
 	.quad	.LFB10290
 	.quad	.LFE10290-.LFB10290
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d90e
+	.long	0x4d936
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82449,12 +82606,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c67c
-	.long	0x4d92d
+	.long	0x4d955
 	.quad	.LFB10279
 	.quad	.LFE10279-.LFB10279
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d942
+	.long	0x4d96a
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82469,12 +82626,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3c6ca
-	.long	0x4d961
+	.long	0x4d989
 	.quad	.LFB10275
 	.quad	.LFE10275-.LFB10275
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d96e
+	.long	0x4d996
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82484,12 +82641,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c71a
-	.long	0x4d98d
+	.long	0x4d9b5
 	.quad	.LFB10270
 	.quad	.LFE10270-.LFB10270
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d99a
+	.long	0x4d9c2
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82499,12 +82656,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c770
-	.long	0x4d9b9
+	.long	0x4d9e1
 	.quad	.LFB10269
 	.quad	.LFE10269-.LFB10269
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4d9de
+	.long	0x4da06
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82523,12 +82680,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3c7c6
-	.long	0x4d9fd
+	.long	0x4da25
 	.quad	.LFB10265
 	.quad	.LFE10265-.LFB10265
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4da0a
+	.long	0x4da32
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82538,12 +82695,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c812
-	.long	0x4da29
+	.long	0x4da51
 	.quad	.LFB10264
 	.quad	.LFE10264-.LFB10264
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4da47
+	.long	0x4da6f
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82562,12 +82719,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c854
-	.long	0x4da66
+	.long	0x4da8e
 	.quad	.LFB10261
 	.quad	.LFE10261-.LFB10261
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4da73
+	.long	0x4da9b
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82577,12 +82734,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c8b0
-	.long	0x4da92
+	.long	0x4daba
 	.quad	.LFB10258
 	.quad	.LFE10258-.LFB10258
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4da9f
+	.long	0x4dac7
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82592,12 +82749,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3c8f5
-	.long	0x4dabe
+	.long	0x4dae6
 	.quad	.LFB10243
 	.quad	.LFE10243-.LFB10243
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4dacb
+	.long	0x4daf3
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82607,12 +82764,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3c957
-	.long	0x4daea
+	.long	0x4db12
 	.quad	.LFB10242
 	.quad	.LFE10242-.LFB10242
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4db1b
+	.long	0x4db43
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82640,12 +82797,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3c9b3
-	.long	0x4db3a
+	.long	0x4db62
 	.quad	.LFB10233
 	.quad	.LFE10233-.LFB10233
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4db47
+	.long	0x4db6f
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82655,12 +82812,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3ca0b
-	.long	0x4db66
+	.long	0x4db8e
 	.quad	.LFB10232
 	.quad	.LFE10232-.LFB10232
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4db73
+	.long	0x4db9b
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82670,12 +82827,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3ca63
-	.long	0x4db92
+	.long	0x4dbba
 	.quad	.LFB10231
 	.quad	.LFE10231-.LFB10231
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4db9f
+	.long	0x4dbc7
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82685,12 +82842,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3caaf
-	.long	0x4dbbe
+	.long	0x4dbe6
 	.quad	.LFB10230
 	.quad	.LFE10230-.LFB10230
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4dbcb
+	.long	0x4dbf3
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82700,12 +82857,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3cafb
-	.long	0x4dbea
+	.long	0x4dc12
 	.quad	.LFB10229
 	.quad	.LFE10229-.LFB10229
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4dc07
+	.long	0x4dc2f
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82724,12 +82881,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3cb5b
-	.long	0x4dc26
+	.long	0x4dc4e
 	.quad	.LFB10228
 	.quad	.LFE10228-.LFB10228
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4dc43
+	.long	0x4dc6b
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82748,12 +82905,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3cbbb
-	.long	0x4dc62
+	.long	0x4dc8a
 	.quad	.LFB10226
 	.quad	.LFE10226-.LFB10226
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4dcd5
+	.long	0x4dcfd
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82817,12 +82974,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3cc29
-	.long	0x4dcf4
+	.long	0x4dd1c
 	.quad	.LFB10214
 	.quad	.LFE10214-.LFB10214
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4dd1d
+	.long	0x4dd45
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82850,12 +83007,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x3cc73
-	.long	0x4dd3c
+	.long	0x4dd64
 	.quad	.LFB10190
 	.quad	.LFE10190-.LFB10190
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4dd49
+	.long	0x4dd71
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82865,12 +83022,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3ccc2
-	.long	0x4dd68
+	.long	0x4dd90
 	.quad	.LFB10189
 	.quad	.LFE10189-.LFB10189
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4dd75
+	.long	0x4dd9d
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4297d
@@ -82880,12 +83037,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x3cd06
-	.long	0x4dd94
+	.long	0x4ddbc
 	.quad	.LFB10188
 	.quad	.LFE10188-.LFB10188
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ddb1
+	.long	0x4ddd9
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x3cd5d
@@ -82904,12 +83061,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x49940
-	.long	0x4ddd0
+	.long	0x4ddf8
 	.quad	.LFB9738
 	.quad	.LFE9738-.LFB9738
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4de1b
+	.long	0x4de43
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x49b6d
@@ -82946,12 +83103,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x38ae1
-	.long	0x4de3a
+	.long	0x4de62
 	.quad	.LFB9647
 	.quad	.LFE9647-.LFB9647
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4de59
+	.long	0x4de81
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x38bab
@@ -82970,12 +83127,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x38b36
-	.long	0x4de78
+	.long	0x4dea0
 	.quad	.LFB9646
 	.quad	.LFE9646-.LFB9646
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4de8d
+	.long	0x4deb5
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x38bab
@@ -82990,12 +83147,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x38a2e
-	.long	0x4deac
+	.long	0x4ded4
 	.quad	.LFB9622
 	.quad	.LFE9622-.LFB9622
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4decb
+	.long	0x4def3
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x38bab
@@ -83023,12 +83180,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0xb
 	.byte	0x54
 	.byte	0x18
-	.long	0x4defa
+	.long	0x4df22
 	.quad	.LFB9189
 	.quad	.LFE9189-.LFB9189
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4df0f
+	.long	0x4df37
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4a0bf
@@ -83036,7 +83193,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x35
-	.long	0x4ded1
+	.long	0x4def9
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -83048,7 +83205,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x8
 	.long	0x492be
 	.uleb128 0x8
-	.long	0x4df15
+	.long	0x4df3d
 	.uleb128 0xa
 	.byte	0x8
 	.long	0x49587
@@ -83057,32 +83214,32 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0xa
 	.byte	0x29
 	.byte	0x18
-	.long	0x4df49
+	.long	0x4df71
 	.quad	.LFB9190
 	.quad	.LFE9190-.LFB9190
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4df5e
+	.long	0x4df86
 	.uleb128 0x10
 	.secrel32	.LASF385
-	.long	0x4df1b
+	.long	0x4df43
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x35
-	.long	0x4df20
+	.long	0x4df48
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1d
 	.long	0x49a63
-	.long	0x4df7d
+	.long	0x4dfa5
 	.quad	.LFB8940
 	.quad	.LFE8940-.LFB8940
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4df8a
+	.long	0x4dfb2
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x49b84
@@ -83092,12 +83249,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x49a09
-	.long	0x4dfa9
+	.long	0x4dfd1
 	.quad	.LFB8939
 	.quad	.LFE8939-.LFB8939
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4dfb6
+	.long	0x4dfde
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x49b84
@@ -83107,12 +83264,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x499a0
-	.long	0x4dfd5
+	.long	0x4dffd
 	.quad	.LFB8938
 	.quad	.LFE8938-.LFB8938
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e017
+	.long	0x4e03f
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x49b84
@@ -83131,7 +83288,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0xa4
 	.quad	.LBB30
 	.quad	.LBE30-.LBB30
-	.uleb128 0x6b
+	.uleb128 0x65
 	.secrel32	.LASF152
 	.byte	0xe
 	.byte	0xfd
@@ -83144,12 +83301,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0x32623
-	.long	0x4e036
+	.long	0x4e05e
 	.quad	.LFB7907
 	.quad	.LFE7907-.LFB7907
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e053
+	.long	0x4e07b
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x326b6
@@ -83168,9 +83325,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x26
 	.long	0x325eb
-	.long	0x4e061
+	.long	0x4e089
 	.byte	0x2
-	.long	0x4e07d
+	.long	0x4e0a5
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x326b6
@@ -83182,33 +83339,33 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x202a0
 	.byte	0
 	.uleb128 0x74
-	.long	0x4e053
+	.long	0x4e07b
 	.ascii "_ZN16wxTypeIdentifierC1EPKc\0"
-	.long	0x4e0b8
+	.long	0x4e0e0
 	.quad	.LFB7906
 	.quad	.LFE7906-.LFB7906
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e0c9
+	.long	0x4e0f1
 	.uleb128 0x20
-	.long	0x4e061
+	.long	0x4e089
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x20
-	.long	0x4e06a
+	.long	0x4e092
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x18
 	.long	0x49c36
-	.long	0x4e0e8
+	.long	0x4e110
 	.quad	.LFB7875
 	.quad	.LFE7875-.LFB7875
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e119
+	.long	0x4e141
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x49e1f
@@ -83236,12 +83393,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x49d6c
-	.long	0x4e138
+	.long	0x4e160
 	.quad	.LFB7860
 	.quad	.LFE7860-.LFB7860
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e145
+	.long	0x4e16d
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4a0a2
@@ -83251,12 +83408,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x49da5
-	.long	0x4e164
+	.long	0x4e18c
 	.quad	.LFB7859
 	.quad	.LFE7859-.LFB7859
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e171
+	.long	0x4e199
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4a0a2
@@ -83266,12 +83423,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x49dde
-	.long	0x4e190
+	.long	0x4e1b8
 	.quad	.LFB7858
 	.quad	.LFE7858-.LFB7858
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e19d
+	.long	0x4e1c5
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x4a0a2
@@ -83281,9 +83438,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x26
 	.long	0x32143
-	.long	0x4e1ab
+	.long	0x4e1d3
 	.byte	0x2
-	.long	0x4e1be
+	.long	0x4e1e6
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x32237
@@ -83292,25 +83449,25 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x10960
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4e19d
+	.long	0x4e1c5
 	.ascii "_ZN23wxCriticalSectionLockerD1Ev\0"
-	.long	0x4e1fe
+	.long	0x4e226
 	.quad	.LFB7852
 	.quad	.LFE7852-.LFB7852
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e207
+	.long	0x4e22f
 	.uleb128 0x20
-	.long	0x4e1ab
+	.long	0x4e1d3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x26
 	.long	0x320f2
-	.long	0x4e215
+	.long	0x4e23d
 	.byte	0x2
-	.long	0x4e22b
+	.long	0x4e253
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x32237
@@ -83322,21 +83479,21 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x320de
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4e207
+	.long	0x4e22f
 	.ascii "_ZN23wxCriticalSectionLockerC1ER17wxCriticalSection\0"
-	.long	0x4e27e
+	.long	0x4e2a6
 	.quad	.LFB7849
 	.quad	.LFE7849-.LFB7849
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e28f
+	.long	0x4e2b7
 	.uleb128 0x20
-	.long	0x4e215
+	.long	0x4e23d
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x20
-	.long	0x4e21e
+	.long	0x4e246
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -83346,24 +83503,24 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0xb
 	.byte	0x54
 	.byte	0x18
-	.long	0x4e2a0
+	.long	0x4e2c8
 	.byte	0x2
-	.long	0x4e2aa
+	.long	0x4e2d2
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x4a0bf
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4e28f
+	.long	0x4e2b7
 	.ascii "_ZN10wxGDIImageC2Ev\0"
-	.long	0x4e2dd
+	.long	0x4e305
 	.quad	.LFB6669
 	.quad	.LFE6669-.LFB6669
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e2e6
+	.long	0x4e30e
 	.uleb128 0x20
-	.long	0x4e2a0
+	.long	0x4e2c8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -83373,48 +83530,48 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0xa
 	.byte	0x29
 	.byte	0x18
-	.long	0x4e2f7
+	.long	0x4e31f
 	.byte	0x2
-	.long	0x4e301
+	.long	0x4e329
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4df1b
+	.long	0x4df43
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4e2e6
+	.long	0x4e30e
 	.ascii "_ZN11wxGDIObjectC2Ev\0"
-	.long	0x4e335
+	.long	0x4e35d
 	.quad	.LFB6663
 	.quad	.LFE6663-.LFB6663
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e33e
+	.long	0x4e366
 	.uleb128 0x20
-	.long	0x4e2f7
+	.long	0x4e31f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x3a
 	.long	0x4a12b
-	.long	0x4e34b
-	.long	0x4e355
+	.long	0x4e373
+	.long	0x4e37d
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x4a1ee
 	.byte	0
 	.uleb128 0x3a
 	.long	0x4a163
-	.long	0x4e362
-	.long	0x4e36c
+	.long	0x4e38a
+	.long	0x4e394
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x4a1ee
 	.byte	0
 	.uleb128 0x3a
 	.long	0x4a19a
-	.long	0x4e379
-	.long	0x4e383
+	.long	0x4e3a1
+	.long	0x4e3ab
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x4a1ee
@@ -83426,151 +83583,151 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x8
 	.long	0x49587
 	.uleb128 0x8
-	.long	0x4e389
+	.long	0x4e3b1
 	.uleb128 0x7
 	.byte	0x8
 	.long	0x264eb
 	.uleb128 0x3a
 	.long	0x49327
-	.long	0x4e3a7
-	.long	0x4e3bd
+	.long	0x4e3cf
+	.long	0x4e3e5
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4e38f
+	.long	0x4e3b7
 	.uleb128 0x3d
 	.secrel32	.LASF69
 	.byte	0xa
 	.byte	0x51
 	.byte	0x42
-	.long	0x4e394
+	.long	0x4e3bc
 	.byte	0
 	.uleb128 0x3a
 	.long	0x49389
-	.long	0x4e3ca
-	.long	0x4e3d4
+	.long	0x4e3f2
+	.long	0x4e3fc
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4e38f
+	.long	0x4e3b7
 	.byte	0
 	.uleb128 0x3a
 	.long	0x493d9
-	.long	0x4e3e1
-	.long	0x4e3eb
+	.long	0x4e409
+	.long	0x4e413
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4e38f
+	.long	0x4e3b7
 	.byte	0
 	.uleb128 0x3a
 	.long	0x49431
-	.long	0x4e3f8
-	.long	0x4e402
+	.long	0x4e420
+	.long	0x4e42a
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4e38f
+	.long	0x4e3b7
 	.byte	0
 	.uleb128 0x3a
 	.long	0x49472
-	.long	0x4e40f
-	.long	0x4e41e
+	.long	0x4e437
+	.long	0x4e446
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4df1b
+	.long	0x4df43
 	.uleb128 0x1
 	.long	0x11219
 	.byte	0
 	.uleb128 0x3a
 	.long	0x494c4
-	.long	0x4e42b
-	.long	0x4e435
+	.long	0x4e453
+	.long	0x4e45d
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4df1b
+	.long	0x4df43
 	.byte	0
 	.uleb128 0x3a
 	.long	0x49517
-	.long	0x4e442
-	.long	0x4e44c
+	.long	0x4e46a
+	.long	0x4e474
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4e38f
+	.long	0x4e3b7
 	.byte	0
 	.uleb128 0x3a
 	.long	0x4954d
-	.long	0x4e459
-	.long	0x4e463
+	.long	0x4e481
+	.long	0x4e48b
 	.uleb128 0x13
 	.secrel32	.LASF385
-	.long	0x4e38f
+	.long	0x4e3b7
 	.byte	0
 	.uleb128 0x26
 	.long	0x29eff
-	.long	0x4e471
+	.long	0x4e499
 	.byte	0x2
-	.long	0x4e47b
+	.long	0x4e4a3
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x2ae58
 	.byte	0
 	.uleb128 0x74
-	.long	0x4e463
+	.long	0x4e48b
 	.ascii "_ZN6wxRectC1Ev\0"
-	.long	0x4e4a9
+	.long	0x4e4d1
 	.quad	.LFB6060
 	.quad	.LFE6060-.LFB6060
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e4b2
+	.long	0x4e4da
 	.uleb128 0x20
-	.long	0x4e471
+	.long	0x4e499
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x26
 	.long	0x29b08
-	.long	0x4e4c0
+	.long	0x4e4e8
 	.byte	0x2
-	.long	0x4e4ca
+	.long	0x4e4f2
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x29ecd
 	.byte	0
 	.uleb128 0x74
-	.long	0x4e4b2
+	.long	0x4e4da
 	.ascii "_ZN7wxPointC1Ev\0"
-	.long	0x4e4f9
+	.long	0x4e521
 	.quad	.LFB5882
 	.quad	.LFE5882-.LFB5882
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e502
+	.long	0x4e52a
 	.uleb128 0x20
-	.long	0x4e4c0
+	.long	0x4e4e8
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x3a
 	.long	0x299b6
-	.long	0x4e50f
-	.long	0x4e519
+	.long	0x4e537
+	.long	0x4e541
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x29cf8
 	.byte	0
 	.uleb128 0x3a
 	.long	0x29983
-	.long	0x4e526
-	.long	0x4e530
+	.long	0x4e54e
+	.long	0x4e558
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x29cf8
 	.byte	0
 	.uleb128 0x26
 	.long	0x293da
-	.long	0x4e53e
+	.long	0x4e566
 	.byte	0x2
-	.long	0x4e560
+	.long	0x4e588
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x29ac9
@@ -83588,50 +83745,50 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x10959
 	.byte	0
 	.uleb128 0x74
-	.long	0x4e530
+	.long	0x4e558
 	.ascii "_ZN6wxSizeC1Eii\0"
-	.long	0x4e58f
+	.long	0x4e5b7
 	.quad	.LFB5802
 	.quad	.LFE5802-.LFB5802
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e5a8
+	.long	0x4e5d0
 	.uleb128 0x20
-	.long	0x4e53e
+	.long	0x4e566
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x20
-	.long	0x4e547
+	.long	0x4e56f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.uleb128 0x20
-	.long	0x4e553
+	.long	0x4e57b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
 	.byte	0
 	.uleb128 0x26
 	.long	0x293b3
-	.long	0x4e5b6
+	.long	0x4e5de
 	.byte	0x2
-	.long	0x4e5c0
+	.long	0x4e5e8
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x29ac9
 	.byte	0
 	.uleb128 0x74
-	.long	0x4e5a8
+	.long	0x4e5d0
 	.ascii "_ZN6wxSizeC1Ev\0"
-	.long	0x4e5ee
+	.long	0x4e616
 	.quad	.LFB5799
 	.quad	.LFE5799-.LFB5799
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e5f7
+	.long	0x4e61f
 	.uleb128 0x20
-	.long	0x4e5b6
+	.long	0x4e5de
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -83644,12 +83801,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x25bfb
 	.uleb128 0x18
 	.long	0x25b66
-	.long	0x4e622
+	.long	0x4e64a
 	.quad	.LFB4721
 	.quad	.LFE4721-.LFB4721
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e63f
+	.long	0x4e667
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x25c0c
@@ -83661,16 +83818,16 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x8
 	.word	0x172
 	.byte	0x29
-	.long	0x4e5fd
+	.long	0x4e625
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x26
 	.long	0x25b9b
-	.long	0x4e64d
+	.long	0x4e675
 	.byte	0x2
-	.long	0x4e660
+	.long	0x4e688
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x25c0c
@@ -83679,53 +83836,53 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x10960
 	.byte	0
 	.uleb128 0x46
-	.long	0x4e63f
+	.long	0x4e667
 	.ascii "_ZN8wxObjectD0Ev\0"
-	.long	0x4e67e
-	.long	0x4e684
+	.long	0x4e6a6
+	.long	0x4e6ac
 	.uleb128 0x37
-	.long	0x4e64d
+	.long	0x4e675
 	.byte	0
 	.uleb128 0x46
-	.long	0x4e63f
+	.long	0x4e667
 	.ascii "_ZN8wxObjectD1Ev\0"
-	.long	0x4e6a2
-	.long	0x4e6a8
+	.long	0x4e6ca
+	.long	0x4e6d0
 	.uleb128 0x37
-	.long	0x4e64d
+	.long	0x4e675
 	.byte	0
 	.uleb128 0x26
 	.long	0x25bd5
-	.long	0x4e6b6
+	.long	0x4e6de
 	.byte	0x2
-	.long	0x4e6c0
+	.long	0x4e6e8
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x25c0c
 	.byte	0
 	.uleb128 0x74
-	.long	0x4e6a8
+	.long	0x4e6d0
 	.ascii "_ZN8wxObjectC2Ev\0"
-	.long	0x4e6f0
+	.long	0x4e718
 	.quad	.LFB4712
 	.quad	.LFE4712-.LFB4712
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e6f9
+	.long	0x4e721
 	.uleb128 0x20
-	.long	0x4e6b6
+	.long	0x4e6de
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x18
 	.long	0x1564f
-	.long	0x4e718
+	.long	0x4e740
 	.quad	.LFB2989
 	.quad	.LFE2989-.LFB2989
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e735
+	.long	0x4e75d
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x25a75
@@ -83744,12 +83901,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0x136a3
-	.long	0x4e754
+	.long	0x4e77c
 	.quad	.LFB2909
 	.quad	.LFE2909-.LFB2909
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e761
+	.long	0x4e789
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x25a0b
@@ -83759,9 +83916,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x26
 	.long	0x135dd
-	.long	0x4e76f
+	.long	0x4e797
 	.byte	0x2
-	.long	0x4e786
+	.long	0x4e7ae
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x25a75
@@ -83773,30 +83930,30 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x25a2d
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4e761
+	.long	0x4e789
 	.ascii "_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE\0"
-	.long	0x4e7eb
+	.long	0x4e813
 	.quad	.LFB2905
 	.quad	.LFE2905-.LFB2905
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e7fc
+	.long	0x4e824
 	.uleb128 0x20
-	.long	0x4e76f
+	.long	0x4e797
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x20
-	.long	0x4e778
+	.long	0x4e7a0
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x26
 	.long	0x133aa
-	.long	0x4e80a
+	.long	0x4e832
 	.byte	0x2
-	.long	0x4e821
+	.long	0x4e849
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x25a75
@@ -83808,30 +83965,30 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x1138e
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4e7fc
+	.long	0x4e824
 	.ascii "_ZN8wxStringC1EPKw\0"
-	.long	0x4e853
+	.long	0x4e87b
 	.quad	.LFB2878
 	.quad	.LFE2878-.LFB2878
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e864
+	.long	0x4e88c
 	.uleb128 0x20
-	.long	0x4e80a
+	.long	0x4e832
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x20
-	.long	0x4e813
+	.long	0x4e83b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x26
 	.long	0x131d2
-	.long	0x4e872
+	.long	0x4e89a
 	.byte	0x2
-	.long	0x4e889
+	.long	0x4e8b1
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x25a75
@@ -83843,30 +84000,30 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x202a0
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4e864
+	.long	0x4e88c
 	.ascii "_ZN8wxStringC1EPKc\0"
-	.long	0x4e8bb
+	.long	0x4e8e3
 	.quad	.LFB2854
 	.quad	.LFE2854-.LFB2854
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e8cc
+	.long	0x4e8f4
 	.uleb128 0x20
-	.long	0x4e872
+	.long	0x4e89a
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x20
-	.long	0x4e87b
+	.long	0x4e8a3
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x26
 	.long	0x12fd5
-	.long	0x4e8da
+	.long	0x4e902
 	.byte	0x2
-	.long	0x4e8f2
+	.long	0x4e91a
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x25a75
@@ -83878,45 +84035,45 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x1184e
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4e8cc
+	.long	0x4e8f4
 	.ascii "_ZN8wxStringC1ERKS_\0"
-	.long	0x4e925
+	.long	0x4e94d
 	.quad	.LFB2827
 	.quad	.LFE2827-.LFB2827
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e936
+	.long	0x4e95e
 	.uleb128 0x20
-	.long	0x4e8da
+	.long	0x4e902
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x20
-	.long	0x4e8e3
+	.long	0x4e90b
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x26
 	.long	0x12fac
-	.long	0x4e944
+	.long	0x4e96c
 	.byte	0x2
-	.long	0x4e94e
+	.long	0x4e976
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x25a75
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4e936
+	.long	0x4e95e
 	.ascii "_ZN8wxStringC1Ev\0"
-	.long	0x4e97e
+	.long	0x4e9a6
 	.quad	.LFB2824
 	.quad	.LFE2824-.LFB2824
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e987
+	.long	0x4e9af
 	.uleb128 0x20
-	.long	0x4e944
+	.long	0x4e96c
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -83926,9 +84083,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x7
 	.word	0x189
 	.byte	0x18
-	.long	0x4e99a
+	.long	0x4e9c2
 	.byte	0x2
-	.long	0x4e9ad
+	.long	0x4e9d5
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x25a75
@@ -83937,16 +84094,16 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x10960
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4e987
+	.long	0x4e9af
 	.ascii "_ZN8wxStringD1Ev\0"
-	.long	0x4e9dd
+	.long	0x4ea05
 	.quad	.LFB2798
 	.quad	.LFE2798-.LFB2798
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4e9e6
+	.long	0x4ea0e
 	.uleb128 0x20
-	.long	0x4e99a
+	.long	0x4e9c2
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -83957,7 +84114,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.quad	.LFE2718-.LFB2718
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ea24
+	.long	0x4ea4c
 	.uleb128 0x38
 	.ascii "str\0"
 	.byte	0x7
@@ -83982,9 +84139,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0x7
 	.word	0x1a9
 	.byte	0xa
-	.long	0x4ea37
+	.long	0x4ea5f
 	.byte	0x2
-	.long	0x4ea4a
+	.long	0x4ea72
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x25adf
@@ -83993,16 +84150,16 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x10960
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4ea24
+	.long	0x4ea4c
 	.ascii "_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev\0"
-	.long	0x4eaaa
+	.long	0x4ead2
 	.quad	.LFB2721
 	.quad	.LFE2721-.LFB2721
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4eab3
+	.long	0x4eadb
 	.uleb128 0x20
-	.long	0x4ea37
+	.long	0x4ea5f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
@@ -84013,7 +84170,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.quad	.LFE2716-.LFB2716
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4eae0
+	.long	0x4eb08
 	.uleb128 0x38
 	.ascii "str\0"
 	.byte	0x7
@@ -84026,12 +84183,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x1d
 	.long	0xbf56
-	.long	0x4eaff
+	.long	0x4eb27
 	.quad	.LFB1660
 	.quad	.LFE1660-.LFB1660
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4eb0c
+	.long	0x4eb34
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x2175b
@@ -84041,7 +84198,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x52
 	.long	0xb79b
-	.long	0x4eb3f
+	.long	0x4eb67
 	.uleb128 0x47
 	.ascii "__s1\0"
 	.byte	0x29
@@ -84063,7 +84220,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x52
 	.long	0xb6da
-	.long	0x4eb56
+	.long	0x4eb7e
 	.uleb128 0x47
 	.ascii "__s\0"
 	.byte	0x29
@@ -84077,7 +84234,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.word	0x240
 	.byte	0x1
 	.ascii "_Z16wxGet_wxConvLibcv\0"
-	.long	0x4eb99
+	.long	0x4ebc1
 	.quad	.LFB1269
 	.quad	.LFE1269-.LFB1269
 	.uleb128 0x1
@@ -84087,9 +84244,9 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x20d6c
 	.uleb128 0x26
 	.long	0x1e413
-	.long	0x4ebad
+	.long	0x4ebd5
 	.byte	0x2
-	.long	0x4ebc0
+	.long	0x4ebe8
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x1e50a
@@ -84098,52 +84255,52 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.long	0x10960
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4eb9f
+	.long	0x4ebc7
 	.ascii "_ZN9wxPrivate17UntypedBufferDataD2Ev\0"
-	.long	0x4ec04
+	.long	0x4ec2c
 	.quad	.LFB1081
 	.quad	.LFE1081-.LFB1081
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ec0d
+	.long	0x4ec35
 	.uleb128 0x20
-	.long	0x4ebad
+	.long	0x4ebd5
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x26
 	.long	0x1d893
-	.long	0x4ec1b
+	.long	0x4ec43
 	.byte	0x2
-	.long	0x4ec25
+	.long	0x4ec4d
 	.uleb128 0x13
 	.secrel32	.LASF385
 	.long	0x1e298
 	.byte	0
 	.uleb128 0x2f
-	.long	0x4ec0d
+	.long	0x4ec35
 	.ascii "_ZN14wxArrayPtrVoidC2Ev\0"
-	.long	0x4ec5c
+	.long	0x4ec84
 	.quad	.LFB960
 	.quad	.LFE960-.LFB960
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ec65
+	.long	0x4ec8d
 	.uleb128 0x20
-	.long	0x4ec1b
+	.long	0x4ec43
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 0
 	.byte	0
 	.uleb128 0x18
 	.long	0xa7db
-	.long	0x4ec84
+	.long	0x4ecac
 	.quad	.LFB124
 	.quad	.LFE124-.LFB124
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ecd7
+	.long	0x4ecff
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x112aa
@@ -84180,12 +84337,12 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x18
 	.long	0xa774
-	.long	0x4ecf6
+	.long	0x4ed1e
 	.quad	.LFB122
 	.quad	.LFE122-.LFB122
 	.uleb128 0x1
 	.byte	0x9c
-	.long	0x4ed12
+	.long	0x4ed3a
 	.uleb128 0x10
 	.secrel32	.LASF385
 	.long	0x1128d
@@ -85989,122 +86146,6 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.byte	0
 	.byte	0
 	.uleb128 0x65
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x66
-	.uleb128 0x34
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3c
-	.uleb128 0x19
-	.byte	0
-	.byte	0
-	.uleb128 0x67
-	.uleb128 0x15
-	.byte	0x1
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x68
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x49
-	.uleb128 0x13
-	.uleb128 0x32
-	.uleb128 0xb
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x69
-	.uleb128 0x2e
-	.byte	0x1
-	.uleb128 0x3f
-	.uleb128 0x19
-	.uleb128 0x3
-	.uleb128 0xe
-	.uleb128 0x6e
-	.uleb128 0x8
-	.uleb128 0x34
-	.uleb128 0x19
-	.uleb128 0x32
-	.uleb128 0xb
-	.uleb128 0x3c
-	.uleb128 0x19
-	.uleb128 0x64
-	.uleb128 0x13
-	.uleb128 0x1
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x6a
-	.uleb128 0xd
-	.byte	0
-	.uleb128 0x3
-	.uleb128 0x8
-	.uleb128 0x3a
-	.uleb128 0xb
-	.uleb128 0x3b
-	.uleb128 0xb
-	.uleb128 0x39
-	.uleb128 0xb
-	.uleb128 0x49
-	.uleb128 0x13
-	.byte	0
-	.byte	0
-	.uleb128 0x6b
 	.uleb128 0x34
 	.byte	0
 	.uleb128 0x3
@@ -86119,6 +86160,122 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x13
 	.uleb128 0x2
 	.uleb128 0x18
+	.byte	0
+	.byte	0
+	.uleb128 0x66
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x67
+	.uleb128 0x34
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3c
+	.uleb128 0x19
+	.byte	0
+	.byte	0
+	.uleb128 0x68
+	.uleb128 0x15
+	.byte	0x1
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x69
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x6e
+	.uleb128 0x8
+	.uleb128 0x49
+	.uleb128 0x13
+	.uleb128 0x32
+	.uleb128 0xb
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x6a
+	.uleb128 0x2e
+	.byte	0x1
+	.uleb128 0x3f
+	.uleb128 0x19
+	.uleb128 0x3
+	.uleb128 0xe
+	.uleb128 0x6e
+	.uleb128 0x8
+	.uleb128 0x34
+	.uleb128 0x19
+	.uleb128 0x32
+	.uleb128 0xb
+	.uleb128 0x3c
+	.uleb128 0x19
+	.uleb128 0x64
+	.uleb128 0x13
+	.uleb128 0x1
+	.uleb128 0x13
+	.byte	0
+	.byte	0
+	.uleb128 0x6b
+	.uleb128 0xd
+	.byte	0
+	.uleb128 0x3
+	.uleb128 0x8
+	.uleb128 0x3a
+	.uleb128 0xb
+	.uleb128 0x3b
+	.uleb128 0xb
+	.uleb128 0x39
+	.uleb128 0xb
+	.uleb128 0x49
+	.uleb128 0x13
 	.byte	0
 	.byte	0
 	.uleb128 0x6c
@@ -90770,6 +90927,10 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.def	_ZN23T100ProjectCreateWizard12GetFirstPageEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN8wxWizard9RunWizardEP12wxWizardPage;	.scl	2;	.type	32;	.endef
 	.def	_ZN23T100ProjectCreateWizardD1Ev;	.scl	2;	.type	32;	.endef
+	.def	_ZN22T100ModuleCreateDialogC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_;	.scl	2;	.type	32;	.endef
+	.def	_ZN22T100ModuleCreateDialog13GetModuleInfoEv;	.scl	2;	.type	32;	.endef
+	.def	_ZN19T100ProjectInvoking11OnModuleNewEP14T100ModuleInfo;	.scl	2;	.type	32;	.endef
+	.def	_ZN22T100ModuleCreateDialogD1Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN14T100BuildPanelC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelRK11wxValidatorS4_;	.scl	2;	.type	32;	.endef
 	.def	_ZN12wxAuiManager6UpdateEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN26T100ProjectViewAboutDialogC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_;	.scl	2;	.type	32;	.endef

@@ -55,8 +55,18 @@ T100VOID T100ModuleCreateDialog::uninit()
 
 }
 
+T100ModuleInfo* T100ModuleCreateDialog::GetModuleInfo()
+{
+    return m_info;
+}
+
 T100VOID T100ModuleCreateDialog::OnApply(wxCommandEvent& event)
 {
+    m_info  = T100NEW T100ModuleInfo();
+
+    m_info->SetLabel(m_nameValue->GetValue().ToStdWstring());
+
     Close();
     SetReturnCode(wxID_APPLY);
 }
+

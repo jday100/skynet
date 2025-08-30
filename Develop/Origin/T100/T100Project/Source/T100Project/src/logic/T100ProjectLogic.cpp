@@ -127,7 +127,10 @@ T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo* workspace)
 
 
 
+T100BOOL T100ProjectLogic::CreateModule(T100ModuleInfo* info)
+{
 
+}
 
 
 

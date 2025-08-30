@@ -8,6 +8,7 @@
 #include "T100WorkSpaceCreateDialog.h"
 #include "T100ModuleCreateDialog.h"
 #include "T100WorkSpacePropertiesDialog.h"
+#include "T100ProjectInvoking.h"
 
 
 T100ProjectViewBase::T100ProjectViewBase()

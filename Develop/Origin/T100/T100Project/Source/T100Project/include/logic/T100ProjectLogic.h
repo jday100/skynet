@@ -9,6 +9,7 @@
 #include "T100WxFolderInfo.h"
 
 class T100WorkSpaceInfo;
+class T100ModuleInfo;
 
 class T100ProjectLogic
 {
@@ -20,10 +21,7 @@ class T100ProjectLogic
         T100BOOL                    New(const T100WxFolderInfo&, T100WorkSpaceInfo*);
         T100BOOL                    Build(T100WorkSpaceInfo*);
 
-
-
-
-
+        T100BOOL                    CreateModule(T100ModuleInfo*);
 
 
 

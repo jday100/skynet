@@ -11,6 +11,7 @@ class T100FolderData;
 class T100ProjectData;
 class T100WxProjectInfo;
 class T100Pack;
+class T100ModuleInfo;
 
 class T100ProjectSkeletal : public T100ProjectSkeletalBase
 {

@@ -122,6 +122,7 @@
 		<Unit filename="include/data/T100WorkSpaceData.h" />
 		<Unit filename="include/info/T100FileInfo.h" />
 		<Unit filename="include/info/T100FolderInfo.h" />
+		<Unit filename="include/info/T100ModuleInfo.h" />
 		<Unit filename="include/info/T100ProjectInfo.h" />
 		<Unit filename="include/info/T100SetupCompilerInfo.h" />
 		<Unit filename="include/info/T100WorkSpaceInfo.h" />
@@ -188,6 +189,7 @@
 		<Unit filename="src/data/T100WorkSpaceData.cpp" />
 		<Unit filename="src/info/T100FileInfo.cpp" />
 		<Unit filename="src/info/T100FolderInfo.cpp" />
+		<Unit filename="src/info/T100ModuleInfo.cpp" />
 		<Unit filename="src/info/T100ProjectInfo.cpp" />
 		<Unit filename="src/info/T100SetupCompilerInfo.cpp" />
 		<Unit filename="src/info/T100WorkSpaceInfo.cpp" />
