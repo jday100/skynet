@@ -39,6 +39,7 @@ T100VOID T100Shell::Execute(const T100WSTRING& value)
         }
         for(wxString item : error){
             std::cout << item;
+            T100ProjectInvoking::OnBuildMessage(item.ToStdWstring());
         }
         break;
     }

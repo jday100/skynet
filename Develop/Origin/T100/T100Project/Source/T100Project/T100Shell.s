@@ -1320,15 +1320,15 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	movq	%rdx, 168(%rbp)	 # value, value
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:24:     wxArrayString   output;
 	.loc 7 24 21
-	leaq	-16(%rbp), %rax	 #, tmp95
-	movq	%rax, %rcx	 # tmp95,
+	leaq	-16(%rbp), %rax	 #, tmp96
+	movq	%rax, %rcx	 # tmp96,
 .LEHB0:
 	call	_ZN13wxArrayStringC1Ev	 #
 .LEHE0:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:25:     wxArrayString   error;
 	.loc 7 25 21
-	leaq	-48(%rbp), %rax	 #, tmp96
-	movq	%rax, %rcx	 # tmp96,
+	leaq	-48(%rbp), %rax	 #, tmp97
+	movq	%rax, %rcx	 # tmp97,
 .LEHB1:
 	call	_ZN13wxArrayStringC1Ev	 #
 .LEHE1:
@@ -1338,106 +1338,106 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LEHB2:
 	call	_Znwy	 #
 .LEHE2:
-	movq	%rax, %rbx	 # tmp97, _22
-	leaq	-48(%rbp), %rdx	 #, tmp98
-	leaq	-16(%rbp), %rax	 #, tmp99
-	movq	%rdx, %r8	 # tmp98,
-	movq	%rax, %rdx	 # tmp99,
-	movq	%rbx, %rcx	 # _22,
+	movq	%rax, %rbx	 # tmp98, _24
+	leaq	-48(%rbp), %rdx	 #, tmp99
+	leaq	-16(%rbp), %rax	 #, tmp100
+	movq	%rdx, %r8	 # tmp99,
+	movq	%rax, %rdx	 # tmp100,
+	movq	%rbx, %rcx	 # _24,
 .LEHB3:
 	call	_ZN18T100ExecuteProcessC1EP13wxArrayStringS1_	 #
 .LEHE3:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:27:     T100ExecuteProcess*     process     = T100NEW T100ExecuteProcess(&output, &error);
 	.loc 7 27 85 is_stmt 0 discriminator 3
-	movq	%rbx, 104(%rbp)	 # _22, process
+	movq	%rbx, 104(%rbp)	 # _24, process
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
 	.loc 7 29 17 is_stmt 1 discriminator 3
-	movq	168(%rbp), %rdx	 # value, tmp100
-	leaq	16(%rbp), %rax	 #, tmp101
-	movq	%rax, %rcx	 # tmp101,
+	movq	168(%rbp), %rdx	 # value, tmp101
+	leaq	16(%rbp), %rax	 #, tmp102
+	movq	%rax, %rcx	 # tmp102,
 .LEHB4:
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE4:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
 	.loc 7 29 17 is_stmt 0 discriminator 1
-	movq	104(%rbp), %rdx	 # process, tmp102
-	leaq	16(%rbp), %rax	 #, tmp103
+	movq	104(%rbp), %rdx	 # process, tmp103
+	leaq	16(%rbp), %rax	 #, tmp104
 	movl	$0, %r9d	 #,
-	movq	%rdx, %r8	 # tmp102,
+	movq	%rdx, %r8	 # tmp103,
 	movl	$2, %edx	 #,
-	movq	%rax, %rcx	 # tmp103,
+	movq	%rax, %rcx	 # tmp104,
 .LEHB5:
 	call	_Z9wxExecuteRK8wxStringiP9wxProcessPK12wxExecuteEnv	 #
 .LEHE5:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
 	.loc 7 29 71 is_stmt 1 discriminator 1
 	testl	%eax, %eax	 # _1
-	sete	%bl	 #, retval.0_30
+	sete	%bl	 #, retval.0_32
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
 	.loc 7 29 17 discriminator 1
-	leaq	16(%rbp), %rax	 #, tmp104
-	movq	%rax, %rcx	 # tmp104,
+	leaq	16(%rbp), %rax	 #, tmp105
+	movq	%rax, %rcx	 # tmp105,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
 	.loc 7 29 5 discriminator 1
-	testb	%bl, %bl	 # retval.0_30
+	testb	%bl, %bl	 # retval.0_32
 	je	.L50	 #,
-	movl	$0, %ebx	 #, finally_tmp.2_5
+	movl	$0, %ebx	 #, finally_tmp.2_6
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:30:         return;
 	.loc 7 30 9
 	jmp	.L51	 #
 .L50:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:33:     while(process->IsRunning()){
 	.loc 7 33 29
-	movq	104(%rbp), %rax	 # process, tmp105
-	movq	%rax, %rcx	 # tmp105,
+	movq	104(%rbp), %rax	 # process, tmp106
+	movq	%rax, %rcx	 # tmp106,
 .LEHB6:
 	call	_ZN18T100ExecuteProcess9IsRunningEv	 #
-	testb	%al, %al	 # _35
+	testb	%al, %al	 # _37
 	je	.L52	 #,
 .LBB13:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:34:         process->FlushPipe();
 	.loc 7 34 27
-	movq	104(%rbp), %rax	 # process, tmp106
-	movq	%rax, %rcx	 # tmp106,
+	movq	104(%rbp), %rax	 # process, tmp107
+	movq	%rax, %rcx	 # tmp107,
 	call	_ZN18T100ExecuteProcess9FlushPipeEv	 #
 .LBB14:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
 	.loc 7 36 29
-	leaq	-16(%rbp), %rax	 #, tmp107
-	movq	%rax, 96(%rbp)	 # tmp107, __for_range
-	movq	96(%rbp), %rax	 # __for_range, tmp108
-	movq	%rax, %rcx	 # tmp108,
+	leaq	-16(%rbp), %rax	 #, tmp108
+	movq	%rax, 96(%rbp)	 # tmp108, __for_range
+	movq	96(%rbp), %rax	 # __for_range, tmp109
+	movq	%rax, %rcx	 # tmp109,
 	call	_ZN13wxArrayString5beginEv	 #
-	movq	%rax, 120(%rbp)	 # tmp109, __for_begin
-	movq	96(%rbp), %rax	 # __for_range, tmp110
-	movq	%rax, %rcx	 # tmp110,
+	movq	%rax, 120(%rbp)	 # tmp110, __for_begin
+	movq	96(%rbp), %rax	 # __for_range, tmp111
+	movq	%rax, %rcx	 # tmp111,
 	call	_ZN13wxArrayString3endEv	 #
-	movq	%rax, 88(%rbp)	 # tmp111, __for_end
+	movq	%rax, 88(%rbp)	 # tmp112, __for_end
 .L54:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
 	.loc 7 36 29 is_stmt 0 discriminator 1
-	movq	120(%rbp), %rax	 # __for_begin, tmp112
-	cmpq	88(%rbp), %rax	 # __for_end, tmp112
+	movq	120(%rbp), %rax	 # __for_begin, tmp113
+	cmpq	88(%rbp), %rax	 # __for_end, tmp113
 	je	.L53	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
 	.loc 7 36 29 discriminator 2
-	movq	120(%rbp), %rdx	 # __for_begin, tmp113
-	leaq	-96(%rbp), %rax	 #, tmp114
-	movq	%rax, %rcx	 # tmp114,
+	movq	120(%rbp), %rdx	 # __for_begin, tmp114
+	leaq	-96(%rbp), %rax	 #, tmp115
+	movq	%rax, %rcx	 # tmp115,
 	call	_ZN8wxStringC1ERKS_	 #
 .LEHE6:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:37:             std::cout << item;
 	.loc 7 37 26 is_stmt 1
-	leaq	-96(%rbp), %rax	 #, tmp115
-	movq	%rax, %rdx	 # tmp115,
+	leaq	-96(%rbp), %rax	 #, tmp116
+	movq	%rax, %rdx	 # tmp116,
 	movq	.refptr._ZSt4cout(%rip), %rcx	 #,
 .LEHB7:
 	call	_ZlsRSoRK8wxString	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:             T100ProjectInvoking::OnBuildMessage(item.ToStdWstring());
 	.loc 7 38 67
-	leaq	-96(%rbp), %rax	 #, tmp116
-	movq	%rax, %rcx	 # tmp116,
+	leaq	-96(%rbp), %rax	 #, tmp117
+	movq	%rax, %rcx	 # tmp117,
 	call	_ZNK8wxString12ToStdWstringB5cxx11Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:38:             T100ProjectInvoking::OnBuildMessage(item.ToStdWstring());
 	.loc 7 38 48
@@ -1446,8 +1446,8 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LEHE7:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
 	.loc 7 36 29 discriminator 3
-	leaq	-96(%rbp), %rax	 #, tmp117
-	movq	%rax, %rcx	 # tmp117,
+	leaq	-96(%rbp), %rax	 #, tmp118
+	movq	%rax, %rcx	 # tmp118,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
 	.loc 7 36 9 discriminator 3
@@ -1458,42 +1458,51 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 .LBB15:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
 	.loc 7 40 29
-	leaq	-48(%rbp), %rax	 #, tmp118
-	movq	%rax, 80(%rbp)	 # tmp118, __for_range
-	movq	80(%rbp), %rax	 # __for_range, tmp119
-	movq	%rax, %rcx	 # tmp119,
+	leaq	-48(%rbp), %rax	 #, tmp119
+	movq	%rax, 80(%rbp)	 # tmp119, __for_range
+	movq	80(%rbp), %rax	 # __for_range, tmp120
+	movq	%rax, %rcx	 # tmp120,
 	call	_ZN13wxArrayString5beginEv	 #
-	movq	%rax, 112(%rbp)	 # tmp120, __for_begin
-	movq	80(%rbp), %rax	 # __for_range, tmp121
-	movq	%rax, %rcx	 # tmp121,
+	movq	%rax, 112(%rbp)	 # tmp121, __for_begin
+	movq	80(%rbp), %rax	 # __for_range, tmp122
+	movq	%rax, %rcx	 # tmp122,
 	call	_ZN13wxArrayString3endEv	 #
-	movq	%rax, 72(%rbp)	 # tmp122, __for_end
+	movq	%rax, 72(%rbp)	 # tmp123, __for_end
 .L56:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
 	.loc 7 40 29 is_stmt 0 discriminator 1
-	movq	112(%rbp), %rax	 # __for_begin, tmp123
-	cmpq	72(%rbp), %rax	 # __for_end, tmp123
+	movq	112(%rbp), %rax	 # __for_begin, tmp124
+	cmpq	72(%rbp), %rax	 # __for_end, tmp124
 	je	.L74	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
 	.loc 7 40 29 discriminator 2
-	movq	112(%rbp), %rdx	 # __for_begin, tmp124
-	leaq	-96(%rbp), %rax	 #, tmp125
-	movq	%rax, %rcx	 # tmp125,
+	movq	112(%rbp), %rdx	 # __for_begin, tmp125
+	leaq	-96(%rbp), %rax	 #, tmp126
+	movq	%rax, %rcx	 # tmp126,
 .LEHB8:
 	call	_ZN8wxStringC1ERKS_	 #
 .LEHE8:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:41:             std::cout << item;
 	.loc 7 41 26 is_stmt 1
-	leaq	-96(%rbp), %rax	 #, tmp126
-	movq	%rax, %rdx	 # tmp126,
+	leaq	-96(%rbp), %rax	 #, tmp127
+	movq	%rax, %rdx	 # tmp127,
 	movq	.refptr._ZSt4cout(%rip), %rcx	 #,
 .LEHB9:
 	call	_ZlsRSoRK8wxString	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:42:             T100ProjectInvoking::OnBuildMessage(item.ToStdWstring());
+	.loc 7 42 67
+	leaq	-96(%rbp), %rax	 #, tmp128
+	movq	%rax, %rcx	 # tmp128,
+	call	_ZNK8wxString12ToStdWstringB5cxx11Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:42:             T100ProjectInvoking::OnBuildMessage(item.ToStdWstring());
+	.loc 7 42 48
+	movq	%rax, %rcx	 # _3,
+	call	_ZN19T100ProjectInvoking14OnBuildMessageERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE9:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
 	.loc 7 40 29 discriminator 3
-	leaq	-96(%rbp), %rax	 #, tmp127
-	movq	%rax, %rcx	 # tmp127,
+	leaq	-96(%rbp), %rax	 #, tmp129
+	movq	%rax, %rcx	 # tmp129,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
 	.loc 7 40 9 discriminator 3
@@ -1501,100 +1510,100 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	jmp	.L56	 #
 .L74:
 .LBE15:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:43:         break;
-	.loc 7 43 9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:44:         break;
+	.loc 7 44 9
 	nop	
 .L52:
 .LBE13:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:46:     process->ExitCode();
-	.loc 7 46 22
-	movq	104(%rbp), %rax	 # process, tmp128
-	movq	%rax, %rcx	 # tmp128,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47:     process->ExitCode();
+	.loc 7 47 22
+	movq	104(%rbp), %rax	 # process, tmp130
+	movq	%rax, %rcx	 # tmp130,
 .LEHB10:
 	call	_ZN18T100ExecuteProcess8ExitCodeEv	 #
 .LEHE10:
-	movl	$1, %ebx	 #, finally_tmp.2_5
+	movl	$1, %ebx	 #, finally_tmp.2_6
 .L51:
-	leaq	-48(%rbp), %rax	 #, tmp129
-	movq	%rax, %rcx	 # tmp129,
+	leaq	-48(%rbp), %rax	 #, tmp131
+	movq	%rax, %rcx	 # tmp131,
 	call	_ZN13wxArrayStringD1Ev	 #
-	cmpl	$1, %ebx	 #, finally_tmp.2_5
+	cmpl	$1, %ebx	 #, finally_tmp.2_6
 	jne	.L57	 #,
-	movl	$1, %ebx	 #, finally_tmp.3_6
+	movl	$1, %ebx	 #, finally_tmp.3_7
 	jmp	.L58	 #
 .L57:
-	movl	$0, %ebx	 #, finally_tmp.3_6
+	movl	$0, %ebx	 #, finally_tmp.3_7
 .L58:
-	leaq	-16(%rbp), %rax	 #, tmp130
-	movq	%rax, %rcx	 # tmp130,
+	leaq	-16(%rbp), %rax	 #, tmp132
+	movq	%rax, %rcx	 # tmp132,
 	call	_ZN13wxArrayStringD1Ev	 #
-	cmpl	$1, %ebx	 #, finally_tmp.3_6
+	cmpl	$1, %ebx	 #, finally_tmp.3_7
 	jmp	.L73	 #
 .L69:
-	movq	%rax, %rsi	 #, tmp132
+	movq	%rax, %rsi	 #, tmp134
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:27:     T100ExecuteProcess*     process     = T100NEW T100ExecuteProcess(&output, &error);
 	.loc 7 27 85
 	movl	$200, %edx	 #,
-	movq	%rbx, %rcx	 # _22,
+	movq	%rbx, %rcx	 # _24,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rbx	 # tmp132, tmp131
+	movq	%rsi, %rbx	 # tmp134, tmp133
 	jmp	.L62	 #
 .L70:
-	movq	%rax, %rbx	 #, tmp136
+	movq	%rax, %rbx	 #, tmp138
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:29:     if(wxExecute(value, wxEXEC_ASYNC | wxEXEC_SHOW_CONSOLE , process) == 0){
 	.loc 7 29 17
-	leaq	16(%rbp), %rax	 #, tmp135
-	movq	%rax, %rcx	 # tmp135,
+	leaq	16(%rbp), %rax	 #, tmp137
+	movq	%rax, %rcx	 # tmp137,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L62	 #
 .L71:
-	movq	%rax, %rbx	 #, tmp139
+	movq	%rax, %rbx	 #, tmp141
 .LBB18:
 .LBB16:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:36:         for(wxString item : output){
 	.loc 7 36 29
-	leaq	-96(%rbp), %rax	 #, tmp138
-	movq	%rax, %rcx	 # tmp138,
+	leaq	-96(%rbp), %rax	 #, tmp140
+	movq	%rax, %rcx	 # tmp140,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L62	 #
 .L72:
-	movq	%rax, %rbx	 #, tmp142
+	movq	%rax, %rbx	 #, tmp144
 .LBE16:
 .LBB17:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:40:         for(wxString item : error){
 	.loc 7 40 29
-	leaq	-96(%rbp), %rax	 #, tmp141
-	movq	%rax, %rcx	 # tmp141,
+	leaq	-96(%rbp), %rax	 #, tmp143
+	movq	%rax, %rcx	 # tmp143,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L62	 #
 .L68:
-	movq	%rax, %rbx	 #, tmp131
+	movq	%rax, %rbx	 #, tmp133
 .L62:
 .LBE17:
 .LBE18:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:25:     wxArrayString   error;
 	.loc 7 25 21
-	leaq	-48(%rbp), %rax	 #, tmp144
-	movq	%rax, %rcx	 # tmp144,
+	leaq	-48(%rbp), %rax	 #, tmp146
+	movq	%rax, %rcx	 # tmp146,
 	call	_ZN13wxArrayStringD1Ev	 #
 	jmp	.L66	 #
 .L67:
-	movq	%rax, %rbx	 #, tmp145
+	movq	%rax, %rbx	 #, tmp147
 .L66:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:24:     wxArrayString   output;
 	.loc 7 24 21
-	leaq	-16(%rbp), %rax	 #, tmp147
-	movq	%rax, %rcx	 # tmp147,
+	leaq	-16(%rbp), %rax	 #, tmp149
+	movq	%rax, %rcx	 # tmp149,
 	call	_ZN13wxArrayStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp145, D.133400
+	movq	%rbx, %rax	 # tmp147, D.133400
 	movq	%rax, %rcx	 # D.133400,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE11:
 .L73:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47: }
-	.loc 7 47 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:48: }
+	.loc 7 48 1
 	addq	$256, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -2051,7 +2060,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB11313:
-	.loc 7 47 1
+	.loc 7 48 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2065,12 +2074,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47: }
-	.loc 7 47 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:48: }
+	.loc 7 48 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
 	jne	.L84	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47: }
-	.loc 7 47 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:48: }
+	.loc 7 48 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
 	jne	.L84	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
@@ -2080,8 +2089,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
 .L84:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47: }
-	.loc 7 47 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:48: }
+	.loc 7 48 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2095,7 +2104,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_proc	_GLOBAL__sub_I__ZN9T100ShellC2Ev
 _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 .LFB11373:
-	.loc 7 47 1
+	.loc 7 48 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2107,8 +2116,8 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:47: }
-	.loc 7 47 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\library\shell\T100Shell.cpp:48: }
+	.loc 7 48 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -52383,7 +52392,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x85
 	.ascii "__initialize_p\0"
 	.byte	0x7
-	.byte	0x2f
+	.byte	0x30
 	.byte	0x1
 	.long	0x22d
 	.uleb128 0x2
@@ -52392,7 +52401,7 @@ _GLOBAL__sub_I__ZN9T100ShellC2Ev:
 	.uleb128 0x85
 	.ascii "__priority\0"
 	.byte	0x7
-	.byte	0x2f
+	.byte	0x30
 	.byte	0x1
 	.long	0x22d
 	.uleb128 0x2
