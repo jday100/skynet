@@ -129,18 +129,19 @@ T100VOID T100ProjectView::FileModified()
     m_mainMenu->FileModified();
 }
 
-T100VOID T100ProjectView::FileOpen(wxTreeItemId id, T100FileInfo* info)
+T100BOOL T100ProjectView::FileOpen(wxTreeItemId id, T100FileInfo* info)
 {
-    if(m_mainPanel){
-
-    }else{
-        m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-        m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
+    if(!CheckMainPanel()){
+        return T100FALSE;
     }
 
-    m_mainPanel->Create(info);
+    if(!m_mainPanel->Open(info)){
+        return T100FALSE;
+    }
 
-    m_projectTree->FileOpen(id, info);
+    if(!m_projectTree->FileOpen(id, info)){
+        return T100FALSE;
+    }
 
     m_mainMenu->FileOpen();
 
@@ -148,6 +149,7 @@ T100VOID T100ProjectView::FileOpen(wxTreeItemId id, T100FileInfo* info)
 
     m_manager->Update();
 
+    return T100TRUE;
 }
 
 T100VOID T100ProjectView::FolderOpen(wxTreeItemId id, T100FolderInfo* info)
@@ -186,19 +188,6 @@ T100VOID T100ProjectView::Load(const T100PROJECT_INFO_VECTOR& projects)
     m_projectTree->Load(projects);
 }
 
-T100VOID T100ProjectView::New()
-{
-    m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-    m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-
-    T100Editor*     editor      = T100NEW T100Editor(m_mainPanel);
-
-    m_mainPanel->AddPage(editor, L"Editor");
-    //m_mainPanel->AddPage(editor, L"Editor");
-
-    m_manager->Update();
-}
-
 T100VOID T100ProjectView::Clear()
 {
     m_projectTree->Clear();
@@ -220,32 +209,6 @@ T100VOID T100ProjectView::OnResize()
 {
     m_manager->Update();
 }
-
-T100VOID T100ProjectView::New(T100FileInfo* info)
-{
-    if(!m_mainPanel){
-        m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-        m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-
-        m_manager->Update();
-    }
-
-    m_mainPanel->Create(info);
-    m_projectTree->FileCreate(info);
-}
-
-T100VOID T100ProjectView::Open(T100FileInfo* info)
-{
-    if(!m_mainPanel){
-        m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-        m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE));
-
-        m_manager->Update();
-    }
-
-    m_mainPanel->Create(info);
-}
-
 
 T100VOID T100ProjectView::FileSave()
 {

@@ -171,7 +171,7 @@ T100VOID T100ProjectSkeletal::OnFileNew()
 
     info->SetLabel(L"unnamed");
 
-    m_view->New(info);
+    m_view->FileOpen(0, info);
 }
 
 T100VOID T100ProjectSkeletal::OnFileOpen()
@@ -187,7 +187,7 @@ T100VOID T100ProjectSkeletal::OnFileOpen()
     info->SetFileName(dialog.GetFilename().ToStdWstring());
     info->SetPath(dialog.GetPath().ToStdWstring());
 
-    m_view->Open(info);
+    m_view->FileOpen(0, info);
 }
 
 T100VOID T100ProjectSkeletal::OnFileClose()

@@ -1213,9 +1213,9 @@ T100VOID T100ProjectTree::FileCreate(T100FileInfo* info)
     AppendFile(item, info);
 }
 
-T100VOID T100ProjectTree::FileOpen(wxTreeItemId id, T100FileInfo* info)
+T100BOOL T100ProjectTree::FileOpen(wxTreeItemId id, T100FileInfo* info)
 {
-
+    return T100TRUE;
 }
 
 T100VOID T100ProjectTree::FolderOpen(wxTreeItemId id, T100FolderInfo* info)

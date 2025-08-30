@@ -100,6 +100,22 @@ T100VOID T100ProjectViewBase::SetTitle()
     m_frame->SetLabel(title);
 }
 
+T100BOOL T100ProjectViewBase::CheckMainPanel()
+{
+    if(m_mainPanel){
+        return T100TRUE;
+    }
+
+    m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
+    if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
+
+    }else{
+        T100SAFE_DELETE(m_mainPanel);
+        return T100FALSE;
+    }
+    return T100TRUE;
+}
+
 T100INT T100ProjectViewBase::ShowDirDialog(T100WSTRING& path)
 {
     T100INT             result;

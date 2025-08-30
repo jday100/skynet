@@ -1233,8 +1233,8 @@ _ZN23T100ProjectSkeletalBase12WorkSpaceNewEP17T100WorkSpaceInfo:
 	leaq	-96(%rbp), %rax	 #, tmp151
 	movq	%rax, %rcx	 # tmp151,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp152, D.196256
-	movq	%rax, %rcx	 # D.196256,
+	movq	%rbx, %rax	 # tmp152, D.196250
+	movq	%rax, %rcx	 # D.196250,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:

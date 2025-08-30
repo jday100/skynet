@@ -56,6 +56,8 @@ class T100ProjectViewBase
 
         T100WSTRING                     m_projectName   = L"T100Project";
 
+        T100BOOL                        CheckMainPanel();
+
     private:
         T100VOID                        init();
         T100VOID                        uninit();

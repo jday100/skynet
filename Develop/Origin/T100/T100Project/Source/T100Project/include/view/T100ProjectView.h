@@ -29,7 +29,7 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    FileModified();
 
-        T100VOID                    FileOpen(wxTreeItemId, T100FileInfo*);
+        T100BOOL                    FileOpen(wxTreeItemId, T100FileInfo*);
         T100VOID                    FolderOpen(wxTreeItemId, T100FolderInfo*);
 
         T100VOID                    FolderSelected();
@@ -41,18 +41,11 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    Load(const T100PROJECT_INFO_VECTOR&);
 
-        T100VOID                    New();
-
         T100VOID                    Clear();
 
         T100VOID                    About();
 
         T100VOID                    OnResize();
-
-
-        T100VOID                    New(T100FileInfo*);
-        T100VOID                    Open(T100FileInfo*);
-
 
         T100VOID                    FileSave();
 
