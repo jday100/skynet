@@ -28,45 +28,89 @@ T100Editor* T100MainPanel::GetCurrentEditor()
 {
     T100EditorPack*     pack    = dynamic_cast<T100EditorPack*>(m_current);
 
-    T100Editor*         result  = T100NULL;
+    T100Editor*         editor  = T100NULL;
 
     if(pack){
-        result  = pack->GetEditor();
+        editor  = pack->GetEditor();
     }
-
-    return result;
+    return editor;
 }
 
-T100VOID T100MainPanel::Create(T100FileInfo* info)
+T100BOOL T100MainPanel::Open(T100FileInfo* info)
 {
-    T100EditorPack*     pack    = T100NEW T100EditorPack(this);
+    if(!info){
+        return T100FALSE;
+    }
 
+    T100EditorPack*     pack    = T100NEW T100EditorPack(this);
     T100WSTRING         path    = info->GetPath();
 
     if(path.empty()){
 
     }else{
-        pack->GetEditor()->LoadFile(path);
-        pack->GetEditor()->SetPath(path);
+        if(pack->GetEditor()->LoadFile(path)){
+            pack->GetEditor()->SetPath(path);
+        }else{
+            T100SAFE_DELETE(pack);
+            return T100FALSE;
+        }
     }
 
-    AddPage(pack, info->GetLabel());
+    if(AddPage(pack, info->GetLabel())){
+        m_current   = pack;
+    }else{
+        T100SAFE_DELETE(pack);
+        return T100FALSE;
+    }
 
-    m_current   = pack;
+    return T100TRUE;
 }
 
-T100VOID T100MainPanel::Clear()
+T100BOOL T100MainPanel::Close(T100FileInfo* info)
 {
-    wxAuiNotebook::DeleteAllPages();
+    if(!info){
+        return T100FALSE;
+    }
+
+    if(DeletePage(1)){
+
+    }else{
+        return T100FALSE;
+    }
+    return T100TRUE;
 }
 
-T100VOID T100MainPanel::Save()
+T100BOOL T100MainPanel::Save()
 {
-    T100BOOL        result      = T100FALSE;
-
     if(m_current){
-        result  = GetCurrentEditor()->SaveFile(GetCurrentEditor()->GetPath());
+
+    }else{
+        return T100FALSE;
     }
+
+    T100Editor*     editor      = T100NULL;
+
+    editor  = GetCurrentEditor();
+
+    if(editor){
+
+    }else{
+        return T100FALSE;
+    }
+
+    editor->SaveFile(editor->GetPath());
+
+    return T100TRUE;
+}
+
+T100BOOL T100MainPanel::SaveAll()
+{
+
+}
+
+T100BOOL T100MainPanel::Clear()
+{
+    return DeleteAllPages();
 }
 
 T100VOID T100MainPanel::OnPageChanged(wxAuiNotebookEvent& event)

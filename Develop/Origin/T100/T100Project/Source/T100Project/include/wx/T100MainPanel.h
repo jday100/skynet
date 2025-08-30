@@ -17,12 +17,14 @@ class T100MainPanel : public wxAuiNotebook
                   long style = wxAUI_NB_DEFAULT_STYLE);
         virtual ~T100MainPanel();
 
-        virtual T100VOID            Create(T100FileInfo*);
-        virtual T100VOID            Clear();
-
-        T100VOID                    Save();
-
         T100Editor*                 GetCurrentEditor();
+
+        virtual T100BOOL            Open(T100FileInfo*);
+        virtual T100BOOL            Close(T100FileInfo*);
+
+        virtual T100BOOL            Save();
+        virtual T100BOOL            SaveAll();
+        virtual T100BOOL            Clear();
 
     protected:
         T100Pack*                   m_current       = T100NULL;
