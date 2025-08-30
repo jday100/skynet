@@ -141,6 +141,8 @@ T100BOOL T100ProjectLogic::CreateModule(T100ModuleInfo* info)
     command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Module.py C:/vm/Hello Hello";
 
     shell.Run(command);
+
+    return T100TRUE;
 }
 
 

@@ -217,7 +217,7 @@ T100VOID T100ProjectViewBase::ShowModuleCreateDialog()
 {
     T100ModuleCreateDialog      dialog(m_frame, wxID_ANY, L"Module Create...");
 
-    if(dialog.ShowModal() == wxAPPLY){
+    if(dialog.ShowModal() == wxID_APPLY){
         T100ProjectInvoking::OnModuleNew(dialog.GetModuleInfo());
     }
 }
@@ -244,6 +244,5 @@ T100VOID T100ProjectViewBase::ShowAboutDialog()
 {
     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
 
-    dialog.CentreOnScreen();
     dialog.ShowModal();
 }

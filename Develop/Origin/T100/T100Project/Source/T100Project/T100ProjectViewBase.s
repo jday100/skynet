@@ -9420,17 +9420,17 @@ _ZN19T100ProjectViewBase22ShowModuleCreateDialogEv:
 	leaq	752(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:220:     if(dialog.ShowModal() == wxAPPLY){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:220:     if(dialog.ShowModal() == wxID_APPLY){
 	.loc 27 220 24
 	leaq	-64(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
 .LEHB75:
 	call	_ZN8wxDialog9ShowModalEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:220:     if(dialog.ShowModal() == wxAPPLY){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:220:     if(dialog.ShowModal() == wxID_APPLY){
 	.loc 27 220 27
-	cmpl	$32, %eax	 #, _2
+	cmpl	$5102, %eax	 #, _2
 	sete	%al	 #, retval.48_19
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:220:     if(dialog.ShowModal() == wxAPPLY){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:220:     if(dialog.ShowModal() == wxID_APPLY){
 	.loc 27 220 5
 	testb	%al, %al	 # retval.48_19
 	je	.L418	 #,
@@ -9867,7 +9867,7 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:245:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
 	.loc 27 245 44 discriminator 2
 	movq	864(%rbp), %rax	 # this, tmp92
-	movq	24(%rax), %rcx	 # this_8(D)->m_frame, _1
+	movq	24(%rax), %rcx	 # this_7(D)->m_frame, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:245:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
 	.loc 27 245 74 discriminator 2
 	leaq	784(%rbp), %r8	 #, tmp93
@@ -9892,58 +9892,52 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	leaq	736(%rbp), %rax	 #, tmp99
 	movq	%rax, %rcx	 # tmp99,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:247:     dialog.CentreOnScreen();
-	.loc 27 247 26
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:247:     dialog.ShowModal();
+	.loc 27 247 21
 	leaq	-64(%rbp), %rax	 #, tmp100
-	movl	$12, %edx	 #,
 	movq	%rax, %rcx	 # tmp100,
 .LEHB87:
-	call	_ZN20wxTopLevelWindowBase14CentreOnScreenEi	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:248:     dialog.ShowModal();
-	.loc 27 248 21
-	leaq	-64(%rbp), %rax	 #, tmp101
-	movq	%rax, %rcx	 # tmp101,
 	call	_ZN8wxDialog9ShowModalEv	 #
 .LEHE87:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:245:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
 	.loc 27 245 74
-	leaq	-64(%rbp), %rax	 #, tmp102
-	movq	%rax, %rcx	 # tmp102,
+	leaq	-64(%rbp), %rax	 #, tmp101
+	movq	%rax, %rcx	 # tmp101,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
-	.loc 27 249 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:248: }
+	.loc 27 248 1
 	jmp	.L447	 #
 .L445:
-	movq	%rax, %rbx	 #, tmp105
-	leaq	784(%rbp), %rax	 #, tmp103
-	movq	%rax, %rcx	 # tmp103,
+	movq	%rax, %rbx	 #, tmp104
+	leaq	784(%rbp), %rax	 #, tmp102
+	movq	%rax, %rcx	 # tmp102,
 	call	_ZN8wxStringD1Ev	 #
 	jmp	.L442	 #
 .L444:
-	movq	%rax, %rbx	 #, tmp104
+	movq	%rax, %rbx	 #, tmp103
 .L442:
-	leaq	736(%rbp), %rax	 #, tmp108
-	movq	%rax, %rcx	 # tmp108,
+	leaq	736(%rbp), %rax	 #, tmp107
+	movq	%rax, %rcx	 # tmp107,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp104, D.260687
+	movq	%rbx, %rax	 # tmp103, D.260687
 	movq	%rax, %rcx	 # D.260687,
 .LEHB88:
 	call	_Unwind_Resume	 #
 .L446:
-	movq	%rax, %rbx	 #, tmp110
+	movq	%rax, %rbx	 #, tmp109
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:245:     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
 	.loc 27 245 74
-	leaq	-64(%rbp), %rax	 #, tmp109
-	movq	%rax, %rcx	 # tmp109,
+	leaq	-64(%rbp), %rax	 #, tmp108
+	movq	%rax, %rcx	 # tmp108,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.260688
+	movq	%rbx, %rax	 # tmp109, D.260688
 	movq	%rax, %rcx	 # D.260688,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE88:
 .L447:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
-	.loc 27 249 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:248: }
+	.loc 27 248 1
 	addq	$968, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -11652,7 +11646,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB20532:
-	.loc 27 249 1
+	.loc 27 248 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -11666,12 +11660,12 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
-	.loc 27 249 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:248: }
+	.loc 27 248 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
 	jne	.L494	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
-	.loc 27 249 1 is_stmt 0 discriminator 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:248: }
+	.loc 27 248 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
 	jne	.L494	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
@@ -11681,8 +11675,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
 .L494:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
-	.loc 27 249 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:248: }
+	.loc 27 248 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -12038,7 +12032,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev
 _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 .LFB20641:
-	.loc 27 249 1
+	.loc 27 248 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -12050,8 +12044,8 @@ _GLOBAL__sub_I__ZN19T100ProjectViewBaseC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:249: }
-	.loc 27 249 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:248: }
+	.loc 27 248 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -78830,7 +78824,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3b
 	.ascii "__initialize_p\0"
 	.byte	0x1b
-	.byte	0xf9
+	.byte	0xf8
 	.byte	0x1
 	.long	0x10959
 	.uleb128 0x2
@@ -78839,7 +78833,7 @@ _ZZN13wxAuiPaneInfo7SetFlagEibE12__FUNCTION__:
 	.uleb128 0x3b
 	.ascii "__priority\0"
 	.byte	0x1b
-	.byte	0xf9
+	.byte	0xf8
 	.byte	0x1
 	.long	0x10959
 	.uleb128 0x2
