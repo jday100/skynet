@@ -92,6 +92,14 @@ T100VOID T100ProjectViewMainMenu::Create(T100ProjectFrame* frame)
 
     menuBar->Append(editMenu, L"Edit");
 
+    m_workspace = T100NEW wxMenuItem(viewMenu, T100PROJECT_MENU_VIEW_WORKSPACE, L"WorkSpace view", wxEmptyString, T100TRUE);
+    m_search    = T100NEW wxMenuItem(viewMenu, T100PROJECT_MENU_VIEW_SEARCH, L"Search result", wxEmptyString, T100TRUE);
+    m_output    = T100NEW wxMenuItem(viewMenu, T100PROJECT_MENU_VIEW_OUTPUT, L"Build messages", wxEmptyString, T100TRUE);
+
+    viewMenu->Append(m_workspace);
+    viewMenu->Append(m_search);
+    viewMenu->Append(m_output);
+
     menuBar->Append(viewMenu, L"View");
 
     m_find      = T100NEW wxMenuItem(searchMenu, T100PROJECT_MENU_SEARCH_FIND, L"Find ...");

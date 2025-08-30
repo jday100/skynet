@@ -54,6 +54,10 @@ class T100ProjectViewMainMenu
         wxMenuItem*                 m_copy          = T100NULL;
         wxMenuItem*                 m_paste         = T100NULL;
 
+        wxMenuItem*                 m_workspace     = T100NULL;
+        wxMenuItem*                 m_search        = T100NULL;
+        wxMenuItem*                 m_output        = T100NULL;
+
         wxMenuItem*                 m_find          = T100NULL;
         wxMenuItem*                 m_replace       = T100NULL;
 
