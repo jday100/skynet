@@ -1,5 +1,7 @@
 #include "T100ProjectViewSetupEditorDialog.h"
 
+#include <wx/fontenum.h>
+
 const long T100ProjectViewSetupEditorDialog::ID_FONT_STATIC_TEXT    = wxNewId();
 const long T100ProjectViewSetupEditorDialog::ID_FONT_LIST_BOX   = wxNewId();
 
@@ -36,7 +38,15 @@ T100VOID T100ProjectViewSetupEditorDialog::init()
     m_fontTitle         = T100NEW wxStaticText(this, ID_FONT_STATIC_TEXT, _("Editor's font:"));
     m_font              = T100NEW wxListBox(this,ID_FONT_LIST_BOX);
 
-    font->Add(m_fontTitle, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_TOP, 5);
+    wxArrayString       fonts;
+    wxFontEnumerator    fontenum;
+    wxFontEncoding      encoding        = wxFONTENCODING_DEFAULT;
+
+    fonts = fontenum.GetFacenames(encoding);
+
+    m_font->Append(fonts);
+
+    font->Add(m_fontTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_TOP, 5);
     font->Add(m_font, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 
     sizer->Add(font, 1, wxALL|wxEXPAND, 5);
