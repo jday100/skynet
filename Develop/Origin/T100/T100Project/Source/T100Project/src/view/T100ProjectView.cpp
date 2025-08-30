@@ -4,6 +4,7 @@
 #include "T100EditorPack.h"
 #include "T100ProjectMain.h"
 #include "T100ProjectViewAboutDialog.h"
+#include "T100ProjectViewSetupEditorDialog.h"
 #include "T100ProjectViewSetupCompilerDialog.h"
 
 T100ProjectView::T100ProjectView() :
@@ -75,6 +76,15 @@ T100BOOL T100ProjectView::WorkSpaceSelect()
 {
     m_mainMenu->WorkSpaceSelect();
     return T100TRUE;
+}
+
+T100VOID T100ProjectView::ShowSetupEditorDialog()
+{
+    T100ProjectViewSetupEditorDialog        dialog(m_frame, wxID_ANY, L"Setup Editor...");
+
+    if(dialog.ShowModal() == wxID_APPLY){
+
+    }
 }
 
 T100VOID T100ProjectView::ShowSetupCompilerDialog()
@@ -175,13 +185,6 @@ T100VOID T100ProjectView::ShowFileName(T100WSTRING& filename)
         filename    = dialog.GetValue().ToStdWstring();
     }
 }
-
-T100VOID T100ProjectView::ShowSetupEditorDialog()
-{
-
-}
-
-
 
 T100VOID T100ProjectView::Load(const T100PROJECT_INFO_VECTOR& projects)
 {
