@@ -1,5 +1,6 @@
 #include "T100ProjectLogic.h"
 
+#include <wx/utils.h>
 #include "T100Shell.h"
 #include "T100Folder.h"
 #include "T100ProjectFile.h"
@@ -41,6 +42,8 @@ T100BOOL T100ProjectLogic::New(const T100WxFolderInfo& info, T100WorkSpaceInfo* 
     T100WSTRING         name;
     T100WSTRING         filename;
 
+    wxBell();
+
     Execute(info, workspace);
 
     return T100TRUE;
@@ -78,6 +81,8 @@ T100BOOL T100ProjectLogic::New(const T100WxFolderInfo& info, T100WorkSpaceInfo* 
     project->SetFileName(filename);
 
     m_project   = project;
+
+    wxBell();
 
     return T100TRUE;
 }
