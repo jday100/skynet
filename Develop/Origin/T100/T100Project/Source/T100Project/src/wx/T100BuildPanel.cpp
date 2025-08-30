@@ -17,3 +17,9 @@ T100BuildPanel::~T100BuildPanel()
 {
     //dtor
 }
+
+T100BOOL T100BuildPanel::Append(T100WSTRING& value)
+{
+
+}
+

@@ -204,6 +204,24 @@ T100VOID T100ProjectViewBase::ShowProjectCreateWizard()
     wizard.RunWizard(wizard.GetFirstPage());
 }
 
+T100VOID T100ProjectViewBase::ShowBuildPanel()
+{
+    if(m_buildPanel){
+
+    }else{
+        m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
+        if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
+
+        }else{
+            T100SAFE_DELETE(m_buildPanel);
+            return;
+        }
+    }
+
+    m_buildPanel->Show();
+    m_manager->Update();
+}
+
 T100VOID T100ProjectViewBase::ShowAboutDialog()
 {
     T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");

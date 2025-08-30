@@ -2,6 +2,7 @@
 #define T100BUILDPANEL_H
 
 #include <wx/textctrl.h>
+#include "T100Common.h"
 
 class T100BuildPanel : public wxTextCtrl
 {
@@ -14,6 +15,8 @@ class T100BuildPanel : public wxTextCtrl
                const wxValidator& validator = wxDefaultValidator,
                const wxString& name = wxTextCtrlNameStr);
         virtual ~T100BuildPanel();
+
+        virtual T100BOOL            Append(T100WSTRING&);
 
     protected:
 

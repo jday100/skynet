@@ -42,6 +42,7 @@ class T100ProjectViewBase
 
         T100VOID                        ShowProjectCreateWizard();
 
+        T100VOID                        ShowBuildPanel();
         T100VOID                        ShowAboutDialog();
 
     protected:
