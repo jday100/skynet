@@ -14,15 +14,16 @@ T100ProjectLogic::T100ProjectLogic()
 }
 
 T100ProjectLogic::T100ProjectLogic(T100ProjectInfo* info) :
-    m_project(info)
+    m_current(info)
 {
     //ctor
-    uninit();
+    init();
 }
 
 T100ProjectLogic::~T100ProjectLogic()
 {
     //dtor
+    uninit();
 }
 
 T100VOID T100ProjectLogic::init()
@@ -37,125 +38,14 @@ T100VOID T100ProjectLogic::uninit()
     T100SAFE_DELETE(m_folder);
 }
 
-T100BOOL T100ProjectLogic::New(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
+T100ProjectInfo* T100ProjectLogic::GetCurrent()
 {
-    T100WSTRING         name;
-    T100WSTRING         filename;
-
-    wxBell();
-
-    Execute(info, workspace);
-
-    return T100TRUE;
-
-    name    = GetFolderName(info);
-
-    T100Folder          folder(name);
-
-    if(folder.IsExists()){
-        return T100FALSE;
-    }
-
-    if(!folder.Create()){
-        return T100FALSE;
-    }
-
-    filename    = GetFileName(info);
-
-    T100ProjectFile     file(filename);
-
-    if(file.IsExists()){
-        return T100FALSE;
-    }
-
-    if(!file.Create()){
-        return T100FALSE;
-    }
-
-    T100ProjectInfo*    project     = T100NULL;
-
-    project     = T100NEW T100ProjectInfo();
-
-    project->SetLabel(info.GetLabel());
-    project->SetPath(name);
-    project->SetFileName(filename);
-
-    m_project   = project;
-
-    wxBell();
-
-    return T100TRUE;
+    return m_current;
 }
 
-T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
+T100WSTRING T100ProjectLogic::GetFileName(const T100WxFolderInfo& info)
 {
-    T100WSTRING         name;
-    T100WSTRING         filename;
-
-    name    = GetFolderName(info);
-
-    T100Shell       shell;
-    T100WSTRING     command;
-
-    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/vm/Hello";
-
-    shell.Run(command);
-}
-
-T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo* workspace)
-{
-    if(!m_current){
-        return;
-    }
-
-    wxBell();
-
-    T100Shell       shell;
-    T100WSTRING     command;
-
-    //command     = L"python3 " + GetBuildName(m_current) + L";pause";
-
-    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
-
-    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/vm/Hello/Make.py build";
-
-    shell.Run(command);
-}
-
-
-
-
-
-
-T100BOOL T100ProjectLogic::CreateModule(T100ModuleInfo* info)
-{
-    if(!info){
-        return T100FALSE;
-    }
-
-    wxBell();
-
-    T100Shell       shell;
-    T100WSTRING     command;
-
-    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Module.py C:/vm/Hello Hello";
-
-    shell.Run(command);
-
-    return T100TRUE;
-}
-
-
-
-
-
-
-
-
-
-T100ProjectInfo* T100ProjectLogic::GetProjectInfo()
-{
-    return m_project;
+    return info.GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
 }
 
 T100BOOL T100ProjectLogic::Check(T100WxFolderInfo* info)
@@ -184,8 +74,30 @@ T100BOOL T100ProjectLogic::Check(T100WxFolderInfo* info)
     return T100TRUE;
 }
 
+T100BOOL T100ProjectLogic::Create(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
+{
+    if(!workspace){
+        return T100FALSE;
+    }
+
+    T100WSTRING         name;
+    T100WSTRING         filename;
+
+    wxBell();
+
+    Execute(info, workspace);
+
+    return T100TRUE;
+}
+
+T100BOOL T100ProjectLogic::Remove(T100ProjectInfo* info)
+{
+
+}
+
 T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
 {
+
     T100Folder      folder(path);
 
     if(!folder.IsExists()){
@@ -235,10 +147,77 @@ T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
     return T100TRUE;
 }
 
-
-T100WSTRING T100ProjectLogic::GetFileName(const T100WxFolderInfo& info)
+T100BOOL T100ProjectLogic::Close(T100ProjectInfo*)
 {
-    return info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_PROJECT_FILENAME;
+
+}
+
+T100BOOL T100ProjectLogic::Rename(T100ProjectInfo*)
+{
+
+}
+
+T100BOOL T100ProjectLogic::Clean(T100ProjectInfo*)
+{
+
+}
+
+T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo*, T100ProjectInfo*)
+{
+    if(!m_current){
+        return;
+    }
+
+    wxBell();
+
+    T100Shell       shell;
+    T100WSTRING     command;
+
+    //command     = L"python3 " + GetBuildName(m_current) + L";pause";
+
+    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+
+    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/vm/Hello/Make.py build";
+
+    shell.Run(command);
+}
+
+T100BOOL T100ProjectLogic::Rebuild(T100WorkSpaceInfo*, T100ProjectInfo*)
+{
+
+}
+
+T100BOOL T100ProjectLogic::CreateModule(T100ModuleInfo* info)
+{
+    if(!info){
+        return T100FALSE;
+    }
+
+    wxBell();
+
+    T100Shell       shell;
+    T100WSTRING     command;
+
+    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Module.py C:/vm/Hello Hello";
+
+    shell.Run(command);
+
+    return T100TRUE;
+}
+
+T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
+{
+    T100WSTRING         name;
+    T100WSTRING         filename;
+
+    name    = GetFolderName(info);
+
+    T100Shell       shell;
+    T100WSTRING     command;
+
+    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/vm/Hello";
+
+    shell.Run(command);
 }
 
 T100WSTRING T100ProjectLogic::GetFolderName(const T100WxFolderInfo& info)
@@ -248,5 +227,5 @@ T100WSTRING T100ProjectLogic::GetFolderName(const T100WxFolderInfo& info)
 
 T100WSTRING T100ProjectLogic::GetBuildName(const T100ProjectInfo* info)
 {
-    return info->GetPath() + L"/" + L"Make.py";
+    return info->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + T100ProjectConfig::T100PROJECT_PROJECT_COMPILE_FILENAME;
 }

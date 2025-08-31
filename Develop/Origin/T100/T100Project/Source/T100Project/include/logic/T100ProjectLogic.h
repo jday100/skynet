@@ -18,29 +18,26 @@ class T100ProjectLogic
         T100ProjectLogic(T100ProjectInfo*);
         virtual ~T100ProjectLogic();
 
-        T100BOOL                    New(const T100WxFolderInfo&, T100WorkSpaceInfo*);
-        T100BOOL                    Build(T100WorkSpaceInfo*);
-
-        T100BOOL                    CreateModule(T100ModuleInfo*);
-
-
-
-
-
-
-        T100ProjectInfo*            GetProjectInfo();
+        T100ProjectInfo*            GetCurrent();
+        T100WSTRING                 GetFileName(const T100WxFolderInfo&);
 
         T100BOOL                    Check(T100WxFolderInfo*);
 
-        T100WSTRING                 GetFileName(const T100WxFolderInfo&);
+        T100BOOL                    Create(const T100WxFolderInfo&, T100WorkSpaceInfo*);
+        T100BOOL                    Remove(T100ProjectInfo*);
 
         T100BOOL                    Open(const T100WSTRING&, T100ProjectInfo*);
+        T100BOOL                    Close(T100ProjectInfo*);
 
+        T100BOOL                    Rename(T100ProjectInfo*);
 
+        T100BOOL                    Clean(T100ProjectInfo*);
+        T100BOOL                    Build(T100WorkSpaceInfo*, T100ProjectInfo*);
+        T100BOOL                    Rebuild(T100WorkSpaceInfo*, T100ProjectInfo*);
+
+        T100BOOL                    CreateModule(T100ModuleInfo*);
 
     protected:
-        T100ProjectInfo*            m_current       = T100NULL;
-
         T100WSTRING                 GetFolderName(const T100WxFolderInfo&);
         T100WSTRING                 GetBuildName(const T100ProjectInfo*);
 
@@ -49,7 +46,7 @@ class T100ProjectLogic
     protected:
         T100FileLogic*              m_file          = T100NULL;
         T100FolderLogic*            m_folder        = T100NULL;
-        T100ProjectInfo*            m_project       = T100NULL;
+        T100ProjectInfo*            m_current       = T100NULL;
 
     private:
         T100VOID                    init();

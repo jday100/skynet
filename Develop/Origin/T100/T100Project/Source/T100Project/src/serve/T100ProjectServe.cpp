@@ -16,7 +16,7 @@ T100ProjectServe::~T100ProjectServe()
 
 T100BOOL T100ProjectServe::New(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
 {
-    return m_projectLogic.New(info, workspace);
+    return m_projectLogic.Create(info, workspace);
 }
 
 
@@ -59,7 +59,7 @@ const T100PROJECT_INFO_VECTOR& T100ProjectServe::GetProjects()
 
 T100ProjectInfo* T100ProjectServe::GetProjectInfo()
 {
-    return m_projectLogic.GetProjectInfo();
+    return m_projectLogic.GetCurrent();
 }
 
 T100BOOL T100ProjectServe::Check(T100WxFolderInfo* info)
