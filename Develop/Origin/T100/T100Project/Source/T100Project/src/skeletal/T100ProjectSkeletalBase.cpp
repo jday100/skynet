@@ -148,6 +148,23 @@ T100VOID T100ProjectSkeletalBase::ProjectOpen()
 
 }
 
+T100BOOL T100ProjectSkeletalBase::ProjectOpen(T100ProjectInfo* info)
+{
+    if(!info){
+        return T100FALSE;
+    }
+
+    T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
+
+    if(logic.Open(info->GetPath(), info)){
+
+    }else{
+        return T100FALSE;
+    }
+
+    m_view->ProjectOpen(info);
+}
+
 T100VOID T100ProjectSkeletalBase::ProjectClose()
 {
 

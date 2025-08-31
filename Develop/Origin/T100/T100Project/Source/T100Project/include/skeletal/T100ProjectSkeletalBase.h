@@ -19,6 +19,7 @@ class T100ProjectSkeletalBase
 
         T100VOID                    ProjectNew();
         T100VOID                    ProjectOpen();
+        T100BOOL                    ProjectOpen(T100ProjectInfo*);
         T100VOID                    ProjectClose();
         T100VOID                    ProjectSave();
         T100VOID                    ProjectSaveAs();

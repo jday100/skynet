@@ -97,6 +97,9 @@ T100BOOL T100ProjectLogic::Remove(T100ProjectInfo* info)
 
 T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
 {
+    if(!info){
+        return T100FALSE;
+    }
 
     T100Folder      folder(path);
 
@@ -218,6 +221,8 @@ T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info, T100WorkSpaceIn
     command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/vm/Hello";
 
     shell.Run(command);
+
+    return T100TRUE;
 }
 
 T100WSTRING T100ProjectLogic::GetFolderName(const T100WxFolderInfo& info)

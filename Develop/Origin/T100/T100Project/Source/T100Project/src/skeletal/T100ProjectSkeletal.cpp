@@ -428,6 +428,7 @@ T100VOID T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo* i
 
     m_serve->GetFolderInfo(folder);
 
+    T100WorkSpaceInfo*      workspace   = T100NULL;
     T100ProjectInfo*        project     = T100NULL;
 
     T100WSTRING     path    = folder.GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + info->GetLabel();
@@ -439,12 +440,14 @@ T100VOID T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo* i
         return;
     }
 
-    project = m_serve->GetProjectServe()->GetProjectInfo();
-    if(!project){
-        return;
-    }
+    workspace   = m_serve->GetWorkSpaceInfo();
 
-    m_view->ProjectOpen(project);
+    project     = T100NEW T100ProjectInfo();
+
+    project->SetLabel(info->GetLabel());
+    project->SetPath(workspace->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + info->GetLabel());
+
+    ProjectOpen(project);
 }
 
 T100VOID T100ProjectSkeletal::OnBuildMessage(const T100WSTRING& value)
