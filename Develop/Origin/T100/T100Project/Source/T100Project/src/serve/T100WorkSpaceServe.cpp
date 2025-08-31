@@ -284,7 +284,7 @@ T100WSTRING T100WorkSpaceServe::GetFileName(const T100WxFolderInfo& info)
 {
     T100WSTRING         filename;
 
-    filename    = info.GetPath() + L"/" + T100ProjectConfig::T100PROJECT_WORKSPACE_FILENAME;
+    filename    = info.GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + T100ProjectConfig::T100PROJECT_WORKSPACE_FILENAME;
 
     return filename;
 }
