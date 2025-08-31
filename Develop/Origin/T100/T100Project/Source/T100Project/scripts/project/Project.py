@@ -35,6 +35,8 @@ def create_project(path):
         create_project_file()
         create_project_make()
 
+        print("Success")
+
 def create_project_file():
     print("Create project file...")
     xml = minidom.Document()
@@ -96,6 +98,8 @@ def build():
 	print(line)
 
 	subprocess.call(line)
+
+	print("Success")
 
 def clean():
 	print("Clean...")
