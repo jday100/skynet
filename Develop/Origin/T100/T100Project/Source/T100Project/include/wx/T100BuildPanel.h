@@ -11,7 +11,7 @@ class T100BuildPanel : public wxTextCtrl
                const wxString& value = wxEmptyString,
                const wxPoint& pos = wxDefaultPosition,
                const wxSize& size = wxDefaultSize,
-               long style = 0,
+               long style = wxTE_MULTILINE,
                const wxValidator& validator = wxDefaultValidator,
                const wxString& name = wxTextCtrlNameStr);
         virtual ~T100BuildPanel();

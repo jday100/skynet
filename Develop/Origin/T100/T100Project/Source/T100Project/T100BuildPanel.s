@@ -360,8 +360,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.260043
-	movq	%rax, %rcx	 # D.260043,
+	movq	%rbx, %rax	 # tmp99, D.260046
+	movq	%rax, %rcx	 # D.260046,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2268,8 +2268,8 @@ _ZN8wxColourC1Ev:
 	movq	-64(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN12wxColourBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp93, D.260054
-	movq	%rax, %rcx	 # D.260054,
+	movq	%rbx, %rax	 # tmp93, D.260057
+	movq	%rax, %rcx	 # D.260057,
 .LEHB3:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2464,7 +2464,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 12 337 27
-	movq	-8(%rbp), %rax	 # D.121899, D.259380
+	movq	-8(%rbp), %rax	 # D.121899, D.259383
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 12 338 5
 	addq	$48, %rsp	 #,
@@ -2695,7 +2695,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 78
-	movq	-8(%rbp), %rax	 # D.121933, D.259402
+	movq	-8(%rbp), %rax	 # D.121933, D.259405
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 81
 	addq	$48, %rsp	 #,
@@ -2743,7 +2743,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 78
-	movq	-8(%rbp), %rax	 # D.121935, D.259399
+	movq	-8(%rbp), %rax	 # D.121935, D.259402
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 81
 	addq	$48, %rsp	 #,
@@ -2930,7 +2930,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 12 532 77
-	movq	-72(%rbp), %rax	 # D.121977, D.259375
+	movq	-72(%rbp), %rax	 # D.121977, D.259378
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 12 533 5
 	addq	$72, %rsp	 #,
@@ -4234,7 +4234,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.259297
+	movq	(%rax), %rax	 # wxDefaultSize, D.259300
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 72
 	popq	%rbp	 #
@@ -4412,8 +4412,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.260060
-	movq	%rax, %rcx	 # D.260060,
+	movq	%rbx, %rax	 # tmp97, D.260063
+	movq	%rax, %rcx	 # D.260063,
 .LEHB6:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5150,8 +5150,8 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	leaq	-96(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.260065
-	movq	%rax, %rcx	 # D.260065,
+	movq	%rbx, %rax	 # tmp97, D.260068
+	movq	%rax, %rcx	 # D.260068,
 .LEHB9:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5258,8 +5258,8 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.260067
-	movq	%rax, %rcx	 # D.260067,
+	movq	%rbx, %rax	 # tmp98, D.260070
+	movq	%rax, %rcx	 # D.260070,
 .LEHB12:
 	call	_Unwind_Resume	 #
 .LEHE12:
@@ -5357,8 +5357,8 @@ _ZN9wxControlC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxControlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.260071
-	movq	%rax, %rcx	 # D.260071,
+	movq	%rbx, %rax	 # tmp96, D.260074
+	movq	%rax, %rcx	 # D.260074,
 .LEHB15:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5827,8 +5827,8 @@ _ZN10wxTextAttrC1Ev:
 	addq	$8, %rax	 #, _22
 	movq	%rax, %rcx	 # _22,
 	call	_ZN10wxArrayIntD1Ev	 #
-	movq	%rbx, %rax	 # tmp151, D.260073
-	movq	%rax, %rcx	 # D.260073,
+	movq	%rbx, %rax	 # tmp151, D.260076
+	movq	%rax, %rcx	 # D.260076,
 .LEHB20:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6012,8 +6012,8 @@ _ZN14wxTextAreaBaseC2Ev:
 	addq	$8, %rax	 #, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.260074
-	movq	%rax, %rcx	 # D.260074,
+	movq	%rbx, %rax	 # tmp98, D.260077
+	movq	%rax, %rcx	 # D.260077,
 .LEHB22:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6282,8 +6282,8 @@ _ZN14wxTextCtrlBaseC2Ev:
 	movq	-64(%rbp), %rax	 # this, _12
 	movq	%rax, %rcx	 # _12,
 	call	_ZN9wxControlD2Ev	 #
-	movq	%rbx, %rax	 # tmp117, D.260076
-	movq	%rax, %rcx	 # D.260076,
+	movq	%rbx, %rax	 # tmp117, D.260079
+	movq	%rax, %rcx	 # D.260079,
 .LEHB27:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6843,8 +6843,8 @@ _ZN10wxTextCtrlC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelRK11wxValidatorS4_:
 	movq	-16(%rbp), %rax	 # this, _6
 	movq	%rax, %rcx	 # _6,
 	call	_ZN14wxTextCtrlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.260087
-	movq	%rax, %rcx	 # D.260087,
+	movq	%rbx, %rax	 # tmp110, D.260090
+	movq	%rax, %rcx	 # D.260090,
 .LEHB30:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8011,8 +8011,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.260093
-	movq	%rax, %rcx	 # D.260093,
+	movq	%rsi, %rax	 # tmp98, D.260096
+	movq	%rax, %rcx	 # D.260096,
 .LEHB33:
 	call	_Unwind_Resume	 #
 .LEHE33:
@@ -8136,8 +8136,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.260094
-	movq	%rax, %rcx	 # D.260094,
+	movq	%rbx, %rax	 # tmp106, D.260097
+	movq	%rax, %rcx	 # D.260097,
 .LEHB37:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8396,8 +8396,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.260096
-	movq	%rax, %rcx	 # D.260096,
+	movq	%rbx, %rax	 # tmp98, D.260099
+	movq	%rax, %rcx	 # D.260099,
 .LEHB41:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8847,8 +8847,8 @@ _ZN20wxMDIParentFrameBase14OnCreateClientEv:
 	movl	$584, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.260099
-	movq	%rax, %rcx	 # D.260099,
+	movq	%rsi, %rax	 # tmp93, D.260102
+	movq	%rax, %rcx	 # D.260102,
 .LEHB44:
 	call	_Unwind_Resume	 #
 .LEHE44:
@@ -9568,8 +9568,8 @@ _ZN14T100BuildPanel16OnMouseRightDownER12wxMouseEvent:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _7,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp102, D.260108
-	movq	%rax, %rcx	 # D.260108,
+	movq	%rsi, %rax	 # tmp102, D.260111
+	movq	%rax, %rcx	 # D.260111,
 	call	_Unwind_Resume	 #
 .L399:
 	movq	%rax, %rbx	 #, tmp105
@@ -9587,8 +9587,8 @@ _ZN14T100BuildPanel16OnMouseRightDownER12wxMouseEvent:
 	leaq	-112(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp104, D.260109
-	movq	%rax, %rcx	 # D.260109,
+	movq	%rbx, %rax	 # tmp104, D.260112
+	movq	%rax, %rcx	 # D.260112,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE50:
@@ -9686,6 +9686,11 @@ _ZN14T100BuildPanel7OnClearER14wxCommandEvent:
 	.cfi_endproc
 .LFE19724:
 	.seh_endproc
+	.section .rdata,"dr"
+	.align 2
+.LC6:
+	.ascii "\12\0\0\0"
+	.text
 	.align 2
 	.globl	_ZN14T100BuildPanel6AppendERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE
 	.def	_ZN14T100BuildPanel6AppendERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
@@ -9709,8 +9714,8 @@ _ZN14T100BuildPanel6AppendERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
-	subq	$80, %rsp	 #,
-	.seh_stackalloc	80
+	addq	$-128, %rsp	 #,
+	.seh_stackalloc	128
 	.seh_endprologue
 	movq	%rcx, 32(%rbp)	 # this, this
 	movq	%rdx, 40(%rbp)	 # value, value
@@ -9719,20 +9724,20 @@ _ZN14T100BuildPanel6AppendERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	movq	32(%rbp), %rsi	 # this, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:56:     AppendText(value);
 	.loc 30 56 21
-	movq	32(%rbp), %rax	 # this, tmp94
-	movq	(%rax), %rax	 # this_6(D)->D.128820.D.125323.D.124831.D.123464.D.123304.D.123101.D.121810.D.115767._vptr.wxObject, _3
+	movq	32(%rbp), %rax	 # this, tmp100
+	movq	(%rax), %rax	 # this_11(D)->D.128820.D.125323.D.124831.D.123464.D.123304.D.123101.D.121810.D.115767._vptr.wxObject, _3
 	addq	$1928, %rax	 #, _4
 	movq	(%rax), %rbx	 # *_4, _5
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:56:     AppendText(value);
 	.loc 30 56 15
-	movq	40(%rbp), %rdx	 # value, tmp95
-	leaq	-48(%rbp), %rax	 #, tmp96
-	movq	%rax, %rcx	 # tmp96,
+	movq	40(%rbp), %rdx	 # value, tmp101
+	leaq	-96(%rbp), %rax	 #, tmp102
+	movq	%rax, %rcx	 # tmp102,
 .LEHB51:
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE51:
-	leaq	-48(%rbp), %rax	 #, tmp97
-	movq	%rax, %rdx	 # tmp97,
+	leaq	-96(%rbp), %rax	 #, tmp103
+	movq	%rax, %rdx	 # tmp103,
 	movq	%rsi, %rcx	 # _1,
 .LEHB52:
 	call	*%rbx	 # _5
@@ -9740,28 +9745,65 @@ _ZN14T100BuildPanel6AppendERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 .LEHE52:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:56:     AppendText(value);
 	.loc 30 56 15 is_stmt 0 discriminator 2
-	leaq	-48(%rbp), %rax	 #, tmp98
-	movq	%rax, %rcx	 # tmp98,
+	leaq	-96(%rbp), %rax	 #, tmp104
+	movq	%rax, %rcx	 # tmp104,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57: }
-	.loc 30 57 1 is_stmt 1 discriminator 2
-	jmp	.L405	 #
-.L404:
-	movq	%rax, %rbx	 #, tmp100
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57:     AppendText(L"\n");
+	.loc 30 57 15 is_stmt 1 discriminator 2
+	movq	32(%rbp), %rsi	 # this, _6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57:     AppendText(L"\n");
+	.loc 30 57 21 discriminator 2
+	movq	32(%rbp), %rax	 # this, tmp105
+	movq	(%rax), %rax	 # this_11(D)->D.128820.D.125323.D.124831.D.123464.D.123304.D.123101.D.121810.D.115767._vptr.wxObject, _8
+	addq	$1928, %rax	 #, _9
+	movq	(%rax), %rbx	 # *_9, _10
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57:     AppendText(L"\n");
+	.loc 30 57 15 discriminator 2
+	leaq	-48(%rbp), %rax	 #, tmp106
+	leaq	.LC6(%rip), %rdx	 #,
+	movq	%rax, %rcx	 # tmp106,
+.LEHB53:
+	call	_ZN8wxStringC1EPKw	 #
+.LEHE53:
+	leaq	-48(%rbp), %rax	 #, tmp107
+	movq	%rax, %rdx	 # tmp107,
+	movq	%rsi, %rcx	 # _6,
+.LEHB54:
+	call	*%rbx	 # _10
+.LVL34:
+.LEHE54:
+	leaq	-48(%rbp), %rax	 #, tmp108
+	movq	%rax, %rcx	 # tmp108,
+	call	_ZN8wxStringD1Ev	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:58: }
+	.loc 30 58 1 discriminator 2
+	jmp	.L407	 #
+.L405:
+	movq	%rax, %rbx	 #, tmp110
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:56:     AppendText(value);
 	.loc 30 56 15
-	leaq	-48(%rbp), %rax	 #, tmp99
-	movq	%rax, %rcx	 # tmp99,
+	leaq	-96(%rbp), %rax	 #, tmp109
+	movq	%rax, %rcx	 # tmp109,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.260112
-	movq	%rax, %rcx	 # D.260112,
-.LEHB53:
+	movq	%rbx, %rax	 # tmp110, D.260115
+	movq	%rax, %rcx	 # D.260115,
+.LEHB55:
 	call	_Unwind_Resume	 #
-.LEHE53:
-.L405:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57: }
-	.loc 30 57 1
-	addq	$80, %rsp	 #,
+.L406:
+	movq	%rax, %rbx	 #, tmp112
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57:     AppendText(L"\n");
+	.loc 30 57 15
+	leaq	-48(%rbp), %rax	 #, tmp111
+	movq	%rax, %rcx	 # tmp111,
+	call	_ZN8wxStringD1Ev	 #
+	movq	%rbx, %rax	 # tmp112, D.260116
+	movq	%rax, %rcx	 # D.260116,
+	call	_Unwind_Resume	 #
+.LEHE55:
+.L407:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:58: }
+	.loc 30 58 1
+	subq	$-128, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
 	popq	%rsi	 #
@@ -9786,10 +9828,18 @@ _ZN14T100BuildPanel6AppendERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.uleb128 0
 	.uleb128 .LEHB52-.LFB19725
 	.uleb128 .LEHE52-.LEHB52
-	.uleb128 .L404-.LFB19725
+	.uleb128 .L405-.LFB19725
 	.uleb128 0
 	.uleb128 .LEHB53-.LFB19725
 	.uleb128 .LEHE53-.LEHB53
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB54-.LFB19725
+	.uleb128 .LEHE54-.LEHB54
+	.uleb128 .L406-.LFB19725
+	.uleb128 0
+	.uleb128 .LEHB55-.LFB19725
+	.uleb128 .LEHE55-.LEHB55
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE19725:
@@ -9958,18 +10008,18 @@ _Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_:
 	.loc 32 71 68
 	movl	16(%rbp), %eax	 # a, tmp89
 	cmpl	24(%rbp), %eax	 # b, tmp89
-	jle	.L413	 #,
+	jle	.L415	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 32 71 68 is_stmt 0 discriminator 1
 	movl	16(%rbp), %eax	 # a, iftmp.20_1
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 32 71 74 is_stmt 1 discriminator 1
-	jmp	.L415	 #
-.L413:
+	jmp	.L417	 #
+.L415:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 32 71 68 discriminator 2
 	movl	24(%rbp), %eax	 # b, iftmp.20_1
-.L415:
+.L417:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:72: }
 	.loc 32 72 1 discriminator 5
 	popq	%rbp	 #
@@ -10096,9 +10146,9 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEven
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:635:     return new wxEventFunctorMethod<EventTag, Class, EventArg, Class>(
 	.loc 9 635 12
 	movl	$32, %ecx	 #,
-.LEHB54:
+.LEHB56:
 	call	_Znwy	 #
-.LEHE54:
+.LEHE56:
 	movq	%rax, %rbx	 # tmp93, _3
 	movq	-16(%rbp), %rax	 # method, tmp94
 	movq	-8(%rbp), %rdx	 # method,
@@ -10108,26 +10158,26 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEven
 	movl	$0, %r8d	 #,
 	movq	%rax, %rdx	 # tmp95,
 	movq	%rbx, %rcx	 # _3,
-.LEHB55:
+.LEHB57:
 	call	_ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEventS3_EC1EMS3_FvRS4_EPS3_	 #
-.LEHE55:
+.LEHE57:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:636:                     method, NULL);
 	.loc 9 636 33
 	movq	%rbx, %rax	 # _3, _6
-	jmp	.L424	 #
-.L423:
+	jmp	.L426	 #
+.L425:
 	movq	%rax, %rsi	 #, tmp97
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:635:     return new wxEventFunctorMethod<EventTag, Class, EventArg, Class>(
 	.loc 9 635 12
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.260114
-	movq	%rax, %rcx	 # D.260114,
-.LEHB56:
+	movq	%rsi, %rax	 # tmp97, D.260119
+	movq	%rax, %rcx	 # D.260119,
+.LEHB58:
 	call	_Unwind_Resume	 #
-.LEHE56:
-.L424:
+.LEHE58:
+.L426:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:637: }
 	.loc 9 637 1
 	addq	$64, %rsp	 #,
@@ -10149,16 +10199,16 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEven
 	.byte	0x1
 	.uleb128 .LLSDACSE20423-.LLSDACSB20423
 .LLSDACSB20423:
-	.uleb128 .LEHB54-.LFB20423
-	.uleb128 .LEHE54-.LEHB54
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB55-.LFB20423
-	.uleb128 .LEHE55-.LEHB55
-	.uleb128 .L423-.LFB20423
-	.uleb128 0
 	.uleb128 .LEHB56-.LFB20423
 	.uleb128 .LEHE56-.LEHB56
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB57-.LFB20423
+	.uleb128 .LEHE57-.LEHB57
+	.uleb128 .L425-.LFB20423
+	.uleb128 0
+	.uleb128 .LEHB58-.LFB20423
+	.uleb128 .LEHE58-.LEHB58
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE20423:
@@ -10251,9 +10301,9 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:635:     return new wxEventFunctorMethod<EventTag, Class, EventArg, Class>(
 	.loc 9 635 12
 	movl	$32, %ecx	 #,
-.LEHB57:
+.LEHB59:
 	call	_Znwy	 #
-.LEHE57:
+.LEHE59:
 	movq	%rax, %rbx	 # tmp93, _3
 	movq	-16(%rbp), %rax	 # method, tmp94
 	movq	-8(%rbp), %rdx	 # method,
@@ -10263,26 +10313,26 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
 	movl	$0, %r8d	 #,
 	movq	%rax, %rdx	 # tmp95,
 	movq	%rbx, %rcx	 # _3,
-.LEHB58:
+.LEHB60:
 	call	_ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEventS3_EC1EMS3_FvRS4_EPS3_	 #
-.LEHE58:
+.LEHE60:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:636:                     method, NULL);
 	.loc 9 636 33
 	movq	%rbx, %rax	 # _3, _6
-	jmp	.L431	 #
-.L430:
+	jmp	.L433	 #
+.L432:
 	movq	%rax, %rsi	 #, tmp97
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:635:     return new wxEventFunctorMethod<EventTag, Class, EventArg, Class>(
 	.loc 9 635 12
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.260117
-	movq	%rax, %rcx	 # D.260117,
-.LEHB59:
+	movq	%rsi, %rax	 # tmp97, D.260122
+	movq	%rax, %rcx	 # D.260122,
+.LEHB61:
 	call	_Unwind_Resume	 #
-.LEHE59:
-.L431:
+.LEHE61:
+.L433:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:637: }
 	.loc 9 637 1
 	addq	$64, %rsp	 #,
@@ -10304,16 +10354,16 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
 	.byte	0x1
 	.uleb128 .LLSDACSE20425-.LLSDACSB20425
 .LLSDACSB20425:
-	.uleb128 .LEHB57-.LFB20425
-	.uleb128 .LEHE57-.LEHB57
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB58-.LFB20425
-	.uleb128 .LEHE58-.LEHB58
-	.uleb128 .L430-.LFB20425
-	.uleb128 0
 	.uleb128 .LEHB59-.LFB20425
 	.uleb128 .LEHE59-.LEHB59
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB60-.LFB20425
+	.uleb128 .LEHE60-.LEHB60
+	.uleb128 .L432-.LFB20425
+	.uleb128 0
+	.uleb128 .LEHB61-.LFB20425
+	.uleb128 .LEHE61-.LEHB61
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE20425:
@@ -10322,10 +10372,10 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
 	.seh_endproc
 	.section .rdata,"dr"
 	.align 8
-.LC6:
+.LC7:
 	.ascii "handler || this->IsEvtHandler()\0"
 	.align 8
-.LC7:
+.LC8:
 	.ascii "handlers defined in non-wxEvtHandler-derived classes must be connected with a valid sink object\0"
 	.section	.text$_ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEventS3_EC1EMS3_FvRS4_EPS3_,"x"
 	.linkonce discard
@@ -10381,53 +10431,53 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEvent
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp103
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.35_3
 	testq	%rax, %rax	 # wxTheAssertHandler.35_3
-	je	.L433	 #,
+	je	.L435	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 is_stmt 0 discriminator 1
 	cmpq	$0, -16(%rbp)	 #, handler
-	jne	.L433	 #,
+	jne	.L435	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 3
 	call	_ZN9wxPrivate11HandlerImplI12wxEvtHandler7wxEventLb1EE12IsEvtHandlerEv	 #
 	xorl	$1, %eax	 #, _5
 	testb	%al, %al	 # _5
-	je	.L433	 #,
+	je	.L435	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 5
-	leaq	.LC7(%rip), %rax	 #, tmp104
+	leaq	.LC8(%rip), %rax	 #, tmp104
 	movq	%rax, 32(%rsp)	 # tmp104,
-	leaq	.LC6(%rip), %r9	 #,
+	leaq	.LC7(%rip), %r9	 #,
 	leaq	_ZZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEventS3_EC4EMS3_FvRS4_EPS3_E12__FUNCTION__(%rip), %r8	 #,
 	movl	$404, %edx	 #,
 	leaq	.LC2(%rip), %rcx	 #,
-.LEHB60:
+.LEHB62:
 	call	_Z10wxOnAssertPKciS0_S0_S0_	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 7
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp105
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.36_6
 	testb	%al, %al	 # wxTrapInAssert.36_6
-	je	.L433	 #,
+	je	.L435	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 8
 	movl	$1, %eax	 #, iftmp.34_8
-	jmp	.L434	 #
-.L433:
+	jmp	.L436	 #
+.L435:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 9
 	movl	$0, %eax	 #, iftmp.34_8
-.L434:
+.L436:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 11
 	testb	%al, %al	 # iftmp.34_8
-	je	.L435	 #,
+	je	.L437	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 12
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp106
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-.LEHE60:
-.L435:
+.LEHE62:
+.L437:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:409:         CheckHandlerArgument(static_cast<EventClass *>(NULL));
 	.loc 9 409 29 is_stmt 1
 	movl	$0, %ecx	 #,
@@ -10435,8 +10485,8 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEvent
 .LBE67:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:410:     }
 	.loc 9 410 5
-	jmp	.L438	 #
-.L437:
+	jmp	.L440	 #
+.L439:
 	movq	%rax, %rbx	 #, tmp107
 .LBB68:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:400:         : m_handler( handler ), m_method( method )
@@ -10444,13 +10494,13 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEvent
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.260119
-	movq	%rax, %rcx	 # D.260119,
-.LEHB61:
+	movq	%rbx, %rax	 # tmp107, D.260124
+	movq	%rax, %rcx	 # D.260124,
+.LEHB63:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE61:
-.L438:
+.LEHE63:
+.L440:
 .LBE68:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:410:     }
 	.loc 9 410 5
@@ -10471,12 +10521,12 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEvent
 	.byte	0x1
 	.uleb128 .LLSDACSE20659-.LLSDACSB20659
 .LLSDACSB20659:
-	.uleb128 .LEHB60-.LFB20659
-	.uleb128 .LEHE60-.LEHB60
-	.uleb128 .L437-.LFB20659
+	.uleb128 .LEHB62-.LFB20659
+	.uleb128 .LEHE62-.LEHB62
+	.uleb128 .L439-.LFB20659
 	.uleb128 0
-	.uleb128 .LEHB61-.LFB20659
-	.uleb128 .LEHE61-.LEHB61
+	.uleb128 .LEHB63-.LFB20659
+	.uleb128 .LEHE63-.LEHB63
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE20659:
@@ -10537,53 +10587,53 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp103
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.46_3
 	testq	%rax, %rax	 # wxTheAssertHandler.46_3
-	je	.L440	 #,
+	je	.L442	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 is_stmt 0 discriminator 1
 	cmpq	$0, -16(%rbp)	 #, handler
-	jne	.L440	 #,
+	jne	.L442	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 3
 	call	_ZN9wxPrivate11HandlerImplI12wxEvtHandler7wxEventLb1EE12IsEvtHandlerEv	 #
 	xorl	$1, %eax	 #, _5
 	testb	%al, %al	 # _5
-	je	.L440	 #,
+	je	.L442	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 5
-	leaq	.LC7(%rip), %rax	 #, tmp104
+	leaq	.LC8(%rip), %rax	 #, tmp104
 	movq	%rax, 32(%rsp)	 # tmp104,
-	leaq	.LC6(%rip), %r9	 #,
+	leaq	.LC7(%rip), %r9	 #,
 	leaq	_ZZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEventS3_EC4EMS3_FvRS4_EPS3_E12__FUNCTION__(%rip), %r8	 #,
 	movl	$404, %edx	 #,
 	leaq	.LC2(%rip), %rcx	 #,
-.LEHB62:
+.LEHB64:
 	call	_Z10wxOnAssertPKciS0_S0_S0_	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 7
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp105
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.47_6
 	testb	%al, %al	 # wxTrapInAssert.47_6
-	je	.L440	 #,
+	je	.L442	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 8
 	movl	$1, %eax	 #, iftmp.45_8
-	jmp	.L441	 #
-.L440:
+	jmp	.L443	 #
+.L442:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 9
 	movl	$0, %eax	 #, iftmp.45_8
-.L441:
+.L443:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 11
 	testb	%al, %al	 # iftmp.45_8
-	je	.L442	 #,
+	je	.L444	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 9 402 9 discriminator 12
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp106
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-.LEHE62:
-.L442:
+.LEHE64:
+.L444:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:409:         CheckHandlerArgument(static_cast<EventClass *>(NULL));
 	.loc 9 409 29 is_stmt 1
 	movl	$0, %ecx	 #,
@@ -10591,8 +10641,8 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 .LBE69:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:410:     }
 	.loc 9 410 5
-	jmp	.L445	 #
-.L444:
+	jmp	.L447	 #
+.L446:
 	movq	%rax, %rbx	 #, tmp107
 .LBB70:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:400:         : m_handler( handler ), m_method( method )
@@ -10600,13 +10650,13 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.260122
-	movq	%rax, %rcx	 # D.260122,
-.LEHB63:
+	movq	%rbx, %rax	 # tmp107, D.260127
+	movq	%rax, %rcx	 # D.260127,
+.LEHB65:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE63:
-.L445:
+.LEHE65:
+.L447:
 .LBE70:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:410:     }
 	.loc 9 410 5
@@ -10627,12 +10677,12 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	.byte	0x1
 	.uleb128 .LLSDACSE20662-.LLSDACSB20662
 .LLSDACSB20662:
-	.uleb128 .LEHB62-.LFB20662
-	.uleb128 .LEHE62-.LEHB62
-	.uleb128 .L444-.LFB20662
+	.uleb128 .LEHB64-.LFB20662
+	.uleb128 .LEHE64-.LEHB64
+	.uleb128 .L446-.LFB20662
 	.uleb128 0
-	.uleb128 .LEHB63-.LFB20662
-	.uleb128 .LEHE63-.LEHB63
+	.uleb128 .LEHB65-.LFB20662
+	.uleb128 .LEHE65-.LEHB65
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE20662:
@@ -12676,19 +12726,19 @@ __tcf_2:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:5: BEGIN_EVENT_TABLE(T100BuildPanel, wxTextCtrl)
 	.loc 30 5 1
 	leaq	96+_ZN14T100BuildPanel20sm_eventTableEntriesE(%rip), %rbx	 #, _1
-.L464:
+.L466:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:5: BEGIN_EVENT_TABLE(T100BuildPanel, wxTextCtrl)
 	.loc 30 5 1 is_stmt 0 discriminator 4
 	leaq	_ZN14T100BuildPanel20sm_eventTableEntriesE(%rip), %rax	 #, tmp88
 	cmpq	%rax, %rbx	 # tmp88, _1
-	je	.L462	 #,
+	je	.L464	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:5: BEGIN_EVENT_TABLE(T100BuildPanel, wxTextCtrl)
 	.loc 30 5 1 discriminator 3
 	subq	$32, %rbx	 #, _1
 	movq	%rbx, %rcx	 # _1,
 	call	_ZN17wxEventTableEntryD1Ev	 #
-	jmp	.L464	 #
-.L462:
+	jmp	.L466	 #
+.L464:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:5: BEGIN_EVENT_TABLE(T100BuildPanel, wxTextCtrl)
 	.loc 30 5 1
 	addq	$40, %rsp	 #,
@@ -12705,7 +12755,7 @@ __tcf_2:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB20908:
-	.loc 30 57 1 is_stmt 1
+	.loc 30 58 1 is_stmt 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -12748,18 +12798,18 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 48(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 56(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57: }
-	.loc 30 57 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:58: }
+	.loc 30 58 1
 	cmpl	$1, 48(%rbp)	 #, __initialize_p
-	jne	.L465	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57: }
-	.loc 30 57 1 is_stmt 0 discriminator 1
+	jne	.L467	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:58: }
+	.loc 30 58 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 56(%rbp)	 #, __priority
-	jne	.L465	 #,
+	jne	.L467	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 33 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
-.LEHB64:
+.LEHB66:
 	call	_ZNSt8ios_base4InitC1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
@@ -12768,7 +12818,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	leaq	_ZN14T100BuildPanel13sm_eventTableE(%rip), %rdx	 #,
 	leaq	_ZN14T100BuildPanel17sm_eventHashTableE(%rip), %rcx	 #,
 	call	_ZN16wxEventHashTableC1ERK12wxEventTable	 #
-.LEHE64:
+.LEHE66:
 	leaq	__tcf_1(%rip), %rcx	 #,
 	call	atexit	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:8: END_EVENT_TABLE()
@@ -12777,22 +12827,22 @@ _Z41__static_initialization_and_destruction_0ii:
 	movl	$2, %esi	 #, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:6:     EVT_RIGHT_DOWN(OnMouseRightDown)
 	.loc 30 6 5
-	leaq	_ZN14T100BuildPanel16OnMouseRightDownER12wxMouseEvent(%rip), %r14	 #, D.259576
-	movl	$0, %r15d	 #, D.259576
+	leaq	_ZN14T100BuildPanel16OnMouseRightDownER12wxMouseEvent(%rip), %r14	 #, D.259579
+	movl	$0, %r15d	 #, D.259579
 	leaq	-64(%rbp), %rax	 #, tmp104
-	movq	%r14, -80(%rbp)	 # D.259576,
-	movq	%r15, -72(%rbp)	 # D.259576,
+	movq	%r14, -80(%rbp)	 # D.259579,
+	movq	%r15, -72(%rbp)	 # D.259579,
 	leaq	-80(%rbp), %rdx	 #, tmp105
 	movq	%rax, %rcx	 # tmp104,
 	call	_Z19wxEventFunctionCastI12wxMouseEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-64(%rbp), %rax	 # D.259577, tmp106
-	movq	-56(%rbp), %rdx	 # D.259577,
+	movq	-64(%rbp), %rax	 # D.259580, tmp106
+	movq	-56(%rbp), %rdx	 # D.259580,
 	movq	%rax, -80(%rbp)	 # tmp106,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp107
 	movq	%rax, %rdx	 # tmp107,
 	movq	.refptr.wxEVT_RIGHT_DOWN(%rip), %rcx	 #,
-.LEHB65:
+.LEHB67:
 	call	_Z22wxNewEventTableFunctorI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEventEP20wxEventFunctorMethodIT_T0_T1_S7_ERKS6_MS7_FvRS8_E	 #
 	movq	%rax, %rdi	 #, _1
 	movq	.refptr.wxEVT_RIGHT_DOWN(%rip), %rcx	 #,
@@ -12812,16 +12862,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rsi	 #, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:7:     EVT_MENU(T100PROJECT_EDITOR_MENU_CLEAR, OnClear)
 	.loc 30 7 5 is_stmt 1 discriminator 1
-	leaq	_ZN14T100BuildPanel7OnClearER14wxCommandEvent(%rip), %r12	 #, D.259578
-	movl	$0, %r13d	 #, D.259578
+	leaq	_ZN14T100BuildPanel7OnClearER14wxCommandEvent(%rip), %r12	 #, D.259581
+	movl	$0, %r13d	 #, D.259581
 	leaq	-48(%rbp), %rax	 #, tmp108
-	movq	%r12, -80(%rbp)	 # D.259578,
-	movq	%r13, -72(%rbp)	 # D.259578,
+	movq	%r12, -80(%rbp)	 # D.259581,
+	movq	%r13, -72(%rbp)	 # D.259581,
 	leaq	-80(%rbp), %rdx	 #, tmp109
 	movq	%rax, %rcx	 # tmp108,
 	call	_Z19wxEventFunctionCastI14wxCommandEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-48(%rbp), %rax	 # D.259579, tmp110
-	movq	-40(%rbp), %rdx	 # D.259579,
+	movq	-48(%rbp), %rax	 # D.259582, tmp110
+	movq	-40(%rbp), %rdx	 # D.259582,
 	movq	%rax, -80(%rbp)	 # tmp110,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp111
@@ -12851,43 +12901,43 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	.refptr.wxEVT_NULL(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # _39,
 	call	_ZN17wxEventTableEntryC1ERKiiiP14wxEventFunctorP8wxObject	 #
-.LEHE65:
+.LEHE67:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:5: BEGIN_EVENT_TABLE(T100BuildPanel, wxTextCtrl)
 	.loc 30 5 1 is_stmt 1 discriminator 3
 	leaq	__tcf_2(%rip), %rcx	 #,
 	call	atexit	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57: }
-	.loc 30 57 1 discriminator 3
-	jmp	.L465	 #
-.L470:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:58: }
+	.loc 30 58 1 discriminator 3
+	jmp	.L467	 #
+.L472:
 	movq	%rax, %rdi	 #, tmp113
 	testq	%rbx, %rbx	 # _20
-	je	.L468	 #,
+	je	.L470	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:8: END_EVENT_TABLE()
 	.loc 30 8 1 discriminator 1
 	movl	$2, %eax	 #, tmp112
 	subq	%rsi, %rax	 # _8, _5
 	salq	$5, %rax	 #, _7
 	leaq	(%rbx,%rax), %rsi	 #, _9
-.L469:
+.L471:
 	cmpq	%rbx, %rsi	 # _20, _9
-	je	.L468	 #,
+	je	.L470	 #,
 	subq	$32, %rsi	 #, _9
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:8: END_EVENT_TABLE()
 	.loc 30 8 1 is_stmt 0 discriminator 5
 	movq	%rsi, %rcx	 # _9,
 	call	_ZN17wxEventTableEntryD1Ev	 #
-	jmp	.L469	 #
-.L468:
-	movq	%rdi, %rax	 # tmp113, D.260123
-	movq	%rax, %rcx	 # D.260123,
-.LEHB66:
+	jmp	.L471	 #
+.L470:
+	movq	%rdi, %rax	 # tmp113, D.260128
+	movq	%rax, %rcx	 # D.260128,
+.LEHB68:
 	call	_Unwind_Resume	 #
 	nop	
-.LEHE66:
-.L465:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57: }
-	.loc 30 57 1 is_stmt 1
+.LEHE68:
+.L467:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:58: }
+	.loc 30 58 1 is_stmt 1
 	addq	$104, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -12917,16 +12967,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	.byte	0x1
 	.uleb128 .LLSDACSE20908-.LLSDACSB20908
 .LLSDACSB20908:
-	.uleb128 .LEHB64-.LFB20908
-	.uleb128 .LEHE64-.LEHB64
-	.uleb128 0
-	.uleb128 0
-	.uleb128 .LEHB65-.LFB20908
-	.uleb128 .LEHE65-.LEHB65
-	.uleb128 .L470-.LFB20908
-	.uleb128 0
 	.uleb128 .LEHB66-.LFB20908
 	.uleb128 .LEHE66-.LEHB66
+	.uleb128 0
+	.uleb128 0
+	.uleb128 .LEHB67-.LFB20908
+	.uleb128 .LEHE67-.LEHB67
+	.uleb128 .L472-.LFB20908
+	.uleb128 0
+	.uleb128 .LEHB68-.LFB20908
+	.uleb128 .LEHE68-.LEHB68
 	.uleb128 0
 	.uleb128 0
 .LLSDACSE20908:
@@ -12974,9 +13024,9 @@ _ZN8wxColourD1Ev:
 .LFE20918:
 	.seh_endproc
 	.section .rdata,"dr"
-.LC8:
-	.ascii "realHandler\0"
 .LC9:
+	.ascii "realHandler\0"
+.LC10:
 	.ascii "invalid event handler\0"
 	.section	.text$_ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEventS3_EclEPS3_RS4_,"x"
 	.linkonce discard
@@ -13010,7 +13060,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:415:         if ( !realHandler )
 	.loc 9 415 9
 	cmpq	$0, -8(%rbp)	 #, realHandler
-	jne	.L473	 #,
+	jne	.L475	 #,
 .LBB78:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:417:             realHandler = this->ConvertFromEvtHandler(handler);
 	.loc 9 417 25
@@ -13021,18 +13071,18 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13
 	cmpq	$0, -8(%rbp)	 #, realHandler
-	jne	.L473	 #,
+	jne	.L475	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 is_stmt 0 discriminator 1
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp110
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.52_1
 	testq	%rax, %rax	 # wxTheAssertHandler.52_1
-	je	.L475	 #,
+	je	.L477	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 discriminator 2
-	leaq	.LC9(%rip), %rax	 #, tmp111
+	leaq	.LC10(%rip), %rax	 #, tmp111
 	movq	%rax, 32(%rsp)	 # tmp111,
-	leaq	.LC8(%rip), %r9	 #,
+	leaq	.LC9(%rip), %r9	 #,
 	leaq	_ZZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEventS3_EclEPS3_RS4_E12__FUNCTION__(%rip), %r8	 #,
 	movl	$420, %edx	 #,
 	leaq	.LC2(%rip), %rcx	 #,
@@ -13040,27 +13090,27 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp112
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.53_2
 	testb	%al, %al	 # wxTrapInAssert.53_2
-	je	.L475	 #,
+	je	.L477	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 discriminator 4
 	movl	$1, %eax	 #, iftmp.51_19
-	jmp	.L476	 #
-.L475:
+	jmp	.L478	 #
+.L477:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 discriminator 5
 	movl	$0, %eax	 #, iftmp.51_19
-.L476:
+.L478:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 discriminator 7
 	testb	%al, %al	 # iftmp.51_19
-	je	.L481	 #,
+	je	.L483	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 discriminator 8
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp113
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-	jmp	.L481	 #
-.L473:
+	jmp	.L483	 #
+.L475:
 .LBE78:
 .LBE77:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
@@ -13074,7 +13124,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	movq	16(%rax), %rax	 # this_27(D)->m_method.__pfn, _6
 	andl	$1, %eax	 #, _8
 	testq	%rax, %rax	 # _8
-	je	.L479	 #,
+	je	.L481	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 9 426 33 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp117
@@ -13088,26 +13138,26 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEve
 	subq	$1, %rax	 #, _15
 	addq	%rdx, %rax	 # _12, _17
 	movq	(%rax), %rax	 # *_17, iftmp.54_20
-	jmp	.L480	 #
-.L479:
+	jmp	.L482	 #
+.L481:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 9 426 33 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp120
 	movq	16(%rax), %rax	 # this_27(D)->m_method.__pfn, iftmp.54_20
-.L480:
+.L482:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 9 426 33 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp121
 	call	*%rax	 # iftmp.54_20
-.LVL34:
-	jmp	.L472	 #
-.L481:
+.LVL35:
+	jmp	.L474	 #
+.L483:
 .LBB80:
 .LBB79:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 is_stmt 1
 	nop	
-.L472:
+.L474:
 .LBE79:
 .LBE80:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:427:     }
@@ -13177,12 +13227,12 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 9 431 9
 	testb	%al, %al	 # retval.48_28
-	je	.L483	 #,
+	je	.L485	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:432:             return false;
 	.loc 9 432 20
 	movl	$0, %eax	 #, iftmp.49_19
-	jmp	.L484	 #
-.L483:
+	jmp	.L486	 #
+.L485:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:438:         const ThisFunctor& other = static_cast<const ThisFunctor &>(functor);
 	.loc 9 438 28
 	movq	24(%rbp), %rax	 # functor, tmp113
@@ -13196,7 +13246,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 71
 	cmpq	%rax, %rdx	 # _10, _9
-	jne	.L485	 #,
+	jne	.L487	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 26 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp116
@@ -13204,14 +13254,14 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
 	movq	-8(%rbp), %rax	 # other, tmp117
 	movq	24(%rax), %rax	 # other_32->m_method.__delta, _12
 	cmpq	%rax, %rdx	 # _12, _11
-	je	.L486	 #,
+	je	.L488	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 26 is_stmt 0 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp118
 	movq	16(%rax), %rax	 # this_21(D)->m_method.__pfn, _13
 	testq	%rax, %rax	 # _13
-	je	.L486	 #,
-.L485:
+	je	.L488	 #,
+.L487:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 62 is_stmt 1 discriminator 6
 	movq	-8(%rbp), %rax	 # other, tmp119
@@ -13219,8 +13269,8 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 44 discriminator 6
 	testq	%rax, %rax	 # _14
-	jne	.L487	 #,
-.L486:
+	jne	.L489	 #,
+.L488:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 9 441 17 discriminator 7
 	movq	16(%rbp), %rax	 # this, tmp120
@@ -13232,7 +13282,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 71 discriminator 7
 	cmpq	%rax, %rdx	 # _16, _15
-	je	.L488	 #,
+	je	.L490	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 9 441 55
 	movq	-8(%rbp), %rax	 # other, tmp122
@@ -13240,23 +13290,23 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI14wxCommandEventE12wxEvtHandler7wxEv
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 9 441 46
 	testq	%rax, %rax	 # _17
-	jne	.L487	 #,
-.L488:
+	jne	.L489	 #,
+.L490:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 71 discriminator 9
 	movl	$1, %eax	 #, iftmp.49_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 9 441 72 discriminator 9
-	jmp	.L490	 #
-.L487:
+	jmp	.L492	 #
+.L489:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 71 discriminator 8
 	movl	$0, %eax	 #, iftmp.49_19
-.L490:
+.L492:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 9 441 72
 	nop	
-.L484:
+.L486:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:442:     }
 	.loc 9 442 5
 	addq	$64, %rsp	 #,
@@ -13382,7 +13432,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEvent
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:415:         if ( !realHandler )
 	.loc 9 415 9
 	cmpq	$0, -8(%rbp)	 #, realHandler
-	jne	.L496	 #,
+	jne	.L498	 #,
 .LBB82:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:417:             realHandler = this->ConvertFromEvtHandler(handler);
 	.loc 9 417 25
@@ -13393,18 +13443,18 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEvent
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13
 	cmpq	$0, -8(%rbp)	 #, realHandler
-	jne	.L496	 #,
+	jne	.L498	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 is_stmt 0 discriminator 1
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp110
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.41_1
 	testq	%rax, %rax	 # wxTheAssertHandler.41_1
-	je	.L498	 #,
+	je	.L500	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 discriminator 2
-	leaq	.LC9(%rip), %rax	 #, tmp111
+	leaq	.LC10(%rip), %rax	 #, tmp111
 	movq	%rax, 32(%rsp)	 # tmp111,
-	leaq	.LC8(%rip), %r9	 #,
+	leaq	.LC9(%rip), %r9	 #,
 	leaq	_ZZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEventS3_EclEPS3_RS4_E12__FUNCTION__(%rip), %r8	 #,
 	movl	$420, %edx	 #,
 	leaq	.LC2(%rip), %rcx	 #,
@@ -13412,27 +13462,27 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEvent
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp112
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.42_2
 	testb	%al, %al	 # wxTrapInAssert.42_2
-	je	.L498	 #,
+	je	.L500	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 discriminator 4
 	movl	$1, %eax	 #, iftmp.40_19
-	jmp	.L499	 #
-.L498:
+	jmp	.L501	 #
+.L500:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 discriminator 5
 	movl	$0, %eax	 #, iftmp.40_19
-.L499:
+.L501:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 discriminator 7
 	testb	%al, %al	 # iftmp.40_19
-	je	.L504	 #,
+	je	.L506	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 discriminator 8
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp113
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-	jmp	.L504	 #
-.L496:
+	jmp	.L506	 #
+.L498:
 .LBE82:
 .LBE81:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
@@ -13446,7 +13496,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEvent
 	movq	16(%rax), %rax	 # this_27(D)->m_method.__pfn, _6
 	andl	$1, %eax	 #, _8
 	testq	%rax, %rax	 # _8
-	je	.L502	 #,
+	je	.L504	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 9 426 33 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp117
@@ -13460,26 +13510,26 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEvent
 	subq	$1, %rax	 #, _15
 	addq	%rdx, %rax	 # _12, _17
 	movq	(%rax), %rax	 # *_17, iftmp.43_20
-	jmp	.L503	 #
-.L502:
+	jmp	.L505	 #
+.L504:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 9 426 33 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp120
 	movq	16(%rax), %rax	 # this_27(D)->m_method.__pfn, iftmp.43_20
-.L503:
+.L505:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 9 426 33 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp121
 	call	*%rax	 # iftmp.43_20
-.LVL35:
-	jmp	.L495	 #
-.L504:
+.LVL36:
+	jmp	.L497	 #
+.L506:
 .LBB84:
 .LBB83:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 9 420 13 is_stmt 1
 	nop	
-.L495:
+.L497:
 .LBE83:
 .LBE84:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:427:     }
@@ -13549,12 +13599,12 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEven
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 9 431 9
 	testb	%al, %al	 # retval.37_28
-	je	.L506	 #,
+	je	.L508	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:432:             return false;
 	.loc 9 432 20
 	movl	$0, %eax	 #, iftmp.38_19
-	jmp	.L507	 #
-.L506:
+	jmp	.L509	 #
+.L508:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:438:         const ThisFunctor& other = static_cast<const ThisFunctor &>(functor);
 	.loc 9 438 28
 	movq	24(%rbp), %rax	 # functor, tmp113
@@ -13568,7 +13618,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEven
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 71
 	cmpq	%rax, %rdx	 # _10, _9
-	jne	.L508	 #,
+	jne	.L510	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 26 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp116
@@ -13576,14 +13626,14 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEven
 	movq	-8(%rbp), %rax	 # other, tmp117
 	movq	24(%rax), %rax	 # other_32->m_method.__delta, _12
 	cmpq	%rax, %rdx	 # _12, _11
-	je	.L509	 #,
+	je	.L511	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 26 is_stmt 0 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp118
 	movq	16(%rax), %rax	 # this_21(D)->m_method.__pfn, _13
 	testq	%rax, %rax	 # _13
-	je	.L509	 #,
-.L508:
+	je	.L511	 #,
+.L510:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 62 is_stmt 1 discriminator 6
 	movq	-8(%rbp), %rax	 # other, tmp119
@@ -13591,8 +13641,8 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEven
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 44 discriminator 6
 	testq	%rax, %rax	 # _14
-	jne	.L510	 #,
-.L509:
+	jne	.L512	 #,
+.L511:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 9 441 17 discriminator 7
 	movq	16(%rbp), %rax	 # this, tmp120
@@ -13604,7 +13654,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEven
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 71 discriminator 7
 	cmpq	%rax, %rdx	 # _16, _15
-	je	.L511	 #,
+	je	.L513	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 9 441 55
 	movq	-8(%rbp), %rax	 # other, tmp122
@@ -13612,23 +13662,23 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI12wxMouseEventE12wxEvtHandler7wxEven
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 9 441 46
 	testq	%rax, %rax	 # _17
-	jne	.L510	 #,
-.L511:
+	jne	.L512	 #,
+.L513:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 71 discriminator 9
 	movl	$1, %eax	 #, iftmp.38_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 9 441 72 discriminator 9
-	jmp	.L513	 #
-.L510:
+	jmp	.L515	 #
+.L512:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 9 440 71 discriminator 8
 	movl	$0, %eax	 #, iftmp.38_19
-.L513:
+.L515:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 9 441 72
 	nop	
-.L507:
+.L509:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:442:     }
 	.loc 9 442 5
 	addq	$64, %rsp	 #,
@@ -13925,7 +13975,7 @@ _ZTSN9wxPrivate11HandlerImplI12wxEvtHandler7wxEventLb1EEE:
 	.seh_proc	_GLOBAL__sub_I__ZN14T100BuildPanel13sm_eventTableE
 _GLOBAL__sub_I__ZN14T100BuildPanel13sm_eventTableE:
 .LFB21047:
-	.loc 30 57 1
+	.loc 30 58 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -13937,8 +13987,8 @@ _GLOBAL__sub_I__ZN14T100BuildPanel13sm_eventTableE:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:57: }
-	.loc 30 57 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100BuildPanel.cpp:58: }
+	.loc 30 58 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -86306,7 +86356,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x31
 	.ascii "__initialize_p\0"
 	.byte	0x1e
-	.byte	0x39
+	.byte	0x3a
 	.byte	0x1
 	.long	0x239
 	.uleb128 0x2
@@ -86315,7 +86365,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x31
 	.ascii "__priority\0"
 	.byte	0x1e
-	.byte	0x39
+	.byte	0x3a
 	.byte	0x1
 	.long	0x239
 	.uleb128 0x2

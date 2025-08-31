@@ -54,5 +54,6 @@ T100VOID T100BuildPanel::OnClear(wxCommandEvent& event)
 T100BOOL T100BuildPanel::Append(const T100WSTRING& value)
 {
     AppendText(value);
+    AppendText(L"\n");
 }
 
