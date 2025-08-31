@@ -51,9 +51,11 @@ def create_module_source():
 
     try:
         with open(g_project_path + "\\source\\src\\" + g_module_label + ".cpp", 'w', encoding='UTF-8') as source:
-            source.write("""
-#include ""
-            """)
+            value = """
+#include "%s.h"
+            """ % (g_module_label)
+
+            source.write(value)
         print("OK")
     except Exception as err:
         print("Error:{err}".format(err=err))
