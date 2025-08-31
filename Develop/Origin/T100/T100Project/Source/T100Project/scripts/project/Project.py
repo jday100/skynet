@@ -61,8 +61,8 @@ import os
 import sys
 import subprocess
 
-g_gcc_path  		= "C:\\zoo\\bin\\CodeBlocks\\MinGW\\bin"
-g_project_path 		= "C:\\vm\\Hello"
+g_gcc_path  		= "C:\\\\zoo\\\\bin\\\\CodeBlocks\\\\MinGW\\\\bin"
+g_project_path 		= "C:\\\\vm\\\\Hello"
 
 def args():
 	print("Args...")
@@ -85,11 +85,15 @@ def build():
 	global g_gcc_path
 	global g_project_path
 
-	cmd = "g++ -c " + "-I" + g_project_path + "\\include"
+	cmd = "g++             -c             -I%s\\\\include" % (g_project_path)
 
-	subprocess.call(g_gcc_path + "\\" + cmd +
-				g_project_path + "\\src\\Hello.cpp \
-				-o main.o")
+	print(cmd)
+
+	line = "%s\\\\%s %s\\\\src\\\\Hello.cpp -o %s\\\\main.o" % (g_gcc_path, cmd, g_project_path, g_project_path)
+
+	print(line)
+
+	subprocess.call(line)
 
 def clean():
 	print("Clean...")

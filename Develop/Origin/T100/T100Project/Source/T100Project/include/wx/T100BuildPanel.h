@@ -19,8 +19,15 @@ class T100BuildPanel : public wxTextCtrl
         virtual T100BOOL            Append(const T100WSTRING&);
 
     protected:
+        T100VOID                    OnMouseRightDown(wxMouseEvent&);
+
+        T100VOID                    OnClear(wxCommandEvent&);
 
     private:
+        T100VOID                    init();
+        T100VOID                    uninit();
+
+        DECLARE_EVENT_TABLE()
 };
 
 #endif // T100BUILDPANEL_H
