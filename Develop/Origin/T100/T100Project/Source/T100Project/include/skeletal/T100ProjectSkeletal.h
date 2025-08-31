@@ -28,23 +28,30 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnWorkSpaceSave();
         T100VOID                    OnWorkSpaceSaveAs();
         T100VOID                    OnWorkSpaceSelect();
+        T100VOID                    OnWorkSpaceProperties();
 
         T100VOID                    OnProjectNew();
         T100VOID                    OnProjectOpen();
+        T100VOID                    OnProjectOpen(T100ProjectData*);
         T100VOID                    OnProjectClose();
         T100VOID                    OnProjectSave();
         T100VOID                    OnProjectSaveAs();
         T100VOID                    OnProjectSelect();
+        T100VOID                    OnProjectCreateWizardFinished(T100WxProjectInfo*);
+
         T100VOID                    OnFileNew();
         T100VOID                    OnFileOpen();
+        T100VOID                    OnFileOpen(T100FileData*);
         T100VOID                    OnFileClose();
         T100VOID                    OnFileSave();
         T100VOID                    OnFileSaveAs();
+
         T100VOID                    OnEditUndo();
         T100VOID                    OnEditRedo();
         T100VOID                    OnEditCut();
         T100VOID                    OnEditCopy();
         T100VOID                    OnEditPaste();
+
         T100VOID                    OnSearchFind();
         T100VOID                    OnSearchReplace();
 
@@ -54,36 +61,26 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
 
         T100VOID                    OnSetupEditor();
         T100VOID                    OnSetupCompiler();
+
         T100VOID                    OnHelpAbout();
 
         T100VOID                    OnResize();
         T100VOID                    OnQuit();
 
-        T100VOID                    OnWorkSpaceProperties();
-
         T100VOID                    OnFolderNew();
+        T100VOID                    OnFolderOpen(T100FolderData*);
         T100VOID                    OnFolderSelect();
 
         T100VOID                    OnModuleNew();
         T100VOID                    OnModuleNew(T100ModuleInfo*);
-
-        T100VOID                    OnFileOpen(T100FileData*);
-        T100VOID                    OnFolderOpen(T100FolderData*);
-
-        T100VOID                    OnProjectOpen(T100ProjectData*);
-
-
-
 
         T100VOID                    OnPageChanged();
         T100VOID                    OnPageClosing(T100Pack*);
         T100VOID                    OnPageClosed(T100Pack*);
 
         T100VOID                    OnItemExpanding();
+
         T100VOID                    OnModified();
-
-        T100VOID                    OnProjectCreateWizardFinished(T100WxProjectInfo*);
-
         T100VOID                    OnBuildMessage(const T100WSTRING&);
 
     protected:

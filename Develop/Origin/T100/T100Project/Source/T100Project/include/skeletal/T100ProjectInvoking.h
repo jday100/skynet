@@ -26,13 +26,16 @@ class T100ProjectInvoking
         static T100VOID                     OnWorkSpaceSave();
         static T100VOID                     OnWorkSpaceSaveAs();
         static T100VOID                     OnWorkSpaceSelect();
+        static T100VOID                     OnWorkSpaceProperties();
 
         static T100VOID                     OnProjectNew();
         static T100VOID                     OnProjectOpen();
+        static T100VOID                     OnProjectOpen(T100ProjectData*);
         static T100VOID                     OnProjectClose();
         static T100VOID                     OnProjectSave();
         static T100VOID                     OnProjectSaveAs();
         static T100VOID                     OnProjectSelect();
+        static T100VOID                     OnProjectCreateWizardFinished(T100WxProjectInfo*);
 
         static T100VOID                     OnFileNew();
         static T100VOID                     OnFileNew(T100VOID*);
@@ -41,11 +44,13 @@ class T100ProjectInvoking
         static T100VOID                     OnFileClose();
         static T100VOID                     OnFileSave();
         static T100VOID                     OnFileSaveAs();
+
         static T100VOID                     OnEditUndo();
         static T100VOID                     OnEditRedo();
         static T100VOID                     OnEditCut();
         static T100VOID                     OnEditCopy();
         static T100VOID                     OnEditPaste();
+
         static T100VOID                     OnSearchFind();
         static T100VOID                     OnSearchReplace();
 
@@ -55,31 +60,26 @@ class T100ProjectInvoking
 
         static T100VOID                     OnSetupEditor();
         static T100VOID                     OnSetupCompiler();
+
         static T100VOID                     OnHelpAbout();
+
         static T100VOID                     OnResize();
         static T100VOID                     OnQuit();
 
-        static T100VOID                     OnWorkSpaceProperties();
-
         static T100VOID                     OnFolderNew();
+        static T100VOID                     OnFolderOpen(T100FolderData*);
         static T100VOID                     OnFolderSelect();
 
         static T100VOID                     OnModuleNew();
         static T100VOID                     OnModuleNew(T100ModuleInfo*);
-
-
-        static T100VOID                     OnFolderOpen(T100FolderData*);
-        static T100VOID                     OnProjectOpen(T100ProjectData*);
 
         static T100VOID                     OnPageChanged();
         static T100VOID                     OnPageClosing(T100Pack*);
         static T100VOID                     OnPageClosed(T100Pack*);
 
         static T100VOID                     OnItemExpanding();
+
         static T100VOID                     OnModified();
-
-        static T100VOID                     OnProjectCreateWizardFinished(T100WxProjectInfo*);
-
         static T100VOID                     OnBuildMessage(const T100WSTRING&);
 
     protected:

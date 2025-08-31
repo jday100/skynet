@@ -16,24 +16,6 @@ class T100WorkSpaceServe
         virtual T100BOOL                        Create();
         virtual T100BOOL                        Destroy();
 
-        virtual T100BOOL                        CreateWorkSpace(T100WorkSpaceInfo*);
-        virtual T100BOOL                        OpenWorkSpace(T100WorkSpaceInfo*);
-        virtual T100BOOL                        CreateWorkSpaceFile(T100WorkSpaceInfo*);
-        virtual T100BOOL                        OpenWorkSpaceFile(T100WorkSpaceInfo*);
-
-        T100BOOL                                CheckWorkSpaceFolder(const T100WxFolderInfo&);
-        T100BOOL                                CheckWorkSpaceFile(const T100WxFolderInfo&);
-
-        T100BOOL                                Open(const T100WxFolderInfo&);
-
-
-
-
-
-
-
-
-
         T100ProjectServe*                       GetProjectServe();
 
         T100VOID                                GetProjects(T100PROJECT_INFO_VECTOR&);
@@ -42,9 +24,18 @@ class T100WorkSpaceServe
 
         T100VOID                                GetFolderInfo(T100WxFolderInfo&);
 
-
         T100BOOL                                IsOpened();
 
+        virtual T100BOOL                        CreateWorkSpace(T100WorkSpaceInfo*);
+        virtual T100BOOL                        CreateWorkSpaceFile(T100WorkSpaceInfo*);
+
+        virtual T100BOOL                        OpenWorkSpace(T100WorkSpaceInfo*);
+        virtual T100BOOL                        OpenWorkSpaceFile(T100WorkSpaceInfo*);
+
+        T100BOOL                                CheckWorkSpaceFolder(const T100WxFolderInfo&);
+        T100BOOL                                CheckWorkSpaceFile(const T100WxFolderInfo&);
+
+        T100BOOL                                Open(const T100WxFolderInfo&);
 
         T100BOOL                                Close();
         T100BOOL                                Save();

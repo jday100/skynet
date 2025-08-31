@@ -10331,8 +10331,8 @@ _ZTV18T100WorkSpaceServe:
 	.quad	_ZN18T100WorkSpaceServe6CreateEv
 	.quad	_ZN18T100WorkSpaceServe7DestroyEv
 	.quad	_ZN18T100WorkSpaceServe15CreateWorkSpaceEP17T100WorkSpaceInfo
-	.quad	_ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo
 	.quad	_ZN18T100WorkSpaceServe19CreateWorkSpaceFileEP17T100WorkSpaceInfo
+	.quad	_ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo
 	.quad	_ZN18T100WorkSpaceServe17OpenWorkSpaceFileEP17T100WorkSpaceInfo
 	.quad	_ZN18T100WorkSpaceServe5CloseEP17T100WorkSpaceInfo
 	.quad	_ZN18T100WorkSpaceServe4SaveEP17T100WorkSpaceInfo
@@ -52237,6 +52237,73 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x2
 	.long	0x351ea
 	.byte	0
+	.uleb128 0x35
+	.ascii "GetProjectServe\0"
+	.byte	0x6
+	.byte	0x9c
+	.byte	0x13
+	.ascii "_ZN18T100WorkSpaceServe15GetProjectServeEv\0"
+	.long	0x35236
+	.byte	0x1
+	.long	0x3499b
+	.long	0x349a1
+	.uleb128 0x2
+	.long	0x351ea
+	.byte	0
+	.uleb128 0x51
+	.ascii "GetProjects\0"
+	.byte	0x6
+	.byte	0xa1
+	.byte	0xa
+	.ascii "_ZN18T100WorkSpaceServe11GetProjectsERSt6vectorIP15T100ProjectInfoSaIS2_EE\0"
+	.byte	0x1
+	.long	0x34a05
+	.long	0x34a10
+	.uleb128 0x2
+	.long	0x351ea
+	.uleb128 0x1
+	.long	0x24f04
+	.byte	0
+	.uleb128 0x35
+	.ascii "GetWorkSpaceInfo\0"
+	.byte	0x6
+	.byte	0xa6
+	.byte	0x14
+	.ascii "_ZN18T100WorkSpaceServe16GetWorkSpaceInfoEv\0"
+	.long	0x3524f
+	.byte	0x1
+	.long	0x34a5e
+	.long	0x34a64
+	.uleb128 0x2
+	.long	0x351ea
+	.byte	0
+	.uleb128 0x51
+	.ascii "GetFolderInfo\0"
+	.byte	0x6
+	.byte	0xab
+	.byte	0xa
+	.ascii "_ZN18T100WorkSpaceServe13GetFolderInfoER16T100WxFolderInfo\0"
+	.byte	0x1
+	.long	0x34aba
+	.long	0x34ac5
+	.uleb128 0x2
+	.long	0x351ea
+	.uleb128 0x1
+	.long	0x35255
+	.byte	0
+	.uleb128 0x35
+	.ascii "IsOpened\0"
+	.byte	0x6
+	.byte	0xb1
+	.byte	0xa
+	.ascii "_ZN18T100WorkSpaceServe8IsOpenedEv\0"
+	.long	0x2321d
+	.byte	0x1
+	.long	0x34b02
+	.long	0x34b08
+	.uleb128 0x2
+	.long	0x351ea
+	.byte	0
 	.uleb128 0x5b
 	.ascii "CreateWorkSpace\0"
 	.byte	0x6
@@ -52250,32 +52317,12 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x4
 	.long	0x347d1
 	.byte	0x1
-	.long	0x349b6
-	.long	0x349c1
+	.long	0x34b6f
+	.long	0x34b7a
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
-	.long	0x35224
-	.byte	0
-	.uleb128 0x5b
-	.ascii "OpenWorkSpace\0"
-	.byte	0x6
-	.byte	0x30
-	.byte	0xa
-	.ascii "_ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo\0"
-	.long	0x2321d
-	.byte	0x1
-	.uleb128 0x2
-	.byte	0x10
-	.uleb128 0x5
-	.long	0x347d1
-	.byte	0x1
-	.long	0x34a24
-	.long	0x34a2f
-	.uleb128 0x2
-	.long	0x351ea
-	.uleb128 0x1
-	.long	0x35224
+	.long	0x3524f
 	.byte	0
 	.uleb128 0x5b
 	.ascii "CreateWorkSpaceFile\0"
@@ -52287,15 +52334,35 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x1
 	.uleb128 0x2
 	.byte	0x10
-	.uleb128 0x6
+	.uleb128 0x5
 	.long	0x347d1
 	.byte	0x1
-	.long	0x34a9e
-	.long	0x34aa9
+	.long	0x34be9
+	.long	0x34bf4
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
-	.long	0x35224
+	.long	0x3524f
+	.byte	0
+	.uleb128 0x5b
+	.ascii "OpenWorkSpace\0"
+	.byte	0x6
+	.byte	0x30
+	.byte	0xa
+	.ascii "_ZN18T100WorkSpaceServe13OpenWorkSpaceEP17T100WorkSpaceInfo\0"
+	.long	0x2321d
+	.byte	0x1
+	.uleb128 0x2
+	.byte	0x10
+	.uleb128 0x6
+	.long	0x347d1
+	.byte	0x1
+	.long	0x34c57
+	.long	0x34c62
+	.uleb128 0x2
+	.long	0x351ea
+	.uleb128 0x1
+	.long	0x3524f
 	.byte	0
 	.uleb128 0x5b
 	.ascii "OpenWorkSpaceFile\0"
@@ -52310,12 +52377,12 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x7
 	.long	0x347d1
 	.byte	0x1
-	.long	0x34b14
-	.long	0x34b1f
+	.long	0x34ccd
+	.long	0x34cd8
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
-	.long	0x35224
+	.long	0x3524f
 	.byte	0
 	.uleb128 0x35
 	.ascii "CheckWorkSpaceFolder\0"
@@ -52325,12 +52392,12 @@ _ZTS18T100WorkSpaceServe:
 	.ascii "_ZN18T100WorkSpaceServe20CheckWorkSpaceFolderERK16T100WxFolderInfo\0"
 	.long	0x2321d
 	.byte	0x1
-	.long	0x34b88
-	.long	0x34b93
+	.long	0x34d41
+	.long	0x34d4c
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
-	.long	0x3523d
+	.long	0x35272
 	.byte	0
 	.uleb128 0x35
 	.ascii "CheckWorkSpaceFile\0"
@@ -52340,12 +52407,12 @@ _ZTS18T100WorkSpaceServe:
 	.ascii "_ZN18T100WorkSpaceServe18CheckWorkSpaceFileERK16T100WxFolderInfo\0"
 	.long	0x2321d
 	.byte	0x1
-	.long	0x34bf8
-	.long	0x34c03
+	.long	0x34db1
+	.long	0x34dbc
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
-	.long	0x3523d
+	.long	0x35272
 	.byte	0
 	.uleb128 0x35
 	.ascii "Open\0"
@@ -52355,79 +52422,12 @@ _ZTS18T100WorkSpaceServe:
 	.ascii "_ZN18T100WorkSpaceServe4OpenERK16T100WxFolderInfo\0"
 	.long	0x2321d
 	.byte	0x1
-	.long	0x34c4b
-	.long	0x34c56
-	.uleb128 0x2
-	.long	0x351ea
-	.uleb128 0x1
-	.long	0x3523d
-	.byte	0
-	.uleb128 0x35
-	.ascii "GetProjectServe\0"
-	.byte	0x6
-	.byte	0x9c
-	.byte	0x13
-	.ascii "_ZN18T100WorkSpaceServe15GetProjectServeEv\0"
-	.long	0x3526c
-	.byte	0x1
-	.long	0x34ca2
-	.long	0x34ca8
-	.uleb128 0x2
-	.long	0x351ea
-	.byte	0
-	.uleb128 0x51
-	.ascii "GetProjects\0"
-	.byte	0x6
-	.byte	0xa1
-	.byte	0xa
-	.ascii "_ZN18T100WorkSpaceServe11GetProjectsERSt6vectorIP15T100ProjectInfoSaIS2_EE\0"
-	.byte	0x1
-	.long	0x34d0c
-	.long	0x34d17
-	.uleb128 0x2
-	.long	0x351ea
-	.uleb128 0x1
-	.long	0x24f04
-	.byte	0
-	.uleb128 0x35
-	.ascii "GetWorkSpaceInfo\0"
-	.byte	0x6
-	.byte	0xa6
-	.byte	0x14
-	.ascii "_ZN18T100WorkSpaceServe16GetWorkSpaceInfoEv\0"
-	.long	0x35224
-	.byte	0x1
-	.long	0x34d65
-	.long	0x34d6b
-	.uleb128 0x2
-	.long	0x351ea
-	.byte	0
-	.uleb128 0x51
-	.ascii "GetFolderInfo\0"
-	.byte	0x6
-	.byte	0xab
-	.byte	0xa
-	.ascii "_ZN18T100WorkSpaceServe13GetFolderInfoER16T100WxFolderInfo\0"
-	.byte	0x1
-	.long	0x34dc1
-	.long	0x34dcc
+	.long	0x34e04
+	.long	0x34e0f
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
 	.long	0x35272
-	.byte	0
-	.uleb128 0x35
-	.ascii "IsOpened\0"
-	.byte	0x6
-	.byte	0xb1
-	.byte	0xa
-	.ascii "_ZN18T100WorkSpaceServe8IsOpenedEv\0"
-	.long	0x2321d
-	.byte	0x1
-	.long	0x34e09
-	.long	0x34e0f
-	.uleb128 0x2
-	.long	0x351ea
 	.byte	0
 	.uleb128 0x35
 	.ascii "Close\0"
@@ -52473,7 +52473,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
-	.long	0x35224
+	.long	0x3524f
 	.byte	0
 	.uleb128 0x7d
 	.ascii "Save\0"
@@ -52492,7 +52492,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
-	.long	0x35224
+	.long	0x3524f
 	.byte	0
 	.uleb128 0x7d
 	.ascii "SaveAs\0"
@@ -52511,7 +52511,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
-	.long	0x35224
+	.long	0x3524f
 	.byte	0
 	.uleb128 0xcd
 	.ascii "Build\0"
@@ -52560,12 +52560,12 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
-	.long	0x3523d
+	.long	0x35272
 	.byte	0
 	.uleb128 0x74
 	.ascii "m_opened\0"
 	.byte	0x3f
-	.byte	0x41
+	.byte	0x38
 	.byte	0x31
 	.long	0x196c9
 	.byte	0x1
@@ -52574,17 +52574,17 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x70
 	.ascii "m_info\0"
 	.byte	0x3f
-	.byte	0x42
+	.byte	0x39
 	.byte	0x43
-	.long	0x35224
+	.long	0x3524f
 	.byte	0x10
 	.byte	0x2
 	.uleb128 0x70
 	.ascii "m_projectServe\0"
 	.byte	0x3f
-	.byte	0x43
+	.byte	0x3a
 	.byte	0x31
-	.long	0x3525a
+	.long	0x35224
 	.byte	0x18
 	.byte	0x2
 	.uleb128 0x55
@@ -52621,7 +52621,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x2
 	.long	0x351ea
 	.uleb128 0x1
-	.long	0x35224
+	.long	0x3524f
 	.byte	0
 	.uleb128 0xce
 	.ascii "WorkSpaceClose\0"
@@ -52657,26 +52657,26 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x8
 	.ascii "__vtbl_ptr_type\0"
 	.long	0x351fb
-	.uleb128 0x8
-	.byte	0x8
-	.long	0x3522a
-	.uleb128 0x24
-	.ascii "T100WorkSpaceInfo\0"
-	.uleb128 0xa
-	.byte	0x8
-	.long	0x35255
-	.uleb128 0x24
-	.ascii "T100WxFolderInfo\0"
-	.uleb128 0x7
-	.long	0x35243
 	.uleb128 0x24
 	.ascii "T100ProjectServe\0"
 	.uleb128 0x8
 	.byte	0x8
-	.long	0x3525a
+	.long	0x35224
+	.uleb128 0x24
+	.ascii "T100WorkSpaceInfo\0"
+	.uleb128 0x8
+	.byte	0x8
+	.long	0x3523c
 	.uleb128 0xa
 	.byte	0x8
-	.long	0x35243
+	.long	0x3525b
+	.uleb128 0x24
+	.ascii "T100WxFolderInfo\0"
+	.uleb128 0x7
+	.long	0x3525b
+	.uleb128 0xa
+	.byte	0x8
+	.long	0x3526d
 	.uleb128 0x67
 	.ascii "_ZNSt17integral_constantIbLb0EE5valueE\0"
 	.long	0x9185
@@ -58055,7 +58055,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.word	0x11b
 	.byte	0x45
-	.long	0x3523d
+	.long	0x35272
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 16
@@ -58119,7 +58119,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0xd4
 	.byte	0x3f
-	.long	0x35224
+	.long	0x3524f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -58214,7 +58214,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0xea
 	.byte	0x21
-	.long	0x35243
+	.long	0x3525b
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -400
@@ -58314,7 +58314,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x30
-	.long	0x35224
+	.long	0x3524f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -58334,7 +58334,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x30
-	.long	0x35224
+	.long	0x3524f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -58354,7 +58354,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x91
 	.sleb128 0
 	.uleb128 0x30
-	.long	0x35224
+	.long	0x3524f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -58405,7 +58405,7 @@ _ZTS18T100WorkSpaceServe:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x34dcc
+	.long	0x34ac5
 	.long	0x391a4
 	.quad	.LFB5744
 	.quad	.LFE5744-.LFB5744
@@ -58420,7 +58420,7 @@ _ZTS18T100WorkSpaceServe:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x34d6b
+	.long	0x34a64
 	.long	0x391d0
 	.quad	.LFB5743
 	.quad	.LFE5743-.LFB5743
@@ -58438,13 +58438,13 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0xab
 	.byte	0x3e
-	.long	0x35272
+	.long	0x35255
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x23
-	.long	0x34d17
+	.long	0x34a10
 	.long	0x3920b
 	.quad	.LFB5742
 	.quad	.LFE5742-.LFB5742
@@ -58459,7 +58459,7 @@ _ZTS18T100WorkSpaceServe:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x34ca8
+	.long	0x349a1
 	.long	0x39237
 	.quad	.LFB5741
 	.quad	.LFE5741-.LFB5741
@@ -58483,7 +58483,7 @@ _ZTS18T100WorkSpaceServe:
 	.sleb128 8
 	.byte	0
 	.uleb128 0x23
-	.long	0x34c56
+	.long	0x3494f
 	.long	0x39272
 	.quad	.LFB5740
 	.quad	.LFE5740-.LFB5740
@@ -58498,7 +58498,7 @@ _ZTS18T100WorkSpaceServe:
 	.sleb128 0
 	.byte	0
 	.uleb128 0x1d
-	.long	0x34c03
+	.long	0x34dbc
 	.long	0x3929e
 	.quad	.LFB5739
 	.quad	.LFE5739-.LFB5739
@@ -58516,7 +58516,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0x6c
 	.byte	0x3b
-	.long	0x3523d
+	.long	0x35272
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -58552,7 +58552,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0x7f
 	.byte	0x1d
-	.long	0x35224
+	.long	0x3524f
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -232
@@ -58560,7 +58560,7 @@ _ZTS18T100WorkSpaceServe:
 	.uleb128 0x24
 	.ascii "T100WorkSpaceFile\0"
 	.uleb128 0x1d
-	.long	0x34b93
+	.long	0x34d4c
 	.long	0x39333
 	.quad	.LFB5738
 	.quad	.LFE5738-.LFB5738
@@ -58578,7 +58578,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0x61
 	.byte	0x49
-	.long	0x3523d
+	.long	0x35272
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -58602,7 +58602,7 @@ _ZTS18T100WorkSpaceServe:
 	.sleb128 -176
 	.byte	0
 	.uleb128 0x1d
-	.long	0x34b1f
+	.long	0x34cd8
 	.long	0x3938f
 	.quad	.LFB5737
 	.quad	.LFE5737-.LFB5737
@@ -58620,7 +58620,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0x5a
 	.byte	0x4b
-	.long	0x3523d
+	.long	0x35272
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -58635,7 +58635,7 @@ _ZTS18T100WorkSpaceServe:
 	.sleb128 -80
 	.byte	0
 	.uleb128 0x23
-	.long	0x34aa9
+	.long	0x34c62
 	.long	0x393da
 	.quad	.LFB5736
 	.quad	.LFE5736-.LFB5736
@@ -58653,13 +58653,13 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0x51
 	.byte	0x43
-	.long	0x35224
+	.long	0x3524f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x1d
-	.long	0x34a2f
+	.long	0x34b7a
 	.long	0x39415
 	.quad	.LFB5732
 	.quad	.LFE5732-.LFB5732
@@ -58677,7 +58677,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0x39
 	.byte	0x45
-	.long	0x35224
+	.long	0x3524f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
@@ -58695,7 +58695,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0x40
 	.byte	0x19
-	.long	0x35243
+	.long	0x3525b
 	.uleb128 0x3
 	.byte	0x91
 	.sleb128 -176
@@ -58710,7 +58710,7 @@ _ZTS18T100WorkSpaceServe:
 	.sleb128 -256
 	.byte	0
 	.uleb128 0x23
-	.long	0x349c1
+	.long	0x34bf4
 	.long	0x39481
 	.quad	.LFB5731
 	.quad	.LFE5731-.LFB5731
@@ -58728,13 +58728,13 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0x30
 	.byte	0x3f
-	.long	0x35224
+	.long	0x3524f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
 	.byte	0
 	.uleb128 0x23
-	.long	0x3494f
+	.long	0x34b08
 	.long	0x394bc
 	.quad	.LFB5730
 	.quad	.LFE5730-.LFB5730
@@ -58752,7 +58752,7 @@ _ZTS18T100WorkSpaceServe:
 	.byte	0x6
 	.byte	0x27
 	.byte	0x41
-	.long	0x35224
+	.long	0x3524f
 	.uleb128 0x2
 	.byte	0x91
 	.sleb128 8
