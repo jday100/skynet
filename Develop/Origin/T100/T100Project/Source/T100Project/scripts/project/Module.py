@@ -30,13 +30,15 @@ def create_module_include():
     global g_module_label
 
     try:
-        with open(g_project_path + "/include/" + g_module_label + ".h", 'w', encoding='UTF-8') as source:
-            source.write("""
-#ifndef _H
-#define _H
+        with open(g_project_path + "\\source\\include\\" + g_module_label + ".h", 'w', encoding='UTF-8') as source:
+            value = """
+#ifndef %s_H
+#define %s_H
 
-#endif // _H
-            """)
+#endif // $s_H
+            """ % ("HELLO")
+
+            source.write(value)
         print("OK")
     except Exception as err:
         print("Error:{err}".format(err=err))
@@ -48,7 +50,7 @@ def create_module_source():
     global g_module_label
 
     try:
-        with open(g_project_path + "/src/" + g_module_label + ".cpp", 'w', encoding='UTF-8') as source:
+        with open(g_project_path + "\\source\\src\\" + g_module_label + ".cpp", 'w', encoding='UTF-8') as source:
             source.write("""
 #include ""
             """)

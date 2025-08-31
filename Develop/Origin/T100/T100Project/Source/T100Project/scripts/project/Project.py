@@ -27,8 +27,10 @@ def create_project(path):
     else:
         print("Dir not exists")
         os.mkdir(path)
-        os.mkdir(path + "/include")
-        os.mkdir(path + "/src")
+        os.mkdir(path + "\\build")
+        os.mkdir(path + "\\source")
+        os.mkdir(path + "\\source\\include")
+        os.mkdir(path + "\\source\\src")
 
         create_project_file()
         create_project_make()
@@ -85,11 +87,11 @@ def build():
 	global g_gcc_path
 	global g_project_path
 
-	cmd = "g++             -c             -I%s\\\\include" % (g_project_path)
+	cmd = "g++             -c             -I%s\\\\source\\\\include" % (g_project_path)
 
 	print(cmd)
 
-	line = "%s\\\\%s %s\\\\src\\\\Hello.cpp -o %s\\\\main.o" % (g_gcc_path, cmd, g_project_path, g_project_path)
+	line = "%s\\\\%s %s\\\\source\\\\src\\\\Hello.cpp -o %s\\\\build\\\\main.o" % (g_gcc_path, cmd, g_project_path, g_project_path)
 
 	print(line)
 
