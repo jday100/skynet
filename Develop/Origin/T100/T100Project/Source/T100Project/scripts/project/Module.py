@@ -35,8 +35,8 @@ def create_module_include():
 #ifndef %s_H
 #define %s_H
 
-#endif // $s_H
-            """ % ("HELLO")
+#endif // %s_H
+            """ % ("HELLO", "HELLO", "HELLO")
 
             source.write(value)
         print("OK")
