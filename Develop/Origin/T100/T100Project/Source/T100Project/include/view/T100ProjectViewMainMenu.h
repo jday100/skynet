@@ -62,6 +62,8 @@ class T100ProjectViewMainMenu
         wxMenuItem*                 m_replace       = T100NULL;
 
         wxMenuItem*                 m_build         = T100NULL;
+        wxMenuItem*                 m_clean         = T100NULL;
+        wxMenuItem*                 m_rebuild       = T100NULL;
 
         wxMenuItem*                 m_editor        = T100NULL;
         wxMenuItem*                 m_compiler      = T100NULL;

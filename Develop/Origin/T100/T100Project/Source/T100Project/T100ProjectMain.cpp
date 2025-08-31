@@ -1234,7 +1234,9 @@ T100VOID T100ProjectFrame::init()
     Connect(T100PROJECT_MENU_EDIT_PASTE,        wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditPaste);
     Connect(T100PROJECT_MENU_SEARCH_FIND,       wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchFind);
     Connect(T100PROJECT_MENU_SEARCH_REPLACE,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchReplace);
+    Connect(T100PROJECT_MENU_COMPILE_CLEAN,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileClean);
     Connect(T100PROJECT_MENU_COMPILE_BUILD,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileBuild);
+    Connect(T100PROJECT_MENU_COMPILE_REBUILD,   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileRebuild);
     Connect(T100PROJECT_MENU_SETUP_EDITOR,      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupEditor);
     Connect(T100PROJECT_MENU_SETUP_COMPILER,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupCompiler);
     Connect(T100PROJECT_MENU_HELP_ABOUT,        wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnHelpAbout);
@@ -1356,9 +1358,19 @@ void T100ProjectFrame::OnSearchReplace(wxCommandEvent& event)
     T100ProjectInvoking::OnSearchReplace();
 }
 
+void T100ProjectFrame::OnCompileClean(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnCompileClean();
+}
+
 void T100ProjectFrame::OnCompileBuild(wxCommandEvent& event)
 {
     T100ProjectInvoking::OnCompileBuild();
+}
+
+void T100ProjectFrame::OnCompileRebuild(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnCompileRebuild();
 }
 
 void T100ProjectFrame::OnSetupEditor(wxCommandEvent& event)

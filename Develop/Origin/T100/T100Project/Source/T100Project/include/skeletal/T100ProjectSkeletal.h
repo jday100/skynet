@@ -47,7 +47,11 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnEditPaste();
         T100VOID                    OnSearchFind();
         T100VOID                    OnSearchReplace();
+
+        T100VOID                    OnCompileClean();
         T100VOID                    OnCompileBuild();
+        T100VOID                    OnCompileRebuild();
+
         T100VOID                    OnSetupEditor();
         T100VOID                    OnSetupCompiler();
         T100VOID                    OnHelpAbout();

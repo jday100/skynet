@@ -2619,7 +2619,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 12 337 27
-	movq	-8(%rbp), %rax	 # D.127070, D.160614
+	movq	-8(%rbp), %rax	 # D.127070, D.160616
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 12 338 5
 	addq	$48, %rsp	 #,
@@ -2850,7 +2850,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 78
-	movq	-8(%rbp), %rax	 # D.127104, D.160636
+	movq	-8(%rbp), %rax	 # D.127104, D.160638
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 12 481 81
 	addq	$48, %rsp	 #,
@@ -2898,7 +2898,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 78
-	movq	-8(%rbp), %rax	 # D.127106, D.160633
+	movq	-8(%rbp), %rax	 # D.127106, D.160635
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 12 482 81
 	addq	$48, %rsp	 #,
@@ -3085,7 +3085,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 12 532 77
-	movq	-72(%rbp), %rax	 # D.127148, D.160609
+	movq	-72(%rbp), %rax	 # D.127148, D.160611
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 12 533 5
 	addq	$72, %rsp	 #,
@@ -4018,7 +4018,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.160498
+	movq	(%rax), %rax	 # wxDefaultSize, D.160500
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 12 1746 72
 	popq	%rbp	 #
@@ -4196,8 +4196,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.161335
-	movq	%rax, %rcx	 # D.161335,
+	movq	%rbx, %rax	 # tmp97, D.161337
+	movq	%rax, %rcx	 # D.161337,
 .LEHB2:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4901,8 +4901,8 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	leaq	-96(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.161340
-	movq	%rax, %rcx	 # D.161340,
+	movq	%rbx, %rax	 # tmp97, D.161342
+	movq	%rax, %rcx	 # D.161342,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5009,8 +5009,8 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.161342
-	movq	%rax, %rcx	 # D.161342,
+	movq	%rbx, %rax	 # tmp98, D.161344
+	movq	%rax, %rcx	 # D.161344,
 .LEHB8:
 	call	_Unwind_Resume	 #
 .LEHE8:
@@ -5139,8 +5139,8 @@ _ZN9wxControlC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxControlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.161346
-	movq	%rax, %rcx	 # D.161346,
+	movq	%rbx, %rax	 # tmp96, D.161348
+	movq	%rax, %rcx	 # D.161348,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5847,8 +5847,8 @@ _ZN14wxBookCtrlBaseC2Ev:
 	movq	-64(%rbp), %rax	 # this, _8
 	movq	%rax, %rcx	 # _8,
 	call	_ZN9wxControlD2Ev	 #
-	movq	%rbx, %rax	 # tmp108, D.161350
-	movq	%rax, %rcx	 # D.161350,
+	movq	%rbx, %rax	 # tmp108, D.161352
+	movq	%rax, %rcx	 # D.161352,
 .LEHB15:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7190,8 +7190,8 @@ _ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	movq	-48(%rbp), %rax	 # this, _13
 	movq	%rax, %rcx	 # _13,
 	call	_ZN19wxNavigationEnabledI14wxBookCtrlBaseED2Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.161359
-	movq	%rax, %rcx	 # D.161359,
+	movq	%rbx, %rax	 # tmp127, D.161361
+	movq	%rax, %rcx	 # D.161361,
 .LEHB20:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8035,8 +8035,8 @@ _ZN13T100MainPanel4OpenEP12T100FileInfo:
 	movl	$616, %edx	 #,
 	movq	%rbx, %rcx	 # _50,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp152, D.161363
-	movq	%rax, %rcx	 # D.161363,
+	movq	%rsi, %rax	 # tmp152, D.161365
+	movq	%rax, %rcx	 # D.161365,
 .LEHB31:
 	call	_Unwind_Resume	 #
 .L353:
@@ -8080,8 +8080,8 @@ _ZN13T100MainPanel4OpenEP12T100FileInfo:
 	leaq	-80(%rbp), %rax	 #, tmp167
 	movq	%rax, %rcx	 # tmp167,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp159, D.161364
-	movq	%rax, %rcx	 # D.161364,
+	movq	%rbx, %rax	 # tmp159, D.161366
+	movq	%rax, %rcx	 # D.161366,
 	call	_Unwind_Resume	 #
 .LEHE31:
 .L357:
@@ -8313,8 +8313,8 @@ _ZN13T100MainPanel4SaveEv:
 	leaq	-96(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp102, D.161367
-	movq	%rax, %rcx	 # D.161367,
+	movq	%rbx, %rax	 # tmp102, D.161369
+	movq	%rax, %rcx	 # D.161369,
 .LEHB34:
 	call	_Unwind_Resume	 #
 .LEHE34:
@@ -8862,19 +8862,19 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.loc 19 192 33
 	movq	64(%rbp), %rdi	 # this, _7
 	leaq	_ZN19wxNavigationEnabledI14wxBookCtrlBaseE15OnNavigationKeyER20wxNavigationKeyEvent(%rip), %rax	 #, tmp112
-	movq	%rax, %r14	 # tmp112, D.160360
-	movl	$0, %r15d	 #, D.160360
+	movq	%rax, %r14	 # tmp112, D.160362
+	movl	$0, %r15d	 #, D.160362
 	leaq	-64(%rbp), %rax	 #, tmp113
-	movq	%r14, -80(%rbp)	 # D.160360,
-	movq	%r15, -72(%rbp)	 # D.160360,
+	movq	%r14, -80(%rbp)	 # D.160362,
+	movq	%r15, -72(%rbp)	 # D.160362,
 	leaq	-80(%rbp), %rdx	 #, tmp114
 	movq	%rax, %rcx	 # tmp113,
 	call	_Z19wxEventFunctionCastI20wxNavigationKeyEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_NAVIGATION_KEY(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI20wxNavigationKeyEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_8, _9
-	movq	-64(%rbp), %rax	 # D.160361, tmp115
-	movq	-56(%rbp), %rdx	 # D.160361,
+	movq	-64(%rbp), %rax	 # D.160363, tmp115
+	movq	-56(%rbp), %rdx	 # D.160363,
 	movq	%rax, -80(%rbp)	 # tmp115,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp116
@@ -8888,19 +8888,19 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.loc 19 195 33
 	movq	64(%rbp), %rdi	 # this, _10
 	leaq	_ZN19wxNavigationEnabledI14wxBookCtrlBaseE7OnFocusER12wxFocusEvent(%rip), %rax	 #, tmp117
-	movq	%rax, %r12	 # tmp117, D.160362
-	movl	$0, %r13d	 #, D.160362
+	movq	%rax, %r12	 # tmp117, D.160364
+	movl	$0, %r13d	 #, D.160364
 	leaq	-48(%rbp), %rax	 #, tmp118
-	movq	%r12, -80(%rbp)	 # D.160362,
-	movq	%r13, -72(%rbp)	 # D.160362,
+	movq	%r12, -80(%rbp)	 # D.160364,
+	movq	%r13, -72(%rbp)	 # D.160364,
 	leaq	-80(%rbp), %rdx	 #, tmp119
 	movq	%rax, %rcx	 # tmp118,
 	call	_Z19wxEventFunctionCastI12wxFocusEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_SET_FOCUS(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI12wxFocusEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_11, _12
-	movq	-48(%rbp), %rax	 # D.160363, tmp120
-	movq	-40(%rbp), %rdx	 # D.160363,
+	movq	-48(%rbp), %rax	 # D.160365, tmp120
+	movq	-40(%rbp), %rdx	 # D.160365,
 	movq	%rax, -80(%rbp)	 # tmp120,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp121
@@ -8914,19 +8914,19 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.loc 19 198 33
 	movq	64(%rbp), %rdi	 # this, _13
 	leaq	_ZN19wxNavigationEnabledI14wxBookCtrlBaseE12OnChildFocusER17wxChildFocusEvent(%rip), %rax	 #, tmp122
-	movq	%rax, %rbx	 # tmp122, D.160364
-	movl	$0, %esi	 #, D.160364
+	movq	%rax, %rbx	 # tmp122, D.160366
+	movl	$0, %esi	 #, D.160366
 	leaq	-32(%rbp), %rax	 #, tmp123
-	movq	%rbx, -80(%rbp)	 # D.160364,
-	movq	%rsi, -72(%rbp)	 # D.160364,
+	movq	%rbx, -80(%rbp)	 # D.160366,
+	movq	%rsi, -72(%rbp)	 # D.160366,
 	leaq	-80(%rbp), %rdx	 #, tmp124
 	movq	%rax, %rcx	 # tmp123,
 	call	_Z19wxEventFunctionCastI17wxChildFocusEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
 	movq	.refptr.wxEVT_CHILD_FOCUS(%rip), %rcx	 #,
 	call	_ZNK14wxEventTypeTagI17wxChildFocusEventEcvRKiEv	 #
 	movl	(%rax), %ecx	 # *_14, _15
-	movq	-32(%rbp), %rax	 # D.160365, tmp125
-	movq	-24(%rbp), %rdx	 # D.160365,
+	movq	-32(%rbp), %rax	 # D.160367, tmp125
+	movq	-24(%rbp), %rdx	 # D.160367,
 	movq	%rax, -80(%rbp)	 # tmp125,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp126
@@ -8959,8 +8959,8 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	movq	64(%rbp), %rax	 # this, _17
 	movq	%rax, %rcx	 # _17,
 	call	_ZN14wxBookCtrlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp128, D.161368
-	movq	%rax, %rcx	 # D.161368,
+	movq	%rbx, %rax	 # tmp128, D.161370
+	movq	%rax, %rcx	 # D.161370,
 .LEHB38:
 	call	_Unwind_Resume	 #
 	nop	
@@ -9095,7 +9095,7 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 	subq	$64, %rsp	 #,
 	.seh_stackalloc	64
 	.seh_endprologue
-	movq	%rcx, 32(%rbp)	 # D.153768, D.153768
+	movq	%rcx, 32(%rbp)	 # D.153770, D.153770
 	movq	%rdx, %rbx	 #, tmp91
 	movq	(%rbx), %rax	 # method, tmp92
 	movq	8(%rbx), %rdx	 # method,
@@ -9130,8 +9130,8 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.161382
-	movq	%rax, %rcx	 # D.161382,
+	movq	%rsi, %rax	 # tmp97, D.161384
+	movq	%rax, %rcx	 # D.161384,
 .LEHB41:
 	call	_Unwind_Resume	 #
 .LEHE41:
@@ -9599,7 +9599,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	call	_ZN14wxEventFunctorC2Ev	 #
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _2
 	movq	-32(%rbp), %rax	 # this, tmp98
-	movq	%rdx, (%rax)	 # _2, this_14(D)->D.153861._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _2, this_14(D)->D.153863._vptr.wxEventFunctor
 	movq	-32(%rbp), %rax	 # this, tmp99
 	movq	-16(%rbp), %rdx	 # handler, tmp100
 	movq	%rdx, 8(%rax)	 # tmp100, this_14(D)->m_handler
@@ -9676,8 +9676,8 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.161387
-	movq	%rax, %rcx	 # D.161387,
+	movq	%rbx, %rax	 # tmp107, D.161389
+	movq	%rax, %rcx	 # D.161389,
 .LEHB43:
 	call	_Unwind_Resume	 #
 	nop	
@@ -9751,7 +9751,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.153802, D.153802
+	movq	%rcx, 16(%rbp)	 # D.153804, D.153804
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:392:     static void CheckHandlerArgument(EventArg *) { }
 	.loc 11 392 52
 	nop	
@@ -10077,7 +10077,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	.loc 11 382 7
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.153861._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.153863._vptr.wxEventFunctor
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
@@ -11207,13 +11207,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -80(%rbp)	 # tmp122, %sfp
 	movq	$0, -72(%rbp)	 #, %sfp
 	leaq	-48(%rbp), %rax	 #, tmp108
-	movdqa	-80(%rbp), %xmm0	 # %sfp, D.160910
-	movaps	%xmm0, -64(%rbp)	 # D.160910,
+	movdqa	-80(%rbp), %xmm0	 # %sfp, D.160912
+	movaps	%xmm0, -64(%rbp)	 # D.160912,
 	leaq	-64(%rbp), %rdx	 #, tmp109
 	movq	%rax, %rcx	 # tmp108,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-48(%rbp), %rax	 # D.160911, tmp110
-	movq	-40(%rbp), %rdx	 # D.160911,
+	movq	-48(%rbp), %rax	 # D.160913, tmp110
+	movq	-40(%rbp), %rdx	 # D.160913,
 	movq	%rax, -64(%rbp)	 # tmp110,
 	movq	%rdx, -56(%rbp)	 #,
 	leaq	-64(%rbp), %rax	 #, tmp111
@@ -11239,16 +11239,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rbx	 #, _10
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:9:     EVT_AUINOTEBOOK_PAGE_CLOSE(wxID_ANY, OnPageClosing)
 	.loc 22 9 5 is_stmt 1 discriminator 1
-	leaq	_ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent(%rip), %r14	 #, D.160912
-	movl	$0, %r15d	 #, D.160912
+	leaq	_ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent(%rip), %r14	 #, D.160914
+	movl	$0, %r15d	 #, D.160914
 	leaq	-32(%rbp), %rax	 #, tmp112
-	movq	%r14, -64(%rbp)	 # D.160912,
-	movq	%r15, -56(%rbp)	 # D.160912,
+	movq	%r14, -64(%rbp)	 # D.160914,
+	movq	%r15, -56(%rbp)	 # D.160914,
 	leaq	-64(%rbp), %rdx	 #, tmp113
 	movq	%rax, %rcx	 # tmp112,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-32(%rbp), %rax	 # D.160913, tmp114
-	movq	-24(%rbp), %rdx	 # D.160913,
+	movq	-32(%rbp), %rax	 # D.160915, tmp114
+	movq	-24(%rbp), %rdx	 # D.160915,
 	movq	%rax, -64(%rbp)	 # tmp114,
 	movq	%rdx, -56(%rbp)	 #,
 	leaq	-64(%rbp), %rax	 #, tmp115
@@ -11273,16 +11273,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rbx	 #, _10
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:10:     EVT_AUINOTEBOOK_PAGE_CLOSED(wxID_ANY, OnPageClosed)
 	.loc 22 10 5 is_stmt 1 discriminator 2
-	leaq	_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent(%rip), %r12	 #, D.160914
-	movl	$0, %r13d	 #, D.160914
+	leaq	_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent(%rip), %r12	 #, D.160916
+	movl	$0, %r13d	 #, D.160916
 	leaq	-16(%rbp), %rax	 #, tmp116
-	movq	%r12, -64(%rbp)	 # D.160914,
-	movq	%r13, -56(%rbp)	 # D.160914,
+	movq	%r12, -64(%rbp)	 # D.160916,
+	movq	%r13, -56(%rbp)	 # D.160916,
 	leaq	-64(%rbp), %rdx	 #, tmp117
 	movq	%rax, %rcx	 # tmp116,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-16(%rbp), %rax	 # D.160915, tmp118
-	movq	-8(%rbp), %rdx	 # D.160915,
+	movq	-16(%rbp), %rax	 # D.160917, tmp118
+	movq	-8(%rbp), %rdx	 # D.160917,
 	movq	%rax, -64(%rbp)	 # tmp118,
 	movq	%rdx, -56(%rbp)	 #,
 	leaq	-64(%rbp), %rax	 #, tmp119
@@ -11340,8 +11340,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_ZN17wxEventTableEntryD1Ev	 #
 	jmp	.L443	 #
 .L442:
-	movq	%rdi, %rax	 # tmp121, D.161390
-	movq	%rax, %rcx	 # D.161390,
+	movq	%rdi, %rax	 # tmp121, D.161392
+	movq	%rax, %rcx	 # D.161392,
 .LEHB46:
 	call	_Unwind_Resume	 #
 	nop	
@@ -11925,7 +11925,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 11 431 35
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_21(D)->D.153861._vptr.wxEventFunctor, _1
+	movq	(%rax), %rax	 # this_21(D)->D.153863._vptr.wxEventFunctor, _1
 	subq	$8, %rax	 #, _2
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 11 431 32

@@ -1850,8 +1850,8 @@ _ZN8wxColourC1Ev:
 	movq	-64(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN12wxColourBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp93, D.222741
-	movq	%rax, %rcx	 # D.222741,
+	movq	%rbx, %rax	 # tmp93, D.222743
+	movq	%rax, %rcx	 # D.222743,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2046,7 +2046,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 13 337 27
-	movq	-8(%rbp), %rax	 # D.121899, D.222179
+	movq	-8(%rbp), %rax	 # D.121899, D.222181
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 13 338 5
 	addq	$48, %rsp	 #,
@@ -2277,7 +2277,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 13 481 78
-	movq	-8(%rbp), %rax	 # D.121933, D.222201
+	movq	-8(%rbp), %rax	 # D.121933, D.222203
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 13 481 81
 	addq	$48, %rsp	 #,
@@ -2325,7 +2325,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 13 482 78
-	movq	-8(%rbp), %rax	 # D.121935, D.222198
+	movq	-8(%rbp), %rax	 # D.121935, D.222200
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 13 482 81
 	addq	$48, %rsp	 #,
@@ -2512,7 +2512,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 13 532 77
-	movq	-72(%rbp), %rax	 # D.121977, D.222174
+	movq	-72(%rbp), %rax	 # D.121977, D.222176
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 13 533 5
 	addq	$72, %rsp	 #,
@@ -3454,7 +3454,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 13 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.222061
+	movq	(%rax), %rax	 # wxDefaultSize, D.222063
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 13 1746 72
 	popq	%rbp	 #
@@ -5024,8 +5024,8 @@ _ZN8wxDialogC2Ev:
 	movq	-64(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN12wxDialogBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp93, D.222751
-	movq	%rax, %rcx	 # D.222751,
+	movq	%rbx, %rax	 # tmp93, D.222753
+	movq	%rax, %rcx	 # D.222753,
 .LEHB4:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5572,8 +5572,8 @@ _ZN8wxWizardC2EP8wxWindowiRK8wxStringRK8wxBitmapRK7wxPointl:
 	movq	-32(%rbp), %rax	 # this, _9
 	movq	%rax, %rcx	 # _9,
 	call	_ZN12wxWizardBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp115, D.222754
-	movq	%rax, %rcx	 # D.222754,
+	movq	%rbx, %rax	 # tmp115, D.222756
+	movq	%rax, %rcx	 # D.222756,
 .LEHB8:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5808,8 +5808,8 @@ _ZN23T100ProjectCreateWizardC2EP8wxWindowiRK8wxStringRK8wxBitmapRK7wxPointl:
 	movq	-32(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN8wxWizardD2Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.222756
-	movq	%rax, %rcx	 # D.222756,
+	movq	%rbx, %rax	 # tmp100, D.222758
+	movq	%rax, %rcx	 # D.222758,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6037,8 +6037,8 @@ _ZN23T100ProjectCreateWizard4initEv:
 	movl	$640, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp106, D.222757
-	movq	%rax, %rcx	 # D.222757,
+	movq	%rsi, %rax	 # tmp106, D.222759
+	movq	%rax, %rcx	 # D.222759,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .L253:
@@ -6048,8 +6048,8 @@ _ZN23T100ProjectCreateWizard4initEv:
 	movl	$656, %edx	 #,
 	movq	%rbx, %rcx	 # _15,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp107, D.222758
-	movq	%rax, %rcx	 # D.222758,
+	movq	%rsi, %rax	 # tmp107, D.222760
+	movq	%rax, %rcx	 # D.222760,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE16:
@@ -6333,8 +6333,8 @@ _ZN23T100ProjectCreateWizard16OnWizardFinishedER13wxWizardEvent:
 	leaq	-96(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZN17T100WxProjectInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.222760
-	movq	%rax, %rcx	 # D.222760,
+	movq	%rbx, %rax	 # tmp98, D.222762
+	movq	%rax, %rcx	 # D.222762,
 .LEHB21:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6539,7 +6539,7 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI13wxWizardEventE12wxEvtHandler7wxEve
 	subq	$64, %rsp	 #,
 	.seh_stackalloc	64
 	.seh_endprologue
-	movq	%rcx, 32(%rbp)	 # D.215451, D.215451
+	movq	%rcx, 32(%rbp)	 # D.215453, D.215453
 	movq	%rdx, %rbx	 #, tmp91
 	movq	(%rbx), %rax	 # method, tmp92
 	movq	8(%rbx), %rdx	 # method,
@@ -6574,8 +6574,8 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI13wxWizardEventE12wxEvtHandler7wxEve
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.222763
-	movq	%rax, %rcx	 # D.222763,
+	movq	%rsi, %rax	 # tmp97, D.222765
+	movq	%rax, %rcx	 # D.222765,
 .LEHB24:
 	call	_Unwind_Resume	 #
 .LEHE24:
@@ -6695,7 +6695,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI13wxWizardEventE12wxEvtHandler7wxEven
 	call	_ZN14wxEventFunctorC2Ev	 #
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI13wxWizardEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _2
 	movq	-32(%rbp), %rax	 # this, tmp98
-	movq	%rdx, (%rax)	 # _2, this_14(D)->D.215544._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _2, this_14(D)->D.215546._vptr.wxEventFunctor
 	movq	-32(%rbp), %rax	 # this, tmp99
 	movq	-16(%rbp), %rdx	 # handler, tmp100
 	movq	%rdx, 8(%rax)	 # tmp100, this_14(D)->m_handler
@@ -6772,8 +6772,8 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI13wxWizardEventE12wxEvtHandler7wxEven
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.222765
-	movq	%rax, %rcx	 # D.222765,
+	movq	%rbx, %rax	 # tmp107, D.222767
+	movq	%rax, %rcx	 # D.222767,
 .LEHB26:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6847,7 +6847,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI13wxWizardEventE12wxEvtHandler7wxEven
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.215485, D.215485
+	movq	%rcx, 16(%rbp)	 # D.215487, D.215487
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:392:     static void CheckHandlerArgument(EventArg *) { }
 	.loc 10 392 52
 	nop	
@@ -7169,7 +7169,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI13wxWizardEventE12wxEvtHandler7wxEven
 	.loc 10 382 7
 	leaq	16+_ZTV20wxEventFunctorMethodI14wxEventTypeTagI13wxWizardEventE12wxEvtHandler7wxEventS3_E(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.215544._vptr.wxEventFunctor
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.215546._vptr.wxEventFunctor
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN14wxEventFunctorD2Ev	 #
@@ -8511,16 +8511,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	movl	$2, %esi	 #, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\wizard\project\T100ProjectCreateWizard.cpp:8:     EVT_WIZARD_CANCEL(wxID_ANY, T100ProjectCreateWizard::OnWizardCancel)
 	.loc 25 8 5
-	leaq	_ZN23T100ProjectCreateWizard14OnWizardCancelER13wxWizardEvent(%rip), %r14	 #, D.222336
-	movl	$0, %r15d	 #, D.222336
+	leaq	_ZN23T100ProjectCreateWizard14OnWizardCancelER13wxWizardEvent(%rip), %r14	 #, D.222338
+	movl	$0, %r15d	 #, D.222338
 	leaq	-64(%rbp), %rax	 #, tmp104
-	movq	%r14, -80(%rbp)	 # D.222336,
-	movq	%r15, -72(%rbp)	 # D.222336,
+	movq	%r14, -80(%rbp)	 # D.222338,
+	movq	%r15, -72(%rbp)	 # D.222338,
 	leaq	-80(%rbp), %rdx	 #, tmp105
 	movq	%rax, %rcx	 # tmp104,
 	call	_Z19wxEventFunctionCastI13wxWizardEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-64(%rbp), %rax	 # D.222337, tmp106
-	movq	-56(%rbp), %rdx	 # D.222337,
+	movq	-64(%rbp), %rax	 # D.222339, tmp106
+	movq	-56(%rbp), %rdx	 # D.222339,
 	movq	%rax, -80(%rbp)	 # tmp106,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp107
@@ -8546,16 +8546,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rsi	 #, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\wizard\project\T100ProjectCreateWizard.cpp:9:     EVT_WIZARD_FINISHED(wxID_ANY, T100ProjectCreateWizard::OnWizardFinished)
 	.loc 25 9 5 is_stmt 1 discriminator 1
-	leaq	_ZN23T100ProjectCreateWizard16OnWizardFinishedER13wxWizardEvent(%rip), %r12	 #, D.222338
-	movl	$0, %r13d	 #, D.222338
+	leaq	_ZN23T100ProjectCreateWizard16OnWizardFinishedER13wxWizardEvent(%rip), %r12	 #, D.222340
+	movl	$0, %r13d	 #, D.222340
 	leaq	-48(%rbp), %rax	 #, tmp108
-	movq	%r12, -80(%rbp)	 # D.222338,
-	movq	%r13, -72(%rbp)	 # D.222338,
+	movq	%r12, -80(%rbp)	 # D.222340,
+	movq	%r13, -72(%rbp)	 # D.222340,
 	leaq	-80(%rbp), %rdx	 #, tmp109
 	movq	%rax, %rcx	 # tmp108,
 	call	_Z19wxEventFunctionCastI13wxWizardEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-48(%rbp), %rax	 # D.222339, tmp110
-	movq	-40(%rbp), %rdx	 # D.222339,
+	movq	-48(%rbp), %rax	 # D.222341, tmp110
+	movq	-40(%rbp), %rdx	 # D.222341,
 	movq	%rax, -80(%rbp)	 # tmp110,
 	movq	%rdx, -72(%rbp)	 #,
 	leaq	-80(%rbp), %rax	 #, tmp111
@@ -8613,8 +8613,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_ZN17wxEventTableEntryD1Ev	 #
 	jmp	.L309	 #
 .L308:
-	movq	%rdi, %rax	 # tmp113, D.222768
-	movq	%rax, %rcx	 # D.222768,
+	movq	%rdi, %rax	 # tmp113, D.222770
+	movq	%rax, %rcx	 # D.222770,
 .LEHB29:
 	call	_Unwind_Resume	 #
 	nop	
@@ -9239,7 +9239,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI13wxWizardEventE12wxEvtHandler7wxEve
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 10 431 35
 	movq	16(%rbp), %rax	 # this, tmp107
-	movq	(%rax), %rax	 # this_21(D)->D.215544._vptr.wxEventFunctor, _1
+	movq	(%rax), %rax	 # this_21(D)->D.215546._vptr.wxEventFunctor, _1
 	subq	$8, %rax	 #, _2
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 10 431 32

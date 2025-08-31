@@ -136,9 +136,19 @@ T100VOID T100ProjectInvoking::OnSearchReplace()
     m_skeletal->OnSearchReplace();
 }
 
+T100VOID T100ProjectInvoking::OnCompileClean()
+{
+    m_skeletal->OnCompileClean();
+}
+
 T100VOID T100ProjectInvoking::OnCompileBuild()
 {
     m_skeletal->OnCompileBuild();
+}
+
+T100VOID T100ProjectInvoking::OnCompileRebuild()
+{
+    m_skeletal->OnCompileRebuild();
 }
 
 T100VOID T100ProjectInvoking::OnSetupEditor()

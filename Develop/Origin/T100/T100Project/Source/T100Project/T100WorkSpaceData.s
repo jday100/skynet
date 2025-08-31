@@ -360,8 +360,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.271305
-	movq	%rax, %rcx	 # D.271305,
+	movq	%rbx, %rax	 # tmp99, D.271309
+	movq	%rax, %rcx	 # D.271309,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1707,7 +1707,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 9 337 27
-	movq	-8(%rbp), %rax	 # D.127637, D.270937
+	movq	-8(%rbp), %rax	 # D.127637, D.270941
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 9 338 5
 	addq	$48, %rsp	 #,
@@ -1938,7 +1938,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 9 481 78
-	movq	-8(%rbp), %rax	 # D.127671, D.270959
+	movq	-8(%rbp), %rax	 # D.127671, D.270963
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 9 481 81
 	addq	$48, %rsp	 #,
@@ -1986,7 +1986,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 9 482 78
-	movq	-8(%rbp), %rax	 # D.127673, D.270956
+	movq	-8(%rbp), %rax	 # D.127673, D.270960
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 9 482 81
 	addq	$48, %rsp	 #,
@@ -2173,7 +2173,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 9 532 77
-	movq	-72(%rbp), %rax	 # D.127715, D.270932
+	movq	-72(%rbp), %rax	 # D.127715, D.270936
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 9 533 5
 	addq	$72, %rsp	 #,
@@ -3428,7 +3428,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 9 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.270847
+	movq	(%rax), %rax	 # wxDefaultSize, D.270851
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 9 1746 72
 	popq	%rbp	 #
@@ -3606,8 +3606,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.271312
-	movq	%rax, %rcx	 # D.271312,
+	movq	%rbx, %rax	 # tmp97, D.271316
+	movq	%rax, %rcx	 # D.271316,
 .LEHB4:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4344,8 +4344,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.271316
-	movq	%rax, %rcx	 # D.271316,
+	movq	%rsi, %rax	 # tmp98, D.271320
+	movq	%rax, %rcx	 # D.271320,
 .LEHB7:
 	call	_Unwind_Resume	 #
 .LEHE7:
@@ -4469,8 +4469,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.271317
-	movq	%rax, %rcx	 # D.271317,
+	movq	%rbx, %rax	 # tmp106, D.271321
+	movq	%rax, %rcx	 # D.271321,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4792,8 +4792,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.271319
-	movq	%rax, %rcx	 # D.271319,
+	movq	%rbx, %rax	 # tmp98, D.271323
+	movq	%rax, %rcx	 # D.271323,
 .LEHB15:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6062,8 +6062,8 @@ _ZN20wxMDIParentFrameBase14OnCreateClientEv:
 	movl	$584, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.271322
-	movq	%rax, %rcx	 # D.271322,
+	movq	%rsi, %rax	 # tmp93, D.271326
+	movq	%rax, %rcx	 # D.271326,
 .LEHB18:
 	call	_Unwind_Resume	 #
 .LEHE18:
@@ -6701,8 +6701,8 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _12,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp127, D.271325
-	movq	%rax, %rcx	 # D.271325,
+	movq	%rsi, %rax	 # tmp127, D.271329
+	movq	%rax, %rcx	 # D.271329,
 .LEHB32:
 	call	_Unwind_Resume	 #
 .L299:
@@ -6712,8 +6712,8 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _17,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp128, D.271326
-	movq	%rax, %rcx	 # D.271326,
+	movq	%rsi, %rax	 # tmp128, D.271330
+	movq	%rax, %rcx	 # D.271330,
 	call	_Unwind_Resume	 #
 .L301:
 	movq	%rax, %rbx	 #, tmp131
@@ -6731,8 +6731,8 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 	leaq	-80(%rbp), %rax	 #, tmp134
 	movq	%rax, %rcx	 # tmp134,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp130, D.271327
-	movq	%rax, %rcx	 # D.271327,
+	movq	%rbx, %rax	 # tmp130, D.271331
+	movq	%rax, %rcx	 # D.271331,
 	call	_Unwind_Resume	 #
 .L303:
 	movq	%rax, %rbx	 #, tmp137
@@ -6750,8 +6750,8 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 	leaq	16(%rbp), %rax	 #, tmp140
 	movq	%rax, %rcx	 # tmp140,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp136, D.271328
-	movq	%rax, %rcx	 # D.271328,
+	movq	%rbx, %rax	 # tmp136, D.271332
+	movq	%rax, %rcx	 # D.271332,
 	call	_Unwind_Resume	 #
 .L305:
 	movq	%rax, %rbx	 #, tmp143
@@ -6769,8 +6769,8 @@ _ZN17T100WorkSpaceData8ShowMenuEv:
 	leaq	112(%rbp), %rax	 #, tmp146
 	movq	%rax, %rcx	 # tmp146,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp142, D.271329
-	movq	%rax, %rcx	 # D.271329,
+	movq	%rbx, %rax	 # tmp142, D.271333
+	movq	%rax, %rcx	 # D.271333,
 	call	_Unwind_Resume	 #
 .LEHE32:
 .L306:
@@ -69234,7 +69234,7 @@ _GLOBAL__sub_I__ZN17T100WorkSpaceDataC2Ev:
 	.byte	0x4
 	.long	0xf032
 	.byte	0xa0
-	.byte	0x2f
+	.byte	0x31
 	.byte	0x6
 	.long	0x43a9a
 	.uleb128 0x7

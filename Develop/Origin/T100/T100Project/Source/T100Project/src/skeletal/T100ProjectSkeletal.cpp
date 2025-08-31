@@ -242,9 +242,19 @@ T100VOID T100ProjectSkeletal::OnSearchReplace()
 
 }
 
+T100VOID T100ProjectSkeletal::OnCompileClean()
+{
+    //m_serve->Clean();
+}
+
 T100VOID T100ProjectSkeletal::OnCompileBuild()
 {
     m_serve->Build();
+}
+
+T100VOID T100ProjectSkeletal::OnCompileRebuild()
+{
+    //m_serve->Rebuild();
 }
 
 T100VOID T100ProjectSkeletal::OnSetupEditor()

@@ -48,7 +48,11 @@ class T100ProjectInvoking
         static T100VOID                     OnEditPaste();
         static T100VOID                     OnSearchFind();
         static T100VOID                     OnSearchReplace();
+
+        static T100VOID                     OnCompileClean();
         static T100VOID                     OnCompileBuild();
+        static T100VOID                     OnCompileRebuild();
+
         static T100VOID                     OnSetupEditor();
         static T100VOID                     OnSetupCompiler();
         static T100VOID                     OnHelpAbout();

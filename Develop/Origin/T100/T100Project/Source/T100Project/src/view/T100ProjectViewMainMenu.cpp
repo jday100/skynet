@@ -112,9 +112,14 @@ T100VOID T100ProjectViewMainMenu::Create(T100ProjectFrame* frame)
 
     helpMenu->Append(T100PROJECT_MENU_HELP_ABOUT, L"About");
 
+    m_clean     = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_CLEAN, L"Clean");
     m_build     = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_BUILD, L"Build");
+    m_rebuild   = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_REBUILD, L"Rebuild");
 
+    compileMenu->Append(m_clean);
     compileMenu->Append(m_build);
+    compileMenu->AppendSeparator();
+    compileMenu->Append(m_rebuild);
 
     menuBar->Append(compileMenu, L"Compile");
 
@@ -168,7 +173,9 @@ T100VOID T100ProjectViewMainMenu::init()
     m_find->Enable(T100FALSE);
     m_replace->Enable(T100FALSE);
 
+    m_clean->Enable(T100FALSE);
     m_build->Enable(T100FALSE);
+    m_rebuild->Enable(T100FALSE);
 
     m_editor->Enable(T100TRUE);
     m_compiler->Enable(T100TRUE);
