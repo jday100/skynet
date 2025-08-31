@@ -44,6 +44,7 @@ class T100WorkSpaceServe
         virtual T100VOID                        SaveAs(T100WorkSpaceInfo*);
 
         virtual T100VOID                        Build();
+        virtual T100BOOL                        Run();
 
         virtual T100VOID                        Clear();
 

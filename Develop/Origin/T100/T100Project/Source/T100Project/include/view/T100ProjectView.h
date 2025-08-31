@@ -43,6 +43,8 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    Clear();
 
+        T100VOID                    Build();
+
         T100VOID                    About();
 
         T100VOID                    OnResize();

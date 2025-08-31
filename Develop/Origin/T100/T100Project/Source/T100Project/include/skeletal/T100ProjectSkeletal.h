@@ -55,6 +55,8 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
         T100VOID                    OnSearchFind();
         T100VOID                    OnSearchReplace();
 
+        T100VOID                    OnCompileRun();
+        T100VOID                    OnCompileBuildAndRun();
         T100VOID                    OnCompileClean();
         T100VOID                    OnCompileBuild();
         T100VOID                    OnCompileRebuild();

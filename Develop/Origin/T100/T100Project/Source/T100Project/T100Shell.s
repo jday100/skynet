@@ -1595,8 +1595,8 @@ _ZN9T100Shell7ExecuteERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	leaq	-16(%rbp), %rax	 #, tmp149
 	movq	%rax, %rcx	 # tmp149,
 	call	_ZN13wxArrayStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp147, D.133405
-	movq	%rax, %rcx	 # D.133405,
+	movq	%rbx, %rax	 # tmp147, D.133407
+	movq	%rax, %rcx	 # D.133407,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	

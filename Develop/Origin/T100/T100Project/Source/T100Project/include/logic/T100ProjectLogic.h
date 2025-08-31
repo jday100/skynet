@@ -31,6 +31,7 @@ class T100ProjectLogic
 
         T100BOOL                    Rename(T100ProjectInfo*);
 
+        T100BOOL                    Run(T100WorkSpaceInfo*, T100ProjectInfo*);
         T100BOOL                    Clean(T100ProjectInfo*);
         T100BOOL                    Build(T100WorkSpaceInfo*, T100ProjectInfo*);
         T100BOOL                    Rebuild(T100WorkSpaceInfo*, T100ProjectInfo*);

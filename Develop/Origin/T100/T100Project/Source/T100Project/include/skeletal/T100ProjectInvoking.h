@@ -54,6 +54,8 @@ class T100ProjectInvoking
         static T100VOID                     OnSearchFind();
         static T100VOID                     OnSearchReplace();
 
+        static T100VOID                     OnCompileRun();
+        static T100VOID                     OnCompileBuildAndRun();
         static T100VOID                     OnCompileClean();
         static T100VOID                     OnCompileBuild();
         static T100VOID                     OnCompileRebuild();

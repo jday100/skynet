@@ -1211,35 +1211,37 @@ T100ProjectFrame::~T100ProjectFrame()
 
 T100VOID T100ProjectFrame::init()
 {
-    Connect(T100PROJECT_MENU_WORKSPACE_NEW,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceNew);
-    Connect(T100PROJECT_MENU_WORKSPACE_OPEN,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceOpen);
-    Connect(T100PROJECT_MENU_WORKSPACE_CLOSE,   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceClose);
-    Connect(T100PROJECT_MENU_WORKSPACE_SAVE,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceSave);
-    Connect(T100PROJECT_MENU_WORKSPACE_SAVE_AS, wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceSaveAs);
-    Connect(T100PROJECT_MENU_WORKSPACE_QUIT,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnQuit);
-    Connect(T100PROJECT_MENU_PROJECT_NEW,       wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectNew);
-    Connect(T100PROJECT_MENU_PROJECT_OPEN,      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectOpen);
-    Connect(T100PROJECT_MENU_PROJECT_CLOSE,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectClose);
-    Connect(T100PROJECT_MENU_PROJECT_SAVE,      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectSave);
-    Connect(T100PROJECT_MENU_PROJECT_SAVE_AS,   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectSaveAs);
-    Connect(T100PROJECT_MENU_FILE_NEW,          wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileNew);
-    Connect(T100PROJECT_MENU_FILE_OPEN,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileOpen);
-    Connect(T100PROJECT_MENU_FILE_CLOSE,        wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileClose);
-    Connect(T100PROJECT_MENU_FILE_SAVE,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileSave);
-    Connect(T100PROJECT_MENU_FILE_SAVE_AS,      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileSaveAs);
-    Connect(T100PROJECT_MENU_EDIT_UNDO,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditUndo);
-    Connect(T100PROJECT_MENU_EDIT_REDO,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditRedo);
-    Connect(T100PROJECT_MENU_EDIT_CUT,          wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditCut);
-    Connect(T100PROJECT_MENU_EDIT_COPY,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditCopy);
-    Connect(T100PROJECT_MENU_EDIT_PASTE,        wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditPaste);
-    Connect(T100PROJECT_MENU_SEARCH_FIND,       wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchFind);
-    Connect(T100PROJECT_MENU_SEARCH_REPLACE,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchReplace);
-    Connect(T100PROJECT_MENU_COMPILE_CLEAN,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileClean);
-    Connect(T100PROJECT_MENU_COMPILE_BUILD,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileBuild);
-    Connect(T100PROJECT_MENU_COMPILE_REBUILD,   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileRebuild);
-    Connect(T100PROJECT_MENU_SETUP_EDITOR,      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupEditor);
-    Connect(T100PROJECT_MENU_SETUP_COMPILER,    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupCompiler);
-    Connect(T100PROJECT_MENU_HELP_ABOUT,        wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnHelpAbout);
+    Connect(T100PROJECT_MENU_WORKSPACE_NEW,             wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceNew);
+    Connect(T100PROJECT_MENU_WORKSPACE_OPEN,            wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceOpen);
+    Connect(T100PROJECT_MENU_WORKSPACE_CLOSE,           wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceClose);
+    Connect(T100PROJECT_MENU_WORKSPACE_SAVE,            wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceSave);
+    Connect(T100PROJECT_MENU_WORKSPACE_SAVE_AS,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceSaveAs);
+    Connect(T100PROJECT_MENU_WORKSPACE_QUIT,            wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnQuit);
+    Connect(T100PROJECT_MENU_PROJECT_NEW,               wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectNew);
+    Connect(T100PROJECT_MENU_PROJECT_OPEN,              wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectOpen);
+    Connect(T100PROJECT_MENU_PROJECT_CLOSE,             wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectClose);
+    Connect(T100PROJECT_MENU_PROJECT_SAVE,              wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectSave);
+    Connect(T100PROJECT_MENU_PROJECT_SAVE_AS,           wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectSaveAs);
+    Connect(T100PROJECT_MENU_FILE_NEW,                  wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileNew);
+    Connect(T100PROJECT_MENU_FILE_OPEN,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileOpen);
+    Connect(T100PROJECT_MENU_FILE_CLOSE,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileClose);
+    Connect(T100PROJECT_MENU_FILE_SAVE,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileSave);
+    Connect(T100PROJECT_MENU_FILE_SAVE_AS,              wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileSaveAs);
+    Connect(T100PROJECT_MENU_EDIT_UNDO,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditUndo);
+    Connect(T100PROJECT_MENU_EDIT_REDO,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditRedo);
+    Connect(T100PROJECT_MENU_EDIT_CUT,                  wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditCut);
+    Connect(T100PROJECT_MENU_EDIT_COPY,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditCopy);
+    Connect(T100PROJECT_MENU_EDIT_PASTE,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditPaste);
+    Connect(T100PROJECT_MENU_SEARCH_FIND,               wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchFind);
+    Connect(T100PROJECT_MENU_SEARCH_REPLACE,            wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchReplace);
+    Connect(T100PROJECT_MENU_COMPILE_RUN,               wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileRun);
+    Connect(T100PROJECT_MENU_COMPILE_BUILD_AND_RUN,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileBuildAndRun);
+    Connect(T100PROJECT_MENU_COMPILE_CLEAN,             wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileClean);
+    Connect(T100PROJECT_MENU_COMPILE_BUILD,             wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileBuild);
+    Connect(T100PROJECT_MENU_COMPILE_REBUILD,           wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileRebuild);
+    Connect(T100PROJECT_MENU_SETUP_EDITOR,              wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupEditor);
+    Connect(T100PROJECT_MENU_SETUP_COMPILER,            wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupCompiler);
+    Connect(T100PROJECT_MENU_HELP_ABOUT,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnHelpAbout);
 }
 
 void T100ProjectFrame::OnWorkSpaceNew(wxCommandEvent& event)
@@ -1356,6 +1358,16 @@ void T100ProjectFrame::OnSearchFind(wxCommandEvent& event)
 void T100ProjectFrame::OnSearchReplace(wxCommandEvent& event)
 {
     T100ProjectInvoking::OnSearchReplace();
+}
+
+void T100ProjectFrame::OnCompileRun(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnCompileRun();
+}
+
+void T100ProjectFrame::OnCompileBuildAndRun(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnCompileBuildAndRun();
 }
 
 void T100ProjectFrame::OnCompileClean(wxCommandEvent& event)

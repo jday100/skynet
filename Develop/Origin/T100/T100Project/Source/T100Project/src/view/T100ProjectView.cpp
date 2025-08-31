@@ -202,6 +202,11 @@ T100VOID T100ProjectView::Clear()
     m_mainMenu->Clear();
 }
 
+T100VOID T100ProjectView::Build()
+{
+    m_mainMenu->Build();
+}
+
 T100VOID T100ProjectView::About()
 {
     T100ProjectViewAboutDialog          dialog(m_frame, wxID_ANY, L"About...");

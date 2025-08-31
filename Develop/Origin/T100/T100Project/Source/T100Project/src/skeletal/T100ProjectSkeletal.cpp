@@ -242,6 +242,16 @@ T100VOID T100ProjectSkeletal::OnSearchReplace()
 
 }
 
+T100VOID T100ProjectSkeletal::OnCompileRun()
+{
+    m_serve->Run();
+}
+
+T100VOID T100ProjectSkeletal::OnCompileBuildAndRun()
+{
+    //m_serve->Build();
+}
+
 T100VOID T100ProjectSkeletal::OnCompileClean()
 {
     //m_serve->Clean();
@@ -250,6 +260,7 @@ T100VOID T100ProjectSkeletal::OnCompileClean()
 T100VOID T100ProjectSkeletal::OnCompileBuild()
 {
     m_serve->Build();
+    m_view->Build();
 }
 
 T100VOID T100ProjectSkeletal::OnCompileRebuild()
@@ -362,14 +373,14 @@ T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
 T100VOID T100ProjectSkeletal::OnProjectOpen(T100ProjectData* data)
 {
     T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
-    T100ProjectInfo*        info        = T100NEW T100ProjectInfo();
+    //T100ProjectInfo*        info        = T100NEW T100ProjectInfo();
 
-    if(!logic.Open(data->GetProjectInfo()->GetPath(), info)){
-        T100SAFE_DELETE(info);
+    if(!logic.Open(data->GetProjectInfo()->GetPath(), data->GetProjectInfo())){
+        //T100SAFE_DELETE(info);
         return T100FALSE;
     }
 
-    m_view->ProjectOpen(data->GetId(), info);
+    m_view->ProjectOpen(data->GetId(), data->GetProjectInfo());
 }
 
 T100VOID T100ProjectSkeletal::OnProjectSelect()

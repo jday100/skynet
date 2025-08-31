@@ -165,6 +165,24 @@ T100BOOL T100ProjectLogic::Clean(T100ProjectInfo*)
 
 }
 
+T100BOOL T100ProjectLogic::Run(T100WorkSpaceInfo* workspace, T100ProjectInfo* project)
+{
+    if(workspace && m_current){
+
+    }else{
+        return T100FALSE;
+    }
+
+    wxBell();
+
+    T100Shell       shell;
+    T100WSTRING     command;
+
+    command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"\\build\\main.exe";
+
+    shell.Run(command);
+}
+
 T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo*, T100ProjectInfo*)
 {
     if(!m_current){
@@ -183,6 +201,8 @@ T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo*, T100ProjectInfo*)
     command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/vm/Hello/Make.py build";
 
     shell.Run(command);
+
+    return T100TRUE;
 }
 
 T100BOOL T100ProjectLogic::Rebuild(T100WorkSpaceInfo*, T100ProjectInfo*)

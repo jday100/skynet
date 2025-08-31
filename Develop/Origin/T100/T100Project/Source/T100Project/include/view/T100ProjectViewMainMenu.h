@@ -20,6 +20,7 @@ class T100ProjectViewMainMenu
         T100VOID                    WorkSpaceSelect();
 
         T100VOID                    ProjectSelect();
+        T100VOID                    Build();
 
         T100VOID                    FileOpen();
         T100VOID                    FileModified();
@@ -61,6 +62,8 @@ class T100ProjectViewMainMenu
         wxMenuItem*                 m_find          = T100NULL;
         wxMenuItem*                 m_replace       = T100NULL;
 
+        wxMenuItem*                 m_run           = T100NULL;
+        wxMenuItem*                 m_buildAndRun   = T100NULL;
         wxMenuItem*                 m_build         = T100NULL;
         wxMenuItem*                 m_clean         = T100NULL;
         wxMenuItem*                 m_rebuild       = T100NULL;

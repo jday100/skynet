@@ -112,10 +112,15 @@ T100VOID T100ProjectViewMainMenu::Create(T100ProjectFrame* frame)
 
     helpMenu->Append(T100PROJECT_MENU_HELP_ABOUT, L"About");
 
-    m_clean     = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_CLEAN, L"Clean");
-    m_build     = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_BUILD, L"Build");
-    m_rebuild   = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_REBUILD, L"Rebuild");
+    m_run           = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_RUN, L"Run");
+    m_buildAndRun   = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_BUILD_AND_RUN, L"Build and run");
+    m_clean         = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_CLEAN, L"Clean");
+    m_build         = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_BUILD, L"Build");
+    m_rebuild       = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_REBUILD, L"Rebuild");
 
+    compileMenu->Append(m_run);
+    compileMenu->Append(m_buildAndRun);
+    compileMenu->AppendSeparator();
     compileMenu->Append(m_clean);
     compileMenu->Append(m_build);
     compileMenu->AppendSeparator();
@@ -173,6 +178,8 @@ T100VOID T100ProjectViewMainMenu::init()
     m_find->Enable(T100FALSE);
     m_replace->Enable(T100FALSE);
 
+    m_run->Enable(T100FALSE);
+    m_buildAndRun->Enable(T100FALSE);
     m_clean->Enable(T100FALSE);
     m_build->Enable(T100FALSE);
     m_rebuild->Enable(T100FALSE);
@@ -224,4 +231,9 @@ T100VOID T100ProjectViewMainMenu::FileModified()
 T100VOID T100ProjectViewMainMenu::FolderSelect()
 {
     m_fileNew->Enable(T100TRUE);
+}
+
+T100VOID T100ProjectViewMainMenu::Build()
+{
+    m_run->Enable(T100TRUE);
 }

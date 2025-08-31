@@ -1496,7 +1496,7 @@ WinMain:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # hInstance, hInstance
 	movq	%rdx, 24(%rbp)	 # hPrevInstance, hPrevInstance
-	movq	%r8, 32(%rbp)	 # D.225770, D.225770
+	movq	%r8, 32(%rbp)	 # D.225776, D.225776
 	movl	%r9d, 40(%rbp)	 # nCmdShow, nCmdShow
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectApp.cpp:17: IMPLEMENT_APP(T100ProjectApp);
 	.loc 7 17 1
@@ -1644,8 +1644,8 @@ _Z11wxCreateAppv:
 	movl	$568, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.232198
-	movq	%rax, %rcx	 # D.232198,
+	movq	%rsi, %rax	 # tmp93, D.232204
+	movq	%rax, %rcx	 # D.232204,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -1750,7 +1750,7 @@ _ZN14T100ProjectApp6OnInitEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectApp.cpp:27:     	Frame->Show();
 	.loc 7 27 18 discriminator 2
 	movq	-16(%rbp), %rax	 # Frame, tmp98
-	movq	(%rax), %rax	 # Frame_15->D.225762.D.214347.D.214159.D.212842.D.212753.D.212474.D.211574.D.211517.D.211416.D.210125.D.115767._vptr.wxObject, _3
+	movq	(%rax), %rax	 # Frame_15->D.225768.D.214347.D.214159.D.212842.D.212753.D.212474.D.211574.D.211517.D.211416.D.210125.D.115767._vptr.wxObject, _3
 	addq	$448, %rax	 #, _4
 	movq	(%rax), %rax	 # *_4, _5
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\T100ProjectApp.cpp:27:     	Frame->Show();
@@ -1781,8 +1781,8 @@ _ZN14T100ProjectApp6OnInitEv:
 	movl	$864, %edx	 #,
 	movq	%rbx, %rcx	 # _12,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp101, D.232201
-	movq	%rax, %rcx	 # D.232201,
+	movq	%rsi, %rax	 # tmp101, D.232207
+	movq	%rax, %rcx	 # D.232207,
 	call	_Unwind_Resume	 #
 .LEHE5:
 .L76:

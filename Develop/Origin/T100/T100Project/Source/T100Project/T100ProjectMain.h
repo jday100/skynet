@@ -49,6 +49,8 @@ class T100ProjectFrame: public wxFrame
         T100VOID            OnEditPaste(wxCommandEvent&);
         T100VOID            OnSearchFind(wxCommandEvent&);
         T100VOID            OnSearchReplace(wxCommandEvent&);
+        T100VOID            OnCompileRun(wxCommandEvent&);
+        T100VOID            OnCompileBuildAndRun(wxCommandEvent&);
         T100VOID            OnCompileClean(wxCommandEvent&);
         T100VOID            OnCompileBuild(wxCommandEvent&);
         T100VOID            OnCompileRebuild(wxCommandEvent&);
