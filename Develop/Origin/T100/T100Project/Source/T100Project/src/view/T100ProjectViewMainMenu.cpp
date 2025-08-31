@@ -178,7 +178,7 @@ T100VOID T100ProjectViewMainMenu::init()
     m_find->Enable(T100FALSE);
     m_replace->Enable(T100FALSE);
 
-    m_run->Enable(T100FALSE);
+    m_run->Enable(T100TRUE);
     m_buildAndRun->Enable(T100FALSE);
     m_clean->Enable(T100FALSE);
     m_build->Enable(T100FALSE);

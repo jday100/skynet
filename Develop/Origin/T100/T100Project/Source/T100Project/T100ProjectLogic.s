@@ -1747,9 +1747,9 @@ _ZN16T100ProjectLogic5CleanEP15T100ProjectInfo:
 .LFE7885:
 	.seh_endproc
 	.section .rdata,"dr"
-	.align 8
+	.align 2
 .LC0:
-	.ascii "\\\0b\0u\0i\0l\0d\0\\\0m\0a\0i\0n\0.\0e\0x\0e\0\0\0"
+	.ascii "b\0u\0i\0l\0d\0\\\0m\0a\0i\0n\0.\0e\0x\0e\0\0\0"
 	.text
 	.align 2
 	.globl	_ZN16T100ProjectLogic3RunEP17T100WorkSpaceInfoP15T100ProjectInfo
@@ -1810,24 +1810,24 @@ _ZN16T100ProjectLogic3RunEP17T100WorkSpaceInfoP15T100ProjectInfo:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"\\build\\main.exe";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"build\\main.exe";
 	.loc 4 181 15
 	movq	48(%rbp), %rax	 # this, tmp96
 	movq	24(%rax), %rax	 # this_8(D)->m_current, _2
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"\\build\\main.exe";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"build\\main.exe";
 	.loc 4 181 34
 	movq	%rax, %rcx	 # _2,
 .LEHB30:
 	call	_ZN15T100ProjectInfo7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _3
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"\\build\\main.exe";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"build\\main.exe";
 	.loc 4 181 36
 	leaq	-16(%rbp), %rax	 #, tmp97
 	movq	.refptr._ZN17T100ProjectConfig29T100PROJECT_STORAGE_SEPARATORB5cxx11E(%rip), %r8	 #,
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_	 #
 .LEHE30:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"\\build\\main.exe";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"build\\main.exe";
 	.loc 4 181 87 discriminator 2
 	leaq	-48(%rbp), %rax	 #, tmp98
 	leaq	-16(%rbp), %rdx	 #, tmp99
@@ -1836,18 +1836,18 @@ _ZN16T100ProjectLogic3RunEP17T100WorkSpaceInfoP15T100ProjectInfo:
 .LEHB31:
 	call	_ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEOS8_PKS5_	 #
 .LEHE31:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"\\build\\main.exe";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"build\\main.exe";
 	.loc 4 181 89 discriminator 4
 	leaq	-48(%rbp), %rdx	 #, tmp100
 	leaq	-96(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEaSEOS4_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"\\build\\main.exe";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"build\\main.exe";
 	.loc 4 181 87 discriminator 4
 	leaq	-48(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"\\build\\main.exe";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"build\\main.exe";
 	.loc 4 181 36 discriminator 4
 	leaq	-16(%rbp), %rax	 #, tmp103
 	movq	%rax, %rcx	 # tmp103,
@@ -1875,7 +1875,7 @@ _ZN16T100ProjectLogic3RunEP17T100WorkSpaceInfoP15T100ProjectInfo:
 	jmp	.L90	 #
 .L97:
 	movq	%rax, %rbx	 #, tmp111
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"\\build\\main.exe";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:181:     command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"build\\main.exe";
 	.loc 4 181 36
 	leaq	-16(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,

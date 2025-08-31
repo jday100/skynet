@@ -178,7 +178,7 @@ T100BOOL T100ProjectLogic::Run(T100WorkSpaceInfo* workspace, T100ProjectInfo* pr
     T100Shell       shell;
     T100WSTRING     command;
 
-    command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"\\build\\main.exe";
+    command = m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + L"build\\main.exe";
 
     shell.Run(command);
 }

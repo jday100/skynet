@@ -11231,20 +11231,20 @@ _ZN23T100ProjectViewMainMenu4initEv:
 	movl	$0, %edx	 #,
 	call	*%rax	 # _138
 .LVL56:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:181:     m_run->Enable(T100FALSE);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:181:     m_run->Enable(T100TRUE);
 	.loc 21 181 5
 	movq	16(%rbp), %rax	 # this, tmp336
 	movq	224(%rax), %rcx	 # this_182(D)->m_run, _139
 	movq	16(%rbp), %rax	 # this, tmp338
 	movq	224(%rax), %rax	 # this_182(D)->m_run, _141
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:181:     m_run->Enable(T100FALSE);
-	.loc 21 181 28
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:181:     m_run->Enable(T100TRUE);
+	.loc 21 181 27
 	movq	(%rax), %rax	 # _141->D.127962.D.123324._vptr.wxObject, _142
 	addq	$72, %rax	 #, _143
 	movq	(%rax), %rax	 # *_143, _144
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:181:     m_run->Enable(T100FALSE);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:181:     m_run->Enable(T100TRUE);
 	.loc 21 181 18
-	movl	$0, %edx	 #,
+	movl	$1, %edx	 #,
 	call	*%rax	 # _144
 .LVL57:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:182:     m_buildAndRun->Enable(T100FALSE);
