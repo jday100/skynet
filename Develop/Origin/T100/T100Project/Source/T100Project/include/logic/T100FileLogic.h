@@ -14,14 +14,13 @@ class T100FileLogic
 
         T100BOOL                    IsExists(const T100WSTRING&);
 
-        T100VOID                    Create(T100FileInfo*);
-        T100VOID                    Remove(T100FileInfo*);
-        T100VOID                    Rename(T100FileInfo*);
+        T100BOOL                    Create(T100FileInfo*);
+        T100BOOL                    Remove(T100FileInfo*);
 
         T100BOOL                    Open(const T100WSTRING&, T100FileInfo*);
-        T100VOID                    Close(T100FileInfo*);
+        T100BOOL                    Close(T100FileInfo*);
 
-
+        T100BOOL                    Rename(T100FileInfo*);
 
     protected:
         T100FILE_INFO_HASH          m_openedFiles;

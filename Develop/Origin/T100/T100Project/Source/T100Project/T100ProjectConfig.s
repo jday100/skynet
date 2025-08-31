@@ -353,7 +353,7 @@ __tcf_4:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:9: const T100WSTRING       T100ProjectConfig::T100PROJECT_EDITOR_FONT                              = L"";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:9: const T100WSTRING       T100ProjectConfig::T100PROJECT_EDITOR_FONT                              = L"system";
 	.loc 1 9 25
 	leaq	_ZN17T100ProjectConfig23T100PROJECT_EDITOR_FONTB5cxx11E(%rip), %rcx	 #,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
@@ -410,7 +410,7 @@ __tcf_5:
 	.ascii "p\0r\0o\0j\0e\0c\0t\0.\0p\0y\0\0\0"
 	.align 2
 .LC4:
-	.ascii "\0\0"
+	.ascii "s\0y\0s\0t\0e\0m\0\0\0"
 	.align 2
 .LC5:
 	.ascii "\\\0\0\0"
@@ -516,7 +516,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_ZNSaIwED1Ev	 #
 	leaq	__tcf_3(%rip), %rcx	 #,
 	call	atexit	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:9: const T100WSTRING       T100ProjectConfig::T100PROJECT_EDITOR_FONT                              = L"";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:9: const T100WSTRING       T100ProjectConfig::T100PROJECT_EDITOR_FONT                              = L"system";
 	.loc 1 9 25 discriminator 2
 	leaq	-82(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
@@ -596,7 +596,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_Unwind_Resume	 #
 .L22:
 	movq	%rax, %rbx	 #, tmp120
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:9: const T100WSTRING       T100ProjectConfig::T100PROJECT_EDITOR_FONT                              = L"";
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\base\T100ProjectConfig.cpp:9: const T100WSTRING       T100ProjectConfig::T100PROJECT_EDITOR_FONT                              = L"system";
 	.loc 1 9 25
 	leaq	-82(%rbp), %rax	 #, tmp119
 	movq	%rax, %rcx	 # tmp119,

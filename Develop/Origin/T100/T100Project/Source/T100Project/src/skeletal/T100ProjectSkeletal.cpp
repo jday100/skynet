@@ -351,7 +351,7 @@ T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
 
     T100FolderInfo*     info        = T100NEW T100FolderInfo();
 
-    if(!logic.Open(data->GetFolderInfo()->GetPath(), info)){
+    if(!logic.List(data->GetFolderInfo()->GetPath(), info)){
         T100SAFE_DELETE(info);
         return T100FALSE;
     }

@@ -3,6 +3,7 @@
 #include <io.h>
 #include "T100Folder.h"
 #include "T100WxFolderInfo.h"
+#include "T100ProjectConfig.h"
 
 T100FolderLogic::T100FolderLogic()
 {
@@ -29,8 +30,22 @@ T100BOOL T100FolderLogic::IsExists(const T100WSTRING& path)
     return T100FALSE;
 }
 
-T100BOOL T100FolderLogic::Open(const T100WSTRING& path, T100FolderInfo* info)
+T100BOOL T100FolderLogic::Create(const T100WSTRING&)
 {
+
+}
+
+T100BOOL T100FolderLogic::Remove(T100FolderInfo*)
+{
+
+}
+
+T100BOOL T100FolderLogic::List(const T100WSTRING& path, T100FolderInfo* info)
+{
+    if(!info){
+        return T100FALSE;
+    }
+
     T100Folder      folder(path);
 
     if(!folder.IsExists()){
@@ -39,7 +54,6 @@ T100BOOL T100FolderLogic::Open(const T100WSTRING& path, T100FolderInfo* info)
 
     T100FILE_INFO_VECTOR&       files       = info->GetFiles();
     T100FOLDER_INFO_VECTOR&     folders     = info->GetSubFolders();
-    //T100PROJECT_INFO_VECTOR&    projects    = info->GetProjects();
 
     T100WSTRING_VECTOR          fileNames;
     T100WSTRING_VECTOR          folderNames;
@@ -50,7 +64,7 @@ T100BOOL T100FolderLogic::Open(const T100WSTRING& path, T100FolderInfo* info)
         T100WxFolderInfo        thisFolder;
 
         thisFolder.SetLabel(item);
-        T100WSTRING     thisPath    = path + L"/" + item;
+        T100WSTRING     thisPath    = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
         thisFolder.SetPath(thisPath);
 
         T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
@@ -59,25 +73,10 @@ T100BOOL T100FolderLogic::Open(const T100WSTRING& path, T100FolderInfo* info)
         thisInfo->SetPath(thisPath);
 
         folders.push_back(thisInfo);
-
-
-        /*
-        if(m_projectServe.Check(&thisFolder)){
-            T100ProjectInfo*    thisProject     = T100NEW T100ProjectInfo();
-
-            projects.push_back(thisProject);
-        }else{
-            T100FolderInfo*     thisInfo        = T100NEW T100FolderInfo();
-
-            thisInfo->SetLabel(item);
-
-            folders.push_back(thisInfo);
-        }
-        */
     }
 
     for(const T100WSTRING& item : fileNames){
-        T100WSTRING         thisPath        = path + L"/" + item;
+        T100WSTRING         thisPath        = path + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
         T100FileInfo*       thisFile        = T100NEW T100FileInfo();
 
         thisFile->SetLabel(item);
@@ -88,4 +87,9 @@ T100BOOL T100FolderLogic::Open(const T100WSTRING& path, T100FolderInfo* info)
     }
 
     return T100TRUE;
+}
+
+T100BOOL T100FolderLogic::Rename(T100FolderInfo*)
+{
+
 }

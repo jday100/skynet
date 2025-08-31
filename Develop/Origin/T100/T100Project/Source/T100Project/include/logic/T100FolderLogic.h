@@ -11,7 +11,12 @@ class T100FolderLogic
 
         T100BOOL            IsExists(const T100WSTRING&);
 
-        T100BOOL            Open(const T100WSTRING&, T100FolderInfo*);
+        T100BOOL            Create(const T100WSTRING&);
+        T100BOOL            Remove(T100FolderInfo*);
+
+        T100BOOL            List(const T100WSTRING&, T100FolderInfo*);
+
+        T100BOOL            Rename(T100FolderInfo*);
 
     protected:
 

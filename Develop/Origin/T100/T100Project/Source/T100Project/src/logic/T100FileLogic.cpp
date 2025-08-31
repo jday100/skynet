@@ -2,6 +2,7 @@
 
 #include <io.h>
 #include "T100File.h"
+#include "T100PathTools.h"
 
 T100FileLogic::T100FileLogic()
 {
@@ -28,30 +29,39 @@ T100BOOL T100FileLogic::IsExists(const T100WSTRING& filename)
     return T100FALSE;
 }
 
-T100VOID T100FileLogic::Create(T100FileInfo*)
+T100BOOL T100FileLogic::Create(T100FileInfo* info)
 {
+    if(!info){
+        return T100FALSE;
+    }
 
+    T100File        file(info->GetPath());
+
+    //return file.Create();
 }
 
-T100VOID T100FileLogic::Remove(T100FileInfo*)
+T100BOOL T100FileLogic::Remove(T100FileInfo* info)
 {
+    if(!info){
+        return T100FALSE;
+    }
 
-}
+    T100File        file(info->GetPath());
 
-T100VOID T100FileLogic::Rename(T100FileInfo*)
-{
-
+    //return file.Remove();
 }
 
 T100BOOL T100FileLogic::Open(const T100WSTRING& path, T100FileInfo* info)
 {
+    if(!info){
+        return T100FALSE;
+    }
+
     T100File        file(path);
 
     if(!file.IsExists()){
         return T100FALSE;
     }
-
-    info->SetPath(path);
 
     T100FileInfo*   value   = T100NULL;
 
@@ -61,16 +71,32 @@ T100BOOL T100FileLogic::Open(const T100WSTRING& path, T100FileInfo* info)
         return T100FALSE;
     }
 
+    T100WSTRING         folder;
+    T100WSTRING         filename;
+
+    T100PathTools::Split(path, folder, filename);
+
+    info->SetLabel(filename);
+    info->SetFileName(filename);
+    info->SetFolder(folder);
+    info->SetOpened(T100TRUE);
+
     m_openedFiles[path] = info;
 
     return T100TRUE;
 }
 
-T100VOID T100FileLogic::Close(T100FileInfo* info)
+T100BOOL T100FileLogic::Close(T100FileInfo* info)
 {
     if(info){
-
+        m_openedFiles.erase(info->GetPath());
     }else{
-        m_openedFiles.clear();
+        return T100FALSE;
     }
+    return T100TRUE;
+}
+
+T100BOOL T100FileLogic::Rename(T100FileInfo*)
+{
+
 }
