@@ -107,7 +107,6 @@ T100BOOL T100WorkSpaceServe::CheckWorkSpaceFile(const T100WxFolderInfo& info)
 
 T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
 {
-
     T100Folder          folder(info.GetPath());
 
     if(!folder.IsExists()){
@@ -140,18 +139,9 @@ T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
     if(!WorkSpaceOpen(m_info)){
         return T100FALSE;
     }
-
+    m_opened    = T100TRUE;
     return T100TRUE;
 }
-
-
-
-
-
-
-
-
-
 
 T100ProjectServe* T100WorkSpaceServe::GetProjectServe()
 {
@@ -181,7 +171,15 @@ T100BOOL T100WorkSpaceServe::IsOpened()
 
 T100BOOL T100WorkSpaceServe::Close()
 {
-    return T100FALSE;
+    if(m_opened && m_info){
+
+    }else{
+        return T100FALSE;
+    }
+
+    T100SAFE_DELETE(m_info);
+    m_opened    = T100FALSE;
+    return T100TRUE;
 }
 
 T100BOOL T100WorkSpaceServe::Save()
@@ -190,11 +188,6 @@ T100BOOL T100WorkSpaceServe::Save()
 }
 
 T100VOID T100WorkSpaceServe::Clear()
-{
-
-}
-
-T100BOOL T100WorkSpaceServe::Close(T100WorkSpaceInfo*)
 {
 
 }

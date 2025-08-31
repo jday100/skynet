@@ -64,7 +64,8 @@ T100BOOL T100ProjectView::WorkSpaceOpen(T100WorkSpaceInfo* info)
 
 T100BOOL T100ProjectView::WorkSpaceClose()
 {
-
+    Clear();
+    return T100TRUE;
 }
 
 T100BOOL T100ProjectView::WorkSpaceSave()
