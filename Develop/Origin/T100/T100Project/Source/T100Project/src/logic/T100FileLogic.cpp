@@ -51,6 +51,11 @@ T100BOOL T100FileLogic::Remove(T100FileInfo* info)
     //return file.Remove();
 }
 
+T100VOID T100FileLogic::Clear()
+{
+    m_openedFiles.clear();
+}
+
 T100BOOL T100FileLogic::Open(const T100WSTRING& path, T100FileInfo* info)
 {
     if(!info){

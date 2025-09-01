@@ -178,6 +178,8 @@ T100BOOL T100WorkSpaceServe::Close()
         return T100FALSE;
     }
 
+    m_projectServe.GetFileLogic().Clear();
+
     T100SAFE_DELETE(m_info);
     m_opened    = T100FALSE;
     return T100TRUE;
