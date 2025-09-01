@@ -135,8 +135,9 @@ T100BOOL T100ProjectView::ProjectSelect()
     return T100TRUE;
 }
 
-T100VOID T100ProjectView::FileModified()
+T100VOID T100ProjectView::FileModified(const T100WSTRING& path)
 {
+    m_mainPanel->FileModified(path);
     m_mainMenu->FileModified();
 }
 

@@ -256,9 +256,9 @@ T100VOID T100ProjectInvoking::OnItemExpanding()
     m_skeletal->OnItemExpanding();
 }
 
-T100VOID T100ProjectInvoking::OnModified()
+T100VOID T100ProjectInvoking::OnModified(const T100WSTRING& path)
 {
-    m_skeletal->OnModified();
+    m_skeletal->OnModified(path);
 }
 
 T100VOID T100ProjectInvoking::OnProjectCreateWizardFinished(T100WxProjectInfo* info)

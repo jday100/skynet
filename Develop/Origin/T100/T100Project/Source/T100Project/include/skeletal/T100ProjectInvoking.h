@@ -81,7 +81,7 @@ class T100ProjectInvoking
 
         static T100VOID                     OnItemExpanding();
 
-        static T100VOID                     OnModified();
+        static T100VOID                     OnModified(const T100WSTRING&);
         static T100VOID                     OnBuildMessage(const T100WSTRING&);
 
     protected:

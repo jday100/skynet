@@ -34,5 +34,5 @@ const T100WSTRING& T100Editor::GetPath()
 
 T100VOID T100Editor::OnModified(wxStyledTextEvent& event)
 {
-    T100ProjectInvoking::OnModified();
+    T100ProjectInvoking::OnModified(m_path);
 }

@@ -28,7 +28,7 @@ class T100ProjectView : public T100ProjectViewBase
         T100VOID                    ProjectOpen(T100ProjectInfo*);
         T100BOOL                    ProjectSelect();
 
-        T100VOID                    FileModified();
+        T100VOID                    FileModified(const T100WSTRING&);
 
         T100BOOL                    FileOpen(wxTreeItemId, T100FileInfo*);
         T100VOID                    FolderOpen(wxTreeItemId, T100FolderInfo*);

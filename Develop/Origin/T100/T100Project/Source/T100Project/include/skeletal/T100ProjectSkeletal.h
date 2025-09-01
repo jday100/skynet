@@ -82,7 +82,7 @@ class T100ProjectSkeletal : public T100ProjectSkeletalBase
 
         T100VOID                    OnItemExpanding();
 
-        T100VOID                    OnModified();
+        T100VOID                    OnModified(const T100WSTRING&);
         T100VOID                    OnBuildMessage(const T100WSTRING&);
 
     protected:

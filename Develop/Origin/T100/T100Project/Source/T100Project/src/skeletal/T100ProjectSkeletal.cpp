@@ -434,11 +434,11 @@ T100VOID T100ProjectSkeletal::OnItemExpanding()
     */
 }
 
-T100VOID T100ProjectSkeletal::OnModified()
+T100VOID T100ProjectSkeletal::OnModified(const T100WSTRING& path)
 {
     m_view->SetDirty();
 
-    m_view->FileModified();
+    m_view->FileModified(path);
 
 }
 

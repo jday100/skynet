@@ -29,6 +29,8 @@ class T100MainPanel : public wxAuiNotebook
         virtual T100BOOL            SaveAll();
         virtual T100BOOL            Clear();
 
+        T100BOOL                    FileModified(const T100WSTRING&);
+
     protected:
         T100Pack*                   m_current       = T100NULL;
         T100MAIN_PACK_HASH          m_packs;

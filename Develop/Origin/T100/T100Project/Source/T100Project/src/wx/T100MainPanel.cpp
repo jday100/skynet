@@ -49,6 +49,9 @@ T100BOOL T100MainPanel::Open(T100FileInfo* info)
     T100WSTRING         path    = info->GetPath();
 
     if(pack){
+        pack->SetLabel(info->GetLabel());
+
+
         /*
         pack->GetEditor()->SetFont(wxFont(T100ProjectConfig::T100PROJECT_EDITOR_FONT));
         wxFont      font    = pack->GetEditor()->GetFont();
@@ -131,7 +134,11 @@ T100BOOL T100MainPanel::Save()
         return T100FALSE;
     }
 
-    editor->SaveFile(editor->GetPath());
+    if(editor->SaveFile(editor->GetPath())){
+        SetPageText(m_current->GetIndex(), m_current->GetLabel());
+    }else{
+        return T100FALSE;
+    }
 
     return T100TRUE;
 }
@@ -180,4 +187,19 @@ T100VOID T100MainPanel::OnPageClosed(wxAuiNotebookEvent& event)
     }
 
     T100ProjectInvoking::OnPageClosed(pack);
+}
+
+T100BOOL T100MainPanel::FileModified(const T100WSTRING& path)
+{
+    T100Pack*   pack    = m_packs[path];
+
+    if(pack){
+
+    }else{
+        return T100FALSE;
+    }
+
+    SetPageText(pack->GetIndex(), L"*" + pack->GetLabel());
+
+    return T100TRUE;
 }
