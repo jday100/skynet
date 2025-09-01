@@ -45,18 +45,21 @@ T100BOOL T100WorkSpaceFile::Load(T100WorkSpaceInfo* info)
     }
 
     if(root->GetName() == L"WorkSpace"){
-        wxXmlNode*  python  = root->GetChildren();
 
-        if(python){
-            info->SetPythonFile(python->GetAttribute(L"File").ToStdWstring());
-
-            wxXmlNode*  compiler    = python->GetNext();
-            if(compiler){
-                info->SetCompilerPath(compiler->GetAttribute(L"Path").ToStdWstring());
-            }
-        }
     }else{
         return T100FALSE;
+    }
+
+    wxXmlNode*  node    = root->GetChildren();
+
+    while(node){
+        if(node->GetName() == L"Python"){
+            info->SetPythonFile(node->GetAttribute(L"File").ToStdWstring());
+        }else if(node->GetName() == L"Compiler"){
+            info->SetCompilerPath(node->GetAttribute(L"Path").ToStdWstring());
+        }
+
+        node = node->GetNext();
     }
 
     return T100TRUE;

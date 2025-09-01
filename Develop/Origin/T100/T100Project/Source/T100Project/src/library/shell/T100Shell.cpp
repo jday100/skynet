@@ -46,3 +46,8 @@ T100VOID T100Shell::Execute(const T100WSTRING& value)
 
     process->ExitCode();
 }
+
+T100VOID T100Shell::Print(T100WSTRING& value)
+{
+    std::wcout << value << std::endl;
+}

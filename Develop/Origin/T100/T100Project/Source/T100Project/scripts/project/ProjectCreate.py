@@ -19,7 +19,8 @@ def args():
     print("Run args...")
     count = len(sys.argv)
 
-    if(count != 10)return
+    if(count != 10):
+        return
 
     global g_project_path
     global g_project_exec
@@ -67,10 +68,10 @@ def create_project():
         print("Project not exists")
         os.mkdir(g_project_path)
 
-        cmdb = "%s\\%s" % (g_roject_path, g_project_build)
+        cmdb = "%s\\%s" % (g_project_path, g_project_build)
         os.mkdir(cmdb)
 
-        cmdc = "%s\\%s" % (g_roject_path, g_project_code)
+        cmdc = "%s\\%s" % (g_project_path, g_project_code)
         os.mkdir(cmdc)
 
         cmdi = "%s\\%s" % (cmdc, g_project_include)
@@ -87,7 +88,7 @@ def create_project():
 def create_project_file():
     print("Run create project file...")
 
-    xml     = minido.Document()
+    xml     = minidom.Document()
 
     project = xml.createElement("Project")
 
@@ -166,9 +167,9 @@ if __name__ == "__main__":
     print("Main...")
     args()
             """)
-            print("Write OK")
-        except Exception as err:
-            print("Error:{err}".format(err=err))
+        print("Write OK")
+    except Exception as err:
+        print("Error:{err}".format(err=err))
 
 if __name__ == "__main__":
     print("Run Project Create...")

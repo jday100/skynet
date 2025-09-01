@@ -263,9 +263,13 @@ T100BOOL T100ProjectLogic::Execute(T100WorkSpaceInfo* workspace, T100ProjectInfo
                 project->GetBuildPath() + L" " +
                 project->GetCodePath() + L" " +
                 project->GetIncludePath() + L" " +
-                project->GetSourcePath();
+                project->GetSourcePath() + L" " +
+                L"project.xml" + L" " +
+                L"make.py";
 
     line    = command + L" " + args;
+
+    shell.Print(line);
 
     shell.Run(line);
 
