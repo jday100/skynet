@@ -64,6 +64,16 @@ const T100WSTRING& T100WorkSpaceInfo::GetCompilerPath()
     return m_compilerPath;
 }
 
+T100VOID T100WorkSpaceInfo::SetExecutePath(const T100WSTRING& path)
+{
+    m_pathExecute   = path;
+}
+
+const T100WSTRING& T100WorkSpaceInfo::GetExecutePath()
+{
+    return m_pathExecute;
+}
+
 T100PROJECT_INFO_VECTOR& T100WorkSpaceInfo::GetProjects()
 {
     return m_projects;

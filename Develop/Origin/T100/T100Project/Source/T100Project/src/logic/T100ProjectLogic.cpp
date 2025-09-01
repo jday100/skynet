@@ -85,7 +85,14 @@ T100BOOL T100ProjectLogic::Create(const T100WxFolderInfo& info, T100WorkSpaceInf
 
     wxBell();
 
-    Execute(info, workspace);
+    T100ProjectInfo*    project     = T100NEW T100ProjectInfo();
+
+    project->SetLabel(info.GetLabel());
+    project->SetPath(info.GetPath());
+
+    Execute(workspace, project);
+
+    m_current   = project;
 
     return T100TRUE;
 }
@@ -232,9 +239,11 @@ T100BOOL T100ProjectLogic::CreateModule(T100ModuleInfo* info)
     return T100TRUE;
 }
 
-T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
+T100BOOL T100ProjectLogic::Execute(T100WorkSpaceInfo* workspace, T100ProjectInfo* project)
 {
-    if(!workspace){
+    if(workspace && project){
+
+    }else{
         return T100FALSE;
     }
 
@@ -248,7 +257,7 @@ T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info, T100WorkSpaceIn
 
 
     command = workspace->GetPythonFile() + L" " + workspace->GetExecutePath() + L"\\scripts\\project\\ProjectCreate.py";
-    args    = info.GetPath() + L" " +
+    args    = project->GetPath() + L" " +
                 workspace->GetExecutePath() + L" " +
                 workspace->GetPythonFile() + L" " +
                 project->GetBuildPath() + L" " +

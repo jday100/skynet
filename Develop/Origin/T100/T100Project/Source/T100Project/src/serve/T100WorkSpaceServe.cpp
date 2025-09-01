@@ -1,5 +1,6 @@
 #include "T100WorkSpaceServe.h"
 
+#include "T100PathTools.h"
 #include "T100Folder.h"
 #include "T100WorkSpaceFile.h"
 #include "T100ProjectConfig.h"
@@ -207,6 +208,8 @@ T100BOOL T100WorkSpaceServe::WorkSpaceOpen(T100WorkSpaceInfo* info)
     if(!info){
         return T100FALSE;
     }
+
+    info->SetExecutePath(T100PathTools::GetCwd());
 
     T100FILE_INFO_VECTOR&       files       = info->GetFiles();
     T100FOLDER_INFO_VECTOR&     folders     = info->GetFolders();

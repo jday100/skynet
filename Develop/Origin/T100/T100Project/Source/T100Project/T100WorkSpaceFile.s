@@ -268,8 +268,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.147795
-	movq	%rax, %rcx	 # D.147795,
+	movq	%rbx, %rax	 # tmp99, D.147802
+	movq	%rax, %rcx	 # D.147802,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1532,8 +1532,8 @@ _ZN17T100WorkSpaceFileC2ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN7T100XMLD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.147799
-	movq	%rax, %rcx	 # D.147799,
+	movq	%rbx, %rax	 # tmp97, D.147806
+	movq	%rax, %rcx	 # D.147806,
 .LEHB4:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2075,8 +2075,8 @@ _ZN17T100WorkSpaceFile4LoadEP17T100WorkSpaceInfo:
 	leaq	-96(%rbp), %rax	 #, tmp167
 	movq	%rax, %rcx	 # tmp167,
 	call	_ZN13wxXmlDocumentD1Ev	 #
-	movq	%rbx, %rax	 # tmp147, D.147801
-	movq	%rax, %rcx	 # D.147801,
+	movq	%rbx, %rax	 # tmp147, D.147808
+	movq	%rax, %rcx	 # D.147808,
 .LEHB17:
 	call	_Unwind_Resume	 #
 .LEHE17:
@@ -2678,8 +2678,8 @@ _ZN17T100WorkSpaceFile4SaveEP17T100WorkSpaceInfo:
 	leaq	-64(%rbp), %rax	 #, tmp217
 	movq	%rax, %rcx	 # tmp217,
 	call	_ZN13wxXmlDocumentD1Ev	 #
-	movq	%rbx, %rax	 # tmp176, D.147809
-	movq	%rax, %rcx	 # D.147809,
+	movq	%rbx, %rax	 # tmp176, D.147816
+	movq	%rax, %rcx	 # D.147816,
 .LEHB43:
 	call	_Unwind_Resume	 #
 	nop	

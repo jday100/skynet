@@ -25,6 +25,9 @@ class T100WorkSpaceInfo
         T100VOID                        SetCompilerPath(const T100WSTRING&);
         const T100WSTRING&              GetCompilerPath();
 
+        T100VOID                        SetExecutePath(const T100WSTRING&);
+        const T100WSTRING&              GetExecutePath();
+
         T100PROJECT_INFO_VECTOR&        GetProjects();
         T100FILE_INFO_VECTOR&           GetFiles();
         T100FOLDER_INFO_VECTOR&         GetFolders();
@@ -35,6 +38,8 @@ class T100WorkSpaceInfo
         T100WSTRING                     m_filename;
         T100WSTRING                     m_pythonFile;
         T100WSTRING                     m_compilerPath;
+
+        T100WSTRING                     m_pathExecute;
 
         T100PROJECT_INFO_VECTOR         m_projects;
         T100FILE_INFO_VECTOR            m_files;

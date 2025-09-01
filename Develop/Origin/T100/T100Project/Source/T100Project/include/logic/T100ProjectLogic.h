@@ -42,7 +42,7 @@ class T100ProjectLogic
         T100WSTRING                 GetFolderName(const T100WxFolderInfo&);
         T100WSTRING                 GetBuildName(const T100ProjectInfo*);
 
-        T100BOOL                    Execute(const T100WxFolderInfo&, T100WorkSpaceInfo*);
+        T100BOOL                    Execute(T100WorkSpaceInfo*, T100ProjectInfo*);
 
     protected:
         T100FileLogic*              m_file          = T100NULL;
