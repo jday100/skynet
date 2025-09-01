@@ -252,10 +252,6 @@ T100BOOL T100ProjectLogic::Execute(T100WorkSpaceInfo* workspace, T100ProjectInfo
     T100WSTRING     args;
     T100WSTRING     line;
 
-    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/vm/Hello";
-
-
-
     command = workspace->GetPythonFile() + L" " + workspace->GetExecutePath() + L"\\scripts\\project\\ProjectCreate.py";
     args    = project->GetPath() + L" " +
                 workspace->GetExecutePath() + L" " +
