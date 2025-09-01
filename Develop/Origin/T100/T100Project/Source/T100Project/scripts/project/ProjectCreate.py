@@ -143,11 +143,11 @@ def build():
 	global g_gcc_path
 	global g_project_path
 
-	cmd = "g++             -c             -I%s\\\\source\\\\include" % (g_project_path)
+	cmd = "g++ -I%s\\\\source\\\\include" % (g_project_path)
 
 	print(cmd)
 
-	line = "%s\\\\%s %s\\\\source\\\\src\\\\Hello.cpp -o %s\\\\build\\\\main.o" % (g_gcc_path, cmd, g_project_path, g_project_path)
+	line = "%s\\\\%s %s\\\\source\\\\src\\\\Hello.cpp -o %s\\\\build\\\\main.exe" % (g_gcc_path, cmd, g_project_path, g_project_path)
 
 	print(line)
 
