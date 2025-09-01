@@ -234,17 +234,31 @@ T100BOOL T100ProjectLogic::CreateModule(T100ModuleInfo* info)
 
 T100BOOL T100ProjectLogic::Execute(const T100WxFolderInfo& info, T100WorkSpaceInfo* workspace)
 {
-    T100WSTRING         name;
-    T100WSTRING         filename;
-
-    name    = GetFolderName(info);
+    if(!workspace){
+        return T100FALSE;
+    }
 
     T100Shell       shell;
     T100WSTRING     command;
+    T100WSTRING     args;
+    T100WSTRING     line;
 
     command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Project.py C:/vm/Hello";
 
-    shell.Run(command);
+
+
+    command = workspace->GetPythonFile() + L" " + workspace->GetExecutePath() + L"\\scripts\\project\\ProjectCreate.py";
+    args    = info.GetPath() + L" " +
+                workspace->GetExecutePath() + L" " +
+                workspace->GetPythonFile() + L" " +
+                project->GetBuildPath() + L" " +
+                project->GetCodePath() + L" " +
+                project->GetIncludePath() + L" " +
+                project->GetSourcePath();
+
+    line    = command + L" " + args;
+
+    shell.Run(line);
 
     return T100TRUE;
 }
