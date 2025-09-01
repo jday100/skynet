@@ -4,6 +4,8 @@ import sys
 from xml.dom import minidom
 
 g_project_path      = ""
+g_project_exec      = ""
+g_project_python    = ""
 
 g_project_build     = ""
 g_project_code      = ""
@@ -20,24 +22,28 @@ def args():
     if(count != 10)return
 
     global g_project_path
+    global g_project_exec
+    global g_project_python
 
     g_project_path      = sys.argv[1]
+    g_project_exec      = sys.argv[2]
+    g_project_python    = sys.argv[3]
 
     global g_project_build
     global g_project_code
     global g_project_include
     global g_project_source
 
-    g_project_build     = sys.argv[2]
-    g_project_code      = sys.argv[3]
-    g_project_include   = sys.argv[4]
-    g_project_source    = sys.argv[5]
+    g_project_build     = sys.argv[4]
+    g_project_code      = sys.argv[5]
+    g_project_include   = sys.argv[6]
+    g_project_source    = sys.argv[7]
 
     global g_project_filename
     global g_project_makefile
 
-    g_project_filename  = sys.argv[6]
-    g_project_makefile  = sys.argv[7]
+    g_project_filename  = sys.argv[8]
+    g_project_makefile  = sys.argv[9]
 
     create_project()
 
