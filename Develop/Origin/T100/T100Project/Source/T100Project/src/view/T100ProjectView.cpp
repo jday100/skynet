@@ -259,4 +259,8 @@ T100VOID T100ProjectView::PageChanged()
     SetTitle();
 }
 
+T100BOOL T100ProjectView::AppendModule(T100WorkSpaceInfo* workspace, T100ProjectInfo* project, T100ModuleInfo* module)
+{
+    return m_projectTree->AppendModule(workspace, project, module);
+}
 

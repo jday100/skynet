@@ -1424,3 +1424,8 @@ wxMenu* T100ProjectTree::GetWorkSpaceMenu()
 
     return menu;
 }
+
+T100BOOL T100ProjectTree::AppendModule(T100WorkSpaceInfo* workspace, T100ProjectInfo* project, T100ModuleInfo* module)
+{
+
+}

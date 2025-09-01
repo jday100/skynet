@@ -3,6 +3,7 @@
 
 #include <wx/imaglist.h>
 #include <wx/treectrl.h>
+#include "T100ModuleInfo.h"
 #include "T100WorkSpaceInfo.h"
 
 class T100ProjectTree : public wxTreeCtrl
@@ -30,6 +31,8 @@ class T100ProjectTree : public wxTreeCtrl
         virtual T100VOID            Clear();
 
         virtual T100VOID            Load(const T100PROJECT_INFO_VECTOR&);
+
+        T100BOOL                    AppendModule(T100WorkSpaceInfo*, T100ProjectInfo*, T100ModuleInfo*);
 
     protected:
         T100VOID                    OnMouseRightDown(wxMouseEvent&);

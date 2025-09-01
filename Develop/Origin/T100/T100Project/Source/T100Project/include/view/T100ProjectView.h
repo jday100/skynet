@@ -2,6 +2,7 @@
 #define T100PROJECTVIEW_H
 
 #include "T100Pack.h"
+#include "T100ModuleInfo.h"
 #include "T100WorkSpaceInfo.h"
 #include "T100ProjectViewBase.h"
 
@@ -53,6 +54,7 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100VOID                    PageChanged();
 
+        T100BOOL                    AppendModule(T100WorkSpaceInfo*, T100ProjectInfo*, T100ModuleInfo*);
 
     protected:
 

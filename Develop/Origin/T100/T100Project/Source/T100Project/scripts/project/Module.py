@@ -16,6 +16,7 @@ def args():
             g_project_path  = sys.argv[1]
             g_module_label  = sys.argv[2]
             create_module()
+            print("Success")
 
 
 def create_module():

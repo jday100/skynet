@@ -326,6 +326,8 @@ T100VOID T100ProjectSkeletal::OnModuleNew(T100ModuleInfo* info)
     }else{
         return;
     }
+
+    m_view->AppendModule(m_serve->GetWorkSpaceInfo(), m_serve->GetProjectServe()->GetProjectInfo(), info);
 }
 
 T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
