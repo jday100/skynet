@@ -91,13 +91,10 @@ T100BOOL T100FileLogic::Open(const T100WSTRING& path, T100FileInfo* info)
     return T100TRUE;
 }
 
-T100BOOL T100FileLogic::Close(T100FileInfo* info)
+T100BOOL T100FileLogic::Close(const T100WSTRING& path)
 {
-    if(info){
-        m_openedFiles.erase(info->GetPath());
-    }else{
-        return T100FALSE;
-    }
+    m_openedFiles.erase(path);
+
     return T100TRUE;
 }
 

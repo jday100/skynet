@@ -9,9 +9,20 @@ T100Pack::T100Pack(wxWindow *parent,
     wxPanel(parent, winid, pos, size, style, name)
 {
     //ctor
+    m_index     = 0;
 }
 
 T100Pack::~T100Pack()
 {
     //dtor
+}
+
+T100VOID T100Pack::SetIndex(T100INT index)
+{
+    m_index     = index;
+}
+
+T100INT T100Pack::GetIndex()
+{
+    return m_index;
 }

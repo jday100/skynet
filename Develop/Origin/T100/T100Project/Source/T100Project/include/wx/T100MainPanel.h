@@ -1,11 +1,14 @@
 #ifndef T100MAINPANEL_H
 #define T100MAINPANEL_H
 
+#include <unordered_map>
 #include <wx/aui/auibook.h>
 #include "T100Common.h"
 #include "T100FileInfo.h"
 #include "T100Editor.h"
 #include "T100Pack.h"
+
+#define     T100MAIN_PACK_HASH          std::unordered_map<T100WSTRING, T100Pack*>
 
 class T100MainPanel : public wxAuiNotebook
 {
@@ -28,6 +31,7 @@ class T100MainPanel : public wxAuiNotebook
 
     protected:
         T100Pack*                   m_current       = T100NULL;
+        T100MAIN_PACK_HASH          m_packs;
 
     private:
         T100VOID                    OnPageChanged(wxAuiNotebookEvent&);

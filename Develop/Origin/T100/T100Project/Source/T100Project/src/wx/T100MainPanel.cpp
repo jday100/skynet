@@ -82,8 +82,9 @@ T100BOOL T100MainPanel::Open(T100FileInfo* info)
         }
     }
 
-    if(AddPage(pack, info->GetLabel())){
-        m_current   = pack;
+    if(AddPage(pack, info->GetLabel(), T100TRUE)){
+        m_current                   = pack;
+        m_packs[info->GetPath()]    = pack;
     }else{
         T100SAFE_DELETE(pack);
         return T100FALSE;
@@ -98,7 +99,13 @@ T100BOOL T100MainPanel::Close(T100FileInfo* info)
         return T100FALSE;
     }
 
-    if(DeletePage(1)){
+    T100Pack*       pack    = m_packs[info->GetPath()];
+
+    if(!pack){
+        return T100FALSE;
+    }
+
+    if(DeletePage(pack->GetIndex())){
 
     }else{
         return T100FALSE;
@@ -136,6 +143,7 @@ T100BOOL T100MainPanel::SaveAll()
 
 T100BOOL T100MainPanel::Clear()
 {
+    m_packs.clear();
     return DeleteAllPages();
 }
 

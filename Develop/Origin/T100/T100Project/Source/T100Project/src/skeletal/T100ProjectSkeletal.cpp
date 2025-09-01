@@ -11,6 +11,8 @@
 #include "T100ProjectData.h"
 #include "T100WxProjectInfo.h"
 
+#include "T100EditorPack.h"
+
 #include "T100ProjectConfig.h"
 
 T100ProjectSkeletal::T100ProjectSkeletal() :
@@ -402,12 +404,17 @@ T100VOID T100ProjectSkeletal::OnPageChanged()
 
 T100VOID T100ProjectSkeletal::OnPageClosing(T100Pack* pack)
 {
+    T100EditorPack*     editor      = dynamic_cast<T100EditorPack*>(pack);
+
+    if(editor){
+        m_serve->GetProjectServe()->GetFileLogic().Close(editor->GetEditor()->GetPath());
+    }
+
     m_view->FileClose(pack);
 }
 
 T100VOID T100ProjectSkeletal::OnPageClosed(T100Pack* pack)
 {
-    m_serve->GetProjectServe()->GetFileLogic().Close(T100NULL);
     m_view->PageClose(pack);
 }
 

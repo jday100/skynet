@@ -1,6 +1,7 @@
 #ifndef T100PACK_H
 #define T100PACK_H
 
+#include <atomic>
 #include <wx/panel.h>
 #include "T100Common.h"
 
@@ -15,7 +16,11 @@ class T100Pack : public wxPanel
             const wxString& name = wxPanelNameStr);
         virtual ~T100Pack();
 
+        T100VOID                SetIndex(T100INT);
+        T100INT                 GetIndex();
+
     protected:
+        std::atomic_int         m_index;
 
     private:
 };

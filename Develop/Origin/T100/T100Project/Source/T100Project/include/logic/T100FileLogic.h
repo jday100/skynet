@@ -20,7 +20,7 @@ class T100FileLogic
         T100VOID                    Clear();
 
         T100BOOL                    Open(const T100WSTRING&, T100FileInfo*);
-        T100BOOL                    Close(T100FileInfo*);
+        T100BOOL                    Close(const T100WSTRING&);
 
         T100BOOL                    Rename(T100FileInfo*);
 
