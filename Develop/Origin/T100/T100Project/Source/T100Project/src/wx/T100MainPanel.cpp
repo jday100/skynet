@@ -1,5 +1,7 @@
 #include "T100MainPanel.h"
 
+#include <wx/settings.h>
+
 #include "T100EditorPack.h"
 #include "T100ProjectConfig.h"
 #include "T100ProjectInvoking.h"
@@ -47,7 +49,21 @@ T100BOOL T100MainPanel::Open(T100FileInfo* info)
     T100WSTRING         path    = info->GetPath();
 
     if(pack){
+        /*
         pack->GetEditor()->SetFont(wxFont(T100ProjectConfig::T100PROJECT_EDITOR_FONT));
+        wxFont      font    = pack->GetEditor()->GetFont();
+        font.SetPixelSize(wxSize(100, 100));
+        font.SetPointSize(100);
+        pack->GetEditor()->SetFont(font);
+        pack->GetEditor()->Refresh();
+        */
+
+        wxFont      font    = wxSystemSettings::GetFont(wxSystemFont::wxSYS_SYSTEM_FONT);
+
+        font.SetPixelSize(wxSize(100, 100));
+        font.SetPointSize(100);
+        pack->GetEditor()->SetFont(font);
+        pack->GetEditor()->Refresh();
     }else{
         return T100FALSE;
     }
