@@ -64,6 +64,9 @@ T100BOOL T100MainPanel::Open(T100FileInfo* info)
         font.SetPointSize(100);
         pack->GetEditor()->SetFont(font);
         pack->GetEditor()->Refresh();
+
+        wxFont TextCtrl1Font(16,wxFONTFAMILY_DEFAULT,wxFONTSTYLE_NORMAL,wxFONTWEIGHT_NORMAL,false,_T("MV Boli"),wxFONTENCODING_DEFAULT);
+        pack->GetEditor()->SetFont(TextCtrl1Font);
     }else{
         return T100FALSE;
     }
