@@ -19,3 +19,23 @@ const T100WSTRING& T100ModuleInfo::GetLabel()
 {
     return m_label;
 }
+
+T100VOID T100ModuleInfo::SetIncludeFile(T100FileInfo* info)
+{
+    m_fileInclude       = info;
+}
+
+T100FileInfo* T100ModuleInfo::GetIncludeFile()
+{
+    return m_fileInclude;
+}
+
+T100VOID T100ModuleInfo::SetSourceFile(T100FileInfo* info)
+{
+    m_fileSource        = info;
+}
+
+T100FileInfo* T100ModuleInfo::GetSourceFile()
+{
+    return m_fileSource;
+}

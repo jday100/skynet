@@ -62,6 +62,46 @@ const T100WSTRING& T100ProjectInfo::GetFileName()
     return m_filename;
 }
 
+T100VOID T100ProjectInfo::SetBuildTreeId(wxTreeItemId id)
+{
+    m_treeIdBuild       = id;
+}
+
+wxTreeItemId T100ProjectInfo::GetBuildTreeId()
+{
+    return m_treeIdBuild;
+}
+
+T100VOID T100ProjectInfo::SetCodeTreeId(wxTreeItemId id)
+{
+    m_treeIdCode        = id;
+}
+
+wxTreeItemId T100ProjectInfo::GetCodeTreeId()
+{
+    return m_treeIdCode;
+}
+
+T100VOID T100ProjectInfo::SetIncludeTreeId(wxTreeItemId id)
+{
+    m_treeIdInclude     = id;
+}
+
+wxTreeItemId T100ProjectInfo::GetIncludeTreeId()
+{
+    return m_treeIdInclude;
+}
+
+T100VOID T100ProjectInfo::SetSourceTreeId(wxTreeItemId id)
+{
+    m_treeIdSource      = id;
+}
+
+wxTreeItemId T100ProjectInfo::GetSourceTreeId()
+{
+    return m_treeIdSource;
+}
+
 T100VOID T100ProjectInfo::SetBuildPath(const T100WSTRING& path)
 {
     m_pathBuild     = path;

@@ -1427,5 +1427,14 @@ wxMenu* T100ProjectTree::GetWorkSpaceMenu()
 
 T100BOOL T100ProjectTree::AppendModule(T100WorkSpaceInfo* workspace, T100ProjectInfo* project, T100ModuleInfo* module)
 {
+    if(workspace && project && module){
 
+    }else{
+        return T100FALSE;
+    }
+
+    AppendFile(project->GetIncludeTreeId(), module->GetIncludeFile());
+    AppendFile(project->GetSourceTreeId(), module->GetSourceFile());
+
+    return T100TRUE;
 }

@@ -358,8 +358,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.220344
-	movq	%rax, %rcx	 # D.220344,
+	movq	%rbx, %rax	 # tmp96, D.226243
+	movq	%rax, %rcx	 # D.226243,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -628,8 +628,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.220348
-	movq	%rax, %rcx	 # D.220348,
+	movq	%rbx, %rax	 # tmp103, D.226247
+	movq	%rax, %rcx	 # D.226247,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -736,8 +736,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.220350
-	movq	%rax, %rcx	 # D.220350,
+	movq	%rbx, %rax	 # tmp99, D.226249
+	movq	%rax, %rcx	 # D.226249,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2810,8 +2810,8 @@ _ZN8wxColourC1Ev:
 	movq	-64(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN12wxColourBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp93, D.220364
-	movq	%rax, %rcx	 # D.220364,
+	movq	%rbx, %rax	 # tmp93, D.226263
+	movq	%rax, %rcx	 # D.226263,
 .LEHB9:
 	call	_Unwind_Resume	 #
 	nop	
@@ -3077,7 +3077,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 15 337 27
-	movq	-8(%rbp), %rax	 # D.121899, D.219634
+	movq	-8(%rbp), %rax	 # D.121899, D.225533
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 15 338 5
 	addq	$48, %rsp	 #,
@@ -3353,7 +3353,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 15 481 78
-	movq	-8(%rbp), %rax	 # D.121933, D.219656
+	movq	-8(%rbp), %rax	 # D.121933, D.225555
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 15 481 81
 	addq	$48, %rsp	 #,
@@ -3401,7 +3401,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 15 482 78
-	movq	-8(%rbp), %rax	 # D.121935, D.219653
+	movq	-8(%rbp), %rax	 # D.121935, D.225552
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 15 482 81
 	addq	$48, %rsp	 #,
@@ -3588,7 +3588,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 15 532 77
-	movq	-72(%rbp), %rax	 # D.121977, D.219629
+	movq	-72(%rbp), %rax	 # D.121977, D.225528
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 15 533 5
 	addq	$72, %rsp	 #,
@@ -4530,7 +4530,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 15 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.219522
+	movq	(%rax), %rax	 # wxDefaultSize, D.225421
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 15 1746 72
 	popq	%rbp	 #
@@ -4708,8 +4708,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.220370
-	movq	%rax, %rcx	 # D.220370,
+	movq	%rbx, %rax	 # tmp97, D.226269
+	movq	%rax, %rcx	 # D.226269,
 .LEHB12:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5436,8 +5436,8 @@ _ZN15wxSizerItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.220374
-	movq	%rax, %rcx	 # D.220374,
+	movq	%rsi, %rax	 # tmp98, D.226273
+	movq	%rax, %rcx	 # D.226273,
 .LEHB15:
 	call	_Unwind_Resume	 #
 .LEHE15:
@@ -5570,8 +5570,8 @@ _ZN7wxSizerC2Ev:
 	movq	-64(%rbp), %rax	 # this, _11
 	movq	%rax, %rcx	 # _11,
 	call	_ZN8wxObjectD2Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.220375
-	movq	%rax, %rcx	 # D.220375,
+	movq	%rbx, %rax	 # tmp110, D.226274
+	movq	%rax, %rcx	 # D.226274,
 .LEHB18:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5744,8 +5744,8 @@ _ZN10wxBoxSizerC1Ei:
 	movq	-48(%rbp), %rax	 # this, _9
 	movq	%rax, %rcx	 # _9,
 	call	_ZN7wxSizerD2Ev	 #
-	movq	%rbx, %rax	 # tmp112, D.220377
-	movq	%rax, %rcx	 # D.220377,
+	movq	%rbx, %rax	 # tmp112, D.226276
+	movq	%rax, %rcx	 # D.226276,
 .LEHB21:
 	call	_Unwind_Resume	 #
 .LEHE21:
@@ -5913,8 +5913,8 @@ _ZN7wxSizer3AddEP8wxWindowiiiP8wxObject:
 	movl	$96, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.220382
-	movq	%rax, %rcx	 # D.220382,
+	movq	%rsi, %rax	 # tmp98, D.226281
+	movq	%rax, %rcx	 # D.226281,
 	call	_Unwind_Resume	 #
 .LEHE24:
 .L248:
@@ -6024,8 +6024,8 @@ _ZN7wxSizer3AddEPS_iiiP8wxObject:
 	movl	$96, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.220383
-	movq	%rax, %rcx	 # D.220383,
+	movq	%rsi, %rax	 # tmp98, D.226282
+	movq	%rax, %rcx	 # D.226282,
 	call	_Unwind_Resume	 #
 .LEHE27:
 .L253:
@@ -6171,8 +6171,8 @@ _ZN9wxControlC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxControlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.220385
-	movq	%rax, %rcx	 # D.220385,
+	movq	%rbx, %rax	 # tmp96, D.226284
+	movq	%rax, %rcx	 # D.226284,
 .LEHB30:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6418,8 +6418,8 @@ _ZN12wxStaticTextC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	movq	-32(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN16wxStaticTextBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.220388
-	movq	%rax, %rcx	 # D.220388,
+	movq	%rbx, %rax	 # tmp100, D.226287
+	movq	%rax, %rcx	 # D.226287,
 .LEHB33:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6624,8 +6624,8 @@ _ZN10wxTextAttrC1Ev:
 	addq	$8, %rax	 #, _22
 	movq	%rax, %rcx	 # _22,
 	call	_ZN10wxArrayIntD1Ev	 #
-	movq	%rbx, %rax	 # tmp151, D.220390
-	movq	%rax, %rcx	 # D.220390,
+	movq	%rbx, %rax	 # tmp151, D.226289
+	movq	%rax, %rcx	 # D.226289,
 .LEHB38:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6809,8 +6809,8 @@ _ZN14wxTextAreaBaseC2Ev:
 	addq	$8, %rax	 #, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.220391
-	movq	%rax, %rcx	 # D.220391,
+	movq	%rbx, %rax	 # tmp98, D.226290
+	movq	%rax, %rcx	 # D.226290,
 .LEHB40:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7002,8 +7002,8 @@ _ZN14wxTextCtrlBaseC2Ev:
 	movq	-64(%rbp), %rax	 # this, _12
 	movq	%rax, %rcx	 # _12,
 	call	_ZN9wxControlD2Ev	 #
-	movq	%rbx, %rax	 # tmp117, D.220393
-	movq	%rax, %rcx	 # D.220393,
+	movq	%rbx, %rax	 # tmp117, D.226292
+	movq	%rax, %rcx	 # D.226292,
 .LEHB45:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7212,8 +7212,8 @@ _ZN10wxTextCtrlC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelRK11wxValidatorS4_:
 	movq	-16(%rbp), %rax	 # this, _6
 	movq	%rax, %rcx	 # _6,
 	call	_ZN14wxTextCtrlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp110, D.220395
-	movq	%rax, %rcx	 # D.220395,
+	movq	%rbx, %rax	 # tmp110, D.226294
+	movq	%rax, %rcx	 # D.226294,
 .LEHB48:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8276,8 +8276,8 @@ _ZN8wxDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	movq	-32(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN12wxDialogBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp100, D.220400
-	movq	%rax, %rcx	 # D.220400,
+	movq	%rbx, %rax	 # tmp100, D.226299
+	movq	%rax, %rcx	 # D.226299,
 .LEHB51:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8378,7 +8378,7 @@ _ZN22T100ModuleCreateDialog13sm_eventTableE:
 	.def	_ZNK22T100ModuleCreateDialog13GetEventTableEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK22T100ModuleCreateDialog13GetEventTableEv
 _ZNK22T100ModuleCreateDialog13GetEventTableEv:
-.LFB16140:
+.LFB16423:
 	.file 31 "C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/src/view/dialog/T100ModuleCreateDialog.cpp"
 	.loc 31 6 1
 	.cfi_startproc
@@ -8399,7 +8399,7 @@ _ZNK22T100ModuleCreateDialog13GetEventTableEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16140:
+.LFE16423:
 	.seh_endproc
 	.globl	_ZN22T100ModuleCreateDialog17sm_eventHashTableE
 	.bss
@@ -8412,7 +8412,7 @@ _ZN22T100ModuleCreateDialog17sm_eventHashTableE:
 	.def	_ZNK22T100ModuleCreateDialog17GetEventHashTableEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK22T100ModuleCreateDialog17GetEventHashTableEv
 _ZNK22T100ModuleCreateDialog17GetEventHashTableEv:
-.LFB16141:
+.LFB16424:
 	.loc 31 6 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -8432,7 +8432,7 @@ _ZNK22T100ModuleCreateDialog17GetEventHashTableEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16141:
+.LFE16424:
 	.seh_endproc
 	.section	.text$_ZN17wxEventTableEntryD1Ev,"x"
 	.linkonce discard
@@ -8441,7 +8441,7 @@ _ZNK22T100ModuleCreateDialog17GetEventHashTableEv:
 	.def	_ZN17wxEventTableEntryD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN17wxEventTableEntryD1Ev
 _ZN17wxEventTableEntryD1Ev:
-.LFB16144:
+.LFB16427:
 	.loc 11 3217 25
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -8469,7 +8469,7 @@ _ZN17wxEventTableEntryD1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16144:
+.LFE16427:
 	.seh_endproc
 	.globl	_ZN22T100ModuleCreateDialog20sm_eventTableEntriesE
 	.bss
@@ -8482,7 +8482,7 @@ _ZN22T100ModuleCreateDialog20sm_eventTableEntriesE:
 	.def	_ZN22T100ModuleCreateDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22T100ModuleCreateDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_
 _ZN22T100ModuleCreateDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
-.LFB16149:
+.LFB16432:
 	.loc 31 10 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -8525,7 +8525,7 @@ _ZN22T100ModuleCreateDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 .LEHE52:
 	leaq	16+_ZTV22T100ModuleCreateDialog(%rip), %rdx	 #, _2
 	movq	-32(%rbp), %rax	 # this, tmp99
-	movq	%rdx, (%rax)	 # _2, this_7(D)->D.213018.D.209620.D.209054.D.208880.D.130070.D.129981.D.129702.D.128509.D.128452.D.123101.D.121810.D.115767._vptr.wxObject
+	movq	%rdx, (%rax)	 # _2, this_7(D)->D.218845.D.209620.D.209054.D.208880.D.130070.D.129981.D.129702.D.128509.D.128452.D.123101.D.121810.D.115767._vptr.wxObject
 	movq	-32(%rbp), %rax	 # this, tmp100
 	movq	$0, 808(%rax)	 #, this_7(D)->m_info
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ModuleCreateDialog.cpp:20:     Center();
@@ -8552,8 +8552,8 @@ _ZN22T100ModuleCreateDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	movq	-32(%rbp), %rax	 # this, _4
 	movq	%rax, %rcx	 # _4,
 	call	_ZN8wxDialogD2Ev	 #
-	movq	%rbx, %rax	 # tmp101, D.220402
-	movq	%rax, %rcx	 # D.220402,
+	movq	%rbx, %rax	 # tmp101, D.226301
+	movq	%rax, %rcx	 # D.226301,
 .LEHB54:
 	call	_Unwind_Resume	 #
 	nop	
@@ -8570,28 +8570,28 @@ _ZN22T100ModuleCreateDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	.cfi_def_cfa 7, -56
 	ret	
 	.cfi_endproc
-.LFE16149:
+.LFE16432:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA16149:
+.LLSDA16432:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE16149-.LLSDACSB16149
-.LLSDACSB16149:
-	.uleb128 .LEHB52-.LFB16149
+	.uleb128 .LLSDACSE16432-.LLSDACSB16432
+.LLSDACSB16432:
+	.uleb128 .LEHB52-.LFB16432
 	.uleb128 .LEHE52-.LEHB52
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB53-.LFB16149
+	.uleb128 .LEHB53-.LFB16432
 	.uleb128 .LEHE53-.LEHB53
-	.uleb128 .L346-.LFB16149
+	.uleb128 .L346-.LFB16432
 	.uleb128 0
-	.uleb128 .LEHB54-.LFB16149
+	.uleb128 .LEHB54-.LFB16432
 	.uleb128 .LEHE54-.LEHB54
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE16149:
+.LLSDACSE16432:
 	.text
 	.seh_endproc
 	.globl	_ZN22T100ModuleCreateDialogC1EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_
@@ -8602,7 +8602,7 @@ _ZN22T100ModuleCreateDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_:
 	.def	_ZN22T100ModuleCreateDialogD2Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22T100ModuleCreateDialogD2Ev
 _ZN22T100ModuleCreateDialogD2Ev:
-.LFB16152:
+.LFB16435:
 	.loc 31 24 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -8621,7 +8621,7 @@ _ZN22T100ModuleCreateDialogD2Ev:
 	.loc 31 24 49
 	leaq	16+_ZTV22T100ModuleCreateDialog(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.213018.D.209620.D.209054.D.208880.D.130070.D.129981.D.129702.D.128509.D.128452.D.123101.D.121810.D.115767._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.218845.D.209620.D.209054.D.208880.D.130070.D.129981.D.129702.D.128509.D.128452.D.123101.D.121810.D.115767._vptr.wxObject
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ModuleCreateDialog.cpp:27:     uninit();
 	.loc 31 27 11
 	movq	16(%rbp), %rcx	 # this,
@@ -8641,7 +8641,7 @@ _ZN22T100ModuleCreateDialogD2Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16152:
+.LFE16435:
 	.seh_endproc
 	.globl	_ZN22T100ModuleCreateDialogD1Ev
 	.def	_ZN22T100ModuleCreateDialogD1Ev;	.scl	2;	.type	32;	.endef
@@ -8651,7 +8651,7 @@ _ZN22T100ModuleCreateDialogD2Ev:
 	.def	_ZN22T100ModuleCreateDialogD0Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22T100ModuleCreateDialogD0Ev
 _ZN22T100ModuleCreateDialogD0Ev:
-.LFB16154:
+.LFB16437:
 	.loc 31 24 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -8679,7 +8679,7 @@ _ZN22T100ModuleCreateDialogD0Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16154:
+.LFE16437:
 	.seh_endproc
 	.section .rdata,"dr"
 .LC8:
@@ -8692,7 +8692,7 @@ _ZN22T100ModuleCreateDialogD0Ev:
 	.def	_ZN22T100ModuleCreateDialog4initEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22T100ModuleCreateDialog4initEv
 _ZN22T100ModuleCreateDialog4initEv:
-.LFB16155:
+.LFB16438:
 	.loc 31 31 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -8986,8 +8986,8 @@ _ZN22T100ModuleCreateDialog4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ModuleCreateDialog.cpp:50:     Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
 	.loc 31 50 12 discriminator 6
 	movq	384(%rbp), %rdi	 # this, _20
-	leaq	_ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent(%rip), %rbx	 #, D.219719
-	movl	$0, %esi	 #, D.219719
+	leaq	_ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent(%rip), %rbx	 #, D.225618
+	movl	$0, %esi	 #, D.225618
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ModuleCreateDialog.cpp:50:     Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
 	.loc 31 50 86 discriminator 6
 	movq	.refptr.wxEVT_BUTTON(%rip), %rcx	 #,
@@ -8995,8 +8995,8 @@ _ZN22T100ModuleCreateDialog4initEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ModuleCreateDialog.cpp:50:     Connect(wxID_APPLY, wxEVT_COMMAND_BUTTON_CLICKED, (wxObjectEventFunction)&OnApply);
 	.loc 31 50 12 discriminator 6
 	movl	(%rax), %edx	 # *_21, _22
-	movq	%rbx, -48(%rbp)	 # D.219719,
-	movq	%rsi, -40(%rbp)	 # D.219719,
+	movq	%rbx, -48(%rbp)	 # D.225618,
+	movq	%rsi, -40(%rbp)	 # D.225618,
 	leaq	-48(%rbp), %rax	 #, tmp158
 	movq	$0, 40(%rsp)	 #,
 	movq	$0, 32(%rsp)	 #,
@@ -9015,8 +9015,8 @@ _ZN22T100ModuleCreateDialog4initEv:
 	movl	$136, %edx	 #,
 	movq	%rdi, %rcx	 # _32,
 	call	_ZdlPvy	 #
-	movq	%rbx, %rax	 # tmp159, D.220403
-	movq	%rax, %rcx	 # D.220403,
+	movq	%rbx, %rax	 # tmp159, D.226302
+	movq	%rax, %rcx	 # D.226302,
 	call	_Unwind_Resume	 #
 .L365:
 	movq	%rax, %rbx	 #, tmp161
@@ -9043,8 +9043,8 @@ _ZN22T100ModuleCreateDialog4initEv:
 	leaq	-32(%rbp), %rax	 #, tmp167
 	movq	%rax, %rcx	 # tmp167,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp165, D.220404
-	movq	%rax, %rcx	 # D.220404,
+	movq	%rbx, %rax	 # tmp165, D.226303
+	movq	%rax, %rcx	 # D.226303,
 	call	_Unwind_Resume	 #
 .L369:
 	movq	%rax, %rbx	 #, tmp169
@@ -9080,8 +9080,8 @@ _ZN22T100ModuleCreateDialog4initEv:
 	leaq	64(%rbp), %rax	 #, tmp178
 	movq	%rax, %rcx	 # tmp178,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp176, D.220405
-	movq	%rax, %rcx	 # D.220405,
+	movq	%rbx, %rax	 # tmp176, D.226304
+	movq	%rax, %rcx	 # D.226304,
 	call	_Unwind_Resume	 #
 .L372:
 	movq	%rax, %rbx	 #, tmp180
@@ -9108,8 +9108,8 @@ _ZN22T100ModuleCreateDialog4initEv:
 	leaq	208(%rbp), %rax	 #, tmp186
 	movq	%rax, %rcx	 # tmp186,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp184, D.220406
-	movq	%rax, %rcx	 # D.220406,
+	movq	%rbx, %rax	 # tmp184, D.226305
+	movq	%rax, %rcx	 # D.226305,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE68:
@@ -9132,72 +9132,72 @@ _ZN22T100ModuleCreateDialog4initEv:
 	.cfi_def_cfa 7, -408
 	ret	
 	.cfi_endproc
-.LFE16155:
+.LFE16438:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA16155:
+.LLSDA16438:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE16155-.LLSDACSB16155
-.LLSDACSB16155:
-	.uleb128 .LEHB55-.LFB16155
+	.uleb128 .LLSDACSE16438-.LLSDACSB16438
+.LLSDACSB16438:
+	.uleb128 .LEHB55-.LFB16438
 	.uleb128 .LEHE55-.LEHB55
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB56-.LFB16155
+	.uleb128 .LEHB56-.LFB16438
 	.uleb128 .LEHE56-.LEHB56
-	.uleb128 .L362-.LFB16155
+	.uleb128 .L362-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB57-.LFB16155
+	.uleb128 .LEHB57-.LFB16438
 	.uleb128 .LEHE57-.LEHB57
-	.uleb128 .L363-.LFB16155
+	.uleb128 .L363-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB58-.LFB16155
+	.uleb128 .LEHB58-.LFB16438
 	.uleb128 .LEHE58-.LEHB58
-	.uleb128 .L364-.LFB16155
+	.uleb128 .L364-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB59-.LFB16155
+	.uleb128 .LEHB59-.LFB16438
 	.uleb128 .LEHE59-.LEHB59
-	.uleb128 .L365-.LFB16155
+	.uleb128 .L365-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB60-.LFB16155
+	.uleb128 .LEHB60-.LFB16438
 	.uleb128 .LEHE60-.LEHB60
-	.uleb128 .L366-.LFB16155
+	.uleb128 .L366-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB61-.LFB16155
+	.uleb128 .LEHB61-.LFB16438
 	.uleb128 .LEHE61-.LEHB61
-	.uleb128 .L367-.LFB16155
+	.uleb128 .L367-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB62-.LFB16155
+	.uleb128 .LEHB62-.LFB16438
 	.uleb128 .LEHE62-.LEHB62
-	.uleb128 .L368-.LFB16155
+	.uleb128 .L368-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB63-.LFB16155
+	.uleb128 .LEHB63-.LFB16438
 	.uleb128 .LEHE63-.LEHB63
-	.uleb128 .L369-.LFB16155
+	.uleb128 .L369-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB64-.LFB16155
+	.uleb128 .LEHB64-.LFB16438
 	.uleb128 .LEHE64-.LEHB64
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB65-.LFB16155
+	.uleb128 .LEHB65-.LFB16438
 	.uleb128 .LEHE65-.LEHB65
-	.uleb128 .L370-.LFB16155
+	.uleb128 .L370-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB66-.LFB16155
+	.uleb128 .LEHB66-.LFB16438
 	.uleb128 .LEHE66-.LEHB66
-	.uleb128 .L371-.LFB16155
+	.uleb128 .L371-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB67-.LFB16155
+	.uleb128 .LEHB67-.LFB16438
 	.uleb128 .LEHE67-.LEHB67
-	.uleb128 .L372-.LFB16155
+	.uleb128 .L372-.LFB16438
 	.uleb128 0
-	.uleb128 .LEHB68-.LFB16155
+	.uleb128 .LEHB68-.LFB16438
 	.uleb128 .LEHE68-.LEHB68
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE16155:
+.LLSDACSE16438:
 	.text
 	.seh_endproc
 	.align 2
@@ -9205,7 +9205,7 @@ _ZN22T100ModuleCreateDialog4initEv:
 	.def	_ZN22T100ModuleCreateDialog6uninitEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22T100ModuleCreateDialog6uninitEv
 _ZN22T100ModuleCreateDialog6uninitEv:
-.LFB16156:
+.LFB16439:
 	.loc 31 54 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9225,14 +9225,14 @@ _ZN22T100ModuleCreateDialog6uninitEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16156:
+.LFE16439:
 	.seh_endproc
 	.align 2
 	.globl	_ZN22T100ModuleCreateDialog13GetModuleInfoEv
 	.def	_ZN22T100ModuleCreateDialog13GetModuleInfoEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22T100ModuleCreateDialog13GetModuleInfoEv
 _ZN22T100ModuleCreateDialog13GetModuleInfoEv:
-.LFB16157:
+.LFB16440:
 	.loc 31 59 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9255,14 +9255,14 @@ _ZN22T100ModuleCreateDialog13GetModuleInfoEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16157:
+.LFE16440:
 	.seh_endproc
 	.align 2
 	.globl	_ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent
 	.def	_ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent
 _ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent:
-.LFB16158:
+.LFB16441:
 	.loc 31 64 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9287,7 +9287,7 @@ _ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent:
 	movq	%rdx, 40(%rbp)	 # event, event
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ModuleCreateDialog.cpp:65:     m_info  = T100NEW T100ModuleInfo();
 	.loc 31 65 38
-	movl	$40, %ecx	 #,
+	movl	$56, %ecx	 #,
 .LEHB69:
 	call	_Znwy	 #
 .LEHE69:
@@ -9360,11 +9360,11 @@ _ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent:
 	movq	%rax, %rsi	 #, tmp109
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\dialog\T100ModuleCreateDialog.cpp:65:     m_info  = T100NEW T100ModuleInfo();
 	.loc 31 65 38
-	movl	$40, %edx	 #,
+	movl	$56, %edx	 #,
 	movq	%rbx, %rcx	 # _13,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp109, D.220415
-	movq	%rax, %rcx	 # D.220415,
+	movq	%rsi, %rax	 # tmp109, D.226314
+	movq	%rax, %rcx	 # D.226314,
 	call	_Unwind_Resume	 #
 .L381:
 	movq	%rax, %rbx	 #, tmp111
@@ -9373,8 +9373,8 @@ _ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent:
 	leaq	-48(%rbp), %rax	 #, tmp110
 	movq	%rax, %rcx	 # tmp110,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp111, D.220416
-	movq	%rax, %rcx	 # D.220416,
+	movq	%rbx, %rax	 # tmp111, D.226315
+	movq	%rax, %rcx	 # D.226315,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE73:
@@ -9391,36 +9391,36 @@ _ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent:
 	.cfi_def_cfa 7, 24
 	ret	
 	.cfi_endproc
-.LFE16158:
+.LFE16441:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA16158:
+.LLSDA16441:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE16158-.LLSDACSB16158
-.LLSDACSB16158:
-	.uleb128 .LEHB69-.LFB16158
+	.uleb128 .LLSDACSE16441-.LLSDACSB16441
+.LLSDACSB16441:
+	.uleb128 .LEHB69-.LFB16441
 	.uleb128 .LEHE69-.LEHB69
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB70-.LFB16158
+	.uleb128 .LEHB70-.LFB16441
 	.uleb128 .LEHE70-.LEHB70
-	.uleb128 .L380-.LFB16158
+	.uleb128 .L380-.LFB16441
 	.uleb128 0
-	.uleb128 .LEHB71-.LFB16158
+	.uleb128 .LEHB71-.LFB16441
 	.uleb128 .LEHE71-.LEHB71
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB72-.LFB16158
+	.uleb128 .LEHB72-.LFB16441
 	.uleb128 .LEHE72-.LEHB72
-	.uleb128 .L381-.LFB16158
+	.uleb128 .L381-.LFB16441
 	.uleb128 0
-	.uleb128 .LEHB73-.LFB16158
+	.uleb128 .LEHB73-.LFB16441
 	.uleb128 .LEHE73-.LEHB73
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE16158:
+.LLSDACSE16441:
 	.text
 	.seh_endproc
 	.section	.text$_ZN22wxScopedCharTypeBufferIwED1Ev,"x"
@@ -9430,7 +9430,7 @@ _ZN22T100ModuleCreateDialog7OnApplyER14wxCommandEvent:
 	.def	_ZN22wxScopedCharTypeBufferIwED1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22wxScopedCharTypeBufferIwED1Ev
 _ZN22wxScopedCharTypeBufferIwED1Ev:
-.LFB16179:
+.LFB16462:
 	.loc 1 125 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9459,16 +9459,16 @@ _ZN22wxScopedCharTypeBufferIwED1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16179:
+.LFE16462:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA16179:
+.LLSDA16462:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE16179-.LLSDACSB16179
-.LLSDACSB16179:
-.LLSDACSE16179:
+	.uleb128 .LLSDACSE16462-.LLSDACSB16462
+.LLSDACSB16462:
+.LLSDACSE16462:
 	.section	.text$_ZN22wxScopedCharTypeBufferIwED1Ev,"x"
 	.linkonce discard
 	.seh_endproc
@@ -9479,7 +9479,7 @@ _ZN22wxScopedCharTypeBufferIwED1Ev:
 	.def	_ZN22wxScopedCharTypeBufferIwEC1ERKS0_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22wxScopedCharTypeBufferIwEC1ERKS0_
 _ZN22wxScopedCharTypeBufferIwEC1ERKS0_:
-.LFB16433:
+.LFB16716:
 	.loc 1 107 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9517,7 +9517,7 @@ _ZN22wxScopedCharTypeBufferIwEC1ERKS0_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16433:
+.LFE16716:
 	.seh_endproc
 	.section	.text$_ZN8wxString15ConvertedBufferIcED1Ev,"x"
 	.linkonce discard
@@ -9526,7 +9526,7 @@ _ZN22wxScopedCharTypeBufferIwEC1ERKS0_:
 	.def	_ZN8wxString15ConvertedBufferIcED1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN8wxString15ConvertedBufferIcED1Ev
 _ZN8wxString15ConvertedBufferIcED1Ev:
-.LFB16502:
+.LFB16785:
 	.loc 4 3489 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9559,7 +9559,7 @@ _ZN8wxString15ConvertedBufferIcED1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16502:
+.LFE16785:
 	.seh_endproc
 	.section	.text$_ZN8wxString15ConvertedBufferIcEC1Ev,"x"
 	.linkonce discard
@@ -9568,7 +9568,7 @@ _ZN8wxString15ConvertedBufferIcED1Ev:
 	.def	_ZN8wxString15ConvertedBufferIcEC1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN8wxString15ConvertedBufferIcEC1Ev
 _ZN8wxString15ConvertedBufferIcEC1Ev:
-.LFB16508:
+.LFB16791:
 	.loc 4 3488 7
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9594,7 +9594,7 @@ _ZN8wxString15ConvertedBufferIcEC1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16508:
+.LFE16791:
 	.seh_endproc
 	.section	.text$_ZNK22wxScopedCharTypeBufferIwEcvPKwEv,"x"
 	.linkonce discard
@@ -9603,7 +9603,7 @@ _ZN8wxString15ConvertedBufferIcEC1Ev:
 	.def	_ZNK22wxScopedCharTypeBufferIwEcvPKwEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK22wxScopedCharTypeBufferIwEcvPKwEv
 _ZNK22wxScopedCharTypeBufferIwEcvPKwEv:
-.LFB16512:
+.LFB16795:
 	.loc 1 157 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9629,7 +9629,7 @@ _ZNK22wxScopedCharTypeBufferIwEcvPKwEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16512:
+.LFE16795:
 	.seh_endproc
 	.section	.text$_ZNK22wxScopedCharTypeBufferIwE4dataEv,"x"
 	.linkonce discard
@@ -9638,7 +9638,7 @@ _ZNK22wxScopedCharTypeBufferIwEcvPKwEv:
 	.def	_ZNK22wxScopedCharTypeBufferIwE4dataEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK22wxScopedCharTypeBufferIwE4dataEv
 _ZNK22wxScopedCharTypeBufferIwE4dataEv:
-.LFB16519:
+.LFB16802:
 	.loc 1 156 21
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9668,7 +9668,7 @@ _ZNK22wxScopedCharTypeBufferIwE4dataEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16519:
+.LFE16802:
 	.seh_endproc
 	.section	.text$_Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_,"x"
 	.linkonce discard
@@ -9676,7 +9676,7 @@ _ZNK22wxScopedCharTypeBufferIwE4dataEv:
 	.def	_Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_;	.scl	2;	.type	32;	.endef
 	.seh_proc	_Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_
 _Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_:
-.LFB16797:
+.LFB17080:
 	.file 32 "C:/zoo/lib/wxWidgets-3.0.5/include/wx/utils.h"
 	.loc 32 65 1
 	.cfi_startproc
@@ -9713,7 +9713,7 @@ _Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16797:
+.LFE17080:
 	.seh_endproc
 	.section	.text$_ZNK14wxEventTypeTagI14wxCommandEventEcvRKiEv,"x"
 	.linkonce discard
@@ -9722,7 +9722,7 @@ _Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_:
 	.def	_ZNK14wxEventTypeTagI14wxCommandEventEcvRKiEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK14wxEventTypeTagI14wxCommandEventEcvRKiEv
 _ZNK14wxEventTypeTagI14wxCommandEventEcvRKiEv:
-.LFB16831:
+.LFB17174:
 	.loc 11 190 5
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9744,7 +9744,7 @@ _ZNK14wxEventTypeTagI14wxCommandEventEcvRKiEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16831:
+.LFE17174:
 	.seh_endproc
 	.section	.text$_ZN22wxScopedCharTypeBufferIwE4DataD1Ev,"x"
 	.linkonce discard
@@ -9753,7 +9753,7 @@ _ZNK14wxEventTypeTagI14wxCommandEventEcvRKiEv:
 	.def	_ZN22wxScopedCharTypeBufferIwE4DataD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22wxScopedCharTypeBufferIwE4DataD1Ev
 _ZN22wxScopedCharTypeBufferIwE4DataD1Ev:
-.LFB16845:
+.LFB17188:
 	.loc 1 164 12
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9781,7 +9781,7 @@ _ZN22wxScopedCharTypeBufferIwE4DataD1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16845:
+.LFE17188:
 	.seh_endproc
 	.section	.text$_ZN22wxScopedCharTypeBufferIwE6DecRefEv,"x"
 	.linkonce discard
@@ -9790,7 +9790,7 @@ _ZN22wxScopedCharTypeBufferIwE4DataD1Ev:
 	.def	_ZN22wxScopedCharTypeBufferIwE6DecRefEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22wxScopedCharTypeBufferIwE6DecRefEv
 _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
-.LFB16842:
+.LFB17185:
 	.loc 1 192 10
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9830,14 +9830,14 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 24
-	movzwl	16(%rax), %edx	 # _3->D.213338.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.219165.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.213338.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.219165.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 24
-	movzwl	16(%rax), %eax	 # _3->D.213338.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.219165.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 30
 	testw	%ax, %ax	 # _6
@@ -9886,7 +9886,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE16842:
+.LFE17185:
 	.seh_endproc
 	.section	.text$_ZN22wxScopedCharTypeBufferIwE11GetNullDataEv,"x"
 	.linkonce discard
@@ -9894,7 +9894,7 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	.def	_ZN22wxScopedCharTypeBufferIwE11GetNullDataEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22wxScopedCharTypeBufferIwE11GetNullDataEv
 _ZN22wxScopedCharTypeBufferIwE11GetNullDataEv:
-.LFB16851:
+.LFB17194:
 	.loc 1 180 18
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9918,7 +9918,7 @@ _ZN22wxScopedCharTypeBufferIwE11GetNullDataEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16851:
+.LFE17194:
 	.seh_endproc
 	.section	.text$_ZN22wxScopedCharTypeBufferIwE6IncRefEv,"x"
 	.linkonce discard
@@ -9927,7 +9927,7 @@ _ZN22wxScopedCharTypeBufferIwE11GetNullDataEv:
 	.def	_ZN22wxScopedCharTypeBufferIwE6IncRefEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN22wxScopedCharTypeBufferIwE6IncRefEv
 _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
-.LFB16951:
+.LFB17294:
 	.loc 1 185 10
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -9967,11 +9967,11 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 17
-	movzwl	16(%rax), %edx	 # _3->D.213338.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.219165.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.213338.m_ref
+	movw	%dx, 16(%rax)	 # _6, _3->D.219165.m_ref
 	jmp	.L405	 #
 .L408:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
@@ -9988,7 +9988,7 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE16951:
+.LFE17294:
 	.seh_endproc
 	.section	.text$_ZNK22wxScopedCharTypeBufferIwE4Data3GetEv,"x"
 	.linkonce discard
@@ -9997,7 +9997,7 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	.def	_ZNK22wxScopedCharTypeBufferIwE4Data3GetEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK22wxScopedCharTypeBufferIwE4Data3GetEv
 _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
-.LFB16969:
+.LFB17312:
 	.loc 1 171 19
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -10012,7 +10012,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 1 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.213338.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.219165.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 1 171 72
 	popq	%rbp	 #
@@ -10020,7 +10020,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE16969:
+.LFE17312:
 	.seh_endproc
 	.globl	_ZTV22T100ModuleCreateDialog
 	.section	.rdata$_ZTV22T100ModuleCreateDialog,"dr"
@@ -10558,7 +10558,7 @@ _ZTV15wxSizerItemList:
 	.def	_ZN15wxSizerItemListD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15wxSizerItemListD1Ev
 _ZN15wxSizerItemListD1Ev:
-.LFB17232:
+.LFB17575:
 	.loc 18 488 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -10589,7 +10589,7 @@ _ZN15wxSizerItemListD1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17232:
+.LFE17575:
 	.seh_endproc
 	.section	.text$_ZN15wxSizerItemListD0Ev,"x"
 	.linkonce discard
@@ -10598,7 +10598,7 @@ _ZN15wxSizerItemListD1Ev:
 	.def	_ZN15wxSizerItemListD0Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN15wxSizerItemListD0Ev
 _ZN15wxSizerItemListD0Ev:
-.LFB17233:
+.LFB17576:
 	.loc 18 488 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -10626,7 +10626,7 @@ _ZN15wxSizerItemListD0Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17233:
+.LFE17576:
 	.seh_endproc
 	.globl	_ZTV20wxObjectEventFunctor
 	.section	.rdata$_ZTV20wxObjectEventFunctor,"dr"
@@ -10648,7 +10648,7 @@ _ZTV20wxObjectEventFunctor:
 	.def	_ZN20wxObjectEventFunctorD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN20wxObjectEventFunctorD1Ev
 _ZN20wxObjectEventFunctorD1Ev:
-.LFB17244:
+.LFB17587:
 	.loc 11 240 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -10679,7 +10679,7 @@ _ZN20wxObjectEventFunctorD1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17244:
+.LFE17587:
 	.seh_endproc
 	.section	.text$_ZN20wxObjectEventFunctorD0Ev,"x"
 	.linkonce discard
@@ -10688,7 +10688,7 @@ _ZN20wxObjectEventFunctorD1Ev:
 	.def	_ZN20wxObjectEventFunctorD0Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN20wxObjectEventFunctorD0Ev
 _ZN20wxObjectEventFunctorD0Ev:
-.LFB17245:
+.LFB17588:
 	.loc 11 240 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -10716,7 +10716,7 @@ _ZN20wxObjectEventFunctorD0Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17245:
+.LFE17588:
 	.seh_endproc
 	.globl	_ZTV20wxThreadHelperThread
 	.section	.rdata$_ZTV20wxThreadHelperThread,"dr"
@@ -10739,7 +10739,7 @@ _ZTV20wxThreadHelperThread:
 	.def	_ZN20wxThreadHelperThreadD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN20wxThreadHelperThreadD1Ev
 _ZN20wxThreadHelperThreadD1Ev:
-.LFB17256:
+.LFB17599:
 	.loc 9 663 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -10770,7 +10770,7 @@ _ZN20wxThreadHelperThreadD1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17256:
+.LFE17599:
 	.seh_endproc
 	.section	.text$_ZN20wxThreadHelperThreadD0Ev,"x"
 	.linkonce discard
@@ -10779,7 +10779,7 @@ _ZN20wxThreadHelperThreadD1Ev:
 	.def	_ZN20wxThreadHelperThreadD0Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN20wxThreadHelperThreadD0Ev
 _ZN20wxThreadHelperThreadD0Ev:
-.LFB17257:
+.LFB17600:
 	.loc 9 663 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -10807,7 +10807,7 @@ _ZN20wxThreadHelperThreadD0Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17257:
+.LFE17600:
 	.seh_endproc
 	.globl	_ZTI22T100ModuleCreateDialog
 	.section	.rdata$_ZTI22T100ModuleCreateDialog,"dr"
@@ -11180,7 +11180,7 @@ _ZTS8wxObject:
 	.def	__tcf_0;	.scl	3;	.type	32;	.endef
 	.seh_proc	__tcf_0
 __tcf_0:
-.LFB17275:
+.LFB17618:
 	.file 33 "C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream"
 	.loc 33 74 25
 	.cfi_startproc
@@ -11205,12 +11205,12 @@ __tcf_0:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17275:
+.LFE17618:
 	.seh_endproc
 	.def	__tcf_1;	.scl	3;	.type	32;	.endef
 	.seh_proc	__tcf_1
 __tcf_1:
-.LFB17276:
+.LFB17619:
 	.loc 31 6 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11234,12 +11234,12 @@ __tcf_1:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17276:
+.LFE17619:
 	.seh_endproc
 	.def	__tcf_2;	.scl	3;	.type	32;	.endef
 	.seh_proc	__tcf_2
 __tcf_2:
-.LFB17277:
+.LFB17620:
 	.loc 31 6 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11283,12 +11283,12 @@ __tcf_2:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE17277:
+.LFE17620:
 	.seh_endproc
 	.def	_Z41__static_initialization_and_destruction_0ii;	.scl	3;	.type	32;	.endef
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
-.LFB17274:
+.LFB17617:
 	.loc 31 71 1 is_stmt 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11392,8 +11392,8 @@ _Z41__static_initialization_and_destruction_0ii:
 	call	_ZN17wxEventTableEntryD1Ev	 #
 	jmp	.L426	 #
 .L425:
-	movq	%rdi, %rax	 # tmp99, D.220418
-	movq	%rax, %rcx	 # D.220418,
+	movq	%rdi, %rax	 # tmp99, D.226317
+	movq	%rax, %rcx	 # D.226317,
 .LEHB76:
 	call	_Unwind_Resume	 #
 	nop	
@@ -11413,28 +11413,28 @@ _Z41__static_initialization_and_destruction_0ii:
 	.cfi_def_cfa 7, -24
 	ret	
 	.cfi_endproc
-.LFE17274:
+.LFE17617:
 	.seh_handler	__gxx_personality_seh0, @unwind, @except
 	.seh_handlerdata
-.LLSDA17274:
+.LLSDA17617:
 	.byte	0xff
 	.byte	0xff
 	.byte	0x1
-	.uleb128 .LLSDACSE17274-.LLSDACSB17274
-.LLSDACSB17274:
-	.uleb128 .LEHB74-.LFB17274
+	.uleb128 .LLSDACSE17617-.LLSDACSB17617
+.LLSDACSB17617:
+	.uleb128 .LEHB74-.LFB17617
 	.uleb128 .LEHE74-.LEHB74
 	.uleb128 0
 	.uleb128 0
-	.uleb128 .LEHB75-.LFB17274
+	.uleb128 .LEHB75-.LFB17617
 	.uleb128 .LEHE75-.LEHB75
-	.uleb128 .L427-.LFB17274
+	.uleb128 .L427-.LFB17617
 	.uleb128 0
-	.uleb128 .LEHB76-.LFB17274
+	.uleb128 .LEHB76-.LFB17617
 	.uleb128 .LEHE76-.LEHB76
 	.uleb128 0
 	.uleb128 0
-.LLSDACSE17274:
+.LLSDACSE17617:
 	.text
 	.seh_endproc
 	.section	.text$_ZN8wxColourD1Ev,"x"
@@ -11444,7 +11444,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	.def	_ZN8wxColourD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN8wxColourD1Ev
 _ZN8wxColourD1Ev:
-.LFB17284:
+.LFB17627:
 	.loc 13 20 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11476,7 +11476,7 @@ _ZN8wxColourD1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17284:
+.LFE17627:
 	.seh_endproc
 	.section	.text$_ZN18wxControlContainerD1Ev,"x"
 	.linkonce discard
@@ -11485,7 +11485,7 @@ _ZN8wxColourD1Ev:
 	.def	_ZN18wxControlContainerD1Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN18wxControlContainerD1Ev
 _ZN18wxControlContainerD1Ev:
-.LFB17296:
+.LFB17639:
 	.loc 28 149 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11516,7 +11516,7 @@ _ZN18wxControlContainerD1Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17296:
+.LFE17639:
 	.seh_endproc
 	.section	.text$_ZN18wxControlContainerD0Ev,"x"
 	.linkonce discard
@@ -11525,7 +11525,7 @@ _ZN18wxControlContainerD1Ev:
 	.def	_ZN18wxControlContainerD0Ev;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN18wxControlContainerD0Ev
 _ZN18wxControlContainerD0Ev:
-.LFB17297:
+.LFB17640:
 	.loc 28 149 24
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11553,7 +11553,7 @@ _ZN18wxControlContainerD0Ev:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17297:
+.LFE17640:
 	.seh_endproc
 	.section	.text$_ZN19wxNavigationEnabledI16wxTopLevelWindowE8SetFocusEv,"x"
 	.linkonce discard
@@ -11562,7 +11562,7 @@ _ZN18wxControlContainerD0Ev:
 	.def	_ZN19wxNavigationEnabledI16wxTopLevelWindowE8SetFocusEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN19wxNavigationEnabledI16wxTopLevelWindowE8SetFocusEv
 _ZN19wxNavigationEnabledI16wxTopLevelWindowE8SetFocusEv:
-.LFB17298:
+.LFB17641:
 	.loc 28 244 42
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11604,7 +11604,7 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE8SetFocusEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17298:
+.LFE17641:
 	.seh_endproc
 	.section	.text$_ZNK19wxNavigationEnabledI16wxTopLevelWindowE12AcceptsFocusEv,"x"
 	.linkonce discard
@@ -11613,7 +11613,7 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE8SetFocusEv:
 	.def	_ZNK19wxNavigationEnabledI16wxTopLevelWindowE12AcceptsFocusEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK19wxNavigationEnabledI16wxTopLevelWindowE12AcceptsFocusEv
 _ZNK19wxNavigationEnabledI16wxTopLevelWindowE12AcceptsFocusEv:
-.LFB17299:
+.LFB17642:
 	.loc 28 203 42
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11641,7 +11641,7 @@ _ZNK19wxNavigationEnabledI16wxTopLevelWindowE12AcceptsFocusEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17299:
+.LFE17642:
 	.seh_endproc
 	.section	.text$_ZNK19wxNavigationEnabledI16wxTopLevelWindowE23AcceptsFocusRecursivelyEv,"x"
 	.linkonce discard
@@ -11650,7 +11650,7 @@ _ZNK19wxNavigationEnabledI16wxTopLevelWindowE12AcceptsFocusEv:
 	.def	_ZNK19wxNavigationEnabledI16wxTopLevelWindowE23AcceptsFocusRecursivelyEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK19wxNavigationEnabledI16wxTopLevelWindowE23AcceptsFocusRecursivelyEv
 _ZNK19wxNavigationEnabledI16wxTopLevelWindowE23AcceptsFocusRecursivelyEv:
-.LFB17300:
+.LFB17643:
 	.loc 28 208 42
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11678,7 +11678,7 @@ _ZNK19wxNavigationEnabledI16wxTopLevelWindowE23AcceptsFocusRecursivelyEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17300:
+.LFE17643:
 	.seh_endproc
 	.section	.text$_ZNK19wxNavigationEnabledI16wxTopLevelWindowE24AcceptsFocusFromKeyboardEv,"x"
 	.linkonce discard
@@ -11687,7 +11687,7 @@ _ZNK19wxNavigationEnabledI16wxTopLevelWindowE23AcceptsFocusRecursivelyEv:
 	.def	_ZNK19wxNavigationEnabledI16wxTopLevelWindowE24AcceptsFocusFromKeyboardEv;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZNK19wxNavigationEnabledI16wxTopLevelWindowE24AcceptsFocusFromKeyboardEv
 _ZNK19wxNavigationEnabledI16wxTopLevelWindowE24AcceptsFocusFromKeyboardEv:
-.LFB17301:
+.LFB17644:
 	.loc 28 213 42
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11715,7 +11715,7 @@ _ZNK19wxNavigationEnabledI16wxTopLevelWindowE24AcceptsFocusFromKeyboardEv:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17301:
+.LFE17644:
 	.seh_endproc
 	.section	.text$_ZN19wxNavigationEnabledI16wxTopLevelWindowE8AddChildEP12wxWindowBase,"x"
 	.linkonce discard
@@ -11724,7 +11724,7 @@ _ZNK19wxNavigationEnabledI16wxTopLevelWindowE24AcceptsFocusFromKeyboardEv:
 	.def	_ZN19wxNavigationEnabledI16wxTopLevelWindowE8AddChildEP12wxWindowBase;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN19wxNavigationEnabledI16wxTopLevelWindowE8AddChildEP12wxWindowBase
 _ZN19wxNavigationEnabledI16wxTopLevelWindowE8AddChildEP12wxWindowBase:
-.LFB17302:
+.LFB17645:
 	.loc 28 218 42
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11784,7 +11784,7 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE8AddChildEP12wxWindowBase:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17302:
+.LFE17645:
 	.seh_endproc
 	.section	.text$_ZN19wxNavigationEnabledI16wxTopLevelWindowE11RemoveChildEP12wxWindowBase,"x"
 	.linkonce discard
@@ -11793,7 +11793,7 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE8AddChildEP12wxWindowBase:
 	.def	_ZN19wxNavigationEnabledI16wxTopLevelWindowE11RemoveChildEP12wxWindowBase;	.scl	2;	.type	32;	.endef
 	.seh_proc	_ZN19wxNavigationEnabledI16wxTopLevelWindowE11RemoveChildEP12wxWindowBase
 _ZN19wxNavigationEnabledI16wxTopLevelWindowE11RemoveChildEP12wxWindowBase:
-.LFB17303:
+.LFB17646:
 	.loc 28 231 42
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11836,7 +11836,7 @@ _ZN19wxNavigationEnabledI16wxTopLevelWindowE11RemoveChildEP12wxWindowBase:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17303:
+.LFE17646:
 	.seh_endproc
 	.globl	_ZTS18wxControlContainer
 	.section	.rdata$_ZTS18wxControlContainer,"dr"
@@ -11870,7 +11870,7 @@ _ZTS11wxTrackable:
 	.def	_GLOBAL__sub_I__ZN22T100ModuleCreateDialog26ID_MODULE_NAME_STATIC_TEXTE;	.scl	3;	.type	32;	.endef
 	.seh_proc	_GLOBAL__sub_I__ZN22T100ModuleCreateDialog26ID_MODULE_NAME_STATIC_TEXTE
 _GLOBAL__sub_I__ZN22T100ModuleCreateDialog26ID_MODULE_NAME_STATIC_TEXTE:
-.LFB17365:
+.LFB17708:
 	.loc 31 71 1
 	.cfi_startproc
 	pushq	%rbp	 #
@@ -11895,7 +11895,7 @@ _GLOBAL__sub_I__ZN22T100ModuleCreateDialog26ID_MODULE_NAME_STATIC_TEXTE:
 	.cfi_def_cfa 7, 8
 	ret	
 	.cfi_endproc
-.LFE17365:
+.LFE17708:
 	.seh_endproc
 	.section	.ctors,"w"
 	.align 8
@@ -82905,15 +82905,15 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x4e0e6
 	.uleb128 0x97
 	.ascii "_GLOBAL__sub_I__ZN22T100ModuleCreateDialog26ID_MODULE_NAME_STATIC_TEXTE\0"
-	.quad	.LFB17365
-	.quad	.LFE17365-.LFB17365
+	.quad	.LFB17708
+	.quad	.LFE17708-.LFB17708
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x21
 	.long	0x4e5b7
 	.long	0x4ff79
-	.quad	.LFB17303
-	.quad	.LFE17303-.LFB17303
+	.quad	.LFB17646
+	.quad	.LFE17646-.LFB17646
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4ff97
@@ -82936,8 +82936,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x21
 	.long	0x4e548
 	.long	0x4ffb6
-	.quad	.LFB17302
-	.quad	.LFE17302-.LFB17302
+	.quad	.LFB17645
+	.quad	.LFE17645-.LFB17645
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x4ffd4
@@ -82960,8 +82960,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x21
 	.long	0x4e4db
 	.long	0x4fff3
-	.quad	.LFB17301
-	.quad	.LFE17301-.LFB17301
+	.quad	.LFB17644
+	.quad	.LFE17644-.LFB17644
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50000
@@ -82975,8 +82975,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x21
 	.long	0x4e46f
 	.long	0x5001f
-	.quad	.LFB17300
-	.quad	.LFE17300-.LFB17300
+	.quad	.LFB17643
+	.quad	.LFE17643-.LFB17643
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x5002c
@@ -82990,8 +82990,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x21
 	.long	0x4e40e
 	.long	0x5004b
-	.quad	.LFB17299
-	.quad	.LFE17299-.LFB17299
+	.quad	.LFB17642
+	.quad	.LFE17642-.LFB17642
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50058
@@ -83005,8 +83005,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x21
 	.long	0x4e62d
 	.long	0x50077
-	.quad	.LFB17298
-	.quad	.LFE17298-.LFB17298
+	.quad	.LFB17641
+	.quad	.LFE17641-.LFB17641
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50084
@@ -83036,8 +83036,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50084
 	.ascii "_ZN18wxControlContainerD0Ev\0"
 	.long	0x500e3
-	.quad	.LFB17297
-	.quad	.LFE17297-.LFB17297
+	.quad	.LFB17640
+	.quad	.LFE17640-.LFB17640
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x500ec
@@ -83051,8 +83051,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50084
 	.ascii "_ZN18wxControlContainerD1Ev\0"
 	.long	0x50127
-	.quad	.LFB17296
-	.quad	.LFE17296-.LFB17296
+	.quad	.LFB17639
+	.quad	.LFE17639-.LFB17639
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50130
@@ -83089,8 +83089,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50130
 	.ascii "_ZN8wxColourD1Ev\0"
 	.long	0x501a8
-	.quad	.LFB17284
-	.quad	.LFE17284-.LFB17284
+	.quad	.LFB17627
+	.quad	.LFE17627-.LFB17627
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x501b1
@@ -83102,8 +83102,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x101
 	.ascii "__static_initialization_and_destruction_0\0"
-	.quad	.LFB17274
-	.quad	.LFE17274-.LFB17274
+	.quad	.LFB17617
+	.quad	.LFE17617-.LFB17617
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50224
@@ -83128,20 +83128,20 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x97
 	.ascii "__tcf_2\0"
-	.quad	.LFB17277
-	.quad	.LFE17277-.LFB17277
+	.quad	.LFB17620
+	.quad	.LFE17620-.LFB17620
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x97
 	.ascii "__tcf_1\0"
-	.quad	.LFB17276
-	.quad	.LFE17276-.LFB17276
+	.quad	.LFB17619
+	.quad	.LFE17619-.LFB17619
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x97
 	.ascii "__tcf_0\0"
-	.quad	.LFB17275
-	.quad	.LFE17275-.LFB17275
+	.quad	.LFB17618
+	.quad	.LFE17618-.LFB17618
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x74
@@ -83163,8 +83163,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50278
 	.ascii "_ZN20wxThreadHelperThreadD0Ev\0"
 	.long	0x502da
-	.quad	.LFB17257
-	.quad	.LFE17257-.LFB17257
+	.quad	.LFB17600
+	.quad	.LFE17600-.LFB17600
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x502e3
@@ -83178,8 +83178,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50278
 	.ascii "_ZN20wxThreadHelperThreadD1Ev\0"
 	.long	0x50320
-	.quad	.LFB17256
-	.quad	.LFE17256-.LFB17256
+	.quad	.LFB17599
+	.quad	.LFE17599-.LFB17599
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50329
@@ -83208,8 +83208,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50329
 	.ascii "_ZN20wxObjectEventFunctorD0Ev\0"
 	.long	0x5038a
-	.quad	.LFB17245
-	.quad	.LFE17245-.LFB17245
+	.quad	.LFB17588
+	.quad	.LFE17588-.LFB17588
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50393
@@ -83223,8 +83223,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50329
 	.ascii "_ZN20wxObjectEventFunctorD1Ev\0"
 	.long	0x503d0
-	.quad	.LFB17244
-	.quad	.LFE17244-.LFB17244
+	.quad	.LFB17587
+	.quad	.LFE17587-.LFB17587
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x503d9
@@ -83253,8 +83253,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x503d9
 	.ascii "_ZN15wxSizerItemListD0Ev\0"
 	.long	0x50436
-	.quad	.LFB17233
-	.quad	.LFE17233-.LFB17233
+	.quad	.LFB17576
+	.quad	.LFE17576-.LFB17576
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x5043f
@@ -83268,8 +83268,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x503d9
 	.ascii "_ZN15wxSizerItemListD1Ev\0"
 	.long	0x50477
-	.quad	.LFB17232
-	.quad	.LFE17232-.LFB17232
+	.quad	.LFB17575
+	.quad	.LFE17575-.LFB17575
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50480
@@ -83574,8 +83574,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1b
 	.long	0xc436
 	.long	0x5079d
-	.quad	.LFB16969
-	.quad	.LFE16969-.LFB16969
+	.quad	.LFB17312
+	.quad	.LFE17312-.LFB17312
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x507aa
@@ -83622,8 +83622,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x21
 	.long	0xc548
 	.long	0x50817
-	.quad	.LFB16951
-	.quad	.LFE16951-.LFB16951
+	.quad	.LFB17294
+	.quad	.LFE17294-.LFB17294
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50824
@@ -83778,15 +83778,15 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0
 	.uleb128 0x102
 	.long	0xc50c
-	.quad	.LFB16851
-	.quad	.LFE16851-.LFB16851
+	.quad	.LFB17194
+	.quad	.LFE17194-.LFB17194
 	.uleb128 0x1
 	.byte	0x9c
 	.uleb128 0x21
 	.long	0xc587
 	.long	0x50a98
-	.quad	.LFB16842
-	.quad	.LFE16842-.LFB16842
+	.quad	.LFB17185
+	.quad	.LFE17185-.LFB17185
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50aa5
@@ -83816,8 +83816,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50aa5
 	.ascii "_ZN22wxScopedCharTypeBufferIwE4DataD1Ev\0"
 	.long	0x50b10
-	.quad	.LFB16845
-	.quad	.LFE16845-.LFB16845
+	.quad	.LFB17188
+	.quad	.LFE17188-.LFB17188
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50b19
@@ -83830,8 +83830,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1b
 	.long	0x3b604
 	.long	0x50b38
-	.quad	.LFB16831
-	.quad	.LFE16831-.LFB16831
+	.quad	.LFB17174
+	.quad	.LFE17174-.LFB17174
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50b45
@@ -83849,8 +83849,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.byte	0x1
 	.ascii "_Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_\0"
 	.long	0x43c06
-	.quad	.LFB16797
-	.quad	.LFE16797-.LFB16797
+	.quad	.LFB17080
+	.quad	.LFE17080-.LFB17080
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50bee
@@ -83888,8 +83888,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x21
 	.long	0xc2a0
 	.long	0x50c0d
-	.quad	.LFB16519
-	.quad	.LFE16519-.LFB16519
+	.quad	.LFB16802
+	.quad	.LFE16802-.LFB16802
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50c1a
@@ -83936,8 +83936,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x21
 	.long	0xc2e2
 	.long	0x50cc9
-	.quad	.LFB16512
-	.quad	.LFE16512-.LFB16512
+	.quad	.LFB16795
+	.quad	.LFE16795-.LFB16795
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50cd6
@@ -83986,8 +83986,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50d53
 	.ascii "_ZN8wxString15ConvertedBufferIcEC1Ev\0"
 	.long	0x50daf
-	.quad	.LFB16508
-	.quad	.LFE16508-.LFB16508
+	.quad	.LFB16791
+	.quad	.LFE16791-.LFB16791
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50db8
@@ -84030,8 +84030,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50e1d
 	.ascii "_ZN8wxString15ConvertedBufferIcED1Ev\0"
 	.long	0x50e82
-	.quad	.LFB16502
-	.quad	.LFE16502-.LFB16502
+	.quad	.LFB16785
+	.quad	.LFE16785-.LFB16785
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50e8b
@@ -84060,8 +84060,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x50e8b
 	.ascii "_ZN22wxScopedCharTypeBufferIwEC1ERKS0_\0"
 	.long	0x50ef5
-	.quad	.LFB16433
-	.quad	.LFE16433-.LFB16433
+	.quad	.LFB16716
+	.quad	.LFE16716-.LFB16716
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x50f06
@@ -84172,8 +84172,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x5106c
 	.ascii "_ZN22wxScopedCharTypeBufferIwED1Ev\0"
 	.long	0x510cf
-	.quad	.LFB16179
-	.quad	.LFE16179-.LFB16179
+	.quad	.LFB16462
+	.quad	.LFE16462-.LFB16462
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x510d8
@@ -84186,8 +84186,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x21
 	.long	0x4db9f
 	.long	0x510f7
-	.quad	.LFB16158
-	.quad	.LFE16158-.LFB16158
+	.quad	.LFB16441
+	.quad	.LFE16441-.LFB16441
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x51114
@@ -84210,8 +84210,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1b
 	.long	0x4dad7
 	.long	0x51133
-	.quad	.LFB16157
-	.quad	.LFE16157-.LFB16157
+	.quad	.LFB16440
+	.quad	.LFE16440-.LFB16440
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x51140
@@ -84225,8 +84225,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1b
 	.long	0x4dc41
 	.long	0x5115f
-	.quad	.LFB16156
-	.quad	.LFE16156-.LFB16156
+	.quad	.LFB16439
+	.quad	.LFE16439-.LFB16439
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x5116c
@@ -84240,8 +84240,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x21
 	.long	0x4dc07
 	.long	0x5118b
-	.quad	.LFB16155
-	.quad	.LFE16155-.LFB16155
+	.quad	.LFB16438
+	.quad	.LFE16438-.LFB16438
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x511bd
@@ -84313,8 +84313,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x51217
 	.ascii "_ZN22T100ModuleCreateDialogD0Ev\0"
 	.long	0x51277
-	.quad	.LFB16154
-	.quad	.LFE16154-.LFB16154
+	.quad	.LFB16437
+	.quad	.LFE16437-.LFB16437
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x51280
@@ -84328,8 +84328,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x51217
 	.ascii "_ZN22T100ModuleCreateDialogD2Ev\0"
 	.long	0x512bf
-	.quad	.LFB16152
-	.quad	.LFE16152-.LFB16152
+	.quad	.LFB16435
+	.quad	.LFE16435-.LFB16435
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x512c8
@@ -84394,8 +84394,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x512c8
 	.ascii "_ZN22T100ModuleCreateDialogC2EP8wxWindowiRK8wxStringRK7wxPointRK6wxSizelS4_\0"
 	.long	0x513a0
-	.quad	.LFB16149
-	.quad	.LFE16149-.LFB16149
+	.quad	.LFB16432
+	.quad	.LFE16432-.LFB16432
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x513e1
@@ -84459,8 +84459,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x513e1
 	.ascii "_ZN17wxEventTableEntryD1Ev\0"
 	.long	0x51440
-	.quad	.LFB16144
-	.quad	.LFE16144-.LFB16144
+	.quad	.LFB16427
+	.quad	.LFE16427-.LFB16427
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x51449
@@ -84473,8 +84473,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1b
 	.long	0x4dd2a
 	.long	0x51468
-	.quad	.LFB16141
-	.quad	.LFE16141-.LFB16141
+	.quad	.LFB16424
+	.quad	.LFE16424-.LFB16424
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x51475
@@ -84488,8 +84488,8 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x1b
 	.long	0x4dcb4
 	.long	0x51494
-	.quad	.LFB16140
-	.quad	.LFE16140-.LFB16140
+	.quad	.LFB16423
+	.quad	.LFE16423-.LFB16423
 	.uleb128 0x1
 	.byte	0x9c
 	.long	0x514a1
@@ -95094,64 +95094,64 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE15781-.LFB15781
 	.quad	.LFB15783
 	.quad	.LFE15783-.LFB15783
-	.quad	.LFB16144
-	.quad	.LFE16144-.LFB16144
-	.quad	.LFB16179
-	.quad	.LFE16179-.LFB16179
-	.quad	.LFB16433
-	.quad	.LFE16433-.LFB16433
-	.quad	.LFB16502
-	.quad	.LFE16502-.LFB16502
-	.quad	.LFB16508
-	.quad	.LFE16508-.LFB16508
-	.quad	.LFB16512
-	.quad	.LFE16512-.LFB16512
-	.quad	.LFB16519
-	.quad	.LFE16519-.LFB16519
-	.quad	.LFB16797
-	.quad	.LFE16797-.LFB16797
-	.quad	.LFB16831
-	.quad	.LFE16831-.LFB16831
-	.quad	.LFB16845
-	.quad	.LFE16845-.LFB16845
-	.quad	.LFB16842
-	.quad	.LFE16842-.LFB16842
-	.quad	.LFB16851
-	.quad	.LFE16851-.LFB16851
-	.quad	.LFB16951
-	.quad	.LFE16951-.LFB16951
-	.quad	.LFB16969
-	.quad	.LFE16969-.LFB16969
-	.quad	.LFB17232
-	.quad	.LFE17232-.LFB17232
-	.quad	.LFB17233
-	.quad	.LFE17233-.LFB17233
-	.quad	.LFB17244
-	.quad	.LFE17244-.LFB17244
-	.quad	.LFB17245
-	.quad	.LFE17245-.LFB17245
-	.quad	.LFB17256
-	.quad	.LFE17256-.LFB17256
-	.quad	.LFB17257
-	.quad	.LFE17257-.LFB17257
-	.quad	.LFB17284
-	.quad	.LFE17284-.LFB17284
-	.quad	.LFB17296
-	.quad	.LFE17296-.LFB17296
-	.quad	.LFB17297
-	.quad	.LFE17297-.LFB17297
-	.quad	.LFB17298
-	.quad	.LFE17298-.LFB17298
-	.quad	.LFB17299
-	.quad	.LFE17299-.LFB17299
-	.quad	.LFB17300
-	.quad	.LFE17300-.LFB17300
-	.quad	.LFB17301
-	.quad	.LFE17301-.LFB17301
-	.quad	.LFB17302
-	.quad	.LFE17302-.LFB17302
-	.quad	.LFB17303
-	.quad	.LFE17303-.LFB17303
+	.quad	.LFB16427
+	.quad	.LFE16427-.LFB16427
+	.quad	.LFB16462
+	.quad	.LFE16462-.LFB16462
+	.quad	.LFB16716
+	.quad	.LFE16716-.LFB16716
+	.quad	.LFB16785
+	.quad	.LFE16785-.LFB16785
+	.quad	.LFB16791
+	.quad	.LFE16791-.LFB16791
+	.quad	.LFB16795
+	.quad	.LFE16795-.LFB16795
+	.quad	.LFB16802
+	.quad	.LFE16802-.LFB16802
+	.quad	.LFB17080
+	.quad	.LFE17080-.LFB17080
+	.quad	.LFB17174
+	.quad	.LFE17174-.LFB17174
+	.quad	.LFB17188
+	.quad	.LFE17188-.LFB17188
+	.quad	.LFB17185
+	.quad	.LFE17185-.LFB17185
+	.quad	.LFB17194
+	.quad	.LFE17194-.LFB17194
+	.quad	.LFB17294
+	.quad	.LFE17294-.LFB17294
+	.quad	.LFB17312
+	.quad	.LFE17312-.LFB17312
+	.quad	.LFB17575
+	.quad	.LFE17575-.LFB17575
+	.quad	.LFB17576
+	.quad	.LFE17576-.LFB17576
+	.quad	.LFB17587
+	.quad	.LFE17587-.LFB17587
+	.quad	.LFB17588
+	.quad	.LFE17588-.LFB17588
+	.quad	.LFB17599
+	.quad	.LFE17599-.LFB17599
+	.quad	.LFB17600
+	.quad	.LFE17600-.LFB17600
+	.quad	.LFB17627
+	.quad	.LFE17627-.LFB17627
+	.quad	.LFB17639
+	.quad	.LFE17639-.LFB17639
+	.quad	.LFB17640
+	.quad	.LFE17640-.LFB17640
+	.quad	.LFB17641
+	.quad	.LFE17641-.LFB17641
+	.quad	.LFB17642
+	.quad	.LFE17642-.LFB17642
+	.quad	.LFB17643
+	.quad	.LFE17643-.LFB17643
+	.quad	.LFB17644
+	.quad	.LFE17644-.LFB17644
+	.quad	.LFB17645
+	.quad	.LFE17645-.LFB17645
+	.quad	.LFB17646
+	.quad	.LFE17646-.LFB17646
 	.quad	0
 	.quad	0
 	.section	.debug_ranges,"dr"
@@ -95482,64 +95482,64 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.quad	.LFE15781
 	.quad	.LFB15783
 	.quad	.LFE15783
-	.quad	.LFB16144
-	.quad	.LFE16144
-	.quad	.LFB16179
-	.quad	.LFE16179
-	.quad	.LFB16433
-	.quad	.LFE16433
-	.quad	.LFB16502
-	.quad	.LFE16502
-	.quad	.LFB16508
-	.quad	.LFE16508
-	.quad	.LFB16512
-	.quad	.LFE16512
-	.quad	.LFB16519
-	.quad	.LFE16519
-	.quad	.LFB16797
-	.quad	.LFE16797
-	.quad	.LFB16831
-	.quad	.LFE16831
-	.quad	.LFB16845
-	.quad	.LFE16845
-	.quad	.LFB16842
-	.quad	.LFE16842
-	.quad	.LFB16851
-	.quad	.LFE16851
-	.quad	.LFB16951
-	.quad	.LFE16951
-	.quad	.LFB16969
-	.quad	.LFE16969
-	.quad	.LFB17232
-	.quad	.LFE17232
-	.quad	.LFB17233
-	.quad	.LFE17233
-	.quad	.LFB17244
-	.quad	.LFE17244
-	.quad	.LFB17245
-	.quad	.LFE17245
-	.quad	.LFB17256
-	.quad	.LFE17256
-	.quad	.LFB17257
-	.quad	.LFE17257
-	.quad	.LFB17284
-	.quad	.LFE17284
-	.quad	.LFB17296
-	.quad	.LFE17296
-	.quad	.LFB17297
-	.quad	.LFE17297
-	.quad	.LFB17298
-	.quad	.LFE17298
-	.quad	.LFB17299
-	.quad	.LFE17299
-	.quad	.LFB17300
-	.quad	.LFE17300
-	.quad	.LFB17301
-	.quad	.LFE17301
-	.quad	.LFB17302
-	.quad	.LFE17302
-	.quad	.LFB17303
-	.quad	.LFE17303
+	.quad	.LFB16427
+	.quad	.LFE16427
+	.quad	.LFB16462
+	.quad	.LFE16462
+	.quad	.LFB16716
+	.quad	.LFE16716
+	.quad	.LFB16785
+	.quad	.LFE16785
+	.quad	.LFB16791
+	.quad	.LFE16791
+	.quad	.LFB16795
+	.quad	.LFE16795
+	.quad	.LFB16802
+	.quad	.LFE16802
+	.quad	.LFB17080
+	.quad	.LFE17080
+	.quad	.LFB17174
+	.quad	.LFE17174
+	.quad	.LFB17188
+	.quad	.LFE17188
+	.quad	.LFB17185
+	.quad	.LFE17185
+	.quad	.LFB17194
+	.quad	.LFE17194
+	.quad	.LFB17294
+	.quad	.LFE17294
+	.quad	.LFB17312
+	.quad	.LFE17312
+	.quad	.LFB17575
+	.quad	.LFE17575
+	.quad	.LFB17576
+	.quad	.LFE17576
+	.quad	.LFB17587
+	.quad	.LFE17587
+	.quad	.LFB17588
+	.quad	.LFE17588
+	.quad	.LFB17599
+	.quad	.LFE17599
+	.quad	.LFB17600
+	.quad	.LFE17600
+	.quad	.LFB17627
+	.quad	.LFE17627
+	.quad	.LFB17639
+	.quad	.LFE17639
+	.quad	.LFB17640
+	.quad	.LFE17640
+	.quad	.LFB17641
+	.quad	.LFE17641
+	.quad	.LFB17642
+	.quad	.LFE17642
+	.quad	.LFB17643
+	.quad	.LFE17643
+	.quad	.LFB17644
+	.quad	.LFE17644
+	.quad	.LFB17645
+	.quad	.LFE17645
+	.quad	.LFB17646
+	.quad	.LFE17646
 	.quad	0
 	.quad	0
 	.section	.debug_line,"dr"

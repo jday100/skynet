@@ -2,6 +2,7 @@
 #define T100PROJECTINFO_H
 
 #include <atomic>
+#include <wx/treectrl.h>
 #include "T100FileInfo.h"
 #include "T100FolderInfo.h"
 
@@ -25,6 +26,15 @@ class T100ProjectInfo
         T100VOID                    SetFileName(const T100WSTRING& path);
         const T100WSTRING&          GetFileName();
 
+        T100VOID                    SetBuildTreeId(wxTreeItemId);
+        wxTreeItemId                GetBuildTreeId();
+        T100VOID                    SetCodeTreeId(wxTreeItemId);
+        wxTreeItemId                GetCodeTreeId();
+        T100VOID                    SetIncludeTreeId(wxTreeItemId);
+        wxTreeItemId                GetIncludeTreeId();
+        T100VOID                    SetSourceTreeId(wxTreeItemId);
+        wxTreeItemId                GetSourceTreeId();
+
         T100VOID                    SetBuildPath(const T100WSTRING& path);
         const T100WSTRING&          GetBuildPath();
         T100VOID                    SetCodePath(const T100WSTRING& path);
@@ -42,6 +52,11 @@ class T100ProjectInfo
         T100WSTRING                 m_label;
         T100WSTRING                 m_path;
         T100WSTRING                 m_filename;
+
+        wxTreeItemId                m_treeIdBuild;
+        wxTreeItemId                m_treeIdCode;
+        wxTreeItemId                m_treeIdInclude;
+        wxTreeItemId                m_treeIdSource;
 
         T100WSTRING                 m_pathBuild     = L"build";
         T100WSTRING                 m_pathCode      = L"source";
