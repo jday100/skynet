@@ -116,6 +116,10 @@ T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
     folder.List(folderNames, fileNames);
 
     for(const T100WSTRING& item : folderNames){
+        if(item == info->GetBuildPath()){
+            continue;
+        }
+
         T100WxFolderInfo        thisFolder;
 
         thisFolder.SetLabel(item);

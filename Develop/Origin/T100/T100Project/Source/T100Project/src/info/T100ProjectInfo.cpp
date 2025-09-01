@@ -62,6 +62,46 @@ const T100WSTRING& T100ProjectInfo::GetFileName()
     return m_filename;
 }
 
+T100VOID T100ProjectInfo::SetBuildPath(const T100WSTRING& path)
+{
+    m_pathBuild     = path;
+}
+
+const T100WSTRING& T100ProjectInfo::GetBuildPath()
+{
+    return m_pathBuild;
+}
+
+T100VOID T100ProjectInfo::SetCodePath(const T100WSTRING& path)
+{
+    m_pathCode      = path;
+}
+
+const T100WSTRING& T100ProjectInfo::GetCodePath()
+{
+    return m_pathCode;
+}
+
+T100VOID T100ProjectInfo::SetIncludePath(const T100WSTRING& path)
+{
+    m_pathInclude   = path;
+}
+
+const T100WSTRING& T100ProjectInfo::GetIncludePath()
+{
+    return m_pathInclude;
+}
+
+T100VOID T100ProjectInfo::SetSourcePath(const T100WSTRING& path)
+{
+    m_pathSource    = path;
+}
+
+const T100WSTRING& T100ProjectInfo::GetSourcePath()
+{
+    return m_pathSource;
+}
+
 T100FILE_INFO_VECTOR& T100ProjectInfo::GetFiles()
 {
     return m_files;
