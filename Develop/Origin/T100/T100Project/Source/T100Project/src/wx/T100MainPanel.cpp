@@ -86,6 +86,7 @@ T100BOOL T100MainPanel::Open(T100FileInfo* info)
     }
 
     if(AddPage(pack, info->GetLabel(), T100TRUE)){
+        T100INT     index   = FindPage(pack);
         m_current                   = pack;
         m_packs[info->GetPath()]    = pack;
     }else{
@@ -199,7 +200,9 @@ T100BOOL T100MainPanel::FileModified(const T100WSTRING& path)
         return T100FALSE;
     }
 
-    SetPageText(pack->GetIndex(), L"*" + pack->GetLabel());
+    T100INT     index       = FindPage(pack);
+
+    T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
 
     return T100TRUE;
 }
