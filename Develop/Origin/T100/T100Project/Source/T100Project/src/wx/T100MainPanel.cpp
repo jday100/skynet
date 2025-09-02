@@ -51,25 +51,9 @@ T100BOOL T100MainPanel::Open(T100FileInfo* info)
     if(pack){
         pack->SetLabel(info->GetLabel());
 
+        wxFont font(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, T100ProjectConfig::T100PROJECT_EDITOR_FONT, wxFONTENCODING_DEFAULT);
+        pack->GetEditor()->StyleSetFont(wxSTC_STYLE_DEFAULT, font);
 
-        /*
-        pack->GetEditor()->SetFont(wxFont(T100ProjectConfig::T100PROJECT_EDITOR_FONT));
-        wxFont      font    = pack->GetEditor()->GetFont();
-        font.SetPixelSize(wxSize(100, 100));
-        font.SetPointSize(100);
-        pack->GetEditor()->SetFont(font);
-        pack->GetEditor()->Refresh();
-        */
-
-        wxFont      font    = wxSystemSettings::GetFont(wxSystemFont::wxSYS_SYSTEM_FONT);
-
-        font.SetPixelSize(wxSize(100, 100));
-        font.SetPointSize(100);
-        pack->GetEditor()->SetFont(font);
-        pack->GetEditor()->Refresh();
-
-        wxFont TextCtrl1Font(16,wxFONTFAMILY_DEFAULT,wxFONTSTYLE_NORMAL,wxFONTWEIGHT_NORMAL,false,_T("MV Boli"),wxFONTENCODING_DEFAULT);
-        pack->GetEditor()->SetFont(TextCtrl1Font);
     }else{
         return T100FALSE;
     }
