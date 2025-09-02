@@ -1324,6 +1324,7 @@ T100VOID T100ProjectTree::AppendFile(wxTreeItemId parent, T100FileInfo* info)
 
 T100VOID T100ProjectTree::AppendFolder(wxTreeItemId parent, T100FolderInfo* info)
 {
+    T100DebugTools::Print(L"T100ProjectTree::AppendFolder()...");
     T100FolderData*     data    = T100NEW T100FolderData(info);
     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
 
@@ -1374,12 +1375,14 @@ T100VOID T100ProjectTree::OnItemChanged(wxTreeEvent& event)
 
 T100VOID T100ProjectTree::OnItemActivated(wxTreeEvent& event)
 {
+    T100DebugTools::Print(L"T100ProjectTree::OnItemActivated(wxTreeEvent&)...");
     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
 
     if(!data){
         return;
     }
 
+    T100DebugTools::Print(L"T100ProjectTree::OnItemExpanding(wxTreeEvent&)...");
     data->OnItemActivated();
 
     event.Skip();
@@ -1387,12 +1390,13 @@ T100VOID T100ProjectTree::OnItemActivated(wxTreeEvent& event)
 
 T100VOID T100ProjectTree::OnItemExpanding(wxTreeEvent& event)
 {
+    T100DebugTools::Print(L"T100ProjectTree::OnItemExpanding(wxTreeEvent&)...");
     T100TreeItemData*       data        = dynamic_cast<T100TreeItemData*>(event.GetClientObject());
 
     if(!data){
         return;
     }
-
+    T100DebugTools::Print(L"T100ProjectTree::OnItemExpanding(wxTreeEvent&)...");
     data->OnItemExpanding();
 }
 

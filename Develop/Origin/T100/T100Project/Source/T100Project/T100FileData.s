@@ -15,7 +15,7 @@
  # -I include\serve -I include\common -I include\logic -I include\info
  # -I include\view\wizard\project -I include\store -I include\view\dialog
  # -I include\library\storage\file\text -I include\base
- # -I include\library\shell -I include\view\pack
+ # -I include\library\shell -I include\view\pack -I include\library\debug
  # -I C:\zoo\bin\llvm-mingw-20240518-msvcrt-x86_64\include
  # -iprefix C:/zoo/bin/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/
  # -D_MT -D_REENTRANT -D __GNUWIN32__ -D __WXMSW__ -D WXUSINGDLL
@@ -139,7 +139,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 1 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.151612
+	setne	%al	 #, D.151608
 .LBE5:
 .LBE4:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -195,7 +195,7 @@ _ZNKSt9type_info4nameEv:
 	movq	8(%rax), %rax	 # this_6(D)->__name, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 31 discriminator 1
-	addq	$1, %rax	 #, iftmp.7_4
+	addq	$1, %rax	 #, iftmp.6_4
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 46 discriminator 1
 	jmp	.L9	 #
@@ -203,7 +203,7 @@ _ZNKSt9type_info4nameEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 31 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	8(%rax), %rax	 # this_6(D)->__name, iftmp.7_4
+	movq	8(%rax), %rax	 # this_6(D)->__name, iftmp.6_4
 .L9:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 54 discriminator 5
@@ -778,7 +778,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 	call	_ZN16wxTypeIdentifiereqERKS_	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 8 251 9
-	testb	%al, %al	 # retval.5_28
+	testb	%al, %al	 # retval.4_28
 	je	.L25	 #,
 .LBB13:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:253:             const wxObjectEventFunctor &other =
@@ -846,14 +846,14 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 .L29:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 8 262 74 discriminator 9
-	movl	$1, %eax	 #, iftmp.6_19
+	movl	$1, %eax	 #, iftmp.5_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 8 263 78 discriminator 9
 	jmp	.L31	 #
 .L28:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 8 262 74 discriminator 8
-	movl	$0, %eax	 #, iftmp.6_19
+	movl	$0, %eax	 #, iftmp.5_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 8 263 78 discriminator 8
 	jmp	.L31	 #
@@ -861,7 +861,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 .LBE13:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:266:             return false;
 	.loc 8 266 20
-	movl	$0, %eax	 #, iftmp.6_19
+	movl	$0, %eax	 #, iftmp.5_19
 .L31:
 .LBE12:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:267:     }
@@ -978,16 +978,16 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 8 3776 50 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp106
-	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.8_17
+	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.7_17
 	jmp	.L38	 #
 .L37:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 8 3776 50 discriminator 2
-	movq	24(%rbp), %rax	 # handler, iftmp.8_17
+	movq	24(%rbp), %rax	 # handler, iftmp.7_17
 .L38:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 8 3776 26 is_stmt 1 discriminator 4
-	movq	%rax, -8(%rbp)	 # iftmp.8_17, realHandler
+	movq	%rax, -8(%rbp)	 # iftmp.7_17, realHandler
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 8 3778 35 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp107
@@ -1016,18 +1016,18 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
 	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, _12
 	subq	$1, %rax	 #, _14
 	addq	%rdx, %rax	 # _11, _16
-	movq	(%rax), %rax	 # *_16, iftmp.9_18
+	movq	(%rax), %rax	 # *_16, iftmp.8_18
 	jmp	.L40	 #
 .L39:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 8 3778 35 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp113
-	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.9_18
+	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.8_18
 .L40:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 8 3778 29 is_stmt 1 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp114
-	call	*%rax	 # iftmp.9_18
+	call	*%rax	 # iftmp.8_18
 .LVL1:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3779: }
 	.loc 8 3779 1 discriminator 4
@@ -1248,8 +1248,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.151618
-	movq	%rax, %rcx	 # D.151618,
+	movq	%rsi, %rax	 # tmp98, D.151614
+	movq	%rax, %rcx	 # D.151614,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -1373,8 +1373,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.151619
-	movq	%rax, %rcx	 # D.151619,
+	movq	%rbx, %rax	 # tmp106, D.151615
+	movq	%rax, %rcx	 # D.151615,
 .LEHB6:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1569,8 +1569,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.151621
-	movq	%rax, %rcx	 # D.151621,
+	movq	%rbx, %rax	 # tmp98, D.151617
+	movq	%rax, %rcx	 # D.151617,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1961,8 +1961,8 @@ _ZN12T100FileData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.151623
-	movq	%rax, %rcx	 # D.151623,
+	movq	%rsi, %rax	 # tmp93, D.151619
+	movq	%rax, %rcx	 # D.151619,
 .LEHB13:
 	call	_Unwind_Resume	 #
 .LEHE13:
@@ -2090,29 +2090,11 @@ _ZN12T100FileData15OnItemExpandingEv:
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
-	subq	$32, %rsp	 #,
-	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:56:     if(m_opened){
-	.loc 11 56 16
-	movq	16(%rbp), %rax	 # this, tmp89
-	addq	$16, %rax	 #, _1
-	movq	%rax, %rcx	 # _1,
-	call	_ZNKSt6atomicIbEcvbEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:56:     if(m_opened){
-	.loc 11 56 5
-	testb	%al, %al	 # retval.4_6
-	jne	.L82	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:59:         T100ProjectInvoking::OnFileOpen(this);
-	.loc 11 59 40
-	movq	16(%rbp), %rcx	 # this,
-	call	_ZN19T100ProjectInvoking10OnFileOpenEP12T100FileData	 #
-.L82:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:61: }
-	.loc 11 61 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:57: }
+	.loc 11 57 1
 	nop	
-	addq	$32, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -2686,7 +2668,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB13303:
-	.loc 11 61 1
+	.loc 11 57 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2700,23 +2682,23 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:61: }
-	.loc 11 61 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:57: }
+	.loc 11 57 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
-	jne	.L94	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:61: }
-	.loc 11 61 1 is_stmt 0 discriminator 1
+	jne	.L92	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:57: }
+	.loc 11 57 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
-	jne	.L94	 #,
+	jne	.L92	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 12 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
 	call	_ZNSt8ios_base4InitC1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
-.L94:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:61: }
-	.loc 11 61 1
+.L92:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:57: }
+	.loc 11 57 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -2730,7 +2712,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_proc	_GLOBAL__sub_I__ZN12T100FileDataC2Ev
 _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 .LFB13379:
-	.loc 11 61 1
+	.loc 11 57 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -2742,8 +2724,8 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:61: }
-	.loc 11 61 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100FileData.cpp:57: }
+	.loc 11 57 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -57891,7 +57873,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.uleb128 0x4e
 	.ascii "__initialize_p\0"
 	.byte	0xb
-	.byte	0x3d
+	.byte	0x39
 	.byte	0x1
 	.long	0xfe3b
 	.uleb128 0x2
@@ -57900,7 +57882,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.uleb128 0x4e
 	.ascii "__priority\0"
 	.byte	0xb
-	.byte	0x3d
+	.byte	0x39
 	.byte	0x1
 	.long	0xfe3b
 	.uleb128 0x2
@@ -58318,7 +58300,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x54
 	.long	0x3beb8
 	.long	0x3d3ec
 	.quad	.LFB12154
@@ -58333,7 +58315,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x50
 	.long	0x3be6c
 	.long	0x3d418
 	.quad	.LFB12153
@@ -58348,7 +58330,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x54
 	.long	0x3be27
 	.long	0x3d444
 	.quad	.LFB12152
@@ -58372,7 +58354,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 -40
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x50
 	.long	0x3bde3
 	.long	0x3d480
 	.quad	.LFB12151
@@ -58387,7 +58369,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x50
 	.long	0x3bd90
 	.long	0x3d4ac
 	.quad	.LFB12150
@@ -58655,7 +58637,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x54
 	.long	0x3948b
 	.long	0x3d826
 	.quad	.LFB11357
@@ -58706,7 +58688,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 32
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x54
 	.long	0x3931a
 	.long	0x3d891
 	.quad	.LFB11352
@@ -58849,7 +58831,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 40
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x54
 	.long	0x3c194
 	.long	0x3da45
 	.quad	.LFB10082
@@ -58905,7 +58887,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x31
 	.long	0x37ea2
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x50
 	.long	0x3c2b7
 	.long	0x3dad8
 	.quad	.LFB9284
@@ -58920,7 +58902,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x50
 	.long	0x3c25d
 	.long	0x3db04
 	.quad	.LFB9283
@@ -58935,7 +58917,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x54
 	.long	0x3c1f4
 	.long	0x3db30
 	.quad	.LFB9282
@@ -58972,7 +58954,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.sleb128 -24
 	.byte	0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x54
 	.long	0x2e601
 	.long	0x3db92
 	.quad	.LFB8251
@@ -59031,7 +59013,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 8
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x54
 	.long	0x3c47e
 	.long	0x3dc45
 	.quad	.LFB8219
@@ -59064,7 +59046,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 -48
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x50
 	.long	0x3c5b4
 	.long	0x3dc97
 	.quad	.LFB8204
@@ -59079,7 +59061,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x50
 	.long	0x3c5ed
 	.long	0x3dcc3
 	.quad	.LFB8203
@@ -59094,7 +59076,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x50
 	.long	0x3c627
 	.long	0x3dcef
 	.quad	.LFB8202
@@ -59260,7 +59242,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x54
+	.uleb128 0x50
 	.long	0xb072
 	.long	0x3df33
 	.quad	.LFB601
@@ -59275,7 +59257,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x50
+	.uleb128 0x54
 	.long	0xa435
 	.long	0x3df5f
 	.quad	.LFB124
@@ -60739,7 +60721,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.uleb128 0x7
 	.uleb128 0x40
 	.uleb128 0x18
-	.uleb128 0x2116
+	.uleb128 0x2117
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13
@@ -60829,7 +60811,7 @@ _GLOBAL__sub_I__ZN12T100FileDataC2Ev:
 	.uleb128 0x7
 	.uleb128 0x40
 	.uleb128 0x18
-	.uleb128 0x2117
+	.uleb128 0x2116
 	.uleb128 0x19
 	.uleb128 0x1
 	.uleb128 0x13

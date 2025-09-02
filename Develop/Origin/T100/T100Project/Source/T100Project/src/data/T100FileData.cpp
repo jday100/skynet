@@ -53,9 +53,5 @@ T100VOID T100FileData::OnItemActivated()
 
 T100VOID T100FileData::OnItemExpanding()
 {
-    if(m_opened){
 
-    }else{
-        T100ProjectInvoking::OnFileOpen(this);
-    }
 }
