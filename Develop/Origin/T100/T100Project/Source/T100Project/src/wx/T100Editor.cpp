@@ -26,7 +26,7 @@ T100Editor::~T100Editor()
 
 T100VOID T100Editor::init()
 {
-
+    SetMarginWidth(0,  50);
 }
 
 T100VOID T100Editor::uninit()

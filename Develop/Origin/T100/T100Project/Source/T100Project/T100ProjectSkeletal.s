@@ -358,8 +358,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.281593
-	movq	%rax, %rcx	 # D.281593,
+	movq	%rbx, %rax	 # tmp96, D.281597
+	movq	%rax, %rcx	 # D.281597,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -585,8 +585,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.281597
-	movq	%rax, %rcx	 # D.281597,
+	movq	%rbx, %rax	 # tmp103, D.281601
+	movq	%rax, %rcx	 # D.281601,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -693,8 +693,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.281599
-	movq	%rax, %rcx	 # D.281599,
+	movq	%rbx, %rax	 # tmp99, D.281603
+	movq	%rax, %rcx	 # D.281603,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1634,7 +1634,7 @@ _ZN16wxFileDialogBaseD2Ev:
 	movq	.refptr._ZTV16wxFileDialogBase(%rip), %rax	 #, tmp95
 	leaq	16(%rax), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp96
-	movq	%rdx, (%rax)	 # _1, this_10(D)->D.272793.D.272329.D.272008.D.271834.D.153381.D.153292.D.153013.D.152087.D.152030.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_10(D)->D.272797.D.272333.D.272012.D.271838.D.153381.D.153292.D.153013.D.152087.D.152030.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp97
 	addq	$1040, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -1783,7 +1783,7 @@ _ZN19T100ProjectSkeletalC2Ev:
 	call	_ZN23T100ProjectSkeletalBaseC2Ev	 #
 	leaq	16+_ZTV19T100ProjectSkeletal(%rip), %rdx	 #, _2
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _2, this_5(D)->D.193238._vptr.T100ProjectSkeletalBase
+	movq	%rdx, (%rax)	 # _2, this_5(D)->D.193242._vptr.T100ProjectSkeletalBase
 .LBE17:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:23: }
 	.loc 10 23 1
@@ -1823,7 +1823,7 @@ _ZN19T100ProjectSkeletalD2Ev:
 	.loc 10 25 43
 	leaq	16+_ZTV19T100ProjectSkeletal(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.193238._vptr.T100ProjectSkeletalBase
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.193242._vptr.T100ProjectSkeletalBase
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN23T100ProjectSkeletalBaseD2Ev	 #
@@ -1919,7 +1919,7 @@ _ZN19T100ProjectSkeletal6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:32:     m_view      = T100NEW T100ProjectView();
 	.loc 10 32 17 discriminator 2
 	movq	32(%rbp), %rax	 # this, tmp98
-	movq	%rbx, 8(%rax)	 # _9, this_12(D)->D.193238.m_view
+	movq	%rbx, 8(%rax)	 # _9, this_12(D)->D.193242.m_view
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:33:     m_serve     = T100NEW T100WorkSpaceServe();
 	.loc 10 33 46 discriminator 2
 	movl	$144, %ecx	 #,
@@ -1934,16 +1934,16 @@ _ZN19T100ProjectSkeletal6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:33:     m_serve     = T100NEW T100WorkSpaceServe();
 	.loc 10 33 17
 	movq	32(%rbp), %rax	 # this, tmp100
-	movq	%rbx, 16(%rax)	 # _15, this_12(D)->D.193238.m_serve
+	movq	%rbx, 16(%rax)	 # _15, this_12(D)->D.193242.m_serve
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:35:     m_view->Create(frame);
 	.loc 10 35 5
 	movq	32(%rbp), %rax	 # this, tmp101
-	movq	8(%rax), %rcx	 # this_12(D)->D.193238.m_view, _1
+	movq	8(%rax), %rcx	 # this_12(D)->D.193242.m_view, _1
 	movq	32(%rbp), %rax	 # this, tmp103
-	movq	8(%rax), %rax	 # this_12(D)->D.193238.m_view, _3
+	movq	8(%rax), %rax	 # this_12(D)->D.193242.m_view, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:35:     m_view->Create(frame);
 	.loc 10 35 25
-	movq	(%rax), %rax	 # _3->D.184055._vptr.T100ProjectViewBase, _4
+	movq	(%rax), %rax	 # _3->D.184059._vptr.T100ProjectViewBase, _4
 	addq	$48, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:35:     m_view->Create(frame);
@@ -1962,8 +1962,8 @@ _ZN19T100ProjectSkeletal6CreateEP16T100ProjectFrame:
 	movl	$96, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp105, D.281604
-	movq	%rax, %rcx	 # D.281604,
+	movq	%rsi, %rax	 # tmp105, D.281608
+	movq	%rax, %rcx	 # D.281608,
 	call	_Unwind_Resume	 #
 .L78:
 	movq	%rax, %rsi	 #, tmp106
@@ -1972,8 +1972,8 @@ _ZN19T100ProjectSkeletal6CreateEP16T100ProjectFrame:
 	movl	$144, %edx	 #,
 	movq	%rbx, %rcx	 # _15,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp106, D.281605
-	movq	%rax, %rcx	 # D.281605,
+	movq	%rsi, %rax	 # tmp106, D.281609
+	movq	%rax, %rcx	 # D.281609,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE12:
@@ -2044,12 +2044,12 @@ _ZN19T100ProjectSkeletal7DestroyEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:40:     m_view->Destroy();
 	.loc 10 40 5
 	movq	16(%rbp), %rax	 # this, tmp109
-	movq	8(%rax), %rdx	 # this_28(D)->D.193238.m_view, _1
+	movq	8(%rax), %rdx	 # this_28(D)->D.193242.m_view, _1
 	movq	16(%rbp), %rax	 # this, tmp111
-	movq	8(%rax), %rax	 # this_28(D)->D.193238.m_view, _3
+	movq	8(%rax), %rax	 # this_28(D)->D.193242.m_view, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:40:     m_view->Destroy();
 	.loc 10 40 21
-	movq	(%rax), %rax	 # _3->D.184055._vptr.T100ProjectViewBase, _4
+	movq	(%rax), %rax	 # _3->D.184059._vptr.T100ProjectViewBase, _4
 	addq	$56, %rax	 #, _5
 	movq	(%rax), %rax	 # *_5, _6
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:40:     m_view->Destroy();
@@ -2060,21 +2060,21 @@ _ZN19T100ProjectSkeletal7DestroyEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:41:     T100SAFE_DELETE(m_serve);
 	.loc 10 41 5
 	movq	16(%rbp), %rax	 # this, tmp112
-	movq	16(%rax), %rax	 # this_28(D)->D.193238.m_serve, _7
+	movq	16(%rax), %rax	 # this_28(D)->D.193242.m_serve, _7
 	testq	%rax, %rax	 # _7
 	je	.L81	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:41:     T100SAFE_DELETE(m_serve);
 	.loc 10 41 5 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp113
-	movq	16(%rax), %rax	 # this_28(D)->D.193238.m_serve, _8
+	movq	16(%rax), %rax	 # this_28(D)->D.193242.m_serve, _8
 	testq	%rax, %rax	 # _8
 	je	.L82	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:41:     T100SAFE_DELETE(m_serve);
 	.loc 10 41 5 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp114
-	movq	16(%rax), %rdx	 # this_28(D)->D.193238.m_serve, _9
+	movq	16(%rax), %rdx	 # this_28(D)->D.193242.m_serve, _9
 	movq	16(%rbp), %rax	 # this, tmp116
-	movq	16(%rax), %rax	 # this_28(D)->D.193238.m_serve, _11
+	movq	16(%rax), %rax	 # this_28(D)->D.193242.m_serve, _11
 	movq	(%rax), %rax	 # _11->_vptr.T100WorkSpaceServe, _12
 	addq	$8, %rax	 #, _13
 	movq	(%rax), %rax	 # *_13, _14
@@ -2085,27 +2085,27 @@ _ZN19T100ProjectSkeletal7DestroyEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:41:     T100SAFE_DELETE(m_serve);
 	.loc 10 41 5 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp117
-	movq	$0, 16(%rax)	 #, this_28(D)->D.193238.m_serve
+	movq	$0, 16(%rax)	 #, this_28(D)->D.193242.m_serve
 .L81:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:42:     T100SAFE_DELETE(m_view);
 	.loc 10 42 5 is_stmt 1
 	movq	16(%rbp), %rax	 # this, tmp118
-	movq	8(%rax), %rax	 # this_28(D)->D.193238.m_view, _15
+	movq	8(%rax), %rax	 # this_28(D)->D.193242.m_view, _15
 	testq	%rax, %rax	 # _15
 	je	.L85	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:42:     T100SAFE_DELETE(m_view);
 	.loc 10 42 5 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp119
-	movq	8(%rax), %rax	 # this_28(D)->D.193238.m_view, _16
+	movq	8(%rax), %rax	 # this_28(D)->D.193242.m_view, _16
 	testq	%rax, %rax	 # _16
 	je	.L84	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:42:     T100SAFE_DELETE(m_view);
 	.loc 10 42 5 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp120
-	movq	8(%rax), %rdx	 # this_28(D)->D.193238.m_view, _17
+	movq	8(%rax), %rdx	 # this_28(D)->D.193242.m_view, _17
 	movq	16(%rbp), %rax	 # this, tmp122
-	movq	8(%rax), %rax	 # this_28(D)->D.193238.m_view, _19
-	movq	(%rax), %rax	 # _19->D.184055._vptr.T100ProjectViewBase, _20
+	movq	8(%rax), %rax	 # this_28(D)->D.193242.m_view, _19
+	movq	(%rax), %rax	 # _19->D.184059._vptr.T100ProjectViewBase, _20
 	addq	$8, %rax	 #, _21
 	movq	(%rax), %rax	 # *_21, _22
 	movq	%rdx, %rcx	 # _17,
@@ -2115,7 +2115,7 @@ _ZN19T100ProjectSkeletal7DestroyEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:42:     T100SAFE_DELETE(m_view);
 	.loc 10 42 5 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp123
-	movq	$0, 8(%rax)	 #, this_28(D)->D.193238.m_view
+	movq	$0, 8(%rax)	 #, this_28(D)->D.193242.m_view
 .L85:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:43: }
 	.loc 10 43 1 is_stmt 1
@@ -2161,7 +2161,7 @@ _ZN19T100ProjectSkeletal14OnWorkSpaceNewEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:49:     if(m_serve->IsOpened()){
 	.loc 10 49 8
 	movq	32(%rbp), %rax	 # this, tmp126
-	movq	16(%rax), %rax	 # this_44(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rax	 # this_44(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:49:     if(m_serve->IsOpened()){
 	.loc 10 49 25
 	movq	%rax, %rcx	 # _1,
@@ -2200,7 +2200,7 @@ _ZN19T100ProjectSkeletal14OnWorkSpaceNewEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:59:     if(!m_view->ShowWorkSpaceCreateDialog(info)){
 	.loc 10 59 9
 	movq	32(%rbp), %rax	 # this, tmp129
-	movq	8(%rax), %rax	 # this_44(D)->D.193238.m_view, _4
+	movq	8(%rax), %rax	 # this_44(D)->D.193242.m_view, _4
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:59:     if(!m_view->ShowWorkSpaceCreateDialog(info)){
 	.loc 10 59 42
 	movq	%rax, %rcx	 # _4, _5
@@ -2330,8 +2330,8 @@ _ZN19T100ProjectSkeletal14OnWorkSpaceNewEv:
 	movl	$272, %edx	 #,
 	movq	%rbx, %rcx	 # _52,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp134, D.281606
-	movq	%rax, %rcx	 # D.281606,
+	movq	%rsi, %rax	 # tmp134, D.281610
+	movq	%rax, %rcx	 # D.281610,
 .LEHB17:
 	call	_Unwind_Resume	 #
 .L102:
@@ -2341,8 +2341,8 @@ _ZN19T100ProjectSkeletal14OnWorkSpaceNewEv:
 	leaq	-96(%rbp), %rax	 #, tmp135
 	movq	%rax, %rcx	 # tmp135,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp136, D.281607
-	movq	%rax, %rcx	 # D.281607,
+	movq	%rbx, %rax	 # tmp136, D.281611
+	movq	%rax, %rcx	 # D.281611,
 	call	_Unwind_Resume	 #
 .LEHE17:
 .L103:
@@ -2434,7 +2434,7 @@ _ZN19T100ProjectSkeletal15OnWorkSpaceOpenEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:82:     if(m_serve->IsOpened()){
 	.loc 10 82 8
 	movq	128(%rbp), %rax	 # this, tmp105
-	movq	16(%rax), %rax	 # this_26(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rax	 # this_26(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:82:     if(m_serve->IsOpened()){
 	.loc 10 82 25
 	movq	%rax, %rcx	 # _1,
@@ -2468,7 +2468,7 @@ _ZN19T100ProjectSkeletal15OnWorkSpaceOpenEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:92:     if(m_view->ShowDirDialog(path) == wxID_OK){
 	.loc 10 92 8
 	movq	128(%rbp), %rax	 # this, tmp108
-	movq	8(%rax), %rax	 # this_26(D)->D.193238.m_view, _4
+	movq	8(%rax), %rax	 # this_26(D)->D.193242.m_view, _4
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:92:     if(m_view->ShowDirDialog(path) == wxID_OK){
 	.loc 10 92 29
 	movq	%rax, %rcx	 # _4, _5
@@ -2546,7 +2546,7 @@ _ZN19T100ProjectSkeletal15OnWorkSpaceOpenEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:112:     m_view->ShowWorkSpaceOpenFailureDialog();
 	.loc 10 112 5
 	movq	128(%rbp), %rax	 # this, tmp121
-	movq	8(%rax), %rax	 # this_26(D)->D.193238.m_view, _8
+	movq	8(%rax), %rax	 # this_26(D)->D.193242.m_view, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:112:     m_view->ShowWorkSpaceOpenFailureDialog();
 	.loc 10 112 43
 	movq	%rax, %rcx	 # _9,
@@ -2619,8 +2619,8 @@ _ZN19T100ProjectSkeletal15OnWorkSpaceOpenEv:
 	leaq	48(%rbp), %rax	 #, tmp137
 	movq	%rax, %rcx	 # tmp137,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp135, D.281608
-	movq	%rax, %rcx	 # D.281608,
+	movq	%rbx, %rax	 # tmp135, D.281612
+	movq	%rax, %rcx	 # D.281612,
 .LEHB22:
 	call	_Unwind_Resume	 #
 .LEHE22:
@@ -2693,7 +2693,7 @@ _ZN19T100ProjectSkeletal16OnWorkSpaceCloseEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:117:     if(m_serve->IsOpened()){
 	.loc 10 117 8
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	16(%rax), %rax	 # this_5(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rax	 # this_5(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:117:     if(m_serve->IsOpened()){
 	.loc 10 117 25
 	movq	%rax, %rcx	 # _1,
@@ -2745,7 +2745,7 @@ _ZN19T100ProjectSkeletal15OnWorkSpaceSaveEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:128:     if(m_serve->IsOpened()){
 	.loc 10 128 8
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	16(%rax), %rax	 # this_5(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rax	 # this_5(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:128:     if(m_serve->IsOpened()){
 	.loc 10 128 25
 	movq	%rax, %rcx	 # _1,
@@ -2797,7 +2797,7 @@ _ZN19T100ProjectSkeletal17OnWorkSpaceSaveAsEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:139:     if(m_serve->IsOpened()){
 	.loc 10 139 8
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	16(%rax), %rax	 # this_5(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rax	 # this_5(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:139:     if(m_serve->IsOpened()){
 	.loc 10 139 25
 	movq	%rax, %rcx	 # _1,
@@ -3046,7 +3046,7 @@ _ZN19T100ProjectSkeletal9OnFileNewEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:179:     m_view->FileOpen(0, info);
 	.loc 10 179 5 is_stmt 1 discriminator 4
 	movq	32(%rbp), %rax	 # this, tmp99
-	movq	8(%rax), %rbx	 # this_16(D)->D.193238.m_view, _1
+	movq	8(%rax), %rbx	 # this_16(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:179:     m_view->FileOpen(0, info);
 	.loc 10 179 21 discriminator 4
 	leaq	-16(%rbp), %rax	 #, tmp100
@@ -3054,7 +3054,7 @@ _ZN19T100ProjectSkeletal9OnFileNewEv:
 	movq	%rax, %rcx	 # tmp100,
 	call	_ZN12wxTreeItemIdC1EPv	 #
 	movq	-8(%rbp), %rdx	 # info, tmp101
-	movq	-16(%rbp), %rax	 # D.273693, tmp102
+	movq	-16(%rbp), %rax	 # D.273697, tmp102
 	movq	%rdx, %r8	 # tmp101,
 	movq	%rax, %rdx	 # tmp102,
 	movq	%rbx, %rcx	 # _1,
@@ -3070,8 +3070,8 @@ _ZN19T100ProjectSkeletal9OnFileNewEv:
 	movl	$176, %edx	 #,
 	movq	%rbx, %rcx	 # _5,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp103, D.281609
-	movq	%rax, %rcx	 # D.281609,
+	movq	%rsi, %rax	 # tmp103, D.281613
+	movq	%rax, %rcx	 # D.281613,
 	call	_Unwind_Resume	 #
 .L150:
 	movq	%rax, %rbx	 #, tmp106
@@ -3089,8 +3089,8 @@ _ZN19T100ProjectSkeletal9OnFileNewEv:
 	leaq	-17(%rbp), %rax	 #, tmp109
 	movq	%rax, %rcx	 # tmp109,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp105, D.281610
-	movq	%rax, %rcx	 # D.281610,
+	movq	%rbx, %rax	 # tmp105, D.281614
+	movq	%rax, %rcx	 # D.281614,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE27:
@@ -3210,7 +3210,7 @@ _ZN19T100ProjectSkeletal10OnFileOpenEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:184:     wxFileDialog        dialog(m_view->GetFrame());
 	.loc 10 184 32 is_stmt 1 discriminator 5
 	movq	1488(%rbp), %rax	 # this, tmp108
-	movq	8(%rax), %rax	 # this_26(D)->D.193238.m_view, _3
+	movq	8(%rax), %rax	 # this_26(D)->D.193242.m_view, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:184:     wxFileDialog        dialog(m_view->GetFrame());
 	.loc 10 184 48 discriminator 5
 	movq	%rax, %rcx	 # _4,
@@ -3339,7 +3339,7 @@ _ZN19T100ProjectSkeletal10OnFileOpenEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:195:     m_view->FileOpen(0, info);
 	.loc 10 195 5 discriminator 3
 	movq	1488(%rbp), %rax	 # this, tmp134
-	movq	8(%rax), %rbx	 # this_26(D)->D.193238.m_view, _9
+	movq	8(%rax), %rbx	 # this_26(D)->D.193242.m_view, _9
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:195:     m_view->FileOpen(0, info);
 	.loc 10 195 21 discriminator 3
 	leaq	1440(%rbp), %rax	 #, tmp135
@@ -3347,7 +3347,7 @@ _ZN19T100ProjectSkeletal10OnFileOpenEv:
 	movq	%rax, %rcx	 # tmp135,
 	call	_ZN12wxTreeItemIdC1EPv	 #
 	movq	1448(%rbp), %rdx	 # info, tmp136
-	movq	1440(%rbp), %rax	 # D.273708, tmp137
+	movq	1440(%rbp), %rax	 # D.273712, tmp137
 	movq	%rdx, %r8	 # tmp136,
 	movq	%rax, %rdx	 # tmp137,
 	movq	%rbx, %rcx	 # _9,
@@ -3394,8 +3394,8 @@ _ZN19T100ProjectSkeletal10OnFileOpenEv:
 	leaq	1104(%rbp), %rax	 #, tmp153
 	movq	%rax, %rcx	 # tmp153,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp151, D.281612
-	movq	%rax, %rcx	 # D.281612,
+	movq	%rbx, %rax	 # tmp151, D.281616
+	movq	%rax, %rcx	 # D.281616,
 .LEHB41:
 	call	_Unwind_Resume	 #
 .L172:
@@ -3431,8 +3431,8 @@ _ZN19T100ProjectSkeletal10OnFileOpenEv:
 	leaq	-48(%rbp), %rax	 #, tmp164
 	movq	%rax, %rcx	 # tmp164,
 	call	_ZN12wxFileDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp154, D.281613
-	movq	%rax, %rcx	 # D.281613,
+	movq	%rbx, %rax	 # tmp154, D.281617
+	movq	%rax, %rcx	 # D.281617,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE41:
@@ -3566,7 +3566,7 @@ _ZN19T100ProjectSkeletal10OnFileSaveEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:205:     m_view->FileSave();
 	.loc 10 205 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	8(%rax), %rax	 # this_3(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_3(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:205:     m_view->FileSave();
 	.loc 10 205 21
 	movq	%rax, %rcx	 # _1,
@@ -3820,9 +3820,9 @@ _ZN19T100ProjectSkeletal12OnCompileRunEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:250:     m_serve->Run();
 	.loc 10 250 5
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	16(%rax), %rdx	 # this_8(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rdx	 # this_8(D)->D.193242.m_serve, _1
 	movq	16(%rbp), %rax	 # this, tmp95
-	movq	16(%rax), %rax	 # this_8(D)->D.193238.m_serve, _3
+	movq	16(%rax), %rax	 # this_8(D)->D.193242.m_serve, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:250:     m_serve->Run();
 	.loc 10 250 18
 	movq	(%rax), %rax	 # _3->_vptr.T100WorkSpaceServe, _4
@@ -3920,9 +3920,9 @@ _ZN19T100ProjectSkeletal14OnCompileBuildEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:265:     m_serve->Build();
 	.loc 10 265 5
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	16(%rax), %rdx	 # this_9(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rdx	 # this_9(D)->D.193242.m_serve, _1
 	movq	16(%rbp), %rax	 # this, tmp96
-	movq	16(%rax), %rax	 # this_9(D)->D.193238.m_serve, _3
+	movq	16(%rax), %rax	 # this_9(D)->D.193242.m_serve, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:265:     m_serve->Build();
 	.loc 10 265 20
 	movq	(%rax), %rax	 # _3->_vptr.T100WorkSpaceServe, _4
@@ -3936,7 +3936,7 @@ _ZN19T100ProjectSkeletal14OnCompileBuildEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:266:     m_view->Build();
 	.loc 10 266 5
 	movq	16(%rbp), %rax	 # this, tmp97
-	movq	8(%rax), %rax	 # this_9(D)->D.193238.m_view, _7
+	movq	8(%rax), %rax	 # this_9(D)->D.193242.m_view, _7
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:266:     m_view->Build();
 	.loc 10 266 18
 	movq	%rax, %rcx	 # _7,
@@ -4001,7 +4001,7 @@ _ZN19T100ProjectSkeletal13OnSetupEditorEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:276:     m_view->ShowSetupEditorDialog();
 	.loc 10 276 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	8(%rax), %rax	 # this_3(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_3(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:276:     m_view->ShowSetupEditorDialog();
 	.loc 10 276 34
 	movq	%rax, %rcx	 # _1,
@@ -4039,7 +4039,7 @@ _ZN19T100ProjectSkeletal15OnSetupCompilerEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:281:     m_view->ShowSetupCompilerDialog();
 	.loc 10 281 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	8(%rax), %rax	 # this_3(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_3(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:281:     m_view->ShowSetupCompilerDialog();
 	.loc 10 281 36
 	movq	%rax, %rcx	 # _1,
@@ -4077,7 +4077,7 @@ _ZN19T100ProjectSkeletal11OnHelpAboutEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:286:     m_view->About();
 	.loc 10 286 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	8(%rax), %rax	 # this_3(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_3(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:286:     m_view->About();
 	.loc 10 286 18
 	movq	%rax, %rcx	 # _1,
@@ -4115,7 +4115,7 @@ _ZN19T100ProjectSkeletal8OnResizeEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:291:     m_view->OnResize();
 	.loc 10 291 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	8(%rax), %rax	 # this_3(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_3(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:291:     m_view->OnResize();
 	.loc 10 291 21
 	movq	%rax, %rcx	 # _1,
@@ -4180,7 +4180,7 @@ _ZN19T100ProjectSkeletal21OnWorkSpacePropertiesEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:301:     m_view->ShowWorkSpacePropertiesDialog();
 	.loc 10 301 5
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	8(%rax), %rax	 # this_4(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_4(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:301:     m_view->ShowWorkSpacePropertiesDialog();
 	.loc 10 301 42
 	movq	%rax, %rcx	 # _2,
@@ -4245,7 +4245,7 @@ _ZN19T100ProjectSkeletal14OnFolderSelectEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:311:     m_view->FolderSelect();
 	.loc 10 311 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	8(%rax), %rax	 # this_3(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_3(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:311:     m_view->FolderSelect();
 	.loc 10 311 25
 	movq	%rax, %rcx	 # _1,
@@ -4283,7 +4283,7 @@ _ZN19T100ProjectSkeletal11OnModuleNewEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:316:     m_view->ShowModuleCreateDialog();
 	.loc 10 316 5
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	8(%rax), %rax	 # this_4(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_4(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:316:     m_view->ShowModuleCreateDialog();
 	.loc 10 316 35
 	movq	%rax, %rcx	 # _2,
@@ -4337,7 +4337,7 @@ _ZN19T100ProjectSkeletal11OnModuleNewEP14T100ModuleInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:326:     T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
 	.loc 10 326 43
 	movq	32(%rbp), %rax	 # this, tmp99
-	movq	16(%rax), %rax	 # this_14(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rax	 # this_14(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:326:     T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
 	.loc 10 326 87
 	movq	%rax, %rcx	 # _1,
@@ -4348,7 +4348,7 @@ _ZN19T100ProjectSkeletal11OnModuleNewEP14T100ModuleInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:328:     workspace   = m_serve->GetWorkSpaceInfo();
 	.loc 10 328 19
 	movq	32(%rbp), %rax	 # this, tmp100
-	movq	16(%rax), %rax	 # this_14(D)->D.193238.m_serve, _3
+	movq	16(%rax), %rax	 # this_14(D)->D.193242.m_serve, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:328:     workspace   = m_serve->GetWorkSpaceInfo();
 	.loc 10 328 44
 	movq	%rax, %rcx	 # _3,
@@ -4373,11 +4373,11 @@ _ZN19T100ProjectSkeletal11OnModuleNewEP14T100ModuleInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:340:     m_view->AppendModule(m_serve->GetWorkSpaceInfo(), m_serve->GetProjectServe()->GetProjectInfo(), info);
 	.loc 10 340 5
 	movq	32(%rbp), %rax	 # this, tmp104
-	movq	8(%rax), %rbx	 # this_14(D)->D.193238.m_view, _4
+	movq	8(%rax), %rbx	 # this_14(D)->D.193242.m_view, _4
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:340:     m_view->AppendModule(m_serve->GetWorkSpaceInfo(), m_serve->GetProjectServe()->GetProjectInfo(), info);
 	.loc 10 340 55
 	movq	32(%rbp), %rax	 # this, tmp105
-	movq	16(%rax), %rax	 # this_14(D)->D.193238.m_serve, _5
+	movq	16(%rax), %rax	 # this_14(D)->D.193242.m_serve, _5
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:340:     m_view->AppendModule(m_serve->GetWorkSpaceInfo(), m_serve->GetProjectServe()->GetProjectInfo(), info);
 	.loc 10 340 25
 	movq	%rax, %rcx	 # _5,
@@ -4388,7 +4388,7 @@ _ZN19T100ProjectSkeletal11OnModuleNewEP14T100ModuleInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:340:     m_view->AppendModule(m_serve->GetWorkSpaceInfo(), m_serve->GetProjectServe()->GetProjectInfo(), info);
 	.loc 10 340 26
 	movq	32(%rbp), %rax	 # this, tmp106
-	movq	16(%rax), %rax	 # this_14(D)->D.193238.m_serve, _8
+	movq	16(%rax), %rax	 # this_14(D)->D.193242.m_serve, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:340:     m_view->AppendModule(m_serve->GetWorkSpaceInfo(), m_serve->GetProjectServe()->GetProjectInfo(), info);
 	.loc 10 340 25
 	movq	%rax, %rcx	 # _8,
@@ -4461,7 +4461,7 @@ _ZN19T100ProjectSkeletal10OnFileOpenEP12T100FileData:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:349:     T100FileLogic&      logic       = m_serve->GetProjectServe()->GetFileLogic();
 	.loc 10 349 39
 	movq	-48(%rbp), %rax	 # this, tmp100
-	movq	16(%rax), %rax	 # this_13(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rax	 # this_13(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:349:     T100FileLogic&      logic       = m_serve->GetProjectServe()->GetFileLogic();
 	.loc 10 349 80
 	movq	%rax, %rcx	 # _1,
@@ -4517,7 +4517,7 @@ _ZN19T100ProjectSkeletal10OnFileOpenEP12T100FileData:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:364:     m_view->FileOpen(data->GetId(), info);
 	.loc 10 364 5
 	movq	-48(%rbp), %rax	 # this, tmp107
-	movq	8(%rax), %rbx	 # this_13(D)->D.193238.m_view, _7
+	movq	8(%rax), %rbx	 # this_13(D)->D.193242.m_view, _7
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:364:     m_view->FileOpen(data->GetId(), info);
 	.loc 10 364 34
 	movq	-40(%rbp), %rax	 # data, _8
@@ -4595,7 +4595,7 @@ _ZN19T100ProjectSkeletal12OnFolderOpenEP14T100FolderData:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:369:     T100FolderLogic&    logic       = m_serve->GetProjectServe()->GetFolderLogic();
 	.loc 10 369 39
 	movq	32(%rbp), %rax	 # this, tmp113
-	movq	16(%rax), %rax	 # this_28(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rax	 # this_28(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:369:     T100FolderLogic&    logic       = m_serve->GetProjectServe()->GetFolderLogic();
 	.loc 10 369 82
 	movq	%rax, %rcx	 # _1,
@@ -4685,7 +4685,7 @@ _ZN19T100ProjectSkeletal12OnFolderOpenEP14T100FolderData:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:382:     m_view->FolderOpen(data->GetId(), info);
 	.loc 10 382 5
 	movq	32(%rbp), %rax	 # this, tmp119
-	movq	8(%rax), %rbx	 # this_28(D)->D.193238.m_view, _18
+	movq	8(%rax), %rbx	 # this_28(D)->D.193242.m_view, _18
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:382:     m_view->FolderOpen(data->GetId(), info);
 	.loc 10 382 23
 	movq	-16(%rbp), %rsi	 # info, info.62_19
@@ -4708,8 +4708,8 @@ _ZN19T100ProjectSkeletal12OnFolderOpenEP14T100FolderData:
 	movl	$160, %edx	 #,
 	movq	%rbx, %rcx	 # _43,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp120, D.281622
-	movq	%rax, %rcx	 # D.281622,
+	movq	%rsi, %rax	 # tmp120, D.281626
+	movq	%rax, %rcx	 # D.281626,
 	call	_Unwind_Resume	 #
 .LEHE44:
 .L227:
@@ -4809,7 +4809,7 @@ _ZN19T100ProjectSkeletal13OnProjectOpenEP15T100ProjectData:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:401:     T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
 	.loc 10 401 43
 	movq	-48(%rbp), %rax	 # this, tmp100
-	movq	16(%rax), %rax	 # this_17(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rax	 # this_17(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:401:     T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
 	.loc 10 401 87
 	movq	%rax, %rcx	 # _1,
@@ -4839,7 +4839,7 @@ _ZN19T100ProjectSkeletal13OnProjectOpenEP15T100ProjectData:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:407:     m_view->ProjectOpen(data->GetId(), info);
 	.loc 10 407 5
 	movq	-48(%rbp), %rax	 # this, tmp104
-	movq	8(%rax), %rbx	 # this_17(D)->D.193238.m_view, _5
+	movq	8(%rax), %rbx	 # this_17(D)->D.193242.m_view, _5
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:407:     m_view->ProjectOpen(data->GetId(), info);
 	.loc 10 407 37
 	movq	-40(%rbp), %rax	 # data, _6
@@ -4908,7 +4908,7 @@ _ZN19T100ProjectSkeletal15OnProjectSelectEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:412:     m_view->ProjectSelect();
 	.loc 10 412 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	8(%rax), %rax	 # this_3(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_3(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:412:     m_view->ProjectSelect();
 	.loc 10 412 26
 	movq	%rax, %rcx	 # _1,
@@ -4946,7 +4946,7 @@ _ZN19T100ProjectSkeletal17OnWorkSpaceSelectEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:417:     m_view->WorkSpaceSelect();
 	.loc 10 417 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	8(%rax), %rax	 # this_3(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_3(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:417:     m_view->WorkSpaceSelect();
 	.loc 10 417 28
 	movq	%rax, %rcx	 # _1,
@@ -4984,7 +4984,7 @@ _ZN19T100ProjectSkeletal13OnPageChangedEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:422:     m_view->PageChanged();
 	.loc 10 422 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	8(%rax), %rax	 # this_3(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_3(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:422:     m_view->PageChanged();
 	.loc 10 422 24
 	movq	%rax, %rcx	 # _1,
@@ -5053,7 +5053,7 @@ _ZN19T100ProjectSkeletal13OnPageClosingEP8T100Pack:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:430:         m_serve->GetProjectServe()->GetFileLogic().Close(editor->GetEditor()->GetPath());
 	.loc 10 430 9
 	movq	-48(%rbp), %rax	 # this, tmp95
-	movq	16(%rax), %rax	 # this_15(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rax	 # this_15(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:430:         m_serve->GetProjectServe()->GetFileLogic().Close(editor->GetEditor()->GetPath());
 	.loc 10 430 50
 	movq	%rax, %rcx	 # _1,
@@ -5075,7 +5075,7 @@ _ZN19T100ProjectSkeletal13OnPageClosingEP8T100Pack:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:433:     m_view->FileClose(pack);
 	.loc 10 433 5
 	movq	-48(%rbp), %rax	 # this, tmp97
-	movq	8(%rax), %rax	 # this_15(D)->D.193238.m_view, _6
+	movq	8(%rax), %rax	 # this_15(D)->D.193242.m_view, _6
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:433:     m_view->FileClose(pack);
 	.loc 10 433 22
 	movq	-40(%rbp), %rdx	 # pack, tmp98
@@ -5117,7 +5117,7 @@ _ZN19T100ProjectSkeletal12OnPageClosedEP8T100Pack:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:438:     m_view->PageClose(pack);
 	.loc 10 438 5
 	movq	16(%rbp), %rax	 # this, tmp88
-	movq	8(%rax), %rax	 # this_3(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_3(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:438:     m_view->PageClose(pack);
 	.loc 10 438 22
 	movq	24(%rbp), %rdx	 # pack, tmp89
@@ -5184,17 +5184,17 @@ _ZN19T100ProjectSkeletal10OnModifiedERKNSt7__cxx1112basic_stringIwSt11char_trait
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:459:     m_view->SetDirty();
 	.loc 10 459 5
 	movq	16(%rbp), %rax	 # this, tmp96
-	movq	8(%rax), %rax	 # this_11(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_11(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:459:     m_view->SetDirty();
 	.loc 10 459 21
 	movq	%rax, %rdx	 # _1, _2
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:459:     m_view->SetDirty();
 	.loc 10 459 5
 	movq	16(%rbp), %rax	 # this, tmp98
-	movq	8(%rax), %rax	 # this_11(D)->D.193238.m_view, _5
+	movq	8(%rax), %rax	 # this_11(D)->D.193242.m_view, _5
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:459:     m_view->SetDirty();
 	.loc 10 459 22
-	movq	(%rax), %rax	 # _5->D.184055._vptr.T100ProjectViewBase, _6
+	movq	(%rax), %rax	 # _5->D.184059._vptr.T100ProjectViewBase, _6
 	addq	$16, %rax	 #, _7
 	movq	(%rax), %rax	 # *_7, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:459:     m_view->SetDirty();
@@ -5205,7 +5205,7 @@ _ZN19T100ProjectSkeletal10OnModifiedERKNSt7__cxx1112basic_stringIwSt11char_trait
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:461:     m_view->FileModified(path);
 	.loc 10 461 5
 	movq	16(%rbp), %rax	 # this, tmp99
-	movq	8(%rax), %rax	 # this_11(D)->D.193238.m_view, _9
+	movq	8(%rax), %rax	 # this_11(D)->D.193242.m_view, _9
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:461:     m_view->FileModified(path);
 	.loc 10 461 25
 	movq	24(%rbp), %rdx	 # path, tmp100
@@ -5300,7 +5300,7 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEP17T100WxProjectInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:470:     m_serve->GetFolderInfo(folder);
 	.loc 10 470 5 discriminator 4
 	movq	208(%rbp), %rax	 # this, tmp115
-	movq	16(%rax), %rcx	 # this_33(D)->D.193238.m_serve, _1
+	movq	16(%rax), %rcx	 # this_33(D)->D.193242.m_serve, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:470:     m_serve->GetFolderInfo(folder);
 	.loc 10 470 27 discriminator 4
 	leaq	-64(%rbp), %rax	 #, tmp116
@@ -5365,7 +5365,7 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEP17T100WxProjectInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:480:     if(!m_serve->GetProjectServe()->New(folder, m_serve->GetWorkSpaceInfo())){
 	.loc 10 480 9
 	movq	208(%rbp), %rax	 # this, tmp127
-	movq	16(%rax), %rax	 # this_33(D)->D.193238.m_serve, _5
+	movq	16(%rax), %rax	 # this_33(D)->D.193242.m_serve, _5
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:480:     if(!m_serve->GetProjectServe()->New(folder, m_serve->GetWorkSpaceInfo())){
 	.loc 10 480 40
 	movq	%rax, %rcx	 # _5,
@@ -5374,7 +5374,7 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEP17T100WxProjectInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:480:     if(!m_serve->GetProjectServe()->New(folder, m_serve->GetWorkSpaceInfo())){
 	.loc 10 480 49
 	movq	208(%rbp), %rax	 # this, tmp128
-	movq	16(%rax), %rax	 # this_33(D)->D.193238.m_serve, _7
+	movq	16(%rax), %rax	 # this_33(D)->D.193242.m_serve, _7
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:480:     if(!m_serve->GetProjectServe()->New(folder, m_serve->GetWorkSpaceInfo())){
 	.loc 10 480 40
 	movq	%rax, %rcx	 # _7,
@@ -5402,7 +5402,7 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEP17T100WxProjectInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:484:     workspace   = m_serve->GetWorkSpaceInfo();
 	.loc 10 484 19
 	movq	208(%rbp), %rax	 # this, tmp130
-	movq	16(%rax), %rax	 # this_33(D)->D.193238.m_serve, _10
+	movq	16(%rax), %rax	 # this_33(D)->D.193242.m_serve, _10
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:484:     workspace   = m_serve->GetWorkSpaceInfo();
 	.loc 10 484 44
 	movq	%rax, %rcx	 # _10,
@@ -5484,7 +5484,7 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEP17T100WxProjectInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:493:     m_view->ProjectAppend(project);
 	.loc 10 493 5 discriminator 7
 	movq	208(%rbp), %rax	 # this, tmp143
-	movq	8(%rax), %rax	 # this_33(D)->D.193238.m_view, _14
+	movq	8(%rax), %rax	 # this_33(D)->D.193242.m_view, _14
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:493:     m_view->ProjectAppend(project);
 	.loc 10 493 26 discriminator 7
 	movq	160(%rbp), %rdx	 # project, tmp144
@@ -5525,8 +5525,8 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEP17T100WxProjectInfo:
 	leaq	63(%rbp), %rax	 #, tmp152
 	movq	%rax, %rcx	 # tmp152,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp148, D.281623
-	movq	%rax, %rcx	 # D.281623,
+	movq	%rbx, %rax	 # tmp148, D.281627
+	movq	%rax, %rcx	 # D.281627,
 .LEHB56:
 	call	_Unwind_Resume	 #
 .L267:
@@ -5578,8 +5578,8 @@ _ZN19T100ProjectSkeletal29OnProjectCreateWizardFinishedEP17T100WxProjectInfo:
 	leaq	-64(%rbp), %rax	 #, tmp169
 	movq	%rax, %rcx	 # tmp169,
 	call	_ZN16T100WxFolderInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp154, D.281624
-	movq	%rax, %rcx	 # D.281624,
+	movq	%rbx, %rax	 # tmp154, D.281628
+	movq	%rax, %rcx	 # D.281628,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE56:
@@ -5679,17 +5679,17 @@ _ZN19T100ProjectSkeletal14OnBuildMessageERKNSt7__cxx1112basic_stringIwSt11char_t
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:498:     m_view->AppendBuildMessage(value);
 	.loc 10 498 5
 	movq	16(%rbp), %rax	 # this, tmp95
-	movq	8(%rax), %rax	 # this_10(D)->D.193238.m_view, _1
+	movq	8(%rax), %rax	 # this_10(D)->D.193242.m_view, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:498:     m_view->AppendBuildMessage(value);
 	.loc 10 498 31
 	movq	%rax, %rcx	 # _1, _2
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:498:     m_view->AppendBuildMessage(value);
 	.loc 10 498 5
 	movq	16(%rbp), %rax	 # this, tmp97
-	movq	8(%rax), %rax	 # this_10(D)->D.193238.m_view, _5
+	movq	8(%rax), %rax	 # this_10(D)->D.193242.m_view, _5
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:498:     m_view->AppendBuildMessage(value);
 	.loc 10 498 37
-	movq	(%rax), %rax	 # _5->D.184055._vptr.T100ProjectViewBase, _6
+	movq	(%rax), %rax	 # _5->D.184059._vptr.T100ProjectViewBase, _6
 	addq	$40, %rax	 #, _7
 	movq	(%rax), %rax	 # *_7, _8
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletal.cpp:498:     m_view->AppendBuildMessage(value);
@@ -6044,8 +6044,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.281631
-	movq	%rax, %rcx	 # D.281631,
+	movq	%rbx, %rax	 # tmp90, D.281635
+	movq	%rax, %rcx	 # D.281635,
 .LEHB59:
 	call	_Unwind_Resume	 #
 .LEHE59:
@@ -6216,14 +6216,14 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 24
-	movzwl	16(%rax), %edx	 # _3->D.274072.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.274076.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.274072.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.274076.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 24
-	movzwl	16(%rax), %eax	 # _3->D.274072.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.274076.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 1 196 30
 	testw	%ax, %ax	 # _6
@@ -6353,11 +6353,11 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 17
-	movzwl	16(%rax), %edx	 # _3->D.274072.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.274076.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 1 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.274072.m_ref
+	movw	%dx, 16(%rax)	 # _6, _3->D.274076.m_ref
 	jmp	.L298	 #
 .L301:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
@@ -6398,7 +6398,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 1 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.274072.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.274076.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 1 171 72
 	popq	%rbp	 #
@@ -7007,7 +7007,7 @@ _ZN12wxFileDialogD1Ev:
 	movq	.refptr._ZTV12wxFileDialog(%rip), %rax	 #, tmp90
 	leaq	16(%rax), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_5(D)->D.272997.D.272793.D.272329.D.272008.D.271834.D.153381.D.153292.D.153013.D.152087.D.152030.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_5(D)->D.273001.D.272797.D.272333.D.272012.D.271838.D.153381.D.153292.D.153013.D.152087.D.152030.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$1104, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
