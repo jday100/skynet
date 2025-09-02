@@ -1,5 +1,6 @@
 #include "T100ProjectLogic.h"
 
+#include "T100DebugTools.h"
 #include <wx/utils.h>
 #include "T100Shell.h"
 #include "T100Folder.h"
@@ -104,7 +105,12 @@ T100BOOL T100ProjectLogic::Remove(T100ProjectInfo* info)
 
 T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
 {
+    T100DebugTools::Print(L"ProjectLogic::Open...");
     if(!info){
+        return T100FALSE;
+    }
+
+    if(info->IsOpened()){
         return T100FALSE;
     }
 
@@ -156,6 +162,7 @@ T100BOOL T100ProjectLogic::Open(const T100WSTRING& path, T100ProjectInfo* info)
         }
     }
 
+    info->SetOpened(T100TRUE);
     m_current   = info;
 
     return T100TRUE;

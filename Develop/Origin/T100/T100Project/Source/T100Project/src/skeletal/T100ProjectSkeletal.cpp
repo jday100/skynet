@@ -14,6 +14,7 @@
 #include "T100EditorPack.h"
 
 #include "T100ProjectConfig.h"
+#include "T100DebugTools.h"
 
 T100ProjectSkeletal::T100ProjectSkeletal() :
     T100ProjectSkeletalBase()
@@ -376,15 +377,27 @@ T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
 
 T100VOID T100ProjectSkeletal::OnProjectOpen(T100ProjectData* data)
 {
-    T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
-    //T100ProjectInfo*        info        = T100NEW T100ProjectInfo();
+    if(!data){
+        return;
+    }
 
-    if(!logic.Open(data->GetProjectInfo()->GetPath(), data->GetProjectInfo())){
-        //T100SAFE_DELETE(info);
+    T100ProjectInfo*        info    = data->GetProjectInfo();
+
+    if(!info){
+        return;
+    }
+
+    if(info->IsOpened()){
+        return;
+    }
+
+    T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
+
+    if(!logic.Open(info->GetPath(), info)){
         return T100FALSE;
     }
 
-    m_view->ProjectOpen(data->GetId(), data->GetProjectInfo());
+    m_view->ProjectOpen(data->GetId(), info);
 }
 
 T100VOID T100ProjectSkeletal::OnProjectSelect()
@@ -444,6 +457,7 @@ T100VOID T100ProjectSkeletal::OnModified(const T100WSTRING& path)
 
 T100VOID T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo* info)
 {
+    T100DebugTools::Print(L"T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo*)...");
     T100WxFolderInfo        folder;
 
     m_serve->GetFolderInfo(folder);

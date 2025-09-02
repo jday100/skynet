@@ -1,5 +1,7 @@
 #include "T100ProjectSkeletalBase.h"
 
+#include "T100DebugTools.h"
+
 T100ProjectSkeletalBase::T100ProjectSkeletalBase()
 {
     //ctor
@@ -150,6 +152,7 @@ T100VOID T100ProjectSkeletalBase::ProjectOpen()
 
 T100BOOL T100ProjectSkeletalBase::ProjectOpen(T100ProjectInfo* info)
 {
+    T100DebugTools::Print(L"T100ProjectSkeletalBase::ProjectOpen(T100ProjectInfo*)...");
     if(!info){
         return T100FALSE;
     }

@@ -15,7 +15,7 @@
  # -I include\serve -I include\common -I include\logic -I include\info
  # -I include\view\wizard\project -I include\store -I include\view\dialog
  # -I include\library\storage\file\text -I include\base
- # -I include\library\shell -I include\view\pack
+ # -I include\library\shell -I include\view\pack -I include\library\debug
  # -I C:\zoo\bin\llvm-mingw-20240518-msvcrt-x86_64\include
  # -iprefix C:/zoo/bin/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/
  # -D_MT -D_REENTRANT -D __GNUWIN32__ -D __WXMSW__ -D WXUSINGDLL
@@ -139,7 +139,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 1 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.270259
+	setne	%al	 #, D.270263
 .LBE5:
 .LBE4:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -195,7 +195,7 @@ _ZNKSt9type_info4nameEv:
 	movq	8(%rax), %rax	 # this_6(D)->__name, _3
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 31 discriminator 1
-	addq	$1, %rax	 #, iftmp.38_4
+	addq	$1, %rax	 #, iftmp.39_4
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 46 discriminator 1
 	jmp	.L9	 #
@@ -203,7 +203,7 @@ _ZNKSt9type_info4nameEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 31 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp94
-	movq	8(%rax), %rax	 # this_6(D)->__name, iftmp.38_4
+	movq	8(%rax), %rax	 # this_6(D)->__name, iftmp.39_4
 .L9:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/typeinfo:100:     { return __name[0] == '*' ? __name + 1 : __name; }
 	.loc 3 100 54 discriminator 5
@@ -459,8 +459,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.270263
-	movq	%rax, %rcx	 # D.270263,
+	movq	%rbx, %rax	 # tmp99, D.270267
+	movq	%rax, %rcx	 # D.270267,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1188,7 +1188,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 	call	_ZN16wxTypeIdentifiereqERKS_	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:251:         if ( wxTypeId(functor) == wxTypeId(*this) )
 	.loc 10 251 9
-	testb	%al, %al	 # retval.36_28
+	testb	%al, %al	 # retval.37_28
 	je	.L43	 #,
 .LBB19:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:253:             const wxObjectEventFunctor &other =
@@ -1256,14 +1256,14 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 .L47:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 10 262 74 discriminator 9
-	movl	$1, %eax	 #, iftmp.37_19
+	movl	$1, %eax	 #, iftmp.38_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 10 263 78 discriminator 9
 	jmp	.L49	 #
 .L46:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:262:             return ( m_method == other.m_method || other.m_method == 0 ) &&
 	.loc 10 262 74 discriminator 8
-	movl	$0, %eax	 #, iftmp.37_19
+	movl	$0, %eax	 #, iftmp.38_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:263:                    ( m_handler == other.m_handler || other.m_handler == NULL );
 	.loc 10 263 78 discriminator 8
 	jmp	.L49	 #
@@ -1271,7 +1271,7 @@ _ZNK20wxObjectEventFunctor10IsMatchingERK14wxEventFunctor:
 .LBE19:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:266:             return false;
 	.loc 10 266 20
-	movl	$0, %eax	 #, iftmp.37_19
+	movl	$0, %eax	 #, iftmp.38_19
 .L49:
 .LBE18:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:267:     }
@@ -1580,16 +1580,16 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 10 3776 50 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp106
-	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.39_17
+	movq	8(%rax), %rax	 # this_20(D)->m_handler, iftmp.40_17
 	jmp	.L65	 #
 .L64:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 10 3776 50 discriminator 2
-	movq	24(%rbp), %rax	 # handler, iftmp.39_17
+	movq	24(%rbp), %rax	 # handler, iftmp.40_17
 .L65:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3776:     wxEvtHandler * const realHandler = m_handler ? m_handler : handler;
 	.loc 10 3776 26 is_stmt 1 discriminator 4
-	movq	%rax, -8(%rbp)	 # iftmp.39_17, realHandler
+	movq	%rax, -8(%rbp)	 # iftmp.40_17, realHandler
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 10 3778 35 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp107
@@ -1618,18 +1618,18 @@ _ZN20wxObjectEventFunctorclEP12wxEvtHandlerR7wxEvent:
 	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, _12
 	subq	$1, %rax	 #, _14
 	addq	%rdx, %rax	 # _11, _16
-	movq	(%rax), %rax	 # *_16, iftmp.40_18
+	movq	(%rax), %rax	 # *_16, iftmp.41_18
 	jmp	.L67	 #
 .L66:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 10 3778 35 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp113
-	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.40_18
+	movq	16(%rax), %rax	 # this_20(D)->m_method.__pfn, iftmp.41_18
 .L67:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3778:     (realHandler->*m_method)(event);
 	.loc 10 3778 29 is_stmt 1 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp114
-	call	*%rax	 # iftmp.40_18
+	call	*%rax	 # iftmp.41_18
 .LVL3:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:3779: }
 	.loc 10 3779 1 discriminator 4
@@ -1798,15 +1798,15 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 .LVL4:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 11 337 16
-	movl	-16(%rbp), %ecx	 # h, h.22_4
-	movl	-12(%rbp), %edx	 # w, w.23_5
+	movl	-16(%rbp), %ecx	 # h, h.23_4
+	movl	-12(%rbp), %edx	 # w, w.24_5
 	leaq	-8(%rbp), %rax	 #, tmp97
-	movl	%ecx, %r8d	 # h.22_4,
+	movl	%ecx, %r8d	 # h.23_4,
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 11 337 27
-	movq	-8(%rbp), %rax	 # D.127637, D.269886
+	movq	-8(%rbp), %rax	 # D.127637, D.269890
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 11 338 5
 	addq	$48, %rsp	 #,
@@ -2037,7 +2037,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 11 481 78
-	movq	-8(%rbp), %rax	 # D.127671, D.269908
+	movq	-8(%rbp), %rax	 # D.127671, D.269912
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 11 481 81
 	addq	$48, %rsp	 #,
@@ -2085,7 +2085,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 11 482 78
-	movq	-8(%rbp), %rax	 # D.127673, D.269905
+	movq	-8(%rbp), %rax	 # D.127673, D.269909
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 11 482 81
 	addq	$48, %rsp	 #,
@@ -2272,7 +2272,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 11 532 77
-	movq	-72(%rbp), %rax	 # D.127715, D.269881
+	movq	-72(%rbp), %rax	 # D.127715, D.269885
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 11 533 5
 	addq	$72, %rsp	 #,
@@ -2689,12 +2689,12 @@ _ZNK12wxWindowBase12CanBeFocusedEv:
 	je	.L108	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 11 744 58 is_stmt 0 discriminator 3
-	movl	$1, %eax	 #, iftmp.21_6
+	movl	$1, %eax	 #, iftmp.22_6
 	jmp	.L109	 #
 .L108:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 11 744 58 discriminator 4
-	movl	$0, %eax	 #, iftmp.21_6
+	movl	$0, %eax	 #, iftmp.22_6
 .L109:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:744:     virtual bool CanBeFocused() const { return IsShown() && IsEnabled(); }
 	.loc 11 744 74 is_stmt 1 discriminator 6
@@ -3527,7 +3527,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 11 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.269796
+	movq	(%rax), %rax	 # wxDefaultSize, D.269800
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 11 1746 72
 	popq	%rbp	 #
@@ -3705,8 +3705,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.270270
-	movq	%rax, %rcx	 # D.270270,
+	movq	%rbx, %rax	 # tmp97, D.270274
+	movq	%rax, %rcx	 # D.270274,
 .LEHB4:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4501,8 +4501,8 @@ _ZN14wxMenuItemList10CreateNodeEP10wxNodeBaseS1_PvRK9wxListKey:
 	movl	$48, %edx	 #,
 	movq	%rbx, %rcx	 # _4,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp98, D.270274
-	movq	%rax, %rcx	 # D.270274,
+	movq	%rsi, %rax	 # tmp98, D.270278
+	movq	%rax, %rcx	 # D.270278,
 .LEHB7:
 	call	_Unwind_Resume	 #
 .LEHE7:
@@ -4626,8 +4626,8 @@ _ZN10wxMenuBaseC2El:
 	movq	-64(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN12wxEvtHandlerD2Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.270275
-	movq	%rax, %rcx	 # D.270275,
+	movq	%rbx, %rax	 # tmp106, D.270279
+	movq	%rax, %rcx	 # D.270279,
 .LEHB11:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4949,8 +4949,8 @@ _ZN6wxMenuC1El:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN10wxMenuBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.270277
-	movq	%rax, %rcx	 # D.270277,
+	movq	%rbx, %rax	 # tmp98, D.270281
+	movq	%rax, %rcx	 # D.270281,
 .LEHB15:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5607,12 +5607,12 @@ _ZNK11wxFrameBase17IsClientAreaChildEPK8wxWindow:
 	je	.L247	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/frame.h:181:         return !IsOneOfBars(child) && wxTopLevelWindow::IsClientAreaChild(child);
 	.loc 19 181 36 is_stmt 0 discriminator 3
-	movl	$1, %eax	 #, iftmp.20_8
+	movl	$1, %eax	 #, iftmp.21_8
 	jmp	.L248	 #
 .L247:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/frame.h:181:         return !IsOneOfBars(child) && wxTopLevelWindow::IsClientAreaChild(child);
 	.loc 19 181 36 discriminator 4
-	movl	$0, %eax	 #, iftmp.20_8
+	movl	$0, %eax	 #, iftmp.21_8
 .L248:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/frame.h:182:     }
 	.loc 19 182 5 is_stmt 1 discriminator 6
@@ -6160,8 +6160,8 @@ _ZN20wxMDIParentFrameBase14OnCreateClientEv:
 	movl	$584, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp93, D.270280
-	movq	%rax, %rcx	 # D.270280,
+	movq	%rsi, %rax	 # tmp93, D.270284
+	movq	%rax, %rcx	 # D.270284,
 .LEHB18:
 	call	_Unwind_Resume	 #
 .LEHE18:
@@ -6268,16 +6268,16 @@ _ZN20wxMDIParentFrameBase9TryBeforeER7wxEvent:
 .L276:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:384:     if ( event.GetEventType() == wxEVT_MENU ||
 	.loc 21 384 45 is_stmt 0 discriminator 3
-	movl	$1, %eax	 #, iftmp.32_15
+	movl	$1, %eax	 #, iftmp.33_15
 	jmp	.L278	 #
 .L277:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:384:     if ( event.GetEventType() == wxEVT_MENU ||
 	.loc 21 384 45 discriminator 4
-	movl	$0, %eax	 #, iftmp.32_15
+	movl	$0, %eax	 #, iftmp.33_15
 .L278:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:384:     if ( event.GetEventType() == wxEVT_MENU ||
 	.loc 21 384 5 is_stmt 1 discriminator 6
-	testb	%al, %al	 # iftmp.32_15
+	testb	%al, %al	 # iftmp.33_15
 	je	.L279	 #,
 .LBB33:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:387:         wxMDIChildFrame * const child = GetActiveChild();
@@ -6324,16 +6324,16 @@ _ZN20wxMDIParentFrameBase9TryBeforeER7wxEvent:
 .L281:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:394:             if ( !from || !from->IsDescendant(child) )
 	.loc 21 394 24 is_stmt 0 discriminator 3
-	movl	$1, %eax	 #, iftmp.34_16
+	movl	$1, %eax	 #, iftmp.35_16
 	jmp	.L283	 #
 .L282:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:394:             if ( !from || !from->IsDescendant(child) )
 	.loc 21 394 24 discriminator 4
-	movl	$0, %eax	 #, iftmp.34_16
+	movl	$0, %eax	 #, iftmp.35_16
 .L283:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:394:             if ( !from || !from->IsDescendant(child) )
 	.loc 21 394 13 is_stmt 1 discriminator 6
-	testb	%al, %al	 # iftmp.34_16
+	testb	%al, %al	 # iftmp.35_16
 	je	.L279	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/mdi.h:396:                 if ( child->ProcessWindowEventLocally(event) )
 	.loc 21 396 54
@@ -7030,8 +7030,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _27,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp189, D.270283
-	movq	%rax, %rcx	 # D.270283,
+	movq	%rsi, %rax	 # tmp189, D.270287
+	movq	%rax, %rcx	 # D.270287,
 .LEHB53:
 	call	_Unwind_Resume	 #
 .L317:
@@ -7041,8 +7041,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _32,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp190, D.270284
-	movq	%rax, %rcx	 # D.270284,
+	movq	%rsi, %rax	 # tmp190, D.270288
+	movq	%rax, %rcx	 # D.270288,
 	call	_Unwind_Resume	 #
 .L318:
 	movq	%rax, %rsi	 #, tmp191
@@ -7051,8 +7051,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _37,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp191, D.270285
-	movq	%rax, %rcx	 # D.270285,
+	movq	%rsi, %rax	 # tmp191, D.270289
+	movq	%rax, %rcx	 # D.270289,
 	call	_Unwind_Resume	 #
 .L319:
 	movq	%rax, %rsi	 #, tmp192
@@ -7061,8 +7061,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _42,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp192, D.270286
-	movq	%rax, %rcx	 # D.270286,
+	movq	%rsi, %rax	 # tmp192, D.270290
+	movq	%rax, %rcx	 # D.270290,
 	call	_Unwind_Resume	 #
 .L320:
 	movq	%rax, %rsi	 #, tmp193
@@ -7071,8 +7071,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	movl	$320, %edx	 #,
 	movq	%rbx, %rcx	 # _47,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp193, D.270287
-	movq	%rax, %rcx	 # D.270287,
+	movq	%rsi, %rax	 # tmp193, D.270291
+	movq	%rax, %rcx	 # D.270291,
 	call	_Unwind_Resume	 #
 .L322:
 	movq	%rax, %rbx	 #, tmp196
@@ -7090,8 +7090,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	-80(%rbp), %rax	 #, tmp199
 	movq	%rax, %rcx	 # tmp199,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp195, D.270288
-	movq	%rax, %rcx	 # D.270288,
+	movq	%rbx, %rax	 # tmp195, D.270292
+	movq	%rax, %rcx	 # D.270292,
 	call	_Unwind_Resume	 #
 .L324:
 	movq	%rax, %rbx	 #, tmp202
@@ -7109,8 +7109,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	16(%rbp), %rax	 #, tmp205
 	movq	%rax, %rcx	 # tmp205,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp201, D.270289
-	movq	%rax, %rcx	 # D.270289,
+	movq	%rbx, %rax	 # tmp201, D.270293
+	movq	%rax, %rcx	 # D.270293,
 	call	_Unwind_Resume	 #
 .L326:
 	movq	%rax, %rbx	 #, tmp208
@@ -7128,8 +7128,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	112(%rbp), %rax	 #, tmp211
 	movq	%rax, %rcx	 # tmp211,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp207, D.270290
-	movq	%rax, %rcx	 # D.270290,
+	movq	%rbx, %rax	 # tmp207, D.270294
+	movq	%rax, %rcx	 # D.270294,
 	call	_Unwind_Resume	 #
 .L328:
 	movq	%rax, %rbx	 #, tmp214
@@ -7147,8 +7147,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	208(%rbp), %rax	 #, tmp217
 	movq	%rax, %rcx	 # tmp217,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp213, D.270291
-	movq	%rax, %rcx	 # D.270291,
+	movq	%rbx, %rax	 # tmp213, D.270295
+	movq	%rax, %rcx	 # D.270295,
 	call	_Unwind_Resume	 #
 .L330:
 	movq	%rax, %rbx	 #, tmp220
@@ -7166,8 +7166,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	304(%rbp), %rax	 #, tmp223
 	movq	%rax, %rcx	 # tmp223,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp219, D.270292
-	movq	%rax, %rcx	 # D.270292,
+	movq	%rbx, %rax	 # tmp219, D.270296
+	movq	%rax, %rcx	 # D.270296,
 	call	_Unwind_Resume	 #
 .L332:
 	movq	%rax, %rbx	 #, tmp226
@@ -7185,8 +7185,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	400(%rbp), %rax	 #, tmp229
 	movq	%rax, %rcx	 # tmp229,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp225, D.270293
-	movq	%rax, %rcx	 # D.270293,
+	movq	%rbx, %rax	 # tmp225, D.270297
+	movq	%rax, %rcx	 # D.270297,
 	call	_Unwind_Resume	 #
 .L334:
 	movq	%rax, %rbx	 #, tmp232
@@ -7204,8 +7204,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	496(%rbp), %rax	 #, tmp235
 	movq	%rax, %rcx	 # tmp235,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp231, D.270294
-	movq	%rax, %rcx	 # D.270294,
+	movq	%rbx, %rax	 # tmp231, D.270298
+	movq	%rax, %rcx	 # D.270298,
 	call	_Unwind_Resume	 #
 .L336:
 	movq	%rax, %rbx	 #, tmp238
@@ -7223,8 +7223,8 @@ _ZN15T100ProjectData8ShowMenuEv:
 	leaq	592(%rbp), %rax	 #, tmp241
 	movq	%rax, %rcx	 # tmp241,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp237, D.270295
-	movq	%rax, %rcx	 # D.270295,
+	movq	%rbx, %rax	 # tmp237, D.270299
+	movq	%rax, %rcx	 # D.270299,
 	call	_Unwind_Resume	 #
 .LEHE53:
 .L337:
@@ -7440,11 +7440,29 @@ _ZN15T100ProjectData15OnItemActivatedEv:
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
+	subq	$32, %rsp	 #,
+	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:63: }
-	.loc 23 63 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:62:     if(m_opened){
+	.loc 23 62 16
+	movq	16(%rbp), %rax	 # this, tmp89
+	addq	$16, %rax	 #, _1
+	movq	%rax, %rcx	 # _1,
+	call	_ZNKSt6atomicIbEcvbEv	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:62:     if(m_opened){
+	.loc 23 62 5
+	testb	%al, %al	 # retval.16_6
+	jne	.L341	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:65:         T100ProjectInvoking::OnProjectOpen(this);
+	.loc 23 65 43
+	movq	16(%rbp), %rcx	 # this,
+	call	_ZN19T100ProjectInvoking13OnProjectOpenEP15T100ProjectData	 #
+.L341:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:67: }
+	.loc 23 67 1
 	nop	
+	addq	$32, %rsp	 #,
 	popq	%rbp	 #
 	.cfi_restore 6
 	.cfi_def_cfa 7, 8
@@ -7458,7 +7476,7 @@ _ZN15T100ProjectData15OnItemActivatedEv:
 	.seh_proc	_ZN15T100ProjectData15OnItemExpandingEv
 _ZN15T100ProjectData15OnItemExpandingEv:
 .LFB20274:
-	.loc 23 66 1
+	.loc 23 70 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -7471,23 +7489,23 @@ _ZN15T100ProjectData15OnItemExpandingEv:
 	.seh_stackalloc	32
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:67:     if(m_opened){
-	.loc 23 67 16
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:71:     if(m_opened){
+	.loc 23 71 16
 	movq	16(%rbp), %rax	 # this, tmp89
 	addq	$16, %rax	 #, _1
 	movq	%rax, %rcx	 # _1,
 	call	_ZNKSt6atomicIbEcvbEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:67:     if(m_opened){
-	.loc 23 67 5
-	testb	%al, %al	 # retval.16_6
-	jne	.L342	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:70:         T100ProjectInvoking::OnProjectOpen(this);
-	.loc 23 70 43
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:71:     if(m_opened){
+	.loc 23 71 5
+	testb	%al, %al	 # retval.20_6
+	jne	.L344	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:74:         T100ProjectInvoking::OnProjectOpen(this);
+	.loc 23 74 43
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZN19T100ProjectInvoking13OnProjectOpenEP15T100ProjectData	 #
-.L342:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:72: }
-	.loc 23 72 1
+.L344:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:76: }
+	.loc 23 76 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -7629,18 +7647,18 @@ _Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_:
 	.loc 24 71 68
 	movl	16(%rbp), %eax	 # a, tmp89
 	cmpl	24(%rbp), %eax	 # b, tmp89
-	jle	.L348	 #,
+	jle	.L350	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 24 71 68 is_stmt 0 discriminator 1
-	movl	16(%rbp), %eax	 # a, iftmp.24_1
+	movl	16(%rbp), %eax	 # a, iftmp.25_1
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 24 71 74 is_stmt 1 discriminator 1
-	jmp	.L350	 #
-.L348:
+	jmp	.L352	 #
+.L350:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 24 71 68 discriminator 2
-	movl	24(%rbp), %eax	 # b, iftmp.24_1
-.L350:
+	movl	24(%rbp), %eax	 # b, iftmp.25_1
+.L352:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:72: }
 	.loc 24 72 1 discriminator 5
 	popq	%rbp	 #
@@ -8918,7 +8936,7 @@ __tcf_0:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB21503:
-	.loc 23 72 1
+	.loc 23 76 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8932,23 +8950,23 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 16(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 24(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:72: }
-	.loc 23 72 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:76: }
+	.loc 23 76 1
 	cmpl	$1, 16(%rbp)	 #, __initialize_p
-	jne	.L362	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:72: }
-	.loc 23 72 1 is_stmt 0 discriminator 1
+	jne	.L364	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:76: }
+	.loc 23 76 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 24(%rbp)	 #, __priority
-	jne	.L362	 #,
+	jne	.L364	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 25 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
 	call	_ZNSt8ios_base4InitC1Ev	 #
 	leaq	__tcf_0(%rip), %rcx	 #,
 	call	atexit	 #
-.L362:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:72: }
-	.loc 23 72 1
+.L364:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:76: }
+	.loc 23 76 1
 	nop	
 	addq	$32, %rsp	 #,
 	popq	%rbp	 #
@@ -8979,7 +8997,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN15T100ProjectDataC2Ev
 _GLOBAL__sub_I__ZN15T100ProjectDataC2Ev:
 .LFB21614:
-	.loc 23 72 1
+	.loc 23 76 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -8991,8 +9009,8 @@ _GLOBAL__sub_I__ZN15T100ProjectDataC2Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:72: }
-	.loc 23 72 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\data\T100ProjectData.cpp:76: }
+	.loc 23 76 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -72345,7 +72363,7 @@ _GLOBAL__sub_I__ZN15T100ProjectDataC2Ev:
 	.uleb128 0x43
 	.ascii "OnItemExpanding\0"
 	.byte	0x17
-	.byte	0x41
+	.byte	0x45
 	.byte	0xa
 	.ascii "_ZN15T100ProjectData15OnItemExpandingEv\0"
 	.byte	0x1
@@ -74026,7 +74044,7 @@ _GLOBAL__sub_I__ZN15T100ProjectDataC2Ev:
 	.uleb128 0x32
 	.ascii "__initialize_p\0"
 	.byte	0x17
-	.byte	0x48
+	.byte	0x4c
 	.byte	0x1
 	.long	0x106a9
 	.uleb128 0x2
@@ -74035,7 +74053,7 @@ _GLOBAL__sub_I__ZN15T100ProjectDataC2Ev:
 	.uleb128 0x32
 	.ascii "__priority\0"
 	.byte	0x17
-	.byte	0x48
+	.byte	0x4c
 	.byte	0x1
 	.long	0x106a9
 	.uleb128 0x2
@@ -74965,7 +74983,7 @@ _GLOBAL__sub_I__ZN15T100ProjectDataC2Ev:
 	.byte	0x91
 	.sleb128 0
 	.byte	0
-	.uleb128 0x16
+	.uleb128 0x22
 	.long	0x46644
 	.long	0x4913c
 	.quad	.LFB20273

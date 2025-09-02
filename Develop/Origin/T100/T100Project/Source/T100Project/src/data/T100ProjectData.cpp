@@ -59,7 +59,11 @@ T100VOID T100ProjectData::OnItemChanged()
 
 T100VOID T100ProjectData::OnItemActivated()
 {
+    if(m_opened){
 
+    }else{
+        T100ProjectInvoking::OnProjectOpen(this);
+    }
 }
 
 T100VOID T100ProjectData::OnItemExpanding()

@@ -54,7 +54,7 @@ class T100ProjectTree : public wxTreeCtrl
         T100VOID                    uninit();
 
         wxTreeItemId                AppendRoot();
-        T100VOID                    AppendProject(wxTreeItemId, T100ProjectInfo*);
+        wxTreeItemId                AppendProject(wxTreeItemId, T100ProjectInfo*);
 
         T100VOID                    AppendFile(wxTreeItemId, T100FileInfo*);
         T100VOID                    AppendFolder(wxTreeItemId, T100FolderInfo*);

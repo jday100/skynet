@@ -32,6 +32,7 @@
 					<Add directory="include/base" />
 					<Add directory="include/library/shell" />
 					<Add directory="include/view/pack" />
+					<Add directory="include/library/debug" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswud" />
@@ -66,6 +67,7 @@
 					<Add directory="include/base" />
 					<Add directory="include/library/shell" />
 					<Add directory="include/view/pack" />
+					<Add directory="include/library/debug" />
 				</Compiler>
 				<ResourceCompiler>
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
@@ -133,6 +135,7 @@
 		<Unit filename="include/library/base/T100Object.h" />
 		<Unit filename="include/library/common/T100Constants.h" />
 		<Unit filename="include/library/common/T100DataTypes.h" />
+		<Unit filename="include/library/debug/T100DebugTools.h" />
 		<Unit filename="include/library/shell/T100Shell.h" />
 		<Unit filename="include/library/storage/file/T100File.h" />
 		<Unit filename="include/library/storage/file/text/T100TextFile.h" />
@@ -200,6 +203,7 @@
 		<Unit filename="src/library/algorithm/tree/T100Tree.cpp" />
 		<Unit filename="src/library/base/T100Class.cpp" />
 		<Unit filename="src/library/base/T100Object.cpp" />
+		<Unit filename="src/library/debug/T100DebugTools.cpp" />
 		<Unit filename="src/library/shell/T100Shell.cpp" />
 		<Unit filename="src/library/storage/file/T100File.cpp" />
 		<Unit filename="src/library/storage/file/text/T100TextFile.cpp" />

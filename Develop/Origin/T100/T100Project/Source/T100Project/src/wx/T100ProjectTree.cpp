@@ -1,5 +1,6 @@
 #include "T100ProjectTree.h"
 
+#include "T100DebugTools.h"
 #include "T100FileData.h"
 #include "T100FolderData.h"
 #include "T100ProjectData.h"
@@ -1170,14 +1171,17 @@ T100BOOL T100ProjectTree::WorkSpaceOpen(T100WorkSpaceInfo* info)
     wxTreeItemId        root        = AppendRoot();
 
     for(T100ProjectInfo* item : info->GetProjects()){
+        T100DebugTools::Print(L"AppendProject:" + item->GetLabel());
         AppendProject(root, item);
     }
 
     for(T100FolderInfo* item : info->GetFolders()){
+        T100DebugTools::Print(L"AppendFolder1:" + item->GetLabel());
         AppendFolder(root, item);
     }
 
     for(T100FileInfo* item : info->GetFiles()){
+        T100DebugTools::Print(L"AppendFile:" + item->GetLabel());
         AppendFile(root, item);
     }
 
@@ -1186,19 +1190,20 @@ T100BOOL T100ProjectTree::WorkSpaceOpen(T100WorkSpaceInfo* info)
     return T100TRUE;
 }
 
-
-
-
-
-
-
-
 T100VOID T100ProjectTree::ProjectOpen(T100ProjectInfo* info)
 {
-    wxTreeItemId        root        = GetRootItem();
-    AppendProject(root, info);
+    T100DebugTools::Print(L"T100ProjectTree::ProjectOpen(T100ProjectInfo*)...");
 
-    //Expand(root);
+    wxTreeItemId        root        = GetRootItem();
+    wxTreeItemId        item;
+
+    T100DebugTools::Print(L"AppendProject:" + info->GetLabel());
+    item    = AppendProject(root, info);
+
+    if(item.IsOk()){
+        Expand(root);
+        Expand(item);
+    }
 }
 
 T100VOID T100ProjectTree::FileCreate(T100FileInfo* info)
@@ -1245,6 +1250,7 @@ T100VOID T100ProjectTree::FolderOpen(wxTreeItemId id, T100FolderInfo* info)
 
 T100VOID T100ProjectTree::ProjectOpen(wxTreeItemId id, T100ProjectInfo* info)
 {
+    T100DebugTools::Print(L"ProjectOpen...");
     T100ProjectData*        data    = dynamic_cast<T100ProjectData*>(GetItemData(id));
 
     if(!data){
@@ -1255,6 +1261,7 @@ T100VOID T100ProjectTree::ProjectOpen(wxTreeItemId id, T100ProjectInfo* info)
     T100FILE_INFO_VECTOR&       files       = info->GetFiles();
 
     for(T100FolderInfo* folder : folders){
+        T100DebugTools::Print(L"AppendFolder2:" + folder->GetPath());
         AppendFolder(id, folder);
     }
 
@@ -1294,7 +1301,7 @@ wxTreeItemId T100ProjectTree::AppendRoot()
     return result;
 }
 
-T100VOID T100ProjectTree::AppendProject(wxTreeItemId parent, T100ProjectInfo* info)
+wxTreeItemId T100ProjectTree::AppendProject(wxTreeItemId parent, T100ProjectInfo* info)
 {
     T100ProjectData*    data    = T100NEW T100ProjectData(info);
     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 5, -1, data);
@@ -1302,6 +1309,8 @@ T100VOID T100ProjectTree::AppendProject(wxTreeItemId parent, T100ProjectInfo* in
     data->SetId(item);
 
     SetItemHasChildren(item, T100TRUE);
+
+    return item;
 }
 
 T100VOID T100ProjectTree::AppendFile(wxTreeItemId parent, T100FileInfo* info)
