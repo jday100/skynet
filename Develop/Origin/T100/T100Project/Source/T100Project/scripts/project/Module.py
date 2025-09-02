@@ -60,12 +60,13 @@ def create_module_include():
     try:
         cmd = "%s\\%s\\%s\\%s" % (g_project_path, g_project_code, g_project_include, g_module_include)
         with open(cmd, 'w', encoding='UTF-8') as source:
+            label   = g_module_label.upper()
             value = """
 #ifndef %s_H
 #define %s_H
 
 #endif // %s_H
-            """ % (g_module_label, g_module_label, g_module_label)
+            """ % (label, label, label)
 
             source.write(value)
 

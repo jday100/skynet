@@ -1,0 +1,6 @@
+
+#ifndef T100HARDDISPLAY_H
+#define T100HARDDISPLAY_H
+
+#endif // T100HARDDISPLAY_H
+            
