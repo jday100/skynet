@@ -50,11 +50,11 @@ def build():
     global g_project_include
     global g_project_source
 
-    bin     = "g++ -I%s\\%s\\%s" % (g_project_path, g_project_code, g_project_include)
+    bin     = "%s\\g++ -I%s\\%s\\%s" % (g_compiler_path, g_project_path, g_project_code, g_project_include)
 
     line    = "%s\\%s\\%s\\" % (g_project_path, g_project_code, g_project_source)
 
-    cmd     = "%s %s" % (bin, line)
+    cmd     = "%s %s%s" % (bin, line, "Project.cpp -o main.exe")
 
     print(cmd)
 
