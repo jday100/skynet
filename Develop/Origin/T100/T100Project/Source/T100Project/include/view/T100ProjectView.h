@@ -32,6 +32,7 @@ class T100ProjectView : public T100ProjectViewBase
         T100VOID                    FileClose(T100Pack*);
         T100VOID                    FileSave();
         T100VOID                    FileModified(const T100WSTRING&);
+        T100BOOL                    FileSelect(wxTreeItemId, T100FileInfo*);
 
         T100VOID                    PageClose(T100Pack*);
         T100VOID                    PageChanged();

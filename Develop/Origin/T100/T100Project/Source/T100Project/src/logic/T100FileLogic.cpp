@@ -29,6 +29,18 @@ T100BOOL T100FileLogic::IsExists(const T100WSTRING& filename)
     return T100FALSE;
 }
 
+T100BOOL T100FileLogic::IsOpened(const T100WSTRING& path)
+{
+    T100FileInfo*   value   = T100NULL;
+
+    value = m_openedFiles[path];
+
+    if(value){
+        return T100TRUE;
+    }
+    return T100FALSE;
+}
+
 T100BOOL T100FileLogic::Create(T100FileInfo* info)
 {
     if(!info){

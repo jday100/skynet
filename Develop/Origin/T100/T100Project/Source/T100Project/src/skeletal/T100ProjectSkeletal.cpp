@@ -353,15 +353,18 @@ T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
         return;
     }
 
-    if(!logic.IsExists(info->GetPath())){
-        return;
-    }
+    if(logic.IsOpened(info->GetPath())){
+        m_view->FileSelect(data->GetId(), info);
+    }else{
+        if(!logic.IsExists(info->GetPath())){
+            return;
+        }
 
-    if(!logic.Open(info->GetPath(), info)){
-        return;
+        if(!logic.Open(info->GetPath(), info)){
+            return;
+        }
+        m_view->FileOpen(data->GetId(), info);
     }
-
-    m_view->FileOpen(data->GetId(), info);
 }
 
 T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)

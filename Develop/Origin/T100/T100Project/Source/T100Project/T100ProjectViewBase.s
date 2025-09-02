@@ -178,7 +178,7 @@ _ZNKSt6atomicIbEcvbEv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/atomic_base.h:396: 	return __atomic_load_n(&_M_i, __m);
 	.loc 1 396 35
 	testb	%al, %al	 # _10
-	setne	%al	 #, D.276389
+	setne	%al	 #, D.276392
 .LBE7:
 .LBE6:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/atomic:86:     { return _M_base.load(); }
@@ -534,8 +534,8 @@ _ZN8wxString7ImplStrEPKcRK8wxMBConv:
 	leaq	-96(%rbp), %rax	 #, tmp95
 	movq	%rax, %rcx	 # tmp95,
 	call	_ZN8wxString17SubstrBufFromTypeI22wxScopedCharTypeBufferIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.276398
-	movq	%rax, %rcx	 # D.276398,
+	movq	%rbx, %rax	 # tmp96, D.276401
+	movq	%rax, %rcx	 # D.276401,
 .LEHB2:
 	call	_Unwind_Resume	 #
 .LEHE2:
@@ -804,8 +804,8 @@ _ZN8wxStringC1EPKc:
 	leaq	-89(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.276402
-	movq	%rax, %rcx	 # D.276402,
+	movq	%rbx, %rax	 # tmp103, D.276405
+	movq	%rax, %rcx	 # D.276405,
 .LEHB5:
 	call	_Unwind_Resume	 #
 	nop	
@@ -912,8 +912,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.276404
-	movq	%rax, %rcx	 # D.276404,
+	movq	%rbx, %rax	 # tmp99, D.276407
+	movq	%rax, %rcx	 # D.276407,
 .LEHB7:
 	call	_Unwind_Resume	 #
 	nop	
@@ -2462,7 +2462,7 @@ _ZNK12wxWindowBase13GetClientSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:337:         return wxSize(w, h);
 	.loc 15 337 27
-	movq	-8(%rbp), %rax	 # D.127637, D.275894
+	movq	-8(%rbp), %rax	 # D.127637, D.275897
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:338:     }
 	.loc 15 338 5
 	addq	$48, %rsp	 #,
@@ -2693,7 +2693,7 @@ _ZNK12wxWindowBase10GetMinSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 15 481 78
-	movq	-8(%rbp), %rax	 # D.127671, D.275916
+	movq	-8(%rbp), %rax	 # D.127671, D.275919
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:481:     virtual wxSize GetMinSize() const { return wxSize(m_minWidth, m_minHeight); }
 	.loc 15 481 81
 	addq	$48, %rsp	 #,
@@ -2741,7 +2741,7 @@ _ZNK12wxWindowBase10GetMaxSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 15 482 78
-	movq	-8(%rbp), %rax	 # D.127673, D.275913
+	movq	-8(%rbp), %rax	 # D.127673, D.275916
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:482:     virtual wxSize GetMaxSize() const { return wxSize(m_maxWidth, m_maxHeight); }
 	.loc 15 482 81
 	addq	$48, %rsp	 #,
@@ -2928,7 +2928,7 @@ _ZNK12wxWindowBase18GetBestVirtualSizeEv:
 	call	_ZN6wxSizeC1Eii	 #
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:532:         return wxSize( wxMax( client.x, best.x ), wxMax( client.y, best.y ) );
 	.loc 15 532 77
-	movq	-72(%rbp), %rax	 # D.127715, D.275889
+	movq	-72(%rbp), %rax	 # D.127715, D.275892
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:533:     }
 	.loc 15 533 5
 	addq	$72, %rsp	 #,
@@ -3870,7 +3870,7 @@ _ZNK12wxWindowBase19DoGetBestClientSizeEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 15 1746 57
 	movq	.refptr.wxDefaultSize(%rip), %rax	 #, tmp89
-	movq	(%rax), %rax	 # wxDefaultSize, D.275787
+	movq	(%rax), %rax	 # wxDefaultSize, D.275790
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/window.h:1746:     virtual wxSize DoGetBestClientSize() const { return wxDefaultSize; }
 	.loc 15 1746 72
 	popq	%rbp	 #
@@ -4737,8 +4737,8 @@ _ZN13wxAuiPaneInfoC1Ev:
 	movq	-64(%rbp), %rax	 # this, _14
 	movq	%rax, %rcx	 # _14,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp143, D.276415
-	movq	%rax, %rcx	 # D.276415,
+	movq	%rbx, %rax	 # tmp143, D.276418
+	movq	%rax, %rcx	 # D.276418,
 .LEHB10:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5105,8 +5105,8 @@ _ZN13wxAuiPaneInfoC1ERKS_:
 	movq	-64(%rbp), %rax	 # this, _30
 	movq	%rax, %rcx	 # _30,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp176, D.276416
-	movq	%rax, %rcx	 # D.276416,
+	movq	%rbx, %rax	 # tmp176, D.276419
+	movq	%rax, %rcx	 # D.276419,
 .LEHB13:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5581,8 +5581,8 @@ _ZN13wxAuiPaneInfo11DefaultPaneEv:
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp106, D.276417
-	movq	%rax, %rcx	 # D.276417,
+	movq	%rbx, %rax	 # tmp106, D.276420
+	movq	%rax, %rcx	 # D.276420,
 .LEHB16:
 	call	_Unwind_Resume	 #
 .LEHE16:
@@ -5759,8 +5759,8 @@ _ZN13wxAuiPaneInfo7SetFlagEib:
 	leaq	-80(%rbp), %rax	 #, tmp113
 	movq	%rax, %rcx	 # tmp113,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp114, D.276423
-	movq	%rax, %rcx	 # D.276423,
+	movq	%rbx, %rax	 # tmp114, D.276426
+	movq	%rax, %rcx	 # D.276426,
 .LEHB19:
 	call	_Unwind_Resume	 #
 .LEHE19:
@@ -6631,7 +6631,7 @@ _ZN15wxDirDialogBaseD2Ev:
 	.loc 26 59 32
 	leaq	16+_ZTV15wxDirDialogBase(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_6(D)->D.263771.D.263054.D.262733.D.262559.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_6(D)->D.263774.D.263057.D.262736.D.262562.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$840, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -6681,7 +6681,7 @@ _ZN15wxDirDialogBaseD1Ev:
 	.loc 26 59 32
 	leaq	16+_ZTV15wxDirDialogBase(%rip), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp91
-	movq	%rdx, (%rax)	 # _1, this_6(D)->D.263771.D.263054.D.262733.D.262559.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_6(D)->D.263774.D.263057.D.262736.D.262562.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, tmp92
 	addq	$840, %rax	 #, _2
 	movq	%rax, %rcx	 # _2,
@@ -6986,8 +6986,8 @@ _ZN19T100ProjectViewBaseC2Ev:
 	leaq	-81(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.276426
-	movq	%rax, %rcx	 # D.276426,
+	movq	%rbx, %rax	 # tmp103, D.276429
+	movq	%rax, %rcx	 # D.276429,
 .LEHB21:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7675,7 +7675,7 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 	movq	24(%rax), %rax	 # this_26(D)->m_frame, _14
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:102:     m_frame->SetLabel(title);
 	.loc 27 102 28
-	movq	(%rax), %rax	 # _14->D.264030.D.142549.D.142361.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject, _15
+	movq	(%rax), %rax	 # _14->D.264033.D.142549.D.142361.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject, _15
 	addq	$176, %rax	 #, _16
 	movq	(%rax), %rbx	 # *_16, _17
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:102:     m_frame->SetLabel(title);
@@ -7748,8 +7748,8 @@ _ZN19T100ProjectViewBase8SetTitleEv:
 	leaq	-96(%rbp), %rax	 #, tmp158
 	movq	%rax, %rcx	 # tmp158,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp150, D.276428
-	movq	%rax, %rcx	 # D.276428,
+	movq	%rbx, %rax	 # tmp150, D.276431
+	movq	%rax, %rcx	 # D.276431,
 .LEHB29:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7948,7 +7948,7 @@ _ZN19T100ProjectViewBase14CheckMainPanelEv:
 	movq	48(%rax), %rdx	 # this_22(D)->m_mainPanel, _10
 	movq	192(%rbp), %rax	 # this, tmp122
 	movq	48(%rax), %rax	 # this_22(D)->m_mainPanel, _12
-	movq	(%rax), %rax	 # _12->D.183786.D.147098.D.146804.D.145419.D.141347.D.141187.D.128839.D.127548.D.121505._vptr.wxObject, _13
+	movq	(%rax), %rax	 # _12->D.183789.D.147098.D.146804.D.145419.D.141347.D.141187.D.128839.D.127548.D.121505._vptr.wxObject, _13
 	addq	$16, %rax	 #, _14
 	movq	(%rax), %rax	 # *_14, _15
 	movq	%rdx, %rcx	 # _10,
@@ -7976,8 +7976,8 @@ _ZN19T100ProjectViewBase14CheckMainPanelEv:
 	movl	$1528, %edx	 #,
 	movq	%rbx, %rcx	 # _25,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp125, D.276436
-	movq	%rax, %rcx	 # D.276436,
+	movq	%rsi, %rax	 # tmp125, D.276439
+	movq	%rax, %rcx	 # D.276439,
 .LEHB34:
 	call	_Unwind_Resume	 #
 .L342:
@@ -7987,8 +7987,8 @@ _ZN19T100ProjectViewBase14CheckMainPanelEv:
 	leaq	-80(%rbp), %rax	 #, tmp126
 	movq	%rax, %rcx	 # tmp126,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.276437
-	movq	%rax, %rcx	 # D.276437,
+	movq	%rbx, %rax	 # tmp127, D.276440
+	movq	%rax, %rcx	 # D.276440,
 	call	_Unwind_Resume	 #
 .LEHE34:
 .L343:
@@ -8072,7 +8072,7 @@ _ZN19T100ProjectViewBase18AppendBuildMessageERKNSt7__cxx1112basic_stringIwSt11ch
 	movq	56(%rax), %rax	 # this_10(D)->m_buildPanel, _4
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:124:         m_buildPanel->Append(value);
 	.loc 27 124 35
-	movq	(%rax), %rax	 # _4->D.183859.D.157617.D.157117.D.141347.D.141187.D.128839.D.127548.D.121505._vptr.wxObject, _5
+	movq	(%rax), %rax	 # _4->D.183862.D.157617.D.157117.D.141347.D.141187.D.128839.D.127548.D.121505._vptr.wxObject, _5
 	addq	$2120, %rax	 #, _6
 	movq	(%rax), %rax	 # *_6, _7
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:124:         m_buildPanel->Append(value);
@@ -8236,8 +8236,8 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	leaq	832(%rbp), %rax	 #, tmp125
 	movq	%rax, %rcx	 # tmp125,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp123, D.276438
-	movq	%rax, %rcx	 # D.276438,
+	movq	%rbx, %rax	 # tmp123, D.276441
+	movq	%rax, %rcx	 # D.276441,
 .LEHB41:
 	call	_Unwind_Resume	 #
 .L359:
@@ -8256,8 +8256,8 @@ _ZN19T100ProjectViewBase13ShowDirDialogERNSt7__cxx1112basic_stringIwSt11char_tra
 	leaq	-64(%rbp), %rax	 #, tmp131
 	movq	%rax, %rcx	 # tmp131,
 	call	_ZN11wxDirDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.276439
-	movq	%rax, %rcx	 # D.276439,
+	movq	%rbx, %rax	 # tmp127, D.276442
+	movq	%rax, %rcx	 # D.276442,
 	call	_Unwind_Resume	 #
 .LEHE41:
 .L360:
@@ -8463,8 +8463,8 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	leaq	880(%rbp), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp117, D.276444
-	movq	%rax, %rcx	 # D.276444,
+	movq	%rbx, %rax	 # tmp117, D.276447
+	movq	%rax, %rcx	 # D.276447,
 .LEHB46:
 	call	_Unwind_Resume	 #
 .L372:
@@ -8472,8 +8472,8 @@ _ZN19T100ProjectViewBase25ShowWorkSpaceCreateDialogEP17T100WorkSpaceInfo:
 	leaq	-64(%rbp), %rax	 #, tmp122
 	movq	%rax, %rcx	 # tmp122,
 	call	_ZN25T100WorkSpaceCreateDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp123, D.276445
-	movq	%rax, %rcx	 # D.276445,
+	movq	%rbx, %rax	 # tmp123, D.276448
+	movq	%rax, %rcx	 # D.276448,
 	call	_Unwind_Resume	 #
 .LEHE46:
 .L373:
@@ -8609,8 +8609,8 @@ _ZN19T100ProjectViewBase28ShowWorkSpaceNotExistsDialogEv:
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp101, D.276448
-	movq	%rax, %rcx	 # D.276448,
+	movq	%rbx, %rax	 # tmp101, D.276451
+	movq	%rax, %rcx	 # D.276451,
 .LEHB50:
 	call	_Unwind_Resume	 #
 .LEHE50:
@@ -8742,8 +8742,8 @@ _ZN19T100ProjectViewBase29ShowWorkSpaceFileExistsDialogEv:
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp101, D.276449
-	movq	%rax, %rcx	 # D.276449,
+	movq	%rbx, %rax	 # tmp101, D.276452
+	movq	%rax, %rcx	 # D.276452,
 .LEHB54:
 	call	_Unwind_Resume	 #
 .LEHE54:
@@ -8881,8 +8881,8 @@ _ZN19T100ProjectViewBase32ShowWorkSpaceFileNotExistsDialogEv:
 	leaq	-80(%rbp), %rax	 #, tmp105
 	movq	%rax, %rcx	 # tmp105,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp101, D.276452
-	movq	%rax, %rcx	 # D.276452,
+	movq	%rbx, %rax	 # tmp101, D.276455
+	movq	%rax, %rcx	 # D.276455,
 .LEHB58:
 	call	_Unwind_Resume	 #
 .LEHE58:
@@ -9023,8 +9023,8 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 	leaq	752(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.276454
-	movq	%rax, %rcx	 # D.276454,
+	movq	%rbx, %rax	 # tmp103, D.276457
+	movq	%rax, %rcx	 # D.276457,
 .LEHB63:
 	call	_Unwind_Resume	 #
 .L403:
@@ -9034,8 +9034,8 @@ _ZN19T100ProjectViewBase29ShowWorkSpacePropertiesDialogEv:
 	leaq	-64(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN29T100WorkSpacePropertiesDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.276455
-	movq	%rax, %rcx	 # D.276455,
+	movq	%rbx, %rax	 # tmp109, D.276458
+	movq	%rax, %rcx	 # D.276458,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE63:
@@ -9168,8 +9168,8 @@ _ZN19T100ProjectViewBase30ShowWorkSpaceOpenFailureDialogEv:
 	leaq	-80(%rbp), %rax	 #, tmp101
 	movq	%rax, %rcx	 # tmp101,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.276457
-	movq	%rax, %rcx	 # D.276457,
+	movq	%rbx, %rax	 # tmp97, D.276460
+	movq	%rax, %rcx	 # D.276460,
 .LEHB67:
 	call	_Unwind_Resume	 #
 	nop	
@@ -9298,8 +9298,8 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	leaq	880(%rbp), %rax	 #, tmp104
 	movq	%rax, %rcx	 # tmp104,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp105, D.276459
-	movq	%rax, %rcx	 # D.276459,
+	movq	%rbx, %rax	 # tmp105, D.276462
+	movq	%rax, %rcx	 # D.276462,
 .LEHB71:
 	call	_Unwind_Resume	 #
 .L415:
@@ -9309,8 +9309,8 @@ _ZN19T100ProjectViewBase23ShowProjectCreateWizardEv:
 	leaq	-64(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZN23T100ProjectCreateWizardD1Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.276460
-	movq	%rax, %rcx	 # D.276460,
+	movq	%rbx, %rax	 # tmp107, D.276463
+	movq	%rax, %rcx	 # D.276463,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE71:
@@ -9467,8 +9467,8 @@ _ZN19T100ProjectViewBase22ShowModuleCreateDialogEv:
 	leaq	752(%rbp), %rax	 #, tmp111
 	movq	%rax, %rcx	 # tmp111,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.276462
-	movq	%rax, %rcx	 # D.276462,
+	movq	%rbx, %rax	 # tmp107, D.276465
+	movq	%rax, %rcx	 # D.276465,
 .LEHB76:
 	call	_Unwind_Resume	 #
 .L424:
@@ -9478,8 +9478,8 @@ _ZN19T100ProjectViewBase22ShowModuleCreateDialogEv:
 	leaq	-64(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	_ZN22T100ModuleCreateDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp113, D.276463
-	movq	%rax, %rcx	 # D.276463,
+	movq	%rbx, %rax	 # tmp113, D.276466
+	movq	%rax, %rcx	 # D.276466,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE76:
@@ -9680,7 +9680,7 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	movq	56(%rax), %rdx	 # this_31(D)->m_buildPanel, _9
 	movq	336(%rbp), %rax	 # this, tmp137
 	movq	56(%rax), %rax	 # this_31(D)->m_buildPanel, _11
-	movq	(%rax), %rax	 # _11->D.183859.D.157617.D.157117.D.141347.D.141187.D.128839.D.127548.D.121505._vptr.wxObject, _12
+	movq	(%rax), %rax	 # _11->D.183862.D.157617.D.157117.D.141347.D.141187.D.128839.D.127548.D.121505._vptr.wxObject, _12
 	addq	$16, %rax	 #, _13
 	movq	(%rax), %rax	 # *_13, _14
 	movq	%rdx, %rcx	 # _9,
@@ -9708,7 +9708,7 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	movq	56(%rax), %rax	 # this_31(D)->m_buildPanel, _19
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     m_buildPanel->Show();
 	.loc 27 239 24
-	movq	(%rax), %rax	 # _19->D.183859.D.157617.D.157117.D.141347.D.141187.D.128839.D.127548.D.121505._vptr.wxObject, _20
+	movq	(%rax), %rax	 # _19->D.183862.D.157617.D.157117.D.141347.D.141187.D.128839.D.127548.D.121505._vptr.wxObject, _20
 	addq	$448, %rax	 #, _21
 	movq	(%rax), %rax	 # *_21, _22
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewBase.cpp:239:     m_buildPanel->Show();
@@ -9752,8 +9752,8 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	leaq	-48(%rbp), %rax	 #, tmp150
 	movq	%rax, %rcx	 # tmp150,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp148, D.276465
-	movq	%rax, %rcx	 # D.276465,
+	movq	%rbx, %rax	 # tmp148, D.276468
+	movq	%rax, %rcx	 # D.276468,
 	call	_Unwind_Resume	 #
 .L438:
 	movq	%rax, %rbx	 #, tmp152
@@ -9762,8 +9762,8 @@ _ZN19T100ProjectViewBase14ShowBuildPanelEv:
 	leaq	48(%rbp), %rax	 #, tmp151
 	movq	%rax, %rcx	 # tmp151,
 	call	_ZN13wxAuiPaneInfoD1Ev	 #
-	movq	%rbx, %rax	 # tmp152, D.276466
-	movq	%rax, %rcx	 # D.276466,
+	movq	%rbx, %rax	 # tmp152, D.276469
+	movq	%rax, %rcx	 # D.276469,
 	call	_Unwind_Resume	 #
 .LEHE83:
 .L439:
@@ -9923,8 +9923,8 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	leaq	736(%rbp), %rax	 #, tmp107
 	movq	%rax, %rcx	 # tmp107,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp103, D.276469
-	movq	%rax, %rcx	 # D.276469,
+	movq	%rbx, %rax	 # tmp103, D.276472
+	movq	%rax, %rcx	 # D.276472,
 .LEHB88:
 	call	_Unwind_Resume	 #
 .L446:
@@ -9934,8 +9934,8 @@ _ZN19T100ProjectViewBase15ShowAboutDialogEv:
 	leaq	-64(%rbp), %rax	 #, tmp108
 	movq	%rax, %rcx	 # tmp108,
 	call	_ZN26T100ProjectViewAboutDialogD1Ev	 #
-	movq	%rbx, %rax	 # tmp109, D.276470
-	movq	%rax, %rcx	 # D.276470,
+	movq	%rbx, %rax	 # tmp109, D.276473
+	movq	%rax, %rcx	 # D.276473,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE88:
@@ -10390,8 +10390,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.276472
-	movq	%rax, %rcx	 # D.276472,
+	movq	%rbx, %rax	 # tmp90, D.276475
+	movq	%rax, %rcx	 # D.276475,
 .LEHB91:
 	call	_Unwind_Resume	 #
 .LEHE91:
@@ -10608,14 +10608,14 @@ _ZN22wxScopedCharTypeBufferIwE6DecRefEv:
 	movq	(%rax), %rax	 # this_11(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 4 196 24
-	movzwl	16(%rax), %edx	 # _3->D.268804.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.268807.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 4 196 30
 	subl	$1, %edx	 #, _5
-	movw	%dx, 16(%rax)	 # _5, _3->D.268804.m_ref
+	movw	%dx, 16(%rax)	 # _5, _3->D.268807.m_ref
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 4 196 24
-	movzwl	16(%rax), %eax	 # _3->D.268804.m_ref, _6
+	movzwl	16(%rax), %eax	 # _3->D.268807.m_ref, _6
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:196:         if ( --m_data->m_ref == 0 )
 	.loc 4 196 30
 	testw	%ax, %ax	 # _6
@@ -10745,11 +10745,11 @@ _ZN22wxScopedCharTypeBufferIwE6IncRefEv:
 	movq	(%rax), %rax	 # this_9(D)->m_data, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 4 189 17
-	movzwl	16(%rax), %edx	 # _3->D.268804.m_ref, _4
+	movzwl	16(%rax), %edx	 # _3->D.268807.m_ref, _4
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:189:         m_data->m_ref++;
 	.loc 4 189 9
 	addl	$1, %edx	 #, _6
-	movw	%dx, 16(%rax)	 # _6, _3->D.268804.m_ref
+	movw	%dx, 16(%rax)	 # _6, _3->D.268807.m_ref
 	jmp	.L479	 #
 .L482:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:188:             return;
@@ -10790,7 +10790,7 @@ _ZNK22wxScopedCharTypeBufferIwE4Data3GetEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 4 171 69
 	movq	16(%rbp), %rax	 # this, tmp89
-	movq	(%rax), %rax	 # this_2(D)->D.268804.m_str, _3
+	movq	(%rax), %rax	 # this_2(D)->D.268807.m_str, _3
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/buffer.h:171:         CharType *Get() const { return static_cast<CharType *>(m_str); }
 	.loc 4 171 72
 	popq	%rbp	 #
@@ -11718,7 +11718,7 @@ _ZN11wxDirDialogD1Ev:
 	movq	.refptr._ZTV11wxDirDialog(%rip), %rax	 #, tmp89
 	leaq	16(%rax), %rdx	 #, _1
 	movq	16(%rbp), %rax	 # this, tmp90
-	movq	%rdx, (%rax)	 # _1, this_4(D)->D.263877.D.263771.D.263054.D.262733.D.262559.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
+	movq	%rdx, (%rax)	 # _1, this_4(D)->D.263880.D.263774.D.263057.D.262736.D.262562.D.141044.D.140955.D.140676.D.139750.D.139693.D.128839.D.127548.D.121505._vptr.wxObject
 	movq	16(%rbp), %rax	 # this, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZN15wxDirDialogBaseD2Ev	 #

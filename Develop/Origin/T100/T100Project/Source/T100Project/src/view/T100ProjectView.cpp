@@ -124,6 +124,11 @@ T100VOID T100ProjectView::FileClose(T100Pack* pack)
     }
 }
 
+T100BOOL T100ProjectView::FileSelect(wxTreeItemId id, T100FileInfo* info)
+{
+    m_mainPanel->Select(info);
+}
+
 T100VOID T100ProjectView::PageClose(T100Pack* pack)
 {
     SetTitle();

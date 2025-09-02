@@ -25,6 +25,8 @@ class T100MainPanel : public wxAuiNotebook
         virtual T100BOOL            Open(T100FileInfo*);
         virtual T100BOOL            Close(T100FileInfo*);
 
+        T100BOOL                    Select(T100FileInfo*);
+
         virtual T100BOOL            Save();
         virtual T100BOOL            SaveAll();
         virtual T100BOOL            Clear();

@@ -101,6 +101,35 @@ T100BOOL T100MainPanel::Close(T100FileInfo* info)
     return T100TRUE;
 }
 
+T100BOOL T100MainPanel::Select(T100FileInfo* info)
+{
+    if(!info){
+        return T100FALSE;
+    }
+
+    T100Pack*       pack        = T100NULL;
+
+    pack    = m_packs[info->GetPath()];
+
+    if(pack){
+
+    }else{
+        return T100FALSE;
+    }
+
+    T100INT     index       = GetPageIndex(pack);
+
+    if(index >= 0){
+
+    }else{
+        return T100FALSE;
+    }
+
+    SetSelection(index);
+
+    return T100TRUE;
+}
+
 T100BOOL T100MainPanel::Save()
 {
     if(m_current){

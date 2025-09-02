@@ -1294,8 +1294,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$64, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp95, D.172730
-	movq	%rax, %rcx	 # D.172730,
+	movq	%rsi, %rax	 # tmp95, D.172733
+	movq	%rax, %rcx	 # D.172733,
 .LEHB4:
 	call	_Unwind_Resume	 #
 .L51:
@@ -1305,8 +1305,8 @@ _ZN16T100ProjectLogic4initEv:
 	movl	$8, %edx	 #,
 	movq	%rbx, %rcx	 # _9,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp96, D.172731
-	movq	%rax, %rcx	 # D.172731,
+	movq	%rsi, %rax	 # tmp96, D.172734
+	movq	%rax, %rcx	 # D.172734,
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE4:
@@ -1540,8 +1540,8 @@ _ZN16T100ProjectLogic11GetFileNameB5cxx11ERK16T100WxFolderInfo:
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp95, D.172732
-	movq	%rax, %rcx	 # D.172732,
+	movq	%rbx, %rax	 # tmp95, D.172735
+	movq	%rax, %rcx	 # D.172735,
 .LEHB7:
 	call	_Unwind_Resume	 #
 .LEHE7:
@@ -1747,8 +1747,8 @@ _ZN16T100ProjectLogic5CheckEP16T100WxFolderInfo:
 	leaq	-48(%rbp), %rax	 #, tmp121
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp117, D.172738
-	movq	%rax, %rcx	 # D.172738,
+	movq	%rbx, %rax	 # tmp117, D.172741
+	movq	%rax, %rcx	 # D.172741,
 .LEHB11:
 	call	_Unwind_Resume	 #
 .LEHE11:
@@ -1925,8 +1925,8 @@ _ZN16T100ProjectLogic6CreateERK16T100WxFolderInfoP17T100WorkSpaceInfo:
 	leaq	-48(%rbp), %rax	 #, tmp114
 	movq	%rax, %rcx	 # tmp114,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp112, D.172740
-	movq	%rax, %rcx	 # D.172740,
+	movq	%rbx, %rax	 # tmp112, D.172743
+	movq	%rax, %rcx	 # D.172743,
 .LEHB15:
 	call	_Unwind_Resume	 #
 .LEHE15:
@@ -2461,8 +2461,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	leaq	223(%rbp), %rax	 #, tmp195
 	movq	%rax, %rcx	 # tmp195,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp191, D.172741
-	movq	%rax, %rcx	 # D.172741,
+	movq	%rbx, %rax	 # tmp191, D.172744
+	movq	%rax, %rcx	 # D.172744,
 .LEHB33:
 	call	_Unwind_Resume	 #
 .L122:
@@ -2567,8 +2567,8 @@ _ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	leaq	128(%rbp), %rax	 #, tmp227
 	movq	%rax, %rcx	 # tmp227,
 	call	_ZN10T100FolderD1Ev	 #
-	movq	%rbx, %rax	 # tmp225, D.172742
-	movq	%rax, %rcx	 # D.172742,
+	movq	%rbx, %rax	 # tmp225, D.172745
+	movq	%rax, %rcx	 # D.172745,
 	call	_Unwind_Resume	 #
 .LEHE33:
 .L129:
@@ -2685,7 +2685,7 @@ _ZN16T100ProjectLogic5CloseEP15T100ProjectInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.163532, D.163532
+	movq	%rdx, 24(%rbp)	 # D.163535, D.163535
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:175: }
 	.loc 8 175 1
 	nop	
@@ -2713,7 +2713,7 @@ _ZN16T100ProjectLogic6RenameEP15T100ProjectInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.163536, D.163536
+	movq	%rdx, 24(%rbp)	 # D.163539, D.163539
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:180: }
 	.loc 8 180 1
 	nop	
@@ -2741,7 +2741,7 @@ _ZN16T100ProjectLogic5CleanEP15T100ProjectInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.163540, D.163540
+	movq	%rdx, 24(%rbp)	 # D.163543, D.163543
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:185: }
 	.loc 8 185 1
 	nop	
@@ -2900,8 +2900,8 @@ _ZN16T100ProjectLogic3RunEP17T100WorkSpaceInfoP15T100ProjectInfo:
 	leaq	-56(%rbp), %rax	 #, tmp117
 	movq	%rax, %rcx	 # tmp117,
 	call	_ZN9T100ShellD1Ev	 #
-	movq	%rbx, %rax	 # tmp115, D.172749
-	movq	%rax, %rcx	 # D.172749,
+	movq	%rbx, %rax	 # tmp115, D.172752
+	movq	%rax, %rcx	 # D.172752,
 .LEHB38:
 	call	_Unwind_Resume	 #
 .LEHE38:
@@ -3550,8 +3550,8 @@ _ZN16T100ProjectLogic5BuildEP17T100WorkSpaceInfoP15T100ProjectInfo:
 	leaq	8(%rbp), %rax	 #, tmp236
 	movq	%rax, %rcx	 # tmp236,
 	call	_ZN9T100ShellD1Ev	 #
-	movq	%rbx, %rax	 # tmp234, D.172753
-	movq	%rax, %rcx	 # D.172753,
+	movq	%rbx, %rax	 # tmp234, D.172756
+	movq	%rax, %rcx	 # D.172756,
 .LEHB58:
 	call	_Unwind_Resume	 #
 .LEHE58:
@@ -3683,8 +3683,8 @@ _ZN16T100ProjectLogic7RebuildEP17T100WorkSpaceInfoP15T100ProjectInfo:
 	.cfi_def_cfa_register 6
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
-	movq	%rdx, 24(%rbp)	 # D.163603, D.163603
-	movq	%r8, 32(%rbp)	 # D.163604, D.163604
+	movq	%rdx, 24(%rbp)	 # D.163606, D.163606
+	movq	%r8, 32(%rbp)	 # D.163607, D.163607
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100ProjectLogic.cpp:240: }
 	.loc 8 240 1
 	nop	
@@ -4353,8 +4353,8 @@ _ZN16T100ProjectLogic12CreateModuleEP17T100WorkSpaceInfoP14T100ModuleInfo:
 	leaq	8(%rbp), %rax	 #, tmp248
 	movq	%rax, %rcx	 # tmp248,
 	call	_ZN9T100ShellD1Ev	 #
-	movq	%rbx, %rax	 # tmp246, D.172774
-	movq	%rax, %rcx	 # D.172774,
+	movq	%rbx, %rax	 # tmp246, D.172777
+	movq	%rax, %rcx	 # D.172777,
 .LEHB80:
 	call	_Unwind_Resume	 #
 .LEHE80:
@@ -5163,8 +5163,8 @@ _ZN16T100ProjectLogic7ExecuteEP17T100WorkSpaceInfoP15T100ProjectInfo:
 	leaq	8(%rbp), %rax	 #, tmp254
 	movq	%rax, %rcx	 # tmp254,
 	call	_ZN9T100ShellD1Ev	 #
-	movq	%rbx, %rax	 # tmp252, D.172797
-	movq	%rax, %rcx	 # D.172797,
+	movq	%rbx, %rax	 # tmp252, D.172800
+	movq	%rax, %rcx	 # D.172800,
 .LEHB104:
 	call	_Unwind_Resume	 #
 .LEHE104:
@@ -5402,8 +5402,8 @@ _ZN16T100ProjectLogic12GetBuildNameB5cxx11EPK15T100ProjectInfo:
 	leaq	-96(%rbp), %rax	 #, tmp94
 	movq	%rax, %rcx	 # tmp94,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp95, D.172823
-	movq	%rax, %rcx	 # D.172823,
+	movq	%rbx, %rax	 # tmp95, D.172826
+	movq	%rax, %rcx	 # D.172826,
 .LEHB107:
 	call	_Unwind_Resume	 #
 .LEHE107:
@@ -5494,8 +5494,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_SA_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.172827
-	movq	%rax, %rcx	 # D.172827,
+	movq	%rbx, %rax	 # tmp90, D.172830
+	movq	%rax, %rcx	 # D.172830,
 .LEHB110:
 	call	_Unwind_Resume	 #
 .LEHE110:
@@ -5664,9 +5664,9 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EED1Ev:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:567: 	std::_Destroy(this->_M_impl._M_start, this->_M_impl._M_finish,
 	.loc 10 567 15
 	movq	16(%rbp), %rax	 # this, tmp92
-	movq	8(%rax), %rdx	 # this_6(D)->D.163256._M_impl._M_finish, _3
+	movq	8(%rax), %rdx	 # this_6(D)->D.163259._M_impl._M_finish, _3
 	movq	16(%rbp), %rax	 # this, tmp93
-	movq	(%rax), %rax	 # this_6(D)->D.163256._M_impl._M_start, _4
+	movq	(%rax), %rax	 # this_6(D)->D.163259._M_impl._M_start, _4
 	movq	%rcx, %r8	 # _2,
 	movq	%rax, %rcx	 # _4,
 	call	_ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSaIT0_E	 #
@@ -5725,7 +5725,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE5beginE
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_	 #
-	movq	-8(%rbp), %rax	 # D.167783, D.172140
+	movq	-8(%rbp), %rax	 # D.167786, D.172143
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 10 699 50
 	addq	$48, %rsp	 #,
@@ -5766,7 +5766,7 @@ _ZNSt6vectorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESaIS5_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt6vectorIS6_SaIS6_EEEC1ERKS7_	 #
-	movq	-8(%rbp), %rax	 # D.167785, D.172143
+	movq	-8(%rbp), %rax	 # D.167788, D.172146
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 10 717 51
 	addq	$48, %rsp	 #,
@@ -6048,7 +6048,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE9push_backERKS1_:
 	.loc 10 1085 4
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv	 #
-	movq	%rax, %rdx	 #, D.172030
+	movq	%rax, %rdx	 #, D.172033
 	movq	24(%rbp), %rax	 # __x, tmp100
 	movq	%rax, %r8	 # tmp100,
 	movq	16(%rbp), %rcx	 # this,
@@ -6129,7 +6129,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE9push_backERKS1_:
 	.loc 10 1085 4
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv	 #
-	movq	%rax, %rdx	 #, D.172166
+	movq	%rax, %rdx	 #, D.172169
 	movq	24(%rbp), %rax	 # __x, tmp100
 	movq	%rax, %r8	 # tmp100,
 	movq	16(%rbp), %rcx	 # this,
@@ -6242,8 +6242,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EERKS8_PKS5_:
 	movq	%rax, %rbx	 #, tmp90
 	movq	-64(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp90, D.172831
-	movq	%rax, %rcx	 # D.172831,
+	movq	%rbx, %rax	 # tmp90, D.172834
+	movq	%rax, %rcx	 # D.172834,
 .LEHB113:
 	call	_Unwind_Resume	 #
 .LEHE113:
@@ -6358,8 +6358,8 @@ _ZStplIwSt11char_traitsIwESaIwEENSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_RKS8_:
 	movq	%rax, %rbx	 #, tmp97
 	movq	-48(%rbp), %rcx	 # <retval>,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.172833
-	movq	%rax, %rcx	 # D.172833,
+	movq	%rbx, %rax	 # tmp97, D.172836
+	movq	%rax, %rcx	 # D.172836,
 .LEHB115:
 	call	_Unwind_Resume	 #
 .LEHE115:
@@ -6625,7 +6625,7 @@ _ZSt8_DestroyIPNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEES5_EvT_S7_RSa
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.167771, D.167771
+	movq	%r8, 32(%rbp)	 # D.167774, D.167774
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 14 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -6817,7 +6817,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.168991, D.172035
+	movq	-8(%rbp), %rax	 # D.168994, D.172038
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 10 717 51
 	addq	$48, %rsp	 #,
@@ -6882,7 +6882,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
 	.loc 16 426 51
 	movq	0(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv	 #
-	movq	%rax, -88(%rbp)	 # tmp127, D.168997
+	movq	%rax, -88(%rbp)	 # tmp127, D.169000
 	leaq	-88(%rbp), %rdx	 #, tmp128
 	leaq	8(%rbp), %rax	 #, tmp129
 	movq	%rax, %rcx	 # tmp129,
@@ -7086,8 +7086,8 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 16 457 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp160, D.172835
-	movq	%rax, %rcx	 # D.172835,
+	movq	%rbx, %rax	 # tmp160, D.172838
+	movq	%rax, %rcx	 # D.172838,
 .LEHB120:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7249,7 +7249,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE3endEv:
 	leaq	-8(%rbp), %rax	 #, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.169038, D.172169
+	movq	-8(%rbp), %rax	 # D.169041, D.172172
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:717:       { return iterator(this->_M_impl._M_finish); }
 	.loc 10 717 51
 	addq	$48, %rsp	 #,
@@ -7310,7 +7310,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
 	.loc 16 426 51
 	movq	0(%rbp), %rcx	 # this,
 	call	_ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv	 #
-	movq	%rax, -88(%rbp)	 # tmp127, D.169044
+	movq	%rax, -88(%rbp)	 # tmp127, D.169047
 	leaq	-88(%rbp), %rdx	 #, tmp128
 	leaq	8(%rbp), %rax	 #, tmp129
 	movq	%rax, %rcx	 # tmp129,
@@ -7514,8 +7514,8 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE17_M_realloc_insertIJRKS1_EEEvN9__gnu_cxx17_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/vector.tcc:457:       __catch(...)
 	.loc 16 457 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp160, D.172837
-	movq	%rax, %rcx	 # D.172837,
+	movq	%rbx, %rax	 # tmp160, D.172840
+	movq	%rax, %rcx	 # D.172840,
 .LEHB125:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7895,7 +7895,7 @@ _ZNKSt6vectorIP14T100FolderInfoSaIS1_EE12_M_check_lenEyPKc:
 	.loc 10 1640 43
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP14T100FolderInfoSaIS1_EE4sizeEv	 #
-	movq	%rax, -96(%rbp)	 # _7, D.169692
+	movq	%rax, -96(%rbp)	 # _7, D.169695
 	leaq	-40(%rbp), %rdx	 #, tmp101
 	leaq	-96(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
@@ -7975,7 +7975,7 @@ _ZNSt6vectorIP14T100FolderInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP14T100FolderInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.169694, D.172072
+	movq	-8(%rbp), %rax	 # D.169697, D.172075
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 10 699 50
 	addq	$48, %rsp	 #,
@@ -8186,15 +8186,15 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP14T100FolderInfoS2_SaIS1_EET0_T_S5_S4
 	movq	-56(%rbp), %rax	 # __last, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rbx	 #, D.172096
+	movq	%rax, %rbx	 #, D.172099
 	movq	-64(%rbp), %rcx	 # __first,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rcx	 #, D.172097
+	movq	%rax, %rcx	 #, D.172100
 	movq	-40(%rbp), %rdx	 # __alloc, tmp92
 	movq	-48(%rbp), %rax	 # __result, tmp93
 	movq	%rdx, %r9	 # tmp92,
 	movq	%rax, %r8	 # tmp93,
-	movq	%rbx, %rdx	 # D.172096,
+	movq	%rbx, %rdx	 # D.172099,
 	call	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6_S5_RSaIT1_E	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:313:     }
 	.loc 19 313 5
@@ -8267,7 +8267,7 @@ _ZSt8_DestroyIPP14T100FolderInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.169019, D.169019
+	movq	%r8, 32(%rbp)	 # D.169022, D.169022
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 14 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -8487,7 +8487,7 @@ _ZNKSt6vectorIP12T100FileInfoSaIS1_EE12_M_check_lenEyPKc:
 	.loc 10 1640 43
 	movq	-48(%rbp), %rcx	 # this,
 	call	_ZNKSt6vectorIP12T100FileInfoSaIS1_EE4sizeEv	 #
-	movq	%rax, -96(%rbp)	 # _7, D.169954
+	movq	%rax, -96(%rbp)	 # _7, D.169957
 	leaq	-40(%rbp), %rdx	 #, tmp101
 	leaq	-96(%rbp), %rax	 #, tmp102
 	movq	%rax, %rcx	 # tmp102,
@@ -8567,7 +8567,7 @@ _ZNSt6vectorIP12T100FileInfoSaIS1_EE5beginEv:
 	leaq	-8(%rbp), %rax	 #, tmp90
 	movq	%rax, %rcx	 # tmp90,
 	call	_ZN9__gnu_cxx17__normal_iteratorIPP12T100FileInfoSt6vectorIS2_SaIS2_EEEC1ERKS3_	 #
-	movq	-8(%rbp), %rax	 # D.169956, D.172202
+	movq	-8(%rbp), %rax	 # D.169959, D.172205
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_vector.h:699:       { return iterator(this->_M_impl._M_start); }
 	.loc 10 699 50
 	addq	$48, %rsp	 #,
@@ -8777,15 +8777,15 @@ _ZSt34__uninitialized_move_if_noexcept_aIPP12T100FileInfoS2_SaIS1_EET0_T_S5_S4_R
 	movq	-56(%rbp), %rax	 # __last, tmp91
 	movq	%rax, %rcx	 # tmp91,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rbx	 #, D.172226
+	movq	%rax, %rbx	 #, D.172229
 	movq	-64(%rbp), %rcx	 # __first,
 	call	_ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0_PT_	 #
-	movq	%rax, %rcx	 #, D.172227
+	movq	%rax, %rcx	 #, D.172230
 	movq	-40(%rbp), %rdx	 # __alloc, tmp92
 	movq	-48(%rbp), %rax	 # __result, tmp93
 	movq	%rdx, %r9	 # tmp92,
 	movq	%rax, %r8	 # tmp93,
-	movq	%rbx, %rdx	 # D.172226,
+	movq	%rbx, %rdx	 # D.172229,
 	call	_ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S5_RSaIT1_E	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:313:     }
 	.loc 19 313 5
@@ -8858,7 +8858,7 @@ _ZSt8_DestroyIPP12T100FileInfoS1_EvT_S3_RSaIT0_E:
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
-	movq	%r8, 32(%rbp)	 # D.169066, D.169066
+	movq	%r8, 32(%rbp)	 # D.169069, D.169069
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:206:       _Destroy(__first, __last);
 	.loc 14 206 15
 	movq	24(%rbp), %rax	 # __last, tmp87
@@ -9257,7 +9257,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP14T100FolderInfoSt13move_iteratorIPS1_EE
 	movq	16(%rbp), %rdx	 # __i,
 	movq	%rax, %rcx	 # tmp89,
 	call	_ZNSt13move_iteratorIPP14T100FolderInfoEC1ES2_	 #
-	movq	-8(%rbp), %rax	 # D.170792, D.172100
+	movq	-8(%rbp), %rax	 # D.170795, D.172103
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:1216:     { return _ReturnType(__i); }
 	.loc 11 1216 32
 	addq	$48, %rsp	 #,
@@ -9290,7 +9290,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP14T100FolderInfoES3_S2_ET0_T_S6
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
 	movq	%r8, 32(%rbp)	 # __result, __result
-	movq	%r9, 40(%rbp)	 # D.169902, D.169902
+	movq	%r9, 40(%rbp)	 # D.169905, D.169905
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:289:     { return std::uninitialized_copy(__first, __last, __result); }
 	.loc 19 289 37
 	movq	32(%rbp), %rdx	 # __result, tmp89
@@ -9563,7 +9563,7 @@ _ZSt32__make_move_if_noexcept_iteratorIP12T100FileInfoSt13move_iteratorIPS1_EET0
 	movq	16(%rbp), %rdx	 # __i,
 	movq	%rax, %rcx	 # tmp89,
 	call	_ZNSt13move_iteratorIPP12T100FileInfoEC1ES2_	 #
-	movq	-8(%rbp), %rax	 # D.170890, D.172230
+	movq	-8(%rbp), %rax	 # D.170893, D.172233
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_iterator.h:1216:     { return _ReturnType(__i); }
 	.loc 11 1216 32
 	addq	$48, %rsp	 #,
@@ -9596,7 +9596,7 @@ _ZSt22__uninitialized_copy_aISt13move_iteratorIPP12T100FileInfoES3_S2_ET0_T_S6_S
 	movq	%rcx, 16(%rbp)	 # __first, __first
 	movq	%rdx, 24(%rbp)	 # __last, __last
 	movq	%r8, 32(%rbp)	 # __result, __result
-	movq	%r9, 40(%rbp)	 # D.170164, D.170164
+	movq	%r9, 40(%rbp)	 # D.170167, D.170167
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_uninitialized.h:289:     { return std::uninitialized_copy(__first, __last, __result); }
 	.loc 19 289 37
 	movq	32(%rbp), %rdx	 # __result, tmp89
@@ -9775,7 +9775,7 @@ _ZN9__gnu_cxx13new_allocatorINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __p, __p
-	movq	%r8, 32(%rbp)	 # D.162209, D.162209
+	movq	%r8, 32(%rbp)	 # D.162212, D.162212
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	.loc 18 125 19
 	movq	24(%rbp), %rax	 # __p, tmp87
@@ -10042,8 +10042,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP14T100FolderInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.170883, D.170883
-	movq	%rdx, 24(%rbp)	 # D.170884, D.170884
+	movq	%rcx, 16(%rbp)	 # D.170886, D.170886
+	movq	%rdx, 24(%rbp)	 # D.170887, D.170887
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 14 117 57
 	nop	
@@ -10308,8 +10308,8 @@ _ZNSt12_Destroy_auxILb1EE9__destroyIPP12T100FileInfoEEvT_S5_:
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
 	.seh_endprologue
-	movq	%rcx, 16(%rbp)	 # D.170981, D.170981
-	movq	%rdx, 24(%rbp)	 # D.170982, D.170982
+	movq	%rcx, 16(%rbp)	 # D.170984, D.170984
+	movq	%rdx, 24(%rbp)	 # D.170985, D.170985
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/stl_construct.h:117:         __destroy(_ForwardIterator, _ForwardIterator) { }
 	.loc 14 117 57
 	nop	

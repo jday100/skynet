@@ -13,6 +13,7 @@ class T100FileLogic
         virtual ~T100FileLogic();
 
         T100BOOL                    IsExists(const T100WSTRING&);
+        T100BOOL                    IsOpened(const T100WSTRING&);
 
         T100BOOL                    Create(T100FileInfo*);
         T100BOOL                    Remove(T100FileInfo*);
