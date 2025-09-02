@@ -1,4 +1,5 @@
 #include <iostream>
+#include "T100HardDisplay.h"
 
 using namespace std;
 
