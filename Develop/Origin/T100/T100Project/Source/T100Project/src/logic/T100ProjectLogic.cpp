@@ -202,24 +202,33 @@ T100BOOL T100ProjectLogic::Run(T100WorkSpaceInfo* workspace, T100ProjectInfo* pr
     shell.Run(command);
 }
 
-T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo*, T100ProjectInfo*)
+T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo* workspace, T100ProjectInfo* info)
 {
-    if(!m_current){
-        return;
-    }
+    if(workspace && m_current){
 
-    wxBell();
+    }else{
+        return T100FALSE;
+    }
 
     T100Shell       shell;
     T100WSTRING     command;
+    T100WSTRING     args;
+    T100WSTRING     line;
 
-    //command     = L"python3 " + GetBuildName(m_current) + L";pause";
+    command     = workspace->GetPythonFile() + L" " +
+                    m_current->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + T100ProjectConfig::T100PROJECT_PROJECT_COMPILE_FILENAME;
 
-    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 " + GetBuildName(m_current);
+    args        = L"build " + m_current->GetPath() + L" " +
+                    workspace->GetCompilerPath() + L" " +
+                    m_current->GetCodePath() + L" " +
+                    m_current->GetIncludePath() + L" " +
+                    m_current->GetSourcePath();
 
-    command     = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/vm/Hello/Make.py build";
+    line        = command + L" " + args;
 
-    shell.Run(command);
+    shell.Print(line);
+
+    shell.Run(line);
 
     return T100TRUE;
 }
