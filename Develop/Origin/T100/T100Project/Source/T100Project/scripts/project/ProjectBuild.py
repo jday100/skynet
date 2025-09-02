@@ -58,7 +58,7 @@ def build():
 
     line    = "%s\\%s\\%s\\" % (g_project_path, g_project_code, g_project_source)
 
-    cmd     = "%s %s%s -o %s\\%s\\%s" % (bin, line, "Project.cpp", g_project_path, g_project_build, "main.exe")
+    cmd     = "%s %s%s -o %s\\%s\\%s" % (bin, line, "main.cpp", g_project_path, g_project_build, "main.exe")
 
     print(cmd)
 

@@ -83,6 +83,7 @@ def create_project():
 
         create_project_file()
         create_project_make()
+        create_project_main()
 
         print("Success")
 
@@ -121,6 +122,31 @@ def create_project_make():
 
         shutil.copy(source, target)
 
+        print("Write OK")
+    except Exception as err:
+        print("Error:{err}".format(err=err))
+
+def create_project_main():
+    print("Run create project main...")
+
+    global g_project_path
+    global g_project_code
+    global g_project_source
+
+    try:
+        cmd = "%s\\%s\\%s\\%s" % (g_project_path, g_project_code, g_project_source, "main.cpp")
+        with open(cmd, 'w', encoding='UTF-8') as source:
+            source.write("""
+#include <iostream>
+
+using namespace std;
+
+int WinMain()
+{
+    cout << "Hello world!" << endl;
+    return 0;
+}
+            """)
         print("Write OK")
     except Exception as err:
         print("Error:{err}".format(err=err))
