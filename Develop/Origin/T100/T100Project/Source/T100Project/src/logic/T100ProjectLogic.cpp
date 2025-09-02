@@ -220,6 +220,7 @@ T100BOOL T100ProjectLogic::Build(T100WorkSpaceInfo* workspace, T100ProjectInfo* 
 
     args        = L"build " + m_current->GetPath() + L" " +
                     workspace->GetCompilerPath() + L" " +
+                    m_current->GetBuildPath() + L" " +
                     m_current->GetCodePath() + L" " +
                     m_current->GetIncludePath() + L" " +
                     m_current->GetSourcePath();

@@ -5,6 +5,7 @@ import subprocess
 g_project_path      = ""
 g_compiler_path     = ""
 
+g_project_build     = ""
 g_project_code      = ""
 g_project_include   = ""
 g_project_source    = ""
@@ -13,12 +14,13 @@ def args():
     print("Run args...")
     count = len(sys.argv)
 
-    if(count != 7):
+    if(count != 8):
         return
 
     global g_project_path
     global g_compiler_path
 
+    global g_project_build
     global g_project_code
     global g_project_include
     global g_project_source
@@ -27,9 +29,10 @@ def args():
     g_project_path      = sys.argv[2]
     g_compiler_path     = sys.argv[3]
 
-    g_project_code      = sys.argv[4]
-    g_project_include   = sys.argv[5]
-    g_project_source    = sys.argv[6]
+    g_project_build     = sys.argv[4]
+    g_project_code      = sys.argv[5]
+    g_project_include   = sys.argv[6]
+    g_project_source    = sys.argv[7]
 
     match value:
         case 'build':
@@ -46,6 +49,7 @@ def build():
     global g_project_path
     global g_compiler_path
 
+    global g_project_build
     global g_project_code
     global g_project_include
     global g_project_source
@@ -54,7 +58,7 @@ def build():
 
     line    = "%s\\%s\\%s\\" % (g_project_path, g_project_code, g_project_source)
 
-    cmd     = "%s %s%s" % (bin, line, "Project.cpp -o main.exe")
+    cmd     = "%s %s%s -o %s\\%s\\%s" % (bin, line, "Project.cpp", g_project_path, g_project_build, "main.exe")
 
     print(cmd)
 
