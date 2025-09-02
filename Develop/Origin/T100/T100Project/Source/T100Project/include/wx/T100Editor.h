@@ -21,6 +21,8 @@ class T100Editor : public wxStyledTextCtrl
         T100WSTRING             m_path;
 
     private:
+        T100VOID                init();
+        T100VOID                uninit();
 
         DECLARE_EVENT_TABLE()
 };

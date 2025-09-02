@@ -15,11 +15,23 @@ T100Editor::T100Editor(wxWindow *parent,
     wxStyledTextCtrl(parent, id, pos, size, style, name)
 {
     //ctor
+    init();
 }
 
 T100Editor::~T100Editor()
 {
     //dtor
+    uninit();
+}
+
+T100VOID T100Editor::init()
+{
+
+}
+
+T100VOID T100Editor::uninit()
+{
+
 }
 
 T100VOID T100Editor::SetPath(const T100WSTRING& path)
