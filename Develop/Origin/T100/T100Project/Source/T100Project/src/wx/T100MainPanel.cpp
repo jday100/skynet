@@ -86,7 +86,7 @@ T100BOOL T100MainPanel::Open(T100FileInfo* info)
     }
 
     if(AddPage(pack, info->GetLabel(), T100TRUE)){
-        T100INT     index   = FindPage(pack);
+        T100INT     index   = GetPageIndex(pack);
         m_current                   = pack;
         m_packs[info->GetPath()]    = pack;
     }else{
@@ -136,7 +136,7 @@ T100BOOL T100MainPanel::Save()
     }
 
     if(editor->SaveFile(editor->GetPath())){
-        SetPageText(m_current->GetIndex(), m_current->GetLabel());
+        SetPageText(GetPageIndex(m_current), m_current->GetLabel());
     }else{
         return T100FALSE;
     }
@@ -200,9 +200,12 @@ T100BOOL T100MainPanel::FileModified(const T100WSTRING& path)
         return T100FALSE;
     }
 
-    T100INT     index       = FindPage(pack);
+    T100BOOL    result;
+    T100INT     index       = GetPageIndex(pack);
 
-    T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
+    if(index >= 0){
+        result  = SetPageText(index, L"*" + pack->GetLabel());
+    }
 
-    return T100TRUE;
+    return result;
 }

@@ -15,7 +15,7 @@
  # -I include\serve -I include\common -I include\logic -I include\info
  # -I include\view\wizard\project -I include\store -I include\view\dialog
  # -I include\library\storage\file\text -I include\base
- # -I include\library\shell -I include\view\pack
+ # -I include\library\shell -I include\view\pack -I include\library\debug
  # -I C:\zoo\bin\llvm-mingw-20240518-msvcrt-x86_64\include
  # -iprefix C:/zoo/bin/CodeBlocks/MinGW/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/
  # -D_MT -D_REENTRANT -D __GNUWIN32__ -D __WXMSW__ -D WXUSINGDLL
@@ -805,8 +805,8 @@ _ZN8wxStringC1EPKw:
 	leaq	-81(%rbp), %rax	 #, tmp98
 	movq	%rax, %rcx	 # tmp98,
 	call	_ZNSaIwED1Ev	 #
-	movq	%rbx, %rax	 # tmp99, D.180834
-	movq	%rax, %rcx	 # D.180834,
+	movq	%rbx, %rax	 # tmp99, D.180837
+	movq	%rax, %rcx	 # D.180837,
 .LEHB1:
 	call	_Unwind_Resume	 #
 	nop	
@@ -1768,8 +1768,8 @@ _ZN6wxFontC1Ei12wxFontFamily11wxFontStyle12wxFontWeightbRK8wxString14wxFontEncod
 	movq	-16(%rbp), %rax	 # this, _4
 	movq	%rax, %rcx	 # _4,
 	call	_ZN10wxFontBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp102, D.180843
-	movq	%rax, %rcx	 # D.180843,
+	movq	%rbx, %rax	 # tmp102, D.180846
+	movq	%rax, %rcx	 # D.180846,
 .LEHB3:
 	call	_Unwind_Resume	 #
 	nop	
@@ -4954,8 +4954,8 @@ _ZN8wxWindowC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.180854
-	movq	%rax, %rcx	 # D.180854,
+	movq	%rbx, %rax	 # tmp97, D.180857
+	movq	%rax, %rcx	 # D.180857,
 .LEHB6:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5659,8 +5659,8 @@ _ZN13wxControlBase12SetLabelTextERK8wxString:
 	leaq	-96(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.180859
-	movq	%rax, %rcx	 # D.180859,
+	movq	%rbx, %rax	 # tmp97, D.180862
+	movq	%rax, %rcx	 # D.180862,
 .LEHB9:
 	call	_Unwind_Resume	 #
 	nop	
@@ -5767,8 +5767,8 @@ _ZNK13wxControlBase12GetLabelTextEv:
 	leaq	-96(%rbp), %rax	 #, tmp97
 	movq	%rax, %rcx	 # tmp97,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp98, D.180861
-	movq	%rax, %rcx	 # D.180861,
+	movq	%rbx, %rax	 # tmp98, D.180864
+	movq	%rax, %rcx	 # D.180864,
 .LEHB12:
 	call	_Unwind_Resume	 #
 .LEHE12:
@@ -5897,8 +5897,8 @@ _ZN9wxControlC2Ev:
 	movq	-64(%rbp), %rax	 # this, _5
 	movq	%rax, %rcx	 # _5,
 	call	_ZN13wxControlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp96, D.180865
-	movq	%rax, %rcx	 # D.180865,
+	movq	%rbx, %rax	 # tmp96, D.180868
+	movq	%rax, %rcx	 # D.180868,
 .LEHB15:
 	call	_Unwind_Resume	 #
 	nop	
@@ -6605,8 +6605,8 @@ _ZN14wxBookCtrlBaseC2Ev:
 	movq	-64(%rbp), %rax	 # this, _8
 	movq	%rax, %rcx	 # _8,
 	call	_ZN9wxControlD2Ev	 #
-	movq	%rbx, %rax	 # tmp108, D.180869
-	movq	%rax, %rcx	 # D.180869,
+	movq	%rbx, %rax	 # tmp108, D.180872
+	movq	%rax, %rcx	 # D.180872,
 .LEHB19:
 	call	_Unwind_Resume	 #
 	nop	
@@ -7948,8 +7948,8 @@ _ZN13wxAuiNotebookC2EP8wxWindowiRK7wxPointRK6wxSizel:
 	movq	-48(%rbp), %rax	 # this, _13
 	movq	%rax, %rcx	 # _13,
 	call	_ZN19wxNavigationEnabledI14wxBookCtrlBaseED2Ev	 #
-	movq	%rbx, %rax	 # tmp127, D.180878
-	movq	%rax, %rcx	 # D.180878,
+	movq	%rbx, %rax	 # tmp127, D.180881
+	movq	%rax, %rcx	 # D.180881,
 .LEHB24:
 	call	_Unwind_Resume	 #
 	nop	
@@ -9148,13 +9148,13 @@ _ZN13T100MainPanel4OpenEP12T100FileInfo:
 	testb	%bl, %bl	 # _138
 	je	.L378	 #,
 .LBB67:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:89:         T100INT     index   = FindPage(pack);
-	.loc 27 89 39
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:89:         T100INT     index   = GetPageIndex(pack);
+	.loc 27 89 43
 	movq	272(%rbp), %rax	 # this, _44
 	movq	8(%rbp), %rdx	 # pack, pack.55_45
 	movq	%rax, %rcx	 # _44,
 .LEHB38:
-	call	_ZNK14wxBookCtrlBase8FindPageEPK8wxWindow	 #
+	call	_ZNK13wxAuiNotebook12GetPageIndexEP8wxWindow	 #
 	movl	%eax, 236(%rbp)	 # _143, index
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:90:         m_current                   = pack;
 	.loc 27 90 37
@@ -9234,8 +9234,8 @@ _ZN13T100MainPanel4OpenEP12T100FileInfo:
 	movl	$624, %edx	 #,
 	movq	%rbx, %rcx	 # _77,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp193, D.180882
-	movq	%rax, %rcx	 # D.180882,
+	movq	%rsi, %rax	 # tmp193, D.180885
+	movq	%rax, %rcx	 # D.180885,
 .LEHB39:
 	call	_Unwind_Resume	 #
 .L392:
@@ -9299,8 +9299,8 @@ _ZN13T100MainPanel4OpenEP12T100FileInfo:
 	leaq	-32(%rbp), %rax	 #, tmp214
 	movq	%rax, %rcx	 # tmp214,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEED1Ev	 #
-	movq	%rbx, %rax	 # tmp195, D.180883
-	movq	%rax, %rcx	 # D.180883,
+	movq	%rbx, %rax	 # tmp195, D.180886
+	movq	%rax, %rcx	 # D.180886,
 	call	_Unwind_Resume	 #
 .LEHE39:
 .L400:
@@ -9525,15 +9525,15 @@ _ZN13T100MainPanel4SaveEv:
 	movq	%rcx, 32(%rbp)	 # this, this
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:122:     if(m_current){
 	.loc 27 122 8
-	movq	32(%rbp), %rax	 # this, tmp112
-	movq	1464(%rax), %rax	 # this_24(D)->m_current, _1
+	movq	32(%rbp), %rax	 # this, tmp113
+	movq	1464(%rax), %rax	 # this_25(D)->m_current, _1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:122:     if(m_current){
 	.loc 27 122 5
 	testq	%rax, %rax	 # _1
 	jne	.L407	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:125:         return T100FALSE;
 	.loc 27 125 16
-	movl	$0, %eax	 #, _20
+	movl	$0, %eax	 #, _21
 	jmp	.L416	 #
 .L407:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:128:     T100Editor*     editor      = T100NULL;
@@ -9544,133 +9544,136 @@ _ZN13T100MainPanel4SaveEv:
 	movq	32(%rbp), %rcx	 # this,
 .LEHB40:
 	call	_ZN13T100MainPanel16GetCurrentEditorEv	 #
-	movq	%rax, -8(%rbp)	 # _28, editor
+	movq	%rax, -8(%rbp)	 # _29, editor
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:132:     if(editor){
 	.loc 27 132 5
 	cmpq	$0, -8(%rbp)	 #, editor
 	jne	.L409	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:135:         return T100FALSE;
 	.loc 27 135 16
-	movl	$0, %eax	 #, _20
+	movl	$0, %eax	 #, _21
 	jmp	.L416	 #
 .L409:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:138:     if(editor->SaveFile(editor->GetPath())){
 	.loc 27 138 24
-	movq	-8(%rbp), %rax	 # editor, tmp113
+	movq	-8(%rbp), %rax	 # editor, tmp114
 	leaq	648(%rax), %rbx	 #, _2
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:138:     if(editor->SaveFile(editor->GetPath())){
 	.loc 27 138 41
-	movq	-8(%rbp), %rax	 # editor, tmp114
-	movq	%rax, %rcx	 # tmp114,
+	movq	-8(%rbp), %rax	 # editor, tmp115
+	movq	%rax, %rcx	 # tmp115,
 	call	_ZN10T100Editor7GetPathB5cxx11Ev	 #
 	movq	%rax, %rdx	 #, _3
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:138:     if(editor->SaveFile(editor->GetPath())){
 	.loc 27 138 24
-	leaq	-112(%rbp), %rax	 #, tmp115
-	movq	%rax, %rcx	 # tmp115,
+	leaq	-112(%rbp), %rax	 #, tmp116
+	movq	%rax, %rcx	 # tmp116,
 	call	_ZN8wxStringC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE40:
-	leaq	-112(%rbp), %rax	 #, tmp116
+	leaq	-112(%rbp), %rax	 #, tmp117
 	movl	$0, %r8d	 #,
-	movq	%rax, %rdx	 # tmp116,
+	movq	%rax, %rdx	 # tmp117,
 	movq	%rbx, %rcx	 # _2,
 .LEHB41:
 	call	_ZN14wxTextAreaBase8SaveFileERK8wxStringi	 #
 .LEHE41:
-	movl	%eax, %ebx	 #, _35
-	leaq	-112(%rbp), %rax	 #, tmp117
-	movq	%rax, %rcx	 # tmp117,
+	movl	%eax, %ebx	 #, _36
+	leaq	-112(%rbp), %rax	 #, tmp118
+	movq	%rax, %rcx	 # tmp118,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:138:     if(editor->SaveFile(editor->GetPath())){
 	.loc 27 138 5
-	testb	%bl, %bl	 # _35
+	testb	%bl, %bl	 # _36
 	je	.L410	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
 	.loc 27 139 20
 	movq	32(%rbp), %rsi	 # this, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
-	.loc 27 139 65
-	movq	32(%rbp), %rax	 # this, tmp118
-	movq	(%rax), %rax	 # this_24(D)->D.168892.D.147575.D.147281.D.145876.D.144656.D.144496.D.138802.D.137529.D.132762._vptr.wxObject, _6
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 67
+	movq	32(%rbp), %rax	 # this, tmp119
+	movq	(%rax), %rax	 # this_25(D)->D.168892.D.147575.D.147281.D.145876.D.144656.D.144496.D.138802.D.137529.D.132762._vptr.wxObject, _6
 	addq	$1832, %rax	 #, _7
 	movq	(%rax), %rbx	 # *_7, _8
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
-	.loc 27 139 44
-	movq	32(%rbp), %rax	 # this, tmp119
-	movq	1464(%rax), %rax	 # this_24(D)->m_current, _9
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
-	.loc 27 139 63
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 46
+	movq	32(%rbp), %rax	 # this, tmp120
+	movq	1464(%rax), %rax	 # this_25(D)->m_current, _9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 65
 	movq	%rax, %rdx	 # _9, _10
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
-	.loc 27 139 44
-	movq	32(%rbp), %rax	 # this, tmp121
-	movq	1464(%rax), %rax	 # this_24(D)->m_current, _13
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
-	.loc 27 139 64
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 46
+	movq	32(%rbp), %rax	 # this, tmp122
+	movq	1464(%rax), %rax	 # this_25(D)->m_current, _13
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 66
 	movq	(%rax), %rax	 # _13->D.164019.D.163944.D.163837.D.163791.D.138802.D.137529.D.132762._vptr.wxObject, _14
 	addq	$184, %rax	 #, _15
 	movq	(%rax), %r8	 # *_15, _16
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
-	.loc 27 139 63
-	leaq	-64(%rbp), %rax	 #, tmp122
-	movq	%rax, %rcx	 # tmp122,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 65
+	leaq	-64(%rbp), %rax	 #, tmp123
+	movq	%rax, %rcx	 # tmp123,
 .LEHB42:
 	call	*%r8	 # _16
 .LVL34:
 .LEHE42:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
-	.loc 27 139 21
-	movq	32(%rbp), %rax	 # this, tmp123
-	movq	1464(%rax), %rax	 # this_24(D)->m_current, _17
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
-	.loc 27 139 40
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 33
+	movq	32(%rbp), %rax	 # this, _17
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 34
+	movq	32(%rbp), %rdx	 # this, tmp124
+	movq	1464(%rdx), %rdx	 # this_25(D)->m_current, _18
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 33
 	movq	%rax, %rcx	 # _17,
 .LEHB43:
-	call	_ZN8T100Pack8GetIndexEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
+	call	_ZNK13wxAuiNotebook12GetPageIndexEP8wxWindow	 #
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
 	.loc 27 139 20
 	cltq
-	leaq	-64(%rbp), %rdx	 #, tmp124
-	movq	%rdx, %r8	 # tmp124,
-	movq	%rax, %rdx	 # _19,
+	leaq	-64(%rbp), %rdx	 #, tmp125
+	movq	%rdx, %r8	 # tmp125,
+	movq	%rax, %rdx	 # _20,
 	movq	%rsi, %rcx	 # _4,
 	call	*%rbx	 # _8
 .LVL35:
 .LEHE43:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
-	.loc 27 139 63 discriminator 4
-	leaq	-64(%rbp), %rax	 #, tmp125
-	movq	%rax, %rcx	 # tmp125,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 65 discriminator 4
+	leaq	-64(%rbp), %rax	 #, tmp126
+	movq	%rax, %rcx	 # tmp126,
 	call	_ZN8wxStringD1Ev	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:144:     return T100TRUE;
 	.loc 27 144 12 discriminator 4
-	movl	$1, %eax	 #, _20
+	movl	$1, %eax	 #, _21
 	jmp	.L416	 #
 .L410:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:141:         return T100FALSE;
 	.loc 27 141 16
-	movl	$0, %eax	 #, _20
+	movl	$0, %eax	 #, _21
 	jmp	.L416	 #
 .L414:
-	movq	%rax, %rbx	 #, tmp128
+	movq	%rax, %rbx	 #, tmp129
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:138:     if(editor->SaveFile(editor->GetPath())){
 	.loc 27 138 24
-	leaq	-112(%rbp), %rax	 #, tmp127
-	movq	%rax, %rcx	 # tmp127,
+	leaq	-112(%rbp), %rax	 #, tmp128
+	movq	%rax, %rcx	 # tmp128,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp128, D.180887
-	movq	%rax, %rcx	 # D.180887,
+	movq	%rbx, %rax	 # tmp129, D.180890
+	movq	%rax, %rcx	 # D.180890,
 .LEHB44:
 	call	_Unwind_Resume	 #
 .L415:
-	movq	%rax, %rbx	 #, tmp130
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(m_current->GetIndex(), m_current->GetLabel());
-	.loc 27 139 63
-	leaq	-64(%rbp), %rax	 #, tmp129
-	movq	%rax, %rcx	 # tmp129,
+	movq	%rax, %rbx	 #, tmp131
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:139:         SetPageText(GetPageIndex(m_current), m_current->GetLabel());
+	.loc 27 139 65
+	leaq	-64(%rbp), %rax	 #, tmp130
+	movq	%rax, %rcx	 # tmp130,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp130, D.180888
-	movq	%rax, %rcx	 # D.180888,
+	movq	%rbx, %rax	 # tmp131, D.180891
+	movq	%rax, %rcx	 # D.180891,
 	call	_Unwind_Resume	 #
 .LEHE44:
 .L416:
@@ -10026,8 +10029,8 @@ _ZN13T100MainPanel12FileModifiedERKNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	movq	%rsp, %rbp	 #,
 	.seh_setframe	%rbp, 0
 	.cfi_def_cfa_register 6
-	subq	$144, %rsp	 #,
-	.seh_stackalloc	144
+	subq	$160, %rsp	 #,
+	.seh_stackalloc	160
 	.seh_endprologue
 	movq	%rcx, 32(%rbp)	 # this, this
 	movq	%rdx, 40(%rbp)	 # path, path
@@ -10040,63 +10043,67 @@ _ZN13T100MainPanel12FileModifiedERKNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 .LEHB45:
 	call	_ZNSt13unordered_mapINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP8T100PackSt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S7_EEEixERSD_	 #
 	movq	(%rax), %rax	 # *_2, tmp108
-	movq	%rax, -8(%rbp)	 # tmp108, pack
+	movq	%rax, -16(%rbp)	 # tmp108, pack
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:197:     if(pack){
 	.loc 27 197 5
-	cmpq	$0, -8(%rbp)	 #, pack
+	cmpq	$0, -16(%rbp)	 #, pack
 	jne	.L431	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:200:         return T100FALSE;
 	.loc 27 200 16
-	movl	$0, %eax	 #, _15
-	jmp	.L437	 #
+	movl	$0, %eax	 #, _16
+	jmp	.L438	 #
 .L431:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:203:     T100INT     index       = FindPage(pack);
-	.loc 27 203 39
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:204:     T100INT     index       = GetPageIndex(pack);
+	.loc 27 204 43
 	movq	32(%rbp), %rax	 # this, _3
-	movq	-8(%rbp), %rdx	 # pack, tmp109
+	movq	-16(%rbp), %rdx	 # pack, tmp109
 	movq	%rax, %rcx	 # _3,
-	call	_ZNK14wxBookCtrlBase8FindPageEPK8wxWindow	 #
-	movl	%eax, -12(%rbp)	 # _26, index
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 38
+	call	_ZNK13wxAuiNotebook12GetPageIndexEP8wxWindow	 #
+	movl	%eax, -20(%rbp)	 # _28, index
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:206:     if(index >= 0){
+	.loc 27 206 5
+	cmpl	$0, -20(%rbp)	 #, index
+	js	.L433	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 30
 	movq	32(%rbp), %rsi	 # this, _4
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 69
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 61
 	movq	32(%rbp), %rax	 # this, tmp110
-	movq	(%rax), %rax	 # this_18(D)->D.168892.D.147575.D.147281.D.145876.D.144656.D.144496.D.138802.D.137529.D.132762._vptr.wxObject, _6
+	movq	(%rax), %rax	 # this_20(D)->D.168892.D.147575.D.147281.D.145876.D.144656.D.144496.D.138802.D.137529.D.132762._vptr.wxObject, _6
 	addq	$1832, %rax	 #, _7
 	movq	(%rax), %rbx	 # *_7, _8
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 67
-	movq	-8(%rbp), %rdx	 # pack, _9
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 68
-	movq	-8(%rbp), %rax	 # pack, tmp111
-	movq	(%rax), %rax	 # pack_23->D.164019.D.163944.D.163837.D.163791.D.138802.D.137529.D.132762._vptr.wxObject, _11
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 59
+	movq	-16(%rbp), %rdx	 # pack, _9
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 60
+	movq	-16(%rbp), %rax	 # pack, tmp111
+	movq	(%rax), %rax	 # pack_25->D.164019.D.163944.D.163837.D.163791.D.138802.D.137529.D.132762._vptr.wxObject, _11
 	addq	$184, %rax	 #, _12
 	movq	(%rax), %r8	 # *_12, _13
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 67
-	leaq	-64(%rbp), %rax	 #, tmp112
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 59
+	leaq	-80(%rbp), %rax	 #, tmp112
 	movq	%rax, %rcx	 # tmp112,
 	call	*%r8	 # _13
 .LVL37:
 .LEHE45:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 51
-	leaq	-112(%rbp), %rax	 #, tmp113
-	leaq	-64(%rbp), %rdx	 #, tmp114
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 43
+	leaq	-128(%rbp), %rax	 #, tmp113
+	leaq	-80(%rbp), %rdx	 #, tmp114
 	movq	%rdx, %r8	 # tmp114,
 	leaq	.LC15(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp113,
 .LEHB46:
 	call	_ZplPKwRK8wxString	 #
 .LEHE46:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 38 discriminator 2
-	movl	-12(%rbp), %eax	 # index, tmp115
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 30 discriminator 2
+	movl	-20(%rbp), %eax	 # index, tmp115
 	cltq
-	leaq	-112(%rbp), %rdx	 #, tmp116
+	leaq	-128(%rbp), %rdx	 #, tmp116
 	movq	%rdx, %r8	 # tmp116,
 	movq	%rax, %rdx	 # _14,
 	movq	%rsi, %rcx	 # _4,
@@ -10104,46 +10111,47 @@ _ZN13T100MainPanel12FileModifiedERKNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	call	*%rbx	 # _8
 .LVL38:
 .LEHE47:
-	movb	%al, -13(%rbp)	 # _31, result
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 51 discriminator 2
-	leaq	-112(%rbp), %rax	 #, tmp117
+	movb	%al, -1(%rbp)	 # _34, result
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 43 discriminator 2
+	leaq	-128(%rbp), %rax	 #, tmp117
 	movq	%rax, %rcx	 # tmp117,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 67 discriminator 2
-	leaq	-64(%rbp), %rax	 #, tmp118
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 59 discriminator 2
+	leaq	-80(%rbp), %rax	 #, tmp118
 	movq	%rax, %rcx	 # tmp118,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:     return T100TRUE;
-	.loc 27 207 12 discriminator 2
-	movl	$1, %eax	 #, _15
-	jmp	.L437	 #
-.L436:
+.L433:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:210:     return result;
+	.loc 27 210 12
+	movzbl	-1(%rbp), %eax	 # result, _16
+	jmp	.L438	 #
+.L437:
 	movq	%rax, %rbx	 #, tmp122
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 51
-	leaq	-112(%rbp), %rax	 #, tmp120
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 43
+	leaq	-128(%rbp), %rax	 #, tmp120
 	movq	%rax, %rcx	 # tmp120,
 	call	_ZN8wxStringD1Ev	 #
-	jmp	.L434	 #
-.L435:
+	jmp	.L435	 #
+.L436:
 	movq	%rax, %rbx	 #, tmp121
-.L434:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:205:     T100BOOL    result  = SetPageText(index, L"*" + pack->GetLabel());
-	.loc 27 205 67 discriminator 1
-	leaq	-64(%rbp), %rax	 #, tmp125
+.L435:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:207:         result  = SetPageText(index, L"*" + pack->GetLabel());
+	.loc 27 207 59 discriminator 1
+	leaq	-80(%rbp), %rax	 #, tmp125
 	movq	%rax, %rcx	 # tmp125,
 	call	_ZN8wxStringD1Ev	 #
-	movq	%rbx, %rax	 # tmp121, D.180890
-	movq	%rax, %rcx	 # D.180890,
+	movq	%rbx, %rax	 # tmp121, D.180893
+	movq	%rax, %rcx	 # D.180893,
 .LEHB48:
 	call	_Unwind_Resume	 #
 .LEHE48:
-.L437:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:208: }
-	.loc 27 208 1
-	addq	$144, %rsp	 #,
+.L438:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:211: }
+	.loc 27 211 1
+	addq	$160, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
 	popq	%rsi	 #
@@ -10168,11 +10176,11 @@ _ZN13T100MainPanel12FileModifiedERKNSt7__cxx1112basic_stringIwSt11char_traitsIwE
 	.uleb128 0
 	.uleb128 .LEHB46-.LFB13559
 	.uleb128 .LEHE46-.LEHB46
-	.uleb128 .L435-.LFB13559
+	.uleb128 .L436-.LFB13559
 	.uleb128 0
 	.uleb128 .LEHB47-.LFB13559
 	.uleb128 .LEHE47-.LEHB47
-	.uleb128 .L436-.LFB13559
+	.uleb128 .L437-.LFB13559
 	.uleb128 0
 	.uleb128 .LEHB48-.LFB13559
 	.uleb128 .LEHE48-.LEHB48
@@ -10313,18 +10321,18 @@ _Z5wxMaxIiiEN24wxImplicitConversionTypeIT_T0_E5valueES1_S2_:
 	.loc 31 71 68
 	movl	16(%rbp), %eax	 # a, tmp89
 	cmpl	24(%rbp), %eax	 # b, tmp89
-	jle	.L443	 #,
+	jle	.L444	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 31 71 68 is_stmt 0 discriminator 1
 	movl	16(%rbp), %eax	 # a, iftmp.23_1
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 31 71 74 is_stmt 1 discriminator 1
-	jmp	.L445	 #
-.L443:
+	jmp	.L446	 #
+.L444:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:71:     return static_cast<ResultType>(a) > static_cast<ResultType>(b) ? a : b;
 	.loc 31 71 68 discriminator 2
 	movl	24(%rbp), %eax	 # b, iftmp.23_1
-.L445:
+.L446:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/utils.h:72: }
 	.loc 31 72 1 discriminator 5
 	popq	%rbp	 #
@@ -10494,8 +10502,8 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 .LBE73:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:201:     }
 	.loc 24 201 5
-	jmp	.L451	 #
-.L450:
+	jmp	.L452	 #
+.L451:
 	movq	%rax, %rbx	 #, tmp129
 .LBB74:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:188:     {
@@ -10504,22 +10512,22 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	addq	$736, %rax	 #, _16
 	movq	%rax, %rcx	 # _16,
 	call	_ZN18wxControlContainerD1Ev	 #
-	jmp	.L448	 #
-.L449:
+	jmp	.L449	 #
+.L450:
 	movq	%rax, %rbx	 #, tmp128
-.L448:
+.L449:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:188:     {
 	.loc 24 188 5 is_stmt 0 discriminator 1
 	movq	64(%rbp), %rax	 # this, _17
 	movq	%rax, %rcx	 # _17,
 	call	_ZN14wxBookCtrlBaseD2Ev	 #
-	movq	%rbx, %rax	 # tmp128, D.180894
-	movq	%rax, %rcx	 # D.180894,
+	movq	%rbx, %rax	 # tmp128, D.180897
+	movq	%rax, %rcx	 # D.180897,
 .LEHB52:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE52:
-.L451:
+.L452:
 .LBE74:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:201:     }
 	.loc 24 201 5 is_stmt 1
@@ -10558,11 +10566,11 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseEC2Ev:
 	.uleb128 0
 	.uleb128 .LEHB50-.LFB14214
 	.uleb128 .LEHE50-.LEHB50
-	.uleb128 .L449-.LFB14214
+	.uleb128 .L450-.LFB14214
 	.uleb128 0
 	.uleb128 .LEHB51-.LFB14214
 	.uleb128 .LEHE51-.LEHB51
-	.uleb128 .L450-.LFB14214
+	.uleb128 .L451-.LFB14214
 	.uleb128 0
 	.uleb128 .LEHB52-.LFB14214
 	.uleb128 .LEHE52-.LEHB52
@@ -10676,20 +10684,20 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:636:                     method, NULL);
 	.loc 16 636 33
 	movq	%rbx, %rax	 # _3, _6
-	jmp	.L458	 #
-.L457:
+	jmp	.L459	 #
+.L458:
 	movq	%rax, %rsi	 #, tmp97
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:635:     return new wxEventFunctorMethod<EventTag, Class, EventArg, Class>(
 	.loc 16 635 12
 	movl	$32, %edx	 #,
 	movq	%rbx, %rcx	 # _3,
 	call	_ZdlPvy	 #
-	movq	%rsi, %rax	 # tmp97, D.180908
-	movq	%rax, %rcx	 # D.180908,
+	movq	%rsi, %rax	 # tmp97, D.180911
+	movq	%rax, %rcx	 # D.180911,
 .LEHB55:
 	call	_Unwind_Resume	 #
 .LEHE55:
-.L458:
+.L459:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:637: }
 	.loc 16 637 1
 	addq	$64, %rsp	 #,
@@ -10717,7 +10725,7 @@ _Z22wxNewEventTableFunctorI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 	.uleb128 0
 	.uleb128 .LEHB54-.LFB14289
 	.uleb128 .LEHE54-.LEHB54
-	.uleb128 .L457-.LFB14289
+	.uleb128 .L458-.LFB14289
 	.uleb128 0
 	.uleb128 .LEHB55-.LFB14289
 	.uleb128 .LEHE55-.LEHB55
@@ -11374,17 +11382,17 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp103
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.92_3
 	testq	%rax, %rax	 # wxTheAssertHandler.92_3
-	je	.L481	 #,
+	je	.L482	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 16 402 9 is_stmt 0 discriminator 1
 	cmpq	$0, -16(%rbp)	 #, handler
-	jne	.L481	 #,
+	jne	.L482	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 16 402 9 discriminator 3
 	call	_ZN9wxPrivate11HandlerImplI12wxEvtHandler7wxEventLb1EE12IsEvtHandlerEv	 #
 	xorl	$1, %eax	 #, _5
 	testb	%al, %al	 # _5
-	je	.L481	 #,
+	je	.L482	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 16 402 9 discriminator 5
 	leaq	.LC17(%rip), %rax	 #, tmp104
@@ -11400,27 +11408,27 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp105
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.93_6
 	testb	%al, %al	 # wxTrapInAssert.93_6
-	je	.L481	 #,
+	je	.L482	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 16 402 9 discriminator 8
 	movl	$1, %eax	 #, iftmp.91_8
-	jmp	.L482	 #
-.L481:
+	jmp	.L483	 #
+.L482:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 16 402 9 discriminator 9
 	movl	$0, %eax	 #, iftmp.91_8
-.L482:
+.L483:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 16 402 9 discriminator 11
 	testb	%al, %al	 # iftmp.91_8
-	je	.L483	 #,
+	je	.L484	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:402:         wxASSERT_MSG( handler || this->IsEvtHandler(),
 	.loc 16 402 9 discriminator 12
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp106
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
 .LEHE56:
-.L483:
+.L484:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:409:         CheckHandlerArgument(static_cast<EventClass *>(NULL));
 	.loc 16 409 29 is_stmt 1
 	movl	$0, %ecx	 #,
@@ -11428,8 +11436,8 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 .LBE78:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:410:     }
 	.loc 16 410 5
-	jmp	.L486	 #
-.L485:
+	jmp	.L487	 #
+.L486:
 	movq	%rax, %rbx	 #, tmp107
 .LBB79:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:400:         : m_handler( handler ), m_method( method )
@@ -11437,13 +11445,13 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	-32(%rbp), %rax	 # this, _7
 	movq	%rax, %rcx	 # _7,
 	call	_ZN14wxEventFunctorD2Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.180913
-	movq	%rax, %rcx	 # D.180913,
+	movq	%rbx, %rax	 # tmp107, D.180916
+	movq	%rax, %rcx	 # D.180916,
 .LEHB57:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE57:
-.L486:
+.L487:
 .LBE79:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:410:     }
 	.loc 16 410 5
@@ -11466,7 +11474,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 .LLSDACSB14530:
 	.uleb128 .LEHB56-.LFB14530
 	.uleb128 .LEHE56-.LEHB56
-	.uleb128 .L485-.LFB14530
+	.uleb128 .L486-.LFB14530
 	.uleb128 0
 	.uleb128 .LEHB57-.LFB14530
 	.uleb128 .LEHE57-.LEHB57
@@ -11828,7 +11836,7 @@ _ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:709:       if (!__p)
 	.loc 6 709 7
 	cmpq	$0, -32(%rbp)	 #, __p
-	jne	.L495	 #,
+	jne	.L496	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:711: 	  __p = __h->_M_allocate_node(std::piecewise_construct,
 	.loc 6 711 8
 	movq	24(%rbp), %rdx	 # __k, tmp106
@@ -11862,15 +11870,15 @@ _ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:714: 	  return __h->_M_insert_unique_node(__n, __code, __p)->second;
 	.loc 6 714 57
 	addq	$32, %rax	 #, _4
-	jmp	.L496	 #
-.L495:
+	jmp	.L497	 #
+.L496:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:717:       return __p->_M_v().second;
 	.loc 6 717 26
 	movq	-32(%rbp), %rax	 # __p, _2
 	movq	%rax, %rcx	 # _2,
 	call	_ZNSt8__detail21_Hash_node_value_baseISt4pairIKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP8T100PackEE4_M_vEv	 #
 	addq	$32, %rax	 #, _4
-.L496:
+.L497:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:718:     }
 	.loc 6 718 5
 	addq	$112, %rsp	 #,
@@ -11982,11 +11990,11 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
 	.seh_endprologue
 	movq	%rcx, 16(%rbp)	 # this, this
 	movq	%rdx, 24(%rbp)	 # __n, __n
-.L504:
+.L505:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2109:       while (__n)
 	.loc 6 2109 7
 	cmpq	$0, 24(%rbp)	 #, __n
-	je	.L505	 #,
+	je	.L506	 #,
 .LBB83:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2111: 	  __node_type* __tmp = __n;
 	.loc 6 2111 17
@@ -12007,8 +12015,8 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
 .LBE83:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2109:       while (__n)
 	.loc 6 2109 7
-	jmp	.L504	 #
-.L505:
+	jmp	.L505	 #
+.L506:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2115:     }
 	.loc 6 2115 5
 	nop	
@@ -12050,7 +12058,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNKSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS5_P8T100PackESaISA_ENSt8__detail10_Select1stESt8equal_toIS5_ESt4hashIS5_ENSC_18_Mod_range_hashingENSC_20_Default_ranged_hashENSC_20_Prime_rehash_policyENSC_17_Hashtable_traitsILb1ELb0ELb1EEEE21_M_uses_single_bucketEPPNSC_15_Hash_node_baseE	 #
 	testb	%al, %al	 # retval.35_6
-	jne	.L509	 #,
+	jne	.L510	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:375: 	__hashtable_alloc::_M_deallocate_buckets(__bkts, __n);
 	.loc 28 375 42
 	movq	32(%rbp), %rdx	 # __n, tmp89
@@ -12059,12 +12067,12 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	movq	%rax, %rdx	 # tmp90,
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP8T100PackELb1EEEEE21_M_deallocate_bucketsEPPNS_15_Hash_node_baseEy	 #
-	jmp	.L506	 #
-.L509:
+	jmp	.L507	 #
+.L510:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:373: 	  return;
 	.loc 28 373 4
 	nop	
-.L506:
+.L507:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:376:       }
 	.loc 28 376 7
 	addq	$32, %rsp	 #,
@@ -12199,17 +12207,17 @@ _ZNKSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIK
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:655: 	if (__before_n)
 	.loc 28 655 2
 	cmpq	$0, -8(%rbp)	 #, __before_n
-	je	.L515	 #,
+	je	.L516	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:656: 	  return static_cast<__node_type*>(__before_n->_M_nxt);
 	.loc 28 656 55
 	movq	-8(%rbp), %rax	 # __before_n, tmp93
 	movq	(%rax), %rax	 # __before_n_9->_M_nxt, _1
-	jmp	.L516	 #
-.L515:
+	jmp	.L517	 #
+.L516:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:657: 	return nullptr;
 	.loc 28 657 9
 	movl	$0, %eax	 #, _1
-.L516:
+.L517:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:658:       }
 	.loc 28 658 7
 	addq	$48, %rsp	 #,
@@ -12511,8 +12519,8 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2085: 	    return __n;
 	.loc 6 2085 13
 	movq	-16(%rbp), %rax	 # __n, _35
-	jmp	.L533	 #
-.L531:
+	jmp	.L534	 #
+.L532:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2087: 	__catch(...)
 	.loc 6 2087 2
 	movq	%rax, %rcx	 # _8,
@@ -12531,17 +12539,17 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
 	.loc 6 2090 6
 	call	__cxa_rethrow	 #
 .LEHE60:
-.L532:
+.L533:
 	movq	%rax, %rbx	 #, tmp110
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2087: 	__catch(...)
 	.loc 6 2087 2
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp110, D.180918
-	movq	%rax, %rcx	 # D.180918,
+	movq	%rbx, %rax	 # tmp110, D.180921
+	movq	%rax, %rcx	 # D.180921,
 .LEHB61:
 	call	_Unwind_Resume	 #
 .LEHE61:
-.L533:
+.L534:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2092:       }
 	.loc 6 2092 7
 	addq	$64, %rsp	 #,
@@ -12576,11 +12584,11 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
 	.uleb128 0
 	.uleb128 .LEHB59-.LFB14626
 	.uleb128 .LEHE59-.LEHB59
-	.uleb128 .L531-.LFB14626
+	.uleb128 .L532-.LFB14626
 	.uleb128 0x1
 	.uleb128 .LEHB60-.LFB14626
 	.uleb128 .LEHE60-.LEHB60
-	.uleb128 .L532-.LFB14626
+	.uleb128 .L533-.LFB14626
 	.uleb128 0
 	.uleb128 .LEHB61-.LFB14626
 	.uleb128 .LEHE61-.LEHB61
@@ -12685,7 +12693,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1730: 	  if (__do_rehash.first)
 	.loc 28 1730 4
 	testb	%al, %al	 # _5
-	je	.L537	 #,
+	je	.L538	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1732: 	      _M_rehash(__do_rehash.second, __saved_state);
 	.loc 28 1732 8
 	movq	-72(%rbp), %rax	 # __do_rehash.second, _6
@@ -12717,7 +12725,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1733: 	      __bkt = _M_bucket_index(this->_M_extract()(__node->_M_v()), __code);
 	.loc 28 1733 14 is_stmt 0 discriminator 1
 	movq	%rax, 8(%rbp)	 # _36, __bkt
-.L537:
+.L538:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1736: 	  this->_M_store_code(__node, __code);
 	.loc 28 1736 4 is_stmt 1
 	movq	16(%rbp), %rdx	 # __code, tmp114
@@ -12750,8 +12758,8 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	movq	%rax, %rcx	 # tmp121,
 	call	_ZNSt8__detail14_Node_iteratorISt4pairIKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP8T100PackELb0ELb1EEC1EPNS_10_Hash_nodeISB_Lb1EEE	 #
 	movq	-48(%rbp), %rax	 # D.177331, D.180091
-	jmp	.L543	 #
-.L541:
+	jmp	.L544	 #
+.L542:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1743:       __catch(...)
 	.loc 28 1743 7
 	movq	%rax, %rcx	 # _13,
@@ -12767,17 +12775,17 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	.loc 28 1746 4
 	call	__cxa_rethrow	 #
 .LEHE64:
-.L542:
+.L543:
 	movq	%rax, %rbx	 #, tmp125
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1743:       __catch(...)
 	.loc 28 1743 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp125, D.180919
-	movq	%rax, %rcx	 # D.180919,
+	movq	%rbx, %rax	 # tmp125, D.180922
+	movq	%rax, %rcx	 # D.180922,
 .LEHB65:
 	call	_Unwind_Resume	 #
 .LEHE65:
-.L543:
+.L544:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1748:     }
 	.loc 28 1748 5
 	addq	$104, %rsp	 #,
@@ -12806,11 +12814,11 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	.uleb128 0
 	.uleb128 .LEHB63-.LFB14637
 	.uleb128 .LEHE63-.LEHB63
-	.uleb128 .L541-.LFB14637
+	.uleb128 .L542-.LFB14637
 	.uleb128 0x1
 	.uleb128 .LEHB64-.LFB14637
 	.uleb128 .LEHE64-.LEHB64
-	.uleb128 .L542-.LFB14637
+	.uleb128 .L543-.LFB14637
 	.uleb128 0
 	.uleb128 .LEHB65-.LFB14637
 	.uleb128 .LEHE65-.LEHB65
@@ -13103,21 +13111,21 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
 	call	_ZNSaIPNSt8__detail15_Hash_node_baseEED1Ev	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2138:     }
 	.loc 6 2138 5
-	jmp	.L556	 #
-.L555:
+	jmp	.L557	 #
+.L556:
 	movq	%rax, %rbx	 #, tmp97
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2136:       __bucket_alloc_type __alloc(_M_node_allocator());
 	.loc 6 2136 27
 	leaq	-89(%rbp), %rax	 #, tmp96
 	movq	%rax, %rcx	 # tmp96,
 	call	_ZNSaIPNSt8__detail15_Hash_node_baseEED1Ev	 #
-	movq	%rbx, %rax	 # tmp97, D.180921
-	movq	%rax, %rcx	 # D.180921,
+	movq	%rbx, %rax	 # tmp97, D.180924
+	movq	%rax, %rcx	 # D.180924,
 .LEHB68:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE68:
-.L556:
+.L557:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2138:     }
 	.loc 6 2138 5
 	addq	$56, %rsp	 #,
@@ -13143,7 +13151,7 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
 	.uleb128 0
 	.uleb128 .LEHB67-.LFB14678
 	.uleb128 .LEHE67-.LEHB67
-	.uleb128 .L555-.LFB14678
+	.uleb128 .L556-.LFB14678
 	.uleb128 0
 	.uleb128 .LEHB68-.LFB14678
 	.uleb128 .LEHE68-.LEHB68
@@ -13272,19 +13280,19 @@ _ZNKSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIK
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1558:       if (!__prev_p)
 	.loc 28 1558 7
 	cmpq	$0, -8(%rbp)	 #, __prev_p
-	jne	.L562	 #,
+	jne	.L563	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1559: 	return nullptr;
 	.loc 28 1559 9
 	movl	$0, %eax	 #, _9
-	jmp	.L563	 #
-.L562:
+	jmp	.L564	 #
+.L563:
 .LBB86:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1561:       for (__node_type* __p = static_cast<__node_type*>(__prev_p->_M_nxt);;
 	.loc 28 1561 25
 	movq	-8(%rbp), %rax	 # __prev_p, tmp100
 	movq	(%rax), %rax	 # __prev_p_18->_M_nxt, tmp101
 	movq	%rax, -16(%rbp)	 # tmp101, __p
-.L570:
+.L571:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1564: 	  if (this->_M_equals(__k, __code, __p))
 	.loc 28 1564 4
 	movq	-16(%rbp), %rcx	 # __p, tmp102
@@ -13296,12 +13304,12 @@ _ZNKSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIK
 	movq	16(%rbp), %rcx	 # this,
 	call	_ZNKSt8__detail15_Hashtable_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS6_P8T100PackENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_17_Hashtable_traitsILb1ELb0ELb1EEEE9_M_equalsERS8_yPNS_10_Hash_nodeISB_Lb1EEE	 #
 	testb	%al, %al	 # _24
-	je	.L564	 #,
+	je	.L565	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1565: 	    return __prev_p;
 	.loc 28 1565 13
 	movq	-8(%rbp), %rax	 # __prev_p, _9
-	jmp	.L563	 #
-.L564:
+	jmp	.L564	 #
+.L565:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1567: 	  if (!__p->_M_nxt || _M_bucket_index(__p->_M_next()) != __n)
 	.loc 28 1567 14
 	movq	-16(%rbp), %rax	 # __p, tmp105
@@ -13309,7 +13317,7 @@ _ZNKSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIK
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1567: 	  if (!__p->_M_nxt || _M_bucket_index(__p->_M_next()) != __n)
 	.loc 28 1567 21
 	testq	%rax, %rax	 # _4
-	je	.L565	 #,
+	je	.L566	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1567: 	  if (!__p->_M_nxt || _M_bucket_index(__p->_M_next()) != __n)
 	.loc 28 1567 56 discriminator 2
 	movq	-16(%rbp), %rax	 # __p, tmp106
@@ -13321,21 +13329,21 @@ _ZNKSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIK
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1567: 	  if (!__p->_M_nxt || _M_bucket_index(__p->_M_next()) != __n)
 	.loc 28 1567 21 discriminator 2
 	cmpq	%rax, 24(%rbp)	 # _6, __n
-	je	.L566	 #,
-.L565:
+	je	.L567	 #,
+.L566:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1567: 	  if (!__p->_M_nxt || _M_bucket_index(__p->_M_next()) != __n)
 	.loc 28 1567 21 is_stmt 0 discriminator 3
 	movl	$1, %eax	 #, iftmp.73_10
-	jmp	.L567	 #
-.L566:
+	jmp	.L568	 #
+.L567:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1567: 	  if (!__p->_M_nxt || _M_bucket_index(__p->_M_next()) != __n)
 	.loc 28 1567 21 discriminator 4
 	movl	$0, %eax	 #, iftmp.73_10
-.L567:
+.L568:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1567: 	  if (!__p->_M_nxt || _M_bucket_index(__p->_M_next()) != __n)
 	.loc 28 1567 4 is_stmt 1 discriminator 6
 	testb	%al, %al	 # iftmp.73_10
-	jne	.L572	 #,
+	jne	.L573	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1569: 	  __prev_p = __p;
 	.loc 28 1569 4
 	movq	-16(%rbp), %rax	 # __p, tmp107
@@ -13348,8 +13356,8 @@ _ZNKSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIK
 	movq	%rax, -16(%rbp)	 # tmp109, __p
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1564: 	  if (this->_M_equals(__k, __code, __p))
 	.loc 28 1564 4
-	jmp	.L570	 #
-.L572:
+	jmp	.L571	 #
+.L573:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1568: 	    break;
 	.loc 28 1568 6
 	nop	
@@ -13357,7 +13365,7 @@ _ZNKSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIK
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1571:       return nullptr;
 	.loc 28 1571 14
 	movl	$0, %eax	 #, _9
-.L563:
+.L564:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1572:     }
 	.loc 28 1572 5
 	addq	$48, %rsp	 #,
@@ -13626,8 +13634,8 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 .LEHE69:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2095:     }
 	.loc 28 2095 5
-	jmp	.L586	 #
-.L584:
+	jmp	.L587	 #
+.L585:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2088:       __catch(...)
 	.loc 28 2088 7
 	movq	%rax, %rcx	 # _1,
@@ -13645,18 +13653,18 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	.loc 28 2093 4
 	call	__cxa_rethrow	 #
 .LEHE70:
-.L585:
+.L586:
 	movq	%rax, %rbx	 #, tmp96
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2088:       __catch(...)
 	.loc 28 2088 7
 	call	__cxa_end_catch	 #
-	movq	%rbx, %rax	 # tmp96, D.180922
-	movq	%rax, %rcx	 # D.180922,
+	movq	%rbx, %rax	 # tmp96, D.180925
+	movq	%rax, %rcx	 # D.180925,
 .LEHB71:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE71:
-.L586:
+.L587:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2095:     }
 	.loc 28 2095 5
 	addq	$56, %rsp	 #,
@@ -13681,11 +13689,11 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 .LLSDACSB14687:
 	.uleb128 .LEHB69-.LFB14687
 	.uleb128 .LEHE69-.LEHB69
-	.uleb128 .L584-.LFB14687
+	.uleb128 .L585-.LFB14687
 	.uleb128 0x1
 	.uleb128 .LEHB70-.LFB14687
 	.uleb128 .LEHE70-.LEHB70
-	.uleb128 .L585-.LFB14687
+	.uleb128 .L586-.LFB14687
 	.uleb128 0
 	.uleb128 .LEHB71-.LFB14687
 	.uleb128 .LEHE71-.LEHB71
@@ -13852,7 +13860,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1583:       if (_M_buckets[__bkt])
 	.loc 28 1583 7
 	testq	%rax, %rax	 # _4
-	je	.L593	 #,
+	je	.L594	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1587: 	  __node->_M_nxt = _M_buckets[__bkt]->_M_nxt;
 	.loc 28 1587 21
 	movq	-64(%rbp), %rax	 # this, tmp113
@@ -13886,8 +13894,8 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	movq	%rdx, (%rax)	 # tmp118, _13->_M_nxt
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1603:     }
 	.loc 28 1603 5
-	jmp	.L596	 #
-.L593:
+	jmp	.L597	 #
+.L594:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1595: 	  __node->_M_nxt = _M_before_begin._M_nxt;
 	.loc 28 1595 37
 	movq	-64(%rbp), %rax	 # this, tmp119
@@ -13908,7 +13916,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1597: 	  if (__node->_M_nxt)
 	.loc 28 1597 4
 	testq	%rax, %rax	 # _15
-	je	.L595	 #,
+	je	.L596	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1600: 	    _M_buckets[_M_bucket_index(__node->_M_next())] = __node;
 	.loc 28 1600 6
 	movq	-64(%rbp), %rax	 # this, tmp124
@@ -13927,7 +13935,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	.loc 28 1600 6
 	movq	-48(%rbp), %rdx	 # __node, tmp126
 	movq	%rdx, (%rax)	 # tmp126, *_20
-.L595:
+.L596:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1601: 	  _M_buckets[__bkt] = &_M_before_begin;
 	.loc 28 1601 4
 	movq	-64(%rbp), %rax	 # this, tmp127
@@ -13944,7 +13952,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1601: 	  _M_buckets[__bkt] = &_M_before_begin;
 	.loc 28 1601 4
 	movq	%rdx, (%rax)	 # _24, *_23
-.L596:
+.L597:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1603:     }
 	.loc 28 1603 5
 	nop	
@@ -14449,11 +14457,11 @@ _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basi
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 33 101 2
 	testb	%al, %al	 # retval.76_7
-	je	.L617	 #,
+	je	.L618	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:102: 	  std::__throw_bad_alloc();
 	.loc 33 102 26
 	call	_ZSt17__throw_bad_allocv	 #
-.L617:
+.L618:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:111: 	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
 	.loc 33 111 41
 	movq	24(%rbp), %rax	 # __n, tmp92
@@ -14620,21 +14628,21 @@ _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basi
 .LEHE72:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:136: 	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
 	.loc 33 136 60
-	jmp	.L625	 #
-.L624:
+	jmp	.L626	 #
+.L625:
 	movq	%rax, %rsi	 #, tmp102
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:136: 	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
 	.loc 33 136 4
 	movq	%rbx, %rdx	 # _14,
 	movq	%rdi, %rcx	 # _16,
 	call	_ZdlPvS_	 #
-	movq	%rsi, %rax	 # tmp102, D.180923
-	movq	%rax, %rcx	 # D.180923,
+	movq	%rsi, %rax	 # tmp102, D.180926
+	movq	%rax, %rcx	 # D.180926,
 .LEHB73:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE73:
-.L625:
+.L626:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:136: 	{ ::new((void *)__p) _Up(std::forward<_Args>(__args)...); }
 	.loc 33 136 60
 	addq	$72, %rsp	 #,
@@ -14660,7 +14668,7 @@ _ZN9__gnu_cxx13new_allocatorINSt8__detail10_Hash_nodeISt4pairIKNSt7__cxx1112basi
 .LLSDACSB14751:
 	.uleb128 .LEHB72-.LFB14751
 	.uleb128 .LEHE72-.LEHB72
-	.uleb128 .L624-.LFB14751
+	.uleb128 .L625-.LFB14751
 	.uleb128 0
 	.uleb128 .LEHB73-.LFB14751
 	.uleb128 .LEHE73-.LEHB73
@@ -14751,11 +14759,11 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2110:       std::size_t __bbegin_bkt = 0;
 	.loc 28 2110 19
 	movq	$0, -16(%rbp)	 #, __bbegin_bkt
-.L632:
+.L633:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2111:       while (__p)
 	.loc 28 2111 7
 	cmpq	$0, -8(%rbp)	 #, __p
-	je	.L628	 #,
+	je	.L629	 #,
 .LBB91:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2113: 	  __node_type* __next = __p->_M_next();
 	.loc 28 2113 17
@@ -14782,7 +14790,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2115: 	  if (!__new_buckets[__bkt])
 	.loc 28 2115 4
 	testq	%rax, %rax	 # _3
-	jne	.L629	 #,
+	jne	.L630	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2117: 	      __p->_M_nxt = _M_before_begin._M_nxt;
 	.loc 28 2117 38
 	movq	16(%rbp), %rax	 # this, tmp115
@@ -14816,7 +14824,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2120: 	      if (__p->_M_nxt)
 	.loc 28 2120 8
 	testq	%rax, %rax	 # _8
-	je	.L630	 #,
+	je	.L631	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2121: 		__new_buckets[__bbegin_bkt] = __p;
 	.loc 28 2121 16
 	movq	-16(%rbp), %rax	 # __bbegin_bkt, tmp123
@@ -14827,13 +14835,13 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	.loc 28 2121 3
 	movq	-8(%rbp), %rdx	 # __p, tmp125
 	movq	%rdx, (%rax)	 # tmp125, *_10
-.L630:
+.L631:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2122: 	      __bbegin_bkt = __bkt;
 	.loc 28 2122 8
 	movq	-40(%rbp), %rax	 # __bkt, tmp126
 	movq	%rax, -16(%rbp)	 # tmp126, __bbegin_bkt
-	jmp	.L631	 #
-.L629:
+	jmp	.L632	 #
+.L630:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2126: 	      __p->_M_nxt = __new_buckets[__bkt]->_M_nxt;
 	.loc 28 2126 35
 	movq	-40(%rbp), %rax	 # __bkt, tmp127
@@ -14859,7 +14867,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	.loc 28 2127 8
 	movq	-8(%rbp), %rdx	 # __p, tmp132
 	movq	%rdx, (%rax)	 # tmp132, _17->_M_nxt
-.L631:
+.L632:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2129: 	  __p = __next;
 	.loc 28 2129 4
 	movq	-32(%rbp), %rax	 # __next, tmp133
@@ -14867,8 +14875,8 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 .LBE91:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2111:       while (__p)
 	.loc 28 2111 7
-	jmp	.L632	 #
-.L628:
+	jmp	.L633	 #
+.L629:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:2132:       _M_deallocate_buckets();
 	.loc 28 2132 7
 	movq	16(%rbp), %rcx	 # this,
@@ -15297,7 +15305,7 @@ _ZNSt8__detail13_Equal_helperINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwE
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:1452:     { return __c == __n->_M_hash_code && __eq(__k, __extract(__n->_M_v())); }
 	.loc 6 1452 39
 	cmpq	%rax, 40(%rbp)	 # _1, __c
-	jne	.L650	 #,
+	jne	.L651	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:1452:     { return __c == __n->_M_hash_code && __eq(__k, __extract(__n->_M_v())); }
 	.loc 6 1452 61 discriminator 1
 	movq	48(%rbp), %rax	 # __n, _2
@@ -15318,16 +15326,16 @@ _ZNSt8__detail13_Equal_helperINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwE
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:1452:     { return __c == __n->_M_hash_code && __eq(__k, __extract(__n->_M_v())); }
 	.loc 6 1452 39 discriminator 1
 	testb	%al, %al	 # _5
-	je	.L650	 #,
+	je	.L651	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:1452:     { return __c == __n->_M_hash_code && __eq(__k, __extract(__n->_M_v())); }
 	.loc 6 1452 39 is_stmt 0 discriminator 3
 	movl	$1, %eax	 #, iftmp.74_6
-	jmp	.L651	 #
-.L650:
+	jmp	.L652	 #
+.L651:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:1452:     { return __c == __n->_M_hash_code && __eq(__k, __extract(__n->_M_v())); }
 	.loc 6 1452 39 discriminator 4
 	movl	$0, %eax	 #, iftmp.74_6
-.L651:
+.L652:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:1452:     { return __c == __n->_M_hash_code && __eq(__k, __extract(__n->_M_v())); }
 	.loc 6 1452 77 is_stmt 1 discriminator 6
 	addq	$32, %rsp	 #,
@@ -15749,7 +15757,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:360: 	if (__builtin_expect(__n == 1, false))
 	.loc 28 360 2
 	testl	%eax, %eax	 # _3
-	je	.L672	 #,
+	je	.L673	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:362: 	    _M_single_bucket = nullptr;
 	.loc 28 362 6
 	movq	16(%rbp), %rax	 # this, tmp92
@@ -15758,8 +15766,8 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 	.loc 28 363 14
 	movq	16(%rbp), %rax	 # this, tmp93
 	addq	$48, %rax	 #, _4
-	jmp	.L673	 #
-.L672:
+	jmp	.L674	 #
+.L673:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:366: 	return __hashtable_alloc::_M_allocate_buckets(__n);
 	.loc 28 366 47
 	movq	24(%rbp), %rax	 # __n, tmp94
@@ -15769,7 +15777,7 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:366: 	return __hashtable_alloc::_M_allocate_buckets(__n);
 	.loc 28 366 51
 	nop	
-.L673:
+.L674:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:367:       }
 	.loc 28 367 7
 	addq	$32, %rsp	 #,
@@ -16200,20 +16208,20 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2126:       return __p;
 	.loc 6 2126 14
 	movq	%rbx, %rax	 # _16, <retval>
-	jmp	.L697	 #
-.L696:
+	jmp	.L698	 #
+.L697:
 	movq	%rax, %rbx	 #, tmp107
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2121:       __bucket_alloc_type __alloc(_M_node_allocator());
 	.loc 6 2121 27
 	leaq	-81(%rbp), %rax	 #, tmp106
 	movq	%rax, %rcx	 # tmp106,
 	call	_ZNSaIPNSt8__detail15_Hash_node_baseEED1Ev	 #
-	movq	%rbx, %rax	 # tmp107, D.180924
-	movq	%rax, %rcx	 # D.180924,
+	movq	%rbx, %rax	 # tmp107, D.180927
+	movq	%rax, %rcx	 # D.180927,
 .LEHB75:
 	call	_Unwind_Resume	 #
 .LEHE75:
-.L697:
+.L698:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:2127:     }
 	.loc 6 2127 5
 	addq	$72, %rsp	 #,
@@ -16235,7 +16243,7 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
 .LLSDACSB14842:
 	.uleb128 .LEHB74-.LFB14842
 	.uleb128 .LEHE74-.LEHB74
-	.uleb128 .L696-.LFB14842
+	.uleb128 .L697-.LFB14842
 	.uleb128 0
 	.uleb128 .LEHB75-.LFB14842
 	.uleb128 .LEHE75-.LEHB75
@@ -16285,7 +16293,7 @@ _ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6020: 	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
 	.loc 5 6020 8
 	cmpq	%rax, %rbx	 # _2, _1
-	jne	.L699	 #,
+	jne	.L700	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6020: 	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
 	.loc 5 6020 45 discriminator 1
 	movq	32(%rbp), %rcx	 # __lhs,
@@ -16304,16 +16312,16 @@ _ZSteqIwEN9__gnu_cxx11__enable_ifIXsrSt9__is_charIT_E7__valueEbE6__typeERKNSt7__
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6020: 	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
 	.loc 5 6020 8 discriminator 1
 	testl	%eax, %eax	 # _6
-	jne	.L699	 #,
+	jne	.L700	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6020: 	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
 	.loc 5 6020 8 is_stmt 0 discriminator 3
 	movl	$1, %eax	 #, iftmp.75_7
-	jmp	.L700	 #
-.L699:
+	jmp	.L701	 #
+.L700:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6020: 	      && !std::char_traits<_CharT>::compare(__lhs.data(), __rhs.data(),
 	.loc 5 6020 8 discriminator 4
 	movl	$0, %eax	 #, iftmp.75_7
-.L700:
+.L701:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6021: 						    __lhs.size())); }
 	.loc 5 6021 27 is_stmt 1
 	addq	$32, %rsp	 #,
@@ -16398,11 +16406,11 @@ _ZN9__gnu_cxx13new_allocatorIPNSt8__detail15_Hash_node_baseEE8allocateEyPKv:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:101: 	if (__n > this->max_size())
 	.loc 33 101 2
 	testb	%al, %al	 # retval.77_7
-	je	.L705	 #,
+	je	.L706	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:102: 	  std::__throw_bad_alloc();
 	.loc 33 102 26
 	call	_ZSt17__throw_bad_allocv	 #
-.L705:
+.L706:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:111: 	return static_cast<_Tp*>(::operator new(__n * sizeof(_Tp)));
 	.loc 33 111 41
 	movq	24(%rbp), %rax	 # __n, tmp92
@@ -17790,19 +17798,19 @@ __tcf_2:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:9: BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
 	.loc 27 9 1
 	leaq	128+_ZN13T100MainPanel20sm_eventTableEntriesE(%rip), %rbx	 #, _1
-.L719:
+.L720:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:9: BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
 	.loc 27 9 1 is_stmt 0 discriminator 4
 	leaq	_ZN13T100MainPanel20sm_eventTableEntriesE(%rip), %rax	 #, tmp88
 	cmpq	%rax, %rbx	 # tmp88, _1
-	je	.L717	 #,
+	je	.L718	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:9: BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
 	.loc 27 9 1 discriminator 3
 	subq	$32, %rbx	 #, _1
 	movq	%rbx, %rcx	 # _1,
 	call	_ZN17wxEventTableEntryD1Ev	 #
-	jmp	.L719	 #
-.L717:
+	jmp	.L720	 #
+.L718:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:9: BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
 	.loc 27 9 1
 	addq	$40, %rsp	 #,
@@ -17819,7 +17827,7 @@ __tcf_2:
 	.seh_proc	_Z41__static_initialization_and_destruction_0ii
 _Z41__static_initialization_and_destruction_0ii:
 .LFB14902:
-	.loc 27 208 1 is_stmt 1
+	.loc 27 211 1 is_stmt 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -17862,14 +17870,14 @@ _Z41__static_initialization_and_destruction_0ii:
 	.seh_endprologue
 	movl	%ecx, 80(%rbp)	 # __initialize_p, __initialize_p
 	movl	%edx, 88(%rbp)	 # __priority, __priority
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:208: }
-	.loc 27 208 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:211: }
+	.loc 27 211 1
 	cmpl	$1, 80(%rbp)	 #, __initialize_p
-	jne	.L720	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:208: }
-	.loc 27 208 1 is_stmt 0 discriminator 1
+	jne	.L721	 #,
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:211: }
+	.loc 27 211 1 is_stmt 0 discriminator 1
 	cmpl	$65535, 88(%rbp)	 #, __priority
-	jne	.L720	 #,
+	jne	.L721	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/iostream:74:   static ios_base::Init __ioinit;
 	.loc 42 74 25 is_stmt 1
 	leaq	_ZStL8__ioinit(%rip), %rcx	 #,
@@ -17895,13 +17903,13 @@ _Z41__static_initialization_and_destruction_0ii:
 	movq	%rax, -80(%rbp)	 # tmp122, %sfp
 	movq	$0, -72(%rbp)	 #, %sfp
 	leaq	-48(%rbp), %rax	 #, tmp108
-	movdqa	-80(%rbp), %xmm0	 # %sfp, D.180289
-	movaps	%xmm0, -64(%rbp)	 # D.180289,
+	movdqa	-80(%rbp), %xmm0	 # %sfp, D.180292
+	movaps	%xmm0, -64(%rbp)	 # D.180292,
 	leaq	-64(%rbp), %rdx	 #, tmp109
 	movq	%rax, %rcx	 # tmp108,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-48(%rbp), %rax	 # D.180290, tmp110
-	movq	-40(%rbp), %rdx	 # D.180290,
+	movq	-48(%rbp), %rax	 # D.180293, tmp110
+	movq	-40(%rbp), %rdx	 # D.180293,
 	movq	%rax, -64(%rbp)	 # tmp110,
 	movq	%rdx, -56(%rbp)	 #,
 	leaq	-64(%rbp), %rax	 #, tmp111
@@ -17927,16 +17935,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rbx	 #, _10
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:11:     EVT_AUINOTEBOOK_PAGE_CLOSE(wxID_ANY, OnPageClosing)
 	.loc 27 11 5 is_stmt 1 discriminator 1
-	leaq	_ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent(%rip), %r14	 #, D.180291
-	movl	$0, %r15d	 #, D.180291
+	leaq	_ZN13T100MainPanel13OnPageClosingER18wxAuiNotebookEvent(%rip), %r14	 #, D.180294
+	movl	$0, %r15d	 #, D.180294
 	leaq	-32(%rbp), %rax	 #, tmp112
-	movq	%r14, -64(%rbp)	 # D.180291,
-	movq	%r15, -56(%rbp)	 # D.180291,
+	movq	%r14, -64(%rbp)	 # D.180294,
+	movq	%r15, -56(%rbp)	 # D.180294,
 	leaq	-64(%rbp), %rdx	 #, tmp113
 	movq	%rax, %rcx	 # tmp112,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-32(%rbp), %rax	 # D.180292, tmp114
-	movq	-24(%rbp), %rdx	 # D.180292,
+	movq	-32(%rbp), %rax	 # D.180295, tmp114
+	movq	-24(%rbp), %rdx	 # D.180295,
 	movq	%rax, -64(%rbp)	 # tmp114,
 	movq	%rdx, -56(%rbp)	 #,
 	leaq	-64(%rbp), %rax	 #, tmp115
@@ -17961,16 +17969,16 @@ _Z41__static_initialization_and_destruction_0ii:
 	subq	$1, %rbx	 #, _10
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:12:     EVT_AUINOTEBOOK_PAGE_CLOSED(wxID_ANY, OnPageClosed)
 	.loc 27 12 5 is_stmt 1 discriminator 2
-	leaq	_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent(%rip), %r12	 #, D.180293
-	movl	$0, %r13d	 #, D.180293
+	leaq	_ZN13T100MainPanel12OnPageClosedER18wxAuiNotebookEvent(%rip), %r12	 #, D.180296
+	movl	$0, %r13d	 #, D.180296
 	leaq	-16(%rbp), %rax	 #, tmp116
-	movq	%r12, -64(%rbp)	 # D.180293,
-	movq	%r13, -56(%rbp)	 # D.180293,
+	movq	%r12, -64(%rbp)	 # D.180296,
+	movq	%r13, -56(%rbp)	 # D.180296,
 	leaq	-64(%rbp), %rdx	 #, tmp117
 	movq	%rax, %rcx	 # tmp116,
 	call	_Z19wxEventFunctionCastI18wxAuiNotebookEventEM12wxEvtHandlerFvR7wxEventEMS1_FvRT_E	 #
-	movq	-16(%rbp), %rax	 # D.180294, tmp118
-	movq	-8(%rbp), %rdx	 # D.180294,
+	movq	-16(%rbp), %rax	 # D.180297, tmp118
+	movq	-8(%rbp), %rdx	 # D.180297,
 	movq	%rax, -64(%rbp)	 # tmp118,
 	movq	%rdx, -56(%rbp)	 #,
 	leaq	-64(%rbp), %rax	 #, tmp119
@@ -18005,38 +18013,38 @@ _Z41__static_initialization_and_destruction_0ii:
 	.loc 27 9 1 is_stmt 1 discriminator 4
 	leaq	__tcf_2(%rip), %rcx	 #,
 	call	atexit	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:208: }
-	.loc 27 208 1 discriminator 4
-	jmp	.L720	 #
-.L725:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:211: }
+	.loc 27 211 1 discriminator 4
+	jmp	.L721	 #
+.L726:
 	movq	%rax, %rdi	 #, tmp121
 	testq	%rsi, %rsi	 # _22
-	je	.L723	 #,
+	je	.L724	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:13: END_EVENT_TABLE()
 	.loc 27 13 1 discriminator 1
 	movl	$3, %eax	 #, tmp120
 	subq	%rbx, %rax	 # _10, _7
 	salq	$5, %rax	 #, _9
 	leaq	(%rsi,%rax), %rbx	 #, _11
-.L724:
+.L725:
 	cmpq	%rsi, %rbx	 # _22, _11
-	je	.L723	 #,
+	je	.L724	 #,
 	subq	$32, %rbx	 #, _11
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:13: END_EVENT_TABLE()
 	.loc 27 13 1 is_stmt 0 discriminator 5
 	movq	%rbx, %rcx	 # _11,
 	call	_ZN17wxEventTableEntryD1Ev	 #
-	jmp	.L724	 #
-.L723:
-	movq	%rdi, %rax	 # tmp121, D.180927
-	movq	%rax, %rcx	 # D.180927,
+	jmp	.L725	 #
+.L724:
+	movq	%rdi, %rax	 # tmp121, D.180930
+	movq	%rax, %rcx	 # D.180930,
 .LEHB78:
 	call	_Unwind_Resume	 #
 	nop	
 .LEHE78:
-.L720:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:208: }
-	.loc 27 208 1 is_stmt 1
+.L721:
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:211: }
+	.loc 27 211 1 is_stmt 1
 	addq	$136, %rsp	 #,
 	popq	%rbx	 #
 	.cfi_restore 3
@@ -18072,7 +18080,7 @@ _Z41__static_initialization_and_destruction_0ii:
 	.uleb128 0
 	.uleb128 .LEHB77-.LFB14902
 	.uleb128 .LEHE77-.LEHB77
-	.uleb128 .L725-.LFB14902
+	.uleb128 .L726-.LFB14902
 	.uleb128 0
 	.uleb128 .LEHB78-.LFB14902
 	.uleb128 .LEHE78-.LEHB78
@@ -18191,13 +18199,13 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseE8SetFocusEv:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:246:         if ( !m_container.DoSetFocus() )
 	.loc 24 246 9
 	testb	%al, %al	 # retval.20_9
-	je	.L730	 #,
+	je	.L731	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:247:             BaseWindowClass::SetFocus();
 	.loc 24 247 38
 	movq	16(%rbp), %rax	 # this, _3
 	movq	%rax, %rcx	 # _3,
 	call	_ZN8wxWindow8SetFocusEv	 #
-.L730:
+.L731:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:248:     }
 	.loc 24 248 5
 	nop	
@@ -18357,7 +18365,7 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseE8AddChildEP12wxWindowBase:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:222:         if ( m_container.UpdateCanFocusChildren() )
 	.loc 24 222 9
 	testb	%al, %al	 # _12
-	je	.L739	 #,
+	je	.L740	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:226:             if ( !BaseWindowClass::HasFlag(wxTAB_TRAVERSAL) )
 	.loc 24 226 43
 	movq	16(%rbp), %rax	 # this, _3
@@ -18370,14 +18378,14 @@ _ZN19wxNavigationEnabledI14wxBookCtrlBaseE8AddChildEP12wxWindowBase:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:226:             if ( !BaseWindowClass::HasFlag(wxTAB_TRAVERSAL) )
 	.loc 24 226 13
 	testb	%al, %al	 # retval.17_15
-	je	.L739	 #,
+	je	.L740	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:227:                 BaseWindowClass::ToggleWindowStyle(wxTAB_TRAVERSAL);
 	.loc 24 227 51
 	movq	16(%rbp), %rax	 # this, _5
 	movl	$524288, %edx	 #,
 	movq	%rax, %rcx	 # _5,
 	call	_ZN12wxWindowBase17ToggleWindowStyleEi	 #
-.L739:
+.L740:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/containr.h:229:     }
 	.loc 24 229 5
 	nop	
@@ -18478,7 +18486,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:415:         if ( !realHandler )
 	.loc 16 415 9
 	cmpq	$0, -8(%rbp)	 #, realHandler
-	jne	.L742	 #,
+	jne	.L743	 #,
 .LBB102:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:417:             realHandler = this->ConvertFromEvtHandler(handler);
 	.loc 16 417 25
@@ -18489,13 +18497,13 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 16 420 13
 	cmpq	$0, -8(%rbp)	 #, realHandler
-	jne	.L742	 #,
+	jne	.L743	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 16 420 13 is_stmt 0 discriminator 1
 	movq	.refptr.wxTheAssertHandler(%rip), %rax	 #, tmp110
 	movq	(%rax), %rax	 # wxTheAssertHandler, wxTheAssertHandler.98_1
 	testq	%rax, %rax	 # wxTheAssertHandler.98_1
-	je	.L744	 #,
+	je	.L745	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 16 420 13 discriminator 2
 	leaq	.LC19(%rip), %rax	 #, tmp111
@@ -18508,27 +18516,27 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp112
 	movzbl	(%rax), %eax	 # wxTrapInAssert, wxTrapInAssert.99_2
 	testb	%al, %al	 # wxTrapInAssert.99_2
-	je	.L744	 #,
+	je	.L745	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 16 420 13 discriminator 4
 	movl	$1, %eax	 #, iftmp.97_19
-	jmp	.L745	 #
-.L744:
+	jmp	.L746	 #
+.L745:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 16 420 13 discriminator 5
 	movl	$0, %eax	 #, iftmp.97_19
-.L745:
+.L746:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 16 420 13 discriminator 7
 	testb	%al, %al	 # iftmp.97_19
-	je	.L750	 #,
+	je	.L751	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 16 420 13 discriminator 8
 	movq	.refptr.wxTrapInAssert(%rip), %rax	 #, tmp113
 	movb	$0, (%rax)	 #, wxTrapInAssert
 	call	_Z6wxTrapv	 #
-	jmp	.L750	 #
-.L742:
+	jmp	.L751	 #
+.L743:
 .LBE102:
 .LBE101:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
@@ -18542,7 +18550,7 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	movq	16(%rax), %rax	 # this_27(D)->m_method.__pfn, _6
 	andl	$1, %eax	 #, _8
 	testq	%rax, %rax	 # _8
-	je	.L748	 #,
+	je	.L749	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 16 426 33 is_stmt 0 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp117
@@ -18556,26 +18564,26 @@ _ZN20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7w
 	subq	$1, %rax	 #, _15
 	addq	%rdx, %rax	 # _12, _17
 	movq	(%rax), %rax	 # *_17, iftmp.100_20
-	jmp	.L749	 #
-.L748:
+	jmp	.L750	 #
+.L749:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 16 426 33 discriminator 2
 	movq	16(%rbp), %rax	 # this, tmp120
 	movq	16(%rax), %rax	 # this_27(D)->m_method.__pfn, iftmp.100_20
-.L749:
+.L750:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:426:         (realHandler->*m_method)(static_cast<EventArg&>(event));
 	.loc 16 426 33 discriminator 4
 	movq	32(%rbp), %rdx	 # event, tmp121
 	call	*%rax	 # iftmp.100_20
 .LVL39:
-	jmp	.L741	 #
-.L750:
+	jmp	.L742	 #
+.L751:
 .LBB104:
 .LBB103:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:420:             wxCHECK_RET( realHandler, "invalid event handler" );
 	.loc 16 420 13 is_stmt 1
 	nop	
-.L741:
+.L742:
 .LBE103:
 .LBE104:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:427:     }
@@ -18645,12 +18653,12 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:431:         if ( wxTypeId(functor) != wxTypeId(*this) )
 	.loc 16 431 9
 	testb	%al, %al	 # retval.94_28
-	je	.L752	 #,
+	je	.L753	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:432:             return false;
 	.loc 16 432 20
 	movl	$0, %eax	 #, iftmp.95_19
-	jmp	.L753	 #
-.L752:
+	jmp	.L754	 #
+.L753:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:438:         const ThisFunctor& other = static_cast<const ThisFunctor &>(functor);
 	.loc 16 438 28
 	movq	24(%rbp), %rax	 # functor, tmp113
@@ -18664,7 +18672,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 16 440 71
 	cmpq	%rax, %rdx	 # _10, _9
-	jne	.L754	 #,
+	jne	.L755	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 16 440 26 discriminator 1
 	movq	16(%rbp), %rax	 # this, tmp116
@@ -18672,14 +18680,14 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
 	movq	-8(%rbp), %rax	 # other, tmp117
 	movq	24(%rax), %rax	 # other_32->m_method.__delta, _12
 	cmpq	%rax, %rdx	 # _12, _11
-	je	.L755	 #,
+	je	.L756	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 16 440 26 is_stmt 0 discriminator 4
 	movq	16(%rbp), %rax	 # this, tmp118
 	movq	16(%rax), %rax	 # this_21(D)->m_method.__pfn, _13
 	testq	%rax, %rax	 # _13
-	je	.L755	 #,
-.L754:
+	je	.L756	 #,
+.L755:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 16 440 62 is_stmt 1 discriminator 6
 	movq	-8(%rbp), %rax	 # other, tmp119
@@ -18687,8 +18695,8 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 16 440 44 discriminator 6
 	testq	%rax, %rax	 # _14
-	jne	.L756	 #,
-.L755:
+	jne	.L757	 #,
+.L756:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 16 441 17 discriminator 7
 	movq	16(%rbp), %rax	 # this, tmp120
@@ -18700,7 +18708,7 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 16 440 71 discriminator 7
 	cmpq	%rax, %rdx	 # _16, _15
-	je	.L757	 #,
+	je	.L758	 #,
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 16 441 55
 	movq	-8(%rbp), %rax	 # other, tmp122
@@ -18708,23 +18716,23 @@ _ZNK20wxEventFunctorMethodI14wxEventTypeTagI18wxAuiNotebookEventE12wxEvtHandler7
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 16 441 46
 	testq	%rax, %rax	 # _17
-	jne	.L756	 #,
-.L757:
+	jne	.L757	 #,
+.L758:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 16 440 71 discriminator 9
 	movl	$1, %eax	 #, iftmp.95_19
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 16 441 72 discriminator 9
-	jmp	.L759	 #
-.L756:
+	jmp	.L760	 #
+.L757:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:440:         return (m_method == other.m_method || other.m_method == NULL) &&
 	.loc 16 440 71 discriminator 8
 	movl	$0, %eax	 #, iftmp.95_19
-.L759:
+.L760:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:441:                (m_handler == other.m_handler || other.m_handler == NULL);
 	.loc 16 441 72
 	nop	
-.L753:
+.L754:
  # C:\zoo\lib\wxWidgets-3.0.5\include/wx/event.h:442:     }
 	.loc 16 442 5
 	addq	$64, %rsp	 #,
@@ -19033,7 +19041,7 @@ _ZTS11wxTrackable:
 	.seh_proc	_GLOBAL__sub_I__ZN13T100MainPanel13sm_eventTableE
 _GLOBAL__sub_I__ZN13T100MainPanel13sm_eventTableE:
 .LFB15004:
-	.loc 27 208 1
+	.loc 27 211 1
 	.cfi_startproc
 	pushq	%rbp	 #
 	.seh_pushreg	%rbp
@@ -19045,8 +19053,8 @@ _GLOBAL__sub_I__ZN13T100MainPanel13sm_eventTableE:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:208: }
-	.loc 27 208 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\wx\T100MainPanel.cpp:211: }
+	.loc 27 211 1
 	movl	$65535, %edx	 #,
 	movl	$1, %ecx	 #,
 	call	_Z41__static_initialization_and_destruction_0ii	 #
@@ -92968,7 +92976,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2a
 	.ascii "__initialize_p\0"
 	.byte	0x1b
-	.byte	0xd0
+	.byte	0xd3
 	.byte	0x1
 	.long	0x25579
 	.uleb128 0x2
@@ -92977,7 +92985,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.uleb128 0x2a
 	.ascii "__priority\0"
 	.byte	0x1b
-	.byte	0xd0
+	.byte	0xd3
 	.byte	0x1
 	.long	0x25579
 	.uleb128 0x2
@@ -97372,25 +97380,25 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.long	0x5c79a
 	.uleb128 0x2
 	.byte	0x91
-	.sleb128 -40
-	.uleb128 0x4f
-	.ascii "index\0"
-	.byte	0x1b
-	.byte	0xcb
-	.byte	0x11
-	.long	0x5b556
-	.uleb128 0x2
-	.byte	0x91
-	.sleb128 -44
+	.sleb128 -48
 	.uleb128 0x4f
 	.ascii "result\0"
 	.byte	0x1b
-	.byte	0xcd
+	.byte	0xcb
 	.byte	0x11
 	.long	0x254aa
 	.uleb128 0x2
 	.byte	0x91
-	.sleb128 -45
+	.sleb128 -33
+	.uleb128 0x4f
+	.ascii "index\0"
+	.byte	0x1b
+	.byte	0xcc
+	.byte	0x11
+	.long	0x5b556
+	.uleb128 0x2
+	.byte	0x91
+	.sleb128 -52
 	.byte	0
 	.uleb128 0x14
 	.long	0x5cdbf
@@ -110810,7 +110818,7 @@ _ZZN21wxEventTableEntryBaseC4EiiP14wxEventFunctorP8wxObjectE12__FUNCTION__:
 	.def	_ZNKSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEE5emptyEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN10T100Editor7SetPathERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE;	.scl	2;	.type	32;	.endef
 	.def	_ZN13wxAuiNotebook7AddPageEP8wxWindowRK8wxStringbRK8wxBitmap;	.scl	2;	.type	32;	.endef
-	.def	_ZNK14wxBookCtrlBase8FindPageEPK8wxWindow;	.scl	2;	.type	32;	.endef
+	.def	_ZNK13wxAuiNotebook12GetPageIndexEP8wxWindow;	.scl	2;	.type	32;	.endef
 	.def	_ZN8T100Pack8GetIndexEv;	.scl	2;	.type	32;	.endef
 	.def	_ZN10T100Editor7GetPathB5cxx11Ev;	.scl	2;	.type	32;	.endef
 	.def	_ZN14wxTextAreaBase8SaveFileERK8wxStringi;	.scl	2;	.type	32;	.endef
