@@ -79,6 +79,11 @@ T100BOOL T100ProjectView::WorkSpaceSelect()
     return T100TRUE;
 }
 
+T100BOOL T100ProjectView::ProjectAppend(T100ProjectInfo* info)
+{
+    m_projectTree->ProjectAppend(info);
+}
+
 T100VOID T100ProjectView::ShowSetupEditorDialog()
 {
     T100ProjectViewSetupEditorDialog        dialog(m_frame, wxID_ANY, L"Setup Editor...");

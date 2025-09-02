@@ -20,25 +20,25 @@ class T100ProjectView : public T100ProjectViewBase
         T100BOOL                    WorkSpaceSave();
         T100BOOL                    WorkSpaceSelect();
 
-        T100VOID                    ShowSetupCompilerDialog();
-
-        T100VOID                    FileClose(T100Pack*);
-        T100VOID                    PageClose(T100Pack*);
-
+        T100BOOL                    ProjectAppend(T100ProjectInfo*);
         T100VOID                    ProjectOpen(T100ProjectInfo*);
+        T100VOID                    ProjectOpen(wxTreeItemId, T100ProjectInfo*);
         T100BOOL                    ProjectSelect();
 
-        T100VOID                    FileModified(const T100WSTRING&);
-
-        T100BOOL                    FileOpen(wxTreeItemId, T100FileInfo*);
         T100VOID                    FolderOpen(wxTreeItemId, T100FolderInfo*);
-
         T100VOID                    FolderSelect();
 
-        T100VOID                    ProjectOpen(wxTreeItemId, T100ProjectInfo*);
+        T100BOOL                    FileOpen(wxTreeItemId, T100FileInfo*);
+        T100VOID                    FileClose(T100Pack*);
+        T100VOID                    FileSave();
+        T100VOID                    FileModified(const T100WSTRING&);
+
+        T100VOID                    PageClose(T100Pack*);
+        T100VOID                    PageChanged();
 
         T100VOID                    ShowFileName(T100WSTRING&);
         T100VOID                    ShowSetupEditorDialog();
+        T100VOID                    ShowSetupCompilerDialog();
 
         T100VOID                    Load(const T100PROJECT_INFO_VECTOR&);
 
@@ -49,10 +49,6 @@ class T100ProjectView : public T100ProjectViewBase
         T100VOID                    About();
 
         T100VOID                    OnResize();
-
-        T100VOID                    FileSave();
-
-        T100VOID                    PageChanged();
 
         T100BOOL                    AppendModule(T100WorkSpaceInfo*, T100ProjectInfo*, T100ModuleInfo*);
 

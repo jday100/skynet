@@ -481,7 +481,9 @@ T100VOID T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo* i
     project->SetLabel(info->GetLabel());
     project->SetPath(workspace->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + info->GetLabel());
 
-    ProjectOpen(project);
+    //ProjectAppend(project);
+
+    m_view->ProjectAppend(project);
 }
 
 T100VOID T100ProjectSkeletal::OnBuildMessage(const T100WSTRING& value)

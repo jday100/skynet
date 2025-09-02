@@ -1190,6 +1190,23 @@ T100BOOL T100ProjectTree::WorkSpaceOpen(T100WorkSpaceInfo* info)
     return T100TRUE;
 }
 
+T100BOOL T100ProjectTree::ProjectAppend(T100ProjectInfo* info)
+{
+    T100DebugTools::Print(L"T100ProjectTree::ProjectAppend(T100ProjectInfo*)...");
+
+    wxTreeItemId        root        = GetRootItem();
+    wxTreeItemId        item;
+
+    T100DebugTools::Print(L"AppendProject:" + info->GetLabel());
+    item    = AppendProject(root, info);
+
+    if(item.IsOk()){
+        Expand(root);
+        return T100TRUE;
+    }
+    return T100FALSE;
+}
+
 T100VOID T100ProjectTree::ProjectOpen(T100ProjectInfo* info)
 {
     T100DebugTools::Print(L"T100ProjectTree::ProjectOpen(T100ProjectInfo*)...");

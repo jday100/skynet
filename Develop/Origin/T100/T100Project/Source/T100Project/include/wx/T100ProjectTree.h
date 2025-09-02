@@ -19,14 +19,14 @@ class T100ProjectTree : public wxTreeCtrl
 
         virtual T100BOOL            WorkSpaceOpen(T100WorkSpaceInfo*);
 
+        virtual T100BOOL            ProjectAppend(T100ProjectInfo*);
         virtual T100VOID            ProjectOpen(T100ProjectInfo*);
-
-        virtual T100VOID            FileCreate(T100FileInfo*);
-        virtual T100BOOL            FileOpen(wxTreeItemId, T100FileInfo*);
+        virtual T100VOID            ProjectOpen(wxTreeItemId, T100ProjectInfo*);
 
         virtual T100VOID            FolderOpen(wxTreeItemId, T100FolderInfo*);
 
-        virtual T100VOID            ProjectOpen(wxTreeItemId, T100ProjectInfo*);
+        virtual T100VOID            FileCreate(T100FileInfo*);
+        virtual T100BOOL            FileOpen(wxTreeItemId, T100FileInfo*);
 
         virtual T100VOID            Clear();
 
