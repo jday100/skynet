@@ -119,52 +119,76 @@ import os
 import sys
 import subprocess
 
-g_gcc_path  		= "C:\\\\zoo\\\\bin\\\\CodeBlocks\\\\MinGW\\\\bin"
-g_project_path 		= "C:\\\\vm\\\\Hello"
+g_project_path      = ""
+g_compiler_path     = ""
+
+g_project_code      = ""
+g_project_include   = ""
+g_project_source    = ""
 
 def args():
-	print("Args...")
-	count = len(sys.argv)
+    print("Run args...")
+    count = len(sys.argv)
 
-	match count:
-		case 2:
-			value = sys.argv[1]
-			match value:
-				case 'build':
-					build()
-				case 'clean':
-					clean()
-				case 'rebuild':
-					rebuild()
+    if(count != 7):
+        return
+
+    global g_project_path
+    global g_compiler_path
+
+    global g_project_code
+    global g_project_include
+    global g_project_source
+
+    value               = sys.argv[1]
+    g_project_path      = sys.argv[2]
+    g_compiler_path     = sys.argv[3]
+
+    g_project_code      = sys.argv[4]
+    g_project_include   = sys.argv[5]
+    g_project_source    = sys.argv[6]
+
+    match value:
+        case 'build':
+            build()
+        case 'clean':
+            clean()
+        case 'rebuild':
+            rebuild()
+
 
 def build():
-	print("Build...")
+    print("Run project build...")
 
-	global g_gcc_path
-	global g_project_path
+    global g_project_path
+    global g_compiler_path
 
-	cmd = "g++ -I%s\\\\source\\\\include" % (g_project_path)
+    global g_project_code
+    global g_project_include
+    global g_project_source
 
-	print(cmd)
+    bin     = "g++ -I%s\\%s\\%s" % (g_project_path, g_project_code, g_project_include)
 
-	line = "%s\\\\%s %s\\\\source\\\\src\\\\Hello.cpp -o %s\\\\build\\\\main.exe" % (g_gcc_path, cmd, g_project_path, g_project_path)
+    line    = "%s\\%s\\%s\\" % (g_project_path, g_project_code, g_project_source)
 
-	print(line)
+    cmd     = "%s %s" % (bin, line)
 
-	subprocess.call(line)
+    print(cmd)
 
-	print("Success")
+    subprocess.call(cmd)
+
+    print("Success")
 
 def clean():
-	print("Clean...")
+    print("Run project clean...")
 
 def rebuild():
-	print("Rebuild...")
-	clean()
-	build()
+    print("Run project rebuild...")
+    clean()
+    build()
 
 if __name__ == "__main__":
-    print("Main...")
+    print("Run project build...")
     args()
             """)
         print("Write OK")
