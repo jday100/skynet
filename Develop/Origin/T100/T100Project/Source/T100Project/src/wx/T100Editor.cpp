@@ -27,6 +27,9 @@ T100Editor::~T100Editor()
 T100VOID T100Editor::init()
 {
     SetMarginWidth(0,  50);
+
+    wxFont font(10, wxDEFAULT, wxNORMAL, wxNORMAL);
+    StyleSetFont(wxSTC_STYLE_DEFAULT, font);
 }
 
 T100VOID T100Editor::uninit()
