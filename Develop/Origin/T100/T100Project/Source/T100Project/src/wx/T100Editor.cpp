@@ -28,7 +28,9 @@ T100VOID T100Editor::init()
 {
     SetMarginWidth(0,  50);
 
-    wxFont font(10, wxDEFAULT, wxNORMAL, wxNORMAL);
+    //wxFont font(10, wxDEFAULT, wxNORMAL, wxNORMAL);
+    wxFont font(16,wxFONTFAMILY_DEFAULT,wxFONTSTYLE_NORMAL,wxFONTWEIGHT_NORMAL,false,_T("MV Boli"),wxFONTENCODING_DEFAULT);
+
     StyleSetFont(wxSTC_STYLE_DEFAULT, font);
 }
 
