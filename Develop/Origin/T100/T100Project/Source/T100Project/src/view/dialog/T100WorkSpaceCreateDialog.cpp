@@ -38,44 +38,32 @@ T100VOID T100WorkSpaceCreateDialog::init()
 
     wxStaticBoxSizer*       workspace   = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("WorkSpace:"));
 
-    m_workspaceTitle        = T100NEW wxStaticText(this, ID_WORKSPACE_STATIC_TEXT, _("Path:"));
+    m_workspaceTitle        = T100NEW wxStaticText(this, ID_WORKSPACE_STATIC_TEXT, _("Path:"), wxDefaultPosition, wxSize(30, -1));
     m_workspacePathPicker   = T100NEW wxDirPickerCtrl(this, ID_WORKSPACE_PATH);
-
-    m_workspaceTitle->SetSize(-1, 50);
 
     workspace->Add(m_workspaceTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     workspace->Add(m_workspacePathPicker, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 
-    m_workspaceTitle->SetSize(-1, 50);
-    m_workspacePathPicker->SetSize(-1, 250);
     sizer->Add(workspace, 1, wxALL|wxEXPAND, 5);
 
     wxStaticBoxSizer*       compiler    = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("GCC:"));
 
-    m_compilerTitle         = T100NEW wxStaticText(this, ID_COMPILER_STATIC_TEXT, _("Path:"));
+    m_compilerTitle         = T100NEW wxStaticText(this, ID_COMPILER_STATIC_TEXT, _("Path:"), wxDefaultPosition, wxSize(30, -1));
     m_compilerPathPicker    = T100NEW wxDirPickerCtrl(this, ID_COMPILER_PATH);
-
-    m_compilerTitle->SetSize(-1, 50);
 
     compiler->Add(m_compilerTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     compiler->Add(m_compilerPathPicker, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 
-    m_compilerTitle->SetSize(-1, 50);
-    m_compilerPathPicker->SetSize(-1, 250);
     sizer->Add(compiler, 1, wxALL|wxEXPAND, 5);
 
     wxStaticBoxSizer*       python      = T100NEW wxStaticBoxSizer(wxHORIZONTAL, this, _("Python:"));
 
-    m_pythonTitle           = T100NEW wxStaticText(this, ID_PYTHON_STATIC_TEXT, _("File:"));
+    m_pythonTitle           = T100NEW wxStaticText(this, ID_PYTHON_STATIC_TEXT, _("File:"), wxDefaultPosition, wxSize(30, -1));
     m_pythonFilePicker      = T100NEW wxFilePickerCtrl(this, ID_PYTHON_FILE);
-
-    m_pythonTitle->SetSize(-1, 50);
 
     python->Add(m_pythonTitle, 0, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
     python->Add(m_pythonFilePicker, 1, wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL, 5);
 
-    m_pythonTitle->SetSize(-1, 50);
-    m_pythonFilePicker->SetSize(-1, 250);
     sizer->Add(python, 1, wxALL|wxEXPAND, 5);
 
     sizer->Add(CreateStdDialogButtonSizer(wxAPPLY | wxCANCEL), 0, wxALL | wxALIGN_RIGHT, 5);
