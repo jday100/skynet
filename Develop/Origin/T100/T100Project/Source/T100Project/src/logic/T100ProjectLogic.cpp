@@ -6,6 +6,7 @@
 #include "T100Folder.h"
 #include "T100ProjectFile.h"
 #include "T100ProjectConfig.h"
+#include "T100ModuleInfo.h"
 #include "T100WorkSpaceInfo.h"
 
 T100ProjectLogic::T100ProjectLogic()
@@ -228,20 +229,35 @@ T100BOOL T100ProjectLogic::Rebuild(T100WorkSpaceInfo*, T100ProjectInfo*)
 
 }
 
-T100BOOL T100ProjectLogic::CreateModule(T100ModuleInfo* info)
+T100BOOL T100ProjectLogic::CreateModule(T100WorkSpaceInfo* workspace, T100ModuleInfo* info)
 {
-    if(!info){
+    if(workspace && m_current && info){
+
+    }else{
         return T100FALSE;
     }
 
-    wxBell();
-
     T100Shell       shell;
     T100WSTRING     command;
+    T100WSTRING     args;
+    T100WSTRING     line;
 
-    command = L"C:/zmsys2/msys2/mingw64/bin/python3 C:/zgit/skynet/Develop/Origin/T100/T100Project/Source/T100Project/scripts/project/Module.py C:/vm/Hello Hello";
+    command     = workspace->GetPythonFile() + L" " +
+                    workspace->GetExecutePath() + L"\\scripts\\project\\Module.py";
 
-    shell.Run(command);
+    args        = m_current->GetPath() + L" " +
+                    m_current->GetCodePath() + L" " +
+                    m_current->GetIncludePath() + L" " +
+                    m_current->GetSourcePath() + L" " +
+                    info->GetLabel() + L" " +
+                    info->GetLabel() + L".h" + L" " +
+                    info->GetLabel() + L".cpp";
+
+    line    = command + L" " + args;
+
+    shell.Print(line);
+
+    shell.Run(line);
 
     return T100TRUE;
 }

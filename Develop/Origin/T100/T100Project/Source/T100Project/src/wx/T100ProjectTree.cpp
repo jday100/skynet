@@ -1332,6 +1332,10 @@ wxTreeItemId T100ProjectTree::AppendProject(wxTreeItemId parent, T100ProjectInfo
 
 T100VOID T100ProjectTree::AppendFile(wxTreeItemId parent, T100FileInfo* info)
 {
+    if(!info){
+        return;
+    }
+
     T100FileData*       data    = T100NEW T100FileData(info);
 
     wxTreeItemId        item    = AppendItem(parent, info->GetLabel(), 10, -1, data);

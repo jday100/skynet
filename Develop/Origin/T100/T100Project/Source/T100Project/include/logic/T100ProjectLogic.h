@@ -36,7 +36,7 @@ class T100ProjectLogic
         T100BOOL                    Build(T100WorkSpaceInfo*, T100ProjectInfo*);
         T100BOOL                    Rebuild(T100WorkSpaceInfo*, T100ProjectInfo*);
 
-        T100BOOL                    CreateModule(T100ModuleInfo*);
+        T100BOOL                    CreateModule(T100WorkSpaceInfo*, T100ModuleInfo*);
 
     protected:
         T100WSTRING                 GetFolderName(const T100WxFolderInfo&);

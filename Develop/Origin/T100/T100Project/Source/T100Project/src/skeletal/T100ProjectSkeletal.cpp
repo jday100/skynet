@@ -322,9 +322,16 @@ T100VOID T100ProjectSkeletal::OnModuleNew(T100ModuleInfo* info)
         return;
     }
 
+    T100WorkSpaceInfo*      workspace   = T100NULL;
     T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
 
-    if(logic.CreateModule(info)){
+    workspace   = m_serve->GetWorkSpaceInfo();
+
+    if(!workspace){
+        return;
+    }
+
+    if(logic.CreateModule(workspace, info)){
 
     }else{
         return;
