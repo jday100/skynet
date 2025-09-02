@@ -34,7 +34,7 @@ T100VOID T100ProjectViewMainMenu::Create(T100ProjectFrame* frame)
     m_workClose     = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_CLOSE, L"Close");
     m_workSave      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_SAVE, L"Save");
     m_workSaveAs    = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_SAVE_AS, L"Save as ...");
-    m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit");
+    m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit\tAlt-F4");
 
     workMenu->Append(m_workNew);
     workMenu->Append(m_workOpen);
@@ -65,7 +65,7 @@ T100VOID T100ProjectViewMainMenu::Create(T100ProjectFrame* frame)
     m_fileNew       = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_NEW, L"New");
     m_fileOpen      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_OPEN, L"Open");
     m_fileClose     = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_CLOSE, L"Close");
-    m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save");
+    m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save\tCtrl-S");
     m_fileSaveAs    = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE_AS, L"Save as ...");
 
     fileMenu->Append(m_fileNew);

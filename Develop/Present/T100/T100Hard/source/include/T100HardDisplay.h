@@ -1,4 +1,3 @@
-
 #ifndef T100HARDDISPLAY_H
 #define T100HARDDISPLAY_H
 

@@ -6538,7 +6538,8 @@ _ZN23T100ProjectViewMainMenuD0Ev:
 	.ascii "S\0a\0v\0e\0 \0a\0s\0 \0.\0.\0.\0\0\0"
 	.align 2
 .LC7:
-	.ascii "Q\0u\0i\0t\0\0\0"
+	.ascii "Q\0u\0i\0t\0\11\0A\0l\0t\0-\0F\0"
+	.ascii "4\0\0\0"
 	.align 2
 .LC8:
 	.ascii "W\0o\0r\0k\0S\0p\0a\0c\0e\0\0\0"
@@ -6547,78 +6548,81 @@ _ZN23T100ProjectViewMainMenuD0Ev:
 	.ascii "P\0r\0o\0j\0e\0c\0t\0\0\0"
 	.align 2
 .LC10:
-	.ascii "F\0i\0l\0e\0\0\0"
+	.ascii "S\0a\0v\0e\0\11\0C\0t\0r\0l\0-\0S\0\0\0"
 	.align 2
 .LC11:
-	.ascii "U\0n\0d\0o\0\0\0"
+	.ascii "F\0i\0l\0e\0\0\0"
 	.align 2
 .LC12:
-	.ascii "R\0e\0d\0o\0\0\0"
+	.ascii "U\0n\0d\0o\0\0\0"
 	.align 2
 .LC13:
-	.ascii "C\0u\0t\0\0\0"
+	.ascii "R\0e\0d\0o\0\0\0"
 	.align 2
 .LC14:
-	.ascii "C\0o\0p\0y\0\0\0"
+	.ascii "C\0u\0t\0\0\0"
 	.align 2
 .LC15:
-	.ascii "P\0a\0s\0t\0e\0\0\0"
+	.ascii "C\0o\0p\0y\0\0\0"
 	.align 2
 .LC16:
-	.ascii "E\0d\0i\0t\0\0\0"
+	.ascii "P\0a\0s\0t\0e\0\0\0"
 	.align 2
 .LC17:
-	.ascii "W\0o\0r\0k\0S\0p\0a\0c\0e\0 \0v\0i\0e\0w\0\0\0"
+	.ascii "E\0d\0i\0t\0\0\0"
 	.align 2
 .LC18:
-	.ascii "S\0e\0a\0r\0c\0h\0 \0r\0e\0s\0u\0l\0t\0\0\0"
+	.ascii "W\0o\0r\0k\0S\0p\0a\0c\0e\0 \0v\0i\0e\0w\0\0\0"
 	.align 2
 .LC19:
-	.ascii "B\0u\0i\0l\0d\0 \0m\0e\0s\0s\0a\0g\0e\0s\0\0\0"
+	.ascii "S\0e\0a\0r\0c\0h\0 \0r\0e\0s\0u\0l\0t\0\0\0"
 	.align 2
 .LC20:
-	.ascii "V\0i\0e\0w\0\0\0"
+	.ascii "B\0u\0i\0l\0d\0 \0m\0e\0s\0s\0a\0g\0e\0s\0\0\0"
 	.align 2
 .LC21:
-	.ascii "F\0i\0n\0d\0 \0.\0.\0.\0\0\0"
+	.ascii "V\0i\0e\0w\0\0\0"
 	.align 2
 .LC22:
-	.ascii "R\0e\0p\0l\0a\0c\0e\0 \0.\0.\0.\0\0\0"
+	.ascii "F\0i\0n\0d\0 \0.\0.\0.\0\0\0"
 	.align 2
 .LC23:
-	.ascii "S\0e\0a\0r\0c\0h\0\0\0"
+	.ascii "R\0e\0p\0l\0a\0c\0e\0 \0.\0.\0.\0\0\0"
 	.align 2
 .LC24:
-	.ascii "A\0b\0o\0u\0t\0\0\0"
+	.ascii "S\0e\0a\0r\0c\0h\0\0\0"
 	.align 2
 .LC25:
-	.ascii "R\0u\0n\0\0\0"
+	.ascii "A\0b\0o\0u\0t\0\0\0"
 	.align 2
 .LC26:
-	.ascii "B\0u\0i\0l\0d\0 \0a\0n\0d\0 \0r\0u\0n\0\0\0"
+	.ascii "R\0u\0n\0\0\0"
 	.align 2
 .LC27:
-	.ascii "C\0l\0e\0a\0n\0\0\0"
+	.ascii "B\0u\0i\0l\0d\0 \0a\0n\0d\0 \0r\0u\0n\0\0\0"
 	.align 2
 .LC28:
-	.ascii "B\0u\0i\0l\0d\0\0\0"
+	.ascii "C\0l\0e\0a\0n\0\0\0"
 	.align 2
 .LC29:
-	.ascii "R\0e\0b\0u\0i\0l\0d\0\0\0"
+	.ascii "B\0u\0i\0l\0d\0\0\0"
 	.align 2
 .LC30:
-	.ascii "C\0o\0m\0p\0i\0l\0e\0\0\0"
+	.ascii "R\0e\0b\0u\0i\0l\0d\0\0\0"
 	.align 2
 .LC31:
-	.ascii "E\0d\0i\0t\0o\0r\0 \0.\0.\0.\0\0\0"
+	.ascii "C\0o\0m\0p\0i\0l\0e\0\0\0"
 	.align 2
 .LC32:
-	.ascii "C\0o\0m\0p\0i\0l\0e\0r\0 \0.\0.\0.\0\0\0"
+	.ascii "E\0d\0i\0t\0o\0r\0 \0.\0.\0.\0\0\0"
 	.align 2
 .LC33:
-	.ascii "S\0e\0t\0u\0p\0\0\0"
+	.ascii "C\0o\0m\0p\0i\0l\0e\0r\0 \0.\0.\0.\0\0\0"
 	.align 2
 .LC34:
+	.ascii "S\0e\0t\0u\0p\0\0\0"
+	.align 2
+.LC35:
 	.ascii "H\0e\0l\0p\0\0\0"
 	.text
 	.align 2
@@ -7043,7 +7047,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	320(%rbp), %rax	 #, tmp440
 	movq	%rax, %rcx	 # tmp440,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit");
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit\tAlt-F4");
 	.loc 21 37 21 discriminator 6
 	leaq	416(%rbp), %rax	 #, tmp441
 	leaq	.LC7(%rip), %rdx	 #,
@@ -7059,11 +7063,11 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 .LEHB64:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE64:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit");
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit\tAlt-F4");
 	.loc 21 37 21 is_stmt 0 discriminator 2
 	leaq	464(%rbp), %rsi	 #, _330
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit");
-	.loc 21 37 92 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit\tAlt-F4");
+	.loc 21 37 100 is_stmt 1 discriminator 2
 	movl	$296, %ecx	 #,
 .LEHB65:
 	call	_Znwy	 #
@@ -7080,7 +7084,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 .LEHB66:
 	call	_ZN10wxMenuItemC1EP6wxMenuiRK8wxStringS4_10wxItemKindS1_	 #
 .LEHE66:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit");
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit\tAlt-F4");
 	.loc 21 37 21 discriminator 6
 	movq	3760(%rbp), %rax	 # this, tmp446
 	movq	%rbx, 56(%rax)	 # _332, this_209(D)->m_workQuit
@@ -7610,10 +7614,10 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	leaq	1280(%rbp), %rax	 #, tmp535
 	movq	%rax, %rcx	 # tmp535,
 	call	_ZN8wxStringD1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save");
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save\tCtrl-S");
 	.loc 21 68 21 discriminator 6
 	leaq	1376(%rbp), %rax	 #, tmp536
-	leaq	.LC5(%rip), %rdx	 #,
+	leaq	.LC10(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp536,
 .LEHB103:
 	call	_ZN8wxStringC1EPKw	 #
@@ -7626,11 +7630,11 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 .LEHB104:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE104:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save");
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save\tCtrl-S");
 	.loc 21 68 21 is_stmt 0 discriminator 2
 	leaq	1424(%rbp), %rsi	 #, _469
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save");
-	.loc 21 68 87 is_stmt 1 discriminator 2
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save\tCtrl-S");
+	.loc 21 68 95 is_stmt 1 discriminator 2
 	movl	$296, %ecx	 #,
 .LEHB105:
 	call	_Znwy	 #
@@ -7647,7 +7651,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 .LEHB106:
 	call	_ZN10wxMenuItemC1EP6wxMenuiRK8wxStringS4_10wxItemKindS1_	 #
 .LEHE106:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save");
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save\tCtrl-S");
 	.loc 21 68 21 discriminator 6
 	movq	3760(%rbp), %rax	 # this, tmp541
 	movq	%rbx, 128(%rax)	 # _471, this_209(D)->m_fileSave
@@ -7754,7 +7758,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:78:     menuBar->Append(fileMenu, L"File");
 	.loc 21 78 20 discriminator 6
 	leaq	1568(%rbp), %rax	 #, tmp558
-	leaq	.LC10(%rip), %rdx	 #,
+	leaq	.LC11(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp558,
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE111:
@@ -7775,7 +7779,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:80:     m_undo      = T100NEW wxMenuItem(editMenu, T100PROJECT_MENU_EDIT_UNDO, L"Undo");
 	.loc 21 80 17 is_stmt 1 discriminator 2
 	leaq	1616(%rbp), %rax	 #, tmp563
-	leaq	.LC11(%rip), %rdx	 #,
+	leaq	.LC12(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp563,
 .LEHB113:
 	call	_ZN8wxStringC1EPKw	 #
@@ -7820,7 +7824,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:81:     m_redo      = T100NEW wxMenuItem(editMenu, T100PROJECT_MENU_EDIT_REDO, L"Redo");
 	.loc 21 81 17 discriminator 6
 	leaq	1712(%rbp), %rax	 #, tmp571
-	leaq	.LC12(%rip), %rdx	 #,
+	leaq	.LC13(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp571,
 .LEHB117:
 	call	_ZN8wxStringC1EPKw	 #
@@ -7867,7 +7871,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:82:     m_cut       = T100NEW wxMenuItem(editMenu, T100PROJECT_MENU_EDIT_CUT, L"Cut");
 	.loc 21 82 17 discriminator 6
 	leaq	1808(%rbp), %rax	 #, tmp579
-	leaq	.LC13(%rip), %rdx	 #,
+	leaq	.LC14(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp579,
 .LEHB121:
 	call	_ZN8wxStringC1EPKw	 #
@@ -7914,7 +7918,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:83:     m_copy      = T100NEW wxMenuItem(editMenu, T100PROJECT_MENU_EDIT_COPY, L"Copy");
 	.loc 21 83 17 discriminator 6
 	leaq	1904(%rbp), %rax	 #, tmp587
-	leaq	.LC14(%rip), %rdx	 #,
+	leaq	.LC15(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp587,
 .LEHB125:
 	call	_ZN8wxStringC1EPKw	 #
@@ -7961,7 +7965,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:84:     m_paste     = T100NEW wxMenuItem(editMenu, T100PROJECT_MENU_EDIT_PASTE, L"Paste");
 	.loc 21 84 17 discriminator 6
 	leaq	2000(%rbp), %rax	 #, tmp595
-	leaq	.LC15(%rip), %rdx	 #,
+	leaq	.LC16(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp595,
 .LEHB129:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8055,7 +8059,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:93:     menuBar->Append(editMenu, L"Edit");
 	.loc 21 93 20 discriminator 6
 	leaq	2096(%rbp), %rax	 #, tmp609
-	leaq	.LC16(%rip), %rdx	 #,
+	leaq	.LC17(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp609,
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE133:
@@ -8076,7 +8080,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:95:     m_workspace = T100NEW wxMenuItem(viewMenu, T100PROJECT_MENU_VIEW_WORKSPACE, L"WorkSpace view", wxEmptyString, T100TRUE);
 	.loc 21 95 17 is_stmt 1 discriminator 2
 	leaq	2144(%rbp), %rax	 #, tmp614
-	leaq	.LC17(%rip), %rdx	 #,
+	leaq	.LC18(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp614,
 .LEHB135:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8121,7 +8125,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:96:     m_search    = T100NEW wxMenuItem(viewMenu, T100PROJECT_MENU_VIEW_SEARCH, L"Search result", wxEmptyString, T100TRUE);
 	.loc 21 96 17 discriminator 6
 	leaq	2240(%rbp), %rax	 #, tmp622
-	leaq	.LC18(%rip), %rdx	 #,
+	leaq	.LC19(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp622,
 .LEHB139:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8168,7 +8172,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:97:     m_output    = T100NEW wxMenuItem(viewMenu, T100PROJECT_MENU_VIEW_OUTPUT, L"Build messages", wxEmptyString, T100TRUE);
 	.loc 21 97 17 discriminator 6
 	leaq	2336(%rbp), %rax	 #, tmp630
-	leaq	.LC19(%rip), %rdx	 #,
+	leaq	.LC20(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp630,
 .LEHB143:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8243,7 +8247,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:103:     menuBar->Append(viewMenu, L"View");
 	.loc 21 103 20 discriminator 6
 	leaq	2432(%rbp), %rax	 #, tmp642
-	leaq	.LC20(%rip), %rdx	 #,
+	leaq	.LC21(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp642,
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE147:
@@ -8264,7 +8268,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:105:     m_find      = T100NEW wxMenuItem(searchMenu, T100PROJECT_MENU_SEARCH_FIND, L"Find ...");
 	.loc 21 105 17 is_stmt 1 discriminator 2
 	leaq	2480(%rbp), %rax	 #, tmp647
-	leaq	.LC21(%rip), %rdx	 #,
+	leaq	.LC22(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp647,
 .LEHB149:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8309,7 +8313,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:106:     m_replace   = T100NEW wxMenuItem(searchMenu, T100PROJECT_MENU_SEARCH_REPLACE, L"Replace ...");
 	.loc 21 106 17 discriminator 6
 	leaq	2576(%rbp), %rax	 #, tmp655
-	leaq	.LC22(%rip), %rdx	 #,
+	leaq	.LC23(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp655,
 .LEHB153:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8377,7 +8381,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:111:     menuBar->Append(searchMenu, L"Search");
 	.loc 21 111 20 discriminator 6
 	leaq	2672(%rbp), %rax	 #, tmp666
-	leaq	.LC23(%rip), %rdx	 #,
+	leaq	.LC24(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp666,
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE157:
@@ -8406,7 +8410,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE159:
 	leaq	2768(%rbp), %rax	 #, tmp673
-	leaq	.LC24(%rip), %rdx	 #,
+	leaq	.LC25(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp673,
 .LEHB160:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8432,7 +8436,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:115:     m_run           = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_RUN, L"Run");
 	.loc 21 115 21 is_stmt 1 discriminator 4
 	leaq	2816(%rbp), %rax	 #, tmp678
-	leaq	.LC25(%rip), %rdx	 #,
+	leaq	.LC26(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp678,
 .LEHB162:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8479,7 +8483,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:116:     m_buildAndRun   = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_BUILD_AND_RUN, L"Build and run");
 	.loc 21 116 21 discriminator 6
 	leaq	2912(%rbp), %rax	 #, tmp686
-	leaq	.LC26(%rip), %rdx	 #,
+	leaq	.LC27(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp686,
 .LEHB166:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8526,7 +8530,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:117:     m_clean         = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_CLEAN, L"Clean");
 	.loc 21 117 21 discriminator 6
 	leaq	3008(%rbp), %rax	 #, tmp694
-	leaq	.LC27(%rip), %rdx	 #,
+	leaq	.LC28(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp694,
 .LEHB170:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8573,7 +8577,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:118:     m_build         = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_BUILD, L"Build");
 	.loc 21 118 21 discriminator 6
 	leaq	3104(%rbp), %rax	 #, tmp702
-	leaq	.LC28(%rip), %rdx	 #,
+	leaq	.LC29(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp702,
 .LEHB174:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8620,7 +8624,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:119:     m_rebuild       = T100NEW wxMenuItem(compileMenu, T100PROJECT_MENU_COMPILE_REBUILD, L"Rebuild");
 	.loc 21 119 21 discriminator 6
 	leaq	3200(%rbp), %rax	 #, tmp710
-	leaq	.LC29(%rip), %rdx	 #,
+	leaq	.LC30(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp710,
 .LEHB178:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8719,7 +8723,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:129:     menuBar->Append(compileMenu, L"Compile");
 	.loc 21 129 20 discriminator 6
 	leaq	3296(%rbp), %rax	 #, tmp724
-	leaq	.LC30(%rip), %rdx	 #,
+	leaq	.LC31(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp724,
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE182:
@@ -8740,7 +8744,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:131:     m_editor    = T100NEW wxMenuItem(setupMenu, T100PROJECT_MENU_SETUP_EDITOR, L"Editor ...");
 	.loc 21 131 17 is_stmt 1 discriminator 2
 	leaq	3344(%rbp), %rax	 #, tmp729
-	leaq	.LC31(%rip), %rdx	 #,
+	leaq	.LC32(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp729,
 .LEHB184:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8785,7 +8789,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:132:     m_compiler  = T100NEW wxMenuItem(setupMenu, T100PROJECT_MENU_SETUP_COMPILER, L"Compiler ...");
 	.loc 21 132 17 discriminator 6
 	leaq	3440(%rbp), %rax	 #, tmp737
-	leaq	.LC32(%rip), %rdx	 #,
+	leaq	.LC33(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp737,
 .LEHB188:
 	call	_ZN8wxStringC1EPKw	 #
@@ -8853,7 +8857,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:137:     menuBar->Append(setupMenu, L"Setup");
 	.loc 21 137 20 discriminator 6
 	leaq	3536(%rbp), %rax	 #, tmp748
-	leaq	.LC33(%rip), %rdx	 #,
+	leaq	.LC34(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp748,
 	call	_ZN8wxStringC1EPKw	 #
 .LEHE192:
@@ -8880,7 +8884,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:139:     menuBar->Append(helpMenu, L"Help");
 	.loc 21 139 20 discriminator 2
 	leaq	3584(%rbp), %rax	 #, tmp754
-	leaq	.LC34(%rip), %rdx	 #,
+	leaq	.LC35(%rip), %rdx	 #,
 	movq	%rax, %rcx	 # tmp754,
 .LEHB194:
 	call	_ZN8wxStringC1EPKw	 #
@@ -9166,8 +9170,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	call	_Unwind_Resume	 #
 .L439:
 	movq	%rax, %rsi	 #, tmp812
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit");
-	.loc 21 37 92 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit\tAlt-F4");
+	.loc 21 37 100 is_stmt 1
 	movl	$296, %edx	 #,
 	movq	%rbx, %rcx	 # _332,
 	call	_ZdlPvy	 #
@@ -9176,7 +9180,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 .L438:
 	movq	%rax, %rbx	 #, tmp811
 .L318:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit");
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit\tAlt-F4");
 	.loc 21 37 21 discriminator 3
 	leaq	464(%rbp), %rax	 #, tmp815
 	movq	%rax, %rcx	 # tmp815,
@@ -9185,7 +9189,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 .L437:
 	movq	%rax, %rbx	 #, tmp816
 .L319:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit");
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:37:     m_workQuit      = T100NEW wxMenuItem(workMenu, T100PROJECT_MENU_WORKSPACE_QUIT, L"Quit\tAlt-F4");
 	.loc 21 37 21 is_stmt 0 discriminator 1
 	leaq	416(%rbp), %rax	 #, tmp818
 	movq	%rax, %rcx	 # tmp818,
@@ -9447,8 +9451,8 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 	call	_Unwind_Resume	 #
 .L468:
 	movq	%rax, %rsi	 #, tmp888
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save");
-	.loc 21 68 87 is_stmt 1
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save\tCtrl-S");
+	.loc 21 68 95 is_stmt 1
 	movl	$296, %edx	 #,
 	movq	%rbx, %rcx	 # _471,
 	call	_ZdlPvy	 #
@@ -9457,7 +9461,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 .L467:
 	movq	%rax, %rbx	 #, tmp887
 .L347:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save");
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save\tCtrl-S");
 	.loc 21 68 21 discriminator 3
 	leaq	1424(%rbp), %rax	 #, tmp891
 	movq	%rax, %rcx	 # tmp891,
@@ -9466,7 +9470,7 @@ _ZN23T100ProjectViewMainMenu6CreateEP16T100ProjectFrame:
 .L466:
 	movq	%rax, %rbx	 #, tmp892
 .L348:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save");
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\view\T100ProjectViewMainMenu.cpp:68:     m_fileSave      = T100NEW wxMenuItem(fileMenu, T100PROJECT_MENU_FILE_SAVE, L"Save\tCtrl-S");
 	.loc 21 68 21 is_stmt 0 discriminator 1
 	leaq	1376(%rbp), %rax	 #, tmp894
 	movq	%rax, %rcx	 # tmp894,
