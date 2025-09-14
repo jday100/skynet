@@ -255,8 +255,8 @@ _ZN7T100VPCD0Ev:
 	.align 8
 .LC0:
 	.ascii "P\0o\0w\0e\0r\0S\0h\0e\0l\0l\0 \0N\0e\0w\0-\0V\0M\0 \0-\0N\0a\0m\0e\0 \0\"\0W\0i\0n\0V\0M\0\"\0 \0-\0M\0e\0m\0o\0r\0y\0S\0t\0a\0r\0t\0u\0p\0B\0y\0t\0e\0s\0 \0"
-	.ascii "2\0G\0B\0 \0-\0N\0e\0w\0V\0H\0D\0P\0a\0t\0h\0 \0\"\0C\0:\0\\\0v\0m\0W\0i\0n\0V\0M\0.\0v\0h\0d\0x\0\"\0 \0-\0N\0e\0w\0V\0H\0D\0S\0i\0z\0e\0B\0y\0t\0e\0s\0 \0"
-	.ascii "2\0G\0B\0;\0p\0a\0u\0s\0e\0\0\0"
+	.ascii "1\0G\0B\0 \0-\0N\0e\0w\0V\0H\0D\0P\0a\0t\0h\0 \0\"\0C\0:\0\\\0v\0m\0\\\0W\0i\0n\0V\0M\0.\0v\0h\0d\0x\0\"\0 \0-\0N\0e\0w\0V\0H\0D\0S\0i\0z\0e\0B\0y\0t\0e\0s\0 \0"
+	.ascii "2\0G\0B\0\0\0"
 	.text
 	.align 2
 	.globl	_ZN7T100VPC5StartEv
@@ -287,7 +287,7 @@ _ZN7T100VPC5StartEv:
 	leaq	-96(%rbp), %rax	 #, tmp88
 	movq	%rax, %rcx	 # tmp88,
 	call	_ZNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEC1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100VPC\src\vpc\T100VPC.cpp:19:     cmd = L"PowerShell New-VM -Name \"WinVM\" -MemoryStartupBytes 2GB -NewVHDPath \"C:\\vm\WinVM.vhdx\" -NewVHDSizeBytes 2GB;pause";
+ # C:\zgit\skynet\Develop\Origin\T100\T100VPC\src\vpc\T100VPC.cpp:19:     cmd = L"PowerShell New-VM -Name \"WinVM\" -MemoryStartupBytes 1GB -NewVHDPath \"C:\\vm\\WinVM.vhdx\" -NewVHDSizeBytes 2GB";
 	.loc 2 19 11
 	leaq	-96(%rbp), %rax	 #, tmp89
 	leaq	.LC0(%rip), %rdx	 #,
