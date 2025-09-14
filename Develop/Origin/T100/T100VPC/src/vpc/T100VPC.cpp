@@ -16,7 +16,7 @@ T100VOID T100VPC::Start()
 {
     T100WSTRING         cmd;
 
-    cmd = L"PowerShell New-VM -Name \"WinVM\" -MemoryStartupBytes 2GB -NewVHDPath \"C:\\vm\WinVM.vhdx\" -NewVHDSizeBytes 2GB;pause";
+    cmd = L"PowerShell New-VM -Name \"WinVM\" -MemoryStartupBytes 1GB -NewVHDPath \"C:\\vm\WinVM.vhdx\" -NewVHDSizeBytes 2GB";
 
     wxExecute(cmd);
 }
