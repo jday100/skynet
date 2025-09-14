@@ -61,7 +61,7 @@ def build():
     bin     = "%s\\g++ -c -I%s\\%s\\%s" % (g_compiler_path, g_project_path, g_project_code, g_project_include)
     source  = "%s\\%s\\%s\\" % (g_project_path, g_project_code, g_project_source)
     target  = "%s\\%s\\" % (g_project_path, g_project_build)
-    link    = ""
+    link    = "%s\\ld -L%s\\%s" % (g_compiler_path, g_project_path, g_project_build)
 
     cmd     = "%s %s%s.cpp -o %s%s.o" % (bin, source, "T100HardDisplay", target, "T100HardDisplay")
 
@@ -70,6 +70,14 @@ def build():
     subprocess.call(cmd)
 
     cmd     = "%s %s%s.cpp -o %s%s.o" % (bin, source, "T100HardSystem", target, "T100HardSystem")
+
+    print(cmd)
+
+    subprocess.call(cmd)
+
+    list    = target + "T100HardDisplay.o "
+    list    += target + "T100HardSystem.o "
+    cmd     = "%s %s -o %s%s" % (link, list, target, "T100Hard.exe")
 
     print(cmd)
 
