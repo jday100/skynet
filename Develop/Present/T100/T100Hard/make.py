@@ -69,6 +69,12 @@ def build():
 
     subprocess.call(cmd)
 
+    cmd     = "%s %s%s.cpp -o %s%s.o" % (bin, source, "T100HardSystem", target, "T100HardSystem")
+
+    print(cmd)
+
+    subprocess.call(cmd)
+
     print("Success")
 
 def clean():
