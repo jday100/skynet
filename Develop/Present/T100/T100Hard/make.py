@@ -58,14 +58,12 @@ def build():
     global g_project_source
     global g_project_build_filename
 
+    bin     = "%s\\g++ -c -I%s\\%s\\%s" % (g_compiler_path, g_project_path, g_project_code, g_project_include)
+    source  = "%s\\%s\\%s\\" % (g_project_path, g_project_code, g_project_source)
+    target  = "%s\\%s\\" % (g_project_path, g_project_build)
+    link    = ""
 
-
-
-    bin     = "%s\\g++ -I%s\\%s\\%s" % (g_compiler_path, g_project_path, g_project_code, g_project_include)
-
-    line    = "%s\\%s\\%s\\" % (g_project_path, g_project_code, g_project_source)
-
-    cmd     = "%s %s%s -o %s\\%s\\%s" % (bin, line, "main.cpp", g_project_path, g_project_build, g_project_build_filename)
+    cmd     = "%s %s%s.cpp -o %s%s.o" % (bin, source, "T100HardDisplay", target, "T100HardDisplay")
 
     print(cmd)
 
@@ -79,7 +77,7 @@ def clean():
     global g_project_build
     global g_project_build_filename
 
-    cmd 	= "del /q %s\\%s\\%s" % (g_project_path, g_project_build, g_project_build_filename)
+    cmd 	= "cmd.exe /c del /q %s\\%s\\%s" % (g_project_path, g_project_build, g_project_build_filename)
 
     print(cmd)
 
