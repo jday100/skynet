@@ -42,6 +42,8 @@ wxString wxbuildinfo(wxbuildinfoformat format)
 }
 
 //(*IdInit(T100VPCFrame)
+const long T100VPCFrame::ID_MENUITEM_START = wxNewId();
+const long T100VPCFrame::ID_MENUITEM_STOP = wxNewId();
 const long T100VPCFrame::idMenuQuit = wxNewId();
 const long T100VPCFrame::idMenuAbout = wxNewId();
 const long T100VPCFrame::ID_STATUSBAR1 = wxNewId();
@@ -64,9 +66,14 @@ T100VPCFrame::T100VPCFrame(wxWindow* parent,wxWindowID id)
     Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     MenuBar1 = new wxMenuBar();
     Menu1 = new wxMenu();
+    MenuItemStart = new wxMenuItem(Menu1, ID_MENUITEM_START, _("Start"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemStart);
+    MenuItemStop = new wxMenuItem(Menu1, ID_MENUITEM_STOP, _("Stop"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItemStop);
+    Menu1->AppendSeparator();
     MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Quit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
     Menu1->Append(MenuItem1);
-    MenuBar1->Append(Menu1, _("&File"));
+    MenuBar1->Append(Menu1, _("&VPC"));
     Menu2 = new wxMenu();
     MenuItem2 = new wxMenuItem(Menu2, idMenuAbout, _("About\tF1"), _("Show info about this application"), wxITEM_NORMAL);
     Menu2->Append(MenuItem2);
@@ -79,6 +86,8 @@ T100VPCFrame::T100VPCFrame(wxWindow* parent,wxWindowID id)
     StatusBar1->SetStatusStyles(1,__wxStatusBarStyles_1);
     SetStatusBar(StatusBar1);
 
+    Connect(ID_MENUITEM_START,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100VPCFrame::OnMenuItemStartSelected);
+    Connect(ID_MENUITEM_STOP,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100VPCFrame::OnMenuItemStopSelected);
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100VPCFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100VPCFrame::OnAbout);
     //*)
@@ -99,4 +108,12 @@ void T100VPCFrame::OnAbout(wxCommandEvent& event)
 {
     wxString msg = wxbuildinfo(long_f);
     wxMessageBox(msg, _("Welcome to..."));
+}
+
+void T100VPCFrame::OnMenuItemStartSelected(wxCommandEvent& event)
+{
+}
+
+void T100VPCFrame::OnMenuItemStopSelected(wxCommandEvent& event)
+{
 }
