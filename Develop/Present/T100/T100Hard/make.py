@@ -91,6 +91,12 @@ def clean():
     global g_project_build
     global g_project_build_filename
 
+    cmd 	= "cmd.exe /c del /q %s\\%s\\%s" % (g_project_path, g_project_build, "*.o")
+
+    print(cmd)
+
+    subprocess.call(cmd)
+
     cmd 	= "cmd.exe /c del /q %s\\%s\\%s" % (g_project_path, g_project_build, g_project_build_filename)
 
     print(cmd)
