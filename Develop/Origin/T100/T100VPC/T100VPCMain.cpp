@@ -112,8 +112,13 @@ void T100VPCFrame::OnAbout(wxCommandEvent& event)
 
 void T100VPCFrame::OnMenuItemStartSelected(wxCommandEvent& event)
 {
+    m_vpc       = T100NEW T100VPC();
+
+    m_vpc->Start();
 }
 
 void T100VPCFrame::OnMenuItemStopSelected(wxCommandEvent& event)
 {
+    m_vpc->Stop();
+    T100SAFE_DELETE(m_vpc);
 }

@@ -16,6 +16,8 @@
 #include <wx/statusbr.h>
 //*)
 
+#include "T100VPC.h"
+
 class T100VPCFrame: public wxFrame
 {
     public:
@@ -24,6 +26,7 @@ class T100VPCFrame: public wxFrame
         virtual ~T100VPCFrame();
 
     private:
+        T100VPC*            m_vpc       = T100NULL;
 
         //(*Handlers(T100VPCFrame)
         void OnQuit(wxCommandEvent& event);
