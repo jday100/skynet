@@ -123,8 +123,12 @@ def clean():
 
     print(cmd)
 
+    """
     with open("output.txt", "w") as output:
         subprocess.call(cmd, env={"path":"C:\\zmsys2\\msys2\\mingw64\\bin"}, stdout=output)
+    """
+
+    subprocess.call(cmd, env={"path":"C:\\zmsys2\\msys2\\mingw64\\bin"}, shell=True)
 
     print("Success")
 
