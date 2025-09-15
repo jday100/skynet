@@ -11,6 +11,9 @@ g_project_include           = ""
 g_project_source            = ""
 g_project_build_filename    = ""
 
+g_qemu_path                 = "C:\\zmsys2\\msys2\\home\\user\\qemu\\build"
+g_qemu_bin                  = "qemu-system-x86_64.exe"
+
 def args():
     print("Run args...")
     count = len(sys.argv)
@@ -91,6 +94,7 @@ def clean():
     global g_project_build
     global g_project_build_filename
 
+    """///
     cmd 	= "cmd.exe /c del /q %s\\%s\\%s" % (g_project_path, g_project_build, "*.o")
 
     print(cmd)
@@ -98,6 +102,16 @@ def clean():
     subprocess.call(cmd)
 
     cmd 	= "cmd.exe /c del /q %s\\%s\\%s" % (g_project_path, g_project_build, g_project_build_filename)
+
+    print(cmd)
+
+    subprocess.call(cmd)
+    ///"""
+
+    global g_qemu_path
+    global g_qemu_bin
+
+    cmd     = "%s\\%s" % (g_qemu_path, g_qemu_bin)
 
     print(cmd)
 
