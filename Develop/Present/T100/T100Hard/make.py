@@ -86,6 +86,12 @@ def build():
 
     subprocess.call(cmd)
 
+    cmd     = "%s\\%s %s%s %s%s" % (g_compiler_path, "objcopy", target, "T100Hard.exe", target, "T100Hard.bin")
+
+    print(cmd)
+
+    subprocess.call(cmd)
+
     print("Success")
 
 def clean():
