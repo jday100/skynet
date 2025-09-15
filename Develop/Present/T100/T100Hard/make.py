@@ -100,6 +100,8 @@ def clean():
     global g_project_build
     global g_project_build_filename
 
+    target  = "%s\\%s\\" % (g_project_path, g_project_build)
+
     """///
     cmd 	= "cmd.exe /c del /q %s\\%s\\%s" % (g_project_path, g_project_build, "*.o")
 
@@ -117,11 +119,12 @@ def clean():
     global g_qemu_path
     global g_qemu_bin
 
-    cmd     = "%s\\%s" % (g_qemu_path, g_qemu_bin)
+    cmd     = "%s\\%s -s -S -kernel %s%s" % (g_qemu_path, g_qemu_bin, target, "T100Hard.bin")
 
     print(cmd)
 
-    subprocess.call(cmd, env={"path":"C:\\zmsys2\\msys2\\mingw64\\bin"})
+    with open("output.txt", "w") as output:
+        subprocess.call(cmd, env={"path":"C:\\zmsys2\\msys2\\mingw64\\bin"}, stdout=output)
 
     print("Success")
 
