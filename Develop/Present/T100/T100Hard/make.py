@@ -115,7 +115,7 @@ def clean():
 
     print(cmd)
 
-    subprocess.call(cmd)
+    subprocess.call(cmd, env={"path":"C:\\zmsys2\\msys2\\mingw64\\bin"})
 
     print("Success")
 
