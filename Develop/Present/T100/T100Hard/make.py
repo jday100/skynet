@@ -120,6 +120,7 @@ def clean():
     global g_qemu_bin
 
     cmd     = "%s\\%s -s -S -kernel %s%s" % (g_qemu_path, g_qemu_bin, target, "T100Hard.bin")
+    cmd     = "C:\\zmsys2\\msys2\\mingw64.exe"
 
     print(cmd)
 
