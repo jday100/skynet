@@ -86,7 +86,7 @@ def build():
 
     subprocess.call(cmd)
 
-    cmd     = "%s\\%s %s%s %s%s" % (g_compiler_path, "objcopy", target, "T100Hard.exe", target, "T100Hard.bin")
+    cmd     = "%s\\%s -O binary %s%s %s%s" % (g_compiler_path, "objcopy", target, "T100Hard.exe", target, "T100Hard.bin")
 
     print(cmd)
 

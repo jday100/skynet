@@ -1,11 +1,8 @@
-#include <iostream>
 #include "T100HardDisplay.h"
 
-using namespace std;
-
-int WinMain()
+int main()
 {
-    cout << "Hello world!" << endl;
+    hard_print("Hello world!");
     return 0;
 }
             
