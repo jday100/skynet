@@ -5,7 +5,10 @@
 extern "C" {
 #endif
 
-void hard_print(wchar_t*);
+#define     HARD_DISPLAY_BUFFER_ADDRESS                     0XB8000
+
+
+void hard_print(const char*);
 
 #ifdef __cplusplus
 }

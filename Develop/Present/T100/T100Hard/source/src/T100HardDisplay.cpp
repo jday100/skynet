@@ -1,11 +1,17 @@
 #include "T100HardDisplay.h"
 
-volatile unsigned int* const DISPLAY_ADDRESS        = (unsigned int*)0xb8000;
-
-void hard_print(wchar_t* text)
+void hard_print(const char* value)
 {
-    while(*text != L'\0'){
-        *DISPLAY_ADDRESS = (unsigned int)(*text);
-        text++;
+    unsigned char* video = (unsigned char*)HARD_DISPLAY_BUFFER_ADDRESS;
+
+    int i;
+    for(i = 0; value[i]; i++){
+        video[i * 2 + 0] = value[i];
+        video[i * 2 + 1] = 0x17;
     }
+    for(; i < 80 * 25; i++){
+        video[i * 2 + 0] = ' ';
+        video[i * 2 + 1] = 0x17;
+    }
+    while(1) {}
 }
