@@ -76,10 +76,17 @@ def build():
 
     print(cmd)
 
+    subprocess.call(cmd)    
+
+    cmd     = "%s %s%s.cpp -o %s%s.o" % (bin, source, "main", target, "main")
+
+    print(cmd)
+
     subprocess.call(cmd)
 
     list    = target + "T100HardDisplay.o "
     list    += target + "T100HardSystem.o "
+    list    += target + "main.o"
     cmd     = "%s %s -o %s%s" % (link, list, target, "T100Hard.exe")
 
     print(cmd)
