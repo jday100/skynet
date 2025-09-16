@@ -64,7 +64,7 @@ def build():
     bin     = "%s\\g++ -c -I%s\\%s\\%s" % (g_compiler_path, g_project_path, g_project_code, g_project_include)
     source  = "%s\\%s\\%s\\" % (g_project_path, g_project_code, g_project_source)
     target  = "%s\\%s\\" % (g_project_path, g_project_build)
-    link    = "%s\\ld -L%s\\%s" % (g_compiler_path, g_project_path, g_project_build)
+    link    = "%s\\gcc -L%s\\%s" % (g_compiler_path, g_project_path, g_project_build)
 
     cmd     = "%s %s%s.cpp -o %s%s.o" % (bin, source, "T100HardDisplay", target, "T100HardDisplay")
 
