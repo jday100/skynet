@@ -259,6 +259,7 @@ T100BOOL T100WorkSpaceServe::WorkSpaceOpen(T100WorkSpaceInfo* info)
         }else{
             T100FileInfo*       thisFile        = T100NEW T100FileInfo();
 
+            thisFile->SetLabel(item);
             thisFile->SetFileName(item);
 
             files.push_back(thisFile);
