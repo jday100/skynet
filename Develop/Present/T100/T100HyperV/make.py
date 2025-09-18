@@ -1,6 +1,7 @@
 import os
 import sys
 import subprocess
+import hyperv
 
 g_project_path      = ""
 g_compiler_path     = ""
@@ -76,11 +77,17 @@ def clean():
     global g_project_build
     global g_project_build_filename
 
+    """
     cmd 	= "cmd.exe /c del /q %s\\%s\\%s" % (g_project_path, g_project_build, g_project_build_filename)
 
     print(cmd)
 
     subprocess.call(cmd)
+
+    print("Success")
+    """
+
+    hyperv.create()
 
     print("Success")
 
