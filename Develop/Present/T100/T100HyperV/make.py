@@ -87,9 +87,7 @@ def clean():
     print("Success")
     """
 
-    hyperv.create()
-
-    print("Success")
+    hyperv.start()
 
 def rebuild():
     print("Run project rebuild...")

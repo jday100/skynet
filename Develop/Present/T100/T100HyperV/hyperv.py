@@ -27,6 +27,11 @@ def create():
 
     print("Success")
 
+def start():
+    print("Run hyperv start...")
+
+    print("Success")
+
 
 if __name__ == "__main__":
     print("Run hyperv...")
