@@ -79,11 +79,15 @@ def clean():
     global g_project_build
     global g_project_build_filename
 
+    """
     cmd 	= "cmd.exe /c del /q %s\\%s\\%s" % (g_project_path, g_project_build, g_project_build_filename)
 
     print(cmd)
 
     subprocess.call(cmd)
+    """
+
+    edk2_build()
 
     print("Success")
 
@@ -94,6 +98,14 @@ def rebuild():
 
 def edk2_build():
     print("EDK2...")
+
+    global g_edk2_path
+
+    cmd     = "cmd.exe %s\\%s\\%s" % (g_edk2_path, "BaseTools", "make")
+
+    print(cmd)
+
+    subprocess.call(cmd)
 
 if __name__ == "__main__":
     print("Run project build...")
