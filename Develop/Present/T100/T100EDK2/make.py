@@ -12,6 +12,8 @@ g_project_include           = ""
 g_project_source            = ""
 g_project_build_filename    = ""
 
+g_edk2_path                 = "C:\\zmsys2\\msys2\\home\\user\\edk2"
+
 def args():
     print("Run args...")
     count = len(sys.argv)
@@ -89,6 +91,9 @@ def rebuild():
     print("Run project rebuild...")
     clean()
     build()
+
+def edk2_build():
+    print("EDK2...")
 
 if __name__ == "__main__":
     print("Run project build...")
