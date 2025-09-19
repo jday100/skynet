@@ -1,7 +1,23 @@
+import os
 import sys
+import ctypes
 import subprocess
 
 g_hyperv_path       = ""
+
+def is_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
+
+def admin():
+    if not is_admin():
+        ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+        sys.exit()
+
+    print("admin")
+
 
 def args():
     print("Run args...")
