@@ -281,7 +281,7 @@ T100VOID T100WorkSpaceServe::Build()
 
 T100BOOL T100WorkSpaceServe::Run()
 {
-    m_projectServe.GetProjectLogic().Run(m_info, T100NULL);
+    //m_projectServe.GetProjectLogic().Run(m_info, T100NULL);
 }
 
 T100WSTRING T100WorkSpaceServe::GetFileName(const T100WxFolderInfo& info)
