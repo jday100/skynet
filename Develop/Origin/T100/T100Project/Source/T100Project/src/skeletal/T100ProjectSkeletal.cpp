@@ -323,7 +323,7 @@ T100VOID T100ProjectSkeletal::OnModuleNew(T100ModuleInfo* info)
     }
 
     T100WorkSpaceInfo*      workspace   = T100NULL;
-    T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
+    T100ProjectLogic*       logic       = m_serve->GetProjectServe()->GetProjectLogic();
 
     workspace   = m_serve->GetWorkSpaceInfo();
 
@@ -331,7 +331,7 @@ T100VOID T100ProjectSkeletal::OnModuleNew(T100ModuleInfo* info)
         return;
     }
 
-    if(logic.CreateModule(workspace, info)){
+    if(logic->CreateModule(workspace, info)){
 
     }else{
         return;
@@ -346,21 +346,21 @@ T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
         return;
     }
 
-    T100FileLogic&      logic       = m_serve->GetProjectServe()->GetFileLogic();
+    T100FileLogic*      logic       = m_serve->GetProjectServe()->GetFileLogic();
     T100FileInfo*       info        = data->GetFileInfo();
 
     if(!info){
         return;
     }
 
-    if(logic.IsOpened(info->GetPath())){
+    if(logic->IsOpened(info->GetPath())){
         m_view->FileSelect(data->GetId(), info);
     }else{
-        if(!logic.IsExists(info->GetPath())){
+        if(!logic->IsExists(info->GetPath())){
             return;
         }
 
-        if(!logic.Open(info->GetPath(), info)){
+        if(!logic->Open(info->GetPath(), info)){
             return;
         }
         m_view->FileOpen(data->GetId(), info);
@@ -369,15 +369,15 @@ T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
 
 T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
 {
-    T100FolderLogic&    logic       = m_serve->GetProjectServe()->GetFolderLogic();
+    T100FolderLogic*    logic       = m_serve->GetProjectServe()->GetFolderLogic();
 
-    if(!logic.IsExists(data->GetFolderInfo()->GetPath())){
+    if(!logic->IsExists(data->GetFolderInfo()->GetPath())){
         return T100FALSE;
     }
 
     T100FolderInfo*     info        = T100NEW T100FolderInfo();
 
-    if(!logic.List(data->GetFolderInfo()->GetPath(), info)){
+    if(!logic->List(data->GetFolderInfo()->GetPath(), info)){
         T100SAFE_DELETE(info);
         return T100FALSE;
     }
@@ -401,9 +401,9 @@ T100VOID T100ProjectSkeletal::OnProjectOpen(T100ProjectData* data)
         return;
     }
 
-    T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
+    T100ProjectLogic*       logic       = m_serve->GetProjectServe()->GetProjectLogic();
 
-    if(!logic.Open(info->GetPath(), info)){
+    if(!logic->Open(info->GetPath(), info)){
         return T100FALSE;
     }
 
@@ -430,7 +430,7 @@ T100VOID T100ProjectSkeletal::OnPageClosing(T100Pack* pack)
     T100EditorPack*     editor      = dynamic_cast<T100EditorPack*>(pack);
 
     if(editor){
-        m_serve->GetProjectServe()->GetFileLogic().Close(editor->GetEditor()->GetPath());
+        m_serve->GetProjectServe()->GetFileLogic()->Close(editor->GetEditor()->GetPath());
     }
 
     m_view->FileClose(pack);

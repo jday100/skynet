@@ -4,7 +4,8 @@
 #include "T100File.h"
 #include "T100PathTools.h"
 
-T100FileLogic::T100FileLogic()
+T100FileLogic::T100FileLogic() :
+    m_openedFiles()
 {
     //ctor
 }

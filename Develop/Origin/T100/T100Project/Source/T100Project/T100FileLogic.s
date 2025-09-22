@@ -111,24 +111,27 @@ _ZNSt8__detail16_Hashtable_allocISaINS_10_Hash_nodeISt4pairIKNSt7__cxx1112basic_
 	.seh_proc	_ZN13T100FileLogicC2Ev
 _ZN13T100FileLogicC2Ev:
 .LFB2515:
+	pushq	%rdi	 #
+	.seh_pushreg	%rdi
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:7: T100FileLogic::T100FileLogic()
-	leaq	16+_ZTV13T100FileLogic(%rip), %rax	 #, tmp94
-	movq	%rax, (%rcx)	 # tmp94, this_3(D)->_vptr.T100FileLogic
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:8:     m_openedFiles()
+	leaq	16+_ZTV13T100FileLogic(%rip), %rax	 #, tmp97
+	movq	%rax, (%rcx)	 # tmp97, this_3(D)->_vptr.T100FileLogic
+	leaq	8(%rcx), %rdi	 #, tmp91
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:7: T100FileLogic::T100FileLogic() :
+	movq	%rcx, %rdx	 # this, this
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:8:     m_openedFiles()
+	xorl	%eax, %eax	 # tmp92
+	movl	$7, %ecx	 #, tmp93
+	rep stosq
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:413:       _Hashtable() = default;
-	leaq	56(%rcx), %rax	 #, tmp92
-	movq	%rax, 8(%rcx)	 # tmp92, MEM[(struct _Hashtable *)this_3(D) + 8B]._M_buckets
-	movq	$1, 16(%rcx)	 #, MEM[(struct _Hashtable *)this_3(D) + 8B]._M_bucket_count
- # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:219:     _Hash_node_base() noexcept : _M_nxt() { }
-	movq	$0, 24(%rcx)	 #, MEM[(struct _Hash_node_base *)this_3(D) + 24B]._M_nxt
- # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:413:       _Hashtable() = default;
-	movq	$0, 32(%rcx)	 #, MEM[(struct _Hashtable *)this_3(D) + 8B]._M_element_count
+	leaq	56(%rdx), %rax	 #, tmp95
+	movq	$1, 16(%rdx)	 #, MEM[(struct _Hashtable *)this_3(D) + 8B]._M_bucket_count
+	movq	%rax, 8(%rdx)	 # tmp95, MEM[(struct _Hashtable *)this_3(D) + 8B]._M_buckets
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable_policy.h:451:     : _M_max_load_factor(__z), _M_next_resize(0) { }
-	movl	$0x3f800000, 40(%rcx)	 #, MEM[(struct _Prime_rehash_policy *)this_3(D) + 40B]._M_max_load_factor
-	movq	$0, 48(%rcx)	 #, MEM[(struct _Prime_rehash_policy *)this_3(D) + 40B]._M_next_resize
- # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:413:       _Hashtable() = default;
-	movq	$0, 56(%rcx)	 #, MEM[(struct _Hashtable *)this_3(D) + 8B]._M_single_bucket
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:10: }
+	movl	$0x3f800000, 40(%rdx)	 #, MEM[(struct _Prime_rehash_policy *)this_3(D) + 40B]._M_max_load_factor
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:11: }
+	popq	%rdi	 #
 	ret	
 	.seh_endproc
 	.globl	_ZN13T100FileLogicC1Ev
@@ -144,16 +147,16 @@ _ZN13T100FileLogic8IsExistsERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwE
 	subq	$40, %rsp	 #,
 	.seh_stackalloc	40
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:18: {
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:19: {
 	movq	%rdx, %rax	 # filename, filename
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:21:     result = ::_waccess(filename.c_str(), F_OK);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:22:     result = ::_waccess(filename.c_str(), F_OK);
 	xorl	%edx, %edx	 #
 	movq	(%rax), %rcx	 # MEM[(wchar_t * *)filename_3(D)],
 	call	*__imp__waccess(%rip)	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:23:     if(-1 == result){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:24:     if(-1 == result){
 	cmpl	$-1, %eax	 #, _6
 	setne	%al	 #, tmp94
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:30: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:31: }
 	addq	$40, %rsp	 #,
 	ret	
 	.seh_endproc
@@ -263,12 +266,12 @@ _ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS
 _ZN13T100FileLogicD2Ev:
 .LFB2518:
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:12: T100FileLogic::~T100FileLogic()
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:13: T100FileLogic::~T100FileLogic()
 	leaq	16+_ZTV13T100FileLogic(%rip), %rax	 #, tmp91
 	movq	%rax, (%rcx)	 # tmp91, this_2(D)->_vptr.T100FileLogic
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h:102:     class unordered_map
 	addq	$8, %rcx	 #, tmp90
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:15: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:16: }
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h:102:     class unordered_map
 	jmp	_ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS5_P12T100FileInfoESaISA_ENSt8__detail10_Select1stESt8equal_toIS5_ESt4hashIS5_ENSC_18_Mod_range_hashingENSC_20_Default_ranged_hashENSC_20_Prime_rehash_policyENSC_17_Hashtable_traitsILb1ELb0ELb1EEEED1Ev	 #
 	.seh_endproc
@@ -287,15 +290,15 @@ _ZN13T100FileLogicD0Ev:
 	subq	$32, %rsp	 #,
 	.seh_stackalloc	32
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:12: T100FileLogic::~T100FileLogic()
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:13: T100FileLogic::~T100FileLogic()
 	leaq	16+_ZTV13T100FileLogic(%rip), %rax	 #, tmp91
 	movq	%rax, (%rcx)	 # tmp91, this_2(D)->_vptr.T100FileLogic
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:12: T100FileLogic::~T100FileLogic()
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:13: T100FileLogic::~T100FileLogic()
 	movq	%rcx, %rbx	 # this, this
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h:102:     class unordered_map
 	leaq	8(%rcx), %rcx	 #, tmp90
 	call	_ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS5_P12T100FileInfoESaISA_ENSt8__detail10_Select1stESt8equal_toIS5_ESt4hashIS5_ENSC_18_Mod_range_hashingENSC_20_Default_ranged_hashENSC_20_Prime_rehash_policyENSC_17_Hashtable_traitsILb1ELb0ELb1EEEED1Ev	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:15: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:16: }
 	movl	$64, %edx	 #,
 	movq	%rbx, %rcx	 # this,
 	addq	$32, %rsp	 #,
@@ -312,7 +315,7 @@ _ZN13T100FileLogic5ClearEv:
 	.seh_endprologue
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h:846:       { _M_h.clear(); }
 	addq	$8, %rcx	 #, tmp89
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:69: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:70: }
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h:846:       { _M_h.clear(); }
 	jmp	_ZNSt10_HashtableINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS5_P12T100FileInfoESaISA_ENSt8__detail10_Select1stESt8equal_toIS5_ESt4hashIS5_ENSC_18_Mod_range_hashingENSC_20_Default_ranged_hashENSC_20_Prime_rehash_policyENSC_17_Hashtable_traitsILb1ELb0ELb1EEEE5clearEv	 #
 	.seh_endproc
@@ -752,7 +755,7 @@ _ZN13T100FileLogic5CloseERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
 	movl	$3339675911, %r8d	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:6618:       { return std::_Hash_impl::hash(__s.data(),
 	movq	8(%rdx), %rax	 # MEM[(long long unsigned int *)path_3(D) + 8B], tmp134
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:107: {
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:108: {
 	movq	%rdx, %rsi	 # path, path
 	movq	%rcx, %rbx	 # this, this
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/functional_hash.h:192:     { return _Hash_bytes(__ptr, __clength, __seed); }
@@ -813,7 +816,7 @@ _ZN13T100FileLogic5CloseERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/hashtable.h:1906:       --_M_element_count;
 	subq	$1, 32(%rbx)	 #, MEM[(struct _Hashtable *)this_1(D) + 8B]._M_element_count
 .L76:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:111: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:112: }
 	movl	$1, %eax	 #,
 	addq	$40, %rsp	 #,
 	popq	%rbx	 #
@@ -1117,10 +1120,10 @@ _ZN13T100FileLogic8IsOpenedERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwE
 	addq	$8, %rcx	 #, tmp93
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/unordered_map.h:977:       { return _M_h[__k]; }
 	call	_ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS6_P12T100FileInfoESaISB_ENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_20_Prime_rehash_policyENS_17_Hashtable_traitsILb1ELb0ELb1EEELb1EEixERS8_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:38:     if(value){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:39:     if(value){
 	cmpq	$0, (%rax)	 #, *_7
 	setne	%al	 #, tmp95
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:42: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:43: }
 	addq	$40, %rsp	 #,
 	ret	
 	.seh_endproc
@@ -1136,16 +1139,16 @@ _ZN13T100FileLogic6CreateEP12T100FileInfo:
 	subq	$48, %rsp	 #,
 	.seh_stackalloc	48
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:46:     if(!info){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:47:     if(!info){
 	testq	%rdx, %rdx	 # info
 	jne	.L123	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:53: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:54: }
 	xorl	%eax, %eax	 #
 	addq	$48, %rsp	 #,
 	popq	%rbx	 #
 	ret	
 .L123:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:50:     T100File        file(info->GetPath());
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:51:     T100File        file(info->GetPath());
 	leaq	40(%rsp), %rbx	 #, tmp92
 	movq	%rdx, %rcx	 # info,
 	call	_ZN12T100FileInfo7GetPathB5cxx11Ev	 #
@@ -1173,7 +1176,7 @@ _ZN13T100FileLogic6RemoveEP12T100FileInfo:
 	.seh_proc	_ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfo
 _ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP12T100FileInfo:
 .LFB2526:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:72: {
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:73: {
 	pushq	%r14	 #
 	.seh_pushreg	%r14
 	pushq	%r13	 #
@@ -1191,39 +1194,39 @@ _ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP1
 	subq	$112, %rsp	 #,
 	.seh_stackalloc	112
 	.seh_endprologue
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:73:     if(!info){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:74:     if(!info){
 	testq	%r8, %r8	 # info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:72: {
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:73: {
 	movq	%rcx, %r12	 # this, this
 	movq	%rdx, %rbp	 # path, path
 	movq	%r8, %rdi	 # info, info
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:73:     if(!info){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:74:     if(!info){
 	je	.L136	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:77:     T100File        file(path);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:78:     T100File        file(path);
 	leaq	40(%rsp), %rsi	 #, tmp129
 	movq	%rsi, %rcx	 # tmp129,
 .LEHB9:
 	call	_ZN8T100FileC1ERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE9:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:79:     if(!file.IsExists()){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:80:     if(!file.IsExists()){
 	movq	%rsi, %rcx	 # tmp129,
 .LEHB10:
 	call	_ZN8T100File8IsExistsEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:79:     if(!file.IsExists()){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:80:     if(!file.IsExists()){
 	testb	%al, %al	 # <retval>
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:79:     if(!file.IsExists()){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:80:     if(!file.IsExists()){
 	movl	%eax, %ebx	 #, <retval>
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:79:     if(!file.IsExists()){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:80:     if(!file.IsExists()){
 	jne	.L127	 #,
 .L129:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:80:         return T100FALSE;
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:81:         return T100FALSE;
 	xorl	%ebx, %ebx	 # <retval>
 .L128:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:77:     T100File        file(path);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:78:     T100File        file(path);
 	movq	%rsi, %rcx	 # tmp129,
 	call	_ZN8T100FileD1Ev	 #
 .L125:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:104: }
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:105: }
 	movl	%ebx, %eax	 # <retval>,
 	addq	$112, %rsp	 #,
 	popq	%rbx	 #
@@ -1243,14 +1246,14 @@ _ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP1
 	movq	%r12, %rcx	 # _26,
 	call	_ZNSt8__detail9_Map_baseINSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEESt4pairIKS6_P12T100FileInfoESaISB_ENS_10_Select1stESt8equal_toIS6_ESt4hashIS6_ENS_18_Mod_range_hashingENS_20_Default_ranged_hashENS_20_Prime_rehash_policyENS_17_Hashtable_traitsILb1ELb0ELb1EEELb1EEixERS8_	 #
 .LEHE10:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:87:     if(value){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:88:     if(value){
 	cmpq	$0, (%rax)	 #, *_27
 	jne	.L129	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:149: 	: allocator_type(std::move(__a)), _M_p(__dat) { }
 	leaq	48(%rsp), %r14	 #, tmp130
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h:398:       { __c1 = __c2; }
 	xorl	%edx, %edx	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:94:     T100PathTools::Split(path, folder, filename);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:95:     T100PathTools::Split(path, folder, filename);
 	movq	%rbp, %rcx	 # path,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:172:       { _M_string_length = __length; }
 	movq	$0, 56(%rsp)	 #, MEM[(size_type *)&folder + 8B]
@@ -1258,7 +1261,7 @@ _ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP1
 	leaq	16(%r14), %rax	 #, tmp103
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h:398:       { __c1 = __c2; }
 	movw	%dx, 96(%rsp)	 #, MEM[(char_type &)&filename + 16]
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:94:     T100PathTools::Split(path, folder, filename);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:95:     T100PathTools::Split(path, folder, filename);
 	movq	%r14, %rdx	 # tmp130,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:149: 	: allocator_type(std::move(__a)), _M_p(__dat) { }
 	leaq	80(%rsp), %r13	 #, tmp128
@@ -1268,28 +1271,28 @@ _ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP1
 	movw	%ax, 64(%rsp)	 #, MEM[(char_type &)&folder + 16]
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:149: 	: allocator_type(std::move(__a)), _M_p(__dat) { }
 	leaq	16(%r13), %rax	 #, tmp105
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:94:     T100PathTools::Split(path, folder, filename);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:95:     T100PathTools::Split(path, folder, filename);
 	movq	%r13, %r8	 # tmp128,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:149: 	: allocator_type(std::move(__a)), _M_p(__dat) { }
 	movq	%rax, 80(%rsp)	 # tmp105, MEM[(struct _Alloc_hider *)&filename]._M_p
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:172:       { _M_string_length = __length; }
 	movq	$0, 88(%rsp)	 #, MEM[(size_type *)&filename + 8B]
 .LEHB11:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:94:     T100PathTools::Split(path, folder, filename);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:95:     T100PathTools::Split(path, folder, filename);
 	call	_ZN13T100PathTools5SplitERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEERS5_S8_	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:96:     info->SetLabel(filename);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:97:     info->SetLabel(filename);
 	movq	%r13, %rdx	 # tmp128,
 	movq	%rdi, %rcx	 # info,
 	call	_ZN12T100FileInfo8SetLabelERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:97:     info->SetFileName(filename);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:98:     info->SetFileName(filename);
 	movq	%r13, %rdx	 # tmp128,
 	movq	%rdi, %rcx	 # info,
 	call	_ZN12T100FileInfo11SetFileNameERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:98:     info->SetFolder(folder);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:99:     info->SetFolder(folder);
 	movq	%r14, %rdx	 # tmp130,
 	movq	%rdi, %rcx	 # info,
 	call	_ZN12T100FileInfo9SetFolderERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:99:     info->SetOpened(T100TRUE);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:100:     info->SetOpened(T100TRUE);
 	movl	$1, %edx	 #,
 	movq	%rdi, %rcx	 # info,
 	call	_ZN12T100FileInfo9SetOpenedEb	 #
@@ -1302,7 +1305,7 @@ _ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP1
 	movq	80(%rsp), %rcx	 # MEM[(wchar_t * *)&filename], _30
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:220: 	if (!_M_is_local())
 	addq	$16, %r13	 #, tmp112
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:101:     m_openedFiles[path] = info;
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:102:     m_openedFiles[path] = info;
 	movq	%rdi, (%rax)	 # info, *_28
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:220: 	if (!_M_is_local())
 	cmpq	%r13, %rcx	 # tmp112, _30
@@ -1321,7 +1324,7 @@ _ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP1
 	jmp	.L128	 #
 	.p2align 4,,10
 .L136:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:74:         return T100FALSE;
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:75:         return T100FALSE;
 	xorl	%ebx, %ebx	 # <retval>
 	jmp	.L125	 #
 .L138:
@@ -1344,7 +1347,7 @@ _ZN13T100FileLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP1
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/ext/new_allocator.h:125: 	::operator delete(__p);
 	call	_ZdlPv	 #
 .L135:
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:77:     T100File        file(path);
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\logic\T100FileLogic.cpp:78:     T100File        file(path);
 	movq	%rsi, %rcx	 # tmp129,
 	call	_ZN8T100FileD1Ev	 #
 	movq	%rbx, %rcx	 # tmp125,

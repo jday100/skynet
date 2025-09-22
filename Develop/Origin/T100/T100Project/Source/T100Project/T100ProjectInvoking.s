@@ -487,7 +487,7 @@ _ZN19T100ProjectInvoking6UninitEv:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectInvoking.cpp:25:     m_skeletal->Destroy();
 	movq	_ZN19T100ProjectInvoking10m_skeletalE(%rip), %rcx	 # m_skeletal, m_skeletal.3_1
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectInvoking.cpp:25:     m_skeletal->Destroy();
-	movq	(%rcx), %rax	 # m_skeletal.3_1->D.193928._vptr.T100ProjectSkeletalBase, m_skeletal.3_1->D.193928._vptr.T100ProjectSkeletalBase
+	movq	(%rcx), %rax	 # m_skeletal.3_1->D.193922._vptr.T100ProjectSkeletalBase, m_skeletal.3_1->D.193922._vptr.T100ProjectSkeletalBase
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectInvoking.cpp:25:     m_skeletal->Destroy();
 	call	*24(%rax)	 # MEM[(int (*) () *)_2 + 24B]
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectInvoking.cpp:26:     T100SAFE_DELETE(m_skeletal);
@@ -495,7 +495,7 @@ _ZN19T100ProjectInvoking6UninitEv:
 	testq	%rcx, %rcx	 # m_skeletal.6_4
 	je	.L33	 #,
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectInvoking.cpp:26:     T100SAFE_DELETE(m_skeletal);
-	movq	(%rcx), %rax	 # m_skeletal.6_4->D.193928._vptr.T100ProjectSkeletalBase, m_skeletal.6_4->D.193928._vptr.T100ProjectSkeletalBase
+	movq	(%rcx), %rax	 # m_skeletal.6_4->D.193922._vptr.T100ProjectSkeletalBase, m_skeletal.6_4->D.193922._vptr.T100ProjectSkeletalBase
 	call	*8(%rax)	 # MEM[(int (*) () *)_5 + 8B]
 	movq	$0, _ZN19T100ProjectInvoking10m_skeletalE(%rip)	 #, m_skeletal
 .L33:

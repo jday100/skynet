@@ -706,7 +706,7 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEP15T100ProjectInfo:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h:431: 	  return wcslen(__s);
 	leaq	.LC0(%rip), %rcx	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:146: 	: allocator_type(__a), _M_p(__dat) { }
-	movq	%rax, 48(%rsp)	 # tmp108, MEM[(struct _Alloc_hider *)&D.193795]._M_p
+	movq	%rax, 48(%rsp)	 # tmp108, MEM[(struct _Alloc_hider *)&D.193789]._M_p
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h:431: 	  return wcslen(__s);
 	call	wcslen	 #
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:511:       { _M_construct(__s, __s ? __s + traits_type::length(__s) : __s+npos); }
@@ -723,7 +723,7 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEP15T100ProjectInfo:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:337: 	if (__n == 1)
 	cmpq	$1, %rdx	 #, _34
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.tcc:225: 	  { this->_S_copy_chars(_M_data(), __beg, __end); }
-	movq	48(%rsp), %rax	 # MEM[(wchar_t * *)&D.193795], prephitmp_4
+	movq	48(%rsp), %rax	 # MEM[(wchar_t * *)&D.193789], prephitmp_4
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:337: 	if (__n == 1)
 	jne	.L60	 #,
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h:398:       { __c1 = __c2; }
@@ -731,7 +731,7 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEP15T100ProjectInfo:
 	movw	%cx, (%rax)	 #, MEM[(char_type &)_37]
 .L61:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:172:       { _M_string_length = __length; }
-	movq	%rdx, 56(%rsp)	 # _34, MEM[(size_type *)&D.193795 + 8B]
+	movq	%rdx, 56(%rsp)	 # _34, MEM[(size_type *)&D.193789 + 8B]
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/char_traits.h:398:       { __c1 = __c2; }
 	xorl	%edx, %edx	 #
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:155:     T100DebugTools::Print(L"T100ProjectSkeletalBase::ProjectOpen(T100ProjectInfo*)...");
@@ -743,7 +743,7 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEP15T100ProjectInfo:
 	call	_ZN14T100DebugTools5PrintERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEE	 #
 .LEHE1:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:211:       { return _M_data() == _M_local_data(); }
-	movq	48(%rsp), %rcx	 # MEM[(wchar_t * *)&D.193795], _22
+	movq	48(%rsp), %rcx	 # MEM[(wchar_t * *)&D.193789], _22
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:220: 	if (!_M_is_local())
 	addq	$16, %rbx	 #, tmp121
 	cmpq	%rbx, %rcx	 # tmp121, _22
@@ -754,23 +754,23 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEP15T100ProjectInfo:
  # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:156:     if(!info){
 	testq	%rdi, %rdi	 # info
 	je	.L70	 #,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:160:     T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:160:     T100ProjectLogic*       logic       = m_serve->GetProjectServe()->GetProjectLogic();
 	movq	16(%rbp), %rcx	 # this_11(D)->m_serve, this_11(D)->m_serve
 .LEHB2:
 	call	_ZN18T100WorkSpaceServe15GetProjectServeEv	 #
 	movq	%rax, %rcx	 # _13,
 	call	_ZN16T100ProjectServe15GetProjectLogicEv	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:162:     if(logic.Open(info->GetPath(), info)){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:162:     if(logic->Open(info->GetPath(), info)){
 	movq	%rdi, %rcx	 # info,
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:160:     T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:160:     T100ProjectLogic*       logic       = m_serve->GetProjectServe()->GetProjectLogic();
 	movq	%rax, %rbx	 #, _15
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:162:     if(logic.Open(info->GetPath(), info)){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:162:     if(logic->Open(info->GetPath(), info)){
 	call	_ZN15T100ProjectInfo7GetPathB5cxx11Ev	 #
 	movq	%rdi, %r8	 # info,
 	movq	%rbx, %rcx	 # _15,
 	movq	%rax, %rdx	 # _17,
 	call	_ZN16T100ProjectLogic4OpenERKNSt7__cxx1112basic_stringIwSt11char_traitsIwESaIwEEEP15T100ProjectInfo	 #
- # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:162:     if(logic.Open(info->GetPath(), info)){
+ # C:\zgit\skynet\Develop\Origin\T100\T100Project\Source\T100Project\src\skeletal\T100ProjectSkeletalBase.cpp:162:     if(logic->Open(info->GetPath(), info)){
 	testb	%al, %al	 # _19
 	jne	.L78	 #,
 .L70:
@@ -798,9 +798,9 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEP15T100ProjectInfo:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:200:       { _M_allocated_capacity = __capacity; }
 	movq	40(%rsp), %rdx	 # __dnew, __dnew
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:168:       { _M_dataplus._M_p = __p; }
-	movq	%rax, 48(%rsp)	 # prephitmp_4, MEM[(wchar_t * *)&D.193795]
+	movq	%rax, 48(%rsp)	 # prephitmp_4, MEM[(wchar_t * *)&D.193789]
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:200:       { _M_allocated_capacity = __capacity; }
-	movq	%rdx, 64(%rsp)	 # __dnew, MEM[(size_type *)&D.193795 + 16B]
+	movq	%rdx, 64(%rsp)	 # __dnew, MEM[(size_type *)&D.193789 + 16B]
 .L59:
  # C:\zoo\bin\llvm-mingw-20240518-msvcrt-x86_64\include/wchar.h:1477:     return (wchar_t *) memcpy (_S1,_S2,_N*sizeof(wchar_t));
 	leaq	.LC0(%rip), %rdx	 #,
@@ -808,7 +808,7 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEP15T100ProjectInfo:
 	movq	%rax, %rcx	 # prephitmp_4,
 	call	memcpy	 #
 	movq	40(%rsp), %rdx	 # __dnew, _34
-	movq	48(%rsp), %rax	 # MEM[(wchar_t * *)&D.193795], prephitmp_4
+	movq	48(%rsp), %rax	 # MEM[(wchar_t * *)&D.193789], prephitmp_4
 	leaq	(%rdx,%rdx), %rsi	 #, _29
 	jmp	.L61	 #
 .L78:
@@ -818,7 +818,7 @@ _ZN23T100ProjectSkeletalBase11ProjectOpenEP15T100ProjectInfo:
 	call	_ZN15T100ProjectView11ProjectOpenEP15T100ProjectInfo	 #
 .L66:
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:211:       { return _M_data() == _M_local_data(); }
-	movq	48(%rsp), %rcx	 # MEM[(wchar_t * *)&D.193795], _6
+	movq	48(%rsp), %rcx	 # MEM[(wchar_t * *)&D.193789], _6
  # C:/zoo/bin/CodeBlocks/MinGW/lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/bits/basic_string.h:220: 	if (!_M_is_local())
 	addq	$16, %rbx	 #, tmp126
 	movq	%rax, %rsi	 #, tmp127

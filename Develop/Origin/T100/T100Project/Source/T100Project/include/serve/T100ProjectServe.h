@@ -14,12 +14,9 @@ class T100ProjectServe
         T100ProjectServe();
         virtual ~T100ProjectServe();
 
-        T100FileLogic&                          GetFileLogic();
-        T100FolderLogic&                        GetFolderLogic();
-        T100ProjectLogic&                       GetProjectLogic();
-
-        T100VOID                                GetProjects(T100PROJECT_INFO_VECTOR&);
-        const T100PROJECT_INFO_VECTOR&          GetProjects();
+        T100FileLogic*                          GetFileLogic();
+        T100FolderLogic*                        GetFolderLogic();
+        T100ProjectLogic*                       GetProjectLogic();
 
         T100ProjectInfo*                        GetProjectInfo();
 
@@ -28,12 +25,13 @@ class T100ProjectServe
         T100BOOL                                New(const T100WxFolderInfo&, T100WorkSpaceInfo*);
 
     protected:
-        T100FileLogic                           m_fileLogic;
-        T100FolderLogic                         m_folderLogic;
-        T100ProjectLogic                        m_projectLogic;
-        T100PROJECT_INFO_VECTOR*                m_projects      = T100NULL;
+        T100FileLogic*                          m_fileLogic     = T100NULL;
+        T100FolderLogic*                        m_folderLogic   = T100NULL;
+        T100ProjectLogic*                       m_projectLogic  = T100NULL;
 
     private:
+        T100VOID                                init();
+        T100VOID                                uninit();
 };
 
 #endif // T100PROJECTSERVE_H

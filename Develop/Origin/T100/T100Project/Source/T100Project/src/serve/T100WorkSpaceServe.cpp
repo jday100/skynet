@@ -21,10 +21,12 @@ T100WorkSpaceServe::~T100WorkSpaceServe()
 T100VOID T100WorkSpaceServe::init()
 {
     m_opened    = T100FALSE;
+    m_projectServe  = T100NEW T100ProjectServe();
 }
 
 T100VOID T100WorkSpaceServe::uninit()
 {
+    T100SAFE_DELETE(m_projectServe);
 }
 
 T100BOOL T100WorkSpaceServe::Create()
@@ -146,12 +148,7 @@ T100BOOL T100WorkSpaceServe::Open(const T100WxFolderInfo& info)
 
 T100ProjectServe* T100WorkSpaceServe::GetProjectServe()
 {
-    return &m_projectServe;
-}
-
-T100VOID T100WorkSpaceServe::GetProjects(T100PROJECT_INFO_VECTOR& projects)
-{
-    m_projectServe.GetProjects(projects);
+    return m_projectServe;
 }
 
 T100WorkSpaceInfo* T100WorkSpaceServe::GetWorkSpaceInfo()
@@ -178,7 +175,7 @@ T100BOOL T100WorkSpaceServe::Close()
         return T100FALSE;
     }
 
-    m_projectServe.GetFileLogic().Clear();
+    m_projectServe->GetFileLogic()->Clear();
 
     T100SAFE_DELETE(m_info);
     m_opened    = T100FALSE;
@@ -235,12 +232,12 @@ T100BOOL T100WorkSpaceServe::WorkSpaceOpen(T100WorkSpaceInfo* info)
         T100WSTRING     path    = m_info->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + item;
         thisFolder.SetPath(path);
 
-        if(m_projectServe.Check(&thisFolder)){
+        if(m_projectServe->Check(&thisFolder)){
             T100ProjectInfo*    thisProject     = T100NEW T100ProjectInfo();
 
             thisProject->SetLabel(item);
             thisProject->SetPath(path);
-            thisProject->SetFileName(m_projectServe.GetProjectLogic().GetFileName(thisFolder));
+            thisProject->SetFileName(m_projectServe->GetProjectLogic()->GetFileName(thisFolder));
 
             projects.push_back(thisProject);
         }else{
@@ -276,12 +273,14 @@ T100BOOL T100WorkSpaceServe::WorkSpaceClose()
 
 T100VOID T100WorkSpaceServe::Build()
 {
-    m_projectServe.GetProjectLogic().Build(m_info, T100NULL);
+    m_projectServe->GetProjectLogic()->Build(m_info, T100NULL);
 }
 
 T100BOOL T100WorkSpaceServe::Run()
 {
-    //m_projectServe.GetProjectLogic().Run(m_info, T100NULL);
+    //m_projectServe.GetProjectLogic()->Run(m_info, T100NULL);
+
+    m_projectServe->GetProjectLogic();
 }
 
 T100WSTRING T100WorkSpaceServe::GetFileName(const T100WxFolderInfo& info)

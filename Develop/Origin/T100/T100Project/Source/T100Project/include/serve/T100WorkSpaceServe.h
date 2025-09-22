@@ -18,8 +18,6 @@ class T100WorkSpaceServe
 
         T100ProjectServe*                       GetProjectServe();
 
-        T100VOID                                GetProjects(T100PROJECT_INFO_VECTOR&);
-
         T100WorkSpaceInfo*                      GetWorkSpaceInfo();
 
         T100VOID                                GetFolderInfo(T100WxFolderInfo&);
@@ -54,7 +52,7 @@ class T100WorkSpaceServe
     protected:
         std::atomic_bool                        m_opened;
         T100WorkSpaceInfo*                      m_info          = T100NULL;
-        T100ProjectServe                        m_projectServe;
+        T100ProjectServe*                       m_projectServe  = T100NULL;
 
     private:
         T100VOID                                init();

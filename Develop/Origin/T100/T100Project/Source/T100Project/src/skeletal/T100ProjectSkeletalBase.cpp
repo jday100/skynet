@@ -157,9 +157,9 @@ T100BOOL T100ProjectSkeletalBase::ProjectOpen(T100ProjectInfo* info)
         return T100FALSE;
     }
 
-    T100ProjectLogic&       logic       = m_serve->GetProjectServe()->GetProjectLogic();
+    T100ProjectLogic*       logic       = m_serve->GetProjectServe()->GetProjectLogic();
 
-    if(logic.Open(info->GetPath(), info)){
+    if(logic->Open(info->GetPath(), info)){
 
     }else{
         return T100FALSE;
