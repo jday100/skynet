@@ -274,13 +274,14 @@ T100BOOL T100WorkSpaceServe::WorkSpaceClose()
 T100VOID T100WorkSpaceServe::Build()
 {
     m_projectServe->GetProjectLogic()->Build(m_info, T100NULL);
+    return;
 }
 
 T100BOOL T100WorkSpaceServe::Run()
 {
-    //m_projectServe.GetProjectLogic()->Run(m_info, T100NULL);
+    m_projectServe->GetProjectLogic()->Run(m_info, T100NULL);
 
-    m_projectServe->GetProjectLogic();
+    return T100TRUE;
 }
 
 T100WSTRING T100WorkSpaceServe::GetFileName(const T100WxFolderInfo& info)

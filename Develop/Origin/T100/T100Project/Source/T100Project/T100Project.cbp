@@ -49,7 +49,8 @@
 				<Option compiler="gcc" />
 				<Option projectLinkerOptionsRelation="2" />
 				<Compiler>
-					<Add option="-O2" />
+					<Add option="-O" />
+					<Add option="-g" />
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
 					<Add directory="include/view" />
 					<Add directory="include/skeletal" />
@@ -73,7 +74,6 @@
 					<Add directory="$(#wx)/lib/gcc_dll/mswu" />
 				</ResourceCompiler>
 				<Linker>
-					<Add option="-s" />
 					<Add library="libwxmsw30u.a" />
 					<Add directory="$(#wx)/lib/gcc_dll" />
 				</Linker>
