@@ -3,14 +3,16 @@
 
 #include <atomic>
 #include <wx/aui/aui.h>
-#include "T100Common.h"
-#include "T100ProjectViewMainMenu.h"
-#include "T100ProjectTree.h"
+#include "T100MainMenu.h"
 #include "T100MainPanel.h"
-#include "T100BuildPanel.h"
+#include "T100ProjectTree.h"
+#include "T100CompilePanel.h"
+#include "T100DebugPanel.h"
+
+#include "T100WxFileInfo.h"
+#include "T100WorkSpaceInfo.h"
 
 class T100ProjectFrame;
-class T100WorkSpaceInfo;
 
 class T100ProjectViewBase
 {
@@ -18,54 +20,50 @@ class T100ProjectViewBase
         T100ProjectViewBase();
         virtual ~T100ProjectViewBase();
 
-        virtual T100VOID                SetDirty();
-        virtual T100VOID                ClearDirty();
-        virtual T100BOOL                IsDirty();
+        T100VOID                    SetDirty();
+        T100VOID                    ClearDirty();
+        T100BOOL                    IsDirty();
 
-        virtual T100VOID                AppendBuildMessage(const T100WSTRING&);
+        T100VOID                    UpdateTitle();
 
-        wxAuiManager*                   GetAuiManager();
-        T100ProjectFrame*               GetFrame();
-        T100ProjectViewMainMenu*        GetMainMenu();
-        T100ProjectTree*                GetProjectTree();
-        T100MainPanel*                  GetMainPanel();
-        T100BuildPanel*                 GetBuildPanel();
+        T100VOID                    ShowViewWorkSpaceTree(T100BOOL);
+        T100VOID                    ShowViewSearchResult(T100BOOL);
+        T100VOID                    ShowViewCompileOutput(T100BOOL);
 
-        T100VOID                        SetTitle();
+        T100VOID                    ShowWorkSpaceCreateWizard();
+        T100VOID                    ShowWorkSpacePopupMenu(T100BOOL);
+        T100BOOL                    ShowWorkSpaceNotExistsDialog();
+        T100INT                     ShowWorkSpaceFileExistsDialog();
+        T100VOID                    ShowWorkSpaceFileNotExistsDailog();
+        T100VOID                    ShowWorkSpaceCreateFailureDialog();
+        T100VOID                    ShowWorkSpaceOpenFailureDialog();
+        T100INT                     ShowWorkSpaceNotSaveDialog();
 
-        T100INT                         ShowDirDialog(T100WSTRING&);
+        T100VOID                    ShowProjectCreateWizard();
+        T100VOID                    ShowProjectCreateFailureDialog();
 
-        T100BOOL                        ShowWorkSpaceCreateDialog(T100WorkSpaceInfo*);
-        T100BOOL                        ShowWorkSpaceNotExistsDialog();
-        T100INT                         ShowWorkSpaceFileExistsDialog();
-        T100BOOL                        ShowWorkSpaceFileNotExistsDialog();
-        T100VOID                        ShowWorkSpacePropertiesDialog();
-        T100VOID                        ShowWorkSpaceOpenFailureDialog();
+        T100VOID                    ShowFileOpenFailureDialog();
 
-        T100VOID                        ShowProjectCreateWizard();
+        T100VOID                    ShowSetupCompilerDialog();
 
-        T100VOID                        ShowModuleCreateDialog();
+        T100INT                     ShowFolderDialog(T100WSTRING&);
+        T100INT                     ShowFileNameDialog(T100WxFileInfo&);
 
-        T100VOID                        ShowBuildPanel();
-        T100VOID                        ShowAboutDialog();
+        T100INT                     ShowModuleCreateDialog();
 
     protected:
-        std::atomic_bool                m_dirty;
-        wxAuiManager*                   m_manager       = T100NULL;
-        T100ProjectFrame*               m_frame         = T100NULL;
-        T100ProjectViewMainMenu*        m_mainMenu      = T100NULL;
+        std::atomic_bool            m_dirty;
+        T100WSTRING                 m_projectTitle  = L"T100Project";
 
-        T100ProjectTree*                m_projectTree   = T100NULL;
-        T100MainPanel*                  m_mainPanel     = T100NULL;
-        T100BuildPanel*                 m_buildPanel    = T100NULL;
-
-        T100WSTRING                     m_projectName   = L"T100Project";
-
-        T100BOOL                        CheckMainPanel();
+        wxAuiManager*               m_manager       = T100NULL;
+        T100ProjectFrame*           m_frame         = T100NULL;
+        T100MainMenu*               m_mainMenu      = T100NULL;
+        T100MainPanel*              m_mainPanel     = T100NULL;
+        T100ProjectTree*            m_projectTree   = T100NULL;
+        T100CompilePanel*           m_compilePanel  = T100NULL;
+        T100DebugPanel*             m_debugPanel    = T100NULL;
 
     private:
-        T100VOID                        init();
-        T100VOID                        uninit();
 };
 
 #endif // T100PROJECTVIEWBASE_H

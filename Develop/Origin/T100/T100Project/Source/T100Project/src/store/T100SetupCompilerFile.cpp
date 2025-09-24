@@ -1,12 +1,7 @@
 #include "T100SetupCompilerFile.h"
 
-#include <io.h>
-
-#include "T100SetupCompilerInfo.h"
-
 T100SetupCompilerFile::T100SetupCompilerFile(const T100WSTRING& filename) :
-    T100XML(filename),
-    m_filename(filename)
+    T100XML(filename)
 {
     //ctor
 }
@@ -14,61 +9,4 @@ T100SetupCompilerFile::T100SetupCompilerFile(const T100WSTRING& filename) :
 T100SetupCompilerFile::~T100SetupCompilerFile()
 {
     //dtor
-}
-
-T100BOOL T100SetupCompilerFile::IsExists()
-{
-    T100INT     result;
-
-    result = ::_waccess(m_filename.c_str(), F_OK);
-
-    if(-1 == result){
-
-    }else{
-        return T100TRUE;
-    }
-
-    return T100FALSE;
-}
-
-T100BOOL T100SetupCompilerFile::Load(T100SetupCompilerInfo* info)
-{
-    wxXmlDocument       document;
-
-    if(!document.Load(m_filename)){
-        return T100FALSE;
-    }
-
-    wxXmlNode*      root    = document.GetRoot();
-
-    if(!root){
-        return T100FALSE;
-    }
-
-    if(root->GetName() == L"WorkSpace"){
-        wxXmlNode*  python  = root->GetChildren();
-
-        if(python){
-            //info->SetPythonFile(python->GetAttribute(L"Path").ToStdWstring());
-        }
-    }else{
-        return T100FALSE;
-    }
-
-    return T100TRUE;
-}
-
-T100BOOL T100SetupCompilerFile::Save(T100SetupCompilerInfo* info)
-{
-    wxXmlDocument       document;
-    wxXmlNode*          type    = T100NEW wxXmlNode(wxXML_DOCUMENT_TYPE_NODE, L"WorkSpace");
-    wxXmlNode*          root    = T100NEW wxXmlNode(wxXML_ELEMENT_NODE, L"WorkSpace");
-
-    wxXmlNode*          python  = T100NEW wxXmlNode(root, wxXML_ELEMENT_NODE, L"Python");
-
-    //python->AddAttribute(L"Path", info->GetPythonFile());
-
-    document.SetDocumentNode(type);
-    document.SetRoot(root);
-    document.Save(m_filename);
 }

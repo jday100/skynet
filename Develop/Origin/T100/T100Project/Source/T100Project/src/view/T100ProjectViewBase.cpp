@@ -1,36 +1,24 @@
 #include "T100ProjectViewBase.h"
 
 #include <wx/msgdlg.h>
-#include <wx/dirdlg.h>
 #include "T100ProjectMain.h"
-#include "T100ProjectCreateWizard.h"
-#include "T100ProjectViewAboutDialog.h"
-#include "T100WorkSpaceCreateDialog.h"
-#include "T100ModuleCreateDialog.h"
-#include "T100WorkSpacePropertiesDialog.h"
-#include "T100ProjectInvoking.h"
+#include "T100SetupCompilerDialog.h"
 
+#include "T100ProjectCreateWizard.h"
+#include "T100WorkSpaceCreateWizard.h"
+#include "T100ModuleCreateDialog.h"
+
+#include "T100ProjectInvoking.h"
 
 T100ProjectViewBase::T100ProjectViewBase()
 {
     //ctor
-    init();
+    m_dirty     = T100FALSE;
 }
 
 T100ProjectViewBase::~T100ProjectViewBase()
 {
     //dtor
-    uninit();
-}
-
-T100VOID T100ProjectViewBase::init()
-{
-    m_dirty     = T100FALSE;
-}
-
-T100VOID T100ProjectViewBase::uninit()
-{
-
 }
 
 T100VOID T100ProjectViewBase::SetDirty()
@@ -48,87 +36,157 @@ T100BOOL T100ProjectViewBase::IsDirty()
     return m_dirty;
 }
 
-wxAuiManager* T100ProjectViewBase::GetAuiManager()
+T100VOID T100ProjectViewBase::UpdateTitle()
 {
-    return m_manager;
-}
-
-T100ProjectFrame* T100ProjectViewBase::GetFrame()
-{
-    return m_frame;
-}
-
-T100ProjectViewMainMenu* T100ProjectViewBase::GetMainMenu()
-{
-    return m_mainMenu;
-}
-
-T100ProjectTree* T100ProjectViewBase::GetProjectTree()
-{
-    return m_projectTree;
-}
-
-T100MainPanel* T100ProjectViewBase::GetMainPanel()
-{
-    return m_mainPanel;
-}
-
-T100BuildPanel* T100ProjectViewBase::GetBuildPanel()
-{
-    return m_buildPanel;
-}
-
-T100VOID T100ProjectViewBase::SetTitle()
-{
+    T100WSTRING         path;
     T100WSTRING         title;
-    T100Editor*         current     = T100NULL;
 
     if(m_mainPanel){
-        current     = m_mainPanel->GetCurrentEditor();
+        path    = m_mainPanel->GetCurrentFilePath();
 
-        if(current){
-            if(m_dirty){
-                title   = m_projectName + L" - " + current->GetPath() + L"*";
-            }else{
-                title   = m_projectName + L" - " + current->GetPath();
-            }
-        }else{
-            title   = m_projectName;
+        if(path.empty()){
+            path    = m_mainPanel->GetCurrentLabel();
         }
-    }else{
-        title   = m_projectName;
+
+        m_mainPanel->UpdateCurrentLabel();
     }
 
+    if(path.empty()){
+        title   = m_projectTitle;
+    }else{
+        if(m_dirty){
+            title   = m_projectTitle + L" - " + path + L"*";
+        }else{
+            title   = m_projectTitle + L" - " + path;
+        }
+    }
     m_frame->SetLabel(title);
 }
 
-T100BOOL T100ProjectViewBase::CheckMainPanel()
+T100VOID T100ProjectViewBase::ShowViewWorkSpaceTree(T100BOOL value)
 {
-    if(m_mainPanel){
+    if(value){
+        m_manager->GetPane(m_projectTree).Show();
+    }else{
+        m_manager->GetPane(m_projectTree).Hide();
+    }
+    m_mainMenu->ViewWorkSpaceTree(value);
+    m_manager->Update();
+}
+
+T100VOID T100ProjectViewBase::ShowViewSearchResult(T100BOOL value)
+{
+    if(value){
+        m_manager->GetPane(m_debugPanel).Show();
+    }else{
+        m_manager->GetPane(m_debugPanel).Hide();
+    }
+    m_mainMenu->ViewSearchResult(value);
+    m_manager->Update();
+}
+
+T100VOID T100ProjectViewBase::ShowViewCompileOutput(T100BOOL value)
+{
+    if(value){
+        m_manager->GetPane(m_compilePanel).Show();
+    }else{
+        m_manager->GetPane(m_compilePanel).Hide();
+    }
+    m_mainMenu->ViewCompileOutput(value);
+    m_manager->Update();
+}
+
+T100VOID T100ProjectViewBase::ShowWorkSpaceCreateWizard()
+{
+    T100WorkSpaceCreateWizard       wizard(m_frame);
+
+    wizard.RunWizard(wizard.GetFirstPage());
+}
+
+T100VOID T100ProjectViewBase::ShowWorkSpacePopupMenu(T100BOOL value)
+{
+    m_projectTree->ShowWorkSpacePopupMenu(value);
+}
+
+T100BOOL T100ProjectViewBase::ShowWorkSpaceNotExistsDialog()
+{
+    T100INT     result;
+
+    result = wxMessageBox(L"Directory is not exists, Create it?", L"Error", wxICON_WARNING | wxYES | wxNO | wxCANCEL, m_frame);
+
+    if(result == wxYES){
         return T100TRUE;
     }
-
-    m_mainPanel     = T100NEW T100MainPanel(m_frame, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_FLAT);
-    if(m_manager->AddPane(m_mainPanel, wxAuiPaneInfo().Center().CloseButton(T100FALSE).CaptionVisible(T100FALSE))){
-
-    }else{
-        T100SAFE_DELETE(m_mainPanel);
-        return T100FALSE;
-    }
-    return T100TRUE;
+    return T100FALSE;
 }
 
-T100VOID T100ProjectViewBase::AppendBuildMessage(const T100WSTRING& value)
+T100INT T100ProjectViewBase::ShowWorkSpaceFileExistsDialog()
 {
-    if(m_buildPanel){
-        m_buildPanel->Append(value);
-    }
+    T100INT     result;
+
+    result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder,\
+                          \nAre you sure you want to overrite it?", L"Warning",
+                          wxICON_WARNING | wxYES | wxNO | wxCANCEL, m_frame);
+
+    return result;
 }
 
-T100INT T100ProjectViewBase::ShowDirDialog(T100WSTRING& path)
+T100VOID T100ProjectViewBase::ShowWorkSpaceFileNotExistsDailog()
 {
-    T100INT             result;
-    wxDirDialog         dialog(m_frame);
+    wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder!", L"Error",
+                          wxICON_ERROR | wxCLOSE, m_frame);
+}
+
+T100VOID T100ProjectViewBase::ShowWorkSpaceCreateFailureDialog()
+{
+    wxMessageBox(L"WorkSpace create failure!", "Error", wxICON_ERROR | wxCLOSE, m_frame);
+}
+
+T100VOID T100ProjectViewBase::ShowWorkSpaceOpenFailureDialog()
+{
+    wxMessageBox(L"WorkSpace open failure!", "Error", wxICON_ERROR | wxCLOSE, m_frame);
+}
+
+T100INT T100ProjectViewBase::ShowWorkSpaceNotSaveDialog()
+{
+    T100INT     result;
+
+    result = wxMessageBox(L"Some file not save, Save it?", L"Info", wxICON_WARNING | wxYES | wxNO | wxCANCEL, m_frame);
+
+    return result;
+}
+
+
+T100VOID T100ProjectViewBase::ShowProjectCreateWizard()
+{
+    T100ProjectCreateWizard         wizard(m_frame);
+
+    wizard.RunWizard(wizard.GetFirstPage());
+}
+
+T100VOID T100ProjectViewBase::ShowProjectCreateFailureDialog()
+{
+    wxMessageBox(L"Project create failure!", "Error", wxICON_ERROR | wxCLOSE, m_frame);
+}
+
+
+T100VOID T100ProjectViewBase::ShowFileOpenFailureDialog()
+{
+    wxMessageBox(L"File open failure!", "Error", wxICON_ERROR | wxCLOSE, m_frame);
+}
+
+
+T100VOID T100ProjectViewBase::ShowSetupCompilerDialog()
+{
+    T100SetupCompilerDialog     dialog(m_frame, wxID_ANY, L"Setup Compiler...");
+
+    dialog.ShowModal();
+}
+
+T100INT T100ProjectViewBase::ShowFolderDialog(T100WSTRING& path)
+{
+    T100INT         result;
+    wxDirDialog     dialog(m_frame);
 
     result  = dialog.ShowModal();
 
@@ -139,110 +197,29 @@ T100INT T100ProjectViewBase::ShowDirDialog(T100WSTRING& path)
     return result;
 }
 
-T100BOOL T100ProjectViewBase::ShowWorkSpaceCreateDialog(T100WorkSpaceInfo* info)
+T100INT T100ProjectViewBase::ShowFileNameDialog(T100WxFileInfo& info)
 {
-    if(!info){
-        return T100FALSE;
+    T100INT         result;
+    wxFileDialog    dialog(m_frame);
+
+    result  = dialog.ShowModal();
+
+    if(result == wxID_OK){
+        info.SetLabel(dialog.GetFilename().ToStdWstring());
+        info.SetPath(dialog.GetPath().ToStdWstring());
     }
-
-    T100WorkSpaceCreateDialog       dialog(m_frame, wxID_ANY, L"Create WorkSpace...");
-
-    if(dialog.ShowModal() == wxID_APPLY){
-        info->SetPath(dialog.GetWorkSpacePath());
-        info->SetPythonFile(dialog.GetPythonFile());
-        info->SetCompilerPath(dialog.GetCompilerPath());
-        return T100TRUE;
-    }
-    return T100FALSE;
-}
-
-T100BOOL T100ProjectViewBase::ShowWorkSpaceNotExistsDialog()
-{
-    T100INT     result;
-
-    result = wxMessageBox(L"", L"", wxYES_NO | wxCANCEL, m_frame);
-
-    if(result == wxYES){
-        return T100TRUE;
-    }else{
-
-    }
-
-    return T100FALSE;
-}
-
-T100INT T100ProjectViewBase::ShowWorkSpaceFileExistsDialog()
-{
-    T100INT     result;
-
-    result = wxMessageBox(L"WorkSpace's config file with the same name already exists in the workspace's folder, Are you sure you want to overwrite it?", L"Message", wxYES_NO | wxCANCEL, m_frame);
 
     return result;
 }
 
-T100BOOL T100ProjectViewBase::ShowWorkSpaceFileNotExistsDialog()
+T100INT T100ProjectViewBase::ShowModuleCreateDialog()
 {
-    T100INT     result;
-
-    result = wxMessageBox(L"WorkSpace's config file not exists in the workspace's folder, Are you sure you want to create it?", L"Message", wxYES | wxCANCEL, m_frame);
-
-    if(result == wxYES){
-        return T100TRUE;
-    }
-    return T100FALSE;
-}
-
-T100VOID T100ProjectViewBase::ShowWorkSpacePropertiesDialog()
-{
-    T100WorkSpacePropertiesDialog       dialog(m_frame, wxID_ANY, L"WorkSpace Properties...");
-
-    dialog.ShowModal();
-}
-
-T100VOID T100ProjectViewBase::ShowWorkSpaceOpenFailureDialog()
-{
-    wxMessageBox(L"WorkSpace open failure!", L"Message", wxCLOSE, m_frame);
-}
-
-T100VOID T100ProjectViewBase::ShowProjectCreateWizard()
-{
-    T100ProjectCreateWizard     wizard(m_frame);
-
-    wizard.CentreOnScreen();
-
-    wizard.RunWizard(wizard.GetFirstPage());
-}
-
-T100VOID T100ProjectViewBase::ShowModuleCreateDialog()
-{
-    T100ModuleCreateDialog      dialog(m_frame, wxID_ANY, L"Module Create...");
+    T100INT                         result;
+    T100ModuleCreateDialog          dialog(m_frame, wxID_ANY, L"Create Module...");
 
     if(dialog.ShowModal() == wxID_APPLY){
-        T100ProjectInvoking::OnModuleNew(dialog.GetModuleInfo());
-    }
-}
-
-T100VOID T100ProjectViewBase::ShowBuildPanel()
-{
-    if(m_buildPanel){
-
-    }else{
-        m_buildPanel    = T100NEW T100BuildPanel(m_frame, wxID_ANY);
-        if(m_manager->AddPane(m_buildPanel, wxAuiPaneInfo().Bottom())){
-
-        }else{
-            T100SAFE_DELETE(m_buildPanel);
-            return;
-        }
+        T100ProjectInvoking::OnModuleCreateDone(dialog.GetModuleInfo());
     }
 
-    m_buildPanel->Show();
-    m_manager->Update();
-}
-
-T100VOID T100ProjectViewBase::ShowAboutDialog()
-{
-    T100ProjectViewAboutDialog      dialog(m_frame, wxID_ANY, L"About...");
-
-    dialog.ShowModal();
+    return result;
 }

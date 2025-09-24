@@ -2,7 +2,7 @@
  * Name:      T100ProjectMain.cpp
  * Purpose:   Code for Application Frame
  * Author:    ZhengFeng Qu (jdayskynet@outlook.com)
- * Created:   2025-07-08
+ * Created:   2025-09-03
  * Copyright: ZhengFeng Qu ()
  * License:
  **************************************************************/
@@ -53,6 +53,7 @@ const long T100ProjectFrame::ID_STATUSBAR1 = wxNewId();
 BEGIN_EVENT_TABLE(T100ProjectFrame,wxFrame)
     //(*EventTable(T100ProjectFrame)
     //*)
+    EVT_AUI_PANE_CLOSE(T100ProjectFrame::OnAuiPaneClose)
 END_EVENT_TABLE()
 
 T100ProjectFrame::T100ProjectFrame(wxWindow* parent,wxWindowID id)
@@ -81,1122 +82,11 @@ T100ProjectFrame::T100ProjectFrame(wxWindow* parent,wxWindowID id)
     StatusBar1->SetFieldsCount(1,__wxStatusBarWidths_1);
     StatusBar1->SetStatusStyles(1,__wxStatusBarStyles_1);
     SetStatusBar(StatusBar1);
-    static const char *ImageList1_0_XPM[] = {
-    "16 16 170 2",
-    "B_ c #4877F9",
-    "C. c #04126C",
-    "3_ c #09166E",
-    "k_ c #9BBBFB",
-    "[_ c #7DA3FF",
-    "Y_ c #020C51",
-    "-_ c #87A5ED",
-    "i. c #5A87F9",
-    "3. c #1145EB",
-    "O. c #739BFF",
-    "f_ c #648FFE",
-    ">_ c #7395ED",
-    "O_ c #041283",
-    "0. c #4173FE",
-    "E. c #022AC2",
-    "s. c #376BFE",
-    "1. c #235BFE",
-    "Z_ c #556EC5",
-    "*_ c #0C1D88",
-    "F_ c #94B4FF",
-    "X. c #80A4FC",
-    "K. c #0540F9",
-    "Q_ c #ADC5FE",
-    "Z. c #1431A5",
-    "b_ c #CBDAFE",
-    "L. c #000F6B",
-    "-. c #678AED",
-    "r_ c #05136C",
-    "J_ c #E4EBFD",
-    "|_ c #265CFB",
-    "B. c #001EA6",
-    "&. c #1C54FB",
-    "8_ c #8DB0FF",
-    "2. c #1C54FE",
-    "D_ c #88ACFF",
-    "0_ c #7EA4FF",
-    "J. c #0D48FE",
-    "s_ c #749CFF",
-    ":. c #6A94FE",
-    "8. c #608CFE",
-    "4_ c #3A4EA7",
-    "M_ c #5B88FE",
-    "'_ c #051381",
-    "~. c #000F81",
-    "L_ c #5180FE",
-    ".. c #051383",
-    "h_ c #1C36A5",
-    "I. c #173BC3",
-    "x. c #3D70FE",
-    "(_ c #386CFE",
-    "5_ c #9FBDFB",
-    "=. c #08177C",
-    "u. c #081A87",
-    "`_ c #03137C",
-    "6. c #3D58C4",
-    "G_ c #E5ECFD",
-    "U_ c #1F40C3",
-    "c. c #3669FE",
-    "6_ c #9DBDFF",
-    "A_ c #98B9FF",
-    "]_ c #89ADFD",
-    "u_ c #93B5FF",
-    "w. c #2259FE",
-    "E_ c #8EB1FF",
-    "p_ c #84A9FF",
-    "5. c #040E51",
-    "R. c #093FEB",
-    "n_ c #7099FF",
-    "+. c #6B95FF",
-    "_. c #011081",
-    "*. c #011083",
-    "!_ c #F7F9FD",
-    "T_ c #09187A",
-    "<_ c #091B87",
-    "+_ c #09187D",
-    ":_ c #8CAEFC",
-    "k. c #020E56",
-    "t_ c #A3C2FF",
-    "#. c #2D62FE",
-    "l_ c #99BAFF",
-    ")_ c #2858EB",
-    "n. c #1E56FE",
-    "x_ c #8AAEFF",
-    "9_ c #85AAFF",
-    "M. c #0F4AFE",
-    "o. c #7BA2FF",
-    "q_ c #769EFF",
-    ";. c #719AFF",
-    "V. c #000B54",
-    "d_ c #6C96FF",
-    "9. c #5886FE",
-    "K_ c #769BFE",
-    "t. c #052DC2",
-    "2_ c #010003",
-    "$_ c #010004",
-    "A. c #3A6BF9",
-    "#_ c #010316",
-    "o_ c #0A197D",
-    "^. c #00117C",
-    "._ c #010317",
-    "T. c #124BFB",
-    "I_ c #4273FE",
-    "v. c #2E63FE",
-    "7_ c #95B7FF",
-    "F. c #245BFE",
-    "S_ c #90B3FF",
-    "i_ c #8BAFFF",
-    "e. c #1A53FE",
-    "W_ c #86ABFF",
-    "H. c #154FFE",
-    "W. c #010C51",
-    "g. c #104BFE",
-    "X_ c #061052",
-    "^_ c #90ADFD",
-    "Q. c #01127C",
-    ";_ c #93B4FC",
-    "p. c #5784FE",
-    "!. c #010F81",
-    "e_ c #223AA5",
-    "l. c #4D7CFE",
-    ",. c #4374FE",
-    "q. c #396CFE",
-    "S. c #3468FE",
-    "~_ c #F7F8FD",
-    "}_ c #2F64FE",
-    "y_ c #9BBCFF",
-    "$. c #255CFE",
-    "z_ c #91B4FF",
-    "m. c #1650FE",
-    "N. c #0744FE",
-    ",_ c #435FC4",
-    "P. c #041687",
-    "j_ c #020D54",
-    "&_ c #071156",
-    "U. c #1E4FEB",
-    "y. c #000A50",
-    "R_ c #809FED",
-    "__ c None",
-    ">. c #628DFE",
-    "g_ c #5D89FE",
-    "N_ c #5381FE",
-    "H_ c #FDFDFD",
-    "@. c #3569FE",
-    "d. c #3065FE",
-    "<. c #2B61FE",
-    "b. c #265DFE",
-    "G. c #1C55FE",
-    "r. c #124DFE",
-    "V_ c #051787",
-    "j. c #001387",
-    "w_ c #6A92FA",
-    "v_ c #C9D8FE",
-    "Y. c #1A52FB",
-    "c_ c #86AAFF",
-    "a_ c #7CA2FF",
-    "C_ c #060F53",
-    "7. c #6892FE",
-    "m_ c #638EFE",
-    "a. c #4F7EFE",
-    "P_ c #4A7AFE",
-    "z. c #4576FE",
-    "/_ c #4072FE",
-    "{_ c #366AFE",
-    "D. c #2C62FE",
-    "f. c #1852FE",
-    "=_ c #5971C5",
-    "@_ c #040F51",
-    "4. c #01117C",
-    "1_ c #040F56",
-    "h. c #0943F9",
-    "________._X_o_O_O_+_@_#_________",
-    "____$_&_*_=_-_;_:_>_,_<_1_2_____",
-    "__$_3_4_5_6_7_8_9_0_q_w_e_r_2___",
-    "__&_4_t_y_u_i_p_a_s_d_f_g_h_j___",
-    "._*_k_l_z_x_c_v_b_n_m_M_N_B_V_#_",
-    "C_Z_A_S_D_F_G_H_H_J_K_L_P_I_U_Y_",
-    "T_R_E_W_Q_!_H_H_H_H_~_^_/_(_)_`_",
-    "'_]_p_[_H_H_H_H_H_H_H_H_{_}_|__.",
-    "..X.o.O.+.H_H_H_H_H_H_@.#.$.&.*.",
-    "=.-.;.:.>.H_H_P_,.H_H_<.1.2.3.4.",
-    "5.6.7.8.9.H_H_0.q.H_H_w.e.r.t.y.",
-    "#_u.i.p.a.H_H_s.d.H_H_f.g.h.j.#_",
-    "__k.h_l.z.x.c.v.b.n.m.M.N.B.V.__",
-    "__2_C.Z.A.S.D.F.G.H.J.K.B.L.2___",
-    "____2_j_P.I.U.Y.T.R.E.j.V.2_____",
-    "________#_W.Q.!.~.^.y.#_________"
-    };
-    static const char *ImageList1_1_XPM[] = {
-    "16 16 161 2",
-    "6. c Black",
-    "B_ c #4877F9",
-    "(_ c #E8E8E8",
-    "N. c #04126C",
-    "3_ c #09166E",
-    "k_ c #9BBBFB",
-    ".. c #7DA3FF",
-    "T_ c #020C51",
-    "-_ c #87A5ED",
-    "f. c #5A87F9",
-    "0. c #1145EB",
-    "=. c #739BFF",
-    "f_ c #648FFE",
-    ">_ c #7395ED",
-    "O_ c #041283",
-    "J. c #022AC2",
-    "8. c #235BFE",
-    "Z_ c #556EC5",
-    "*_ c #0C1D88",
-    "&. c #80A4FC",
-    "C. c #0540F9",
-    "!_ c #ADC5FE",
-    "B. c #1431A5",
-    ")_ c #101010",
-    "Z. c #000F6B",
-    "2. c #678AED",
-    "r_ c #05136C",
-    "@. c #265CFB",
-    "m. c #001EA6",
-    ",. c #1C54FB",
-    "8_ c #8DB0FF",
-    "9. c #1C54FE",
-    "D_ c #88ACFF",
-    "0_ c #7EA4FF",
-    "s_ c #749CFF",
-    "4. c #6A94FE",
-    "t. c #608CFE",
-    "4_ c #3A4EA7",
-    "M_ c #5B88FE",
-    "|_ c #051381",
-    "I. c #000F81",
-    "P_ c #5180FE",
-    "$. c #051383",
-    "h_ c #1C36A5",
-    "S. c #173BC3",
-    "~_ c #E7E9ED",
-    "[_ c #386CFE",
-    "G_ c #4A4C51",
-    "5_ c #9FBDFB",
-    "1. c #08177C",
-    "d. c #081A87",
-    "}_ c #03137C",
-    "e. c #3D58C4",
-    "J_ c #111111",
-    "Y_ c #1F40C3",
-    "6_ c #9DBDFF",
-    "A_ c #98B9FF",
-    "_. c #89ADFD",
-    "u_ c #93B5FF",
-    "u. c #2259FE",
-    "W_ c #8EB1FF",
-    "p_ c #84A9FF",
-    "w. c #040E51",
-    "H. c #093FEB",
-    "n_ c #7099FF",
-    "-. c #6B95FF",
-    "#. c #011081",
-    "<. c #011083",
-    "R_ c #09187A",
-    "<_ c #091B87",
-    "+_ c #09187D",
-    ":_ c #8CAEFC",
-    "x. c #020E56",
-    "t_ c #A3C2FF",
-    ":. c #2D62FE",
-    "l_ c #99BAFF",
-    "{_ c #2858EB",
-    "x_ c #8AAEFF",
-    "9_ c #85AAFF",
-    "b. c #0F4AFE",
-    "*. c #7BA2FF",
-    "q_ c #769EFF",
-    "3. c #719AFF",
-    "M. c #000B54",
-    "d_ c #6C96FF",
-    "y. c #5886FE",
-    "L_ c #769BFE",
-    "v_ c #BCCAEE",
-    "a. c #052DC2",
-    "2_ c #010003",
-    "$_ c #010004",
-    "V. c #3A6BF9",
-    "#_ c #010316",
-    "o_ c #0A197D",
-    "U. c #00117C",
-    "._ c #010317",
-    "G. c #124BFB",
-    "/_ c #FBFBFB",
-    "U_ c #4273FE",
-    "7_ c #95B7FF",
-    "S_ c #90B3FF",
-    "i_ c #8BAFFF",
-    "i. c #1A53FE",
-    "Q_ c #86ABFF",
-    "K. c #010C51",
-    "k. c #104BFE",
-    "X_ c #061052",
-    "'_ c #90ADFD",
-    "L. c #01127C",
-    ";_ c #93B4FC",
-    "g. c #5784FE",
-    "H_ c #141414",
-    "P. c #010F81",
-    "e_ c #223AA5",
-    "c. c #4D7CFE",
-    "o. c #EDEDED",
-    "`_ c #F7F8FD",
-    "+. c #2F64FE",
-    "y_ c #9BBCFF",
-    ">. c #255CFE",
-    "z_ c #91B4FF",
-    "n. c #0744FE",
-    ",_ c #435FC4",
-    "A. c #041687",
-    "j_ c #020D54",
-    "&_ c #071156",
-    "^_ c #0D0D0D",
-    "D. c #1E4FEB",
-    "s. c #000A50",
-    "E_ c #809FED",
-    "b_ c #C1D0F2",
-    "__ c None",
-    "5. c #628DFE",
-    "g_ c #5D89FE",
-    "N_ c #5381FE",
-    "X. c #FDFDFD",
-    ";. c #3569FE",
-    "7. c #2B61FE",
-    "p. c #124DFE",
-    "F_ c #92B2FC",
-    "V_ c #051787",
-    "z. c #001387",
-    "w_ c #6A92FA",
-    "F. c #1A52FB",
-    "c_ c #86AAFF",
-    "a_ c #7CA2FF",
-    "C_ c #060F53",
-    "r. c #6892FE",
-    "m_ c #638EFE",
-    "h. c #4F7EFE",
-    "I_ c #4A7AFE",
-    "v. c #4576FE",
-    "]_ c #4072FE",
-    "O. c #366AFE",
-    "K_ c #61646B",
-    "j. c #1852FE",
-    "=_ c #5971C5",
-    "@_ c #040F51",
-    "q. c #01117C",
-    "1_ c #040F56",
-    "l. c #0943F9",
-    "________._X_o_O_O_+_@_#_________",
-    "____$_&_*_=_-_;_:_>_,_<_1_2_____",
-    "__$_3_4_5_6_7_8_9_0_q_w_e_r_2___",
-    "__&_4_t_y_u_i_p_a_s_d_f_g_h_j___",
-    "._*_k_l_z_x_c_v_b_n_m_M_N_B_V_#_",
-    "C_Z_A_S_D_F_G_H_J_K_L_P_I_U_Y_T_",
-    "R_E_W_Q_!_~_^_/_(_)_`_'_]_[_{_}_",
-    "|__.p_..X.o.)_X.o.)_X.X.O.+.@.#.",
-    "$.&.*.=.-.o.)_X.o.)_X.;.:.>.,.<.",
-    "1.2.3.4.5.6.6.6.6.6.6.7.8.9.0.q.",
-    "w.e.r.t.y.6.6.6.6.6.6.u.i.p.a.s.",
-    "#_d.f.g.h.6.6.6.6.6.6.j.k.l.z.#_",
-    "__x.h_c.v.6.6.6.6.6.6.b.n.m.M.__",
-    "__2_N.B.V.6.6.6.6.6.6.C.m.Z.2___",
-    "____2_j_A.S.D.F.G.H.J.z.M.2_____",
-    "________#_K.L.P.I.U.s.#_________"
-    };
-    static const char *ImageList1_2_XPM[] = {
-    "16 16 14 1",
-    "O c #168216",
-    "X c #1D5A1D",
-    "@ c #821616",
-    "= c #1D1D5A",
-    "& c #828216",
-    "* c #161682",
-    "_ c #591D1D",
-    "$ c #FFFF00",
-    "o c #FF0000",
-    "- c #0000FF",
-    ". c #5A1D1D",
-    "# c #59591D",
-    "+ c #00FF00",
-    "; c #5A5A1D",
-    "_.......XXXXXXXX",
-    "_oooooooO++++++X",
-    "_oooooooO++++++X",
-    "_oooooooO++++++X",
-    "_oooooooO++++++X",
-    "_oooooooO++++++X",
-    "_oooooooO++++++X",
-    "_@@@@@@@O++++++X",
-    "#$$$$$$&*******=",
-    "#$$$$$$&-------=",
-    "#$$$$$$&-------=",
-    "#$$$$$$&-------=",
-    "#$$$$$$&-------=",
-    "#$$$$$$&-------=",
-    "#$$$$$$&-------=",
-    "#;;;;;;;========"
-    };
-    static const char *ImageList1_3_XPM[] = {
-    "16 16 33 1",
-    "e c Black",
-    "O c #168216",
-    "X c #1D5A1D",
-    "< c #821616",
-    "w c #1D1D5A",
-    "@ c #EF0000",
-    "9 c #15157A",
-    "- c #006C00",
-    "7 c #101000",
-    "8 c #828216",
-    "; c #0D0000",
-    "0 c #010108",
-    "$ c #FC0000",
-    "q c #161682",
-    "_ c #591D1D",
-    "3 c #157A15",
-    "6 c #EFEF00",
-    "= c #010901",
-    "5 c #FFFF00",
-    "2 c #080101",
-    "* c #140000",
-    ", c #001000",
-    "1 c #7A1515",
-    "# c #157C15",
-    "o c #FF0000",
-    "r c #0000FF",
-    ": c #FD0000",
-    ". c #5A1D1D",
-    "4 c #59591D",
-    "& c #520000",
-    "+ c #00FF00",
-    "> c #147714",
-    "t c #5A5A1D",
-    "_.......XXXXXXXX",
-    "_oooooooO++++++X",
-    "_oooooooO++++++X",
-    "_oooooooO++++++X",
-    "_oooooo@#++++++X",
-    "_oooo$&*=-+++++X",
-    "_oooo@;:>,+++++X",
-    "_<<<<12<3,+++++X",
-    "4555567890qqqqqw",
-    "45555eeeeeerrrrw",
-    "45555eeeeeerrrrw",
-    "45555eeeeeerrrrw",
-    "45555eeeeeerrrrw",
-    "45555eeeeeerrrrw",
-    "45555558rrrrrrrw",
-    "4tttttttwwwwwwww"
-    };
-    static const char *ImageList1_4_XPM[] = {
-    "16 16 88 1",
-    ". c #005CB1",
-    "B c #7CB9F4",
-    "C c #61ABF0",
-    "N c #70B4F2",
-    "v c #50A2EE",
-    "- c #9ACBF7",
-    "m c #75B5F2",
-    "l c #7AB9F4",
-    "] c #0053B6",
-    "[ c #0053B7",
-    "n c #3F99EC",
-    "u c #84BEF5",
-    "S c #69B0F1",
-    "q c #64ACF0",
-    "( c #499EED",
-    "M c #73B5F2",
-    "k c #7DBAF3",
-    "R c #51A3EE",
-    "! c #3191EA",
-    "9 c #76B6F2",
-    "w c #5BA8EF",
-    "` c #3B96EB",
-    "c c #0658BB",
-    "4 c #4A9FED",
-    "o c #AAD2F9",
-    "3 c #54A4EE",
-    "= c #9ECDF7",
-    "8 c #7EBBF4",
-    "h c #439BEC",
-    "@ c #A8D2F9",
-    "y c #88C0F5",
-    "g c #4DA0ED",
-    "^ c #4DA0EE",
-    "P c #3292EA",
-    "p c #77B7F3",
-    "G c #66AEF1",
-    "a c #70B3F2",
-    "j c #7FBCF4",
-    "d c #5FAAF0",
-    "{ c #0052B7",
-    "x c #0052B8",
-    "t c #89C1F5",
-    "Z c #004FB6",
-    "/ c #4EA1EE",
-    "& c #93C6F6",
-    "T c #58A6EF",
-    "r c #479DED",
-    "X c #B1D8FA",
-    "e c #51A2EE",
-    "+ c #96C7F7",
-    ", c #7BB9F3",
-    "A c #6AB0F1",
-    "~ c #4A9EED",
-    "; c #94C7F7",
-    "E c #489EED",
-    ": c #8DC3F5",
-    "6 c #8DC3F6",
-    "< c #72B5F2",
-    "0 c #6DB1F2",
-    "L c #3291EA",
-    "Y c #5CA8F0",
-    "7 c #86BFF5",
-    "V c #6BB1F2",
-    "z c #75B6F3",
-    "H c #55A4EE",
-    "' c #0054B6",
-    "> c #84BFF4",
-    "U c #5FA9EF",
-    "J c #499FEE",
-    "D c #6EB2F2",
-    "_ c None",
-    "Q c #3392EA",
-    "i c #7DBBF4",
-    "I c #5DA9EF",
-    ") c #429BEC",
-    "K c #3D97EB",
-    "F c #6CB2F1",
-    "s c #67AEF1",
-    "5 c #91C5F6",
-    "f c #56A5EF",
-    "O c #A0CEF8",
-    "$ c #9BCAF8",
-    "2 c #5EAAF0",
-    "W c #3E98EC",
-    "# c #A3CFF9",
-    "* c #88C1F4",
-    "1 c #68AFF1",
-    "b c #489DED",
-    "________________",
-    "________________",
-    "________________",
-    "__....__________",
-    "_.XoO+._________",
-    "_.@#$&*......___",
-    "_.=-;:>,<1234.__",
-    "_.&567890qwer.__",
-    "_.tyuipasdfgh.__",
-    "_.jklzxxxcvbn.__",
-    "_.mMNxBzVCxxxxZ_",
-    "_.ASxDFGdHJKLPLx",
-    "_.dxIUYTREWQ!Lx_",
-    "_.x~^/g()`!LLx__",
-    "__'''][[{{{{{___",
-    "________________"
-    };
-    static const char *ImageList1_5_XPM[] = {
-    "16 16 68 1",
-    "h c #2B822C",
-    "d c #80DB87",
-    "o c #ABE8B0",
-    "L c #267B28",
-    "V c #49C64C",
-    "x c #74D376",
-    ", c #79DA81",
-    "n c #79D47A",
-    "m c #72D374",
-    "a c #4CCD56",
-    "X c #B5EAB9",
-    "5 c #83DC8A",
-    "6 c #7CDB84",
-    "> c #81DC88",
-    "g c #277C28",
-    "s c #86DD8D",
-    "b c #7FD680",
-    "3 c #52CF5C",
-    "r c #89DE90",
-    "B c #52C955",
-    "z c #7DD67F",
-    "q c #50CF5B",
-    "* c #8EDF94",
-    "p c #55D05F",
-    "e c #8CDF93",
-    "F c #55CA58",
-    "v c #80D782",
-    "; c #91E097",
-    "J c #5ACB5C",
-    "l c #85D886",
-    "i c #5FD268",
-    ": c #8ADF91",
-    "0 c #58D162",
-    "w c #8FE096",
-    "4 c #94E19A",
-    "c c #277B28",
-    "2 c #5BD265",
-    "+ c #99E29F",
-    "K c #257B28",
-    "& c #97E29D",
-    "N c #60CD62",
-    "k c #8BDA8C",
-    "1 c #65D46E",
-    "H c #65CE67",
-    "9 c #63D46C",
-    "G c #63CE65",
-    "- c #9FE4A4",
-    ". c #217828",
-    "D c #68CF6A",
-    "y c #6DD675",
-    "u c #66D56F",
-    "$ c #9DE4A3",
-    "8 c #6BD674",
-    "= c #A2E5A7",
-    "M c #6BD06D",
-    "< c #70D778",
-    "# c #A7E6AC",
-    "_ c None",
-    "O c #A5E6AA",
-    "7 c #73D87B",
-    "@ c #AAE7AF",
-    "S c #6CD16E",
-    "A c #71D273",
-    "t c #76D97E",
-    "C c #4BC64D",
-    "f c #7BDA82",
-    "Z c #6FD271",
-    "j c #49CC53",
-    "________________",
-    "________________",
-    "________________",
-    "__....__________",
-    "_.XoO+._________",
-    "_.@#$&*......___",
-    "_.=-+;:>,<123.__",
-    "_.&4;:567890q.__",
-    "_.wer56tyuipa.__",
-    "_.s5dfgggh0qj.__",
-    "_.,,tgklzxggggc_",
-    "_.<<gvbnmMNBVCVg",
-    "_.ugZAZSDNFCVVg_",
-    "_.gNGHGNJBVVVg__",
-    "__KKKLLLLLLLL___",
-    "________________"
-    };
-    static const char *ImageList1_6_XPM[] = {
-    "16 16 5 1",
-    "O c #D3D3E1",
-    "o c #F2F2F9",
-    "_ c None",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........Xooo__",
-    "__.ooooooo.Xoo__",
-    "__.ooooooo.OXo__",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_7_XPM[] = {
-    "16 16 7 1",
-    "+ c #E1E1EC",
-    "O c #D3D3E1",
-    "o c #F2F2F9",
-    "@ c #B6B6CB",
-    "_ c None",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.++oooooXXXX__",
-    "____+++ooooooX__",
-    "______++oooooX__",
-    "__.+___+oooooX__",
-    "__.++__++ooooX__",
-    "__.o+___++oooX__",
-    "__.o++___++++X__",
-    "__.ooo+______@__",
-    "__.ooo+++_______",
-    "__.ooooo+++++___",
-    "__.ooooooooo+@__",
-    "__.ooooooooooX__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_8_XPM[] = {
-    "16 16 6 1",
-    "+ c #D3D3E1",
-    "o c #F2F2F9",
-    "O c #FF9934",
-    "_ c None",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.oOOoooo.+X___",
-    "__.oOOooooXXXX__",
-    "__.oOOoooooooX__",
-    "__.oOOoooooooX__",
-    "__.ooooooooooX__",
-    "__.oOOoooooooX__",
-    "__.oOOoooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_9_XPM[] = {
-    "16 16 6 1",
-    "+ c Black",
-    "O c #D3D3E1",
-    "o c #F2F2F9",
-    "_ c None",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.oooo++ooooX__",
-    "__.ooo+oo+oooX__",
-    "__.ooo+oo+oooX__",
-    "__.ooo+oo+oooX__",
-    "__.oo++++++ooX__",
-    "__.oo++++++ooX__",
-    "__.oo++++++ooX__",
-    "__.oo++++++ooX__",
-    "__.oo++++++ooX__",
-    "__.ooooooooooX__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_10_XPM[] = {
-    "16 16 6 1",
-    "O c #D3D3E1",
-    "o c #F2F2F9",
-    "+ c #0000FF",
-    "_ c None",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.ooooo++oooX__",
-    "__.ooooo++oooX__",
-    "__.ooo++++++oX__",
-    "__.ooo++++++oX__",
-    "__.ooooo++oooX__",
-    "__.ooooo++oooX__",
-    "__.ooooooooooX__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_11_XPM[] = {
-    "16 16 8 1",
-    "# c Black",
-    "O c #D3D3E1",
-    "o c #F2F2F9",
-    "@ c #FFFF00",
-    "+ c #CCCC00",
-    "_ c None",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.oooo++ooooX__",
-    "__.oooo++ooooX__",
-    "__.ooo+@@+oooX__",
-    "__.ooo+@@+oooX__",
-    "__.oo+@##@+ooX__",
-    "__.oo+@##@+ooX__",
-    "__.o+@@##@@+oX__",
-    "__.o+@@@@@@+oX__",
-    "__.+@@@##@@@+X__",
-    "__.+@@@##@@@+X__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_12_XPM[] = {
-    "16 16 6 1",
-    "O c #D3D3E1",
-    "o c #F2F2F9",
-    "+ c #9191FB",
-    "_ c None",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.oooo++ooooX__",
-    "__.ooo++++oooX__",
-    "__.oo++++++ooX__",
-    "__.oooo++ooooX__",
-    "__.o++o++o++oX__",
-    "__.o+oo++oo+oX__",
-    "__.o+oo++oo+oX__",
-    "__.o+oooooo+oX__",
-    "__.o+oooooo+oX__",
-    "__.o++++++++oX__",
-    "__.ooooooooooX__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_13_XPM[] = {
-    "16 16 6 1",
-    "O c #D3D3E1",
-    "o c #F2F2F9",
-    "+ c #2BCC2A",
-    "_ c None",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.oooo++ooooX__",
-    "__.ooo+oo+oooX__",
-    "__.ooo+oo+oooX__",
-    "__.ooo+oo+oooX__",
-    "__.oo++++++ooX__",
-    "__.oo++++++ooX__",
-    "__.oo++++++ooX__",
-    "__.oo++++++ooX__",
-    "__.oo++++++ooX__",
-    "__.ooooooooooX__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_14_XPM[] = {
-    "16 16 7 1",
-    "O c #D3D3E1",
-    "o c #F2F2F9",
-    "+ c #FF0000",
-    "@ c #2BCC2A",
-    "_ c None",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.oooo++ooooX__",
-    "__.ooo+oo+oooX__",
-    "__.ooo+oo+oooX__",
-    "__.@oo+oo+oo@X__",
-    "__.oo++++++ooX__",
-    "__.@o++++++o@X__",
-    "__.oo++++++ooX__",
-    "__.@o++++++o@X__",
-    "__.oo++++++ooX__",
-    "__.@oooooooo@X__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_15_XPM[] = {
-    "16 16 8 1",
-    "@ c #E1E1EC",
-    "+ c #D3D3E1",
-    "O c #F2F2F9",
-    "# c #B6B6CB",
-    "o c #FF0000",
-    "_ c None",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooOOooO.X____",
-    "__.oOOooOO.+X___",
-    "__.@@ooOOoXXXX__",
-    "____@@@OooOOoX__",
-    "______@@oOOooX__",
-    "__.@___@OOooOX__",
-    "__.@@__@@ooOOX__",
-    "__.O@___@@OOoX__",
-    "__.o@@___@@@@X__",
-    "__.oOO@______#__",
-    "__.OOo@@@_______",
-    "__.OooOO@@@@@___",
-    "__.ooOOooOOo@#__",
-    "__.oOOooOOooOX__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_16_XPM[] = {
-    "16 16 12 1",
-    "+ c #E1E1EC",
-    "$ c #7CD581",
-    "# c #84DD87",
-    "O c #D3D3E1",
-    "o c #F2F2F9",
-    "= c #B6B6CB",
-    "* c #90D895",
-    "& c #2BCC2A",
-    "_ c None",
-    "@ c #99E19C",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.++oooooXXXX__",
-    "____+++ooooooX__",
-    "______++oooo@X__",
-    "__.+___+ooo##X__",
-    "__.++__++o#@oX__",
-    "__.o+___+$@o&X__",
-    "__.o++___*+&&X__",
-    "__.ooo+______=__",
-    "__.ooo$*+_______",
-    "__.oo#@o$&&&&___",
-    "__.o#@o#&&&&&=__",
-    "__.#@o#&&&&&&X__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_17_XPM[] = {
-    "16 16 9 1",
-    "O c #D3D3E1",
-    "# c #E1C85C",
-    "o c #F2F2F9",
-    "@ c #E3CD6F",
-    "+ c #E6D48A",
-    "_ c None",
-    ". c #D0D0DF",
-    "$ c #D7AF00",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.+oooooooooX__",
-    "__.@@ooooooooX__",
-    "__.o+@oooooooX__",
-    "__.#o+@ooooooX__",
-    "__.$@o+@oooooX__",
-    "__.$$@o+@ooooX__",
-    "__.$$$@o+@oooX__",
-    "__.$$$$@o+@ooX__",
-    "__.$$$$$@o+@oX__",
-    "__.$$$$$$@o+@X__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_18_XPM[] = {
-    "16 16 21 1",
-    "* c #FD2E2F",
-    "< c #FD2B2C",
-    "1 c #F5BCC1",
-    "3 c #F9696C",
-    "O c #D3D3E1",
-    "$ c #F6AEB3",
-    "o c #F2F2F9",
-    "@ c #F6A5AA",
-    "# c #FE0B0C",
-    "2 c #F2E9F0",
-    ", c #FD2A2B",
-    "= c #FF0909",
-    "- c #FF0606",
-    "& c #F3E1E7",
-    "+ c #F3DBE2",
-    "; c #F6A1A6",
-    "_ c None",
-    ". c #D0D0DF",
-    "> c #F7A2A6",
-    "X c #9C9CB6",
-    ": c #FF0202",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.ooooooooooX__",
-    "__.oo+oooo+ooX__",
-    "__.o@#$oo$#@oX__",
-    "__.o&*=$$=*&oX__",
-    "__.oo&*--*&ooX__",
-    "__.ooo;::>oooX__",
-    "__.oo$=,<=$ooX__",
-    "__.o1=*&&*=1oX__",
-    "__.o23&oo&32oX__",
-    "__.ooooooooooX__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_19_XPM[] = {
-    "16 16 8 1",
-    "# c #F0C819",
-    "O c #D3D3E1",
-    "o c #F2F2F9",
-    "+ c #FF0000",
-    "_ c None",
-    ". c #D0D0DF",
-    "@ c #D7AF00",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.oooo++ooooX__",
-    "__.ooo++++oooX__",
-    "__.oo++++++ooX__",
-    "__.o++++++++oX__",
-    "__.++++++++++X__",
-    "__.ooo++++oooX__",
-    "__.ooo++++oooX__",
-    "__.@@#++++#@@X__",
-    "__.@@#++++#@@X__",
-    "__.@@######@@X__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_20_XPM[] = {
-    "16 16 8 1",
-    "O c #D3D3E1",
-    "+ c #646464",
-    "o c #F2F2F9",
-    "# c #2BCC2A",
-    "_ c None",
-    ". c #D0D0DF",
-    "@ c #D7AF00",
-    "X c #9C9CB6",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.oooo++ooooX__",
-    "__.@@o+oo+o##X__",
-    "__.ooo+oo+oooX__",
-    "__.@@o+oo+o##X__",
-    "__.oo++++++ooX__",
-    "__.@@++++++##X__",
-    "__.oo++++++ooX__",
-    "__.@@++++++##X__",
-    "__.oo++++++ooX__",
-    "__.@@oooooo##X__",
-    "__XXXXXXXXXXXX__"
-    };
-    static const char *ImageList1_21_XPM[] = {
-    "16 16 13 1",
-    "@ c #BBCCBB",
-    "# c #84DD87",
-    "O c #D3D3E1",
-    "& c #A2CCA1",
-    "o c #F2F2F9",
-    "= c #98CC98",
-    "* c #74DA76",
-    "- c #2BCC2A",
-    "_ c None",
-    "+ c #99E19C",
-    ". c #D0D0DF",
-    "X c #9C9CB6",
-    "$ c #B0CCAF",
-    "__........X_____",
-    "__.ooooooo.X____",
-    "__.ooooooo.OX___",
-    "__.oooooooXXXX__",
-    "__.ooooooooooX__",
-    "__.ooooooooo+X@_",
-    "__.oooooooo##X$_",
-    "__.ooooooo#+oX&_",
-    "__.oooooo#+o*X=_",
-    "__.ooooo#+o#-X=_",
-    "__.oooo#+o#--X=_",
-    "__.ooo#+o#---X=_",
-    "__.oo#+o#----X=_",
-    "__.o#+o#-----X=_",
-    "__.#+o#------X=_",
-    "__XXXXXXXXXXXX=_"
-    };
-    ImageList1 = new wxImageList(16, 16, 23);
-    ImageList1->Add(wxBitmap(ImageList1_0_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_1_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_2_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_3_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_4_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_5_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_6_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_7_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_8_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_9_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_10_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_11_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_12_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_13_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_14_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_15_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_16_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_17_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_18_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_19_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_20_XPM));
-    ImageList1->Add(wxBitmap(ImageList1_21_XPM));
 
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100ProjectFrame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&T100ProjectFrame::OnAbout);
-    Connect(wxEVT_SIZE,(wxObjectEventFunction)&T100ProjectFrame::OnResize);
     //*)
+
     init();
     T100ProjectInvoking::Init(this);
 }
@@ -1207,197 +97,67 @@ T100ProjectFrame::~T100ProjectFrame()
     //*)
 
     T100ProjectInvoking::Uninit();
+    uninit();
 }
 
 T100VOID T100ProjectFrame::init()
 {
-    Connect(T100PROJECT_MENU_WORKSPACE_NEW,             wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceNew);
-    Connect(T100PROJECT_MENU_WORKSPACE_OPEN,            wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceOpen);
-    Connect(T100PROJECT_MENU_WORKSPACE_CLOSE,           wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceClose);
-    Connect(T100PROJECT_MENU_WORKSPACE_SAVE,            wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceSave);
-    Connect(T100PROJECT_MENU_WORKSPACE_SAVE_AS,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceSaveAs);
-    Connect(T100PROJECT_MENU_WORKSPACE_QUIT,            wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnQuit);
-    Connect(T100PROJECT_MENU_PROJECT_NEW,               wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectNew);
-    Connect(T100PROJECT_MENU_PROJECT_OPEN,              wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectOpen);
-    Connect(T100PROJECT_MENU_PROJECT_CLOSE,             wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectClose);
-    Connect(T100PROJECT_MENU_PROJECT_SAVE,              wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectSave);
-    Connect(T100PROJECT_MENU_PROJECT_SAVE_AS,           wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectSaveAs);
-    Connect(T100PROJECT_MENU_FILE_NEW,                  wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileNew);
-    Connect(T100PROJECT_MENU_FILE_OPEN,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileOpen);
-    Connect(T100PROJECT_MENU_FILE_CLOSE,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileClose);
-    Connect(T100PROJECT_MENU_FILE_SAVE,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileSave);
-    Connect(T100PROJECT_MENU_FILE_SAVE_AS,              wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileSaveAs);
-    Connect(T100PROJECT_MENU_EDIT_UNDO,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditUndo);
-    Connect(T100PROJECT_MENU_EDIT_REDO,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditRedo);
-    Connect(T100PROJECT_MENU_EDIT_CUT,                  wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditCut);
-    Connect(T100PROJECT_MENU_EDIT_COPY,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditCopy);
-    Connect(T100PROJECT_MENU_EDIT_PASTE,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditPaste);
-    Connect(T100PROJECT_MENU_SEARCH_FIND,               wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchFind);
-    Connect(T100PROJECT_MENU_SEARCH_REPLACE,            wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchReplace);
-    Connect(T100PROJECT_MENU_COMPILE_RUN,               wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileRun);
-    Connect(T100PROJECT_MENU_COMPILE_BUILD_AND_RUN,     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileBuildAndRun);
-    Connect(T100PROJECT_MENU_COMPILE_CLEAN,             wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileClean);
-    Connect(T100PROJECT_MENU_COMPILE_BUILD,             wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileBuild);
-    Connect(T100PROJECT_MENU_COMPILE_REBUILD,           wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileRebuild);
-    Connect(T100PROJECT_MENU_SETUP_EDITOR,              wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupEditor);
-    Connect(T100PROJECT_MENU_SETUP_COMPILER,            wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupCompiler);
-    Connect(T100PROJECT_MENU_HELP_ABOUT,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnHelpAbout);
+    Connect(T100PROJECT_MENU_WORKSPACE_NEW,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceCreate);
+    Connect(T100PROJECT_MENU_WORKSPACE_OPEN,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceOpen);
+    Connect(T100PROJECT_MENU_WORKSPACE_CLOSE,               wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceClose);
+    Connect(T100PROJECT_MENU_WORKSPACE_SAVE,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceSave);
+    Connect(T100PROJECT_MENU_WORKSPACE_QUIT,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnWorkSpaceQuit);
+
+    Connect(T100PROJECT_MENU_PROJECT_NEW,                   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectCreate);
+    Connect(T100PROJECT_MENU_PROJECT_REMOVE,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectRemove);
+    Connect(T100PROJECT_MENU_PROJECT_OPEN,                  wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectOpen);
+    Connect(T100PROJECT_MENU_PROJECT_CLOSE,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectClose);
+    Connect(T100PROJECT_MENU_PROJECT_SAVE,                  wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectSave);
+    Connect(T100PROJECT_MENU_PROJECT_SAVE_AS,               wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnProjectSaveAs);
+
+    Connect(T100PROJECT_MENU_FILE_NEW,                      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileCreate);
+    Connect(T100PROJECT_MENU_FILE_REMOVE,                   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileRemove);
+    Connect(T100PROJECT_MENU_FILE_OPEN,                     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileOpen);
+    Connect(T100PROJECT_MENU_FILE_CLOSE,                    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileClose);
+    Connect(T100PROJECT_MENU_FILE_SAVE,                     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileSave);
+    Connect(T100PROJECT_MENU_FILE_SAVE_AS,                  wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnFileSaveAs);
+
+    Connect(T100PROJECT_MENU_EDIT_UNDO,                     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditUndo);
+    Connect(T100PROJECT_MENU_EDIT_REDO,                     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditRedo);
+    Connect(T100PROJECT_MENU_EDIT_CUT,                      wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditCut);
+    Connect(T100PROJECT_MENU_EDIT_COPY,                     wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditCopy);
+    Connect(T100PROJECT_MENU_EDIT_PASTE,                    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnEditPaste);
+
+    Connect(T100PROJECT_MENU_VIEW_WORKSPACE,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnViewWorkSpaceTree);
+    Connect(T100PROJECT_MENU_VIEW_SEARCH,                   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnViewSearchResult);
+    Connect(T100PROJECT_MENU_VIEW_OUTPUT,                   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnViewCompileOutput);
+
+    Connect(T100PROJECT_MENU_SEARCH_FIND,                   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchFind);
+    Connect(T100PROJECT_MENU_SEARCH_REPLACE,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSearchReplace);
+
+    Connect(T100PROJECT_MENU_COMPILE_RUN,                   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileRun);
+    Connect(T100PROJECT_MENU_COMPILE_BUILD_AND_RUN,         wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileBuildAndRun);
+    Connect(T100PROJECT_MENU_COMPILE_BUILD,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileBuild);
+    Connect(T100PROJECT_MENU_COMPILE_CLEAN,                 wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileClean);
+    Connect(T100PROJECT_MENU_COMPILE_REBUILD,               wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnCompileRebuild);
+
+    Connect(T100PROJECT_MENU_DEBUG_START,                   wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnDebugStart);
+    Connect(T100PROJECT_MENU_DEBUG_STOP,                    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnDebugStop);
+
+    Connect(T100PROJECT_MENU_SETUP_EDITOR,                  wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupEditor);
+    Connect(T100PROJECT_MENU_SETUP_COMPILER,                wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnSetupCompiler);
+
+    Connect(T100PROJECT_MENU_HELP_ABOUT,                    wxEVT_COMMAND_MENU_SELECTED, (wxObjectEventFunction)&T100ProjectFrame::OnHelpAbout);
 }
 
-void T100ProjectFrame::OnWorkSpaceNew(wxCommandEvent& event)
+T100VOID T100ProjectFrame::uninit()
 {
-    T100ProjectInvoking::OnWorkSpaceNew();
-}
 
-void T100ProjectFrame::OnWorkSpaceOpen(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnWorkSpaceOpen();
-}
-
-void T100ProjectFrame::OnWorkSpaceClose(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnWorkSpaceClose();
-}
-
-void T100ProjectFrame::OnWorkSpaceSave(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnWorkSpaceSave();
-}
-
-void T100ProjectFrame::OnWorkSpaceSaveAs(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnWorkSpaceSaveAs();
-}
-
-void T100ProjectFrame::OnProjectNew(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnProjectNew();
-}
-
-void T100ProjectFrame::OnProjectOpen(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnProjectOpen();
-}
-
-void T100ProjectFrame::OnProjectClose(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnProjectClose();
-}
-
-void T100ProjectFrame::OnProjectSave(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnProjectSave();
-}
-
-void T100ProjectFrame::OnProjectSaveAs(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnProjectSaveAs();
-}
-
-void T100ProjectFrame::OnFileNew(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnFileNew();
-}
-
-void T100ProjectFrame::OnFileOpen(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnFileOpen();
-}
-
-void T100ProjectFrame::OnFileClose(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnFileClose();
-}
-
-void T100ProjectFrame::OnFileSave(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnFileSave();
-}
-
-void T100ProjectFrame::OnFileSaveAs(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnFileSaveAs();
 }
 
 void T100ProjectFrame::OnQuit(wxCommandEvent& event)
 {
-    T100ProjectInvoking::OnQuit();
     Close();
-}
-
-void T100ProjectFrame::OnEditUndo(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnEditUndo();
-}
-
-void T100ProjectFrame::OnEditRedo(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnEditRedo();
-}
-
-void T100ProjectFrame::OnEditCut(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnEditCut();
-}
-
-void T100ProjectFrame::OnEditCopy(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnEditCopy();
-}
-
-void T100ProjectFrame::OnEditPaste(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnEditPaste();
-}
-
-void T100ProjectFrame::OnSearchFind(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnSearchFind();
-}
-
-void T100ProjectFrame::OnSearchReplace(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnSearchReplace();
-}
-
-void T100ProjectFrame::OnCompileRun(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnCompileRun();
-}
-
-void T100ProjectFrame::OnCompileBuildAndRun(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnCompileBuildAndRun();
-}
-
-void T100ProjectFrame::OnCompileClean(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnCompileClean();
-}
-
-void T100ProjectFrame::OnCompileBuild(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnCompileBuild();
-}
-
-void T100ProjectFrame::OnCompileRebuild(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnCompileRebuild();
-}
-
-void T100ProjectFrame::OnSetupEditor(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnSetupEditor();
-}
-
-void T100ProjectFrame::OnSetupCompiler(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnSetupCompiler();
-}
-
-void T100ProjectFrame::OnHelpAbout(wxCommandEvent& event)
-{
-    T100ProjectInvoking::OnHelpAbout();
 }
 
 void T100ProjectFrame::OnAbout(wxCommandEvent& event)
@@ -1406,7 +166,202 @@ void T100ProjectFrame::OnAbout(wxCommandEvent& event)
     wxMessageBox(msg, _("Welcome to..."));
 }
 
-void T100ProjectFrame::OnResize(wxSizeEvent& event)
+T100VOID T100ProjectFrame::OnAuiPaneClose(wxAuiManagerEvent& event)
 {
-    T100ProjectInvoking::OnResize();
+    T100ProjectInvoking::OnAuiPaneClose(event.GetPane());
+}
+
+T100VOID T100ProjectFrame::OnWorkSpaceCreate(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnWorkSpaceCreate();
+}
+
+T100VOID T100ProjectFrame::OnWorkSpaceOpen(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnWorkSpaceOpen();
+}
+
+T100VOID T100ProjectFrame::OnWorkSpaceClose(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnWorkSpaceClose();
+}
+
+T100VOID T100ProjectFrame::OnWorkSpaceSave(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnWorkSpaceSave();
+}
+
+T100VOID T100ProjectFrame::OnWorkSpaceQuit(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnWorkSpaceQuit();
+}
+
+
+T100VOID T100ProjectFrame::OnProjectCreate(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnProjectCreate();
+}
+
+T100VOID T100ProjectFrame::OnProjectRemove(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnProjectRemove();
+}
+
+T100VOID T100ProjectFrame::OnProjectOpen(wxCommandEvent& event)
+{
+    //T100ProjectInvoking::OnProjectOpen();
+}
+
+T100VOID T100ProjectFrame::OnProjectClose(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnProjectClose();
+}
+
+T100VOID T100ProjectFrame::OnProjectSave(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnProjectSave();
+}
+
+T100VOID T100ProjectFrame::OnProjectSaveAs(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnProjectSaveAs();
+}
+
+
+T100VOID T100ProjectFrame::OnFileCreate(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnFileCreate();
+}
+
+T100VOID T100ProjectFrame::OnFileRemove(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnFileRemove();
+}
+
+T100VOID T100ProjectFrame::OnFileOpen(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnFileOpen();
+}
+
+T100VOID T100ProjectFrame::OnFileClose(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnFileClose();
+}
+
+T100VOID T100ProjectFrame::OnFileSave(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnFileSave();
+}
+
+T100VOID T100ProjectFrame::OnFileSaveAs(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnFileSaveAs();
+}
+
+
+
+T100VOID T100ProjectFrame::OnEditUndo(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnEditUndo();
+}
+
+T100VOID T100ProjectFrame::OnEditRedo(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnEditRedo();
+}
+
+T100VOID T100ProjectFrame::OnEditCut(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnEditCut();
+}
+
+T100VOID T100ProjectFrame::OnEditCopy(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnEditCopy();
+}
+
+T100VOID T100ProjectFrame::OnEditPaste(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnEditPaste();
+}
+
+
+T100VOID T100ProjectFrame::OnViewWorkSpaceTree(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnViewWorkSpaceTree(event.IsChecked());
+}
+
+T100VOID T100ProjectFrame::OnViewSearchResult(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnViewSearchResult(event.IsChecked());
+}
+
+T100VOID T100ProjectFrame::OnViewCompileOutput(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnViewCompileOutput(event.IsChecked());
+}
+
+
+T100VOID T100ProjectFrame::OnSearchFind(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnSearchFind();
+}
+
+T100VOID T100ProjectFrame::OnSearchReplace(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnSearchReplace();
+}
+
+
+T100VOID T100ProjectFrame::OnCompileRun(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnCompileRun();
+}
+
+T100VOID T100ProjectFrame::OnCompileBuildAndRun(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnCompileBuildAndRun();
+}
+
+T100VOID T100ProjectFrame::OnCompileBuild(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnCompileBuild();
+}
+
+T100VOID T100ProjectFrame::OnCompileClean(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnCompileClean();
+}
+
+T100VOID T100ProjectFrame::OnCompileRebuild(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnCompileRebuild();
+}
+
+
+T100VOID T100ProjectFrame::OnDebugStart(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnDebugStart();
+}
+
+T100VOID T100ProjectFrame::OnDebugStop(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnDebugStop();
+}
+
+
+T100VOID T100ProjectFrame::OnSetupEditor(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnSetupEditor();
+}
+
+T100VOID T100ProjectFrame::OnSetupCompiler(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnSetupCompiler();
+}
+
+
+T100VOID T100ProjectFrame::OnHelpAbout(wxCommandEvent& event)
+{
+    T100ProjectInvoking::OnHelpAbout();
 }

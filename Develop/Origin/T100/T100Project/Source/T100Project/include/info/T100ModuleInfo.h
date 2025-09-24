@@ -9,19 +9,19 @@ class T100ModuleInfo
         T100ModuleInfo();
         virtual ~T100ModuleInfo();
 
-        T100VOID                SetLabel(const T100WSTRING&);
-        const T100WSTRING&      GetLabel();
+        T100VOID                    SetLabel(const T100WSTRING&);
+        const T100WSTRING&          GetLabel();
 
-        T100VOID                SetIncludeFile(T100FileInfo*);
-        T100FileInfo*           GetIncludeFile();
+        T100VOID                    SetIncludeFile(T100FileInfo*);
+        T100FileInfo*               GetIncludeFile();
 
-        T100VOID                SetSourceFile(T100FileInfo*);
-        T100FileInfo*           GetSourceFile();
+        T100VOID                    SetSourceFile(T100FileInfo*);
+        T100FileInfo*               GetSourceFile();
 
     protected:
-        T100WSTRING             m_label;
-        T100FileInfo*           m_fileInclude       = T100NULL;
-        T100FileInfo*           m_fileSource        = T100NULL;
+        T100WSTRING                 m_label;
+        T100FileInfo                m_fileInclude;
+        T100FileInfo                m_fileSource;
 
     private:
 };

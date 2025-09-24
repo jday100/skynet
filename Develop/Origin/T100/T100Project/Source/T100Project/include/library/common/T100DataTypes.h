@@ -17,3 +17,4 @@ typedef     T100UINT32          T100UINT;
 typedef     T100INT32           T100INT;
 
 #endif // T100DATATYPES_H
+

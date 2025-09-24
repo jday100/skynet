@@ -3,17 +3,13 @@
 
 #include "T100XML.h"
 
-class T100ProjectFile : T100XML
+class T100ProjectFile : public T100XML
 {
     public:
         T100ProjectFile(const T100WSTRING&);
         virtual ~T100ProjectFile();
 
-        T100BOOL                IsExists();
-
-        T100BOOL                Check(const T100WSTRING&);
-
-        T100BOOL                Create();
+        T100BOOL            Check();
 
     protected:
 

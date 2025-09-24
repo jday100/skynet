@@ -3,12 +3,12 @@
 
 #include <unordered_map>
 #include <wx/aui/auibook.h>
-#include "T100Common.h"
+#include "T100Pack.h"
+#include "T100WxFileInfo.h"
 #include "T100FileInfo.h"
 #include "T100Editor.h"
-#include "T100Pack.h"
 
-#define     T100MAIN_PACK_HASH          std::unordered_map<T100WSTRING, T100Pack*>
+#define     T100MAIN_PACK_HASH                      std::unordered_map<T100WSTRING, T100Pack*>
 
 class T100MainPanel : public wxAuiNotebook
 {
@@ -20,18 +20,20 @@ class T100MainPanel : public wxAuiNotebook
                   long style = wxAUI_NB_DEFAULT_STYLE);
         virtual ~T100MainPanel();
 
+        const T100WSTRING           GetCurrentLabel();
+        const T100WSTRING           GetCurrentFilePath();
         T100Editor*                 GetCurrentEditor();
 
-        virtual T100BOOL            Open(T100FileInfo*);
-        virtual T100BOOL            Close(T100FileInfo*);
+        T100VOID                    UpdateCurrentLabel();
 
         T100BOOL                    Select(T100FileInfo*);
+        T100BOOL                    Open(T100FileInfo*);
+        T100BOOL                    Close(T100FileInfo*);
 
-        virtual T100BOOL            Save();
-        virtual T100BOOL            SaveAll();
-        virtual T100BOOL            Clear();
+        T100BOOL                    Save();
+        T100BOOL                    SaveAs(T100WxFileInfo*);
 
-        T100BOOL                    FileModified(const T100WSTRING&);
+        T100BOOL                    Clear();
 
     protected:
         T100Pack*                   m_current       = T100NULL;

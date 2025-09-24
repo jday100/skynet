@@ -4,7 +4,7 @@
 #include <atomic>
 #include "T100FileInfo.h"
 
-#define     T100FOLDER_INFO_VECTOR                  std::vector<T100FolderInfo*>
+#define     T100FOLDER_INFO_VECTOR                      std::vector<T100FolderInfo*>
 
 class T100FolderInfo
 {

@@ -1,10 +1,12 @@
 #ifndef T100PROJECTVIEW_H
 #define T100PROJECTVIEW_H
 
-#include "T100Pack.h"
-#include "T100ModuleInfo.h"
-#include "T100WorkSpaceInfo.h"
 #include "T100ProjectViewBase.h"
+
+class T100WorkSpaceInfo;
+class T100ProjectInfo;
+class T100ModuleInfo;
+class wxTreeItemId;
 
 class T100ProjectView : public T100ProjectViewBase
 {
@@ -17,43 +19,38 @@ class T100ProjectView : public T100ProjectViewBase
 
         T100BOOL                    WorkSpaceOpen(T100WorkSpaceInfo*);
         T100BOOL                    WorkSpaceClose();
-        T100BOOL                    WorkSpaceSave();
-        T100BOOL                    WorkSpaceSelect();
 
         T100BOOL                    ProjectAppend(T100ProjectInfo*);
-        T100VOID                    ProjectOpen(T100ProjectInfo*);
-        T100VOID                    ProjectOpen(wxTreeItemId, T100ProjectInfo*);
+        T100BOOL                    ProjectOpen(wxTreeItemId, T100ProjectInfo*);
         T100BOOL                    ProjectSelect();
+        T100BOOL                    ProjectBuild();
 
-        T100VOID                    FolderOpen(wxTreeItemId, T100FolderInfo*);
-        T100VOID                    FolderSelect();
 
-        T100BOOL                    FileOpen(wxTreeItemId, T100FileInfo*);
-        T100VOID                    FileClose(T100Pack*);
-        T100VOID                    FileSave();
-        T100VOID                    FileModified(const T100WSTRING&);
+        T100BOOL                    FolderList(wxTreeItemId, T100FolderInfo*);
+
+        T100BOOL                    FileSelect();
         T100BOOL                    FileSelect(wxTreeItemId, T100FileInfo*);
+        T100BOOL                    FileSelect(T100FileInfo*);
+        T100BOOL                    FileOpen(wxTreeItemId, T100FileInfo*);
+        T100BOOL                    FileOpen(T100FileInfo*);
+        T100VOID                    FileModified();
+        T100BOOL                    FileSave();
+        T100BOOL                    FileSaveAs(T100WxFileInfo*);
+        T100BOOL                    FileRemove(T100FileInfo*);
+        T100BOOL                    FileRemove(wxTreeItemId, T100FileInfo*);
 
-        T100VOID                    PageClose(T100Pack*);
-        T100VOID                    PageChanged();
+        T100BOOL                    DebugPrint(const T100WSTRING&);
 
-        T100VOID                    ShowFileName(T100WSTRING&);
-        T100VOID                    ShowSetupEditorDialog();
-        T100VOID                    ShowSetupCompilerDialog();
+        T100BOOL                    Clear();
+        T100BOOL                    Quit();
 
-        T100VOID                    Load(const T100PROJECT_INFO_VECTOR&);
+        T100BOOL                    ModuleAppend(T100WorkSpaceInfo*, T100ProjectInfo*, T100ModuleInfo*);
 
-        T100VOID                    Clear();
-
-        T100VOID                    Build();
-
-        T100VOID                    About();
-
-        T100VOID                    OnResize();
-
-        T100BOOL                    AppendModule(T100WorkSpaceInfo*, T100ProjectInfo*, T100ModuleInfo*);
+        wxTreeItemId                GetSelection();
+        const T100WSTRING           GetCurrentFilePath();
 
     protected:
+        T100BOOL                    CheckMainPanel();
 
     private:
 };

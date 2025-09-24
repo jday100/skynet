@@ -1,9 +1,6 @@
 #include "T100MainPanel.h"
 
-#include <wx/settings.h>
-
 #include "T100EditorPack.h"
-#include "T100ProjectConfig.h"
 #include "T100ProjectInvoking.h"
 
 BEGIN_EVENT_TABLE(T100MainPanel, wxAuiNotebook)
@@ -27,16 +24,84 @@ T100MainPanel::~T100MainPanel()
     //dtor
 }
 
+const T100WSTRING T100MainPanel::GetCurrentLabel()
+{
+    if(m_current){
+        return m_current->GetLabel();
+    }
+    return L"";
+}
+
+const T100WSTRING T100MainPanel::GetCurrentFilePath()
+{
+    if(m_current){
+        return m_current->GetPath();
+    }
+    return L"";
+}
+
 T100Editor* T100MainPanel::GetCurrentEditor()
 {
-    T100EditorPack*     pack    = dynamic_cast<T100EditorPack*>(m_current);
-
-    T100Editor*         editor  = T100NULL;
+    T100Editor*         editor      = T100NULL;
+    T100EditorPack*     pack        = dynamic_cast<T100EditorPack*>(m_current);
 
     if(pack){
         editor  = pack->GetEditor();
     }
     return editor;
+}
+
+T100VOID T100MainPanel::UpdateCurrentLabel()
+{
+    T100WSTRING     label;
+
+    if(m_current){
+        T100EditorPack*     editor      = T100NULL;
+        T100INT             index       = GetPageIndex(m_current);
+
+        if(index < 0){
+            return;
+        }
+
+        editor  = dynamic_cast<T100EditorPack*>(m_current);
+        if(editor){
+            if(editor->GetEditor()->GetModify()){
+                label   = L"*" + m_current->GetLabel();
+            }else{
+                label   = m_current->GetLabel();
+            }
+
+            SetPageText(index, label);
+        }
+    }
+}
+
+T100BOOL T100MainPanel::Select(T100FileInfo* info)
+{
+    if(!info){
+        return T100FALSE;
+    }
+
+    T100Pack*       pack         = T100NULL;
+
+    pack    = m_packs[info->GetPath()];
+
+    if(pack){
+
+    }else{
+        return T100FALSE;
+    }
+
+    T100INT         index       = GetPageIndex(pack);
+
+    if(index >= 0){
+
+    }else{
+        return T100FALSE;
+    }
+
+    SetSelection(index);
+    return T100TRUE;
 }
 
 T100BOOL T100MainPanel::Open(T100FileInfo* info)
@@ -45,37 +110,36 @@ T100BOOL T100MainPanel::Open(T100FileInfo* info)
         return T100FALSE;
     }
 
-    T100EditorPack*     pack    = T100NEW T100EditorPack(this);
-    T100WSTRING         path    = info->GetPath();
+    T100WSTRING         path        = info->GetPath();
+    T100EditorPack*     pack        = T100NEW T100EditorPack(this);
 
     if(pack){
         pack->SetLabel(info->GetLabel());
-
-        wxFont font(12, wxFONTFAMILY_DEFAULT, wxFONTSTYLE_NORMAL, wxFONTWEIGHT_NORMAL, false, T100ProjectConfig::T100PROJECT_EDITOR_FONT, wxFONTENCODING_DEFAULT);
-        pack->GetEditor()->StyleSetFont(wxSTC_STYLE_DEFAULT, font);
-
+        pack->SetPath(path);
     }else{
+        return T100FALSE;
+    }
+
+    if(AddPage(pack, info->GetLabel(), T100TRUE)){
+        T100INT     index       = GetPageIndex(pack);
+        m_current                       = pack;
+        m_packs[info->GetPath()]        = pack;
+    }else{
+        T100SAFE_DELETE(pack);
         return T100FALSE;
     }
 
     if(path.empty()){
 
     }else{
+        pack->GetEditor()->Lock();
         if(pack->GetEditor()->LoadFile(path)){
+            pack->GetEditor()->Unlock();
             pack->GetEditor()->SetPath(path);
         }else{
             T100SAFE_DELETE(pack);
             return T100FALSE;
         }
-    }
-
-    if(AddPage(pack, info->GetLabel(), T100TRUE)){
-        T100INT     index   = GetPageIndex(pack);
-        m_current                   = pack;
-        m_packs[info->GetPath()]    = pack;
-    }else{
-        T100SAFE_DELETE(pack);
-        return T100FALSE;
     }
 
     return T100TRUE;
@@ -87,27 +151,7 @@ T100BOOL T100MainPanel::Close(T100FileInfo* info)
         return T100FALSE;
     }
 
-    T100Pack*       pack    = m_packs[info->GetPath()];
-
-    if(!pack){
-        return T100FALSE;
-    }
-
-    if(DeletePage(pack->GetIndex())){
-
-    }else{
-        return T100FALSE;
-    }
-    return T100TRUE;
-}
-
-T100BOOL T100MainPanel::Select(T100FileInfo* info)
-{
-    if(!info){
-        return T100FALSE;
-    }
-
-    T100Pack*       pack        = T100NULL;
+    T100Pack*       pack         = T100NULL;
 
     pack    = m_packs[info->GetPath()];
 
@@ -117,7 +161,7 @@ T100BOOL T100MainPanel::Select(T100FileInfo* info)
         return T100FALSE;
     }
 
-    T100INT     index       = GetPageIndex(pack);
+    T100INT         index       = GetPageIndex(pack);
 
     if(index >= 0){
 
@@ -125,16 +169,12 @@ T100BOOL T100MainPanel::Select(T100FileInfo* info)
         return T100FALSE;
     }
 
-    SetSelection(index);
-
-    return T100TRUE;
+    return DeletePage(index);
 }
 
 T100BOOL T100MainPanel::Save()
 {
-    if(m_current){
-
-    }else{
+    if(!m_current){
         return T100FALSE;
     }
 
@@ -142,24 +182,43 @@ T100BOOL T100MainPanel::Save()
 
     editor  = GetCurrentEditor();
 
-    if(editor){
-
-    }else{
+    if(!editor){
         return T100FALSE;
     }
 
     if(editor->SaveFile(editor->GetPath())){
-        SetPageText(GetPageIndex(m_current), m_current->GetLabel());
-    }else{
+        return T100TRUE;
+    }
+    return T100FALSE;
+}
+
+T100BOOL T100MainPanel::SaveAs(T100WxFileInfo* info)
+{
+    if(!info){
         return T100FALSE;
     }
 
-    return T100TRUE;
-}
+    if(!m_current){
+        return T100FALSE;
+    }
 
-T100BOOL T100MainPanel::SaveAll()
-{
+    T100Editor*     editor      = T100NULL;
 
+    editor  = GetCurrentEditor();
+
+    if(!editor){
+        return T100FALSE;
+    }
+
+    if(editor->SaveFile(info->GetPath())){
+        editor->SetLabel(info->GetLabel());
+        editor->SetPath(info->GetPath());
+        m_current->SetLabel(info->GetLabel());
+        m_current->SetPath(info->GetPath());
+        UpdateCurrentLabel();
+        return T100TRUE;
+    }
+    return T100FALSE;
 }
 
 T100BOOL T100MainPanel::Clear()
@@ -170,13 +229,13 @@ T100BOOL T100MainPanel::Clear()
 
 T100VOID T100MainPanel::OnPageChanged(wxAuiNotebookEvent& event)
 {
-    T100EditorPack*     pack        = T100NULL;
+    T100Pack*       pack        = T100NULL;
 
     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
 
     m_current   = pack;
 
-    T100ProjectInvoking::OnPageChanged();
+    T100ProjectInvoking::OnMainPanelPageChanged();
 }
 
 T100VOID T100MainPanel::OnPageClosing(wxAuiNotebookEvent& event)
@@ -185,7 +244,7 @@ T100VOID T100MainPanel::OnPageClosing(wxAuiNotebookEvent& event)
 
     pack    = dynamic_cast<T100Pack*>(GetCurrentPage());
 
-    T100ProjectInvoking::OnPageClosing(pack);
+    T100ProjectInvoking::OnMainPanelPageClosing(pack);
 }
 
 T100VOID T100MainPanel::OnPageClosed(wxAuiNotebookEvent& event)
@@ -200,25 +259,5 @@ T100VOID T100MainPanel::OnPageClosed(wxAuiNotebookEvent& event)
         m_current   = T100NULL;
     }
 
-    T100ProjectInvoking::OnPageClosed(pack);
-}
-
-T100BOOL T100MainPanel::FileModified(const T100WSTRING& path)
-{
-    T100Pack*   pack    = m_packs[path];
-
-    if(pack){
-
-    }else{
-        return T100FALSE;
-    }
-
-    T100BOOL    result;
-    T100INT     index       = GetPageIndex(pack);
-
-    if(index >= 0){
-        result  = SetPageText(index, L"*" + pack->GetLabel());
-    }
-
-    return result;
+    T100ProjectInvoking::OnMainPanelPageClosed(pack);
 }

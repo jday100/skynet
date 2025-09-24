@@ -9,15 +9,15 @@ class T100WxFolderInfo
         T100WxFolderInfo();
         virtual ~T100WxFolderInfo();
 
-        T100VOID                SetLabel(const T100WSTRING&);
-        const T100WSTRING&      GetLabel();
+        T100VOID                    SetLabel(const T100WSTRING&);
+        const T100WSTRING&          GetLabel();
 
-        T100VOID                SetPath(const T100WSTRING&);
-        const T100WSTRING&      GetPath();
+        T100VOID                    SetPath(const T100WSTRING&);
+        const T100WSTRING&          GetPath();
 
     protected:
-        T100WSTRING             m_label;
-        T100WSTRING             m_path;
+        T100WSTRING                 m_label;
+        T100WSTRING                 m_path;
 
     private:
 };

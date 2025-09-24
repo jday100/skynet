@@ -1,30 +1,24 @@
 #include "T100FileInfo.h"
 
-T100FileInfo::T100FileInfo()
+T100FileInfo::T100FileInfo() :
+    m_label(),
+    m_filename(),
+    m_extname(),
+    m_path(),
+    m_folder()
 {
     //ctor
-    init();
+    m_opened        = T100FALSE;
 }
 
 T100FileInfo::~T100FileInfo()
 {
     //dtor
-    uninit();
-}
-
-T100VOID T100FileInfo::init()
-{
-    m_opened    = T100FALSE;
-}
-
-T100VOID T100FileInfo::uninit()
-{
-
 }
 
 T100VOID T100FileInfo::SetOpened(T100BOOL value)
 {
-    m_opened    = value;
+    m_opened        = value;
 }
 
 T100BOOL T100FileInfo::IsOpened()
@@ -74,7 +68,7 @@ const T100WSTRING& T100FileInfo::GetPath()
 
 T100VOID T100FileInfo::SetFolder(const T100WSTRING& folder)
 {
-    m_folder    = folder;
+    m_folder        = folder;
 }
 
 const T100WSTRING& T100FileInfo::GetFolder()

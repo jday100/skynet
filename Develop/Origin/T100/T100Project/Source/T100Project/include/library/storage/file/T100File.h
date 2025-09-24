@@ -9,9 +9,13 @@ class T100File
         T100File(const T100WSTRING&);
         virtual ~T100File();
 
-        virtual T100BOOL            IsExists();
+        T100VOID                SetPath(const T100WSTRING&);
+        const T100WSTRING&      GetPath();
+
+        T100BOOL                IsExists();
 
     protected:
+        T100WSTRING             m_path;
 
     private:
 };

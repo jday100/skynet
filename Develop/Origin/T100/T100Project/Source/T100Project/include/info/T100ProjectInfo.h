@@ -6,7 +6,7 @@
 #include "T100FileInfo.h"
 #include "T100FolderInfo.h"
 
-#define     T100PROJECT_INFO_VECTOR                 std::vector<T100ProjectInfo*>
+#define     T100PROJECT_INFO_VECTOR                     std::vector<T100ProjectInfo*>
 
 class T100ProjectInfo
 {
@@ -17,14 +17,17 @@ class T100ProjectInfo
         T100VOID                    SetOpened(T100BOOL);
         T100BOOL                    IsOpened();
 
-        T100VOID                    SetLabel(const T100WSTRING& label);
+        T100VOID                    SetLabel(const T100WSTRING&);
         const T100WSTRING&          GetLabel();
 
-        T100VOID                    SetPath(const T100WSTRING& path);
+        T100VOID                    SetPath(const T100WSTRING&);
         const T100WSTRING&          GetPath();
 
-        T100VOID                    SetFileName(const T100WSTRING& path);
+        T100VOID                    SetFileName(const T100WSTRING&);
         const T100WSTRING&          GetFileName();
+
+        T100VOID                    SetFolder(const T100WSTRING&);
+        const T100WSTRING&          GetFolder();
 
         T100VOID                    SetBuildTreeId(wxTreeItemId);
         wxTreeItemId                GetBuildTreeId();
@@ -35,14 +38,17 @@ class T100ProjectInfo
         T100VOID                    SetSourceTreeId(wxTreeItemId);
         wxTreeItemId                GetSourceTreeId();
 
-        T100VOID                    SetBuildPath(const T100WSTRING& path);
+        T100VOID                    SetBuildPath(const T100WSTRING&);
         const T100WSTRING&          GetBuildPath();
-        T100VOID                    SetCodePath(const T100WSTRING& path);
+        T100VOID                    SetCodePath(const T100WSTRING&);
         const T100WSTRING&          GetCodePath();
-        T100VOID                    SetIncludePath(const T100WSTRING& path);
+        T100VOID                    SetIncludePath(const T100WSTRING&);
         const T100WSTRING&          GetIncludePath();
-        T100VOID                    SetSourcePath(const T100WSTRING& path);
+        T100VOID                    SetSourcePath(const T100WSTRING&);
         const T100WSTRING&          GetSourcePath();
+
+        T100VOID                    SetBuildFileName(const T100WSTRING&);
+        const T100WSTRING&          GetBuildFileName();
 
         T100FILE_INFO_VECTOR&       GetFiles();
         T100FOLDER_INFO_VECTOR&     GetSubFolders();
@@ -52,16 +58,18 @@ class T100ProjectInfo
         T100WSTRING                 m_label;
         T100WSTRING                 m_path;
         T100WSTRING                 m_filename;
+        T100WSTRING                 m_folder;
 
         wxTreeItemId                m_treeIdBuild;
         wxTreeItemId                m_treeIdCode;
         wxTreeItemId                m_treeIdInclude;
         wxTreeItemId                m_treeIdSource;
 
-        T100WSTRING                 m_pathBuild     = L"build";
-        T100WSTRING                 m_pathCode      = L"source";
-        T100WSTRING                 m_pathInclude   = L"include";
-        T100WSTRING                 m_pathSource    = L"src";
+        T100WSTRING                 m_pathBuild         = L"build";
+        T100WSTRING                 m_pathCode          = L"source";
+        T100WSTRING                 m_pathInclude       = L"include";
+        T100WSTRING                 m_pathSource        = L"src";
+        T100WSTRING                 m_fileNameBuild     = L"";
 
         T100FILE_INFO_VECTOR        m_files;
         T100FOLDER_INFO_VECTOR      m_folders;

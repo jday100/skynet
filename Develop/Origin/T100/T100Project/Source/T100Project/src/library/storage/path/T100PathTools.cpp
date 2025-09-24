@@ -13,7 +13,6 @@ T100PathTools::~T100PathTools()
     //dtor
 }
 
-
 const T100WSTRING T100PathTools::GetCwd()
 {
     T100WCHAR       buffer[_MAX_PATH];
@@ -29,7 +28,7 @@ T100BOOL T100PathTools::Format(const T100WSTRING& file, T100WSTRING& path, T100W
     T100BOOL        result;
     T100WSTRING     value;
 
-    result = Full(file, value);
+    result = FullPath(file, value);
     if(!result){
         return T100FALSE;
     }
@@ -37,7 +36,7 @@ T100BOOL T100PathTools::Format(const T100WSTRING& file, T100WSTRING& path, T100W
     return result;
 }
 
-T100BOOL T100PathTools::Full(const T100WSTRING& file, T100WSTRING& path)
+T100BOOL T100PathTools::FullPath(const T100WSTRING& file, T100WSTRING& path)
 {
     T100WCHAR   buffer[_MAX_PATH];
     T100WCHAR*  result;

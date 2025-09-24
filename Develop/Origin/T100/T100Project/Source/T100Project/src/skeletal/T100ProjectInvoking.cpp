@@ -2,7 +2,7 @@
 
 #include "T100ProjectSkeletal.h"
 
-T100ProjectSkeletal*            T100ProjectInvoking::m_skeletal                 = T100NULL;
+T100ProjectSkeletal*        T100ProjectInvoking::m_skeletal                     = T100NULL;
 
 T100ProjectInvoking::T100ProjectInvoking()
 {
@@ -16,7 +16,7 @@ T100ProjectInvoking::~T100ProjectInvoking()
 
 T100VOID T100ProjectInvoking::Init(T100ProjectFrame* frame)
 {
-    m_skeletal      = T100NEW T100ProjectSkeletal();
+    m_skeletal  = T100NEW T100ProjectSkeletal();
     m_skeletal->Create(frame);
 }
 
@@ -26,14 +26,29 @@ T100VOID T100ProjectInvoking::Uninit()
     T100SAFE_DELETE(m_skeletal);
 }
 
-T100VOID T100ProjectInvoking::OnWorkSpaceNew()
+T100VOID T100ProjectInvoking::OnWorkSpaceCreate()
 {
-    m_skeletal->OnWorkSpaceNew();
+    m_skeletal->OnWorkSpaceCreate();
+}
+
+T100VOID T100ProjectInvoking::OnWorkSpaceCreateDone(T100WorkSpaceInfo* info)
+{
+    m_skeletal->OnWorkSpaceCreateDone(info);
+}
+
+T100VOID T100ProjectInvoking::OnWorkSpaceRemove()
+{
+    m_skeletal->OnWorkSpaceRemove();
 }
 
 T100VOID T100ProjectInvoking::OnWorkSpaceOpen()
 {
     m_skeletal->OnWorkSpaceOpen();
+}
+
+T100VOID T100ProjectInvoking::OnWorkSpaceOpenDone()
+{
+    m_skeletal->OnWorkSpaceOpenDone();
 }
 
 T100VOID T100ProjectInvoking::OnWorkSpaceClose()
@@ -51,14 +66,35 @@ T100VOID T100ProjectInvoking::OnWorkSpaceSaveAs()
     m_skeletal->OnWorkSpaceSaveAs();
 }
 
-T100VOID T100ProjectInvoking::OnProjectNew()
+T100VOID T100ProjectInvoking::OnWorkSpaceQuit()
 {
-    m_skeletal->OnProjectNew();
+    m_skeletal->OnWorkSpaceQuit();
 }
 
-T100VOID T100ProjectInvoking::OnProjectOpen()
+T100VOID T100ProjectInvoking::OnWorkSpaceMouseRightDown()
 {
-    m_skeletal->OnProjectOpen();
+    m_skeletal->OnWorkSpaceMouseRightDown();
+}
+
+
+T100VOID T100ProjectInvoking::OnProjectCreate()
+{
+    m_skeletal->OnProjectCreate();
+}
+
+T100VOID T100ProjectInvoking::OnProjectCreateDone(T100ProjectInfo* info)
+{
+    m_skeletal->OnProjectCreateDone(info);
+}
+
+T100VOID T100ProjectInvoking::OnProjectRemove()
+{
+    m_skeletal->OnProjectRemove();
+}
+
+T100VOID T100ProjectInvoking::OnProjectOpen(T100ProjectData* data)
+{
+    m_skeletal->OnProjectOpen(data);
 }
 
 T100VOID T100ProjectInvoking::OnProjectClose()
@@ -76,14 +112,35 @@ T100VOID T100ProjectInvoking::OnProjectSaveAs()
     m_skeletal->OnProjectSaveAs();
 }
 
-T100VOID T100ProjectInvoking::OnFileNew()
+T100VOID T100ProjectInvoking::OnProjectActivated()
 {
-    m_skeletal->OnFileNew();
+    m_skeletal->OnProjectActivated();
+}
+
+T100VOID T100ProjectInvoking::OnProjectSelect()
+{
+    m_skeletal->OnProjectSelect();
+}
+
+
+T100VOID T100ProjectInvoking::OnFileCreate()
+{
+    m_skeletal->OnFileCreate();
+}
+
+T100VOID T100ProjectInvoking::OnFileRemove()
+{
+    m_skeletal->OnFileRemove();
 }
 
 T100VOID T100ProjectInvoking::OnFileOpen()
 {
     m_skeletal->OnFileOpen();
+}
+
+T100VOID T100ProjectInvoking::OnFileOpenDone(T100FileData* data)
+{
+    m_skeletal->OnFileOpenDone(data);
 }
 
 T100VOID T100ProjectInvoking::OnFileClose()
@@ -100,6 +157,12 @@ T100VOID T100ProjectInvoking::OnFileSaveAs()
 {
     m_skeletal->OnFileSaveAs();
 }
+
+T100VOID T100ProjectInvoking::OnFileSelect()
+{
+    m_skeletal->OnFileSelect();
+}
+
 
 T100VOID T100ProjectInvoking::OnEditUndo()
 {
@@ -126,6 +189,23 @@ T100VOID T100ProjectInvoking::OnEditPaste()
     m_skeletal->OnEditPaste();
 }
 
+
+T100VOID T100ProjectInvoking::OnViewWorkSpaceTree(T100BOOL value)
+{
+    m_skeletal->OnViewWorkSpaceTree(value);
+}
+
+T100VOID T100ProjectInvoking::OnViewSearchResult(T100BOOL value)
+{
+    m_skeletal->OnViewSearchResult(value);
+}
+
+T100VOID T100ProjectInvoking::OnViewCompileOutput(T100BOOL value)
+{
+    m_skeletal->OnViewCompileOutput(value);
+}
+
+
 T100VOID T100ProjectInvoking::OnSearchFind()
 {
     m_skeletal->OnSearchFind();
@@ -135,6 +215,7 @@ T100VOID T100ProjectInvoking::OnSearchReplace()
 {
     m_skeletal->OnSearchReplace();
 }
+
 
 T100VOID T100ProjectInvoking::OnCompileRun()
 {
@@ -146,20 +227,38 @@ T100VOID T100ProjectInvoking::OnCompileBuildAndRun()
     m_skeletal->OnCompileBuildAndRun();
 }
 
-T100VOID T100ProjectInvoking::OnCompileClean()
-{
-    m_skeletal->OnCompileClean();
-}
-
 T100VOID T100ProjectInvoking::OnCompileBuild()
 {
     m_skeletal->OnCompileBuild();
+}
+
+T100VOID T100ProjectInvoking::OnCompileClean()
+{
+    m_skeletal->OnCompileClean();
 }
 
 T100VOID T100ProjectInvoking::OnCompileRebuild()
 {
     m_skeletal->OnCompileRebuild();
 }
+
+
+T100VOID T100ProjectInvoking::OnDebugStart()
+{
+    m_skeletal->OnDebugStart();
+}
+
+T100VOID T100ProjectInvoking::OnDebugStop()
+{
+    m_skeletal->OnDebugStop();
+}
+
+
+T100VOID T100ProjectInvoking::OnDebugPrint(const T100WSTRING& value)
+{
+    m_skeletal->OnDebugPrint(value);
+}
+
 
 T100VOID T100ProjectInvoking::OnSetupEditor()
 {
@@ -171,89 +270,46 @@ T100VOID T100ProjectInvoking::OnSetupCompiler()
     m_skeletal->OnSetupCompiler();
 }
 
+
 T100VOID T100ProjectInvoking::OnHelpAbout()
 {
     m_skeletal->OnHelpAbout();
 }
 
-T100VOID T100ProjectInvoking::OnResize()
-{
-    m_skeletal->OnResize();
-}
 
-T100VOID T100ProjectInvoking::OnQuit()
+T100VOID T100ProjectInvoking::OnFolderCreate()
 {
 
 }
 
-T100VOID T100ProjectInvoking::OnWorkSpaceProperties()
+T100VOID T100ProjectInvoking::OnFolderRemove()
 {
-    m_skeletal->OnWorkSpaceProperties();
+
 }
 
-T100VOID T100ProjectInvoking::OnFolderNew()
+T100VOID T100ProjectInvoking::OnFolderList(T100FolderData* data)
 {
-    m_skeletal->OnFolderNew();
+    m_skeletal->OnFolderList(data);
 }
 
-T100VOID T100ProjectInvoking::OnFolderSelect()
+T100VOID T100ProjectInvoking::OnFolderClose()
 {
-    m_skeletal->OnFolderSelect();
+
 }
 
-T100VOID T100ProjectInvoking::OnModuleNew()
+T100VOID T100ProjectInvoking::OnMainPanelPageChanged()
 {
-    m_skeletal->OnModuleNew();
+    m_skeletal->OnMainPanelPageChanged();
 }
 
-T100VOID T100ProjectInvoking::OnModuleNew(T100ModuleInfo* info)
+T100VOID T100ProjectInvoking::OnMainPanelPageClosed(T100Pack* pack)
 {
-    m_skeletal->OnModuleNew(info);
+    m_skeletal->OnMainPanelPageClosed(pack);
 }
 
-T100VOID T100ProjectInvoking::OnFileOpen(T100FileData* data)
+T100VOID T100ProjectInvoking::OnMainPanelPageClosing(T100Pack* pack)
 {
-    m_skeletal->OnFileOpen(data);
-}
-
-T100VOID T100ProjectInvoking::OnFolderOpen(T100FolderData* data)
-{
-    m_skeletal->OnFolderOpen(data);
-}
-
-T100VOID T100ProjectInvoking::OnProjectOpen(T100ProjectData* data)
-{
-    m_skeletal->OnProjectOpen(data);
-}
-
-T100VOID T100ProjectInvoking::OnProjectSelect()
-{
-    m_skeletal->OnProjectSelect();
-}
-
-T100VOID T100ProjectInvoking::OnWorkSpaceSelect()
-{
-    m_skeletal->OnWorkSpaceSelect();
-}
-
-T100VOID T100ProjectInvoking::OnPageChanged()
-{
-    m_skeletal->OnPageChanged();
-}
-
-T100VOID T100ProjectInvoking::OnPageClosing(T100Pack* pack)
-{
-    m_skeletal->OnPageClosing(pack);
-}
-
-T100VOID T100ProjectInvoking::OnPageClosed(T100Pack* pack)
-{
-    m_skeletal->OnPageClosed(pack);
-}
-
-T100VOID T100ProjectInvoking::OnItemExpanding()
-{
-    m_skeletal->OnItemExpanding();
+    m_skeletal->OnMainPanelPageClosing(pack);
 }
 
 T100VOID T100ProjectInvoking::OnModified(const T100WSTRING& path)
@@ -261,12 +317,17 @@ T100VOID T100ProjectInvoking::OnModified(const T100WSTRING& path)
     m_skeletal->OnModified(path);
 }
 
-T100VOID T100ProjectInvoking::OnProjectCreateWizardFinished(T100WxProjectInfo* info)
+T100VOID T100ProjectInvoking::OnModuleCreate()
 {
-    m_skeletal->OnProjectCreateWizardFinished(info);
+    m_skeletal->OnModuleCreate();
 }
 
-T100VOID T100ProjectInvoking::OnBuildMessage(const T100WSTRING& value)
+T100VOID T100ProjectInvoking::OnModuleCreateDone(T100ModuleInfo* info)
 {
-    m_skeletal->OnBuildMessage(value);
+    m_skeletal->OnModuleCreateDone(info);
+}
+
+T100VOID T100ProjectInvoking::OnAuiPaneClose(wxAuiPaneInfo* info)
+{
+    m_skeletal->OnAuiPaneClose(info);
 }

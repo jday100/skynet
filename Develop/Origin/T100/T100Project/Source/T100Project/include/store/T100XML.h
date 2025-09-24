@@ -10,12 +10,15 @@ class T100XML
         T100XML(const T100WSTRING&);
         virtual ~T100XML();
 
+        T100VOID                SetPath(const T100WSTRING&);
+        const T100WSTRING&      GetPath();
+
+        T100BOOL                IsExists();
+
     protected:
-        T100WSTRING         m_filename;
+        T100WSTRING             m_path;
 
     private:
-        T100VOID            init();
-        T100VOID            uninit();
 };
 
 #endif // T100XML_H

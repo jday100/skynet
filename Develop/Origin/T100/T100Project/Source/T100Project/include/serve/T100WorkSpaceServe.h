@@ -2,10 +2,11 @@
 #define T100WORKSPACESERVE_H
 
 #include <atomic>
-#include "T100Common.h"
-#include "T100ProjectServe.h"
 #include "T100WxFolderInfo.h"
 #include "T100WorkSpaceInfo.h"
+#include "T100FileServe.h"
+#include "T100FolderServe.h"
+#include "T100ProjectServe.h"
 
 class T100WorkSpaceServe
 {
@@ -13,53 +14,37 @@ class T100WorkSpaceServe
         T100WorkSpaceServe();
         virtual ~T100WorkSpaceServe();
 
-        virtual T100BOOL                        Create();
-        virtual T100BOOL                        Destroy();
+        T100FileServe&              GetFileServe();
+        T100FolderServe&            GetFolderServe();
+        T100ProjectServe&           GetProjectServe();
 
-        T100ProjectServe*                       GetProjectServe();
+        T100VOID                    SetOpened(T100BOOL);
+        T100BOOL                    IsOpened();
 
-        T100WorkSpaceInfo*                      GetWorkSpaceInfo();
+        T100BOOL                    Create();
+        T100WorkSpaceInfo*          GetWorkSpaceInfo();
 
-        T100VOID                                GetFolderInfo(T100WxFolderInfo&);
+        virtual T100BOOL            CheckWorkSpaceFolder(const T100WSTRING&);
+        virtual T100BOOL            CheckWorkSpaceFile(T100WxFolderInfo*);
 
-        T100BOOL                                IsOpened();
+        virtual T100BOOL            CreateWorkSpace(T100WorkSpaceInfo*);
+        virtual T100BOOL            CreateWorkSpaceFile(T100WorkSpaceInfo*);
 
-        virtual T100BOOL                        CreateWorkSpace(T100WorkSpaceInfo*);
-        virtual T100BOOL                        CreateWorkSpaceFile(T100WorkSpaceInfo*);
+        virtual T100BOOL            OpenWorkSpace(T100WorkSpaceInfo*);
+        virtual T100BOOL            OpenWorkSpaceFile(T100WorkSpaceInfo*);
 
-        virtual T100BOOL                        OpenWorkSpace(T100WorkSpaceInfo*);
-        virtual T100BOOL                        OpenWorkSpaceFile(T100WorkSpaceInfo*);
-
-        T100BOOL                                CheckWorkSpaceFolder(const T100WxFolderInfo&);
-        T100BOOL                                CheckWorkSpaceFile(const T100WxFolderInfo&);
-
-        T100BOOL                                Open(const T100WxFolderInfo&);
-
-        T100BOOL                                Close();
-        T100BOOL                                Save();
-
-        virtual T100VOID                        Save(T100WorkSpaceInfo*);
-        virtual T100VOID                        SaveAs(T100WorkSpaceInfo*);
-
-        virtual T100VOID                        Build();
-        virtual T100BOOL                        Run();
-
-        virtual T100VOID                        Clear();
+        T100BOOL                    CloseWorkSpace();
 
     protected:
-        T100WSTRING                             GetFileName(const T100WxFolderInfo&);
+        std::atomic_bool            m_opened;
+        T100WorkSpaceInfo*          m_workspace     = T100NULL;
 
-    protected:
-        std::atomic_bool                        m_opened;
-        T100WorkSpaceInfo*                      m_info          = T100NULL;
-        T100ProjectServe*                       m_projectServe  = T100NULL;
+        T100FileServe               m_serveFile;
+        T100FolderServe             m_serveFolder;
+        T100ProjectServe            m_serveProject;
 
     private:
-        T100VOID                                init();
-        T100VOID                                uninit();
-
-        T100BOOL                                WorkSpaceOpen(T100WorkSpaceInfo*);
-        T100BOOL                                WorkSpaceClose();
+        T100WSTRING                 GetFileName(const T100WSTRING&);
 };
 
 #endif // T100WORKSPACESERVE_H

@@ -11,15 +11,15 @@ class T100EditorPack : public T100Pack
         T100EditorPack(wxWindow*);
         virtual ~T100EditorPack();
 
-        T100VOID            SetEditor(T100Editor*);
-        T100Editor*         GetEditor();
+        T100VOID                SetEditor(T100Editor*);
+        T100Editor*             GetEditor();
 
     protected:
-        T100Editor*         m_editor        = T100NULL;
+        T100Editor*             m_editor        = T100NULL;
 
     private:
-        T100VOID            init();
-        T100VOID            uninit();
+        T100VOID                init();
+        T100VOID                uninit();
 };
 
 #endif // T100EDITORPACK_H

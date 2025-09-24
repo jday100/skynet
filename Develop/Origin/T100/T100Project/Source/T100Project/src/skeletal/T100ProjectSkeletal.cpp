@@ -1,20 +1,10 @@
 #include "T100ProjectSkeletal.h"
 
-#include <wx/dirdlg.h>
-#include <wx/filedlg.h>
 #include "T100PathTools.h"
-#include "T100ProjectMain.h"
-#include "T100WxFolderInfo.h"
-
 #include "T100FileData.h"
 #include "T100FolderData.h"
 #include "T100ProjectData.h"
-#include "T100WxProjectInfo.h"
-
 #include "T100EditorPack.h"
-
-#include "T100ProjectConfig.h"
-#include "T100DebugTools.h"
 
 T100ProjectSkeletal::T100ProjectSkeletal() :
     T100ProjectSkeletalBase()
@@ -33,6 +23,7 @@ T100VOID T100ProjectSkeletal::Create(T100ProjectFrame* frame)
     m_serve     = T100NEW T100WorkSpaceServe();
 
     m_view->Create(frame);
+    m_view->UpdateTitle();
 }
 
 T100VOID T100ProjectSkeletal::Destroy()
@@ -42,54 +33,68 @@ T100VOID T100ProjectSkeletal::Destroy()
     T100SAFE_DELETE(m_view);
 }
 
-T100VOID T100ProjectSkeletal::OnWorkSpaceNew()
+T100VOID T100ProjectSkeletal::OnWorkSpaceCreate()
 {
-    T100BOOL        result      = T100TRUE;
-
     if(m_serve->IsOpened()){
-        result  = WorkSpaceClose();
+        if(WorkSpaceClose()){
+
+        }else{
+            return;
+        }
     }
 
-    if(!result){
-        return;
+    m_view->ShowWorkSpaceCreateWizard();
+}
+
+T100VOID T100ProjectSkeletal::OnWorkSpaceCreateDone(T100WorkSpaceInfo* info)
+{
+    if(info){
+        if(m_serve->IsOpened()){
+            if(WorkSpaceClose()){
+
+            }else{
+                m_view->ShowWorkSpaceCreateFailureDialog();
+                return;
+            }
+        }
+
+        if(WorkSpaceCreate(info)){
+
+        }else{
+            m_view->ShowWorkSpaceCreateFailureDialog();
+            return;
+        }
+
+        T100WxFolderInfo        folder;
+
+        folder.SetPath(info->GetPath());
+
+        if(WorkSpaceOpen(&folder)){
+            return;
+        }
     }
 
-    T100WorkSpaceInfo*      info        = T100NEW T100WorkSpaceInfo();
+    m_view->ShowWorkSpaceCreateFailureDialog();
+}
 
-    if(!m_view->ShowWorkSpaceCreateDialog(info)){
-        return;
-    }
+T100VOID T100ProjectSkeletal::OnWorkSpaceRemove()
+{
 
-    if(!WorkSpaceNew(info)){
-        T100SAFE_DELETE(info);
-        return;
-    }
-
-    T100WxFolderInfo        folder;
-
-    folder.SetPath(info->GetPath());
-    T100SAFE_DELETE(info);
-
-    if(!WorkSpaceOpen(folder)){
-        return;
-    }
 }
 
 T100VOID T100ProjectSkeletal::OnWorkSpaceOpen()
 {
-    T100BOOL        result      = T100TRUE;
-
     if(m_serve->IsOpened()){
-        result  = WorkSpaceClose();
+        if(WorkSpaceClose()){
+
+        }else{
+            return;
+        }
     }
 
-    if(!result){
-        return;
-    }
+    T100WSTRING     path;
 
-    T100WSTRING         path;
-
-    if(m_view->ShowDirDialog(path) == wxID_OK){
+    if(m_view->ShowFolderDialog(path) == wxID_OK){
 
     }else{
         return;
@@ -105,54 +110,120 @@ T100VOID T100ProjectSkeletal::OnWorkSpaceOpen()
     info.SetLabel(label);
     info.SetPath(path);
 
-    if(WorkSpaceOpen(info)){
+    if(WorkSpaceOpen(&info)){
         return;
     }
 
     m_view->ShowWorkSpaceOpenFailureDialog();
 }
 
+T100VOID T100ProjectSkeletal::OnWorkSpaceOpenDone()
+{
+
+}
+
 T100VOID T100ProjectSkeletal::OnWorkSpaceClose()
 {
-    if(m_serve->IsOpened()){
-
-    }else{
-        return;
-    }
-
     WorkSpaceClose();
 }
 
 T100VOID T100ProjectSkeletal::OnWorkSpaceSave()
 {
-    if(m_serve->IsOpened()){
 
-    }else{
-        return;
-    }
-
-    WorkSpaceSave();
 }
 
 T100VOID T100ProjectSkeletal::OnWorkSpaceSaveAs()
 {
-    if(m_serve->IsOpened()){
 
+}
+
+T100VOID T100ProjectSkeletal::OnWorkSpaceQuit()
+{
+    if(m_serve->IsOpened()){
+        if(WorkSpaceClose()){
+
+        }else{
+            return;
+        }
     }else{
+        if(m_view->IsDirty()){
+            T100INT     value;
+
+            value = m_view->ShowWorkSpaceNotSaveDialog();
+
+            if(value == wxYES){
+                /*if(!WorkSpaceSave()){
+                    return T100FALSE;
+                }*/
+            }else if(value == wxNO){
+
+            }else if(value == wxCANCEL){
+                return;
+            }
+        }
+    }
+
+    m_view->Quit();
+}
+
+T100VOID T100ProjectSkeletal::OnWorkSpaceMouseRightDown()
+{
+    m_view->ShowWorkSpacePopupMenu(m_serve->IsOpened());
+}
+
+
+T100VOID T100ProjectSkeletal::OnProjectCreate()
+{
+    m_view->ShowProjectCreateWizard();
+}
+
+T100VOID T100ProjectSkeletal::OnProjectCreateDone(T100ProjectInfo* info)
+{
+    if(!info){
         return;
     }
 
-    WorkSpaceSaveAs();
+    if(ProjectCreate(info)){
+        T100ProjectInfo*    project     = m_serve->GetProjectServe().GetCurrentProject();
+
+        if(project){
+            if(m_view->ProjectAppend(project)){
+                return;
+            }
+        }
+    }
+
+    m_view->ShowProjectCreateFailureDialog();
 }
 
-T100VOID T100ProjectSkeletal::OnProjectNew()
+T100VOID T100ProjectSkeletal::OnProjectRemove()
 {
-    ProjectNew();
+
 }
 
-T100VOID T100ProjectSkeletal::OnProjectOpen()
+T100VOID T100ProjectSkeletal::OnProjectOpen(T100ProjectData* data)
 {
+    if(!data){
+        return;
+    }
 
+    T100ProjectInfo*        info        = data->GetProjectInfo();
+
+    if(!info){
+        return;
+    }
+
+    if(info->IsOpened()){
+        return;
+    }
+
+    if(m_serve->GetProjectServe().Open(info)){
+        if(m_view->ProjectOpen(data->GetId(), info)){
+
+        }
+    }else{
+
+    }
 }
 
 T100VOID T100ProjectSkeletal::OnProjectClose()
@@ -170,29 +241,57 @@ T100VOID T100ProjectSkeletal::OnProjectSaveAs()
 
 }
 
-T100VOID T100ProjectSkeletal::OnFileNew()
+T100VOID T100ProjectSkeletal::OnProjectActivated()
 {
-    T100FileInfo*       info        = T100NEW T100FileInfo();
 
-    info->SetLabel(L"unnamed");
+}
 
-    m_view->FileOpen(0, info);
+T100VOID T100ProjectSkeletal::OnProjectSelect()
+{
+    m_view->ProjectSelect();
+}
+
+
+T100VOID T100ProjectSkeletal::OnFileCreate()
+{
+    FileCreate();
+}
+
+T100VOID T100ProjectSkeletal::OnFileRemove()
+{
+    FileRemove();
 }
 
 T100VOID T100ProjectSkeletal::OnFileOpen()
 {
-    wxFileDialog        dialog(m_view->GetFrame());
+    FileOpen();
+}
 
-    if(dialog.ShowModal() == wxID_CANCEL){
+T100VOID T100ProjectSkeletal::OnFileOpenDone(T100FileData* data)
+{
+    if(!data){
         return;
     }
 
-    T100FileInfo*       info        = T100NEW T100FileInfo();
+    T100FileServe&      serve   = m_serve->GetFileServe();
+    T100FileInfo*       info    = data->GetFileInfo();
 
-    info->SetFileName(dialog.GetFilename().ToStdWstring());
-    info->SetPath(dialog.GetPath().ToStdWstring());
+    if(!info){
+        return;
+    }
 
-    m_view->FileOpen(0, info);
+    if(serve.IsOpened(info->GetPath())){
+        m_view->FileSelect(data->GetId(), info);
+    }else{
+        if(serve.Open(info)){
+            if(m_view->FileOpen(data->GetId(), info)){
+                m_view->ClearDirty();
+                m_view->UpdateTitle();
+            }
+        }else{
+            m_view->ShowFileOpenFailureDialog();
+        }
+    }
 }
 
 T100VOID T100ProjectSkeletal::OnFileClose()
@@ -207,8 +306,14 @@ T100VOID T100ProjectSkeletal::OnFileSave()
 
 T100VOID T100ProjectSkeletal::OnFileSaveAs()
 {
-
+    FileSaveAs();
 }
+
+T100VOID T100ProjectSkeletal::OnFileSelect()
+{
+    m_view->FileSelect();
+}
+
 
 T100VOID T100ProjectSkeletal::OnEditUndo()
 {
@@ -235,6 +340,23 @@ T100VOID T100ProjectSkeletal::OnEditPaste()
 
 }
 
+
+T100VOID T100ProjectSkeletal::OnViewWorkSpaceTree(T100BOOL value)
+{
+    m_view->ShowViewWorkSpaceTree(value);
+}
+
+T100VOID T100ProjectSkeletal::OnViewSearchResult(T100BOOL value)
+{
+    m_view->ShowViewSearchResult(value);
+}
+
+T100VOID T100ProjectSkeletal::OnViewCompileOutput(T100BOOL value)
+{
+    m_view->ShowViewCompileOutput(value);
+}
+
+
 T100VOID T100ProjectSkeletal::OnSearchFind()
 {
 
@@ -245,35 +367,78 @@ T100VOID T100ProjectSkeletal::OnSearchReplace()
 
 }
 
+
 T100VOID T100ProjectSkeletal::OnCompileRun()
 {
-    m_serve->Run();
+    T100WorkSpaceInfo*      workspace       = m_serve->GetWorkSpaceInfo();
+    T100ProjectInfo*        project         = m_serve->GetProjectServe().GetCurrentProject();
+
+    if(workspace && project){
+        if(ProjectRun(workspace, project)){
+            return;
+        }
+    }
+
+    m_view->ShowProjectCreateFailureDialog();
 }
 
 T100VOID T100ProjectSkeletal::OnCompileBuildAndRun()
 {
-    //m_serve->Build();
-}
 
-T100VOID T100ProjectSkeletal::OnCompileClean()
-{
-    //m_serve->Clean();
 }
 
 T100VOID T100ProjectSkeletal::OnCompileBuild()
 {
-    m_serve->Build();
-    m_view->Build();
+    T100WorkSpaceInfo*      workspace   = m_serve->GetWorkSpaceInfo();
+    T100ProjectInfo*        project     = m_serve->GetProjectServe().GetCurrentProject();
+
+    if(workspace && project){
+        if(ProjectBuild(workspace, project)){
+            return;
+        }
+    }
+
+    m_view->ShowProjectCreateFailureDialog();
+}
+
+T100VOID T100ProjectSkeletal::OnCompileClean()
+{
+    T100WorkSpaceInfo*      workspace   = m_serve->GetWorkSpaceInfo();
+    T100ProjectInfo*        project     = m_serve->GetProjectServe().GetCurrentProject();
+
+    if(workspace && project){
+        if(ProjectClean(workspace, project)){
+            return;
+        }
+    }
 }
 
 T100VOID T100ProjectSkeletal::OnCompileRebuild()
 {
-    //m_serve->Rebuild();
+
 }
+
+
+T100VOID T100ProjectSkeletal::OnDebugStart()
+{
+
+}
+
+T100VOID T100ProjectSkeletal::OnDebugStop()
+{
+
+}
+
+
+T100VOID T100ProjectSkeletal::OnDebugPrint(const T100WSTRING& value)
+{
+    m_view->DebugPrint(value);
+}
+
 
 T100VOID T100ProjectSkeletal::OnSetupEditor()
 {
-    m_view->ShowSetupEditorDialog();
+
 }
 
 T100VOID T100ProjectSkeletal::OnSetupCompiler()
@@ -281,49 +446,60 @@ T100VOID T100ProjectSkeletal::OnSetupCompiler()
     m_view->ShowSetupCompilerDialog();
 }
 
+
 T100VOID T100ProjectSkeletal::OnHelpAbout()
 {
-    m_view->About();
+
 }
 
-T100VOID T100ProjectSkeletal::OnResize()
+T100VOID T100ProjectSkeletal::OnFolderList(T100FolderData* data)
 {
-    m_view->OnResize();
+    T100FolderInfo*     info    = data->GetFolderInfo();
+
+    m_serve->GetFolderServe().List(info);
+
+    m_view->FolderList(data->GetId(), info);
 }
 
-T100VOID T100ProjectSkeletal::OnQuit()
+T100VOID T100ProjectSkeletal::OnMainPanelPageChanged()
 {
-
+    m_view->UpdateTitle();
 }
 
-T100VOID T100ProjectSkeletal::OnWorkSpaceProperties()
+T100VOID T100ProjectSkeletal::OnMainPanelPageClosing(T100Pack* pack)
 {
-    m_view->ShowWorkSpacePropertiesDialog();
+    T100EditorPack*     editor      = dynamic_cast<T100EditorPack*>(pack);
+
+    if(editor){
+        if(m_serve->GetFileServe().Close(editor->GetEditor()->GetPath())){
+
+        }
+    }
 }
 
-T100VOID T100ProjectSkeletal::OnFolderNew()
+T100VOID T100ProjectSkeletal::OnMainPanelPageClosed(T100Pack* pack)
 {
-
+    m_view->UpdateTitle();
 }
 
-T100VOID T100ProjectSkeletal::OnFolderSelect()
+T100VOID T100ProjectSkeletal::OnModified(const T100WSTRING& path)
 {
-    m_view->FolderSelect();
+    m_view->FileModified();
 }
 
-T100VOID T100ProjectSkeletal::OnModuleNew()
+T100VOID T100ProjectSkeletal::OnModuleCreate()
 {
     m_view->ShowModuleCreateDialog();
 }
 
-T100VOID T100ProjectSkeletal::OnModuleNew(T100ModuleInfo* info)
+T100VOID T100ProjectSkeletal::OnModuleCreateDone(T100ModuleInfo* info)
 {
     if(!info){
         return;
     }
 
-    T100WorkSpaceInfo*      workspace   = T100NULL;
-    T100ProjectLogic*       logic       = m_serve->GetProjectServe()->GetProjectLogic();
+    T100ProjectServe&           serve           = m_serve->GetProjectServe();
+    T100WorkSpaceInfo*          workspace       = T100NULL;
 
     workspace   = m_serve->GetWorkSpaceInfo();
 
@@ -331,172 +507,32 @@ T100VOID T100ProjectSkeletal::OnModuleNew(T100ModuleInfo* info)
         return;
     }
 
-    if(logic->CreateModule(workspace, info)){
+    if(serve.ModuleCreate(workspace, info)){
 
     }else{
         return;
     }
 
-    m_view->AppendModule(m_serve->GetWorkSpaceInfo(), m_serve->GetProjectServe()->GetProjectInfo(), info);
-}
-
-T100VOID T100ProjectSkeletal::OnFileOpen(T100FileData* data)
-{
-    if(!data){
+    if(m_view->ModuleAppend(m_serve->GetWorkSpaceInfo(), serve.GetCurrentProject(), info)){
         return;
     }
+}
 
-    T100FileLogic*      logic       = m_serve->GetProjectServe()->GetFileLogic();
-    T100FileInfo*       info        = data->GetFileInfo();
-
+T100VOID T100ProjectSkeletal::OnAuiPaneClose(wxAuiPaneInfo* info)
+{
     if(!info){
         return;
     }
 
-    if(logic->IsOpened(info->GetPath())){
-        m_view->FileSelect(data->GetId(), info);
-    }else{
-        if(!logic->IsExists(info->GetPath())){
-            return;
-        }
+    T100WSTRING         name;
 
-        if(!logic->Open(info->GetPath(), info)){
-            return;
-        }
-        m_view->FileOpen(data->GetId(), info);
+    name    = info->name.ToStdWstring();
+
+    if(name == L"WorkSpace"){
+        m_view->ShowViewWorkSpaceTree(T100FALSE);
+    }else if(name == L"CompileOutput"){
+        m_view->ShowViewCompileOutput(T100FALSE);
+    }else if(name == L"DebugOutput"){
+        m_view->ShowViewCompileOutput(T100FALSE);
     }
-}
-
-T100VOID T100ProjectSkeletal::OnFolderOpen(T100FolderData* data)
-{
-    T100FolderLogic*    logic       = m_serve->GetProjectServe()->GetFolderLogic();
-
-    if(!logic->IsExists(data->GetFolderInfo()->GetPath())){
-        return T100FALSE;
-    }
-
-    T100FolderInfo*     info        = T100NEW T100FolderInfo();
-
-    if(!logic->List(data->GetFolderInfo()->GetPath(), info)){
-        T100SAFE_DELETE(info);
-        return T100FALSE;
-    }
-
-    m_view->FolderOpen(data->GetId(), info);
-}
-
-T100VOID T100ProjectSkeletal::OnProjectOpen(T100ProjectData* data)
-{
-    if(!data){
-        return;
-    }
-
-    T100ProjectInfo*        info    = data->GetProjectInfo();
-
-    if(!info){
-        return;
-    }
-
-    if(info->IsOpened()){
-        return;
-    }
-
-    T100ProjectLogic*       logic       = m_serve->GetProjectServe()->GetProjectLogic();
-
-    if(!logic->Open(info->GetPath(), info)){
-        return T100FALSE;
-    }
-
-    m_view->ProjectOpen(data->GetId(), info);
-}
-
-T100VOID T100ProjectSkeletal::OnProjectSelect()
-{
-    m_view->ProjectSelect();
-}
-
-T100VOID T100ProjectSkeletal::OnWorkSpaceSelect()
-{
-    m_view->WorkSpaceSelect();
-}
-
-T100VOID T100ProjectSkeletal::OnPageChanged()
-{
-    m_view->PageChanged();
-}
-
-T100VOID T100ProjectSkeletal::OnPageClosing(T100Pack* pack)
-{
-    T100EditorPack*     editor      = dynamic_cast<T100EditorPack*>(pack);
-
-    if(editor){
-        m_serve->GetProjectServe()->GetFileLogic()->Close(editor->GetEditor()->GetPath());
-    }
-
-    m_view->FileClose(pack);
-}
-
-T100VOID T100ProjectSkeletal::OnPageClosed(T100Pack* pack)
-{
-    m_view->PageClose(pack);
-}
-
-T100VOID T100ProjectSkeletal::OnItemExpanding()
-{
-    /*
-    T100WSTRING         label;
-    T100ProjectServe*   serve   = m_serve->GetProjectServe();
-
-    if(!serve){
-        return;
-    }
-
-    serve->Open(label);
-
-    m_view->New();
-    */
-}
-
-T100VOID T100ProjectSkeletal::OnModified(const T100WSTRING& path)
-{
-    m_view->SetDirty();
-
-    m_view->FileModified(path);
-
-}
-
-T100VOID T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo* info)
-{
-    T100DebugTools::Print(L"T100ProjectSkeletal::OnProjectCreateWizardFinished(T100WxProjectInfo*)...");
-    T100WxFolderInfo        folder;
-
-    m_serve->GetFolderInfo(folder);
-
-    T100WorkSpaceInfo*      workspace   = T100NULL;
-    T100ProjectInfo*        project     = T100NULL;
-
-    T100WSTRING     path    = folder.GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + info->GetLabel();
-
-    folder.SetLabel(info->GetLabel());
-    folder.SetPath(path);
-
-    if(!m_serve->GetProjectServe()->New(folder, m_serve->GetWorkSpaceInfo())){
-        return;
-    }
-
-    workspace   = m_serve->GetWorkSpaceInfo();
-
-    project     = T100NEW T100ProjectInfo();
-
-    project->SetLabel(info->GetLabel());
-    project->SetPath(workspace->GetPath() + T100ProjectConfig::T100PROJECT_STORAGE_SEPARATOR + info->GetLabel());
-
-    //ProjectAppend(project);
-
-    m_view->ProjectAppend(project);
-}
-
-T100VOID T100ProjectSkeletal::OnBuildMessage(const T100WSTRING& value)
-{
-    m_view->AppendBuildMessage(value);
 }

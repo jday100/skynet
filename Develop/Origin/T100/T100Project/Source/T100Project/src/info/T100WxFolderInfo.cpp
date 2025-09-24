@@ -1,6 +1,8 @@
 #include "T100WxFolderInfo.h"
 
-T100WxFolderInfo::T100WxFolderInfo()
+T100WxFolderInfo::T100WxFolderInfo() :
+    m_label(),
+    m_path()
 {
     //ctor
 }

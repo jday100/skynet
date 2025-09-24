@@ -1,22 +1,29 @@
 #ifndef T100FOLDER_H
 #define T100FOLDER_H
 
-#include "T100FSEntry.h"
+#include "T100Common.h"
 
-class T100Folder : public T100FSEntry
+class T100Folder
 {
     public:
         T100Folder(const T100WSTRING&);
         virtual ~T100Folder();
 
-        T100BOOL            Create();
+        T100VOID                SetPath(const T100WSTRING&);
+        const T100WSTRING&      GetPath();
 
-        T100VOID            List(T100WSTRING_VECTOR&, T100WSTRING_VECTOR&);
+        T100BOOL                IsExists();
 
-        T100VOID            GetAllSubFolders(T100WSTRING_VECTOR&);
-        T100VOID            GetAllFiles(T100WSTRING_VECTOR&);
+        T100BOOL                Create();
+        T100BOOL                Remove();
+
+        T100VOID                List(T100WSTRING_VECTOR&, T100WSTRING_VECTOR&);
+
+        T100VOID                GetAllFiles(T100WSTRING_VECTOR&);
+        T100VOID                GetAllSubFolders(T100WSTRING_VECTOR&);
 
     protected:
+        T100WSTRING             m_path;
 
     private:
 };

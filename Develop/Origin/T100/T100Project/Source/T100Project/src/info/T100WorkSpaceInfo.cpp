@@ -4,6 +4,11 @@ T100WorkSpaceInfo::T100WorkSpaceInfo() :
     m_label(),
     m_path(),
     m_filename(),
+    m_pythonFile(),
+    m_pathCompiler(),
+    m_pathExecute(),
+    m_files(),
+    m_folders(),
     m_projects()
 {
     //ctor
@@ -46,7 +51,7 @@ const T100WSTRING& T100WorkSpaceInfo::GetFileName()
 
 T100VOID T100WorkSpaceInfo::SetPythonFile(const T100WSTRING& file)
 {
-    m_pythonFile    = file;
+    m_pythonFile        = file;
 }
 
 const T100WSTRING& T100WorkSpaceInfo::GetPythonFile()
@@ -56,17 +61,17 @@ const T100WSTRING& T100WorkSpaceInfo::GetPythonFile()
 
 T100VOID T100WorkSpaceInfo::SetCompilerPath(const T100WSTRING& path)
 {
-    m_compilerPath  = path;
+    m_pathCompiler      = path;
 }
 
 const T100WSTRING& T100WorkSpaceInfo::GetCompilerPath()
 {
-    return m_compilerPath;
+    return m_pathCompiler;
 }
 
 T100VOID T100WorkSpaceInfo::SetExecutePath(const T100WSTRING& path)
 {
-    m_pathExecute   = path;
+    m_pathExecute       = path;
 }
 
 const T100WSTRING& T100WorkSpaceInfo::GetExecutePath()
@@ -84,7 +89,7 @@ T100FILE_INFO_VECTOR& T100WorkSpaceInfo::GetFiles()
     return m_files;
 }
 
-T100FOLDER_INFO_VECTOR& T100WorkSpaceInfo::GetFolders()
+T100FOLDER_INFO_VECTOR& T100WorkSpaceInfo::GetSubFolders()
 {
     return m_folders;
 }

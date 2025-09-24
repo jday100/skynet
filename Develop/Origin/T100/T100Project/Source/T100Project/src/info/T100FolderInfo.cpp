@@ -1,8 +1,14 @@
 #include "T100FolderInfo.h"
 
-T100FolderInfo::T100FolderInfo()
+T100FolderInfo::T100FolderInfo() :
+    m_label(),
+    m_path(),
+    m_folder(),
+    m_files(),
+    m_folders()
 {
     //ctor
+    m_opened        = T100FALSE;
     init();
 }
 
@@ -14,17 +20,19 @@ T100FolderInfo::~T100FolderInfo()
 
 T100VOID T100FolderInfo::init()
 {
-    m_opened    = T100FALSE;
+
 }
 
 T100VOID T100FolderInfo::uninit()
 {
-
+    m_files.clear();
+    m_folders.clear();
+    m_opened    = T100FALSE;
 }
 
 T100VOID T100FolderInfo::SetOpened(T100BOOL value)
 {
-    m_opened    = value;
+    m_opened        = value;
 }
 
 T100BOOL T100FolderInfo::IsOpened()

@@ -10,8 +10,9 @@ class T100PathTools
         virtual ~T100PathTools();
 
         static const T100WSTRING            GetCwd();
+
         static T100BOOL                     Format(const T100WSTRING&, T100WSTRING&, T100WSTRING&);
-        static T100BOOL                     Full(const T100WSTRING&, T100WSTRING&);
+        static T100BOOL                     FullPath(const T100WSTRING&, T100WSTRING&);
         static T100BOOL                     Split(const T100WSTRING&, T100WSTRING&, T100WSTRING&);
 
     protected:

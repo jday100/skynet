@@ -1,12 +1,11 @@
 #ifndef T100PROJECTSERVE_H
 #define T100PROJECTSERVE_H
 
+#include "T100WxFolderInfo.h"
 #include "T100ProjectInfo.h"
-#include "T100FileLogic.h"
-#include "T100FolderLogic.h"
-#include "T100ProjectLogic.h"
 
 class T100WorkSpaceInfo;
+class T100ModuleInfo;
 
 class T100ProjectServe
 {
@@ -14,24 +13,32 @@ class T100ProjectServe
         T100ProjectServe();
         virtual ~T100ProjectServe();
 
-        T100FileLogic*                          GetFileLogic();
-        T100FolderLogic*                        GetFolderLogic();
-        T100ProjectLogic*                       GetProjectLogic();
+        T100ProjectInfo*                GetCurrentProject();
 
-        T100ProjectInfo*                        GetProjectInfo();
+        const T100WSTRING               GetFileName(const T100WSTRING&);
 
-        T100BOOL                                Check(T100WxFolderInfo*);
+        const T100WSTRING               GetFolderName(const T100WSTRING&, const T100WSTRING&);
 
-        T100BOOL                                New(const T100WxFolderInfo&, T100WorkSpaceInfo*);
+        T100BOOL                        Check(T100WxFolderInfo*);
+
+        T100BOOL                        Create(T100WorkSpaceInfo*, T100ProjectInfo*);
+
+        T100BOOL                        Open(T100ProjectInfo*);
+
+        T100BOOL                        Build(T100WorkSpaceInfo*, T100ProjectInfo*);
+
+        T100BOOL                        Run(T100WorkSpaceInfo*, T100ProjectInfo*);
+
+        T100BOOL                        Clean(T100WorkSpaceInfo*, T100ProjectInfo*);
+
+        T100BOOL                        ModuleCreate(T100WorkSpaceInfo*, T100ModuleInfo*);
+
+        T100BOOL                        Clear();
 
     protected:
-        T100FileLogic*                          m_fileLogic     = T100NULL;
-        T100FolderLogic*                        m_folderLogic   = T100NULL;
-        T100ProjectLogic*                       m_projectLogic  = T100NULL;
+        T100ProjectInfo*                m_current       = T100NULL;
 
     private:
-        T100VOID                                init();
-        T100VOID                                uninit();
 };
 
 #endif // T100PROJECTSERVE_H

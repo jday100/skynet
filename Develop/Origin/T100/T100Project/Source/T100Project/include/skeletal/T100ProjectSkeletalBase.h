@@ -2,8 +2,11 @@
 #define T100PROJECTSKELETALBASE_H
 
 #include "T100ProjectView.h"
-#include "T100WxFolderInfo.h"
 #include "T100WorkSpaceServe.h"
+
+class T100WxFolderInfo;
+class T100ProjectInfo;
+class T100WorkSpaceInfo;
 
 class T100ProjectSkeletalBase
 {
@@ -11,34 +14,20 @@ class T100ProjectSkeletalBase
         T100ProjectSkeletalBase();
         virtual ~T100ProjectSkeletalBase();
 
-        T100BOOL                    WorkSpaceNew(T100WorkSpaceInfo*);
-        T100BOOL                    WorkSpaceOpen(const T100WxFolderInfo&);
+        T100BOOL                    WorkSpaceCreate(T100WorkSpaceInfo*);
+        T100BOOL                    WorkSpaceOpen(T100WxFolderInfo*);
         T100BOOL                    WorkSpaceClose();
         T100BOOL                    WorkSpaceSave();
-        T100BOOL                    WorkSpaceSaveAs();
 
-        T100VOID                    ProjectNew();
-        T100VOID                    ProjectOpen();
-        T100BOOL                    ProjectOpen(T100ProjectInfo*);
-        T100VOID                    ProjectClose();
-        T100VOID                    ProjectSave();
-        T100VOID                    ProjectSaveAs();
-        T100VOID                    FileNew();
-        T100VOID                    FileOpen();
-        T100VOID                    FileClose();
-        T100VOID                    FileSave();
-        T100VOID                    FileSaveAs();
-        T100VOID                    EditUndo();
-        T100VOID                    EditRedo();
-        T100VOID                    EditCut();
-        T100VOID                    EditCopy();
-        T100VOID                    EditPaste();
-        T100VOID                    SearchFind();
-        T100VOID                    SearchReplace();
-        T100VOID                    CompileBuild();
-        T100VOID                    SetupEditor();
-        T100VOID                    SetupCompiler();
-        T100VOID                    HelpAbout();
+        T100BOOL                    ProjectCreate(T100ProjectInfo*);
+        T100BOOL                    ProjectBuild(T100WorkSpaceInfo*, T100ProjectInfo*);
+        T100BOOL                    ProjectRun(T100WorkSpaceInfo*, T100ProjectInfo*);
+        T100BOOL                    ProjectClean(T100WorkSpaceInfo*, T100ProjectInfo*);
+
+        T100BOOL                    FileCreate();
+        T100BOOL                    FileRemove();
+        T100BOOL                    FileOpen();
+        T100BOOL                    FileSaveAs();
 
     protected:
         T100ProjectView*            m_view      = T100NULL;
