@@ -46,7 +46,9 @@ def args():
         case 'clean':
             clean()
         case 'rebuild':
-            rebuild()
+            rebuild()  
+        case 'run':
+            run()
 
 
 def build():
@@ -144,6 +146,20 @@ def rebuild():
     print("Run project rebuild...")
     clean()
     build()
+
+def run():
+    print("Run project target...")
+    global g_project_path
+    global g_project_build
+    global g_project_build_filename
+
+    cmd 	= "%s\\%s\\%s" % (g_project_path, g_project_build, g_project_build_filename)
+
+    print(cmd)
+
+    subprocess.call(cmd)
+
+    print("Success")
 
 if __name__ == "__main__":
     print("Run project build...")
