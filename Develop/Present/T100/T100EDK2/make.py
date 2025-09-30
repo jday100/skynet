@@ -117,7 +117,10 @@ def edk2_build():
 
     global g_edk2_path
 
-    cmd     = "cmd.exe /c %s\\%s\\%s" % (g_edk2_path, "BaseTools", "make")
+    #cmd     = "cmd.exe /c %s\\%s\\%s" % (g_edk2_path, "BaseTools", "make")
+    #C:\zmsys2\msys2\mingw64.exe
+
+    cmd     = "cmd.exe /c %s" % ("C:\\zmsys2\\msys2\\mingw64.exe")
 
     print(cmd)
 
