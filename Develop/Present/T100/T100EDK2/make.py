@@ -42,6 +42,7 @@ def args():
     match value:
         case 'build':
             build()
+            edk2_build()
         case 'clean':
             clean()
         case 'rebuild':
@@ -116,7 +117,7 @@ def edk2_build():
 
     global g_edk2_path
 
-    cmd     = "cmd.exe %s\\%s\\%s" % (g_edk2_path, "BaseTools", "make")
+    cmd     = "cmd.exe /c %s\\%s\\%s" % (g_edk2_path, "BaseTools", "make")
 
     print(cmd)
 
