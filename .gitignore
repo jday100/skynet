@@ -196,3 +196,7 @@
 /Develop/Origin/T100/T100VPC/T100VPC.layout
 /Develop/Origin/T100/bin
 /Develop/Present/T100/T100HyperV/__pycache__
+/Develop/Present/T100/T100EDK2/build
+/Develop/Present/T100/T100Hard/build
+/Develop/Present/T100/T100HyperV/build
+/Develop/Present/T100/T100Library/build
