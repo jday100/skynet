@@ -2,6 +2,11 @@ import os
 import sys
 import subprocess
 
+import ctypes
+from ctypes import wintypes
+
+kernel32 = ctypes.windll.kernel32
+
 g_project_path      = ""
 g_compiler_path     = ""
 
@@ -125,6 +130,71 @@ def edk2_build():
     print(cmd)
 
     subprocess.call(cmd)
+
+
+
+def build_test():
+    cmd     = "C:\\zmsys2\\msys2\\mingw64.exe"
+
+    class STARTUPINFO(ctypes.Structure):
+        _fields_ = [
+                ("cb", wintypes.DWORD),
+                ("lpReserved", wintypes.LPSTR),
+                ("lpDesktop", wintypes.LPSTR),
+                ("lpTitle", wintypes.LPSTR),
+                ("dwX", wintypes.DWORD),
+                ("dwY", wintypes.DWORD),
+                ("dwXSize", wintypes.DWORD),
+                ("dwYSize", wintypes.DWORD),
+                ("dwXCountChars", wintypes.DWORD),
+                ("dwYCountChars", wintypes.DWORD),
+                ("dwFillAttribute", wintypes.DWORD),
+                ("dwFlags", wintypes.DWORD),
+                ("wShowWindow", wintypes.WORD),
+                ("cbReserved2", wintypes.WORD),
+                ("lpReserved2", ctypes.c_void_p),
+                ("hStdInput", wintypes.HANDLE),
+                ("hStdOutput", wintypes.HANDLE),
+                ("hStdError", wintypes.HANDLE)
+            ]
+
+    class PROCESS_INFORMATION(ctypes.Structure):
+        _fields_ = [
+            ("hProcess", wintypes.HANDLE),
+            ("hThread", wintypes.HANDLE),
+            ("dwProcessId", wintypes.DWORD),
+            ("dwThreadId", wintypes.DWORD)
+        ]
+
+    startupinfo = STARTUPINFO()
+    process_information = PROCESS_INFORMATION()
+
+    creation_flags  = 0x00000010
+    startupinfo.cb = ctypes.sizeof(STARTUPINFO)
+
+    success = kernel32.CreateProcessA(
+            b"C:\\zmsys2\\msys2\\mingw64.exe",
+            None,
+            None,
+            None,
+            False,
+            creation_flags,
+            None,
+            None,
+            ctypes.byref(startupinfo),
+            ctypes.byref(process_information)
+        )
+
+    if success:
+        print("Success")
+    else:
+        error_code = kernel32.GetLastError()
+        print("Error")
+
+    return
+
+
+
 
 if __name__ == "__main__":
     print("Run project build...")
