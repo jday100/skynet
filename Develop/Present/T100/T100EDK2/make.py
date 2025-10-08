@@ -6,6 +6,7 @@ import ctypes
 from ctypes import wintypes
 
 kernel32 = ctypes.windll.kernel32
+user32 = ctypes.windll.user32
 
 g_project_path      = ""
 g_compiler_path     = ""
@@ -131,7 +132,13 @@ def edk2_build():
 
     subprocess.call(cmd)
 
-
+def find_windows_by_pid(pid):
+    def callback(hwnd, lparam):
+        if ctypes.cast(lparam, ctypes.POINTER(wintypes.DWORD)).contents.value == pid:
+            print("{hwnd}")
+        return True
+    print(user32)
+    #user32.EnumWindows(user32.WNDENUMPROC(callback), ctypes.byref(wintypes.DWORD(pid)))
 
 def build_test():
     cmd     = "C:\\zmsys2\\msys2\\mingw64.exe"
