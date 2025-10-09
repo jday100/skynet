@@ -8,6 +8,8 @@ from ctypes import wintypes
 kernel32 = ctypes.windll.kernel32
 user32 = ctypes.windll.user32
 
+EnumWindowsProc     = ctypes.WINFUNCTYPE(wintypes.BOOL, wintypes.HWND, wintypes.LPARAM)
+
 g_project_path      = ""
 g_compiler_path     = ""
 
@@ -47,6 +49,8 @@ def args():
 
     match value:
         case 'build':
+            build_test()
+            return
             build()
             edk2_build()
         case 'clean':
@@ -134,11 +138,12 @@ def edk2_build():
 
 def find_windows_by_pid(pid):
     def callback(hwnd, lparam):
-        if ctypes.cast(lparam, ctypes.POINTER(wintypes.DWORD)).contents.value == pid:
-            print("{hwnd}")
+        #if ctypes.cast(lparam, ctypes.POINTER(wintypes.DWORD)).contents.value == pid:
+        print("{hwnd}")
         return True
     print(user32)
-    #user32.EnumWindows(user32.WNDENUMPROC(callback), ctypes.byref(wintypes.DWORD(pid)))
+
+    ctypes.windll.user32.EnumWindows(EnumWindowsProc(callback), 0)
 
 def build_test():
     cmd     = "C:\\zmsys2\\msys2\\mingw64.exe"
@@ -198,10 +203,11 @@ def build_test():
         error_code = kernel32.GetLastError()
         print("Error")
 
+
+
+    find_windows_by_pid(process_information.dwProcessId)
+
     return
-
-
-
 
 if __name__ == "__main__":
     print("Run project build...")
