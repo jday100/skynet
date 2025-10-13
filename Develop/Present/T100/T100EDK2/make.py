@@ -139,7 +139,19 @@ def edk2_build():
 def find_windows_by_pid(pid):
     def callback(hwnd, lparam):
         #if ctypes.cast(lparam, ctypes.POINTER(wintypes.DWORD)).contents.value == pid:
-        print("{hwnd}")
+        #if ctypes.cast(lparam, ctypes.POINTER(wintypes.DWORD)).contents.value == pid:
+        #print("{hwnd}")
+
+        id  = ctypes.POINTER(wintypes.DWORD)
+        id  = ctypes.cast(lparam, ctypes.POINTER(wintypes.DWORD))
+        print(id)
+        return False
+        if id == None or id.contents == None:
+            return False
+        else:
+            if id.contents.value == pid:
+                print("{hwnd}")
+
         return True
     print(user32)
 
